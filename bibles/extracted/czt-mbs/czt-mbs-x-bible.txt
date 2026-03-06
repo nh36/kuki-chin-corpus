@@ -1,0 +1,675 @@
+# language_name:        Chin Zotung
+# closest ISO 639-3:    czt
+# year_short:           2002
+# year_long:            Not available
+# title:                The New Testament in Chin Zotung
+# URL:                  http://www.myanmarbible.com/bible/bible.php?version=Zotung&testament=NT&book=Mark&chapter=1
+# copyright_short:      © Myanmar Bible Society 2002.
+# copyright_long:       Not available
+41001001	Pachia Ccapaw Jesuh Kri Thehooy Bya konglang tuh hynte nynh athua .
+41001002	Athonaw kya profet Isaiah nynh a lah zeipaw tuh :
+41001003	Laesiaram kya ccungccaw lukheit nynh siaza ,
+41001004	Tukeiccuze laesiaram kya Johan tuh oun langkuza baptisma pya te phung a hopya hae . Ccungccawhae kyakhe , “ Nae seinaw ngaesikuh ohla baptisma lak oh , te nae seinaw Pachia nynh ae ngaethya cih oh , ” a ci .
+41001005	Judea ram te Jerusalem khopi e ccungccawhae tuh Johan phunghopaw ngae khylang oun cceih hae . Mih seinaw kha phykuh haeza Jordan Vawkhu kya baptisma a pya hae .
+41001006	Johan tuh kalauk muingte kuakupaw uccaw kha lawkuza saphua taesung kha a cce kyakhe a sungku , te a looh tuh khungrung te ramkaw e khoitui nynh athua .
+41001007	Ccungccawhae kyakhe , “ Ka nulangte oun thua cipaw tuh kae laeze a leehuapaw nynh athua . Kae tuh a phanarui phoupyalang sangma ka ngaekuh khy .
+41001008	Kae nynh tuh tuite baptisma kae pya oh , thuasalama amaw nynh tuh Thya Muisawte baptisma kha ae pya cih oh , ” a ci .
+41001009	Tukoute aromawze Galilee pee Nazareth khua langte Jesuh tuh oun thuaza Johan nynh Jordan vawkhu khe baptisma a pya .
+41001010	Jesuh tuh tui lungkhu te oun pou miakawte vaawlui oun hongkupaw te Muisaw nynh vafu lolang oun rungbungza a tungvaw a topaw kha a mui .
+41001011	Te vaaw langte roy oun ccaeza , “ Nang tuh ka sungsapaw ka Ccapaw nynh na thua . Na tungvaw kya ka lung accin , ” a ci .
+41001012	Vaekheitmawte Muisaw nynh Jesuh tuh laesiaram langkhe cciasaza ,
+41001013	tuinkya nin sungpalei umza Satan nynh a touu . Tuinkya tuh loramsawhae ma ah um hae , thuasalama vaawhae nynh oun rung haeza ah bawm hae .
+41001014	Johan kha thong kya ah sah hae koute Jesuh tuh Galilee lang cceiza Pachia kya e Thehooy Bya kha a ho .
+41001015	“ Ccyh phe ccinvaeza , Pachia Peenaw anaevae ! Nae seinaw ngaesikuh ohla Thehooy Bya kha zyn oh ! ” a ci .
+41001016	Jesuh nynh Galilee Tuili kinte a ccia lyakhe ngasawkyngtuhae lunin , Simon te a netaw Andru kha miate ngasaw ah kyng mangcciahaepaw a muih hae .
+41001017	Jesuh nynh mimin kyakhe , “ Oun zui ohla ccungccaw kyngnaw kae ccanpah cih oh , ” a ci .
+41001018	Vaekheitmawte mih miahae kha cciataw haeza amaw tuh ah zui hae .
+41001019	Takyh asawnaw langkhe cceiza ccangpaw uno lunin , Zebedi ccawhae James te Johan kha a muih hae . Mimin tuh mih long lungkhu mih miahae kha ah thawe hae .
+41001020	Jesuh nynh a muih miakaw haete a ko hae ; mih long lungkhu khe ah hohhaepaw ryte mih paw tuh cciataw haeza Jesuh tuh ah zui hae .
+41001021	Jesuh te a zuituhae tuh Kapernaum khe thua haeza Sabbath muakaw kya Jesuh nynh sinakok lang cciate ccanpyanaw a tho .
+41001022	A ccanpyanaw a thaehaepaw nynh mih ngae-an myarya thua , pawccecize Phungbya sayahae hawte thuakhy ; ahmaw myarya ccihlangte a ccanpya hae .
+41001023	Tuh ccyh lyakhe Satan bakupaw ccungccaw lukheit tuh sinakok langkhe oun teeza ,
+41001024	“ Nazareth khuapaw Jesuh , kaenin kya pawmou ci na ry ? Kaenin rolang tou nae thua ? Nang hynh hummou ci paw mang kae nyh —- athyapaw Pachia zeccawetu nynh na thua ! ” cite a sia .
+41001025	Jesuh nynh satan tuh , “ Yccae nang ! Kha e paw kyate toykuh ! ” cite kaw a pya .
+41001026	Satan nynh ccungccapaw tuh thawte dungsyaza , thawte a siasah koute a toytawku .
+41001027	Ccungccawhae tuh mih ngae-an thuaza lukheit te lukheit kyakhe , “ Pawcihawpaw bya mou ? Ccan-pyanaw athawpaw phuinkheit tou ? Hynh e paw nynh satanhae kawpyanaw kaw hoiza a kaw ah ngae hae ! ” ah ci hae .
+41001028	Tukeiccuze Jesuh the tuh Galilee pee kya balyn kaleh a zehkuh .
+41001029	Jesuh te a zuituhae tuh James te Johan hae pangte sinakok kyate toykuh haeza Simon te Andru inn lang ete ah cceih hae .
+41001030	Simon zu nung tuh vaeryate cciza khungvaw khe a it , Jesuh a thua miakawte a ccinawpaw konglang a ho pya .
+41001031	Ngeccih kalankhe cceiza a kuit kyngte a tho . A vaerya tuh dangza mimin kha a do-oyh hae .
+41001032	Khuanin accate khuazi dynkhe ccungccawhae nynh ngeccih balyn te satan bakuhaepaw kha Jesuh kalan oun cciakhae hae .
+41001033	A khopite inn malang khe ah pumkuh hae .
+41001034	Jesuh nynh mih ccinaw takyh kyate dangsah haeza satan bakupaw balyn kha a deipya hae . Jesuh nynh satanhae kha kawnaesah khyh hae , pawccecize hummou ci paw ah nyvae hae .
+41001035	Amuakalang khuanin a thua maw awkhuatakawte Jesuh tuh inn kyate toykuza khote lang daekakinnaw kya saw a sang .
+41001036	Thuasalama Simon te a banhae tuh amaw ccunglang cceih haeza ,
+41001037	ah muih haete a kyakhe , “ Ccungccaw miakaw nynh palei ae ccung hae , ” ah ci pya hae .
+41001038	Thuasalama Jesuh nynh , “ Hynh pepang khoh ccang lang balyn ah cceih cih oh . Mimin kya balyn phungholangpaw ka hoi , pawccecize tuh e tuh nynh kae thuanuathepaw , ” a ci .
+41001039	Tukeiccuze Galilee ram kya balyn ccongte sinakokhae kya phunghoza satanhae balyn kha a dei .
+41001040	Vaethyakaepaw ccungccapaw lukheit nynh oun cceiza ccukharutungte , “ Na ry athuaze tuh nae thyasah kho , ”
+41001041	Jesuh nynh thaw kou cciza a kuitdyngte haeza , “ Thyasah kae ry , thyaccavae , ” a ci .
+41001042	Vaekheitmawte ccungccapaw ccinaw tuh a dang .
+41001043	Te Jesuh nynh cciasaza rehahanlangte ,
+41001044	“ Ngae , e kong hynh hum kyama lah ho nang , thuasalama silawtu kalan sysy lah cceih la lah dosaku ; tuinte ccungccaw miakaw nynh na dangvae ci paw ae nynawlang hae Moses nynh raelang ae ci pya ohpaw kha lah rae , ” a ci .
+41001045	Thuasalama ccungccapaw nynh cceiza a dangnawpaw kong tuh teitei kya balyn a zehsaku . Tuh e kong eh a hotu keiccuze Jesuh tuh khopi lang ruarua tee khovae khy . Khohte lang daekakinnaw khe zya umza hmintakyh e ccungccawhae balyn nynh a kalankhe oun ccianua hae .
+41002001	Te nin sosoh koute Jesuh tuh Kapernaum khua lang tuin oun kiza innvaw nynh a um ci paw the kha athang .
+41002002	Ccungccaw ah lawng hae keiccuze inn lungkhu kya accawngnaw um khy , thuakaw lialang cia ah beih hae . Jesuh nynh mimin kha phung a hopya lyaccya hae khe ,
+41002003	ccungccaw lupalei nynh kuitccuchipaw kha Jesuh kalan oun puit hae .
+41002004	Ccungccaw eih lawng keiccuze Jesuh kalan thuakhae kho khyh hae . Tukeiccuze Jesuh te adekunaw a luki e ngaedi kha kiabia haeza kuitccuchipaw tuh a iphae vawlang isate ah sawbung hae .
+41002005	Mih zynnaw hoi zia kha Jesuh nynh a muite kuitccuchipaw kyakhe , “ Ka ccapaw , na seinaw tuh ngaethya athuavae , ” a ci .
+41002006	Tuin a dahunghaepaw abang Phungbya sayahae nynh ,
+41002007	“ Pawtemou hynte Pachia saryanaw bya a ho ngang ? Pachia lukheit kyalya roukhaw ccungccaw seinaw a ngaethya khopaw tuh athua ! ” cite mi lungkhute ah ci hae .
+41002008	Vaekheitmawte mih tuanaw kha Jesuh nynh nyza , “ Pawccemou hynhawte nah tua oh ?
+41002009	E kuitccuchipaw kya , ‘ Na seinaw tuh ngaethya athuavae , ’ ci tou , ‘ Thokuh la na iphae lawkute cceih , ’ ci tou azoyhua ?
+41002010	Ccungccaw Ccapaw nynh laephivaw seingaethyanaw a hoi ci paw hyn nae kya muisah kae ry oh , ” a ci . Tukeiccuze a kuitccuchipaw kyakhe ,
+41002011	“ Thokuh , na iphae kha lawkuh la inn lang lah cceih ccavae , kae ci , ” a ci .
+41002012	Mih balynte ah do lya hae khe ccungccapaw tuh a thokuh , a iphae tuh lawkuza arangte a ccei . Mih balynte mih ngae-an myarya thuaza , “ Hyncihaw tuh kae muih boy khy ! ” cih haeza Pachia ah thehooysah hae .
+41002013	Jesuh tuh Galilee tuili kin langkhe bua a cceih ki . Mibuupihae nynh a kalankhe oun thua haeza a ccanpya hae .
+41002014	Laanpi a pae lyakhe khosia khoytu , Alfeas ccapaw Levi a zung kya a dahungpaw kha a mui . Jesuh nynh , “ Oun zui , ” a ci . Levi nynh thokuza a zui .
+41002015	Tukoute Jesuh tuh Levi inn kya
+41002016	Abang Farasi Phungbya sayahae nynh Jesuh tuh noysihaepaw te khosia khoytuhae ryte looh ah ae kheihaepaw kha ah muih hae tuh a zuituhae kyakhe , “ Pawccemou hyncihawpaw ccungccawhae ryte looh ah ae kheih hae ? ” cite ah khia hae .
+41002017	Tuh e kong Jesuh nynh a thaete , “ A danghaepaw nynh sibawi peki khyh hae , ngeccihae rou nynh khaw ah peki hae . Midinghae ko khylang kae thua khy , miseihae ko khylang nynh kae thua , ” a ci .
+41002018	Vaekheitlya Baptisma pyatu Johan zuituhae te Farasihae tuh looh ah sung hae . Abang ccungccaw nynh Jesuh kalan oun cceih haeza , ‘ Pawcce Baptisma pyatu Johan zuituhae te Farasihae zuituhaeze loohsung haeza na zuituhae ze ah sung khyh hae ? ” cite ah khia hae .
+41002019	Jesuh nynh , “ Zudy poy kalan kohaepaw kha looh ae leite ah ung cih hae cite nah tua oh tou ? Unglang khyh hae ! Zudypaw mih kya a um lungkhu tuh looh ae leite unglang khyh hae .
+41002020	Thuasalama zudypaw mih kyate laaw oun thuate tuh looh oun sung cih hae .
+41002021	“ Hum sangma angki pawepaw bianawlang kha boeibia thawpaw mang boy khy , pawccecize boeibia thawpaw nynh a pawepaw angki kha a sheisakuh ciza a ua kha hou ako ci .
+41002022	Te mitsurtui thawpaw kha arynpaw saphuatui-ung kya hum nynh ma the boy khy , paw ccecize mitsurtui nynh saphuatui-ung tuh a pawsah ciza miturtui te saphua tuh paroute ah ro cih hae . Tuh e lae tuh , mitsurtui thawpaw kha athawpaw saphuatui-ung kya thelangpaw nynh athua , ” a ci .
+41002023	Jesuh tuh Sabbath nin kyakhe ccatanloo lungkhu te a ccei . Amaw ryte a zuituhae tuh pyngkheilang ah ccia lya hae khe ccatan kha ah zukupaw hae .
+41002024	Farasihae nynh Jesuh kyakhe , “ Do tua , na zuituhae nynh Sabbath nin kyaze hynte ah cyihaepaw hyn ah Phung nynh a kheepaw nynh athua ! ” ah ci hae .
+41002025	Jesuh nynh , “ David nynh aelangpaw a hoi khyze pawmou a cyi ci paw nah ria boy khyh oh tou ? Amaw te a ccungccawhae nynh mih voelaw lya ,
+41002026	Pachia inn lungkhu lang tee haeza Pachia ah pyahaepaw sanglou kha ah ae hae . Tute acyiku lya Silawtu Lupi tuh Abiathar nynh athua . Ah Phung thyte athualangze silawtuhae rou nynh aelangpaw nynh athua . Thuasalama David nynh a ae lae apiaze a ccungccawhae cia a pya hae , ” a ci .
+41002027	Te Jesuh nynh , “ Sabbath tuh ccungccaw hanlang raepaw nynh athua ; ccungccaw tuh Sabbath hanlang raepaw thuakhy .
+41002028	Tukeiccuze Ccungccaw Ccapaw tuh Sabbath vawlang cia Bawi nynh athua , ” a ci .
+41003001	Tuinte Jesuh tuh sinakok lang bua cceih kiza tuinkya a kuitchipaw a lah um .
+41003002	Jesuh seiphusah a ryhaepaw abang ccungccaw um haeza tukeiccuze Sabbath nin kya ccungccapaw hyn oun dangsah ta cite hooyte ah do hae .
+41003003	Jesuh nynh ccungccapaw kha , “ Malang hein oun pou tua , ” a ci .
+41003004	Tuinte mipihae kha , “ Sabbath nin kya ah Phung nynh a uapaw hynh pawmou ? Bawmlangpaw tou athuakhyze rhunaw pyalangpaw tou ? Ccungccaw hiinnaw khumlangpaw tou tukhyze rolangpaw tou ? ” cite a khia hae .
+41003005	Jesuh nynh thinriate do haeza mih thinlung a ping zia kha a muih tuh a ngae athah . Te ccungccapaw kyakhe , “ Na kuit kha dyng , ” a ci . A kuit kha a dyng tuh a dang ccaccingvae .
+41003006	Te Farasihae tuh sinakok kyate toykuh haeza Herod ccungccawhae ryte Jesuh chianawlangpaw khua ah khang hae .
+41003007	Jesuh te a zuituhae tuh Galilee tuili kalankhe cceih haeza mibuupi nynh amaw kha ah zui hae . Mimin tuh Galilee ram , Judea ram ,
+41003008	Jerusalem , Idumea pee te Jordan vaw ninthualang ram , Taia te Sidon khopihae pepang e khuahae kyate oun cceihaepaw nynh ah thua hae . Jesuh nynh uccaw a raepaw ah thae hae keiccuze oun thuahaepaw nynh athua .
+41003009	Ccungccaw eih lawng kaesyza oun eh sei cih hae cite a thin a phangpawte Jesuh nynh a zuituhae kha long ccankheit a naungsapyakuty hae .
+41003010	Ccungccaw patae dangsah haeza a dangleihaepaw balyn nynh amaw haelang kha ah zuaku hae .
+41003011	Te muisaw hooyleipaw a bakuhaepaw balyn nynh amaw kha ah muih hae tuh a malang khe bakhung haeza , “ Nang tuh Pachia Ccapaw nynh na thua , ” cite thawte ah sia hae .
+41003012	Jesuh nynh muisaw hooyleipaw a bakuhaepaw kha hum nynh athua ci paw hyn hum kya sangma lah ho nang oh , ” cite bya a kin hae .
+41003013	Tuinte Jesuh tuh mua langkhe kaeza a rypaw ccungccaw kha a ko hae . A kalankhe oun cceih haeza ,
+41003014	luhawlaeinin kha po haeza zuituhae cite min a phu hae . “ Nanin tuh ka kya a umlang hae cite kae povae oh . Phungholang zema kae shaw cih oh ,
+41003015	te satanhae deinaw kaw nah hoi cih oh , ” a ci .
+41003016	Hynh e luhawlaenin hae hyn a po hae : Simon ( Jesuh nynh Peter cite min a phupaw ) ,
+41003017	Zebedi ccawhae James te a netaw Johan ( Jesuh nynh Boanerges cite min a phu hae , asuilan tuh “ Kholon Ccungccawhae ” ) ,
+41003018	Andru , Filip , Bartholomew , Matthai , Thomas , Alfeas ccapaw James , Thaddeas , Phuin thadynkhaetu Simon ,
+41003019	te Jesuh phetu Judas Iskariot hae nynh ah thua hae .
+41003020	Te Jesuh tuh inn lang a ccei . Mibuupi nynh bua lungnuakuh haeza Jesuh te a zuituhae tuh aenaw ccyh sangma hoi khyh hae .
+41003021	Ccungccawhae nynh , “ A ngaeevae ! ” ah cihaepaw kha a vaeccawhae nynh ah thae hae keiccuze amaw oylang ah cceih hae .
+41003022	Jerusalem te oun thuahaepaw abang Phungbya sayahae nynh , “ A lungkhu kya Beelzebul nynh a um ! Satan uktu bawi nynh huhan a pyapawte nynh a dei kho , ” ah ci hae .
+41003023	Tukeiccuze Jesuh nynh a kalankhe ko haeza tousenawte a hopya hae : “ Pawtemou Satan nynh Satan tuh a dei kho ci ?
+41003024	Ram ramkheit nynh phu pataelang phiakuza mimaw te mimaw ah doukulang haeze tuh e ram tuh a kuai ci .
+41003025	Innbynkheit lungkhu kya peku ziakute um haeza phu pataelang ah phiakulang haeze tuh e innbyn tuh a roh ci .
+41003026	Tuhawte Satan peenaw ma aphute phiakuh haeza ah doukulang haeze athanaw cia tyn kholang khyh haeza marya ah roh cih hae .
+41003027	“ A thawsaepaw kha amaw heity leite hum nynh zema a inn phou biate a uccaw a lua khopaw umlang khy .
+41003028	“ Baccaccing kae hopya oh : ccung-ccawhae hyn mih seinaw te ahooyleipaw ah hohaepaw balyn tuh ngaethya kholang hae .
+41003029	Thuasalama humzema Thya Muisaw rawselangte a hopaw ccungccawhae tuh ngaethya kho leilang hae , pawccecize zungzae tynpaw seinaw nynh a rae , ” a ci .
+41003030	( Abang ccungccawhae nynh , “ A lungkhu kya muisaw hooyleipaw nynh a hawehkuh , ” ah ci hae keiccu nynh Jesuh nynh hynte a ho . )
+41003031	Tuinte Jesuh a nung te a netawhae kha oun thua hae . Inn lialang khe thadyn haeza inn lungkhu e hae kha bya ah taw hae .
+41003032	Jesuh pe a dahunghaepaw nynh a kyakhe , “ Do tua , na nung te na netawhae te na ccianung hae nynh tongku ae ry haeza atolang nynh ah um hae , ” cite ah ci hae .
+41003033	Jesuh nynh , “ Hummou ka nung tuh ? Hum hae mou ka netawhae tuh ? ” a ci .
+41003034	A pe kya a dahunghaepaw ccungccawhae kha dobiate , ” Do oh ! Heinkya e hae khaw ka nung te ka netawhae !
+41003035	Humzema Pachia rynaw a raehaepaw tuh ka netaw , ka ccianung , ka nung nynh ah thua hae , ” a ci .
+41004001	Jesuh nynh Galilee Tuili kin khe a ccanpya ki hae . A pe kya a pumkuhaepaw mibuupi tuh eih ah lawng hae keiccuze long lungkhu lang teeza a dahung . Long tuh tui lungkhu umza ccungccawhae tuh varang langkhe ah thadyn hae .
+41004002	Mimin kyakhe patae tousenawhae mangte a ccanpya hae :
+41004003	“ Ngaetua oh ! Vaekheitlya ccung-ccaw lukheit umza ccacivua khylang loo lang a ccei .
+41004004	Loo lungkhu khe ccaci kha vuaza abang tuh laanpi kyakhe ccaza pavawhae nynh oun thuanua haeza marya ah tut hae .
+41004005	Abang tuh lae hooy pytarinaw lung vaw langkhe a ccah . Laehooypaw kha alawng khyh keiccuze kaleh a po .
+41004006	Te khuanin oun thua tuh nobaleipaw aku kha karae a ruaa . Atharui asaepi a saw kho khyh keiccuze ccaciku tuh phe rou kangmaw .
+41004007	Abang ccaci tuh hinku laku khe a ccah ; hinku oun lee tuh ccaci kha pong veiza thaee khovae khy .
+41004008	Thuasalama abang ccaci tuh lae hooy kya a ccah ; oun poza oun lee tuh athaee oun thaee ; abang tuh leit sungthum , abang tuh leit sungtaruh , te abang tuh leit zakheit a voy , ” a ci .
+41004009	Te Jesuh nynh , “ Thaenaw nakaring a hoipaw nynh thae oh ! ” a ci .
+41004010	Jesuh tuh amakhaete a umvaeze bya a thaevaehaepaw te zuituhae laenin nynh cciate tousenaw suilan kha oun ccaesapya tua cite ah ngia hae .
+41004011	Jesuh nynh , “ Pachia Peenaw baphi tuh nae kya phy athuavae , thuasalama atolang e hae tuh tousenaw route nynh hopya ah thua hae ;
+41004012	tukeiccuze ,
+41004013	Tuinte Jesuh nynh mimin kyakhe , “ Hynh e tousenaw hyn nah nyh kho khyh oh tou ? Hynh e sang nah ny kho khyh ohze pawtemou ccangpaw tousenaw thy tuh nah nyh kho cih oh ?
+41004014	Ccacivuatu nynh Pachia bya a vua .
+41004015	Abang ccungccaw tuh laanpi kya a ccapaw ccacite nynh ah loku hae . Ah thaehaepaw Pachia bya kha Satan nynh a laawpya hae .
+41004016	Abang ccungccaw tuh lungphae vawlang a ccapaw ccacite nynh ah loku hae . Pachia bya kha a thaete lungtuate a laawku kangmaw .
+41004017	Thuasalama mih lungkhu lang a tee kho khyh keiccuze khawcia tyn khy . Tukeiccu Pachia bya keiccuze rhunaw te te-ingnaw oun thuavaeze vaekheitmawte ah phawhkuh hae .
+41004018	Abang ccungccaw tuh hin laku kya a ccapaw ccacite nynh ah loku hae . Pachia bya tuh ah thae hae ,
+41004019	thuasalama hynh e laephivaw hiinnaw elang lungriathaenaw te hoirum rynaw , rynaw ccaccangpaw nynh pong vei haeza athaee thaee kho khyh hae .
+41004020	Thuasalama abang ccungccaw tuh lae hooynaw kya a ccapaw ccacite nynh ah loku hae . Pachia bya kha thae haeza ah kyngku hae , te thaee ah thaee hae : leit sungthum , leit sungtaruh , leit zakheit cia ah voy hae , ” a ci .
+41004021	Jesuh nynh , “ Hum nynh sang maei-inn kha ke lungkhu tukhyze ikhuin kaw kya naung boy hae zaw tou ? Maei awnawpaw tungkhung vaw kya naung khyh hae tou ?
+41004022	Aking akae e tharupaw kha ming nynh muilangte langsakulangza khungpaw miakaw kha marya hongpyalangvae .
+41004023	Thaenaw nakaring a hoipaw nynh thae oh ! ” a ci .
+41004024	Jesuh nynh mimin kyakhe , “ Nah thae ohpaw hyn hooyte tua oh . Minghae nah pianaw ohpaw phung khate nynh Pachia nynh naemaw kha ae pia cih oh , hou arhuhuapaw heze ae mang ci .
+41004025	A hoipaw tuh hou buchilangza a hoileipaw kha a hoi thypaw cia laawpya athua ci , ” a ci .
+41004026	Jesuh nynh , “ Pachia Peenaw tuh hynhawte nynh athua . Ccungccapaw lukheit nynh loo lungkhu khe ccaci a vua .
+41004027	Khuazi tuh a it , khua oun daete thoza ninthu kya rya a lak , tuloukaw khe ccacihae tuh oun po haeza ah leethung hae . Thuasalama pawtepei tute acyiku ci paw nyh khy .
+41004028	Laephi nynh leethungsah haeza thaee a thaeesah hae , masaty tuh nobaleipaw a naw oun toihza , te oun vui , nyathyakou kya oun voy .
+41004029	Looh rawe ccyh oun zawte ccungccapaw nynh rungkou kha ccyngkuza a aw , pawccecize rawe ccyh azawvae keiccu nynh athua .
+41004030	Jesuh nynh , “ Pachia Peenaw tuh pawte nynh aloku citemou holang ? Thaethyanawlangpaw paw tousenaw mou laawlang ?
+41004031	Hynh e te nynh aloku . Ccungccapaw lukheit nynh laephi vawze adihuapaw atam ci kha lakza laephi kya a vua .
+41004032	Aromawze oun leeza ccoupaw thingku balyn laeze a leehuapawlang oun tang . A phei aleepaw vaw a mynlyh kaw khe pavawhae nynh oun thua haeza buu ah luaku hae , ” a ci .
+41004033	Jesuh nynh ah thaethyanawlanghaepaw tousenaw patae mangte phung kha ccungccawhae a ccanpya hae .
+41004034	Tousenaw mang leite mimin kha hopah boy khyh hae . Thuasalama a zuituhae ry mih makhaete ah umvae haeze pawpaw balyn ccaerarilang a hopya hae .
+41004035	Tuin zete kya Jesuh nynh a zuituhae kha , “ Tuili khuraw lang cceih oh si , ” a ci .
+41004036	Tukeiccuze mibuupi kha cciataw haeza long lungkhu langkhe ah tee hae . Jesuh tuh lah dahung tyvaeza long nynh a cciakhae hae . Tuinkya ccangpaw longhae ma ah um hae .
+41004037	Tualeipite khise oun zawza tuileit oun tho tuh long lungkhu kya tui tuh vyavya bialang oun civae .
+41004038	Jesuh tuh long nulang khe lungngya kha ngyaza marya a it . Zuituhae nynh thoo haeza , “ Saya , ah chivae cih oh hynh sya , na thawsia khyh rei ? ” ah ci hae .
+41004039	Jesuh nynh oun thooza khise tuh , “ Zawvae nang ! ” cite kaw pyaza tuileit kha , “ Dae ! ” a ci . Khise ma zawvae khyza tuileit ma a dae .
+41004040	Tuinte Jesuh nynh a zuituhae kyakhe , “ Pawcce hyncih balang nah rhi oh ? Zynnaw nah hoi loh khyh oh i ? ” a ci .
+41004041	Zuituhae tuh mih rhikaw thuaza lukheit te lukheit kyakhe , “ Hynh e paw hyn paw ccungccaw mou ? Khise te tuileit nynh cia a kaw ah ngae hae rei ! ” cite ah ci hae .
+41005001	Jesuh te a zuituhae tuh Galilee tuili khuraw e Gerasa pee kya ah thua hae .
+41005002	Long lungkhu te a toykuh takawte ssaw lungkarung kya umpaw ccungccapaw nynh amaw kha oun tongku . Tuh e paw tuh satan bakupaw thuaza ,
+41005003	ssawhae kya a umpaw nynh athua . Hum nynh sangma sivarui bawtaryte sang ah hei kholeihaepaw nynh athua .
+41005004	A kuit te a ccu kha sivarui bawtaryte avae patae heivaepaw thuasalama sivarui bawtaryh kha marya paeza a ccu kya e sivalua kha a khya kou . A thaw eih saeza hum nynh sangma tae kho khyh hae .
+41005005	Ninthu khuazi balyn ssaw kya te mua langkhe khiakuza amaw te amaw kha lungte a awkupaw te a siapaw nynh athua .
+41005006	Asawnaw kyate Jesuh kha a muih tuh a kalankhe ccawete a malang a ccukharutungza ,
+41005007	a thahinkingte , “ Pou Jesuh , ahanghua Pachia Ccapaw ! Pawtemou cyilang nae ry ? Pachia minte kae ngiaku , vawsawnaw tuh beh oun pya nang ! ” cite a sia .
+41005008	( Hynte a honawpaw tuh Jesuh nynh , “ Satan , hynh e paw lungkhu kyate toykuh ! ” a ci keiccu nynh athua ) .
+41005009	Te Jesuh nynh , “ Na min hummou ? ” cite a khia .
+41005010	Te satan bakupaw nynh tuin ram kyate satanhae deileinawlang kha a ngia .
+41005011	Tuin pe muavaw khe vok aphupite ah pae hae .
+41005012	Satanhae nynh , “ Vokhae kalan oun ky la mih lungkhu lang khuin oun tee sa , cite ah ngia hae .
+41005013	Ah ngia hae hawte cciasah haeza satanhae tuh ccungccapaw lungkhu te toykute vokhae lungkhu langkhe ah tee hae . Vokhae tuh thungnin hang cih haeza mih balyn mawte chiavaw te zoubung haeza tuili lungkhu lang marya phaungkuh hae .
+41005014	Vokrinhaepaw nynh ccawekangmaw haeza tuh e the tuh khopi te loo lang balyn khe ah ho hae . Ccungccawhae tuh acyikupaw dolang oun cceih hae ,
+41005015	te Jesuh kya ah thua hae tuh satanhae nynh ah bahaepaw ccungccapaw kha ah muih hae . Tuinkya dahungza boeizingkute a lung ahawvaepaw kha ah muih hae tuh mih rhikaw a thua .
+41005016	Tuh e a muihaepaw nynh satan bakupaw ccungccapaw te vokhae tungvaw acyikupaw kha ccungccawhae kya ah ho hae .
+41005017	Tukeiccuze Jesuh kha mih ram kyate a toykunawlang ah ngia hae .
+41005018	Jesuh tuh long lungkhu lang a tee dynkhe satan bakupaw ccungccapaw nynh , “ Na kalan beh kae cceih bua i ! ” cite a ngia .
+41005019	Thuasalama Jesuh nynh a kang . “ Nae inn lang palia lah ki la na innbynhae kya Bawipaw nynh pawcimou na hanlang ae raepyapaw te ngaethya ae ungsanawpaw kha lah hopah hae , ” a ci .
+41005020	Tukeiccuze ccungccapaw nynh Khopihae Khohaw kalankhe cceiza Jesuh nynh a raepyapaw kong kha a hopya hae . Te tuh e a thaehaepaw miakaw nynh mih ngae-an phe thua .
+41005021	Jesuh tuh tuili khuraw langkhe a cceih ki . Tuili kin tuin mibuupi nynh ah umlui hae .
+41005022	Sinakok uktu Jairas nynh oun cceiza Jesuh kha a muite a cculeipaw khe a bakhung ,
+41005023	te a kyakhe , “ Ka ccanung taraw myarya a ccih . Thawccinawte beh oun cceih la a tungvaw khe na kuit beh khang la , te a dang ciza a hiin ci , ” cite a ngia .
+41005024	Tuinte Jesuh tuh amaw ryte ah cceih hae . Ccungccaw patae nynh ah zui hae keiccuze voyrangte ah eng hae .
+41005025	Tuinkya chiiluangte kumhawlaenin cia a ccihnung nopinung a um .
+41005026	Sibawihae patae nynh oyh hae salama danglae khy . A phua balyn pong a mang zema a ccinaw tuh hooythungleite houhou cih .
+41005027	Jesuh the a thaepawte ccungccaw zaw laku tuin a nulangte a zui bua .
+41005028	“ A boeiki ka haeze tuh ka dang cih , ” cite a tuaku .
+41005029	A boeiki kha a haete vaekheitmawte a chiiluangpaw oun kang ; te ka dangvae ci paw a nyku .
+41005030	Jesuh nynh a kyate huhan a toykupaw kha a nyh miakawte mibuupi kalankhe maekuza , “ Hummou ka boei a hae ? ” cite a khia hae .
+41005031	A zuituhae nynh , “ Mibuupi nynh ae enghaepaw ngaw re ; hummou nae hae oh na ci ? ” cite ah ci hae .
+41005032	Thuasalama Jesuh nynh hummou ae enghaepaw tuh cite palei a do .
+41005033	Nopinung nynh a tungvaw acyikupaw kha a nyku keiccuze rhi te thyngkubiate cceiza a cculeipaw kya bakhungte ahmepaw kong balyn kha a ho pya .
+41005034	Jesuh nynh , “ Ka ccanung na zynnaw nynh ae dangsavae . Lungdaete lah cceih la na ccinaw tuh lah dang ccavae sa , ” a ci .
+41005035	Jesuh nynh tute a ho lyakhe Jairas inn langte oun nawhaepaw nynh , “ Na ccanung phe chivae . Sayapaw tuh hnanawhvae nang , ” ah ci hae .
+41005036	Jesuh nynh tute ah hohaepaw kha pawlang rialeite ungza a kyakhe , “ Na thing phang nang , zyn palia zyn , ” a ci .
+41005037	Tuinte Jesuh nynh Peter , James te a netaw Johan holeite hum sangma zuisakuh ryvae khyh hae .
+41005038	Jairas inn kya ah thua hae tuh Jesuh nynh rawkhuite a siahaepaw kha a mui .
+41005039	Innthung langkhe teeza , “ Pawccemou hynte nah siarua oh ? Pawcce nah raw oh ? Imanung tuh a chih zaw tou , a it ungpaw khaw tou ! ” a ci .
+41005040	Mimin nynh ah nuinse hae keiccuze mih balynte a toysaku hae . Imanung nung te paw te a zuituhae luthum ryte imanung a sungkunaw khaan kalankhe ah tee hae .
+41005041	Imanung tuh a kuitte kyngza , “ Talitha , koum , ” a ci , asuilan tuh , “ Imanung thoo lah kae ci , ” ci paw nynh athua .
+41005042	Vaekheitmawte imanung tuh oun thooza a ccei . ( Amaw tuh kumhawlaenin nung nynh athua . ) Tuh e ah muih hae tuh mih ngae-an myarya thua .
+41005043	Thuasalama Jesuh nynh hum kya sangma holeilangte byakin haeza , “ Aelangpaw hankhakheit pya oh , ” a ci .
+41006001	Jesuh tuh tuin kyate thokuza a thonaw khopi langkhe cceiza a zuituhae nynh ah zui hae .
+41006002	Sabbath nin kya sinakok kyakhe a ccanpya hae . Tuinkya ccungccaw patae um haeza a ccanpyanawhaepaw ah thae hae tuh mih ngae-an myarya thua . Mimin nynh , “ Hynh e balyn hyn pawkya e mou a maweku ? Hyncihaw hawnaw hyn pawkyatemou a mawe ? Pawtemou ngae-annaw hyn a rae kho ?
+41006003	Mary ccapaw , leccamapaw , James , Josef , Judas te Simon hae upaw thuakhyh tou ? A ccianunghae balyn heinkya mang um hae khaw ? ” ah ci hae . Tetuh pawlang riavae khyh hae .
+41006004	Jesuh nynh mimin kyakhe , “ Profet hyn amaw thokeinaw khua , a puiziahae te a innbyn holeite hmin ccanlang tuh saw ah tua hae , ” a ci .
+41006005	Tuinkya tuh a dangleihaepaw pytari tungvaw a kuit khangza a dangsahaepaw laelang ngae-annaw pawsangma rae khy .
+41006006	Zynnaw ah hoi khyhaepaw keiccuze a ngae-an myarya thua .
+41006007	A zuituhae laenin kha ko haeza lunin ccite a shaw hae . Satanhae deinaw kaw a pya hae ,
+41006008	te mimin kyakhe , “ Khua nah ccongnaw oh kya hoytang laelang ccangpaw pawsangma ccyngkuh nang oh —- aepaw thuasa , looh ngianawpaw zaw thuasa , nae angkizaw kya phua mah sangkuh nang oh .
+41006009	Phanah nawkuh ohla angki sang phukhykuh nang oh .
+41006010	Innccung ae uanaw oh kyakhe khoh ccang lang nah ccong maw oh cia nah um cih oh .
+41006011	Nah thua cinaw oh khua hae nynh innccung ae daweh ohza nae bya ah ngae khyh haeze nae ccu kya e laemoy kha thyngnua sya ohla cciataw oh . Tuh e tuh mimin hanlang raeringpyanaw athua ci ! ” a ci .
+41006012	Tukeiccuze cceih haeza ccungccaw-hae kha mih seinaw kyate ah ngaesikunawlanghaepaw kha ah ccanpya hae .
+41006013	Satan patae kha deite ngeccih patae kha olif chitui kha thuh haeza ah dangsah hae .
+41006014	Jesuh the tuh khotakyh cia thangza siangpahrang
+41006015	Miccanghae nynh pawtezema , “ Elijah nynh athua , ” ah ci hae .
+41006016	Tuh e tuh Herod nynh a thaete , “ Baptisma pyatu Johan nynh athua ! A lu ka paepaw athua zema bua oun hiin thuivae ! ” a ci .
+41006017	Johan tuh kyngte sivaruite khinaw te thongsawnaw kaw Herod amaw ccacci nynh a lah pya boypaw nynh athua . Pawcce hynte a cyi cize , Herod nynh a netaw Philip zu Herodias kha ,
+41006018	Baptisma pyatu Johan nynh , “ Na netaw zu na dykupaw tuh ahmepaw thuakhyh ! ” cite Herod kha a cipya keiccu nynh athua .
+41006019	Tukeiccuze Herodias nynh Johan kha lungungtungpaza chialang a ry , thuasalama Herod a um keiccuze pawsangma cyih ngang khy .
+41006020	Herod nynh Johan kha myarya a rhi pya , pawccecize Johan tuh ahooypaw te accipaw nynh athua . Tukeiccuze Johan kha a pangkhaw . Johan bya a thae takyvaeze a lung kharyh hooy khy , zema a bya tuh bua a ngaery ki .
+41006021	Nyalangkou tuh Herodias nynh ccyhooy a mawe . Herod puinin kyatuin Herod nynh accozah bawihae , rhawkah bawihae te Galilee ram cciakhaetu piccanhae elang loohdangnaw poy a rae .
+41006022	Herodias ccanung nynh oun teeza oun lawte Herod te a kohaepaw balyn mih lungry myarya thua . Tukeiccuze siangpahrang nynh liaccanung kyakhe , “ Pawmou na ry ? Na rypaw balyn kae pya ci , ” a ci .
+41006023	“ Nae ngiapaw balyn kae pya ci ; ka peenaw abang heze kae pya ci ! ” cite ccaesakute a ho .
+41006024	Tuinte liaccanung nynh a nung kyakhe , “ Pawmou ka ngiakuh ci ? ” a ci .
+41006025	Liaccanung nynh ccawekangmawza siangpahrang kyakhe , “ Baptisma pyatu Johan lu kha pakepite atu heinkya nae pyaze tuh kou ka ry ! ” a ci .
+41006026	Tuh e bya kha siangpahrang nynh a thae tuh a ngae myarya thah , thuasalama a kohaepaw a bawi kahoihae malang ccaesakute bya a kinkuvae keiccuze liaccanung nynh a ngiapaw tuh ei khovae khy .
+41006027	Tukeiccuze vaekheitmawte rhawkaw lukheit kha shawza Johan lu ccynglangte kaw a pya . Rhawkapaw tuh toykuza thonginn lang cciate Johan lu kha a lah pae .
+41006028	Tukoute pakepite oun ccyngza liaccanung tuh a pya ; liaccanung nynh a nung bua a pyaki .
+41006029	Tuh e the tuh Johan zuituhae nynh ah thae haete a ruaa kha lak haeza ah u hae .
+41006030	A zuituhae tuh oun thua haeza Jesuh ryte ah tongkuh hae , te ah cyisanawhae te ah ccanpyanawhae balyn kha ah hopya hae .
+41006031	A kalan oun cceihaepaw te a kihaepaw ah lawng hae keiccuze Jesuh te a zuituhae tuh looh aenaw ccyh sangma hoi khyh hae . Tukeiccuze mimin kyakhe , “ Cceih ohsi la ah makhaete daekakinlang um oh si , te sosoh nae hae-ung thya cih oh , ” a ci .
+41006032	Te mimaw lalyte adaenaw hmin kalan ccialang kha longte ah thokuh hae .
+41006033	Thuasalama ah cciahaepaw kha ccungccaw patae nynh muih haeza hum hae mou ci paw kha ah ny hae keiccuze khuahae balyn kyate toykuh haeza rang langpi khate cciakhawte Jesuh te a zuituhae ah thua maw haeze tuinkya ah lah thua lalovae hae .
+41006034	Jesuh tuh long kyate oun toykuza mibuupi kha a muite thaw myarya a ccih hae , pawccecize rintu a hoileihaepaw tuuhae kha a losah hae . Tukeiccuze phung patae kha a ccanpya hae .
+41006035	Zete tuh a zuituhae nynh oun cceih haeza a kyakhe , “ Atu hynh a mohvae , te hein tuh ccikakingnaw nynh athua .
+41006036	Ccungccawhae hynh shaw hae la anaenaw loo lang te kholae lang zema hankhakheit aelangpaw lah rekuh hae sa , ” ah ci hae .
+41006037	Jesuh nynh , “ Naemaw nynh ah aelanghaepaw tuh pya oh , ” a ci
+41006038	Jesuh nynh , “ Hozetmou sanglou nah hoi oh ? Cceih ohla do oh , ” a ci .
+41006039	Tuinte Jesuh nynh a zuituhae kha a hinpaw lonua vawlang ccungccawhae aphute dahungsalanghaepaw kha a hopya hae .
+41006040	Te ccungccawhae tuh zakheit phu te sungpangaw phute atante ah dahungsah hae .
+41006041	Te Jesuh nynh sanglou phe pangaw te ngasaw zawnin kha lakza vaawlang hoyte Pachia kalan lungtuabya a ho . Sanglou tuh eihza a zuituhae pyate ccungccawhae kha a neisah hae .
+41006042	Ngasaw zawnin khama a neisah ki hae . Ccungccaw miakaw nynh ae haeza ah byn hae .
+41006043	Tuinte a zuituhae nynh ah aebanghaepaw sanglou te ngasaw kha khuin haeza shua hawlaenin acih .
+41006044	Ah aehaepaw pisehae balynte thungpangaw ah cih hae .
+41006045	Vaekheitmawte Jesuh nynh a zuituhae kha long lungkhu lang teesah haeza tuili khuraw e Bethsaida khua lang malang a cciasah lalo loukaw hae khe mibuupi kha a shawki hae .
+41006046	Ngedangte ii cite a beiksya hae koute mua langkhe sawsanglang a ccei .
+41006047	Khua oun zite long tuh tui ngaelung cia thuaza Jesuh tuh a makhaete mua vaw kya a um lya nynh athua .
+41006048	Khisang nynh mih kalan a zaw keiccuze a zuituhae nynh long a zawhaepaw mih vawsawpaw kha ah muih hae . Tukeiccuze awkhua suimilan ccanthum te ccantaruh laku tuh mih kalankhe tui vawlangte cceiza po loilang hae te oun ccei ,
+41006049	thuasalama tui vawlangte oun cciapaw kha ah muih hae . “ Khozi , ” cite tua haeza raerae ah sia hae .
+41006050	Mih balynte amaw kha ah muih hae tuh ah rhih hae .
+41006051	Tuinte mih kalan long lungkhu langkhe tee buaza khisang tuh zya adae . A zuituhae tuh mih ngae-an myarya thua ,
+41006052	pawccecize ccungccaw thungpangaw looh a dangpaw kha a suilan nyh khyh haeza mih thinlung kya lah ccyvae khyh hae .
+41006053	Tuili ah zua hae koute Genesaret kya thua haeza tuinkya mih long kha ah khi hae .
+41006054	Long kyate ah toykuh takaw haete ccungccawhae nynh Jesuh ci paw savah ah ny hae .
+41006055	Tukeiccuze tuin ram kalan arangte cceih haeza a ccihaepaw kha mih phiate Jesuh umnaw langkhe oun puitnua hae .
+41006056	Te Jesuh a ccianaw miakaw kyakhe khoti , khopi te zema thuasa , loo langte zema thuasa , ngeccihae kha kungkunaw hmin kalankhe oun thuakhae haeza a ccihaepaw nynh a boeiki sang ah haenawlang hae kha ah ngiapya hae . Te a haehaepaw miakaw tuh ah dang hae .
+41007001	Jerusalem langte oun thuahaepaw abang Farasihae te Phungbya sayahae nynh ah pae bua hae .
+41007002	Abang zuituhae nynh kuit singku leite ah aehaepaw kha ah muih hae , asuilan tuh Farasihae nynh nae kuit nah singkuh cih oh , ah ci hae thyhawte mih kuit kha singkuh khyh hae cinawpaw nynh athua .
+41007003	( Pawccecize Farasihae thuasa , Judahae thuasa , mih mingpawhae ccanpyanaw kha kyngkuh haeza ah zui hae ; mih phung hawte mih kuit ah singkuvae khyh haeze looh aevae khyh hae .
+41007004	Te kungku kya e ah rehaepaw uccaw ciakha mih phung thyte ah sing khyh haeze ae ry khyh hae . Te mih mingpawhae nynh ah ccanpyahaepaw banan sing zia , an sing zia , sohin dawre sing zia , te ikhuinhae
+41007005	Tukeiccuze Farasihae te Phungbya sayahae nynh Jesuh kha , “ Pawccemou na zuituhae nynh ah mingpawhae ccanpyanaw zui leite kuit singku leipite looh ah ae hae ? ” cite ah khia hae .
+41007006	Jesuh nynh , “ Profet Isaiah nynh nanin konglang a hopaw akyh babang ! Nanin thyaphehae , nae kong tuh hynte nynh a zei :
+41007007	Kae oun beikhaepaw hyn ccungkia khy ,
+41007008	“ Pachia phungbya kha nah vua ohza ccungccaw ccanpyanaw kha nah zui oh , ” a ci .
+41007009	Te Jesuh nynh piakiza , “ Naemaw ccanpyakunaw tynsanaw elang Pachia phungbya vua tuh myarya nah thya oh .
+41007010	Pawccecize Moses kawpyapaw kya , ‘ Na nung te na paw sawtua , ’ te ‘ Humzema a nung thuasa , a paw thuasa , a ruingpaw tuh chia thuasah , ’ a ciku .
+41007011	Thuasalama nanin nynh tuh , ‘ Ccungccaw lukhakheit nynh a paw te a nung kha : naemaw bawmnawlang ka ci paw ka uccaw hyn Korban nynh athua a cize , ( asuilan tuh Pachia uccaw ci paw ) ,
+41007012	tuh e paw tuh a paw te a nung bawmnaw kyate a lawe , ’ nah ci oh .
+41007013	Hyncite minghae nah ccanpya ohpaw nynh Pachia bya kha marya a the kou . Te tuhawte nah cyi ohpaw ccangpaw uccaw ma patae um , ” a ci .
+41007014	Jesuh nynh mibuupi kha a kalankhe bua koki haeza mimin kyakhe , “ Nae kalangte ka bya hopaw hyn ngae ohla thae oh !
+41007015	Ccungccaw hyn atolang te alungkhu lang oun teepaw nynh oun thusah khy . Alungkhu kyate oun poupaw nynh oun thu sa , ” a ci .
+41007017	Jesuh nynh mibuupi kha cciataw haeza innthung lang a teete a zuituhae nynh tuh e bya suilan kha ah khia hae .
+41007018	Jesuh nynh , “ Miccanghae laeze nah hawhua khyh oh hynh sya ! Nah nyh ccaccing khyh oh tou ? Atolang te oun teepaw uccaw nynh ccungccaw kha thusah khy ,
+41007019	pawccecize a bung lungkhu lang tee leite a voe lungkhu lang teeza a pyn kyate bua a pou ki . ( Hynte Jesuh nynh a horynawpaw tuh aepaw miakaw balyn ae langze accanthya , a ci rynawpaw nynh athua . )
+41007020	Te Jesuh nynh , “ Ccungccaw a thusatu tuh a lungkhu kyate a toykupaw nynh athua .
+41007021	Pawccecize hooyleinaw a raesatu ruanaw hooyleipaw balyn tuh ccungccaw lungkhu kyate oun toykuhaepaw nynh ah thua hae : runaw , ming chianaw ,
+41007022	nopi pise seinaw , uccaw duaanaw , thyarunaw , lingkunaw , ei-ungnaw , thethya honaw , phu-ehnaw , pookunaw , ngaeepaw ryalawnaw ,
+41007023	hynh e uccawhae balyn tuh ccungccaw lungkhu kyate oun toykupaw thua haeza ccungccaw a thusatu nynh athua , ” a ci .
+41007024	Tuinte Jesuh tuh cceiza Taia khua pe khe a thua . Inn ccankheit lungkhu langkhe teeza hum sangma nysakuh ry khyh hae , thuasalama rekuh kho lae khy .
+41007025	A ccanung satan bakupaw nopinung nynh Jesuh kong kha a thaepawte oun cceiza vaekheitmawte a cculeipaw khe a bakhung .
+41007026	Amaw tuh Syria ram Foenisia pee kya a puinung Zeintailnung nynh athua . Satan kha a ccanung kyate deipyalang Jesuh tuh a ngia .
+41007027	Thuasalama Jesuh nynh , “ Aepaw tuh ccawhae sya pyatylang . Ccawhae aepaw tuh ui pyalangze hme ngaw khy , ” a ci .
+41007028	Nopinung nynh , “ Athua , Bawipaw ! Ccawhae nynh ah hihaepaw ccaboy kaw e loohya tuh uihae nynh ah ccua he hae khaw ! ” a ci .
+41007029	Te Jesuh nynh a kyakhe , “ Tuh e letnaw keiccuze , na inn lang lah ki la na ccanung tungvaw kyate satan a pouvaepaw kha na muih ci , ” a ci .
+41007030	Inn langkhe cceiza satan nynh a poutawvaepaw ikhuin vaw a inung a ccanung kha a mui .
+41007031	Tuin Taia pee kyate Jesuh tuh thokuza Sidon ram luipaw biate Khuahae Khohaw kyacia cceiza Galilee Tuili kya a thua .
+41007032	Abang ccungccaw nynh a kalankhe nawrua-byaholeipaw kha oun cciakhae haeza Jesuh nynh a tungvaw kya a kuit a khangnawlangpaw ah ngia hae .
+41007033	Tukeiccuze Jesuh nynh ccungccapaw kha mibuupi kyate accanglang cciakhaeza a kuitdungte a nakaring a pu , a tuinte thoiza a lae kha a hae .
+41007034	Tuinte Jesuh nynh vaawlang hoyte rumza tuh e paw elang kha , “ Effatha , ” cite a ci ; asuilan tuh , “ Hongkuh ccavae ! ” ci paw nynh athua .
+41007035	Vaekheitmawte tuh e paw tuh a naw ae uaza a lae-akvae leite nawpalilang oun ho thyavae .
+41007036	Tuinte Jesuh nynh hynh e kong tuh hum kya sangma nah holang khyh oh a cipya hae . Thuasalama hou khee haeza hou ah ho hae .
+41007037	Tuh e the a thaehaepaw balyn nynh mih ngae-an myarya thuaza , “ A raepaw balyn myarya myng hooy rei ! Nawruahae naw uaza byaholeihae nynh bya ah hothya hae ! ” cite ah poo hae .
+41008001	Tukoute aromawze mibuupi nynh oun soiluanuakuki hae . Mibuupihae tuh aelangpaw ah hoi khyh haepawte Jesuh nynh a zuituhae kha ko haeza ,
+41008002	“ Hynh e hae hyn ninthum cia ka kya umvae haeza atu aelangpaw ah hoi khyh hae keiccuze thaw myarya ka ccih hae .
+41008003	Looh ae leite cciasalang haeze abang ccungccaw tuh laansawpi lang a cceih cihaepaw ah thua hae keiccuze laanryng ah baaw cih hae , ” a ci .
+41008004	A zuituhae nynh , “ Hynh e ccikakingnaw kya hyn hynzet ccungccaw aelangpaw hum nynh mou a zah kho ci ? ” ah ci hae .
+41008005	Jesuh nynh , “ Sanglou hozetmou nah hoi oh ? ” cite a khia hae .
+41008006	Jesuh nynh mibuupi kha laekhu kya dahungnaw kaw a pya hae . Tuinte Jesuh nynh sanglou kha lakza Pachia kalan lungtuabya a ho koute eihza mibuupi neilang kha a zuituhae a pya hae ; te a zuituhae nynh ah nei hae .
+41008007	Ngasadipaw pytari ma ah hoi hae . Jesuh nynh ngasadipaw hanlang lungtuabya a ho koute a zuituhae neilang a naw hae .
+41008010	vaekheitmawte a zuituhae ryte long lungkhu lang tee haeza Dalmanutha pee lang ah cceih hae .
+41008011	Abang Farasihae nynh Jesuh kalan oun cceih haeza bya ah eikuh hae . Amaw kha bakaang kaesah ah ry hae keiccuze , Pachia popaw na thua te thuakhyh langsakunawlang ngae-annaw pyngkheit rae tua ? ” ah ci hae .
+41008012	Jesuh nynh thawte rumza , “ Pawccemou atu she e ccungccawhae nynh ngae-annaw raelang kha nae naw oh ? Baccaccing kae hopya oh : tucihaw muisanaw tuh atu she e ccungccawhae tuh pya thualang khy , ” a ci .
+41008013	Mimin kha cciataw haeza long lungkhu lang a tee koute tuili khuraw lang a cciataw hae .
+41008014	Zuituhae nynh sanglou pheh zaw-lang phulangpaw kha ning haeza long lungkhu kya phekheit kyalya nynh ah hoi hae .
+41008015	Jesuh nynh mimin kyakhe , “ Farasihae soda te Herod soda kha raeringkuh oh , ” a ci .
+41008016	Mimin nynh , “ Sanglou ah hoi khyh ohpawte nynh hynte a ho , ” cite lukheit te lukheit kha ah cikuh hae .
+41008017	Tucite ah hohaepaw kha Jesuh nynh a nypawte mimin kyakhe , “ Paw-langmou sanglou nah hoi khyh ohpaw kong tuh palei nah ho oh ? Nah nyh lah khyh oh tou ? Nah thae thya lah khyh oh tou ? Nae lung myarya ping i ?
+41008018	Mit nah hoi oh khaw , nah muih kho khyh oh i ? Nakaring nah hoi oh khaw , nah thae kho khyh oh i ? Ccungccaw thungpangaw hanlang ,
+41008019	sanglou phe pangaw ka ia lya kha nah nyvae khyh oh tou ? Aebangpaw kha shua hozetmou nah khuin oh ? ” a ci .
+41008020	Jesuh nynh , “ Te ccungccaw thungpalei hanlang sanglou phe sari ka ia lya kha aebangpaw shua hozetmou nah khuin oh ? ” cite a khia hae .
+41008021	Jesuh nynh , “ Atu ryacia nah thae thya khyh oh tou ? ” cite a khia hae .
+41008022	Bethsaida khua ah thua hae tuh tuin e abang ccungccaw nynh mitzupaw lukheit kha Jesuh kalan oun cciakhae haeza a kuitte haelang ah ngia hae .
+41008023	Jesuh nynh mitzupaw tuh a kuitte kyngza khoh liaa langkhe a cciakhae . A mit kya a tuin a thoi koute Jesuh nynh a tungvaw kya a kuit khangza , “ Pawsang na muih kho tou ? ” cite a khia .
+41008024	Mitzupaw nynh dothungza , “ Athua , ccungccaw ka muih kho , thuasalama thinghae a cceihaepaw hawte nynh athua , ” a ci .
+41008025	Ccungccapaw mit vaw khe Jesuh nynh a kuit kha a khang ki . Mitzupaw nynh thawmawte doza a mit a awvae keiccuze pawpaw balyn ccaerarilang a muih kho .
+41008026	Jesuh nynh inn langkhe kisaza , “ Kholae lang lah teevae nang , ” a ci .
+41008027	Tuinte Jesuh te a zuituhae tuh Sisaria Philippi khua pe e khotarawhae cconglang ah cceih hae . Laanpi kya Jesuh nynh zuituhae kyakhe , “ Kae hyn ccungccawhae nynh hum oun ci hae mou , oun hopya tua oh ? ” cite a khia hae .
+41008028	Mimin nynh , “ Abang nynh Baptisma pyatu Johan , ae ci hae ; abang nynh , “ Elijah , ” ae ci hae ; abang nynh , “ Profethae lukhakheit nynh athua , ae ci hae , ” cite ah ci hae .
+41008029	Jesuh nynh , “ Nanin so hum nae ci oh mou ? ” cite a khia hae .
+41008030	Tuinte Jesuh nynh , “ Ka konglang hyn hum kya sangma lah ho nang oh ” cite bya a kin hae .
+41008031	Tuinte Jesuh nynh a zuituhae kha a ccanpya hae : “ Ccungccaw Ccapaw tuh accihuapaw vawsawnaw a ing hahe ci , te piccanhae , silawtu piccanhae te Phungbya sayahae nynh oun vua cih hae . Amaw tuh oun theih cih hae , thuasalama ninthum koute oun hiinthui ci , ” a ci .
+41008032	Tuh e kong tuh mimin kha ccaerarilang a hopya hae . Tukeiccuze Peter nynh Jesuh kha ccanglang khe cciakhaeza a raw .
+41008033	Thuasalama Jesuh nynh maenuakuza a zuituhae dobiate Peter kha , “ Satan , ka kyate cceih ! Na tuanaw hyn Pachia kyate oun thuapaw thuakhy , ccungccaw kyate oun thuapaw nynh athua , ” a ci .
+41008034	Tuinte Jesuh nynh mibuupi te a zuituhae kha a kalankhe ko haeza , “ Humzema ka kalan ccia a rypaw tuh amaw te amaw ningkuh sa , a vaelantung puitkuh sa , te oun zui sa .
+41008035	Pawccecize humzema amaw a hiinnaw a sungkhawkupaw tuh a hiinnaw a shung ci , thuasalama kaekah hanlang te thehooypaw elang a hiinnaw a vuapaw tuh a hiinnaw a khyng ci .
+41008036	Ccungccaw lukheit nynh laephi hyn pong ccou salama a hiinnaw a shung langze pawmou athane ? Thane khy !
+41008037	A hiinnaw tuh pawtesangma muithui khovaelang khy .
+41008038	Atu she Pachia pawlang a rialeihaepaw sheethya kyahin kamaw te ka ccanpyanaw a ziachikhaepaw tuh Ccungccaw Ccapaw nynh vaaw mithyahae ryte a Paw phu-enawte oun thuavaeze a ziachikhae ru ci , ” a ci .
+41009001	Te baccaccing kae hopya oh : “ Heinkya abang a umpaw nynh Pachia Peenaw huhante oun thuapaw ah muih hae mawlaezung chilang khyh hae , ” a ci .
+41009002	Nintaruh koute Jesuh nynh Peter , James te Johan kha hoybua haeza mih makhaete mua langkhe ah kae hae . Ah muinaw hae kyamaw khe Jesuh tuh a muinsang rulaekuza ,
+41009003	a boeinin tuh lalah atlang rawza laephi ccungccaw nynh tucih rawlangte a suh khopaw unglang khy .
+41009004	Tuinte zuituhae luthum nynh Jesuh ryte bya a hokuhaepaw Moses te Elijah kha ah muih hae .
+41009005	Peter nynh , “ Saya , hein ah um ohpaw tuh myarya ahooy ! Buu buuthum sah oh sila na hanlang buukheit , Moses hanlang buukheit , te Elijah hanlang buukheit , ” a ci .
+41009006	Peter te a banhae tuh mih rhikaw thuaza pawsangma holangpaw ah ny khyh hae keiccu nynh athua .
+41009007	Tuinte maeking nynh oun pouza mih vawlangte pong a chii hae , te maeking lungkhu kyate , “ Hynh e paw tuh ka sungsapaw ka Ccapaw , a kaw lah ngae oh ! ” cite a ci .
+41009008	Arangte mih pepang tuin do haeza humsangma muih khyh hae ; Jesuh kyalya mih pe kya a umpaw kha ah muih hae .
+41009009	Mua langte oun rungbung lya hae khe Jesuh nynh , “ Ccungccaw Ccapaw nynh chinaw te oun thoothui mawlaezung tuh nah muih ohpaw hyn hum kya sangma lah ho nang oh , ” cite bya a kin hae .
+41009010	A bakin tuh ah ngae hae , thuasalama , “ Chinaw kyate thoothui , ” ci paw hyn pawcihawpaw mou ? ” cite mih laku kya ah khiakuh hae .
+41009011	Te mimin nynh Jesuh kha , “ Pawccemou Phungbya sayahae nynh Elijah nynh oun thuaty cih , ah ci hae ? ” cite ah khia hae .
+41009012	Jesuh nynh , “ Pawpaw balyn paccynty khylang Elijah tuh oun thuaty ci . Thuasalama pawccemou Ccathya nynh , ‘ Ccungccaw Ccapaw nynh vawsawnaw a te-ing ciza oun vua cih hae , ’ a ci ?
+41009013	Baccaccing kae hopya oh : Elijah tuh oun thuavaeza , Ccathya nynh a ho hawte ccungccawhae nynh mih ry thathyte ah tuaavae hae , ” a ci .
+41009014	Ccangpaw zuituhae kya ah thua hae tuh mih pepangte mibuupi nynh koylui haeza Phungbya sayahae ryte ah eikuhaepaw kha ah muih hae .
+41009015	Mibuupi nynh Jesuh kha ah muih hae tuh mih ngae-an thuaza doyhaw khylang ah ccawe hae .
+41009016	Jesuh nynh a zuituhae kha , “ Paw kong mou mimin ryte nah eiku oh ? ” cite a khia hae .
+41009017	Mibuupi lakute ccungccapaw lukheit nynh , “ Saya , ka ccapaw na kalan kae cciakhae , pawccecize satan nynh bahza bya ma ho kho khy .
+41009018	Satan nynh oun thuanuavaeze laephi kya vuakuza a khalan kyate a kaphoi thuate a haw ryza karae a hoohe . Satan deipyalang na zuituhae ka hopah haeza dei kho khyh hae , ” a ci .
+41009019	Jesuh nynh mimin kyakhe , “ Pou zynnaw hoilei ccungccawhae ! Nae kya hose ciamou ka um ung ci ? Nae kya hose ciamou kae ngaesangpah ung cih oh ? imapaw tuh ka kalan oun cciakhae oh ! ” a ci .
+41009020	imapaw tuh Jesuh kalan ah cciakhae hae .
+41009021	Jesuh nynh , “ Hynte a cyinaw sawvae tou ? ” cite a paw kha a khia
+41009022	Vae patae satan nynh amaw hynh chialangte maei lungkhu lang te tui lungkhu lang a phaungsaku . Na cyi khopaw athuaze tuh thaw oun ccih la beh oun bawm tua ! ” a ci .
+41009023	Jesuh nynh , “ Na cyi kho athuaze tuh , na ci . Athua ! Zynnaw a hoipaw hanlang tuh atynre balyn a cyikuh kho khaw tou , ” a ci .
+41009024	Vaekheitmawte a paw nynh , “ Zynnaw tuh mang ka hoi , thuasalama zaw khy . Hou oun bawm hin ! ” cite a sia .
+41009025	Jesuh nynh mibuupi houhou oun naekuhaepaw kha a muih tuh satan kha , “ Naw a pangsapaw te bya a hosaleipaw muisaw , imapaw pyn kyate toykuh ohla a lungkhu kya tee thuivae nang oh , ” cite kaw a pya .
+41009026	Satan tuh rumza imapaw kha dungsyate vuasakuza a toytawku . imapaw tuh michi a lovae keiccuze ccungccaw miakaw nynh , “ A chivae , ” ah ci hae .
+41009027	Thuasalama Jesuh nynh imapaw tuh a kuitte thooza a thadyn .
+41009028	Jesuh innthung lang a tee loukaw khe a zuituhae nynh arulangte , “ Pawcce mou muisaw ah dei kho khyh oh ? ” ah cikuh hae .
+41009029	Jesuh nynh , “ Hyncihaw hynh tuh sawsangnawte rou nynh dei khopaw athua , ” a ci .
+41009030	Jesuh te a zuituhae tuh tuin ram kyate thokuh haeza Galilee ram ah cceipaw hae . Jesuh nynh a umnaw kha hum nynh sangma oun nyh nang sah ci a ry .
+41009031	Pawccecize a zuituhae kha ccanpya bia haeza , “ Ccungccaw Ccapaw kha a theih cihaepaw kuit kalankhe oun pya cih hae . Pawtezema ninthum koute bua oun thoothui ci , ” a ci .
+41009032	Thuasalama a ccanpyahaepaw suilan kha nyh kho khyh hae , te khia raw mah phe rhih hae .
+41009033	Kapernaum khua ah thua hae tuh innthung lang ah tee hae koute Jesuh nynh a zuituhae kha , “ Laanpize nah eiku ohpaw kha pawmou ? ” cite a khia hae .
+41009034	Thuasalama khung khyh hae , pawccecize laanpize ah eikuhaepaw tuh mih laku kya hummou a leehua ci paw nynh athua .
+41009035	Jesuh nynh dahungte zuituhae luhawlaenin kha ko haeza , “ Humzema a leehuapawlang tang a rypaw tuh nae laku kya a nyaahuapawlang a tangty ci te ccungccawhae sinumlang a tang ci , ” a ci .
+41009036	Tuinte imua lukheit kha koza mih laku khe a thadyn sa . Imua tuh kuiza ,
+41009037	“ Humzema hynh e imua hyn ka minte a paduapaw tuh kae oun paduapaw ; te kae oun paduapaw tuh oun shawtupaw khazema a padua , ” a ci .
+41009038	Johan nynh , “ Saya , na minte satan a deipaw kae muiza kae khee , pawccecize amaw tuh ah phu kya e thuakhy , ” a ci .
+41009039	Jesuh nynh , “ Khee nang oh , paw-ccecize ka minte ngae-annaw a raepaw nynh tuh ka thethya oun holang khy .
+41009040	Pawccecize oun douleipaw tuh oun pangkhaepaw nynh athua .
+41009041	Baccaccing kae hopya oh : ka ccungccaw nah thua oh keiccuze nialangpaw tuikyaa nankheit ae suapah ohpaw tuh laksawng a mawe ccaccing ci .
+41009042	“ Humzema imuahae lukhakheit hyn kae oun zynnaw kyate a rosapaw tuh a ngin kya ccatan mianawpaw lungtung saelangza rili lungkhu lang phaunglangze anin hanlang ahooyhua .
+41009043	Tukeiccuze na kuit nynh na zynnaw ae rosah langze thoh tya ! Kuitninte achih kholeipaw hell maei lungkhu lang ccaw laeze kuitkheitte hiinnaw kalan tee nynh na hanlang ahooyhua .
+41009045	Te na ccu nynh na zynnaw ae rosah langze thoh tya ! Ccuninte hell lungkhu lang ccaw laeze ccukheitte hiinnaw lungkhu lang tee nynh na hanlang ahooyhua .
+41009047	Na mit nynh na zynnaw ae rosah langze khoi ! Mitninte hell lungkhu lang ccaw laeze mitkheitte Pachia Peenaw lungkhu lang teepaw nynh na hanlang ahooyhua .
+41009048	Tuin tuh ‘ mimaw a aetu zangpawhae kha chiboyvae khyh haeza mimaw a utu maei ma chiboyvae khy . ’
+41009049	“ Silawkunawpaw saw kha loyte thyasah athua hawte ccungccaw miakaw tuh maeite thyasah athua ci .
+41009050	“ Loy tuh ahooy ; thuasalama a ennaw kha azovae langze pawtemou bua na ensah kho ci ?
+41010001	Tuinte Jesuh nynh tuin hmin kyate toykute Judea ram langkhe cceiza Jordan Vaw a zua . Mibuupihae nynh bua oun pumnuakuh ki haeza a ccanpya hae hawte a ccanpyaki hae .
+41010002	Abang Farasihae nynh seinaw ccungpya khylang oun thua haeza mimin nynh , “ Ah Phung nynh zu mya hyn oun ua tou , oun hopya tua ? ” cite ah khia hae .
+41010003	Jesuh nynh , “ Paw phung mou Moses nynh ae pya oh ? ” cite bakhianawte a let hae .
+41010004	Mimin nynh , “ Moses nynh tuh zumyanaw ccaw kha nah zei cih ohza zu tuh nah mak kho oh , a ci , ” cite ah let hae .
+41010005	Jesuh nynh mimin kyakhe , “ Nae thinlung eih pingza ccanpya nah rhu oh keiccuze Moses nynh hynte phung ae pyanaw ohpaw tuh athua .
+41010006	Thuasalama atakaw vaaw te lae rae lyaze Ccathya nynh a ho hawte , ‘ Pachia nynh nopi te pise a rae .
+41010007	Tukeiccuze pise nynh a nung te a paw kha cciatawte a zu te ah soiluakuh cih haeza pynkheitlang ah tangvae cih hae , ’ a cinawpaw tuh athua .
+41010008	Tukeiccuze lunin thuavae leite pynkheit nynh ah thuavae hae .
+41010009	Pachia nynh a soiluavaehaepaw kha hum nynh sangma phia nang hae sa , ” a ci .
+41010010	Innthung lang bua ah tee haete a zuituhae nynh Jesuh kha tuh e konglang ah khia hae .
+41010011	Jesuh nynh mimin kyakhe , “ Ccungccaw lukheit nynh a zu kha makza ccangpaw nopi a dyze tuh ccangpaw zu kya seinaw a raepaw nynh athua .
+41010012	Tuthyhawte nopinung nynh a vawpaw kha makza vawpah ccangpaw a hoize tuh vawpah ccangpaw kya seinaw a raenung nynh athua , ” a ci .
+41010013	Abang ccungccawhae nynh imuahae kha Jesuh nynh mih tungvaw kya kuitkhangte hythuapyasalang a kalankhe oun cciakhae hae , thuasalama a zuituhae nynh ccungccawhae kha ah raw hae .
+41010014	Tuh e kong kha Jesuh nynh a thaete a thinriaza a zuituhae kyakhe , “ Imuahae tuh ka kalan oun cceih hae sa , raw nang oh , pawccecize Pachia Peenaw tuh hynhawhaepaw imuahae hanlang nynh athua .
+41010015	Baccaccing kae hopya oh : humzema imua hawte Pachia Peenaw kha a ccouleipaw tuh tuin lungkhu lang tee kho boylang khy , ” a ci .
+41010016	Te imuahae tuh pawm haeza mih tungvaw khe a kuit khang kalang haeza hythuanaw a pya hae .
+41010017	Jesuh tuh khuacconglang a thoku dynkhe ccungccapaw lukheit nynh oun ccaweza a ccukharutungte , “ Saya hooypaw , zungzae hiinnaw ka ccou khonawlang pawmou ka cyih ci ? ” a ci .
+41010018	Jesuh nynh , “ Pawcce saya hooypaw nae ci ? Pachia laelang ahooypaw hum mah um khy .
+41010019	Kawbyahae kha mang na nyh khaw : ‘ ccungccaw theih nang ; nopi pise seinaw rae nang ; ruh nang ; ming sei bei nang ; ccungccaw ling nang ; na paw te na nung sawtua , ’ ci paw kha , ” a ci .
+41010020	Tuh e paw nynh , “ Saya , e kawbyahae balyn tuh ka ditaraw lyate marya ka zuivaepaw , ” a ci .
+41010021	Jesuh nynh tuh e paw kha sungsanawte doza , “ Uccaw hankheit na bou ung . Lah cceih la na hoipaw balyn kha zuate phua kha ryachihae lah pya hae , te vaawlang khua kya na hoirum ci ; tukoute rang la oun zui , ” a ci .
+41010022	Tuh e bya a thaete ccungccapaw tuh a mimae hooyleite ngaethyate a ki , pawccecize myarya a hoirumpaw nynh athua .
+41010023	Jesuh nynh a zuituhae kha do haeza mimin kyakhe , “ Mirumhae nynh Pachia Peenaw kya teelangpaw tuh pawcimou arhu ci ! ” a ci .
+41010024	Tuh e bya ah thae haete zuitu-hae tuh mih ngae-an myarya thua ; thuasalama Jesuh nynh hopah ki haeza , “ Ka ccawhae , Pachia Peenaw kya tee tuh pawcimou arhu !
+41010025	Mirumhae nynh Pachia Peenaw lungkhu lang teelangpaw laeze kalauk nynh phynbang khu lungkhu lang a tee langze azoyhua , ” a ci .
+41010026	Tuh e bya ah thae hae te mih nge-an hou thuaza , “ Tute athuaze hummou khumnaw tuh ah mawe kho ci ? ” cite lukheit te lukheit kha ah khiakuh hae .
+41010027	Jesuh nynh a zuituhae kha dobiate , “ Hynh e hyn ccungccaw hanlang tuh cyikuh kholang khy , thuasalama Pachia hanlang tuh acyikuh kho ; Pachia hanlang tuh acyikuh kholeipaw pawsangma um khy , ” a ci .
+41010028	Tukoute Peter nynh thoza , “ Do tua , uccaw miakaw kae cciatawza namaw kae zui , ” a ci .
+41010029	Jesuh nynh mimin kyakhe , “ Athua , baccaccing kae hopya oh : humzema a inn thuasa , a uno thuasa , a ccianung thuasa , a nung thuasa , a paw thuasa , a ccawhae thuasa , a loo thuasa , kae te thehooypaw hanlang a cciatawpaw tuh ,
+41010030	atu she ccacci kyamaw hyn hou lawnglang a mawe ci . Innhae thuasa , unohae thuasa , ccianunghae thuasa , nunghae thuasa , ccawhae thuasa , loohae thuasa , aleit zakheit a mawe ci , tuh e vawlang vawsawnaw zema a mawe ci ; te oun thua cipaw she kya zungzae hiinnaw a mawe ci .
+41010031	Thuasalama atuze masaty ccungccawhae tuh nyathyapawlang oun tang cih hae , te atuze nyathyapaw ccungccaw patae tuh masatypawlang oun tang cih hae , ” a ci .
+41010032	Jesuh te a zuituhae tuh Jerusalem lang ah cceih hae . Jesuh nynh a zuituhae kha laanmaw a soypya hae keiccuze mih bung azou ; a nulangte a zuihaepaw ccungccawhae ma ah rhih hae . Jesuh nynh zuituhae luhawlaenin kha ccanglang khe bua cciakhae haeza a tungvaw kya oun cyikuh cipaw kong a hopya ki hae .
+41010033	Jesuh nynh mimin kyakhe , “ Ngaetua oh ! Jerusalem oun thua cih ohza Ccungccaw Ccapaw hyn silawtu piccanhae te phungbya sayahae kuit kya oun pya cih hae . Mimin nynh chialangte bya oun pae hae koute Zeintailhae kalan oun pya cih hae .
+41010034	Tuh e hae nynh ccya oun sanakuh cih hae , tuinte oun thoi cih hae , oun zia cih hae , te oun theih cih hae ; thuasalama ninthum koute oun thoothui ci , ” a ci .
+41010035	Tuinte Zebedi ccawhae James te Johan nynh Jesuh kalan oun cceih haeza , “ Saya , kaenin hanlang uccaw hankhakheit nae cyi paravo nynh ci kae ry , ” ah ci hae .
+41010036	Jesuh nynh , “ Pawmou nah ry ohpaw tuh ? ” cite a khia hae .
+41010037	Mimin nynh , “ A phu-epaw na Peenaw tungkhung kya nae dahungvaeze na pe khe oun dahungsah buavae i ; lukheit na ranglang , lukheit na voylang , ” ah ci hae .
+41010038	Jesuh nynh mimin kyakhe , “ Pawpei kae ngia ci paw hyn nah nyh khyh oh . Ka nialangpaw tei-ingnaw banan hyn nah neih kho cih oh tou ? Ka mawelangpaw baptisma hyn nah lak kho cih oh tou ? ” a ci .
+41010039	Mimin nynh , “ Kae cyih kho ci , ” cite ah khung hae .
+41010040	Thuasalama ka ranglang te ka voylang a dahung cipaw ponaw kaw ka hoi khy . Pachia nynh hynh e hminhae tuh a paccyngpya tyhaepaw kyakhe a pya cih hae , ” a ci .
+41010041	Tuh e kong zuituhae luhaw nynh ah thae hae tuh James te Johan elang mih thin myarya aria .
+41010042	Tukeiccuze Jesuh nynh mih balynte a kalan ko haeza , “ Laephivaw uktu bawihae tuh a ukhaepaw tungvaw huhan myarya hoi haeza rangpihae cia kaw myarya hoi hae , ci paw nah ny oh .
+41010043	Thuasalama nanin laku tuh tute thualang khy . Nanin lakuze lukhakheit nynh aleepawlang tang a ry langze nae sinumlang a tang hahe ci .
+41010044	Nanin lakuze lukhakheit nynh ccankheitnawlang tang a ry langze nae seelang a tang hahe ci .
+41010045	Pawccecize Ccungccaw Ccapaw tuh ryaapawlangte oun thua khy ; ryaatulang te ccungccaw patae a hiinnawte saw khylang nynh oun thua , ” a ci .
+41010046	Jesuh te a zuituhae te mibuupi tuh Jerikho khua ah thua hae . Tuin khua te ah poudyng hae khe uccawngiakutu Timeas ccapaw Bartimias tuh laanrae khe a dahung .
+41010047	Nazareth khuapaw Jesuh ci paw a thae tuh , “ David Ccapaw Jesuh ! Thaw beh oun cci tua ! ” cite a sia .
+41010048	Ccungccaw patae nynh raw haeza ah daesah hae . Thuasalama hou ccaelangte , “ David Ccapaw , ka tungvaw thaw beh oun cci tua ! ” cite a sia .
+41010049	Jesuh nynh dahangza , “ Oun ko oh , ” a ci .
+41010050	A boei kha vuaza a thohkupawte Jesuh kya a thua .
+41010051	Jesuh nynh , “ Paw oun cyipasah ci mou nae ry ? ” cite a khia .
+41010052	Jesuh nynh , “ Cceih , na zynnaw nynh ae dangsavae , ” a ci .
+41011001	Jerusalem lang vyavya thuadyn Bethfage te Bethany khua pe Oliv Mua kya ah thua hae . Jesuh nynh a zuituhae lunin kha malang khe shaw lalo haeza ,
+41011002	mimin kyakhe , “ Nae malang e khua kalankhe lah cceih oh . Tuin nah thua oh miakawte hum nynh sangma ah cciku boyleihaepaw lantaraw a khikupaw kha nah muih cih oh . Oun supah ohla oun sawe oh .
+41011003	Lukhakheit nynh , ‘ Pawcce nah su oh ? ’ , ae ci ohze , ‘ Bawipaw nynh a peki , taloy bua kae pya cih oh , ’ nae cipah cih oh , ” a ci .
+41011004	Te cceih haeza laanpi kya e innkheit thuakaw kya ah khikupaw lantaraw kha ah muih hae . Ah supya lya hae khe ,
+41011005	mih pe a bang a thadynhaepaw nynh , “ Pawmou nah cyi oh , lantaraw i nah supya oh ? ” ah ci hae .
+41011006	Jesuh nynh a taw thyh hae hawte hopah haeza mimin nynh ah cciasah hae .
+41011007	Lantaraw tuh Jesuh kya ah thuakhae hae te mih boei kha a tungvaw khe depah haeza Jesuh nynh ah cciku .
+41011008	Ccungccawhae nynh Jesuh oun zui cinaw laanpi kya mih boei kha phaepah haeza abang nynh loo kya e thingnge kha khya haeza ah phaepya hae .
+41011009	Malang a cceihaepaw te nulang a cceihaepaw nynh , “ Pachia tuh thehooysah oh ! Bawipaw minte oun thuapaw tuh Pachia nynh hythua pya sa !
+41011010	Ah mingpaw David Siangpahrang Peenaw oun thualangpaw tuh Pachia nynh hythua pya sa ! Pachia tuh thehooysah oh ! ” cite ah sia hae .
+41011011	Jesuh tuh Jerusalem khua a thuate Beikinn lungkhu lang teeza uccaw balyn marya a do . Thuasalama khuanin anaevae keiccuze zuituhae laenin ryte Bethany lang ah cceih hae .
+41011012	Amuakalang Bethany khua te oun ki lya hae khe Jesuh tuh a voe a law .
+41011013	Asawpite ebung ku anaw hinlalypaw kha muiza a thaee loku khylang a ccianua . Thuasalama ebung kya a thua tuh anaw kyalya kha a mui , pawccecize ebung a thaee ccyh thuakhy .
+41011014	Hum nynh sangzema na thaee ae ci tuh umvae nang sa , ” a ci .
+41011015	Jerusalem ah thua hae te Jesuh tuh Beikinn lang cceiza a lungkhu uccaw a repaw te a zuahaepaw kha a dei hae . Phua a ruhaepaw ccaboy balyn te valaeleh a zuahaepaw tungkhung balyn marya a bulepya hae ,
+41011016	te Beikinn maepaw kya uccaw a phuhaepaw khama a khee hae .
+41011017	Ccungccaw zahpihae kha hynte a ccanpyahae : “ Ccathyahae kya Pachia nynh , ‘ Ka inn tuh miphuinhae balyn sawsangnaw inn ci athua ci , ’ cite a zeiku . Thuasalama nanin nynh tuh miruhae rekunaw karunglang nah rae oh , ” a ci .
+41011018	Silawtu piccanhae te Phungbya sayahae nynh tuh e bya ah thae hae tuh Jesuh chianawlangpaw ah ccung hae . Mimin nynh Jesuh kha myarya ah rhih hae , pawccecize Jesuh nynh a ccanpyahaepaw kha mibuupi mih lung myarya a tawng .
+41011019	Zetesang oun thuate Jesuh te a zuituhae tuh khopi kyate ah toykuh hae .
+41011020	Amuakalang awkhua takaw ah ccia lya hae khe ebung ku kha ah muih hae . A dung kyate a tharui kyacia a chih .
+41011021	Peter nynh oun tuathuiza Jesuh kyakhe , “ Do tua , Saya , ccae na sapaw ebung ku phe chivae , ” a ci .
+41011022	Jesuh nynh mimin kyakhe , “ Pachia doliakuh oh .
+41011023	Baccaccing kae hopya oh : humzema lunghingnaw ungleite a ho hawte a cyikuh ccaccing ci cite zyntynnaw a hoize tuh , ‘ Hynh e mua hyn thungkuh la rili lungkhu lang ccah , ’ a cize raepya athua ci .
+41011024	Tukeiccuze hynte kae hopya oh : saw nah sang ohza uccaw hankhakheit nah ngiavae ohze ka mawevae cite zyn ohla nah ngia ohpaw tuh nah mawe cih oh .
+41011025	Sawsanglang nah thadynvae ohze ccungccaw lukhakheit tungvaw thinrianaw nah hoi ohpaw kha lah ngaeethya oh , te vaawlang umpaw nae Paw nynh nae seinaw kha ae ngaeethya cih oh , ”
+41011027	Jesuh te a zuituhae tuh Jerusalem langkhe oun thua ki hae . Jesuh tuh Beikinn lungkhu lang a ccia lyakhe silawtu piccanhae , Phungbya sayahae , ccangpaw piccanhae nynh oun cceih haeza ,
+41011028	Jesuh kha , “ Paw kawhoinawte mou hyncihaw uccaw hyn na rae ? Hummou kawhoinaw ae pya ? ” cite ah khia hae .
+41011029	Jesuh nynh mimin kyakhe , “ Ba-khianaw pyngkheit kae hoi tua oh sa , te aphi nae pya ohze hynh e uccawhae raenaw kaw hyn kaema pawte nynh ka hoi ci paw kae hopah cih oh .
+41011030	Oun hopya tua oh , Johan nynh baptisma pyanaw kaw kha hum kyate mou a mawe ? Pachia kyate tou , ccungccaw kyate tou ? ” a ci .
+41011031	Mimaw te mimaw kha eikuh haeza : “ Pawte holang ? ‘ Pachia kyate , ’ ci langze , ‘ Pawcce Johan tuh nah zyn khyh oh ? ’ oun cih ci .
+41011032	Thuasalama , ‘ ccung-ccaw kyate , ’ ci langze ccungccawhae rhaw bua rhih hae , pawccecize ccung-ccaw balyn nynh Johan tuh profet cite marya ah ny kouhaepaw nynh athua , ” ah ci hae .
+41011033	Tukeiccuze Jesuh kyakhe , “ Kae nyh khy , ” ah ci hae .
+41012001	Tuinte Jesuh nynh tousenawte mimin kha a hopya hae : “ Lanmawlya ccungccapaw lukheit nynh mitsur kokhu a tua ; kuute a koyh , te mitsur sunawlangpaw laephi kha karouhza rih ngawnawlang buuhang a dua . Tuinte vae a luakuh ryhaepaw kya pyasya haeza khycce lang a ccei .
+41012002	Mitsur thaee lo oun zaw tuh a hangpaw laaw khylang a seepaw lukheit kha a shaw .
+41012003	Vaeluahaepaw nynh a seepaw tuh kyng haeza ah bua hae koute a sasete a kisah hae .
+41012004	Te ccangpaw see lukheit kha bua shaw kiza vaeluahaepaw nynh a lu kya bua haeza maethyate ah naung hae .
+41012005	Kokhu hoipaw nynh miccangpaw see lukheit kha bua shawza ah chia hae , te miccanghae patae khama tucite ah lah cyi hae ; abang tuh bua haeza abang tuh ah chia hae .
+41012006	Shawlangte a um ungpaw tuh kokhu hoipaw ccapaw rou nynh a umvae . Nyalang kou tuh a ccapaw kha vaeluahaepaw kalankhe shawza , ‘ Ka ccapaw hynh tuh saw oun tua mamin cih hae , ’ a ci .
+41012007	Thuasalama vaeluahaepaw nynh , ‘ Hynh e paw tuh kokhu hoipaw ccapaw nynh athua . Rang oh , lah theih oh sila a uccaw balyn hyn ahmaw hangvae ! ’ cite lukheit te lukheit kha ah hokuh hae .
+41012008	Tuhawte a ccapaw tuh kyng haeza ah theih hae koute a ruaa kha akhunglang khe ah vua hae .
+41012009	“ Tukoute kokhu hoitupaw nynh pawtepei a cyi hae ? ” cite Jesuh nynh a khia hae . “ Kokhu hoipaw nynh oun cceih ciza a theih hae koute kokhu kha ccangpaw vaeluahaepaw kuit kalan a pya cih hae .
+41012010	Ccathya kyaze ,
+41012011	Tuh e tuh Bawipaw raepaw thuaza pawcimou ngae-anlang a ung ,
+41012012	Judah piccanhae nynh Jesuh kynglang ah zuaku hae , pawccecize a honuathehaepaw kha ah nyku hae . Thuasalama mibuupi rhaw ah rhihaepawte Jesuh kha ah cciataw hae .
+41012013	Abang Farasihae te abang Herod patihae kha Jesuh a bya touloute kaang kaesah khylang byakhialang ah shaw hae .
+41012014	Jesuh kya oun thua haete , “ Saya , nang tuh ccungccawhae nynh pawtemou oun cyih cih hae ci paw kha tuakuty leite baccing a hopaw ci paw kae ny . Nang tuh mimae doleipaw te adih alee na laesaleipaw nynh na thua . Thuasalama ccungccaw hanlang Pachia rynaw baccing kha na ccanpya hae . Rom Siangpahrang kalan ngunkhoe pyapaw hyn ah Phungte a rawsekuh tou , oun hopya tua ? Kae pya cih tou , pyaleilang tou ? ” cite ah khia hae .
+41012015	Thuasalama Jesuh nynh ah cikhihaepaw kha phe nyza , “ Pawccemou kaang kaesalang nae ci oh ? Ngun phua phekheit tuh oun ccyng tua oh , ka lah do tua , ” a ci .
+41012016	Phekheit kha oun ccyng haeza Jesuh nynh , “ Hynh e hyn a hum muinsang te min mou ? ” cite a khia hae .
+41012017	Tukeiccuze Jesuh nynh , “ Tute athualangze , Siangpahrang uccaw kha Siangpahrang pya oh , te Pachia uccaw kha Pachia pya oh , ” a ci .
+41012018	Tuinte chinaw kyate thoothuinaw um khyh , cite a zynhaepaw abang Saddusihae nynh , Jesuh kalan oun cceih haeza ,
+41012019	“ Saya , Moses nynh phungbya oun zeipyapaw kyaze , ‘ Ccungccaw lukheit nynh ccaw saleite a chize ccaw oun sapah sala a chipaw ccaw cite cinaw elang a netaw nynh a upaw zu tuh a dy cih , ’ cite a ung .
+41012020	Vaekheitlya uno lusari ah um hae ; atawccapaw nynh zu dyza ccaw saleite a chih .
+41012021	Tuinte a zuitupaw nynh bua dy kiza ccaw saleite a chih . Tuhawte luthumnawpaw nynh ma bua dy kiza a chi taw ki .
+41012022	Mih balynte ccaw saleite marya chih hae . Mih balynte tuh e nung tuh ungkhae haeza ccaw saleite ah chih hae . Te nyalang kou kya tuh e nung ma a chih bua .
+41012023	Thoothui nin kya michihae balyn oun thoovae haeze tuh e nung tuh hum zulangmou a tang ci ? Mih lusarite khe ah ungkhae hae , ” ah ci hae .
+41012024	Jesuh nynh mimin kyakhe , “ Paw nah sei oh babang ! Pawcce hynte kae sei ci paw hynh so nah nykuh oh tou ? Ccathya thuasa , Pachia huhan thuasa , nah ny khyh oh keiccu nynh athua .
+41012025	Pawccecize michihae oun thoothuivae haeze vaawlang khua e vaawhae oun lovae ngaw hae keiccuze zudyku ci paw ungvaelang khy .
+41012026	Michi thoothuinaw konglang tuh Moses Cca-uk lungkhu kya longccabu unaw kong kha nah ria boy khyh oh tou ? Tuinkya Pachia nynh Moses kya , ‘ Kae tuh Abraham Pachia , Isaac Pachia , te Jakob Pachia nynh ka thua , ’ a ci .
+41012027	Pachia tuh a hiinhaepaw Pachia thuaza a chihaepaw Pachia thuakhy . Tukeiccuze myarya nah sei oh ! ” a ci .
+41012028	Tuinkya a hopaw a thae buapaw Phungbya saya lukheit a um . Jesuh nynh Saddusihae kha kou hooylangte a let-haepaw kha a muih tuh Jesuh kalankhe oun cceiza , “ Phungbya balyn lakuze paw phungbya mou abapihua ? ” cite a khia .
+41012029	Jesuh nynh , “ Abapihuapaw ccankheit tuh : ‘ Pou Israel ngaetua ! Bawipaw ah Pachia kyalya rou hynh nynh Bawipaw tuh athua .
+41012030	Bawipaw na Pachia tuh na thinlung balyn , na hiinnaw balyn , na ruanaw balyn , na thawzung balynte na sungsah ci , ’ ci paw hynh nynh athua .
+41012031	Pyngninnawpaw phungbya tuh : ‘ Na innpaw kha namaw na sungsaku hawte na sungsah ci , ’ ci hynh nynh athua . Hynh e ccanninhae laeze abapihuapaw ccangpaw phungbya umvae khy , ” a ci .
+41012032	Phungbya sayapaw nynh Jesuh kyakhe , “ Saya , na hopaw tuh myarya hooy ; na ho hawte Bawipaw kyalya hyn Pachia ccaccing thuaza ccangpaw pachia umvae khy .
+41012033	Tukeiccuze ccungccaw nynh Pachia tuh a thinlung balyn , a ruanaw balyn , a thawzung balynte a sungsah ciza , a innpaw kha amaw hawte a sungsalangpaw nynh athua . Hynh e phungbyahae pyngnin zui tuh Pachia kalan sarampawte silawkunaw te ccangpaw silawkunaw balyn laeze abapihua , ” a ci .
+41012034	Jesuh nynh a byalepaw kha myarya ahooy cite muiza tuh e paw kyakhe , “ Pachia Peenaw kyate na sawkuh khy , ” a ci .
+41012035	Jesuh nynh Beikinn lungkhu a ccanpya lya hae khe hynte bya khia haeza , “ Pawtemou Phungbya sayahae nynh Messiah tuh David cihan nynh athua cih , cite ah ho hae ?
+41012036	Amaw David toulou kha Thya Muisaw nynh hosaza ,
+41012037	Amaw David ccacci nynh Messiah tuh , ‘ Bawipaw , ’ cite a ko langze pawtemou David cihan tuh athua kho ci ? ” a ci .
+41012038	A ccanpya lya hae tuin Jesuh nynh , “ Phungbya sayahae hyn raeringkuh oh . Mimin tuh mih boei ccuapanunglangte khiakulang te kungku kya ccungccawhae nynh sawtuate oun beik hae sah cite ah ry hae ,
+41012039	sinakokhae kya dahungnaw kha haawkuh haeza poyhae kyaze ahmin ahooyhuapaw ah poku hae .
+41012040	Nomaehae kha amiat ccungkunawlang mang haeza mih inn kha ah lua hae . Te ccungccawhae nynh oun muihaeccaw cite saw ah sang hae . Mih detanaw kha hou accih ci ! ” a ci .
+41012041	Jesuh tuh Beikinn phuasangnaw ape khe dahungza ccungccawhae nynh phua ah sanghaepaw kha palei a do . Mirumhae patae nynh phua patae ah sang hae ;
+41012042	tuinte ryachi nomaenung lukheit nynh oun thuaza piapangaw loukaw aphupaw dawphua phenin a sang bua .
+41012043	Jesuh nynh a zuituhae kha pyngkheitlang ko haeza , “ Baccaccing kae hopya oh : ryachi nomaenung nynh miccanghae balyn laeze phuasangnaw phuakua kya alawnghua a sang .
+41012044	Pawccecize minghae tuh ah hoihaepaw lungkhu e alaepaw nynh ah sang hae , thuasalama hynh e nung tuh a rya kou chipite a hoipaw balyn kha karyh sangza a hiinnawlangpaw balyn kha marya a pya , ” a ci .
+41013001	Jesuh tuh Beikinn te a toyku dynkhe zuituhae lakuze lukheit nynh , “ Saya , do tua ! Hynh e inn te lunghae hyn hyntute myng lypaw hyn ! ” a ci .
+41013002	Jesuh nynh , “ Hynh e innhae papi hyn na muih khaw ? Hynh e lunghae hyn mih umnaw kya oun um khyh nin hae ccyh oun thua ciza abalynte marya oun ting ci , ” a ci .
+41013003	Jesuh tuh Beikinn rawlang a umpaw Oliv Mua vawlang a dahung lyakhe , Peter , James , Johan te Andru hae nynh arulangte a kalankhe oun cceih haeza ,
+41013004	“ Hotumou hynh e ccyh tuh oun thua ci ? Oun hopya tua ! Tuh e ccyh oun thuavae cih ci paw nynawlang pawmou oun langkuh ci ? ” ah ci hae .
+41013005	Jesuh nynh mimin kyakhe , “ Lah raeringkuh oh ! Hum sangma lah lingsakuh nang oh !
+41013006	Ccungccaw patae nynh kamaw minte oun thua cih haeza , ‘ Amaw nynh ka thua , ’ oun cikuh ci haeza ccungccaw patae oun ling cih hae .
+41013007	Te laannae rhawtukunaw the te laansaw rhawtukunaw the nah thae ohzema nae bung lah zou nang sa . Tucihawpaw ccyh tuh oun thua ci , thuasalama athanaw ccyh tuh thua loh khy .
+41013008	Ramkheit te ramkheit , peekheit te peekheit oun doukuh cih hae . Khuatakyh kya innrui oun dungkuh ciza ccakang oun ccih ci . Hynh e tuh netaw a pui dynze netangia accity hawte nynh athua .
+41013009	“ Naemaw hynzema raeringkuh oh . Ae kyng cih ohza zung lang ae cciakhae cih oh . Sinakokhae kyakhe ae zia cih oh ; kaekah keiccuze uktuhae te siangpahrang malang khe ae thadynsah cih ohza tuh e ccyh tuh mimin kha Thehooy Bya nah hopya nin oh nynh athua .
+41013010	Thuasalama athanaw ccyh oun thua mawze ccungccawhae miakaw kalan thehooypaw ho oun thua ci .
+41013011	Te ae kyng ohza zung lang ae thuakhae ohte nah holang ohpaw kha nae lungria thaesakuh nang oh . Accyh oun zawte nah holang ohpaw tuh nysah oun thua ci . Pawccecize nah holang ohpaw tuh naemaw nynh nah doihku oh thuakhy , Thya Muisaw kyate oun thuapaw nynh athua .
+41013012	U te no nynh chinaw ciate oun zuakuh cih haeza tuhawte pawhae nynh ma mih ccawhae tungvaw oun cyih bua cih hae . Ccawhae nynh nungpawhae kha oun dou cih haeza chinaw cia oun phyasah cih hae .
+41013013	Ccungccaw miakaw nynh kaekah keiccuze ae hua cih oh , thuasalama athanaw cia a ing khopaw tuh khum athua ci .
+41013014	“ Lungdoihlang ungpaw tuh a thadynnaw hmin athua leipipaw kya a thadynpaw kha nae muih cih oh . ” ( A riatu balyn nynh hynh e suilan hyn nyh oh ! ) “ Tuinte Judea ram kya a umhaepaw mua langkhe ccawe oh .
+41013015	Inn ccukaly vaw a umpaw nynh a uccaw laawkulang cite rungbungvae nang sala teevae nang sa .
+41013016	Loo kya umpaw nynh boei laawkulang inn lang kivae nang sa .
+41013017	Ccaw a hoipaw te anopaw imua a hoihaepaw nopihae tuh vaw oun saw cih hae .
+41013018	Hynh e rhunaw hyn khoccih ccyh kya a tong khyhnawlang Pachia kalan sawsang oh .
+41013019	Pawccecize hynh e vawsawnaw hyn Pachia nynh laephi a rae takawte atunin cia laephi nynh a ny boyleipaw athua ci . Malang zema um boyvaelang khy .
+41013020	Thuasalama Bawipaw nynh tuh e nin tuh a dyngsavae . A dyngsah khyhze tuh hum sangma ing kholang khy . Thuasalama a pohaepaw hanlang tuh e nin tuh a dyngsavae .
+41013021	“ Tukeiccuze ccungccaw lukhakheit nynh , ‘ Do oh , heinkya Messiah mang um , ’ ae cipya ohzema thuasa , ‘ Do oh , khuinkya Messiah mang um , ’ ae cipya ohzema thuasa , lah zyn nang oh .
+41013022	Pawccecize lingthya Messiahhae te lingthya profethae oun pou cih hae . Pachia pohaepaw cia ah ling kho hae thyte ling khylang ngae-annaw te khuaruarunaw hae balyn oun rae cih hae .
+41013023	Raeringkuh oh ! Accyh oun thua mawze pawpaw tynre balyn marya kae hopya kouvae oh .
+41013024	“ Tuh e vawsawnaw koute khuanin tuh oun moh ciza sawpaw ma awvaelang khy ,
+41013025	vaaw langte awsi oun ccah ciza vaaw huhan ccianaw balyn oun suliakuh cih hae .
+41013026	Tuinte Ccungccaw Ccapaw tuh phu-e leesaenawte maeking kyate oun rungbungpaw kha oun langkuh ci .
+41013027	Laephi kipalei kya a umhaepaw Pachia pohaepaw ccungccawhae soilua khylang vaawhae oun shaw ci .
+41013028	“ Ebung ku nynh muisanaw pyngkheit ae ccanpah oh sa . A nopaw a nge nynh oun hiinza a naw oun tuate hawnin anaevae ci paw nah ny oh .
+41013029	Tucite uccaw oun cyikuvaeze ccyh anaevae , vyavya oun thuavae ci kha nyh oh .
+41013030	Heinkya umhaepaw a chi maw hae , hynh e uccaw balyn oun cyikuh ci .
+41013031	Vaawlui te laephi tuh zo hae salazema ka bya tuh zo kholang khy .
+41013032	“ Thuasalama hotumou tuh e nin te ccyh tuh oun thua cih ci paw hum nynh sangma nyh khyh hae ; vaaw e vaawhae ma nyh khyh hae , Ccapaw ma nyh khy , Paw rou nynh a ny .
+41013033	Oun thualangpaw accyh kha nah ny khyh oh keiccuze raeringku te lungkyte um oh .
+41013034	Pawtemou aloku cize ccungccaw lukheit khuacconglang thokuza a sinumhae kha mih ryalaw raveh pyasyate thuakaw ngawpaw it leite na lah ngaw cih cite a tawsyapaw inn hoitupaw hawte nynh athua .
+41013035	Inn hoitu bawi tuh hotuh nynh oun thua cih ci paw nah ny khyh oh keiccuze raeringkute um oh . Zete zema a thua kho , ziraccyng zema a thua kho , a aw maw zema a thua khoza khuanin a thua maw zema a thua kho .
+41013036	Tualeipite oun thuaze nah itheh ohpaw kha ae thuanua nang oh sa .
+41013037	Nae kyaze ka hopaw hyn ccungccawhae kya zema ka hopaw nynh athua : Raeringkute um oh ! ” a ci .
+41014001	Pongpou Poy te Soda phingleipaw Sanglou Poy tuanawlangpaw ninnin nynh aryvae . Silawtu piccanhae te Phungbya sayahae nynh Jesuh kyngnawlangpaw te chianawlangpaw arulangte laanpi ah ccung hae .
+41014002	“ Poy lya tuh ah cyilang khyh oh , ccungccawhae oun pokuh cih hae , ” ah ci hae .
+41014003	Jesuh tuh Bethany khua vaethyakaepaw Simon inn kya umza looh a ae lyakhe nopinung lukheit nynh alabaster tuihinbu bukheit a thekupaw zimuintui kha oun ccyngza innthung langkhe oun tee . Tuh e tuihinbu tuh kuaiza zimuintui kha Jesuh lu kyakhe a bu .
+41014004	Tuinkya a umhaepaw abang ccungccawhae tuh mih thinriaza , “ Myarya pawhae !
+41014005	Zimuintui hyn ngun phua zathum
+41014006	Thuasalama Jesuh nynh , “ Pawsangma cyih nang oh ! Pawccemou palei nah ccoh oh ? Hynh e nung nynh ka hanlang apuithyapaw te ahooypaw kha a raevae .
+41014007	Ryachihae tuh nae kyahin zungzae ah lah um cih hae , te hotuh ccyh kya zema mimin tuh nah bawm kho oh . Thuasalama kae tuh nae kya zungzae ka umlang khy .
+41014008	A cyi khonaw ciate a raevae . Ka pyn vaw kyaze zimuintui oun bupaw tuh oun unawlanghaepaw oun raepya typaw nynh athua .
+41014009	Baccaccing kae hopya oh : laephivaw thehooypaw honaw takyh kya hynh e a raepaw hyn ningleinawlang ah lah ho zungzae cih hae , ” a ci .
+41014010	Tuinte zuituhae luhawlaenin laku e lukheit , Judas Iskariot tuh mih kalan Jesuh phe khylang silawtu piccanhae kalan a ccei .
+41014011	A hopaw kha ah thae tuh mih lung eih tua kaesyza phua pyalangte bya ah kinku hae . Tukeiccuze Judas nynh Jesuh mih kuit kya a thuathyanawlangpaw ccyh hooy kha palei a dosevae .
+41014012	Soda phingleipaw Sanglou masaty nin , Pongpou loohdangnaw hanlang tuutaraw ah chia ccyh lya hae khe zuituhae nynh Jesuh kyakhe , “ Pawkyamou Pongpou loohdangkunaw tuh paccyng hae sah ci na ry ? ” cite ah khia hae .
+41014013	Tuinte Jesuh nynh mimin lungkhu e lunin kha shaw haeza hynte bya a taw hae : “ Khopi lungkhu langkhe lah cceih ohla dawrete tui a thepaw ryte nah tongkuh cih oh . Amaw kha lah zui ohla ,
+41014014	a teenaw e inn hoipaw kha , ‘ Sayapaw nynh ka zuituhae ryte Pongpou zerya kae mang cinaw tuh pawkyamou ? , a ci , ’ cite lah khia oh .
+41014015	Tuinte anin nynh palungkhaan aleepipaw kha ae muisah cih oh . Bounaw ungleilangte a paccyngtyhaepaw khaan alah thua ciza tuinkya khe zerya mangkheinaw tuh lah paccyng oh . ” a ci .
+41014016	Zuituhae nynh cceih haeza kholae ah thua hae tuh Jesuh nynh a hopya hae hawte ah muih hae . Tuinkhe Pongpou zerya tuh ah paccyng hae .
+41014017	Zetesang khe Jesuh tuh zuituhae luhawlaenin ryte oun thua hae .
+41014018	Ccaboy kya ah ae lya hae khe Jesuh nynh , “ Baccaccing kae hopya oh : nanin laku e lukheit , kamawte kae ae kheipaw nynh nae phe cih oh , ” a ci .
+41014019	Zuituhae tuh mih ngaethahza , “ Kae tuh ka thuakhyh , thuakhyh khaw ? ” ah ci kalang hae .
+41014020	Nanin luhawlaenin lakuze lukheit , kae ryte a sanglou pake kekheit kae pukheipaw oun thua ci .
+41014021	Ccungccaw Ccapaw tuh Ccathya nynh a ho hawte a chih ci . Thuasalama Ccungccaw Ccapaw a phepaw hanlang tuh pawcimou rhilang a ung ! Pui leite lah ung salaze a hanlang ahooyhua ! ” a ci .
+41014022	Zerya ah mang lya hae khe Jesuh nynh sanglou kha lakza lungtuanaw saw a sang koute eihza a zuituhae kha a ne hae . “ Laawkuh oh , hynh e hyn ka saw nynh athua , ” a ci .
+41014023	Tuinte banan kha lakza Pachia kalan lungtuanaw saw a sang koute mimin kha pya haeza mih balynte ah nia hae .
+41014024	Jesuh nynh , “ Hynh e hyn ccungccaw patae hanlang ka laepaw ka chii , Pachia bakinnaw a tynsatu nynh athua .
+41014025	Baccaccing kae hopya oh : Pachia Peenaw lungkhu kya mitsurtui thawpaw ka nia maw balyn hynh e mitsurtui tuh ka neih boyvaelang khy , ” a ci .
+41014026	Tuinte hlaw lakheit ah sah hae koute Oliv Mua langkhe ah cceih hae .
+41014027	Jesuh nynh mimin kyakhe , “ Nae balynte nae ccawetaw cih ohza nae cciataw cih oh , pawccecize Ccathya nynh , ‘ Pachia nynh tuurinpaw tuh oun theih ciza tuuhae tuh oun phiakuh cih hae , ’ a ci .
+41014028	Thuasalama chinaw kyate bua kae thoothuite tuh nae malang khe Galilee lang ka lah cceity ci , ” a ci .
+41014029	Peter nynh , “ Minghae nynh ae ccawetaw hae zema kae tuh kae ccawetawlang khy ! ” a ci .
+41014030	Jesuh nynh Peter kyakhe , “ Bacca-ccing kae ho pya : atu khozi aw vaenin a khuang mawze , ‘ Ka nyh khyh , ’ cite vaethum cia nae pheikuh ci , ” a ci .
+41014031	Peter nynh hou ccihlangte , “ Namaw ryte chikheilangte ka ccang zema tute tuh ka ho boylang khy ! ” a ci .
+41014032	Gethsemane ah cinaw hae hmin kya ah thua hae , te Jesuh nynh a zuituhae kyakhe , “ Saw ka sang loukaw tuh heinkya lah um oh , ” a ci .
+41014033	Peter , James te Johan kha a hoy bua hae . Thinlung cci lungzote umza ,
+41014034	mimin kyakhe , “ Ka thinlung kya ngaethyanaw eih leeza phung oun paw cipaw nynh alo . Hein lah um ohla it leite oun lah ngaw oh , ” a ci .
+41014035	Takyh asawnaw langkhe cceiza lae kya bakhungte saw a sang . Athuathyaze tuh e vawsawnaw kha tong leilangte a ngia .
+41014036	“ Ka Paw , pou ka Paw , na hanlang tuh pawpaw balyn marya acyikuh kho . Hynh e te-ingnaw banan hyn beh oun laawpah . Thuasalama ka ry hawte thua nang sa , na ry hawte thua sa , ” a ci .
+41014037	Te oun ki tuh zuituhae luthum marya ah ihaepaw kha a mui . Peter kyakhe , “ Simon , marya na it i ? Suimilan ccankheit sangkaw it leite na um kho khyh i ? ” a ci .
+41014038	Te mimin kyakhe , “ Itheh leite oun ngaw ohla tounaw lungkhu lang nah ccaw khyhnawlang oh sawsang oh . Nae thinlung nynh tuh kou ry salazema nae pynsaw nynh taenin khyh i ! ” a ci .
+41014039	Jesuh tuh bua cceih kiza masaty hawte saw a sang .
+41014040	Tuinte zuituhae kalankhe oun kiza marya ah lah ihaepaw kha bua ah muih hae ; mih mit sang dae khovae khyh hae . Pawtemou khunglang ci paw sangma nyvae khyh hae .
+41014041	Vaethumnaw bua oun thua tuh mimin kyakhe , “ Palei nah it ung oh i , nah byn lokhyh oh i ? Zaw sa ! Accyh oun thuavae ! Do oh , Ccungccaw Ccapaw tuh miseihae kuit kalan pya athuavae ci !
+41014042	Tho oh , cceih oh si ! Do oh , heinkya oun phetupaw ccungccapaw oun thuavae , ” a ci .
+41014043	Jesuh nynh bya a ho lyaccya nin khe zuituhae luhawlaenin kya a pangpaw Judas tuh oun thua . Piccanhae , Phungbya sayahae , te silawtu piccanhae nynh oun shawhaepaw mibuupi tuh thaloy te tungbang hae ccyngkute Judas ryte oun thua hae .
+41014044	A phetupaw nynh mibuupi kha syntawnaw lah hopah ty haeza , “ Kae myngpaw tuh kyng nah ry ohpaw nynh athua . Ahooyte rinte nah lah cciakhae cih oh , ” a ci .
+41014045	Judas nynh a thua kangmawte , “ Saya , ” ciza a myng .
+41014046	Te Jesuh tuh kyng haeza ah hei hae .
+41014047	Thuasalama tuin a thadynhaepaw lakuze lukheit nynh thaloy kha dungkuza Silawtu Lupi seepaw na kua kha thohccalang a bae .
+41014048	Tuinte Jesuh nynh mimin kyakhe , “ Kae hyn miruh tou ka thua , thaloyhae , tungbanghaete nae ccianua oh ?
+41014049	Nintakyte Beikinn kya phung kae ccanpya lya ohze nae kyng khyh oh re . Thuasalama Ccathya nynh a hopaw tuh accing aho , ” a ci .
+41014050	Tuinte a zuituhae balyn nynh ah ccawetawvae hae .
+41014051	Boei pasadipaw a zingkupaw minopaw lukheit nynh Jesuh tuh a zui . Amaw kha kynglang ah ci hae ;
+41014052	thuasalama a boei kha cciatawza a sasete a ccawe .
+41014053	Te Jesuh tuh Silawtu Lupi inn langkhe ah cciakhae hae , tuinkya silawtu piccanhae , piccanhae , te Phungbya sayahae balyn ah pumkuh hae .
+41014054	Phyaku leite Peter nynh zuiza Silawtu Lupi maepah langkhe a tee .
+41014055	Maepaw kya umhaepaw rhawviahae kyakhe maei a ekuh bua . Silawtu piccanhae te bapiatuhae balyn nynh Jesuh chianawlangpaw a seinaw kha ccungpah hae salazema muih kho khyh hae .
+41014056	Ccaekiahae patae nynh Jesuh kong kha hyngbyate seinaw ccung hae salazema ah hohaepaw lokuh kho khy .
+41014057	Te abanghae nynh thadyn haeza ,
+41014058	Jesuh nynh , ‘ Ccungccaw nynh sapaw Beikinn hyn ka phou ciza ninthum koute ccungccaw nynh sah leipaw Beikinn ka sah ci , ’ a ci paw kae thae , ” cite hyngbya a hosah hae .
+41014059	Thuasalama mih hopaw tuh lokuh kho khy .
+41014060	Silawtu Lupi nynh thadynza mih malangkhe Jesuh kha , “ Seinaw ae beihaepaw tuh na lelang khyh hae tou ? ” cite a khia .
+41014061	Thuasalama Jesuh tuh yccae khyza kawkheit sangma ho khy . Tuinte Silawtu Lupi nynh , “ Aleesaepaw Pachia Ccapaw Messiah na thua tou ? ” cite bua a khia .
+41014062	Jesuh nynh , “ Ka thua ! Ccung-ccaw Ccapaw hyn Aleesaepaw Pachia ranglang khe oun dahung ciza vaawlang maeking kyate oun rungpaw kha nae muih cih oh ! ” a ci .
+41014063	Silawtu Lupi nynh a boei kha sheiza , “ Ccangpaw ccaekia hovae khy !
+41014064	Pachia a sarya zia tuh nah thaevae oh . Pawtemou nah tua oh ? ” a ci .
+41014065	Abang ccungccaw nynh Jesuh tuh mih tuinte thoi haeza a mit hute ah bia hae . “ Ae biatuhae hyn hum hae mou , ho tua ! ” ah ci hae . Te rhawviahae nynh bua haeza ah cciakhae hae .
+41014066	Peter tuh maepaw a um lyakhe Silawtu Lupi a sinum nopihae lakuze lukheit tuh oun ccei .
+41014067	Maei a ekupaw Peter kha a muih tuh a mae kha palei siaza , “ Nang hynh zema Nazarethpaw Jesuh kya na um buapaw khaw , ” a ci .
+41014068	Thuasalama Peter nynh pheikuza , “ Ka nyh khy ! Na hopaw hyn paw kong ci paw ka nyh khy , ” a ci , te sakuih pelang a naweku . Tulyatuin aw oun khuang .
+41014069	Sinumnung nynh tuinkya bua muih kiza a pe a thadynhaepaw kyakhe , “ Hynh e paw hyn mimin kya a umbuapaw khaw ! ” a ci .
+41014070	Thuasalama Peter nynh bua a pheiku ki .
+41014071	Peter nynh , “ Ccaesakute ka ho : ka hopaw hyn ahmepaw athuakhyze Pachia nynh de oun tat sa ! Nah ho ohpaw ccungccaw hyn ka ny boyleipaw ! ” a ci .
+41014072	Tuh ccyh lyakhe vaeninnaw aw oun khuangza Peter tuh Jesuh nynh , “ Aw vaenin a khuang mawze vaethum cia , ‘ Ka nynh khyh , ’ cite nae pheikuh ci , ” cite a ci paw kha oun leihthuiza thawte a rah .
+41015001	Awkhua takawte silawtu piccanhae tuh piccanhae , Phungbya sayahae , Bapiatuhae ryte arangte tongkuh haeza khua ah khang hae . Jesuh tuh sivarui bawtaryte khite cciakhae haeza Pilat kuit kya ah pya hae .
+41015002	Pilat nynh , “ Judahae siangpahrang na thua tou ? ” cite a khia .
+41015003	Silawtu piccanhae nynh Jesuh tuh sei patae ah bei hae ,
+41015004	tukeiccuze Pilat nynh , “ Na lelang khyh hae tou ? Sei ae bei haepaw balyn tuh ngae tua ! ” a ci .
+41015005	Jesuh nynh kawkheit sangma khung ry khyza Pilat tuh a ngae-an myarya thua .
+41015006	Pongpou Poy takyh vaeze ccung-ccawhae nynh ah ngiahaepaw thongccah lukheit kha Pilat nynh leih a shawpya he hae .
+41015007	Kha ccyh lyakhe rhawtho lyaze ccungccaw a lah theihtu Barabbas ah cihaepaw tuh ccangpaw rhawthotuhae ryte thong ah ccah hae .
+41015008	Mibuupi nynh oun pumkuh haeza a lah raepya hae hawte a raepyanawlang hae Pilat kha ah ngia hae .
+41015009	Pilat nynh , “ Nae hanlang Judahae siangpahrang hyn oun shawpasah ci nah ry oh tou ? ” cite a khia hae .
+41015010	Silawtu piccanhae nynh a kuit kalan Jesuh ah pyahaepaw kha mih ei a ung keiccu nynh athua ci paw a ny .
+41015011	Thuasalama Pilat nynh Barabbas kha oun shawpasah cite silawtu piccanhae nynh mibuupi tuh ah lah toutyvae hae .
+41015012	Pilat nynh mibuupi kha , “ Tute athuaze , Judahae siangpahrang nah ci ohpaw hynh so pawte oun cyipasah ci mou nah ry oh ? ” cite bua a khia hae .
+41015013	Mimin nynh “ Vaelan kya khiade ! ” cite ah sia ki hae .
+41015014	Paw seinaw mou a rae ? ” cite a khia hae .
+41015015	Pilat nynh mibuupi lunghooynaw kha a ry keiccuze Barabbas kha a shawpya hae . Tuinte Jesuh tuh ccaungte buasah haeza vaelan kya khiadelang mimin kha a pya hae .
+41015016	Rhawkawhae nynh Jesuh kha mangki bawipaw maepah langkhe teekhae haeza rhawkabuupihae khama ah ko bua hae .
+41015017	Jesuh tuh boeisenpaw kha zingsah haeza hin ku ah kheihaepaw bawi lukhung kha ah khungsah hae .
+41015018	Tuinte salan pya haeza , “ Judahae Siangpahrang na she sae sa ! ” ah ci hae .
+41015019	A lu kya ccaungngoete ah bua hae , tuinte ah thoi hae , mih ccukharutung haeza mih lu ah ngypya hae .
+41015020	Tute ah sarya hae koute ah zingsahaepaw boeisenpaw tuh lak haeza amaw boei kha bua ah zingsah hae .
+41015021	Laanpi kya Simon cikupaw ryte ah tongkuh hae . Amaw tuh khoti langte khopi lang oun cceipaw kha rhawkawhae nynh Jesuh vaelantung puitlang ah nangse hae . ( Simon tuh Sairin khuapaw thuaza Alexander te Rufas hae paw nynh athua . )
+41015022	Jesuh tuh Golgotha ah cihaepaw hmin kyakhe ah thuakhae hae ; Golgotha ci paw tuh , “ Luru hmin , ” ci paw nynh athua .
+41015023	Tuinkya mitsurtui mura iseite ah pyhaepaw kha ah pya hae , thuasalama Jesuh nynh neih ry khy .
+41015024	Tukoute vaelantung kya khiade haeza a boei kha ccungccydungte mimin nynh ah neiku hae .
+41015025	Awkhua suimilan ccantakua ccyh lyakhe vaelantung kya ah khiade hae .
+41015026	Ah seisanawhaepaw ccakhia tuh , “ Judahae Siangpahrang , ” ci hynh nynh athua .
+41015027	Jesuh ryte vaelantung kya miruhae lunin , a voylang lukheit , a ranglang lukheit ah khiade bua hae .
+41015029	Acceih bungthunghaepaw nynh mih lu ngypah haeza Jesuh kha saryanawte ah nuinse hae : “ Nang hyn Beikinn tuh ka phou ciza ninthumte ka lyng cih a cipaw khaw !
+41015030	Atu vaelantung kyate oun rungbung la namaw te namaw kha khumku tua ! ” ah ci hae
+41015031	Tucimaminte silawtu piccanhae te Phungbya sayahae nynh sarya bua haeza , “ Minghaeze khum haeza amawze khumkuh kho khyh re !
+41015032	Israel siangpahrang Messiah tuh atulya hyn vaelantung kyate oun rungbungpaw muih oh silaze ah zyn bua cih ohpaw ! ” cite lukheit te lukheit kha ah hokuh hae .
+41015033	Ninthu kya tuin ram balyn tuh suimilan ccanthum ryacia khua azi .
+41015034	Suimilan ccanthum kya Jesuh nynh , “ Eloi , Eloi , lama sabakthani ? ” cite thawte a sia . Asuilan tuh , “ Ka Pachia , ka Pachia , pawcce nae cciataw ? ” ci paw nynh athua .
+41015035	Tuin abang a umhaepaw nynh thae haeza , “ Ngaetua oh , Elijah nynh a ko ! ” ah ci hae .
+41015036	Mih laku e lukheit nynh oun ccawe kangmawza boeipawepaw kha mitsurtuiriapaw kya daungza ccaungngoedung kya a heide koute Jesuh mung kya a be lyakhe , “ Um tua hin ! Vaelantung kyate sawbung khylang Elijah oun thua ta , do hin oh si ! ” a ci .
+41015037	Jesuh tuh thawte siaza a hy atha .
+41015038	Beikinn lungkhu ah zohaepaw boei kha alu te alia ryacia zungninlang a sheiku .
+41015039	Vaelantung malang a thadynpaw rhawbawipaw nynh Jesuh a chinawpaw kha a muih tuh , “ Hynh e paw hyn Pachia Ccapaw ccaccing nynh athua ! ” a ci .
+41015040	Tuin a umhaepaw nopihae nynh laansaw langkhate ah do hae . Mimin tuh Mary Magdalahae , imuahuapaw James te Josef hae nung Mary , te Salome nynh ah thua hae .
+41015041	Galilee ram kya Jesuh a um lyaze a lah zuihaepaw te a lah bawmhaepaw nynh ah thua hae . Jesuh ryte Jerusalem langte oun cceih kheihaepaw ccangpaw nopihae patae ma ah um bua hae .
+41015044	Pilat nynh Jesuh a chivae ci paw a thae tuh a ngae-an myarya thua . Rhawkaw zakheit uktu rhawbawipaw kha koza , “ Jesuh a chinaw khaw civae tou ? ” cite a khia .
+41015045	Rhawbawipaw bya a thaete Pilat nynh Josef kha Jesuh ruaa tuh na lak khovae cite a ho pya .
+41015046	Josef nynh lukaria boei kha reza a ruaa kha a laung koute lung ccipaw ah karynghaepaw ssaw lungkhu khe a u . Tuinte athuhfulang lungphepi kha touza a husung .
+41015047	Mary Magdalahae te Josef nung Mary hae nynh apete do bua haeza Jesuh a ukunaw kha ah muih hae .
+41016001	Sabbath nin koute Mary Madalinhae , James nung Mary te Salome hae nynh Jesuh thuhlangpaw zimuin kha ah re hae .
+41016002	Nawpi nin awkhua , khuanin a thua dynkhe ssaw kalan ah cceih hae .
+41016005	Ssaw lungkhu langkhe tee haeza boei rawpaw zingkuza ranglang kya a dahungpaw kha muih haeza ah sikuh hae .
+41016006	Anin nynh , “ Rhih nang oh ! Vaelan kya ah khiadehaepaw Nazarethpaw Jesuh nah ccung ohkha ka ny . Heinkya umvae khy , pheh thoovae ! Ah ccynaw hae hyn dotua oh .
+41016007	Lah cceih ohla a zuituhae te Peter kha , ‘ Nae malang khe Galilee lang a cceityvae . Ae hopya oh hawte tuinkya nah muih cih oh , ’ cite lah hopah oh , ” a ci hae .
+41016008	Te ssaw kyate toykuh haeza thinphang bungzoute ah ccawe hae . Ah rhihaepawte hum kya sangma hopah bua khyh hae .
+41016009	[ Nopihae nynh cceih haeza Peter te a banhae kyakhe vaawhae nynh ah hopyahaepaw kha adyngnawte ah hopya hae .
+41016010	Tukoute Jesuh amaw ccacci nynh athyapaw te zungzae tynpaw a hiinpaw khumnaw bya kha a zuituhae liate a zehsaku . ]
+41016011	te Jesuh phe hiinthuivae , mang kae muih , a cipyahaepaw kha zyn kho khyh hae .
+41016012	Tukoute Jesuh tuh zuituhae lunin khoti lang ah ccia lya hae khe phuinccanglangte mih kya a langku .
+41016013	Mimin nynh ki haeza minghae kha ah hopya hae , thuasalama zyn khyh hae .
+41016014	Nyalangkou kya Jesuh tuh zuituhae luhawlaekheit looh ah ae lya hae khe mih kya a langku . Zynnaw ah hoi khyhaepaw te a hiinvae cite a muituhaepaw nynh ah hohaepaw ah zyn khyhnaw hae mih lung apingpaw kha a pe hae .
+41016015	Te mimin kyakhe , “ Laephivaw balyn lah cceih ohla ccungccaw miakaw kya thehooypaw lah ho oh .
+41016016	Humzema zynza baptisma a mawepaw tuh khum athua ci ; humzema a zynleipaw tuh seibapia athua ci .
+41016017	A zynhaepaw tuh ngae-annaw rae khonaw huhan pya athua ci : ka minte satan ah dei kho cih hae ; bya thawpaw ah ho cih hae ;
+41016018	fupaw ah kyng hae zema thuasa , chi isei ah nia hae zema thuasa , pawpaw cilang khyh hae ; ngeccih tungvaw mih kuit ah khang cih haeza ah dang cih hae , ” a ci .
+41016019	Bawipaw Jesuh tuh mimin kya bya a ho koute vaaw langte oun lak haeza Pachia ranglang khe a dahung .
+41016020	Zuituhae nynh khotakyh lang cceih haeza phung ah ho hae , te Bawipaw nynh mimin kyakhe ryalaza phung ah hohaepaw ahmepaw ci paw kha ngae-annaw ah raehaepawte a lang sa . ]
