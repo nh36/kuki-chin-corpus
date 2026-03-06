@@ -1,0 +1,97 @@
+[
+  {
+    "iso": "bgr",
+    "entries": 5364,
+    "output": "data/lexicons/bgr_lexicon.tsv"
+  },
+  {
+    "iso": "cek",
+    "entries": 1793,
+    "output": "data/lexicons/cek_lexicon.tsv"
+  },
+  {
+    "iso": "cfm",
+    "entries": 7551,
+    "output": "data/lexicons/cfm_lexicon.tsv"
+  },
+  {
+    "iso": "clt",
+    "entries": 2861,
+    "output": "data/lexicons/clt_lexicon.tsv"
+  },
+  {
+    "iso": "cmr",
+    "entries": 1978,
+    "output": "data/lexicons/cmr_lexicon.tsv"
+  },
+  {
+    "iso": "cnh",
+    "entries": 6494,
+    "output": "data/lexicons/cnh_lexicon.tsv"
+  },
+  {
+    "iso": "cnk",
+    "entries": 4829,
+    "output": "data/lexicons/cnk_lexicon.tsv"
+  },
+  {
+    "iso": "cnw",
+    "entries": 8332,
+    "output": "data/lexicons/cnw_lexicon.tsv"
+  },
+  {
+    "iso": "csh",
+    "entries": 4905,
+    "output": "data/lexicons/csh_lexicon.tsv"
+  },
+  {
+    "iso": "csy",
+    "entries": 7594,
+    "output": "data/lexicons/csy_lexicon.tsv"
+  },
+  {
+    "iso": "ctd",
+    "entries": 8354,
+    "output": "data/lexicons/ctd_lexicon.tsv"
+  },
+  {
+    "iso": "czt",
+    "entries": 7081,
+    "output": "data/lexicons/czt_lexicon.tsv"
+  },
+  {
+    "iso": "czt-mbs",
+    "entries": 619,
+    "output": "data/lexicons/czt-mbs_lexicon.tsv"
+  },
+  {
+    "iso": "hlt",
+    "entries": 2814,
+    "output": "data/lexicons/hlt_lexicon.tsv"
+  },
+  {
+    "iso": "lus",
+    "entries": 8837,
+    "output": "data/lexicons/lus_lexicon.tsv"
+  },
+  {
+    "iso": "pck",
+    "entries": 9850,
+    "output": "data/lexicons/pck_lexicon.tsv"
+  },
+  {
+    "iso": "tcz",
+    "entries": 16496,
+    "output": "data/lexicons/tcz_lexicon.tsv"
+  },
+  {
+    "iso": "zom",
+    "entries": 653,
+    "output": "data/lexicons/zom_lexicon.tsv"
+  },
+  {
+    "iso": "zyp",
+    "entries": 2814,
+    "output": "data/lexicons/zyp_lexicon.tsv"
+  }
+]
