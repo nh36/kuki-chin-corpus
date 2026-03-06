@@ -1,12 +1,20 @@
 iso	language_name	verses	total_possible	coverage_pct	books_count
-eng	King James Version	31101	31104	99.99	66
-bgr	Bawm	677	31104	2.18	1
-cfm	Chin Falam	673	31104	2.16	1
-cnh	Chin Haka	678	31104	2.18	1
-cnk	Khumi Chin	29862	31104	96.01	66
-csy	Chin Siyin	672	31104	2.16	1
-ctd	Tedim Chin	674	31104	2.17	1
-czt	Chin Zotung	667	31104	2.14	1
-hlt	Chin Matu	676	31104	2.17	1
-lus	Mizo (Lushai)	658	31104	2.12	1
-zom	Zokam	678	31104	2.18	1
+eng	King James Version	31101	31105	99.99	66
+bgr	Bawm Chin	29721	31105	95.55	66
+cek	Lemi (Eastern Khumi)	7817	31105	25.13	27
+cfm	Falam Chin	30262	31105	97.29	66
+clt	Lautu Chin	7938	31105	25.52	27
+cmr	Mro (Khimi)	7770	31105	24.98	27
+cnh	Hakha Chin	30808	31105	99.05	66
+cnk	Khumi Chin	29862	31105	96.0	66
+cnw	Ngawn Chin	30147	31105	96.92	66
+csh	Cho Chin	29839	31105	95.93	66
+csy	Siyin Chin	29811	31105	95.84	66
+ctd	Tedim Chin	30422	31105	97.8	66
+czt	Zotung Chin	30968	31105	99.56	66
+hlt2	Matu Chin (NT)	7880	31105	25.33	27
+lus	Mizo	30489	31105	98.02	66
+pck	Paite Chin	31082	31105	99.93	66
+tcz	Thadou Chin	31104	31105	100.0	66
+zom	Zokam	678	31105	2.18	1
+zyp	Zyphe Chin	7930	31105	25.49	27

@@ -1,12 +1,21 @@
 iso	language_name	verses	unique_wordforms	total_tokens
-bgr	Bawm	677	4831	247628
-cfm	Chin Falam	673	7418	253112
-cnh	Chin<br>Haka	678	13324	1038791
+bgr	Bawm Chin	29721	17715	812443
+cek	Lemi (Eastern Khumi)	7817	4489	281182
+cfm	Falam Chin	30262	23442	857418
+clt	Lautu Chin	7938	8798	207931
+cmr	Mro (Khimi)	7770	4381	272692
+cnh	Hakha Chin	30808	19659	933377
 cnk	Khumi Chin	29862	15383	971119
-csy	Chin Siyin	672	6882	246633
-ctd	Tedim Chin	674	9048	240122
-czt	Chin Zotung	667	11515	210071
+cnw	Ngawn Chin	30147	24942	790507
+csh	Cho Chin	29839	19634	1008764
+csy	Siyin Chin	29811	20863	831621
+ctd	Tedim Chin	30422	27599	831408
+czt	Zotung Chin	30968	21853	852510
 eng	King James Version	31101	28862	794735
-hlt	Chin<br>Matu	676	6102	262334
-lus	Mizo (Lushai)	658	7986	229890
+hlt	Matu Chin	0	0	0
+hlt2	Matu Chin (NT)	7880	8562	235920
+lus	Mizo	30489	26218	841777
+pck	Paite Chin	31082	32931	724011
+tcz	Thadou Chin	31104	70520	612949
 zom	Zokam	678	27461	862137
+zyp	Zyphe Chin	7930	7849	229084

@@ -150,7 +150,9 @@ def extract_verses_from_html(html: str, book_num: int, chapter: int) -> list[tup
             data = json.loads(json_match.group(1))
             # Navigate to the chapter content
             props = data.get("props", {}).get("pageProps", {})
-            chapter_info = props.get("chapterInfo", {})
+            chapter_info = props.get("chapterInfo")
+            if chapter_info is None:
+                return []  # Chapter doesn't exist in this translation
             content = chapter_info.get("content", "")
             
             if content:
