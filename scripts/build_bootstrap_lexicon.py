@@ -22,6 +22,48 @@ from collections import defaultdict, Counter
 from typing import Dict, List, Tuple, Set
 import json
 
+# English stopwords - function words that appear in almost every verse
+# These create noise because they co-occur with everything
+ENGLISH_STOPWORDS = {
+    # Articles
+    "a", "an", "the",
+    # Prepositions
+    "of", "to", "in", "for", "on", "with", "at", "by", "from", "up", "about",
+    "into", "over", "after", "beneath", "under", "above", "upon", "through",
+    "between", "without", "within", "among", "against", "before", "behind",
+    "beside", "beyond", "during", "except", "toward", "until", "unto", "out",
+    # Conjunctions
+    "and", "but", "or", "nor", "yet", "so", "as", "than", "because", "although",
+    "while", "whereas", "if", "unless", "whether", "though", "when", "where",
+    # Pronouns (personal) - these vary by context, not content
+    "I", "me", "my", "mine", "myself",
+    "you", "your", "yours", "yourself", "yourselves",
+    "he", "him", "his", "himself",
+    "she", "her", "hers", "herself",
+    "it", "its", "itself",
+    "we", "us", "our", "ours", "ourselves",
+    "they", "them", "their", "theirs", "themselves",
+    # KJV archaic pronouns
+    "ye", "thee", "thou", "thy", "thine",
+    # Demonstratives
+    "this", "that", "these", "those",
+    # Relative/interrogative
+    "who", "whom", "whose", "which", "what",
+    # Indefinite
+    "all", "any", "some", "every", "each", "both", "few", "many", "much",
+    "more", "most", "other", "another", "such", "no", "none", "one",
+    # Auxiliaries/modals (lemmatized forms)
+    "be", "have", "do", "shall", "will", "would", "should", "could", "may",
+    "might", "must", "can", "need", "dare", "ought",
+    # Common verbs too generic to be useful
+    "say", "go", "come", "make", "take", "get", "give", "put", "let", "set",
+    # Other function words
+    "not", "also", "even", "only", "just", "now", "then", "there", "here",
+    "very", "too", "well", "how", "why", "when", "where", "again", "ever",
+    "never", "always", "still", "already", "soon", "away", "back", "forth",
+    "therefore", "thus", "hence", "wherefore", "yea", "nay", "lo", "behold",
+}
+
 # Simple English lemmatization rules
 # We'll use a basic approach - could enhance with NLTK/spaCy later
 ENGLISH_IRREGULAR = {
@@ -81,6 +123,65 @@ ENGLISH_IRREGULAR = {
     "eats": "eat", "ate": "eat", "eaten": "eat", "eating": "eat",
     # Drink
     "drinks": "drink", "drank": "drink", "drunk": "drink", "drinking": "drink",
+    # Additional common verbs
+    "fell": "fall", "falls": "fall", "fallen": "fall", "falling": "fall",
+    "kept": "keep", "keeps": "keep", "keeping": "keep",
+    "slept": "sleep", "sleeps": "sleep", "sleeping": "sleep",
+    "wept": "weep", "weeps": "weep", "weeping": "weep",
+    "held": "hold", "holds": "hold", "holding": "hold",
+    "built": "build", "builds": "build", "building": "build",
+    "bought": "buy", "buys": "buy", "buying": "buy",
+    "taught": "teach", "teaches": "teach", "teaching": "teach",
+    "caught": "catch", "catches": "catch", "catching": "catch",
+    "fought": "fight", "fights": "fight", "fighting": "fight",
+    "sought": "seek", "seeks": "seek", "seeking": "seek",
+    "wrought": "work", "works": "work", "working": "work",
+    "smote": "smite", "smites": "smite", "smiting": "smite", "smitten": "smite",
+    "slew": "slay", "slays": "slay", "slaying": "slay", "slain": "slay",
+    "drew": "draw", "draws": "draw", "drawing": "draw", "drawn": "draw",
+    "flew": "fly", "flies": "fly", "flying": "fly", "flown": "fly",
+    "grew": "grow", "grows": "grow", "growing": "grow", "grown": "grow",
+    "threw": "throw", "throws": "throw", "throwing": "throw", "thrown": "throw",
+    "knew": "know", "blew": "blow", "blows": "blow", "blowing": "blow", "blown": "blow",
+    "chose": "choose", "chooses": "choose", "choosing": "choose", "chosen": "choose",
+    "froze": "freeze", "freezes": "freeze", "freezing": "freeze", "frozen": "freeze",
+    "rose": "rise", "rises": "rise", "rising": "rise", "risen": "rise",
+    "arose": "arise", "arises": "arise", "arising": "arise", "arisen": "arise",
+    "bore": "bear", "bears": "bear", "bearing": "bear", "borne": "bear", "born": "bear",
+    "wore": "wear", "wears": "wear", "wearing": "wear", "worn": "wear",
+    "tore": "tear", "tears": "tear", "tearing": "tear", "torn": "tear",
+    "swore": "swear", "swears": "swear", "swearing": "swear", "sworn": "swear",
+    "forgave": "forgive", "forgives": "forgive", "forgiving": "forgive", "forgiven": "forgive",
+    "forsook": "forsake", "forsakes": "forsake", "forsaking": "forsake", "forsaken": "forsake",
+    "spake": "speak", "bade": "bid", "bids": "bid", "bidding": "bid", "bidden": "bid",
+    "rode": "ride", "rides": "ride", "riding": "ride", "ridden": "ride",
+    "drove": "drive", "drives": "drive", "driving": "drive", "driven": "drive",
+    "strove": "strive", "strives": "strive", "striving": "strive", "striven": "strive",
+    "shone": "shine", "shines": "shine", "shining": "shine",
+    "abode": "abide", "abides": "abide", "abiding": "abide",
+    "dwelt": "dwell", "dwells": "dwell", "dwelling": "dwell",
+    "burnt": "burn", "burns": "burn", "burning": "burn", "burned": "burn",
+    "learnt": "learn", "learns": "learn", "learning": "learn", "learned": "learn",
+    "dreamt": "dream", "dreams": "dream", "dreaming": "dream", "dreamed": "dream",
+    "leapt": "leap", "leaps": "leap", "leaping": "leap", "leaped": "leap",
+    "crept": "creep", "creeps": "creep", "creeping": "creep",
+    "swept": "sweep", "sweeps": "sweep", "sweeping": "sweep",
+    "dealt": "deal", "deals": "deal", "dealing": "deal",
+    "meant": "mean", "means": "mean", "meaning": "mean",
+    "bent": "bend", "bends": "bend", "bending": "bend",
+    "lent": "lend", "lends": "lend", "lending": "lend",
+    "spent": "spend", "spends": "spend", "spending": "spend",
+    "rent": "rend", "rends": "rend", "rending": "rend",
+    "split": "split", "spread": "spread", "spread": "spread",
+    "shut": "shut", "shuts": "shut", "shutting": "shut",
+    "cut": "cut", "cuts": "cut", "cutting": "cut",
+    "cast": "cast", "casts": "cast", "casting": "cast",
+    "hurt": "hurt", "hurts": "hurt", "hurting": "hurt",
+    "cost": "cost", "costs": "cost", "costing": "cost",
+    "burst": "burst", "bursts": "burst", "bursting": "burst",
+    "thrust": "thrust", "thrusts": "thrust", "thrusting": "thrust",
+    "clave": "cleave", "cleaves": "cleave", "cleaving": "cleave", "cloven": "cleave",
+    "gat": "get", "begat": "beget", "begets": "beget", "begetting": "beget", "begotten": "beget",
     # Pronouns (keep as-is but normalize case)
     "i": "I", "me": "I", "my": "I", "mine": "I", "myself": "I",
     "he": "he", "him": "he", "his": "he", "himself": "he",
@@ -88,20 +189,89 @@ ENGLISH_IRREGULAR = {
     "they": "they", "them": "they", "their": "they", "theirs": "they", "themselves": "they",
     "we": "we", "us": "we", "our": "we", "ours": "we", "ourselves": "we",
     "you": "you", "your": "you", "yours": "you", "yourself": "you", "yourselves": "you",
-    # Common KJV forms
+    # Common KJV archaic forms
     "ye": "you", "thee": "you", "thou": "you", "thy": "you", "thine": "you",
-    "hath": "have", "doth": "do", "doeth": "do", "saith": "say", "sayeth": "say",
-    "shalt": "shall", "wilt": "will", "wouldst": "would", "shouldst": "should",
+    "hath": "have", "hadst": "have", 
+    "doth": "do", "doeth": "do", "didst": "do",
+    "saith": "say", "sayeth": "say", "saidst": "say",
+    "shalt": "shall", "wilt": "will", "wouldst": "would", "shouldst": "should", "couldst": "could",
     "art": "be", "wast": "be", "wert": "be",
     "goeth": "go", "cometh": "come", "maketh": "make", "taketh": "take",
     "giveth": "give", "knoweth": "know", "seeth": "see", "heareth": "hear",
     "speaketh": "speak", "walketh": "walk", "liveth": "live", "loveth": "love",
     "believeth": "believe", "receiveth": "receive", "bringeth": "bring",
-    # Plurals of common nouns (sample)
+    "putteth": "put", "setteth": "set", "letteth": "let", "getteth": "get",
+    "seeketh": "seek", "findeth": "find", "keepeth": "keep", "holdeth": "hold",
+    "passeth": "pass", "turneth": "turn", "returneth": "return", "remaineth": "remain",
+    "worketh": "work", "teacheth": "teach", "preacheth": "preach", "reacheth": "reach",
+    "showeth": "show", "followeth": "follow", "calleth": "call", "falleth": "fall",
+    "filleth": "fill", "killeth": "kill", "willeth": "will", "dwelleth": "dwell",
+    "entereth": "enter", "answereth": "answer", "remembereth": "remember",
+    "abideth": "abide", "continueth": "continue", "endureth": "endure",
+    "overcometh": "overcome", "hateth": "hate", "eateth": "eat", "drinketh": "drink",
+    "sitteth": "sit", "standeth": "stand", "reigneth": "reign", "remaineth": "remain",
+    "ruleth": "rule", "judgeth": "judge", "blesseth": "bless", "curseth": "curse",
+    "leadeth": "lead", "readeth": "read", "pleaseth": "please", "needeth": "need",
+    "thinketh": "think", "trusteth": "trust", "lusteth": "lust", "justifieth": "justify",
+    "glorifieth": "glorify", "sanctifieth": "sanctify", "testifieth": "testify",
+    "witnesseth": "witness", "profiteth": "profit", "suffereth": "suffer",
+    "offereth": "offer", "differeth": "differ", "delivereth": "deliver",
+    "serveth": "serve", "deserveth": "deserve", "observeth": "observe", "preserveth": "preserve",
+    "addeth": "add", "hideth": "hide", "rideth": "ride", "abideth": "abide",
+    "bindeth": "bind", "findeth": "find", "windeth": "wind",
+    "lieth": "lie", "dieth": "die", "trieth": "try", "crieth": "cry", "flieth": "fly",
+    "casteth": "cast", "lasteth": "last", "hasteth": "haste", "wasteth": "waste",
+    "resteth": "rest", "testeth": "test", "manifesteth": "manifest",
+    "departeth": "depart", "converteth": "convert", "perverteth": "pervert",
+    "exalteth": "exalt", "faulteth": "fault", "halteth": "halt", "salteth": "salt",
+    "wanteth": "want", "planteth": "plant", "granteth": "grant", "painteth": "paint",
+    "fainteth": "faint", "appointeth": "appoint", "anointeth": "anoint",
+    "printeth": "print", "pointeth": "point", "jointeth": "joint",
+    "hunteth": "hunt", "counteth": "count", "mounteth": "mount", "founteth": "fount",
+    "increaseth": "increase", "decreaseth": "decrease", "ceaseth": "cease",
+    "pleaseth": "please", "appeaseth": "appease",
+    "raiseth": "raise", "praiseth": "praise", "amazeth": "amaze",
+    "despiseth": "despise", "adviseth": "advise", "deviseth": "devise",
+    "riseth": "rise", "ariseth": "arise",
+    "closeth": "close", "composeth": "compose", "proposeth": "propose", "supposeth": "suppose",
+    "rejoiceth": "rejoice", "choiceth": "choice", "voiceth": "voice",
+    "forceth": "force", "pierceth": "pierce",
+    "washeth": "wash", "pusheth": "push", "rusheth": "rush", "crusheth": "crush",
+    "flourisheth": "flourish", "nourisheth": "nourish", "perisheth": "perish",
+    "publisheth": "publish", "punisheth": "punish", "vanisheth": "vanish",
+    "furnisheth": "furnish", "burnisheth": "burnish", "banisheth": "banish",
+    "establisheth": "establish", "abolisheth": "abolish", "polisheth": "polish",
+    "accomplisheth": "accomplish", "relinquisheth": "relinquish",
+    "catcheth": "catch", "watcheth": "watch", "matcheth": "match", "patcheth": "patch",
+    "fetcheth": "fetch", "stretcheth": "stretch", "wretcheth": "wretch",
+    "pitcheth": "pitch", "switcheth": "switch", "witcheth": "witch",
+    "toucheth": "touch", "voucheth": "vouch", "coucheth": "couch", "croucheth": "crouch",
+    # Common irregular plurals
     "men": "man", "women": "woman", "children": "child", "brethren": "brother",
     "oxen": "ox", "feet": "foot", "teeth": "tooth", "geese": "goose",
-    # Past participles
+    "mice": "mouse", "lice": "louse", "dice": "die",
+    "sheep": "sheep", "deer": "deer", "fish": "fish", "swine": "swine",
+    "cattle": "cattle", "people": "person",
+    "wives": "wife", "lives": "life", "knives": "knife", "loaves": "loaf",
+    "leaves": "leaf", "halves": "half", "selves": "self", "shelves": "shelf",
+    "calves": "calf", "wolves": "wolf", "thieves": "thief", "sheaves": "sheaf",
+    # Common adjective forms
+    "elder": "old", "eldest": "old", "older": "old", "oldest": "old",
+    "better": "good", "best": "good", "worse": "bad", "worst": "bad",
+    "more": "much", "most": "much", "less": "little", "least": "little",
+    "greater": "great", "greatest": "great", "lesser": "less",
+    "higher": "high", "highest": "high", "lower": "low", "lowest": "low",
+    "longer": "long", "longest": "long", "shorter": "short", "shortest": "short",
+    "wider": "wide", "widest": "wide", "broader": "broad", "broadest": "broad",
+    "deeper": "deep", "deepest": "deep", "nearer": "near", "nearest": "near",
+    "farther": "far", "farthest": "far", "further": "far", "furthest": "far",
+    # Past participles as adjectives
     "blessed": "bless", "cursed": "curse",
+    "beloved": "love", "chosen": "choose", "broken": "break",
+    "spoken": "speak", "written": "write", "hidden": "hide",
+    "forbidden": "forbid", "ridden": "ride", "risen": "rise",
+    "fallen": "fall", "swollen": "swell", "stolen": "steal",
+    "gotten": "get", "forgotten": "forget", "begotten": "beget",
 }
 
 
@@ -226,7 +396,9 @@ def compute_association_scores(
     eng_counts: Dict[str, int],
     total_verses: int,
     min_pair_count: int = 3,
-    min_eng_freq: int = 5
+    min_eng_freq: int = 5,
+    min_kc_freq: int = 3,
+    filter_stopwords: bool = True
 ) -> Dict[str, List[Tuple[str, float, int, float]]]:
     """
     Compute association scores for word pairs.
@@ -239,6 +411,8 @@ def compute_association_scores(
     Filters out:
     - Pairs occurring less than min_pair_count times
     - English words appearing less than min_eng_freq times (reduces noise from rare words)
+    - KC words appearing less than min_kc_freq times
+    - English stopwords (function words that co-occur with everything)
     
     Returns:
         Dict of kc_word -> [(eng_word, pmi_score, raw_count, confidence), ...]
@@ -254,8 +428,16 @@ def compute_association_scores(
         if eng_counts[eng_word] < min_eng_freq:
             continue
         
+        # Skip rare KC words (too few data points for reliable association)
+        if kc_counts[kc_word] < min_kc_freq:
+            continue
+        
         # Skip single-letter words on both sides
         if len(kc_word) <= 1 or len(eng_word) <= 1:
+            continue
+        
+        # Skip English stopwords - they co-occur with everything
+        if filter_stopwords and eng_word in ENGLISH_STOPWORDS:
             continue
         
         # Compute PMI
