@@ -70,6 +70,18 @@ In `data/`:
 - `language_stats.tsv` - Per-language statistics
 - `alignment_stats.tsv` - Coverage statistics per language
 
+### Bootstrap Lexicons
+
+In `data/lexicons/`:
+- `{iso}_lexicon.tsv` - Word-pair associations ranked by confidence
+- Columns: `kc_word`, `kc_freq`, `eng_gloss`, `pmi_score`, `pair_count`, `confidence`, `rank`
+
+Generated via bag-of-words co-occurrence analysis: for each aligned verse pair,
+we compute the cross-product of English and Kuki-Chin words and track which
+pairings recur most consistently. Sorted by confidence (stability), then PMI.
+
+Lexicon sizes range from ~600 entries (Mark-only) to ~16,000 entries (full Bible).
+
 ## Project Goals
 
 1. **Reader volumes** (Matthew, Mark, Luke–Acts) with:
@@ -89,6 +101,8 @@ In `data/`:
 | `scripts/scrape_bible.py` | Scrape Bibles from bible.com |
 | `scripts/build_wordform_inventory.py` | Build unified wordform list across all languages |
 | `scripts/build_verse_alignment.py` | Create aligned verse table for parallel comparison |
+| `scripts/build_bootstrap_lexicon.py` | Generate word co-occurrence lexicons for all languages |
+| `scripts/lookup_word.py` | Interactive lookup tool (forward and reverse) |
 
 ## Directory Structure
 
@@ -121,6 +135,20 @@ python scripts/build_wordform_inventory.py
 
 # Build verse alignment table
 python scripts/build_verse_alignment.py
+
+# Generate bootstrap lexicons for all languages
+python scripts/build_bootstrap_lexicon.py
+
+# Look up a word (KC -> English)
+python scripts/lookup_word.py ctd tapa
+# Output: son (91.5% confidence), and, the, of, he...
+
+# Reverse lookup (English -> KC words across all languages)
+python scripts/lookup_word.py --all -r water
+# Output: tui-related words in most languages (tuithawl, tuidam, tuiahte, etc.)
+
+# Look up English word in a specific language
+python scripts/lookup_word.py -r ctd water
 ```
 
 ## Data Sources
