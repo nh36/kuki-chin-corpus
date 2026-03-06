@@ -398,15 +398,17 @@ def compute_association_scores(
     min_pair_count: int = 3,
     min_eng_freq: int = 5,
     min_kc_freq: int = 3,
-    filter_stopwords: bool = True
+    filter_stopwords: bool = True,
+    max_eng_coverage: float = 0.15  # Penalize English words in >15% of verses
 ) -> Dict[str, List[Tuple[str, float, int, float]]]:
     """
     Compute association scores for word pairs.
     
-    Uses Positive PMI (PPMI) combined with a confidence weight:
+    Uses Positive PMI (PPMI) combined with a confidence weight and frequency penalty:
     - PMI(kc, eng) = log2(P(kc, eng) / (P(kc) * P(eng)))
-    - Confidence = min(pair_count, kc_freq) / kc_freq (how often the KC word co-occurs with this English word)
-    - Final score combines PMI with frequency evidence
+    - Confidence = pair_count / kc_freq (how often the KC word co-occurs with this English word)
+    - Frequency penalty: discount score for overly common English words
+    - Final score = confidence * frequency_penalty
     
     Filters out:
     - Pairs occurring less than min_pair_count times
@@ -415,7 +417,7 @@ def compute_association_scores(
     - English stopwords (function words that co-occur with everything)
     
     Returns:
-        Dict of kc_word -> [(eng_word, pmi_score, raw_count, confidence), ...]
+        Dict of kc_word -> [(eng_word, pmi_score, raw_count, adjusted_confidence), ...]
     """
     lexicon = defaultdict(list)
     
@@ -450,9 +452,28 @@ def compute_association_scores(
             
             # Only keep positive associations
             if pmi > 0:
-                # Confidence: what fraction of KC word occurrences co-occur with this ENG word
-                confidence = count / kc_counts[kc_word]
-                lexicon[kc_word].append((eng_word, pmi, count, confidence))
+                # Raw confidence: what fraction of KC word occurrences co-occur with this ENG word
+                raw_confidence = count / kc_counts[kc_word]
+                
+                # Frequency penalty: discount overly common English words
+                # Words appearing in >max_eng_coverage of verses get penalized
+                eng_coverage = eng_counts[eng_word] / total_verses
+                if eng_coverage > max_eng_coverage:
+                    # Strong penalty for ubiquitous words
+                    frequency_penalty = (max_eng_coverage / eng_coverage) ** 2
+                else:
+                    frequency_penalty = 1.0
+                
+                # Combined score: PMI-weighted confidence
+                # PMI tells us how much more often they co-occur than by chance
+                # Confidence tells us how consistently they pair
+                # Use PMI to distinguish semantic vs accidental co-occurrence
+                pmi_weight = min(pmi / 5.0, 1.0)  # Normalize PMI (typical range 0-10)
+                
+                # Final score: confidence * pmi_weight * frequency_penalty
+                adjusted_confidence = raw_confidence * pmi_weight * frequency_penalty
+                
+                lexicon[kc_word].append((eng_word, pmi, count, adjusted_confidence))
     
     # Sort by confidence (stability) first, then PMI
     # This prioritizes consistent translations over rare high-PMI pairs
