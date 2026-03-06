@@ -1,0 +1,14 @@
+# Ignore original zip files (large, already tracked elsewhere)
+*.zip
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vscode/
+.idea/

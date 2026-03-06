@@ -1,0 +1,686 @@
+# language_name:        Zokam
+# closest ISO 639-3:    zom
+# year_short:           1994
+# year_long:            Not available
+# title:                The New Testament in Zokam
+# URL:                  https://www.bible.com/de/bible/208/mat.1
+# copyright_short:      © Bible League 1994
+# copyright_long:       Not available
+41001001	Pasian Tapa Jesu Christ tawh kisai lungdamna-thu a kipatna .
+41001002	Kamsangpa Isaiah lai sungah : “ Na lampi a sialkhol dingin , ka thupuakpa na mai-ah ka sawl ding hi , ”
+41001003	" Gamlak-a kikopa aw in ‘ Topa ading lampi sialkhol unla , ama lampi na tangsak un , ’ ” ci-in kigelh hi .
+41001004	Tua bangin John in sehnel-gam kual sungah baptise in mawhnate maisak nading kisikna tawh kisai baptisena thu hilh in a pai hi .
+41001005	Judea gam sung teng le Jerusalem a mite khempeuh ama kiangah a pai uh hi . A mawhnate uh pulak uh a , amah in Jordan Gun sungah a baptise hi .
+41001006	John in kala-oh mul tawh kibawl puan silhin savun kawnggak a gak hi . Kauphe le gamlak khuaizu an in a nei hi .
+41001007	Ama thupuak hih ahi hi : “ Ka nungah kei sanga vanglianzaw khat hong pai ding hi . Kun in ama khedap khaute sut ding nangawnin ka kilawm kei hi .
+41001008	Kei in note tui in kong baptize hi . Ahi hangin amah in note Khasiangtho in hong baptize ding hi . ”
+41001009	Tua hunin Galilee gam Nazareth panin Jesu pai-a , Jordan gun sungah John a kibaptisesak hi .
+41001010	Tui lakpanin Jesu a paikhiat toh laitakin van kihong a , ama tungah vakhu bangin Kha a kumsuk a mu hi .
+41001011	Tua laitakin vantung panin aw khat ginga , “ Nang , ka it ka Tapa na hi hi ; nang tungah ka lungkim mahmah hi , ” a ci hi .
+41001012	Thakhatin Kha in amah sehnelgamah sawlpah a ,
+41001013	Satan zia-etna thuakin ni sawmli sung a om hi . Gamsate tawh amah omkhawm a , vansawltakte in a don uh hi .
+41001014	John thong a kiat khit ciangin Pasian lungdamna thuthak tangko in Galilee gam sungah Jesu va pai hi .
+41001015	Amah in , “ A hun hong tung zo hi . Pasian gam hong nai ta hi . Kisik unla thupha um un ! ” a ci hi .
+41001016	Galilee Tuipi gei-a Jesu a pai laitakin nga beng mi ahi Simon le a sanggampa Andrew-te in tui sungah len a khuh laitak uh a mu hi .
+41001017	Jesu in , “ Hong pai unla kei hong zui un . Mi a mante kong suaksak ding hi , ” a ci hi .
+41001018	Amau zong a lente uh nusia pah in amah a zui uh hi .
+41001019	Tua pan tawmkha a pai lai leh Zebedee tapa James le a sanggampa John , a lente uh puaha gunkuang sunga om a mu hi .
+41001020	Amah in amaute sampah a , amau zong a pa uh Zebedee le sumthalawhte gunkuang sungah nusia-in amah a zui uh hi .
+41001021	Amaute Capernaum ah pai uh a , Sabbath ni a tun ciangin synagogue ah Jesu lutin thuhilh a kipan hi .
+41001022	Thukham siate bang hi loin thuneipa khat bangin a hilh manin mite in a thuhilh zia lamdang a sa mahmah uh hi .
+41001023	Tua laitakin synagogue sungah kha gilo a lut mi khat in ,
+41001024	" Nazareth mi Jesu aw , kote bang hong cih nuam na hi hiam ? Kote susia dingin hong pai na hi hiam ? Nang kua na hiam cih kong thei hi - Pasian Mi Siangtho na hi hi ! ” ci-in a kiko hi .
+41001025	Jesu in khauhtakin , “ Pau ken ! Ama sung pan paikhia in ! ” a ci hi .
+41001026	Kha gilo in tua mipa a pumlinsak gawp khit ciangin kiko zekzak kawmin a paikhia hi .
+41001027	Mite in lamdang sa mahmah uh a , “ Hih in bang ahi hiam ? Thuneihna tawh thuhilhna thak khat hilh mawk ! Kha gilote thu a piak ciang nangawnin amaute in a mang tazen uh hi , ” ci-in khat le khat a kidong uh hi .
+41001028	Galilee kual bupah ama thu a kizel khinpah hi .
+41001029	Synagogue pan amaute a paikhiat khit phetun James le John tawh Simon le Andrew-te innah a hawh uh hi .
+41001030	Simon sungnu nattun a lupna-a lum ahilam amaute in Jesu kiangah a gen uh hi .
+41001031	Tua ciangin ama kiangah Jesu pai-a , a khut lenin a phongto hi . A nattun dam a , amaute a zindo hi .
+41001032	Tua nitak , ni a tum khit ciangin mite in cinate le dawilutte khempeuh Jesu kiangah a puak uh hi .
+41001033	Khuazangpi in kongkhak kiangah kikhawm uh a ,
+41001034	natna tuamtuam a vei mi tampi Jesu in a damsak hi . Amah in dawi tampi zong hawlkhia a , tua dawite in amah kua hiam cih thei uh ahi manin Jesu in amaute pau ding a phal kei hi .
+41001035	Zingkhangpi phalvak ma-in Jesu tho a , tua inn panin gamdaihna munah pai-in tua lai-ah thu a ngen hi .
+41001036	Simon le a pawlte amah zong dingin a pai uh hi .
+41001037	Amah a muh uh ciangin , “ Mi khempeuh in nang hong zong uh hi lo hiam ! ” ci-in a ko uh hi .
+41001038	Jesu in , “ Thu hilh dinga hong pai ka hi manin hih khuate khatpeuhah thuhilh dingin paikhia ni ” a ci hi .
+41001039	Tua ciangin amah Galilee gam sung tengah zin kawikawi a , synagogue-te ah thu hilhin dawite a hawlkhia hi .
+41001040	Miphak khat a kiangah va pai a , khukdinin , “ Ut peuh lecin nong siangsak thei hi , ” ci-in a thum hi .
+41001041	Khuatuahna tawh Jesu kidimin , a khut zana , tuapa lawngin , “ Ka ut hi . Siang ta in ! ” a ci hi .
+41001042	Tua khit phetin a phak natna in amah nusia-a , a damsiang hi .
+41001043	Jesu in vauhilhna khauh tawh amah sawlkhiapah a ,
+41001044	" Hih thu kuamah hilh peuhmah kei in . Ahi hangin pai inla siampipa kiangah va kilak in ; amaute tungah teci pang na suah nadingin na sian nading a Moses thupiak biakpiakna na pia in , ” a ci hi .
+41001045	Tuapa in tua banga a hih sangsikin paikhia-a genthang in tua thu a kizelsak hi . Tua hangin khuapi sungah Jesu a langtangin lut thei nawn lo-a , a pualam kuama om lohna munmun ah a om kawikawi hi . Tua hi napi mun khempeuh panin mihonte ama kiangah a pai veve uh hi .
+41002001	Ni tawmvei khit Capernaum ah Jesu a lut kik ciangin inn tung kik hi , cih thu mite in a za uh hi .
+41002002	Inn pua nangawnah om nading om lo zah dongin mi tampi va kikhawm uh a , amah in amaute kiangah thu a hilh hi .
+41002003	Mi pawlkhat va pai uh a , mi li in a zawn pumzaw khat a kiangah a paipih uh hi .
+41002004	Mihonpite hangin Jesu kiang a tut theih loh manun Jesu tung santak innkhum phelkhia in vangsak uh a , tua ciangin a zawna phekin pumzawpa a khaisuk uh hi .
+41002005	Jesu in amaute upna a muh ciangin pumzawpa kiangah , “ Tapa aw , na mawhnate kimaisak zo hi , ” a ci hi .
+41002006	Tua lai-a tu thukham siate pawlkhat in , ”
+41002007	Bang hangin hih pa tua bangin pau ahi hiam ? Amah in Pasian a gendai hi ! Pasian longal kua in mawhna maisak thei ahi hiam ! ” ci-in a ngaihsun uh hi .
+41002008	Amaute lungsim sunga a ngaihsutna uh Jesu in a kha-in theipah ahi manin amaute kiangah , “ Hih thute bang hangin ngaihsun na hi uh hiam ?
+41002009	Pumzawpa kiangah , ‘ Na mawhnate kimaisak zo hi , ’ cih ding le , ‘ Tho in , na phek la-in pai in , ’ cih ding koi baihzaw ahi hiam ?
+41002010	Ahi hangin Mihing Tapa in hih leitungah mawh maisak theih nading thu nei hi , cih na theih nadingun . . . , ” a cih khit ciangin pumzawpa kiangah ,
+41002011	" Tho in , na phek la inla innah ciah in , kong ci hi , ” a ci hi .
+41002012	Amah tho a , a phek la-in amaute khempeuh muhin a paikhia hi . Mi khempeuh in lamdang mahmah sa uh a , “ Hih bang peuhmah mu ngei nai kei hang maw ! ” kici-in Pasian a phat uh hi .
+41002013	Khatvei tuilipi gei-ah Jesu a pai leuleu hi . Mihon tampi ama kiangah va pai uh a , amah in amaute thu a hilh hi .
+41002014	Amah a pai kawikawi laitakin Alphaeus tapa Levi , siahdonna bukno sunga tu a mu hi . Jesu in , “ Kei hong zui in , ” a cih ciangin Levi dingto in a zui hi .
+41002015	Levi innah Jesu in nitak-an a nek laitakin mi tampi in a nung zui ahi manin siahdongte tampi le “ mawhneite ” in amah le a nungzuite tawh a nekhawm uh hi .
+41002016	Thukham sia ahi Pharisee-te in “ mawhneite ” le siahdongte tawh an a nekkhawm a muh uh ciangin , “ Amah in bang hangin siahdongte le “ mawhneite ” tawh ankuang umkhawm ahi hiam ? ” ci-in a nungzuite kiangah a dong uh hi .
+41002017	Jesu in hih thu a zak ciangin amaute kiangah , “ Siavuan kisam cidamte hi loin cinate hizaw hi . A thumaante sam dinga hong pai ka hi kei a , mawhneite sam dinga hong pai ka hi hi , ” a ci hi .
+41002018	John nungzuite le Pharisee-te in an a tang uh hi . Jesu kiangah mi pawlkhat va pai uh a , “ John nungzuite le Pharisee-te nungzuite in an tang napi bang hangin nang nungzuite in an tang lo uh hiam ? ” ci-in a dong uh hi .
+41002019	Jesu in , “ Zineipa tawh a omkhawm kimlai bangci in mopawi simte in an tang thei ding uh hiam ? Zineipa tawh a omkhawm lai tengun an a tang thei kei ding uh hi .
+41002020	Ahi hangin amaute kiang pan zineipa a kilakkhiat hun hong tung ding hi . Tua ni ciangin amaute in an a tang ding uh hi .
+41002021	" Kuamah in a ton nai lo puanbekin puanlui a thuap ngei kei hi . A thuap leh tua puanthak them in puanlui kaikekin a kek semsem ding hi .
+41002022	Savun-um lui sungah lenggahzu thak kuamah in a thun ngei kei hi . Tua bangin thun leh lenggahzu in savun-um phukham dinga , lenggahzu le savun-um a kisia khawm ding hi . Tua bang hi lo zaw in , savun-um thak sungah lenggahzu thak thun zaw hi , ” a ci hi .
+41002023	Sabbath ni khat Jesu buhlei tawnin a pai hi . Nungzuite in a pai kawmkawmun buhvuite a zut uh hi .
+41002024	Pharisee-te in a kiangah , “ En in , bang hangin amaute Sabbath ni-in thukham tawh kituak loin gamta uh hiam ? ” a ci uh hi .
+41002025	Amah in , “ David le a pawlte in a gilkial laitak uh le a kisap laitakun bang hih uh cih sim ngei nai lo na hi . uh hiam ?
+41002026	Tulpi Abiathar hunlai-in Pasian inn sungah amah luta , siampite bekin a nek theih a ki-apsa anlum ne-in , a pawlte zong a pia hi , ” ci-in a dawng hi .
+41002027	Tua ciangin amah in amaute kiangah , “ Mite adingin Sabbath kibawl hi-a Sabbath ni adingin mite a kibawl kei hi .
+41002028	Tua hi-a Mihing Tapa , Sabbath ni Topa nangawn ahi hi , ” a ci hi .
+41003001	Khatvei synagogue ah a pai leh a khut teem mi khat a na om hi .
+41003002	Amaute lakah pawlkhat in Jesu a mawhmat nading uh zongin , tua mipa Sabbath ni-in a damsak kha hiam , ci-in a vil gige uh hi .
+41003003	Jesu in khutteem pa kiangah , “ Mi khempeuh mai-ah ding dih in , ” ci-in a sawl hi .
+41003004	Tua ciangin Jesu in amaute kiangah , “ Sabbath ni-in a sia hih ding le a pha hih ding , nuntakna hot ding le thah ding , koi pen thukham tawh kituakzaw hiam ? ” ci-in a dong hi . Ahi hangin amaute a dai khipkhep uh hi .
+41003005	Amah hehin akim apam en-a , amaute lungkhauhna hangin lungdong ngeungau-a khutteempa kiangah , “ Na khut zan in , ” ci-in a sawl hi . Amah in a khut a zan leh , a sa dim kikin a damsiang kiuhkeuh hi .
+41003006	Tua ciangin Pharisee-te paikhia uh a , Jesu a thah theih nadingun Herod pawlte tawh a geelsim uh hi .
+41003007	Jesu a nungzuite tawh tuilipi lamah kihemkhia uh a Galilee panin mihon tampi in a zui uh hi .
+41003008	Amaute in ama hihte khempeuh a zak uh ciangin Judea , Jerusalem , Idumea le Jordan gungal kual teng le Tyre le Sidon kima gamte panin mi tampi in amah a zuan uh hi .
+41003009	Mihonpite in amah a nehcip gawp khak loh nadingin gunkuang khat kigingsa-a a koih nadingun Jesu in a nungzuite kiangah a gen hi .
+41003010	Ahang in , amah in mi tampi damsak khin ahi manin a cina laite in amah lawng nuamin mailam a phu tentan uh hi .
+41003011	Amah kha gilote in a muh peuhpeuh uh ciangin a mai-ah bokin , “ Pasian Tapa na hi hi , ” ci-in a kiko uh hi .
+41003012	Ahi hangin amah kua hiam , cih a gen loh nadingun amaute thukhauh a pia hi .
+41003013	Jesu mualtung lamah kahto a , ama deihte a kiangah samin amaute in amah a zuan uh hi .
+41003014	Amah in sawm-le-nihte sehkhia-a , sawltakpi , ci-in a minvawh hi . Tua in amaute ama kiangah a om theih nading , thu hilh ding le
+41003015	dawite hawlkhiat theihna thuneihna nei-a a sawlkhiat theih nading ahi hi .
+41003016	A sehkhiat sawm le nihte hih teng ahi hi : Simon ( Peter min a phuah ) ;
+41003017	Zebedee tapa James le a sanggampa John ( Vanging Tapate cih nopna in amau unau Boanerges , ci-a min a phuah ) ;
+41003018	Andrew , Philip , Bartholomew , Matthew , Thomas , Alphaeus tapa James , Thaddaeus , Zealot pawl-a Simon
+41003019	le amah lehhekpa Judas Iskariot-te ahi hi .
+41003020	Tua ciangin Jesu inn khatah luta mihonpite va kikhawm leuleu uh ahi manin amah le a nungzuite in an nangawn a ne thei kei uh hi .
+41003021	A innkuanpihte in hih thu a zak uh ciangin , “ Amah a lungmawk ahi hi , ” ci-in a kemcing dingin a pai uh hi .
+41003022	Jerusalem pana paisuk thukham siate in , “ Ama sungah Beelzebub lut hi ! Amah in dawite kumpitapa suangin dawite a hawlkhia hi , ” a ci uh hi .
+41003023	Tua ahi ciangin Jesu in amaute samin gentehnate zangin amaute kiangah thu gen a , “ Bangci bangin Satan in Satan hawlkhia thei ding ahi hiam ?
+41003024	Amah le amah kilangpanga a kikhenthang kumpi-gam a kip kei hi .
+41003025	Amah le amah kilangpanga kikhenthang innkuan a kip kei ding hi .
+41003026	Tua ahi ciaingin Satan , amah le amah kilangpangin kikhenthang leh a kip kei ding hi ; ama beina a tung ta hi .
+41003027	A taktak in mi khatpeuh in mihatpa hencip masa loin tuapa inn sungah lutin a neihsa bangci puakkhiatsak thei ding ahi hiam ? A hencip khit ciangin a inn a luh thei pan ding hi .
+41003028	Thutak kong geninah , mite mawhnate khempeuh le Pasian gen dainate khempeuh kimaisak ding hi .
+41003029	Ahi hangin Khasiangtho a gendai peuhmah a kimaisak ngei kei ding hi ; amah tawntung khialhna ah a mawh hi , ” a ci hi .
+41003030	Amaute in , “ Amah in kha gilo nei hi , ” a cihna uh hangin amah in hih thu a gen hi .
+41003031	Tua ciangin Jesu nu le a sanggamte a tung uh hi . Amaute innpua ah ding uh a , amah sam dingin inn sungah mi khat a sawl uh hi .
+41003032	A kimkotah mihonpi tu uh a , amaute in ama kiangah , “ Na nu le na sanggamte nang hong zongin inn pua-ah om uh hi , ” ci-in a hilh uh hi .
+41003033	Amah in , “ Ka nu kua hi a , ka sanggamte kua ahi hiam ? ” ci-in a dong hi .
+41003034	Tua ciangin amah in a kimkot-a tute en a , “ Hih lai-ah ka nu le ka sanggamte a om uh hi !
+41003035	Pasian deihna a hih peuhpeuh ka sanggampa , ka sanggamnu le ka nu ahi uh hi , ” a ci hi .
+41004001	Hun dang khatin Jesu in tuilipi gei-ah thuhilh a kipan hi . Ama kimkota kikhawm mi tam lua ahi manin tuilipi tunga gunkuang sungah kahin a tu hi . Mipite ahileh tui gei sehtak tungah a tu uh hi .
+41004002	Amah in amaute gentehnate tawh na tampi hilh a :
+41004003	" Ngai un ! Lokhopa khat ama khaici vawh dingin a kuankhia hi .
+41004004	Khaici a theh ciangin pawlkhat lamdung-ah tu-a , vasate pai-in tawmin a nemang uh hi .
+41004005	Pawlkhatte leitak tam lohna mun , suang lakah a tu hi . Leitak dai ahi manin popah sam hi .
+41004006	Ahi hangin ni a san ciangin ankungte kangdulh a , zung kha zo lo ahi manin vulpah hi .
+41004007	Adang pawlkhatte ling lakah tu-a , lingkungte khangin ankungte depgawp ahi manin gah a gah zo kei hi .
+41004008	Adang pawlkhatte leuleu lei hoihna ah a tu hi . Ankung po-a , khangtoin , a kivawh zah sawmthum , sawmguk tham lo zakhat nangawn a gahkhia hi , ” a ci hi .
+41004009	Tua ciangin Jesu in , “ Bil nei peuh in za ta hen , ” a ci hi .
+41004010	Amah kia a om laitakin , Sawm-le-nihte le ama kima om adangte in tua gentehna thute , amah a dong uh hi .
+41004011	Amah in amaute kiangah , “ Note tungah Pasian gam thusim hong kipia zo hi . Ahi hangin a pualama omte gentehnate tawh ka hilhna pen ,
+41004012	" ‘ Amaute in mu ngitnget napi , mutel ngei lo ding uh a , za ngitnget napi , a theitel ngei kei ding uh hi ; tua hi kei leh amaute lunghei in , kimaisak kha ding hi ! ’ ” a ci hi .
+41004013	Tua ciangin Jesu in amaute kiangah , “ Hih gentehna theitel lo na hi uh hiam ? Tua ahileh gentehna khatpeuh bangci theihtel thei ding na hi uh hiam ?
+41004014	Lokhopa in thu a vawh hi .
+41004015	Mi pawlkhatte thu kivawhna lamdung a tu khaici tawh kibang uh hi . Tua thu a zak phetun Satan va pai-a amaute sunga kivawhsa thu a lak mangsak hi .
+41004016	Adangte , suang laka tu khaici tawh kibangin thu ngai uh a , lungdamin a sangpah uh hi .
+41004017	Ahi hangin zung kha lo ahi manin tawmvei sung bek a hing zo hi . Thu hangin lungmanna ahi zongin bawlsiatna ahi zongin a tun ciangin a pukmang pah uh hi .
+41004018	Adangte leuleu , ling laka tu khaici kivawh tawh kibang uh hi ; thu ngai uh a ,
+41004019	ahi hangin leitung nuntak nading lunghimawh nate , hauhna’ khemna-te le nadangte lunggulhna lutin , thu depgawp a , gah a gahsak kei hi .
+41004020	A dangte lei hoihna-a tu khaici tawh kibang uh hi ; thu ngai-in sang uh a , a kivawh zah sawmthum , sawmguk tham lo za khat nangawn a gahkhia uh hi , ” a ci hi .
+41004021	Amah in amaute kiangah , “ Note in kuangkum nuai peuh lupna nuai peuh a koih dingin meivak keng na hi uh hiam ? A tunna tungah tungzaw hi lo na hi uh hiam ?
+41004022	Ahang in , a ki-imcip peuhmah a kigenkhia ding cihnopna hi-a , a kiselcip peuhmah a kipholak ding cihnopna ahi hi .
+41004023	Zak nading bil nei peuh in za ta hen , ” a ci hi .
+41004024	Amah in , “ Na zakte uh limtakin ngaihsun un . Midangte aa na tehna uh tawh no aa zong hong kitehsak tham loin a tamzaw in hong kiteh kik ding hi .
+41004025	A nei peuhmah a kipia beh ding hi ; a nei lo peuhmah a neihsun nangawn a kilak khiatsak ding hi , ” a ci lai hi .
+41004026	Amah in , “ Pasian gam pianzia hih bang ahi hi : Mi khat in leitungah khaici a vawh hi .
+41004027	Amah in khaici pianzia a theih loh hangin a sun a zan , a ihmut kal ahi zongin , a hah sung ahi zongin khaici po in na khang hi .
+41004028	Lei in ama thu-in gah a gahsak hi . A masa penin a kung , tua khit ciangin a vui , tua khit ciangin a vui sungah atak a piangsak hi .
+41004029	Buh a min phetin an lak hun tung ta ahi manin phiaukawi tawh a at hi , ” zong a ci lai hi .
+41004030	Amah in , “ Pasian gam pianzia bang tawh kibang ci ding i hi hiam ? Bang gentehna zangin telgen ding i hi hiam ?
+41004031	Pasian gam in lei sunga na tuh khaici neupen ankam tang tawh kibang hi .
+41004032	Ahi zongin a kituh ciangin khangto-a , huan ankungte khempeuh lakah a lian pen suakin vana vasate a lim belin a tuan theih-na zahin a hiangte lian hi , ” ci-in a gen leuleu hi .
+41004033	Jesu in amaute theihcian theih zahzah tua tawh a kibang gentehna tampite zangin amaute thu a hilh hi .
+41004034	Amah in gentehna zang loin amaute bangmah a hilh kei hi . Ahi hangin a nungzuite bek tawh a omkhawm ciangin na khempeuh a hilhcian hi .
+41004035	Tua ni nitak lam ciangin amah in a nungzuite kiangah , “ Galkhat lamah pai ni , ” a ci hi .
+41004036	Mihonpite nusia-in , amaute in gunkuang sunga a om bangbangin a paipih uh hi . Gunkuang dangte tawh zong a ton uh hi .
+41004037	Huih le guah nasiatakin kinuai-a , tuihualte in gunkuang vatin gunkuang a tuum dektak hi .
+41004038	Gunkuang nunglamah lukham khamin Jesu a ihmu hi . Nungzuite in amah phong uh a , “ Sia aw , tui kia le ung phamawh sa lo na hiam ? ” a ci uh hi .
+41004039	Amah tho a huih tai-in tuihualte kiangah , “ Dai un ! Tang kei un ! ” a ci hi . Tua ciangin huih nung khawla , tui sippahin a dai dide hi .
+41004040	Amah in a nungzuite kiangah , “ Bang dinga tua ci lau lawmlawm na hi uh hiam ? Upna nei nai lo lailai na hi uh hiam ? ” a ci hi .
+41004041	Amaute lau lua mahmah uh a , “ Hihpa kua hiam ? Huih le tuihualte nangawn in a thu mang tazen hi ! ” a kici uh hi .
+41005001	Amaute tuilipi kantanin Gerasenes kual lamah a pai uh hi .
+41005002	Gunkuang pan Jesu a tuahkhiat ciangin , amah a dawntuah dingin kha gilo a lut mi khat hankhuk lak pan a paikhia hi .
+41005003	Hih mipa hankhuk laka teng hi-a , kuamah in sikkhau nangawn tawh a hen zo nawn kei hi .
+41005004	A khut le a khete a sikkhainiang bottatin a khe-a sikkolte a sutan hi . Amah a thazawh zo dinga hat kuamah a om kei hi .
+41005005	A sun a zanin hankhuk lak le mual tungah awng-a , amah le amah suang tawh a kikui keh hi .
+41005006	Jesu a galmuh ciangin tai-in a mai-ah a khukdin hi .
+41005007	Tuapa in , “ A Sang Pen Pasian Tapa Jesu aw , kei bang hong cih nuam na hiam ? Kei hong bawlsia lo dingin Pasian tungah kiciam in ! ” ci-in a aw neih zahin a awng hi .
+41005008	Ahang in , Jesu in ama kiangah , “ Kha gilo aw , hih pa sung pan paikhia in , ” a ci hi .
+41005009	Tua ciangin Jesu in ama kiangah , “ Na min bang hiam ? ” ci-in a dong hi . “ Tampi pha ka hi manun , ka min Legionb hi , ” ci-in a dawng hi .
+41005010	Tua ciangin tua kuam pana amaute a hawlkhiat loh nadingin Jesu kiangah tuapa in a ngen kikkik hi .
+41005011	A kianga mual pangah vok hon tampi a gamta hi .
+41005012	Dawite in Jesu kiangah , “ Vokte lakah hong sawl inla tuate sungah hong lutsak in , ” ci-in a thum uh hi .
+41005013	Amah in amaute phalna pia-a , tua ciangin kha gilote paikhia-in vokte sungah a lut uh hi . Vok honte tul nih bang pha a , kensang pan tuili sungah tuaksukin tui a kia khin uh hi .
+41005014	Vok cingte tai-in khuapi le khua neu ah hih thu a koh uh ciangin bang thu piang hiam cih en dingin mi tampi a kuankhia uh hi .
+41005015	Amaute Jesu kiang a tun uh ciangin dawi legion khat a lutna pa , tua lai-ah tu-in puan silha , a lungsim pila om a muh uh ciangin a lau uh hi .
+41005016	Tua thu a musate in dawi lutpa tunga piangte le vokte thu zong mite kiangah a gen uh hi .
+41005017	Tua ciangin mipite in Jesu in amau kual a nusiat nadingin a thum uh hi .
+41005018	Gunkuang ah Jesu a kah laitakin tua dawilut ngei pa in amah a zuih nadingin a thum hi .
+41005019	Jesu in phal loin , “ Na innah ciah inla , Topa in nang tungah bangzahtak bawla , nang bangzahtakin hong lainat cih thu na innkuanpihte kiangah gen in , ” a ci hi .
+41005020	Tua ahi ciangin tuapa paikhia a , ama adingin Jesu in bangzahtak bawl cih thu Decapolis ah a gen hi . Mite khempeuh in lamdang a sa mahmah uh hi .
+41005021	Gunkuang tuangin tuipi gal khatah Jesu a galkah ciangin mihon tampite a kimah va kikhawm uh hi . Tuilipi gei-ah a om laitakin
+41005022	synagogue ukte lakah Jairus min nei khat , tua lai-ah va pai hi . Jesu a muh ciangin a khephungah bok-a ,
+41005023	" Ka tanu si dekdek hi . Nong hehpihna-in cidama a nuntak nadingin hong pai inla , ama tungah na khut hong ngaksak in , ” ci-in a thum ngutngut hi .
+41005024	Tua ciangin Jesu in amah a zui hi . Mihon tampi in ama nung zui uh a , a kimah a nehcih uh hi .
+41005025	Tua laitakin kum sawm-le-nih sung siluang natna a thuak khat a om hi .
+41005026	Siavuan tampi in a bawl sungin gim mahmah a , a neihsa khempeuh a bei khin hi . Ahi zongin noptuam tuan loin a nasia semsem zaw hi .
+41005027	Amah in Jesu thu a zak ciangin mihonpite lakah Jesu nunglam panin zuana , a puantualpi a lawng hi .
+41005028	Ahang in , tuanu in , “ A puan lawngkha peuh leng ka dam ding hi , ” ci-in a ngaihsun hi .
+41005029	Tua khit phetin a siluang kangpah a , a thuakna pan a suahtak lam a pumpi panin a kiphawk hi .
+41005030	Jesu in ama tung panin vang paikhia cih a phawk pah hi . Mihonpi lakah amah kihei kawikawi a , “ Ka puansilhte hong lawnsak kua hiam ? ” ci-in a dong hi .
+41005031	A nungzuite in , “ Hong nehcih mihon pite mu napi in , ‘ Kuan hong lawng hiam , ’ ci-in bang dinga dong lai na hi hiam ? ” ci-in a dawng uh hi .
+41005032	Ahi hangin Jesu in a lawng kua hiam cih thei nuamin a kimkot a enen hi .
+41005033	Tua ciangin ama natna hanga ama tunga thupiang a thei tua numei lau-a ling kawmin va pai-a , Jesu khephungah bokin ahi bang teng a gen hi .
+41005034	Amah in tuanu kiangah , “ Ka tanu aw , na upna in nang hong damsak zo hi . Lungnuamin ciah inla , na thuakna pan suakta in , ” a ci hi .
+41005035	Jesu a paupau laitakin synagogue ukpa Jairus inn panin mi pawl khat va pai uh hi . Amaute in , “ Na tanu si ta hi . Siapa buaisak kul nawn ding hiam ? ” a ci uh hi .
+41005036	Jesu in a mau thugente thudon loin Jew-te synagogue ukpa kiangah , “ Lau kei in ; um lel in , ” ci-in a gen hi .
+41005037	Amah in Peter , James le James sanggampa John-te simloh adang kua mah a kizuisak kei hi .
+41005038	Jew-te synagogue ukpa’ inn a tun uh ciangin mite nakpi-in kapa taamloin a buai ngeingai Jesu in a mu hi .
+41005039	Amah inn sungah lutin amaute kiangah , “ Bang hangin hih bangin taamlo-a buai ngeingai na hi uh hiam ? Naupangno a si hi lo hi ; a ihmu hi , ” a ci hi .
+41005040	Ahi hangin amaute in amah a nuihsan uh hi . Amah in amaute a pusuahsak khit ciangin numeino omna ah numeinof nu le a pa le a tonpih a nungzuite a lutpih hi .
+41005041	Tua numeino a khutin len a , “ Talitha koum ! ” ( “ Numeino aw , nang tungah kong ci hi tho in , ! ” a cihnopna ) a ci hi .
+41005042	Tua khit phetin numeino ( amah kum sawm-le-nih pha ta ) thotoin a vak kawikawi hi . Amaute in hih thu lamdang a sa mahmah uh hi .
+41005043	Amah in hih thu kuamah a theihsak loh nadingun amaute thukhauh pia-a , numeino nek dingin bang khatpeuh a piak dingun a sawl hi .
+41006001	Tua mun nusia in Jesu le a nungzuite ama tenna khua ah a pai uh hi .
+41006002	Sabbath a tun ciangin synagogue sungah thuhilh kipana , ama thugen a za mi tampi in lamdang a sa uh hi . Amaute in , “ Hih mipa in hih nate koi pana a ngah ahi hiam ? Nalamdangte nangawn a bawl theih nadingin ama tunga kipia hih pilna bang ahi hiam ?
+41006003	Khutsiampa hi lo ahi hiam ? Mary tapa hi-a , James , Joseph , Judas le Simon-te sanggampa hi lo ahi hiam ? A saggam numeite ei tawh teng khawm uh hi lo ahi hiam ? ” a ci uh hi . Tua ciangin ama tungah amaute a lungkim kei uh hi .
+41006004	Jesu in amaute kiangah , “ Kamsangpa ama khua sung , ama tanau-te lak le ama inn sung bekah a kipahtawi kei hi , ” a ci hi .
+41006005	Tua lai-ah amah in mi cina tawmkhatte tungah a khut nga-in a damsak lohngal nalamdang khat beek a bawl thei kei hi .
+41006006	Amah in amaute uplahna lamdang a sa hi . Tua ciangin Jesu , khua khat pan khua khatah thuhilhin a vak kawikawi hi .
+41006007	Sawm-le-nihte ama kiangah sama , kha gilote tungah thuneihna pia-in nihta nihta-in a sawlkhia hi .
+41006008	Amah in amaute a lamlahna hih bang ahi hi : “ Na khualzinna ua na zat dingun ciangkhut longal an ahi zongin , thung-ip ahi zongin , kawnggak sungah sum ahi zongin bangmah pua kei un .
+41006009	Khedap bulh unla ahi hangin puantungsilh keng thuah kei un .
+41006010	Inn khatpeuh ah na lut uh ciangin tua khua na nusiat mateng uh tua inn ah tam suak un .
+41006011	Note hong ngai lo , na thu uh a ngai nuam lo munte na nusiat uh ciangin amaute langa teci panna-in na khepek ua leivuite singkhia un , ” a ci hi .
+41006012	Amaute paikhia uh a , mite a kisik nadingin thu a hilh uh hi .
+41006013	Amaute in dawi tampi hawlkhia uh a , cina tampite sathau nilhin a damsak uh hi .
+41006014	Jesu min kithei khawk khin ta ahi manin Kumpi Herod in zong hih thu a za hi . Mi pawlkhatin , “ Baptize-pa John misisa tho kika , tua hangin amah in nalamdang bawl theihna vangliatna nei ahi hi , ” a ci uh hi .
+41006015	Adangte in , “ Amah Elijah hi , ” a ci uh hi . Pawlkhatte leuleu in , “ Tang lai-a kamsangte banga kamsangpa khat ahi hi , ” a ci uh hi .
+41006016	Ahi hangin Herod in hih thu a zak ciangin , “ A ngawng ka tanpa John misisa tho kik hi ! ” a ci hi .
+41006017	Ahang in , John mat dingin Herod mahmah in thu pia-in hensak-a thong sungah a khumsak hi . A nau pa Philip zi a suh nu Herodia hangin hih banga a hih ahi hi .
+41006018	John in Herod kiangah , “ Na sanggampa zi na suh thukham tawh kituak het lo hi , ” a cici khin zo hi .
+41006019	Tua ahi ciangin Herodia in John hua-in a that nuam hi . Ahi hangin tuanu in amah a that thei kei hi .
+41006020	Bang hang hiam cih leh John mi thumaan le misiangtho khat ahilam Herod in thei ahi manin amah kihta in a hu hi . Herod in John thu a zak ciangin amkham mahmah napi ama thugen a ngai nuam hi .
+41006021	A nunungna-ah a hun hoih khat a om hi . Herod in a suah ni-in ama uliante le galkapmangte le Galilee makaite an a vak hi .
+41006022	Herodia’ tanu sungtumin lama , tuanu in Herod le a nitak-an nekpih lenglate a lungkimsak hi . Kumpipa in numeino kiangah , “ Na deih peuhpeuh hong ngen in , kong pia ding hi , ” a ci hi .
+41006023	Amah kiciama , “ Ka kumpi gam phel khat dong nong nget peuhpeuh kong pia ding hi , ” ci-in a kamciam hi .
+41006024	Tuanu paikhia-in a nu kiangah , “ Bang ngen ding ka hi hiam ? ” a ci hi . Amah in , “ Baptize-pa John’ lutang , ” ci-in a dawng hi .
+41006025	Kumpipa kiangah numeino manlangin paipah a , “ Tu mahmah in kuangdai-in Baptize-pa John lutang nong piak ding ka deih hi , ” ci-in a ngen hi .
+41006026	Kumpipa lungdong lua mahmah a , ahi hangin ama kamciamsa le a nitak-an nekpih a lenglate hangin tuanu a nial nuam kei hi .
+41006027	Tua ciangin amah in John lutang a paipih nading thupiakna tawh mithatpa khat a sawlpah hi . Tua mipa pai-in thong sunga om John ngawng tana ,
+41006028	ama lutang kuangdai-in a puak kik hi . Amah in numeino pia-a tuanu in a nu a pia hi .
+41006029	John nungzuite in hih thu a zak uh ciangin pai uh a , a luang la-in han sung khatah a sial uh hi .
+41006030	Jesu kimkotah sawltakpite va ki khawm uh a , amau hihsa le a hilhsate uh a ko uh hi .
+41006031	Tua ciangin mipite a ciah le a kuan a tam luat manin an nek hun ding nangawn nei lo uh a , amaute kiangah , “ Gamdaihna mun khatah no kia bek in hong zui unla , tawlnga un , ” a ci hi .
+41006032	Tua ciangin amau guak gamtawng khatah gunkuang khatin a pai uh hi .
+41006033	Ahi hangin amaute paikhiat a mute in thei uh a , khua khempeuh panin khe-in tai uh a , amaute tun ma-in a na tung uh hi .
+41006034	Jesu lei-ah a tun ciangin mihonpi tampi a mu hi . Amah in amaute khuatuah hi , bang hang hiam cih leh amaute a cingpa om lo tuuhon tawh kibang uh hi . Tua ciangin amaute thu tampi a hilh hi .
+41006035	Tua hunlaitak nitak lam ahi hi . Tua ciangin a nungzuite a kiangah va pai uh a amaute in , “ Hih tak gamtawng hi-a khuanung lua mahmah ta hi .
+41006036	Hih kima khuata khuaneute ah pai-in a nek ding uh an a lei theih nadingun mipite ciahsak ta in , ” a ci uh hi .
+41006037	Ahi hangin amah in , “ Note in a nek ding uh khatpeuh pia un , ” a ci hi . Amaute in ama kiangah , “ Tuabang hileh pasal khat , kha giat thaman tak bei ding hi ! Kote pai-in tua zah tawh an va lei-in amaute nek ding , pia ding ka hi uh hiam ? ” a ci uh hi .
+41006038	Amah in , “ Anlum bangzah na nei uh hiam ? Pai-in va en dih un , ” a ci hi . Amaute in a et khit uh ciangin , “ Lum nga le ngasa nih om hi , ” a ci uh hi .
+41006039	Tua ciangin Jesu in mipite lopa hing tungah a pawlpawlin a tusak hi .
+41006040	Tua ahi ciangin amaute a zaza , a sawm nganga-in a tu ciptep uh hi .
+41006041	Tua anlum nga le ngasate gel la-a , vantung lam ento-in lungdam a koh khit ciangin anlumte a balkham hi . Tua ciangin mipite a lui dingun a nungzuite a pia hi . Amaute khempeuh lakah ngasate gel zong a hawm hi .
+41006042	Amaute in ne uh a , a kham pikpek uh hi .
+41006043	Nungzuite in anlum le ngasa athem aneng bawmta sawm-le- nih a tawm uh hi .
+41006044	Tua an nete pasal cingteng tul nga a pha hi .
+41006045	Tua khit phetin Jesu in nungzuite gunkuang sungah tuangsaka , ama mai Bethsaida ah paisakin mihonpite a ciahsak hi .
+41006046	Amaute paisan-a , amah thungen dingin mual tungah a pai hi .
+41006047	Nitak ciangin tuilipi laizangah gun kuang om a , amah ahileh lei lakah a om hi .
+41006048	Huih in gunkuang lehmut ahi manin nungzuite in gunkuang nakpi-a a hot uh a mu hi . Zan vil lina pawlin amaute lam zuanin tuilipi tungah Jesu a pai hi . Amaute kheng dektak a ,
+41006049	ahi hangin amah tuilipi tunga pai a muh uh ciangin sikha sa in a kikokhia uh hi .
+41006050	Bang hang hiam cih leh a vekun amah mu uh a , a lau mahmah uh hi . Jesu in amaute kiangah , “ Lau kei un ! Keimah ka hi hi . Hong kihta kei un , ” a cipah hi .
+41006051	Tua ciangin amaute tawh gunkuang tungah kahto a , huih nung a dai kiuhkeuh hi .
+41006052	Amaute in anlum ngate thu theitel lo uh ahi manin lamdang lua mahmah a sa uh hi , amaute lungtang kikhauhsak hi .
+41006053	Amaute galkah uh a , Gennesaret a tun uh ciangin tua lai-ah a gunkuang uh a khih uh hi .
+41006054	Gunkuang pan a pusuah phetun , mipite in Jesu mel a theitel uh hi .
+41006055	Mipite tua kual khempeuhah tai kawi kawi uh a , cinate phek tawh zawngin , amah om hi ci-a a zakna peuhpeuhuah a paipih uh hi .
+41006056	Khuapite khuaneute le gamsung khuate ahi zongin ama paina peuhpeuhah cinate paipih uh a , sum zuakna munte ah a na koih uh hi . Ama puantualpi mongtep ciang beek a lawnsak theih nadingin thum uh a , amah a lawngte khempeuh a dam uh hi .
+41007001	Jerusalem panin Pharisee-te le thukham siate pawlkhat Jesu kiang ah va kikhawm uh a ,
+41007002	a nungzuite pawlkhat in ngeina banga “ siang lo ” —tua pen biakna ngeina a silsiang loh khut tawh an a nek laitak uh a mu uh hi .
+41007003	( Pharisee-te le Jew-te khempeuh in upate tang ngeinate a kipletna un a ngeina bangin khut sil masa loin an a ne kei uh hi .
+41007004	Sum zuakna mun pan a ciah uh ciangin kisil masa loin an a ne kei uh hi . Tua ciangin haite , tuivotbeelte le niangbeelte sawpsiangna-a kipan tang ngeina adang tampi a tang uh hi . )
+41007005	Tua ahi ciangin Pharisee-te le thukham siate in , “ Bang hangin na nungzuite in khut sianglo tawh an a nek uh sangin upate tang ngeina bangin gamta zaw lo uh ahi hiam ? ” ci-in Jesu a dong uh hi .
+41007006	Amah in , “ No kineihsiamte tawh kisai-a Isaiah in a genkholh hih banga kigelhsa : “ ‘ Hih mite in a muk uh tawh kei hong pahtawi uh a , ahi hangin a lungtang uh kei tawh kigamla hi .
+41007007	A mawkna in kei hong bia uh a , a thuhilhte uh mihing bawltawm ngeina ahi hi , ’ a cih man mahmah hi .
+41007008	" Note in Pasian thupiakte na paikhia uh a , mihingte tang ngeinate na len tentan uh hi , ” ci-in a dawng hi .
+41007009	Tua ciangin amah in amaute kiangah , “ Na tang ngeinate uh na tan theih nadingun Pasian thupiakte nawlkhin dan na siam uh hi !
+41007010	Moses in , ‘ Na nu na pa pahtawi in . A nu a pa a hamsiat mi peuhmah thah ding ahi hi , ’ ci hi .
+41007011	Ahi hangin note in , mi khatpeuh in a nu a pa-te khatpeuh kiangah , ‘ Kei tung pana na ngah ding uh huhnate Corban ( Pasian a ki-apsa letsong ) hi ta hi , ’ na ci uh a ,
+41007012	tua ciangin a nute a pate ading bangmah na hihsak nawn kei uh hi .
+41007013	Tua bangin note na kipiaksawn uh na tang ngeinate uh zangin Pasian thu bangmah lo na suaksak uh hi . Tua banah tua bangin na tampi na hih uh hi , ” a ci hi .
+41007014	Jesu in mihonpite sam leuleu a , “ Na vekpi un ngai unla hih thu theitel un .
+41007015	A pualam pana mihing sunga tumsuk , bangmah in amah a ‘ nin’ suaksak thei lo hi . Mihing sung pana pusuakte in amah a ‘ nin’ suaksak zaw hi .
+41007016	Zak nading bil nei peuh in za ta hen , ” a ci hi .
+41007017	Mihonpite nusia in inn sungah a lut ciangin a nungzuite in hih gentehna thu ama kiangah a dong uh hi .
+41007018	Amah in , “ Tua zahin lungmawl zawzen na hi uh hiam ? Pua lam panin mihing sunga tumsuk khatpeuh in amah a ‘ nin’ suaksak thei lo ahilam thei lo na hi uh hiam ?
+41007019	Ahang in , a lungtang sungah tumsuk loin gilpi sungah tumsuk a , tua ciangin pumpi pualamah a pusuak khia hi , ” a ci hi . ( Jesu in hih banga a gen ciangin ante khempeuh ‘ siang’ hi ci-a a pulakkhia ahi hi . )
+41007020	A thugen zom lai-a : “ Mihing sung pana pusuak in amah a ‘ nin’ suaksak hi .
+41007021	Ahang in , a sunglam mihing lungtang panin ngaihsutna khel , numei pasal paktatna , guktakna , tualthahna , angkawmna ,
+41007022	huaihamna , etsatna , zuau tatna , thangtatna enna , gensiatna , kiphatsakna le hainate a pusuakkhia hi .
+41007023	Hih gitlohnate khempeuh a sung lam pana pusuakkhia hi-a , mihing a ‘ nin’ suaksak hi , ” a ci hi .
+41007024	Jesu in tua mun nusia a , Tyre kimnai-ah a pai hi . Amah inn khatah luta , ama omsim lam kuama theih ding deih lo napi a ki-im zo kei hi .
+41007025	A taktakin , a tanu sunga kha gilo a lut nupi khat in ama thu a zak khit phetin va pai-a , a khe phungah a bok hi .
+41007026	Tuanu , Syria gam Phoenicia a suak Greek mi ahi hi . Tuanu in a tanu sunga dawi a hawlkhiatsak nadingin Jesu kiangah a thum hi .
+41007027	Amah in tuanu kiangah . “ Tate an nek kim lai laksakin uite piak ding kilawm lo ahi manin , tate in a duh zahzah uh ne masa phot uh hen , ” a ci hi .
+41007028	Tuanu in , “ Himah hi , Topa aw , ahi hangin sabuai nuai-a uite in zong naupangte annengte a ne uh hi , ” a ci hi .
+41007029	Tua ciangin amah in tuanu kiangah , “ Tuaci banga nong dawn manin na ciah thei hi ; dawi in na tanu a nusia zo hi , ” a ci hi .
+41007030	Tuanu ciaha , a sung pana dawi a paikhia khin , lupna tunga lum a tanuno a mu hi .
+41007031	Tua ciangin Jesu in Tyre kimnai teng nusia-a , Sidon kantanin Galilee tuipi ah pai-a tua ciangin Decapolis kualah a paisuk hi .
+41007032	Tua lai-ah mi pawlkhat in bilngong-a pau-awk pasal khat va paipih uh a , tuapa tungah a khut a ngak nadingin ama kiangah a thum hi .
+41007033	Jesu in tuapa mihonpite lak panin a tang paikhiatpih khit ciangin a khutmete tuapa bil sungah a khum suk hi . Tua ciangin a cil phih a tuapa leii a lawng hi .
+41007034	Vantung lam ento a nakpi-in khuisa-a tuapa kiangah , “ Ephatha ! ” ( “ Kihong ta hen ! ” cihna ) a ci hi .
+41007035	Tua laitakin tua mipa bilte kihonga , a leiigui kikolin siangtakin a pau thei sensen hi .
+41007036	Kuama tungah a gen loh nadingun Jesu in amaute thu a pia hi . Ahi hangin tua banga thu a piak semsem ciangin amaute in tua thu a gen semsem uh hi .
+41007037	Mipite in lamdang sa lua mahmah uh a , “ Amah in na khempeuh a hoihin bawl khin zo hi . Amah in bilngongte khua zasakin , a pau thei lote nangawn a pausak hi , ” a ci uh hi .
+41008001	Tua hunlaitakin mihonpi dang khat va kikhawm uh hi . Amaute in nek ding bangmah nei lo uh ahi ciangin Jesu in a nungzuite sama ,
+41008002	" Hih mite ka khuatuah hi . Kei kianga hong om zawh uh ni thum tak pha khin ta-a , a nek ding uh bangmah a nei kei uh hi .
+41008003	Gil kialpi in innah ciahsak leng pawlkhatte gamlapi pana hong pai uh ahi manin lamkalah phuk-hong vei-in puk ding uh hi , ” a ci hi .
+41008004	A nungzuite in , “ Ahi ta zongin gamsung hi bangah mihon hizah ta vak nading an koi pan kingah thei ding ahi hiam ? ” ci-in a dawng uh hi .
+41008005	Jesu in , “ Anlum bangzah na nei uh hiam ? ” ci-in a dot ciangin , “ Sagih , ” ci-in a dawng uh hi .
+41008006	Amah in mihonpite leitual ah a tusak hi . Tua anlum sagihte la-a , lungdam a koh khit ciangin balkhama mipite a lui dingun a nungzuite pia-a , amaute in mipite a lui uh hi .
+41008007	Amaute in ngasa neu tawmkha zong a nei uh hi ; amah in tuate hangin zong lungdam a koh khit ciangin a hawmkhia dingin nungzuite a sawl hi .
+41008008	Mipite in ne uh a , a kham pikpek uh hi . An khamval teng nungzuite in a neng a themin a top uh leh bawm sagih dimtak a pha hi .
+41008009	Tua lai-ah pasal tulli bang a om hi . Jesu in amaute a ciahkhiatsak khit ciangin
+41008010	a nungzuite tawh gunkuangah tuangin Dalmanutha kual lam a zuan hi .
+41008011	Pharisee-te va pai-in Jesu kiangah thu a dong uh hi . Amah a zia-etna un , amaute in vantung panin lim khat a ngen uh hi .
+41008012	Amah nakpi in khuisa-a , “ Bang hangin hih khang mite in lim lamdang ngen uh ahi hiam ? Thutak kong geninah , amaute tungah lim bangmah a kilak kei ding hi , ” a ci hi .
+41008013	Tua ciangin Jesu in amaute nusia in gunkuangah tuang kika , a galkhat lamah a galkah hi .
+41008014	Nungzuite in gunkuang sunga a neihsa uh anlum khat longal an puak ding a mangngilh uh hi .
+41008015	Jesu in amaute kiangah , “ Pilvang un , Pharisee-te le Herod silngo panin na kidawm un , ” ci-in a vauhilh hi .
+41008016	" An i neih loh hang hi , ” ci-in amaute khat le khat a kikum uh hi .
+41008017	Jesu in amaute kikupna a theih ciangin , “ Bang hangin note , na an neih loh uh kikum tazen na hi uh hiam ? Tu dongin mu nai lo , theitel nailo lailai na hi uh hiam ? Na lungtang uh kikhauhsak lai ahi hiam ?
+41008018	Mit nei napi in mu lo a , bil nei napi in za lo na hi uh hiam ? Hih thu phawk lo lailai na hi uh hiam ?
+41008019	Mi tulnga adingin anlum nga ka balkhap lai-in athem aneng na topte uh bawm dim bangzah pha ahi hiam , na phawk lai uh hiam ? ” a ci hi . “ Sawm-le-nih , ” ci-in a dawng uh hi .
+41008020	" Mi tulli ading anlum sagih ka balkhap lai-in athem aneng na topte uh , bawm dim bangzah pha ahi hiam ? ” ci-in a dot ciangin , amaute in , “ Sagih , ” ci-in a dawng uh hi .
+41008021	Jesu in amaute kiangah , “ Theitel nai lo na hi uh hiam ? ” a ci hi .
+41008022	Amaute Bethsaida a tun uh ciangin mi pawlkhat in mittaw khat va paipih uh a , Jesu in a lawn nadingin a thum uh hi .
+41008023	Amah in mittawpa a khutin kai-a , khuanawl ah a paikhiatpih hi . Jesu in tuapa mitte a cil phih-a a tungah a khutte a ngak khit ciangin , “ Na khatpeuh na mu thei hiam ? ” ci-in a dong hi .
+41008024	Amah khuadak a , “ Mite ka mu hi ; amaute singkung lampai bang uh hi , ” a ci hi .
+41008025	Jesu in a khutte tuapa mitte ah a nga kik hi . Tua ciangin a mit kihongin khua mu thei-in na khempeuh siang sinsenin a mu hi .
+41008026	Jesu in , “ Khua sungah lut kei in , ” ci-in amah a ciahsak hi .
+41008027	Jesu le a nungzuite , Caesarea le Philipi kima khuaneute a tun dong uh a pai uh hi . Lam a pai laitakun amaute kiangah , “ Mite in kei kua hi , hong ci uh hiam ? ” ci-in a dong hi .
+41008028	Amaute in , “ Kimkhat in Baptize-pa John hi ; adangte in Elijah hi ; pawlkhatte leuleu in kamsangte lakah khat hi , hong ci uh hi , ” ci-in a dawng uh hi .
+41008029	" No e leh , kei kua hi nong ci uh hiam ? ” ci-in a dong kik hi . Peter in , “ Nang tua Christ na hi hi , ” ci-in a dawng hi .
+41008030	Jesu in ama thu kuamah a hilh loh nadingun amaute a vauhilh hi .
+41008031	Tua ciangin Mihing Tapa in tampi thuak pelmawh dinga , upate , siampi makaite le thukham siate in amah nolh ding uh a , pel loin amah kithatin ni thum khit ciangin a tho kik ding hi , cih thu amaute hilh a kipan hi .
+41008032	Amah in hih thu teltakin gena , tua ciangin Peter in amah tang paikhiatpih in a tai hi .
+41008033	Ahi hangin Jesu kihei-a , a nungzuite enin Peter tai a , “ Satan aw , ka nungah kihem in ! Pasian thute ngaihsun loin mihing thute na ngaihsun hi , ” a ci hi .
+41008034	Tua ciangin a nungzuite le mihonpite ama kiangah sama , “ Mi khatpeuh in ka nung hong zuih nop leh pel loin amah le mah kinialin , ama singlamteh kisuanin hong zui ding hi .
+41008035	Ahang in , a nuntakna a honkhia nuam peuh in taan dinga , ahi hangin kei hang le lungdamna-thu hangin ama nuntakna a taan peuhmah in a nuntakna a honkhia ding hi .
+41008036	Mi khatin leitung buppi a neih hangin a hinna taan leh bang phatuam ding ahi hiam ?
+41008037	Ahi kei leh mi khatin ama hinna bang tawh khek thei ding ahi hiam ?
+41008038	Hih angkawm le mawhdim khang mite hunah keimah le ka thu a zumpihte , Mihing Tapa in a Pa minthanna-in ama vansawltak siang thote tawh hong pai ciangin amaute a zumpih ding hi , ” a ci hi .
+41009001	Tua ciangin amah in amaute kiangah , “ Thutak kong geninah , vangliatna tawh Pasian gam hong tung , hih lai-a ding mi kimkhat in a muh matengun sihna a ciam kei ding uh hi , ” a ci hi .
+41009002	Niguk khit ciangin Jesu in Peter , James le John tonpih in mualsang tungah kahpih to a , tua lai-ah amauteng bek a om uh hi . Tua lai-ah amauteng bek mitmuhin a mel a kikhel hi .
+41009003	Ama puansilhte leitunga , a kipaksak thei penpen sangin pak zaw-a a leng daldal hi .
+41009004	Tua laitakin amaute mai-ah Elijah le Moses kilanga , Jesu tawh a kiho uh hi .
+41009005	Peter in Jesu kiangah , “ Rabbi , hih lai-a i om nuam mahmah hi . Nang ading khat , Moses ading khat , Elijah ading khat , buk thum lam ni , ” a ci hi .
+41009006	( Amah in a gen ding thei lo hi , amaute a lau mahmah uh hi . )
+41009007	Tua ciangin meii lompi khat kai-in amaute tuama , tua meii lak panin aw khat in , “ Hih in , ka it ka Tapa ahi hi . Ama thu na ngai un , ” a ci hi .
+41009008	Tua khit phetin a kimkot uh a et uh leh Jesu longal kuamah dang a mu nawn kei uh hi .
+41009009	Amaute mualtung pan a kumsuk kawmkawmun Mihing Tapa misi pan a thawh kik mateng a muhte uh kuama kiangah a gen loh nadingun Jesu in amaute thu a pia hi .
+41009010	Amaute in hih thu amauteng theih in koih uh a “ misi pan tho kik ” cih bang cihnopna hiam cih a kikum uh hi .
+41009011	Tua ciangin amaute in , “ Bang hangin thukham siate in , Elijah hong pai masa pelmawh ding hi , ci-in gen uh ahi hiam ? ” ci-in amah a dong uh hi .
+41009012	Jesu in , “ A taktakin Elijah hong pai masa takpi mah a na khempeuh bawlpha mah hi . Tua ahileh Mihing Tapa in nak thuak mahmah dinga a kinolh ding hi , cih thu bang hangin kigelh ahi hiam ?
+41009013	Ahi hangin ken kong cihinah , Elijah hong pai khin zo a , ama thu a kigelhsa bangin amau ut bangin ama tungah bawl khin zo uh hi , ” ci-in a dawng hi .
+41009014	Nungzui dangte kiangah amaute a tun uh ciangin amaute kimah mihon tampi na oma , thukham siate tawh thu a kinialnial uh a mu uh hi .
+41009015	Tua lai-a om mite khempeuh in Jesu a muh phetun lamdang sa lua uh a , amah dawntuah dingin a tai uh hi .
+41009016	Amah in , “ Amaute tawh bang thu kinialnial na hi uh hiam ? ” ci-in a dong hi .
+41009017	Mihonpite lakah khat in , “ Sia aw , ka tapa sungah kha khat lutin pausak thei lo-a na kiangah kong paipih hi .
+41009018	A dawi in a mat peuhpeuh ciangin leilak a denna hi . A kam panin cilphuan bua-a , a ha gawi-in gawcip hi . Na nungzuite kiangah tua kha a hawlkhiat nadingun ka nget hangin a hawlkhia thei kei uh hi , ” ci-in a dawng hi .
+41009019	Jesu in , “ Thu um lo khangmite aw , no tawh bang tan om khawm lai ding ka hi hiam ? Bang tanvei hong thuak zo ding ka hi hiam ? Tua pasalno ka kiangah hong paipih un , ” a ci hi .
+41009020	Tua ciangin amaute in amah a paipih uh hi . Tua kha in Jesu a muh phetin tua naupang a kisatgawpsak hi . Amah lei lakah pukin kipum khuka , a cilphuan a bua hi .
+41009021	Jesu in , “ A hicih zawh bang tanvei sawt khin hiam ? ” ci-in tua pasalno’ pa a dong hi . Amah in , “ A neu tunga kipan ahi hi .
+41009022	Tua kha in amah that nuamin mei sung khawng , tui sung khawng ah sawnpai zel hi . Ahi zongin nang na hih theih leh hong hehpih inla , hong huh in , ” a ci hi .
+41009023	Jesu in , “ ‘ Na hih theih leh e’ ? A um mi adingin na khempeuh hi thei hi , ” a ci hi .
+41009024	Tua pasalno’ pa in zong , “ Ka um hi ; ka uplahna ka zawh nadingin hong huh in ! ” a cikhia pah hi .
+41009025	Tua munah mihonpite hong tai uh Jesu in a muh ciangin tua kha gilo a tai hi . Amah in , “ Nang a bilngong , a pauthei lo kha aw , ama sung pan paikhia inla , lut kik nawn peuhmah kei in , ci-in thu kong pia hi , ” a ci hi .
+41009026	Tua kha ku zelzal a , tua pasalno kisatsak vanvanin tua khit ciangin a paikhia hi . Tua pasalno misisa tawh kibang lua ahi manin mi tampi in , “ Si ta ei ! ” a ci uh hi .
+41009027	Ahi hangin Jesu in tuapa khut lenin a phottoh leh amah a ding to hi .
+41009028	Inn sungah Jesu a tum khit ciangin a nungzuite in , “ Bang hangin kote in hawlkhia thei lo ka hi uh hiam ? ” ci-in a dong sim uh hi .
+41009029	Amah in , “ Hih bangte pawl , thungetna bek tawh paikhia thei hi , ” ci-in a dawng hi .
+41009030	Amaute in tua mun nusia in Galilee a kantan uh hi . Jesu in amau omna kuama theih ding a deih kei hi .
+41009031	Bang hang hiam cih leh amah in , “ Mihing Tapa , mite khut sungah kilehhek ding hi . Amaute in amah that ding uh a , ni thum khit ciangin amah tho ding hi , ” ci-in a nungzuite a hilh hi .
+41009032	Ahi hangin amaute in ama cihnopna theitel lo uh a , tua thu tawh kisai lah a dong ngam kei uh hi .
+41009033	Amaute Capernaum a tung uh hi . Inn sungah a om laitakun , “ Lampi-a na kisel uh bang ahi hiam ? ” ci-in amaute a dong hi .
+41009034	Ahi hangin lampi-a a kisel uh kua lianpen hiam , cih thu tawh kisai ahi manin a dai uh hi .
+41009035	Jesu tusuk in Sawm-le-nihte sam a , “ Mi khatpeuh a masakpen nop leh a nunung penpen le adang teng’ nasem ahi pelmawh kul hi , ” a ci hi .
+41009036	Amah in naupangno khat kai-a amaute lakah a dingsak hi . Amah in tua naupangno tawi-in amaute kiangah ,
+41009037	" Keima min hangin hih bang naupangno khat a sang peuhmah kei hong sang ahi hi . Kei hong sang peuhmah , keimah hong sang hi loin kei hong sawlpa a sang ahi hi , ” a ci hi .
+41009038	John in , “ Sia aw , mi khatin nang minin dawite a hawlkhiat ka mu uh a , ei mi hi lo ahi manin a hih nawn loh nadingin ka kho uh hi , ” a ci hi .
+41009039	Jesu in , “ Tuapa kho kei un , kuamah in keima minin nalamdang a bawl khit phetin kei hong siatgen pah thei lo ding hi .
+41009040	Ahang in , ei hong langpang lo peuh ei aa ahi hi .
+41009041	Thutak kong geninah , Christ pawl na hi manun kei min hanga tuisik hai khat hong suah peuhpeuh pahtakman ngah loin a om peuhmah kei ding hi .
+41009042	Kei hong um hih naupang no khatpeuh mawhna a bawlsak a om leh a ngawngah angawina suang lianpi khihin tuipi sungah kipai leh ama adingin hoihzaw ding hi .
+41009043	Na khut in mawhna hong bawlsak leh sattan in .
+41009044	Khut kimin , amaute than a sihlohna , mei a mit lohna muna meilipi khukah hong kikhul sangin khut buisa-in nuntakna ah lut lecin nang adingin a hoihzaw hi .
+41009045	Na khe in mawhna hong bawlsak leh sattan in
+41009046	Khe kimin , amaute than a sihlohna mei a mit lohna mun meilipi khukah hong kipaih sangin khe buisa-in nuntakna ah lut lecin nang ading a hoihzaw hi .
+41009047	Na mittang hangin mawhna na bawl leh khelkhia in . Mittang kimin meilipi khukah hong kipaih sangin mit langkhat bek tawh Pasian gamah lut lecin nang adingin a hoihzaw hi .
+41009048	Tua meilipi khukah “ ‘ amaute than nangawn si lo-a , mei zong a mit ngei kei hi , ’
+41009049	Mi khempeuh cisawh bangin mei tawh kisawh ding hi .
+41009050	" Ci a lim hangin a alna mang leh bangci alkiksak thei ding na hi hiam ? Note zong ci alin al unla , khat le khat na kilem un , ” a ci hi .
+41010001	Tua ciangin Jesu tua mun nusia in Jordan gal khat lam Judea kualah a pai hi . Ama kiangah mihonte va pai leuleu uh a , a hih ngei bangin amaute thu a hilh hi .
+41010002	Pharisee-te pawlkhat va pai uh a , a zia-etna un , “ Mikhat in zi a mak ding thukham tawh a kituak hiam ? ” ci-in a dong uh hi .
+41010003	Amah in , “ Moses in note bang thu hong pia ahi hiam ? ” ci-in a dawng hi .
+41010004	Amaute in , “ Mi khatin a zi a makna lai pia-a , a zi a nawkiksak theih nading Moses in a phal hi , ” a ci uh hi .
+41010005	Jesu in , “ Na lungtang uh khauh lua ahi manin Moses in hih thukham note adingin a gelh ahi hi .
+41010006	Ahi hangin Pasian in na khempeuh a piansak cilin amaute ‘ numei le pasal-in a bawl hi . ’
+41010007	‘ Hih thu hangin pasal in a nu a pa nusia-in a zi tawh kigawm dinga ,
+41010008	amaute gel sakhat a suak ding uh hi . ’ Tua ahi ciangin amaute nih hi nawn loin khat ahi hi .
+41010009	Tua ahi manin Pasian gawmsate mihing in khen kei ta hen , ” a ci hi .
+41010010	Amaute inn sungah a om kik uh ciangin , nungzuite in hih thu Jesu a dong uh hi .
+41010011	Amah in , “ Ama zi ma-a , numei dang khat a tenpih peuhmah a zi angkawmsan ahi hi .
+41010012	Tua ciangin numei khat in a pasal ma-a pasal dang khat a tenpih leh tua numei angkawm a suak hi , ” ci-in a dawng hi .
+41010013	Jesu lawn dingin mipite in nau pangnote ama kiangah a paipih uh leh , nungzuite in amaute a na tai uh hi .
+41010014	Jesu in a muh ciangin a lungkim kei hi . Amah in amaute kiangah , “ Naupangnote ka kiangah hong paisak un , amaute dal kei un . Ahang in , Pasian gam i cih hih bangte aa ahi hi .
+41010015	Thutak kong geninah , naupangno banga Pasian gam a sang lo peuhmah , tua sungah a lut ngei kei ding hi , ” a ci hi .
+41010016	Tua ciangin amah in naupangnote a khutin tawi-a , a tunguah a khutte nga in amaute thupha a pia hi .
+41010017	Jesu a paikhiat laitakin ama kiangah mi khat va tai-a , a mai ah khukdinin , “ A hoih siapa aw , nuntak tawntungna ka luah nadingin bang ka hih ding kul hiam ? ” ci-in a dong hi .
+41010018	Jesu in , “ Bang hangin kei hoih hong ci na hi hiam ? Pasian bek longal mi hoih khat beek a om kei hi .
+41010019	‘ Tual that kei in , ang kawm kei in , gu kei in , zuau teci pang kei in , khem kei in , na nu na pa pahtawi in , ’ kici thupiakte na theihsa ahi hi , ” ci-in a dawng hi .
+41010020	Tuapa in , “ Sia aw , tuate khempeuh ka neu tunga kipan ka zuihsa ahi hi , ” a ci hi .
+41010021	Jesu in amah enin it a , “ Na khat na kisam lai hi . Pai-in , na neihsa khempeuh zuak inla mizawngte pia in . Tua hileh vantungah gou na nei ding hi . Tua khit ciangin hong pai inla kei hong zui in , ” a ci hi .
+41010022	Hih thu hangin tuapa a mai a mual hi . Amah hau mahmah ahi manin lungsi dedu in a paikhia hi .
+41010023	Jesu in a kim teng en kawikawi a , a nungzuite kiangah , “ A haute Pasian gam a lut nading haksa na zen e ! ” a ci hi .
+41010024	Nungzuite in Jesu thugente lamdang a sa mahmah uh hi . Ahi hangin Jesu in , “ Tate aw , Pasian gam lut nading haksa mahmah si !
+41010025	Mihau khat Pasian gam a lut ding sangin phim bilvang ah kala-oh thawl ding a baihzaw hi , ” a ci hi .
+41010026	Nungzuite in lamdang sa semsem uh a , “ Tua hileh kua kihonkhia thei peuhmah ding hiam ? ” ci-in khat le khat a kikum uh hi .
+41010027	Jesu in amaute en a , “ Mihing adingin ahi thei lo mah ahi hi ; ahi hangin Pasian adingin tua bang hi lo hi . Pasian adingin na khempeuh hi thei hi , ” a ci hi .
+41010028	Peter in ama kiangah , “ Kote in na khempeuh nusia in nang kong zui uh hi , ” a ci hi .
+41010029	Jesu in “ Thutak kong geninah , keima hang le lungdamna-thu hangin a inn , a sanggampate , a sanggamnute , a nu , a pa , a tate le a lote a nusia peuhmah in ,
+41010030	tu khanghunin a zah zakhat ( innte , sanggampate , sanggamnute , nute , tate le lote—tuate tawh bawlsiatnate ) le hong tung ding khanghunin nuntak tawntungna a ngah ding a kipelh kei ding hi .
+41010031	Ahi hangin a masate tampi nunung ding uh a , a nunungte a masa ding uh hi , ” ci-in a dawng hi .
+41010032	Jesu mapi in amaute Jerusalem manawhin a pai laitakun nungzuite in lamdang vat sa uh a , amau zuite ahileh a lau uh hi . Amah in Sawm-le-nihte paipih tuamin ama tunga piang dingte a hilh hi .
+41010033	Amah in , “ Jerusalem dong i pai dinga , siampi makaite le thukham siate tungah Mihing Tapa a kilehhek ding hi . Amaute in amah thah dingin mawhpaih ding uh a , Gentile-te khut ah amah piakhia ding uh hi .
+41010034	Amaute in amah zahko-in , cilphih in , satin , a that ding uh hi . Tua zawh ni thum ciangin amah a tho kik ding hi , ” a ci hi .
+41010035	Tua ciangin Zebedee tapate James le John a kiangah va pai uh hi . Amaute in , “ Sia aw , kong nget peuhpeuh uh hong hihsak dingin kong deih uh hi , ” a ci uh hi .
+41010036	Amah in , “ Bang hong hihsak leng na deih uh hiam ? ” ci-in a dong hi .
+41010037	Amaute in , “ Na minthanna na ngah ciangin kote gel na taklam khat na veilam khat hong tusak in , ” ci-in a dawng hi .
+41010038	Jesu in , “ Nong nget uh na thei kei uh hi . Ka dawn ding hai dawn thei ding na hi uh hiam ? Ahikeh kei kibaptise nading baptisena ah na kibaptise thei ding uh hiam ? ” a ci hi .
+41010039	Amaute in , “ Ka hih thei ding uh hi , ” ci-in a dawng uh hi . Jesu in amaute kiangah , “ Ka dawn ding hai na dawn takpi ding uh a , kei kibaptisena tua kibaptisena ah na kibaptise takpi ding uh hi .
+41010040	Ahi hangin ka taklam ahikeh ka veilam a tu ding kei hong piak theih hi lo hi . Tua munte ah a tu dinga a kiseh kholsa mite bek tu ding uh hi , ” a ci hi .
+41010041	Nungzui sawmte in hih thu a zak uh ciangin James le John tungah a lungkim kei uh hi .
+41010042	Jesu in amaute samkhawm a , “ Gentile-te tungah gam-uka ki ngaih sunte , amau tungah kiliansak uh a , a uliante uh amau tungah kithuneisak uh hi , cih na thei uh hi .
+41010043	Note tua bang na hi kei uh hi . Tua bang na hi sangsik-un note lakah a lian nuam peuhmah na nasem uh suakin ,
+41010044	a masa pen ahi nuam peuh , mi khempeuh sila ahi pelmawh kul hi .
+41010045	Ahang in , Mihing Tapa nangawn ama na midangte a semsak ding hi loin , midangte na a sem ding le mi tampi tat nadingin ama nuntakna pia dinga hong pai ahi hi , ” a ci hi .
+41010046	Tua ciangin amaute Jericho a tung uh hi . Jesu le a nungzuite in mihon tampi tawh tua khuapi a nusiat laitakun mittaw khat Bartimaeus ( tua pen , Timaeus Tapa ) khut dawh-a ngenin lam gei ah a na tu hi .
+41010047	Amah in Nazareth mi Jesu ahi lam a zak ciangin , “ David Tapa Jesu aw , kei hong lainat in , ” ci-in a kiko hi .
+41010048	Mi tampi in amah tai uh a , daitaka a om nadingin a gen uh hi . Ahi hangin tuapa in , “ David Tapa aw , kei hong lainat in ! ” ci-in a kiko semsem hi .
+41010049	Jesu khawl a , “ Amah sam un , ” a ci hi . Tua ciangin amaute in mittawpa kiangah , “ Lung nuam in ! Ding in ! Amah in nang hong sam hi , ” ci-in a sam uh hi .
+41010050	Amah in a puantualpi paikhia pahin dingto-a Jesu kiangah a pai hi .
+41010051	Jesu in , “ Bang kong hihsak ding deih na hi hiam ? ” ci-in amah a dong hi . Tua mittawpa in , “ Rabbi aw , khua ka mu thei nuam hi , ” a ci hi .
+41010052	Jesu in , “ Pai ta in , na upna in nang hong damsak zo hi , ” a ci hi . Tua khit phetin amah in khua mu thei pah lian a , lampi ah Jesu a zui hi .
+41011001	Amaute Jerusalem zuana a pai laitak , Olive Vum panga om Bethphage le Bethany a tun uh ciangin Jesu in a nungzuite nih a mapaisak hi .
+41011002	Amah in amaute kiangah “ Na mai-ua khua ah pai le uh cin na lut phetun kuama tuan ngei nai lohna laano khat a kikhih na mu ding uh hi . Sut unla hong paipih un .
+41011003	Mi khatpeuh in , ‘ Bang hangin hih banga hih na hi uh hiam ? ’ ci-a hong dot leh , ‘ Topa in a deihna om hi ; hong puak kik pah ding hi , ’ ci un , ” ci-in a sawl hi .
+41011004	Amaute pai uh a inntual kong pualam kongzinga kikhih laano khat a mu uh hi . Amaute in a sut laitakun
+41011005	tua lai-a ding mi pawlkhat in , “ Bang dinga tua laano sut na hi uh hiam ? ” ci-in a dong uh hi .
+41011006	Amau gel in Jesu hilhsa bangin a dawn uh ciangin tua mite in amaute a paisak uh hi .
+41011007	Tua laano Jesu kiang a tunpih uh ciangin a tungah a puantualpite uh phah uh a , amah a tungah a tu hi .
+41011008	Mi tampi in a puantualpite uh lampi ah a phah uh hi . Pawlkhat in gamlak singhiangte khiakin lampi ah a phah uh hi .
+41011009	A nung le a mai-a pai mihonpite in , “ Hosanna ! ” “ Topa min-a hong pai pa in thupha a ngah hi ! ”
+41011010	" Hong tung ding i pa David kumpi gam in thupha a ngah hi ! ” “ A sangpenna munah Hosanna ! ” ci-in a awng uh hi .
+41011011	Jerusalem ah Jesu lutin biakinnpi ah a pai hi . Amah in na khempeuh en kawikawi a , ahi hangin khuanung lua ta ahi manin Sawm-le-nihte tawh Bethany ah a pai uh hi .
+41011012	A zing ciangin Bethany nusia-a a pai laitakin Jesu a gil kial hi .
+41011013	Theikung a teh pha khat a galmuh ciangin , a gah kha hiam cih en dingin a va pai hi . Thei gah hun hi lo ahi manin thei phung a tun ciangin a teh simloh bangmah a om kei hi .
+41011014	Tua ciangin amah in theikung kiangah , “ Kuamah in na gah ne ngei nawn kei ta hen , ” a ci hi . A nungzuite in tua a cih a za uh hi .
+41011015	Jerusalem a tun uh ciangin biakinnpi huangah Jesu lut-a , tua lai-a sum lei sum zuakte a hawlkhia hi . Sum khengte sabuaite le vakhu zuakte tutphahsaute sawnthalsak gawpin ,
+41011016	biakinntualte ah sumbuk van paipih ding kuamah a phal kei hi .
+41011017	Amah in amaute hilh a , “ ‘ Ka inn , minamte khempeuh thungetna inn kici ding hi , ’ ci-in kigelh hi lo ahi hiam ? Ahi hang-in note in ‘ misuamte kua’ na suaksak tazen uh hi , ” a ci hi .
+41011018	Siampi makaite le thukham siate in hih thu a zak uh ciangin Jesu a thah theih nading uh lampi a zong uh hi . Ahang in , mihonpite khempeuh in ama thuhilhna lamdang sa mahmah uh ahi manin amaute in amah a kihta uh hi .
+41011019	Nitak lam ciangin amaute khuapi pualamah a paikhia uh hi .
+41011020	A zingsang ciangin amaute a pai laitakun tua theikung a zunga kipan a dinggaw-a om a mu uh hi .
+41011021	Peter in phawka Jesu kiangah , “ Rabbi aw , en in ! Na hamsiat theikung dinggaw hi ! ” a ci hi .
+41011022	Jesu in , “ Pasian muang un .
+41011023	Thutak kong geninah , mi khatpeuh in hih mualpi kiangah , ‘ Pai inla tuipi sungah kipai in , ’ ci-in lunghei loin a cih bang piang ding hi , ci-a a up leh ama cih bang tektekin a piang ding hi .
+41011024	Tua ahi manin ken kong geninah , na nget peuhpeuh uh ka ngah khin hi , ci-a na up uh leh na ngah ding uh hi .
+41011025	Thungena na din laitakin mi khatpeuh tungah lungkimlohna na neih leh vantunga om na Pa in na mawhnate hong maisak theih nadingin tuapa na maisak in .
+41011026	Ahi zongin na maisak kei uh leh vantunga om na Pa un no mawhnate hong maisak lo ding hi , ” ci-in a dawng hi .
+41011027	Amaute Jerusalem tung kik uh a , biakinnpi tualte ah Jesu a vak kawikawi laitakin siampi makaite , thukham siate le upate ama kiangah a pai uh hi .
+41011028	Amaute in , “ Bang thuneihna tawh hihte hih na hiam ? Hihte hih nading thuneihna kua in hong pia hiam ? ” ci-in a dong uh hi .
+41011029	Jesu in , “ Kei zong khat kong dong ding hi . Hong dawng un ; tua ciangin ken zong bang thu neihna tawh hihte hih ka hi hiam , cih kong gen ding hi .
+41011030	John baptisena koi pana hong pai ahi hiam ? Vantung pan hiam , mihing tung pan hiam ? Hong gen dih un ! ” ci-in a dawng hi .
+41011031	Amaute kikum uh a , “ Vantung pan hi , ’ ci leng , ‘ Tua ahileh bang hangin amah um lo na hi uh hiam ? ’ hong ci ding hi .
+41011032	Ahi hangin ‘ Mihing tung pan hi , ’ ci leng lah . . . , ( John pen mi khempeuh in kamsang taktakin sang uh ahi manin amaute in mipite a kihta uh hi . ) ” a ci uh hi . .
+41011033	Tua ciangin amaute in , “ Ka thei kei uh hi , ” ci-in Jesu a dawng uh hi . Jesu in , “ Kei zong bang thuneihna tawh hihte ka hih cih kong gen kei ding hi , ” a ci hi .
+41012001	Tua ciangin amah in amaute kiangah gentehnate zangin thu gen a : “ Lenggui a ciing mi khat a om hi . A kimkotah dai kai-a , lengtui sukna khat toin , tausang khat a dawh hi . Tua khit ciangin a lenggui lo lokho pawlkhat khawhlawhsakin khual a zinsan hi .
+41012002	A lak hun a tun ciangin lenggah khawm dingin lo-khawhlawhte kiangah a nasemte khat a sawl hi .
+41012003	Ahi hangin amaute in tuapa na man uh a , satgawpin a guak ciahsak uh hi .
+41012004	Tua ciangin amah in tuate kiangah nasem dang khat a sawl kik hi . Amaute in hih pa lu sat sakin a zahlaksak ngi-ingei uh hi .
+41012005	Amah in zong nasem dang khat sawl kik leuleu a , amaute in tuapa a that uh hi . Nasem adang tampi a sawl hangin amaute in pawlkhat satin , adangte a that uh hi .
+41012006	" Amah in a sawl theih ding a it a tapa khat a nei lai hi . A tawpkhakna ah , ‘ Ka tapa zahtak buang ding uh hi , ’ ci-in a tapa a paisak hi .
+41012007	" Ahi hangin lo-khawhlawhte in , ‘ Hih pa a gouluahpa ahi hi ; hong pai un amah that ni , a luah ding teng ei aa suakpah ding hi , ’ kici uh hi .
+41012008	Tua ciangin amah manin that uh a , daipua lamah a paikhia uh hi .
+41012009	" Tua bangin hileh lenggui lo neipa in bang a cih ding hiam ? Amah hong pai-in lo-khawhlawhte thatin ama lo midangte a pia ding hi .
+41012010	Hih Laisiangtho thu : “ ‘ Inn lamte nilkhiat suang inntungkhum suang a suak hi ;
+41012011	hih thu Topa hih hi a , eite mitmuh in piandang hi , ’ cih sim ngei lo na hi uh hiam ? ” a ci hi .
+41012012	Hih gentehna amaute a langgenna ahilam thei uh ahi manin amah mat nading lampi a zong uh hi . Ahi hangin amaute in mihonpite kihta uh a , tua ciangin amah nusia-in a paimang uh hi .
+41012013	Tua nung ciangin amaute in ama thugenin amah a mat theih nadingun Pharisee-te le Herod pawlte Jesu kiangah a paisak uh hi .
+41012014	Amaute va pai-in ama kiangah , “ Sia aw , nang mi thutak khat na hi lam ka thei uh hi . Kuamah maivil nei lo na hi manin , kuama thu-in na gamta kei a , Pasian thutak tawh kizui-in na hilh hi . Tua hi-a Caesar tungah siah piak tuak hiam , piak tuak lo hiam ?
+41012015	Pia ding ka hi uh hiam , pia lo ding ka hi uh hiam ? ” a ci uh hi . Ahi hangin Jesu in amaute a kineih a hina thei-a , “ Bang hangin kei hong thangsiah na hi uh hiam ? Denarius khat hong la unla hong veelsak dih un , ” a ci hi .
+41012016	Amaute in tua sumtang a paipih uh ciangin amaute kiangah , “ Hih kua lim hi-a hih kua min ahi hiam ? ” ci-in a dong hi . Amaute in , “ Caesar aa ahi hi , ” ci-in a dawng uh hi .
+41012017	Tua ciangin Jesu in amaute kiangah , “ Caesar aa te Caesar na pia unla , Pasian aa te Pasian na pia un , ” a ci hi . Tua ciangin amaute in amah lamdang a sa mahmah uh hi .
+41012018	Tua khit ciangin thawhkikna om lo hi , a ci Sadducee-te thu dong dingin Jesu kiangah a pai uh hi .
+41012019	Amaute in , “ Sia aw , Moses in , ‘ Ta nei man loin a zi a sihsan pasal khatpeuh a om leh a sanggampa in tua meigongnu tenpihin a sanggampa ading tate neihsak hen , ’ ci-in ko adingin na gelh hi .
+41012020	Tu-in unau pasal sagih a om hi . A u pen in zi nei a , ta nei man loin a si hi . A nihna pa in
+41012021	tua meigongnu tenpih a , ahi hangin amah zong ta nei man lo mah in a si hi . A thumna pa zong tua mah bang ahi hi .
+41012022	A taktak in tua unau sagihte khat beek in ta a nei man kei uh hi . A tawpkhakna ah tua numei zong a si hi .
+41012023	Tua ahileh tua numei in unau pasal sagih teng tenpih kim ahi ciangin thawhkik ciangin amah kua pen zi hi ding hiam ? ” ci-in a dong uh hi .
+41012024	Jesu in , “ Note in Laisiangtho ahi zongin , Pasian vang ahi zongin thei lo na hi manun khial hi lo na hi uh hiam ?
+41012025	Misite a thawh kik ciangin mopina le mokhakna a om kei ding hi . Amaute vana vansawltakte a bang ding uh hi .
+41012026	Misite thawhkikna tawh kisai-in Pasian in , Moses kiangah , ‘ Abraham’ Pasian , Isaac’ Pasian le Jacob’ Pasian ka hi hi , ’ ci-a sawlbawk laka a genna thu Moses laibu sungah sim ngei lo na hi uh hiam ?
+41012027	Amah a site Pasian hi loin a nungtate Pasian ahi hi . Note nakpi takin na khial uh hi ! ” ci-in a dawng hi .
+41012028	Tua laitakin thukham siate lakah khat va pai-a amaute kam kinialna a za hi . Jesu in amaute hoihtakin a dawn theih lam tuapa in a theih ciangin , “ Thupiakte khempeuh lakah koi a thupi pen ahi hiam ? ” ci-in amah a dong hi .
+41012029	Jesu in , “ A thupi penpen hih ahi hi : ‘ Israel aw , ngai dih in i Topa eite Pasian in Topa khat ahi hi .
+41012030	Na Topa Pasian , na lungtang khempeuh , na hinna khempeuh , na lungsim khempeuh le na thahatna khempeuh tawh it in . ’
+41012031	A nihna hih ahi hi : ‘ Nang le nang na ki-it bangin na vengte it in . ’ Hihte gel sanga lianzaw thupiak khat beek a om kei hi , ” ci-in a dawng hi .
+41012032	Tuapa in , “ Sia aw , na gente ahi takpi ahi hi . Pasian khat bek hi-a , amah longal Pasian dang a om kei hi , na cih a man hi .
+41012033	Na lungtang khempeuh , na theihna khempeuh le na thahatna khempeuh tawh amah it ding le nang le nang na ki-it banga na vengte na it ding pen meihal biakna buppi le biakpiaknate sangin thupizaw mah hi , ” ci-in a dawng kik hi .
+41012034	Jesu in tuapa in pilna tawh dawng cih a theih ciangin ama kiangah , “ Nang Pasian gam tawh na kigamla kei hi , ” a ci hi . Tua-a kipan kuamah in thu dang a dong ngam nawn kei uh hi .
+41012035	Biakinntualte ah Jesu in thu a hilh laitakin , “ Christ pen David Tapa hi , ci-in bangci a thukham siate in gen thei uh ahi hiam ?
+41012036	David mahmah in : “ Topa in ka Topa kiangah : ‘ Na galte khempeuh na khe nuai-ah ka koih matengin ka taklamah na tu in ’ ” ci-in Khasiangtho in na pulakkhia khin hi .
+41012037	“ Amah pen David mahmah in ‘ Topa’ ci ahileh bangci in ama tapa hi thei ding hiam ? ” ci-in a dong hi . Mihon tampite in lungkimtakin ama thugen a ngai uh hi .
+41012038	Tua bang a hilh kawmin Jesu in , “ Thukham siate panin na kikem un . Amaute puantual deldal silhin vak kawikawi nuam uh a , vanzuakna munte ah pibawl ding a ut uh hi .
+41012039	Synagogue-te sunga tutna thupi pente ah tu nuam diakin , pawite ah pahtawina munte ah a tu nuam uh hi .
+41012040	Amaute in meigongte inn netum uh a , kineih khemin sauvei pipi thu a ngen uh hi . Tua bang mite a nasia penin kigawt ding hi , ” a ci hi .
+41012041	Sumpi khiatna mun mai-ah Jesu tu-in mihonpite in biakinnpi sumkholna sunga amau sumpi a khiat uh a vil hi . Sumhau tampi in sum tampipi a khia uh hi .
+41012042	Ahi hangin azawng meigongnu khat va pai-a sum tawmkha bek a man sumsan tangneu nih a khia hi .
+41012043	Jesu in a nungzuite ama kiangah sama , “ Thutak kong geninah , hih a zawng meigongnu in midang teng khempeuh sangin sumkholna ah tam a khia zaw hi .
+41012044	Amaute in a hauhna lak panun a pia uh hi ; tuanu in ahileh a zawnsa pipi-in ama kivak nadinga a neih khempeuh a khia hi , ” a ci hi .
+41013001	Biakinnpi pan Jesu a paikhiat laitakin a nungzuite khat in ama kiangah , “ Siapa en dih ve ! Hih suangtumte gol thei tabuang a ! Hih innte thupi thei ngemngam mahmah hi ! ” a ci hi .
+41013002	Jesu in , “ Hih inn liante khempeuh na mu hiam ? Suang khat tungah suang dang khat beek a kiciangsa-in a kinusia kei ding hi ; a vekpi in a kicimmang ding hi , ” ci-in a dawng hi .
+41013003	Biakinnpi tawh a kigalsai Olive Vum tungah Jesu a tut laitakin Peter , James , John le Andrew-te in ,
+41013004	" Hihte cik cianga piang ding ahi hiam ? Tua teng a tangtun kim nading bang lim hong hi ding hiam hong hilh in , ” ci-in a dong sim uh hi .
+41013005	Jesu in amaute kiangah , “ Note kuamah in hong khem zawh loh nadingin kikem un .
+41013006	Keima minin mi tampi hong pai ding uh a , ‘ Keimah in amah ka hi hi ’ ci teltalin mi tampi a khem ding uh hi .
+41013007	Galthu le galthuthang na zak uh ciangin na patau nai kei un . Tua bangte a piang pelmawh ding mah ahi hi . Ahi hangin hun beina hi nai lo hi .
+41013008	Mi nam khat le nam khat kido dinga , gam khat le gam khat a kido ding uh hi . Mun tuamtuam ah zin lingin kialpi a tung ding hi . Hihte khempeuh nausuahnat kipatna ahi hi .
+41013009	Note kigingsa in om pelmawh un . Tualsung vaihawmte khutah note hong ap ding uh a , synagogue-te sungah hong sat ding uh hi . Keima hangin gam-ukte le kumpite mai-ah teci in na ding ding uh hi .
+41013010	Minamte khempeuh tungah lungdamna-thu kihilh masa pelmawh ding hi .
+41013011	Note hong kimanin thu hong kisit peuhpeuh ciangin , bang ka gen ding hiam , ci-in ama-in lunghimawh khol kei un . A gen ding no hi loin Khasiangtho hizaw ding ahi manin tua huna hong kipia peuhpeuh na gen lel un .
+41013012	" Unau khat le khat ahi zongin , pa in a ta ahi zongin , sih nading dongin a kilehhek ding uh hi . A nu a pa-te langah tate pang ding uh a , a thatsak ding uh hi .
+41013013	Keima hangin mi khempeuh in note hong mudah ding uh hi . Ahi zongin a bei dongin a kipte kihonkhia ding hi .
+41013014	" Note in ‘ a hawmmangsak kihhuaina’ a kisai loh na munah a ding na muh uh ciangin—a simte in theitel ta hen—Judea gama omte mual tungah tai uh hen .
+41013015	A innkhuma omte kuamah kumsuk kei hen . Ahikeh inn sunga na khatpeuh la dingin lut kei hen .
+41013016	Lo-a om kuamah a puantual-pi la dingin ciah kei hen .
+41013017	Nau paiite le naungek nei numeite adingin tua nite a mulkimhuai lua ding hi !
+41013018	Hih hun phalbi sunga a tun loh nadingin thu na ngen un .
+41013019	Ahang in , Pasian in leitung a piansak cil-a kipan tu hun dong tua zah a om ngei lo le a om ngei nawn lo ding lungdonna nite ahi ding hi .
+41013020	Topa in tua nite tomsak lo hileh kuamah a suakta zo kei ding hi . Ahi hangin amah in a teelsa teltuamte hangin tua nite a tomsak khin zo hi .
+41013021	Tua hun ciangin mi khatpeuh in note kiangah , ‘ En un , hih lai-ah Christ om hi ! ’ ahikeh , ‘ Hua lai-ah om hi ! ’ hong cih leh um kei un .
+41013022	Ahang in , Christ zuaute le kamsang zuaute hong kilang ding uh a , hi thei hi leh teelsate nangawn a khem nadingun limte le nalamdangte a bawl ding uh hi .
+41013023	Tua ahi ciangin kigingsa in om un ; na khempeuh a pian ma-in kong genkhol hi .
+41013024	" Ahi hangin tua lungdon nite khit ciangin , “ ‘ ni kimialsak dinga , kha a tang nawn kei ding hi ;
+41013025	van panin aksite kiasuk dinga , van-a om nate kilingsak ding hi . ’
+41013026	" Tua hunin mite in Mihing Tapa a vanglianpi le a minthanna tawh meii lakah a paisuk a mu ding uh hi .
+41013027	Tua ciangin amah in ama vansawltakte sawl dinga , lei kiu lite pan , leimongte panin van mongte dongin a teelsa mite a kaikhawm ding hi .
+41013028	" Tu-in hih thute theikung panin na sin un : A hiang menga a teh a sel phetin khuakhal hong nai ta hi , cih na thei uh hi .
+41013029	Tua mah bangin hih nate a piang na muh ciangun kongbiang mahmah dong hong nai ta hi , cih na thei un .
+41013030	Thutak kong genin-ah , hih thute khempeuh a tun khit mateng hih khang mite a bei kei ding uh hi .
+41013031	Van le lei a mangthang ding hi ; ahi zongin ka thu a mangthang ngei kei ding hi .
+41013032	" A ni ahi zongin a hun ahi zongin kuamah in a thei kei hi ; vantunga vansawltakte nangawn in a thei kei uh hi ; Tapa in zong thei lo a , ahi zongin Pa khat bek in a thei hi .
+41013033	Kigingsa-in om un ! Kigalging un ! Tua hun cik ciangin hong tung ding cih na thei kei uh hi .
+41013034	Tua in khual zinkhia mi khat tawh kibang hi . Amah in a nasemte khutah a inn ap a , amau sep ding ciat sehsakin , kongcingpa kiangah a vil gige ding a vaikhak hi .
+41013035	" Tua ahi ciangin inn neipa a tun kik ding hun—nitak hi ding hiam , zankim laitak hi ding hiam , akkhuan hi ding hiam , phalvak ciang hi ding hiam , cih thei lo na hi manun na vil gige un .
+41013036	Amah thakhatin hong tung vat leh ihmusa a na om laitak uh kituaksak kei un .
+41013037	Note kianga kong cih bangin a kuamahpeuh kiangah : ‘ Vil un ! ’ ka ci hi , ” a ci hi .
+41014001	Tu-in Paisan-pawi le Silngo-sawhloh Anlum Pawi ding ni nih bekin a sap laitakin , siampi makaite le thukham siate in , Jesu mansima thahlup theih nading lampi a zong uh hi .
+41014002	Amaute in , “ Mipite hong so kha ding ahi ciangin Pawi sungin hih kei ni , ” a ci uh hi .
+41014003	Bethany a Miphak Simon kici pa inn-a sabuai tungah Jesu kingama a om laitakin a manpha mahmah nard kia kibawl sathau namtui suangngo thawl khat tawi-in numei khat ama kiangah a pai hi . Tuanu in a thawl sukham a Jesu lutang tungah sathau namtui a buak hi .
+41014004	Tua lai-a om mi kimkhat lungkim lo uh a , “ Sathau namtui pammaih lel hi lo hiam ?
+41014005	Kizuak leh kumkhat thaman sanga tamzaw kikhawng ding hi , tua sum mizawngte piakhuai zaw hi , ” a kici uh hi . Tua ciangin amaute in tuanu a taigawp uh hi .
+41014006	Jesu in , “ Hih nu bangmah cih dah un . Bang hang buaisak na hi uh hiam ? Amah in kei tungah a kilawm na khat a sem khin hi .
+41014007	Note tawh mizawngte a om khawm den ding uh a , na ut hunhunun amaute na huh thei uh hi . Ahi hangin kei note tawh ka omkhawm den kei ding hi .
+41014008	Hih nu in ama hih theih bang a hih zo hi . Ka pumpi sathau namtui hong buah ciangin kei kivui nading bawlkhol ahi hi .
+41014009	Thutak kong geninah , lungdamna-thu a kihilhna leitung mun khempeuhah tuanu a kiphawkna in ama hihsa thu zong a kigen ding hi , ” a ci hi .
+41014010	Tua ciangin Jesu lehek dingin Sawm-le-nihte lakah khat , Judas Iscariot , siampi makaite kiangah a va pai hi .
+41014011	Amaute in hih thu a zak uh ciangin lungkim mahmah uh a , ama tungah sum piak dingin a kamciam pah uh hi . Tua hi-a amah in amaute khutah Jesu a piak thei nading hun hoih a ngak gige hi .
+41014012	Silngo-sawhloh Anlum Pawi ni masa pen ni Paisan tuuno-a biakna a kipiak ngei hunin Jesu nungzuite in ama kiangah , “ Paisan-pawi bawl nading koi lai-ah pai-in na bawlkhol le ung na deih hiam ? ” ci-in a dong uh hi .
+41014013	Tua ahi ciangin amah in a nungzuite nih sawla , amaute kiangah , “ Khuapi sungah pai le uh cin tuibel khat a pua pasal khat tawh na kituak ding uh hi . Tuapa na zui un .
+41014014	Ama lutna inntekpa kiangah , ‘ Siapa in : Ka nungzuite tawh Paisan-pawi ka bawl nading , ka zintunna inndei koi lai ahi hiam , ci-in hong dongsak hi , ’ va ci un .
+41014015	Amah in van zat ding a kima om , a kipuahsa inndei tungnung a zaipi khat note hong lak ding hi . Tua lai-ah ei adingin na kisakhol un , ” ci-in a vaikhak hi .
+41014016	Tua nungzuite gel paikhia uh a , khuapi sungah a lut uh ciangin Jesu gensa bang tektek in a mu uh hi . Tua hi-a amaute in Paisan-pawi bawl nading a na kisakhol uh hi .
+41014017	A nitak ciangin Sawm-le-nihte tawh Jesu a tung hi .
+41014018	Amaute sabuai ah kingamin an a nek laitakun amah in , “ Thutak kong geninah , an ka nek khawmpih note lakah khat in kei hong lehhek ding hi , ” a ci hi .
+41014019	Amaute lungsi dedu uh a , ama kiangah , “ Kei hi buang kei ning maw ? ” ci-in khat khatin a dong uh hi .
+41014020	Amah in , “ Sawm-le-nihte lakah khat ahi hi ; tuapa kei tawh kuangkum-a anlum a diahkhawm pa ahi hi .
+41014021	Ama’ thu a kigelhsa bangin Mihing Tapa a pai ding hi . Ahi hangin Mihing Tapa a lehhek pa in gimna nak thuak nazen incia ! Amah a piang vet lo hileh ama adingin hoihzaw ding hi , ” a ci hi .
+41014022	Amaute in an a nek laitakun Jesu in anlum la-a , lungdam ko-in balkhama , a nungzuite pia in , “ Hih , ka pumpi ahi hi , la unla ne un , ” a ci hi .
+41014023	Tua khit ciangin hai la-in lungdam ko-a amaute pia-in amaute in tua hai panin a dawn ciat uh hi .
+41014024	Amah in amaute kiangah , “ Hih in mi tampi ading kibuakhia thukhunna ka sisana ahi hi .
+41014025	Thutak kong geninah , Pasian gam sungah a thaka ka dawn ni mateng tu-a kipan lenggahzu ka dawn nawn kei ding hi , ” a ci hi .
+41014026	Amaute in biakna la a sak khit uh ciangin Olive Vum manawhin a paikhia uh hi .
+41014027	Tua khit ciangin Jesu in amaute kiangah , “ ‘ Tuucingpa ka sat dinga , tuuhonte kithehthang ding hi , ’ ci-a kigelhsa bangin note na vekpi un na pukmang ding uh hi .
+41014028	Ahi hangin ka thawh kik khit ciangin note mai Galilee ah ka na pai ding hi , ” ci-in a gen hi .
+41014029	Peter in , “ Adang teng khempeuh a pukmang zongin kei ka puk kei ding hi , ” ci-in a pulakkhia hi .
+41014030	Jesu in , “ Thutak kong geninah , tu ni , tu zan mahmah ak nihvei a khuan ma-in nang tektek in thumvei nong kitheih mawhbawl ding hi , ” ci-in a dawng hi .
+41014031	Ahi hangin Peter in , “ Nang tawh sihkhawm ding ahi zongin nang kong kitheihmawhbawl ngei kei ding hi , ” a ci teitei hi . Adangte khempeuh in zong tua mah a ci ciat uh hi .
+41014032	Amaute Gethsemane kici mun ah pai uh a , Jesu in a nungzuite kiangah , “ Thungen-a ka pai kalin hih lai-ah na tu un , ” a ci hi .
+41014033	Amah in Peter , James le John-te tonpih a lungdong ngeungau-in a lungkham mahmah hi .
+41014034	Amah in amaute kiangah , “ Dahluatna in sih nading zah in hong zen hi . Hih lai-ah na om unla , na kigalging un , ” a ci hi .
+41014035	Tawmkha pailai-in lei-ah bok a , ahi theih leh tua hun tawh a kipelh nadingin thu a ngen hi .
+41014036	" Abba , Pa aw , nang adingin na khempeuh hi thei hi . Hih hai kei kiang panin hong lakkhiatsak in . Ahi zongin kei deihna bang hi loin nangma deihna bang hizaw hen , ” a ci hi .
+41014037	Tua khit ciangin a nungzuite kiangah a pai kik leh amaute ihmu sa a om a mu hi . Amah in Peter kiangah , “ Simon aw , ihmu na hi hiam ? Nai khat sung beek kigalging zo lo na hi hiam ?
+41014038	Zia-etna na thuak loh nadingun kigalgingin thu na ngen un . Kha a ut hangin pumpi a thanem hi , ” a ci hi .
+41014039	Khatvei paikhia leuleu-a , a ngetsa mah bangin a ngen hi .
+41014040	Amah a pai kik ciangin amaute ihmut suak lua uh ahi manin a ihmut laitak uh a tuak leuleu hi . Amaute in ama kiangah a gen ding uh a thei kei uh hi .
+41014041	A thumveina va pai kika , amaute kiangah , “ Note ihmu lailai-in tawlnga lailai na hi uh hiam ? Pha zo ta ! A hun hong tung ta hi . En un , mawhneite khut sungah Mihing Tapa a kilehhek hun hong tung petmah hi .
+41014042	Tho un ! Pai ta ni ! Kei hong lehhekpa hih lai-ah hong pai ta hi ! ” a ci hi .
+41014043	Tua banga a paupau laitak , Sawm-le-nihte lakah khat Judas a kilang hi . Siampi makaite , thukham siate le upate sawl namsau le khetbuk tawi mihon amah tawh a tonkhawm uh hi .
+41014044	Tua a lehhekpa in , “ Ka nappa pen amah hi ding hi ; tuapa man pah unla , cingin paikhiatpih un , ” ci-in amaute tawh lim a kilakkhol khin hi .
+41014045	Jesu kiangah Juda paipah a , “ Rabbi aw ! ” ci-in Jesu a nam hi .
+41014046	Tua mite in Jesu lencipin a man uh hi .
+41014047	Tua laitakin a gei-a dingte khat in a namsau dokin tulpipa nasempa a sat leh a bil langkhat a satkhia hi .
+41014048	Jesu in , “ Kei man dinga namsau le khetbuk tawh nong kuan zawzen uh , kumpi langpangte makai ka hi hiam ?
+41014049	Nisimin biakinnpi tualte ah thu ka hilh laitakin nong man kei uh hi . Ahi hangin Laisiangtho a tangtung pelmawh ding mah ahi hi , ” a ci hi .
+41014050	Tua ciangin mi khempeuh amah nusia-in a taimang uh hi .
+41014051	Saihadial puanza khat longal puan dang a silh lo tangval khat in zong Jesu a zui hi . Amaute in amah a mat uh ciangin ,
+41014052	amah in a puanza nusia in a guaktang in a tai hi .
+41014053	Amaute in tulpipa kiangah Jesu paipih uh a siampi makaite , upate le thukham siate khempeuh a kikhawm uh hi .
+41014054	Peter in tulpipa inntual ciang tektek a kihal simsimin Jesu a zui hi . Tua laitakah amah a cingte tawh mei awi-in a va tukhawm hi .
+41014055	Siampi makaite le Sanhedrin buppi in Jesu a thah theih nadingun langpangin paulap a zon uh hangin khat beek a mu kei uh hi .
+41014056	Ama langah mi tampi dingin zuau teci a pan uh hangin a thugente uh a kituak kei hi .
+41014057	Tua ciangin mi pawlkhat dingin ama langah hih zuau teci pang uh a ,
+41014058	" Amah in , ‘ Mihing khuta kibawl hih biakinnpi ka susia dinga , mihing khuta kibawl lo adang khat nithum sungin ka lam kik zo ding hi , ’ a cih ka za uh hi , ” a ci uh hi .
+41014059	Tua bang hi napi amaute teci panna a kituak kei lailai hi .
+41014060	Tua ciangin amaute mai-ah tulpipa dingin Jesu kiangah , “ Dawng lo ding na hi hiam ? Na langkhata hihte tecipanna bang hiam ? ” ci-in a dong hi .
+41014061	Ahi hangin Jesu in dawng loin a dai dide hi . Tua ciangin tulpipa in ama kiangah , “ Nang Thupha Ngahpa’ Tapa Christ na hi hiam ? ” ci-in a dong kik hi .
+41014062	Jesu in , “ Ka hi hi . Note in Thahat Pa taklama tu meiipi tunga hong paisuk Mihing Tapa na mu ding uh hi , ” a ci hi .
+41014063	Tulpipa in a puansilh balkek a , “ Teci dang kul nawn ding ahi hiam ?
+41014064	Pasian a gendaina na za zo uh hi . Bang na ci ngaihsut uh hiam ? ” ci-in a dong hi . Amaute in amah sihsak thamin a mawhpaih uh hi .
+41014065	Tua ciangin pawlkhat in amah cilphih uh a , a mai tuamin a khuttum uh tawh tumin , “ Hong gen in ! ” a ci uh hi . Tua ciangin a cingte in amah tonpih in a sat uh hi .
+41014066	A nuai innpi tualah Peter a om laitakin tulpipa nasem numeite khat a kiangah va pai hi .
+41014067	Tuanu in Peter mei-awi a muh ciangin amah a va nai et mahmah hi . “ Nang zong tua Nazareth mi Jesu tawh na kipawl hi , ” a va ci hi .
+41014068	Ahi hangin aman a nial hi . Amah in , “ Na thugen ka thei kei-a , a pianzia zong ka thei beek kei hi , ” ci-in kong pua ah a kihemkhia hi .
+41014069	Tua numei mah in tua lai-a om a muh ciangin a kima dingte kiangah , “ Hih pa amaute lakah khat ahi hi , ” a ci kik hi .
+41014070	Amah in a nial leuleu hi . Tawlkhat khit ciangin a gei-a dingte in Peter kiangah , “ Amau pawlte lakah khat na hi taktak hi . Galilee mi na hi ngel ve leh , ” a ci uh hi .
+41014071	Tua ciangin amah le amah kihamsiat in , “ Na gen uh hih mipa ka thei peuhmah kei hi , ” ci-in a tomlo hi .
+41014072	Tua khit phetin a nih veina ak a khuang hi . Tua ciangin Peter in Jesu in a ma tunga , “ Ak nih vei a khuan ma-in thum vei nong kitheihmawhbawl ding hi , ” ci-a a gensa a phawk hi . Tua ciangin amah ki-ip zo nawn loin a kapkhia hi .
+41015001	Zingsang phalvak tungin siampi makaite in upate , thukham siate le Sanhedrin buppi tawh thukhensatna a bawl uh hi . Amaute in Jesu henin paikhiatpih uh a , Pilate khutah a tun uh hi .
+41015002	Pilate in , “ Nang Jew-te kumpipa na hi hiam ? ” ci-in a dong hi . Jesu in , “ Ka hi hi , na cih bang ahi hi , ” ci-in a dawng hi .
+41015003	Siampi makaite in amah thu tampi tawh a mawhmat uh hi .
+41015004	Tua ahi ciangin Pilate in , “ Amaute in nang thu tampi tawh hong mawhmat uh na thei hi . Dawng lo ding na hi hiam ? ” ci-in a dong hi .
+41015005	Ahi hangin Jesu in dawng tuan lo lailai ahi ciangin Pilate in lamdang a sa mahmah hi .
+41015006	Tua hun lai-in pawi hun ciangin mipite nget thongkia khatpeuh a khahkhiat ding ngeina ahi hi .
+41015007	Kumpi langdo-a , tualthatte tawh thong kiakhawm Barabbas kici mi khat a om hi .
+41015008	Pilate kiangah mihonpite va pai uh a , a hih ngei banga a hih nadingin a ngen uh hi .
+41015009	Pilate in , “ Jew-te kumpipa no kiangah hong khah leng na deih uh hiam ? ” ci-in a dong hi .
+41015010	Tua pen siampi makaite in Jesu a hazat manun ama khutah a tut uh ahilam a theih man ahi hi .
+41015011	Ahi hangin Pilate in Barabbas a khahsak zawk nadingin siampi makaite in mihonpite a tawsawn uh hi .
+41015012	Pilate in , “ Tua ahileh Jew-te kumpipa na cih pa uh bang ka cih ding hiam ? ” ci-in a dong hi .
+41015013	Amaute in , “ Kilhlum in , ” ci-in a kiko uh hi .
+41015014	Pilate in , “ Bang hangin maw ? Amah in bang tatkhialhna nei ahi hiam ? ” ci-in a dong hi . Ahi hangin amaute in , “ Amah kilhlum in ! ” ci-in a kinak ko semsem uh hi .
+41015015	Pilate in mihonpite a lungkimsak nop manin amaute kiangah Barabbas a khah hi . Amah in Jesu a satsak khit ciangin kilhlup dingin amaute khutah a ap hi .
+41015016	Galkapte in Jesu kumpi inn ( tua pen gam-ukpa Innpi ) ah paipih uh a , tua ciangin galkap company bup khat a sam uh hi .
+41015017	Tua ciangin amaute in kumpi puan dupsan khat silhsak uh a , ling tawh kumpi lukhu khat phanin amah a khusak uh hi .
+41015018	Tua ciangin amaute in , “ Jew-te kumpipa aw , na khan sawt ta hen ! ” ci-in a otkhai uh hi .
+41015019	Amaute in ciangkhutin a lu satsat uh a , cil a phihphih uh hi . Amaute khuk dinin amah a bia uh hi .
+41015020	Amah a zahko khit uh ciangin kumpi puan dupsan suahkhiatsak uh a , ama puan a silhsak kik uh hi . Tua khit ciangin kilhlup dingin a paikhiatpih uh hi .
+41015021	Alexander le Rufus-te pa , Cyrene pana Simon kici mi khat in gamsung panin tua lai a va tawn hi . Amaute in zawhthawh thu-in amah singlamteh a puasak uh hi .
+41015022	Amaute in Golgotha ( Luguh Mun cihna ) kici munah Jesu a paipih uh hi .
+41015023	Tua ciangin amaute in amah , paknamtui kha tawh kihel lenggahzu a pia uh hi . Ahi hangin a dawn kei hi .
+41015024	Amaute in singlamteh tungah amah a kilh uh hi . Amaute in a puan hawm uh a , kua in koi tang ding cihna-in ai a lawn uh hi .
+41015025	Amaute in amah a kilh laitakun nai thumna a sat hi .
+41015026	Amah kimawhmatna-in JEW-TE KUMPIPA , ci-in theihsakna lai kigelh hi .
+41015027	Amaute in amah tawh , misuamte nih a taklam khat , a veilam khat kilh uh a ,
+41015028	tua ciangin Laisiangtho gen : “ Thukham palsatte tawh amah kisimkhawm hi ” cih thu a tangtung hi .
+41015029	Tua lai a tawnte in amah engko in lupeisan uh a , “ Petmah aw ! Nang , biakinnpi susia a ni thum sunga lam kik ding pa ,
+41015030	singlamteh tung pan hong kumsuk inla , nang le nang hong kihon khia dih ve ! ” a ci uh hi .
+41015031	Tua mah bangin siampi makaite le thukham siate in amaute lakah amah a zahko uh hi . Amaute in , “ Amah in midangte honkhia zo a , amah le amah kihonkhia zo lo pi !
+41015032	I mitin mu a i up theih nadingin hih Israel-te kumpipa , hih Christ singlamteh tung pan hong kumsuk ta hen , ” a ci uh hi . Tua mah bangin amah tawh a kikilh khawmte in zong a engko uh hi .
+41015033	Tua gam bupah nai gukna-a kipan nai kuana dong khim a zing hi .
+41015034	Nai kuana laitakin Jesu in , “ Eloi , Eloi , lama sabacthani ? ” ci-in nakpi-in a kiko hi . A khiatna in , “ Ka Pasian , ka Pasian aw , bang hangin kei hong taisan na hi hiam ? ” cihna ahi hi .
+41015035	Tua lai-a ding mi kimkhat in a zak uh ciangin , “ Ngai dih un , amah’n Elijah sam hi , ” a ci uh hi .
+41015036	Mi khat va tai-a , lenggahzu thuk sungah tuihup a diah khit ciangin ciang dawnah koihin Jesu dawn dingin a pia hi . Amah in , “ Bangmah cih dah dih un . Amah lakhiasuk dingin Elijah hong pai hiam , en phot dih ni , ” a ci hi .
+41015037	Jesu nakpi-in kiko-a tua ciangin a hutawpna a sang hi .
+41015038	Biakinnpi puanzak a lu pan a taw dong kikekin phel nih a suak hi .
+41015039	Jesu mai-a ding zakhat-ukpa in ama kikona le a sihzia a muh ciang- in , “ Hih pa Pasian Tapa hi takpi ei ! ” a ci hi .
+41015040	A gamla sim pan numei pawlkhat in a galvil uh hi . Amaute lakah Mary Magdalene , James nauzaw pen le Joses nu Mary , le Salome-te a om uh hi .
+41015041	Hih numeite in Galilee ah amah zui uh a , a kisapnate a sepsak uh hi . Jerusalem dong amah tawh a ton numei dang tampi zong tua lai-ah a om uh hi .
+41015042	Tua ni , kiginkholh Ni , Sabbath tunma ni ahi hi . Tua hi-a ni niam kuan ciangin ,
+41015043	Pasian gam a ngak gige Vaihawmte lakah mi thupi khat , Arimathea mi Joseph Pilate kiangah hangtakin pai-a Jesu luang a va ngen hi .
+41015044	Pilate in amah si zo cih a zak ciangin lamdang a sa hi . Amah in zakhat-ukpa samin , Jesu si khin takpi hiam , cih a dong hi .
+41015045	Si khin zo takpi , cih zakhat-ukpa kam pan a zak ciangin a luang Joseph a pia hi .
+41015046	Tua ciangin Joseph in saihadial puan pawlkhat lei-in siluang lakhia suka , saihadial puanin a tun khit ciangin suangpi a khuak han sungah a sial hi . Tua ciangin tua han kong vang suangtum khatin a khak hi .
+41015047	Mary Magdalene le Joses nu Mary-te in ama kisialna mun a mu uh hi .
+41016001	Sabbath ni a bei khit ciangin Mary Magdalene , James nu Mary le Salome-te in Jesu luang a zut nading uh gimnamtui a keng uh hi .
+41016002	Nipikal ni masa ni zingsang tung ni suah khit phetin amaute hanah hawh uh a ,
+41016003	" Han kongvang khakna suangtum kuan hong likkhiatsak ding hiam ? ” ci-in khat le khat a kikum uh hi .
+41016004	Ahi hangin a daktoh uh ciangin a lian mahmah tua suangtumpi a tukkhia khin zo a mu uh hi .
+41016005	Amaute han sungah a lut uh leh , puantualpi pak silh tangval khat , a taklam-a tu mu uh a , amaute a patau uh hi .
+41016006	Amah in , “ Patau kei un , a kikilhlum Nazareth mi Jesu a zong na hi uh hi . Amah tho kik zo hi ! Amah hih lai-ah om lo hi . A kisialna mun en un .
+41016007	Ahi hangin pai unla nungzuite le Peter kiangah , “ Note mai Galilee ah amah na pai ding hi . Ama hong gensa bang tektekin , tua lai-ah amah na mu ding uh hi , ’ ci-in va gen un , ” a ci hi .
+41016008	Tua numeite lungmang le ling kawmsa-in han pan paikhia-in a tai uh hi . Amaute lau uh ahi manin kuama kiangah bangmah a gen kei uh hi .
+41016009	Nipikal ni masa ni , zingsang tung , Jesu a thawh kik khit ciangin a sung pana dawi sagih a hawlkhiatna nu Mary Magdalene kiangah a kilang masa pen hi .
+41016010	Tuanu pai-in amah tawh a omkhawm ngei , adah a kap laite kiangah thu a gen hi .
+41016011	Jesu nungta-a amah in mu khin zo cih thu amaute in a zak uh ciangin a um kei uh hi .
+41016012	Tua khit ciangin tuate lakah nih gamsung lam zuanin a pai laitakun amaute kiangah meltuamin Jesu a kilang hi .
+41016013	Hihte gel kileh kik uh a , adangte kiangah a va koh uh hangin amau zong a um tuan kei uh hi .
+41016014	Tua nung ciangin nungzui Sawm le khatte in an a nek laitakun amaute kiangah a kilang hi . Amah a thawh kik khit ciangin amah a mute genna a up loh teltalna hang uh le amaute uplahna hangin amaute a tai hi .
+41016015	Amah in amaute kiangah , “ Leitung mun khempeuh ah pai unla , a piansaksa khempeuh tungah lungdamna thu na hilh un .
+41016016	Um-a a kibaptise-te peuhmah kihonkhia dinga , ahi hangin a um lo peuhmah a kimawhpaih ding hi .
+41016017	Tua ciangin a umte ahileh hih limte in a zui ding hi : Keima minin dawite a hawlkhia ding uh hi ; amaute pauthakte in a pau ding uh hi .
+41016018	A khutun gul a man ding uh hi ; sihtheihna gu a dawn uh hangin bangmah a ci peuhmah kei ding uh hi . Amaute in cinate tungah a khut uh nga ding uh a , amaute a dam ding uh hi , ” a ci hi .
+41016019	Topa Jesu in amaute a vaikhak khit ciangin amah vantungah kilato a , Pasian taklamah a tu hi .
+41016020	Tua ciangin nungzuite paikhia uh a mun khempeuh ah thu a hilh uh hi . Topa in amaute seppih a , amaute a zui limte in ama thugen a kipsak hi .

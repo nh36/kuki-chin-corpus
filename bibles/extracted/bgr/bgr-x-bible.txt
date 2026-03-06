@@ -1,0 +1,685 @@
+# language_name:        Bawm
+# closest ISO 639-3:    bgr
+# year_short:           2006
+# year_long:            Not available
+# title:                The New Testament in Bawm
+# URL:                  http://www.bible.is/BGRBBS/Matt/1
+# copyright_short:      © 2006 Bangladesh Bible Soicety
+# copyright_long:       Not available
+41001001	Hi hi Pathian Fapa Jisu Krist Thawngthang Ṭha tlung dawmhtîrnâk chu asi .
+41001002	Khuavâng Isai lasuibu ah : " Ngâinik , ka mifial na mâi leiah ka fial lai le , anih nih chun na lampi a siam lai .
+41001003	Ramkaro ah mi âu hâu nih chun , Lalpa lampi sial ule , a lam tla dingtir u , " a ti , ti hen , rîn hâwi khan .
+41001004	Johan ramkaro ah Baptistu kha sual ngaihdamnâk ding rimnâk baptisma thu sim hen a hawng kal .
+41001005	Chun , Judai ram mi zawzawng leh Jerusalem mi zawzawng tla an suak le , a sinah an kal le , an sual tla thutluang vâwr hen Jordan Va ah chun a sinah baptis an si rawh .
+41001006	Chun , Johan chu sangâwngsâu mul puan hen â thuam le , a tâi savun tâisâwm hen â sâwm le , khâubawk leh ram khuaitizû a ei .
+41001007	Chun , " Ka dung leiah keimah ngâk hen rokual dauh a hawng kal liau asi ; kûn hen a pheikawk ri sût tlâk khawm ka si lo .
+41001008	Kei nih chun tî hen ka nan baptis na tâwn le ; anih lam nih chun Thlarau Thenhlimh hen a nan baptis na lai , " ti hen , a sim .
+41001009	Chun , chu liau chun tihin asi le , Jisu chu Galili ram ah Nazaret thawk hen a hawng kal le , Jordan Va ah chun Johan sinah baptis asi rawh .
+41001010	Tî ah mi a suak kâ hen vân â awng le , Thlarau Thenhlimh vaṭhu hâwi hen a tlûnah a hawng ṭum mi a muh .
+41001011	Chun , " Nang , ka Fapa duhtak na si le , na tlûnah thungâi ka lâwm asi , " ti hen , vân thawk hen aw-hâu a hawng suak .
+41001012	Chun , Thlarau nih chun ramkaro ah a fial sawm .
+41001013	Chun , Setan lêm bû hen ramkaro ah ni sâwmli a um le , ramsa tla nâwngah a um le ; vânmifial tla nih chun an zauhkhenh rawh .
+41001014	Chun , Johan chu rêng an thlâk nûnah Jisu chu Pathian Thâwngthâng Ṭha sim hen Galili ram ah a hawng kal le ,
+41001015	" Tik chu a hawng tlung rawh , Pathian Ram khawm a hawng nâi rawh ; rim ule , Thâwngthâng Ṭha hi lung u , " a ti vima .
+41001016	Chun , Galili Rilî kap a râwng liauah Simon leh a unau Andri chu rilî ah chun lên vawrh hen a muh na le ; ngarâltu an si rêng asi .
+41001017	Chun , Jisu nih an sinah , " Hawng ka zûl u , minung hâwltu ah ka nan siam na lai , " a ti .
+41001018	Chun , lên tla chu kaltâk hen an zûl sawm .
+41001019	Chun , lât lo tê a kal rawh chun Zebedai fapa Jem leh a unau Johan chu a muh na le , chu tla chu lên ṭhît hen lawng ah ber an um .
+41001020	Chun , anih nih chun anmah chu a kawh sawm na le ; chun an pa Zebedai chu lawh an lâk mi tla hen lawng ah an kaltâk na le , an zûl rawh .
+41001021	Chun , Kapernaum khua ah a va lût le ; chun Dinhni ah chun pumhnâk in ah a va lût le , a sîntir sawm na .
+41001022	A thu sîntirnâk chu chê an ti thlo ; Dân sîntirtu tla hâwi silo hen , thuneihnâk nei hâwi tak hen anmah tla a sîntir na ruangah .
+41001023	Chun , anna pumhnâk in ah chun khuri nâwmtâm vuanh mi pakhat a um le ; anih nih chun ,
+41001024	" Nazaret Jisu , kannih leh nang zei me kanna tlâinâk um ? Hawng kan veih ding hen na hawng mi masi ? Nang ka nan theih , Pathian Mi Thenhlimh na si , " ti hen a âu sawm rawh .
+41001025	Chun , Jisu nih a fâi le , " Dâisip , a sungah mi hawng suak rawh , " a ti .
+41001026	Chun , khuri nâwmtâm nih chun amah a sûlneng le , aw-hâu fâk tak hen a sungah mi a suak rawh .
+41001027	Chun , an ektê hen thungâi chê an ti . Chuvachun , " Hi hi zei me si le ? Sîntirnâk thar asi ma hi ! Khuri nâwmtâm tla khawm thu nei tak hen thu a pêk le , a thu anna âwi vima ko râu , " ti hen , anna cheih .
+41001028	Chun , Galili ram kiangkam zawzawng ah ram kipah a thâwngthâng a thang sawm .
+41001029	Chun , pumhnâk in ah mi chu a suak rawh chun , Jem leh Johan hen Simon leh Andri in ah chun an lût sawm .
+41001030	Chun , Simon nupi nu chu a dam lo le , a rîl ko ; chun , a thâwngthâng chu Jisu an simh sawm .
+41001031	Chun , anih nih chun a kut a tleih le , a thawh rawh ; chun a zâwt chu a reh le , an eibâr a timhtuah piak na rawh .
+41001032	Chun , zânleibâi ah nî a tlâ nûnah chun damlo zawzawng leh khuri vuanh tla a sinah an hawng put .
+41001033	Khuatê hen kawtkari ah chun an hawng a pûm khup .
+41001034	Chun , mi cherkhet nganfâk kip hen fâk tla chu a damh na le , khuri cherkhet a nar na ; khuri tla nih chun amah an theih ruangah an hawlh ding a siang lo .
+41001035	Chun , a thâizîngtê , khuadei lânah a thawk le , in ah mi chu a suak . Khuapi thawk hen mun king nakah ah a va kal le , chunah chun thla a cham .
+41001036	Chun , Simon leh a hâwi tla nih chun a dung leiah an zûl .
+41001037	Chun , anih chu an tawng rawh chun a sinah , " Mi zawzawng nih an hâwl asi , an ti .
+41001038	Chun , anih nih chun an sinah , " Mun dangah khua nâi tla ah chun kan kal lai , chubang tla ah khawm thu ka sim khonâk ding hen ; chu chu ka hawng kal san asi , " a ti .
+41001039	Chun , thusim leh khuri tla nar vima hen Galili ram zawzawng ah pumhnâk in tla ah a lût vima .
+41001040	Chun , Jisu sinah phâr a hawng kal le , " Na duh chun na hawng ka thiangtir kho , " ti hen , a mâika ah siksidîr hen a ngiar chiam .
+41001041	Chun , anih nih chun thungâi a zângfah le , a banh le , a tawngh , " Ka duh e , hawng thiang rawh , " a ti .
+41001042	Chun , zeikarlo ah a phâr chu a reh sawm le , a hawng thiang rawh .
+41001043	Chun , Jisu nih chun , " Âu sin khawmah sim lo ding hen a thiamthih rawh ;
+41001044	sikhawmsele , bâwlpu sinah va a zauhtir le , na thianhnâk ding hen Mosi nih thil a ruat mi tla kha ap rawh , an theihthiam khonâk ding hen , " a ti thlir le , a kaltir sawm .
+41001045	Sikhawmsele , anih chu a suak le , chu thâwngthâng chu thungâi a phuang le , a zanh . Chuvachun , Jisu chu lang hen khua ah a lût kho lo rawh . Ramkaro mun ah a um le , chun mun kipah mi a sinah an hawng kal tâwn .
+41002001	Chun , ni zeimaw zat ding nûnah , Kapernaum ah a lût nawlh liauah , in ah chun a um ti thu a hawng thang rawh .
+41002002	Chun , kawtkari khawmah umnâk umlo rê hen mi cherkhet an hawng a pûm rawh ; chun an sinah thu a sim rawh .
+41002003	Chun , mi khêng pakhat , minung pali nih zawnh hen a sinah an hawngpi .
+41002004	Chun , zapi ruangah a kiang tekah an kal kho lo ruangah a umnâk in tlûn an siat le ; chun , an pemh thluh rawh chun a tangphah chu a tlûnah mi khêng zâu bû hen an thlâk .
+41002005	Chun , Jisu nih an lung zia chu a muh rawh chun mi khêng sinah , " Ka fa , na sual tla ngaihdam asi rawh , " a ti .
+41002006	Chun , Dân sîntirtu zeimaw mi tla chu chunah chun an to le ,
+41002007	" Hi minung nih hin zeirangah me hi hâwi hen thu a sim ? Pathian a simsâwi asi hi ; mi pakhat , Pathian cho lo nih chun âu nih me sual tla ngaihdam kho ? " ti hen , an thinlung hen anna ruat .
+41002008	Chun , Jisu nih an thinlung ah chu hâwi hen an ruat ti a thinlung hen a hawng theih sawm le , an sinah , " Chubang thu chu zeirangah me nan thinlung ah nan ruat ?
+41002009	Mi khêng sinah hin , ' Na sual tla ngaihdam asi rawh , ' ti leh , ' Na tangphah lâk le , kê hen kal rawh , ti hi , a zei mi a sim awl dauh ' ?
+41002010	Zeikhawm si sele , laikulh ah Minung Fapa nih sual ngaihdam khonâk a nei ti nan theih khonâk ding hen mi khêng sinah chun ,
+41002011	' ' Thawk le , na tangphah lâk le , na in ah kal rawh ka nan ti , " a ti .
+41002012	Chun , anih chu a thawk le , a tangphah a lâk sawm le , an ektê muh hen a suak rawh . Churawhchun , an ektê hen thungâi chê an ti le , " Hi hâwi rerêng hi kan muh dah lo , " ti hen , Pathian an sawr rawh .
+41002013	Chun , Jisu chu a suak nawlh le , rilî kapah chun a kal le ; chun mi zapi zawzawng chu a sinah an va kal le , a sîntir na rawh .
+41002014	Chun , a kal pah hen , Levi , Alphai fapa chu siah châwinâk mun ah to mi a muh le , a sinah , " Hawng ka zûl rawh , " a ti . Chun , a thawk le , a zûl rawh .
+41002015	Chun , hi hâwi hi Jisu nih chun Levi in ah chun buh khêng a dûm le , siah khawlhtu tla leh misual cherkhet nih Jisu leh a ṭhiruai tla chu an dûmpi na . An tam ngâi dangâiah Jisu chu an zûl bâk tâwn .
+41002016	Chun , Farisai tla lakah Dân sîntirtu tla nih chun Jisu nih misual tla leh siah khawlhtu tla a dûmpi na mi an muh rawh chun , a ṭhiruai tla sinah chun , " Zei zia me siah khawlhtu tla leh misual tla sinah a ei hen a din ? " an ti .
+41002017	Chun , Jisu nih chu chu a theih le , an sinah chun , " Mi chak tla nih daktawr an herh lo le , miṭia lo tla nih an herh dauh asi ; mi rep tak tla lam ding hen hawng kal ka si lo le , misual tla lam ding dauh hen hawng kal ka si , " a ti .
+41002018	Chun , Johan ṭhiruai tla leh Farisai tla nih chun buh an ngei le ; chun , mi an hawng kal le , Jisu sinah , " Zeirangah me Johan ṭhiruai tla leh Farisai ṭhiruai tla nih buh an ngei le , na ṭhiruai tla nih an ngei tâwn bâk lo ? " an ti .
+41002019	Jisu nih an sinah , " Mo ruaitu tla sinah a pasal ding mi a um kar vial mo ruaitu tla nih chun buh an ngei kho mazei ? A pasal ding mi chu an sinah a um kar zawng an ngei kho lai loh .
+41002020	Sikhawmsele , a pasal ding mi chu an sinah mi kalpi ving ni tla a tlung lai le , chu ni ah lam chun an ngei lai . "
+41002021	" Âukhawm puan li , puan tiṭum suk lo mi tliar hen an belh dah lo ; belh nik sele a belhnâk nih chun a thlêk lehlam lai ; a thar nih chun a li mi chu a thlêk lai le , a tlêk khun lai .
+41002022	Chun , âukhawm nih uain thar uain dûr li tla ah an râwn dah lo ; râwn nik sele , uain nih chun savun dûr tla chu a tâwn phet lai le , uain leh savun dûr tla chu an vei vevê lai . Uain thar chu savun uain dûr thar tla ah an râwn dauh tâwn asi , " a ti .
+41002023	Chun , tihin asi le , Jisu chu Dinhni ah chun fâng mun tla a pal le , chun a ṭhiruai tla nih chun an kal pah hen favûi tla chu an khiak rawh .
+41002024	Chun , Farisai tla nih chun a sinah , " Zauhnik , zeirangah Dinhni ah a thianglo mi chu an ti ? " an ti .
+41002025	Chun , anih nih chun an sinah , " David leh a hâwi tla an samphâng le , an sungvâng liauah a thilti kha nan rêl lo mazei ?
+41002026	Kha hâwi hen Abiathar Bâwlpu Lalchem asi liauah Pathian in ah a lût le , bâwlpu tla cho lo nih chun ei a thiang lo mi sang an siah mi chu a ei le , a hâwi tla sinah a pêk bâk mi thu kha ? " a ti .
+41002027	Chun , amah ber nih chun an sinah , " Dinhni hi minung rangah siam asi le , minung hi Dinhni rangah siam asi lo .
+41002028	Chuvachun , Minung Fapa hi Dinhni lak khawmah Lal asi , " a ti .
+41003001	Chun , Jisu chu pumhnâk in ah chun a lût nawlh le , chunah chun minung pakhat kutkhêng a um .
+41003002	Chun , amah an phiar khonâk ding hen Dinhni ah a damh awt leh awt lo an thlingthlâk .
+41003003	Chun , anih nih kutkhêng sinah chun , " A lâi ah dîr rawh , " a ti .
+41003004	Chun , an sinah chun , " Dinhni ah hin ṭhattir ma a thiang siattir ? Ruangsuah ma a thiang thah ? " ti hen , a deih na . Sikhawmsele , an dâisip .
+41003005	Chun , an thinlung chang zia chu thungâi pawi ti piak hen , thinthawk bû hen anmah tla a zauh na nûnah chu minung sinah chun , " Na kut zangh rawh , " a ti . Chun , a van zangh le , a kut chu a dam rawh .
+41003006	Chun , Farisai tla chu an suak le , amah an thah kho zia ding ruat hen Herod murui tla hen chun anna thluk sawm .
+41003007	Chun , Jisu chu a ṭhiruai tla hen rilî leiah chun anna ṭhinh ving . Chun , Galili ram thawk hen mi zapi cherkhet nih an zûl rawh .
+41003008	Chun , a thilti rokual zia chu an theih rawh chun Judai ram thawk hen , Jerusalem thawk hen , Idumai ram thawk hen , Jordan râl thawk hen , Tura leh Sidon khua kiangkam thawk hen , mi zapi cherkhet a sinah an hawng kal .
+41003009	Chun , mi zapi ruangah chun a rangah lawnglêng ruat piak ding hen a ṭhiruai tla a simh na , " Chu lo chun an hawng ka eng dûlmâl lebang lai , " a ti .
+41003010	Mi cherkhet a damh na le ; chun nganfâk nei mi vial nih amah an tawngh khonâk ding hen an fûk thur .
+41003011	Khuri nâwmtâm tla khawm nih amah chu an muh kip hen a mâika ah bawkbukhup hen , " Nang , Pathian Fapa chu na si , " ti hen , an âu tâwn .
+41003012	Chun , anih nih chun a thâwngthâng chu phuang lo ding hen an sinah thu a kilh vima na .
+41003013	Chun , Jisu chu tlâng ah chun a kâi le , amah nih a duh mi vial chu a kawh na ; chun annih chu a sinah an va kal .
+41003014	Chun , a sinah an um khonâk ding hen leh thusim ding leh
+41003015	khuri tla narnâk thu nei ding hen a fial na khonâk ding hen leinih a ruat .
+41003016	Chu tla chu Simon ( Jisu nih Peter ti hen a auh mi ) ,
+41003017	Zebedai fapa Jem leh a unau Johan , ( chu tla chu Boanerge a sak , chu chu Khuarît fa tla tinâk asi ) ;
+41003018	Andri , Philip , Bartholomai , Mathai , Thom , Alphai fapa Jem , Thadai , Kana mi Simon leh
+41003019	a tleihtirtu Juda Iskariot tla an si .
+41003020	Chun , Jisu chu in ah a lût rawh . Chun , mi zapi chu an hawng a pûm nawlh le , chuvachun sang ngangâi men an ei kholo rawh .
+41003021	Chun , a dâwngsung tla nih chun chu chu an theih rawh chun , " A â ma chu , " ti hen , amah tleih ding hen anna thawh .
+41003022	Chun , Dân sîntirtu tla Jerusalem thawk hen hawng ṭum mi tla nih chun , " Belzebul nei asi hi , " an ti ; " Khuri lal ruangah asi lo mazei khuri tla a nar tâwn mi , " an ti .
+41003023	Chun , Jisu nih Dân sîntirtu tla chu a kawh na le , tahṭhimh thu hen an sinah , " Setan nih Setan ber zeitin a nar kho lai ?
+41003024	Ram khawm mah leh mah a do chun , chu ram chu a dîr kho lai lo .
+41003025	Dâwngsung khat khawm mah anna do chun , chu dâwngsung chu a dîr kho lai lo .
+41003026	Churuangah Setan ram chu ṭhenkhuai hen a um chun a dîr kho lai lo le , a vei thlo lai .
+41003027	" Âukhawm nih mi chak in ah lût hen a sum chu a lâk piak kho tâwn lo , mi chak chu a phuar masa tâ lo chun . Chu nûnah lam chun a in chu a rawk kho lai .
+41003028	" Hi hi theih u ! Minung fa tla hi an sualnâk zawzawng ah leh Pathian an simsiatnâk zei lei zawngah khawm an simsiatnâk tla chu ngaihdam an si lai .
+41003029	Sikhawmsele , âuzawng Thlarau Thenhlimh ngâi simsiattu lam chu zeitik khawmah ngaihdamnâk a tawng lai lo , zungzâl sualnâk ah chun mawh hen a um lehlam lai , " a ti .
+41003030	" Khuri nâwmtâm a nei asi , " an ti ruang khan chu chu a sim asi .
+41003031	Chun , Jisu nu leh a unau tla an hawng le , lêng ah an dîr le , amah va kawh ding hen mi an fial .
+41003032	Chun , a kiangah chun mi zapi anna tohâwng le , chun a sinah chun , " Zauhnik , lênglei ah na nu leh na unau tla nih an hâwl , " an ti .
+41003033	Chun , anih nih chun an sinah , " Ka nu leh ka unau tla chu âu me ? " ti hen , a sâng .
+41003034	Chun , a kiangah to tla chu a zauh na le , " Zauhnik u , ka nu leh ka unau tla hi !
+41003035	Âuzawng Pathian duhzia titu vial chu ka unau , ka far , ka nu tla an si , " a ti .
+41004001	Chun , Jisu nih Galili rilî kapah chun , a sîntir nawlh na rawh . Chun , mi zapi tla cherkhet a sinah an hawng a pûm le , chun rilî ah chun lawng ah â chuan le , a to le ; zapi tla zawzawng chu rilî kap tlâng ah chun an um .
+41004002	Chun , tahṭhimh thu hen thu cherkhet a sîntir na ; a sîntirnâk ah chun an sinah :
+41004003	" Ngâi u ! Fachî vawrhtu fachî vawrh hen a kal le ;
+41004004	chun , hi hâwi hi asi le , a vawrh liauah a zeimaw mi lam vâu ah a tlâ le , vâ tla nih an ei hep .
+41004005	Chun , a zeimaw mi lungpher tlûn tual pannâk ah a tlâ le , tual a sah lo ruangah a keuh sawm .
+41004006	Sikhawmsele , nî a hawng sâng dauh rawh chun uai tep hen a emh , ram a nei lo ruangah a rawp ko rawh .
+41004007	Chun , a zeimaw mi bualingnei nâwngah a tlâ le , bua chu a hawng sâng le , a dawrh hep le , rah rerêng a rah lo rawh .
+41004008	Chun , a zeimaw mi tual ṭha lakah a tlâ le , a kho le , a ṭhang le , a rah rawh ; sâwmthum , sâwmruk , zâ lebang hen a pung , " a ti .
+41004009	Chun , amah nih , " Âuzawng theihnâk ding hen nâ nei nih chun theih seh , " a ti .
+41004010	Chun , mi kingnâk ah Jisu chu a um liauah leinih tla leh amah zûltu tla nih tahṭhimh thu tla chu an deih .
+41004011	Chun , anih nih chun an sinah , " Pathian Ram thuthup chu nannih theih lam chu siang asi le , lêng ah mi tla rangah lam chun zeizawng tahṭhimh thu hen ti asi .
+41004012	Chuvachun , ' Muh lam chu an muh kho narêng hen , theih lam chu an theih kho lonâk ding hen leh , Nâ hen an theih narêng hen a ngaihtawnhnâk lam chu an theih kho lonâk ding hen . Chu lo chun anna her nawlh lai le , ngaihdam an hawng si sual lebang lai , " a ti .
+41004013	Chun , Jisu nih an sinah , " Hi tahṭhimh thu hi nan theih kho lo ma ? Chu hâwi asi chun , zeitin tahṭhimh thu dang zawzawng tla chu nan theih zia lai ?
+41004014	Fachî vawrhtu nih chun thu chu a vawrh asi .
+41004015	Chun , lam vâu ah a thu vawrhnâk tla chu hi tla hi an si : Thu an theih kâ hen Setan nih chun an thinlung ah thu vawrh mi chu a lâk piak sawm tâwn .
+41004016	Chun , chu hâwi ber hen lungpher tlûnah vawrh mi chu hi tla hi an si : Thu an theih kâ hen lâwm tak hen tleih sawmtu tla hi ;
+41004017	sikhawmsele , anmah lakah chun ram an nei lo , sâwtlotê cho an um le ; chu nûnah chun thu ruangah hamhnâk mawh nehsawhnâk mawh a hawng um ka hen an tlû sawm tâwn .
+41004018	Chun , midang tla chu bualingnei lakah vawrh mi chu an si : Chubang tla nih chun thu chu an theih rawh le ,
+41004019	sikhawmsele laikulh lungkhamnâk tla , neihnâk tla , bumnâk tla , thil dang duhnâk tla chu a hawng lût le , thu chu a dawrh le , rah lo hen a hawng um tâwn .
+41004020	Chun , tual ṭha lakah vawrh mi chu hi bang hi an si : Thu chu theih hen , tleih hen , a leh sâwmthum , sâwmruk , zâ lebang hen rah tla hi an si , " a ti .
+41004021	Chun , Jisu ber nih an sinah , " Khâwnvâr chu a siahnâk ah siah lo hen , tâwng tangah mawh ihkhun tangah mawh , siah ding hen an lâk tâwn mazei ?
+41004022	Puang lo ding hen pheh zeikhawm a um lo , lang lo ding hen thuh zeikhawm a um lo .
+41004023	Âuzawng nih theihnâk ding hen nâ nei nih chun theih seh , " a ti .
+41004024	Chun , amah nih an sinah , " Nan ngâi mi chu zei me asi a thiamthih u ; nan tahnâk lîlâ hen an tah piak na lai le , an pêk tam khun na lai .
+41004025	Âuzawng a nei mi chu an pêk sap lai le , âuzawng a nei lo mi chu a neihlem khawm an lâk piak lai , " a ti .
+41004026	Chun , Jisu ber nih a sim vima le , " Pathian Ram chu hi hâwi hi asi : Mi nih tual ah hin chî vawrh sele ,
+41004027	zân ah it thlit hen sûn ah thawk tâwn sele , chî chu zeitin mi zât asi ti theihlo hen a hawng keuh hen a hawng ṭhang rawh .
+41004028	Tual nih amah rah a hawng suahtir tâwn . A tîr chem ah a kûng , chu nûnah chun a vûi ; chun chu nûnah a vûi lakah chun fângmal bit .
+41004029	Sikhawmsele , rah chu a hawng min tikah fâng ât a chû ruangah favah chu a thuak sawm tâwn , a ti .
+41004030	Chun , Jisu nih , " Pathian Ram chu zei hen me kan tahṭhimh lai ? Asi lo leh , zei tahṭhimh thu hen me kan tahṭhimh lai ?
+41004031	Anṭam chî mal khat tual ah an vawrh le : tual ah chî zawzawng ngâk hen mêchem khawmsele ,
+41004032	a vawrh nûnah lam chun a kho le , thlâi zawzawng ngâk hen a hawng lian dauh rawh . Ṭeng lian tatak a nei le , chuvachun tlûn zuang vâ tla chu a dâidul ah an bû an tuah le , an um , " a ti .
+41004033	Chun , chu hâwi tahṭhimh thu tamtak hen , an theih kho rirî hen thu chu an sinah a sim tâwn .
+41004034	Sikhawmsele , tahṭhimh thu lo hen an sinah thu a sim lo . Amah ṭhiruai tla sinah lam chun mi kingnâk ah zeizawng a simhfiang na tâwn .
+41004035	Chun , chu ni lîlâ ah chun , zânleibâi ah , Jisu nih chun an sinah , " Khatlei râl ah khin kan kal lai , " a ti .
+41004036	Chun , mi zapi tla chu kaltâk hen amah chu a um chia tê hen , lawng ah chun an kalpi sawm rawh . Lawng dang tla khawm a sinah an um .
+41004037	Chun , thli chawp tak a hawng râng le , tî tlingtlawk tla chu lawng ah chun a lût chukmak le , chuvachun lawng chu a khat awt ko rawh .
+41004038	Chun , anih chu sanhtling tlinh a it hen , lawng taw leiah chun a um . Chun , an thawh le , a sinah , " Sîntirtu , kan vei ding mi hi pawi na ti lo ma ? " an ti .
+41004039	Chun , anih chu a hawng a ṭhang le , thli chu a fâî le , rilî sinah khawm chun , " Dâisip le , um ziar rawh ! " a ti . Chun , thli chu a bâng le , a reh dup ko .
+41004040	Chun , anih nih chun an sinah , " Zeirang chu tluk rak hen nan lâu le ? Lungnâk rerêng nan nei lo rih mu ? " a ti .
+41004041	Chun , dîntuai hen an ṭih lo le , " Hi minung hi âu me si le , thli leh rilî tiang khawm nih a thu an ngâi râu ! " an ti .
+41005001	Chun , rilî râl Gerasin mi tla ram chu an hawng tlung .
+41005002	Chun , Jisu chu lawng ah mi a suak nûnah chun minung pakhat , khuri nâwmtâm nei , thlân thawk hen a hawng suak mi nih a tawng sawm le ;
+41005003	chu minung nih chun thlân tla lakah chun umnâk a nei tâwn le , âukhawm nih thîr chikchîn hen khawm an phuar kho lo rawh le ;
+41005004	rêng leh thîr chikchîn tla khawm hen an phuar kumza rawh le ; sikhawmsele , thîr chikchîn tla chu a sah le , rêng tla khawm chu a khiak dip tâwn ; âukhawm nih an ti kho lo .
+41005005	A sûn a zân hen thlân tla ah leh tlâng tla ah chun a âu a âu tâwn le , lung hen khawm â ât kumza tâwn .
+41005006	Chun , lât tak thawk hen Jisu chu a muh kâ hen a tek le , a mâimûk .
+41005007	Chun , aw-hâu fakpi a âu hen , " Jisu , Pathian Chungnungchem Fapa , kei leh nang zei me kanna tlâinâk um ? Hawng ka rêp lo ding hen Pathian min hen ka nan ngiar chiam asi , " a ti .
+41005008	( Jisu nih chun a sinah , " Nang , khuri nâwmtâm , minung sungah mi hawng suak rawh , " a ti rawh dangâiah . )
+41005009	Chun , anih nih chun , " Na min zei mesi ? " ti hen , a deih . Chun , anih nih chun , a sinah , " Ka min chu khuri zapi asi , cherkhet kan si , " a ti .
+41005010	Chun , chu ram thawk hen chun anmah tla nar lo ding hen Jisu sinah an ngiar chiam .
+41005011	Chun , chu tlâng pangdâr ah chun vawk rual tamtak an tlawng .
+41005012	Chun , khuri nâwmtâm tla nih chun , " Vawk tla sinah hawng kan fial , an sungah kan lût khonâk ding hen , " ti hen , a sinah an ngiar chiam .
+41005013	Chun , anih nih chun thu a pêk . Chun , khuri nâwmtâm tla chu an suak le , vawk paw sung tla ah chun an lût le , chun vawk rual chu ( sâng nih tluk ding an si ) kham ah anna khâwk le ; rilî lakah an lût ver ; chun rilî ah chun tî thalh hen an thi rawh .
+41005014	Chun , a vulhtu tla chu an tek le , khua ah leh lo tla ah chun an sim . Mi zapi tla chu zei thil me a hawng si rawh ti zauh ding hen an hawng kal .
+41005015	Chun , Jisu sinah an hawng tleng le , khuri vuanh , khuri zapi nih a luah mi kha , puan aih hen , thinlung fîm put hen , to mi an hawng muh le ; chun an ṭih rawh .
+41005016	Chun , a theihtu tla nih chun khuri tleih tlûnah thil tlung zia leh vawk thâwngthâng tla chu , chubang tla chu an simh na .
+41005017	Chun , chu tla nih chun an ram ah mi suak ding hen an ngiar chiam rawh .
+41005018	Chun , lawng ah â chuan awt liau takah khuri vuanh rawh mi nih khan Jisu sinah um ding a ngiar .
+41005019	Sikhawmsele , Jisu nih a siang lo le , a sinah , " Na in ah na hâwi tla sinah tlung le , Lalpa nih na rangah thil a nan ti piak mi a rokual zia leh a nan zângfah zia hi va sim rawh , " a ti rawh .
+41005020	Chun , a kal le , Dekapoli ah chun Jisu nih a rangah thil a ti piak mi rokual zia chu a phuang rawh . Chun , mi zawzawng nih chê an ti .
+41005021	Chun , Jisu chu lawng ah khatlei râl ah a kâl nawlh rawh chun mi zapi cherkhet a sinah an hawng a pûm . Chun , anih chu rilî kapah a um .
+41005022	Chun , pumhnâk in hotu tla lakah pakhat , a min Jaira chu a hawng kal le ; Jisu a muh ka hen a kebul ah a bawkbukhup le ,
+41005023	" Ka fanu ngâksiatê a thi awt ngâi le , â panh hen a hawng dam khonâk ding hen hawng kal le , a tlûnah na kut thâng ding hen ka nan ngiar , " ti hen , a ngiar chiam .
+41005024	Chun , Jisu chu a sinah a va kal . Chun , mi zapi cherkhet nih an zûl le , an eng chukmak .
+41005025	Chun , nunau pakhat kum leinih thî suak hen a hat kho lo le ,
+41005026	daktawr tamtak lakah cherkhet a tuar rawh le , a neih zawzawng khawm a veih hep rawh le , ṭhat lei ngâk hen a zual dauh lehlam .
+41005027	Chu nih chun Jisu thâwngthâng thu tla a theih le , a dung leiah mi zapi lakah chun a hawng kal le , a puan a tawngh .
+41005028	" A puan cho khawm tawngh sele damh hen ka um ko lai , " ti a ruat asi .
+41005029	Chun , zeikarlo ah a thî suak chu a hawng reh sawm le , a nganfâk chu damh asi rawh ti a taksa ah a theih rawh .
+41005030	Chun , Jisu nih chun a sungah mi thiltikhonâk suak tâwn mi chu a suak ti a theih le , mi zapi lakah chun â hawi le , " Âu me ka puan tla tawnghtu kha ? " a ti .
+41005031	Chun , a ṭhiruai tla nih chun a sinah , " Mi zapi nih an eng chukmak mi hi na muh ko mi , ' Âu nih an ka tawngh ? ' zeitin zia hen ti me le ?
+41005032	Chun , anih nih chun chu thil titu chu muh ding hen â hawi .
+41005033	Chuvachun , nunau nih chun a tlûnah thil a ti piak mi chu theih hen , lâu leh thir bû hen a hawng kal le , a mâika ah a bawkbukhup le , a sinah thu dik tak hen a simh ver rawh .
+41005034	Chun , anih nih chun a sinah , " Ka fanu , na lungnâk hi na dampi asi , lungngam tak hen kal le , na nganfâknâk chu hawng dam pawt seh , " a ti .
+41005035	A hawlh liau chirah , pumhnâk in hotu in thawk hen mi an hawng kal le , " Na fanu a thi rawh ; zeirangah Sîntirtu hi na hamhtir nget awt ? " an ti .
+41005036	Jisu lam nih chun an thusim chu ngaihlo lêm thlâk hen , pumhnâk in hotu sinah chun , " Lâu lah , lung ko , " a ti .
+41005037	Chun , Peter , Jem leh a unau Johan tla cho lo chu âukhawm amah zûl bâk ding a siang lo rawh .
+41005038	Chun , pumhnâk in hotu in chu a va tlung le , Jisu nih an nawk chur mi leh an ṭap chur mi leh an râk chur mi chu a muh .
+41005039	Chun , a va lût rawh chun an sinah , " Zeirangah nâ sêt huam hen nan ṭap ? Ngâksia chu a thi lo , a it asi , " a ti .
+41005040	Chun , annih nih chun an nih sanh ko . Anih lam nih chun an ektê hen a nar phin na le , ngâksia nu leh pa leh a ṭhiruai pathum tla chu a ruai na le , ngâksia umnâk ah chun a va lût .
+41005041	Chun , ngâksia kut chu a tleih le , a sinah chun , " Talitha , koum , " a ti , chu chu " Kuih nu , thawk rawh ka nan ti ! " tinâk asi .
+41005042	Chun , nunau ngâksia chu a hawng thawk le , a kal sawm ko ; amah chu kum leinih mi asi rawh . Chun , annih nih chun chê an ti rarâu lo .
+41005043	Chun , anih nih an sinah , " Hi hi âukhawm nih theih lah seh , ' a ti thlir ; chun ei ding pêk ding hen thu a pêk .
+41006001	Chun , chu thawk hen chun Jisu chu a suak le , a umnâk khua lei chu a tlung le , a ṭhiruai tla nih chun an zûl vima .
+41006002	Chun , Dinhni a hawng si le , pumhnâk in ah a sîntir na le , chun , mi cherkhet a thu theihtu tla nih chun , " Hi minung nih hi bang thu hi kha zei mi me a theih le ? Hi minung sinah finghnâk pêk asi mi hi zei finghnâk me si le ? A kut hen hi tluk rak thilchê a ti mi hi zei zia mesi ?
+41006003	Hi minung hi Mari fapa Jem , Josef , Juda , Simon leh a unaupa thing hen thil siamtu kha asi lo mazei ? A farnu le khawm hinah kan sinah um an si lo mazei ? " an ti le , thungâi chê an ti . Chun , a tlûnah an lungsilo rawh .
+41006004	Chun , Jisu nih an sinah , " Khuavâng chu amah khua lei tla ah , amah rualsia tla lakah , amah in tla ah cho lo chun chawnglawmh lo hen a um dah lo , " a ti .
+41006005	Chun , mi damlo tâwmtê tlûnah kut thâng hen a damh mi cho lo chu chunah chun thilchê rêng a ti kho lo .
+41006006	An lung lo ruangah thungâi chê a ti . Chun , sîntir pah vima hen khua tla chu a ṭawl .
+41006007	Chun , leinih tla chu a kawh na le , panih vima hen a fial na rawh . Khuri nâwmtâm tla tlûnah thuneihnâk a pêk na .
+41006008	Chun , an khualtlâwngnâk ding rangah ṭhianṭhunh cho lo chu zeikhawm , sang khawm , zâl khawm , tâisâwm ah tangka khawm put lo ding hen a ti thlir .
+41006009	Pheikawk lam chu ruk ding a ti . " Kawrdawh panih a ruk lah u , " a ti .
+41006010	Chun , amah nih an sinah , " Kha zei khawmah nan tlungnâk in ah chun , chunah mi nan suak lân lo chu tlung kumza u .
+41006011	Chun , zei khua khawmah an lawmh na lo hen , nan thu an ngâi lonâk zawngah chu thawk hen nan suak tikah chun anmah theihtir na ding hen nan kezaphah tangah valeidip kawp mi chu khâwng u , " a ti .
+41006012	Chun , an suak le , rimnâk thu an sim le ;
+41006013	khuri tamtak khawm an nar le , damlo tamtak khawm sariak an thuh le , an damh .
+41006014	Chun , lalchem Herod nih chun a theih le , Jisu min chu a thang rawh dangâiah . Mi le tla nih chun , " Baptistu Johan kha mithi lakah mi a thawknawlh rawh le , chubang thiltikhonâk tla nih chun amah lakah a ṭuan asi chu ! " an ti .
+41006015	Midang lam nih chun , " Elija ma chu , " an ti ; midang nih , " Khuavâng ma chu , tuan ah mi khuavâng tla lakah pakhat hâwi kha , " an ti .
+41006016	Herod lam nih chun a theih rawh chun , " Johan , a lû ka tan mi tak kha a hawng thawknawlh rawh ma chu ! " a ti .
+41006017	Amah Herod nih chun a unau Philip nupi Herodi ruangah mi a fial le , Johan chu a tleihtir le , rêngin ah phuar bû hen a khumh rawh dangâiah . Herodi chu nupi ah a umpi rawh le ;
+41006018	Johan nih chun Herod sinah , " Na unau nupi na umpi mi hi a thiang lo asi , " a ti rawh asi .
+41006019	Churuangah Herodi nih chun amah chu a râl thlo le , thah a duh le , sikhawmsele a ti kho lo .
+41006020	Herod nih Johan chu mi rep leh thenhlimh tak asi ti a theih ruangah amah chu a ṭih le , a hum thlir asi , a thu a ngâi chun a lawksawng ngâi tâwn .
+41006021	Chun , Herod suakcham ni ah chun a mi rokual tla , kawrsen hotu lian tla , Galili ram ah mi lian tla rangah zân ah puai a hawng um le , Herodi rang chun tik remchâng a hawng um rawh .
+41006022	Herodi fanu chu a hawng lût le , a lâm le , Herod leh a buh dûmpitu tla chu a lawmhtir na . Chun , lalchem nih chun nunau ngâksia sinah , " Na duh mi zawng hawng ka deih , ka nan pêk lai , ' a ti .
+41006023	" Zei tal na ka deih mi zawng chu , ka ram khingkhuai khawm ka nan pêk lai , " ti hen , a sinah siat a sirh .
+41006024	Chun , anih chu a suak le , a nu sinah chun , " Zei me ka deih lai ? " a va ti . Anih nih , " Baptistu Johan lû , " a ti .
+41006025	Chun , anih chu khulrang tak hen lalchem sinah chun a va lût sawm le , " Khêng hen Baptistu Johan lû na ka pêk sawm ka duh asi , " ti hen , a deih .
+41006026	Chun , lalchem chu thungâi a lawksawng . Sikhawmsele , a siatsirh tla leh a buh dûmpitu tla ruangah chun a êl duh lo .
+41006027	Chun , lalchem nih chun a vêngtu kawrsen pakhat a fial sawm le , a lû hawng put ding thu a pêk . Chun , anih chu rêngin ah a va lût le , a lû a va tan le ,
+41006028	a lû chu khêng hen a hawng put le , nunau ngâksia sinah chun a pêk rawh . Chun , nunau ngâksia nih chun a nu sinah a pêk .
+41006029	Chun , a ṭhiruai tla nih chun an theih kâ hen a ruak chu an va lâwm le , thlân ah chun an vûi rawh .
+41006030	Chun , mifial tla chu Jisu sinah an hawng a pûm le , zeizawng an thilti leh an sîntir mi vial an simh .
+41006031	Chun , anih nih chun an sinah , " Nanmah tla lâwng hen ramkaro mun ah a dang hen hawng ule , a dîn rih u , " a ti . Mi tamtak anna lanh zulmal le , buh ngâi men an ei manh lo .
+41006032	Chun , ramkaro mun ah anmah lâwng hen a dang hen an va kal .
+41006033	Chun , mi nih an kal liau chu an muh na le , mi tamtak nih anmah tla chu an theih na le , anna pûm le , an lehkhanh rawh .
+41006034	Chun , Jisu chu vakap ah a suak le , mi zapi cherkhet a muh na le , vêngtu neilo dawrâ tla hâwi an si ruangah thungâi a zângfah na le , thu tamtak a sîntir na rawh .
+41006035	Chun , zânleibâi khet ah , a ṭhiruai tla chu a sinah an hawng kal le , " Hi hi mi kingnâk mun asi le , a zânlei ving rawh dangâiah ;
+41006036	annih tla hi kan kiangkam lo ah leh khua tla ah kal hen , an ei ding zeimaw tal an châwk khonâk ding hen kaltir na me , " an ti .
+41006037	Anih lam nih chun an sinah , " Nanmah nih ei ding pêk na u , " ti hen , a sâng . Chun , annih nih chun a sinah , " Sang denari zanih man va châwk hen ei ding kan pêk na awt masi ? " an ti .
+41006038	Chun , anih nih chun an sinah , " Sangtlêp zeizat me nan nei ? Va zauhnik u , " a ti . Chun , an neih zat an theih ka hen , " Sangtlêp panga , ngâ panih hen , " an ti .
+41006039	Chun , anih nih chun an ektê hen ramhthep tlûnah chun a murui vima hen totir ding hen an sinah thu a pêk .
+41006040	Chun , a tlar hen , zâ tla , sâwmnga tla vima hen an to .
+41006041	Chun , anih nih chun sangtlêp panga leh ngâ panih chu a lâk le , vân lei hawi hen mal a sâwm le , sangtlêp tla chu a phel le , an mâika ah hunh na ding hen a ṭhiruai tla sinah chun a pêk le , ngâ panih khawm chu mi zawzawng lakah a ṭhen .
+41006042	Chun , an ektê hen an ei le , an khim chiau .
+41006043	Chun , sang neknâwi leh ngâ neknâwi khobung leinih an rût le , a khat .
+41006044	Sangtlêp eitu tla chu patling lir sângnga an si .
+41006045	Chun , Jisu nih mi zapi chu a ṭiaktir na karah varâl leiah Betsaida ah va kal masa ding hen a ṭhiruai tla chu lawng ah a chuantir sawm na .
+41006046	Chun , annih chu a ṭiaktir na nûnah chun thlacham ding hen tlâng ah a kal rawh .
+41006047	Chun , zânleibâi ah lawng chu rilî lâi takah chun a um le , anih chu amah lâwng hen tlâng ah chun a um .
+41006048	Chun , an lawng vei lakah chun an lawksawng hen a muh le , thli nih amahlo leikângah a nam ruangah , khuafîmchat lei zo ah rilî tlûnah kê hen kal hen anmah lei a hawng fûk le , anmah tla lanh a tum .
+41006049	Sikhawmsele , annih nih chun anih chu rilî tlûnah kê hen a kal mi an muh rawh chun mithlâ bei an ti le , an âu chiam le ,
+41006050	an ektê hen amah an muh le , an thla a kâm . Sikhawmsele , anih nih chun anmah chu a sawnh sawm na le , an sinah , " Lungngam tak hen um u ; keimah ka si , lâu lah u , " a ti .
+41006051	Chun , lawng ah chun an sinah â chuan le , thli chu a bâng ko rawh . Chun , an thinlung hen thungâi chê an ti .
+41006052	Sangtlêp thu chu a ngaihtawnh dân an theihthiam lo dangâiah , an thinlung a chang ruangah .
+41006053	Chun , varâl leiah an kâi rawh chun , Genesaret ram tlâng an tlung le , vakap ah chun lawng chu an rêng .
+41006054	Chun , lawng ah mi an suak nûnah chun mi tla nih anih chu an theih sawm le ;
+41006055	Chu ram kiangkam zawzawng ah an tek chur le , a um ti an theihnâk zawngah damlo tla an tangphah lakah it bû hen an hawng zawnh sup .
+41006056	Chun , khuatê leh khua lian tla ah , lo tla ah , kha zeizawng ah a lûtnâk kipah damlo tla chu sumtuah mun tla ah an zâutir na , a puansâr tla tawngh kho an deih chiam le , chun amah tawnghtu zawng chu an dam vima .
+41007001	Churawhchun , Farisai tla leh Dân sîntirtu tla lakah mi âu tla mawh Jerusalem thawk hen hawng kal tla chu a sinah an hawng a pûm .
+41007002	Chubang tla nih chun a ṭhiruai a zeimaw mi tla kut nâwm hen sang an ei mi an muh . " Nâwm " ti hi ṭâwl lo tinâk asi .
+41007003	( Farisai tla leh Juda tla zawzawng nih chun upa thurovuih chu an tleih thlir ruangah an kut ngenh tak hen an ṭâwl lo chun an ei dah lo .
+41007004	Chun , sumtuah mun thawk hen an tlung khawmah tak anna khawlh lo chun an ei dah lo . Chun , thu dang tamtak an tleih thlir ding hen an lâk singsuan mi chu a um , hâi tla , bêl tla , dârbêl tla ṭâwl tla hi . )
+41007005	Chuvachun , Farisai tla leh Dân sîntirtu tla nih chun , " Zeirangah me na ṭhiruai tla nih upa thurovuih ziatê a um lo hen , kut nâwm hen sang an ei tâwn ? " ti hen an deih .
+41007006	Anih nih chun an sinah , " Isai nih hin nannih mi perpê tla thu hi a simkan mi a dik tak ko a ! ' Hi minung tla nih an kâ hen an ka chawnglawmh le , an thinlung lam nih chun an ka lât .
+41007007	Zeikhawm si sele , an sîntirnâk ah minung thupêk tla an sîntir ruangah an ka sawnh tâwn hi a thawt asi , ' ti hen a rîn hâwi khan .
+41007008	" Pathian thupêk tla chu thlahthlamh hen minung thurovuih chu nan tleih thlir asi , " a ti .
+41007009	Chun , amah nih an sinah , " Nanmah thurovuih chu nan tleih khonâk ding hen Pathian thupêk tla nan duh lo hi a ziazâng thungâi nan theih a !
+41007010	Mosi nih , ' Na nu leh na pa chawnglawmh rawh , ' ti leh , ' Âuzawng a nu mawh a pa simsiattu zawng chu thi ding asi , ' a ti khateh .
+41007011	Nannih lam nih chun hi hâwi hen nan ti tâwn , ' Mi nih a nu mawh a pa mawh sinah , " Na ka mang ding mi hi Korban asi rawh , " a ti chun ( chu chu ' Pathian sinah pêk , ' tinâk asi ) ,
+41007012	a nu rangah mawh a pa rangah mawh ti piak zeikhawm nan siang tâwn lo rawh .
+41007013	Mi sinah nan thurovuih singsuan nih hin Pathian thu hi a veih tâwn asi ; chu hâwi thil chu tamtak nan ti tâwn , " a ti .
+41007014	Chun , mi zapi tla chu a kawh nawlh le , an sinah , " Nan ektê hen ka thu hi ngâi chiau ule , theihthiam u :
+41007015	Minung lênglei thawk hen a paw sungah lût mi nih amah nawmh kho zeikhawm a um lo ; minung paw sung thawk hen hawng suak tla chu minung nawmhtu asi dauh .
+41007016	Theihnâk ding hen nâ nei nih chun theih seh , " a ti .
+41007017	Chun , mi zapi tla in ah a lût tâk na nûnah a ṭhiruai tla nih chun tahṭhimh thu amah an deih fiang rawh .
+41007018	Chun , anih nih chun an sinah , " Nannih khawm chu tluk rak hen theihnâk neilo nan si mu ? Zeizawng lênglei thawk hen minung paw sungah lût mi zawng ,
+41007019	a thinlung sungah lût lo hen , a paw sungah lût hen vâu kalnâk ah a suak ruangah amah chu a nawmh kho lo ti nan theih lo mazei ? " a ti . ( chu chu ei ding mi zawng ei a thiang tinâk asi . )
+41007020	Chun , amah nih , " Minung paw sung thawk hen suak nih chun , chu tak nih chun minung a nawmh tâwn asi .
+41007021	Paw sungah mi , minung thinlung tla thawk hen ruatdawnnâk sual tla a hawng suak tâwn ruangah ; pung-leh-lêngnâk tla , fîrnâk tla , mi thahnâk tla ,
+41007022	ṭangdang pawmtâknâk tla , ngarhnâk tla , sualnâk tla , bumnâk tla , simsiatnâk tla , khâwngnâk tla leh âtnâk tla hi .
+41007023	Chubang thilsual zawzawng tla chu paw sung thawk hen a hawng suak le , minung chu a nawmhtir tâwn , " a ti .
+41007024	Chun , Jisu chu a thawk le , chu thawk hen chun Tura leh Sidon kiangkam ah a kal . Chun , in ah a lût le , âu theih khawm a duh lo . Sikhawmsele â thup kho lo .
+41007025	Chuvachun , nunau pakhat , fanu ngâksiatê khuri nâwmtâm vuanh nei mi nih chun a thâwngthâng a theih le , a kebul ah a va bawkbukhup sawm .
+41007026	Nunau chu Greek mi asi le , phun leikângah chun Siria ah Phoiniki ram ah suak mi asi . Anih nih chun a fanu paw sungah mi khuri nar ding hen a ngiar .
+41007027	Chun , anih nih chun a sinah , " Fa tla chu khawp masa na seh ; fa tla sang lâk piak hen ui tla sinah lawnh chu â dawh lo , " a ti .
+41007028	Anih nih chun a sinah , " Lalpa si chu si ngâk , sikhawmsele dawhkân tangah ui tla khawm nih fa le tla sang neknâwi chu a ei tâwn asi , " ti hen a sâng .
+41007029	Chun anih nih chun a sinah , " Na thusim ruangah chun kal rawh le , khuri chu na fanu paw sungah mi a suak rawh , " a ti .
+41007030	Chun , a in ah chun a va tlung le , a fa chu khuri nih a suaktâk rawh hen ihkhun ah it mi a muh rawh .
+41007031	Chun , Tura ram thawk hen Jisu chu a suak nawlh le , Sidon pal hen Dekapoli ram lan vima hen Galili rilî chu a tlung rawh .
+41007032	Chun , mi pakhat nasêt , hawlh khawm hawlh fiang kho lo mi a sinah an hawng ruai le , a tlûnah a kut thâng ding hen an ngiar .
+41007033	Chun , anih nih chun zapi nâwngah mi amah cho a dang hen a ruai le , a kutmar hen a nakua tla a tham le , chun chil a sâk le , a lei a tham piak le ;
+41007034	chun vân lei zauh hen a thaw a suah le , a sinah , " Ephphatha , " a ti . ( chu chu " A awng rawh , " tinâk asi . )
+41007035	Chun , a nâ tla chu a âwng le , a lei phuarnâk tla khawm chu â sût le , fiang tak hen a hawlh kho rawh .
+41007036	Chun , anih nih chun a sinah âukhawm simh lo ding hen a ti thlir . Sikhawmsele , a khap fâk bilik leh an phuang zia a zual khun tâwn .
+41007037	" Anih nih chun zeizawng ṭha tak hen a ti le , nasêt tla a theihtir le , hawlh kho lo tla khawm a hawlhtir tâwn , " an ti le , dîntuai hen chê an ti lo .
+41008001	Chu ni tla ah chun mi zapi tla cherkhet an hawng um nawlh le , ei ding zeikhawm an neilo liauah chun Jisu nih a ṭhiruai tla chu a kawh na le , an sinah ,
+41008002	" Mi zapi tla hi tuah ni thum ka sinah an um rawh le , ei ding zeikhawm an neilo ruangah thungâi ka zângfah na asi .
+41008003	Buh ngei hen an in ah ka tlungtir na chun lam lakah an vâiphâl awt dangâiah ; zeimaw mi tla châng chu an hawng kalnâk thungâi a lât mi , " a ti .
+41008004	Chun , a ṭhiruai tla nih chun , " Mi nih hinah ramkaro mun ah hin kha zei mi sang hen me hi bang tla hi an khawptir kho lai ? " ti hen , amah an sâng .
+41008005	Chun , anih nih chun , " Sangtlêp zeizat me nan nei ? " ti hen annih chu a deih na . Chun , annih nih chun " Tlêp sarih , " an ti .
+41008006	Chun , mi zapi tla chu tual ah to ding hen thu a pêk le ; chun sangtlêp pasarih chu a lâk le , lâwmthu a sim thluh nûnah a phel le , an mâika ah hunh ding hen a ṭhiruai tla sinah a pêk . Chun , mi zapi tla sinah chun an hunh rawh .
+41008007	Ngatenek tâwmtê an nei ber ; chun Jisu nih chun lâwmthu sim hen mal a sâwm le , ṭhiruai tla sinah chubang tla khawm chu an mâika ah hunh ding hen thu a pêk na .
+41008008	Chun , an ei le , an khawp chiau ; annih tla chu mi sâng li ding an si . An ei bang chu ṭhiruai tla nih khobung sarih an khah . Chun , Jisu nih chun annih chu a ṭiaktir na rawh .
+41008010	Chun , anih chu a ṭhiruai tla sinah lawng ah chun â chuan sawm le , Dalmanutha ram chu a tlung rawh .
+41008011	Chun , Farisai tla an hawng suak le , Jisu niknâk ding hen a lakah vân a mi singsiahnâk hâwl hen anih chu an êl rawh .
+41008012	Chun , anih chu a thinlung hen a rûm le , " Zeirangah me tusan mi tla nih hin singsiahnâk an hâwl ? Thungâi tak hen ka nan simh na , tusan minung tla sinah hin singsiahnâk rerêng pêk asi lai lo , " a ti .
+41008013	Chun , annih chu a kaltâk na le , lawng ah chun â chuan nawlh le , varâl leiah a kal rawh .
+41008014	Chun , a ṭhiruai tla nih chun sang put an philh le , sangtlêp pakhat cho lo chu lawng ah chun sang dang rerêng an nei lo .
+41008015	Chun , anih nih chun an sinah , " Farisai tla leh Herod thilnu lakah chun a vêng ule , a thiamthih u , " a ti thlir .
+41008016	Chun , annih nih chun , " Sang kan nei lo thlo , " ti hen anna ruah .
+41008017	Chun , Jisu nih chu chu a theih le , an sinah , " Zeirangah sang nan nei lo ruangah nanna ruatdawn ? Tu khawmah nan thinlung hen nan theih lo nget rih ma ? A ngaihtawnhnâk khawm nan theih lo nget rih mu ? Nan thinlung chu a mâwlâwt rawh na maw ?
+41008018	Mit nei ko hen nan muh lo mazei ? Nâ nei ko hen nan theih lo mazei ? Nan theihkumza lo ma ?
+41008019	Sângnga sinah sangtlêp panga ka phel liauah khan a neknâwi kha khobung zeizat me nan khah ? " a ti . Chun , annih nih chun a sinah , " Leinih , " an ti .
+41008020	" Chun , sâng li sinah sangtlêp pasarih ka phel liauah khan a neknâwi kha khobung zeizat me nan khah ? " a ti . Chun , annih nih chun a sinah , " Khobung sarih , " an ti .
+41008021	Chun , anih nih chun an sinah , " Tu khawmah a ngaihtawnh dân nan thiam lo rih ma ? " a ti .
+41008022	Chun , Betsaida ah a hawng tlung . Chun , Jisu sinah mitchâw an hawng ruai le , amah tawngh ding hen an ngiar .
+41008023	Chun , anih nih chun mitchâw kut chu a tleih le , khua lêng ah a suakpi le ; chun a mit ah chil a sah le , a tlûnah kut a thâng thluh rawh chun , " Khua na muh kho ma ? " ti hen a deih .
+41008024	Chun , a vân a tâu le , " Minung tla ka muh le , thing kal hâwi hen ka muh fâwn , " a ti .
+41008025	Chun , a mit ah a kut a thâng nawlh le , chun anih nih chun a zauh ko le , a hawng dam le , zeizawng fiang tak hen a muh rawh .
+41008026	Chun , anih nih chun , " Khua khawmah lût lah , " ti hen a in ah a tlungtir rawh .
+41008027	Chun , Jisu leh a ṭhiruai tla chu an suak le , Philipi Kaisari khuatê tla ah chun an kal . Chun , kal pah hen a ṭhiruai tla sinah , " Mi nih âu me asi ' an ka ti ? " ti hen a deih na .
+41008028	Chun , annih nih chun , " Baptistu Johan asi , " a nan ti ; midang nih , ' Elija asi , ' a nan ti ; a zeimaw mi lam nih chun , " Pathian khuavâng tla lakah pakhat asi , ' a nan ti , " ti hen an simh .
+41008029	Chun , anih nih chun an sinah , " Asi chun ne , nannih nih âu asi nan ka ti ? " ti hen a deih na . Peter nih chun a sinah , " Mesia chu na si , " ti hen a sâng .
+41008030	Chun , anih nih chun a thâwngthâng âukhawm simh lo ding a ti thlir na .
+41008031	Chun , Minung Fapa nih chun thil tamtak a tuar ding mi leh upa tla , bâwlpu lal tla , Dân sîntirtu tla duhlo hen a um ding mi tla , thah hen a um ding mi tla , ni thum ni ah a thawknawlh ding mi tla chu a sîntir na rawh .
+41008032	Chubang thu chu fiang tak hen a sim asi . Chun , Peter nih chun anih chu a dang hen a ruai le , nun a simh rawh .
+41008033	Anih lam chu â her le , a ṭhiruai tla chu a zauh le , " Setan , ka dung leiah kal rawh , Pathian thil tla dawn lo hen , minung thil tla na dawn asi hi , " ti hen , Peter nun a simh rawh .
+41008034	Chun , mi zapi tla chu a ṭhiruai tla hen a kawh na le , an sinah , " Âuzawng nih hawng ka zûl a duh chun mah a pheh hen a kraws put hen hawng ka zûl seh .
+41008035	Âuzawng a nungnâk hum duhtu zawng nih a thlâu lai le ; âuzawng keimah ruangah leh Thâwngthâng Ṭha ruangah a nungnâk thlâutu nih chun a him lai .
+41008036	Mi nih laikulh hi a pum hen nei sele , a nungnâk thlâu sele , a rangah zei me a ṭhatvaknâk um lai ?
+41008037	Mi nih a nungnâk ruangrûl ah zei me a pêk kho lai ?
+41008038	Âuzawng tusan zumhkâilo leh thilsual ti mang tla lakah keimah leh ka thu zahpitu zawng chu , Minung Fapa nih hin vânmifial thenhlimh tla hen a Pa rokualnâk ah a thuam hen a hawng kal tikah chun chu minung chu a hawng zahpi bâk lai , " a ti .
+41009001	Chun , Jisu nih an sinah , ' Thungâi tak hen ka nan simh na , hinah dîr tla , a zeimaw mi tla hi Pathian Ram thiltikhonâk hen hawng tlung mi an muh lân lo chu thihnâk tem lo thlo ding mi an um , " a ti .
+41009002	Chun , ni ruk nûnah chun Jisu nih Peter , Jem leh Johan tla chu a ruai na le , a dang hen tlâng sâng takah anmah tla cho a kâipi na ; an mâika ah chun a mêl umzia chu a hawng dang rawh .
+41009003	Chun , a nipuan tla chu tual ah puan suktu nih an suk vâr kho lo rê tiang a vâr tîk hen a lek zur rawh .
+41009004	Chun , Elija leh Mosi chu an sinah an hawng a langh le , Jisu hen anna sâwn .
+41009005	Chun , Peter nih Jisu a sawnh le , " Rabbi " kan rangah hinah um hi a ṭha ; basâ pathum kan khuar lai , nang rangah pakhat , Mosi rangah pakhat , Elija rangah pakhat , " a ti .
+41009006	An ṭih ngâi ruangah sim ding lêm khawm an theih lo .
+41009007	Chun , anmah tla liah hen sûm a hawng zîng le , chun sûm ah chun aw a hawng suak le , " Hi hi ka Fapa duhtak asi , amah thu ngâi u , " a ti .
+41009008	Chun , an kiangkam an zauh sawm le , anmah tla sinah Jisu cho lo chu âukhawm an muh lo rawh .
+41009009	Chun , tlâng ah mi chu an ṭum liauah Minung Fapa mithi lakah mi a thawknawlh nûnah cho lo chun an thil muh tla chu âukhawm simh lo ding a ti thlir .
+41009010	Chun , chu thu chu an chîng thlir le , " Mithi lakah mi thawknawlh chu zei tinâk me si lai ? " ti hen anna deih tawnh .
+41009011	Chun , annih nih a sinah , " Zei ti zia me Dân sîntirtu tla nih , ' Elija chu a hawng kal masa ding asi , an ti zia , " ti hen an deih .
+41009012	Chun , anih nih chun an sinah , " Elija chu a hawng kal masa ding asi rerêng ; zeizawng a remh awt asi ; thil tamtak tuar hen mi zauhnawmh hen a um ding asi ti Minung Fapa thâwngthâng zei hâwi hen me an rîn ?
+41009013	Sikhawmsele , ka nan simh na , Elija chu a hawng kal ving rawh asi . Chun , a thâwngthâng an rîn hâwitê khan a tlûnah an duh duh hen an ti ber rawh asi , " a ti .
+41009014	Chun , a ṭhiruai tla sinah an va tlung rawh chun an kiangkam ah mi zapi cherkhet tla leh Dân sîntirtu tla nih an êl na liau an va muh .
+41009015	Chun , mi zapi zawzawng nih chun Jisu an muh ka hen chun chê an ti ngâi le , a sinah an tek sawm le , chibai an va bûk .
+41009016	Chun , anih nih chun an sinah , " Annih tla hen zei thu me nanna êl ? " ti hen a deih na .
+41009017	Chun , mi zapi lakah mi pakhat nih a sinah , " Sîntirtu , ka fapa khuri vuanh hawlh kholo chu na sinah ka hawng put le ,
+41009018	a tleihnâk kipah a thlûk chiam tâwn le ; chun a buanbarâ tla a tlâ le , a hachang a rial le , â zûk dadauh tâwn . Chun , na ṭhiruai tla hi nar ding hen ka simh na le , an ti kho lo , " ti hen a sâng .
+41009019	Chun , anih nih chun an sinah , " Tusan lungnâk neilo le tla , zei ri me nan sinah ka um lai le ? Zei ri me ka nan sang kho na lai ? Amah chu ka sinah hawng ruai u , " ti hen a sâng .
+41009020	Chun , amah chu a sinah an hawng ruai . Chun , khuri nih chun anih chu a muh kâ hen ngâksia chu cherkhet hen a sûlneng sawm rawh . Chun , tual ah a tlû le , a buanbarâ a tlâ le , a tâl chiam .
+41009021	Chun , anih nih chun a pa sinah , " Hi hâwi hen a hawng umtirnâk hi zei tluk a sâwt rawh ? " ti hen a deih . Anih nih chun , " A ngâksiatê thawk hen asi ;
+41009022	chun amah veih ding hen vei tamtak mei ah leh tî ah khawm a tûl rawh le ; sikhawmsele nangnih zeitin mawh tal na ti kho chun hawng kan zângfah le , hawng kan ṭangpi rawh , " a ti .
+41009023	Chun , Jisu nih a sinah , " Na ti kho chun a ! Lungnâk neitu rangah chun zeizawng tikho asi , " a ti .
+41009024	Chun , ngâksia pa nih chun , " Ka lung , ka zumhmaihnâk ah hin hawng ka ṭangpi rawh , " ti hen a âu sawm rawh .
+41009025	Chun , Jisu nih mi zapi an hawng tek le , anna pûm liau a muh rawh chun khuri nâwmtâm chu a fâi le , a sinah , " Nang , khuri hawlh kho lo leh nasêt , thu ka nan pêk , a sungah mi suak le , lût nawlh lah rawh , " a ti .
+41009026	Chun , a âu le , cherkhet a sûlneng rawh chun a suak rawh . Chun , ngâksia chu thi hâwi hen a um rawh . Chuvachun , mi tam dauh nih chun , " A thi asi , " an ti .
+41009027	Jisu lam nih chun a kut a tleih le , a thawh ; chun a hawng thawk rawh .
+41009028	Chun , Jisu chu in ah a va lût rawh chun a ṭhiruai tla nih , " Zeirangah me kan nar kho lo le ? " ti hen , mi kingnâk ah an deih .
+41009029	Chun , anih nih chun an sinah , " Hi hâwi hi thlacham cho lo nih chun zeitin khawm a nar kho lo , " a ti .
+41009030	Chun , chunah mi chu a suak le , Galili ram chu an lan le , âukhawm nih an theih ding a duh lo .
+41009031	A ṭhiruai tla a sîntir na dangâiah ; an sinah , " Minung Fapa hi minung tla kut ah tleihtir hen a um ding asi , an thah lai le ; chun an thah nûnah ni thum ni ah a thawknawlh lai , " a ti .
+41009032	Sikhawmsele , a thusim chu a ngaihtawnhnâk an theih lo le , amah tâ nih an deih ngam lo .
+41009033	Chun , Kapernaum chu an hawng tlung le , chun in sungah a um liauah chun an sinah , " Lampi ah khan zei thu me nanna êl ? " ti hen , a deih na .
+41009034	Sikhawmsele , lampi ah chun , kan lakah âu me a rokual chem lai ne ? ti thu anna êl ruangah an dâisip .
+41009035	Chun , anih chu a to le , leinih tla chu a kawh na le , an sinah , " Âuzawng nih masachem si a duh chun , mi zawzawng ngâk hen madungchem ah a um ding asi , mi zawzawng to-aw ah a um ding asi , " a ti .
+41009036	Chun , ngâksiatê a ruai le , an lâiah a dîrtir ; chun a kuah le , an sinah ,
+41009037	" Âuzawng ka min ruangah hi hâwi ngâksiatê pakhat khawm lawmhtu vial chu keimah lawmhtu an si lai ; âuzawng kei hawng ka lawmhtu zawng chu keimah cho lawmhtu an si lo le , hawng ka fialtu lawmh khawm an si lai , " a ti .
+41009038	Johan nih chun a sinah , " Sîntirtu , âu nih mawh na min hen khuri tla a nar mi kan muh le , hawng kan zûl bâk lo ruangah kan khap ko rawh , " a ti .
+41009039	Jisu lam nih chun , " Khap lah u rawh ; âukhawm ka min hen thilchê ti hen hawng ka simsiat sawm kho an um lo asi .
+41009040	Âuzawng hawng kan do lotu chu kanmah lei ṭângṭawm an si .
+41009041	Âuzawng ka mi nan si ruangah tî hâi khat din ding an pêk natu chu , thungâi tak hen ka nan simh na , a lâwmman chu a dawk rîlmâl lai loh .
+41009042	" Âuzawng hi bang hawng ka zumhtu mi mê tla lakah pakhat khawm tlûktirtu zawng chu an ngâwng ah fâng rialnâk lung lianpi awihtir hen tisumsumriat ah thlâk sele an rangah a ṭha dauh ding asi .
+41009043	Chun , na kut nih a nan tlûktir chun tan ko ;
+41009044	kut panih nei hen Gehena ah an tholung thih lonâk ah leh mei mit kho lo ah kal ngâk chun , siat leh râwk hen nungnâk ah lût na rangah a ṭha dauh .
+41009045	Chun , na kê nih a nan tlûktir chun , tan ko ;
+41009046	kê panih nei hen Gehena ah an tholung thih lonâk ah leh mei mit kho lo ah lawnh ngâk chun , khêng leh bai bû hen nungnâk ah lût na rangah a ṭha dauh asi .
+41009047	Chun , na mit nih a nan tlûktir chun , chawih zek ;
+41009048	mit khiang khinih nei hen Gehena ah an tholung thih lonâk ah leh mei mit kho lo ah lawnh ngâk chun , mit khiang khat nei hen Pathian Ram ah lût na rangah a ṭha dauh .
+41009049	" Mi kip mei hen alhtir an si lai .
+41009050	" Chitê hi a ṭha ; sikhawmsele , chitê hi a dâwng rawh chun zei hen me an altir nawlh lai ? " Nanmah lak takah chitê nei ule , a rem u , a ti .
+41010001	Chun , Jisu chu a thawk le , chu thawk hen chun Judai ram ah leh Jordan râl ah a kal le ; chun , mi zapi tla chu a sinah an hawng a pûm nawlh le ; chun , a ti dân kumza hâwi hen a sîntir nawlh na .
+41010002	Chun , Farisai zeimaw mi a sinah an hawng kal le , amah niknâk ding hen , " Mi nih nupi mâk a thiang ma ? " ti hen an deih .
+41010003	Chun , anih nih chun an sinah , " Mosi nih zei thu me a nan pêk na ? " ti hen , a sâng .
+41010004	Chun , annih nih chun , " Mosi nih chun mâknâk lasui rîn hen mâk a siang tâwn asi , " an ti .
+41010005	Sikhawmsele ; Jisu nih an sinah , " Nan thinlung khauh ruangah asi chu thupêk chu a nan rîn piak na mi chu .
+41010006	Sikhawmsele , tual leh vân tuahtîr thawk hen annih chu nunau leh mipa ah a siam asi .
+41010007	Churuang chun mipa nih a nu leh a pa a kaltâk lai le , a nupi a sihawh lai ;
+41010008	chun , an panih hen chun taksa pumkhat an si lai rawh . Chuvachun , panih an si lo rawh le , taksa pumkhat an si lehlam rawh asi .
+41010009	Chuvachun , Pathian nih a sihawh na rawh mi chu minung nih ṭhen lah seh , " a ti .
+41010010	Chun , in ah an lût nawlh rawh chun chubang thu chu Jisu rangah an deih nawlh .
+41010011	Chun , anih nih chun an sinah , " Âuzawng a nupi mâk hen midang umpitu nih chun a nupi chu ṭângdang a pawmtâk asi .
+41010012	Anih khawm nih chun a pasal a ṭhen hen midang a umpi chun ṭângdang a pawmtâk bâk , " a ti .
+41010013	Chun , Jisu tawngh ding hen a sinah ngâksia tetê an hawng ruai na le ; chun , ṭhiruai tla nih an fâi na .
+41010014	Sikhawmsele , Jisu nih chu chu a muh rawh chun thungâi a lungsi lo ; ṭhiruai tla sinah chun , " Ngâksia tetê tla ka sinah hawng kaltir ule , nar lah na u ; Pathian Ram chu hi bang mi tla tâ asi .
+41010015	Thungâi tak hen ka nan simh na , âuzawng Pathian Ram chu ngâksiatê nih a lawmh mi hâwi hen lawmh lotu zawng chu a sungah an lût rîlmâl lai loh , " a ti .
+41010016	Chun , anmah tla chu a kuah na le , an tlûnah kut thâng hen mal a sâwm na rawh .
+41010017	Chun , kal ding hen Jisu a suak liauah minung pakhat amah leiah a hawng tek le , a mâika ah a siksidîr le , a sinah , " Sîntirtu ṭha , zungzâl nungnâk ka ting khonâk ding hen zei me ka ti lai ? " ti hen a deih .
+41010018	Chun , Jisu nih a sinah , " Zeirangah me mi ṭha na ka ti ? Minung pakhat cho lo chu âukhawm mi ṭha an um lo , chu chu Pathian asi .
+41010019	Thupêk tla chu na theih ko khateh , ' Mi thah lah , ṭângdang pawmtâk lah , fîr lah , theihpitu âwkrâwl ah suak lah , bum lah , na nu leh na pa zah rawh , ' ti tla hi , " a ti .
+41010020	Chun , anih nih chun a sinah , " Sîntirtu , chubang thu zawzawng chu ka ngâksiatê thawk hen ka zâwt tâwn , " a ti .
+41010021	Chun , Jisu nih amah chu a zauh le , a zângfah le , a sinah , " Kâng khat na bat rih ; kal le , na neih zawzawng zuar le , mipâm tla sinah pêk rawh , chun , vân ah ro na nei lai ; chun hawng kal le , hawng ka zûl , " a ti .
+41010022	Sikhawmsele , chubang thu lakah chun a mêl chu a hawng mûi khup le , ngaihsia tak hen a kal rawh ; sum tamtak nei mi asi ruangah .
+41010023	Chun , Jisu nih a kiangkam a zauh le , a ṭhiruai tla sinah chun , " Sum leh pâi chawng tla rangah chun Pathian Ram ah lût a har awt â ! " a ti .
+41010024	Chun , ṭhiruai tla nih chun a thusim chu thungâi chê an ti . Jisu nih a sâng nawlh na le , " Ka fa tla , sum rinhsantu tla rangah Pathian Ram ah lût a har â !
+41010025	Minei Pathian Ram ah lût ngâk hen sangâwngsâu ṭhim kua ah lût a awl dauh , " a ti .
+41010026	Chun , annih nih chun thungâi chê an ti le , a sinah , " Asi chun âu me ruangsuak sikho lai ne ? " an ti .
+41010027	Jisu nih annih chu a zauh na le , " Chu chu minung nih tikho asi lo le , Pathian lam nih chun tikho lo asi loh ; Pathian nih chun zeizawng a ti kho asi , " a ti .
+41010028	Peter nih a sinah , " Ngâinik , kannih nih zeizawng kaltâk hen kan nan zûl rawh , " ti hen , sim a dawmh rawh .
+41010029	Jisu nih chun , " Thungâi tak hen ka nan simh na , âuzawng keimah ruangah leh Thâwngthâng Ṭha ruangah in mawh , unaupa mawh , farnu mawh , nu mawh , pa mawh , fa tla mawh , ram tla mawh kaltâk rawh mi nih chun ,
+41010030	tu dam sung lîlâ hin in tla , unaupa tla , farnu tla , nu tla , fa tla , ram tla a let zâ hen , nehsawhnâk tla hen , tawng lo ding âukhawm an um lo ; tik hawng tlung ding mi ah zungzâl nungnâk hen .
+41010031	Sikhawmsele , mi tamtak masachem ah um tla chu madungchem ah an um lai , madung chem tla khawm chu masachem ah an um lai , a ti .
+41010032	Chun , Jerusalem ah kâi ding hen lam lakah an um le , Jisu chu an mâi leiah a kal le ; annih nih chun thungâi chê an ti ; a hawng zûltu tla nih chun an ṭih . Chun , anih nih chun leinih tla chu a dang hen a ruai nawlh na le ,
+41010033	" Ngâinik u , Jerusalem ah kan kâl awt hi ; Minung Fapa hi bâwlpu lal tla leh Dân sîntirtu tla sinah tleihtir hen a um awt asi .
+41010034	Chun , annih nih chun a tlûnah thi ding hen thu an thlûk lai le , Phundang tla sinah an pêk lai ; chun annih nih chun nihsuak siamnâk ah an mang lai le , chil an sah lai le , an vuak lai le , an thah lai ; chun , ni thumnâk ah a thawknawlh lai , " ti hen , a tlûnah thil hawng tlung ding mi tla chu an sinah a sim rawh .
+41010035	Chun , Zebedai fapa Jem leh Johan nih chun Jisu chu an hawng naih le , a sinah , " Sîntirtu , na sinah kan deih mi zawng na hawng kan ti piak kan duh , " an ti .
+41010036	Chun , anih nih chun an sinah , " Nan rangah zei me an ti piak na sele nan duh ? " a ti .
+41010037	Chun , annih nih chun a sinah , " Na rokualnâk ah chun na vawrh leiah pakhat , na kehlei ah pakhat hawng kan totir , " an ti .
+41010038	Jisu lam nih chun , an sinah , " Nan deih mi chu nan theih lo asi . Ka hâi din ding mi chu nan din kho mazei ? Baptis ka sinâk ah khawm nanna baptis kho mazei ? " a ti .
+41010039	Chun , annih nih chun a sinah , " Kan ti kho , " an ti . Chun , Jisu nih an sinah , " Ka hâi din ding mi chu nan din lai le , ka baptis si ding khawm chu nan si bâk lai .
+41010040	Sikhawmsele , ka vawrhlei ah mawh ka kehlei ah mawh to ding thu chu kei pêk ding asi lo le , an timhtuah piak na mi tla rangah asi dauh lai , " a ti .
+41010041	Chun , parâ tla nih chun chu chu an theih rawh chun Jem leh Johan tlûnah chun thungâi an lungsi lo .
+41010042	Jisu lam nih chun annih tla chu a kawh na le , an sinah , " Phundang tla tlûnah lâirêltu ah an ruat mi tla chu an tlûnah thungâi anna lal tâwn le , an mi lian tla nih chun an tlûnah thungâi thu an nei tâwn ti nan theih .
+41010043	Sikhawmsele , nan lakah lam chun chu hâwi asi lai loh ; âuzawng nan lakah mi lian si duh mi zawng chu nan to-aw ah a um ding asi .
+41010044	Âuzawng nan lakah masachem si duh mi zawng chu mi zawzawng sal ah a um ding asi .
+41010045	Minung Fapa khawm nih hin rianṭuan piak ding hen a hawng lo le , rianṭuan ding leh mi tamtak tlanhnâk ah a nungnâk pêk ding hen a hawng kal asi , " a ti .
+41010046	Chun , Jeriko ah an hawng tlung rawh . Jisu chu Jeriko thawk hen chun a ṭhiruai tla leh mi zapi cherkhet hen a suak liauah kutdawnh mitchâw , Timai fapa Bartimai chu lam vâu ah a to .
+41010047	Chun , Nazaret Jisu asi ti a theih ka hen , " Jisu , David Fapa , hawng ka zângfah rawh , " ti hen , a âu rawh .
+41010048	Chun , mi tamtak nih dâisip ding hen an fâi . Sikhawmsele , anih nih chun , " David Fapa , hawng ka zângfah rawh , " ti hen , a âu dadauh .
+41010049	Chun , Jisu chu a dîr le , " Amah chu kawh u , " a ti . Chun , mitchâw chu an kawh le , a sinah chun , " Lungngam tak hen um le , thawk rawh ; a nan kawh , " an ti .
+41010050	Chun , anih nih chun a puan a lawnh le , a thawk lawt le , Jisu sinah a hawng kal .
+41010051	Chun , Jisu nih chun amah chu a hawng sawnh le , " Na lakah zeitin an ti sele na ka duh ? " a ti . Chun , mitchâw nih chun a sinah , " Rabboni " muh kho ka duh , " a ti .
+41010052	Chun , Jisu nih a sinah , " Kal rawh , na lungnâk hi na dam phah asi , " a ti . Chun , a muh kho sawm le , lampi ah chun Jisu a zûl rawh .
+41011001	Chun , Jerusalem an naih dâwp ah , Oliv Tlâng Bethphage leh Bethani kiang an tlung rawh chun a ṭhiruai lakah mi panih a fial na le ,
+41011002	an sinah , " Nan mâilei khua ah khin va kal ule , chun nan lût tîrah Sanatung fa rêng mi , âukhawm chuan dah lonâk nan va muh sawm lai ; chu chu sût ule , hawng ruai u .
+41011003	Chun , âutal nih , ' Kha kha zeirangah nan ti awt ? ' an ti na chun , ' Lalpa nih a duh asi , hinah a hawng thaktir nawlh sawm lai , ti u , a ti .
+41011004	Chun , an kal le , zâwllâi ah inkhâr lênglei ah Sanatung fa rêng mi an va muh le ; chun chu chu an sût rawh .
+41011005	Chun , chunah chun dîr mi âu tla nih mawh an sinah , " Sanatung fa kha zeirangah nan sût ? " an ti .
+41011006	Chun , annih nih chun Jisu sim hâwitê khan an sinah an sim le ; chun kal ding an siang rawh .
+41011007	Chun , sanatung fa chu Jisu sinah an hawng ruai le , a tlûnah chun an puan tla an phah le ; chun a tlûnah â chuan rawh .
+41011008	Chun , mi tamtak nih lampi ah chun an puan an phah le ; midang nih lo mi sâwlring sât hen an phah .
+41011009	Chun , a mâi leiah kal tla leh a dung leiah zûltu tla nih chun , " Hosana ! Lalpa min hen a hawng kal mi chu a thaw a suak .
+41011010	Ram hawng tlung ding mi , kan pa David Ram chua thaw a suak , Chungnungchem ah khin Hosana ! " ti hen , an âu .
+41011011	Chun , Jisu chu Jerusalem ah Pathian Biakin ah chun a lût rawh . Chun , zeizawng a zauh thluh rawh chun , zânleibâi khawm asi rawh le , a suak le , leinih tla hen Bethani ah an kal rawh .
+41011012	Chun , a thâituan ah chun , Bethani thawk hen Jisu chu a suak nûnah a sung a vâng rawh .
+41011013	Chun , theipi kûng nah nei râl lât hen a muh le , a rah muh ding hen a va kal le ; chun a va tlung rawh chun a nah cho lo chu zeikhawm a muh lo le ; theipi rah tik asi lo rêng asi .
+41011014	Chun , Jisu nih thing chu a sawnh le , " Tu thawk hen kumleza hen na lakah âukhawm nih rah ei lah rawh seh , " a ti . A ṭhiruai tla nih chun chu chu an theih .
+41011015	Chun , Jerusalem ah chun an tlung rawh . Pathian Biakin ah Jisu chu a va lût le , chunah mi zuartu tla leh châwktu tla chu a nar na le , tangka thlengtu tla dawhkân tla leh vaṭhu zuartu tla tophah tla khawm chu a thlûk piak na le ;
+41011016	chun , Pathian Biakin ah chun âukhawm nih thil-le-rî an lanpi a siang lo .
+41011017	Chun , an sinah chun , " ' Ka in chu phun kip rangah thlachamnâk in an ti lai , ti rîn asi lo mazei ? Nannih lam nih chun rawkmang tla pûk ah nan siam , " ti hen , a sîntir na rawh .
+41011018	Chun , bâwlpu lal tla leh Dân sîntirtu tla nih chun chu chu an theih le , amah chu an ṭih ruangah a veihnâk ding zia an hâwl . Mi zapi zawzawng nih chun a sîntirnâk chu thungâi chê an ti .
+41011019	Chun , zânleibâi a hawng si rawh chun Jisu leh a ṭhiruai tla chu khuapi ah mi chu an suak rawh .
+41011020	Chun , zîng ah an kal pah hen theipi kûng chu a ram tiang uai ver hen an muh rawh .
+41011021	Chun , Peter nih a theih pup le , a sinah , " Rabbi zauhnik , theipi kûng hawlhsiat na barh mi kha a uai ver rawh , " a ti .
+41011022	Chun , Jisu nih an sinah , " Pathian zumh u .
+41011023	Thungâi tak hen ka nan simh na , âuzawng hi tlâng sinah hin , Hawng a ṭhinh le , tisumsumriat ah a lawnh rawh , ' ti hen , a thinlung ah zumhmaih lo hen a sim mi chu a tlung ngelchel lai ti lungtu nih an sim zia zawng hen an muh lai .
+41011024	Churuangah ka nan ti na , zeizawng thla nan cham hen nan deih mi zawng chu tawng rawh hen a ruat ule , chun nan tawng lai .
+41011025	Chun , thlacham hen nan dîr tik zawngah âu lak khawmah thupawi zeimawh nan nei chun ngaihdam u ; nan Pa vân ah mi khawm nih nan buarnâk tla chu a nan ngaihdam na khonâk ding hen .
+41011026	( Chun , nan ngaihdam lo chun nan Pa vân ah mi nih nan buarnâk tla a nan ngaihdam na bâk lai loh , " a ti le , a sâng . )
+41011027	Chun , Jerusalem ah chun an tlung nawlh le , chun Pathian Biakin ah Jisu chu a kal liauah bâwlpu lal tla leh Dân sîntirtu tla leh upa tla chu a sinah an kal le ,
+41011028	a sinah , " Âu thu hen me hi bang thil hi na ti ? Hi bang thil hi ti ding hen âu nih me thu a nan pêk ? " an ti .
+41011029	Chun , Jisu nih an sinah , " Kei khawm nih thu kâ khat ka nan deih na bâk lai , hawng ka sâng ule ; chun âu thu hen me hi bang thil hi ka ti ka nan simh na lai .
+41011030	Johan baptisma kha vân ah mi thu ma , minung thu ? Hawng ka sâng u , " a ti .
+41011031	Chun , anna ruat le , " Vân ah mi thu , kan ti chun , ' Zeirangah a thu nan âwi lo ne ? ' a kan ti ṭung lai ,
+41011032	' Minung thu , ' kan ti lai dek maw aw ? " an ti . ( Sikhawmsele , mi zapi chu an ṭih le , mi zawzawng nih Johan chu khuavâng tatak ah an ruat khap ruangah . )
+41011033	Chun , Jisu an sâng le , " Kan theih lo , " an ti . Chun , Jisu nih an sinah , " Kei khawm nih âu thu hen me hi bang thil hi ka ti ka nan simh na bâk awt lo , " a ti .
+41012001	Chun , tahṭhimh thu hen Jisu nih an sinah a sim rawh : " Âu nih mawh grep dûm a siam le , dâi hen a kulh le , grep sûrnâk khur a chawh le , in sâng a sak le , a bultu tla sinah thlawh lawh ding hen a pêk le , ram dangah a kal rawh .
+41012002	Chun , kawih a chû rawh chun dûm ah a rah mi chu a tingvo bultu tla sinah mi lâk ding hen a bultu tla sinah chun sal pakhat a fial .
+41012003	Chun , chu minung chu an tleih le , an vuak le , kut karo hen an kîrtir nawlh rawh .
+41012004	Chun , sal dang an sinah a fial nawlh le ; chu khawm chu a lû ah an liamh , ningzakkâi tak hen an siam .
+41012005	Chun , sal dang a fial nawlh le ; chu minung chu an thah . Sal dang tamtak khawm zeimaw mi an vuak le , zeimaw mi an thah .
+41012006	Chun , pakhat , fapa duhtak a nei rih ; ' Ka fapa hi chu an zah lai , ' ti hen , anih chu a madungchem ah an sinah a fial .
+41012007	Sikhawmsele , chubang a bultu tla nih chun , ' Hi minung hi rotingtu ding chu asi ; kan thah lai ! Chun , a roting ding mi hi kan tâ asi ko lai , ' anna ti .
+41012008	Chun , anih chu an tleih le , an thah le , grep dûm ah mi chu an lawnh rawh .
+41012009	" Chuvachun , dûm dâwngpu nih chun zeitin a hawng ti lai ? Bultu tla chu a hawng veih na lai le , dûm chu midang tla a pêk lai .
+41012010	Hi Pathian lasui thu hi nan rêl lo mazei ? ' In saktu tla duhlo mi lung kha , chu tak chu a kil ah lung herh chem a hawng si rawh .
+41012011	Chu chu Lalpa ti asi le ; kan mitmuh ah a chê asi , ' ti hi , " a ti .
+41012012	Chun , amah chu tleih an tum le , sikhawmsele , mi zapi chu an ṭih le ; chu tahṭhimh thu chu anmah tla tisan hen a sim ti an theih dangâiah . Chun , amah chu an kaltâk le , an kal rawh .
+41012013	Chun , a thusim ah tleih ding hen Farisai tla leh Herod murui lakah mi âu tla mawh a sinah an fial .
+41012014	Chun , annih chu an hawng tlung rawh chun a sinah , " Sîntirtu , mi dik tak na si le , âukhawm ṭih leh zah khun na nei lo ti kan theih , âukhawm thliar leh dang lo hen , sîset hen Pathian lei thu na sîntir tâwn asi . Kaisar sinah siah châwi hi dân asi ma si lo ? Kan pêk lai ma , pêk lai lo ? " an ti .
+41012015	Anih lam nih chun an perpet zia chu theih hen an sinah , " Zeirangah nan ka nik ? Denari khat hawng put ule , ka zauh lai , " a ti .
+41012016	Chun , an hawng put . Chun , anih nih chun an sinah , " Hi hi âu lem leh âu min mesi ? " a ti . Chun , annih nih chun a sinah , " Kaisar , " an ti .
+41012017	Chun , Jisu nih an sinah , " Kaisar thil tla chu Kaisar sinah pêk ule , Pathian thil tla chu Pathian sinah pêk u , " a ti . Chun , thungâi chê an ti .
+41012018	Chun , Sadukai tla , thawknawlhnâk a um lo titu tla chu Jisu sinah an hawng kal le , a sinah ,
+41012019	" Sîntirtu , Mosi nih , ' Âuzawng a unaupa nih fa nei lo hen a nupi thih tâk sele , a unaupa nih chun a nupi chu umpi hen a unaupa rangah chi a thlâk piak ding asi , ' ti hen hawng kan rîn piak asi .
+41012020	Unau pasarih an um le , upachem nih nupi a nei le , chi thlah lo hen a thi .
+41012021	Chun , a panihnâk nih chun a umpi le , chi thlah lo hen a thi nawlh le ; a pathumnâk nih chu hâwi ber hen .
+41012022	Chun , unau pasarih chu chi rerêng thlah lo hen an thi vima . A madungchem ah nunau khawm chu a thi rawh .
+41012023	Thawknawlh tikah anmah lakah âu nupi me asi lai ? An pasarih nih chun nupi ah an umpi dangâiah , " ti hen , an deih .
+41012024	Jisu nih an sinah , " Hi ruangah hin silo ma , nan ngaih palh tâwn , Pathian lasui thu leh Pathian thiltikhonâk nan theih lo ruangah hin ?
+41012025	Mithi lakah mi an thawknawlh tikah chun mipa leh nunau tla anna umh lai lo rawh le , vân ah vânmifial tla hâwi hen an si awt lehlam asi .
+41012026	Chun , mithi tla thawh hen an um ding thu chu -- Mosi lasuibu ah , Thingbû thu ah khan Pathian nih , ' Kei Abraham Pathian , Isak Pathian , Jakob Pathian ka si , ' ti hen , a sawnh zia kha nan rêl lo mazei ?
+41012027	Anih chu mithi Pathian asi lo le , minung Pathian asi dauh ; thungâi nan ngaih sual asi , " a ti .
+41012028	Chun , Dân sîntirtu lakah mi pakhat a hawng kal le , anna êl mi chu a hawng ngâi . Jisu nih annih tla chu ṭha tak hen a sâng ti a theih le , a sinah , " Thupêk zawzawng lakah a zei hi me a herh chem ? " ti hen a deih .
+41012029	Jisu nih , " Thupêk herh chem chu hi hi asi : ' Israel tla , ngâi u , Lalpa kan Pathian chu Lalpa pakhat cho asi le ;
+41012030	Lalpa na Pathian chu na thinlung zawzawng hen , na thlarau zawzawng hen , na dawnruatnâk zawzawng hen , na chaknâk zawzawng hen na dâwt ding asi , ti hi .
+41012031	A sangtu chu hi hi asi : ' Nangmah na dâwt hâwi hen na zâwlbâwm tla na dâwt ding asi , ' ti hi . Hi ngâk hen thupêk rokual rerêng a um lo , " ti hen , a sâng .
+41012032	Chun , Dân sîntirtu nih chun a sinah , " Asi ngâk , sîntirtu , amah chu pakhat cho asi le , amah lo chu Pathian dang rêng an um lo ,
+41012033	amah chu thinlung zawzawng hen , theihthiamnâk zawzawng hen , chaknâk zawzawng hen , mah a dâwt hâwi hen zâwlbâwm tla dâwt hi pum duah thilpêk leh bâwlnâk zawzawng ngâk hen a ṭha dauh khun ti hi , na sim dik tak ko , a ti .
+41012034	Chun , fing tak a sâng ti Jisu nih a theih rawh chun a sinah , " Pathian Ram na lât lo , " a ti . Chu rî rawh chun âukhawm nih thu rerêng an deih ngam lo rawh .
+41012035	Chun , Jisu nih Pathian Biakin ah a sîntir liauah anmah tla a sawnh na le , " Mesia chu David fapa asi ti Dân sîntirtu tla nih zei zia hen sim me an si ?
+41012036	David tak nih Thlarau Thenhlimh hen , ' Lalpa nih chun ka Lalpa sinah , na mêlma tla na kê sirhsanh ah ka siam lân lo chu ka vawrhlei ah to rawh , ' a ti .
+41012037	David tak nih chun anih chu , ' Lalpa , ' a ti dangâiah , zeitin a fapa asi lai ? " a ti . Chun , mi zapi vântlâng nih chun lâwm tak hen a thu an ngâi .
+41012038	Chun , a sîntirnâk ah chun , " Dân sîntirtu tla lakah a thiamthih u ; annih nih chun kawrdawh fual ruk hen tawih an duh tâwn le ,
+41012039	sumtuah mun ah chibai bûk tla , pumhnâk in ah tophah ṭha chem tla , puaituahnâk ah mun ṭha chem tla an ngiat tâwn .
+41012040	Numei sum an ei le , mi muh ah sâwt tak thla an cham tâwn ; chubang tla nih chun a mawh an phurh zual khun lai , " a ti .
+41012041	Chun , thawhlâwm bâwm zâwn ah chun Jisu chu a to , thawhlâwm ah mi zapi tla tangka thlâk zia chu a zauh le ; minei tamtak nih cherkhet an tlâk .
+41012042	Chun , numei pâm tak a hawng kal le , lepta panih a thlâk le , chu chu quadran khat tluk asi .
+41012043	Chun , Jisu nih chun a ṭhiruai tla chu a kawh na le , an sinah , " Thungâi tak hen ka nan simh na , thawhlâwm bâwm ah thlâktu dang zawzawng ngâk hen hi numei pâm tak nih a thlâk tam dauh .
+41012044	Hi bang zawzawng nih hin an neih a lei mi an thlâk asi ; anih lam nih chun a duh liau tak , a neihlemtê , a um san mi zawzawng chu a thlâk ver asi , a ti .
+41013001	Chun , Pathian Biakin ah mi chu a suak liauah a ṭhiruai tla lakah mi pakhat nih a sinah , " Sîntirtu , zauhnik , a lung leh a in tla hi a rokual châwk a ! " a ti .
+41013002	Jisu nih a sinah , " Hi bang in rokual tak tla hi na muh mu ? Chimtir lo hen lung â chuanh mi rerêng hinah a um lai loh , " a ti .
+41013003	Chun , Oliv Tlang ah Pathian Biakin zâwn ah a to liauah , Peter , Jem , Johan leh Andri tla nih chun a sinah ,
+41013004	" Chubang chu zei tikah a hawng um lai ? Chubang zawzawng chu a hawng tlung awt tikah singsiahnâk zei me a um lai ? Hawng kan simh , " ti hen , a thup hen an deih .
+41013005	Chun , Jisu nih an sinah " Âukhawm nih an perpet na lonâk ding hen a thiamthih u .
+41013006	Mi tamtak nih , ' Mesia chu ka si , ' ti hen , keimah min sâl hen an hawng kal lai le , mi tamtak an perpet lai .
+41013007	Chun , râltuk thu leh râltuk thuthang tla nan theih tikah lawksawng lah u ; chubang chu hawng tlung ding rêng asi ; sikhawmsele , dawnghnâk chu asi lo rih .
+41013008	Phun dang leh phun dang anna tuk lai le , ram dang leh ram dang anna tuk lai le ; mun dang dangah lî tla â nîn lai , pâm tla a tlung lai ; Chubang chu nau nei nganfâk dawmhtirnâk asi ;
+41013009	" Sikhawmsele , a thiamthih u ; lâirêltu tla an tleihtir na lai le , pumhnâk in tla ah an vuak na lai . Keimah ruangah governor tla leh lalchem tla mâika ah anmah tla theihtirnâk ding hen nan dîr teh lai .
+41013010	Chun , Thâwngthâng Ṭha hi phun zawzawng sinah sim masa ding asi .
+41013011	Chun , an ruai na hen , an tleihtir na tikah chun , ' Zeime ka sim lai , ' ti hen , a dawnkan lah u ; a tik takah chun a nan theihtir na mi zawng ; chu tak chu sim u ; a simtu chu nanmah nan si awt lo le , Thlarau Thenhlimh asi dauh awt .
+41013012	Chun , thah ding hen a unaupa nih a unaupa a tleihtir lai le , pa khawm nih a fa a tleihtir lai ; fa tla khawm nih an nu leh an pa tla an do lai , an thahtir lai .
+41013013	Keimah min ruangah mi zawzawng huat nan si lai ; sikhawmsele , a dawngh tiang hen tuar huamtu zawng chu , chu tak chu ruangsuak hen a um lai .
+41013014	" Sikhawmsele , ' Ṭhiautu Fihnungkâi ' chu a dîr lonâk ding mun ah dîr nan muh tikah , ( a rêltu zawng nih a umzia theih seh ) , chu tikah chun Judai ram ah um tla chu tlâng ah tek seh .
+41013015	Chun , in tlûnah um mi chu ṭum lah seh ; a in ah zeilo lâk ding hen lût lah seh .
+41013016	Chun , lo ah um mi chu a puan lâk ding hen kîr lah seh .
+41013017	Chubang ni ah chun râi tla leh nauno pawm tla tlûn chu a pit lai .
+41013018	Chun , chubang chu busik ah a tlung lonâk ding hen thlacham u .
+41013019	Chubang ni chu hamhnâk ni asi awt dangâiah , chu hâwi hamh chu Pathian siam tual tuah tîr thawk hen tutiang hen a um dah lo le , zeitik khawm a um lai lo rawh .
+41013020	Chun , Lalpa nih chubang ni chu tâwitir lah sele , minung rerêng dam hen an suak lai loh ; sikhawmsele , mi thîm , a ruat mi tla ruangah chun ni tla chu a tâwitir .
+41013021	" Chun , chu tikah chun âuzawng nih nan sinah , ' Zauhnik u , Mesia hinah a um , ' mawh ' Zauhnik u , hinah khi ! ' mawh an ti na chun lung lah u .
+41013022	Mesia telê tla leh khuavâng telê tla an hawng suak awt dangâiah . Chu tla nih chun singsiahnâk leh thilchê tla an ti lai ; tikho sele , thîm tla men an perpet khonâk ding hen .
+41013023	Nannih lam chu a thiamthih u , zeizawng ka nan simhkan na rawh hi .
+41013024	" Sikhawmsele , chubang ni ah , chubang hamhnâk nûnah chun nî thimtir hen a um lai le , thlâ a chêu lai lo le ,
+41013025	vân thawk hen ârfi tla an hawng tlâ lai le , vân ah thiltikhonâk um tla chu ninh asi lai .
+41013026	Chu tikah chun Minung Fapa hi thiltikhonâk fâk tak leh rokualnâk fâk tak hen sûm lakah a hawng kal mi an muh lai .
+41013027	Chu tikah chun vânmifial tla chu a fial lai le , a thîm mi tla chu kâwlkil li ah mi tual dawngh thawk hen vân dawngh tiang hen a lâwr hen a pumh lai .
+41013028	" Chun , theipi kûng ah hin tahṭhimh thu a sîn u ; a chawrh a hawng no le , a nah a hawng chawrh chun ṭhâlpini a suak awt ti nan theih tâwn .
+41013029	Chu hâwi ber hen nannih khawm nih chubang chu a hawng tlung mi nan muh tikah chun amah chu a hawng nâi rawh le , kawtkarî ah a um ti theih u .
+41013030	Thungâi tak hen ka nan simh na , chubang zawzawng chu a hawng tlung lân lo chu tusan mi tla hi an tlâu lai loh .
+41013031	Tual leh vân a tlâu lai le , ka thu lam chu a tlâu lai loh .
+41013032	" Sikhawmsele , a ni leh a dâr thu chu pa cho lo nih chun âukhawm nih , vân ah vânmifial tla khawm nih , Fapa khawm nih an theih lo .
+41013033	Thiamthih ule ; ringrâwn kumza hen um u ; a tik chu nan theih lo dangâiah .
+41013034	Mi , a in kaltâk hen , a sal tla chu thuneitir hen , an rianṭuan ding pêk chiau hen , inkhâr vêngtu khawm râlring ding thu pêk tâ hen , ram lât takah khualtlâwng ving mi hâwi asi .
+41013035	Chuvachun , ringrâwn kumza hen um u ; in dâwngpu hawng tlung tik ding chu zân leiah ma , thanṭim ah ma , zîng ah ma asi awt nan theih lo .
+41013036	Chu hâwi asi lo chun , a hawng tlung khup chun it thlit hen a nan muh sual na lebang lai .
+41013037	Chun , nan sinah ka sim mi hi mi zawzawng sinah sim ka si , ringrâwn hen um kumza u , " a ti rawh .
+41014001	Chun , ni nihnâk ah chun Kalkanh Kût leh Sang Thilnu telhlo Kût a um awt le ; bâwlpu lal tla leh Dân sîntirtu tla nih chun amah chu ngamlêm pêk a tleih hen an thah khonâk ding zia an hâwl an hâwl le ,
+41014002	" Kût sung chun si lah seh , asi lo chun mi zapi vântlâng lakah nawknâk a hawng um sual lebang lai , " an ti .
+41014003	Chun , Bethani ah phâr Simon in ah chun Jisu chu a um liauah , buh a dûm liauah nunau pakhat alabasta dûr ah spiknard sariak rimthâw a man har tak put hen a hawng kal le , a dûr chu a khuai le , a lû ah a tawih .
+41014004	Sikhawmsele , mi zeimaw mi chu an ro a thâwk le , " Zeirangah me sariak rimthâw hi a veih salam ?
+41014005	Hi sariak hi denari zathum ngâk a tam dauh zuar hen , mipâm tla sinah pêk kho asi mi , " an ti . Chun , a tlûnah an chipchiar rawh .
+41014006	Jisu lam nih chun , " Zeitin khawm ti lah u ; zeirangah nan nawktir ? Ka tlûnah thil ṭha tak a ti asi .
+41014007	Mipâm tla chu kumleza hen nan sinah um an si le , nan duh tik zawngah annih chu nan zângfah kho mi ; kei lam chu kumleza hen nan sinah um ding ka si lo .
+41014008	A ti kho tâwk a ti asi ; ka taksa hi phûm ding hen a chulh kan asi hi .
+41014009	Chun , thungâi tak hen ka nan simh na , laikulh zawzawng ah , kha zeizawng ah , Thâwngthâng Ṭha an simnâk zawngah hi nunau thilti khawm hi amah theihkumzanâk ding hen an sim vima bâk lai , " a ti .
+41014010	Chun , Juda Iskariot , leinih tla lakah mi pakhat nih khan Jisu chu an sinah a tleihtir khonâk ding hen bâwlpu lal tla sinah a va kal .
+41014011	Chun , annih nih chun an theih kâ hen anna lâwm thlo le , a sinah tangka pêk ding hen an tiamh rawh . Chun , a tleihtirnâk ding zia remkâng a hâwl rawh .
+41014012	Chun , Sang Thilnu telhlo Kût , ni masachem , Kalkanh Kûtnâk dawrâ fa an thah tâwnnâk ni ah chun , a ṭhiruai tla nih a sinah , " Kalkanh Kût buh na ei khonâk ding hen kha zeiah va timhtuah sele na duh ? " an ti .
+41014013	Chun , a ṭhiruai tla lakah mi panih a fial le , an sinah , " Khuapi ah va lût ule , chunah chun mipa tibêl put hen a nan tawng na lai ; amah chu zûl ko u .
+41014014	Chun , a lûtnâk zawngah , chu in dâwngpu sinah chun , Sîntirtu nih ka ṭhiruai tla hen Kalkanh Kût buh kan einâk ding hen , khual in kardang chu kha zeiah me ? a ti , ' va ti u .
+41014015	Chun , amah nih a tlûn chuanh kardang kâu tak , thil-le-rî um chia , timh chia a nan zauhtir na lai ; chunah chun kan rangah timhtuah u , " a ti .
+41014016	Chun , ṭhiruai tla chu an suak le , khuapi ah chun an va lût le , an sinah a sim hâwitê hen an muh le , chun , Kalkanh Kût buh chu an timhtuah rawh .
+41014017	Chun , zânlei asi rawh chun anih chu leinih tla hen an va kal rawh .
+41014018	Chun , an dûm le , an ei liauah Jisu nih , " Thungâi tak hen ka nan simh na , nan lakah mi pakhat ka sinah ei bâk mi tak nih hin a hawng ka tleihtir lai , " a ti .
+41014019	Chun , thungâi an lawksawng le , pakhat khat nih a sinah , " Keimah masi ? " an ti chiau .
+41014020	Chun , anih nih chun an sinah , " Leinih tla lakah mi pakhat , a sang khêng ah hawng ka nîmpitu hi asi .
+41014021	Minung Fapa hi a thâwngthâng an rîn mi hâwitê khan a kal awt asi ; sikhawmsele , Minung Fapa tleihtirtu ding minung tlûn chu a pit ! Chu minung chu suak lah sele a rangah a ṭha dauh lai , " a ti .
+41014022	Chun , an ei liauah Jisu nih sang a lâk le , mal a sâwm thluh rawh chun a phel le , an sinah a pêk le , " Lâk u ; hi hi ka taksa asi , " a ti .
+41014023	Chun , hâi a lâk le , lâwmthu a sim thluh rawh chun an sinah a pêk le ; chun an ektê hen an din chiau rawh .
+41014024	Chun , anih nih chun an sinah , " Hi hi ka thisen , mi tamtak rangah suak ding mi thudântuk chu asi .
+41014025	Thungâi tak hen ka nan simh na , Pathian Ram ah a thar ka din ni a tlung lân lo chu grep zûn rah lakah mi ka din nawlh lai lo rawh , " a ti .
+41014026	Chun , la an sak thluh rawh chun an suak le , Oliv Tlâng ah chun an va kal rawh .
+41014027	Chun , Jisu nih an sinah , " Nan ektê hen nan ka tektâk ver lai le , nan ka mâk thlap lai , Dawrâ vêngtu chu ka vuak lai le , dawrâ tla chu anna ṭhêk lai , ti rîn asi .
+41014028	Sikhawmsele , ka thawknawlh nûnah Galili ram ah nan mâilei ah ka kal lai , " a ti .
+41014029	Peter lam nih chun a sinah , " An ektê hen an tektâk khawm sele , kei lam chu ka nan tektâk lai loh , " a ti .
+41014030	Chun , Jisu nih a sinah , " Thungâi tak hen ka nan simh , tusûn ah tuzân lîlâ ah hin âr veinih a khuang lânah nangnih veithum na ka pheh lai , " a ti .
+41014031	Anih lam nih chun fâk tak hen , " Na thihnâk ah thi bâk awt khawmsele ka nan pheh lai loh , " a ti chiam . Chun , chu hâwitê chun an ti chiau .
+41014032	Chun , Getsemani an ti mi mun chu an tlung le , chun Jisu nih a ṭhiruai tla sinah , " Thla ka cham kar zawng hinah hin to u , " a ti .
+41014033	Chun , Peter , Jem leh Johan tla chu a ruai na le , thungâi a thlakâm hen a lawksawng rawh .
+41014034	Chun , an sinah , " Ka thinlung thungâi a lawksawng le , thihnâk khawp rê asi ; hinah hin um ule , a râlring kumza u , " a ti .
+41014035	Chun , tâwm hen mâi leiah a va kal dauh le , tual ah a bawk le , tikho si sele , chu tik nih chun amah lanh ding hen thla a cham .
+41014036	" Abba , ka pa , zeizawng na ti kho le , hi hâi hi ka sinah mi ṭhial rawh ; sikhawmsele , keimah duhzia silo hen nangmah duhzia si dauh seh , " a ti .
+41014037	Chun , a hawng kal le , annih tla chu it hen a hawng muh na le ; chun Peter sinah , " Simon , na it na maw ? Dârkar khat khawm râlring kumza hen nan um kho lo mu ?
+41014038	Lêmnâk ah nan lût lonâk ding hen râlring kumza hen thlacham u . Thlarau lam nih chun a huam le , taksa lam chu a chak lo asi , " a ti .
+41014039	Chun , a va kal nawlh le , a thusim lîlâ sim hen thla a cham nawlh .
+41014040	Chun , a hawng nawlh rawh chun annih tla chu it hen a hawng muh nawlh na , an itmu a suak ngâi dangâiah ; a sâng duandân an theih loh .
+41014041	Chun , a hawng kal veithumnâk ah chun , an sinah , " Tuah lam chun it ule , a dîn u . A tâwk rawh ! A tik chu a hawng tlung rawh ! Zauhnik u , Minung Fapa hi misual tla kut ah an tleihtir awt hi .
+41014042	Thawk ule , kan kal lai ; zauhnik u , hawng ka tleihtirtu ding mi chu a hawng nâi rawh hi , " a ti .
+41014043	Chun , a sim liauah , Juda , leinih tla lakah pakhat chu a hawng tleng sawm le , amah rual hen chun bâwlpu lal tla leh Dân sîntirtu tla leh upa tla sinah mi , mi zapi tla chu nâmsâu leh talhbo put hen an hawng tleng .
+41014044	Chun , a tleihtirtu ding mi nih chun , " Ka châwchawk mi zawng chu amah chu asi lai ; tleih ule , ṭha tak hen kalpi u , " ti hen , singsiahnâk ding a simhkan zet na .
+41014045	Chun , a tleng kâ hen amah a va fûk sawm le , " Rabbi , " ti hen , a châwchawk chiam .
+41014046	Chun , anih chu a vuanh le , an tleih rawh .
+41014047	Chun , a kiang ah dîr tla lakah mi âu nih mawh a nâmsâu a phâwi le , bâwlpu lalchem sal chu a tuk le , a nâ a themh piak phak .
+41014048	Chun , Jisu nih annih tla chu a sawnh na le , an sinah , " Nâmsâu tla , talhbo tla put hen rawkmang tleih ding hâwi hen hawng ka tleih ding hen nan hawng suak mu ?
+41014049	Pathian Biakin ah nisiar hen nan sinah ka um tâwn le , nan ka tleih lo mi . Sikhawmsele , Pathian lasui thu chu a hawng tlung khonâk ding hen asi hi , " a ti .
+41014050	Chun , an ektê hen amah chu an thlahthlamh le , an tek ver .
+41014051	Chun , tlangvâl âu nih mawh , puan mangṭhia cho aih hen amah chu a zûl le ; chun anih chu an tleih le ,
+41014052	sikhawmsele , a puan mangṭhia chu a kaltâk le , taklâwng hen a tek rawh .
+41014053	Chun , Jisu chu Bâwlpu Lalchem sinah an ruai le , chun amah rual hen chun bâwlpu lal tla , upa tla , Dân sîntirtu tla zawzawng an hawng a pûm .
+41014054	Chun , Peter nih chun lâtpi thawk hen amah chu a zûl le , Bâwlpu Lalchem in kulhsung tualmâi tiang hen ; chun vêngtu tla sinah mei aih hen a to bâk .
+41014055	Chun , Jisu an thah khonâk ding hen bâwlpu lal tla leh lâirêltu tla zawzawng nih chun amah phiarnâk an hâwl le , an tawng lo .
+41014056	Mi tamtak nih âwkrâwl hen an phiar le , sikhawmsele an phiarnâk thu chu â bang lo .
+41014057	Chun , âu tla mawh an dîr le , âwkrâwl hen an phiar le ,
+41014058	" Hi minung nih hin , ' Hi Pathian Biakin hi ka siat lai le , ni thum karah biakin dang , kut hen sak lo mi , ka sak lai , a ti , ti kan theih , " an ti .
+41014059	Sikhawmsele , chu hâwi hen khawm chun an phiarnâk thu chu â bang kho lo .
+41014060	Chun , Bâwlpu Lalchem chu a lâi ah a dîr le , Jisu sinah , " Zeikhawm hen na sâng lo mu ? Hi bang tla nih a nan phiarnâk hi zei zia me asi ? " ti hen a deih .
+41014061	Anih lam chu a dâisip le , zeikhawm hen a sâng lo . Bâwlpu Lalchem nih chun a sinah , " Mesia Thawsuak Fapa chu na si ma ? " ti hen a deih nawlh .
+41014062	Chun , Jisu nih , " Ka si ; Minung Fapa hi thiltikhonâk vawrhlei ah to hen , vân sûm lakah a hawng mi nan muh awt asi , " a ti .
+41014063	Chun , Bâwlpu Lalchem nih chun a nipuan tla a thlêk le , " Theihpitu dang zei me kan ngâi lai rih ?
+41014064	Pathian a simsiat zia chu nan theih rawh le , zeitin nan ngaih ? " a ti . Chun , an ektê hen anih chu thi tlâk asi ti hen an thlûk .
+41014065	Chun , a zeimaw mi nih chun chil an sah mâimî le , a mêl an tuam le , an sut le , a sinah , " Âu nih an vuak , sim rawh , " an ti . Chun , vêngtu tla nih chun an tleih dîr le , thungâi thlâk hen an bengh .
+41014066	Chun , Peter chu tanglei in kulhsung tualmâi ah chun a um liauah Bâwlpu Lalchem zûlvêltu nungâk lakah pakhat a hawng kal le ;
+41014067	Peter mei aih chu a hawng muh le , " Nang khawm hi Jisu Nazaret mi sinah um kha na si hi , " a ti .
+41014068	Anih lam nih chun , " Na thusim chu ka theih lo thlo , a ngaihtawnh dân rêng khawm ka theih lo , " ti hen , a pheh . Chun , intipûm ah chun a va suak le ; chun âr a khuang rawh .
+41014069	Chun , nungâk nih chun a muh le , a kiangah dîr mi tla sinah chun , " Hi minung hi an sinah mi asi , " a ti nawlh .
+41014070	Sikhawmsele , a pheh nawlh . Chun , sâwtlotê nûnah a kiangah dîr mi tla nih chun , Peter sinah , " An lakah mi na si chiammâm , Galili ram ah mi na si dangâiah , " an ti .
+41014071	Anih lam nih chun , " Chu minung nan sim mi chu ka theih lo , " ti hen , hawlh siat barh hen siat a sirh rawh .
+41014072	Chun , ârkhuang veinihnâk chu a khuang sawm rawh . Chun , Peter nih chun Jisu nih a sinah , " Âr veinih a khuang lânah nangnih veithum na hawng ka pheh lai , " a ti mi thu kha a theih nawlh rawh . Chun , chu chu a dawn le , a ṭap rawh .
+41015001	Chun , zînglei a hawng si kâ hen bâwlpu lal tla chu upa tla leh Dân sîntirtu tla zawzawng hen anna thluk le , Jisu chu an phuar le , an ruai le , Pilat sinah an pêk sawm rawh .
+41015002	Chun , Pilat nih chun a sinah , " Juda tla Lalchem na si ma ? " ti hen , a deih . Chun , anih nih chun a sinah , " Na sim hâwi hen ka si , " ti hen , a sâng .
+41015003	Chun , bâwlpu lal tla nih chun kâng tamtak hen an phiar .
+41015004	Chun , Pilat nih a deih nawlh le , a sinah , " Zeikhawm na sâng lo mu ? Ngâi rawh , an phiarnâk rîlmâl hi ! " a ti .
+41015005	Jisu lam nih chun zeikhawm hen a sâng lo rawh le ; chuvachun , Pilat nih thungâi chê a ti .
+41015006	Chun , Pilat nih chun Kût ni ah chun rêngtlâ pakhat an ngiar mi zawng chu a suah piak na tâwn :
+41015007	Chun , minung pakhat Baraba an ti mi chu hel tla lakah rêngin ah a tâng ko ; chu tla nih chun helnâk ah chun mi an thah asi .
+41015008	Chun , mi zapi an va kal le , an rangah a ti piak na tâwn hâwi a ti ding hen an ngiar rawh .
+41015009	Chun , Pilat nih a sâng le , an sinah , " Juda tla Lalchem hi an suah piak na sele nan duh ma ? " a ti .
+41015010	Bâwlpu lal tla nih nahsuahnâk ruangah an hawng ruai ti a theih dangâiah .
+41015011	Sikhawmsele , bâwlpu lal tla nih chun mi zapi tla chu Baraba lam suah piak dauh ding hen an fawrh .
+41015012	Chun , Pilat nih chun an sinah , " Juda tla Lalchem nan ti mi hi zeitin ka ti lai rawh ne ? " ti hen , a sâng nawlh .
+41015013	Chun , annih tla chu , " Kraws ah khenhbêk rawh , " ti hen , an âu nawlh .
+41015014	Chun , Pilat nih chun an sinah , " Zeirangah ? Zei me a sual , " a ti . Sikhawmsele , annih tla chu , " Kraws ah khenhbêk rawh , " ti hen an âu chiam .
+41015015	Chun , Pilat nih chun mi zapi lungâwitir a duh le , Baraba chu a suah piak na rawh . Chun , Jisu chu a vuak thluh rawh chun kraws ah khenhbêk ding hen a pêk rawh .
+41015016	Chun , kawrsen tla nih chun in kulhsung tualmâi Praitorion an ti mi ah chun amah chu an lûtpi le , an murui lakah mi zawzawng an pumh .
+41015017	Chun , puan senduk an aihtir le , ling lukhuh an phiar le , an khuhtir .
+41015018	Chun , " Chibai , Juda tla Lalchem ! " ti hen , chibai an bûk rawh .
+41015019	Chun , a lû ah chun lâiluang hen an vuak le , chil an sah le , siksidîr hen chibai an bûk .
+41015020	Chun , nihsuak siamnâk ah an mang thluh rawh chun puan senduk chu an lît le , amah puan an aihtir nawlh le , kraws ah khenhbêk ding hen an ruai rawh .
+41015021	Chun , mi velvâ pakhat , ram lei thawk hen khuapi lei a hawng mi , kawrsen tla nih chun Jisu kraws put ding hen an nawrh . ( Simon hi Kurini ah mi Alekzandar leh Rufa pa asi . )
+41015022	Chun , Jisu chu Golgotha an ti mi mun ah chun an ruai le , chu chu " Luruh mun , " tinâk asi .
+41015023	Chun , uain murrah hen chawmh mi an pêk le , sikhawmsele a duh lo .
+41015024	Chun , kraws ah an khenhbêk le , anna ting ding chiau theihnâk ah chamchawh hen a nipuan tla chu anna ṭhen .
+41015025	Chun , Jisu an khenhbêk mi chu zîng dâr kuanâk asi .
+41015026	Chun , a phiarnâk lasui a tlûn leiah an rîn le , " JUDA TLA LALCHEM , " ti hen .
+41015027	Chun , amah rual hen chun rawkmang panih an khenhbêk na bâk ; a vawrhlei ah pakhat , a kehlei ah pakhat .
+41015028	Pathian lasui thu , " Chun , anih chu misual tla ah ngaih asi rawh , " ti mi chu a hawng tlungkim rawh .
+41015029	Chun , mi anna vel mi kip nih an lû lei bû hen , " I hi ! Nang Pathian Biakin siat hen ni thum ah sak nawlhtu , a damh le ,
+41015030	kraws ah mi kha hawng ṭum me ! " an ti .
+41015031	Chu hâwi ber hen bâwlpu lal tla nih chun Dân sîntirtu tla hen anmah tla lakah amah zauhnawmh hen , ' Midang men a damh tâwn le , amah chu â damh kho lo .
+41015032	Kan muh hen kan lung khonâk ding hen , Mesia , Israel Lalchem chu , tuhin kraws ah mi chu hawng ṭum se me , " an ti . Chun , amah rual hen an khenhbêk na mi tla nih chun anih chu an fâi .
+41015033	Chun , sûn dâr leinihnâk liau chirah chun sûnnilei dâr thum tiang hen laikulh a hawng thim ver .
+41015034	Chun , sûnnilei dâr thumnâk ah chun aw-hâu fâk tak hen , " Eloi , Eloi , lema sabakthani ? " ti hen , a âu le , chu chu , " Ka Pathian , ka Pathian , zeirangah na ka kaltâk ? " tinâk asi .
+41015035	Chun , a kiangah dîr mi zeimaw mi tla nih chun chu chu an theih rawh chun , " Ngâinik u , Elija a kawh asi , " an ti .
+41015036	Chun , mi pakhat a tek le , sponge uain thur ah khat phak chiah hen lâiluang fung pâr ah a târ le , a dintir . " Um ko seh , amah lâk ding hen Elija a hawng mawh kan zauh lai , " a ti .
+41015037	Chun , Jisu chu hâu fâk tak hen a âu le , a nûkrî a chat rawh .
+41015038	Chun , Pathian Biakin puanzâr chu a tlûnlei thawk hen a tanglei tiang hen suak dak hen â thlêk rawh .
+41015039	Chun , a mâilei zâwn kraws kiangah kawrsen zâ hotu dîr mi nih chun chu hâwi Jisu thih dân a muh rawh chun , " Hi minung hi Pathian Fapa asi tatak asi , " a ti .
+41015040	Chun , nunau tla khawm nih lât tak thawk hen an chuanh le ; chubang tla lakah chun Mari Magdala mi , Jemtê leh Josef nu Mari leh Salomi tla anna tel .
+41015041	Chu tla chu Galili ram ah a um liauah amah zûl hen a rianṭuan piak tâwntu tla chu an si . Nunau dang tamtak Jerusalem ah amah rual hen kal mi tla chu anna tel bâk .
+41015042	Chun , zânleibâi a hawng si rawh chun Timhtuah ni asi ruangah , chu chu Dinhni lânah mi ni hi asi .
+41015043	Josef Arimathai khua mi , lâirêltu zahkâi tak , Pathian Ram lungum bâk mi , a hawng le , râlṭha tak hen Pilat sinah a lût le , Jisu ruak chu a deih rawh .
+41015044	Chun , Pilat nih chu hâwi hen Jisu a thih tuan chu thungâi chê a ti . Chun , kawrsen zâ hotu chu a kawh le , a thihnâk a sâwt rawh ma ti a deih .
+41015045	Chun , kawrsen zâ hotu kâ ah a theih rawh chun a ruak chu Josef sinah a pêk .
+41015046	Chun , anih nih chun puan mangṭhia a châwk le , amah chu a lâk le , puan mangṭhia hen chun a tuam le , thlân lung hawrh mi lakah a vûi le , thlân kawtkâ ah chun lungphêngpi rilh hen a khâr .
+41015047	Chun , Mari Magdala mi leh Josef nu Mari nih chun an vûinâk chu an muh .
+41016001	Chun , Dinhni chu a hawng lanh rawh chun , Mari Magdala mi , Jem nu Mari leh Salomi tla nih chun Jisu taksa chulh ding hen an va kal khonâk ding hen zeilo rimthâw an châwk .
+41016002	Chun , ni sarih ni masachem ah , zîngtê ah , nî suak nûnah thlân chu an va tleng .
+41016003	Chun , Thlân kawtkâ ah mi lung chu âu nih me a kan rilh piak ving lai aw ? "
+41016004	anna ti liau chirah an va chuanh le , lung chu rilh chia hen an muh le , lung chu a lian thlo asi .
+41016005	Chun , thlân lungah an lût le , tlangvâl pakhat puan vâr aih mi , vawrhlei kângah to an muh le ; an lawksawng rawh .
+41016006	Chun , anih nih chun , an sinah , ' Lawksawng lah u ; Jisu Nazaret mi , an khenhbêk mi kha nan hâwl asi ; a thawknawlh rawh ; hinah a um lo rawh , zauhnik u , an vûinâk hi !
+41016007	Sikhawmsele kal ule , a ṭhiruai tla leh Peter sinah chun , ' Galili ram ah nanmah lânah a kal awt ; nan sinah a sim hâwitê khan chunah chun nan muh lai , ' ti hen , simh na u , " a ti .
+41016008	Chun , an thir le , chê an ti ruangah an suak le , thlân thawk hen chun an tek chiam le ; an ṭih ruangah âu sinah khawm zeikhawm an sim lo .
+41016009	[ Nunau tla chu Peter leh a hâwi tla sinah an kal le , thâwngthang an sinah simh hen a um mi zawzawng chu a tâwikâng hen an simh na .
+41016010	Chu nehnûnah , Jisu ngelchel nih suahlei thawk hen tlâklei ah a ṭhiruai tla chu zungzâl ruangsuahnâk thu thenhlimh leh nung chu phuang ding hen a fial na . ]
+41016011	Sikhawmsele , annih nih chun , a nung nawlh le , muh khawm a muh ti an theih ko na hen an lung lo .
+41016012	Chun , chu mi nûnah chun an lakah mi panih ram lei fûk hen an kal liauah mêl dang put hen an sinah â langh .
+41016013	Chun , annih nih chun ṭhiruai dang tla an va simh le , annih khawm chu an lung lêm lo .
+41016014	Chun , chu nûn khawmah chun , buh an dûm liauah leikhat tla sinah tak â langh le , a thawknawlh nûnah a muhtu tla thu chu an lung lo ruangah leh an thinlung chang leikâng thu ah a fâi na rawh .
+41016015	Chun , an sinah , " Laikulh zawzawng ah kal ule , thilsiam zawzawng sinah chun Thâwngthâng Ṭha hi sim u .
+41016016	A lung hen baptis hen a um mi chu ruangsuak hen a um lai le , a lunglotu lam chu mawh hen a um lai .
+41016017	Chun , hi bang singsiahnâk tla nih hin lungtu chu a zûl vima lai : Ka min hen khuri tla an nâr lai le , hawlh thar hen an hawlh lai le ;
+41016018	rûl tla kut hen an lâk lai le , thihnâk tûr zei tal din khawmsele zeikhawm a pawi lai lo . Damlo tla tlûnah an kut an thâng lai le , an dam vima lai , " a ti .
+41016019	Chuvachun , Lalpa Jisu chu an sinah thu a sim thluh rawh chun vân leiah lâk hen a um le , Pathian vawrhlei ah a to rawh .
+41016020	Chun , annih chu an suak le , ram kipah thu an sim rawh le , Lalpa nih anmah tla a ṭuanpi na le ; a zûltu singsiahnâk tla hen thu chu a birhtir vima . ]
