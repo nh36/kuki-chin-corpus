@@ -626,6 +626,8 @@ VERB_STEMS = {
     'hotkhiat': 'save',      # kihotkhiat = be saved
     'thatlum': 'slay',       # kithatlum = be slain
     'lamdang': 'different',  # kilamdang = be different
+    'tangval': 'young.man',  # tangvalte = young men
+    'pil': 'learn',          # pilvang = be wise
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -3302,6 +3304,224 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mahun': ('ma-hun', 'that-time'),                     # 7x - "at that time"
         'deda': ('de-da', 'love-?'),                          # 7x - compound
         'lokho': ('lo-kho', 'able.NEG-?'),                    # 7x - compound
+        
+        # Session 5 Round 6: High-frequency partial fixes
+        'lamdangsa': ('lamdang-sa', 'different-INTNS'),       # 54x - "be astonished"
+        'lamdangsa-in': ('lamdang-sa-in', 'different-INTNS-ERG'), # 22x
+        'tangvalte': ('tangval-te', 'young.man-PL'),          # 48x - "young men, lads"
+        'tangval': ('tangval', 'young.man'),                  # base form
+        'tanglai': ('tang-lai', 'generation-middle'),         # 28x - "of old, ancient"
+        'bawltawm': ('bawl-tawm', 'make-break'),              # 11x - "break forth"
+        'hatsak': ('hat-sak', 'strong-CAUS'),                 # 11x - "strengthen"
+        'deihsak': ('deih-sak', 'want-CAUS'),                 # 11x - "desire for"
+        'ngaihsunsun': ('ngaihsun-sun', 'think-deep'),        # 11x - "meditate"
+        'pilvang': ('pil-vang', 'learn-wise'),                # 11x - "be wise/cunning"
+        'nisa': ('ni-sa', 'day-hot'),                         # 11x - "summer"
+        'tungman': ('tung-man', 'arrive-clay'),               # 11x - "clay" (potter's)
+        'paipel': ('pai-pel', 'go-vessel'),                   # 11x - "vessel, basket"
+        'piathei': ('pia-thei', 'give-able'),                 # 11x - "able to give"
+        'tangthu': ('tang-thu', 'generation-word'),           # 10x - "old word, tradition"
+        'khualna-in': ('khual-na-in', 'sojourn-NMLZ-ERG'),    # 10x - "sojourning"
+        'hanthotna': ('han-thot-na', 'follow-tie-NMLZ'),      # 10x - compound
+        'gamlum': ('gam-lum', 'land-round'),                  # 9x - "whole land"
+        'saiha': ('sai-ha', 'flesh-tooth'),                   # 9x - "ivory"
+        'zangsak': ('zang-sak', 'use-CAUS'),                  # 9x - "cause to use"
+        'liailiai': ('liai~liai', 'go.around~RED'),           # 9x - "go around repeatedly"
+        
+        # More high-frequency fixes
+        'ak': ('ak', 'then/particle'),                        # 13x - discourse particle
+        'ki-em': ('ki-em', 'REFL-?'),                         # 11x - CHECK: needs context
+        'pukna': ('puk-na', 'cave-NMLZ'),                     # 11x - "cave dwelling"
+        'khawk': ('khawk', 'hollow/empty'),                   # 11x - "hollow"
+        'pahtakna': ('pah-tak-na', 'trust-true-NMLZ'),        # 11x - "trust"
+        'midikte\u2019': ('mi-dik-te\u2019', 'person-righteous-PL.POSS'), # 11x
+        "midikte'": ('mi-dik-te\u2019', 'person-righteous-PL.POSS'),
+        'beelseek': ('beel-seek', 'pan-form'),                # 11x - "potter"
+        'keutum': ('keu-tum', 'dig-all'),                     # 11x - "dig completely"
+        'kangtumsak': ('kang-tum-sak', 'brass-all-CAUS'),     # 11x - compound
+        'khen\u2019': ('khen\u2019', 'divide.POSS'),          # 10x
+        "khen'": ('khen\u2019', 'divide.POSS'),
+        'nate\u2019': ('na-te\u2019', '2SG-PL.POSS'),         # 10x - "your (pl)"
+        "nate'": ('na-te\u2019', '2SG-PL.POSS'),
+        'nite': ('ni-te', 'day-PL'),                          # compound
+        'mawhneite': ('mawh-nei-te', 'sin-have-PL'),          # 10x - "sinners"
+        'tawlette': ('tawle-tte', 'span-?-PL'),               # 9x - compound
+        'kauphete': ('kau-phe-te', 'call-?-PL'),              # 9x - compound
+        'siampipuan\u2019': ('siampi-puan\u2019', 'priest-cloth.POSS'), # 9x
+        "siampipuan'": ('siampi-puan\u2019', 'priest-cloth.POSS'),
+        'ukpa\u2019': ('uk-pa\u2019', 'rule-father.POSS'),    # 9x
+        "ukpa'": ('uk-pa\u2019', 'rule-father.POSS'),
+        'patna': ('pat-na', 'trust-NMLZ'),                    # 9x - "trust, faith"
+        'cina-in': ('ci-na-in', 'say-NMLZ-ERG'),              # 9x - "saying"
+        'ziate': ('zi-a-te', 'wife-3SG-PL'),                  # 9x - "his wives"
+        
+        # Session 6 Round 1: Philologically verified (97.31%)
+        'ki-em': ('ki-em', 'PASS-bake'),                       # 11x - "be baked" (Lev)
+        'tawlette': ('tawle-te', 'window-PL'),                 # 9x - "windows"
+        'kikholhpihte': ('ki-kholh-pih-te', 'REFL-accompany-CAUS-PL'),  # 9x - "companions"
+        'paihkhiatsak': ('paih-khiat-sak', 'go-depart-APPL'),  # 9x - "take away"
+        'mialsak': ('mial-sak', 'darkness-CAUS'),              # 9x - "darken, cover"
+        'ento': ('en-to', 'look-toward'),                      # 9x - "look up at"
+        'lingkung': ('ling-kung', 'thorn-round'),              # 9x - "thorns, briers"
+        'sikkawi': ('sik-kawi', 'hook-fish'),                  # 9x - "fishhook"
+        'piakkhong': ('piak-khong', 'give-NOM'),               # 9x - "gift"
+        'ngahzawh': ('ngah-zawh', 'get-COMPL'),                # 9x - "obtain, get fully"
+        'upadi': ('upa-di', 'elder-?'),                        # 9x - compound
+        'awksak': ('awk-sak', 'for-CAUS'),                     # 9x - "cause for" 
+        'thumante': ('thu-man-te', 'word-true-PL'),            # 9x - "true words"
+        'kampi': ('kam-pi', 'word-big'),                       # 9x - "great word"
+        'ngente': ('ngen-te', 'pray-PL'),                      # 9x - compound
+        'ututin': ('u-tu-tin', 'want-FUT-PROG'),               # 9x - "wanting, willing"
+        'nuntakna-ah': ('nun-tak-na-ah', 'life-true-NMLZ-LOC'), # 9x - "in life"
+        'zattheih': ('zat-theih', 'hear-can'),                 # 9x - "can hear"
+        'ukzawh': ('uk-zawh', 'rule-COMPL'),                   # 9x - "rule completely"
+        'omngei': ('om-ngei', 'be-know'),                      # 9x - "be known"
+        'baihzaw': ('baih-zaw', 'owe-more'),                   # 9x - "owe more"
+        'lungdamhuai': ('lung-dam-huai', 'heart-heal-fear'),   # 9x - "rejoice greatly"
+        'kineihkhemte': ('ki-neih-khem-te', 'REFL-have-all-PL'), # 9x - "possessions"
+        'septheih': ('sep-theih', 'work-can'),                 # 9x - "can work"
+        'pupite': ('pupi-te', 'grandparent-PL'),               # 9x - "grandparents/ancestors"
+        'neuzaw': ('neu-zaw', 'young-more'),                   # 8x - "younger"
+        'khentat': ('khen-tat', 'divide-cut'),                 # 8x - "divide, cut off"
+        'zinei': ('zi-nei', 'wife-have'),                      # 9x - "have a wife, marry"
+        
+        # Session 6 Round 2: More philological additions
+        'kauphete': ('kauphe-te', 'locust-PL'),                # 9x - "locusts"
+        'upadi': ('upa-di', 'elder-manner'),                   # 9x - "law, custom, manner"
+        'naungekte': ('naungek-te', 'infant-PL'),              # 9x - "infants, sucklings"  
+        'khualzinin': ('khual-zin-in', 'sojourn-road-ERG'),    # 8x - "journeying"
+        'ciahsakkik': ('ciah-sak-kik', 'return-CAUS-ITER'),    # 8x - "send back"
+        'suh': ('suh', 'well'),                                # 8x - "well" (water source)
+        'hawmguakin': ('hawm-guak-in', 'empty-ADV'),           # 8x - "empty, empty-handed"
+        'suksak': ('suk-sak', 'become-CAUS'),                  # 8x - "make become"
+        'milipun': ('mi-li-pun', 'person-?-bundle'),           # 8x - "bundle"
+        'tuisuak': ('tui-suak', 'water-become'),               # 8x - "melt"
+        'teelkhia': ('teel-khia', 'choose-emerge'),            # 8x - "choose out, select"
+        'khuttum': ('khut-tum', 'hand-bunch'),                 # 8x - "fist"
+        'thutakna': ('thu-tak-na', 'word-true-NMLZ'),          # 8x - "faithfulness"
+        'lutangin': ('lut-ang-in', 'enter-together-ERG'),      # 8x - "entering together"
+        'teelkhiain': ('teel-khia-in', 'choose-emerge-ERG'),   # 8x - "choosing out"
+        'khamkhop': ('kham-khop', 'forbid-together'),          # 8x - compound
+        'sawlpang': ('sawl-pang', 'send-carry'),               # 8x - "messenger"
+        'giahna': ('giah-na', 'camp-NMLZ'),                    # 8x - "camping, encampment"
+        'minthangin': ('min-thang-in', 'name-famous-ERG'),     # 8x - "in blessing"
+        'netniamna': ('net-niam-na', 'hunger-lowly-NMLZ'),     # 8x - "fasting"
+        'kisilna': ('ki-sil-na', 'REFL-wash-NMLZ'),            # 8x - "purification"
+        'hontat': ('hon-tat', 'flock-cut'),                    # 8x - "separate flock"
+        'kisiansuahna': ('ki-sian-suah-na', 'REFL-holy-issue-NMLZ'), # 8x - "sanctification"
+        'miphak': ('mi-phak', 'person-half'),                  # 8x - compound
+        'samul': ('sa-mul', 'animal-hair'),                    # 8x - "animal hair"
+        'kikoihna': ('ki-koih-na', 'REFL-place-NMLZ'),         # 8x - compound
+        'khakcip': ('khak-cip', 'descendant-small'),           # 8x - compound
+        'paipai': ('pai-pai', 'go~REDUP'),                     # 8x - "go repeatedly"
+        'innlak': ('inn-lak', 'house-middle'),                 # 8x - "among the house"
+        
+        # Session 6 Round 3: More philological additions
+        'meiite': ('mei-ite', 'cloud-PL'),                     # 8x - "clouds"
+        'sutgawp': ('sut-gawp', 'spoil-round'),                # 8x - "spoil"
+        'koihcing': ('koih-cing', 'put-prepare'),              # 8x - "store up"
+        'hihzo': ('hih-zo', 'do-can'),                         # 8x - "be able to do"
+        'paulap': ('pau-lap', 'speak-fold'),                   # 8x - "occasion, matter"
+        'kumkumin': ('kum-kum-in', 'year~REDUP-ERG'),          # 8x - "yearly"
+        'galvilte': ('gal-vil-te', 'war-watch-PL'),            # 8x - "watchmen"
+        'suahtaksak': ('suah-tak-sak', 'issue-true-CAUS'),     # 8x - "redeem"
+        'tuakkha': ('tuak-kha', 'meet-?'),                     # 8x - compound
+        'kingakna': ('ki-ngak-na', 'REFL-wait-NMLZ'),          # 8x - "base, stand"
+        'pangsak': ('pang-sak', 'plead-CAUS'),                 # 8x - "cause to plead"
+        'kamah': ('ka-mah', '1SG-self'),                       # 8x - "myself"
+        'kawmun': ('ka-om-un', '1SG-be-PL.INCL'),              # 8x - compound
+        'sangsak': ('sang-sak', 'high-CAUS'),                  # 8x - "make high, exalt"
+        'puteekte': ('puteek-te', 'ancestors-PL'),             # 8x - "ancestors"
+        'paikawmun': ('pai-ka-om-un', 'go-1SG-be-PL.INCL'),    # 8x - compound
+        'kongcing': ('kong-cing', '1SG→3-prepare'),            # 8x - compound
+        'tangtungsak': ('tang-tung-sak', 'reach-top-CAUS'),    # 8x - "make arrive"
+        'omcip': ('om-cip', 'be-close'),                       # 8x - "be close"
+        'deihnate': ('deih-na-te', 'want-NMLZ-PL'),            # 8x - "desires"
+        
+        # Session 6 Round 4: More philological additions  
+        'gamtatzia': ('gam-tat-zia', 'land-cut-way'),          # 8x - "way, manner"
+        'thudot': ('thu-dot', 'word-ask'),                     # 8x - "enquire"
+        'lawpna': ('lawp-na', 'rejoice-NMLZ'),                 # 8x - "rejoicing"
+        'kiniamkhiatte': ('ki-niam-khiat-te', 'REFL-lowly-depart-PL'), # 8x - "the meek"
+        'suaktazo': ('suak-ta-zo', 'become-true-can'),         # 8x - "escape, deliver"
+        'ngaklah': ('ngak-lah', 'wait-take'),                  # 8x - "watch for"
+        'neihzah': ('neih-zah', 'have.II-much'),               # 8x - "have much"
+        'liammate': ('liam-ma-te', 'wound-?-PL'),              # 8x - "wounds, bruises"
+        'siamnate': ('siam-na-te', 'skilled-NMLZ-PL'),         # 8x - "skillful works"
+        'santheih': ('san-theih', 'salt-can'),                 # 8x - "salted" (Mark 9:49)
+        'lutpih': ('lut-pih', 'enter-CAUS'),                   # 8x - "bring in"
+        'pahtawi-in': ('pa-htawi-in', 'male-old.man-ERG'),     # 8x - "patriarch" (from htawi elder)
+        'cimawhte\u2019': ('ci-mawh-te\u2019', 'say-sin-PL.POSS'), # 8x 
+        "cimawhte'": ('ci-mawh-te\u2019', 'say-sin-PL.POSS'),
+        'pannate': ('panna-te', 'petition-PL'),                # 8x - "petitions"
+        'gennate': ('gen-na-te', 'speak-NMLZ-PL'),             # 8x - "sayings"
+        'vawhpa': ('vawh-pa', 'go.and-male'),                  # 8x - compound
+        'kongpite-ah': ('kong-pi-te-ah', '1SG→3-big-PL-LOC'),  # 8x - compound
+        'puksi': ('puk-si', 'cave-?'),                         # 8x - "cave" (compound noun)
+        
+        # Session 6 Round 5: More philological additions (freq 7)
+        'vakvai': ('vak-vai', 'walk-wander'),                  # 7x - "fugitive, wanderer"
+        'tuikhukte': ('tui-khuk-te', 'water-hollow-PL'),       # 7x - "wells"
+        'sangto': ('sang-to', 'high-toward'),                  # 7x - "lift up"
+        'phakna': ('phak-na', 'reach-NMLZ'),                   # 7x - "meaning, significance"
+        'mundang': ('mun-dang', 'place-other'),                # 7x - "another place"
+        'tengkhia': ('teng-khia', 'dwell-emerge'),             # 7x - "set up, appoint"
+        'gilkialte': ('gil-kial-te', 'stomach-turn-PL'),       # 7x - "honest men"
+        'penna': ('pen-na', 'best-NMLZ'),                      # 7x - "the best"
+        'leina': ('lei-na', 'buy-NMLZ'),                       # 7x - "buying, purchase"
+        'thupalsatna': ('thu-pal-sat-na', 'word-cross-cut-NMLZ'), # 7x - "trespass"
+        'vutte': ('vut-te', 'ash-PL'),                         # 7x - "ashes"
+        'deihgawh': ('deih-gawh', 'want-covet'),               # 7x - "covet"
+        'khialkha': ('khial-kha', 'err-go'),                   # 7x - "go astray"
+        'eng': ('eng', 'what'),                                # 7x - "what" (interrogative)
+        'kihona': ('ki-ho-na', 'REFL-call-NMLZ'),              # 7x - "calling"
+        'cilesa': ('ci-le-sa', 'say-and-?'),                   # 7x - compound
+        'anhuan': ('an-huan', '3PL-prepare'),                  # 7x - "they prepare"
+        'ihmu-in': ('i-mu-in', '1PL.INCL-see-ERG'),            # 7x - compound
+        'khawmsak': ('khawm-sak', 'gather-CAUS'),              # 7x - "cause to gather"
+        'ton': ('ton', 'arrive'),                              # 7x - "arrive, reach"
+        'neel': ('ne-el', 'eat-NFIN'),                         # 7x - "eating"
+        'sialin': ('si-al-in', 'die-NFIN'),                    # 7x - "dying"
+        'kaisak': ('kai-sak', 'hang-CAUS'),                    # 7x - "hang up"
+        'unu': ('u-nu', 'elder.sibling-mother'),               # 7x - "aunt"
+        'naubu': ('na-u-bu', '2SG-elder.sibling-father'),      # 7x - "your uncle"
+        'sanggamnu\u2019': ('sanggam-nu\u2019', 'sibling-mother.POSS'), # 7x - "sister's"
+        "sanggamnu'": ('sanggam-nu\u2019', 'sibling-mother.POSS'),
+        'hithiatin': ('hi-thiat-in', 'be-cease-ERG'),          # 7x - "thus being"
+        'cingnu': ('cing-nu', 'prepare-mother'),               # 7x - compound
+        
+        # Session 6 Round 6: More philological additions (freq 6)
+        'kidawk': ('ki-dawk', 'REFL-dry'),                     # 6x - "become dry, dry land"
+        'singgahte': ('sing-gah-te', 'tree-fruit-PL'),         # 6x - "fruit trees"
+        'manthan': ('man-than', 'true-exist'),                 # 6x - "keep alive, preserve"
+        'gancingte': ('gan-cing-te', 'cattle-care-PL'),        # 6x - "herdsmen"
+        'phelnih': ('phel-nih', 'part-two'),                   # 6x - "in half, two pieces"
+        'siampa': ('siam-pa', 'skilled-male'),                 # 6x - "craftsman"
+        'tawhna': ('tawh-na', 'meet-NMLZ'),                    # 6x - "meeting, battle"
+        'cimtak': ('cim-tak', 'be.weary-true'),                # 6x - "weary, loathe"
+        'ciangkang': ('ciang-kang', 'clear-stripe'),           # 6x - "striped, peeled"
+        'kihing': ('ki-hing', 'REFL-live'),                    # 6x - "be preserved"
+        'hawkkhiatsak': ('hawk-khiat-sak', 'take.off-depart-CAUS'), # 6x - "strip off"
+        'thongkiate': ('thong-kia-te', 'prison-?-PL'),         # 6x - "prisoners"
+        'kivuina': ('ki-vui-na', 'REFL-bury-NMLZ'),            # 6x - "burying place"
+        'neite\u2019': ('nei-te\u2019', 'have-PL.POSS'),       # 6x
+        "neite'": ('nei-te\u2019', 'have-PL.POSS'),
+        'tumte': ('tum-te', 'will-PL'),                        # 6x - compound
+        'pualama': ('pualam-a', 'outside-LOC'),                # 6x - "outside"
+        'omnasa': ('om-na-sa', 'be-NMLZ-animal'),              # 6x - compound
+        'hut': ('hut', 'shelter'),                             # 6x - "shelter, booth"
+        'bangci-a': ('bang-ci-a', 'what-say-Q'),               # 6x - "what manner"
+        'kapkhia': ('ka-pkhia', '1SG-emerge'),                 # 6x - compound
+        'zawl-ai': ('zawl-ai', 'valley-LOC'),                  # 6x - "in the valley"
+        'thalawhsa': ('tha-lawh-sa', 'breath-reap-animal'),    # 6x - compound
+        'zawte': ('zawh-te', 'finish-PL'),                     # 6x - "those who finished"
+        'huk': ('huk', 'bark'),                                # 6x - "bark" (of tree)
+        'samsakin': ('sam-sak-in', 'call-CAUS-ERG'),           # 6x - "causing to call"
+        'damdamin': ('dam-dam-in', 'well~REDUP-ERG'),          # 6x - "well, safely"
+        'kawngah': ('kawng-ah', 'road-LOC'),                   # 6x - "on the road"
+        'piapi': ('pia-pi', 'give-big'),                       # 6x - "give greatly"
+        'ginat': ('gi-nat', 'stomach-tight'),                  # 6x - "courageous"
+        'paipihsak': ('pai-pih-sak', 'go-CAUS-APPL'),          # 6x - "cause to accompany"
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
