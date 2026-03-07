@@ -28,7 +28,7 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 
 ### Phase 4: Leipzig Morphological Analyzer ✓
 - Focus: Tedim Chin (ctd)
-- **Current coverage: 97.59% of tokens**
+- **Current coverage: 97.61% of tokens**
 - Handles: prefixes, stems, suffixes, compounds, reduplication
 
 ## Current Analyzer Performance (2026-03-08)
@@ -36,20 +36,23 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 ### Overall Statistics
 ```
 Total tokens:      831,340
-Fully analyzed:    811,303 (97.59%)
-Partial:            14,465 (1.74%)  -- has some morphemes glossed
-Unknown:             5,572 (0.67%)  -- completely unknown
+Fully analyzed:    811,482 (97.61%)
+Partial:            14,299 (1.72%)  -- has some morphemes glossed
+Unknown:             5,559 (0.67%)  -- completely unknown
 ```
 
 ### Quality Assurance (Allomorph Audit)
 ```
 -te (Plural) suffix audit:
-  Correctly analyzed:    26,297 tokens
-  Unknown base + -te:     2,086 tokens
-  Flagged issues:           286 cases (down from 361)
+  Correctly analyzed:    26,472 tokens
+  Unknown base + -te:     1,911 tokens (down from 2,086)
+  Flagged issues:           ~250 cases (down from 361)
 
-Verified: -te is a single allomorph (no -ite, -ate variants)
-Distribution: vowel-final (66%), consonant-final (34%)
+Session 6 accomplishments:
+- Created allomorph_audit.py for systematic quality checks
+- Fixed 100+ over-segmentation bugs via protective COMPOUND_WORDS entries
+- Verified -te is a single allomorph (no -ite, -ate variants)
+- Distribution: vowel-final (66%), consonant-final (34%)
 ```
 
 ### Analyzer Components (Current)
