@@ -615,6 +615,17 @@ VERB_STEMS = {
     'tamzan': 'break.many',  # kitamzan = broken
     'hem': 'remove',         # hemkhia = remove-exit
     'meeng': 'branch',       # meengkhia = branch-exit
+    'hazat': 'jealous',      # hazatna = jealousy
+    'luang': 'flow',         # luangkhia = flow out
+    'guta': 'destroyer',     # gutate = destroyers
+    'tang': 'take.hold',     # kitang = take hold of each other
+    'keek': 'tear',          # kikeek = be rent
+    'lawh': 'spread',        # kilawh = spread
+    'kalh': 'lock',          # kikalh = be locked
+    'behlap': 'burden',      # kibehlap = be a burden
+    'hotkhiat': 'save',      # kihotkhiat = be saved
+    'thatlum': 'slay',       # kithatlum = be slain
+    'lamdang': 'different',  # kilamdang = be different
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -3228,6 +3239,69 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kaina': ('kai-na', 'ascend-NMLZ'),                   # NOT ka-i-na! = "ascent"
         'minamte': ('mi-nam-te', 'person-tribe-PL'),          # "tribes/nations"
         'minamin': ('mi-nam-in', 'person-tribe-ERG'),         # "by nation"
+        
+        # Session 5 Round 4: More partial word fixes
+        'hazatna': ('hazat-na', 'jealousy-NMLZ'),             # 10x - DEU 29:20
+        'luangkhia': ('luang-khia', 'flow-exit'),             # 10x - "flow out"
+        'thuthuk': ('thu-thuk', 'word-deep'),                 # 10x - "secret, deep thing"
+        'sikkol': ('sik-kol', 'iron-bind'),                   # 10x - "stocks, fetter"
+        'gutate': ('guta-te', 'destroyer-PL'),                # 10x - "destroyers"
+        'gina': ('gina', 'virtuous'),                         # 9x - "virtuous"
+        'cinten': ('cin-ten', 'say-fast'),                    # 9x - "abide fast"
+        'sattan': ('sat-tan', 'cut-hang'),                    # 9x - "cut off, hang"
+        'satpuk': ('sat-puk', 'strike-fall'),                 # 9x - "smite"
+        'keekin': ('keel-kin', 'heel-half'),                  # 10x - compound
+        'hanthotna': ('han-thot-na', 'follow-?-NMLZ'),        # 10x - compound
+        'munkip': ('mun-kip', 'place-near'),                  # 10x - "nearby place"
+        'lohnate': ('loh-na-te', 'able.NEG-NMLZ-PL'),         # 10x - "impossibilities"
+        'maangmuhnate': ('maang-muh-na-te', 'vision-see.II-NMLZ-PL'), # 10x
+        'naupangnote': ('nau-pang-no-te', 'child-side-young-PL'), # 10x
+        'siahdongte': ('siah-dong-te', 'judge-until-PL'),     # 10x - compound
+        'tawlette': ('tawle-tte', 'span-?-PL'),               # 9x - compound
+        'kauphete': ('kau-phe-te', 'call-?-PL'),              # 9x - compound
+        'patna': ('pa-t-na', 'father-?-NMLZ'),                # 9x - compound
+        'cithuah': ('ci-thuah', 'say-add'),                   # 9x - "add more saying"
+        'vai-in': ('vai-in', 'go.and-ERG'),                   # 9x - compound
+        'luangte': ('luang-te', 'flow-PL'),                   # 9x - "flows"
+        'innlam': ('inn-lam', 'house-side'),                  # 9x - "household side"
+        'simthamin': ('sim-tham-in', 'count-molten-ERG'),     # 9x - compound
+        'paizia': ('pai-zia', 'go-manner'),                   # 9x - "manner of going"
+        
+        # Session 5 Round 5: Ki- verbs from KJV
+        'kitang': ('ki-tang', 'REFL-take'),                   # 7x - "take hold of one another"
+        'kikeek': ('ki-keek', 'REFL-tear'),                   # 7x - "be rent/torn"
+        'kilawh': ('ki-lawh', 'REFL-spread'),                 # 7x - "spread"
+        'kikalh': ('ki-kalh', 'REFL-lock'),                   # 7x - "be locked"
+        'kibehlap': ('ki-beh-lap', 'REFL-burden-add'),        # 7x - "be a burden"
+        'kinusiacip': ('ki-nusia-cip', 'REFL-forsake-pinch'), # 7x - "be forsaken"
+        'kihotkhiat': ('ki-hot-khiat', 'REFL-call-depart'),   # 7x - "be saved"
+        'kithatlum': ('ki-that-lum', 'REFL-kill-lie'),        # 7x - "be slain"
+        'kilamdang': ('ki-lam-dang', 'REFL-way-different'),   # 7x - "be different"
+        'kithawhkiksak': ('ki-thawh-kik-sak', 'REFL-rise-ITER-CAUS'), # 7x - "be risen again"
+        'kitun': ('ki-tun', 'REFL-arrive'),                   # 7x - "arrive together"
+        'susiazo': ('susia-zo', 'destroy-COMPL'),             # 7x - "destroyed completely"
+        'sunkim': ('sun-kim', 'burn-half'),                   # 7x - "burn completely"
+        
+        # Other unknowns
+        'phe': ('phe', 'wing'),                               # 7x - "wing"
+        'hah': ('hah', 'pant'),                               # 7x - "pant/gasp"
+        'thahlup': ('thah-lup', 'kill-overturn'),             # 7x - "overthrow"
+        'khikhe': ('khi-khe', 'foot-?'),                      # 7x - compound
+        'lamdung': ('lam-dung', 'way-straight'),              # 7x - "straight way"
+        'koimahah': ('koi-mah-ah', 'which-self-LOC'),         # 7x - "whichever place"
+        'dawk': ('dawk', 'open'),                             # 7x - "open"
+        'themno': ('them-no', 'one-young'),                   # 7x - "young one"
+        'thangling': ('thang-ling', 'rise-expect'),           # 7x - "hope"
+        'dau': ('dau', 'war'),                                # 7x - "war"
+        'sungtumin': ('sung-tum-in', 'inside-all-ERG'),       # 7x - "inside all"
+        'phalvak': ('phal-vak', 'permit-?'),                  # 7x - compound
+        'guahpi': ('guah-pi', 'bowl-big'),                    # 7x - "great bowl"
+        'manmanin': ('man-man-in', 'price~RED-ERG'),          # 7x - "pricing"
+        'lawp': ('lawp', 'lap'),                              # 7x - "lap"
+        'dip': ('dip', 'valley'),                             # 7x - "valley"
+        'mahun': ('ma-hun', 'that-time'),                     # 7x - "at that time"
+        'deda': ('de-da', 'love-?'),                          # 7x - compound
+        'lokho': ('lo-kho', 'able.NEG-?'),                    # 7x - compound
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
