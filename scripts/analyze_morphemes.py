@@ -1000,6 +1000,21 @@ NOUN_STEMS = {
     'sisan': 'blood',        # 135x - "blood"
     'laibu': 'book',         # 121x - "book" (laibu ahi hi = the book of)
     'silngo': 'meal/feast',  # 78x - "meal, feast" (unleavened bread context)
+    
+    # === Session 6 Round 11: Allomorph audit additions ===
+    # Stems needed to prevent over-segmentation with -te suffix
+    'hing': 'alive',         # hingte = alive-PL
+    'vun': 'skin',           # vunte = skin-PL
+    'thal': 'bow',           # thalte = bow-PL (weapon)
+    'taneu': 'child.small',  # taneute = little ones
+    'teipi': 'spear',        # teipite = spears
+    'hisak': 'proud',        # kihisakte = proud ones
+    'gial': 'spotted',       # gialte = spotted ones
+    'anpal': 'firstfruit',   # anpalte = firstfruits
+    'vanglian': 'mighty',    # vangliante = mighty ones
+    'pawi': 'feast',         # pawite = feasts
+    'delh': 'overcome',      # delhte = conquerors  
+    'zuak': 'sell',          # zuakte = sellers
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -3695,6 +3710,94 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'innkuankuanin': ('inn-kuan-kuan-in', 'house-family~REDUP-ERG'), # 7x - compound
         'apna': ('ap-na', 'cover-NMLZ'),                       # 7x - "covering"
         'nawksak': ('nawk-sak', 'again-CAUS'),                 # 7x - compound
+        
+        # Session 6 Round 11: Allomorph audit fixes - prevent over-segmentation
+        # These are nouns/verbs that were being incorrectly split
+        'hingte': ('hing-te', 'alive-PL'),                     # 14x - "living creatures"
+        'hing': ('hing', 'alive'),                             # base
+        'vunte': ('vun-te', 'skin-PL'),                        # 8x - "skins"
+        'vun': ('vun', 'skin'),                                # base
+        'thalte': ('thal-te', 'bow-PL'),                       # 8x - "bows"
+        'thal': ('thal', 'bow'),                               # base - weapon
+        'kihhuaite': ('ki-hhuai-te', 'REFL-abominate-PL'),     # 8x - "abominations"
+        'taneute': ('taneu-te', 'child.small-PL'),             # 8x - "little ones"
+        'taneu': ('taneu', 'child.small'),                     # base
+        'teipite': ('teipi-te', 'spear-PL'),                   # 8x - "spears"
+        'teipi': ('teipi', 'spear'),                           # base
+        'kihisakte': ('ki-hisak-te', 'REFL-proud-PL'),         # 9x - "proud ones"
+        'hisak': ('hisak', 'proud'),                           # base
+        'gialte': ('gial-te', 'spotted-PL'),                   # 7x - "spotted ones"
+        'gial': ('gial', 'spotted'),                           # base
+        'anpalte': ('anpal-te', 'firstfruit-PL'),              # 8x - "firstfruits"
+        'anpal': ('anpal', 'firstfruit'),                      # base
+        'kingaknate': ('ki-ngak-na-te', 'REFL-wait-NMLZ-PL'),  # 10x - "bases, stands"
+        'kineite': ('ki-nei-te', 'REFL-have-PL'),              # 10x - "upright ones"
+        'delhte': ('delh-te', 'overcome-PL'),                  # 9x - "conquerors"
+        'delh': ('delh', 'overcome'),                          # base verb
+        'hilote': ('hi-lo-te', 'be-NEG-PL'),                   # 8x - "those who are not"
+        'anlate': ('an-la-te', '3PL-take-PL'),                 # 8x - compound
+        'zuakte': ('zuak-te', 'sell-PL'),                      # 8x - "sellers"
+        'zuak': ('zuak', 'sell'),                              # base verb
+        'innsungmangte': ('inn-sung-mang-te', 'house-inside-ruin-PL'), # 8x
+        'vangliante': ('vanglian-te', 'mighty-PL'),            # 8x - "mighty ones"
+        'vanglian': ('vanglian', 'mighty'),                    # base
+        'sawmngate': ('sawmnga-te', 'fifty-PL'),               # 7x - compound
+        'pawite': ('pawi-te', 'feast-PL'),                     # 12x - "feasts/offerings"
+        'pawi': ('pawi', 'feast'),                             # base - feast/festival
+        
+        # Session 6 Round 12: More over-segmentation fixes from allomorph audit
+        'innsate': ('innsa-te', 'cattle-PL'),                  # cattle (NOT i-nnsa-te)
+        'innsa': ('innsa', 'cattle'),                          # base - cattle/domestic animals
+        'gamsate': ('gamsa-te', 'beast-PL'),                   # beasts/wild animals
+        'gamsa': ('gamsa', 'beast'),                           # base - wild beast
+        'thukte': ('thuk-te', 'deep-PL'),                      # depths (NOT thu-k-te)
+        'thuk': ('thuk', 'deep'),                              # base - deep/depth
+        'kangte': ('kang-te', 'gray-PL'),                      # gray/white ones (hair)
+        'kang': ('kang', 'gray'),                              # base - gray/white
+        'keelpite': ('keelpi-te', 'she.goat-PL'),              # she-goats (NOT keel-pi-te)
+        'keelpi': ('keelpi', 'she.goat'),                      # base - female goat
+        'bawngpite': ('bawngpi-te', 'cattle.big-PL'),          # large cattle/kine
+        'bawngpi': ('bawngpi', 'cattle.big'),                  # base - large cattle
+        'tuilite': ('tuili-te', 'stream-PL'),                  # streams/ponds
+        'tuili': ('tuili', 'stream'),                          # base - stream/pond
+        'dalnate': ('dalna-te', 'hindrance-PL'),               # hindrances (dal-na-te correct)
+        'dalna': ('dalna', 'hindrance'),                       # base - hindrance
+        'suknate': ('sukna-te', 'becoming-PL'),                # becomings (suk-na-te correct)
+        'sukna': ('sukna', 'becoming'),                        # base - process of becoming
+        'cilte': ('cil-te', 'beginning-PL'),                   # beginnings
+        'cil': ('cil', 'beginning'),                           # base - beginning (NOT ci-l)
+        'kikoihte': ('kikoih-te', 'foundation-PL'),            # foundations
+        'kikoih': ('kikoih', 'foundation'),                    # base - foundation
+        'theihnate': ('theihna-te', 'knowledge-PL'),           # knowledges
+        'theihna': ('theihna', 'knowledge'),                   # base - knowledge
+        
+        # Session 6 Round 13: More over-segmentation fixes
+        'nunte': ('nun-te', 'knop-PL'),                        # knobs/knops (NOT nu-n-te)
+        'nun': ('nun', 'knop'),                                # base - knob/knop (decorative)
+        'kalte': ('kal-te', 'kidney-PL'),                      # kidneys (NOT ka-l-te)
+        'kal': ('kal', 'kidney'),                              # base - kidney
+        'pangte': ('pang-te', 'branch-PL'),                    # branches
+        'pang': ('pang', 'branch'),                            # base - branch
+        'gamgite': ('gamgi-te', 'border-PL'),                  # borders/bounds
+        'gamgi': ('gamgi', 'border'),                          # base - border/boundary
+        
+        # Session 6 Round 14: More over-segmentation fixes
+        'sante': ('san-te', 'garlic-PL'),                      # garlick (NOT sa-n-te)
+        'san': ('san', 'garlic'),                              # base - garlic
+        'zinte': ('zin-te', 'sojourner-PL'),                   # strangers (NOT zi-n-te)
+        'zin': ('zin', 'sojourner'),                           # base - stranger/sojourner
+        'khutpite': ('khutpi-te', 'thumb-PL'),                 # thumbs  
+        'khutpi': ('khutpi', 'thumb'),                         # base - thumb (hand-big)
+        'khepite': ('khepi-te', 'big.toe-PL'),                 # great toes
+        'khepi': ('khepi', 'big.toe'),                         # base - big toe
+        'liammate': ('liamma-te', 'wound-PL'),                 # wounds (8 occurrences)
+        'liamma': ('liamma', 'wound'),                         # base - wound/injury
+        'thongkiate': ('thongkia-te', 'prison-PL'),            # prisons
+        'thongkia': ('thongkia', 'prison'),                    # base - prison
+        'kungnote': ('kungno-te', 'herb-PL'),                  # herbs (trees bringing forth)
+        'kungno': ('kungno', 'herb'),                          # base - herb/plant
+        'khawkte': ('khawk-te', 'spirit-PL'),                  # spirits
+        'khawk': ('khawk', 'spirit'),                          # base - spirit
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
