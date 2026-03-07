@@ -98,6 +98,10 @@ FUNCTION_WORDS = {
     'matengin': 'until',     # 99x - variant with -in
     'veve': 'still/yet',     # 142x - temporal adverb (reduplication)
     
+    # === Purpose/Infinitive markers (NOT 2SG!) ===
+    'nading': 'PURP',        # 1140x - "in order to, for (purpose)" 
+    'nadingin': 'PURP.ERG',  # 1671x - purpose marker with ergative
+    
     # === Topic/Focus Particles ===
     'mah': 'EMPH',           # 1,540
     'pen': 'TOP',            # 4,541
@@ -111,6 +115,8 @@ FUNCTION_WORDS = {
     'teltel': 'each',
     'vekpi': 'altogether',   # 213x "all (of), total"
     'tuamtuam': 'various',   # 59x - "different kinds, various" (reduplication)
+    'ciatin': 'each.kind.ERG', # 45x - "after its kind" (ciat + -in)
+    'ciatciatin': 'each.kind~RED', # 20x - "each after their kind" (reduplicated)
     
     # === Adverbs - Temporal/Iterative ===
     'leuleu': 'again',       # 193x - reduplication of leu
@@ -177,7 +183,6 @@ FUNCTION_WORDS = {
     # === TAM Markers ===
     'ding': 'PROSP',         # 18,980
     'dingin': 'PROSP.ERG',   # 4,798
-    'nadingin': '2SG.PROSP.ERG',  # 1,635
     'nadingun': '2PL.PROSP.IMP',  # 656
     'ta': 'PFV',             # 1,106
     'zo': 'COMPL',
@@ -489,6 +494,18 @@ VERB_STEMS = {
     'tuang': 'ride',         # 43x - "ride" (tuangte = riders, horsemen)
     'hon': 'flock',          # 41x - "flock, herd" (honte = flocks)
     'ngetsak': 'pray/intercede',  # 61x - causative of nget (request)
+    
+    # === Recently discovered verb stems (from partial analysis) ===
+    'ap': 'press/submit',    # 53x - ki-ap = submit (reflexive)
+    'at': 'cut',             # 53x - ki-at = circumcise (reflexive cut)
+    'bia': 'worship',        # 49x - bia-in = worshipping
+    'biak': 'worship/serve', # 211x - "worship, serve" (biak nading = for serving)
+    'gamtat': 'kingdom',     # base for gamtatna, gamtatnasa
+    'phat': 'praise',        # 70x - "praise, bless, commend" (kiphatsakna = pride)
+    'phatsak': 'glorify',    # 45x - "glorify" (phat + CAUS)
+    'zeet': 'tempt',         # 48x - "tempt, test" (ze-et hyphenated)
+    'khangsak': 'raise.up',  # 39x - "raise up generations" (khang + CAUS)
+    'lasak': 'take.CAUS',    # 39x - "take away" (la + sak)
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -785,6 +802,16 @@ NOUN_STEMS = {
     'maangmuh': 'vision',    # 42x - base for maangmuhna (vision)
     'tuikulh': 'island',     # 41x - "island, isles" (isles of the sea)
     'puantualpi': 'robe/coat',  # 40x - "coat of many colors"
+    
+    # === na- words that are NOT 2SG prefix! ===
+    # These are independent lexemes, not na- + X
+    'nasem': 'servant',      # 350x - "servant, young man" (NOT 2SG-serve)
+    'nasia': 'severe',       # 60x - "severe, great, terrible" (NOT 2SG-bad)
+    'nalamdang': 'miracle',  # 76x - "miracle, wonder, sign" (NOT 2SG-way-other)
+    'naita': 'near',         # 36x - "near, approaching" (NOT 2SG-love)
+    'natui': 'discharge',    # 22x - "bodily discharge, issue" (NOT 2SG-water)
+    'naupa': 'younger.sibling', # 21x - "younger brother/sibling" (NOT 2SG-elder)
+    'nakpi': 'night',        # 42x - "night" (NOT 2SG-big)
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -902,6 +929,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
     if not word:
         return ('', '')
     
+    # Normalize hyphens - try without hyphens first for morphological analysis
+    # This handles cases like 'ki-ap' vs 'kiap', 'pua-in' vs 'puain'
+    word_no_hyphen = word.replace('-', '')
+    
     # Check if proper noun
     if is_proper_noun(word):
         return (word, word.upper())
@@ -925,8 +956,13 @@ def analyze_word(word: str) -> Tuple[str, str]:
     
     # Check function words first (full match)
     word_lower = word.lower()
+    word_no_hyphen_lower = word_no_hyphen.lower()
+    
+    # Try both hyphenated and unhyphenated forms
     if word_lower in FUNCTION_WORDS:
         return (word, FUNCTION_WORDS[word_lower])
+    if word_no_hyphen_lower in FUNCTION_WORDS:
+        return (word, FUNCTION_WORDS[word_no_hyphen_lower])
     
     # Check common compounds - EXPANDED from corpus frequency analysis
     COMPOUND_WORDS = {
@@ -944,6 +980,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gamah': ('gam-ah', 'land-LOC'),
         'vantungah': ('vantung-ah', 'heaven-LOC'),
         'leitungah': ('leitung-ah', 'earth-LOC'),
+        'khuapi-ah': ('khuapi-ah', 'city-LOC'),  # hyphenated city
+        'tawpna-ah': ('tawpna-ah', 'end.NMLZ-LOC'),  # end/latter
+        
+        # === Religious vocabulary ===
+        'biakbuk': ('biak-buk', 'worship-tent'),  # 112x - sanctuary/tabernacle
         
         # === Verb + Quotative Compounds ===
         'ci-in': ('ci-in', 'say-QUOT'),
@@ -953,11 +994,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # === TAM Compounds ===
         'dingin': ('ding-in', 'PROSP-ERG'),
-        'nadingin': ('na-ding-in', '2SG-PROSP-ERG'),
         'nadingun': ('na-ding-un', '2SG-PROSP-IMP'),
         'adingin': ('a-ding-in', '3SG-PROSP-ERG'),
         'kadingin': ('ka-ding-in', '1SG-PROSP-ERG'),
-        'nading': ('na-ding', '2SG-PROSP'),
         'ading': ('a-ding', '3SG-PROSP'),
         'kading': ('ka-ding', '1SG-PROSP'),
         'tungta': ('tung-ta', 'arrive-PFV'),
@@ -1008,6 +1047,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kihongin': ('ki-hong-in', 'REFL-open-ERG'),
         'kikhel': ('ki-khel', 'REFL-differ'),
         
+        # === Household/Family Compounds ===
+        'innkuanpihte': ('innkuanpih-te', 'household-PL'),  # 46x
+        'kiphatsakna': ('ki-phatsak-na', 'REFL-glorify-NMLZ'),  # 45x - pride/selfwill
+        
         # === Causative Compounds ===
         'paisak': ('pai-sak', 'go-CAUS'),
         'damsak': ('dam-sak', 'well-CAUS'),
@@ -1042,6 +1085,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khempeuhah': ('khempeuh-ah', 'all-LOC'),    # 378x "to all, in all"
         'khempeuhin': ('khempeuh-in', 'all-ERG'),   # "by all"
         'peuhpeuh': ('peuh-peuh', 'DISTR-DISTR'),
+        
+        # === Directional Verb Compounds ===
+        'paito': ('pai-to', 'go-UP'),           # 200x - "go up, ascend"
+        'paitoin': ('pai-to-in', 'go-UP-ERG'),  # going up
+        'paisuk': ('pai-suk', 'go-DOWN'),       # "go down, descend"
+        'paisukin': ('pai-suk-in', 'go-DOWN-ERG'),
         
         # === Common Connectors ===
         'ciangin': ('ciang-in', 'then-ERG'),
@@ -1084,6 +1133,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # === ban- (besides/in addition to) compounds ===
         'banah': ('ban-ah', 'besides-LOC'),   # 138x "in addition to"
+        
+        # === Number Compounds ===
+        'sawmahkhat': ('sawm-ah-khat', 'ten-LOC-one'),  # 47x - "tithe/tenth"
         
         # === Postposition + LOC ===
         'panin': ('panin', 'ABL'),  # "from"
@@ -1373,7 +1425,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'niloh': ('ni-loh', 'day-NEG'),
         'kikoih': ('ki-koih', 'REFL-put'),
         'sakolte': ('sakol-te', 'donkey-PL'),
-        'nalamdang': ('na-lam-dang', '2SG-way-other'),
         'hing': ('hing', 'alive'),
         'pana': ('pa-na', 'father-NMLZ'),
         'lasakna': ('la-sak-na', 'take-CAUS-NMLZ'),
@@ -1517,7 +1568,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lite': ('li-te', 'four-PL'),                          # 60
         'bawngtalte': ('bawng-tal-te', 'cow-calf-PL'),        # 59
         'kahna': ('kah-na', 'fight-NMLZ'),                     # 59
-        'nasia': ('na-sia', '2SG-bad'),                        # 58
         'neute': ('neu-te', 'small-PL'),                       # 58
         'tangvalpa': ('tangval-pa', 'youth-father'),          # 58
         'khialhnate': ('khialh-na-te', 'sin-NMLZ-PL'),        # 57
@@ -1572,13 +1622,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'siampipuan': ('siampi-puan', 'priest-cloth'),        # 46
         'thusia': ('thu-sia', 'word-evil'),                    # 46
         'savun': ('sa-vun', 'meat-fur'),                       # 45
-        'thupiaksa': ('thupiak-sa', 'commandment-flesh'),     # 45
-        'gamtatnasa': ('gamtat-na-sa', 'kingdom-NMLZ-?'),     # 45
+        'thupiaksa': ('thu-piak-sa', 'word-give-PL.POSS'),     # 45
+        'gamtatnasa': ('gamtat-na-sa', 'kingdom-NMLZ-PL.POSS'), # 45 - "his kingdom/rule"
+        'nasepnate': ('nasepna-te', 'work.NMLZ-PL'),            # 47 - "works"
         'puanhampi': ('puan-ham-pi', 'cloth-cover-big'),      # 45
         'sawt': ('sawt', 'long.time'),                         # 45
         'zawng': ('zawng', 'all'),                              # 45
         'nun': ('nun', 'life'),                                 # 45
-        'piaksa': ('piak-sa', 'give-flesh'),                   # 44
+        'piaksa': ('piak-sa', 'give-PL.POSS'),                 # 44
         'gamlapi': ('gam-la-pi', 'land-take-big'),            # 44
         'ahihlam': ('a-hih-lam', '3SG-be-way'),               # 43
         'thukkik': ('thuk-kik', 'deep-again'),                # 43
@@ -1601,21 +1652,33 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'puantualpi': ('puan-tual-pi', 'cloth-?-big'),        # 39
         'thutak': ('thu-tak', 'word-true'),                   # 39
     }
+    
+    # Check compound words (try both hyphenated and unhyphenated)
     if word_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_lower]
+    if word_no_hyphen_lower in COMPOUND_WORDS:
+        return COMPOUND_WORDS[word_no_hyphen_lower]
     
-    # Check noun stems
+    # Check noun stems (try both forms)
     if word in NOUN_STEMS:
         return (word, NOUN_STEMS[word])
+    if word_no_hyphen in NOUN_STEMS:
+        return (word, NOUN_STEMS[word_no_hyphen])
+    if word_no_hyphen_lower in NOUN_STEMS:
+        return (word, NOUN_STEMS[word_no_hyphen_lower])
     
-    # Check verb stems
+    # Check verb stems (try both forms)
     if word in VERB_STEMS:
         return (word, VERB_STEMS[word])
+    if word_no_hyphen in VERB_STEMS:
+        return (word, VERB_STEMS[word_no_hyphen])
+    if word_no_hyphen_lower in VERB_STEMS:
+        return (word, VERB_STEMS[word_no_hyphen_lower])
     
-    # Try morphological decomposition
+    # For morphological decomposition, use the unhyphenated form
     segments = []
     glosses = []
-    remaining = word
+    remaining = word_no_hyphen
     
     # 1. Check for pronominal prefix
     for prefix, gloss in sorted(OBJECT_PREFIXES.items(), key=lambda x: -len(x[0])):
