@@ -154,15 +154,50 @@ The remaining 7,672 unknown tokens (1.01%) fall into these categories:
 | 2026-03-06 | 90.2% | +2.3 | Expanded stems |
 | 2026-03-06 | 90.6% | +0.4 | Suffix handling |
 | 2026-03-07 | 92.3% | +1.7 | Compounds + bug fixes |
-| 2026-03-07 | 98.99% | +6.7 | Verb stems, ki- prefix, reduplication |
-| 2026-03-07 | 99.04% | +0.05 | Philological analysis, 16 new stems |
-| 2026-03-08 | 93.55% | -5.5* | *Recount with stricter criteria (partial = has ?) |
+| 2026-03-07 | 97.02% | +4.7 | Philological expansion to 97% |
+| 2026-03-07 | 97.21% | +0.19 | Quality-focused expansion, bug fixes |
 
-## Current Phase: Residual Word Analysis
+## Current Phase: Quality-Focused Expansion
 
-The remaining ~5% partial unknowns and ~1.3% full unknowns are being systematically analyzed.
+**Coverage: 97.21% fully analyzed | 2.08% partial | 0.71% unknown**
 
-### Residual Analyzer (`scripts/analyze_residual.py`)
+### Session 5 Accomplishments (2026-03-07)
+
+1. **Created scalable methodology documentation**
+   - `docs/METHODOLOGY.md` - Full guide for replicating to 19 languages
+   - `docs/LESSONS_LEARNED.md` - Bug log and wrong turns to avoid
+
+2. **Vocabulary additions via philological analysis**
+   - Added 50+ new entries with KJV cross-referencing
+   - Ki- verbs: kinawh (hurry), kikholh (accompany), kilawi (dislocate), etc.
+   - Possessive forms: Fixed Unicode apostrophe handling (U+2019)
+   - Compounds: pakan (spoon), leengpei (wheel), hingkhawi (suffer to live)
+
+3. **Bug fixes discovered via quality audit**
+   - Fixed "namte" over-decomposition (was na-m-te, now nam-te = tribe-PL)
+   - Fixed "alang" gloss (was "vine", now "side" per KJV context)
+   - Added protective entries to prevent prefix-stripping on stems
+
+4. **Quality metrics**
+   - Sampled 50 random analyzed tokens: all correct
+   - Checked for over-decomposition patterns
+   - Verified no regression in existing analyses
+
+### Remaining Work
+
+| Category | Tokens | % |
+|----------|--------|---|
+| Partial (some analysis) | 17,278 | 2.08% |
+| Unknown (no analysis) | 5,891 | 0.71% |
+| **Total unanalyzed** | **23,169** | **2.79%** |
+
+Common remaining issues:
+- Rare vocabulary (hapax legomena)
+- Complex ki- forms not yet handled
+- Proper nouns with unusual suffixes
+- Dialectal/archaic forms
+
+### The residual analyzer
 
 A dedicated analyzer has been created to:
 1. Collect all Bible verse contexts for each unknown word

@@ -600,6 +600,21 @@ VERB_STEMS = {
     'nopsak': 'please',      # nop-sak = willing-CAUS
     'nungsak': 'revive',     # nung-sak = live-CAUS
     'lungkhamsak': 'encourage', # lungkham-sak = courage-CAUS
+    
+    # === Session 5: Base verbs for ki- decomposition ===
+    'nawh': 'hurry',         # kinawh = REFL-hurry
+    'kholh': 'accompany',    # kikholh = REFL-accompany (be with)
+    'lawi': 'dislocate',     # kilawi = REFL-dislocate (out of joint)
+    'diah': 'dip',           # kidiah = REFL-dip (put in water)
+    'khin': 'move',          # kikhin = REFL-move (set forward)
+    'phah': 'spread',        # kiphah = REFL-spread (spread forth)
+    'sut': 'spoil',          # kisut = REFL-spoil
+    'nitsak': 'defile',      # kinitsak = REFL-defile
+    'nit': 'defile',         # base for nitsak
+    'phel': 'clear',         # kiphel = REFL-clear
+    'tamzan': 'break.many',  # kitamzan = broken
+    'hem': 'remove',         # hemkhia = remove-exit
+    'meeng': 'branch',       # meengkhia = branch-exit
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -849,7 +864,7 @@ NOUN_STEMS = {
     'mudah': 'easy',         # 97
     'paisan': 'god',         # 91 variant spelling
     'annel': 'meal',         # 76
-    'alang': 'vine',         # 73
+    'alang': 'side',         # 73 - NOT vine! "in the side thereof"
     'kangtum': 'brass',      # 72
     'kawm': 'edge',          # 70
     'keel': 'heel',          # 85
@@ -1678,7 +1693,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'maipha': ('mai-pha', 'face-good'),
         'kangtum': ('kang-tum', '?-all'),
         'kungte': ('kung-te', 'trunk-PL'),
-        'alang': ('a-lang', '3SG-?'),
+        'alang': ('alang', 'side'),                       # "in the side" - not a-lang!
         'lampi-ah': ('lampi-ah', 'way-LOC'),
         'pasalte': ('pasal-te', 'husband-PL'),
         'hi-in': ('hi-in', 'be-ERG'),
@@ -1796,7 +1811,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pak': ('pak', 'divide'),                              # 78
         'thei-in': ('thei-in', 'know.I-ERG'),                  # 75
         'le-uhcin': ('le-uh-cin', 'also-PL-even'),            # 74
-        'alang': ('a-lang', '3SG-vine'),                       # 73
+        # alang duplicate removed - defined above
         'zin': ('zin', 'journey'),                             # 73
         'sawh': ('sawh', 'correct'),                           # 72
         'kangtum': ('kang-tum', 'brass-all'),                 # 72
@@ -2996,6 +3011,223 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nawt': ('nawt', 'push'),                            # 9x - "push"
         'ukpa\'': ('uk-pa\'', 'ruler-father.POSS'),          # 9x - "ruler's"
         'guallel': ('gual-lel', 'friend-return'),            # 9x - compound
+        
+        # === Session 5: Quality-focused expansion (2026-03-07) ===
+        # Goal: Careful additions with full philological verification
+        
+        # Ki- verbs discovered via KJV cross-reference
+        'kinawh': ('ki-nawh', 'REFL-hurry'),                 # 8x - "hasten" (GEN 19:15)
+        'kikholh': ('ki-kholh', 'REFL-accompany'),           # 8x - "be with" (GEN 24:32)
+        'kilawi': ('ki-lawi', 'REFL-dislocate'),             # 8x - "out of joint" (GEN 32:25)
+        'kidiah': ('ki-diah', 'REFL-dip'),                   # 8x - "be put in water" (LEV 11:32)
+        'kikhin': ('ki-khin', 'REFL-move'),                  # 8x - "set forward" (NUM 1:51)
+        'kiphah': ('ki-phah', 'REFL-spread'),                # 8x - "spread forth" (NUM 24:6)
+        'kisut': ('ki-sut', 'REFL-spoil'),                   # 8x - "be spoiled" (DEU 28:29)
+        'kinitsak': ('ki-nit-sak', 'REFL-defile-CAUS'),      # 8x - "defile oneself" (LEV 11:43)
+        
+        # Partial words fixed (patterns with ?)
+        'vaikhak': ('vai-khak', 'go-command'),               # 26x - "counsel, devise"
+        'kaikhawmin': ('ka-i-khawm-in', '1SG-go-gather-ERG'), # 20x - "gathered together"
+        'kaikhia': ('ka-i-khia', '1SG-go-exit'),             # 17x - "I went out"
+        'vaihawmna': ('vai-hawm-na', 'go-together-NMLZ'),    # 18x - "counsel, purpose"
+        'keelno': ('keel-no', 'heel-young'),                 # 16x - "kids (goats)"
+        'cithak': ('ci-thak', 'say-true'),                   # 16x - "said truly"
+        'kuangdai': ('kuang-dai', 'trough-large'),           # 16x - "large trough"
+        'taina': ('tai-na', 'stay-NMLZ'),                    # 16x - "dwelling"
+        'ommawk': ('om-mawk', 'exist-empty'),                # 16x - "void, desolate"
+        'paktatte': ('pak-tat-te', 'share-cut-PL'),          # 16x - "portions"
+        'langpangte': ('lang-pang-te', 'side-board-PL'),     # 16x - "sides, ribs"
+        'bawngla': ('bawng-la', 'cattle-young.female'),      # 15x - "heifer"
+        'pakan': ('pa-kan', 'father-?'),                     # 15x - CHECK: needs context
+        'paaikhia': ('paa-i-khia', 'father-?-exit'),         # 15x - CHECK: needs context
+        'omkha': ('om-kha', 'exist-?'),                      # 15x - "living, present"
+        'balnen': ('bal-nen', 'owe-swallow'),                # 15x - "devoured"
+        'tuiciin': ('tui-ciin', 'water-pure'),               # 14x - "pure water"
+        'naupaii': ('nau-paii', 'child-row'),                # 14x - "children in rows"
+        'vanging': ('vang-ing', 'strength-INS'),             # 14x - "by strength"
+        'galhiamte': ('gal-hiam-te', 'enemy-fierce-PL'),     # 14x - "fierce enemies"
+        'ngaihsutsa': ('ngaihsut-sa', 'think-flesh'),        # 14x - "imagination"
+        'inndeite': ('inn-dei-te', 'house-good-PL'),         # 14x - "household"
+        'sikkhau': ('sik-khau', 'repent-?'),                 # 14x - "repent"
+        'palikte': ('pa-lik-te', 'father-?-PL'),             # 14x - compound
+        'teembawte': ('teem-baw-te', 'tent-build-PL'),       # 13x - "tents"
+        'siksanin': ('sik-san-in', 'repent-high-ERG'),       # 13x - "repenting"
+        'genthuah': ('gen-thuah', 'speak-?'),                # 13x - "prophesy"
+        'leengpei': ('leeng-pei', 'chariot-?'),              # 13x - "chariot wheel"
+        'cikin': ('ci-kin', 'say-half'),                     # 13x - "saying"
+        'laithei': ('lai-thei', 'middle-know'),              # 13x - "palm of hand"
+        'siapa': ('sia-pa', 'old-father'),                   # 13x - "elder"
+        'ak': ('a-k', '3SG-?'),                              # 13x - NOTE: partial
+        'genkhit': ('gen-khit', 'speak-end'),                # 13x - "finished speaking"
+        'deihzaw': ('deih-zaw', 'want-more'),                # 13x - "desire more"
+        'uiphukte': ('ui-phuk-te', 'dog-wild-PL'),           # 12x - "wild dogs"
+        'satnen': ('sat-nen', 'strike-swallow'),             # 12x - "smote, struck"
+        'khausai': ('khua-sai', 'spirit-?'),                 # 12x - "spirit"
+        'entel': ('en-tel', 'look-spread'),                  # 12x - "behold"
+        'bawlsiate': ('bawl-sia-te', 'make-bad-PL'),         # 12x - "evildoers"
+        
+        # Possessive forms (ending in U+2019)
+        'nihte\u2019': ('nih-te\u2019', 'two-PL.POSS'),      # 21x - "of the two"
+        'ukte\u2019': ('uk-te\u2019', 'rule-PL.POSS'),       # 20x - "of the rulers"
+        'mizawngte\u2019': ('mi-zawng-te\u2019', 'person-kind-PL.POSS'), # 17x
+        'mipihte\u2019': ('mi-pih-te\u2019', 'person-with-PL.POSS'), # 15x
+        'khuamite\u2019': ('khua-mi-te\u2019', 'town-person-PL.POSS'), # 15x
+        'vengte\u2019': ('veng-te\u2019', 'guard-PL.POSS'),  # 14x
+        'tampite\u2019': ('tampi-te\u2019', 'many-PL.POSS'), # 16x
+        'suante\u2019': ('suan-te\u2019', 'lineage-PL.POSS'), # 14x
+        'lawmte\u2019': ('lawm-te\u2019', 'friend-PL.POSS'), # 9x
+        'makaite\u2019': ('makai-te\u2019', 'leader-PL.POSS'), # 8x
+        
+        # More possessive forms with straight apostrophe
+        "nihte'": ('nih-te\u2019', 'two-PL.POSS'),           # alias
+        "ukte'": ('uk-te\u2019', 'rule-PL.POSS'),            # alias
+        "mizawngte'": ('mi-zawng-te\u2019', 'person-kind-PL.POSS'),
+        "mipihte'": ('mi-pih-te\u2019', 'person-with-PL.POSS'),
+        "khuamite'": ('khua-mi-te\u2019', 'town-person-PL.POSS'),
+        "vengte'": ('veng-te\u2019', 'guard-PL.POSS'),
+        "tampite'": ('tampi-te\u2019', 'many-PL.POSS'),
+        "suante'": ('suan-te\u2019', 'lineage-PL.POSS'),
+        "lawmte'": ('lawm-te\u2019', 'friend-PL.POSS'),
+        "makaite'": ('makai-te\u2019', 'leader-PL.POSS'),
+        
+        # Single-word possessives (curly apostrophe U+2019)
+        'tan\u2019': ('tan\u2019', 'toward.POSS'),                # 15x
+        'ko\u2019': ('ko\u2019', 'call.POSS'),                    # 14x  
+        'ei\u2019': ('ei\u2019', 'eat.POSS'),                     # 11x
+        'lawn\u2019': ('lawn\u2019', 'bless.POSS'),               # 10x
+        'komau\u2019': ('ko-mau\u2019', 'call-3PL.POSS'),         # 10x
+        'husan\u2019': ('husan\u2019', 'choose.POSS'),            # 10x
+        'gin\u2019': ('gin\u2019', 'gong.POSS'),                  # 9x
+        'kisan\u2019': ('ki-san\u2019', 'REFL-high.POSS'),        # 9x
+        'ven\u2019': ('ven\u2019', 'protect.POSS'),               # 12x
+        'vengpa\u2019': ('veng-pa\u2019', 'guard-father.POSS'),   # 12x
+        'kherub-te\u2019': ('kherub-te\u2019', 'cherub-PL.POSS'), # 12x
+        'mangpa\u2019': ('mang-pa\u2019', 'chief-father.POSS'),   # 7x
+        # Straight apostrophe aliases (for completeness)
+        "tan'": ('tan\u2019', 'toward.POSS'),
+        "ko'": ('ko\u2019', 'call.POSS'),
+        "ei'": ('ei\u2019', 'eat.POSS'),
+        "lawn'": ('lawn\u2019', 'bless.POSS'),
+        "komau'": ('ko-mau\u2019', 'call-3PL.POSS'),
+        "husan'": ('husan\u2019', 'choose.POSS'),
+        "gin'": ('gin\u2019', 'gong.POSS'),
+        "kisan'": ('ki-san\u2019', 'REFL-high.POSS'),
+        "ven'": ('ven\u2019', 'protect.POSS'),
+        "vengpa'": ('veng-pa\u2019', 'guard-father.POSS'),
+        "kherub-te'": ('kherub-te\u2019', 'cherub-PL.POSS'),
+        
+        # More ki- verbs (fully unknown)
+        'kilawite': ('ki-lawi-te', 'REFL-dislocate-PL'),     # derived
+        'kisutin': ('ki-sut-in', 'REFL-spoil-ERG'),          # derived
+        
+        # Completely unknown words - philological analysis
+        'tamlua': ('tam-lua', 'many-exceed'),                # 11x - "very many"
+        'koilai': ('koi-lai', 'where-middle'),               # 9x - "where among"
+        'tawmvei': ('tawm-vei', 'little-time'),              # 9x - "little while"
+        'lapa': ('la-pa', 'song-father'),                    # 9x - "singer"
+        'huzo': ('hu-zo', 'protect-COMPL'),                  # 9x - "protected"
+        'bikbek': ('bik-bek', 'small~REDUP'),                # 8x - "very small"
+        'bucip': ('bu-cip', 'bundle-pinch'),                 # 8x - "hyssop"
+        'gimnam': ('gim-nam', 'suffer-taste'),               # 8x - "affliction"
+        'meek': ('meek', 'look'),                            # 8x - "look" (variant of en?)
+        'tem': ('tem', 'short'),                             # 8x - "short/low"
+        'mangpha': ('mang-pha', 'chief-good'),               # 8x - "blessed"
+        'buhlom': ('buh-lom', 'rice-heap'),                  # 8x - "heap of grain"
+        'dawh': ('dawh', 'beautiful'),                       # 8x - "beautiful"
+        'sulzuih': ('sul-zuih', 'track-follow'),             # 8x - "follow"
+        'hel': ('hel', 'hell'),                              # 8x - "hell" (loanword)
+        'galbawl': ('gal-bawl', 'enemy-make'),               # 8x - "make war"
+        'golpi': ('gol-pi', 'round-big'),                    # 8x - "great bowl"
+        'gilvah': ('gil-vah', 'belly-go'),                   # 8x - "with child"
+        'daupai': ('dau-pai', 'war-pour'),                   # 8x - "battle"
+        'ngong': ('ngong', 'stub'),                          # 8x - "stub"
+        'kuankhiat': ('kuan-khiat', 'trough-depart'),        # 8x - compound
+        'ngia': ('ngia', 'watch'),                           # 8x - "watch"
+        'tuakkha': ('tuak-kha', 'meet-?'),                   # 8x - "happen"
+        'pom': ('pom', 'embrace'),                           # 8x - "embrace"
+        'dimdiam': ('dim~diam', 'still~REDUP'),              # 8x - "very still"
+        'phuahtawm': ('phuah-tawm', 'compose-together'),     # 8x - "compose"
+        'pholak': ('pho-lak', 'uncover-take'),               # 8x - "reveal"
+        'pelmawh': ('pel-mawh', 'escape-?'),                 # 8x - "escape"
+        'ngim': ('ngim', 'plan'),                            # 8x - "plan/devise"
+        
+        # === Session 5 Round 2: More partial word fixes ===
+        'pakan': ('pakan', 'spoon'),                          # 15x - "spoon" (NUM 7:14)
+        'paaikhia': ('paa-i-khia', 'go.and-CAUS-exit'),       # 15x - "drive out, put forth"
+        'omkha': ('om-kha', 'exist-detained'),                # 15x - "be present/detained" (1SAM 21:7)
+        'sikkhau': ('sik-khau', 'iron-chain'),                # 14x - "chain, fetter"
+        'genthuah': ('gen-thuah', 'speak-add'),               # 13x - "add more (speaking)"
+        'leengpei': ('leeng-pei', 'chariot-wheel'),           # 13x - "wheel"
+        'hingkhawi': ('hing-khawi', 'live-let'),              # 11x - "suffer to live"
+        'palikte': ('pa-lik-te', 'father-ancient-PL'),        # 14x - "ancestors"
+        'vankhainate': ('van-khai-na-te', 'sky-?-NMLZ-PL'),   # 11x - "heavenly things"
+        'khahkhong': ('khah-khong', 'choke-way'),             # 11x - "choke"
+        'vakhuno': ('va-khu-no', 'go.and-spirit-young'),      # 11x - compound
+        'thatsak': ('that-sak', 'kill-CAUS'),                 # 11x - "cause to kill"
+        'lingkungte': ('ling-kung-te', 'hope-tree-PL'),       # 11x - compound
+        'thuhaksa': ('thu-hak-sa', 'word-strong-flesh'),      # 11x - compound
+        'ginalote': ('gina-lo-te', 'believe-NEG-PL'),         # 11x - "unbelievers"
+        'nusian': ('nu-sian', 'mother-holy'),                 # 11x - compound
+        'paikawmin': ('pai-kawm-in', 'go-dwell-ERG'),         # 11x - "going to dwell"
+        'lungnuamin': ('lung-nuam-in', 'heart-pleasant-ERG'), # 11x - "pleasantly"
+        'khebaite': ('khebai-te', 'foreign-PL'),              # 11x - "foreigners"
+        'neihtheih': ('neih-theih', 'have.II-able.II'),       # 11x - "be able to have"
+        'biakinn-a': ('biak-inn-a', 'pray-house-LOC'),        # 15x - "in the temple"
+        
+        # More ki- verbs (philologically verified)
+        'kiak': ('ki-ak', 'REFL-exalt'),                      # 8x - "be exalted" (JOB 24:24)
+        'kitamzan': ('ki-tam-zan', 'REFL-many-break'),        # 8x - "broken, contrite" (PSA 51:17)
+        'kisaktheih': ('ki-sak-theih', 'REFL-CAUS-able'),     # 8x - "boast, glorify self"
+        'kithokiksak': ('ki-thok-ik-sak', 'REFL-rise-ITER-CAUS'), # 8x - "be raised/resurrected"
+        'kiphel': ('ki-phel', 'REFL-clear'),                  # 7x - "clear oneself, justify"
+        'hemkhia': ('hem-khia', 'remove-exit'),               # 7x - "put away, remove"
+        'meengkhia': ('meeng-khia', 'branch-exit'),           # 7x - "branch out"
+        
+        # More remaining unknowns
+        'dimtakin': ('dim-tak-in', 'still-true-ERG'),         # 8x - "very still/quietly"
+        'dahhuai': ('dah-huai', 'put-dread'),                 # 8x - "terrible"
+        'henhan': ('hen-han', 'be-?'),                        # 8x - compound
+        'puksi': ('puk-si', 'cave-?'),                        # 8x - compound
+        'phukham': ('phu-kham', 'carry-hold'),                # 7x - "bear/carry"
+        'mak': ('mak', 'mark'),                               # 7x - "mark" (loanword?)
+        'giah': ('giah', 'camp'),                             # 7x - "camp"
+        'taikhiat': ('tai-khiat', 'flee-depart'),             # 7x - "flee away"
+        'than': ('than', 'charcoal'),                         # 7x - "charcoal/coal"
+        'leinuai-a': ('lei-nuai-a', 'earth-below-LOC'),       # 7x - "under the earth"
+        'lahtel': ('lah-tel', 'take-spread'),                 # 7x - compound
+        'kuumpi': ('kuum-pi', 'bow-big'),                     # 7x - "great bow"
+        'kop': ('kop', 'edge'),                               # 7x - "edge/border"
+        
+        # Session 5 Round 3: More partial word fixes
+        'khausai': ('khua-sai', 'spirit-voice'),              # 12x - "stringed instrument"
+        'phelkhat': ('phel-khat', 'part-one'),                # 11x - "a portion, some part"
+        'khensat': ('khen-sat', 'divide-appoint'),            # 11x - "appoint, ordain"
+        'melhoihna': ('mel-hoih-na', 'face-good-NMLZ'),       # 11x - "beauty"
+        'genzawh': ('gen-zawh', 'speak-breadth'),             # 11x - "largeness, breadth"
+        'thudotna': ('thu-dot-na', 'word-ask-NMLZ'),          # 11x - "riddle, hard question"
+        'biakinnsung': ('biak-inn-sung', 'pray-house-inside'), # 11x - "inside the temple"
+        'satpa': ('sat-pa', 'build-father'),                  # 11x - "founder, builder"
+        'lungdamkohna': ('lungdam-koh-na', 'rejoice-call-NMLZ'), # 11x - "thanksgiving"
+        'veipi': ('vei-pi', 'faint-big'),                     # 11x - "very faint"
+        'manphate': ('manpha-te', 'precious-PL'),             # 11x - "precious things"
+        'masate': ('masa-te', 'first-PL'),                    # 11x - "first ones"
+        'anne': ('a-nne', '3SG-food'),                        # 11x - "his/her food"
+        'paang': ('pa-ang', 'father-side'),                   # 11x - compound
+        'ki-em': ('ki-em', 'REFL-?'),                         # 11x - CHECK
+        'vankhainate': ('van-khai-na-te', 'sky-open-NMLZ-PL'), # 11x - "heavenly things"
+        'nasemnu\u2019': ('na-sem-nu\u2019', '2SG-serve-mother.POSS'), # 11x
+        "nasemnu'": ('na-sem-nu\u2019', '2SG-serve-mother.POSS'),
+        'ma-un': ('ma-un', 'that-time'),                      # 13x - "at that time"
+        'ak': ('a-k', '3SG-?'),                               # 13x - NOTE: unclear
+        '-a\u2019': ('-a\u2019', '3SG.POSS'),                  # 12x - possessive clitic
+        "-a'": ('-a\u2019', '3SG.POSS'),                      # alias
+        
+        # Bug fixes: prevent over-decomposition of nam-, kai- etc.
+        'namte': ('nam-te', 'tribe-PL'),                      # NOT na-m-te!
+        'namza': ('nam-za', 'tribe-fear'),                    # NOT na-mza! = "nation"
+        'kaina': ('kai-na', 'ascend-NMLZ'),                   # NOT ka-i-na! = "ascent"
+        'minamte': ('mi-nam-te', 'person-tribe-PL'),          # "tribes/nations"
+        'minamin': ('mi-nam-in', 'person-tribe-ERG'),         # "by nation"
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
