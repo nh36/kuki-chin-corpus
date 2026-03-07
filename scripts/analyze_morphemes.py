@@ -78,185 +78,338 @@ NOMINALIZERS = {
     'uh': 'PL',       # Plural (separate word)
 }
 
-# Common function words with glosses
+# Common function words with glosses - expanded with frequencies
 FUNCTION_WORDS = {
-    # Conjunctions
-    'le': 'and',
-    'leh': 'and/or',
-    'ahihleh': 'if',
-    'hangin': 'because',
-    'bangin': 'like',
-    'manin': 'therefore',
-    'zongin': 'although',
-    # Particles
-    'mah': 'EMPH',
-    'pen': 'TOP',
-    'zong': 'also',
-    'khempeuh': 'all',
-    # Adverbs/connectors
-    'ciangin': 'then',
-    'tua': 'DIST',
-    'hih': 'PROX',
-    # Copula/auxiliary
-    'ci': 'say',
-    'ahi': 'be.3SG',
+    # === Conjunctions & Connectors ===
+    'le': 'and',             # 10,942
+    'leh': 'and/or',         # 2,921
+    'ahihleh': 'if',         # 335
+    'hitaleh': 'if.so',      # 295
+    'hangin': 'because',     # 3,461
+    'bangin': 'like',        # 3,886
+    'manin': 'therefore',    # 2,790
+    'zongin': 'although',    # 1,970
+    'ciangin': 'then',       # 9,297
+    'inla': 'and.then',      # ~838
+    
+    # === Topic/Focus Particles ===
+    'mah': 'EMPH',           # 1,540
+    'pen': 'TOP',            # 4,541
+    'zong': 'also',          # 3,320
+    'bek': 'only',           # 782
+    
+    # === Quantifiers ===
+    'khempeuh': 'all',       # 4,783
+    'peuhpeuh': 'every',     # 431
+    'tampi': 'many',         # 727
+    'teltel': 'each',
+    
+    # === Demonstratives ===
+    'tua': 'DIST',           # 9,156 (sentence-initial)
+    'hih': 'PROX',           # 4,025
+    'tua': 'that',
+    'hih': 'this',
+    'Tua': 'that',           # capitalized sentence-initial
+    
+    # === Copula/Auxiliary ===
+    'ci': 'say',             # 5,954
+    'cih': 'say.NOM',        # 2,827
+    'ahi': 'be.3SG',         # 7,409
     'ahih': 'be.3SG.REL',
-    'hi': 'DECL',
-    'om': 'exist',
-    # Pronouns (full forms)
-    'amah': '3SG.PRO',
-    'amaute': '3PL.PRO',
-    'keimah': '1SG.PRO',
-    'nangmah': '2SG.PRO',
+    'hi': 'DECL',            # 35,961
+    'om': 'exist',           # 5,068
+    
+    # === Independent Pronouns ===
+    'amah': '3SG.PRO',       # 4,404
+    'amaute': '3PL.PRO',     # 4,590
+    'keimah': '1SG.PRO',     # 656
+    'nangmah': '2SG.PRO',    # 435
     'amau': '3PL.PRO',
-    'note': '2PL.PRO',
-    'kote': '1PL.PRO',
+    'note': '2PL.PRO',       # 3,016
+    'kote': '1PL.PRO',       # 649
     'nang': '2SG.PRO',
-    # Pronominal markers (when standalone)
+    'nangma': '2SG.self',    # emphatic 2SG
+    'keima': '1SG.self',     # emphatic 1SG
+    'eite': '1PL.PRO',       # we (exclusive)
+    
+    # === Pronominal Markers (standalone) ===
     'ka': '1SG',
     'na': '2SG',
-    'a': '3SG',
+    'a': '3SG',              # 58,363 (also generic article)
     'i': '1PL.INCL',
-    'kong': '1SG→3',
-    'hong': '3→1',
-    # Case markers as separate words
-    'in': 'ERG',
+    'kong': '1SG→3',         # 1,945
+    'hong': '3→1',           # 15,358
+    'nong': '2→1',           # 720
+    
+    # === Case Markers (standalone) ===
+    'in': 'ERG',             # 22,726
     'ah': 'LOC',
-    'uh': 'PL',
+    'uh': 'PL',              # 21,924
     'un': 'PL.IMP',
-    # Negation
-    'lo': 'NEG',
-    'kei': 'NEG.EMPH',
-    # Question
-    'hiam': 'Q',
-    # TAM
-    'ding': 'PROSP',
-    'dingin': 'PROSP.LOC',
-    'nadingin': '2SG.PROSP.LOC',
-    'ta': 'PFV',
-    # Relative/nominalizers
-    'mi': 'REL/person',
-    # Numbers  
-    'khat': 'one',
-    'nih': 'two',
-    'thum': 'three',
+    'tawh': 'COM',           # 7,572
+    'panin': 'ABL',          # 4,296
+    'sangin': 'COMP',        # 517
+    'dong': 'until',         # 647
+    
+    # === Negation ===
+    'lo': 'NEG',             # 6,018
+    'kei': 'NEG.EMPH',       # 6,487
+    'loh': 'NEG.NOM',        # 885
+    'loin': 'NEG.ERG',       # 873
+    'kuamah': 'nobody',      # 595
+    'bangmah': 'nothing',    # 495
+    
+    # === Question ===
+    'hiam': 'Q',             # 2,766
+    
+    # === TAM Markers ===
+    'ding': 'PROSP',         # 18,980
+    'dingin': 'PROSP.ERG',   # 4,798
+    'nadingin': '2SG.PROSP.ERG',  # 1,635
+    'nadingun': '2PL.PROSP.IMP',  # 656
+    'ta': 'PFV',             # 1,106
+    'zo': 'COMPL',
+    'kik': 'ITER',
+    'nawn': 'CONT',          # 1,022
+    'khin': 'IMM',           # 893
+    'khit': 'SEQ',           # 996
+    
+    # === Relational/Nominalizers ===
+    'mi': 'person/REL',      # 4,221
+    'te': 'PL',
+    'na': 'NMLZ',
+    
+    # === Numbers ===
+    'khat': 'one',           # 4,303
+    'nih': 'two',            # 598
+    'thum': 'three',         # 626
     'li': 'four',
     'nga': 'five',
     'guk': 'six',
     'sagih': 'seven',
     'giat': 'eight',
     'kua': 'nine',
-    'sawm': 'ten',
+    'sawm': 'ten',           # 679
+    'sawmnih': 'twenty',     # 263
+    'za': 'hundred',
+    'tul': 'thousand',
+    
+    # === Locative/Relational Nouns ===
+    'sung': 'inside',        # 2,208
+    'tung': 'on',            # 1,413
+    'kiang': 'beside',       # 597
+    'lai': 'midst',          # 1,032
+    'lak': 'among',          # 552
+    'mai': 'front',
+    
+    # === Adverbs ===
+    'mahmah': 'very',
+    'tawntung': 'forever',   # 679
+    'tu': 'now',
+    
+    # === Interrogatives/Comparatives ===
+    'bang': 'what/like',     # often in compounds
+    'kua': 'who',
 }
 
-# Verb stems (common ones)
+# Verb stems - expanded from corpus frequency analysis
+# Note: Some verbs have Stem I (basic) and Stem II (modified) forms
 VERB_STEMS = {
-    'om': 'exist',
-    'hi': 'be',
-    'pai': 'go',
-    'hong': 'come',
-    'nei': 'have',
-    'ci': 'say',
-    'gen': 'speak',
-    'hilh': 'teach',
-    'thei': 'know',
-    'mu': 'see',
-    'muh': 'see',
-    'za': 'hear',
-    'zak': 'hear',
-    'bawl': 'make/do',
-    'pia': 'give',
-    'lak': 'take',
-    'it': 'love',
+    # Existence/State (high frequency)
+    'om': 'exist',           # 5,068
+    'hi': 'be',              # copula
+    'ahi': 'be.3SG',         # 7,409
+    'ahih': 'be.3SG.REL',    # relativized copula
+    'suak': 'become',        # 605
+    'teng': 'dwell',         # 859
+    'dam': 'be.well',        # health state
+    'hoih': 'be.good',       # 641
+    
+    # Motion verbs
+    'pai': 'go',             # 2,350
+    'va': 'go.and',          # 817
+    'lut': 'enter',
+    'khia': 'exit',
+    'tung': 'arrive',
+    'zui': 'follow',         # 504
+    'ciahpai': 'go.home',
+    'liahpai': 'return',
+    'zuan': 'cross',
+    
+    # Perception verbs (with stem alternation)
+    'mu': 'see.I',           # 962 (Stem I)
+    'muh': 'see.II',         # 501 (Stem II)
+    'za': 'hear.I',          # 652 (Stem I)
+    'zak': 'hear.II',        # (Stem II)
+    'ngai': 'listen.I',
+    'ngaih': 'listen.II',
+    
+    # Cognition verbs (with stem alternation)
+    'thei': 'know.I',        # 2,543 (Stem I)
+    'theih': 'know.II',      # 1,383 (Stem II / passive)
     'um': 'believe',
-    'sawl': 'send',
+    'ngaihsun': 'think',     # 409 "mind-think"
+    'lung': 'feel',          # emotional state
+    
+    # Speech verbs
+    'ci': 'say',             # 5,954
+    'cih': 'say.NOM',        # 2,827
+    'gen': 'speak',          # 2,416
+    'hilh': 'teach',
+    'thugen': 'preach',      # 353 "word-speak"
+    'sam': 'call',
+    'sampah': 'proclaim',
+    'kiko': 'cry.out',
+    'paupai': 'gossip',
+    
+    # Transfer/Possession
+    'pia': 'give',           # 2,202
+    'piak': 'give.to',       # 781
+    'lak': 'take',           # 552
+    'nei': 'have',           # 1,770
+    'koih': 'put',           # 592
+    'sawl': 'send',          # 541
+    
+    # Action verbs
+    'bawl': 'make',          # 1,532
+    'sem': 'serve',          # 603
+    'uk': 'rule',            # 664
+    'that': 'kill',
+    'tat': 'strike',
+    'ne': 'eat',             # 552
+    'thuak': 'suffer',       # 535
     'phum': 'immerse',
     'vak': 'walk',
-    'kiko': 'cry.out',
-    'kipan': 'begin',
-    'kisai': 'concern',
-    'kisikin': 'repent',
-    'ngai': 'hear/listen',
-    'tung': 'arrive',
-    'kikhia': 'depart',
-    'tat': 'strike',
-    'that': 'kill',
-    'dam': 'heal',
-    'nuam': 'want',
     'tawp': 'end',
     'ding': 'stand',
     'to': 'sit',
     'tut': 'sleep',
-    'suak': 'become',
     'suk': 'make.become',
-    'khia': 'exit',
-    'lut': 'enter',
-    'zui': 'follow',
     'khen': 'divide',
-    'piak': 'give.to',
-    'sam': 'call',
-    'sampah': 'call.out',
     'gelh': 'write',
+    
+    # Reflexive/reciprocal (ki- prefix)
+    'kipan': 'begin',        # ki-pan "REFL-begin"
+    'kisai': 'concern',
+    'kisik': 'repent',
+    'kikhia': 'depart',
+    'kibawl': 'be.done',     # 338
+    'kibang': 'be.alike',    # 612
+    'kikhel': 'differ',
+    'kituah': 'meet',
+    'kikhen': 'separate',
+    
+    # Causative/applicative (-sak, -pih)
+    'paisak': 'send',        # pai-sak "go-CAUS"
+    'damsak': 'heal',        # dam-sak "well-CAUS"
+    'paipih': 'accompany',   # 599 pai-pih "go-APPL"
+    'honkhia': 'bring.out',
+    
+    # Additional common verbs from corpus
+    'nuam': 'want',
+    'it': 'love',
+    'zol': 'redeem',
+    'hong': 'come/open',
+    'ciapteh': 'receive',
+    'nuntak': 'live',        # nun-tak "life-firm"
 }
 
-# Noun stems (common ones)  
+# Noun stems - expanded from corpus frequency analysis
 NOUN_STEMS = {
-    'Pasian': 'God',
-    'Topa': 'Lord',
-    'mi': 'person',
-    'mite': 'people',
-    'pa': 'father',
-    'pate': 'fathers',
-    'nu': 'mother',
-    'tapa': 'son',
-    'tapate': 'sons',
-    'gam': 'land',
-    'khua': 'town',
-    'khuapi': 'city',
-    'inn': 'house',
-    'biakinn': 'temple',
-    'thu': 'word',
-    'thuthak': 'truth',
-    'thuhilhna': 'teaching',
-    'hun': 'time',
-    'ni': 'day',
-    'zan': 'night',
-    'lampi': 'way',
-    'tui': 'water',
-    'mawhna': 'sin',
-    'aw': 'voice',
-    'mai': 'face',
-    'khut': 'hand',
-    'min': 'name',
-    'kum': 'year',
-    'lungsim': 'heart',
-    'leitung': 'earth',
-    'vantung': 'heaven',
-    'zi': 'wife',
-    'mipa': 'man',
-    'numei': 'woman',
-    'mun': 'place',
-    'Lungdamna': 'gospel',
-    'biakna': 'worship/altar',
+    # Divine/Religious (high frequency in Bible)
+    'Pasian': 'God',         # 5,308
+    'Topa': 'Lord',          # 7,486
+    'biakna': 'worship',     # 1,236 biak-na
+    'biakinn': 'temple',     # 741 biak-inn
+    'siangtho': 'holy',      # 476
+    'thupha': 'blessing',    # 479 thu-pha
+    'mawhna': 'sin',         # 688 mawh-na
+    'Lungdamna': 'gospel',   # 296 lungdam-na
+    'nuntakna': 'life',      # 394 nuntak-na
+    'thuciamna': 'promise',  # 374 thuciam-na
+    'vangliatna': 'power',   # 282
+    
+    # Social terms
+    'mi': 'person',          # 4,221
+    'mite': 'people',        # 6,569
+    'minam': 'nation',       # 596
+    'kumpipa': 'king',       # 1,563
+    'kumpi': 'king',
+    'siampi': 'priest',      # 357
+    'siampite': 'priests',   # 255
+    'nasemte': 'servants',   # 389
+    'nasempa': 'servant',
+    'galte': 'enemies',
     'kamsang': 'prophet',
     'kamtai': 'messenger',
-    'siangtho': 'holy',
-    'kumpipa': 'king',
-    'kumpi': 'king',
-    'nasemte': 'servants',
-    'nasempa': 'servant',
-    'siampi': 'priest',
-    'siampite': 'priests',
-    'galte': 'enemies',
+    
+    # Kinship
+    'pa': 'father',          # 2,265
+    'pate': 'fathers',
+    'nu': 'mother',          # 619
+    'tapa': 'son',           # 1,906
+    'tapate': 'sons',        # 411
+    'tanu': 'daughter',
+    'sanggam': 'brother',
     'sanggamte': 'brothers',
+    'zi': 'wife',            # 339
+    'mipa': 'man',
+    'numei': 'woman',
+    
+    # Body parts
+    'khut': 'hand',          # 854
+    'mai': 'face',
+    'lungsim': 'heart',      # 957 lung-sim
+    'kha': 'spirit',         # 748
+    'sa': 'flesh',           # 573
+    'lu': 'head',
+    'ke': 'foot',
+    'mit': 'eye',
+    'bil': 'ear',
+    'ka': 'mouth',
+    
+    # Place/Location
+    'gam': 'land',           # 2,586
+    'khua': 'town',          # 919
+    'khuapi': 'city',        # 1,050
+    'inn': 'house',          # 715
+    'mun': 'place',          # 820
+    'leitung': 'earth',      # 717
+    'leitang': 'earth',      # 462 (variant)
+    'vantung': 'heaven',     # 419
+    'lampi': 'way',
+    
+    # Time terms
+    'hun': 'time',           # 1,208
+    'ni': 'day',             # 1,191
+    'kum': 'year',           # 868
+    'zan': 'night',
+    'tawntung': 'forever',   # 679
+    
+    # Abstract terms
+    'thu': 'word',           # 5,516
+    'thuthak': 'truth',
+    'thuhilhna': 'teaching',
+    'tui': 'water',
+    'aw': 'voice',
+    'min': 'name',
+    
+    # Other common nouns
+    'ngeina': 'knowledge',   # 327 ngei-na
+    'siatna': 'destruction', # 350 siat-na
+    'khialhna': 'sin',       # 328 khialh-na
+    'gamtatna': 'kingdom',   # 300 gamtat-na
 }
 
-# Proper nouns (don't gloss)
+# Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
 PROPER_NOUNS = {
     'Jesuh', 'Jesus', 'Khrih', 'Christ', 'Johan', 'John',
     'Isaiah', 'Jordan', 'Galilee', 'Jerusalem', 'Judea',
     'Israel', 'David', 'Moses', 'Simon', 'Andru', 'James',
-    'Peter', 'Zebedi', 'Nazareth', 'Kapernaum',
+    'Peter', 'Zebedi', 'Nazareth', 'Kapernaum', 'Topa',
+    'Pasian', 'Nangma', 'Zeisu', 'Kristu', 'Pilate',
+    'Abraham', 'Jakobu', 'Johane', 'Herod', 'Maria',
+    'Bethlehem', 'Egypt', 'Nazaret', 'Samaria', 'Roma',
 }
 
 # =============================================================================
@@ -264,8 +417,12 @@ PROPER_NOUNS = {
 # =============================================================================
 
 def clean_word(word: str) -> str:
-    """Remove punctuation from word."""
-    return re.sub(r'[.,;:!?\'"()]+$', '', word)
+    """Remove punctuation from word, including quotes and apostrophes at word boundaries."""
+    # Handle curly quotes and other Unicode punctuation
+    word = re.sub(r'^["\'"\'\[\(\«„"]+', '', word)  # Leading quotes/brackets
+    word = re.sub(r'[.,;:!?"\'\"\'\)\]\»"\']+$', '', word)  # Trailing punctuation
+    word = re.sub(r"'+$", '', word)  # Trailing apostrophes (possessives in some styles)
+    return word
 
 def is_proper_noun(word: str) -> bool:
     """Check if word is a proper noun."""
@@ -295,36 +452,201 @@ def analyze_word(word: str) -> Tuple[str, str]:
     if word_lower in FUNCTION_WORDS:
         return (word, FUNCTION_WORDS[word_lower])
     
-    # Check common compounds with locatives
+    # Check common compounds - EXPANDED from corpus frequency analysis
     COMPOUND_WORDS = {
+        # === Noun + LOC Compounds (very common pattern) ===
         'sungah': ('sung-ah', 'inside-LOC'),
         'tungah': ('tung-ah', 'on-LOC'),
         'kiangah': ('kiang-ah', 'beside-LOC'),
         'tangtungah': ('tangtung-ah', 'upon-LOC'),
+        'maih': ('mai-ah', 'front-LOC'),  # contracted
+        'lai-ah': ('lai-ah', 'midst-LOC'),
+        'lakah': ('lak-ah', 'among-LOC'),
+        'munah': ('mun-ah', 'place-LOC'),
+        'innah': ('inn-ah', 'house-LOC'),
+        'khuaah': ('khua-ah', 'town-LOC'),
+        'gamah': ('gam-ah', 'land-LOC'),
+        'vantungah': ('vantung-ah', 'heaven-LOC'),
+        'leitungah': ('leitung-ah', 'earth-LOC'),
+        
+        # === Verb + Quotative Compounds ===
         'ci-in': ('ci-in', 'say-QUOT'),
-        'kigelhna': ('ki-gelh-na', 'REFL-write-NMLZ'),
-        'tuiphum': ('tui-phum', 'water-immerse'),
-        'bawlkhol': ('bawl-khol', 'make-prepare'),
-        'kipankhia': ('ki-pan-khia', 'REFL-begin-exit'),
-        'maisak': ('mai-sak', 'face-CAUS'),
-        'sunga': ('sung-a', 'inside-LOC'),
-        'panin': ('panin', 'ABL'),
-        'kihongin': ('ki-hong-in', 'REFL-open-ERG'),
-        'gamlakah': ('gam-lak-ah', 'land-midst-LOC'),
-        'paisak': ('pai-sak', 'go-CAUS'),
-        'kumsuk': ('kum-suk', 'bow-CAUS'),
-        'thawhkhiat': ('thawh-khiat', 'rise-emerge'),
-        'mahmah': ('mahmah', 'very'),
-        'lungkim': ('lung-kim', 'heart-please'),
-        'thakhat': ('tha-khat', 'spirit-one'),
-        # More compounds from Bible
-        'thuhilhna': ('thu-hilh-na', 'word-teach-NMLZ'),
-        'hunhoih': ('hun-hoih', 'time-good'),
+        'cih': ('ci-h', 'say-NOM'),  # nominalized
+        'ciin': ('ci-in', 'say-QUOT'),
+        'a ci hi': ('a ci hi', '3SG say DECL'),
+        
+        # === TAM Compounds ===
+        'dingin': ('ding-in', 'PROSP-ERG'),
+        'nadingin': ('na-ding-in', '2SG-PROSP-ERG'),
+        'nadingun': ('na-ding-un', '2SG-PROSP-IMP'),
+        'adingin': ('a-ding-in', '3SG-PROSP-ERG'),
+        'kadingin': ('ka-ding-in', '1SG-PROSP-ERG'),
+        'nading': ('na-ding', '2SG-PROSP'),
+        'ading': ('a-ding', '3SG-PROSP'),
+        'kading': ('ka-ding', '1SG-PROSP'),
         'tungta': ('tung-ta', 'arrive-PFV'),
         'kipanta': ('ki-pan-ta', 'REFL-begin-PFV'),
-        'kisikkik': ('ki-sik-kik', 'REFL-repent-ITER'),
+        'om ta': ('om ta', 'exist PFV'),
+        
+        # === Verb + NMLZ Compounds (very productive) ===
+        'thuhilhna': ('thu-hilh-na', 'word-teach-NMLZ'),
+        'mawhna': ('mawh-na', 'err-NMLZ'),
+        'nuntakna': ('nuntak-na', 'live-NMLZ'),
+        'thuciamna': ('thuciam-na', 'promise-NMLZ'),
+        'siatna': ('siat-na', 'destroy-NMLZ'),
+        'khialhna': ('khialh-na', 'wrong-NMLZ'),
+        'ngeina': ('ngei-na', 'know-NMLZ'),
+        'gamtatna': ('gamtat-na', 'rule.land-NMLZ'),
+        'biakna': ('biak-na', 'worship-NMLZ'),
+        'vangliatna': ('vangliat-na', 'strong-NMLZ'),
+        'lungdamna': ('lungdam-na', 'rejoice-NMLZ'),
+        'damna': ('dam-na', 'well-NMLZ'),
+        'kingaihna': ('ki-ngaih-na', 'REFL-desire-NMLZ'),
+        'kisikna': ('ki-sik-na', 'REFL-turn-NMLZ'),
+        
+        # === Noun + Noun Compounds ===
+        'tapa': ('ta-pa', 'child-male'),
+        'tanu': ('ta-nu', 'child-female'),
+        'biakinn': ('biak-inn', 'worship-house'),
+        'khuapi': ('khua-pi', 'village-big'),
+        'leitung': ('lei-tung', 'land-on'),
+        'leitang': ('lei-tang', 'land-?'),
+        'vantung': ('van-tung', 'sky-on'),
+        'lungsim': ('lung-sim', 'stone-mind'),
+        'minam': ('mi-nam', 'person-kind'),
+        'kumpipa': ('kumpi-pa', 'king-male'),
+        'nasempa': ('nasem-pa', 'work.serve-male'),
+        'thupha': ('thu-pha', 'word-good'),
+        'thuthak': ('thu-thak', 'word-true'),
+        
+        # === Reflexive/Middle Compounds ===
+        'kibawl': ('ki-bawl', 'REFL-make'),
+        'kibang': ('ki-bang', 'REFL-same'),
+        'kipan': ('ki-pan', 'REFL-begin'),
+        'kisai': ('ki-sai', 'REFL-concern'),
+        'kisik': ('ki-sik', 'REFL-turn'),
+        'kituah': ('ki-tuah', 'REFL-meet'),
+        'kikhen': ('ki-khen', 'REFL-divide'),
+        'kigelhna': ('ki-gelh-na', 'REFL-write-NMLZ'),
+        'kipankhia': ('ki-pan-khia', 'REFL-begin-exit'),
+        'kihongin': ('ki-hong-in', 'REFL-open-ERG'),
+        'kikhel': ('ki-khel', 'REFL-differ'),
+        
+        # === Causative Compounds ===
+        'paisak': ('pai-sak', 'go-CAUS'),
+        'damsak': ('dam-sak', 'well-CAUS'),
         'suaksak': ('suak-sak', 'become-CAUS'),
+        'maisak': ('mai-sak', 'face-CAUS'),
+        'kumsuk': ('kum-suk', 'bow-CAUS'),
+        
+        # === Applicative Compounds ===
+        'paipih': ('pai-pih', 'go-APPL'),
+        'honpih': ('hon-pih', 'come-APPL'),
+        
+        # === Aspectual/Directional Compounds ===
+        'thawhkhiat': ('thawh-khiat', 'rise-emerge'),
+        'honkhia': ('hon-khia', 'come-exit'),
+        'paikhia': ('pai-khia', 'go-exit'),
+        'lutkhia': ('lut-khia', 'enter-exit'),
+        'bawlkhol': ('bawl-khol', 'make-prepare'),
+        'tuiphum': ('tui-phum', 'water-immerse'),
+        
+        # === Temporal Compounds ===
+        'hunhoih': ('hun-hoih', 'time-good'),
+        'tawntung': ('tawn-tung', 'ever-always'),
+        'nipi': ('ni-pi', 'day-great'),
+        
+        # === Intensifiers/Emphasis ===
+        'mahmah': ('mahmah', 'very'),
+        'lungkim': ('lung-kim', 'heart-full'),  # "pleased"
+        'thakhat': ('tha-khat', 'spirit-one'),
+        
+        # === Quantifier Compounds ===
         'khempeuhte': ('khempeuh-te', 'all-PL'),
+        'peuhpeuh': ('peuh-peuh', 'DISTR-DISTR'),
+        
+        # === Common Connectors ===
+        'ciangin': ('ciang-in', 'then-ERG'),
+        'hangin': ('hang-in', 'because-ERG'),
+        'bangin': ('bang-in', 'like-ERG'),
+        'manin': ('man-in', 'reason-ERG'),
+        'zongin': ('zong-in', 'although-ERG'),
+        'ahihleh': ('a-hi-h-leh', '3SG-be-NOM-if'),
+        'hitaleh': ('hi-ta-leh', 'be-PFV-if'),
+        'laitakin': ('lai-tak-in', 'midst-exact-ERG'),
+        
+        # === Negation Compounds ===
+        'loh': ('lo-h', 'NEG-NOM'),
+        'loin': ('lo-in', 'NEG-ERG'),
+        'kuamah': ('kua-mah', 'who-EMPH'),  # "nobody"
+        'bangmah': ('bang-mah', 'what-EMPH'),  # "nothing"
+        
+        # === Postposition + LOC ===
+        'panin': ('panin', 'ABL'),  # "from"
+        'sangin': ('sang-in', 'high-ERG'),  # "than"
+        'tawh': ('tawh', 'COM'),  # "with"
+        
+        # === Pronoun Compounds ===
+        'keimah': ('kei-mah', '1SG.base-EMPH'),
+        'nangmah': ('nang-mah', '2SG.base-EMPH'),
+        'amah': ('a-mah', '3SG-EMPH'),
+        'amaute': ('a-mau-te', '3-PL.base-PL'),
+        
+        # === Iterative/Continuative ===
+        'kisikkik': ('ki-sik-kik', 'REFL-turn-ITER'),
+        'nawnkik': ('nawn-kik', 'still-ITER'),
+        
+        # === Common -in forms (verb/noun + ERG) ===
+        'pai-in': ('pai-in', 'go-ERG'),
+        'om-in': ('om-in', 'exist-ERG'),
+        'thu-in': ('thu-in', 'word-ERG'),
+        'nusia-in': ('nusia-in', 'abandon-ERG'),
+        'paikhia-in': ('pai-khia-in', 'go-exit-ERG'),
+        'zui-in': ('zui-in', 'follow-ERG'),
+        
+        # === Additional noun compounds ===
+        'kikhopna': ('ki-khop-na', 'REFL-gather-NMLZ'),
+        'natna': ('nat-na', 'ill-NMLZ'),
+        'gamdaihna': ('gam-daih-na', 'land-wide-NMLZ'),
+        'paina': ('pai-na', 'go-NMLZ'),
+        'khuami': ('khua-mi', 'town-person'),
+        'mawhnate': ('mawh-na-te', 'err-NMLZ-PL'),
+        
+        # === Additional plurals ===
+        'gilote': ('gilo-te', 'enemy-PL'),
+        'dawite': ('dawi-te', 'demon-PL'),
+        
+        # === Adverbial compounds ===
+        'nakpitakin': ('nak-pi-tak-in', 'strong-big-exact-ERG'),
+        
+        # === Additional common forms ===
+        'an': ('an', '3PL.POSS'),  # 3rd plural possessive
+        'pan': ('pan', 'begin/side'),
+        'leitang': ('lei-tang', 'land-?'),
+        'thute': ('thu-te', 'word-PL'),
+        'tu-in': ('tu-in', 'now-ERG'),
+        'tuate': ('tua-te', 'DIST-PL'),
+        'ciang': ('ciang', 'then'),
+        'neih': ('nei-h', 'have-NOM'),
+        'ni-in': ('ni-in', 'day-ERG'),
+        'nai': ('nai', 'near'),
+        'omna': ('om-na', 'exist-NMLZ'),
+        'gamtat': ('gam-tat', 'land-rule'),
+        'gimna': ('gim-na', 'suffer-NMLZ'),
+        'kham': ('kham', 'forbid'),
+        'thuman': ('thu-man', 'word-reason'),
+        
+        # === Miscellaneous High-Frequency ===
+        'gamlakah': ('gam-lak-ah', 'land-midst-LOC'),
+        'inla': ('in-la', 'ERG-and'),
+        'sunga': ('sung-a', 'inside-3SG'),
+        'tunga': ('tung-a', 'on-3SG'),
+        'ama': ('a-ma', '3SG-self'),
+        'nau': ('nau', 'child'),
+        'aana': ('a-ana', '3SG-child.PL'),
+        'pah': ('pah', 'do.so'),
+        'hileh': ('hi-leh', 'be-if'),
+        'unla': ('un-la', 'PL.IMP-and'),
     }
     if word_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_lower]
