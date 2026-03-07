@@ -121,6 +121,19 @@ FUNCTION_WORDS = {
     # === Adverbs - Temporal/Iterative ===
     'leuleu': 'again',       # 193x - reduplication of leu
     'leu': 'again',          # base form for leuleu
+    'nitakin': 'at.evening', # 35x - "in the evening" (ni-tak-in)
+    'nihin': 'today',        # 35x - "today" (ni-hin = day-this)
+    
+    # === Verbal particles ===
+    'kawmin': 'while',       # 39x - "while, as" (temporal subordinator)
+    'itin': 'lovingly',      # 41x - "lovingly, kindly" (it-in)
+    'nangawnin': 'henceforth', # 43x - "from now on, forever"
+    'nangawnah': 'forever',  # 36x - variant with -ah
+    
+    # === Interrogatives ===
+    'bangci': 'how',         # 36x - "how" (interrogative adverb)
+    'bangciin': 'how.ERG',   # variant with -in
+    'bangci-in': 'how.ERG',  # hyphenated variant
     
     # === Demonstratives ===
     'tua': 'DIST',           # 9,156 (sentence-initial)
@@ -149,6 +162,16 @@ FUNCTION_WORDS = {
     'nangma': '2SG.self',    # emphatic 2SG
     'keima': '1SG.self',     # emphatic 1SG
     'eite': '1PL.PRO',       # we (exclusive)
+    'nomau': '2PL.PRO',      # 62x - "you (plural)" (alternative form)
+    "nomau'": '2PL.POSS',    # 44x - "your (plural)" with possessive marker
+    "ke'n": '1SG.PRO',       # 63x - "I" (contraction of kei) - straight quote
+    "ke\u2019n": '1SG.PRO',   # curly quote version
+    "keima-a'": '1SG.self.GEN', # 31x - "my own" - straight quote
+    "keima-a\u2019": '1SG.self.GEN', # curly quote version
+    'kei': '1SG.PRO',        # "I"
+    'nangmahmah': '2SG.EMPH.REDUP', # 23x - "you yourself" (emphatic reduplication)
+    "kua'n": 'nobody.EMPH',  # 9x - "nobody" variant - straight quote
+    "kua\u2019n": 'nobody.EMPH', # curly quote version
     
     # === Pronominal Markers (standalone) ===
     'ka': '1SG',
@@ -168,6 +191,14 @@ FUNCTION_WORDS = {
     'panin': 'ABL',          # 4,296
     'sangin': 'COMP',        # 517
     'dong': 'until',         # 647
+    
+    # Combinations with plural uh-
+    'uhah': 'PL.LOC',        # 507x - "in your/their (plural)"
+    'uhleh': 'PL.if',        # 306x - "if you (plural)"
+    'uha': 'PL.LOC',         # 56x - variant of uhah
+    'ulian': 'PL.elder',     # 96x - needs analysis (could be elder-great)
+    'ung': 'PL.FUT',         # 30x - plural future marker
+    'up': 'PL.Q',            # 60x - plural question marker
     
     # === Negation ===
     'lo': 'NEG',             # 6,018
@@ -331,6 +362,13 @@ VERB_STEMS = {
     'lup': 'bow.down',       # 140
     'kem': 'guard',          # 147
     'zang': 'use',           # 198
+    'duh': 'want/love',      # 30x - "want, love, desire"
+    'muan': 'trust',         # 30x - "trust, rely on"
+    'vel': 'around',         # 29x - "around, approximately"
+    'im': 'hide',            # 33x - "hide" (im ding = shall hide)
+    'u': 'elder.sibling',    # 28x - "elder brother/sister"
+    'nungta': 'live',        # 29x - "be alive, live" (variant of nuntak)
+    'limci': 'promise',      # 32x - "promise, sign" (lim-ci)
     
     # Reflexive/reciprocal (ki- prefix)
     'kipan': 'begin',        # ki-pan "REFL-begin"
@@ -506,6 +544,46 @@ VERB_STEMS = {
     'zeet': 'tempt',         # 48x - "tempt, test" (ze-et hyphenated)
     'khangsak': 'raise.up',  # 39x - "raise up generations" (khang + CAUS)
     'lasak': 'take.CAUS',    # 39x - "take away" (la + sak)
+    
+    # === Session 2: More verb stems from philological analysis ===
+    'kantan': 'cross.over',  # 44x - "cross over, fly across" (vantung kantanin = fly across heaven)
+    'sawlkhia': 'send.forth', # 37x - "send forth, expel"
+    'lumkhawm': 'lie.with',  # 37x - "lie with, sleep with"
+    'sepsak': 'serve/work.for', # 35x - "cause to work, serve"
+    'khaktan': 'restrain',   # 35x - "restrain, prevent" (khak-tan)
+    'vangik': 'burden/load', # 35x - "burden" (between two burdens)
+    'cimawh': 'oppress',     # 39x - "oppress" (a zawng a cimawh = oppressed)
+    
+    # === Session 3: Additional verb stems ===
+    'khuh': 'cover',         # 36x - "cover" (kh-uh vs cover.I, but better as standalone)
+    'sap': 'call/summon',    # 33x - "call, summon" (Faro in Moses sap = Pharaoh called Moses)
+    'ngat': 'seek/divine',   # 33x - "seek (omens), divine"
+    'ciam': 'promise',       # 33x - "promise" (thuciam = thu-ciam = word-promise = covenant)
+    'it': 'love',            # base for "itte" (it-te = love-PL?)
+    'gamta': 'send.away',    # 50x - "send away" (hong hawlkhia = sent away)
+    'dawng': 'get/receive',  # 387x - "get, receive, fetch" (bawngno a dawng = fetched a calf)
+    'luan': 'flow',          # 32x - "flow" (luanna = flowing)
+    'khiat': 'depart/leave', # 32x - "depart, leave"
+    'pian': 'create/born',   # 32x - "create, be born" (piansak = creation work)
+    'bei': 'end/finish',     # 32x - "end, finish" (beina = ending)
+    'pan': 'plead',          # 32x - "plead, argue for"
+    'kido': 'fight',         # 31x - "fight" (galkidona = warfare)
+    'ciah': 'return',        # 31x - "return" (ciahsak = send back)
+    'khol': 'denounce',      # 31x - "denounce" (genkhol = speak denounce)
+    'nuih': 'laugh',         # 31x - "laugh" (nuihsan = laugh at)
+    'simmawh': 'blaspheme',  # 31x - "blaspheme"
+    'khual': 'sojourn',      # 30x - "sojourn, visit" (khualmi = stranger)
+    'zah': 'fear/respect',   # 30x - "fear, respect" (zahzah = reduplicated)
+    'kihtak': 'dread',       # 30x - "dread" (kihtakna = dread)
+    'suahtak': 'redeem',     # 30x - "redeem" (suahtakna = redemption)
+    'nop': 'willing/want',   # 52x - "willing, want" (a numei in nang hong zuih nop)
+    'ngaih': 'think/love',   # 33x - "think lovingly of, love"
+    'muhdah': 'trouble',     # 29x - "trouble, make stink"
+    'geel': 'plan/fashion',  # 29x - "plan, design" (geelna = pattern)
+    'teel': 'choose',        # 28x - "choose" (teelna = choice)
+    'mindai': 'shame',       # 29x - "shame" (mindaina = shame)
+    'sep': 'work',           # 28x - "work" (sepnate = works)
+    'ngaihsut': 'think/imagine', # 27x - "think, imagine" (ngaihsutnate = thoughts)
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -812,6 +890,72 @@ NOUN_STEMS = {
     'natui': 'discharge',    # 22x - "bodily discharge, issue" (NOT 2SG-water)
     'naupa': 'younger.sibling', # 21x - "younger brother/sibling" (NOT 2SG-elder)
     'nakpi': 'night',        # 42x - "night" (NOT 2SG-big)
+    
+    # === Session 2: More noun stems from philological analysis ===
+    'hiang': 'branch',       # 41x - "branch" (a hiangte = its branches)
+    'ausan': 'scarlet',      # 39x - "scarlet (color)" (a ausan puante = scarlet cloths)
+    'luanghawm': 'carcass',  # 39x - "carcass, corpse" (humpinelkai luanghawm = lion carcass)
+    'gamkhing': 'desolate',  # 38x - "desolate, empty land"
+    'bawngno': 'calf',       # 36x - "calf" (bawng = cow + no = child/young)
+    'thumvei': 'three.times', # 36x - "three times" (thum + vei)
+    'vakhu': 'dove',         # 35x - "dove"
+    'khualzin': 'journey',   # 35x - "journey, travel" (khua + zin)
+    'manna': 'manna',        # 35x - biblical manna (loanword)
+    'cingtaak': 'dwarf',     # 35x - "dwarf, short person"
+    
+    # === Session 2: More nouns from philological analysis ===
+    'kammal': 'word/speech', # 38x - "word, speech" (kammalte = words)
+    'kampau': 'voice',       # used in kampauna (voice-NMLZ)
+    'gamhluah': 'heir',      # 35x - "heir" (gam-hluah = land-inherit)
+    'tunna': 'end/border',   # 35x - "end, border" (Jordan tunna = end of Jordan)
+    'omzia': 'welfare',      # 34x - "welfare, condition" (om-zia = exist-manner)
+    'tual': 'generation/place', # base for puantualpi
+    
+    # === Session 3: More nouns from philological analysis ===
+    'kongkha': 'door',       # 38x - "door" (kongkhakte = doors)
+    'pawl': 'group/allies',  # 33x - "group, companions, allies"
+    'kauphe': 'locust',      # 33x - "locust" (kauphe hon = locusts)
+    'beel': 'pan/bowl',      # 33x - "pan, bowl" (beelte = pans)
+    'khak': 'offspring',     # 34x - "offspring, generation" (a khakte = his generations)
+    'sunga': 'inside',       # 34x - "inside, in" (khuasunga = in the town)
+    'sing': 'tree/wood',     # 33x - "tree, wood" (singte = trees)
+    'singkung': 'tree',      # 32x - "tree" (singkungte = trees) - fuller form
+    'nuam': 'pleased',       # 32x - "pleased, comfortable" (lungnuam = heart-pleased)
+    'hon': 'flock/swarm',    # 31x - "flock, swarm" (honpi = great multitude)
+    'khat': 'one',           # numeral "one"
+    'lang': 'side',          # "side" (langkhat = one side, langpang = against)
+    'mial': 'darkness',      # 31x - "darkness" (khua mial = darkness)
+    'dang': 'other',         # "other" (nidang = day-other = before)
+    'ham': 'full',           # "full" (khangham = full of years)
+    'an': 'rice/food',       # 30x - "rice, food" (anlak = harvest)
+    'nawi': 'butter',        # "butter" (bawngnawi = cow-butter)
+    'kalaoh': 'camel',       # 30x - "camel" (kalaohte = camels)
+    'liangko': 'shoulder',   # 29x - "shoulder"
+    'phaknat': 'leprosy',    # 31x - "leprosy" (skin disease)
+    'no': 'young',           # "young" (khangno = youngest)
+    'aksi': 'star',          # 32x - "star" (aksite = stars)
+    'aisan': 'magician',     # 29x - "magician, sorcerer"
+    'ukpi': 'duke',          # 29x - "duke, chief"
+    'lungtang': 'breastplate', # 29x - "breastplate" (lung-tang = heart-place)
+    'sila': 'servant',       # 29x - "servant, slave"
+    'zineu': 'concubine',    # 28x - "concubine" (zi-neu = wife-lesser)
+    'lim': 'sign',           # 29x - "sign" (limte = signs)
+    'mangbuh': 'barley',     # 28x - "barley"
+    'kuang': 'trough/box',   # 28x - "trough, box" (kuangte = kneadingtroughs)
+    'thau': 'fat',           # 27x - "fat" (thaute = fats)
+    'thaltang': 'arrow',     # 27x - "arrow" (thaltangte = arrows)
+    'cing': 'faithful',      # 33x - "faithful" (cingte = faithful ones)
+    'si': 'die',             # verb "die" (si ding = shall die)
+    'sim': 'count',          # 356x - verb "count, number"
+    'silh': 'clothe',        # 116x - verb "clothe"
+    'siang': 'holy',         # 114x - adjective "holy" (base of siangthosak)
+    'lianpi': 'army',        # 27x - "army" (lianpite = armies)
+    'peengkul': 'trumpet',   # 27x - "trumpet"
+    'lai': 'tip/middle',     # 26x - "tip, middle" (laite = tips)
+    'lasa': 'pillar',        # 26x - "pillar" (lasate = pillars)
+    'sisan': 'blood',        # 135x - "blood"
+    'laibu': 'book',         # 121x - "book" (laibu ahi hi = the book of)
+    'silngo': 'meal/feast',  # 78x - "meal, feast" (unleavened bread context)
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -897,14 +1041,19 @@ PROPER_NOUNS = {
 # =============================================================================
 
 def clean_word(word: str) -> str:
-    """Remove punctuation from word, including quotes and apostrophes at word boundaries."""
+    """Remove punctuation from word, including quotes at word boundaries.
+    Note: Interior and trailing apostrophes (both ' and ') are preserved as they are meaningful in Tedim.
+    Examples: keima-a' (1SG.self.GEN), ke'n (1SG.PRO), Topa' (Lord's)
+    """
     # Handle curly quotes (", ", ', ') and other Unicode punctuation
-    # Leading: remove quotes, brackets
-    word = re.sub(r'^["\'\u201c\u201d\u2018\u2019\[\(\xab\u201e]+', '', word)
-    # Trailing: remove punctuation, quotes, brackets
-    word = re.sub(r'[.,;:!?\u201c\u201d\u2018\u2019"\'\)\]\xbb]+$', '', word)
-    # Remove trailing straight apostrophes
-    word = re.sub(r"'+$", '', word)
+    # Leading: remove quotes, brackets including leading apostrophes that are quote marks
+    word = re.sub(r'^["\u201c\u201d\u2018\u2019\'\[\(\xab\u201e]+', '', word)
+    # Trailing: remove punctuation, double quotes, brackets
+    # Also remove apostrophe/curly quote when preceded by comma/punctuation (closing quotes)
+    # Pattern: word,'\n or word,"
+    word = re.sub(r',["\'\u2018\u2019\u201c\u201d]+$', '', word)  # Remove ,' or ," at end
+    word = re.sub(r'\?["\'\u2018\u2019]+$', '?', word)  # Keep ? but remove trailing quote
+    word = re.sub(r'[.,;:!?\u201c\u201d"\)\]\xbb]+$', '', word)  # Remove other trailing punct
     return word
 
 def is_proper_noun(word: str) -> bool:
@@ -963,6 +1112,57 @@ def analyze_word(word: str) -> Tuple[str, str]:
         return (word, FUNCTION_WORDS[word_lower])
     if word_no_hyphen_lower in FUNCTION_WORDS:
         return (word, FUNCTION_WORDS[word_no_hyphen_lower])
+    
+    # Handle possessive marker ' or ' (curly quote) at end of word
+    # Common pattern: Topa' = "Lord's", mite' = "people's", pa' = "father's"
+    if word.endswith("'") or word.endswith("\u2019"):
+        base = word.rstrip("'\u2019")
+        base_lower = base.lower()
+        # Check if base is a known word
+        if base_lower in FUNCTION_WORDS:
+            return (word, FUNCTION_WORDS[base_lower] + '.POSS')
+        if base_lower in NOUN_STEMS:
+            return (f"{base}'", f"{NOUN_STEMS[base_lower]}.POSS")
+        if base.lower() in PROPER_NOUNS or base in PROPER_NOUNS:
+            return (f"{base}'", f"{base.upper()}.POSS")
+        # Check if it's a compound that ends in a known stem
+        # e.g., mite' -> mi-te -> person-PL -> person.PL.POSS
+        if base_lower.endswith('te') and len(base_lower) > 2:
+            stem = base_lower[:-2]
+            if stem in NOUN_STEMS:
+                return (f"{base}'", f"{NOUN_STEMS[stem]}-PL.POSS")
+        # Common possessive words
+        poss_map = {
+            'amau': '3PL.POSS',
+            'mite': 'people.POSS',
+            'note': '2PL.POSS',
+            'amaute': '3PL.POSS',
+            'kumpipa': 'king.POSS',
+            'pa': 'father.POSS',
+            'kei': '1SG.POSS',
+            'kote': '1PL.POSS',
+            'eite': '1PL.EXCL.POSS',
+            'khempeuh': 'all.POSS',
+            'nu': 'mother.POSS',
+            'nang': '2SG.POSS',
+            'dangte': 'other-PL.POSS',
+            'minamte': 'nation-PL.POSS',
+            'mipa': 'man.POSS',
+            'mihingte': 'human-PL.POSS',
+            'galte': 'enemy-PL.POSS',
+            'pate': 'father-PL.POSS',
+            'tate': 'child-PL.POSS',
+            'tapate': 'son-PL.POSS',
+            'nasemte': 'servant-PL.POSS',
+            'khempeuhte': 'all-PL.POSS',
+            'uliante': 'elder-PL.POSS',
+            'tuate': 'DIST-PL.POSS',
+            'man': 'price.POSS',
+            'pasian-te': 'god-PL.POSS',
+            'langpan': 'side.POSS',
+        }
+        if base_lower in poss_map:
+            return (word, poss_map[base_lower])
     
     # Check common compounds - EXPANDED from corpus frequency analysis
     COMPOUND_WORDS = {
@@ -1046,10 +1246,37 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kipankhia': ('ki-pan-khia', 'REFL-begin-exit'),
         'kihongin': ('ki-hong-in', 'REFL-open-ERG'),
         'kikhel': ('ki-khel', 'REFL-differ'),
+        'kipawlna': ('ki-pawl-na', 'REFL-associate-NMLZ'),  # 35x - association
+        'kitotna': ('ki-tot-na', 'REFL-cut-NMLZ'),  # 35x - separation
         
         # === Household/Family Compounds ===
         'innkuanpihte': ('innkuanpih-te', 'household-PL'),  # 46x
         'kiphatsakna': ('ki-phatsak-na', 'REFL-glorify-NMLZ'),  # 45x - pride/selfwill
+        
+        # === Session 2: More compounds from philological analysis ===
+        'hiangte': ('hiang-te', 'branch-PL'),  # 41x
+        'hingkik': ('hing-kik', 'live-ITER'),  # 40x - "revive, live again"
+        'ngahtheih': ('ngah-theih', 'get-ABIL'),  # 40x - "be able to get, obtainable"
+        'hithiat': ('hi-thiat', 'be-quiet'),  # 39x - "be quiet, hold peace"
+        'hoihpen': ('hoih-pen', 'good-TOP'),  # 37x - "the good (of), best part"
+        'nitakin': ('ni-tak-in', 'day-exact-ERG'),  # 35x - "at evening, at dusk"
+        'pulnatna': ('pul-nat-na', 'fear-very-NMLZ'),  # 36x - great fear
+        'ngimna': ('ngim-na', 'think-NMLZ'),  # 35x - thought
+        'haina': ('hai-na', 'possess-NMLZ'),  # 38x - possession
+        
+        # === Session 2: More compounds ===
+        'kantanin': ('kantan-in', 'cross.over-ERG'),  # 44x - "flying across"
+        'kammalte': ('kammal-te', 'word-PL'),  # 38x - "words"
+        'kampauna': ('kampau-na', 'voice-NMLZ'),  # 38x - "voice, saying"
+        'lasaknate': ('lasak-na-te', 'take.CAUS-NMLZ-PL'),  # 39x - "songs"
+        'cial': ('ci-al', 'say-must'),  # 37x - "must say, should say"
+        'pial': ('pi-al', 'give-must'),  # 36x - "must give"
+        'zaksa': ('zak-sa', 'hear-PL.POSS'),  # 35x - "their hearing"
+        'awk': ('awk', 'ram'),  # 35x - "ram" (standalone noun)
+        'vet': ('vet', 'do'),  # 35x - base verb
+        'vawh': ('vawh', 'name'),  # 34x - "name" (a vawh = named)
+        'puantualpi': ('puan-tual-pi', 'cloth-many.colored-big'),  # 39x - Joseph's coat
+        'khutnuaiah': ('khut-nuai-ah', 'hand-below-LOC'),  # 35x - "under the hand of"
         
         # === Causative Compounds ===
         'paisak': ('pai-sak', 'go-CAUS'),
@@ -1057,6 +1284,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suaksak': ('suak-sak', 'become-CAUS'),
         'maisak': ('mai-sak', 'face-CAUS'),
         'kumsuk': ('kum-suk', 'bow-CAUS'),
+        'sepsak': ('sep-sak', 'work-CAUS'),  # 35x - "make to work, serve"
         
         # === Applicative Compounds ===
         'paipih': ('pai-pih', 'go-APPL'),
@@ -1328,7 +1556,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'dingun': ('ding-un', 'PROSP-PL.IMP'),
         'pawi': ('pawi', 'Pawi'),
         'pang': ('pang', 'side/small'),
-        'cing': ('cing', 'know'),
         'zing': ('zing', 'morning'),
         'nial': ('nial', 'deny'),
         'san': ('san', 'flee'),
@@ -1478,7 +1705,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'paktat': ('pak-tat', '?-strike'),
         'pak': ('pak', '?'),
         'khuam': ('khuam', 'darkness'),
-        'sap': ('sap', 'European'),
+        'sap': ('sap', 'call/summon'),
         'sal': ('sal', 'slave'),
         'kan': ('kan', 'stay'),
         'vai': ('vai', 'foreigner'),
@@ -1649,8 +1876,357 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'palsat': ('pal-sat', 'wall-strike'),                 # 39
         'gensak': ('gen-sak', 'speak-CAUS'),                  # 39
         'kai': ('kai', 'ascend'),                              # 39
-        'puantualpi': ('puan-tual-pi', 'cloth-?-big'),        # 39
+        'puantualpi': ('puan-tual-pi', 'cloth-generation-big'), # 39 - "coat" (of many colors)
         'thutak': ('thu-tak', 'word-true'),                   # 39
+        
+        # === Session 3: More compounds ===
+        'letmat': ('let-mat', 'half-cubit'),                  # 34 - "cubit and a half"
+        'thuciam': ('thu-ciam', 'word-promise'),              # 33 - "covenant, promise"
+        'thumin': ('thu-min', 'three'),                       # numeral "three"
+        'kongkhakte': ('kongkha-te', 'door-PL'),              # 38 - "doors"
+        'pawlte': ('pawl-te', 'group-PL'),                    # 33 - "companions, allies"
+        'paikhawm': ('pai-khawm', 'go-together'),             # 33 - "come together"
+        'cisak': ('ci-sak', 'say-CAUS'),                      # 33 - "curse" (causative of say)
+        'beelte': ('beel-te', 'pan-PL'),                      # 33 - "pans, bowls"
+        'kauphe': ('kauphe', 'locust'),                       # 33 - "locust"
+        'kisapna': ('ki-sap-na', 'REFL-call-NMLZ'),           # 33 - "need/necessity"
+        'gamtain': ('gamta-in', 'send.away-ERG'),             # 50 - "sending away"
+        
+        # === Session 3: More compounds ===
+        'le-uh': ('le-uh', 'and-PL.IMP'),                     # 44 - "and (plural imperative)"
+        'leuh': ('le-uh', 'and-PL.IMP'),                      # variant
+        'itte': ('it-te', 'love-PL'),                         # 39 - "loves/lovest" (plural verb)
+        'vante': ('van-te', 'sky-PL'),                        # 34 - unclear, possibly "skies" or parsing error
+        'khakte': ('khak-te', 'offspring-PL'),                # 34 - "generations, offspring"
+        'khuasunga': ('khua-sunga', 'town-inside'),           # 34 - "in the town"
+        'tuidawn': ('tui-dawn', 'water-fetch'),               # 34 - "fetch water"
+        'theithei': ('thei~thei', 'know.I~RED'),              # 33 - "perceive/know" (reduplicated)
+        'singte': ('sing-te', 'tree-PL'),                     # 33 - "trees"
+        'lungnuam': ('lung-nuam', 'heart-pleased'),           # 32 - "pleased, glad"
+        'khiate': ('khia-te', 'exit-PL'),                     # variant
+        'lakhia': ('la-khia', 'take-out'),                    # 32 - "take out"
+        'lakhia-in': ('la-khia-in', 'take-out-ERG'),          # 32 - "taking out"
+        'luanna': ('luan-na', 'flow-NMLZ'),                   # 32 - "flowing"
+        'singkungte': ('singkung-te', 'tree-PL'),             # 32 - "trees"
+        'honpi': ('hon-pi', 'flock-big'),                     # 31 - "great multitude, swarm"
+        
+        # === Session 3: More compounds (corrections) ===
+        'dawng': ('dawng', 'get/receive'),                    # 387 - "get, receive, fetch"
+        'dawngin': ('dawng-in', 'get/receive-ERG'),          # 143 - "getting, receiving"
+        'langkhatah': ('lang-khat-ah', 'side-one-LOC'),      # 88 - "against" (at one side)
+        'langpangin': ('lang-pang-in', 'side-near-ERG'),     # 63 - "against" (near one side)
+        'langpang': ('lang-pang', 'side-near'),              # 39 - "against, side"
+        'langkhat': ('lang-khat', 'side-one'),               # 35 - "one side"
+        'singlamteh': ('sing-lam-teh', 'wood-cross'),        # 65 - "cross" (the cross)
+        'singkuang': ('sing-kuang', 'wood-box'),             # 45 - "ark" (wooden box)
+        
+        # === Session 3: More compounds (round 2) ===
+        'siangthosak': ('siangtho-sak', 'holy-CAUS'),        # 32 - "sanctify"
+        'piansak': ('pian-sak', 'create-CAUS'),              # 32 - "creation"
+        'lausak': ('lau-sak', 'fear-CAUS'),                  # 31 - "make afraid"
+        'galkidona': ('gal-kido-na', 'enemy-fight-NMLZ'),    # 31 - "warfare"
+        'genkhol': ('gen-khol', 'speak-INTENS'),             # 31 - "denounce"
+        'ciahsak': ('ciah-sak', 'return-CAUS'),              # 31 - "send back"
+        'genkhia': ('gen-khia', 'speak-EXIT'),               # 32 - "utter forth"
+        'theihsa': ('theih-sa', 'know.II-PERF'),             # 32 - "already known"
+        'beina': ('bei-na', 'end-NMLZ'),                     # 32 - "ending"
+        'panpih': ('pan-pih', 'plead-APPL'),                 # 32 - "plead for"
+        'neupen': ('neu-pen', 'small-TOP'),                  # 32 - "smallest"
+        
+        # === Session 3: More compounds (round 3) ===
+        'beisak': ('bei-sak', 'end-CAUS'),                   # 99 - "destroy, abolish"
+        'beisa': ('bei-sa', 'end-PERF'),                     # 68 - "ended, finished"
+        'beimang': ('bei-mang', 'end-COMPL'),                # 33 - "perish, be destroyed"
+        'nuihsan': ('nuih-san', 'laugh-at'),                 # 31 - "laugh at, mock"
+        'simmawhna': ('simmawh-na', 'blaspheme-NMLZ'),       # 31 - "blasphemy"
+        'bawngnawi': ('bawng-nawi', 'cow-butter'),           # 30 - "butter"
+        'khualmi': ('khual-mi', 'sojourn-person'),           # 30 - "stranger, sojourner"
+        'nidang': ('ni-dang', 'day-other'),                  # 30 - "formerly, before"
+        'khangham': ('khang-ham', 'generation-full'),        # 30 - "full of years"
+        'sawmkua': ('sawm-kua', 'ten-nine'),                 # 30 - "ninety"
+        'anlak': ('an-lak', 'rice-harvest'),                 # 30 - "harvest"
+        
+        # === Session 3: More compounds (round 4) ===
+        'simmawhbawl': ('simmawh-bawl', 'blaspheme-do'),     # 33 - "commit blasphemy"
+        'phaknatna': ('phaknat-na', 'leprosy-NMLZ'),         # 31 - "leprosy"
+        'zahzah': ('zah~zah', 'fear~RED'),                   # 30 - "every living" (reduplicated)
+        'kalaohte': ('kalaoh-te', 'camel-PL'),               # 30 - "camels"
+        'kihtakna': ('kihtak-na', 'dread-NMLZ'),             # 30 - "dread"
+        'suahtakna': ('suahtak-na', 'redeem-NMLZ'),          # 30 - "redemption"
+        'khangno': ('khang-no', 'generation-young'),         # 30 - "youngest"
+        'liangko': ('liangko', 'shoulder'),                  # 29 - "shoulder"
+        'nungtasak': ('nung-ta-sak', 'live-?-CAUS'),         # 29 - "spare life"
+        'honpite': ('hon-pi-te', 'flock-big-PL'),            # 29 - "great multitudes"
+        
+        # === Session 3: More compounds (round 5) ===
+        'kihtakhuai': ('kihtak-huai', 'dread-causing'),      # 46 - "dreadful, terrible"
+        'ngaihno': ('ngaih-no', 'think-lovingly'),           # 33 - "beloved"
+        'aksite': ('aksi-te', 'star-PL'),                    # 32 - "stars"
+        'behbehin': ('beh-beh-in', 'tribe~RED-ERG'),         # 32 - "by tribes"
+        'pawlpite': ('pawl-pi-te', 'group-big-PL'),          # 31 - "churches"
+        'citakin': ('ci-tak-in', 'say-true-ERG'),            # 30 - "truly"
+        'biakpiak': ('biak-piak', 'worship-give'),           # 29 - "sacrifice"
+        'ukpite': ('ukpi-te', 'duke-PL'),                    # 29 - "dukes"
+        'hampha': ('ham-pha', 'full-worthy'),                # 29 - "worthy"
+        'lungtang': ('lung-tang', 'heart-place'),            # 29 - "breastplate"
+        'geelna': ('geel-na', 'plan-NMLZ'),                  # 29 - "pattern, fashion"
+        
+        # === Session 3: More compounds (round 6) ===
+        'ngahsak': ('ngah-sak', 'get-CAUS'),                 # 29 - "need, require"
+        'mindaina': ('mindai-na', 'shame-NMLZ'),             # 29 - "shame"
+        'silate': ('sila-te', 'servant-PL'),                 # 29 - "servants"
+        'limte': ('lim-te', 'sign-PL'),                      # 29 - "signs"
+        'kuangte': ('kuang-te', 'trough-PL'),                # 28 - "kneadingtroughs"
+        'thukpi': ('thuk-pi', 'deep-big'),                   # 28 - "the deep, flood"
+        'teelna': ('teel-na', 'choose-NMLZ'),                # 28 - "choice"
+        'bawlpa': ('bawl-pa', 'make-person'),                # 27 - "young man"
+        'thaute': ('thau-te', 'fat-PL'),                     # 27 - "fats"
+        'gensia': ('gen-sia', 'speak-bad'),                  # 27 - "slander"
+        'thaltangte': ('thaltang-te', 'arrow-PL'),           # 27 - "arrows"
+        'phattuam': ('phat-tuam', 'praise-benefit'),         # 27 - "benefit"
+        'samsak': ('sam-sak', 'call-CAUS'),                  # 26 - "send for"
+        
+        # === Session 3: More compounds (round 7: -te suffix words) ===
+        'cingte': ('cing-te', 'faithful-PL'),                # 33 - "faithful ones"
+        'site': ('si-te', 'die-PL'),                         # 31 - "the dead"
+        'sate': ('sa-te', 'flesh-PL'),                       # 29 - "flesh(es)"
+        'sepnate': ('sep-na-te', 'work-NMLZ-PL'),           # 28 - "works, deeds"
+        'lianpite': ('lianpi-te', 'army-PL'),               # 27 - "armies"
+        'peengkulte': ('peengkul-te', 'trumpet-PL'),        # 27 - "trumpets"
+        'ngaihsutnate': ('ngaihsut-na-te', 'think-NMLZ-PL'), # 27 - "thoughts"
+        'laite': ('lai-te', 'tip-PL'),                       # 26 - "tips"
+        'luanghawmte': ('luanghawm-te', 'carcass-PL'),       # 26 - "carcasses"
+        'lasate': ('lasa-te', 'pillar-PL'),                  # 26 - "pillars"
+        
+        # === Session 3: More compounds (round 8: fix sim/sisan/siang/silh over-matching) ===
+        'limtakin': ('lim-tak-in', 'sign-true-ERG'),         # 227 - "thoroughly"
+        'laitakun': ('lai-tak-un', 'middle-true-PL.IMP'),   # 125 - "in the midst"
+        'laitak': ('lai-tak', 'middle-true'),               # 87 - "midst"
+        'simin': ('sim-in', 'count-ERG'),                   # 135 - "counting"
+        'simloh': ('sim-loh', 'count-unable'),              # 99 - "cannot be counted"
+        'silhin': ('silh-in', 'clothe-ERG'),                # 54 - "clothed"
+        'laiteng': ('lai-teng', 'middle-at'),               # 46 - "at the midst"
+        'laizangah': ('lai-zang-ah', 'middle-side-LOC'),    # 41 - "in the midst"
+        'laizang': ('lai-zang', 'middle-side'),             # 39 - "midst"
+        'siasak': ('sia-sak', 'bad-CAUS'),                  # 57 - "make bad, damage"
+        'siangsak': ('siang-sak', 'holy-CAUS'),             # 39 - "make holy, sanctify"
+        'sisak': ('si-sak', 'die-CAUS'),                    # 39 - "cause to die, kill"
+        'sisa': ('si-sa', 'die-PERF'),                      # 42 - "already dead"
+        'siit': ('siit', 'sacrifice'),                      # 39 - sacrifice offering
+        'teelsa': ('teel-sa', 'choose-PERF'),               # 36 - "chosen"
+        
+        # === Session 4: More lai-, sak-, and other compounds ===
+        'laizial': ('lai-zial', 'middle-place'),            # 39 - "middle place"
+        'laiza': ('lai-za', 'middle-place'),                # 38 - "midst"
+        'lai-un': ('lai-un', 'middle-PL.IMP'),             # 31 - "in the midst"
+        'lailai': ('lai~lai', 'middle~REDUP'),             # 31 - "continually, always"
+        'lai-at': ('lai-at', 'middle-?'),                  # 30 - needs context
+        
+        # -sak causative compounds
+        'khauhsak': ('khauh-sak', 'strong-CAUS'),           # 30 - "make strong"
+        'nungtasak': ('nungta-sak', 'live-CAUS'),           # 29 - "make alive, revive"
+        'silhsak': ('silh-sak', 'clothe-CAUS'),             # 27 - "cause to clothe"
+        'maizumsak': ('maizum-sak', 'bow.face-CAUS'),       # 25 - "make bow"
+        'lungkimsak': ('lungkim-sak', 'satisfied-CAUS'),    # 22 - "satisfy"
+        'khensak': ('khen-sak', 'divide-CAUS'),             # 22 - "cause to divide"
+        'khialsak': ('khial-sak', 'err-CAUS'),              # 22 - "cause to err, mislead"
+        'tengsak': ('teng-sak', 'dwell-CAUS'),              # 21 - "cause to dwell"
+        'luangsak': ('luang-sak', 'flow-CAUS'),             # 21 - "cause to flow"
+        'hihsak': ('hih-sak', 'be-CAUS'),                   # 21 - "make to be"
+        
+        # Other high-frequency compounds
+        'nak-uhleh': ('nak-uh-leh', 'SUBJ-PL-if'),         # 40 - conditional marker
+        'sanah': ('sanah', 'in.front'),                    # 32 - "before, in front of"
+        'sawmte': ('sawm-te', 'ten-PL'),                   # 32 - "tens, dozens"
+        'thumanin': ('thu-man-in', 'word-true-ERG'),       # 32 - "truly, in truth"
+        'singgah': ('singgah', 'hang'),                    # 25 - "hang (on tree)"
+        'nasemnu': ('na-sem-nu', '2SG-serve-FEM'),         # 26 - "your maidservant"
+        'paktatna': ('pak-tat-na', 'proclaim-strike-NMLZ'), # 30 - "proclamation"
+        'paikhiatpihin': ('paikhiat-pih-in', 'send.away-APPL-ERG'), # 28 - "sending away"
+        'munmuanhuai': ('mun-muan-huai', 'place-trust-worthy'), # 26 - "trustworthy place"
+        'khasiat': ('kha-siat', 'spirit-evil'),             # 26 - "evil spirit"
+        'gamtate': ('gamta-te', 'kingdom-PL'),              # 27 - "kingdoms"
+        'thudang': ('thu-dang', 'word-other'),              # 26 - "other word/another matter"
+        'gukna': ('guk-na', 'dog-NMLZ'),                    # 26 - "doggish/dog's"
+        'tungnung': ('tung-nung', 'arrive-after'),          # 26 - "after arriving"
+        'tonpih': ('ton-pih', 'sit-APPL'),                  # 26 - "sit with, accompany"
+        'nekhawm': ('nek-hawm', 'eat.II-together'),         # 26 - "eat together"
+        'thudon': ('thu-don', 'word-preach'),               # 26 - "preach, proclaim"
+        'tungsiah': ('tung-siah', 'arrive-time'),           # 26 - "time of arrival"
+        'bawngtalno': ('bawngtal-no', 'calf-small'),        # 26 - "young calf"
+        'keng': ('keng', 'only'),                           # 26 - "only" (variant of ken)
+        'vaikhak': ('va-i-khak', 'go.and-?-approach'),      # 26 - "go and approach"
+        
+        # === Session 4 Round 2: lung- (heart) compounds ===
+        'lunggulh': ('lung-gulh', 'heart-long'),            # 25 - "long for, desire intensely"
+        'lungduai': ('lung-duai', 'heart-soft'),            # 25 - "gracious, longsuffering"
+        'lungkimna': ('lung-kim-na', 'heart-whole-NMLZ'),   # 19 - "agreement, contentment"
+        'lunghihmawhna': ('lung-hih-mawh-na', 'heart-be-sin-NMLZ'), # 18 - "grief, sorrow"
+        'lungduaina': ('lung-duai-na', 'heart-soft-NMLZ'),  # 15 - "grace, patience"
+        'lungmuangin': ('lung-muang-in', 'heart-trust-ERG'), # 14 - "trusting"
+        
+        # khua- compounds
+        'khuampeek': ('khuampeek', 'cubit'),                # 28 - "cubit" (unit of measure)
+        'khuakhal': ('khua-khal', 'town-famine'),           # 20 - "famine in town"
+        'khualzinna': ('khual-zin-na', 'sojourn-travel-NMLZ'), # 18 - "sojourning"
+        'khuamte': ('khuam-te', 'cubit-PL'),                # 18 - "cubits"
+        'khuamluzepna': ('khua-mlu-zep-na', 'town-head-bow-NMLZ'), # 18 - context-dep
+        'khuapikulh': ('khuapi-kulh', 'city-wall'),         # 17 - "city wall"
+        
+        # thu- (word) compounds
+        'thukim': ('thu-kim', 'word-keep'),                  # 22 - "keep covenant, agree"
+        'thukimna': ('thu-kim-na', 'word-keep-NMLZ'),        # 15 - "covenant keeping"
+        'thukhennate': ('thu-khen-na-te', 'word-divide-NMLZ-PL'), # 13 - "judgments"
+        'thukimpih': ('thu-kim-pih', 'word-keep-APPL'),      # 12 - "agree with"
+        'thukan': ('thu-kan', 'word-hold'),                  # 11 - "hold word"
+        'thukna': ('thu-k-na', 'word-NMLZ'),                 # 10 - "saying, utterance"
+        
+        # khaw- compounds
+        'khawlin': ('khawl-in', 'rest-ERG'),                 # 23 - "resting"
+        'khawng': ('khawng', 'about/approximately'),         # 21 - "about, approximately"
+        'khawhlawhte': ('khawh-lawh-te', 'able-earn-PL'),    # 18 - "earners, workers"
+        'khawh': ('khawh', 'can/able'),                      # 15 - "can, able to"
+        'khawlsak': ('khawl-sak', 'rest-CAUS'),              # 15 - "cause to rest"
+        'khawlna': ('khawl-na', 'rest-NMLZ'),                # 13 - "rest, resting place"
+        
+        # khang- (generation) compounds  
+        'khansau': ('khan-sau', 'generation-long'),          # 20 - "generations, long time"
+        'khanglo': ('khang-lo', 'generation-NEG'),           # 17 - "barren, childless"
+        'khangto': ('khang-to', 'generation-sit'),           # 15 - "generation, posterity"
+        'khanglai': ('khang-lai', 'generation-middle'),      # 10 - "generation, era"
+        'khanlawh': ('khan-lawh', 'generation-earn'),        # 10 - "generation-earn"
+        
+        # Miscellaneous high-frequency
+        'lo-a': ('lo-ah', 'field-LOC'),                      # 31 - "in the field"
+        'hici': ('hi-ci', 'this-say'),                       # 27 - "do this, thus"
+        'kal': ('kal', 'liver'),                             # 32 - "liver" (body part)
+        'muhsa': ('muh-sa', 'see.II-PERF'),                  # 27 - "seen, having seen"
+        'kipatna': ('ki-pat-na', 'REFL-begin-NMLZ'),         # 28 - "beginning"
+        
+        # === Session 4 Round 3: -sak causatives ===
+        'hoihsak': ('hoih-sak', 'good-CAUS'),               # 20 - "make good, bless"
+        'semsak': ('sem-sak', 'serve-CAUS'),                # 19 - "make to serve"
+        'vaksak': ('vak-sak', 'shine-CAUS'),                # 17 - "illuminate, light up"
+        'koihsak': ('koih-sak', 'put-CAUS'),                # 17 - "put, place"
+        'dingsak': ('ding-sak', 'stand-CAUS'),              # 17 - "make stand, erect"
+        'nuamsak': ('nuam-sak', 'pleasant-CAUS'),           # 17 - "make pleasant, please"
+        'nesak': ('ne-sak', 'eat-CAUS'),                    # 18 - "feed"
+        'hingsak': ('hing-sak', 'be.alive-CAUS'),           # 19 - "make alive, resurrect"
+        'thumsak': ('thum-sak', 'three-CAUS'),              # 19 - contextual
+        'mindaisak': ('mindai-sak', 'shame-CAUS'),          # 18 - "cause shame"
+        'hingkiksak': ('hing-kik-sak', 'be.alive-ITER-CAUS'), # 18 - "resurrect"
+        'honsak': ('hon-sak', 'flock-CAUS'),                # 17 - "shepherd, tend flock"
+        'langsak': ('lang-sak', 'side-CAUS'),               # 15 - "show, reveal"
+        'suksiatsak': ('suk-siat-sak', 'make-destroy-CAUS'), # 16 - "cause destruction"
+        
+        # More compounds with verb+suffix patterns
+        'nga-in': ('ngai-in', 'listen.I-ERG'),              # 36 - "listening"
+        'baihsa-in': ('baihsa-in', 'already-ERG'),          # 29 - "already having"
+        'cingin': ('cing-in', 'faithful-ERG'),              # 28 - "faithfully"
+        'lua-in': ('lua-in', 'exceed-ERG'),                 # 25 - "exceedingly"
+        'kha-in': ('kha-in', 'spirit-ERG'),                 # 22 - "in spirit"
+        'baihin': ('baih-in', 'already-ERG'),               # 21 - "already"
+        'thuhilhin': ('thu-hilh-in', 'word-teach-ERG'),     # 21 - "instructing"
+        'pangin': ('pang-in', 'plead-ERG'),                 # 20 - "pleading"
+        
+        # More -na nominalizer compounds
+        'paubaanna': ('pau-baan-na', 'speak-slander-NMLZ'), # 30 - "slander, blasphemy"
+        'aisanna': ('ai-san-na', 'burn-flee-NMLZ'),         # 29 - context-specific
+        'sawmna': ('sawm-na', 'ten-NMLZ'),                  # 28 - "tithing"
+        'sanna': ('san-na', 'flee-NMLZ'),                   # 26 - "fleeing"
+        'migitna': ('mi-git-na', 'person-hate-NMLZ'),       # 25 - "hatred of people"
+        'hopihna': ('ho-pih-na', 'counsel-APPL-NMLZ'),      # 25 - "counseling"
+        'dawna': ('dawn-na', 'receive-NMLZ'),               # 25 - "reception"
+        'kisuanna': ('ki-suan-na', 'REFL-follow-NMLZ'),     # 24 - "succession"
+        'suahna': ('suah-na', 'become-NMLZ'),               # 23 - "becoming"
+        'cihtakna': ('ci-tak-na', 'say-true-NMLZ'),         # 23 - "truth telling"
+        'galdona': ('gal-do-na', 'enemy-conquer-NMLZ'),     # 23 - "victory"
+        'giatna': ('giat-na', 'hate-NMLZ'),                 # 23 - "hatred"
+        'salsuahna': ('sal-suah-na', 'servant-become-NMLZ'), # 22 - "servitude"
+        'ancilna': ('ancil-na', 'anoint-NMLZ'),             # 22 - "anointing"
+        'vankoihna': ('van-koih-na', 'sky-put-NMLZ'),       # 22 - "heavenly placing"
+        
+        # === Session 4 Round 4: More high-frequency words ===
+        "ke'n": ("ke'n", '1SG.PRO'),                        # straight quote
+        "ke\u2019n": ("ke\u2019n", '1SG.PRO'),              # curly quote
+        "keima-a'": ("keima-a'", '1SG.self.GEN'),           # straight quote
+        "keima-a\u2019": ("keima-a\u2019", '1SG.self.GEN'), # curly quote
+        "kua'n": ("kua'n", 'nobody.EMPH'),                  # straight quote
+        "kua\u2019n": ("kua\u2019n", 'nobody.EMPH'),        # curly quote
+        'nazatte': ('na-zat-te', '2SG-hear-PL'),            # 33x - "you hear them"
+        'nazat': ('na-zat', '2SG-hear'),                    # 32x - "you hear"
+        'ulianpa': ('u-lian-pa', 'elder-great-M'),          # 32x - "elder"
+        'sin': ('sin', 'near'),                             # 32x - "near, close to"
+        'sil': ('sil', 'flesh/body'),                       # 30x - "flesh, body"
+        'ning': ('ning', 'will/shall'),                     # 30x - modal auxiliary
+        'theitel': ('thei-tel', 'know.I-exact'),            # 30x - "know exactly"
+        'nisuh': ('ni-suh', 'day-count'),                   # 30x - "days"
+        'lai-at': ('lai-at', 'middle-LOC'),                 # 30x - "at the middle"
+        'matengun': ('mateng-un', 'until-PL.IMP'),          # 29x - "until (plural)"
+        'tuh': ('tuh', 'sow/plant'),                        # 29x - "sow, plant"
+        'gamlapi-ah': ('gamlapi-ah', 'wilderness-LOC'),     # 28x - "in the wilderness"
+        'mangbuhham': ('mangbuh-ham', 'barley-?'),          # 28x - compound
+        'kite': ('ki-te', 'REFL-PL'),                       # 28x - "themselves"
+        'thatang': ('that-ang', 'kill-?'),                  # 28x - compound
+        'khauhtakin': ('khauh-tak-in', 'strong-true-ERG'),  # 28x - "strongly"
+        'nawkin': ('na-wkin', '2SG-?'),                     # 27x - compound
+        'sawp': ('sawp', 'wrap'),                           # 27x - "wrap, cover"
+        'mudahte': ('muhdah-te', 'trouble-PL'),             # 27x - "troubles, troubles"
+        'muhdahhuai': ('muhdah-huai', 'trouble-worthy'),    # 27x - "troublesome"
+        'piakik': ('piak-kik', 'give.to-ITER'),             # 26x - "give back"
+        'kongpi-ah': ('kongpi-ah', 'road.big-LOC'),         # 26x - "on the highway"
+        'piapa': ('pia-pa', 'give-M'),                      # 26x - "giver, one who gives"
+        'hihsa': ('hih-sa', 'be-PERF'),                     # 25x - "been"
+        'sia-in': ('sia-in', 'bad-ERG'),                    # 25x - "badly"
+        'kaihkhop': ('kaih-khop', 'gather-together'),       # 25x - "gather together"
+        'kawng': ('kawng', 'road/way'),                     # 25x - "road, way"
+        'nengniam': ('neng-niam', 'breast-?'),              # 25x - compound
+        'singkha': ('sing-kha', 'wood-?'),                  # 25x - compound
+        'khate': ('khat-te', 'one-PL'),                     # 25x - "some (ones)"
+        'kawlsing': ('kawl-sing', 'fry-wood'),              # 25x - compound
+        'paai': ('pa-ai', 'father-love'),                   # 25x - compound
+        'ngeite': ('ngei-te', 'have.NMLZ-PL'),              # 25x - "possessions"
+        'hawlkhiat': ('hawl-khiat', 'drive-away'),          # 25x - "drive away"
+        'zahko': ('zah-ko', 'fear-?'),                       # 25x - compound
+        'mihau': ('mi-hau', 'person-rich'),                 # 25x - "rich person"
+        'thatlum': ('that-lum', 'kill-all'),                # 25x - "kill all"
+        'milian': ('mi-lian', 'person-great'),              # 25x - "great person"
+        'mul': ('mul', 'hair'),                             # 24x - "hair"
+        'tuunote': ('tuuno-te', 'child-PL'),                # 24x - "children"
+        
+        # === Session 4 Round 5: More compounds ===
+        'paipihto': ('paipih-to', 'accompany-sit'),         # 24x - "accompany"
+        'kahto': ('ka-h-to', '1SG-?-sit'),                  # 24x - needs more analysis
+        'awmdal': ('awm-dal', 'exist-remain'),              # 24x - "remain, stay"
+        'val': ('val', 'go.quickly'),                       # 24x - "go quickly"
+        'buktual': ('buk-tual', 'hole-dig'),                # 24x - "dig pit"
+        'kawikawi-in': ('kawikawi-in', 'crooked-ERG'),      # 24x - "crookedly"
+        'muk': ('muk', 'kiss'),                             # 24x - "kiss"
+        'panmun': ('pan-mun', 'plead-place'),               # 24x - "altar"
+        'gennop': ('gen-nop', 'speak-soft'),                # 24x - "speak softly"
+        'gahte': ('gah-te', 'fruit-PL'),                    # 23x - "fruits"
+        'pahpah': ('pah~pah', 'father~REDUP'),              # 23x - "each father"
+        'pangah': ('pan-gah', 'plead-fall'),                # 23x - compound
+        'veilam': ('vei-lam', 'faint-direction'),           # 23x - compound
+        'inn-a': ('inn-ah', 'house-LOC'),                   # 23x - "in the house"
+        'sagihvei': ('sagih-vei', 'seven-times'),           # 23x - "seven times"
+        'naih': ('na-ih', '2SG-love'),                      # 23x - "you love"
+        'lakik': ('la-kik', 'take-ITER'),                   # 23x - "take back"
+        'unau': ('u-nau', 'elder-younger'),                 # 23x - "siblings"
+        'mipih': ('mi-pih', 'person-APPL'),                 # 23x - compound
+        'nuh': ('nuh', 'mother'),                           # 23x - "mother" variant
+        'tawntungun': ('tawntung-un', 'eternity-PL.IMP'),   # 23x - "forever (pl)"
+        'dangtak': ('dang-tak', 'other-true'),              # 23x - "truly other"
+        'vengpa': ('veng-pa', 'guard-M'),                   # 23x - "guardian"
+        'gensawn': ('gen-sawn', 'speak-continue'),          # 23x - "continue speaking"
+        'sepsa': ('sep-sa', 'work-PERF'),                   # 23x - "worked"
+        'thuteng': ('thu-teng', 'word-?'),                  # 23x - compound
+        'pawlpih': ('pawl-pih', 'group-APPL'),              # 23x - "with group"
+        'miliante': ('mi-lian-te', 'person-great-PL'),      # 23x - "great people"
+        'mangbuhham': ('mangbuh-ham', 'barley-wheat'),      # 28x - "barley and wheat"
+        'thatang': ('that-ang', 'kill-?'),                  # 28x - needs context
+        'nawkin': ('na-wk-in', '2SG-?-ERG'),                # 27x - needs context
+        'kaikhawmin': ('ka-i-khawm-in', '1SG-?-together-ERG'), # 28x - compound
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
@@ -1836,10 +2412,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
         suffix_glosses = {
             'na': 'NMLZ',
             'te': 'PL', 
+            'uh': 'PL',       # Plural (alternative to te)
             'in': 'ERG',
             'ah': 'LOC',
             'sak': 'CAUS',
             'pih': 'APPL',
+            'theih': 'ABIL',  # Abilitative/potential suffix
+            'kik': 'ITER',    # Iterative suffix
+            'khia': 'EXIT',   # Directional "out"
+            'khawm': 'together', # Directional "together"
+            'toh': 'up',      # Directional "up"
+            'sa': 'PERF',     # Perfective aspect
+            'khol': 'INTENS', # Intensifier (genkhol = denounce)
+            'pen': 'TOP',     # Topic marker (also superlative)
+            'mang': 'COMPL',  # Completive (beimang = perish completely)
+            'san': 'at',      # Locative "at" (nuihsan = laugh at)
         }
         for suffix, suf_gloss in sorted(suffix_glosses.items(), key=lambda x: -len(x[0])):
             if remaining.lower().endswith(suffix) and len(remaining) > len(suffix) + 1:
