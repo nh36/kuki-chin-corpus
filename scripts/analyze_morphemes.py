@@ -3522,6 +3522,90 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'piapi': ('pia-pi', 'give-big'),                       # 6x - "give greatly"
         'ginat': ('gi-nat', 'stomach-tight'),                  # 6x - "courageous"
         'paipihsak': ('pai-pih-sak', 'go-CAUS-APPL'),          # 6x - "cause to accompany"
+        
+        # Session 6 Round 7: More philological additions (freq 8)
+        'hutna': ('hut-na', 'shelter-NMLZ'),                   # 8x - "shelter, refuge"
+        'puang': ('puang', 'speckled'),                        # 8x - "speckled, spotted"
+        'zawt': ('zawh-t', 'finish-?'),                        # 8x - "stronger" (contextual)
+        'letsongin': ('let-song-in', 'return-send-ERG'),       # 8x - "as a present"
+        'hoihlamin': ('hoih-lam-in', 'good-manner-ERG'),       # 8x - "peacefully"
+        'kinuh': ('ki-nuh', 'REFL-anoint'),                    # 8x - "be anointed"
+        'zuikha': ('zui-kha', 'follow-?'),                     # 8x - "follow, remember"
+        'hingte\u2019': ('hing-te\u2019', 'live-PL.POSS'),     # 8x - "living creatures'"
+        "hingte'": ('hing-te\u2019', 'live-PL.POSS'),
+        'luangsuk': ('luang-suk', 'flow-grind'),               # 8x - "grind fine"
+        'singniim': ('sing-niim', 'tree-shade'),               # 8x - "grove"
+        'genpih': ('gen-pih', 'speak-APPL'),                   # 8x - "speak unto"
+        'buksim': ('buk-sim', 'ambush-?'),                     # 8x - "lie in wait"
+        'dona': ('do-na', 'fight-NMLZ'),                       # 8x - "war, fighting"
+        'damkikzo': ('dam-kik-zo', 'well-ITER-can'),           # 8x - "recover"
+        'singluang': ('sing-luang', 'tree-log'),               # 8x - "beam"
+        'kiciamtehna': ('ki-ciam-teh-na', 'REFL-oath-mark-NMLZ'), # 8x - "enrollment"
+        'innluahza': ('inn-luah-za', 'house-?-?'),             # 8x - compound
+        'milipun': ('mi-lipun', 'person-bundle'),              # 8x - "bundle"
+        'atna': ('at-na', 'cut-NMLZ'),                         # 8x - "cutting"
+        'kongpuankhai': ('kong-puan-khai', '1SG→3-cloth-?'),   # 8x - compound
+        'khetphimte': ('khet-phim-te', 'judge-try-PL'),        # 8x - "trials"
+        'zepna': ('zep-na', 'press-NMLZ'),                     # 8x - "oppression"
+        'tuibuah': ('tui-buah', 'water-?'),                    # 8x - compound
+        'lungduai-in': ('lung-duai-in', 'heart-doubt-ERG'),    # 8x - "doubting"
+        'koihsa': ('koih-sa', 'put-already'),                  # 8x - "already placed"
+        'khangkhangin': ('khang-khang-in', 'generation~REDUP-ERG'), # 8x - "from generation"
+        'kantel': ('kan-tel', '1SG→3-spread'),                 # 8x - compound
+        'liangko-ah': ('liang-ko-ah', 'shine-?-LOC'),          # 8x - compound
+        'pataukohna': ('pa-tau-koh-na', 'male-?-call-NMLZ'),   # 8x - compound
+        'puanmongteep': ('puan-mong-teep', 'cloth-cover-?'),   # 8x - "covering"
+        'hinglai': ('hing-lai', 'live-time'),                  # 8x - "lifetime"
+        'sausak': ('sau-sak', 'long-CAUS'),                    # 8x - "lengthen"
+        'vuite': ('vui-te', 'bury-PL'),                        # 8x - compound
+        'luahte': ('luah-te', 'flow-PL'),                      # 8x - compound
+        'puanza': ('puan-za', 'cloth-?'),                      # 8x - compound
+        'nungakna': ('nungak-na', 'maiden-NMLZ'),              # 8x - "virginity"
+        'hihnate': ('hih-na-te', 'do-NMLZ-PL'),                # 8x - "doings"
+        'lunghimawhin': ('lung-himawh-in', 'heart-doubt-ERG'), # 8x - "anxiously"
+        'bawh': ('bawh', 'rub'),                               # 8x - "rub"
+        'kicihna': ('ki-cih-na', 'REFL-say-NMLZ'),             # 8x - "being called"
+        'sawmsagihte': ('sawm-sagih-te', 'ten-seven-PL'),      # 8x - "seventies"
+        'nun\u2019': ('nun\u2019', 'life.POSS'),               # 8x - "life's"
+        "nun'": ('nun\u2019', 'life.POSS'),
+        'sala': ('sa-la', 'animal-?'),                         # 8x - compound
+        'inntualah': ('inn-tu-a-lah', 'house-?-LOC-?'),        # 8x - compound
+        'muanhuai-in': ('muan-huai-in', 'trust-fear-ERG'),     # 8x - "trustingly"
+        'kihuh': ('ki-huh', 'REFL-push'),                      # 8x - compound
+        'thongkiatna': ('thong-kiat-na', 'prison-release-NMLZ'), # 8x - "release from prison"
+        
+        # Session 6 Round 8: More philological additions (freq 8)
+        'innluahza': ('inn-luah-za', 'house-inherit-right'),   # 8x - "birthright"
+        'tuibuah': ('tui-buah', 'water-pour'),                 # 8x - "drink offering"
+        'hehluatna': ('heh-luat-na', 'anger-exceed-NMLZ'),     # 8x - "fierceness"
+        'pelmawh': ('pel-mawh', 'praise-?'),                   # 8x - compound
+        'singhiang': ('sing-hiang', 'tree-branch'),            # 8x - "branches"
+        'tuihual': ('tui-hual', 'water-wave'),                 # 8x - "waves, unstable"
+        'nono': ('no-no', 'small~REDUP'),                      # 8x - "small, village"
+        'paupau': ('pau-pau', 'speak~REDUP'),                  # 8x - "speak repeatedly"
+        'lingsak': ('ling-sak', 'move-CAUS'),                  # 8x - "remove, shake"
+        'keugaw': ('keu-gaw', 'dig-round'),                    # 8x - "overturn"
+        'limlang': ('lim-lang', 'image-reflect'),              # 8x - "mirror"
+        'genteh': ('gen-teh', 'speak-mark'),                   # 8x - "byword, proverb"
+        'mimawhte': ('mi-mawh-te', 'person-sin-PL'),           # 8x - "sinners"
+        'omsakkik': ('om-sak-kik', 'be-CAUS-ITER'),            # 8x - "restore"
+        'theihpih': ('theih-pih', 'know.II-APPL'),             # 8x - "know together"
+        'sutsak': ('sut-sak', 'spoil-CAUS'),                   # 8x - "cause to spoil"
+        'liveina': ('li-vei-na', 'four-time-NMLZ'),            # 8x - "fourth"
+        'ciangpi': ('ciang-pi', 'measure-big'),                # 8x - "ephah"
+        'dampah': ('dam-pah', 'well-?'),                       # 8x - "willingly"
+        'vokte': ('vok-te', 'pig-PL'),                         # 8x - "swine"
+        'zuikha': ('zui-kha', 'follow-go'),                    # 8x - "follow"
+        'buksim': ('buk-sim', 'ambush-surround'),              # 8x - "lie in wait"
+        'tuakkha': ('tuak-kha', 'meet-go'),                    # 8x - "meet"
+        'ututun': ('u-tu-tun', 'want-FUT-DUR'),                # 8x - "wanting"
+        'cingtakin': ('cing-tak-in', 'prepare-true-ERG'),      # 8x - "truly"
+        'sapi': ('sa-pi', 'animal-big'),                       # 8x - "ox, cattle"
+        'neihsateng': ('neih-sa-teng', 'have.II-already-dwell'), # 8x - compound
+        'khihna': ('khih-na', 'frighten-NMLZ'),                # 8x - "fear"
+        'khutlekhezaw': ('khut-le-khe-zaw', 'hand-and-foot-more'), # 8x - "hands and feet"
+        'piancil': ('pian-cil', 'born-alone'),                 # 8x - "firstborn"
+        'vun-atna': ('vun-at-na', 'skin-cut-NMLZ'),            # 8x - "circumcision"
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
