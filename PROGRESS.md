@@ -28,42 +28,40 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 
 ### Phase 4: Leipzig Morphological Analyzer ✓
 - Focus: Tedim Chin (ctd)
-- **Current coverage: 98.99% of tokens**
+- **Current coverage: 97.57% of tokens**
 - Handles: prefixes, stems, suffixes, compounds, reduplication
 
-## Current Analyzer Performance (2026-03-07)
+## Current Analyzer Performance (2026-03-08)
 
 ### Overall Statistics
 ```
-Total tokens:   771,201
-Fully analyzed: 721,455 (93.55%)
-Partial:         39,610 (5.14%)  -- has some morphemes glossed, but not all
-Unknown:         10,136 (1.31%)  -- completely unknown
+Total tokens:      830,722
+Fully analyzed:    810,539 (97.57%)
+Partial:            14,633 (1.76%)  -- has some morphemes glossed
+Unknown:             5,550 (0.67%)  -- completely unknown
 ```
-
-Note: The previous 99.04% figure counted partial analyses as "glossed". 
-The 93.55% figure is stricter: only fully analyzed tokens count.
 
 ### Analyzer Components (Current)
 
-1. **Function Words** (~100 entries)
+1. **Function Words** (~120 entries)
    - Pronouns, demonstratives, particles
    - TAM markers, negation, question words
 
-2. **Verb Stems** (~190 entries)
+2. **Verb Stems** (~280 entries)
    - Stem I/II alternation (mu/muh, za/zak, thei/theih)
    - Motion, perception, cognition, speech, transfer verbs
    - Reflexive bases for ki- decomposition
 
-3. **Noun Stems** (~170 entries)
+3. **Noun Stems** (~240 entries)
    - Religious, social, kinship, body part terms
    - Place, time, abstract nouns
 
-4. **Compound Words** (~400 entries)
+4. **Compound Words** (~1,200 entries)
    - Noun+LOC: tungah, sungah, kiangah
    - Verb+NMLZ: mawhna, biakna, nuntakna
    - Noun+Noun: tapa, biakinn, lungsim
    - Reflexive: kibawl, kipan, kisai
+   - Philologically verified via KJV cross-referencing
 
 5. **Productive Morphology**
    - Prefix stripping: ka-, na-, a-, kong-, hong-, ki-
@@ -155,97 +153,65 @@ The remaining 7,672 unknown tokens (1.01%) fall into these categories:
 | 2026-03-06 | 90.6% | +0.4 | Suffix handling |
 | 2026-03-07 | 92.3% | +1.7 | Compounds + bug fixes |
 | 2026-03-07 | 97.02% | +4.7 | Philological expansion to 97% |
-| 2026-03-07 | 97.21% | +0.19 | Quality-focused expansion, bug fixes |
+| 2026-03-07 | 97.21% | +0.19 | Quality-focused expansion |
+| 2026-03-07 | 97.25% | +0.04 | Bug fixes (namte, alang) |
+| 2026-03-08 | 97.44% | +0.19 | Session 6 Rounds 1-6 |
+| 2026-03-08 | 97.50% | +0.06 | Session 6 Rounds 7-8 |
+| 2026-03-08 | 97.57% | +0.07 | Session 6 Rounds 9-10 |
 
 ## Current Phase: Quality-Focused Expansion
 
-**Coverage: 97.21% fully analyzed | 2.08% partial | 0.71% unknown**
+**Coverage: 97.57% fully analyzed | 1.76% partial | 0.67% unknown**
 
-### Session 5 Accomplishments (2026-03-07)
+### Session 6 Accomplishments (2026-03-08)
 
-1. **Created scalable methodology documentation**
-   - `docs/METHODOLOGY.md` - Full guide for replicating to 19 languages
-   - `docs/LESSONS_LEARNED.md` - Bug log and wrong turns to avoid
+1. **Vocabulary additions via philological analysis**
+   - Added ~350 new compound word entries
+   - All verified via KJV English cross-referencing
+   - Categories: biblical terminology, body parts, legal terms
+   
+2. **Notable additions by round:**
+   - Round 1-2: ki-em (bake), tawlette (windows), kauphete (locusts)
+   - Round 3-4: meiite (clouds), gamtatzia (way), lawpna (rejoicing)
+   - Round 5-6: vakvai (wanderer), kidawk (dry land), gancingte (herdsmen)
+   - Round 7-8: innluahza (birthright), vokte (swine), hehluatna (fierceness)
+   - Round 9-10: siangthopen (most holy), upmawh (jealousy), kolte (wheels)
 
-2. **Vocabulary additions via philological analysis**
-   - Added 50+ new entries with KJV cross-referencing
-   - Ki- verbs: kinawh (hurry), kikholh (accompany), kilawi (dislocate), etc.
-   - Possessive forms: Fixed Unicode apostrophe handling (U+2019)
-   - Compounds: pakan (spoon), leengpei (wheel), hingkhawi (suffer to live)
-
-3. **Bug fixes discovered via quality audit**
-   - Fixed "namte" over-decomposition (was na-m-te, now nam-te = tribe-PL)
-   - Fixed "alang" gloss (was "vine", now "side" per KJV context)
-   - Added protective entries to prevent prefix-stripping on stems
-
-4. **Quality metrics**
-   - Sampled 50 random analyzed tokens: all correct
+3. **Quality audits**
+   - Sampled 20 random analyzed tokens: all correct
    - Checked for over-decomposition patterns
-   - Verified no regression in existing analyses
+   - No regressions identified
 
-### Remaining Work
+### Remaining Work (~2.4% = 20,183 tokens)
 
-| Category | Tokens | % |
-|----------|--------|---|
-| Partial (some analysis) | 17,278 | 2.08% |
-| Unknown (no analysis) | 5,891 | 0.71% |
-| **Total unanalyzed** | **23,169** | **2.79%** |
+| Category | Est. % | Examples |
+|----------|--------|----------|
+| Rare vocabulary (hapax) | ~40% | dongun, veipi, utzaw |
+| Complex compounds not yet handled | ~30% | kongpuankhai, puanmongteep |
+| Proper nouns with unusual suffixes | ~15% | Minor biblical names |
+| Dialectal/archaic forms | ~10% | Variant spellings |
+| Potential loan words | ~5% | sapfaia, peel, vot |
 
-Common remaining issues:
-- Rare vocabulary (hapax legomena)
-- Complex ki- forms not yet handled
-- Proper nouns with unusual suffixes
-- Dialectal/archaic forms
+### Philological Method Used
 
-### The residual analyzer
+For each unknown/partial word:
+1. Grep all Bible verses where the word occurs
+2. Extract verse IDs and look up KJV English parallel
+3. Infer meaning from English context
+4. Verify morphological structure is consistent
+5. Add to COMPOUND_WORDS with segmentation and gloss
 
-A dedicated analyzer has been created to:
-1. Collect all Bible verse contexts for each unknown word
-2. Cross-reference with English KJV translations
-3. Infer semantics from contextual evidence
-4. Classify words: loans, dialectal, archaic, ki-forms, compounds
-5. Generate per-word reports with philological analysis
+This method ensures all entries are semantically verified against actual usage.
 
-### Recently Added Stems (2026-03-08)
+### Next Steps
 
-Based on philological analysis of Bible contexts:
-
-**Nouns:**
-- `aksi` (star), `lutang` (chief), `guh` (bone), `liat` (great)
-- `nak` (nose), `ngasa` (fish), `lungsim` (heart), `pualam` (outside)
-- `nuai` (below), `humpinelkai` (lion), `nuamsa` (prosperous)
-
-**Verbs:**
-- `kantan` (cross.over), `khahkhia` (deliver), `hawlkhia` (drive.out)
-- `lungkia` (dismay), `tawlngak` (rest), `sitbaang` (blemish)
-- `mengmeng` (quickly), `zenzen` (at.all), `vei` (faint)
-
-**Function words:**
-- `veve` (still/yet), `tuamtuam` (various), `ciatah` (each)
-- `baih` (early), `letsong` (gift)
-
-**Proper nouns:**
-- `Balak`, `Zippor`, `Mizpah`
-
-### Immediate Next Steps
-
-1. [x] Build residual word analyzer framework
-2. [x] Add high-frequency stems from philological analysis
-3. [ ] Continue systematic unknown word investigation
-4. [ ] Clean up duplicate compound word entries
-5. [ ] Generate Leipzig-glossed sample chapters
-
-### Questions for Remaining Unknowns
-
-For each remaining unknown word:
-1. What Bible verses does it appear in?
-2. What is the corresponding KJV English text?
-3. Can meaning be confidently inferred from context?
-4. Is it a variant spelling of a known word?
-5. Is it a loan word? If so, from what language?
-6. Does Henderson 1965 document it?
+1. [ ] Continue systematic unknown word investigation (freq 6-7)
+2. [ ] Document truly unanalyzable items for future research
+3. [ ] Try Henderson vocabulary extraction for remaining gaps
+4. [ ] Generate Leipzig-glossed sample chapters
+5. [ ] Prepare methodology for scaling to other 18 languages
 
 ---
 
 *Last updated: 2026-03-08*
-*Coverage: 93.55% fully analyzed | 5.14% partial | 1.31% unknown*
+*Coverage: 97.57% fully analyzed | 1.76% partial | 0.67% unknown*
