@@ -3606,6 +3606,95 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khutlekhezaw': ('khut-le-khe-zaw', 'hand-and-foot-more'), # 8x - "hands and feet"
         'piancil': ('pian-cil', 'born-alone'),                 # 8x - "firstborn"
         'vun-atna': ('vun-at-na', 'skin-cut-NMLZ'),            # 8x - "circumcision"
+        
+        # Session 6 Round 9: More philological additions (freq 7-8)
+        'liangko-ah': ('liang-ko-ah', 'shoulder-?-LOC'),       # 8x - "on shoulders"
+        'pataukohna': ('pa-tau-koh-na', 'male-?-call-NMLZ'),   # 8x - "alarm, trumpet"
+        'puanmongteep': ('puan-mong-teep', 'cloth-cover-fringe'), # 8x - "fringes"
+        'tuutalte': ('tuutal-te', 'ram-PL'),                   # 8x - "rams"
+        'puanza': ('puan-za', 'cloth-garment'),                # 8x - "vesture, garment"
+        'henhan': ('hen-han', 'be-?'),                         # 8x - "spreading"
+        'liammate': ('liam-ma-te', 'wound-?-PL'),              # 8x - "wounds, bruises"
+        'awi-in': ('a-wi-in', '3SG-tie-ERG'),                  # 8x - compound
+        'cilesa': ('ci-le-sa', 'say-and-already'),             # 7x - "saying and"
+        'toh': ('toh', 'stand'),                               # 7x - "stand"
+        'sapfaia': ('sapfaia', 'sapphire'),                    # 7x - "sapphire" (loanword)
+        'panga': ('pang-a', 'side-LOC'),                       # 7x - "on the side"
+        'liangkaih': ('liang-kaih', 'shoulder-join'),          # 7x - "shoulder piece"
+        'langnih': ('lang-nih', 'side-two'),                   # 7x - "both sides"
+        'siangthopen': ('siangtho-pen', 'holy-SUPL'),          # 7x - "most holy"
+        'sintuamte': ('sin-tuam-te', 'liver-lobe-PL'),         # 7x - "liver lobes"
+        'balgawp': ('bal-gawp', 'torn-round'),                 # 7x - "torn by beasts"
+        'upmawh': ('up-mawh', 'suspect-sin'),                  # 7x - "jealousy"
+        'upmawhna': ('up-mawh-na', 'suspect-sin-NMLZ'),        # 7x - "jealousy"
+        'tatsat': ('tat-sat', 'cut-regular'),                  # 7x - "continual"
+        'hawlkhiatsak': ('hawl-khiat-sak', 'drive-depart-CAUS'), # 7x - "drive out"
+        'luzang': ('lu-zang', 'head-crown'),                   # 7x - "crown of head"
+        'gilkialna': ('gil-kial-na', 'stomach-turn-NMLZ'),     # 7x - "hunger"
+        'thun': ('thun', 'entreat'),                           # 7x - "pray, entreat"
+        'minthangsak': ('min-thang-sak', 'name-famous-CAUS'),  # 7x - "glorify"
+        'gelhsak': ('gelh-sak', 'write-CAUS'),                 # 7x - "describe, write"
+        'omdan': ('om-dan', 'be-manner'),                      # 7x - "condition, welfare"
+        'pawi-ah': ('pawi-ah', 'feast-LOC'),                   # 7x - "at feast"
+        'mualzang': ('mual-zang', 'mountain-crown'),           # 7x - "mountain top"
+        'anteh': ('an-teh', '3PL-mark'),                       # 7x - compound
+        'khawhsa': ('khawh-sa', 'harvest-animal'),             # 7x - compound
+        'tecite': ('teci-te', 'witness-PL'),                   # 7x - "witnesses"
+        'cilphih': ('cil-pih', 'alone-APPL'),                  # 7x - compound
+        'kiphawkna': ('ki-phawk-na', 'REFL-remember-NMLZ'),    # 7x - "memorial"
+        'kituh': ('ki-tuh', 'REFL-push'),                      # 7x - compound
+        'thukkikna': ('thuk-kik-na', 'deep-ITER-NMLZ'),        # 7x - compound
+        'mante': ('man-te', 'true-PL'),                        # 7x - compound
+        'khikhe': ('khi-khe', 'foot-leg'),                     # 7x - "legs, feet"
+        'tunglam': ('tung-lam', 'above-direction'),            # 7x - "upward"
+        'tangtakin': ('tang-tak-in', 'reach-true-ERG'),        # 7x - "certainly"
+        'niam': ('niam', 'lowly'),                             # 7x - "low, humble"
+        'theikha': ('theih-kha', 'know.II-go'),                # 7x - compound
+        'ulianpa\u2019': ('ulian-pa\u2019', 'chief-male.POSS'), # 7x
+        "ulianpa'": ('ulian-pa\u2019', 'chief-male.POSS'),
+        'khinkhia': ('khin-khia', 'move-emerge'),              # 7x - "remove"
+        'munmuanhuai-ah': ('mun-muanhuai-ah', 'place-trust-LOC'), # 7x - "at refuge"
+        'khansih': ('khan-sih', 'generation-finish'),          # 7x - compound
+        'naunu': ('na-u-nu', '2SG-elder.sibling-mother'),      # 7x - "your aunt"
+        'thakhauh': ('tha-khauh', 'strength-strong'),          # 7x - "mighty"
+        'theihzawh': ('theih-zawh', 'know.II-COMPL'),          # 7x - "know completely"
+        'kongzingah': ('kong-zing-ah', '1SG→3-wife-LOC'),      # 7x - compound
+        'samzang': ('sam-zang', 'call-?'),                     # 7x - compound
+        'innkuansung': ('inn-kuan-sung', 'house-family-inside'), # 7x - "household"
+        'satlum': ('sat-lum', 'cut-round'),                    # 7x - "kill, slay"
+        'minsiasak': ('min-sia-sak', 'name-bad-CAUS'),         # 7x - "blaspheme"
+        
+        # Session 6 Round 10: More philological additions (freq 7-8)
+        'zawt': ('zawh-t', 'strong-?'),                        # 8x - "stronger" (form of zawh)
+        'inntualah': ('inn-tu-a-lah', 'house-stand-LOC-take'), # 8x - "platform"
+        'sala': ('sa-la', 'flesh-take'),                       # 8x - "slave"
+        'napi-un': ('na-pi-un', '2PL-big-?'),                  # 8x - compound
+        'puksi': ('puk-si', 'cave-die'),                       # 8x - compound
+        'pakante': ('pak-an-te', 'spoon-3PL-PL'),              # 7x - "spoons"
+        'gaknate': ('gak-na-te', 'hook-NMLZ-PL'),              # 7x - "hooks"
+        'thumna-ah': ('thum-na-ah', 'three-NMLZ-LOC'),         # 7x - "on the third"
+        'takah': ('tak-ah', 'true-LOC'),                       # 7x - "through/truly"
+        'pano': ('pa-no', 'male-young'),                       # 7x - "young male/calf"
+        'maingatin': ('mai-ngat-in', 'face-ground-ERG'),       # 7x - "face down"
+        'banna': ('ban-na', 'spread-NMLZ'),                    # 7x - "spreading (plague)"
+        'lawnna': ('lawn-na', 'flow-NMLZ'),                    # 7x - "issue, discharge"
+        'simto': ('sim-to', 'count-toward'),                   # 7x - "count unto"
+        'zuakna': ('zuak-na', 'sell-NMLZ'),                    # 7x - "sale"
+        'kikhihna': ('ki-khih-na', 'REFL-bind-NMLZ'),          # 7x - "binding oath"
+        'angvan': ('ang-van', 'together-?'),                   # 7x - "respect"
+        'luat': ('luat', 'exceed'),                            # 7x - "excess, over"
+        'phalvak': ('phal-vak', 'permit-quick'),               # 7x - compound
+        'ciahsuk': ('ciah-suk', 'return-down'),                # 7x - "return down"
+        'hihgawp': ('hih-gawp', 'do-round'),                   # 7x - compound
+        'paukhia': ('pau-khia', 'speak-emerge'),               # 7x - "speak out"
+        'kuangkhia': ('kuang-khia', 'box-emerge'),             # 7x - compound
+        'khuaphialep': ('khua-phial-ep', 'town-wide-?'),       # 7x - compound
+        'nungkiksak': ('nung-kik-sak', 'live-ITER-CAUS'),      # 7x - "revive"
+        'kolte': ('kol-te', 'wheel-PL'),                       # 7x - "wheels"
+        'sahna': ('sah-na', 'grind-NMLZ'),                     # 7x - "grinding"
+        'innkuankuanin': ('inn-kuan-kuan-in', 'house-family~REDUP-ERG'), # 7x - compound
+        'apna': ('ap-na', 'cover-NMLZ'),                       # 7x - "covering"
+        'nawksak': ('nawk-sak', 'again-CAUS'),                 # 7x - compound
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
