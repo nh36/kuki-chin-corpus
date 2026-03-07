@@ -1,97 +1,97 @@
 [
   {
     "iso": "bgr",
-    "entries": 4414,
+    "entries": 3221,
     "output": "data/lexicons/bgr_lexicon.tsv"
   },
   {
     "iso": "cek",
-    "entries": 1511,
+    "entries": 1097,
     "output": "data/lexicons/cek_lexicon.tsv"
   },
   {
     "iso": "cfm",
-    "entries": 5997,
+    "entries": 4089,
     "output": "data/lexicons/cfm_lexicon.tsv"
   },
   {
     "iso": "clt",
-    "entries": 2210,
+    "entries": 1444,
     "output": "data/lexicons/clt_lexicon.tsv"
   },
   {
     "iso": "cmr",
-    "entries": 1657,
+    "entries": 1172,
     "output": "data/lexicons/cmr_lexicon.tsv"
   },
   {
     "iso": "cnh",
-    "entries": 5304,
+    "entries": 3833,
     "output": "data/lexicons/cnh_lexicon.tsv"
   },
   {
     "iso": "cnk",
-    "entries": 3980,
+    "entries": 2868,
     "output": "data/lexicons/cnk_lexicon.tsv"
   },
   {
     "iso": "cnw",
-    "entries": 6303,
+    "entries": 4140,
     "output": "data/lexicons/cnw_lexicon.tsv"
   },
   {
     "iso": "csh",
-    "entries": 3870,
+    "entries": 2679,
     "output": "data/lexicons/csh_lexicon.tsv"
   },
   {
     "iso": "csy",
-    "entries": 5928,
+    "entries": 4031,
     "output": "data/lexicons/csy_lexicon.tsv"
   },
   {
     "iso": "ctd",
-    "entries": 6576,
+    "entries": 4400,
     "output": "data/lexicons/ctd_lexicon.tsv"
   },
   {
     "iso": "czt",
-    "entries": 5871,
+    "entries": 4076,
     "output": "data/lexicons/czt_lexicon.tsv"
   },
   {
     "iso": "czt-mbs",
-    "entries": 385,
+    "entries": 174,
     "output": "data/lexicons/czt-mbs_lexicon.tsv"
   },
   {
     "iso": "hlt",
-    "entries": 2182,
+    "entries": 1455,
     "output": "data/lexicons/hlt_lexicon.tsv"
   },
   {
     "iso": "lus",
-    "entries": 7352,
+    "entries": 5013,
     "output": "data/lexicons/lus_lexicon.tsv"
   },
   {
     "iso": "pck",
-    "entries": 8024,
+    "entries": 5288,
     "output": "data/lexicons/pck_lexicon.tsv"
   },
   {
     "iso": "tcz",
-    "entries": 12789,
+    "entries": 7537,
     "output": "data/lexicons/tcz_lexicon.tsv"
   },
   {
     "iso": "zom",
-    "entries": 425,
+    "entries": 205,
     "output": "data/lexicons/zom_lexicon.tsv"
   },
   {
     "iso": "zyp",
-    "entries": 2236,
+    "entries": 1491,
     "output": "data/lexicons/zyp_lexicon.tsv"
   }
 ]

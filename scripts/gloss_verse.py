@@ -84,10 +84,17 @@ def tokenize(text: str) -> List[str]:
 
 
 def get_confidence_tier(confidence: float) -> str:
-    """Classify confidence into tiers."""
-    if confidence >= 0.7:
+    """Classify confidence into tiers.
+    
+    New scoring uses PMI × sqrt(pair_count), so scores range 0-200.
+    Thresholds based on score distribution analysis:
+    - High: >= 25 (top ~25% of entries, strong evidence)
+    - Medium: >= 10 (middle tier, reasonable evidence)
+    - Low: > 0 (any positive association)
+    """
+    if confidence >= 25.0:
         return "high"
-    elif confidence >= 0.4:
+    elif confidence >= 10.0:
         return "medium"
     elif confidence > 0:
         return "low"

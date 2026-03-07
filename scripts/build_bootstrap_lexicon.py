@@ -395,25 +395,26 @@ def compute_association_scores(
     kc_counts: Dict[str, int],
     eng_counts: Dict[str, int],
     total_verses: int,
-    min_pair_count: int = 3,
+    min_pair_count: int = 5,  # Increased from 3 to reduce noise from rare co-occurrences
     min_eng_freq: int = 5,
     min_kc_freq: int = 3,
     filter_stopwords: bool = True,
-    max_eng_coverage: float = 0.15  # Penalize English words in >15% of verses
+    max_eng_coverage: float = 0.15,  # Penalize English words in >15% of verses
+    max_kc_coverage: float = 0.30,   # Filter KC function words (>30% verse coverage)
 ) -> Dict[str, List[Tuple[str, float, int, float]]]:
     """
     Compute association scores for word pairs.
     
-    Uses Positive PMI (PPMI) combined with a confidence weight and frequency penalty:
+    Uses PMI combined with pair count for a balanced score:
     - PMI(kc, eng) = log2(P(kc, eng) / (P(kc) * P(eng)))
-    - Confidence = pair_count / kc_freq (how often the KC word co-occurs with this English word)
+    - Combined score = PMI * sqrt(pair_count) (balances rare high-PMI vs common pairs)
     - Frequency penalty: discount score for overly common English words
-    - Final score = confidence * frequency_penalty
     
     Filters out:
-    - Pairs occurring less than min_pair_count times
+    - Pairs occurring less than min_pair_count times (reduces noise)
     - English words appearing less than min_eng_freq times (reduces noise from rare words)
     - KC words appearing less than min_kc_freq times
+    - KC function words (appearing in >30% of verses) - these get spurious content glosses
     - English stopwords (function words that co-occur with everything)
     
     Returns:
@@ -421,8 +422,18 @@ def compute_association_scores(
     """
     lexicon = defaultdict(list)
     
+    # Pre-compute KC word coverage to filter function words
+    kc_coverage = {word: count / total_verses for word, count in kc_counts.items()}
+    
+    # Content words that should NOT be glosses for function words
+    content_word_glosses = {
+        'king', 'lord', 'god', 'man', 'woman', 'son', 'father', 'mother',
+        'hand', 'heart', 'eye', 'head', 'spirit', 'mouth', 'foot',
+        'house', 'land', 'water', 'fire', 'earth', 'heaven',
+    }
+    
     for (kc_word, eng_word), count in pair_counts.items():
-        # Skip low-frequency pairs
+        # Skip low-frequency pairs (increased threshold for reliability)
         if count < min_pair_count:
             continue
         
@@ -442,6 +453,14 @@ def compute_association_scores(
         if filter_stopwords and eng_word in ENGLISH_STOPWORDS:
             continue
         
+        # Filter KC function words: if KC word appears in >30% of verses,
+        # it's likely a grammatical particle and shouldn't get content word glosses
+        kc_word_coverage = kc_coverage.get(kc_word, 0)
+        if kc_word_coverage > max_kc_coverage:
+            # Only block content word glosses for high-coverage KC words
+            if eng_word in content_word_glosses:
+                continue
+        
         # Compute PMI
         p_pair = count / total_verses
         p_kc = kc_counts[kc_word] / total_verses
@@ -452,9 +471,6 @@ def compute_association_scores(
             
             # Only keep positive associations
             if pmi > 0:
-                # Raw confidence: what fraction of KC word occurrences co-occur with this ENG word
-                raw_confidence = count / kc_counts[kc_word]
-                
                 # Frequency penalty: discount overly common English words
                 # Words appearing in >max_eng_coverage of verses get penalized
                 eng_coverage = eng_counts[eng_word] / total_verses
@@ -464,19 +480,20 @@ def compute_association_scores(
                 else:
                     frequency_penalty = 1.0
                 
-                # Combined score: PMI-weighted confidence
-                # PMI tells us how much more often they co-occur than by chance
-                # Confidence tells us how consistently they pair
-                # Use PMI to distinguish semantic vs accidental co-occurrence
-                pmi_weight = min(pmi / 5.0, 1.0)  # Normalize PMI (typical range 0-10)
+                # Combined score: PMI * sqrt(pair_count)
+                # This balances:
+                # - High PMI (genuine correlation, not by chance)
+                # - Pair count (reliability - more evidence = more confidence)
+                # sqrt smooths the pair count effect so very common words don't dominate
+                combined_score = pmi * math.sqrt(count) * frequency_penalty
                 
-                # Final score: confidence * pmi_weight * frequency_penalty
-                adjusted_confidence = raw_confidence * pmi_weight * frequency_penalty
+                # Normalized confidence for backward compatibility
+                raw_confidence = count / kc_counts[kc_word]
+                adjusted_confidence = raw_confidence * frequency_penalty
                 
-                lexicon[kc_word].append((eng_word, pmi, count, adjusted_confidence))
+                lexicon[kc_word].append((eng_word, pmi, count, combined_score))
     
-    # Sort by confidence (stability) first, then PMI
-    # This prioritizes consistent translations over rare high-PMI pairs
+    # Sort by combined score (PMI * sqrt(count))
     for kc_word in lexicon:
         lexicon[kc_word].sort(key=lambda x: (-x[3], -x[1], -x[2]))
     
