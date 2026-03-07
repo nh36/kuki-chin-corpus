@@ -403,13 +403,39 @@ NOUN_STEMS = {
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
 PROPER_NOUNS = {
-    'Jesuh', 'Jesus', 'Khrih', 'Christ', 'Johan', 'John',
-    'Isaiah', 'Jordan', 'Galilee', 'Jerusalem', 'Judea',
-    'Israel', 'David', 'Moses', 'Simon', 'Andru', 'James',
-    'Peter', 'Zebedi', 'Nazareth', 'Kapernaum', 'Topa',
-    'Pasian', 'Nangma', 'Zeisu', 'Kristu', 'Pilate',
-    'Abraham', 'Jakobu', 'Johane', 'Herod', 'Maria',
-    'Bethlehem', 'Egypt', 'Nazaret', 'Samaria', 'Roma',
+    # Jesus and titles
+    'Jesuh', 'Jesus', 'Khrih', 'Christ', 'Kristu', 'Zeisu',
+    
+    # Old Testament figures
+    'Abraham', 'Isaac', 'Jakob', 'Jakobu', 'Israel', 'Josef', 'Joseph',
+    'Moses', 'Aaron', 'Joshua', 'David', 'Solomon', 'Saul', 'Samuel',
+    'Elijah', 'Elisha', 'Isaiah', 'Jeremiah', 'Ezekiel', 'Daniel',
+    'Job', 'Esau', 'Levi', 'Reuben', 'Benjamin', 'Judah', 'Manasseh',
+    'Efraim', 'Gad', 'Simeon', 'Naphtali', 'Asher', 'Zebulun', 'Issachar',
+    'Jonathan', 'Absalom', 'Joab', 'Nathan', 'Eli', 'Noah', 'Adam', 'Eve',
+    'Jeroboam', 'Rehoboam', 'Ahab', 'Jehoshafat', 'Hezekiah', 'Josiah',
+    
+    # New Testament figures
+    'Johan', 'John', 'Peter', 'Piter', 'Paul', 'Paulus', 'Simon', 'Andru',
+    'James', 'Zebedi', 'Matthew', 'Mark', 'Luke', 'Thomas', 'Philip',
+    'Bartholomew', 'Judas', 'Maria', 'Mary', 'Martha', 'Lazarus',
+    'Pilate', 'Herod', 'Nicodemus', 'Stephen', 'Timothy', 'Titus',
+    'Barnabas', 'Silas', 'Apollos',
+    
+    # Places - Old Testament
+    'Egypt', 'Babylon', 'Jerusalem', 'Judah', 'Samaria',
+    'Moab', 'Edom', 'Ammon', 'Syria', 'Assiria', 'Kanaan', 'Canaan',
+    'Gilead', 'Zion', 'Sinai', 'Horeb', 'Bethel', 'Bethlehem',
+    'Jordan', 'Filistia', 'Philistia',
+    
+    # Places - New Testament
+    'Galilee', 'Nazareth', 'Nazaret', 'Kapernaum', 'Capernaum',
+    'Roma', 'Rome', 'Corinth', 'Ephesus', 'Antioch', 'Athens',
+    'Macedonia', 'Galatia', 'Thessalonica', 'Judea',
+    
+    # Groups/Peoples
+    'Jew', 'Farisi', 'Pharisee', 'Sadducee', 'Gentail', 'Gentile',
+    'Levite', 'Pawi', 'Faro',
 }
 
 # =============================================================================
@@ -418,10 +444,13 @@ PROPER_NOUNS = {
 
 def clean_word(word: str) -> str:
     """Remove punctuation from word, including quotes and apostrophes at word boundaries."""
-    # Handle curly quotes and other Unicode punctuation
-    word = re.sub(r'^["\'"\'\[\(\«„"]+', '', word)  # Leading quotes/brackets
-    word = re.sub(r'[.,;:!?"\'\"\'\)\]\»"\']+$', '', word)  # Trailing punctuation
-    word = re.sub(r"'+$", '', word)  # Trailing apostrophes (possessives in some styles)
+    # Handle curly quotes (", ", ', ') and other Unicode punctuation
+    # Leading: remove quotes, brackets
+    word = re.sub(r'^["\'\u201c\u201d\u2018\u2019\[\(\xab\u201e]+', '', word)
+    # Trailing: remove punctuation, quotes, brackets
+    word = re.sub(r'[.,;:!?\u201c\u201d\u2018\u2019"\'\)\]\xbb]+$', '', word)
+    # Remove trailing straight apostrophes
+    word = re.sub(r"'+$", '', word)
     return word
 
 def is_proper_noun(word: str) -> bool:
@@ -647,6 +676,43 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pah': ('pah', 'do.so'),
         'hileh': ('hi-leh', 'be-if'),
         'unla': ('un-la', 'PL.IMP-and'),
+        
+        # === More common noun forms ===
+        'mai-ah': ('mai-ah', 'face-LOC'),
+        'khua-ah': ('khua-ah', 'town-LOC'),
+        'inn-ah': ('inn-ah', 'house-LOC'),
+        'leitang': ('lei-tang', 'land-earth'),
+        'pasal': ('pasal', 'husband'),
+        'pawlkhat': ('pawl-khat', 'some-one'),
+        'mihing': ('mi-hing', 'person-kind'),
+        'minamte': ('mi-nam-te', 'person-kind-PL'),
+        'nasep': ('na-sep', 'work'),
+        'suante': ('suan-te', 'offspring-PL'),
+        'namsau': ('nam-sau', 'long.hair'),
+        'nangawn': ('na-ngawn', '2SG-own'),
+        'piang': ('piang', 'be.born'),
+        'hihna': ('hih-na', 'this-NMLZ'),
+        'lungdam': ('lung-dam', 'heart-well'),
+        'itna': ('it-na', 'love-NMLZ'),
+        'nungta': ('nung-ta', 'life-PFV'),
+        'uliante': ('ulian-te', 'elder-PL'),
+        'huh': ('huh', 'blow'),
+        'khuapite': ('khua-pi-te', 'town-big-PL'),
+        'lohna': ('loh-na', 'NEG-NMLZ'),
+        'kam': ('kam', 'word/mouth'),
+        'mual': ('mual', 'mountain'),
+        'sathau': ('sa-thau', 'fat'),
+        'tuipi': ('tui-pi', 'water-big'),
+        'hehna': ('heh-na', 'anger-NMLZ'),
+        'upna': ('up-na', 'believe-NMLZ'),
+        'nungzuite': ('nung-zui-te', 'life-follow-PL'),
+        'khawm': ('khawm', 'gather'),
+        'ciat': ('ciat', 'each'),
+        'dangte': ('dang-te', 'other-PL'),
+        'tate': ('ta-te', 'child-PL'),
+        'nate': ('na-te', '2SG-PL'),
+        'kizui-in': ('ki-zui-in', 'REFL-follow-ERG'),
+        'la-in': ('la-in', 'take-ERG'),
     }
     if word_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_lower]
