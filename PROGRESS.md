@@ -28,17 +28,28 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 
 ### Phase 4: Leipzig Morphological Analyzer ✓
 - Focus: Tedim Chin (ctd)
-- **Current coverage: 97.57% of tokens**
+- **Current coverage: 97.59% of tokens**
 - Handles: prefixes, stems, suffixes, compounds, reduplication
 
 ## Current Analyzer Performance (2026-03-08)
 
 ### Overall Statistics
 ```
-Total tokens:      830,722
-Fully analyzed:    810,539 (97.57%)
-Partial:            14,633 (1.76%)  -- has some morphemes glossed
-Unknown:             5,550 (0.67%)  -- completely unknown
+Total tokens:      831,340
+Fully analyzed:    811,303 (97.59%)
+Partial:            14,465 (1.74%)  -- has some morphemes glossed
+Unknown:             5,572 (0.67%)  -- completely unknown
+```
+
+### Quality Assurance (Allomorph Audit)
+```
+-te (Plural) suffix audit:
+  Correctly analyzed:    26,297 tokens
+  Unknown base + -te:     2,086 tokens
+  Flagged issues:           286 cases (down from 361)
+
+Verified: -te is a single allomorph (no -ite, -ate variants)
+Distribution: vowel-final (66%), consonant-final (34%)
 ```
 
 ### Analyzer Components (Current)
@@ -52,16 +63,18 @@ Unknown:             5,550 (0.67%)  -- completely unknown
    - Motion, perception, cognition, speech, transfer verbs
    - Reflexive bases for ki- decomposition
 
-3. **Noun Stems** (~240 entries)
+3. **Noun Stems** (~260 entries)
    - Religious, social, kinship, body part terms
    - Place, time, abstract nouns
+   - Session 6 additions: hing, vun, thal, innsa, gamsa, etc.
 
-4. **Compound Words** (~1,200 entries)
+4. **Compound Words** (~1,350 entries)
    - Noun+LOC: tungah, sungah, kiangah
    - Verb+NMLZ: mawhna, biakna, nuntakna
    - Noun+Noun: tapa, biakinn, lungsim
    - Reflexive: kibawl, kipan, kisai
    - Philologically verified via KJV cross-referencing
+   - **Over-segmentation guards**: protective entries for hingte, innsate, etc.
 
 5. **Productive Morphology**
    - Prefix stripping: ka-, na-, a-, kong-, hong-, ki-
