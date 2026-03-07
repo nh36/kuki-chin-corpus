@@ -344,6 +344,98 @@ VERB_STEMS = {
     'hehpih': 'be.angry',    # 233
     'zahtak': 'honor',       # 148
     'lungdam': 'rejoice',    # 154
+    
+    # Additional verb stems from frequency analysis (Round 2)
+    'huam': 'surround',      # 27x
+    'buang': 'be.confused',  # 21x
+    'ngeisa': 'desire',      # 15x
+    'dem': 'blame',          # 12x
+    'phong': 'reveal',       # 11x
+    'ngian': 'endure',       # 11x
+    'buak': 'fight',         # 10x
+    'laih': 'replace',       # 10x
+    'gawm': 'seize',         # 9x
+    'hawl': 'seek',          # 9x
+    'pung': 'increase',      # 12x
+    'hoi': 'arrange',        # 15x
+    'zuat': 'prepare',       # 13x
+    'ngah': 'get',           # common
+    'let': 'return',         # 10x
+    'dial': 'call',          # 10x
+    'vial': 'encircle',      # 10x
+    'tangtun': 'arrive',     # 10x
+    'hawm': 'join',
+    'cim': 'pierce',
+    'zop': 'join',           # 10x
+    'kho': 'labor',          # 10x
+    'puah': 'divine',
+    'dokkik': 'oppose',      # 10x
+    'dinkhiat': 'stand.up',  # 10x
+    'zem': 'be.straight',    # 11x
+    'sel': 'slice',          # 11x
+    'khum': 'cover',         # 14x
+    'hisak': 'make.known',   # 19x
+    'neih': 'have.II',       # 16x (Stem II of nei)
+    'sithei': 'be.possible', # 17x
+    'veng': 'guard',         # 15x
+    'mangkhin': 'faint',     # 14x
+    'guang': 'carry',        # 12x
+    'thadah': 'forgive',     # 12x
+    'uih': 'bark',           # 12x
+    'vekin': 'like',         # 12x
+    'gimthuak': 'suffer',    # 12x
+    'manphazaw': 'succeed',  # 12x
+    'bangcih': 'how.say',    # 12x
+    'siansak': 'sanctify',   # 12x
+    'huhau': 'surround',     # 12x
+    'geelsa': 'mark',        # 11x
+    'sunglam': 'inside.way', # 11x
+    'notkhia': 'bring.out',  # 9x
+    'kunsuk': 'bend.down',   # 9x
+    'vukcip': 'cover.over',  # 9x
+    
+    # Additional verb stems (Round 3 - remaining unknowns)
+    'bat': 'bind',           # for kibat
+    'tuam': 'promise',       # for kituam
+    'phut': 'spray',         # for kiphut  
+    'lakkhiat': 'snatch',    # ki-lakkhiat "take-away"
+    'limbawl': 'prepare',    # 26x
+    'khinsa': 'mock',        # 28x
+    'hamtang': 'be.strong',  # 15x
+    'liang': 'shine',        # 15x
+    'khitsa': 'leave',       # 15x
+    'lobuang': 'disturb',    # 14x
+    'diak': 'be.different',  # 14x
+    'galtai': 'be.captive',  # 13x
+    'taleng': 'gather',      # 13x
+    'huai': 'dread',         # 12x
+    'dei': 'say',            # 11x - variant of ci
+    'ngongtat': 'oppose',    # 10x
+    'mal': 'be.dry',         # 14x
+    'ven': 'protect',        # 14x
+    'seek': 'sweep',         # 17x
+    'vot': 'vote',           # 11x (loan word)
+    'puakkik': 'return',     # 11x
+    
+    # Round 4 - more verb stems from remaining unknowns
+    'am': 'sink',            # for kiam (ki-am)
+    'mat': 'grasp',          # for kimat (ki-mat)
+    'cian': 'announce',      # for kician (ki-cian)
+    'pawlthei': 'join',      # for kipawlthei
+    'teh': 'measure',        # for kiteh
+    'kham': 'forbid',        # for kikham
+    'kep': 'clutch',         # for kikep
+    'khem': 'restrain',      # for kikhem
+    'pua': 'carry.on.back',  # for kipua
+    'sit': 'cut.off',        # for kisit
+    'nga': 'endure',         # for kinga
+    'peel': 'peel',          # 12x
+    'peng': 'break.into',    # 10x
+    'hum': 'cover',          # 10x
+    'taka': 'truly',         # 9x
+    'tanau': 'orphan',       # 9x (noun)
+    've': 'do',              # 9x
+    'ngeingai': 'truly.want', # 9x
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -1422,6 +1514,49 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 remaining = remaining[len(prefix):]
                 break
     
+    # 1b. Check for reflexive/reciprocal ki- prefix
+    if remaining.lower().startswith('ki') and len(remaining) > 2:
+        ki_base = remaining[2:]
+        # Check if base is a known verb stem
+        ki_base_lower = ki_base.lower()
+        # First try full compound forms
+        full_ki_word = remaining.lower()
+        if full_ki_word in VERB_STEMS:
+            segments.append(remaining)
+            glosses.append(VERB_STEMS[full_ki_word])
+            remaining = ''
+        elif ki_base_lower in VERB_STEMS:
+            segments.append('ki')
+            glosses.append('REFL')
+            segments.append(ki_base)
+            glosses.append(VERB_STEMS[ki_base_lower])
+            remaining = ''
+        elif ki_base_lower in NOUN_STEMS:
+            segments.append('ki')
+            glosses.append('REFL')
+            segments.append(ki_base)
+            glosses.append(NOUN_STEMS[ki_base_lower])
+            remaining = ''
+        else:
+            # Try suffix stripping on ki- base
+            for suffix in ['sak', 'pih', 'khiat', 'khia', 'tak', 'kik', 'zo', 'ta']:
+                if ki_base_lower.endswith(suffix) and len(ki_base_lower) > len(suffix):
+                    base_before_suffix = ki_base_lower[:-len(suffix)]
+                    if base_before_suffix in VERB_STEMS:
+                        segments.append('ki')
+                        glosses.append('REFL')
+                        segments.append(base_before_suffix)
+                        glosses.append(VERB_STEMS[base_before_suffix])
+                        suffix_glosses_map = {
+                            'sak': 'CAUS', 'pih': 'APPL', 'khiat': 'AWAY',
+                            'khia': 'AWAY', 'tak': 'firmly', 'kik': 'ITER',
+                            'zo': 'COMPL', 'ta': 'PFV'
+                        }
+                        segments.append(suffix)
+                        glosses.append(suffix_glosses_map.get(suffix, suffix))
+                        remaining = ''
+                        break
+    
     # 2. Check for verb/noun stem
     stem_found = False
     for stem, gloss in sorted(VERB_STEMS.items(), key=lambda x: -len(x[0])):
@@ -1497,6 +1632,25 @@ def analyze_word(word: str) -> Tuple[str, str]:
     
     # Special handling: if no decomposition, try suffix stripping
     if remaining and not segments:
+        # First, try reduplication patterns (X-X)
+        half_len = len(remaining) // 2
+        if len(remaining) >= 4 and len(remaining) % 2 == 0:
+            first_half = remaining[:half_len].lower()
+            second_half = remaining[half_len:].lower()
+            if first_half == second_half:
+                # Check if base is a known stem
+                if first_half in VERB_STEMS:
+                    return (f"{first_half}~{first_half}", f"{VERB_STEMS[first_half]}~RED")
+                elif first_half in NOUN_STEMS:
+                    return (f"{first_half}~{first_half}", f"{NOUN_STEMS[first_half]}~RED")
+                else:
+                    # Try lexicon lookup for base
+                    lex_gloss = lookup_lexicon(first_half)
+                    if lex_gloss:
+                        return (f"{first_half}~{first_half}", f"{lex_gloss}~RED")
+                    else:
+                        return (f"{first_half}~{first_half}", f"?~RED")
+        
         # Try stripping common suffixes to find stem
         suffix_glosses = {
             'na': 'NMLZ',
