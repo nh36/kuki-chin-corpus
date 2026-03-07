@@ -2,6 +2,11 @@
 
 Based on analysis of the Tedim Bible corpus (31,000+ verses) and cross-referenced with Henderson 1965 and VanBik 2009.
 
+**Current Analyzer Performance:**
+- **Overall Coverage: 92.8%** (771,935 / 831,408 tokens)
+- Best: John 95.0%, Genesis 94.5%
+- Average: 92-93% across most books
+
 **Corpus Statistics:**
 - Total verses analyzed: 31,105
 - Unique word forms: ~22,000

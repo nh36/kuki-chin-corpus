@@ -38,6 +38,7 @@ OBJECT_PREFIXES = {
 CASE_MARKERS = {
     'in': 'ERG',      # Ergative/instrumental
     'ah': 'LOC',      # Locative
+    'a': 'LOC',       # Locative (short form)
     'tawh': 'COM',    # Comitative "with"
     'panin': 'ABL',   # Ablative "from"
 }
@@ -224,6 +225,9 @@ VERB_STEMS = {
     'teng': 'dwell',         # 859
     'dam': 'be.well',        # health state
     'hoih': 'be.good',       # 641
+    'sih': 'die',            # death
+    'nung': 'live',          # life
+    'piang': 'be.born',      # birth
     
     # Motion verbs
     'pai': 'go',             # 2,350
@@ -235,6 +239,8 @@ VERB_STEMS = {
     'ciahpai': 'go.home',
     'liahpai': 'return',
     'zuan': 'cross',
+    'ciah': 'return',        # 360
+    'ciahkik': 'return.again',
     
     # Perception verbs (with stem alternation)
     'mu': 'see.I',           # 962 (Stem I)
@@ -243,13 +249,17 @@ VERB_STEMS = {
     'zak': 'hear.II',        # (Stem II)
     'ngai': 'listen.I',
     'ngaih': 'listen.II',
+    'en': 'look',
     
     # Cognition verbs (with stem alternation)
     'thei': 'know.I',        # 2,543 (Stem I)
     'theih': 'know.II',      # 1,383 (Stem II / passive)
     'um': 'believe',
     'ngaihsun': 'think',     # 409 "mind-think"
+    'ngaihsut': 'consider',  # 210
     'lung': 'feel',          # emotional state
+    'deih': 'want',          # 279
+    'nuam': 'want',
     
     # Speech verbs
     'ci': 'say',             # 5,954
@@ -261,6 +271,7 @@ VERB_STEMS = {
     'sampah': 'proclaim',
     'kiko': 'cry.out',
     'paupai': 'gossip',
+    'pau': 'speak',          # 240
     
     # Transfer/Possession
     'pia': 'give',           # 2,202
@@ -269,14 +280,18 @@ VERB_STEMS = {
     'nei': 'have',           # 1,770
     'koih': 'put',           # 592
     'sawl': 'send',          # 541
+    'sak': 'cause',          # 220 causative
     
     # Action verbs
     'bawl': 'make',          # 1,532
     'sem': 'serve',          # 603
+    'sep': 'work',           # 127
     'uk': 'rule',            # 664
     'that': 'kill',
     'tat': 'strike',
+    'sat': 'strike',         # 214
     'ne': 'eat',             # 552
+    'nek': 'eat.II',
     'thuak': 'suffer',       # 535
     'phum': 'immerse',
     'vak': 'walk',
@@ -287,6 +302,16 @@ VERB_STEMS = {
     'suk': 'make.become',
     'khen': 'divide',
     'gelh': 'write',
+    'kap': 'weep',           # 185
+    'zah': 'fear',           # 182
+    'zawh': 'be.able',       # 178
+    'khial': 'err',          # 177
+    'nusia': 'abandon',      # 173
+    'pil': 'learn',          # 242
+    'siam': 'be.skilled',    # 174
+    'lup': 'bow.down',       # 140
+    'kem': 'guard',          # 147
+    'zang': 'use',           # 198
     
     # Reflexive/reciprocal (ki- prefix)
     'kipan': 'begin',        # ki-pan "REFL-begin"
@@ -298,27 +323,36 @@ VERB_STEMS = {
     'kikhel': 'differ',
     'kituah': 'meet',
     'kikhen': 'separate',
+    'kilem': 'prepare',      # 131
     
     # Causative/applicative (-sak, -pih)
     'paisak': 'send',        # pai-sak "go-CAUS"
     'damsak': 'heal',        # dam-sak "well-CAUS"
     'paipih': 'accompany',   # 599 pai-pih "go-APPL"
     'honkhia': 'bring.out',
+    'piangsak': 'cause.birth', # 221
+    'tungsak': 'lift.up',    # 197
+    'paikhiat': 'send.away', # 202
     
     # Additional common verbs from corpus
-    'nuam': 'want',
     'it': 'love',
     'zol': 'redeem',
     'hong': 'come/open',
     'ciapteh': 'receive',
     'nuntak': 'live',        # nun-tak "life-firm"
+    'minthan': 'bless',      # 253
+    'hehpih': 'be.angry',    # 233
+    'zahtak': 'honor',       # 148
+    'lungdam': 'rejoice',    # 154
 }
 
 # Noun stems - expanded from corpus frequency analysis
 NOUN_STEMS = {
     # Divine/Religious (high frequency in Bible)
     'Pasian': 'God',         # 5,308
+    'pasian': 'god',         # lowercase variant
     'Topa': 'Lord',          # 7,486
+    'topa': 'lord',          # lowercase variant
     'biakna': 'worship',     # 1,236 biak-na
     'biakinn': 'temple',     # 741 biak-inn
     'siangtho': 'holy',      # 476
@@ -328,20 +362,33 @@ NOUN_STEMS = {
     'nuntakna': 'life',      # 394 nuntak-na
     'thuciamna': 'promise',  # 374 thuciam-na
     'vangliatna': 'power',   # 282
+    'thukham': 'law',        # 210
     
     # Social terms
     'mi': 'person',          # 4,221
     'mite': 'people',        # 6,569
     'minam': 'nation',       # 596
+    'mihing': 'human',       # 354
     'kumpipa': 'king',       # 1,563
     'kumpi': 'king',
     'siampi': 'priest',      # 357
     'siampite': 'priests',   # 255
+    'siampipa': 'high.priest', # 172
     'nasemte': 'servants',   # 389
     'nasempa': 'servant',
     'galte': 'enemies',
+    'galkap': 'soldier',     # 233
+    'galkapte': 'soldiers',
     'kamsang': 'prophet',
     'kamtai': 'messenger',
+    'upa': 'elder',          # 162
+    'upate': 'elders',
+    'mihon': 'poor.person',  # 216
+    'mihonte': 'poor.people',
+    'midang': 'other.person', # 181
+    'midangte': 'others',
+    'migilo': 'enemy',       # 179
+    'migilote': 'enemies',
     
     # Kinship
     'pa': 'father',          # 2,265
@@ -350,15 +397,23 @@ NOUN_STEMS = {
     'tapa': 'son',           # 1,906
     'tapate': 'sons',        # 411
     'tanu': 'daughter',
+    'tanute': 'daughters',
     'sanggam': 'brother',
     'sanggamte': 'brothers',
+    'sanggampa': 'brother',  # 210
     'zi': 'wife',            # 339
+    'pasal': 'husband',      # 359
     'mipa': 'man',
     'numei': 'woman',
+    'numeite': 'women',      # 195
+    'suanlekhak': 'genealogy', # 224
+    'innkuan': 'household',  # 205
     
     # Body parts
     'khut': 'hand',          # 854
+    'khutsung': 'palm',      # 158
     'mai': 'face',
+    'maitang': 'forehead',   # 137
     'lungsim': 'heart',      # 957 lung-sim
     'kha': 'spirit',         # 748
     'sa': 'flesh',           # 573
@@ -370,14 +425,22 @@ NOUN_STEMS = {
     
     # Place/Location
     'gam': 'land',           # 2,586
+    'gamte': 'lands',        # 173
     'khua': 'town',          # 919
     'khuapi': 'city',        # 1,050
+    'khuapite': 'cities',    # 253
     'inn': 'house',          # 715
+    'innte': 'houses',
     'mun': 'place',          # 820
     'leitung': 'earth',      # 717
     'leitang': 'earth',      # 462 (variant)
     'vantung': 'heaven',     # 419
+    'vantungmi': 'angel',    # 247
     'lampi': 'way',
+    'van': 'sky',            # 227
+    'mual': 'mountain',      # 283
+    'mualtung': 'mountaintop', # 202
+    'tuipi': 'sea',          # 270
     
     # Time terms
     'hun': 'time',           # 1,208
@@ -385,20 +448,50 @@ NOUN_STEMS = {
     'kum': 'year',           # 868
     'zan': 'night',
     'tawntung': 'forever',   # 679
+    'nisuah': 'birth.day',   # 169
+    'khang': 'generation',   # 213
     
     # Abstract terms
     'thu': 'word',           # 5,516
     'thuthak': 'truth',
     'thuhilhna': 'teaching',
+    'thupiak': 'commandment', # 241
+    'thupiakna': 'commandment.NMLZ', # 184
     'tui': 'water',
     'aw': 'voice',
     'min': 'name',
+    'nam': 'kind/tribe',     # 177
     
     # Other common nouns
     'ngeina': 'knowledge',   # 327 ngei-na
     'siatna': 'destruction', # 350 siat-na
     'khialhna': 'sin',       # 328 khialh-na
     'gamtatna': 'kingdom',   # 300 gamtat-na
+    'sihna': 'death',        # 268
+    'deihna': 'desire',      # 244
+    'pilna': 'learning',     # 227
+    'hehpihna': 'wrath',     # 225
+    'nasepna': 'work.NMLZ',  # 174
+    'ngaihsutna': 'thought', # 175
+    'ukna': 'rule.NMLZ',     # 138
+    'upna': 'belief',        # 258
+    'itna': 'love.NMLZ',     # 299
+    'hoihna': 'goodness',    # 108
+    'lum': 'warm',           # 149
+    'puan': 'cloth',         # 168
+    'puante': 'clothes',
+    'beh': 'tribe',          # 173
+    'behte': 'tribes',
+    'omlai': 'dwelling',     # 236
+    'lote': 'non-X',         # 230
+    'milim': 'idol',         # 230
+    'khuavak': 'light',      # 188
+    'sakol': 'donkey',       # 155
+    'anlum': 'food',         # 145
+    'ganhing': 'animal',     # 164
+    'ganhingte': 'animals',
+    'sang': 'high',          # 209
+    'nin': 'day',            # 200 variant
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -651,7 +744,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # === Additional common forms ===
         'an': ('an', '3PL.POSS'),  # 3rd plural possessive
         'pan': ('pan', 'begin/side'),
-        'leitang': ('lei-tang', 'land-?'),
+        'leitang': ('lei-tang', 'land-earth'),
         'thute': ('thu-te', 'word-PL'),
         'tu-in': ('tu-in', 'now-ERG'),
         'tuate': ('tua-te', 'DIST-PL'),
@@ -664,6 +757,298 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gimna': ('gim-na', 'suffer-NMLZ'),
         'kham': ('kham', 'forbid'),
         'thuman': ('thu-man', 'word-reason'),
+        
+        # === High-frequency productive -na nominalizations ===
+        'ahihna': ('a-hih-na', '3SG-be.NOM-NMLZ'),
+        'cihna': ('cih-na', 'say.NOM-NMLZ'),
+        'theihna': ('theih-na', 'know.II-NMLZ'),
+        'hoihna': ('hoih-na', 'good-NMLZ'),
+        'bawlna': ('bawl-na', 'make-NMLZ'),
+        'piakna': ('piak-na', 'give.to-NMLZ'),
+        'genna': ('gen-na', 'speak-NMLZ'),
+        'kikona': ('kiko-na', 'cry.out-NMLZ'),
+        'thuakna': ('thuak-na', 'suffer-NMLZ'),
+        'sawlna': ('sawl-na', 'send-NMLZ'),
+        
+        # === High-frequency -te plurals ===
+        'kumpite': ('kumpi-te', 'king-PL'),
+        'thugente': ('thugen-te', 'preacher-PL'),
+        'numeite': ('numei-te', 'woman-PL'),
+        'kamsangte': ('kamsang-te', 'prophet-PL'),
+        'gamte': ('gam-te', 'land-PL'),
+        'tanute': ('tanu-te', 'daughter-PL'),
+        'biaknate': ('biakna-te', 'worship-PL'),
+        'tuite': ('tui-te', 'water-PL'),
+        'neite': ('nei-te', 'have-PL'),
+        'gamtatnate': ('gamtatna-te', 'kingdom-PL'),
+        'kamtaite': ('kamtai-te', 'messenger-PL'),
+        'innte': ('inn-te', 'house-PL'),
+        'hoihte': ('hoih-te', 'good-PL'),
+        'nihte': ('nih-te', 'two-PL'),
+        'thumte': ('thum-te', 'three-PL'),
+        'liante': ('lian-te', 'big-PL'),
+        'ukte': ('uk-te', 'rule-PL'),
+        'lote': ('lo-te', 'NEG-PL'),
+        
+        # === -in ergative/instrumental forms ===
+        'napi-in': ('na-pi-in', 'manner-big-ERG'),
+        'lai-in': ('lai-in', 'midst-ERG'),
+        'pia-in': ('pia-in', 'give-ERG'),
+        'kisai-in': ('ki-sai-in', 'REFL-concern-ERG'),
+        'biakna-in': ('biakna-in', 'worship-ERG'),
+        'hinapi-in': ('hi-na-pi-in', 'be-?-big-ERG'),
+        'cihin-ah': ('ci-h-in-ah', 'say-NOM-ERG-LOC'),
+        'genin-ah': ('gen-in-ah', 'speak-ERG-LOC'),
+        'ma-in': ('ma-in', 'self-ERG'),
+        'zan-in': ('zan-in', 'night-ERG'),
+        'muhna-ah': ('muh-na-ah', 'see.II-NMLZ-LOC'),
+        'gei-ah': ('gei-ah', 'edge-LOC'),
+        
+        # === Compound verbs ===
+        'ciahkik': ('ciah-kik', 'return-ITER'),
+        'paisuak': ('pai-suak', 'go-become'),
+        'paisuk': ('pai-suk', 'go-CAUS'),
+        'paito': ('pai-to', 'go-sit'),
+        'paikhiatpih': ('pai-khiat-pih', 'go-emerge-APPL'),
+        'semsem': ('sem-sem', 'serve-RED'),
+        
+        # === Quantifiers ===
+        'khatpeuh': ('khat-peuh', 'one-every'),
+        'khatlekhat': ('khat-le-khat', 'one-and-one'),
+        'khatah': ('khat-ah', 'one-LOC'),
+        'sawmthum': ('sawm-thum', 'ten-three'),
+        'sawmli': ('sawm-li', 'ten-four'),
+        'sagih': ('sagih', 'seven'),
+        'vekpi-in': ('vek-pi-in', 'all-big-ERG'),
+        
+        # === Other high-frequency compounds ===
+        'tokhom': ('to-khom', 'sit-gather'),
+        'hoihtak': ('hoih-tak', 'good-exact'),
+        'thahat': ('tha-hat', 'strong-firm'),
+        'thukhen': ('thu-khen', 'word-divide'),
+        'neihsa': ('nei-h-sa', 'have-NOM-flesh'),
+        'paknamtui': ('pak-nam-tui', 'wine'),
+        'minthanna': ('min-than-na', 'name-bless-NMLZ'),
+        'suanlekhakte': ('suan-le-khak-te', 'offspring-PL'),
+        'nisuahna': ('ni-suah-na', 'day-birth-NMLZ'),
+        'mihingte': ('mi-hing-te', 'person-kind-PL'),
+        'zanin': ('zan-in', 'night-ERG'),
+        'omkhawm': ('om-khawm', 'exist-gather'),
+        'khuamial': ('khua-mial', 'town-dark'),
+        'omsak': ('om-sak', 'exist-CAUS'),
+        'sawmnga': ('sawm-nga', 'ten-five'),
+        'hoihtakin': ('hoih-tak-in', 'good-exact-ERG'),
+        'ukpa': ('uk-pa', 'rule-male'),
+        'zingsang': ('zing-sang', 'morning-high'),
+        'nitak': ('ni-tak', 'day-exact'),
+        'gamgi': ('gam-gi', 'land-boundary'),
+        'nihna': ('nih-na', 'two-NMLZ'),
+        'thumna': ('thum-na', 'three-NMLZ'),
+        'adang': ('a-dang', '3SG-other'),
+        'gensa': ('gen-sa', 'speak-flesh'),
+        'innsung': ('inn-sung', 'house-inside'),
+        'biakpiakna': ('biak-piak-na', 'worship-give.to-NMLZ'),
+        'milimte': ('mi-lim-te', 'idol-PL'),
+        'thukhamte': ('thu-kham-te', 'law-PL'),
+        'inndei': ('inn-dei', 'house-?'),
+        'lonona': ('lo-no-na', 'NEG-?-NMLZ'),
+        'puanbuk': ('puan-buk', 'cloth-?'),
+        'awging': ('aw-ging', 'voice-sound'),
+        'lutang': ('lu-tang', 'head-?'),
+        'siamna': ('siam-na', 'skilled-NMLZ'),
+        'thahatna': ('tha-hat-na', 'strong-firm-NMLZ'),
+        'hoihzaw': ('hoih-zaw', 'good-more'),
+        'kilemna': ('ki-lem-na', 'REFL-prepare-NMLZ'),
+        'tuni-in': ('tu-ni-in', 'now-day-ERG'),
+        'naupang': ('nau-pang', 'child-small'),
+        'hotkhiatna': ('hot-khiat-na', '?-emerge-NMLZ'),
+        'lawmte': ('lawm-te', 'friend-PL'),
+        'lopi-in': ('lo-pi-in', 'NEG-big-ERG'),
+        'zakhat': ('za-khat', 'hundred-one'),
+        'mipihte': ('mi-pih-te', 'person-APPL-PL'),
+        'kongpi': ('kong-pi', 'road-big'),
+        'kawikawi': ('kawi-kawi', 'crooked-RED'),
+        'thutang': ('thu-tang', 'word-story'),
+        'citak': ('ci-tak', 'say-exact'),
+        'ompih': ('om-pih', 'exist-APPL'),
+        'thupi': ('thu-pi', 'word-big'),
+        'huhna': ('huh-na', 'blow-NMLZ'),
+        'gamdang': ('gam-dang', 'land-other'),
+        'lui': ('lui', 'river'),
+        'sepna': ('sep-na', 'work-NMLZ'),
+        'thungetna': ('thu-nget-na', 'word-request-NMLZ'),
+        'gitlohna': ('git-loh-na', 'hate-NEG-NMLZ'),
+        'tenna': ('ten-na', 'dwell-NMLZ'),
+        'tampite': ('tam-pi-te', 'many-big-PL'),
+        'tuute': ('tuu-te', '?-PL'),
+        'pawlkhatte': ('pawl-khat-te', 'some-one-PL'),
+        'dingte': ('ding-te', 'stand-PL'),
+        'dingun': ('ding-un', 'PROSP-PL.IMP'),
+        'pawi': ('pawi', 'Pawi'),
+        'pang': ('pang', 'side/small'),
+        'cing': ('cing', 'know'),
+        'zing': ('zing', 'morning'),
+        'nial': ('nial', 'deny'),
+        'san': ('san', 'flee'),
+        'ap': ('ap', 'entrust'),
+        'pawl': ('pawl', 'group'),
+        'zat': ('zat', 'use'),
+        'vang': ('vang', 'because'),
+        'thuk': ('thuk', 'deep'),
+        'zuih': ('zui-h', 'follow-NOM'),
+        'zaw': ('zaw', 'more'),
+        'khak': ('khak', 'limit'),
+        'gamlak': ('gam-lak', 'land-midst'),
+        
+        # === More locative -a/-ah forms ===
+        'khua-a': ('khua-a', 'town-LOC'),
+        'lai-a': ('lai-a', 'midst-LOC'),
+        'gei-a': ('gei-a', 'edge-LOC'),
+        'tu-a': ('tu-a', 'now-LOC'),
+        'nuai-ah': ('nuai-ah', 'below-LOC'),
+        'thu-ah': ('thu-ah', 'word-LOC'),
+        'dinga': ('ding-a', 'PROSP-LOC'),
+        
+        # === More -in forms ===
+        'hinapi-in': ('hi-na-pi-in', 'be-NMLZ-big-ERG'),
+        'nei-in': ('nei-in', 'have-ERG'),
+        'ne-in': ('ne-in', 'eat-ERG'),
+        'khatin': ('khat-in', 'one-ERG'),
+        
+        # === More -na nominalizations ===
+        'lungkhamna': ('lung-kham-na', 'heart-anxiety-NMLZ'),
+        'thumanna': ('thuman-na', 'truth-NMLZ'),
+        'phatna': ('phat-na', 'praise-NMLZ'),
+        'khiatna': ('khiat-na', 'emerge-NMLZ'),
+        'cihnopna': ('ci-h-nop-na', 'say-NOM-want-NMLZ'),
+        'lupna': ('lup-na', 'bow.down-NMLZ'),
+        'mawkna': ('mawk-na', 'err-NMLZ'),
+        'hauhna': ('hauh-na', 'shout-NMLZ'),
+        'thugenna': ('thu-gen-na', 'word-speak-NMLZ'),
+        'nitumna': ('ni-tum-na', 'day-all-NMLZ'),
+        
+        # === More -te plurals ===
+        'kipte': ('kip-te', '?-PL'),
+        'makaite': ('makai-te', 'leader-PL'),
+        'zite': ('zi-te', 'wife-PL'),
+        'hihte': ('hih-te', 'this-PL'),
+        'mizawngte': ('mi-zawng-te', 'person-all-PL'),
+        'siate': ('sia-te', 'bad-PL'),
+        'omlaite': ('om-lai-te', 'exist-midst-PL'),
+        'thupiaknate': ('thu-piak-na-te', 'word-give.to-NMLZ-PL'),
+        
+        # === More compound words ===
+        'pasian-te': ('pasian-te', 'god-PL'),
+        'inndei': ('inn-dei', 'family'),
+        'lonona': ('lo-no-na', 'disobedience'),
+        'puanbuk': ('puan-buk', 'tent'),
+        'lutang': ('lu-tang', 'pillow'),
+        'hotkhiatna': ('hot-khiat-na', 'salvation'),
+        'pawlpi': ('pawl-pi', 'group-big'),
+        'khawl': ('khawl', 'rest'),
+        'tungtawnin': ('tung-tawn-in', 'on-ever-ERG'),
+        'panun': ('pa-nun', 'father-?'),
+        'muang': ('muang', 'trust'),
+        'neu': ('neu', 'small'),
+        'ciangkhut': ('ciang-khut', 'then-hand'),
+        'mudah': ('mu-dah', 'see-?'),
+        'lakhia': ('lak-khia', 'take-exit'),
+        'awng': ('awng', 'open'),
+        'namtui': ('nam-tui', 'kind-water'),
+        'ciam': ('ciam', 'promise'),
+        'luang': ('luang', 'flow'),
+        'bawlsak': ('bawl-sak', 'make-CAUS'),
+        'amahmah': ('a-mah-mah', '3SG-self-RED'),
+        'sawmsagih': ('sawm-sagih', 'ten-seven'),
+        'thuhilh': ('thu-hilh', 'word-teach'),
+        'bawlsa': ('bawl-sa', 'make-flesh'),
+        'peuh': ('peuh', 'every'),
+        'zanih': ('zan-ih', 'night-NOM'),
+        'suksiat': ('suk-siat', 'CAUS-destroy'),
+        'khau': ('khau', 'rope'),
+        'tuute': ('tuu-te', 'grandchild-PL'),
+        'lua': ('lua', 'exceed'),
+        
+        # === More compounds (frequency 70-110) ===
+        'panun': ('pa-nun', 'father-?'),
+        'kipte': ('kip-te', 'edge-PL'),
+        'lungkham': ('lung-kham', 'heart-anxious'),
+        'khuasung': ('khua-sung', 'town-inside'),
+        'kaikhawm': ('kai-khawm', 'call-gather'),
+        'thunuama': ('thu-nuam-a', 'word-want-LOC'),
+        'nopsakna': ('nop-sak-na', 'want-CAUS-NMLZ'),
+        'lametna': ('lam-et-na', 'way-?-NMLZ'),
+        'salin': ('sa-lin', 'meat-?'),
+        'vengte': ('veng-te', 'neighborhood-PL'),
+        'niloh': ('ni-loh', 'day-NEG'),
+        'kikoih': ('ki-koih', 'REFL-put'),
+        'sakolte': ('sakol-te', 'donkey-PL'),
+        'nalamdang': ('na-lam-dang', '2SG-way-other'),
+        'hing': ('hing', 'alive'),
+        'phattuamna': ('phat-tuam-na', 'praise-?-NMLZ'),
+        'pana': ('pa-na', 'father-NMLZ'),
+        'lasakna': ('la-sak-na', 'take-CAUS-NMLZ'),
+        'thahna': ('thah-na', 'die-NMLZ'),
+        'annel': ('an-nel', '3PL-?'),
+        'omte': ('om-te', 'exist-PL'),
+        'zahtakna': ('zah-tak-na', 'fear-exact-NMLZ'),
+        'kiciamna': ('ki-ciam-na', 'REFL-promise-NMLZ'),
+        'maipha': ('mai-pha', 'face-good'),
+        'kangtum': ('kang-tum', '?-all'),
+        'kungte': ('kung-te', 'trunk-PL'),
+        'alang': ('a-lang', '3SG-?'),
+        'lampi-ah': ('lampi-ah', 'way-LOC'),
+        'pasalte': ('pasal-te', 'husband-PL'),
+        'hi-in': ('hi-in', 'be-ERG'),
+        'biakinn-ah': ('biakinn-ah', 'temple-LOC'),
+        'vekpi-un': ('vek-pi-un', 'all-big-PL.IMP'),
+        'nungzui': ('nung-zui', 'life-follow'),
+        'khatvei': ('khat-vei', 'one-time'),
+        'naungek': ('nau-ngek', 'child-small'),
+        'kongkhak': ('kong-khak', '1SG→3-limit'),
+        'ciahpih': ('ciah-pih', 'return-APPL'),
+        'nuamtakin': ('nuam-tak-in', 'want-exact-ERG'),
+        'ciamsa': ('ciam-sa', 'promise-flesh'),
+        'thupiang': ('thu-piang', 'word-born'),
+        'suaktasak': ('suak-ta-sak', 'become-PFV-CAUS'),
+        'koi-ah': ('koi-ah', 'where-LOC'),
+        'nopna': ('nop-na', 'want-NMLZ'),
+        'vanglian': ('vang-lian', 'power-big'),
+        'hizaw': ('hi-zaw', 'be-more'),
+        'annek': ('an-nek', '3PL-eat.II'),
+        'innkuante': ('inn-kuan-te', 'house-household-PL'),
+        'mawhsakna': ('mawh-sak-na', 'err-CAUS-NMLZ'),
+        'zuihna': ('zuih-na', 'follow.II-NMLZ'),
+        'vaihawm': ('vai-hawm', '?-smell'),
+        'ciamteh': ('ciam-teh', 'promise-receive'),
+        'mu-in': ('mu-in', 'see-ERG'),
+        'omna-ah': ('omna-ah', 'exist.NMLZ-LOC'),
+        'nai-ah': ('nai-ah', 'near-LOC'),
+        'za-in': ('za-in', 'hear-ERG'),
+        'sawltakte': ('sawl-tak-te', 'send-exact-PL'),
+        'maizum': ('mai-zum', 'face-bow'),
+        'dahna': ('dah-na', 'put-NMLZ'),
+        'thuaksak': ('thuak-sak', 'suffer-CAUS'),
+        'maizumna': ('mai-zum-na', 'face-bow-NMLZ'),
+        'vasa': ('vasa', 'bird'),
+        'nilh': ('nilh', 'wipe'),
+        'khan': ('khan', 'generation'),
+        'sawmguk': ('sawm-guk', 'ten-six'),
+        'sanggamnu': ('sanggam-nu', 'sibling-female'),
+        'khuadak': ('khua-dak', 'town-near'),
+        'paktat': ('pak-tat', '?-strike'),
+        'pak': ('pak', '?'),
+        'khuam': ('khuam', 'darkness'),
+        'sap': ('sap', 'European'),
+        'sal': ('sal', 'slave'),
+        'kan': ('kan', 'stay'),
+        'vai': ('vai', 'foreigner'),
+        'kumpi-in': ('kumpi-in', 'king-ERG'),
+        'keel': ('keel', '?'),
+        'khuaneute': ('khua-neu-te', 'town-small-PL'),
+        'tuamtuamte': ('tuam-tuam-te', 'different-RED-PL'),
+        'gamh': ('gamh', 'land.II'),
+        'ing': ('ing', '?'),
         
         # === Miscellaneous High-Frequency ===
         'gamlakah': ('gam-lak-ah', 'land-midst-LOC'),
@@ -795,12 +1180,45 @@ def analyze_word(word: str) -> Tuple[str, str]:
         for nom, gloss in NOMINALIZERS.items():
             if remaining.lower().endswith(nom) and len(remaining) > len(nom):
                 base = remaining[:-len(nom)]
-                segments.append(base)
-                glosses.append('?')  # Unknown base
+                # Check if base is a known stem
+                if base in VERB_STEMS:
+                    segments.append(base)
+                    glosses.append(VERB_STEMS[base])
+                elif base in NOUN_STEMS:
+                    segments.append(base)
+                    glosses.append(NOUN_STEMS[base])
+                else:
+                    segments.append(base)
+                    glosses.append('?')  # Unknown base
                 segments.append(nom)
                 glosses.append(gloss)
                 remaining = ''
                 break
+    
+    # Special handling: if no decomposition, try suffix stripping
+    if remaining and not segments:
+        # Try stripping common suffixes to find stem
+        suffix_glosses = {
+            'na': 'NMLZ',
+            'te': 'PL', 
+            'in': 'ERG',
+            'ah': 'LOC',
+            'sak': 'CAUS',
+            'pih': 'APPL',
+        }
+        for suffix, suf_gloss in sorted(suffix_glosses.items(), key=lambda x: -len(x[0])):
+            if remaining.lower().endswith(suffix) and len(remaining) > len(suffix) + 1:
+                base = remaining[:-len(suffix)]
+                base_lower = base.lower()
+                # Check if base is a known stem
+                if base_lower in VERB_STEMS:
+                    return (f"{base}-{suffix}", f"{VERB_STEMS[base_lower]}-{suf_gloss}")
+                elif base_lower in NOUN_STEMS:
+                    return (f"{base}-{suffix}", f"{NOUN_STEMS[base_lower]}-{suf_gloss}")
+                # Try lexicon lookup for base
+                lex_gloss = lookup_lexicon(base_lower)
+                if lex_gloss:
+                    return (f"{base}-{suffix}", f"{lex_gloss}-{suf_gloss}")
     
     # If we still have remaining, add it as unknown
     if remaining:
