@@ -1,0 +1,61 @@
+!
+14 TIDDIM CHIN
+
+pitch; [x] for a mid falling pitch; [, ] for a low falling pitch; [-] for
+a mid rising pitch; [~] for a high rising pitch; and [_] for a low
+rising pitch.
+
+These pitch marks, to which must be added the dots sometimes
+used to indicate unstressed syllables in a sequence, are not used
+for the notation of syllable-tone as such, which is indicated by raised
+numbers (see p. 19). In the pronunciations given for entries in the
+vocabulary at the end of this study, all tone 2 syllables are marked
+as mid level, and all tone 1 syllables as mid rising. Short tone 3
+syllables closed by a stop are marked as either high level or low
+level according to the frequency with which such pitches occur in
+texts. All other tone 3 syllables are marked as mid falling.
+
+The mark * is used in phonetic texts to indicate a short un-
+stressed vowel.
+
+IV
+SYLLABLE STRUCTURE
+
+A FULL statement of the phonological structure of the Tiddim
+Chin syllable would require as its starting-point a complete i in-
+ventory of the syllables occurring in the language, paying due atten-
+tion to the kind of words in which they are found. The present
+study does not encompass so much, and can therefore claim to hold
+only for the material in hand. The range of syllable finals appears
+to be fairly wide, so that the occasional gap (e.g. usm) may with
+
+“some confidence be regarded as accidental. It seems, however,
+
+warrantable to assume that we have examples of all syllable initials,
+The data is, however, insufficient to justify any but the most tenta-
+tive statements based upon the relative frequency of initials or
+finals, or upon the possible combinations of initials and finals. It is
+perhaps permissible to observe that ¢ is found only before a close
+front vowel, which suggests an alignment with some other sound,
+e.g. t, which is never found before a close front vowel. Less readily
+dealt with are the initial possibilities before the opening diph-
+thongs ia and ua. Here the incompleteness of the material prevents
+us from deciding whether the absence of $, m, n, and ph before
+ia, or of h and d before ua, or of n and v before either ia or ua, is
+systematic or accidental. We cannot go further than our material
+allows. There are clear indications in it of a number of the factors
+that must be taken into account in any attempt to link the
+phonetic features of utterances with the grammatical statement,
+but it is not comprehensive enough to permit an exhaustive list of
+such factors to be drawn up.
+
+1. THE PHONETIC MATERIAL
+
+The phonetic material upon which the phonological statements
+are based is briefly summarized below.
+
+In phonetic descriptions in this study the term syllable is used
+to refer to a sound sequence containing one vowel, diphthong, or
+triphthong (see p. 16). The minimum utterance is a single syllable
+with or without certain initial and final consonantal articulations
+

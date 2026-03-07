@@ -1,0 +1,227 @@
+======================================================================
+TEDIM CHIN SPELLING VARIATION ANALYSIS
+======================================================================
+
+Total unique words: 19492
+Total tokens: 742805
+
+----------------------------------------------------------------------
+1. WORD-FINAL H VARIATION (Stem I/II)
+----------------------------------------------------------------------
+Note: Most of these are grammatical alternations, NOT spelling variants.
+Stem I (no -h) appears before vowel-initial suffixes.
+Stem II (-h or -k) appears elsewhere.
+
+  hi              (43234, 89.0%) ~ hih             ( 5322, 11.0%)
+  leh             ( 3342, 23.5%) ~ le              (10906, 76.5%)
+  ahih            ( 5738, 40.4%) ~ ahi             ( 8474, 59.6%)
+  kah             (   48,  0.3%) ~ ka              (13699, 99.7%)
+  tuah            (   47,  0.4%) ~ tua             (12659, 99.6%)
+  ama             ( 4309, 40.4%) ~ amah            ( 6345, 59.6%)
+  cih             ( 2797, 32.4%) ~ ci              ( 5847, 67.6%)
+  tawh            ( 7737, 99.8%) ~ taw             (   18,  0.2%)
+  lo              ( 6233, 87.4%) ~ loh             (  897, 12.6%)
+  tungah          ( 6021, 96.2%) ~ tunga           (  238,  3.8%)
+  thu             ( 5742, 100.0%) ~ thuh            (    1,  0.0%)
+  mi              ( 4793, 100.0%) ~ mih             (    1,  0.0%)
+  kiangah         ( 4127, 99.3%) ~ kianga          (   31,  0.7%)
+  theih           ( 1364, 34.9%) ~ thei            ( 2542, 65.1%)
+  sunga           (  615, 16.3%) ~ sungah          ( 3155, 83.7%)
+  gam             ( 2786, 97.4%) ~ gamh            (   73,  2.6%)
+  pah             (  159,  5.6%) ~ pa              ( 2693, 94.4%)
+  pai             ( 2382, 99.9%) ~ paih            (    2,  0.1%)
+  aw              ( 2237, 100.0%) ~ awh             (    1,  0.0%)
+  neih            (  412, 18.8%) ~ nei             ( 1783, 81.2%)
+  nih             (  662, 30.7%) ~ ni              ( 1493, 69.3%)
+  keima           ( 1010, 52.0%) ~ keimah          (  932, 48.0%)
+  nangmah         (  707, 41.1%) ~ nangma          ( 1014, 58.9%)
+  mah             ( 1535, 95.5%) ~ ma              (   72,  4.5%)
+  mu              (  954, 66.1%) ~ muh             (  489, 33.9%)
+  laih            (   10,  0.8%) ~ lai             ( 1186, 99.2%)
+  khuapi          ( 1167, 99.6%) ~ khuapih         (    5,  0.4%)
+  ngah            (  823, 71.1%) ~ nga             (  334, 28.9%)
+  kha             ( 1066, 94.5%) ~ khah            (   62,  5.5%)
+  lah             (  118, 10.6%) ~ la              ( 1000, 89.4%)
+
+----------------------------------------------------------------------
+2. NEAR-VARIANTS (Edit Distance = 1)
+----------------------------------------------------------------------
+Pairs differing by one character. May be typos, variants, or distinct words.
+
+  ahi             ( 8474) ~ hi              (43234)  [-i]
+  ci              ( 5847) ~ hi              (43234)  [c→h at pos 0]
+  hi              (43234) ~ hih             ( 5322)  [+h]
+  hi              (43234) ~ mi              ( 4793)  [h→m at pos 0]
+  hi              (43234) ~ hi,             ( 3777)  [+,]
+  hi              (43234) ~ ni              ( 1493)  [h→n at pos 0]
+  hi              (43234) ~ si              (  842)  [h→s at pos 0]
+  hi              (43234) ~ zi              (  468)  [h→z at pos 0]
+  hi              (43234) ~ pi              (  282)  [h→p at pos 0]
+  hi              (43234) ~ li              (  223)  [h→l at pos 0]
+  hi              (43234) ~ ihi             (  176)  [+i]
+  hai             (  165) ~ hi              (43234)  [-i]
+  hi              (43234) ~ hu              (  115)  [i→u at pos 1]
+  ai              (   83) ~ hi              (43234)  [a→h at pos 0]
+  hi              (43234) ~ hit             (   61)  [+t]
+  ei              (   59) ~ hi              (43234)  [e→h at pos 0]
+  hi              (43234) ~ ki              (   54)  [h→k at pos 0]
+  ha              (   43) ~ hi              (43234)  [a→i at pos 1]
+  hei             (   27) ~ hi              (43234)  [-i]
+  hi              (43234) ~ hiv             (   26)  [+v]
+  hi              (43234) ~ hin             (   21)  [+n]
+  hi              (43234) ~ ui              (   19)  [h→u at pos 0]
+  hi              (43234) ~ hoi             (   12)  [+i]
+  ka              (13699) ~ na              (16954)  [k→n at pos 0]
+  in              (27121) ~ un              ( 2735)  [i→u at pos 0]
+  in              (27121) ~ min             (  959)  [+n]
+  an              (  934) ~ in              (27121)  [a→i at pos 0]
+  in              (27121) ~ in,             (  842)  [+,]
+  in              (27121) ~ inn             (  762)  [+n]
+  en              (  669) ~ in              (27121)  [e→i at pos 0]
+  in              (27121) ~ it              (  258)  [n→t at pos 1]
+  in              (27121) ~ nin             (  205)  [+n]
+  in              (27121) ~ zin             (   73)  [+n]
+  cin             (   61) ~ in              (27121)  [-n]
+  in              (27121) ~ ing             (   48)  [+g]
+  in              (27121) ~ sin             (   38)  [+n]
+  im              (   29) ~ in              (27121)  [m→n at pos 1]
+  in              (27121) ~ kin             (   27)  [+n]
+  din             (   23) ~ in              (27121)  [-n]
+  hin             (   21) ~ in              (27121)  [-n]
+
+----------------------------------------------------------------------
+3. SPECIFIC ORTHOGRAPHIC PATTERNS
+----------------------------------------------------------------------
+
+  h_loss:
+    leh             ( 3342) ~ le              (10906)
+    siah            (   60) ~ sia             (  262)
+    tawh            ( 7737) ~ taw             (   18)
+    leilakah        (   81) ~ leilaka         (    2)
+    kiimah          (   47) ~ kiima           (   57)
+    luah            (  191) ~ lua             (  111)
+    koih            (  588) ~ koi             (   96)
+    tuh             (   29) ~ tu              (  391)
+    pangah          (   23) ~ panga           (    7)
+    thah            (  172) ~ tha             (   86)
+
+  k_h:
+    guk             (  139) ~ guh             (   49)
+    sik             (  101) ~ sih             (  265)
+    dik             (   35) ~ dih             (  105)
+    kituak          (   51) ~ kituah          (   23)
+    tuk             (   57) ~ tuh             (   29)
+    buk             (  156) ~ buh             (    4)
+    thak            (  129) ~ thah            (  172)
+    zak             (  338) ~ zah             (  176)
+    sak             (  219) ~ sah             (   15)
+    bek             (  788) ~ beh             (  278)
+
+  ei_i:
+    neite           (   82) ~ nite            (   19)
+    keima           ( 1010) ~ kima            (    5)
+    hei             (   27) ~ hi              (43234)
+    gei             (   69) ~ gi              (    4)
+    deih            (  304) ~ dih             (  105)
+    lei-ah          (   27) ~ li-ah           (    3)
+    mei             (  353) ~ mi              ( 4793)
+    neih            (  412) ~ nih             (  662)
+    lei             (  298) ~ li              (  223)
+    nei             ( 1783) ~ ni              ( 1493)
+
+  ai_e:
+    haina           (   39) ~ hena            (    3)
+    tai             (  259) ~ te              (    8)
+    kain            (   24) ~ ken             (  112)
+    nai             (  397) ~ ne              (  558)
+    lai             ( 1186) ~ le              (10906)
+    naih            (   21) ~ neh             (   16)
+    kamtai          (   44) ~ kamte           (    7)
+    paina           (  124) ~ pena            (    2)
+    taii            (   30) ~ tei             (   34)
+    khai            (   61) ~ khe             (  185)
+
+  ua_aw:
+    luah            (  191) ~ lawh            (   94)
+    suakin          (   62) ~ sawkin          (    4)
+    huang           (   39) ~ hawng           (    2)
+    tuangin         (   34) ~ tawngin         (    2)
+    khuam           (   76) ~ khawm           (  248)
+    zuan            (   61) ~ zawn            (    6)
+    kuangte         (   28) ~ kawngte         (    1)
+    tual            (   60) ~ tawl            (    4)
+    gual            (   41) ~ gawl            (    4)
+    tuam            (  131) ~ tawm            (  117)
+
+  ng_n:
+    kiling          (   24) ~ kilin           (    3)
+    ning            (   31) ~ nin             (  205)
+    ing,            (   32) ~ in,             (  842)
+    cing            (  135) ~ cin             (   61)
+    ing             (   48) ~ in              (27121)
+    huang           (   39) ~ huan            (   82)
+    zangin          (   67) ~ zanin           (  150)
+    dong            (  687) ~ don             (   85)
+    suang           (  289) ~ suan            (  167)
+    bang            ( 4199) ~ ban             (   85)
+
+  kh_k:
+    kho             (   45) ~ ko              (  249)
+    khen            (  267) ~ ken             (  112)
+    kikhawmin       (   23) ~ kikawmin        (    1)
+    khol            (   26) ~ kol             (   22)
+    khawl           (  107) ~ kawl            (   17)
+    khuam           (   76) ~ kuam            (  108)
+    khua-ah         (  316) ~ kua-ah          (    1)
+    khua            (  980) ~ kua             (  514)
+    khem            (   79) ~ kem             (  148)
+    kikhawm         (  111) ~ kikawm          (    5)
+
+  ph_p:
+    phu             (   26) ~ pu              (  255)
+    phum            (   29) ~ pum             (   21)
+    phun            (   22) ~ pun             (    2)
+    phatna          (   98) ~ patna           (    9)
+    phetin          (   66) ~ petin           (    2)
+    phat            (  278) ~ pat             (    3)
+    phei            (   27) ~ pei             (   11)
+    phel            (   22) ~ pel             (   22)
+    pha             (  460) ~ pa              ( 2693)
+    phak            (   69) ~ pak             (   78)
+
+  th_t:
+    thuaksak        (   61) ~ tuaksak         (    6)
+    thah            (  172) ~ tah             (    1)
+    thawl           (   30) ~ tawl            (    4)
+    theite          (   53) ~ teite           (    1)
+    thau            (   90) ~ tau             (  426)
+    thumin          (   35) ~ tumin           (   29)
+    kithawi         (   90) ~ kitawi          (    1)
+    thong           (  102) ~ tong            (    4)
+    thak            (  129) ~ tak             (  250)
+    thum            (  637) ~ tum             (  186)
+
+  geminate:
+    sanna           (   26) ~ sana            (    4)
+    taak            (   42) ~ tak             (  250)
+    dawnna          (   21) ~ dawna           (   25)
+    leii            (   33) ~ lei             (  298)
+    baal            (   76) ~ bal             (    1)
+    teelna          (   28) ~ telna           (    1)
+    paai            (   25) ~ pai             ( 2382)
+    ammon           (  151) ~ amon            (   20)
+    taang           (   77) ~ tang            (  165)
+    leeng           (  171) ~ leng            (  104)
+
+----------------------------------------------------------------------
+4. PRELIMINARY ASSESSMENT
+----------------------------------------------------------------------
+
+  H-variation pairs found: 30
+  Near-variant pairs found: 40
+
+  INTERPRETATION:
+  - Most 'variation' appears to be grammatical (Stem I/II alternation)
+  - True orthographic variants seem limited
+  - Aggressive normalization NOT recommended at this stage
+  - Safe to treat Stem I/II as related but distinct forms

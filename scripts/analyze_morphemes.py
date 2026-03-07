@@ -492,43 +492,198 @@ NOUN_STEMS = {
     'ganhingte': 'animals',
     'sang': 'high',          # 209
     'nin': 'day',            # 200 variant
+    
+    # === Additional stems from corpus frequency analysis ===
+    # Social/occupational
+    'tangval': 'youth',       # tangvalte = youths
+    'naupang': 'child',       # naupangte = children
+    'luang': 'corpse',
+    'nungak': 'girl',        # 73
+    'tuuhon': 'poor.person', # tuuhonte
+    'lute': 'heads',
+    'mihoih': 'righteous',   # 70
+    'mihai': 'wise',         # 89
+    'misite': 'dead.PL',
+    'misi': 'dead',          # 70
+    'mihonpi': 'noble',      # mihonpite
+    'siangthote': 'saints',
+    
+    # Nominalizations (productive -na pattern)
+    'lamet': 'example',      # lametna = example.NMLZ
+    'phattua': 'reward',     # phattuamna
+    'haksat': 'difficult',   # haksatna
+    'gualzawh': 'transgress', # gualzawhna
+    'tawntung': 'eternity',  # tawntungna
+    'mahmah': 'very',        # mahmahna
+    'pian': 'birth',         # pianna
+    'lut': 'enter',          # lutna
+    'neih': 'have',          # neihna
+    'muh': 'see',            # muhna
+    'lau': 'fear',           # launa
+    'kah': 'fight',          # kahna
+    'lin': 'hope',           # lina
+    'sik': 'repent',         # sikna
+    'dik': 'straight',       # dikna
+    'hat': 'strong',         # hatna
+    'dal': 'hinder',         # dalna
+    'buk': 'ambush',         # bukna
+    
+    # Places/locations
+    'mailam': 'front',       # 64
+    'mualtung': 'mountaintop', # mualtungah
+    'zawl': 'open.space',    # zawlte
+    'gamla': 'wilderness',   # 57
+    
+    # Body parts / objects
+    'lukhu': 'crown',        # 59
+    'kongzing': 'harp',      # 59
+    'kammal': 'jawbone',     # 59
+    'vatgawp': 'bird',       # 55
+    'mittaw': 'blind',       # 47
+    'sum': 'money',          # sumte
+    'kent': 'cubit',         # kente
+    'leeng': 'chariot',      # leengte = 68
+    'bawntal': 'calf',       # bawngtalte
+    'sabuai': 'sheep',       # 60
+    'sawltak': 'servant',    # 56
+    'khuaizu': 'locust',     # 60
+    
+    # Action-related
+    'khaici': 'sow',         # 58 (farmer)
+    'kamsangpa': 'prophet',  # 58
+    'vaihawm': 'counsel',    # 63
+    'muanhuai': 'trust',     # 57
+    'minthang': 'glory',     # 57
+    'thusim': 'parable',     # 60
+    'thuhoih': 'good.news',  # 47
+    'laksak': 'redeem',      # 54
+    'ninsak': 'strengthen',  # 52
+    'lungdamsak': 'comfort', # 50
+    'nusia': 'forsake',      # 50
+    'musak': 'show',         # 46
+    
+    # Plurals (productive -te pattern)
+    'sagih': 'seven',        # sagihte
+    'sawmgiat': 'seventy',   # 55
+    'zathum': 'three.hundred', # 52
+    'zali': 'four.hundred',  # 51
+    'zawsop': 'judge',       # 52
+    'ukpi': 'governor',      # 53
+    'siamte': 'craftsmen',
+    'thupiakte': 'commandments',
+    'ante': 'them',          # 50
+    'pente': 'things',
+    'khete': 'some',
+    'khaute': 'which',
+    'suangte': 'descendants',
+    'bawlte': 'makers',
+    'pute': 'ancestors',
+    'taute': 'children',
+    'vantungte': 'heavenly.beings',
+    
+    # Miscellaneous high-frequency
+    'ken': 'only',           # 112
+    'panun': 'toward',       # 101
+    'mudah': 'easy',         # 97
+    'paisan': 'god',         # 91 variant spelling
+    'annel': 'meal',         # 76
+    'alang': 'vine',         # 73
+    'kangtum': 'brass',      # 72
+    'kawm': 'edge',          # 70
+    'keel': 'heel',          # 85
+    'zaguk': 'winepress',    # 65
+    'umcih': 'hope',         # 64
+    'ihih': 'this.be',       # 64 = i-hih
+    'cin': 'said',           # 61
+    'kampau': 'voice',       # 61
+    'hit': 'that',           # 61
+    'khai': 'hold',          # 61
+    'keu': 'dig',            # 59
+    'maimang': 'shame',      # 59
+    'khah': 'choke',         # 62
+    'nakleh': 'otherwise',   # 56
+    'hiang': 'know',         # 54
+    'khialh': 'sin',         # 54
+    'sau': 'long',           # 52
+    'luppih': 'lay.down',    # 51
+    'lungmuang': 'trust',    # 51
+    'lunghimawh': 'fear',    # 51
+    'samsia': 'destroy',     # 50
+    'pianzia': 'nature',     # 50
+    'gammi': 'citizen',      # 47
+    'namkim': 'rainbow',     # 46
+    'sauveipi': 'flock',     # 46
+    'mipil': 'wise.person',  # 47
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
+# Expanded from corpus frequency analysis - 200+ entries
 PROPER_NOUNS = {
     # Jesus and titles
-    'Jesuh', 'Jesus', 'Khrih', 'Christ', 'Kristu', 'Zeisu',
+    'Jesuh', 'Jesus', 'Khrih', 'Christ', 'Kristu', 'Zeisu', 'Khrih',
     
-    # Old Testament figures
-    'Abraham', 'Isaac', 'Jakob', 'Jakobu', 'Israel', 'Josef', 'Joseph',
-    'Moses', 'Aaron', 'Joshua', 'David', 'Solomon', 'Saul', 'Samuel',
-    'Elijah', 'Elisha', 'Isaiah', 'Jeremiah', 'Ezekiel', 'Daniel',
-    'Job', 'Esau', 'Levi', 'Reuben', 'Benjamin', 'Judah', 'Manasseh',
-    'Efraim', 'Gad', 'Simeon', 'Naphtali', 'Asher', 'Zebulun', 'Issachar',
-    'Jonathan', 'Absalom', 'Joab', 'Nathan', 'Eli', 'Noah', 'Adam', 'Eve',
+    # Old Testament figures - Patriarchs
+    'Abraham', 'Abram', 'Isaac', 'Jakob', 'Jakobu', 'Israel', 'Josef', 'Joseph',
+    'Noah', 'Adam', 'Eve', 'Seth', 'Enoch', 'Methuselah', 'Lamech',
+    
+    # Old Testament - Moses era
+    'Moses', 'Aaron', 'Joshua', 'Caleb', 'Miriam', 'Korah', 'Phinehas',
+    
+    # Old Testament - Judges & Kings
+    'David', 'Solomon', 'Saul', 'Samuel', 'Eli', 'Gideon', 'Samson',
     'Jeroboam', 'Rehoboam', 'Ahab', 'Jehoshafat', 'Hezekiah', 'Josiah',
+    'Nebukhadnezzar', 'Nebuchadnezzar', 'Belshazzar', 'Darius', 'Cyrus',
+    'Abimelek', 'Abimelech', 'Abner', 'Absalom', 'Joab', 'Jonathan',
     
-    # New Testament figures
-    'Johan', 'John', 'Peter', 'Piter', 'Paul', 'Paulus', 'Simon', 'Andru',
-    'James', 'Zebedi', 'Matthew', 'Mark', 'Luke', 'Thomas', 'Philip',
-    'Bartholomew', 'Judas', 'Maria', 'Mary', 'Martha', 'Lazarus',
-    'Pilate', 'Herod', 'Nicodemus', 'Stephen', 'Timothy', 'Titus',
-    'Barnabas', 'Silas', 'Apollos',
+    # Old Testament - Prophets
+    'Elijah', 'Elisha', 'Isaiah', 'Jeremiah', 'Ezekiel', 'Daniel',
+    'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum',
+    'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi',
+    'Nathan', 'Zadok',
+    
+    # Old Testament - Other figures
+    'Job', 'Esau', 'Levi', 'Reuben', 'Benjamin', 'Judah', 'Manasseh',
+    'Efraim', 'Ephraim', 'Gad', 'Simeon', 'Naphtali', 'Naftali', 'Asher',
+    'Zebulun', 'Issachar', 'Dan', 'Ishmael', 'Ruth', 'Boaz', 'Rahab',
+    
+    # New Testament figures - Apostles
+    'Johan', 'John', 'Peter', 'Piter', 'Paul', 'Paulus', 'Simon', 'Andru', 'Andrew',
+    'James', 'Zebedi', 'Zebedee', 'Matthew', 'Mark', 'Luke', 'Thomas', 'Philip',
+    'Bartholomew', 'Judas', 'Thaddaeus', 'Matthias',
+    
+    # New Testament - Other figures  
+    'Maria', 'Mary', 'Martha', 'Lazarus', 'Nicodemus', 'Stephen', 'Stefanus',
+    'Timothy', 'Titus', 'Barnabas', 'Silas', 'Apollos', 'Priscilla', 'Aquila',
+    'Pilat', 'Pilate', 'Herod', 'Caiaphas', 'Annas',
     
     # Places - Old Testament
-    'Egypt', 'Babylon', 'Jerusalem', 'Judah', 'Samaria',
-    'Moab', 'Edom', 'Ammon', 'Syria', 'Assiria', 'Kanaan', 'Canaan',
-    'Gilead', 'Zion', 'Sinai', 'Horeb', 'Bethel', 'Bethlehem',
-    'Jordan', 'Filistia', 'Philistia',
+    'Egypt', 'Babylon', 'Jerusalem', 'Judah', 'Samaria', 'Damaskas', 'Damascus',
+    'Moab', 'Edom', 'Ammon', 'Syria', 'Assiria', 'Assyria', 'Kanaan', 'Canaan',
+    'Gilead', 'Zion', 'Sinai', 'Horeb', 'Bethel', 'Bethlehem', 'Ai',
+    'Jordan', 'Filistia', 'Philistia', 'Khaldea', 'Chaldea',
+    'Midian', 'Persia', 'Media', 'Sheba',
     
     # Places - New Testament
     'Galilee', 'Nazareth', 'Nazaret', 'Kapernaum', 'Capernaum',
     'Roma', 'Rome', 'Corinth', 'Ephesus', 'Antioch', 'Athens',
-    'Macedonia', 'Galatia', 'Thessalonica', 'Judea',
+    'Macedonia', 'Galatia', 'Thessalonica', 'Judea', 'Tarsus',
     
     # Groups/Peoples
     'Jew', 'Farisi', 'Pharisee', 'Sadducee', 'Gentail', 'Gentile',
-    'Levite', 'Pawi', 'Faro',
+    'Levite', 'Pawi', 'Faro', 'Pharaoh', 'Kherub', 'Cherub', 'Satan',
+    'Amor', 'Amorite', 'Hittite', 'Midianite',
+    
+    # Lowercase forms found in corpus (need to match case-insensitively)
+    'israel', 'jesuh', 'jerusalem', 'egypt', 'babylon', 'judah',
+    'saul', 'aaron', 'abraham', 'paul', 'kanaan', 'ammon', 'assiria',
+    'samuel', 'sabbath', 'isaac', 'absalom', 'zion', 'samaria', 'ahab',
+    'nebukhadnezzar', 'abimelek', 'abner', 'abram', 'isaiah', 'ishmael',
+    'damaskas', 'zadok', 'pilat', 'satan', 'naftali', 'khaldea',
+    'gentail', 'filistia', 'amor', 'kherub', 'ai',
+    # Additional proper nouns from corpus frequency analysis
+    'ahaz', 'samson', 'midian', 'amalek', 'asher', 'nathan', 'saihadial',
+    'moab', 'edom', 'gilead', 'sheba', 'laban', 'rebekah', 'leah', 'rachel',
+    'bethel', 'sodom', 'gomorrah', 'nineveh', 'tyre', 'sidon',
 }
 
 # =============================================================================
@@ -547,9 +702,12 @@ def clean_word(word: str) -> str:
     return word
 
 def is_proper_noun(word: str) -> bool:
-    """Check if word is a proper noun."""
+    """Check if word is a proper noun (case-insensitive matching)."""
     clean = clean_word(word)
-    return clean in PROPER_NOUNS or (clean[0].isupper() if clean else False)
+    if not clean:
+        return False
+    # Check both original case and lowercase
+    return clean in PROPER_NOUNS or clean.lower() in PROPER_NOUNS or clean[0].isupper()
 
 def analyze_word(word: str) -> Tuple[str, str]:
     """
@@ -568,6 +726,23 @@ def analyze_word(word: str) -> Tuple[str, str]:
     # Check if proper noun
     if is_proper_noun(word):
         return (word, word.upper())
+    
+    # Check for proper noun + suffix patterns (israel-te, jerusalem-ah, etc.)
+    word_lower = word.lower()
+    proper_suffixes = {
+        '-te': 'PL',      # plural
+        '-ah': 'LOC',     # locative  
+        '-a': 'LOC',      # short locative
+        '-in': 'ERG',     # ergative
+        'te': 'PL',       # without hyphen
+        'ah': 'LOC',      # without hyphen
+    }
+    for suffix, gloss in sorted(proper_suffixes.items(), key=lambda x: -len(x[0])):
+        if word_lower.endswith(suffix):
+            base = word[:-len(suffix)]
+            base_clean = base.rstrip('-')  # Remove trailing hyphen if present
+            if base_clean.lower() in PROPER_NOUNS or base_clean in PROPER_NOUNS:
+                return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_clean.upper()}-{gloss}")
     
     # Check function words first (full match)
     word_lower = word.lower()
@@ -1098,6 +1273,123 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nate': ('na-te', '2SG-PL'),
         'kizui-in': ('ki-zui-in', 'REFL-follow-ERG'),
         'la-in': ('la-in', 'take-ERG'),
+        
+        # === Additional compounds from frequency analysis (freq 50-230) ===
+        'leenggahzu': ('leeng-gah-zu', 'chariot-?-?'),       # 228
+        'sumngo': ('sum-ngo', 'money-?'),                     # 152
+        'leenggui': ('leeng-gui', 'chariot-wheel'),           # 130
+        'ling': ('ling', 'pile'),                              # 106
+        'panun': ('pa-nun', 'father-life'),                    # 101
+        'leenggah': ('leeng-gah', 'chariot-?'),               # 98
+        'mudah': ('mu-dah', 'see-easy'),                       # 97
+        'keel': ('keel', 'heel'),                              # 85
+        'salin': ('sa-lin', 'meat-hope'),                      # 82
+        'lametna': ('lam-et-na', 'path-example-NMLZ'),        # 81
+        'paktat': ('pak-tat', 'divide-strike'),               # 79
+        'pak': ('pak', 'divide'),                              # 78
+        'annel': ('an-nel', 'food-?'),                         # 76
+        'phattuamna': ('phat-tuam-na', 'praise-?-NMLZ'),      # 76
+        'thei-in': ('thei-in', 'know.I-ERG'),                  # 75
+        'le-uhcin': ('le-uh-cin', 'also-PL-even'),            # 74
+        'alang': ('a-lang', '3SG-vine'),                       # 73
+        'zin': ('zin', 'journey'),                             # 73
+        'sawh': ('sawh', 'correct'),                           # 72
+        'kangtum': ('kang-tum', 'brass-all'),                 # 72
+        'nisimin': ('ni-simin', 'day-always'),                # 70
+        'tuikhuk': ('tui-khuk', 'water-ladle'),               # 68
+        'late': ('la-te', 'song-PL'),                          # 68
+        'mualtungah': ('mual-tung-ah', 'mountain-top-LOC'),   # 66
+        'kang': ('kang', 'suffer'),                            # 66
+        'cil': ('cil', 'sprout'),                              # 66
+        'lauhuai': ('lau-huai', 'fear-dread'),                # 65
+        'vaihawm': ('vai-hawm', 'plan-counsel'),              # 63
+        'lite': ('li-te', 'four-PL'),                          # 60
+        'bawngtalte': ('bawng-tal-te', 'cow-calf-PL'),        # 59
+        'kahna': ('kah-na', 'fight-NMLZ'),                     # 59
+        'nasia': ('na-sia', '2SG-bad'),                        # 58
+        'neute': ('neu-te', 'small-PL'),                       # 58
+        'tangvalpa': ('tangval-pa', 'youth-father'),          # 58
+        'khialhnate': ('khialh-na-te', 'sin-NMLZ-PL'),        # 57
+        'nuai-a': ('nuai-a', 'below-LOC'),                     # 56
+        'kihei-in': ('ki-hei-in', 'REFL-angry-ERG'),          # 56
+        'lutangte': ('lu-tang-te', 'head-?-PL'),              # 56
+        'zawlte': ('zawl-te', 'plain-PL'),                     # 56
+        'tai-in': ('tai-in', 'flee-ERG'),                      # 55
+        'lau-in': ('lau-in', 'fear-ERG'),                      # 55
+        'nasepna-ah': ('na-sep-na-ah', 'work-NMLZ-LOC'),      # 55
+        'zingsangin': ('zing-sang-in', 'morning-early-ERG'),  # 54
+        'neihna': ('neih-na', 'have-NMLZ'),                   # 54
+        'laksak': ('lak-sak', 'take-CAUS'),                   # 54
+        'pian': ('pian', 'be.born'),                           # 54
+        'lamdangte': ('lam-dang-te', 'way-other-PL'),         # 54
+        'pahtawina': ('pah-tawi-na', 'do-honor-NMLZ'),        # 54
+        'mualte': ('mual-te', 'mountain-PL'),                 # 54
+        'mahmahna': ('mahmah-na', 'very-NMLZ'),               # 54
+        'egypt-ah': ('egypt-ah', 'EGYPT-LOC'),                # 53
+        'sumte': ('sum-te', 'money-PL'),                      # 53
+        'hikeileh': ('hi-kei-leh', 'be-NEG.EMPH-if'),         # 53
+        'munte': ('mun-te', 'place-PL'),                      # 53
+        'theite': ('thei-te', 'know.I-PL'),                   # 53
+        'khawmin': ('khawm-in', 'gather-ERG'),                # 52
+        'siangthote': ('siangtho-te', 'holy-PL'),             # 52
+        'khitna': ('khit-na', 'after-NMLZ'),                  # 52
+        'sau': ('sau', 'long'),                                # 52
+        'midikte': ('mi-dik-te', 'person-straight-PL'),       # 51
+        'lungmuang': ('lung-muang', 'heart-still'),           # 51
+        'lunghimawh': ('lung-himawh', 'heart-fear'),          # 51
+        'bukna': ('buk-na', 'ambush-NMLZ'),                   # 51
+        'gengen': ('gen-gen', 'speak-RED'),                   # 50
+        'samsia': ('sam-sia', 'call-destroy'),                # 50
+        'lungdamsak': ('lung-dam-sak', 'heart-well-CAUS'),    # 50
+        'ante': ('an-te', '3PL-PL'),                          # 50
+        'tuni-a': ('tu-ni-a', 'now-day-LOC'),                 # 50
+        'biakpiaknate': ('biak-piak-na-te', 'worship-give-NMLZ-PL'), # 50
+        'nusiat': ('nu-siat', 'mother-destroy'),              # 50
+        'pianzia': ('pian-zia', 'birth-manner'),              # 50
+        
+        # === More compounds from frequency analysis (freq 38-55) ===
+        'leenggahzu': ('leeng-gah-zu', 'chariot-rider-?'),    # 228
+        'sumngo': ('sum-ngo', 'money-silver'),                 # 152
+        'kumpinu': ('kumpi-nu', 'king-mother'),               # 54
+        'nupi': ('nu-pi', 'mother-big'),                       # 53
+        'ihmu': ('ih-mu', '1PL-see'),                          # 52
+        'guh': ('guh', 'shout'),                               # 49
+        'ing': ('ing', 'be.able'),                             # 48
+        'aksi': ('ak-si', 'fowl-?'),                           # 48
+        'zasak': ('za-sak', 'hear-CAUS'),                      # 47
+        'biakinnpi': ('biakinn-pi', 'temple-big'),            # 47
+        'siampipuan': ('siampi-puan', 'priest-cloth'),        # 46
+        'thusia': ('thu-sia', 'word-evil'),                    # 46
+        'savun': ('sa-vun', 'meat-fur'),                       # 45
+        'thupiaksa': ('thupiak-sa', 'commandment-flesh'),     # 45
+        'gamtatnasa': ('gamtat-na-sa', 'kingdom-NMLZ-?'),     # 45
+        'kantan': ('kan-tan', 'remain-?'),                     # 45
+        'puanhampi': ('puan-ham-pi', 'cloth-cover-big'),      # 45
+        'sawt': ('sawt', 'long.time'),                         # 45
+        'zawng': ('zawng', 'all'),                              # 45
+        'nun': ('nun', 'life'),                                 # 45
+        'piaksa': ('piak-sa', 'give-flesh'),                   # 44
+        'gamlapi': ('gam-la-pi', 'land-take-big'),            # 44
+        'ahihlam': ('a-hih-lam', '3SG-be-way'),               # 43
+        'thukkik': ('thuk-kik', 'deep-again'),                # 43
+        'bawlsia': ('bawl-sia', 'make-evil'),                 # 43
+        'nuai': ('nuai', 'below'),                             # 42
+        'zai': ('zai', 'song'),                                # 42
+        'nawk': ('nawk', 'again'),                             # 42
+        'theisak': ('thei-sak', 'know.I-CAUS'),               # 42
+        'ngaihno': ('ngaih-no', 'think-?'),                   # 42
+        'ciangun': ('ciang-un', 'then-PL.IMP'),               # 41
+        'nail': ('nail', 'always'),                            # 41
+        'zasagih': ('za-sagih', 'hundred-seven'),             # 40
+        'at': ('at', 'cut'),                                   # 40
+        'pahtawi': ('pah-tawi', 'do-honor'),                  # 40
+        'nunung': ('nu-nung', 'mother-back'),                 # 40
+        'behlap': ('beh-lap', 'tribe-half'),                  # 40
+        'palsat': ('pal-sat', 'wall-strike'),                 # 39
+        'gensak': ('gen-sak', 'speak-CAUS'),                  # 39
+        'kai': ('kai', 'ascend'),                              # 39
+        'puantualpi': ('puan-tual-pi', 'cloth-?-big'),        # 39
+        'thutak': ('thu-tak', 'word-true'),                   # 39
     }
     if word_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_lower]
@@ -1178,15 +1470,23 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Check nominalizers
         for nom, gloss in NOMINALIZERS.items():
+            # Case 1: remaining IS exactly the nominalizer (after stem extraction)
+            if remaining.lower() == nom:
+                segments.append(nom)
+                glosses.append(gloss)
+                remaining = ''
+                break
+            # Case 2: remaining has a base + nominalizer
             if remaining.lower().endswith(nom) and len(remaining) > len(nom):
                 base = remaining[:-len(nom)]
+                base_lower = base.lower()
                 # Check if base is a known stem
-                if base in VERB_STEMS:
+                if base_lower in VERB_STEMS:
                     segments.append(base)
-                    glosses.append(VERB_STEMS[base])
-                elif base in NOUN_STEMS:
+                    glosses.append(VERB_STEMS[base_lower])
+                elif base_lower in NOUN_STEMS:
                     segments.append(base)
-                    glosses.append(NOUN_STEMS[base])
+                    glosses.append(NOUN_STEMS[base_lower])
                 else:
                     segments.append(base)
                     glosses.append('?')  # Unknown base

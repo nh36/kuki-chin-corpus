@@ -1,0 +1,99 @@
+30 TIDDIM CHIN
+
+SPAP(I 8,114) PSPP (I 28b) APPPP (I 5)
+PSPAP (I 27b) APAP (I 9, 11, 31)
+
+SAPPSP (I 17) PASPP (I 13, 26) APAPP (I 10)
+SPSAP (I 20) APAAP (I 24)
+ASPP (I 39)
+
+It will be seen that the number of phrases in a sentence may
+range from one to six, though sentences with five or six constituent
+phrases are rare. A considerable number of the sentence types are
+found only once in the texts under examination. It may be assumed
+that if a greater number of texts were examined, further examples
+of these types, and probably of new types also, would be forth-
+coming.
+
+Sentences consisting of one subjective phrase are found only
+in the titles of the texts. All other sentences have a predicative
+phrase in final place in the sequence. The commonest type of sen-
+tence in this style appears to be one with an adjunctive phrase in
+first place, followed by one or more predicative phrases.
+
+ro
+
+Sentence particles
+
+in the narrative style of these texts only two sentence particles
+are recognized, both occurring finally, namely ‘hi’ and ‘leh’.
+A sentence containing the sentence particle ‘hi’ may be termed
+conclusive; one containing the sentence particle ‘leh’ may be termed
+inconclusive. Conclusive and inconclusive sentences are further
+distinguished by mood (see p. 32). By far the majority of the sen-
+tences in the texts are conclusive. An inconclusive sentence together
+with the following conclusive sentence constitutes a compound
+sentence. All other sentences are simple. Each of the constituent
+sentences of a compound sentence is regarded as simple when
+examined by itself,
+
+B. Sentence intonation L
+
+The intonational features that are a property of the sentence as
+a structure are not to be confused with the intonational features
+characteristic of structures of lesser extent, as for example, phrases,
+figures, words, or syllables. Characteristic of the sentence are the
+following intonational features:
+
+(a) the gradual downward drift, by which each succeeding
+
+THE NARRATIVE STYLE 31
+
+phrase tends to be pitched in a key slightly lower than the
+preceding one; and
+
+(2) the pitch-contour of the final sentence particle or particle
+group.
+
+‘The downward drift appears to characterize all sentences in the
+texts.
+
+‘The pitch-contour of the final sentence particle or particle group
+(see pp. 103, 107) is in the great majority of cases low level or low
+falling in relation to the preceding pitches in the sentence. In a few
+inconclusive sentences a final high level pitch is observed, and in
+one case, that of a final particle group, the contour is low falling in
+the first syllable of the group followed by a rapid rise to a relatively
+high pitch (II 5a). It is convenient to generalize these patterns by
+postulating two intonational possibilities, one in which the pitch
+contour of the final particle or particle group ends on a pitch that
+is high in relation to the preceding pitches in the phrase, and one
+in which it ends on a pitch low in relation to the preceding pitches.
+‘These two possibilities will be referred to as high and low sentence
+intonation respectively, and are marked and ! in the detailed
+textual analysis given on pp. 120-40. .
+
+Low sentence intonation is commonly realized in a conclusive
+sentence by a low falling or low level pitch on the sentence particle
+‘hi’. In inconclusive sentences only a low level pitch has been ob-
+served (I 28a, II 1a).
+
+High sentence intonation appears in this style to be restricted to
+
+“inconclusive sentences. It is commonly realized by a high level or
+
+short high rising pitch on the sentence particle ‘leh’. In the particle
+group ‘le cin’ (II 5a) it is realized by a pitch-contour which starts
+with a low fall and rises abruptly to a pitch somewhat higher than
+that at the beginning of the contour.
+
+In a number of respects, the titles of the narratives differ in
+structure from the other sentences of the narrative style. In addi-
+tion to the exceptional phrase arrangement already noted (see
+P. 30), titles differ from all other sentences in this style by the
+absence of a sentence-final particle, and hence by the absence of
+a final pitch-contour which can be referred to high or low intona-
+tion in the manner discussed above. Such sentences may be said
+to be characterized by neutral sentence intonation, for which the
+mark * is used in structural formulae.
+

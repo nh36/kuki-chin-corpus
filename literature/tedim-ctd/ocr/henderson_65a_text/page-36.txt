@@ -1,0 +1,96 @@
+' 60 TIDDIM CHIN
+
+The oblique case is a characteristic of nominal figures consisting
+of a noun followed by the nominal suffixes ‘pa’ and ‘nv’, e.g.
+“gal n. war, enemy, ~Satl -tex n.--ns. enemies, but -garl -pa:z
+n.°--ns, an enemy. Compare also ~ur n, with Ur-pat 1.°--n5.,
+both meaning elder brother, and -naru n. younger sibling, “nau
+-pa: 2.°-++-ns. younger brother, -naxa -nut n.°--ns. younger sister,
+
+Some nominal figures consisting of a noun followed by a verb
+also show the noun in the oblique form. Compare -miz . person
+with smi: -hin 2.°+-v." human being.
+
+With nouns of inanimate or abstract reference in the texts (see
+also p. 141) the oblique form is not the exponent of case but of a
+difference in semantic content which finds lexical expression in
+the English translation. Compare ~zam 1. night with ~zarn n°
+yesterday, and ~tux -niz 2.°-+n.° today with -tu: 2, now and “ni:
+n, day,
+
+F. Figure-final glottalization
+
+The glottal constriction which is frequently heard towards the
+end of the rising pitch-contour of cértain words and affixes when
+they occur in figure-final position in the texts (see p. 18)
+appears to function as a mark of the boundaries between figures,
+and is thus interpreted as the realization of an element of figure
+structure for which the term figure-final glottalization is used.
+
+The syllables most regularly affected by it are the nominal
+suffixes ‘te’ and ‘pa’ (see pp. 101, 103), the nomino-verbal suffix
+‘pi’ (see pp. 102-3), and the adverb ‘sa’, This is, however, not an
+
+indication that the feature is to be regarded as an integral part of
+
+the syllabic structure of such forms but is rather the result of their
+relative frequency in the texts and of the fact that their grammatical
+functions dictate that they are most commonly found at the end of
+figures (see p. 69). That figure-final glottalization is not peculiar
+to affixes is proved by a few instances in the texts of its occurrence
+with tone 3 nouns. It is perhaps worth remarking that no instance
+is recorded of its occurrence with verbs.
+
+The following are examples of passages in the texts which were
+regularly pronounced with the type of figure-final glottalization
+under discussion: ‘Dahpa Thu’ (I 0), ‘a sawt pi’ (I 8), ‘tua te’
+(I 37), ‘lo khawh sa’ (I 14), ‘dawi pa’ (1 16), ‘a lopa’ (I 10), ni
+tamp?’ (I 13), ‘an min sa’ (I 18), ‘a om takpi’ (I 18), ‘a suak kik
+
+_THE NARRATIVE STYLE 61
+
+takpi’ (I 17). Glottalization was never present when a figure was
+immediately followed in the phrase by the particle ‘in’, even when
+the last syllable in the figure was one of the suffixes ‘pa’, ‘te’, or
+‘pi’. Contrast, for example, in the pronunciation of the texts set
+out in Section VII (pp. 120-40), ‘tua te’ (I 37) with ‘a innkuan
+pih te in’ (I x and 8), ‘ka lo cing pi’ (I 17) with ‘a lo cing piin’ later
+in the same sentence, and ‘leikha’ (I 38) with ‘leikha in’ in the
+following sentence.
+
+In this study passages such as ‘a lopa khawh khiat sa teng’ all the
+grass that had been weeded out already (I 10) are analysed as single
+nominal figures (see p. 66). It is clear, however, that we are con-
+fronted here ‘by the problem familiar to all grammarians of the
+operation of grammatical structures as constituent elements within
+larger grammatical structures of the same order. The boundaries
+of these “figures within figures’ in the passage cited were clearly
+defined in utterance by the regular glottalization of ‘pa’ and ‘sa’,
+Similarly marked are other composite nominal figures such as
+‘a khawh sa teng’ (I 12), with a boundary between ‘sa’ and ‘teng’
+and ‘lopa a kikho khia sa te’ (I 15), with boundaries between ‘lopa’
+and ‘a’ and between ‘sa’ and ‘te’, The final glottalization of ‘sa’
+meat in the composite figure ‘sa a muat loh na ding’ for the sake of
+the meat not going bad (I 24) serves the same purpose.
+
+Elsewhere in the texts usage was variable. In ‘zusa vasa te’ small
+anunals and birds (I 22 and 37), glottalization was usually present
+in the second ‘sa’, frequently absent in the first. ‘khapi’ moon
+(I 25) was sometimes glottalized, sometimes not: ‘bilp’ rabbit
+(I 34) was on no occasion recorded with final glottalization.
+Clearly, the careful recording of many more examples is needed
+before the role of final glottalization of this type could be formu-
+lated with any degree of precision, but it has been decided for the
+purposes of this study to treat it as a figure-final, not as a syllable-
+final, feature.
+
+Also interpreted as the realization of figure-final glottalization is
+the glottal stop heard. at the end of the post-nominal particles
+‘tawh’ and ‘ah’, The reasons for regarding this glottal stop as an
+element of figure rather than of word or syllable structure are set
+out in the section on pp. 104-5 dealing with the syllabic structure
+of particles,
+
+In structural formulae in the detailed analysis of the texts on
+pp. 120-40 figure-final glottalization is noted by a raised comma’
+

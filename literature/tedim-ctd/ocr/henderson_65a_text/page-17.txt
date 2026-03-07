@@ -1,0 +1,96 @@
+22 TIDDIM CHIN
+
+general to be accidental, remains phonologically unaccounted for.
+Contrast al/al’, ai/ai?, au/au’, &c., with asl, ati, aru, &c.
+
+Calling for special consideration is the glottal constriction some-
+times associated with certain open syllables with rising pitch,
+usually in pre-pausal position (see p. 18). This final glottalization,
+which is never vigorous enough to be confused with final glottal
+stop, is for reasons which are set out fully in the relevant sections
+of this study (see pp. 60-62, 104-5) interpreted not as an in-
+tegral part of the syllabic structure of the forms affected but as
+a mark of the boundaries of larger linguistic units.
+
+D. Syllable-opening features
+
+There are no clear indications in the present material of syllable-
+opening features comparable in function to the syllable-closure
+features already discussed. There are a few examples, however, of
+the use of the phonetic relationship between stops and spirants as
+a formal mark of the semantic relationship obtaining between
+some verbs, e.g.
+
+“kim to raise oneself = -xam to hit
+
+skia to fail sxia to drop (tr.)
+“turk to roll (intr.) -xuik Zo roll (tr.)
+-purk to fall -phu:k to fell
+
+Other examples will be found on p. 84. Further investigation
+might support the abstraction of syllable-onset features which
+might be'termed abrupt or gradual, by analogy with the syllable-
+closure features already described, but it appears that their gram-
+matical importance would be far less than that of the syllable-
+closure features with the same label.
+
+More material is needed to show whether the gaps in the
+distribution of initial consonants before opening diphthongs should
+be regarded as systematic or fortuitous (see p. 15). A more com-
+prehensive body of texts might suggest the phonological inter-
+pretation of the first element of such diphthongs as front or back
+modifications of the phonematic unit before a following central
+nuclear phonematic unit (see p, 23), and might point to a systematic
+relation between such modification and pre-nuclear units with
+which it ‘could be associated. Such an interpretation would entail
+
+SYLLABLE STRUCTURE 23
+
+the postulation of two or more syllable-beginning properties perti-
+nent to the structure of the syllable as a whole, and of five nuclear
+phonematic units instead of seven (see below).
+
+E. The nature, number, and sequence of the placed elements
+
+The phonematic units which are the placed elements of syllable
+structure are of three kinds, nuclear, pre-nuclear, and post-nuclear.
+
+All syllables have a vocalic nucleus, which will be represented in
+structural formulae by V. This vocalic nucleus may stand by itself
+as the only placed element of a syllable, or it may be preceded and/or
+followed by consonantal elements. Pre-nuclear elements, which are
+always consonantal in substance, are represented in structural
+
+_ formulae by C, post-nuclear elements by c. The possible sequences
+
+of these elements in Tiddim Chin syllables are as follows: V, CV,
+CVe, Ve.
+
+Nuclear Phonematic Units. The phonetic information sum-
+marized on pp. 17-18 shows that the quality of the half-open and
+half-close vowels &, e, 9, and o is correlated with vowel length,
+except before the glottal stop. The vowelsi, it,e, €1,a,a!,0,9:,U, Ux
+may therefore be regarded as the exponents of a series of nuclear
+phonematic units z, e, a, 0, and win syllables characterized by one
+of two degrees of quantity (see pp. 20-21). The closing diphthongs
+are regarded as sequences of appropriate nuclear units and palatal
+or labio-velar post-nuclear units (see p. 27).
+
+The full tally of nuclear units necessary to accommodate the
+material available is achieved by the addition of two further units
+ua and 1a.
+
+Classification of the nuclear units by relative degree of openness
+appears to be phonologically pertinent, since formal use is made
+of this relation in reduplicated adverbs such as ~diu~deu in a
+straight line, ~deuxdau one after the other, ~nixua-new in coils.
+The nuclear unit of the second syllable of such forms in the texts
+is always one degree more open than that of the first. In all other
+respects the structure of the two syllables is the same. This pheno-
+menon is referred to elsewhere in this study as ‘chiming’ (see
+P: 57).
+
+A problem is posed by the reduced phonetic possibilities for
+vowels in unstressed syllables (see p. 18). The absence of long
+vowels makes no difficulty since short quantity is invariably a
+

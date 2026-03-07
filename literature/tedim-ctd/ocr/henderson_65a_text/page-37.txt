@@ -1,0 +1,145 @@
+62 TIDDIM CHIN
+
+after the relevant symbol for the figure concerned. Where the figure
+concerned is a composite one (see p. 61) with more than one
+boundary marked in this way, the number of raised commas is
+increased accordingly, e.g. N’’’.
+
+G. The nature, number, and arrangement of the constituent
+placed elements
+
+The constituent placed elements of figures are words and affixes.
+The words which constitute placed elements of figures are
+assigned to the following classes: nouns, verbs, quantifiers, adverbs,
+verbal auxiliaries, nominal auxiliaries, and adverbial conjunctions.
+
+In structural formulae nouns are represented by the abbreviation _.
+
+n., verbs by v., quantifiers by g., adverbs by a., verbal auxiliaries
+by va., nominal auxiliaries by ma,, and adverbial conjunctions
+by ae.
+
+The affixes which, in combination with words from the classes
+referred to above, may go to make up figures are classified as
+pronominal prefixes (ppf.), verbal prefixes (upf.), pronominal
+suffixes (ps.), nomino-verbal suffixes (nvs.), nominal suffixes (ns.), and
+post-nominal particles (pup.).
+
+A figure may consist of an independent word (see p. 69) by
+itself, but never of a dependent word (see p. 69) or affix by itself.
+
+A post-nominal particle always marks the end of a nominal
+figure.
+
+A pronominal prefix always marks the beginning of a figure,
+nominal or verbal, except in the special cases set out on p. 61.
+
+Figures may, however, begin and end without prefixes, suffixes,
+or particles,
+
+The nominal figure
+
+The nominal figures in the texts are constituted in the following
+ways:
+(a) By a single noun, with or without a pronominal prefix and with
+or without suffixes, e.g.
+
+n, zingsang morning (I 2)
+Dahpa Dahpa (1 1 et al.)
+amah he (I 3)
+inn house (1 6)
+
+lo fields (1 7)
+
+THE NARRATIVE STYLE : 63
+
+ppfi-n. "a zing
+
+a khuang
+
+a mit
+n-ns. galte
+n.-NVS. bilpi
+ppf.-n.-nvs. a.sawt pi
+2.-NUS.-NS. innkuan pih te
+Dpf.-n.-nvs.-ns, a innkuan pih te
+
+the morning (I 10)
+his drum (1 16)
+his eyes (I 31)
+enemies (II 1)
+
+the rabbit (I 34)
+
+a long time (I 8)
+the family (1 8)
+his family (I 1)
+
+(6) By a single noun, with or without affixes, and a post-nominal
+
+particle, e.g.
+
+to his house (1 20)
+
+in the inner room (I 4)
+with his hoe (I 2)
+
+with his drum (I 20)
+to his hole (I 32)
+
+on the road (II 1)
+
+to their fields (I 8)
+
+the story of Dahpa (I 0)
+breakfast (I 3)
+
+that star (II 5)
+
+Dahpa’s drum (I 35)
+Khua Let's dog (II 5)
+
+n.-pnp. inn ah
+pialkhang ah
+Dppf.-n.-pnp. a tu tawh
+a khuang tawh
+a kua ah
+1.-NUS.-pnp, lampi ah
+Ppf.-n.-ps.-pnp. alo uh ah
+(c) By two successive nouns, with or without affixes, ¢.g.
+NN Dahpa Thu
+zingsang an
+tua aksi
+2°-n, Dahpa’ khuang
+Khua Le?’ ui
+bpf.-n.-n.-nvs. a cl pumpi
+
+his body (I 26)
+
+(2) By a noun and a nominal auxiliary, followed by a post-nominal
+
+particle, e.g.
+
+n.-na.-pnp. lo lai ah
+
+in the middle of the field
+
+(I 14)
+
+(e) By two successive ‘nouns and a nominal auxiliary followed by
+
+a post-nominal particle, e.g.
+
+Nn,-na~pnp.
+
+n.°-n.-na.-pnp.
+kiang ah
+
+vok gawl dawn a(h) on the top of the pig fence
+
+(I 27)
+
+Khua Lei’ khuk near Khua Lei’s knee (I
+
+5)
+

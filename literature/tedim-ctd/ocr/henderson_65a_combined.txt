@@ -1,0 +1,4753 @@
+SCHOOL OF
+ORIENTAL AND AFRICAN STUDIES
+UNIVERSITY OF LONDON
+
+London Oriental Series
+Volume 25
+
+LONDON ORIENTAL SERIES » VOLUME 15
+
+TIDDIM CHIN
+
+A DESCRIPTIVE ANALYSIS
+OF TWO TEXTS
+
+BY
+
+EUGENIE J. A. HENDERSON
+
+Professor of Phonetics in the
+University of London
+
+LONDON
+OXFORD UNIVERSITY PRESS
+
+NEW YORK TORONTO
+
+1965
+
+Oxford University Press, Amen House, London E.C.4
+
+GLASGOW NEW YORK TORONTO MELBOURNE WELLINGTON
+BOMBAY CALCUTTA MADRAS KARACHI LAHORE DACCA
+CAPE TOWN SALISBURY NAIROBI IBADAN ACCRA
+KUALA LUMPUR HONG KONG
+
+© EH. ¥. A. Henderson 1965
+
+PRINTED IN GREAT BRITAIN
+
+FOREWORD
+
+In the autumn of 1954 the author of this volume, in company with
+Professor Gordon H. Luce of Rangoon University and Dr. Theo-
+dore Stern of the University of Oregon, spent six weeks engaged in
+linguistic research in the Northern Chin Hills. The expedition was
+sponsored by the University of Rangoon, without whose generosity
+and support it could not have taken place. Professor Luce was tem-
+porarily released from his duties as Professor of Far Eastern His-
+tory in the University in order to take part, while my own work in
+Burma, which was made possible in the first instance by study leave
+granted by the School of Oriental and African Studies, London
+University, was greatly facilitated by my appointment as Visiting
+Professor in the University of Rangoon for the period of my visit.
+Our American colleague, Dr. Stern, who is Associate Professor of
+Anthropology in the University of Oregon, was at the time working
+at Rangoon University as a research fellow in linguistics under the
+Fulbright scheme. A fourth and most helpful participant in the
+first two weeks of our tour was U Khin Maung Saw of the Anthro-
+pology Department of Rangoon University. The especially warm
+acknowledgements and thanks of all of us are due to Dr. Htin
+Aung, at that time Rector of the University, whose personal
+enthusiasm and vigorous official backing for this project were as
+inspiring as they were invaluable. It was a great disappointment to
+us all that urgent official business at the last moment prevented him
+from leading our party. We also owe an immense debt of gratitude
+
+‘to Mr. Zahre Lian, then Minister for Chin Affairs, who supported
+
+the project from the start with all the means at his disposal, and in
+whose company we had the honour of travelling for part of the
+time. ] take this opportunity of expressing our grateful thanks to
+all the officials of the Chin Hills, from the Commissioner down-
+wards, and to all our numerous informants, Government servants,
+merchants, missionaries, schoolmasters, schoolboys, and even road-
+coolies, who, one and all, did their utmost to help us. I am also
+greatly indebted to the authorities of the School of Oriental and
+African Studies for generously providing a full subvention for the
+publication of the study presented here, which brings to fruition
+a major part of my own share in those weeks of intensive research.
+
+vi FOREWORD
+
+Professor Luce, in an article entitled ‘Chin Hills—Linguistic
+tour (Dec. 1954)—-University Project’ (Journal of the Burma Re-
+search Society, vol. xli, pt. 1, 1959), has given an account of the
+expedition and of what was accomplished, Despite the varying pre-
+occupations and interests of the individual members of the expedi-
+tion, we found much profit in working together and frequently
+called upon each other to check, listen, and advise. I gratefully
+acknowledge the wise counsel and warm encouragement of my two
+colleagues, and in particular that of Professor Luce, whose enthu-
+siasm was the mainspring of our work and whose erudition was its
+guide.
+
+EUGENIE J. A. HENDERSON
+London
+October 1962
+
+TASANhe oR St
+
+“er
+
+CONTENTS
+
++
+
+- INTRODUCTION
+
+Il. THE TEXTS
+III. SPELLING AND PRONUNCIATION
+
+IV. SYLLABLE STRUCTURE
+1. The Phonetic Material
+2. The Phonological Structure of Syllables
+A. Tone
+B. Quantity
+c. Syllable-closing features
+D. Syllable-opening features
+
+E. The nature, number, and sequence of the placed elements
+Nuclear phonematic units
+Pre-nuclear phonematic units
+Post-nuclear phonematie units
+
+V. THE NARRATIVE STYLE
+
+x. Sentences
+A. The nature, number, and sequence of the placed elements
+Phrases
+Sentence particles
+B. Sentence intonation
+c. Mood as a characteristic of sentences
+D. Pronominal concord within the sentence
+
+2. Phrases
+A. Phrase intonation
+Rising phrase intonation
+Falling phrase intonation
+Level phrase intonation
+Figure-linking intonation
+B. Reduplication as a characteristic of the phrase
+c. Moed as a characteristic of the phrase
+
+D. Pronominal concord within the phrase
+
+5
+15
+19
+19
+20
+aX
+22
+23
+23
+
+26
+
+27
+
+29
+29
+29
+29
+30
+30
+32
+32
+33
+33
+34
+35
+36
+36
+39
+40
+40
+
+4
+
+gE. The nature, number, and sequence of the constituent placed
+
+F. Sununary of the properties of the different types of
+
+CONTENTS
+
+elements
+Phrase particles
+The subjective phrase
+The predicative phrase
+The adjunctive phrase
+
+phrases
+
+Figures
+
+A.
+B,
+
+Cc.
+Dd.
+
+be]
+
+F,
+
+G.
+
+Figure intonation
+
+Reduplication and pairing
+Reduplication of adverb
+Reduplication of verb
+
+Figure stress
+
+Mood as a characteristic of figures
+
+Case as a characteristic of the nominal figure
+Figure-final glottalization
+
+The nature, number, and arrangement of the constituent
+placed elements ‘
+The nominal figure
+The verbal figure
+The adverbial figure
+The citational Sigure
+
+Words and Affixes
+Gi) Independent Words
+
+A.
+
+B
+
+C.
+D.
+(ii)
+A.
+B.
+C.
+
+i=
+
+Nouns
+The syllabic structure of nouns
+
+Verbs
+Regular verbs
+Irregular verbs
+Derived verbs
+Use of the verb forms I and IT
+The syllabic structure of verbs
+Quantifiers
+Adverbial conjunctions
+Dependent words
+Nominal auxiliaries
+Verbal auniliaries
+
+Adverbs
+The syllabic structure of adverbs
+
+40
+41
+41
+43
+
+51
+
+52
+52
+57
+57
+57
+58
+59
+59
+60
+
+62
+62
+66
+69
+69
+69
+69
+69
+71
+72
+72,
+80
+82
+84
+89
+go
+gi
+92
+92
+92
+92
+94
+
+E
+{
+i
+i
+
+OOM Ta RACE @ Terman no perrenet
+
+CONTENTS
+(iii) Affixes
+A. Prefixes
+Pronominal prefixes
+The use of the pronominal prefixes
+Verbal prefixes
+The use of the verbal prefixes
+The syllabic structure of prefixes
+B. Suffixes
+- Nominal suffixes
+Pronominal suffixes
+Nomino-verbal suffixes
+The syllabic structure of suffixes
+c. Particles 7
+Sentence particles
+Phyrase-final particles
+Figure-linking particles
+Post-nominal particles
+The syllabic structure of particles
+
+VI. THE COLLOQUIAL STYLE
+G) Richer variety of particles and particle groups
+(ii) The use of pronominal suffixes
+Gili) Difference of usage as regards mood
+(iv) ‘Fusion’ of elements
+(v) New word-classes
+Grammatical Analysis.of the Colloquial Material
+
+VII. THE DETAILED ANALYSIS OF THE TEXTS
+
+VIII. VOCABULARY
+
+roo
+Teo
+IOI
+102
+1902
+103
+103
+103
+103
+104
+104
+
+106
+107
+108
+III
+1i2
+II3
+II3
+
+118
+
+145
+
+I
+INTRODUCTION |
+
+THE material on which this study is based was gathered in the
+course of a four weeks’ visit to Tiddim, in the Northern Chin hills,
+in the autumn of 1954. The dialect studied is that spoken in and
+around Tiddim itself, and is often referred to as Kamhau, some-
+times as Sokté, My informants preferred the designation “Tiddim
+Chin’, which is accordingly that adopted here.
+
+It was obvious from the beginning that it would not be possible
+in so short a time to assemble sufficient reliable material to justify
+an attempt at anything approaching a full-scale grammar and
+
+phonology of the dialect. The great danger was that the material
+
+collected, when sorted and re-examined at leisure, would amount
+to no more than a jumble of disjointed notes on this and that
+feature of the language, without the co-ordination or completeness
+necessary to build up a reasonably coherent picture. It was for this
+reason that I decided to take a specific passage of continuous text
+as the focal point for my investigations, in the belief that a coherent
+and comprehensive analysis of the structure of such a text might
+be expected, with certain expansions and minor modifications, to
+provide a good working basis for the handling of a far wider range
+of material. The concentration upon a specific text has not meant
+that I have felt obliged to present an academic exercise in analysis
+based upon that text alone, The inquiries called forth by the text
+itself often carried us far afield, and I have incorporated what it
+seemed useful to extract from such excursions in the analysis
+presented.
+
+As my first and principal text I have chosen a Chin story which
+was written down for me, and subsequently spoken as often as
+I required, by Mr. Vul Za Thang (henceforward referred to briefly
+as VZT), who was at the time a teacher at Tiddim Secondary
+School and who later became its head. I have also included a second
+much shorter story because it exhibits certain interesting differ-
+ences from the first both in style and delivery. My informant for
+the second story was the Rev. Hau Go (henceforward referred to
+
+O 2238 B
+
+2 TIDDIM CHIN
+
+as HG), who was at the time of our visit in charge of the Baptist
+Mission at Tiddim. I am greatly indebted to both my informants
+for their patience and goodwill, and for their ready grasp of lin-
+guistic problems, in which both were deeply interested.
+
+Both stories are related in what I have here termed the ‘narra-
+tive style’, that is, the style appropriate to the writing and reading
+of simple tales of this nature. The narrative style is the main sub-
+ject of investigation here. The passages of direct speech in the first
+story are in a quite different style, which I have termed ‘colloquial’.
+A brief study is made of this colloquial style in order to indicate
+the main lines along which it differs from the more formal style
+of the greater part of the material. The interest of the second story
+
+lies in the traces it shows, in a narrative context, of the colloquial ~
+
+style, and it is of interest to note here that HG, as a minister, had
+been concerned with some of the first attempts at writing down for
+use in religious pamphlets the everyday language as spoken in the
+home.
+
+The method of presentation chosen starts with the larger lin-
+guistic structures and works downwards through the smaller ones
+of which they are built up. This involves the examination succes-
+sively, and in descending order of size, of grammatical units re-
+ferred to as sentences, phrases, figures, words, and affixes. Such
+a method does not, of course, always reflect the order or manner of
+working out the material in the preliminary stages during which
+there must necessarily be continual reference and cross-reference
+from one section of the analysis to another. It does, however, have
+the advantage of affording the investigator a means of handling
+certain phenomena characteristic of the larger structures, such as
+intonation and stress, at a conveniently early stage in the analysis
+so that they present fewer complications when the time comes to
+deal with the smaller units. The pursuit of the method to its logical
+conclusion would require that the treatment of the smallest gram-
+matical units postulated in this study, namely words and affixes,
+should be followed by an account of syllable structure. It has, how-
+ever, been found more convenient to present the section dealing
+with syllable structure before those dealing with grammatical units,
+since the phonological generalizations arrived at make for a clearer
+and more economical exposition of the grammatical units them-
+selves,
+
+Phonology in this study is understood to mean the ordering and
+
+axongeee
+
+INTRODUCTION 3
+
+presentation of the phonetic features of utterances in the manner
+which best relates such utterances to the grammatical statement.
+Unfortunately, it is here that the incompleteness of the material
+makes itself felt most keenly, While it is possible to point out cer-
+tain phonological characteristics of grammatical structures of all
+sizes, it is not possible on the evidence to hand to provide an
+exhaustive list of the syllable-building factors operating within the
+various word-classes. It is clear from the available evidence that
+these factors are not the same for all word-classes (see pp. 89,
+94, 99, 104). A far greater body of material is required before
+certain apparent gaps and discrepancies (see p. 15) in phonetic
+distribution can convincingly be demonstrated as systematic or
+accidental. Meanwhile, in the detailed analysis of the texts only
+very general formulae for syllable structure are suggested, and in
+the vocabulary, where ideally the complete phonological structure
+of each entry should be given, there is instead a representation of
+its pronunciation in general phonetic terms. In the main body of
+this study, the material is presented either in its orthographic form,
+or, where this seems insufficient for the point at issue, in a phonetic
+transcription.
+In order to make good some of the gaps in my own material,
+I have been glad to be able to draw upon an excellent little book
+
+‘by VZT and J. Gin Za Twang entitled How to Spell, Pronounce
+
+and Learn Tiddim-Chin Words, published by the Baptist Board of
+Publications in Rangoon in 1953. I have felt that it is useful to
+include as many as possible of the words listed in that book in the
+vocabulary at the end of this study for the sake of those who wish
+to form as complete a picture as possible of the phonetic possi-
+bilities of the language to whom VZT’s book may not be available.
+The pronunciation of all the words included was checked with
+VZT himself. When a word given by VZT does not occur in my
+texts or in the accompariying descriptive matter it is preceded in
+the vocabulary by an asterisk. Where I have insufficient evidence at
+my disposal to establish the appropriate grammatical designation
+of such a word, the designation that appears most likely is set down
+followed by a question mark, e.g. 2.?; where no one grammatical
+designation appears more likely than another only a question mark
+is used, e.g. -mazt ? reserved (see p. 154).
+
+I]
+
+THE TEXTS
+
+THE texts are presented here in the orthographic form used by
+VZT and HG respectively when writing them out for me. Chin
+orthography is still fluid in some respects and a certain variety in
+usage was observed, I have felt it more useful to reproduce the
+texts exactly as they appear in my manuscripts rather than to im-
+
+pose on them a uniformity of my own devising, but it may well be —
+
+that in so doing I have included forms which my informants might
+have wished to correct if they had had the opportunity to do so,
+I, and not they, must be held responsible, therefore, for any mis-
+spellings there may be. When citing passages from the texts in the
+main part of this study I have felt free to depart on occasions from
+the word-division shown in my manuscripts in order to illustrate
+more clearly the point at issue.
+
+Following each text is a free rendering into English. For ease
+of reference, the sentences in each text are numbered consecutively,
+the same numbers appearing for the corresponding English sen-
+tences. The titles of the stories are referred to by the number o.
+
+A detailed grammatical analysis of the texts, sentence by sen-
+tence, is given on pp. 120-44.
+
+I. o. Dahpa Thu
+
+1. Dahpa in lo a kuan nuam kei a, a inn kuan pih te in a tai zel uh
+hi. 2. Zing sang tung a ah tai uh ciangin, “Tu ni in kuan mah ning
+in, hi ci khawh ning’, ci in a tap tung teng uh a tu tawh a kal hi.
+3. Zing sang an neek khit cianigin, a innkuan pih te kuan masa sak
+a, amah a nunung hi. 4. Zu beel tung khat in lup sim a, pial khang
+ah puan a khuh khit ciangin, amah zong a kuan hi. 5. Khua gal
+a tun ciangin ‘Hawi’ ci in dawng zel zal a, ‘Inn ah mi khat in hing
+sam’, ciin a ciah kik hi. 6. Inn a tun ciangin ‘Mi ih sak leh zubel
+hi khong veh e’, cin a leih pah a, ane hi. 7..Loakuan nawn kei hi.
+
+8. Innkuan pih te in, a tai tai uh a, a sawt pi ciangin Dahpa a lo
+
+3
+k
+x
+%.
+
+seh ow a
+
+setae Raises ye
+
+a
+2
+2
+t
+
+ae
+®
+a:
+
+THE TEXTS 5
+
+uh ah ava kuan hi, 9. Sun niloh in lo a khoa, nitak ciangina ciah hi.
+10, A zing ciangin kuan kik leuh leu a, ahih hangin a lopa khawh
+khiat sa teng na po kik a, khawh lo a bang hi. 11. Sun niloh in kho
+kik leu leu a, ni tak ciangin a ciah hi. 12. A kuan kik ciangin a
+khawh sa teng khawh lo a na suak pah pah hi.
+
+13. Tua bangin ni tampia pian khit ciangin, Dahpa in, ‘Bang thu
+hi peuh mah hiam? Pang ning’, ci in a pang hi. 14. Dawi te khat
+in lo lai ah vak in, ‘Dahpa lo khawh sa khawh Ioh bang hen’, ci in
+khuang khat a tum hi. 15, Khuang a tum ciangin, lopa a kikho
+khia sa te tho nai nai-uh a, a hing kik hi. 16, Dahpa in zong gem
+gem in, dawipa a bawh a a khuang a sut hi.
+
+17. Dahpa in khuang a ngah khit ciangin, ‘Ka lo cing pi khawh
+sa suak hen oh’, ci in khuang a beng a, a lo cing pi in khawh sa a
+suak kik takpi hi, 18. Tua khit ciangin, an minsa a ngen a, aom
+takpi hi. 19. Zu khaih sa a ngen a, a kiang ah a om paha, ane
+pah hi.
+
+20. Dahpa a khuang tawh inn ah a ciah a, a deih peuh peuh
+khuang tum kawm a a gen ciangin a om lua lua hi. 21. Sawt loin
+amah a hau mah mah hi.
+
+22. Tua ciangin Dahpa zu nung a, mihing ganhing zusa vasa te
+kheempeuh zong a sam hi. 23. Ni sagih tawn tung sa go, sane
+zune in a lam lam uh hi. 24. Sa a muat loh na dingin khua dam
+angen a, tu dong in, kum sim in Phalbi khua dam hun ih nei hi.
+25. Zan ciang a lam na dingin, khua vak a ngen a, khapia piang hi,
+
+26. 'Tangteuh sasem a hi a, sa lak a a bual bual na in, tu dongin
+a ci pumpi in a zol hi. 27. Baibek gual nuam lua kisa in, vok gawl
+dawn a tuang kawm a a lam leh, kia a, vok gawl dawn hiam in a
+nel a sun sisan a, tu dongin a san lai hi. 28. Thankik in a mei tawh
+thang a siah leh sakhi khat awk a, sakhi in a lehlam in a tai pih hi.
+2g. Tua ahih man in “Than kik’ kici den hi. 30. Buiin khuang tum
+in lam a makai hi. 31. Thankik a muh ciang in, a nui nui a, tu
+dongin a mit a vung hi. 32. ‘Nui nui kei un la, na khuang uh tum.
+un la lam un’, ci a Dahpa in bui a tai leh, nuak a, a khuang tawh a
+kua ah a ciah hi. 33. Kua mah in a sam kik zo kei hi. 34. A sawt
+ciangin bilpi va pai a, ‘Bui aw, pu Dahpa in, ‘“Tu a hong pai kei
+leh, a kua ah tui sa sung ding hing”’, ci hi’, cia a va khem leh tak
+sang a, khuang la in a pai kik hi.
+
+35. Ni sagih khit, zunun a ven ciangin Dahpa’ khuang dol lua
+a, nisa ah a pho uh hi. 36. Niin deih gawh in a guk sak hi. 37.
+Dahpa in, ‘Ka khuang ka lak kik zawh na ding in, tau sang ka lam
+
+6 TIDDIM CHIN
+
+ding hi. Mihing ganhing, zusa vasa, miksi thovai in hing awi un,’
+ci in tua te kheempeuh a bia hi. 38. Ahih hangin leikha a bia
+mangngilh hi. 39. Tau sangpi a lam ciangin, leikha in a bul na ne
+nea, atuk hi. 40. Dahpa zong a si ta hi.
+
+I. o. A Dahpa Story
+
+1. As Dahpa did not like to go to work in the fields, his family used
+to scold him often about it. 2. Early one morning, when they were
+scolding him, he said: ‘This morning I really will go, and I shall
+dig like this’, and so saying, he raked all over the hearth with a hoe.
+
+3. After breakfast, he let his family go on in front of him while he~
+
+stayed behind. 4. After he had secretly covered an upright beer-
+‘pot with a blanket in the inner room, he too went out. 5. When
+they had got outside the village, he called out loudly, as if answer-
+ing someone: ‘Ho there! There is someone at home calling me’,
+and he turned back again. 6. When he got home he said: “We
+thought there was someone here, but it is only a beer-pot after
+all’, and he at once poured water on the beer and began to drink it,
+7. He did not go out to work any more that day.
+
+8. His family continued to reproach him for a long time until
+in the end he went off to work in the fields. 9. All day long he
+cultivated the fields and when evening came he went home. ro. In
+the morning he returned to the fields again but all the grass he had
+already weeded out had grown again in his absence, and it was as
+if the field had never been cultivated. 11. Once again he worked
+away at it all day long and returned home in the evening, 12. but
+when he went back to work next day all the land he had cultivated
+had once again reverted to its uncultivated state in his absence.
+
+13. When this had happened for many days, Dahpa said to him-
+self; ‘What is really going on, I wonder? I shall lie in wait and see’,
+and he did so. 14. He saw a spirit walk to the middle of the field
+and say: ‘Let the land Dahpa has already weeded be as if he had
+not done so’, and as he spoke he beat on a drum. 15. When he beat
+the drum, the grass which had been weeded out sprang up all over
+the place and grew once more. 16. Then Dahpa crept stealthily
+up to the spirit and caught hold of him and snatched his drum.
+
+17. When he had got possession of the drum, Dahpa said
+solemnly, ‘Let the whole of my field be cultivated’, and as he spoke
+
++ Mpeuineet
+
+svn riggs ot
+
+EES panies”
+
+1 BERBER Oe. Sate
+
+Roa te weaece
+
+THE TEXTS 7
+
+he slapped the drum with his palm, and the whole of his field
+became really thoroughly cultivated once more. 18. After that, he
+
+asked for some ready-cooked food, and at once there was some in
+
+front of him. 19. He then asked for ready-filtered beer, and at
+once there it was beside him, and he ate and drank without delay.
+
+20. Dahpa went home with the drum, and from then on if he
+asked for anything he wanted and beat the drum at the same time,
+it appeared in abundance. 21. It was not long before he was a very
+rich man.
+
+22. When he became rich, Dahpa gave a feast, and invited all
+living things to it, both men and animals, and the smaller creatures
+and birds. 23. For seven whole days they slaughtered beasts and
+ate meat and drank beer, and danced continuously. 24. So that the
+meat should not spoil, Dahpa asked for cool weather, and to this
+day, we still have a cool winter season every year. 25. When night
+came he asked for light to dance by, and the moon appeared.
+
+26, The skink acted as meat-carver, and to this day the skin all
+over his body is greasy from splashing about in the meat. 27. The
+red-vented bulbul enjoyed himself so excessively that he fell as he
+was dancing on top of the fence round the pig-sty and the sharp
+points of the fence pierced his vent so that it bled, and it is still
+blood-red today. 28. When the chameleon set a snare with his tail
+and caught a barking deer, the barking deer ran backwards drag-
+ging him along with him. 29. Itis for this reason that the chameleon
+is always called ‘Noble Backwards’. 30. Now the bamboo rat was
+beating his drum as he led the row of dancers. 31. When he saw
+the chameleon he laughed and laughed so much that his eyes are
+still swollen to this day. 32. Dahpa said ‘Do not laugh all the time,
+beat your drum and dance, all of you’, but when he was rebuked in
+this way, the bamboo rat sulked and went back to his hole with his
+drum. 33. Nobody could persuade him to return. 34. In the
+end the rabbit went to him and said: ‘Bamboo rat, Lord Dahpa
+says that if you do not come he is going to pour boiling water
+
+_ down your hole!’ The bamboo rat believed the rabbit when he
+
+tricked him in this way, and taking up his drum he returned to the
+feast.
+
+35. After seven days, when the feast was over, Dahpa’s drum was
+very damp and they set it in the sun to dry. 36. Now the sun
+coveted the drum and stole it. 37. Dahpa said: ‘In order to recover
+my drum I shall build a high tower’, and he called upon all living
+
+8 TIDDIM CHIN
+
+creatures, humans and animals, birds and insects, to support him,
+and he propitiated all of them. 38. However, he forgot to propi-
+tiate the white ants, 39. and when the tower was very high they
+came and ate away the foot of the tower while the builders were
+busy up above, and it collapsed. 40. Dahpa perished along with it.
+
+II. o. Khua Lei
+
+1, Ni dang lai-in Khaw Leia kici mi khat khual a zin leh, lampi-ah
+galte in a that hi. 2. A thah khit uh ciangin a ngawng a tan uh a,
+a baan leh a phei lang khat zong a tan uh hi. 3. Tua khit ciangin
+a ui a khe lang khat ah khih sa-in a nusia uh hi. 4. Tua Khua Lei
+leh a ui pen, aksi suak a, tu-in Khaw Lei Ui Kai kici hi. 5. Zan
+ciangin tua aksi en lecin, Khaw Lei’ Khuk kiangah Khaw Lei’ ui
+zong a phe Jeklek na mu ding hi.
+
+II. o, The Chin Story of the Origin
+, of the Great Bear
+
+1. In former times, a man named Khua Lei was killed by enemies
+on the road while he was travelling away from home. 2. After they
+had killed him they cut off his head and arms and one of his legs.
+3. Then they left his dog tied to his remaining leg. 4. Khua Lei
+and his dog became a group of stars we now call ‘Khua Lei leading
+‘ his Dog’. 5. If you look at these stars at night, you will see Khua
+Lei’s dog twinkling away near his knee.
+
+ra a stagyorrenpatcearrs re SHO Be RAY neg
+
+_eyreninnt ances
+
+Il
+
+SPELLING AND PRONUNCIATION
+
+THE roman orthography in common use for Tiddim Chin is in
+the main a phonetic one, though the fact that tone is never and
+vowel length very infrequently indicated makes it necessary, when
+these features are relevant to the point at issue, to cite examples in
+phonetic transcription.
+
+At the beginnings of syllables the following consonant letters
+and combinations of letters are used: b-, c-, d-, g-, h-, k-, kh-, 1-,
+m-, n-, ng-, p-, ph-, s-, t-, th-, v-, z-.
+
+‘b-’ [b] represents a lightly voiced bilabial plosive.
+
+‘c-’ [c] represents for VZT an affricate pronounced with the
+tongue-tip down, and with contact of the blade of the tongue in
+the alveolar region. In HG’s pronunciation the tongue-tip was up,
+and the articulation much clearer and more ts-like than with VZT.
+
+‘d-’ [d] represents a lightly voiced alveolar plosive. The glottaliz-
+ation of [b] and [d] observed in the pronunciation of some Chin
+speakers was absent from the speech of VZT, who was willing,
+however, to accept a slightly glottalized pronunciation of these
+sounds. There appeared to me to be very slight glottalization in
+HG’s pronunciation on occasions.
+
+‘g-’ [8] represents a lightly voiced velar plosive.
+
+‘h-’ [h] represents a voiceless glottal fricative.
+
+‘k-’ [k] represents a voiceless unaspirated velar plosive.
+
+‘kh-’ [x] represents a voiceless velar fricative.
+
+‘J-’ [I] represents a voiced alveolar lateral with a central reso-
+nance. HG was aware that the contact for this sound was further
+back than for initial [t] and [th].
+
+‘m-’ [m] represents a voiced bilabial nasal.
+
+‘n-’ [n] represents a voiced alveolar nasal.
+
+‘ng-’ [yn] represents a voiced velar nasal.
+
+‘p-’ [p] represents a voiceless unaspirated bilabial plosive.
+
+‘ph-’ [ph] represents a voiceless aspirated bilabial plosive.
+
+‘s-’ [s] represents for VZT a voiceless alveolar fricative, pro-
+nounced. with the tongue-tip up. There is a thickish buzzing
+
+10 TIDDIM CHIN
+
+quality to his pronunciation of the sound, possibly to be accounted
+for in part by a slightly retroflex position of the tongue, and in part
+by a rather wide area of narrowing. In HG’s pronunciation the
+sound is much clearer, and was to me indistinguishable from my
+own southern English [s] in quality.
+
+‘t-’ [t] represents a voiceless unaspirated alveolar plosive.
+
+‘th-’ [th] represents a voiceless aspirated alveolar plosive.
+
+‘v-’ [v] represents a voiced labiodental fricative.
+
+‘z-’ [z] represents a voiced alveolar fricative, pronounced with
+the tip down, and with narrowing in the alveolar region. HG felt
+that the narrowing was a little further back than for his [s]. In
+VZT’s pronunciation [z] is frequently palatalized, especially before
+front vowels, and quite a strong palatal offglide is then heard.
+
+At the ends of syllables the following consonant letters and com-
+binations of letters are found: -h, -k, -l, -Ih, -m, -n, -ng, -p, -t, -w,
+-wh, -wk, wl, -wm, -wn, -wng, -wp, -wt.
+
+‘-h’ in the great majority of cases represents a glottal stop [?]
+when used finally. My informants occasionally wrote a final ‘-h’,
+however, where they would not pronounce a glottal stop, as in the
+pronominal prefix ‘ih’, and more rarely in the pronominal prefix
+which is usually written ‘a’. In the manuscript of my texts I note
+the spelling ‘leuh leu’ (I 11) where no glottal stop was pronounced,
+and for contrast the spelling ‘khawh lo’ (I 10) where both pro-
+nunciation and grammar lead one to expect ‘khawh Ioh’.
+
+‘-k’ [k] represents a voiceless velar plosive or unexploded stop.
+
+‘-l’ [1] represents a voiced alveolar or post-alveolar lateral with
+a slightly retroflex articulation and resonance.
+
+‘-[h’ [1?] represents the preceding sound immediately followed
+by a glottal stop.
+
+‘-m’ [m] represents a voiced bilabial nasal.
+
+‘-n’ [n] represents a voiced alveolar nasal with a contact rather
+more retracted than in syllable initial position. The digraph ‘-nn’
+is used in the common word ‘inn’ house to differentiate it from the
+even commoner particle ‘in’,
+
+‘-ng’ [n] represents a voiced velar nasal.
+
+‘-p’ [p] represents a voiceless bilabial plosive or unexploded
+stop.
+
+Jt [t] represents a voiceless alveolar plosive or unexploded stop,
+with _a contact slightly more retracted than in syllable initial
+position. ,
+
+SPELLING AND PRONUNCIATION II
+
+‘.w’ occurs in the digraph ‘-aw’ [9:], which represents along half-
+open back rounded vowel.
+
+‘wh’ occurs in the trigraph ‘-awh’ [9°], which represents a short
+half-open back rounded vowel followed by a glottal stop.
+
+‘wk, -wl, -wm, -wn, -wng, -wp,’ and ‘-wt’ are found preceded
+by the letter ‘a’ in sequences which represent a long half-open
+back rounded vowel followed by the consonant sound indicated
+by the last letter.
+
+The roman vowel letters are used singly and in combinations
+with the following values:
+
+The letter ‘a’ used singly at the end of a syllable represents a long
+open back vowel [az]. Before a following consonant letter other
+than ‘w’ or ‘h’ it may represent either a long back open vowel
+[a] or a more fronted short open vowel [a]. Occasionally, but not
+regularly, the long vowel is indicated by doubling of the letter,
+e.g. ‘baan’ arm (II 2). Before ‘-h’ it always represents the short
+
+~ open vowel. Used with a following ‘-w’ it represents a long half-
+
+open back rounded vowel (see above).
+
+The digraphs ‘ai’ and ‘au’ represent closing diphthongs begin-
+ning with either a short rather front open vowel or a long back
+open vowel [ai], [a:i], [au] or [aru]. When the digraph is followed
+by the letter ‘-h’, the diphthong always begins with the short vowel,
+e.g. ‘haih’ [_hai?].
+
+The letter ‘e? when used singly in an open syllable represents
+a long half-open front vowel [ex]. Before a following ‘-h’ it
+represents a short half-open front vowel [e]. Before any other con-
+sonant letter it represents either a short half-close front vowel [e], or
+a long half-open front vowel [ez]. Occasionally, but not regularly,
+the digraph ‘ee’ is used to represent the long vowel. Before a final
+[I] a markedly centralized pronunciation of the short vowel is often
+heard, Between the long open vowel and a following velar conson-
+ant there is commonly a marked central glide, e.g. ‘neek’ [-nezk].
+
+The digraph ‘ei’ represents a closing diphthong starting either
+from a short half-close front vowel [ei] or from a long half-open
+front vowel [exi], and moving to a closer front position. The tri-
+graph ‘eii’ is occasionally used to differentiate a word in frequent
+use from other common words which would otherwise be homo-
+graphs, e.g. ‘lei’ [-lei] tongue, which would otherwise be in-
+distinguishable in appearance from two other very common words
+
+‘le’ [lei] to buy, and ‘lei’ [Mei] bridge.
+
+12 TIDDIM CHIN
+
+‘eu’ represents a closing diphthong starting either from a short
+half-close front vowel [eu] or from a long half-open front vowel
+{exu] and moving to a closer back rounded position.
+
+The letter ‘i’ used singly in an open syllable represents a long
+close front vowel [iz]. Before any consonant other than ‘-h’ it
+represents either a short or a long close front vowel [i] or fix].
+Before ‘-h’ it always represents a short vowel. A centralized on-
+glide to a following velar consonant is frequently heard after the
+long vowel, e.g. ‘cing’ [-cizn].
+
+The digraph ‘ia’ [ia] represents an opening diphthong moving
+from a close front vowel position to an open central vowel position.
+
+‘iu’ represents a diphthong beginning either with a long or with
+a short close front vowel and moving towards a close back rounded
+vowel, i.e. either [iu] or [iru].
+
+‘tai’ [iai] and ‘iau’ [iau] represent triphthongs beginning with
+close front vowel positions, moving towards a more open central
+vowel, and then towards a close front or close back rounded vowel
+position respectively.
+
+The letter ‘o’ used singly in an open syllable or before a follow-
+ing ‘-h’ represents a closing diphthong starting with a very slightly
+rounded half-close back vowel and moving to a closer back rounded
+vowel [ou]. Before a consonant other than ‘-h’ or ‘-I’ it represents
+a short half-close back rounded vowel fo]. Before a final lateral a
+short half-close back vowel without lip-rounding is most com-
+monly heard. ’
+
+‘oi’ [oi] represents a short diphthong starting from a half-close
+back rounded vowel and moving towards a close front vowel.
+
+The letter ‘u’ used singly in an open syllable represents a long
+close back rounded vowel [ux]. Before a following consonant other
+than ‘-h’ it represents either a short or a long close back rounded
+vowel [ul] or [uz]. Before ‘-h’ it always represents a short vowel.
+When the following consonant is [n] a fronted pronunciation of the
+vowel is common, followed by an on-glide to the [n].
+
+The digraph ‘ua’ [ua] represents an opening diphthong moving
+from a close back rounded vowel position to an open central vowel
+position. This is usually pronounced as a falling diphthong, but is
+occasionally pronounced as a rising diphthong.
+
+‘uai’ [uai] and ‘uau’ [uau] represent triphthongs moving from
+a close back rounded vowel position to amore open central position,
+and then towards a close front unrounded or close back rounded
+
+SPELLING AND PRONUNCIATION 13
+
+position respectively. Prominence may be on either the first or the
+second element.
+
+‘ui’ commonly represents a diphthong starting with either a long
+or a short close back rounded vowel and moving towards a front
+unrounded vowel, i.e. [ui] or [uzi]. In the word ‘ui’ dog, however,
+the letters represent a sequence of glottal stop, labiovelar semi-
+vowel, and long close front unrounded vowel [-? wi].
+
+As has been said already (see p. 9), tones are not indicated in
+the orthography. My informants, however, recognized three pos-
+sible tones for monosyllables. These were called by VZT ‘high’,
+‘mid’, and ‘low’, and correspond in the main to tones 1, 2, and 3
+here postulated for syllables (see pp. 19-20), Except where the
+intonation patterns of larger structures intervene, VZT’s ‘high’
+tone is pronounced with a rising pitch in all open and long
+syllables, and with a high level or short high rising pitch in short
+syllables closed by a stop. His ‘mid’ tone is pronounced with level
+
+pitch, and his ‘low’ tone with a falling pitch in open and long
+
+syllables, and with a low level or short low falling pitch in syllables
+closed by a stop (see p. 18). None of these pitches can be deduced
+with certainty from the spelling, although in the great majority of
+cases short syllables closed by a stop, i.e. those ending in the
+spelling with ‘-h, -Ih, -k, -t, -p’ or ‘-wh’, are pronounced with alow
+level pitch. The relative starting pitches of the different tones vary
+considerably from utterance to utterance and context to context.
+‘Uttered as a series of isolated words, the starting pitches of ‘hai’
+[-hati] basket, ‘hai’ [-ha:i] mango, and ‘hai’ [sha:i] cup, would
+probably be, relatively speaking, low, mid, and high. When uttered
+in sequence in a sentence, however, the starting pitches of the
+words for basket or cup might be either the same as, or higher or
+lower than, that of the word for mango. VZT felt that variation
+here depends sometimes upon differences in usage from village to
+village, sometimes upon emphasis, and sometimes it is clear that
+grammatical considerations come into play. VZT, for instance,
+distinguishes in his usage between ‘hai hai khat’ a cup full of
+mangos and ‘hai hai khat’ @ cup made of a mango. The intonation
+used in the first instance may be represented [-~_], and that used
+in the second instance [~*_],
+
+In attempts to compare such intonations phonetically, the
+following pitch marks are used: [-] for a mid level pitch; [~] for
+a high level pitch; {_] for a low level pitch; [~] for a high falling
+
+!
+14 TIDDIM CHIN
+
+pitch; [x] for a mid falling pitch; [, ] for a low falling pitch; [-] for
+a mid rising pitch; [~] for a high rising pitch; and [_] for a low
+rising pitch.
+
+These pitch marks, to which must be added the dots sometimes
+used to indicate unstressed syllables in a sequence, are not used
+for the notation of syllable-tone as such, which is indicated by raised
+numbers (see p. 19). In the pronunciations given for entries in the
+vocabulary at the end of this study, all tone 2 syllables are marked
+as mid level, and all tone 1 syllables as mid rising. Short tone 3
+syllables closed by a stop are marked as either high level or low
+level according to the frequency with which such pitches occur in
+texts. All other tone 3 syllables are marked as mid falling.
+
+The mark * is used in phonetic texts to indicate a short un-
+stressed vowel.
+
+IV
+SYLLABLE STRUCTURE
+
+A FULL statement of the phonological structure of the Tiddim
+Chin syllable would require as its starting-point a complete i in-
+ventory of the syllables occurring in the language, paying due atten-
+tion to the kind of words in which they are found. The present
+study does not encompass so much, and can therefore claim to hold
+only for the material in hand. The range of syllable finals appears
+to be fairly wide, so that the occasional gap (e.g. usm) may with
+
+“some confidence be regarded as accidental. It seems, however,
+
+warrantable to assume that we have examples of all syllable initials,
+The data is, however, insufficient to justify any but the most tenta-
+tive statements based upon the relative frequency of initials or
+finals, or upon the possible combinations of initials and finals. It is
+perhaps permissible to observe that ¢ is found only before a close
+front vowel, which suggests an alignment with some other sound,
+e.g. t, which is never found before a close front vowel. Less readily
+dealt with are the initial possibilities before the opening diph-
+thongs ia and ua. Here the incompleteness of the material prevents
+us from deciding whether the absence of $, m, n, and ph before
+ia, or of h and d before ua, or of n and v before either ia or ua, is
+systematic or accidental. We cannot go further than our material
+allows. There are clear indications in it of a number of the factors
+that must be taken into account in any attempt to link the
+phonetic features of utterances with the grammatical statement,
+but it is not comprehensive enough to permit an exhaustive list of
+such factors to be drawn up.
+
+1. THE PHONETIC MATERIAL
+
+The phonetic material upon which the phonological statements
+are based is briefly summarized below.
+
+In phonetic descriptions in this study the term syllable is used
+to refer to a sound sequence containing one vowel, diphthong, or
+triphthong (see p. 16). The minimum utterance is a single syllable
+with or without certain initial and final consonantal articulations
+
+16 TIDDIM CHIN
+
+(see below and p. 17), and pronounced with one of a number
+of contrastive pitch contours (see p. 18). In polysyllabic utterances
+syllable boundaries are readily established by reference to the
+special phonetic characteristics of initial and final consonantal
+articulations in monosyllabic utterances, and to pitch behaviour.
+Some syllables may be perceived as less prominent than others, so
+that we may refer to stressed and unstressed syllables.
+
+Stressed syllables. The following consonants are found at the
+beginning of stressed syllables:
+
+Labial Alveolar Velar Glottal
+Voiceless plosives Pp t k
+Voiced plosives b d g
+Voiceless aspirated plosives ph th
+Voiceless fricatives s x h
+Voiceless affricate c
+Voiced oral continuants Vv z,i
+Pre-glottalized continuant °w (?w)
+Nasals m n y
+
+A more detailed account of the pronunciation of these con-
+sonants by my two informants is given on pp. g-II.
+
+Close front, close rounded back, and open central to back vowels,
+i, u, a, are found both long and short in stressed syllables, Half-
+close front and half-close back rounded vowels e, o are found short
+only, while half-open front and half-open back rounded vowels are
+always long, except before the glottal stop, €1, 01, £7, 9°.
+
+Diphthongs may start from any vowel position and move
+towards either a close front or close back rounded vowel, ei, ex,
+ai, ati, eu, emu, au, amu, &c., or they may start from close vowel
+positions and move towards a central open vowel, ia, ua.
+
+The triphthongs are of what may be termed. the ‘opening-
+closing’ type, that is to say they start with a close vowel position,
+move to a more open vowel position, and then proceed to a closer
+vowel position. In the two commonest, uai, iau, there is an overall
+movement from back to front or front to back, but iai and uau
+are also found. ;
+
+For a more detailed description of the pronunciation of vowels,
+diphthongs, and triphthongs see pp. 11-13.
+
+Stressed syllables with long vowels occur with and without a final
+
+SYLLABLE STRUCTURE 17
+
+consonantal articulation. Stressed syllables with short vowels are
+always closed by a consonantal articulation.
+
+The consonantal articulations found at the end of stressed
+syllables are the following:
+
+Labial Alveolar Velar Glottal
+
+Continuant m a,l H
+Stop Pp t k ,
+Post-glottalized continuant I
+
+Final stops are usually unexploded.
+’ The vowels and combinations of vowels and final consonants
+observed in the material are set out in tabular form below:
+
+ix i? ia ia?
+im irk in ian iak
+im in it ian iat
+iim  =oiixp . im ip jam iap
+il il? ial
+iai
+u iu iu? iau
+€x es?
+x1) €: ey ek
+em ext en et
+Fob 4 ' exp em ep
+exl el el?
+ext ei ei?
+eu - eu eu?
+ax a?
+ary axk ay ak
+aun axt an at
+arm ap am ap
+ail al al?
+ati ai ai?
+amu au au?
+ox 2?
+any ark on ok
+om ast ot
+oxm arp om op
+ont ol ol?
+ou oi oi?
+ou ou’
+
+18
+
+TIDDIM CHIN
+
+Ux u? ua ua?
+uy wk uy uk uay uak
+umn uxt un ut van uat
+
+urp um. vam
+ul ul ul? ual
+wi ui ni? “vai uai?
+uau
+
+With the exception of certain particles (see pp. 104-5), all
+syllables containing a long vowel or an opening diphthong and all
+short syllables closed by a continuant may be lexically differen-
+tiated according to whether they aré pronounced with falling,
+rising, or level pitches. The rising pitch is frequently accompanied _.
+by glottal constriction towards its end, especially in pre-pausal
+position. This final glottalization is functionally quite distinct from
+syllable-final glottal stop and appears to differ from it phonetically
+in the slower and less. vigorous nature of the muscular movements
+involved. Syllables with a short vowel followed by a stop (includ-
+ing the post-glottalized continuant) are with one exception always
+pronounced, without lexical differentiation, with a low level or
+low falling pitch, except in certain special grammatical contexts
+when they are pronounced with a high pitch which is postulated
+as an exponent of sentence, phrase, or figure intonation (see pp.
+19-20, 31, 36-37, 54). The exception is the word “thak to be new,
+which is discussed more fully in the section dealing with Tone on
+Pp. 20,
+
+Unstressed syllables. Syllables pronounced with markedly less
+stress than their neighbours in the texts are, unlike stressed
+syllables, never differentiated by vowel length or pitch, and are
+never closed by a consonant. Their vowels are always short and
+only five distinctions of quality are recorded:
+
+Front Central Back
+Close i u
+Open g a 3
+
+Initial consonantal possibilities appear to be the same as for
+stressed syllables. The pitch on which unstressed syllables are
+pronounced is never distinctive, and varies according to the word
+or figure of which the syllable is a part, and to some extent accord-
+ing to the idiosyncrasies of the speaker. (See pp. 52-56.)
+
+SYLLABLE STRUCTURE 19
+
+2, THE PHONOLOGICAL STRUCTURE OF
+SYLLABLES
+
+From the phonological point of view, syllables are regarded
+as constituted of appropriate placed and unplaced elements, The
+placed elements of syllable structure are phonematic units. The
+unplaced elements of syllable structure, that is to say those proper-
+ties which characterize the syllable as a whole, are of five kinds:
+
+A. Tone,
+
+B. Quantity.
+
+C. Syllable-closing features.
+
+D, Syllable-opening features.
+
+E, The number, nature, and sequence of the placed elements.
+
+A. Tone
+
+The account of pitch behaviour on p. 18 suggests that for
+the phonological statement of syllable structure we require to
+postulate three tones, which will be labelled numerically 1, 2, and 3.
+Tone r is realized by a low rising pitch, tone 2 by a level pitch, and
+tone 3 by a high falling pitch for most syllable types, and by a low
+falling or low level pitch in short syllables with abrupt syllable
+closure (see p. 18).
+
+As has already been stated, pitch is generally not contrastive for
+syllables of this latter type. In the very rare cases in which two
+words containing such syllables appear to be lexically differentiated
+by pitch alone, the pitch of one of the pair, usually a dependent
+word (see p. 69), is contextually determined by the larger gram-
+matical structure of which it is a part and is thus looked upon as an
+exponent of a phonological characteristic of that-structure, and not °
+as an exponent of syllable-tone. Compare, for example, “de” (an
+exclamator used in warning) with de? (verb) fo sting, “hak
+(adverb) with difficulty, with -hak (verb) to be awake, 1a? (adverb)
+lightly, deftly with -la® (verb) to be incapable, “ke? (fused form of
+-kei not and le? zf) with _ke? (verb) to leak. The low pitch common
+to all the verb forms above is a phonetic exponent of syllable tone
+(see above). The high pitch of “ds? on the other hand is an exponent
+of the high sentence intonation proper to exclamatory sentences
+(see p. 115), while the high pitch of the adverbs is an exponent of
+the rising intonation appropriate to the verbal figure of which they
+are a constituent (see p. 54). “ke? is a fusion of the adverb -kei
+
+20 TIDDIM CHIN
+
+and the sentence particle le? (see p. 112), and its high pitch is an
+exponent of the high sentence intonation that is a mark of in-
+conclusive sentences (see pp. 30-31).
+
+Pitch is, with one exception, never contrastive for independent
+words, i.e. nouns, verbs, quantifiers, adverbial conjunctions, and
+exclamators (see pp. 18, 69, 113), constituted of short syllables with
+abrupt syllable closure. Nouns and verbs of this structure in
+the texts are always pronounced with a low level pitch or a slight
+low fall. Despite this absence of contrastive pitch at the syllable
+level, it is desirable for grammatical reasons to regard such words
+as bearing tone 3 rather than as being toneless (see pp. 79-80).
+Adverbial conjunctions are not found with abrupt syllable closure
+(see p. 91). The quantifier _xat one is recorded in the texts with —
+both low level and high level pitches, according to the intonation
+pattern of the figure of which it is a constituent, but here again there
+is no lexically contrastive function at the word or syllable level,
+and since the pronunciation given in isolation was always the low
+level one, tone 3 may be postulated here also. Exclamators, which
+are frequently co-terminous with figure, phrase, and sentence, are
+hence, like particles, the vehicles for the pitch exponents of the
+intonation of the larger structures, and are possibly best regarded
+as toneless in themselves (see p. 104). The one pair of inde-
+pendent words in the material whose differentiation by pitch
+cannot be ascribed to the workings of figure, phrase, or sentence-
+intonation, since both are verbs and hence found in very similar
+grammatical contexts, is the following: thak to itch, “thak to be
+new, Following the usage of my informant VZT, the high pitch
+of the latter is taken to be an exponent of tone 1 (see p. 13). The
+historical explanation of how a syllable of this structure comes to
+have a tone not found elsewhere in the company of syllabic short-
+ness and abrupt syllable-closure is perhaps suggested by its cog-
+nates in the Central Chin dialects, in which the final consonant
+sound is -r,
+
+B. Quantity
+
+The phonetic material shows that vowel length, with or without
+concomitant vowel quality features, is significant before final con-
+sonants (except *) and in.the closing diphthongs. Quantity may
+therefore be stated as an unplaced element of the phonological
+
+SYLLABLE STRUCTURE 2
+
+structure of such syllables, with length or shortness of vowel the
+co-exponents with appropriate vowel quality of Jong (:) and short
+(*) syllable quantity.
+
+Vowel length does not appear to be significant before an imme-
+diately following glottal stop or in syllables containing an opening
+diphthong. It is convenient, however, to regard the latter (except
+before the glottal stop) as phonologically long, since their pitch
+behaviour is that appropriate to long rather than short syllables;
+that is to say, they may be pronounced with either high, level, or
+rising pitch, All syllables ending with a glottal stop, on the other
+hand, are taken as phonologically short, since like all syllables con-
+taining a short vowel with an immediately following stop consonant
+they may only be pronounced with the low level or low falling
+pitch already postulated as the exponent of tone 3 in short syllables
+(see p. 19).
+
+In phonetically open syllables with a final pure vowel, length and
+shortness of vowel are bound to strong or weak stress on the
+syllables concerned. Since the juxtaposition of strong and weak
+stress is treated as a feature of certain polysyllabic structures,
+whether words or figures (see p. 52), it does not enter into the
+statement of the phonological structure of individual syllables.
+It need only be noted here that short quantity of the weaker
+syllables is one of the exponents of word- and figure-stress (see
+
+pp. 58, 72).
+
+C. Syllable-closing Features
+
+The arrangement of the phonetic material on pp. 17-18 reflects
+the importance in the language of two contrasting ways of ending
+syllables. Almost all continuant finals have a corresponding stopped
+final..The contrast between continuant and stopped syllable-
+closure is of prime grammatical consequence in the verb (see p. 79)
+and is hence accorded phonological status by the postulation of the
+manner of syllable-closure as a characteristic of the syllable as a
+whole, All syllables ending in a vowel, diphthong, triphthong, or
+continuant consonant are held to have gradual syllable-closure (-),
+all syllables ending in a stopped consonant, including the glottal
+stop, are held to have abrupt syllable-closure (’).
+
+The non-occurrence of abrupt correlates of syllables with long
+diphthongs or long vowels before final 1, which appears to be too
+
+22 TIDDIM CHIN
+
+general to be accidental, remains phonologically unaccounted for.
+Contrast al/al’, ai/ai?, au/au’, &c., with asl, ati, aru, &c.
+
+Calling for special consideration is the glottal constriction some-
+times associated with certain open syllables with rising pitch,
+usually in pre-pausal position (see p. 18). This final glottalization,
+which is never vigorous enough to be confused with final glottal
+stop, is for reasons which are set out fully in the relevant sections
+of this study (see pp. 60-62, 104-5) interpreted not as an in-
+tegral part of the syllabic structure of the forms affected but as
+a mark of the boundaries of larger linguistic units.
+
+D. Syllable-opening features
+
+There are no clear indications in the present material of syllable-
+opening features comparable in function to the syllable-closure
+features already discussed. There are a few examples, however, of
+the use of the phonetic relationship between stops and spirants as
+a formal mark of the semantic relationship obtaining between
+some verbs, e.g.
+
+“kim to raise oneself = -xam to hit
+
+skia to fail sxia to drop (tr.)
+“turk to roll (intr.) -xuik Zo roll (tr.)
+-purk to fall -phu:k to fell
+
+Other examples will be found on p. 84. Further investigation
+might support the abstraction of syllable-onset features which
+might be'termed abrupt or gradual, by analogy with the syllable-
+closure features already described, but it appears that their gram-
+matical importance would be far less than that of the syllable-
+closure features with the same label.
+
+More material is needed to show whether the gaps in the
+distribution of initial consonants before opening diphthongs should
+be regarded as systematic or fortuitous (see p. 15). A more com-
+prehensive body of texts might suggest the phonological inter-
+pretation of the first element of such diphthongs as front or back
+modifications of the phonematic unit before a following central
+nuclear phonematic unit (see p, 23), and might point to a systematic
+relation between such modification and pre-nuclear units with
+which it ‘could be associated. Such an interpretation would entail
+
+SYLLABLE STRUCTURE 23
+
+the postulation of two or more syllable-beginning properties perti-
+nent to the structure of the syllable as a whole, and of five nuclear
+phonematic units instead of seven (see below).
+
+E. The nature, number, and sequence of the placed elements
+
+The phonematic units which are the placed elements of syllable
+structure are of three kinds, nuclear, pre-nuclear, and post-nuclear.
+
+All syllables have a vocalic nucleus, which will be represented in
+structural formulae by V. This vocalic nucleus may stand by itself
+as the only placed element of a syllable, or it may be preceded and/or
+followed by consonantal elements. Pre-nuclear elements, which are
+always consonantal in substance, are represented in structural
+
+_ formulae by C, post-nuclear elements by c. The possible sequences
+
+of these elements in Tiddim Chin syllables are as follows: V, CV,
+CVe, Ve.
+
+Nuclear Phonematic Units. The phonetic information sum-
+marized on pp. 17-18 shows that the quality of the half-open and
+half-close vowels &, e, 9, and o is correlated with vowel length,
+except before the glottal stop. The vowelsi, it,e, €1,a,a!,0,9:,U, Ux
+may therefore be regarded as the exponents of a series of nuclear
+phonematic units z, e, a, 0, and win syllables characterized by one
+of two degrees of quantity (see pp. 20-21). The closing diphthongs
+are regarded as sequences of appropriate nuclear units and palatal
+or labio-velar post-nuclear units (see p. 27).
+
+The full tally of nuclear units necessary to accommodate the
+material available is achieved by the addition of two further units
+ua and 1a.
+
+Classification of the nuclear units by relative degree of openness
+appears to be phonologically pertinent, since formal use is made
+of this relation in reduplicated adverbs such as ~diu~deu in a
+straight line, ~deuxdau one after the other, ~nixua-new in coils.
+The nuclear unit of the second syllable of such forms in the texts
+is always one degree more open than that of the first. In all other
+respects the structure of the two syllables is the same. This pheno-
+menon is referred to elsewhere in this study as ‘chiming’ (see
+P: 57).
+
+A problem is posed by the reduced phonetic possibilities for
+vowels in unstressed syllables (see p. 18). The absence of long
+vowels makes no difficulty since short quantity is invariably a
+
+24 TIDDIM CHIN
+
+property of unstressed syllables (see pp. 18, 21), but the relation
+of the five vowel qualities observed in unstressed syllables to the
+seven nuclear phonematic units of syllable structure remains to be
+stated. The most satisfactory phonological solution is to regard the
+short open back rounded vowel 9 as the phonetic exponent of ua
+in a short syllable. Compare, for example, the variants of the name
+Khua Leiin Text II, -xua-lei with double stress, beside ~x3-lei
+with a weak stress followed by a strong stress, and the variants
+“xua-~dam and “x3-dam cold weather. The phonetic exponents
+of the nuclear phonematic units in syllables with gradual syllable
+closure may be stated as follows:
+
+Phonematic
+‘units Phonetic exponents
+cyv:” CVc:~ cv’* CVc’*
+t ix iz i i
+-mix -kimn “mi-hin -min
+person to move human being to be crooked
+e €x ez é e
+“tex gem “té-dim -tem
+to glitter toask for  Tiddim knife
+a ar ar & a
+sxar sxarl -x4-pi: <xam.
+month groin moon gold
+0 ox a 3 oO
+“gx sgorl (not re- -don
+to dry up fence corded) until
+u 1194 ux i u
+"ZU ‘sum = “nii-nuy -nuy
+beer day time tobebehind back
+ua ua ua 3 (see p. 18)
+“—xua ~xuay “x3-dam
+village drum cold weather
+ia ia ia (not re- (see p. 18)
+corded)
+-sia -piay
+
+to spoil to happen
+
+SYLLABLE STRUCTURE 25
+
+Such syllables as ~xuay and ~piay are regarded as phono-
+logically long by analogy with similar syllables with abrupt
+syllable-closure (see second following paragraph and p. 2r). It is
+
+‘submitted, however, that the postulation of phonologically short
+
+correlates of such syllables may be a convenient way of dealing
+with an ‘irregular’ verb like -nuam to want (to do something), the
+subjunctive form of which is not ~nuam but _nop (see p. 80).
+The indicative and subjunctive forms of the verbs in the material
+are frequently distinguished from each other by differences of
+tone, quantity, syllable-closure, or post-nuclear units, but never by
+differences in the nuclear units. It seems preferable, therefore, to
+regard -nuam and _nop as having the same phonematic structure
+but different tones, degrees of quantity, and syllable-closure fea-
+tures rather than to insist, in addition, upon an alternation of
+nuclear phonematic units without parallel in other verb forms.
+Syllables of the structure CV*~ are always unstressed and are
+thus always a characteristic mark of some larger structure, either
+word or figure (see p. 21).
+Syllables of the CVe type with abrupt syllable-closure realize
+the nuclear phonematic units in the same way as their gradual
+
+correlates, viz. -kixk again, mit eye, -text to glitter (Form Td),
+
+-Sek hammer; -xaxp span, _xat one; -soxp to watch, “phot firstly;
+-lurt to enter, _sut to snatch; -suak to be born; -biak to propitiate
+(Form IT). The last two examples are stated to be phonologically
+long, despite the absence of contrast with corresponding short
+forms, on account of their tonal behaviour (see p. 21).
+
+The phonetic finals i?, ©, a®, 5°, u®, ua®, and ia? are inter-
+preted as the nuclear units of CV or V type syllables, the glottal |
+stop being the phonetic exponent of abrupt syllable-closure and
+not of a post-nuclear phonematic unit. Such syllables present
+special problems in that the vowels are always short while the
+vowel quality is that more commonly associated with vowel length
+(see p. 23). This supports the hypothesis of a CV or V rather than
+a CVc or Ve structure. That they are to be regarded as phono-
+logically short is indicated by the fact that their pitch behaviour is
+that of other syllables with a short vowel followed by a stop, and
+not that of those with a long vowel followed by a stop (see p. 18).
+The absence of any contrasts of pitch or vowel length might
+suggest that it should be held that syllable quantity and tone are not
+phonological properties of these syllables, but the grammatical
+
+26 TIDDIM CHIN
+
+role of syllable quantity and tone in the verb demands the postula-
+tion of short quantity and tone 3 for them (see pp. 72-84).
+
+Pre-nuclear phonematic umts. The phonetic information avail-
+able for the establishment of the pre-nuclear elements of syllable
+structure can most conveniently be referred to in the vocabulary
+at the end of this study. As has always been stressed, the material
+so far assembled is too incomplete for a systematic study of the
+relative distribution of initial consonants and following vowels and
+consonants to be made. In the absence of such a study it is futile
+to attempt to draw up an exhaustive inventory of pre-nuclear
+phonematic units. The best that can be done is to draw attention
+to some of the factors which examination of the present material
+suggests require to be taken into account when such an inventory
+comes to be made.
+
+Mention has already been made of the possible desirability of
+abstracting certain phonological features of syllable-onset (see
+pp. 22-23). Clearly any such abstraction would be likely. to affect
+the number and nature of the pre-nuclear elements. Further
+clues as to their nature might be found in the distribution of
+accompanying back and front modification (see p. 22).
+
+Another factor of great potential interest is the varying fre-
+quency of occurrence of the different initial consonants. The
+following list shows in descending order of frequency the number
+of entries in the vocabulary on pp. 146-62 beginning with each
+consonant sound:
+
+8 89, t 87, k 81, 1 80, h and n 78 each, m 67, x 66, d 64, p 61,
+(no initial consonant) 59, Z 58, & 53, b 47, Vv 45, th 41, ph
+25, 9) 24, C9.
+
+While the incompleteness of the material precludes any assump-
+tion that the above figures represent the frequency ratio obtaining
+in the language as a whole, the disparity in functional load between
+some of the consonants is great enough to excite curiosity and to
+call for an explanation in terms of structure, The frequent occur-
+rence of t is particularly striking, and is still more so if c and t are
+interpreted as reflexes of the same phonological unit, as their com-
+
+/ Plementary distribution would justify. An explanation is offered
+
+a
+
+by comparison with words from a variety of Chin dialects which
+show that’ Tiddim Chin initial t corresponds to both initial t and f in
+
+SYLLABLE STRUCTURE . 27
+
+other dialects. The infrequency of n as compared with n and m sug-
+gests that its natural phonetic grouping with these two is probably
+not to be taken as a guide to its phonological status. The aspirated
+plosives th and ph are initially less frequent than the homorganic
+unaspirated plosives t and p. x, on the other hand, is not much less
+frequent than k. Semantically linked pairs of words such as those
+already cited on p. 22 point the way to a structural explanation of
+this relatively high frequency of x, which appears to show conver-
+gence of the phonetic exponents of the ‘breathy’ or ‘gradual onset’
+correlates of both k and t. This means that the phonetic classi-
+fication of th and ph as two of a kind does not necessarily reflect
+a similar phonological alignment.
+
+Post-nuclear phonematic units. When the two syllable-closure
+properties are abstracted from the phonetic finals shown on pp.
+17-18 the post-nuclear phonematic system is revealed as one of
+six terms only, which we may symbolize as follows:
+
+P (labial), T' (denti-alveolar), K (velar), L (alveolo-lateral), Y
+
+(palatal), and W (labio-velar).
+
+The phonological interpretation of the phonetic finals on pp.
+17-18 is given below in terms of nuclear and post-nuclear phone-
+matic units with accompanying syllable quantity and syllable-
+closure features. A complete statement of the structure of any
+given syllable in the language would of course require the addition
+of an appropriate pre-nuclear phonematic unit with accompanying
+syllable-onset features, and of a tone,
+
+vu a tai~ 7a”?
+iKi~ 1K? .oatK iaK:~ tak”
+yi” iT?” iT” iaT?~ zaT?
+zp: ~ tp? ip” ip” 7aP'~ taP*
+tL.” tL”? 1aLi~
+1ayv'~
+zWi~ zw” iw" aw: ~
+ee” e”
+
+eKi~ eK” eK?” eK”
+
+eT?” eT” eT’~ eT”
+
+eP*~ ep? ep*~ ep”
+
+eL~ eL’~ eL”
+
+ey:~ ey*~ ey”
+
+ew~ ew*~ ew”
+
+28 TIDDIM CHIN
+
+aw a”
+aK: ~ ak? ak*~ ak”
+at ™ aT? at” aT”
+ap:~ ap? ap*” ap”
+aLi~ aL” aL”
+aY:~ ay~~ ay”
+aw: ~ aw*~ aw”
+o~ 0”
+oK'~ oK” oK*~ oK”
+oT:~ oT” oT”
+oP: ~ oP” oP*~ oP”
+oLi~ oL*” oL”
+oY'~ oY *~ oY”
+ow’ ow”
+ue ; ue? -uai™~ ua”
+uKi~ uk? uK*~ uk” uak~ uak?
+uy: ut? uT°~ ut” ual?~ uaT”
+uP? uP’~ - uaP~ uaP?
+uLi~ uL’~ uL”? uaLi~
+uy:~ uy ~~ uy” uaY:~ uay?
+uaWw:~
+
+Some of the gaps in the above series have already been com-~
+mented upon (see pp. 15, 21-22). Some will no doubt be filled
+when more material is forthcoming.
+
+SPSP (I 1) PAP (I 4)
+
+V
+THE NARRATIVE STYLE
+
+1. SENTENCES
+
+THE largest structure selected for analysis is the sentence.
+
+A sentence is, for the purpose of this analysis, a structure con-
+stituted of appropriate placed and unplaced elements, as defined
+and described in the analysis.
+
+The unplaced elements of sentence structure are certain proper-
+ties which characterize the sentence as a whole, namely:
+
+A. The nature, number, and sequence of the placed elements.
+B. Sentence intonation.
+C. Mood,
+
+D. Pronominal concord within the sentence.
+
+The placed elements of sentence structure are phrases and sen-
+tence particles,
+
+A. The nature, number, and sequence of the placed
+elements
+Phrases
+
+Phrases are of three kinds, subjective, predicative, and adjunctive,
+represented in the structural formulae by S, P, and A respectively.
+
+The simple sentences in the texts may be grouped into types
+according to the number and sequence of their constituent phrases
+as follows:
+
+S (Lo, IT 0) P (1 7, II sb) AP (1 12, 29, 38, II
+1a, 5a)
+SP (I 28a, 33, 40, II PP (I 32b) ASP (1 21)
+tb)
+SPP (I 30, 36, 37) PPP (IL 19, 34b) APP(I3, 15, 18, 22,
+23, 35, II 2, 3)
+
+SPPP (I 14, 16, 27a) PSP (I 32a) AAPP (I 2, 25)
+
+APPP (I 6, 34a)
+
+30 TIDDIM CHIN
+
+SPAP(I 8,114) PSPP (I 28b) APPPP (I 5)
+PSPAP (I 27b) APAP (I 9, 11, 31)
+
+SAPPSP (I 17) PASPP (I 13, 26) APAPP (I 10)
+SPSAP (I 20) APAAP (I 24)
+ASPP (I 39)
+
+It will be seen that the number of phrases in a sentence may
+range from one to six, though sentences with five or six constituent
+phrases are rare. A considerable number of the sentence types are
+found only once in the texts under examination. It may be assumed
+that if a greater number of texts were examined, further examples
+of these types, and probably of new types also, would be forth-
+coming.
+
+Sentences consisting of one subjective phrase are found only
+in the titles of the texts. All other sentences have a predicative
+phrase in final place in the sequence. The commonest type of sen-
+tence in this style appears to be one with an adjunctive phrase in
+first place, followed by one or more predicative phrases.
+
+ro
+
+Sentence particles
+
+in the narrative style of these texts only two sentence particles
+are recognized, both occurring finally, namely ‘hi’ and ‘leh’.
+A sentence containing the sentence particle ‘hi’ may be termed
+conclusive; one containing the sentence particle ‘leh’ may be termed
+inconclusive. Conclusive and inconclusive sentences are further
+distinguished by mood (see p. 32). By far the majority of the sen-
+tences in the texts are conclusive. An inconclusive sentence together
+with the following conclusive sentence constitutes a compound
+sentence. All other sentences are simple. Each of the constituent
+sentences of a compound sentence is regarded as simple when
+examined by itself,
+
+B. Sentence intonation L
+
+The intonational features that are a property of the sentence as
+a structure are not to be confused with the intonational features
+characteristic of structures of lesser extent, as for example, phrases,
+figures, words, or syllables. Characteristic of the sentence are the
+following intonational features:
+
+(a) the gradual downward drift, by which each succeeding
+
+THE NARRATIVE STYLE 31
+
+phrase tends to be pitched in a key slightly lower than the
+preceding one; and
+
+(2) the pitch-contour of the final sentence particle or particle
+group.
+
+‘The downward drift appears to characterize all sentences in the
+texts.
+
+‘The pitch-contour of the final sentence particle or particle group
+(see pp. 103, 107) is in the great majority of cases low level or low
+falling in relation to the preceding pitches in the sentence. In a few
+inconclusive sentences a final high level pitch is observed, and in
+one case, that of a final particle group, the contour is low falling in
+the first syllable of the group followed by a rapid rise to a relatively
+high pitch (II 5a). It is convenient to generalize these patterns by
+postulating two intonational possibilities, one in which the pitch
+contour of the final particle or particle group ends on a pitch that
+is high in relation to the preceding pitches in the phrase, and one
+in which it ends on a pitch low in relation to the preceding pitches.
+‘These two possibilities will be referred to as high and low sentence
+intonation respectively, and are marked and ! in the detailed
+textual analysis given on pp. 120-40. .
+
+Low sentence intonation is commonly realized in a conclusive
+sentence by a low falling or low level pitch on the sentence particle
+‘hi’. In inconclusive sentences only a low level pitch has been ob-
+served (I 28a, II 1a).
+
+High sentence intonation appears in this style to be restricted to
+
+“inconclusive sentences. It is commonly realized by a high level or
+
+short high rising pitch on the sentence particle ‘leh’. In the particle
+group ‘le cin’ (II 5a) it is realized by a pitch-contour which starts
+with a low fall and rises abruptly to a pitch somewhat higher than
+that at the beginning of the contour.
+
+In a number of respects, the titles of the narratives differ in
+structure from the other sentences of the narrative style. In addi-
+tion to the exceptional phrase arrangement already noted (see
+P. 30), titles differ from all other sentences in this style by the
+absence of a sentence-final particle, and hence by the absence of
+a final pitch-contour which can be referred to high or low intona-
+tion in the manner discussed above. Such sentences may be said
+to be characterized by neutral sentence intonation, for which the
+mark * is used in structural formulae.
+
+32 TIDDIM CHIN
+
+C. Mood as a characteristic of sentences
+
+In the narrative style, the final predicative phrase of all con-
+clusive sentences contains a verb or verbs in Form I (see p. 72).
+Such sentences are said to be characterized by the indicative mood.
+In the same style, the final verbal phrase of all inconclusive sen-
+tences contains a verb or verbs in Form II (see p. 30). Such sen-
+tences are said to be characterized by the subjunctive mood. The
+alternating forms of the verb are described at some length in the
+section on ‘Verbs’ (see pp. 72-82). Mood and its functions are
+further discussed on pp. 84~89. Indicative mood is marked in
+structural formulae by a raised ‘, subjunctive mood by a raised *.
+
+D. Pronominal concord within the sentence
+
+There are almost always concordial relations to be stated between
+a figure (see p. 33) opened by a pronominal prefix and some pre-
+ceding nominal structure. Where this concord extends over phrase
+boundaries it may be said to be a property of the sentence of which
+the phrases are constituents. With very rare exceptions, pronominal
+concord always obtains between a subjective phrase and some
+succeeding predicative phrase within the same sentence. This is in
+itself a characteristic of subjective phrases and distinguishes them
+from adjunctive phrases with similar constituent placed elements
+(see p. 50), since there is never pronominal concord between
+adjunctive phrases of this structure and following predicative
+phrases. There may also be pronominal concord between a sub-
+jective phrase and following subjective phrases within the same
+sentence. For example, in the first sentence of the first text, ‘Dahpa
+in lo a kuan nuam kei a, a inn kuan pih te in a tai zel uh hi’ Dahpa
+did not like to go to work in the fields, and his family used to scold him
+often about it, there is pronominal concord between ‘Dahpa’ and
+the prefix in ‘a kuan’ and ‘a inn kuan’, while the prefix of ‘a tai’
+concords with ‘a inn kuan pih te in’.
+
+For all nominal forms except ‘kei, keimah’, &c., J, ‘nang, nang-
+mah’, &c., you, ‘ei, eite’, &c., we, ‘ko, kote’, &c., we, ‘no, note’, &c.,
+you, concord obtains with the pronominal prefix ‘a-’. For the words
+listed above, the concordant pronominal prefixes are ‘ka-, na-, i-,
+
+‘‘ka-’, and ‘na-’ respectively. In the cases where the sequence of
+
+THE NARRATIVE STYLE 33
+
+nominal form and pronominal prefix is unpredictable there is held
+to be no pronominal concord. Examples of such cases will be
+found on p. 71,
+
+Pronominal concord within the sentence is shown in the detailed
+analysis of the texts by raised arrows, ~, or *, in the formulae for
+the relevant phrases. Pronominal concord which oversteps sentence
+boundaries is not marked in the analysis, since this study does not
+concern itself with structures larger than sentences. No pronominal
+concord can be stated for the subjective phrases which form the
+sole constituents of the titles of the texts since there is no following
+predicative phrase with which they can concord.
+
+2. PHRASES
+
+Phrases, which are regarded as placed elements of the sentence
+as a structure, are themselves structures built up in similar
+
+fashion of appropriate placed and unplaced elements as hereafter
+
+set out and described.
+The unplaced elements which are to be regarded as properties
+of the phrase as a whole are the following:
+
+A. Phrase intonation.
+
+B. Certain reduplicative patterns of the constituent placed
+elements.
+
+C. Mood as a characteristic of the phrase.
+
+D. Pronominal concord within the phrase.
+
+E, The nature, number, and sequence of the constituent placed
+
+elements.
+
+The placed elements which go to constitute a phrase are struc-
+tures smaller than phrases but larger than words for which the
+term figure is used, and phrase particles.
+
+A. Phrase intonation
+
+The intonation of the same phrase-final particle may vary from
+phrase to phrase, and is therefore to be regarded as a property of
+the phrase and not of the particle as such. The pitch-contour of the
+phrase-final particle may be rising, falling, or level. We shall
+accordingly refer to rising, falling, or level phrase intonation, and
+indicate these by ~, -, -, in structural formulae.
+
+CO 2288 D
+
+34 TIDDIM CHIN
+
+Rising phrase intonation
+
+Sometimes the rise in pitch proper to a phrase with rising
+intonation is observed on the word immediately preceding the
+phrase-final particle. Thus ‘ni dang lai in’ in former times (II 1a)
+may be pronounced with a rising pitch on ‘lai’ followed by a high
+level pitch on the particle ‘in’, ie. [-~], or with a level pitch on
+‘lai’ followed by a rise on ‘in’, i.e. [--], or with a low rise on ‘Iai’
+followed by a higher rise on ‘in’, i.e. [.~]. The type of realization
+appears to be a matter of personal idiosyncrasy. On the whole HG
+preterred the first pronunciation, VZT the last two pronunciations.
+Other phrases in the text where this pre-particle rise in pitch was
+observed are ‘a bual bual na in’ through his splashing about (1 26),
+‘tuang kawm a’ while he perched (I 27), ‘a deih peuh peuh khuang
+tum kawm a’ whatever he wished for while he was beating the drum
+(I 20), ‘a sun si san a’ he pierced so that it bled. In all the above
+examples from a lexical standpoint the pitch to be expected of the
+pre-particle word is level. Special cases of a pre-particlerisein pitch
+as the realization of rising phrase intonation are afforded by the
+adjunctive phrases ‘tu in’ now (II 4) and ‘lam na ding in’, where the
+lexically expected rise in pitch on the words ‘tu’ and ‘ding’ appears
+to be sufficient in itself, without a concomitant pitch rise in the
+phrase particle, to mark the rising intonation which always accom-
+panies adjunctive phrases (see also p, 50). The rise in pitch on these
+two words, therefore, is in this context the simultaneous realization
+of both syllable tone and phrase intonation. It would, of course, be
+possible in these two cases to take the pitch of the particles as the
+criterion and so to posit level phrase intonation for them. This
+would, however, run counter to the pattern observable every-
+where else for adjunctive phrases, which were always recorded
+with final pitch features ascribable to rising phrase intonation.
+
+In other contexts the rise in pitch usually starts at a pitch which
+may be referred to that of the immediately preceding syllable in
+the phrase in the following way: where the preceding syllable has
+a rising pitch-contour the rise on the particle tends to begin at
+about the final pitch reached in this syllable or very slightly lower,
+e.g. the intonation of the phrase ‘zing san an neek khit ciangin’
+after they had eaten breakfast (I 3) may be represented graphically
+[~~--"~"], that of ‘a ci pumpi in’ his body (I 26) ["--~], and
+‘Dahpa zunung a’ Dahpa gave a feast (I 22) [_~+_-]. Where the
+
+THE NARRATIVE STYLE 35
+
+preceding syllable has a falling pitch-contour, as in ‘sawt lo in’
+[~~] not long after (I 21), the rise begins at a point appreciably
+higher in pitch than the endpoint of the preceding contour. Where
+the preceding syllable has a mid or low level pitch, the rise appears
+to start from approximately the same pitch, e.g. ‘sun ni loh in’
+[\’--] the whole day long (1 9), ‘bilpi vapai a’ [--*--] the rabbit went
+off (1 33). Where the preceding syllable is high level in pitch, the
+tise begins at a slightly lower pitch, e.g. ‘a tai tai uh a’ ['--7~]
+they scolded him again and again (I 8).
+
+Falling phrase intonation
+
+In phrases with falling intonation the fall in pitch is on the phrase
+particle, the highest point of its pitch-contour being related to the
+pitch of the preceding syllable. If the preceding syllable has a
+falling pitch-contour, the pitch-fall of the particle will start ata
+pitch rather lower than the highest pitch of the contour of the
+preceding syllable, as for example ‘Dahpa in’ [_s.] Dahpa (11 and
+elsewhere), ‘khapi a piang hi’ [.--\_] the moon appeared (I 25).
+Where the preceding syllable has a rising or a high level pitch, the
+pitch-contour of the particle will start its fall from a pitch appre-
+ciably lower than the highest pitch of the preceding contour, e.g.
+‘a tai zel uh hi’ [*~-"_] they scolded him often (1 1), ‘innkuan pih te
+in’ [-._-.] his whole family (I 8), ‘amah a nunung hi’ [-_-.-_] he
+followed behind (1 3), ‘a ciah kik hi’ [-_-_] he went. home again (I 5).
+When the pitch of the preceding syllable is level, the fall is per-
+ceived as starting from approximately the same pitch, e.g. ‘a zol
+hi? [‘-.] he is greasy (I 26), ‘sakhi-in’ [\-.] the barking deer (I 28),
+‘amah a hau mah mah hi’ [-_.+___] he grew very rich (I 21), ‘dawi
+te khat in’? [.-__] one of the spirits (I 14).
+
+A realization of falling phrase intonation unusual in narrative
+style was observed in the first sentence of the second text. ‘Galte
+in’ enemies was variously pronounced ~ga:l-te:in and ~gazl
+“tern. This second pronunciation, with the fall in pitch on the
+syllable preceding the particle, and the special form of the particle
+itself, shows similarities to certain features characteristic of collo-
+quial style (see p. 112).
+
+A further unusual case is afforded by the pronunciation “Aspian
+shi: recorded for the phrase ‘a piang hi’ it appeared (I 25), along-
+side the more usual “A ~piay \hiz. The unexpected fall in pitch on
+the word ‘piang’ must be attributed to a pre-particle fall in pitch
+
+36 TIDDIM CHIN
+
+as part of the realization of falling phrase intonation, analogous
+to the far commoner pre-particle rise already described (p. 34).
+
+Level phrase intonation
+Level intonation in phrases is realized as follows:
+
+After a preceding syllable with a rising pitch, the pitch of the
+phrase particle is perceived as about the same as the highest pitch
+of the preceding contour, e.g. ‘dawng zel zal a’ [~~~] he answered
+loudly (1 5), ‘zing sang tung a’ [~--~] early in the morning (I 2),
+‘a tai uh ciangin’ [+\.--] when they scolded him (11), ‘ta dong in’
+[---] now (I 27), ‘a bul na ne ne a’ [*-*--~] they nibbled away at the
+foot (I 39), ‘a ui pen’ ['-7] as for has dog (II 4).
+
+After a preceding syllable with a falling pitch-contour, the pitch
+of the phrase particle is appreciably higher than the lowest pitch
+of the preceding contour, and is often approximately that of its
+highest pitch, e.g. ‘ci in’ [+~] he said (I 6 and elsewhere), ‘zu khaih
+saa ngen a’ [-.-+.-] he asked for ready-prepared beer (I 19), ‘kia a’
+[7] ze fell (1 27).
+
+The pitch of the phrase particle in a phrase with level intonation
+is a little higher than a preceding syllable on a low level pitch, @g.
+‘a ciah a’ [*_-] he went back (I 20). Preceded by a syllable with a
+
+high level pitch, the phrase particle is pronounced with a slightly”
+
+lower pitch, e.g. ‘a tai tai uh a’ they continued to reproach him (1 8)
+[‘--7-]. No examples are recorded in the texts of phrases with level
+intonation in which the phrase particle is immediately preceded by
+a syllable pronounced on a mid level pitch.
+
+The correlation of the three types of phrase intonation, rising,
+falling, and level with the three types of phrase, subjective,
+predicative, and adjunctive, is set out on pp. 41~53 in the section
+dealing with the phrase types individually.
+
+Figure-linking intonation
+The figure-linking particle, ‘leh’ is always found in the texts. on
+a pitch that is high in relation to the pitches of neighbouring
+
+syllables, e.g.:
+
+‘a baan leh a phei lang khat’ [*-“*s-~]
+his arms and one of his legs (II 2)
+
+‘tua Khua Lei leh a ui pen’ [-*-"*-7]
+that Khua Lei and his dog (11 4)
+
+THE NARRATIVE STYLE 37
+
+The pitch-contour of the particle may be level or very slightly
+rising, but is always high relative to the other pitches close to it in
+the phrase. This lack of an alternative pronunciation in phrases of
+this kind might lead one to regard the high pitch as characteristic
+of the word as such, and not of the phrase as a whole. High pitch
+is, however, not a regular realization of tone in syllables of this
+structure (see p. 18) so that it is rather to be interpreted as a feature
+of the intonation of the phrase. The figure-linking particle ‘zong’,
+on the other hand, is always pronounced with a falling pitch-
+contour, which is a perfectly regular tonal possibility for words of
+this structure. Since there are considerations which suggest that
+in general the pitch of particles of all kinds is most conveniently
+regarded as expressing the intonation of a larger structure (see
+pp- 104-5) this falling pitch-contour of ‘zong’ is regarded in this
+study as the realization of a special type of phrase intonation for
+which the label figure-linking intonation is suggested.
+
+In the phrases containing the figure-linking particle ‘Ieh’ there
+is a special low-high pitch relationship between the last syllable
+of the first constituent figure and the figure-linking particle, and a
+corresponding high-low pitch relationship between the particle
+and the second constituent figure. The intonation pattern low-
+high-low at the junction of the two constituent figures may there-
+fore also be regarded as a type of figure-linking intonation. Figure-
+linking intonation does not, like phrase intonation, define phrase
+boundaries but the boundaries of the figures of which the phrase
+is built up. Phonetically, the intonation patterns observed are
+frequently identical with those observed elsewhere (see pp. 52-56)
+for figures. Very short phrases, in which the constituent figures
+may be co-terminous with single words, are sometimes held
+together as structures by the same intonational links as may obtain
+between the constituent words of a figure. Figure-linking intona-
+tion of the type just described, where the essential characteristics
+are an upward pitch leap followed by a downward pitch leap, will
+be shown in structural formulae by the symbol 7 J preceding the
+relevant phrase intonation symbol. The pattern occurs twice in the
+long predicative phrase which constitutes a citational figure within
+I 32a (see p. 115). The relevant figure-linking particle, ‘la’, is ap-
+propriate to the colloquial style (see p. 107).
+
+The unexpectedly (from a lexical point of view) high rising pitch
+of ‘inn’ in the phrase ‘inn a tun ciang in’ “in“A ~tun-ciay-in.
+
+38 TIDDIM CHIN
+
+when he arrived home (1 6) is regarded as providing a high-low
+intonation pattern linking the nominal figure ‘inn’ with the follow-
+ing verbal figure ‘a tun’. The intonational characteristics of the
+phrase, gua phrase, are, therefore, a high-low figure-linking
+intonation binding the first two constituent figures and a rising
+phrase intonation for the phrase as a whole, as realized in the rising
+pitch of the adverbial figure ‘ciang’. This combination of features
+is indicated in the structural formulae by the symbol sequence “1-
+(see p. 122). Similar intonation patterns are posited for the follow-
+ing phrases:
+
+‘tu dong in’ “tu: -doy -in to this day (I 27b),
+
+in which there is a high-low figure-linking intonation between the
+nominal figure ‘tu’ and the adverbial figure ‘dong’ and rising phrase
+intonation realized in the rising pitch of the latter. Contrast the
+pronunciation recorded for this instance of the phrase with that
+recorded for the same phrase in I 24 and I 26 where there is no
+special figure-linking intonation (see pp. 130, 131).
+
+‘a hih hang in’ “A “hi? -hary -in, however (I 38),
+
+in which the levelling figure-intonation of ‘a hih’ (see p. 55) is the
+means of expressing a high-low figure-linking intonation between
+the verbal figure ‘a hih’ and the following adverbial figure ‘hang’,
+the pitch of which is in its turn the expression of rising phrase
+intonation. Contrast this with I 10 in which the pronunciation
+recorded for this same phrase does not exhibit any special figure-
+linking features.
+
+The frequent instances in the texts of a low falling pitch on the
+word ‘ci’ following a citational figure is always interpreted as the
+realization of a high—low link between that figure and the one-word
+verbal figure ‘ci’. The phrases in question are always closed in the
+texts by one of the phrase particles ‘in’ or ‘a’ with a level pitch
+(cf. I 2, 5, 6, 13, 32a, 34a, 37). The special intonational character-
+istics of such ‘phrases are, therefore, high-low figure-linking
+intonation and level phrase intonation (~1-). The same pattern is
+recorded for the phrase ‘sawt lo in’ [-.-] mot long after (I 21) in
+which the unexpectedly low fall on the one-word verbal figure ‘lo’
+
+marks a high—low linking intonation with the preceding one-word
+
+nominal figure ‘sawt’.
+The reverse figure-linking intonation pattern, i.e. a low-high
+
+THE NARRATIVE STYLE 39
+
+pitch relationship between two consecutive figures in a phrase
+(I”), is also exemplified in the texts. The phrase ‘tua khit ciang in’,
+which occurs twice in the texts (see I 18 and IT 3), is recorded in
+both places with the intonation [-~--]. Here the figure-linking
+intonation is expressed in the upward leap in pitch from the one-
+word figure ‘tua’ to the one-word figure ‘khit’, for which, on struc-
+tural grounds, a low pitch is ordinarily to be expected (see p. 18).
+The low falling pitch of ‘lam’ in ‘lam a makai hi’ [_--._] (I 30) is
+similarly interpreted as marking a low-high pitch relationship with
+the following verbal figure.
+
+In the long final predicative phrase of sentence II 2 (see p. 138),
+the first figure is linked to the second by the figure-linking particle
+‘leh’ and low-high intonation, while the second is linked to the
+third by the figure-linking particle ‘zong’ and high-low-high
+intonation. The compound figure-linking intonation pattern for
+the whole phrase is thus marked [ 1.
+
+B. Reduphcation as a characteristic of the phrase
+
+The phase ‘sa go sa ne zu ne in’ killing meat and eating it and
+drinking beer (I 23) exemplifies what may be termed multiple re-
+duplication. The exponent of reduplication in the first four words
+may be expressed as repeated noun plus paired verb, and for the last
+four words as paired noun plus repeated verb, so that there is an
+overlapping of the elements, which binds the whole sequence into
+a single verbal phrase for which one may state the formula NV *?
+(where N = nominal figure, V = verbal figure, see p. 41), built
+up thus:
+
+repeated repeated
+
+1 |
+
+N VN VN V
+sa go sa ne zu ne :
+
+paired
+
+paired
+
+4° TIDDIM CHIN
+
+For a description of reduplication as a feature of other structures,
+and for ‘pairing’, see p. 57.
+
+C. Mood as a characteristic of the phrase
+
+The verbal figures which may constitute a phrase (see p. 41)
+contain verbs which may be in one of two forms (see p. 72). The
+verbs in the verbal figures of all predicative phrases except the last
+phrase of an inconclusive sentence (see p. 30) are in Form I.
+Verbs in Form II are found in the last predicative phrase of an
+inconclusive sentence, and in all adjunctive phrases containing a
+‘verbal figure (see p. 51). Predicative phrases, the verbs of whose
+constituent verbal figures are in Form I, are said to be character-
+ized by the indicative mood. Predicative and adjunctive phrases
+whose constituent verbal figures contain verbs in Form II are said
+to be characterized by the subjunctive mood. Mood is marked in
+the formulae for phrases by a raised or s,
+
+Mood is not a characteristic of subjective phrases.
+
+D. Pronominal concord within the phrase
+
+Pronominal concord may obtain between the nominal and verbal
+figures within a phrase as in ‘amah a nunung hi’ he remained behind
+{I 3). Contrast ‘lo a kuan nuam kei a’ he didn’t like going to work
+in the fields (I 1), where the pronominal concord is with a nominal
+figure in the preceding phrase, and not with ‘lo’. Absence of con-
+cord between nominal and verbal figures within the phrase may
+sometimes be marked by the oblique form of the noun (see p. 70).
+In other instances, the clue may lie in the mood of the verbal
+
+“ c" ~ figure, e.g. in ‘lo pa a kikho khia sa te’ (I 15) the indicative verb
+
+forms ‘ko khia’ mark pronominal concord with ‘lo pa’, hence the
+grass which was weeded out already. The phrase ‘lo pa a khawh khiat
+sa te’, with subjunctive verb forms, would point to an absence of
+concord, i.e, the grass which he had weeded out already.
+
+E. The nature, number, and sequence of the
+constituent placed elements .
+
+The placed elements of the phrase as a structure are its con-
+stituent figures and phrase particles.
+The constituent figures which contribute to the construction of
+
+THE NARRATIVE STYLE 41
+
+phrases are of four kinds, namely; nominal, verbal, adverbial, and
+citational, for which the abbreviated notation N, V, A, and Q will
+be used in structural formulae.
+
+The arrangement of the figures within the phrase is so closely
+bound up with the identification of the different kinds of phrase,
+
+that it is best treated separately under headings for each kind of
+phrase.
+
+Phrase particles
+
+Phrase particles are of two kinds. By far the commonest are
+phrase-final since all phrases, except those which go to constitute
+‘titles’, are terminated by a phrase particle. Particles are, however,
+sometimes observed within the body of a phrase, when their func-
+tion may be regarded as the linking together of two constituent
+figures. Such figure-linking particles are relatively rare in these
+texts. ; ;
+
+The phrase-final particles in the narrative style are ‘in, a, pen,
+
+“hi and ‘leh’. As phrase-final particles, ‘hi’ and ‘leh’ are co-
+
+terminous with sentence particles, that is to say, they are only
+found in the last phrase of a sentence. It follows that ‘in, pen’ and
+‘a’ are proper to non-final phrases only, Examples of the use of
+these particles are abundant and obvious in the texts. The phrase-
+final particles proper to the different kinds of phrases, i.e. sub-
+jective, predicative, and adjunctive, are set out on Pp. 42-52, where
+the structure of these phrases is described in some detail.
+
+The figure-linking particles in this style are ‘leh’ and ‘zong’.
+‘leh’ always links nominal figure with nominal figure; ‘zong’ always
+links a nominal figure with a following verbal figure. Both particles
+are found in II 2, viz.:
+
+a baan leh a phei lang khat zong a tan uh hi
+They cut off his arms and one of his legs
+
+Here ‘leh’, which is translated by and, links the nominal figure
+‘a baan’ Ads arms with the nominal figure ‘a phei lang khat’ one of
+his legs, while ‘zong’, which may be translated also, links ‘a phei
+lang khat’ with the verbal figure ‘a tan uh’ they cut off.
+
+The subjective phrase
+
+A subjective phrase in the present study is a structure whose
+placed elements are nominal figures and certain specified phrase
+
+42 TIDDIM CHIN
+
+particles, and whose unplaced elements are the phrase properties
+set out below.
+
+Classified according to the arrangement of the constituent
+figures, only two types of subjective phrase are recognized:
+
+(a) a phrase consisting of one nominal figure and appropriate
+particles and properties (V);
+
+(6) a phrase consisting of two nominal figures and appropriate
+particles and properties (NV).
+
+(a) Phrases with one constituent nominal figure. Such phrases are very
+numerous in the texts. In the examples cited below a slanting line
+is used to separate the placed elements, i.e. in this instance nominal
+figure and phrase-final or figure-linking particle, if any.
+
+Dahpa Thu
+
+Dahpa / in
+
+a innkuan pih te / in
+dawi te khat / in
+
+a lo cingpi / in
+
+bui / in
+
+kua mah / in
+
+vok gawl dawn hiam / in
+Khua Lei
+
+a Dahpa story (I 0)
+
+Dahpa (I 1 and elsewhere)
+
+his whole family (1 1)
+
+one of the spirits (I 14)
+
+his whole field (I 17)
+
+the bamboo rat (I 30)
+
+anybody (1 33)
+
+the sharp top of the pig fence (I 27)
+Khua Let (personal name) (II 0)
+
+(b) Phrases with two constituent nominal figures. Exatnples of these
+are:
+
+lampi ah / galte / in enemies on the road (II 1)
+tua Khua Lei/leh/aui/ as for Khua Lei and his dog (11 4)
+pen
+
+In the last example above there is, in addition to the two figures
+and the final particle, a further particle linking the two figures (see
+p- 41).
+
+Particles, All subjective phrases in the texts except those which
+constitute the titles of the texts themselves are terminated by a
+phrase-final particle. It may be observed here that the regular
+presence of phrase-final particles is a characteristic of narrative as
+opposed to colloquial style. In the latter style, phrases without
+final particles are common. In this respect the usage in the titles
+resembles colloquial rather than narrative style, and would per-
+haps best be treated outside narrative style as such,
+
+SEN
+
+THE NARRATIVE STYLE 43
+
+The phrase-final particles appropriate to the subjective phrase
+in the narrative style are ‘in’ and ‘pen’, ‘a’ and ‘hi’ are not used in
+subjective phrases, while ‘pen’ is reserved exclusively for sub-
+jective phrases,
+
+The figure-linking particle appropriate to subjective phrases is
+‘leh’, which links one nominal figure with another (see pp. 41, 42).
+
+Intonation. ‘The vast majority of subjective phrases have falling
+phrase intonation. The phrase-final particle ‘pen’, which is rela-
+tively rare, favours level intonation. A few isolated examples were
+observed of subjective phrases with the final particle ‘in’ pro-
+nounced with level intonation, e.g.:
+
+the whole of his field (I 17)
+his body (I 26)
+
+a lo cingpi / in
+a ci pumpi / in
+
+Rising phrase intonation is not a property of subjective phrases.
+
+Pronominal concord. As has already been stated (on p. 32), pro-
+nominal concord almost always obtains between a subjective
+phrase and a following predicative phrase in the same sentence.
+This is a characteristic feature of the subjective phrase since no
+such concord can be stated between predicative phrases and only
+rarely between an adjunctive phrase and some other phrase in the
+sentence. It is not a characteristic of adjunctive phrases as such,
+nor of predicative phrases, since for many of these, i.e. those not
+preceded in the same sentence by a subjective phrase, no pro-
+nominal concord obtains,
+
+The predicative phrase
+
+A predicative phrase is a structure whose placed elements are
+verbal, nominal, and citational figures, arranged in certain specified
+sequences, together with certain phrase particles, and whose un-
+placed elements are the phrase properties described below as being
+appropriate to such a structure,
+
+The sequences of constituent figures appropriate to predicative
+phrases are the following:
+
+(a) V
+(b) NV
+
+(c) NNV.
+(@) NNVV
+
+(ec) NNNV
+(f) QV
+
+Such sequences of figures are always followed by an appropriate
+phrase-final particle.
+
+44 TIDDIM CHIN
+
+(a) Phrases with a single constituent verbal figure—V. Examples of
+such phrases are very numerous in the texts. A selection is given
+here:
+
+a tai zel uh / hi
+
+they scolded him often (1 )
+a ciah kik / hi
+
+he went back again (I 5)
+a leih pah / a
+
+he at once added water to it (I 6)
+kuan kik leu leu / a
+
+he went to work once again (1 10)
+a lam lam uh / hi
+
+they danced continuously (1 23)
+a va khem / leh
+
+when he deceived him (1 34)
+deih gawh / in
+
+(the sun) coveted it (1 36)
+
+(b) Phrases with a nominal figure followed by a verbal figure—NV. .
+
+lo / a kuan nuam kei / a
+he didn’t want to go to work in the fields (I 1)
+ainn kuan pih te / kuan masa sak / a
+he got his family to go on ahead (1 3)
+amah / a nunung / hi
+he himself went behind (1 3)
+amah / zong / a kuan / hi
+he also returned home (1 4)
+
+(the nominal figure is here linked to the following verbal
+figure by the particle ‘zong’)
+a lopa khawh khiat sa teng / na po kik /a
+
+all the grass that had been weeded out already grew up again
+(I ro)
+
+khawh loh / a bang / hi
+it was as tf tt had not been cultivated (1 10)
+
+lo lai ah / vak / in
+walked in the middle of the field (1 14)
+
+THE NARRATIVE STYLE 45
+khuang khat / a tum / hi
+he beat a drum (I 14)
+
+phalbi khuadam hun / ih nei / hi
+we have a cold winter season (I 24)
+
+An interesting special case of the above phrase-type has already
+been described in the section dealing with reduplication as a feature
+
+of the phrase (see p. 39).
+
+(c) Phrases with two consecutive nominal figures followed by a verbal
+jigure—NNV.
+
+a tap tung teng uh / a tu tawh / a kal / hi
+he raked over the whole of their hearth with a hoe (I 2)
+Dahpa / a lo uh a/ a va kuan / hi
+Dahpa went off to work in the family fields (I 8)
+tangteuh / sa sem / a hi/a
+the skink was the carver (1 26)
+a khawh sa teng / khawh Ioh / a nasuak pah pah / hi
+what had previously been cultivated immediately became un-
+cultivated (I 12)
+
+a mei tawh / thang / a siah / leh
+
+when he set a trap with his tail (I 28)
+a deih peuh peuh / khuang / tum kawm / a
+
+whatever he wished for while beating his drum (I 20)
+a khuang tawh / a kua ah / a ciah / hi
+
+he went back to his hole with his drum (1 32)
+
+Khaw Lei a kici mi khat / khual / a zin / leh
+while a man named Khua Lei was travelling away from home
+(II 1)
+aui/akhe lang khat ah / khih sa / in
+having tied his dog to one of his legs (II 3)
+
+In phrases of this type, the first two figures may be linked hy the
+particle ‘leh’ and the last two by the particle ‘zong’ (see p. 41), as
+in the following example:
+
+a baan / leh / a phei lang khat / zong / a tan uh / hi
+they cut off his arms and one of his legs (II 2)
+
+46 TIDDIM CHIN
+(d) One example ts recorded of a phrase of the structure NNVV:
+
+Khaw Lei khuk kiang ah / Khaw Lei ui / zong / a phe lek Iek /
+na mu ding / hi ;
+near Khua Lei’s knee you will also see Khua Lei’s dog twinkling
+away (11 5b) ,
+
+(e) One example is recorded of a phrase of the structure NNNV:
+Dahpa / a khuang tawh / inn ah / a ciah/ a
+Dahpa returned to his house with the drum (I 20)
+
+(f) Phrases with a citational figure followed by a verbal figure—Q V.
+Such phrases are very numerous in the texts. The verbal figure is
+usually, but not invariably, ‘ci’ and is followed by one of the final
+particles appropriate to predicative phrases, The citational figure
+always consists of a passage of direct speech in the colloquial style
+(see pp. 106-17). This passage may. comprise one or more sen-
+tences in the colloquial style, or a single item of ‘naming’, e.g.:
+
+‘Ka khuang ka lak kik zawh nading in, tau sang ka lam ding hi.
+Mihing ganhing zusa vasa kiksi thovai in hing awi un’, / ciin
+‘In order to get my drum back again I shall build a high tower.
+
+I must get all living creatures, animals, birds and insects, to
+agree to this’, he said (1 37)
+
+“Thankik’ / ki ci den hi
+he has been called ‘Noble backwards’ ever since (1 29)
+
+In the first example cited above, the whole of the passage of
+direct speech constitutes one citational figure, followed by the
+verbal figure ‘ci’ and the phrase-final particle ‘in’, In the second
+example the single name ‘Thankik’ constitutes the citational figure,
+followed by the verbal figure ‘ki ci den’ and the phrase-final
+particle ‘hi’.
+
+Other examples of phrases of this type are:
+
+‘Mi th sak leh zu bel hi khong veh e’ / ci in
+‘We thought it was a man, but it is only a beer pot after all’,
+he said (I 6) -
+“Khaw Lei Ui Kai’ / ki ci hi _
+it.1s called ‘Khua Lei Leading his Dog’ (II 4)
+
+THE NARRATIVE STYLE 47
+Sometimes there is a further passage of direct speech within the
+
+- citational figure itself, as in
+
+‘Bui aw, pu Dahpa in “Tu a hong hing” ci hi’, cia
+‘Bamboo-rat! Lord Dahpa says: “If he won’t come out at once
+Pm going to put boiling water down his hole”,’ he said (I 34)
+
+Citational figures are built up of one or more sentences in col-
+loquial style, the grammar of which is dealt with in a separate
+section on pp. 106-17,
+
+Particles. All predicative phrases are terminated by one of the
+phrase-final particles ‘hi, leh, in’, or ‘a’. Of these the first two are
+co-terminous with sentence-final particles, and are restricted to.
+the final phrase in a sentence. ‘They are an exclusive characteristic
+of the predicative phrase. ‘in’ and ‘a’ are both also found in adjunc-
+tive phrases, but are then accompanied by differences in the other
+phrase-properties (see pp. 48-53).
+
+Both the figure-linking particles ‘leh’ and ‘zong’ may occur
+within a predicative phrase, as for example in sentence II 2b.
+
+Intonation. The last phrase ina conclusive sentence always has
+falling intonation; that in an inconclusive sentence may be falling
+or level.
+
+Level: Khaw Lei a kici mi khat khual a zin leh
+When a man named Khua Lei was travelling away from
+home (II 1a)
+Falling: tua aksi en le cin
+Jf you look at those stars (II 5a)
+
+Predicative phrases other than the last one in the sentence are
+most commonly characterized by level intonation, but an occa-
+sional use of falling intonation was observed, as for example in the
+phrase ‘dawi pa a bawh a’ he seized hold of the spirit (I 16).
+
+Where a predicative phrase was characterized by rising intona-
+tion, this was frequently realized as a rise in pitch on the syllable
+preceding the final particle, the particle itself being pronounced
+either with a level pitch or with a slight rise in pitch, e.g.:
+
+a deih peuh peuh khuang tum kawm a
+
+Whatever he wished for as he was beating his drum {I 20) ‘
+lup sim a
+
+having secretly filled it and prepared it ready for drinking (I 4)
+
+48 TIDDIM CHIN
+
+In the above two phrases the expected realization of the syllable
+tone of ‘kawm’ and ‘sim’ is a level pitch, but in these examples
+both words are pronounced with a rising pitch, which is inter-
+preted as being simultaneously a property of the phrase as a whole
+and of the relevant verbal figure.
+
+Mood of constituent verbal figures. In verbal figures which are
+constituent elements of a predicative phrase in a conclusive sen-
+tence the verb in the figure has Form I. In the final phrase of an
+inconclusive sentence the verb has Form II (see pp. 32, 84). This
+usage is to be contrasted with that in adjunctive phrases, where the
+verb always has Form II (see p. 51). Since the last phrase in a
+sentence is never adjunctive (see p. 30), this use of the verb form
+clearly sets off predicative from adjunctive phrases, and.is accord-
+ingly to be regarded as a property of the phrase. Predicative phrases
+may be said to be characterized by indicative or subjunctive mood,
+according to the form of their constituent verbal figures. Adjunc-
+tive phrases are never in the indicative mood.
+
+The adjunctive phrase
+
+An adjunctive phrase is a structure whose placed elements are
+nominal, verbal, and adverbial figures in specified sequences,
+together with certain phrase particles. The unplaced elements of
+an adjunctive phrase are the phrase properties hereafter described.
+In contrast to subjective and predicative phrases, an adjunctive
+phrase may never stand alone in a sentence but only in conjunction
+with others (cf. p. 30). 7
+
+The sequences of constituent figures that may with or without
+appropriate particles constitute an adjunctive phrase are the
+following: .
+
+(a) NA (b) NVA (c) NNVA (ad) NVNVA (e&) VA
+(f)N (g) NN
+
+(a) Phrases with a constituent nominal figure followed by an adverbial
+figure—NA. ,
+
+a sawt pi /.ciang / in
+
+after some considerable time (1 8)
+ni tak / ciang / in
+
+at night (I 9)
+
+THE NARRATIVE STYLE 49
+
+a zing / ciang / in
+
+when it was morning (I 10)
+tua / ciang / in
+
+after that (I 22)
+ni sagih / tawntung
+
+for seven days continuously (I 23)
+tu / dong / in
+
+to this day (I 24)
+zan / ciang / a
+
+in the night time (I 25)
+
+(5) Phrases with the structure NV A,
+zing sang an / neek khit / ciang / in
+after they had eaten breakfast (I 3)
+inn / a tun / ciang / in
+when he reached the house (1 6)
+khua gal / a tun / ciang / in
+when they got outside the village (I 5)
+ni tampi / a pian khit / ciang / in
+when this had been happening for many days (I 13)
+khuang / a tum / ciang / in
+when he beat the drum (I 15)
+tua / khit / ciang / in
+after that (I 18)
+tua / a hih / man / in
+for this reason (1 29)
+khuang / a ngah / ciang / in
+when he had got the drum (I 17)
+
+(c) Phrases with the structure NNV A, Only one example of an ad-
+junctive phrase of this structure is recorded:
+
+pial khang ah / puan / a khuh khit / ciang / in
+after he had covered it with a blanket in the inner room (I 4)
+
+(d@) Phrases with the structure NVNVA. Only one example is
+recorded:
+
+ni sagih / khit / zunun / a ven / ciang / in
+after seven days when the feast was over (I 35)
+2288 E
+
+50 TIDDIM CHIN
+
+(e) Phrases with the structure V A.
+ah tai uh / ciang / in
+when they scolded him (I 2)
+a kuan kik / ciang / in
+when he went to work again {1 12)
+a gen/ ciang / in
+when he announced it (I 20)
+
+(f) Phrases with a single nominal figure—N.
+sun niloh / in
+all day long (I 9)
+kum sim / in
+every year (I 24)
+sa a muat loh na ding / in
+for the sake of the meat not going bad (I 24)
+
+lam na ding / in
+
+for the sake of the dancing (I 25)
+tu / in
+
+now (II 4)
+
+(g) Phrases with two consecutive nominal figures—NN. One example
+is recorded: ,
+
+sa lak a /'a bual bual na / in
+through his splashing about in the meat (I 26)
+
+It will be observed that the placed elements of types (f) and (g)
+above are the same as those postulated for subjective phrases. The
+adjunctive and subjective phrases are, however, kept apart by
+differences of phrase intonation (see pp. 43, 53), and of pro-
+nominal concord (see p. 32), which does not obtain between ad-
+junctive phrases of this structure and other phrases in the sentence,
+
+Particles. The phrase-final particles appropriate to the adjunctive
+phrase are ‘in’ and ‘a’, It is a distinctive property of adjunctive
+phrases that they may be found in the body of the texts without a
+phrase-final particle, e.g. ‘ni sagih tawntung’ for seven days con-
+tinuously (1 23).
+
+Intonation. The phrase intonation of all adjunctive phrases is
+rising. Where the last constituent figure is adverbial, phrase
+intonation is realized by a rising pitch on the adverbial conjunction,
+
+THE NARRATIVE STYLE 51
+
+followed, apparently at random, by either a relatively high rising
+pitch or high level pitch on the phrase-final particle. Thus, ‘tua
+ciangin’ then (I 22) may be pronounced [--~] or [---], and so on.
+Where there is no adverbial figure, the rise in pitch must take place
+either on the phrase-final particle or on the syllable preceding this
+particle (see p. 34). Thus ‘kum sim in’ every year (I 24) is pro-
+nounced [s~~] or [+-~], though the pitch of ‘sim’ in another context
+would be level. In ‘sun niloh in’ all day long (1 9) a rise in pitch on
+the final particle is always observed, as rising pitch on a syllable
+of the structure of ‘loh’ would be irregular (sce p. 18). In ‘lam na
+ding in’ for the sake of the dancing (1 25) the rising pitch on ‘ding’
+is the simultaneous realization of syllable tone and phrase in-
+tonation.
+
+Mood of constituent verbal figures. Where one of the constituent
+figures of an adjunctive phrase is verbal, the form of the verb in
+that figure will be the second or subjunctive one (see p. 40). Where
+mood is a property of an adjunctive phrase, therefore, it is always
+subjunctive. This is in contrast with the usage in predicative
+phrases which may be indicative or subjunctive (see p. 40). Thus;
+in the adjunctive phrase ‘khuang a tum ciangin’ when he beat the
+drum (I 15) ‘tum’ has the falling pitch which is the mark of Form II
+in this verb (see p. 75). In the predicative phrase ‘khuang khat a
+tum hi? he was beating a drum (I 14) ‘tum’ has the rising pitch
+which is the mark of Form I,
+
+Pronominal concord. The one adjunctive phrase in the texts for
+which pronominal concord with a succeeding predicative phrase
+can be stated is ‘tau sangpi a lam ciangin’ when they had built a
+very tall tower (1 39), which concords with the prefix ‘a’ in the:
+subsequent phrase ‘a tuk hi’ it collapsed. In sentence I 17, the ad-
+junctive phrase ‘khuang a ngah khit ciangin’ concords with the
+preceding subjective phrase ‘Dahpa in’ (see p. 127).
+
+Summary of the properties of the different types of phrases
+
+A study of the foregoing description of the characteristics of
+phrases collectively, and of phrase-types individually, will show
+that each phrase-type has certain properties in common with other
+phrase-types, and certain other properties exclusive to itself. There
+is no overlapping of structures. Every phrase in the texts can be
+unequivocally identified as being subjective, predicative, or ad-
+junctive on the basis of the description given. Thus, while both
+
+52 TIDDIM CHIN
+
+subjective and adjunctive phrases may havea single constituent
+nominal figure, the phrase-final particle may or may not be the
+same, but the phrase intonation and concord will always be
+different. Similarly, while predicative and adjunctive phrases may
+both contain constituent verbal figures and be terminated by the
+same phrase-final particle, the verbal figure in such phrases will
+have a different form in the two phrase-types.
+
+Both shared and exclusive properties are summarized inthe com-
+parative table on the opposite page.
+
+3. FIGURES
+
+The term figure is applied to linguistic structures which are
+smaller in extent than phrases, but which may be greater than
+words. The constituent placed elements of the figure are words and
+affixes. The properties that may be characteristic of the figure as
+a whole are the following:
+
+A. Certain intonational features referred to as figure intonation
+
+. Reduplication and pairing
+
+. Certain stress phenomena which will be referred to as figure
+stress ,
+
+‘The case of the nouns in nominal figures
+
+A special use of glottal constriction which will be referred
+to as figure-final glottalization
+
+The nature, number, and arrangement of the constituent
+placed elements,
+
+mo Ab
+
+7
+
+A. Figure intonation
+
+The intonational features characteristic of figures are the
+following:
+
+(a) A high-low pitch relation linking a prefix or prefixes with
+the first syllable of the succeeding word. This pitch relation is
+represented by the symbol “1. It is always accompanied by certain
+stress phenomena described below (see p. 58). Thus ‘a inn’ his
+house is pronounced with a combination of pitch and stress which
+may be represented graphically by [*-], ‘a tu’ his hoe by [*], ‘ka
+pai’ I go by [*-], ‘a sita’ he died instantaneously by [**\], ‘ka na pai
+ding’ I will go on ahead by [**~-].
+
+A high-low pitch relation with accompanying stress. pattern is
+
+PROPERTIES OF PHRASES
+
+THE NARRATIVE STYLE
+
+Phrase-
+
+= irl >
+& - ~—
+8 8 = tp §
+~ A ~
+=| gs Ee f
+“| 23 a5 z
+cm ce
+Ro
+8/82 2 Se A
+3
+SES
+Ri & s oa
+nH
+ba on |) 1 1
+fm 8 ¢ co) o
+ns 2S 9'5 g 5
+a 6 3
+8) £38 [8 Be
+§ ane a a F
+a
+3| faae [4 eo
+S| BREE 3
+= eo Py Orn
+= om 18 Be
+Ss. eats vp & o
+& od g = a
+GRE Se 22 =a
+a ° ° an Zz °
+as) vu 3 et .
+8 5 qos aay
+S q 3 5
+Zz Pad wy ié a)
+q
+> fg SON SN
+a. |e NS TN
+Ss] AZ2ZS)/ TTR SH
+Ss A2ZASSZQZNSze
+oe
+a 13 2 2
+g
+Ez Zz
+me
+3 8
+2a{s ° *
+se] 8
+1s) 82 {RS ah
+s :
+3 3
+Sel ¢ a 8
+s8; 3. be ts
+Fx} Se ge g
+9.38 ao Sq oO
+O8 a} oo" Zz
+2
+a a) ay <i
+=
+
+53
+
+54 TIDDIM CHIN
+
+also sometimes used to weld together two successive words, or a
+word and a suffix, within the figure, e.g.
+
+mi hing ['~] human being (cf. ‘mi’ [~] person and ‘hing’ [-] to de
+alive).
+
+zusa vasa [‘-’-] small animals and birds (cf. ‘zw’ [-] rat, mouse,
+‘va’ [-] bird, ‘sa’ [-] wild game).
+
+tapa ["-] son (cf. ‘ta’ [-] child, ‘pa’ [-] (masculine suffix)).
+
+ni sa [*-] sunlight (cf. ‘ni’ [-] day, ‘sa’ [-] to be bright).
+
+“ ki ci den ["'s] he is always called (cf. ‘ki-’ upf., ‘ci? [s] to say,
+
+‘den’ [~] always).
+
+(b) A low-high pitch relation, without characteristic correlating
+stress features, used to link a pronominal suffix or post-nominal
+particle with the preceding word. This pattern is represented by
+the symbol I~. It will be seen from the following examples that
+both high-low and low-high patterns may be combined within the
+same figure.
+
+a “Itaizel [ uh they scolded him frequently (I 1)
+allo T uh their field (1 8)
+
+‘a “ltap tung teng [ uh all over their hearth (1 2)
+
+tho nai nai [ uh sprang up all over the place (I 15)
+a “lkiang [ ah near him (I 19)
+
+a “| khuang [ tawh ‘with his drum (I 20)
+
+pial khang ah in the inner room-(1 4)
+
+In all the above examples the final suffix was uttered by the in-
+formant on a pitch high in relation to the preceding pitches in the
+figure, and was closed by a glottal stop. A similar pattern is fre-
+
+quently found linking adverbs with the preceding verb in the
+figure, and the quantifier ‘khat’ one with the preceding word in the
+
+figure, e.g.
+zu beeltung [ khat — an upright pot of beer (I 4)
+
+a “| phei lang [ khat one of his thighs (II 2)
+a”| phe T lek lek it twinkles away {II 5)
+
+In the pronunciation recorded for ‘kum sim’ [_.~] every year (I 24)
+the unusually low pitch of the first word and the high rise of the
+
+second are also interpreted as low~high figure intonation.
+
+THE NARRATIVE STYLE 55
+
+VZT almost always used the F pattern to link a pronominal
+suffix or post-nominal particle with the preceding word. He was,
+however, observed sometimes to pronounce the suffix or particle
+on a relatively low pitch after a preceding word with falling pitch,
+e.g. in ‘a tai “1 uh ciang’ when they scolded (I 2) and in ‘a tu “1
+tawh’ with a hoe (I 2). In HG’s pronunciation a relatively low pitch
+was commonest in both these contexts. He appeared to use the 71
+pattern regularly after preceding words with rising or falling pitch,
+and the IT” pattern after words with level pitch, e.g. ‘lampi “1 ah’
+(II 1) [--_], ‘inn nuai ah’ [--_], ‘Phalam 71 ah’ [.. -], but
+‘kiang I~ ah’ [-"], ‘inn sung I~ ah’ [--7], ‘Tedim I" ah’ ['-"], ‘Khaw
+Leia kici mi 7 khat’ (II 1) [*-++\--], ‘a tan “1 uh’ (II 2) [*-_], ‘a nu
+sia “T uh’ (II 3) [*-<_].
+
+The figure ‘a khe lang khat ah’ to one of his legs (II 3) is of interest
+in that it contains both the quantifier ‘khat’ and a following post-
+nominal particle. Here HG’s usage was the T link between ‘lang’
+and ‘khat’ followed by a “link between ‘khat’ and ‘ah’.
+
+(c) Certain other intonation patterns were observed which must
+be classed as figure properties, e.g. the pattern [-’--] heard in ‘kuan
+masa sak’ he let them go on in front (I 3) is to be regarded as a
+special figure intonation. The pattern that one might have expected
+here for ‘ma sa’ is ['~]. Note also two similar ‘levelling’ intonation
+patterns used by HG, ['-_] for ‘na mu ding’ (II 5) instead of the
+expected [*--], and ['--] for ‘a khe lang’ (II 3), instead of ['s~].
+The pronunciation -A “hi? recorded for ‘a hih’ in I 38, instead of
+the more usual ~4_hi? is taken as yet another instance of levelling
+figure intonation. (Formulaic notation: =.
+
+(2) The intonation of adverbial figures is always rising, (Formu-
+laic notation: //.)
+
+(¢) A special rising intonation pattern (/) was observed in certain
+verbal figures in which there is reduplication (see following sec-
+tion) of a verbal form ordinarily pronounced with a level pitch.
+In such figures the reiterated form is pronounced with a rising
+pitch. Examples are ‘a lam lam uh’ (I 23) and ‘a nui nui’ (I 31).
+
+(f) A further rising intonation pattern (//) must be posited for
+certain verbal and nominal figures in which the rising pitch of the
+final constituent word is associated with rising phrase intonation
+(see pp. 33-35, 47-48, 50-51). Examples are ‘khuang tum kawm’
+while beating the drum (I 20), ‘a sun si san’ he pierced so that it
+bled (I 27b), ‘a bual bual na’ his splashing about (1 26).
+
+56 TIDDIM CHIN
+
+(g) A special falling intonation pattern (\\) within the figure was
+observed in one case only, namely ‘a piang’ it appeared (I 25), in
+which the pitch of ‘piang’ is falling, not level as might be expected:
+from the lexical form of the word. Here, also, phrase intonation
+appears to be at work (see pp. 35-36).
+
+In some figures in the texts combinations of the above intonation
+patterns are found.
+
+In the pronunciation recorded for ‘a “1 kuan nawn [ kei’
+[*-_“] he didn’t go to work any more (I 7) the low. fall of ‘nawn’ is
+interpreted as a continuation of the high-low pattern found in
+‘a kuan’, while the high rise on the following ‘kei’ indicates a low-
+high pattern linking ‘nawn’ and ‘kei’, This compound pattern,
+high-low-high, is marked “II in the textual analysis. Other
+examples of comparable patterns are: ‘a “1 khuang [ tawh’
+[*-"] with his drum (I 20), ‘a “1lo T pa’ [*_-] the grass (I 10). In the
+latter example, it is the unexpectedly low pitch of the middle
+syllable that leads to the postulation of a low-high link between it
+and the following syllable. ;
+
+The compound pattern low-high—low ([ 1) is seen in ‘lam ["
+na “1 ding’ [»-] for the sake of the dancing (1 25).
+
+In the figure ‘a “Tlo [ uh “1 ah’ [*-”_] to their field (I 8) we have
+the triple compound pattern high—-low—high-low (“1T 71).
+
+The figure ‘a1 lam // lam I ub’ ['--7] they danced continuously
+(I 23) exemplifies both the rising intonation found in reduplicated
+verbal figures (see p. 55), a high-low link between the first two
+words, and a low-high link between the last two words (T/T).
+
+‘a “Tsun si] // san’ [*-*-] 7t bled (I 27a) is a compound of two
+high-low patterns anda rise(171/), since without the operation
+here of a special rising figure intonation the expected pitch of the
+last word would be level.
+
+‘A “Tkhe = lang I” khat “1 ah’ [*--"_] to one of his legs (11 3),
+as pronounced by HG, is an example of a quadruple compound
+intonation pattern (“I=T “1) built up as follows: high-low link
+between ‘a’ and ‘khe’, ‘levelling’ of the pitch of ‘khe’ (lexical form
+sxeé:), low-high link between ‘lang’ and ‘khat’, high-low link
+between ‘khat’ and ‘ah’.
+
+THE NARRATIVE STYLE 57
+
+B. Reduplication and pairing
+
+Within the verbal figure there may be a reduplication of either
+a verb or an adverb, shown in structural formulae by a raised ',
+
+Reduplication of adverb:
+
+kuan. kik leu leu went to work once again (I 10)
+
+kho kik leu leu cultivated it once more (I 11)
+
+anasuak pah pah hi in his absence it at once became... (I 12)
+tho nai nai uh sprang up all over the place (1 15) |
+aom lua lua it was present in abundance (I 20)
+
+a hau mah mah he was very rich (I 21)
+
+a phe lek lek it twinkles away (II 5b)
+
+The figure ‘dawng zel zal’ (I 5) answering loudly illustrates a
+special kind of reduplicated adverb, very common in the colloquial
+style, in which there is a variation in the vowels of the adverb and
+
+which is referred to as chiming. This type of reduplication is noted
+in structural formulae by °°,
+
+Reduplication of verb:
+
+a tai tai uh they scolded him continuously (I 8)
+gem gem crept up gradually (1 16)
+_nane ne ate away (I 39)
+alamlamuh they danced continuously (I 23)
+a nui nui he laughed and laughed (1 31)
+
+The special intonation pattern characteristic of the last two
+figures cited above is described in the preceding section,
+
+Within the nominal figure, reduplication may be accompanied by
+pairing (see p. 39), as in ‘mihing ganhing zusa vasa te’ all living
+things, humans, animals and small creatures ({ 22) where ‘mi’ is
+paired with ‘gan’, ‘zu’ with ‘va’, and ‘hing’ and ‘sa’ are reduplicated,
+Nominal figures consisting of verbal sequences nominalized by
+
+a nominal sufhix (see p. 65) may exhibit reduplication of the verb
+or adverb in the same way as verbal figures, e.g.
+
+abualbualna his splashing about (I 26)
+
+58 TIDDIM CHIN
+
+C. Figure stress
+
+Prefixes, whether pronominal or verbal, are always lightly
+stressed in relation to the following word. Where there is asequence
+of two prefixes, both are lightly stressed in relation to the next
+following full word. This stress pattern, which serves to bind
+together the constituent elements of the figure, is always accom-
+panied by certain characteristic intonational features (see pp. 52~
+55) and by relative shortness of the vowel of the prefix. Its formulaic
+notation is “~.
+
+The nominal suffix ‘na’ has a similar stress relationship with a
+
+following nominal auxiliary within the nominal figure, e.g.
+
+saa muat loh na [na] ding i order that the meat might not
+spoil (I 24).
+
+lam na [na] ding so that they might dance (1 25)
+
+The pronunciation of the nominal suffix ‘na’ in these two examples
+is to be contrasted with its pronunciation fully long and fully
+stressed when it is final in the figure, e.g. ‘a bual bual na [-na:]’
+his splashing about (1 26).
+Examples of a pronominal prefix and a following stress-linked
+noun or verb are too numerous in the texts to require separate
+citation here. It may be useful, however, to ‘note the following
+examples of two consecutive prefixes at the beginning of a figure:
+
+veL
+
+anasuak in his absence it became... (1 12)
+amakai he went in front (1 30)
+
+ve
+
+The same stress relationship may sometimes operate between
+two or more words within a figure or between a word and an affix,
+
+thus welding them the more closely together, e.g.
+
+‘-  sita w+a. die instantaneously (I 40)
+“=  mihing = 7.-+-2. human being (1 22) -
+
+“~ vasa n-+n. birds (I 22)
+
+“- nisa n+. sunlight (I 35)
+
+“= khapi n.--Nnvs. moon (I 25)
+
+“- sasem sw. -+-v, meat-carver (1 26)
+
+““-  kiciden wpf.tu.ta. he is always called (I 29)
+““-  yvasabu os w,-tn.-+7. bird’s nest
+
+(For the abbreviations of the names of word-classes see p. 62.)
+
+THE NARRATIVE STYLE 59
+
+D. Mood as a characteristic of figures
+
+Figures may be said to be characterized by mood according to
+whether the verbs which they contain are in Form I or Form If
+(see pp. 40, 72). The verbs in a given figure are always all in the
+same form (see p. 86). Verbal figures containing a verb or verbs
+in Form I are characterized by the indicative mood; verbal and
+adverbial figures containing a verb or verbs in Form II are
+characterized by the subjunctive mood. Mood is not held to be a
+property of nominal figures although these also may contain verbs
+(see pp. 64-66).
+
+E, Case as a characteristic of the
+nominal figure
+
+All nouns have two possible forms. One, referred to as the direct
+form, is appropriate to the great majority of linguistic situations;
+
+the other, referred to as the oblique form, is restricted to certain
+
+types of nominal figure, or to certain semantic contexts. Where
+this formal variation (which is described on p- 70) expresses a
+grammatical relationship between placed elements of the nominal
+figure, this relationship is stated as one of case. When two con-
+secutive nouns within the same nominal figure are both in the
+direct form, the case relationship between them is described as
+direct; when the first noun is in the oblique form, the case relation-
+ship is described as oblique. The commonest example of an
+oblique case relationship within the nominal figure is supplied by
+a construction which corresponds closely to the genitival con-
+struction in English. In such constructions the noun which con-
+stitutes the first placed element of a nominal figure of the type
+n.-n, is in the oblique form. This is recognized orthographically
+by the writing of an apostrophe after the noun concerned, e.g,
+‘Dahpa’ khuang’ Dahpa’s drum. In similar constructions of the
+type n.-\-ns.+-n. the nominal suffix attached to the first noun is in
+the oblique form, In the grammatical formulae the oblique form of
+noun or suffix is indicated by a raised ° after the appropriate
+abbreviation. The direct form, which is by far the commonest, is
+left unmarked, e.g.
+
+-da’~paz n, Dahpa, but .da*-paz “xuay (I 35) 2.°-+-n. Dahpa’s
+drum.
+
+' 60 TIDDIM CHIN
+
+The oblique case is a characteristic of nominal figures consisting
+of a noun followed by the nominal suffixes ‘pa’ and ‘nv’, e.g.
+“gal n. war, enemy, ~Satl -tex n.--ns. enemies, but -garl -pa:z
+n.°--ns, an enemy. Compare also ~ur n, with Ur-pat 1.°--n5.,
+both meaning elder brother, and -naru n. younger sibling, “nau
+-pa: 2.°-++-ns. younger brother, -naxa -nut n.°--ns. younger sister,
+
+Some nominal figures consisting of a noun followed by a verb
+also show the noun in the oblique form. Compare -miz . person
+with smi: -hin 2.°+-v." human being.
+
+With nouns of inanimate or abstract reference in the texts (see
+also p. 141) the oblique form is not the exponent of case but of a
+difference in semantic content which finds lexical expression in
+the English translation. Compare ~zam 1. night with ~zarn n°
+yesterday, and ~tux -niz 2.°-+n.° today with -tu: 2, now and “ni:
+n, day,
+
+F. Figure-final glottalization
+
+The glottal constriction which is frequently heard towards the
+end of the rising pitch-contour of cértain words and affixes when
+they occur in figure-final position in the texts (see p. 18)
+appears to function as a mark of the boundaries between figures,
+and is thus interpreted as the realization of an element of figure
+structure for which the term figure-final glottalization is used.
+
+The syllables most regularly affected by it are the nominal
+suffixes ‘te’ and ‘pa’ (see pp. 101, 103), the nomino-verbal suffix
+‘pi’ (see pp. 102-3), and the adverb ‘sa’, This is, however, not an
+
+indication that the feature is to be regarded as an integral part of
+
+the syllabic structure of such forms but is rather the result of their
+relative frequency in the texts and of the fact that their grammatical
+functions dictate that they are most commonly found at the end of
+figures (see p. 69). That figure-final glottalization is not peculiar
+to affixes is proved by a few instances in the texts of its occurrence
+with tone 3 nouns. It is perhaps worth remarking that no instance
+is recorded of its occurrence with verbs.
+
+The following are examples of passages in the texts which were
+regularly pronounced with the type of figure-final glottalization
+under discussion: ‘Dahpa Thu’ (I 0), ‘a sawt pi’ (I 8), ‘tua te’
+(I 37), ‘lo khawh sa’ (I 14), ‘dawi pa’ (1 16), ‘a lopa’ (I 10), ni
+tamp?’ (I 13), ‘an min sa’ (I 18), ‘a om takpi’ (I 18), ‘a suak kik
+
+_THE NARRATIVE STYLE 61
+
+takpi’ (I 17). Glottalization was never present when a figure was
+immediately followed in the phrase by the particle ‘in’, even when
+the last syllable in the figure was one of the suffixes ‘pa’, ‘te’, or
+‘pi’. Contrast, for example, in the pronunciation of the texts set
+out in Section VII (pp. 120-40), ‘tua te’ (I 37) with ‘a innkuan
+pih te in’ (I x and 8), ‘ka lo cing pi’ (I 17) with ‘a lo cing piin’ later
+in the same sentence, and ‘leikha’ (I 38) with ‘leikha in’ in the
+following sentence.
+
+In this study passages such as ‘a lopa khawh khiat sa teng’ all the
+grass that had been weeded out already (I 10) are analysed as single
+nominal figures (see p. 66). It is clear, however, that we are con-
+fronted here ‘by the problem familiar to all grammarians of the
+operation of grammatical structures as constituent elements within
+larger grammatical structures of the same order. The boundaries
+of these “figures within figures’ in the passage cited were clearly
+defined in utterance by the regular glottalization of ‘pa’ and ‘sa’,
+Similarly marked are other composite nominal figures such as
+‘a khawh sa teng’ (I 12), with a boundary between ‘sa’ and ‘teng’
+and ‘lopa a kikho khia sa te’ (I 15), with boundaries between ‘lopa’
+and ‘a’ and between ‘sa’ and ‘te’, The final glottalization of ‘sa’
+meat in the composite figure ‘sa a muat loh na ding’ for the sake of
+the meat not going bad (I 24) serves the same purpose.
+
+Elsewhere in the texts usage was variable. In ‘zusa vasa te’ small
+anunals and birds (I 22 and 37), glottalization was usually present
+in the second ‘sa’, frequently absent in the first. ‘khapi’ moon
+(I 25) was sometimes glottalized, sometimes not: ‘bilp’ rabbit
+(I 34) was on no occasion recorded with final glottalization.
+Clearly, the careful recording of many more examples is needed
+before the role of final glottalization of this type could be formu-
+lated with any degree of precision, but it has been decided for the
+purposes of this study to treat it as a figure-final, not as a syllable-
+final, feature.
+
+Also interpreted as the realization of figure-final glottalization is
+the glottal stop heard. at the end of the post-nominal particles
+‘tawh’ and ‘ah’, The reasons for regarding this glottal stop as an
+element of figure rather than of word or syllable structure are set
+out in the section on pp. 104-5 dealing with the syllabic structure
+of particles,
+
+In structural formulae in the detailed analysis of the texts on
+pp. 120-40 figure-final glottalization is noted by a raised comma’
+
+62 TIDDIM CHIN
+
+after the relevant symbol for the figure concerned. Where the figure
+concerned is a composite one (see p. 61) with more than one
+boundary marked in this way, the number of raised commas is
+increased accordingly, e.g. N’’’.
+
+G. The nature, number, and arrangement of the constituent
+placed elements
+
+The constituent placed elements of figures are words and affixes.
+The words which constitute placed elements of figures are
+assigned to the following classes: nouns, verbs, quantifiers, adverbs,
+verbal auxiliaries, nominal auxiliaries, and adverbial conjunctions.
+
+In structural formulae nouns are represented by the abbreviation _.
+
+n., verbs by v., quantifiers by g., adverbs by a., verbal auxiliaries
+by va., nominal auxiliaries by ma,, and adverbial conjunctions
+by ae.
+
+The affixes which, in combination with words from the classes
+referred to above, may go to make up figures are classified as
+pronominal prefixes (ppf.), verbal prefixes (upf.), pronominal
+suffixes (ps.), nomino-verbal suffixes (nvs.), nominal suffixes (ns.), and
+post-nominal particles (pup.).
+
+A figure may consist of an independent word (see p. 69) by
+itself, but never of a dependent word (see p. 69) or affix by itself.
+
+A post-nominal particle always marks the end of a nominal
+figure.
+
+A pronominal prefix always marks the beginning of a figure,
+nominal or verbal, except in the special cases set out on p. 61.
+
+Figures may, however, begin and end without prefixes, suffixes,
+or particles,
+
+The nominal figure
+
+The nominal figures in the texts are constituted in the following
+ways:
+(a) By a single noun, with or without a pronominal prefix and with
+or without suffixes, e.g.
+
+n, zingsang morning (I 2)
+Dahpa Dahpa (1 1 et al.)
+amah he (I 3)
+inn house (1 6)
+
+lo fields (1 7)
+
+THE NARRATIVE STYLE : 63
+
+ppfi-n. "a zing
+
+a khuang
+
+a mit
+n-ns. galte
+n.-NVS. bilpi
+ppf.-n.-nvs. a.sawt pi
+2.-NUS.-NS. innkuan pih te
+Dpf.-n.-nvs.-ns, a innkuan pih te
+
+the morning (I 10)
+his drum (1 16)
+his eyes (I 31)
+enemies (II 1)
+
+the rabbit (I 34)
+
+a long time (I 8)
+the family (1 8)
+his family (I 1)
+
+(6) By a single noun, with or without affixes, and a post-nominal
+
+particle, e.g.
+
+to his house (1 20)
+
+in the inner room (I 4)
+with his hoe (I 2)
+
+with his drum (I 20)
+to his hole (I 32)
+
+on the road (II 1)
+
+to their fields (I 8)
+
+the story of Dahpa (I 0)
+breakfast (I 3)
+
+that star (II 5)
+
+Dahpa’s drum (I 35)
+Khua Let's dog (II 5)
+
+n.-pnp. inn ah
+pialkhang ah
+Dppf.-n.-pnp. a tu tawh
+a khuang tawh
+a kua ah
+1.-NUS.-pnp, lampi ah
+Ppf.-n.-ps.-pnp. alo uh ah
+(c) By two successive nouns, with or without affixes, ¢.g.
+NN Dahpa Thu
+zingsang an
+tua aksi
+2°-n, Dahpa’ khuang
+Khua Le?’ ui
+bpf.-n.-n.-nvs. a cl pumpi
+
+his body (I 26)
+
+(2) By a noun and a nominal auxiliary, followed by a post-nominal
+
+particle, e.g.
+
+n.-na.-pnp. lo lai ah
+
+in the middle of the field
+
+(I 14)
+
+(e) By two successive ‘nouns and a nominal auxiliary followed by
+
+a post-nominal particle, e.g.
+
+Nn,-na~pnp.
+
+n.°-n.-na.-pnp.
+kiang ah
+
+vok gawl dawn a(h) on the top of the pig fence
+
+(I 27)
+
+Khua Lei’ khuk near Khua Lei’s knee (I
+
+5)
+
+64 TIDDIM CHIN
+
+(f) By a nominal auxiliary preceded by a pronominal prefix and
+followed by a post-nominal particle, e.g.
+
+Dpf.-na.-pnp. a kiang ah at hand, near by (1 19)
+(g) By a quantifier by itself
+khat one (I 14)
+kheempeuh all (I 37)
+
+(A) By a noun with or without affixes, followed by a quantifier, with
+or without a following suffix, e.g.
+
+nq. khuang khat a drum (I 14)
+ni sagih seven days (I 23)
+sakhi khat a barking deer (1 28)
+kum sim every year (I 24)
+
+ppf-n-g.-nvs. a lo cingpi his whole field (1 17)
+
+(i) By a noun, with or without a prefix, followed by a nominal
+auxiliary and a quantifier, with or without a suffix, e.g.
+
+a phei lang khat one of his thighs (II 2)
+
+ppf.-n.-na.-q.
+a tap tung teng uh ail over their hearth (1 2)
+
+ppf.-n.-na.-q.-ps.
+
+(j) By a sequence of a noun with or without a prefix, a nominal
+auxiliary, and a quantifier, followed by a post-nominal particle, e.g,
+pof.-n.-na.-q.-pnp. akhelangkhatah Zo one of his legs (II 3)
+
+(k) By a sequence of a noun, prefixed or otherwise, and a verb in
+Form I, linked by features of stress and intonation (see p. 58), ¢.g.
+
+not khuadam the cold weather (I 24}
+khuavak light (I 25)
+sasem meat-carver (I 26)
+no-v,t mihing human being (1 22)
+
+(7) By the same sequence as at (k) followed by a post-nominal
+particle or nomino-verbal suffix, e.g.
+
+many days (1 13)
+in the sunlight (I 35)
+
+n.-0.1-nvs. ni tampi
+n,-v.1-pnp. nisa ah
+
+n-v7-n, ni dang lai
+
+THE NARRATIVE STYLE 65
+
+(m) By a sequence of nouns, prefixed or otherwise, verb in Form
+I, and adverb, e.g.
+
+N-VIna, an min sa
+zu khaih sa
+
+ready-cooked food (I 18)
+ready-prepared beer (119)
+
+(n) By a sequence of two nouns, a nominal auxiliary, and a verb in
+
+Form I, e.g.
+
+vok gawl dawn the sharp top of the pig
+hiam fence (I 27)
+
+A-N.-na.-v
+
+(0) By a sequence of a noun, a verb in Form I, and a noun, e.g.
+in other times {II 1)
+
+(p) By asequence of two nouns, a verb in Form I, and a noun, e.g.
+
+N~N.-V.1-n, phalbi khuadam — a cold winter season (I 24)
+
+hun
+
+(q) Nominal suffixes are constituent elements exclusive to nominal
+figures (see p, 100) and as such may have the effect of nominalizing
+an otherwise predominantly verbal sequence. The affixation of a
+nominal suffix to a verb marks the figure concerned as nominal,
+The verb is in such cases in Form II, e.g.
+
+ppf.-v.U-ns, a bual buai na his splashing about (1 26)
+n.-ppf.-epf.-v.1-v.™ lopa a kikho khia the grass which had been
+a sa te weeded out already (1
+
+15)
+
+It will be seen from the above examples that the figures cited
+here show exceptional features and are, in fact, composite struc-
+tures which may be regarded as composed of ‘figures within
+figures’ (see also p. 61).
+
+(r) Nominalized sequences such as those described in (g) may be
+followed, in this same figure, by a nominal auxiliary, e.g.
+
+vtlns.-na. lam na ding for the sake of the dancing
+
+(I 25)
+n.-ppf.-v 4-91 sa a muat loh na for the sake of the not-
+
+~ns.-na. ding going-bad.of the meat
+(I 24)
+
+© 2238 F
+
+66 TIDDIM CHIN
+
+(s) The presence of a quantifier is also a mark of a nominal figure
+and has, like that of a nominal suffix, a nominalizing effect on a
+preceding verbal sequence, e.g.
+
+ppf.-v.U-a.-g. all that had been culti-
+vated already (I 12)
+
+all the grass that had
+been weeded out al-
+
+ready (I 10)
+
+a khawh sa teng
+
+a lopa khawh «
+khiat sa teng
+
+ppf.-n.-v.-01-4,-g,
+
+Other examples of nominal figures closed by a quantifier are:
+
+1.-1.-U.1-a.-g, zu beel tung khat an upright pot of beer (I 4)
+n.-ppf.-vpf.-v.-n.- Khawleiakici mi a person called Khua Lei
+g. khat (II 1)
+(n.-v.4)"?-(4.-n.)"?- mihing ganhing "all living creatures, hu-
+nS.-g. zusa vasa mans, animals, small
+kheempeuh creatures and birds (I
+22)
+
+(2) Form II of the verb, with or without following adverb, may
+sometimes function as a nominal figure without an accompanying
+nominal suffix or quantifier (see also p. 86), e.g.
+
+git zunun beer feast (1 35)
+
+v.tla, khawh sa already cultivated (I 17)
+vtiig 1 khawh loh uncultivated (1 10)
+ppf.-v.U-a* adeih peuh peuh whatever he wanted (I 20)
+
+Not occurring in the texts, but clearly illustrating this nominal
+function of Form II of the verb, are such common words as ~lazm
+a dance (cf. -lazm, ~lazm to dance) and snark nose (cf. ~natk, -
+~nazk to breathe). . ,
+
+The verbal figure
+The verbal figures in the texts are constituted as follows:
+(a) By a single verb with or without affixes, e.g.
+
+v2 vak walking (I 14)
+ci saying (I 2 et al.)
+v.7F gem gem creeping up gradually (I
+16) .
+
+so
+
+THE NARRATIVE STYLE 67
+
+ppf.-v4 a nunung he went behind (I 3)
+
+a ciah he returned (1 9)
+
+a tum [-tum] he beat (1 14)
+ppf.-o.tt a tum [~tum] he beat {I 15)
+upf.-v.t na ne ne eating away unbeknown
+
+, to him (I 39)
+
+ppf.-vpf.-v.t a vakuan he went off to work (I 8)
+
+‘a makai he led (1 30)
+ppf.-v.1-nvs. a tai pih he dragged with him (I
+
+28b)
+
+ppbf.-v.1-ps. a tan uh they cut off (II 2)
+
+a pho uh they dried (tt) (I 35)
+ppf.-o.1 ps, a tai uh they scolded (him) (I 2)
+
+(6) By a verb, prefixed or otherwise, followed by an adverb, with or
+without a following suffix, e.g.
+
+va, lup sim filled and prepared it
+secretly (I 4)
+v.l-a.t-ps. tho nai nai uh sprang up all over the
+. place (I 15)
+v,t-a,re dawng zel zal answering loudly (I 5)
+ppf.-v.t-a. a ciah kik he went back (I 5)
+a leih pah he at once added water (1 6)
+. a ne pah he ate it at once (I 19)
+upf.-v.1-a, na po kik growing again in his ab-
+sence (1 10)
+ppf.-v4-a.t ahau mah mah — he was very rich (I 21)
+ppf.-v.4-a.-ps. a tai zel uh they scolded him often
+
+(fx)
+anasuak pah pah it immediately became in
+has absence (1 12)
+
+bpf.-vpf.-v.7-a.*
+
+(c) By a sequence of two verbs, with or without affixes, e.g.
+
+voy tT neek khit after eating (I 3)
+
+ppf.-v."-o 1 a khuh khit after he had covered (1 4)
+
+ppf.-v.1-v.1-nvs, a om takpi there it really was (I 18)
+
+ppf.-o.-v lps, a thah khit uh after they had killed him
+(IE 2)
+
+ppf.-v.t-v1 abiamangngilh —_he forgot topropitiate(138)
+
+68 TIDDIM CHIN
+
+(2) By a sequence of two verbs, prefixed or otherwise, followed by
+an adverb, e.g.
+
+ppf.-v.1-v.l-a, akuan nuam kei he didn’t like to go to
+work (1.1)
+
+(e) By a sequence of three verbs with or without prefixes, e.g.
+
+v._vpf.-v.t-vt kuan masa sak (he) let them go on ahead
+(I 3)
+
+(7) By a sequence of a verb and an adverb followed by a second verb
+and adverb, with or without prefixes, e.g.
+
+ppf.-v.1-a.-v.l-a, asam kik zo kei they couldn't call him
+back again (1 33)
+
+(g) By a verb, prefixed or otherwise, followed by two adverbs, e.g.
+
+ppf.-v.4-a.-a, akuan nawn kei he never went again (I 7)
+v.1-G.-4.7 kho kik leu leu (he) cultivated all over
+again (I 11)
+
+(h) By a verb, with or without affixes, followed by a verbal auxiliary,
+e.g.
+ppf.-v.t-va. na mu ding you will see (II 5)
+
+(7) By a sequence of verb, with or without prefixes, adverb, verb,
+and suffix, e.g.
+
+Ppf-v."-a.-v.l-nvs. asuakkiktakpi it really once more became
+
+(I 17)
+
+(j) By a sequence of prefixed verb and a noun with a stress intona-
+tion relationship between them, e.g.
+
+ppf.-vt-n, a leh lam he went backwards (1 28b)
+
+(k) By a sequence of prefixed verb, noun, and verb, with a stress
+
+intonation relationship between the noun and the second verb,
+
+e.g. ;
+
+ppf.-v4-n.-o4 a sun sisan at pierced so that it bled
+, (I 27b)
+
+THE NARRATIVE STYLE 69
+The adverbial figure
+
+The only placed elements of adverbial figures in the texts are
+adverbial conjunctions (see p. gr).
+
+The citational figure
+
+A citational figure is a passage of direct speech functioning as
+a constituent of a predicative phrase (see pp. 46-47). The passages
+which occur in the texts are discussed and analysed in the section
+of this study which deals with the colloquial style (see pp. 113-17),
+
+4. WORDS AND AFFIXES
+
+Words and affixes are the ultimate grammatical constituents ;
+that is to say, they are not regarded as structures consisting of yet
+smaller grammatical elements. As phonological structures, how~
+ever, they are regarded as constituted of syllables and other word
+properties, which in their turn are built up of phonematic and
+prosodic elements (see p. 19).
+
+Words are classified as independent or dependent.
+
+Independent words, which are subdivided into four classes,
+nouns, verbs, quantifiers, and adverbial conjunctions, may be co-
+extensive with figures, or indeed with the larger structures, phrases,
+and sentences. Dependent words never occur except as consti-
+tuents of grammatical structures alongside other words or affixes.
+Dependent words are subdivided into three classes, verbal
+auxiliaries, nominal auxiliaries, and adverbs.
+
+Affixes always occur, either singly or in groups, at the junction
+points of figures, phrases, and sentences. They can never, by
+definition, form the sole constituent of figure, phrase, or sentence.
+Affixes are subdivided into three classes, prefixes, suffixes, and
+particles. These classes are further subdivided into pronominal
+prefixes, verbal prefixes; pronominal suffixes, nominal suffixes,
+nomino-verbal suffixes; sentence particles, phrase particles, figure~
+linking particles, and post-nominal particles,
+
+Independent Words
+A. Nouns
+
+All nouns have two forms. This formal variation distinguishes
+nouns from all other classes of words. It will be seen that the formal
+
+Jo TIDDIM CHIN
+variation is quite distinct from that characteristic of verbs (see
+PP. 72-89).
+
+‘The alternance is a tonal one. Where the noun has more than
+one syllable, this alternance operates in the last syllable only. The
+form of the noun that is by far the commonest in the texts is
+referred to as the direct form, the less common form is referred
+to as the oblique form (see p. 59). The alternance appears to be
+absolutely regular, and is as follows:
+
+Tone of direct form Tone of oblique form
+I (rising) 3 (falling or low level)
+2 (level) 1 (rising)
+
+2 (level)
+
+3 (falling or low level) —
+
+This may be simply represented as follows
+
+rt
+
+3
+KY
+\at
+
+It will be seen that the two forms are mutually predictable in so
+far as their tonal structure is concerned. Nouns with more than
+one syllable show variation in the final syllable only. The phone-
+matic structure of the two forms is always the same but there may
+be alternation of quantity and syllable closure features. Nouns the
+final syllables of whose direct form is of the structure (C)V3~ have
+an oblique form of the structure (C)V2*~. It is possible that the
+shortness of the vowel and the final glottal stop of such direct
+forms, which are always final in the figure, should be regarded as
+pertinent to figure rather than to word or syllable structure, as in
+the case of some other words (see pp. 104-5), e.g.
+
+Direct form
+
+Oblique form
+amah “4 ma?’ he ama “Aa-~max fis
+
+The use of the oblique form
+
+The use of the forms of the noun as the exponents of direct or
+oblique case within the nominal figure has already been described
+on pp. 59-60. Further examples at this point may be useful,
+
+THE NARRATIVE STYLE _ 7
+
+Compare:
+Shazu ~gou_ Haugo (a name), with
+“hatu ~gou “wi: Haugo’s dog
+~vul “24 ~thayy Vul Za Thang, with
+~vul “za -than -*wiz Vul Za Thang’s dog
+“yul Man Ngul Lang, with
+“gul “lay -*wi: Negul Lang’s dog
+“x3 “lei Khua Lei (II 0), with
+“XS “lei <xurk -kian “a? near Khua Lei’s knee (II 5b)
+
+In the last example cited, there is an oblique case relationship
+
+between ‘Khua Lei’ and ‘khuk’, and a direct case relationships. tc. 4.
+
+between ‘khuk’ and ‘kiang’.
+
+Other special uses of the oblique form in certain grammatical ©
+
+and semantic contexts have already been mentioned (see p. 60).
+Yet another instance of its use is illustrated by sentences such as
+‘keima (oblique) a hi hi’ it zs mine, ‘Dahpa’ (oblique) a hi hi’ zt zs
+Dahpa’s, &c. The first example, in which there is no pronominal
+concord to be stated between ‘keima’ and the prefix ‘a-’, may be
+compared with ‘keimah ka pai hi’ J went where there is such con-
+cord between the nominal form ‘keimah’ J, and the pronominal
+prefix at the beginning of the verbal figure (see p. 32). The pro-
+nominal prefix in ‘Dahpa’ a hi hi’ is ambiguous, as formally it
+could concord with ‘Dahpa’. The only formal expression of the
+absence of concord in the sentence cited is the use of the oblique
+form of the noun.
+
+The syllabic structure of nouns
+
+The great majority of the nouns in the texts are monosyllabic,
+and call for no special mention from the point of view of syllabic
+structure,
+
+Of the disyllabic forms here classed as nouns, further research
+into both Tiddim Chin and the Chin dialects would almost cer-
+tainly suggest the reclassification of a number of these, such as
+‘zingsang, pialkhang, aksi, niloh, nitak, sakhi, kuamah, keimah’,
+&c., as nominal figures consisting of two nouns in direct or oblique
+case relationship, or of a noun and following verbal form. Until it is
+possible, however, to relate both elements of such forms with
+certainty to the figure types already discussed (see pp. 62-66), or
+
+7% TIDDIM CHIN
+
+to new ones it is found desirable to postulate, it seems best to treat
+them as single words (see remarks on ‘innkuan’ and ‘gualnuam’
+on pp. 87 and 89).
+
+The two syllables of what are here classed as disyllabic nouns
+are frequently bound together by stress and pitch features recalling
+those already discussed as features of figures (see pp. 52-58). For
+instance, in ‘sakhi’, ‘niloh’, ‘nitak’, and ‘amah’, the first syllables
+have a high-low pitch relation with the second syllable, and a
+weak-strong stress relationship, e.g.
+
+“~ “Tsakhi, “71 niloh, “77 nitak, “7 7 amah.
+
+A low-high pitch relationship without accompanying stress fea-
+tures obtains between the two syllables of such words as ‘baibek’,
+‘tangteuh’, and ‘taksang’.
+
+B. Verbs
+
+Verbs are distinguished from all other classes of words by their
+formal scatter. All verbs have two alternating forms, dependent
+upon grammatical context (see pp. 84~89). In the great majority
+of the verbs recorded one of these forms, hereafter referred to as
+Form II, can always be predicted from the other, hereafter referred
+to as Form I. Such verbs may be termed regular. All other verbs
+are irregular.
+
+The formal scatter of regular verbs is correlated with the phono-
+logical structure of the last syllable of Form I.
+
+Regular verbs
+
+All verbs whose Form I has a long final syllable with tone 1 or 2
+have tone 3 in Form JI. There is no other change except that when
+the final consonant in Form I is a velar nasal, the final consonant
+in Form II is always an alveolar nasal. This special relationship
+between velar and alveolar finals, which is peculiar to verbs as a
+class, suggests that both post-nuclear K and T are realized as
+alveolars in the Form II of verbs whose Form I is accompanied by
+gradual syllable ending. That the alveolar realization of post-
+nuclear K is not bound to tone 3 syllables as such is clear from such
+forms as ~dazn to be pale, ~lan to appear, and others (see p. 78).
+That it is bound to gradual closure in Form I is shown by such a
+series as -xatk, ~xark to close, -xaiy, >xatn to lift up, ~matk,
+
+THE NARRATIVE STYLE 73
+
+“ma: to form a rash, ~dam, _dat to be pale. An alternative solu-
+tion would be to postulate a change of post-nuclear unit in Form II
+for such verbs, but this would be without parallel elsewhere in the
+language and is therefore rejected in this study.
+
+_ Examples are given in phonetic transcription, since the tradi-
+tional orthography seldom indicates vowel length,
+
+Verbs with Tone x in Form I, Tone 3 in Form Il
+(Long Syllables)
+
+Phonological summary: (C)Vet! or’ | (C)Ves! “or? A
+
+The examples are shown in Form I.
+
+-kuan to go to work
+-aim to be jealous
+
+ait to cut
+
+dail to protect
+
+-daxk to look beyond
+“Sark to tighten
+
+“gem Zo tell
+
+chat! to burn
+
+-karn to jump over
+“Marp to exempt
+
+-mdil to be blunt
+
+“perk to be flat
+
+“soip to watch
+
+~vatk to walk
+
+-zaip to fan
+
+-zaim to fall to the ground
+charm to utter wild cries
+-karp to shoot at
+
+“Kati to bend the head sideways
+-kimn to move
+
+-kurn to bow
+
+-kitk to be reversed
+
+-xaim to forbid
+-xatk to close
+“xeim to deceive
+-sain to accelerate
+-taxi to scold
+-vait to beat down
+-zuau to le
+
+-lu:t to enter
+
+lati to wrestle
+-lam to be afraid
+-muat fo decay
+“nazi to be near
+-nexu to be small
+-nuak to sulk
+-nark to wait:
+-yait to be strict
+“pati to be pregnant
+-saiu to be long
+-ta:u to groan
+-zam to break to pieces
+“pat to shred, fray
+
+74 TIDDIM CHIN
+
+Verbs with Tone 2 in Form I, Tone 3 in Form II
+(Long Syllables)
+
+Phonological summary: (C)Vc? ~9r’ / (C)Vc3 ~ or?
+
+The examples are shown in Form I.
+
+“ori to agree
+
+~sain to foretell the future
+
+“sap to rent
+
+“sazi to press a trigger
+
+~bati to be lame
+
+~bual to sewim
+
+“tarm to spend the night
+
+“to:p to stop
+
+~vark to feed
+
+“zarm to grow, shoot up
+
+“paru fo speak
+
+~phuai to scratch (e.g. with the
+Jinger-nail) _
+
+~zatk to spread (a blanket)
+
+~di:k to inhale
+
+“gai fo conceive
+
+~hazm to be old
+
+“hurp to attract
+
+“hiam to be sharp —
+
+~kark io dilate
+
+“xark to open wide
+
+~xait to be old
+
+~xati to hang
+
+“SeIp fo winnow
+
+~larm ‘to dance
+
+turk to collapse
+
+~la:k to expose
+
+-liau to pay a fine
+
+~luxp to prepare (beer pot)
+“luti to be old
+
+“mam to be straight
+~mazn to be true
+
+“maui fo be null and void
+“mol to play —
+~natk to breathe
+
+“nizm fo aim at
+
+“tam to be deprived of
+“pari to worship
+
+_ The following have a final velar nasal in Form I and a final
+alveolar nasal in Form II (see p. 72):
+
+-xaiy, <xain to lift up
+-parn, spain to defend
+
+-zary, ~zamn to be light
+“tuay, ~tuan to perch
+
+All verbs whose Form I has a short final syllable with tone 1 or 2
+and gradual syllable closure also have tone 3 in Form II, with no
+other change except as specified above for verbs whose Form I
+
+ends in a velar nasal.
+
+THE NARRATIVE STYLE
+
+Verbs with Tone x in Form I, Tone 3 in Form I
+(Short Syllables)
+
+Phonological summary: (C)Vc!*~ / (C)Ve3*~
+The examples are shown in Form I.
+
+-bal to tear off
+-dai to be shallow *
+“gam fo be dry
+
+.-ham to be coarse
+
+chai to be foolish
+-heu to wither away
+-mai to grope for
+-xam to be replete
+-zin to travel
+
+dei to separate
+-lal to migrate
+‘lam to build
+
+lei to buy
+
+-man to finish
+-may to be lost
+
+-tuyy io arrive
+-vay) to be sparse
+-om to be present
+-gan to be profuse
+-kay to dry up
+-pal to stumble
+-pan fo be very thin
+-phou to be dry
+-tam to be many
+-tan to cut off
+-tum to beat
+
+-vau to strike
+
+-zai to be wide
+-dan to be different
+
+Verbs with Tone 2 in Form I, Tone 3 in Form II
+(Short syllables)
+
+Phonological summary: (C)Ve?*~ / (C)Ve3*~
+The examples are shown in Form I.
+
+“san to be red
+
+“sam {to incant
+
+“sai to take charge of
+“tam to be level
+
+“tay to be straight
+-vaty to form a hole
+“very to be over
+
+-vom to be black
+~zan to stretch
+
+~zay to be capable of reaching far
+~z0l to be greasy
+~ban to slash
+
+“dam to be well
+
+“dau to be insipid
+“dou zo fight
+
+“hai to be greedy
+~kan to inguire
+
+~keu to be dry
+
+~xam to lay crosswise
+-xal to control
+
+“pou fo grow
+
+“xoi to suckle
+
+“man to be sticky
+~mal Zo tear to pieces
+“min fo be cooked
+“nam to be smelly
+
+75
+
+76 TIDDIM CHIN
+
+Since short syllables with abrupt syllable closure, i.e. those
+closed by a glottalized continuant, or by a voiceless stop, or by a
+glottal stop, are precluded by their syllabic structure from the
+tonal variation common to other syllables, being always pronounced
+on a low level pitch regarded as a realization of tone 3 (see p. 19),
+regular verbs whose Form I has a final syllable of this structure
+show no change in Form II. .
+
+EXAMPLES:
+Phonological summary: (C)V(c)}3” / (C)V(c)3”
+
+-nai? to draw near (tr.) ~dei® _g9” fo envy
+
+-Ka? to receive, get -man_yil® to forget
+
+-yat to face towards dei? to want
+
+-pal? to blossom -8a” to bear fruit
+
+-pha? to lay, spread ~lei® to add water (to beer)
+-sa* to be thick -xai? to filter
+
+-Sak to cause to be done -mal? jo. swell with moisture
+-Sil’ to wear -Se” to cover with a blanket
+-tak to be right el? to write
+
+-tai’® fo rob -ha? to clear away
+
+te? to measure hoi? to be good, beautiful
+-val? to swallow . hai? to miss, go astray
+
+-la? to be incapable -heu? to prune
+
+-lou? to settle down -ka* to climb
+
+-le? to return -kal? to bolt (a door)
+
+-lai? to change -ke? to leak
+
+al? to taste bitter ~xa? to set fire to
+
+-ap to be mouldy -xi’ to tie
+
+-ba? to be tired -xe® to crack open
+
+-bak to catch in the mouth -xu? to cover
+
+-bat to wear in the ear | -ne? to huddle together
+
+bo? to seize -pe” to join up
+
+~cia? to return home -mai? to plaster with mud
+-da? to be sad
+
+Regular verbs whose Form I has a long final syllable with tone 3
+and abrupt syllable closure are unchanged in Form II, e.g.
+
+Phonological summary: (C)Ve3” / (C)Vc3?
+
+Mlexk to outweigh
+smatk to form a rash
+
+“arp to entrust
+scitk to be concentrated
+
+THE NARRATIVE STYLE
+
+77
+
+Regular verbs whose Form I consists of either a long or a short
+tone 3 syllable with gradual closure have a short syllable with
+abrupt closure in Form IT, accompanied by the low pitch which is
+the appropriate exponent of tone 3 in syllables of this structure
+
+{see p. 19).
+
+Examples of verbs of this type, whose alternatin
+
+g forms may be
+
+summarized phonologically as (C)V(c)s “or =~ 7 (C)V(c)s” are:
+
+Form I
+(2) Final open vowel: CV3:~
+
+eg. Cit to say
+Shi: to be
+“mux zo see
+
+(4) Final lateral, vowel long or short:
+CVL# or?
+
+e.g. sbazl to be covered with juice :
+~dol to be damp
+skal to rake up
+
+(¢) Final open diphthong, long or
+short: CVYorW3:or’~
+
+e.g. ~Kazi to pull, drag
+skiru to knock
+“lou not to be
+“thei to know, to be able to
+“gai to consume
+
+(2) Final bilabial nasal, vowel long
+or short: CVP3'or’~
+
+e.g. ‘kam to be dispersed
+~am to be perplexed, giddy
+“lazm to Lift up
+~gezm to creep up on
+“irm to keep secret
+~gaim to exact a fine
+
+Form IT
+
+Final glottal stop,
+short vowel: CV3”
+
+ci?
+_hi®
+-mu?
+
+Final glottalized lateral,
+short vowel: CVL3”
+
+_bal?
+_dol?
+_kal?
+
+Final short glottalized
+diphthong: CVYorW3”
+
+_kai?
+-kiu?
+_lou’
+_thei?
+Bai?
+
+' Final glottalized bilabial
+
+stop, short vowel: CVP3”’
+
+-kap
+-ap
+_lap
+-Sep
+-ip
+gap
+
+78 TIDDIM CHIN THE NARRATIVE STYLE
+
+79
+
+(e) Final velar or alveolar nasal, vowel _ Final glottalized alveolar Form I Form II
+long or short: CVK or T3 or * ~ stop, short vowel: CVT/K3 Vowel . Vowel .
+; ite, én, ina 2tC, eng, ina
+one ! lat Pitch — length — Final Pitch — length Final
+“8: an ro eve f ~ dat : falling long -p
+<man to cost -mat ” ” Xk No change i
+~ t . ” » iad
+“nay to be weak hot low level short *
+syem to ask for _ye ; :
+Span to start! pat r ” P |
+sdain to be pale ~da ” ” - _
+barn to rah for -bat ” ” * No change .
+sbay to be like -bat yy » v,
+The quantity relation between Form I and Form II in regular — ” ” a o*
+verbs is realized phonetically by the features of vowel daration and | long or
+» * ’ a .
+vowel quality set out in the phonological descr iption of long th falling short open low level short -”
+short syllables (see pp. 20-21), The final -t in the form in the ' Pe -
+second column above is the regular realization of post-nuclear ” % ” ” P
+K and T in Form II when accompanied by abrupt syllable ” ” - - » 4
+losure (see pp. 72-73). ; ; » ” ;: ” ” t
+c The see Pee? of the last syllables of regular verbs in phonetic ” 3 ae ”» ” ie
+terms is shown below: ” ” ae ” ” em
+Form I Form Il ” ” » >
+Pitch Vowel Final Pitch Vowel Final |
+rising length ; length i*, u*, i?*, u?* in this table represent the end points of the
+or level long: open falling long open diphthongs moving towards close front and close back vowels,
+>» =m » ” “™m. without or with final glottal stop, respectively,
+” + -n ;
+A bf oP] . . .
+» ry y ” - -n The foregoing phonetic account of Chin verbal behaviour may
+” ” -p . — ~p be briefly summarized by means of phonological formulae as
+» ” -t ” » -t follows: .
+” ” -k ” ” -k ; (C)Vetor2: ~ / (C)Vc3:~
+. . a . . I (C)Voror? 1 (C)Ves
+, . i . . -i* (C)Verer¥™ 1 (C)Vea¥~
+” >? ~u* ,s ” -u* (C)Ve3* / (C)Ve3?
+short = =m » Short = -m (C)Ves"_] (C)V(e)s”
+” —n y -n (C)V(e)ior*™ 7 (C)V(e)s”
+” oe) : . -n
+” ” ? . » ~1 It will be seen that for all verbs having tone 1 or 2 in Form I, the
+” ” -i* . » ~i* alternance is tonal only. All verbs with tone 3 in Form I accom-
+. ” -u* » ” ~u* panied by abrupt syllable closure are invariable. Verbs with a short
+
+Bo TIDDIM CHIN
+
+tone 3 syllable with gradual closure in Form I alternate syllable
+closure features only, while verbs with a long tone 3 syllable with
+gradual closure in Form I alternate both as to syllable closure and
+quantity.
+
+The verbs, relatively few in number, which do not comply with
+the foregoing patterns are classed as irregular.
+
+It is worthy of note that regular verbs with the phonematic
+structure CV are very rare except on tone 3 (see p. 77). Verbs
+with a CV syllable as one of their forms frequently alternate with
+a form of the structure CVc. Since the post-nuclear unit in the
+CVc forms of such pairs is always unpredictable they are regarded
+as irregular, even if tone and other features follow the regular
+pattern.
+
+Irregular verbs
+
+In the verbs classed as irregular the correlation of tone, quan-
+tity, syllable closure features, and phonematic structure between
+Forms I and II differs in some respects from that observed for the
+great majority of verbs in the language. Form II of such verbs is
+thus not predictable from Form I by the rules laid down hitherto,
+Such verbs may be grouped together for consideration as follows:
+
+(a) Verbs with a long or short syllable, tone x or 2, and gradual
+closure in Form I, and a short abrupt syllable in Form II:
+
+CVct~/CVc3”  -nuam _nop to want to do something
+CVc#~/CVc3"  -nuzi _nui? to laugh
+~siz -si’ to die
+co “ya: -yai? — to love
+CVer*~/ CVs” -en et to look at
+CVc2"~ } CVc3 — -xin -xit to be over
+CVcl*~/ CV3"— -xou -xo? to cultivate
+-Z0U -z9° to finish
+-thou  _tho® fo spring up
+
+It will be seen that the Form II of these verbs is in every case
+such as would in a regular verb presuppose a Form I with tone 3
+(see pp. 73-75): .
+
+The Form I of the first four examples would in regular verbs be
+partnered in Form II by a long syllable with gradual closure,
+instead of a short syllable with abrupt closure.
+
+THE NARRATIVE STYLE 81
+
+The Form I of the last five examples would in regular verbs
+alternate with a Form II with tone 3, but otherwise identical, i.e, as
+regards syllable quantity, syllable closure, and phonematic structure.
+
+It will be observed that the phonological interpretation of the
+Tiddim Chin vowel sounds proposed in this study (see p. 24.) makes
+it unnecessary to posit a change of nuclear phonematic units as
+between the two forms of the last three examples.
+
+(6) A number of verbs with open syllables in Form I have either
+a velar or alveolar final stop in Form II. The tonal correspondence
+in such verbs may or may not be regular,
+
+With regular tone and quantity alternation:
+
+-phez phe:t to tremble
+
+ssiz -sik to fight (with horns)
+~pha: -phat to be good
+
+syax nak to lay down
+
+sar Sak to sing
+
+var _vak to have an aptitude for
+maxsax “ma.sak to be in front
+
+With regular tonal alternation but irregular quantity correspondence:
+
+“dex det to appear (of moon)
+~ba:z -bat to owe
+“Zar ~zat to be broad
+“sat -sak to be hot
+With irregular tonal alternation but regular quantity correspondence :
+“tex -text to glitter
+“ox ~gort to dry up
+~pua ~puak to carry
+“bia -biak to propitiate
+
+Among verbs of this type there are small sub-groups operating
+within minor regular patterns of their own, e.g,
+
+“Nex ene:k to eat
+
+“la: -lark to take
+-gur -guxk to be stolen
+-phax -phartk to overtake
+“ZEAL -7ark to hear
+-har -ha:t to be solid
+“ha-zax “ha-zazt to covet
+
+© 2238 G
+
+82 TIDDIM CHIN
+
+eka: vkart to be forked
+-par -part to be thin
+-sia -siat to spoil
+skia_ -kiat to fall
+sxia rxiat to fell
+“ntissia “nii-siat to leave
+
+(c) A small group of verbs has a final glottal stop in Form II,
+with either a velar, labial, or alveolar final stop in Form I. Most of
+such verbs comprise short syllables in both forms but some
+examples of verbs belonging to this group with long syllables in
+Form I were noted.
+
+EXAMPLES:
+sbark -ba’ to feed forcibly
+-suak _ sua? to be born
+-hak -ha’ to be awake
+-lak la’ to show
+pak pa? to be of loose character
+sak sa? to be hard:
+_kap -ka’ to cry
+_pap _pa? to immerse
+-sat usa? to jerk
+-sut su? to snatch
+tat ta? to strike against
+that -tha’ to kill
+
+Derived verbs
+
+A few verbs which appear at first sight to be irregular may be
+regarded as derived from other verbs and hence as in a class of
+their own. Form I of the derived verb is identical with Form IT
+of the original verb. ,
+
+Compare, for instance, ~dam to be well, with a regular Form II
+sdam, and dam to heal (tr.). Both Form I and Form I of the
+latter verb are sdam, whereas we should expect dap for Form II
+in a regular verb (see p. 77).
+
+THE NARRATIVE STYLE 83
+Compare also: -dan, ~dan to be different; ~dan, ~dan to
+differentiate.
+
+Other sets of verbs which appear to be semantically linked are
+quite regular, e.g.
+“tam, ~tamn
+
+“tain, tat
+
+to be bright
+to flash a light at or on something
+
+to dance
+
+to perform a ceremonial dance holding an
+animal’s head in the hand
+
+to be near
+
+to draw near (intr.)
+
+to draw someone near (tr.)
+
+-la:m, ~lazm
+slarm, lap
+
+enazi, snazi
+“nad, nai?
+nai’, nai?
+
+“nam, “nam
+“nam, _nap
+
+to smell (intr.)
+to smell (tr.)
+
+-lam, ~lam to earn for oneself
+
+slam, _lap to earn for someone else, e.g. one’s family
+-dim, ~dim ' to be full
+
+~dim, _dip to fill
+
+There appear to be vestiges here of a regular causative relation
+expressed by means of tonal progression and manner of syllable
+closure, ‘This does not, however, appear to be a living process today,
+and my informant was of the opinion that people nowadays tended
+to use the verb ‘sak’ to cause to be done to replace the causative
+derivative. Let us compare the following sentences, for instance:
+
+“A -dam ~hi: _ it has healed
+(“4.ma?’) “A ~damshi: he healed him
+or “Aav-dam “sak whiz he healed him
+
+The second sentence uses Form I of the derived causative
+verb, this form being identical with the Form II of the verb in the
+first sentence. In the third sentence, which is contextually inter-
+changeable with the second sentence, we have Form I of the non-
+derived form followed by ‘sak’. (The high pitch on the word in
+this sentence is to be attributed to figure intonation of the type
+described on p. 54.)
+
+Y
+
+a“
+
+x
+
+84 TIDDIM CHIN
+
+Tonal progression and the manner of syllable closure are not
+the only phonological means of expressing causation in the verb,
+since the following pairs of words suggest that certain syllabie-
+onset features may play a role here (see also p. 22):
+
+kia to fall
+
+“kati to be suspended
+-ka:k to dilate (intr.)
+“turk to roll (intr.)
+-purk to fall
+
+-kax to raise (oneself)
+
+~xia to drop (tr.)
+
+“xazi to hang (tr.)
+
+“xark to open wide (tr.)
+~xurk to roll (e.g. a stone)
+-phu:k Zo fell
+
+“xa to lift (tr.)
+
+Use of the verb Forms I and II
+
+As has already been stated, mood as a grammatical category may
+be a characteristic of (a) sentences, (6) predicative and adjunctive
+phrases, and (c) certain of the figures which constitute phrases
+(see pp. 32, 40). The indicative mood is realized by Form I of the
+verb, the subjunctive by Form II (see pp. 32, 40).
+
+(a) Mood as a characteristic of sentences, In the narrative style,
+all conclusive sentences are characterized by the indicative mood,
+that is to say, the final predicative phrase contains a verb or verbs
+in Form I. In the same style, all inconclusive sentences are charac-
+terized by the subjunctive mood, that is to say, the final predicative
+phrase contains a verb or verbs in Form II (see p. 32).
+
+In the colloquial style, as used in the passages of direct speech
+in the texts, conclusive sentences may also be characterized by the
+subjunctive mood. Such sentences as have been recorded fre-
+quently contain the figure ‘hi ci’ Like this, or the word ‘hong’ (see
+p. 113). Many subjunctive sentences recorded convey the sense of
+doing something for someone else. The following colloquial sen-
+
+tences, which are all conclusive, may usefully be compared:
+Indicative mood Subjunctive mood
+
+sa a go hi he killed an animal,
+
+e.g. for a feast for me
+keiadinginlupthi he prepared zu hong lup™ hi he prepared
+beer on my behalf beer for me
+
+hi ci khawh ning PU cultivate
+it like this
+
+hi bang in kho ning I°/] culti-
+vate it like this (in this man-
+ner)
+
+saa gawh hi he killed an animal
+
+THE NARRATIVE STYLE 85
+
+The use of the subjunctive mood to express what in English
+one must often translate as ‘doing something for someone else’
+recalls some of the derived verbs already described (see p- 83).
+‘Zu hong lup!™ hi’ he prepared beer for me may be contrasted with
+‘hong pai! hi’ he came to see me (not on my behalf). Compare here
+‘pail! sak in’ go on his behalf with ‘pail sak in’ let him go. In an
+indicative sentence, therefore, ‘sak’ is to be translated as to let or
+cause to be done and in a subjunctive sentence by to do on someone
+else’s behalf. Forms I and II ina verb of the phonological structure
+of ‘sak’ are identical (seep. 76), but Form I is postulated for the
+indicative sentence and Form II for the subjunctive sentence.
+
+EXAMPLEs:
+
+-kong mat! sakiIT hi
+na lo kong khawh!! sak! hi
+
+but,
+a dam! sak! hi
+
+Pve caught it for you
+PU cultivate your fields for you
+
+he healed him
+
+There are also indications in my material that in the colloquial
+style inconclusive sentences may be characterized by the indica-
+tive mood. For example, in the sentence ‘amah pai? hen la, a upa
+va-sam! hen’ let him go and call his elder brother, ‘la’ appears to
+function as an inconclusive sentence-final particle in much the
+same way as ‘leh’ in the narrative style, but Form I and not Form
+Tl of the preceding verb is used. .
+
+(6) Mood as a characteristic of phrases. All adjunctive phrases
+containing a verbal figure are characterized by the subjunctive
+mood (see p. 51). This. means that the verbal figure will have a
+verb or verbs in Form IT,
+
+All predicative phrases in conclusive sentences in the narrative
+style in the texts are characterized by the indicative mood (see
+p. 48). This means that the final verbal figures always have a verb
+
+"or verbs in Form JI,
+
+Mood is not a property of subjective phrases,
+
+(c) Mood as a characteristic of figures. Tt follows from the fore-
+going section that verbal figures within an adjunctive phrase are
+always in the subjunctive mood.
+
+Verbal figures within a predicative phrase may be indicative or
+subjunctive. Subjunctive verbal figures, i.e. those in which the verb
+

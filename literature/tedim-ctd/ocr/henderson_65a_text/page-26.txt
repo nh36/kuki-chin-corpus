@@ -1,0 +1,99 @@
+4° TIDDIM CHIN
+
+For a description of reduplication as a feature of other structures,
+and for ‘pairing’, see p. 57.
+
+C. Mood as a characteristic of the phrase
+
+The verbal figures which may constitute a phrase (see p. 41)
+contain verbs which may be in one of two forms (see p. 72). The
+verbs in the verbal figures of all predicative phrases except the last
+phrase of an inconclusive sentence (see p. 30) are in Form I.
+Verbs in Form II are found in the last predicative phrase of an
+inconclusive sentence, and in all adjunctive phrases containing a
+‘verbal figure (see p. 51). Predicative phrases, the verbs of whose
+constituent verbal figures are in Form I, are said to be character-
+ized by the indicative mood. Predicative and adjunctive phrases
+whose constituent verbal figures contain verbs in Form II are said
+to be characterized by the subjunctive mood. Mood is marked in
+the formulae for phrases by a raised or s,
+
+Mood is not a characteristic of subjective phrases.
+
+D. Pronominal concord within the phrase
+
+Pronominal concord may obtain between the nominal and verbal
+figures within a phrase as in ‘amah a nunung hi’ he remained behind
+{I 3). Contrast ‘lo a kuan nuam kei a’ he didn’t like going to work
+in the fields (I 1), where the pronominal concord is with a nominal
+figure in the preceding phrase, and not with ‘lo’. Absence of con-
+cord between nominal and verbal figures within the phrase may
+sometimes be marked by the oblique form of the noun (see p. 70).
+In other instances, the clue may lie in the mood of the verbal
+
+“ c" ~ figure, e.g. in ‘lo pa a kikho khia sa te’ (I 15) the indicative verb
+
+forms ‘ko khia’ mark pronominal concord with ‘lo pa’, hence the
+grass which was weeded out already. The phrase ‘lo pa a khawh khiat
+sa te’, with subjunctive verb forms, would point to an absence of
+concord, i.e, the grass which he had weeded out already.
+
+E. The nature, number, and sequence of the
+constituent placed elements .
+
+The placed elements of the phrase as a structure are its con-
+stituent figures and phrase particles.
+The constituent figures which contribute to the construction of
+
+THE NARRATIVE STYLE 41
+
+phrases are of four kinds, namely; nominal, verbal, adverbial, and
+citational, for which the abbreviated notation N, V, A, and Q will
+be used in structural formulae.
+
+The arrangement of the figures within the phrase is so closely
+bound up with the identification of the different kinds of phrase,
+
+that it is best treated separately under headings for each kind of
+phrase.
+
+Phrase particles
+
+Phrase particles are of two kinds. By far the commonest are
+phrase-final since all phrases, except those which go to constitute
+‘titles’, are terminated by a phrase particle. Particles are, however,
+sometimes observed within the body of a phrase, when their func-
+tion may be regarded as the linking together of two constituent
+figures. Such figure-linking particles are relatively rare in these
+texts. ; ;
+
+The phrase-final particles in the narrative style are ‘in, a, pen,
+
+“hi and ‘leh’. As phrase-final particles, ‘hi’ and ‘leh’ are co-
+
+terminous with sentence particles, that is to say, they are only
+found in the last phrase of a sentence. It follows that ‘in, pen’ and
+‘a’ are proper to non-final phrases only, Examples of the use of
+these particles are abundant and obvious in the texts. The phrase-
+final particles proper to the different kinds of phrases, i.e. sub-
+jective, predicative, and adjunctive, are set out on Pp. 42-52, where
+the structure of these phrases is described in some detail.
+
+The figure-linking particles in this style are ‘leh’ and ‘zong’.
+‘leh’ always links nominal figure with nominal figure; ‘zong’ always
+links a nominal figure with a following verbal figure. Both particles
+are found in II 2, viz.:
+
+a baan leh a phei lang khat zong a tan uh hi
+They cut off his arms and one of his legs
+
+Here ‘leh’, which is translated by and, links the nominal figure
+‘a baan’ Ads arms with the nominal figure ‘a phei lang khat’ one of
+his legs, while ‘zong’, which may be translated also, links ‘a phei
+lang khat’ with the verbal figure ‘a tan uh’ they cut off.
+
+The subjective phrase
+
+A subjective phrase in the present study is a structure whose
+placed elements are nominal figures and certain specified phrase
+

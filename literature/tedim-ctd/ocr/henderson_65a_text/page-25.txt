@@ -1,0 +1,91 @@
+38 TIDDIM CHIN
+
+when he arrived home (1 6) is regarded as providing a high-low
+intonation pattern linking the nominal figure ‘inn’ with the follow-
+ing verbal figure ‘a tun’. The intonational characteristics of the
+phrase, gua phrase, are, therefore, a high-low figure-linking
+intonation binding the first two constituent figures and a rising
+phrase intonation for the phrase as a whole, as realized in the rising
+pitch of the adverbial figure ‘ciang’. This combination of features
+is indicated in the structural formulae by the symbol sequence “1-
+(see p. 122). Similar intonation patterns are posited for the follow-
+ing phrases:
+
+‘tu dong in’ “tu: -doy -in to this day (I 27b),
+
+in which there is a high-low figure-linking intonation between the
+nominal figure ‘tu’ and the adverbial figure ‘dong’ and rising phrase
+intonation realized in the rising pitch of the latter. Contrast the
+pronunciation recorded for this instance of the phrase with that
+recorded for the same phrase in I 24 and I 26 where there is no
+special figure-linking intonation (see pp. 130, 131).
+
+‘a hih hang in’ “A “hi? -hary -in, however (I 38),
+
+in which the levelling figure-intonation of ‘a hih’ (see p. 55) is the
+means of expressing a high-low figure-linking intonation between
+the verbal figure ‘a hih’ and the following adverbial figure ‘hang’,
+the pitch of which is in its turn the expression of rising phrase
+intonation. Contrast this with I 10 in which the pronunciation
+recorded for this same phrase does not exhibit any special figure-
+linking features.
+
+The frequent instances in the texts of a low falling pitch on the
+word ‘ci’ following a citational figure is always interpreted as the
+realization of a high—low link between that figure and the one-word
+verbal figure ‘ci’. The phrases in question are always closed in the
+texts by one of the phrase particles ‘in’ or ‘a’ with a level pitch
+(cf. I 2, 5, 6, 13, 32a, 34a, 37). The special intonational character-
+istics of such ‘phrases are, therefore, high-low figure-linking
+intonation and level phrase intonation (~1-). The same pattern is
+recorded for the phrase ‘sawt lo in’ [-.-] mot long after (I 21) in
+which the unexpectedly low fall on the one-word verbal figure ‘lo’
+
+marks a high—low linking intonation with the preceding one-word
+
+nominal figure ‘sawt’.
+The reverse figure-linking intonation pattern, i.e. a low-high
+
+THE NARRATIVE STYLE 39
+
+pitch relationship between two consecutive figures in a phrase
+(I”), is also exemplified in the texts. The phrase ‘tua khit ciang in’,
+which occurs twice in the texts (see I 18 and IT 3), is recorded in
+both places with the intonation [-~--]. Here the figure-linking
+intonation is expressed in the upward leap in pitch from the one-
+word figure ‘tua’ to the one-word figure ‘khit’, for which, on struc-
+tural grounds, a low pitch is ordinarily to be expected (see p. 18).
+The low falling pitch of ‘lam’ in ‘lam a makai hi’ [_--._] (I 30) is
+similarly interpreted as marking a low-high pitch relationship with
+the following verbal figure.
+
+In the long final predicative phrase of sentence II 2 (see p. 138),
+the first figure is linked to the second by the figure-linking particle
+‘leh’ and low-high intonation, while the second is linked to the
+third by the figure-linking particle ‘zong’ and high-low-high
+intonation. The compound figure-linking intonation pattern for
+the whole phrase is thus marked [ 1.
+
+B. Reduphcation as a characteristic of the phrase
+
+The phase ‘sa go sa ne zu ne in’ killing meat and eating it and
+drinking beer (I 23) exemplifies what may be termed multiple re-
+duplication. The exponent of reduplication in the first four words
+may be expressed as repeated noun plus paired verb, and for the last
+four words as paired noun plus repeated verb, so that there is an
+overlapping of the elements, which binds the whole sequence into
+a single verbal phrase for which one may state the formula NV *?
+(where N = nominal figure, V = verbal figure, see p. 41), built
+up thus:
+
+repeated repeated
+
+1 |
+
+N VN VN V
+sa go sa ne zu ne :
+
+paired
+
+paired
+
