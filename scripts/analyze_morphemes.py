@@ -3828,6 +3828,22 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ngimna': ('ngimna', 'imagination'),                   # base - imagination
         'mukte': ('muk-te', 'lip-PL'),                         # lips (NOT mu-k-te)
         'muk': ('muk', 'lip'),                                 # base - lip
+        
+        # Session 6 Round 17: More over-segmentation fixes
+        'kawbiate': ('kawbia-te', 'shovel-PL'),                # shovels/basins (NOT ka-wbia-te)
+        'kawbia': ('kawbia', 'shovel'),                        # base - shovel/basin
+        'ngaknate': ('ngakna-te', 'base-PL'),                  # bases/feet (of laver)
+        'ngakna': ('ngakna', 'base'),                          # base - foot/base/stand
+        'nengniamte': ('nengniam-te', 'oppressor-PL'),         # oppressors (NOT ne-ngniam-te)
+        'nengniam': ('nengniam', 'oppressor'),                 # base - oppressor
+        'leenglate': ('leengla-te', 'guest-PL'),               # guests/invitees (NOT leeng-la-te)
+        'leengla': ('leengla', 'guest'),                       # base - guest/invitee
+        'innlamte': ('innlam-te', 'builder-PL'),               # builders (NOT i-nnlam-te)
+        'innlam': ('innlam', 'builder'),                       # base - builder/mason
+        'gitlohnate': ('gitlohna-te', 'wickedness-PL'),        # wickednesses/sins
+        'gitlohna': ('gitlohna', 'wickedness'),                # base - wickedness
+        'mawhsakte': ('mawhsak-te', 'adversary-PL'),           # adversaries
+        'mawhsak': ('mawhsak', 'adversary'),                   # base - adversary/enemy
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
