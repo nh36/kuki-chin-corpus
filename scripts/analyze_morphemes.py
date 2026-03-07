@@ -3798,6 +3798,36 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kungno': ('kungno', 'herb'),                          # base - herb/plant
         'khawkte': ('khawk-te', 'spirit-PL'),                  # spirits
         'khawk': ('khawk', 'spirit'),                          # base - spirit
+        
+        # Session 6 Round 15: More over-segmentation fixes
+        'kamte': ('kam-te', 'word-PL'),                        # words/speeches (NOT ka-m-te)
+        'kam': ('kam', 'word'),                                # base - word/speech
+        'bengte': ('beng-te', 'companion-PL'),                 # companions/fishers
+        'beng': ('beng', 'companion'),                         # base - companion/fisher
+        'zungte': ('zung-te', 'root-PL'),                      # roots (of plants)
+        'zung': ('zung', 'root'),                              # base - root
+        'muangte': ('muang-te', 'trust-PL'),                   # those who trust  
+        'muang': ('muang', 'trust'),                           # base - trust (nominalizer)
+        'buluhte': ('buluh-te', 'troop-PL'),                   # troops/robbers
+        'buluh': ('buluh', 'troop'),                           # base - troop/band
+        'kuamte': ('kuam-te', 'plain-PL'),                     # plains/valleys
+        'kuam': ('kuam', 'plain'),                             # base - plain/valley
+        'huhte': ('huh-te', 'help-PL'),                        # helpers
+        'huh': ('huh', 'help'),                                # base - help
+        
+        # Session 6 Round 16: More over-segmentation fixes  
+        'taktakte': ('taktak-te', 'genuine-PL'),               # genuine/true ones
+        'taktak': ('taktak', 'genuine'),                       # base - truly/genuine
+        'ganhonte': ('ganhon-te', 'flock-PL'),                 # flocks/herds
+        'ganhon': ('ganhon', 'flock'),                         # base - flock/herd
+        'khedapte': ('khedap-te', 'shoe-PL'),                  # shoes/sandals
+        'khedap': ('khedap', 'shoe'),                          # base - shoe/sandal
+        'tawmte': ('tawm-te', 'produce-PL'),                   # produce/growth
+        'tawm': ('tawm', 'produce'),                           # base - produce
+        'ngimnate': ('ngimna-te', 'imagination-PL'),           # imaginations/thoughts
+        'ngimna': ('ngimna', 'imagination'),                   # base - imagination
+        'mukte': ('muk-te', 'lip-PL'),                         # lips (NOT mu-k-te)
+        'muk': ('muk', 'lip'),                                 # base - lip
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
