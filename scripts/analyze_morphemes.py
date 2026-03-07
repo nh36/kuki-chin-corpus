@@ -92,6 +92,11 @@ FUNCTION_WORDS = {
     'zongin': 'although',    # 1,970
     'ciangin': 'then',       # 9,297
     'inla': 'and.then',      # ~838
+    'napi': 'but/however',   # 279x - contrastive conjunction
+    'hinapi': 'but/however', # 156x - variant with hi-
+    'mateng': 'until',       # 185x - temporal "until"
+    'matengin': 'until',     # 99x - variant with -in
+    'veve': 'still/yet',     # 142x - temporal adverb (reduplication)
     
     # === Topic/Focus Particles ===
     'mah': 'EMPH',           # 1,540
@@ -104,6 +109,12 @@ FUNCTION_WORDS = {
     'peuhpeuh': 'every',     # 431
     'tampi': 'many',         # 727
     'teltel': 'each',
+    'vekpi': 'altogether',   # 213x "all (of), total"
+    'tuamtuam': 'various',   # 59x - "different kinds, various" (reduplication)
+    
+    # === Adverbs - Temporal/Iterative ===
+    'leuleu': 'again',       # 193x - reduplication of leu
+    'leu': 'again',          # base form for leuleu
     
     # === Demonstratives ===
     'tua': 'DIST',           # 9,156 (sentence-initial)
@@ -202,6 +213,9 @@ FUNCTION_WORDS = {
     'lai': 'midst',          # 1,032
     'lak': 'among',          # 552
     'mai': 'front',
+    'ban': 'besides',        # 85x - "beside X", often banah "in addition to"
+    'pualam': 'outside',     # 60x - "without, outside"
+    'nuai': 'below',         # 42x - "under"
     
     # === Adverbs ===
     'mahmah': 'very',
@@ -455,6 +469,22 @@ VERB_STEMS = {
     'sungtawng': 'within',   # 10x - 1Ki 6:19 "in the house within", "oracle"
     'dongun': 'boundary',    # 14x - Lev 23:22 "corners of thy field"
     'utzaw': 'destruction',  # 11x - Job 7:15 "death", Isa 65:12 "slaughter"
+    
+    # Round 6 - additional verbs from residual analysis
+    'puak': 'send',          # 239x - Gen 37:32 "sent/brought", Gen 38:17 "send"
+    'ngak': 'wait',          # 102x - Gen 8:12 "stayed", Gen 49:18 "waited"
+    'ngam': 'dare',          # 128x - (context shows "venture/dare")
+    'hawlkhia': 'drive.out', # 119x - Gen 3:24 "drove out the man"
+    'vei': 'faint',          # 71x - Gen 25:29 "he was faint" (also "red")
+    'zenzen': 'at.all',      # 53x - intensifier (often with negation "not at all")
+    'mengmeng': 'quickly',   # 50x - reduplication "hastily, speedily" (Gen 18:6)
+    'meng': 'quick',         # base for mengmeng
+    'kantan': 'cross.over',  # 45x - "pass over, cross" (NOT kan-tan)
+    'khahkhia': 'deliver',   # 46x - "deliver, rescue" (NOT khah-khia)
+    'lungkia': 'dismay',     # 43x - "be dismayed, terrified"
+    'tawlngak': 'rest',      # 45x - "rest" (base for tawlngakna)
+    'sitbaang': 'blemish',   # 43x - "blemish" (without blemish)
+    'ut': 'will/want',       # 44x - "will, desire" (base for utna)
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -603,6 +633,7 @@ NOUN_STEMS = {
     'ganhingte': 'animals',
     'sang': 'high',          # 209
     'nin': 'day',            # 200 variant
+    'bawng': 'cattle',       # 31x + many compounds (bawngtal, bawngpi, etc.)
     
     # === Additional stems from corpus frequency analysis ===
     # Social/occupational
@@ -654,10 +685,13 @@ NOUN_STEMS = {
     'sum': 'money',          # sumte
     'kent': 'cubit',         # kente
     'leeng': 'chariot',      # leengte = 68
-    'bawntal': 'calf',       # bawngtalte
+    'bawngtal': 'ox',        # bawngtalte = oxen 212x
     'sabuai': 'sheep',       # 60
     'sawltak': 'servant',    # 56
     'khuaizu': 'locust',     # 60
+    'nak': 'nose',           # 77x - "nostrils, nose" (NOT na-k!)
+    'ngasa': 'fish',         # 62x - "fish"
+    'lungsim': 'heart',      # 57x - "heart, bowels, inner being"
     
     # Action-related
     'khaici': 'sow',         # 58 (farmer)
@@ -691,6 +725,8 @@ NOUN_STEMS = {
     'pute': 'ancestors',
     'taute': 'children',
     'vantungte': 'heavenly.beings',
+    'humpinelkai': 'lion',   # 125x - "lion"
+    'nuamsa': 'prosperous',  # 51x - "well, prosperous, at ease"
     
     # Miscellaneous high-frequency
     'ken': 'only',           # 112
@@ -705,6 +741,8 @@ NOUN_STEMS = {
     'zaguk': 'winepress',    # 65
     'umcih': 'hope',         # 64
     'ihih': 'this.be',       # 64 = i-hih
+    'letsong': 'gift',       # 76x - "gift, portion"
+    'baih': 'early',         # 49x - "early" (in 'tho baih' = rise early)
     'cin': 'said',           # 61
     'kampau': 'voice',       # 61
     'hit': 'that',           # 61
@@ -725,6 +763,13 @@ NOUN_STEMS = {
     'namkim': 'rainbow',     # 46
     'sauveipi': 'flock',     # 46
     'mipil': 'wise.person',  # 47
+    'aksi': 'star',          # 48x - "star" (vana aksi = star of heaven)
+    'lutang': 'duke/chief',  # 56x - "duke, chief"
+    'ciatah': 'each',        # 48x - "each, every"
+    'tuam': 'promise',       # base for phattuamna, tuamtuam
+    'guh': 'bone',           # 44x - "bone" (guhte = bones)
+    'liat': 'great',         # 44x - "great, much" (liatna = greatness)
+    'kapin': 'among',        # 46x - "among, before" (came unto)
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -795,6 +840,12 @@ PROPER_NOUNS = {
     'ahaz', 'samson', 'midian', 'amalek', 'asher', 'nathan', 'saihadial',
     'moab', 'edom', 'gilead', 'sheba', 'laban', 'rebekah', 'leah', 'rachel',
     'bethel', 'sodom', 'gomorrah', 'nineveh', 'tyre', 'sidon',
+    # Proper names starting with 'ba-' (must not be analyzed as ba + X)
+    'baal', 'balaam', 'bashan', 'babylon', 'barnabus', 'barnabas',
+    'bathsheba', 'barak', 'barabbas', 'baruch', 'belshazzar', 'benhadad',
+    'bethlehem', 'beersheba', 'beelzebub', 'belial',
+    # Additional proper names from residual analysis
+    'balak', 'zippor', 'mizpah',
 }
 
 # =============================================================================
@@ -971,6 +1022,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # === Quantifier Compounds ===
         'khempeuhte': ('khempeuh-te', 'all-PL'),
+        'khempeuhah': ('khempeuh-ah', 'all-LOC'),    # 378x "to all, in all"
+        'khempeuhin': ('khempeuh-in', 'all-ERG'),   # "by all"
         'peuhpeuh': ('peuh-peuh', 'DISTR-DISTR'),
         
         # === Common Connectors ===
@@ -988,6 +1041,32 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'loin': ('lo-in', 'NEG-ERG'),
         'kuamah': ('kua-mah', 'who-EMPH'),  # "nobody"
         'bangmah': ('bang-mah', 'what-EMPH'),  # "nothing"
+        'bangmahin': ('bang-mah-in', 'what-EMPH-ERG'),  # "in no way"
+        
+        # === bang- (what/how/like) compounds - must precede ba- matching ===
+        'bang': ('bang', 'what/like'),        # 4263x
+        'bangci': ('bang-ci', 'what-say'),    # "how" 224x
+        'banga': ('bang-a', 'what-LOC'),      # "as/like" 79x
+        'bangun': ('bang-un', 'what-PL'),     # 84x
+        'bangzah': ('bang-zah', 'what-quantity'),  # "how many" 65x
+        'bangbang': ('bang-bang', 'what-RED'),     # "whatever" 48x
+        'bangte': ('bang-te', 'what-PL'),     # 32x
+        'bangzahin': ('bang-zah-in', 'what-quantity-ERG'),  # 28x
+        'bangbangin': ('bang-bang-in', 'what-RED-ERG'),     # 28x
+        'bangsak': ('bang-sak', 'what-CAUS'), # 26x
+        'bangcih': ('bang-cih', 'what-say.NOM'),  # 15x
+        'bangsakkik': ('bang-sak-kik', 'what-CAUS-ITER'),  # 12x
+        'bangteng': ('bang-teng', 'what-dwell'),   # 10x
+        'bangzia': ('bang-zia', 'what-manner'),    # 6x
+        'bangkik': ('bang-kik', 'what-ITER'),      # 4x
+        'bangbangun': ('bang-bang-un', 'what-RED-PL'),  # 4x
+        'bangpi': ('bang-pi', 'what-big'),    # 3x
+        'bangkhat': ('bang-khat', 'what-one'),# 3x
+        'bangah': ('bang-ah', 'what-LOC'),    # 2x
+        'bangta': ('bang-ta', 'what-PFV'),    # 2x
+        
+        # === ban- (besides/in addition to) compounds ===
+        'banah': ('ban-ah', 'besides-LOC'),   # 138x "in addition to"
         
         # === Postposition + LOC ===
         'panin': ('panin', 'ABL'),  # "from"
@@ -1147,6 +1226,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kilemna': ('ki-lem-na', 'REFL-prepare-NMLZ'),
         'tuni-in': ('tu-ni-in', 'now-day-ERG'),
         'naupang': ('nau-pang', 'child-small'),
+        'naupangte': ('nau-pang-te', 'child-small-PL'),  # 59x - "children"
+        'naupangno': ('nau-pang-no', 'child-small-DIM'),  # "little child"
         'hotkhiatna': ('hot-khiat-na', '?-emerge-NMLZ'),
         'lawmte': ('lawm-te', 'friend-PL'),
         'lopi-in': ('lo-pi-in', 'NEG-big-ERG'),
@@ -1160,6 +1241,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thupi': ('thu-pi', 'word-big'),
         'huhna': ('huh-na', 'blow-NMLZ'),
         'gamdang': ('gam-dang', 'land-other'),
+        'lungsimah': ('lungsim-ah', 'heart-LOC'),        # 57x - "in heart/mind"
+        'khutnuai': ('khut-nuai', 'hand-under'),        # 63x - "under hand" (control)
+        'pualamah': ('pualam-ah', 'outside-LOC'),       # 62x - "outside"
+        'lutangte': ('lutang-te', 'chief-PL'),          # 56x - "dukes/chiefs"
+        'phattuamna': ('phat-tuam-na', 'praise-promise-NMLZ'),  # 77x - "benefit, reward"
+        'pianna': ('pian-na', 'birth-NMLZ'),            # 48x - "origin, father of"
         'lui': ('lui', 'river'),
         'sepna': ('sep-na', 'work-NMLZ'),
         'thungetna': ('thu-nget-na', 'word-request-NMLZ'),
@@ -1271,11 +1358,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sakolte': ('sakol-te', 'donkey-PL'),
         'nalamdang': ('na-lam-dang', '2SG-way-other'),
         'hing': ('hing', 'alive'),
-        'phattuamna': ('phat-tuam-na', 'praise-?-NMLZ'),
         'pana': ('pa-na', 'father-NMLZ'),
         'lasakna': ('la-sak-na', 'take-CAUS-NMLZ'),
         'thahna': ('thah-na', 'die-NMLZ'),
-        'annel': ('an-nel', '3PL-?'),
         'omte': ('om-te', 'exist-PL'),
         'zahtakna': ('zah-tak-na', 'fear-exact-NMLZ'),
         'kiciamna': ('ki-ciam-na', 'REFL-promise-NMLZ'),
@@ -1398,8 +1483,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lametna': ('lam-et-na', 'path-example-NMLZ'),        # 81
         'paktat': ('pak-tat', 'divide-strike'),               # 79
         'pak': ('pak', 'divide'),                              # 78
-        'annel': ('an-nel', 'food-?'),                         # 76
-        'phattuamna': ('phat-tuam-na', 'praise-?-NMLZ'),      # 76
         'thei-in': ('thei-in', 'know.I-ERG'),                  # 75
         'le-uhcin': ('le-uh-cin', 'also-PL-even'),            # 74
         'alang': ('a-lang', '3SG-vine'),                       # 73
@@ -1423,7 +1506,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khialhnate': ('khialh-na-te', 'sin-NMLZ-PL'),        # 57
         'nuai-a': ('nuai-a', 'below-LOC'),                     # 56
         'kihei-in': ('ki-hei-in', 'REFL-angry-ERG'),          # 56
-        'lutangte': ('lu-tang-te', 'head-?-PL'),              # 56
         'zawlte': ('zawl-te', 'plain-PL'),                     # 56
         'tai-in': ('tai-in', 'flee-ERG'),                      # 55
         'lau-in': ('lau-in', 'fear-ERG'),                      # 55
@@ -1459,14 +1541,15 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pianzia': ('pian-zia', 'birth-manner'),              # 50
         
         # === More compounds from frequency analysis (freq 38-55) ===
-        'leenggahzu': ('leeng-gah-zu', 'chariot-rider-?'),    # 228
+        'leenggahzu': ('leenggah-zu', 'grape-liquid'),    # 239x "wine"
+        'leenggah': ('leenggah', 'grape'),               # 98x "grape/vine fruit"
+        'leenggui': ('leenggui', 'grapevine'),           # vineyard-related
         'sumngo': ('sum-ngo', 'money-silver'),                 # 152
         'kumpinu': ('kumpi-nu', 'king-mother'),               # 54
         'nupi': ('nu-pi', 'mother-big'),                       # 53
         'ihmu': ('ih-mu', '1PL-see'),                          # 52
         'guh': ('guh', 'shout'),                               # 49
         'ing': ('ing', 'be.able'),                             # 48
-        'aksi': ('ak-si', 'fowl-?'),                           # 48
         'zasak': ('za-sak', 'hear-CAUS'),                      # 47
         'biakinnpi': ('biakinn-pi', 'temple-big'),            # 47
         'siampipuan': ('siampi-puan', 'priest-cloth'),        # 46
@@ -1474,7 +1557,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'savun': ('sa-vun', 'meat-fur'),                       # 45
         'thupiaksa': ('thupiak-sa', 'commandment-flesh'),     # 45
         'gamtatnasa': ('gamtat-na-sa', 'kingdom-NMLZ-?'),     # 45
-        'kantan': ('kan-tan', 'remain-?'),                     # 45
         'puanhampi': ('puan-ham-pi', 'cloth-cover-big'),      # 45
         'sawt': ('sawt', 'long.time'),                         # 45
         'zawng': ('zawng', 'all'),                              # 45

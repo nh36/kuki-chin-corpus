@@ -35,10 +35,14 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 
 ### Overall Statistics
 ```
-Total tokens:   761,347
-Glossed:        754,006 (99.04%)
-Unknown:          7,341 (0.96%)
+Total tokens:   771,201
+Fully analyzed: 721,455 (93.55%)
+Partial:         39,610 (5.14%)  -- has some morphemes glossed, but not all
+Unknown:         10,136 (1.31%)  -- completely unknown
 ```
+
+Note: The previous 99.04% figure counted partial analyses as "glossed". 
+The 93.55% figure is stricter: only fully analyzed tokens count.
 
 ### Analyzer Components (Current)
 
@@ -152,16 +156,49 @@ The remaining 7,672 unknown tokens (1.01%) fall into these categories:
 | 2026-03-07 | 92.3% | +1.7 | Compounds + bug fixes |
 | 2026-03-07 | 98.99% | +6.7 | Verb stems, ki- prefix, reduplication |
 | 2026-03-07 | 99.04% | +0.05 | Philological analysis, 16 new stems |
+| 2026-03-08 | 93.55% | -5.5* | *Recount with stricter criteria (partial = has ?) |
 
-## Current Phase: Quality Assurance & Refinement
+## Current Phase: Residual Word Analysis
+
+The remaining ~5% partial unknowns and ~1.3% full unknowns are being systematically analyzed.
+
+### Residual Analyzer (`scripts/analyze_residual.py`)
+
+A dedicated analyzer has been created to:
+1. Collect all Bible verse contexts for each unknown word
+2. Cross-reference with English KJV translations
+3. Infer semantics from contextual evidence
+4. Classify words: loans, dialectal, archaic, ki-forms, compounds
+5. Generate per-word reports with philological analysis
+
+### Recently Added Stems (2026-03-08)
+
+Based on philological analysis of Bible contexts:
+
+**Nouns:**
+- `aksi` (star), `lutang` (chief), `guh` (bone), `liat` (great)
+- `nak` (nose), `ngasa` (fish), `lungsim` (heart), `pualam` (outside)
+- `nuai` (below), `humpinelkai` (lion), `nuamsa` (prosperous)
+
+**Verbs:**
+- `kantan` (cross.over), `khahkhia` (deliver), `hawlkhia` (drive.out)
+- `lungkia` (dismay), `tawlngak` (rest), `sitbaang` (blemish)
+- `mengmeng` (quickly), `zenzen` (at.all), `vei` (faint)
+
+**Function words:**
+- `veve` (still/yet), `tuamtuam` (various), `ciatah` (each)
+- `baih` (early), `letsong` (gift)
+
+**Proper nouns:**
+- `Balak`, `Zippor`, `Mizpah`
 
 ### Immediate Next Steps
 
-1. [ ] Audit development documentation (ensure all work is recorded)
-2. [ ] Extract vocabulary from Henderson OCR output
-3. [ ] Analyze remaining ~7,600 unknown tokens philologically
-4. [ ] Identify loan words and determine if analyzable
-5. [ ] Cross-reference Henderson with remaining unknowns
+1. [x] Build residual word analyzer framework
+2. [x] Add high-frequency stems from philological analysis
+3. [ ] Continue systematic unknown word investigation
+4. [ ] Clean up duplicate compound word entries
+5. [ ] Generate Leipzig-glossed sample chapters
 
 ### Questions for Remaining Unknowns
 
@@ -175,5 +212,5 @@ For each remaining unknown word:
 
 ---
 
-*Last updated: 2026-03-07 09:00 UTC*
-*Coverage: 99.04% | Tokens: 754,006/761,347 | Unknown: 7,341*
+*Last updated: 2026-03-08*
+*Coverage: 93.55% fully analyzed | 5.14% partial | 1.31% unknown*
