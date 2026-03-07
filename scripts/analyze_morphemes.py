@@ -485,6 +485,10 @@ VERB_STEMS = {
     'tawlngak': 'rest',      # 45x - "rest" (base for tawlngakna)
     'sitbaang': 'blemish',   # 43x - "blemish" (without blemish)
     'ut': 'will/want',       # 44x - "will, desire" (base for utna)
+    'buai': 'confuse',       # 41x - "confusion, astonishment" (base for buaina)
+    'tuang': 'ride',         # 43x - "ride" (tuangte = riders, horsemen)
+    'hon': 'flock',          # 41x - "flock, herd" (honte = flocks)
+    'ngetsak': 'pray/intercede',  # 61x - causative of nget (request)
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -770,6 +774,17 @@ NOUN_STEMS = {
     'guh': 'bone',           # 44x - "bone" (guhte = bones)
     'liat': 'great',         # 44x - "great, much" (liatna = greatness)
     'kapin': 'among',        # 46x - "among, before" (came unto)
+    'innkuanpih': 'household', # 46x - "household" (inn-kuan-pih)
+    'khuampi': 'board/pillar', # 44x - "board, pillar" (architectural)
+    'ngawng': 'neck',        # 43x - "neck"
+    'ngaihno': 'beloved',    # 42x - "beloved" (O thou whom my soul loveth)
+    'et': 'care',            # 41x - base for etna (caring, keeping)
+    'nget': 'request',       # 41x - base for ngetna (request, petition)
+    'kiman': 'profit',       # 41x - base for kimanna (profitable)
+    'kimang': 'profit',      # 68x - variant of kiman (what profit)
+    'maangmuh': 'vision',    # 42x - base for maangmuhna (vision)
+    'tuikulh': 'island',     # 41x - "island, isles" (isles of the sea)
+    'puantualpi': 'robe/coat',  # 40x - "coat of many colors"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -781,6 +796,8 @@ PROPER_NOUNS = {
     # Old Testament figures - Patriarchs
     'Abraham', 'Abram', 'Isaac', 'Jakob', 'Jakobu', 'Israel', 'Josef', 'Joseph',
     'Noah', 'Adam', 'Eve', 'Seth', 'Enoch', 'Methuselah', 'Lamech',
+    'Sarah', 'Sarai', 'Rebekah', 'Leah', 'Rachel',  # Matriarchs
+    'Issakhar', 'Issachar', 'Reuben', 'Simeon', 'Levi', 'Judah', 'Zebulun',  # Tribes
     
     # Old Testament - Moses era
     'Moses', 'Aaron', 'Joshua', 'Caleb', 'Miriam', 'Korah', 'Phinehas',
@@ -845,7 +862,7 @@ PROPER_NOUNS = {
     'bathsheba', 'barak', 'barabbas', 'baruch', 'belshazzar', 'benhadad',
     'bethlehem', 'beersheba', 'beelzebub', 'belial',
     # Additional proper names from residual analysis
-    'balak', 'zippor', 'mizpah',
+    'balak', 'zippor', 'mizpah', 'azariah', 'zadok', 'nathan',
 }
 
 # =============================================================================
