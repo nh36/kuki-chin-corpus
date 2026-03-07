@@ -3844,6 +3844,22 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gitlohna': ('gitlohna', 'wickedness'),                # base - wickedness
         'mawhsakte': ('mawhsak-te', 'adversary-PL'),           # adversaries
         'mawhsak': ('mawhsak', 'adversary'),                   # base - adversary/enemy
+        
+        # Session 6 Round 18: More over-segmentation fixes
+        'bilvangte': ('bilvang-te', 'loop-PL'),                # loops (curtain coupling)
+        'bilvang': ('bilvang', 'loop'),                        # base - loop
+        'mithagolte': ('mithagol-te', 'giant-PL'),             # giants
+        'mithagol': ('mithagol', 'giant'),                     # base - giant
+        'lianpipite': ('lianpipi-te', 'great-PL'),             # great ones (stones)
+        'lianpipi': ('lianpipi', 'great'),                     # base - great/large
+        'lelte': ('lel-te', 'desperate-PL'),                   # desperate ones
+        'lel': ('lel', 'desperate'),                           # base - desperate
+        'thante': ('than-te', 'worm-PL'),                      # worms/corruption
+        'than': ('than', 'worm'),                              # base - worm
+        'dote': ('do-te', 'rise-PL'),                          # those who rise up
+        'do': ('do', 'rise'),                                  # base - rise against
+        'ngeekte': ('ngeek-te', 'herb-PL'),                    # herbs/grass
+        'ngeek': ('ngeek', 'herb'),                            # base - herb/grass
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
