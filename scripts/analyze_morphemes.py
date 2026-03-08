@@ -3932,6 +3932,81 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bilngong': ('bilngong', 'deaf'),                      # base - deaf (ear-closed)
         'pulepate': ('pulepa-te', 'ancestor-PL'),              # ancestors
         'pulepa': ('pulepa', 'ancestor'),                      # base - ancestor
+        
+        # Round 23: More vocabulary (Deut, Judges, Kings, Chronicles)
+        'haksatnate': ('haksatna-te', 'trouble-PL'),           # troubles/difficulties
+        'haksatna': ('haksat-na', 'difficult-NMLZ'),           # trouble/difficulty
+        'haksat': ('haksat', 'difficult'),                     # base - difficult
+        'kithatte': ('ki-that-te', 'REFL-kill-PL'),            # slain ones (ki-that reflexive)
+        'kiseelte': ('ki-seel-te', 'REFL-hide-PL'),            # hidden things
+        'kiseel': ('ki-seel', 'REFL-hide'),                    # base - ki-seel
+        'seel': ('seel', 'hide'),                              # base - hide
+        'hangte': ('hang-te', 'stallion-PL'),                  # stallions/mighty ones
+        'hang': ('hang', 'stallion'),                          # base - stallion/mighty
+        'meivakkhuamte': ('meivakkhuam-te', 'candlestick-PL'), # candlesticks
+        'meivakkhuam': ('mei-vak-khuam', 'fire-light-holder'), # candlestick/lampstand
+        'leenggahzute': ('leenggahzu-te', 'frankincense-PL'),  # frankincense/spices
+        'leenggahzu': ('leeng-gahzu', 'incense-fragrant'),     # frankincense
+        'gahzu': ('gahzu', 'fragrant'),                        # base - fragrant
+        'sungnungte': ('sungnung-te', 'inner.room-PL'),        # inner chambers/rooms
+        'sungnung': ('sungnung', 'inner.room'),                # base - inner room
+        'lamlakte': ('lamlak-te', 'counsellor-PL'),            # counsellors/advisers
+        'lamlak': ('lamlak', 'counsellor'),                    # base - counsellor
+        
+        # More vocabulary
+        'lokhote': ('lokho-te', 'farmer-PL'),                  # farmers/husbandmen
+        'lokho': ('lokho', 'farmer'),                          # base - farmer
+        'laitaite': ('laitai-te', 'messenger-PL'),             # posts/messengers
+        'laitai': ('laitai', 'messenger'),                     # base - messenger/post
+        'thupalsatnate': ('thupalsatna-te', 'transgression-PL'),  # transgressions
+        'thupalsatna': ('thu-palsat-na', 'word-transgress-NMLZ'), # transgression
+        'namsaute': ('namsau-te', 'knife-PL'),                 # knives/lances
+        'namsau': ('namsau', 'knife'),                         # base - knife
+        'vankinusiate': ('vankinusia-te', 'colored.spoil-PL'), # colored spoils
+        'vankinusia': ('vankinusia', 'colored.spoil'),         # colored spoil/prey
+        'vanmanphate': ('vanmanpha-te', 'treasure-PL'),        # treasures
+        'vanmanpha': ('vanmanpha', 'treasure'),                # base - treasure/valuable
+        
+        # Round 24: Job, Psalms, Exodus, Chronicles vocabulary
+        'khuamluzepnate': ('khuamluzepna-te', 'fillet-PL'),    # fillets/bands
+        'khuamluzepna': ('khuam-luzep-na', 'pole-encircle-NMLZ'), # fillet/band
+        'luzep': ('luzep', 'encircle'),                        # base - encircle/surround
+        'kihhuainate': ('kihhuaina-te', 'abomination-PL'),     # abominations
+        'kihhuaina': ('kihhuai-na', 'abominate-NMLZ'),         # abomination
+        'kihhuai': ('ki-hhuai', 'REFL-abominate'),             # abominate
+        'vaihawmnate': ('vaihawmna-te', 'counsel-PL'),         # counsels/secrets
+        'vaihawmna': ('vai-hawm-na', 'plan-counsel-NMLZ'),     # counsel/secret
+        'dangtakte': ('dangtak-te', 'weary-PL'),               # weary/tired ones
+        'dangtak': ('dangtak', 'weary'),                       # base - weary/tired
+        'thungetnate': ('thungetna-te', 'prayer-PL'),          # prayers
+        'thungetna': ('thu-nget-na', 'word-pray-NMLZ'),        # prayer
+        'papite': ('papi-te', 'elder-PL'),                     # elders/aged men
+        'papi': ('papi', 'elder'),                             # base - elder/aged
+        'mawhsaknate': ('mawhsakna-te', 'sin.offering-PL'),    # sin offerings
+        'mawhsakna': ('mawh-sak-na', 'sin-CAUS-NMLZ'),         # sin offering
+        'kisate': ('kisa-te', 'proud-PL'),                     # proud ones
+        'kisa': ('kisa', 'proud'),                             # base - proud
+        'miphate': ('mipha-te', 'righteous-PL'),               # righteous ones
+        'mipha': ('mi-pha', 'person-good'),                    # righteous
+        
+        # Round 25: Psalms vocabulary
+        'paunate': ('pauna-te', 'word-PL'),                    # words (as spoken)
+        'pauna': ('pau-na', 'speak-NMLZ'),                     # word/speech
+        'belte': ('bel-te', 'trust-PL'),                       # those who trust
+        'bel': ('bel', 'trust'),                               # base - trust
+        'lehdote': ('lehdo-te', 'rebellious-PL'),              # rebellious ones
+        'lehdo': ('lehdo', 'rebellious'),                      # base - rebellious
+        'khawite': ('khawi-te', 'flock-PL'),                   # flocks/herds
+        'khawi': ('khawi', 'flock'),                           # base - flock/herd
+        'dawibiate': ('dawibia-te', 'heathen-PL'),             # heathens/gentiles
+        'dawibia': ('dawibia', 'heathen'),                     # base - heathen
+        'nopsaknate': ('nopsakna-te', 'restoration-PL'),       # restorations
+        'nopsakna': ('nopsak-na', 'restore-NMLZ'),             # restoration
+        'nopsak': ('nopsak', 'restore'),                       # base - restore
+        'hualte': ('hual-te', 'wave-PL'),                      # waves
+        'hual': ('hual', 'wave'),                              # base - wave
+        'theikungte': ('theikung-te', 'fig.tree-PL'),          # fig trees
+        'theikung': ('thei-kung', 'fruit-tree'),               # fig tree
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
