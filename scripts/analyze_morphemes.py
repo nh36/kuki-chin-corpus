@@ -7373,6 +7373,160 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tolhkhia': ('tolh-khia', 'loose-out'),                     # loose from
         'ciampek': ('ciam-pek', 'mock-deceive'),                    # mock/deceive
         'gongbakte': ('gongbak-te', 'knee-PL'),                     # knees
+        # Round 128: More compound fixes
+        'nuainungte': ('nuai-nung-te', 'below-back-PL'),            # nether springs
+        'hawlkhiamang': ('hawl-khia-mang', 'drive-out-completely'), # utterly drive out
+        'omsuakin': ('om-suak-in', 'exist-become-INST'),            # shall abide
+        'khegingte': ('khe-ging-te', 'foot-sound-PL'),              # wheels
+        'kizemte': ('ki-zem-te', 'REFL-weave-PL'),                  # needlework PL
+        'sawlkikin': ('sawl-kik-in', 'send-ITER-INST'),             # send again
+        'khauhualte': ('khau-hual-te', 'cord-bind-PL'),             # cords
+        'innpite': ('inn-pi-te', 'house-big-PL'),                   # pillars
+        'cialin': ('ci-al-in', 'say-take-INST'),                    # thus dealeth
+        'omsakin': ('om-sak-in', 'exist-CAUS-INST'),                # put before
+        'khopkhat': ('khop-khat', 'gather-one'),                    # gathered together
+        'dialh': ('dial-h', 'call-COMP'),                           # call/tarry
+        'pangsimte': ('pang-sim-te', 'side-count-PL'),              # liers in wait
+        'ciahkhawm': ('ciah-khawm', 'return-together'),             # return together
+        'luata': ('lu-ata', 'head-old'),                            # old (too old)
+        'khuazang': ('khua-zang', 'town-all'),                      # all the city
+        'migina': ('mi-gi-na', 'person-wealth-NMLZ'),               # kinsman
+        'anlate': ('an-la-te', '3PL-take-PL'),                      # reapers
+        'naseppihte': ('na-sep-pih-te', '2SG-work-APPL-PL'),        # workers
+        'naizaw': ('nai-zaw', 'near-more'),                         # nearer
+        'lungzuang': ('lung-zuang', 'heart-feeble'),                # waxed feeble
+        'hingsakkik': ('hing-sak-kik', 'live-CAUS-ITER'),           # maketh alive
+        'kibiaknate': ('ki-biak-na-te', 'REFL-worship-NMLZ-PL'),    # offerings
+        'kamsangin': ('kam-sang-in', 'word-establish-INST'),        # established
+        'maiman': ('mai-man', 'face-true'),                         # face/name
+        'hehpihnaun': ('hehpih-na-un', 'pity-NMLZ-PL.IMP'),         # mercies
+        # Round 129: More partial fixes
+        'tuamdang': ('tuam-dang', 'manner-other'),                  # another (manner)
+        'sikseek': ('sik-seek', 'metal-forge'),                     # smith
+        'seeksak': ('seek-sak', 'forge-CAUS'),                      # cause to forge
+        'bawhin': ('bawh-in', 'spoil-INST'),                        # flying upon spoil
+        'lungkhauhna': ('lung-khauh-na', 'heart-stubborn-NMLZ'),    # stubbornness
+        'biaktheih': ('biak-theih', 'worship-able'),                # able to worship
+        'omnuam': ('om-nuam', 'exist-pleasant'),                    # pleasant/comely
+        'thungip': ('thu-ngip', 'word-bag'),                        # scrip/bag
+        'sattukin': ('sat-tuk-in', 'strike-strike-INST'),           # smite
+        'khawhcip': ('khawh-cip', 'strike-pierce'),                 # javelin
+        'diksa': ('dik-sa', 'straight-very'),                       # very direct/determined
+        'pangkhawm': ('pang-khawm', 'side-together'),               # stand together
+        'piangsakkha': ('piang-sak-kha', 'birth-CAUS-PERF'),        # have occasioned
+        'khansia': ('khan-sia', 'time-evil'),                       # evil determined
+        'simlut': ('sim-lut', 'count-enter'),                       # enter midst
+        # Round 130: More partial fixes
+        'tawmkhatte': ('tawm-khat-te', 'few-one-PL'),               # those few
+        'galsimte': ('gal-sim-te', 'enemy-count-PL'),               # spoilers
+        'lotte': ('lo-te', 'arrow-PL'),                             # arrows
+        'kilate': ('kila-te', 'portion-PL'),                        # portions (spoil)
+        'vankahte': ('van-kah-te', 'go.and-go-PL'),                 # familiar spirits
+        'vankahthei': ('van-kah-thei', 'go.and-go-able'),           # has familiar spirit
+        'thahlohna': ('thah-loh-na', 'kill-NEG-NMLZ'),              # not killing (transgression)
+        'sungtumna': ('sung-tum-na', 'inside-want-NMLZ'),           # coming in/going out
+        'pawlpihna': ('pawl-pih-na', 'group-APPL-NMLZ'),            # rebellion/confusion
+        'khiatpihin': ('khiat-pih-in', 'leave-APPL-INST'),          # led out
+        # Round 131: More partial fixes
+        'tuizawl': ('tui-zawl', 'water-channel'),                   # gutter
+        'lungli': ('lung-li', 'heart-turn'),                        # fetch a compass
+        'tangguakin': ('tang-guak-in', 'hold-uncover-INST'),        # uncovered
+        'simmawhhuai': ('sim-mawh-huai', 'count-blame-full'),       # vile/base
+        'maipukin': ('mai-puk-in', 'face-prostrate-INST'),          # fell on face
+        'hoihhoih': ('hoih-hoih', 'good-REDUP'),                    # safely/well
+        'tungsa': ('tung-sa', 'arrive-early'),                      # from youth
+        'neithuah': ('nei-thuah', 'have-more'),                     # yet/more
+        'thalian': ('thal-ian', 'bow-strong'),                      # giant
+        'kheme': ('khem-e', 'restrain-EXCL'),                       # exclaim
+        # Round 132: Hyphenated suffix fixes
+        'dawngkikin': ('dawng-kik-in', 'receive-ITER-INST'),        # give in return
+        'ciahsakin': ('ciah-sak-in', 'return-CAUS-INST'),           # let go
+        'khanglo-in': ('khang-lo-in', 'generation-NEG-INST'),       # went away
+        'samkhia-in': ('sam-khia-in', 'call-out-INST'),             # called out
+        'gamdai-in': ('gam-dai-in', 'land-edge-INST'),              # with edge
+        # Round 133: More partial fixes
+        'bilun': ('bil-un', 'ear-PL.IMP'),                          # our ears
+        'langnihin': ('lang-nih-in', 'side-two-INST'),              # on both feet
+        'hehnemte': ('heh-nem-te', 'pity-comfort-PL'),              # comforters
+        'heite': ('hei-te', 'saw-PL'),                              # saws (instrument)
+        'sawmsimte': ('sawm-sim-te', 'incite-count-PL'),            # conspirators
+        'vanlelei': ('van-le-lei', 'heaven-and-earth'),             # heaven and earth
+        'sizaw': ('si-zaw', 'be-more'),                             # would I had (died)
+        'nungsang': ('nung-sang', 'back-establish'),                # prospered
+        'khamul-in': ('kham-ul-in', 'jaw-hold-INST'),               # by the beard
+        'simna-in': ('sim-na-in', 'count-NMLZ-INST'),               # with siege
+        'kisemsakte': ('ki-sem-sak-te', 'REFL-record-CAUS-PL'),     # recorder
+        # Round 134: More partial fixes
+        'khawmkik': ('khawm-kik', 'gather-ITER'),                   # gathered again
+        'lampaina': ('lam-pai-na', 'way-go-NMLZ'),                  # going (sound of)
+        'muktu': ('muk-tu', 'see.I-stumble'),                       # shook
+        'kihuauna': ('ki-huau-na', 'REFL-whisper-NMLZ'),            # whispered
+        'innluah': ('inn-luah', 'house-family'),                    # whole family
+        'musakkik': ('mu-sak-kik', 'see.I-CAUS-ITER'),              # show me again
+        'amkhamsak': ('am-kham-sak', '3SG.POSS-forbid-CAUS'),       # make afraid
+        'khumzangah': ('khum-zang-ah', 'cover-all-LOC'),            # over the gate
+        'netumin': ('ne-tum-in', 'eat-want-INST'),                  # consumed
+        'niamsakin': ('niam-sak-in', 'low-CAUS-INST'),              # bowed down
+        'kamsiat': ('kam-siat', 'word-break'),                      # calamity
+        'kancip': ('kan-cip', 'turn-pierce'),                       # compassed about
+        # Round 135: More partial fixes
+        'beitum': ('bei-tum', 'end-want'),                          # consumed
+        'milianpi': ('mi-lian-pi', 'person-great-big'),             # raised up high
+        'kemnu': ('kem-nu', 'guard-woman'),                         # young virgin
+        'kibawlsa': ('ki-bawl-sa', 'REFL-make-ready'),              # made ready
+        'pianlim': ('pian-lim', 'create-mold'),                     # one measure
+        'bangtung': ('bang-tung', 'which-arrive'),                  # lintel
+        'khumkhelh': ('khum-khelh', 'cover-exceed'),                # exceeded
+        'zuakkhia': ('zuak-khia', 'sell-out'),                      # bring out by means
+        'omkhawmin': ('om-khawm-in', 'exist-together-INST'),        # be with
+        'beisiangsak': ('bei-siang-sak', 'end-clear-CAUS'),         # take away remnant
+        'numei-pasal': ('numei-pasal', 'woman-man'),                # sodomites
+        'singkang': ('sing-kang', 'tree-stick'),                    # sticks
+        'lungngaih': ('lung-ngaih', 'heart-wait'),                  # sleepeth
+        'khutkuak': ('khut-kuak', 'hand-full'),                     # handfuls
+        'khentawm': ('khen-tawm', 'divide-finish'),                 # decided
+        'hawlpa': ('hawl-pa', 'seek-venture'),                      # at a venture
+        # Round 136: More partial fixes
+        'buante': ('buan-te', 'dust-PL'),                           # as dust
+        'inndap': ('inn-dap', 'house-cover'),                       # covered house
+        'innsun': ('inn-sun', 'house-side'),                        # sides of house
+        'pakkual': ('pak-kual', 'throw-corner'),                    # undersetters
+        'kipsaknate': ('ki-psak-na-te', 'REFL-ledge-NMLZ-PL'),      # ledges
+        'vankoihna-ah': ('van-koih-na-ah', 'heaven-put-NMLZ-LOC'),  # treasures
+        'zawngkhalna': ('zawng-khal-na', 'roam-consume-NMLZ'),      # consumption
+        'lahnate': ('lah-na-te', 'take-NMLZ-PL'),                   # tents
+        'zawngmaw': ('zawng-maw', 'roam-Q'),                        # sea navy
+        'vangte': ('vang-te', 'cause-PL'),                          # cause
+        'ngahkikna': ('ngah-kik-na', 'get-ITER-NMLZ'),              # bring back
+        'vaikhakin': ('vai-khak-in', 'go-return-INST'),             # go back again
+        'leibate': ('lei-ba-te', 'buy-owe-PL'),                     # debt
+        'mainawtin': ('mai-nawt-in', 'face-pierce-INST'),           # forward smiting
+        'pailai-in': ('pai-lai-in', 'go-middle-INST'),              # a day's journey
+        # Round 137: More partial fixes
+        'khialsakin': ('khial-sak-in', 'err-CAUS-INST'),            # slew (caused err)
+        'vaihawmtawm': ('vai-hawm-tawm', 'go-gather-few'),          # portion/inheritance
+        'biaknate-a': ('biak-na-te-a', 'worship-NMLZ-PL-NOM'),      # priests of high places
+        'khenkhia-in': ('khen-khia-in', 'divide-out-INST'),         # cut off
+        'khuangneute': ('khuang-neu-te', 'drum-small-PL'),          # timbrels
+        # Round 138: More partial fixes
+        'nautum': ('nau-tum', 'young-want'),                        # youngest child
+        'zanni': ('zan-ni', 'yesterday-day'),                       # yesterday
+        'ulianpi': ('u-lian-pi', 'elder-great-big'),                # great captain
+        'delhphah': ('delh-phah', 'overcome-spread'),               # spread on face
+        'puahsak': ('puah-sak', 'divide-CAUS'),                     # repair breaches
+        'kuangpi': ('kuang-pi', 'trough-big'),                      # bases (brasen)
+        'kikop': ('ki-kop', 'REFL-oppose'),                         # come up against
+        'thukpen': ('thuk-pen', 'word-cut'),                        # messengers
+        'suksiatsa': ('suk-siat-sa', 'make-break-NMLZ'),            # destroyed
+        'hunhun': ('hun-hun', 'time-REDUP'),                        # continually
+        'paipihtoh': ('pai-pih-toh', 'go-APPL-with'),               # bring up with
+        'gentaak': ('gen-taak', 'speak-firmly'),                    # strangers (few)
+        'kidoksa': ('ki-dok-sa', 'REFL-draw-NMLZ'),                 # drawn sword
+        'ziahziah': ('ziah-ziah', 'willing-REDUP'),                 # willingly
+        'entelin': ('en-tel-in', 'look-join-INST'),                 # seen together
+        'vaihawmsa': ('vai-hawm-sa', 'go-gather-NMLZ'),             # do all things
+        'zuakkhiat': ('zuak-khiat', 'sell-depart'),                 # brought forth
+        'tawpsak': ('tawp-sak', 'end-CAUS'),                        # let cease
         # Round 125: Hyphenated suffix forms
         'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # on both shoulders
         'napiun': ('napi-un', 'but-PL.IMP'),                       # but (imperative pl)
