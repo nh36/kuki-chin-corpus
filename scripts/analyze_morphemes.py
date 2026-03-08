@@ -4221,6 +4221,40 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nam': ('nam', 'nation'),                              # base - nation
         'paipah': ('pai-pah', 'go-arrive'),                    # arrive/come
         'tonkhawm': ('ton-khawm', 'meet-together'),            # meet together
+        
+        # Round 37: More vocabulary from Matthew, Genesis, Exodus
+        'zineipa': ('zinei-pa', 'marry-male'),                 # bridegroom
+        'zinei': ('zinei', 'marry'),                           # base - marry
+        'meivakna': ('mei-vak-na', 'fire-light-NMLZ'),         # candlestick/lamp
+        'innteek': ('inn-teek', 'house-master'),               # householder/master
+        'teek': ('teek', 'master'),                            # base - master
+        'pianpih': ('pian-pih', 'born-with'),                  # born together
+        'zukhamna': ('zukham-na', 'wine-NMLZ'),                # wine/drunkenness
+        'zukham': ('zukham', 'wine'),                          # base - wine
+        'thaneemna': ('thaneem-na', 'naked-NMLZ'),             # nakedness
+        'thaneem': ('thaneem', 'naked'),                       # base - naked
+        'niamsak': ('niam-sak', 'bow-CAUS'),                   # bow down
+        'niam': ('niam', 'bow'),                               # base - bow
+        'kikhenthang': ('ki-khen-thang', 'REFL-separate-scatter'), # scattered
+        'thang': ('thang', 'scatter'),                         # base - scatter
+        'khing': ('khing', 'remain'),                          # base - remain
+        'dikdek': ('dik-dek', 'small-REDUP'),                  # very small
+        'dik': ('dik', 'small'),                               # base - small
+        'dek': ('dek', 'REDUP'),                               # base - reduplication
+        'paisuaksak': ('pai-suak-sak', 'go-become-CAUS'),      # break through
+        'balzan': ('bal-zan', 'tear-PERF'),                    # torn
+        'khutpeek': ('khut-peek', 'hand-breadth'),             # hand breadth
+        'peek': ('peek', 'breadth'),                           # base - breadth
+        'vutluahna': ('vut-luah-na', 'ash-carry-NMLZ'),        # firepan
+        'vut': ('vut', 'ash'),                                 # base - ash
+        'luah': ('luah', 'carry'),                             # base - carry
+        'siklen': ('sik-len', 'tie-net'),                      # grate/net
+        'len': ('len', 'net'),                                 # base - net
+        'simsiam': ('sim-siam', 'count-make'),                 # network/workmanship
+        'thuap': ('thu-ap', 'measure-span'),                   # span (measurement)
+        'ap': ('ap', 'span'),                                  # base - span
+        'khutsiam': ('khut-siam', 'hand-skill'),               # workmanship
+        'siam': ('siam', 'skill'),                             # base - skill
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
