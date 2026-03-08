@@ -5039,6 +5039,84 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khumzaw': ('khum-zaw', 'sweet-COMP'),                 # sweeter
         'khuapisung': ('khuapi-sung', 'city-inside'),          # inside the city
         'sangkil': ('sang-kil', 'step-threshold'),             # threshold, step
+        
+        # Round 64: More partial analyses
+        "pawlkhatte'": ('pawl-khatte', 'group-fifty'),         # fifty (with apostrophe)
+        'pawlkhatte': ('pawl-khatte', 'group-fifty'),          # fifty
+        'cici': ('ci-ci', 'say-REDUP'),                        # entreat, beg repeatedly
+        'ansang': ('an-sang', 'grain-gather'),                 # reap, glean
+        'mitsuan': ('mit-suan', 'eye-direct'),                 # watch, keep eyes on
+        'khamval': ('kham-val', 'forbid-remain'),              # remain, be left over
+        'satkhia': ('sat-khia', 'strike-out'),                 # beat out
+        'kibawlsia': ('ki-bawl-sia', 'REFL-make-bad'),         # be harmed, be met with trouble
+        'thungenin': ('thu-ngen-in', 'word-request-ERG'),      # praying (instrumental)
+        'innkhumzangah': ('inn-khum-zang-ah', 'house-roof-top-LOC'), # on the rooftop
+        'lokhawhna': ('lo-khawh-na', 'field-work-NMLZ'),       # plowing, farming
+        'omkim': ('om-kim', 'exist-complete'),                 # all present, complete
+        'sawmin': ('sawm-in', 'ten.thousand-ERG'),             # ten thousand (as agent)
+        'nawhtai': ('nawh-tai', 'hurry-flee'),                 # hurry, make haste
+        'leenggahkeu': ('leeng-gah-keu', 'grape-dry-cluster'), # raisins
+        'theikhol': ('thei-khol', 'know-certain'),             # know for sure
+        'cinat': ('ci-nat', 'become-sick'),                    # sickness
+        'cinatna': ('ci-nat-na', 'become-sick-NMLZ'),          # sickness (nominalized)
+        'veh': ('veh', 'see'),                                 # see, visit
+        'tomkha': ('tom-kha', 'cover-go'),                     # covered
+        'langtuakah': ('lang-tuak-ah', 'side-each-LOC'),       # on each side
+        'khuakulh': ('khua-kulh', 'town-wall'),                # city wall
+        'ziazua': ('zia-zua', 'clear-?'),                      # clear (morning)
+        'ninbulomtang': ('nin-bulom-tang', 'day-ruin-place'),  # desolate, high (ruin)
+        'kangcip': ('kang-cip', 'dry-lick'),                   # lick up (fire)
+        'kaito': ('kai-to', 'rise-DIR'),                       # arise, come up
+        'awngkhia': ('awng-khia', 'call-out'),                 # cry out
+        
+        # More apostrophe forms
+        "liante'": ('lian-te', 'great-PL'),                    # great ones
+        "gilote'": ('gi-lo-te', 'near-NEG-PL'),                # those far away
+        "lianpa'": ('lian-pa', 'great-father'),                # great man, elder
+        "tuute'": ('tuu-te', 'sheep-PL'),                      # sheep (plural)
+        "tegel'": ('tegel', 'bridle'),                         # bridle
+        "thukhente'": ('thu-khen-te', 'word-divide-PL'),       # judges, those who decide
+        "khatpeuh'": ('khat-peuh', 'one-any'),                 # anyone, any
+        "nengniamte'": ('neng-niam-te', 'sit-low-PL'),         # humble ones
+        "cian'": ('cian', 'announce'),                         # announce
+        "kumpinu'": ('kumpi-nu', 'king-mother'),               # queen mother
+        
+        # Round 65: More partial analyses
+        'zial': ('zi-al', 'shadow-defense'),                   # defense, protection
+        'taktakna': ('tak-tak-na', 'true-REDUP-NMLZ'),         # certainly, truly
+        'kawt': ('kawt', 'head'),                              # head (of river)
+        'kamkaih': ('kam-kaih', 'word-betray'),                # treachery
+        'silsiang': ('sil-siang', 'wash-clean'),               # wash clean
+        'nawnkei': ('nawn-kei', 'again-NEG'),                  # not again, no more
+        'thuahthuah': ('thuah-thuah', 'break-REDUP'),          # break repeatedly, breach upon breach
+        'puanpi': ('puan-pi', 'cloth-great'),                  # robe, garment
+        'tuamtuamin': ('tuam-tuam-in', 'various-REDUP-ERG'),   # in various ways, diversely
+        'hawmpi': ('hawm-pi', 'arrange-great'),                # order, arrange properly
+        'omthei': ('om-thei', 'exist-can'),                    # be possible, can be
+        'kapkap': ('kap-kap', 'weep-REDUP'),                   # weep continually
+        'tawitehna': ('tawi-teh-na', 'hand-measure-NMLZ'),     # span, measure
+        'angsung': ('ang-sung', 'breast-from'),                # weaned
+        'pampaih': ('pam-paih', 'restore-heal'),               # restore health
+        'cingsak': ('cing-sak', 'stand-CAUS'),                 # set up, make strong
+        'siahdongpa': ('siah-dong-pa', 'tax-collect-AGT'),     # tax collector, publican
+        'ankam': ('an-kam', 'food-seed'),                      # grain, seed
+        'lungsimtawng': ('lung-sim-tawng', 'heart-mind-false'), # hypocrisy
+        'nuamtaksa': ('nuam-tak-sa', 'want-true-CAUS'),        # pretence, make to want
+        'cinuam': ('ci-nuam', 'say-pleasant'),                 # proverb
+        'gennuam': ('gen-nuam', 'speak-want'),                 # want to say, have to say
+        'biakinncing': ('biak-inn-cing', 'worship-house-betray'), # betray (at temple)
+        'nekkhit': ('nek-khit', 'eat-after'),                  # after supper, after eating
+        'khongin': ('khong-in', 'obey-ERG'),                   # obeying
+        'bulphuh': ('bul-phuh', 'pride-emerge'),               # boasting
+        'hinkikna': ('hin-kik-na', 'life-return-NMLZ'),        # receiving back, resurrection
+        'pilsak': ('pil-sak', 'learn-CAUS'),                   # teach, make wise
+        'tuithawl': ('tui-thawl', 'water-bottle'),             # water bottle, skin
+        'humcip': ('hum-cip', 'fear-grip'),                    # fear, reverence
+        'tuibeel': ('tui-beel', 'water-pitcher'),              # pitcher, vessel
+        
+        # More apostrophe words
+        "bawlsiate'": ('bawl-sia-te', 'make-bad-PL'),          # evildoers
+        "numeino'": ('numei-no', 'woman-little'),              # girl, young woman
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
