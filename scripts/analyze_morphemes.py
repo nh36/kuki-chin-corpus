@@ -4934,6 +4934,111 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'leteh': ('let-eh', 'return-EXCL'),                    # it is good/bear
         'ninthem': ('nin-them', 'day-dawn'),                   # mote/early morning
         'bawlbawl': ('bawl-bawl', 'make-REDUP'),               # continually
+        
+        # Round 60: Pushing toward 98.5%
+        'kiimnai': ('ki-im-nai', 'REFL-neighbor-close'),       # neighboring, all around
+        'tunma': ('tun-ma', 'arrive-before'),                  # meanwhile, in the meantime
+        'lopipi': ('lo-pipi', 'NEG-really'),                   # unwillingly / with force (ut lopipi = strong hand)
+        "huihpi'": ('huih-pi', 'wind-great'),                  # strong wind, east wind
+        'huihpi': ('huih-pi', 'wind-great'),                   # strong wind (no apostrophe)
+        'kiphelkhamin': ('ki-phel-kham-in', 'REFL-split-break-ERG'),  # was rent/split
+        'peka': ('pek-a', 'edge-LOC'),                         # uttermost parts, edge
+        'kisukha': ('ki-suk-ha', 'REFL-pollute-CAUS'),         # defiled, made unclean
+        "buppi'": ('bup-pi', 'all-great'),                     # entire, whole
+        'buppi': ('bup-pi', 'all-great'),                      # entire, whole (no apostrophe)
+        "kiguan'": ('ki-guan', 'REFL-deliver'),                # delivered, handed over
+        'kiguan': ('ki-guan', 'REFL-deliver'),                 # delivered (no apostrophe)
+        'suntangpi': ('sun-tang-pi', 'sun-before-great'),      # before the sun, publicly
+        'phukha': ('phu-kha', 'emerge-go'),                    # seeth, sees, views
+        'gimpi': ('gim-pi', 'labor-great'),                    # sorrow, toil, great labor
+        'dahlua': ('dah-lua', 'weep-exceed'),                  # great sorrow, grief
+        "pi'": ('pi', 'great'),                                # great (with apostrophe)
+        'uhcin': ('uh-cin', 'PL-COND'),                        # conditional plural marker
+        'le-uhcin': ('le-uh-cin', 'and-PL-COND'),              # lest (conditional warning)
+        'leuhcin': ('le-uh-cin', 'and-PL-COND'),               # lest (without hyphen)
+        
+        # Round 61: Fixing partial analyses
+        'baihsa': ('baih-sa', 'prepare-CAUS'),                 # be ready, prepared
+        'khenuai': ('khe-nuai', 'foot-beneath'),               # sole of foot, from foot
+        'khemsa': ('khem-sa', 'restrain-CAUS'),                # deceive, mislead
+        'dingkhia': ('ding-khia', 'stand-out'),                # depart, go forth
+        'kohna': ('koh-na', 'thank-NMLZ'),                     # thanksgiving
+        'sangpi': ('sang-pi', 'high-great'),                   # high (walls)
+        'siahna': ('siah-na', 'snare-NMLZ'),                   # snare, trap
+        'kihamsiatna': ('ki-hamsiat-na', 'REFL-reproach-NMLZ'), # reproach, disgrace
+        'sutkhia': ('sut-khia', 'break-out'),                  # break off, remove
+        'atkhia': ('at-khia', 'cut-out'),                      # cut off
+        'nawhsa': ('nawh-sa', 'hurry-CAUS'),                   # in haste, hurriedly
+        'khaguh': ('kha-guh', 'jaw-bone'),                     # jawbone
+        'zaza': ('za-za', 'hundred-hundred'),                  # hundreds
+        'zonna': ('zon-na', 'seek-NMLZ'),                      # seeking, searching
+        'siasa': ('sia-sa', 'waste-CAUS'),                     # lay waste, destroy
+        'nui': ('nui', 'laugh'),                               # laugh
+        'ipzo': ('ip-zo', 'restrain-COMPL'),                   # withhold, restrain
+        'balkhia': ('bal-khia', 'tear-out'),                   # rend out, tear off
+        'ansal': ('an-sal', 'grain-store'),                    # storehouse
+        'phongto': ('phong-to', 'reveal-DIR'),                 # raise up, lift
+        'kitheihna': ('ki-theih-na', 'REFL-know-NMLZ'),        # pledge, token (of knowing)
+        'lunggulhna': ('lung-gulh-na', 'heart-long-NMLZ'),     # longing, desire
+        'khengakna': ('khen-gak-na', 'divide-step-NMLZ'),      # footstool, steps
+        'hawmkhia': ('hawm-khia', 'join-out'),                 # give portions, distribute
+        'khuaphia': ('khua-phia', 'cloud-bright'),             # brightness, thick clouds
+        'lusu': ('lu-su', 'head-shake'),                       # shake head
+        'vuina': ('vui-na', 'bury-NMLZ'),                      # burial
+        'deda': ('de-da', 'love-INTNS'),                       # enlarge, widen (covenant)
+        'deidan': ('dei-dan', 'say-manner'),                   # according as, how one says
+        'atsak': ('at-sak', 'cut-CAUS'),                       # circumcise
+        'tuitawi': ('tui-tawi', 'water-draw'),                 # draw water
+        
+        # Round 62: More unknowns
+        'thozo': ('tho-zo', 'arise-COMPL'),                    # walk abroad, recover
+        'tawmzaw': ('tawm-zaw', 'little-COMP'),                # less
+        'kigalsai': ('ki-gal-sai', 'REFL-opposite-face'),      # opposite, over against
+        'kitanh': ('ki-tanh', 'REFL-estimate'),                # be valued, estimated
+        'op': ('op', 'egg'),                                   # egg(s)
+        'lompi': ('lom-pi', 'gate-great'),                     # great gate, entrance
+        'khungin': ('khung-in', 'beam-ERG'),                   # with beams
+        'lampha': ('lam-pha', 'path-good'),                    # restore, rebuild
+        'zumhuaipi': ('zum-huai-pi', 'filth-bad-great'),       # unclean, polluted
+        'beba': ('be-ba', 'open-wide'),                        # gape, open wide mouth
+        'gingpha': ('ging-pha', 'skill-good'),                 # skilfully
+        'deudau': ('deu-dau', 'gather-together'),              # together
+        'kitawito': ('ki-tawi-to', 'REFL-lift-DIR'),           # towering, high/lifted
+        'khuisa': ('khui-sa', 'breath-emit'),                  # sigh
+        'thai': ('thai', 'embrace'),                           # embrace, search
+        'guaktanga': ('guak-tang-a', 'bare-body-LOC'),         # naked (in nakedness)
+        'kitukalhsak': ('ki-tukalh-sak', 'REFL-confuse-CAUS'), # confound, mix up
+        'thongmial': ('thong-mial', 'prison-dark'),            # dungeon
+        'eh!': ('eh', 'EXCL'),                                 # exclamation
+        "han'": ('han', 'yet'),                                # yet (with apostrophe)
+        "masa'": ('masa', 'first'),                            # first (with apostrophe)
+        
+        # Round 63: Fixing partial analyses
+        'awi': ('awi', 'warm'),                                # warm (at fire)
+        'iik': ('iik', 'breast'),                              # breast (wave offering)
+        'sawnsawn': ('sawn-sawn', 'talk-REDUP'),               # talk continuously, persecute
+        'kawikawina': ('kawi-kawi-na', 'wander-REDUP-NMLZ'),   # wandering
+        'ciahto': ('ciah-to', 'return-DIR'),                   # go up, hasten back
+        'zaam': ('zaam', 'run.over'),                          # run over (branches)
+        'buhcilna': ('buh-cil-na', 'grain-thresh-NMLZ'),       # threshing floor
+        'nawtin': ('nawt-in', 'forward-ERG'),                  # forward, onward
+        'nawmvalh': ('nawm-valh', 'soft-swallow'),             # swallow up
+        'kahtoh': ('kah-toh', 'step-ascend'),                  # go up by steps
+        'nilhsak': ('nilh-sak', 'put.on-CAUS'),                # put upon, compound
+        'mongte': ('mong-te', 'end-PL'),                       # ends, edges
+        'khatpeuhah': ('khat-peuh-ah', 'one-any-LOC'),         # in any place
+        'thukzaw': ('thuk-zaw', 'deep-COMP'),                  # lower, deeper
+        'kamsiatna': ('kam-siat-na', 'word-bad-NMLZ'),         # trouble, travail
+        'kansim': ('kan-sim', 'spy-out'),                      # spy out, search
+        'kawcik': ('kaw-cik', 'hollow-narrow'),                # narrow place
+        'kamciam': ('kam-ciam', 'word-promise'),               # vow, bond
+        'ahihlohna': ('a-hi-loh-na', '3SG-be-NEG-NMLZ'),       # not being, absence
+        'lehdona': ('leh-do-na', 'turn-against-NMLZ'),         # trespass, rebellion
+        'mainawt': ('mai-nawt', 'face-forward'),               # rush forward
+        'hilhsak': ('hilh-sak', 'teach-CAUS'),                 # cause to teach, instruct
+        'khumzaw': ('khum-zaw', 'sweet-COMP'),                 # sweeter
+        'khuapisung': ('khuapi-sung', 'city-inside'),          # inside the city
+        'sangkil': ('sang-kil', 'step-threshold'),             # threshold, step
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
