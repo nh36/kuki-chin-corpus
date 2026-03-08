@@ -5717,6 +5717,33 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hihzawh': ('hih-zawh', 'do-able'),                        # able to do, capable
         'veva': ('ve-va', 'do-INTENS'),                            # do repeatedly, intensely
         'nungzang': ('nung-zang', 'back-part'),                    # back, loins
+        # Round 86: KJV-verified vocabulary
+        'ciim': ('ciim', 'mire'),                                  # mire, mud, deep water
+        'vapite': ('vapi-te', 'stork-PL'),                         # storks
+        'vapi': ('vapi', 'stork'),                                 # stork (bird)
+        'tehpih': ('teh-pih', 'measure-compare'),                  # compare, liken
+        'pakpak': ('pak-pak', 'quick-REDUP'),                      # quickly, suddenly
+        'nainai': ('nai-nai', 'near-REDUP'),                       # increasingly, continually
+        'tautauna': ('tautau-na', 'groan-NMLZ'),                   # groaning, sighing
+        'tautau': ('tautau', 'groan'),                             # groan, sigh
+        'biakpih': ('biak-pih', 'worship-also'),                   # worship along with
+        'zawhsak': ('zawh-sak', 'able-CAUS'),                      # subdue, make subject
+        'khuainun': ('khuainun', 'wax'),                           # wax (melting substance)
+        # Round 87: KJV-verified vocabulary
+        'kicinna': ('ki-cin-na', 'REFL-perfect-NMLZ'),             # integrity, perfection
+        'kiliansakte': ('ki-lian-sak-te', 'REFL-great-CAUS-PL'),   # those who exalt themselves
+        'kiliansak': ('ki-lian-sak', 'REFL-great-CAUS'),           # exalt oneself
+        'geelgeel': ('geel-geel', 'plan-REDUP'),                   # ponder, meditate, devise
+        'cihcih': ('cih-cih', 'say-REDUP'),                        # say repeatedly, continually say
+        'thalpi': ('thal-pi', 'bow-great'),                        # bow (weapon)
+        'kiuhkeuh': ('ki-uh-keuh', 'REFL-wash-INTENS'),            # thoroughly wash
+        'siklukhu': ('sik-lukhu', 'iron-helmet'),                  # helmet, strength of head
+        'minthannate': ('minthan-na-te', 'glory-NMLZ-PL'),         # glories, majesties
+        'minthanna': ('minthan-na', 'glory-NMLZ'),                 # glory, majesty
+        'tehlop': ('teh-lop', 'measure-trap'),                     # trap, snare
+        'hatpen': ('hat-pen', 'strong-most'),                      # strongest, mightiest
+        'luituite': ('lui-tui-te', 'river-water-PL'),              # rivers, streams
+        'luitui': ('lui-tui', 'river-water'),                      # river, stream
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
