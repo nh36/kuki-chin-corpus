@@ -6549,6 +6549,139 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suaktasakin': ('suak-ta-sak-in', 'become-free-CAUS-INST'), # let go free
         'thudonin': ('thu-don-in', 'word-obey-INST'),              # obeying
         'phutkhak': ('phut-khak', 'fear-into'),                    # send fear
+        # Round 108: More vocabulary for 99% (count=2)
+        'vankhaina': ('van-khai-na', 'pillar-hang-NMLZ'),          # hooks, pillars
+        'zaisak': ('zai-sak', 'altar-CAUS'),                       # make altar
+        'karbankal': ('karban-kal', 'carbuncle-row'),              # carbuncle
+        'puankhau': ('puan-khau', 'cloth-girdle'),                 # curious girdle
+        'kawnggakte': ('kawng-gak-te', 'coat-PL'),                 # coats
+        'singzep': ('sing-zep', 'tribe-call'),                     # called by name
+        'hakna': ('hak-na', 'delay-NMLZ'),                         # delay
+        'sumtui': ('sum-tui', 'gold-molten'),                      # molten gold
+        'bawlkha': ('bawl-kha', 'make-already'),                   # already made
+        'zungbuhte': ('zung-buh-te', 'bracelet-ring-PL'),          # bracelets
+        'banbulhte': ('ban-bulh-te', 'tablet-PL'),                 # tablets
+        'geelsiam': ('geel-siam', 'devise-make'),                  # devise cunning
+        'siamgat': ('siam-gat', 'make-engrave'),                   # engraver
+        'singpekte': ('sing-pek-te', 'wood-board-PL'),             # boards
+        'vankhai': ('van-khai', 'pillar-hook'),                    # hooks
+        'gelhnate': ('gelh-na-te', 'engrave-NMLZ-PL'),             # engravings
+        'siklongte': ('sik-long-te', 'bell-round-PL'),             # bells
+        'khaito': ('khai-to', 'hang-up'),                          # hang up
+        'kinilhna': ('ki-nilh-na', 'REFL-anoint-NMLZ'),            # anointing
+        'kigawhna': ('ki-gawh-na', 'REFL-sin-NMLZ'),               # sin offering
+        'suhte': ('suh-te', 'rob-PL'),                             # robbed things
+        'apkhawm': ('ap-khawm', 'anoint-together'),                # anointed
+        'pheite': ('phei-te', 'breast-PL'),                        # breasts
+        'awmtal': ('awm-tal', 'belly-crawl'),                      # belly
+        'kibawltawm': ('ki-bawl-tawm', 'REFL-make-vain'),          # abominable
+        'damsa': ('dam-sa', 'heal-PAST'),                          # healed
+        'milmial': ('mil-mial', 'spot-freckle'),                   # freckled spot
+        'zutna': ('zut-na', 'mortar-NMLZ'),                        # mortar
+        'tutnasa': ('tut-na-sa', 'sit-NMLZ-PAST'),                 # sat upon
+        'ninneih': ('nin-neih', 'issue-have'),                     # have issue
+        'ninnei': ('nin-nei', 'issue-have'),                       # have issue
+        'hunlopi': ('hun-lo-pi', 'time-NEG-any'),                  # not at all times
+        'keeldawite': ('keel-dawi-te', 'goat-devil-PL'),           # devils
+        'luakkhiat': ('luak-khiat', 'vomit-out'),                  # spue out
+        'kiate': ('kia-te', 'grape-PL'),                           # grapes
+        'kemcip': ('kem-cip', 'defraud-INTENS'),                   # defraud
+        'tehnate': ('teh-na-te', 'measure-NMLZ-PL'),               # measures
+        'vankahna': ('van-kah-na', 'spirit-follow-NMLZ'),          # familiar spirits
+        'khutlekhe': ('khut-lekhe', 'hand-flat'),                  # flat nose
+        'ciltang': ('cil-tang', 'back-crooked'),                   # crookback
+        'nekkhak': ('nek-khak', 'eat-into'),                       # eat unwittingly
+        'saulua': ('sau-lua', 'long-too'),                         # superfluous
+        'zuaksa': ('zuak-sa', 'sell-PAST'),                        # sold
+        'hakkolte': ('hak-kol-te', 'yoke-band-PL'),                # bands of yoke
+        'demlai': ('dem-lai', 'reform-still'),                     # reformed
+        'nanzawh': ('nan-zawh', 'fall-finish'),                    # fall
+        'tungsiahte': ('tung-siah-te', 'age-sixty-PL'),            # sixty years old
+        'buppite': ('bup-pi-te', 'head-great-PL'),                 # princes
+        'simkhawm': ('sim-khawm', 'count-together'),               # take sum
+        'kipiate': ('ki-pia-te', 'REFL-give-PL'),                  # wholly given
+        'innkuankuanun': ('inn-kuan-kuan-un', 'house-family-REDUP-3PL'), # throughout families
+        'tuibuahna': ('tui-buah-na', 'water-dish-NMLZ'),           # dishes
+        'ditkikna': ('dit-kik-na', 'recompense-again-NMLZ'),       # recompense
+        'pawmin': ('pawm-in', 'drink-INST'),                       # drinking
+        'sauzaw': ('sau-zaw', 'long-more'),                        # longer
+        'kihelte': ('ki-hel-te', 'REFL-mingle-PL'),                # mingled
+        'nehin': ('neh-in', 'cloud-INST'),                         # in cloud
+        'phunsanna': ('phun-san-na', 'murmur-complaint-NMLZ'),     # murmuring
+        'ninpa': ('nin-pa', 'clean-NMLZ'),                         # clean person
+        'gulte': ('gul-te', 'serpent-PL'),                         # serpents
+        'nengcip': ('neng-cip', 'face-crush'),                     # crushed
+        'zuisuak': ('zui-suak', 'follow-out'),                     # go with
+        'kaplet': ('kap-let', 'break-pierce'),                     # pierce
+        'pammaihsa': ('pam-maih-sa', 'zealous-face-PAST'),         # zealous
+        'saksak': ('sak-sak', 'atonement-CAUS'),                   # made atonement
+        'valh': ('valh', 'swallow'),                               # swallowed
+        'hunun': ('hun-un', 'day-3PL'),                            # in day
+        'kamciamnate': ('kam-ciam-na-te', 'mouth-vow-NMLZ-PL'),    # vows
+        'kamciamin': ('kam-ciam-in', 'mouth-vow-INST'),            # vowing
+        'khenkhiat': ('khen-khiat', 'divide-out'),                 # divided
+        'zawhpih': ('zawh-pih', 'subdue-with'),                    # subdued
+        'giahphualte': ('giah-phual-te', 'place-standard-PL'),     # standards
+        'peemte': ('peem-te', 'refuge-PL'),                        # refuges
+        'totsa': ('tot-sa', 'hear-PAST'),                          # heard
+        'paupeengsak': ('pau-peeng-sak', 'speak-hard-CAUS'),       # hardened
+        'khuazing': ('khua-zing', 'sky-dark'),                     # thick darkness
+        'minamdang': ('mi-nam-dang', 'person-nation-other'),       # another nation
+        'khiasak': ('khia-sak', 'put.out-CAUS'),                   # put out
+        'khalna': ('khal-na', 'chasten-NMLZ'),                     # chastening
+        # Round 109: More vocabulary for 99%
+        'lamna': ('lam-na', 'dance-NMLZ'),                         # dancing
+        'kiimnai': ('ki-im-nai', 'REFL-destroy-all'),              # utterly destroyed
+        'hehsa': ('heh-sa', 'angry-PAST'),                         # anger kindled
+        'hutna': ('hut-na', 'save-NMLZ'),                          # saving
+        'kiimcip': ('ki-im-cip', 'REFL-destroy-INTENS'),           # utterly
+        'dahlua': ('dah-lua', 'grieve-too'),                       # sorrow too much
+        'louih': ('lo-uih', 'garlic-leek'),                        # leeks
+        'suntangpi': ('sun-tang-pi', 'sun-before-great'),          # before sun
+        'hawkkhia': ('hawk-khia', 'strip-out'),                    # stripped off
+        'zumhuaipi': ('zum-huai-pi', 'unclean-mix-great'),         # unclean
+        'haksapi': ('hak-sa-pi', 'difficult-PAST-great'),          # evil case
+        'khekna': ('khek-na', 'fail-NMLZ'),                        # fail
+        'kigaih': ('ki-gaih', 'REFL-chew'),                        # chewed
+        'liaktum': ('liak-tum', 'lick-up'),                        # lick up
+        'dawhsa': ('dawh-sa', 'draw-PAST'),                        # drawn
+        'sungtum': ('sung-tum', 'inside-ask'),                     # ask counsel
+        'phulapa': ('phula-pa', 'avenger-NMLZ'),                   # avenger
+        'kimaituahin': ('ki-mai-tuah-in', 'REFL-face-do-INST'),    # face to face
+        'tamvei': ('tam-vei', 'many-stripes'),                     # many stripes
+        'kinengniamin': ('ki-neng-niam-in', 'REFL-grope-feel-INST'), # groping
+        'kikzo': ('kik-zo', 'again-able'),                         # rise again
+        'lamteng': ('lam-teng', 'direction-all'),                  # border met
+        'sualphah': ('sual-phah', 'turn-in'),                      # turn in
+        'hutpih': ('hut-pih', 'save-with'),                        # save/plead
+        'kisuahin': ('ki-suah-in', 'REFL-ambush-INST'),            # laid wait
+        'ginazaw': ('gina-zaw', 'better-more'),                    # better than
+        'tasel': ('ta-sel', 'child-seek'),                         # bare not
+        'botsat': ('bot-sat', 'break-thread'),                     # brake withs
+        'busim': ('bu-sim', 'rope-new'),                           # new ropes
+        'kimet': ('ki-met', 'REFL-shave'),                         # be shaven
+        'kimawl': ('ki-mawl', 'REFL-sport'),                       # make sport
+        'thahatte': ('tha-hat-te', 'strength-strong-PL'),          # mighty men
+        'thahloh': ('thah-loh', 'slay-NEG'),                       # slay not
+        'galphualah': ('gal-phual-ah', 'battle-place-LOC'),        # to battle
+        'tuukhawk': ('tuu-khawk', 'sheep-cote'),                   # sheepcote
+        'phawktel': ('phawk-tel', 'perceive-know'),                # perceived
+        'hepkhiat': ('hep-khiat', 'depart-out'),                   # depart away
+        'madawkin': ('ma-dawkin', 'that-reason'),                  # wherefore
+        'tawmlua': ('tawm-lua', 'little-too'),                     # too little
+        'zongzaw': ('zong-zaw', 'more-more'),                      # how much more
+        'taisuk': ('tai-suk', 'cross-over'),                       # went over
+        'kilinggawp': ('ki-ling-gawp', 'REFL-shake-INTENS'),       # shook terribly
+        'sugawpzo': ('su-gawp-zo', 'leap-INTENS-able'),            # leaped over
+        'suangseek': ('suang-seek', 'stone-hew'),                  # hewers
+        'kidap': ('ki-dap', 'REFL-carve'),                         # carved
+        'lamnop': ('lam-nop', 'desire-pleasant'),                  # pleased to do
+        'olsak': ('ol-sak', 'easy-CAUS'),                          # made abundant
+        'kilin': ('ki-lin', 'REFL-shake'),                         # shaken
+        'hawklam': ('hawk-lam', 'trench-path'),                    # trench
+        'kithakhauhsak': ('ki-tha-kauh-sak', 'REFL-strength-strong-CAUS'), # strengthen
+        'kihepkhiat': ('ki-hep-khiat', 'REFL-depart-out'),         # departed
+        'thep': ('thep', 'wound'),                                 # wounded
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
