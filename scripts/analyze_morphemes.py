@@ -5273,6 +5273,76 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ngetnop': ('nget-nop', 'request-desire'),             # desire a request
         'lungnuamsak': ('lung-nuam-sak', 'heart-pleasant-CAUS'), # cheer, make glad
         'khuadakin': ('khua-dak-in', 'town-division-ERG'),     # divide into companies
+        
+        # Round 71: More high-frequency partials
+        'selkeu': ('sel-keu', 'cut-bundle'),                   # boughs (cut branches)
+        'zawlta': ('zawl-ta', 'valley-from'),                  # Gileadite
+        'pawipuan': ('pawi-puan', 'feast-cloth'),              # feast (linen garments)
+        'luai': ('lua-i', 'exceed-?'),                         # middle (pillars)
+        'naina': ('nai-na', 'near-NMLZ'),                      # battle, lying in wait
+        'kumsim': ('kum-sim', 'year-count'),                   # yearly
+        'sihsan': ('sih-san', 'die-leave'),                    # died (both)
+        'maipuk': ('mai-puk', 'face-fall'),                    # fall on face
+        'puato': ('pua-to', 'carry-up'),                       # fetch up
+        'limcipen': ('lim-ci-pen', 'beauty-say-SUPRL'),        # best (vineyards)
+        'bawngnote': ('bawng-no-te', 'cattle-young-PL'),       # calves
+        'lingsa': ('ling-sa', 'fear-CAUS'),                    # trembled (elders)
+        'puaksak': ('puak-sak', 'send-CAUS'),                  # send, laden
+        'sihtheih': ('sih-theih', 'die-can'),                  # can be killed
+        'kengin': ('keng-in', 'only-ERG'),                     # only (with ephod)
+        'genthang': ('gen-thang', 'speak-hear'),               # report (heard)
+        'pamah': ('pa-mah', 'father-self'),                    # aside (privately)
+        'khangkhawm': ('khang-khawm', 'grow-together'),        # brought up
+        'khutmeno': ('khut-me-no', 'hand-self-little'),        # own hands
+        'khentel': ('khen-tel', 'divide-distinguish'),         # put difference
+        'neizaw': ('nei-zaw', 'have-COMP'),                    # more parts
+        'hatlua': ('hat-lua', 'strong-exceed'),                # too strong
+        'kawkbaang': ('kawk-baang', 'call-upright'),           # upright man
+        'dotna': ('dot-na', 'ask-NMLZ'),                       # asking (straitly)
+        
+        # Round 72: More high-frequency partials
+        'pilzaw': ('pil-zaw', 'wise-COMP'),                    # wiser
+        'cingsing': ('cing-sing', 'know-wood'),                # almug trees (rare wood)
+        'lingnei': ('ling-nei', 'hope-have'),                  # add (whips)
+        'kiheina': ('ki-hei-na', 'REFL-turn-NMLZ'),            # cause, turning
+        'akte': ('ak-te', 'rooster-PL'),                       # lights (in firmament)
+        'pailai': ('pai-lai', 'go-midst'),                     # day's journey
+        'sampa': ('sam-pa', 'call-AGT'),                       # prophet (one who calls)
+        'sawnkhia': ('sawn-khia', 'catch-out'),                # caught (at feet)
+        'mattheih': ('mat-theih', 'grasp-can'),                # able to catch
+        'kibatna': ('ki-bat-na', 'REFL-trust-NMLZ'),           # trust
+        'nul': ('nul', 'beast'),                               # beast
+        'sinna': ('sin-na', 'sin-NMLZ'),                       # young/tender
+        'kilamkikna': ('ki-lam-kik-na', 'REFL-burden-return-NMLZ'), # burdens laid
+        'keen': ('keen', 'alive'),                             # alive
+        'sumkem': ('sum-kem', 'money-guard'),                  # treasurer
+        'kisuksiatna': ('ki-suk-siat-na', 'REFL-pollute-destroy-NMLZ'), # destruction
+        'mualbo': ('mual-bo', 'see-round'),                    # over against
+        'mui': ('mui', 'shoot'),                               # shoot (arrows)
+        'kikna': ('kik-na', 'return-NMLZ'),                    # returning, bringing back
+        'minthuhna': ('min-thuh-na', 'name-sign-NMLZ'),        # signet ring
+        'phatuam': ('pha-tuam', 'good-exceed'),                # forcible
+        'singteh': ('sing-teh', 'tree-break'),                 # leaf (driven)
+        'ciangtan': ('ciang-tan', 'weave-swift'),              # shuttle (weaver's)
+        'nuamtuam': ('nuam-tuam', 'want-cover'),               # forbear
+        'nektum': ('nek-tum', 'eat-end'),                      # destroy body
+        'letkhiat': ('let-khiat', 'return-away'),              # depart from
+        'paubaan': ('pau-baan', 'speak-?'),                    # perfect (blameless)
+        'suakkha': ('suak-kha', 'become-hard'),                # hardened
+        'henna': ('hen-na', 'cast-NMLZ'),                      # casting off (cords)
+        'linglawng': ('ling-lawng', 'hope-vex'),               # vex (in displeasure)
+        'lungngai': ('lung-ngai', 'heart-meditate'),           # meditate
+        'hingkhia': ('hing-khia', 'be-out'),                   # travail, bring forth
+        'kiphatna': ('ki-phat-na', 'REFL-praise-NMLZ'),        # excellent, glory
+        'pialkhia': ('pial-khia', 'show-out'),                 # declare
+        'laikung': ('lai-kung', 'midst-matter'),               # inditing, matter
+        'kisikcip': ('ki-sik-cip', 'REFL-turn-grip'),          # return ashamed
+        'luangkhiasak': ('luang-khia-sak', 'flow-out-CAUS'),   # bring streams
+        'ansi': ('an-si', 'grain-chaff'),                      # chaff
+        'silesa': ('si-lesa', 'skin-faint'),                   # flesh fail
+        'kankan': ('kan-kan', 'seek-REDUP'),                   # sought out
+        'sakpa': ('sak-pa', 'cause-AGT'),                      # one who makes
+        'sumlepai': ('sum-le-pai', 'money-and-go'),            # ransom
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
