@@ -4586,6 +4586,73 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suak': ('suak', 'wither'),                            # base - wither
         'bekun': ('bek-un', 'only-time'),                      # at last
         'bek': ('bek', 'only'),                                # base - only
+        
+        # Round 49: More vocabulary from Deuteronomy, Joshua, Judges, Proverbs, Ecclesiastes, etc.
+        'zunglot': ('zung-lot', 'root-pull'),                  # uproot
+        'lot': ('lot', 'pull'),                                # base - pull
+        'lazo': ('la-zo', 'take-able'),                        # able to take
+        'meilah': ('mei-lah', 'fire-lamp'),                    # lamp
+        'lah': ('lah', 'lamp'),                                # base - lamp
+        'tup': ('tup', 'roast'),                               # roast
+        'piciang': ('pi-ciang', 'great-straight'),             # various/diverse
+        'kiphattawm': ('ki-phat-tawm', 'REFL-praise-by'),      # be praised
+        'tawm': ('tawm', 'by'),                                # base - by/with
+        'kiheek': ('ki-heek', 'REFL-oppose'),                  # resist/withstand
+        'heek': ('heek', 'oppose'),                            # base - oppose
+        'suangngo': ('suang-ngo', 'stone-socket'),             # socket/base
+        'ngo': ('ngo', 'socket'),                              # base - socket
+        'bupun': ('bup-un', 'all-time'),                       # cluster
+        'gahpha': ('gah-pha', 'branch-good'),                  # flourishing
+        'gah': ('gah', 'branch'),                              # base - branch
+        'kikai': ('ki-kai', 'REFL-lead'),                      # be led away/captive
+        'kilkel': ('ki-lkel', 'REFL-leave'),                   # be forsaken
+        'lkel': ('lkel', 'leave'),                             # base - leave
+        'gip': ('gip', 'seal'),                                # seal
+        'lipkhap': ('lip-khap', 'freedom-loose'),              # liberty
+        'lip': ('lip', 'freedom'),                             # base - freedom
+        'khap': ('khap', 'loose'),                             # base - loose
+        
+        # Round 50: More vocabulary from Acts, Corinthians, Genesis, Exodus
+        'kithutuak': ('ki-thu-tuak', 'REFL-word-receive'),     # believe
+        'tuak': ('tuak', 'receive'),                           # base - receive
+        'kimuthei': ('ki-mu-thei', 'REFL-see-able'),           # be visible
+        'meiilum': ('mei-ilum', 'fire-mist'),                  # vapor/mist
+        'ilum': ('ilum', 'mist'),                              # base - mist
+        'kithukkik': ('ki-thuk-kik', 'REFL-revenge-ITER'),     # be avenged
+        'thuk': ('thuk', 'revenge'),                           # base - revenge
+        'kisunin': ('ki-sun-in', 'REFL-resemble-ERG'),         # in likeness
+        'kisiagawp': ('ki-sia-gawp', 'REFL-bad-break'),        # be corrupted
+        'kultal': ('kul-tal', 'tar-coat'),                     # pitch/tar
+        'kul': ('kul', 'tar'),                                 # base - tar
+        'tal': ('tal', 'coat'),                                # base - coat
+        'kiphiatkhia': ('ki-phiat-khia', 'REFL-destroy-out'),  # be destroyed
+        'guaktang': ('guak-tang', 'back-toward'),              # backward
+        'guak': ('guak', 'back'),                              # base - back
+        'kizelthang': ('ki-zel-thang', 'REFL-scatter-spread'), # be spread abroad
+        'zel': ('zel', 'scatter'),                             # base - scatter
+        'kilui': ('ki-lui', 'REFL-tell'),                      # be told
+        'lui': ('lui', 'tell'),                                # base - tell
+        'kigu': ('ki-gu', 'REFL-tear'),                        # be torn
+        'lapi': ('la-pi', 'take-big'),                         # female animal
+        'thagui': ('tha-gui', 'strength-cord'),                # sinew
+        'gui': ('gui', 'cord'),                                # base - cord
+        'moman': ('mo-man', 'bride-price'),                    # dowry
+        'mo': ('mo', 'bride'),                                 # base - bride
+        'mangman': ('mang-man', 'dream-person'),               # dreamer
+        'teekpa': ('teek-pa', 'in.law-father'),                # father-in-law
+        'teek': ('teek', 'in.law'),                            # base - in-law
+        'huanpipa': ('huan-pi-pa', 'bread-great-man'),         # chief baker
+        'huan': ('huan', 'bread'),                             # base - bread
+        'gawng': ('gawng', 'lean'),                            # lean/ill-favoured
+        'buhvui': ('buh-vui', 'rice-dust'),                    # grain
+        'khitlam': ('khit-lam', 'finish-way'),                 # appearance
+        'oksak': ('ok-sak', 'clothe-CAUS'),                    # cause to wear
+        'ok': ('ok', 'clothe'),                                # base - clothe
+        'tumpihin': ('tum-pih-in', 'set-APPL-ERG'),            # set before
+        'gawl': ('gawl', 'neck'),                              # neck
+        'sul': ('sul', 'snake'),                               # snake/serpent
+        'hankuang': ('han-kuang', 'carry-box'),                # coffin
+        'haksapi': ('hak-sa-pi', 'heavy-flesh-great'),         # hard labor
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
