@@ -5173,6 +5173,60 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'haksate': ('haksa-te', 'difficult-PL'),               # hard (causes)
         'neisa': ('nei-sa', 'have-CAUS'),                      # give dominion
         'honsa': ('hon-sa', 'flock-CAUS'),                     # conceive (opened womb)
+        
+        # Round 68: More partial analyses
+        'ziazua': ('zia-zua', 'sun-clear'),                    # clear morning (sunrise)
+        'nawite': ('nawi-te', 'twin-PL'),                      # twins
+        'khawngah': ('khawng-ah', 'wall-LOC'),                 # upon the wall
+        'kangtummang': ('kang-tum-mang', 'burn-end-destroy'),  # devoured, consumed
+        'kamkei': ('kam-kei', 'word-with'),                    # with me, come along
+        'kahin': ('ka-hi-n', '1SG-be-PST'),                    # was (past tense)
+        'zumna': ('zum-na', 'foolish-NMLZ'),                   # foolishness
+        'zumhuaina': ('zum-huai-na', 'filth-bad-NMLZ'),        # shame, nakedness
+        'zuipah': ('zui-pah', 'follow-toward'),                # follow (toward)
+        'zuihtheih': ('zuih-theih', 'follow-can'),             # able to follow
+        'zintunna': ('zin-tun-na', 'journey-arrive-NMLZ'),     # stay, remain
+        'zinling': ('zin-ling', 'journey-pass'),               # still small (voice)
+        'zawlta': ('zawl-ta', 'valley-?'),                     # Gileadite (from Gilead)
+        'zawhgawp': ('zawh-gawp', 'able-strike'),              # able to conquer
+        'zanuam': ('za-nuam', 'hear-desire'),                  # desire to hear
+        'zanthapai': ('zan-tha-pai', 'night-new-go'),          # wearisome nights
+        'zam': ('zam', 'fear'),                                # fear, distress
+        'veivei': ('vei-vei', 'time-REDUP'),                   # from time to time
+        'vatawt': ('va-tawt', 'go.and-?'),                     # hawk (bird)
+        'vankah': ('van-kah', 'spirit-?'),                     # familiar spirits
+        'vangikpi': ('vangik-pi', 'yoke-great'),               # grievous yoke
+        'vailam': ('vai-lam', 'side-direction'),               # west side
+        'umgui': ('um-gui', 'shade-?'),                        # gourd (shade plant)
+        'tunsakna': ('tun-sak-na', 'arrive-CAUS-NMLZ'),        # offering (brought near)
+        'tungtham': ('tung-tham', 'top-height'),               # height, stature
+        'tungnungah': ('tung-nung-ah', 'above-back-LOC'),      # upper (chambers)
+        'tuamsak': ('tuam-sak', 'cover-CAUS'),                 # clothe, fence
+        'tuahsiatna': ('tuah-siat-na', 'do-bad-NMLZ'),         # complaining, evil deed
+        'tuahna': ('tuah-na', 'do-NMLZ'),                      # deed, murder
+        'top': ('top', 'generation'),                          # generations
+        'tokhia': ('to-khia', 'sit-out'),                      # hew out
+        
+        # Round 69: More partials
+        'thuzuau': ('thu-zuau', 'word-froward'),               # froward mouth
+        'thuthukpi': ('thu-thuk-pi', 'word-deep-great'),       # secret, mystery
+        'thuthei': ('thu-thei', 'word-know'),                  # understanding, wise
+        'thutelna': ('thu-tel-na', 'word-fulfill-NMLZ'),       # charge, understanding
+        'thutanna': ('thu-tan-na', 'word-judge-NMLZ'),         # right, cause, judgment
+        'thumong': ('thu-mong', 'word-end'),                   # end, fate
+        'thuktum': ('thuk-tum', 'deep-end'),                   # deep (of plague)
+        'thukhual': ('thu-khual', 'word-strange'),             # strange, enemy
+        'thudong': ('thu-dong', 'word-inquire'),               # enquire, ask
+        'thuciamteh': ('thu-ciam-teh', 'word-promise-measure'), # covenant (confirm)
+        'theihsak': ('theih-sak', 'know-CAUS'),                # make known
+        'tektek': ('tek-tek', 'bend-REDUP'),                   # bend (tongues)
+        'teello': ('teel-lo', 'choose-NEG'),                   # not chosen
+        'teelkhiat': ('teel-khiat', 'choose-away'),            # reject, forsake
+        'tawldamna': ('tawl-dam-na', 'rest-well-NMLZ'),        # hope, security
+        'tawikhaina': ('tawi-khai-na', 'weigh-balance-NMLZ'),  # balance, integrity
+        'tangtunsak': ('tang-tun-sak', 'arrive-reach-CAUS'),   # hasten, bring to pass
+        'taiina': ('tai-na', 'correct-NMLZ'),                  # chastening
+        'sutpi': ('sut-pi', 'spoil-great'),                    # chief cornerstone
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
