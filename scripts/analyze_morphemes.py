@@ -5744,6 +5744,35 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hatpen': ('hat-pen', 'strong-most'),                      # strongest, mightiest
         'luituite': ('lui-tui-te', 'river-water-PL'),              # rivers, streams
         'luitui': ('lui-tui', 'river-water'),                      # river, stream
+        # Round 88: KJV-verified vocabulary
+        'teelpa': ('teel-pa', 'choose-NMLZ.M'),                    # chosen one
+        'paihsak': ('paih-sak', 'cast-CAUS'),                      # cast away, throw down
+        'neikha': ('nei-kha', 'have-?'),                           # consider, know (in heart)
+        'huihte': ('huih-te', 'wind-PL'),                          # winds
+        'huih': ('huih', 'wind'),                                  # wind
+        'muantaak': ('muan-taak', 'trust-ADV'),                    # trustworthy, faithful
+        'thuciamnasa': ('thuciamna-sa', 'promise-PRF'),            # vow made, promised
+        'pialsak': ('pial-sak', 'stray-CAUS'),                     # cause to stray, lead astray
+        'khialhkhak': ('khialh-khak', 'err-fall'),                 # stumble into sin
+        'muhtangpi': ('muh-tangpi', 'see.II-before'),              # in sight of, before (eyes)
+        'awkna': ('awk-na', 'trap-NMLZ'),                          # trap, snare, slaughter
+        'awk': ('awk', 'trap'),                                    # trap, snare
+        # Round 89: KJV-verified vocabulary
+        'sinkhamna': ('sin-kham-na', 'heart-tight-NMLZ'),          # anguish, distress
+        'thungaihsut': ('thu-ngaihsut', 'word-think'),             # understanding, discretion
+        'ansalte': ('ansal-te', 'granary-PL'),                     # barns, granaries
+        'ansal': ('ansal', 'granary'),                             # barn, granary
+        'kihilhnate': ('ki-hilh-na-te', 'PASS-teach-NMLZ-PL'),     # instructions
+        'kihilhna': ('ki-hilh-na', 'PASS-teach-NMLZ'),             # instruction
+        'paikha': ('pai-kha', 'go-near'),                          # go near, approach
+        'lumlum': ('lum-lum', 'lie-REDUP'),                        # sleep deeply, slumber
+        'thungaihsun': ('thu-ngaihsun', 'word-think'),             # understanding (variant)
+        'awkpih': ('awk-pih', 'trap-APPL'),                        # be trapped, ensnared
+        'teiteite': ('teitei-te', 'certain-PL'),                   # certainly (those who)
+        'teitei': ('teitei', 'certain'),                           # certainly, surely
+        'kipelhna': ('ki-pelh-na', 'REFL-escape-NMLZ'),            # escape, deliverance
+        'kipel': ('ki-pelh', 'REFL-escape'),                       # escape
+        'nektawm': ('nek-tawm', 'eat.II-little'),                  # food, something to eat
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
