@@ -4183,6 +4183,44 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zal': ('zal', 'shake'),                               # base - shake
         'hihnop': ('hih-nop', 'do-want'),                      # plan/thought
         'zahhuai': ('zah-huai', 'ashamed-bad'),                # ashamed/vexed
+        
+        # Round 35: More vocabulary
+        'kiliatsakna': ('ki-liat-sak-na', 'REFL-oppress-CAUS-NMLZ'), # oppression
+        'kiselna': ('ki-sel-na', 'REFL-quarrel-NMLZ'),         # strife
+        'sel': ('sel', 'quarrel'),                             # base - quarrel
+        'nuntakzia': ('nuntak-zia', 'live-manner'),            # ways/lifestyle
+        'zia': ('zia', 'manner'),                              # base - manner
+        'damdam': ('dam-dam', 'well-well'),                    # softly/gently
+        'maitai': ('mai-tai', 'face-bright'),                  # radiant/lightened
+        'etlawm': ('et-lawm', 'fat-lamb'),                     # fat/fatness
+        'lawm': ('lawm', 'lamb'),                              # base - lamb
+        'ngaihsunkha': ('ngaihsun-kha', 'think-CAUS'),         # thought/imagine
+        'nilkhiat': ('nil-khiat', 'throw-away'),               # refuse/reject
+        'nil': ('nil', 'throw'),                               # base - throw
+        'thuakpih': ('thuak-pih', 'suffer-with'),              # adversity/trouble
+        'hamphazaw': ('ham-pha-zaw', 'full-good-more'),        # better/more
+        'suaktalai': ('suak-ta-lai', 'become-PERF-midst'),     # remnant/escaped
+        
+        # Round 36: More vocabulary from prophets
+        'mualsang': ('mual-sang', 'hill-high'),                # high places
+        'sang': ('sang', 'high'),                              # base - high
+        'dialkaih': ('dial-kaih', 'belt-loosen'),              # girdle/belt
+        'dial': ('dial', 'belt'),                              # base - belt
+        'kaih': ('kaih', 'loosen'),                            # base - loosen
+        'khuakulhpi': ('khua-kulh-pi', 'town-wall-big'),       # fenced wall
+        'kulhpi': ('kulh-pi', 'wall-big'),                     # great wall
+        'mulkimhuai': ('mul-kim-huai', 'full-all-bad'),        # horrible
+        'mul': ('mul', 'full'),                                # base - full
+        'thuvanpi': ('thu-van-pi', 'word-write-master'),       # scribe
+        'thuakkhawm': ('thuak-khawm', 'suffer-together'),      # suffer together
+        'khawm': ('khawm', 'together'),                        # base - together
+        'tangsak': ('tang-sak', 'give-CAUS'),                  # give/provide
+        'theinuam': ('thei-nuam', 'know-want'),                # want to know
+        'nuam': ('nuam', 'want'),                              # base - want
+        'paunam': ('pau-nam', 'speak-nation'),                 # language
+        'nam': ('nam', 'nation'),                              # base - nation
+        'paipah': ('pai-pah', 'go-arrive'),                    # arrive/come
+        'tonkhawm': ('ton-khawm', 'meet-together'),            # meet together
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
