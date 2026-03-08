@@ -6917,6 +6917,65 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'cithei': ('ci-thei', 'eye-evil'),                         # eye evil
         'theithei': ('thei-thei', 'know-REDUP'),                   # perceive
         'bangzia': ('bang-zia', 'what-like'),                      # such like
+        # Round 114: More vocabulary for 99%
+        'hawi': ('hawi', 'holy'),                                  # holy
+        'kihuansa': ('ki-huan-sa', 'REFL-shave-PAST'),             # shaven
+        'kiumin': ('ki-um-in', 'REFL-strong-INST'),                # strong
+        'mongteep': ('mong-teep', 'border-fringe'),                # fringes
+        'kiphelkham': ('ki-phel-kham', 'REFL-split-asunder'),      # clave asunder
+        'kisiincip': ('ki-siin-cip', 'REFL-cover-INTENS'),         # covering
+        'madawk': ('ma-dawk', 'that-morrow'),                      # on morrow
+        'suzan': ('su-zan', 'strength-unicorn'),                   # unicorn
+        'kizomtawm': ('ki-zom-tawm', 'REFL-join-together'),        # joined
+        'gimsakgawp': ('gim-sak-gawp', 'vex-CAUS-INTENS'),         # vex
+        'lehpan': ('leh-pan', 'rebel-against'),                    # rebelled
+        'dungteng': ('dung-teng', 'west-border'),                  # west border
+        'tawmcik': ('tawm-cik', 'few-number'),                     # few in number
+        'dengzan': ('deng-zan', 'rod-iron'),                       # rod of iron
+        'talsuan': ('tal-suan', 'lay-up'),                         # lay up
+        'kideidan': ('ki-dei-dan', 'REFL-kill-eat'),               # kill and eat
+        'sotsak': ('sot-sak', 'enlarge-CAUS'),                     # enlarge
+        'kibuakhia': ('ki-buak-hia', 'REFL-pour-out'),             # poured out
+        'tawsak': ('taw-sak', 'weary-CAUS'),                       # wearied
+        'songpi': ('song-pi', 'image-great'),                      # image
+        'haksalua': ('hak-sa-lua', 'hard-PAST-too'),               # too hard
+        'zomto': ('zom-to', 'loose-shoe'),                         # loose shoe
+        'gilvahin': ('gil-vah-in', 'tithe-fill-INST'),             # tithing
+        'oltak': ('ol-tak', 'ease-rest'),                          # ease/rest
+        'kisukkhak': ('ki-suk-khak', 'REFL-blood-upon'),           # blood upon
+        'kilelsak': ('ki-lel-sak', 'REFL-flee-CAUS'),              # made flee
+        'guktak': ('guk-tak', 'good-fidelity'),                    # good fidelity
+        'gamtatna': ('gam-tat-na', 'earth-curse-NMLZ'),            # curse ground
+        'inndei': ('inn-dei', 'house-chamber'),                    # chamber
+        'hehpihna': ('heh-pih-na', 'favor-with-NMLZ'),             # favour
+        'siampi': ('siam-pi', 'priest-great'),                     # priest
+        'sihna': ('sih-na', 'blood-NMLZ'),                         # blood/life
+        'lingsa': ('ling-sa', 'tremble-PAST'),                     # trembled
+        'zahko': ('zah-ko', 'gather-grapes'),                      # gathered
+        'koihna': ('koih-na', 'set-NMLZ'),                         # set over
+        'siahna': ('siah-na', 'snare-NMLZ'),                       # snare
+        'hoihzaw': ('hoih-zaw', 'well-more'),                      # well
+        'kisa': ('ki-sa', 'REFL-PAST'),                            # grieved
+        'sangpi': ('sang-pi', 'high-great'),                       # high walls
+        'tanglai': ('tang-lai', 'ancient-NMLZ'),                   # ancient
+        'ngaihsutna': ('ngaih-sut-na', 'think-NMLZ'),              # thoughts
+        'khangto': ('khang-to', 'prevail-up'),                     # prevailed
+        'amaute': ('a-mau-te', '3SG-EMPH-PL'),                     # them
+        'honsa': ('hon-sa', 'open-PAST'),                          # open pit
+        'biakpiakna': ('biak-piak-na', 'worship-offer-NMLZ'),      # burnt offering
+        'biakbuk': ('biak-buk', 'worship-house'),                  # sanctuary
+        'thukhenna': ('thu-khen-na', 'word-judge-NMLZ'),           # judge
+        'gamgi': ('gam-gi', 'land-year'),                          # year
+        'khapna': ('khap-na', 'pledge-NMLZ'),                      # pledge
+        'suksiatna': ('suk-siat-na', 'destroy-NMLZ'),              # destruction
+        'zuihna': ('zuih-na', 'turn-NMLZ'),                        # turned away
+        'cilna': ('cil-na', 'command-NMLZ'),                       # commandment
+        'dingto': ('ding-to', 'stand-up'),                         # stood up
+        'bawlpha': ('bawl-pha', 'fortify-strong'),                 # fortified
+        'kidona': ('ki-don-a', 'REFL-war-LOC'),                    # war
+        'sumkholna': ('sum-khol-na', 'silver-treasure-NMLZ'),      # treasuries
+        'zanthapai': ('zan-tha-pai', 'night-weary-appoint'),       # wearisome nights
+        'kipan': ('ki-pan', 'REFL-begin'),                         # began
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
