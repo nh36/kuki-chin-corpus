@@ -6092,6 +6092,116 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'munmuanhuaina': ('mun-muan-huai-na', 'place-safe-mix-NMLZ'), # stronghold
         'tunkhitna': ('tun-khit-na', 'enter-shut-NMLZ'),           # shut in
         'sukhalo': ('su-kha-lo', 'destroy-NEG-EMPH'),              # shall not find
+        # Round 99: More vocabulary for 99%
+        'lukhung': ('lu-khung', 'head-pillow'),                    # bolster
+        'gamtatkha': ('gam-tat-kha', 'land-cut-off'),              # erred, played fool
+        'thaltawite': ('thal-tawi-te', 'bow-shoot-PL'),            # archers
+        'zaptel': ('zap-tel', 'swift-quick'),                      # swifter
+        'pusuahna': ('pu-suah-na', 'deceive-out-NMLZ'),            # deceiving
+        'miliante': ('mi-lian-te', 'person-great-PL'),             # great men
+        'angawina': ('an-gawi-na', 'stone-grind-NMLZ'),            # millstone
+        'luate': ('lua-te', 'shame-PL'),                           # shames, fools
+        'banglel': ('bang-lel', 'like-only'),                      # why should
+        'mualpangah': ('mual-pang-ah', 'hill-side-LOC'),           # on hillside
+        'teelsak': ('teel-sak', 'choose-CAUS'),                    # let choose
+        'vaikhakna': ('vai-khak-na', 'command-charge-NMLZ'),       # charge, command
+        'siamgante': ('siam-gan-te', 'weave-work-PL'),             # weavers
+        'siamlawngpi': ('siam-lawng-pi', 'weave-beam-great'),      # weaver's beam
+        'thangte': ('thang-te', 'snare-PL'),                       # snares
+        'kaai': ('kaai', 'tender.grass'),                          # tender grass
+        'tutungin': ('tu-tung-in', 'now-arrive-INST'),             # at this time
+        'tuidawnin': ('tui-dawn-in', 'water-drink-INST'),          # drinking
+        'tehzawh': ('teh-zawh', 'measure-finish'),                 # exceeding
+        'vanpua': ('van-pua', 'burden-bear'),                      # burden bearer
+        'innkam': ('inn-kam', 'house-chamber'),                    # chamber
+        'nanna': ('nan-na', 'narrow-NMLZ'),                        # narrowed
+        'innkamte': ('inn-kam-te', 'house-chamber-PL'),            # chambers
+        'umgah': ('um-gah', 'be-open'),                            # open flowers
+        'nannate': ('nan-na-te', 'narrow-NMLZ-PL'),                # undersetters
+        'awnsak': ('awn-sak', 'incline-CAUS'),                     # incline
+        'thupina': ('thu-pi-na', 'word-great-NMLZ'),               # integrity
+        'hihzaw': ('hih-zaw', 'this-more'),                        # more than this
+        'hoihzawk': ('hoih-zawk', 'good-more'),                    # better
+        'tuinakah': ('tui-na-kah', 'water-spring-LOC'),            # at spring
+        'ngaklai': ('ngak-lai', 'wait-still'),                     # wait for
+        'maangte': ('maang-te', 'eunuch-PL'),                      # eunuchs
+        'phelkek': ('phel-kek', 'break-INTENS'),                   # break thoroughly
+        'suangseekte': ('suang-seek-te', 'stone-hew-PL'),          # hewers of stone
+        'nenniamna': ('nen-niam-na', 'face-low-NMLZ'),             # beseeching
+        'zuautatna': ('zuau-tat-na', 'conspiracy-cut-NMLZ'),       # conspiracy
+        'siakhawm': ('sia-khawm', 'dung-eat'),                     # eat dung
+        'geelkholhsa': ('geel-kholh-sa', 'plan-declare-PAST'),     # formed long ago
+        'nakpheh': ('nak-pheh', 'nose-hook'),                      # hook in nose
+        'khituite': ('khi-tui-te', 'eye-water-PL'),                # tears
+        'zindo': ('zin-do', 'journey-treasure'),                   # treasures
+        'dawibiakna': ('dawi-biak-na', 'idol-worship-NMLZ'),       # idolatry, high places
+        'hante': ('han-te', 'bone-PL'),                            # bones
+        'zawngpente': ('zawng-pen-te', 'poor-most-PL'),            # poorest
+        'omzawh': ('om-zawh', 'be-finish'),                        # came to pass
+        'mualkuam': ('mual-kuam', 'hill-brook'),                   # brooks
+        'thuahin': ('thuah-in', 'spread-INST'),                    # spreading
+        'nengniamsak': ('neng-niam-sak', 'face-low-CAUS'),         # reproved
+        'nilhte': ('nilh-te', 'anoint-PL'),                        # anointed ones
+        'thuzawh': ('thu-zawh', 'word-finish'),                    # prevailed
+        'zatte': ('zat-te', 'jewel-PL'),                           # precious stones
+        'tokhomah': ('tok-hom-ah', 'room-place-LOC'),              # in room of
+        'buaisak': ('buai-sak', 'vex-CAUS'),                       # vexed
+        'zawsak': ('zaw-sak', 'strong-CAUS'),                      # strengthen
+        'puantualpite': ('puan-tual-pi-te', 'cloth-court-great-PL'), # robes
+        'tok': ('tok', 'stir'),                                    # stirred up
+        'liamnate': ('liam-na-te', 'wound-NMLZ-PL'),               # wounds
+        # Round 100: More vocabulary for 99%
+        'vangah': ('vang-ah', 'gate-LOC'),                         # at the gate
+        'uuk': ('uuk', 'husbandry'),                               # husbandry
+        'sumit': ('sum-it', 'lamp-put.out'),                       # put out lamps
+        'puahsiang': ('puah-siang', 'gather-clean'),               # cleanse
+        'zuansak': ('zuan-sak', 'gather-CAUS'),                    # gather
+        'lunghihmawhpih': ('lung-hih-mawh-pih', 'heart-nothing-wrong-also'), # nothing to do with
+        'losapte': ('lo-sap-te', 'tribute-pay-PL'),                # tribute payers
+        'suaksa': ('suak-sa', 'become-PAST'),                      # captivity
+        'tanna': ('tan-na', 'fast-NMLZ'),                          # fasting
+        'maavanna': ('maavan-na', 'bondage-NMLZ'),                 # bondage
+        'vakkhia': ('vak-khia', 'walk-out'),                       # arose, went out
+        'zaipi': ('zai-pi', 'work-great'),                         # great work
+        'pama': ('pa-ma', 'hundred-also'),                         # hundred also
+        'tualpi': ('tual-pi', 'street-great'),                     # broad street
+        'simkhia': ('sim-khia', 'read-out'),                       # read aloud
+        'khupna': ('khup-na', 'assemble-NMLZ'),                    # assembly
+        'ukgawp': ('uk-gawp', 'rule-INTENS'),                      # dominion
+        'pengsak': ('peng-sak', 'spare-CAUS'),                     # spare
+        'zunekna': ('zu-nek-na', 'wine-eat-NMLZ'),                 # feast
+        'kisimmawhna': ('ki-sim-mawh-na', 'REFL-shame-wrong-NMLZ'), # contempt
+        'kithuh': ('ki-thuh', 'REFL-seal'),                        # sealed
+        'patsa': ('pat-sa', 'begin-PAST'),                         # had begun
+        'thupite': ('thu-pi-te', 'word-great-PL'),                 # decrees
+        'hawkna': ('hawk-na', 'roar-NMLZ'),                        # roaring
+        'suktansak': ('suk-tan-sak', 'break-stand-CAUS'),          # broken
+        'lunggimna': ('lung-gim-na', 'heart-grief-NMLZ'),          # grief
+        'aktui': ('ak-tui', 'egg-water'),                          # egg white
+        'tuikhal': ('tui-khal', 'water-freeze'),                   # ice
+        'lunggulhin': ('lung-gulh-in', 'heart-desire-INST'),       # earnestly desire
+        'sincip': ('sin-cip', 'seal-INTENS'),                      # sealed up
+        'beipak': ('bei-pak', 'finish-swift'),                     # swifter
+        'dingpi': ('ding-pi', 'stand-great'),                      # unprofitable
+        'musanete': ('mu-sane-te', 'see-bread-PL'),                # wandering for bread
+        'kahkahna': ('kah-kah-na', 'weep-REDUP-NMLZ'),             # weeping
+        'langbawl': ('lang-bawl', 'appear-turn'),                  # turned against
+        'suktheih': ('suk-theih', 'break-able'),                   # persecute
+        'thamante': ('tha-man-te', 'labor-true-PL'),               # labours
+        'cihtheih': ('cih-theih', 'say-able'),                     # sufficiency
+        'lungtom': ('lung-tom', 'heart-troubled'),                 # troubled spirit
+        'silhloin': ('silh-lo-in', 'clothe-NEG-INST'),             # without clothing
+        'toncip': ('ton-cip', 'wet-INTENS'),                       # wet through
+        'pelhna': ('pelh-na', 'depart-NMLZ'),                      # departing
+        'limun': ('li-mun', 'hide-self'),                          # hid themselves
+        'ninbulom': ('nin-bu-lom', 'mire-dust-mix'),               # dust and ashes
+        'kikoihsa': ('ki-koih-sa', 'REFL-appoint-PAST'),           # appointed
+        'thuhkik': ('thuh-kik', 'portion-return'),                 # portion
+        'zawhthawh': ('zawh-thawh', 'terror-bring'),               # terror
+        'hihkik': ('hih-kik', 'this-again'),                       # oftentimes
+        'velvel': ('vel-vel', 'hold-REDUP'),                       # hold peace
+        'kiphatsaknate': ('ki-phat-sak-na-te', 'REFL-praise-CAUS-NMLZ-PL'), # transgressions
+        'theikim': ('thei-kim', 'see-all'),                        # see it
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
