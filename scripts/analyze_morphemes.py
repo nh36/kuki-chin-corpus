@@ -7151,6 +7151,59 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nuiin': ('nui-in', 'laugh-INST'),                         # laugh INST
         'topain': ('topa-in', 'lord-INST'),                        # lord INST
         'thuakzoin': ('thuak-zo-in', 'endure-able-INST'),          # endure INST
+        # Round 120: More vocabulary and suffix forms
+        'muhdahhuai': ('muh-dah-huai', 'see-hate-mix'),            # troubled
+        'semsemna': ('sem-sem-na', 'hate-REDUP-NMLZ'),             # hated more
+        'kapsain': ('kap-sa-in', 'mourn-PAST-INST'),               # mourning INST
+        'luahnaah': ('luah-na-ah', 'issue-NMLZ-LOC'),              # issue LOC
+        'nekneknain': ('nek-nek-na-in', 'eat-REDUP-NMLZ-INST'),    # eating INST
+        'buknaah': ('buk-na-ah', 'shelter-NMLZ-LOC'),              # shelter LOC
+        'sapnain': ('sap-na-in', 'stretch-NMLZ-INST'),             # stretch INST
+        'khauhsakin': ('kauh-sak-in', 'harden-CAUS-INST'),         # harden INST
+        'sianthonaah': ('sian-tho-na-ah', 'holy-rise-NMLZ-LOC'),   # holiness LOC
+        'kihtakhuaiin': ('ki-hta-khuai-in', 'REFL-fierce-mix-INST'), # fierce INST
+        'sinsoin': ('sin-so-in', 'consume-INST'),                  # consume INST
+        'puanbuka': ('puan-buk-a', 'cloth-tent-LOC'),              # tent LOC
+        'khialhnaah': ('khialh-na-ah', 'sin-NMLZ-LOC'),            # sin LOC
+        'vevein': ('ve-ve-in', 'lack-REDUP-INST'),                 # lack INST
+        'nengnianmin': ('neng-niam-in', 'fellowship-INST'),        # fellowship INST
+        'mupi': ('mu-pi', 'bird-great'),                           # eagle/ossifrage
+        'luimu': ('lui-mu', 'river-bird'),                         # osprey
+        'mumeika': ('mu-mei-ka', 'bird-fire-vulture'),             # vulture
+        'pengpelep': ('peng-pelep', 'wing-night'),                 # night hawk
+        'musi': ('mu-si', 'bird-cuckoo'),                          # cuckoo
+        'tuimu': ('tui-mu', 'water-bird'),                         # cormorant/owl
+        'vazonei': ('va-zonei', 'bird-stork'),                     # stork
+        'thukzawin': ('thuk-zaw-in', 'deep-more-INST'),            # deeper INST
+        'mitkhu': ('mit-khu', 'eye-brow'),                         # eyebrow
+        'hunlopiin': ('hun-lopi-in', 'time-NEG.any-INST'),         # not at any time
+        'laipiin': ('lai-pi-in', 'book-great-INST'),               # great book INST
+        # Round 121: More vocabulary and suffix forms
+        'khuituahin': ('khu-i-tuah-in', 'six-curtain-do-INST'),    # six curtains
+        'thosakin': ('tho-sak-in', 'live-CAUS-INST'),              # living INST
+        'thahatpa': ('tha-hat-pa', 'strength-strong-NMLZ'),        # mighty
+        'haksapipiin': ('hak-sa-pi-pi-in', 'difficult-PAST-big-REDUP-INST'), # scarce INST
+        'gimpiin': ('gim-pi-in', 'sorrow-big-INST'),               # sorrow INST
+        'poplar': ('poplar', 'poplar'),                            # poplar
+        'leikhop': ('lei-khop', 'earth-twelve'),                   # twelve tribes
+        'kopte': ('kop-te', 'knop-PL'),                            # knops
+        'gukte': ('guk-te', 'bowl-PL'),                            # bowls
+        'lite': ('li-te', 'four-PL'),                              # four
+        'mongte': ('mong-te', 'end-PL'),                           # ends
+        'kisukha': ('ki-suk-ha', 'REFL-defile-already'),           # defiled
+        'kidemnaah': ('ki-dem-na-ah', 'REFL-condemn-NMLZ-LOC'),    # condemn LOC
+        'zonnain': ('zon-na-in', 'seek-NMLZ-INST'),                # seeking INST
+        'khusain': ('khu-sa-in', 'feast-PAST-INST'),               # feast INST
+        'kheun': ('khe-un', 'leg-3PL'),                            # legs
+        'ganun': ('gan-un', 'bear-3PL'),                           # bear 3PL
+        'lamun': ('lam-un', 'direction-3PL'),                      # directions
+        'tula': ('tul-a', 'foot-LOC'),                             # on foot
+        'gala': ('gal-a', 'little-LOC'),                           # little LOC
+        'dahluain': ('dah-lua-in', 'grieve-too-INST'),             # sorrow INST
+        'suntangpiin': ('sun-tang-pi-in', 'sun-before-great-INST'), # before sun INST
+        'hawkkhiain': ('hawk-khia-in', 'strip-out-INST'),          # stripped INST
+        'zumhuaipiin': ('zum-huai-pi-in', 'unclean-mix-great-INST'), # unclean INST
+        'haksapiin': ('hak-sa-pi-in', 'difficult-PAST-great-INST'), # difficult INST
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
