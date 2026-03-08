@@ -4139,6 +4139,50 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'keu': ('keu', 'dry'),                                 # base - dry
         'cip': ('cip', 'tight'),                               # base - tight
         'sutat': ('su-tat', 'break-COMPL'),                    # break/sever
+        
+        # Round 33: More vocabulary from Chronicles, Kings, Numbers, Deut
+        'ukpipa': ('uk-pi-pa', 'rule-big-male'),               # prince/chief
+        'vangtaang': ('vang-taang', 'glory-beautiful'),        # glory
+        'taang': ('taang', 'beautiful'),                       # base - beautiful
+        'kiphuh': ('ki-phuh', 'REFL-rest'),                    # abide/rest
+        'phuh': ('phuh', 'rest'),                              # base - rest
+        'phelkhia': ('phel-khia', 'break-out'),                # overthrow/destroy
+        'khia': ('khia', 'out'),                               # base - out
+        'kangtumin': ('kangtum-in', 'consume-ERG'),            # consuming
+        'kangtum': ('kang-tum', 'burn-all'),                   # consume
+        'siahuaizaw': ('sia-huai-zaw', 'evil-bad-more'),       # more evil
+        'huai': ('huai', 'bad'),                               # base - bad
+        'zaw': ('zaw', 'more'),                                # base - more/comparative
+        'humpinelkaite': ('humpinelkai-te', 'ornament-PL'),    # ornaments/decorations
+        'humpinelkai': ('hum-pinelkai', 'cover-ornament'),     # ornament
+        'pinelkai': ('pinelkai', 'ornament'),                  # base - ornament
+        'sawmnihna': ('sawm-nih-na', 'ten-two-ORD'),           # twentieth
+        'nih': ('nih', 'two'),                                 # base - two
+        
+        # Round 34: More vocabulary from Nehemiah, Esther, Job, Psalms
+        'vangliatnate': ('vangliatna-te', 'power-PL'),         # powers/might
+        'vangliatna': ('vang-liat-na', 'glory-power-NMLZ'),    # power/might
+        'naptui': ('nap-tui', 'wet-water'),                    # tears
+        'nap': ('nap', 'wet'),                                 # base - wet
+        'tenpihna': ('tenpih-na', 'marry-NMLZ'),               # marriage/taking
+        'tenpih': ('ten-pih', 'stay-with'),                    # marry/live with
+        'hawmsuak': ('hawm-suak', 'shake-become'),             # emptied/shaken
+        'hoihnate': ('hoihna-te', 'goodness-PL'),              # good deeds
+        'innsungmang': ('innsungmang', 'eunuch'),              # eunuch (palace servant)
+        'antanna': ('antan-na', 'fast-NMLZ'),                  # fasting
+        'antan': ('an-tan', 'food-stop'),                      # fast/abstain
+        'pakin': ('pa-kin', 'completely-destroy'),             # perish
+        'pianma': ('pian-ma', 'born-before'),                  # elder/very old
+        'omom': ('om-om', 'exist-exist'),                      # remain/still
+        'mutkhiat': ('mut-khiat', 'blow-away'),                # blow away
+        'mut': ('mut', 'blow'),                                # base - blow
+        'nuihsat': ('nuih-sat', 'laugh-toward'),               # laugh at
+        'imcip': ('im-cip', 'hide-tight'),                     # hide/conceal
+        'im': ('im', 'hide'),                                  # base - hide
+        'zalzal': ('zal-zal', 'shake-shake'),                  # rattle/shake
+        'zal': ('zal', 'shake'),                               # base - shake
+        'hihnop': ('hih-nop', 'do-want'),                      # plan/thought
+        'zahhuai': ('zah-huai', 'ashamed-bad'),                # ashamed/vexed
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
