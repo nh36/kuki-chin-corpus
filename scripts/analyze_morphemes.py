@@ -6976,6 +6976,105 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sumkholna': ('sum-khol-na', 'silver-treasure-NMLZ'),      # treasuries
         'zanthapai': ('zan-tha-pai', 'night-weary-appoint'),       # wearisome nights
         'kipan': ('ki-pan', 'REFL-begin'),                         # began
+        # Round 115: Judges and historical vocabulary
+        'kikhungto': ('ki-khung-to', 'REFL-go-up'),                # goeth up
+        'kiimteng': ('ki-im-teng', 'REFL-all-border'),             # unto borders
+        'hahsawl': ('hah-sawl', 'ask-field'),                      # ask field
+        'kinim': ('ki-nim', 'REFL-divide'),                        # divided prey
+        'tuksukin': ('tuk-suk-in', 'tumble-down-INST'),            # tumbled
+        'teeksih': ('teek-sih', 'old-die'),                        # good old age
+        'sosuah': ('so-suah', 'send-privily'),                     # sent privily
+        'hallum': ('hal-lum', 'burn-fire'),                        # burnt with fire
+        'kisingin': ('ki-sing-in', 'REFL-shake-INST'),             # shake myself
+        'gualnuam': ('gual-nuam', 'sacrifice-rejoice'),            # rejoice sacrifice
+        'kizuihna': ('ki-zuih-na', 'REFL-keep-NMLZ'),              # keeping
+        'khuasung': ('khua-sung', 'village-inside'),               # within gates
+        'sinna': ('sin-na', 'prepare-NMLZ'),                       # preparation
+        'kizem': ('ki-zem', 'REFL-twine'),                         # twined
+        # Round 116: Common word+suffix combinations
+        'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # on both shoulders
+        'napiun': ('na-pi-un', '2PL-great-3PL'),                   # but/however
+        'zangleia': ('zang-lei-a', 'east-field-LOC'),              # from east LOC
+        'khangsimnaah': ('khang-sim-na-ah', 'generation-divide-NMLZ-LOC'), # generations LOC
+        'sepnaah': ('sep-na-ah', 'do-NMLZ-LOC'),                   # doest LOC
+        'kiukzawhna': ('ki-uk-zawh-na', 'REFL-contain-finish-NMLZ'), # cannot contain
+        'nihteah': ('nih-te-ah', 'two-PL-LOC'),                    # two LOC
+        'nihnaah': ('nih-na-ah', 'second-NMLZ-LOC'),               # second LOC
+        'simnaah': ('sim-na-ah', 'count-NMLZ-LOC'),                # counted LOC
+        'biaknaah': ('biak-na-ah', 'worship-NMLZ-LOC'),            # altar LOC
+        'sawmngain': ('sawm-nga-in', 'ten-five-INST'),             # fifty INST
+        'munteah': ('mun-te-ah', 'spot-PL-LOC'),                   # spots LOC
+        'nawhsain': ('nawh-sa-in', 'unleavened-PAST-INST'),        # unleavened INST
+        'sangnaah': ('sang-na-ah', 'high-NMLZ-LOC'),               # high LOC
+        'khuaneutea': ('khua-neu-te-a', 'village-small-PL-LOC'),   # villages LOC
+        'painaah': ('pai-na-ah', 'go-NMLZ-LOC'),                   # walking LOC
+        'ancilnaah': ('an-cil-na-ah', 'corn-thresh-NMLZ-LOC'),     # threshingfloor LOC
+        'omlaiin': ('om-lai-in', 'rest-still-INST'),               # rest INST
+        'piaknaah': ('piak-na-ah', 'give-NMLZ-LOC'),               # offering LOC
+        'dangteah': ('dang-te-ah', 'other-PL-LOC'),                # other LOC
+        'thuaknaah': ('thuak-na-ah', 'afflict-NMLZ-LOC'),          # affliction LOC
+        'kaikhiain': ('kai-khia-in', 'draw-out-INST'),             # draw INST
+        'citheiin': ('ci-thei-in', 'eye-evil-INST'),               # eye evil INST
+        'theitheiin': ('thei-thei-in', 'know-REDUP-INST'),         # perceive INST
+        'bangziain': ('bang-zia-in', 'what-like-INST'),            # such like INST
+        'lasakol': ('la-sakol', 'take-CAUS.APPL'),                 # take CAUS
+        'kuanguk': ('kuang-uk', 'box-rule'),                       # rule over
+        'vaak': ('va-ak', 'bird-crow'),                            # bird crow
+        'ukpain': ('uk-pa-in', 'rule-NMLZ-INST'),                  # ruler INST
+        'kiapna': ('ki-ap-na', 'REFL-give-NMLZ'),                  # giving
+        'pahtawinain': ('pah-tawi-na-in', 'praise-NMLZ-INST'),     # praising INST
+        'khuaneuteah': ('khua-neu-te-ah', 'village-small-PL-LOC'), # villages LOC
+        'niun': ('ni-un', 'day-3PL'),                              # days
+        'gamtatnaah': ('gam-tat-na-ah', 'earth-curse-NMLZ-LOC'),   # curse LOC
+        'piaknainin': ('piak-na-in', 'give-NMLZ-INST'),            # offering INST
+        'inndeiahah': ('inn-dei-ah', 'house-chamber-LOC'),         # chamber LOC
+        'hehpihnain': ('heh-pih-na-in', 'favor-with-NMLZ-INST'),   # favour INST
+        # Round 117: More suffix combinations
+        'piaknanin': ('piak-na-in', 'give-NMLZ-INST'),             # offering INST
+        'inndeiah': ('inn-dei-ah', 'house-chamber-LOC'),           # chamber LOC
+        'siampiin': ('siam-pi-in', 'priest-great-INST'),           # priest INST
+        'sihnaah': ('sih-na-ah', 'blood-NMLZ-LOC'),                # blood LOC
+        'lingsain': ('ling-sa-in', 'tremble-PAST-INST'),           # trembled INST
+        'koihnaah': ('koih-na-ah', 'set-NMLZ-LOC'),                # set LOC
+        'siahnain': ('siah-na-in', 'snare-NMLZ-INST'),             # snare INST
+        'hoihzawin': ('hoih-zaw-in', 'well-more-INST'),            # well INST
+        'kisain': ('ki-sa-in', 'REFL-PAST-INST'),                  # grieved INST
+        'sangpiin': ('sang-pi-in', 'high-great-INST'),             # high walls INST
+        'tanglaia': ('tang-lai-a', 'ancient-NMLZ-LOC'),            # ancient LOC
+        'ngaihsutnaah': ('ngaih-sut-na-ah', 'think-NMLZ-LOC'),     # thoughts LOC
+        'gamlapi': ('gam-la-pi', 'land-field-great'),              # great field
+        'khuaul': ('khua-ul', 'village-EMPH'),                     # village
+        'khangtoin': ('khang-to-in', 'prevail-up-INST'),           # prevailed INST
+        'honsain': ('hon-sa-in', 'open-PAST-INST'),                # opened INST
+        'biakpiaknaah': ('biak-piak-na-ah', 'worship-offer-NMLZ-LOC'), # offering LOC
+        'biakbuka': ('biak-buk-a', 'worship-house-LOC'),           # sanctuary LOC
+        'thukhennaah': ('thu-khen-na-ah', 'word-judge-NMLZ-LOC'),  # judge LOC
+        'gamgiin': ('gam-gi-in', 'land-year-INST'),                # year INST
+        'khapnain': ('khap-na-in', 'pledge-NMLZ-INST'),            # pledge INST
+        'suksiatnaah': ('suk-siat-na-ah', 'destroy-NMLZ-LOC'),     # destruction LOC
+        'gamgiah': ('gam-gi-ah', 'land-year-LOC'),                 # year LOC
+        'koihkhiain': ('koih-khia-in', 'set-out-INST'),            # set out INST
+        'ithuai': ('it-huai', 'love-mix'),                         # beloved
+        'zuihnaah': ('zuih-na-ah', 'turn-NMLZ-LOC'),               # turned LOC
+        'cilnaah': ('cil-na-ah', 'command-NMLZ-LOC'),              # command LOC
+        'meiamte': ('mei-am-te', 'fire-dark-PL'),                  # dark fire PL
+        'vaakte': ('va-ak-te', 'bird-crow-PL'),                    # crows PL
+        'maiet': ('mai-et', 'face-look'),                          # face look
+        'dingtoin': ('ding-to-in', 'stand-up-INST'),               # stood INST
+        'bawlphain': ('bawl-pha-in', 'fortify-strong-INST'),       # fortified INST
+        'kidonaah': ('ki-don-a-ah', 'REFL-war-LOC-LOC'),           # war LOC
+        'siaa': ('sia-a', 'bad-LOC'),                              # bad LOC
+        'sumkholnaah': ('sum-khol-na-ah', 'silver-treasure-NMLZ-LOC'), # treasury LOC
+        'zanthapaiin': ('zan-tha-pai-in', 'night-weary-appoint-INST'), # wearisome INST
+        'vasakalaoh': ('va-sa-kalaoh', 'bird-meat-INTERJ'),        # bird INTERJ
+        'thungetnaah': ('thu-nget-na-ah', 'word-pray-NMLZ-LOC'),   # prayer LOC
+        'lunggulhnain': ('lung-gulh-na-in', 'heart-sorrow-NMLZ-INST'), # sorrow INST
+        'ngaihsutpiin': ('ngaih-sut-pi-in', 'think-great-INST'),   # thinking INST
+        'sealt': ('se-alt', 'beast-island'),                       # island beast
+        'tanglaiin': ('tang-lai-in', 'ancient-NMLZ-INST'),         # ancient INST
+        'puanak': ('puan-ak', 'cloth-put'),                        # clothe
+        'paaiahaah': ('paai-ah', 'place-LOC'),                     # place LOC
+        'sumzuaknaah': ('sum-zuak-na-ah', 'money-sell-NMLZ-LOC'),  # merchandise LOC
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
