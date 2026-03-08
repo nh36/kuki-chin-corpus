@@ -5227,6 +5227,52 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tangtunsak': ('tang-tun-sak', 'arrive-reach-CAUS'),   # hasten, bring to pass
         'taiina': ('tai-na', 'correct-NMLZ'),                  # chastening
         'sutpi': ('sut-pi', 'spoil-great'),                    # chief cornerstone
+        
+        # Round 70: High-frequency partials
+        'thalawh': ('thal-awh', 'bow-young'),                  # younger (daughter)
+        'nawizu': ('nawi-zu', 'firstfruit-bring'),             # firstfruits
+        'sikli': ('sik-li', 'robe-?'),                         # ephod
+        'kiliahna': ('ki-liah-na', 'REFL-veil-NMLZ'),          # veil, covering
+        'khutdim': ('khut-dim', 'hand-full'),                  # handful
+        'beelpei': ('beel-pei', 'pan-flat'),                   # pan (flat)
+        'kawnga': ('kawng-a', 'way-LOC'),                      # on the way
+        'attan': ('at-tan', 'cut-down'),                       # break down (heifer)
+        'hihkhak': ('hih-khak', 'be-may'),                     # if (it be)
+        'pawn': ('pawn', 'scar'),                              # scar, burn
+        'koihcip': ('koih-cip', 'put-lock'),                   # shut up
+        'kizatna': ('ki-zat-na', 'REFL-use-NMLZ'),             # be spread
+        'luakhia': ('lua-khia', 'exceed-out'),                 # vomit out, visit iniquity
+        'cisa': ('ci-sa', 'say-CAUS'),                         # appoint, set over
+        'kisehna': ('ki-seh-na', 'REFL-value-NMLZ'),           # redemption
+        'painasa': ('pai-na-sa', 'go-NMLZ-CAUS'),              # saying, goodly land
+        'seppih': ('sep-pih', 'work-with'),                    # keep charge
+        'samsiatsak': ('sam-siat-sak', 'call-curse-CAUS'),     # curse
+        'sawlteng': ('sawl-teng', 'send-all'),                 # speak only
+        'galmuh': ('gal-muh', 'enemy-see'),                    # high places (to see)
+        'kalun': ('ka-lun', '1SG-self'),                       # myself
+        'nungakin': ('nung-ak-in', 'live-dwell-ERG'),          # being in (father's house)
+        'laitakah': ('lai-tak-ah', 'midst-true-LOC'),          # in the very midst
+        'khapa': ('kha-pa', 'spirit-father'),                  # God (spiritual father)
+        'ciamtehin': ('ciam-teh-in', 'promise-measure-ERG'),   # lay up (in heart)
+        'aituam': ('ai-tuam', 'self-cover'),                   # multiply (for himself)
+        'nangawnun': ('nangawn-un', 'not.even-PL'),            # not even unto 10th gen
+        'satsak': ('sat-sak', 'strike-CAUS'),                  # cause to be beaten
+        'matsak': ('mat-sak', 'grasp-CAUS'),                   # take hold, draw near
+        'simthamah': ('sim-tham-ah', 'count-be.able-LOC'),     # graven image (curse)
+        'nawtkhia': ('nawt-khia', 'thrust-out'),               # underneath (thrust out)
+        'kiphumna': ('ki-phum-na', 'REFL-bury-NMLZ'),          # burial place
+        'gamtakha': ('gam-tak-ha', 'land-send-go'),            # far from land
+        'cidamin': ('ci-dam-in', 'say-well-ERG'),              # in peace
+        'paupih': ('pau-pih', 'speak-with'),                   # speak together
+        'nungkikin': ('nung-kik-in', 'live-return-ERG'),       # cleave unto
+        'sepnop': ('sep-nop', 'work-desire'),                  # desire to serve
+        'damtakin': ('dam-tak-in', 'well-true-ERG'),           # surely, firmly
+        'ginna': ('gin-na', 'believe-NMLZ'),                   # deliverance, faith
+        'pawm': ('pawm', 'belly'),                             # belly (bitter water)
+        'khanglam': ('khang-lam', 'generation-way'),           # provisions
+        'ngetnop': ('nget-nop', 'request-desire'),             # desire a request
+        'lungnuamsak': ('lung-nuam-sak', 'heart-pleasant-CAUS'), # cheer, make glad
+        'khuadakin': ('khua-dak-in', 'town-division-ERG'),     # divide into companies
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
