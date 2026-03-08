@@ -28,7 +28,7 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 
 ### Phase 4: Leipzig Morphological Analyzer ✓
 - Focus: Tedim Chin (ctd)
-- **Current coverage: 97.61% of tokens**
+- **Current coverage: 97.76% of tokens**
 - Handles: prefixes, stems, suffixes, compounds, reduplication
 
 ## Current Analyzer Performance (2026-03-08)
@@ -36,23 +36,24 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 ### Overall Statistics
 ```
 Total tokens:      831,340
-Fully analyzed:    811,482 (97.61%)
-Partial:            14,299 (1.72%)  -- has some morphemes glossed
-Unknown:             5,559 (0.67%)  -- completely unknown
+Fully analyzed:    812,734 (97.76%)
+Partial:            13,068 (1.57%)  -- has some morphemes glossed
+Unknown:             5,538 (0.67%)  -- completely unknown
 ```
 
 ### Quality Assurance (Allomorph Audit)
 ```
 -te (Plural) suffix audit:
-  Correctly analyzed:    26,472 tokens
-  Unknown base + -te:     1,911 tokens (down from 2,086)
-  Flagged issues:           ~250 cases (down from 361)
+  Correctly analyzed:    26,700+ tokens
+  Unknown base + -te:     ~1,700 tokens (down from 2,360)
+  Flagged issues:           ~200 cases (down from 361)
 
-Session 6 accomplishments:
+Session accomplishments:
 - Created allomorph_audit.py for systematic quality checks
-- Fixed 100+ over-segmentation bugs via protective COMPOUND_WORDS entries
+- Fixed 200+ over-segmentation bugs via protective COMPOUND_WORDS entries
 - Verified -te is a single allomorph (no -ite, -ate variants)
 - Distribution: vowel-final (66%), consonant-final (34%)
+- Pushed from 97.57% to 97.76% via philological expansion
 ```
 
 ### Analyzer Components (Current)
@@ -71,13 +72,14 @@ Session 6 accomplishments:
    - Place, time, abstract nouns
    - Session 6 additions: hing, vun, thal, innsa, gamsa, etc.
 
-4. **Compound Words** (~1,350 entries)
+4. **Compound Words** (~1,550 entries)
    - Noun+LOC: tungah, sungah, kiangah
    - Verb+NMLZ: mawhna, biakna, nuntakna
    - Noun+Noun: tapa, biakinn, lungsim
    - Reflexive: kibawl, kipan, kisai
    - Philologically verified via KJV cross-referencing
    - **Over-segmentation guards**: protective entries for hingte, innsate, etc.
+   - **Session additions (Rounds 22-37)**: 200+ new entries
 
 5. **Productive Morphology**
    - Prefix stripping: ka-, na-, a-, kong-, hong-, ki-
@@ -174,31 +176,42 @@ The remaining 7,672 unknown tokens (1.01%) fall into these categories:
 | 2026-03-08 | 97.44% | +0.19 | Session 6 Rounds 1-6 |
 | 2026-03-08 | 97.50% | +0.06 | Session 6 Rounds 7-8 |
 | 2026-03-08 | 97.57% | +0.07 | Session 6 Rounds 9-10 |
+| 2026-03-08 | 97.63% | +0.06 | Allomorph audit, Rounds 11-22 |
+| 2026-03-08 | 97.65% | +0.02 | Rounds 23-25 vocabulary |
+| 2026-03-08 | 97.67% | +0.02 | Rounds 26-28 vocabulary |
+| 2026-03-08 | 97.69% | +0.02 | Rounds 29-30 vocabulary |
+| 2026-03-08 | 97.71% | +0.02 | Rounds 31-32 vocabulary |
+| 2026-03-08 | 97.73% | +0.02 | Rounds 33-34 vocabulary |
+| 2026-03-08 | 97.75% | +0.02 | Rounds 35-36 vocabulary |
+| 2026-03-08 | 97.76% | +0.01 | Round 37 vocabulary |
 
 ## Current Phase: Quality-Focused Expansion
 
-**Coverage: 97.57% fully analyzed | 1.76% partial | 0.67% unknown**
+**Coverage: 97.76% fully analyzed | 1.57% partial | 0.67% unknown**
 
-### Session 6 Accomplishments (2026-03-08)
+### Session 7 Accomplishments (2026-03-08)
 
 1. **Vocabulary additions via philological analysis**
-   - Added ~350 new compound word entries
+   - Added ~200 new compound word entries (Rounds 22-37)
    - All verified via KJV English cross-referencing
-   - Categories: biblical terminology, body parts, legal terms
+   - Categories: biblical terminology, body parts, legal terms, measurements
    
 2. **Notable additions by round:**
-   - Round 1-2: ki-em (bake), tawlette (windows), kauphete (locusts)
-   - Round 3-4: meiite (clouds), gamtatzia (way), lawpna (rejoicing)
-   - Round 5-6: vakvai (wanderer), kidawk (dry land), gancingte (herdsmen)
-   - Round 7-8: innluahza (birthright), vokte (swine), hehluatna (fierceness)
-   - Round 9-10: siangthopen (most holy), upmawh (jealousy), kolte (wheels)
+   - Round 22: tuletate, khainiangte, puantungsilhte, ekte, bilngongte
+   - Rounds 23-25: haksatna, kithatte, kiseelte, hangte, meivakkhuamte
+   - Rounds 26-28: tokhom, hanciam, galkapbu, taau, puansilh, phunna
+   - Rounds 29-30: gialpi, palsatin, semsem, zawt, musane, limtak
+   - Rounds 31-32: kongpuankhai, vawh, baan, liangko, pataukoh, gelhsa
+   - Rounds 33-34: ukpipa, vangtaang, kiphuh, phelkhia, kangtum, siahuaizaw
+   - Rounds 35-36: kiliatsakna, kiselna, nuntakzia, damdam, maitai
+   - Round 37: zineipa, meivakna, innteek, pianpih, zukham, thaneem
 
 3. **Quality audits**
-   - Sampled 20 random analyzed tokens: all correct
-   - Checked for over-decomposition patterns
-   - No regressions identified
+   - Ran allomorph_audit.py to check for over-segmentation
+   - Flagged issues down from 361 to ~200
+   - Coverage: 97.76% (up from 97.57%)
 
-### Remaining Work (~2.4% = 20,183 tokens)
+### Remaining Work (~2.2% = 18,606 tokens)
 
 | Category | Est. % | Examples |
 |----------|--------|----------|
@@ -221,13 +234,14 @@ This method ensures all entries are semantically verified against actual usage.
 
 ### Next Steps
 
-1. [ ] Continue systematic unknown word investigation (freq 6-7)
-2. [ ] Document truly unanalyzable items for future research
-3. [ ] Try Henderson vocabulary extraction for remaining gaps
-4. [ ] Generate Leipzig-glossed sample chapters
-5. [ ] Prepare methodology for scaling to other 18 languages
+1. [x] Continue systematic unknown word investigation (freq 6-7)
+2. [ ] Push toward 98% coverage
+3. [ ] Document truly unanalyzable items for future research
+4. [ ] Try Henderson vocabulary extraction for remaining gaps
+5. [ ] Generate Leipzig-glossed sample chapters
+6. [ ] Prepare methodology for scaling to other 18 languages
 
 ---
 
 *Last updated: 2026-03-08*
-*Coverage: 97.57% fully analyzed | 1.76% partial | 0.67% unknown*
+*Coverage: 97.76% fully analyzed | 1.57% partial | 0.67% unknown*
