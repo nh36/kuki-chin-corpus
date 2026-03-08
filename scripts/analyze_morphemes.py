@@ -6306,6 +6306,107 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lingsakgawp': ('ling-sak-gawp', 'shake-CAUS-INTENS'),     # shake terribly
         'theihkim': ('theih-kim', 'know-all'),                     # famous, renown
         'etsuk': ('et-suk', 'look-down'),                          # look unto
+        # Round 103: More vocabulary for 99%
+        'veilama': ('vei-lam-a', 'left-side-LOC'),                 # on the left
+        'sinsan': ('sin-san', 'shake-shake'),                      # shake hand
+        'sitlai': ('sit-lai', 'shake-over'),                       # shake over
+        'singliim': ('sing-liim', 'tree-shade'),                   # shadow
+        'zaai': ('zaai', 'languish'),                              # languish
+        'khialhpih': ('khialh-pih', 'deceive-also'),               # deceived
+        'tangguak': ('tang-guak', 'bare-foot'),                    # barefoot
+        'khenkip': ('khen-kip', 'nail-fasten'),                    # nail fastened
+        'beimangsak': ('bei-mang-sak', 'finish-away-CAUS'),        # swallow up
+        'suahsakna': ('suah-sak-na', 'shoot-CAUS-NMLZ'),           # shooting forth
+        'kummin': ('kummin', 'cummin'),                            # cummin
+        'themte': ('them-te', 'scrape-PL'),                        # scrapings
+        'laidal': ('lai-dal', 'leaf-fall'),                        # falling leaf
+        'sehnelte': ('sehnel-te', 'spring-PL'),                    # springs
+        'thukpenna': ('thuk-pen-na', 'deep-most-NMLZ'),            # height
+        'zakzak': ('zak-zak', 'hear-REDUP'),                       # cry out
+        'khutsiampa': ('khut-siam-pa', 'hand-make-NMLZ'),          # craftsman
+        'awngthawl': ('awng-thawl', 'create-establish'),           # established
+        'uang': ('uang', 'lavish'),                                # lavish
+        'tungvat': ('tung-vat', 'upon-fall'),                      # fall upon
+        'lausakzo': ('lau-sak-zo', 'fear-CAUS-able'),              # able to prevail
+        'hihlohna': ('hih-loh-na', 'this-NEG-NMLZ'),               # treachery
+        'tengsakkik': ('teng-sak-kik', 'establish-CAUS-again'),    # establish again
+        'kimakna': ('ki-mak-na', 'REFL-divorce-NMLZ'),             # divorcement
+        'kapte': ('kap-te', 'shoot-PL'),                           # shooters
+        'silhlo': ('silh-lo', 'clothe-NEG'),                       # not clothe
+        'thumthum': ('thum-thum', 'mourn-REDUP'),                  # mourn sore
+        'neupente': ('neu-pen-te', 'small-most-PL'),               # smallest
+        'kepsak': ('kep-sak', 'feed-CAUS'),                        # feed flocks
+        'suhna': ('suh-na', 'robbery-NMLZ'),                       # robbery
+        'gamlakpi': ('gam-lak-pi', 'land-middle-great'),           # wilderness
+        'mutin': ('mut-in', 'blow-INST'),                          # blowing
+        'awlmawh': ('awl-mawh', 'rest-without'),                   # without rest
+        'lopite': ('lopi-te', 'harlot-PL'),                        # harlots
+        'theigahte': ('thei-gah-te', 'fig-tree-PL'),               # fig trees
+        'kantanzo': ('kan-tan-zo', 'bound-stand-able'),            # bound
+        'keei': ('keei', 'shadow'),                                # shadow
+        'sapsap': ('sap-sap', 'speak-REDUP'),                      # speaking
+        'gamsai': ('gam-sai', 'land-bitter'),                      # wormwood
+        'nungdelhsak': ('nung-delh-sak', 'life-chase-CAUS'),       # scatter
+        'ngaihsuttawm': ('ngaihsut-tawm', 'think-vain'),           # vain thought
+        'pasalnei': ('pasal-nei', 'man-have'),                     # bridegroom
+        'sangun': ('sang-un', 'high-3PL'),                         # worse
+        'cizaw': ('ci-zaw', 'say-more'),                           # say more
+        'amsak': ('am-sak', 'dismay-CAUS'),                        # dismayed
+        'ngaihsutkhak': ('ngaihsut-khak', 'think-into'),           # came to mind
+        'singpeek': ('sing-peek', 'wood-ceiling'),                 # cieled with cedar
+        'saltangte': ('saltan-te', 'captive-PL'),                  # captives
+        'khangtosak': ('khang-to-sak', 'grow-up-CAUS'),            # build up
+        'siacipin': ('sia-cip-in', 'destroy-INTENS-INST'),         # utterly destroy
+        # Round 104: More vocabulary for 99%
+        'khuttung': ('khut-tung', 'hand-upon'),                    # at hand
+        'umsak': ('um-sak', 'be-CAUS'),                            # make to trust
+        'taangmi': ('taang-mi', 'star-person'),                    # messenger
+        'omlaisun': ('om-lai-sun', 'be-still-middle'),             # remnant
+        'cialte': ('cial-te', 'fat-PL'),                           # fatted
+        'huhnate': ('huh-na-te', 'help-NMLZ-PL'),                  # helpers
+        'misuamte': ('mi-suam-te', 'person-wilderness-PL'),        # wilderness people
+        'painop': ('pai-nop', 'go-straight'),                      # straight forward
+        'theisakkik': ('thei-sak-kik', 'know-CAUS-again'),         # open mouth
+        'molhtumte': ('molh-tum-te', 'siege-mount-PL'),            # siege mounts
+        'delhphahin': ('delh-phah-in', 'lay-upon-INST'),           # laying upon
+        'muhkhak': ('muh-khak', 'see-into'),                       # in sight of
+        'genkholhnate': ('gen-kholh-na-te', 'speak-declare-NMLZ-PL'), # declarations
+        'sumzuak': ('sum-zuak', 'money-buy'),                      # buyer
+        'mindaihuai': ('min-dai-huai', 'eye-far-mix'),             # far off
+        'paikhiatlam': ('pai-khiat-lam', 'go-out-direction'),      # removing
+        'apte': ('ap-te', 'talent-PL'),                            # talents
+        'utbang': ('ut-bang', 'think-like'),                       # think like
+        'zialzial': ('zial-zial', 'sharp-REDUP'),                  # sharpened
+        'kisawmna': ('ki-sawm-na', 'REFL-sword-NMLZ'),             # terrors by sword
+        'galnanna': ('gal-nan-na', 'war-shout-NMLZ'),              # shouting
+        'annekte': ('an-nek-te', 'bread-eat-PL'),                  # bread of men
+        'kumkhia': ('kum-khia', 'robe-out'),                       # put off robes
+        'lianpente': ('lian-pen-te', 'great-most-PL'),             # greatest
+        'huana': ('hua-na', 'garden-NMLZ'),                        # garden
+        'tangtawng': ('tang-tawng', 'ancient-old'),                # ancient
+        'pumpite': ('pum-pi-te', 'body-great-PL'),                 # bodies
+        'nekzawh': ('nek-zawh', 'eat-finish'),                     # eat full
+        'inndeipi': ('inn-dei-pi', 'house-temple-great'),          # inner temple
+        'munteng': ('mun-teng', 'place-all'),                      # all places
+        'piakkhop': ('piak-khop', 'give-offering'),                # meat offering
+        'ngaptansak': ('ngap-tan-sak', 'ankle-stand-CAUS'),        # ankle deep
+        'kideidanna': ('ki-dei-dan-na', 'REFL-serve-manner-NMLZ'), # service
+        'khamkhi': ('kham-khi', 'cry-aloud'),                      # cry aloud
+        'laimal': ('lai-mal', 'writing-?'),                        # writing
+        'vaihawmpi': ('vai-hawm-pi', 'account-give-great'),        # president
+        'khauhzaw': ('kauh-zaw', 'strong-more'),                   # stronger
+        'pianzawh': ('pian-zawh', 'trouble-finish'),               # time of trouble
+        'mawhmaisakna': ('mawh-mai-sak-na', 'sin-away-CAUS-NMLZ'), # altar to sin
+        'mukhol': ('mu-khol', 'see-pleasant'),                     # pleasant place
+        'awngkek': ('awng-kek', 'roar-INTENS'),                    # roar out
+        'neihteng': ('neih-teng', 'have-all'),                     # have all
+        'sihsuah': ('sih-suah', 'mourn-out'),                      # mourning
+        'zaknop': ('zak-nop', 'hear-pleasant'),                    # hearing
+        'neihtuam': ('neih-tuam', 'have-portion'),                 # inherit portion
+        'ngakngak': ('ngak-ngak', 'wait-REDUP'),                   # suddenly come
+        'kekseu': ('kek-seu', 'corrupt-moth'),                     # moth corrupt
+        'nattunin': ('nat-tun-in', 'sick-enter-INST'),             # sick
+        'siahdong': ('siah-dong', 'sin-person'),                   # sinners
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
