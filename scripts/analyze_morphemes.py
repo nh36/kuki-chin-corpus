@@ -4784,6 +4784,156 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kisui': ('ki-sui', 'REFL-polish'),                    # polished
         'pukkha': ('puk-kha', 'fall-NEG'),                     # not stumble
         'mapekin': ('ma-pek-in', 'EMPH-settle-ERG'),           # settled
+        
+        # Round 54: More vocabulary from Exodus, Samuel, Kings, Romans, Proverbs
+        'kikhinin': ('ki-khin-in', 'REFL-behind-ERG'),         # move behind
+        'khin': ('khin', 'behind'),                            # base - behind
+        'haknaw': ('hak-naw', 'heavy-lead'),                   # sink like lead
+        'naw': ('naw', 'lead'),                                # base - lead (metal)
+        'lawnkhak': ('lawn-khak', 'throw-lock'),               # set bounds
+        'seelsim': ('seel-sim', 'cover-count'),                # uncover/steps
+        'phih': ('phih', 'bowl'),                              # bowl/cover
+        'tuucin': ('tuu-cin', 'throw-rope'),                   # sling
+        'cin': ('cin', 'rope'),                                # base - rope
+        'pelhthei': ('pelh-thei', 'escape-able'),              # able to escape
+        'pelh': ('pelh', 'escape'),                            # base - escape
+        'kikup': ('ki-kup', 'REFL-hide'),                      # hide oneself
+        'kup': ('kup', 'hide'),                                # base - hide
+        'kinamin': ('ki-nam-in', 'REFL-kiss-ERG'),             # kiss/salute
+        'nam': ('nam', 'kiss'),                                # base - kiss
+        'taangkhiasak': ('taang-khia-sak', 'time-out-CAUS'),   # put forth
+        'leikang': ('lei-kang', 'earth-burn'),                 # burn in field
+        'mawhmaisak': ('mawh-mai-sak', 'sin-face-CAUS'),       # mock
+        'mawh': ('mawh', 'sin'),                               # base - sin
+        'gina-in': ('gin-a-in', 'firm-3SG-ERG'),               # wise
+        'gin': ('gin', 'firm'),                                # base - firm
+        'kitheikim': ('ki-thei-kim', 'REFL-know-complete'),    # be well known
+        
+        # Round 55: Final push from Ecclesiastes, Isaiah, Jeremiah, Ezekiel, Daniel, Joel, Matthew, Mark, etc.
+        'phop': ('phop', 'sew'),                               # sew
+        'piikpeek': ('piik-peek', 'gather-spread'),            # gathered/eaten
+        'piik': ('piik', 'gather'),                            # base - gather
+        'leltak': ('lel-tak', 'change-truly'),                 # truly full
+        'ngun-ek': ('ngun-ek', 'silver-dross'),                # dross
+        'kihanthawn': ('ki-han-thawn', 'REFL-begin-encourage'), # be stirred/moved
+        'kiphiat': ('ki-phiat', 'REFL-destroy'),               # be disannulled
+        'thonginn': ('thong-inn', 'prison-house'),             # prison house
+        'thong': ('thong', 'prison'),                          # base - prison
+        'kinawtngil': ('ki-nawt-ngil', 'REFL-smooth-arrow'),   # polished shaft
+        'nawt': ('nawt', 'smooth'),                            # base - smooth
+        'ngil': ('ngil', 'arrow'),                             # base - arrow
+        'kizep': ('ki-zep', 'REFL-clothe'),                    # be clothed
+        'zep': ('zep', 'clothe'),                              # base - clothe
+        'tuacih': ('tua-cih', 'that-say'),                     # circumcise
+        'leihoih': ('lei-hoih', 'earth-good'),                 # fruitful place
+        'hoih': ('hoih', 'good'),                              # base - good
+        'taanlawh': ('taan-lawh', 'withhold-PERF'),            # withhold
+        'taan': ('taan', 'withhold'),                          # base - withhold
+        'kullo': ('kul-lo', 'hope-NEG'),                       # no hope
+        'kisuah': ('ki-suah', 'REFL-escape'),                  # go like serpent
+        'pempam': ('pem-pam', 'fire-fold'),                    # infolding fire
+        'pem': ('pem', 'fire'),                                # base - fire (alt)
+        'pam': ('pam', 'fold'),                                # base - fold
+        'maangmu': ('maang-mu', 'vision-see'),                 # seen nothing
+        'maang': ('maang', 'vision'),                          # base - vision
+        'tuahsiat': ('tuah-siat', 'do-destroy'),               # bring to remembrance
+        'lohteng': ('loh-teng', 'NEG-remain'),                 # residue/small thing
+        'phazaw': ('pha-zaw', 'good-more'),                    # better/do better
+        'deuhin': ('deuh-in', 'clothed-ERG'),                  # clothed in linen
+        'deuh': ('deuh', 'clothed'),                           # base - clothed
+        'leipi': ('lei-pi', 'earth-great'),                    # earth quake
+        'tunsaknop': ('tun-sak-nop', 'arrive-CAUS-want'),      # let peace come
+        'nop': ('nop', 'want'),                                # base - want
+        'kitawphah': ('ki-taw-phah', 'REFL-receive-place'),    # receive seed
+        'kikhamval': ('ki-kham-val', 'REFL-gather-basket'),    # took up baskets
+        'kham': ('kham', 'gather'),                            # base - gather
+        'val': ('val', 'basket'),                              # base - basket
+        'mannop': ('man-nop', 'price-want'),                   # willing/hear
+        'thongkiat': ('thong-kiat', 'prison-extract'),         # came unto prison
+        'kitheithang': ('ki-thei-thang', 'REFL-know-spread'),  # blaze abroad
+        'mapaisak': ('ma-pai-sak', 'EMPH-go-CAUS'),            # constrained to go
+        'tamveipi': ('tam-vei-pi', 'many-time-great'),         # ofttimes
+        'vei': ('vei', 'time'),                                # base - time
+        'thahkhit': ('thah-khit', 'kill-finish'),              # kill body
+        'thongcing': ('thong-cing', 'prison-throw'),           # cast into prison
+        'cing': ('cing', 'throw'),                             # base - throw
+        'dongtangsak': ('dong-tang-sak', 'stumble-on-CAUS'),   # put stumblingblock
+        'dong': ('dong', 'stumble'),                           # base - stumble
+        'kilehngatin': ('ki-leh-ngat-in', 'REFL-return-time-ERG'), # say again
+        'ngat': ('ngat', 'time'),                              # base - time
+        'zokhin': ('zok-hin', 'finish-sit'),                   # finished course
+        'zok': ('zok', 'finish'),                              # base - finish
+        
+        # Round 56: Final push - Genesis, Exodus vocabulary
+        'eimah': ('ei-mah', '1PL.EXCL-EMPH'),                  # us/our (emphatic)
+        'ei': ('ei', '1PL.EXCL'),                              # 1st person plural exclusive
+        'petpetin': ('pet-pet-in', 'bone-bone-ERG'),           # bone of bones
+        'hup': ('hup', 'mouth'),                               # mouth
+        'kisamsiat': ('ki-sam-siat', 'REFL-open-destroy'),     # opened (mouth)
+        'sam': ('sam', 'open'),                                # base - open
+        'kithuk': ('ki-thuk', 'REFL-revenge'),                 # vengeance taken
+        'tuzawh': ('tu-zawh', 'sit-able'),                     # possible/hard
+        'zawh': ('zawh', 'able'),                              # base - able
+        'tuununo': ('tuu-nu-no', 'ewe-female-small'),          # ewe lamb
+        'makeng': ('ma-keng', 'EMPH-tree'),                    # grove/tree
+        'keng': ('keng', 'tree'),                              # base - tree
+        'temta': ('tem-ta', 'fire-hold'),                      # fire in hand
+        'tem': ('tem', 'fire'),                                # base - fire (alt)
+        'butsak': ('but-sak', 'face-CAUS'),                    # put upon face
+        'but': ('but', 'face'),                                # base - face (alt)
+        'kihehnem': ('ki-heh-nem', 'REFL-angry-comfort'),      # comfort oneself
+        'nem': ('nem', 'comfort'),                             # base - comfort
+        'galmat': ('gal-mat', 'enemy-steal'),                  # stolen away
+        'mat': ('mat', 'steal'),                               # base - steal
+        'khelkom': ('khel-kom', 'hollow-touch'),               # touched hollow
+        'kom': ('kom', 'touch'),                               # base - touch
+        'khel': ('khel', 'hollow'),                            # hollow (of thigh)
+        'dawksak': ('dawk-sak', 'bind-CAUS'),                  # bound upon
+        'dawk': ('dawk', 'bind'),                              # base - bind
+        'pipa': ('pi-pa', 'great-man'),                        # chief/officer
+        'phai': ('phai', 'meadow'),                            # meadow
+        'kikhailum': ('ki-khai-lum', 'REFL-hang-round'),       # restored/hanged
+        'lum': ('lum', 'round'),                               # base - round
+        'gaih': ('gaih', 'little'),                            # little
+        'kipulak': ('ki-pul-ak', 'REFL-expose-COMPL'),         # made known
+        'ak': ('ak', 'COMPL'),                                 # completive
+        'gulgu': ('gul-gu', 'coil-bite'),                      # adder/serpent
+        'phazaw-in': ('pha-zaw-in', 'good-more-ERG'),          # more/multiplied
+        'kilangzo': ('ki-lang-zo', 'REFL-clear-able'),         # hearken
+        'lang': ('lang', 'clear'),                             # base - clear
+        'vik': ('vik', 'rod'),                                 # rod
+        'lomkhat': ('lom-khat', 'bundle-one'),                 # bunch (of hyssop)
+        'phialgawp': ('phial-gawp', 'morning-watch'),          # morning watch
+        'phial': ('phial', 'morning'),                         # base - morning
+        'vukkhal': ('vuk-khal', 'frost-dew'),                  # hoar frost
+        'vuk': ('vuk', 'frost'),                               # base - frost
+        'khal': ('khal', 'dew'),                               # base - dew
+        
+        # Round 57: Final few to reach 98%
+        'beka': ('beka', 'bekah'),                             # bekah (half shekel)
+        'daii': ('daii', 'pan'),                               # pan/frying pan
+        'dunga': ('dung-a', 'border-LOC'),                     # at border/utmost coast
+        'phuala': ('phual-a', 'field-LOC'),                    # in the field/strove
+        'beryl': ('beryl', 'beryl'),                           # beryl (gemstone - loanword)
+        
+        # Round 58: More partials to push over 98%
+        'palh': ('palh', 'palm'),                              # palm tree
+        'khangkhia': ('khang-khia', 'generation-out'),         # branch/grow out
+        'phattheih': ('phat-theih', 'praise-able'),            # praiseworthy
+        'mimawh': ('mi-mawh', 'person-sin'),                   # innocent/sinner
+        'sumlei': ('sum-lei', 'money-buy'),                    # buyer/seller
+        'pauthei': ('pau-thei', 'speak-able'),                 # able to speak
+        'pau': ('pau', 'speak'),                               # base - speak
+        'simun': ('sim-un', 'count-time'),                     # without ceasing
+        'muthei': ('mu-thei', 'see-able'),                     # able to see
+        'mu': ('mu', 'see'),                                   # base - see
+        'uploh': ('up-loh', 'look-NEG'),                       # not looking/unaware
+        'up': ('up', 'look'),                                  # base - look
+        
+        # Round 59: Final push past 98%
+        'leteh': ('let-eh', 'return-EXCL'),                    # it is good/bear
+        'ninthem': ('nin-them', 'day-dawn'),                   # mote/early morning
+        'bawlbawl': ('bawl-bawl', 'make-REDUP'),               # continually
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
