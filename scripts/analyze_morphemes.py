@@ -4300,6 +4300,114 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lui': ('lui', 'old'),                                 # base - old
         'ciahpihin': ('ciah-pih-in', 'return-with-ERG'),       # bring/restore
         'paithei': ('pai-thei', 'go-able'),                    # able to go/come
+        
+        # Round 40: More vocabulary from Deuteronomy, Joshua, Leviticus, Numbers
+        'makna': ('mak-na', 'divorce-NMLZ'),                   # divorcement
+        'mak': ('mak', 'divorce'),                             # base - divorce
+        'thehthangna': ('theh-thang-na', 'throw-scatter-NMLZ'), # scattering
+        'theh': ('theh', 'throw'),                             # base - throw
+        'kihuhna': ('ki-huh-na', 'REFL-help-NMLZ'),             # help/safety
+        'huh': ('huh', 'help'),                                # base - help
+        'muhsak': ('muh-sak', 'see-CAUS'),                     # show/cause to see
+        'ensim': ('en-sim', 'look-count'),                     # view/survey
+        'sim': ('sim', 'count'),                               # base - count
+        'khawlcip': ('khawl-cip', 'rest-tight'),               # stand still
+        'khawl': ('khawl', 'rest'),                            # base - rest
+        'sawmkhat': ('sawm-khat', 'ten-one'),                  # eleven/ten
+        'vanvan': ('van-van', 'old-old'),                      # ancient/very old
+        'van': ('van', 'old'),                                 # base - old
+        'khengvalin': ('kheng-val-in', 'proud-presume-ERG'),   # presumptuously
+        'kheng': ('kheng', 'proud'),                           # base - proud
+        'nangzo': ('nang-zo', 'face-able'),                    # able to face
+        'zo': ('zo', 'able'),                                  # base - able
+        'anlom': ('an-lom', 'offering-wave'),                  # wave offering
+        'lom': ('lom', 'wave'),                                # base - wave
+        'hihloh': ('hi-hloh', 'be-NEG'),                       # not be
+        'hloh': ('hloh', 'NEG'),                               # base - negative
+        'innkuankuan': ('inn-kuan-kuan', 'house-family-REDUP'), # families
+        'kuan': ('kuan', 'family'),                            # base - family
+        'tuisia': ('tui-sia', 'water-evil'),                   # bitter water
+        
+        # Round 41: More vocabulary from Chronicles, Ezra, Nehemiah, Job, Psalms
+        'bawlpha': ('bawl-pha', 'make-good'),                  # prepare/make well
+        'thunuam': ('thu-nuam', 'word-pleasant'),              # good word/law
+        'zahpihna': ('zah-pih-na', 'respect-APPL-NMLZ'),       # disrespect/scorn
+        'mipi': ('mi-pi', 'person-great'),                     # common people
+        'sawmlinih': ('sawm-li-nih', 'ten-four-two'),          # forty-two (42)
+        'golna': ('gol-na', 'divide-NMLZ'),                    # treasury/division
+        'gol': ('gol', 'divide'),                              # base - divide
+        'simang': ('sim-ang', 'count-perish'),                 # perish/destroy
+        'ang': ('ang', 'be/become'),                           # suffix - resultative
+        'nuamzaw': ('nuam-zaw', 'want-more'),                  # prefer/rather
+        'zaw': ('zaw', 'more'),                                # base - more
+        'maimom': ('mai-mom', 'face-web'),                     # spider web
+        'mom': ('mom', 'web'),                                 # base - web
+        'thuakkha': ('thuak-kha', 'suffer-NEGPERF'),           # not suffer/safe
+        'kha': ('kha', 'NEG.PERF'),                            # suffix - negative perfect
+        'venvan': ('ven-van', 'protect-store'),                # heap up/store
+        'manphatna': ('man-phat-na', 'price-worthy-NMLZ'),     # value/exchange
+        'phat': ('phat', 'worthy'),                            # base - worthy
+        'tehtheih': ('teh-theih', 'measure-able'),             # comparable/equal
+        'khollo': ('khol-lo', 'care-NEG'),                     # forget/not care
+        'cihsan': ('cih-san', 'say-rely'),                     # trust/declare trust
+        'san': ('san', 'rely'),                                # base - rely
+        
+        # Round 42: More vocabulary from Kings, Chronicles, Psalms, Proverbs
+        'satvui': ('sat-vui', 'strike-dust'),                  # smash to pieces
+        'vui': ('vui', 'dust'),                                # base - dust
+        'galdaihna': ('gal-daih-na', 'enemy-able-NMLZ'),       # dominion
+        'daih': ('daih', 'able'),                              # base - able
+        'sepkhiat': ('sep-khiat', 'work-extract'),             # execute judgment
+        'sep': ('sep', 'work'),                                # base - work
+        'khiat': ('khiat', 'extract'),                         # base - extract
+        'theithek': ('thei-thek', 'know-extreme'),             # abundant/know well
+        'thek': ('thek', 'extreme'),                           # base - extreme
+        'khialhsak': ('khialh-sak', 'sin-CAUS'),               # cause to sin
+        'omzaw': ('om-zaw', 'exist-more'),                     # more numerous
+        'taangkona': ('taang-ko-na', 'time-long-NMLZ'),        # long period
+        'taang': ('taang', 'time'),                            # base - time
+        'ko': ('ko', 'long'),                                  # base - long
+        'zuauna': ('zuau-na', 'lie-NMLZ'),                     # lying
+        'zuau': ('zuau', 'lie'),                               # base - lie
+        'sibup': ('si-bup', 'die-all'),                        # completely exhausted
+        'bup': ('bup', 'all'),                                 # base - all
+        'thuaklawh': ('thuak-lawh', 'suffer-PERF'),            # suffered
+        'lawh': ('lawh', 'PERF'),                              # suffix - perfective
+        'leengmang': ('leeng-mang', 'chariot-fly'),            # fly away
+        'mang': ('mang', 'fly'),                               # base - fly
+        'zawkna': ('zawk-na', 'more-NMLZ'),                    # surplus/excess
+        'zawk': ('zawk', 'more'),                              # base - more
+        
+        # Round 43: More vocabulary from Ruth, Samuel, Kings, Chronicles, Job, Psalms, Jeremiah
+        'lohbuang': ('loh-buang', 'apart-divide'),             # separation/parting
+        'buang': ('buang', 'divide'),                          # base - divide
+        'kizuih': ('ki-zuih', 'REFL-hang'),                    # hang oneself
+        'zuih': ('zuih', 'hang'),                              # base - hang
+        'kithuah': ('ki-thuah', 'REFL-gird'),                  # gird oneself
+        'thuah': ('thuah', 'gird'),                            # base - gird
+        'zozaw': ('zo-zaw', 'able-more'),                      # overcome/prevail
+        'meiphual': ('mei-phual', 'fire-field'),               # furnace
+        'phual': ('phual', 'field'),                           # base - field
+        'kipakta': ('ki-pak-ta', 'REFL-wait-TA'),              # wait patiently
+        'pak': ('pak', 'wait'),                                # base - wait
+        'suangkang': ('suang-kang', 'stone-pillar'),           # marble pillar
+        'kang': ('kang', 'pillar'),                            # base - pillar
+        'suangphah': ('suang-phah', 'stone-floor'),            # pavement
+        'manlah': ('man-lah', 'time-ADV'),                     # afterward/later
+        'themthum': ('them-thum', 'dawn-early'),               # every moment
+        'them': ('them', 'dawn'),                              # base - dawn
+        'thum': ('thum', 'early'),                             # base - early
+        'gakcip': ('gak-cip', 'trap-tight'),                   # snare/gin
+        'gak': ('gak', 'trap'),                                # base - trap
+        'cip': ('cip', 'tight'),                               # base - tight
+        'kikaikhia': ('ki-kai-khia', 'REFL-dig-out'),          # uproot
+        'kai': ('kai', 'dig'),                                 # base - dig
+        'thangsiah': ('thang-siah', 'speak-compose'),          # conspire/encourage
+        'siah': ('siah', 'compose'),                           # base - compose
+        'maban': ('ma-ban', 'own-matter'),                     # concerning
+        'ban': ('ban', 'matter'),                              # base - matter
+        'taisim': ('tai-sim', 'check-count'),                  # investigate
+        'tai': ('tai', 'check'),                               # base - check
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
