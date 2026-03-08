@@ -6682,6 +6682,125 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kithakhauhsak': ('ki-tha-kauh-sak', 'REFL-strength-strong-CAUS'), # strengthen
         'kihepkhiat': ('ki-hep-khiat', 'REFL-depart-out'),         # departed
         'thep': ('thep', 'wound'),                                 # wounded
+        # Round 110: More vocabulary for 99%
+        'gan': ('gan', 'bear'),                                    # able to bear
+        'tul': ('tul', 'foot'),                                    # on foot
+        'pipi': ('pi-pi', 'grind-REDUP'),                          # to grind
+        'gal': ('gal', 'little'),                                  # a little
+        'leung': ('le-ung', 'would.God-OPTATIVE'),                 # would God
+        'sealt': ('se-alt', 'beast-island'),                       # island beasts
+        'kua': ('kua', 'who'),                                     # who
+        'kiattan': ('ki-at-tan', 'REFL-offer-closely'),            # take off hard by
+        'pho': ('pho', 'spread'),                                  # spread abroad
+        'bum': ('bum', 'charm'),                                   # charmer
+        'tawhkuang': ('tawh-kuang', 'burn-foundation'),            # set on fire
+        'el': ('el', 'provoke'),                                   # provoked
+        'kingeinaseh': ('ki-ngei-na-seh', 'REFL-prove-NMLZ-try'),  # assayed/proved
+        'tupa': ('tu-pa', 'son-NMLZ'),                             # son's son
+        'lelh': ('lelh', 'defeat'),                                # defeat counsel
+        'guiawk': ('gui-awk', 'saddle-go'),                        # saddled ass
+        'suih': ('suih', 'hew'),                                   # hew timber
+        'meigongnu': ('mei-gong-nu', 'fire-torch-woman'),          # widow
+        'poding': ('po-ding', 'juniper-tree'),                     # juniper tree
+        'lelhlam': ('lelh-lam', 'break-through'),                  # break through
+        'teekta': ('teek-ta', 'old-already'),                      # husband old
+        'koimah': ('koi-mah', 'whither-EMPH'),                     # whence
+        'eklei': ('ek-lei', 'dung-field'),                         # dung
+        'kitai': ('ki-tai', 'REFL-birth'),                         # come to birth
+        'sulet': ('su-let', 'break-up'),                           # broken up
+        'seng': ('seng', 'finish'),                                # finished
+        'guahzuk': ('guah-zuk', 'transgress-much'),                # transgressed
+        'kikhuak': ('ki-khuak', 'REFL-dig'),                       # wells digged
+        'khusa': ('khu-sa', 'feast-make'),                         # made feast
+        'daai': ('daai', 'hedge'),                                 # hedge about
+        'kiseelcip': ('ki-seel-cip', 'REFL-hide-INTENS'),          # hidden
+        'leen': ('leen', 'spark'),                                 # sparks
+        'kihencip': ('ki-hen-cip', 'REFL-stop-INTENS'),            # stopped
+        'taangzaw': ('taang-zaw', 'clear-more'),                   # clearer
+        'bulsum': ('bul-sum', 'root-stock'),                       # stock/root
+        'kigimsak': ('ki-gim-sak', 'REFL-remove-CAUS'),            # removed
+        'kitunpih': ('ki-tun-pih', 'REFL-root-out'),               # rooted out
+        'git': ('git', 'bound'),                                   # bounds
+        'kileizo': ('ki-lei-zo', 'REFL-get-able'),                 # cannot be gotten
+        'hawkguam': ('hawk-guam', 'cliff-cave'),                   # caves/cliffs
+        'lato': ('la-to', 'drop-small'),                           # drops
+        'khihcip': ('khih-cip', 'hide-INTENS'),                    # hide in dust
+        'kihihsakpih': ('ki-hih-sak-pih', 'REFL-remember-CAUS-with'), # trust in
+        'kidikdik': ('ki-dik-dik', 'REFL-bow-REDUP'),              # bowed down
+        'gawisan': ('gawi-san', 'mock-feast'),                     # mockers in feasts
+        'kisosuah': ('ki-so-suah', 'REFL-stir-up'),                # stir up
+        'thokikzo': ('tho-kik-zo', 'rise-again-able'),             # rise up again
+        'kigual': ('ki-gual', 'REFL-entreat'),                     # entreat favour
+        'kihai': ('ki-hai', 'REFL-approve'),                       # approve
+        'gulpi': ('gul-pi', 'serpent-great'),                      # serpent
+        'sungsuk': ('sung-suk', 'inside-pour'),                    # pour out
+        'kikumkum': ('ki-kum-kum', 'REFL-counsel-REDUP'),          # take counsel
+        'tawdat': ('taw-dat', 'cup-full'),                         # cup full
+        'galkido': ('gal-ki-do', 'battle-REFL-turn'),              # turned back
+        'taklama': ('tak-lam-a', 'right-hand-LOC'),                # right hand
+        'gilvahsak': ('gil-vah-sak', 'wheat-feed-CAUS'),           # fed with wheat
+        'kitahkhak': ('ki-tah-khak', 'REFL-bear-up'),              # bear up
+        'kitawhkuang': ('ki-tawh-kuang', 'REFL-burn-kindle'),      # wrath kindled
+        'thazaw': ('tha-zaw', 'strength-more'),                    # more comfort
+        'haksazaw': ('hak-sa-zaw', 'difficult-PAST-more'),         # woe is me
+        'sotto': ('so-tto', 'go-come'),                            # go and come
+        'kuncip': ('kun-cip', 'eye-INTENS'),                       # eyes look
+        'lamka': ('lam-ka', 'way-high'),                           # high places
+        'kiphawkphawk': ('ki-phawk-phawk', 'REFL-remember-REDUP'), # memory blessed
+        'nguntang': ('ngun-tang', 'silver-choice'),                # choice silver
+        'leenmang': ('leen-mang', 'whirlwind-pass'),               # whirlwind passeth
+        'kipuk': ('ki-puk', 'REFL-fall'),                          # people fall
+        'kiphasakte': ('ki-pha-sak-te', 'REFL-save-CAUS-PL'),      # saved people
+        'hauhnop': ('hauh-nop', 'oppress-increase'),               # oppresseth
+        'tawipa': ('tawi-pa', 'form-NMLZ'),                        # the great former
+        'phengtat': ('pheng-tat', 'vision-perish'),                # no vision perish
+        'kisilsiang': ('ki-sil-siang', 'REFL-wipe-clean'),         # wipeth mouth
+        'hauzaw': ('hau-zaw', 'rich-more'),                        # great possessions
+        # Round 111: More vocabulary for 99%
+        'lihleh': ('lih-leh', 'cluster-vine'),                     # cluster
+        'tulh': ('tulh', 'lead'),                                  # lead/bring
+        'zunek': ('zu-nek', 'wine-drink'),                         # drink wine
+        'masuan': ('ma-suan', 'that-before'),                      # before
+        'kiliamsak': ('ki-liam-sak', 'REFL-hurt-CAUS'),            # hurt not
+        'suahtung': ('suah-tung', 'rise-upon'),                    # going forth
+        'kisusiacip': ('ki-su-sia-cip', 'REFL-break-destroy-INTENS'), # broken purposes
+        'kisiacip': ('ki-sia-cip', 'REFL-destroy-INTENS'),         # utterly emptied
+        'tumtakin': ('tum-tak-in', 'ease-true-INST'),              # at ease
+        'zek': ('zek', 'vintage'),                                 # vintage
+        'kizial': ('ki-zial', 'REFL-dissolve'),                    # dissolved
+        'haipi': ('hai-pi', 'cup-big'),                            # cup
+        'kituamkoih': ('ki-tuam-koih', 'REFL-stand-aside'),        # stand by
+        'taisanzo': ('tai-san-zo', 'hold-water-able'),             # hold water
+        'suam': ('suam', 'pollute'),                               # polluted
+        'koici': ('koi-ci', 'how-pardon'),                         # how pardon
+        'kipaithang': ('ki-pai-thang', 'REFL-scatter-field'),      # fall as
+        'teeng': ('teeng', 'linen'),                               # linen
+        'kilehngat': ('ki-leh-ngat', 'REFL-depart-heart'),         # heart depart
+        'kipaidak': ('ki-pai-dak', 'REFL-cast-heat'),              # cast out
+        'huhzo': ('huh-zo', 'breath-able'),                        # breath taken
+        'kimudahtawm': ('ki-mudah-tawm', 'REFL-loathe-self'),      # loathe themselves
+        'kiphan': ('ki-phan', 'REFL-prosper'),                     # prosper
+        'lan': ('lan', 'fornication'),                             # fornication
+        'hehnateng': ('heh-na-teng', 'fury-NMLZ-pour'),            # pour fury
+        'lamkabom': ('lam-ka-bom', 'place-high-spoil'),            # take spoil
+        'kimatin': ('ki-mat-in', 'REFL-wash-INST'),                # washed
+        'meikuangpi': ('mei-kuang-pi', 'fire-furnace-great'),      # fiery furnace
+        'kicingta': ('ki-cing-ta', 'REFL-great-already'),          # certainly come
+        'thangpai': ('thang-pai', 'anger-against'),                # anger against
+        'suahkhiatsak': ('suah-khiat-sak', 'take-off-CAUS'),       # take away
+        'kiphukin': ('ki-phuk-in', 'REFL-hew-INST'),               # hewn down
+        'tanlam': ('tan-lam', 'sad-face'),                         # sad countenance
+        'kikhultum': ('ki-khul-tum', 'REFL-clothe-cast'),          # cast into
+        'masazaw': ('ma-sa-zaw', 'that-first-more'),               # seek first
+        'mopawi': ('mo-pawi', 'bridechamber-mourn'),               # children mourn
+        'olzaw': ('ol-zaw', 'tolerable-more'),                     # more tolerable
+        'depgawp': ('dep-gawp', 'thorn-choke'),                    # choked
+        'taangci': ('taang-ci', 'seed-sow'),                       # sowed seed
+        'tahum': ('ta-hum', 'enemy-sow'),                          # enemy sowed
+        'pupa': ('pu-pa', 'grandfather-NMLZ'),                     # elders
+        'suahnop': ('suah-nop', 'take-up'),                        # take up cross
+        'kipiathuah': ('ki-pia-thuah', 'REFL-give-abundance'),     # given abundance
+        'khitzawh': ('khit-zawh', 'curse-swear'),                  # curse and swear
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
