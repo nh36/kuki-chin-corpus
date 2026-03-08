@@ -4255,6 +4255,51 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ap': ('ap', 'span'),                                  # base - span
         'khutsiam': ('khut-siam', 'hand-skill'),               # workmanship
         'siam': ('siam', 'skill'),                             # base - skill
+        
+        # Round 38: More vocabulary from Genesis, Exodus, Leviticus, Numbers
+        'nungngatin': ('nung-ngat-in', 'back-opposite-ERG'),   # over against
+        'ngat': ('ngat', 'opposite'),                          # base - opposite
+        'ompihin': ('om-pih-in', 'exist-with-ERG'),            # being with
+        'khiatpih': ('khiat-pih', 'depart-with'),              # bring out
+        'semnen': ('sem-nen', 'cut-pieces'),                   # cut in pieces
+        'nen': ('nen', 'pieces'),                              # base - pieces
+        'sitset': ('sit-set', 'wash-clean'),                   # scour/clean
+        'set': ('set', 'clean'),                               # base - clean
+        'vallai': ('val-lai', 'pour-lay'),                     # pour out
+        'val': ('val', 'pour'),                                # base - pour
+        'tuampian': ('tuam-pian', 'swell-appear'),             # rising/bright spot
+        'tuam': ('tuam', 'swell'),                             # base - swell
+        'piakzawh': ('piak-zawh', 'give-finish'),              # give completely
+        'neksak': ('nek-sak', 'eat-CAUS'),                     # cause to eat/devour
+        'hinna': ('hi-n-na', 'be-CONN-NMLZ'),                  # life/living
+        'velval': ('vel-val', 'turn-turn'),                    # causing/making bitter
+        'vel': ('vel', 'turn'),                                # base - turn
+        'tuithuk': ('tui-thuk', 'water-deep'),                 # deep/depth
+        'thuk': ('thuk', 'deep'),                              # base - deep
+        
+        # Round 39: More vocabulary from Numbers, Leviticus, Deuteronomy
+        'mulkiatna': ('mul-kiat-na', 'hair-cut-NMLZ'),         # razor
+        'piakhawm': ('piak-hawm', 'give-together'),            # offer together
+        'hawm': ('hawm', 'together'),                          # base - together
+        'sutan': ('sut-an', 'break-NEG'),                      # not break
+        'sut': ('sut', 'break'),                               # base - break
+        'kibangsak': ('ki-bang-sak', 'REFL-equal-CAUS'),       # sound alarm
+        'bang': ('bang', 'equal'),                             # base - equal
+        'laipi': ('lai-pi', 'midst-big'),                      # lifetime/while
+        'lai': ('lai', 'midst'),                               # base - midst
+        'dingkhawm': ('ding-khawm', 'stand-together'),         # stand together
+        'kihalna': ('ki-hal-na', 'REFL-burn-NMLZ'),            # burning
+        'tuanna': ('tuan-na', 'ride-NMLZ'),                    # riding/beast
+        'tuan': ('tuan', 'ride'),                              # base - ride
+        'lungkiasak': ('lung-kia-sak', 'heart-fall-CAUS'),     # discourage
+        'kia': ('kia', 'fall'),                                # base - fall
+        'hehsakna': ('heh-sak-na', 'anger-CAUS-NMLZ'),         # provocation
+        'kisatna': ('ki-sat-na', 'REFL-strike-NMLZ'),          # controversy/stroke
+        'sat': ('sat', 'strike'),                              # base - strike
+        'khanglui': ('khang-lui', 'generation-old'),           # old time
+        'lui': ('lui', 'old'),                                 # base - old
+        'ciahpihin': ('ciah-pih-in', 'return-with-ERG'),       # bring/restore
+        'paithei': ('pai-thei', 'go-able'),                    # able to go/come
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
