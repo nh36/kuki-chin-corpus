@@ -4100,6 +4100,45 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hen': ('hen', 'spread'),                              # base - spread
         'hitaseleh': ('hi-ta-se-leh', 'be-that-CONN-COND'),    # although that
         'bawlsiain': ('bawl-sia-in', 'make-evil-ERG'),         # doing evil
+        
+        # Round 31: More high-frequency partial words
+        'kongpuankhai': ('kong-puan-khai', 'door-cloth-hang'),   # hanging/curtain
+        'vawhin': ('vawh-in', 'arise-ERG'),                    # arising
+        'vawh': ('vawh', 'arise'),                             # base - arise/rise
+        'baan': ('baan', 'lay'),                               # base - lay/put
+        'liangkoah': ('liangko-ah', 'shoulder-LOC'),           # on shoulders
+        'liangko': ('liangko', 'shoulder'),                    # base - shoulder
+        'pataukohna': ('pataukoh-na', 'alarm-NMLZ'),           # alarm/trumpet call
+        'pataukoh': ('pa-tau-koh', 'male-signal-call'),        # alarm/trumpet call
+        'tau': ('tau', 'signal'),                              # base - signal
+        'gelhsa': ('gelh-sa', 'write-PERF'),                   # written
+        'nilhin': ('nilh-in', 'anoint-ERG'),                   # anointing
+        'nilh': ('nilh', 'anoint'),                            # base - anoint
+        
+        # Round 32: More vocabulary from Numbers, Deut, Kings, Judges
+        'zawngin': ('zawng-in', 'lack-ERG'),                   # lacking/poor
+        'zawng': ('zawng', 'lack'),                            # base - lack
+        'hamsia': ('ham-sia', 'curse-evil'),                   # curse
+        'nawkkha': ('nawk-kha', 'turn-CAUS'),                  # turn aside
+        'khuaneu': ('khua-neu', 'town-small'),                 # village
+        'neu': ('neu', 'small'),                               # base - small
+        'angvan': ('ang-van', 'face-see'),                     # show favoritism
+        'sawtpi': ('sawt-pi', 'long-big'),                     # prolong/long time
+        'sawt': ('sawt', 'long'),                              # base - long
+        'sukhamin': ('sukham-in', 'grind-ERG'),                # grinding
+        'sukham': ('su-kham', 'make-grind'),                   # grind
+        'cinna': ('cin-na', 'plant-NMLZ'),                     # garden/planting
+        'cin': ('cin', 'plant'),                               # base - plant
+        'kiatna': ('kiat-na', 'fall-NMLZ'),                    # falling place
+        'kiat': ('kiat', 'fall'),                              # base - fall
+        'samzang': ('sam-zang', 'throw-INSTR'),                # sling
+        'zang': ('zang', 'use'),                               # base - use
+        'kidop': ('ki-dop', 'REFL-guard'),                     # take heed
+        'dop': ('dop', 'guard'),                               # base - guard
+        'keucip': ('keu-cip', 'dry-tight'),                    # dried up
+        'keu': ('keu', 'dry'),                                 # base - dry
+        'cip': ('cip', 'tight'),                               # base - tight
+        'sutat': ('su-tat', 'break-COMPL'),                    # break/sever
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
