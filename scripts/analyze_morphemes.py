@@ -4653,6 +4653,137 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sul': ('sul', 'snake'),                               # snake/serpent
         'hankuang': ('han-kuang', 'carry-box'),                # coffin
         'haksapi': ('hak-sa-pi', 'heavy-flesh-great'),         # hard labor
+        
+        # Round 51: More vocabulary from Jeremiah, Daniel, Hosea, Matthew, Luke, John, Acts, Exodus
+        'kiphal': ('ki-phal', 'REFL-shut'),                    # be shut up
+        'phal': ('phal', 'shut'),                              # base - shut
+        'dozo': ('do-zo', 'throw-able'),                       # able to cast
+        'do': ('do', 'throw'),                                 # base - throw
+        'lawptakin': ('lawp-tak-in', 'shake-truly-ERG'),       # trembling
+        'lawp': ('lawp', 'shake'),                             # base - shake
+        'tak': ('tak', 'truly'),                               # base - truly
+        'lonei': ('lo-nei', 'NEG-have'),                       # tares/without
+        'kimtakin': ('kim-tak-in', 'complete-truly-ERG'),      # thoroughly
+        'tuukulh': ('tuu-kulh', 'climb-steal'),                # sneak up/climb
+        'tuu': ('tuu', 'climb'),                               # base - climb
+        'kulh': ('kulh', 'steal'),                             # base - steal
+        'tunma-in': ('tun-ma-in', 'arrive-EMPH-ERG'),          # before
+        'holhthawh': ('holh-thawh', 'stir-up'),                # incite/stir up
+        'holh': ('holh', 'stir'),                              # base - stir
+        'kithawisa-in': ('ki-thawi-sa-in', 'REFL-ready-already-ERG'), # harnessed
+        'thawi': ('thawi', 'ready'),                           # base - ready
+        'lopipi-in': ('lo-pi-pi-in', 'NEG-great-great-ERG'),   # powerfully
+        
+        # Round 52: Massive batch from Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, Samuel
+        'khuituah': ('khui-tuah', 'fold-do'),                  # double/fold together
+        'khui': ('khui', 'fold'),                              # base - fold
+        'kuak': ('kuak', 'hollow'),                            # hollow
+        'guat': ('guat', 'work'),                              # work/craft
+        'liimsun': ('liim-sun', 'wing-spread'),                # spread wings
+        'liim': ('liim', 'wing'),                              # base - wing
+        'kizen': ('ki-zen', 'REFL-thin'),                      # flatten
+        'kihuan': ('ki-huan', 'REFL-fry'),                     # be fried
+        'kilah': ('ki-lah', 'REFL-spread'),                    # spread
+        'talkolh': ('tal-kolh', 'bald-head'),                  # bald forehead
+        'kolh': ('kolh', 'head'),                              # base - head
+        'kikhakcip': ('ki-khak-cip', 'REFL-lock-tight'),       # be locked
+        'khak': ('khak', 'lock'),                              # base - lock
+        'zuthawl': ('zu-thawl', 'slave-female'),               # female slave
+        'ki-apsa': ('ki-ap-sa', 'REFL-devote-already'),        # devoted
+        'ap': ('ap', 'devote'),                                # base - devote
+        'teep': ('teep', 'fringe'),                            # fringe
+        'kipumsil': ('ki-pum-sil', 'REFL-body-wash'),          # bathe
+        'pum': ('pum', 'body'),                                # base - body
+        'sil': ('sil', 'wash'),                                # base - wash
+        'phul': ('phul', 'spring'),                            # spring (water)
+        'thoto': ('tho-to', 'rise-UP'),                        # arise
+        'to': ('to', 'up'),                                    # base - up
+        'huihlaka': ('huih-laka', 'wind-among'),               # in the air
+        'laka': ('laka', 'among'),                             # base - among
+        'thahatzaw': ('tha-hat-zaw', 'strength-have-more'),    # mightier
+        'hat': ('hat', 'have'),                                # base - have
+        'momai': ('mo-mai', 'dry-without'),                    # drought
+        'gawizan': ('gawi-zan', 'stamp-break'),                # crush/grind
+        'gawi': ('gawi', 'stamp'),                             # base - stamp
+        'heitang': ('hei-tang', 'path-divide'),                # prepare route
+        'hei': ('hei', 'path'),                                # base - path
+        'phiatkhiat': ('phiat-khiat', 'destroy-out'),          # blot out
+        'sungnu': ('sung-nu', 'inside-female'),                # mother-in-law
+        'sung': ('sung', 'inside'),                            # base - inside
+        'kisugawp': ('ki-su-gawp', 'REFL-crush-break'),        # oppressed
+        'lahkhiat': ('lah-khiat', 'reveal-out'),               # reveal
+        'lamkal': ('lam-kal', 'way-middle'),                   # on the way
+        'kal': ('kal', 'middle'),                              # base - middle
+        'lengkhia-in': ('leng-khia-in', 'line-out-ERG'),       # draw out
+        'leng': ('leng', 'line'),                              # base - line
+        'kuansuk': ('kuan-suk', 'attack-fall'),                # slay
+        'kihu': ('ki-hu', 'REFL-help'),                        # plead
+        'hu': ('hu', 'help'),                                  # base - help
+        'kisatgawp': ('ki-sat-gawp', 'REFL-strike-break'),     # set against
+        'sat': ('sat', 'strike'),                              # base - strike
+        'kuikek': ('kui-kek', 'tear-scratch'),                 # tear
+        'kui': ('kui', 'tear'),                                # base - tear
+        'kek': ('kek', 'scratch'),                             # base - scratch
+        'domto-in': ('dom-to-in', 'go-UP-ERG'),                # going up
+        'dom': ('dom', 'go'),                                  # base - go
+        'kilehhei': ('ki-leh-hei', 'REFL-return-wonder'),      # be amazed
+        'liimnuai': ('liim-nuai', 'wing-under'),               # under wings
+        'nuai': ('nuai', 'under'),                             # base - under
+        'haih': ('haih', 'winnow'),                            # winnow
+        'galphual': ('gal-phual', 'enemy-field'),              # battlefield
+        'tumsiam': ('tum-siam', 'play-skilled'),               # skilled player
+        
+        # Round 53: Another massive batch from Samuel, Kings, Chronicles, Ezra, Job, Psalms, Proverbs
+        'kinawhin': ('ki-nawh-in', 'REFL-meet-ERG'),           # meet/come to meet
+        'nawh': ('nawh', 'meet'),                              # base - meet
+        'gimlua': ('gim-lua', 'faint-excessive'),              # exhausted
+        'gim': ('gim', 'faint'),                               # base - faint
+        'kikekin': ('ki-kek-in', 'REFL-scratch-ERG'),          # rent/torn
+        'kilok': ('ki-lok', 'REFL-shake'),                     # cast away
+        'kheging': ('khe-ging', 'foot-sound'),                 # sound of going
+        'ging': ('ging', 'sound'),                             # base - sound
+        'gel': ('gel', 'together'),                            # together
+        'kizal': ('ki-zal', 'REFL-stretch'),                   # stretch forth
+        'kipsuak': ('ki-psuak', 'REFL-take'),                  # take by war
+        'psuak': ('psuak', 'take'),                            # base - take
+        'dimlet': ('dim-let', 'fill-back'),                    # overflow
+        'guallelin': ('gual-lel-in', 'enemy-change-ERG'),      # defeat
+        'diam': ('diam', 'month'),                             # month
+        'kisingkhia': ('ki-sing-khia', 'REFL-shake-out'),      # be shaken out
+        'sing': ('sing', 'shake'),                             # base - shake
+        'tawldam': ('tawl-dam', 'free-good'),                  # rest/deliver
+        'tawl': ('tawl', 'free'),                              # base - free
+        'dam': ('dam', 'good'),                                # base - good
+        'lampai': ('lam-pai', 'way-go'),                       # journey
+        'mancip': ('man-cip', 'time-tight'),                   # seize
+        'sucip': ('su-cip', 'crush-tight'),                    # cut off
+        'phiatkhiatsak': ('phiat-khiat-sak', 'destroy-out-CAUS'), # seal up
+        'ngingei': ('ngin-gei', 'weary-edge'),                 # make desolate
+        'ngin': ('ngin', 'weary'),                             # base - weary
+        'puklawh': ('puk-lawh', 'fall-PERF'),                  # cast down
+        'pumtangin': ('pum-tang-in', 'body-on-ERG'),           # upon body
+        'kithun': ('ki-thun', 'REFL-press'),                   # burst
+        'thun': ('thun', 'press'),                             # base - press
+        'peekpi': ('peek-pi', 'spread-big'),                   # spread out
+        'peek': ('peek', 'spread'),                            # base - spread
+        'mei-ek': ('mei-ek', 'fire-sneeze'),                   # neesings/light
+        'ek': ('ek', 'sneeze'),                                # base - sneeze
+        'vutlevai': ('vut-levai', 'dust-spread'),              # dust and ashes
+        'levai': ('levai', 'spread'),                          # base - spread
+        'kipaaksak': ('ki-paak-sak', 'REFL-glad-CAUS'),        # make glad
+        'paak': ('paak', 'glad'),                              # base - glad
+        'kituancil': ('ki-tuan-cil', 'REFL-cut-piece'),        # cut in pieces
+        'tuan': ('tuan', 'cut'),                               # base - cut
+        'cil': ('cil', 'piece'),                               # base - piece
+        'themkha': ('them-kha', 'dawn-NEG'),                   # would not
+        'domto': ('dom-to', 'go-UP'),                          # reproach
+        'taksing': ('tak-sing', 'truly-shake'),                # fir trees
+        'kibulhin': ('ki-bul-hin', 'REFL-root-sit'),           # sit in darkness
+        'telzaw': ('tel-zaw', 'know-more'),                    # more understanding
+        'tel': ('tel', 'know'),                                # base - know
+        'kisui': ('ki-sui', 'REFL-polish'),                    # polished
+        'pukkha': ('puk-kha', 'fall-NEG'),                     # not stumble
+        'mapekin': ('ma-pek-in', 'EMPH-settle-ERG'),           # settled
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
