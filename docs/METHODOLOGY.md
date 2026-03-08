@@ -5,8 +5,8 @@
 This document describes the methodology developed for building a morphological analyzer for Tedim Chin (ctd), designed to be replicated across 19 Kuki-Chin languages. The goal is Leipzig-style glossing with 95%+ token coverage.
 
 **Reference Implementation:** `scripts/analyze_morphemes.py` (Tedim Chin)  
-**Coverage Achieved:** 97.02% (805,944 of 830,722 tokens)  
-**Development Time:** ~3 sessions of iterative work
+**Coverage Achieved:** 98.51% (838,202 of 850,903 tokens)  
+**Development Time:** ~5 sessions of iterative work
 
 ---
 

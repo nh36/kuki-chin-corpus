@@ -48,7 +48,7 @@ def lookup(word):
 
 ### Bug 3: Unicode Apostrophe vs ASCII Apostrophe
 
-**Discovery:** Possessive forms like "Topa'" weren't being recognized.
+**Discovery:** Possessive forms like "Topa'" weren't being recognized; forms with curly apostrophes were being misanalyzed.
 
 **Root Cause:** Corpus uses U+2019 (RIGHT SINGLE QUOTATION MARK), code checked for U+0027 (APOSTROPHE).
 
@@ -56,15 +56,15 @@ def lookup(word):
 - `Topa'` = `Topa\u2019` (Lord's) - curly apostrophe
 - Not `Topa'` = `Topa\u0027` - straight apostrophe
 
-**Fix:**
+**Fix (2026-03-08):** Normalize curly apostrophes to straight at the start of `analyze_word()`:
 ```python
-# Check both apostrophe forms
-if word.endswith('\u2019') or word.endswith("'"):
-    stem = word.rstrip("'\u2019")
-    # Handle possessive
+# In analyze_word(), after clean_word():
+word = word.replace('\u2019', "'").replace('\u2018', "'")
 ```
 
-**Prevention:** Always inspect corpus encoding. Print `repr(text)` to see actual Unicode values.
+This single fix improved coverage from 98.49% to 98.51% (+200 tokens) by allowing all apostrophe-variant words to match dictionary entries.
+
+**Prevention:** Always normalize Unicode quotation marks early in the analysis pipeline. Use `repr(text)` to inspect actual codepoints.
 
 ---
 
@@ -222,7 +222,8 @@ def analyze_recursive(word, depth=0):
 | 92% | Missing ki-/reflexive forms | Add ki- prefix rule with proper stems |
 | 95% | Missing reduplication | Add reduplication pattern handler |
 | 97% | Rare vocabulary, proper nouns | Philological analysis, add proper noun list |
-| 98%+ | Hapax, dialectal forms, loans | Document but don't chase exhaustively |
+| 98% | Unicode issues, edge cases | Normalize apostrophes (U+2019→U+0027) |
+| 98.5%+ | Hapax, dialectal forms, loans | Document but don't chase exhaustively |
 
 ---
 

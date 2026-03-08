@@ -5568,8 +5568,66 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khinmang': ('khin-mang', 'breath-all'),                   # any to breathe (Josh 11:11)
         'lungsimtak': ('lung-sim-tak', 'heart-think-true'),        # wholly followed (Josh 14:14)
         'zawhsa': ('zawh-sa', 'subdue-PERF'),                      # subdued (Josh 18:1)
-        "tawpun": ('tawp-un', 'end-?'),
+        "tawpun": ('tawp-un', 'end-EMPH'),                         # final
         "beisakin,": ('bei-sak-in', 'pierce-CAUS-INST'),
+        
+        # Round 79: More partials (2026-03-08)
+        'mithagol': ('mitha-gol', 'person-giant'),                 # giant (2 Sam 21:18)
+        "mithagolte'": ('mitha-gol-te', 'person-giant-PL'),        # giants
+        'kigelhte': ('ki-gelh-te', 'REFL-expel-PL'),               # expel them (Josh 23:5)
+        'paikhawmin': ('pai-khawm-in', 'go-together-INST'),        # went with (Jdg 1:17)
+        'thaukhal': ('thau-khal', 'fat-kidney'),                   # fat (Deut 32:14)
+        'tupna': ('tup-na', 'cast.down-NMLZ'),                     # plead/altar (Jdg 6:31)
+        'galpanna': ('galpan-na', 'armed-NMLZ'),                   # armed men (Jdg 7:11)
+        'thuksak': ('thu-sak', 'word-CAUS'),                       # speak/proceed (Jdg 11:36)
+        'ciahsan': ('ciah-san', 'go-up'),                          # went up (Jdg 14:19)
+        'meite': ('mei-te', 'fire-PL'),                            # firebrands (Jdg 15:4)
+        'thalkhau': ('thal-khau', 'new-cord'),                     # green withs (Jdg 16:7)
+        'guallelhna': ('guallelh-na', 'ambush-NMLZ'),              # liers in wait (Jdg 20:36)
+        'uilut': ('ui-lut', 'dog-enter'),                          # emerods (1 Sam 5:6)
+        'kuanna': ('kuan-na', 'reign-NMLZ'),                       # reign (1 Sam 12:12)
+        'sattuk': ('sat-tuk', 'strike-reach'),                     # smote (1 Sam 14:31)
+        'suanglotna': ('suang-lot-na', 'stone-throw-NMLZ'),        # sling (1 Sam 17:40)
+        'liamte': ('liam-te', 'wound-PL'),                         # wounded (1 Sam 17:52)
+        
+        # More from the partial list
+        "thugente'": ('thu-gen-te', 'word-tell-PL'),               # words/speakers
+        'keivom': ('kei-vom', 'wolf-male'),                        # wolf (Gen 49:27)
+        'keising': ('kei-sing', 'owl-tree'),                       # cormorant (Isa 34:11)
+        'pawlbawl': ('pawl-bawl', 'group-make'),                   # organize (group)
+        'utun': ('ut-un', 'want-EMPH'),                            # will/want (emphatic)
+        'ute': ('ut-e', 'want-NMLZ'),                              # wanting
+        "thumte'": ('thum-te', 'three-PL'),                        # threes
+        'ziau': ('zi-au', 'wife-elder.sibling'),                   # sister-in-law
+        'puteek': ('pute-ek', 'ancestors-small'),                  # forefathers
+        'lausakin': ('lau-sak-in', 'fear-CAUS-INST'),              # fearing
+        'sawkin': ('sa-wkin', 'flesh-?'),                          # bodily
+        # Round 80: KJV-verified vocabulary
+        'lumsak': ('lum-sak', 'lie.down-CAUS'),                    # cause to lie down, lodge
+        'thupuak': ('thu-puak', 'word-make'),                      # command, instruct
+        'thupuakpa': ('thu-puak-pa', 'word-make-NMLZ.M'),          # commander
+        'ciahkhiat': ('ciah-khiat', 'return-completely'),          # depart completely
+        'ciap': ('ciap', 'taste'),                                 # taste, try
+        'dimna': ('dim-na', 'full-NMLZ'),                          # fullness, plot (of land)
+        'pakpalhte': ('pakpalh-te', 'flower.opening-PL'),          # open flowers (carved)
+        'pakpalh': ('pakpalh', 'flower.opening'),                  # open flower
+        'vawhsak': ('vawh-sak', 'saddle-CAUS'),                    # saddle (animal)
+        'maikhingin': ('maikhing-in', 'displeased-INST'),          # displeasedly
+        'maikhing': ('maikhing', 'displeased'),                    # displeased, sullen
+        'thukante': ('thukan-te', 'messenger-PL'),                 # messengers
+        'thukan': ('thukan', 'messenger'),                         # messenger
+        'thukanpa': ('thukan-pa', 'messenger-NMLZ.M'),             # messenger (male)
+        # More Round 80 entries
+        'hihlo': ('hi-hlo', 'be-NEG'),                             # is not (contraction)
+        'neihlam': ('neih-lam', 'have.II-manner'),                 # having, possession
+        'ciangduai': ('ciangduai', 'rod/scourge'),                 # rod, scourge (punishment)
+        'thulamlak': ('thu-lamlak', 'word-crooked'),               # crooked counsel
+        'thulamlakpa': ('thu-lamlak-pa', 'word-crooked-NMLZ.M'),   # counsellor (wisdom)
+        'khuanawl': ('khua-nawl', 'town-outskirts'),               # outskirts of town
+        'thukawi': ('thu-kawi', 'word-crooked'),                   # perverse, froward
+        'sawmsimin': ('sawmsim-in', 'conspire-INST'),              # conspiring
+        'sawmsim': ('sawmsim', 'conspire'),                        # conspire
+        'sawmsimna': ('sawmsim-na', 'conspire-NMLZ'),              # conspiracy
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
