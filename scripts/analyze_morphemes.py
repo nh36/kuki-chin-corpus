@@ -5667,6 +5667,41 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'keeksak': ('keek-sak', 'tear.open-CAUS'),                 # enlarge, expand borders
         'gualnopna': ('gualnop-na', 'rejoice-NMLZ'),               # rejoicing, mirth
         'gualnop': ('gualnop', 'rejoice'),                         # rejoice, be merry
+        # Round 83: KJV-verified vocabulary
+        'siktukkilh': ('sik-tukkilh', 'iron-nail'),                # iron nail
+        'kipakna': ('kipak-na', 'rejoice.together-NMLZ'),          # rejoicing, gladness
+        'kipak': ('ki-pak', 'REFL-rejoice'),                       # rejoice together
+        'lamdangpi': ('lamdang-pi', 'strange-great'),              # marvelously, wonderfully
+        'khotakin': ('khotak-in', 'zealous-INST'),                 # diligently, zealously
+        'khotak': ('khotak', 'zealous'),                           # diligent, zealous
+        'siksan': ('sik-san', 'iron-attach'),                      # nail, stake, confidence
+        'gamtatsiate': ('gamtat-sia-te', 'deed-evil-PL'),          # evil deeds, iniquities
+        'gamtatsia': ('gamtat-sia', 'deed-evil'),                  # evil deed
+        'khasak': ('kha-sak', 'send-CAUS'),                        # cause to go, escort
+        'khamseek': ('kham-seek', 'gold-smith'),                   # goldsmith
+        'khamseekpa': ('kham-seek-pa', 'gold-smith-NMLZ.M'),       # goldsmith
+        'sawlbuk': ('sawl-buk', 'leaf-booth'),                     # booth, tabernacle
+        'gawpna': ('gawp-na', 'trample-NMLZ'),                     # trampling
+        'gawp': ('gawp', 'trample'),                               # trample, tread
+        'dangtakna': ('dang-tak-na', 'thirst-ADV-NMLZ'),           # thirst
+        'dangtak': ('dangtak', 'thirst'),                          # thirst
+        'gentelna': ('gen-tel-na', 'speak-understand-NMLZ'),       # explanation, entrance
+        'gentel': ('gen-tel', 'speak-understand'),                 # explain
+        'dawnkikna': ('dawn-kik-na', 'answer-return-NMLZ'),        # reply, answer
+        'dawnkik': ('dawn-kik', 'answer-return'),                  # reply, answer back
+        # Round 84: KJV-verified vocabulary
+        'nautang': ('nau-tang', 'child-group'),                    # families, divisions
+        'langtangin': ('langtang-in', 'open-INST'),                # openly, before (someone)
+        'langtang': ('langtang', 'open'),                          # open, public
+        'ciahpah': ('ciah-pah', 'return-immediately'),             # go home quickly
+        'kihtaktak': ('kihtak-tak', 'dread-INTENS'),               # greatly fear
+        'kihtak': ('kihtak', 'dread'),                             # dread, fear greatly
+        'zanglo': ('zang-lo', 'use-NEG'),                          # not use, pervert
+        'sazang': ('sa-zang', 'flesh-fiber'),                      # sinews, muscle
+        'baihta': ('baih-ta', 'certain-PRF'),                      # certainly, surely (go)
+        'banzo': ('ban-zo', 'reach-able'),                         # reach, attain
+        'suksuk': ('suk-suk', 'make-REDUP'),                       # continually, repeatedly
+        'awle': ('awle', 'leviathan'),                             # leviathan, sea monster
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
