@@ -7,6 +7,13 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 2. Bootstrap lexicon generation via PMI-based word alignment
 3. Morphological analysis and Leipzig-style glossing (starting with Tedim)
 
+## 🎉 MILESTONE ACHIEVED: 98% Coverage
+
+**Date:** 2026-03-08
+**Coverage:** 98.00% (814,720/831,340 tokens)
+
+This represents production-ready morphological analysis for Tedim Chin.
+
 ## Completed Phases
 
 ### Phase 1: Corpus Collection ✓
@@ -28,7 +35,7 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 
 ### Phase 4: Leipzig Morphological Analyzer ✓
 - Focus: Tedim Chin (ctd)
-- **Current coverage: 97.76% of tokens**
+- **Current coverage: 98.00% of tokens** 🎉
 - Handles: prefixes, stems, suffixes, compounds, reduplication
 
 ## Current Analyzer Performance (2026-03-08)
@@ -36,9 +43,9 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 ### Overall Statistics
 ```
 Total tokens:      831,340
-Fully analyzed:    812,734 (97.76%)
-Partial:            13,068 (1.57%)  -- has some morphemes glossed
-Unknown:             5,538 (0.67%)  -- completely unknown
+Fully analyzed:    814,720 (98.00%)
+Partial:            12,559 (1.51%)  -- has some morphemes glossed
+Unknown:             4,061 (0.49%)  -- completely unknown
 ```
 
 ### Quality Assurance (Allomorph Audit)
@@ -48,12 +55,11 @@ Unknown:             5,538 (0.67%)  -- completely unknown
   Unknown base + -te:     ~1,700 tokens (down from 2,360)
   Flagged issues:           ~200 cases (down from 361)
 
-Session accomplishments:
-- Created allomorph_audit.py for systematic quality checks
-- Fixed 200+ over-segmentation bugs via protective COMPOUND_WORDS entries
-- Verified -te is a single allomorph (no -ite, -ate variants)
-- Distribution: vowel-final (66%), consonant-final (34%)
-- Pushed from 97.57% to 97.76% via philological expansion
+Session accomplishments (Session 8):
+- Pushed from 97.78% to 98.00% (Rounds 40-59)
+- Added ~400 new COMPOUND_WORDS entries via philological verification
+- Cross-referenced CTD Bible verses with KJV English translations
+- Systematic vocabulary expansion from Genesis through Revelation
 ```
 
 ### Analyzer Components (Current)
@@ -72,14 +78,14 @@ Session accomplishments:
    - Place, time, abstract nouns
    - Session 6 additions: hing, vun, thal, innsa, gamsa, etc.
 
-4. **Compound Words** (~1,550 entries)
+4. **Compound Words** (~2,000 entries)
    - Noun+LOC: tungah, sungah, kiangah
    - Verb+NMLZ: mawhna, biakna, nuntakna
    - Noun+Noun: tapa, biakinn, lungsim
    - Reflexive: kibawl, kipan, kisai
    - Philologically verified via KJV cross-referencing
    - **Over-segmentation guards**: protective entries for hingte, innsate, etc.
-   - **Session additions (Rounds 22-37)**: 200+ new entries
+   - **Sessions 7-8 additions (Rounds 22-59)**: 500+ new entries
 
 5. **Productive Morphology**
    - Prefix stripping: ka-, na-, a-, kong-, hong-, ki-
