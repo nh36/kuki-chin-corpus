@@ -3898,6 +3898,26 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'leenggah': ('leenggah', 'grape'),                     # base - grape
         'kholhnate': ('kholhna-te', 'enchantment-PL'),         # enchantments/divinations
         'kholhna': ('kholhna', 'enchantment'),                 # base - enchantment
+        
+        # Session 6 Round 21: More over-segmentation fixes
+        'anlimte': ('anlim-te', 'dainty-PL'),                  # dainties (NOT a-nlim-te)
+        'anlim': ('anlim', 'dainty'),                          # base - dainty/delicacy
+        'gannote': ('ganno-te', 'lamb-PL'),                    # lambs/fatlings
+        'ganno': ('ganno', 'lamb'),                            # base - lamb/young animal
+        'zawngte': ('zawng-te', 'poor-PL'),                    # the poor (NOT za-wng-te)
+        'zawng': ('zawng', 'poor'),                            # base - poor
+        'kiute': ('kiu-te', 'corner-PL'),                      # corners
+        'kiu': ('kiu', 'corner'),                              # base - corner
+        'haute': ('hau-te', 'rich-PL'),                        # the rich
+        'hau': ('hau', 'rich'),                                # base - rich
+        'pote': ('po-te', 'grow-PL'),                          # growths/harvests
+        'po': ('po', 'grow'),                                  # base - grow
+        'namtuite': ('namtui-te', 'perfume-PL'),               # perfumes/odours (NOT na-mtui-te)
+        'namtui': ('namtui', 'perfume'),                       # base - oil/perfume
+        'miphakte': ('miphak-te', 'leper-PL'),                 # lepers
+        'miphak': ('miphak', 'leper'),                         # base - leper (person-strike)
+        'gamhte': ('gamh-te', 'inheritance-PL'),               # inheritances (NOT gam-h-te)
+        'gamh': ('gamh', 'inheritance'),                       # base - inheritance
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
