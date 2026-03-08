@@ -7075,6 +7075,82 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'puanak': ('puan-ak', 'cloth-put'),                        # clothe
         'paaiahaah': ('paai-ah', 'place-LOC'),                     # place LOC
         'sumzuaknaah': ('sum-zuak-na-ah', 'money-sell-NMLZ-LOC'),  # merchandise LOC
+        # Round 118: More suffix combinations and partials
+        'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # shoulder LOC
+        'piaknanin': ('piak-na-in', 'give-NMLZ-INST'),             # offering INST
+        'zahkoin': ('zah-ko-in', 'gather-grapes-INST'),            # gathering INST
+        'gamlapia': ('gam-la-pi-a', 'land-field-great-LOC'),       # field LOC
+        'zuin': ('zu-in', 'wine-INST'),                            # wine INST
+        'naiin': ('nai-in', 'near-INST'),                          # near INST
+        'paaiaah': ('paai-ah', 'place-LOC'),                       # place LOC
+        'leenggahzuhau': ('leeng-gah-zu-hau', 'eagle-vulture-wine-rich'), # eagle
+        'nuamtaksain': ('nuam-tak-sa-in', 'pleasant-true-PAST-INST'), # pleasant INST
+        'zahtain': ('zah-ta-in', 'fear-already-INST'),             # feared INST
+        'vunat': ('vun-at', 'skin-place'),                         # on skin
+        'thukin': ('thuk-in', 'deep-INST'),                        # deep INST
+        'pain': ('pa-in', 'father-INST'),                          # father INST
+        'thugennaah': ('thu-gen-na-ah', 'word-speak-NMLZ-LOC'),    # speaking LOC
+        'tuangsakin': ('tuang-sak-in', 'feed-CAUS-INST'),          # fed INST
+        'thupia': ('thu-pi-a', 'word-great-LOC'),                  # great word LOC
+        'siangthosakin': ('siang-tho-sak-in', 'clean-rise-CAUS-INST'), # cleansing INST
+        'neihnaah': ('neih-na-ah', 'have-NMLZ-LOC'),               # have LOC
+        'linaah': ('li-na-ah', 'four-NMLZ-LOC'),                   # four LOC
+        'saiik': ('sa-iik', 'meat-INTERJ'),                        # meat INTERJ
+        'sutkhiain': ('sut-khia-in', 'remove-out-INST'),           # remove INST
+        'siangsakin': ('siang-sak-in', 'clean-CAUS-INST'),         # clean INST
+        'sagihnaah': ('sa-gih-na-ah', 'meat-cut-NMLZ-LOC'),        # cut LOC
+        'biakbukah': ('biak-buk-ah', 'worship-house-LOC'),         # sanctuary LOC
+        'innkuanah': ('inn-kuan-ah', 'house-family-LOC'),          # family LOC
+        'mimiin': ('mi-mi-in', 'person-REDUP-INST'),               # persons INST
+        'siazawin': ('sia-zaw-in', 'bad-more-INST'),               # worse INST
+        'bangmaha': ('bang-mah-a', 'what-EMPH-LOC'),               # what LOC
+        'ngahmunteah': ('ngah-mun-te-ah', 'place-PL-LOC'),         # places LOC
+        'bawlnaah': ('bawl-na-ah', 'make-NMLZ-LOC'),               # make LOC
+        'dangtea': ('dang-te-a', 'other-PL-LOC'),                  # other LOC
+        'naupaiiin': ('nau-paii-in', 'child-cry-INST'),            # crying INST
+        'balkhiain': ('bal-khia-in', 'tear-out-INST'),             # torn INST
+        'neknaah': ('nek-na-ah', 'eat-NMLZ-LOC'),                  # eat LOC
+        'tehnain': ('teh-na-in', 'measure-NMLZ-INST'),             # measure INST
+        'samsiain': ('sam-sia-in', 'hair-bad-INST'),               # hair INST
+        # Round 119: More suffix combinations
+        'khualnun': ('khual-na-un', 'stranger-NMLZ-3PL'),          # strangers
+        'biaknateah': ('biak-na-te-ah', 'worship-NMLZ-PL-LOC'),    # altars LOC
+        'zaiin': ('zai-in', 'altar-INST'),                         # altar INST
+        'pialin': ('pial-in', 'turn-INST'),                        # turn INST
+        'lasakolte': ('la-sakol-te', 'take-CAUS.APPL-PL'),         # take CAUS PL
+        'zahpihin': ('zah-pih-in', 'fear-with-INST'),              # fear with INST
+        'sisain': ('si-sa-in', 'blood-PAST-INST'),                 # blood INST
+        'ninai': ('ni-nai', 'day-near'),                           # near day
+        'awin': ('aw-in', 'voice-INST'),                           # voice INST
+        'nitein': ('ni-te-in', 'day-PL-INST'),                     # days INST
+        'zazaa': ('za-za-a', 'hear-REDUP-LOC'),                    # heard LOC
+        'lutnaa': ('lut-na-a', 'enter-NMLZ-LOC'),                  # enter LOC
+        'siasain': ('sia-sa-in', 'bad-PAST-INST'),                 # bad INST
+        'inndeiteah': ('inn-dei-te-ah', 'house-chamber-PL-LOC'),   # chambers LOC
+        'kahkahnain': ('kah-kah-na-in', 'follow-REDUP-NMLZ-INST'), # following INST
+        'vasakalaohte': ('va-sa-kalaoh-te', 'bird-meat-INTERJ-PL'), # birds PL
+        'bangzahtain': ('bang-zah-ta-in', 'what-fear-already-INST'), # feared INST
+        'khaguhah': ('kha-guh-ah', 'chin-jaw-LOC'),                # jaw LOC
+        'thungetnain': ('thu-nget-na-in', 'word-pray-NMLZ-INST'),  # pray INST
+        'ngaknain': ('ngak-na-in', 'wait-NMLZ-INST'),              # wait INST
+        'sisaa': ('si-sa-a', 'blood-PAST-LOC'),                    # blood LOC
+        'neuteah': ('neu-te-ah', 'small-PL-LOC'),                  # small LOC
+        'nenein': ('ne-ne-in', 'small-REDUP-INST'),                # small INST
+        'beisaa': ('bei-sa-a', 'finish-PAST-LOC'),                 # finished LOC
+        'lungamsak': ('lung-am-sak', 'heart-rest-CAUS'),           # comfort
+        'khuaneua': ('khua-neu-a', 'village-small-LOC'),           # village LOC
+        'kiumcihna': ('ki-um-cih-na', 'REFL-strong-say-NMLZ'),     # strengthening
+        'kangop': ('kang-op', 'carry-bear'),                       # bear
+        'hilhkholhnain': ('hilh-kholh-na-in', 'teach-NMLZ-INST'),  # teach INST
+        'laimal': ('lai-mal', 'book-plain'),                       # plain book
+        'guktakna': ('guk-tak-na', 'good-true-NMLZ'),              # goodness
+        'deihnaun': ('deih-na-un', 'want-NMLZ-3PL'),               # want
+        'upnaah': ('up-na-ah', 'believe-NMLZ-LOC'),                # believe LOC
+        'luppihin': ('lup-pih-in', 'roll-with-INST'),              # roll INST
+        'piangkhiain': ('piang-khia-in', 'born-out-INST'),         # born INST
+        'nuiin': ('nui-in', 'laugh-INST'),                         # laugh INST
+        'topain': ('topa-in', 'lord-INST'),                        # lord INST
+        'thuakzoin': ('thuak-zo-in', 'endure-able-INST'),          # endure INST
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
