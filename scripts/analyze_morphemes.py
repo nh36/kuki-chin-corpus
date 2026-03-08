@@ -3918,6 +3918,20 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'miphak': ('miphak', 'leper'),                         # base - leper (person-strike)
         'gamhte': ('gamh-te', 'inheritance-PL'),               # inheritances (NOT gam-h-te)
         'gamh': ('gamh', 'inheritance'),                       # base - inheritance
+        
+        # Session 6 Round 22: More over-segmentation fixes
+        'tuletate': ('tuleta-te', 'breast-PL'),                # breasts/wombs
+        'tuleta': ('tuleta', 'breast'),                        # base - breast/womb
+        'khainiangte': ('khainiang-te', 'chain-PL'),           # chains/wreaths
+        'khainiang': ('khainiang', 'chain'),                   # base - chain
+        'puantungsilhte': ('puantungsilh-te', 'coat-PL'),      # coats (NOT pua-ntungsilh-te)
+        'puantungsilh': ('puantungsilh', 'coat'),              # base - coat
+        'ekte': ('ek-te', 'dung-PL'),                          # dung/excrement
+        'ek': ('ek', 'dung'),                                  # base - dung
+        'bilngongte': ('bilngong-te', 'deaf-PL'),              # deaf ones
+        'bilngong': ('bilngong', 'deaf'),                      # base - deaf (ear-closed)
+        'pulepate': ('pulepa-te', 'ancestor-PL'),              # ancestors
+        'pulepa': ('pulepa', 'ancestor'),                      # base - ancestor
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
