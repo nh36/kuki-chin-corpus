@@ -5343,6 +5343,149 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kankan': ('kan-kan', 'seek-REDUP'),                   # sought out
         'sakpa': ('sak-pa', 'cause-AGT'),                      # one who makes
         'sumlepai': ('sum-le-pai', 'money-and-go'),            # ransom
+        
+        # Round 73: More high-frequency partials
+        'muantheih': ('muan-theih', 'trust-can'),              # directeth (way)
+        'nuamtak': ('nuam-tak', 'peace-true'),                 # in peace
+        'ngaihsutpi': ('ngaih-sut-pi', 'think-measure-great'), # guide heart (wisdom)
+        'luhgawp': ('luh-gawp', 'enter-strike'),               # spoil dwelling
+        'nuammawh': ('nuam-mawh', 'envy-wrong'),               # envious of wicked
+        'al': ('al', 'cubit'),                                 # cubit
+        'leengto': ('leeng-to', 'chariot-fly'),                # swallow (bird)
+        'luak': ('luak', 'vomit'),                             # vomit out
+        'lungdamzaw': ('lung-dam-zaw', 'heart-well-COMP'),     # more favour
+        'hilel': ('hi-lel', 'be-hold'),                        # taketh hold
+        'nik': ('nik', 'forget'),                              # forget
+        'kelkel': ('kel-kel', 'doves-REDUP'),                  # doves' eyes
+        'sawtpekin': ('sawt-pek-in', 'long-ago-ERG'),          # long ago
+        'kisaktheihna': ('ki-sak-theih-na', 'REFL-make-can-NMLZ'), # stay (on God)
+        'masakna': ('ma-sak-na', 'self-cause-NMLZ'),           # first place (Shiloh)
+        'hilhtel': ('hilh-tel', 'teach-understand'),           # understand
+        'paulamin': ('pau-lam-in', 'speak-toward-ERG'),        # spoken to
+        'kaihkhiat': ('kaih-khiat', 'lead-away'),              # loose (shoe)
+        'nungtalai': ('nung-ta-lai', 'live-PFV-midst'),        # still living
+        'anla': ('an-la', 'grain-harvest'),                    # seedtime and harvest
+        'galdalna': ('gal-dal-na', 'war-equip-NMLZ'),          # armour
+        'pangpi': ('pang-pi', 'side-great'),                   # four sides
+        'hilhkholh': ('hilh-kholh', 'teach-swallow'),          # swallowed up
+        'silhpa': ('silh-pa', 'clothe-AGT'),                   # one clothed
+        'huanna': ('huan-na', 'build-NMLZ'),                   # building
+        'lungkimzo': ('lung-kim-zo', 'heart-full-COMPL'),      # satisfied
+        'kongvang': ('kong-vang', 'way-empty'),                # grave's mouth
+        'ngahzah': ('ngah-zah', 'get-measure'),                # treasure desired
+        'piaknop': ('piak-nop', 'give-desire'),                # consecrate
+        'khongkhai': ('khong-khai', 'obey-?'),                 # hearkened
+        'minambup': ('min-am-bup', 'name-all-turn'),           # transgressions
+        'muhnop': ('muh-nop', 'see-desire'),                   # prepare way
+        'ngahthei': ('ngah-thei', 'get-can'),                  # ravening
+        'sihkhawm': ('sih-khawm', 'die-together'),             # die with
+        'nehcip': ('neh-cip', 'press-throng'),                 # throng, press
+        'neutung': ('neu-tung', 'little-since'),               # since childhood
+        'cihkhit': ('cih-khit', 'say-after'),                  # faith made whole
+        'dingzia': ('ding-zia', 'stand-how'),                  # betray
+        'nitawp': ('ni-tawp', 'day-end'),                      # last day
+        'paitheih': ('pai-theih', 'go-can'),                   # able to go
+        'nekkhawmna': ('nek-khawm-na', 'eat-together-NMLZ'),   # communion
+        
+        # Round 74: More partials (2026-03-08)
+        'pawlkhatte': ('pawl-khat-te', 'group-one-PL'),        # companies (1 Sam 8:12)
+        'cian': ('cian', 'light'),                             # light (Gen 1:3)
+        'thukhente': ('thu-khen-te', 'word-judge-PL'),         # judges (Ex 21:6)
+        'khatpeuh': ('khat-peuh', 'one-whosoever'),            # whosoever (Gen 4:15)
+        'nengniamte': ('neng-niam-te', 'oppress-low-PL'),      # those oppressed (Jdg 2:18)
+        'kumpinu': ('kumpi-nu', 'king-female'),                # queen (1 Kgs 10:1)
+        'bawlsiate': ('bawl-sia-te', 'do-evil-PL'),            # persecutors (Ps 31:15)
+        'numeino': ('numei-no', 'woman-DIM'),                  # maid (Ex 2:8)
+        'sikli': ('sikli', 'cubit'),                           # cubit (Ex 28:4)
+        'luai': ('luai', 'pillar'),                            # pillar (Jdg 16:29)
+        'paubaan': ('pau-baan', 'speak-true'),                 # perfect (Gen 6:9)
+        'khongkhai': ('khong-khai', 'magic-open'),             # diviner (Deut 18:14)
+        'umgui': ('um-gui', 'be-gourd'),                       # gourd (Jonah 4:6)
+        'khuan': ('khuan', 'dance'),                           # dance (Gen 31:27)
+        'pawlpi': ('pawl-pi', 'group-big'),                    # troop (2 Sam 2:25)
+        'ngahzaw': ('ngah-zaw', 'get-more'),                   # more blessed (Deut 33:24)
+        'khopa': ('khopa', 'tiller'),                          # tiller (Gen 4:2)
+        'omden': ('om-den', 'be-always'),                      # always (Num 9:16)
+        'omto': ('om-to', 'be-over'),                          # covered (Gen 7:20)
+        'vaihawmte': ('vaihawm-te', 'imagine-PL'),             # those who imagine (Gen 11:6)
+        'kimatna': ('ki-mat-na', 'REFL-train-NMLZ'),           # trained (Gen 14:14)
+        'honpite': ('hon-pi-te', 'many-big-PL'),               # many (Gen 1:20)
+        'nisat': ('ni-sat', 'day-heat'),                       # heat of day (Gen 18:1)
+        'minsa': ('min-sa', 'raw-meat'),                       # raw meat (1 Sam 2:15)
+        'nunghei': ('nung-hei', 'behind-look'),                # look back (Gen 19:17)
+        'paikhiatsak': ('pai-khia-sak', 'go-out-CAUS'),        # send away (Gen 20:13)
+        'hoihkhop': ('hoih-khop', 'good-sufficient'),          # sufficient (Prov 25:16)
+        'sumbukte': ('sum-buk-te', 'money-merchant-PL'),       # merchants (Gen 23:16)
+        'vangsak': ('vang-sak', 'prosper-CAUS'),               # make prosperous (Gen 24:12)
+        'nakbah': ('nak-bah', 'ear-ring'),                     # earring (Gen 24:22)
+        'ciahkhiasak': ('ciah-khia-sak', 'go-out-CAUS'),       # send away (Gen 24:59)
+        'kikhuhna': ('ki-khuh-na', 'REFL-cover-NMLZ'),         # veil (Gen 24:65)
+        'nauzaw': ('nau-zaw', 'child-more'),                   # younger (Gen 25:23)
+        'tungtangah': ('tung-tang-ah', 'well-another-LOC'),    # another well (Gen 26:21)
+        'tuto': ('tu-to', 'sit-up'),                           # sit up (Gen 27:19)
+        'kikokhia': ('ki-ko-khia', 'REFL-cry-out'),            # cry out (Gen 27:34)
+        'nikhat': ('ni-khat', 'day-one'),                      # one day (Gen 27:45)
+        'ihmutna': ('ih-mut-na', 'sleep-wake-NMLZ'),           # awaking (Gen 28:16)
+        'hiangpa': ('hiang-pa', 'green-tree'),                 # poplar (Gen 30:37)
+        'sawmvei': ('sawm-vei', 'ten-times'),                  # ten times (Gen 31:7)
+        'kitenna': ('ki-ten-na', 'REFL-marry-NMLZ'),           # marriage (Gen 34:9)
+        
+        # Round 75: More partials (2026-03-08)
+        'nausuah': ('nau-suah', 'child-give.birth'),           # give birth (Gen 35:16)
+        'bansau': ('ban-sau', 'coat-long'),                    # coat (Gen 37:3)
+        'thugente': ('thu-gen-te', 'word-tell-PL'),            # words (Gen 37:8)
+        'zasakkik': ('za-sak-kik', 'word-CAUS-return'),        # bring word (Gen 37:14)
+        'puaksuk': ('puak-suk', 'carry-down'),                 # carry down (Gen 37:25)
+        'meetna': ('meet-na', 'profit-NMLZ'),                  # profit (Gen 37:26)
+        'lungkimhuai': ('lung-kim-huai', 'heart-full-almost'), # displeased (Gen 38:10)
+        'siatloh': ('siat-loh', 'destroy-NEG'),                # not perish (Gen 41:36)
+        'zuisuk': ('zui-suk', 'follow-down'),                  # descend after (Gen 42:38)
+        'ciahpihkik': ('ciah-pih-kik', 'go-with-return'),      # bring back (Gen 43:9)
+        'puakik': ('puak-ik', 'carry-return'),                 # carry again (Gen 43:12)
+        'maimawk': ('mai-mawk', 'face-fail'),                  # die (Gen 47:19)
+        'leenggahtui': ('leeng-gah-tui', 'grape-juice-water'), # wine (Gen 49:11)
+        'suakkhiasak': ('suak-khia-sak', 'become-out-CAUS'),   # let loose (Gen 49:21)
+        'keivom': ('kei-vom', 'wolf-?'),                       # wolf (Gen 49:27)
+        'thuum': ('thuum', 'mourning'),                        # mourning (Gen 50:10)
+        'naudomte': ('nau-dom-te', 'child-care-PL'),           # midwives (Ex 1:17)
+        'hihkha': ('hih-kha', 'this-EMPH'),                    # lest (Ex 5:3)
+        'mekna': ('mek-na', 'knead-NMLZ'),                     # kneading trough (Ex 8:3)
+        'kaikhawmte': ('kai-khawm-te', 'gather-together-PL'),  # those gathered (Ex 16:18)
+        'sansak': ('san-sak', 'prevail-CAUS'),                 # cause to prevail (Ex 17:11)
+        'puakpih': ('puak-pih', 'carry-with'),                 # bear with (Ex 18:22)
+        'tatkhiat': ('tat-khiat', 'redeem-?'),                 # redeem (Ex 15:13)
+        'hawmguak': ('hawm-guak', 'empty-?'),                  # empty (Gen 31:42)
+        'kikihtakna': ('ki-kih-tak-na', 'REFL-fear-true-NMLZ'),# fear (Ex 23:27)
+        'kaisuk': ('kai-suk', 'hang-down'),                    # hang over (Ex 26:12)
+        'gakna': ('gak-na', 'hook-NMLZ'),                      # hooks (Ex 27:10)
+        'topaz': ('topaz', 'topaz'),                           # topaz (Ex 28:17)
+        'sianthosak': ('sian-tho-sak', 'holy-rise-CAUS'),      # hallow (Ex 29:1)
+        'iikte': ('iik-te', 'breast-PL'),                      # breasts (Lev 9:20)
+        'sai': ('sai', 'ashes'),                               # ashes (Lev 6:10)
+        'supna': ('sup-na', 'bless-NMLZ'),                     # blessing (Ex 32:29)
+        'kizutna': ('ki-zut-na', 'REFL-hook-NMLZ'),            # hooks/fillets (Ex 38:17)
+        'kisimna': ('ki-sim-na', 'REFL-count-NMLZ'),           # numbered (Ex 38:26)
+        'sikbeel': ('sik-beel', 'fry-pan'),                    # frying pan (Lev 2:7)
+        
+        # Apostrophe variants of Round 74-75 entries
+        "pawlkhatte'": ('pawl-khat-te', 'group-one-PL'),
+        "cian'": ('cian', 'light'),
+        "thukhente'": ('thu-khen-te', 'word-judge-PL'),
+        "khatpeuh'": ('khat-peuh', 'one-whosoever'),
+        "nengniamte'": ('neng-niam-te', 'oppress-low-PL'),
+        "kumpinu'": ('kumpi-nu', 'king-female'),
+        "bawlsiate'": ('bawl-sia-te', 'do-evil-PL'),
+        "numeino'": ('numei-no', 'woman-DIM'),
+        "khuan'": ('khuan', 'dance'),
+        "pawlpi'": ('pawl-pi', 'group-big'),
+        "honpite'": ('hon-pi-te', 'many-big-PL'),
+        "sumbukte'": ('sum-buk-te', 'money-merchant-PL'),
+        "nauzaw'": ('nau-zaw', 'child-more'),
+        "minthan'": ('min-than', 'name-new'),
+        "mithagolte'": ('mitha-gol-te', 'person-?-PL'),
+        "sawmthumte'": ('sawm-thum-te', 'ten-three-PL'),
+        "gamsate'": ('gam-sa-te', 'land-flesh-PL'),
+        "tangvalpa'": ('tang-val-pa', 'young-man-NMLZ'),
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
