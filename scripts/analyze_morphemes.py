@@ -6202,6 +6202,110 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'velvel': ('vel-vel', 'hold-REDUP'),                       # hold peace
         'kiphatsaknate': ('ki-phat-sak-na-te', 'REFL-praise-CAUS-NMLZ-PL'), # transgressions
         'theikim': ('thei-kim', 'see-all'),                        # see it
+        # Round 101: More vocabulary for 99%
+        'lamdangsak': ('lam-dang-sak', 'way-different-CAUS'),      # respect, fear
+        'sinkhiat': ('sin-khiat', 'shake-out'),                    # shaken out
+        'khamcip': ('kham-cip', 'withhold-INTENS'),                # withheld
+        'zap': ('zap', 'flutter'),                                 # flutter, stir
+        'sasi': ('sa-si', 'blood-suck'),                           # suck blood
+        'zahval': ('zah-val', 'enough-share'),                     # more than enough
+        'genkha': ('gen-kha', 'speak-already'),                    # have spoken
+        'bangzahta': ('bang-zah-ta', 'like-much-PAST'),            # lo now
+        'gialhek': ('gial-hek', 'tree-shade'),                     # shady trees
+        'hate': ('ha-te', 'tooth-PL'),                             # teeth
+        'nisuak': ('ni-suak', 'sneeze-out'),                       # sneezing
+        'nip': ('nip', 'rotten'),                                  # rotten
+        'kitamte': ('ki-tam-te', 'REFL-sharp-PL'),                 # sharp things
+        'citheisakkik': ('ci-thei-sak-kik', 'return-able-CAUS-again'), # turned captivity
+        'siamang': ('siam-ang', 'make-wisdom'),                    # be wise
+        'leengtui': ('leeng-tui', 'corn-wine'),                    # corn and wine
+        'thahnopna': ('thah-nop-na', 'kill-like-NMLZ'),            # deceitful
+        'kibawlphat': ('ki-bawl-phat', 'REFL-make-ready'),         # made ready
+        'lelna': ('lel-na', 'fear-NMLZ'),                          # fear
+        'kihotkhiatna': ('ki-hot-khiat-na', 'REFL-deliver-out-NMLZ'), # deliverance
+        'phattaak': ('phat-taak', 'praise-worthy'),                # worthy of praise
+        'zamin': ('za-min', 'hundred-thousand'),                   # many
+        'lungmuan': ('lung-muan', 'heart-secure'),                 # secure heart
+        'kikoko': ('ki-ko-ko', 'REFL-cry-REDUP'),                  # cried out
+        'khuailuzu': ('khuai-lu-zu', 'honey-head-sweet'),          # honeycomb
+        'dingtang': ('ding-tang', 'stand-upright'),                # stand upright
+        'lungno': ('lung-no', 'heart-worm'),                       # worm
+        'khasia': ('kha-sia', 'face-hide'),                        # hide face
+        'khuisatna': ('khui-sat-na', 'sigh-NMLZ'),                 # sighing
+        'tuithukpite': ('tui-thuk-pi-te', 'water-deep-great-PL'),  # deep waters
+        'mitheek': ('mi-theek', 'person-wrong'),                   # wrongfully
+        'tawnna': ('tawn-na', 'reproof-NMLZ'),                     # reproofs
+        'gentham': ('gen-tham', 'speak-hand'),                     # handbreadth
+        'nuihsatin': ('nuih-sat-in', 'reproach-NMLZ-INST'),        # reproach
+        'vuakna': ('vuak-na', 'blow-NMLZ'),                        # blow, stroke
+        'lungnop': ('lung-nop', 'heart-rest'),                     # recover
+        'khakunkun': ('kha-kun-kun', 'face-cast.down-REDUP'),      # cast down
+        'tuizeu': ('tui-zeu', 'water-deep'),                       # deep water
+        'khangualte': ('khan-gual-te', 'time-fellow-PL'),          # fellows
+        'ciangkik': ('ciang-kik', 'good-again'),                   # good pleasure
+        'keutumsak': ('keu-tum-sak', 'melt-finish-CAUS'),          # melt away
+        'sikcipsak': ('sik-cip-sak', 'tread-INTENS-CAUS'),         # tread down
+        'guhngek': ('guh-ngek', 'bless-long'),                     # bless while live
+        'gallauna': ('gal-lau-na', 'enemy-fear-NMLZ'),             # fear of enemy
+        'kuakte': ('kuak-te', 'furrow-PL'),                        # furrows
+        'zaktheih': ('zak-theih', 'hear-able'),                    # gave ear
+        'sawtpek': ('sawt-pek', 'long-very'),                      # ancient times
+        'khuaphialepte': ('khua-phialep-te', 'sky-lightning-PL'),  # lightnings
+        'guntuite': ('gun-tui-te', 'river-water-PL'),              # rivers, floods
+        'hinkhawi': ('hing-khawi', 'live-spare'),                  # spared life
+        'etsak': ('et-sak', 'look-CAUS'),                          # look upon
+        # Round 102: More vocabulary for 99%
+        'nungtasakkik': ('nung-ta-sak-kik', 'live-again-CAUS-again'), # revive again
+        'thuhilhpa': ('thu-hilh-pa', 'word-teach-NMLZ'),           # teacher, former
+        'kawina': ('kawi-na', 'wicked-NMLZ'),                      # wickedness
+        'tuidawnte': ('tui-dawn-te', 'water-drink-PL'),            # those drinking
+        'paatkhia': ('paat-khia', 'wax.old-out'),                  # wax old
+        'muala': ('mual-a', 'hill-LOC'),                           # on the hill
+        'muamua': ('mua-mua', 'many-REDUP'),                       # innumerable
+        'kaikhawmkik': ('kai-khawm-kik', 'pull-together-again'),   # gather again
+        'sumbawl': ('sum-bawl', 'business-do'),                    # do business
+        'sunsunte': ('sun-sun-te', 'extort-REDUP-PL'),             # extortioners
+        'tuiphih': ('tui-phih', 'water-cup'),                      # cup
+        'tuhte': ('tuh-te', 'sow-PL'),                             # those who sow
+        'duhgawh': ('duh-gawh', 'desire-evil'),                    # evil desire
+        'tungsuk': ('tung-suk', 'upon-swift'),                     # swiftly
+        'thugentehnate': ('thu-gen-teh-na-te', 'word-speak-dark-NMLZ-PL'), # dark sayings
+        'pialkha': ('pial-kha', 'turn-already'),                   # turn aside
+        'sinnamon': ('sinnamon', 'cinnamon'),                      # cinnamon
+        'citeng': ('ci-teng', 'corner-all'),                       # every corner
+        'neihlelam': ('neih-le-lam', 'have-also-direction'),       # inherit
+        'khemzawh': ('khem-zawh', 'all-finish'),                   # completely
+        'nungzangah': ('nungzang-ah', 'back-LOC'),                 # on the back
+        'hikha': ('hi-kha', 'this-way'),                           # this way
+        'thuzak': ('thu-zak', 'word-believe'),                     # believe word
+        'zaknophuai': ('zak-nop-huai', 'hear-pleasant-mix'),       # sweetness
+        'taanna': ('taan-na', 'cover-NMLZ'),                       # covering
+        'hoihpenin': ('hoih-pen-in', 'good-most-INST'),            # best
+        'pat': ('pat', 'stroke'),                                  # strokes
+        'vawhte': ('vawh-te', 'iniquity-PL'),                      # iniquities
+        'tutpih': ('tut-pih', 'sit-with'),                         # sit with
+        'thakhauhna': ('tha-kauh-na', 'strength-strong-NMLZ'),     # strength
+        'tuivot': ('tui-vot', 'water-cold'),                       # cold water
+        'leengsuk': ('leeng-suk', 'bird-fly'),                     # bird flying
+        'tungthama': ('tung-thama', 'rebuke-after'),               # rebuke after
+        'hoihzawkna': ('hoih-zawk-na', 'good-more-NMLZ'),          # preeminence
+        'hamphat': ('ham-phat', 'what-benefit'),                   # what benefit
+        'paaksak': ('paak-sak', 'white-CAUS'),                     # make white
+        'hithiatna': ('hi-thiat-na', 'this-leave-NMLZ'),           # yielding
+        'taangte': ('taang-te', 'star-PL'),                        # stars
+        'gamlumnate': ('gam-lum-na-te', 'land-sound-NMLZ-PL'),     # sounds
+        'hiuhiau': ('hiu-hiau', 'black-REDUP'),                    # black
+        'biang': ('biang', 'cheek'),                               # cheeks
+        'suknawi': ('suk-nawi', 'break-charge'),                   # charge, adjure
+        'sakhitalno': ('sakhital-no', 'hart-young'),               # young hart
+        'itluat': ('it-luat', 'love-exceed'),                      # my love
+        'nard': ('nard', 'spikenard'),                             # spikenard
+        'kiuh': ('kiuh', 'knock'),                                 # knock
+        'pona': ('po-na', 'garden-NMLZ'),                          # garden bed
+        'phelhzo': ('pelh-zo', 'quench-able'),                     # able to quench
+        'lingsakgawp': ('ling-sak-gawp', 'shake-CAUS-INTENS'),     # shake terribly
+        'theihkim': ('theih-kim', 'know-all'),                     # famous, renown
+        'etsuk': ('et-suk', 'look-down'),                          # look unto
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
