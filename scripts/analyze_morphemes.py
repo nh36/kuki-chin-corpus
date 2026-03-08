@@ -5773,6 +5773,72 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kipelhna': ('ki-pelh-na', 'REFL-escape-NMLZ'),            # escape, deliverance
         'kipel': ('ki-pelh', 'REFL-escape'),                       # escape
         'nektawm': ('nek-tawm', 'eat.II-little'),                  # food, something to eat
+        # Round 90: Final push to 98.6%
+        'haitatna': ('haitat-na', 'foolish-NMLZ'),                 # foolishness
+        'haitat': ('haitat', 'foolish'),                           # foolish
+        'ankuang': ('an-kuang', 'breast-bosom'),                   # bosom
+        'thadahpa': ('thadah-pa', 'lazy-NMLZ.M'),                  # sluggard
+        'thadah': ('thadah', 'lazy'),                              # lazy, slothful
+        'hiathiat': ('hiat-hiat', 'clearly-REDUP'),                # clearly, wisely (speak)
+        'thangsiahna': ('thangsiah-na', 'deceive-NMLZ'),           # deceit, snare
+        'thangsiah': ('thangsiah', 'deceive'),                     # deceive, trick
+        'cikha': ('ci-kha', 'say-PROH'),                           # don't say (prohibitive)
+        'zuihnop': ('zuih-nop', 'follow-want'),                    # want to follow
+        'niamkhiatna': ('niamkhiat-na', 'humble-NMLZ'),            # humiliation, lowness
+        'niamkhiat': ('niamkhiat', 'humble'),                      # humble, low
+        'muhthadahhuai': ('muh-thadah-huai', 'see-forgive-NEG'),   # abominable
+        'singno': ('sing-no', 'tree-fruit'),                       # orchard, fruit tree
+        'bawhkhiat': ('bawh-khiat', 'pluck-off'),                  # pluck up, tear off
+        'kidemna': ('ki-dem-na', 'REFL-compete-NMLZ'),             # envy, rivalry
+        'kidem': ('ki-dem', 'REFL-compete'),                       # compete, vie
+        # Round 91: Push to 98.6%
+        'theikhia': ('thei-khia', 'know-out'),                     # find out, understand deeply
+        'samphekte': ('samphek-te', 'hair.lock-PL'),               # locks of hair
+        'samphek': ('samphek', 'hair.lock'),                       # lock of hair
+        'saledi': ('saledi', 'frankincense'),                      # frankincense
+        'ngaihnop': ('ngaih-nop', 'hear-want'),                    # want to hear, pleasing
+        'heuhna': ('heuh-na', 'prune-NMLZ'),                       # pruning
+        'heuh': ('heuh', 'prune'),                                 # prune (plants)
+        'lunggimsak': ('lung-gim-sak', 'heart-tire-CAUS'),         # cause grief, weary
+        'lungkiatna': ('lung-kiat-na', 'heart-fall-NMLZ'),         # despair, disappointment
+        'lungkiat': ('lung-kiat', 'heart-fall'),                   # despair, be disappointed
+        'sawk': ('sawk', 'put.hand.into'),                         # put hand into, draw lots
+        'mualtungte': ('mual-tung-te', 'mountain-top-PL'),         # mountain tops
+        'mualtung': ('mual-tung', 'mountain-top'),                 # mountain top
+        'koihpa': ('koih-pa', 'place-NMLZ.M'),                     # one who places, separates
+        'piantheih': ('pian-theih', 'happen-able'),                # possible, can happen
+        'hunhunin': ('hun-hun-in', 'time-time-INST'),              # every moment, constantly
+        'khaukhai': ('khaukhai', 'plumbline'),                     # plumbline, measuring line
+        'sasialne': ('sasial-ne', 'prey-NMLZ'),                    # predatory, ravenous
+        'sasial': ('sasial', 'prey'),                              # prey, hunt
+        # Round 92: Final push to 98.6%
+        'niamin': ('niam-in', 'low-INST'),                         # lowly, humbly
+        'niam': ('niam', 'low'),                                   # low
+        'beisakin': ('bei-sak-in', 'finish-CAUS-INST'),            # destroying, cutting off
+        'beisak': ('bei-sak', 'finish-CAUS'),                      # destroy, cut off
+        'sawkin': ('sawk-in', 'put.hand.into-INST'),               # reaching into, taking
+        'sungte': ('sung-te', 'inside-PL'),                        # chambers, treasuries
+        # Round 93: Final push to 98.6%
+        'nuhsak': ('nuh-sak', 'apply-CAUS'),                       # apply (plaster)
+        'khahkhiatna': ('khah-khiat-na', 'hold-out-NMLZ'),         # deliverance
+        'paiziate': ('paizia-te', 'way-PL'),                       # ways
+        'paizia': ('paizia', 'way'),                               # way, manner
+        'ipcip': ('ip-cip', 'restrain-INTENS'),                    # restrain oneself
+        'zapsiang': ('zap-siang', 'winnow-clean'),                 # winnow, cleanse
+        'mutna': ('mut-na', 'blow-NMLZ'),                          # alarm (trumpet)
+        'mut': ('mut', 'blow'),                                    # blow (trumpet)
+        'siacip': ('sia-cip', 'spoil-INTENS'),                     # utterly spoiled
+        'delhmang': ('delh-mang', 'chase-away'),                   # fray away, scare off
+        'lungmangin': ('lungmang-in', 'dismay-INST'),              # dismayed
+        'lungmang': ('lungmang', 'dismay'),                        # dismay
+        'thupiteng': ('thu-pi-teng', 'thing-great-all'),           # precious things
+        'patauhna': ('patauh-na', 'shout-NMLZ'),                   # shouting, alarm
+        'patauh': ('patauh', 'shout'),                             # shout
+        'saltang': ('sal-tang', 'slave-person'),                   # captive
+        'saltanna': ('saltan-na', 'captive-NMLZ'),                 # captivity
+        'saltan': ('saltan', 'captive'),                           # captive
+        'neusak': ('neu-sak', 'small-CAUS'),                       # make small
+        'kaikhiato': ('kai-khia-to', 'pull-out-up'),               # draw up, pull out
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
