@@ -7204,6 +7204,108 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hawkkhiain': ('hawk-khia-in', 'strip-out-INST'),          # stripped INST
         'zumhuaipiin': ('zum-huai-pi-in', 'unclean-mix-great-INST'), # unclean INST
         'haksapiin': ('hak-sa-pi-in', 'difficult-PAST-great-INST'), # difficult INST
+        # Round 122: Deuteronomy vocabulary
+        'ngahkikin': ('ngah-kik-in', 'return-again-INST'),         # return INST
+        'siasakin': ('sia-sak-in', 'bad-CAUS-INST'),               # appoint terror INST
+        'vakvaiin': ('vak-vai-in', 'vagabond-REDUP-INST'),         # vagabond INST
+        'hamsiatnain': ('ham-siat-na-in', 'curse-destroy-NMLZ-INST'), # curse INST
+        'kumsukin': ('kum-suk-in', 'cloud-pillar-INST'),           # pillar cloud INST
+        'namtuiin': ('nam-tui-in', 'sweet-savour-INST'),           # sweet savour INST
+        'valhtumiin': ('valh-tum-in', 'swallow-INST'),             # swallow INST
+        'khualzinnaah': ('khual-zin-na-ah', 'journey-NMLZ-LOC'),   # journey LOC
+        'sawmlina': ('sawm-li-na', 'ten-four-NMLZ'),               # fortieth
+        'zasakkikin': ('za-sak-kik-in', 'bring-CAUS-again-INST'),  # brought again INST
+        'entoin': ('en-to-in', 'look-up-INST'),                    # look up INST
+        'biakkhak': ('biak-khak', 'worship-deceive'),              # deceived worship
+        'awngah': ('awng-ah', 'heap-LOC'),                         # heap LOC
+        'insek': ('in-sek', 'fly-creep'),                          # flying creeping
+        'khuthawm': ('khut-hawm', 'hand-empty'),                   # empty hand
+        'piaknasa': ('piak-na-sa', 'give-NMLZ-PAST'),              # given
+        'thukhensatna': ('thu-khen-sat-na', 'word-judge-sentence-NMLZ'), # sentence
+        'khongkhaite': ('khong-khai-te', 'divine-observe-PL'),     # diviners
+        'nuampa': ('nuam-pa', 'pleasant-NMLZ'),                    # worthy
+        'gamlatna': ('gam-lat-na', 'land-pursue-NMLZ'),            # pursuing
+        'deihzawkna': ('deih-zawk-na', 'want-more-NMLZ'),          # preferred
+        'awnghawh': ('awng-hawh', 'abroad-go'),                    # go abroad
+        'kiguaihna': ('ki-guaih-na', 'REFL-abomination-NMLZ'),     # abomination
+        'sumgum': ('sum-gum', 'money-usury'),                      # usury
+        'koihsuk': ('koih-suk', 'set-down'),                       # set down
+        'nom': ('nom', 'consumption'),                             # consumption
+        'meimatumte': ('mei-matum-te', 'fire-boil-PL'),            # boils
+        'dalzawh': ('dal-zawh', 'fail-finish'),                    # fail
+        'nasepsa': ('na-sep-sa', '2SG-work-PAST'),                 # thy labours
+        'nemang': ('ne-mang', 'locust-consume'),                   # locust consume
+        'cinatnate': ('ci-nat-na-te', 'sick-NMLZ-PL'),             # sicknesses
+        'hintheih': ('hin-theih', 'live-able'),                    # may live
+        'nunna': ('nun-na', 'desert-NMLZ'),                        # desert
+        'thuknate': ('thuk-na-te', 'deep-NMLZ-PL'),                # deep things
+        'hoihpenna': ('hoih-pen-na', 'good-most-NMLZ'),            # first/best
+        # Round 123: Joshua/narrative vocabulary
+        'khennate': ('khen-na-te', 'judge-NMLZ-PL'),               # judgments
+        'nawtkhiain': ('nawt-khia-in', 'thrust-out-INST'),         # thrust out INST
+        'sawlsim': ('sawl-sim', 'spy-secret'),                     # spy secretly
+        'kikhentan': ('ki-khen-tan', 'REFL-cut-off'),              # cut off
+        'sawlsa': ('sawl-sa', 'arm-PAST'),                         # armed
+        'kansak': ('kan-sak', 'dry-CAUS'),                         # dried up
+        'iplahin': ('ip-lah-in', 'accursed-thing-INST'),           # accursed INST
+        'sumkoihnaah': ('sum-koih-na-ah', 'silver-set-NMLZ-LOC'),  # treasury LOC
+        'khaamin': ('khaam-in', 'curse-INST'),                     # cursed INST
+        'lakha': ('lak-ha', 'spoil-take'),                         # take spoil
+        'hihnasa': ('hih-na-sa', 'do-NMLZ-PAST'),                  # done
+        'khembawl': ('khem-bawl', 'all-work'),                     # work wilily
+        'hinsak': ('hin-sak', 'live-CAUS'),                        # let live
+        'suite': ('sui-te', 'hew-PL'),                             # hewers
+        'tuidawk': ('tui-dawk', 'water-border'),                   # border
+        'zahtak': ('zah-tak', 'fear-true'),                        # fear/dread
+        'sisate': ('si-sa-te', 'blood-PAST-PL'),                   # unclean PL
+        'paktat': ('pak-tat', 'harlot-deal'),                      # deal as harlot
+        'theite': ('thei-te', 'fruit-PL'),                         # fruits
+        'naungek': ('nau-ngek', 'child-birth'),                    # midwife
+        'tuangte': ('tuang-te', 'chariot-PL'),                     # chariots
+        'kikhaite': ('ki-khai-te', 'REFL-hang-PL'),                # hangings
+        'dingte': ('ding-te', 'light-PL'),                         # lights
+        'thatte': ('that-te', 'kill-PL'),                          # killed PL
+        'tuamtuamte': ('tuam-tuam-te', 'divers-REDUP-PL'),         # divers
+        'tanaute': ('ta-nau-te', 'child-small-PL'),                # children PL
+        'zawthin': ('zawn', 'north'),                              # northward
+        'lungzin': ('lung-zin', 'heart-bright'),                   # noonday
+        'khangham': ('khang-ham', 'generation-old'),               # old age
+        'kipna': ('kip-na', 'confirm-NMLZ'),                       # confirm
+        'nungzuite': ('nung-zui-te', 'back-follow-PL'),            # followers
+        'pawlpite': ('pawl-pi-te', 'group-great-PL'),              # church PL
+        'tonu': ('to-nu', 'lord-woman'),                           # mistress
+        'koihpa': ('koih-pa', 'set-NMLZ'),                         # progenitor
+        'nazatte': ('na-zat-te', '2SG-work-PL'),                   # artificers
+        'sawmnihte': ('sawm-nih-te', 'ten-two-PL'),                # twenty PL
+        'satpa': ('sat-pa', 'smite-NMLZ'),                         # smiter
+        'saang': ('saang', 'basket'),                              # basket
+        # Round 124: More narrative vocabulary
+        'liangko': ('liang-ko', 'shoulder-both'),                  # both shoulders
+        'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # on shoulders
+        'miliante': ('mi-lian-te', 'person-great-PL'),             # great men
+        'siamgante': ('siam-gan-te', 'weave-work-PL'),             # weavers
+        'khanghamte': ('khang-ham-te', 'generation-old-PL'),       # old ones
+        'nungzui': ('nung-zui', 'back-follow'),                    # follow after
+        'pawlpi': ('pawl-pi', 'group-great'),                      # church
+        'tonu': ('to-nu', 'lord-woman'),                           # mistress
+        'sawmnga': ('sawm-nga', 'ten-five'),                       # fifty
+        'sawmngate': ('sawm-nga-te', 'ten-five-PL'),               # fifties
+        'koihpa': ('koih-pa', 'put-NMLZ'),                         # progenitor
+        'nazat': ('na-zat', 'hand-work'),                          # artificer
+        'sawmnih': ('sawm-nih', 'ten-two'),                        # twenty
+        'nengniam': ('neng-niam', 'stranger-oppress'),             # oppress stranger
+        'giahphual': ('giah-phual', 'carry-pass'),                 # pass over
+        'giahphualate': ('giah-phual-a-te', 'carry-pass-NOM-PL'),  # passed over PL
+        'valhtumin': ('valh-tum-in', 'swallow-COMPL-INST'),        # swallow up INST
+        'satpa': ('sat-pa', 'smite-NMLZ'),                         # smiter
+        'muhdahhuai': ('muh-dah-huai', 'smell-bad-hateful'),       # stink
+        'muhdahhuaiin': ('muh-dah-huai-in', 'smell-bad-hateful-INST'),  # stink INST
+        'nesakin': ('ne-sak-in', 'eat-CAUS-INST'),                 # eating INST
+        'behpa': ('beh-pa', 'capture-NMLZ'),                       # captive
+        'amahmah': ('a-mah-mah', '3SG-self-self'),                 # himself
+        'semsemnain': ('sem-sem-na-in', 'divide-REDUP-NMLZ-INST'), # by themselves INST
+        'semsemna': ('sem-sem-na', 'divide-REDUP-NMLZ'),           # by themselves
+        'thumante': ('thu-man-te', 'word-true-PL'),                # faithful PL
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
