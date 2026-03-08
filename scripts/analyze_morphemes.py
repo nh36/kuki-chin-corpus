@@ -5628,6 +5628,45 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sawmsimin': ('sawmsim-in', 'conspire-INST'),              # conspiring
         'sawmsim': ('sawmsim', 'conspire'),                        # conspire
         'sawmsimna': ('sawmsim-na', 'conspire-NMLZ'),              # conspiracy
+        # Round 81: KJV-verified vocabulary
+        'tong': ('tong', 'end/tip'),                               # hinder end, way, path
+        'ngap': ('ngap', 'cross/array'),                           # ferry, deck oneself
+        'kawk': ('kawk', 'upright/look.toward'),                   # morally upright, face
+        'daupaina': ('daupai-na', 'prosper-NMLZ'),                 # prosperity
+        'daupai': ('daupai', 'prosper'),                           # prosper
+        'liahna': ('liah-na', 'dwell-NMLZ'),                       # dwelling place, secret place
+        'liah': ('liah', 'lick/dwell'),                            # lick, dwell
+        'leibatna': ('leibat-na', 'debt-NMLZ'),                    # creditor (debt claim)
+        'leibat': ('leibat', 'debt'),                              # debt
+        'leibatnapa': ('leibat-na-pa', 'debt-NMLZ-NMLZ.M'),        # creditor (person)
+        'mittawtna': ('mittawt-na', 'blind-NMLZ'),                 # blindness
+        'mittawt': ('mittawt', 'blind'),                           # blind
+        'hinkiksak': ('hin-kik-sak', 'live-return-CAUS'),          # restore to life
+        'phelkham': ('phel-kham', 'split-across'),                 # rip open
+        'laktheih': ('lak-theih', 'take-able'),                    # capture, seize
+        'hingmat': ('hing-mat', 'alive-grasp'),                    # take alive, capture alive
+        'sehkhatte': ('sehkhat-te', 'one.third-PL'),               # thirds, third parts
+        'sehkhat': ('sehkhat', 'one.third'),                       # one third
+        'satpukin': ('sat-puk-in', 'strike-down-INST'),            # smiting down
+        'satpuk': ('sat-puk', 'strike-down'),                      # smite down
+        'neuno': ('neu-no', 'small-DIM'),                          # small thing, trifle
+        # Round 82: KJV-verified vocabulary
+        'cilphuan': ('cil-phuan', 'spittle-foam'),                 # foam, let spittle fall
+        'vanglianpa': ('vanglian-pa', 'almighty-NMLZ.M'),          # the Almighty
+        'vanglian': ('vanglian', 'almighty'),                      # almighty, omnipotent
+        'zahun': ('za-hun', 'hundred-time'),                       # might, all one's strength
+        'semzaw': ('sem-zaw', 'serve-more'),                       # serve more
+        'bukno': ('buk-no', 'ambush-DIM'),                         # watchtower, guardpost
+        'hilhkholhnate': ('hilh-kholh-na-te', 'teach-RECIPR-NMLZ-PL'),  # testimonies
+        'hilhkholhna': ('hilh-kholh-na', 'teach-RECIPR-NMLZ'),     # testimony
+        'heina': ('hei-na', 'mock-NMLZ'),                          # mockery, provocation
+        'hei': ('hei', 'mock'),                                    # mock, provoke
+        'khankhit': ('khan-khit', 'grow-before'),                  # before growing up
+        'kamsangnu': ('kamsang-nu', 'prophet-F'),                  # prophetess
+        'genkholhsa': ('gen-kholh-sa', 'speak-RECIPR-PRF'),        # spoken (prophecy)
+        'keeksak': ('keek-sak', 'tear.open-CAUS'),                 # enlarge, expand borders
+        'gualnopna': ('gualnop-na', 'rejoice-NMLZ'),               # rejoicing, mirth
+        'gualnop': ('gualnop', 'rejoice'),                         # rejoice, be merry
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
