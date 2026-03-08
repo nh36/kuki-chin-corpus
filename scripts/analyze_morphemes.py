@@ -6801,6 +6801,122 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suahnop': ('suah-nop', 'take-up'),                        # take up cross
         'kipiathuah': ('ki-pia-thuah', 'REFL-give-abundance'),     # given abundance
         'khitzawh': ('khit-zawh', 'curse-swear'),                  # curse and swear
+        # Round 112: More vocabulary for 99%
+        'tahto': ('tah-to', 'fill-put'),                           # filled and put
+        'kithosak': ('ki-tho-sak', 'REFL-rise-CAUS'),              # risen from dead
+        'tumkhit': ('tum-khit', 'privately-ask'),                  # asked privately
+        'sungpan': ('sung-pan', 'among-from'),                     # one of
+        'kilikkhia': ('ki-lik-khia', 'REFL-roll-out'),             # rolled away
+        'kizakim': ('ki-zakim', 'REFL-fame'),                      # fame went out
+        'mankhit': ('man-khit', 'cease-pray'),                     # when ceased
+        'denlup': ('den-lup', 'tower-fall'),                       # tower fell
+        'phadiak': ('pha-diak', 'covetous-deride'),                # derided
+        'manpah': ('man-pah', 'perceive-lay'),                     # perceived
+        'kiphunsan': ('ki-phun-san', 'REFL-murmur-say'),           # murmured
+        'kuateng': ('kua-teng', 'who-all'),                        # who they were
+        'thawhsakkik': ('thawh-sak-kik', 'raise-CAUS-again'),      # raised again
+        'suahkhit': ('suah-khit', 'deliver-child'),                # delivered
+        'taangzaih': ('taang-zaih', 'light-shine'),                # light shined
+        'zomsuak': ('zom-suak', 'break-bread'),                    # break bread
+        'menzipa': ('menzi-pa', 'governor-NMLZ'),                  # governor
+        'tunzawh': ('tun-zawh', 'come-finish'),                    # come into
+        'kimuang': ('ki-muang', 'REFL-instruct'),                  # instructor
+        'bulphuhin': ('bul-phuh-in', 'root-sure-INST'),            # sure to
+        'suahma': ('suah-ma', 'born-not.yet'),                     # not yet born
+        'kiciing': ('ki-ciing', 'REFL-graft'),                     # grafted
+        'pehkik': ('peh-kik', 'graft-again'),                      # graft again
+        'dawizek': ('dawi-zek', 'unclean-esteem'),                 # esteems unclean
+        'telkheh': ('tel-kheh', 'put-mind'),                       # putting in mind
+        'kiukzawh': ('ki-uk-zawh', 'REFL-contain-finish'),         # cannot contain
+        'kientel': ('ki-en-tel', 'REFL-examine-self'),             # examine himself
+        'khuksung': ('khuk-sung', 'before-say'),                   # said before
+        'bedolak': ('bedolak', 'bdellium'),                        # bdellium
+        'sunim': ('su-nim', 'bruise-enmity'),                      # enmity
+        'thahkhak': ('thah-khak', 'slay-vengeance'),               # vengeance
+        'petin': ('pet-in', 'pluck-leaf'),                         # plucked leaf
+        'lamun': ('la-mun', 'garment-cover'),                      # covered
+        'lal': ('lal', 'plain'),                                   # plain
+        'bekbak': ('bek-bak', 'sleep-deep'),                       # deep sleep
+        'khita': ('khi-ta', 'know-PAST'),                          # I know
+        'thawhlam': ('thawh-lam', 'lie-down'),                     # lay with
+        'gikzah': ('gik-zah', 'weigh-silver'),                     # weighed silver
+        'mavangsak': ('ma-vang-sak', 'that-wonder-CAUS'),          # wondering
+        'daptakin': ('dap-tak-in', 'peace-true-INST'),             # held peace
+        'phukhong': ('phu-khong', 'sod-pottage'),                  # sod pottage
+        'hucipin': ('hu-cip-in', 'stop-INTENS-INST'),              # stopped
+        'tuupi': ('tuu-pi', 'sheep-great'),                        # ewes and goats
+        'kinuihsan': ('ki-nuih-san', 'REFL-shame-complaint'),      # be shamed
+        'sungthu': ('sung-thu', 'hand-matter'),                    # all in hand
+        'sungtang': ('sung-tang', 'inside-mock'),                  # mock us
+        'theemsak': ('theem-sak', 'blast-CAUS'),                   # blasted
+        'tunkim': ('tun-kim', 'store-all'),                        # all storehouses
+        'kibalzan': ('ki-bal-zan', 'REFL-tear-pieces'),            # torn in pieces
+        'kithawisakin': ('ki-thawi-sak-in', 'REFL-present-CAUS-INST'), # presented
+        'mongkhat': ('mong-khat', 'end-one'),                      # one end
+        'thadim': ('tha-dim', 'lively-midwife'),                   # lively
+        'ngeizah': ('ngei-zah', 'straw-diminish'),                 # get straw
+        'lomlomin': ('lom-lom-in', 'heap-REDUP-INST'),             # upon heaps
+        'kilawhgawp': ('ki-lawh-gawp', 'REFL-break-forth'),        # breaking forth
+        'vuih': ('vuih', 'boll'),                                  # bolled
+        'kilamdangin': ('ki-lam-dang-in', 'REFL-direction-other-INST'), # put difference
+        'khikcip': ('khik-cip', 'still-INTENS'),                   # still as stone
+        'phimpi': ('phim-pi', 'ear-bore'),                         # bore ear
+        # Round 113: More vocabulary for 99%
+        'pik': ('pik', 'gore'),                                    # gored
+        'kiuhkeuhin': ('ki-uhkeuh-in', 'REFL-overthrow-INST'),     # overthrow
+        'tunpi': ('tun-pi', 'hornet-great'),                       # hornets
+        'kimaingat': ('ki-mai-ngat', 'REFL-face-look'),            # faces look
+        'kikak': ('ki-kak', 'REFL-couple'),                        # coupled
+        'long': ('long', 'pomegranate'),                           # pomegranate
+        'sungkua': ('sung-kua', 'inward-wash'),                    # wash inwards
+        'thaksing': ('thak-sing', 'sweet-spice'),                  # spices
+        'kikhep': ('ki-khep', 'REFL-double'),                      # doubled
+        'meibung': ('mei-bung', 'fire-oven'),                      # oven
+        'kimitsak': ('ki-mit-sak', 'REFL-burn-CAUS'),              # burning
+        'helsa': ('hel-sa', 'bake-PAST'),                          # baken
+        'kiminthangsak': ('ki-min-thang-sak', 'REFL-name-glory-CAUS'), # glorified
+        'khepek': ('khe-pek', 'leg-leap'),                         # leap
+        'kitom': ('ki-tom', 'REFL-locust'),                        # locust
+        'khebom': ('khe-bom', 'paw-NMLZ'),                         # paws
+        'phakpa': ('phak-pa', 'bare-NMLZ'),                        # head bare
+        'kisianthosak': ('ki-sian-tho-sak', 'REFL-clean-rise-CAUS'), # cleansing
+        'kimuhmawh': ('ki-muh-mawh', 'REFL-see-hide'),             # hide eyes
+        'kihallum': ('ki-hal-lum', 'REFL-burn-fire'),              # burnt with fire
+        'kimasa': ('ki-ma-sa', 'REFL-first-PAST'),                 # shall not take
+        'tuulekeel': ('tuu-le-keel', 'sheep-and-goat'),            # beeves or sheep
+        'kitaangko': ('ki-taang-ko', 'REFL-trumpet-blow'),         # blowing trumpets
+        'poisak': ('poi-sak', 'blemish-CAUS'),                     # cause blemish
+        'lopawi': ('lo-pawi', 'field-thresh'),                     # threshing
+        'hahsiang': ('hah-siang', 'old-store'),                    # old store
+        'kipuahphat': ('ki-puah-phat', 'REFL-pine-away'),          # pine away
+        'vilvelin': ('vil-vel-in', 'vow-REDUP-INST'),              # singular vow
+        'tulkua': ('tul-kua', 'thousand-head'),                    # heads of thousands
+        'hawng': ('hawng', 'husk'),                                # husk
+        'liangko': ('liang-ko', 'shoulder-both'),                  # both shoulders
+        'napi': ('na-pi', 'distress-great'),                       # distress
+        'zanglei': ('zang-lei', 'east-field'),                     # from the east
+        'khangsimna': ('khang-sim-na', 'generation-divide-NMLZ'),  # generations
+        'sepna': ('sep-na', 'do-NMLZ'),                            # doest
+        'nihte': ('nih-te', 'two-PL'),                             # two
+        'nihna': ('nih-na', 'second-NMLZ'),                        # second
+        'simna': ('sim-na', 'count-NMLZ'),                         # numbered
+        'biakna': ('biak-na', 'worship-NMLZ'),                     # altar
+        'note': ('no-te', 'you-PL'),                               # you
+        'sawmnga': ('sawm-nga', 'ten-five'),                       # fifty
+        'munte': ('mun-te', 'spot-PL'),                            # spots
+        'nawhsa': ('nawh-sa', 'unleavened-PAST'),                  # unleavened
+        'sangna': ('sang-na', 'high-NMLZ'),                        # high places
+        'khuaneute': ('khua-neu-te', 'village-small-PL'),          # villages
+        'paina': ('pai-na', 'go-NMLZ'),                            # walking
+        'ancilna': ('an-cil-na', 'corn-thresh-NMLZ'),              # threshingfloor
+        'omlai': ('om-lai', 'rest-still'),                         # rest
+        'piakna': ('piak-na', 'give-NMLZ'),                        # offering
+        'dangte': ('dang-te', 'other-PL'),                         # other
+        'thuakna': ('thuak-na', 'afflict-NMLZ'),                   # affliction
+        'kaikhia': ('kai-khia', 'draw-out'),                       # draw
+        'cithei': ('ci-thei', 'eye-evil'),                         # eye evil
+        'theithei': ('thei-thei', 'know-REDUP'),                   # perceive
+        'bangzia': ('bang-zia', 'what-like'),                      # such like
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
