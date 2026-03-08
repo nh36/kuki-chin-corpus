@@ -5702,6 +5702,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'banzo': ('ban-zo', 'reach-able'),                         # reach, attain
         'suksuk': ('suk-suk', 'make-REDUP'),                       # continually, repeatedly
         'awle': ('awle', 'leviathan'),                             # leviathan, sea monster
+        # Round 85: KJV-verified vocabulary
+        'khinkhian': ('khin-khian', 'wait-INTENS'),                # wait, lie in wait
+        'cimang': ('ci-mang', 'say-finish'),                       # desolate, perish
+        'ngahnop': ('ngah-nop', 'get-want'),                       # desire to get, covet
+        'hiat': ('hiat', 'cast.down'),                             # cast down, descend quickly
+        'khapi': ('khapi', 'moon'),                                # moon
+        'sinsen': ('sin-sen', 'clear-clear'),                      # clearly, plainly visible
+        'seelna': ('seel-na', 'hide-NMLZ'),                        # hiding, concealment
+        'seel': ('seel', 'hide'),                                  # hide, conceal
+        'lumletin': ('lumlet-in', 'overturn-INST'),                # overturning
+        'lumlet': ('lumlet', 'overturn'),                          # overturn, turn over
+        'omkhong': ('om-khong', 'exist-still'),                    # stand still, remain
+        'hihzawh': ('hih-zawh', 'do-able'),                        # able to do, capable
+        'veva': ('ve-va', 'do-INTENS'),                            # do repeatedly, intensely
+        'nungzang': ('nung-zang', 'back-part'),                    # back, loins
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
