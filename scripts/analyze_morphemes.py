@@ -4514,6 +4514,78 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kigal': ('ki-gal', 'REFL-oppose'),                    # opposite side
         'khetphim': ('khet-phim', 'heel-peg'),                 # peg/stake
         'phim': ('phim', 'peg'),                               # base - peg
+        
+        # Round 47: More vocabulary from Exodus, Leviticus, Numbers, Deuteronomy, Genesis
+        'sui': ('sui', 'staff'),                               # staff/pole
+        'bot': ('bot', 'pluck'),                               # pluck
+        'meikangma': ('mei-kang-ma', 'fire-burn-mark'),        # burn mark
+        'tawisuang': ('tawi-suang', 'hand-stone'),             # weights
+        'kiten': ('ki-ten', 'REFL-dwell'),                     # be married
+        'kima': ('ki-ma', 'REFL-alone'),                       # be alone/widowed
+        'ma': ('ma', 'alone'),                                 # base - alone
+        'kitah': ('ki-tah', 'REFL-separate'),                  # separate oneself
+        'tah': ('tah', 'separate'),                            # base - separate
+        'gupha': ('gu-pha', 'tree-branch'),                    # pole
+        'gu': ('gu', 'tree'),                                  # base - tree
+        'pha': ('pha', 'branch'),                              # base - branch
+        'buppi': ('bup-pi', 'all-big'),                        # whole
+        'kikhung': ('ki-khung', 'REFL-exit'),                  # boundary/border
+        'tamasak': ('ta-ma-sak', 'cut-EMPH-CAUS'),             # forsake/abandon
+        'gisuang': ('gi-suang', 'marker-stone'),               # landmark
+        'gi': ('gi', 'marker'),                                # base - marker
+        'khung': ('khung', 'roof'),                            # roof
+        'taikeek': ('tai-keek', 'flee-ITER'),                  # flee away
+        'keek': ('keek', 'ITER'),                              # suffix - iterative
+        'guallelsak': ('gual-lel-sak', 'enemy-change-CAUS'),   # defeat/cause smitten
+        'lel': ('lel', 'change'),                              # base - change
+        
+        # Round 48: More vocabulary from Judges, Samuel, Kings, Chronicles, Ezra, Job, Psalms
+        'hanthot': ('han-thot', 'begin-stir'),                 # begin moving
+        'thot': ('thot', 'stir'),                              # base - stir
+        'thaneih': ('tha-neih', 'strength-have'),              # have strength
+        'neih': ('neih', 'have'),                              # base - have
+        'kihanthawnin': ('ki-han-thawn-in', 'REFL-begin-encourage-ERG'), # encourage oneself
+        'thawn': ('thawn', 'encourage'),                       # base - encourage
+        'suangtang': ('suang-tang', 'stone-embed'),            # sink into
+        'tang': ('tang', 'embed'),                             # base - embed
+        'tawngnung': ('tawng-nung', 'speak-later'),            # back area/cave
+        'nung': ('nung', 'later'),                             # base - later
+        'mansuah': ('man-suah', 'price-escape'),               # missing
+        'suah': ('suah', 'escape'),                            # base - escape
+        'lohlam': ('loh-lam', 'NEG-way'),                      # not the way
+        'khezaw': ('khe-zaw', 'foot-weak'),                    # lame
+        'kilawnsuk': ('ki-lawn-suk', 'REFL-throw-fall'),       # be thrown
+        'lawn': ('lawn', 'throw'),                             # base - throw
+        'kilokgawp': ('ki-lok-gawp', 'REFL-shake-break'),      # tremble
+        'lok': ('lok', 'shake'),                               # base - shake
+        'kizong': ('ki-zong', 'REFL-warm'),                    # warm oneself
+        'zong': ('zong', 'warm'),                              # base - warm
+        'kipiatawm': ('ki-piat-awm', 'REFL-sell-self'),        # sell oneself
+        'piat': ('piat', 'sell'),                              # base - sell
+        'awm': ('awm', 'self'),                                # base - self
+        'kilawmzaw': ('ki-lawm-zaw', 'REFL-worthy-more'),      # more fitting
+        'zeizai': ('zei-zai', 'what-thing'),                   # everything
+        'zai': ('zai', 'thing'),                               # base - thing
+        'puksuk': ('puk-suk', 'fall-down'),                    # sink down
+        'zun': ('zun', 'urine'),                               # urine
+        'kizat': ('ki-zat', 'REFL-use'),                       # be used
+        'zat': ('zat', 'use'),                                 # base - use
+        'golhguk': ('golh-guk', 'oppose-dig'),                 # undermine/frustrate
+        'golh': ('golh', 'oppose'),                            # base - oppose
+        'guk': ('guk', 'dig'),                                 # base - dig
+        'kihisakin': ('ki-hi-sak-in', 'REFL-be-CAUS-ERG'),     # act proudly
+        'kiphawkkha': ('ki-phawk-kha', 'REFL-remember-NEG'),   # be forgotten
+        'phuan': ('phuan', 'refuge'),                          # refuge
+        'kithuhilh': ('ki-thu-hilh', 'REFL-word-tell'),        # be reproved
+        'hilh': ('hilh', 'tell'),                              # base - tell
+        'sekpi': ('sek-pi', 'hammer-big'),                     # axe/hammer
+        'sek': ('sek', 'hammer'),                              # base - hammer
+        'huihnung': ('huih-nung', 'wind-continue'),            # passing wind
+        'thaksuak': ('thak-suak', 'new-wither'),               # fresh then wither
+        'thak': ('thak', 'new'),                               # base - new
+        'suak': ('suak', 'wither'),                            # base - wither
+        'bekun': ('bek-un', 'only-time'),                      # at last
+        'bek': ('bek', 'only'),                                # base - only
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
