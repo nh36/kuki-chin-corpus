@@ -4064,6 +4064,42 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mineu': ('mi-neu', 'person-small'),                   # little one
         'ciangkhutte': ('ciangkhut-te', 'stripe-PL'),          # stripes/white streaks
         'ciangkhut': ('ciang-khut', 'white-part'),             # stripe/streak
+        
+        # Round 29: High-frequency partial words
+        'gialpi': ('gial-pi', 'hail-big'),                     # grievous hail
+        'pi': ('pi', 'big'),                                   # base - big/great
+        'palsatin': ('palsat-in', 'transgress-ERG'),           # transgressing
+        'semsemin': ('semsem-in', 'breathe-ERG'),              # breathing/dying
+        'semsem': ('semsem', 'breathe'),                       # breathe (intensive)
+        'zawt': ('zawt', 'weary'),                             # base - weary/tire
+        'musane': ('musane', 'pelican'),                       # pelican (bird)
+        'limtak': ('lim-tak', 'true-true'),                    # truly/well/accepted
+        'khuaphialep': ('khua-phial-ep', 'sky-flash-lightning'), # lightning
+        'phial': ('phial', 'flash'),                           # base - flash
+        'ep': ('ep', 'strike'),                                # base - strike/hit
+        'balnenin': ('balnen-in', 'tear-ERG'),                 # tearing/torn
+        'balnen': ('balnen', 'tear'),                          # base - tear/rip
+        'luhin': ('luh-in', 'smite-ERG'),                      # smiting/ripping
+        'luh': ('luh', 'smite'),                               # base - smite/rip
+        'pelmawh': ('pel-mawh', 'report-evil'),                # report/denounce
+        'nawkgawp': ('nawk-gawp', 'overtake-all'),             # overwhelm/tempest
+        'nawk': ('nawk', 'overtake'),                          # base - overtake
+        'gawp': ('gawp', 'all'),                               # base - all
+        
+        # Round 30: More high-frequency partial words
+        'omteng': ('om-teng', 'exist-remain'),                 # remain/survive
+        'teng': ('teng', 'remain'),                            # base - remain
+        'omlain': ('om-lai-in', 'exist-midst-ERG'),            # existing in midst
+        'dington': ('ding-ton', 'stand-stable'),               # stand firm
+        'ton': ('ton', 'stable'),                              # base - stable
+        'tonu': ('tonu', 'mistress'),                          # mistress/lady
+        'bai': ('bai', 'rise.early'),                          # rise early/arise
+        'dampah': ('dam-pah', 'healthy-clear'),                # cleansed/healed
+        'pah': ('pah', 'clear'),                               # base - clear
+        'henhan': ('hen-han', 'spread-spread'),                # spreading
+        'hen': ('hen', 'spread'),                              # base - spread
+        'hitaseleh': ('hi-ta-se-leh', 'be-that-CONN-COND'),    # although that
+        'bawlsiain': ('bawl-sia-in', 'make-evil-ERG'),         # doing evil
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
