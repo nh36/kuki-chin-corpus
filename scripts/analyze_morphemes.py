@@ -3860,6 +3860,44 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'do': ('do', 'rise'),                                  # base - rise against
         'ngeekte': ('ngeek-te', 'herb-PL'),                    # herbs/grass
         'ngeek': ('ngeek', 'herb'),                            # base - herb/grass
+        
+        # Session 6 Round 19: More over-segmentation fixes
+        'ankungte': ('ankung-te', 'herb-PL'),                  # herbs of field (NOT a-nkung-te)
+        'ankung': ('ankung', 'herb'),                          # base - herb/plant of field
+        'natnate': ('natna-te', 'disease-PL'),                 # diseases (NOT na-tna-te)
+        'natna': ('natna', 'disease'),                         # base - disease/sickness
+        'geelnate': ('geelna-te', 'way-PL'),                   # ways/manners
+        'geelna': ('geelna', 'way'),                           # base - way/manner
+        'ngiate': ('ngia-te', 'field-PL'),                     # standing corn/fields
+        'ngia': ('ngia', 'field'),                             # base - field/standing grain
+        'lungkhamnate': ('lungkhamna-te', 'tribulation-PL'),   # tribulations
+        'lungkhamna': ('lungkhamna', 'tribulation'),           # base - tribulation
+        'hauhnate': ('hauhna-te', 'riches-PL'),                # riches/wealth
+        'hauhna': ('hauhna', 'riches'),                        # base - riches
+        'phatnate': ('phatna-te', 'praise-PL'),                # praises
+        'phatna': ('phatna', 'praise'),                        # base - praise
+        'tagahte': ('tagah-te', 'orphan-PL'),                  # orphans/fatherless
+        'tagah': ('tagah', 'orphan'),                          # base - orphan
+        'meigongte': ('meigong-te', 'widow-PL'),               # widows
+        'meigong': ('meigong', 'widow'),                       # base - widow
+        'khutmete': ('khutme-te', 'finger-PL'),                # fingers (NOT khut-me-te)
+        'khutme': ('khutme', 'finger'),                        # base - finger (hand-small)
+        
+        # Session 6 Round 20: More over-segmentation fixes
+        'meimate': ('meima-te', 'wound-PL'),                   # wounds
+        'meima': ('meima', 'wound'),                           # base - wound/sore
+        'kimte': ('kim-te', 'nation-PL'),                      # all nations/peoples
+        'kim': ('kim', 'nation'),                              # base - all/nation
+        'lawkite': ('lawki-te', 'Gentile-PL'),                 # Gentiles/heathen
+        'lawki': ('lawki', 'Gentile'),                         # base - Gentile/heathen
+        'ciangkangte': ('ciangkang-te', 'rod-PL'),             # rods/peeled sticks (NOT cian-gkang)
+        'ciangkang': ('ciangkang', 'rod'),                     # base - rod/peeled stick
+        'kicite': ('kici-te', 'called-PL'),                    # those called/named
+        'kici': ('kici', 'called'),                            # base - be called
+        'leenggahte': ('leenggah-te', 'grape-PL'),             # grapes (NOT leeng-gah-te)
+        'leenggah': ('leenggah', 'grape'),                     # base - grape
+        'kholhnate': ('kholhna-te', 'enchantment-PL'),         # enchantments/divinations
+        'kholhna': ('kholhna', 'enchantment'),                 # base - enchantment
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
