@@ -4007,6 +4007,63 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hual': ('hual', 'wave'),                              # base - wave
         'theikungte': ('theikung-te', 'fig.tree-PL'),          # fig trees
         'theikung': ('thei-kung', 'fruit-tree'),               # fig tree
+        
+        # Round 26: More Psalms, Proverbs, Genesis, Exodus vocabulary
+        'tokhomte': ('tokhom-te', 'throne-PL'),                # thrones
+        'tokhom': ('tokhom', 'throne'),                        # base - throne
+        'hanciamte': ('hanciam-te', 'pursuer-PL'),             # pursuers
+        'hanciam': ('hanciam', 'pursue'),                      # base - pursue/strive
+        'galkapbute': ('galkapbu-te', 'captain-PL'),           # captains of soldiers
+        'galkapbu': ('galkap-bu', 'soldier-leader'),           # captain
+        'taaute': ('taau-te', 'bracelet-PL'),                  # bracelets
+        'taau': ('taau', 'bracelet'),                          # base - bracelet
+        'puansilhte': ('puansilh-te', 'garment-PL'),           # garments/clothes
+        'puansilh': ('puan-silh', 'cloth-wear'),               # garment
+        'phunnate': ('phunna-te', 'murmuring-PL'),             # murmurings
+        'phunna': ('phun-na', 'murmur-NMLZ'),                  # murmuring
+        'phun': ('phun', 'murmur'),                            # base - murmur
+        'kuangdaite': ('kuangdai-te', 'dish-PL'),              # dishes
+        'kuangdai': ('kuang-dai', 'container-flat'),           # dish
+        'dai': ('dai', 'flat'),                                # base - flat
+        'kilhnate': ('kilhna-te', 'clasp-PL'),                 # clasps/taches
+        'kilhna': ('kilh-na', 'join-NMLZ'),                    # clasp
+        'kilh': ('kilh', 'join'),                              # base - join
+        
+        # Round 27: Nominalizations from various books
+        'sawmsimna': ('sawmsim-na', 'conspiracy-NMLZ'),        # conspiracy
+        'sawmsim': ('sawmsim', 'conspire'),                    # base - conspire
+        'zahkona': ('zahko-na', 'reproach-NMLZ'),              # reproach/shame
+        'zahko': ('zah-ko', 'shame-have'),                     # reproach/shame
+        'lungzinna': ('lungzin-na', 'darkness-NMLZ'),          # shadow/darkness
+        'lungzin': ('lung-zin', 'heart-shadow'),               # shadow/darkness
+        'palsatna': ('palsat-na', 'transgression-NMLZ'),       # transgression
+        'palsat': ('palsat', 'transgress'),                    # base - transgress
+        'hetlohna': ('hetloh-na', 'displeasure-NMLZ'),         # displeasure
+        'hetloh': ('het-loh', 'approve-NEG'),                  # disapprove
+        'deihluatna': ('deihluat-na', 'zeal-NMLZ'),            # zeal
+        'deihluat': ('deih-luat', 'want-exceed'),              # be zealous
+        'kimuanna': ('kimuan-na', 'confidence-NMLZ'),          # confidence
+        'kimuan': ('ki-muan', 'REFL-believe'),                 # trust/believe self
+        
+        # Round 28: More vocabulary from Genesis, Exodus, Nahum, Jeremiah
+        'mette': ('met-te', 'shearer-PL'),                     # shearers
+        'met': ('met', 'shear'),                               # base - shear
+        'mapite': ('mapi-te', 'officer-PL'),                   # officers/overseers
+        'mapi': ('mapi', 'officer'),                           # base - officer
+        'mohte': ('moh-te', 'cake-PL'),                        # cakes (unleavened)
+        'moh': ('moh', 'cake'),                                # base - cake
+        'mohphengte': ('mohpheng-te', 'wafer-PL'),             # wafers
+        'mohpheng': ('moh-pheng', 'cake-flat'),                # wafer
+        'pheng': ('pheng', 'flat'),                            # base - flat
+        'puankhaite': ('puankhai-te', 'hanging-PL'),           # hangings/curtains
+        'puankhai': ('puan-khai', 'cloth-hang'),               # hanging
+        'khai': ('khai', 'hang'),                              # base - hang
+        'sikkhaute': ('sikkhau-te', 'bond-PL'),                # bonds/yokes
+        'sikkhau': ('sik-khau', 'tie-rope'),                   # bond/yoke
+        'mineute': ('mineu-te', 'little.one-PL'),              # little ones
+        'mineu': ('mi-neu', 'person-small'),                   # little one
+        'ciangkhutte': ('ciangkhut-te', 'stripe-PL'),          # stripes/white streaks
+        'ciangkhut': ('ciang-khut', 'white-part'),             # stripe/streak
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
