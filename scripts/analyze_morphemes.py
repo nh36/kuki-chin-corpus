@@ -5117,6 +5117,62 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # More apostrophe words
         "bawlsiate'": ('bawl-sia-te', 'make-bad-PL'),          # evildoers
         "numeino'": ('numei-no', 'woman-little'),              # girl, young woman
+        
+        # Round 66: More unknowns
+        'tuanu': ('tua-nu', 'that-female'),                    # her, unto her
+        'liau': ('li-au', 'separate-go'),                      # miscarry, fruit depart
+        'heikhiatsak': ('hei-khiat-sak', 'turn-twist-CAUS'),   # pervert, blindeth
+        'khep': ('khep', 'couple'),                            # couple, pair
+        'kigak': ('ki-gak', 'REFL-hook'),                      # be hooked, filleted
+        'diamond': ('diamond', 'DIAMOND'),                     # diamond (loanword)
+        'jakinth': ('jakinth', 'JACINTH'),                     # jacinth (loanword)
+        'tuazah': ('tua-zah', 'that-fragrant'),                # sweet cinnamon
+        'gawivui': ('gawi-vui', 'grind-dust'),                 # powder
+        'phukpai': ('phuk-pai', 'cut-go'),                     # cut down
+        'pheituam': ('phei-tuam', 'wear-cover'),               # bonnets
+        'manzah': ('man-zah', 'value-measure'),                # estimation
+        'kikuangsak': ('ki-kuang-sak', 'REFL-burn-CAUS'),      # burnt offering
+        'kisukham': ('ki-suk-ham', 'REFL-cook-boil'),          # sodden, boiled
+        'kitheh': ('ki-theh', 'REFL-pour'),                    # pour out
+        'kisawhkha': ('ki-sawh-kha', 'REFL-touch-go'),         # touch, be touched
+        'phiahsak': ('phiah-sak', 'bare-CAUS'),                # uncover
+        'lozaw': ('lo-zaw', 'enter-COMP'),                     # deeper
+        'phuisam': ('phui-sam', 'trip-cause.fall'),            # stumblingblock
+        'kidaisak': ('ki-dai-sak', 'REFL-pollute-CAUS'),       # defile
+        'leipa': ('lei-pa', 'buy-back'),                       # restore, redeem
+        'kitanhkik': ('ki-tanh-kik', 'REFL-count-return'),     # be reckoned, counted
+        'tuat': ('tuat', 'sell'),                              # sell
+        'diik': ('diik', 'waste'),                             # desolation, waste
+        'pheipi': ('phei-pi', 'bitter-great'),                 # bitter water, curse
+        "mawkmawkte'": ('mawk-mawk-te', 'spot-REDUP-PL'),      # spotted ones
+        
+        # Round 67: More partial analyses
+        'ngitngetna': ('ngit-nget-na', 'think-REDUP-NMLZ'),    # imagination, thought
+        'sakhituihup': ('sak-hi-tuihup', 'set-be-cloud'),      # set in the cloud
+        'neilai': ('nei-lai', 'have-still'),                   # still living, begat
+        'atin': ('at-in', 'grow-ERG'),                         # growing
+        'ciamnuih': ('ciam-nuih', 'promise-mock'),             # mocking
+        'tuikhukah': ('tui-khuk-ah', 'water-well-LOC'),        # at the well
+        'nene': ('ne-ne', 'eat-REDUP'),                        # eat of, eating
+        'thallawng': ('thal-lawng', 'bow-quiver'),             # quiver (for arrows)
+        'keelhon': ('keel-hon', 'call-flock'),                 # fetch from flock
+        'thalawh': ('thal-awh', 'bow-?'),                      # younger (daughter)
+        'lupkhawm': ('lup-khawm', 'lie.down-together'),        # go in unto, consummate
+        'thuneu': ('thu-neu', 'word-small'),                   # small matter
+        'ngahmun': ('ngah-mun', 'get-place'),                  # ford, crossing place
+        'khuapih': ('khua-pih', 'town-gate'),                  # gate of city
+        'kemsak': ('kem-sak', 'guard-CAUS'),                   # charge with, assign
+        'vulgawp': ('vul-gawp', 'faint-strike'),               # very sore (famine)
+        'khekna': ('khek-na', 'fail-NMLZ'),                    # failure
+        'luahna': ('luah-na', 'beget-NMLZ'),                   # issue, offspring
+        'zagui': ('za-gui', 'hear-secret'),                    # secret counsel
+        'sawn': ('sawn', 'beat'),                              # beaten
+        'vilna': ('vil-na', 'observe-NMLZ'),                   # observance
+        'khamzah': ('kham-zah', 'forbid-measure'),             # according to eating
+        'omzah': ('om-zah', 'exist-measure'),                  # each (measure)
+        'haksate': ('haksa-te', 'difficult-PL'),               # hard (causes)
+        'neisa': ('nei-sa', 'have-CAUS'),                      # give dominion
+        'honsa': ('hon-sa', 'flock-CAUS'),                     # conceive (opened womb)
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
