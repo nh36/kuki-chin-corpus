@@ -4408,6 +4408,112 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ban': ('ban', 'matter'),                              # base - matter
         'taisim': ('tai-sim', 'check-count'),                  # investigate
         'tai': ('tai', 'check'),                               # base - check
+        
+        # Round 44: More vocabulary from Jeremiah, Exodus, Song of Solomon, Job, etc.
+        'sunteng': ('sun-teng', 'basket-basket'),              # baskets
+        'sun': ('sun', 'basket'),                              # base - basket
+        'teng': ('teng', 'basket'),                            # base - basket (alt)
+        'kihual': ('ki-hual', 'REFL-bind'),                    # interweave/wreathen
+        'hual': ('hual', 'bind'),                              # base - bind
+        'phet': ('phet', 'twin'),                              # twins
+        'lawmnu': ('lawm-nu', 'friend-female'),                # bride/companion
+        'seelcip': ('seel-cip', 'cover-tight'),                # conceal
+        'seel': ('seel', 'cover'),                             # base - cover
+        'meisuang': ('mei-suang', 'fire-stone'),               # flint/sharp stone
+        'puksisak': ('puk-si-sak', 'attack-die-CAUS'),         # cause to die/kill
+        'puk': ('puk', 'attack'),                              # base - attack
+        'hehlua': ('heh-lua', 'angry-excessive'),              # burst in anger
+        'lua': ('lua', 'excessive'),                           # base - excessive
+        'kilaak': ('ki-laak', 'REFL-show'),                    # present oneself/appear
+        'laak': ('laak', 'show'),                              # base - show
+        'suahkhiat': ('suah-khiat', 'born-out'),               # come out/emerge
+        'kigawh': ('ki-gawh', 'REFL-touch'),                   # touch/lay hand on
+        'gawh': ('gawh', 'touch'),                             # base - touch
+        'kisuksiat': ('ki-suk-siat', 'REFL-collapse-destroy'), # be destroyed/snared
+        'suk': ('suk', 'collapse'),                            # base - collapse
+        'siat': ('siat', 'destroy'),                           # base - destroy
+        'tuahun': ('tuah-un', 'do-time'),                      # occurrence/controversy
+        'un': ('un', 'time'),                                  # base - time
+        'meidawi': ('mei-dawi', 'fire-fear'),                  # cowardly/fainthearted
+        'dawi': ('dawi', 'fear'),                              # base - fear
+        'huihpi': ('huih-pi', 'wind-great'),                   # strong wind
+        'huih': ('huih', 'wind'),                              # base - wind
+        'kiphuk': ('ki-phuk', 'REFL-overthrow'),               # be toppled/cast down
+        'phuk': ('phuk', 'overthrow'),                         # base - overthrow
+        
+        # Round 45: More vocabulary from Genesis, Numbers, Deuteronomy, Judges, Kings, Job, Psalms
+        'bengin': ('beng-in', 'hunt-ERG'),                     # hunting
+        'beng': ('beng', 'hunt'),                              # base - hunt
+        'haza': ('haza', 'envy'),                              # envy/jealousy
+        'gega': ('gega', 'red'),                               # red
+        'kihut': ('ki-hut', 'REFL-arm'),                       # arm oneself
+        'hut': ('hut', 'arm'),                                 # base - arm (weapon)
+        'pet': ('pet', 'sting'),                               # sting/bite/poison
+        'pelem': ('pelem', 'lacking'),                         # lacking/missing
+        'geivial': ('gei-vial', 'edge-knop'),                  # ornament/knop
+        'gei': ('gei', 'edge'),                                # base - edge
+        'vial': ('vial', 'knop'),                              # base - knop
+        'mapai': ('ma-pai', 'own-go'),                         # go ahead/pass before
+        'kisumit': ('ki-sum-it', 'REFL-extinguish-IT'),        # be put out
+        'sum': ('sum', 'extinguish'),                          # base - extinguish
+        'kisuksiatsak': ('ki-suk-siat-sak', 'REFL-collapse-destroy-CAUS'), # be destroyed
+        'husia': ('husia', 'destruction'),                     # destruction
+        'hetkei': ('het-kei', 'trouble-NEG'),                  # not trouble
+        'het': ('het', 'trouble'),                             # base - trouble
+        'kiliah': ('ki-liah', 'REFL-circuit'),                 # go round/circuit
+        'liah': ('liah', 'circuit'),                           # base - circuit
+        'dimletin': ('dim-let-in', 'fill-back-ERG'),           # filled plenty
+        'let': ('let', 'back'),                                # base - back/return
+        'kigengen': ('ki-gen-gen', 'REFL-say-REDUP'),          # be spoken
+        'zen': ('zen', 'way'),                                 # way/manner
+        'kineihin': ('ki-nei-hin', 'REFL-with-ERG'),           # bow down
+        
+        # Round 46: More vocabulary from Ezekiel, Matthew, Luke, Genesis, Exodus, Leviticus
+        'hauhlawh': ('hauh-lawh', 'grasp-PERF'),               # extort
+        'hauh': ('hauh', 'grasp'),                             # base - grasp
+        'hot': ('hot', 'steer'),                               # pilot/steer
+        'tunuam': ('tu-nuam', 'sit-pleasant'),                 # best seats
+        'tu': ('tu', 'sit'),                                   # base - sit
+        'bulkip': ('bul-kip', 'root-firm'),                    # foundation
+        'bul': ('bul', 'root'),                                # base - root
+        'kip': ('kip', 'firm'),                                # base - firm
+        'khetul': ('khet-ul', 'heel-crush'),                   # bruise heel
+        'khet': ('khet', 'heel'),                              # base - heel
+        'ul': ('ul', 'crush'),                                 # base - crush
+        'kinengniam': ('ki-neng-niam', 'REFL-oppress-humble'), # be afflicted
+        'neng': ('neng', 'oppress'),                           # base - oppress
+        'kilei': ('ki-lei', 'REFL-buy'),                       # be bought
+        'lei': ('lei', 'buy'),                                 # base - buy
+        'kisuang': ('ki-suang', 'REFL-pure'),                  # be pure/innocent
+        'kibehlaplap': ('ki-behlap-lap', 'REFL-grow-REDUP'),   # grow greatly
+        'behlap': ('behlap', 'grow'),                          # base - grow
+        'tenkhop': ('ten-khop', 'dwell-join'),                 # settle together
+        'khop': ('khop', 'join'),                              # base - join
+        'ki-ip': ('ki-ip', 'REFL-hold'),                       # restrain oneself
+        'ip': ('ip', 'hold'),                                  # base - hold
+        'ki-ipzo': ('ki-ip-zo', 'REFL-hold-able'),             # able to restrain
+        'kiciangtan': ('ki-ciang-tan', 'REFL-straight-assign'), # portion assigned
+        'tan': ('tan', 'assign'),                              # base - assign
+        'mawlpih': ('mawl-pih', 'dig-APPL'),                   # dig down
+        'mawl': ('mawl', 'dig'),                               # base - dig
+        'takun': ('takun', 'maiden'),                          # maiden/maid
+        'phawkzo': ('phawk-zo', 'remember-able'),              # remember
+        'phawk': ('phawk', 'remember'),                        # base - remember
+        'thokang': ('tho-kang', 'rise-extend'),                # stretch out
+        'denggawp': ('deng-gawp', 'strike-break'),             # smash/break
+        'deng': ('deng', 'strike'),                            # base - strike
+        'gawp': ('gawp', 'break'),                             # base - break
+        'kot': ('kot', 'ready'),                               # equipped/ready
+        'kingen': ('ki-ngen', 'REFL-request'),                 # be demanded
+        'kimciang': ('kim-ciang', 'complete-straight'),        # span end to end
+        'kikhaisuk': ('ki-khai-suk', 'REFL-hang-fall'),        # curtain/hanging
+        'khai': ('khai', 'hang'),                              # base - hang
+        'kisuzan': ('ki-su-zan', 'REFL-tear-break'),           # be destroyed
+        'su': ('su', 'tear'),                                  # base - tear
+        'zan': ('zan', 'break'),                               # base - break
+        'kigal': ('ki-gal', 'REFL-oppose'),                    # opposite side
+        'khetphim': ('khet-phim', 'heel-peg'),                 # peg/stake
+        'phim': ('phim', 'peg'),                               # base - peg
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
