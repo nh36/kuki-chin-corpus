@@ -3571,7 +3571,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'koihsa': ('koih-sa', 'put-already'),                  # 8x - "already placed"
         'khangkhangin': ('khang-khang-in', 'generation~REDUP-ERG'), # 8x - "from generation"
         'kantel': ('kan-tel', '1SG→3-spread'),                 # 8x - compound
-        'liangko-ah': ('liang-ko-ah', 'shine-?-LOC'),          # 8x - compound
+        'liangko-ah': ('liang-ko-ah', 'shoulder-both-LOC'),    # 8x - on both shoulders
         'pataukohna': ('pa-tau-koh-na', 'male-?-call-NMLZ'),   # 8x - compound
         'puanmongteep': ('puan-mong-teep', 'cloth-cover-?'),   # 8x - "covering"
         'hinglai': ('hing-lai', 'live-time'),                  # 8x - "lifetime"
@@ -3627,7 +3627,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vun-atna': ('vun-at-na', 'skin-cut-NMLZ'),            # 8x - "circumcision"
         
         # Session 6 Round 9: More philological additions (freq 7-8)
-        'liangko-ah': ('liang-ko-ah', 'shoulder-?-LOC'),       # 8x - "on shoulders"
         'pataukohna': ('pa-tau-koh-na', 'male-?-call-NMLZ'),   # 8x - "alarm, trumpet"
         'puanmongteep': ('puan-mong-teep', 'cloth-cover-fringe'), # 8x - "fringes"
         'tuutalte': ('tuutal-te', 'ram-PL'),                   # 8x - "rams"
@@ -7306,6 +7305,37 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'semsemnain': ('sem-sem-na-in', 'divide-REDUP-NMLZ-INST'), # by themselves INST
         'semsemna': ('sem-sem-na', 'divide-REDUP-NMLZ'),           # by themselves
         'thumante': ('thu-man-te', 'word-true-PL'),                # faithful PL
+        # Round 125: Hyphenated suffix forms
+        'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # on both shoulders
+        'napiun': ('na-pi-un', 'na-pi-un', '2PL-big-?'),           # you all (pl)
+        'notea': ('no-te-a', 'young-PL-NOM'),                      # young ones
+        'nomaua': ('no-mau-a', 'young-also-NOM'),                  # also young
+        'nuaiate': ('nuai-a-te', 'below-NOM-PL'),                  # those below
+        'piakna': ('piak-na', 'give.to-NMLZ'),                     # giving
+        'piaknain': ('piak-na-in', 'give.to-NMLZ-INST'),           # in giving
+        'mautea': ('mau-te-a', 'also-PL-NOM'),                     # also they
+        'mipi': ('mi-pi', 'person-big'),                           # great person
+        'zahtakte': ('zahtak-te', 'honor-PL'),                     # honors
+        'vasate': ('va-sa-te', 'go.and-PAST-PL'),                  # went PL
+        'sealt': ('seal-t', 'seal-?'),                             # seal
+        'sealte': ('seal-te', 'seal-PL'),                          # seals
+        'paaiah': ('pa-ai-ah', 'father-NOM-LOC'),                  # to/at father
+        'naungekah': ('nau-ngek-ah', 'child-birth-LOC'),           # at midwife
+        'tuangte': ('tuang-te', 'chariot-PL'),                     # chariots
+        'dingte': ('ding-te', 'light-PL'),                         # lights
+        'sipah': ('si-pa-ah', 'be-NMLZ-LOC'),                      # being LOC
+        'maimanah': ('mai-man-ah', 'face-true-LOC'),               # in face
+        'thatte': ('that-te', 'kill-PL'),                          # killed PL
+        'tuamtuamte': ('tuam-tuam-te', 'various-REDUP-PL'),        # various PL
+        'tanaute': ('ta-nau-te', 'child-small-PL'),                # children
+        'sisate': ('si-sa-te', 'unclean-PAST-PL'),                 # unclean PL
+        'miliante': ('mi-lian-te', 'person-great-PL'),             # great men
+        'khualnaun': ('khual-naun', 'guest-long.time'),            # sojourner
+        'khualnaunin': ('khual-naun-in', 'guest-long.time-INST'),  # as sojourner
+        'siamgante': ('siam-gan-te', 'weave-work-PL'),             # weavers
+        'zawnahna': ('zawn-ah-na', 'north-LOC-?'),                 # to north
+        'lungzina': ('lung-zin-a', 'heart-bright-NOM'),            # brightness
+        'khanghamte': ('khang-ham-te', 'generation-old-PL'),       # old ones
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
