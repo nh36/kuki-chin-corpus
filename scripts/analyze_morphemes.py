@@ -7527,6 +7527,57 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vaihawmsa': ('vai-hawm-sa', 'go-gather-NMLZ'),             # do all things
         'zuakkhiat': ('zuak-khiat', 'sell-depart'),                 # brought forth
         'tawpsak': ('tawp-sak', 'end-CAUS'),                        # let cease
+        # Round 139: More partial fixes (NMLZ forms)
+        'kingapna': ('ki-ngap-na', 'REFL-lean-NMLZ'),               # leaning
+        'liamsakna': ('liam-sak-na', 'wound-CAUS-NMLZ'),            # wounds
+        'tecipanna': ('te-ci-pan-na', 'PL-say-arrive-NMLZ'),        # testimony
+        'kilawmtatna': ('ki-lawm-tat-na', 'REFL-agree-cut-NMLZ'),   # betray
+        'kisehkhenna': ('ki-seh-khen-na', 'REFL-set-divide-NMLZ'),  # divisions
+        'sawmlinga': ('sawm-ling-a', 'ten-round-NOM'),              # ten in cubit
+        'thuciamsa': ('thu-ciam-sa', 'word-promise-NMLZ'),          # promised
+        # Round 140: More partial fixes (PL forms)
+        'sakite': ('sak-i-te', 'CAUS-PST-PL'),                      # cymbals/instruments
+        'sakzawk': ('sak-zawk', 'cause-more'),                      # greatly (feared)
+        'nisima': ('ni-sim-a', 'day-count-NOM'),                    # every day
+        'kisimte': ('ki-sim-te', 'REFL-count-PL'),                  # numbered ones
+        'haipite': ('hai-pi-te', 'spear-big-PL'),                   # fleshhooks
+        'liatnate': ('liat-na-te', 'great-NMLZ-PL'),                # greatness (things)
+        'pemtate': ('pem-ta-te', 'sojourn-NMLZ-PL'),                # sojourners
+        'golzawte': ('gol-zaw-te', 'hundred-more-PL'),              # greatest over hundred
+        'neuzawte': ('neu-zaw-te', 'small-more-PL'),                # least over hundred
+        'pahtawihuai': ('pah-tawi-huai', 'father-sorrow-full'),     # bare with sorrow
+        # Round 141: More partial fixes
+        'paangah': ('pang-ah', 'nail-LOC'),                         # nail into temples
+        'thukkhia': ('thuk-khia', 'word-out'),                      # poured out
+        'kamdawn': ('kam-dawn', 'word-perceive'),                   # hear rumor
+        'innlimah': ('inn-lim-ah', 'house-pillar-LOC'),             # in the pillars
+        'sangzaw': ('sang-zaw', 'high-more'),                       # taller
+        # Round 142: More partial fixes
+        'bawngnawi': ('bawng-nawi', 'cow-meat'),                    # butter (calf meat)
+        'tutna': ('tut-na', 'sleep-NMLZ'),                          # bed/lying place
+        'phatna': ('phat-na', 'praise-NMLZ'),                       # song/praise
+        'hoihna': ('hoih-na', 'good-NMLZ'),                         # goodness/pleasantness
+        'sagihna': ('sagih-na', 'seven-NMLZ'),                      # seventh
+        'zahtakna': ('zahtak-na', 'fear-NMLZ'),                     # fear (of God)
+        'hihna': ('hih-na', 'be-NMLZ'),                             # being/existence
+        'zanpi': ('zan-pi', 'night-big'),                           # in the night
+        'zuazuate': ('zuazua-te', 'willing-PL'),                    # freewill offerings
+        'namcin': ('nam-cin', 'nation-say'),                        # salutation
+        'khuak': ('khu-ak', 'bed-place'),                           # sepulchre/bed
+        # Round 143: Suffix forms
+        'pahtawina': ('pah-tawi-na', 'feast-sorrow-NMLZ'),          # unleavened feast
+        'cianna': ('cian-na', 'announce-NMLZ'),                     # indignation/announcement
+        'mualbo': ('mual-bo', 'hill-tower'),                        # great tower
+        'thupi': ('thu-pi', 'word-big'),                            # honourable
+        'dingpi': ('ding-pi', 'stand-big'),                         # no good
+        'khuamialna': ('khua-mial-na', 'town-dark-NMLZ'),           # darkness
+        'pilzaw': ('pil-zaw', 'wise-more'),                         # wiser
+        'hawmpi': ('hawm-pi', 'join-big'),                          # order speech
+        'cingh': ('cing-h', 'lend-COMP'),                           # surely lend
+        'muanhuai': ('muan-huai', 'trust-full'),                    # gathered cattle
+        'khinta': ('khin-ta', 'move-NMLZ'),                         # given
+        'ngakngakna': ('ngak-ngak-na', 'wait-REDUP-NMLZ'),          # waiting
+        'tuamtuamte': ('tuam-tuam-te', 'kind-REDUP-PL'),            # after its kind
         # Round 125: Hyphenated suffix forms
         'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # on both shoulders
         'napiun': ('napi-un', 'but-PL.IMP'),                       # but (imperative pl)
