@@ -7,10 +7,10 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 2. Bootstrap lexicon generation via PMI-based word alignment
 3. Morphological analysis and Leipzig-style glossing (starting with Tedim)
 
-## 🎉 MILESTONE ACHIEVED: 98% Coverage
+## 🎉 MILESTONE ACHIEVED: 98.5% Coverage
 
 **Date:** 2026-03-08
-**Coverage:** 98.00% (814,720/831,340 tokens)
+**Coverage:** 98.51% (838,202/850,903 tokens)
 
 This represents production-ready morphological analysis for Tedim Chin.
 
@@ -35,17 +35,17 @@ This represents production-ready morphological analysis for Tedim Chin.
 
 ### Phase 4: Leipzig Morphological Analyzer ✓
 - Focus: Tedim Chin (ctd)
-- **Current coverage: 98.00% of tokens** 🎉
+- **Current coverage: 98.51% of tokens** 🎉
 - Handles: prefixes, stems, suffixes, compounds, reduplication
 
 ## Current Analyzer Performance (2026-03-08)
 
 ### Overall Statistics
 ```
-Total tokens:      831,340
-Fully analyzed:    814,720 (98.00%)
-Partial:            12,559 (1.51%)  -- has some morphemes glossed
-Unknown:             4,061 (0.49%)  -- completely unknown
+Total tokens:      850,903
+Fully analyzed:    838,202 (98.51%)
+Partial:             9,288 (1.09%)  -- has some morphemes glossed
+Unknown:             3,413 (0.40%)  -- completely unknown
 ```
 
 ### Quality Assurance (Allomorph Audit)
