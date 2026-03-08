@@ -5965,6 +5965,133 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vamimte': ('vamim-te', 'quail-PL'),                       # quails
         'khom': ('khom', 'place'),                                 # place, abide
         'paisuakzo': ('pai-suak-zo', 'go-out-able'),               # able to go out
+        # Round 97: More vocabulary for 99%
+        'anlakna': ('an-lak-na', 'grain-take-NMLZ'),               # firstfruits
+        'langneih': ('lang-neih', 'appear-have'),                  # countenance
+        'dikpa': ('dik-pa', 'right-NMLZ'),                         # righteous one
+        'khaudum': ('khau-dum', 'edge-border'),                    # selvedge, edge
+        'sawmlite': ('sawm-li-te', 'ten-four-PL'),                 # forties
+        'pangkhat': ('pang-khat', 'side-one'),                     # one side
+        'agate': ('agate', 'agate'),                               # agate (gemstone)
+        'amethyst': ('amethyst', 'amethyst'),                      # amethyst (gemstone)
+        'siklong': ('sik-long', 'hem-round'),                      # hem round about
+        'kikipsakna': ('ki-kip-sak-na', 'REFL-wave-CAUS-NMLZ'),    # wave offering
+        'kitatkhiatna': ('ki-tat-khiat-na', 'REFL-count-out-NMLZ'), # ransom
+        'sawhin': ('sawh-in', 'compound-INST'),                    # confection
+        'lelhna': ('lelh-na', 'overcome-NMLZ'),                    # being overcome
+        'valteng': ('val-teng', 'share-all'),                      # all portions
+        'kibuakna': ('ki-buak-na', 'REFL-pour-NMLZ'),              # pouring out
+        'khamtheih': ('kham-theih', 'forbid-able'),                # forbidden
+        'sanhuai': ('san-huai', 'accept-mix'),                     # accepted
+        'bak': ('bak', 'bat'),                                     # bat
+        'sian': ('sian', 'purify'),                                # purifying
+        'thukzawk': ('thuk-zawk', 'deep-more'),                    # somewhat dark
+        'mualin': ('mual-in', 'hill-INST'),                        # somewhat dark
+        'lutol': ('lu-tol', 'head-bald'),                          # bald head
+        'daihna': ('daih-na', 'bear-NMLZ'),                        # bearing
+        'vakto': ('vak-to', 'walk-go'),                            # go up and down
+        'sitbaanna': ('sit-baan-na', 'blemish-none-NMLZ'),         # without blemish
+        'sawmngana': ('sawm-nga-na', 'ten-five-NMLZ'),             # fiftieth
+        'gawpgawpna': ('gawp-gawp-na', 'rigor-REDUP-NMLZ'),        # rigour
+        'khualmipa': ('khualmi-pa', 'stranger-NMLZ'),              # sojourner
+        'zawnglua': ('zawng-lua', 'means-poor'),                   # poorer than
+        'honhonin': ('hon-hon-in', 'count-REDUP-INST'),            # numbering
+        'kitatna': ('ki-tat-na', 'REFL-count-NMLZ'),               # ransom
+        'behtangun': ('beh-tang-un', 'beside-stand-3PL'),          # under the hand
+        'palhngulh': ('palh-ngulh', 'trespass-aside'),             # go aside
+        'saangin': ('saang-in', 'make-INST'),                      # fashioned
+        'nawine': ('nawi-ne', 'nursing-child'),                    # sucking child
+        'malzah': ('mal-zah', 'bless-amount'),                     # number
+        'hawmthawh': ('hawm-thawh', 'bring-near'),                 # brought near
+        'ulianin': ('ulian-in', 'prince-INST'),                    # as a prince
+        'hingtangun': ('hing-tang-un', 'live-stand-3PL'),          # went down alive
+        'vute': ('vu-te', 'ash-PL'),                               # ashes
+        'kilahna': ('ki-lah-na', 'REFL-strive-NMLZ'),              # striving
+        'nawksuak': ('nawk-suak', 'smite-out'),                    # smote out
+        'linggawp': ('ling-gawp', 'sorrow-INTENS'),                # sore distressed
+        'khantawnin': ('khan-tawn-in', 'time-meet-INST'),          # ever since
+        'gamsial': ('gam-sial', 'land-strong'),                    # unicorn strength
+        'kihilna': ('ki-hil-na', 'REFL-teach-NMLZ'),               # enchantments
+        'suaktate': ('suak-ta-te', 'become-PAST-PL'),              # those who came
+        'khasim': ('kha-sim', 'month-sweet'),                      # sweet savour
+        'ciampel': ('ciam-pel', 'vow-break'),                      # break vow
+        'lumkhawmsa': ('lum-khawm-sa', 'lie-together-PAST'),       # lying with
+        'nungaknote': ('nungak-no-te', 'virgin-child-PL'),         # women children
+        'sumang': ('su-mang', 'destroy-scatter'),                  # destroy
+        'behbeh': ('beh-beh', 'count-REDUP'),                      # number
+        'thatkha': ('that-kha', 'kill-accidental'),                # unawares, accidental
+        'khutun': ('khu-tun', 'hand-carry'),                       # in hands
+        'thahatnate': ('tha-hat-na-te', 'strength-great-NMLZ-PL'), # mighty acts
+        'khuadakto': ('khua-dak-to', 'place-sudden-arrive'),       # get up to
+        'genteng': ('gen-teng', 'speak-all'),                      # speak all
+        'niamkhiatin': ('niam-khiat-in', 'low-out-INST'),          # pine away
+        'sangpente': ('sang-pen-te', 'high-most-PL'),              # heavens
+        'teelzaw': ('teel-zaw', 'choose-more'),                    # chose above
+        'kizahtakna': ('ki-zahtak-na', 'REFL-fear-NMLZ'),          # fear, dread
+        'thuahte': ('thuah-te', 'offer-PL'),                       # offerings
+        'khong': ('khong', 'enchanter'),                           # enchanter
+        'sikha': ('sikha', 'wizard'),                              # wizard
+        # Round 98: More vocabulary for 99%
+        'cinte': ('cin-te', 'nail-PL'),                            # nails
+        'kidongsa': ('ki-dong-sa', 'REFL-betroth-PAST'),           # betrothed
+        'apkik': ('ap-kik', 'deliver-return'),                     # deliver back
+        'suangtumpite': ('suangtum-pi-te', 'stone-great-PL'),      # great stones
+        'cikzethuai': ('cik-ze-thuai', 'flee-seven-scatter'),      # flee seven ways
+        'lungham': ('lung-ham', 'heart-anger'),                    # anger, wrath
+        'khansauna': ('khan-sau-na', 'time-long-NMLZ'),            # length of days
+        'cimawhsak': ('ci-mawh-sak', 'fear-wrong-CAUS'),           # fail, forsake
+        'mitnauta': ('mit-nau-ta', 'eye-child-PAST'),              # apple of eye
+        'saklam': ('sak-lam', 'side-direction'),                   # toward
+        'ankan': ('an-kan', 'grain-old'),                          # old corn
+        'puanhoih': ('puan-hoih', 'cloth-good'),                   # goodly garment
+        'paatsa': ('paat-sa', 'old-PAST'),                         # old, worn
+        'paitohna': ('pai-toh-na', 'go-arrive-NMLZ'),              # arrival, way
+        'cipin': ('cip-in', 'stand-INST'),                         # standing
+        'beisiang': ('bei-siang', 'finish-clean'),                 # consumed
+        'kuankhiatna': ('kuan-khiat-na', 'strength-out-NMLZ'),     # going out
+        'neulua': ('neu-lua', 'small-too'),                        # too narrow
+        'lononate': ('lono-na-te', 'pasture-NMLZ-PL'),             # suburbs
+        'antah': ('an-tah', 'thorn-side'),                         # thorns
+        'khansak': ('khan-sak', 'time-CAUS'),                      # raised up
+        'khualzinte': ('khualzin-te', 'traveler-PL'),              # travellers
+        'ciangciang': ('ciang-ciang', 'until-REDUP'),              # completely
+        'pausak': ('pau-sak', 'speak-CAUS'),                       # cause to speak
+        'sinsak': ('sin-sak', 'prove-CAUS'),                       # prove, test
+        'khade': ('kha-de', 'ornament-PL'),                        # ornaments
+        'bilbah': ('bil-bah', 'ear-ring'),                         # earrings
+        'naihuai': ('nai-huai', 'near-mix'),                       # inclined
+        'niamkoih': ('niam-koih', 'low-put'),                      # brought low
+        'zawn': ('zawn', 'why'),                                   # wherefore
+        'lampialin': ('lam-pial-in', 'way-turn-INST'),             # turning aside
+        'ummawh': ('um-mawh', 'be-without'),                       # without want
+        'puteekpa': ('puteek-pa', 'old.man-NMLZ'),                 # old man
+        'nungakno': ('nungak-no', 'virgin-child'),                 # young virgin
+        'pailam': ('pai-lam', 'go-direction'),                     # direction
+        'tanaupa': ('tanau-pa', 'relative-NMLZ'),                  # kinsman
+        'thaneemte': ('tha-neem-te', 'strength-weak-PL'),          # weak ones
+        'sangtosak': ('sang-to-sak', 'high-up-CAUS'),              # lift up
+        'kikhiasuk': ('ki-khia-suk', 'REFL-out-down'),             # fall down
+        'beelpi': ('beel-pi', 'pot-great'),                        # caldron
+        'palai': ('palai', 'mediator'),                            # mediator, judge
+        'apkhapna': ('ap-khap-na', 'give-close-NMLZ'),             # secret parts
+        'thukhenin': ('thu-khen-in', 'word-judge-INST'),           # judging
+        'sumnen': ('sum-nen', 'money-part'),                       # part of shekel
+        'innkhumzanga': ('inn-khum-zang-a', 'house-top-side-LOC'), # top of house
+        'theisa': ('thei-sa', 'know-PAST'),                        # knew before
+        'sawltheih': ('sawl-theih', 'send-able'),                  # able to send
+        'leengkai': ('leeng-kai', 'yoke-pull'),                    # yoke of oxen
+        'hamu': ('hamu', 'file'),                                  # file (tool)
+        'ciangka': ('ciang-ka', 'way-edge'),                       # passage
+        'zuito': ('zui-to', 'follow-up'),                          # come up
+        'vattuk': ('vat-tuk', 'climb-up'),                         # climbed up
+        'muaimuai': ('muai-muai', 'melt-REDUP'),                   # melted away
+        'luhsak': ('luh-sak', 'spoil-CAUS'),                       # spoiled
+        'lukham': ('lu-kham', 'head-cover'),                       # pillow, bolster
+        'muitum': ('mui-tum', 'shoot-mark'),                       # shoot at mark
+        'nawhtat': ('nawh-tat', 'smite-cut'),                      # weapon, sword
+        'munmuanhuaina': ('mun-muan-huai-na', 'place-safe-mix-NMLZ'), # stronghold
+        'tunkhitna': ('tun-khit-na', 'enter-shut-NMLZ'),           # shut in
+        'sukhalo': ('su-kha-lo', 'destroy-NEG-EMPH'),              # shall not find
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
