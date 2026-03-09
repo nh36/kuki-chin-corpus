@@ -327,6 +327,8 @@ FUNCTION_WORDS = {
     'inla': 'and.then',      # ~838
     'napi': 'but/however',   # 279x - contrastive conjunction
     'hinapi': 'but/however', # 156x - variant with hi-
+    'hinapi-in': 'but/however.ERG',  # 126x - hinapi with ergative
+    'hinapiin': 'but/however.ERG',   # variant without hyphen
     'mateng': 'until',       # 185x - temporal "until"
     'matengin': 'until',     # 99x - variant with -in
     'veve': 'still/yet',     # 142x - temporal adverb (reduplication)
@@ -1008,6 +1010,7 @@ NOUN_STEMS = {
     'numei': 'woman',
     'numeite': 'women',      # 195
     'suanlekhak': 'genealogy', # 224
+    'suanlekhakte': 'genealogies', # plural form
     'innkuan': 'household',  # 205
     
     # Body parts
@@ -2102,7 +2105,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'neihsa': ('neih-sa', 'have.II-PAST'),                  # had (past of have)
         'paknamtui': ('pak-nam-tui', 'wine'),
         'minthanna': ('min-than-na', 'name-bless-NMLZ'),
-        'suanlekhakte': ('suan-le-khak-te', 'offspring-PL'),
+        'suanlekhakte': ('suanlekhak-te', 'genealogy-PL'),       # fixed: was over-segmented
         'nisuahna': ('ni-suah-na', 'day-birth-NMLZ'),
         'mihingte': ('mi-hing-te', 'person-kind-PL'),
         'zanin': ('zan-in', 'night-ERG'),
