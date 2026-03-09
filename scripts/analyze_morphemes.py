@@ -1010,6 +1010,12 @@ VERB_STEMS = {
     'hailawh': 'be.mad',         # Jer 25:16 "drink, and be moved, and be mad"
     'kimap': 'live/be.saved',    # Jer 38:17 "thy soul shall live"
     'khelkhiatsak': 'put.out.eyes', # Jer 39:7 "put out Zedekiah's eyes"
+    'koizaw': 'stand',           # Jer 44:28 "whose words shall stand"
+    'kiphamat': 'meet',          # Jer 51:31 "run to meet another"
+    'taikhiasim': 'flee',        # Jer 52:7 "all the men of war fled"
+    'kisuai': 'pomegranate',     # Jer 52:22 "network and pomegranates"
+    'pekpak': 'swoon',           # Lam 2:12 "when they swooned as the wounded"
+    'kimkotteng': 'brightness',  # Ezek 1:4 "brightness was about it"
     
     # === Session 4 Round 9: More verb stems for -sak causatives ===
     'khialh': 'err/sin',     # khialhsak = cause to sin
