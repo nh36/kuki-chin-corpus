@@ -105,6 +105,8 @@ TAM_SUFFIXES = {
     'loh': 'NEG',       # Negative result
     'pi': 'COMP',       # Comparative (more/-er)
     'pa': 'NMLZ.AG',    # Agent nominalizer (one who V-s)
+    # Henderson: Experiential/habitual aspect
+    'ngei': 'EXP',      # Experiential (have V-ed before, know how to V)
     # Round 154 additions - more suffixes
     'khap': 'forbid',   # Prohibitive
     'suak': 'become',   # Inchoative (become)
@@ -332,6 +334,104 @@ AMBIGUOUS_MORPHEMES = {
     'tung': [
         ('on', 'with_ah'),           # Relational noun + LOC
         ('arrive', 'verbal'),        # Motion verb
+    ],
+    
+    # === Henderson 1965: Form I/II Disambiguation ===
+    # Verbs have two forms: Form I (indicative, sentence-final) and 
+    # Form II (subjunctive, in adjunctive phrases/non-final predicates)
+    # The following entries help disambiguate these patterns
+    
+    # sung: 'inside' (relational noun) vs 'high' (adjective)
+    # - 'inside' with -ah (sung-ah = inside-LOC, a sungah = in it)
+    # - 'high' less common in Bible
+    'sung': [
+        ('inside', 'relational'),    # Relational noun (default)
+        ('high', 'adjective'),       # Rare adjective use
+    ],
+    
+    # kiang: 'beside/near' (relational noun) vs 'separate' (verb)
+    # - 'beside' with -ah (kiang-ah = beside-LOC)
+    'kiang': [
+        ('beside', 'relational'),    # Relational noun (default)
+        ('separate', 'verbal'),      # Verb: separate/be.different
+    ],
+    
+    # lak: 'among/middle' (relational noun)
+    # - 'among' with -ah (lak-ah = among-LOC)
+    'lak': [
+        ('among', 'relational'),     # Relational noun (default)
+    ],
+    
+    # mai: 'face/front' (relational noun) vs 'end/edge' (noun)
+    # - 'face' most common, 'front' with -ah
+    'mai': [
+        ('face', 'nominal'),         # Body part / front
+        ('front', 'relational'),     # Relational: in front of
+    ],
+    
+    # nuai: 'below/under' (relational noun)
+    'nuai': [
+        ('below', 'relational'),     # Relational noun
+    ],
+    
+    # lam: 'road/way/side' (noun) vs 'manner' (nominalizer)
+    # Henderson: lam forms manner nominals (V-lam = way of V-ing)
+    'lam': [
+        ('road', 'nominal'),         # Noun: road, path
+        ('side', 'relational'),      # Relational: that side
+        ('manner', 'with_verb'),     # Manner nominalizer after verbs
+    ],
+    
+    # zo: 'able/finish' (completive) vs 'south' (direction) vs ethnic 'Zo'
+    'zo': [
+        ('COMPL', 'after_verb'),     # Completive aspect (can complete)
+        ('south', 'directional'),    # Direction (rare)
+    ],
+    
+    # in: 'ERG' (ergative case) vs 'house' vs 'QUOT' (quotative)
+    # - 'ERG' as suffix on NPs
+    # - 'house' as standalone or with suffix
+    # - 'QUOT' after ci 'say'
+    'in': [
+        ('ERG', 'case_marker'),      # Ergative case (most common)
+        ('house', 'nominal'),        # Noun: house (standalone)
+        ('QUOT', 'after_ci'),        # Quotative after ci 'say'
+    ],
+    
+    # ah: 'LOC' (locative) vs 'DAT' (dative/allative)
+    # Henderson distinguishes positional (-ah) from directional (goal)
+    'ah': [
+        ('LOC', 'locative'),         # Locative case (at/in/on)
+        ('DAT', 'dative'),           # Dative/goal (to)
+    ],
+    
+    # te: 'PL' (plural) vs diminutive
+    # - 'PL' on nouns (mi-te = people)
+    # - Diminutive in some compounds
+    'te': [
+        ('PL', 'plural'),            # Plural marker (default)
+        ('DIM', 'diminutive'),       # Diminutive (rare)
+    ],
+    
+    # pi: 'grandmother/big' vs 'also/give'
+    # - 'big' as intensifier (khua-pi = big-town = city)
+    # - 'grandmother' standalone
+    'pi': [
+        ('big', 'intensifier'),      # Intensifier (default in compounds)
+        ('grandmother', 'kinship'),  # Kinship term
+        ('also', 'additive'),        # Additive particle
+    ],
+    
+    # mu: 'see' (Form I) - Form II is 'muh'
+    # Henderson: mu (Form I) in conclusive sentences, muh (Form II) elsewhere
+    'mu': [
+        ('see.I', 'form_i'),         # Form I (indicative)
+    ],
+    
+    # ci: 'say' (Form I) - Form II is 'cih'
+    # Henderson: ci 'say' is highly grammaticalized as quotative marker
+    'ci': [
+        ('say', 'quotative'),        # Quotative verb (default)
     ],
 }
 
@@ -599,6 +699,50 @@ VERB_STEM_PAIRS = {
 
 # Reverse lookup: Form I → Form II (for reference)
 FORM_I_TO_II = {v[0]: (k, v[1]) for k, v in VERB_STEM_PAIRS.items()}
+
+
+def is_form_ii_verb(stem: str) -> tuple:
+    """
+    Check if a stem is a Form II verb and return its analysis.
+    
+    Henderson 1965: Form II verbs are marked by:
+    - Addition of -h to Form I stems ending in vowels
+    - Addition of -k to some Form I stems  
+    - Change of final -ng to -n
+    
+    Args:
+        stem: The verb stem to check
+        
+    Returns:
+        Tuple of (is_form_ii, form_i, base_gloss) or (False, None, None)
+    """
+    # Direct lookup in VERB_STEM_PAIRS
+    if stem in VERB_STEM_PAIRS:
+        form_i, gloss = VERB_STEM_PAIRS[stem]
+        return (True, form_i, gloss)
+    
+    # Heuristic: stems ending in -h might be Form II
+    # Check if removing -h gives a known Form I verb
+    if stem.endswith('h') and len(stem) > 1:
+        possible_form_i = stem[:-1]
+        if possible_form_i in VERB_STEMS:
+            gloss = VERB_STEMS[possible_form_i]
+            # Remove .I suffix if present
+            if gloss.endswith('.I'):
+                gloss = gloss[:-2]
+            return (True, possible_form_i, gloss)
+    
+    # Heuristic: stems ending in -k might be Form II
+    if stem.endswith('k') and len(stem) > 1:
+        possible_form_i = stem[:-1]
+        if possible_form_i in VERB_STEMS:
+            gloss = VERB_STEMS[possible_form_i]
+            if gloss.endswith('.I'):
+                gloss = gloss[:-2]
+            return (True, possible_form_i, gloss)
+    
+    # Not a recognized Form II
+    return (False, None, None)
 
 # Verb stems - expanded from corpus frequency analysis
 # Note: Some verbs have Stem I (basic) and Stem II (modified) forms
@@ -1790,6 +1934,92 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
             return 'arrive'
         return 'on'  # Default to relational noun
     
+    # === Henderson 1965 Relational Nouns ===
+    # These are spatial/relational nouns that take -ah to form postpositions
+    
+    elif morpheme == 'sung':
+        # 'inside' - relational noun (default)
+        # sung-ah = inside-LOC, a sungah = in it
+        return 'inside'
+    
+    elif morpheme == 'kiang':
+        # 'beside' - relational noun (default)
+        # kiang-ah = beside-LOC
+        if context.get('has_prefix') and not context.get('next_morpheme') == 'ah':
+            return 'separate'  # Verb: be.separate (rare)
+        return 'beside'
+    
+    elif morpheme == 'lak':
+        # 'among' - relational noun
+        return 'among'
+    
+    elif morpheme == 'mai':
+        # 'face/front' - default to face (body part)
+        # mai-ah = front-LOC, a maitung = before him
+        if context.get('next_morpheme') == 'ah':
+            return 'front'
+        return 'face'
+    
+    elif morpheme == 'nuai':
+        # 'below/under' - relational noun
+        return 'below'
+    
+    elif morpheme == 'lam':
+        # 'road/way' vs 'manner' nominalizer
+        # After verb: manner (zui-lam = way of following)
+        # Standalone: road
+        if context.get('position') == 'suffix' and context.get('prev_is_verb'):
+            return 'manner'
+        if context.get('next_morpheme') == 'ah':
+            return 'side'
+        return 'road'
+    
+    elif morpheme == 'zo':
+        # 'COMPL' (completive) vs 'south'
+        # After verb: completive (nei-zo = able to have)
+        if context.get('position') == 'suffix' and context.get('prev_is_verb'):
+            return 'COMPL'
+        return 'south'
+    
+    elif morpheme == 'in':
+        # 'ERG' (ergative case) vs 'house' vs 'QUOT'
+        # After ci: QUOT (quotative)
+        if context.get('prev_morpheme') == 'ci':
+            return 'QUOT'
+        # Standalone: house
+        if context.get('position') == 'standalone':
+            return 'house'
+        # Default: ERG (case marker)
+        return 'ERG'
+    
+    elif morpheme == 'ah':
+        # 'LOC' (locative) vs 'DAT' (dative)
+        # Henderson doesn't strongly distinguish; default LOC
+        # Motion verbs may take DAT reading
+        if context.get('prev_is_motion_verb'):
+            return 'DAT'
+        return 'LOC'
+    
+    elif morpheme == 'te':
+        # 'PL' (plural) - nearly always this
+        return 'PL'
+    
+    elif morpheme == 'pi':
+        # 'big' (intensifier in compounds) vs 'grandmother'
+        # In compounds: big (khua-pi = city, tuipi = sea)
+        if context.get('position') == 'suffix':
+            return 'big'
+        # Standalone: grandmother (or kinship)
+        return 'grandmother'
+    
+    elif morpheme == 'mu':
+        # 'see' - Form I (indicative)
+        return 'see.I'
+    
+    elif morpheme == 'ci':
+        # 'say' - quotative verb
+        return 'say'
+    
     # Default: return first meaning
     return meanings[0][0] if meanings else None
 
@@ -1917,6 +2147,123 @@ def chunk_sentence(sentence: str) -> list:
         phrases.append(current_phrase)
     
     return phrases
+
+
+# =============================================================================
+# SENTENCE TYPE DETECTION (Henderson 1965)
+# =============================================================================
+#
+# Henderson identifies two sentence types:
+# 1. Conclusive: Ends with 'hi' (DECL) - statement of fact
+# 2. Inconclusive: Ends with 'leh' - conditional/hypothetical
+#
+# Conclusive sentences use Form I verbs in final predicative phrase.
+# Inconclusive sentences use Form II verbs in final predicative phrase.
+#
+# =============================================================================
+
+# Sentence-final markers (Henderson pp. 30-31)
+SENTENCE_FINAL_MARKERS = {
+    'hi': ('DECL', 'conclusive'),       # Declarative - conclusive sentence
+    'leh': ('COND', 'inconclusive'),    # Conditional - inconclusive sentence  
+    'hiam': ('Q', 'interrogative'),     # Question marker
+    'hen': ('IMP', 'imperative'),       # Imperative
+    'ta': ('PFV', 'perfective'),        # Perfective (can be sentence-final)
+    'rawh': ('HORT', 'hortative'),      # Hortative/polite imperative
+    'in': ('ERG', 'subordinate'),       # Ergative often marks subordinate clause
+}
+
+
+def detect_sentence_type(sentence: str) -> dict:
+    """
+    Detect the sentence type based on Henderson's analysis.
+    
+    Args:
+        sentence: A sentence string
+        
+    Returns:
+        Dictionary with:
+        - type: 'conclusive', 'inconclusive', 'interrogative', 'imperative'
+        - final_marker: The sentence-final particle
+        - expected_verb_form: 'I' (indicative) or 'II' (subjunctive)
+    """
+    words = sentence.strip().rstrip('.,;:!?"\'').split()
+    if not words:
+        return {'type': 'unknown', 'final_marker': None, 'expected_verb_form': None}
+    
+    # Check last word for sentence-final marker
+    last_word = words[-1].lower().rstrip('.,;:!?"\'')
+    
+    # Direct check
+    if last_word in SENTENCE_FINAL_MARKERS:
+        marker, sent_type = SENTENCE_FINAL_MARKERS[last_word]
+        verb_form = 'II' if sent_type == 'inconclusive' else 'I'
+        return {'type': sent_type, 'final_marker': marker, 'expected_verb_form': verb_form}
+    
+    # Check if ends with common sentence-final patterns
+    seg, gloss = analyze_word(last_word)
+    
+    if gloss.endswith('DECL') or 'hi' in gloss.split('-'):
+        return {'type': 'conclusive', 'final_marker': 'DECL', 'expected_verb_form': 'I'}
+    
+    if 'Q' in gloss or 'hiam' in last_word:
+        return {'type': 'interrogative', 'final_marker': 'Q', 'expected_verb_form': 'I'}
+    
+    # Default to conclusive (most common)
+    return {'type': 'conclusive', 'final_marker': None, 'expected_verb_form': 'I'}
+
+
+def analyze_phrase_type(phrase_words: list) -> str:
+    """
+    Determine if a phrase is subjective, predicative, or adjunctive.
+    
+    Henderson 1965:
+    - Subjective phrase: Subject NP, has pronominal concord with following verb
+    - Predicative phrase: Contains verb, final in sentence
+    - Adjunctive phrase: Non-subject NP, adverbial, contains Form II verbs
+    
+    Args:
+        phrase_words: List of (word, seg, gloss) tuples
+        
+    Returns:
+        'subjective', 'predicative', or 'adjunctive'
+    """
+    if not phrase_words:
+        return 'unknown'
+    
+    # Check if phrase contains a verb
+    has_verb = False
+    has_form_ii = False
+    ends_with_case = False
+    
+    for word, seg, gloss in phrase_words:
+        # Check for verb markers
+        if any(v in gloss for v in ['see', 'hear', 'say', 'go', 'come', 'give', 'take', 
+                                      'know', 'exist', 'be', 'have', 'want', 'make']):
+            has_verb = True
+        
+        # Check for Form II marker
+        if '.II' in gloss or gloss.endswith('.II'):
+            has_form_ii = True
+    
+    # Check final word for case marker
+    final_gloss = phrase_words[-1][2]
+    if any(case in final_gloss for case in ['ERG', 'LOC', 'COM', 'ABL', 'DAT']):
+        ends_with_case = True
+    
+    # Adjunctive: has Form II verb OR ends with case marker (non-final)
+    if has_form_ii:
+        return 'adjunctive'
+    
+    # Predicative: has verb (Form I implied)
+    if has_verb:
+        return 'predicative'
+    
+    # Subjective: NP without case marker or with nominative/topic
+    if ends_with_case:
+        return 'adjunctive'
+    
+    return 'subjective'
 
 
 def analyze_word(word: str) -> Tuple[str, str]:
