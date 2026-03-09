@@ -198,11 +198,16 @@ NOMINALIZERS = {
 FUNCTION_WORDS = {
     # === Conjunctions & Connectors ===
     'le': 'and',             # 10,942
+    'la': 'and.SEQ',         # Round 155: sequential and (hen la = let... and)
+    'masa': 'first',         # Round 155: a masa = the first (not ma-sa)
+    'sia': 'evil',           # Round 155: a sia = evil (not si-a)
     'leh': 'and/or',         # 2,921
     'ahihleh': 'if',         # 335
     'hitaleh': 'if.so',      # 295
+    'hang': 'reason',        # Round 155: fix - "bang hang hiam" = why (not stallion)
     'hangin': 'because',     # 3,461
     'bangin': 'like',        # 3,886
+    'man': 'finish',         # Round 155: a man khit = finished (also catch/wrong)
     'manin': 'therefore',    # 2,790
     'zongin': 'although',    # 1,970
     'ciangin': 'then',       # 9,297
@@ -340,7 +345,7 @@ FUNCTION_WORDS = {
     # === Relational/Nominalizers ===
     'mi': 'person/REL',      # 4,221
     'te': 'PL',
-    'na': 'NMLZ',
+    # Note: 'na' is 2SG in FUNCTION_WORDS (line 295), -na is NMLZ as suffix
     
     # === Numbers ===
     'khat': 'one',           # 4,303
@@ -486,7 +491,9 @@ VERB_STEMS = {
     'limci': 'promise',      # 32x - "promise, sign" (lim-ci)
     
     # Reflexive/reciprocal (ki- prefix)
+    'kipat': 'begin',        # Round 155: variant of kipan (a kipat = in the beginning)
     'kipan': 'begin',        # ki-pan "REFL-begin"
+    'kizom': 'unite',        # Round 155: be united/joined
     'kisai': 'concern',
     'kisik': 'repent',
     'kikhia': 'depart',
@@ -744,6 +751,7 @@ VERB_STEMS = {
     'lamdang': 'different',  # kilamdang = be different
     'tangval': 'young.man',  # tangvalte = young men
     'pil': 'learn',          # pilvang = be wise
+    'mawh': 'guilty',        # Round 155: i mawh = we are guilty
     # Round 155: add commonly mis-segmented stems
     'zawng': 'poor',         # zawngkhal = wear.out
     'zawngkhal': 'tire.out', # tire/wear out
