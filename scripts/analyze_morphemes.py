@@ -712,7 +712,7 @@ VERB_STEMS = {
     'ngak': 'wait',          # 102x - Gen 8:12 "stayed", Gen 49:18 "waited"
     'ngam': 'dare',          # 128x - (context shows "venture/dare")
     'hawlkhia': 'drive.out', # 119x - Gen 3:24 "drove out the man"
-    'vei': 'faint',          # 71x - Gen 25:29 "he was faint" (also "red")
+    'vei': 'sick',           # 71x - Gen 25:29 "he was faint" (sick/faint/exhausted)
     'zenzen': 'at.all',      # 53x - intensifier (often with negation "not at all")
     'mengmeng': 'quickly',   # 50x - reduplication "hastily, speedily" (Gen 18:6)
     'meng': 'quick',         # base for mengmeng
@@ -1709,6 +1709,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # === Religious vocabulary ===
         'biakbuk': ('biak-buk', 'worship-tent'),  # 112x - sanctuary/tabernacle
+        'vei-a': ('vei-a', 'wave-LOC'),    # wave offering (vei-a piak/biakna)
+        'veia': ('vei-a', 'wave-LOC'),     # unhyphenated form
         
         # === Verb + Quotative Compounds ===
         'ci-in': ('ci-in', 'say-QUOT'),
