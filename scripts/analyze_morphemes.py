@@ -194,11 +194,82 @@ NOMINALIZERS = {
     'uh': 'PL',       # Plural (separate word)
 }
 
+# =============================================================================
+# AMBIGUOUS MORPHEMES - Multiple meanings with contextual disambiguation
+# =============================================================================
+# Format: morpheme -> list of (meaning, context_description)
+# The analyze_word function will use context to select the appropriate meaning
+
+AMBIGUOUS_MORPHEMES = {
+    # za: 'hear' (verb) vs 'hundred' (number)
+    # - 'hundred' when following kum/sawm or before tul, or standalone in number context
+    # - 'hear' when with verbal morphology (prefixes ka/na/a, suffixes -te/-na/-in)
+    'za': [
+        ('hear', 'verbal'),      # Primary: with verbal morphology
+        ('hundred', 'numeral'),  # After kum/sawm, before tul
+    ],
+    
+    # la: 'take' (verb) vs 'and' (sequential conjunction) vs 'donkey' (noun)
+    # - 'take' most common (la-in = taking, amah la = took him)
+    # - 'and' after imperatives (hen la = let... and)
+    # - 'donkey' rare (late = donkeys)
+    'la': [
+        ('take', 'verbal'),      # Primary: with verbal morphology
+        ('and.SEQ', 'after_imperative'),  # After hen (imperative)
+        ('donkey', 'nominal'),   # As noun (rare)
+    ],
+    
+    # na: '2SG' (pronoun) vs 'NMLZ' (nominalizer suffix)
+    # - '2SG' when standalone or as prefix
+    # - 'NMLZ' when suffix on verbs (verb-na)
+    'na': [
+        ('2SG', 'standalone'),   # Standalone word
+        ('NMLZ', 'suffix'),      # As suffix on verbs
+    ],
+    
+    # pa: 'father' (noun) vs 'NMLZ.AG' (agentive nominalizer)
+    # - 'father' standalone or with possessive (ka pa = my father)
+    # - 'NMLZ.AG' as suffix creating agent nouns (verb-pa = one who verbs)
+    'pa': [
+        ('father', 'standalone'),  # Standalone or possessed
+        ('NMLZ.AG', 'suffix'),     # Agentive nominalizer
+    ],
+    
+    # man: 'finish' vs 'reason' vs 'catch/take' vs 'price'
+    # - 'finish' in "a man khit" = finished
+    # - 'reason' in "ahih manin" = therefore (frozen form)
+    # - 'catch' in "amah man" = caught him
+    # - 'price' in "a man" = its price
+    'man': [
+        ('finish', 'with_khit'),   # a man khit = finished
+        ('catch', 'verbal'),       # with verbal morphology
+        ('reason', 'in_manin'),    # frozen in manin
+        ('price', 'nominal'),      # as noun
+    ],
+    
+    # hang: 'reason' vs 'mighty/stallion'
+    # - 'reason' in "bang hang hiam" = why (99% of occurrences)
+    # - 'mighty' rare, possibly not in Bible text
+    'hang': [
+        ('reason', 'default'),     # Default meaning
+        ('mighty', 'rare'),        # Rare meaning
+    ],
+    
+    # vei: 'time/instance' vs 'sick/faint'
+    # - 'time' in khatvei = once, nihvei = twice
+    # - 'sick/faint' in phukhong vei = faint from hunger
+    'vei': [
+        ('time', 'with_numeral'),  # After numerals (sagih vei = seven times)
+        ('wave', 'with_verb_morphology'),  # Wave offering (vei-a piak = wave-LOC give)
+        ('sick', 'standalone'),    # Standalone or with illness words
+    ],
+}
+
 # Common function words with glosses - expanded with frequencies
 FUNCTION_WORDS = {
     # === Conjunctions & Connectors ===
     'le': 'and',             # 10,942
-    'la': 'and.SEQ',         # Round 155: sequential and (hen la = let... and)
+    'la': 'take',            # Round 155: primary meaning is 'take' (also 'and.SEQ' after hen)
     'masa': 'first',         # Round 155: a masa = the first (not ma-sa)
     'sia': 'evil',           # Round 155: a sia = evil (not si-a)
     'leh': 'and/or',         # 2,921
@@ -359,7 +430,7 @@ FUNCTION_WORDS = {
     'kua': 'nine',
     'sawm': 'ten',           # 679
     'sawmnih': 'twenty',     # 263
-    'za': 'hundred',
+    'za': 'hundred',         # In number context (kum za = 100 years); also 'hear' - see AMBIGUOUS_MORPHEMES
     'tul': 'thousand',
     
     # === Locative/Relational Nouns ===
@@ -1324,6 +1395,84 @@ def clean_word(word: str) -> str:
     return word
 
 
+def disambiguate_morpheme(morpheme: str, context: dict) -> str:
+    """
+    Disambiguate an ambiguous morpheme based on context.
+    
+    Args:
+        morpheme: The morpheme to disambiguate
+        context: Dict with keys like 'position', 'prev_morpheme', 'next_morpheme', 
+                 'has_prefix', 'has_suffix', 'in_compound'
+    
+    Returns:
+        The appropriate gloss for this context
+    """
+    if morpheme not in AMBIGUOUS_MORPHEMES:
+        return None
+    
+    meanings = AMBIGUOUS_MORPHEMES[morpheme]
+    
+    # Apply disambiguation rules
+    if morpheme == 'za':
+        # 'hundred' after kum/sawm or in number context
+        if context.get('prev_morpheme') in ('kum', 'sawm', 'tul'):
+            return 'hundred'
+        # 'hear' with verbal morphology
+        if context.get('has_prefix') or context.get('has_suffix'):
+            return 'hear'
+        # Default: check if followed by tul (thousand)
+        if context.get('next_morpheme') == 'tul':
+            return 'hundred'
+        return 'hear'  # Default to verbal meaning
+    
+    elif morpheme == 'la':
+        # 'and.SEQ' after imperative hen
+        if context.get('prev_morpheme') == 'hen':
+            return 'and.SEQ'
+        # 'take' with verbal morphology (la-in, etc.)
+        if context.get('has_suffix') or context.get('has_prefix'):
+            return 'take'
+        return 'take'  # Default to verbal meaning
+    
+    elif morpheme == 'na':
+        # 'NMLZ' when used as suffix
+        if context.get('position') == 'suffix':
+            return 'NMLZ'
+        # '2SG' when standalone or prefix
+        return '2SG'
+    
+    elif morpheme == 'pa':
+        # 'NMLZ.AG' when suffix on verb
+        if context.get('position') == 'suffix' and context.get('prev_is_verb'):
+            return 'NMLZ.AG'
+        return 'father'
+    
+    elif morpheme == 'man':
+        # Check frozen form manin
+        if context.get('in_compound') == 'manin':
+            return 'reason'
+        # 'finish' with khit
+        if context.get('next_morpheme') == 'khit':
+            return 'finish'
+        return 'finish'  # Default
+    
+    elif morpheme == 'hang':
+        # Almost always 'reason' in Biblical text
+        return 'reason'
+    
+    elif morpheme == 'vei':
+        # 'time' after numerals
+        if context.get('prev_morpheme') in ('khat', 'nih', 'thum', 'li', 'nga', 'guk', 'sagih', 'giat', 'sawmle'):
+            return 'time'
+        # 'wave' when has verbal suffix (-a piak pattern = wave offering)
+        if context.get('has_suffix'):
+            return 'wave'
+        return 'sick'
+    
+    # Default: return first meaning
+    return meanings[0][0] if meanings else None
+
+
 def is_proper_noun(word: str) -> bool:
     """Check if word is a proper noun (case-insensitive matching)."""
     clean = clean_word(word)
@@ -1378,6 +1527,17 @@ def analyze_word(word: str) -> Tuple[str, str]:
     # Check function words first (full match)
     word_lower = word.lower()
     word_no_hyphen_lower = word_no_hyphen.lower()
+    
+    # Check for ambiguous morphemes FIRST - use context-appropriate meaning
+    # For standalone words, use default (first) meaning from AMBIGUOUS_MORPHEMES
+    if word_lower in AMBIGUOUS_MORPHEMES:
+        # Standalone word - use context-based disambiguation
+        # For 'za' standalone, prefer 'hear' (more common in Bible)
+        # For 'la' standalone, prefer 'take' (most common)
+        # For 'na' standalone, prefer '2SG' (suffix handled separately)
+        meaning = disambiguate_morpheme(word_lower, {'position': 'standalone'})
+        if meaning:
+            return (word, meaning)
     
     # Try both hyphenated and unhyphenated forms
     if word_lower in FUNCTION_WORDS:
