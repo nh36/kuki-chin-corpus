@@ -1415,9 +1415,18 @@ NOUN_STEMS = {
     'siampipa': 'high.priest', # 172
     'nasemte': 'servants',   # 389
     'nasempa': 'servant',
+    'gal': 'enemy',          # enemy/war (base stem for galte, galkap, galmi, etc.)
     'galte': 'enemies',
     'galkap': 'soldier',     # 233
     'galkapte': 'soldiers',
+    'galhiam': 'adversary',  # 50x - man of war / opponent
+    'galhang': 'warrior',    # 39x - man of war
+    'galkhat': 'battle',     # 36x - war-strike (battle)
+    'galkah': 'warfare',     # 33x - go to battle
+    'galdo': 'campaign',     # 32x - go forth to war
+    'galvil': 'war.camp',    # 16x - military camp
+    'galvan': 'armour',      # 9x - war equipment
+    'galmatin': 'overthrown', # 17x - war-defeat (undone by war)
     'kamsang': 'prophet',
     'kamtai': 'messenger',
     'upa': 'elder',          # 162
