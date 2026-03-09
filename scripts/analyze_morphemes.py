@@ -927,6 +927,35 @@ VERB_STEMS = {
     'sep': 'work',           # 28x - "work" (sepnate = works)
     'ngaihsut': 'think/imagine', # 27x - "think, imagine" (ngaihsutnate = thoughts)
     
+    # === Newly discovered stems from rare words analysis ===
+    'dawn': 'top',               # 8x - Gen 11:4 "tower whose top may reach unto heaven"
+    'dawnkim': 'drink.all',      # Mark 14:23 "they all drank of it"
+    'dawntheih': 'able.to.drink', # Matt 20:22 "are ye able to drink"
+    'dawntuah': 'meet',          # 24x - Gen 24:17, Josh 9:11 "go to meet them"
+    'nkhiat': 'set.forward',     # Num 10:5-6 "set forward" (dinkhiat = stand-forward)
+    'nsak': 'redeem/restore',    # ki-nsak = be redeemed, hinsakna = redemption
+    'leentheih': 'fly',          # Job 39:26 "doth the hawk fly"
+    'kitamzan': 'broken',        # Ps 34:18 "broken heart" (REFL-many-break = completely broken)
+    'nawlkhin': 'ways',          # Job 21:14 "knowledge of thy ways" (nawl-khin as compound)
+    'kiphatna': 'praise',        # Ps 9:14 "show forth all thy praise"
+    'sumngo': 'rotten',          # Job 41:27 "brass as rotten wood"
+    'lungngaihngaih': 'meditate', # Ps 63:4 "meditate on thee" (reduplication of ngaih)
+    'khuisatna': 'groaning',     # Ps 38:9 "my groaning is not hid"
+    'kuampi': 'valley',          # Ps 65:13 "valleys covered with corn"
+    'lunggulh': 'delight',       # Ps 68:30 "people that delight in war"
+    'tauna': 'mourning',         # Ps 30:11 "turned my mourning into dancing"
+    'husia': 'tempest',          # Ps 55:8 "windy storm and tempest"
+    'kisut': 'spoil',            # Ps 68:12 "divided the spoil"
+    'lip': 'scale',              # Job 41:15 "his scales are his pride"
+    'maiphut': 'confront',       # Ps 17:13 "disappoint him" (mai-phut = face-??)
+    'thalpaih': 'cast.down',     # Ps 17:13 "cast him down" (thal-paih = bow-go?)
+    'lungtaii': 'rejoice',       # Ps 19:5 "rejoiceth as a strong man"
+    'maikhingsak': 'shame',      # Ps 40:15 "desolate for their shame"
+    'ngtanpih': 'excellency',    # Ps 47:4 "excellency of Jacob" (a-ngtanpih)
+    'nnlelo': 'family',          # Ps 68:6 "setteth the solitary in families"
+    'sahpi': 'thick.cloud',      # Ps 18:12 "thick clouds passed"
+    'ncip': 'compass',           # Ps 49:5 "iniquity compass me about"
+    
     # === Session 4 Round 9: More verb stems for -sak causatives ===
     'khialh': 'err/sin',     # khialhsak = cause to sin
     'piasak': 'cause.give',  # pia-sak = give-CAUS
@@ -1209,6 +1238,13 @@ NOUN_STEMS = {
     'kilungso': 'wait.patiently',  # rest in the LORD
     'phuang': 'upright',     # perfect/upright
     'kidona': 'sword',       # 56x - (not ki-don-a)
+    
+    # === Rare word stems (from KJV cross-reference) ===
+    # Discovered via synoptic parallel analysis
+    'nneng': 'crumb',        # annengte = 3SG-crumb-PL (Matt 15:27, Luke 16:21)
+    'nkungno': 'rootless',   # ankungnote = scorched/no root (Matt 13:6, Mark 4:6)  
+    'nhai': 'gluttonous',    # anhai = 3SG-gluttonous (Matt 11:19, Luke 7:34)
+    'lsak': 'season/salt',   # alsakkik = salt losing savour (Matt 5:13, Mark 9:50)
     
     # === Additional stems from corpus frequency analysis ===
     # Social/occupational
