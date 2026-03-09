@@ -7802,7 +7802,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'naungek': ('nau-ngek', 'child-birth'),                    # midwife
         'tuangte': ('tuang-te', 'chariot-PL'),                     # chariots
         'kikhaite': ('ki-khai-te', 'REFL-hang-PL'),                # hangings
-        'dingte': ('ding-te', 'light-PL'),                         # lights
+        'dingte': ('ding-te', 'PROSP-PL'),                         # those who will (not lights)
         'thatte': ('that-te', 'kill-PL'),                          # killed PL
         'tuamtuamte': ('tuam-tuam-te', 'divers-REDUP-PL'),         # divers
         'tanaute': ('ta-nau-te', 'child-small-PL'),                # children PL
@@ -8455,7 +8455,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'paaiah': ('pa-ai-ah', 'father-NOM-LOC'),                  # to/at father
         'naungekah': ('nau-ngek-ah', 'child-birth-LOC'),           # at midwife
         'tuangte': ('tuang-te', 'chariot-PL'),                     # chariots
-        'dingte': ('ding-te', 'light-PL'),                         # lights
+        'dingte': ('ding-te', 'PROSP-PL'),                         # those who will (not lights)
         'sipah': ('si-pa-ah', 'be-NMLZ-LOC'),                      # being LOC
         'maimanah': ('mai-man-ah', 'face-true-LOC'),               # in face
         'thatte': ('that-te', 'kill-PL'),                          # killed PL
