@@ -975,6 +975,18 @@ VERB_STEMS = {
     'gimneih': 'fear',           # Ps 31:11 "a fear to mine acquaintance"
     'haipau': 'vile',            # Job 40:4 "I am vile"
     'hehmai': 'boldness',        # Eccl 8:1 "boldness of his face"
+    'sesing': 'juniper',         # Ps 120:4 "coals of juniper"
+    'huihkua': 'treasury',       # Ps 135:7 "wind out of his treasuries"
+    'kiphawkmawh': 'pass.over',  # Prov 19:11 "pass over a transgression"
+    'likto': 'lift.up',          # Isa 10:15 "staff should lift up itself"
+    'gopa': 'slay',              # Isa 66:3 "killeth an ox is as if he slew"
+    'mettom': 'utmost.corner',   # Jer 9:26 "in the utmost corners"
+    'kiallai': 'be.satisfied',   # Isa 9:20 "they shall not be satisfied"
+    'kheguak': 'barefoot',       # Isa 20:2 "walking naked and barefoot"
+    'goih': 'visit',             # Jer 3:16 "neither shall they visit it"
+    'lehlamin': 'upside.down',   # Isa 29:16 "turning of things upside down"
+    'sunlum': 'reach',           # Jer 4:10 "sword reacheth unto the soul"
+    'kiget': 'eunuch',           # Isa 56:3 "neither let the eunuch say"
     
     # === Session 4 Round 9: More verb stems for -sak causatives ===
     'khialh': 'err/sin',     # khialhsak = cause to sin
