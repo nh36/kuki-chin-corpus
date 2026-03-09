@@ -28,6 +28,49 @@ PRONOMINAL_PREFIXES = {
     'i': '1PL.INCL',
 }
 
+# =============================================================================
+# PRONOMINAL CONCORD (Henderson 1965, pp. 32-33)
+# =============================================================================
+#
+# Henderson describes pronominal concord between nominal subjects and verbal
+# prefixes. This helps disambiguate phrase structure:
+#
+# Concordant pairs (nominal → prefix):
+#   - kei, keimah (I, myself) → ka-
+#   - nang, nangmah (you.SG, yourself) → na-
+#   - amah, ama (he/she/it) → a-
+#   - ei, eite (we.INCL) → i-
+#   - ko, kote (we.EXCL) → ka-
+#   - no, note (you.PL) → na-
+#   - Most other nouns (3rd person) → a-
+#
+# Key insight: Pronominal concord distinguishes SUBJECTIVE from ADJUNCTIVE
+# phrases. Subjective phrases have concord; adjunctive phrases do NOT.
+#
+# Example: "Dahpa in lo a kuan nuam kei a"
+#   - "Dahpa" (subject) concords with "a" prefix in "a kuan"
+#   - "lo" (field) does NOT concord - it's in an adjunctive phrase
+#
+# =============================================================================
+
+PRONOMINAL_CONCORD = {
+    # Pronoun/noun → expected prefix for concord
+    'kei': 'ka',        # 1SG
+    'keimah': 'ka',     # 1SG emphatic
+    'nang': 'na',       # 2SG
+    'nangmah': 'na',    # 2SG emphatic
+    'amah': 'a',        # 3SG
+    'ama': 'a',         # 3SG (short form)
+    'ei': 'i',          # 1PL.INCL
+    'eite': 'i',        # 1PL.INCL
+    'ko': 'ka',         # 1PL.EXCL
+    'kote': 'ka',       # 1PL.EXCL
+    'no': 'na',         # 2PL
+    'note': 'na',       # 2PL
+    # Default for other nouns (3rd person)
+    '_default': 'a',
+}
+
 # Object/direction prefixes
 OBJECT_PREFIXES = {
     'kong': '1SG→3',  # I do to him/them
@@ -2264,6 +2307,69 @@ def analyze_phrase_type(phrase_words: list) -> str:
         return 'adjunctive'
     
     return 'subjective'
+
+
+def check_pronominal_concord(subject: str, verb_prefix: str) -> bool:
+    """
+    Check if a subject noun/pronoun concords with a verbal prefix.
+    
+    Henderson 1965 (pp. 32-33): Pronominal concord distinguishes
+    subjective phrases from adjunctive phrases. Subjective phrases
+    have concord with following predicative phrases; adjunctive
+    phrases do NOT.
+    
+    Args:
+        subject: The subject noun or pronoun
+        verb_prefix: The pronominal prefix on the verb (a, ka, na, i)
+        
+    Returns:
+        True if the subject concords with the prefix
+        
+    Examples:
+        >>> check_pronominal_concord('Dahpa', 'a')
+        True  # 3rd person noun → a-
+        >>> check_pronominal_concord('kei', 'ka')
+        True  # 1SG pronoun → ka-
+        >>> check_pronominal_concord('kei', 'a')
+        False  # 1SG should have ka-, not a-
+    """
+    subject_lower = subject.lower().rstrip('.,;:!?"\'-')
+    
+    # Get expected prefix for this subject
+    if subject_lower in PRONOMINAL_CONCORD:
+        expected = PRONOMINAL_CONCORD[subject_lower]
+    else:
+        # Default: all other nouns are 3rd person
+        expected = PRONOMINAL_CONCORD['_default']
+    
+    return verb_prefix.lower() == expected
+
+
+def extract_verb_prefix(analyzed_gloss: str) -> str:
+    """
+    Extract the pronominal prefix from an analyzed gloss.
+    
+    Args:
+        analyzed_gloss: A gloss string like "3SG-go" or "1SG-have"
+        
+    Returns:
+        The prefix ('a', 'ka', 'na', 'i') or None
+    """
+    prefix_map = {
+        '1SG': 'ka',
+        '2SG': 'na',
+        '3SG': 'a',
+        '1PL.INCL': 'i',
+        '1PL.EXCL': 'ka',
+        '2PL': 'na',
+        '3PL': 'a',
+    }
+    
+    for prefix_gloss, prefix in prefix_map.items():
+        if analyzed_gloss.startswith(prefix_gloss + '-'):
+            return prefix
+    
+    return None
 
 
 def analyze_word(word: str) -> Tuple[str, str]:
