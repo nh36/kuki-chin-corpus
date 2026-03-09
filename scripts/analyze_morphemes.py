@@ -435,6 +435,9 @@ FUNCTION_WORDS = {
     'ung': 'PL.FUT',         # 30x - plural future marker
     'up': 'PL.Q',            # 60x - plural question marker
     
+    # === Military vocabulary ===
+    'kidona': 'sword',       # 56x - sword (not ki-don-a)
+    
     # === Negation ===
     'lo': 'NEG',             # 6,018
     'kei': 'NEG.EMPH',       # 6,487
@@ -1104,6 +1107,7 @@ NOUN_STEMS = {
     'ganbuk': 'fold',        # animal fold/pen
     'kilungso': 'wait.patiently',  # rest in the LORD
     'phuang': 'upright',     # perfect/upright
+    'kidona': 'sword',       # 56x - (not ki-don-a)
     
     # === Additional stems from corpus frequency analysis ===
     # Social/occupational
@@ -7228,7 +7232,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gan': ('gan', 'bear'),                                    # able to bear
         'tul': ('tul', 'foot'),                                    # on foot
         'pipi': ('pi-pi', 'grind-REDUP'),                          # to grind
-        'gal': ('gal', 'little'),                                  # a little
+        'gal': ('gal', 'enemy/war'),                               # enemy/war (not 'little')
+        'kidona': ('kidona', 'sword'),                             # sword (gal-kidona = war-sword)
+        'galkidona': ('gal-kidona', 'war-sword'),                  # sword of war
         'leung': ('le-ung', 'would.God-OPTATIVE'),                 # would God
         'sealt': ('se-alt', 'beast-island'),                       # island beasts
         'kua': ('kua', 'who'),                                     # who
