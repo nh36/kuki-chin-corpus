@@ -518,6 +518,7 @@ VERB_STEMS = {
     'dam': 'be.well',        # health state
     'hoih': 'be.good',       # 641
     'sih': 'die',            # death
+    'sil': 'wipe/erase',     # sil-khia = wipe away
     'nung': 'live',          # life
     'piang': 'be.born',      # birth
     
@@ -590,6 +591,7 @@ VERB_STEMS = {
     'tawp': 'end',
     'ding': 'stand',
     'to': 'sit',
+    'ton': 'pull',           # "pull, draw" (tonsak = cause.to.pull)
     'tut': 'sleep',
     'suk': 'make.become',
     'khen': 'divide',
