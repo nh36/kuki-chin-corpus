@@ -150,6 +150,10 @@ TAM_SUFFIXES = {
     'pa': 'NMLZ.AG',    # Agent nominalizer (one who V-s)
     # Henderson: Experiential/habitual aspect
     'ngei': 'EXP',      # Experiential (have V-ed before, know how to V)
+    # Henderson: Form II (subjunctive) marker - glottal stop suffix
+    # Form II verbs end in -h (glottal) in adjunctive phrases, non-final predicates
+    # E.g., mu → muh, za → zah, pai → paih, bawl → bawlh
+    'h': 'SBJV',        # Form II/Subjunctive marker (glottal stop suffix)
     # Round 154 additions - more suffixes
     'khap': 'forbid',   # Prohibitive
     'suak': 'become',   # Inchoative (become)
@@ -883,6 +887,7 @@ VERB_STEMS = {
     'zawh': 'be.able',       # 178
     'khial': 'err',          # 177
     'nusia': 'abandon',      # 173
+    'nusiat': 'abandon.II',  # Form II of nusia (adjunctive/subjunctive)
     'pil': 'learn',          # 242
     'siam': 'be.skilled',    # 174
     'lup': 'bow.down',       # 140
@@ -915,6 +920,7 @@ VERB_STEMS = {
     'damsak': 'heal',        # dam-sak "well-CAUS"
     'paipih': 'accompany',   # 599 pai-pih "go-APPL"
     'honkhia': 'bring.out',
+    'honkhiat': 'bring.out.II', # Form II of honkhia
     'piangsak': 'cause.birth', # 221
     'tungsak': 'lift.up',    # 197
     'paikhiat': 'send.away', # 202
@@ -953,6 +959,7 @@ VERB_STEMS = {
     'cim': 'pierce',
     'zop': 'join',           # 10x
     'kho': 'labor',          # 10x
+    # Note: khot='labor.II' removed - conflicts with kho-te (labor-PL)
     'puah': 'divine',
     'dokkik': 'oppose',      # 10x
     'dinkhiat': 'stand.up',  # 10x
@@ -1047,6 +1054,7 @@ VERB_STEMS = {
     'ngak': 'wait',          # 102x - Gen 8:12 "stayed", Gen 49:18 "waited"
     'ngam': 'dare',          # 128x - (context shows "venture/dare")
     'hawlkhia': 'drive.out', # 119x - Gen 3:24 "drove out the man"
+    'hawlkhiat': 'drive.out.II', # Form II of hawlkhia
     'vei': 'sick',           # 71x - Gen 25:29 "he was faint" (sick/faint/exhausted)
     'zenzen': 'at.all',      # 53x - intensifier (often with negation "not at all")
     'mengmeng': 'quickly',   # 50x - reduplication "hastily, speedily" (Gen 18:6)
@@ -1077,6 +1085,7 @@ VERB_STEMS = {
     # === Session 2: More verb stems from philological analysis ===
     'kantan': 'cross.over',  # 44x - "cross over, fly across" (vantung kantanin = fly across heaven)
     'sawlkhia': 'send.forth', # 37x - "send forth, expel"
+    'sawlkhiat': 'send.forth.II', # Form II of sawlkhia
     'lumkhawm': 'lie.with',  # 37x - "lie with, sleep with"
     'sepsak': 'serve/work.for', # 35x - "cause to work, serve"
     'khaktan': 'restrain',   # 35x - "restrain, prevent" (khak-tan)
@@ -1097,6 +1106,7 @@ VERB_STEMS = {
     'bei': 'end/finish',     # 32x - "end, finish" (beina = ending)
     'pan': 'plead',          # 32x - "plead, argue for"
     'kido': 'fight',         # 31x - "fight" (galkidona = warfare)
+    'kidot': 'fight.II',     # Form II of kido (adjunctive/subjunctive)
     'ciah': 'return',        # 31x - "return" (ciahsak = send back)
     'khol': 'denounce',      # 31x - "denounce" (genkhol = speak denounce)
     'nuih': 'laugh',         # 31x - "laugh" (nuihsan = laugh at)
@@ -1132,6 +1142,7 @@ VERB_STEMS = {
     'lunggulh': 'delight',       # Ps 68:30 "people that delight in war"
     'tauna': 'mourning',         # Ps 30:11 "turned my mourning into dancing"
     'husia': 'tempest',          # Ps 55:8 "windy storm and tempest"
+    'husiat': 'tempest.II',      # Form II of husia
     'kisut': 'spoil',            # Ps 68:12 "divided the spoil"
     'lip': 'scale',              # Job 41:15 "his scales are his pride"
     'maiphut': 'confront',       # Ps 17:13 "disappoint him" (mai-phut = face-??)
@@ -1178,6 +1189,7 @@ VERB_STEMS = {
     'phialphiah': 'swallow',     # Ps 84:3 "swallow hath found a house"
     'hawktui': 'troubled',       # Prov 25:26 "troubled fountain"
     'dipkua': 'haste',           # Ps 48:5 "troubled, and hasted away"
+    'dipkuat': 'haste.II',       # Form II of dipkua
     'leikeu': 'dry.land',        # Ps 66:6 "turned the sea into dry land"
     'haihuaipi': 'vanity',       # Jer 10:15 "vanity, work of errors"
     'ngik': 'roar',              # Isa 5:30 "roar like the roaring of the sea"
@@ -1297,6 +1309,7 @@ VERB_STEMS = {
     'tuibuak': 'water',       # water (verb - he that watereth)
     'tuatcil': 'trample',     # tread/trample
     'tuahpha': 'quickly',     # found so quickly
+    'tuahphat': 'quickly.II', # Form II of tuahpha
     'vatmai': 'defeat',       # discomfit
     'valkhong': 'redeem',     # redeem the time
     'vawhzo': 'pierce',       # nose pierceth
@@ -1534,6 +1547,7 @@ NOUN_STEMS = {
     'mualtung': 'mountaintop', # mualtungah
     'zawl': 'open.space',    # zawlte
     'gamla': 'wilderness',   # 57
+    'gamlat': 'wilderness.II', # Form II of gamla
     'meikhuk': 'furnace',    # 27x - meikhukah = furnace-LOC (mei=fire + khuk=place)
     
     # Body parts / objects
@@ -1608,6 +1622,7 @@ NOUN_STEMS = {
     'hit': 'that',           # 61
     'khai': 'hold',          # 61
     'keu': 'dig',            # 59
+    # Note: khuat='dig.II' removed - conflicts with khua-te (town-PL)
     'maimang': 'shame',      # 59
     'khah': 'choke',         # 62
     'nakleh': 'otherwise',   # 56
