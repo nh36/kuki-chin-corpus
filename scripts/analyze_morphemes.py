@@ -1001,6 +1001,15 @@ VERB_STEMS = {
     'meiizun': 'night.dew',      # Song 5:2 "locks with drops of the night"
     'logam': 'fruitful.place',   # Jer 4:26 "the fruitful place was a wilderness"
     'kisatnim': 'bruised',       # Isa 53:5 "he was bruised for our iniquities"
+    'phusuakin': 'pass.on',      # Prov 22:3 "the simple pass on, and are punished"
+    'guahciin': 'continual.drip', # Prov 19:13 "continual dropping"
+    'dipkuasak': 'sprinkle',     # Isa 52:15 "so shall he sprinkle many nations"
+    # Note: leilaka removed - conflicts with leilak-ah parsing
+    'phitsan': 'hiss',           # Jer 19:8 "astonished and hiss"
+    'dongsim': 'ask.secretly',   # Jer 37:17 "asked him secretly"
+    'hailawh': 'be.mad',         # Jer 25:16 "drink, and be moved, and be mad"
+    'kimap': 'live/be.saved',    # Jer 38:17 "thy soul shall live"
+    'khelkhiatsak': 'put.out.eyes', # Jer 39:7 "put out Zedekiah's eyes"
     
     # === Session 4 Round 9: More verb stems for -sak causatives ===
     'khialh': 'err/sin',     # khialhsak = cause to sin
