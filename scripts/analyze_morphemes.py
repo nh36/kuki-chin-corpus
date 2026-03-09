@@ -1534,6 +1534,7 @@ NOUN_STEMS = {
     'mualtung': 'mountaintop', # mualtungah
     'zawl': 'open.space',    # zawlte
     'gamla': 'wilderness',   # 57
+    'meikhuk': 'furnace',    # 27x - meikhukah = furnace-LOC (mei=fire + khuk=place)
     
     # Body parts / objects
     'lukhu': 'crown',        # 59
@@ -2594,6 +2595,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'leitungah': ('leitung-ah', 'earth-LOC'),
         'khuapi-ah': ('khuapi-ah', 'city-LOC'),  # hyphenated city
         'tawpna-ah': ('tawpna-ah', 'end.NMLZ-LOC'),  # end/latter
+        'meikhukah': ('meikhuk-ah', 'furnace-LOC'),  # 9x - "furnace, smelting pot"
+        
+        # === Intensifiers/Adverbs ===
+        'dipkuathuai': ('dipkua-thuai', 'terrifying-INTENS'),  # 6x - "very terrible"
+        'lamethuai': ('lamet-huai', 'vanity'),                 # 2x - "vanity, emptiness"
         
         # === Religious vocabulary ===
         'biakbuk': ('biak-buk', 'worship-tent'),  # 112x - sanctuary/tabernacle
