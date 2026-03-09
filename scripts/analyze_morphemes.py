@@ -301,6 +301,38 @@ AMBIGUOUS_MORPHEMES = {
         ('gold', 'standalone'),    # Noun: gold (ngun le kham = silver and gold)
         ('forbid', 'with_ki'),     # Verb: forbid (ki-kham = REFL-forbid)
     ],
+    
+    # hi: 'be' (copula) vs 'DECL' (sentence-final particle)
+    # Henderson 1965: hi is declarative particle sentence-finally
+    # As copula when preceded by subject prefix (ka-hi, a-hi)
+    'hi': [
+        ('DECL', 'sentence_final'),  # Sentence-final declarative particle
+        ('be', 'with_prefix'),       # Copula with pronominal prefix
+    ],
+    
+    # sa: 'flesh' (noun) vs 'PERF' (perfective suffix on verbs)
+    # - 'flesh' standalone or with nominal morphology
+    # - 'PERF' after verb stems (muh-sa = seen, nei-sa = had)
+    'sa': [
+        ('flesh', 'nominal'),        # Noun: flesh, meat, wild game
+        ('PERF', 'after_verb'),      # Perfective aspect after verbs
+    ],
+    
+    # ta: 'child' (noun) vs 'PFV' (perfective aspect)
+    # - 'child' in compounds (ta-pa = son, ta-nu = daughter)
+    # - 'PFV' after verbs (nei-ta = already have)
+    'ta': [
+        ('child', 'nominal'),        # Noun: child, offspring
+        ('PFV', 'after_verb'),       # Perfective aspect marker
+    ],
+    
+    # tung: 'on/upon' (relational noun) vs 'arrive' (verb)
+    # - 'on' when followed by -ah (tung-ah = on-LOC)
+    # - 'arrive' with verbal morphology
+    'tung': [
+        ('on', 'with_ah'),           # Relational noun + LOC
+        ('arrive', 'verbal'),        # Motion verb
+    ],
 }
 
 # Common function words with glosses - expanded with frequencies
@@ -1630,6 +1662,36 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
             return 'forbid'
         # 'gold' as standalone noun
         return 'gold'
+    
+    elif morpheme == 'hi':
+        # 'be' (copula) when preceded by subject prefix
+        if context.get('has_prefix'):
+            return 'be'
+        # 'DECL' sentence-finally (standalone)
+        return 'DECL'
+    
+    elif morpheme == 'sa':
+        # 'PERF' after verb stems
+        if context.get('position') == 'suffix' and context.get('prev_is_verb'):
+            return 'PERF'
+        # 'flesh' as noun
+        return 'flesh'
+    
+    elif morpheme == 'ta':
+        # 'PFV' after verbs (aspect marker)
+        if context.get('position') == 'suffix' and context.get('prev_is_verb'):
+            return 'PFV'
+        # 'child' in nominal compounds (ta-pa, ta-nu)
+        return 'child'
+    
+    elif morpheme == 'tung':
+        # 'on' when followed by -ah
+        if context.get('next_morpheme') == 'ah':
+            return 'on'
+        # 'arrive' as verb
+        if context.get('has_prefix'):
+            return 'arrive'
+        return 'on'  # Default to relational noun
     
     # Default: return first meaning
     return meanings[0][0] if meanings else None
