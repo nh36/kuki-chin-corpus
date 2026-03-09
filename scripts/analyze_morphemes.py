@@ -744,6 +744,86 @@ VERB_STEMS = {
     'lamdang': 'different',  # kilamdang = be different
     'tangval': 'young.man',  # tangvalte = young men
     'pil': 'learn',          # pilvang = be wise
+    # Round 155: add commonly mis-segmented stems
+    'zawng': 'poor',         # zawngkhal = wear.out
+    'zawngkhal': 'tire.out', # tire/wear out
+    'zanei': 'official',     # zanei = palace official/steward
+    'zuihzawh': 'receive',   # zuihzawh = receive/accept (compound verb)
+    'zuihkhak': 'obstruct',  # zuihkhak = obstruct following
+    'zung': 'ring',          # zungbuh = signet ring
+    'zungpi': 'chief.ring',  # large signet ring  
+    'zungthuk': 'engraved.ring', # engraved ring
+    'zukham': 'intoxicated', # zukhamna = drunkenness
+    'zuauthei': 'liar',      # zuautheite = liars
+    'zuauphuah': 'dark.saying', # understanding dark sentences
+    'zelzel': 'repeatedly',  # again and again
+    'zeek': 'account',       # give an account
+    'zuahzuah': 'little.by.little', # reduplication meaning gradually
+    'zualsakin': 'gradually', # another form
+    'vum': 'breath',          # breath of
+    'vokcing': 'swineherd',   # pig keeper
+    'vankisut': 'proud',      # van-kisut = sky-lofty = proud
+    'tuzaw': 'appointed.time', # at the appointed time
+    'tuzawh': 'appointed.time', # variant
+    'tunkhit': 'shut.in',     # trapped/enclosed
+    'tunkhak': 'obstruct',    # block/obstruct
+    'tulak': 'forest',        # wood country
+    'ulenau': 'brethren',     # brothers/brethren
+    'uplah': 'doubt',         # doubt
+    'tuma': 'eloquent',       # able to speak
+    'tukhang': 'this.generation', # from this generation
+    'theu': 'cease',          # stop/satisfy
+    'themcik': 'a.little',    # even a little
+    'thawlpi': 'wine.vat',    # pressfat for wine
+    'thawhbat': 'butter',     # smoother than butter
+    'thanuam': 'diligent',    # hand of the diligent
+    'thaneihteng': 'strength', # my strength
+    'thakbawl': 'rejoice',    # rejoice over
+    'tenkhak': 'dwell',       # sojourn/dwell
+    'teeptum': 'drive.away',  # driven away
+    'tawk': 'be.drunk',       # make drunk
+    'tawizawh': 'spider',     # spider
+    'tamkim': 'upright',      # uprightness
+    'zongpa': 'wisdom',       # getteth wisdom
+    'zingsol': 'morning.star', # morning star
+    'uisan': 'glutton',       # winebibber/riotous eater
+    'tuithuk': 'deep',        # the deep/abyss
+    'tuikhukpi': 'pool',      # pools of water
+    'tuikhu': 'fountain',     # fountain of the deep
+    'tuibuak': 'water',       # water (verb - he that watereth)
+    'tuatcil': 'trample',     # tread/trample
+    'tuahpha': 'quickly',     # found so quickly
+    'vatmai': 'defeat',       # discomfit
+    'valkhong': 'redeem',     # redeem the time
+    'vawhzo': 'pierce',       # nose pierceth
+    'vekun': 'shut.up',       # cities shut up
+    'velval': 'bitter',       # become bitter
+    'zinleleeng': 'temperate', # self-controlled
+    'zinkhia': 'wander',      # wander from
+    'zineih': 'wed',          # wife of youth
+    'zik': 'wife',            # variant of zi (wife)
+    'ziauziau': 'go.about',   # gad about
+    'zavei': 'reproof',       # reproof
+    'zahzahun': 'feathered',  # feathered fowl
+    'zahkona': 'distress',    # distress
+    'tovang': 'dig',          # dig in the wall
+    'tomlam': 'count',        # number our days
+    'tokgawpin': 'divide',    # divided the sea
+    'thusit': 'condemn',      # condemn him
+    'thusel': 'resist',       # resist
+    'thuphawk': 'wise',       # wise men
+    'thupalsat': 'transgressor', # transgressors
+    'thunem': 'restore',      # restore
+    'thuksak': 'plead',       # plead the cause
+    'thukpi': 'flood',        # upon the flood
+    'thukihilh': 'reproof',   # reproof/instruction
+    'thuahkhawm': 'gather',   # gathered (figs)
+    'then': 'thousand',       # thousands of
+    'theipuam': 'herb',       # manner of herbs
+    'thangtat': 'honest',     # walk honestly
+    'thaltawi': 'archer',     # archers hit him
+    'thalsing': 'myrrh',      # smell of myrrh
+    'thalpeu': 'bend',        # bend their tongues
 }
 
 # Noun stems - expanded from corpus frequency analysis
@@ -848,6 +928,8 @@ NOUN_STEMS = {
     'ni': 'day',             # 1,191
     'kum': 'year',           # 868
     'zan': 'night',
+    'zing': 'morning',       # Round 155: add morning (prevents zi-ng mis-segmentation)
+    'zingsang': 'morning',   # full form
     'tawntung': 'forever',   # 679
     'nisuah': 'birth.day',   # 169
     'khang': 'generation',   # 213
@@ -1576,6 +1658,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # === Intensifiers/Emphasis ===
         'mahmah': ('mahmah', 'very'),
         'lungkim': ('lung-kim', 'heart-full'),  # "pleased"
+        'lungzing': ('lung-zing', 'heart-anguish'),  # Round 155: anguish
         'thakhat': ('tha-khat', 'spirit-one'),
         
         # === Quantifier Compounds ===
@@ -1669,6 +1752,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # === Additional plurals ===
         'gilote': ('gilo-te', 'enemy-PL'),
         'dawite': ('dawi-te', 'demon-PL'),
+        'ahite': ('a-hi-te', '3SG-be-PL'),  # Round 155: fix mis-segmentation
         
         # === Adverbial compounds ===
         'nakpitakin': ('nak-pi-tak-in', 'strong-big-exact-ERG'),
