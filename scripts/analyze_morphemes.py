@@ -1705,6 +1705,123 @@ def is_proper_noun(word: str) -> bool:
     # Check both original case and lowercase
     return clean in PROPER_NOUNS or clean.lower() in PROPER_NOUNS or clean[0].isupper()
 
+
+# =============================================================================
+# PHRASE BOUNDARY DETECTION (Henderson 1965)
+# =============================================================================
+#
+# Henderson identifies three phrase types in Tedim Chin:
+# 1. Subjective phrase: Subject NP (pronominal concord with following verb)
+# 2. Predicative phrase: Verb phrase (final in conclusive sentences)
+# 3. Adjunctive phrase: Non-subject NP, adverbial
+#
+# NP boundaries are marked by:
+# - Case suffixes: -in (ERG), -ah (LOC), -tawh (COM)
+# - Postpositions: panin (ABL), sangin (COMP), dong (TERM)
+# - Plural marker: -te (often phrase-final in NPs)
+# - Topic/focus: pen (TOP), zong (INCL), bek (RESTR)
+#
+# =============================================================================
+
+# Phrase boundary markers (suffixes and particles that close NPs)
+PHRASE_BOUNDARY_SUFFIXES = {
+    'in': 'ERG',      # Ergative (transitive subject)
+    'ah': 'LOC',      # Locative
+    'tawh': 'COM',    # Comitative 'with'
+    'pen': 'TOP',     # Topic marker
+    'te': 'PL',       # Plural (often NP-final)
+    'uh': 'PL.AGR',   # Plural agreement (VP marker)
+}
+
+PHRASE_BOUNDARY_WORDS = {
+    'panin': 'ABL',     # Ablative 'from'
+    'sangin': 'COMP',   # Comparative 'than'
+    'dong': 'TERM',     # Terminative 'until'
+    'tungah': 'on-LOC',
+    'sungah': 'inside-LOC',
+    'kiangah': 'beside-LOC',
+    'lakah': 'among-LOC',
+    'maitung': 'before',
+}
+
+
+def is_phrase_boundary(word: str, gloss: str) -> bool:
+    """
+    Check if a word marks a phrase boundary.
+    
+    Args:
+        word: The word form
+        gloss: The analyzed gloss
+        
+    Returns:
+        True if this word ends a phrase (NP or VP)
+    """
+    word_lower = word.lower().rstrip('.,;:!?"\'')
+    
+    # Check if word itself is a boundary marker
+    if word_lower in PHRASE_BOUNDARY_WORDS:
+        return True
+    
+    # Check if gloss ends with a boundary suffix
+    for suffix in PHRASE_BOUNDARY_SUFFIXES:
+        if gloss.endswith(suffix) or gloss.endswith(PHRASE_BOUNDARY_SUFFIXES[suffix]):
+            return True
+    
+    # Sentence-final particles
+    if gloss in ('DECL', 'Q', 'IMP', 'HORT'):
+        return True
+    
+    return False
+
+
+def analyze_sentence(sentence: str) -> list:
+    """
+    Analyze a sentence and return word-by-word analysis with phrase boundaries.
+    
+    Args:
+        sentence: A string of space-separated words
+        
+    Returns:
+        List of tuples: (word, segmentation, gloss, is_boundary)
+    """
+    results = []
+    words = sentence.split()
+    
+    for word in words:
+        seg, gloss = analyze_word(word)
+        boundary = is_phrase_boundary(word, gloss)
+        results.append((word, seg, gloss, boundary))
+    
+    return results
+
+
+def chunk_sentence(sentence: str) -> list:
+    """
+    Chunk a sentence into phrases based on boundary markers.
+    
+    Args:
+        sentence: A string of space-separated words
+        
+    Returns:
+        List of phrases, where each phrase is a list of (word, seg, gloss) tuples
+    """
+    analysis = analyze_sentence(sentence)
+    phrases = []
+    current_phrase = []
+    
+    for word, seg, gloss, is_boundary in analysis:
+        current_phrase.append((word, seg, gloss))
+        if is_boundary:
+            phrases.append(current_phrase)
+            current_phrase = []
+    
+    # Add any remaining words as final phrase
+    if current_phrase:
+        phrases.append(current_phrase)
+    
+    return phrases
+
+
 def analyze_word(word: str) -> Tuple[str, str]:
     """
     Analyze a Tedim word and return (segmentation, gloss).
