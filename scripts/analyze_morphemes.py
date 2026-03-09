@@ -7578,6 +7578,339 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khinta': ('khin-ta', 'move-NMLZ'),                         # given
         'ngakngakna': ('ngak-ngak-na', 'wait-REDUP-NMLZ'),          # waiting
         'tuamtuamte': ('tuam-tuam-te', 'kind-REDUP-PL'),            # after its kind
+        # Round 144: Unknown fixes
+        'lamna': ('lam-na', 'way-NMLZ'),                            # dancing
+        'kiimnai': ('ki-im-nai', 'REFL-stay-near'),                 # none remaining
+        'hehsa': ('heh-sa', 'angry-NMLZ'),                          # anger (kindled)
+        'hutna': ('hut-na', 'escape-NMLZ'),                         # escape/saving
+        'khekna': ('khek-na', 'give.in-NMLZ'),                      # give in exchange
+        'khimsakin': ('khim-sak-in', 'crown-CAUS-INST'),            # put crown
+        'kiphasakte': ('ki-pha-sak-te', 'REFL-good-CAUS-PL'),       # afflicted saved
+        'kisukha': ('ki-suk-ha', 'REFL-move-PERF'),                 # put out
+        'kimawlsak': ('ki-mawl-sak', 'REFL-mock-CAUS'),             # made sport
+        'ngunseek': ('ngun-seek', 'silver-forge'),                  # founder (silversmith)
+        'otsan': ('ot-san', 'cry-voice'),                           # aileth
+        'lanluat': ('lan-luat', 'show-fold'),                       # lewdness
+        'dahmai': ('dah-mai', 'sad-face'),                          # sad countenance
+        # Round 145: High-frequency partial fixes
+        '-': ('-', 'PUNCT'),                                        # 110x - em dash punctuation
+        'mangpa': ('mang-pa', 'chief-father'),                      # 7x - chief captain
+        "mangpa'": ("mang-pa'", 'chief-father.POSS'),               # 7x - chief's
+        'lamna-a': ('lam-na-a', 'way-NMLZ-LOC'),                    # 6x - in the way/direction
+        'kiimnai-a': ('ki-im-nai-a', 'REFL-stay-near-LOC'),         # 6x - at neighboring place
+        'hehsa-in': ('heh-sa-in', 'angry-NMLZ-ERG'),                # 6x - with anger
+        'gan-an': ('gan-an', 'possess-?'),                          # 5x - possessions? (context: substance)
+        'lam-an': ('lam-an', 'way-?'),                              # 5x - way/direction variant
+        'eh': ('eh', 'INTERJ'),                                     # 5x - interjection
+        'hutna-in': ('hut-na-in', 'shelter-NMLZ-ERG'),              # 5x - by refuge
+        'pipi-in': ('pi-pi-in', 'grind-REDUP-ERG'),                 # 5x - by grinding
+        "hi'ng": ("hi-'ng", 'be-EMPH'),                             # 5x - emphatic be
+        # Round 146: More partial fixes
+        "se-alte'": ('se-al-te', 'jackal-PL.POSS'),                  # 4x - jackals'/dragons'
+        'se-alte': ('se-al-te', 'jackal-PL'),                        # jackals/dragons
+        'se-al': ('se-al', 'jackal'),                                # jackal/dragon
+        "kua-a'": ('kua-a', 'who-NOM.POSS'),                         # 3x - who's
+        'khekna-in': ('khek-na-in', 'exchange-NMLZ-ERG'),            # 3x - in exchange
+        "phulapa'": ('phu-la-pa', 'avenger-NMLZ-M.POSS'),            # 3x - avenger's
+        'phulapa': ('phu-la-pa', 'avenge-NMLZ-M'),                   # avenger (of blood)
+        "thahatte'": ('tha-hat-te', 'strength-strong-PL.POSS'),      # 3x - mighty ones'
+        'thahatte': ('tha-hat-te', 'strength-strong-PL'),            # mighty ones
+        "tupa'": ('tu-pa', 'grandson-M.POSS'),                       # 3x - grandson's
+        'tupa': ('tu-pa', 'grandson-M'),                             # grandson
+        "meigongnu'": ('mei-gong-nu', 'fire-alone-F.POSS'),          # 3x - widow's
+        'meigongnu': ('mei-gong-nu', 'fire-alone-F'),                # widow
+        "kilin'": ('ki-lin', 'REFL-shake.POSS'),                     # 3x - quaking's
+        'kilin': ('ki-lin', 'REFL-shake'),                           # quake
+        'kiling': ('ki-ling', 'REFL-shake'),                         # quaked
+        'khe-a': ('khe-a', 'foot-LOC'),                              # 3x - at foot
+        "gulpi'": ('gul-pi', 'serpent-big.POSS'),                    # 3x - serpent's
+        'gulpi': ('gul-pi', 'serpent-big'),                          # serpent
+        "kiphasakte'": ('ki-pha-sak-te', 'REFL-good-CAUS-PL.POSS'),  # 3x - saved ones'
+        "thahatpa'": ('tha-hat-pa', 'strength-strong-M.POSS'),       # 3x - mighty man's
+        'thahatpa': ('tha-hat-pa', 'strength-strong-M'),             # mighty man
+        # Round 147: More 2x partial fixes
+        'gan-an': ('gan-an', 'possess-ERG'),                         # 5x - possessions (substance)
+        'lam-an': ('lam-an', 'way-ERG'),                              # 5x - way/direction 
+        "sungpa'": ('sung-pa', 'inside-M.POSS'),                      # 2x - father-in-law's
+        'sungpa': ('sung-pa', 'inside-M'),                            # father-in-law
+        "kopte'": ('kop-te', 'frog-PL.POSS'),                         # 2x - frogs'
+        'kopte': ('kop-te', 'frog-PL'),                               # frogs
+        "gukte'": ('guk-te', 'lice-PL.POSS'),                         # 2x - lice's
+        'gukte': ('guk-te', 'lice-PL'),                               # lice
+        "lite'": ('li-te', 'river-PL.POSS'),                          # 2x - rivers'
+        'lite': ('li-te', 'river-PL'),                                # rivers
+        "sun'": ('sun', 'day.POSS'),                                  # 2x - day's
+        'mongte-ah': ('mong-te-ah', 'throat-PL-LOC'),                 # 2x - at throats/necks
+        'mongte': ('mong-te', 'throat-PL'),                           # throats/necks
+        'li-a': ('li-a', 'river-LOC'),                                # 2x - at river/four
+        "phakpa'": ('phak-pa', 'able-M.POSS'),                        # 2x - able one's
+        'phakpa': ('phak-pa', 'able-M'),                              # able one
+        "suante-a'": ('suan-te-a', 'descendant-PL-LOC.POSS'),         # 2x - descendants' place
+        'suante': ('suan-te', 'descendant-PL'),                       # descendants/dukes
+        "lehpan'": ('leh-pan', 'change-side.POSS'),                   # 2x - change's
+        "tecite'": ('teci-te', 'witness-PL.POSS'),                    # 2x - witnesses'
+        'tecite': ('teci-te', 'witness-PL'),                          # witnesses
+        "peuhpeuhte'": ('peuh-peuh-te', 'every-REDUP-PL.POSS'),       # 2x - everyone's
+        "tuutalte'": ('tuu-tal-te', 'flock-POSS-PL.POSS'),            # 2x - flocks'
+        'tuutalte': ('tuu-tal-te', 'flock-POSS-PL'),                  # flocks
+        'tau-a': ('tau-a', 'spear-LOC'),                              # 2x - at spear
+        "luite'": ('lui-te', 'river-PL.POSS'),                        # 2x - rivers'
+        'luite': ('lui-te', 'river-PL'),                              # rivers
+        "hangte'": ('hang-te', 'reason-PL.POSS'),                     # 2x - reasons'
+        'hangte': ('hang-te', 'reason-PL'),                           # reasons
+        "kungte'": ('kung-te', 'tree-PL.POSS'),                       # 2x - trees'
+        'kungte': ('kung-te', 'tree-PL'),                             # trees
+        "mavan'": ('ma-van', 'before-sky.POSS'),                      # 2x - beforehand
+        "nihna'": ('nih-na', 'two-NMLZ.POSS'),                        # 2x - second's
+        'suanpa': ('suan-pa', 'descendant-M'),                        # 2x - descendant/duke
+        # Round 148: Large batch of 2x partials
+        'kisukha-in': ('ki-suk-ha-in', 'REFL-move-out-ERG'),          # 2x - put out
+        'kisukha': ('ki-suk-ha', 'REFL-move-out'),                    # put out
+        'dengzanin': ('deng-zan-in', 'cut-break-ERG'),                # 2x - break down
+        'dengzan': ('deng-zan', 'cut-break'),                         # break down
+        'tawsakin': ('taw-sak-in', 'blind-CAUS-ERG'),                 # 2x - smite blind
+        'tawsak': ('taw-sak', 'blind-CAUS'),                          # smite blind
+        'ngeksuak': ('ngek-suak', 'tender-become'),                   # 2x - tender/delicate
+        'tamkham': ('tam-kham', 'many-break'),                        # 2x - broken to pieces
+        'mangkha': ('mang-kha', 'dream-wake'),                        # 2x - dream
+        'ot': ('ot', 'cry.out'),                                      # 2x - cry/wail
+        'kipuksuk': ('ki-puk-suk', 'REFL-fall-move'),                 # 2x - prostrate
+        'phulkhap': ('phul-khap', 'avenge-join'),                     # 2x - avenge
+        'tuaklo': ('tuak-lo', 'encounter-NEG'),                       # 2x - without meeting
+        'seelcipzo': ('seel-cip-zo', 'press-squeeze-COMPL'),          # 2x - pressed
+        'kisiit': ('ki-siit', 'REFL-wipe'),                           # 2x - wipe self
+        'kidiahin': ('ki-diah-in', 'REFL-level-ERG'),                 # 2x - level/even
+        'phualkip': ('phual-kip', 'outside-completely'),              # 2x - completely outside
+        'phulin': ('phul-in', 'avenge-ERG'),                          # 2x - avenging
+        'laphuah': ('la-phuah', 'song-compose'),                      # 2x - compose song
+        'phungmai': ('phung-mai', 'law-face'),                        # 2x - before law
+        'kihui': ('ki-hui', 'REFL-gather'),                           # 2x - gather together
+        'dap': ('dap', 'war'),                                        # 2x - battle/war
+        'kihuiheek': ('ki-hui-heek', 'REFL-gather-scatter'),          # 2x - scatter
+        'tasam': ('ta-sam', 'child-call'),                            # 2x - adopt
+        'guallelh': ('gual-lelh', 'outside-change'),                  # 2x - substitute
+        "mante'": ('man-te', 'price-PL.POSS'),                        # 2x - prices'
+        'mante': ('man-te', 'price-PL'),                              # prices
+        'tazo': ('ta-zo', 'child-COMPL'),                             # 2x - fully born
+        'vuknelh': ('vuk-nelh', 'wash-again'),                        # 2x - wash again
+        'gimbawlin': ('gim-bawl-in', 'difficulty-make-ERG'),          # 2x - make difficulty
+        'giklua': ('gik-lua', 'fall-exceed'),                         # 2x - fall greatly
+        "khangnote'": ('khang-no-te', 'generation-young-PL.POSS'),    # 2x - young generation's
+        'phualte-ah': ('phual-te-ah', 'outside-PL-LOC'),              # 2x - at outside
+        'phiatsiang': ('phiat-siang', 'throw-clean'),                 # 2x - throw away clean
+        'kikhuangin': ('ki-khuang-in', 'REFL-shake-ERG'),             # 2x - shaking
+        'kikhuang': ('ki-khuang', 'REFL-shake'),                      # shake
+        'kisun': ('ki-sun', 'REFL-day'),                              # 2x - daily
+        'manlahin': ('man-lah-in', 'price-take-ERG'),                 # 2x - redeeming
+        'kingamin': ('ki-ngam-in', 'REFL-dare-ERG'),                  # 2x - daring
+        'kulhzangah': ('kulh-zang-ah', 'wall-middle-LOC'),            # 2x - at wall
+        'kikeeksa': ('ki-keek-sa', 'REFL-bend-PAST'),                 # 2x - bowed
+        'tawmto': ('tawm-to', 'short-stay'),                          # 2x - brief stay
+        'gukvei': ('guk-vei', 'louse-time'),                          # 2x - lice time?
+        'lamlah': ('lam-lah', 'way-take'),                            # 2x - lead way
+        'gahto': ('gah-to', 'fruit-stay'),                            # 2x - remain fruit
+        'lehkaih': ('leh-kaih', 'change-turn'),                       # 2x - turn back
+        'tuanthu': ('tuan-thu', 'tell-word'),                         # 2x - tell story
+        "pun'": ('pun', 'multiply.POSS'),                             # 2x - multiply's
+        "semte'": ('sem-te', 'serve-PL.POSS'),                        # 2x - servants'
+        'semte': ('sem-te', 'serve-PL'),                              # servants
+        'khelbawl': ('khel-bawl', 'deceive-make'),                    # 2x - practice deception
+        "kithatte'": ('ki-that-te', 'REFL-kill-PL.POSS'),             # 2x - slain ones'
+        'taigawp': ('tai-gawp', 'flee-cover'),                        # 2x - flee covering
+        'susiapa': ('su-sia-pa', 'enemy-bad-M'),                      # 2x - adversary
+        'lengzong': ('leng-zong', 'king-even'),                       # 2x - even king
+        'kulhkongpi-a': ('kulh-kong-pi-a', 'wall-gate-big-LOC'),      # 2x - at big gate
+        'suangdawk': ('suang-dawk', 'stone-pound'),                   # 2x - pound stone
+        "hen'": ('hen', 'let.POSS'),                                  # 2x - let's
+        # Round 149: More 2x partial fixes
+        'kinawngkaisak': ('ki-nawng-kai-sak', 'REFL-help-turn-CAUS'), # 2x - help turn
+        'lelhtuak': ('lelh-tuak', 'change-meet'),                     # 2x - change meeting
+        'kinuaisiah': ('ki-nuai-siah', 'REFL-below-descend'),         # 2x - descend below
+        'kuppih': ('kup-pih', 'cover-CAUS'),                          # 2x - cause cover
+        'kitamkham': ('ki-tam-kham', 'REFL-many-break'),              # 2x - broken many
+        'phuksakin': ('phuk-sak-in', 'fell-CAUS-ERG'),                # 2x - cause to fall
+        'gukhia-in': ('guk-khia-in', 'louse-exit-ERG'),               # 2x - lice emerge
+        'batsakkik': ('bat-sak-kik', 'bind-CAUS-ITER'),               # 2x - bind again
+        'piangvat': ('piang-vat', 'be.born-time'),                    # 2x - birth time
+        'bawlthuah': ('bawl-thuah', 'make-success'),                  # 2x - make succeed
+        'kitheihthang': ('ki-theih-thang', 'REFL-know-able'),         # 2x - be known
+        'lomte': ('lom-te', 'warm-PL'),                               # 2x - warm ones
+        'kimakai': ('ki-ma-kai', 'REFL-front-reach'),                 # 2x - reach front
+        'tuubukte': ('tuu-buk-te', 'flock-fold-PL'),                  # 2x - sheepfolds
+        'kutna': ('kut-na', 'hand-NMLZ'),                             # 2x - handiwork
+        'kihelkim': ('ki-hel-kim', 'REFL-deceive-complete'),          # 2x - fully deceive
+        'pawlpawl': ('pawl-pawl', 'group-REDUP'),                     # 2x - various groups
+        'kihihna': ('ki-hih-na', 'REFL-be-NMLZ'),                     # 2x - being
+        'zakiasak': ('zak-ia-sak', 'hear.II-NOM-CAUS'),               # 2x - cause hear
+        'kinusiat': ('ki-nu-siat', 'REFL-mother-destroy'),            # 2x - mother destroy
+        'pamte': ('pam-te', 'arm-PL'),                                # 2x - arms
+        'behlephung': ('beh-le-phung', 'tribe-and-family'),           # 2x - tribes families
+        'khekhat': ('khe-khat', 'foot-one'),                          # 2x - one foot
+        'daltuah': ('dal-tuah', 'hinder-success'),                    # 2x - successfully hinder
+        'mangpite': ('mang-pi-te', 'chief-big-PL'),                   # 2x - chief captains
+        'losap': ('lo-sap', 'field-work'),                            # 2x - field work
+        'kisukcipna': ('ki-suk-cip-na', 'REFL-move-press-NMLZ'),      # 2x - pressing
+        'kikanna': ('ki-kan-na', 'REFL-dry-NMLZ'),                    # 2x - drying
+        'kisepna': ('ki-sep-na', 'REFL-work-NMLZ'),                   # 2x - working
+        'thuzaksakna': ('thu-zak-sak-na', 'word-hear-CAUS-NMLZ'),     # 2x - causing hear
+        'telh': ('telh', 'add'),                                      # 2x - add
+        'kipaipihna': ('ki-pai-pih-na', 'REFL-go-CAUS-NMLZ'),         # 2x - going together
+        'semsakkik': ('sem-sak-kik', 'serve-CAUS-ITER'),              # 2x - serve again
+        'siampipihte': ('siam-pi-pih-te', 'skilled-big-CAUS-PL'),     # 2x - skilled ones
+        'tungto': ('tung-to', 'arrive-remain'),                       # 2x - arrive stay
+        'sinin': ('si-nin', 'die-seem'),                              # 2x - seem to die
+        'puakkhawm': ('puak-khawm', 'send-together'),                 # 2x - send together
+        'nungpai': ('nung-pai', 'live-go'),                           # 2x - go living
+        'thakna': ('thak-na', 'new-NMLZ'),                            # 2x - newness
+        'kilawmzah': ('ki-lawm-zah', 'REFL-sufficient-respect'),      # 2x - sufficient respect
+        'kiu-a': ('kiu-a', 'call-LOC'),                               # 2x - at call
+        'kuanun': ('kuan-un', 'carry-PL'),                            # 2x - carry PL
+        'zahzahin': ('zah-zah-in', 'respect-REDUP-ERG'),              # 2x - respectfully
+        'singkhia': ('sing-khia', 'tree-exit'),                       # 2x - tree sprout
+        'gikpi': ('gik-pi', 'fall-big'),                              # 2x - big fall
+        'kisutuah': ('ki-su-tuah', 'REFL-enemy-defeat'),              # 2x - defeat enemy
+        'taseleh': ('ta-se-leh', 'child-small-and'),                  # 2x - and small child
+        'livei': ('li-vei', 'river-time'),                            # 2x - river time
+        "masate'": ('masa-te', 'first-PL.POSS'),                      # 2x - firstborn's
+        'masate': ('masa-te', 'first-PL'),                            # firstborn
+        'kikhawmtuah': ('ki-khawm-tuah', 'REFL-gather-succeed'),      # 2x - gather succeed
+        'tuilim': ('tui-lim', 'water-submerge'),                      # 2x - water submerge
+        'suanglot': ('suang-lot', 'stone-loosen'),                    # 2x - loosen stone
+        'vahsak': ('vah-sak', 'go-CAUS'),                             # 2x - cause go
+        'phulsak': ('phul-sak', 'avenge-CAUS'),                       # 2x - cause avenge
+        'gendai': ('gen-dai', 'speak-hinder'),                        # 2x - hinder speech
+        'sialo': ('sia-lo', 'bad-NEG'),                               # 2x - not bad
+        'ngaihsutsak': ('ngaihsut-sak', 'think-CAUS'),                # 2x - cause think
+        'teltheihna': ('tel-theih-na', 'add-able-NMLZ'),              # 2x - ability to add
+        # Round 150: Final push to 99%
+        'neu-a': ('neu-a', 'small-LOC'),                              # 2x - at small
+        'neu-in': ('neu-in', 'small-ERG'),                            # 2x - with small
+        'neu-et': ('neu-et', 'small-until'),                          # 2x - until small
+        'neu': ('neu', 'small'),                                      # small
+        'tutna-ah': ('tut-na-ah', 'sleep-NMLZ-LOC'),                  # 2x - at sleep
+        'phatna-ah': ('phat-na-ah', 'praise-NMLZ-LOC'),               # 2x - at praise
+        'phatna-in': ('phat-na-in', 'praise-NMLZ-ERG'),               # 2x - with praise
+        'phatna': ('phat-na', 'praise-NMLZ'),                         # praise
+        'hoihna-ah': ('hoih-na-ah', 'good-NMLZ-LOC'),                 # 2x - at goodness
+        'hoihna': ('hoih-na', 'good-NMLZ'),                           # goodness
+        'hihna-ah': ('hih-na-ah', 'be-NMLZ-LOC'),                     # 2x - at being
+        'cianna-ah': ('cian-na-ah', 'announce-NMLZ-LOC'),             # 2x - at announcing
+        'cianna': ('cian-na', 'announce-NMLZ'),                       # announcing
+        'zahtakna-in': ('zahtak-na-in', 'honor-NMLZ-ERG'),            # 2x - with honor
+        'khangno-in': ('khang-no-in', 'generation-young-ERG'),        # 2x - young generation
+        'khangno': ('khang-no', 'generation-young'),                  # young generation
+        'sangzaw-in': ('sang-zaw-in', 'high-more-ERG'),               # 2x - more highly
+        'sangzaw': ('sang-zaw', 'high-more'),                         # higher
+        'zato': ('za-to', 'hear.I-remain'),                           # 2x - remain hearing
+        'sukmang': ('suk-mang', 'make-chief'),                        # 2x - make chief
+        'ahihloh': ('a-hih-loh', '3SG-be-fail'),                      # 2x - if not
+        'thumnop': ('thum-nop', 'three-willing'),                     # 2x - three willing
+        'tengbek': ('teng-bek', 'dwell-only'),                        # 2x - dwell only
+        'phutsak': ('phut-sak', 'spray-CAUS'),                        # 2x - cause spray
+        'hehpihzawh': ('heh-pih-zawh', 'angry-CAUS-able'),            # 2x - able to anger
+        'kiginkholh': ('ki-gin-kholh', 'REFL-fear-wrap'),             # 2x - fearfully wrap
+        'khaisak': ('khai-sak', 'lift-CAUS'),                         # 2x - cause lift
+        'tuamtuama': ('tuam-tuam-a', 'various-REDUP-LOC'),            # 2x - at various
+        'kikhaina': ('ki-khai-na', 'REFL-lift-NMLZ'),                 # 2x - lifting
+        'kitanna': ('ki-tan-na', 'REFL-stand-NMLZ'),                  # 2x - standing
+        'khantohna': ('khan-toh-na', 'spirit-reach-NMLZ'),            # 2x - spiritual reaching
+        'kikhit': ('ki-khit', 'REFL-finish'),                         # 2x - finish self
+        'phehlehna': ('pheh-leh-na', 'throw-back-NMLZ'),              # 2x - throwing back
+        'lawnto': ('lawn-to', 'cross-remain'),                        # 2x - remain crossing
+        'kipaii': ('ki-pai-i', 'REFL-go-NOM'),                        # 2x - going
+        'hepkhiatsak': ('hep-khiat-sak', 'shake-off-CAUS'),           # 2x - shake off
+        'ngeungau': ('ngeu-ngau', 'shake-REDUP'),                     # 2x - shake
+        'mot': ('mot', 'ant'),                                        # 2x - ant
+        'luipi': ('lui-pi', 'river-big'),                             # 2x - big river
+        'khuasikmul': ('khua-sik-mul', 'town-cool-hill'),             # 2x - cool town hill
+        'piangtawm': ('piang-tawm', 'be.born-short'),                 # 2x - born briefly
+        'dahte': ('dah-te', 'sad-PL'),                                # 2x - sad ones
+        'lumletsak': ('lum-let-sak', 'warm-change-CAUS'),             # 2x - cause warm
+        'puksih': ('puk-sih', 'fall-die'),                            # 2x - fall and die
+        'kitawikhai': ('ki-tawi-khai', 'REFL-short-lift'),            # 2x - lift shortly
+        'gikzaw': ('gik-zaw', 'fall-more'),                           # 2x - fall more
+        'kihehnepna': ('ki-heh-nep-na', 'REFL-angry-press-NMLZ'),     # 2x - angry pressing
+        'suksiatgawp': ('suk-siat-gawp', 'make-destroy-cover'),       # 2x - destroy covering
+        'hilhhelh': ('hilh-helh', 'teach-wrong'),                     # 2x - teach wrongly
+        'zungbawh': ('zung-bawh', 'root-spread'),                     # 2x - spread root
+        'zawhzawh': ('zawh-zawh', 'able-REDUP'),                      # 2x - very able
+        'thupi-in': ('thu-pi-in', 'word-big-ERG'),                    # 2x - with big word
+        'dahnate': ('dah-na-te', 'sad-NMLZ-PL'),                      # 2x - sadnesses
+        'paih': ('pai-h', 'go-COMP'),                                 # 2x - go (completed)
+        'thuthukte': ('thu-thuk-te', 'word-deep-PL'),                 # 2x - deep words
+        'vakvaisak': ('vak-vai-sak', 'walk-around-CAUS'),             # 2x - cause walk
+        'dingpi-in': ('ding-pi-in', 'stand-big-ERG'),                 # 2x - standing big
+        'seello': ('seel-lo', 'press-NEG'),                           # 2x - not press
+        'pilnate': ('pil-na-te', 'learn-NMLZ-PL'),                    # 2x - learnings
+        'nialnial': ('nial-nial', 'argue-REDUP'),                     # 2x - argue much
+        'kikhek': ('ki-khek', 'REFL-exchange'),                       # 2x - exchange self
+        'gawlin': ('gawl-in', 'empty-ERG'),                           # 2x - emptily
+        'thuumsak': ('thuum-sak', 'believe-CAUS'),                    # 2x - cause believe
+        'bungbu': ('bung-bu', 'cave-hole'),                           # 2x - cave
+        'kisiah': ('ki-siah', 'REFL-descend'),                        # 2x - descend
+        "nungtate'": ('nungta-te', 'live-PL.POSS'),                   # 2x - living ones'
+        'mialcipsak': ('mial-cip-sak', 'dark-press-CAUS'),            # 2x - cause darken
+        'midangpi': ('mi-dang-pi', 'person-other-big'),               # 2x - great stranger
+        'siakhia': ('sia-khia', 'bad-exit'),                          # 2x - go bad
+        'dangtawng': ('dang-tawng', 'other-language'),                # 2x - other language
+        'zangkha': ('zang-kha', 'use-wake'),                          # 2x - use awake
+        'lamsate': ('lam-sa-te', 'wild-beast-PL'),                    # 2x - wild beasts
+        'duhduh': ('duh-duh', 'want-REDUP'),                          # 2x - much want
+        'keuhkeuh': ('keuh-keuh', 'dig-REDUP'),                       # 2x - dig much
+        'kholsa': ('khol-sa', 'denounce-PAST'),                       # 2x - denounced
+        'khantosak': ('khan-to-sak', 'spirit-stay-CAUS'),             # 2x - spiritual stay
+        'punna': ('pun-na', 'multiply-NMLZ'),                         # 2x - multiplying
+        'kisukmitsak': ('ki-suk-mit-sak', 'REFL-move-eye-CAUS'),      # 2x - cause eye move
+        'buhsi': ('buh-si', 'rice-die'),                              # 2x - rice die
+        'lunggimin': ('lung-gim-in', 'heart-pain-ERG'),               # 2x - with pain
+        'nopnate': ('nop-na-te', 'willing-NMLZ-PL'),                  # 2x - willingnesses
+        'kivuk': ('ki-vuk', 'REFL-wash'),                             # 2x - wash self
+        'taai': ('taai', 'flee'),                                     # 2x - flee
+        'langpan': ('lang-pan', 'side-from'),                         # 2x - from side
+        "tagahte'": ('ta-gah-te', 'child-fruit-PL.POSS'),             # 2x - offspring's
+        'tagahte': ('ta-gah-te', 'child-fruit-PL'),                   # offspring
+        'neihsunte': ('neih-sun-te', 'have-day-PL'),                  # 2x - daily having
+        'gawi-in': ('gawi-in', 'hook-ERG'),                           # 2x - with hook
+        "meigongte'": ('mei-gong-te', 'fire-alone-PL.POSS'),          # 2x - widows'
+        'meigongte': ('mei-gong-te', 'fire-alone-PL'),                # widows
+        'seelcipsak': ('seel-cip-sak', 'press-squeeze-CAUS'),         # 2x - cause press
+        'kisakna': ('ki-sak-na', 'REFL-CAUS-NMLZ'),                   # 2x - causing
+        'leenkhia-in': ('leen-khia-in', 'lean-exit-ERG'),             # 2x - leaning out
+        'kitawh': ('ki-tawh', 'REFL-COM'),                            # 2x - with self
+        'leivuite': ('lei-vui-te', 'earth-dust-PL'),                  # 2x - dusts
+        'tawhvang': ('tawh-vang', 'with-because'),                    # 2x - because with
+        'nomsak': ('nom-sak', 'rest-CAUS'),                           # 2x - cause rest
+        'maigumna': ('mai-gum-na', 'face-bow-NMLZ'),                  # 2x - face bowing
+        'singzung': ('sing-zung', 'tree-trunk'),                      # 2x - tree trunk
+        'sawlkawm': ('sawl-kawm', 'send-together'),                   # 2x - send together
+        'hoihlua': ('hoih-lua', 'good-exceed'),                       # 2x - exceed good
+        'guaksuaksak': ('guak-suak-sak', 'cry-become-CAUS'),          # 2x - cause cry
+        'koihkhong': ('koih-khong', 'put-closed'),                    # 2x - put closed
+        'buisum': ('bui-sum', 'round-three'),                         # 2x - three rounds
+        'ngaingai': ('ngai-ngai', 'listen-REDUP'),                    # 2x - listen well
+        'mawkphat': ('mawk-phat', 'only-reach'),                      # 2x - only reach
+        'limpen': ('lim-pen', 'sign-most'),                           # 2x - most sign
+        'sipak': ('si-pak', 'die-side'),                              # 2x - die aside
+        'cihpih': ('cih-pih', 'say-CAUS'),                            # 2x - cause say
+        'talecin': ('tale-cin', 'wave-move'),                         # 2x - move wave
+        'pilzaw-in': ('pil-zaw-in', 'learn-more-ERG'),                # 2x - learning more
+        'vangliat': ('vang-liat', 'power-strong'),                    # 2x - strong power
+        'hawmpi-in': ('hawm-pi-in', 'join-big-ERG'),                  # 2x - joining big
+        'vialcip': ('vial-cip', 'encircle-press'),                    # 2x - press encircle
+        'taanglua': ('taang-lua', 'poor-exceed'),                     # 2x - exceed poor
+        'uksawnte': ('uk-sawn-te', 'rule-teach-PL'),                  # 2x - ruling teachers
+        "mangte'": ('mang-te', 'chief-PL.POSS'),                      # 2x - chiefs'
+        'mangte': ('mang-te', 'chief-PL'),                            # chiefs
+        "kigin'": ('ki-gin', 'REFL-fear.POSS'),                       # 2x - fearing's
+        'kigin': ('ki-gin', 'REFL-fear'),                             # fearing
+        'kipuahin': ('ki-puah-in', 'REFL-send-ERG'),                  # 2x - sending self
+        'kize-etna': ('ki-zeet-na', 'REFL-rub-NMLZ'),                 # 2x - rubbing
+        'tawngnungah': ('tawng-nung-ah', 'language-after-LOC'),       # 2x - at latter
+        'sagihna-a': ('sagih-na-a', 'seven-NMLZ-LOC'),                # 2x - at seventh
+        'thukna-in': ('thuk-na-in', 'deep-NMLZ-ERG'),                 # 2x - deeply
+        'omlai-un': ('om-lai-un', 'exist-midst-PL'),                  # 2x - in midst PL
+        'paihna': ('paih-na', 'go.COMP-NMLZ'),                        # 2x - going
+        'tuamtuamte-ah': ('tuam-tuam-te-ah', 'various-REDUP-PL-LOC'), # 2x - at various
         # Round 125: Hyphenated suffix forms
         'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # on both shoulders
         'napiun': ('napi-un', 'but-PL.IMP'),                       # but (imperative pl)
