@@ -1023,6 +1023,7 @@ NOUN_STEMS = {
     'aw': 'voice',
     'min': 'name',
     'nam': 'kind/tribe',     # 177
+    'mawhnei': 'sinner',     # 24x - mawh (guilty/sin) + nei (have) = sin-having
     
     # Other common nouns
     'ngeina': 'knowledge',   # 327 ngei-na
@@ -1055,6 +1056,9 @@ NOUN_STEMS = {
     'sang': 'high',          # 209
     'nin': 'day',            # 200 variant
     'bawng': 'cattle',       # 31x + many compounds (bawngtal, bawngpi, etc.)
+    'ganbuk': 'fold',        # animal fold/pen
+    'kilungso': 'wait.patiently',  # rest in the LORD
+    'phuang': 'upright',     # perfect/upright
     
     # === Additional stems from corpus frequency analysis ===
     # Social/occupational
