@@ -7971,6 +7971,70 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zawnahna': ('zawn-ah-na', 'north-LOC-?'),                 # to north
         'lungzina': ('lung-zin-a', 'heart-bright-NOM'),            # brightness
         'khanghamte': ('khang-ham-te', 'generation-old-PL'),       # old ones
+        
+        # Round 152: Hyphenated compound fixes
+        'nini': ('ni-ni', 'day-REDUP'),                            # each day, daily
+        'nini-in': ('ni-ni-in', 'day-REDUP-ERG'),                  # daily (adverbial)
+        'niniin': ('ni-ni-in', 'day-REDUP-ERG'),                   # daily (adverbial) 
+        'temkawi': ('tem-kawi', 'prune-hook'),                     # pruning hook
+        'temkawi-in': ('tem-kawi-in', 'prune-hook-ERG'),           # into pruning hooks
+        'temkawiin': ('tem-kawi-in', 'prune-hook-ERG'),            # into pruning hooks
+        'temkawite': ('tem-kawi-te', 'prune-hook-PL'),             # pruning hooks
+        'kiim': ('kiim', 'around'),                                # surroundings/around
+        'kiim-ah': ('kiim-ah', 'around-LOC'),                      # in surroundings
+        'kiimah': ('kiim-ah', 'around-LOC'),                       # in surroundings
+        'kiima': ('kiim-a', 'around-NOM'),                         # surrounding ones
+        'kiimate': ('kiim-a-te', 'around-NOM-PL'),                 # surrounding ones PL
+        'kiimte': ('kiim-te', 'around-PL'),                        # surroundings PL
+        'kiimte-ah': ('kiim-te-ah', 'around-PL-LOC'),              # in surroundings
+        'lamlianpi': ('lam-lian-pi', 'road-big-INTENS'),           # highway
+        'lamlianpi-ah': ('lam-lian-pi-ah', 'road-big-INTENS-LOC'), # on highway
+        'lamlianpiah': ('lam-lian-pi-ah', 'road-big-INTENS-LOC'),  # on highway
+        'thuthu': ('thu-thu', 'word-REDUP'),                       # secrets/deep things
+        'thuthu-in': ('thu-thu-in', 'word-REDUP-ERG'),             # in secrets
+        'thuthuin': ('thu-thu-in', 'word-REDUP-ERG'),              # in secrets
+        'lohpipi': ('loh-pi-pi', 'not-big-INTENS'),                # great bitterness
+        'lohpipi-in': ('loh-pi-pi-in', 'not-big-INTENS-ERG'),      # bitterly
+        'lohnapi': ('loh-na-pi', 'not-NMLZ-big'),                  # great difficulty
+        'lohnapi-ah': ('loh-na-pi-ah', 'not-NMLZ-big-LOC'),        # in difficulty
+        'bui': ('bui', 'joint'),                                   # joint (shoulder joint)
+        'bui-in': ('bui-in', 'joint-ERG'),                         # from joint
+        'zekna': ('zek-na', 'allocate-NMLZ'),                      # allocation/portion
+        'zekna-ah': ('zek-na-ah', 'allocate-NMLZ-LOC'),            # in allocation
+        'lung-am': ('lung-am', 'heart-?'),                         # feel/sense
+        'nitak-an': ('ni-tak-an', 'day-true-?'),                   # evening time
+        'bawngnawi': ('bawng-nawi', 'cattle-?'),                   # bull/cattle type
+        'bawngnawi-thaukhal': ('bawng-nawi-thau-khal', 'cattle-?-?-?'), # type of offering
+        'kiumcip': ('ki-um-cip', 'REFL-cover-tightly'),            # enclosed/shut up
+        'ki-umcip': ('ki-um-cip', 'REFL-cover-tightly'),           # enclosed/shut up
+        'kitha': ('ki-tha', 'REFL-spread'),                        # scattered/spread
+        'ki-tha': ('ki-tha', 'REFL-spread'),                       # scattered/spread
+        'kiitin': ('ki-it-in', 'REFL-love-ERG'),                   # harmonizing/uniting  
+        'ki-itin': ('ki-it-in', 'REFL-love-ERG'),                  # harmonizing/uniting
+        'kiukin': ('ki-uk-in', 'REFL-rule-ERG'),                   # being ruled
+        'ki-ukin': ('ki-uk-in', 'REFL-rule-ERG'),                  # being ruled
+        'kei-a': ('kei-a', '1SG.EMPH-GEN'),                        # my own (emphatic)
+        'zalhmai': ('zalh-mai', 'settle-INTENS'),                  # settle down/flatten
+        'zalhmai-in': ('zalh-mai-in', 'settle-INTENS-ERG'),        # settling (adv)
+        'zalhmain': ('zalh-mai-in', 'settle-INTENS-ERG'),          # settling (adv)
+        'kawmsa': ('kawm-sa', 'sigh-PAST'),                        # sighed/sighing
+        'kawmsa-in': ('kawm-sa-in', 'sigh-PAST-ERG'),              # sighing (adv)
+        'kawmsain': ('kawm-sa-in', 'sigh-PAST-ERG'),               # sighing (adv)
+        'cilin': ('cil-in', 'thresh-ERG'),                         # threshing (adv)
+        'ci-lin': ('cil-in', 'thresh-ERG'),                        # threshing (adv)
+        'cilna': ('cil-na', 'thresh-NMLZ'),                        # threshing
+        'bawngek': ('bawng-ek', 'cattle-dung'),                    # cow dung
+        'bawng-ek': ('bawng-ek', 'cattle-dung'),                   # cow dung
+        'anpia': ('an-pia', 'PL-give'),                            # they give
+        'anpia-in': ('an-pia-in', 'PL-give-ERG'),                  # giving (them)
+        'lungam': ('lung-am', 'heart-feel'),                       # feel/sense
+        'lung-am': ('lung-am', 'heart-feel'),                      # feel/sense
+        'tumakuak': ('tu-ma-kuak', 'this-also-half'),              # half-measure
+        'tumakuakte': ('tu-ma-kuak-te', 'this-also-half-PL'),      # half-measures
+        'tu-ma-kuakte': ('tu-ma-kuak-te', 'this-also-half-PL'),    # half-measures
+        'nitak': ('ni-tak', 'sun-set'),                            # evening
+        'nitakan': ('ni-tak-an', 'sun-set-time'),                  # evening time
+        'nitak-an': ('ni-tak-an', 'sun-set-time'),                 # evening time
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
@@ -7978,6 +8042,24 @@ def analyze_word(word: str) -> Tuple[str, str]:
         return COMPOUND_WORDS[word_lower]
     if word_no_hyphen_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_no_hyphen_lower]
+    
+    # Handle explicit hyphen before grammatical suffixes (e.g., lauhuai-in, muanhuai-ah)
+    # These are written with explicit hyphen before -in (ERG), -ah (LOC), -a (LOC)
+    HYPHEN_SUFFIXES = {
+        "-a'": 'GEN',      # possessive/genitive with curly quote
+        "-a\u2019": 'GEN', # possessive/genitive with curly quote (unicode)
+        '-in': 'ERG',
+        '-ah': 'LOC', 
+        '-un': 'IMP',      # imperative plural
+        '-a': 'LOC',
+    }
+    for hyph_suffix, suffix_gloss in sorted(HYPHEN_SUFFIXES.items(), key=lambda x: -len(x[0])):
+        if word_lower.endswith(hyph_suffix) or word.endswith(hyph_suffix):
+            stem = word[:-len(hyph_suffix)]
+            stem_result = analyze_word(stem)
+            if stem_result and stem_result[1] and '?' not in stem_result[1]:
+                # Stem fully analyzed, combine with suffix
+                return (f"{stem_result[0]}{hyph_suffix}", f"{stem_result[1]}-{suffix_gloss}")
     
     # Check noun stems (try both forms)
     if word in NOUN_STEMS:
