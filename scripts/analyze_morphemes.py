@@ -8001,10 +8001,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bui-in': ('bui-in', 'joint-ERG'),                         # from joint
         'zekna': ('zek-na', 'allocate-NMLZ'),                      # allocation/portion
         'zekna-ah': ('zek-na-ah', 'allocate-NMLZ-LOC'),            # in allocation
-        'lung-am': ('lung-am', 'heart-?'),                         # feel/sense
-        'nitak-an': ('ni-tak-an', 'day-true-?'),                   # evening time
-        'bawngnawi': ('bawng-nawi', 'cattle-?'),                   # bull/cattle type
-        'bawngnawi-thaukhal': ('bawng-nawi-thau-khal', 'cattle-?-?-?'), # type of offering
+        'lung-am': ('lung-am', 'heart-feel'),                     # feel/sense
+        'nitak-an': ('ni-tak-an', 'day-true-time'),               # evening time
+        'bawngnawi': ('bawng-nawi', 'cattle-bull'),               # bull/cattle type
+        'bawngnawi-thaukhal': ('bawng-nawi-thau-khal', 'cattle-bull-fat-roast'), # type of offering
         'kiumcip': ('ki-um-cip', 'REFL-cover-tightly'),            # enclosed/shut up
         'ki-umcip': ('ki-um-cip', 'REFL-cover-tightly'),           # enclosed/shut up
         'kitha': ('ki-tha', 'REFL-spread'),                        # scattered/spread
@@ -8035,6 +8035,498 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nitak': ('ni-tak', 'sun-set'),                            # evening
         'nitakan': ('ni-tak-an', 'sun-set-time'),                  # evening time
         'nitak-an': ('ni-tak-an', 'sun-set-time'),                 # evening time
+        
+        # Round 153: Comprehensive hyphenated compound fixes
+        # === ki- reflexive/reciprocal compounds ===
+        'ki-enen': ('ki-en-en', 'REFL-look-REDUP'),                 # gaze at each other
+        'kizia': ('ki-zia', 'REFL-crouch'),                        # crouch/lie flat
+        'kizia-in': ('ki-zia-in', 'REFL-crouch-ERG'),              # crouching
+        'kiciangto': ('ki-ciang-to', 'REFL-pile-CONT'),            # pile up/stand firm
+        'kiciangto-in': ('ki-ciang-to-in', 'REFL-pile-CONT-ERG'),  # piling up
+        'ki-atnente': ('ki-at-nen-te', 'REFL-burn-fire-PL'),       # burnt offerings
+        'ki-atkeh': ('ki-at-keh', 'REFL-cut-self'),               # cut self (mourning)
+        'ki-omsakkik': ('ki-om-sak-kik', 'REFL-be-CAUS-again'),    # restore/re-establish
+        'ki-etkik': ('ki-et-kik', 'REFL-care-again'),              # inspect again
+        'kilukhuhsa': ('ki-lu-khuh-sa', 'REFL-head-cover-PAST'),   # covered head
+        'kilukhuhsa-in': ('ki-lu-khuh-sa-in', 'REFL-head-cover-PAST-ERG'), # covering head
+        'ki-up': ('ki-up', 'REFL-expect'),                         # expect/hope
+        'kipumpei': ('ki-pum-pei', 'REFL-body-shake'),             # tremble/shake
+        'kipumpei-in': ('ki-pum-pei-in', 'REFL-body-shake-ERG'),   # trembling
+        'kihoho': ('ki-ho-ho', 'REFL-counsel-REDUP'),              # counsel together
+        'kihoho-in': ('ki-ho-ho-in', 'REFL-counsel-REDUP-ERG'),    # counseling together
+        'kivakna': ('ki-vak-na', 'REFL-walk-NMLZ'),                # roaming/wandering
+        'kivakna-in': ('ki-vak-na-in', 'REFL-walk-NMLZ-ERG'),      # in wandering
+        'kilawnto': ('ki-lawn-to', 'REFL-rise-CONT'),              # rise and fall
+        'kilawnto-in': ('ki-lawn-to-in', 'REFL-rise-CONT-ERG'),    # rising and falling
+        'kilensa': ('ki-len-sa', 'REFL-lean-PAST'),                # leaned on
+        'kilensa-in': ('ki-len-sa-in', 'REFL-lean-PAST-ERG'),      # leaning on
+        'kibotkhia': ('ki-bot-khia', 'REFL-remove-exit'),          # depart/remove
+        'kibotkhia-in': ('ki-bot-khia-in', 'REFL-remove-exit-ERG'), # departing
+        'kibulhsa': ('ki-bulh-sa', 'REFL-arrange-PAST'),           # arranged/set up
+        'kibulhsa-in': ('ki-bulh-sa-in', 'REFL-arrange-PAST-ERG'), # arranging
+        'kinawhsa': ('ki-nawh-sa', 'REFL-push-PAST'),              # pushed out
+        'kinawhsa-in': ('ki-nawh-sa-in', 'REFL-push-PAST-ERG'),    # pushing out
+        'kipuahpha': ('ki-puah-pha', 'REFL-waste-away'),           # pine away/waste
+        'kipuahpha-in': ('ki-puah-pha-in', 'REFL-waste-away-ERG'), # pining away
+        'kikhualna': ('ki-khual-na', 'REFL-guest-NMLZ'),           # sojourning
+        'kikhualna-in': ('ki-khual-na-in', 'REFL-guest-NMLZ-ERG'), # in sojourning
+        'kiphuai': ('ki-phuai', 'REFL-devour'),                    # bite/devour each other
+        'kiphuai-in': ('ki-phuai-in', 'REFL-devour-ERG'),          # devouring
+        'kituhnate': ('ki-tuh-na-te', 'REFL-swear-NMLZ-PL'),       # oaths
+        'kituhnate-ah': ('ki-tuh-na-te-ah', 'REFL-swear-NMLZ-PL-LOC'), # in oaths
+        'kiginna': ('ki-gin-na', 'REFL-wanton-NMLZ'),              # wanton living
+        'kiginna-in': ('ki-gin-na-in', 'REFL-wanton-NMLZ-ERG'),    # living wantonly
+        'ki-ipipna': ('ki-ip-ip-na', 'REFL-strive-REDUP-NMLZ'),    # striving together
+        'ki-ipipna-in': ('ki-ip-ip-na-in', 'REFL-strive-REDUP-NMLZ-ERG'),
+        'kihazatnate': ('ki-hazat-na-te', 'REFL-revel-NMLZ-PL'),   # revelries
+        'kihazatnate-in': ('ki-hazat-na-te-in', 'REFL-revel-NMLZ-PL-ERG'),
+        'kihaza': ('ki-haza', 'REFL-revel'),                       # revel
+        'kihaza-in': ('ki-haza-in', 'REFL-revel-ERG'),             # reveling
+        'kimawlna': ('ki-mawl-na', 'REFL-subdue-NMLZ'),            # subjection
+        'kimawlna-ah': ('ki-mawl-na-ah', 'REFL-subdue-NMLZ-LOC'),  # in subjection
+        'ki-ettelna': ('ki-et-tel-na', 'REFL-test-match-NMLZ'),    # testing
+        'ki-ettel': ('ki-et-tel', 'REFL-test-match'),              # test/examine
+        'ki-ettehin': ('ki-et-teh-in', 'REFL-test-match-ERG'),     # testing
+        'ki-upmawhnate': ('ki-up-mawh-na-te', 'REFL-hope-err-NMLZ-PL'), # offenses
+        'ki-apin': ('ki-ap-in', 'REFL-cry-ERG'),                   # crying out
+        'ki-uktawm': ('ki-uk-tawm', 'REFL-rule-end'),              # end of rule
+        'ki-ipzote': ('ki-ip-zo-te', 'REFL-strive-able-PL'),       # those striving
+        'ki-ipin': ('ki-ip-in', 'REFL-strive-ERG'),                # striving
+        'kikaiawksak': ('ki-kai-awk-sak', 'REFL-gather-all-CAUS'), # cause to gather
+        'kikai-awksak': ('ki-kai-awk-sak', 'REFL-gather-all-CAUS'),
+        'kize-etsa': ('ki-ze-et-sa', 'REFL-tempt-care-PAST'),      # tempted
+        'ki-eu': ('ki-eu', 'REFL-call'),                           # reflexive form
+        'ki-ipcip': ('ki-ip-cip', 'REFL-strive-tightly'),          # strive earnestly
+        'ki-uatsaknate': ('ki-uat-sak-na-te', 'REFL-bind-CAUS-NMLZ-PL'), # causings
+        'ki-enpha': ('ki-en-pha', 'REFL-look-good'),               # look well/prosper
+        'ki-umcihin': ('ki-um-cih-in', 'REFL-cover-tight-ERG'),    # enclosing
+        'kitunsa': ('ki-tun-sa', 'REFL-arrive-PAST'),              # arrived
+        'kitunsa-in': ('ki-tun-sa-in', 'REFL-arrive-PAST-ERG'),    # arriving
+        'kikawi': ('ki-kawi', 'REFL-hook'),                        # hook together
+        'kikawi-in': ('ki-kawi-in', 'REFL-hook-ERG'),              # hooking
+        'ki-atte': ('ki-at-te', 'REFL-burn-PL'),                   # burnt ones
+        'kinungat': ('ki-nung-at', 'REFL-follow-after'),           # follow after
+        'kinung-at': ('ki-nung-at', 'REFL-follow-after'),
+        'ki-itnate': ('ki-it-na-te', 'REFL-love-NMLZ-PL'),         # loves
+        'kisu': ('ki-su', 'REFL-count'),                           # be counted
+        'kisu-in': ('ki-su-in', 'REFL-count-ERG'),
+        'kitheihsakna': ('ki-theih-sak-na', 'REFL-know-CAUS-NMLZ'), # making known
+        'kitheihsakna-ah': ('ki-theih-sak-na-ah', 'REFL-know-CAUS-NMLZ-LOC'),
+        'kitheihsakna-in': ('ki-theih-sak-na-in', 'REFL-know-CAUS-NMLZ-ERG'),
+        'kiphukha': ('ki-phu-kha', 'REFL-wear-put'),               # wear/put on
+        'kiphukha-in': ('ki-phu-kha-in', 'REFL-wear-put-ERG'),
+        'kikokona': ('ki-koko-na', 'REFL-cry.out-NMLZ'),           # crying out
+        'kikokona-in': ('ki-koko-na-in', 'REFL-cry.out-NMLZ-ERG'),
+        'kikolawksak': ('ki-kol-awk-sak', 'REFL-cry-all-CAUS'),
+        'kikol-awksak': ('ki-kol-awk-sak', 'REFL-cry-all-CAUS'),
+        
+        # === Verbal compounds ===
+        'hangkeu': ('hang-keu', 'roast-fire'),                      # roasted
+        'hangkeu-in': ('hang-keu-in', 'roast-fire-ERG'),            # roasting
+        'sapipi': ('sa-pi-pi', 'INTENS-big-REDUP'),                # greatly
+        'sapipi-in': ('sa-pi-pi-in', 'INTENS-big-REDUP-ERG'),      # very greatly
+        'hehsapi': ('heh-sa-pi', 'anger-PAST-big'),                # greatly angered
+        'hehsapi-in': ('heh-sa-pi-in', 'anger-PAST-big-ERG'),      # in great anger
+        'thangzaw': ('thang-zaw', 'bless-more'),                   # bless more
+        'thangzaw-in': ('thang-zaw-in', 'bless-more-ERG'),         # blessing more
+        'ciangpha': ('ciang-pha', 'announce-good'),                # strengthen
+        'ciangpha-in': ('ciang-pha-in', 'announce-good-ERG'),      # strengthening
+        'tampipi': ('tam-pi-pi', 'many-big-REDUP'),                # very many
+        'tampipi-in': ('tam-pi-pi-in', 'many-big-REDUP-ERG'),      # very many (adv)
+        'phengphi': ('pheng-phi', 'testify-against'),              # testify against
+        'phengphi-in': ('pheng-phi-in', 'testify-against-ERG'),    # testifying
+        'zangawp': ('zan-gawp', 'night-break'),                    # broken (heart)
+        'zan-gawp': ('zan-gawp', 'night-break'),
+        'singkungno': ('sing-kung-no', 'tree-trunk-small'),        # young tree
+        'singkungno-in': ('sing-kung-no-in', 'tree-trunk-small-ERG'),
+        'otkhai': ('ot-khai', 'drive-away'),                       # drive away
+        'otkhai-in': ('ot-khai-in', 'drive-away-ERG'),             # driving away
+        'thapai': ('tha-pai', 'pierce-go'),                        # pierce through
+        'thapai-in': ('tha-pai-in', 'pierce-go-ERG'),              # piercing
+        'tuibeem': ('tui-beem', 'water-collect'),                  # cistern/pit
+        'tuibeem-ah': ('tui-beem-ah', 'water-collect-LOC'),        # in cistern
+        'dakkhia': ('dak-khia', 'look-exit'),                      # look out from
+        'dakkhia-in': ('dak-khia-in', 'look-exit-ERG'),            # looking out
+        'hilopi': ('hi-lo-pi', 'be-NEG-big'),                      # not at all
+        'hilopi-in': ('hi-lo-pi-in', 'be-NEG-big-ERG'),            # not at all
+        'mema': ('me-ma', 'grain-handful'),                        # handful
+        'mema-in': ('me-ma-in', 'grain-handful-ERG'),              # by handful
+        'phinna': ('phin-na', 'turn-NMLZ'),                        # turning
+        'phinna-in': ('phin-na-in', 'turn-NMLZ-ERG'),              # in turning
+        'selkhia': ('sel-khia', 'slice-exit'),                     # cut off
+        'selkhia-in': ('sel-khia-in', 'slice-exit-ERG'),           # cutting off
+        'kolhna': ('kolh-na', 'desolate-NMLZ'),                    # desolation
+        'kolhna-ah': ('kolh-na-ah', 'desolate-NMLZ-LOC'),          # in desolation
+        'gawigawi': ('gawi-gawi', 'gnash-REDUP'),                  # gnashing
+        'gawigawi-in': ('gawi-gawi-in', 'gnash-REDUP-ERG'),        # gnashing (adv)
+        'thenthen': ('then-then', 'multiply-REDUP'),               # greatly multiply
+        'thenthen-in': ('then-then-in', 'multiply-REDUP-ERG'),     # multiplying greatly
+        'vakzau': ('vak-zau', 'walk-far'),                         # walk abroad
+        'vakzau-in': ('vak-zau-in', 'walk-far-ERG'),               # walking abroad
+        'khamlua': ('kham-lua', 'forbid-exceed'),                  # forbid too much
+        'khamlua-in': ('kham-lua-in', 'forbid-exceed-ERG'),        # forbidding
+        'mawlnapi': ('mawl-na-pi', 'blunt-NMLZ-big'),              # very blunt
+        'mawlnapi-in': ('mawl-na-pi-in', 'blunt-NMLZ-big-ERG'),    # being very blunt
+        'zankhuavak': ('zan-khua-vak', 'night-town-walk'),         # night revelry
+        'zankhuavak-in': ('zan-khua-vak-in', 'night-town-walk-ERG'),
+        'ngaihnophuai': ('ngaih-nop-huai', 'think-want-full'),     # delightful
+        'ngaihnop-huai': ('ngaih-nop-huai', 'think-want-full'),
+        'suausuau': ('suau-suau', 'chirp-REDUP'),                  # chirping
+        'suausuau-in': ('suau-suau-in', 'chirp-REDUP-ERG'),        # chirping (adv)
+        'dawksa': ('dawk-sa', 'appear-PAST'),                      # appeared/came forth
+        'dawksa-in': ('dawk-sa-in', 'appear-PAST-ERG'),            # appearing
+        'ngato': ('nga-to', 'divine-CONT'),                        # divining/carrying
+        'ngato-in': ('nga-to-in', 'divine-CONT-ERG'),              # divining
+        'puahpha': ('puah-pha', 'divine-good'),                    # repair/restore
+        'puahpha-in': ('puah-pha-in', 'divine-good-ERG'),          # restoring
+        'hiamsa': ('hiam-sa', 'sharpen-PAST'),                     # sharpened
+        'hiamsa-in': ('hiam-sa-in', 'sharpen-PAST-ERG'),           # sharpening
+        'tangawlin': ('tang-awl-in', 'hold-firm-ERG'),             # holding
+        'tang-awlin': ('tang-awl-in', 'hold-firm-ERG'),
+        'mutkhia': ('mut-khia', 'see-exit'),                       # see come out
+        'mutkhia-in': ('mut-khia-in', 'see-exit-ERG'),             # seeing
+        'huaihammawhna': ('huai-ham-mawh-na', 'dread-old-err-NMLZ'), # fearful sin
+        'huaiham-mawhna': ('huai-ham-mawh-na', 'dread-old-err-NMLZ'),
+        'suangtui': ('suang-tui', 'stone-water'),                  # refine/smelt
+        'suangtui-in': ('suang-tui-in', 'stone-water-ERG'),        # refining
+        'pul': ('pul', 'divide'),                                  # divide
+        'pul-in': ('pul-in', 'divide-ERG'),                        # dividing
+        'teltakpi': ('tel-tak-pi', 'certain-true-INTENS'),         # very certainly
+        'teltakpi-in': ('tel-tak-pi-in', 'certain-true-INTENS-ERG'),
+        'letkhia': ('let-khia', 'return-exit'),                    # return out
+        'letkhia-in': ('let-khia-in', 'return-exit-ERG'),          # returning
+        'sukzaw': ('suk-zaw', 'cause-more'),                       # cause more
+        'sukzaw-in': ('suk-zaw-in', 'cause-more-ERG'),             # causing more
+        'zeza': ('ze-za', 'foot-sole'),                            # calf/sole of foot
+        'zeza-in': ('ze-za-in', 'foot-sole-ERG'),                  # by foot
+        'thuhna': ('tuh-na', 'seal-NMLZ'),                         # sealing
+        'thuhna-in': ('tuh-na-in', 'seal-NMLZ-ERG'),               # in sealing
+        'tasuahna': ('ta-suah-na', 'child-born-NMLZ'),             # birth/offspring
+        'tasuahna-in': ('ta-suah-na-in', 'child-born-NMLZ-ERG'),
+        'lipkhaphuai': ('lip-kha-phuai', 'ruin-place-heap'),       # heaps/ruins
+        'lipkhaphuai-in': ('lip-kha-phuai-in', 'ruin-place-heap-ERG'),
+        'luhzo': ('luh-zo', 'enter-able'),                         # able to enter
+        'luhzo-in': ('luh-zo-in', 'enter-able-ERG'),               # entering
+        'thalawhna': ('tha-lawh-na', 'flee-away-NMLZ'),            # fleeing
+        'thalawhna-in': ('tha-lawh-na-in', 'flee-away-NMLZ-ERG'),  # in fleeing
+        'gahta': ('gah-ta', 'pasture-NMLZ'),                       # pasturing
+        'gahta-in': ('gah-ta-in', 'pasture-NMLZ-ERG'),             # pasturing
+        'tuahsia': ('tuah-sia', 'meet-bad'),                       # displease
+        'tuahsia-in': ('tuah-sia-in', 'meet-bad-ERG'),             # displeasing
+        'tuucinna': ('tuucin-na', 'shepherd-NMLZ'),                # shepherding
+        'tuucinna-in': ('tuucin-na-in', 'shepherd-NMLZ-ERG'),      # in shepherding
+        'pozo': ('po-zo', 'spread-able'),                          # able to spread
+        'pozo-in': ('po-zo-in', 'spread-able-ERG'),                # spreading
+        'siapi': ('sia-pi', 'bad-big'),                            # very bad
+        'siapi-in': ('sia-pi-in', 'bad-big-ERG'),                  # very badly
+        'singpua': ('sing-pua', 'tree-fruit'),                     # tree fruit/vine
+        'singpua-in': ('sing-pua-in', 'tree-fruit-ERG'),           # by vine
+        'tuikia': ('tui-kia', 'water-cry'),                        # sound of waters
+        'tuikia-in': ('tui-kia-in', 'water-cry-ERG'),              # with water sound
+        'silhlopi': ('silh-lo-pi', 'clothe-NEG-INTENS'),           # utterly unclothed
+        'silhlopi-in': ('silh-lo-pi-in', 'clothe-NEG-INTENS-ERG'),
+        'nungaktangval': ('nungak-tangval', 'maiden-youth'),       # young men and women
+        'nungak-tangval': ('nungak-tangval', 'maiden-youth'),
+        'thuakma': ('thuak-ma', 'suffer-also'),                    # also suffer
+        'thuakma-in': ('thuak-ma-in', 'suffer-also-ERG'),          # also suffering
+        'mutheisa': ('mu-thei-sa', 'see-able-PAST'),               # could be seen
+        'mutheisa-in': ('mu-thei-sa-in', 'see-able-PAST-ERG'),     # being seen
+        'zuakma': ('zuak-ma', 'sell-also'),                        # also sell
+        'zuakma-in': ('zuak-ma-in', 'sell-also-ERG'),              # also selling
+        'keksa': ('kek-sa', 'foot-PAST'),                          # footed/stepped
+        'keksa-in': ('kek-sa-in', 'foot-PAST-ERG'),                # stepping
+        'mahmahpi': ('mah-mah-pi', 'EMPH-EMPH-INTENS'),            # very very much
+        'mahmahpi-in': ('mah-mah-pi-in', 'EMPH-EMPH-INTENS-ERG'),
+        'zeekte': ('zeek-te', 'crouch-PL'),                        # crouching ones
+        'zeekte-in': ('zeek-te-in', 'crouch-PL-ERG'),
+        'simthei': ('sim-thei', 'count-able'),                     # able to count
+        'simthei-in': ('sim-thei-in', 'count-able-ERG'),           # counting
+        'noptaksa': ('nop-tak-sa', 'want-true-PAST'),              # truly wanted
+        'noptaksa-in': ('nop-tak-sa-in', 'want-true-PAST-ERG'),    # truly wanting
+        'toknawi': ('tok-nawi', 'sit-still'),                      # sitting position
+        'toknawi-in': ('tok-nawi-in', 'sit-still-ERG'),            # sitting
+        'khengto': ('kheng-to', 'divide-CONT'),                    # dividing
+        'khengto-in': ('kheng-to-in', 'divide-CONT-ERG'),          # dividing (adv)
+        'puksakkha': ('puk-sak-kha', 'call-CAUS-out'),             # cause to call
+        'puksakkha-in': ('puk-sak-kha-in', 'call-CAUS-out-ERG'),
+        'peukhia': ('peu-khia', 'cover-exit'),                     # uncover
+        'peukhia-in': ('peu-khia-in', 'cover-exit-ERG'),           # uncovering
+        'uanglua': ('uang-lua', 'elder-exceed'),                   # too proud
+        'uanglua-in': ('uang-lua-in', 'elder-exceed-ERG'),         # too proudly
+        'khahsuahna': ('khah-suah-na', 'choke-out-NMLZ'),          # choking
+        'khahsuahna-in': ('khah-suah-na-in', 'choke-out-NMLZ-ERG'),
+        'vatkhia': ('vat-khia', 'go-exit'),                        # go out
+        'vatkhia-in': ('vat-khia-in', 'go-exit-ERG'),              # going out
+        'khatthu': ('khat-thu', 'one-word'),                       # one matter/thing
+        'khatthu-in': ('khat-thu-in', 'one-word-ERG'),             # in one matter
+        
+        # === Noun compounds ===
+        'luphak': ('lu-phak', 'head-bow'),                         # bow head
+        'lu-phak': ('lu-phak', 'head-bow'),
+        'khaphak': ('kha-phak', 'spirit-reach'),                   # spirit reach
+        'kha-phak': ('kha-phak', 'spirit-reach'),
+        'thukhak': ('thu-khak', 'word-block'),                     # decree/command
+        'thu-khak': ('thu-khak', 'word-block'),
+        'saiikte': ('sa-iik-te', 'flesh-type-PL'),                # flesh types
+        'sa-iikte': ('sa-iik-te', 'flesh-type-PL'),
+        'sabetna': ('sa-bet-na', 'flesh-cut-NMLZ'),                # flesh cutting
+        'sabetna-ah': ('sa-bet-na-ah', 'flesh-cut-NMLZ-LOC'),
+        'sawmahkhatte': ('sawm-ah-khat-te', 'ten-LOC-one-PL'),     # eleven
+        'sawm-ah-khatte': ('sawm-ah-khat-te', 'ten-LOC-one-PL'),
+        'saledite': ('saledi-te', 'gazelle-PL'),                   # gazelles
+        'saledi-te': ('saledi-te', 'gazelle-PL'),
+        'beeluk': ('beel-uk', 'bowl-cover'),                       # covered bowl
+        'beel-uk': ('beel-uk', 'bowl-cover'),
+        'lampangte': ('lam-pang-te', 'road-side-PL'),              # roadsides
+        'lampangte-ah': ('lam-pang-te-ah', 'road-side-PL-LOC'),
+        'sumkoihnate': ('sum-koih-na-te', 'money-place-NMLZ-PL'),  # treasuries
+        'sumkoihnate-ah': ('sum-koih-na-te-ah', 'money-place-NMLZ-PL-LOC'),
+        'vankoihnate': ('van-koih-na-te', 'sky-place-NMLZ-PL'),    # heavenly places
+        'vankoihnate-ah': ('van-koih-na-te-ah', 'sky-place-NMLZ-PL-LOC'),
+        'gambuppi': ('gam-bup-pi', 'land-all-INTENS'),             # whole land
+        'gambuppi-ah': ('gam-bup-pi-ah', 'land-all-INTENS-LOC'),
+        'vaktohna': ('vak-toh-na', 'walk-up-NMLZ'),                # ascending
+        'vaktohna-ah': ('vak-toh-na-ah', 'walk-up-NMLZ-LOC'),
+        'puansilhna': ('puan-silh-na', 'cloth-wear-NMLZ'),         # garment/clothing
+        'puansilhna-ah': ('puan-silh-na-ah', 'cloth-wear-NMLZ-LOC'),
+        'lamneute': ('lam-neu-te', 'road-small-PL'),               # small paths
+        'lamneute-ah': ('lam-neu-te-ah', 'road-small-PL-LOC'),
+        'lamkabomte': ('lam-ka-bom-te', 'road-mouth-junction-PL'), # crossroads
+        'lamkabomte-ah': ('lam-ka-bom-te-ah', 'road-mouth-junction-PL-LOC'),
+        'hanthotnate': ('han-thot-na-te', 'strength-grow-NMLZ-PL'), # strengthening
+        'hanthotnate-ah': ('han-thot-na-te-ah', 'strength-grow-NMLZ-PL-LOC'),
+        'suatna': ('suat-na', 'redeem-NMLZ'),                      # redemption
+        'suatna-ah': ('suat-na-ah', 'redeem-NMLZ-LOC'),
+        'belna': ('bel-na', 'lick-NMLZ'),                          # licking
+        'belna-ah': ('bel-na-ah', 'lick-NMLZ-LOC'),
+        'khopna': ('khop-na', 'labor-NMLZ'),                       # labor/toil
+        'khopna-ah': ('khop-na-ah', 'labor-NMLZ-LOC'),
+        'phaksakna': ('phak-sak-na', 'reach-CAUS-NMLZ'),           # causing to reach
+        'phaksakna-ah': ('phak-sak-na-ah', 'reach-CAUS-NMLZ-LOC'),
+        'zumhuaina': ('zum-huai-na', 'trust-full-NMLZ'),           # faithfulness
+        'zumhuaina-teng': ('zum-huai-na-teng', 'trust-full-NMLZ-all'),
+        'kulhpua': ('kulh-pua', 'wall-outside'),                   # outer wall
+        'kulhpua-ah': ('kulh-pua-ah', 'wall-outside-LOC'),
+        'tanungak': ('ta-nu-ngak', 'child-female-young'),          # maiden daughter
+        'tanu-ngak': ('ta-nu-ngak', 'child-female-young'),
+        'geite': ('gei-te', 'shore-PL'),                           # shores
+        'geite-ah': ('gei-te-ah', 'shore-PL-LOC'),
+        'pawpite': ('pawpi-te', 'church-PL'),                      # churches
+        'pawpite-ah': ('pawpi-te-ah', 'church-PL-LOC'),
+        'khuaate': ('khua-a-te', 'town-NOM-PL'),                   # town ones
+        'khua-ate': ('khua-a-te', 'town-NOM-PL'),
+        'khitate': ('khit-a-te', 'after-NOM-PL'),                  # later ones
+        'khit-ate': ('khit-a-te', 'after-NOM-PL'),
+        'innate': ('inn-a-te', 'house-NOM-PL'),                    # house ones
+        'inn-ate': ('inn-a-te', 'house-NOM-PL'),
+        'maiate': ('mai-a-te', 'face-NOM-PL'),                     # front ones
+        'mai-ate': ('mai-a-te', 'face-NOM-PL'),
+        'vaakonte': ('va-ak-no-te', 'go-NOM-young-PL'),            # young birds
+        'va-aknote': ('va-ak-no-te', 'go-NOM-young-PL'),
+        'bualte': ('bual-te', 'garden-PL'),                        # gardens
+        'bualte-a': ('bual-te-a', 'garden-PL-NOM'),
+        'diphumna': ('dip-hum-na', 'dip-place-NMLZ'),              # dipping place
+        'dip-humna': ('dip-hum-na', 'dip-place-NMLZ'),
+        'zonna': ('zo-na', 'finish-NMLZ'),                         # finishing
+        'zo-na': ('zo-na', 'finish-NMLZ'),
+        
+        # === Other compounds ===
+        'balnensa': ('bal-nen-sa', 'owe-bake-PAST'),              # owed (baked offering)
+        'balnensa-in': ('bal-nen-sa-in', 'owe-bake-PAST-ERG'),
+        'balkeksa': ('bal-kek-sa', 'owe-fry-PAST'),              # owed (fried offering)
+        'balkeksa-in': ('bal-kek-sa-in', 'owe-fry-PAST-ERG'),
+        'anpalanlum': ('an-pal-an-lum', 'PL-side-PL-soft'),        # they on soft side
+        'anpal-anlum': ('an-pal-an-lum', 'PL-side-PL-soft'),
+        'kaaito': ('ka-ai-to', '1SG-go-CONT'),                     # I keep going
+        'kaaito-in': ('ka-ai-to-in', '1SG-go-CONT-ERG'),
+        'kawkkhia': ('kawk-khia', 'call-exit'),                    # call out
+        'kawkkhia-in': ('kawk-khia-in', 'call-exit-ERG'),
+        'olin': ('ol-in', 'easy-ERG'),                             # easily
+        'ol-in': ('ol-in', 'easy-ERG'),
+        'tumasiah': ('tu-ma-siah', 'this-also-like'),              # like this also
+        'tumasiah-a': ('tu-ma-siah-a', 'this-also-like-NOM'),
+        'zeol': ('ze-ol', 'tempt-easy'),                           # easily tempted
+        'ze-ol': ('ze-ol', 'tempt-easy'),
+        'zeetnate': ('ze-et-na-te', 'tempt-care-NMLZ-PL'),         # temptations
+        'ze-etnate': ('ze-et-na-te', 'tempt-care-NMLZ-PL'),
+        'tangpiun': ('tang-pi-un', 'hold-big-IMP'),                # hold firmly
+        'tangpi-un': ('tang-pi-un', 'hold-big-IMP'),
+        'naunungzuite': ('nau-nung-zui-te', 'child-after-follow-PL'), # followers
+        'nau-nungzuite': ('nau-nung-zui-te', 'child-after-follow-PL'),
+        'khuzaw': ('khu-zaw', 'cold-more'),                        # colder
+        'khuzaw-in': ('khu-zaw-in', 'cold-more-ERG'),
+        'maietin': ('mai-et-in', 'face-care-ERG'),                 # looking at
+        'mai-etin': ('mai-et-in', 'face-care-ERG'),
+        'cimmai': ('cim-mai', 'pierce-face'),                      # pierce through
+        'cimmai-in': ('cim-mai-in', 'pierce-face-ERG'),
+        'zinna': ('zin-na', 'wife-NMLZ'),                          # marriage
+        'zinna-in': ('zin-na-in', 'wife-NMLZ-ERG'),
+        'khuakhua': ('khua-khua', 'town-REDUP'),                   # every town
+        'khuakhua-in': ('khua-khua-in', 'town-REDUP-ERG'),
+        'ngawngawhte': ('ngawng-awh-te', 'neck-bend-PL'),          # bent necks
+        'ngawng-awhte': ('ngawng-awh-te', 'neck-bend-PL'),
+        'huau': ('hu-au', 'grandparent-male'),                    # grandfather
+        'huau-in': ('hu-au-in', 'grandparent-male-ERG'),
+        'ciahpihto': ('ciah-pih-to', 'return-all-CONT'),           # returning
+        'ciahpihto-in': ('ciah-pih-to-in', 'return-all-CONT-ERG'),
+        'lialua': ('lia-lua', 'exceed-exceed'),                    # greatly exceed
+        'lialua-in': ('lia-lua-in', 'exceed-exceed-ERG'),
+        'sikkeukathum': ('sik-keu-ka-thum', 'turn-back-and-three'), # threefold turning
+        'sikkeu-ka-thum': ('sik-keu-ka-thum', 'turn-back-and-three'),
+        'lungmuanhuai': ('lung-muan-huai', 'heart-trust-full'),    # confidence
+        'lungmuanhuai-in': ('lung-muan-huai-in', 'heart-trust-full-ERG'),
+        'gegupi': ('ge-gu-pi', 'jaw-bone-big'),                    # large jaw
+        'gegupi-in': ('ge-gu-pi-in', 'jaw-bone-big-ERG'),
+        'khawngai': ('khawng-ai', 'pity-love'),                    # be merciful
+        'khawngai-in': ('khawng-ai-in', 'pity-love-ERG'),
+        'sawi': ('sa-wi', 'flesh-part'),                          # meat
+        'sawi-in': ('sa-wi-in', 'flesh-part-ERG'),
+        'bawlzaw': ('bawl-zaw', 'make-more'),                      # make more
+        'bawlzaw-in': ('bawl-zaw-in', 'make-more-ERG'),
+        'kongkalai': ('kong-ka-lai', 'mouth-1SG-midst'),           # in my speech
+        'kongkalai-ah': ('kong-ka-lai-ah', 'mouth-1SG-midst-LOC'),
+        'hetchiai': ('het-chiai', 'strong-very'),                  # strongly
+        'hetchiai-in': ('het-chiai-in', 'strong-very-ERG'),
+        'vatakum': ('va-tak-um', 'go-true-cover'),                 # truly go
+        'vatak-um': ('va-tak-um', 'go-true-cover'),
+        'nawkpai': ('nawk-pai', 'again-go'),                       # go again
+        'nawkpai-in': ('nawk-pai-in', 'again-go-ERG'),
+        'sikhiau': ('sik-hiau', 'turn-back'),                      # turn around
+        'sik-hiau': ('sik-hiau', 'turn-back'),
+        'siket': ('sik-et', 'turn-care'),                          # look around
+        'sik-et': ('sik-et', 'turn-care'),
+        'sikawmdal': ('sik-awm-dal', 'turn-be-still'),             # turn/repent
+        'sik-awmdal': ('sik-awm-dal', 'turn-be-still'),
+        'sikek': ('sik-ek', 'turn-?'),                             # turn
+        'sik-ek': ('sik-ek', 'turn-?'),
+        'vaite': ('vai-te', 'affairs-PL'),                         # affairs
+        'vaite-ah': ('vai-te-ah', 'affairs-PL-LOC'),
+        'muamuaana': ('mua-mua-a-na', 'see-REDUP-NOM-NMLZ'),       # viewing
+        'muamua-na': ('mua-mua-na', 'see-REDUP-NMLZ'),
+        'cilei': ('ci-lei', 'say-buy'),                            # say/buy
+        'ci-lei': ('ci-lei', 'say-buy'),
+        'savunum': ('sa-vun-um', 'flesh-skin-?'),                  # leather
+        'savun-um': ('sa-vun-um', 'flesh-skin-?'),
+        'holam': ('hol-am', 'south-?'),                            # southward
+        'hol-am': ('hol-am', 'south-?'),
+        'kineuet': ('ki-neu-et', 'REFL-small-care'),               # humble self
+        'kineu-et': ('ki-neu-et', 'REFL-small-care'),
+        'kimasialh': ('ki-ma-sialh', 'REFL-face-?'),               # ashamed
+        'kima-sialh': ('ki-ma-sialh', 'REFL-face-?'),
+        'lawtkhia': ('lawt-khia', 'jump-exit'),                    # jump out
+        'lawtkhia-in': ('lawt-khia-in', 'jump-exit-ERG'),
+        'tuka': ('tu-ka', 'now-1SG'),                              # now I
+        'tu-ka': ('tu-ka', 'now-1SG'),
+        'vasakalaohte': ('va-sa-kala-oh-te', 'bird-flesh-owl-type-PL'), # owls
+        'vasa-kalaohte': ('va-sa-kala-oh-te', 'bird-flesh-owl-type-PL'),
+        "vasa-kalaohte'": ("va-sa-kala-oh-te'", 'bird-flesh-owl-type-PL.POSS'),
+        'pahtakhuai': ('pah-ta-khuai', 'father-child-?'),          # fatherhood
+        'pahtakhuai-in': ('pah-ta-khuai-in', 'father-child-?-ERG'),
+        'takhuai': ('ta-khuai', 'child-?'),                        # childhood
+        'ta-khuai': ('ta-khuai', 'child-?'),
+        'nalnah': ('nal-na-ah', '2SG-NMLZ-LOC'),                   # your place
+        'nalna-ah': ('nal-na-ah', '2SG-NMLZ-LOC'),
+        'huiah': ('hui-ah', 'wind-LOC'),                           # in wind
+        'hui-ah': ('hui-ah', 'wind-LOC'),
+        'noahtaak': ('noah-taak', 'NOAH-true'),                    # Noah truly
+        'noah-taak': ('noah-taak', 'NOAH-true'),
+        'mithah': ('mit-hah', 'eye-?'),                            # blind
+        'mit-hah': ('mit-hah', 'eye-?'),
+        'kawmpi': ('kawm-pi', 'sigh-big'),                         # sigh greatly
+        'kawmpi-in': ('kawm-pi-in', 'sigh-big-ERG'),
+        'nakpipi': ('nak-pi-pi', '2SG-big-REDUP'),                 # your greatness
+        'nakpipi-in': ('nak-pi-pi-in', '2SG-big-REDUP-ERG'),
+        'awngawng': ('awng-awng', 'open-REDUP'),                   # wide open
+        'awng-awng': ('awng-awng', 'open-REDUP'),
+        'tedildel': ('te-dil-del', 'PL-?-?'),                      # scattered
+        'te-dildel': ('te-dil-del', 'PL-?-?'),
+        'tusawnsawn': ('tu-sawn-sawn', 'now-time-REDUP'),          # now repeatedly
+        'tu-sawnsawn': ('tu-sawn-sawn', 'now-time-REDUP'),
+        'nuaiet': ('nuai-et', 'below-care'),                       # look down
+        'nuai-et': ('nuai-et', 'below-care'),
+        'lenpihto': ('len-pih-to', 'lean-all-CONT'),               # leaning
+        'lenpihto-in': ('len-pih-to-in', 'lean-all-CONT-ERG'),
+        'awzol': ('aw-zol', 'voice-weak'),                         # voice weak
+        'aw-zol': ('aw-zol', 'voice-weak'),
+        'hiloto': ('hi-lo-to', 'be-NEG-CONT'),                     # not being
+        'hito-in': ('hi-to-in', 'be-CONT-ERG'),                    # being
+        'zileta': ('zi-le-ta', 'wife-and-child'),                  # wife and child
+        'zileta-in': ('zi-le-ta-in', 'wife-and-child-ERG'),
+        'zinlinna': ('zin-lin-na', 'wife-dwell-NMLZ'),             # marriage
+        'zinlinna-a': ('zin-lin-na-a', 'wife-dwell-NMLZ-NOM'),
+        'innpua': ('inn-pua', 'house-outside'),                    # outside house
+        'innpua-ah': ('inn-pua-ah', 'house-outside-LOC'),
+        'cialna': ('cial-na', 'say-NMLZ'),                         # saying
+        'cialna-in': ('cial-na-in', 'say-NMLZ-ERG'),
+        'sunan': ('sun-an', 'day-time'),                           # daytime
+        'sun-an': ('sun-an', 'day-time'),
+        'dakto': ('dak-to', 'look-CONT'),                          # looking
+        'dakto-in': ('dak-to-in', 'look-CONT-ERG'),
+        'dein': ('de-in', 'say-ERG'),                              # saying
+        'de-in': ('de-in', 'say-ERG'),
+        'mutpai': ('mut-pai', 'see-go'),                           # go see
+        'mutpai-in': ('mut-pai-in', 'see-go-ERG'),
+        'mihaipi': ('mi-hai-pi', 'person-wise-big'),               # very wise person
+        'mihaipi-in': ('mi-hai-pi-in', 'person-wise-big-ERG'),
+        'lungamin': ('lung-am-in', 'heart-feel-ERG'),              # feeling
+        'lung-amin': ('lung-am-in', 'heart-feel-ERG'),
+        'tailahpi': ('tai-lah-pi', 'flee-?-big'),                  # flee greatly
+        'tailahpi-in': ('tai-lah-pi-in', 'flee-?-big-ERG'),
+        'gukha': ('gu-kha', 'leg-?'),                              # leg bone
+        'gu-kha': ('gu-kha', 'leg-?'),
+        'kahpihto': ('kah-pih-to', '1SG-accompany-CONT'),          # I accompanying
+        'kahpihto-in': ('kah-pih-to-in', '1SG-accompany-CONT-ERG'),
+        'eukhia': ('eu-khia', 'call-exit'),                        # call out
+        'eukhia-in': ('eu-khia-in', 'call-exit-ERG'),
+        'kaiiin': ('ka-ii-in', '1SG-?-ERG'),                       # I...
+        'kaii-in': ('ka-ii-in', '1SG-?-ERG'),
+        'atulmakin': ('a-tul-ma-kin', '3SG-?-also-?'),             # he also
+        'atul-amakin': ('a-tul-ama-kin', '3SG-?-3PL-?'),
+        'bilapphuai': ('bil-ap-phuai', 'ear-close-?'),             # deaf
+        'bil-aphuai': ('bil-ap-phuai', 'ear-close-?'),
+        'langet': ('lang-et', 'side-care'),                        # look at side
+        'lang-et': ('lang-et', 'side-care'),
+        'singat': ('sing-at', 'tree-burn'),                        # burn wood
+        'sing-at': ('sing-at', 'tree-burn'),
+        'genkikina': ('gen-ki-kin-a', 'say-REFL-again-NOM'),        # saying again
+        'genkikin-ah': ('gen-ki-kin-ah', 'say-REFL-again-LOC'),
+        'saamek': ('saam-ek', 'hair-fur'),                          # hair/fur
+        'saam-ek': ('saam-ek', 'hair-fur'),
+        # Final hyphenated fixes
+        'mithah': ('mit-hah', 'eye-blind'),                         # blind
+        'mit-hah': ('mit-hah', 'eye-blind'),
+        'tedildel': ('te-dil-del', 'PL-shake-REDUP'),               # scattered
+        'te-dildel': ('te-dil-del', 'PL-shake-REDUP'),
+        'savunum': ('sa-vun-um', 'flesh-skin-cover'),               # leather
+        'savun-um': ('sa-vun-um', 'flesh-skin-cover'),
+        'sikek': ('sik-ek', 'turn-dung'),                           # turn (variant)
+        'sik-ek': ('sik-ek', 'turn-dung'),
+        'holam': ('hol-am', 'south-ward'),                          # southward
+        'hol-am': ('hol-am', 'south-ward'),
+        'kimasialh': ('ki-ma-sialh', 'REFL-face-shame'),            # ashamed
+        'kima-sialh': ('ki-ma-sialh', 'REFL-face-shame'),
+        'kituahnate': ('ki-tuah-na-te', 'REFL-meet-NMLZ-PL'),       # meetings/oaths
+        'kituahnate-ah': ('ki-tuah-na-te-ah', 'REFL-meet-NMLZ-PL-LOC'),
+        'pahtakhuai': ('pah-ta-khuai', 'father-child-love'),        # fatherly love
+        'pahtakhuai-in': ('pah-ta-khuai-in', 'father-child-love-ERG'),
+        'takhuai': ('ta-khuai', 'child-love'),                      # love for child
+        'ta-khuai': ('ta-khuai', 'child-love'),
+        'kisiamaimang': ('ki-sia-mai-mang', 'REFL-bad-face-vanish'), # ashamed
+        'kisia-maimang': ('ki-sia-mai-mang', 'REFL-bad-face-vanish'),
+        'khanlai': ('khan-lai', 'time-midst'),                      # meanwhile
+        'khanlai-in': ('khan-lai-in', 'time-midst-ERG'),
+        'tailahpi': ('tai-lah-pi', 'flee-far-INTENS'),              # flee greatly
+        'tailahpi-in': ('tai-lah-pi-in', 'flee-far-INTENS-ERG'),
+        'gukha': ('gu-kha', 'leg-bone'),                            # leg bone
+        'gu-kha': ('gu-kha', 'leg-bone'),
+        'bilaphuai': ('bil-ap-huai', 'ear-close-full'),             # deaf
+        'bil-aphuai': ('bil-ap-huai', 'ear-close-full'),
+        'kaiiin': ('ka-ii-in', '1SG-go-ERG'),                       # I going
+        'kaii-in': ('ka-ii-in', '1SG-go-ERG'),
+        'atulamakin': ('a-tul-ama-kin', '3SG-follow-3PL-also'),     # he also follows them
+        'atul-amakin': ('a-tul-ama-kin', '3SG-follow-3PL-also'),
+        'sekhei': ('sek-hei', 'rest-place'),                        # resting place
+        'sek-hei': ('sek-hei', 'rest-place'),
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
