@@ -1506,29 +1506,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
     # This handles cases like 'ki-ap' vs 'kiap', 'pua-in' vs 'puain'
     word_no_hyphen = word.replace('-', '')
     
-    # Check if proper noun
-    if is_proper_noun(word):
-        return (word, word.upper())
-    
-    
-    # Check for proper noun + suffix patterns (israel-te, jerusalem-ah, etc.)
-    word_lower = word.lower()
-    proper_suffixes = {
-        '-te': 'PL',      # plural
-        '-ah': 'LOC',     # locative  
-        '-a': 'LOC',      # short locative
-        '-in': 'ERG',     # ergative
-        'te': 'PL',       # without hyphen
-        'ah': 'LOC',      # without hyphen
-    }
-    for suffix, gloss in sorted(proper_suffixes.items(), key=lambda x: -len(x[0])):
-        if word_lower.endswith(suffix):
-            base = word[:-len(suffix)]
-            base_clean = base.rstrip('-')  # Remove trailing hyphen if present
-            if base_clean.lower() in PROPER_NOUNS or base_clean in PROPER_NOUNS:
-                return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_clean.upper()}-{gloss}")
-    
-    # Check function words first (full match)
+    # Check function words FIRST (before proper noun check)
+    # This ensures 'Tua' (sentence-initial 'that') isn't treated as proper noun
     word_lower = word.lower()
     word_no_hyphen_lower = word_no_hyphen.lower()
     
@@ -1548,6 +1527,26 @@ def analyze_word(word: str) -> Tuple[str, str]:
         return (word, FUNCTION_WORDS[word_lower])
     if word_no_hyphen_lower in FUNCTION_WORDS:
         return (word, FUNCTION_WORDS[word_no_hyphen_lower])
+    
+    # Check if proper noun (only AFTER function words check)
+    if is_proper_noun(word):
+        return (word, word.upper())
+    
+    # Check for proper noun + suffix patterns (israel-te, jerusalem-ah, etc.)
+    proper_suffixes = {
+        '-te': 'PL',      # plural
+        '-ah': 'LOC',     # locative  
+        '-a': 'LOC',      # short locative
+        '-in': 'ERG',     # ergative
+        'te': 'PL',       # without hyphen
+        'ah': 'LOC',      # without hyphen
+    }
+    for suffix, gloss in sorted(proper_suffixes.items(), key=lambda x: -len(x[0])):
+        if word_lower.endswith(suffix):
+            base = word[:-len(suffix)]
+            base_clean = base.rstrip('-')  # Remove trailing hyphen if present
+            if base_clean.lower() in PROPER_NOUNS or base_clean in PROPER_NOUNS:
+                return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_clean.upper()}-{gloss}")
     
     # Handle possessive marker ' or ' (curly quote) at end of word
     # Common pattern: Topa' = "Lord's", mite' = "people's", pa' = "father's"
