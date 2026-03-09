@@ -195,10 +195,40 @@ NOMINALIZERS = {
 }
 
 # =============================================================================
-# AMBIGUOUS MORPHEMES - Multiple meanings with contextual disambiguation
+# AMBIGUOUS MORPHEMES - Contextual Disambiguation System
 # =============================================================================
-# Format: morpheme -> list of (meaning, context_description)
-# The analyze_word function will use context to select the appropriate meaning
+#
+# PURPOSE:
+# This system handles morphemes with multiple meanings (polysemy) by selecting
+# the contextually appropriate gloss. Without this, single-gloss dictionaries
+# would assign incorrect meanings to common words.
+#
+# ARCHITECTURE:
+# 1. AMBIGUOUS_MORPHEMES dict: Lists all meanings for each polysemous morpheme
+#    Format: morpheme -> [(meaning1, context_desc), (meaning2, context_desc), ...]
+#
+# 2. disambiguate_morpheme() function: Applies contextual rules to select meaning
+#    Uses context dict with keys: position, prev_morpheme, next_morpheme,
+#    has_prefix, has_suffix, has_ki_prefix, in_compound
+#
+# INTEGRATION:
+# - For standalone words: Called in analyze_word() before FUNCTION_WORDS lookup
+# - For morphemes in compounds: Called when stripping prefixes/suffixes
+# - Context is built from the morphological analysis state
+#
+# ADDING NEW AMBIGUOUS MORPHEMES:
+# 1. Add entry to AMBIGUOUS_MORPHEMES with all meanings
+# 2. Add elif branch in disambiguate_morpheme() with rules
+# 3. Rules should prioritize corpus frequency and grammatical context
+# 4. Always include a sensible default (most common meaning)
+#
+# EXAMPLES:
+# - za: 'hear' (verb, 283x) vs 'hundred' (numeral, 73x)
+#   Rule: 'hundred' after kum/sawm, 'hear' otherwise
+# - vei: 'sick' (standalone) vs 'wave' (with suffix) vs 'time' (after numeral)
+#   Rule: context-dependent selection
+#
+# =============================================================================
 
 AMBIGUOUS_MORPHEMES = {
     # za: 'hear' (verb) vs 'hundred' (number)
@@ -263,6 +293,14 @@ AMBIGUOUS_MORPHEMES = {
         ('wave', 'with_verb_morphology'),  # Wave offering (vei-a piak = wave-LOC give)
         ('sick', 'standalone'),    # Standalone or with illness words
     ],
+    'pha': [
+        ('good', 'as_suffix'),     # Evaluative suffix (thu-pha = word-good = blessing)
+        ('branch', 'standalone'),  # Noun: branch/limb
+    ],
+    'kham': [
+        ('gold', 'standalone'),    # Noun: gold (ngun le kham = silver and gold)
+        ('forbid', 'with_ki'),     # Verb: forbid (ki-kham = REFL-forbid)
+    ],
 }
 
 # Common function words with glosses - expanded with frequencies
@@ -273,6 +311,10 @@ FUNCTION_WORDS = {
     'masa': 'first',         # Round 155: a masa = the first (not ma-sa)
     'sia': 'evil',           # Round 155: a sia = evil (not si-a)
     'leh': 'and/or',         # 2,921
+    
+    # Sentence-initial function words (prevent proper noun treatment)
+    'Tu-in': 'now-ERG',      # Sentence-initial 'tu-in'
+    'Siangtho': 'holy',      # Sentence-initial 'siangtho'
     'ahihleh': 'if',         # 335
     'hitaleh': 'if.so',      # 295
     'hang': 'reason',        # Round 155: fix - "bang hang hiam" = why (not stallion)
@@ -980,7 +1022,7 @@ NOUN_STEMS = {
     'ke': 'foot',
     'mit': 'eye',
     'bil': 'ear',
-    'ka': 'mouth',
+    'kam': 'mouth',           # kam = mouth (NOT ka)
     
     # Place/Location
     'gam': 'land',           # 2,586
@@ -1403,13 +1445,39 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
     """
     Disambiguate an ambiguous morpheme based on context.
     
+    This function implements contextual disambiguation for polysemous morphemes.
+    It examines the morphological and syntactic context to select the most
+    appropriate meaning from the AMBIGUOUS_MORPHEMES dictionary.
+    
     Args:
-        morpheme: The morpheme to disambiguate
-        context: Dict with keys like 'position', 'prev_morpheme', 'next_morpheme', 
-                 'has_prefix', 'has_suffix', 'in_compound'
+        morpheme: The morpheme to disambiguate (lowercase)
+        context: Dictionary with contextual information. Recognized keys:
+            - 'position': Where in word ('standalone', 'prefix', 'suffix', 'stem')
+            - 'prev_morpheme': The morpheme before this one (e.g., 'kum' for numbers)
+            - 'next_morpheme': The morpheme after this one
+            - 'has_prefix': True if word has prefix (ka-, na-, a-, ki-, etc.)
+            - 'has_suffix': True if word has suffix (-te, -na, -in, etc.)
+            - 'has_ki_prefix': True if word specifically has ki- (reflexive)
+            - 'in_compound': True if part of compound word
     
     Returns:
-        The appropriate gloss for this context
+        str: The appropriate gloss for this context, or None if morpheme
+        is not in AMBIGUOUS_MORPHEMES.
+    
+    Examples:
+        >>> disambiguate_morpheme('za', {'position': 'standalone'})
+        'hear'
+        >>> disambiguate_morpheme('za', {'prev_morpheme': 'kum'})
+        'hundred'
+        >>> disambiguate_morpheme('vei', {'prev_morpheme': 'khat'})
+        'time'
+        >>> disambiguate_morpheme('kham', {'has_ki_prefix': True})
+        'forbid'
+    
+    Rule Priority:
+        1. Specific contextual triggers (prev_morpheme matches known pattern)
+        2. Morphological context (has_prefix, has_suffix)
+        3. Default meaning (most common in corpus)
     """
     if morpheme not in AMBIGUOUS_MORPHEMES:
         return None
@@ -1473,6 +1541,20 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
             return 'wave'
         return 'sick'
     
+    elif morpheme == 'pha':
+        # 'good' when used as suffix (thu-pha = blessing)
+        if context.get('has_prefix') or context.get('position') == 'suffix':
+            return 'good'
+        # 'branch' as standalone noun
+        return 'branch'
+    
+    elif morpheme == 'kham':
+        # 'forbid' with ki- prefix (kikham = refrain)
+        if context.get('has_ki_prefix'):
+            return 'forbid'
+        # 'gold' as standalone noun
+        return 'gold'
+    
     # Default: return first meaning
     return meanings[0][0] if meanings else None
 
@@ -1522,7 +1604,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         if meaning:
             return (word, meaning)
     
-    # Try both hyphenated and unhyphenated forms
+    # Try both hyphenated and unhyphenated forms (also check original case for sentence-initial words)
+    if word in FUNCTION_WORDS:
+        return (word, FUNCTION_WORDS[word])
     if word_lower in FUNCTION_WORDS:
         return (word, FUNCTION_WORDS[word_lower])
     if word_no_hyphen_lower in FUNCTION_WORDS:
