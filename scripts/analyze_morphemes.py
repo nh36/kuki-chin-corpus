@@ -150,10 +150,8 @@ TAM_SUFFIXES = {
     'pa': 'NMLZ.AG',    # Agent nominalizer (one who V-s)
     # Henderson: Experiential/habitual aspect
     'ngei': 'EXP',      # Experiential (have V-ed before, know how to V)
-    # Henderson: Form II (subjunctive) marker - glottal stop suffix
-    # Form II verbs end in -h (glottal) in adjunctive phrases, non-final predicates
-    # E.g., mu → muh, za → zah, pai → paih, bawl → bawlh
-    'h': 'SBJV',        # Form II/Subjunctive marker (glottal stop suffix)
+    # Note: Form II -h suffix NOT here - handled via VERB_STEM_PAIRS for consistency
+    # See is_form_ii_verb() which uses VERB_STEM_PAIRS to link Form I ↔ Form II
     # Round 154 additions - more suffixes
     'khap': 'forbid',   # Prohibitive
     'suak': 'become',   # Inchoative (become)
@@ -742,6 +740,50 @@ VERB_STEM_PAIRS = {
     'tuak': ('tua', 'meet'),        # 100x (verbal, not demonstrative)
     'muk': ('mu', 'see'),           # 24x (alternative Form II)
     'kiak': ('kia', 'fear'),        # 8x / 66x
+    
+    # +t alternation (for stems ending in -a)
+    # Henderson: Some stems add -t for Form II
+    'nusiat': ('nusia', 'abandon'),     # Form II of nusia
+    'kidot': ('kido', 'fight'),         # Form II of kido  
+    'husiat': ('husia', 'tempest'),     # Form II of husia
+    'honkhiat': ('honkhia', 'bring.out'), # Form II of honkhia
+    'sawlkhiat': ('sawlkhia', 'send.forth'), # Form II of sawlkhia
+    'hawlkhiat': ('hawlkhia', 'drive.out'), # Form II of hawlkhia
+    'tuahphat': ('tuahpha', 'quickly'),  # Form II of tuahpha
+    'dipkuat': ('dipkua', 'haste'),     # Form II of dipkua
+    'gamlat': ('gamla', 'wilderness'),  # Form II of gamla (nominal)
+    
+    # Additional -h forms from corpus (now handled via VERB_STEM_PAIRS, not TAM_SUFFIXES)
+    'noh': ('no', 'young'),             # young.II
+    'sumh': ('sum', 'money'),           # money.II (nominalized)
+    'mualh': ('mual', 'mountain'),      # mountain.II
+    'thuh': ('thu', 'word'),            # word.II
+    'khaih': ('khai', 'hold'),          # hold.II
+    'keuh': ('keu', 'dig'),             # dig.II
+    'khoh': ('kho', 'labor'),           # labor.II
+    'vialh': ('vial', 'encircle'),      # encircle.II
+    'lampih': ('lampi', 'way'),         # way.II
+    
+    # Conflicting stems - need special disambiguation
+    # khot: labor.II vs kho-te (labor-PL) - see FORM_II_DISAMBIGUATION
+    # khuat: dig.II vs khua-te (town-PL) - see FORM_II_DISAMBIGUATION
+    'khot': ('kho', 'labor'),           # labor.II (disambiguate vs kho-te)
+    'khuat': ('khua', 'town'),          # NOTE: This is khua.II, not dig.II!
+}
+
+# Form II stems that conflict with stem+suffix patterns
+# These require special handling in analyze_word() to check context
+FORM_II_DISAMBIGUATION = {
+    'khot': {
+        'form_ii_of': 'kho',
+        'conflicts_with': ('kho', 'te'),  # kho-te = labor-PL
+        'prefer_segmented_when': ['te', 'in', 'ah'],  # When followed by these suffixes
+    },
+    'khuat': {
+        'form_ii_of': 'khua', 
+        'conflicts_with': ('khua', 'te'),  # khua-te = town-PL
+        'prefer_segmented_when': ['te', 'in', 'ah', 'pi'],
+    },
 }
 
 # Reverse lookup: Form I → Form II (for reference)
@@ -887,7 +929,7 @@ VERB_STEMS = {
     'zawh': 'be.able',       # 178
     'khial': 'err',          # 177
     'nusia': 'abandon',      # 173
-    'nusiat': 'abandon.II',  # Form II of nusia (adjunctive/subjunctive)
+    # Note: nusiat (Form II) now in VERB_STEM_PAIRS, not here
     'pil': 'learn',          # 242
     'siam': 'be.skilled',    # 174
     'lup': 'bow.down',       # 140
@@ -920,7 +962,7 @@ VERB_STEMS = {
     'damsak': 'heal',        # dam-sak "well-CAUS"
     'paipih': 'accompany',   # 599 pai-pih "go-APPL"
     'honkhia': 'bring.out',
-    'honkhiat': 'bring.out.II', # Form II of honkhia
+    # Note: honkhiat (Form II) now in VERB_STEM_PAIRS
     'piangsak': 'cause.birth', # 221
     'tungsak': 'lift.up',    # 197
     'paikhiat': 'send.away', # 202
@@ -1054,7 +1096,7 @@ VERB_STEMS = {
     'ngak': 'wait',          # 102x - Gen 8:12 "stayed", Gen 49:18 "waited"
     'ngam': 'dare',          # 128x - (context shows "venture/dare")
     'hawlkhia': 'drive.out', # 119x - Gen 3:24 "drove out the man"
-    'hawlkhiat': 'drive.out.II', # Form II of hawlkhia
+    # Note: hawlkhiat (Form II) now in VERB_STEM_PAIRS
     'vei': 'sick',           # 71x - Gen 25:29 "he was faint" (sick/faint/exhausted)
     'zenzen': 'at.all',      # 53x - intensifier (often with negation "not at all")
     'mengmeng': 'quickly',   # 50x - reduplication "hastily, speedily" (Gen 18:6)
@@ -1085,7 +1127,7 @@ VERB_STEMS = {
     # === Session 2: More verb stems from philological analysis ===
     'kantan': 'cross.over',  # 44x - "cross over, fly across" (vantung kantanin = fly across heaven)
     'sawlkhia': 'send.forth', # 37x - "send forth, expel"
-    'sawlkhiat': 'send.forth.II', # Form II of sawlkhia
+    # Note: sawlkhiat (Form II) now in VERB_STEM_PAIRS
     'lumkhawm': 'lie.with',  # 37x - "lie with, sleep with"
     'sepsak': 'serve/work.for', # 35x - "cause to work, serve"
     'khaktan': 'restrain',   # 35x - "restrain, prevent" (khak-tan)
@@ -1106,7 +1148,7 @@ VERB_STEMS = {
     'bei': 'end/finish',     # 32x - "end, finish" (beina = ending)
     'pan': 'plead',          # 32x - "plead, argue for"
     'kido': 'fight',         # 31x - "fight" (galkidona = warfare)
-    'kidot': 'fight.II',     # Form II of kido (adjunctive/subjunctive)
+    # Note: kidot (Form II) now in VERB_STEM_PAIRS
     'ciah': 'return',        # 31x - "return" (ciahsak = send back)
     'khol': 'denounce',      # 31x - "denounce" (genkhol = speak denounce)
     'nuih': 'laugh',         # 31x - "laugh" (nuihsan = laugh at)
@@ -1142,7 +1184,7 @@ VERB_STEMS = {
     'lunggulh': 'delight',       # Ps 68:30 "people that delight in war"
     'tauna': 'mourning',         # Ps 30:11 "turned my mourning into dancing"
     'husia': 'tempest',          # Ps 55:8 "windy storm and tempest"
-    'husiat': 'tempest.II',      # Form II of husia
+    # Note: husiat (Form II) now in VERB_STEM_PAIRS
     'kisut': 'spoil',            # Ps 68:12 "divided the spoil"
     'lip': 'scale',              # Job 41:15 "his scales are his pride"
     'maiphut': 'confront',       # Ps 17:13 "disappoint him" (mai-phut = face-??)
@@ -1189,7 +1231,7 @@ VERB_STEMS = {
     'phialphiah': 'swallow',     # Ps 84:3 "swallow hath found a house"
     'hawktui': 'troubled',       # Prov 25:26 "troubled fountain"
     'dipkua': 'haste',           # Ps 48:5 "troubled, and hasted away"
-    'dipkuat': 'haste.II',       # Form II of dipkua
+    # Note: dipkuat (Form II) now in VERB_STEM_PAIRS
     'leikeu': 'dry.land',        # Ps 66:6 "turned the sea into dry land"
     'haihuaipi': 'vanity',       # Jer 10:15 "vanity, work of errors"
     'ngik': 'roar',              # Isa 5:30 "roar like the roaring of the sea"
@@ -1309,7 +1351,7 @@ VERB_STEMS = {
     'tuibuak': 'water',       # water (verb - he that watereth)
     'tuatcil': 'trample',     # tread/trample
     'tuahpha': 'quickly',     # found so quickly
-    'tuahphat': 'quickly.II', # Form II of tuahpha
+    # Note: tuahphat (Form II) now in VERB_STEM_PAIRS
     'vatmai': 'defeat',       # discomfit
     'valkhong': 'redeem',     # redeem the time
     'vawhzo': 'pierce',       # nose pierceth
@@ -1547,7 +1589,7 @@ NOUN_STEMS = {
     'mualtung': 'mountaintop', # mualtungah
     'zawl': 'open.space',    # zawlte
     'gamla': 'wilderness',   # 57
-    'gamlat': 'wilderness.II', # Form II of gamla
+    # Note: gamlat (Form II) now in VERB_STEM_PAIRS
     'meikhuk': 'furnace',    # 27x - meikhukah = furnace-LOC (mei=fire + khuk=place)
     
     # Body parts / objects
@@ -3268,7 +3310,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ante': ('an-te', '3PL-PL'),                          # 50
         'tuni-a': ('tu-ni-a', 'now-day-LOC'),                 # 50
         'biakpiaknate': ('biak-piak-na-te', 'worship-give-NMLZ-PL'), # 50
-        'nusiat': ('nu-siat', 'mother-destroy'),              # 50
+        # Note: nusiat is Form II of nusia, handled in VERB_STEM_PAIRS
         'pianzia': ('pian-zia', 'birth-manner'),              # 50
         
         # === More compounds from frequency analysis (freq 38-55) ===
@@ -3623,7 +3665,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kawlsing': ('kawl-sing', 'fry-wood'),              # 25x - compound
         'paai': ('pa-ai', 'father-love'),                   # 25x - compound
         'ngeite': ('ngei-te', 'have.NMLZ-PL'),              # 25x - "possessions"
-        'hawlkhiat': ('hawl-khiat', 'drive-away'),          # 25x - "drive away"
+        # Note: hawlkhiat is Form II of hawlkhia, handled in VERB_STEM_PAIRS
         'zahko': ('zah-ko', 'despise-curse'),                   # 25x - curse/despise
         'mihau': ('mi-hau', 'person-rich'),                 # 25x - "rich person"
         'thatlum': ('that-lum', 'kill-all'),                # 25x - "kill all"
@@ -7325,7 +7367,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sapsak': ('sap-sak', 'suckle-CAUS'),                      # nurse
         'anthul': ('an-thul', 'grain-smitten'),                    # smitten grain
         'nekzah': ('nek-zah', 'eat-amount'),                       # eating portion
-        'sawlkhiat': ('sawl-khiat', 'send-out'),                   # send out
+        # Note: sawlkhiat is Form II of sawlkhia, handled in VERB_STEM_PAIRS
         'lingcip': ('ling-cip', 'sorrow-INTENS'),                  # deep sorrow
         'vamimte': ('vamim-te', 'quail-PL'),                       # quails
         'khom': ('khom', 'place'),                                 # place, abide
@@ -9982,16 +10024,28 @@ def analyze_word(word: str) -> Tuple[str, str]:
             best_noun = (stem, gloss)
             break
     
-    # Choose the longer match (prefer noun if tie, as verbs tend to be shorter)
-    if best_verb and best_noun:
-        if len(best_noun[0]) >= len(best_verb[0]):
-            stem, gloss = best_noun
-        else:
-            stem, gloss = best_verb
-    elif best_verb:
-        stem, gloss = best_verb
-    elif best_noun:
-        stem, gloss = best_noun
+    # Find best Form II verb stem match (Henderson 1965)
+    best_form_ii = None
+    for stem, (form_i, gloss) in sorted(VERB_STEM_PAIRS.items(), key=lambda x: -len(x[0])):
+        if remaining_lower.startswith(stem):
+            # Check for disambiguation - some Form II stems conflict with stem+suffix patterns
+            if stem in FORM_II_DISAMBIGUATION:
+                disamb = FORM_II_DISAMBIGUATION[stem]
+                base_stem, _ = disamb['conflicts_with']
+                suffix_in_word = remaining_lower[len(base_stem):]  # What comes after Form I stem
+                # If followed by a suffix that suggests segmented form, skip this Form II match
+                if any(suffix_in_word.startswith(suf) for suf in disamb['prefer_segmented_when']):
+                    continue  # Don't use this Form II stem, let stem+suffix win
+            best_form_ii = (stem, gloss)
+            break
+    
+    # Choose the longest match (prefer Form II > noun > verb for ties)
+    candidates = [(best_form_ii, 0), (best_noun, 1), (best_verb, 2)]
+    candidates = [(c, p) for c, p in candidates if c is not None]
+    if candidates:
+        # Sort by length (descending), then priority (ascending)
+        candidates.sort(key=lambda x: (-len(x[0][0]), x[1]))
+        stem, gloss = candidates[0][0]
     else:
         stem, gloss = None, None
     
@@ -10022,13 +10076,16 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     # Strip suffix from end and check if what remains is valid
                     base = remaining[:-len(suffix)]
                     base_lower = base.lower()
-                    # Check if base is a known stem or TAM suffix
-                    if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in TAM_SUFFIXES:
+                    # Check if base is a known stem, Form II verb, or TAM suffix
+                    if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in VERB_STEM_PAIRS or base_lower in TAM_SUFFIXES:
                         segments.append(base)
                         if base_lower in VERB_STEMS:
                             glosses.append(VERB_STEMS[base_lower])
                         elif base_lower in NOUN_STEMS:
                             glosses.append(NOUN_STEMS[base_lower])
+                        elif base_lower in VERB_STEM_PAIRS:
+                            form_i, base_gloss = VERB_STEM_PAIRS[base_lower]
+                            glosses.append(base_gloss)
                         else:
                             glosses.append(TAM_SUFFIXES[base_lower])
                         segments.append(suffix)
@@ -10081,13 +10138,18 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 if remaining.lower().endswith(nom) and len(remaining) > len(nom):
                     base = remaining[:-len(nom)]
                     base_lower = base.lower()
-                    # Check if base is a known stem
+                    # Check if base is a known stem (including Form II verbs)
                     if base_lower in VERB_STEMS:
                         segments.append(base)
                         glosses.append(VERB_STEMS[base_lower])
                     elif base_lower in NOUN_STEMS:
                         segments.append(base)
                         glosses.append(NOUN_STEMS[base_lower])
+                    elif base_lower in VERB_STEM_PAIRS:
+                        # Form II verb (Henderson 1965)
+                        form_i, base_gloss = VERB_STEM_PAIRS[base_lower]
+                        segments.append(base)
+                        glosses.append(base_gloss)
                     elif base_lower in TAM_SUFFIXES:
                         segments.append(base)
                         glosses.append(TAM_SUFFIXES[base_lower])
@@ -10164,6 +10226,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     return (f"{base}-{suffix}", f"{VERB_STEMS[base_lower]}-{suf_gloss}")
                 elif base_lower in NOUN_STEMS:
                     return (f"{base}-{suffix}", f"{NOUN_STEMS[base_lower]}-{suf_gloss}")
+                # Check Form II verb stems (Henderson 1965)
+                elif base_lower in VERB_STEM_PAIRS:
+                    form_i, base_gloss = VERB_STEM_PAIRS[base_lower]
+                    return (f"{base}-{suffix}", f"{base_gloss}-{suf_gloss}")
                 
                 # Try lexicon lookup for base
                 lex_gloss = lookup_lexicon(base_lower)
