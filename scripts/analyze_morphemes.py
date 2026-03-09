@@ -45,14 +45,128 @@ CASE_MARKERS = {
 
 # TAM suffixes
 TAM_SUFFIXES = {
-    'ding': 'PROSP',  # Prospective/future
-    'ta': 'PFV',      # Perfective
-    'zo': 'COMPL',    # Completive
-    'kik': 'ITER',    # Iterative
-    'nawn': 'CONT',   # Continuative
-    'khin': 'IMM',    # Immediate
-    'sa': 'PAST',     # Past tense (homophonous with 'flesh' noun)
+    # Tense/Aspect markers
+    'ding': 'PROSP',    # Prospective/future
+    'ta': 'PFV',        # Perfective (completed action)
+    'zo': 'COMPL',      # Completive (able to complete)
+    'kik': 'ITER',      # Iterative (again)
+    'nawn': 'CONT',     # Continuative
+    'khin': 'IMM',      # Immediate/intensifier
+    'sa': 'PAST',       # Past tense
+    # Verbal extension suffixes (Round 154)
+    'sak': 'CAUS',      # Causative
+    'pih': 'APPL',      # Applicative (with/for)
+    'khawm': 'COM',     # Comitative (together)
+    'gawp': 'INTENS',   # Intensive (forcefully)
+    'thei': 'ABIL',     # Abilitative (can/able)
+    'theih': 'ABIL',    # Abilitative variant
+    'nuam': 'want',     # Desiderative (want to)
+    'pah': 'NEG.ABIL',  # Negative ability (cannot)
+    'tawm': 'DIMIN',    # Diminutive (a bit)
+    'khak': 'RES',      # Resultative
+    'khit': 'COMPL',    # Completive variant
+    'zaw': 'MORE',      # Comparative (more)
+    'lua': 'too',       # Excessive (too much)
+    'mawk': 'perhaps',  # Dubitative
+    'pak': 'NEG.ABIL',  # Unable (variant)
+    'lawh': 'NEG.ABIL', # Unable
+    # Directional/motion suffixes
+    'khia': 'out',      # Directional out
+    'khiat': 'away',    # Directional away
+    'lut': 'in',        # Directional in
+    'toh': 'up',        # Directional up
+    'to': 'CONT',       # Continuative
+    'cip': 'tightly',   # Intensifier (firmly/tightly)
+    # Other aspect markers
+    'mang': 'COMPL',    # Completive (completely)
+    'kim': 'fully',     # Completive (fully)
+    'san': 'at',        # Locative relation
+    'sim': 'ITER',      # Iterative variant
+    'lam': 'DIR',       # Directional/manner
+    'zia': 'manner',    # Manner nominal
+    'sakin': 'CAUS.ERG', # Causative + ergative
+    'sakkik': 'CAUS.ITER', # Causative + iterative
+    'sakzo': 'CAUS.COMPL', # Causative + completive
+    # Round 154 additions - more verbal suffixes
+    'teng': 'until',    # Temporal boundary
+    'kha': 'still',     # Persistive (still/yet)
+    'suk': 'CAUS',      # Causative variant (make.become)
+    'zawh': 'finish',   # Completive (finish V-ing)
+    'nop': 'want',      # Desiderative variant
+    'lai': 'middle',    # Temporal middle (while V-ing)
+    'takin': 'really',  # Emphatic adverbializer
+    'nasa': 'INTENS',   # Intensive (strongly)
+    'zah': 'INTENS',    # Intensive (greatly/fear)
+    'sawn': 'toward',   # Directional toward
+    'thuah': 'always',  # Habitual (repeatedly)
+    'tel': 'each',      # Distributive (each/every)
+    'khop': 'together', # Collective
+    'hak': 'INTENS',    # Intensive variant
+    'loh': 'NEG',       # Negative result
+    'pi': 'COMP',       # Comparative (more/-er)
+    'pa': 'NMLZ.AG',    # Agent nominalizer (one who V-s)
+    # Round 154 additions - more suffixes
+    'khap': 'forbid',   # Prohibitive
+    'suak': 'become',   # Inchoative (become)
+    'sung': 'inside',   # Locative (within)
+    'nin': 'ERG',       # Ergative variant (after consonant)
+    'min': 'ERG',       # Ergative variant
+    'nateng': 'NMLZ.until', # Nominalized + until
+    'kikin': 'ITER.ERG',    # Iterative + ergative
+    'neu': 'small',     # Diminutive
+    'luat': 'exceed',   # Excessive
+    'bawl': 'do',       # Light verb (do/make)
+    'zang': 'use',      # Instrumental
+    # Round 154 additions - second batch
+    'tat': 'COMPL',     # Completive (completely)
+    'siang': 'well',    # Manner (properly/well)
+    'kawm': 'nearly',   # Approximative
+    'phat': 'EMPH',     # Emphatic/intensive
+    'zawk': 'MORE',     # Comparative variant
+    'hawm': 'together', # Collective
+    'bu': 'group',      # Collective/group
+    'sawm': 'ten',      # Numeric (also: attempt)
+    'huai': 'CAUS',     # Causative variant
+    'beng': 'straight', # Adverbializer (directly)
+    'dang': 'other',    # Other/different
+    'sia': 'bad',       # Deteriorative (wrongly)
+    'lan': 'appear',    # Evidential
+    'pha': 'good',      # Evaluative (well)
+    'lah': 'ADV',       # Adverbializer
+    'ha': 'PL',         # Plural variant (archaic)
+    'kin': 'quickly',   # Manner (quickly)
+    # Round 154 additions - third batch
+    'siat': 'spoil',    # Destructive
+    'zawl': 'easy',     # Evaluative (easily)
+    'khai': 'INSTR',    # Instrumental
+    'vat': 'suddenly',  # Sudden/quick
+    'kholh': 'INTENS',  # Intensive (denounce)
+    'thang': 'spread',  # Extent (spread out)
+    'dai': 'quiet',     # Manner (quietly)
+    'sun': 'during',    # Temporal (during)
+    'aimang': 'COMPL',  # Completive (all gone)
+    'nai': 'near',      # Proximity
+    'tak': 'truly',     # Emphatic
+    'pen': 'TOP',       # Topic (already in FUNCTION_WORDS but also suffix)
+    # Round 154 additions - fourth batch
+    'lo': 'NEG',        # Negative
+    'kip': 'keep',      # Keep/maintain (thukip = keep word)
+    'lian': 'great',    # Augmentative (greatly)
+    'mai': 'only',      # Restrictive
+    'ham': 'also',      # Additive
+    'am': 'also',       # Additive variant
+    'no': 'young',      # Diminutive
+    'kak': 'INTENS',    # Intensive
+    # Round 154 additions - fifth batch
+    'tuam': 'different', # Manner (differently)
+    'dak': 'suddenly',   # Manner (suddenly) - variant of vat
+    'khem': 'all',       # Totality (all/completely)
+    'ang': 'like',       # Similative (like/as)
+    'nu': 'female',      # Gender marker
+    'na': 'NMLZ',        # Nominalizer (also in NOMINALIZERS)
 }
+
+# NOTE: 'te'' (PL.POSS) handled separately in possessive section
 
 # Sentence-final particles
 FINAL_PARTICLES = {
@@ -505,6 +619,7 @@ VERB_STEMS = {
     'tot': 'contend',        # 9x (via kitot) - Num 27:14 "rebelled/strife"
     'nial': 'argue',         # 9x (via kinial) - Job 9:3 "contend/answer"
     'siat': 'spoil',         # 9x (via kisiat) - Ps 18:37 "pursued/overtaken"
+    'samsiat': 'destroy',    # compound sam-siat (call-spoil = destroy)
     'lawnthal': 'overthrow', # 9x - Ex 15:7 "overthrown them"
     'zomlai': 'journey',     # 9x - Gen 35:21 "journeyed"
     'lianlua': 'too.much',   # 9x - Num 11:14 "too heavy for me"
@@ -717,6 +832,7 @@ NOUN_STEMS = {
     'inn': 'house',          # 715
     'innte': 'houses',
     'mun': 'place',          # 820
+    'mung': 'place',         # variant form
     'leitung': 'earth',      # 717
     'leitang': 'earth',      # 462 (variant)
     'vantung': 'heaven',     # 419
@@ -1276,6 +1392,47 @@ def analyze_word(word: str) -> Tuple[str, str]:
         }
         if base_lower in poss_map:
             return (word, poss_map[base_lower])
+        
+        # Round 154: Handle -te' (PL.POSS) with recursive analysis
+        # e.g., biate' -> bia-te' -> worship-PL.POSS
+        if base_lower.endswith('te') and len(base_lower) > 2:
+            stem = base_lower[:-2]
+            # Try to analyze the stem
+            if stem in VERB_STEMS:
+                return (f"{stem}-te'", f"{VERB_STEMS[stem]}-PL.POSS")
+            if stem in NOUN_STEMS:
+                return (f"{stem}-te'", f"{NOUN_STEMS[stem]}-PL.POSS")
+            # Try full recursive analysis of stem
+            stem_seg, stem_gloss = analyze_word(stem)
+            if '?' not in stem_gloss:
+                return (f"{stem_seg}-te'", f"{stem_gloss}-PL.POSS")
+        
+        # Round 154: Handle -pa' (NMLZ.AG.POSS) with recursive analysis
+        # e.g., veipa' -> vei-pa' -> do-NMLZ.AG.POSS
+        if base_lower.endswith('pa') and len(base_lower) > 2:
+            stem = base_lower[:-2]
+            if stem in VERB_STEMS:
+                return (f"{stem}-pa'", f"{VERB_STEMS[stem]}-NMLZ.AG.POSS")
+            stem_seg, stem_gloss = analyze_word(stem)
+            if '?' not in stem_gloss:
+                return (f"{stem_seg}-pa'", f"{stem_gloss}-NMLZ.AG.POSS")
+    
+    # Round 154: Early reduplication check (X-X patterns like hathat, kilhkilh)
+    word_clean = word.lower().replace('-', '')
+    half_len = len(word_clean) // 2
+    if len(word_clean) >= 4 and len(word_clean) % 2 == 0:
+        first_half = word_clean[:half_len]
+        second_half = word_clean[half_len:]
+        if first_half == second_half:
+            # Check if base is a known stem
+            if first_half in VERB_STEMS:
+                return (f"{first_half}~{first_half}", f"{VERB_STEMS[first_half]}~RED")
+            elif first_half in NOUN_STEMS:
+                return (f"{first_half}~{first_half}", f"{NOUN_STEMS[first_half]}~RED")
+            # Try lexicon lookup for base
+            lex_gloss = lookup_lexicon(first_half)
+            if lex_gloss:
+                return (f"{first_half}~{first_half}", f"{lex_gloss}~RED")
     
     # Check common compounds - EXPANDED from corpus frequency analysis
     COMPOUND_WORDS = {
@@ -8632,78 +8789,140 @@ def analyze_word(word: str) -> Tuple[str, str]:
                         remaining = ''
                         break
     
-    # 2. Check for verb/noun stem
+    # 2. Check for verb/noun stem (Round 154: prefer longest match across both dicts)
     stem_found = False
+    remaining_lower = remaining.lower()
+    
+    # Find best verb stem match
+    best_verb = None
     for stem, gloss in sorted(VERB_STEMS.items(), key=lambda x: -len(x[0])):
-        if remaining.lower().startswith(stem):
-            segments.append(stem)
-            glosses.append(gloss)
-            remaining = remaining[len(stem):]
-            stem_found = True
+        if remaining_lower.startswith(stem):
+            best_verb = (stem, gloss)
             break
     
-    if not stem_found:
-        for stem, gloss in sorted(NOUN_STEMS.items(), key=lambda x: -len(x[0])):
-            if remaining.lower().startswith(stem):
-                segments.append(stem)
-                glosses.append(gloss)
-                remaining = remaining[len(stem):]
-                stem_found = True
-                break
+    # Find best noun stem match  
+    best_noun = None
+    for stem, gloss in sorted(NOUN_STEMS.items(), key=lambda x: -len(x[0])):
+        if remaining_lower.startswith(stem):
+            best_noun = (stem, gloss)
+            break
+    
+    # Choose the longer match (prefer noun if tie, as verbs tend to be shorter)
+    if best_verb and best_noun:
+        if len(best_noun[0]) >= len(best_verb[0]):
+            stem, gloss = best_noun
+        else:
+            stem, gloss = best_verb
+    elif best_verb:
+        stem, gloss = best_verb
+    elif best_noun:
+        stem, gloss = best_noun
+    else:
+        stem, gloss = None, None
+    
+    if stem:
+        segments.append(stem)
+        glosses.append(gloss)
+        remaining = remaining[len(stem):]
+        stem_found = True
     
     # 3. Check for suffixes on remaining
     if remaining:
-        # Check TAM suffixes
-        for suffix, gloss in sorted(TAM_SUFFIXES.items(), key=lambda x: -len(x[0])):
-            if remaining.lower() == suffix or remaining.lower().endswith(suffix):
-                if remaining.lower() == suffix:
+        # === Round 154: Enhanced suffix chain parsing ===
+        # Process suffix chain iteratively (e.g., -kik-in, -na-teng, etc.)
+        suffix_processed = True
+        while remaining and suffix_processed:
+            suffix_processed = False
+            remaining_lower = remaining.lower()
+            
+            # Check TAM suffixes (longest first)
+            for suffix, gloss in sorted(TAM_SUFFIXES.items(), key=lambda x: -len(x[0])):
+                if remaining_lower == suffix:
                     segments.append(suffix)
+                    glosses.append(gloss)
+                    remaining = ''
+                    suffix_processed = True
+                    break
+                elif remaining_lower.endswith(suffix) and len(remaining) > len(suffix):
+                    # Strip suffix from end and check if what remains is valid
+                    base = remaining[:-len(suffix)]
+                    base_lower = base.lower()
+                    # Check if base is a known stem or TAM suffix
+                    if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in TAM_SUFFIXES:
+                        segments.append(base)
+                        if base_lower in VERB_STEMS:
+                            glosses.append(VERB_STEMS[base_lower])
+                        elif base_lower in NOUN_STEMS:
+                            glosses.append(NOUN_STEMS[base_lower])
+                        else:
+                            glosses.append(TAM_SUFFIXES[base_lower])
+                        segments.append(suffix)
+                        glosses.append(gloss)
+                        remaining = ''
+                        suffix_processed = True
+                        break
+            
+            if not suffix_processed and remaining:
+                # Check case markers
+                for case, gloss in sorted(CASE_MARKERS.items(), key=lambda x: -len(x[0])):
+                    if remaining_lower == case:
+                        segments.append(case)
+                        glosses.append(gloss)
+                        remaining = ''
+                        suffix_processed = True
+                        break
+                    elif remaining_lower.endswith(case) and len(remaining) > len(case):
+                        base = remaining[:-len(case)]
+                        base_lower = base.lower()
+                        # Check if base is valid TAM suffix or stem
+                        if base_lower in TAM_SUFFIXES:
+                            segments.append(base)
+                            glosses.append(TAM_SUFFIXES[base_lower])
+                            segments.append(case)
+                            glosses.append(gloss)
+                            remaining = ''
+                            suffix_processed = True
+                            break
+        
+        # Check final particles (only exact match)
+        if remaining:
+            for particle, gloss in FINAL_PARTICLES.items():
+                if remaining.lower() == particle:
+                    segments.append(particle)
                     glosses.append(gloss)
                     remaining = ''
                     break
         
-        # Check case markers
-        for case, gloss in sorted(CASE_MARKERS.items(), key=lambda x: -len(x[0])):
-            if remaining.lower() == case:
-                segments.append(case)
-                glosses.append(gloss)
-                remaining = ''
-                break
-        
-        # Check final particles
-        for particle, gloss in FINAL_PARTICLES.items():
-            if remaining.lower() == particle:
-                segments.append(particle)
-                glosses.append(gloss)
-                remaining = ''
-                break
-        
         # Check nominalizers
-        for nom, gloss in NOMINALIZERS.items():
-            # Case 1: remaining IS exactly the nominalizer (after stem extraction)
-            if remaining.lower() == nom:
-                segments.append(nom)
-                glosses.append(gloss)
-                remaining = ''
-                break
-            # Case 2: remaining has a base + nominalizer
-            if remaining.lower().endswith(nom) and len(remaining) > len(nom):
-                base = remaining[:-len(nom)]
-                base_lower = base.lower()
-                # Check if base is a known stem
-                if base_lower in VERB_STEMS:
-                    segments.append(base)
-                    glosses.append(VERB_STEMS[base_lower])
-                elif base_lower in NOUN_STEMS:
-                    segments.append(base)
-                    glosses.append(NOUN_STEMS[base_lower])
-                else:
-                    segments.append(base)
-                    glosses.append('?')  # Unknown base
-                segments.append(nom)
-                glosses.append(gloss)
-                remaining = ''
-                break
+        if remaining:
+            for nom, gloss in NOMINALIZERS.items():
+                # Case 1: remaining IS exactly the nominalizer (after stem extraction)
+                if remaining.lower() == nom:
+                    segments.append(nom)
+                    glosses.append(gloss)
+                    remaining = ''
+                    break
+                # Case 2: remaining has a base + nominalizer
+                if remaining.lower().endswith(nom) and len(remaining) > len(nom):
+                    base = remaining[:-len(nom)]
+                    base_lower = base.lower()
+                    # Check if base is a known stem
+                    if base_lower in VERB_STEMS:
+                        segments.append(base)
+                        glosses.append(VERB_STEMS[base_lower])
+                    elif base_lower in NOUN_STEMS:
+                        segments.append(base)
+                        glosses.append(NOUN_STEMS[base_lower])
+                    elif base_lower in TAM_SUFFIXES:
+                        segments.append(base)
+                        glosses.append(TAM_SUFFIXES[base_lower])
+                    else:
+                        segments.append(base)
+                        glosses.append('?')  # Unknown base
+                    segments.append(nom)
+                    glosses.append(gloss)
+                    remaining = ''
+                    break
     
     # Special handling: if no decomposition, try suffix stripping
     if remaining and not segments:
@@ -8726,39 +8945,78 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     else:
                         return (f"{first_half}~{first_half}", f"?~RED")
         
-        # Try stripping common suffixes to find stem
+        # === ENHANCED SUFFIX CHAIN PARSING (Round 154) ===
+        # Extended suffix list with verbal aspect/ability markers
         suffix_glosses = {
-            'na': 'NMLZ',
-            'te': 'PL', 
-            'uh': 'PL',       # Plural (alternative to te)
-            'in': 'ERG',
-            'ah': 'LOC',
-            'sak': 'CAUS',
-            'pih': 'APPL',
-            'theih': 'ABIL',  # Abilitative/potential suffix
-            'kik': 'ITER',    # Iterative suffix
-            'khia': 'EXIT',   # Directional "out"
-            'khawm': 'together', # Directional "together"
-            'toh': 'up',      # Directional "up"
-            'sa': 'PERF',     # Perfective aspect
-            'khol': 'INTENS', # Intensifier (genkhol = denounce)
-            'pen': 'TOP',     # Topic marker (also superlative)
-            'mang': 'COMPL',  # Completive (beimang = perish completely)
-            'san': 'at',      # Locative "at" (nuihsan = laugh at)
+            # Verbal ability/potential suffixes
+            'thei': 'ABIL',     # ability/potential (can/able to)
+            'theih': 'ABIL',    # variant form
+            'zo': 'able',       # abilitative (capable of)
+            # Aspect/directional suffixes
+            'gawp': 'INTENS',   # intensive (forcefully/thoroughly)
+            'khin': 'INTENS',   # intensive variant
+            'kik': 'ITER',      # iterative (again)
+            'pih': 'APPL',      # applicative (with/for)
+            'khawm': 'COM',     # comitative (together)
+            'khia': 'EXIT',     # directional (out)
+            'lut': 'ENTER',     # directional (into)
+            'toh': 'up',        # directional (up)
+            'to': 'CONT',       # continuative
+            # Other verbal suffixes
+            'sak': 'CAUS',      # causative
+            'sa': 'PERF',       # perfective
+            'ta': 'PERF',       # perfective variant (completed action)
+            'mang': 'COMPL',    # completive
+            'khol': 'INTENS',   # intensifier
+            'san': 'at',        # locative
+            'pen': 'TOP',       # topic/superlative
+            # Nominal suffixes
+            'na': 'NMLZ',       # nominalizer
+            'te': 'PL',         # plural
+            'uh': 'PL',         # plural variant
+            'in': 'ERG',        # ergative
+            'ah': 'LOC',        # locative
         }
+        
+        # Try suffix stripping with RECURSIVE analysis of base
         for suffix, suf_gloss in sorted(suffix_glosses.items(), key=lambda x: -len(x[0])):
             if remaining.lower().endswith(suffix) and len(remaining) > len(suffix) + 1:
                 base = remaining[:-len(suffix)]
                 base_lower = base.lower()
-                # Check if base is a known stem
+                
+                # First check direct stem lookups (fast path)
                 if base_lower in VERB_STEMS:
                     return (f"{base}-{suffix}", f"{VERB_STEMS[base_lower]}-{suf_gloss}")
                 elif base_lower in NOUN_STEMS:
                     return (f"{base}-{suffix}", f"{NOUN_STEMS[base_lower]}-{suf_gloss}")
+                
                 # Try lexicon lookup for base
                 lex_gloss = lookup_lexicon(base_lower)
                 if lex_gloss:
                     return (f"{base}-{suffix}", f"{lex_gloss}-{suf_gloss}")
+                
+                # RECURSIVE: Try analyzing the base as a complex form
+                # This handles chains like verb-CAUS-ITER, ki-verb-ABIL, etc.
+                base_seg, base_gloss = analyze_word(base)
+                if '?' not in base_gloss:
+                    # Base is fully analyzable - combine with suffix
+                    return (f"{base_seg}-{suffix}", f"{base_gloss}-{suf_gloss}")
+        
+        # === KI- REFLEXIVE PREFIX HANDLING (Round 154) ===
+        # Handle ki- prefix with recursive analysis of remainder
+        remaining_lower = remaining.lower()
+        if remaining_lower.startswith('ki') and len(remaining_lower) > 3:
+            ki_base = remaining[2:]
+            ki_base_lower = ki_base.lower()
+            
+            # Check direct stem lookups first
+            if ki_base_lower in VERB_STEMS:
+                return (f"ki-{ki_base}", f"REFL-{VERB_STEMS[ki_base_lower]}")
+            
+            # Try recursive analysis of the base
+            base_seg, base_gloss = analyze_word(ki_base)
+            if '?' not in base_gloss:
+                return (f"ki-{base_seg}", f"REFL-{base_gloss}")
     
     # If we still have remaining, add it as unknown
     if remaining:
