@@ -956,6 +956,26 @@ VERB_STEMS = {
     'sahpi': 'thick.cloud',      # Ps 18:12 "thick clouds passed"
     'ncip': 'compass',           # Ps 49:5 "iniquity compass me about"
     
+    # === More rare vocabulary from KJV cross-reference ===
+    'serafim': 'seraphim',       # Isa 6:2 (Hebrew loanword)
+    'kithukhat': 'rage',         # Ps 2:1 "why do the heathen rage"
+    'phulet': 'pass',            # Ps 18:12 "thick clouds passed"
+    'denkhap': 'dash.in.pieces', # Ps 2:9 "dash them in pieces"
+    'kikhawlpa': 'companion',    # Ps 119:63 "I am a companion"
+    'haltui': 'dross',           # Isa 1:25 "purge away thy dross"
+    'guakbek': 'desolate',       # Ps 25:16 "I am desolate and afflicted"
+    'suamlum': 'murder',         # Ps 94:6 "murder the fatherless"
+    'lengsawn': 'hearing',       # Isa 11:3 "hearing of his ears"
+    'meikhuka': 'hearth',        # Isa 30:14 "take fire from the hearth"
+    'kultaltui': 'pitch',        # Isa 34:9 "streams turned into pitch"
+    'taankhiat': 'shine.forth',  # Isa 62:1 "righteousness go forth as brightness"
+    'sunletzo': 'bridle',        # Job 41:13 "his double bridle"
+    'bunzo': 'pierce',           # Job 41:26 "sword cannot hold/pierce"
+    'kithawithawi': 'be.raised', # Jer 6:22 "great nation shall be raised"
+    'gimneih': 'fear',           # Ps 31:11 "a fear to mine acquaintance"
+    'haipau': 'vile',            # Job 40:4 "I am vile"
+    'hehmai': 'boldness',        # Eccl 8:1 "boldness of his face"
+    
     # === Session 4 Round 9: More verb stems for -sak causatives ===
     'khialh': 'err/sin',     # khialhsak = cause to sin
     'piasak': 'cause.give',  # pia-sak = give-CAUS
