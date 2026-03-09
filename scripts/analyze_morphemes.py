@@ -987,6 +987,20 @@ VERB_STEMS = {
     'lehlamin': 'upside.down',   # Isa 29:16 "turning of things upside down"
     'sunlum': 'reach',           # Jer 4:10 "sword reacheth unto the soul"
     'kiget': 'eunuch',           # Isa 56:3 "neither let the eunuch say"
+    'beemlepang': 'provision',   # Ps 132:15 "abundantly bless her provision"
+    'phialphiah': 'swallow',     # Ps 84:3 "swallow hath found a house"
+    'hawktui': 'troubled',       # Prov 25:26 "troubled fountain"
+    'dipkua': 'haste',           # Ps 48:5 "troubled, and hasted away"
+    'leikeu': 'dry.land',        # Ps 66:6 "turned the sea into dry land"
+    'haihuaipi': 'vanity',       # Jer 10:15 "vanity, work of errors"
+    'ngik': 'roar',              # Isa 5:30 "roar like the roaring of the sea"
+    'lela': 'rejoice',           # Prov 13:9 "light of the righteous rejoiceth"
+    # Note: 'khi' and 'ku' removed - too short, cause mis-segmentation
+    'taat': 'bend',              # Ps 7:12 "bent his bow, made it ready"
+    'kopkopin': 'chariot',       # Isa 21:7 "saw a chariot with horsemen"
+    'meiizun': 'night.dew',      # Song 5:2 "locks with drops of the night"
+    'logam': 'fruitful.place',   # Jer 4:26 "the fruitful place was a wilderness"
+    'kisatnim': 'bruised',       # Isa 53:5 "he was bruised for our iniquities"
     
     # === Session 4 Round 9: More verb stems for -sak causatives ===
     'khialh': 'err/sin',     # khialhsak = cause to sin
