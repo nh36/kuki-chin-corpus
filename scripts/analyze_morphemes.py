@@ -505,6 +505,69 @@ FUNCTION_WORDS = {
     'kua': 'who',
 }
 
+# =============================================================================
+# VERB STEM ALTERNATION (Form I / Form II)
+# =============================================================================
+#
+# Based on Henderson 1965 "Tiddim Chin: A Descriptive Analysis of Two Texts"
+#
+# Tedim Chin verbs have two forms:
+# - Form I (Indicative): Used in conclusive sentences (final predicative phrase)
+# - Form II (Subjunctive): Used in inconclusive sentences and adjunctive phrases
+#
+# Form II is derived from Form I by phonological rules:
+# 1. For verbs with long final syllable + Tone 1/2: Add -h, change to Tone 3
+#    Examples: mu → muh (see), thei → theih (know), nei → neih (have)
+#
+# 2. For some verbs: Add -k instead of -h
+#    Examples: za → zak (hear), pia → piak (give), ne → nek (eat)
+#
+# 3. For verbs ending in -ng: Change to -n (velar → alveolar)
+#    This pattern is less common in the Bible corpus
+#
+# The analyzer recognizes both forms and glosses them appropriately.
+# Form II verbs get the same base gloss as Form I (the alternation is 
+# grammatical, not lexical).
+#
+# =============================================================================
+
+VERB_STEM_PAIRS = {
+    # Primary verb alternation pairs: Form I → Form II
+    # Format: form_ii: (form_i, base_gloss)
+    
+    # +h alternation (most common)
+    'muh': ('mu', 'see'),           # 503x Form II / 967x Form I
+    'theih': ('thei', 'know'),      # 1385x / 2579x
+    'neih': ('nei', 'have'),        # 416x / 1803x
+    'cih': ('ci', 'say'),           # 2827x / 5971x
+    'zuih': ('zui', 'follow'),      # 170x / 509x
+    'ngaih': ('ngai', 'think'),     # 52x / 434x
+    'neh': ('ne', 'eat'),           # 17x / 560x
+    'siah': ('sia', 'decay'),       # 61x / 220x
+    'khialh': ('khial', 'err'),     # 54x / 177x
+    'luah': ('lua', 'exceed'),      # 192x / 111x
+    'puah': ('pua', 'bet'),         # 66x / 153x
+    'tuah': ('tua', 'do'),          # 47x / (tua usually demonstrative)
+    'tanh': ('tan', 'spread'),      # 71x / 22x
+    'genh': ('gen', 'speak'),       # Form II of gen
+    'bawlh': ('bawl', 'make'),      # Form II of bawl
+    'omh': ('om', 'exist'),         # Form II of om
+    'paih': ('pai', 'go'),          # Form II of pai
+    
+    # +k alternation
+    'zak': ('za', 'hear'),          # 347x / 664x
+    'piak': ('pia', 'give'),        # 797x / 2209x
+    'nek': ('ne', 'eat'),           # 199x / 560x (both +h and +k exist)
+    'biak': ('bia', 'worship'),     # 212x / 219x
+    'puak': ('pua', 'spill'),       # 239x / 153x
+    'tuak': ('tua', 'meet'),        # 100x (verbal, not demonstrative)
+    'muk': ('mu', 'see'),           # 24x (alternative Form II)
+    'kiak': ('kia', 'fear'),        # 8x / 66x
+}
+
+# Reverse lookup: Form I → Form II (for reference)
+FORM_I_TO_II = {v[0]: (k, v[1]) for k, v in VERB_STEM_PAIRS.items()}
+
 # Verb stems - expanded from corpus frequency analysis
 # Note: Some verbs have Stem I (basic) and Stem II (modified) forms
 VERB_STEMS = {
@@ -9081,6 +9144,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         return (word, VERB_STEMS[word_no_hyphen])
     if word_no_hyphen_lower in VERB_STEMS:
         return (word, VERB_STEMS[word_no_hyphen_lower])
+    
+    # Check for Form II verb stems (Henderson 1965: subjunctive forms)
+    # Form II is used in inconclusive sentences and adjunctive phrases
+    if word_no_hyphen_lower in VERB_STEM_PAIRS:
+        form_i, base_gloss = VERB_STEM_PAIRS[word_no_hyphen_lower]
+        return (word, base_gloss)  # Return base gloss (form is grammatical, not lexical)
     
     # For morphological decomposition, use the unhyphenated form
     segments = []
