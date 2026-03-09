@@ -438,6 +438,10 @@ FUNCTION_WORDS = {
     # === Military vocabulary ===
     'kidona': 'sword',       # 56x - sword (not ki-don-a)
     
+    # === Nature vocabulary ===
+    'tuipi': 'sea',          # 256x - tui-pi = water-big = sea (not proper noun)
+    'Tuipi': 'sea',          # capitalized variant
+    
     # === Negation ===
     'lo': 'NEG',             # 6,018
     'kei': 'NEG.EMPH',       # 6,487
