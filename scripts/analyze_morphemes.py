@@ -9909,6 +9909,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Form II stems with emphatic -e suffix (5x, 2x)
         'nusiate': ('nusia-te', 'forsake-PL'),                      # those who forsake (5x)
         'husiate': ('husia-te', 'tempest-PL'),                      # tempests (2x)
+        
+        # Low-frequency compounds (2x each)
+        'nawlkhin': ('nawl-khin', 'way-knowledge'),                  # knowledge of ways (2x)
+        'sikkate': ('sikka-te', 'basin-PL'),                        # basins/basons (2x)
+        'sikka': ('sikka', 'basin'),                                # basin/vessel
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
