@@ -496,6 +496,40 @@ AMBIGUOUS_MORPHEMES = {
         ('shelter', 'with_ki'),      # Refuge with ki- prefix
         ('arm', 'weapon'),           # Weapon/armament
     ],
+    
+    # luang: 'flow' (verb) vs 'corpse' (noun)
+    # - 'flow' with water/liquid subjects, often reduplicated (luan-luang)
+    # - 'corpse' in death/burial contexts
+    'luang': [
+        ('flow', 'verbal'),          # Flow (water, blood)
+        ('corpse', 'nominal'),       # Corpse/dead body
+    ],
+    
+    # hong: 'come/open' (verb) vs '3→1' (directional marker)
+    # - Verb: 'open' (hong-khia = open-out), 'come' standalone
+    # - Directional: hong-pai = toward speaker (3→1 direction)
+    # The 3→1 marker is a grammaticalized prefix, not standalone
+    'hong': [
+        ('3→1', 'prefix'),           # Directional: toward 1st person
+        ('open', 'verbal'),          # Open (door, etc.)
+        ('come', 'standalone'),      # Come (rare standalone)
+    ],
+    
+    # nga: 'endure' (verb) vs 'five' (numeral)
+    # - 'five' in numeral contexts (sagih-nga = seven-five = 75)
+    # - 'endure' as verb stem
+    'nga': [
+        ('five', 'numeral'),         # Five (in counting)
+        ('endure', 'verbal'),        # Endure/tolerate
+    ],
+    
+    # ding: 'stand' (verb) vs 'PROSP' (prospective aspect)
+    # - 'stand' as main verb (ding-in = standing)
+    # - 'PROSP' as TAM suffix indicating future/intention
+    'ding': [
+        ('PROSP', 'suffix'),         # Prospective aspect (most common)
+        ('stand', 'verbal'),         # Stand (rare as main verb)
+    ],
 }
 
 # Common function words with glosses - expanded with frequencies
@@ -1838,7 +1872,7 @@ PROPER_NOUNS = {
     'Jesuh', 'Jesus', 'Khrih', 'Christ', 'Kristu', 'Zeisu', 'Khrih',
     
     # Old Testament figures - Patriarchs
-    'Abraham', 'Abram', 'Isaac', 'Jakob', 'Jakobu', 'Israel', 'Josef', 'Joseph',
+    'Abraham', 'Abram', 'Isaac', 'Jakob', 'Jakobu', 'Israel', 'Srael', 'Josef', 'Joseph',
     'Noah', 'Adam', 'Eve', 'Seth', 'Enoch', 'Methuselah', 'Lamech',
     'Sarah', 'Sarai', 'Rebekah', 'Leah', 'Rachel',  # Matriarchs
     'Issakhar', 'Issachar', 'Reuben', 'Simeon', 'Levi', 'Judah', 'Zebulun',  # Tribes
@@ -2532,8 +2566,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         if word_lower.endswith(suffix):
             base = word[:-len(suffix)]
             base_clean = base.rstrip('-')  # Remove trailing hyphen if present
-            if base_clean.lower() in PROPER_NOUNS or base_clean in PROPER_NOUNS:
-                return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_clean.upper()}-{gloss}")
+            base_title = base_clean.title()
+            if base_title in PROPER_NOUNS or base_clean in PROPER_NOUNS:
+                return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_title.upper()}-{gloss}")
     
     # Handle possessive marker ' or ' (curly quote) at end of word
     # Common pattern: Topa' = "Lord's", mite' = "people's", pa' = "father's"
@@ -2545,14 +2580,20 @@ def analyze_word(word: str) -> Tuple[str, str]:
             return (word, FUNCTION_WORDS[base_lower] + '.POSS')
         if base_lower in NOUN_STEMS:
             return (f"{base}'", f"{NOUN_STEMS[base_lower]}.POSS")
-        if base.lower() in PROPER_NOUNS or base in PROPER_NOUNS:
-            return (f"{base}'", f"{base.upper()}.POSS")
+        # Check proper nouns (stored in Title case)
+        base_title = base.title()
+        if base_title in PROPER_NOUNS or base in PROPER_NOUNS:
+            return (f"{base}'", f"{base_title.upper()}.POSS")
         # Check if it's a compound that ends in a known stem
         # e.g., mite' -> mi-te -> person-PL -> person.PL.POSS
         if base_lower.endswith('te') and len(base_lower) > 2:
             stem = base_lower[:-2]
             if stem in NOUN_STEMS:
                 return (f"{base}'", f"{NOUN_STEMS[stem]}-PL.POSS")
+            # Check if stem is a proper noun (e.g., sraelte' = SRAEL-PL.POSS)
+            stem_title = stem.title()
+            if stem_title in PROPER_NOUNS:
+                return (f"{base}'", f"{stem_title.upper()}-PL.POSS")
         # Common possessive words
         poss_map = {
             'amau': '3PL.POSS',
