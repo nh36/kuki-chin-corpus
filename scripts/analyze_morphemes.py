@@ -10045,6 +10045,17 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 # If followed by a suffix that suggests segmented form, skip this Form II match
                 if any(suffix_in_word.startswith(suf) for suf in disamb['prefer_segmented_when']):
                     continue  # Don't use this Form II stem, let stem+suffix win
+            
+            # Check if Form I + known suffix gives a better parse
+            # E.g., for "mukik": prefer mu (Form I) + kik (ITER) over muk (Form II) + ik (?)
+            suffix_after_form_ii = remaining_lower[len(stem):]
+            if suffix_after_form_ii and suffix_after_form_ii not in TAM_SUFFIXES:
+                # Check if Form I + suffix would be valid
+                suffix_after_form_i = remaining_lower[len(form_i):]
+                if suffix_after_form_i in TAM_SUFFIXES:
+                    # Form I parse is better - skip this Form II
+                    continue
+            
             best_form_ii = (stem, gloss)
             break
     
