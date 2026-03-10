@@ -1969,6 +1969,16 @@ PROPER_NOUNS = {
     'oholah', 'derbe', 'husham', 'shimron', 'hushim', 'pihahiroth', 'zered',
     'elath', 'golan', 'gerizim', 'betharabah', 'eshtemoa', 'gaash', 'harod',
     'elimelek', 'peninnah', 'jeshanah', 'merab', 'jehozabad', 'jaazaniah',
+    # Round 161: More OT/NT proper nouns to prevent prefix mis-segmentation
+    'hilkiah', 'tola', 'nethanel', 'hammon', 'amon', 'ahimelek', 'zibiah',
+    'tobiah', 'enok', 'asahel', 'mattaniah', 'abel', 'babel', 'sukkoth',
+    'ashhur', 'pashhur', 'ahikam', 'enosh', 'khemosh', 'chemosh', 'nahor',
+    'paran', 'naboth', 'kareah', 'amariah', 'ananias', 'uzziel', 'urim',
+    'abarim', 'jefunneh', 'agag', 'zimri', 'nebo', 'ahimaaz', 'netofah',
+    'bani', 'jehoram', 'remaliah', 'amoz', 'mikhael', 'sairas', 'saipras',
+    'saddusi', 'agrippa', 'abihu', 'ashtaroth', 'ashkelon', 'ner',
+    'ahithofel', 'ahithophel', 'jehu', 'esther', 'lot', 'beor', 'amram',
+    'izhar', 'ithamar', 'ahira', 'ira',
 }
 
 # =============================================================================
