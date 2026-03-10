@@ -1950,6 +1950,17 @@ PROPER_NOUNS = {
     'kenan', 'amen', 'ur', 'aram', 'hamath', 'anak', 'negeb',
     'amaziah', 'hiv', 'hivite', 'kaleb', 'uriah', 'zikri', 'jessi', 'jehoiada',
     'zif', 'abijah', 'baruk', 'kadesh', 'zedekiah', 'hezekiah',
+    # Round 157: More proper nouns from partials
+    'heman', 'aner', 'puah', 'enan', 'adonijah', 'mikaiah', 'on',
+    'arnon', 'karmel', 'carmel', 'ahaziah', 'uzziah', 'nebat', 'athaliah',
+    'antiok', 'iram', 'arabah', 'abiathar', 'nadab', 'khadet', 'kedar',
+    'akhan', 'achan', 'sisera', 'jabin', 'joash', 'joab', 'omri',
+    # Round 158: Proper nouns with prefix-like beginnings (a-, na-, mi-, hi-, etc.)
+    'haman', 'asa', 'sihon', 'akhish', 'zeruiah', 'baasha', 'mikah',
+    'hiram', 'ahasueras', 'ahasuerus', 'sisaria', 'eleazar', 'ashdod',
+    'abigail', 'abishai', 'asaf', 'asaph', 'lakhish', 'lachish',
+    'anathoth', 'naomi', 'naaman', 'mikhal', 'michal', 'shafan', 'shaphan',
+    'nebuzaradan', 'nethaniah', 'aroer', 'ahijah', 'nabal', 'ziba', 'amasa',
 }
 
 # =============================================================================
