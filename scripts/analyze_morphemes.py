@@ -3118,6 +3118,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'amahmah': ('a-mah-mah', '3SG-self-RED'),
         'sawmsagih': ('sawm-sagih', 'ten-seven'),
         'thuhilh': ('thu-hilh', 'word-teach'),
+        'thuhilhte': ('thu-hilh-te', 'word-teach-PL'),   # ordinances/customs (19x)
         'bawlsa': ('bawl-sa', 'make-PAST'),                     # made (past of make)
         'peuh': ('peuh', 'every'),
         'zanih': ('zan-ih', 'night-NOM'),
@@ -9904,6 +9905,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'atul-amakin': ('a-tul-ama-kin', '3SG-follow-3PL-also'),
         'sekhei': ('sek-hei', 'rest-place'),                        # resting place
         'sek-hei': ('sek-hei', 'rest-place'),
+        
+        # Form II stems with emphatic -e suffix (5x, 2x)
+        'nusiate': ('nusia-te', 'forsake-PL'),                      # those who forsake (5x)
+        'husiate': ('husia-te', 'tempest-PL'),                      # tempests (2x)
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
