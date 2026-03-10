@@ -561,6 +561,7 @@ FUNCTION_WORDS = {
     'mateng': 'until',       # 185x - temporal "until"
     'matengin': 'until',     # 99x - variant with -in
     'veve': 'still/yet',     # 142x - temporal adverb (reduplication)
+    'tuazawh': 'after.that', # 7x - "after that, then" (sentence-initial)
     
     # === Purpose/Infinitive markers (NOT 2SG!) ===
     'nading': 'PURP',        # 1140x - "in order to, for (purpose)" 
@@ -1961,6 +1962,13 @@ PROPER_NOUNS = {
     'abigail', 'abishai', 'asaf', 'asaph', 'lakhish', 'lachish',
     'anathoth', 'naomi', 'naaman', 'mikhal', 'michal', 'shafan', 'shaphan',
     'nebuzaradan', 'nethaniah', 'aroer', 'ahijah', 'nabal', 'ziba', 'amasa',
+    # Round 159: Short proper nouns that conflict with prefixes
+    'uz', 'ar', 'ai', 'on', 'or', 'ir', 'en', 'ed',
+    # Round 160: More proper nouns from unknowns
+    'elim', 'zeeb', 'doeg', 'harar', 'meunim', 'hagri', 'hananel', 'thebes',
+    'oholah', 'derbe', 'husham', 'shimron', 'hushim', 'pihahiroth', 'zered',
+    'elath', 'golan', 'gerizim', 'betharabah', 'eshtemoa', 'gaash', 'harod',
+    'elimelek', 'peninnah', 'jeshanah', 'merab', 'jehozabad', 'jaazaniah',
 }
 
 # =============================================================================
@@ -2579,12 +2587,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         "-te'": 'PL.POSS',  # plural possessive
         "-te'": 'PL.POSS',  # plural possessive (curly quote)
         '-te': 'PL',        # plural
+        '-pa': 'man',       # man/person (e.g., Filistia-pa = Philistine man)
         '-ah': 'LOC',       # locative  
         '-a': 'LOC',        # short locative
         '-in': 'ERG',       # ergative
         "te'": 'PL.POSS',   # without hyphen
         "te'": 'PL.POSS',   # without hyphen (curly quote)
         'te': 'PL',         # without hyphen
+        'pa': 'man',        # without hyphen
         'ah': 'LOC',        # without hyphen
     }
     for suffix, gloss in sorted(proper_suffixes.items(), key=lambda x: -len(x[0])):
