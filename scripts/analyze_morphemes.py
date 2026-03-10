@@ -1086,6 +1086,8 @@ VERB_STEMS = {
     'pua': 'carry.on.back',  # for kipua
     'sit': 'cut.off',        # for kisit
     'nga': 'endure',         # for kinga
+    'awk': 'snare',          # 67x - "catch, snare, trap" (awkin=snared)
+    # Note: tuh='dispute' conflicts with tuh='sow' in COMPOUND_WORDS; use kituhna compound instead
     'peel': 'peel',          # 12x
     'peng': 'break.into',    # 10x
     'hum': 'cover',          # 10x
@@ -3068,6 +3070,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sepna': ('sep-na', 'work-NMLZ'),
         'thungetna': ('thu-nget-na', 'word-request-NMLZ'),
         'gitlohna': ('git-loh-na', 'hate-NEG-NMLZ'),
+        'phawksakna': ('phawk-sak-na', 'remember-CAUS-NMLZ'), # 2x - "memorial, reminder"
+        'thakhauhsakna': ('tha-khauh-sak-na', 'strength-strong-CAUS-NMLZ'), # 2x - "strengthening"
+        'awkin': ('awk-in', 'snare-ERG'),              # 3x - "being snared" (not a-wkin)
+        'kituhna': ('ki-tuh-na', 'REFL-dispute-NMLZ'),  # 2x - "controversy, dispute"
         'tenna': ('ten-na', 'dwell-NMLZ'),
         'tampite': ('tam-pi-te', 'many-big-PL'),
         'tuute': ('tuu-te', '?-PL'),
