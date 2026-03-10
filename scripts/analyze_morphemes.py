@@ -1576,6 +1576,9 @@ NOUN_STEMS = {
     'kilungso': 'wait.patiently',  # rest in the LORD
     'phuang': 'upright',     # perfect/upright
     'kidona': 'sword',       # 56x - (not ki-don-a)
+    'sakhital': 'hart/roebuck', # 4x - deer species
+    'tuzum': 'harrow',       # 2x - farming tool
+    'khuahun': 'season',     # 2x - khua (town/weather) + hun (time)
     
     # === Rare word stems (from KJV cross-reference) ===
     # Discovered via synoptic parallel analysis
