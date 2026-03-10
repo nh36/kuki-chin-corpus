@@ -1876,6 +1876,7 @@ PROPER_NOUNS = {
     'Noah', 'Adam', 'Eve', 'Seth', 'Enoch', 'Methuselah', 'Lamech',
     'Sarah', 'Sarai', 'Rebekah', 'Leah', 'Rachel',  # Matriarchs
     'Issakhar', 'Issachar', 'Reuben', 'Simeon', 'Levi', 'Judah', 'Zebulun',  # Tribes
+    'Kohath', 'Gershon', 'Merari', 'Hori', 'Oreb',  # Levite clans and others
     
     # Old Testament - Moses era
     'Moses', 'Aaron', 'Joshua', 'Caleb', 'Miriam', 'Korah', 'Phinehas',
@@ -1896,6 +1897,7 @@ PROPER_NOUNS = {
     'Job', 'Esau', 'Levi', 'Reuben', 'Benjamin', 'Judah', 'Manasseh',
     'Efraim', 'Ephraim', 'Gad', 'Simeon', 'Naphtali', 'Naftali', 'Asher',
     'Zebulun', 'Issachar', 'Dan', 'Ishmael', 'Ruth', 'Boaz', 'Rahab',
+    'Shuah', 'Giloh', 'Gilopa',  # Added
     
     # New Testament figures - Apostles
     'Johan', 'John', 'Peter', 'Piter', 'Paul', 'Paulus', 'Simon', 'Andru', 'Andrew',
@@ -1913,6 +1915,9 @@ PROPER_NOUNS = {
     'Gilead', 'Zion', 'Sinai', 'Horeb', 'Bethel', 'Bethlehem', 'Ai',
     'Jordan', 'Filistia', 'Philistia', 'Khaldea', 'Chaldea',
     'Midian', 'Persia', 'Media', 'Sheba',
+    'Lebanon', 'Hebron', 'Hiopia', 'Ethiopia', 'Libya', 'Put',  # Added
+    'Horonaim', 'Makpelah', 'Efrath', 'Ephrath', 'Kishon', 'Seba',  # Added
+    'Rameses', 'Marah', 'Berea',  # Added
     
     # Places - New Testament
     'Galilee', 'Nazareth', 'Nazaret', 'Kapernaum', 'Capernaum',
@@ -1941,6 +1946,10 @@ PROPER_NOUNS = {
     'bethlehem', 'beersheba', 'beelzebub', 'belial',
     # Additional proper names from residual analysis
     'balak', 'zippor', 'mizpah', 'azariah', 'zadok', 'nathan',
+    # Round 156: More proper nouns to prevent prefix mis-segmentation
+    'kenan', 'amen', 'ur', 'aram', 'hamath', 'anak', 'negeb',
+    'amaziah', 'hiv', 'hivite', 'kaleb', 'uriah', 'zikri', 'jessi', 'jehoiada',
+    'zif', 'abijah', 'baruk', 'kadesh', 'zedekiah', 'hezekiah',
 }
 
 # =============================================================================
@@ -2204,8 +2213,8 @@ def is_proper_noun(word: str) -> bool:
     clean = clean_word(word)
     if not clean:
         return False
-    # Check both original case and lowercase
-    return clean in PROPER_NOUNS or clean.lower() in PROPER_NOUNS or clean[0].isupper()
+    # Check original case, title case, and first-letter uppercase
+    return clean in PROPER_NOUNS or clean.title() in PROPER_NOUNS or clean[0].isupper()
 
 
 # =============================================================================
@@ -2554,13 +2563,18 @@ def analyze_word(word: str) -> Tuple[str, str]:
         return (word, word.upper())
     
     # Check for proper noun + suffix patterns (israel-te, jerusalem-ah, etc.)
+    # Also handle possessive forms like Israel-te' (Israel's people)
     proper_suffixes = {
-        '-te': 'PL',      # plural
-        '-ah': 'LOC',     # locative  
-        '-a': 'LOC',      # short locative
-        '-in': 'ERG',     # ergative
-        'te': 'PL',       # without hyphen
-        'ah': 'LOC',      # without hyphen
+        "-te'": 'PL.POSS',  # plural possessive
+        "-te'": 'PL.POSS',  # plural possessive (curly quote)
+        '-te': 'PL',        # plural
+        '-ah': 'LOC',       # locative  
+        '-a': 'LOC',        # short locative
+        '-in': 'ERG',       # ergative
+        "te'": 'PL.POSS',   # without hyphen
+        "te'": 'PL.POSS',   # without hyphen (curly quote)
+        'te': 'PL',         # without hyphen
+        'ah': 'LOC',        # without hyphen
     }
     for suffix, gloss in sorted(proper_suffixes.items(), key=lambda x: -len(x[0])):
         if word_lower.endswith(suffix):
