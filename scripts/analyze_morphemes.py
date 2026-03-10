@@ -478,6 +478,24 @@ AMBIGUOUS_MORPHEMES = {
     'ci': [
         ('say', 'quotative'),        # Quotative verb (default)
     ],
+    
+    # lawm: 'worthy/suitable' (verb/adj) vs 'friend' (noun) vs 'lamb' (noun)
+    # - 'worthy' with ki- prefix (ki-lawm = REFL-worthy = be fitting/worthy) - 258x
+    # - 'friend' in compounds (lawmte = friends)
+    # - 'lamb' very rare
+    'lawm': [
+        ('worthy', 'with_ki'),       # With ki- prefix: be worthy/suitable
+        ('friend', 'nominal'),       # Friend (noun)
+        ('lamb', 'rare'),            # Lamb (rare in Bible)
+    ],
+    
+    # hut: 'arm' (weapon) vs 'shelter' (noun/verb)
+    # - 'arm' (weapon) with hut (6x)
+    # - 'shelter' in kihut = refuge (ki-hut-na = shelter-NMLZ)
+    'hut': [
+        ('shelter', 'with_ki'),      # Refuge with ki- prefix
+        ('arm', 'weapon'),           # Weapon/armament
+    ],
 }
 
 # Common function words with glosses - expanded with frequencies
@@ -923,6 +941,7 @@ VERB_STEMS = {
     'tut': 'sleep',
     'suk': 'make.become',
     'khen': 'divide',
+    'khecin': 'sharp',       # 18x - sharp (adj) - khecinte = sharp-PL
     'gelh': 'write',
     'kap': 'weep',           # 185
     'zah': 'fear',           # 182
@@ -1050,6 +1069,8 @@ VERB_STEMS = {
     'seek': 'sweep',         # 17x
     'vot': 'vote',           # 11x (loan word)
     'puakkik': 'return',     # 11x
+    'hite': 'hate',          # 2x - "hate" (verb) - a hite kei = "hate me"
+    'lampial': 'scatter',    # 19x - "drive away, scatter, stray"
     
     # Round 4 - more verb stems from remaining unknowns
     'am': 'sink',            # for kiam (ki-am)
@@ -1060,6 +1081,8 @@ VERB_STEMS = {
     'kham': 'forbid',        # for kikham
     'kep': 'clutch',         # for kikep
     'khem': 'restrain',      # for kikhem
+    'luh': 'plunder',        # for kiluh (be plundered, robbed)
+    'khezaw': 'lame/crippled', # 6x - "lame, crippled" (khezawte = lame people)
     'pua': 'carry.on.back',  # for kipua
     'sit': 'cut.off',        # for kisit
     'nga': 'endure',         # for kinga
@@ -1543,6 +1566,7 @@ NOUN_STEMS = {
     'anlum': 'food',         # 145
     'ganhing': 'animal',     # 164
     'ganhingte': 'animals',
+    'gankhahna': 'pasture',  # 3x - "pasture" (gan=animal + khah=tend + na=NMLZ)
     'sang': 'high',          # 209
     'nin': 'day',            # 200 variant
     'bawng': 'cattle',       # 31x + many compounds (bawngtal, bawngpi, etc.)
@@ -1557,6 +1581,7 @@ NOUN_STEMS = {
     'nkungno': 'rootless',   # ankungnote = scorched/no root (Matt 13:6, Mark 4:6)  
     'nhai': 'gluttonous',    # anhai = 3SG-gluttonous (Matt 11:19, Luke 7:34)
     'lsak': 'season/salt',   # alsakkik = salt losing savour (Matt 5:13, Mark 9:50)
+    'phung': 'plain/fort',   # 41x - plain, or fort/siege-tower (context-dependent)
     
     # === Additional stems from corpus frequency analysis ===
     # Social/occupational
@@ -1585,6 +1610,7 @@ NOUN_STEMS = {
     'neih': 'have',          # neihna
     'muh': 'see',            # muhna
     'lau': 'fear',           # launa
+    'lawm': 'worthy',        # kilawm (258x) = REFL-worthy = be fitting/suitable
     'kah': 'fight',          # kahna
     'lin': 'hope',           # lina
     'sik': 'repent',         # sikna
@@ -2734,6 +2760,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kikhel': ('ki-khel', 'REFL-differ'),
         'kipawlna': ('ki-pawl-na', 'REFL-associate-NMLZ'),  # 35x - association
         'kitotna': ('ki-tot-na', 'REFL-cut-NMLZ'),  # 35x - separation
+        'kilawmna': ('ki-lawm-na', 'REFL-worthy-NMLZ'),  # 3x - worthiness/suitability
+        'kihutna': ('ki-hut-na', 'REFL-shelter-NMLZ'),  # 3x - refuge
+        'kilakna': ('ki-lak-na', 'REFL-appear-NMLZ'),  # 2x - appearing
         
         # === Household/Family Compounds ===
         'innkuanpihte': ('innkuanpih-te', 'household-PL'),  # 46x
@@ -3000,6 +3029,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'biakpiakna': ('biak-piak-na', 'worship-give.to-NMLZ'),
         'milimte': ('mi-lim-te', 'idol-PL'),
         'thukhamte': ('thu-kham-te', 'law-PL'),
+        'thumuhnate': ('thu-muhna-te', 'word-vision-PL'),  # 3x - visions/understandings
         'inndei': ('inn-dei', 'house-?'),
         'lonona': ('lo-no-na', 'NEG-?-NMLZ'),
         'puanbuk': ('puan-buk', 'cloth-?'),
@@ -3032,6 +3062,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lutangte': ('lutang-te', 'chief-PL'),          # 56x - "dukes/chiefs"
         'phattuamna': ('phat-tuam-na', 'praise-promise-NMLZ'),  # 77x - "benefit, reward"
         'pianna': ('pian-na', 'birth-NMLZ'),            # 48x - "origin, father of"
+        'misia': ('mi-sia', 'person-evil'),              # 13x - "evil person/wicked"
+        'misiate': ('mi-sia-te', 'person-evil-PL'),      # 3x - "evil people"
         'lui': ('lui', 'river'),
         'sepna': ('sep-na', 'work-NMLZ'),
         'thungetna': ('thu-nget-na', 'word-request-NMLZ'),
@@ -3315,6 +3347,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lunghimawh': ('lung-himawh', 'heart-fear'),          # 51
         'bukna': ('buk-na', 'ambush-NMLZ'),                   # 51
         'gengen': ('gen-gen', 'speak-RED'),                   # 50
+        'gengenin': ('gen-gen-in', 'speak-RED-ERG'),           # 3x - "speaking intensively"
         'samsia': ('sam-sia', 'call-destroy'),                # 50
         'lungdamsak': ('lung-dam-sak', 'heart-well-CAUS'),    # 50
         'ante': ('an-te', '3PL-PL'),                          # 50
@@ -9914,6 +9947,20 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nawlkhin': ('nawl-khin', 'way-knowledge'),                  # knowledge of ways (2x)
         'sikkate': ('sikka-te', 'basin-PL'),                        # basins/basons (2x)
         'sikka': ('sikka', 'basin'),                                # basin/vessel
+        
+        # Form II + unknown suffix compounds
+        'theihzel': ('theih-zel', 'know-accustomed'),               # accustomed/habitual (2x)
+        'cihmel': ('cih-mel', 'say-understand'),                    # understand (2x)
+        'khawhletzo': ('khawh-let-zo', 'sharpen-?-COMPL'),          # barbed iron (2x)
+        'siahil': ('siah-il', 'wonder-?'),                          # wonder/marvel (2x)
+        
+        # Contracted locative forms (lak-ah → laka)
+        'leilaka': ('lei-lak-ah', 'earth-among-LOC'),               # on the earth (2x)
+        
+        # Short stems that were removed to prevent mis-segmentation
+        # Adding as compounds instead
+        'ku': ('ku', 'howl'),                                       # make noise like dog (2x)
+        'khi': ('khi', 'chain'),                                    # chain/necklace (2x)
     }
     
     # Check compound words (try both hyphenated and unhyphenated)
