@@ -10840,6 +10840,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hihnu': ('hi-h-nu', 'this-II-after'),                       # after.this (Mark 12:23)
         'pilvangin': ('pil-vang-in', 'learn-guard-ERG'),             # watch (Mark 14:38)
         'minnei': ('min-nei', 'name-have'),                          # named (Luke 1:5)
+        # Round 167k: Luke/Acts partials
+        'hihtheihna': ('hi-h-theih-na', 'be-II-able-NMLZ'),          # temptation (Luke 4:13)
+        'gunkuangte': ('gunkuang-te', 'boat-PL'),                    # ships (Luke 5:3)
+        'pahtakbawl': ('pah-tak-bawl', 'praise-real-do'),            # speak.well.of (Luke 6:26)
+        # Round 167k more: Luke/John partials
+        'taanlawhte': ('taan-lawh-te', 'lose-away-PL'),              # those.who.lose (Matthew 10:39)
+        'nakgen': ('nak-gen', 'much-speak'),                         # tell.much (Mark 1:45)
+        'kongkawcipsak': ('kong-kaw-cip-sak', '1SG→3-convulse-tight-CAUS'), # tear (Luke 9:39)
+        'mawhzon': ('mawh-zon', 'guilty-seek'),                      # accuse (Luke 11:53)
+        'anvakna': ('an-vak-na', '3PL-repay-NMLZ'),                  # recompense (Luke 14:12)
+        'aptheih': ('a-p-theih', '3SG-give-able'),                   # deliver (Luke 20:20)
+        'kipiaknate': ('ki-piak-na-te', 'REFL-give-NMLZ-PL'),        # offerings (Luke 21:5)
+        'ahihkhak': ('a-hi-h-khak', '3SG-be-II-if'),                 # if.it.be (Luke 22:42)
+        'kipawlte': ('ki-pawl-te', 'REFL-ally-PL'),                  # companions (Luke 22:59)
+        'talapte': ('talap-te', 'porch-PL'),                         # porches (John 5:3)
     }
 
 
