@@ -1621,7 +1621,8 @@ VERB_STEMS = {
     'zak': 'spread/proclaim',      # spread/proclaim (genzak = speak-proclaim)
     'zaw': 'leap',                 # leap (kanzaw = 1SG-leap, sugawpzo/zaw compounds)
     'pial': 'stray',               # stray/err (pialsakin = stray-CAUS-ERG)
-    'tai': 'rebuke',               # rebuke (tainate = rebuke-NMLZ-PL)
+    'tai': 'rebuke',               # rebuke (tainate = rebuke-NMLZ-PL) - NOTE: short form, taii is full form
+    'taii': 'rebuke',              # rebuke (taii-in = rebuke-ERG) - full form
     'isan': 'own',                 # own (naisan = 2SG-own)
     'tama': 'repair',              # repair (lettamate = return-repair-PL)
     'hin': 'life',                 # life/breath (hintheihna = life-know-NMLZ)
@@ -10776,6 +10777,31 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sianthosakna': ('siangtho-sak-na', 'holy-CAUS-NMLZ'),       # purge (Daniel 11:35)
         'ommah': ('om-mah', 'exist-EMPH'),                           # born (Hosea 2:3)
         'balthanggawp': ('bal-thang-gawp', 'bite-rend-together'),    # tear (Hosea 13:8)
+        # Round 167i: Minor prophets partials
+        'ciingte': ('ciing-te', 'vine.dresser-PL'),                  # vinedressers (Joel 1:11)
+        'kiluansakna': ('ki-luan-sak-na', 'REFL-pour-CAUS-NMLZ'),    # pouring (Joel 2:30)
+        'meikatna': ('mei-kat-na', 'fire-burn-NMLZ'),                # fire (Joel 2:30)
+        'duhduhin': ('duh-duh-in', 'want-REDUP-ERG'),                # at.will (Amos 6:4)
+        'ngapi': ('nga-pi', 'fish-big'),                             # great.fish (Jonah 1:17)
+        'gunpite': ('gun-pi-te', 'river-big-PL'),                    # rivers (Nahum 1:4)
+        'itluatna': ('it-luat-na', 'love-exceed-NMLZ'),              # jealousy (Zechariah 8:2)
+        'summeet': ('sum-meet', 'money-poor'),                       # poor (Zechariah 11:7)
+        # Round 167i: High-frequency partials
+        'taii': ('taii', 'rebuke'),                                  # rebuke (32x in corpus)
+        'emerald': ('emerald', 'emerald'),                           # English loan word (5x)
+        'mangthangte': ('mangthang-te', 'glory-PL'),                 # glory.ones (2x)
+        'puansungsilh': ('puan-sung-silh', 'cloth-inside-wipe'),     # inner.garment (2x)
+        # Round 167i more: Job/Psalms/Prophets partials
+        'kaite': ('kait-e', 'consume-DECL'),                         # consumed (Job 7:9) - kait = consume
+        'nikten': ('nikten', 'dust'),                                # dust (Job 27:16)
+        'khawhletzo': ('khawh-let-zo', 'pierce-return-COMPL'),       # fill.with (Job 41:7)
+        'ansite': ('ansi-te', 'chaff-PL'),                           # chaff (Psalm 35:5)
+        'kaisakin': ('ka-isak-in', '1SG-rise.CAUS-ERG'),             # rise (Psalm 135:7)
+        'kongkhuam': ('kong-khuam', '1SG→3-threshold'),              # threshold (Ezekiel 43:8)
+        'antan': ('an-tan', '3PL-fast'),                             # fast (Jonah 3:5) - tan = fast
+        'kamciamsa': ('ka-mciam-sa', '1SG-vow-NOM'),                  # vowed (Malachi 1:14)
+        'santak': ('san-tak', 'stand-remain'),                       # stood (Matthew 2:9)
+        'kahtohpih': ('ka-htoh-pih', '1SG-set-APPL'),                 # set (Matthew 4:5)
     }
 
 
