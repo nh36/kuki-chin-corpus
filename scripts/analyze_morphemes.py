@@ -1616,6 +1616,16 @@ VERB_STEMS = {
     'psa': 'dedicate',             # dedicate (apsate = dedicated things)
     'mun': 'rare',                 # rare (genmun = rare word) - NOTE: also 'spot' in other contexts
     'dek': 'low',                  # low/cheap (sidek = low pit, sumdek = cheap)
+    # Round 167h: More stems from partial-gloss analysis
+    'em': 'bake',                  # bake (emna = bake-NMLZ, baking place)
+    'zak': 'spread/proclaim',      # spread/proclaim (genzak = speak-proclaim)
+    'zaw': 'leap',                 # leap (kanzaw = 1SG-leap, sugawpzo/zaw compounds)
+    'pial': 'stray',               # stray/err (pialsakin = stray-CAUS-ERG)
+    'tai': 'rebuke',               # rebuke (tainate = rebuke-NMLZ-PL)
+    'isan': 'own',                 # own (naisan = 2SG-own)
+    'tama': 'repair',              # repair (lettamate = return-repair-PL)
+    'hin': 'life',                 # life/breath (hintheihna = life-know-NMLZ)
+    'huam': 'possession',          # possession (khuapihuam = city-possession)
 }
 
 
@@ -10723,6 +10733,49 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lamnawl': ('lam-nawl', 'way-other'),                       # other side (Luke 10:31)
         'phengzat': ('pheng-zat', 'waste-use'),                     # waste/squander (Luke 15:13)
         'kilhcip': ('ki-lh-cip', 'REFL-hang-tight'),                # crucify (Luke 23:33)
+        # Round 167h: More NT hapax from KJV cross-reference
+        'lehpei': ('leh-pei', 'turn-betray'),                        # betray (John 6:64)
+        'buannawi': ('buan-nawi', 'dirt-soft'),                      # clay (John 9:6)
+        'dengnuam': ('deng-nuam', 'stone-want'),                     # want.to.stone (John 10:33)
+        'likkhia': ('lik-khia', 'roll-away'),                        # take.away (John 11:39)
+        'mantaktak': ('man-tak-tak', 'true-real-REDUP'),             # truly (John 19:35)
+        'manzawk': ('man-zawk', 'true-more'),                        # more.right (Acts 4:19)
+        'ngongbawl': ('ngong-bawl', 'force-do'),                     # violence (Acts 5:26)
+        'kigawlmek': ('ki-gawl-mek', 'REFL-strangle-tight'),         # strangled (Acts 15:20)
+        'buppiak': ('bu-piak', 'body-give'),                         # yield (Romans 6:19)
+        'tavai': ('ta-vai', 'child-shame'),                          # ashamed (Romans 9:33)
+        'kipeh': ('ki-peh', 'REFL-join'),                            # grafted.in (Romans 11:17)
+        'gimsakkhak': ('gim-sak-khak', 'suffer-CAUS-suddenly'),      # persecute (Romans 15:31)
+        # Round 167h more: OT hapax compounds
+        'singkhuah': ('sing-khuah', 'wood-burn'),                    # firebrand (Amos 4:11)
+        'lunggulhgulh': ('lung-gulh-gulh', 'heart-desire-REDUP'),    # desired (Micah 7:1)
+        'genzak': ('gen-zak', 'speak-proclaim'),                     # publish (Isaiah 52:7)
+        'cikhuk': ('ci-khuk', 'salt-preserve'),                      # to.salt (Ezekiel 47:11)
+        'atkhiat': ('a-tkhiat', '3SG-cut.off'),                      # cut off (1 Sam 24:5) 
+        'kanzaw': ('ka-n-zaw', '1SG-DIR-leap'),                      # leap (1 Sam 20:19)
+        'kanzo': ('ka-n-zo', '1SG-DIR-COMPL'),                       # leaped (2 Sam 22:30) - probably kanzo = 'ka-n-zo'
+        # Round 167h more: OT partial-gloss fixes
+        'siahil': ('siah-il', 'wonder-INTNS'),                       # wonder (Psalm 71:7)
+        'kongvangah': ('kong-vang-ah', 'mouth-open-LOC'),            # grave's.mouth (Psalm 141:7)
+        'tainate': ('tai-na-te', 'rebuke-NMLZ-PL'),                  # reproof (Proverbs 1:25)
+        'mana': ('ma-na', 'envy-NMLZ'),                              # envy (Ecclesiastes 4:4)
+        'pialsakin': ('pial-sak-in', 'stray-CAUS-ERG'),              # err (Isaiah 63:17)
+        'kaihnelh': ('kaih-nelh', 'thorn-tangle'),                   # briers (Ezekiel 2:6)
+        'naisan': ('na-isan', '2SG-own'),                            # own (blood) (Ezekiel 16:6)
+        'leengguino': ('leeng-guin-o', 'vine-seed-DIM'),             # seed (Ezekiel 17:5)
+        'pantah': ('pan-tah', 'young-lion'),                         # whelp/cub (Ezekiel 19:5)
+        'lettamate': ('let-tama-te', 'return-repair-PL'),            # calkers (Ezekiel 27:9)
+        # Round 167h more: Daniel/Minor prophets partials
+        'hintheihna': ('hin-theih-na', 'life-know-NMLZ'),            # breath (Ezekiel 37:8)
+        'puanunga': ('puan-unga', 'outer-court'),                    # outer.court (Ezekiel 42:3)
+        'khuapihuam': ('khuapi-huam', 'city-possession'),            # city.possession (Ezekiel 48:20)
+        'khemete': ('kheme-te', 'toe-PL'),                           # toes (Daniel 2:41)
+        'tamngaite': ('tamngai-te', 'flute-PL'),                     # flutes (Daniel 3:5)
+        'khuatheihna': ('khua-theih-na', 'mind-know-NMLZ'),          # understanding (Daniel 4:34)
+        'khantoh': ('khan-toh', 'generation-tax'),                   # taxes/glory (Daniel 11:20)
+        'sianthosakna': ('siangtho-sak-na', 'holy-CAUS-NMLZ'),       # purge (Daniel 11:35)
+        'ommah': ('om-mah', 'exist-EMPH'),                           # born (Hosea 2:3)
+        'balthanggawp': ('bal-thang-gawp', 'bite-rend-together'),    # tear (Hosea 13:8)
     }
 
 
