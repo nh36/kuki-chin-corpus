@@ -1627,6 +1627,10 @@ VERB_STEMS = {
     'tama': 'repair',              # repair (lettamate = return-repair-PL)
     'hin': 'life',                 # life/breath (hintheihna = life-know-NMLZ)
     'huam': 'possession',          # possession (khuapihuam = city-possession)
+    # Round 167j: More stems from Gospel partials
+    'zuih': 'follow',              # follow (galzuih = far-follow, nungzuih = behind-follow)
+    'hual': 'roll',                # roll (hualin = roll-ERG)
+    'kiim': 'border',              # border (khuakiim = town-border)
 }
 
 
@@ -10802,6 +10806,40 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kamciamsa': ('ka-mciam-sa', '1SG-vow-NOM'),                  # vowed (Malachi 1:14)
         'santak': ('san-tak', 'stand-remain'),                       # stood (Matthew 2:9)
         'kahtohpih': ('ka-htoh-pih', '1SG-set-APPL'),                 # set (Matthew 4:5)
+        # Round 167j: More Gospel partials
+        'dangate': ('dang-a-te', 'other-REL-PL'),                    # others (Ezekiel 40:28)
+        'bate': ('ba-te', 'pledge-PL'),                              # pledges (Habakkuk 2:6)
+        'tungthamah': ('tung-thamah', 'on-outside'),                 # outwardly (Matthew 7:15)
+        'sialtalling': ('sial-tal-ling', 'thorn-grow-wild'),         # thistles (Matthew 7:16)
+        'naksiat': ('na-ksiat', '2SG-fall'),                         # fall (Matthew 7:27) - ksiat = fall
+        'kengthuah': ('keng-thuah', 'carry-extra'),                  # extra (Matthew 10:10)
+        'sammal': ('sam-mal', 'hair-all'),                           # hairs.all (Matthew 10:30)
+        'itzawte': ('it-zaw-te', 'love-more-PL'),                    # love.more (Matthew 10:37)
+        'taanlawhte': ('taan-lawh-te', 'lose-?-PL'),                 # lose (Matthew 10:39) - lawh suffix
+        'kimawlte': ('ki-mawl-te', 'REFL-play-PL'),                  # playing (Matthew 11:16)
+        # Round 167j more: Matthew partials
+        'mangbuhvuite': ('mangbuh-vui-te', 'grain-ear-PL'),          # ears.of.corn (Matthew 12:1)
+        'lametet': ('lamet-et', 'example-indeed'),                   # indeed (Matthew 12:23)
+        'kitawphahna': ('ki-taw-phah-na', 'REFL-cover-rock-NMLZ'),   # stony.places (Matthew 13:5)
+        'hihtakpi': ('hi-h-tak-pi', 'be-II-real-EMPH'),              # be.thou (Matthew 14:28)
+        'kaikhawmsak': ('ka-i-khawm-sak', '1SG-DIR-gather-CAUS'),    # gather (Matthew 24:31)
+        'bangcite': ('bang-ci-te', 'what-say-PL'),                   # which.ones (Matthew 24:45)
+        'simmatin': ('sim-mat-in', 'deceive-snare-ERG'),             # by.subtilty (Matthew 26:4)
+        'limnap': ('lim-nap', 'sign-deep'),                          # kissed (Matthew 26:49)
+        'kipatthakna': ('ki-pat-thak-na', 'REFL-begin-new-NMLZ'),    # renewal (Isaiah 6:13)
+        # Round 167j more: Mark/Luke partials
+        'hihpak': ('hi-h-pak', 'be-II-do'),                          # do.this (Matthew 26:50)
+        'galzuih': ('gal-zuih', 'far-follow'),                       # follow.afar (Matthew 26:58)
+        'hualin': ('hual-in', 'roll-ERG'),                           # roll (Matthew 27:60)
+        'nungzuih': ('nung-zuih', 'behind-follow'),                  # follow.after (Mark 1:36)
+        'khawlpah': ('khawl-pah', 'dry-COMPL'),                      # dried.up (Mark 5:29)
+        'lingkawmin': ('ling-kawm-in', 'tremble-together-ERG'),      # trembling (Mark 5:33)
+        'pawlkhatah': ('pawl-khat-ah', 'group-one-LOC'),             # in.groups (Mark 6:40)
+        'khuakiim': ('khua-kiim', 'town-border'),                    # borders (Mark 7:24)
+        'sawnpaih': ('sawn-paih', 'table-push'),                     # overthrew (Mark 11:15)
+        'hihnu': ('hi-h-nu', 'this-II-after'),                       # after.this (Mark 12:23)
+        'pilvangin': ('pil-vang-in', 'learn-guard-ERG'),             # watch (Mark 14:38)
+        'minnei': ('min-nei', 'name-have'),                          # named (Luke 1:5)
     }
 
 
