@@ -383,6 +383,15 @@ AMBIGUOUS_MORPHEMES = {
         ('sit.II', 'rare'),          # Form II of tu (rare)
     ],
     
+    # kah: 'climb/ascend' vs 'fight' vs 'cry'
+    # - 'climb' in motion contexts (kah-to = climb-up = ascend)
+    # - 'fight' in conflict contexts (kah-na = fight-NMLZ)  
+    # - 'cry/weep' (kap variant?)
+    'kah': [
+        ('climb', 'motion'),         # Climb/ascend (kah-to = ascend)
+        ('fight', 'conflict'),       # Fight
+    ],
+    
     # sa: 'flesh' (noun) vs 'PERF' (perfective suffix on verbs)
     # - 'flesh' standalone or with nominal morphology
     # - 'PERF' after verb stems (muh-sa = seen, nei-sa = had)
@@ -4465,7 +4474,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kongcingte': ('kong-cing-te', 'road-faithful-PL'), # 22x - compound
         
         # === Session 4 Round 7: More compounds from philological analysis ===
-        'kahto': ('ka-hto', '1SG-ascend'),                  # 24x - "I ascend"
+        'kahto': ('kah-to', 'climb-up'),                    # 37x - "ascend" (kah=climb, to=up)
         'thuteng': ('thu-teng', 'word-tell'),               # 23x - "told/informed"
         'kawnggak': ('kawng-gak', 'road-girdle'),           # 22x - "girdle" (garment)
         'paubaang': ('pau-baang', 'speak-perfect'),         # 21x - "perfect" (blameless)
