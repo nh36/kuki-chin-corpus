@@ -10892,6 +10892,16 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'buangun': ('buan-gun', 'pass-by'),                          # pass.by (Genesis 18:3)
         'khakhia': ('kha-khia', 'drive-away'),                       # sent.away (Genesis 12:20)
         'awngthawlpi': ('awng-thawl-pi', 'open-waste-big'),          # void (Genesis 1:2)
+        # Round 167n: More OT/Revelation partials
+        'kipatcil': ('ki-pat-cil', 'REFL-begin-old'),                # from.beginning (3 John 1:5)
+        'awmgak': ('awm-gak', 'waist-bind'),                         # girded (Revelation 1:13)
+        'gualzote': ('gual-zo-te', 'win-COMPL-PL'),                  # overcomers (Revelation 3:12)
+        'kalkakin': ('kal-kak-in', 'step-stand-ERG'),                # standing.on (Revelation 10:5)
+        'kanggawp': ('kang-gawp', 'burn-together'),                  # scorched (Revelation 16:8)
+        'suangtawphahte': ('suang-taw-phah-te', 'stone-floor-rock-PL'), # foundations (Revelation 21:14)
+        'kizopna': ('ki-zop-na', 'REFL-join-NMLZ'),                  # coupling (Exodus 28:27)
+        'thukhenna': ('thu-khen-na', 'word-judge-NMLZ'),             # judgment (Genesis 15:14)
+        'kicinsakna': ('ki-cin-sak-na', 'REFL-complete-CAUS-NMLZ'),  # perfected (James 2:22)
     }
 
 
