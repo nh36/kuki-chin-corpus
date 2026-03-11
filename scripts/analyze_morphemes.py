@@ -3666,7 +3666,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kisai-in': ('ki-sai-in', 'REFL-concern-ERG'),
         'biakna-in': ('biakna-in', 'worship-ERG'),
         'hinapi-in': ('hi-na-pi-in', 'be-?-big-ERG'),
-        'cihin-ah': ('ci-h-in-ah', 'say-NOM-ERG-LOC'),
+        'cihin-ah': ('cih-in-ah', 'say.II-ERG-LOC'),  # cih is Form II of ci
         'genin-ah': ('gen-in-ah', 'speak-ERG-LOC'),
         'ma-in': ('ma-in', 'self-ERG'),
         'zan-in': ('zan-in', 'night-ERG'),
@@ -3803,7 +3803,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thumanna': ('thuman-na', 'truth-NMLZ'),
         'phatna': ('phat-na', 'praise-NMLZ'),
         'khiatna': ('khiat-na', 'emerge-NMLZ'),
-        'cihnopna': ('ci-h-nop-na', 'say-NOM-want-NMLZ'),
+        'cihnopna': ('cih-nop-na', 'say.II-want-NMLZ'),  # cih is Form II of ci
         'lupna': ('lup-na', 'bow.down-NMLZ'),
         'mawkna': ('mawk-na', 'err-NMLZ'),
         'hauhna': ('hauh-na', 'shout-NMLZ'),
@@ -4412,7 +4412,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # === Session 4 Round 5: More compounds ===
         'paipihto': ('paipih-to', 'accompany-sit'),         # 24x - "accompany"
-        'kahto': ('ka-h-to', '1SG-?-sit'),                  # 24x - needs more analysis
+        # kahto entry moved to later section with correct analysis
         'awmdal': ('awm-dal', 'exist-remain'),              # 24x - "remain, stay"
         'val': ('val', 'go.quickly'),                       # 24x - "go quickly"
         'buktual': ('buk-tual', 'hole-dig'),                # 24x - "dig pit"
@@ -10761,7 +10761,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 167g: More unknown words from Gospel hapax
         'guai': ('guai', 'hire'),                                   # hire/wage (Deut 23:18)
-        'kiguaihna': ('ki-guai-h-na', 'REFL-hire-II-NMLZ'),         # hiring (prostitution)
+        # kiguaihna already defined earlier with simpler analysis
         'kipeksat': ('ki-pek-sat', 'REFL-break-strike'),            # break covenant (Isa 33:8)
         'kipeksatin': ('ki-pek-sat-in', 'REFL-break-strike-ERG'),   # breaking
         'likkhiat': ('lik-khiat', 'burden-away'),                   # burden/cut (Zech 12:3)
