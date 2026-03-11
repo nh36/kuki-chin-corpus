@@ -10678,6 +10678,32 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tawnnate': ('tawn-na-te', 'meet-NMLZ-PL'),                 # meetings
         'kigenna': ('ki-gen-na', 'REFL-speak-NMLZ'),                # speaking together
         'kigennate': ('ki-gen-na-te', 'REFL-speak-NMLZ-PL'),        # speakings
+        
+        # Round 167e: More suffix patterns from hapax analysis
+        'hute': ('hu-te', 'protect-PL'),                            # protectors/shields (Gen 15:1)
+        'makaite': ('makai-te', 'chief-PL'),                        # chiefs/mighty ones (Exod 15:15)
+        'nengniamin': ('nengniami-n', 'deceive-ERG'),               # deceiving (Lev 6:2)
+        'galkapteng': ('gal-kap-teng', 'war-throw-ALL'),            # all soldiers (Ezek 30:6)
+        'ganhingteng': ('gan-hing-teng', 'animal-alive-ALL'),       # all living animals (Dan 2:38)
+        'galkapte': ('gal-kap-te', 'war-throw-PL'),                 # soldiers
+        'ganhingteteng': ('gan-hing-te-teng', 'animal-alive-PL-ALL'), # all animals
+        
+        # Round 167e: -teng suffix (all/whole) compounds
+        'leitungteng': ('lei-tung-teng', 'earth-surface-ALL'),      # all the earth surface
+        'hihthuteng': ('hih-thu-teng', 'this-word-ALL'),            # all these words
+        'lampangteng': ('lam-pang-teng', 'way-carry-ALL'),          # all directions (Ezek 47:18)
+        
+        # Round 167f: Unknown words from hapax KJV cross-reference
+        'daang': ('daang', 'forsake'),                              # forsake (Prov 27:10)
+        'daanggawp': ('daang-gawp', 'forsake-grasp'),               # troubled/distressed (Dan 7:28)
+        'khungnung': ('khung-nung', 'border-back'),                 # far end/border (Ezek 48:1)
+        'phiangsiah': ('phiang-siah', 'collect-tribute'),           # tax collector (Dan 11:20)
+        'leenlak': ('leen-lak', 'swoop-among'),                     # swoop down (Hosea 8:1)
+        'pettan': ('pettan', 'palmerworm'),                         # palmerworm insect (Joel 1:4)
+        'hawksuk': ('hawk-suk', 'roar-down'),                       # roar out (Joel 3:16)
+        'kiteenkhia': ('ki-teen-khia', 'REFL-snatch-out'),          # plucked out (Amos 4:11)
+        'kiamsuk': ('kiam-suk', 'flood-down'),                      # rise as flood (Amos 8:8)
+        'gimlawh': ('gim-lawh', 'pain-exceed'),                     # very sorrowful (Zech 9:5)
     }
 
 
