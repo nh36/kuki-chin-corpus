@@ -1598,7 +1598,12 @@ VERB_STEMS = {
     'guaih': 'reward',             # reward (givest a reward)
     'puanteng': 'nakedness',       # nakedness (discover thy nakedness)
     'dotnop': 'prosper',           # prosper (shall it prosper)
+    
+    # Round 166: High-frequency stems
+    'huang': 'village',            # village/field (39x) - not same as hua (garden)
+    'huan': 'garden',              # garden (huanah = garden-LOC) - 11x (overrides 'bread' compound)
 }
+
 
 
 
