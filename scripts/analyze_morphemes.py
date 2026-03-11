@@ -1443,7 +1443,104 @@ VERB_STEMS = {
     'thaltawi': 'archer',     # archers hit him
     'thalsing': 'myrrh',      # smell of myrrh
     'thalpeu': 'bend',        # bend their tongues
+    
+    # Round 164: Reduplication base verbs from remaining partials
+    # NOTE: Short stems (di, ho, sen, cip, tup, hel) moved to COMPOUND_WORDS 
+    # to prevent over-segmentation - they're only valid in reduplication context
+    'lek': 'appear',          # appear/seem (leklek = appearing repeatedly)
+    'gaih': 'grieve',         # lament/grieve (gaihgaih = grieving/lamenting)
+    'kut': 'press',           # press/urge (kutkut = pressing urgently)
+    'dua': 'quiet',           # be quiet/still (duadua = very quiet)
+    'ngeu': 'shake',          # shake (ngeungeu = shaking)
+    'vuau': 'pour.forth',     # pour forth (vuauvuau = poured forth)
+    'viau': 'be.fragrant',    # be fragrant (viauviau = fragrant)
+    'phang': 'stammer',       # stammer (phangphang = stammering)
+    'hut': 'neigh',           # neigh (huthut = neighing)
+    'gap': 'look.at.each.other',  # mutual gaze (gapgap = looking at each other)
+    'thop': 'oppress',        # oppress/vex (thopthop = oppressing)
+    'lit': 'pine.away',       # pine away/mourn (litlit = pining away)
+    'giau': 'wait.upon',      # wait upon (giaugiau = waiting upon)
+    
+    # Round 164: Nominalization base verbs from remaining partials
+    'ngolh': 'chasten',       # chasten/fast (ngolhna = chastening/fasting)
+    'mangngilh': 'forget',    # forget (mangngilhna = forgetfulness)
+    'niamsak': 'bow',         # bow/humble (niamsakna = humbling)
+    'gilvah': 'be.satisfied', # be satisfied (gilvahna = satisfaction)
+    'dimdiam': 'socket',      # socket/base (dimdiamna = sockets)
+    'kinetniam': 'relieve',   # relieve oppressed (kinetniamna = relief)
+    'meihal': 'burnt.offering', # burnt offering (meihalna = burnt offering)
+    'kosiat': 'revile',       # revile/reproach (kosiatna = reviling)
+    'kihen': 'bundle',        # bundle/tie (kihenna = bundle)
+    'kolbulh': 'stocks',      # put in stocks (kolbulhna = stocks)
+    'kilei': 'buy',           # buy (kileina = purchase)
+    'hehsuah': 'provoke.jealousy', # provoke to jealousy (hehsuahna = jealousy)
+    'kicip': 'breach',        # breach/gap (kicipna = breach)
+    
+    # Round 164 continued: More partials from KJV cross-reference
+    'aisanna': 'familiar.spirit',  # familiar spirit/wizard (Lev 19:31)
+    'naugil': 'door',              # door (of womb) - "shut not doors"
+    'balgawp': 'die.naturally',    # die of itself/be torn
+    'nikten': 'dust',              # dust (as the dust)
+    'sawtta': 'great',             # great (number of days is great)
+    'khawh': 'till',               # till the ground
+    'nencip': 'compass',           # compass about
+    'siahil': 'wonder',            # wonder (as a wonder to many)
+    'lunggimhuai': 'painful',      # painful/difficult
+    'sameh': 'provide',            # provide/give (bread, flesh)
+    'ngal': 'leap',                # leap (have legs to leap)
+    'palhin': 'flourish',          # flourish/sprout
+    'lungsimmawl': 'brutish',      # brutish/foolish
+    'khansihsak': 'take.away',     # take away
+    'kinengniamte': 'oppressed',   # the oppressed (as noun)
+    'meipi': 'fire',               # fire/large fire
+    'meikuang': 'flaming',         # flaming (sword)
+    'kamguh': 'speak.rashly',      # speak rashly/unadvisedly
+    'khuaipi': 'bees',             # bees (like bees)
+    'mitsuan': 'watch',            # watch/look on
+    
+    # Round 164 batch 3: More partials from KJV
+    'kawma': 'chew',               # chew (ere it was chewed)
+    'zaak': 'spread',              # spread (net is spread)
+    'engkha': 'envy',              # envy/choose (envy thou not)
+    'iplah': 'take',               # take (when ye take)
+    'tangtawnga': 'beginning',     # beginning/old (of old)
+    'cinasak': 'make.sick',        # make sick (maketh heart sick)
+    'maitaisak': 'make.cheerful',  # make cheerful (cheerful countenance)
+    'kidon': 'beat',               # beaten (were beaten)
+    'awklawh': 'snare',            # snare/get a snare
+    'mitphiat': 'set.eyes',        # set eyes (set thine eyes upon)
+    # NOTE: 'mana' removed - causes over-segmentation with manawh (direct toward)
+    'omtual': 'dwelling',          # house/dwelling (house of mourning)
+    'ngiano': 'fox',               # fox (the foxes)
+    'khuto': 'pillar',             # pillar (pillars of smoke)
+    'hialhial': 'twins',           # twins (that are twins)
+    'lungzuangin': 'lovesick',     # sick of love
+    'kikhawl': 'walk.with',        # walk with (walked with God)
+    'keenhawm': 'cave',            # cave (caves of earth)
+    'maiput': 'countenance',       # countenance (shew of countenance)
+    'singbul': 'root',             # root (serpent's root)
+    'nasiazaw': 'more',            # more/further (bring more)
+    'patpuan': 'weave',            # weave (weave networks)
+    'khansuah': 'bring.forth',     # bring forth (bring forth children)
+    'keutumin': 'mourn',           # mourn/languish
+    'mutgawp': 'drive.back',       # go back/drive back (caused sea to go back)
+    'ciil': 'refined',             # refined (well refined)
+    'migit': 'mercy',              # mercy (thy mercy)
+    'kheuh': 'branch',             # branch (consume the branches)
+    'manawh': 'direct.toward',     # direct toward / set face toward (35x)
+    
+    # Round 164 batch 4: More bases from -te plural forms
+    # NOTE: 'zuau' removed - causes over-segmentation with zuauthu (lie/dissemble)
+    # 'taina' removed - conflicts with other taina words
+    'meiipi': 'leprous',           # leprous/cloud (became leprous, white as snow)
+    'kisapna': 'need',             # need (what needeth it?)
+    'leii': 'tongue',              # tongue (hide under tongue)
+    'taksing': 'fir.tree',         # fir tree (fir trees)
+    'suangmai': 'smooth.stone',    # smooth stone (five smooth stones)
 }
+
+
+
 
 # Noun stems - expanded from corpus frequency analysis
 NOUN_STEMS = {
@@ -10423,7 +10520,30 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Adding as compounds instead
         'ku': ('ku', 'howl'),                                       # make noise like dog (2x)
         'khi': ('khi', 'chain'),                                    # chain/necklace (2x)
+        
+        # Round 164: Short-stem reduplication compounds (prevent over-segmentation)
+        'helhel': ('hel~hel', 'feed~RED'),                          # feeding/grazing repeatedly
+        'didi': ('di~di', 'soft~RED'),                              # softly
+        'hoho': ('ho~ho', 'greet~RED'),                             # greeting repeatedly  
+        'themthem': ('them~them', 'matter~RED'),                    # matters/things
+        'sensen': ('sen~sen', 'distinguish~RED'),                   # distinguishing
+        'tuptup': ('tup~tup', 'swallow~RED'),                       # swallowing
+        'cippi': ('ci-pi', 'say-COMP'),                             # saying greatly
+        'cipna': ('cip-na', 'besiege-NMLZ'),                        # siege
+        'cipte': ('cip-te', 'besiege-PL'),                          # sieges (?)
+        'kicipna': ('ki-cip-na', 'REFL-besiege-NMLZ'),              # breach/gap
+        
+        # Round 164 batch 5: Problematic stems moved to compounds
+        'zuauthu': ('zuau-thu', 'vain-word'),                       # lie/dissemble (92x)
+        'zuaugen': ('zuau-gen', 'vain-speak'),                      # speak vainly (14x)
+        'zuaute': ('zuau-te', 'vain-PL'),                           # vain ones (2x)
+        'zuauna': ('zuau-na', 'vain-NMLZ'),                         # vanity (2x)
+        'tainapa': ('tai-na-pa', 'flee-NMLZ-father'),               # refugee (not taina-pa)
+        'kituhte': ('ki-tuh-te', 'REFL-dispute-PL'),                # disputes (2x)
+        'kituhteh': ('ki-tuh-teh', 'REFL-dispute-EMP'),             # disputed indeed (2x)
     }
+
+
     
     # Check compound words (try both hyphenated and unhyphenated)
     if word_lower in COMPOUND_WORDS:
