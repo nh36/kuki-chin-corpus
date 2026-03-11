@@ -10873,6 +10873,25 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kigente': ('ki-gen-te', 'REFL-speak-PL'),                   # told (1 Kings 10:7)
         'daihsakna': ('daih-sak-na', 'silence-CAUS-NMLZ'),           # silencing (Psalm 8:2)
         'lukhu': ('lu-khu', 'head-crown'),                           # crown (Exodus 29:6)
+        # Round 167m: Epistles partials
+        'namdangpi': ('nam-dang-pi', 'nation-other-big'),            # foreigner (1 Corinthians 14:11)
+        'kisialhpihna': ('ki-sialh-pih-na', 'REFL-boast-APPL-NMLZ'), # boasting (2 Corinthians 8:24)
+        'patun': ('pa-tun', 'father-arrive'),                        # by.birth (Galatians 2:15)
+        'kilunggulhna': ('ki-lung-gulh-na', 'REFL-heart-desire-NMLZ'), # lust (1 Thessalonians 4:3)
+        'phuahtawmte': ('phuah-tawm-te', 'make-false-PL'),           # fables (1 Timothy 4:7)
+        'kisinna': ('ki-sin-na', 'REFL-train-NMLZ'),                 # exercise (1 Timothy 4:8)
+        'nangzote': ('nang-zo-te', 'endure-COMPL-PL'),               # endure (James 1:12)
+        # Round 167m more: Genesis/OT partials
+        'kingaihna': ('ki-ngaih-na', 'REFL-love-NMLZ'),              # love (Proverbs 30:19)
+        'nuihsan': ('nuih-san', 'laugh-at'),                         # exult.over (1 Samuel 2:1)
+        'zawtzawt': ('zawt-zawt', 'grope-REDUP'),                    # groped (Genesis 19:11)
+        'ciamnui': ('ciam-nui', 'promise-laugh'),                    # joke (Genesis 19:14)
+        'nuihzak': ('nuih-zak', 'laugh-spread'),                     # laugh (Genesis 21:6)
+        'gamdung': ('gam-dung', 'land-length'),                      # length (Genesis 13:17)
+        'gamvai': ('gam-vai', 'land-breadth'),                       # breadth (Genesis 13:17)
+        'buangun': ('buan-gun', 'pass-by'),                          # pass.by (Genesis 18:3)
+        'khakhia': ('kha-khia', 'drive-away'),                       # sent.away (Genesis 12:20)
+        'awngthawlpi': ('awng-thawl-pi', 'open-waste-big'),          # void (Genesis 1:2)
     }
 
 
