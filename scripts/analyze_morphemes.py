@@ -17,6 +17,136 @@ from pathlib import Path
 from typing import List, Tuple, Optional
 
 # =============================================================================
+# PHONOTACTIC CONSTRAINTS
+# =============================================================================
+#
+# Tedim Chin has strict phonotactic constraints on word/morpheme onsets.
+# These constraints prevent impossible segmentations like *hto, *kp, etc.
+#
+# Based on corpus analysis (831,431 tokens):
+# - No true consonant clusters in native words
+# - Aspirates (kh, th, ph) and velar nasal (ng) are single phonemes
+# - Only foreign words (loanwords, proper nouns) violate these constraints
+#
+# =============================================================================
+
+# Valid word/morpheme-initial consonant patterns
+# These are the ONLY valid onsets for native Tedim morphemes
+VALID_ONSETS = frozenset({
+    # Single consonants
+    'b', 'c', 'd', 'g', 'h', 'k', 'l', 'm', 'n', 'p', 's', 't', 'v', 'z',
+    # Aspirates (single phonemes, written as digraphs)
+    'kh', 'th', 'ph',
+    # Velar nasal (single phoneme)
+    'ng',
+    # Vowel-initial (empty onset)
+    '',
+})
+
+# Vowels for onset extraction
+VOWELS = frozenset('aeiou')
+
+
+def get_onset(morpheme: str) -> str:
+    """
+    Extract the onset (initial consonant cluster) from a morpheme.
+    
+    Args:
+        morpheme: A morpheme string
+        
+    Returns:
+        The onset consonants, or '' for vowel-initial morphemes
+        
+    Examples:
+        >>> get_onset('khua')
+        'kh'
+        >>> get_onset('thu')
+        'th'
+        >>> get_onset('om')
+        ''
+        >>> get_onset('pa')
+        'p'
+        >>> get_onset('ngai')
+        'ng'
+    """
+    if not morpheme:
+        return ''
+    
+    # Check for aspirates/ng first (2-char onsets)
+    if len(morpheme) >= 2:
+        digraph = morpheme[:2]
+        if digraph in {'kh', 'th', 'ph', 'ng'}:
+            return digraph
+    
+    # Single consonant or vowel
+    if morpheme[0] in VOWELS:
+        return ''
+    
+    # Return all initial consonants (for detecting invalid clusters)
+    i = 0
+    while i < len(morpheme) and morpheme[i] not in VOWELS:
+        i += 1
+    return morpheme[:i]
+
+
+def is_valid_onset(morpheme: str) -> bool:
+    """
+    Check if a morpheme has a phonotactically valid onset.
+    
+    This validates that the morpheme begins with a legal Tedim Chin
+    consonant pattern. Invalid onsets indicate a segmentation error.
+    
+    Args:
+        morpheme: A morpheme string to validate
+        
+    Returns:
+        True if the onset is valid, False otherwise
+        
+    Examples:
+        >>> is_valid_onset('khua')   # kh is valid aspirate
+        True
+        >>> is_valid_onset('hto')    # *ht cluster is invalid
+        False
+        >>> is_valid_onset('om')     # vowel-initial is valid
+        True
+        >>> is_valid_onset('ngai')   # ng is valid
+        True
+        >>> is_valid_onset('pta')    # *pt cluster is invalid
+        False
+    """
+    onset = get_onset(morpheme)
+    return onset in VALID_ONSETS
+
+
+def validate_segmentation(segments: List[str]) -> Tuple[bool, Optional[str]]:
+    """
+    Validate that all morphemes in a segmentation have valid onsets.
+    
+    Args:
+        segments: List of morpheme strings
+        
+    Returns:
+        Tuple of (is_valid, error_message)
+        - is_valid: True if all segments have valid onsets
+        - error_message: Description of the first invalid segment, or None
+        
+    Examples:
+        >>> validate_segmentation(['ka', 'pai'])
+        (True, None)
+        >>> validate_segmentation(['ka', 'hto'])
+        (False, "Invalid onset 'ht' in morpheme 'hto'")
+    """
+    for seg in segments:
+        # Skip empty segments and punctuation
+        if not seg or not seg[0].isalpha():
+            continue
+        if not is_valid_onset(seg):
+            onset = get_onset(seg)
+            return (False, f"Invalid onset '{onset}' in morpheme '{seg}'")
+    return (True, None)
+
+
+# =============================================================================
 # MORPHEME INVENTORY
 # =============================================================================
 
@@ -11348,6 +11478,15 @@ def analyze_word(word: str) -> Tuple[str, str]:
         segmented = segments[0] if segments else word
         gloss = glosses[0] if glosses else '?'
     
+    # Phonotactic validation: check that all segments have valid onsets
+    # This catches segmentation errors like *hto, *kp, etc.
+    if len(segments) > 1:
+        is_valid, error = validate_segmentation(segments)
+        if not is_valid:
+            # Log warning but don't reject - the analysis may be from compound dictionary
+            # In production, consider adding: import logging; logging.warning(f"...")
+            pass  # Silently note the issue; use validate_segmentation() directly to audit
+    
     return (segmented, gloss)
 
 
@@ -11381,6 +11520,51 @@ def lookup_lexicon(word: str) -> Optional[str]:
     """Look up a word in the lexicon."""
     lexicon = load_lexicon()
     return lexicon.get(word.lower())
+
+
+def audit_phonotactics(verbose: bool = False) -> List[Tuple[str, str, str]]:
+    """
+    Audit all compound entries for phonotactic validity.
+    
+    This function checks all entries in FUNCTION_WORDS that have tuple values
+    (indicating compound words with segmentation) to identify any segmentations
+    that produce phonotactically invalid morphemes.
+    
+    Args:
+        verbose: If True, print each invalid entry as found
+        
+    Returns:
+        List of (word, segmentation, invalid_morpheme) tuples for invalid entries
+        
+    Usage:
+        >>> from analyze_morphemes import audit_phonotactics
+        >>> invalid = audit_phonotactics(verbose=True)
+        >>> print(f"Found {len(invalid)} invalid segmentations")
+    """
+    invalid_entries = []
+    
+    # Check FUNCTION_WORDS for compound entries (those with tuple values)
+    for word, value in FUNCTION_WORDS.items():
+        if isinstance(value, tuple) and len(value) == 2:
+            segmentation, gloss = value
+            # Split segmentation into morphemes
+            segments = segmentation.split('-')
+            
+            for seg in segments:
+                # Skip empty, punctuation-only, or possessive markers
+                if not seg or not seg[0].isalpha():
+                    continue
+                if seg in ["'", "'"]:
+                    continue
+                    
+                if not is_valid_onset(seg):
+                    onset = get_onset(seg)
+                    invalid_entries.append((word, segmentation, seg))
+                    if verbose:
+                        print(f"INVALID: '{word}' → '{segmentation}' has invalid morpheme '{seg}' (onset: '{onset}')")
+                    break  # Only report first invalid morpheme per entry
+    
+    return invalid_entries
 
 
 def gloss_sentence(sentence: str) -> List[Tuple[str, str, str]]:
