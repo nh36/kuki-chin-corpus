@@ -357,6 +357,32 @@ AMBIGUOUS_MORPHEMES = {
         ('be', 'with_prefix'),       # Copula with pronominal prefix
     ],
     
+    # hih: 'this' (proximal demonstrative) vs Form II of 'hi' (be)
+    # Henderson: hih as Form II appears in inconclusive sentences/before predicates
+    # - 'this' when modifying nouns (hih pa = this person)
+    # - 'be.II' in manner clauses (a hih bangin = as it being)
+    'hih': [
+        ('this', 'before_noun'),     # Proximal demonstrative (hih pa, hih thu)
+        ('be.II', 'in_clause'),      # Form II of hi in subordinate clauses
+    ],
+    
+    # tu: 'now' (temporal) vs 'sit' (verb)
+    # - 'now' in tu-in = now-ERG (temporal adverb)
+    # - 'sit' as verb stem (tu-a = sit-LOC = sitting)
+    'tu': [
+        ('now', 'temporal'),         # Temporal adverb (most common)
+        ('sit', 'verbal'),           # Sit (less common)
+    ],
+    
+    # tuh: 'sow/plant' vs Form II of 'tu' (sit)
+    # Henderson: tuh is Form II of tu, but also lexicalized as 'sow/plant'
+    # - 'sow/plant' in agricultural contexts (khai tuh = plant seed)
+    # - 'sit.II' rare (would be subordinate clause with sitting)
+    'tuh': [
+        ('sow', 'agricultural'),     # Sow/plant (primary meaning in Bible)
+        ('sit.II', 'rare'),          # Form II of tu (rare)
+    ],
+    
     # sa: 'flesh' (noun) vs 'PERF' (perfective suffix on verbs)
     # - 'flesh' standalone or with nominal morphology
     # - 'PERF' after verb stems (muh-sa = seen, nei-sa = had)
@@ -783,6 +809,19 @@ VERB_STEM_PAIRS = {
     'bawlh': ('bawl', 'make'),      # Form II of bawl
     'omh': ('om', 'exist'),         # Form II of om
     'paih': ('pai', 'go'),          # Form II of pai
+    
+    # hi/hih - copula "be" alternation
+    # Henderson: hi (Form I) in conclusive/declarative sentences
+    #           hih (Form II) in inconclusive sentences, before other predicates
+    # NOTE: hih is ALSO 'this' (proximal demonstrative) - context determines meaning
+    # - hih as Form II: "a hih bangin" = "as it being" (manner clause)
+    # - hih as PROX: "hih pa" = "this person"
+    'hih': ('hi', 'be'),            # Form II of hi (copula) - disambiguate vs 'this'
+    
+    # tu/tuh - sit verb alternation (also tuh='sow' lexicalized)
+    # Henderson: tu (Form I) 'sit', tuh (Form II)
+    # NOTE: tuh is primarily 'sow/plant' in Bible corpus - context determines
+    'tuh': ('tu', 'sit'),           # Form II of tu (sit) - vs lexicalized 'sow'
     
     # +k alternation
     'zak': ('za', 'hear'),          # 347x / 664x
@@ -3493,7 +3532,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bangin': ('bang-in', 'like-ERG'),
         'manin': ('man-in', 'reason-ERG'),
         'zongin': ('zong-in', 'although-ERG'),
-        'ahihleh': ('a-hi-h-leh', '3SG-be-NOM-if'),
+        'ahihleh': ('a-hih-leh', '3SG-be.II-if'),  # hih is Form II of hi
         'hitaleh': ('hi-ta-leh', 'be-PFV-if'),
         'laitakin': ('lai-tak-in', 'midst-exact-ERG'),
         
@@ -10821,14 +10860,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mangbuhvuite': ('mangbuh-vui-te', 'grain-ear-PL'),          # ears.of.corn (Matthew 12:1)
         'lametet': ('lamet-et', 'example-indeed'),                   # indeed (Matthew 12:23)
         'kitawphahna': ('ki-taw-phah-na', 'REFL-cover-rock-NMLZ'),   # stony.places (Matthew 13:5)
-        'hihtakpi': ('hi-h-tak-pi', 'be-II-real-EMPH'),              # be.thou (Matthew 14:28)
+        'hihtakpi': ('hih-tak-pi', 'be.II-real-EMPH'),              # truly.be (Matthew 14:28) - hih is Form II
         'kaikhawmsak': ('ka-i-khawm-sak', '1SG-DIR-gather-CAUS'),    # gather (Matthew 24:31)
         'bangcite': ('bang-ci-te', 'what-say-PL'),                   # which.ones (Matthew 24:45)
         'simmatin': ('sim-mat-in', 'deceive-snare-ERG'),             # by.subtilty (Matthew 26:4)
         'limnap': ('lim-nap', 'sign-deep'),                          # kissed (Matthew 26:49)
         'kipatthakna': ('ki-pat-thak-na', 'REFL-begin-new-NMLZ'),    # renewal (Isaiah 6:13)
         # Round 167j more: Mark/Luke partials
-        'hihpak': ('hi-h-pak', 'be-II-do'),                          # do.this (Matthew 26:50)
+        'hihpak': ('hih-pak', 'be.II-able'),                         # can.be (Matthew 26:50) - hih is Form II
         'galzuih': ('gal-zuih', 'far-follow'),                       # follow.afar (Matthew 26:58)
         'hualin': ('hual-in', 'roll-ERG'),                           # roll (Matthew 27:60)
         'nungzuih': ('nung-zuih', 'behind-follow'),                  # follow.after (Mark 1:36)
@@ -10837,11 +10876,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pawlkhatah': ('pawl-khat-ah', 'group-one-LOC'),             # in.groups (Mark 6:40)
         'khuakiim': ('khua-kiim', 'town-border'),                    # borders (Mark 7:24)
         'sawnpaih': ('sawn-paih', 'table-push'),                     # overthrew (Mark 11:15)
-        'hihnu': ('hi-h-nu', 'this-II-after'),                       # after.this (Mark 12:23)
+        'hihnu': ('hih-nu', 'this-after'),                           # after.this (Mark 12:23) - hih as demonstrative here
         'pilvangin': ('pil-vang-in', 'learn-guard-ERG'),             # watch (Mark 14:38)
         'minnei': ('min-nei', 'name-have'),                          # named (Luke 1:5)
         # Round 167k: Luke/Acts partials
-        'hihtheihna': ('hi-h-theih-na', 'be-II-able-NMLZ'),          # temptation (Luke 4:13)
+        'hihtheihna': ('hih-theih-na', 'be.II-able-NMLZ'),           # ability (Luke 4:13) - hih is Form II
         'gunkuangte': ('gunkuang-te', 'boat-PL'),                    # ships (Luke 5:3)
         'pahtakbawl': ('pah-tak-bawl', 'praise-real-do'),            # speak.well.of (Luke 6:26)
         # Round 167k more: Luke/John partials
@@ -10852,7 +10891,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'anvakna': ('an-vak-na', '3PL-repay-NMLZ'),                  # recompense (Luke 14:12)
         'aptheih': ('a-p-theih', '3SG-give-able'),                   # deliver (Luke 20:20)
         'kipiaknate': ('ki-piak-na-te', 'REFL-give-NMLZ-PL'),        # offerings (Luke 21:5)
-        'ahihkhak': ('a-hi-h-khak', '3SG-be-II-if'),                 # if.it.be (Luke 22:42)
+        'ahihkhak': ('a-hih-khak', '3SG-be.II-if'),                  # if.it.be (Luke 22:42) - hih is Form II
         'kipawlte': ('ki-pawl-te', 'REFL-ally-PL'),                  # companions (Luke 22:59)
         'talapte': ('talap-te', 'porch-PL'),                         # porches (John 5:3)
         # Round 167l: John/Acts/Romans partials
@@ -10865,7 +10904,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'palikbute': ('palik-bu-te', 'police-group-PL'),             # sergeants (Acts 16:35)
         'tangtut': ('tang-tut', 'hold-complete'),                    # finish (Acts 20:24)
         'kiphelna': ('ki-phel-na', 'REFL-defend-NMLZ'),              # defense (Acts 26:2)
-        'ihihlam': ('i-hi-h-lam', '1PL.INCL-be-II-manner'),          # would.be (Romans 6:3)
+        'ihihlam': ('i-hih-lam', '1PL.INCL-be.II-manner'),           # "as we being" (Romans 6:3) - hih is Form II of hi
         # Round 167l more: Epistles/OT partials
         'tangdinzo': ('tang-din-zo', 'hold-stand-COMPL'),            # complete.without (1 Corinthians 11:11)
         'samsau': ('sam-sau', 'hair-long'),                          # long.hair (1 Corinthians 11:15)
