@@ -1602,6 +1602,20 @@ VERB_STEMS = {
     # Round 166: High-frequency stems
     'huang': 'village',            # village/field (39x) - not same as hua (garden)
     'huan': 'garden',              # garden (huanah = garden-LOC) - 11x (overrides 'bread' compound)
+    
+    # Round 167: Hapax analysis stems - must be in VERB_STEMS for suffix parsing
+    # NOTE: Short stems can cause over-segmentation conflicts. Resolution strategy:
+    # - Add explicit COMPOUND_WORDS entries for high-frequency conflicting forms
+    # - Longer compound matches take precedence over stem+suffix parsing
+    'thak': 'new',                 # new/renew (bawlthak = make-new, khangthak = generation-new)
+    'ngkawm': 'commit.adultery',   # adulterer (ngkawmte = adulterers, ngkawmna = adultery)
+    'psak': 'clothe',              # clothe (apsak = he clothed, kapsak = I clothed)
+    'ngek': 'tender',              # tender/tip (nongek = young ones, dawnngek = top/tip)
+    'khip': 'veil',                # veil/cover (khipte = veils)
+    'hop': 'snare',                # snare (duhhopna = desire-snare = temptation)
+    'psa': 'dedicate',             # dedicate (apsate = dedicated things)
+    'mun': 'rare',                 # rare (genmun = rare word) - NOTE: also 'spot' in other contexts
+    'dek': 'low',                  # low/cheap (sidek = low pit, sumdek = cheap)
 }
 
 
@@ -10608,6 +10622,62 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tainapa': ('tai-na-pa', 'flee-NMLZ-father'),               # refugee (not taina-pa)
         'kituhte': ('ki-tuh-te', 'REFL-dispute-PL'),                # disputes (2x)
         'kituhteh': ('ki-tuh-teh', 'REFL-dispute-EMP'),             # disputed indeed (2x)
+        
+        # Round 167: V1+V2 serial verb compounds from hapax analysis
+        # These need explicit entries because suffix parsing only triggers with grammatical suffixes
+        'bawlthak': ('bawl-thak', 'make-new'),                      # renew (Psalm 104:30)
+        'khangthak': ('khang-thak', 'generation-new'),              # new generation (Judges 2:10)
+        'nongek': ('no-ngek', 'young-tender'),                      # tender young ones (Gen 33:13)
+        'dawnngek': ('dawn-ngek', 'top-tender'),                    # tip/branch (Ezek 17:22)
+        'dawnngekte': ('dawn-ngek-te', 'top-tender-PL'),            # tips/branches (Psalm 80:11)
+        'sidek': ('si-dek', 'die-low'),                             # low/pit (Psalm 88:4)
+        'sumdek': ('sum-dek', 'money-low'),                         # cheap (Prov 20:14)
+        'dekna': ('dek-na', 'low-NMLZ'),                            # lowness (Song 5:8)
+        'genmun': ('gen-mun', 'speak-rare'),                        # rare word (1 Sam 3:1)
+        'ommun': ('om-mun', 'exist-rare'),                          # rarely exist (1 Sam 3:1)
+        'bukmun': ('buk-mun', 'ambush-place'),                      # place of ambush (Isaiah 54:2)
+        
+        # Round 167b: Disambiguation - ho-pih (greet-APPL) vs hop-X (snare-X)
+        # 'hopih' = ho-pih (speak to) appears 161x, must override 'hop' stem parsing
+        'hopih': ('ho-pih', 'greet-APPL'),                          # speak to/address (161x)
+        'hopihin': ('ho-pih-in', 'greet-APPL-ERG'),                 # speaking to (10x)
+        'hopihsak': ('ho-pih-sak', 'greet-APPL-CAUS'),              # cause to speak to (6x)
+        'hopihpah': ('ho-pih-pah', 'greet-APPL-NEG.ABIL'),          # unable to speak to (2x)
+        
+        # Round 167b: thak-hauh-sak = "strengthen" (KJV: strengthen, strengthened)
+        # 'hauh' = strong/vigor, thakhauhsak = make-strong = strengthen
+        'thakhatin': ('thak-hat-in', 'new-strong-ERG'),             # freshly/recently (56x)
+        'thakhauhsak': ('thak-hauh-sak', 'new-strong-CAUS'),        # strengthen (9x) 
+        'kithakhauhsak': ('ki-thak-hauh-sak', 'REFL-new-strong-CAUS'), # strengthen oneself
+        'kithakhauhsakin': ('ki-thak-hauh-sak-in', 'REFL-new-strong-CAUS-ERG'),
+        'thakhauhsakzaw': ('thak-hauh-sak-zaw', 'new-strong-CAUS-MORE'), # strengthen more
+        
+        # Round 167c: kaih-khop = gather-together (KJV: gathered)
+        'kaihkhop': ('kaih-khop', 'gather-together'),               # gather together
+        'kaihkhopsa': ('kaih-khop-sa', 'gather-together-PAST'),     # gathered (Gen 12:5)
+        'kaihkhoppih': ('kaih-khop-pih', 'gather-together-APPL'),   # gather with (Matt 12:30)
+        'kaihkhopna': ('kaih-khop-na', 'gather-together-NMLZ'),     # gathering (Exod 23:16)
+        'kikaihkhopna': ('ki-kaih-khop-na', 'REFL-gather-together-NMLZ'), # gathering (Num 16:11)
+        
+        # Round 167c: dialkhip = diadem/hood/veil (KJV: hoods, vails, diadem)
+        'dialkhip': ('dial-khip', 'call-veil'),                     # hood/veil (Isaiah 3:23)
+        'dialkhipte': ('dial-khip-te', 'call-veil-PL'),             # hoods/veils (pl)
+        
+        # Round 167d: More hapax compounds from KJV cross-reference
+        'buhlomte': ('buh-lom-te', 'rice-bundle-PL'),               # sheaves (Psalm 126:6)
+        'buhlom': ('buh-lom', 'rice-bundle'),                       # sheaf
+        'kawikawite': ('kawikawi-te', 'to.and.fro-PL'),             # talebearers (Prov 20:19)
+        'kikhamna': ('ki-kham-na', 'REFL-forbid-NMLZ'),             # vow/oath (Ezek 18:6)
+        'gahteng': ('gah-teng', 'fruit-whole'),                     # strong rods/branches (Ezek 19:12)
+        'phawktheihna': ('phawk-theih-na', 'remember-able-NMLZ'),   # remembrance (Ezek 21:23)
+        'khuaphawk': ('khua-phawk', 'town-remember'),               # care/anxiety (Ezek 30:9)
+        'hauhnateng': ('hauhna-teng', 'riches-whole'),              # multitude (Ezek 30:10)
+        
+        # Round 167d: More verb compounds
+        'tawnna': ('tawn-na', 'meet-NMLZ'),                         # meeting (base for tawnnate)
+        'tawnnate': ('tawn-na-te', 'meet-NMLZ-PL'),                 # meetings
+        'kigenna': ('ki-gen-na', 'REFL-speak-NMLZ'),                # speaking together
+        'kigennate': ('ki-gen-na-te', 'REFL-speak-NMLZ-PL'),        # speakings
     }
 
 
