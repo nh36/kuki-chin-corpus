@@ -10704,6 +10704,25 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kiteenkhia': ('ki-teen-khia', 'REFL-snatch-out'),          # plucked out (Amos 4:11)
         'kiamsuk': ('kiam-suk', 'flood-down'),                      # rise as flood (Amos 8:8)
         'gimlawh': ('gim-lawh', 'pain-exceed'),                     # very sorrowful (Zech 9:5)
+        
+        # Round 167g: More unknown words from Gospel hapax
+        'guai': ('guai', 'hire'),                                   # hire/wage (Deut 23:18)
+        'kiguaihna': ('ki-guai-h-na', 'REFL-hire-II-NMLZ'),         # hiring (prostitution)
+        'kipeksat': ('ki-pek-sat', 'REFL-break-strike'),            # break covenant (Isa 33:8)
+        'kipeksatin': ('ki-pek-sat-in', 'REFL-break-strike-ERG'),   # breaking
+        'likkhiat': ('lik-khiat', 'burden-away'),                   # burden/cut (Zech 12:3)
+        'bulphuk': ('bul-phuk', 'root-uproot'),                     # root/uproot (Matt 3:10)
+        'lawngsim': ('lawng-sim', 'back-touch'),                    # touch (Matt 9:20)
+        'taiibawl': ('taii-bawl', 'rebuke-make'),                   # upbraid (Matt 11:20)
+        'popah': ('po-pah', 'spring-up'),                           # spring up (Matt 13:5)
+        'lehmut': ('leh-mut', 'turn-contrary'),                     # contrary/toss (Matt 14:24)
+        'khenkhit': ('khen-khit', 'condemn-away'),                  # condemn (Matt 20:18)
+        'henkhit': ('hen-khit', 'condemn-away'),                    # condemn variant
+        'lehtai': ('leh-tai', 'turn-rebuke'),                       # rebuke (Mark 8:33)
+        'kinakko': ('ki-nak-ko', 'REFL-cry-loud'),                  # cry out (Mark 15:14)
+        'lamnawl': ('lam-nawl', 'way-other'),                       # other side (Luke 10:31)
+        'phengzat': ('pheng-zat', 'waste-use'),                     # waste/squander (Luke 15:13)
+        'kilhcip': ('ki-lh-cip', 'REFL-hang-tight'),                # crucify (Luke 23:33)
     }
 
 
