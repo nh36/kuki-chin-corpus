@@ -10855,6 +10855,24 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ahihkhak': ('a-hi-h-khak', '3SG-be-II-if'),                 # if.it.be (Luke 22:42)
         'kipawlte': ('ki-pawl-te', 'REFL-ally-PL'),                  # companions (Luke 22:59)
         'talapte': ('talap-te', 'porch-PL'),                         # porches (John 5:3)
+        # Round 167l: John/Acts/Romans partials
+        'kihukna': ('ki-huk-na', 'REFL-dig-NMLZ'),                   # cave (John 11:38)
+        'mainulpi': ('mai-nul-pi', 'face-wipe-cloth'),               # towel (John 13:4)
+        'sawpsiangsak': ('sawp-siang-sak', 'wipe-clean-CAUS'),       # blot.out (Acts 3:18)
+        'pawlmat': ('pawl-mat', 'ally-friend'),                      # befriend (Acts 12:20)
+        'pakkualte': ('pak-kual-te', 'flower-wreath-PL'),            # garlands (Acts 14:13)
+        'sawtna': ('sawt-na', 'long-NMLZ'),                          # long.time (Acts 16:18)
+        'palikbute': ('palik-bu-te', 'police-group-PL'),             # sergeants (Acts 16:35)
+        'tangtut': ('tang-tut', 'hold-complete'),                    # finish (Acts 20:24)
+        'kiphelna': ('ki-phel-na', 'REFL-defend-NMLZ'),              # defense (Acts 26:2)
+        'ihihlam': ('i-hi-h-lam', '1PL.INCL-be-II-manner'),          # would.be (Romans 6:3)
+        # Round 167l more: Epistles/OT partials
+        'tangdinzo': ('tang-din-zo', 'hold-stand-COMPL'),            # complete.without (1 Corinthians 11:11)
+        'samsau': ('sam-sau', 'hair-long'),                          # long.hair (1 Corinthians 11:15)
+        'kitheihsakna': ('ki-theih-sak-na', 'REFL-know-CAUS-NMLZ'),  # making.known (1 Chronicles 17:19)
+        'kigente': ('ki-gen-te', 'REFL-speak-PL'),                   # told (1 Kings 10:7)
+        'daihsakna': ('daih-sak-na', 'silence-CAUS-NMLZ'),           # silencing (Psalm 8:2)
+        'lukhu': ('lu-khu', 'head-crown'),                           # crown (Exodus 29:6)
     }
 
 
