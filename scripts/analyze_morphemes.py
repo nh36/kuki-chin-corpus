@@ -11331,6 +11331,90 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'salpihte': ('sal-pih-te', 'slave-with-PL'),                 # (1x)
         # cit- compounds
         'citpiak': ('cit-piak', 'go-give'),                          # (1x)
+        # Round 169j: Final batch of phonotactic fixes
+        # kel- compounds
+        'kelkelna': ('kel~kel-na', 'leave~RED-NMLZ'),                # (reduplication)
+        # am- compounds
+        'amsakin': ('am-sak-in', 'cover-CAUS-ERG'),                  # (1x)
+        # mut- compounds
+        'mutsia': ('mut-sia', 'face-bad'),                           # (1x)
+        # an- compounds  
+        'ansing': ('an-sing', 'food-true'),                          # (1x)
+        'antehna': ('an-teh-na', 'food-cut-NMLZ'),                   # (1x)
+        'antannate': ('an-tan-na-te', 'food-endure-NMLZ-PL'),        # (1x)
+        # san- compounds
+        'santeng': ('san-teng', 'hang-upright'),                     # (1x)
+        'sansanah': ('san~san-ah', 'hang~RED-LOC'),                  # (reduplication)
+        # nen- compounds
+        'nenniamnate': ('nen-niam-na-te', 'soft-humble-NMLZ-PL'),    # (1x)
+        # kido- compounds (kidom = catch)
+        'kidomkaang': ('kidom-kaang', 'catch-?'),                    # (1x)
+        'kidomto': ('kidom-to', 'catch-sit'),                        # (1x)
+        # kal- compounds
+        'kallakah': ('kal-lak-ah', 'go-back-LOC'),                   # (1x)
+        # kap- compounds
+        'kapsuk': ('kap-suk', 'cry-rest'),                           # (1x)
+        # nil- compounds
+        'nilsuk': ('nil-suk', 'light-rest'),                         # (1x)
+        # tol- compounds
+        'tolsak': ('tol-sak', 'follow-CAUS'),                        # (1x)
+        # cil- compounds
+        'cilgawp': ('cil-gawp', 'answer-strike'),                    # (1x)
+        'cilsate': ('cil-sa-te', 'answer-PERF-PL'),                  # (1x)
+        # bal- compounds
+        'balnensak': ('bal-nen-sak', 'bear-soft-CAUS'),              # (1x)
+        'balkeksak': ('bal-kek-sak', 'bear-break-CAUS'),             # (1x)
+        # lauh- compounds (reduplication)
+        'lauhlauh': ('lauh~lauh', 'fear~RED'),                       # (reduplication)
+        # ban- compounds
+        'bantan': ('ban-tan', 'arm-endure'),                         # (1x)
+        # pal- compounds
+        'palsatkhak': ('pal-sat-khak', 'stray-attach-?'),            # (1x)
+        'palsatte': ('pal-sat-te', 'stray-attach-PL'),               # (1x)
+        # khuan- compounds
+        'khuankuan': ('khuan-kuan', 'village-village'),              # (1x)
+        'khuamkua': ('khuam-kua', 'dream-?'),                        # (1x)
+        # nat- compounds
+        'nattutna': ('nat-tut-na', 'pain-endure-NMLZ'),              # (1x)
+        # nul- compounds
+        'nulkeusak': ('nul-keu-sak', 'push-?-CAUS'),                 # (1x)
+        'nulsaknu': ('nul-sak-nu', 'push-CAUS-mother'),              # (1x)
+        # nak- compounds
+        'nakpau': ('nak-pau', 'nose-fat'),                           # (1x)
+        # val- compounds
+        'valsak': ('val-sak', 'hold-CAUS'),                          # (1x)
+        # nuh/kah- compounds
+        'nuhkawmin': ('nuh-kawm-in', 'press-meet-ERG'),              # (1x)
+        'kahkawmin': ('kah-kawm-in', 'climb-meet-ERG'),              # (1x)
+        'kahkawmun': ('kah-kawm-un', 'climb-meet-2PL'),              # (1x)
+        'kahtohpihin': ('kah-toh-pih-in', 'climb-up-with-ERG'),      # (1x)
+        # it- compounds
+        'itteng': ('it-teng', 'love-upright'),                       # (1x)
+        'itkik': ('it-kik', 'love-ITER'),                            # (1x)
+        # sin- compounds
+        'sinsanin': ('sin-san-in', 'trust-hang-ERG'),                # (1x)
+        'sinnateng': ('sin-na-teng', 'trust-NMLZ-upright'),          # (1x)
+        'sinsenin': ('sin-sen-in', 'trust-hang-ERG'),                # (1x)
+        'sinsa': ('sin-sa', 'trust-PERF'),                           # (1x)
+        # ih- compounds
+        'ihmusip': ('ih-mu-sip', 'sleep-see-seep'),                  # (1x)
+        # toh- compounds (reduplication)
+        'tohtoh': ('toh~toh', 'up~RED'),                             # (reduplication)
+        # zat- compounds
+        'zatsak': ('zat-sak', 'use-CAUS'),                           # (1x)
+        'zatsiamte': ('zat-siam-te', 'use-skilled-PL'),              # (1x)
+        # nak- compounds
+        'nakkin': ('nak-kin', 'nose-quickly'),                       # (1x)
+        # up- compounds
+        'upsa': ('up-sa', 'blow-PERF'),                              # (1x)
+        # pah- compounds
+        'pahtawizawk': ('pah-tawi-zawk', 'honor-carry-more'),        # (1x)
+        # kek- compounds
+        'kekseuna': ('kek-seu-na', 'break-?-NMLZ'),                  # (1x)
+        # zawn- compounds
+        'zawnnate': ('zawn-na-te', 'seek-NMLZ-PL'),                  # (1x)
+        # tai- compounds
+        'taihsak': ('taih-sak', 'rebuke-CAUS'),                      # (1x)
     }
 
 
