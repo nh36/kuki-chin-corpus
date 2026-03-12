@@ -11415,6 +11415,226 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zawnnate': ('zawn-na-te', 'seek-NMLZ-PL'),                  # (1x)
         # tai- compounds
         'taihsak': ('taih-sak', 'rebuke-CAUS'),                      # (1x)
+        
+        # Round 170: Resolve remaining 2x partials via KJV cross-reference
+        # Animal care/agriculture
+        'buhkung': ('buhkung', 'provender'),                         # (2x) animal feed - Gen 24:32
+        'buhkungte': ('buhkung-te', 'provender-PL'),
+        # Siege warfare  
+        'dum': ('dum', 'siege.mound'),                               # (2x) siege works - Ezek 4:2
+        'dumte': ('dum-te', 'siege.mound-PL'),
+        # Geography
+        'guam': ('guam', 'valley'),                                  # (2x) valleys - Ezek 36:4
+        'guamte': ('guam-te', 'valley-PL'),
+        'guamteng': ('guam-teng', 'valley-all'),
+        # Sea creatures
+        'gulpi': ('gulpi', 'dragon'),                                # (2x) sea monster/dragon - Ps 74:13
+        'gulpite': ('gulpi-te', 'dragon-PL'),
+        # Snakes/vipers
+        'gunei': ('gunei', 'viper'),                                 # (2x) viper/asp - Job 20:16
+        'guneite': ('gunei-te', 'viper-PL'),
+        # Mixed peoples
+        'khawm': ('khawm', 'mingled'),                               # (2x) mixed people - Jer 25:24
+        'khawmte': ('khawm-te', 'mingled-PL'),
+        # Mental/emotional states
+        'meidawi': ('meidawi', 'feeble.minded'),                     # (2x) timid/fearful - 1Thess 5:14
+        'meidawite': ('meidawi-te', 'feeble.minded-PL'),
+        # Wedding terms
+        'mothak': ('mothak', 'bride'),                               # (2x) bride - Jer 7:34
+        'mothakte': ('mothak-te', 'bride-PL'),
+        # Emotional/mental states
+        'lungnem': ('lung-nem', 'heart-soft'),                       # (2x) meek - Num 12:3
+        'lungnemte': ('lung-nem-te', 'heart-soft-PL'),
+        'lungzinhuai': ('lung-zinhuai', 'heart-dread'),              # (2x) anxiety - Job 15:23
+        # Marriage/family
+        'zinei': ('zi-nei', 'wife-have'),                            # (2x) married woman - Isa 54:6
+        # Creatures
+        'momai': ('momai', 'scorpion'),                              # (2x) scorpion - Deut 8:15
+        'momaite': ('momai-te', 'scorpion-PL'),
+        # Verbs
+        'susia': ('su-sia', 'CAUS-bad'),                             # (2x) destroy - Gen 6:13
+        'susiate': ('su-sia-te', 'CAUS-bad-PL'),
+        # Reflexive compounds
+        'kisehtawm': ('ki-seh-tawm', 'REFL-appoint-COMPL'),          # (2x) called/appointed - Heb 5:4
+        'kilangbawl': ('ki-lang-bawl', 'REFL-visible-make'),         # (2x) witchcraft - Gal 5:20
+        'kilangbawlna': ('ki-lang-bawl-na', 'REFL-visible-make-NMLZ'),
+        'kithuahpih': ('ki-thuah-pih', 'REFL-associate-APPL'),       # (2x) kinsmen - Ps 38:11
+        'kithuahpihte': ('ki-thuah-pih-te', 'REFL-associate-APPL-PL'),
+        # Materials
+        'suangkhi': ('suangkhi', 'coral'),                           # (2x) coral/pearls - Job 28:18
+        'sumbawm': ('sum-bawm', 'money-bag'),                        # (2x) purse - Luke 22:35
+        # Water/wells
+        'tuibem': ('tui-bem', 'water-well'),                         # (2x) cistern - Neh 9:25
+        'tuibemte': ('tui-bem-te', 'water-well-PL'),
+        # Religious/abstract
+        'zehphit': ('zehphit', 'desolation'),                        # (2x) abomination - Matt 24:15
+        'zehphitna': ('zehphit-na', 'desolation-NMLZ'),
+        # Food/materials
+        'mangbuhnel': ('mangbuh-nel', 'wheat-flour'),                # (2x) wheat flour - Exod 29:2
+        # Fire/burning
+        'meikang': ('mei-kang', 'fire-burn'),                        # (2x) burning - Exod 21:25
+        # Appearance
+        'melhoihzaw': ('mel-hoih-zaw', 'face-good-COMP'),            # (2x) more handsome - 1Sam 9:2
+        # Close relations
+        'ulianpih': ('u-lianpih', 'elder-close'),                    # (2x) close associates - 2Ki 9:15
+        'ulianpihte': ('u-lianpih-te', 'elder-close-PL'),
+        # Weather/time
+        'khuadam': ('khua-dam', 'weather-cold'),                     # (2x) cold - Job 24:7
+        'khuamui': ('khua-mui', 'time-evening'),                     # (2x) evening/twilight - Exod 12:6
+        # Places/edges
+        'madawk': ('madawk', 'edge'),                                # (2x) utmost part - Num 22:41
+        'madawkte': ('madawk-te', 'edge-PL'),
+        # Family/social
+        'meigon': ('mei-gon', 'fire-extinguished'),                  # (2x) widow - Gen 38:11
+        'meigonna': ('mei-gon-na', 'fire-extinguished-NMLZ'),        # widowhood
+        # Birds
+        'huihtun': ('huihtun', 'heron'),                             # (2x) heron - Lev 11:19
+        # Vehicles/military
+        'hupipa': ('hupipa', 'chariot'),                             # (2x) chariot - 2Ki 2:12
+        # Abstract
+        'haivai': ('haivai', 'vanity'),                              # (2x) vanity - Eccl 8:14
+        # Sequential
+        'henla': ('hen-la', 'that-and.SEQ'),                         # (2x) and.then - Gal 6:4
+        # Verbs - causatives
+        'gimsakkha': ('gim-sak-kha', 'suffer-CAUS-COMPL'),           # (2x) persecute - Rom 15:31
+        # Reflexive self-states
+        'kisathei': ('ki-sa-thei', 'REFL-proud-able'),               # (2x) boast - 2Chr 25:19
+        'kisatheite': ('ki-sa-thei-te', 'REFL-proud-able-PL'),
+        # Physical states
+        'thakiam': ('thak-iam', 'thin-QST'),                         # (2x) lean - 2Sam 13:4
+        # Animals
+        'latal': ('latal', 'he.ass'),                                # (2x) male donkey - Gen 12:16
+        # Reduplication - humans
+        'lellel': ('lel~lel', 'mere~RED'),                           # (2x) mere mortal - Ps 56:11
+        'lellelte': ('lel~lel-te', 'mere~RED-PL'),
+        # Spices/herbs
+        'lengmasel': ('lengmasel', 'mint'),                          # (2x) mint - Matt 23:23
+        'lingsi': ('lingsi', 'balm'),                                # (2x) balm - Gen 37:25
+        # Dowry
+        'thalawh': ('thalawh', 'bride.price'),                       # (2x) dowry - Gen 29:18
+        # Directions/positions
+        'dunglam': ('dung-lam', 'back-direction'),                   # (2x) side - Exod 26:13
+        # Compounds - informing
+        'thukimpih': ('thu-kim-pih', 'word-complete-APPL'),          # (2x) inform - 1Ki 1:27
+        'thukimpihin': ('thu-kim-pih-in', 'word-complete-APPL-ERG'),
+        # Social roles
+        'thulamlak': ('thu-lamlak', 'word-advisor'),                 # (2x) counsellor - 2Sam 15:12
+        'thulamlakte': ('thu-lamlak-te', 'word-advisor-PL'),
+        'laihilh': ('lai-hilh', 'writing-teach'),                    # (2x) teacher - 1Cor 12:28
+        'laihilhte': ('lai-hilh-te', 'writing-teach-PL'),
+        # Actions
+        'peksat': ('pek-sat', 'break-cut'),                          # (2x) break - Luke 8:29
+        # Geography
+        'luihawm': ('lui-hawm', 'river-valley'),                     # (2x) valley - Josh 8:11
+        # Containers
+        'kuanglekeu': ('kuang-lekeu', 'trough-wooden'),              # (2x) wooden vessel - Lev 15:12
+        'kuanglekeute': ('kuang-lekeu-te', 'trough-wooden-PL'),
+        # Position
+        'minautang': ('mi-nau-tang', 'person-young-stand'),          # (2x) lowest - Luke 14:9
+        'minautangte': ('mi-nau-tang-te', 'person-young-stand-PL'),
+        # Military
+        'palikmang': ('palikmang', 'captain'),                       # (2x) captain - Luke 22:4
+        'palikmangte': ('palikmang-te', 'captain-PL'),
+        # Age/hair
+        'samkang': ('sam-kang', 'hair-gray'),                        # (2x) gray.haired - Deut 32:25
+        'samkangte': ('sam-kang-te', 'hair-gray-PL'),
+        # Trade goods
+        'singnamtui': ('sing-namtui', 'tree-oil'),                   # (2x) spices - Ezek 27:22
+        'singnamtuite': ('sing-namtui-te', 'tree-oil-PL'),
+        # Numbers
+        'sawmguk': ('sawm-guk', 'ten-six'),                          # (2x) sixty - Gen 5:15
+        'sawmgukte': ('sawm-guk-te', 'ten-six-PL'),
+        # Reduplication - looking
+        'enen': ('en~en', 'look~RED'),                               # (2x) look at each other - Gen 42:1
+        'enenin': ('en~en-in', 'look~RED-ERG'),
+        # Reduplication - oppression
+        'thopthopin': ('thop~thop-in', 'oppress~RED-ERG'),           # (2x) reproach - Ezek 22:4
+        # Tools
+        'singatna': ('sing-at-na', 'wood-cut-NMLZ'),                 # (2x) saw - 2Sam 12:31
+        'singatnate': ('sing-at-na-te', 'wood-cut-NMLZ-PL'),
+        # Fading
+        'theipal': ('thei-pal', 'know-fade'),                        # (2x) fading - Isa 28:4
+        
+        # Round 170b: More 2x partial resolutions
+        # Restore/return
+        'bangkikin': ('bang-ki-kin', 'like-REFL-ITER'),              # (2x) restore - 2Ki 5:10
+        'bangsakkikin': ('bang-sak-ki-kin', 'like-CAUS-REFL-ITER'),  # (2x) cause.return - Deut 30:3
+        # Agricultural/materials
+        'buh': ('buh', 'straw'),                                     # (2x) straw - Gen 24:32
+        # Protest/teach
+        'hilhkholin': ('hilh-khol-in', 'teach-alone-ERG'),           # (2x) protest.solemnly - 1Sam 8:9
+        # Fruits/plants
+        'kawlsing': ('kawlsing', 'pomegranate'),                     # (2x) pomegranate - Exod 28:33
+        'kawlsingte': ('kawlsing-te', 'pomegranate-PL'),
+        # Body/appearance
+        'khauhualpi': ('khau-hualpi', 'shave-big'),                  # (2x) baldness - Isa 3:24
+        # Causative rest
+        'khawlsakin': ('khawl-sak-in', 'rest-CAUS-ERG'),             # (2x) resting - 2Sam 6:13
+        # Evil workers
+        'miginalo': ('mi-gina-lo', 'person-true-NEG'),               # (2x) evil.worker - Phil 3:2
+        # House parts
+        'innsun': ('inn-sun', 'house-shade'),                        # (2x) eaves - Gen 19:8 (context)
+        'innsunte': ('inn-sun-te', 'house-shade-PL'),
+        # Portions
+        'pawkhat': ('paw-khat', 'portion-one'),                      # (2x) portion - Josh 19:1
+        # Measurements
+        'sehsawmsuah': ('seh-sawm-suah', 'appoint-ten-produce'),     # (2x) tenth.part - Rev 11:13
+        'sehzah': ('seh-zah', 'appoint-measure'),                    # (2x) estimation - Lev 6:6
+        # Body parts
+        'utok': ('utok', 'caul'),                                    # (2x) caul (liver) - Exod 29:13
+        # Partiality
+        'deidanna': ('dei-dan-na', 'say-manner-NMLZ'),               # (2x) respect.of.persons - 2Chr 19:7
+        # Understanding
+        'mitei': ('mi-tei', 'person-understand'),                    # (2x) prudent - 1Cor 1:19
+        'miteite': ('mi-tei-te', 'person-understand-PL'),
+        # Sea creatures
+        'go': ('go', 'great'),                                       # (2x) great (in golpi=whale) - Gen 1:21
+        'gote': ('go-te', 'great-PL'),
+        # Containers
+        'ip': ('ip', 'sack'),                                        # (2x) sack - Gen 42:25
+        'ipte': ('ip-te', 'sack-PL'),
+        # Rising
+        'tho': ('tho', 'rise'),                                      # (2x) rise/arise - Gen 19:2
+        'thote': ('tho-te', 'rise-PL'),
+        # Going and doing
+        'taw': ('taw', 'with'),                                      # (2x) with - but tawte context needed
+        'tawte': ('taw-te', 'with-PL'),
+        
+        # Round 170c: Foreign words and remaining 2x partials
+        # Food
+        'bet': ('bet', 'pottage'),                                   # (2x) pottage - Gen 25:29
+        # Letters/epistles
+        'koleko': ('koleko', 'epistle'),                             # (2x) letter - 2Cor 3:1
+        # Spices
+        'masala': ('masala', 'cummin'),                              # (2x) cummin - Isa 28:25
+        # Success
+        'mavan': ('ma-van', 'NEG-empty'),                            # (2x) prosperous - Gen 24:21
+        # Mourning
+        'mau': ('mau', 'mourn'),                                     # (2x) mourn - Neh 8:9
+        # Sound instruments
+        'peeng': ('peeng', 'trumpet'),                               # (2x) trumpet - Exod 19:16
+        # Breeding
+        'pun': ('pun', 'breed'),                                     # (2x) breed - Gen 8:17
+        # Aramaic (untranslated)
+        'sabakthani': ('sabakthani', 'forsaken.me[Aramaic]'),        # (2x) - Matt 27:46
+        # Measurements  
+        'sahin': ('sa-hin', 'six-span'),                             # (2x) six cubits - Ezek 40:5
+        # Physical states
+        'sanim': ('sanim', 'bruised'),                               # (2x) bruised - Lev 22:24
+        # Clothing actions
+        'teen': ('teen', 'gird'),                                    # (2x) girdle/gird - Lev 16:4
+        # Young animals
+        'tuunawi': ('tuu-nawi', 'sheep-young'),                      # (2x) lamb - Deut 32:14
+        # Dowry-related
+        'thalawhin': ('thalawh-in', 'bride.price-ERG'),              # (2x) for wife - Hos 12:12
+        # Service
+        'vaanin': ('va-an-in', 'go.and-care-ERG'),                   # (2x) keeping charge - Num 18:4
+        # Gemstones
+        'khrisolait': ('khrisolait', 'chrysolite'),                  # (2x) chrysolite - Ezek 28:13
+        # Enmity context
+        'nan': ('nan', '2PL'),                                       # (2x) - Gen 3:15 context = na+n (2SG+?)
+        # ciante form
+        'ciangte': ('ciang-te', 'time-PL'),                          # (2x) times - contextual
     }
 
 
