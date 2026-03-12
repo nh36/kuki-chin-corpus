@@ -11242,7 +11242,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vekpite': ('vek-pi-te', 'all-big-PL'),                      # all big ones (1x)
         'khansakna': ('khan-sak-na', 'age-CAUS-NMLZ'),               # aging (1x)
         'ihsip': ('ih-sip', 'sleep-seep'),                           # (1x)
-        'kamka': ('kam-ka', 'word-bitter'),                          # bitter word (1x)
+        'kamka': ('kamka', 'ashamed'),                                # ashamed/confounded (Job 6:20)
         'kaptuk': ('kap-tuk', 'cry-?'),                              # cry (1x)
         'kahzo': ('kah-zo', 'climb-reach'),                          # climb reach (1x)
         'thuktawng': ('thuk-tawng', 'deep-speak'),                   # speak deeply (1x)
@@ -11365,7 +11365,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'balnensak': ('bal-nen-sak', 'bear-soft-CAUS'),              # (1x)
         'balkeksak': ('bal-kek-sak', 'bear-break-CAUS'),             # (1x)
         # lauh- compounds (reduplication)
-        'lauhlauh': ('lauh~lauh', 'fear~RED'),                       # (reduplication)
+        'lauhlauh': ('lauh~lauh', 'rattle~RED'),                       # onomatopoeia for rattling (Nahum 3:2)
         # ban- compounds
         'bantan': ('ban-tan', 'arm-endure'),                         # (1x)
         # pal- compounds
@@ -11380,7 +11380,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nulkeusak': ('nul-keu-sak', 'push-?-CAUS'),                 # (1x)
         'nulsaknu': ('nul-sak-nu', 'push-CAUS-mother'),              # (1x)
         # nak- compounds
-        'nakpau': ('nak-pau', 'nose-fat'),                           # (1x)
+        'nakpau': ('nakpau', 'vehemently'),                            # vehemently/fiercely (Luke 23:5)
         # val- compounds
         'valsak': ('val-sak', 'hold-CAUS'),                          # (1x)
         # nuh/kah- compounds
@@ -11397,9 +11397,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sinsenin': ('sin-sen-in', 'trust-hang-ERG'),                # (1x)
         'sinsa': ('sin-sa', 'trust-PERF'),                           # (1x)
         # ih- compounds
-        'ihmusip': ('ih-mu-sip', 'sleep-see-seep'),                  # (1x)
+        'ihmusip': ('ihmu-sip', 'sleep-deep'),                        # deep sleep (Acts 20:9)
         # toh- compounds (reduplication)
-        'tohtoh': ('toh~toh', 'up~RED'),                             # (reduplication)
+        'tohtoh': ('toh~toh', 'stand~RED'),                            # continuously/persistently (Acts 24:25)
         # zat- compounds
         'zatsak': ('zat-sak', 'use-CAUS'),                           # (1x)
         'zatsiamte': ('zat-siam-te', 'use-skilled-PL'),              # (1x)
