@@ -11635,6 +11635,13 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nan': ('nan', '2PL'),                                       # (2x) - Gen 3:15 context = na+n (2SG+?)
         # ciante form
         'ciangte': ('ciang-te', 'time-PL'),                          # (2x) times - contextual
+        # Watering
+        'kawtsakin': ('kawt-sak-in', 'water-CAUS-ERG'),              # (2x) watereth - Isa 55:10
+        # English/URL artifacts (mark as foreign)
+        'bi': ('bi', 'FGN'),                                         # URL artifact
+        'bible.com': ('bible.com', 'FGN'),                           # URL
+        'copyright': ('copyright', 'FGN'),                           # English
+        'for': ('for', 'FGN'),                                       # English
     }
 
 
