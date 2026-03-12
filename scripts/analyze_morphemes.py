@@ -11109,6 +11109,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'husanna': ('husanna', 'hosanna'),                           # hosanna (13x)
         # anne - proper noun Anna
         'anne': ('Anne', 'ANNA'),                                    # Anna (11x)
+        # Round 169c: Fix kiC compounds being misanalyzed as ki-C
+        # kim (66x standalone) = "fully/all" - compounds should be kim-X not ki-mX
+        'kimin': ('kim-in', 'fully-ERG'),                            # completely (9x)
+        # kin (28x standalone) = "quickly/clearly" - compounds should be kin-X not ki-nX
+        'kinsak': ('kin-sak', 'quickly-CAUS'),                       # quicken/revive (2x)
+        'kinin': ('kin-in', 'quickly-ERG'),                          # quickly (7x)
     }
 
 
