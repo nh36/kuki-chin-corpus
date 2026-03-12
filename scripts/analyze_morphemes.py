@@ -11116,15 +11116,87 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kinsak': ('kin-sak', 'quickly-CAUS'),                       # quicken/revive (2x)
         'kinin': ('kin-in', 'quickly-ERG'),                          # quickly (7x)
         # Round 169d: More phonotactic fixes for invalid onsets
-        # kilkel (5x) - 'remain cold' in water context - kil (edge/cold) + kel (leave)
-        'kilkel': ('kil-kel', 'cold-leave'),                         # remain cold (Jer 18:14)
-        # kansakna (2x) - 'drying up' - kan (stay/dry) + sak (CAUS) + na (NMLZ)
-        'kansakna': ('kan-sak-na', 'dry-CAUS-NMLZ'),                 # drying up (Josh 2:10)
+        # kilkel (5x) - 'clear/pure' (crystal, glass) - reduplication kil~kel
+        'kilkel': ('kil~kel', 'clear~RED'),                          # clear/pure (Jer 18:14, Rev 4:6)
+        # kansak/kansakna - 'dry up' - lexicalized compound (kan here = dry, not ask)
+        'kansak': ('kansak', 'dry.up'),                              # dry up (Josh 4:23)
+        'kansakna': ('kansak-na', 'dry.up-NMLZ'),                    # drying up (Josh 2:10)
         # Words with geminate nn - should not be segmented as a-nn...
         'annengte': ('Anneng-te', 'ANNENG-PL'),                      # proper name plural (2x)
         'annelte': ('annel-te', 'meal-PL'),                          # meals (2x)
         'annel': ('annel', 'meal'),                                  # meal (unsegmented)
         'anneng': ('anneng', 'crumb'),                               # crumb (unsegmented)
+        # Round 169e: More phonotactic fixes
+        # hihlo/hihloh - 'nothing' - hih (this) + lo/loh (NEG)
+        'hihloh': ('hih-loh', 'this-NEG.NOM'),                       # nothing (6x)
+        'hihlo': ('hih-lo', 'this-NEG'),                             # nothing (4x)
+        # kipsuak - 'remain/continue' - kip (firm) + suak (become)
+        'kipsuak': ('kip-suak', 'firm-become'),                      # continue/remain (4x)
+        # sotto - 'each other' (reduplication) - not so-tto
+        'sotto': ('so~tto', 'other~RED'),                            # each other (3x)
+        # pahpah - reduplication for emphasis
+        'pahpahte': ('pah~pah-te', 'honor~RED-PL'),                  # honorable ones (2x)
+        'pahpahin': ('pah~pah-in', 'honor~RED-ERG'),                 # honorably (1x)
+        # kihtakhuai - kih (abhor) + takhuai (despise)
+        'kihtakhuai': ('kih-takhuai', 'abhor-despise'),              # abhor completely (3x)
+        'kihtakhuai-in': ('kih-takhuai-in', 'abhor-despise-ERG'),    # abhorring
+        # naksiat - lexicalized 'ruin/destruction' (historically nak+siat)
+        'naksiat': ('naksiat', 'ruin'),                              # ruin/destruction (2x)
+        # alsakkik - al (salt) + sak (CAUS) + kik (ITER) = 'salt again'
+        'alsakkik': ('al-sak-kik', 'salt-CAUS-ITER'),                # salt again (2x)
+        # antan - an (eat/food) + tan (endure) - lexicalized
+        'antan': ('antan', 'endure'),                                # endure (2x)  
+        "antan'": ("antan'", 'endure.GEN'),                          # genitive form
+        'antangte': ('antan-te', 'endure-PL'),                       # plural
+        # Round 169f: More phonotactic fixes
+        # kahtohpih - kah (climb) + toh (up) + pih (with) - not ka-htoh-pih
+        'kahtohpih': ('kah-toh-pih', 'climb-up-with'),               # take up (2x)
+        # kamciamsa - kam (word) + ciam (promise) + sa (PERF) - not ka-mciam
+        'kamciamsa': ('kam-ciam-sa', 'word-promise-PERF'),           # vowed (2x)
+        'kamciamnasa': ('kam-ciam-na-sa', 'word-promise-NMLZ-PERF'), # vow (1x)
+        # ankungnote - an (food) + kungno (desire) + te (PL) - not a-nkungno
+        'ankungnote': ('an-kungno-te', 'food-desire-PL'),            # gluttons (2x)
+        # pahtawi variants - pah (honor) + tawi (carry) - not pa-htawi  
+        'pahtawite': ('pah-tawi-te', 'honor-carry-PL'),              # honored (1x)
+        'pahtaklam': ('pah-taklam', 'honor-way'),                    # honored way (1x)
+        # nihta - ni (day) + hta -> should be nih-ta or just lexicalized
+        'nihta': ('nihta', 'certainly'),                             # certainly/indeed (1x)
+        # thukpa - thu (word) + kpa -> thuk-pa (deep-person)?
+        'thukpa': ('thuk-pa', 'deep-person'),                        # deep one (1x)
+        'thukpah': ('thuk-pah', 'deep-honor'),                       # deep respect (1x)
+        # ciltel - cil (answer) + tel -> cil-tel (answer-?) or lexicalized
+        'ciltel': ('ciltel', 'response'),                            # response (1x)
+        'ciltangte': ('cil-tang-te', 'answer-all-PL'),               # all answers (1x)
+        # Round 169g: More phonotactic fixes (hapax and low-frequency)
+        # mulnei - mul (full) + nei (have) - not mu-lnei
+        'mulnei': ('mul-nei', 'full-have'),                          # have fully (1x)
+        # ippi - unsegmented word for 'sack/bag'
+        'ippi': ('ippi', 'sack'),                                    # sack (1x)
+        # ipsung - ip (basket) + sung (inside) - not i-psung
+        'ipsung': ('ip-sung', 'basket-inside'),                      # in basket (1x)
+        # ihmucipin, ihmusak - ih (sleep) + mu (see) compounds - not i-hmu
+        'ihmucipin': ('ih-mu-cip-in', 'sleep-see-tight-ERG'),        # sleeping tight (1x)
+        'ihmusak': ('ih-mu-sak', 'sleep-see-CAUS'),                  # put to sleep (1x)
+        # anpalin, anpiang, anpiakna - an (food/eat) + pial/piak - not a-np...
+        'anpalin': ('an-pal-in', 'food-stray-ERG'),                  # going astray for food (1x)
+        'anpiang': ('an-piang', 'food-fruit'),                       # food/fruit (1x)
+        'anpiakna': ('an-piak-na', 'food-give-NMLZ'),                # food offering (1x)
+        # ansangte - an (food) + sang (high) + te (PL) - not a-nsang
+        'ansangte': ('an-sang-te', 'food-high-PL'),                  # high foods (1x)
+        # ankante - an (food) + kan (stay) + te (PL) - not a-nkan
+        'ankante': ('an-kan-te', 'food-stay-PL'),                    # remaining food (1x)
+        # ancilnate - an (food) + cil (answer) + na + te - not a-ncil
+        'ancilnate': ('an-cil-na-te', 'food-answer-NMLZ-PL'),        # food responses (1x)
+        # kansimte - kan (stay) + sim (count) + te - not ka-nsim
+        'kansimte': ('kan-sim-te', 'stay-count-PL'),                 # counting (1x)
+        # tomsakin - tom (heap) + sak (CAUS) + in - not to-msak
+        'tomsakin': ('tom-sak-in', 'heap-CAUS-ERG'),                 # heaping (1x)
+        # khantawnun - khan (age) + tawn (along) + un - not kha-ntawn
+        'khantawnun': ('khan-tawn-un', 'age-along-2PL'),             # throughout your age (1x)
+        # khopsakin - khop (whole) + sak (CAUS) + in - not kho-psak
+        'khopsakin': ('khop-sak-in', 'whole-CAUS-ERG'),              # making whole (1x)
+        # cilbawl - cil (answer) + bawl (make) - not ci-lbawl
+        'cilbawl': ('cil-bawl', 'answer-make'),                      # give answer (1x)
     }
 
 
