@@ -11084,12 +11084,13 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kicinsakna': ('ki-cin-sak-na', 'REFL-complete-CAUS-NMLZ'),  # perfected (James 2:22)
         
         # Round 169: Phonotactic fixes - compounds with invalid *ht, *ps, *hh onsets
-        # kipsak (93x) - establish covenant - ki + piak + sak = REFL-give-CAUS
-        'kipsak': ('ki-piak-sak', 'REFL-give-CAUS'),                 # establish (Genesis 6:18)
-        'kipsakna': ('ki-piak-sak-na', 'REFL-give-CAUS-NMLZ'),       # covenant (8x)
-        'kipsakin': ('ki-piak-sak-in', 'REFL-give-CAUS-ERG'),        # establishing (7x)
-        'kipsaksa': ('ki-piak-sak-sa', 'REFL-give-CAUS-PERF'),       # established (3x)
-        'kipsaknate': ('ki-piak-sak-na-te', 'REFL-give-CAUS-NMLZ-PL'), # covenants (2x)
+        # kipsak (98x) - establish covenant - kip + sak = firm + CAUS = "make firm"
+        # NOT ki-piak-sak (REFL-give-CAUS) - kipiaksak only appears 1x
+        'kipsak': ('kip-sak', 'firm-CAUS'),                          # establish (Genesis 6:18)
+        'kipsakna': ('kip-sak-na', 'firm-CAUS-NMLZ'),                # covenant (8x)
+        'kipsakin': ('kip-sak-in', 'firm-CAUS-ERG'),                 # establishing (7x)
+        'kipsaksa': ('kip-sak-sa', 'firm-CAUS-PERF'),                # established (3x)
+        'kipsaknate': ('kip-sak-na-te', 'firm-CAUS-NMLZ-PL'),        # covenants (2x)
         # kihhuai (66x) - abomination - ki + huai (not ki + hhuai)
         'kihhuai': ('ki-huai', 'REFL-abominate'),                    # abomination (Genesis 43:32)
         'kihhuaina': ('ki-huai-na', 'REFL-abominate-NMLZ'),          # abomination (9x)
