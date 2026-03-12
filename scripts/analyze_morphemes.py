@@ -11538,9 +11538,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Age/hair
         'samkang': ('sam-kang', 'hair-gray'),                        # (2x) gray.haired - Deut 32:25
         'samkangte': ('sam-kang-te', 'hair-gray-PL'),
-        # Trade goods
-        'singnamtui': ('sing-namtui', 'tree-oil'),                   # (2x) spices - Ezek 27:22
-        'singnamtuite': ('sing-namtui-te', 'tree-oil-PL'),
+        # Trade goods - namtui = perfume (nam=smell + tui=water/oil)
+        'singnamtui': ('sing-namtui', 'tree-perfume'),               # (2x) spices - Ezek 27:22
+        'singnamtuite': ('sing-namtui-te', 'tree-perfume-PL'),
         # Numbers
         'sawmguk': ('sawm-guk', 'ten-six'),                          # (2x) sixty - Gen 5:15
         'sawmgukte': ('sawm-guk-te', 'ten-six-PL'),
@@ -11587,9 +11587,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Understanding
         'mitei': ('mi-tei', 'person-understand'),                    # (2x) prudent - 1Cor 1:19
         'miteite': ('mi-tei-te', 'person-understand-PL'),
-        # Sea creatures
-        'go': ('go', 'great'),                                       # (2x) great (in golpi=whale) - Gen 1:21
-        'gote': ('go-te', 'great-PL'),
+        # Sea creatures - gol = grow, pi = big (NOT go-lpi which violates phonotactics)
+        'golpi': ('gol-pi', 'grow-big'),                             # whale/great creature - Gen 1:21
+        'golpite': ('gol-pi-te', 'grow-big-PL'),
         # Containers
         'ip': ('ip', 'sack'),                                        # (2x) sack - Gen 42:25
         'ipte': ('ip-te', 'sack-PL'),
