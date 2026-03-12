@@ -140,8 +140,9 @@ def validate_segmentation(segments: List[str]) -> Tuple[bool, Optional[str]]:
         # Skip empty segments and punctuation
         if not seg or not seg[0].isalpha():
             continue
-        if not is_valid_onset(seg):
-            onset = get_onset(seg)
+        # Use lowercase for phonotactic check (case doesn't affect phonology)
+        if not is_valid_onset(seg.lower()):
+            onset = get_onset(seg.lower())
             return (False, f"Invalid onset '{onset}' in morpheme '{seg}'")
     return (True, None)
 
@@ -1787,11 +1788,11 @@ VERB_STEMS = {
     # - Longer compound matches take precedence over stem+suffix parsing
     'thak': 'new',                 # new/renew (bawlthak = make-new, khangthak = generation-new)
     'ngkawm': 'commit.adultery',   # adulterer (ngkawmte = adulterers, ngkawmna = adultery)
-    'psak': 'clothe',              # clothe (apsak = he clothed, kapsak = I clothed)
+    # NOTE: psak removed - was creating invalid *ps onset. kipsak is ki-piak-sak contraction
     'ngek': 'tender',              # tender/tip (nongek = young ones, dawnngek = top/tip)
     'khip': 'veil',                # veil/cover (khipte = veils)
     'hop': 'snare',                # snare (duhhopna = desire-snare = temptation)
-    'psa': 'dedicate',             # dedicate (apsate = dedicated things)
+    # NOTE: psa removed - was creating invalid onset
     'mun': 'rare',                 # rare (genmun = rare word) - NOTE: also 'spot' in other contexts
     'dek': 'low',                  # low/cheap (sidek = low pit, sumdek = cheap)
     # Round 167h: More stems from partial-gloss analysis
@@ -1805,6 +1806,7 @@ VERB_STEMS = {
     'tama': 'repair',              # repair (lettamate = return-repair-PL)
     'hin': 'life',                 # life/breath (hintheihna = life-know-NMLZ)
     'huam': 'possession',          # possession (khuapihuam = city-possession)
+    'tawi': 'carry',               # carry/hold (167x) - a tawi = he carried
     # Round 167j: More stems from Gospel partials
     'zuih': 'follow',              # follow (galzuih = far-follow, nungzuih = behind-follow)
     'hual': 'roll',                # roll (hualin = roll-ERG)
@@ -11080,6 +11082,32 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kizopna': ('ki-zop-na', 'REFL-join-NMLZ'),                  # coupling (Exodus 28:27)
         'thukhenna': ('thu-khen-na', 'word-judge-NMLZ'),             # judgment (Genesis 15:14)
         'kicinsakna': ('ki-cin-sak-na', 'REFL-complete-CAUS-NMLZ'),  # perfected (James 2:22)
+        
+        # Round 169: Phonotactic fixes - compounds with invalid *ht, *ps, *hh onsets
+        # kipsak (93x) - establish covenant - ki + piak + sak = REFL-give-CAUS
+        'kipsak': ('ki-piak-sak', 'REFL-give-CAUS'),                 # establish (Genesis 6:18)
+        'kipsakna': ('ki-piak-sak-na', 'REFL-give-CAUS-NMLZ'),       # covenant (8x)
+        'kipsakin': ('ki-piak-sak-in', 'REFL-give-CAUS-ERG'),        # establishing (7x)
+        'kipsaksa': ('ki-piak-sak-sa', 'REFL-give-CAUS-PERF'),       # established (3x)
+        'kipsaknate': ('ki-piak-sak-na-te', 'REFL-give-CAUS-NMLZ-PL'), # covenants (2x)
+        # kihhuai (66x) - abomination - ki + huai (not ki + hhuai)
+        'kihhuai': ('ki-huai', 'REFL-abominate'),                    # abomination (Genesis 43:32)
+        'kihhuaina': ('ki-huai-na', 'REFL-abominate-NMLZ'),          # abomination (9x)
+        'kihhuaite': ('ki-huai-te', 'REFL-abominate-PL'),            # abominations (8x)
+        'kihhuainate': ('ki-huai-na-te', 'REFL-abominate-NMLZ-PL'),  # abominations (5x)
+        'kihhuaisa': ('ki-huai-sa', 'REFL-abominate-PERF'),          # abominated (1x)
+        # kahto compounds - should be kah-to (climb-up), not ka-hto
+        'kahtohna': ('kah-toh-na', 'climb-up-NMLZ'),                 # ascent (10x)
+        'kahtoin': ('kah-to-in', 'climb-up-ERG'),                    # ascending
+        'kahto-in': ('kah-to-in', 'climb-up-ERG'),                   # ascending (hyphenated)
+        # pahtawi (8x) - dwell with / honor - pah + tawi
+        'pahtawi': ('pah-tawi', 'honor-carry'),                      # dwell.with (Genesis 30:20)
+        'pahtawiin': ('pah-tawi-in', 'honor-carry-ERG'),             # dwelling.with
+        'pahtawi-in': ('pah-tawi-in', 'honor-carry-ERG'),            # hyphenated
+        # husanna - foreign word, leave unsegmented
+        'husanna': ('husanna', 'hosanna'),                           # hosanna (13x)
+        # anne - proper noun Anna
+        'anne': ('Anne', 'ANNA'),                                    # Anna (11x)
     }
 
 
