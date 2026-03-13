@@ -3559,6 +3559,18 @@ ATOMIC_GLOSSES = {
     'cing': 'pure',        # kongcing = side-pure
     'cil': 'thresh',       # ancil = rice-thresh = threshing
     'mu': 'see',           # muvan = see-sky = vision
+    
+    # Round 176: Additional atomic glosses
+    'vai': 'plan',         # vaihawm = plan-counsel = counsel
+    'hawm': 'counsel',     # vaihawm = plan-counsel
+    'nih': 'two',          # nihvei = two-time = second
+    'vei': 'time',         # nihvei = two-time
+    'hawl': 'drive',       # hawlkhiat = drive-out = persecution
+    'paih': 'pour',        # thangpaih = rise-pour = flood
+    'duai': 'soft',        # lungduai = heart-soft = compassion
+    'khum': 'cover',       # kikhum = REFL-cover = covering
+    'dan': 'manner',       # kilamdan = REFL-way-manner = pattern
+    'gong': 'alone',       # meigong = fire-alone = widow
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3789,6 +3801,25 @@ BINARY_COMPOUNDS = {
     'thahatsak': ('thahat', 'sak', 'strengthen'), # strong-CAUS → strengthen (20x)
     'kihonkhia': ('ki', 'honkhia', 'escape'),   # REFL-go.forth → escape (20x)
     'thawhkik': ('thawh', 'kik', 'resurrection'), # rise-again → resurrection (20x)
+    
+    # Round 176: 10-19x frequency binary compounds
+    'vaihawm': ('vai', 'hawm', 'counsel'),       # plan-counsel → counsel (19x)
+    'lungmuan': ('lung', 'muan', 'confidence'),  # heart-trust → confidence (18x)
+    'minphat': ('min', 'phat', 'fame'),          # name-praise → fame (18x)
+    'bawnghon': ('bawng', 'hon', 'herd'),        # cattle-flock → herd (18x)
+    'hingkik': ('hing', 'kik', 'resurrect'),     # alive-again → resurrect (18x)
+    'nihvei': ('nih', 'vei', 'second'),          # two-time → second (17x)
+    'khialhsak': ('khialh', 'sak', 'trespass'),  # err-CAUS → trespass (17x)
+    'hawlkhiat': ('hawl', 'khiat', 'persecute'), # drive-out → persecution (17x)
+    'thukim': ('thu', 'kim', 'covenant'),        # word-keep → covenant (15x)
+    'thangpaih': ('thang', 'paih', 'flood'),     # rise-pour → flood (15x)
+    'lungduai': ('lung', 'duai', 'compassion'),  # heart-soft → compassion (15x)
+    'huaiham': ('huai', 'ham', 'terror'),        # dread-full → terror (15x)
+    'galsim': ('gal', 'sim', 'number'),          # enemy-count → number (15x)
+    'hamphat': ('ham', 'phat', 'glory'),         # full-praise → glory (16x)
+    'kikhum': ('ki', 'khum', 'covering'),        # REFL-cover → covering (14x)
+    'kulhkong': ('kulh', 'kong', 'gate'),        # wall-road → gate (14x)
+    'meigong': ('mei', 'gong', 'widow'),         # fire-alone → widow (14x)
 }
 
 
@@ -4832,6 +4863,115 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['thawh', 'kik', 'na'],
         'structure': '(thawh-kik)-na',
         'lexical': 'resurrection',
+        'head': 'left',
+    },
+    # Round 176: 10-19x frequency ternary compounds
+    'vaihawmna': {
+        'morphemes': ['vai', 'hawm', 'na'],
+        'structure': '(vai-hawm)-na',
+        'lexical': 'counsel',
+        'head': 'left',
+    },
+    'lungmuanna': {
+        'morphemes': ['lung', 'muan', 'na'],
+        'structure': '(lung-muan)-na',
+        'lexical': 'confidence',
+        'head': 'left',
+    },
+    'minphatna': {
+        'morphemes': ['min', 'phat', 'na'],
+        'structure': '(min-phat)-na',
+        'lexical': 'fame',
+        'head': 'left',
+    },
+    'bawnghonte': {
+        'morphemes': ['bawng', 'hon', 'te'],
+        'structure': '(bawng-hon)-te',
+        'lexical': 'herds',
+        'head': 'left',
+    },
+    'hingkiksak': {
+        'morphemes': ['hing', 'kik', 'sak'],
+        'structure': '(hing-kik)-sak',
+        'lexical': 'resurrect',
+        'head': 'left',
+    },
+    'nihveina': {
+        'morphemes': ['nih', 'vei', 'na'],
+        'structure': '(nih-vei)-na',
+        'lexical': 'second',
+        'head': 'left',
+    },
+    'khialhsakna': {
+        'morphemes': ['khialh', 'sak', 'na'],
+        'structure': '(khialh-sak)-na',
+        'lexical': 'trespass',
+        'head': 'left',
+    },
+    'hawlkhiatna': {
+        'morphemes': ['hawl', 'khiat', 'na'],
+        'structure': '(hawl-khiat)-na',
+        'lexical': 'persecution',
+        'head': 'left',
+    },
+    'thukimna': {
+        'morphemes': ['thu', 'kim', 'na'],
+        'structure': '(thu-kim)-na',
+        'lexical': 'covenant',
+        'head': 'left',
+    },
+    'thangpaihna': {
+        'morphemes': ['thang', 'paih', 'na'],
+        'structure': '(thang-paih)-na',
+        'lexical': 'flood',
+        'head': 'left',
+    },
+    'lungduaina': {
+        'morphemes': ['lung', 'duai', 'na'],
+        'structure': '(lung-duai)-na',
+        'lexical': 'compassion',
+        'head': 'left',
+    },
+    'huaihamna': {
+        'morphemes': ['huai', 'ham', 'na'],
+        'structure': '(huai-ham)-na',
+        'lexical': 'terror',
+        'head': 'left',
+    },
+    'galsimna': {
+        'morphemes': ['gal', 'sim', 'na'],
+        'structure': '(gal-sim)-na',
+        'lexical': 'census',
+        'head': 'left',
+    },
+    'hamphatna': {
+        'morphemes': ['ham', 'phat', 'na'],
+        'structure': '(ham-phat)-na',
+        'lexical': 'glory',
+        'head': 'left',
+    },
+    'kikhumna': {
+        'morphemes': ['ki', 'khum', 'na'],
+        'structure': '(ki-khum)-na',
+        'lexical': 'covering',
+        'head': 'left',
+    },
+    'kulhkongpite': {
+        'morphemes': ['kulh', 'kong', 'pi', 'te'],
+        'structure': '((kulh-kong)-pi)-te',
+        'lexical': 'city.gates',
+        'head': 'left',
+    },
+    'meigongnu': {
+        'morphemes': ['mei', 'gong', 'nu'],
+        'structure': '(mei-gong)-nu',
+        'lexical': 'widow',
+        'head': 'left',
+    },
+    'kilamdanna': {
+        'morphemes': ['ki', 'lam', 'dan', 'na'],
+        'structure': '((ki-lam)-dan)-na',
+        'lexical': 'pattern',
         'head': 'left',
     },
 }
