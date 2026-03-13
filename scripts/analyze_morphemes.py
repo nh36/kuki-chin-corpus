@@ -3396,6 +3396,7 @@ ATOMIC_GLOSSES = {
     'bawng': 'cattle',
     'ui': 'dog',
     'ngal': 'wolf',
+    'hon': 'flock',
     
     # Qualities
     'dam': 'well/healthy',
@@ -3408,6 +3409,10 @@ ATOMIC_GLOSSES = {
     'kim': 'complete/perfect',
     'muang': 'still/calm',
     'thim': 'dark',
+    'siam': 'skilled',
+    'mawh': 'guilty',
+    'siat': 'spoil',
+    'khialh': 'sin',
     
     # Substances
     'nam': 'smell',      # TB root for smell/fragrance
@@ -3426,6 +3431,8 @@ ATOMIC_GLOSSES = {
     'lam': 'side/direction',
     'inn': 'house',
     'mun': 'place',
+    'khua': 'town',
+    'gam': 'land',
     
     # Abstracts
     'na': 'NMLZ',        # nominalizer
@@ -3441,6 +3448,16 @@ ATOMIC_GLOSSES = {
     'khia': 'out',       # directional out
     'let': 'back',       # directional back
     'khin': 'COMPL',     # completive
+    'tat': 'strike',     # gamtat = kingdom
+    'gen': 'speak',      # thugen = speech
+    'sim': 'count',      # lungsim = heart
+    'sem': 'serve',      # nasem = servant
+    'sep': 'work',       # nasep = work
+    'bawl': 'make',      # kibawl = be.made
+    'pia': 'give',       # kipia = be.given
+    'pan': 'begin',      # kipan = begin
+    'pawl': 'group',     # pawlkhat = some
+    'khat': 'one',       # numeral
     
     # Sizes/degrees
     'pi': 'big',
@@ -3477,6 +3494,11 @@ AMBIGUOUS_ATOMIC = {
         'default': 'ERG',
         'as_suffix': 'ERG',           # NP + in → ergative
         'as_noun': 'house',           # inn → house
+    },
+    'nam': {
+        'default': 'smell',           # TB root for smell/fragrance
+        'in_namtui': 'smell',         # namtui = perfume
+        'in_minam': 'kind/tribe',     # minam = nation/people
     },
 }
 
@@ -3542,6 +3564,32 @@ BINARY_COMPOUNDS = {
     'mikhual': ('mi', 'khual', 'stranger'),     # person-village → stranger
     'mihing': ('mi', 'hing', 'mankind'),        # person-creature → mankind
     'saili': ('sai', 'li', 'sling'),            # throw-? → sling
+    
+    # High-frequency compounds from corpus (freq >= 100)
+    'kumpipa': ('kumpi', 'pa', 'king'),         # king-man → king (1910x)
+    'biakna': ('biak', 'na', 'worship'),        # worship-NMLZ → worship (1518x)
+    'khuapi': ('khua', 'pi', 'city'),           # town-big → city (1225x)
+    'lungsim': ('lung', 'sim', 'heart'),        # heart-count → heart/mind (989x)
+    'numei': ('nu', 'mei', 'woman'),            # mother-fire → woman (763x)
+    'mawhna': ('mawh', 'na', 'sin'),            # guilty-NMLZ → sin/guilt (735x)
+    'minam': ('mi', 'nam', 'nation'),           # person-kind → nation/people (711x)
+    'thukham': ('thu', 'kham', 'law'),          # word-forbid → law/commandment (447x)
+    'thugen': ('thu', 'gen', 'speech'),         # word-speak → speech/saying (381x)
+    'siampi': ('siam', 'pi', 'priest'),         # skilled-big → priest (431x)
+    'lampi': ('lam', 'pi', 'road'),             # way-big → road/highway (378x)
+    'siatna': ('siat', 'na', 'destruction'),    # spoil-NMLZ → destruction (384x)
+    'khialhna': ('khialh', 'na', 'sin'),        # sin-NMLZ → sin/transgression (354x)
+    'sihna': ('sih', 'na', 'death'),            # die-NMLZ → death (317x)
+    'gamtat': ('gam', 'tat', 'kingdom'),        # land-strike → kingdom (398x)
+    'pawlkhat': ('pawl', 'khat', 'some'),       # group-one → some (394x)
+    'nasem': ('na', 'sem', 'servant'),          # ?-serve → servant (350x) - na here is different
+    'nasep': ('na', 'sep', 'work'),             # ?-work → work (346x)
+    'kibawl': ('ki', 'bawl', 'be.made'),        # REFL-make → be made (345x)
+    'kipia': ('ki', 'pia', 'be.given'),         # REFL-give → be given (339x)
+    'kipan': ('ki', 'pan', 'begin'),            # REFL-begin → begin (409x)
+    'paikhia': ('pai', 'khia', 'go.out'),       # go-exit → go out (464x)
+    'honkhia': ('hon', 'khia', 'go.forth'),     # flock-exit → go forth (357x)
+    'leitang': ('lei', 'tang', 'earth'),        # earth-stand → earth/ground (514x)
 }
 
 
@@ -3670,7 +3718,256 @@ TERNARY_COMPOUNDS = {
         'lexical': 'temples',
         'head': 'left',
     },
-    # Note: tuipiakna is 4 morphemes (tui-pi-ak-na) - not handled as ternary
+    # High-frequency ternary compounds from corpus
+    # [compound]-te (plural) patterns
+    'nasemte': {
+        'morphemes': ['na', 'sem', 'te'],
+        'structure': '(na-sem)-te',
+        'lexical': 'servants',
+        'head': 'left',
+    },
+    'minamte': {
+        'morphemes': ['mi', 'nam', 'te'],
+        'structure': '(mi-nam)-te',
+        'lexical': 'nations',
+        'head': 'left',
+    },
+    'siampite': {
+        'morphemes': ['siam', 'pi', 'te'],
+        'structure': '(siam-pi)-te',
+        'lexical': 'priests',
+        'head': 'left',
+    },
+    'khuapite': {
+        'morphemes': ['khua', 'pi', 'te'],
+        'structure': '(khua-pi)-te',
+        'lexical': 'cities',
+        'head': 'left',
+    },
+    'mihingte': {
+        'morphemes': ['mi', 'hing', 'te'],
+        'structure': '(mi-hing)-te',
+        'lexical': 'mankind',
+        'head': 'left',
+    },
+    'numeite': {
+        'morphemes': ['nu', 'mei', 'te'],
+        'structure': '(nu-mei)-te',
+        'lexical': 'women',
+        'head': 'left',
+    },
+    'thugente': {
+        'morphemes': ['thu', 'gen', 'te'],
+        'structure': '(thu-gen)-te',
+        'lexical': 'sayings',
+        'head': 'left',
+    },
+    'biaknate': {
+        'morphemes': ['biak', 'na', 'te'],
+        'structure': '(biak-na)-te',
+        'lexical': 'worships',
+        'head': 'left',
+    },
+    'pawlkhatte': {
+        'morphemes': ['pawl', 'khat', 'te'],
+        'structure': '(pawl-khat)-te',
+        'lexical': 'some',
+        'head': 'left',
+    },
+    'thukhamte': {
+        'morphemes': ['thu', 'kham', 'te'],
+        'structure': '(thu-kham)-te',
+        'lexical': 'laws',
+        'head': 'left',
+    },
+    'mawhnate': {
+        'morphemes': ['mawh', 'na', 'te'],
+        'structure': '(mawh-na)-te',
+        'lexical': 'sins',
+        'head': 'left',
+    },
+    'khialhnate': {
+        'morphemes': ['khialh', 'na', 'te'],
+        'structure': '(khialh-na)-te',
+        'lexical': 'transgressions',
+        'head': 'left',
+    },
+    'vantungte': {
+        'morphemes': ['van', 'tung', 'te'],
+        'structure': '(van-tung)-te',
+        'lexical': 'heavens',
+        'head': 'left',
+    },
+    'singkungte': {
+        'morphemes': ['sing', 'kung', 'te'],
+        'structure': '(sing-kung)-te',
+        'lexical': 'trees',
+        'head': 'left',
+    },
+    'leengguite': {
+        'morphemes': ['leeng', 'gui', 'te'],
+        'structure': '(leeng-gui)-te',
+        'lexical': 'vineyards',
+        'head': 'left',
+    },
+    'lampite': {
+        'morphemes': ['lam', 'pi', 'te'],
+        'structure': '(lam-pi)-te',
+        'lexical': 'roads',
+        'head': 'left',
+    },
+    'nasepte': {
+        'morphemes': ['na', 'sep', 'te'],
+        'structure': '(na-sep)-te',
+        'lexical': 'works',
+        'head': 'left',
+    },
+    # [compound]-na (nominalization) patterns  
+    'gamtatna': {
+        'morphemes': ['gam', 'tat', 'na'],
+        'structure': '(gam-tat)-na',
+        'lexical': 'kingdom',
+        'head': 'left',
+    },
+    'nasepna': {
+        'morphemes': ['na', 'sep', 'na'],
+        'structure': '(na-sep)-na',
+        'lexical': 'work',
+        'head': 'left',
+    },
+    'lungkhamna': {
+        'morphemes': ['lung', 'kham', 'na'],
+        'structure': '(lung-kham)-na',
+        'lexical': 'sorrow',
+        'head': 'left',
+    },
+    'thugenna': {
+        'morphemes': ['thu', 'gen', 'na'],
+        'structure': '(thu-gen)-na',
+        'lexical': 'saying',
+        'head': 'left',
+    },
+    'haksatna': {
+        'morphemes': ['hak', 'sat', 'na'],
+        'structure': '(hak-sat)-na',
+        'lexical': 'difficulty',
+        'head': 'left',
+    },
+    'lungkimna': {
+        'morphemes': ['lung', 'kim', 'na'],
+        'structure': '(lung-kim)-na',
+        'lexical': 'peace',
+        'head': 'left',
+    },
+    'kibawlna': {
+        'morphemes': ['ki', 'bawl', 'na'],
+        'structure': '(ki-bawl)-na',
+        'lexical': 'creation',
+        'head': 'left',
+    },
+    # [compound]-pa (agent) patterns
+    'nasempa': {
+        'morphemes': ['na', 'sem', 'pa'],
+        'structure': '(na-sem)-pa',
+        'lexical': 'servant',
+        'head': 'left',
+    },
+    'siampipa': {
+        'morphemes': ['siam', 'pi', 'pa'],
+        'structure': '(siam-pi)-pa',
+        'lexical': 'priest',
+        'head': 'left',
+    },
+    'nasemnu': {
+        'morphemes': ['na', 'sem', 'nu'],
+        'structure': '(na-sem)-nu',
+        'lexical': 'maidservant',
+        'head': 'left',
+    },
+    # [compound]-mi (person) patterns
+    'vantungmi': {
+        'morphemes': ['van', 'tung', 'mi'],
+        'structure': '(van-tung)-mi',
+        'lexical': 'angel',
+        'head': 'left',
+    },
+    # [compound]-sak (causative) patterns
+    'lungdamsak': {
+        'morphemes': ['lung', 'dam', 'sak'],
+        'structure': '(lung-dam)-sak',
+        'lexical': 'make.glad',
+        'head': 'left',
+    },
+    'lungkimsak': {
+        'morphemes': ['lung', 'kim', 'sak'],
+        'structure': '(lung-kim)-sak',
+        'lexical': 'satisfy',
+        'head': 'left',
+    },
+    'paikhiasak': {
+        'morphemes': ['pai', 'khia', 'sak'],
+        'structure': '(pai-khia)-sak',
+        'lexical': 'send.out',
+        'head': 'left',
+    },
+    # [compound]-in (ergative) patterns
+    'kipanin': {
+        'morphemes': ['ki', 'pan', 'in'],
+        'structure': '(ki-pan)-in',
+        'lexical': 'from',
+        'head': 'left',
+    },
+    'lungdamin': {
+        'morphemes': ['lung', 'dam', 'in'],
+        'structure': '(lung-dam)-in',
+        'lexical': 'gladly',
+        'head': 'left',
+    },
+    'lungmuangin': {
+        'morphemes': ['lung', 'muang', 'in'],
+        'structure': '(lung-muang)-in',
+        'lexical': 'peacefully',
+        'head': 'left',
+    },
+    # [compound]-pi (augmentative) patterns
+    'biakinnpi': {
+        'morphemes': ['biak', 'inn', 'pi'],
+        'structure': '(biak-inn)-pi',
+        'lexical': 'great.temple',
+        'head': 'left',
+    },
+    # [compound]-sung (inside) patterns
+    'biakinnsung': {
+        'morphemes': ['biak', 'inn', 'sung'],
+        'structure': '(biak-inn)-sung',
+        'lexical': 'in.temple',
+        'head': 'left',
+    },
+    # [modifier]-siatna (destruction) patterns - right-headed
+    'samsiatna': {
+        'morphemes': ['sam', 'siat', 'na'],
+        'structure': 'sam-(siat-na)',
+        'lexical': 'utter.destruction',
+        'head': 'right',
+    },
+    'bawlsiatna': {
+        'morphemes': ['bawl', 'siat', 'na'],
+        'structure': 'bawl-(siat-na)',
+        'lexical': 'complete.destruction',
+        'head': 'right',
+    },
+    'suksiatna': {
+        'morphemes': ['suk', 'siat', 'na'],
+        'structure': 'suk-(siat-na)',
+        'lexical': 'destruction',
+        'head': 'right',
+    },
+    'simmawhna': {
+        'morphemes': ['sim', 'mawh', 'na'],
+        'structure': 'sim-(mawh-na)',
+        'lexical': 'guilt',
+        'head': 'right',
+    },
 }
 
 
@@ -12308,6 +12605,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bible.com': ('bible.com', 'FGN'),                           # URL
         'copyright': ('copyright', 'FGN'),                           # English
         'for': ('for', 'FGN'),                                       # English
+        
+        # Round 171: High-frequency remaining partials
+        'tuhun': ('tu-hun', 'now-time'),                             # 56x - "at this time/season"
+        'sinsona': ('sinsona', 'wrath'),                             # 19x - fierce anger/wrath
+        'sinsonain': ('sinsona-in', 'wrath-ERG'),
+        'bible': ('bible', 'FGN'),                                   # 4x - foreign word
+        'tedim': ('tedim', 'Tedim'),                                 # 2x - language/place name
+        'kristal': ('kristal', 'FGN'),                               # 2x - crystal (foreign)
     }
 
 
