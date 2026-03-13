@@ -3636,6 +3636,15 @@ ATOMIC_GLOSSES = {
     'tai': 'bright/clear', # maitai = face-bright = radiant
     'kaih': 'betray',      # kamkaih = word-betray = treachery
     'luah': 'inherit',     # innluahza = house-inherit-right = birthright
+    
+    # Round 184: Final batch atomic glosses
+    'nawl': 'place',       # nawlnung = place-back = edge
+    'nung': 'back',        # nawlnung = place-back
+    'pam': 'all',          # pammaih = all-face = behalf
+    'maih': 'face',        # pammaih = all-face
+    'dial': 'belt',        # dialkaih = belt-loosen = girdle
+    'len': 'net',          # siklen = tie-net = network
+    'buah': 'pour',        # tuibuah = water-pour = libation
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3991,6 +4000,22 @@ BINARY_COMPOUNDS = {
     'maitai': ('mai', 'tai', 'radiant'),          # face-bright → radiant/joyful (7x)
     'kamciam': ('kam', 'ciam', 'vow'),            # word-promise → vow (6x)
     'kamkaih': ('kam', 'kaih', 'treachery'),      # word-betray → treachery (6x)
+    
+    # Round 184: Final batch of 5-9x lexicalized compounds
+    'ngahsa': ('ngah', 'sa', 'acquire'),          # get-flesh → acquire/gotten (9x)
+    'nawlnung': ('nawl', 'nung', 'edge'),         # place-back → edge/selvedge (9x)
+    'pammaih': ('pam', 'maih', 'behalf'),         # all-face → on behalf of (9x)
+    'tatsat': ('tat', 'sat', 'continual'),        # cut-regular → continual/daily (9x)
+    'diktat': ('dik', 'tat', 'entrance'),         # straight-cut → entrance (9x)
+    'itluat': ('it', 'luat', 'beloved'),          # love-exceed → beloved (9x)
+    'dialkaih': ('dial', 'kaih', 'girdle'),       # belt-loosen → girdle/loincloth (9x)
+    'omngei': ('om', 'ngei', 'know'),             # be-know → recognize (9x)
+    'gimnam': ('gim', 'nam', 'savour'),           # suffer-smell → sweet savour (8x)
+    'sulzuih': ('sul', 'zuih', 'pursue'),         # track-follow → pursue/overcome (8x)
+    'siklen': ('sik', 'len', 'network'),          # tie-net → network/grating (8x)
+    'tuibuah': ('tui', 'buah', 'libation'),       # water-pour → drink offering (8x)
+    'khutsiam': ('khut', 'siam', 'craft'),        # hand-skill → craftsmanship (8x)
+    'tawisuang': ('tawi', 'suang', 'weights'),    # weigh-stone → scale weights (8x)
 }
 
 
