@@ -5,8 +5,8 @@
 This document describes the methodology developed for building a morphological analyzer for Tedim Chin (ctd), designed to be replicated across 19 Kuki-Chin languages. The goal is Leipzig-style glossing with 95%+ token coverage.
 
 **Reference Implementation:** `scripts/analyze_morphemes.py` (Tedim Chin)  
-**Coverage Achieved:** 98.51% (838,202 of 850,903 tokens)  
-**Development Time:** ~5 sessions of iterative work
+**Coverage Achieved:** 99.73% (829,152 of 831,431 tokens)  
+**Development Time:** ~12 sessions of iterative work
 
 ---
 
@@ -305,18 +305,20 @@ if '-' in word:
 
 ---
 
-## 5. Dictionary Size Guidelines
+### 5.1 Dictionary Size Guidelines
 
 Based on Tedim experience, expect approximately:
 
 | Category | Entries | Coverage Contribution |
 |----------|---------|----------------------|
 | Function words | 100-150 | ~60% |
-| Verb stems | 200-300 | ~15% |
-| Noun stems | 200-300 | ~10% |
-| Compound words | 400-800 | ~10% |
-| Proper nouns | 200-500 | ~2% |
-| **Total** | **1,100-2,050** | **~97%** |
+| Verb stems | 2,000+ | ~15% |
+| Noun stems | 800+ | ~10% |
+| Compound words (simple) | 500-1,000 | ~8% |
+| Hierarchical compounds | 300-600 | ~3% |
+| Proper nouns | 2,500+ | ~2% |
+| Atomic glosses | 300+ | (compositional) |
+| **Total** | **~7,000+** | **~99%** |
 
 ---
 
@@ -326,7 +328,8 @@ Based on Tedim experience, expect approximately:
 
 | Tier | Coverage | Status |
 |------|----------|--------|
-| 🟢 Excellent | ≥97% | Full Leipzig glossing ready |
+| 🟢 Excellent | ≥99% | Production-ready Leipzig glossing |
+| 🟢 Very Good | 97-99% | Full Leipzig glossing ready |
 | 🟡 Good | 93-97% | Usable with some gaps |
 | 🟠 Developing | 85-93% | Significant work needed |
 | 🔴 Initial | <85% | Early stage |
@@ -422,6 +425,6 @@ analysis/{ISO}_unknown_words.tsv    # Remaining unknowns for manual review
 
 ---
 
-*Document version: 1.0*  
-*Last updated: 2026-03-07*  
+*Document version: 2.0*  
+*Last updated: 2026-03-13*  
 *Based on: Tedim Chin (ctd) analyzer development*

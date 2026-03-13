@@ -147,6 +147,68 @@ def analyze_recursive(word, depth=0):
 
 ---
 
+### Bug 8: N+N Compound Remaining Morpheme Gloss Lookup Failure
+
+**Discovery (2026-03-13):** Words like `khutlum` (palm) were being glossed as `hand-?` despite `lum` having a gloss in ATOMIC_GLOSSES.
+
+**Root Cause:** After successful stem parsing (finding `khut` = hand), the remaining morpheme `lum` was marked with `?` without checking if it existed in ATOMIC_GLOSSES, NOUN_STEMS, or VERB_STEMS.
+
+**Location:** Lines 14834-14848 in `analyze_word()`, in the stem parsing section.
+
+**Fix:**
+```python
+# After: remaining = word[len(stem):]
+# BEFORE (wrong): remaining_gloss = '?'
+# AFTER (correct):
+if remaining_lower in ATOMIC_GLOSSES:
+    remaining_gloss = ATOMIC_GLOSSES[remaining_lower]
+elif remaining_lower in NOUN_STEMS:
+    remaining_gloss = NOUN_STEMS[remaining_lower]
+elif remaining_lower in VERB_STEMS:
+    remaining_gloss = VERB_STEMS[remaining_lower]
+elif remaining_lower in VERB_STEM_PAIRS:
+    remaining_gloss = VERB_STEM_PAIRS[remaining_lower]
+else:
+    remaining_gloss = '?'
+```
+
+**Impact:** +952 tokens fixed (from 828,200 to 829,152).
+
+**Prevention:** When decomposing compounds, always check ALL gloss dictionaries for remaining morphemes before marking as unknown.
+
+---
+
+### Bug 9: Greedy Single-Character Prefix Parsing
+
+**Discovery (2026-03-13):** Word `innpiah` (great house, palace) was being analyzed as `i-nnpiah` (1PL.INCL-?) instead of `inn-pi-ah` (house-big-LOC).
+
+**Root Cause:** Single-character prefix `i-` was being stripped even when the word started with a longer known stem (`inn` = house). The algorithm found `i-` as a valid prefix and stripped it, leaving `nnpiah` which couldn't be parsed.
+
+**Location:** Lines 14526-14560 in `analyze_word()`, in the prefix stripping section.
+
+**Fix:** Before stripping a single-character prefix, check three conditions:
+```python
+# Don't strip single-char prefix if:
+# 1. Remainder starts with doubled consonant (suggests gemination, not prefix)
+if len(remainder) >= 2 and remainder[0] == remainder[1] and remainder[0] in 'bcdfghjklmnpqrstvwxyz':
+    continue  # Skip this prefix
+    
+# 2. Full word is a known stem  
+if word_lower in NOUN_STEMS or word_lower in VERB_STEMS:
+    continue  # Skip this prefix
+    
+# 3. A longer stem exists starting with this character
+if any(word_lower.startswith(stem) and len(stem) > 1 
+       for stem in list(NOUN_STEMS.keys()) + list(VERB_STEMS.keys())):
+    continue  # Skip this prefix
+```
+
+**Impact:** +76 tokens fixed.
+
+**Prevention:** Single-character prefix stripping is dangerous. Add protective checks to avoid stripping when the word clearly starts with a longer stem.
+
+---
+
 ## 2. Wrong Turns (Approaches That Didn't Work)
 
 ### Wrong Turn 1: Aggressive Spelling Normalization
@@ -225,7 +287,8 @@ def analyze_recursive(word, depth=0):
 | 95% | Missing reduplication | Add reduplication pattern handler |
 | 97% | Rare vocabulary, proper nouns | Philological analysis, add proper noun list |
 | 98% | Unicode issues, edge cases | Normalize apostrophes (U+2019→U+0027) |
-| 98.5%+ | Hapax, dialectal forms, loans | Document but don't chase exhaustively |
+| 99% | Gloss lookup bugs, greedy parsing | Fix remaining morpheme lookups (Bug 8), protect prefix stripping (Bug 9) |
+| 99.5%+ | Hapax, dialectal forms, loans | Document but don't chase exhaustively |
 
 ---
 
