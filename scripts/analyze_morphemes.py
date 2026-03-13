@@ -6298,6 +6298,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
             stem_seg, stem_gloss = analyze_word(stem)
             if '?' not in stem_gloss:
                 return (f"{stem_seg}-pa'", f"{stem_gloss}-NMLZ.AG.POSS")
+        
+        # Round 189: General compound possessive fallback
+        # For compound words like hehna' (anger-NMLZ), gulpi' (serpent-big)
+        # If the base analyzes correctly, treat apostrophe as possessive
+        base_seg, base_gloss = analyze_word(base)
+        if '?' not in base_gloss and '-' in base_seg:
+            # It's a successfully analyzed compound - add .POSS
+            return (f"{base_seg}'", f"{base_gloss}.POSS")
     
     # Round 154: Early reduplication check (X-X patterns like hathat, kilhkilh)
     word_clean = word.lower().replace('-', '')
