@@ -1,8 +1,10 @@
-# Tedim Chin Analyzer: Lessons Learned & Bug Log
+# Kuki-Chin Morphological Analyzer: Lessons Learned & Bug Log
 
 ## Overview
 
-This document captures specific issues encountered during the development of the Tedim Chin (ctd) morphological analyzer, including wrong turns, bugs discovered, and their solutions. This is intended as a reference for future language work.
+This document captures specific issues encountered during the development of morphological analyzers for Kuki-Chin languages, beginning with Tedim Chin (ctd). It documents wrong turns, bugs discovered, solutions, and best practices for applying this methodology to additional languages.
+
+**Target Languages (18+):** Bawm (bgr), Falam (cfm), Hakha (cnh), Khumi (cnk, cek), Mizo (lus), Nga'la/Hlawng (hlt), Sizang (csy), Tedim (ctd), Zotung (czt), Zomi (zom), and others.
 
 ---
 
@@ -306,8 +308,251 @@ If a gloss contains "?", the word is not fully analyzed. Never ship an analyzer 
 8. **Document, don't normalize, spelling variation**
 9. **Accept 97% as "excellent" - don't chase 100%**
 10. **Keep detailed logs of what was added and why**
+11. **PREPROCESSING FIRST** - Clean corpus artifacts before analysis (see Section 7)
 
 ---
 
-*Document version: 1.0*  
-*Last updated: 2026-03-07*
+## 7. Corpus Preprocessing Pipeline (Critical Foundation)
+
+### The Problem We Discovered
+
+During Tedim Chin development, we encountered web scraping artifacts being treated as vocabulary:
+- `scraped`, `https`, `www`, `bible.com`, `copyright` appeared as "unknown words"
+- These were handled ad-hoc by adding them to FGN (foreign) entries
+- This pollutes the lexicon and masks the true coverage
+
+**Root Cause:** Metadata embedded in corpus text files leaked into analysis.
+
+### Recommended Architecture
+
+**Before (problematic):**
+```
+bibles/extracted/ctd/ctd-x-bible.txt
+├── # language_name: Tedim Chin    ← Metadata mixed with text
+├── # URL: https://www.bible.com  
+├── 01001001  In the beginning...  ← Verse data
+└── ...
+```
+
+**After (clean separation):**
+```
+bibles/extracted/ctd/
+├── metadata.json           ← All provenance info
+├── ctd-x-bible.txt         ← Pure verse text only
+└── ctd-x-bible.raw.txt     ← Original scrape (archival)
+```
+
+### metadata.json Schema
+
+```json
+{
+  "language_name": "Tedim Chin",
+  "iso_639_3": "ctd",
+  "source": {
+    "url": "https://www.bible.com/bible/368",
+    "scrape_date": "2026-03-01",
+    "scrape_tool": "bible_scraper.py v1.0"
+  },
+  "copyright": {
+    "holder": "See bible.com for copyright information",
+    "usage_terms": "For research purposes"
+  },
+  "preprocessing": {
+    "date": "2026-03-13",
+    "steps": ["removed_metadata_lines", "normalized_unicode", "removed_html_artifacts"]
+  },
+  "statistics": {
+    "total_verses": 31102,
+    "total_tokens": 851068,
+    "unique_tokens": 45230
+  }
+}
+```
+
+### Preprocessing Script (scripts/preprocess_corpus.py)
+
+Should perform these steps IN ORDER:
+
+1. **Extract metadata** - Parse `#`-prefixed lines into JSON
+2. **Remove metadata lines** - Leave only `VERSE_ID\ttext` lines
+3. **Normalize Unicode**:
+   - `\u2019` → `'` (curly apostrophe → straight)
+   - `\u2018` → `'`
+   - `\u201c`/`\u201d` → `"` (curly quotes)
+   - NBSP → space
+4. **Remove HTML artifacts** - `&amp;`, `&nbsp;`, stray tags
+5. **Validate format** - Every line matches `^[0-9]{8}\t.+$`
+6. **Archive original** - Keep `.raw.txt` for provenance
+
+### Why This Matters for 18 Languages
+
+If preprocessing isn't standardized:
+- Each language's analyzer will have ad-hoc FGN entries for the same artifacts
+- Coverage comparisons across languages will be inconsistent
+- Bugs will be replicated 18 times
+- Foreign word lists will bloat with metadata terms
+
+### Action Items for This Project
+
+1. [ ] Create `scripts/preprocess_corpus.py` 
+2. [ ] Generate `metadata.json` for all 20 extracted languages
+3. [ ] Clean existing `.txt` files (archive originals as `.raw.txt`)
+4. [ ] Remove FGN entries for metadata artifacts (scraped, https, etc.)
+5. [ ] Update scraping scripts to output clean format from start
+
+---
+
+## 8. Hierarchical Compound Analysis System
+
+### Discovery
+
+During Tedim Chin analysis, we discovered that long compounds have nested structure:
+
+```
+singnamtui = sing + namtui = sing + (nam + tui)
+         = tree + perfume = tree + (smell + water)
+         = "spices"
+```
+
+Simply glossing `singnamtui = spices` loses the compositional semantics.
+
+### Solution: Multi-Level Representation
+
+We implemented a system that captures BOTH:
+- **Lexical gloss**: The established meaning (`spices`)
+- **Compositional gloss**: The morpheme-by-morpheme breakdown (`tree-(smell-water)`)
+
+### Data Structures
+
+```python
+@dataclass
+class CompoundStructure:
+    morphemes: list[str]          # ['sing', 'nam', 'tui']
+    segmentation: str              # 'sing-nam-tui'
+    bracketing: str                # 'sing-(nam-tui)'
+    compositional_gloss: str       # 'tree-(smell-water)'
+    lexical_gloss: str             # 'spices'
+    head_position: str             # 'left' or 'right'
+
+# Atomic morpheme meanings
+ATOMIC_GLOSSES = {
+    'sing': 'tree', 'nam': 'smell', 'tui': 'water',
+    'lung': 'heart', 'dam': 'healthy', 'kham': 'afraid',
+    # ... 80+ entries
+}
+
+# Known binary compounds
+BINARY_COMPOUNDS = {
+    'namtui': ('nam-tui', 'smell-water', 'perfume'),
+    'lungdam': ('lung-dam', 'heart-healthy', 'joy'),
+    # ... 55+ entries
+}
+
+# Known ternary compounds with constituency
+TERNARY_COMPOUNDS = {
+    'singnamtui': ('sing', 'namtui', 'right', 'spices'),  # sing + (namtui)
+    'lungdamte': ('lungdam', 'te', 'left', 'joyful.ones'),  # (lungdam) + te
+    # ... 70+ entries
+}
+```
+
+### Key Insight: Constituency Matters
+
+- `sing-nam-tui` = `sing + (nam-tui)` = tree + perfume (right-headed)
+- `lung-dam-te` = `(lung-dam) + te` = joy + PL (left-headed)
+
+The system must know WHERE the primary break is.
+
+### Position-Aware Disambiguation
+
+Some morphemes have different meanings depending on position:
+
+```python
+AMBIGUOUS_ATOMIC = {
+    'te': {
+        'default': 'small',
+        'as_suffix': 'PL',        # lungdamte = joyful.ones (PL)
+        'as_modifier': 'small',   # tepa = small.person
+    },
+    'pi': {
+        'default': 'big',
+        'as_suffix': 'AUG',
+    },
+}
+```
+
+### Applicability to Other Languages
+
+This pattern is common across Tibeto-Burman:
+- **Mizo (lus)**: Similar compounding with transparent semantics
+- **Hakha (cnh)**: Related morpheme inventory
+- **Falam (cfm)**: Cognate compounds
+
+The ATOMIC_GLOSSES will need language-specific entries, but the architecture transfers.
+
+---
+
+## 9. Development Workflow Recommendations
+
+### Phase 1: Corpus Preparation (Do First!)
+1. Run preprocessing script
+2. Generate metadata.json
+3. Validate format
+4. Calculate baseline statistics (token count, unique words)
+
+### Phase 2: High-Frequency Foundation
+1. Extract top 500 word forms
+2. Add function words (pronouns, demonstratives, conjunctions)
+3. Add top 100 verbs (both Stem I and II)
+4. Target: 70% coverage
+
+### Phase 3: Morphological Rules
+1. Add prefix rules (sorted by length, longest first)
+2. Add suffix rules
+3. Add reduplication patterns
+4. Handle ki-/reflexive forms
+5. Target: 90% coverage
+
+### Phase 4: Compound Dictionary
+1. Build COMPOUND_WORDS dictionary for known compounds
+2. Add hierarchical analysis for complex compounds
+3. Add proper noun list
+4. Target: 97% coverage
+
+### Phase 5: Long Tail
+1. KJV cross-reference for unknown vocabulary
+2. Handle Unicode edge cases
+3. Document but don't exhaustively chase hapax
+4. Target: 99%+ coverage
+
+### Testing Discipline
+- Test coverage after every 10-20 additions
+- Never merge changes that decrease coverage (unless intentional)
+- Keep git commits small and well-documented
+- Sample-check accuracy, not just coverage
+
+---
+
+## 10. Top 15 Rules for Future Languages
+
+1. **PREPROCESS FIRST** - Extract metadata, clean artifacts before any analysis
+2. **Function words first** - They cover 60% of tokens
+3. **Compound dictionary before decomposition rules**
+4. **Always add both Stem I and Stem II for verbs**
+5. **Sort prefixes/suffixes by length (longest first)**
+6. **Handle Unicode apostrophes (U+2019)**
+7. **Test after every 10-20 additions**
+8. **Cross-reference with KJV for unknown vocabulary**
+9. **Document, don't normalize, spelling variation**
+10. **Accept 97% as "excellent" - don't chase 100%**
+11. **Keep detailed logs of what was added and why**
+12. **Implement hierarchical compound analysis for complex morphology**
+13. **Use position-aware disambiguation for ambiguous morphemes**
+14. **Separate metadata from text in structured JSON**
+15. **Archive raw scrapes; work from cleaned versions**
+
+---
+
+*Document version: 2.0*  
+*Last updated: 2026-03-13*
+*Languages covered: Tedim Chin (ctd) - methodology applicable to 18+ Kuki-Chin languages*

@@ -1,0 +1,28 @@
+{
+  "language_name": "Tedim Chin",
+  "iso_639_3": "ctd",
+  "source": {
+    "url": "https://www.bible.com/bible/368",
+    "scrape_date": "2026",
+    "scrape_tool": "bible_scraper.py"
+  },
+  "copyright": {
+    "short": "See bible.com for copyright information",
+    "long": "Scraped from bible.com. See original source for copyright."
+  },
+  "preprocessing": {
+    "date": "2026-03-13",
+    "script_version": "1.0",
+    "steps": [
+      "extracted_metadata",
+      "normalized_unicode"
+    ],
+    "notes": "Metadata still embedded in .txt for backward compatibility during development"
+  },
+  "statistics": {
+    "total_verses": 31102,
+    "total_tokens": 851068,
+    "unique_tokens": 45230,
+    "coverage": "99.65%"
+  }
+}
