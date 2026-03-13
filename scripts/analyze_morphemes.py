@@ -3366,6 +3366,7 @@ ATOMIC_GLOSSES = {
     'gu': 'bone',
     'thi': 'blood',
     'sa': 'flesh',
+    'nak': 'nose',
     
     # Nature
     'tui': 'water',
@@ -3413,6 +3414,10 @@ ATOMIC_GLOSSES = {
     'mawh': 'guilty',
     'siat': 'spoil',
     'khialh': 'sin',
+    'tak': 'true/exact',           # laitakin = exactly.in.midst
+    'liat': 'great/power',         # vangliatna = glory
+    'hing': 'alive/kind',          # mihing = person
+    'lim': 'sign/form',            # limtak = truly (sign-true)
     
     # Substances
     'nam': 'smell',      # TB root for smell/fragrance
@@ -3433,6 +3438,7 @@ ATOMIC_GLOSSES = {
     'mun': 'place',
     'khua': 'town',
     'gam': 'land',
+    'lak': 'midst/among',          # gamlak = land-midst
     
     # Abstracts
     'na': 'NMLZ',        # nominalizer
@@ -3441,8 +3447,9 @@ ATOMIC_GLOSSES = {
     'te': 'PL',          # plural (default; also 'small' in some contexts)
     'ki': 'REFL',        # reflexive/reciprocal
     'sai': 'throw',      # throw (in compounds)
+    'vang': 'glory/because',       # vangliat = glory
     
-    # Verbal suffixes
+    # Verbal roots
     'sak': 'CAUS',       # causative
     'kik': 'ITER',       # iterative (do again)
     'khia': 'out',       # directional out
@@ -3458,6 +3465,18 @@ ATOMIC_GLOSSES = {
     'pan': 'begin',      # kipan = begin
     'pawl': 'group',     # pawlkhat = some
     'khat': 'one',       # numeral
+    'khop': 'gather',    # kikhop = REFL-gather
+    'zui': 'follow',     # nungzui = back-follow = disciple
+    'gal': 'enemy/war',  # galte = enemies
+    'kap': 'fight/throw',# galkap = soldiers
+    'heh': 'anger/favor',# hehpih = grace
+    'pih': 'APPL',       # applicative
+    'suah': 'birth',     # nisuah = day-birth = birthday
+    'ngaih': 'think/love', # ngaihsut = think
+    'sut': 'break/untie',  # ngaihsut = deliberate
+    'khiat': 'out/emerge', # paikhiat = go.out
+    'biak': 'worship',   # biakna = worship (NMLZ)
+    'piak': 'offer',     # biakpiak = worship-offer
     
     # Sizes/degrees
     'pi': 'big',
@@ -3530,10 +3549,12 @@ BINARY_COMPOUNDS = {
     'vantung': ('van', 'tung', 'heaven'),       # sky-above → heaven
     'vanlei': ('van', 'lei', 'world'),          # sky-earth → world
     'vanmi': ('van', 'mi', 'angel'),            # sky-person → angel/heavenly being
+    'vangliat': ('vang', 'liat', 'glory'),      # glory-power → glory/majesty
     
     # Earth compounds: lei + X
     'leitung': ('lei', 'tung', 'earth'),        # earth-on → earth/world (surface)
     'leilak': ('lei', 'lak', 'dust'),           # earth-particle → dust
+    'laitak': ('lai', 'tak', 'exact.midst'),    # midst-true → exactly in midst
     
     # Tree/plant compounds: sing + X
     'singkung': ('sing', 'kung', 'tree'),       # tree-trunk → tree
@@ -3590,6 +3611,19 @@ BINARY_COMPOUNDS = {
     'paikhia': ('pai', 'khia', 'go.out'),       # go-exit → go out (464x)
     'honkhia': ('hon', 'khia', 'go.forth'),     # flock-exit → go forth (357x)
     'leitang': ('lei', 'tang', 'earth'),        # earth-stand → earth/ground (514x)
+    
+    # Round 172: Additional high-frequency compounds
+    'kikhop': ('ki', 'khop', 'assemble'),       # REFL-gather → assemble (292x)
+    'nungzui': ('nung', 'zui', 'disciple'),     # back-follow → disciple (274x)
+    'galkap': ('gal', 'kap', 'soldier'),        # war-throw → soldier (246x)
+    'limtak': ('lim', 'tak', 'sign.true'),      # sign-true → truly/form (240x)
+    'hehpih': ('heh', 'pih', 'grace'),          # anger/favor-APPL → grace/mercy (240x)
+    'nisuah': ('ni', 'suah', 'birthday'),       # day-birth → birthday (213x)
+    'ngaihsut': ('ngaih', 'sut', 'think'),      # think-break → think/deliberate (199x)
+    'paikhiat': ('pai', 'khiat', 'go.out'),     # go-emerge → go out (185x)
+    'gamlak': ('gam', 'lak', 'land.midst'),     # land-midst → among lands (156x)
+    'hoihtak': ('hoih', 'tak', 'good.truly'),   # good-true → truly good (145x)
+    'biakpiak': ('biak', 'piak', 'offering'),   # worship-offer → offering (145x)
 }
 
 
@@ -3967,6 +4001,100 @@ TERNARY_COMPOUNDS = {
         'structure': 'sim-(mawh-na)',
         'lexical': 'guilt',
         'head': 'right',
+    },
+    # Round 172: Additional high-frequency ternary compounds
+    'vangliatna': {
+        'morphemes': ['vang', 'liat', 'na'],
+        'structure': '(vang-liat)-na',
+        'lexical': 'glory',
+        'head': 'left',
+    },
+    'kikhopna': {
+        'morphemes': ['ki', 'khop', 'na'],
+        'structure': '(ki-khop)-na',
+        'lexical': 'assembly',
+        'head': 'left',
+    },
+    'nungzuite': {
+        'morphemes': ['nung', 'zui', 'te'],
+        'structure': '(nung-zui)-te',
+        'lexical': 'disciples',
+        'head': 'left',
+    },
+    'galkapte': {
+        'morphemes': ['gal', 'kap', 'te'],
+        'structure': '(gal-kap)-te',
+        'lexical': 'soldiers',
+        'head': 'left',
+    },
+    'hehpihna': {
+        'morphemes': ['heh', 'pih', 'na'],
+        'structure': '(heh-pih)-na',
+        'lexical': 'grace',
+        'head': 'left',
+    },
+    'ngaihsutna': {
+        'morphemes': ['ngaih', 'sut', 'na'],
+        'structure': '(ngaih-sut)-na',
+        'lexical': 'thought',
+        'head': 'left',
+    },
+    'biakpiakna': {
+        'morphemes': ['biak', 'piak', 'na'],
+        'structure': '(biak-piak)-na',
+        'lexical': 'offering',
+        'head': 'left',
+    },
+    'nisuahna': {
+        'morphemes': ['ni', 'suah', 'na'],
+        'structure': '(ni-suah)-na',
+        'lexical': 'birthday',
+        'head': 'left',
+    },
+    # X + tak + in patterns (truly/exactly + ERG)
+    'laitakin': {
+        'morphemes': ['lai', 'tak', 'in'],
+        'structure': '(lai-tak)-in',
+        'lexical': 'exactly.in.midst',
+        'head': 'left',
+    },
+    'nakpitakin': {
+        'morphemes': ['nak', 'pi', 'tak', 'in'],  # Actually 4 morphemes
+        'structure': '((nak-pi)-tak)-in',
+        'lexical': 'strongly',
+        'head': 'left',
+    },
+    'limtakin': {
+        'morphemes': ['lim', 'tak', 'in'],
+        'structure': '(lim-tak)-in',
+        'lexical': 'truly',
+        'head': 'left',
+    },
+    'hoihtakin': {
+        'morphemes': ['hoih', 'tak', 'in'],
+        'structure': '(hoih-tak)-in',
+        'lexical': 'well',
+        'head': 'left',
+    },
+    # khatlekhat pattern (one-and-one = each)
+    'khatlekhat': {
+        'morphemes': ['khat', 'le', 'khat'],
+        'structure': 'khat-le-khat',
+        'lexical': 'each',
+        'head': 'none',  # reduplication pattern
+    },
+    # paikhiatpih pattern (go-out-APPL)
+    'paikhiatpih': {
+        'morphemes': ['pai', 'khiat', 'pih'],
+        'structure': '(pai-khiat)-pih',
+        'lexical': 'send.forth',
+        'head': 'left',
+    },
+    'gamlakah': {
+        'morphemes': ['gam', 'lak', 'ah'],
+        'structure': '(gam-lak)-ah',
+        'lexical': 'among.lands',
+        'head': 'left',
     },
 }
 
