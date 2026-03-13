@@ -3478,6 +3478,19 @@ ATOMIC_GLOSSES = {
     'biak': 'worship',   # biakna = worship (NMLZ)
     'piak': 'offer',     # biakpiak = worship-offer
     
+    # Round 173: Additional verbal/adjectival roots
+    'tha': 'strength',   # thahat = strong
+    'hat': 'firm',       # thahat = strength-firm
+    'lem': 'prepare',    # kilem = REFL-prepare
+    'hot': 'lead/save',  # hotkhiat = salvation
+    'nget': 'pray',      # thunget = word-pray = prayer
+    'zawng': 'all',      # mizawng = person-all
+    'tam': 'many',       # tampi = many-big
+    'khen': 'judge',     # thukhen = word-judge = judgment
+    'hilh': 'teach',     # thuhilh = word-teach = teaching
+    'neu': 'small',      # khuaneu = village-small
+    'tuam': 'various',   # tuamtuam = various-REDUP
+    
     # Sizes/degrees
     'pi': 'big',
     # Note: 'te' can also mean 'small/diminutive' but PL is far more common
@@ -3624,6 +3637,21 @@ BINARY_COMPOUNDS = {
     'gamlak': ('gam', 'lak', 'land.midst'),     # land-midst → among lands (156x)
     'hoihtak': ('hoih', 'tak', 'good.truly'),   # good-true → truly good (145x)
     'biakpiak': ('biak', 'piak', 'offering'),   # worship-offer → offering (145x)
+    
+    # Round 173: Additional binary compounds
+    'thahat': ('tha', 'hat', 'strength'),       # strength-firm → strong (123x)
+    'kilem': ('ki', 'lem', 'prepare'),          # REFL-prepare → preparation (123x)
+    'hotkhiat': ('hot', 'khiat', 'save'),       # lead-out → salvation (122x)
+    'thunget': ('thu', 'nget', 'pray'),         # word-request → prayer (120x)
+    'mipih': ('mi', 'pih', 'companion'),        # person-APPL → companion (112x)
+    'mizawng': ('mi', 'zawng', 'everyone'),     # person-all → everyone (109x)
+    'tampi': ('tam', 'pi', 'many'),             # many-big → multitude (108x)
+    'thukhen': ('thu', 'khen', 'judgment'),     # word-judge → judgment (107x)
+    'thuhilh': ('thu', 'hilh', 'teach'),        # word-teach → teaching (96x)
+    'khuaneu': ('khua', 'neu', 'village'),      # town-small → village (96x)
+    'khuami': ('khua', 'mi', 'townsman'),       # town-person → townsperson (90x)
+    'milim': ('mi', 'lim', 'idol'),             # person-image → idol (129x)
+    'tuamtuam': ('tuam', 'tuam', 'various'),    # various-REDUP → various (82x)
 }
 
 
@@ -4094,6 +4122,85 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['gam', 'lak', 'ah'],
         'structure': '(gam-lak)-ah',
         'lexical': 'among.lands',
+        'head': 'left',
+    },
+    # Round 173: High-frequency ternary compounds (freq >= 80)
+    'milimte': {
+        'morphemes': ['mi', 'lim', 'te'],
+        'structure': '(mi-lim)-te',
+        'lexical': 'idols',
+        'head': 'left',
+    },
+    'thahatna': {
+        'morphemes': ['tha', 'hat', 'na'],
+        'structure': '(tha-hat)-na',
+        'lexical': 'strength',
+        'head': 'left',
+    },
+    'kilemna': {
+        'morphemes': ['ki', 'lem', 'na'],
+        'structure': '(ki-lem)-na',
+        'lexical': 'preparation',
+        'head': 'left',
+    },
+    'hotkhiatna': {
+        'morphemes': ['hot', 'khiat', 'na'],
+        'structure': '(hot-khiat)-na',
+        'lexical': 'salvation',
+        'head': 'left',
+    },
+    'thungetna': {
+        'morphemes': ['thu', 'nget', 'na'],
+        'structure': '(thu-nget)-na',
+        'lexical': 'prayer',
+        'head': 'left',
+    },
+    'mipihte': {
+        'morphemes': ['mi', 'pih', 'te'],
+        'structure': '(mi-pih)-te',
+        'lexical': 'companions',
+        'head': 'left',
+    },
+    'mizawngte': {
+        'morphemes': ['mi', 'zawng', 'te'],
+        'structure': '(mi-zawng)-te',
+        'lexical': 'all.people',
+        'head': 'left',
+    },
+    'tampite': {
+        'morphemes': ['tam', 'pi', 'te'],
+        'structure': '(tam-pi)-te',
+        'lexical': 'multitude',
+        'head': 'left',
+    },
+    'thukhenna': {
+        'morphemes': ['thu', 'khen', 'na'],
+        'structure': '(thu-khen)-na',
+        'lexical': 'judgment',
+        'head': 'left',
+    },
+    'thuhilhna': {
+        'morphemes': ['thu', 'hilh', 'na'],
+        'structure': '(thu-hilh)-na',
+        'lexical': 'teaching',
+        'head': 'left',
+    },
+    'khuaneute': {
+        'morphemes': ['khua', 'neu', 'te'],
+        'structure': '(khua-neu)-te',
+        'lexical': 'villages',
+        'head': 'left',
+    },
+    'khuamite': {
+        'morphemes': ['khua', 'mi', 'te'],
+        'structure': '(khua-mi)-te',
+        'lexical': 'townspeople',
+        'head': 'left',
+    },
+    'tuamtuamte': {
+        'morphemes': ['tuam', 'tuam', 'te'],
+        'structure': '(tuam-tuam)-te',
+        'lexical': 'various.ones',
         'head': 'left',
     },
 }
