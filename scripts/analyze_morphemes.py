@@ -4128,6 +4128,25 @@ BINARY_COMPOUNDS = {
     'nakbah': ('nak', 'bah', 'earring'),          # ear-ring → earring (4x)
     'namdang': ('nam', 'dang', 'diverse'),        # kind-different → diverse kind (4x)
     'puanbek': ('puan', 'bek', 'piece.of.cloth'), # cloth-piece → piece of cloth (4x)
+    
+    # Round 188: More 1-4x lexicalized compounds
+    'ankuang': ('an', 'kuang', 'bosom'),          # breast-bosom → bosom (Prov 19:24) (4x)
+    'saltang': ('sal', 'tang', 'captive'),        # slave-stand → captive (Jer 29:4) (4x)
+    'sangpi': ('sang', 'pi', 'high.wall'),        # high-big → high wall (Deut 3:5) (4x)
+    'sungnu': ('sung', 'nu', 'mother.in.law'),    # inside-woman → mother-in-law (Deut 27:23) (4x)
+    'teekpa': ('teek', 'pa', 'father.in.law'),    # master-man → father-in-law (Gen 38:13) (4x)
+    'lungno': ('lung', 'no', 'worm'),             # heart-worm → worm/humble person (Job 25:6) (4x)
+    'maisiat': ('mai', 'siat', 'oppose'),         # face-spoil → set face against (Lev 17:10) (4x)
+    
+    # Body part compounds (3x)
+    'lukham': ('lu', 'kham', 'pillow'),           # head-cover → pillow/bolster (1Sam 19:13) (3x)
+    'lungham': ('lung', 'ham', 'wrath'),          # heart-anger → wrath/indignation (Deut 29:28) (3x)
+    'mitkhu': ('mit', 'khu', 'eyebrow'),          # eye-smoke → eyebrow (Lev 14:9) (3x)
+    
+    # Nature compounds (2-3x)
+    'singzung': ('sing', 'zung', 'root'),         # tree-root → root/trunk (Job 30:3) (2x)
+    'leipi': ('lei', 'pi', 'earthquake'),         # earth-big → earthquake (Joel 2:10) (3x)
+    'khasim': ('kha', 'sim', 'new.moon'),         # moon-sweet → new moon (Num 29:6) (3x)
 }
 
 
