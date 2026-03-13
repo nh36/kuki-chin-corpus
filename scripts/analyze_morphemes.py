@@ -3571,6 +3571,22 @@ ATOMIC_GLOSSES = {
     'khum': 'cover',       # kikhum = REFL-cover = covering
     'dan': 'manner',       # kilamdan = REFL-way-manner = pattern
     'gong': 'alone',       # meigong = fire-alone = widow
+    
+    # Round 177: Additional atomic glosses (5-9x compounds)
+    'kiat': 'release',     # thongkiat = prison-release = deliverance
+    'nep': 'soft',         # hehnep = angry-soft = patience
+    'lat': 'strong',       # kilat = REFL-strong = strengthen
+    'kip': 'firm',         # kipsak = firm-CAUS = confirm
+    'bah': 'deaf',         # bilbah = ear-deaf = deaf
+    'phu': 'carry',        # phulak = carry-take = burden
+    'li': 'four',          # livei = four-time = fourth
+    'mong': 'hem',         # puanmong = cloth-hem = garment hem
+    'teep': 'fringe',      # puanmongteep = garment-hem-fringe
+    'net': 'hungry',       # netniam = hungry-low = hunger
+    'niam': 'low',         # netniam = hungry-low
+    'ngak': 'wait',        # kingak = REFL-wait = expectation
+    'sil': 'wash',         # kisil = REFL-wash = washing
+    'hhuai': 'abominate',  # kihhuai = REFL-abominate = abomination
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3820,6 +3836,32 @@ BINARY_COMPOUNDS = {
     'kikhum': ('ki', 'khum', 'covering'),        # REFL-cover → covering (14x)
     'kulhkong': ('kulh', 'kong', 'gate'),        # wall-road → gate (14x)
     'meigong': ('mei', 'gong', 'widow'),         # fire-alone → widow (14x)
+    
+    # Round 177: 5-9x frequency binary compounds
+    'siansuah': ('sian', 'suah', 'sanctify'),    # holy-become → sanctify (9x)
+    'thongkiat': ('thong', 'kiat', 'deliver'),   # prison-release → deliver (8x)
+    'lungdam': ('lung', 'dam', 'joy'),           # heart-heal → joy (inner compounds)
+    'hehnep': ('heh', 'nep', 'patience'),        # angry-soft → patience (9x)
+    'kilat': ('ki', 'lat', 'strengthen'),        # REFL-strong → strengthen (9x)
+    'kipsak': ('kip', 'sak', 'confirm'),         # firm-CAUS → confirm (9x)
+    'bilbah': ('bil', 'bah', 'deaf'),            # ear-blocked → deaf (9x)
+    'phulak': ('phu', 'lak', 'burden'),          # carry-take → burden (9x)
+    'langpan': ('lang', 'pan', 'advocate'),      # side-plead → advocate (9x)
+    'laigelh': ('lai', 'gelh', 'write'),         # paper-write → writing (8x)
+    'livei': ('li', 'vei', 'fourth'),            # four-time → fourth (8x)
+    'khangsim': ('khang', 'sim', 'genealogy'),   # generation-count → genealogy (8x)
+    'thuman': ('thu', 'man', 'true.word'),       # word-true → true word (9x)
+    'thutak': ('thu', 'tak', 'truth'),           # word-true → truth (8x)
+    'thuciam': ('thu', 'ciam', 'promise'),       # word-promise → promise (8x)
+    'gamdang': ('gam', 'dang', 'other.land'),    # land-other → other land (9x)
+    'innkhum': ('inn', 'khum', 'tent.cover'),    # house-cover → tent covering (9x)
+    'sintuam': ('sin', 'tuam', 'liver.lobe'),    # liver-lobe → liver lobe (8x)
+    'puanmong': ('puan', 'mong', 'garment.hem'), # cloth-hem → garment hem (8x)
+    'netniam': ('net', 'niam', 'hunger'),        # hunger-lowly → hunger (8x)
+    'kingak': ('ki', 'ngak', 'expect'),          # REFL-wait → expectation (8x)
+    'kikoih': ('ki', 'koih', 'place'),           # REFL-put → placement (8x)
+    'kisil': ('ki', 'sil', 'wash'),              # REFL-wash → washing (8x)
+    'kicih': ('ki', 'cih', 'say'),               # REFL-say → saying (8x)
 }
 
 
@@ -4972,6 +5014,187 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['ki', 'lam', 'dan', 'na'],
         'structure': '((ki-lam)-dan)-na',
         'lexical': 'pattern',
+        'head': 'left',
+    },
+    # Round 177: 5-9x frequency ternary compounds
+    'siansuahna': {
+        'morphemes': ['sian', 'suah', 'na'],
+        'structure': '(sian-suah)-na',
+        'lexical': 'sanctification',
+        'head': 'left',
+    },
+    'kisiansuahna': {
+        'morphemes': ['ki', 'sian', 'suah', 'na'],
+        'structure': '(ki-(sian-suah))-na',
+        'lexical': 'sanctification',
+        'head': 'left',
+    },
+    'kiciamtehna': {
+        'morphemes': ['ki', 'ciam', 'teh', 'na'],
+        'structure': '((ki-ciam)-teh)-na',
+        'lexical': 'circumcision',
+        'head': 'left',
+    },
+    'kibiakna': {
+        'morphemes': ['ki', 'biak', 'na'],
+        'structure': '(ki-biak)-na',
+        'lexical': 'worship',
+        'head': 'left',
+    },
+    'thongkiatna': {
+        'morphemes': ['thong', 'kiat', 'na'],
+        'structure': '(thong-kiat)-na',
+        'lexical': 'deliverance',
+        'head': 'left',
+    },
+    'lungdamhuai': {
+        'morphemes': ['lung', 'dam', 'huai'],
+        'structure': '(lung-dam)-huai',
+        'lexical': 'great.joy',
+        'head': 'left',
+    },
+    'hehnepna': {
+        'morphemes': ['heh', 'nep', 'na'],
+        'structure': '(heh-nep)-na',
+        'lexical': 'patience',
+        'head': 'left',
+    },
+    'kilatna': {
+        'morphemes': ['ki', 'lat', 'na'],
+        'structure': '(ki-lat)-na',
+        'lexical': 'strength',
+        'head': 'left',
+    },
+    'kipsakna': {
+        'morphemes': ['kip', 'sak', 'na'],
+        'structure': '(kip-sak)-na',
+        'lexical': 'confirmation',
+        'head': 'left',
+    },
+    'kihhuaina': {
+        'morphemes': ['ki', 'hhuai', 'na'],
+        'structure': '(ki-hhuai)-na',
+        'lexical': 'abomination',
+        'head': 'left',
+    },
+    'bilbahte': {
+        'morphemes': ['bil', 'bah', 'te'],
+        'structure': '(bil-bah)-te',
+        'lexical': 'deaf.ones',
+        'head': 'left',
+    },
+    'phulakna': {
+        'morphemes': ['phu', 'lak', 'na'],
+        'structure': '(phu-lak)-na',
+        'lexical': 'burden',
+        'head': 'left',
+    },
+    'kitangsapna': {
+        'morphemes': ['ki', 'tang', 'sap', 'na'],
+        'structure': '((ki-tang)-sap)-na',
+        'lexical': 'compulsion',
+        'head': 'left',
+    },
+    'langpanna': {
+        'morphemes': ['lang', 'pan', 'na'],
+        'structure': '(lang-pan)-na',
+        'lexical': 'advocacy',
+        'head': 'left',
+    },
+    'laigelhna': {
+        'morphemes': ['lai', 'gelh', 'na'],
+        'structure': '(lai-gelh)-na',
+        'lexical': 'writing',
+        'head': 'left',
+    },
+    'liveina': {
+        'morphemes': ['li', 'vei', 'na'],
+        'structure': '(li-vei)-na',
+        'lexical': 'fourth',
+        'head': 'left',
+    },
+    'khangsimna': {
+        'morphemes': ['khang', 'sim', 'na'],
+        'structure': '(khang-sim)-na',
+        'lexical': 'genealogy',
+        'head': 'left',
+    },
+    'thumante': {
+        'morphemes': ['thu', 'man', 'te'],
+        'structure': '(thu-man)-te',
+        'lexical': 'true.words',
+        'head': 'left',
+    },
+    'thutakna': {
+        'morphemes': ['thu', 'tak', 'na'],
+        'structure': '(thu-tak)-na',
+        'lexical': 'truth',
+        'head': 'left',
+    },
+    'thuciamte': {
+        'morphemes': ['thu', 'ciam', 'te'],
+        'structure': '(thu-ciam)-te',
+        'lexical': 'promises',
+        'head': 'left',
+    },
+    'thahatpa': {
+        'morphemes': ['tha', 'hat', 'pa'],
+        'structure': '(tha-hat)-pa',
+        'lexical': 'mighty.man',
+        'head': 'left',
+    },
+    'gamdangte': {
+        'morphemes': ['gam', 'dang', 'te'],
+        'structure': '(gam-dang)-te',
+        'lexical': 'other.lands',
+        'head': 'left',
+    },
+    'innkhumzang': {
+        'morphemes': ['inn', 'khum', 'zang'],
+        'structure': '(inn-khum)-zang',
+        'lexical': 'tent.curtain',
+        'head': 'left',
+    },
+    'sintuamte': {
+        'morphemes': ['sin', 'tuam', 'te'],
+        'structure': '(sin-tuam)-te',
+        'lexical': 'liver.lobes',
+        'head': 'left',
+    },
+    'puanmongteep': {
+        'morphemes': ['puan', 'mong', 'teep'],
+        'structure': '(puan-mong)-teep',
+        'lexical': 'garment.hem',
+        'head': 'left',
+    },
+    'netniamna': {
+        'morphemes': ['net', 'niam', 'na'],
+        'structure': '(net-niam)-na',
+        'lexical': 'hunger',
+        'head': 'left',
+    },
+    'kingakna': {
+        'morphemes': ['ki', 'ngak', 'na'],
+        'structure': '(ki-ngak)-na',
+        'lexical': 'expectation',
+        'head': 'left',
+    },
+    'kikoihna': {
+        'morphemes': ['ki', 'koih', 'na'],
+        'structure': '(ki-koih)-na',
+        'lexical': 'placement',
+        'head': 'left',
+    },
+    'kisilna': {
+        'morphemes': ['ki', 'sil', 'na'],
+        'structure': '(ki-sil)-na',
+        'lexical': 'washing',
+        'head': 'left',
+    },
+    'kicihna': {
+        'morphemes': ['ki', 'cih', 'na'],
+        'structure': '(ki-cih)-na',
+        'lexical': 'saying',
         'head': 'left',
     },
 }
