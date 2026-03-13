@@ -14610,13 +14610,64 @@ def analyze_word(word: str) -> Tuple[str, str]:
                         break
     
     # 2. Check for verb/noun stem (Round 154: prefer longest match across both dicts)
+    # Round 189: Bug 10 fix - Don't accept short stem matches if remainder is unparseable
     stem_found = False
     remaining_lower = remaining.lower()
+    
+    # Helper function to check if a remainder is parseable
+    def is_remainder_parseable(remainder_text):
+        """Check if the remainder after stem extraction can be parsed."""
+        if not remainder_text:
+            return True  # Empty remainder is fine
+        rem_lower = remainder_text.lower()
+        # Check if remainder is a known suffix/TAM/case marker
+        if rem_lower in TAM_SUFFIXES or rem_lower in CASE_MARKERS or rem_lower in NOMINALIZERS:
+            return True
+        # Check if remainder is a known stem (N+N compound)
+        if rem_lower in NOUN_STEMS or rem_lower in VERB_STEMS or rem_lower in VERB_STEM_PAIRS:
+            return True
+        if rem_lower in ATOMIC_GLOSSES:
+            return True
+        # Check if remainder starts with known stem (stem+suffix pattern)
+        # This handles cases like "neihna" = neih-na
+        for stem in sorted(VERB_STEMS.keys(), key=lambda x: -len(x)):
+            if rem_lower.startswith(stem) and len(rem_lower) > len(stem):
+                suffix_part = rem_lower[len(stem):]
+                if suffix_part in TAM_SUFFIXES or suffix_part in NOMINALIZERS or suffix_part in CASE_MARKERS:
+                    return True
+                # Also check for common grammatical suffixes
+                if suffix_part in ['te', 'na', 'in', 'ah', 'ding', 'zo', 'ta', 'sak', 'pih']:
+                    return True
+        for stem in sorted(NOUN_STEMS.keys(), key=lambda x: -len(x)):
+            if rem_lower.startswith(stem) and len(rem_lower) > len(stem):
+                suffix_part = rem_lower[len(stem):]
+                if suffix_part in TAM_SUFFIXES or suffix_part in NOMINALIZERS or suffix_part in CASE_MARKERS:
+                    return True
+                if suffix_part in ['te', 'na', 'in', 'ah', 'ding']:
+                    return True
+        # Check if remainder starts with known suffix chain
+        for suf in sorted(TAM_SUFFIXES.keys(), key=lambda x: -len(x)):
+            if rem_lower.startswith(suf):
+                return True
+        for suf in sorted(CASE_MARKERS.keys(), key=lambda x: -len(x)):
+            if rem_lower.startswith(suf):
+                return True
+        # Check for common verb suffixes
+        verb_suffixes = ['sak', 'pih', 'khiat', 'khia', 'tak', 'kik', 'zo', 'ta', 'na', 'te']
+        for suf in verb_suffixes:
+            if rem_lower.startswith(suf):
+                return True
+        return False
     
     # Find best verb stem match
     best_verb = None
     for stem, gloss in sorted(VERB_STEMS.items(), key=lambda x: -len(x[0])):
         if remaining_lower.startswith(stem):
+            # Round 189: For short stems (<=3 chars), verify remainder is parseable
+            if len(stem) <= 3:
+                remainder_after = remaining_lower[len(stem):]
+                if remainder_after and not is_remainder_parseable(remainder_after):
+                    continue  # Skip this short stem, try next
             best_verb = (stem, gloss)
             break
     
@@ -14624,6 +14675,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
     best_noun = None
     for stem, gloss in sorted(NOUN_STEMS.items(), key=lambda x: -len(x[0])):
         if remaining_lower.startswith(stem):
+            # Round 189: For short stems (<=3 chars), verify remainder is parseable
+            if len(stem) <= 3:
+                remainder_after = remaining_lower[len(stem):]
+                if remainder_after and not is_remainder_parseable(remainder_after):
+                    continue  # Skip this short stem, try next
             best_noun = (stem, gloss)
             break
     
@@ -14906,6 +14962,30 @@ def analyze_word(word: str) -> Tuple[str, str]:
     else:
         segmented = segments[0] if segments else word
         gloss = glosses[0] if glosses else '?'
+    
+    # Round 189: Trailing punctuation fallback
+    # If result contains '?' and word ends with punctuation (comma, period, etc.),
+    # try stripping the punctuation and re-analyzing.
+    # CAREFUL: Apostrophe ' has grammatical meaning (possessive), so only strip if:
+    # - It's clearly a quotation mark (other punctuation follows, or at sentence end)
+    # - The stripped version gives a BETTER parse (no '?')
+    if '?' in gloss and len(original) > 1:
+        trailing_punct = '.,;:!?"'  # Safe to strip (not apostrophe by default)
+        if original[-1] in trailing_punct:
+            stripped = original.rstrip(trailing_punct)
+            if stripped and stripped != original:
+                stripped_seg, stripped_gloss = analyze_word(stripped)
+                if '?' not in stripped_gloss:
+                    return (stripped_seg, stripped_gloss)
+        # For trailing apostrophe, only strip if it improves the parse
+        # This handles quotation marks at end of quoted speech
+        elif original[-1] in "'\u2019" and not original.endswith("te'") and not original.endswith("te\u2019"):
+            # Don't strip if it's a plural possessive pattern
+            stripped = original.rstrip("'\u2019")
+            if stripped and stripped != original and len(stripped) > 1:
+                stripped_seg, stripped_gloss = analyze_word(stripped)
+                if '?' not in stripped_gloss:
+                    return (stripped_seg, stripped_gloss)
     
     # Phonotactic validation: check that all segments have valid onsets
     # This catches segmentation errors like *hto, *kp, *ns, etc.
