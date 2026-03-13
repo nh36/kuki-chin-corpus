@@ -3491,6 +3491,32 @@ ATOMIC_GLOSSES = {
     'neu': 'small',      # khuaneu = village-small
     'tuam': 'various',   # tuamtuam = various-REDUP
     
+    # Round 174: Additional atomic morphemes from full audit
+    'lo': 'NEG',         # lono = NEG-obey = disobey
+    'no': 'obey',        # lono = NEG-obey
+    'tum': 'all',        # nitum = day-all = always
+    'lang': 'side/clear',# langkhat = side-one
+    'la': 'field/take',  # gamla = land-field
+    'et': 'see/example', # lamet = way-see = example
+    'ciam': 'promise',   # kiciam = REFL-promise = covenant
+    'teh': 'measure/cross', # singlamteh = wooden.cross
+    'mual': 'mountain',  # mualtung = mountain-top
+    'kuan': 'family',    # innkuan = house-family = household
+    'pang': 'near/small',# langpang = side-near = beside
+    'zum': 'bow',        # maizum = face-bow = bow.down
+    'tal': 'young',      # bawngtal = cow-young = calf
+    'zing': 'morning',   # zingsang = morning-high = early
+    'sang': 'high/early',# zingsang = morning-high
+    'dang': 'other',     # lamdang = way-other
+    'dik': 'straight',   # midik = person-straight = righteous
+    'ham': 'cover',      # puanham = cloth-cover = covering
+    'zang': 'side',      # laizang = middle-side = midst
+    'man': 'true',       # thuman = word-true = truth
+    'tual': 'generation',# puantual = cloth-generation = robe
+    'phat': 'praise',    # kiphat = REFL-praise
+    'cih': 'say',        # cihnop = say-want = meaning
+    'mai': 'face',       # maizum = face-bow, kimaisak = appear
+    
     # Sizes/degrees
     'pi': 'big',
     # Note: 'te' can also mean 'small/diminutive' but PL is far more common
@@ -3652,6 +3678,31 @@ BINARY_COMPOUNDS = {
     'khuami': ('khua', 'mi', 'townsman'),       # town-person → townsperson (90x)
     'milim': ('mi', 'lim', 'idol'),             # person-image → idol (129x)
     'tuamtuam': ('tuam', 'tuam', 'various'),    # various-REDUP → various (82x)
+    # Round 174: Additional binary compounds from full audit
+    'lono': ('lo', 'no', 'disobey'),            # not-obey → disobey (125x)
+    'nitum': ('ni', 'tum', 'always'),           # day-all → always (104x)
+    'langkhat': ('lang', 'khat', 'one.side'),   # side-one → one side (88x)
+    'omlai': ('om', 'lai', 'present'),          # exist-midst → those present (88x)
+    'gamla': ('gam', 'la', 'wilderness'),       # land-field → wilderness (82x)
+    'lamet': ('lam', 'et', 'manner'),           # way-see → manner/example (82x)
+    'kiciam': ('ki', 'ciam', 'covenant'),       # REFL-promise → covenant (80x)
+    'lasak': ('la', 'sak', 'redeem'),           # take-CAUS → redeem (77x)
+    'phattuam': ('phat', 'tuam', 'vow'),        # praise-promise → vow (77x)
+    'mualtung': ('mual', 'tung', 'mountaintop'),# mountain-top → summit (67x)
+    'mawhsak': ('mawh', 'sak', 'cause.sin'),    # sin-CAUS → cause to sin (67x)
+    'innkuan': ('inn', 'kuan', 'household'),    # house-family → household (65x)
+    'langpang': ('lang', 'pang', 'beside'),     # side-near → beside (63x)
+    'maizum': ('mai', 'zum', 'bow.down'),       # face-bow → bow down (62x)
+    'bawngtal': ('bawng', 'tal', 'calf'),       # cow-young → calf (59x)
+    'naupang': ('nau', 'pang', 'child'),        # child-small → child (59x)
+    'zingsang': ('zing', 'sang', 'early'),      # morning-high → early morning (55x)
+    'lamdang': ('lam', 'dang', 'other.way'),    # way-other → other way (54x)
+    'kimaisak': ('ki', 'maisak', 'appear'),     # REFL-face.CAUS → appear (52x) - NOTE: maisak is compound
+    'midik': ('mi', 'dik', 'righteous'),        # person-straight → righteous (52x)
+    'puanham': ('puan', 'ham', 'covering'),     # cloth-cover → covering (45x)
+    'laizang': ('lai', 'zang', 'midst'),        # middle-side → in midst (41x)
+    'thuman': ('thu', 'man', 'truth'),          # word-true → truth (41x)
+    'puantual': ('puan', 'tual', 'robe'),       # cloth-generation → robe (40x)
 }
 
 
@@ -4201,6 +4252,187 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['tuam', 'tuam', 'te'],
         'structure': '(tuam-tuam)-te',
         'lexical': 'various.ones',
+        'head': 'left',
+    },
+    # Round 174: Additional ternary compounds from full audit
+    'lonona': {
+        'morphemes': ['lo', 'no', 'na'],
+        'structure': '(lo-no)-na',
+        'lexical': 'disobedience',
+        'head': 'left',
+    },
+    'nitumna': {
+        'morphemes': ['ni', 'tum', 'na'],
+        'structure': '(ni-tum)-na',
+        'lexical': 'always',
+        'head': 'left',
+    },
+    'thupiaknate': {
+        'morphemes': ['thu', 'piak', 'na', 'te'],
+        'structure': '((thu-piak)-na)-te',
+        'lexical': 'commandments',
+        'head': 'left',
+    },
+    'cihnopna': {
+        'morphemes': ['cih', 'nop', 'na'],
+        'structure': '(cih-nop)-na',
+        'lexical': 'meaning',
+        'head': 'left',
+    },
+    'langkhatah': {
+        'morphemes': ['lang', 'khat', 'ah'],
+        'structure': '(lang-khat)-ah',
+        'lexical': 'on.one.side',
+        'head': 'left',
+    },
+    'omlaite': {
+        'morphemes': ['om', 'lai', 'te'],
+        'structure': '(om-lai)-te',
+        'lexical': 'those.present',
+        'head': 'left',
+    },
+    'gamlapi': {
+        'morphemes': ['gam', 'la', 'pi'],
+        'structure': '(gam-la)-pi',
+        'lexical': 'wilderness',
+        'head': 'left',
+    },
+    'lametna': {
+        'morphemes': ['lam', 'et', 'na'],
+        'structure': '(lam-et)-na',
+        'lexical': 'example',
+        'head': 'left',
+    },
+    'kiciamna': {
+        'morphemes': ['ki', 'ciam', 'na'],
+        'structure': '(ki-ciam)-na',
+        'lexical': 'covenant',
+        'head': 'left',
+    },
+    'singlamteh': {
+        'morphemes': ['sing', 'lam', 'teh'],
+        'structure': 'sing-(lam-teh)',
+        'lexical': 'cross',
+        'head': 'right',
+    },
+    'lasakna': {
+        'morphemes': ['la', 'sak', 'na'],
+        'structure': '(la-sak)-na',
+        'lexical': 'redemption',
+        'head': 'left',
+    },
+    'phattuamna': {
+        'morphemes': ['phat', 'tuam', 'na'],
+        'structure': '(phat-tuam)-na',
+        'lexical': 'vow',
+        'head': 'left',
+    },
+    'mualtungah': {
+        'morphemes': ['mual', 'tung', 'ah'],
+        'structure': '(mual-tung)-ah',
+        'lexical': 'on.mountaintop',
+        'head': 'left',
+    },
+    'mawhsakna': {
+        'morphemes': ['mawh', 'sak', 'na'],
+        'structure': '(mawh-sak)-na',
+        'lexical': 'causing.sin',
+        'head': 'left',
+    },
+    'innkuante': {
+        'morphemes': ['inn', 'kuan', 'te'],
+        'structure': '(inn-kuan)-te',
+        'lexical': 'households',
+        'head': 'left',
+    },
+    'langpangin': {
+        'morphemes': ['lang', 'pang', 'in'],
+        'structure': '(lang-pang)-in',
+        'lexical': 'beside',
+        'head': 'left',
+    },
+    'maizumna': {
+        'morphemes': ['mai', 'zum', 'na'],
+        'structure': '(mai-zum)-na',
+        'lexical': 'obeisance',
+        'head': 'left',
+    },
+    'bawngtalte': {
+        'morphemes': ['bawng', 'tal', 'te'],
+        'structure': '(bawng-tal)-te',
+        'lexical': 'calves',
+        'head': 'left',
+    },
+    'naupangte': {
+        'morphemes': ['nau', 'pang', 'te'],
+        'structure': '(nau-pang)-te',
+        'lexical': 'children',
+        'head': 'left',
+    },
+    'zingsangin': {
+        'morphemes': ['zing', 'sang', 'in'],
+        'structure': '(zing-sang)-in',
+        'lexical': 'early.morning',
+        'head': 'left',
+    },
+    'lamdangte': {
+        'morphemes': ['lam', 'dang', 'te'],
+        'structure': '(lam-dang)-te',
+        'lexical': 'other.ways',
+        'head': 'left',
+    },
+    'thukhente': {
+        'morphemes': ['thu', 'khen', 'te'],
+        'structure': '(thu-khen)-te',
+        'lexical': 'judgments',
+        'head': 'left',
+    },
+    'midikte': {
+        'morphemes': ['mi', 'dik', 'te'],
+        'structure': '(mi-dik)-te',
+        'lexical': 'righteous.ones',
+        'head': 'left',
+    },
+    'biakpiaknate': {
+        'morphemes': ['biak', 'piak', 'na', 'te'],
+        'structure': '((biak-piak)-na)-te',
+        'lexical': 'offerings',
+        'head': 'left',
+    },
+    'kiphatsakna': {
+        'morphemes': ['ki', 'phat', 'sak', 'na'],
+        'structure': '((ki-phat)-sak)-na',
+        'lexical': 'self.glorification',
+        'head': 'left',
+    },
+    'puanhampi': {
+        'morphemes': ['puan', 'ham', 'pi'],
+        'structure': '(puan-ham)-pi',
+        'lexical': 'veil',
+        'head': 'left',
+    },
+    'laizangah': {
+        'morphemes': ['lai', 'zang', 'ah'],
+        'structure': '(lai-zang)-ah',
+        'lexical': 'in.midst',
+        'head': 'left',
+    },
+    'thumanin': {
+        'morphemes': ['thu', 'man', 'in'],
+        'structure': '(thu-man)-in',
+        'lexical': 'truly',
+        'head': 'left',
+    },
+    'puantualpi': {
+        'morphemes': ['puan', 'tual', 'pi'],
+        'structure': '(puan-tual)-pi',
+        'lexical': 'great.robe',
+        'head': 'left',
+    },
+    'lasaknate': {
+        'morphemes': ['la', 'sak', 'na', 'te'],
+        'structure': '((la-sak)-na)-te',
+        'lexical': 'redemptions',
         'head': 'left',
     },
 }
