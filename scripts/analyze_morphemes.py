@@ -3377,6 +3377,7 @@ ATOMIC_GLOSSES = {
     'huih': 'wind',
     'gua': 'rain',
     'khu': 'smoke',
+    'khuk': 'bend/pool',  # tuikhuk = pool
     
     # Plants/trees
     'sing': 'tree',
@@ -3430,15 +3431,53 @@ ATOMIC_GLOSSES = {
     'na': 'NMLZ',        # nominalizer
     'pa': 'man/AGT',     # agent/man
     'nu': 'woman',
-    'te': 'PL',          # plural
+    'te': 'PL',          # plural (default; also 'small' in some contexts)
     'ki': 'REFL',        # reflexive/reciprocal
     'sai': 'throw',      # throw (in compounds)
     
+    # Verbal suffixes
+    'sak': 'CAUS',       # causative
+    'kik': 'ITER',       # iterative (do again)
+    'khia': 'out',       # directional out
+    'let': 'back',       # directional back
+    'khin': 'COMPL',     # completive
+    
     # Sizes/degrees
     'pi': 'big',
-    'te': 'small',
+    # Note: 'te' can also mean 'small/diminutive' but PL is far more common
     'lian': 'great',
     'nau': 'young',
+}
+
+# Morphemes with multiple meanings - used for contextual disambiguation
+# in compositional gloss generation
+AMBIGUOUS_ATOMIC = {
+    'te': {
+        'default': 'PL',
+        'as_suffix': 'PL',           # noun + te → plural
+        'as_modifier': 'small',       # te + noun → diminutive
+        'standalone': 'small.one',    # rare
+    },
+    'pi': {
+        'default': 'big',
+        'as_suffix': 'big',           # noun + pi → augmentative
+        'as_modifier': 'big',         # pi + noun → large X
+    },
+    'na': {
+        'default': 'NMLZ',
+        'as_suffix': 'NMLZ',          # verb + na → nominalization
+        'as_prefix': '2SG',           # na- + verb → 2nd person
+    },
+    'sa': {
+        'default': 'flesh',
+        'as_noun': 'flesh/meat',
+        'as_suffix': 'PERF',          # verb + sa → perfective
+    },
+    'in': {
+        'default': 'ERG',
+        'as_suffix': 'ERG',           # NP + in → ergative
+        'as_noun': 'house',           # inn → house
+    },
 }
 
 
@@ -3572,17 +3611,89 @@ TERNARY_COMPOUNDS = {
         'lexical': 'slingstone',
         'head': 'left',
     },
+    # lung-X + te (plural) patterns - very common
+    'lungdamte': {
+        'morphemes': ['lung', 'dam', 'te'],
+        'structure': '(lung-dam)-te',
+        'lexical': 'joyful.ones',
+        'head': 'left',
+    },
+    'lungkhamte': {
+        'morphemes': ['lung', 'kham', 'te'],
+        'structure': '(lung-kham)-te',
+        'lexical': 'sorrowful.ones',
+        'head': 'left',
+    },
+    'lungkimte': {
+        'morphemes': ['lung', 'kim', 'te'],
+        'structure': '(lung-kim)-te',
+        'lexical': 'peaceful.ones',
+        'head': 'left',
+    },
+    # lung-X + sak (causative) patterns
+    'lungkhamsak': {
+        'morphemes': ['lung', 'kham', 'sak'],
+        'structure': '(lung-kham)-sak',
+        'lexical': 'cause.sorrow',
+        'head': 'left',
+    },
+    'lungmuangsak': {
+        'morphemes': ['lung', 'muang', 'sak'],
+        'structure': '(lung-muang)-sak',
+        'lexical': 'comfort',
+        'head': 'left',
+    },
+    'lungnopsak': {
+        'morphemes': ['lung', 'nop', 'sak'],
+        'structure': '(lung-nop)-sak',
+        'lexical': 'tempt',
+        'head': 'left',
+    },
+    # lung-nop + na (nominalization)
+    'lungnopna': {
+        'morphemes': ['lung', 'nop', 'na'],
+        'structure': '(lung-nop)-na',
+        'lexical': 'desire',
+        'head': 'left',
+    },
+    # leeng-gui + pi (augmentative)
+    'leengguipi': {
+        'morphemes': ['leeng', 'gui', 'pi'],
+        'structure': '(leeng-gui)-pi',
+        'lexical': 'great.vine',
+        'head': 'left',
+    },
+    # biak-inn + te (plural)
+    'biakinnte': {
+        'morphemes': ['biak', 'inn', 'te'],
+        'structure': '(biak-inn)-te',
+        'lexical': 'temples',
+        'head': 'left',
+    },
+    # Note: tuipiakna is 4 morphemes (tui-pi-ak-na) - not handled as ternary
 }
 
 
-def get_morpheme_gloss(morpheme: str) -> Optional[str]:
+def get_morpheme_gloss(morpheme: str, position: str = 'default') -> Optional[str]:
     """
     Get the gloss for an atomic morpheme from all available sources.
     
-    Checks ATOMIC_GLOSSES first (most accurate for compositional analysis),
-    then falls back to NOUN_STEMS, VERB_STEMS, and other dictionaries.
+    Args:
+        morpheme: The morpheme to look up
+        position: Context hint - 'default', 'as_suffix', 'as_modifier', 'as_prefix'
+                  Used to disambiguate morphemes with multiple meanings.
+    
+    Checks AMBIGUOUS_ATOMIC first for position-sensitive lookup,
+    then ATOMIC_GLOSSES, then falls back to NOUN_STEMS, VERB_STEMS.
     """
     morpheme_lower = morpheme.lower()
+    
+    # Priority 0: Check ambiguous morphemes with position-aware lookup
+    if morpheme_lower in AMBIGUOUS_ATOMIC:
+        meanings = AMBIGUOUS_ATOMIC[morpheme_lower]
+        if position in meanings:
+            return meanings[position]
+        return meanings.get('default', list(meanings.values())[0])
     
     # Priority 1: Atomic glosses (designed for compositional analysis)
     if morpheme_lower in ATOMIC_GLOSSES:
@@ -3636,6 +3747,10 @@ def analyze_ternary_compound(word: str) -> Optional[CompoundStructure]:
     
     Returns CompoundStructure with bracketed structure showing
     which morphemes group together (head compound vs modifier).
+    
+    Uses position-aware glossing for ambiguous morphemes:
+    - Final position morphemes use 'as_suffix' 
+    - Initial position morphemes use 'as_modifier'
     """
     word_lower = word.lower()
     
@@ -3643,15 +3758,22 @@ def analyze_ternary_compound(word: str) -> Optional[CompoundStructure]:
     if word_lower in TERNARY_COMPOUNDS:
         info = TERNARY_COMPOUNDS[word_lower]
         morphemes = info['morphemes']
-        glosses = [get_morpheme_gloss(m) or '?' for m in morphemes]
         
-        # Build compositional gloss with same bracket structure
+        # Position-aware glossing based on structure
         if info['head'] == 'right':
             # N (N N) - modifier + head compound
-            comp_gloss = f"{glosses[0]}-({glosses[1]}-{glosses[2]})"
+            # morphemes[0] is modifier, [1] and [2] are head compound
+            g0 = get_morpheme_gloss(morphemes[0], 'as_modifier') or '?'
+            g1 = get_morpheme_gloss(morphemes[1]) or '?'
+            g2 = get_morpheme_gloss(morphemes[2], 'as_suffix') or '?'
+            comp_gloss = f"{g0}-({g1}-{g2})"
         else:
-            # (N N) N - head compound + modifier
-            comp_gloss = f"({glosses[0]}-{glosses[1]})-{glosses[2]}"
+            # (N N) N - head compound + modifier/suffix
+            # morphemes[0] and [1] are head compound, [2] is suffix
+            g0 = get_morpheme_gloss(morphemes[0]) or '?'
+            g1 = get_morpheme_gloss(morphemes[1]) or '?'
+            g2 = get_morpheme_gloss(morphemes[2], 'as_suffix') or '?'
+            comp_gloss = f"({g0}-{g1})-{g2}"
         
         return CompoundStructure(
             morphemes=morphemes,
@@ -3705,12 +3827,13 @@ def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[Optional[s
                                                 key=lambda x: -len(x[0])):
         if word_lower.endswith(base) and len(word_lower) > len(base):
             modifier = word_lower[:-len(base)]
-            mod_gloss = get_morpheme_gloss(modifier)
+            mod_gloss = get_morpheme_gloss(modifier, 'as_modifier')
             
             if mod_gloss:
                 # We have a valid modifier + binary compound
+                # Position-aware: m1 is internal, m2 is final (suffix position)
                 g1 = get_morpheme_gloss(m1) or '?'
-                g2 = get_morpheme_gloss(m2) or '?'
+                g2 = get_morpheme_gloss(m2, 'as_suffix') or '?'
                 
                 segmentation = f"{modifier}-{m1}-{m2}"
                 # Compositional gloss shows hierarchy
@@ -3730,7 +3853,7 @@ def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[Optional[s
                 mod_result = analyze_hierarchical_compound(modifier, depth + 1)
                 if mod_result[0]:
                     g1 = get_morpheme_gloss(m1) or '?'
-                    g2 = get_morpheme_gloss(m2) or '?'
+                    g2 = get_morpheme_gloss(m2, 'as_suffix') or '?'
                     segmentation = f"{mod_result[0]}-{m1}-{m2}"
                     # Nested structure: ((m0-m1)-(m2-m3))
                     comp_gloss = f"({mod_result[1]})-({g1}-{g2})"
@@ -3738,18 +3861,20 @@ def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[Optional[s
     
     # Step 4: Try decomposing as [binary compound] + [suffix/modifier]
     # Pattern: (N N) N - e.g., biakinn + lam = temple + direction
+    # This is common for [compound] + grammatical suffix (te, na, pi, etc.)
     for base, (m1, m2, base_lexical) in sorted(BINARY_COMPOUNDS.items(),
                                                 key=lambda x: -len(x[0])):
         if word_lower.startswith(base) and len(word_lower) > len(base):
             suffix = word_lower[len(base):]
-            suffix_gloss = get_morpheme_gloss(suffix)
+            # Final position - use 'as_suffix' for position-aware glossing
+            suffix_gloss = get_morpheme_gloss(suffix, 'as_suffix')
             
             if suffix_gloss:
                 g1 = get_morpheme_gloss(m1) or '?'
                 g2 = get_morpheme_gloss(m2) or '?'
                 
                 segmentation = f"{m1}-{m2}-{suffix}"
-                # Show head compound + modifier
+                # Show head compound + suffix
                 comp_gloss = f"({g1}-{g2})-{suffix_gloss}"
                 
                 return (segmentation, comp_gloss)
@@ -3780,16 +3905,16 @@ def get_full_compound_analysis(word: str) -> Optional[CompoundStructure]:
         return binary
     
     # Try dynamic decomposition
-    # Pattern: modifier + binary base
+    # Pattern: modifier + binary base (head-final: N + (N N))
     for base, (m1, m2, base_lexical) in sorted(BINARY_COMPOUNDS.items(),
                                                 key=lambda x: -len(x[0])):
         if word_lower.endswith(base) and len(word_lower) > len(base):
             modifier = word_lower[:-len(base)]
-            mod_gloss = get_morpheme_gloss(modifier)
+            mod_gloss = get_morpheme_gloss(modifier, 'as_modifier')
             
             if mod_gloss:
                 g1 = get_morpheme_gloss(m1) or '?'
-                g2 = get_morpheme_gloss(m2) or '?'
+                g2 = get_morpheme_gloss(m2, 'as_suffix') or '?'
                 
                 return CompoundStructure(
                     morphemes=[modifier, m1, m2],
@@ -3800,12 +3925,12 @@ def get_full_compound_analysis(word: str) -> Optional[CompoundStructure]:
                     head_position='right'
                 )
     
-    # Pattern: binary base + suffix
+    # Pattern: binary base + suffix (head-initial: (N N) + suffix)
     for base, (m1, m2, base_lexical) in sorted(BINARY_COMPOUNDS.items(),
                                                 key=lambda x: -len(x[0])):
         if word_lower.startswith(base) and len(word_lower) > len(base):
             suffix = word_lower[len(base):]
-            suffix_gloss = get_morpheme_gloss(suffix)
+            suffix_gloss = get_morpheme_gloss(suffix, 'as_suffix')
             
             if suffix_gloss:
                 g1 = get_morpheme_gloss(m1) or '?'
