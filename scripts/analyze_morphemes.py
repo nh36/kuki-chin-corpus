@@ -3587,6 +3587,16 @@ ATOMIC_GLOSSES = {
     'ngak': 'wait',        # kingak = REFL-wait = expectation
     'sil': 'wash',         # kisil = REFL-wash = washing
     'hhuai': 'abominate',  # kihhuai = REFL-abominate = abomination
+    
+    # Round 178: Additional atomic glosses (batch 2)
+    'thang': 'famous',     # minthang = name-famous = fame
+    'sia': 'evil',         # minsia = name-evil = dishonor
+    'kial': 'turn',        # gilkial = stomach-turn = bowels
+    'sel': 'quarrel',      # kisel = REFL-quarrel = strife
+    'phawk': 'remember',   # kiphawk = REFL-remember = remembrance
+    'khih': 'bind',        # kikhih = REFL-bind = binding
+    'daih': 'wide',        # gamdaih = land-wide = breadth
+    'sawm': 'ten',         # sawmnih = ten-two = twelve
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3862,6 +3872,24 @@ BINARY_COMPOUNDS = {
     'kikoih': ('ki', 'koih', 'place'),           # REFL-put → placement (8x)
     'kisil': ('ki', 'sil', 'wash'),              # REFL-wash → washing (8x)
     'kicih': ('ki', 'cih', 'say'),               # REFL-say → saying (8x)
+    
+    # Round 178: More 5-9x frequency binary compounds (batch 2)
+    'minthang': ('min', 'thang', 'fame'),         # name-famous → fame (7x)
+    'minsia': ('min', 'sia', 'dishonor'),         # name-evil → dishonor (7x)
+    'meivak': ('mei', 'vak', 'lamplight'),        # fire-light → lamplight (7x)
+    'maisak': ('mai', 'sak', 'appearance'),       # face-cause → appearance (7x)
+    'gilkial': ('gil', 'kial', 'bowels'),         # stomach-turn → bowels (7x)
+    'kisel': ('ki', 'sel', 'strife'),             # REFL-quarrel → strife (7x)
+    'kiphawk': ('ki', 'phawk', 'remember'),       # REFL-remember → remembrance (7x)
+    'kikhih': ('ki', 'khih', 'bind'),             # REFL-bind → binding (7x)
+    'kiho': ('ki', 'ho', 'call'),                 # REFL-call → calling (7x)
+    'gentheih': ('gen', 'theih', 'eloquence'),    # speak-know → eloquence (7x)
+    'gamdaih': ('gam', 'daih', 'breadth'),        # land-wide → breadth (7x)
+    'hamsiat': ('ham', 'siat', 'reproach'),       # cover-spoil → reproach (7x)
+    'khuakulh': ('khua', 'kulh', 'fortress'),     # town-wall → fortress (7x)
+    'innkuan': ('inn', 'kuan', 'household'),      # house-family → household (7x)
+    'khangham': ('khang', 'ham', 'ancestor'),     # generation-old → ancestor (7x)
+    'sawmnih': ('sawm', 'nih', 'twelve'),         # ten-two → twelve (7x)
 }
 
 
@@ -5195,6 +5223,115 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['ki', 'cih', 'na'],
         'structure': '(ki-cih)-na',
         'lexical': 'saying',
+        'head': 'left',
+    },
+    # Round 178: More 5-9x frequency ternary compounds (batch 2)
+    'kithawhkiksak': {
+        'morphemes': ['ki', 'thawh', 'kik', 'sak'],
+        'structure': '((ki-thawh)-kik)-sak',
+        'lexical': 'resurrect',
+        'head': 'left',
+    },
+    'kituiphum': {
+        'morphemes': ['ki', 'tui', 'phum'],
+        'structure': 'ki-(tui-phum)',
+        'lexical': 'baptize',
+        'head': 'right',
+    },
+    'minthangsak': {
+        'morphemes': ['min', 'thang', 'sak'],
+        'structure': '(min-thang)-sak',
+        'lexical': 'glorify',
+        'head': 'left',
+    },
+    'minsiasak': {
+        'morphemes': ['min', 'sia', 'sak'],
+        'structure': '(min-sia)-sak',
+        'lexical': 'blaspheme',
+        'head': 'left',
+    },
+    'meivakna': {
+        'morphemes': ['mei', 'vak', 'na'],
+        'structure': '(mei-vak)-na',
+        'lexical': 'lamplight',
+        'head': 'left',
+    },
+    'maisakna': {
+        'morphemes': ['mai', 'sak', 'na'],
+        'structure': '(mai-sak)-na',
+        'lexical': 'appearance',
+        'head': 'left',
+    },
+    'gilkialte': {
+        'morphemes': ['gil', 'kial', 'te'],
+        'structure': '(gil-kial)-te',
+        'lexical': 'bowels',
+        'head': 'left',
+    },
+    'kiselna': {
+        'morphemes': ['ki', 'sel', 'na'],
+        'structure': '(ki-sel)-na',
+        'lexical': 'strife',
+        'head': 'left',
+    },
+    'kiphawkna': {
+        'morphemes': ['ki', 'phawk', 'na'],
+        'structure': '(ki-phawk)-na',
+        'lexical': 'remembrance',
+        'head': 'left',
+    },
+    'kikhihna': {
+        'morphemes': ['ki', 'khih', 'na'],
+        'structure': '(ki-khih)-na',
+        'lexical': 'binding',
+        'head': 'left',
+    },
+    'kihona': {
+        'morphemes': ['ki', 'ho', 'na'],
+        'structure': '(ki-ho)-na',
+        'lexical': 'calling',
+        'head': 'left',
+    },
+    'gentheihna': {
+        'morphemes': ['gen', 'theih', 'na'],
+        'structure': '(gen-theih)-na',
+        'lexical': 'eloquence',
+        'head': 'left',
+    },
+    'gamdaihna': {
+        'morphemes': ['gam', 'daih', 'na'],
+        'structure': '(gam-daih)-na',
+        'lexical': 'breadth',
+        'head': 'left',
+    },
+    'hamsiatna': {
+        'morphemes': ['ham', 'siat', 'na'],
+        'structure': '(ham-siat)-na',
+        'lexical': 'reproach',
+        'head': 'left',
+    },
+    'khuakulhpi': {
+        'morphemes': ['khua', 'kulh', 'pi'],
+        'structure': '(khua-kulh)-pi',
+        'lexical': 'fortress',
+        'head': 'left',
+    },
+    'innkuansung': {
+        'morphemes': ['inn', 'kuan', 'sung'],
+        'structure': '(inn-kuan)-sung',
+        'lexical': 'household',
+        'head': 'left',
+    },
+    'khanghamte': {
+        'morphemes': ['khang', 'ham', 'te'],
+        'structure': '(khang-ham)-te',
+        'lexical': 'ancestors',
+        'head': 'left',
+    },
+    'sawmnihna': {
+        'morphemes': ['sawm', 'nih', 'na'],
+        'structure': '(sawm-nih)-na',
+        'lexical': 'twelfth',
         'head': 'left',
     },
 }
