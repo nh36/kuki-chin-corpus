@@ -3627,6 +3627,15 @@ ATOMIC_GLOSSES = {
     'kawi': 'fish',        # sikkawi = hook-fish = fishhook
     'dot': 'ask',          # thudot = word-ask = question
     'mul': 'tip',          # keelmul = heel-tip = goat's hair (contextual)
+    
+    # Round 183: Additional atomic glosses
+    'niim': 'shade',       # singniim = tree-shade = green tree
+    'hiang': 'branch',     # singhiang = tree-branch
+    'phia': 'bright',      # khuaphia = cloud-bright = brightness
+    'taang': 'beautiful',  # vangtaang = glory-beautiful
+    'tai': 'bright/clear', # maitai = face-bright = radiant
+    'kaih': 'betray',      # kamkaih = word-betray = treachery
+    'luah': 'inherit',     # innluahza = house-inherit-right = birthright
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3969,6 +3978,19 @@ BINARY_COMPOUNDS = {
     'mangpha': ('mang', 'pha', 'farewell'),       # chief-good → farewell (8x)
     'tawmvei': ('tawm', 'vei', 'moment'),         # little-time → short time (8x)
     'keelmul': ('keel', 'mul', 'goathair'),       # heel-tip → goat's hair (8x)
+    
+    # Round 183: More N+N lexicalized compounds (5-9x)
+    'kampi': ('kam', 'pi', 'mouth'),              # word-big → mouth (9x)
+    'luzang': ('lu', 'zang', 'crown'),            # head-crown → top of head (8x)
+    'singniim': ('sing', 'niim', 'green.tree'),   # tree-shade → green tree (8x)
+    'singluang': ('sing', 'luang', 'beam'),       # tree-log → wooden beam (8x)
+    'singhiang': ('sing', 'hiang', 'branch'),     # tree-branch → branch (8x)
+    'khuaphia': ('khua', 'phia', 'brightness'),   # cloud-bright → brightness (8x)
+    'puankhai': ('puan', 'khai', 'curtain'),      # cloth-hang → hanging/curtain (9x)
+    'vangtaang': ('vang', 'taang', 'glory'),      # glory-beautiful → glory (7x)
+    'maitai': ('mai', 'tai', 'radiant'),          # face-bright → radiant/joyful (7x)
+    'kamciam': ('kam', 'ciam', 'vow'),            # word-promise → vow (6x)
+    'kamkaih': ('kam', 'kaih', 'treachery'),      # word-betray → treachery (6x)
 }
 
 
@@ -5605,6 +5627,32 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['thu', 'thuk', 'pi'],
         'structure': '(thu-thuk)-pi',
         'lexical': 'deep.word',
+        'head': 'left',
+    },
+    
+    # Round 183: More ternary compounds (5-9x)
+    'innluahza': {
+        'morphemes': ['inn', 'luah', 'za'],
+        'structure': '(inn-luah)-za',
+        'lexical': 'birthright',
+        'head': 'left',
+    },
+    'luzangte': {
+        'morphemes': ['lu', 'zang', 'te'],
+        'structure': '(lu-zang)-te',
+        'lexical': 'crowns',
+        'head': 'left',
+    },
+    'singniimte': {
+        'morphemes': ['sing', 'niim', 'te'],
+        'structure': '(sing-niim)-te',
+        'lexical': 'green.trees',
+        'head': 'left',
+    },
+    'kamciamte': {
+        'morphemes': ['kam', 'ciam', 'te'],
+        'structure': '(kam-ciam)-te',
+        'lexical': 'vows',
         'head': 'left',
     },
 }
