@@ -3619,6 +3619,14 @@ ATOMIC_GLOSSES = {
     'tawi': 'weigh',       # tawikhai = weigh-balance = balance
     'khai': 'balance',     # tawikhai = weigh-balance
     'thuk': 'deep',        # thuthuk = word-deep = deep word
+    
+    # Round 182: Additional atomic glosses (5-9x compounds)
+    'hual': 'wave',        # tuihual = water-wave = flood
+    'teek': 'master',      # innteek = house-master = landlord
+    'lom': 'bundle',       # buhlom = grain-bundle = sheaf
+    'kawi': 'fish',        # sikkawi = hook-fish = fishhook
+    'dot': 'ask',          # thudot = word-ask = question
+    'mul': 'tip',          # keelmul = heel-tip = goat's hair (contextual)
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3943,6 +3951,24 @@ BINARY_COMPOUNDS = {
     'piankhiat': ('pian', 'khiat', 'birthright'), # birth-leave → birthright (5x)
     'tuinak': ('tui', 'nak', 'spring'),           # water-nose → spring (5x)
     'thuthuk': ('thu', 'thuk', 'deep.word'),      # word-deep → deep word (5x)
+    
+    # Round 182: More 5-9x lexicalized compounds
+    'tuihual': ('tui', 'hual', 'flood'),          # water-wave → flood/depths (9x)
+    'khuttum': ('khut', 'tum', 'fist'),           # hand-bunch → fist (9x)
+    'bukkong': ('buk', 'kong', 'doorway'),        # shelter-road → doorway (9x)
+    'zungbuh': ('zung', 'buh', 'ring'),           # root-? → ring/jewelry (9x)
+    'innteek': ('inn', 'teek', 'landlord'),       # house-master → household master (9x)
+    'buhlom': ('buh', 'lom', 'sheaf'),            # grain-bundle → sheaf (9x)
+    'lingkung': ('ling', 'kung', 'thorns'),       # thorn-round → thorns/briers (9x)
+    'sikkawi': ('sik', 'kawi', 'fishhook'),       # hook-fish → fishhook (9x)
+    'nitawp': ('ni', 'tawp', 'last.day'),         # day-end → last day (9x)
+    'limlang': ('lim', 'lang', 'crystal'),        # image-reflect → crystal (8x)
+    'thudot': ('thu', 'dot', 'question'),         # word-ask → question/demand (8x)
+    'mundang': ('mun', 'dang', 'elsewhere'),      # place-other → another place (8x)
+    'cingnu': ('cing', 'nu', 'nurse'),            # care-mother → nurse (8x)
+    'mangpha': ('mang', 'pha', 'farewell'),       # chief-good → farewell (8x)
+    'tawmvei': ('tawm', 'vei', 'moment'),         # little-time → short time (8x)
+    'keelmul': ('keel', 'mul', 'goathair'),       # heel-tip → goat's hair (8x)
 }
 
 
