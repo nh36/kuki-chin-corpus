@@ -3608,6 +3608,17 @@ ATOMIC_GLOSSES = {
     'huh': 'help',         # kihuh = REFL-help = help
     'hal': 'burn',         # kihal = REFL-burn = burning
     'tawng': 'false',      # lungsimtawng = heart-mind-false = hypocrisy
+    
+    # Round 180: Additional atomic glosses (batch 4)
+    'kholh': 'accompany',  # genkholh = speak-accompany = interpretation
+    'gan': 'cattle',       # gancing = cattle-care = shepherd
+    'tun': 'arrive',       # zintun = journey-arrive = destination
+    'zak': 'hear',         # zaksak = hear-CAUS = testimony
+    'tan': 'judge',        # thutan = word-judge = judgment
+    'tawl': 'rest',        # tawldam = rest-well = rest
+    'tawi': 'weigh',       # tawikhai = weigh-balance = balance
+    'khai': 'balance',     # tawikhai = weigh-balance
+    'thuk': 'deep',        # thuthuk = word-deep = deep word
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3916,6 +3927,22 @@ BINARY_COMPOUNDS = {
     'kihuh': ('ki', 'huh', 'help'),               # REFL-help → help (6x)
     'kihal': ('ki', 'hal', 'burn'),               # REFL-burn → burning (6x)
     'sawmli': ('sawm', 'li', 'forty'),            # ten-four → forty (6x)
+    
+    # Round 180: More 5-9x frequency binary compounds (batch 4)
+    'genkholh': ('gen', 'kholh', 'interpret'),    # speak-accompany → interpret (6x)
+    'gancing': ('gan', 'cing', 'shepherd'),       # cattle-care → shepherd (6x)
+    'galdaih': ('gal', 'daih', 'warfare'),        # enemy-able → warfare (6x)
+    'zintun': ('zin', 'tun', 'arrive'),           # journey-arrive → destination (5x)
+    'zaksak': ('zak', 'sak', 'testify'),          # hear-CAUS → testimony (5x)
+    'thutel': ('thu', 'tel', 'fulfill'),          # word-fulfill → fulfillment (5x)
+    'thutan': ('thu', 'tan', 'judge'),            # word-judge → judgment (5x)
+    'tawldam': ('tawl', 'dam', 'rest'),           # rest-well → rest (5x)
+    'tawikhai': ('tawi', 'khai', 'balance'),      # weigh-balance → balance (5x)
+    'tatsiat': ('tat', 'siat', 'destroy'),        # strike-spoil → destruction (5x)
+    'tatkhialh': ('tat', 'khialh', 'transgress'), # strike-err → transgression (5x)
+    'piankhiat': ('pian', 'khiat', 'birthright'), # birth-leave → birthright (5x)
+    'tuinak': ('tui', 'nak', 'spring'),           # water-nose → spring (5x)
+    'thuthuk': ('thu', 'thuk', 'deep.word'),      # word-deep → deep word (5x)
 }
 
 
@@ -5449,6 +5476,109 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['sawm', 'li', 'nih'],
         'structure': '(sawm-li)-nih',
         'lexical': 'forty.two',
+        'head': 'left',
+    },
+    # Round 180: More 5-9x frequency ternary compounds (batch 4)
+    'genkholhna': {
+        'morphemes': ['gen', 'kholh', 'na'],
+        'structure': '(gen-kholh)-na',
+        'lexical': 'interpretation',
+        'head': 'left',
+    },
+    'gancingte': {
+        'morphemes': ['gan', 'cing', 'te'],
+        'structure': '(gan-cing)-te',
+        'lexical': 'shepherds',
+        'head': 'left',
+    },
+    'galdaihna': {
+        'morphemes': ['gal', 'daih', 'na'],
+        'structure': '(gal-daih)-na',
+        'lexical': 'warfare',
+        'head': 'left',
+    },
+    'zintunna': {
+        'morphemes': ['zin', 'tun', 'na'],
+        'structure': '(zin-tun)-na',
+        'lexical': 'destination',
+        'head': 'left',
+    },
+    'zaksakna': {
+        'morphemes': ['zak', 'sak', 'na'],
+        'structure': '(zak-sak)-na',
+        'lexical': 'testimony',
+        'head': 'left',
+    },
+    'thutelna': {
+        'morphemes': ['thu', 'tel', 'na'],
+        'structure': '(thu-tel)-na',
+        'lexical': 'fulfillment',
+        'head': 'left',
+    },
+    'thutanna': {
+        'morphemes': ['thu', 'tan', 'na'],
+        'structure': '(thu-tan)-na',
+        'lexical': 'judgment',
+        'head': 'left',
+    },
+    'tawldamna': {
+        'morphemes': ['tawl', 'dam', 'na'],
+        'structure': '(tawl-dam)-na',
+        'lexical': 'rest',
+        'head': 'left',
+    },
+    'tawikhaina': {
+        'morphemes': ['tawi', 'khai', 'na'],
+        'structure': '(tawi-khai)-na',
+        'lexical': 'balance',
+        'head': 'left',
+    },
+    'tatsiatna': {
+        'morphemes': ['tat', 'siat', 'na'],
+        'structure': '(tat-siat)-na',
+        'lexical': 'destruction',
+        'head': 'left',
+    },
+    'tatkhialhna': {
+        'morphemes': ['tat', 'khialh', 'na'],
+        'structure': '(tat-khialh)-na',
+        'lexical': 'transgression',
+        'head': 'left',
+    },
+    'piankhiatna': {
+        'morphemes': ['pian', 'khiat', 'na'],
+        'structure': '(pian-khiat)-na',
+        'lexical': 'birthright',
+        'head': 'left',
+    },
+    'biakinncing': {
+        'morphemes': ['biak', 'inn', 'cing'],
+        'structure': '(biak-inn)-cing',
+        'lexical': 'temple.betrayal',
+        'head': 'left',
+    },
+    'thuciamteh': {
+        'morphemes': ['thu', 'ciam', 'teh'],
+        'structure': '(thu-ciam)-teh',
+        'lexical': 'covenant',
+        'head': 'left',
+    },
+    'siangthosakpa': {
+        'morphemes': ['siangtho', 'sak', 'pa'],
+        'structure': '(siangtho-sak)-pa',
+        'lexical': 'sanctifier',
+        'head': 'left',
+    },
+    'tuinakte': {
+        'morphemes': ['tui', 'nak', 'te'],
+        'structure': '(tui-nak)-te',
+        'lexical': 'springs',
+        'head': 'left',
+    },
+    'thuthukpi': {
+        'morphemes': ['thu', 'thuk', 'pi'],
+        'structure': '(thu-thuk)-pi',
+        'lexical': 'deep.word',
         'head': 'left',
     },
 }
