@@ -14230,18 +14230,20 @@ def analyze_word(word: str) -> Tuple[str, str]:
 
 
     
-    # Check compound words (try both hyphenated and unhyphenated)
+    # Try hierarchical compound analysis FIRST (Round 181 fix)
+    # This handles lexicalized compounds with proper semantic glosses:
+    # - BINARY_COMPOUNDS: lungdam → 'joy' (not just 'heart-well')
+    # - TERNARY_COMPOUNDS: singnamtui → 'spices' (not just 'tree-smell-water')
+    # Hierarchical takes precedence over COMPOUND_WORDS for better semantic quality
+    hier_result = analyze_hierarchical_compound(word_no_hyphen_lower)
+    if hier_result[0]:
+        return hier_result
+    
+    # Check compound words (fallback for grammatical compounds not in hierarchical system)
     if word_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_lower]
     if word_no_hyphen_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_no_hyphen_lower]
-    
-    # Try hierarchical compound analysis
-    # This handles cases like singnamtui = sing + namtui = tree + perfume
-    # where namtui is itself a compound (nam + tui = smell + water)
-    hier_result = analyze_hierarchical_compound(word_no_hyphen_lower)
-    if hier_result[0]:
-        return hier_result
     
     # Handle explicit hyphen before grammatical suffixes (e.g., lauhuai-in, muanhuai-ah)
     # These are written with explicit hyphen before -in (ERG), -ah (LOC), -a (LOC)
