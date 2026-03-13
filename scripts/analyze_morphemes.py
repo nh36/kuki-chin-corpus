@@ -3522,6 +3522,43 @@ ATOMIC_GLOSSES = {
     # Note: 'te' can also mean 'small/diminutive' but PL is far more common
     'lian': 'great',
     'nau': 'young',
+    
+    # Round 175: Medium-frequency atomic glosses
+    'u': 'elder.sibling',  # ulianpa = elder-great-man = elder
+    'pul': 'tremble',      # pulnat = tremble-hurt = terror
+    'nat': 'hurt',         # pulnat = tremble-hurt
+    'tot': 'circumcise',   # kitot = REFL-circumcise
+    'khuam': 'darkness',   # meivakkhuam = lamp-walk-dark = lampstand
+    'muan': 'trust',       # munmuan = place-trust
+    'huai': 'bad/terrible',# muhdahhuai = see-hate-terrible = abomination
+    'baan': 'lay',         # paubaan = say-lay = blaspheme
+    'sal': 'slave',        # salsuah = slave-become = slavery
+    'do': 'fight',         # galdo = war-fight = battle
+    'koih': 'put',         # vankoih = sky-put = heaven
+    'git': 'hate',         # migit = person-hate
+    'suan': 'plant',       # kisuan = REFL-plant = succession
+    'ho': 'greet',         # hopih = greet-APPL = counsel
+    'zep': 'clothe',       # kizep = REFL-clothe = join
+    'phum': 'immerse',     # tuiphum = water-immerse = baptism
+    'le': 'and',           # nulepa = mother-and-father
+    'mang': 'fly',         # kapmangte = shoot-fly-PL = captains
+    'zin': 'travel',       # khualzin = village-travel = pilgrimage
+    'pei': 'guide',        # leengpei = chariot-guide = chariot.leader
+    'thah': 'slay',        # kithah = REFL-slay = murder
+    'kal': 'middle',       # lamkal = way-middle = midway
+    'lum': 'warm',         # gamlum = land-warm = south
+    'gelh': 'write',       # kigelh = REFL-write = scripture
+    'tel': 'know',         # theihtel = know-know = wisdom
+    'kuang': 'box/pool',   # tuikuang = water-box = pool
+    'theih': 'know',       # thutheih = word-know = knowledge
+    'hau': 'rich',         # mihau = person-rich = rich.one
+    'khang': 'generation', # khangnote = generation-young-PL = youth
+    'thawh': 'rise',       # thawhkik = rise-again = resurrection
+    'ai': 'persecute',     # aisan = persecute-rely = persecution
+    'kong': 'side',        # kongcing = side-pure = faithful
+    'cing': 'pure',        # kongcing = side-pure
+    'cil': 'thresh',       # ancil = rice-thresh = threshing
+    'mu': 'see',           # muvan = see-sky = vision
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3697,12 +3734,61 @@ BINARY_COMPOUNDS = {
     'naupang': ('nau', 'pang', 'child'),        # child-small → child (59x)
     'zingsang': ('zing', 'sang', 'early'),      # morning-high → early morning (55x)
     'lamdang': ('lam', 'dang', 'other.way'),    # way-other → other way (54x)
-    'kimaisak': ('ki', 'maisak', 'appear'),     # REFL-face.CAUS → appear (52x) - NOTE: maisak is compound
+    'kimaisak': ('ki', 'maisak', 'appear'),     # REFL-face.CAUS → appear (52x)
     'midik': ('mi', 'dik', 'righteous'),        # person-straight → righteous (52x)
     'puanham': ('puan', 'ham', 'covering'),     # cloth-cover → covering (45x)
     'laizang': ('lai', 'zang', 'midst'),        # middle-side → in midst (41x)
     'thuman': ('thu', 'man', 'truth'),          # word-true → truth (41x)
     'puantual': ('puan', 'tual', 'robe'),       # cloth-generation → robe (40x)
+    
+    # Round 175: Medium-frequency binary compounds (20-39x)
+    'ulian': ('u', 'lian', 'elder'),            # elder-great → elder (39x)
+    'pulnat': ('pul', 'nat', 'terror'),         # fear-pain → terror (39x)
+    'kipawl': ('ki', 'pawl', 'fellowship'),     # REFL-associate → fellowship (37x)
+    'kitot': ('ki', 'tot', 'circumcision'),     # REFL-cut → circumcision (36x)
+    'meivak': ('mei', 'vak', 'lamp'),           # fire-light → lamp (36x)
+    'neihsa': ('neih', 'sa', 'possession'),     # have-flesh → possession (35x)
+    'pawlpi': ('pawl', 'pi', 'elders'),         # group-big → elders (35x)
+    'honpi': ('hon', 'pi', 'multitude'),        # many-big → multitude (33x)
+    'kisap': ('ki', 'sap', 'calling'),          # REFL-call → calling (33x)
+    'ompih': ('om', 'pih', 'presence'),         # exist-APPL → presence (33x)
+    'lauhuai': ('lau', 'huai', 'dread'),        # fear-dread → dread (32x)
+    'paubaan': ('pau', 'baan', 'blasphemy'),    # speak-slander → blasphemy (32x)
+    'paktat': ('pak', 'tat', 'declare'),        # proclaim-strike → declaration (31x)
+    'salsuah': ('sal', 'suah', 'slavery'),      # servant-become → slavery (31x)
+    'galdo': ('gal', 'do', 'victory'),          # enemy-conquer → victory (31x)
+    'milian': ('mi', 'lian', 'noble'),          # person-great → noble (31x)
+    'kipat': ('ki', 'pat', 'beginning'),        # REFL-begin → beginning (30x)
+    'muhdah': ('muh', 'dah', 'abomination'),    # smell-bad → abomination (29x)
+    'ancil': ('an', 'cil', 'thresh'),           # food-thresh → threshing (29x)
+    'kisiansuah': ('ki', 'siansuah', 'sanctify'), # REFL-holy.become → sanctify (28x)
+    'vankoih': ('van', 'koih', 'heaven'),       # sky-put → heaven (26x)
+    'migit': ('mi', 'git', 'hatred'),           # person-hate → hatred (25x)
+    'kisuan': ('ki', 'suan', 'succession'),     # REFL-follow → succession (25x)
+    'hopih': ('ho', 'pih', 'counsel'),          # counsel-APPL → counsel (25x)
+    'kizep': ('ki', 'zep', 'joining'),          # REFL-join → joining (24x)
+    'tuiphum': ('tui', 'phum', 'baptism'),      # water-immerse → baptism (24x)
+    'nule': ('nu', 'le', 'parents'),            # mother-and → parents (23x)
+    'cihtak': ('cih', 'tak', 'testimony'),      # say-true → testimony (23x)
+    'galkapmang': ('galkap', 'mang', 'captain'),# soldier-chief → captain (23x)
+    'khualzin': ('khual', 'zin', 'pilgrimage'), # sojourn-travel → pilgrimage (22x)
+    'hoihpen': ('hoih', 'pen', 'best'),         # good-SUPER → best (22x)
+    'nipikal': ('ni', 'pikal', 'anniversary'),  # day-fold → anniversary (22x)
+    'kithah': ('ki', 'thah', 'murder'),         # REFL-kill → murder (22x)
+    'kigamla': ('ki', 'gamla', 'territory'),    # REFL-land.field → territory (22x)
+    'kineihkhem': ('ki', 'neihkhem', 'possess.all'), # REFL-have.all → possess all (22x)
+    'lopa': ('lo', 'pa', 'farmer'),             # field-man → farmer (21x)
+    'kigen': ('ki', 'gen', 'conversation'),     # REFL-speak → conversation (21x)
+    'lamkal': ('lam', 'kal', 'midway'),         # way-middle → midway (21x)
+    'gamlum': ('gam', 'lum', 'south'),          # land-warm → south (21x)
+    'kigelh': ('ki', 'gelh', 'scripture'),      # REFL-write → scripture (21x)
+    'theihtel': ('theih', 'tel', 'wisdom'),     # know-help → wisdom (21x)
+    'thutheih': ('thu', 'theih', 'knowledge'),  # word-know → knowledge (21x)
+    'mihau': ('mi', 'hau', 'rich.one'),         # person-rich → rich one (21x)
+    'khangno': ('khang', 'no', 'youth'),        # generation-young → youth (20x)
+    'thahatsak': ('thahat', 'sak', 'strengthen'), # strong-CAUS → strengthen (20x)
+    'kihonkhia': ('ki', 'honkhia', 'escape'),   # REFL-go.forth → escape (20x)
+    'thawhkik': ('thawh', 'kik', 'resurrection'), # rise-again → resurrection (20x)
 }
 
 
@@ -4433,6 +4519,319 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['la', 'sak', 'na', 'te'],
         'structure': '((la-sak)-na)-te',
         'lexical': 'redemptions',
+        'head': 'left',
+    },
+    # Round 175: Medium-frequency ternary compounds (20-39x)
+    'ulianpa': {
+        'morphemes': ['u', 'lian', 'pa'],
+        'structure': '(u-lian)-pa',
+        'lexical': 'elder',
+        'head': 'left',
+    },
+    'pulnatna': {
+        'morphemes': ['pul', 'nat', 'na'],
+        'structure': '(pul-nat)-na',
+        'lexical': 'terror',
+        'head': 'left',
+    },
+    'kipawlna': {
+        'morphemes': ['ki', 'pawl', 'na'],
+        'structure': '(ki-pawl)-na',
+        'lexical': 'fellowship',
+        'head': 'left',
+    },
+    'kiciamteh': {
+        'morphemes': ['ki', 'ciam', 'teh'],
+        'structure': '(ki-ciam)-teh',
+        'lexical': 'circumcision',
+        'head': 'left',
+    },
+    'kitotna': {
+        'morphemes': ['ki', 'tot', 'na'],
+        'structure': '(ki-tot)-na',
+        'lexical': 'circumcision',
+        'head': 'left',
+    },
+    'meivakkhuam': {
+        'morphemes': ['mei', 'vak', 'khuam'],
+        'structure': '(mei-vak)-khuam',
+        'lexical': 'lampstand',
+        'head': 'left',
+    },
+    'neihsate': {
+        'morphemes': ['neih', 'sa', 'te'],
+        'structure': '(neih-sa)-te',
+        'lexical': 'possessions',
+        'head': 'left',
+    },
+    'pawlpite': {
+        'morphemes': ['pawl', 'pi', 'te'],
+        'structure': '(pawl-pi)-te',
+        'lexical': 'elders',
+        'head': 'left',
+    },
+    'munmuanhuai': {
+        'morphemes': ['mun', 'muan', 'huai'],
+        'structure': '(mun-muan)-huai',
+        'lexical': 'trustworthy',
+        'head': 'left',
+    },
+    'honpite': {
+        'morphemes': ['hon', 'pi', 'te'],
+        'structure': '(hon-pi)-te',
+        'lexical': 'multitudes',
+        'head': 'left',
+    },
+    'kisapna': {
+        'morphemes': ['ki', 'sap', 'na'],
+        'structure': '(ki-sap)-na',
+        'lexical': 'calling',
+        'head': 'left',
+    },
+    'ompihna': {
+        'morphemes': ['om', 'pih', 'na'],
+        'structure': '(om-pih)-na',
+        'lexical': 'presence',
+        'head': 'left',
+    },
+    'kikaikhawm': {
+        'morphemes': ['ki', 'kai', 'khawm'],
+        'structure': '(ki-kai)-khawm',
+        'lexical': 'assembly',
+        'head': 'left',
+    },
+    'lauhuaina': {
+        'morphemes': ['lau', 'huai', 'na'],
+        'structure': '(lau-huai)-na',
+        'lexical': 'dread',
+        'head': 'left',
+    },
+    'paubaanna': {
+        'morphemes': ['pau', 'baan', 'na'],
+        'structure': '(pau-baan)-na',
+        'lexical': 'blasphemy',
+        'head': 'left',
+    },
+    'paktatna': {
+        'morphemes': ['pak', 'tat', 'na'],
+        'structure': '(pak-tat)-na',
+        'lexical': 'declaration',
+        'head': 'left',
+    },
+    'salsuahna': {
+        'morphemes': ['sal', 'suah', 'na'],
+        'structure': '(sal-suah)-na',
+        'lexical': 'slavery',
+        'head': 'left',
+    },
+    'muvanlai': {
+        'morphemes': ['mu', 'van', 'lai'],
+        'structure': 'mu-(van-lai)',
+        'lexical': 'vision',
+        'head': 'right',
+    },
+    'aisanna': {
+        'morphemes': ['ai', 'san', 'na'],
+        'structure': '(ai-san)-na',
+        'lexical': 'persecution',
+        'head': 'left',
+    },
+    'galdona': {
+        'morphemes': ['gal', 'do', 'na'],
+        'structure': '(gal-do)-na',
+        'lexical': 'victory',
+        'head': 'left',
+    },
+    'miliante': {
+        'morphemes': ['mi', 'lian', 'te'],
+        'structure': '(mi-lian)-te',
+        'lexical': 'nobles',
+        'head': 'left',
+    },
+    'kipatna': {
+        'morphemes': ['ki', 'pat', 'na'],
+        'structure': '(ki-pat)-na',
+        'lexical': 'beginning',
+        'head': 'left',
+    },
+    'muhdahhuai': {
+        'morphemes': ['muh', 'dah', 'huai'],
+        'structure': '(muh-dah)-huai',
+        'lexical': 'abomination',
+        'head': 'left',
+    },
+    'ancilna': {
+        'morphemes': ['an', 'cil', 'na'],
+        'structure': '(an-cil)-na',
+        'lexical': 'threshing',
+        'head': 'left',
+    },
+    'kongcingte': {
+        'morphemes': ['kong', 'cing', 'te'],
+        'structure': '(kong-cing)-te',
+        'lexical': 'faithful.ones',
+        'head': 'left',
+    },
+    'vankoihna': {
+        'morphemes': ['van', 'koih', 'na'],
+        'structure': '(van-koih)-na',
+        'lexical': 'heaven',
+        'head': 'left',
+    },
+    'migitna': {
+        'morphemes': ['mi', 'git', 'na'],
+        'structure': '(mi-git)-na',
+        'lexical': 'hatred',
+        'head': 'left',
+    },
+    'kisuanna': {
+        'morphemes': ['ki', 'suan', 'na'],
+        'structure': '(ki-suan)-na',
+        'lexical': 'succession',
+        'head': 'left',
+    },
+    'hopihna': {
+        'morphemes': ['ho', 'pih', 'na'],
+        'structure': '(ho-pih)-na',
+        'lexical': 'counsel',
+        'head': 'left',
+    },
+    'kizepna': {
+        'morphemes': ['ki', 'zep', 'na'],
+        'structure': '(ki-zep)-na',
+        'lexical': 'joining',
+        'head': 'left',
+    },
+    'tuiphumpa': {
+        'morphemes': ['tui', 'phum', 'pa'],
+        'structure': '(tui-phum)-pa',
+        'lexical': 'baptist',
+        'head': 'left',
+    },
+    'nulepa': {
+        'morphemes': ['nu', 'le', 'pa'],
+        'structure': 'nu-le-pa',
+        'lexical': 'parents',
+        'head': 'none',
+    },
+    'cihtakna': {
+        'morphemes': ['cih', 'tak', 'na'],
+        'structure': '(cih-tak)-na',
+        'lexical': 'testimony',
+        'head': 'left',
+    },
+    'galkapmangte': {
+        'morphemes': ['gal', 'kap', 'mang', 'te'],
+        'structure': '((gal-kap)-mang)-te',
+        'lexical': 'captains',
+        'head': 'left',
+    },
+    'khualzinna': {
+        'morphemes': ['khual', 'zin', 'na'],
+        'structure': '(khual-zin)-na',
+        'lexical': 'pilgrimage',
+        'head': 'left',
+    },
+    'hoihpente': {
+        'morphemes': ['hoih', 'pen', 'te'],
+        'structure': '(hoih-pen)-te',
+        'lexical': 'best.ones',
+        'head': 'left',
+    },
+    'leengpeite': {
+        'morphemes': ['leeng', 'pei', 'te'],
+        'structure': '(leeng-pei)-te',
+        'lexical': 'chariot.leaders',
+        'head': 'left',
+    },
+    'kithahna': {
+        'morphemes': ['ki', 'thah', 'na'],
+        'structure': '(ki-thah)-na',
+        'lexical': 'murder',
+        'head': 'left',
+    },
+    'paktatte': {
+        'morphemes': ['pak', 'tat', 'te'],
+        'structure': '(pak-tat)-te',
+        'lexical': 'portions',
+        'head': 'left',
+    },
+    'lunghihmawhna': {
+        'morphemes': ['lung', 'hih', 'mawh', 'na'],
+        'structure': '((lung-hih)-mawh)-na',
+        'lexical': 'guilt',
+        'head': 'left',
+    },
+    'lopate': {
+        'morphemes': ['lo', 'pa', 'te'],
+        'structure': '(lo-pa)-te',
+        'lexical': 'farmers',
+        'head': 'left',
+    },
+    'kigenna': {
+        'morphemes': ['ki', 'gen', 'na'],
+        'structure': '(ki-gen)-na',
+        'lexical': 'conversation',
+        'head': 'left',
+    },
+    'lamkalah': {
+        'morphemes': ['lam', 'kal', 'ah'],
+        'structure': '(lam-kal)-ah',
+        'lexical': 'midway',
+        'head': 'left',
+    },
+    'gamlumna': {
+        'morphemes': ['gam', 'lum', 'na'],
+        'structure': '(gam-lum)-na',
+        'lexical': 'south',
+        'head': 'left',
+    },
+    'kigelhna': {
+        'morphemes': ['ki', 'gelh', 'na'],
+        'structure': '(ki-gelh)-na',
+        'lexical': 'scripture',
+        'head': 'left',
+    },
+    'theihtelna': {
+        'morphemes': ['theih', 'tel', 'na'],
+        'structure': '(theih-tel)-na',
+        'lexical': 'wisdom',
+        'head': 'left',
+    },
+    'thahatte': {
+        'morphemes': ['tha', 'hat', 'te'],
+        'structure': '(tha-hat)-te',
+        'lexical': 'mighty.ones',
+        'head': 'left',
+    },
+    'tuikuangpi': {
+        'morphemes': ['tui', 'kuang', 'pi'],
+        'structure': '(tui-kuang)-pi',
+        'lexical': 'great.pool',
+        'head': 'left',
+    },
+    'thutheihna': {
+        'morphemes': ['thu', 'theih', 'na'],
+        'structure': '(thu-theih)-na',
+        'lexical': 'knowledge',
+        'head': 'left',
+    },
+    'mihaute': {
+        'morphemes': ['mi', 'hau', 'te'],
+        'structure': '(mi-hau)-te',
+        'lexical': 'rich.ones',
+        'head': 'left',
+    },
+    'khangnote': {
+        'morphemes': ['khang', 'no', 'te'],
+        'structure': '(khang-no)-te',
+        'lexical': 'youth',
+        'head': 'left',
+    },
+    'thawhkikna': {
+        'morphemes': ['thawh', 'kik', 'na'],
+        'structure': '(thawh-kik)-na',
+        'lexical': 'resurrection',
         'head': 'left',
     },
 }
