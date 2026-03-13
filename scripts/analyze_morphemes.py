@@ -2719,6 +2719,8 @@ PROPER_NOUNS = {
     'zippor', 'zipporah', 'zithri', 'ziz', 'ziza', 'zizah', 'zoan', 'zoar', 'zoba', 'zobah',
     'zobebah', 'zohar', 'zoheleth', 'zoheth', 'zofah', 'zofai', 'zofar', 'zofa', 'zorah', 'zorathite',
     'zoreah', 'zorite', 'zorobabel', 'zuar', 'zuf', 'zuph', 'zur', 'zuriel', 'zurishaddai', 'zuzim',
+    # Round 188b: Additional proper nouns
+    'athen', 'athens',  # Acts 17:15-21 - city of Athens
 }
 
 # =============================================================================
