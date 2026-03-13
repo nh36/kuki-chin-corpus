@@ -3662,6 +3662,79 @@ ATOMIC_GLOSSES = {
     'ka': 'high',          # lamka = way-high = heights
     'zin': 'bright',       # lungzin = heart-bright = clearness
     'bah': 'ring',         # nakbah = ear-ring = earring
+    
+    # Round 187: Missing atomic glosses (systematic addition)
+    # Common verbs
+    'dah': 'put',          # used in compounds
+    'it': 'love',          # itna = love-NMLZ
+    'lau': 'fear',         # milauna = fear-NMLZ
+    'muh': 'see',          # muhdahna = see-put-NMLZ = vision
+    'neih': 'have',        # neihsa = have-PERF
+    'ngah': 'get',         # ngahsa = get-PERF
+    'om': 'be',            # omna = being-NMLZ = place
+    'pai': 'go',           # paite = those.going
+    'pha': 'reach',        # phate = arrived.ones
+    'sih': 'die',          # sihna = death
+    
+    # Body/physical
+    'kam': 'mouth',        # kampi = mouth-big = edge/opening
+    'keel': 'foot',        # keelmul = heel
+    'sul': 'track',        # sulzui = follow.track
+    'gil': 'stomach',      # gilkial = famished
+    
+    # Descriptive
+    'gim': 'heavy',        # gimna = weight
+    'hoih': 'good',        # hoihpen = best
+    'hak': 'difficult',    # haksat = difficult
+    
+    # Direction/location
+    'khual': 'guest',      # khualzin = traveling
+    'kulh': 'surround',    # kulhpi = fortress
+    'zung': 'root',        # zungkuang = foundation
+    
+    # Abstract/other
+    'bang': 'like',        # bangzat = how.many
+    'buk': 'building',     # biakbuk = worship-building = sanctuary
+    'khan': 'time',        # khankuang = time-trunk = ancient
+    'min': 'name',         # mintha = good.name
+    'puan': 'cloth',       # puanbek = cloth-piece
+    'san': 'price',        # sanna = price-NMLZ = redemption
+    'sap': 'foreign',      # sapthu = foreign.word
+    'thu': 'word',         # thupuan = word-cloth = scroll
+    
+    # Compounds used atomically in larger compounds
+    'galkap': 'soldier',   # galkap = war-person
+    'gamla': 'elder',      # gamla = old-person
+    'kumpi': 'king',       # kumpi = age-big
+    'siangtho': 'holy',    # siangtho = deity-pure
+    'siansuah': 'save',    # siansuah = deity-rescue
+    'thahat': 'strong',    # thahat = strength-firm
+    'neihkhem': 'possess', # neihkhem = have-hold
+    'maisak': 'despise',   # maisak = face-discard
+    'honkhia': 'spare',    # honkhia = flock-out
+    
+    # Less common but needed
+    'hih': 'this',         # demonstrative
+    'kai': 'roast',        # meikai = fire-roast
+    'khawm': 'together',   # khawmpi = congregation
+    'ling': 'awake',       # lingling = watchful
+    'luang': 'flow',       # tuiluang = river
+    'luat': 'exceed',      # itluat = beloved
+    'ngei': 'often',       # ngei-ngei = continually
+    'paa': 'father',       # pasal-paa = husband-father
+    'pat': 'weave',        # patna = weaving
+    'pau': 'speak',        # paupui = counsel
+    'pen': 'SUPER',        # hoihpen = best
+    'pian': 'born',        # pianna = birth
+    'pikal': 'side',       # pikala = one.side
+    'siah': 'official',    # siahpa = official-father
+    'sian': 'deity',       # siangtho = holy
+    'suk': 'push',         # sukkhia = push.out
+    'suang': 'stone',      # suangtum = stone-round
+    'tawm': 'short',       # tawmciang = soon
+    'tawp': 'end',         # tawpna = ending
+    'thong': 'chain',      # thongkhang = prison
+    'zuih': 'follow',      # sulzuih = track-follow
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -14759,10 +14832,23 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 return (f"ki-{base_seg}", f"REFL-{base_gloss}")
     
     # If we still have remaining, add it as unknown
+    # Round 187: Check ATOMIC_GLOSSES, NOUN_STEMS, VERB_STEMS before marking as ?
     if remaining:
         if segments:
+            remaining_lower = remaining.lower()
+            remaining_gloss = None
+            # Try to find a gloss for the remaining morpheme
+            if remaining_lower in ATOMIC_GLOSSES:
+                remaining_gloss = ATOMIC_GLOSSES[remaining_lower]
+            elif remaining_lower in NOUN_STEMS:
+                remaining_gloss = NOUN_STEMS[remaining_lower]
+            elif remaining_lower in VERB_STEMS:
+                remaining_gloss = VERB_STEMS[remaining_lower]
+            elif remaining_lower in VERB_STEM_PAIRS:
+                _, remaining_gloss = VERB_STEM_PAIRS[remaining_lower]
+            
             segments.append(remaining)
-            glosses.append('?')
+            glosses.append(remaining_gloss if remaining_gloss else '?')
         else:
             # No decomposition found - try lexicon lookup
             lexicon_gloss = lookup_lexicon(word.lower())
