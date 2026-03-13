@@ -3655,6 +3655,13 @@ ATOMIC_GLOSSES = {
     'bak': 'deep',         # bekbak = sleep-deep
     'dung': 'length',      # gamdung = land-length
     'mel': 'void',         # limlemel = form-NEG-void
+    
+    # Round 186: Additional atomic glosses
+    'vui': 'dust/ear',     # buhvui = grain-dust = ears of corn
+    'ging': 'sound',       # kheging = foot-sound = footsteps
+    'ka': 'high',          # lamka = way-high = heights
+    'zin': 'bright',       # lungzin = heart-bright = clearness
+    'bah': 'ring',         # nakbah = ear-ring = earring
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -4035,6 +4042,19 @@ BINARY_COMPOUNDS = {
     'bekbak': ('bek', 'bak', 'deep.sleep'),       # sleep-deep → deep sleep (2x)
     'gamdung': ('gam', 'dung', 'length'),         # land-length → length of land (1x)
     'gamvai': ('gam', 'vai', 'breadth'),          # land-breadth → breadth of land (1x)
+    
+    # Round 186: More low-frequency (1-4x) lexicalized compounds
+    'buhvui': ('buh', 'vui', 'ears.of.corn'),     # grain-dust → ears of corn (4x)
+    'kamsia': ('kam', 'sia', 'boast'),            # mouth-evil → boastful words (4x)
+    'kheging': ('khe', 'ging', 'footsteps'),      # foot-sound → sound of going (4x)
+    'khuanawl': ('khua', 'nawl', 'outskirts'),    # town-place → outskirts (4x)
+    'lampai': ('lam', 'pai', 'proceed'),          # way-go → proceed/go on (4x)
+    'lamka': ('lam', 'ka', 'heights'),            # way-high → high places (4x)
+    'lungnem': ('lung', 'nem', 'meek'),           # heart-soft → meekness (4x)
+    'lungzin': ('lung', 'zin', 'brightness'),     # heart-bright → clearness/shine (4x)
+    'nakbah': ('nak', 'bah', 'earring'),          # ear-ring → earring (4x)
+    'namdang': ('nam', 'dang', 'diverse'),        # kind-different → diverse kind (4x)
+    'puanbek': ('puan', 'bek', 'piece.of.cloth'), # cloth-piece → piece of cloth (4x)
 }
 
 
