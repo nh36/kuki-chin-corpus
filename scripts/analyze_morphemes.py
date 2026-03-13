@@ -1811,6 +1811,10 @@ VERB_STEMS = {
     'zuih': 'follow',              # follow (galzuih = far-follow, nungzuih = behind-follow)
     'hual': 'roll',                # roll (hualin = roll-ERG)
     'kiim': 'border',              # border (khuakiim = town-border)
+    
+    # Round 190: Hapax verbs from KJV cross-reference
+    'tukkhiat': 'pluck.off',       # 1x Gen 8:11 - olive leaf "pluckt off"
+    'niamsuk': 'let.down',         # 1x Gen 24:18 - "let down her pitcher"
 }
 
 
@@ -2237,6 +2241,153 @@ NOUN_STEMS = {
     'pawi': 'feast',         # pawite = feasts
     'delh': 'overcome',      # delhte = conquerors  
     'zuak': 'sell',          # zuakte = sellers
+    
+    # === Round 190: Hapax vocabulary from KJV cross-reference ===
+    'tapeeng': 'twins',      # 1x Gen 25:24 - "twins in her womb"
+    'bemeh': 'lentils',      # 1x Gen 25:34 - "pottage of lentiles"
+    'khaleh': 'perhaps',     # 1x Gen 24:5 - "Peradventure" (what if)
+    'moken': 'dowry',        # 1x Gen 30:20 - "good dowry"
+    'thacial': 'wages',      # 1x Gen 30:18 - "my hire/wages"
+    'tausangpi': 'tower',    # 1x Gen 11:5 - "tower" (tau-sang-pi = ?-high-big)
+    'lanu': 'she.ass',       # 1x Gen 12:16 - "she asses" (la-nu = donkey-female)
+    'zual': 'wild',          # 1x Gen 16:12 - "wild man"
+    'lehkhak': 'shut',       # 1x Gen 19:6 - "shut the door"
+    'manlang': 'hastily',    # 36x - "hastily, quickly" (manlangin = hastily-ERG)
+    'daitui': 'dew',         # 1x Gen 27:39 - "dew of heaven" (dai-tui = ?-water)
+    'kheh': 'peel',          # 1x Gen 30:37 - "pilled/peeled" (strakes)
+    'khehsa': 'peeled',      # 1x Gen 30:38 - "peeled rods" (kheh-sa = peel-PERF)
+    'bungsuk': 'pour.out',   # 1x Gen 24:20 - "emptied her pitcher"
+    'innlelo': 'homeless',   # 2x Ps 68:6 - "solitary in families" (inn-lelo = house-less)
+    'sumkhek': 'moneychanger', # 2x Mark 11:15 - "moneychangers" (sum-khek = money-change)
+    'angtanpih': 'pride',    # 2x Ps 47:4 - "excellency" (pride/glory)
+    'anhai': 'gluttonous',   # 2x Matt 11:19 - "gluttonous" (an-hai = food-greedy)
+    'neel': 'smooth',        # 1x Gen 27:16 - "smooth of his neck"
+    'phawng': 'hunting',     # 1x Gen 49:9 - (lion hunting context)
+    'balzan': 'torn.by.beasts', # 1x Gen 31:39 - "torn of beasts"
+    'supna': 'loss',         # 1x Gen 31:39 - "I bare the loss" (supnate = losses)
+    'suangkhuam': 'pillar',  # 1x Gen 31:52 - "heap/pillar" witness pillar
+    'pomcip': 'embrace',     # 1x Gen 33:4 - "embraced" (pom-cip = hug-tight)
+    'lungphamawh': 'weak',   # 1x Gen 33:13 - "tender" (lung-pha-mawh = heart-good-not)
+    'naudom': 'childbirth',  # 1x Gen 35:17 - "hard labour" in childbirth
+    'mavansak': 'prosper',   # 1x Gen 39:3 - "made to prosper"
+    'mohlawh': 'whitebread', # 1x Gen 40:16 - "white baskets/bakemeats"
+    'theem': 'blasted',      # 1x Gen 41:23 - "blasted with east wind"
+    'kamphen': 'interpreter', # 1x Gen 42:23 - "interpreter between them"
+    'pistakhio': 'pistachio', # 1x Gen 43:11 - pistachio nuts (loanword)
+    'suakmasa': 'firstborn', # 1x Gen 43:33 - "firstborn" order (suak-masa = born-first)
+    'moilai': 'youngest',    # 1x Gen 44:20 - "child of old age" (youngest)
+    'mawkval': 'waste',      # 1x Gen 47:19 - "why should we die/waste"
+    'kipaihpehsak': 'cross.hands', # 1x Gen 48:14 - "guiding his hands wittingly"
+    
+    # === Round 190b: More hapax from KJV cross-reference ===
+    'khelkom': 'thigh.hollow', # 1x Gen 32:25 - "hollow of his thigh"
+    'khelpi': 'thigh',       # 1x Gen 32:31 - "halted upon his thigh"
+    'bom': 'blossom',        # 1x Gen 40:10 - "blossoms shot forth"
+    'domsak': 'midwife',     # 1x Exod 1:15 - "midwives" (dom-sak = birth-help)
+    'nausuah': 'birthstool', # 1x Exod 1:16 - "upon the stools" (nau-suah = child-emerge)
+    'phansak': 'daub',       # 1x Exod 2:3 - "daubed with slime/pitch"
+    'kitap': 'anguish',      # 1x Exod 6:9 - "anguish of spirit"
+    'mangbuhman': 'wheat',   # 1x Exod 9:32 - "wheat and rie"
+    'innzom': 'neighbor',    # 1x Exod 12:4 - "neighbour next unto his house"
+    'mehteh': 'bitter.herbs', # 1x Exod 12:8 - "with bitter herbs"
+    'kithamuan': 'triumph',  # 1x Exod 14:8 - "triumphed gloriously"
+    'dimval': 'excess',      # 1x Exod 16:18 - "had nothing over"
+    'dimlah': 'lack',        # 1x Exod 16:18 - "had no lack"
+    'mawhzon': 'quarrel',    # 1x Exod 17:7 - "chiding/quarreling"
+    'vanging': 'thunder',    # 1x Exod 20:18 - "thunderings"
+    'tupkhiat': 'knock.out', # 1x Exod 21:27 - "smite out tooth"
+    'piklup': 'gore',        # 1x Exod 21:28 - "ox gore" (horn-pierce)
+    'leetkhia': 'firstfruit', # 1x Exod 22:29 - "first of ripe fruits"
+    'lokhul': 'fallow',      # 1x Exod 23:11 - "let it rest" (lo-khul = field-rest)
+    'suangphahpek': 'pavement', # 1x Exod 24:10 - "paved work of sapphire"
+    'bangpian': 'as.if',     # 1x Exod 24:10 - "as it were"
+    'liangkaih': 'join',     # 1x Exod 28:7 - "joined at the edges"
+    'guklam': 'steal',       # 1x Gen 31:32 - "Rachel had stolen them"
+    'kibangmah': 'likewise', # 1x Gen 32:19 - "on this manner"
+    'kinenniam': 'afflict',  # 1x Exod 1:12 - "the more they afflicted"
+    'kibatloh': 'differ',    # 1x Exod 1:19 - "not as the Egyptian women"
+    'kuangzawn': 'trough',   # 1x Exod 2:16 - "filled the troughs"
+    'dengtan': 'smite',      # 1x Exod 9:25 - "hail smote"
+    'masiah': 'before',      # 1x Exod 10:14 - "before them/beforetime"
+    'vuhsak': 'bore.through', # 1x Exod 21:6 - "bore his ear"
+    'bakbak': 'ravin',       # 1x Gen 49:27 - "ravin as a wolf" (reduplication)
+    'khawilevulh': 'womb',   # 1x Gen 49:25 - "blessings of the womb"
+    'tuipiakna': 'watering.trough', # 1x Gen 30:38 - "watering troughs"
+    'puangin': 'speckled',   # 1x Gen 31:10 - "ringstraked, speckled, grisled"
+    
+    # === Round 190c: Leviticus/Numbers hapax ===
+    'khuangbai': 'bald.locust', # 1x Lev 11:22 - "bald locust"
+    'innhikpi': 'weasel',    # 1x Lev 11:29 - "weasel"
+    'tawlbawkpi': 'ferret',  # 1x Lev 11:30 - "ferret/lizard"
+    'tangteuh': 'chameleon', # 1x Lev 11:30 - "chameleon"
+    'tol': 'bald',           # 1x Lev 13:40 - "bald head"
+    'puankek': 'torn.clothes', # 1x Lev 13:45 - "clothes rent"
+    'kizutna': 'mortar',     # 1x Lev 14:45 - "morter of the house"
+    'saanin': 'cast.lots',   # 1x Lev 16:8 - "cast lots" (saa-nin?)
+    'kisunen': 'beaten',     # 1x Lev 16:12 - "beaten sweet incense"
+    'hawkmai': 'glean',      # 1x Lev 19:10 - "glean thy vineyard"
+    'thukan': 'scourging',   # 1x Lev 19:20 - "scourging"
+    'kinailua': 'confusion', # 1x Lev 20:12 - "wrought confusion"
+    'nawlhui': 'beard.corner', # 1x Lev 21:5 - "corner of beard"
+    'kisunna': 'anointing',  # 1x Lev 21:10 - "anointing oil poured"
+    'khelbai': 'lame',       # 1x Lev 21:18 - "a lame man"
+    'elkul': 'hunchback',    # 1x Lev 21:20 - "crookbackt"
+    'tomlua': 'superfluous', # 1x Lev 22:23 - "superfluous/lacking"
+    'lonawl': 'field.corner', # 1x Lev 23:22 - "corners of thy field"
+    'singhiangpi': 'palm.branch', # 1x Lev 23:40 - "branches of palm trees"
+    'gialhek': 'willow',     # 1x Lev 23:40 - "willows of the brook"
+    'tensak': 'cause.dwell', # 1x Lev 23:43 - "made to dwell in booths"
+    'kisuzan': 'pressed',    # 1x Lev 24:2 - "olive beaten/pressed"
+    'anlui': 'old.store',    # 1x Lev 25:22 - "old fruit/store"
+    'tuat': 'reckon',        # 1x Lev 25:52 - "count with him"
+    'dingtang': 'upright',   # 1x Lev 26:13 - "go upright"
+    'tawiteh': 'by.weight',  # 1x Lev 26:26 - "deliver by weight"
+    'kiphupai': 'stumble',   # 1x Lev 26:37 - "fall one upon another"
+    'pelhzah': 'abhor',      # 1x Lev 26:44 - "will not abhor them"
+    'nengneng': 'pin',       # 1x Num 3:36 - "pins" (reduplication)
+    'meikhuam': 'candlestick', # 1x Num 4:9 - "candlestick of the light"
+    'luakkhia': 'remove.ashes', # 1x Num 4:13 - "take away ashes"
+    'tomkhano': 'moment',    # 1x Num 4:20 - "when covered" (tom-kha-no)
+    'tuuvun': 'badger.skin', # 1x Num 4:25 - "badgers' skins"
+    'phawkkik': 'memorial',  # 1x Num 5:18 - "memorial offering"
+    # NOTE: 'teem' and 'teemsak' removed - conflict with teembaw (ark, 124x)
+    
+    # === Round 190d: Exodus/Leviticus hapax ===
+    'kizim': 'hole',         # 1x Exod 28:32 - "hole in the top"
+    'kihelhsak': 'alternate', # 1x Exod 28:34 - "bell and pomegranate"
+    'pheituam': 'linen.breeches', # 1x Exod 28:42 - "linen breeches"
+    'sabak': 'inwards',      # 1x Exod 29:17 - "inwards and legs"
+    'stak': 'stacte',        # 1x Exod 30:34 - spice (loanword)
+    'onikha': 'onycha',      # 1x Exod 30:34 - spice (loanword)
+    'galbanum': 'galbanum',  # 1x Exod 30:34 - spice (loanword)
+    'tunsuk': 'delay',       # 1x Exod 32:1 - "Moses delayed"
+    'takhialsak': 'make.naked', # 1x Exod 32:25 - "made them naked"
+    'phiatmai': 'blot.out',  # 1x Exod 32:32 - "blot me out"
+    'tungnun': 'find.grace', # 1x Exod 33:16 - "found grace"
+    'tuami': 'face',         # 1x Exod 33:20 - "see my face"
+    'tukkilh': 'bracelet',   # 1x Exod 35:22 - "bracelets"
+    'valzaw': 'too.much',    # 1x Exod 36:7 - "sufficient and too much"
+    'bupkhat': 'tache',      # 1x Exod 36:13 - "fifty taches"
+    'luzepna': 'chapiter',   # 1x Exod 36:38 - "chapiters/capitals"
+    'zimna': 'binding',      # 1x Exod 39:23 - "hole of an habergeon"
+    'kihelh': 'bell',        # 1x Exod 39:25 - "golden bell"
+    'sungvan': 'within',     # 1x Exod 40:9 - "anoint all within"
+    'sanen': 'piece',        # 1x Lev 1:8 - "lay the parts"
+    'heektat': 'wring.off',  # 1x Lev 1:15 - "wring off his head"
+    'heeksat': 'offer',      # 1x Lev 5:8 - "offer for sin"
+    'lohkik': 'make.amends', # 1x Lev 5:16 - "make amends"
+    'kithehkhak': 'sprinkle', # 1x Lev 6:27 - "sprinkled"
+    'kithehkha': 'sprinkle', # 1x Lev 6:27 - variant
+    'kihuanna': 'boiling',   # 1x Lev 6:28 - "sodden/boiled"
+    'taaubeelin': 'rinse',   # 1x Lev 6:28 - "scoured and rinsed"
+    'meithau': 'rump.fat',   # 1x Lev 7:3 - "rump and fat"
+    'bilteep': 'ear.tip',    # 1x Lev 8:24 - "tip of right ear"
+    'kiphuhna': 'lifting',   # 1x Num 9:17 - "cloud was taken up"
+    'gindan': 'alarm',       # 1x Num 10:7 - "blow, but not alarm"
+    'nungdal': 'rearward',   # 1x Num 10:25 - "rearward of the camp"
+    'lamhilh': 'guide',      # 1x Num 10:31 - "thou knowest how"
+    'ikkhiat': 'loathsome',  # 1x Num 11:20 - "come out at nostrils"
+    'kiciamteh': 'enrolled', # 1x Num 11:26 - "of them that were written"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
