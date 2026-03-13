@@ -3282,6 +3282,126 @@ def extract_verb_prefix(analyzed_gloss: str) -> str:
     return None
 
 
+# =============================================================================
+# HIERARCHICAL COMPOUND ANALYSIS
+# =============================================================================
+# 
+# Tedim Chin compounds can be nested: singnamtui = sing + (nam + tui)
+# where namtui is itself a compound (nam=smell + tui=water → perfume)
+#
+# This system identifies "compound bases" that can serve as heads of larger
+# compounds, and recursively analyzes modifiers.
+#
+# Example: paknamtui → pak + namtui → wine + perfume → "fragrant wine"
+# Structure: [modifier: pak] + [head compound: namtui]
+#            where namtui = [nam] + [tui] = smell + water = perfume
+
+# Compound bases that can serve as heads of larger compounds
+# Format: base -> (segmentation, semantic_gloss)
+# These are analyzed compounds that can take modifiers
+# The semantic_gloss is used for the final compound meaning
+COMPOUND_BASES = {
+    # Liquids/oils - can combine with modifiers (pak-, sing-, etc.)
+    'namtui': ('nam-tui', 'perfume'),           # smell-water → perfume/fragrant oil
+    'gahzu': ('gah-zu', 'fragrance'),           # fruit-juice → fragrance
+    
+    # Trees/plants - can combine with type modifiers
+    'singkung': ('sing-kung', 'tree'),          # tree-trunk → tree
+    'singgah': ('sing-gah', 'fruit.tree'),      # tree-fruit → fruit tree
+    'leenggui': ('leeng-gui', 'grapevine'),     # grape-vine → grapevine
+    
+    # Body/anatomy - can combine with descriptors
+    'lungdam': ('lung-dam', 'joy'),             # heart-healthy → joy/gladness
+    'lungtang': ('lung-tang', 'courage'),       # heart-stand → courage
+    'lungkham': ('lung-kham', 'sorrow'),        # heart-forbid → sorrow
+    
+    # Places/locations - can combine with qualifiers
+    'vantung': ('van-tung', 'heaven'),          # sky-above → heaven
+    'leitung': ('lei-tung', 'earth'),           # earth-on → earth/world
+    'tuipi': ('tui-pi', 'sea'),                 # water-big → sea
+    
+    # Actions/states - can combine with intensifiers
+    'haksatna': ('haksat-na', 'difficulty'),    # difficult-NMLZ → difficulty
+}
+
+# Modifiers that commonly attach to compound bases
+# Format: modifier -> gloss
+COMPOUND_MODIFIERS = {
+    # Material/source modifiers
+    'sing': 'tree',       # sing-namtui = tree perfume (spices)
+    'pak': 'wine',        # pak-namtui = wine perfume
+    'leeng': 'grape',     # leeng-namtui = grape oil
+    'tuu': 'sheep',       # tuu-namtui = sheep oil
+    'bawng': 'cattle',    # bawng-namtui = cattle oil
+    'mei': 'fire',        # mei-vak = fire-light
+    
+    # Quality modifiers
+    'hoih': 'good',
+    'sia': 'bad',
+    'lian': 'big',
+    'nau': 'young/small',
+    'thak': 'new',
+    'lui': 'old',
+    
+    # Intensifiers
+    'pi': 'big/great',
+    'te': 'small',
+}
+
+
+def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[str, str]:
+    """
+    Attempt hierarchical compound analysis.
+    
+    Tries to split the word into [modifier] + [compound base], where the
+    compound base is a known analyzed compound that can take modifiers.
+    
+    Args:
+        word: The word to analyze (lowercase, no hyphens)
+        depth: Recursion depth (to prevent infinite loops)
+    
+    Returns:
+        Tuple of (segmentation, gloss) or (None, None) if no analysis found
+    
+    Examples:
+        singnamtui -> ('sing-nam-tui', 'tree-smell-water') = tree perfume
+        paknamtui -> ('pak-nam-tui', 'wine-smell-water') = fragrant wine
+    """
+    if depth > 3:  # Prevent deep recursion
+        return (None, None)
+    
+    word_lower = word.lower()
+    
+    # Try to find a compound base at the end of the word
+    for base, (base_seg, base_gloss) in sorted(COMPOUND_BASES.items(), 
+                                                 key=lambda x: -len(x[0])):
+        if word_lower.endswith(base) and len(word_lower) > len(base):
+            modifier = word_lower[:-len(base)]
+            
+            # Check if modifier is a known simple modifier
+            if modifier in COMPOUND_MODIFIERS:
+                mod_gloss = COMPOUND_MODIFIERS[modifier]
+                return (f"{modifier}-{base_seg}", f"{mod_gloss}-{base_gloss}")
+            
+            # Check if modifier is a known noun stem (global dict defined earlier)
+            if modifier in NOUN_STEMS:
+                mod_gloss = NOUN_STEMS[modifier]
+                return (f"{modifier}-{base_seg}", f"{mod_gloss}-{base_gloss}")
+            
+            # Check if modifier is a known verb stem (global dict defined earlier)
+            if modifier in VERB_STEMS:
+                mod_gloss = VERB_STEMS[modifier]
+                return (f"{modifier}-{base_seg}", f"{mod_gloss}-{base_gloss}")
+            
+            # Try recursive analysis of modifier (it might be a compound too)
+            if depth < 2:
+                mod_result = analyze_hierarchical_compound(modifier, depth + 1)
+                if mod_result[0]:
+                    return (f"{mod_result[0]}-{base_seg}", f"{mod_result[1]}-{base_gloss}")
+    
+    return (None, None)
+
+
 def analyze_word(word: str) -> Tuple[str, str]:
     """
     Analyze a Tedim word and return (segmentation, gloss).
@@ -11651,6 +11771,13 @@ def analyze_word(word: str) -> Tuple[str, str]:
         return COMPOUND_WORDS[word_lower]
     if word_no_hyphen_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_no_hyphen_lower]
+    
+    # Try hierarchical compound analysis
+    # This handles cases like singnamtui = sing + namtui = tree + perfume
+    # where namtui is itself a compound (nam + tui = smell + water)
+    hier_result = analyze_hierarchical_compound(word_no_hyphen_lower)
+    if hier_result[0]:
+        return hier_result
     
     # Handle explicit hyphen before grammatical suffixes (e.g., lauhuai-in, muanhuai-ah)
     # These are written with explicit hyphen before -in (ERG), -ah (LOC), -a (LOC)
