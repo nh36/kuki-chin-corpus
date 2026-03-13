@@ -3597,6 +3597,17 @@ ATOMIC_GLOSSES = {
     'khih': 'bind',        # kikhih = REFL-bind = binding
     'daih': 'wide',        # gamdaih = land-wide = breadth
     'sawm': 'ten',         # sawmnih = ten-two = twelve
+    
+    # Round 179: Additional atomic glosses (batch 3)
+    'dong': 'collect',     # siahdong = tax-collect = tax collector
+    'kia': 'fall',         # lungkia = heart-fall = discourage
+    'khawh': 'work',       # lokhawh = field-work = farming
+    'keu': 'cluster',      # leenggahkeu = grape-dry-cluster = raisin cluster
+    'vui': 'bury',         # kivui = REFL-bury = burial
+    'sik': 'turn',         # kisik = REFL-turn = turning
+    'huh': 'help',         # kihuh = REFL-help = help
+    'hal': 'burn',         # kihal = REFL-burn = burning
+    'tawng': 'false',      # lungsimtawng = heart-mind-false = hypocrisy
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -3890,6 +3901,21 @@ BINARY_COMPOUNDS = {
     'innkuan': ('inn', 'kuan', 'household'),      # house-family → household (7x)
     'khangham': ('khang', 'ham', 'ancestor'),     # generation-old → ancestor (7x)
     'sawmnih': ('sawm', 'nih', 'twelve'),         # ten-two → twelve (7x)
+    
+    # Round 179: More 5-9x frequency binary compounds (batch 3)
+    'siahdong': ('siah', 'dong', 'tax.collect'),  # tax-collect → tax collector (6x)
+    'lungkia': ('lung', 'kia', 'discourage'),     # heart-fall → discourage (6x)
+    'lungsim': ('lung', 'sim', 'mind'),           # heart-think → mind (6x)
+    'mulkiat': ('mul', 'kiat', 'shave'),          # hair-cut → shave (6x)
+    'lokhawh': ('lo', 'khawh', 'farm'),           # field-work → farm (6x)
+    'leenggah': ('leeng', 'gah', 'raisin'),       # grape-dry → raisin (6x)
+    'manphat': ('man', 'phat', 'worthy'),         # price-worthy → worthy (6x)
+    'kivui': ('ki', 'vui', 'bury'),               # REFL-bury → burial (6x)
+    'kisik': ('ki', 'sik', 'turn'),               # REFL-turn → turning (6x)
+    'kisat': ('ki', 'sat', 'strike'),             # REFL-strike → striking (6x)
+    'kihuh': ('ki', 'huh', 'help'),               # REFL-help → help (6x)
+    'kihal': ('ki', 'hal', 'burn'),               # REFL-burn → burning (6x)
+    'sawmli': ('sawm', 'li', 'forty'),            # ten-four → forty (6x)
 }
 
 
@@ -5332,6 +5358,97 @@ TERNARY_COMPOUNDS = {
         'morphemes': ['sawm', 'nih', 'na'],
         'structure': '(sawm-nih)-na',
         'lexical': 'twelfth',
+        'head': 'left',
+    },
+    # Round 179: More 5-9x frequency ternary compounds (batch 3)
+    'siahdongpa': {
+        'morphemes': ['siah', 'dong', 'pa'],
+        'structure': '(siah-dong)-pa',
+        'lexical': 'tax.collector',
+        'head': 'left',
+    },
+    'phulapa': {
+        'morphemes': ['phu', 'la', 'pa'],
+        'structure': '(phu-la)-pa',
+        'lexical': 'avenger',
+        'head': 'left',
+    },
+    'lungkiasak': {
+        'morphemes': ['lung', 'kia', 'sak'],
+        'structure': '(lung-kia)-sak',
+        'lexical': 'discourage',
+        'head': 'left',
+    },
+    'lungsimtawng': {
+        'morphemes': ['lung', 'sim', 'tawng'],
+        'structure': '(lung-sim)-tawng',
+        'lexical': 'hypocrisy',
+        'head': 'left',
+    },
+    'mulkiatna': {
+        'morphemes': ['mul', 'kiat', 'na'],
+        'structure': '(mul-kiat)-na',
+        'lexical': 'shaving',
+        'head': 'left',
+    },
+    'lokhawhna': {
+        'morphemes': ['lo', 'khawh', 'na'],
+        'structure': '(lo-khawh)-na',
+        'lexical': 'farming',
+        'head': 'left',
+    },
+    'leenggahkeu': {
+        'morphemes': ['leeng', 'gah', 'keu'],
+        'structure': '(leeng-gah)-keu',
+        'lexical': 'raisin.cluster',
+        'head': 'left',
+    },
+    'manphatna': {
+        'morphemes': ['man', 'phat', 'na'],
+        'structure': '(man-phat)-na',
+        'lexical': 'worthiness',
+        'head': 'left',
+    },
+    'kivuina': {
+        'morphemes': ['ki', 'vui', 'na'],
+        'structure': '(ki-vui)-na',
+        'lexical': 'burial',
+        'head': 'left',
+    },
+    'kitheihna': {
+        'morphemes': ['ki', 'theih', 'na'],
+        'structure': '(ki-theih)-na',
+        'lexical': 'knowledge',
+        'head': 'left',
+    },
+    'kisikna': {
+        'morphemes': ['ki', 'sik', 'na'],
+        'structure': '(ki-sik)-na',
+        'lexical': 'turning',
+        'head': 'left',
+    },
+    'kisatna': {
+        'morphemes': ['ki', 'sat', 'na'],
+        'structure': '(ki-sat)-na',
+        'lexical': 'striking',
+        'head': 'left',
+    },
+    'kihuhna': {
+        'morphemes': ['ki', 'huh', 'na'],
+        'structure': '(ki-huh)-na',
+        'lexical': 'help',
+        'head': 'left',
+    },
+    'kihalna': {
+        'morphemes': ['ki', 'hal', 'na'],
+        'structure': '(ki-hal)-na',
+        'lexical': 'burning',
+        'head': 'left',
+    },
+    'sawmlinih': {
+        'morphemes': ['sawm', 'li', 'nih'],
+        'structure': '(sawm-li)-nih',
+        'lexical': 'forty.two',
         'head': 'left',
     },
 }
