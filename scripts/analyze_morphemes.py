@@ -14529,15 +14529,36 @@ def analyze_word(word: str) -> Tuple[str, str]:
     remaining = word_no_hyphen
     
     # 1. Check for pronominal prefix
+    # Round 188 fix: Don't strip single-char prefixes if remaining would start with
+    # a consonant cluster that suggests a longer stem (e.g., 'innpiah' starts with 'inn')
+    remaining_lower = remaining.lower()
     for prefix, gloss in sorted(OBJECT_PREFIXES.items(), key=lambda x: -len(x[0])):
-        if remaining.lower().startswith(prefix):
+        if remaining_lower.startswith(prefix):
             segments.append(prefix)
             glosses.append(gloss)
             remaining = remaining[len(prefix):]
             break
     else:
         for prefix, gloss in sorted(PRONOMINAL_PREFIXES.items(), key=lambda x: -len(x[0])):
-            if remaining.lower().startswith(prefix) and len(remaining) > len(prefix):
+            if remaining_lower.startswith(prefix) and len(remaining) > len(prefix):
+                # Check if stripping prefix would leave a phonotactically invalid onset
+                # or if a longer stem exists (e.g., 'inn' vs 'i' + 'nn')
+                after_prefix = remaining[len(prefix):]
+                after_prefix_lower = after_prefix.lower()
+                # Skip if remainder starts with doubled consonant (suggests it's part of stem)
+                if len(after_prefix) >= 2 and after_prefix[0] == after_prefix[1] and after_prefix[0].isalpha():
+                    continue
+                # Skip if the full word or longer prefix is a known stem
+                if remaining_lower in NOUN_STEMS or remaining_lower in VERB_STEMS:
+                    continue
+                # Check for known longer stems starting with the prefix
+                longer_stem_found = False
+                for stem in list(NOUN_STEMS.keys()) + list(VERB_STEMS.keys()):
+                    if remaining_lower.startswith(stem) and len(stem) > len(prefix):
+                        longer_stem_found = True
+                        break
+                if longer_stem_found:
+                    continue
                 segments.append(prefix)
                 glosses.append(gloss)
                 remaining = remaining[len(prefix):]
