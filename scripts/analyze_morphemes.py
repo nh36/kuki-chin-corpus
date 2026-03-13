@@ -3292,114 +3292,535 @@ def extract_verb_prefix(analyzed_gloss: str) -> str:
 # This system identifies "compound bases" that can serve as heads of larger
 # compounds, and recursively analyzes modifiers.
 #
-# Example: paknamtui → pak + namtui → wine + perfume → "fragrant wine"
-# Structure: [modifier: pak] + [head compound: namtui]
-#            where namtui = [nam] + [tui] = smell + water = perfume
+# =============================================================================
+# HIERARCHICAL COMPOUND ANALYSIS SYSTEM
+# =============================================================================
+#
+# Tedim Chin has productive compound formation where:
+# 1. Simple compounds: N + N → compound (e.g., nam + tui → namtui "perfume")
+# 2. Complex compounds: N + (N N) or (N N) + N → nested compound
+#    e.g., sing + namtui → singnamtui "spices" = tree + (smell + water)
+#
+# This system represents BOTH:
+# - The lexicalized meaning (holistic gloss): "spices"
+# - The compositional structure (morpheme-by-morpheme): "tree-(smell-water)"
+#
+# The analysis returns:
+# - segmentation: "sing-nam-tui" (morpheme boundaries)
+# - gloss: "spices" (lexical meaning when known)
+# - structure: "sing-(nam-tui)" (bracketed structure showing constituency)
+# - compositional: "tree-(smell-water)" (meaning of each morpheme)
+# =============================================================================
 
-# Compound bases that can serve as heads of larger compounds
-# Format: base -> (segmentation, semantic_gloss)
-# These are analyzed compounds that can take modifiers
-# The semantic_gloss is used for the final compound meaning
-COMPOUND_BASES = {
-    # Liquids/oils - can combine with modifiers (pak-, sing-, etc.)
-    'namtui': ('nam-tui', 'perfume'),           # smell-water → perfume/fragrant oil
-    'gahzu': ('gah-zu', 'fragrance'),           # fruit-juice → fragrance
-    
-    # Trees/plants - can combine with type modifiers
-    'singkung': ('sing-kung', 'tree'),          # tree-trunk → tree
-    'singgah': ('sing-gah', 'fruit.tree'),      # tree-fruit → fruit tree
-    'leenggui': ('leeng-gui', 'grapevine'),     # grape-vine → grapevine
-    
-    # Body/anatomy - can combine with descriptors
-    'lungdam': ('lung-dam', 'joy'),             # heart-healthy → joy/gladness
-    'lungtang': ('lung-tang', 'courage'),       # heart-stand → courage
-    'lungkham': ('lung-kham', 'sorrow'),        # heart-forbid → sorrow
-    
-    # Places/locations - can combine with qualifiers
-    'vantung': ('van-tung', 'heaven'),          # sky-above → heaven
-    'leitung': ('lei-tung', 'earth'),           # earth-on → earth/world
-    'tuipi': ('tui-pi', 'sea'),                 # water-big → sea
-    
-    # Actions/states - can combine with intensifiers
-    'haksatna': ('haksat-na', 'difficulty'),    # difficult-NMLZ → difficulty
-}
+from dataclasses import dataclass
+from typing import Optional, Dict, List, Tuple, Union
 
-# Modifiers that commonly attach to compound bases
-# Format: modifier -> gloss
-COMPOUND_MODIFIERS = {
-    # Material/source modifiers
-    'sing': 'tree',       # sing-namtui = tree perfume (spices)
-    'pak': 'wine',        # pak-namtui = wine perfume
-    'leeng': 'grape',     # leeng-namtui = grape oil
-    'tuu': 'sheep',       # tuu-namtui = sheep oil
-    'bawng': 'cattle',    # bawng-namtui = cattle oil
-    'mei': 'fire',        # mei-vak = fire-light
-    
-    # Quality modifiers
-    'hoih': 'good',
-    'sia': 'bad',
-    'lian': 'big',
-    'nau': 'young/small',
-    'thak': 'new',
-    'lui': 'old',
-    
-    # Intensifiers
-    'pi': 'big/great',
-    'te': 'small',
-}
-
-
-def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[str, str]:
+@dataclass
+class CompoundStructure:
     """
-    Attempt hierarchical compound analysis.
+    Represents the hierarchical structure of a compound word.
     
-    Tries to split the word into [modifier] + [compound base], where the
-    compound base is a known analyzed compound that can take modifiers.
+    Attributes:
+        morphemes: List of morpheme strings in order
+        segmentation: Hyphen-separated morphemes (e.g., "sing-nam-tui")
+        bracketing: Constituency structure (e.g., "sing-(nam-tui)")
+        compositional_gloss: Morpheme-by-morpheme meaning (e.g., "tree-(smell-water)")
+        lexical_gloss: Holistic/lexicalized meaning if known (e.g., "spices")
+        head_position: 'left' for (N N) N, 'right' for N (N N), or None
+    """
+    morphemes: List[str]
+    segmentation: str
+    bracketing: str
+    compositional_gloss: str
+    lexical_gloss: Optional[str] = None
+    head_position: Optional[str] = None
     
-    Args:
-        word: The word to analyze (lowercase, no hyphens)
-        depth: Recursion depth (to prevent infinite loops)
+    def get_display_gloss(self) -> str:
+        """Return the best gloss for display - prefer lexical if available."""
+        return self.lexical_gloss if self.lexical_gloss else self.compositional_gloss
+    
+    def get_full_analysis(self) -> str:
+        """Return full analysis showing both lexical and compositional."""
+        if self.lexical_gloss:
+            return f"{self.lexical_gloss} [{self.compositional_gloss}]"
+        return self.compositional_gloss
+
+
+# =============================================================================
+# ATOMIC MORPHEME GLOSSES (for compositional analysis)
+# =============================================================================
+# These are the building blocks - morphemes with their basic meanings.
+# Used to compute compositional glosses for compounds.
+
+ATOMIC_GLOSSES = {
+    # Body parts
+    'lung': 'heart',
+    'lu': 'head',
+    'khe': 'foot',
+    'khut': 'hand',
+    'mit': 'eye',
+    'bil': 'ear',
+    'lei': 'tongue',
+    'ha': 'tooth',
+    'sam': 'hair',
+    'gu': 'bone',
+    'thi': 'blood',
+    'sa': 'flesh',
+    
+    # Nature
+    'tui': 'water',
+    'mei': 'fire',
+    'van': 'sky',
+    'lei': 'earth',
+    'ni': 'sun',
+    'kha': 'moon',
+    'huih': 'wind',
+    'gua': 'rain',
+    'khu': 'smoke',
+    
+    # Plants/trees
+    'sing': 'tree',
+    'kung': 'trunk',
+    'gah': 'fruit',
+    'nang': 'leaf',
+    'gui': 'vine',
+    'bu': 'grain',
+    'an': 'food',
+    
+    # Animals
+    'nga': 'fish',
+    'vak': 'bird',
+    'sa': 'animal',
+    'tuu': 'sheep',
+    'bawng': 'cattle',
+    'ui': 'dog',
+    'ngal': 'wolf',
+    
+    # Qualities
+    'dam': 'well/healthy',
+    'sat': 'hard',
+    'nem': 'soft',
+    'tang': 'straight/stand',
+    'kham': 'forbid',
+    'nop': 'want/like',
+    'za': 'feel',
+    'kim': 'complete/perfect',
+    'muang': 'still/calm',
+    'thim': 'dark',
+    
+    # Substances
+    'nam': 'smell',      # TB root for smell/fragrance
+    'pak': 'wine',
+    'leeng': 'grape',
+    'zu': 'juice/alcohol',
+    'thei': 'fig',
+    'buh': 'rice',
+    
+    # Positions/locations
+    'tung': 'above/on',
+    'nuai': 'below',
+    'sung': 'inside',
+    'lai': 'middle',
+    'ki': 'side',
+    'lam': 'side/direction',
+    'inn': 'house',
+    'mun': 'place',
+    
+    # Abstracts
+    'na': 'NMLZ',        # nominalizer
+    'pa': 'man/AGT',     # agent/man
+    'nu': 'woman',
+    'te': 'PL',          # plural
+    'ki': 'REFL',        # reflexive/reciprocal
+    'sai': 'throw',      # throw (in compounds)
+    
+    # Sizes/degrees
+    'pi': 'big',
+    'te': 'small',
+    'lian': 'great',
+    'nau': 'young',
+}
+
+
+# =============================================================================
+# BINARY COMPOUNDS (two-morpheme compounds with internal structure)
+# =============================================================================
+# Format: compound -> (morpheme1, morpheme2, lexical_gloss)
+# These are the building blocks for larger hierarchical compounds.
+
+BINARY_COMPOUNDS = {
+    # Liquids/substances: N + tui (water)
+    'namtui': ('nam', 'tui', 'perfume'),        # smell-water → perfume/fragrant oil
+    'tuipi': ('tui', 'pi', 'sea'),              # water-big → sea/ocean
+    'tuibang': ('tui', 'bang', 'flood'),        # water-spread → flood
+    'tuikhuk': ('tui', 'khuk', 'pool'),         # water-bend → pool
+    
+    # Heart compounds: lung + X
+    'lungdam': ('lung', 'dam', 'joy'),          # heart-well → joy/gladness
+    'lungtang': ('lung', 'tang', 'courage'),    # heart-stand → courage
+    'lungkham': ('lung', 'kham', 'sorrow'),     # heart-forbid → sorrow/trouble
+    'lungmit': ('lung', 'mit', 'attention'),    # heart-eye → attention
+    'lungkim': ('lung', 'kim', 'peace'),        # heart-complete → contentment
+    'lungthim': ('lung', 'thim', 'conscience'), # heart-dark → conscience
+    'lungmuang': ('lung', 'muang', 'peace'),    # heart-still → peace of mind
+    'lungnop': ('lung', 'nop', 'desire'),       # heart-want → desire/wish
+    
+    # Sky/heaven compounds: van + X
+    'vantung': ('van', 'tung', 'heaven'),       # sky-above → heaven
+    'vanlei': ('van', 'lei', 'world'),          # sky-earth → world
+    'vanmi': ('van', 'mi', 'angel'),            # sky-person → angel/heavenly being
+    
+    # Earth compounds: lei + X
+    'leitung': ('lei', 'tung', 'earth'),        # earth-on → earth/world (surface)
+    'leilak': ('lei', 'lak', 'dust'),           # earth-particle → dust
+    
+    # Tree/plant compounds: sing + X
+    'singkung': ('sing', 'kung', 'tree'),       # tree-trunk → tree
+    'singgah': ('sing', 'gah', 'fruit.tree'),   # tree-fruit → fruit tree
+    
+    # Vine compounds: X + gui
+    'leenggui': ('leeng', 'gui', 'grapevine'),  # grape-vine → grapevine
+    
+    # Food compounds
+    'buhkung': ('buh', 'kung', 'provender'),    # rice-trunk → stored grain
+    'ankung': ('an', 'kung', 'provision'),      # food-trunk → provisions
+    
+    # Juice/liquid compounds: X + zu
+    'gahzu': ('gah', 'zu', 'sap'),              # fruit-juice → sap/juice
+    'paazu': ('paa', 'zu', 'wine'),             # grape?-juice → wine
+    
+    # Animal compounds
+    'tuupi': ('tuu', 'pi', 'ram'),              # sheep-big → ram
+    'bawngpi': ('bawng', 'pi', 'bull'),         # cattle-big → bull
+    'ngalpi': ('ngal', 'pi', 'great.wolf'),     # wolf-big → great wolf
+    
+    # Place compounds: X + inn (house)
+    'biakinn': ('biak', 'inn', 'temple'),       # worship-house → temple
+    'sihinn': ('sih', 'inn', 'prison'),         # bind-house → prison
+    
+    # Other productive patterns
+    'haksat': ('hak', 'sat', 'difficult'),      # hard-hard → difficult
+    'mikhual': ('mi', 'khual', 'stranger'),     # person-village → stranger
+    'mihing': ('mi', 'hing', 'mankind'),        # person-creature → mankind
+    'saili': ('sai', 'li', 'sling'),            # throw-? → sling
+}
+
+
+# =============================================================================
+# TERNARY+ COMPOUNDS (three or more morphemes with hierarchical structure)
+# =============================================================================
+# Format: compound -> {
+#     'morphemes': ['m1', 'm2', 'm3'],
+#     'structure': 'm1-(m2-m3)' or '(m1-m2)-m3',
+#     'lexical': 'holistic meaning',
+#     'head': 'right' or 'left'
+# }
+# 
+# head='right' means N (N N): modifier + [head compound]
+# head='left' means (N N) N: [head compound] + modifier
+
+TERNARY_COMPOUNDS = {
+    # sing + namtui type: tree + (smell-water) = tree-perfume = spices
+    'singnamtui': {
+        'morphemes': ['sing', 'nam', 'tui'],
+        'structure': 'sing-(nam-tui)',
+        'lexical': 'spices',
+        'head': 'right',
+    },
+    # pak + namtui type: wine + (smell-water) = wine-perfume
+    'paknamtui': {
+        'morphemes': ['pak', 'nam', 'tui'],
+        'structure': 'pak-(nam-tui)',
+        'lexical': 'ointment',
+        'head': 'right',
+    },
+    # leeng + gahzu type: grape + (fruit-juice) = grape juice
+    'leenggahzu': {
+        'morphemes': ['leeng', 'gah', 'zu'],
+        'structure': 'leeng-(gah-zu)',
+        'lexical': 'grape.juice',
+        'head': 'right',
+    },
+    # biakinn + lam type: (worship-house) + direction = temple direction
+    'biakinnlam': {
+        'morphemes': ['biak', 'inn', 'lam'],
+        'structure': '(biak-inn)-lam',
+        'lexical': 'temple.side',
+        'head': 'left',
+    },
+    # lung + damna type: heart + (well-NMLZ) = gladness
+    'lungdamna': {
+        'morphemes': ['lung', 'dam', 'na'],
+        'structure': 'lung-(dam-na)',
+        'lexical': 'gladness',
+        'head': 'right',
+    },
+    # Additional complex compounds from corpus
+    # kilungkim: ki + lungkim = REFL + (heart-complete) = peace/contentment
+    'kilungkim': {
+        'morphemes': ['ki', 'lung', 'kim'],
+        'structure': 'ki-(lung-kim)',
+        'lexical': 'contentment',
+        'head': 'right',
+    },
+    # sailungtang: saili + lungtang is NOT the structure
+    # Actually: sai-lung-tang = sling-stone (lit. throw?-stone-?)
+    # From context: slingstone
+    'sailungtang': {
+        'morphemes': ['sai', 'lung', 'tang'],
+        'structure': '(sai-lung)-tang',
+        'lexical': 'slingstone',
+        'head': 'left',
+    },
+}
+
+
+def get_morpheme_gloss(morpheme: str) -> Optional[str]:
+    """
+    Get the gloss for an atomic morpheme from all available sources.
+    
+    Checks ATOMIC_GLOSSES first (most accurate for compositional analysis),
+    then falls back to NOUN_STEMS, VERB_STEMS, and other dictionaries.
+    """
+    morpheme_lower = morpheme.lower()
+    
+    # Priority 1: Atomic glosses (designed for compositional analysis)
+    if morpheme_lower in ATOMIC_GLOSSES:
+        return ATOMIC_GLOSSES[morpheme_lower]
+    
+    # Priority 2: Noun stems
+    if morpheme_lower in NOUN_STEMS:
+        return NOUN_STEMS[morpheme_lower]
+    
+    # Priority 3: Verb stems
+    if morpheme_lower in VERB_STEMS:
+        return VERB_STEMS[morpheme_lower]
+    
+    return None
+
+
+def analyze_binary_compound(word: str) -> Optional[CompoundStructure]:
+    """
+    Analyze a two-morpheme compound, returning its full structure.
+    
+    Returns CompoundStructure with:
+    - morphemes: [m1, m2]
+    - segmentation: "m1-m2"
+    - bracketing: "(m1-m2)" 
+    - compositional_gloss: "gloss1-gloss2"
+    - lexical_gloss: holistic meaning if in BINARY_COMPOUNDS
+    """
+    word_lower = word.lower()
+    
+    # Check if it's a known binary compound
+    if word_lower in BINARY_COMPOUNDS:
+        m1, m2, lexical = BINARY_COMPOUNDS[word_lower]
+        g1 = get_morpheme_gloss(m1) or '?'
+        g2 = get_morpheme_gloss(m2) or '?'
+        
+        return CompoundStructure(
+            morphemes=[m1, m2],
+            segmentation=f"{m1}-{m2}",
+            bracketing=f"({m1}-{m2})",
+            compositional_gloss=f"({g1}-{g2})",
+            lexical_gloss=lexical,
+            head_position='right'  # Tedim is generally head-final
+        )
+    
+    return None
+
+
+def analyze_ternary_compound(word: str) -> Optional[CompoundStructure]:
+    """
+    Analyze a three-morpheme compound with hierarchical structure.
+    
+    Returns CompoundStructure with bracketed structure showing
+    which morphemes group together (head compound vs modifier).
+    """
+    word_lower = word.lower()
+    
+    # Check if it's a known ternary compound
+    if word_lower in TERNARY_COMPOUNDS:
+        info = TERNARY_COMPOUNDS[word_lower]
+        morphemes = info['morphemes']
+        glosses = [get_morpheme_gloss(m) or '?' for m in morphemes]
+        
+        # Build compositional gloss with same bracket structure
+        if info['head'] == 'right':
+            # N (N N) - modifier + head compound
+            comp_gloss = f"{glosses[0]}-({glosses[1]}-{glosses[2]})"
+        else:
+            # (N N) N - head compound + modifier
+            comp_gloss = f"({glosses[0]}-{glosses[1]})-{glosses[2]}"
+        
+        return CompoundStructure(
+            morphemes=morphemes,
+            segmentation='-'.join(morphemes),
+            bracketing=info['structure'],
+            compositional_gloss=comp_gloss,
+            lexical_gloss=info.get('lexical'),
+            head_position=info['head']
+        )
+    
+    return None
+
+
+def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Attempt hierarchical compound analysis using the new compound system.
+    
+    This function provides both the morpheme-level segmentation AND
+    the appropriate gloss (preferring lexical over compositional).
+    
+    The analysis proceeds in order:
+    1. Check for known ternary+ compounds (full structure known)
+    2. Check for known binary compounds
+    3. Try to decompose as [modifier] + [known binary compound]
+    4. Try to decompose as [known binary compound] + [suffix]
     
     Returns:
         Tuple of (segmentation, gloss) or (None, None) if no analysis found
-    
-    Examples:
-        singnamtui -> ('sing-nam-tui', 'tree-smell-water') = tree perfume
-        paknamtui -> ('pak-nam-tui', 'wine-smell-water') = fragrant wine
+        
+    The gloss returned is the LEXICAL gloss if available (e.g., "spices"),
+    otherwise the COMPOSITIONAL gloss (e.g., "tree-(smell-water)").
     """
-    if depth > 3:  # Prevent deep recursion
+    if depth > 3:
         return (None, None)
     
     word_lower = word.lower()
     
-    # Try to find a compound base at the end of the word
-    for base, (base_seg, base_gloss) in sorted(COMPOUND_BASES.items(), 
-                                                 key=lambda x: -len(x[0])):
+    # Step 1: Check for known ternary compounds
+    ternary = analyze_ternary_compound(word_lower)
+    if ternary:
+        return (ternary.segmentation, ternary.get_display_gloss())
+    
+    # Step 2: Check for known binary compounds
+    binary = analyze_binary_compound(word_lower)
+    if binary:
+        return (binary.segmentation, binary.get_display_gloss())
+    
+    # Step 3: Try decomposing as [modifier] + [binary compound base]
+    # Pattern: N (N N) - e.g., thei + namtui = fig + perfume
+    for base, (m1, m2, base_lexical) in sorted(BINARY_COMPOUNDS.items(), 
+                                                key=lambda x: -len(x[0])):
         if word_lower.endswith(base) and len(word_lower) > len(base):
             modifier = word_lower[:-len(base)]
+            mod_gloss = get_morpheme_gloss(modifier)
             
-            # Check if modifier is a known simple modifier
-            if modifier in COMPOUND_MODIFIERS:
-                mod_gloss = COMPOUND_MODIFIERS[modifier]
-                return (f"{modifier}-{base_seg}", f"{mod_gloss}-{base_gloss}")
+            if mod_gloss:
+                # We have a valid modifier + binary compound
+                g1 = get_morpheme_gloss(m1) or '?'
+                g2 = get_morpheme_gloss(m2) or '?'
+                
+                segmentation = f"{modifier}-{m1}-{m2}"
+                # Compositional gloss shows hierarchy
+                comp_gloss = f"{mod_gloss}-({g1}-{g2})"
+                
+                # Check if this specific ternary has a known lexical gloss
+                if word_lower in TERNARY_COMPOUNDS:
+                    lex_gloss = TERNARY_COMPOUNDS[word_lower].get('lexical')
+                    if lex_gloss:
+                        return (segmentation, lex_gloss)
+                
+                # Return compositional gloss (shows the hierarchy)
+                return (segmentation, comp_gloss)
             
-            # Check if modifier is a known noun stem (global dict defined earlier)
-            if modifier in NOUN_STEMS:
-                mod_gloss = NOUN_STEMS[modifier]
-                return (f"{modifier}-{base_seg}", f"{mod_gloss}-{base_gloss}")
-            
-            # Check if modifier is a known verb stem (global dict defined earlier)
-            if modifier in VERB_STEMS:
-                mod_gloss = VERB_STEMS[modifier]
-                return (f"{modifier}-{base_seg}", f"{mod_gloss}-{base_gloss}")
-            
-            # Try recursive analysis of modifier (it might be a compound too)
+            # Try recursive analysis of modifier
             if depth < 2:
                 mod_result = analyze_hierarchical_compound(modifier, depth + 1)
                 if mod_result[0]:
-                    return (f"{mod_result[0]}-{base_seg}", f"{mod_result[1]}-{base_gloss}")
+                    g1 = get_morpheme_gloss(m1) or '?'
+                    g2 = get_morpheme_gloss(m2) or '?'
+                    segmentation = f"{mod_result[0]}-{m1}-{m2}"
+                    # Nested structure: ((m0-m1)-(m2-m3))
+                    comp_gloss = f"({mod_result[1]})-({g1}-{g2})"
+                    return (segmentation, comp_gloss)
+    
+    # Step 4: Try decomposing as [binary compound] + [suffix/modifier]
+    # Pattern: (N N) N - e.g., biakinn + lam = temple + direction
+    for base, (m1, m2, base_lexical) in sorted(BINARY_COMPOUNDS.items(),
+                                                key=lambda x: -len(x[0])):
+        if word_lower.startswith(base) and len(word_lower) > len(base):
+            suffix = word_lower[len(base):]
+            suffix_gloss = get_morpheme_gloss(suffix)
+            
+            if suffix_gloss:
+                g1 = get_morpheme_gloss(m1) or '?'
+                g2 = get_morpheme_gloss(m2) or '?'
+                
+                segmentation = f"{m1}-{m2}-{suffix}"
+                # Show head compound + modifier
+                comp_gloss = f"({g1}-{g2})-{suffix_gloss}"
+                
+                return (segmentation, comp_gloss)
     
     return (None, None)
+
+
+def get_full_compound_analysis(word: str) -> Optional[CompoundStructure]:
+    """
+    Get the full hierarchical analysis of a compound word.
+    
+    This is the main entry point for compound analysis when you need
+    the full structure (not just segmentation + gloss).
+    
+    Returns:
+        CompoundStructure with all fields populated, or None if not a compound
+    """
+    word_lower = word.lower()
+    
+    # Check ternary first (most specific)
+    ternary = analyze_ternary_compound(word_lower)
+    if ternary:
+        return ternary
+    
+    # Check binary
+    binary = analyze_binary_compound(word_lower)
+    if binary:
+        return binary
+    
+    # Try dynamic decomposition
+    # Pattern: modifier + binary base
+    for base, (m1, m2, base_lexical) in sorted(BINARY_COMPOUNDS.items(),
+                                                key=lambda x: -len(x[0])):
+        if word_lower.endswith(base) and len(word_lower) > len(base):
+            modifier = word_lower[:-len(base)]
+            mod_gloss = get_morpheme_gloss(modifier)
+            
+            if mod_gloss:
+                g1 = get_morpheme_gloss(m1) or '?'
+                g2 = get_morpheme_gloss(m2) or '?'
+                
+                return CompoundStructure(
+                    morphemes=[modifier, m1, m2],
+                    segmentation=f"{modifier}-{m1}-{m2}",
+                    bracketing=f"{modifier}-({m1}-{m2})",
+                    compositional_gloss=f"{mod_gloss}-({g1}-{g2})",
+                    lexical_gloss=None,  # Unknown - not in dictionary
+                    head_position='right'
+                )
+    
+    # Pattern: binary base + suffix
+    for base, (m1, m2, base_lexical) in sorted(BINARY_COMPOUNDS.items(),
+                                                key=lambda x: -len(x[0])):
+        if word_lower.startswith(base) and len(word_lower) > len(base):
+            suffix = word_lower[len(base):]
+            suffix_gloss = get_morpheme_gloss(suffix)
+            
+            if suffix_gloss:
+                g1 = get_morpheme_gloss(m1) or '?'
+                g2 = get_morpheme_gloss(m2) or '?'
+                
+                return CompoundStructure(
+                    morphemes=[m1, m2, suffix],
+                    segmentation=f"{m1}-{m2}-{suffix}",
+                    bracketing=f"({m1}-{m2})-{suffix}",
+                    compositional_gloss=f"({g1}-{g2})-{suffix_gloss}",
+                    lexical_gloss=None,
+                    head_position='left'
+                )
+    
+    return None
 
 
 def analyze_word(word: str) -> Tuple[str, str]:
@@ -3957,7 +4378,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thahat': ('tha-hat', 'strong-firm'),
         'thukhen': ('thu-khen', 'word-divide'),
         'neihsa': ('neih-sa', 'have.II-PAST'),                  # had (past of have)
-        'paknamtui': ('pak-nam-tui', 'wine'),
+        # paknamtui now handled by hierarchical system → 'ointment'
         'minthanna': ('min-than-na', 'name-bless-NMLZ'),
         'suanlekhakte': ('suanlekhak-te', 'genealogy-PL'),       # fixed: was over-segmented
         'nisuahna': ('ni-suah-na', 'day-birth-NMLZ'),
@@ -4242,7 +4663,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'la-in': ('la-in', 'take-ERG'),
         
         # === Additional compounds from frequency analysis (freq 50-230) ===
-        'leenggahzu': ('leeng-gah-zu', 'grape-cluster-wine'),    # 228 - wine (lit. grape wine)
+        # leenggahzu now handled by hierarchical system → 'grape.juice'
         'sumngo': ('sum-ngo', 'brass-iron'),                      # 152 - brass and iron (metals)
         'leenggui': ('leeng-gui', 'grape-vine'),                  # 130 - grapevine
         'ling': ('ling', 'pile'),                                  # 106
@@ -4312,10 +4733,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pianzia': ('pian-zia', 'birth-manner'),              # 50
         
         # === More compounds from frequency analysis (freq 38-55) ===
-        'leenggahzu': ('leenggah-zu', 'grape-liquid'),    # 239x "wine"
-        'leenggah': ('leenggah', 'grape'),               # 98x "grape/vine fruit"
-        'leenggui': ('leenggui', 'grapevine'),           # vineyard-related
-        'sumngo': ('sum-ngo', 'money-silver'),                 # 152
+        # leenggahzu now handled by hierarchical system
+        'leenggah': ('leeng-gah', 'grape-fruit'),               # 98x "grape/vine fruit"
+        # leenggui already defined above
+        # sumngo already defined above
         'kumpinu': ('kumpi-nu', 'king-mother'),               # 54
         'nupi': ('nu-pi', 'mother-big'),                       # 53
         'ihmu': ('ih-mu', '1PL-see'),                          # 52
@@ -6353,9 +6774,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hang': ('hang', 'stallion'),                          # base - stallion/mighty
         'meivakkhuamte': ('meivakkhuam-te', 'candlestick-PL'), # candlesticks
         'meivakkhuam': ('mei-vak-khuam', 'fire-light-holder'), # candlestick/lampstand
-        'leenggahzute': ('leenggahzu-te', 'frankincense-PL'),  # frankincense/spices
-        'leenggahzu': ('leeng-gahzu', 'incense-fragrant'),     # frankincense
-        'gahzu': ('gahzu', 'fragrant'),                        # base - fragrant
+        'leenggahzute': ('leeng-gah-zu-te', 'grape.juice-PL'),  # wine (plural)
+        # leenggahzu now handled by hierarchical system → 'grape.juice'
+        'gahzu': ('gah-zu', 'fruit-juice'),                     # base - fruit juice
         'sungnungte': ('sungnung-te', 'inner.room-PL'),        # inner chambers/rooms
         'sungnung': ('sungnung', 'inner.room'),                # base - inner room
         'lamlakte': ('lamlak-te', 'counsellor-PL'),            # counsellors/advisers
@@ -11658,9 +12079,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Age/hair
         'samkang': ('sam-kang', 'hair-gray'),                        # (2x) gray.haired - Deut 32:25
         'samkangte': ('sam-kang-te', 'hair-gray-PL'),
-        # Trade goods - namtui = perfume (nam=smell + tui=water/oil)
-        'singnamtui': ('sing-namtui', 'tree-perfume'),               # (2x) spices - Ezek 27:22
-        'singnamtuite': ('sing-namtui-te', 'tree-perfume-PL'),
+        # Trade goods - now handled by hierarchical compound system
+        # singnamtui → 'spices' via TERNARY_COMPOUNDS
+        'singnamtuite': ('sing-nam-tui-te', 'spices-PL'),
         # Numbers
         'sawmguk': ('sawm-guk', 'ten-six'),                          # (2x) sixty - Gen 5:15
         'sawmgukte': ('sawm-guk-te', 'ten-six-PL'),
