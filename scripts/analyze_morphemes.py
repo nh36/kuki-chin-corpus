@@ -3645,6 +3645,16 @@ ATOMIC_GLOSSES = {
     'dial': 'belt',        # dialkaih = belt-loosen = girdle
     'len': 'net',          # siklen = tie-net = network
     'buah': 'pour',        # tuibuah = water-pour = libation
+    
+    # Round 185: Low-frequency atomic glosses
+    'nai': 'precious',     # singnai = stone-precious = onyx
+    'kul': 'tar',          # kultal = tar-coat = pitch
+    'mim': 'thread',       # mimkhau = thread-fine
+    'khau': 'fine',        # mimkhau = thread-fine
+    'bek': 'sleep',        # bekbak = sleep-deep
+    'bak': 'deep',         # bekbak = sleep-deep
+    'dung': 'length',      # gamdung = land-length
+    'mel': 'void',         # limlemel = form-NEG-void
 }
 
 # Morphemes with multiple meanings - used for contextual disambiguation
@@ -4016,6 +4026,15 @@ BINARY_COMPOUNDS = {
     'tuibuah': ('tui', 'buah', 'libation'),       # water-pour → drink offering (8x)
     'khutsiam': ('khut', 'siam', 'craft'),        # hand-skill → craftsmanship (8x)
     'tawisuang': ('tawi', 'suang', 'weights'),    # weigh-stone → scale weights (8x)
+    
+    # Round 185: Low-frequency (1-4x) lexicalized compounds
+    'singnai': ('sing', 'nai', 'onyx'),           # stone-precious → onyx/precious stone (4x)
+    'kultal': ('kul', 'tal', 'pitch'),            # tar-coat → pitch (4x)
+    'khansung': ('khan', 'sung', 'lifetime'),     # generation-inside → lifetime/days (4x)
+    'mimkhau': ('mim', 'khau', 'thread'),         # thread-fine → thread (4x)
+    'bekbak': ('bek', 'bak', 'deep.sleep'),       # sleep-deep → deep sleep (2x)
+    'gamdung': ('gam', 'dung', 'length'),         # land-length → length of land (1x)
+    'gamvai': ('gam', 'vai', 'breadth'),          # land-breadth → breadth of land (1x)
 }
 
 
@@ -5679,6 +5698,14 @@ TERNARY_COMPOUNDS = {
         'structure': '(kam-ciam)-te',
         'lexical': 'vows',
         'head': 'left',
+    },
+    
+    # Round 185: Low-frequency ternary compounds (1-4x)
+    'limlemel': {
+        'morphemes': ['lim', 'le', 'mel'],
+        'structure': 'lim-(le-mel)',
+        'lexical': 'formless.void',    # Genesis 1:2 "without form and void"
+        'head': 'right',
     },
 }
 
