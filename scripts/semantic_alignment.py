@@ -31,15 +31,17 @@ GRAMMATICAL = {
     'pfv', 'ipfv', 'cont', 'perf', 'pst', 'fut', 'prog', 'compl',
     'prosp', 'prosp.erg',  # prospective (ding)
     'purp', 'purp.erg',    # purposive
+    'neg.perf',  # negative perfect
     # Derivational
     'nmlz', 'caus', 'appl', 'refl', 'recp', 'pass',
     'neg.nom',  # negative nominalizer
+    'nmlz.ag', 'nmlz.ag.poss',  # agent nominalizer
     # Plurals/Number
     'pl', 'sg', 'du', 'pl.imp', 'pl.poss',
     # Person/pronouns
     '1sg', '2sg', '3sg', '1pl', '2pl', '3pl', '3→1', '1sg→3',
     '3sg.pro', '3pl.pro', '1sg.pro', '2sg.pro', '2pl.pro', '1pl.pro',
-    '3pl.pro.poss', '1pl.incl',
+    '3pl.pro.poss', '1pl.incl', '1sg.self', '2sg.self', '3sg.self',
     # Discourse
     'top', 'foc', 'emph', 'q', 'decl', 'imp', 'opt',
     'neg.emph', 'neg.erg',  # negation variants
@@ -47,7 +49,7 @@ GRAMMATICAL = {
     # Connectives
     'and', 'or', 'but', 'rel', 'conj', 'comp', 'and/or',
     # Copula/existential
-    'cop', 'exist', 'be.3sg', 'be.3sg.rel',
+    'cop', 'exist', 'be.3sg', 'be.3sg.rel', 'be',
     # Aspect/Direction
     'iter', 'away', 'enter', 'exit', 'intens', 'abil',
     # Other grammatical
@@ -56,10 +58,17 @@ GRAMMATICAL = {
     'house', 'on', 'too', 'also', 'that', 'then', 'amen',
     # Adverbs/discourse  
     'therefore', 'because', 'although', 'beside', 'very',
-    'this', 'all', 'one', 'like', 'inside', 'now',
-    'what/like', 'each', 'only', 'among', 'exp',
+    'this', 'all', 'one', 'like', 'inside', 'now', 'same',
+    'what/like', 'each', 'only', 'among', 'exp', 'other', 'more',
+    # Quantifiers
+    'every', 'some', 'any', 'many', 'few', 'much',
+    # Temporal/locational
+    'past', 'before', 'after', 'still', 'yet', 'again',
     # Unanalyzed Tedim words (proper handling needed)
     'ama',  # 3sg pronoun
+    # Numbers (handled separately, filter here)
+    'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+    'hundred', 'thousand',
 }
 
 # Semantic equivalences: Tedim gloss -> KJV word stems
@@ -90,35 +99,40 @@ SEMANTIC_MAP = {
     'dark': {'dark', 'darkness', 'night'},
     'fire': {'fire', 'flame'},
     'road': {'way', 'road', 'path'},
+    'way': {'way', 'road', 'path', 'manner'},
     'midst': {'midst', 'among', 'middle'},
     'town': {'city', 'town', 'place'},
+    'place': {'place', 'town', 'city', 'land'},
     
     # Body/emotion - VERIFIED: lung="feel" is Tedim for heart/emotion center
     'feel': {'heart', 'hearts', 'mind', 'soul'},  # lung -> feel
     'joy': {'joy', 'glad', 'gladness', 'rejoice', 'rejoiced'},  # lungdam -> joy
     'sorrow': {'sorrow', 'grief', 'sad', 'mourn', 'mourning'},  # lungkham -> sorrow
     'heart-pleased': {'peace', 'content', 'pleased'},  # lungnuam -> heart-pleased
+    'face': {'face', 'countenance', 'presence'},
     
     # Communication
-    'say': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'call', 'called', 'spake'},
-    'say.nom': {'saying', 'word', 'words'},
+    'say': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'call', 'called', 'spake', 'answer', 'answered'},
+    'say.nom': {'saying', 'word', 'words', 'said'},
     'speak': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'spake'},
+    'tell': {'tell', 'told', 'say', 'said', 'speak', 'declare'},
     'word': {'word', 'words', 'speak', 'saying', 'thing', 'things', 'matter'},
     'name': {'name', 'named', 'call', 'called'},
-    'voice': {'voice', 'cry', 'sound'},
+    'voice': {'voice', 'cry', 'sound', 'hear'},
     
     # Perception
     'see': {'see', 'saw', 'seen', 'look', 'looked', 'behold', 'perceive'},
-    'hear': {'hear', 'heard', 'listen'},
-    'know': {'know', 'knew', 'known', 'understand'},
-    'know.i': {'know', 'knew', 'known', 'understand'},
+    'hear': {'hear', 'heard', 'listen', 'hearken'},
+    'know': {'know', 'knew', 'known', 'understand', 'understood'},
+    'know.i': {'know', 'knew', 'known', 'understand', 'wisdom'},
     'know.ii': {'know', 'knew', 'known', 'understand'},
     
     # Quality
-    'good': {'good', 'well', 'right', 'righteous'},
-    'great': {'great', 'big', 'large', 'mighty'},
+    'good': {'good', 'well', 'right', 'righteous', 'better'},
+    'great': {'great', 'big', 'large', 'mighty', 'greater'},
     'big': {'great', 'big', 'large', 'mighty'},
-    'holy': {'holy', 'sacred', 'sanctify'},
+    'holy': {'holy', 'sacred', 'sanctify', 'sanctified'},
+    'worthy': {'worthy', 'worth', 'able'},
     'old': {'old', 'elder', 'ancient'},
     
     # People - VERIFIED: mi="person/REL", mipa="man", mite="people"
@@ -262,6 +276,12 @@ KJV_STOPWORDS = {
     'forthwith', 'straightway',
     # More particles
     'both', 'neither', 'either', 'same', 'such', 'other', 'another',
+    # Additional function words (Round 192e)
+    'own', 'himself', 'themselves', 'itself', 'ourselves', 'yourselves',
+    'according', 'about', 'concerning', 'against',
+    'lest', 'whether', 'except', 'unless',
+    'forth', 'back', 'together', 'apart',
+    'yet', 'already', 'ever', 'never',
 }
 
 
