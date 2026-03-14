@@ -2605,7 +2605,7 @@ NOUN_STEMS = {
     'alun': 'oak',           # 1x Jdg 2:15 - "oak tree"
     'nisuhkung': 'noon',     # 1x Jdg 4:5 - "noontime"
     'gimluat': 'affliction', # 1x Jdg 4:21 - "great affliction"
-    'koptai': 'lament',      # 1x Jdg 5:22 - "lamentation"
+    'koptai': 'prance',      # 1x Jdg 5:22 - "prancing" (horse hooves stamping)
     'khetbuk': 'stamp',      # 1x Jdg 5:26 - "pounding"
     'kinim': 'believe',      # 1x Jdg 5:30 - "trusted"
     'tuumul': 'barley',      # 1x Jdg 6:38 - "barley loaf"
@@ -8273,7 +8273,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tacilte': ('ta-cil-te', 'stay-first-PL'),           # 14x - "firstlings"
         'thumnate': ('thum-na-te', 'three-NMLZ-PL'),         # 14x - compound
         'tuiciin': ('tui-ciin', 'water-?'),                  # 14x - compound
-        'nupa': ('nu-pa', 'male.and.female'),                # 14x - "the male and female" (pair, Gen 7:2)
+        'nupa': ('nu-pa', 'female-male'),                     # 14x - "male and female pair" (Gen 7:2, Acts 5:1)
         'naupaii': ('nau-paii', 'child-?'),                  # 14x - compound
         'midik': ('mi-dik', 'person-righteous'),             # 14x - "righteous person"
         'hukna': ('huk-na', 'cover-NMLZ'),                   # 14x - "covering"
