@@ -2801,6 +2801,13 @@ NOUN_STEMS = {
     'bulom': 'ruin',         # 1x 2Kgs 19:25 - "ruinous heaps"
     'angkawm': 'adultery',   # 2x Jer 5:7, 9:2 - "committed adultery", "adulterers"
     'ipip': 'endure',        # 2x Jer 20:9, Rom 9:22 - "forbearing/longsuffering"
+    'bulh': 'bind',          # 1x Jer 20:2 - "stocks" (restraining device)
+    'bum': 'deceive',        # 1x Isa 47:12 - "sorceries/deception"
+    'bengbeng': 'slap',      # 1x 2Cor 11:20 - "smite on face"
+    'bung': 'tablet',        # 1x Isa 3:20 - "tablets" (ornamental jewelry)
+    'awng': 'young',         # 1x Gen 33:13 - "herds with young"
+    'pel': 'break',          # 1x Rom 1:31 - "covenantbreakers" (ciampel = promise-break)
+    'tehteh': 'beseech',     # 1x Isa 64:9 - "we beseech thee"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15096,6 +15103,22 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ipipna': ('ipip-na', 'endure-NMLZ'),                        # 2x - forbearing/patience
         'hiau': ('hiau', 'directly'),                                # 1x - went directly (Luke 4:30)
         'hiauhiau': ('hiau-hiau', 'gently-REDUP'),                   # 1x - softly (Acts 27:13)
+        
+        # Round 193b: More hapax
+        'anphalte': ('an-phal-te', 'grain-bound-PL'),                # 1x Micah 4:12 - "sheaves"
+        'awngte': ('awng-te', 'young-PL'),                           # 1x Gen 33:13 - "herds with young"
+        'bakte': ('bak-te', 'cave-PL'),                              # 1x Isa 2:19 - "caves"
+        'buite': ('bui-te', 'hole-PL'),                              # 1x Isa 2:19 - "holes"
+        'bawlung': ('bawlung', 'ball'),                              # 1x Isa 22:18 - "like a ball"
+        'bengbengte': ('bengbeng-te', 'slap-PL'),                    # 1x 2Cor 11:20 - "smite on face"
+        'bungte': ('bung-te', 'tablet-PL'),                          # 1x Isa 3:20 - "tablets" (ornaments)
+        'bulhna': ('bulh-na', 'bind-NMLZ'),                          # 1x Jer 20:2 - "stocks" (restraint)
+        'bumna': ('bum-na', 'deceive-NMLZ'),                         # 1x Isa 47:12 - "sorceries"
+        'ciampelin': ('ciam-pel-in', 'promise-break-ERG'),           # 1x 2Tim 3:4 - "traitors"
+        'ciampelna': ('ciam-pel-na', 'promise-break-NMLZ'),          # 1x Rom 1:31 - "covenantbreakers"
+        'ciamtehteh': ('ciam-tehteh', 'promise-beseech'),            # 1x Isa 64:9 - "we beseech"
+        'zingtho': ('zing-tho', 'morning-early'),                    # 1x Prov 31:15 - "riseth early"
+        'zingciangin': ('zing-ciang-in', 'morning-time-ERG'),        # 1x Esth 5:14 - "in the morning"
     }
 
 
