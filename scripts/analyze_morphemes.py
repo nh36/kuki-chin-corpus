@@ -1815,6 +1815,7 @@ VERB_STEMS = {
     # Round 190: Hapax verbs from KJV cross-reference
     'tukkhiat': 'pluck.off',       # 1x Gen 8:11 - olive leaf "pluckt off"
     'niamsuk': 'let.down',         # 1x Gen 24:18 - "let down her pitcher"
+    'tun': 'kneel',                # kneel/bow (tunpih = kneel-APPL = bow down) 63x
 }
 
 
@@ -2595,7 +2596,7 @@ NOUN_STEMS = {
     'mongciik': 'south',     # 1x Jos 15:21 - "southward"
     'hawmthawh': 'mingle',   # 1x Jos 22:16 - "mingles with"
     'lehnawt': 'overturn',   # 1x Jos 23:5 - "overturn them"
-    'tunpi': 'bow.down',     # 1x Jos 24:12 - "bow down"
+    # 'tunpi': REMOVED - conflicts with tunpi=hornet-big. Use tun-pih (kneel-APPL) instead
     'nengkia': 'drive.out',  # 1x Jdg 1:7 - "driven out"
     'sungpa': 'husband',     # 1x Jdg 1:16 - "father-in-law"
     'lehgamtat': 'possess',  # 1x Jdg 2:2 - "possess the land"
