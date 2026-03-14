@@ -1305,6 +1305,7 @@ VERB_STEMS = {
     'peel': 'peel',          # 12x
     'peng': 'break.into',    # 10x
     'hum': 'cover',          # 10x
+    'tuamin': 'cover',       # 18x - cover/wrap (1Ki 19:13 "wrapped face")
     'taka': 'truly',         # 9x
     'tanau': 'orphan',       # 9x (noun)
     've': 'do',              # 9x
@@ -1985,6 +1986,7 @@ NOUN_STEMS = {
     'sang': 'high',          # 209
     'nin': 'day',            # 200 variant
     'bawng': 'cattle',       # 31x + many compounds (bawngtal, bawngpi, etc.)
+    'tuuno': 'lamb',         # 127x - young sheep (Gen 22:7, 2 Sam 12:6)
     'ganbuk': 'fold',        # animal fold/pen
     'kilungso': 'wait.patiently',  # rest in the LORD
     'phuang': 'upright',     # perfect/upright
@@ -3158,7 +3160,7 @@ PROPER_NOUNS = {
     'timon', 'timotheus', 'timothy', 'tiphsah', 'tiras', 'tirathite', 'tirhakah', 'tirhanah', 'tiria', 'tirshatha',
     'tirzah', 'tishbite', 'titus', 'toah', 'tob', 'tobadonijah', 'tobiah', 'tobijah', 'tochen', 'tofeth',
     'togarmah', 'tohu', 'toi', 'tokhath', 'tola', 'tolad', 'tolaite', 'tophel', 'tophet', 'topheth',
-    'tou', 'trachonitis', 'troas', 'trogyllium', 'trofimas', 'trophimus', 'tubal', 'tubal-cain', 'tuuno', 'tychicus',
+    'tou', 'trachonitis', 'troas', 'trogyllium', 'trofimas', 'trophimus', 'tubal', 'tubal-cain', 'tychicus',
     'tyrannus', 'tyre-te', 'tyros', 'tyrus',
     'ucal', 'uel', 'ulai', 'ulam', 'ulla', 'ummah', 'unni', 'unno', 'uphaz', 'uppaz',
     'ur', 'urbane', 'urbanus', 'uri', 'uriah', 'urias', 'uriel', 'urijah', 'urim', 'uthai',
@@ -7930,7 +7932,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thatlum': ('that-lum', 'kill-all'),                # 25x - "kill all"
         'milian': ('mi-lian', 'person-great'),              # 25x - "great person"
         'mul': ('mul', 'hair'),                             # 24x - "hair"
-        'tuunote': ('tuuno-te', 'child-PL'),                # 24x - "children"
+        'tuunote': ('tuuno-te', 'lamb-PL'),                 # 24x - "lambs"
         
         # === Session 4 Round 5: More compounds ===
         'paipihto': ('paipih-to', 'accompany-sit'),         # 24x - "accompany"
@@ -8895,6 +8897,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lahtel': ('lah-tel', 'take-spread'),                 # 7x - compound
         'kuumpi': ('kuum-pi', 'bow-big'),                     # 7x - "great bow"
         'kop': ('kop', 'pair'),                               # 7x - classifier for pairs (Gen 7:2 "seven pairs")
+        'kialo': ('ki-alo', 'REFL-fall'),                     # 5x - "fall" (1 Sam 14:45 "shall not fall")
+        'tungnungte': ('tung-nung-te', 'upper-back-PL'),      # 5x - "upper springs/chambers" (Josh 15:19)
         
         # Session 5 Round 3: More partial word fixes
         'khausai': ('khua-sai', 'spirit-voice'),              # 12x - "stringed instrument"

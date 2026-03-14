@@ -236,6 +236,17 @@ SEMANTIC_MAP = {
     'righteousness': {'righteousness', 'righteous', 'just'},
     'flesh': {'flesh', 'body'},
     'mouth': {'mouth', 'lips'},
+    
+    # Worship/religious actions (Round 192g)
+    'worship': {'worship', 'worshipped', 'bow', 'bowed', 'praise', 'praised'},
+    'follow': {'follow', 'followed', 'after'},
+    'able': {'able', 'can', 'could', 'may'},
+    'forever': {'ever', 'evermore', 'forever', 'everlasting', 'eternal'},
+    'jesuh': {'jesus'},
+    
+    # Animals
+    'lamb': {'lamb', 'lambs', 'sheep'},
+    'cattle': {'cattle', 'ox', 'oxen', 'cow', 'herd', 'herds'},
 }
 
 # KJV stopwords (function words to ignore)
