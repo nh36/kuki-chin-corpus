@@ -173,6 +173,39 @@ SEMANTIC_MAP = {
     'put': {'put', 'set', 'place', 'placed'},
     'deliver': {'deliver', 'delivered', 'save', 'saved'},
     'see.i': {'see', 'saw', 'seen', 'behold'},
+    
+    # Additional verb tenses (Round 192c)
+    'answer': {'answer', 'answered'},
+    'call': {'call', 'called', 'calling'},
+    'cast': {'cast', 'casting'},
+    'do': {'do', 'did', 'done', 'doing'},
+    'eat': {'eat', 'ate', 'eaten', 'eating'},
+    'fall': {'fall', 'fell', 'fallen'},
+    'fear': {'fear', 'feared', 'afraid'},
+    'find': {'find', 'found'},
+    'keep': {'keep', 'kept', 'keeping'},
+    'kill': {'kill', 'killed', 'slay', 'slew', 'slain'},
+    'open': {'open', 'opened', 'opening'},
+    'return': {'return', 'returned'},
+    'rise': {'rise', 'rose', 'risen'},
+    'sit': {'sit', 'sat'},
+    'stand': {'stand', 'stood', 'standing'},
+    'turn': {'turn', 'turned'},
+    'walk': {'walk', 'walked', 'walking'},
+    'write': {'write', 'wrote', 'written'},
+    
+    # Nouns needing plural forms
+    'house': {'house', 'houses', 'household'},
+    'inn': {'house', 'houses', 'household'},  # Tedim 'inn' = house
+    'servant': {'servant', 'servants'},
+    'field': {'field', 'fields'},
+    'gate': {'gate', 'gates'},
+    'offering': {'offering', 'offerings', 'sacrifice', 'sacrifices'},
+    'power': {'power', 'powers', 'might', 'strength'},
+    'iniquity': {'iniquity', 'iniquities', 'sin', 'sins'},
+    'righteousness': {'righteousness', 'righteous', 'just'},
+    'flesh': {'flesh', 'body'},
+    'mouth': {'mouth', 'lips'},
 }
 
 # KJV stopwords (function words to ignore)
@@ -208,6 +241,16 @@ KJV_STOPWORDS = {
     'let', 'now', 'even', 'also', 'only', 'just', 'still',
     'very', 'much', 'more', 'most', 'less', 'least',
     'again', 'here', 'there', 'away', 'out', 'off', 'up', 'down',
+    # Archaic reference words (Round 192c)
+    'thereof', 'therein', 'thereon', 'thereto', 'thereby', 'therefrom',
+    'whereof', 'wherein', 'whereon', 'whereto', 'whereby', 'wherefrom',
+    'henceforth', 'hitherto', 'thenceforth',
+    'whence', 'thence', 'hence',
+    'whatsoever', 'whosoever', 'wheresoever', 'whithersoever',
+    'likewise', 'nevertheless', 'notwithstanding',
+    'forthwith', 'straightway',
+    # More particles
+    'both', 'neither', 'either', 'same', 'such', 'other', 'another',
 }
 
 
