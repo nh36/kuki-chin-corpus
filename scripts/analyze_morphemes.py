@@ -2778,6 +2778,29 @@ NOUN_STEMS = {
     'siakkhiat': 'die.away', # 1x Prov 10:17 - "die away"
     'ekbuk': 'vomit',        # 1x Prov 10:27 - "vomit"
     'siakkhia': 'die.out',   # 1x Prov 10:28 - "die out"
+    
+    # === Round 193: Systematic hapax analysis ===
+    'nungguh': 'rump',       # 1x Lev 3:9 - "the whole rump" (animal anatomy)
+    'vutvang': 'hole',       # 1x 2Kgs 12:9 - "bored a hole" in chest lid
+    'simzel': 'invade',      # 1x 2Kgs 13:20 - "bands invaded the land"
+    'lahkim': 'pattern',     # 1x 2Kgs 16:10 - "the fashion/pattern of altar"
+    'balkhiat': 'rend',      # 1x 2Kgs 17:21 - "rent Israel from house of David"
+    'cilun': 'dwell.begin',  # 1x 2Kgs 17:25 - "beginning of their dwelling"
+    'kikhap': 'pledge',      # 1x 2Kgs 18:23 - "give pledges/wager"
+    'lehnawhzo': 'turn.away.able', # 1x 2Kgs 18:24 - "turn away the face"
+    'vankia': 'prey',        # 1x 2Kgs 21:14 - "become a prey and spoil"
+    'gat': 'weave',          # 1x 2Kgs 23:7 - "where women wove hangings"
+    # Note: thuap means 'span' (measurement) - see COMPOUND_WORDS line ~9950
+    # ngahthuap = get-allowance (compound) in 2Kgs 25:30
+    'tunu': 'daughter',      # 1x 1Chr 1:50 - variant of tanu (daughter)
+    'hansuah': 'stir.up',    # 1x 1Chr 5:26 - "stirred up the spirit"
+    'pheeng': 'pan',         # 1x 1Chr 9:31 - "things made in pans"
+    'thagol': 'height',      # 1x 1Chr 11:23 - "of great stature/height"
+    'phinna': 'provoke',     # 1x 2Kgs 23:26 - "provocations"
+    'nuak': 'return',        # 1x 2Sam 17:23 - "gat him home" (returned home)
+    'bulom': 'ruin',         # 1x 2Kgs 19:25 - "ruinous heaps"
+    'angkawm': 'adultery',   # 2x Jer 5:7, 9:2 - "committed adultery", "adulterers"
+    'ipip': 'endure',        # 2x Jer 20:9, Rom 9:22 - "forbearing/longsuffering"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15042,6 +15065,37 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bible': ('bible', 'FGN'),                                   # 4x - foreign word
         'tedim': ('tedim', 'Tedim'),                                 # 2x - language/place name
         'kristal': ('kristal', 'FGN'),                               # 2x - crystal (foreign)
+        
+        # Round 193: Systematic hapax compound forms
+        'sakhatin': ('sakhati-n', 'cause-ERG'),                      # 1x Exo 37:8 - out of/by means of
+        'lahkimna': ('lahkim-na', 'pattern-NMLZ'),                   # 1x 2Kgs 16:10 - "the pattern"
+        'kikhapna': ('kikhap-na', 'pledge-NMLZ'),                    # 1x 2Kgs 18:23 - "give pledges"
+        'zawdeuhte': ('zawdeuh-te', 'elder-PL'),                     # 1x 2Kgs 19:2 - "the elders"
+        'vankiate': ('vankia-te', 'prey-PL'),                        # 1x 2Kgs 21:14 - "prey and spoil"
+        'gatna': ('gat-na', 'weave-NMLZ'),                           # 1x 2Kgs 23:7 - "weaving place"
+        'ngahthuap': ('ngah-thuap', 'get-allowance'),                # 1x 2Kgs 25:30 - "his allowance"
+        'ngahthuapna': ('ngah-thuap-na', 'get-allowance-NMLZ'),      # 1x 2Kgs 25:30 - "allowance"
+        'pheengte': ('pheeng-te', 'pan-PL'),                         # 1x 1Chr 9:31 - "things in pans"
+        'satpukte': ('satpuk-te', 'smite-PL'),                       # 1x 2Kgs 12:21 - "those who smote"
+        'zaptelte': ('zaptel-te', 'swift-PL'),                       # 1x 1Kgs 4:28 - "dromedaries"
+        
+        # Contracted forms with curly apostrophe (U+2019)
+        "ve\u2019n": ("ve\u2019n", 'EMPH'),                          # 3x - emphatic/assertive particle
+        "ve'n": ("ve'n", 'EMPH'),                                    # ASCII variant
+        "nu\u2019ng": ("nu\u2019ng", 'COHORT'),                      # 2x - "let us" cohortative
+        "nu'ng": ("nu'ng", 'COHORT'),                                # ASCII variant  
+        "uh\u2019n": ("uh\u2019n", 'PL.EMPH'),                        # 1x - plural emphatic
+        "uh'n": ("uh'n", 'PL.EMPH'),                                 # ASCII variant
+        
+        # More Round 193 hapax compounds
+        'khennihte': ('khen-nih-te', 'divide-two-PL'),               # 1x 2Kgs 11:7 - "two parts"
+        'thukuppihte': ('thu-kup-pih-te', 'word-place-APPL-PL'),     # 1x 2Kgs 25:19 - counselors
+        'phinnate': ('phinna-te', 'provoke-PL'),                     # 1x 2Kgs 23:26 - "provocations"
+        'ninbulomtangin': ('nin-bulom-tang-in', 'day-ruin-hang-ERG'), # 1x 2Kgs 19:25 - ruinous heaps
+        'phualte': ('phual-te', 'camp-PL'),                          # 4x - camps/journeys (Num 33)
+        'ipipna': ('ipip-na', 'endure-NMLZ'),                        # 2x - forbearing/patience
+        'hiau': ('hiau', 'directly'),                                # 1x - went directly (Luke 4:30)
+        'hiauhiau': ('hiau-hiau', 'gently-REDUP'),                   # 1x - softly (Acts 27:13)
     }
 
 
