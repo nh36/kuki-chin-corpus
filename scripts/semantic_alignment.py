@@ -30,16 +30,20 @@ GRAMMATICAL = {
     # TAM markers
     'pfv', 'ipfv', 'cont', 'perf', 'pst', 'fut', 'prog', 'compl',
     'prosp', 'prosp.erg',  # prospective (ding)
+    'purp', 'purp.erg',    # purposive
     # Derivational
     'nmlz', 'caus', 'appl', 'refl', 'recp', 'pass',
+    'neg.nom',  # negative nominalizer
     # Plurals/Number
-    'pl', 'sg', 'du', 'pl.imp',
-    # Person
-    '1sg', '2sg', '3sg', '1pl', '2pl', '3pl', '3→1',
-    '3sg.pro', '3pl.pro', '1sg.pro', '2sg.pro',  # pronouns
+    'pl', 'sg', 'du', 'pl.imp', 'pl.poss',
+    # Person/pronouns
+    '1sg', '2sg', '3sg', '1pl', '2pl', '3pl', '3→1', '1sg→3',
+    '3sg.pro', '3pl.pro', '1sg.pro', '2sg.pro', '2pl.pro', '1pl.pro',
+    '3pl.pro.poss', '1pl.incl',
     # Discourse
     'top', 'foc', 'emph', 'q', 'decl', 'imp', 'opt',
     'neg.emph', 'neg.erg',  # negation variants
+    'quot',  # quotative
     # Connectives
     'and', 'or', 'but', 'rel', 'conj', 'comp', 'and/or',
     # Copula/existential
@@ -48,17 +52,18 @@ GRAMMATICAL = {
     'iter', 'away', 'enter', 'exit', 'intens', 'abil',
     # Other grammatical
     'aux', 'det', 'dem', 'poss', 'neg', 'part', 'red',
-    # Common misparses to filter
+    # Common functional glosses to filter
     'house', 'on', 'too', 'also', 'that', 'then', 'amen',
     # Adverbs/discourse  
     'therefore', 'because', 'although', 'beside', 'very',
-    'this', 'all', 'one', 'like', 'inside',
-    # Unanalyzed Tedim words (need to be filtered separately)
+    'this', 'all', 'one', 'like', 'inside', 'now',
+    'what/like', 'each', 'only', 'among', 'exp',
+    # Unanalyzed Tedim words (proper handling needed)
     'ama',  # 3sg pronoun
-    'person/rel',  # relative marker
 }
 
 # Semantic equivalences: Tedim gloss -> KJV word stems
+# IMPORTANT: Only add mappings where the Tedim gloss is VERIFIED to mean the KJV concept
 SEMANTIC_MAP = {
     # Divine terms
     'pasian': {'god', 'lord', 'gods'},
@@ -88,10 +93,16 @@ SEMANTIC_MAP = {
     'midst': {'midst', 'among', 'middle'},
     'town': {'city', 'town', 'place'},
     
+    # Body/emotion - VERIFIED: lung="feel" is Tedim for heart/emotion center
+    'feel': {'heart', 'hearts', 'mind', 'soul'},  # lung -> feel
+    'joy': {'joy', 'glad', 'gladness', 'rejoice', 'rejoiced'},  # lungdam -> joy
+    'sorrow': {'sorrow', 'grief', 'sad', 'mourn', 'mourning'},  # lungkham -> sorrow
+    'heart-pleased': {'peace', 'content', 'pleased'},  # lungnuam -> heart-pleased
+    
     # Communication
-    'say': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'call', 'called'},
+    'say': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'call', 'called', 'spake'},
     'say.nom': {'saying', 'word', 'words'},
-    'speak': {'say', 'said', 'speak', 'spoke', 'tell', 'told'},
+    'speak': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'spake'},
     'word': {'word', 'words', 'speak', 'saying', 'thing', 'things', 'matter'},
     'name': {'name', 'named', 'call', 'called'},
     'voice': {'voice', 'cry', 'sound'},
@@ -110,9 +121,10 @@ SEMANTIC_MAP = {
     'holy': {'holy', 'sacred', 'sanctify'},
     'old': {'old', 'elder', 'ancient'},
     
-    # People
+    # People - VERIFIED: mi="person/REL", mipa="man", mite="people"
     'man': {'man', 'men', 'person', 'people', 'adam'},
     'person': {'man', 'men', 'person', 'people', 'one'},
+    'person/rel': {'man', 'men', 'person', 'people', 'one', 'who', 'which'},  # mi often = REL marker
     'people': {'people', 'man', 'men', 'nation', 'nations'},
     'woman': {'woman', 'women', 'wife', 'wives'},
     'son': {'son', 'sons', 'child', 'children'},
@@ -121,11 +133,12 @@ SEMANTIC_MAP = {
     'mother': {'mother', 'mothers'},
     'brother': {'brother', 'brothers', 'brethren'},
     'king': {'king', 'kings', 'reign', 'royal'},
+    'household': {'house', 'household', 'family'},  # innkuan -> household
     
     # Actions
     'come': {'come', 'came', 'coming'},
     'go': {'go', 'went', 'gone', 'going', 'depart'},
-    'pai': {'go', 'went', 'gone', 'walk', 'walked'},  # Tedim verb
+    'pai': {'go', 'went', 'gone', 'walk', 'walked'},  # Tedim verb (currently unanalyzed)
     'give': {'give', 'gave', 'given'},
     'take': {'take', 'took', 'taken'},
     'make': {'make', 'made', 'making'},
@@ -136,6 +149,30 @@ SEMANTIC_MAP = {
     
     # Mental/cognitive
     'reason': {'reason', 'cause', 'because', 'why'},
+    
+    # Direct matches that need explicit mapping for plurals/forms
+    'have': {'have', 'had', 'hath', 'having'},
+    'time': {'time', 'times', 'season', 'seasons'},
+    'face': {'face', 'faces', 'countenance'},
+    'sin': {'sin', 'sins', 'sinned', 'transgression', 'iniquity'},
+    'day': {'day', 'days'},
+    'eye': {'eye', 'eyes'},
+    'hand': {'hand', 'hands'},
+    'foot': {'foot', 'feet'},
+    
+    # Life/living
+    'live': {'live', 'lived', 'life', 'living', 'alive'},
+    'evil': {'evil', 'wicked', 'wickedness'},
+    
+    # More verbs
+    'send': {'send', 'sent'},
+    'send.away': {'send', 'sent', 'away'},
+    'get': {'get', 'got', 'receive', 'received', 'obtain'},
+    'finish': {'finish', 'finished', 'end', 'ended', 'complete'},
+    'cut': {'cut', 'cutting'},
+    'put': {'put', 'set', 'place', 'placed'},
+    'deliver': {'deliver', 'delivered', 'save', 'saved'},
+    'see.i': {'see', 'saw', 'seen', 'behold'},
 }
 
 # KJV stopwords (function words to ignore)
@@ -187,10 +224,11 @@ def extract_tedim_content(verse_text: str) -> dict:
         seg, gloss = analyze_word(word)
         
         # Handle compound glosses with dots (e.g., 'cause.birth')
+        # Also handle parentheses in glosses like '(heart-count)'
         for g in re.split(r'[-~]', gloss):
             g_clean = g.strip('?').lower()
-            # Remove trailing apostrophes
-            g_clean = g_clean.rstrip("'")
+            # Remove trailing apostrophes and parentheses
+            g_clean = g_clean.strip("'()")
             
             # Skip unknowns, grammatical, single chars
             if (g_clean and 
