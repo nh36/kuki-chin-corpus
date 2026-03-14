@@ -138,17 +138,28 @@ SEMANTIC_MAP = {
     # Actions
     'come': {'come', 'came', 'coming'},
     'go': {'go', 'went', 'gone', 'going', 'depart'},
-    'pai': {'go', 'went', 'gone', 'walk', 'walked'},  # Tedim verb (currently unanalyzed)
+    'pai': {'go', 'went', 'gone', 'walk', 'walked'},  # Tedim verb
     'give': {'give', 'gave', 'given'},
+    'give.to': {'give', 'gave', 'given'},  # Tedim piak
     'take': {'take', 'took', 'taken'},
     'make': {'make', 'made', 'making'},
     'bring': {'bring', 'brought'},
     'arrive': {'come', 'came', 'arrive', 'arrived', 'reach'},
+    'arrive-appl': {'bring', 'brought'},  # tunpih = bring (arrive-APPL)
     'die': {'die', 'died', 'dead', 'death'},
     'want': {'desire', 'want', 'seek'},
+    'carry.on.back': {'bring', 'brought', 'carry', 'carried', 'bear', 'bore'},
     
     # Mental/cognitive
     'reason': {'reason', 'cause', 'because', 'why'},
+    'think': {'think', 'thought', 'consider', 'considered'},
+    'suffer': {'suffer', 'suffered', 'afflict', 'afflicted', 'trouble'},
+    
+    # Soul/spirit terms
+    'soul': {'soul', 'souls'},
+    'spirit': {'spirit', 'spirits', 'ghost'},
+    'life': {'life', 'live', 'living', 'soul'},
+    'nuntakna': {'life', 'soul', 'living'},  # Tedim for life/soul
     
     # Direct matches that need explicit mapping for plurals/forms
     'have': {'have', 'had', 'hath', 'having'},
