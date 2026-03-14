@@ -15659,17 +15659,27 @@ def audit_phonotactics(verbose: bool = False) -> List[Tuple[str, str, str]]:
 
 def gloss_sentence(sentence: str) -> List[Tuple[str, str, str]]:
     """
-    Gloss a full sentence.
+    Gloss a full sentence with contextual disambiguation.
     
     Returns:
         List of (original, segmented, gloss) tuples
+    
+    Contextual patterns handled:
+    - "min X" (name X): X is treated as proper noun even if homophonous with common word
+      e.g., "min Pai" = "name Pai" (place name), not "name go"
     """
     words = sentence.split()
     results = []
     
-    for word in words:
-        segmented, gloss = analyze_word(word)
-        results.append((word, segmented, gloss))
+    for i, word in enumerate(words):
+        # Contextual disambiguation: word after "min" (name) is a proper noun
+        # This handles cases like "Ama khuapi min Pai hi" where Pai is a place name
+        if i > 0 and words[i-1].lower() == 'min' and word[0].isupper():
+            # Word follows "min" and is capitalized - treat as proper noun
+            results.append((word, word, word.upper()))
+        else:
+            segmented, gloss = analyze_word(word)
+            results.append((word, segmented, gloss))
     
     return results
 
