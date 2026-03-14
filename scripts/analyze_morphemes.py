@@ -3083,7 +3083,8 @@ PROPER_NOUNS = {
     'omri', 'on', 'onam', 'onan', 'onesiforas', 'onesimus', 'ono', 'ophel', 'ophir', 'ophni',
     'ophrah', 'oreb', 'oren', 'orion', 'ornan', 'orpah', 'ortygometra', 'osaias', 'oseas', 'osee',
     'osnappar', 'othni', 'othniel', 'ozem', 'ozias', 'ozni',
-    'paarai', 'padanaram', 'paddanaram', 'padon', 'pagiel', 'pahathmoab', 'pai', 'palal', 'palestine', 'pallu',
+    'paarai', 'padanaram', 'paddanaram', 'padon', 'pagiel', 'pahathmoab', 'palal', 'palestine', 'pallu',
+    # Note: 'pai' removed - conflicts with verb 'pai' (go, 2998x). Place name only 1x in 1Ch 1:50.
     'palti', 'paltiel', 'paltite', 'pamfilia', 'pannag', 'paphos', 'parah', 'paran', 'parbar', 'parmashta',
     'parmenas', 'parnach', 'parosh', 'parshandatha', 'partahia', 'parthian', 'paruah', 'parvaim', 'pasach', 'pasdammim',
     'paseah', 'pashhur', 'pathros', 'pathrusim', 'patmos', 'patrobas', 'pau', 'pedael', 'pedahel', 'pedahzur',
@@ -3519,12 +3520,29 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
 
 
 def is_proper_noun(word: str) -> bool:
-    """Check if word is a proper noun (case-insensitive matching)."""
+    """Check if word is a proper noun (case-insensitive matching).
+    
+    Returns True only if word is in PROPER_NOUNS set OR is capitalized AND
+    not a known common word (verb/noun stem). This prevents sentence-initial
+    common words like 'Pai' (go) from being treated as proper nouns.
+    """
     clean = clean_word(word)
     if not clean:
         return False
-    # Check original case, title case, and first-letter uppercase
-    return clean in PROPER_NOUNS or clean.title() in PROPER_NOUNS or clean[0].isupper()
+    clean_lower = clean.lower()
+    
+    # Explicit proper noun check
+    if clean in PROPER_NOUNS or clean.title() in PROPER_NOUNS:
+        return True
+    
+    # If capitalized, only treat as proper noun if NOT a known common word
+    if clean[0].isupper():
+        # Check if lowercase form is in common word dictionaries
+        if clean_lower in VERB_STEMS or clean_lower in NOUN_STEMS or clean_lower in FUNCTION_WORDS:
+            return False  # Known common word, not a proper noun
+        return True  # Unknown capitalized word, treat as proper noun
+    
+    return False
 
 
 # =============================================================================
