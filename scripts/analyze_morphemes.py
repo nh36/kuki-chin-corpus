@@ -2745,7 +2745,8 @@ NOUN_STEMS = {
     'manlan': 'hastily',     # 1x Gen 27:20 - appears as manlan not manlang
     'tuami': 'face',         # (from Round 190k) - face/countenance
     'sakhati': 'cause',      # 1x Exo 37:8 - variant of sak
-    'ih': 'lie.down',        # ih-na = sleeping place (kaihna = 1SG-lie.down-NMLZ)
+    # 'ih': REMOVED - was incorrectly glossed as 'lie.down'. kaihna actually means 'furrow/plow-area'
+    'kaihna': 'furrow',      # 1x 1Sam 14:14 - "half acre" (area a yoke of oxen can plow)
     'zalh': 'lazy',          # 1x 2Kgs 17:19 - "slothful"
     'leibeel': 'lazy.person', # 1x 2Kgs 17:28 - "sluggard"
     'bepi': 'idle',          # 1x 2Kgs 17:28 - "idle person"
@@ -2769,7 +2770,7 @@ NOUN_STEMS = {
     'kun': 'bow',            # 1x Prov 5:18 - "bow down" (kunna = bow-NMLZ)
     'nungdelh': 'alive',     # 1x Prov 5:20 - "living"
     'kitankhiat': 'depart.from', # 1x Prov 6:31 - "departed from"
-    'kial': 'return',        # 1x Prov 7:12 - "returning" (kialna = return-NMLZ)
+    'kial': 'hunger',        # 36x - "want/hunger/famine" (gilkial = stomach-hunger = bowels)
     'khuacing': 'town.gate', # 1x Prov 9:14 - "city gate"
     'meltheih': 'know.face', # 1x Prov 10:11 - "recognize"
     'siakkhiat': 'die.away', # 1x Prov 10:17 - "die away"
@@ -4131,7 +4132,7 @@ ATOMIC_GLOSSES = {
     # Round 178: Additional atomic glosses (batch 2)
     'thang': 'famous',     # minthang = name-famous = fame
     'sia': 'evil',         # minsia = name-evil = dishonor
-    'kial': 'turn',        # gilkial = stomach-turn = bowels
+    'kial': 'hunger',      # gilkial = stomach-hunger = bowels
     'sel': 'quarrel',      # kisel = REFL-quarrel = strife
     'phawk': 'remember',   # kiphawk = REFL-remember = remembrance
     'khih': 'bind',        # kikhih = REFL-bind = binding
