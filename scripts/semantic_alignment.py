@@ -64,6 +64,9 @@ GRAMMATICAL = {
     'every', 'some', 'any', 'many', 'few', 'much',
     # Temporal/locational
     'past', 'before', 'after', 'still', 'yet', 'again',
+    # Aspect markers (Round 192f)
+    'imm', 'seq',  # immediate, sequential aspect
+    'really',  # intensifier
     # Unanalyzed Tedim words (proper handling needed)
     'ama',  # 3sg pronoun
     # Numbers (handled separately, filter here)
@@ -148,6 +151,8 @@ SEMANTIC_MAP = {
     'brother': {'brother', 'brothers', 'brethren'},
     'king': {'king', 'kings', 'reign', 'royal'},
     'household': {'house', 'household', 'family'},  # innkuan -> household
+    'pair': {'pair', 'two', 'male', 'female'},  # kop = classifier for pairs
+    'male.and.female': {'male', 'female', 'pair'},  # nupa = male and female pair
     
     # Actions
     'come': {'come', 'came', 'coming'},
@@ -192,7 +197,7 @@ SEMANTIC_MAP = {
     # More verbs
     'send': {'send', 'sent'},
     'send.away': {'send', 'sent', 'away'},
-    'get': {'get', 'got', 'receive', 'received', 'obtain'},
+    'get': {'get', 'got', 'gotten', 'receive', 'received', 'obtain', 'obtained'},
     'finish': {'finish', 'finished', 'end', 'ended', 'complete'},
     'cut': {'cut', 'cutting'},
     'put': {'put', 'set', 'place', 'placed'},

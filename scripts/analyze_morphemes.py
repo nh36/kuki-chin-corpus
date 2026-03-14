@@ -8271,7 +8271,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tacilte': ('ta-cil-te', 'stay-first-PL'),           # 14x - "firstlings"
         'thumnate': ('thum-na-te', 'three-NMLZ-PL'),         # 14x - compound
         'tuiciin': ('tui-ciin', 'water-?'),                  # 14x - compound
-        'nupa': ('nu-pa', 'mother-father'),                  # 14x - "parents"
+        'nupa': ('nu-pa', 'male.and.female'),                # 14x - "the male and female" (pair, Gen 7:2)
         'naupaii': ('nau-paii', 'child-?'),                  # 14x - compound
         'midik': ('mi-dik', 'person-righteous'),             # 14x - "righteous person"
         'hukna': ('huk-na', 'cover-NMLZ'),                   # 14x - "covering"
@@ -8894,7 +8894,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'leinuai-a': ('lei-nuai-a', 'earth-below-LOC'),       # 7x - "under the earth"
         'lahtel': ('lah-tel', 'take-spread'),                 # 7x - compound
         'kuumpi': ('kuum-pi', 'bow-big'),                     # 7x - "great bow"
-        'kop': ('kop', 'edge'),                               # 7x - "edge/border"
+        'kop': ('kop', 'pair'),                               # 7x - classifier for pairs (Gen 7:2 "seven pairs")
         
         # Session 5 Round 3: More partial word fixes
         'khausai': ('khua-sai', 'spirit-voice'),              # 12x - "stringed instrument"
