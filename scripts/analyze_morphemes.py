@@ -2740,6 +2740,41 @@ NOUN_STEMS = {
     'thuko': 'lie.down',     # 1x 2Sam 15:28 - "tarry"
     'phehkeu': 'scatter',    # 1x 2Sam 16:1 - "scatter"
     'uisi': 'viper',         # 1x 2Sam 16:9 - "dead dog"
+    
+    # === Round 190l: Remaining suffix/stem fixes ===
+    'manlan': 'hastily',     # 1x Gen 27:20 - appears as manlan not manlang
+    'tuami': 'face',         # (from Round 190k) - face/countenance
+    'sakhati': 'cause',      # 1x Exo 37:8 - variant of sak
+    'ih': 'lie.down',        # ih-na = sleeping place (kaihna = 1SG-lie.down-NMLZ)
+    'zalh': 'lazy',          # 1x 2Kgs 17:19 - "slothful"
+    'leibeel': 'lazy.person', # 1x 2Kgs 17:28 - "sluggard"
+    'bepi': 'idle',          # 1x 2Kgs 17:28 - "idle person"
+    'ngel': 'wander',        # 1x 2Kgs 18:11 - "wandering"
+    'makhelh': 'backslide',  # 1x 2Kgs 18:23 - "backsliding"
+    'kamneem': 'soft.word',  # 1x 2Kgs 19:7 - "soft words"
+    'awngsuk': 'open.mouth', # 1x 2Kgs 22:14 - "open wide"
+    'psap': 'sob',           # 1x Psa 2:46 - "sobbing" (foreign pattern)
+    'zaptel': 'flutter',     # 1x Psa 4:28 - "fluttering"
+    'cipnelh': 'cringe',     # 1x Psa 20:30 - "cringe"
+    'petlum': 'swallow.up',  # 1x Psa 20:36 - "swallow up"
+    'zakphet': 'hearing',    # 1x Psa 21:16 - "hearing"
+    'samulpuan': 'sackcloth', # 1x Prov 1:8 - "sackcloth"
+    'tatolh': 'revolve',     # 1x Prov 2:21 - "revolving"
+    'lukolh': 'roll.up',     # 1x Prov 2:23 - "roll up"
+    'pomlai': 'middle',      # 1x Prov 3:3 - "midst"
+    'ganpi': 'great.one',    # 1x Prov 3:17 - "great ones"
+    'kuantoh': 'glean.together', # 1x Prov 3:21 - "gleaning"
+    'mehbeel': 'ember',      # 1x Prov 4:39 - "ember/coal"
+    'atnen': 'offering',     # 1x Prov 4:39 - "offering" (variant)
+    'kun': 'bow',            # 1x Prov 5:18 - "bow down" (kunna = bow-NMLZ)
+    'nungdelh': 'alive',     # 1x Prov 5:20 - "living"
+    'kitankhiat': 'depart.from', # 1x Prov 6:31 - "departed from"
+    'kial': 'return',        # 1x Prov 7:12 - "returning" (kialna = return-NMLZ)
+    'khuacing': 'town.gate', # 1x Prov 9:14 - "city gate"
+    'meltheih': 'know.face', # 1x Prov 10:11 - "recognize"
+    'siakkhiat': 'die.away', # 1x Prov 10:17 - "die away"
+    'ekbuk': 'vomit',        # 1x Prov 10:27 - "vomit"
+    'siakkhia': 'die.out',   # 1x Prov 10:28 - "die out"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
