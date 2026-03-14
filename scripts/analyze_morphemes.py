@@ -8902,6 +8902,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ate': ('a-te', 'NOM-PL'),                            # 3x - "those" (nominalizer + plural)
         'nasiat': ('nasiat', 'severe.II'),                    # 2x - "severe/great" (Stem II of nasia)
         'huate': ('hua-te', 'these-PL'),                      # 2x - "these/them" (Ezek 8:17, Mark 14:70)
+        'tunpihsuk': ('tun-pih-suk', 'arrive-APPL-CAUS'),     # 1x - "bring" (Deut 1:25)
+        'tunpite': ('tunpi-te', 'hornet-PL'),                 # 1x - "hornets" (Josh 24:12)
+        'meette': ('meet-te', 'shearer-PL'),                  # 1x - "shearers" (1 Sam 25:11)
+        'halte': ('hal-te', 'burn-PL'),                       # 1x - "those who burned" (2 Ki 23:5)
         
         # Session 5 Round 3: More partial word fixes
         'khausai': ('khua-sai', 'spirit-voice'),              # 12x - "stringed instrument"

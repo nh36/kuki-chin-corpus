@@ -142,11 +142,12 @@ SEMANTIC_MAP = {
     'old': {'old', 'elder', 'ancient'},
     
     # People - VERIFIED: mi="person/REL", mipa="man", mite="people"
-    'man': {'man', 'men', 'person', 'people', 'adam'},
+    'man': {'man', 'men', 'person', 'people', 'adam', 'male'},
     'person': {'man', 'men', 'person', 'people', 'one'},
     'person/rel': {'man', 'men', 'person', 'people', 'one', 'who', 'which'},  # mi often = REL marker
     'people': {'people', 'man', 'men', 'nation', 'nations'},
-    'woman': {'woman', 'women', 'wife', 'wives'},
+    'woman': {'woman', 'women', 'wife', 'wives', 'female'},
+    'husband': {'husband', 'man', 'male'},
     'son': {'son', 'sons', 'child', 'children'},
     'child': {'child', 'children', 'son', 'sons'},
     'father': {'father', 'fathers'},
@@ -155,7 +156,8 @@ SEMANTIC_MAP = {
     'king': {'king', 'kings', 'reign', 'royal'},
     'household': {'house', 'household', 'family'},  # innkuan -> household
     'pair': {'pair', 'two', 'male', 'female'},  # kop = classifier for pairs
-    'male.and.female': {'male', 'female', 'pair'},  # nupa = male and female pair
+    'female-male': {'male', 'female', 'pair', 'husband', 'wife'},  # nupa = male and female pair
+    'male.and.female': {'male', 'female', 'pair'},  # legacy
     
     # Actions
     'come': {'come', 'came', 'coming'},
@@ -182,6 +184,8 @@ SEMANTIC_MAP = {
     'spirit': {'spirit', 'spirits', 'ghost'},
     'life': {'life', 'live', 'living', 'soul'},
     'nuntakna': {'life', 'soul', 'living'},  # Tedim for life/soul
+    'dead.pl.poss': {'dead', 'death', 'hell', 'grave', 'destruction'},  # misite' = the dead's
+    'height': {'naked', 'bare', 'open', 'exposed'},  # kilang = visible/exposed
     
     # Direct matches that need explicit mapping for plurals/forms
     'have': {'have', 'had', 'hath', 'having'},
