@@ -2673,9 +2673,42 @@ NOUN_STEMS = {
     'ninkikhol': 'daily',    # 1x Deu 13:16 - "day by day"
     'ga': 'hook',            # 1x Deu 19:3 - "hook/goad"
     
-    # === Round 190k: Samuel hapax ===
+    # === Round 190k: Samuel hapax with disambiguation ===
     'tuami': 'face',         # 1x Gen 30:40 - "face/countenance"
-    # 'teem': REMOVED - conflicts with teembaw (ark, 124x)
+    
+    # Disambiguation: Add short stems WITH explicit compounds to prevent over-parsing
+    # Pattern: Add the short stem, then add longer words that shouldn't be parsed with it
+    
+    # teem (swell) - add teembaw as explicit compound
+    'teem': 'swell',         # 1x Num 5:27 - "belly swell"
+    'teembaw': 'ark',        # 124x - DISAMBIGUATION: ark, not swell+baw
+    
+    # gih (pierce) - gihna means 'tremble' not 'pierce-NMLZ'
+    'gih': 'pierce',         # 1x 2Sam 14:26 - "pierce"
+    'gihna': 'tremble',      # 18x - DISAMBIGUATION: tremble (separate root)
+    
+    # ho (crowd) - hong/hon/hoih are separate roots
+    'ho': 'crowd',           # 1x 2Sam 3:27 - "crowd"
+    # hong/hon/hoih already in dictionary as separate stems - no conflict if ho is checked last
+    
+    # dawt (love) - dawtna/dawtsak are compounds of dawt
+    'dawt': 'love',          # 1x 2Sam 2:16 - "beloved"
+    'dawtna': 'love.NMLZ',   # Already correctly parsed as dawt-na, this is redundant but safe
+    
+    # huat (hate) - same as dawt, compounds work
+    'huat': 'hate',          # 1x 2Sam 10:6 - "hatred"
+    
+    # baak (debt) - ba is separate root, baak shouldn't parse as ba+ak
+    'baak': 'debt',          # 1x 2Sam 6:19 - "debt"
+    
+    # lee (which) - leeng is chariot (separate root)
+    'lee': 'which.REL',      # 1x 2Sam 2:18 - "who/which"  
+    'leeng': 'chariot',      # 169x - DISAMBIGUATION: chariot (separate root)
+    'leenggahzu': 'chariot.wheel', # Already compound
+    'leenggui': 'chariot.body',    # Already compound
+    
+    # meet already exists in dictionary - no need to add
+    
     'khitah': 'chain.for',   # 1x Num 25:13 - "chained"
     'ihkhiatsak': 'lie.down', # 1x Deu 25:9 - "lie down"
     'laitengun': 'midst',    # 1x Deu 31:11 - "in the midst"
@@ -2684,7 +2717,6 @@ NOUN_STEMS = {
     'isuksak': 'restore',    # 1x 1Sam 21:13 - "restore"
     'kiselsim': 'humble',    # 1x 1Sam 23:23 - "humbled"
     'metna': 'lick',         # 1x 1Sam 25:4 - "licking"
-    # 'meet': REMOVED - conflicts with existing meet (profit)
     'theimoh': 'know.not',   # 1x 1Sam 25:18 - "not knowing"
     'lotkhiat': 'draw.out',  # 1x 1Sam 25:29 - "sling out"
     'zahkoh': 'fear',        # 1x 1Sam 25:39 - "feared"
@@ -2695,20 +2727,14 @@ NOUN_STEMS = {
     'dawtlet': 'secretly',   # 1x 1Sam 31:4 - "secretly"
     'khuakulhah': 'stronghold', # 1x 1Sam 31:10 - "fortress"
     'banbulh': 'bracelet',   # 1x 2Sam 1:10 - "bracelet"
-    # 'dawt': REMOVED - conflicts with dawtna, dawtsak (love compounds)
-    # 'lee': REMOVED - conflicts with leeng (chariot, 169x)
     'lengsuak': 'prince',    # 1x 2Sam 2:23 - "nobleman"
     'bangtan': 'shield',     # 1x 2Sam 2:26 - "shield"
     'sawtlai': 'long.time',  # 1x 2Sam 2:26 - "long while"
-    # 'ho': REMOVED - conflicts with hong (come, 15358x), hon (flock, 147x)
     'susiazaw': 'worse',     # 1x 2Sam 4:11 - "more wicked"
     'lathuah': 'smite',      # 1x 2Sam 5:13 - "smite"
-    # 'baak': REMOVED - conflicts with existing ba (owe)
     'pulak': 'declare',      # 1x 2Sam 7:27 - "reveal"
-    # 'huat': REMOVED - conflicts with huatna, huatte compounds
     'zothawh': 'accomplish', # 1x 2Sam 11:23 - "prevail"
     'maipuksuk': 'bow.face', # 1x 2Sam 14:22 - "bow face down"
-    # 'gih': REMOVED - conflicts with gihna (tremble)
     'wivak': 'surround',     # 1x 2Sam 15:20 - "surround"
     'thuko': 'lie.down',     # 1x 2Sam 15:28 - "tarry"
     'phehkeu': 'scatter',    # 1x 2Sam 16:1 - "scatter"
@@ -8028,7 +8054,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'taina': ('ta-i-na', 'stay-?-NMLZ'),                # 18x - "dwelling"
         'ngahkhawm': ('ngah-khawm', 'get-together'),        # 18x - "gather"
         'thahatte': ('tha-hat-te', 'strength-hard-PL'),     # 18x - "strong ones"
-        'gihna': ('gih-na', 'tremble-NMLZ'),                # 18x - "trembling"
+        'gihna': ('gihna', 'tremble'),                       # 18x - DISAMBIGUATION: separate root, not gih-na
         'nidanga': ('ni-dang-a', 'day-other-LOC'),          # 18x - "other day"
         'nitaang': ('ni-taang', 'day-long'),                # 18x - "long day"
         'inntual': ('inn-tual', 'house-floor'),             # 18x - "house floor"
