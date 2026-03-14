@@ -83,6 +83,8 @@ SEMANTIC_MAP = {
     'kha': {'spirit', 'ghost'},
     'khrih': {'christ'},
     'khrist': {'christ'},
+    'kherub': {'cherub', 'cherubim', 'cherubims'},
+    'god': {'god', 'gods', 'lord'},
     
     # Creation/existence
     'cause.birth': {'create', 'created', 'make', 'made', 'birth', 'bear', 'bore'},
@@ -178,6 +180,10 @@ SEMANTIC_MAP = {
     'reason': {'reason', 'cause', 'because', 'why'},
     'think': {'think', 'thought', 'consider', 'considered'},
     'suffer': {'suffer', 'suffered', 'afflict', 'afflicted', 'trouble'},
+    'truly': {'truly', 'verily', 'indeed', 'truth', 'true'},
+    'true.word': {'truth', 'true', 'faithful', 'verily'},
+    'choose': {'choose', 'chose', 'chosen', 'elect'},
+    'sorrow': {'sorrow', 'grief', 'tribulation', 'trouble', 'affliction'},
     
     # Soul/spirit terms
     'soul': {'soul', 'souls'},
