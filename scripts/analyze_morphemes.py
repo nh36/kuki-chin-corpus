@@ -8899,6 +8899,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kop': ('kop', 'pair'),                               # 7x - classifier for pairs (Gen 7:2 "seven pairs")
         'kialo': ('ki-alo', 'REFL-fall'),                     # 5x - "fall" (1 Sam 14:45 "shall not fall")
         'tungnungte': ('tung-nung-te', 'upper-back-PL'),      # 5x - "upper springs/chambers" (Josh 15:19)
+        'ate': ('a-te', 'NOM-PL'),                            # 3x - "those" (nominalizer + plural)
+        'nasiat': ('nasiat', 'severe.II'),                    # 2x - "severe/great" (Stem II of nasia)
+        'huate': ('hua-te', 'these-PL'),                      # 2x - "these/them" (Ezek 8:17, Mark 14:70)
         
         # Session 5 Round 3: More partial word fixes
         'khausai': ('khua-sai', 'spirit-voice'),              # 12x - "stringed instrument"

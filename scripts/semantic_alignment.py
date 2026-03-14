@@ -117,11 +117,12 @@ SEMANTIC_MAP = {
     # Communication
     'say': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'call', 'called', 'spake', 'answer', 'answered'},
     'say.nom': {'saying', 'word', 'words', 'said'},
-    'speak': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'spake'},
+    'speak': {'say', 'said', 'speak', 'spoke', 'tell', 'told', 'spake', 'answer', 'answered'},
     'tell': {'tell', 'told', 'say', 'said', 'speak', 'declare'},
     'word': {'word', 'words', 'speak', 'saying', 'thing', 'things', 'matter'},
     'name': {'name', 'named', 'call', 'called'},
     'voice': {'voice', 'cry', 'sound', 'hear'},
+    'friend': {'friend', 'friends', 'companion', 'companions'},
     
     # Perception
     'see': {'see', 'saw', 'seen', 'look', 'looked', 'behold', 'perceive'},
@@ -129,6 +130,8 @@ SEMANTIC_MAP = {
     'know': {'know', 'knew', 'known', 'understand', 'understood'},
     'know.i': {'know', 'knew', 'known', 'understand', 'wisdom'},
     'know.ii': {'know', 'knew', 'known', 'understand'},
+    'learning': {'wisdom', 'understanding', 'knowledge', 'learn'},
+    'knowledge': {'knowledge', 'understanding', 'wisdom'},
     
     # Quality
     'good': {'good', 'well', 'right', 'righteous', 'better'},
