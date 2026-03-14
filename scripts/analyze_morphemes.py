@@ -1815,7 +1815,7 @@ VERB_STEMS = {
     # Round 190: Hapax verbs from KJV cross-reference
     'tukkhiat': 'pluck.off',       # 1x Gen 8:11 - olive leaf "pluckt off"
     'niamsuk': 'let.down',         # 1x Gen 24:18 - "let down her pitcher"
-    'tun': 'kneel',                # kneel/bow (tunpih = kneel-APPL = bow down) 63x
+    # Note: tun (arrive) already in NOUN_STEMS line 4156 - tunpih = arrive-APPL = bring
 }
 
 
@@ -15439,7 +15439,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 base_lower = base.lower()
                 
                 # First check direct stem lookups (fast path)
-                if base_lower in VERB_STEMS:
+                # Round 191: ATOMIC_GLOSSES takes priority - curated glosses override lexicon
+                if base_lower in ATOMIC_GLOSSES:
+                    return (f"{base}-{suffix}", f"{ATOMIC_GLOSSES[base_lower]}-{suf_gloss}")
+                elif base_lower in VERB_STEMS:
                     return (f"{base}-{suffix}", f"{VERB_STEMS[base_lower]}-{suf_gloss}")
                 elif base_lower in NOUN_STEMS:
                     return (f"{base}-{suffix}", f"{NOUN_STEMS[base_lower]}-{suf_gloss}")
@@ -15448,7 +15451,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     form_i, base_gloss = VERB_STEM_PAIRS[base_lower]
                     return (f"{base}-{suffix}", f"{base_gloss}-{suf_gloss}")
                 
-                # Try lexicon lookup for base
+                # Lexicon lookup as fallback (for words not in curated dictionaries)
                 lex_gloss = lookup_lexicon(base_lower)
                 if lex_gloss:
                     return (f"{base}-{suffix}", f"{lex_gloss}-{suf_gloss}")
@@ -15495,8 +15498,20 @@ def analyze_word(word: str) -> Tuple[str, str]:
             segments.append(remaining)
             glosses.append(remaining_gloss if remaining_gloss else '?')
         else:
-            # No decomposition found - try lexicon lookup
-            lexicon_gloss = lookup_lexicon(word.lower())
+            # No decomposition found - try internal glosses BEFORE lexicon
+            # Round 191: Priority order matters - our curated glosses override lexicon
+            word_lower = word.lower()
+            if word_lower in ATOMIC_GLOSSES:
+                return (word, ATOMIC_GLOSSES[word_lower])
+            elif word_lower in NOUN_STEMS:
+                return (word, NOUN_STEMS[word_lower])
+            elif word_lower in VERB_STEMS:
+                return (word, VERB_STEMS[word_lower])
+            elif word_lower in VERB_STEM_PAIRS:
+                _, stem_gloss = VERB_STEM_PAIRS[word_lower]
+                return (word, stem_gloss)
+            # Lexicon as fallback for words we haven't curated
+            lexicon_gloss = lookup_lexicon(word_lower)
             if lexicon_gloss:
                 return (word, lexicon_gloss)
             segments = [word]
