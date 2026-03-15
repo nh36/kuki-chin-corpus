@@ -16354,6 +16354,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'uphuai': ('up-huai', 'believe-able'),                  # 1x - able to believe
         'dozawh': ('do-zawh', 'fight-finish'),                  # 1x - finish fighting
         'phalkei': ('phal-kei', 'allow-1SG'),                   # 1x - allow me
+        
+        # Round 219: Exodus/Job/Psalms hapax vocabulary
+        'kiphutte': ('ki-phut-te', 'REFL-fasten-PL'),           # 1x Exod 28:14 - ouches
+        'piansaksate': ('pian-sak-sa-te', 'birth-CAUS-already-PL'),  # 1x Job 12:10 - created ones
+        'khasiatpihnate': ('kha-siat-pih-na-te', 'spirit-evil-with-NMLZ-PL'),  # 1x Job 42:11 - condolences
+        'kisukcipnate': ('ki-suk-cip-na-te', 'REFL-push-deep-NMLZ-PL'),  # 1x Ps 44:24 - oppressions
+        'lauhuainate': ('lau-huai-na-te', 'fear-able-NMLZ-PL'),  # 1x Ps 66:12 - terrors
+        'kikhemnate': ('ki-khem-na-te', 'REFL-limit-NMLZ-PL'),  # 1x Ps 55:11 - guile
+        'gimte': ('gim-te', 'trouble-PL'),                      # 1x - troubles
+        'sakhipite': ('sa-khi-pi-te', 'flesh-leg-great-PL'),    # 1x - great legs
+        'kaihte': ('kaih-te', 'lead-PL'),                       # 1x - led ones
+        'nawnkhia': ('nawn-khia', 'remain-out'),                # 1x - remain out
+        'khimzin': ('khim-zin', 'dark-journey'),                # 1x - dark journey
+        'khian': ('khian', 'grow'),                             # 1x - grow (variant)
+        'luaksuahhuai': ('luak-suah-huai', 'vomit-become-able'),  # 1x - able to vomit
+        'kalkhia': ('kal-khia', 'walk-out'),                    # 1x - walk out
+        'nawtkhiat': ('nawt-khiat', 'drive-out'),               # 1x - drive out
+        'muatsakmang': ('muat-sak-mang', 'rot-CAUS-chief'),     # 1x - cause to rot
+        'lainatna': ('lai-nat-na', 'time-pain-NMLZ'),           # 1x - time of pain
+        'muammuam': ('muam-muam', 'dark-REDUP'),                # 1x - very dark
+        'kawtciimsak': ('kawt-ciim-sak', 'gate-shut-CAUS'),     # 1x - cause shut gate
+        'kuante': ('kuan-te', 'authority-PL'),                  # 1x - authorities
+        'taciingte': ('ta-ciing-te', 'child-NEG-PL'),           # 1x - barren ones
+        'khangnozawte': ('khang-no-zaw-te', 'generation-young-more-PL'),  # 1x - younger generations
+        'thengta': ('theng-ta', 'clear-child'),                 # 1x - clear child
+        'zawlmitin': ('zawl-mit-in', 'prophet-eye-ERG'),        # 1x - prophet eye
+        "galte'n": ("gal-te-'n", 'enemy-PL-ERG'),               # 1x - by enemies
+        'cinatsakna': ('ci-nat-sak-na', 'say-pain-CAUS-NMLZ'),  # 1x - rebuke
+        'henhanna': ('hen-han-na', 'appear-CAUS-NMLZ'),         # 1x - revelation
+        'mualleguamte': ('mual-le-guam-te', 'grave-and-hole-PL'),  # 1x - graves and pits
+        'kaisakzo': ('kai-sak-zo', 'lead-CAUS-finish'),         # 1x - finished leading
+        'zaangmul': ('zaang-mul', 'arm-round'),                 # 1x - round arm
+        'lungso': ('lung-so', 'heart-?)'),                      # 1x - heart...
+        "na'n": ("na-'n", '2SG.GEN-ERG'),                       # 1x - by your
+        'cingvalin': ('cing-val-in', 'still-INTENS-ERG'),       # 1x - very still
+        'luatnate': ('luat-na-te', 'pull-NMLZ-PL'),             # 1x - pullings
+        'kisiahna': ('ki-siah-na', 'REFL-throw-NMLZ'),          # 1x - casting
+        'zangawpte': ('zan-gawp-te', 'night-cover-PL'),         # 1x - night covers
+        'lungsosa': ('lung-so-sa', 'heart-?-already'),          # 1x - already heart
+        'khesikna': ('khe-sik-na', 'foot-step-NMLZ'),           # 1x - footsteps
+        'ngangngang': ('ngang-ngang', 'steady-REDUP'),          # 1x - very steady
+        'buluah': ('bu-luah', 'group-scatter'),                 # 1x - scatter group
+        'deudaute': ('deu-dau-te', 'little-little-PL'),         # 1x - little ones
+        'kiimvelin': ('ki-im-vel-in', 'REFL-house-around-ERG'),  # 1x - around house
+        'helhhawtte': ('helh-hawt-te', 'advise-hard-PL'),       # 1x - hard advisers
+        'sumleina': ('sum-lei-na', 'money-borrow-NMLZ'),        # 1x - usury
+        'tuancilte': ('tuan-cil-te', 'ride-turn-PL'),           # 1x - riders
+        'toktol': ('tok-tol', 'peck-hit'),                      # 1x - pecking
+        'suhgawpnate': ('suh-gawp-na-te', 'count-cover-NMLZ-PL'),  # 1x - accountings
+        'thuciamsate': ('thu-ciam-sa-te', 'word-promise-already-PL'),  # 1x - promised ones
+        'leivumte': ('lei-vum-te', 'earth-heap-PL'),            # 1x - earth heaps
+        'nunungin': ('nu-nung-in', 'mother-back-ERG'),          # 1x - after mother
     }
 
 
