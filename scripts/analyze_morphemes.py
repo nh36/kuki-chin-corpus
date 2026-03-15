@@ -2818,7 +2818,7 @@ NOUN_STEMS = {
     'mangzo': 'profit',      # 1x Heb 12:11 - "yieldeth/profitable"
     'mawl': 'mad',           # 1x Eccl 1:17 - "madness"
     'meidawi': 'sober.mind', # 1x 2Tim 1:7 - "sound mind"
-    'suanghawm': 'rock',     # 1x Jer 16:16 - "rocks/caves"
+    # suanghawm moved to BINARY_COMPOUNDS as suang-hawm (rock-hollow = cave)
     'vuk': 'ice',            # 1x Job 38:29 - "ice"
     'val': 'young.man',      # 1x 1Cor 15:6 - "brethren" (young men)
     'piksan': 'stubborn',    # 1x Prov 16:30 - "froward"
@@ -2934,7 +2934,7 @@ NOUN_STEMS = {
     'ginalopi': 'polluted',  # 1x Mal 1:7 - "polluted"
     'gisuang': 'boundary',   # 1x Job 24:2 - "landmarks"
     'gitta': 'sparrow',      # 1x Matt 10:29 - "sparrows"
-    'guahtui': 'rain',       # 1x Heb 6:7 - "rain"
+    'guah': 'rain',          # for guahtui compound (rain-water)
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -4501,6 +4501,7 @@ AMBIGUOUS_ATOMIC = {
 BINARY_COMPOUNDS = {
     # Liquids/substances: N + tui (water)
     'namtui': ('nam', 'tui', 'perfume'),        # smell-water → perfume/fragrant oil
+    'guahtui': ('guah', 'tui', 'rainwater'),    # rain-water → rainwater
     'tuipi': ('tui', 'pi', 'sea'),              # water-big → sea/ocean
     'tuibang': ('tui', 'bang', 'flood'),        # water-spread → flood
     'tuikhuk': ('tui', 'khuk', 'pool'),         # water-bend → pool
@@ -4711,6 +4712,7 @@ BINARY_COMPOUNDS = {
     'kilat': ('ki', 'lat', 'strengthen'),        # REFL-strong → strengthen (9x)
     'kipsak': ('kip', 'sak', 'confirm'),         # firm-CAUS → confirm (9x)
     'bilbah': ('bil', 'bah', 'deaf'),            # ear-blocked → deaf (9x)
+    'suanghawm': ('suang', 'hawm', 'cave'),       # rock-hollow → cave (12x)
     'phulak': ('phu', 'lak', 'burden'),          # carry-take → burden (9x)
     'langpan': ('lang', 'pan', 'advocate'),      # side-plead → advocate (9x)
     'laigelh': ('lai', 'gelh', 'write'),         # paper-write → writing (8x)
@@ -6696,14 +6698,7 @@ def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[Optional[s
             mod_gloss = get_morpheme_gloss(modifier, 'as_modifier')
             
             if mod_gloss:
-                # We have a valid modifier + binary compound
-                # Position-aware: m1 is internal, m2 is final (suffix position)
-                g1 = get_morpheme_gloss(m1) or '?'
-                g2 = get_morpheme_gloss(m2, 'as_suffix') or '?'
-                
                 segmentation = f"{modifier}-{m1}-{m2}"
-                # Compositional gloss shows hierarchy
-                comp_gloss = f"{mod_gloss}-({g1}-{g2})"
                 
                 # Check if this specific ternary has a known lexical gloss
                 if word_lower in TERNARY_COMPOUNDS:
@@ -6711,18 +6706,28 @@ def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[Optional[s
                     if lex_gloss:
                         return (segmentation, lex_gloss)
                 
-                # Return compositional gloss (shows the hierarchy)
+                # Use lexical gloss of base compound if available (Round 193m fix)
+                if base_lexical:
+                    comp_gloss = f"{mod_gloss}-{base_lexical}"
+                else:
+                    g1 = get_morpheme_gloss(m1) or '?'
+                    g2 = get_morpheme_gloss(m2, 'as_suffix') or '?'
+                    comp_gloss = f"{mod_gloss}-({g1}-{g2})"
+                
                 return (segmentation, comp_gloss)
             
             # Try recursive analysis of modifier
             if depth < 2:
                 mod_result = analyze_hierarchical_compound(modifier, depth + 1)
                 if mod_result[0]:
-                    g1 = get_morpheme_gloss(m1) or '?'
-                    g2 = get_morpheme_gloss(m2, 'as_suffix') or '?'
                     segmentation = f"{mod_result[0]}-{m1}-{m2}"
-                    # Nested structure: ((m0-m1)-(m2-m3))
-                    comp_gloss = f"({mod_result[1]})-({g1}-{g2})"
+                    # Use lexical gloss of base compound if available
+                    if base_lexical:
+                        comp_gloss = f"({mod_result[1]})-{base_lexical}"
+                    else:
+                        g1 = get_morpheme_gloss(m1) or '?'
+                        g2 = get_morpheme_gloss(m2, 'as_suffix') or '?'
+                        comp_gloss = f"({mod_result[1]})-({g1}-{g2})"
                     return (segmentation, comp_gloss)
     
     # Step 4: Try decomposing as [binary compound] + [suffix/modifier]
@@ -6736,12 +6741,15 @@ def analyze_hierarchical_compound(word: str, depth: int = 0) -> Tuple[Optional[s
             suffix_gloss = get_morpheme_gloss(suffix, 'as_suffix')
             
             if suffix_gloss:
-                g1 = get_morpheme_gloss(m1) or '?'
-                g2 = get_morpheme_gloss(m2) or '?'
-                
                 segmentation = f"{m1}-{m2}-{suffix}"
-                # Show head compound + suffix
-                comp_gloss = f"({g1}-{g2})-{suffix_gloss}"
+                # Use lexical gloss if available (Round 193m fix)
+                # e.g., suanghawm-te = cave-PL, not (stone-counsel)-PL
+                if base_lexical:
+                    comp_gloss = f"{base_lexical}-{suffix_gloss}"
+                else:
+                    g1 = get_morpheme_gloss(m1) or '?'
+                    g2 = get_morpheme_gloss(m2) or '?'
+                    comp_gloss = f"({g1}-{g2})-{suffix_gloss}"
                 
                 return (segmentation, comp_gloss)
     
@@ -15273,14 +15281,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mangzote': ('mangzo-te', 'profit-PL'),                      # 1x Heb 12:11 - "profitable ones"
         'mawlna': ('mawl-na', 'mad-NMLZ'),                           # 1x Eccl 1:17 - "madness"
         'meidawina': ('meidawi-na', 'sober.mind-NMLZ'),              # 1x 2Tim 1:7 - "sound mind"
-        'suanghawmte': ('suanghawm-te', 'rock-PL'),                  # 1x Jer 16:16 - "rocks"
+        # suanghawmte now handled by hierarchical via BINARY_COMPOUNDS
         'suangpite': ('suangpi-te', 'rock.big-PL'),                  # 1x Psa 78:15 - "great rocks"
         'valte': ('val-te', 'young.man-PL'),                         # 1x 1Cor 15:6 - "brethren"
         'vukte': ('vuk-te', 'ice-PL'),                               # 1x Job 38:29 - "ice"
         'piksante': ('piksan-te', 'stubborn-PL'),                    # 1x Prov 16:30 - "froward"
         'phuahte': ('phuah-te', 'thunder-PL'),                       # 1x Mark 3:17 - "thunder"
         'thaguite': ('thagui-te', 'sinew-PL'),                       # 1x Job 10:11 - "sinews"
-        'taksate': ('taksa-te', 'body-PL'),                          # 1x Matt 3:12 - "bodies"
+        'taksate': ('taksa-te', 'wheat-PL'),                          # 1x Matt 3:12 - "wheat" (grain)
         'talte': ('tal-te', 'buffalo-PL'),                           # 1x Isa 34:7 - "unicorns/bulls"
         'taakte': ('taak-te', 'comb-PL'),                            # 1x Psa 19:10 - "honeycomb"
         'ngimte': ('ngim-te', 'bitter-PL'),                          # 1x Psa 64:3 - "bitter words"
@@ -15437,7 +15445,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nehphei': ('neh-phei', 'lean-on'),                         # 1x John 13:25 - "lying on breast"
         'neihse': ('neih-se', 'have-more'),                         # 1x 1Cor 7:40 - "happier"
         'nekledawn': ('nek-ledawn', 'eat-drink'),                   # 1x Rom 14:17 - "meat and drink"
-        'nektumsak': ('nek-tumsak', 'eat-devour'),                  # 1x Psa 105:35 - "devoured"
+        'nektumsak': ('nek-tum-sak', 'eat-all-CAUS'),                 # 1x Psa 105:35 - "devoured"
         'nakbuhte': ('nak-buh-te', 'nose-hang-PL'),                 # 1x Isa 3:21 - "nose jewels"
         'nakvangte': ('nakvang-te', 'nostril-PL'),                  # 1x Psa 18:8 - "nostrils"
         
@@ -15469,25 +15477,26 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ginalopite': ('ginalopi-te', 'polluted-PL'),               # 1x Mal 1:7 - "polluted"
         'gisuangte': ('gisuang-te', 'boundary-PL'),                 # 1x Job 24:2 - "landmarks"
         'gittate': ('gitta-te', 'sparrow-PL'),                      # 1x Matt 10:29 - "sparrows"
-        'guahtuite': ('guahtui-te', 'rain-PL'),                     # 1x Heb 6:7 - "rain"
+        'guahtuite': ('guah-tui-te', 'rain-water-PL'),                # 1x Heb 6:7 - "rain"
     }
 
 
-    
-    # Try hierarchical compound analysis FIRST (Round 181 fix)
-    # This handles lexicalized compounds with proper semantic glosses:
-    # - BINARY_COMPOUNDS: lungdam → 'joy' (not just 'heart-well')
-    # - TERNARY_COMPOUNDS: singnamtui → 'spices' (not just 'tree-smell-water')
-    # Hierarchical takes precedence over COMPOUND_WORDS for better semantic quality
-    hier_result = analyze_hierarchical_compound(word_no_hyphen_lower)
-    if hier_result[0]:
-        return hier_result
-    
-    # Check compound words (fallback for grammatical compounds not in hierarchical system)
+    # Check compound words FIRST for explicit overrides
+    # This allows COMPOUND_WORDS entries to override hierarchical analysis
+    # when a specific form needs a different gloss than what hierarchical produces
     if word_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_lower]
     if word_no_hyphen_lower in COMPOUND_WORDS:
         return COMPOUND_WORDS[word_no_hyphen_lower]
+    
+    # Try hierarchical compound analysis (Round 181 fix, Round 193m improvements)
+    # This handles lexicalized compounds with proper semantic glosses:
+    # - BINARY_COMPOUNDS: lungdam → 'joy', suanghawm → 'cave'
+    # - TERNARY_COMPOUNDS: singnamtui → 'spices'
+    # - Step 3/4 now use lexical glosses (e.g., suanghawmte → cave-PL, not stone-counsel-PL)
+    hier_result = analyze_hierarchical_compound(word_no_hyphen_lower)
+    if hier_result[0]:
+        return hier_result
     
     # Handle explicit hyphen before grammatical suffixes (e.g., lauhuai-in, muanhuai-ah)
     # These are written with explicit hyphen before -in (ERG), -ah (LOC), -a (LOC)
