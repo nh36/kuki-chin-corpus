@@ -121,6 +121,43 @@ meaning definitively does NOT relate to the actual meaning:
 - **Evidence:** Exod 25:4, 26:7 "goats' hair"
 - **Verdict:** Opaque. Foot/tip don't relate to goat hair.
 
+## Morphemes with Multiple Meanings (Philological Notes)
+
+### khuam - possibly 'upright/pillar' not just 'darkness'
+Evidence from compounds:
+- **khuampi** = pillar/board (44x) - architectural term
+- **suangkhuam** = stone pillar (Gen 31:52)
+- **innkhuam** = pillar (1Ki 10:12, Prov 9:1)
+- **meivakkhuam** = candlestick/lampstand (upright holder)
+- **khuampeek** = cubit (forearm, possibly "upright" measure)
+
+This suggests khuam may have a secondary meaning "upright structure/pillar"
+distinct from khuam "darkness". The innkhuam compound becomes transparent:
+inn (house) + khuam (pillar) → "house pillar".
+
+### kham - possibly 'support/rest' not just 'forbid'
+Evidence from compounds:
+- **lukham** = pillow (Gen 28:11,18; 1Sam 19:13; Mark 4:38)
+  - Jacob uses stone "lukhamin" then sets it "khuamin phut" (as pillar)
+  - Context shows "head-support" meaning
+- **khamsak** = preserve (kham-sak = keep-CAUS)
+- kham also means 'gold' as standalone noun
+
+This suggests kham may have meaning "support/hold" in lukham:
+lu (head) + kham (support) → "head-rest" = pillow.
+
+### li - possibly 'cord/strap' in saili, not just 'four'
+The compound saili (sling) is problematic:
+- **sai** = throw (makes sense for sling)
+- **li** = four (doesn't obviously relate to slings)
+
+Possible explanations:
+1. Slings have multiple cords/straps (li could mean 'cord')
+2. The word is opaque/fossilized
+3. There's a lost meaning for li
+
+Note: li also means 'river' in some contexts (lite' = "rivers'").
+
 ## Probable Opaque Lexemes (Need Verification)
 
 ### aisan 'magician'

@@ -4699,7 +4699,7 @@ BINARY_COMPOUNDS = {
     'khialhsak': ('khialh', 'sak', 'trespass'),  # err-CAUS → trespass (17x)
     'hawlkhiat': ('hawl', 'khiat', 'persecute'), # drive-out → persecution (17x)
     'thukim': ('thu', 'kim', 'covenant'),        # word-keep → covenant (15x)
-    'thangpaih': ('thang', 'paih', 'indignation'), # rise-pour → indignation/wrath (15x)
+    'thangpaih': ('thang', 'paih', 'pour.out'),     # rise-pour → pour out (wrath); thangpaihna = fury/indignation
     'lungduai': ('lung', 'duai', 'compassion'),  # heart-soft → compassion (15x)
     'huaiham': ('huai', 'ham', 'terror'),        # dread-full → terror (15x)
     'galsim': ('gal', 'sim', 'number'),          # enemy-count → number (15x)
