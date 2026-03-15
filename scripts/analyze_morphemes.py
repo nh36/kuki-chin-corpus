@@ -15996,6 +15996,52 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suangvui': ('suang-vui', 'stone-sand'),          # 1x - gravel
         'kikemte': ('ki-kem-te', 'REFL-gather-PL'),       # 1x - gathered ones
         'lususu': ('lu-su-su', 'head-push-REDUP'),        # 1x - pushing head
+        
+        # Round 212: Jeremiah hapax vocabulary
+        'buhvai': ('buh-vai', 'rice-chaff'),              # 1x Jer 13:24 - stubble
+        'damlenat': ('dam-le-nat', 'well-or-pain'),       # 1x Jer 15:5 - welfare
+        'gimhun': ('gim-hun', 'trouble-time'),            # 1x Jer 30:7 - time of trouble
+        'kilamna': ('ki-lam-na', 'REFL-build-NMLZ'),      # 1x Jer 31:28 - building
+        'vangpi': ('vang-pi', 'power-great'),             # 1x Jer 32:17 - great power
+        'zongsang': ('zong-sang', 'accustom-high'),       # 1x Jer 13:23 - accustomed
+        'puksite': ('puk-si-te', 'fall-die-PL'),          # 1x - fallen dead
+        'keizan': ('kei-zan', '1SG-EMPH'),                # 1x - I myself
+        'lambaangin': ('lam-baang-in', 'way-turn-ERG'),   # 1x - turning aside
+        'tamsakzaw': ('tam-sak-zaw', 'many-CAUS-more'),   # 1x - made more
+        'sunkimlai': ('sun-kim-lai', 'day-full-time'),    # 1x - midday
+        'kuiliam': ('kui-liam', 'ring-joint'),            # 1x - ankle
+        'tutung': ('tu-tung', 'now-upon'),                # 1x - upon now
+        'opsim': ('op-sim', 'embrace-think'),             # 1x - consider
+        'lehngatsan': ('leh-ngat-san', 'return-think-price'),  # 1x - recompense
+        'sidar': ('sidar', 'cedar'),                      # 1x - cedar (tree)
+        'lamnal': ('lam-nal', 'way-smooth'),              # 1x - smooth way
+        'buhtang': ('buh-tang', 'rice-long'),             # 1x - tall grain
+        'kidongzaw': ('ki-dong-zaw', 'REFL-beat-more'),   # 1x - beaten more
+        'dongzaw': ('dong-zaw', 'beat-more'),             # 1x - beaten more
+        'pulnatnate': ('pul-nat-na-te', 'fear-pain-NMLZ-PL'),  # 1x - terrors
+        'khelkikzaw': ('khel-kik-zaw', 'err-ITER-more'),  # 1x - erred more
+        'lehneih': ('leh-neih', 'return-take'),           # 1x - take back
+        'tapeuh': ('ta-peuh', 'child-each'),              # 1x - each child
+        'e': ('e', 'INTERJ'),                             # 1x - interjection
+        'ngutngutna': ('ngut-ngut-na', 'groan-REDUP-NMLZ'),  # 1x - groaning
+        'lamlahnate': ('lam-lah-na-te', 'way-take-NMLZ-PL'),  # 1x - way-takings
+        'thazawm': ('tha-zawm', 'strength-continue'),     # 1x - continue strong
+        'kibetkhiatna': ('ki-bet-khiat-na', 'REFL-pluck-out-NMLZ'),  # 1x - plucking up
+        'kisuankhiatna': ('ki-suan-khiat-na', 'REFL-throw-out-NMLZ'),  # 1x - throwing down
+        'kithukimna': ('ki-thu-kim-na', 'REFL-word-full-NMLZ'),  # 1x - fulfillment
+        'koltanna': ('kol-tan-na', 'roll-stand-NMLZ'),    # 1x - rolling
+        'tusawn': ('tu-sawn', 'now-again'),               # 1x - now again
+        "vukngo'": ("vuk-ngo'", 'blanket-warm.POSS'),     # 1x - warm blanket
+        'tawna': ('taw-na', 'with-NMLZ'),                 # 1x - companion
+        'khaphial': ('kha-phial', 'spirit-wander'),       # 1x - wandering spirit
+        'kikhiatlam': ('ki-khiat-lam', 'REFL-exit-direction'),  # 1x - departing direction
+        'lenuai': ('le-nuai', 'and-under'),               # 1x - and under
+        'haltumna': ('hal-tum-na', 'burn-join-NMLZ'),     # 1x - burning
+        'tensuak': ('ten-suak', 'dwell-become'),          # 1x - become dwelling
+        'hallam': ('hal-lam', 'burn-direction'),          # 1x - burning direction
+        'kilehhawl': ('ki-leh-hawl', 'REFL-return-rest'), # 1x - returning rest
+        'taikekmang': ('tai-kek-mang', 'flee-reverse-chief'),  # 1x - fleeing chief
+        'kinungleh': ('ki-nung-leh', 'REFL-back-return'), # 1x - turning back
     }
 
 
