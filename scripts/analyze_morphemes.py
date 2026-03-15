@@ -2913,6 +2913,9 @@ NOUN_STEMS = {
     'dawilut': 'overcome',   # 1x Acts 19:16 - "overcame"
     'cilphih': 'spit',       # 1x Isa 50:6 - "spitting"
     'cingh': 'poor',         # 1x Prov 14:21 - "poor"
+    'nawng': 'wrong',        # For nawngkai etc
+    'nawk': 'convert',       # 1x Acts 15:3 - "conversion"
+    'nakvang': 'nostril',    # 1x Psa 18:8 - "nostrils"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15398,6 +15401,26 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'beimangsakna': ('bei-mangsak-na', 'finish-destroy-NMLZ'),  # 1x Ezek 25:16 - "destroy"
         'beisakmangna': ('bei-sakmang-na', 'finish-destroy-NMLZ'),  # 1x Esth 3:13 - "destroy"
         'atkhiatsakna': ('at-khiatsak-na', 'cut-off-NMLZ'),         # 1x 1Chr 19:4 - "cut off"
+        
+        # Round 193j: na- over-segmentation fixes
+        'nawngkai': ('nawng-kai', 'wrong-do'),                      # 1x Acts 4:2 - "grieved"
+        'nawngkaina': ('nawng-kai-na', 'wrong-do-NMLZ'),            # - "wrongdoing"
+        'nawngkaisa': ('nawng-kai-sa', 'wrong-do-already'),         # - "wronged"
+        'nawngkaisakin': ('nawng-kai-sak-in', 'wrong-do-CAUS-with'), # - "causing wrong"
+        'nawngkaisakte': ('nawng-kai-sak-te', 'wrong-do-CAUS-PL'),  # - "wrongdoers"
+        'nawngkaisakzo': ('nawng-kai-sak-zo', 'wrong-do-CAUS-able'), # - "able to wrong"
+        'nawnglakte': ('nawng-lak-te', 'wrong-PL'),                 # - "wrongs"
+        'nawngpi': ('nawng-pi', 'wrong-big'),                       # - "great wrong"
+        'nawkna': ('nawk-na', 'convert-NMLZ'),                      # 1x Acts 15:3 - "conversion"
+        'nawkzawh': ('nawk-zawh', 'do.again-able'),                 # 1x Phil 4:13 - "can do"
+        'nawkgawpin': ('nawk-gawp-in', 'again-all-with'),           # - "all again"
+        'nailung': ('nai-lung', 'fig-heart'),                       # 1x Luke 17:6 - "sycamine"
+        'nehphei': ('neh-phei', 'lean-on'),                         # 1x John 13:25 - "lying on breast"
+        'neihse': ('neih-se', 'have-more'),                         # 1x 1Cor 7:40 - "happier"
+        'nekledawn': ('nek-ledawn', 'eat-drink'),                   # 1x Rom 14:17 - "meat and drink"
+        'nektumsak': ('nek-tumsak', 'eat-devour'),                  # 1x Psa 105:35 - "devoured"
+        'nakbuhte': ('nak-buh-te', 'nose-hang-PL'),                 # 1x Isa 3:21 - "nose jewels"
+        'nakvangte': ('nakvang-te', 'nostril-PL'),                  # 1x Psa 18:8 - "nostrils"
     }
 
 
