@@ -15497,6 +15497,15 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gisuangte': ('gisuang-te', 'boundary-PL'),                 # 1x Job 24:2 - "landmarks"
         'gittate': ('gitta-te', 'sparrow-PL'),                      # 1x Matt 10:29 - "sparrows"
         'guahtuite': ('guah-tui-te', 'rain-water-PL'),                # 1x Heb 6:7 - "rain"
+        
+        # Round 194: More hapax vocabulary
+        'ngiahon': ('ngiahon', 'ravening'),                           # 1x Ezek 22:27 - "ravening prey"
+        'haksapipi': ('haksa-pi~pi', 'difficult-INT~RED'),            # 3x Acts 27 - "hardly/with difficulty"
+        'khawlmun': ('khawl-mun', 'rest-place'),                      # 1x Acts 27:8 - "havens" (Fair Havens)
+        'tuani': ('tua-ni', 'that-day'),                              # 1x Josh 6:15 - "on that day"
+        'tulai': ('tu-lai', 'now-time'),                              # 1x 1Sam 25:10 - "nowadays"
+        'menzipipa': ('men-zipi-pa', 'office-great-person'),          # 4x Ezra 4 - "chancellor"
+        'leihawmpi': ('lei-hawm-pi', 'earth-depth-big'),              # 3x Psalms - "hell/corruption" (Sheol)
     }
 
 
