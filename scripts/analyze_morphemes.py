@@ -16666,6 +16666,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suakcilte': ('suak-cil-te', 'become-turn-PL'),          # 1x - becoming ones
         'uangtatna': ('uang-tat-na', 'pour-each-NMLZ'),          # 1x - pouring each
         'kosia': ('ko-sia', 'cry-evil'),                         # 1x - evil cry
+        
+        # Round 225: Proverbs/Ecclesiastes/Song hapax vocabulary
+        'kigamtatnate': ('ki-gam-tat-na-te', 'REFL-land-each-NMLZ-PL'),  # 1x Eccl 4:1 - oppressions
+        'kisamsiatna': ('ki-sam-siat-na', 'REFL-call-evil-NMLZ'),  # 1x Prov 26:2 - curse
+        'haihuaina': ('hai-huai-na', 'confuse-able-NMLZ'),       # 1x Eccl 7:25 - madness
+        'kaihzawhna': ('kaih-zawh-na', 'lead-finish-NMLZ'),      # 1x Prov 16:7 - peace
+        'kawkbaanna': ('kawk-baan-na', 'touch-scratch-NMLZ'),    # 1x Song 4:7 - spot
+        'lehbawlna': ('leh-bawl-na', 'return-make-NMLZ'),        # 2x - deceit
+        'lungso': ('lung-so', 'heart-?'),                        # 1x - heart...
+        'lungsosa': ('lung-so-sa', 'heart-?-already'),           # 1x - heart already
+        'khuangtumte': ('khuang-tum-te', 'drum-stumble-PL'),     # 1x - drummers
+        'khaknelhsak': ('khak-nelh-sak', 'firm-press-CAUS'),     # 1x - cause press firm
+        'kawngte': ('kawng-te', 'gate-PL'),                      # 1x - gates
+        'hilhial': ('hilh-ial', 'teach-?'),                      # 1x - teach...
+        'luiliante': ('lui-lian-te', 'river-great-PL'),          # 1x - great rivers
+        'muanlesuan': ('muan-le-suan', 'trust-and-plant'),       # 1x - trust and plant
+        'kanglum': ('kang-lum', 'burn-heap'),                    # 1x - heap burn
+        'khuangno': ('khuang-no', 'drum-young'),                 # 1x - young drum
+        'kawlgit': ('kawl-git', 'call-squeeze'),                 # 1x - squeeze call
+        'luakha': ('luak-ha', 'vomit-dry'),                      # 1x - dry vomit
+        'vuasak': ('vua-sak', 'bear.fruit-CAUS'),                # 1x - cause fruit
+        'saalte': ('saal-te', 'Saul-PL'),                        # 1x - Sauls
+        'ciimsak': ('ciim-sak', 'shut-CAUS'),                    # 1x - cause shut
+        'muansuam': ('muan-suam', 'trust-throw'),                # 1x - throw trust
+        'suihkhakte': ('suih-khak-te', 'adorn-firm-PL'),         # 1x - firmly adorned
+        'mengme': ('meng-me', 'dream-?'),                        # 1x - dream...
+        'khenglahkha': ('kheng-lah-kha', 'lean-take-dry'),       # 1x - lean take
+        'dian': ('dian', 'throne'),                              # 1x - throne (variant)
+        'iptheite': ('ip-thei-te', 'blow-know-PL'),              # 1x - knowing blowers
+        'hoihbekin': ('hoih-bek-in', 'good-only-ERG'),           # 1x - only good
+        'gensiasiate': ('gen-sia-sia-te', 'say-evil-REDUP-PL'),  # 1x - evil speakers
+        'kimudahsak': ('ki-mu-dah-sak', 'REFL-see-find-CAUS'),   # 1x - cause find
+        'teekte': ('teek-te', 'sink-PL'),                        # 1x - sinking ones
+        'kehsakkhak': ('keh-sak-khak', 'kick-CAUS-firm'),        # 1x - firmly kick
+        'khahsuahsuah': ('khah-suah-suah', 'carry-become-REDUP'),  # 1x - carrying
+        'kituakte': ('ki-tuak-te', 'REFL-meet-PL'),              # 1x - met ones
+        'nawtgawpin': ('nawt-gawp-in', 'drive-cover-ERG'),       # 1x - driving cover
+        "humpi'n": ("hum-pi-'n", 'cover-great-ERG'),             # 1x - greatly covering
+        'kiattheihna': ('kiat-theih-na', 'break-know-NMLZ'),     # 1x - breaking know
+        'seuhseuh': ('seuh-seuh', 'search-REDUP'),               # 1x - searching
+        'khutzepin': ('khut-zep-in', 'hand-pinch-ERG'),          # 1x - pinching hand
+        'kawmhek': ('kawm-hek', 'around-blow'),                  # 1x - blow around
+        'kaihsak': ('kaih-sak', 'lead-CAUS'),                    # 1x - cause lead
+        'lualiang': ('lua-liang', 'exceed-bright'),              # 1x - exceed bright
+        'siahuaite': ('sia-huai-te', 'evil-able-PL'),            # 1x - evil ones
+        'zakiat': ('za-kiat', 'hundred-break'),                  # 1x - hundred break
+        'zakiatna': ('za-kiat-na', 'hundred-break-NMLZ'),        # 1x - hundred breaking
+        'penpente': ('pen-pen-te', 'each-REDUP-PL'),             # 1x - each ones
+        'singtenin': ('sing-ten-in', 'tree-above-ERG'),          # 1x - above tree
+        'thalawp': ('tha-lawp', 'strength-wrap'),                # 1x - wrap strength
+        'kawisate': ('kawi-sa-te', 'crooked-already-PL'),        # 1x - crooked ones
+        'hahkatna': ('hah-kat-na', 'tired-cut-NMLZ'),            # 1x - cutting tiredness
     }
 
 
