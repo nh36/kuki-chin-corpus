@@ -2893,6 +2893,17 @@ NOUN_STEMS = {
     'tei': 'prudent',        # 1x 1Cor 1:19 - "prudent"
     'teitei': 'persistent',  # 1x Luke 11:8 - "importunity"
     'tangngol': 'caterpillar', # 1x Psa 105:34 - "caterpillars"
+    'maan': 'shadow',        # 1x Jer 48:45 - "shadow"
+    'manglian': 'governor',  # 1x Dan 3:3 - "governors"
+    'mawkphat': 'flatter',   # 1x Prov 29:5 - "flattereth"
+    'meilak': 'break',       # 1x Isa 30:14 - "breaking"
+    'meimapi': 'sore',       # 1x Isa 1:6 - "sores"
+    'miaimuai': 'myriad',    # 1x Rev 5:11 - "ten thousand"
+    'migina': 'upright',     # 1x Prov 2:21 - "upright"
+    'miniam': 'meek',        # 1x Psa 149:4 - "meek"
+    'mithuman': 'righteous', # 1x Prov 28:1 - "righteous"
+    'mivom': 'leopard',      # 1x Jer 13:23 - "leopard"
+    'monu': 'daughter.in.law', # 1x Matt 10:35 - "daughter in law"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15344,6 +15355,26 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'teiteina': ('teitei-na', 'persistent-NMLZ'),               # 1x Luke 11:8 - "importunity"
         'tangngolte': ('tangngol-te', 'caterpillar-PL'),            # 1x Psa 105:34 - "caterpillars"
         'tahtah': ('tah~tah', 'press~RED'),                         # 1x Luke 6:38 - "pressed down"
+        
+        # Round 193h: muan- compounds
+        'muanglah': ('muan-lah', 'trust-waver'),                    # 1x Jas 1:6 - "wavering"
+        'muangngam': ('muan-ngam', 'trust-firm'),                   # 1x Heb 10:23 - "without wavering"
+        'muangsak': ('muan-sak', 'trust-CAUS'),                     # 1x Jer 49:11 - "trust"
+        'muangzo': ('muan-zo', 'trust-able'),                       # 1x Job 4:18 - "put trust in"
+        'maanna': ('maan-na', 'shadow-NMLZ'),                       # 1x Jer 48:45 - "shadow"
+        'mainul': ('mai-nul', 'face-cloth'),                        # 1x Acts 19:12 - "handkerchiefs"
+        'mangliante': ('manglian-te', 'governor-PL'),               # 1x Dan 3:3 - "governors"
+        'mawkphatna': ('mawkphat-na', 'flatter-NMLZ'),              # 1x Prov 29:5 - "flattereth"
+        'meilakna': ('meilak-na', 'break-NMLZ'),                    # 1x Isa 30:14 - "breaking"
+        'meimapite': ('meimapi-te', 'sore-PL'),                     # 1x Isa 1:6 - "sores"
+        'miaimuai': ('miaimuai', 'myriad'),                         # 1x Rev 5:11 - "ten thousand"
+        'mialzawt': ('mial-zawt', 'dark-grope'),                    # 1x Job 12:25 - "grope in dark"
+        'mibuppite': ('mi-buppi-te', 'person-great-PL'),            # 1x Ezek 45:17 - "princes"
+        'miginate': ('migina-te', 'upright-PL'),                    # 1x Prov 2:21 - "upright"
+        'miniamte': ('miniam-te', 'meek-PL'),                       # 1x Psa 149:4 - "meek"
+        'mithumante': ('mithuman-te', 'righteous-PL'),              # 1x Prov 28:1 - "righteous"
+        'mivomte': ('mivom-te', 'leopard-PL'),                      # 1x Jer 13:23 - "leopard"
+        'monute': ('monu-te', 'daughter.in.law-PL'),                # 1x Matt 10:35 - "daughter in law"
     }
 
 
