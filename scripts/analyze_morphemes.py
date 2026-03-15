@@ -15509,6 +15509,19 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tulai': ('tu-lai', 'now-time'),                              # 1x 1Sam 25:10 - "nowadays"
         'menzipipa': ('men-zipi-pa', 'office-great-person'),          # 4x Ezra 4 - "chancellor"
         'leihawmpi': ('lei-hawm-pi', 'earth-depth-big'),              # 3x Psalms - "hell/corruption" (Sheol)
+        
+        # Round 195: More hapax vocabulary
+        'kulhzang': ('kulh-zang', 'wall-edge'),                       # 2x 2Kgs 6:26 - "upon the wall"
+        'khawlei': ('khawlei', 'Arcturus'),                           # 2x Job 9:9, 38:32 - constellation
+        'uikai': ('uikai', 'Orion'),                                  # 2x Job 9:9, 38:31 - constellation
+        'vuttui': ('vut-tui', 'snow-water'),                          # 2x Job 9:30, 24:19 - "snow water"
+        'thangkhau': ('thang-khau', 'trap-rope'),                     # 2x Job 18:9-10 - "gin/snare"
+        'dildel': ('dil~del', 'glitter~RED'),                         # 2x Job 20:25 - "glittering"
+        'suangheeng': ('suang-heeng', 'stone-crag'),                  # 2x Job 39:28 - "rock crag"
+        'hol': ('hol', 'coals'),                                      # 2x Gen 6:21, John 18:18 - "coals"
+        'husang': ('hu-sang', 'live-up'),                             # 2x 1Thes 3:8 - "we live"
+        'olno': ('ol-no', 'vine-tender'),                             # 2x Gen 49:11 - "choice vine"
+        'meihol': ('mei-hol', 'fire-coals'),                          # 2x John 18:18, 21:9 - "fire of coals"
     }
 
 
