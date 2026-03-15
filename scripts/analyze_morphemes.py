@@ -16094,6 +16094,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gunsung': ('gun-sung', 'heart-inside'),                # 1x - inside heart
         'kamun': ('ka-mun', '1SG.GEN-place'),                   # 1x - my place
         'khiang': ('khiang', 'quick'),                          # 1x - quickly
+        
+        # Round 214: Daniel/Hosea/Amos/Joel hapax vocabulary
+        'kipawlkhawmna': ('ki-pawl-khawm-na', 'REFL-group-join-NMLZ'),  # 1x Dan 11:6 - alliance
+        'mangthangpak': ('mang-thang-pak', 'vanish-quick-INTENS'),  # 1x Hos 6:4 - quickly vanishing
+        'kitumna': ('ki-tum-na', 'REFL-stumble-NMLZ'),          # 1x Amos 2:2 - tumult
+        'leitawina': ('lei-tawi-na', 'borrow-take-NMLZ'),       # 1x Amos 2:8 - pledge
+        'lamkikna': ('lam-kik-na', 'build-ITER-NMLZ'),          # 6x - repairing/rebuilding
+        'lawkgawpna': ('lawkgawp-na', 'spoil-NMLZ'),            # 1x Dan 11:33 - spoil
+        'hauhsakna': ('hauh-sak-na', 'rich-CAUS-NMLZ'),         # 3x - enrichment
+        'zutsiang': ('zut-siang', 'ugly-handsome'),             # 1x - ugly-handsome
+        'dosuakzo': ('do-suak-zo', 'fight-become-finish'),      # 1x - finished fighting
+        'tangtungzo': ('tang-tung-zo', 'rise-upon-finish'),     # 1x - risen up
+        'lehbawlin': ('leh-bawl-in', 'return-make-ERG'),        # 1x - making return
+        'manphateng': ('man-pha-teng', 'price-good-all'),       # 1x - all valuable
+        'kenkante': ('ken-kan-te', 'carry-REDUP-PL'),           # 1x - carriers
+        'behlaplap': ('beh-lap-lap', 'tribe-lap-REDUP'),        # 1x - tribes
+        'phawknuam': ('phawk-nuam', 'remember-pleasant'),       # 1x - pleasant memory
+        'singthem': ('sing-them', 'tree-spit'),                 # 1x - tree sap
+        'thengpak': ('theng-pak', 'clear-INTENS'),              # 1x Hos 6:4 - quickly clear
+        'zuaupiteng': ('zuau-pi-teng', 'lie-great-all'),        # 1x - all great lies
+        'mohbawl': ('moh-bawl', 'mock-make'),                   # 1x - mocking
+        'seem': ('seem', 'give'),                               # 1x - give (variant)
+        'kanlam': ('kan-lam', 'turn-direction'),                # 1x - turning direction
+        'lehgen': ('leh-gen', 'return-say'),                    # 1x - say again
+        'lehsawm': ('leh-sawm', 'return-call'),                 # 1x - call back
+        'tuiphuan': ('tui-phuan', 'water-blanket'),             # 1x - water covering
+        'dengcip': ('deng-cip', 'strike-deep'),                 # 1x - strike deep
+        'thuapthuapin': ('thuap-thuap-in', 'boast-REDUP-ERG'),  # 1x - boasting
+        'kalkham': ('kal-kham', 'walk-prevent'),                # 1x - prevent walking
+        'phualnek': ('phual-nek', 'nest-press'),                # 1x - press nest
+        'ngawhpiak': ('ngawh-piak', 'bite-give'),               # 1x - give bite
+        'hailuat': ('hai-luat', 'pluck-pull'),                  # 1x - pluck out
+        'theikungteng': ('thei-kung-teng', 'fruit-tree-all'),   # 1x - all fruit trees
+        'sengsang': ('seng-sang', 'rise-high'),                 # 1x - rise high
+        'nisuhte': ('ni-suh-te', 'day-count-PL'),               # 1x - counted days
+        'alh': ('alh', 'wing'),                                 # 1x - wing (variant)
+        'heempai': ('heem-pai', 'scatter-go'),                  # 1x - scatter away
+        'hoihbekzah': ('hoih-bek-zah', 'good-only-EMPH'),       # 1x - only good
+        'zinlin': ('zin-lin', 'journey-walk'),                  # 1x - journey walk
+        'khauhtuak': ('khauh-tuak', 'strict-very'),             # 1x - very strict
+        'netcipsuk': ('net-cip-suk', 'twist-deep-push'),        # 1x - twist deep
+        'nengcipsuk': ('neng-cip-suk', 'lean-deep-push'),       # 1x - lean deep
+        'kimawksai': ('ki-mawk-sai', 'REFL-wet-leave'),         # 1x - left wet
+        'kulhvang': ('kulh-vang', 'wall-power'),                # 1x - wall power
+        'dikdekin': ('dik-dek-in', 'straight-REDUP-ERG'),       # 1x - straightening
+        'nuaigawp': ('nuai-gawp', 'under-cover'),               # 1x - cover under
+        'zumkhak': ('zum-khak', 'bow-hard'),                    # 1x - hard bow
+        'neuseekin': ('neu-seek-in', 'small-search-ERG'),       # 1x - searching small
+        'anhaihna': ('an-haih-na', 'food-want-NMLZ'),           # 1x - food wanting
+        'naizo': ('nai-zo', 'near-finish'),                     # 1x - nearly finished
+        'hehhak': ('heh-hak', 'angry-difficult'),               # 1x - difficult anger
+        'sileng': ('si-leng', 'die-if'),                        # 1x - if die
     }
 
 
