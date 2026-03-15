@@ -16766,6 +16766,51 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hoihzawknate': ('hoih-zawk-na-te', 'good-more-NMLZ-PL'),  # 1x Rev 2:19 - last more than first
         'hotnop': ('hot-nop', 'trust-want'),                     # 1x Matt 27:43 - he trusted
         'huhsawn': ('huh-sawn', 'comfort-console'),              # 1x 2Cor 1:4 - comforteth us
+        
+        # Round 227: Mixed hapax vocabulary
+        'gamtangsakkik': ('gam-tang-sak-kik', 'land-rise-CAUS-again'),  # 1x Ezek 36:12 - inherit again
+        'henhante': ('hen-han-te', 'handful-do-PL'),             # 1x Isa 60:8 - fly as doves
+        'huhtheite': ('huh-thei-te', 'help-can-PL'),             # 1x 1Cor 12:28 - helps (gifts)
+        'hukte': ('huk-te', 'snuff-PL'),                         # 1x Jer 2:24 - snuffeth up wind
+        'hullum': ('hul-lum', 'fire-flame'),                     # 1x Dan 3:22 - flame of fire
+        'hupkang': ('hup-kang', 'swallow-mouth'),                # 1x Rev 12:16 - swallowed up flood
+        'husam': ('hu-sam', 'guard-murderer'),                   # 1x Jer 4:31 - murderers
+        'inngualte': ('in-ngual-te', 'house-story-PL'),          # 1x Ezek 42:6 - three stories
+        'keutumpah': ('keu-tum-pah', 'scratch-sun-strike'),      # 1x Mark 4:6 - sun scorched
+        'khantheihna': ('khan-theih-na', 'grow-can-NMLZ'),       # 1x Mark 4:27 - grow he knoweth not
+        'khatkhatin': ('khat-khat-in', 'one-one-ERG'),           # 1x 1Cor 14:31 - one by one
+        'khatpeuhin': ('khat-peuh-in', 'one-any-ERG'),           # 1x Matt 24:50 - in hour not aware
+        'khauhtat': ('khauh-tat', 'grief-cut'),                  # 1x 2Cor 2:5 - caused grief
+        'khausante': ('khau-san-te', 'cloth-silk-PL'),           # 1x Rev 18:12 - silk and scarlet
+        'khawngte': ('khawng-te', 'cup-PL'),                     # 1x Mark 7:4 - washing of cups
+        'khengsuak': ('kheng-suak', 'row-emerge'),               # 1x Mark 6:48 - toiling in rowing
+        'khengta': ('kheng-ta', 'spring-already'),               # 1x Isa 42:9 - spring forth
+        'khephung': ('khe-phung', 'foot-group'),                 # 1x Rev 3:9 - worship at feet
+        'khephungah': ('khe-phung-ah', 'foot-group-LOC'),        # 1x Mark 5:33 - fell at feet
+        'khipkhep': ('khip-khep', 'wind-calm'),                  # 1x Mark 4:39 - be still calm
+        'khuaisuahna': ('khua-i-suah-na', 'town-?-become-NMLZ'), # 1x Isa 47:9 - widowhood
+        'khuaisuahte': ('khua-i-suah-te', 'town-?-become-PL'),   # 1x Zech 12:10 - mourn for him
+        'khuakehte': ('khua-keh-te', 'town-cross-PL'),           # 1x Mark 6:56 - villages cities
+        'khuangta': ('khuang-ta', 'cock-already'),               # 1x Matt 26:74 - cock crew
+        'khuangte': ('khuang-te', 'tabret-PL'),                  # 1x Jer 31:4 - tabrets
+        'khuaphawkin': ('khua-phawk-in', 'town-naked-ERG'),      # 1x Rev 16:15 - walk naked
+        'khulte': ('khul-te', 'take.up-PL'),                     # 1x Dan 3:22 - took up
+        'khutdawhin': ('khut-dawh-in', 'hand-beg-ERG'),          # 1x Mark 10:46 - begging
+        'kidimna': ('ki-dim-na', 'REFL-fill-NMLZ'),              # 1x Ezek 43:5 - filled house
+        'kigeelna': ('ki-geel-na', 'REFL-go.in-NMLZ'),           # 1x Ezek 43:11 - comings in
+        'kigelnate': ('ki-gel-na-te', 'REFL-go.in-NMLZ-PL'),     # 1x Ezek 43:11 - goings
+        'kigengenna': ('ki-gen-gen-na', 'REFL-say-REDUP-NMLZ'),  # 1x Mark 6:14 - name spread
+        'kihaltumna': ('ki-hal-tum-na', 'REFL-burn-all-NMLZ'),   # 1x 1Cor 13:3 - be burned
+        'kihanthawntawm': ('ki-han-thawn-tawm', 'REFL-do-continue-?'),  # 1x Ezek 38:14 - dwell safely
+        'kihtalua': ('ki-htal-ua', 'REFL-shake-very'),           # 1x Matt 28:4 - did shake
+        'kihutawm': ('ki-hu-tawm', 'REFL-guard-finish'),         # 1x Ezek 38:11 - at rest
+        'kikhamvalte': ('ki-kham-val-te', 'REFL-prevent-left-PL'),  # 1x John 6:12 - fragments remain
+        'kikopin': ('ki-kop-in', 'REFL-gather-ERG'),             # 1x Rom 15:17 - glory in
+        'kilamdan': ('ki-lam-dan', 'REFL-way-different'),        # 1x 2Pet 3:8 - thousand years
+        'kimangngilhkha': ('ki-mang-ngilh-kha', 'REFL-profit-forget-still'),  # 1x Ezek 39:14 - continual
+        'kimudahin': ('ki-mu-dah-in', 'REFL-see-offend-ERG'),    # 1x Matt 24:10 - be offended
+        'kimuhnop': ('ki-muh-nop', 'REFL-see-want'),             # 1x Rom 15:23 - desire to come
+        'kinapna': ('ki-nap-na', 'REFL-kiss-NMLZ'),              # 1x 1Cor 16:20 - holy kiss
     }
 
 
