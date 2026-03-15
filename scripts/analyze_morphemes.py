@@ -16510,6 +16510,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tawmcikkhat': ('tawm-cik-khat', 'short-quick-one'),     # 1x - one quick short
         'cikze': ('cik-ze', 'quick-manner'),                     # 1x - quick manner
         'lawnthang': ('lawn-thang', 'throw-rise'),               # 1x - throw rise
+        
+        # Round 222: Minor Prophets/Daniel hapax vocabulary
+        'kisukgawpna': ('ki-suk-gawp-na', 'REFL-push-cover-NMLZ'),  # 1x Hab 1:3 - violence
+        'gimtuahna': ('gim-tuah-na', 'trouble-do-NMLZ'),         # 1x Zech 9:1 - burden
+        'hehnepnate': ('heh-nep-na-te', 'angry-soft-NMLZ-PL'),   # 1x Zech 10:2 - comforts
+        'kidomkaang': ('ki-dom-kaang', 'REFL-stand-straight'),   # 1x Dan 7:4 - stand upright
+        'lamnopna': ('lam-nop-na', 'build-want-NMLZ'),           # 1x Hag 1:14 - work
+        'leiseekna': ('lei-seek-na', 'earth-seek-NMLZ'),         # 1x Nah 3:14 - brickkiln
+        'bakkhat': ('bak-khat', 'bind-one'),                     # 1x - bind one
+        'kiphen': ('ki-phen', 'REFL-open'),                      # 1x - be opened
+        'sibupin': ('si-bup-in', 'die-fall-ERG'),                # 1x - falling dead
+        'daplan': ('da-plan', 'dry-flat'),                       # 1x - flat dry
+        'tamzawte': ('tam-zaw-te', 'many-more-PL'),              # 1x - more many
+        'gankhawk': ('gan-khawk', 'carry-shake'),                # 1x - shake carry
+        'kipaihna': ('ki-paih-na', 'REFL-go-NMLZ'),              # 1x - going
+        'heu': ('heu', 'blow'),                                  # 1x - blow (variant)
+        'upin': ('up-in', 'believe-ERG'),                        # 1x - believing
+        'haibawl': ('hai-bawl', 'pluck-make'),                   # 1x - make pluck
+        'sawpkhiat': ('sawp-khiat', 'sweep-out'),                # 1x - sweep out
+        'kangcipsak': ('kang-cip-sak', 'burn-deep-CAUS'),        # 1x - cause burn deep
+        'linglom': ('ling-lom', 'bell-friend'),                  # 1x - bell friend
+        'zulesa': ('zule-sa', 'obey-already'),                   # 1x - already obey
+        'koplen': ('kop-len', 'call-play'),                      # 1x - call play
+        'kilehsuk': ('ki-leh-suk', 'REFL-return-push'),          # 1x - push return
+        'koplenna': ('kop-len-na', 'call-play-NMLZ'),            # 1x - playing
+        'miamua': ('mia-mua', 'face-wet'),                       # 1x - wet face
+        'sungvumin': ('sung-vum-in', 'inside-heap-ERG'),         # 1x - heaping inside
+        'ngenpi': ('ngen-pi', 'beg-great'),                      # 1x - great beg
+        'keikai': ('kei-kai', '1SG-lead'),                       # 1x - lead me
+        'kimetcip': ('ki-met-cip', 'REFL-squeeze-deep'),         # 1x - squeeze deep
+        'suthang': ('su-thang', 'push-rise'),                    # 1x - push rise
+        'pumlin': ('pum-lin', 'body-walk'),                      # 1x - walk body
+        'pukcipsuk': ('puk-cip-suk', 'fall-deep-push'),          # 1x - push fall deep
+        'zaptelsak': ('zap-tel-sak', 'pinch-join-CAUS'),         # 1x - cause join pinch
+        'banglai': ('bang-lai', 'what-time'),                    # 1x - what time
+        'sinkham': ('sin-kham', 'tree-prevent'),                 # 1x - prevent tree
+        'kizapkhiat': ('ki-zap-khiat', 'REFL-pinch-out'),        # 1x - pinch out
+        'gunvapite': ('gun-va-pi-te', 'heart-bird-great-PL'),    # 1x - great heart birds
+        'khuangin': ('khuang-in', 'drum-ERG'),                   # 1x - drumming
+        'saguh': ('sa-guh', 'flesh-basket'),                     # 1x - flesh basket
+        'upmawhzah': ('up-mawh-zah', 'believe-sin-EMPH'),        # 1x - truly sin believe
+        'kulhhuam': ('kulh-huam', 'wall-guard'),                 # 1x - guard wall
+        'meikulh': ('mei-kulh', 'fire-wall'),                    # 1x - fire wall
+        'lehsuh': ('leh-suh', 'return-count'),                   # 1x - count return
+        'kisiakmang': ('ki-siak-mang', 'REFL-throw-chief'),      # 1x - thrown chief
+        'siinkik': ('siin-kik', 'alive-ITER'),                   # 1x - alive again
+        'huihleeng': ('huih-leeng', 'wind-wing'),                # 1x - wind wing
+        'teeklua': ('teek-lua', 'sink-exceed'),                  # 1x - exceed sink
+        'phezaizai': ('phe-zai-zai', 'spread-REDUP-REDUP'),      # 1x - spreading
+        'kigizawng': ('ki-gi-zawng', 'REFL-squeeze-search'),     # 1x - search squeeze
+        'zulim': ('zul-im', 'follow-house'),                     # 1x - follow house
+        'tupi': ('tu-pi', 'now-great'),                          # 1x - great now
     }
 
 
