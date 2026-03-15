@@ -2268,7 +2268,7 @@ NOUN_STEMS = {
     'phawng': 'hunting',     # 1x Gen 49:9 - (lion hunting context)
     'balzan': 'torn.by.beasts', # 1x Gen 31:39 - "torn of beasts"
     'supna': 'loss',         # 1x Gen 31:39 - "I bare the loss" (supnate = losses)
-    'suangkhuam': 'pillar',  # 1x Gen 31:52 - "heap/pillar" witness pillar
+    'suangkhuam': 'stone-pillar',  # 1x Gen 31:52 - suang 'stone' + khuam 'pillar'
     'pomcip': 'embrace',     # 1x Gen 33:4 - "embraced" (pom-cip = hug-tight)
     'lungphamawh': 'weak',   # 1x Gen 33:13 - "tender" (lung-pha-mawh = heart-good-not)
     'naudom': 'childbirth',  # 1x Gen 35:17 - "hard labour" in childbirth
@@ -4877,7 +4877,7 @@ BINARY_COMPOUNDS = {
     'tuikulh': ('tui', 'kulh', 'island'),         # water-surround → island
     'taanggam': ('taang', 'gam', 'suburb'),       # beautiful-land → suburb
     # sanggam removed - opaque lexeme meaning 'brother', not sang+gam
-    'innkhuam': ('inn', 'khuam', 'pillar'),       # house-pillar → pillar (khuam 'pillar', not 'darkness')
+    'innkhuam': ('inn', 'khuam', 'house-pillar'),  # khuam 'pillar', not 'darkness'
     
     # Round 193m continued: More long stems as binary compounds
     'banbulh': ('ban', 'bulh', 'bracelet'),       # arm-bind → bracelet
@@ -9805,8 +9805,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'seel': ('seel', 'hide'),                              # base - hide
         'hangte': ('hang-te', 'stallion-PL'),                  # stallions/mighty ones
         'hang': ('hang', 'stallion'),                          # base - stallion/mighty
-        'meivakkhuamte': ('meivakkhuam-te', 'candlestick-PL'), # candlesticks
-        'meivakkhuam': ('mei-vak-khuam', 'fire-light-holder'), # candlestick/lampstand
+        'meivakkhuamte': ('mei-vak-khuam-te', 'fire-light-pillar-PL'), # candlesticks
+        'meivakkhuam': ('mei-vak-khuam', 'fire-light-pillar'), # candlestick/lampstand
         'leenggahzute': ('leeng-gah-zu-te', 'grape.juice-PL'),  # wine (plural)
         # leenggahzu now handled by hierarchical system → 'grape.juice'
         'gahzu': ('gah-zu', 'fruit-juice'),                     # base - fruit juice
