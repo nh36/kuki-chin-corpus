@@ -15138,6 +15138,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'galmuhin': ('gal-muh-in', 'far-see-ERG'),                   # 1x Heb 11:13 - "afar off"
         'galpanmun': ('gal-pan-mun', 'enemy-protect-place'),         # 1x Psa 89:40 - "strongholds"
         'ehna': ('eh-na', 'cleave-NMLZ'),                            # 1x Eccl 10:9 - "cleaveth wood"
+        
+        # Round 193d: Compound words with common patterns
+        'kaihkhopte': ('kaih-khop-te', 'gather-PL'),                 # 1x Isa 57:13 - "companies"
+        'khuakongpi': ('khua-kong-pi', 'town-gate-big'),             # 1x Jer 51:30 - "holds/strongholds"
+        'lungdamkoh': ('lungdam-koh', 'rejoice-call'),               # 1x 2Cor 9:12 - "thanksgiving"
+        'lungmuannate': ('lung-muanna-te', 'heart-peace-PL'),        # 1x Ezek 7:11 - "multitude"
+        'hehnate': ('hehna-te', 'anger-PL'),                         # 1x - "angers/wraths"
+        'khawlmunte': ('khawl-mun-te', 'rest-place-PL'),             # 1x - "resting places"
     }
 
 
