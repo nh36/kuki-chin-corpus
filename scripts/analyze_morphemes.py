@@ -2916,6 +2916,13 @@ NOUN_STEMS = {
     'nawng': 'wrong',        # For nawngkai etc
     'nawk': 'convert',       # 1x Acts 15:3 - "conversion"
     'nakvang': 'nostril',    # 1x Psa 18:8 - "nostrils"
+    'palhngulh': 'stray',    # 1x Psa 106:39 - "whoring"
+    'pangbet': 'correct',    # 1x Prov 22:15 - "correction"
+    'phamawh': 'necessary',  # 1x Titus 3:14 - "necessary"
+    'phok': 'turn',          # 1x Isa 42:16 - "paths"
+    'phualpi': 'merchant.city', # 1x Isa 23:11 - "merchant cities"
+    'pheek': 'bed',          # 1x Acts 5:15 - "beds"
+    'phuhsa': 'planted',     # 1x Jer 45:4 - "planted"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15421,6 +15428,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nektumsak': ('nek-tumsak', 'eat-devour'),                  # 1x Psa 105:35 - "devoured"
         'nakbuhte': ('nak-buh-te', 'nose-hang-PL'),                 # 1x Isa 3:21 - "nose jewels"
         'nakvangte': ('nakvang-te', 'nostril-PL'),                  # 1x Psa 18:8 - "nostrils"
+        
+        # Round 193k: p-r hapax
+        'palhngulhna': ('palhngulh-na', 'stray-NMLZ'),              # 1x Psa 106:39 - "whoring"
+        'pangbetna': ('pangbet-na', 'correct-NMLZ'),                # 1x Prov 22:15 - "correction"
+        'phalna': ('phal-na', 'permit-NMLZ'),                       # 1x Dan 2:16 - "time/permission"
+        'phamawhte': ('phamawh-te', 'necessary-PL'),                # 1x Titus 3:14 - "necessary"
+        'phokna': ('phok-na', 'turn-NMLZ'),                         # 1x Isa 42:16 - "paths"
+        'phualpite': ('phualpi-te', 'merchant.city-PL'),            # 1x Isa 23:11 - "merchant cities"
+        'puanakte': ('puan-ak-te', 'cloth-wear-PL'),                # 1x Acts 9:39 - "coats"
+        'pheekte': ('pheek-te', 'bed-PL'),                          # 1x Acts 5:15 - "beds"
+        'phelthum': ('phel-thum', 'part-three'),                    # 1x Rev 16:19 - "three parts"
+        'phuhna': ('phuh-na', 'sit-NMLZ'),                          # 1x Rev 2:13 - "seat"
+        'phuhsate': ('phuhsa-te', 'planted-PL'),                    # 1x Jer 45:4 - "planted"
+        'piakhol': ('piak-hol', 'give-return'),                     # 1x Isa 36:21 - "answer"
+        'puankang': ('puan-kang', 'cloth-pure'),                    # 1x Luke 23:53 - "linen"
     }
 
 
