@@ -15682,6 +15682,38 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kibottat': ('ki-bot-tat', 'REFL-break-apart'),               # 1x Psa 124:7 - "snare broken"
         'kuih': ('kuih', 'plow'),                                     # 1x Psa 129:3 - "plowed"
         "luiliante'": ("lui-lian-te'", "river-big-PL.GEN"),           # 1x Psa 77:19 - "great waters"
+        
+        # Round 202: Proverbs/Job hapax vocabulary
+        'liuliau': ('liu-liau', 'straight-IDEO'),                     # 1x Prov 4:25 - "look straight"
+        'guhguak': ('guh-guak', 'moan-groan'),                        # 1x Prov 5:11 - "consumed/mourn"
+        'keikha': ('kei-kha', 'NEG-PERF'),                            # 1x Prov 5:13 - "have not done"
+        'khoih': ('khoih', 'point'),                                  # 1x Prov 6:13 - "teacheth with fingers"
+        'kisusiatawm': ('ki-su-siat-awm', 'REFL-push-destroy-PART'),  # 1x Prov 6:32 - "destroyeth own soul"
+        'hehzawk': ('heh-zawk', 'angry-most'),                        # 1x Prov 6:34 - "jealousy/rage"
+        'petmah': ('pet-mah', 'find-exactly'),                        # 1x Prov 7:15 - "have found thee"
+        'siipsak': ('siip-sak', 'sting-CAUS'),                        # 1x Prov 10:26 - "irritate eyes"
+        'vokpi': ('vok-pi', 'pig-big'),                               # 1x Prov 11:22 - "swine"
+        'leinop': ('lei-nop', 'buy-good'),                            # 1x Prov 11:26 - "good harvest"
+        'leikhal': ('lei-khal', 'earth-dry'),                         # 1x Prov 12:12 - "net/snare"
+        'pholaklak': ('pho-lak-lak', 'proclaim-REDUP'),               # 1x Prov 12:23 - "proclaimeth"
+        'maigumsak': ('mai-gum-sak', 'face-dark-CAUS'),               # 1x Prov 15:13 - "spirit broken"
+        'bangbek': ('bang-bek', 'what-only'),                         # 1x Prov 16:33 - "entirely/whole"
+        'mohkeu': ('moh-keu', 'bread-dry'),                           # 1x Prov 17:1 - "dry morsel"
+        'bunzaw': ('bun-zaw', 'deep-more'),                           # 1x Prov 17:10 - "entereth deeply"
+        'lipi': ('li-pi', 'each-EMPH'),                               # 1x Gen 44:11 - "every man"
+        'khawlpak': ('khawl-pak', 'cease-CAUS'),                      # 1x Prov 17:14 - "leave off"
+        'maigum': ('mai-gum', 'face-dark'),                           # 1x Job 29:24 - "countenance dark"
+        'kihupsuk': ('ki-hup-suk', 'REFL-pierce-sink'),               # 1x Prov 18:8 - "go down into"
+        'sawksukin': ('sawk-suk-in', 'dip-hold-ERG'),                 # 1x Prov 19:24 - "hideth hand"
+        'haikhak': ('hai-khak', 'gravel-hard'),                       # 1x Prov 20:17 - "filled with gravel"
+        'lopthop': ('lop-thop', 'hurry-quickly'),                     # 1x Prov 21:5 - "hasty"
+        'lehthuak': ('leh-thuak', 'suffer-instead'),                  # 1x Prov 21:18 - "ransom"
+        'kizawnlawh': ('ki-zawn-lawh', 'REFL-poor-RESULT'),           # 1x Prov 22:16 - "come to want"
+        'hehbaih': ('heh-baih', 'angry-easily'),                      # 1x Prov 22:24 - "furious man"
+        'duhgawhkha': ('duh-gawh-kha', 'desire-dainty-PERF'),         # 1x Prov 23:6 - "desire dainties"
+        'kithuahkha': ('ki-thuah-kha', 'REFL-associate-PERF'),        # 1x Prov 23:20 - "be among"
+        "dian'": ("dian'", "Midian.GEN"),                             # 1x Gen 25:4 - proper noun
+        "kha'n": ("kha'n", "might-COND"),                             # 1x Prov 22:13 - "might"
     }
 
 
