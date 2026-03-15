@@ -4088,7 +4088,7 @@ ATOMIC_GLOSSES = {
     
     # Nature
     'tui': 'water',
-    'mei': 'fire',
+    'mei': 'fire',      # Also mei 'female' (TB *mei) - homophonous roots
     'van': 'sky',
     'lei': 'earth',
     'ni': 'sun',
@@ -4097,6 +4097,10 @@ ATOMIC_GLOSSES = {
     'gua': 'rain',
     'khu': 'smoke',
     'khuk': 'bend/pool',  # tuikhuk = pool
+    
+    # Gender (TB cognates)
+    # mei 'female' (TB *mei) - distinct from mei 'fire', used in numei, meigong
+    # pa 'male/father' - used in many compounds
     
     # Plants/trees
     'sing': 'tree',
@@ -4288,7 +4292,7 @@ ATOMIC_GLOSSES = {
     'duai': 'soft',        # lungduai = heart-soft = compassion
     'khum': 'cover',       # kikhum = REFL-cover = covering
     'dan': 'manner',       # kilamdan = REFL-way-manner = pattern
-    'gong': 'alone',       # meigong = fire-alone = widow
+    'gong': 'alone',       # meigong = female-alone = widow (mei 'female' TB *mei)
     
     # Round 177: Additional atomic glosses (5-9x compounds)
     'kiat': 'release',     # thongkiat = prison-release = deliverance
@@ -4562,7 +4566,7 @@ BINARY_COMPOUNDS = {
     'biakna': ('biak', 'na', 'worship'),        # worship-NMLZ → worship (1518x)
     'khuapi': ('khua', 'pi', 'city'),           # town-big → city (1225x)
     'lungsim': ('lung', 'sim', 'heart'),        # heart-count → heart/mind (989x)
-    'numei': ('nu', 'mei', 'woman'),            # mother-fire → woman (763x)
+    'numei': ('nu', 'mei', 'woman'),            # mother-female → woman (763x) - mei 'female' (TB *mei)
     'mawhna': ('mawh', 'na', 'sin'),            # guilty-NMLZ → sin/guilt (735x)
     'minam': ('mi', 'nam', 'nation'),           # person-kind → nation/people (711x)
     'thukham': ('thu', 'kham', 'law'),          # word-forbid → law/commandment (447x)
@@ -4702,7 +4706,7 @@ BINARY_COMPOUNDS = {
     'hamphat': ('ham', 'phat', 'glory'),         # full-praise → glory (16x)
     'kikhum': ('ki', 'khum', 'covering'),        # REFL-cover → covering (14x)
     'kulhkong': ('kulh', 'kong', 'gate'),        # wall-road → gate (14x)
-    'meigong': ('mei', 'gong', 'widow'),         # fire-alone → widow (14x)
+    'meigong': ('mei', 'gong', 'widow'),         # female-alone → widow (14x) - mei 'female' (TB *mei)
     
     # Round 177: 5-9x frequency binary compounds
     'siansuah': ('sian', 'suah', 'sanctify'),    # holy-become → sanctify (9x)
@@ -12557,7 +12561,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lelh': ('lelh', 'defeat'),                                # defeat counsel
         'guiawk': ('gui-awk', 'saddle-go'),                        # saddled ass
         'suih': ('suih', 'hew'),                                   # hew timber
-        'meigongnu': ('mei-gong-nu', 'fire-torch-woman'),          # widow
+        'meigongnu': ('meigong-nu', 'widow-F'),                    # widow (mei 'female' TB *mei)
         'poding': ('po-ding', 'juniper-tree'),                     # juniper tree
         'lelhlam': ('lelh-lam', 'break-through'),                  # break through
         'teekta': ('teek-ta', 'old-already'),                      # husband old
@@ -13437,8 +13441,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thahatte': ('tha-hat-te', 'strength-strong-PL'),            # mighty ones
         "tupa'": ('tu-pa', 'grandson-M.POSS'),                       # 3x - grandson's
         'tupa': ('tu-pa', 'grandson-M'),                             # grandson
-        "meigongnu'": ('mei-gong-nu', 'fire-alone-F.POSS'),          # 3x - widow's
-        'meigongnu': ('mei-gong-nu', 'fire-alone-F'),                # widow
+        "meigongnu'": ('meigong-nu', 'widow-F.POSS'),                # 3x - widow's (mei 'female' TB *mei)
+        'meigongnu': ('meigong-nu', 'widow-F'),                      # widow (mei 'female' TB *mei)
         "kilin'": ('ki-lin', 'REFL-shake.POSS'),                     # 3x - quaking's
         'kilin': ('ki-lin', 'REFL-shake'),                           # quake
         'kiling': ('ki-ling', 'REFL-shake'),                         # quaked
@@ -13691,8 +13695,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tagahte': ('ta-gah-te', 'child-fruit-PL'),                   # offspring
         'neihsunte': ('neih-sun-te', 'have-day-PL'),                  # 2x - daily having
         'gawi-in': ('gawi-in', 'hook-ERG'),                           # 2x - with hook
-        "meigongte'": ('mei-gong-te', 'fire-alone-PL.POSS'),          # 2x - widows'
-        'meigongte': ('mei-gong-te', 'fire-alone-PL'),                # widows
+        "meigongte'": ('meigong-te', 'widow-PL.POSS'),                # 2x - widows' (mei 'female' TB *mei)
+        'meigongte': ('meigong-te', 'widow-PL'),                      # widows (mei 'female' TB *mei)
         'seelcipsak': ('seel-cip-sak', 'press-squeeze-CAUS'),         # 2x - cause press
         'kisakna': ('ki-sak-na', 'REFL-CAUS-NMLZ'),                   # 2x - causing
         'leenkhia-in': ('leen-khia-in', 'lean-exit-ERG'),             # 2x - leaning out

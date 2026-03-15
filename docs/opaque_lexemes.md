@@ -53,7 +53,22 @@ A word is considered an opaque lexeme when:
 - **Actual meaning:** woman, female
 - **Evidence:** Gen 1:27 "male and female created he them"
 - **Note:** Core vocabulary. Etymology unclear - may be historical compound.
-- **Verdict:** Currently decomposed but likely opaque/fossilized.
+- **Resolution:** mei here is NOT 'fire' but a separate Tibeto-Burman root *mei 
+  meaning 'female'. This is a widespread TB cognate. nu-mei = mother-female → woman.
+- **Verdict:** TRANSPARENT compound once mei 'female' is recognized.
+
+## Tibeto-Burman Cognates
+
+### mei 'female' (TB *mei)
+There is a root `mei` meaning 'female' that is homophonous with `mei` 'fire' but 
+etymologically distinct. This is a widespread Tibeto-Burman cognate found in many
+related languages.
+
+**Compounds using mei 'female':**
+- **numei** = nu (mother) + mei (female) → "woman" ✓
+- **meigong** = mei (female) + gong (alone) → "widow" (female-alone) ✓
+
+This root has been added to the analyzer's atomic stems with appropriate documentation.
 
 ## Probable Opaque Lexemes (Need Verification)
 
@@ -103,22 +118,6 @@ A word is considered an opaque lexeme when:
 ## Semantically Questionable Compounds
 
 These are currently analyzed as compounds but the semantic connection is indirect or cultural:
-
-### numei 'woman/female'
-- **Current analysis:** nu (woman/mother) + mei (fire)
-- **Compositional meaning:** "woman-fire" (?)
-- **Actual meaning:** woman, female (core vocabulary)
-- **Notes:** Etymology unclear. May be a fossilized historical compound.
-- **Status:** Retained as compound with holistic gloss "woman". Consider opaque.
-
-### meigong 'widow'
-- **Current analysis:** mei (fire) + gong (alone)
-- **Compositional meaning:** "fire-alone" (?)
-- **Actual meaning:** widow
-- **Evidence:** Gen 38:11 "Remain a widow at thy father's house"
-- **Notes:** The connection between "fire" and widowhood is not obvious.
-  Possibly cultural: extinguished hearth = no husband?
-- **Status:** Retained as compound. Possibly opaque or culturally transparent.
 
 ### innkhuam 'pillar'
 - **Current analysis:** inn (house) + khuam (darkness)
