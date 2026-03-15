@@ -4361,7 +4361,10 @@ ATOMIC_GLOSSES = {
     'tawng': 'false',      # lungsimtawng = heart-mind-false = hypocrisy
     
     # Round 180: Additional atomic glosses (batch 4)
-    'kholh': 'accompany',  # genkholh = speak-accompany = interpretation
+    # Note: kholh has TWO homophonous morphemes:
+    # - kholh₁ 'INTENS' (intensifier) used with gen-, hilh-, theih-, geel-, bawl-
+    # - kholh₂ 'accompany' used with ki- (REFL-accompany = be with)
+    # The INTENS meaning is in SUFFIXES dict; 'accompany' applies to ki- compounds only
     'gan': 'cattle',       # gancing = cattle-care = shepherd
     'tun': 'arrive',       # zintun = journey-arrive = destination
     'zak': 'hear',         # zaksak = hear-CAUS = testimony
@@ -4798,7 +4801,7 @@ BINARY_COMPOUNDS = {
     'sawmli': ('sawm', 'li', 'forty'),            # ten-four → forty (6x)
     
     # Round 180: More 5-9x frequency binary compounds (batch 4)
-    'genkholh': ('gen', 'kholh', 'interpret'),    # speak-accompany → interpret (6x)
+    'genkholh': ('gen', 'kholh', 'prophesy'),      # speak-INTENS → prophesy/declare (6x)
     'gancing': ('gan', 'cing', 'shepherd'),       # cattle-care → shepherd (6x)
     'galdaih': ('gal', 'daih', 'warfare'),        # enemy-able → warfare (6x)
     'zintun': ('zin', 'tun', 'arrive'),           # journey-arrive → destination (5x)
@@ -6454,7 +6457,7 @@ TERNARY_COMPOUNDS = {
     'genkholhna': {
         'morphemes': ['gen', 'kholh', 'na'],
         'structure': '(gen-kholh)-na',
-        'lexical': 'interpretation',
+        'lexical': 'prophecy',  # speak-INTENS-NMLZ = prophetic declaration
         'head': 'left',
     },
     'gancingte': {
@@ -8569,7 +8572,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         '-a\'': ('-a\'', 'LOC.POSS'),                        # 13x - compound
         'hingin': ('hing-in', 'live-ERG'),                   # 13x - "living"
         'gensia-in': ('gen-sia-in', 'speak-bad-ERG'),        # 13x - "speaking ill"
-        'hilhkholhna': ('hilh-kholh-na', 'teach-denounce-NMLZ'), # 13x - "teaching"
+        'hilhkholhna': ('hilh-kholh-na', 'teach-INTENS-NMLZ'),  # 13x - "testimony"
         'kamsung': ('kam-sung', 'mouth-inside'),             # 13x - "in mouth"
         'kamciamna': ('kam-ciam-na', 'mouth-promise-NMLZ'),  # 13x - "oath"
         'siksanin': ('sik-san-in', 'repent-?-ERG'),          # 13x - compound
@@ -8599,7 +8602,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lungngaingai': ('lung-ngai-ngai', 'heart-think~think'), # 12x - "meditate"
         'matsa': ('mat-sa', 'grasp-meat'),                   # 12x - "venison"
         'bawngpi': ('bawng-pi', 'cattle-big'),               # 12x - "milch cow"
-        'theihkholh': ('theih-kholh', 'know.II-denounce'),   # 12x - "sore"
+        'theihkholh': ('theih-kholh', 'know.II-INTENS'),       # 12x - "certainly/sore"
         'lunghihmawh': ('lung-hih-mawh', 'heart-do-sin'),    # 12x - "knew not"
         'kimuhna': ('ki-muh-na', 'REFL-see.II-NMLZ'),        # 12x - "found"
         'numeino': ('numei-no', 'woman-young'),              # 12x - "maid"
@@ -9789,8 +9792,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kici': ('kici', 'called'),                            # base - be called
         'leenggahte': ('leenggah-te', 'grape-PL'),             # grapes (NOT leeng-gah-te)
         'leenggah': ('leenggah', 'grape'),                     # base - grape
-        'kholhnate': ('kholhna-te', 'enchantment-PL'),         # enchantments/divinations
-        'kholhna': ('kholhna', 'enchantment'),                 # base - enchantment
+        'kholhnate': ('kholhna-te', 'divination-PL'),           # divinations (opaque lexeme)
+        'kholhna': ('kholhna', 'divination'),                  # base - divination (opaque)
         
         # Session 6 Round 21: More over-segmentation fixes
         'anlimte': ('anlim-te', 'dainty-PL'),                  # dainties (NOT a-nlim-te)
@@ -11261,7 +11264,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'anla': ('an-la', 'grain-harvest'),                    # seedtime and harvest
         'galdalna': ('gal-dal-na', 'war-equip-NMLZ'),          # armour
         'pangpi': ('pang-pi', 'side-great'),                   # four sides
-        'hilhkholh': ('hilh-kholh', 'teach-swallow'),          # swallowed up
+        'hilhkholh': ('hilh-kholh', 'teach-INTENS'),            # testify/warn
         'silhpa': ('silh-pa', 'clothe-AGT'),                   # one clothed
         'huanna': ('huan-na', 'build-NMLZ'),                   # building
         'lungkimzo': ('lung-kim-zo', 'heart-full-COMPL'),      # satisfied
@@ -11547,13 +11550,13 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zahun': ('za-hun', 'hundred-time'),                       # might, all one's strength
         'semzaw': ('sem-zaw', 'serve-more'),                       # serve more
         'bukno': ('buk-no', 'ambush-DIM'),                         # watchtower, guardpost
-        'hilhkholhnate': ('hilh-kholh-na-te', 'teach-testify-NMLZ-PL'),  # testimonies
-        'hilhkholhna': ('hilh-kholh-na', 'teach-testify-NMLZ'),     # testimony
+        'hilhkholhnate': ('hilh-kholh-na-te', 'teach-INTENS-NMLZ-PL'),   # testimonies
+        'hilhkholhna': ('hilh-kholh-na', 'teach-INTENS-NMLZ'),      # testimony
         'heina': ('hei-na', 'mock-NMLZ'),                          # mockery, provocation
         'hei': ('hei', 'mock'),                                    # mock, provoke
         'khankhit': ('khan-khit', 'grow-before'),                  # before growing up
         'kamsangnu': ('kamsang-nu', 'prophet-F'),                  # prophetess
-        'genkholhsa': ('gen-kholh-sa', 'speak-testify-PRF'),        # spoken (prophecy)
+        'genkholhsa': ('gen-kholh-sa', 'speak-INTENS-PRF'),          # prophesied
         'keeksak': ('keek-sak', 'tear.open-CAUS'),                 # enlarge, expand borders
         'gualnopna': ('gualnop-na', 'rejoice-NMLZ'),               # rejoicing, mirth
         'gualnop': ('gualnop', 'rejoice'),                         # rejoice, be merry
@@ -12020,7 +12023,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nenniamna': ('nen-niam-na', 'face-low-NMLZ'),             # beseeching
         'zuautatna': ('zuau-tat-na', 'conspiracy-cut-NMLZ'),       # conspiracy
         'siakhawm': ('sia-khawm', 'dung-eat'),                     # eat dung
-        'geelkholhsa': ('geel-kholh-sa', 'plan-declare-PAST'),     # formed long ago
+        'geelkholhsa': ('geel-kholh-sa', 'plan-INTENS-PRF'),        # prepared/formed
         'nakpheh': ('nak-pheh', 'nose-hook'),                      # hook in nose
         'khituite': ('khi-tui-te', 'eye-water-PL'),                # tears
         'zindo': ('zin-do', 'journey-treasure'),                   # treasures
@@ -12260,7 +12263,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'molhtumte': ('molh-tum-te', 'siege-mount-PL'),            # siege mounts
         'delhphahin': ('delh-phah-in', 'lay-upon-INST'),           # laying upon
         'muhkhak': ('muh-khak', 'see-into'),                       # in sight of
-        'genkholhnate': ('gen-kholh-na-te', 'speak-declare-NMLZ-PL'), # declarations
+        'genkholhnate': ('gen-kholh-na-te', 'speak-INTENS-NMLZ-PL'),  # prophecies
         'sumzuak': ('sum-zuak', 'money-buy'),                      # buyer
         'mindaihuai': ('min-dai-huai', 'eye-far-mix'),             # far off
         'paikhiatlam': ('pai-khiat-lam', 'go-out-direction'),      # removing
@@ -13033,7 +13036,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khuaneua': ('khua-neu-a', 'village-small-LOC'),           # village LOC
         'kiumcihna': ('ki-um-cih-na', 'REFL-strong-say-NMLZ'),     # strengthening
         'kangop': ('kang-op', 'carry-bear'),                       # bear
-        'hilhkholhnain': ('hilh-kholh-na-in', 'teach-NMLZ-INST'),  # teach INST
+        'hilhkholhnain': ('hilh-kholh-na-in', 'teach-INTENS-NMLZ-ERG'),  # testimony ERG
         'laimal': ('lai-mal', 'book-plain'),                       # plain book
         'guktakna': ('guk-tak-na', 'good-true-NMLZ'),              # goodness
         'deihnaun': ('deih-na-un', 'want-NMLZ-3PL'),               # want
@@ -13202,7 +13205,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tenglai': ('teng-lai', 'dwell-time'),                      # dwelling time
         'notkik': ('not-kik', 'push-ITER'),                         # force/push repeatedly
         'paisuksak': ('pai-suk-sak', 'go-descend-CAUS'),            # force down
-        'hilhkholhsa': ('hilh-kholh-sa', 'teach-warn-PERF'),        # sworn/warned
+        'hilhkholhsa': ('hilh-kholh-sa', 'teach-INTENS-PRF'),         # testified/warned
         'veikhoi': ('vei-khoi', 'cry.out-call'),                    # cry out
         'puannuai': ('puan-nuai', 'cloth-under'),                   # under raiment
         'khaknelhin': ('khak-nel-hin', 'shut-door-DECL'),           # shut/locked
@@ -13664,7 +13667,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tengbek': ('teng-bek', 'dwell-only'),                        # 2x - dwell only
         'phutsak': ('phut-sak', 'spray-CAUS'),                        # 2x - cause spray
         'hehpihzawh': ('heh-pih-zawh', 'angry-CAUS-able'),            # 2x - able to anger
-        'kiginkholh': ('ki-gin-kholh', 'REFL-fear-wrap'),             # 2x - fearfully wrap
+        'kiginkholh': ('ki-gin-kholh', 'REFL-fear-INTENS'),           # 2x - fearfully made
         'khaisak': ('khai-sak', 'lift-CAUS'),                         # 2x - cause lift
         'tuamtuama': ('tuam-tuam-a', 'various-REDUP-LOC'),            # 2x - at various
         'kikhaina': ('ki-khai-na', 'REFL-lift-NMLZ'),                 # 2x - lifting
@@ -15621,7 +15624,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lopi': ('lo-pi', 'NEG-EMPH'),                                # 1x Gen 21:23 - "falsely" (not falsely)
         'sucipsuk': ('su-cip-suk', 'push-tight-sink'),                # 1x Job 30:14 - "rolled upon me"
         'heekcip': ('heek-cip', 'bind-tight'),                        # 1x Job 30:18 - "bindeth me about"
-        'sehkholhin': ('seh-khol-hin', 'appoint-house-ERG'),          # 1x Job 30:23 - "house appointed"
+        'sehkholhin': ('seh-kholh-in', 'appoint-INTENS-ERG'),          # 1x Job 30:23 - "appointed"
         'sinkhamin': ('sin-kham-in', 'dark-mourn-ERG'),               # 1x Job 30:28 - "mourning"
         'dulhkhia': ('dulh-khia', 'peel-out'),                        # 1x Job 30:30 - "skin peeling off"
         'henkop': ('hen-kop', 'bind-together'),                       # 1x Job 38:31 - "bind influences"

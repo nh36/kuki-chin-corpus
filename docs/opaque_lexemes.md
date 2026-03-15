@@ -121,7 +121,40 @@ meaning definitively does NOT relate to the actual meaning:
 - **Evidence:** Exod 25:4, 26:7 "goats' hair"
 - **Verdict:** Opaque. Foot/tip don't relate to goat hair.
 
+### kholhna 'divination/enchantment'
+- **Apparent analysis:** kholh (INTENS) + na (NMLZ)
+- **Compositional meaning:** "intensification" (?)
+- **Actual meaning:** divination, enchantment, observing times
+- **Evidence:** Lev 19:26 "ye shall not use enchantment, nor observe times"
+              2Chr 33:6 "observed times, used enchantments"
+- **Note:** The morpheme -kholh- elsewhere means INTENS (intensifier) in compounds
+  like gen-kholh (speak-INTENS = prophesy), hilh-kholh (teach-INTENS = testify),
+  theih-kholh (know-INTENS = know certainly). But kholhna as a standalone nominal
+  has lexicalized to mean "divination" with no transparent connection to intensification.
+- **Verdict:** Opaque lexicalized nominal. Treated as indivisible stem.
+
 ## Morphemes with Multiple Meanings (Philological Notes)
+
+### kholh - homophonous morphemes
+There are two distinct morphemes spelled -kholh-:
+
+**kholh₁ 'INTENS' (verbal intensifier)**
+Used to intensify the action of a preceding verb:
+- **gen-kholh** = speak-INTENS → prophesy, declare solemnly
+- **hilh-kholh** = teach-INTENS → testify, warn, bear witness
+- **theih-kholh** = know-INTENS → know certainly, know straitly
+- **geel-kholh** = plan-INTENS → prepare, form (thoroughly)
+- **bawl-kholh** = make-INTENS → prepare (thoroughly)
+- **seh-kholh** = appoint-INTENS → firmly appoint
+
+**kholh₂ 'accompany' (verb)**
+Used with REFL prefix ki- to mean "be with, accompany":
+- **ki-kholh** = REFL-accompany → be with, accompany (Gen 24:32)
+- **ki-kholh-pih** = REFL-accompany-CAUS → companion (Ps 55:13)
+
+**kholhna 'divination' (lexicalized nominal)**
+This is an opaque lexeme (see above). While formally appearing to be kholh + na (NMLZ),
+the meaning "divination/enchantment" is not derivable from either kholh₁ or kholh₂.
 
 ### khuam - possibly 'upright/pillar' not just 'darkness'
 Evidence from compounds:
