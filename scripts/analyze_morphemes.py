@@ -15571,7 +15571,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zehsiang': ('zeh-siang', 'pure-clean'),                      # 1x Ezra 6:20 - "purified"
         
         # Round 198b: More hapax from Nehemiah/Esther
-        'tukawmin': ('tu-kawm-in', 'sit-beside-ADV'),                 # 1x Neh 2:6 - "sitting by"
+        'tukawmin': ('tu-kawm-in', 'sit-beside-ERG'),                 # 1x Neh 2:6 - "sitting by"
         'zumcingte': ('zum-cing-te', 'prison-guard-PL'),              # 1x Neh 3:25 - "court of prison"  
         'lehtuksak': ('leh-tuk-sak', 'turn-back-CAUS'),               # 1x Neh 4:4 - "turn back"
         'gamzai': ('gam-zai', 'land-fat'),                            # 1x Neh 9:35 - "fat land"
@@ -15615,7 +15615,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'dinden': ('din-den', 'stand-border'),                        # 1x Job 26:10 - "boundary/bounds"
         'leizawh': ('lei-zawh', 'buy-exchange'),                      # 1x Job 28:17 - "exchange"
         'dimdem': ('dim-dem', 'quiet-IDEO'),                          # 1x Job 29:21 - "silently/waited"
-        "taciingte'": ("ta-ciing-te'", "child-bear.NEG-PL.GEN"),      # 1x Job 24:21 - "barren women"
+        "taciingte'": ("taciing-te'", "barren-PL.GEN"),               # 1x Job 24:21 - "barren women" (taciing=lexicalized)
         
         # Round 200: Job/Psalms/Numbers hapax vocabulary
         'lopi': ('lo-pi', 'NEG-EMPH'),                                # 1x Gen 21:23 - "falsely" (not falsely)
@@ -15636,19 +15636,19 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thasaan': ('tha-saan', 'strength-lift'),                     # 1x Psa 7:6 - "lift up thyself"
         'meiivom': ('meii-vom', 'cloud-dark'),                        # 1x Psa 18:9 - "darkness"
         'kinawmsawmin': ('ki-nawm-sawm-in', 'REFL-fall-together-ERG'), # 1x Psa 20:8 - "brought down"
-        'guaksuak': ('guak-suak', 'fail-cause'),                      # 1x Job 31:16 - "cause to fail"
+        'guaksuak': ('guak-suak', 'confound-become'),                 # 1x Psa 22:5 - "were not confounded" (suak=become, not CAUS)
         'sabawh': ('sa-bawh', 'roar-open'),                           # 1x Psa 22:13 - "ravening lion"
         
         # Round 200b: Psalms hapax vocabulary
-        'kihbawl': ('kih-bawl', 'REFL-hide'),                         # 1x Psa 22:24 - "hid his face"
-        'kigimtawm': ('ki-gim-tawm', 'REFL-afflict-again'),           # 1x Psa 35:13 - "humbled my soul"
+        'kihbawl': ('kih-bawl', 'hide-make'),                         # 1x Psa 22:24 - "hid his face" (kih=hide stem)
+        'kigimtawm': ('ki-gim-tawm', 'REFL-afflict-again'),           # 1x Psa 35:13 - "humbled my soul" (with -sak separate)
         'enkhong': ('en-khong', 'look-how.long'),                     # 1x Psa 35:17 - "how long wilt thou look on"
         'lokung': ('lo-kung', 'field-herb'),                          # 1x Psa 37:2 - "green herb"
         'suniam': ('su-niam', 'push-down'),                           # 1x Psa 37:14 - "cast down"
         'kipden': ('kip-den', 'endure-forever'),                      # 1x Psa 37:18 - "for ever"
         'kibokcipsak': ('ki-bok-cip-sak', 'REFL-bow-tight-CAUS'),     # 1x Psa 38:6 - "bowed down greatly"
         'ngiungeu': ('ngiu-ngeu', 'wait-IDEO'),                       # 1x Psa 40:1 - "waited patiently"
-        'kihuauhuau': ('ki-huau-huau', 'REFL-whisper-REDUP'),         # 1x Psa 41:7 - "whisper together"
+        'kihuauhuau': ('ki-huau-huau', 'RECIP-whisper-REDUP'),        # 1x Psa 41:7 - "whisper together" (ki-=reciprocal)
         'sawnpai': ('sawn-pai', 'push-go'),                           # 1x Psa 44:5 - "push down"
         
         # Round 201: Psalms/Leviticus/Numbers hapax vocabulary
@@ -15701,7 +15701,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mohkeu': ('moh-keu', 'bread-dry'),                           # 1x Prov 17:1 - "dry morsel"
         'bunzaw': ('bun-zaw', 'deep-more'),                           # 1x Prov 17:10 - "entereth deeply"
         'lipi': ('li-pi', 'each-EMPH'),                               # 1x Gen 44:11 - "every man"
-        'khawlpak': ('khawl-pak', 'cease-CAUS'),                      # 1x Prov 17:14 - "leave off"
+        'khawlpak': ('khawl-pak', 'cease-quickly'),                   # 1x Prov 17:14 - "leave off" (pak=quickly, not CAUS)
         'maigum': ('mai-gum', 'face-dark'),                           # 1x Job 29:24 - "countenance dark"
         'kihupsuk': ('ki-hup-suk', 'REFL-pierce-sink'),               # 1x Prov 18:8 - "go down into"
         'sawksukin': ('sawk-suk-in', 'dip-hold-ERG'),                 # 1x Prov 19:24 - "hideth hand"
@@ -15728,7 +15728,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lomcip': ('lom-cip', 'gather-tight'),                        # 1x Prov 30:4 - "gathered in fists"
         'tuncip': ('tun-cip', 'cover-tight'),                         # 1x Job 9:24 - "covereth faces"
         'khazel': ('kha-zel', 'fear-might'),                          # 1x Prov 30:9 - "lest I"
-        'taciing': ('ta-ciing', 'bear-NEG'),                          # 1x Job 24:21 - "barren"
+        'taciing': ('taciing', 'barren'),                             # 1x Prov 30:16 - "barren womb" (lexicalized)
         'khelkhiat': ('khel-khiat', 'pick-out'),                      # 1x Prov 30:17 - "pick it out"
         'kheekin': ('kheek-in', 'spin-ERG'),                          # 1x Prov 31:19 - "layeth to spindle"
         'gantawm': ('gan-tawm', 'hold-again'),                        # 1x Prov 31:19 - "hold distaff"
