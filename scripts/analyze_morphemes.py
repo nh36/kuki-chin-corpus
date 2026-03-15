@@ -11547,13 +11547,13 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zahun': ('za-hun', 'hundred-time'),                       # might, all one's strength
         'semzaw': ('sem-zaw', 'serve-more'),                       # serve more
         'bukno': ('buk-no', 'ambush-DIM'),                         # watchtower, guardpost
-        'hilhkholhnate': ('hilh-kholh-na-te', 'teach-RECIPR-NMLZ-PL'),  # testimonies
-        'hilhkholhna': ('hilh-kholh-na', 'teach-RECIPR-NMLZ'),     # testimony
+        'hilhkholhnate': ('hilh-kholh-na-te', 'teach-testify-NMLZ-PL'),  # testimonies
+        'hilhkholhna': ('hilh-kholh-na', 'teach-testify-NMLZ'),     # testimony
         'heina': ('hei-na', 'mock-NMLZ'),                          # mockery, provocation
         'hei': ('hei', 'mock'),                                    # mock, provoke
         'khankhit': ('khan-khit', 'grow-before'),                  # before growing up
         'kamsangnu': ('kamsang-nu', 'prophet-F'),                  # prophetess
-        'genkholhsa': ('gen-kholh-sa', 'speak-RECIPR-PRF'),        # spoken (prophecy)
+        'genkholhsa': ('gen-kholh-sa', 'speak-testify-PRF'),        # spoken (prophecy)
         'keeksak': ('keek-sak', 'tear.open-CAUS'),                 # enlarge, expand borders
         'gualnopna': ('gualnop-na', 'rejoice-NMLZ'),               # rejoicing, mirth
         'gualnop': ('gualnop', 'rejoice'),                         # rejoice, be merry
