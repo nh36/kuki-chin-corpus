@@ -2923,6 +2923,18 @@ NOUN_STEMS = {
     'phualpi': 'merchant.city', # 1x Isa 23:11 - "merchant cities"
     'pheek': 'bed',          # 1x Acts 5:15 - "beds"
     'phuhsa': 'planted',     # 1x Jer 45:4 - "planted"
+    'gai': 'lame',           # 1x Jer 31:8 - "lame"
+    'galkisim': 'war.signal', # 1x Jer 4:21 - "standard/trumpet"
+    'gawhna': 'understanding', # 1x Mark 12:33 - "understanding"
+    'gawng': 'lean',         # 1x Ezek 34:20 - "lean cattle"
+    'gehsa': 'bull',         # 1x Isa 34:7 - "bullocks"
+    'gialbem': 'leopard',    # 1x Isa 11:6 - "leopard"
+    'gimpiak': 'afflict',    # 1x Psa 88:15 - "afflicted"
+    'gimsak': 'judge',       # 1x Isa 59:9 - "judgment"
+    'ginalopi': 'polluted',  # 1x Mal 1:7 - "polluted"
+    'gisuang': 'boundary',   # 1x Job 24:2 - "landmarks"
+    'gitta': 'sparrow',      # 1x Matt 10:29 - "sparrows"
+    'guahtui': 'rain',       # 1x Heb 6:7 - "rain"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15443,6 +15455,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'phuhsate': ('phuhsa-te', 'planted-PL'),                    # 1x Jer 45:4 - "planted"
         'piakhol': ('piak-hol', 'give-return'),                     # 1x Isa 36:21 - "answer"
         'puankang': ('puan-kang', 'cloth-pure'),                    # 1x Luke 23:53 - "linen"
+        
+        # Round 193l: g-l hapax
+        'gaite': ('gai-te', 'lame-PL'),                             # 1x Jer 31:8 - "lame"
+        'galkisimna': ('galkisim-na', 'war.signal-NMLZ'),           # 1x Jer 4:21 - "standard/trumpet"
+        'gambulak': ('gam-bulak', 'land-waste'),                    # 1x Isa 33:8 - "waste"
+        'gawhnate': ('gawhna-te', 'understanding-PL'),              # 1x Mark 12:33 - "understanding"
+        'gawngte': ('gawng-te', 'lean-PL'),                         # 1x Ezek 34:20 - "lean cattle"
+        'gehsate': ('gehsa-te', 'bull-PL'),                         # 1x Isa 34:7 - "bullocks"
+        'gialbem': ('gialbem', 'leopard'),                          # 1x Isa 11:6 - "leopard"
+        'gimpiakte': ('gimpiak-te', 'afflict-PL'),                  # 1x Psa 88:15 - "afflicted"
+        'gimsakte': ('gimsak-te', 'judge-PL'),                      # 1x Isa 59:9 - "judgment"
+        'ginalopite': ('ginalopi-te', 'polluted-PL'),               # 1x Mal 1:7 - "polluted"
+        'gisuangte': ('gisuang-te', 'boundary-PL'),                 # 1x Job 24:2 - "landmarks"
+        'gittate': ('gitta-te', 'sparrow-PL'),                      # 1x Matt 10:29 - "sparrows"
+        'guahtuite': ('guahtui-te', 'rain-PL'),                     # 1x Heb 6:7 - "rain"
     }
 
 
