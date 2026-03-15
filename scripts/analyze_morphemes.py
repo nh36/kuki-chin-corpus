@@ -16915,6 +16915,69 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sandup': ('san-dup', 'gold-cover'),                     # 1x Jer 10:9 - gold from Uphaz
         'sawlpangte': ('sawl-pang-te', 'send-branch-PL'),        # 1x Mark 11:8 - cut down branches
         'sawpsiangin': ('sawp-siang-in', 'wash-clean-ERG'),      # 1x Rev 7:14 - washed their robes
+        
+        # Round 230: Final hapax vocabulary (approaching 100%)
+        'sehlisuah': ('seh-li-suah', 'four-part-become'),        # 1x Rev 6:8 - fourth part
+        'sehthum': ('seh-thum', 'four-three'),                   # 1x Zech 13:8 - third shall be left
+        'siahdonna': ('siah-don-na', 'sit-stand-NMLZ'),          # 1x Mark 2:14 - receipt of custom
+        'sosuk': ('so-suk', 'north-push'),                       # 1x Jer 1:14 - out of north
+        'suahsakkhak': ('suah-sak-khak', 'become-CAUS-block'),   # 1x 2Cor 6:1 - receive not in vain
+        'suangkangte': ('suang-kang-te', 'stone-marble-PL'),     # 1x Rev 18:12 - marble
+        'suktapsak': ('suk-tap-sak', 'push-break-CAUS'),         # 1x Jer 2:16 - have broken
+        'sulum': ('su-lum', 'destroy-finish'),                   # 1x 1Cor 10:10 - destroyed of destroyer
+        'sumkhotte': ('sum-khot-te', 'money-lack-PL'),           # 1x Mark 10:21 - one thing thou lackest
+        'sutatin': ('sut-at-in', 'spoil-hang-ERG'),              # 1x Jer 2:20 - playing the harlot
+        'suum': ('suum', 'emerald'),                             # 1x Rev 4:3 - like unto emerald
+        'taangmite': ('taang-mi-te', 'messenger-person-PL'),     # 1x Jer 27:3 - by the messengers
+        'taankha': ('taan-kha', 'lose-still'),                   # 1x 2John 1:8 - lose not
+        'taanlua': ('taan-lua', 'lose-too.much'),                # 1x 2Cor 3:7 - to be done away
+        'taanzausak': ('taan-zau-sak', 'lose-wide-CAUS'),        # 1x 2Cor 6:13 - be enlarged
+        'tadihin': ('ta-dih-in', 'child-proper-ERG'),            # 1x 1Cor 16:12 - convenient time
+        'tangguakun': ('tang-guak-un', 'rise-naked-IMP'),        # 1x Isa 32:11 - strip you bare
+        'tankhiat': ('tan-khiat', 'cut-out'),                    # 1x Mark 6:16 - I beheaded
+        'tawbo': ('taw-bo', 'with-buttock'),                     # 1x Isa 20:4 - buttocks uncovered
+        'tawcip': ('taw-cip', 'arm-squeeze'),                    # 1x Zech 11:17 - arm dried up
+        'tawllua': ('tawl-lua', 'tongue-too.much'),              # 1x Jer 9:5 - taught tongue lies
+        'tawphah': ('tawp-hah', 'end-foundation'),               # 1x Rev 21:14 - twelve foundations
+        'tenma': ('ten-ma', 'before-that'),                      # 1x Acts 7:2 - before he dwelt
+        'thakhauhsakkik': ('tha-khauh-sak-kik', 'spirit-revive-CAUS-again'),  # 1x Isa 57:15 - revive
+        'thasanpha': ('tha-san-pha', 'spirit-stand-good'),       # 1x Rev 3:2 - strengthen things
+        'thehna': ('theh-na', 'sprinkle-NMLZ'),                  # 1x Ezek 43:18 - sprinkle blood
+        'themthumte': ('them-thum-te', 'purpose-three-PL'),      # 1x 2Cor 1:17 - things I purpose
+        'thuahpah': ('thuah-pah', 'miracle-exactly'),            # 1x Mark 9:39 - do a miracle
+        'thugennna': ('thu-gen-na', 'word-say-NMLZ'),            # 1x Jer 23:17 - LORD hath said
+        'thukidotna': ('thu-ki-dot-na', 'word-REFL-argue-NMLZ'), # 1x Mark 12:28 - reasoning together
+        'thunthuah': ('thun-thuah', 'oil-use'),                  # 1x Matt 25:3 - took no oil
+        'tuanlam': ('tuan-lam', 'stand-way'),                    # 1x Dan 1:19 - stood before king
+        'tuiphul': ('tui-phul', 'water-cast'),                   # 1x Jer 6:7 - casteth out waters
+        'tukguah': ('tuk-guah', 'rain-separate'),                # 1x Jer 5:24 - former and latter rain
+        'tuksuk': ('tuk-suk', 'mountain-push'),                  # 1x Dan 2:45 - cut out of mountain
+        'tulum': ('tu-lum', 'serpent-coil'),                     # 1x 1Cor 10:9 - destroyed of serpents
+        'tunbaih': ('tun-baih', 'present-melt'),                 # 1x 2Pet 3:12 - elements shall melt
+        'tunlam': ('tun-lam', 'present-way'),                    # 1x Rev 3:3 - what hour I come
+        'tunphetin': ('tun-phet-in', 'now-tell-ERG'),            # 1x Mark 1:30 - anon they tell
+        'tupcip': ('tup-cip', 'flood-squeeze'),                  # 1x Matt 24:39 - flood came
+        'tuulak': ('tuu-lak', 'howl-voice'),                     # 1x Zech 11:3 - voice of howling
+        'uiphuk': ('ui-phuk', 'frog-out'),                       # 1x Rev 16:13 - like frogs
+        'valhcip': ('valh-cip', 'bitter-squeeze'),               # 1x Acts 8:23 - gall of bitterness
+        'vanzuakin': ('van-zuak-in', 'heaven-sell-ERG'),         # 1x Rev 13:17 - buy or sell
+        'vung': ('vung', 'cistern'),                             # 1x Jer 2:13 - broken cisterns
+        'zailam': ('zai-lam', 'measure-way'),                    # 1x Ezek 45:3 - of this measure
+        'zapin': ('za-pin', 'hear.I-blow'),                      # 1x Isa 54:16 - bloweth the coals
+        'zasakkhol': ('za-sak-khol', 'hear.I-CAUS-show'),        # 1x Isa 48:5 - I shewed it thee
+        'zatval': ('zat-val', 'use-left.over'),                  # 1x Luke 21:4 - of her penury
+        'zehphi': ('zeh-phi', 'conscience-weak'),                # 1x 1Cor 8:7 - conscience weak
+        'zelpak': ('zel-pak', 'fame-spread'),                    # 1x Mark 1:28 - fame spread abroad
+        'zelzul': ('zel-zul', 'prophesy-follow'),                # 1x 1Cor 14:31 - all prophesy
+        'zilepasal': ('zile-pa-sal', 'adultery-father-man'),     # 1x Mark 7:21 - adulteries
+        # Numbers stay as partials (expected)
+        '144,000': ('144,000', 'NUM'),                           # Rev 7:4 - number
+        '666': ('666', 'NUM'),                                   # Rev 13:18 - number of beast
+        # Remaining complex forms with unknown intermediate morphemes
+        'kaikikpah': ('ka-i-kik-pah', '1SG-need-again-exactly'), # 1x Mark 11:3 - Lord hath need
+        'khuaisuahna': ('khua-i-suah-na', 'town-lack-become-NMLZ'),  # 1x Isa 47:9 - loss of children
+        'khuaisuahte': ('khua-i-suah-te', 'town-lack-become-PL'),  # 1x Zech 12:10 - mourn
+        'kihanthawntawm': ('ki-han-thawn-tawm', 'REFL-do-continue-end'),  # 1x Ezek 38:14 - dwell safely
     }
 
 
