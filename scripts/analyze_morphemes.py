@@ -3424,6 +3424,26 @@ PROPER_NOUNS = {
     'harosheth', 'gibeath', 'temelah',  # Judges 4, Josh 5, Ezra 2
     # Round 196: More place names
     'rods',  # Acts 21:1 - Rhodes (Greek island)
+    # Round 197: Final proper nouns and loanwords
+    'khorazin',      # Chorazin - city cursed by Jesus (Matt 11:21)
+    'elohe',         # El-Elohe-Israel (Gen 33:20)
+    'zafenath',      # Zaphenath-paneah - Joseph's Egyptian name (Gen 41:45)
+    'haaraloth',     # Gibeath-haaraloth - place of circumcision (Josh 5:3)
+    'shahar',        # Zereth-shahar - place (Josh 13:19)
+    'timnathheres',  # Timnath-heres - Joshua's burial place (Judg 2:9)
+    'elohim',        # Gibeath-elohim - place (1Sam 10:5)
+    'seku',          # Secu - place near Ramah (1Sam 19:22)
+    'aniam',         # Aniam - son of Shemida (1Chr 7:19)
+    'labanon',       # Lebanon variant spelling
+    'kerenhappuk',   # Keren-happuch - Job's daughter (Job 42:14)
+    'korban',        # Korban - Hebrew offering term (Mark 7:11)
+    'effatha',       # Ephphatha - Aramaic "be opened" (Mark 7:34)
+    'saffron',       # saffron - spice (Song 4:14)
+    'ruby',          # ruby - gemstone (Ezek 27:16)
+    'terebinth',     # terebinth - tree type (Hos 4:13)
+    'githa',         # gittith - musical term (Psa 150:3)
+    'khrisoprase',   # chrysoprase - gemstone (Rev 21:20)
+    'porsias',       # Porcius Festus (Acts 24:27)
 }
 
 # =============================================================================
