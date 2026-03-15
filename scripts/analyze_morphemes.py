@@ -4250,7 +4250,7 @@ ATOMIC_GLOSSES = {
     'pul': 'tremble',      # pulnat = tremble-hurt = terror
     'nat': 'hurt',         # pulnat = tremble-hurt
     'tot': 'circumcise',   # kitot = REFL-circumcise
-    'khuam': 'darkness',   # meivakkhuam = lamp-walk-dark = lampstand
+    'khuam': 'darkness',   # Also khuam 'pillar' in innkhuam, khuampi, suangkhuam (homophonous)
     'muan': 'trust',       # munmuan = place-trust
     'huai': 'bad/terrible',# muhdahhuai = see-hate-terrible = abomination
     'baan': 'lay',         # paubaan = say-lay = blaspheme
@@ -4877,7 +4877,7 @@ BINARY_COMPOUNDS = {
     'tuikulh': ('tui', 'kulh', 'island'),         # water-surround → island
     'taanggam': ('taang', 'gam', 'suburb'),       # beautiful-land → suburb
     # sanggam removed - opaque lexeme meaning 'brother', not sang+gam
-    'innkhuam': ('inn', 'khuam', 'pillar'),       # house-pillar → pillar (1Ki 10:12, Prov 9:1)
+    'innkhuam': ('inn', 'khuam', 'pillar'),       # house-pillar → pillar (khuam 'pillar', not 'darkness')
     
     # Round 193m continued: More long stems as binary compounds
     'banbulh': ('ban', 'bulh', 'bracelet'),       # arm-bind → bracelet
