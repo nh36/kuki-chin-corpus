@@ -585,11 +585,17 @@ AMBIGUOUS_MORPHEMES = {
         ('below', 'relational'),     # Relational noun
     ],
     
-    # lam: 'road/way/side' (noun) vs 'manner' (nominalizer)
-    # Henderson: lam forms manner nominals (V-lam = way of V-ing)
+    # lam: 'road/way/side' (noun) vs 'manner' (nominalizer) vs 'build' (verb) vs 'dance' (verb)
+    # CRITICAL: Four distinct homophonous roots
+    # - lam1: road/way/path (noun) - lampi, lamzin, lamkaih, lamliante
+    # - lam2: build (verb) - lamkik "rebuild", lamkikna "rebuilding"  
+    # - lam3: dance (verb) - lamna "dancing"
+    # - lam4: manner nominalizer (with verbs) - V-lam = way of V-ing
     'lam': [
-        ('road', 'nominal'),         # Noun: road, path
+        ('way', 'nominal'),          # Noun: road, path, way
         ('side', 'relational'),      # Relational: that side
+        ('build', 'before_kik'),     # Verb: build (only before -kik)
+        ('dance', 'before_na'),      # Verb: dance (only before -na)
         ('manner', 'with_verb'),     # Manner nominalizer after verbs
     ],
     
@@ -3648,14 +3654,22 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
         return 'below'
     
     elif morpheme == 'lam':
-        # 'road/way' vs 'manner' nominalizer
-        # After verb: manner (zui-lam = way of following)
-        # Standalone: road
+        # CRITICAL: Four homophonous roots
+        # lam1 'way/road', lam2 'build', lam3 'dance', lam4 'manner'
+        # Before -kik: build (lamkik = rebuild)
+        if context.get('next_morpheme') == 'kik':
+            return 'build'
+        # Before -na (without preceding verb): dance (lamna = dancing)
+        if context.get('next_morpheme') == 'na' and not context.get('prev_is_verb'):
+            return 'dance'
+        # After verb: manner nominalizer (zui-lam = way of following)
         if context.get('position') == 'suffix' and context.get('prev_is_verb'):
             return 'manner'
+        # Before -ah: side/direction
         if context.get('next_morpheme') == 'ah':
             return 'side'
-        return 'road'
+        # Default: road/way
+        return 'way'
     
     elif morpheme == 'zo':
         # 'COMPL' (completive) vs 'south'
@@ -8358,7 +8372,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vanging': ('vang-ing', 'strength-?'),              # 17x - compound
         'phawkna': ('phawk-na', 'remember-NMLZ'),           # 17x - "remembrance"
         'tuamcip': ('tuam-cip', 'promise-cover'),           # 17x - "covered over"
-        'lamna': ('lam-na', 'way-NMLZ'),                    # 17x - "direction"
+        'lamna': ('lam-na', 'dance-NMLZ'),                    # 17x - "dancing"
         'bukkongah': ('buk-kong-ah', 'ambush-place-LOC'),   # 17x - "at ambush"
         'khenthei': ('khen-thei', 'divide-able'),           # 17x - "able to divide"
         'nuamsa-in': ('nuam-sa-in', 'want-early-ERG'),      # 17x - "willingly"
@@ -11210,7 +11224,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kibatna': ('ki-bat-na', 'REFL-trust-NMLZ'),           # trust
         'nul': ('nul', 'beast'),                               # beast
         'sinna': ('sin-na', 'sin-NMLZ'),                       # young/tender
-        'kilamkikna': ('ki-lam-kik-na', 'REFL-burden-return-NMLZ'), # burdens laid
+        'kilamkikna': ('ki-lam-kik-na', 'REFL-build-ITER-NMLZ'), # rebuilding
         'keen': ('keen', 'alive'),                             # alive
         'sumkem': ('sum-kem', 'money-guard'),                  # treasurer
         'kisuksiatna': ('ki-suk-siat-na', 'REFL-pollute-destroy-NMLZ'), # destruction
@@ -13436,8 +13450,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khinta': ('khin-ta', 'move-NMLZ'),                         # given
         'ngakngakna': ('ngak-ngak-na', 'wait-REDUP-NMLZ'),          # waiting
         'tuamtuamte': ('tuam-tuam-te', 'kind-REDUP-PL'),            # after its kind
-        # Round 144: Unknown fixes
-        'lamna': ('lam-na', 'way-NMLZ'),                            # dancing
+        # Round 144: Unknown fixes (duplicates removed - see earlier entries)
+        # 'lamna': see line ~8361
         'kiimnai': ('ki-im-nai', 'REFL-stay-near'),                 # none remaining
         'hehsa': ('heh-sa', 'angry-NMLZ'),                          # anger (kindled)
         'hutna': ('hut-na', 'escape-NMLZ'),                         # escape/saving
@@ -15863,7 +15877,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'singmuat': ('sing-muat', 'wood-rot'),            # 1x Job 13:28 - rotten thing
         'hotna': ('hot-na', 'save-NMLZ'),                 # 1x Job 26:2 - saving
         'hot': ('hot', 'save'),                           # base form
-        'suangseeksate': ('suang-seeksa-te', 'stone-carve.PRF-PL'),  # 1x - masons
+        'suangseeksate': ('suang-seek-sa-te', 'stone-hew-PRF-PL'),  # 1x - masons/stonecutters
         'suangseeksa': ('suang-seeksa', 'stone-carve.PRF'),  # base - mason
         'khialhkhaknate': ('khialh-khak-na-te', 'err-shut-NMLZ-PL'),  # 1x - iniquities
         'suangkeente': ('suang-keen-te', 'stone-hard-PL'),  # 1x - rocks
@@ -15921,7 +15935,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'singsengte': ('sing-seng-te', 'tree-shear-PL'),  # 1x - shorn (teeth)
         'duang': ('duang', 'love'),                       # 1x - base for duangvul
         'daingo': ('daingo', 'dew'),                      # 1x Song 5:2 - dew
-        'suanghawmpite': ('suanghawm-pi-te', 'cave-big-PL'),  # 1x Isa 2:19 - caves
+        'suanghawmpite': ('suang-hawm-pi-te', 'rock-hollow-big-PL'),  # 1x Isa 2:19 - caves
         'puktheihna': ('puk-theih-na', 'fall-able-NMLZ'), # 1x - ability to fall
         'ciakciak': ('ciak-ciak', 'chirp-REDUP'),         # 1x - chirping
         'tungdap': ('tung-dap', 'upon-close'),            # 1x - close upon
@@ -16100,6 +16114,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mangthangpak': ('mang-thang-pak', 'vanish-quick-INTENS'),  # 1x Hos 6:4 - quickly vanishing
         'kitumna': ('ki-tum-na', 'REFL-stumble-NMLZ'),          # 1x Amos 2:2 - tumult
         'leitawina': ('lei-tawi-na', 'borrow-take-NMLZ'),       # 1x Amos 2:8 - pledge
+        'lamkik': ('lam-kik', 'build-ITER'),                    # 46x - build/rebuild
         'lamkikna': ('lam-kik-na', 'build-ITER-NMLZ'),          # 6x - repairing/rebuilding
         'lawkgawpna': ('lawkgawp-na', 'spoil-NMLZ'),            # 1x Dan 11:33 - spoil
         'hauhsakna': ('hauh-sak-na', 'rich-CAUS-NMLZ'),         # 3x - enrichment
