@@ -2808,6 +2808,12 @@ NOUN_STEMS = {
     'awng': 'young',         # 1x Gen 33:13 - "herds with young"
     'pel': 'break',          # 1x Rom 1:31 - "covenantbreakers" (ciampel = promise-break)
     'tehteh': 'beseech',     # 1x Isa 64:9 - "we beseech thee"
+    'dapphah': 'precious.cloth', # 1x Ezek 27:20 - "precious clothes for chariots"
+    'del': 'tremble',        # 1x James 2:19 - "devils tremble"
+    'dimsak': 'fill',        # 1x Zeph 1:9 - "fill masters' houses"
+    'gaisak': 'birth',       # 1x Matt 1:18 - "birth of Jesus Christ"
+    'galpan': 'fortress',    # 1x Psa 89:40 - "strong holds"
+    'eh': 'cleave',          # 1x Eccl 10:9 - "cleaveth wood" (not interjection here)
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15119,6 +15125,19 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ciamtehteh': ('ciam-tehteh', 'promise-beseech'),            # 1x Isa 64:9 - "we beseech"
         'zingtho': ('zing-tho', 'morning-early'),                    # 1x Prov 31:15 - "riseth early"
         'zingciangin': ('zing-ciang-in', 'morning-time-ERG'),        # 1x Esth 5:14 - "in the morning"
+        
+        # Round 193c: More hapax
+        'dapphahte': ('dapphah-te', 'precious.cloth-PL'),            # 1x Ezek 27:20 - "precious clothes"
+        'dawhna': ('dawh-na', 'cut-NMLZ'),                           # 1x Joel 3:13 - "sickle"
+        'deldel': ('del-del', 'tremble-REDUP'),                      # 1x James 2:19 - "tremble"
+        'deuhte': ('deuh-te', 'more-PL'),                            # 1x 2Kgs 19:2 - "elders"
+        'dimsakte': ('dimsak-te', 'fill-PL'),                        # 1x Zeph 1:9 - "those who fill"
+        'dongte': ('dong-te', 'end-PL'),                             # 1x Psa 73:17 - "their end"
+        'dopna': ('dop-na', 'guard-NMLZ'),                           # 1x 2Cor 1:23 - "witness/record"
+        'gaisakna': ('gaisak-na', 'birth-NMLZ'),                     # 1x Matt 1:18 - "birth"
+        'galmuhin': ('gal-muh-in', 'far-see-ERG'),                   # 1x Heb 11:13 - "afar off"
+        'galpanmun': ('gal-pan-mun', 'enemy-protect-place'),         # 1x Psa 89:40 - "strongholds"
+        'ehna': ('eh-na', 'cleave-NMLZ'),                            # 1x Eccl 10:9 - "cleaveth wood"
     }
 
 
