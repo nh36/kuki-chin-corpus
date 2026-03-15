@@ -8528,7 +8528,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ui': ('ui', 'dog'),                                 # 14x - "dog"
         'dingto': ('ding-to', 'stand-sit'),                  # 14x - "stand/sit"
         'dangtakin': ('dang-tak-in', 'other-true-ERG'),      # 14x - "differently"
-        'sinso': ('sin-so', 'die-remain'),                   # 14x - "remnant"
+        'sinso': ('sinso', 'be.angry'),                      # 16x - "be angry/wrathful"
         'puakhia-in': ('puak-hia-in', 'send-away-ERG'),      # 14x - "sending"
         'suante\'': ('suan-te\'', 'lineage-PL.POSS'),        # 14x - "descendants'"
         'zaw-in': ('zaw-in', 'able-ERG'),                    # 14x - "being able"
@@ -15273,9 +15273,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 171: High-frequency remaining partials
         'tuhun': ('tu-hun', 'now-time'),                             # 56x - "at this time/season"
-        'sinsona': ('sinsona', 'wrath'),                             # 19x - fierce anger/wrath
-        'sinsonain': ('sinsona-in', 'wrath-ERG'),
-        "sinsona'": ("sinsona'", 'wrath.POSS'),                      # 1x - possessive form
+        'sinsona': ('sinso-na', 'be.angry-NMLZ'),                     # 19x - wrath (from sinso 'be angry')
+        'sinsonain': ('sinso-na-in', 'be.angry-NMLZ-ERG'),
+        "sinsona'": ("sinso-na'", 'be.angry-NMLZ.POSS'),               # 1x - possessive form
         'bible': ('bible', 'FGN'),                                   # 4x - foreign word
         'tedim': ('tedim', 'Tedim'),                                 # 2x - language/place name
         'kristal': ('kristal', 'FGN'),                               # 2x - crystal (foreign)
