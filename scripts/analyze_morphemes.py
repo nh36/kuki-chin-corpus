@@ -3422,6 +3422,8 @@ PROPER_NOUNS = {
     'athen', 'athens',  # Acts 17:15-21 - city of Athens
     # Round 194: Place names from remaining unknowns
     'harosheth', 'gibeath', 'temelah',  # Judges 4, Josh 5, Ezra 2
+    # Round 196: More place names
+    'rods',  # Acts 21:1 - Rhodes (Greek island)
 }
 
 # =============================================================================
@@ -15522,6 +15524,15 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'husang': ('hu-sang', 'live-up'),                             # 2x 1Thes 3:8 - "we live"
         'olno': ('ol-no', 'vine-tender'),                             # 2x Gen 49:11 - "choice vine"
         'meihol': ('mei-hol', 'fire-coals'),                          # 2x John 18:18, 21:9 - "fire of coals"
+        
+        # Round 196: More hapax vocabulary
+        'haulua': ('hau-lua', 'rich-too'),                            # 2x Prov 30:8 - "riches" (too rich)
+        'tuipeek': ('tui-peek', 'water-swim'),                        # 2x Acts 27:43 - "swim"
+        'tankhiapa': ('tan-khia-pa', 'redeem-out-M'),                 # 2x Isa 49:26, 60:16 - "Redeemer"
+        'citciat': ('cit~ciat', 'go~RED'),                            # 2x John 5:9 - exactness marker
+        'suangkeen': ('suang-keen', 'rock-move'),                     # 2x Job 14:18 - "rock removed"
+        'thuklua': ('thuk-lua', 'deep-too'),                          # 2x Ezek 47:5 - "too deep"
+        'lingvom': ('ling-vom', 'thorn-bush'),                        # 2x Luke 6:44 - "bramble bush"
     }
 
 
