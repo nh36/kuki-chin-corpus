@@ -3444,6 +3444,9 @@ PROPER_NOUNS = {
     'githa',         # gittith - musical term (Psa 150:3)
     'khrisoprase',   # chrysoprase - gemstone (Rev 21:20)
     'porsias',       # Porcius Festus (Acts 24:27)
+    # Round 198: More place names
+    'sufa',          # Sufa region (Num 21:14)
+    'suf',           # Suf/Suph - Red Sea area (Deut 1:1)
 }
 
 # =============================================================================
@@ -15553,6 +15556,17 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suangkeen': ('suang-keen', 'rock-move'),                     # 2x Job 14:18 - "rock removed"
         'thuklua': ('thuk-lua', 'deep-too'),                          # 2x Ezek 47:5 - "too deep"
         'lingvom': ('ling-vom', 'thorn-bush'),                        # 2x Luke 6:44 - "bramble bush"
+        
+        # Round 198: More hapax vocabulary
+        'geh': ('geh', 'bull'),                                       # 2x Isa 34:7 - "bullocks"
+        'meitui': ('mei-tui', 'fire-water'),                          # 2x Matt 25:8 - "oil" (lamp oil)
+        'zuphung': ('zu-phung', 'wine-master'),                       # 2x John 2:8 - "governor of feast"
+        'menzi': ('men-zi', 'office-hold'),                           # 2x Acts 23:33 - "governor"
+        'atkeh': ('at-keh', 'cut-REFL'),                              # 1x Deut 14:1 - "cut yourselves"
+        'pheklek': ('pheklek', 'spy.out'),                            # 1x 1Chr 19:3 - "spy out"
+        'hehsakkha': ('heh-sak-kha', 'anger-CAUS-PAST'),              # 1x Ezra 5:12 - "provoked to wrath"
+        'kidawhkhiat': ('ki-dawh-khiat', 'REFL-set-out'),             # 2x Ezra 6:11 - "pulled down"
+        'zehsiang': ('zeh-siang', 'pure-clean'),                      # 1x Ezra 6:20 - "purified"
     }
 
 
