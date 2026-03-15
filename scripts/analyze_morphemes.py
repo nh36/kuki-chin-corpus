@@ -15650,6 +15650,38 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ngiungeu': ('ngiu-ngeu', 'wait-IDEO'),                       # 1x Psa 40:1 - "waited patiently"
         'kihuauhuau': ('ki-huau-huau', 'REFL-whisper-REDUP'),         # 1x Psa 41:7 - "whisper together"
         'sawnpai': ('sawn-pai', 'push-go'),                           # 1x Psa 44:5 - "push down"
+        
+        # Round 201: Psalms/Leviticus/Numbers hapax vocabulary
+        'lop': ('lop', 'false'),                                      # 1x Gen 21:23 - appears in "lopi-in" = falsely
+        'angtang': ('ang-tang', 'forehead-part'),                     # 1x 1Sam 17:49 - "forehead"
+        'maivil': ('mai-vil', 'face-entreat'),                        # 1x Psa 45:12 - "entreat thy favour"
+        'taktakpa': ('tak-tak-pa', 'true-REDUP-NMZ'),                 # 1x Psa 48:3 - "refuge"
+        'phuhkip': ('phuh-kip', 'establish-forever'),                 # 1x Psa 48:8 - "establish forever"
+        'zelh': ('zelh', 'spread'),                                   # 1x Lev 13:53 - "be not spread"
+        'ngozaw': ('ngo-zaw', 'white-more'),                          # 1x Psa 51:7 - "whiter than snow"
+        'vakthap': ('vak-thap', 'wander-far'),                        # 1x Psa 55:7 - "wander far off"
+        'nelzaw': ('nel-zaw', 'smooth-more'),                         # 1x Psa 55:21 - "smoother than butter"
+        'nipzaw': ('nip-zaw', 'soft-more'),                           # 1x Psa 55:21 - "softer than oil"
+        'lawnkhiasuk': ('lawn-khia-suk', 'cast-out-sink'),            # 1x Psa 56:7 - "cast down"
+        'tawnun': ('tawn-un', 'prosper-PROG'),                        # 1x Deut 23:6 - "prosperity"
+        'leek': ('leek', 'weigh'),                                    # 1x Psa 62:9 - "laid in balance"
+        'kihubing': ('ki-hu-bing', 'REFL-mouth-stop'),                # 1x Psa 63:11 - "shall be stopped"
+        'pumtuam': ('pum-tuam', 'body-cover'),                        # 1x Psa 69:7 - "covered my face"
+        'lehsuak': ('leh-suak', 'return-out'),                        # 1x Psa 69:10 - "reproach"
+        'kuavang': ('kua-vang', 'pit-mouth'),                         # 1x Psa 69:15 - "pit mouth"
+        'kisuipuk': ('ki-sui-puk', 'REFL-slip-sink'),                 # 1x Psa 73:2 - "feet slipped"
+        'heipi': ('hei-pi', 'thigh-big'),                             # 1x Num 5:21 - "thy thigh"
+        'daigawl': ('dai-gawl', 'fence-break'),                       # 1x Psa 80:12 - "broken hedges"
+        'suvang': ('su-vang', 'break-through'),                       # 1x Psa 80:12 - "broken down"
+        'ninnen': ('nin-nen', 'dust-blow'),                           # 1x Psa 83:13 - "like a wheel/stubble"
+        'helhawt': ('hel-hawt', 'violent-rush'),                      # 1x Psa 86:14 - "violent men"
+        'thohonpi': ('tho-hon-pi', 'fly-swarm-big'),                  # 1x Psa 105:31 - "divers flies"
+        'tuiphualah': ('tui-phual-ah', 'water-place-LOC'),            # 1x Psa 106:32 - "at the waters"
+        'ninphual': ('nin-phual', 'dust-place'),                      # 1x Psa 113:7 - "dunghill"
+        'hileng': ('hi-leng', 'be-if.not'),                           # 1x Psa 119:92 - "unless"
+        'kibottat': ('ki-bot-tat', 'REFL-break-apart'),               # 1x Psa 124:7 - "snare broken"
+        'kuih': ('kuih', 'plow'),                                     # 1x Psa 129:3 - "plowed"
+        "luiliante'": ("lui-lian-te'", "river-big-PL.GEN"),           # 1x Psa 77:19 - "great waters"
     }
 
 
