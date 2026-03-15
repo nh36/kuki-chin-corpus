@@ -3447,6 +3447,8 @@ PROPER_NOUNS = {
     # Round 198: More place names
     'sufa',          # Sufa region (Num 21:14)
     'suf',           # Suf/Suph - Red Sea area (Deut 1:1)
+    # Round 199: More proper nouns
+    'reke',          # Rekem - Midianite king (Josh 13:21)
 }
 
 # =============================================================================
@@ -15589,6 +15591,31 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khalhnelh': ('khalh-nelh', 'freeze-black'),                  # 1x Job 6:16 - "blackish by ice"
         'suangtawphah': ('suang-tawphah', 'stone-foundation'),        # 3x Job 8:17, Rev 21 - "foundations"
         'tuncipsak': ('tun-cip-sak', 'cover-tight-CAUS'),             # 1x Job 9:24 - "covereth"
+        
+        # Round 199: Job/Luke hapax vocabulary
+        'ol': ('ol', 'slow'),                                         # 3x Exod 4:10, 12:39 - "slow of speech" 
+        'melh': ('melh', 'forge'),                                    # 1x Job 13:4 - "forgers of lies"
+        'dengvui': ('deng-vui', 'pound-dust'),                        # 2x Job 10:9, Luke 20:18 - "dust/powder"
+        'vutkhu': ('vut-khu', 'faded-ash'),                           # 1x Job 13:12 - "ashes"
+        'zaizaw': ('zai-zaw', 'extent-more'),                         # 2x Job 11:9, 2Cor 10:15 - "broader"
+        'lehzuih': ('leh-zuih', 'return-CONT'),                       # 2x Job 16:22, 1Sam 15:25 - "return"
+        'lehsuksiat': ('leh-suk-siat', 'return-pull-destroy'),        # 1x Job 10:8 - "destroy"
+        
+        # Round 199b: Genesis/Job hapax vocabulary
+        "khimzin'": ("khim-zin'", "dark-GEN"),                        # 1x Job 3:4 - "that day be darkness"
+        'da': ('da', 'dry'),                                          # 1x Gen 1:9 - "dry land"
+        'khauzak': ('khau-zak', 'rope-trap'),                         # 1x Job 18:10 - "snare/trap"
+        'melmawl': ('mel-mawl', 'face-young'),                        # 1x Job 19:18 - "young children"
+        'dihdiahin': ('dih-diah-in', 'bare-only-ERG'),                # 1x Job 19:20 - "barely/just"
+        'mumaang': ('mu-maang', 'dream-vision'),                      # 1x Job 20:8 - "vision of night"
+        'zongtawm': ('zong-tawm', 'seek-again'),                      # 1x Job 24:5 - "seek/search"
+        'thazawngkhal': ('tha-zawng-khal', 'strength-arm-lacking'),   # 1x Job 26:2 - "without strength"
+        'lingleng': ('ling-leng', 'hang-IDEO'),                       # 1x Job 26:7 - "hangeth upon nothing"
+        'meiilom': ('meii-lom', 'cloud-thick'),                       # 1x Job 26:8 - "thick clouds"
+        'dinden': ('din-den', 'stand-border'),                        # 1x Job 26:10 - "boundary/bounds"
+        'leizawh': ('lei-zawh', 'buy-exchange'),                      # 1x Job 28:17 - "exchange"
+        'dimdem': ('dim-dem', 'quiet-IDEO'),                          # 1x Job 29:21 - "silently/waited"
+        "taciingte'": ("ta-ciing-te'", "child-bear.NEG-PL.GEN"),      # 1x Job 24:21 - "barren women"
     }
 
 
