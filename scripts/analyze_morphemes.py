@@ -1885,7 +1885,7 @@ NOUN_STEMS = {
     'tapate': 'sons',        # 411
     'tanu': 'daughter',
     'tanute': 'daughters',
-    # sanggam moved to BINARY_COMPOUNDS as sang-gam (high-land = brother)
+    'sanggam': 'brother',     # Opaque lexeme (not sang+gam compound)
     'sanggamte': 'brothers',
     'sanggampa': 'brother',  # 210
     'zi': 'wife',            # 339
@@ -4872,7 +4872,7 @@ BINARY_COMPOUNDS = {
     'lamhilh': ('lam', 'hilh', 'guide'),          # way-teach → guide
     'tuikulh': ('tui', 'kulh', 'island'),         # water-surround → island
     'taanggam': ('taang', 'gam', 'suburb'),       # beautiful-land → suburb
-    'sanggam': ('sang', 'gam', 'brother'),        # high-land → brother (figurative?)
+    # sanggam removed - opaque lexeme meaning 'brother', not sang+gam
     'innkhuam': ('inn', 'khuam', 'pillar'),       # house-pillar → pillar (1Ki 10:12, Prov 9:1)
     
     # Round 193m continued: More long stems as binary compounds
