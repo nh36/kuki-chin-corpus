@@ -2904,6 +2904,15 @@ NOUN_STEMS = {
     'mithuman': 'righteous', # 1x Prov 28:1 - "righteous"
     'mivom': 'leopard',      # 1x Jer 13:23 - "leopard"
     'monu': 'daughter.in.law', # 1x Matt 10:35 - "daughter in law"
+    'ban': 'arm',            # 1x Dan 2:32 - "arms"
+    'bawk': 'mule',          # 1x 1Chr 12:40 - "mules"
+    'biang': 'spice',        # 1x SoS 5:13 - "spices"
+    'ciimsa': 'counsel',     # 1x Prov 1:5 - "counsels"
+    'anvai': 'dry',          # 1x Jer 4:11 - "dry wind"
+    'anzap': 'winnow',       # 1x Matt 3:12 - "fan"
+    'dawilut': 'overcome',   # 1x Acts 19:16 - "overcame"
+    'cilphih': 'spit',       # 1x Isa 50:6 - "spitting"
+    'cingh': 'poor',         # 1x Prov 14:21 - "poor"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15375,6 +15384,20 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mithumante': ('mithuman-te', 'righteous-PL'),              # 1x Prov 28:1 - "righteous"
         'mivomte': ('mivom-te', 'leopard-PL'),                      # 1x Jer 13:23 - "leopard"
         'monute': ('monu-te', 'daughter.in.law-PL'),                # 1x Matt 10:35 - "daughter in law"
+        
+        # Round 193i: a-l hapax
+        'bante': ('ban-te', 'arm-PL'),                              # 1x Dan 2:32 - "arms"
+        'bawkte': ('bawk-te', 'mule-PL'),                           # 1x 1Chr 12:40 - "mules"
+        'biangte': ('biang-te', 'spice-PL'),                        # 1x SoS 5:13 - "spices"
+        'ciimsate': ('ciimsa-te', 'counsel-PL'),                    # 1x Prov 1:5 - "counsels"
+        'anvaite': ('anvai-te', 'dry-PL'),                          # 1x Jer 4:11 - "dry wind"
+        'anzapna': ('anzap-na', 'winnow-NMLZ'),                     # 1x Matt 3:12 - "fan"
+        'dawilutna': ('dawilut-na', 'overcome-NMLZ'),               # 1x Acts 19:16 - "overcame"
+        'cilphihna': ('cilphih-na', 'spit-NMLZ'),                   # 1x Isa 50:6 - "spitting"
+        'cinghte': ('cingh-te', 'poor-PL'),                         # 1x Prov 14:21 - "poor"
+        'beimangsakna': ('bei-mangsak-na', 'finish-destroy-NMLZ'),  # 1x Ezek 25:16 - "destroy"
+        'beisakmangna': ('bei-sakmang-na', 'finish-destroy-NMLZ'),  # 1x Esth 3:13 - "destroy"
+        'atkhiatsakna': ('at-khiatsak-na', 'cut-off-NMLZ'),         # 1x 1Chr 19:4 - "cut off"
     }
 
 
