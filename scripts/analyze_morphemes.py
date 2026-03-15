@@ -15751,6 +15751,38 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'duangvul': ('duang-vul', 'love-sick'),                       # 1x Song 2:5 - "sick of love"
         'kisawpsiang': ('ki-sawp-siang', 'REFL-wash-clean'),          # 1x Song 4:2 - "from washing"
         'kuai': ('kuai', 'break'),                                    # 1x Exod 12:46 - "break a bone"
+        
+        # Round 204: Loanwords and proper nouns (high-frequency unknowns)
+        'manna': ('manna', 'manna'),                      # 36x - Hebrew loanword
+        'gath': ('Gath', 'Gath'),                         # 32x - Philistine city
+        'harp': ('harp', 'harp'),                         # 32x - English loanword
+        'hell': ('hell', 'hell'),                         # 23x - English loanword (Sheol)
+        'myrrh': ('myrrh', 'myrrh'),                      # 19x - fragrant resin
+        'joppa': ('Joppa', 'Joppa'),                      # 17x - coastal city
+        'hermon': ('Hermon', 'Hermon'),                   # 14x - mountain
+        'debir': ('Debir', 'Debir'),                      # 14x - Canaanite city
+        'hadad': ('Hadad', 'Hadad'),                      # 13x - personal name
+        'dagon': ('Dagon', 'Dagon'),                      # 13x - Philistine god
+        'bethany': ('Bethany', 'Bethany'),                # 13x - village near Jerusalem
+        'peel': ('peel', 'peel'),                         # 12x - skin/rind
+        'beeroth': ('Beeroth', 'Beeroth'),                # 12x - city name
+        'gog': ('Gog', 'Gog'),                            # 12x - Ezekiel prophecy figure
+        'er': ('Er', 'Er'),                               # 11x - personal name (Judah's son)
+        'almond': ('almond', 'almond'),                   # 10x - nut/tree
+        'dathan': ('Dathan', 'Dathan'),                   # 10x - rebel against Moses
+        'elihu': ('Elihu', 'Elihu'),                      # 10x - Job's friend
+        'deborah': ('Deborah', 'Deborah'),                # 9x - judge/prophetess
+        'bozrah': ('Bozrah', 'Bozrah'),                   # 8x - Edomite city
+        'jasper': ('jasper', 'jasper'),                   # 7x - precious stone
+        'ram': ('Ram', 'Ram'),                            # 7x - personal name
+        'bethsaida': ('Bethsaida', 'Bethsaida'),          # 7x - town in Galilee
+        'emerald': ('emerald', 'emerald'),                # 6x - precious stone
+        'delilah': ('Delilah', 'Delilah'),                # 6x - Samson's betrayer
+        'topaz': ('topaz', 'topaz'),                      # 5x - precious stone
+        'gerah': ('gerah', 'gerah'),                      # 5x - unit of weight
+        'aloes': ('aloes', 'aloes'),                      # 5x - fragrant wood/resin
+        'beryl': ('beryl', 'beryl'),                      # 4x - precious stone
+        'agate': ('agate', 'agate'),                      # 3x - precious stone
     }
 
 
