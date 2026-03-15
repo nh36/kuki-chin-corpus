@@ -16863,6 +16863,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lungduaizo': ('lung-duai-zo', 'heart-loathe-finish'),   # 1x Zech 11:8 - soul lothed
         'lungso': ('lung-so', 'heart-hot'),                      # 1x Ps 6:1 - hot displeasure
         'lungsosa': ('lung-so-sa', 'heart-hot-already'),         # 1x Ps 38:1 - hot displeasure
+        
+        # Round 229: Remaining hapax vocabulary
+        'mapiak': ('ma-piak', 'that-give'),                      # 1x 2Cor 1:22 - given earnest
+        'mawkkheel': ('mawk-kheel', 'vain-yea'),                 # 1x 2Cor 1:17 - yea yea nay nay
+        'mawkpau': ('mawk-pau', 'vain-say'),                     # 1x Ezek 6:10 - not said in vain
+        'mawktai': ('mawk-tai', 'vain-run'),                     # 1x 1Cor 9:26 - run not uncertainly
+        'mawktuptup': ('mawk-tup-tup', 'vain-beat-REDUP'),       # 1x 1Cor 9:26 - beateth the air
+        'mehtui': ('meh-tui', 'broth-water'),                    # 1x Isa 65:4 - broth of abominations
+        'meikat': ('mei-kat', 'fire-burn'),                      # 1x 1Cor 3:15 - work burned
+        'melsia': ('mel-sia', 'form-decay'),                     # 1x 1Cor 15:43 - sown in dishonour
+        'mengme': ('meng-me', 'dream-slumber'),                  # 1x Prov 6:10 - a little slumber
+        'mih': ('mih', 'maimed'),                                # 1x Mark 9:43 - enter life maimed
+        'misuam': ('mi-suam', 'person-robber'),                  # 1x Jer 7:11 - den of robbers
+        'motpau': ('mot-pau', 'self-speak'),                     # 1x Isa 58:13 - speaking own words
+        'muak': ('mu-ak', 'see.I-return'),                       # 1x Dan 4:36 - reason returned
+        'muhkhiatnate': ('muh-khiat-na-te', 'see-out-NMLZ-PL'),  # 1x Rev 2:2 - tried them
+        'mutkhak': ('mut-khak', 'wind-hold'),                    # 1x Rev 7:1 - holding the winds
+        'nektawmzon': ('nek-tawm-zon', 'eat-finish-area'),       # 1x 1Cor 9:6 - forbear working
+        'neuneute': ('neu-neu-te', 'small-REDUP-PL'),            # 1x 1Cor 6:3 - things of this life
+        'ngakkawmun': ('ngak-kawm-un', 'wait-with-IMP'),         # 1x Jude 1:21 - looking for mercy
+        'ngeingeite': ('ngei-ngei-te', 'true-REDUP-PL'),         # 1x 1Cor 10:13 - God is faithful
+        'ngentang': ('ngen-tang', 'knowledge-rise'),             # 1x Dan 1:4 - understanding science
+        'ngotgawp': ('ngot-gawp', 'dig-dig'),                    # 1x Jer 13:7 - digged and took
+        'nopcitna': ('nop-cit-na', 'want-desire-NMLZ'),          # 1x Rev 18:14 - soul lusted after
+        'nuaisiahna': ('nuai-siah-na', 'oppress-decay-NMLZ'),    # 1x Jer 22:17 - oppression
+        'paiphei': ('pai-phei', 'go-enter'),                     # 1x Ezek 41:6 - entered into wall
+        'pangtatte': ('pang-tat-te', 'help-cut-PL'),             # 1x Isa 57:3 - sons of sorceress
+        'patauhhuai': ('pa-tauh-huai', 'father-wonder-stumble'), # 1x Jer 5:30 - wonderful horrible
+        'pataulua': ('pa-tau-lua', 'father-dream-too.much'),     # 1x Dan 2:1 - dreamed dreams
+        'pawnlak': ('pawn-lak', 'vineyard-portion'),             # 1x Jer 12:10 - destroyed vineyard
+        'penteng': ('pen-teng', 'thing-fixed'),                  # 1x Ezek 44:30 - every oblation
+        'phalvaktung': ('phal-vak-tung', 'allow-bright-tall'),   # 1x Isa 58:8 - light break forth
+        'phawkpah': ('phawk-pah', 'touch-exactly'),              # 1x Mark 5:30 - who touched
+        'phen': ('phen', 'seed'),                                # 1x Isa 57:3 - seed of adulterer
+        'phialun': ('phia-lun', 'gather-together'),              # 1x Acts 13:44 - city came together
+        'phokeu': ('pho-keu', 'spread-net'),                     # 1x Ezek 47:10 - spread forth nets
+        'phunkhak': ('phun-khak', 'kind-blame'),                 # 1x 2Cor 8:20 - no man blame us
+        'pikhau': ('pi-khau', 'big-brass'),                      # 1x Ezek 40:3 - appearance of brass
+        'piteek': ('pi-teek', 'big-pour'),                       # 1x Jer 6:11 - pour it out
+        'puansawpte': ('puan-sawp-te', 'cloth-white-PL'),        # 1x Mark 9:3 - white as snow
+        'puanvom': ('puan-vom', 'cloth-black'),                  # 1x Rev 6:12 - black as sackcloth
+        'pukpah': ('puk-pah', 'root-exactly'),                   # 1x Mark 4:17 - no root
+        'puksukpah': ('puk-suk-pah', 'fall-down-exactly'),       # 1x Acts 5:5 - fell down
+        'pumbukah': ('pum-buk-ah', 'body-furnace-LOC'),          # 1x Rev 1:15 - burned in furnace
+        'pumguakin': ('pum-guak-in', 'body-naked-ERG'),          # 1x Rev 17:16 - make her naked
+        'sabit': ('sabit', 'pearl.gate'),                        # 1x Rev 21:21 - gate of one pearl
+        'sagawh': ('sa-gawh', 'flesh-odour'),                    # 1x Dan 2:46 - sweet odours
+        'sahang': ('sa-hang', 'flesh-beast'),                    # 1x 1Cor 15:32 - fought with beasts
+        'saihate': ('sai-ha-te', 'ivory-vessel-PL'),             # 1x Rev 18:12 - vessels of ivory
+        'sandup': ('san-dup', 'gold-cover'),                     # 1x Jer 10:9 - gold from Uphaz
+        'sawlpangte': ('sawl-pang-te', 'send-branch-PL'),        # 1x Mark 11:8 - cut down branches
+        'sawpsiangin': ('sawp-siang-in', 'wash-clean-ERG'),      # 1x Rev 7:14 - washed their robes
     }
 
 
