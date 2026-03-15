@@ -616,6 +616,110 @@ The ATOMIC_GLOSSES will need language-specific entries, but the architecture tra
 
 ---
 
-*Document version: 2.0*  
-*Last updated: 2026-03-13*
+## 11. Post-Coverage Quality Audit (Critical!)
+
+### The Problem: Coverage ≠ Correctness
+
+After achieving 99%+ coverage on Tedim Chin, spot-checking revealed systematic errors:
+- Wrong segmentations (e.g., `sinso` analyzed as `sin-so` = "die-remain")
+- Wrong glosses (e.g., `sinso` = "die-remain" when it means "be.angry")
+- Duplicate entries with conflicting analyses (same word, different glosses)
+- Inconsistent terminology (e.g., `suang` glossed as both "rock" and "stone")
+- Missed transparent derivations (e.g., `sinsona` treated as opaque "wrath" instead of `sinso-na` = "be.angry-NMLZ")
+
+**Root Cause:** Rapid vocabulary expansion prioritized coverage over verification.
+
+### Error Categories Discovered
+
+| Category | Example | Issue | Fix |
+|----------|---------|-------|-----|
+| Wrong segmentation | `sinso` → `sin-so` | No "sin" root meaning "die" | `sinso` is monomorphemic verb |
+| Wrong gloss | `sinso` = "die-remain" | KJV shows "wrath/anger" | `sinso` = "be.angry" |
+| Transparent→opaque | `sinsona` = "wrath" | Actually `sinso` + `-na` | `sinso-na` = "be.angry-NMLZ" |
+| Duplicate conflict | 3x `sinsona` entries | Different analyses | Keep correct, remove errors |
+| Missing disambiguation | `lamna` = ? | Both "build" and "dance" | Default + explicit compounds |
+| Inconsistent gloss | `suang` = rock/stone | Same root, different glosses | Normalize to "stone" |
+
+### Systematic Audit Programme
+
+**Phase 1: Structural Integrity**
+1. Find all duplicate entries (same word, different glosses)
+2. Find conflicting segmentations
+3. Complete all partial glosses (entries with `?`)
+
+**Phase 2: Semantic Verification**
+1. Verify each root against 3+ corpus examples via KJV
+2. Check if "opaque" entries are actually transparent derivations
+3. Normalize terminology across all entries
+
+**Phase 3: Disambiguation Completeness**
+1. Inventory all homophonous roots
+2. Verify disambiguation rules exist for each
+3. Test on actual corpus contexts
+
+**Phase 4: Cross-Validation**
+1. Test algorithmic outputs match expected results
+2. Maintain regression tests after each fix batch
+
+**Phase 5: Documentation**
+1. Document error patterns found
+2. Update methodology to prevent recurrence
+3. Write replication guide for other languages
+
+### Verification Checklist for New Entries
+
+Before adding ANY new vocabulary entry:
+
+- [ ] **KJV verification**: Check 3+ occurrences against English translation
+- [ ] **Segmentation validation**: Every morpheme in segmentation exists in ROOTS/STEMS
+- [ ] **Consistency check**: Same morpheme = same gloss everywhere
+- [ ] **Homophone check**: If root has multiple meanings, add to POLYSEMOUS_ROOTS
+- [ ] **Transparency check**: If nominalized form, verify base verb/noun exists
+- [ ] **No duplicates**: grep for existing entries before adding
+
+### Key Lesson: Etymology Before Addition
+
+When encountering `XYZna` (apparent nominalization):
+1. **Check if `XYZ` exists as independent word**
+2. **If yes**: Add `XYZna` as `XYZ-na` (verb/adj-NMLZ)
+3. **If no**: Research `XYZ` meaning first, THEN add both
+
+**Bad:** Adding `sinsona = "wrath"` without checking `sinso`
+**Good:** Finding `sinso = "be.angry"`, then adding `sinsona = sinso-na = "be.angry-NMLZ"`
+
+### Homophony Must Be Documented
+
+When root has multiple meanings:
+
+```python
+# POLYSEMOUS_ROOTS
+'lam': {
+    'lam1': ('way', 'path/road/direction'),    # lampi, lamzin
+    'lam2': ('build', 'construct'),             # lamkik, lamkikna
+    'lam3': ('dance', 'dance (v.)'),            # le lamna (dance context)
+}
+
+# Plus explicit compound entries for disambiguation:
+'lamna': ('lam-na', 'build-NMLZ'),           # default (more common)
+'le lamna': ('le lam-na', 'and dance-NMLZ'), # dance context
+```
+
+---
+
+## 12. Updated Rules for Future Languages
+
+Adding to the Top 15 Rules:
+
+16. **VERIFY BEFORE ADDING** - Check KJV for 3+ occurrences before adding any entry
+17. **CHECK ETYMOLOGY** - For `XYZna`, verify `XYZ` exists first
+18. **NO DUPLICATE ENTRIES** - grep before adding; consolidate if exists
+19. **SAME MORPHEME = SAME GLOSS** - Normalize terminology (stone not rock)
+20. **DOCUMENT HOMOPHONES** - Add to POLYSEMOUS_ROOTS with disambiguation rules
+21. **AUDIT AFTER 100% REACHED** - Coverage ≠ correctness; verify systematically
+22. **RUN DUPLICATE DETECTION** - Automated check for conflicting entries
+
+---
+
+*Document version: 3.0*  
+*Last updated: 2026-03-15*
 *Languages covered: Tedim Chin (ctd) - methodology applicable to 18+ Kuki-Chin languages*

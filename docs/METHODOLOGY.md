@@ -5,8 +5,8 @@
 This document describes the methodology developed for building a morphological analyzer for Tedim Chin (ctd), designed to be replicated across 19 Kuki-Chin languages. The goal is Leipzig-style glossing with 95%+ token coverage.
 
 **Reference Implementation:** `scripts/analyze_morphemes.py` (Tedim Chin)  
-**Coverage Achieved:** 99.73% (829,152 of 831,431 tokens)  
-**Development Time:** ~12 sessions of iterative work
+**Coverage Achieved:** 99.9998% (832,202 of 832,204 tokens)  
+**Development Time:** ~15 sessions of iterative work + quality audit
 
 ---
 
@@ -371,8 +371,56 @@ Common false positive types:
 | Bootstrap | 1-2 days | 60-70% |
 | Iterative expansion | 3-5 days | 85-95% |
 | Edge cases | 1-2 days | 95-97% |
-| Validation | 0.5 days | - |
-| **Total** | **5-10 days** | **95-97%** |
+| Push to 99%+ | 2-3 days | 99%+ |
+| Quality audit | 1-2 days | (verification) |
+| **Total** | **8-14 days** | **99%+ verified** |
+
+---
+
+## 8. Post-Coverage Quality Audit (NEW)
+
+**Critical Discovery:** Coverage ≠ Correctness. After achieving 99%+ coverage, systematic verification revealed:
+- Duplicate entries with conflicting glosses
+- Wrong segmentations (guessed morpheme boundaries)
+- Wrong glosses (no KJV verification)
+- Transparent derivations misclassified as opaque
+
+### Audit Programme (5 Phases)
+
+**Phase 1: Structural Integrity**
+- Find duplicate entries (same word, 2+ different glosses)
+- Find conflicting segmentations
+- Complete all partial glosses (entries with `?`)
+
+**Phase 2: Semantic Verification**
+- Verify each root against 3+ corpus examples via KJV
+- Check if "opaque" entries are actually transparent
+- Normalize terminology (e.g., "stone" not "rock" for `suang`)
+
+**Phase 3: Disambiguation**
+- Inventory all homophonous roots
+- Verify disambiguation rules exist in POLYSEMOUS_ROOTS
+- Add explicit compound entries for context-dependent meanings
+
+**Phase 4: Cross-Validation**
+- Test BINARY/TERNARY_COMPOUNDS produce expected outputs
+- Run regression tests after each fix batch
+
+**Phase 5: Documentation**
+- Document error patterns found
+- Update LESSONS_LEARNED.md
+- Create verification checklist for new entries
+
+### New Entry Verification Checklist
+
+Before adding ANY vocabulary entry:
+- [ ] KJV verification (3+ occurrences)
+- [ ] Segmentation uses only known morphemes
+- [ ] No duplicate entries exist (grep first)
+- [ ] Consistent with existing glosses
+- [ ] Homophones documented in POLYSEMOUS_ROOTS
+
+See `docs/LESSONS_LEARNED.md` Section 11 for detailed audit methodology.
 
 ---
 
@@ -425,6 +473,6 @@ analysis/{ISO}_unknown_words.tsv    # Remaining unknowns for manual review
 
 ---
 
-*Document version: 2.0*  
-*Last updated: 2026-03-13*  
-*Based on: Tedim Chin (ctd) analyzer development*
+*Document version: 3.0*  
+*Last updated: 2026-03-15*  
+*Based on: Tedim Chin (ctd) analyzer development + quality audit*
