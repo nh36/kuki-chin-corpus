@@ -15648,7 +15648,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kipden': ('kip-den', 'endure-forever'),                      # 1x Psa 37:18 - "for ever"
         'kibokcipsak': ('ki-bok-cip-sak', 'REFL-bow-tight-CAUS'),     # 1x Psa 38:6 - "bowed down greatly"
         'ngiungeu': ('ngiu-ngeu', 'wait-IDEO'),                       # 1x Psa 40:1 - "waited patiently"
-        'kihuauhuau': ('ki-huau-huau', 'RECIP-whisper-REDUP'),        # 1x Psa 41:7 - "whisper together" (ki-=reciprocal)
+        'kihuauhuau': ('ki-huau-huau', 'REFL-whisper-REDUP'),         # 1x Psa 41:7 - "whisper together"
         'sawnpai': ('sawn-pai', 'push-go'),                           # 1x Psa 44:5 - "push down"
         
         # Round 201: Psalms/Leviticus/Numbers hapax vocabulary
