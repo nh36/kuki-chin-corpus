@@ -15914,6 +15914,42 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tatkhiatsate': ('tat-khiat-sa-te', 'strike-out-PRF-PL'),  # 1x - struck out
         'geelgeelin': ('geel-geel-in', 'plan-REDUP-ERG'), # 1x - planning carefully
         'khiankhian': ('khia-khia-in', 'exit-REDUP-ERG'), # 1x - going out repeatedly
+        
+        # Round 210: More hapax (Song of Songs, Isaiah, etc.)
+        'lungtup': ('lung-tup', 'heart-knock'),           # 1x Song 5:2 - beloved knocks
+        'singseng': ('sing-seng', 'tree-shear'),          # 1x Song 4:2 - shorn
+        'singsengte': ('sing-seng-te', 'tree-shear-PL'),  # 1x - shorn (teeth)
+        'duang': ('duang', 'love'),                       # 1x - base for duangvul
+        'daingo': ('daingo', 'dew'),                      # 1x Song 5:2 - dew
+        'suanghawmpite': ('suanghawm-pi-te', 'cave-big-PL'),  # 1x Isa 2:19 - caves
+        'puktheihna': ('puk-theih-na', 'fall-able-NMLZ'), # 1x - ability to fall
+        'ciakciak': ('ciak-ciak', 'chirp-REDUP'),         # 1x - chirping
+        'tungdap': ('tung-dap', 'upon-close'),            # 1x - close upon
+        'kil': ('kil', 'corner'),                         # 1x - corner
+        'eka': ('eka', 'alone'),                          # 1x - alone
+        'tupeek': ('tupeek', 'cubit'),                    # 1x - measure
+        'lingliang': ('ling-liang', 'shine-bright'),      # 1x - shining bright
+        'tumbang': ('tumbang', 'alike'),                  # 1x - like/alike
+        'khauzen': ('khauzen', 'yarn'),                   # 1x - thread/yarn
+        'bumek': ('bumek', 'fine.flour'),                 # 1x - fine flour
+        'bangkeek': ('bang-keek', 'like-tear'),           # 1x - torn like
+        'lehmat': ('lehmat', 'exchange'),                 # 1x - exchange
+        'dedu': ('dedu', 'suddenly'),                     # 1x - suddenly
+        'pialpual': ('pial-pual', 'wander-REDUP'),        # 1x - wandering about
+        'tucip': ('tucip', 'squeeze'),                    # 1x - squeeze/press
+        'heengte': ('heeng-te', 'bare-PL'),               # 1x - bare ones
+        'netumte': ('netum-te', 'young.woman-PL'),        # 1x - young women
+        'netum': ('netum', 'young.woman'),                # base form
+        'gawpnate': ('gawp-na-te', 'weep-NMLZ-PL'),       # 1x - weepings
+        'patlom': ('pat-lom', 'touch-bundle'),            # 1x - handle/bunch
+        'khemul': ('khe-mul', 'foot-tip'),                # 1x - toe
+        'thiuhtheuh': ('thiuh-theuh', 'sprinkle-REDUP'),  # 1x - sprinkling
+        'lomtangin': ('lom-tang-in', 'bundle-long-ERG'),  # 1x - bundled long
+        'kisangsakte': ('ki-sang-sak-te', 'REFL-high-CAUS-PL'),  # 1x - exalted ones
+        'kihawlkhiate': ('ki-hawl-khia-te', 'REFL-rest-exit-PL'),  # 1x - those who rest
+        'kidengawpna': ('ki-deng-awp-na', 'REFL-stand-meet-NMLZ'),  # 1x - standing together
+        'kisepsakna': ('ki-sep-sak-na', 'REFL-destroy-CAUS-NMLZ'),  # 1x - destruction
+        'luhinna': ('luh-in-na', 'plunder-take-NMLZ'),    # 1x - plundering
     }
 
 
