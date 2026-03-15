@@ -1885,7 +1885,7 @@ NOUN_STEMS = {
     'tapate': 'sons',        # 411
     'tanu': 'daughter',
     'tanute': 'daughters',
-    'sanggam': 'brother',
+    # sanggam moved to BINARY_COMPOUNDS as sang-gam (high-land = brother)
     'sanggamte': 'brothers',
     'sanggampa': 'brother',  # 210
     'zi': 'wife',            # 339
@@ -2151,7 +2151,7 @@ NOUN_STEMS = {
     'kiman': 'profit',       # 41x - base for kimanna (profitable)
     'kimang': 'profit',      # 68x - variant of kiman (what profit)
     'maangmuh': 'vision',    # 42x - base for maangmuhna (vision)
-    'tuikulh': 'island',     # 41x - "island, isles" (isles of the sea)
+    # tuikulh moved to BINARY_COMPOUNDS as tui-kulh (water-surround = island)
     'puantualpi': 'robe/coat',  # 40x - "coat of many colors"
     
     # === na- words that are NOT 2SG prefix! ===
@@ -2388,7 +2388,7 @@ NOUN_STEMS = {
     'kiphuhna': 'lifting',   # 1x Num 9:17 - "cloud was taken up"
     'gindan': 'alarm',       # 1x Num 10:7 - "blow, but not alarm"
     'nungdal': 'rearward',   # 1x Num 10:25 - "rearward of the camp"
-    'lamhilh': 'guide',      # 1x Num 10:31 - "thou knowest how"
+    # lamhilh moved to BINARY_COMPOUNDS as lam-hilh (way-teach = guide)
     'ikkhiat': 'loathsome',  # 1x Num 11:20 - "come out at nostrils"
     'kiciamteh': 'enrolled', # 1x Num 11:26 - "of them that were written"
     
@@ -2517,7 +2517,7 @@ NOUN_STEMS = {
     'bul': 'nave',           # 1x 1Kgs 7:33 - "naves"
     'vangsung': 'laver',     # 1x 1Kgs 7:38 - "ten lavers"
     'khukdin': 'kneeling',   # 1x 1Kgs 8:54 - "kneeling on his knees"
-    'innkhuam': 'almug.pillar', # 1x 1Kgs 10:12 - "almug trees pillars"
+    # innkhuam moved to BINARY_COMPOUNDS as inn-khuam (house-pillar = pillar)
     'utong': 'peacock',      # 1x 1Kgs 10:22 - "peacocks"
     'zuibup': 'follow.fully', # 1x 1Kgs 11:6 - "went not fully after"
     'thuhaksa': 'grievous.yoke', # 1x 1Kgs 12:4 - "made our yoke grievous"
@@ -2668,7 +2668,7 @@ NOUN_STEMS = {
     'banbuh': 'armlet',      # 1x Num 31:50 - "bracelet"
     'khi': 'chain',          # 1x Num 31:50 - "chains"
     'lamgal': 'war',         # 1x Num 32:19 - "war"
-    'taanggam': 'suburb',    # 1x Num 35:5 - "suburbs"
+    # taanggam moved to BINARY_COMPOUNDS as taang-gam (beautiful-land = suburb)
     'daihual': 'revenger',   # 1x Num 35:27 - "avenger"
     'lenkip': 'every',       # 1x Deu 4:4 - "everyone"
     'sungtengun': 'among',   # 1x Deu 11:5 - "in midst of"
@@ -4867,6 +4867,13 @@ BINARY_COMPOUNDS = {
     'singzung': ('sing', 'zung', 'root'),         # tree-root → root/trunk (Job 30:3) (2x)
     'leipi': ('lei', 'pi', 'earthquake'),         # earth-big → earthquake (Joel 2:10) (3x)
     'khasim': ('kha', 'sim', 'new.moon'),         # moon-sweet → new moon (Num 29:6) (3x)
+    
+    # Round 193m: Long stems analyzed as binary compounds
+    'lamhilh': ('lam', 'hilh', 'guide'),          # way-teach → guide
+    'tuikulh': ('tui', 'kulh', 'island'),         # water-surround → island
+    'taanggam': ('taang', 'gam', 'suburb'),       # beautiful-land → suburb
+    'sanggam': ('sang', 'gam', 'brother'),        # high-land → brother (figurative?)
+    'innkhuam': ('inn', 'khuam', 'pillar'),       # house-pillar → pillar (1Ki 10:12, Prov 9:1)
 }
 
 
