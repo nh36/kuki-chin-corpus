@@ -4699,7 +4699,7 @@ BINARY_COMPOUNDS = {
     'khialhsak': ('khialh', 'sak', 'trespass'),  # err-CAUS → trespass (17x)
     'hawlkhiat': ('hawl', 'khiat', 'persecute'), # drive-out → persecution (17x)
     'thukim': ('thu', 'kim', 'covenant'),        # word-keep → covenant (15x)
-    'thangpaih': ('thang', 'paih', 'flood'),     # rise-pour → flood (15x)
+    'thangpaih': ('thang', 'paih', 'indignation'), # rise-pour → indignation/wrath (15x)
     'lungduai': ('lung', 'duai', 'compassion'),  # heart-soft → compassion (15x)
     'huaiham': ('huai', 'ham', 'terror'),        # dread-full → terror (15x)
     'galsim': ('gal', 'sim', 'number'),          # enemy-count → number (15x)
@@ -12338,7 +12338,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Round 107: More vocabulary for 99% (count=2)
         'limlemel': ('lim-le-mel', 'form-NEG-void'),               # without form
         'golpite': ('gol-pi-te', 'whale-great-PL'),                # whales
-        'singnai': ('singnai', 'onyx'),                            # onyx stone (opaque lexeme)
+        'singnai': ('sing-nai', 'precious.stone'),                 # sing=stone + nai=precious → onyx
         'nakguh': ('nak-guh', 'rib-take'),                         # took rib
         'kipiansakna': ('ki-pian-sak-na', 'REFL-create-CAUS-NMLZ'), # creation
         'minthangte': ('min-thang-te', 'name-famous-PL'),          # men of renown
