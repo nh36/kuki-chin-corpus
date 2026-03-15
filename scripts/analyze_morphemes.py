@@ -16718,6 +16718,54 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thalawp': ('tha-lawp', 'strength-wrap'),                # 1x - wrap strength
         'kawisate': ('kawi-sa-te', 'crooked-already-PL'),        # 1x - crooked ones
         'hahkatna': ('hah-kat-na', 'tired-cut-NMLZ'),            # 1x - cutting tiredness
+        
+        # Round 226: Mixed hapax vocabulary
+        'baina': ('bai-na', 'owe-NMLZ'),                         # 1x 2Cor 4:9 - persecuted (debt)
+        'bangsakkikte': ('bang-sak-kik-te', 'like-CAUS-again-PL'),  # 1x Isa 58:12 - restorer
+        'bawhhuan': ('bawh-huan', 'cry-garden'),                 # 1x Acts 7:57 - cried out
+        'belawi': ('bel-awi', 'leave-winnow'),                   # 1x Ezek 4:9 - fitches (grain)
+        'betkhiatsak': ('bet-khiat-sak', 'shoot-out-CAUS'),      # 1x Ezek 39:3 - cause arrows fall
+        'betkhiatsakin': ('bet-khiat-sak-in', 'shoot-out-CAUS-ERG'),  # 1x Ezek 39:3 - causing arrows fall
+        'bing': ('bing', 'uncircumcised'),                       # 1x Jer 6:10 - uncircumcised ear
+        'buhphual': ('buh-phual', 'rice-torch'),                 # 1x Zech 12:6 - torch in sheaf
+        'dahlekah': ('dah-le-kah', 'dry-and-lamentations'),      # 1x Ezek 2:10 - lamentations
+        'daihawh': ('dai-hawh', 'dawn-sabbath'),                 # 1x Matt 28:1 - end of sabbath
+        'dawhkhiat': ('dawh-khiat', 'snatch-out'),               # 1x Jude 1:23 - pulling out of fire
+        'deh': ('deh', 'scorpion.sting'),                        # 1x Rev 9:5 - scorpion striketh
+        'dehthei': ('deh-thei', 'sting-can'),                    # 1x Rev 9:10 - stings in tails
+        'denpaih': ('den-paih', 'stand-beside'),                 # 1x Dan 2:45 - hereafter
+        'dongkhak': ('dong-khak', 'way-block'),                  # 1x Isa 57:14 - stumblingblock
+        'dongnuam': ('dong-nuam', 'way-pleasant'),               # 1x Jer 12:1 - way prosper
+        'dongtelin': ('dong-tel-in', 'way-patient-ERG'),         # 1x Rev 2:2 - patience
+        'engdup': ('eng-dup', 'light-cover'),                    # 1x Jer 10:9 - blue and purple
+        'gahkhak': ('gah-khak', 'fruit-block'),                  # 1x Mark 11:13 - time of figs
+        'gahphat': ('gah-phat', 'fruit-destroy'),                # 1x Jer 11:19 - destroy tree with fruit
+        'gamlelei': ('gam-lelei', 'land-tremble'),               # 1x Jer 8:16 - land trembled
+        'gawsem': ('gaw-sem', 'sound-dulcimer'),                 # 1x Dan 3:15 - dulcimer (instrument)
+        'gawsemte': ('gaw-sem-te', 'sound-dulcimer-PL'),         # 1x Dan 3:5 - dulcimers
+        'geihualte': ('gei-hual-te', 'settle-corners-PL'),       # 1x Ezek 43:20 - corners of settle
+        'guaktangun': ('guak-tang-un', 'naked-rise-IMP'),        # 1x Lam 4:21 - make thyself naked
+        'gualnuamte': ('gual-nuam-te', 'dance-pleasant-PL'),     # 1x Jer 31:4 - dances of merry
+        'gualtut': ('gual-tut', 'group-fifty'),                  # 1x Mark 6:40 - by fifties
+        'guipi': ('gui-pi', 'bone-big'),                         # 1x Ezek 37:11 - these bones
+        'guktaknate': ('guk-tak-na-te', 'steal-true-NMLZ-PL'),   # 1x Rev 9:21 - thefts
+        'gumthuak': ('gum-thuak', 'slave-endure'),               # 1x 1Cor 4:12 - we suffer it
+        'gutui': ('gu-tui', 'gall-water'),                       # 1x Jer 9:15 - water of gall
+        'haitatnasate': ('hai-tat-na-sa-te', 'whore-cut-NMLZ-already-PL'),  # 1x Ezek 6:9 - whorish heart
+        'hallupna': ('hal-lup-na', 'burn-bury-NMLZ'),            # 1x Jer 7:31 - burn in fire
+        'harpte': ('harp-te', 'harp-PL'),                        # 1x Rev 15:2 - harps (loanword)
+        'hauhnopna': ('hauh-nop-na', 'desire-deceive-NMLZ'),     # 1x Mark 4:19 - deceitfulness
+        'hehhuai': ('heh-huai', 'anger-stumble'),                # 1x 1Cor 1:23 - stumblingblock
+        'hehnemzaw': ('heh-nem-zaw', 'anger-comfort-more'),      # 1x 2Cor 2:7 - comfort more
+        'heksim': ('hek-sim', 'accuse-slander'),                 # 1x Dan 3:8 - accused the Jews
+        'hekteng': ('hek-teng', 'accuse-fix'),                   # 1x Dan 6:24 - had accused
+        'heuhkhiatsak': ('heuh-khiat-sak', 'scatter-out-CAUS'),  # 1x Jer 5:10 - take away battlements
+        'heuhsiang': ('heuh-siang', 'scatter-shake'),            # 1x Dan 4:14 - shake off leaves
+        'hilhel': ('hilh-el', 'teach-COMPL'),                    # 1x Ezek 42:6 - straitened
+        'hilhial': ('hilh-ial', 'teach-spread'),                 # 1x Ps 73:4 - no bands in death
+        'hoihzawknate': ('hoih-zawk-na-te', 'good-more-NMLZ-PL'),  # 1x Rev 2:19 - last more than first
+        'hotnop': ('hot-nop', 'trust-want'),                     # 1x Matt 27:43 - he trusted
+        'huhsawn': ('huh-sawn', 'comfort-console'),              # 1x 2Cor 1:4 - comforteth us
     }
 
 
