@@ -16146,6 +16146,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'naizo': ('nai-zo', 'near-finish'),                     # 1x - nearly finished
         'hehhak': ('heh-hak', 'angry-difficult'),               # 1x - difficult anger
         'sileng': ('si-leng', 'die-if'),                        # 1x - if die
+        
+        # Round 215: Matthew/Malachi hapax vocabulary
+        'genkholhsakna': ('gen-kholh-sak-na', 'say-INTENS-CAUS-NMLZ'),  # 1x Matt 13:35 - utterance
+        'kiphasakteng': ('ki-pha-sak-teng', 'REFL-good-CAUS-all'),  # 1x Mal 3:15 - proud ones
+        'kiciamnate': ('ki-ciam-na-te', 'REFL-promise-NMLZ-PL'),  # 1x Matt 5:33 - oaths
+        'leidaina': ('lei-dai-na', 'earth-quiet-NMLZ'),         # 1x Matt 13:5 - stony places
+        'kilawnkeek': ('ki-lawn-keek', 'REFL-throw-reverse'),   # 1x Matt 24:2 - thrown down
+        'kibulphuh': ('ki-bul-phuh', 'REFL-begin-plant'),       # 1x Matt 12:37 - condemned
+        'mualsuangte': ('mual-suang-te', 'grave-stone-PL'),     # 1x Matt 23:29 - sepulchres
+        'sehnih': ('seh-nih', 'appoint-two'),                   # 1x - appoint two
+        'mitkua': ('mit-kua', 'eye-hole'),                      # 1x - eye socket
+        'muatin': ('muat-in', 'rot-ERG'),                       # 1x - rotting
+        'khilongte': ('khi-long-te', 'climb-round-PL'),         # 1x - climbers
+        'hoihmahin': ('hoih-mah-in', 'good-self-ERG'),          # 1x - very well
+        'hoihmah': ('hoih-mah', 'good-self'),                   # 1x - very good
+        'palsatkhak': ('pal-sat-khak', 'separate-hard-firm'),   # 1x - firmly separated
+        'citheibek': ('ci-theih-bek', 'say-know-only'),         # 1x Mal 3:15 - just say
+        'nuaisiahin': ('nuai-siah-in', 'under-throw-ERG'),      # 1x - throwing under
+        'lemtuahin': ('lem-tuah-in', 'image-do-ERG'),           # 1x - doing image
+        'maksim': ('mak-sim', 'Mark-SIM'),                      # 1x - like Mark
+        'kihilkik': ('ki-hil-kik', 'REFL-turn-ITER'),           # 1x - turn back
+        'khulna': ('khul-na', 'bow-NMLZ'),                      # 1x - bowing
+        'kangsa': ('kang-sa', 'burn-leave'),                    # 1x - left burning
+        'guktheihna': ('guk-theih-na', 'bow-know-NMLZ'),        # 1x - knowing bow
+        'kheek': ('kheek', 'mark'),                             # 1x - mark (variant)
+        'guatzaw': ('guat-zaw', 'crooked-more'),                # 1x - more crooked
+        'kawcikin': ('kaw-cik-in', 'call-quick-ERG'),           # 1x - calling quickly
+        'gamtateng': ('gam-ta-teng', 'land-child-all'),         # 1x - all land children
+        'nangpipi': ('nang-pi-pi', '2SG-great-REDUP'),          # 1x - you very great
+        'kaigawmin': ('kai-gawm-in', 'lead-around-ERG'),        # 1x - leading around
+        'tawmbek': ('tawm-bek', 'short-only'),                  # 1x - only short
+        'kozaw': ('ko-zaw', 'cry-more'),                        # 1x - cry more
+        'kihtazaw': ('kih-ta-zaw', 'hide-child-more'),          # 1x - hide more
+        'mawkkiat': ('mawk-kiat', 'wet-break'),                 # 1x - wet break
+        'lopakungte': ('lo-pa-kung-te', 'field-male-tree-PL'),  # 1x - field workers
+        'upnop': ('up-nop', 'believe-soft'),                    # 1x - soft belief
+        'dopbawl': ('dop-bawl', 'attack-make'),                 # 1x - make attack
+        'lingbulsumte': ('ling-bul-sum-te', 'bell-ball-money-PL'),  # 1x - money bells
+        'bingsak': ('bing-sak', 'flat-CAUS'),                   # 1x - flatten
+        'lomhen': ('lom-hen', 'friend-appear'),                 # 1x - appear friend
+        'tungthamun': ('tung-tha-mun', 'upon-new-place'),       # 1x - new place upon
+        'pusuakte': ('pu-suak-te', 'grandpa-become-PL'),        # 1x - ancestors
+        'suangneu': ('suang-neu', 'stone-small'),               # 1x - small stone
+        'phawkkhial': ('phawk-khial', 'remember-err'),          # 1x - misremember
+        'meiingo': ('meii-ngo', 'fire-warm'),                   # 1x - warm fire
+        'sihbup': ('sih-bup', 'die-fall'),                      # 1x - fall dead
+        'dongtak': ('dong-tak', 'beat-true'),                   # 1x - truly beat
+        'ciangbek': ('ciang-bek', 'become-only'),               # 1x - only become
+        'sehte': ('seh-te', 'appoint-PL'),                      # 1x - appointed ones
+        'khingin': ('khing-in', 'lean-ERG'),                    # 1x - leaning
+        'dongkhakin': ('dong-khak-in', 'beat-firm-ERG'),        # 1x - beating firmly
+        'thovai': ('tho-vai', 'awake-chaff'),                   # 1x - chaff awake
     }
 
 
