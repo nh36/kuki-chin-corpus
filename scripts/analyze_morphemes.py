@@ -16458,6 +16458,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kuankhiate': ('kuan-khia-te', 'authority-out-PL'),      # 1x - authorities out
         'tangguakun': ('tang-guak-un', 'rise-?-IMP'),            # 1x - rise up!
         'minun': ('min-un', 'name-IMP'),                         # 1x - name it!
+        
+        # Round 221: Jeremiah/Ezekiel hapax vocabulary
+        'kaihkhiatna': ('kaih-khiat-na', 'lead-out-NMLZ'),       # 1x Jer 38:11 - letting down
+        'kihonthahna': ('ki-hon-thah-na', 'REFL-open-new-NMLZ'),  # 1x Ezek 6:8 - escape
+        'kikalhna': ('ki-kalh-na', 'REFL-bar-NMLZ'),             # 1x Jer 51:30 - bars
+        'khuaphiatna': ('khua-phiat-na', 'cloud-clear-NMLZ'),    # 1x Ezek 1:4 - brightness
+        'khuakongpite': ('khua-kong-pi-te', 'village-gate-great-PL'),  # 1x Jer 51:58 - high gates
+        'kisuliam': ('ki-su-liam', 'REFL-cut-joint'),            # 1x Jer 47:5 - cut oneself
+        'vukngo': ('vuk-ngo', 'blanket-warm'),                   # 1x - warm blanket
+        'anduh': ('an-duh', 'food-soup'),                        # 1x - soup food
+        'puanlomte': ('puan-lom-te', 'cloth-friend-PL'),         # 1x - cloth friends
+        'zutkhat': ('zut-khat', 'ugly-one'),                     # 1x - one ugly
+        'kigawite': ('ki-gawi-te', 'REFL-crooked-PL'),           # 1x - crooked ones
+        'zangleite': ('zang-lei-te', 'arm-borrow-PL'),           # 1x - arm borrowers
+        'sukhamzan': ('suk-ham-zan', 'push-desire-night'),       # 1x - night desire
+        'suktap': ('suk-tap', 'push-weep'),                      # 1x - push weep
+        'lakhiasuk': ('la-khia-suk', 'take-out-push'),           # 1x - push take out
+        'kisuh': ('ki-suh', 'REFL-count'),                       # 1x - be counted
+        'saal': ('saal', 'Saul'),                                # 1x - Saul (variant)
+        'nuaiphahin': ('nuai-phah-in', 'under-throw-ERG'),       # 1x - throwing under
+        'siktawnte': ('sik-tawn-te', 'bar-stand-PL'),            # 1x Jer 51:30 - bar stands
+        'ciak': ('ciak', 'eat'),                                 # 1x - eat (variant)
+        'zumlai': ('zum-lai', 'bow-time'),                       # 1x - bow time
+        'ngelhngalh': ('ngelh-ngalh', 'smooth-REDUP'),           # 1x - very smooth
+        'husamin': ('hu-sam-in', 'follow-call-ERG'),             # 1x - following call
+        'tahtansak': ('tah-tan-sak', 'exact-stand-CAUS'),        # 1x - cause stand exact
+        'giugiau': ('giu-giau', 'shake-REDUP'),                  # 1x - shaking
+        'kenkanzo': ('ken-kan-zo', 'carry-REDUP-finish'),        # 1x - finish carrying
+        'lehdokha': ('leh-do-kha', 'return-fight-dry'),          # 1x - return fight
+        'delhkek': ('delh-kek', 'throw-reverse'),                # 1x - throw reverse
+        'kiciangte': ('ki-ciang-te', 'REFL-become-PL'),          # 1x - become ones
+        'dup': ('dup', 'heap'),                                  # 1x - heap
+        'silenai': ('si-le-nai', 'die-and-near'),                # 1x - die and near
+        'ngenngenkha': ('ngen-ngen-kha', 'beg-REDUP-dry'),        # 1x - begging dry
+        'vilsim': ('vil-sim', 'round-think'),                    # 1x - think round
+        'nuinui': ('nui-nui', 'laugh-REDUP'),                    # 1x - laughing
+        'guaktangun': ('guak-tang-un', '?-rise-IMP'),            # 1x - rise up!
+        'mam': ('mam', 'mother'),                                # 1x - mother (variant)
+        'tatkhatin': ('tat-khat-in', 'each-one-ERG'),            # 1x - each one
+        'kangto': ('kang-to', 'burn-reach'),                     # 1x - reach burn
+        'kiukiau': ('kiu-kiau', 'cry-REDUP'),                    # 1x - crying
+        'leenna': ('leen-na', 'wine-NMLZ'),                      # 1x - wine place
+        'paupeeng': ('pau-peeng', 'word-open'),                  # 1x - open word
+        'dahlekah': ('dah-le-kah', 'dry-and-?'),                 # 1x - dry and...
+        'thumletau': ('thum-le-tau', 'three-and-gourd'),         # 1x - three gourds
+        'sikpeek': ('sik-peek', 'bar-split'),                    # 1x - split bar
+        'belawi': ('bel-awi', 'leave-?'),                        # 1x - leave...
+        'ekkeu': ('ek-keu', 'excrement-unmarried'),              # 1x - dung
+        'tunsate': ('tun-sa-te', 'arrive-already-PL'),           # 1x - arrived ones
+        'tawmcikkhat': ('tawm-cik-khat', 'short-quick-one'),     # 1x - one quick short
+        'cikze': ('cik-ze', 'quick-manner'),                     # 1x - quick manner
+        'lawnthang': ('lawn-thang', 'throw-rise'),               # 1x - throw rise
     }
 
 
