@@ -15857,6 +15857,63 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'phatuamsak': ('phat-tuam-sak', 'praise-all-CAUS'),  # 1x - cause all praise
         'ciangtang': ('ciang-tang', 'clear-long'),        # 1x - clearly long
         'laiphai': ('lai-phai', 'book-flat'),             # 1x - flat book/tablet
+        
+        # Round 208: More hapax fixes
+        'savokphual': ('savokphual', 'weasel'),           # 1x Lev 11:29 - animal
+        'singmuat': ('sing-muat', 'wood-rot'),            # 1x Job 13:28 - rotten thing
+        'hotna': ('hot-na', 'save-NMLZ'),                 # 1x Job 26:2 - saving
+        'hot': ('hot', 'save'),                           # base form
+        'suangseeksate': ('suang-seeksa-te', 'stone-carve.PRF-PL'),  # 1x - masons
+        'suangseeksa': ('suang-seeksa', 'stone-carve.PRF'),  # base - mason
+        'khialhkhaknate': ('khialh-khak-na-te', 'err-shut-NMLZ-PL'),  # 1x - iniquities
+        'suangkeente': ('suang-keen-te', 'stone-hard-PL'),  # 1x - rocks
+        'suangkeen': ('suang-keen', 'stone-hard'),        # base - rock
+        'teharsha': ('Teharsha', 'Tel-Harsha'),           # 1x - place name
+        'tiz': ('tiz', 'scatter'),                        # 1x - scatter
+        'ami': ('ami', 'who'),                            # 1x - interrogative
+        'kar': ('kar', 'generation'),                     # 1x - generation/age
+        '"ciknawng': ('ciknawng', 'alone'),               # 1x - alone/by oneself
+        'ciknawng': ('ciknawng', 'alone'),                # base form
+        'lapna': ('lap-na', 'wrap-NMLZ'),                 # 1x - wrapping
+        'lap': ('lap', 'wrap'),                           # base form
+        'nipna': ('nip-na', 'pinch-NMLZ'),                # 1x - pinching
+        'nip': ('nip', 'pinch'),                          # base form
+        'lungso': ('lung-so', 'heart-?'),                 # 1x - heart feeling
+        'kaptuk': ('kap-tuk', 'cry-meet'),                # 1x - crying together
+        'mavanna': ('mavan-na', 'wonder-NMLZ'),           # 1x - wondering
+        'mavan': ('mavan', 'wonder'),                     # base form
+        'ngongbawlna': ('ngong-bawl-na', 'self-make-NMLZ'),  # 1x - self-making
+        'suahkhiatna': ('suah-khiat-na', 'emerge-exit-NMLZ'),  # 1x - emergence
+        'kisiansakna': ('ki-sian-sak-na', 'REFL-holy-CAUS-NMLZ'),  # 1x - sanctification
+        'thudotnate': ('thu-dot-na-te', 'word-confirm-NMLZ-PL'),  # 1x - confirmations
+        'suhsakte': ('suh-sak-te', 'push-CAUS-PL'),       # 1x - pushers
+        'lahtelnate': ('lahtel-na-te', 'accompany-NMLZ-PL'),  # 1x - accompaniments
+        
+        # Round 209: More hapax compounds
+        'lamkhial': ('lam-khial', 'way-err'),             # 1x Jer 50:6 - go astray
+        'khekhapte': ('khe-khap-te', 'foot-step-PL'),     # 2x - footsteps
+        'khekhap': ('khe-khap', 'foot-step'),             # base - footstep
+        'dinkipna': ('din-kip-na', 'stand-together-NMLZ'),  # 1x - standing together
+        'kithukkikna': ('ki-thuk-kik-na', 'REFL-deep-ITER-NMLZ'),  # 1x - deepening
+        'kigakna': ('ki-gak-na', 'REFL-stop-NMLZ'),       # 1x - stopping
+        'dianna': ('dian-na', 'still-NMLZ'),              # 1x - stillness
+        'kizuakna': ('ki-zuak-na', 'REFL-sell-NMLZ'),     # 1x - selling self
+        'hailuatna': ('hai-luat-na', 'be.anxious-exceed-NMLZ'),  # 1x - excessive anxiety
+        'hauhtohna': ('hauh-toh-na', 'call-reach-NMLZ'),  # 1x - calling/reaching
+        'lawpluatna': ('lawp-luat-na', 'rejoice-exceed-NMLZ'),  # 1x - exceeding joy
+        'khahkhongna': ('khah-khong-na', 'choke-tight-NMLZ'),  # 1x - choking
+        'khiukheuna': ('khiu-kheu-na', 'crooked-REDUP-NMLZ'),  # 1x - crookedness
+        'laptohna': ('lap-toh-na', 'wrap-reach-NMLZ'),    # 1x - wrapping
+        'guhnatna': ('guh-nat-na', 'labor-pain-NMLZ'),    # 1x - labor pains
+        'hehsaknate': ('heh-sak-na-te', 'anger-CAUS-NMLZ-PL'),  # 1x - provocations
+        'kihilhte': ('ki-hilh-te', 'REFL-teach-PL'),      # 1x - taught ones
+        'zuaunate': ('zuau-na-te', 'rebel-NMLZ-PL'),      # 1x - rebellions
+        'sawmnate': ('sawm-na-te', 'tempt-NMLZ-PL'),      # 1x - temptations
+        'lahsate': ('lah-sa-te', 'take-PRF-PL'),          # 1x - taken ones
+        'theithekte': ('thei-thek-te', 'know.I-cut-PL'),  # 1x - acquainted ones
+        'tatkhiatsate': ('tat-khiat-sa-te', 'strike-out-PRF-PL'),  # 1x - struck out
+        'geelgeelin': ('geel-geel-in', 'plan-REDUP-ERG'), # 1x - planning carefully
+        'khiankhian': ('khia-khia-in', 'exit-REDUP-ERG'), # 1x - going out repeatedly
     }
 
 
