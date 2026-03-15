@@ -8363,7 +8363,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'cik': ('cik', 'fountain'),                         # 17x - "fountain"
         'neh': ('neh', 'sojourn/come'),                     # 17x - "sojourn"
         'mudahin': ('mu-dah-in', 'see.I-hate-ERG'),         # 17x - "hating/sent away"
-        'sinsona': ('sin-son-a', 'die-remain-LOC'),         # 17x - compound
+        # sinsona: see line ~15277 (wrath - opaque lexeme, not sin-son-a)
         'encik': ('en-cik', 'look-fountain'),               # 17x - compound
         'lupkhop': ('lup-khop', 'bow.down-enough'),         # 17x - "bow down"
         'paikikin': ('pai-kik-in', 'go-again-ERG'),         # 17x - "going again"
@@ -14894,11 +14894,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # tok- compounds (tok = peck/sit)
         'toktol': ('tok-tol', 'peck-?'),                             # (1x)
         'toktok': ('tok~tok', 'peck~RED'),                           # pecking (reduplication)
-        # sin- compounds (sin = trust)
-        'sinsona': ('sin-sona', 'trust-?'),                          # (1x)
-        "sinsona'": ("sin-sona'", 'trust-?.GEN'),                    # (1x)
-        'sinsanna': ('sin-san-na', 'trust-hang-NMLZ'),               # (1x)
-        "sinsin'": ("sin~sin'", 'trust~RED.GEN'),                    # (reduplication)
+        # Note: sinsona = 'wrath' (opaque lexeme, see line ~15277)
+        # NOT sin-sona (sin = 'near', doesn't yield 'wrath')
+        'sinsanna': ('sin-san-na', 'near-hang-NMLZ'),               # shaking/wavering (Isa 19:16)
+        "sinsin'": ("sin~sin'", 'near~RED.POSS'),                   # skipping (Jer 48:27)
         # ih- compounds (ih = sleep)
         'ihmucip': ('ih-mu-cip', 'sleep-see-tight'),                 # deep sleep (1x)
         # khia- compounds
