@@ -16198,6 +16198,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khingin': ('khing-in', 'lean-ERG'),                    # 1x - leaning
         'dongkhakin': ('dong-khak-in', 'beat-firm-ERG'),        # 1x - beating firmly
         'thovai': ('tho-vai', 'awake-chaff'),                   # 1x - chaff awake
+        
+        # Round 216: Luke hapax vocabulary
+        'kivukdim': ('ki-vuk-dim', 'REFL-fill-full'),           # 1x Luke 3:5 - be filled
+        'kiniamkhiatsuk': ('ki-niam-khiat-suk', 'REFL-low-out-push'),  # 1x Luke 18:14 - be abased
+        'thuambuak': ('thuam-buak', 'vegetable-scatter'),       # 1x Luke 11:42 - rue (herb)
+        'lamliante': ('lam-lian-te', 'way-great-PL'),           # 1x Luke 14:23 - highways
+        'kisamte': ('ki-sam-te', 'REFL-invite-PL'),             # 1x Luke 14:8 - invited ones
+        'kisuampa': ('ki-suam-pa', 'REFL-throw-NMLZ.M'),        # 1x Luke 10:36 - fallen one
+        'lammat': ('lam-mat', 'way-forget'),                    # 1x - forget way
+        'laitah': ('lai-tah', 'time-exact'),                    # 1x - exact time
+        'ngeizel': ('ngei-zel', 'possess-separate'),            # 1x - separate possession
+        'sunkham': ('sun-kham', 'day-prevent'),                 # 1x - prevent day
+        'omomin': ('om-om-in', 'be-REDUP-ERG'),                 # 1x - being
+        'kawite': ('kawi-te', 'crooked-PL'),                    # 1x Luke 3:5 - crooked
+        'leihumte': ('lei-hum-te', 'earth-rough-PL'),           # 1x Luke 3:5 - rough ways
+        'mawkcih': ('mawk-cih', 'wet-say'),                     # 1x - say wet
+        'khanna': ('khan-na', 'grow-NMLZ'),                     # 1x - growing
+        'keenah': ('keen-ah', 'straight-LOC'),                  # 1x - at straight
+        'eukhiat': ('eu-khiat', 'shake-out'),                   # 1x - shake out
+        'phuisamte': ('phui-sam-te', 'clothe-invite-PL'),       # 1x - clothed ones
+        'dawhlai': ('dawh-lai', 'beautiful-time'),              # 1x - beautiful time
+        'khuamkua': ('khuam-kua', 'village-hole'),              # 1x - village pit
+        'suangsung': ('suang-sung', 'stone-inside'),            # 1x - inside stone
+        'madiakin': ('ma-diak-in', 'EMPH-exact-ERG'),           # 1x - exactly
+        'nulkeusak': ('nul-keu-sak', 'female-unmarried-CAUS'),  # 1x - cause unmarried
+        'deplum': ('dep-lum', 'press-heap'),                    # 1x - pressed heap
+        'siavuante': ('sia-vuan-te', 'evil-spirit-PL'),         # 1x - evil spirits
+        'kangpah': ('kang-pah', 'burn-fire'),                   # 1x - fire burn
+        'sawngteng': ('sawng-teng', 'vessel-all'),              # 1x - all vessels
+        'lenkawmin': ('len-kawm-in', 'play-around-ERG'),        # 1x - playing around
+        'taangkim': ('taang-kim', 'rise-complete'),             # 1x - rise complete
+        'donkha': ('don-kha', 'receive-mouth'),                 # 1x - receive word
+        'khiathuah': ('khiat-huah', 'out-throw'),               # 1x - throw out
+        'inntuan': ('inn-tuan', 'house-bear'),                  # 1x - bear house
+        'guanzaw': ('guan-zaw', 'gaze-more'),                   # 1x - gaze more
+        'leikha': ('lei-kha', 'earth-dry'),                     # 1x - dry earth
+        'zuma': ('zum-a', 'bow-NMLZ'),                          # 1x - bowing
+        'kaigawpin': ('kai-gawp-in', 'lead-cover-ERG'),         # 1x - leading cover
+        'liausum': ('liau-sum', 'wander-money'),                # 1x - wander money
+        'nawtsuakin': ('nawt-suak-in', 'drive-become-ERG'),     # 1x - driving out
+        'tusakzaw': ('tu-sak-zaw', 'now-CAUS-more'),            # 1x - cause more now
+        'angtanhuai': ('ang-tan-huai', 'smell-stand-able'),     # 1x - able to smell
+        'phuhkhit': ('phuh-khit', 'plant-finish'),              # 1x - finished planting
+        'begap': ('be-gap', 'give-close'),                      # 1x - give close
+        'vaiciah': ('vai-ciah', 'chaff-eat'),                   # 1x - eat chaff
+        'tavuanteng': ('ta-vuan-teng', 'child-spirit-all'),     # 1x - all spirit children
+        'taanzaih': ('taan-zaih', 'rise-build'),                # 1x - rise build
+        'donnop': ('don-nop', 'receive-want'),                  # 1x - want to receive
+        'khutdawh': ('khut-dawh', 'hand-beautiful'),            # 1x - beautiful hand
+        'geinai': ('gei-nai', 'edge-near'),                     # 1x - near edge
+        'tuntom': ('tun-tom', 'arrive-hurry'),                  # 1x - hurry arrive
+        'ginalopa': ('gina-lo-pa', 'believe-NEG-NMLZ.M'),       # 1x - unbeliever
     }
 
 
