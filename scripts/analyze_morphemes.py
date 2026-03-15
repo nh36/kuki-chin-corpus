@@ -15567,6 +15567,17 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hehsakkha': ('heh-sak-kha', 'anger-CAUS-PAST'),              # 1x Ezra 5:12 - "provoked to wrath"
         'kidawhkhiat': ('ki-dawh-khiat', 'REFL-set-out'),             # 2x Ezra 6:11 - "pulled down"
         'zehsiang': ('zeh-siang', 'pure-clean'),                      # 1x Ezra 6:20 - "purified"
+        
+        # Round 198b: More hapax from Nehemiah/Esther
+        'tukawmin': ('tu-kawm-in', 'sit-beside-ADV'),                 # 1x Neh 2:6 - "sitting by"
+        'zumcingte': ('zum-cing-te', 'prison-guard-PL'),              # 1x Neh 3:25 - "court of prison"  
+        'lehtuksak': ('leh-tuk-sak', 'turn-back-CAUS'),               # 1x Neh 4:4 - "turn back"
+        'gamzai': ('gam-zai', 'land-fat'),                            # 1x Neh 9:35 - "fat land"
+        'patkhiat': ('pat-khiat', 'begin-out'),                       # 1x Neh 11:17 - "principal to begin"
+        'namlephung': ('nam-le-phung', 'people-and-family'),          # 1x Esth 2:10 - "people nor kindred"
+        'ngenthuah': ('ngen-thuah', 'request-extra'),                 # 1x Esth 2:15 - "required"
+        'vingveng': ('ving~veng', 'hurry~RED'),                       # 1x Esth 6:12 - "hasted"
+        'lelhtak': ('lelh-tak', 'fall-begin'),                        # 1x Esth 6:13 - "begun to fall"
     }
 
 
