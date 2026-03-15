@@ -15616,6 +15616,40 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'leizawh': ('lei-zawh', 'buy-exchange'),                      # 1x Job 28:17 - "exchange"
         'dimdem': ('dim-dem', 'quiet-IDEO'),                          # 1x Job 29:21 - "silently/waited"
         "taciingte'": ("ta-ciing-te'", "child-bear.NEG-PL.GEN"),      # 1x Job 24:21 - "barren women"
+        
+        # Round 200: Job/Psalms/Numbers hapax vocabulary
+        'lopi': ('lo-pi', 'NEG-EMPH'),                                # 1x Gen 21:23 - "falsely" (not falsely)
+        'sucipsuk': ('su-cip-suk', 'push-tight-sink'),                # 1x Job 30:14 - "rolled upon me"
+        'heekcip': ('heek-cip', 'bind-tight'),                        # 1x Job 30:18 - "bindeth me about"
+        'sehkholhin': ('seh-khol-hin', 'appoint-house-ERG'),          # 1x Job 30:23 - "house appointed"
+        'sinkhamin': ('sin-kham-in', 'dark-mourn-ERG'),               # 1x Job 30:28 - "mourning"
+        'dulhkhia': ('dulh-khia', 'peel-out'),                        # 1x Job 30:30 - "skin peeling off"
+        'henkop': ('hen-kop', 'bind-together'),                       # 1x Job 38:31 - "bind influences"
+        'bawhsuk': ('bawh-suk', 'bow-sink'),                          # 1x Job 39:3 - "bow down to birth"
+        'phitsak': ('phit-sak', 'frighten-CAUS'),                     # 1x Job 39:20 - "make afraid"
+        'deek': ('deek', 'bargain'),                                  # 1x Job 41:6 - "make a banquet"
+        'phensak': ('phen-sak', 'open-CAUS'),                         # 1x Job 41:14 - "open doors"
+        'tuiso': ('tui-so', 'water-bubble'),                          # 1x Job 41:31 - "boil like pot"
+        'pheuphau': ('pheu-phau', 'foam-white'),                      # 1x Job 41:32 - "hoary/white"
+        'hehluat': ('heh-luat', 'anger-excessive'),                   # 1x Num 32:14 - "fierce anger"
+        'gawlgui': ('gawl-gui', 'throat-neck'),                       # 1x Psa 5:9 - "throat"
+        'thasaan': ('tha-saan', 'strength-lift'),                     # 1x Psa 7:6 - "lift up thyself"
+        'meiivom': ('meii-vom', 'cloud-dark'),                        # 1x Psa 18:9 - "darkness"
+        'kinawmsawmin': ('ki-nawm-sawm-in', 'REFL-fall-together-ERG'), # 1x Psa 20:8 - "brought down"
+        'guaksuak': ('guak-suak', 'fail-cause'),                      # 1x Job 31:16 - "cause to fail"
+        'sabawh': ('sa-bawh', 'roar-open'),                           # 1x Psa 22:13 - "ravening lion"
+        
+        # Round 200b: Psalms hapax vocabulary
+        'kihbawl': ('kih-bawl', 'REFL-hide'),                         # 1x Psa 22:24 - "hid his face"
+        'kigimtawm': ('ki-gim-tawm', 'REFL-afflict-again'),           # 1x Psa 35:13 - "humbled my soul"
+        'enkhong': ('en-khong', 'look-how.long'),                     # 1x Psa 35:17 - "how long wilt thou look on"
+        'lokung': ('lo-kung', 'field-herb'),                          # 1x Psa 37:2 - "green herb"
+        'suniam': ('su-niam', 'push-down'),                           # 1x Psa 37:14 - "cast down"
+        'kipden': ('kip-den', 'endure-forever'),                      # 1x Psa 37:18 - "for ever"
+        'kibokcipsak': ('ki-bok-cip-sak', 'REFL-bow-tight-CAUS'),     # 1x Psa 38:6 - "bowed down greatly"
+        'ngiungeu': ('ngiu-ngeu', 'wait-IDEO'),                       # 1x Psa 40:1 - "waited patiently"
+        'kihuauhuau': ('ki-huau-huau', 'REFL-whisper-REDUP'),         # 1x Psa 41:7 - "whisper together"
+        'sawnpai': ('sawn-pai', 'push-go'),                           # 1x Psa 44:5 - "push down"
     }
 
 
