@@ -8372,7 +8372,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vanging': ('vang-ing', 'strength-?'),              # 17x - compound
         'phawkna': ('phawk-na', 'remember-NMLZ'),           # 17x - "remembrance"
         'tuamcip': ('tuam-cip', 'promise-cover'),           # 17x - "covered over"
-        'lamna': ('lam-na', 'dance-NMLZ'),                    # 17x - "dancing"
+        'lamna': ('lam-na', 'build/dance-NMLZ'),            # 17x - ambiguous: "building" (10x) or "dancing" (3x)
         'bukkongah': ('buk-kong-ah', 'ambush-place-LOC'),   # 17x - "at ambush"
         'khenthei': ('khen-thei', 'divide-able'),           # 17x - "able to divide"
         'nuamsa-in': ('nuam-sa-in', 'want-early-ERG'),      # 17x - "willingly"
@@ -13467,7 +13467,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         '-': ('-', 'PUNCT'),                                        # 110x - em dash punctuation
         'mangpa': ('mang-pa', 'chief-father'),                      # 7x - chief captain
         "mangpa'": ("mang-pa'", 'chief-father.POSS'),               # 7x - chief's
-        'lamna-a': ('lam-na-a', 'way-NMLZ-LOC'),                    # 6x - in the way/direction
+        'lamna-a': ('lam-na-a', 'build/dance-NMLZ-LOC'),         # 6x - "in the building/dancing"
         'kiimnai-a': ('ki-im-nai-a', 'REFL-stay-near-LOC'),         # 6x - at neighboring place
         'hehsa-in': ('heh-sa-in', 'angry-NMLZ-ERG'),                # 6x - with anger
         'gan-an': ('gan-an', 'possess-?'),                          # 5x - possessions? (context: substance)
@@ -14700,7 +14700,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gualzote': ('gual-zo-te', 'win-COMPL-PL'),                  # overcomers (Revelation 3:12)
         'kalkakin': ('kal-kak-in', 'step-stand-ERG'),                # standing.on (Revelation 10:5)
         'kanggawp': ('kang-gawp', 'burn-together'),                  # scorched (Revelation 16:8)
-        'suangtawphahte': ('suang-taw-phah-te', 'stone-floor-rock-PL'), # foundations (Revelation 21:14)
+        'suangtawphahte': ('suang-taw-phah-te', 'stone-floor-spread-PL'), # foundations (Revelation 21:14)
         'kizopna': ('ki-zop-na', 'REFL-join-NMLZ'),                  # coupling (Exodus 28:27)
         'thukhenna': ('thu-khen-na', 'word-judge-NMLZ'),             # judgment (Genesis 15:14)
         'kicinsakna': ('ki-cin-sak-na', 'REFL-complete-CAUS-NMLZ'),  # perfected (James 2:22)
@@ -15347,7 +15347,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mawlna': ('mawl-na', 'mad-NMLZ'),                           # 1x Eccl 1:17 - "madness"
         'meidawina': ('meidawi-na', 'sober.mind-NMLZ'),              # 1x 2Tim 1:7 - "sound mind"
         # suanghawmte now handled by hierarchical via BINARY_COMPOUNDS
-        'suangpite': ('suangpi-te', 'rock.big-PL'),                  # 1x Psa 78:15 - "great rocks"
+        'suangpite': ('suangpi-te', 'stone.big-PL'),                 # 1x Psa 78:15 - "great rocks"
         'valte': ('val-te', 'young.man-PL'),                         # 1x 1Cor 15:6 - "brethren"
         'vukte': ('vuk-te', 'ice-PL'),                               # 1x Job 38:29 - "ice"
         'piksante': ('piksan-te', 'stubborn-PL'),                    # 1x Prov 16:30 - "froward"
@@ -15571,7 +15571,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tuipeek': ('tui-peek', 'water-swim'),                        # 2x Acts 27:43 - "swim"
         'tankhiapa': ('tan-khia-pa', 'redeem-out-M'),                 # 2x Isa 49:26, 60:16 - "Redeemer"
         'citciat': ('cit~ciat', 'go~RED'),                            # 2x John 5:9 - exactness marker
-        'suangkeen': ('suang-keen', 'rock-move'),                     # 2x Job 14:18 - "rock removed"
+        'suangkeen': ('suang-keen', 'stone-move'),                    # 2x Job 14:18 - "rock removed"
         'thuklua': ('thuk-lua', 'deep-too'),                          # 2x Ezek 47:5 - "too deep"
         'lingvom': ('ling-vom', 'thorn-bush'),                        # 2x Luke 6:44 - "bramble bush"
         
@@ -15879,8 +15879,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suangseeksate': ('suang-seek-sa-te', 'stone-hew-PRF-PL'),  # 1x - masons/stonecutters
         'suangseeksa': ('suang-seeksa', 'stone-carve.PRF'),  # base - mason
         'khialhkhaknate': ('khialh-khak-na-te', 'err-shut-NMLZ-PL'),  # 1x - iniquities
-        'suangkeente': ('suang-keen-te', 'stone-hard-PL'),  # 1x - rocks
-        'suangkeen': ('suang-keen', 'stone-hard'),        # base - rock
+        'suangkeente': ('suang-keen-te', 'stone-move-PL'),   # 1x - rocks (moved)
+        # suangkeen: see line ~15574 (duplicate removed)
         'teharsha': ('Teharsha', 'Tel-Harsha'),           # 1x - place name
         'tiz': ('tiz', 'scatter'),                        # 1x - scatter
         'ami': ('ami', 'who'),                            # 1x - interrogative
@@ -15934,7 +15934,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'singsengte': ('sing-seng-te', 'tree-shear-PL'),  # 1x - shorn (teeth)
         'duang': ('duang', 'love'),                       # 1x - base for duangvul
         'daingo': ('daingo', 'dew'),                      # 1x Song 5:2 - dew
-        'suanghawmpite': ('suang-hawm-pi-te', 'rock-hollow-big-PL'),  # 1x Isa 2:19 - caves
+        'suanghawmpite': ('suang-hawm-pi-te', 'stone-hollow-big-PL'), # 1x Isa 2:19 - caves
         'puktheihna': ('puk-theih-na', 'fall-able-NMLZ'), # 1x - ability to fall
         'ciakciak': ('ciak-ciak', 'chirp-REDUP'),         # 1x - chirping
         'tungdap': ('tung-dap', 'upon-close'),            # 1x - close upon
