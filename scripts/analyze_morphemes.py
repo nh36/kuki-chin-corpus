@@ -15276,6 +15276,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tuhun': ('tu-hun', 'now-time'),                             # 56x - "at this time/season"
         'sinsona': ('sinsona', 'wrath'),                             # 19x - fierce anger/wrath
         'sinsonain': ('sinsona-in', 'wrath-ERG'),
+        "sinsona'": ("sinsona'", 'wrath.POSS'),                      # 1x - possessive form
         'bible': ('bible', 'FGN'),                                   # 4x - foreign word
         'tedim': ('tedim', 'Tedim'),                                 # 2x - language/place name
         'kristal': ('kristal', 'FGN'),                               # 2x - crystal (foreign)
@@ -15578,7 +15579,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tuipeek': ('tui-peek', 'water-swim'),                        # 2x Acts 27:43 - "swim"
         'tankhiapa': ('tan-khia-pa', 'redeem-out-M'),                 # 2x Isa 49:26, 60:16 - "Redeemer"
         'citciat': ('cit~ciat', 'go~RED'),                            # 2x John 5:9 - exactness marker
-        'suangkeen': ('suang-keen', 'stone-move'),                    # 2x Job 14:18 - "rock removed"
+        # suangkeen: Job 14:18 "rock is removed", Amos 6:12 "upon the rock"
+        # keen appears to mean 'crag/cliff' (cf. keenhawm=cave, keen sang=rock top)
+        'suangkeen': ('suang-keen', 'stone-crag'),                    # 2x - rocky crag/cliff
         'thuklua': ('thuk-lua', 'deep-too'),                          # 2x Ezek 47:5 - "too deep"
         'lingvom': ('ling-vom', 'thorn-bush'),                        # 2x Luke 6:44 - "bramble bush"
         
@@ -15886,8 +15889,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'suangseeksate': ('suang-seek-sa-te', 'stone-hew-PRF-PL'),  # 1x - masons/stonecutters
         'suangseeksa': ('suang-seeksa', 'stone-carve.PRF'),  # base - mason
         'khialhkhaknate': ('khialh-khak-na-te', 'err-shut-NMLZ-PL'),  # 1x - iniquities
-        'suangkeente': ('suang-keen-te', 'stone-move-PL'),   # 1x - rocks (moved)
-        # suangkeen: see line ~15574 (duplicate removed)
+        'suangkeente': ('suang-keen-te', 'stone-crag-PL'),   # 1x Job 14:18 - rocks/crags
+        # suangkeen: see line ~15584 (consolidated)
         'teharsha': ('Teharsha', 'Tel-Harsha'),           # 1x - place name
         'tiz': ('tiz', 'scatter'),                        # 1x - scatter
         'ami': ('ami', 'who'),                            # 1x - interrogative
