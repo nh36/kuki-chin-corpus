@@ -16406,6 +16406,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thuciamsate': ('thu-ciam-sa-te', 'word-promise-already-PL'),  # 1x - promised ones
         'leivumte': ('lei-vum-te', 'earth-heap-PL'),            # 1x - earth heaps
         'nunungin': ('nu-nung-in', 'mother-back-ERG'),          # 1x - after mother
+        
+        # Round 220: Isaiah hapax vocabulary
+        'kitawhzauna': ('ki-tawh-zau-na', 'REFL-with-perplexity-NMLZ'),  # 1x Isa 22:5 - perplexity
+        'kitamvuisak': ('ki-tam-vui-sak', 'REFL-many-dust-CAUS'),  # 1x Isa 28:28 - bruise
+        'kisialhnate': ('ki-sialh-na-te', 'REFL-boast-NMLZ-PL'),  # 1x Isa 16:6 - lies/boasts
+        'puansungsilhte': ('puan-sung-silh-te', 'cloth-inside-clothe-PL'),  # 1x Isa 3:23 - vails
+        'kipahtawite': ('ki-pah-tawi-te', 'REFL-good-take-PL'),  # 1x Isa 23:8 - honourable ones
+        'thakhauhsakin': ('tha-khauh-sak-in', 'strength-strong-CAUS-ERG'),  # 2x Isa - strengthening
+        'kamkeite': ('kam-kei-te', 'word-1SG-PL'),               # 1x - my words
+        'bangzahtakin': ('bang-zah-tak-in', 'what-much-true-ERG'),  # 1x - how much truly
+        'etlawmin': ('et-lawm-in', 'look-together-ERG'),         # 1x - looking together
+        'pattahsa': ('pat-tah-sa', 'attach-exact-already'),      # 1x - exactly attached
+        'sialomtangte': ('sia-lom-tang-te', 'evil-friend-rise-PL'),  # 1x - evil friends rising
+        'khebuh': ('khe-buh', 'foot-rice'),                      # 1x - foot of rice
+        'kawngtente': ('kawng-ten-te', 'gate-above-PL'),         # 1x - above gates
+        'siseihte': ('si-seih-te', 'die-lean-PL'),               # 1x - dying lean ones
+        'naisakin': ('nai-sak-in', 'near-CAUS-ERG'),             # 1x - making near
+        'nawtsuk': ('nawt-suk', 'drive-push'),                   # 1x - drive push
+        'tonbucipin': ('ton-bu-cip-in', 'meet-group-deep-ERG'),  # 1x - meeting deeply
+        'ciangkhutin': ('ciang-khut-in', 'become-hand-ERG'),     # 1x - becoming hand
+        'munphiah': ('mun-phiah', 'place-flat'),                 # 1x - flat place
+        'kaiton': ('kai-ton', 'lead-meet'),                      # 1x - lead meet
+        'kimetmai': ('ki-met-mai', 'REFL-squeeze-face'),         # 1x - squeeze face
+        'ngahmunah': ('ngah-mun-ah', 'receive-place-LOC'),       # 1x - at receiving place
+        'phawkkhak': ('phawk-khak', 'remember-firm'),            # 1x - remember firmly
+        'lolaite': ('lo-lai-te', 'field-time-PL'),               # 1x - field times
+        'pehin': ('peh-in', 'give-ERG'),                         # 1x - giving
+        'kimut': ('ki-mut', 'REFL-suck'),                        # 1x - suck self
+        'kangcipin': ('kang-cip-in', 'burn-deep-ERG'),           # 1x - burning deep
+        'gante': ('gan-te', 'carry-PL'),                         # 1x - carriers
+        'tawbo': ('taw-bo', 'with-?'),                           # 1x - with...
+        'sidaangsak': ('si-daang-sak', 'die-tall-CAUS'),         # 1x - cause tall die
+        'sualpuante': ('sual-puan-te', 'sin-cloth-PL'),          # 1x - sin cloths
+        'kiseepsa': ('ki-seep-sa', 'REFL-burn-already'),         # 1x - already burned
+        'tuibempi': ('tui-bem-pi', 'water-edge-great'),          # 1x - great water edge
+        'mettolna': ('met-tol-na', 'squeeze-hit-NMLZ'),          # 1x - squeezing
+        'huiheek': ('hui-heek', 'wind-blow'),                    # 1x - wind blow
+        'thangzakte': ('thang-zak-te', 'news-hear-PL'),          # 1x - news hearers
+        'bengtumsuk': ('beng-tum-suk', 'side-stumble-push'),     # 1x - push stumble side
+        'kiheekheek': ('ki-heek-heek', 'REFL-blow-REDUP'),       # 1x - blowing repeatedly
+        'kikualvial': ('ki-kual-vial', 'REFL-hold-round'),       # 1x - holding round
+        'kithukkim': ('ki-thuk-kim', 'REFL-word-complete'),      # 1x - complete word
+        'dengawpna': ('den-gawp-na', 'strike-cover-NMLZ'),       # 1x - striking
+        'kalkhamin': ('kal-kham-in', 'walk-prevent-ERG'),        # 1x - preventing walk
+        'cilvui': ('cil-vui', 'chaff-dust'),                     # 1x Isa 28:28 - chaff
+        'leithuk': ('lei-thuk', 'earth-deep'),                   # 1x - deep earth
+        'leivuineel': ('lei-vui-neel', 'earth-dust-smooth'),     # 1x - smooth dust earth
+        'tumdang': ('tum-dang', 'stumble-different'),            # 1x - different stumble
+        'nopnehte': ('nop-neh-te', 'want-weak-PL'),              # 1x - weak wanters
+        'kuankhiate': ('kuan-khia-te', 'authority-out-PL'),      # 1x - authorities out
+        'tangguakun': ('tang-guak-un', 'rise-?-IMP'),            # 1x - rise up!
+        'minun': ('min-un', 'name-IMP'),                         # 1x - name it!
     }
 
 
