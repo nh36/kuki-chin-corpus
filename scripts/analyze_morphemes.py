@@ -1861,7 +1861,7 @@ NOUN_STEMS = {
     'galhiam': 'adversary',  # 50x - man of war / opponent
     'galhang': 'warrior',    # 39x - man of war
     'galkhat': 'battle',     # 36x - war-strike (battle)
-    'galkah': 'warfare',     # 33x - go to battle
+    # galkah moved to BINARY_COMPOUNDS as gal-kah (war-fight = warfare)
     'galdo': 'campaign',     # 32x - go forth to war
     'galvil': 'war.camp',    # 16x - military camp
     'galvan': 'armour',      # 9x - war equipment
@@ -2169,7 +2169,7 @@ NOUN_STEMS = {
     'ausan': 'scarlet',      # 39x - "scarlet (color)" (a ausan puante = scarlet cloths)
     'luanghawm': 'carcass',  # 39x - "carcass, corpse" (humpinelkai luanghawm = lion carcass)
     'gamkhing': 'desolate',  # 38x - "desolate, empty land"
-    'bawngno': 'calf',       # 36x - "calf" (bawng = cow + no = child/young)
+    # bawngno moved to BINARY_COMPOUNDS as bawng-no (cattle-young = calf)
     'thumvei': 'three.times', # 36x - "three times" (thum + vei)
     'vakhu': 'dove',         # 35x - "dove"
     'khualzin': 'journey',   # 35x - "journey, travel" (khua + zin)
@@ -2729,7 +2729,7 @@ NOUN_STEMS = {
     'tawnpuk': 'cave',       # 1x 1Sam 28:20 - "cave"
     'dawtlet': 'secretly',   # 1x 1Sam 31:4 - "secretly"
     'khuakulhah': 'stronghold', # 1x 1Sam 31:10 - "fortress"
-    'banbulh': 'bracelet',   # 1x 2Sam 1:10 - "bracelet"
+    # banbulh moved to BINARY_COMPOUNDS as ban-bulh (arm-bind = bracelet)
     'lengsuak': 'prince',    # 1x 2Sam 2:23 - "nobleman"
     'bangtan': 'shield',     # 1x 2Sam 2:26 - "shield"
     'sawtlai': 'long.time',  # 1x 2Sam 2:26 - "long while"
@@ -2812,7 +2812,7 @@ NOUN_STEMS = {
     'del': 'tremble',        # 1x James 2:19 - "devils tremble"
     'dimsak': 'fill',        # 1x Zeph 1:9 - "fill masters' houses"
     'gaisak': 'birth',       # 1x Matt 1:18 - "birth of Jesus Christ"
-    'galpan': 'fortress',    # 1x Psa 89:40 - "strong holds"
+    # galpan moved to BINARY_COMPOUNDS as gal-pan (war-side = fortress)
     'eh': 'cleave',          # 1x Eccl 10:9 - "cleaveth wood" (not interjection here)
     'makaih': 'leader',      # 1x Isa 9:16 - "leaders"
     'mangzo': 'profit',      # 1x Heb 12:11 - "yieldeth/profitable"
@@ -4874,6 +4874,12 @@ BINARY_COMPOUNDS = {
     'taanggam': ('taang', 'gam', 'suburb'),       # beautiful-land → suburb
     'sanggam': ('sang', 'gam', 'brother'),        # high-land → brother (figurative?)
     'innkhuam': ('inn', 'khuam', 'pillar'),       # house-pillar → pillar (1Ki 10:12, Prov 9:1)
+    
+    # Round 193m continued: More long stems as binary compounds
+    'banbulh': ('ban', 'bulh', 'bracelet'),       # arm-bind → bracelet
+    'galkah': ('gal', 'kah', 'warfare'),          # war-fight → warfare
+    'galpan': ('gal', 'pan', 'fortress'),         # war-side → fortress
+    'bawngno': ('bawng', 'no', 'calf'),           # cattle-young → calf
 }
 
 
@@ -12409,7 +12415,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sumtui': ('sum-tui', 'gold-molten'),                      # molten gold
         'bawlkha': ('bawl-kha', 'make-already'),                   # already made
         'zungbuhte': ('zung-buh-te', 'bracelet-ring-PL'),          # bracelets
-        'banbulhte': ('ban-bulh-te', 'tablet-PL'),                 # tablets
+        # banbulhte now handled by BINARY_COMPOUNDS as ban-bulh (arm-bind = bracelet)
         'geelsiam': ('geel-siam', 'devise-make'),                  # devise cunning
         'siamgat': ('siam-gat', 'make-engrave'),                   # engraver
         'singpekte': ('sing-pek-te', 'wood-board-PL'),             # boards
