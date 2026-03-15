@@ -15783,6 +15783,80 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'aloes': ('aloes', 'aloes'),                      # 5x - fragrant wood/resin
         'beryl': ('beryl', 'beryl'),                      # 4x - precious stone
         'agate': ('agate', 'agate'),                      # 3x - precious stone
+        'amethyst': ('amethyst', 'amethyst'),             # 3x - precious stone
+        
+        # Round 205: Partial gloss fixes
+        'tawmkhat': ('tawm-khat', 'few-one'),             # 55x - "a little"
+        'gaias': ('Gaias', 'Gaius'),                      # 8x - personal name
+        'maangin': ('maang-in', 'dim-ERG'),               # 6x - "eyes dim"
+        'maang': ('maang', 'dim'),                        # base form
+        'tahumte': ('tahum-te', 'tares-PL'),              # 4x - "tares"
+        'tahum': ('tahum', 'tares'),                      # base form
+        "puansawppa'": ("puan-sawppa'", "cloth-fuller.POSS"),  # 3x - "fuller's" (cloth washer)
+        'sawppa': ('sawppa', 'fuller'),                   # base form
+        'karnelian': ('karnelian', 'carnelian'),          # 3x - precious stone
+        'carnelian': ('carnelian', 'carnelian'),          # alternate spelling
+        'poplar': ('poplar', 'poplar'),                   # 2x - tree type
+        "hebru-te'": ("Hebru-te'", "Hebrew-PL.POSS"),     # 2x - "Hebrews'"
+        'hebru': ('Hebru', 'Hebrew'),                     # base form
+        'leenggahsukna': ('leenggah-suk-na', 'grape-press-NMLZ'),  # 2x - winepress
+        'miksite': ('miksi-te', 'ant-PL'),                # 2x - ants
+        'miksi': ('miksi', 'ant'),                        # base form
+        'diktanna': ('dik-tan-na', 'right-stand-NMLZ'),   # 2x - righteousness
+        'thuciamtehna': ('thu-ciam-teh-na', 'word-promise-establish-NMLZ'),  # 2x - covenant record
+        'thakhauhin': ('tha-khauh-in', 'strength-strong-ERG'),  # 2x - strengthened
+        'thakhauh': ('tha-khauh', 'strength-strong'),     # base form - be strong
+        'thakhauhsak': ('tha-khauh-sak', 'strength-strong-CAUS'),  # strengthen
+        'galbanum': ('galbanum', 'galbanum'),             # 1x - aromatic resin
+        
+        # Round 206: More partial fixes
+        'nahthel': ('nahthel', 'leaf'),                   # 2x - leaf (Lev 26:36)
+        'masalate': ('masala-te', 'fitches-PL'),          # 2x - fitches (grain)
+        'masala': ('masala', 'fitches'),                  # base form
+        'tuateng': ('tua-teng', 'that-only'),             # 2x - "not only that"
+        'thopi': ('thopi', 'bird'),                       # 2x - bird (Eccl 10:20)
+        'limlangah': ('limlang-ah', 'mirror-LOC'),        # 2x - in a glass/mirror
+        'limlang': ('limlang', 'mirror'),                 # base form
+        'kipangsak': ('ki-pang-sak', 'REFL-side-CAUS'),   # 1x - set in array
+        'o': ('o', 'INTERJ'),                             # 2x - interjection "O"
+        'merodak-baladan': ('Merodak-Baladan', 'Merodach-Baladan'),  # 2x - Babylonian king
+        'anaiah': ('Anaiah', 'Anaiah'),                   # 2x - personal name
+        'khawlei-uikai': ('khawlei-uikai', 'world-guide'),  # 2x - world guides
+        "'zuhai": ('zuhai', 'INTERJ'),                    # 2x - exclamation
+        'rehoboth-ir': ('Rehoboth-Ir', 'Rehoboth-Ir'),    # 1x - city name
+        'el-elohe-israel': ('El-Elohe-Israel', 'El-Elohe-Israel'),  # 1x - altar name
+        'zafenath-paneah': ('Zaphenath-Paneah', 'Zaphenath-Paneah'),  # 1x - Joseph's Egyptian name
+        'gibeath-haaraloth': ('Gibeath-Haaraloth', 'Gibeath-Haaraloth'),  # 1x - place name
+        'gibeath-elohim': ('Gibeath-Elohim', 'Gibeath-Elohim'),  # 1x - place name
+        
+        # Round 207: ki- nominalizations and hapax fixes
+        'kizawhna': ('ki-zawh-na', 'REFL-cross-NMLZ'),    # 1x - crossing (Ezra 4:10)
+        'kikholhna': ('ki-kholh-na', 'REFL-accompany-NMLZ'),  # 1x - sending portions (Esth 9:19)
+        'kipuahna': ('ki-puah-na', 'REFL-purify-NMLZ'),   # 1x - purifying (Esth 2:12)
+        'kisenna': ('ki-sen-na', 'REFL-red-NMLZ'),        # 1x - reddening
+        'kisuhna': ('ki-suh-na', 'REFL-push-NMLZ'),       # 1x - pushing
+        'kimematna': ('ki-memat-na', 'REFL-grip-NMLZ'),   # 1x - gripping
+        'kikhakna': ('ki-khak-na', 'REFL-shut-NMLZ'),     # 1x - shutting
+        'kinaina': ('ki-nai-na', 'REFL-near-NMLZ'),       # 1x - drawing near
+        'kipelhsakna': ('ki-pelh-sak-na', 'REFL-cross-CAUS-NMLZ'),  # 1x - causing to cross
+        'kipaiina': ('ki-paii-na', 'REFL-sorrow-NMLZ'),   # 1x - sorrowing
+        'kiginkholhna': ('ki-gin-kholh-na', 'REFL-fear-INTENS-NMLZ'),  # 1x - fearfully made
+        'niangnuangte': ('niangnuang-te', 'feeble-PL'),   # 1x - feeble ones
+        'niangnuang': ('niangnuang', 'feeble'),           # base form
+        'phazahte': ('phazah-te', 'number-PL'),           # 1x - numbers/census
+        'phazah': ('phazah', 'number'),                   # base form
+        'makte': ('mak-te', 'strange-PL'),                # 1x - strangers
+        'lehtukna': ('leh-tuk-na', 'return-meet-NMLZ'),   # 1x - returning
+        'phuisamna': ('phui-sam-na', 'shave-hair-NMLZ'),  # 1x - shaving
+        'minphatnate': ('min-phat-na-te', 'name-praise-NMLZ-PL'),  # 1x - praises
+        'vuahep': ('vu-ahep', 'bee-swarm'),               # 1x - bee swarm
+        'sialun': ('sial-un', 'mithun-3PL'),              # 1x - their mithuns
+        'deihdeihin': ('deih-deih-in', 'want-REDUP-ERG'), # 1x - desiring greatly
+        'tungtangin': ('tung-tang-in', 'above-long-ERG'), # 1x - from above
+        'phuhsak': ('phuh-sak', 'plant-CAUS'),            # 1x - cause to plant
+        'phatuamsak': ('phat-tuam-sak', 'praise-all-CAUS'),  # 1x - cause all praise
+        'ciangtang': ('ciang-tang', 'clear-long'),        # 1x - clearly long
+        'laiphai': ('lai-phai', 'book-flat'),             # 1x - flat book/tablet
     }
 
 
