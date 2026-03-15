@@ -8372,7 +8372,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vanging': ('vang-ing', 'strength-?'),              # 17x - compound
         'phawkna': ('phawk-na', 'remember-NMLZ'),           # 17x - "remembrance"
         'tuamcip': ('tuam-cip', 'promise-cover'),           # 17x - "covered over"
-        'lamna': ('lam-na', 'build/dance-NMLZ'),            # 17x - ambiguous: "building" (10x) or "dancing" (3x)
+        # lamna: default to build-NMLZ (more common); dance contexts handled via compounds below
+        'lamna': ('lam-na', 'build-NMLZ'),                  # 17x - "building" (default; dance: see explicit entries)
+        # Explicit lamna disambiguation entries:
+        # Dance contexts (Ex 32:19, Ps 30:11, Ps 150:4, Lk 15:25):
+        'le lamna': ('le lam-na', 'and dance-NMLZ'),        # "and the dancing" (Ex 32:19, Ps 150:4)
+        'taunate lamna': ('tauna-te lam-na', 'mourn-PL dance-NMLZ'),  # mourning → dancing (Ps 30:11)
+        'lamna le lasakna': ('lam-na le lasak-na', 'dance-NMLZ and sing-NMLZ'),  # dancing and music (Lk 15:25)
+        # Build contexts are the default - no need for explicit entries
         'bukkongah': ('buk-kong-ah', 'ambush-place-LOC'),   # 17x - "at ambush"
         'khenthei': ('khen-thei', 'divide-able'),           # 17x - "able to divide"
         'nuamsa-in': ('nuam-sa-in', 'want-early-ERG'),      # 17x - "willingly"
@@ -13467,7 +13474,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         '-': ('-', 'PUNCT'),                                        # 110x - em dash punctuation
         'mangpa': ('mang-pa', 'chief-father'),                      # 7x - chief captain
         "mangpa'": ("mang-pa'", 'chief-father.POSS'),               # 7x - chief's
-        'lamna-a': ('lam-na-a', 'build/dance-NMLZ-LOC'),         # 6x - "in the building/dancing"
+        'lamna-a': ('lam-na-a', 'build-NMLZ-LOC'),               # 6x - "in the building" (all contexts are building)
         'kiimnai-a': ('ki-im-nai-a', 'REFL-stay-near-LOC'),         # 6x - at neighboring place
         'hehsa-in': ('heh-sa-in', 'angry-NMLZ-ERG'),                # 6x - with anger
         'gan-an': ('gan-an', 'possess-?'),                          # 5x - possessions? (context: substance)
