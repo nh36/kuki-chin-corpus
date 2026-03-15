@@ -70,6 +70,57 @@ related languages.
 
 This root has been added to the analyzer's atomic stems with appropriate documentation.
 
+### lo 'field' (distinct from lo 'NEG')
+There is a root `lo` meaning 'field' that is homophonous with `lo` 'NEG' (negative marker).
+
+**Compounds using lo 'field':**
+- **lopa** = lo (field) + pa (man) → "farmer" ✓
+- **lokhawh** = lo (field) + khawh (work) → "farming" ✓
+
+### hawm 'hollow/enclosure' (distinct from hawm 'counsel')
+There is a root `hawm` with a secondary meaning 'hollow/enclosed space' used in:
+- **suanghawm** = suang (stone) + hawm (hollow) → "cave" ✓
+
+## Truly Opaque Lexemes (Confirmed)
+
+These compounds have been verified via KJV cross-reference and the compositional
+meaning definitively does NOT relate to the actual meaning:
+
+### zungbuh 'ring' (finger ring)
+- **Apparent analysis:** zung (root) + buh (rice)
+- **Compositional meaning:** "root-rice" (?)
+- **Actual meaning:** finger ring
+- **Evidence:** Gen 41:42 "Pharaoh took off his ring"; Exod 35:22 "rings, earrings"
+- **Verdict:** Opaque. No semantic connection between root/rice and ring.
+
+### singnai 'onyx'
+- **Apparent analysis:** sing (tree) + nai (precious)
+- **Compositional meaning:** "tree-precious" or "precious tree"
+- **Actual meaning:** onyx (gemstone)
+- **Evidence:** Gen 2:12 "the gold of that land is good: there is bdellium and the onyx stone"
+- **Verdict:** Probably opaque. "Precious" fits, but "tree" doesn't relate to gemstones.
+
+### singluang 'beam'
+- **Apparent analysis:** sing (tree) + luang (flow/corpse)
+- **Compositional meaning:** "tree-flow" (?)
+- **Actual meaning:** beam (wooden structural element)
+- **Evidence:** 2 Kings 6:2,5 "take thence every man a beam"
+- **Verdict:** Partially transparent. sing=tree/wood makes sense; luang is unclear.
+
+### lingkung 'thorns'
+- **Apparent analysis:** ling (awake) + kung (trunk)
+- **Compositional meaning:** "awake-trunk" (?)
+- **Actual meaning:** thorns, briers
+- **Evidence:** Judg 8:7,16 "thorns of the wilderness"
+- **Verdict:** Opaque. No semantic connection visible.
+
+### keelmul 'goat's hair'
+- **Apparent analysis:** keel (foot/heel) + mul (tip)
+- **Compositional meaning:** "foot-tip" (?)
+- **Actual meaning:** goat's hair (textile material)
+- **Evidence:** Exod 25:4, 26:7 "goats' hair"
+- **Verdict:** Opaque. Foot/tip don't relate to goat hair.
+
 ## Probable Opaque Lexemes (Need Verification)
 
 ### aisan 'magician'

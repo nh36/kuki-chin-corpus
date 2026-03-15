@@ -4214,7 +4214,7 @@ ATOMIC_GLOSSES = {
     'tuam': 'various',   # tuamtuam = various-REDUP
     
     # Round 174: Additional atomic morphemes from full audit
-    'lo': 'NEG',         # lono = NEG-obey = disobey
+    'lo': 'NEG',         # lono = NEG-obey = disobey; ALSO lo 'field' (homophonous) in lopa, lokhawh
     'no': 'obey',        # lono = NEG-obey
     'tum': 'all',        # nitum = day-all = always
     'lang': 'side/clear',# langkhat = side-one
@@ -8810,7 +8810,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bilbahte': ('bil-bah-te', 'earring-PL'),            # 9x - "earrings" (NOT deaf!)
         'inncing': ('inn-cing', 'house-clean'),              # 9x - "clean house"
         'kimangngilh': ('ki-mang-ngilh', 'REFL-forget-?'),   # 9x - "forget self"
-        'zungbuh': ('zung-buh', 'root-rice'),                # 9x - compound
+        'zungbuh': ('zungbuh', 'ring'),                      # 9x - signet ring (opaque lexeme)
         'antang': ('an-tang', '3PL-force'),                  # 9x - "their force"
         'piazaw': ('pia-zaw', 'give-more'),                  # 9x - "give more"
         'milip': ('mi-lip', 'person-crowd'),                 # 9x - "multitude"
@@ -8826,7 +8826,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lohte': ('loh-te', 'field-PL'),                     # 9x - "fields"
         'gin\'': ('gin\'', 'gong.POSS'),                     # 9x - "gong's"
         'cinatna': ('ci-nat-na', 'say-sick-NMLZ'),           # 9x - compound
-        'keelmul': ('keel-mul', 'heel-tip'),                 # 9x - "heel tip"
+        'keelmul': ('keelmul', 'goathair'),                  # 9x - goat's hair (opaque lexeme)
         'taitehte': ('tai-teh-te', '?-measure-PL'),          # 9x - compound
         'nawlnung': ('nawl-nung', 'place-back'),             # 9x - "back place"
         'siampipuan\'': ('siampi-puan\'', 'priest-cloth.POSS'), # 9x - "priest's robe"
@@ -9240,7 +9240,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'paihkhiatsak': ('paih-khiat-sak', 'go-depart-APPL'),  # 9x - "take away"
         'mialsak': ('mial-sak', 'darkness-CAUS'),              # 9x - "darken, cover"
         'ento': ('en-to', 'look-toward'),                      # 9x - "look up at"
-        'lingkung': ('ling-kung', 'thorn-round'),              # 9x - "thorns, briers"
+        'lingkung': ('lingkung', 'thorns'),                    # 9x - thorns/briers (opaque lexeme)
         'sikkawi': ('sik-kawi', 'hook-fish'),                  # 9x - "fishhook"
         'piakkhong': ('piak-khong', 'give-NOM'),               # 9x - "gift"
         'ngahzawh': ('ngah-zawh', 'get-COMPL'),                # 9x - "obtain, get fully"
@@ -9417,7 +9417,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'buksim': ('buk-sim', 'ambush-?'),                     # 8x - "lie in wait"
         'dona': ('do-na', 'fight-NMLZ'),                       # 8x - "war, fighting"
         'damkikzo': ('dam-kik-zo', 'well-ITER-can'),           # 8x - "recover"
-        'singluang': ('sing-luang', 'tree-log'),               # 8x - "beam"
+        'singluang': ('singluang', 'beam'),                    # 8x - wooden beam (partial opacity)
         'kiciamtehna': ('ki-ciam-teh-na', 'REFL-oath-mark-NMLZ'), # 8x - "enrollment"
         'innluahza': ('inn-luah-za', 'house-?-?'),             # 8x - compound
         'milipun': ('mi-lipun', 'person-bundle'),              # 8x - "bundle"
@@ -12338,7 +12338,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Round 107: More vocabulary for 99% (count=2)
         'limlemel': ('lim-le-mel', 'form-NEG-void'),               # without form
         'golpite': ('gol-pi-te', 'whale-great-PL'),                # whales
-        'singnai': ('sing-nai', 'stone-precious'),                 # precious stone
+        'singnai': ('singnai', 'onyx'),                            # onyx stone (opaque lexeme)
         'nakguh': ('nak-guh', 'rib-take'),                         # took rib
         'kipiansakna': ('ki-pian-sak-na', 'REFL-create-CAUS-NMLZ'), # creation
         'minthangte': ('min-thang-te', 'name-famous-PL'),          # men of renown
