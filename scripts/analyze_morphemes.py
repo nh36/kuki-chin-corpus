@@ -16811,6 +16811,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kimudahin': ('ki-mu-dah-in', 'REFL-see-offend-ERG'),    # 1x Matt 24:10 - be offended
         'kimuhnop': ('ki-muh-nop', 'REFL-see-want'),             # 1x Rom 15:23 - desire to come
         'kinapna': ('ki-nap-na', 'REFL-kiss-NMLZ'),              # 1x 1Cor 16:20 - holy kiss
+        
+        # Round 228: Final hapax vocabulary push
+        'ipcipte': ('ip-cip-te', 'hide-squeeze-PL'),             # 1x 1Cor 14:25 - secrets made manifest
+        'kaikikpah': ('ka-i-kik-pah', '1SG-?-again-exactly'),    # 1x Mark 11:3 - send him hither
+        'kanghul': ('ka-nghul', '1SG-smell.of.fire'),            # 1x Dan 3:27 - smell of fire
+        'kangkha': ('ka-ngkha', '1SG-heat'),                     # 1x Rev 7:16 - nor any heat
+        'kawihei': ('ka-wih-ei', '1SG-difficult-EXCL'),          # 1x 2Pet 3:16 - hard to be understood
+        'kinotsuk': ('ki-not-suk', 'REFL-push-push'),            # 1x 1Cor 4:11 - buffeted
+        'kinotto': ('ki-not-to', 'REFL-push-also'),              # 1x 1Cor 4:11 - have no dwellingplace
+        'kipelhzaw': ('ki-pelh-zaw', 'REFL-spare-more'),         # 1x 1Cor 7:28 - I spare you
+        'kiphunsanna': ('ki-phun-san-na', 'REFL-kind-stand-NMLZ'),  # 1x Acts 6:1 - murmuring
+        'kipiakhiate': ('ki-piak-hia-te', 'REFL-give-all-PL'),   # 1x Ezek 44:29 - dedicated things
+        'kisehsate': ('ki-seh-sa-te', 'REFL-write-already-PL'),  # 1x Rev 13:8 - written in book
+        'kisiamaisate': ('ki-siam-aisa-te', 'REFL-repair-already-PL'),  # 1x Isa 61:4 - repair waste cities
+        'kitamnen': ('ki-tam-nen', 'REFL-many-become'),          # 1x Dan 2:35 - became great mountain
+        'kiteelte': ('ki-teel-te', 'REFL-choose-PL'),            # 1x Dan 1:6 - among these were
+        'kithahlupna': ('ki-thah-lup-na', 'REFL-tear-flow-NMLZ'),  # 1x Jer 9:1 - fountain of tears
+        'kithehzak': ('ki-theh-zak', 'REFL-throw-scatter'),      # 1x 1Cor 10:5 - overthrown
+        'kizapzap': ('ki-zap-zap', 'REFL-burn-REDUP'),           # 1x Jer 6:29 - bellows burned
+        'kobawlna': ('ko-bawl-na', '1PL.EXCL-make-NMLZ'),        # 1x Ezek 36:15 - cause to fall
+        'kongkaw': ('kong-kaw', '1SG→3-tear'),                   # 1x Mark 1:26 - torn him
+        'kongkawcip': ('kong-kaw-cip', '1SG→3-tear-squeeze'),    # 1x Mark 9:18 - teareth and foameth
+        'kongkawsak': ('kong-kaw-sak', '1SG→3-tear-CAUS'),       # 1x Mark 9:20 - spirit tare him
+        'kongkawtsak': ('kong-kaw-tsak', '1SG→3-tear-tight'),    # 1x Mark 9:26 - rent him sore
+        'kongkhuamte': ('kong-khuam-te', '1SG→3-corner-PL'),     # 1x Ezek 45:19 - corners of settle
+        'konglekong': ('kong-le-kong', '1SG→3-and-1SG→3'),       # 1x Ezek 40:27 - gate to gate
+        'kongvangneute': ('kong-vang-neu-te', '1SG→3-space-small-PL'),  # 1x Ezek 41:16 - narrow windows
+        'kuanlamin': ('kuan-lam-in', 'enter-way-ERG'),           # 1x Ezek 46:8 - go in by way
+        'kulzaw': ('kul-zaw', 'lack-more'),                      # 1x 1Cor 12:24 - part which lacked
+        'kumi': ('kumi', 'arise'),                               # 1x Mark 5:41 - Talitha cumi (Aramaic)
+        'laigelhnate': ('lai-gelh-na-te', 'writing-carve-NMLZ-PL'),  # 1x Rom 16:26 - scriptures
+        'laipek': ('lai-pek', 'writing-wash'),                   # 1x Mark 7:5 - unwashen hands
+        'lamval': ('lam-val', 'way-left.over'),                  # 1x Mark 12:44 - her want
+        'lawngte': ('lawng-te', 'look-PL'),                      # 1x Mark 5:32 - looked round
+        'lawnkhit': ('lawn-khit', 'look-recover'),               # 1x Mark 5:29 - healed of plague
+        'leenkawmin': ('leen-kawm-in', 'fly-middle-ERG'),        # 1x Rev 8:13 - flying through midst
+        'lehbawlnate': ('leh-bawl-na-te', 'again-make-NMLZ-PL'), # 1x Ezek 39:26 - trespasses
+        'lehheknate': ('leh-hek-na-te', 'again-accuse-NMLZ-PL'), # 1x Ezek 37:23 - transgressions
+        'lehpiak': ('leh-piak', 'again-give'),                   # 1x 1Cor 4:12 - being reviled we bless
+        'lehtatte': ('leh-tat-te', 'again-cut-PL'),              # 1x Rev 21:8 - liars
+        'leitawm': ('lei-tawm', 'buy-enough'),                   # 1x Matt 25:9 - enough for us
+        'leivuithem': ('lei-vui-them', 'buy-dust-dirt'),         # 1x 1Cor 4:13 - filth of world
+        'letmatthuhna': ('let-mat-thuh-na', 'turn-eye-point-NMLZ'),  # 1x Jer 22:24 - signet ring
+        'liahkhak': ('liah-khak', 'shadow-block'),               # 1x Acts 5:15 - shadow overshadow
+        'lialuanate': ('lia-lua-na-te', 'hope-too.much-NMLZ-PL'),  # 1x Jer 3:23 - vain salvation
+        'liamlawh': ('liam-lawh', 'burden-self'),                # 1x Zech 12:3 - burden themselves
+        'lohongte': ('lo-hong-te', 'field-keep-PL'),             # 1x Jer 4:17 - keepers of field
+        'luguh': ('lu-guh', 'head-crown'),                       # 1x Jer 2:16 - crown of head
+        'luisate': ('lui-sa-te', 'tear-already-PL'),             # 1x Rev 21:4 - wipe away tears
+        'lungduaizo': ('lung-duai-zo', 'heart-loathe-finish'),   # 1x Zech 11:8 - soul lothed
+        'lungso': ('lung-so', 'heart-hot'),                      # 1x Ps 6:1 - hot displeasure
+        'lungsosa': ('lung-so-sa', 'heart-hot-already'),         # 1x Ps 38:1 - hot displeasure
     }
 
 
