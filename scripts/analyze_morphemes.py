@@ -15578,6 +15578,17 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ngenthuah': ('ngen-thuah', 'request-extra'),                 # 1x Esth 2:15 - "required"
         'vingveng': ('ving~veng', 'hurry~RED'),                       # 1x Esth 6:12 - "hasted"
         'lelhtak': ('lelh-tak', 'fall-begin'),                        # 1x Esth 6:13 - "begun to fall"
+        
+        # Round 198c: Job/Revelation hapax
+        'ngeikei': ('ngei-kei', 'have-NEG'),                          # 1x Job 3:9 - "have none"
+        'zonzaw': ('zon-zaw', 'dig-more'),                            # 1x Job 3:21 - "dig for it more"
+        'khukzaw': ('khuk-zaw', 'knee-weak'),                         # 1x Job 4:4 - "feeble knees"
+        'ginghiau': ('ging-hiau', 'whisper-small'),                   # 1x Job 4:12 - "secretly/a little"
+        'liahtumsak': ('liah-tum-sak', 'take-all-CAUS'),              # 1x Job 5:5 - "taketh up"
+        'pokhiatawm': ('pok-khiat-awm', 'spring-out-PART'),           # 1x Job 5:6 - "spring out"
+        'khalhnelh': ('khalh-nelh', 'freeze-black'),                  # 1x Job 6:16 - "blackish by ice"
+        'suangtawphah': ('suang-tawphah', 'stone-foundation'),        # 3x Job 8:17, Rev 21 - "foundations"
+        'tuncipsak': ('tun-cip-sak', 'cover-tight-CAUS'),             # 1x Job 9:24 - "covereth"
     }
 
 
