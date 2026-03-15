@@ -4651,7 +4651,7 @@ BINARY_COMPOUNDS = {
     'paubaan': ('pau', 'baan', 'blasphemy'),    # speak-slander → blasphemy (32x)
     'paktat': ('pak', 'tat', 'declare'),        # proclaim-strike → declaration (31x)
     'salsuah': ('sal', 'suah', 'slavery'),      # servant-become → slavery (31x)
-    'galdo': ('gal', 'do', 'victory'),          # enemy-conquer → victory (31x)
+    'galdo': ('gal', 'do', 'campaign'),          # war-go → military campaign (59x)
     'milian': ('mi', 'lian', 'noble'),          # person-great → noble (31x)
     'kipat': ('ki', 'pat', 'beginning'),        # REFL-begin → beginning (30x)
     'muhdah': ('muh', 'dah', 'abomination'),    # smell-bad → abomination (29x)
@@ -4711,7 +4711,7 @@ BINARY_COMPOUNDS = {
     'hehnep': ('heh', 'nep', 'patience'),        # angry-soft → patience (9x)
     'kilat': ('ki', 'lat', 'strengthen'),        # REFL-strong → strengthen (9x)
     'kipsak': ('kip', 'sak', 'confirm'),         # firm-CAUS → confirm (9x)
-    'bilbah': ('bil', 'bah', 'deaf'),            # ear-blocked → deaf (9x)
+    'bilbah': ('bil', 'bah', 'earring'),         # ear-ring → earring (11x, NOT deaf!)
     'suanghawm': ('suang', 'hawm', 'cave'),       # rock-hollow → cave (12x)
     'phulak': ('phu', 'lak', 'burden'),          # carry-take → burden (9x)
     'langpan': ('lang', 'pan', 'advocate'),      # side-plead → advocate (9x)
@@ -4855,7 +4855,7 @@ BINARY_COMPOUNDS = {
     'sangpi': ('sang', 'pi', 'high.wall'),        # high-big → high wall (Deut 3:5) (4x)
     'sungnu': ('sung', 'nu', 'mother.in.law'),    # inside-woman → mother-in-law (Deut 27:23) (4x)
     'teekpa': ('teek', 'pa', 'father.in.law'),    # master-man → father-in-law (Gen 38:13) (4x)
-    'lungno': ('lung', 'no', 'worm'),             # heart-worm → worm/humble person (Job 25:6) (4x)
+    # lungno removed - opaque lexeme meaning 'worm' (5x), not lung+no compound
     'maisiat': ('mai', 'siat', 'oppose'),         # face-spoil → set face against (Lev 17:10) (4x)
     
     # Body part compounds (3x)
@@ -8803,7 +8803,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nauzaw': ('nau-zaw', 'child-more'),                 # 9x - "younger"
         'ngahsa': ('ngah-sa', 'get-early'),                  # 9x - "got before"
         'koihkhia': ('koih-khia', 'put-exit'),               # 9x - "put out"
-        'bilbahte': ('bil-bah-te', 'ear-deaf-PL'),           # 9x - "deaf ears"
+        'bilbahte': ('bil-bah-te', 'earring-PL'),            # 9x - "earrings" (NOT deaf!)
         'inncing': ('inn-cing', 'house-clean'),              # 9x - "clean house"
         'kimangngilh': ('ki-mang-ngilh', 'REFL-forget-?'),   # 9x - "forget self"
         'zungbuh': ('zung-buh', 'root-rice'),                # 9x - compound
@@ -12084,7 +12084,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kikoko': ('ki-ko-ko', 'REFL-cry-REDUP'),                  # cried out
         'khuailuzu': ('khuai-lu-zu', 'honey-head-sweet'),          # honeycomb
         'dingtang': ('ding-tang', 'stand-upright'),                # stand upright
-        'lungno': ('lung-no', 'heart-worm'),                       # worm
+        'lungno': ('lungno', 'worm'),                              # opaque lexeme, not lung+no
         'khasia': ('kha-sia', 'face-hide'),                        # hide face
         'khuisatna': ('khui-sat-na', 'sigh-NMLZ'),                 # sighing
         'tuithukpite': ('tui-thuk-pi-te', 'water-deep-great-PL'),  # deep waters
