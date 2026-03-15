@@ -16614,6 +16614,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khauhpah': ('khauh-pah', 'strong-strike'),              # 1x - strike strong
         'diangkawmin': ('diang-kawm-in', 'throne-around-ERG'),   # 1x - around throne
         'manzaw': ('man-zaw', 'price-more'),                     # 1x - more price
+        
+        # Round 224: Epistles hapax vocabulary
+        'kigensiatnate': ('ki-gen-siat-na-te', 'REFL-say-evil-NMLZ-PL'),  # 1x 1Pet 2:1 - evil speakings
+        'kitotlawhna': ('ki-tot-lawh-na', 'REFL-contend-earn-NMLZ'),  # 1x Titus 3:9 - strivings
+        'kiselnate': ('ki-sel-na-te', 'REFL-dispute-NMLZ-PL'),  # 1x 2Tim 2:16 - babblings
+        'deihluatnate': ('deih-luat-na-te', 'want-exceed-NMLZ-PL'),  # 1x 2Pet 1:4 - lusts
+        'kinialnate': ('ki-nial-na-te', 'REFL-argue-NMLZ-PL'),  # 1x 2Tim 2:23 - questions
+        'lahkholhna': ('lah-kholh-na', 'represent-INTENS-NMLZ'),  # 1x Heb 10:1 - shadow
+        'thangsakte': ('thang-sak-te', 'news-CAUS-PL'),          # 1x - news makers
+        'tapkual': ('tap-kual', 'weep-embrace'),                 # 1x - weep embrace
+        'hangsankhak': ('hang-san-khak', 'CAUS-separate-firm'),  # 1x - firmly separate
+        'khauhte': ('khauh-te', 'strong-PL'),                    # 1x - strong ones
+        'nakzat': ('nak-zat', 'heavy-use'),                      # 1x - use heavy
+        'tangzaizaw': ('tang-zai-zaw', 'rise-stand-more'),       # 1x - rise more
+        'lehngaihsut': ('leh-ngaih-sut', 'return-think-pull'),   # 1x - think return
+        'kitheite': ('ki-thei-te', 'REFL-know-PL'),              # 1x - known ones
+        'guptuam': ('gup-tuam', 'war-weapon'),                   # 1x - war weapon
+        'haunuam': ('hau-nuam', 'rich-pleasant'),                # 1x - pleasant rich
+        'puathamteng': ('pua-tham-teng', 'carry-new-all'),       # 1x - all new carry
+        'khiankhianin': ('khian-khian-in', 'grow-REDUP-ERG'),    # 1x - growing
+        'kilehbulh': ('ki-leh-bulh', 'REFL-return-begin'),       # 1x - begin return
+        'khuahek': ('khua-hek', 'cloud-blow'),                   # 1x - cloud blow
+        'kiphamawhte': ('ki-pha-mawh-te', 'REFL-good-sin-PL'),   # 1x - prideful ones
+        'kipumpiak': ('ki-pum-piak', 'REFL-body-give'),          # 1x - give body
+        'thangba': ('thang-ba', 'news-want'),                    # 1x - want news
+        'luisuak': ('lui-suak', 'river-become'),                 # 1x - become river
+        'kikhelkhel': ('ki-khel-khel', 'REFL-err-REDUP'),        # 1x - erring repeatedly
+        'khahsuahkhak': ('khah-suah-khak', 'carry-become-firm'),  # 1x - firmly carry
+        'khauhsakkhak': ('khauh-sak-khak', 'strong-CAUS-firm'),  # 1x - firmly strengthen
+        'thanop': ('tha-nop', 'strength-want'),                  # 1x - want strength
+        'lianzawte': ('lian-zaw-te', 'great-more-PL'),           # 1x - greater ones
+        'kideina': ('ki-dei-na', 'REFL-want-NMLZ'),              # 1x - self-desire
+        'khawmnate': ('khawm-na-te', 'join-NMLZ-PL'),            # 1x - joinings
+        'hehsakte': ('heh-sak-te', 'angry-CAUS-PL'),             # 1x - anger causers
+        'kimvel': ('kim-vel', 'complete-around'),                # 1x - around complete
+        'hucip': ('hu-cip', 'follow-deep'),                      # 1x - follow deep
+        'phing': ('phing', 'fart'),                              # 1x - fart/flatulence
+        'nuangnuang': ('nuang-nuang', 'soft-REDUP'),             # 1x - very soft
+        'luangluangin': ('luang-luang-in', 'flow-REDUP-ERG'),    # 1x - flowing
+        'thuakngap': ('thuak-ngap', 'suffer-endure'),            # 1x - endure suffering
+        'kithehna': ('ki-theh-na', 'REFL-place-NMLZ'),           # 1x - placing
+        'kidopzawh': ('ki-dop-zawh', 'REFL-attack-finish'),      # 1x - finish attack
+        'gukhal': ('guk-hal', 'bow-burn'),                       # 1x - burn bow
+        'theipum': ('thei-pum', 'fruit-body'),                   # 1x - fruit body
+        'dawivai': ('dawi-vai', 'medicine-chaff'),               # 1x - medicine chaff
+        'pumsung': ('pum-sung', 'body-inside'),                  # 1x - inside body
+        'muattumta': ('muat-tum-ta', 'rot-stumble-child'),       # 1x - rotten child
+        'kekseuna': ('kek-seu-na', 'reverse-search-NMLZ'),       # 1x - reverse search
+        'phitphet': ('phit-phet', 'split-REDUP'),                # 1x - splitting
+        'suakcilte': ('suak-cil-te', 'become-turn-PL'),          # 1x - becoming ones
+        'uangtatna': ('uang-tat-na', 'pour-each-NMLZ'),          # 1x - pouring each
+        'kosia': ('ko-sia', 'cry-evil'),                         # 1x - evil cry
     }
 
 
