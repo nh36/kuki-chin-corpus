@@ -3420,6 +3420,8 @@ PROPER_NOUNS = {
     'zoreah', 'zorite', 'zorobabel', 'zuar', 'zuf', 'zuph', 'zur', 'zuriel', 'zurishaddai', 'zuzim',
     # Round 188b: Additional proper nouns
     'athen', 'athens',  # Acts 17:15-21 - city of Athens
+    # Round 194: Place names from remaining unknowns
+    'harosheth', 'gibeath', 'temelah',  # Judges 4, Josh 5, Ezra 2
 }
 
 # =============================================================================
