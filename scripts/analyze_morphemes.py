@@ -16250,6 +16250,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'geinai': ('gei-nai', 'edge-near'),                     # 1x - near edge
         'tuntom': ('tun-tom', 'arrive-hurry'),                  # 1x - hurry arrive
         'ginalopa': ('gina-lo-pa', 'believe-NEG-NMLZ.M'),       # 1x - unbeliever
+        
+        # Round 217: Acts/Romans hapax vocabulary
+        'hinkiksakna': ('hin-kik-sak-na', 'live-ITER-CAUS-NMLZ'),  # 1x Acts 13:34 - raising up
+        'kituiphumna': ('ki-tui-phum-na', 'REFL-water-immerse-NMLZ'),  # 1x Acts 19:3 - baptism
+        'thawhsakkikna': ('thawh-sak-kik-na', 'arise-CAUS-ITER-NMLZ'),  # 1x Rom 1:4 - resurrection
+        'khihsakna': ('khih-sak-na', 'bind-CAUS-NMLZ'),          # 1x Acts 22:30 - bands
+        'khawlsakna': ('khawl-sak-na', 'rest-CAUS-NMLZ'),        # 1x Acts 27:29 - anchors
+        'mawhnopnate': ('mawh-nop-na-te', 'sin-want-NMLZ-PL'),   # 1x Rom 7:5 - motions of sins
+        'tamlai': ('tam-lai', 'many-time'),                     # 1x - many times
+        'kenkon': ('ken-kon', 'carry-move'),                    # 1x - carry move
+        'phialun': ('phia-lun', 'wander-?'),                    # 1x - wandering
+        'nawla': ('naw-la', 'drive-take'),                      # 1x - drive take
+        'honsaknate': ('hon-sak-na-te', 'open-CAUS-NMLZ-PL'),    # 1x - openings
+        'masakun': ('ma-sak-un', 'EMPH-CAUS-IMP'),               # 1x - make surely
+        'tunni': ('tun-ni', 'arrive-day'),                      # 1x - arrival day
+        'singkol': ('sing-kol', 'tree-roll'),                   # 1x - rolling tree
+        'piansakma': ('pian-sak-ma', 'birth-CAUS-EMPH'),         # 1x - truly begotten
+        'zatzia': ('zat-zia', 'use-manner'),                    # 1x - manner of use
+        'upzawh': ('up-zawh', 'believe-finish'),                # 1x - believe finish
+        'aitawi': ('ai-tawi', 'price-take'),                    # 1x - take price
+        'maimankhak': ('mai-man-khak', 'face-price-firm'),      # 1x - firm face price
+        'lapnuam': ('lap-nuam', 'lap-pleasant'),                # 1x - pleasant lap
+        'phawkkawmin': ('phawk-kawm-in', 'remember-around-ERG'),  # 1x - remembering
+        'tapkhap': ('tap-khap', 'weep-cry'),                    # 1x - weeping
+        'khihcipna': ('khih-cip-na', 'bind-deep-NMLZ'),          # 1x - deep binding
+        'gawlmek': ('gawl-mek', 'pond-mud'),                    # 1x - pond mud
+        'khensatin': ('khen-sat-in', 'separate-hard-ERG'),      # 1x - separating hard
+        'kitawngpah': ('ki-tawng-pah', 'REFL-word-strike'),     # 1x - dispute
+        'hupha': ('hu-pha', 'follow-good'),                     # 1x - follow good
+        'kikoh': ('ki-koh', 'REFL-call'),                       # 1x - be called
+        'hialbawl': ('hial-bawl', 'visit-make'),                # 1x - make visit
+        'ciangzum': ('ciang-zum', 'become-bow'),                # 1x - become bowing
+        'munsimtham': ('mun-sim-tham', 'place-think-new'),      # 1x - new thinking place
+        'leidawk': ('lei-dawk', 'earth-dig'),                   # 1x - dig earth
+        'cintenin': ('cin-ten-in', 'ripen-above-ERG'),          # 1x - ripening above
+        'khengkhin': ('kheng-khin', 'lean-finish'),             # 1x - finished leaning
+        'hailua': ('hai-lua', 'pluck-exceed'),                  # 1x - pluck much
+        'piakkhongin': ('piak-khong-in', 'give-hole-ERG'),      # 1x - giving hole
+        'ciinna': ('cii-na', 'sting-NMLZ'),                     # 1x - sting
+        'luiteng': ('lui-teng', 'river-all'),                   # 1x - all rivers
+        'maleep': ('ma-leep', 'EMPH-quick'),                    # 1x - very quick
+        'lungduaitakin': ('lung-duai-tak-in', 'heart-soft-true-ERG'),  # 1x - truly soft heart
+        'hitalehang': ('hi-ta-leh-ang', 'this-child-and-FUT'),  # 1x - this child then
+        'huhnuam': ('huh-nuam', 'blow-pleasant'),               # 1x - pleasant blowing
+        'theihma': ('theih-ma', 'know-before'),                 # 1x - foreknow
+        'zatnop': ('zat-nop', 'use-want'),                      # 1x - want to use
+        'paupeensak': ('pau-peen-sak', 'word-open-CAUS'),       # 1x - cause open word
+        'muktuk': ('muk-tuk', 'suck-suck'),                     # 1x - sucking
+        'lasuk': ('la-suk', 'song-push'),                       # 1x - push song
+        'gitnat': ('git-nat', 'squeeze-pain'),                  # 1x - painful squeeze
+        'hoihkan': ('hoih-kan', 'good-grow'),                   # 1x - grow good
+        'pukding': ('puk-ding', 'fall-FUT'),                    # 1x - will fall
     }
 
 
