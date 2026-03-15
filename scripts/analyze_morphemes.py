@@ -8741,7 +8741,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hihtheih': ('hih-theih', 'do-able'),                # 12x - "doable"
         
         # === Session 4 Round 17: 10x frequency vocabulary ===
-        'tawlette': ('tawl-et-te', '?-?-PL'),                # 10x - "seventeenth"
+        # 'tawlette': see line ~9286 (window-PL)
         'peuhmahte': ('peuh-mah-te', 'each-self-PL'),        # 10x - "whoso/everyone"
         'maingat': ('mai-ngat', 'face-sit'),                 # 10x - "shoulders"
         'sempa': ('sem-pa', 'serve-father'),                 # 10x - "servant"
@@ -8813,7 +8813,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'awgingte': ('awging-te', 'voice-PL'),               # 10x - "voices"
         
         # === Session 4 Round 18: Push to 97% ===
-        'tawlette': ('tawl-et-te', 'seven-?-PL'),            # 10x - "seventeenth"
+        # 'tawlette': see line ~9286
         'tute': ('tu-te', 'now-PL'),                         # 10x - compound
         'dangka': ('dang-ka', 'other-one'),                  # 10x - "parcel"
         'mualpang': ('mual-pang', 'hill-side'),              # 10x - "portion"
@@ -9185,7 +9185,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'maangmuhnate': ('maang-muh-na-te', 'vision-see.II-NMLZ-PL'), # 10x
         'naupangnote': ('nau-pang-no-te', 'child-side-young-PL'), # 10x
         'siahdongte': ('siah-dong-te', 'judge-until-PL'),     # 10x - compound
-        'tawlette': ('tawle-tte', 'span-?-PL'),               # 9x - compound
+        # 'tawlette': see line ~9286
         'kauphete': ('kau-phe-te', 'call-?-PL'),              # 9x - compound
         'patna': ('pa-t-na', 'father-?-NMLZ'),                # 9x - compound
         'cithuah': ('ci-thuah', 'say-add'),                   # 9x - "add more saying"
@@ -9271,7 +9271,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         "nate'": ('na-te\u2019', '2SG-PL.POSS'),
         'nite': ('ni-te', 'day-PL'),                          # compound
         'mawhneite': ('mawh-nei-te', 'sin-have-PL'),          # 10x - "sinners"
-        'tawlette': ('tawle-tte', 'span-?-PL'),               # 9x - compound
+        # 'tawlette': see line ~9286
         'kauphete': ('kau-phe-te', 'call-?-PL'),              # 9x - compound
         'siampipuan\u2019': ('siampi-puan\u2019', 'priest-cloth.POSS'), # 9x
         "siampipuan'": ('siampi-puan\u2019', 'priest-cloth.POSS'),
