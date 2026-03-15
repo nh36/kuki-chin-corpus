@@ -16042,6 +16042,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kilehhawl': ('ki-leh-hawl', 'REFL-return-rest'), # 1x - returning rest
         'taikekmang': ('tai-kek-mang', 'flee-reverse-chief'),  # 1x - fleeing chief
         'kinungleh': ('ki-nung-leh', 'REFL-back-return'), # 1x - turning back
+        
+        # Round 213: Ezekiel hapax vocabulary
+        'tumpihzaw': ('tum-pih-zaw', 'stumble-with-more'),      # 1x Ezek 7:19 - stumblingblock
+        'biaibuai': ('biai-buai', 'smoke-disperse'),            # 1x Ezek 8:11 - cloud of incense
+        'pulpi': ('pul-pi', 'fear-great'),                      # 1x Ezek 14:19 - pestilence
+        'kisanna': ('ki-san-na', 'REFL-separate-NMLZ'),         # 1x Ezek 21:23 - divination
+        'piancilna': ('pian-cil-na', 'birth-turn-NMLZ'),        # 1x Ezek 29:14 - habitation
+        'kisaktheihpihna': ('ki-sak-theih-pih-na', 'REFL-CAUS-know-with-NMLZ'),  # 1x Ezek 30:18 - pomp
+        'kizutnelh': ('ki-zut-nelh', 'REFL-ugly-press'),        # 1x Ezek 16:25 - abhorred
+        'semsemah': ('sem-sem-ah', 'give-REDUP-LOC'),           # 1x - giving repeatedly
+        'nawhkhiatnate': ('nawh-khiat-na-te', 'destroy-out-NMLZ-PL'),  # 1x - destructions
+        'sungnungteng': ('sung-nung-teng', 'inside-back-all'),  # 1x - all back inside
+        'dinsih': ('din-sih', 'stand-firm'),                    # 1x - stand firm
+        'kicimte': ('ki-cim-te', 'REFL-kiss-PL'),               # 1x - kissing ones
+        'phuaktawm': ('phuak-tawm', 'compose-short'),           # 1x - short composition
+        'lehhanthot': ('leh-han-thot', 'return-CAUS-bring'),    # 1x - bring back
+        'zulkatteng': ('zul-kat-teng', 'follow-cut-all'),       # 1x - all following
+        'sawpkhiatsak': ('sawp-khiat-sak', 'sweep-out-CAUS'),   # 1x - cause to sweep out
+        'guaizaw': ('guai-zaw', 'crooked-more'),                # 1x - more crooked
+        'siateng': ('sia-teng', 'evil-all'),                    # 1x - all evil
+        'zonkhiatsak': ('zon-khiat-sak', 'flee-out-CAUS'),      # 1x - cause to flee
+        'kaihkhopkik': ('kaih-khop-kik', 'lead-gather-ITER'),   # 1x - gather again
+        'seuhseuhin': ('seuh-seuh-in', 'search-REDUP-ERG'),     # 1x - searching repeatedly
+        'sumaigawp': ('sumai-gawp', 'face-cover'),              # 1x - cover face
+        'kimlaipi': ('kim-lai-pi', 'full-time-great'),          # 1x - great fullness
+        'ngunteng': ('ngun-teng', 'silver-all'),                # 1x - all silver
+        'bal': ('bal', 'tired'),                                # 1x - tired/weary
+        'ciangzo': ('ciang-zo', 'become-able'),                 # 1x - become able
+        'kawngten': ('kawng-ten', 'gate-above'),                # 1x - above gate
+        'kihzah': ('kih-zah', 'hide-fear'),                     # 1x - hiding in fear
+        'huknate': ('huk-na-te', 'shelter-NMLZ-PL'),            # 1x - shelters
+        'khekhapteng': ('khek-hap-teng', 'mark-all'),           # 1x - all marks (variant)
+        'petkham': ('pet-kham', 'block-prevent'),               # 1x - blocking
+        'kuikham': ('kui-kham', 'leg-prevent'),                 # 1x - leg chains
+        'vuh': ('vuh', 'blow'),                                 # 1x - blow (wind)
+        'taubeel': ('tau-beel', 'gourd-wild'),                  # 1x - wild gourd
+        'bun': ('bun', 'portion'),                              # 1x - portion
+        'kihongkek': ('ki-hong-kek', 'REFL-open-reverse'),      # 1x - opened
+        'hoihpipite': ('hoih-pi-pi-te', 'good-great-REDUP-PL'), # 1x - very good ones
+        'tungkhuh': ('tung-khuh', 'upon-nest'),                 # 1x - nest upon
+        'haknawte': ('hak-naw-te', 'difficult-small-PL'),       # 1x - small difficulties
+        'ningsing': ('ning-sing', 'remember-tree'),             # 1x - memorial tree
+        'hotte': ('hot-te', 'save-PL'),                         # 1x - saved ones
+        'tuikiate': ('tui-kia-te', 'water-boil-PL'),            # 1x - boiling waters
+        'geiteng': ('gei-teng', 'edge-all'),                    # 1x - all edges
+        'daicipsuak': ('dai-cip-suak', 'quiet-deep-become'),    # 1x - become deeply quiet
+        'karbankel': ('karbankel', 'carbuncle'),                # 1x - carbuncle (gem)
+        'puakhiamang': ('puak-hia-mang', 'create-there-chief'), # 1x - created there
+        'kitante': ('ki-tan-te', 'REFL-stand-PL'),              # 1x - standing ones
+        'gunsung': ('gun-sung', 'heart-inside'),                # 1x - inside heart
+        'kamun': ('ka-mun', '1SG.GEN-place'),                   # 1x - my place
+        'khiang': ('khiang', 'quick'),                          # 1x - quickly
     }
 
 
