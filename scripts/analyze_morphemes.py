@@ -2876,6 +2876,23 @@ NOUN_STEMS = {
     'siasa': 'evil.thing',   # For siasate
     'sawkkhawm': 'betray',   # 1x Luke 22:21 - "betrayeth"
     'sankhit': 'receive',    # 1x Acts 8:14 - "received"
+    'taal': 'fall',          # 1x Psa 56:13 - "falling"
+    'tanzum': 'joint',       # 1x SoS 7:1 - "joints"
+    'tawhtang': 'key',       # 1x Matt 16:19 - "keys"
+    'tawlnga': 'work',       # 1x Heb 4:10 - "works"
+    'teeknu': 'mother.in.law', # 1x Ruth 1:14 - "mother in law"
+    'teeksia': 'father.in.law', # - "father in law"
+    'tawmkha': 'few',        # 1x Jer 44:28 - "remnant"
+    'tawmno': 'small',       # 1x Luke 12:32 - "little"
+    'tenpak': 'dwell.tent',  # 1x Jer 35:7 - "dwell in tents"
+    'tenpih': 'marry',       # 1x Matt 5:32 - "marry"
+    'telkheh': 'remind',     # 1x Rom 15:15 - "remind"
+    'tennop': 'desire',      # 1x Jer 42:22 - "desire"
+    'tentheih': 'dwell',     # 1x Jer 33:12 - "habitation"
+    'teepkang': 'medicine',  # 1x Prov 17:22 - "medicine"
+    'tei': 'prudent',        # 1x 1Cor 1:19 - "prudent"
+    'teitei': 'persistent',  # 1x Luke 11:8 - "importunity"
+    'tangngol': 'caterpillar', # 1x Psa 105:34 - "caterpillars"
 }
 
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
@@ -15303,6 +15320,30 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sankhitna': ('sankhit-na', 'receive-NMLZ'),                # 1x Acts 8:14 - "received"
         'sangaipi': ('sang-aipi', 'high-big'),                      # 1x Psa 18:33 - "high places"
         'sattantawm': ('sat-tantawm', 'cut-damage'),                # 1x Prov 26:6 - "damage"
+        
+        # Round 193g: More t-z hapax
+        'taalna': ('taal-na', 'fall-NMLZ'),                         # 1x Psa 56:13 - "falling"
+        'taalte': ('taal-te', 'fall-PL'),                           # - "fallings"
+        'tanggawl': ('tang-gawl', 'single-alone'),                  # 1x 1Cor 7:8 - "unmarried"
+        'tanghial': ('tang-hial', 'span-measure'),                  # 1x Lam 2:20 - "span long"
+        'tanzumte': ('tanzum-te', 'joint-PL'),                      # 1x SoS 7:1 - "joints"
+        'tawhtangte': ('tawhtang-te', 'key-PL'),                    # 1x Matt 16:19 - "keys"
+        'tawlngate': ('tawlnga-te', 'work-PL'),                     # 1x Heb 4:10 - "works"
+        'teeknute': ('teeknu-te', 'mother.in.law-PL'),              # 1x Ruth 1:14 - "mother in law"
+        'teeksiate': ('teeksia-te', 'father.in.law-PL'),            # - "fathers in law"
+        'tawmkhate': ('tawmkha-te', 'few-PL'),                      # 1x Jer 44:28 - "remnant"
+        'tawmnate': ('tawmna-te', 'humble-PL'),                     # 1x Isa 58:5 - "afflict"
+        'tawmnote': ('tawmno-te', 'small-PL'),                      # 1x Luke 12:32 - "little"
+        'tenpakna': ('tenpak-na', 'dwell.tent-NMLZ'),               # 1x Jer 35:7 - "dwell in tents"
+        'tenpihte': ('tenpih-te', 'marry-PL'),                      # 1x Matt 5:32 - "marry"
+        'telkhehna': ('telkheh-na', 'remind-NMLZ'),                 # 1x Rom 15:15 - "putting in mind"
+        'tennopna': ('tennop-na', 'desire-NMLZ'),                   # 1x Jer 42:22 - "desire"
+        'tentheihna': ('tentheih-na', 'dwell-NMLZ'),                # 1x Jer 33:12 - "habitation"
+        'teepkang': ('teepkang', 'medicine'),                       # 1x Prov 17:22 - "medicine"
+        'teina': ('tei-na', 'prudent-NMLZ'),                        # 1x 1Cor 1:19 - "prudent"
+        'teiteina': ('teitei-na', 'persistent-NMLZ'),               # 1x Luke 11:8 - "importunity"
+        'tangngolte': ('tangngol-te', 'caterpillar-PL'),            # 1x Psa 105:34 - "caterpillars"
+        'tahtah': ('tah~tah', 'press~RED'),                         # 1x Luke 6:38 - "pressed down"
     }
 
 
