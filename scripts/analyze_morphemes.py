@@ -2143,7 +2143,7 @@ NOUN_STEMS = {
     'liat': 'great',         # 44x - "great, much" (liatna = greatness)
     'kapin': 'among',        # 46x - "among, before" (came unto)
     'innkuanpih': 'household', # 46x - "household" (inn-kuan-pih)
-    'khuampi': 'board/pillar', # 44x - "board, pillar" (architectural)
+    # khuampi moved to BINARY_COMPOUNDS as khuam-pi (pillar-great)
     'ngawng': 'neck',        # 43x - "neck"
     'ngaihno': 'beloved',    # 42x - "beloved" (O thou whom my soul loveth)
     'et': 'care',            # 41x - base for etna (caring, keeping)
@@ -2268,7 +2268,7 @@ NOUN_STEMS = {
     'phawng': 'hunting',     # 1x Gen 49:9 - (lion hunting context)
     'balzan': 'torn.by.beasts', # 1x Gen 31:39 - "torn of beasts"
     'supna': 'loss',         # 1x Gen 31:39 - "I bare the loss" (supnate = losses)
-    'suangkhuam': 'stone-pillar',  # 1x Gen 31:52 - suang 'stone' + khuam 'pillar'
+    # suangkhuam moved to BINARY_COMPOUNDS as suang-khuam (stone-pillar)
     'pomcip': 'embrace',     # 1x Gen 33:4 - "embraced" (pom-cip = hug-tight)
     'lungphamawh': 'weak',   # 1x Gen 33:13 - "tender" (lung-pha-mawh = heart-good-not)
     'naudom': 'childbirth',  # 1x Gen 35:17 - "hard labour" in childbirth
@@ -4878,6 +4878,8 @@ BINARY_COMPOUNDS = {
     'taanggam': ('taang', 'gam', 'suburb'),       # beautiful-land → suburb
     # sanggam removed - opaque lexeme meaning 'brother', not sang+gam
     'innkhuam': ('inn', 'khuam', 'house-pillar'),  # khuam 'pillar', not 'darkness'
+    'suangkhuam': ('suang', 'khuam', 'stone-pillar'),  # suang 'stone' + khuam 'pillar'
+    'khuampi': ('khuam', 'pi', 'pillar-great'),    # khuam 'pillar' + pi 'great' → great pillar
     
     # Round 193m continued: More long stems as binary compounds
     'banbulh': ('ban', 'bulh', 'bracelet'),       # arm-bind → bracelet
