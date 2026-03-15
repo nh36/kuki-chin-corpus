@@ -15714,6 +15714,40 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kithuahkha': ('ki-thuah-kha', 'REFL-associate-PERF'),        # 1x Prov 23:20 - "be among"
         "dian'": ("dian'", "Midian.GEN"),                             # 1x Gen 25:4 - proper noun
         "kha'n": ("kha'n", "might-COND"),                             # 1x Prov 22:13 - "might"
+        
+        # Round 203: Proverbs/Judges/Ecclesiastes hapax vocabulary
+        'tukha': ('tu-kha', 'sit-PERF'),                              # 1x Judg 19:6 - "sat down together"
+        'khei': ('khei', 'pierce'),                                   # 1x Prov 26:9 - "thorn goeth up"
+        'sawksuk': ('sawk-suk', 'dip-hold'),                          # 1x Prov 19:24 - "hideth hand"
+        'lehkiat': ('leh-kiat', 'return-fall'),                       # 1x Prov 26:27 - "fall therein"
+        'dengkha': ('deng-kha', 'strike-PERF'),                       # 1x Judg 9:53 - "brake skull"
+        'lehden': ('leh-den', 'return-upon'),                         # 1x Prov 26:27 - "return upon him"
+        'daangkoih': ('daang-koih', 'distant-forsake'),               # 1x Prov 27:10 - "forsake not"
+        'halungvei': ('ha-lung-vei', 'roar-heart-fierce'),            # 1x Prov 28:15 - "ranging bear"
+        'neucik': ('neu-cik', 'small-bit'),                           # 1x Prov 28:21 - "piece of bread"
+        'lomcip': ('lom-cip', 'gather-tight'),                        # 1x Prov 30:4 - "gathered in fists"
+        'tuncip': ('tun-cip', 'cover-tight'),                         # 1x Job 9:24 - "covereth faces"
+        'khazel': ('kha-zel', 'fear-might'),                          # 1x Prov 30:9 - "lest I"
+        'taciing': ('ta-ciing', 'bear-NEG'),                          # 1x Job 24:21 - "barren"
+        'khelkhiat': ('khel-khiat', 'pick-out'),                      # 1x Prov 30:17 - "pick it out"
+        'kheekin': ('kheek-in', 'spin-ERG'),                          # 1x Prov 31:19 - "layeth to spindle"
+        'gantawm': ('gan-tawm', 'hold-again'),                        # 1x Prov 31:19 - "hold distaff"
+        'khuitawm': ('khui-tawm', 'weave-again'),                     # 1x Prov 31:22 - "maketh coverings"
+        'lasiam': ('la-siam', 'song-skilled'),                        # 1x Eccl 2:8 - "singers"
+        'bawhsat': ('bawh-sat', 'break-snap'),                        # 1x Eccl 4:12 - "quickly broken"
+        'phawkkhiat': ('phawk-khiat', 'perceive-out'),                # 1x Eccl 5:18 - "have seen"
+        
+        # Round 203b: Ecclesiastes/Song/Exodus hapax vocabulary
+        'mamsakkik': ('mam-sak-kik', 'straight-CAUS-again'),          # 1x Eccl 7:13 - "make straight"
+        'bangtumlo': ('bang-tum-lo', 'what-all-NEG'),                 # 1x Eccl 10:13 - "foolishness"
+        'keh': ('keh', 'cut'),                                        # 1x Deut 14:1 - "cut yourselves"
+        'tamluat': ('tam-luat', 'full-excessive'),                    # 1x Eccl 11:3 - "full of rain"
+        'zusuk': ('zu-suk', 'pour-sink'),                             # 1x Eccl 11:3 - "empty themselves"
+        'phawnzawh': ('phawn-zawh', 'awaken-exchange'),               # 1x Eccl 12:4 - "rise up at voice"
+        'gawtbawl': ('gawt-bawl', 'angry-make'),                      # 1x Song 1:6 - "were angry"
+        'duangvul': ('duang-vul', 'love-sick'),                       # 1x Song 2:5 - "sick of love"
+        'kisawpsiang': ('ki-sawp-siang', 'REFL-wash-clean'),          # 1x Song 4:2 - "from washing"
+        'kuai': ('kuai', 'break'),                                    # 1x Exod 12:46 - "break a bone"
     }
 
 
