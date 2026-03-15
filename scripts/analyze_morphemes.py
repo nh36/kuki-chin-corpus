@@ -16562,6 +16562,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kigizawng': ('ki-gi-zawng', 'REFL-squeeze-search'),     # 1x - search squeeze
         'zulim': ('zul-im', 'follow-house'),                     # 1x - follow house
         'tupi': ('tu-pi', 'now-great'),                          # 1x - great now
+        
+        # Round 223: John/Mark/NT hapax vocabulary
+        'kithuapna': ('ki-thuap-na', 'REFL-stack-NMLZ'),         # 1x Mark 13:2 - stacking
+        'lungnopnate': ('lung-nop-na-te', 'heart-want-NMLZ-PL'),  # 1x John 14:27 - peace
+        'nungzuihpihte': ('nung-zuih-pih-te', 'back-follow-with-PL'),  # 1x John 11:16 - fellowdisciples
+        'kikhamvalte': ('ki-kham-val-te', 'REFL-prevent-?-PL'),  # 1x John 6:12 - fragments
+        'kikilhna': ('ki-kilh-na', 'REFL-nail-NMLZ'),            # 1x John 20:25 - print of nails
+        'kikalhnelh': ('ki-kalh-nelh', 'REFL-bar-press'),        # 1x John 20:19 - shut
+        'huhnop': ('huh-nop', 'blow-want'),                      # 1x - want blow
+        'peuhpeuhun': ('peuh-peuh-un', 'each-REDUP-IMP'),        # 1x - each each!
+        'nangnuam': ('nang-nuam', '2SG-pleasant'),               # 1x - you pleasant
+        'masawlin': ('ma-sawl-in', 'EMPH-send-ERG'),             # 1x - truly sending
+        'tunkuan': ('tun-kuan', 'arrive-authority'),             # 1x - authority arrive
+        'zatval': ('zat-val', 'use-?'),                          # 1x - use...
+        'lunghihmawhin': ('lung-hih-mawh-in', 'heart-fear-sin-ERG'),  # 1x - fearing heart
+        'buhhum': ('buh-hum', 'rice-cover'),                     # 1x - cover rice
+        'phawkvat': ('phawk-vat', 'remember-quick'),             # 1x - remember quick
+        'thonga': ('thong-a', 'prison-LOC'),                     # 1x - in prison
+        'hanphual': ('han-phual', 'CAUS-nest'),                  # 1x - cause nest
+        'tumpah': ('tum-pah', 'stumble-strike'),                 # 1x - strike stumble
+        'dinkhawl': ('din-khawl', 'stand-rest'),                 # 1x - rest stand
+        'tusawng': ('tu-sawng', 'now-vessel'),                   # 1x - now vessel
+        'haankeu': ('haan-keu', 'goose-unmarried'),              # 1x - young goose
+        'khuagei': ('khua-gei', 'village-edge'),                 # 1x - village edge
+        'tuipihte': ('tui-pih-te', 'water-with-PL'),             # 1x - water ones
+        'ipbawl': ('ip-bawl', 'blow-make'),                      # 1x - make blow
+        'thambelpi': ('tham-bel-pi', 'new-leave-great'),         # 1x - great new leave
+        'thambelpite': ('tham-bel-pi-te', 'new-leave-great-PL'),  # 1x - great new leaves
+        'sitsetin': ('sit-set-in', 'wipe-REDUP-ERG'),            # 1x - wiping
+        'khauteep': ('khau-teep', 'rope-tie'),                   # 1x - tie rope
+        'khuapihte': ('khua-pih-te', 'village-with-PL'),         # 1x - village ones
+        'phengphang': ('pheng-phang', 'plank-REDUP'),            # 1x - planks
+        'tuitungah': ('tui-tung-ah', 'water-upon-LOC'),          # 1x - upon water
+        'nuailam': ('nuai-lam', 'under-direction'),              # 1x - under direction
+        'kobawlin': ('ko-bawl-in', 'cry-make-ERG'),              # 1x - making cry
+        'tuukong': ('tuu-kong', 'gourd-hole'),                   # 1x - gourd hole
+        'kicialtawm': ('ki-cial-tawm', 'REFL-scatter-short'),    # 1x - scatter short
+        'mankim': ('man-kim', 'price-complete'),                 # 1x - complete price
+        'kipatma': ('ki-pat-ma', 'REFL-attach-before'),          # 1x - attach before
+        'nuhkhit': ('nuh-khit', 'push-finish'),                  # 1x - finish push
+        'mawkgen': ('mawk-gen', 'wet-say'),                      # 1x - say wet
+        'suahhun': ('suah-hun', 'become-time'),                  # 1x - time become
+        'ngenpah': ('ngen-pah', 'beg-strike'),                   # 1x - strike beg
+        'lalcin': ('lal-cin', 'king-still'),                     # 1x - still king
+        'khukawm': ('khu-kawm', 'knee-around'),                  # 1x - around knee
+        'vaikhakte': ('vai-khak-te', 'chaff-firm-PL'),           # 1x - firm chaff
+        'kaizo': ('kai-zo', 'lead-finish'),                      # 1x - finish lead
+        'buatbuatin': ('buat-buat-in', 'prepare-REDUP-ERG'),     # 1x - preparing
+        'kithehkek': ('ki-theh-kek', 'REFL-place-reverse'),      # 1x - reverse place
+        'khauhpah': ('khauh-pah', 'strong-strike'),              # 1x - strike strong
+        'diangkawmin': ('diang-kawm-in', 'throne-around-ERG'),   # 1x - around throne
+        'manzaw': ('man-zaw', 'price-more'),                     # 1x - more price
     }
 
 
