@@ -15950,6 +15950,52 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kidengawpna': ('ki-deng-awp-na', 'REFL-stand-meet-NMLZ'),  # 1x - standing together
         'kisepsakna': ('ki-sep-sak-na', 'REFL-destroy-CAUS-NMLZ'),  # 1x - destruction
         'luhinna': ('luh-in-na', 'plunder-take-NMLZ'),    # 1x - plundering
+        
+        # Round 211: Isaiah hapax vocabulary
+        'lamzin': ('lam-zin', 'way-journey'),             # 1x Isa 30:11 - path
+        'suanghum': ('suang-hum', 'stone-rough'),         # 1x Isa 40:4 - rough places
+        'thangko': ('thang-ko', 'spread-call'),           # 1x Isa 44:7 - declare
+        'lamkaih': ('lam-kaih', 'way-lead'),              # 1x Isa 49:10 - guide/lead
+        'leibatnate': ('lei-bat-na-te', 'debt-bind-NMLZ-PL'),  # 1x Isa 50:1 - creditors
+        'leibatna': ('lei-bat-na', 'debt-bind-NMLZ'),     # base - debt
+        'leibat': ('lei-bat', 'debt-bind'),               # base - owe
+        'eimau': ('ei-mau', '1PL.EXCL-self'),             # 1x Isa 53:6 - ourselves
+        'lungzingin': ('lung-zing-in', 'heart-tremble-ERG'),  # 1x - trembling heart
+        'dipna': ('dip-na', 'dip-NMLZ'),                  # 1x - dipping
+        'dip': ('dip', 'dip'),                            # base
+        'taangzah': ('taang-zah', 'grain-measure'),       # 1x - grain measure
+        'kolhsiang': ('kolh-siang', 'wrap-clean'),        # 1x - wrapped clean
+        'thawhtohna': ('thawh-toh-na', 'rise-reach-NMLZ'),  # 1x - arising
+        'lohun': ('lo-hun', 'NEG-time'),                  # 1x - untimely
+        'kidokkhia': ('ki-dok-khia', 'REFL-fight-exit'),  # 1x - fight out
+        'laho': ('laho', 'bamboo'),                       # 1x - bamboo
+        'sangak': ('sang-ak', 'high-over'),               # 1x - high above
+        'keeldawi': ('keel-dawi', 'heel-kick'),           # 1x - kick with heel
+        'lauthawng': ('lau-thawng', 'fear-wide'),         # 1x - widespread fear
+        'notzo': ('not-zo', 'push-able'),                 # 1x - pushable
+        'hial': ('hial', 'EMPH'),                         # 1x - emphatic particle
+        'kihial': ('ki-hial', 'REFL-EMPH'),               # 1x - emphatic
+        'pongkhaina': ('pong-khai-na', 'open-lift-NMLZ'), # 1x - opening
+        'nengbaang': ('neng-baang', 'face-flat'),         # 1x - flat face
+        'lenkhiatpih': ('len-khiat-pih', 'change-out-with'),  # 1x - exchange
+        'kikoihkhong': ('ki-koih-khong', 'REFL-put-tight'),  # 1x - placed firmly
+        'suvui': ('suvui', 'sand'),                       # 1x - sand
+        'ngongte': ('ngong-te', 'self-PL'),               # 1x - selves
+        'singnawtna': ('sing-nawt-na', 'tree-sweep-NMLZ'),  # 1x - sweeping trees
+        'simthama': ('sim-thama', 'examine-fully'),       # 1x - examine fully
+        'buasuk': ('bua-suk', 'fruit-descend'),           # 1x - fruit fall
+        'pokhiat': ('po-khiat', 'burst-out'),             # 1x - burst out
+        'mamsak': ('mam-sak', 'soft-CAUS'),               # 1x - soften
+        'zauvak': ('zau-vak', 'carry-lift'),              # 1x - carry away
+        'paupeengin': ('pau-peeng-in', 'bag-flat-ERG'),   # 1x - in flat bag
+        'kiminthansakna': ('ki-min-than-sak-na', 'REFL-name-spread-CAUS-NMLZ'),  # 1x - making famous
+        'pehtum': ('peh-tum', 'join-together'),           # 1x - joined together
+        'kithehthangte': ('ki-theh-thang-te', 'REFL-change-spread-PL'),  # 1x - changed ones
+        'maimanna': ('mai-man-na', 'face-true-NMLZ'),     # 1x - true face
+        'gote': ('go-te', 'round-PL'),                    # 1x - rounds
+        'suangvui': ('suang-vui', 'stone-sand'),          # 1x - gravel
+        'kikemte': ('ki-kem-te', 'REFL-gather-PL'),       # 1x - gathered ones
+        'lususu': ('lu-su-su', 'head-push-REDUP'),        # 1x - pushing head
     }
 
 
