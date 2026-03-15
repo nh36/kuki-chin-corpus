@@ -13430,6 +13430,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gan-an': ('gan-an', 'possess-?'),                          # 5x - possessions? (context: substance)
         'lam-an': ('lam-an', 'way-?'),                              # 5x - way/direction variant
         'eh': ('eh', 'INTERJ'),                                     # 5x - interjection
+        'oh': ('oh', 'INTERJ'),                                     # 2x - interjection (Exo 4:10,13)
         'hutna-in': ('hut-na-in', 'shelter-NMLZ-ERG'),              # 5x - by refuge
         'pipi-in': ('pi-pi-in', 'grind-REDUP-ERG'),                 # 5x - by grinding
         "hi'ng": ("hi-'ng", 'be-EMPH'),                             # 5x - emphatic be
