@@ -16302,6 +16302,58 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gitnat': ('git-nat', 'squeeze-pain'),                  # 1x - painful squeeze
         'hoihkan': ('hoih-kan', 'good-grow'),                   # 1x - grow good
         'pukding': ('puk-ding', 'fall-FUT'),                    # 1x - will fall
+        
+        # Round 218: Galatians/Ephesians/Philippians/1 Timothy hapax
+        'lunghihmawhsak': ('lung-hih-mawh-sak', 'heart-fear-sin-CAUS'),  # 1x Gal 4:11 - afraid
+        'dokhawmna': ('do-khawm-na', 'fight-join-NMLZ'),        # 1x Phil 1:27 - striving together
+        'kinopmawhna': ('ki-nop-mawh-na', 'REFL-want-sin-NMLZ'),  # 1x 1Tim 2:8 - doubting
+        'suahtheihna': ('suah-theih-na', 'become-know-NMLZ'),   # 1x Gal 3:26 - becoming
+        'thanopna': ('tha-nop-na', 'strength-want-NMLZ'),       # 1x Eph 6:7 - good will
+        'lahnopna': ('lah-nop-na', 'represent-want-NMLZ'),      # 1x Gal 4:24 - allegory
+        'haisapi': ('hai-sa-pi', 'pluck-flesh-great'),          # 1x - great flesh pluck
+        'lungkhampihin': ('lung-kham-pih-in', 'heart-prevent-with-ERG'),  # 1x - with heart
+        'phattuamnapi': ('phat-tuam-na-pi', 'praise-much-NMLZ-great'),  # 1x - great praise
+        'bangmahpi': ('bang-mah-pi', 'what-self-great'),        # 1x - nothing great
+        'sumlepaite': ('sum-le-pai-te', 'money-and-go-PL'),     # 1x - money goers
+        'lannate': ('lan-na-te', 'appear-NMLZ-PL'),             # 1x - appearances
+        'zatkhak': ('zat-khak', 'use-firm'),                    # 1x - firm use
+        'kiletna': ('ki-let-na', 'REFL-cut-NMLZ'),              # 1x - circumcision
+        'patkhit': ('pat-khit', 'attach-finish'),               # 1x - finished attaching
+        'kimemat': ('ki-mem-at', 'REFL-soft-very'),             # 1x - very soft
+        'nungphiat': ('nung-phiat', 'back-abandon'),            # 1x - abandon back
+        'piakma': ('piak-ma', 'give-before'),                   # 1x - give before
+        'vangneite': ('vang-nei-te', 'power-have-PL'),          # 1x - powerful ones
+        'pianuamte': ('pian-uam-te', 'birth-pleasant-PL'),      # 1x - pleasant births
+        'kipetkha': ('ki-pet-kha', 'REFL-block-dry'),           # 1x - be blocked
+        'hahbawl': ('hah-bawl', 'tired-make'),                  # 1x - make tired
+        'meimapawn': ('mei-ma-pawn', 'fire-EMPH-even'),         # 1x - even fire
+        'sehkholhsa': ('seh-kholh-sa', 'appoint-INTENS-already'),  # 1x - already appointed
+        'pianlui': ('pian-lui', 'birth-old'),                   # 1x - old birth
+        'gawpgawpnate': ('gawp-gawp-na-te', 'cover-REDUP-NMLZ-PL'),  # 1x - coverings
+        'nawtsakzaw': ('nawt-sak-zaw', 'drive-CAUS-more'),      # 1x - drive more
+        'huhkim': ('huh-kim', 'blow-complete'),                 # 1x - blow complete
+        'hahkatlua': ('hah-kat-lua', 'tired-cut-exceed'),       # 1x - exceed tired
+        'supngam': ('sup-ngam', 'suck-dare'),                   # 1x - dare suck
+        'piakkhiatnate': ('piak-khiat-na-te', 'give-out-NMLZ-PL'),  # 1x - givings out
+        'theihtelnate': ('theih-tel-na-te', 'know-join-NMLZ-PL'),  # 1x - knowledge
+        'sepbel': ('sep-bel', 'work-leave'),                    # 1x - leave work
+        'khangcingin': ('khang-cing-in', 'generation-still-ERG'),  # 1x - in generation
+        'tungthamin': ('tung-tham-in', 'upon-new-ERG'),         # 1x - upon new
+        'siavuanpa': ('sia-vuan-pa', 'evil-spirit-NMLZ.M'),     # 1x - evil spirit (person)
+        'silbawlnate': ('sil-bawl-na-te', 'clothe-make-NMLZ-PL'),  # 1x - clothings
+        'gimlawhkhak': ('gim-lawh-khak', 'trouble-earn-firm'),  # 1x - firmly earn trouble
+        'dahluat': ('dah-luat', 'dry-pull'),                    # 1x - pull dry
+        'tunvat': ('tun-vat', 'arrive-quick'),                  # 1x - arrive quick
+        'mutlum': ('mut-lum', 'suck-heap'),                     # 1x - heap suck
+        'suplawhkhak': ('sup-lawh-khak', 'suck-earn-firm'),     # 1x - firmly earn suck
+        'hiathiatin': ('hiat-hiat-in', 'there-REDUP-ERG'),      # 1x - there repeatedly
+        'khangsimnate': ('khang-sim-na-te', 'generation-think-NMLZ-PL'),  # 1x - generation thoughts
+        'palepa': ('pale-pa', 'separate-NMLZ.M'),               # 1x - separated one
+        'gute': ('gu-te', 'bow-PL'),                            # 1x - bows
+        'kilehbulhin': ('ki-leh-bul-in', 'REFL-return-begin-ERG'),  # 1x - returning begin
+        'uphuai': ('up-huai', 'believe-able'),                  # 1x - able to believe
+        'dozawh': ('do-zawh', 'fight-finish'),                  # 1x - finish fighting
+        'phalkei': ('phal-kei', 'allow-1SG'),                   # 1x - allow me
     }
 
 
