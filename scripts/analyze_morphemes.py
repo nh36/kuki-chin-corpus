@@ -10847,7 +10847,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bawlbawl': ('bawl-bawl', 'make-REDUP'),               # continually
         
         # Round 60: Pushing toward 98.5%
-        'kiimnai': ('ki-im-nai', 'REFL-neighbor-close'),       # neighboring, all around
+        'kiimnai': ('ki-im-nai', 'REFL-around-near'),            # neighboring, surrounding
         'tunma': ('tun-ma', 'arrive-before'),                  # meanwhile, in the meantime
         'lopipi': ('lo-pipi', 'NEG-really'),                   # unwillingly / with force (ut lopipi = strong hand)
         "huihpi'": ('huih-pi', 'wind-great'),                  # strong wind, east wind
@@ -12537,10 +12537,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khiasak': ('khia-sak', 'put.out-CAUS'),                   # put out
         'khalna': ('khal-na', 'chasten-NMLZ'),                     # chastening
         # Round 109: More vocabulary for 99%
-        'lamna': ('lam-na', 'dance-NMLZ'),                         # dancing
-        'kiimnai': ('ki-im-nai', 'REFL-destroy-all'),              # utterly destroyed
-        'hehsa': ('heh-sa', 'angry-PAST'),                         # anger kindled
-        'hutna': ('hut-na', 'save-NMLZ'),                          # saving
+        # 'kiimnai': see line ~10850 (neighboring/surrounding)
+        'hehsa': ('heh-sa', 'angry-PRF'),                            # anger kindled
+        # 'hutna': see line ~9453
         'kiimcip': ('ki-im-cip', 'REFL-destroy-INTENS'),           # utterly
         'dahlua': ('dah-lua', 'grieve-too'),                       # sorrow too much
         'louih': ('lo-uih', 'garlic-leek'),                        # leeks
@@ -13452,9 +13451,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tuamtuamte': ('tuam-tuam-te', 'kind-REDUP-PL'),            # after its kind
         # Round 144: Unknown fixes (duplicates removed - see earlier entries)
         # 'lamna': see line ~8361
-        'kiimnai': ('ki-im-nai', 'REFL-stay-near'),                 # none remaining
-        'hehsa': ('heh-sa', 'angry-NMLZ'),                          # anger (kindled)
-        'hutna': ('hut-na', 'escape-NMLZ'),                         # escape/saving
+        # 'kiimnai': see line ~10850
+        # 'hehsa': see line ~12541
+        # 'hutna': see line ~9453
         'khekna': ('khek-na', 'give.in-NMLZ'),                      # give in exchange
         'khimsakin': ('khim-sak-in', 'crown-CAUS-INST'),            # put crown
         'kiphasakte': ('ki-pha-sak-te', 'REFL-good-CAUS-PL'),       # afflicted saved
