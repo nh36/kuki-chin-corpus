@@ -755,12 +755,9 @@ FUNCTION_WORDS = {
     'ahihleh': 'if',         # 335
     'hitaleh': 'if.so',      # 295
     'hang': 'reason',        # Round 155: fix - "bang hang hiam" = why (not stallion)
-    'hangin': 'because',     # 3,461
-    'bangin': 'like',        # 3,886
+    # hangin, bangin, manin, zongin, ciangin removed - use transparent ERG analysis
+    # e.g. ciangin → ciang-in = then-ERG (shows morphological structure)
     'man': 'finish',         # Round 155: a man khit = finished (also catch/wrong)
-    'manin': 'therefore',    # 2,790
-    'zongin': 'although',    # 1,970
-    'ciangin': 'then',       # 9,297
     'inla': 'and.then',      # ~838
     'napi': 'but',   # 279x - contrastive conjunction
     'hinapi': 'but', # 156x - variant with hi-
@@ -862,7 +859,7 @@ FUNCTION_WORDS = {
     'un': 'PL.IMP',
     'tawh': 'COM',           # 7,572
     'panin': 'ABL',          # 4,296
-    'sangin': 'COMP',        # 517
+    # sangin removed - use transparent ERG analysis: sang-in = high-ERG (comparative)
     'dong': 'until',         # 647
     
     # Combinations with plural uh-
@@ -3812,7 +3809,7 @@ PHRASE_BOUNDARY_SUFFIXES = {
 
 PHRASE_BOUNDARY_WORDS = {
     'panin': 'ABL',     # Ablative 'from'
-    'sangin': 'COMP',   # Comparative 'than'
+    # sangin handled as sang-in = high-ERG (comparative marker)
     'dong': 'TERM',     # Terminative 'until'
     'tungah': 'on-LOC',
     'sungah': 'inside-LOC',
