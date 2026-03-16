@@ -397,6 +397,114 @@ semantic accuracy.
 
 The analyzer respects the principle: **explicit entries take precedence over algorithmic decomposition**.
 
+## Grammaticalized Function Words (Opaque)
+
+These words can be morphologically decomposed but are lexicalized as function words
+with idiomatic meanings. They are parsed as opaque units:
+
+### Conditionals
+| Word | Decomposition | Literal | Actual Meaning |
+|------|---------------|---------|----------------|
+| ahihleh | a-hih-leh | 3SG-be.II-if | "if" |
+| hitaleh | hi-ta-leh | be-PFV-if | "if so" |
+
+### Indefinite Pronouns  
+| Word | Decomposition | Literal | Actual Meaning |
+|------|---------------|---------|----------------|
+| kuamah | kua-mah | who-EMPH | "nobody" |
+| bangmah | bang-mah | what-EMPH | "nothing" |
+
+### Interrogatives/Adverbials
+| Word | Decomposition | Literal | Actual Meaning |
+|------|---------------|---------|----------------|
+| bangci | bang-ci | what-say | "how" |
+| inla | in-la | ERG-and | "and then" |
+
+## Emphatic Pronouns (Opaque)
+
+The emphatic pronouns are formed with -h (glottal stop, marking Form II/subjunctive)
+or -mah (emphatic marker). They are parsed as lexicalized units:
+
+### With -h (Form II marker)
+| Form | Base | Relationship | Meaning |
+|------|------|--------------|---------|
+| keimah | kei | kei + mah | 1SG emphatic |
+| nangmah | nang | nang + mah | 2SG emphatic |
+| amah | a | a + mah | 3SG emphatic |
+
+Note: The -h in amah reflects Form II (glottal stop), marking subjunctive/emphatic.
+Compare: a (3SG prefix) vs amah (3SG emphatic pronoun).
+
+### Plural Forms
+| Form | Components | Meaning |
+|------|------------|---------|
+| amaute | amah + te | 3PL emphatic |
+| note | no + te | 2PL |
+| kote | ko + te | 1PL inclusive |
+| eite | ei + te | 1PL exclusive |
+
+## Polysemy and Contextual Disambiguation
+
+The following morphemes have multiple attested meanings and require contextual
+disambiguation in the analyzer:
+
+### kham
+| Meaning | Context | Examples |
+|---------|---------|----------|
+| gold | default/standalone | kham le ngun (gold and silver) |
+| forbid | with ki- prefix | kikham (refrain) |
+| forbid | as verb | amaute kham in (forbid them, Num 11:28) |
+| hold | after pawi | pawi kham (hold feast) |
+| support | in lukham | lu-kham (head-support → pillow) |
+
+### vei  
+| Meaning | Context | Examples |
+|---------|---------|----------|
+| time | with numeral | nihvei (two-time → second), khatvei (once) |
+| sick | standalone | meima vei (sick with fever) |
+| wave | in ritual | vei-a piak (wave offering) |
+
+### sin
+| Meaning | Context | Examples |
+|---------|---------|----------|
+| near | default | sin (near, close to) |
+| liver | in anatomy (sin tuam) | sin tuam (liver lobe) |
+| anger | in sinso | sinso (anger kindled) |
+
+Note: Capitalized Sin = proper noun (Wilderness of Sin).
+
+### awk
+| Meaning | Context | Examples |
+|---------|---------|----------|
+| trap/snare | default | awk khak (be snared), gui-awk (hang oneself) |
+| ram | with tuutal | awk tuutal (trapped ram, Gen 22:13) |
+
+Note: The "ram" meaning only appears in the phrase "awk tuutal" where awk
+describes the trapped state. The noun for "ram" is tuutal.
+
+### huh
+| Meaning | Context | Examples |
+|---------|---------|----------|
+| help | all contexts | a huh ding (help for him, Gen 2:18) |
+
+Note: No "blow" meaning is attested. "Blow" is translated as mut (wind) or
+kitum (trumpet).
+
+### zong
+| Meaning | Context | Examples |
+|---------|---------|----------|
+| also/too | all contexts | aksite zong (stars also, Gen 1:16) |
+
+Note: No "warm" meaning is attested. "Warm" is translated as lum.
+
+### ap
+| Meaning | Context | Examples |
+|---------|---------|----------|
+| entrust/commit | all contexts | Josef' et dingin ap (committed to Joseph's hand) |
+| press | with ki- | ki-ap (submit) |
+
+Note: No "span" meaning is attested. "Span" (measurement) is letmat kua.
+
 ---
 *Last updated: March 2026*
 *Part of the Tedim Chin Morphological Analyzer project*

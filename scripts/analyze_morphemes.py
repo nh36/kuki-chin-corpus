@@ -7664,7 +7664,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zing': ('zing', 'morning'),
         'nial': ('nial', 'deny'),
         'san': ('san', 'flee'),
-        'ap': ('ap', 'span'),
+        'ap': ('ap', 'entrust'),
         'pawl': ('pawl', 'group'),
         'zat': ('zat', 'use'),
         'vang': ('vang', 'because'),
@@ -10043,7 +10043,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'len': ('len', 'net'),                                 # base - net
         'simsiam': ('sim-siam', 'count-make'),                 # network/workmanship
         'thuap': ('thu-ap', 'measure-span'),                   # span (measurement)
-        'ap': ('ap', 'span'),                                  # base - span
+        'ap': ('ap', 'entrust'),                                  # base - span
         'khutsiam': ('khut-siam', 'hand-skill'),               # workmanship
         'siam': ('siam', 'skill'),                             # base - skill
         
@@ -10319,7 +10319,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kilokgawp': ('ki-lok-gawp', 'REFL-shake-break'),      # tremble
         'lok': ('lok', 'shake'),                               # base - shake
         'kizong': ('ki-zong', 'REFL-warm'),                    # warm oneself
-        'zong': ('zong', 'also'),                              # base - warm
+        'zong': ('zong', 'also'),                              # base - also
         'kipiatawm': ('ki-piat-awm', 'REFL-sell-self'),        # sell oneself
         'piat': ('piat', 'sell'),                              # base - sell
         'awm': ('awm', 'self'),                                # base - self
