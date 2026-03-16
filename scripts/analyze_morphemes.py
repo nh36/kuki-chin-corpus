@@ -16,6 +16,16 @@ import re
 from pathlib import Path
 from typing import List, Tuple, Optional
 
+# Import refactored morphology module
+from morphology import (
+    OPAQUE_LEXEMES,
+    PREFIXES,
+    DERIVATIONAL_SUFFIXES,
+    INFLECTIONAL_SUFFIXES,
+)
+from morphology.opaque import is_opaque, get_opaque_gloss
+from morphology.affixes import is_prefix, is_suffix, validate_suffix_sequence, get_suffix_order
+
 # =============================================================================
 # PHONOTACTIC CONSTRAINTS
 # =============================================================================
@@ -6918,6 +6928,18 @@ def analyze_word(word: str) -> Tuple[str, str]:
         meaning = disambiguate_morpheme(word_lower, {'position': 'standalone'})
         if meaning:
             return (word, meaning)
+    
+    # Check OPAQUE LEXEMES early - these are words that LOOK decomposable
+    # but have non-compositional meanings (e.g., sanggam = 'brother' NOT 'high-land')
+    # This check uses the refactored morphology/opaque.py module
+    if is_opaque(word_lower):
+        gloss_tuple = get_opaque_gloss(word_lower)
+        if gloss_tuple:
+            return gloss_tuple
+    if is_opaque(word_no_hyphen_lower):
+        gloss_tuple = get_opaque_gloss(word_no_hyphen_lower)
+        if gloss_tuple:
+            return gloss_tuple
     
     # Try both hyphenated and unhyphenated forms (also check original case for sentence-initial words)
     if word in FUNCTION_WORDS:
@@ -16894,6 +16916,24 @@ def analyze_word(word: str) -> Tuple[str, str]:
     if len(segments) > 1:
         is_valid, error = validate_segmentation(segments)
         # Validation result available but not blocking - for audit purposes
+    
+    # Suffix ordering validation: check that suffixes appear in valid order
+    # This catches impossible sequences like *NMLZ-CAUS (should be CAUS-NMLZ)
+    # Uses the refactored morphology/affixes.py module
+    if len(segments) > 1:
+        # Extract just the suffixes (skip prefixes and root)
+        suffix_candidates = []
+        for i, seg in enumerate(segments):
+            seg_lower = seg.lower()
+            if is_suffix(seg_lower):
+                suffix_candidates.append(seg_lower)
+        
+        # Validate suffix ordering if we have multiple suffixes
+        if len(suffix_candidates) >= 2:
+            if not validate_suffix_sequence(suffix_candidates):
+                # Invalid suffix order - this might indicate a parsing error
+                # For now, just log for debugging; in future could use alternative parse
+                pass  # TODO: Add logging or alternative parse strategy
     
     return (segmented, gloss)
 

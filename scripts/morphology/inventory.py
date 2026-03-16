@@ -28,7 +28,7 @@ MORPHEME_INVENTORY = {
     },
     'sep': {
         'category': 'verb_root',
-        'gloss': 'do',
+        'gloss': 'work',  # Aligned with VERB_STEMS
         'frequency': 300,
     },
     'pai': {
@@ -53,18 +53,18 @@ MORPHEME_INVENTORY = {
     },
     'muh': {
         'category': 'verb_root',
-        'gloss': 'see',
+        'gloss': 'see.II',  # Henderson Form II
         'frequency': 300,
     },
     'mu': {
         'category': 'verb_root',
-        'gloss': 'see',
-        'form': 'II',  # Form II of muh
+        'gloss': 'see.I',  # Henderson Form I
+        'form': 'I',
         'frequency': 250,
     },
     'thei': {
         'category': 'verb_root',
-        'gloss': 'know',
+        'gloss': 'know.I',  # Henderson Form I
         'polysemy': ['know (verb)', 'able (suffix)'],
         'frequency': 200,
     },
@@ -93,7 +93,7 @@ MORPHEME_INVENTORY = {
     },
     'dam': {
         'category': 'verb_root',
-        'gloss': 'well',
+        'gloss': 'be.well',  # Aligned with VERB_STEMS
         'frequency': 150,
     },
     'hot': {
@@ -179,7 +179,8 @@ MORPHEME_INVENTORY = {
     },
     'buk': {
         'category': 'noun_root',
-        'gloss': 'shelter',
+        'gloss': 'ambush',  # Aligned with NOUN_STEMS
+        'polysemy': ['ambush', 'shelter/booth'],
         'frequency': 50,
     },
     'sa': {
@@ -190,8 +191,8 @@ MORPHEME_INVENTORY = {
     },
     'nam': {
         'category': 'noun_root',
-        'gloss': 'hair',
-        'polysemy': ['hair', 'kind/type (minam = people-kind)'],
+        'gloss': 'kind',  # Aligned with NOUN_STEMS (minam = people-kind)
+        'polysemy': ['kind/type', 'hair'],
         'frequency': 100,
     },
     'tang': {
@@ -299,3 +300,30 @@ def get_all_senses(form: str) -> list:
     if info:
         return [info['gloss']]
     return []
+
+
+def validate_consistency(verb_stems: dict, noun_stems: dict) -> list:
+    """
+    Validate that MORPHEME_INVENTORY is consistent with main dictionaries.
+    
+    Returns list of inconsistencies found.
+    """
+    issues = []
+    
+    for form, info in MORPHEME_INVENTORY.items():
+        cat = info.get('category', '')
+        inv_gloss = info.get('gloss', '')
+        
+        if 'verb' in cat:
+            if form in verb_stems:
+                stem_gloss = verb_stems[form]
+                if stem_gloss.lower() != inv_gloss.lower():
+                    issues.append(f"VERB gloss mismatch: {form} = '{inv_gloss}' (inventory) vs '{stem_gloss}' (VERB_STEMS)")
+        
+        if 'noun' in cat:
+            if form in noun_stems:
+                stem_gloss = noun_stems[form]
+                if stem_gloss.lower() != inv_gloss.lower():
+                    issues.append(f"NOUN gloss mismatch: {form} = '{inv_gloss}' (inventory) vs '{stem_gloss}' (NOUN_STEMS)")
+    
+    return issues
