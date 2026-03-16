@@ -134,24 +134,24 @@ transparently to the whole. The compositional meaning IS the actual meaning.
 These compounds have single-word glosses despite multi-morpheme segmentation,
 suggesting the compositional meaning may NOT match the actual meaning.
 
-| Word | Segmentation | Gloss | Analysis |
-|------|--------------|-------|----------|
-| hotkhiatna | hot-khiat-na | salvation | hot(save) + khiat(away) + na(NMLZ) → **TRANSPARENT**: "save-away-NMLZ" |
-| lamethuai | lamet-huai | vanity | lamet(example) + huai(?) → **NEEDS REVIEW**: compositional unclear |
-| lonona | lo-no-na | disobedience | lo(NEG) + no(obey) + na(NMLZ) → **TRANSPARENT**: "NEG-obey-NMLZ" |
-| lutang | lu-tang | pillow | lu(head) + tang(hold) → **TRANSPARENT**: "head-leader" = chief (see Gen 36:21) |
-| namsau | nam-sau | long.hair | nam(hair?) + sau(long) → **TRANSPARENT** if nam=hair: "hair-long" |
-| puanbuk | puan-buk | tent | puan(cloth) + buk(shelter) → **TRANSPARENT**: "cloth-shelter" = tent |
-| sathau | sa-thau | fat | sa(flesh) + thau(fat) → **TRANSPARENT**: "flesh-fat" = fat |
-| singnai | sing-nai | precious.stone | sing(tree) + nai(precious) → **POSSIBLY OPAQUE**: etymology unclear |
-| thumin | thu-min | three | thu(?) + min(?) → **OPAQUE**: numeral with unclear etymology |
+| Word | Segmentation | Current Gloss | Status |
+|------|--------------|---------------|--------|
+| hotkhiatna | hot-khiat-na | save-away-NMLZ | ✅ UPDATED |
+| lonona | lo-no-na | NEG-obey-NMLZ | ✅ UPDATED |
+| lutang | lu-tang | head-leader | ✅ UPDATED (= chief/duke) |
+| puanbuk | puan-buk | cloth-shelter | ✅ UPDATED (= tent) |
+| sathau | sa-thau | flesh-fat | ✅ UPDATED |
+| namsau | nam-sau | hair-long | ✅ UPDATED |
+| thumin | thum-in | three-ERG | ✅ UPDATED (thum=three, in=ERG) |
+| singnai | sing-nai | tree-precious | ✅ UPDATED (bdellium = tree resin) |
+| lamethuai | lamet-huai | vanity | ⚠️ NEEDS REVIEW: compositional unclear |
 
 
 ### Summary
 
-Of the 9 "opaque" entries identified:
-- **7 are actually TRANSPARENT** and should have their glosses updated
-- **2 are genuinely OPAQUE** or unclear (singnai, thumin)
+Of the 9 "opaque" entries originally identified:
+- **8 are now TRANSPARENT** with updated glosses (commit 4e9afb2)
+- **1 needs review** (lamethuai - etymology unclear)
 
 ---
 
