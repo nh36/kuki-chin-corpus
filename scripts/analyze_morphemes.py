@@ -8108,7 +8108,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'galdona': ('gal-do-na', 'enemy-conquer-NMLZ'),     # 23 - "victory"
         'giatna': ('giat-na', 'hate-NMLZ'),                 # 23 - "hatred"
         'salsuahna': ('sal-suah-na', 'servant-become-NMLZ'), # 22 - "servitude"
-        'ancilna': ('ancil-na', 'anoint-NMLZ'),             # 22 - "anointing"
         'vankoihna': ('van-koih-na', 'sky-put-NMLZ'),       # 22 - "heavenly placing"
         
         # === Session 4 Round 4: More high-frequency words ===
@@ -8511,7 +8510,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hithei': ('hi-thei', 'be-able'),                    # 14x - "can be"
         
         # === Session 4 Round 14: 13x frequency vocabulary ===
-        'husanna': ('husa-nna', 'flood-NMLZ'),               # 13x - "flood"
         'dawnte': ('dawn-te', 'receive-PL'),                 # 13x - "waters/months"
         'ciing': ('ciing', 'barren'),                        # 13x - "barren"
         'tengkhawm': ('teng-khawm', 'dwell-together'),       # 13x - "dwell together"
@@ -8847,7 +8845,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kipsakna': ('kip-sak-na', 'firm-CAUS-NMLZ'),        # 9x - "confirmation" (phonotactic: no ps cluster)
         'phulakna': ('phu-lak-na', 'carry-take-NMLZ'),       # 9x - compound
         'vah': ('vah', 'go.quickly'),                        # 9x - "go quickly"
-        'nawt': ('nawt', 'push'),                            # 9x - "push"
         'ukpa\'': ('uk-pa\'', 'ruler-father.POSS'),          # 9x - "ruler's"
         'guallel': ('gual-lel', 'friend-return'),            # 9x - compound
         
@@ -9510,7 +9507,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gamsate': ('gamsa-te', 'beast-PL'),                   # beasts/wild animals
         'thukte': ('thuk-te', 'deep-PL'),                      # depths (NOT thu-k-te)
         'kangte': ('kang-te', 'gray-PL'),                      # gray/white ones (hair)
-        'kang': ('kang', 'gray'),                              # base - gray/white
         'keelpite': ('keelpi-te', 'she.goat-PL'),              # she-goats (NOT keel-pi-te)
         'keelpi': ('keelpi', 'she.goat'),                      # base - female goat
         'bawngpite': ('bawngpi-te', 'cattle.big-PL'),          # large cattle/kine
@@ -9527,13 +9523,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Session 6 Round 13: More over-segmentation fixes
         'nunte': ('nun-te', 'knop-PL'),                        # knobs/knops (NOT nu-n-te)
         'kalte': ('kal-te', 'kidney-PL'),                      # kidneys (NOT ka-l-te)
-        'kal': ('kal', 'kidney'),                              # base - kidney
         'pangte': ('pang-te', 'branch-PL'),                    # branches
         'gamgite': ('gamgi-te', 'border-PL'),                  # borders/bounds
         
         # Session 6 Round 14: More over-segmentation fixes
         'sante': ('san-te', 'garlic-PL'),                      # garlick (NOT sa-n-te)
-        'san': ('san', 'garlic'),                              # base - garlic
         'zinte': ('zin-te', 'sojourner-PL'),                   # strangers (NOT zi-n-te)
         'khutpite': ('khutpi-te', 'thumb-PL'),                 # thumbs  
         'khutpi': ('khutpi', 'thumb'),                         # base - thumb (hand-big)
@@ -9546,7 +9540,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kungnote': ('kungno-te', 'herb-PL'),                  # herbs (trees bringing forth)
         'kungno': ('kungno', 'herb'),                          # base - herb/plant
         'khawkte': ('khawk-te', 'spirit-PL'),                  # spirits
-        'khawk': ('khawk', 'spirit'),                          # base - spirit
         
         # Session 6 Round 15: More over-segmentation fixes
         'kamte': ('kam-te', 'word-PL'),                        # words/speeches (NOT ka-m-te)
@@ -9573,7 +9566,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tawm': ('tawm', 'produce'),                           # base - produce
         'ngimnate': ('ngimna-te', 'imagination-PL'),           # imaginations/thoughts
         'mukte': ('muk-te', 'lip-PL'),                         # lips (NOT mu-k-te)
-        'muk': ('muk', 'lip'),                                 # base - lip
         
         # Session 6 Round 17: More over-segmentation fixes
         'kawbiate': ('kawbia-te', 'shovel-PL'),                # shovels/basins (NOT ka-wbia-te)
@@ -9605,7 +9597,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'natnate': ('natna-te', 'disease-PL'),                 # diseases (NOT na-tna-te)
         'geelnate': ('geelna-te', 'way-PL'),                   # ways/manners
         'ngiate': ('ngia-te', 'field-PL'),                     # standing corn/fields
-        'ngia': ('ngia', 'field'),                             # base - field/standing grain
         'lungkhamnate': ('lungkhamna-te', 'tribulation-PL'),   # tribulations
         'hauhnate': ('hauhna-te', 'riches-PL'),                # riches/wealth
         'phatnate': ('phatna-te', 'praise-PL'),                # praises
@@ -9681,7 +9672,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'laitaite': ('laitai-te', 'messenger-PL'),             # posts/messengers
         'laitai': ('laitai', 'messenger'),                     # base - messenger/post
         'thupalsatnate': ('thupalsatna-te', 'transgression-PL'),  # transgressions
-        'thupalsatna': ('thu-palsat-na', 'word-transgress-NMLZ'), # transgression
         'namsaute': ('namsau-te', 'knife-PL'),                 # knives/lances
         'vankinusiate': ('vankinusia-te', 'colored.spoil-PL'), # colored spoils
         'vankinusia': ('vankinusia', 'colored.spoil'),         # colored spoil/prey
@@ -9689,10 +9679,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 24: Job, Psalms, Exodus, Chronicles vocabulary
         'khuamluzepnate': ('khuamluzepna-te', 'fillet-PL'),    # fillets/bands
-        'khuamluzepna': ('khuam-luzep-na', 'pole-encircle-NMLZ'), # fillet/band
         'luzep': ('luzep', 'encircle'),                        # base - encircle/surround
         'kihhuainate': ('kihhuaina-te', 'abomination-PL'),     # abominations
-        'kihhuaina': ('kihhuai-na', 'abominate-NMLZ'),         # abomination
         'kihhuai': ('ki-hhuai', 'REFL-abominate'),             # abominate
         'vaihawmnate': ('vaihawmna-te', 'counsel-PL'),         # counsels/secrets
         'dangtakte': ('dangtak-te', 'weary-PL'),               # weary/tired ones
@@ -9712,7 +9700,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lehdote': ('lehdo-te', 'rebellious-PL'),              # rebellious ones
         'lehdo': ('lehdo', 'rebellious'),                      # base - rebellious
         'khawite': ('khawi-te', 'flock-PL'),                   # flocks/herds
-        'khawi': ('khawi', 'flock'),                           # base - flock/herd
         'dawibiate': ('dawibia-te', 'heathen-PL'),             # heathens/gentiles
         'dawibia': ('dawibia', 'heathen'),                     # base - heathen
         'nopsaknate': ('nopsakna-te', 'restoration-PL'),       # restorations
@@ -9720,7 +9707,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hualte': ('hual-te', 'wave-PL'),                      # waves
         'hual': ('hual', 'wave'),                              # base - wave
         'theikungte': ('theikung-te', 'fig.tree-PL'),          # fig trees
-        'theikung': ('thei-kung', 'fruit-tree'),               # fig tree
         
         # Round 26: More Psalms, Proverbs, Genesis, Exodus vocabulary
         'tokhomte': ('tokhom-te', 'throne-PL'),                # thrones
@@ -9743,7 +9729,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 27: Nominalizations from various books
         'sawmsimna': ('sawmsim-na', 'conspiracy-NMLZ'),        # conspiracy
-        'sawmsim': ('sawmsim', 'conspire'),                    # base - conspire
         'zahkona': ('zahko-na', 'reproach-NMLZ'),              # reproach/shame
         'lungzinna': ('lungzin-na', 'darkness-NMLZ'),          # shadow/darkness
         'lungzin': ('lung-zin', 'heart-shadow'),               # shadow/darkness
@@ -9785,10 +9770,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'balnenin': ('balnen-in', 'tear-ERG'),                 # tearing/torn
         'balnen': ('balnen', 'tear'),                          # base - tear/rip
         'luhin': ('luh-in', 'smite-ERG'),                      # smiting/ripping
-        'luh': ('luh', 'smite'),                               # base - smite/rip
         'pelmawh': ('pel-mawh', 'report-evil'),                # report/denounce
         'nawkgawp': ('nawk-gawp', 'overtake-all'),             # overwhelm/tempest
-        'nawk': ('nawk', 'overtake'),                          # base - overtake
         'gawp': ('gawp', 'all'),                               # base - all
         
         # Round 30: More high-frequency partial words
@@ -9799,7 +9782,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tonu': ('tonu', 'mistress'),                          # mistress/lady
         'bai': ('bai', 'rise.early'),                          # rise early/arise
         'dampah': ('dam-pah', 'healthy-clear'),                # cleansed/healed
-        'pah': ('pah', 'clear'),                               # base - clear
         'henhan': ('hen-han', 'spread-spread'),                # spreading
         'hen': ('hen', 'spread'),                              # base - spread
         'hitaseleh': ('hi-ta-se-leh', 'be-that-CONN-COND'),    # although that
@@ -9814,7 +9796,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tau': ('tau', 'signal'),                              # base - signal
         'gelhsa': ('gelh-sa', 'write-PERF'),                   # written
         'nilhin': ('nilh-in', 'anoint-ERG'),                   # anointing
-        'nilh': ('nilh', 'anoint'),                            # base - anoint
         
         # Round 32: More vocabulary from Numbers, Deut, Kings, Judges
         'zawngin': ('zawng-in', 'lack-ERG'),                   # lacking/poor
@@ -9871,7 +9852,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pianma': ('pian-ma', 'born-before'),                  # elder/very old
         'omom': ('om-om', 'exist-exist'),                      # remain/still
         'mutkhiat': ('mut-khiat', 'blow-away'),                # blow away
-        'mut': ('mut', 'blow'),                                # base - blow
         'nuihsat': ('nuih-sat', 'laugh-toward'),               # laugh at
         'imcip': ('im-cip', 'hide-tight'),                     # hide/conceal
         'im': ('im', 'hide'),                                  # base - hide
@@ -9901,11 +9881,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sang': ('sang', 'high'),                              # base - high
         'dialkaih': ('dial-kaih', 'belt-loosen'),              # girdle/belt
         'dial': ('dial', 'belt'),                              # base - belt
-        'kaih': ('kaih', 'loosen'),                            # base - loosen
         'khuakulhpi': ('khua-kulh-pi', 'town-wall-big'),       # fenced wall
         'kulhpi': ('kulh-pi', 'wall-big'),                     # great wall
         'mulkimhuai': ('mul-kim-huai', 'full-all-bad'),        # horrible
-        'mul': ('mul', 'full'),                                # base - full
         'thuvanpi': ('thu-van-pi', 'word-write-master'),       # scribe
         'thuakkhawm': ('thuak-khawm', 'suffer-together'),      # suffer together
         'tangsak': ('tang-sak', 'give-CAUS'),                  # give/provide
@@ -9974,7 +9952,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sutan': ('sut-an', 'break-NEG'),                      # not break
         'sut': ('sut', 'break'),                               # base - break
         'kibangsak': ('ki-bang-sak', 'REFL-equal-CAUS'),       # sound alarm
-        'bang': ('bang', 'equal'),                             # base - equal
         'laipi': ('lai-pi', 'midst-big'),                      # lifetime/while
         'lai': ('lai', 'midst'),                               # base - midst
         'dingkhawm': ('ding-khawm', 'stand-together'),         # stand together
@@ -9992,7 +9969,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 40: More vocabulary from Deuteronomy, Joshua, Leviticus, Numbers
         'makna': ('mak-na', 'divorce-NMLZ'),                   # divorcement
-        'mak': ('mak', 'divorce'),                             # base - divorce
         'thehthangna': ('theh-thang-na', 'throw-scatter-NMLZ'), # scattering
         'theh': ('theh', 'throw'),                             # base - throw
         'kihuhna': ('ki-huh-na', 'REFL-help-NMLZ'),             # help/safety
@@ -10024,7 +10000,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'golna': ('gol-na', 'divide-NMLZ'),                    # treasury/division
         'gol': ('gol', 'divide'),                              # base - divide
         'simang': ('sim-ang', 'count-perish'),                 # perish/destroy
-        'ang': ('ang', 'be/become'),                           # suffix - resultative
         'nuamzaw': ('nuam-zaw', 'want-more'),                  # prefer/rather
         'maimom': ('mai-mom', 'face-web'),                     # spider web
         'mom': ('mom', 'web'),                                 # base - web
@@ -10036,7 +10011,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tehtheih': ('teh-theih', 'measure-able'),             # comparable/equal
         'khollo': ('khol-lo', 'care-NEG'),                     # forget/not care
         'cihsan': ('cih-san', 'say-rely'),                     # trust/declare trust
-        'san': ('san', 'rely'),                                # base - rely
         
         # Round 42: More vocabulary from Kings, Chronicles, Psalms, Proverbs
         'satvui': ('sat-vui', 'strike-dust'),                  # smash to pieces
@@ -10073,9 +10047,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'meiphual': ('mei-phual', 'fire-field'),               # furnace
         'phual': ('phual', 'field'),                           # base - field
         'kipakta': ('ki-pak-ta', 'REFL-wait-TA'),              # wait patiently
-        'pak': ('pak', 'wait'),                                # base - wait
         'suangkang': ('suang-kang', 'stone-pillar'),           # marble pillar
-        'kang': ('kang', 'pillar'),                            # base - pillar
         'suangphah': ('suang-phah', 'stone-floor'),            # pavement
         'manlah': ('man-lah', 'time-ADV'),                     # afterward/later
         'themthum': ('them-thum', 'dawn-early'),               # every moment
@@ -10084,7 +10056,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gakcip': ('gak-cip', 'trap-tight'),                   # snare/gin
         'gak': ('gak', 'trap'),                                # base - trap
         'kikaikhia': ('ki-kai-khia', 'REFL-dig-out'),          # uproot
-        'kai': ('kai', 'dig'),                                 # base - dig
         'thangsiah': ('thang-siah', 'speak-compose'),          # conspire/encourage
         'siah': ('siah', 'compose'),                           # base - compose
         'maban': ('ma-ban', 'own-matter'),                     # concerning
@@ -10096,7 +10067,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sunteng': ('sun-teng', 'basket-basket'),              # baskets
         'sun': ('sun', 'basket'),                              # base - basket
         'kihual': ('ki-hual', 'REFL-bind'),                    # interweave/wreathen
-        'hual': ('hual', 'bind'),                              # base - bind
         'phet': ('phet', 'twin'),                              # twins
         'lawmnu': ('lawm-nu', 'friend-female'),                # bride/companion
         'seelcip': ('seel-cip', 'cover-tight'),                # conceal
@@ -10104,7 +10074,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'puksisak': ('puk-si-sak', 'attack-die-CAUS'),         # cause to die/kill
         'puk': ('puk', 'attack'),                              # base - attack
         'hehlua': ('heh-lua', 'angry-excessive'),              # burst in anger
-        'lua': ('lua', 'excessive'),                           # base - excessive
         'kilaak': ('ki-laak', 'REFL-show'),                    # present oneself/appear
         'laak': ('laak', 'show'),                              # base - show
         'suahkhiat': ('suah-khiat', 'born-out'),               # come out/emerge
@@ -10124,11 +10093,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 45: More vocabulary from Genesis, Numbers, Deuteronomy, Judges, Kings, Job, Psalms
         'bengin': ('beng-in', 'hunt-ERG'),                     # hunting
-        'beng': ('beng', 'hunt'),                              # base - hunt
         'haza': ('haza', 'envy'),                              # envy/jealousy
         'gega': ('gega', 'red'),                               # red
         'kihut': ('ki-hut', 'REFL-arm'),                       # arm oneself
-        'hut': ('hut', 'arm'),                                 # base - arm (weapon)
         'pet': ('pet', 'sting'),                               # sting/bite/poison
         'pelem': ('pelem', 'lacking'),                         # lacking/missing
         'geivial': ('gei-vial', 'edge-knop'),                  # ornament/knop
@@ -10151,7 +10118,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 46: More vocabulary from Ezekiel, Matthew, Luke, Genesis, Exodus, Leviticus
         'hauhlawh': ('hauh-lawh', 'grasp-PERF'),               # extort
-        'hauh': ('hauh', 'grasp'),                             # base - grasp
         'hot': ('hot', 'steer'),                               # pilot/steer
         'tunuam': ('tu-nuam', 'sit-pleasant'),                 # best seats
         'tu': ('tu', 'sit'),                                   # base - sit
@@ -10168,9 +10134,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kisuang': ('ki-suang', 'REFL-pure'),                  # be pure/innocent
         'kibehlaplap': ('ki-behlap-lap', 'REFL-grow-REDUP'),   # grow greatly
         'tenkhop': ('ten-khop', 'dwell-join'),                 # settle together
-        'khop': ('khop', 'join'),                              # base - join
         'ki-ip': ('ki-ip', 'REFL-hold'),                       # restrain oneself
-        'ip': ('ip', 'hold'),                                  # base - hold
         'ki-ipzo': ('ki-ip-zo', 'REFL-hold-able'),             # able to restrain
         'kiciangtan': ('ki-ciang-tan', 'REFL-straight-assign'), # portion assigned
         'tan': ('tan', 'assign'),                              # base - assign
@@ -10182,7 +10146,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thokang': ('tho-kang', 'rise-extend'),                # stretch out
         'denggawp': ('deng-gawp', 'strike-break'),             # smash/break
         'deng': ('deng', 'strike'),                            # base - strike
-        'gawp': ('gawp', 'break'),                             # base - break
         'kot': ('kot', 'ready'),                               # equipped/ready
         'kingen': ('ki-ngen', 'REFL-request'),                 # be demanded
         'kimciang': ('kim-ciang', 'complete-straight'),        # span end to end
@@ -10214,9 +10177,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gi': ('gi', 'marker'),                                # base - marker
         'khung': ('khung', 'roof'),                            # roof
         'taikeek': ('tai-keek', 'flee-ITER'),                  # flee away
-        'keek': ('keek', 'ITER'),                              # suffix - iterative
         'guallelsak': ('gual-lel-sak', 'enemy-change-CAUS'),   # defeat/cause smitten
-        'lel': ('lel', 'change'),                              # base - change
         
         # Round 48: More vocabulary from Judges, Samuel, Kings, Chronicles, Ezra, Job, Psalms
         'hanthot': ('han-thot', 'begin-stir'),                 # begin moving
@@ -10331,7 +10292,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'phal': ('phal', 'shut'),                              # base - shut
         'dozo': ('do-zo', 'throw-able'),                       # able to cast
         'lawptakin': ('lawp-tak-in', 'shake-truly-ERG'),       # trembling
-        'lawp': ('lawp', 'shake'),                             # base - shake
         'tak': ('tak', 'truly'),                               # base - truly
         'lonei': ('lo-nei', 'NEG-have'),                       # tares/without
         'kimtakin': ('kim-tak-in', 'complete-truly-ERG'),      # thoroughly
@@ -10358,14 +10318,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'talkolh': ('tal-kolh', 'bald-head'),                  # bald forehead
         'kolh': ('kolh', 'head'),                              # base - head
         'kikhakcip': ('ki-khak-cip', 'REFL-lock-tight'),       # be locked
-        'khak': ('khak', 'lock'),                              # base - lock
         'zuthawl': ('zu-thawl', 'slave-female'),               # female slave
         'ki-apsa': ('ki-ap-sa', 'REFL-devote-already'),        # devoted
-        'ap': ('ap', 'devote'),                                # base - devote
         'teep': ('teep', 'fringe'),                            # fringe
         'kipumsil': ('ki-pum-sil', 'REFL-body-wash'),          # bathe
         'pum': ('pum', 'body'),                                # base - body
-        'sil': ('sil', 'wash'),                                # base - wash
         'phul': ('phul', 'spring'),                            # spring (water)
         'thoto': ('tho-to', 'rise-UP'),                        # arise
         'to': ('to', 'up'),                                    # base - up
@@ -10384,7 +10341,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kisugawp': ('ki-su-gawp', 'REFL-crush-break'),        # oppressed
         'lahkhiat': ('lah-khiat', 'reveal-out'),               # reveal
         'lamkal': ('lam-kal', 'way-middle'),                   # on the way
-        'kal': ('kal', 'middle'),                              # base - middle
         'lengkhia-in': ('leng-khia-in', 'line-out-ERG'),       # draw out
         'leng': ('leng', 'line'),                              # base - line
         'kuansuk': ('kuan-suk', 'attack-fall'),                # slay
@@ -10431,7 +10387,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pumtangin': ('pum-tang-in', 'body-on-ERG'),           # upon body
         'kithun': ('ki-thun', 'REFL-press'),                   # burst
         'peekpi': ('peek-pi', 'spread-big'),                   # spread out
-        'peek': ('peek', 'spread'),                            # base - spread
         'mei-ek': ('mei-ek', 'fire-sneeze'),                   # neesings/light
         'vutlevai': ('vut-levai', 'dust-spread'),              # dust and ashes
         'levai': ('levai', 'spread'),                          # base - spread
@@ -10463,7 +10418,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kikup': ('ki-kup', 'REFL-hide'),                      # hide oneself
         'kup': ('kup', 'hide'),                                # base - hide
         'kinamin': ('ki-nam-in', 'REFL-kiss-ERG'),             # kiss/salute
-        'nam': ('nam', 'kiss'),                                # base - kiss
         'taangkhiasak': ('taang-khia-sak', 'time-out-CAUS'),   # put forth
         'leikang': ('lei-kang', 'earth-burn'),                 # burn in field
         'mawhmaisak': ('mawh-mai-sak', 'sin-face-CAUS'),       # mock
@@ -10483,7 +10437,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thonginn': ('thong-inn', 'prison-house'),             # prison house
         'thong': ('thong', 'prison'),                          # base - prison
         'kinawtngil': ('ki-nawt-ngil', 'REFL-smooth-arrow'),   # polished shaft
-        'nawt': ('nawt', 'smooth'),                            # base - smooth
         'ngil': ('ngil', 'arrow'),                             # base - arrow
         'kizep': ('ki-zep', 'REFL-clothe'),                    # be clothed
         'zep': ('zep', 'clothe'),                              # base - clothe
@@ -10509,7 +10462,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nop': ('nop', 'want'),                                # base - want
         'kitawphah': ('ki-taw-phah', 'REFL-receive-place'),    # receive seed
         'kikhamval': ('ki-kham-val', 'REFL-gather-basket'),    # took up baskets
-        'kham': ('kham', 'gather'),                            # base - gather
         'mannop': ('man-nop', 'price-want'),                   # willing/hear
         'thongkiat': ('thong-kiat', 'prison-extract'),         # came unto prison
         'kitheithang': ('ki-thei-thang', 'REFL-know-spread'),  # blaze abroad
@@ -10522,7 +10474,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'dongtangsak': ('dong-tang-sak', 'stumble-on-CAUS'),   # put stumblingblock
         'dong': ('dong', 'stumble'),                           # base - stumble
         'kilehngatin': ('ki-leh-ngat-in', 'REFL-return-time-ERG'), # say again
-        'ngat': ('ngat', 'time'),                              # base - time
         'zokhin': ('zok-hin', 'finish-sit'),                   # finished course
         'zok': ('zok', 'finish'),                              # base - finish
         
@@ -10538,19 +10489,16 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zawh': ('zawh', 'able'),                              # base - able
         'tuununo': ('tuu-nu-no', 'ewe-female-small'),          # ewe lamb
         'makeng': ('ma-keng', 'EMPH-tree'),                    # grove/tree
-        'keng': ('keng', 'tree'),                              # base - tree
         'temta': ('tem-ta', 'fire-hold'),                      # fire in hand
         'butsak': ('but-sak', 'face-CAUS'),                    # put upon face
         'but': ('but', 'face'),                                # base - face (alt)
         'kihehnem': ('ki-heh-nem', 'REFL-angry-comfort'),      # comfort oneself
-        'nem': ('nem', 'comfort'),                             # base - comfort
         'galmat': ('gal-mat', 'enemy-steal'),                  # stolen away
         'mat': ('mat', 'steal'),                               # base - steal
         'khelkom': ('khel-kom', 'hollow-touch'),               # touched hollow
         'kom': ('kom', 'touch'),                               # base - touch
         'khel': ('khel', 'hollow'),                            # hollow (of thigh)
         'dawksak': ('dawk-sak', 'bind-CAUS'),                  # bound upon
-        'dawk': ('dawk', 'bind'),                              # base - bind
         'pipa': ('pi-pa', 'great-man'),                        # chief/officer
         'phai': ('phai', 'meadow'),                            # meadow
         'kikhailum': ('ki-khai-lum', 'REFL-hang-round'),       # restored/hanged
@@ -10564,7 +10512,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'vik': ('vik', 'rod'),                                 # rod
         'lomkhat': ('lom-khat', 'bundle-one'),                 # bunch (of hyssop)
         'phialgawp': ('phial-gawp', 'morning-watch'),          # morning watch
-        'phial': ('phial', 'morning'),                         # base - morning
         'vukkhal': ('vuk-khal', 'frost-dew'),                  # hoar frost
         'vuk': ('vuk', 'frost'),                               # base - frost
         'khal': ('khal', 'dew'),                               # base - dew
@@ -10612,7 +10559,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'dahlua': ('dah-lua', 'weep-exceed'),                  # great sorrow, grief
         "pi'": ('pi', 'great'),                                # great (with apostrophe)
         'uhcin': ('uh-cin', 'PL-COND'),                        # conditional plural marker
-        'le-uhcin': ('le-uh-cin', 'and-PL-COND'),              # lest (conditional warning)
         'leuhcin': ('le-uh-cin', 'and-PL-COND'),               # lest (without hyphen)
         
         # Round 61: Fixing partial analyses
@@ -10811,7 +10757,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nene': ('ne-ne', 'eat-REDUP'),                        # eat of, eating
         'thallawng': ('thal-lawng', 'bow-quiver'),             # quiver (for arrows)
         'keelhon': ('keel-hon', 'call-flock'),                 # fetch from flock
-        'thalawh': ('thal-awh', 'bow-?'),                      # younger (daughter)
         'lupkhawm': ('lup-khawm', 'lie.down-together'),        # go in unto, consummate
         'thuneu': ('thu-neu', 'word-small'),                   # small matter
         'ngahmun': ('ngah-mun', 'get-place'),                  # ford, crossing place
@@ -10880,7 +10825,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sutpi': ('sut-pi', 'spoil-great'),                    # chief cornerstone
         
         # Round 70: High-frequency partials
-        'thalawh': ('thal-awh', 'bow-young'),                  # younger (daughter)
         'nawizu': ('nawi-zu', 'firstfruit-bring'),             # firstfruits
         'kiliahna': ('ki-liah-na', 'REFL-veil-NMLZ'),          # veil, covering
         'khutdim': ('khut-dim', 'hand-full'),                  # handful
@@ -11035,11 +10979,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nekkhawmna': ('nek-khawm-na', 'eat-together-NMLZ'),   # communion
         
         # Round 74: More partials (2026-03-08)
-        'pawlkhatte': ('pawl-khat-te', 'group-one-PL'),        # companies (1 Sam 8:12)
         'cian': ('cian', 'light'),                             # light (Gen 1:3)
         'thukhente': ('thu-khen-te', 'word-judge-PL'),         # judges (Ex 21:6)
-        'nengniamte': ('neng-niam-te', 'oppress-low-PL'),      # those oppressed (Jdg 2:18)
-        'kumpinu': ('kumpi-nu', 'king-female'),                # queen (1 Kgs 10:1)
         'paubaan': ('pau-baan', 'speak-true'),                 # perfect (Gen 6:9)
         'khongkhai': ('khong-khai', 'magic-open'),             # diviner (Deut 18:14)
         'umgui': ('um-gui', 'be-gourd'),                       # gourd (Jonah 4:6)
@@ -11200,7 +11141,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         "beisakin,": ('bei-sak-in', 'pierce-CAUS-INST'),
         
         # Round 79: More partials (2026-03-08)
-        'mithagol': ('mitha-gol', 'person-giant'),                 # giant (2 Sam 21:18)
         "mithagolte'": ('mitha-gol-te', 'person-giant-PL'),        # giants
         'kigelhte': ('ki-gelh-te', 'REFL-expel-PL'),               # expel them (Josh 23:5)
         'paikhawmin': ('pai-khawm-in', 'go-together-INST'),        # went with (Jdg 1:17)
@@ -11258,7 +11198,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kawk': ('kawk', 'upright/look.toward'),                   # morally upright, face
         'daupaina': ('daupai-na', 'prosper-NMLZ'),                 # prosperity
         'liahna': ('liah-na', 'dwell-NMLZ'),                       # dwelling place, secret place
-        'liah': ('liah', 'lick/dwell'),                            # lick, dwell
         'leibatna': ('leibat-na', 'debt-NMLZ'),                    # creditor (debt claim)
         'leibatnapa': ('leibat-na-pa', 'debt-NMLZ-NMLZ.M'),        # creditor (person)
         'mittawtna': ('mittawt-na', 'blind-NMLZ'),                 # blindness
@@ -11299,7 +11238,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khamseekpa': ('kham-seek-pa', 'gold-smith-NMLZ.M'),       # goldsmith
         'sawlbuk': ('sawl-buk', 'leaf-booth'),                     # booth, tabernacle
         'gawpna': ('gawp-na', 'trample-NMLZ'),                     # trampling
-        'gawp': ('gawp', 'trample'),                               # trample, tread
         'dangtakna': ('dang-tak-na', 'thirst-ADV-NMLZ'),           # thirst
         'gentelna': ('gen-tel-na', 'speak-understand-NMLZ'),       # explanation, entrance
         'dawnkikna': ('dawn-kik-na', 'answer-return-NMLZ'),        # reply, answer
@@ -12340,7 +12278,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nguntang': ('ngun-tang', 'silver-choice'),                # choice silver
         'leenmang': ('leen-mang', 'whirlwind-pass'),               # whirlwind passeth
         'kipuk': ('ki-puk', 'REFL-fall'),                          # people fall
-        'kiphasakte': ('ki-pha-sak-te', 'REFL-save-CAUS-PL'),      # saved people
         'hauhnop': ('hauh-nop', 'oppress-increase'),               # oppresseth
         'tawipa': ('tawi-pa', 'form-NMLZ'),                        # the great former
         'phengtat': ('pheng-tat', 'vision-perish'),                # no vision perish
@@ -12487,10 +12424,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'simna': ('sim-na', 'count-NMLZ'),                         # numbered
         'note': ('no-te', 'you-PL'),                               # you
         'sangna': ('sang-na', 'high-NMLZ'),                        # high places
-        'khuaneute': ('khua-neu-te', 'village-small-PL'),          # villages
         'ancilna': ('an-cil-na', 'corn-thresh-NMLZ'),              # threshingfloor
         'omlai': ('om-lai', 'rest-still'),                         # rest
-        'kaikhia': ('kai-khia', 'draw-out'),                       # draw
         # Round 114: More vocabulary for 99%
         'hawi': ('hawi', 'holy'),                                  # holy
         'kihuansa': ('ki-huan-sa', 'REFL-shave-PAST'),             # shaven
@@ -12523,13 +12458,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hehpihna': ('heh-pih-na', 'favor-with-NMLZ'),             # favour
         'siampi': ('siam-pi', 'priest-great'),                     # priest
         'sihna': ('sih-na', 'blood-NMLZ'),                         # blood/life
-        'lingsa': ('ling-sa', 'tremble-PAST'),                     # trembled
         'koihna': ('koih-na', 'set-NMLZ'),                         # set over
         'kisa': ('ki-sa', 'REFL-PAST'),                            # grieved
         'ngaihsutna': ('ngaih-sut-na', 'think-NMLZ'),              # thoughts
         'thukhenna': ('thu-khen-na', 'word-judge-NMLZ'),           # judge
         'suksiatna': ('suk-siat-na', 'destroy-NMLZ'),              # destruction
-        'bawlpha': ('bawl-pha', 'fortify-strong'),                 # fortified
         'kidona': ('ki-don-a', 'REFL-war-LOC'),                    # war
         'sumkholna': ('sum-khol-na', 'silver-treasure-NMLZ'),      # treasuries
         # Round 115: Judges and historical vocabulary
@@ -12544,10 +12477,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kisingin': ('ki-sing-in', 'REFL-shake-INST'),             # shake myself
         'gualnuam': ('gual-nuam', 'sacrifice-rejoice'),            # rejoice sacrifice
         'kizuihna': ('ki-zuih-na', 'REFL-keep-NMLZ'),              # keeping
-        'khuasung': ('khua-sung', 'village-inside'),               # within gates
         'kizem': ('ki-zem', 'REFL-twine'),                         # twined
         # Round 116: Common word+suffix combinations
-        'liangkoah': ('liang-ko-ah', 'shoulder-both-LOC'),         # on both shoulders
         'napiun': ('na-pi-un', '2PL-great-3PL'),                   # but/however
         'zangleia': ('zang-lei-a', 'east-field-LOC'),              # from east LOC
         'khangsimnaah': ('khang-sim-na-ah', 'generation-divide-NMLZ-LOC'), # generations LOC
@@ -12703,7 +12634,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'topain': ('topa-in', 'lord-INST'),                        # lord INST
         'thuakzoin': ('thuak-zo-in', 'endure-able-INST'),          # endure INST
         # Round 120: More vocabulary and suffix forms
-        'muhdahhuai': ('muh-dah-huai', 'see-hate-mix'),            # troubled
         'semsemna': ('sem-sem-na', 'hate-REDUP-NMLZ'),             # hated more
         'kapsain': ('kap-sa-in', 'mourn-PAST-INST'),               # mourning INST
         'luahnaah': ('luah-na-ah', 'issue-NMLZ-LOC'),              # issue LOC
@@ -12738,13 +12668,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'poplar': ('poplar', 'poplar'),                            # poplar
         'leikhop': ('lei-khop', 'earth-twelve'),                   # twelve tribes
         'kopte': ('kop-te', 'knop-PL'),                            # knops
-        'gukte': ('guk-te', 'bowl-PL'),                            # bowls
         'kidemnaah': ('ki-dem-na-ah', 'REFL-condemn-NMLZ-LOC'),    # condemn LOC
         'zonnain': ('zon-na-in', 'seek-NMLZ-INST'),                # seeking INST
         'khusain': ('khu-sa-in', 'feast-PAST-INST'),               # feast INST
         'kheun': ('khe-un', 'leg-3PL'),                            # legs
         'ganun': ('gan-un', 'bear-3PL'),                           # bear 3PL
-        'lamun': ('lam-un', 'direction-3PL'),                      # directions
         'tula': ('tul-a', 'foot-LOC'),                             # on foot
         'gala': ('gal-a', 'little-LOC'),                           # little LOC
         'dahluain': ('dah-lua-in', 'grieve-too-INST'),             # sorrow INST
@@ -12812,17 +12740,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tanaute': ('ta-nau-te', 'child-small-PL'),                # children PL
         'zawthin': ('zawn', 'north'),                              # northward
         'kipna': ('kip-na', 'confirm-NMLZ'),                       # confirm
-        'tonu': ('to-nu', 'lord-woman'),                           # mistress
         'sawmnihte': ('sawm-nih-te', 'ten-two-PL'),                # twenty PL
         'saang': ('saang', 'basket'),                              # basket
         # Round 124: More narrative vocabulary
         'khanghamte': ('khang-ham-te', 'generation-old-PL'),       # old ones
-        'sawmngate': ('sawm-nga-te', 'ten-five-PL'),               # fifties
         'sawmnih': ('sawm-nih', 'ten-two'),                        # twenty
         'giahphual': ('giah-phual', 'carry-pass'),                 # pass over
         'giahphualate': ('giah-phual-a-te', 'carry-pass-NOM-PL'),  # passed over PL
         'valhtumin': ('valh-tum-in', 'swallow-COMPL-INST'),        # swallow up INST
-        'muhdahhuai': ('muh-dah-huai', 'smell-bad-hateful'),       # stink
         'muhdahhuaiin': ('muh-dah-huai-in', 'smell-bad-hateful-INST'),  # stink INST
         'nesakin': ('ne-sak-in', 'eat-CAUS-INST'),                 # eating INST
         'semsemnain': ('sem-sem-na-in', 'divide-REDUP-NMLZ-INST'), # by themselves INST
@@ -12836,7 +12761,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khaknelhin': ('khak-nel-hin', 'shut-door-DECL'),           # shut/locked
         'nawtsuak': ('nawt-suak', 'sweep-away'),                    # sweep away
         'satkhamin': ('sat-kham-in', 'smite-pierce-INST'),          # smite through
-        'kizem': ('ki-zem', 'REFL-weave'),                          # woven
         'satui': ('sa-tui', 'meat-broth'),                          # broth
         'dinglai': ('ding-lai', 'stand-time'),                      # standing time
         'sukkhia': ('suk-khia', 'wring-out'),                       # wring out
@@ -12844,7 +12768,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thumun': ('thu-mun', 'word-blow'),                         # trumpet (blow)
         'kipahtawina': ('ki-pah-tawi-na', 'REFL-honor-NMLZ'),       # honor
         'kigalneihna': ('ki-gal-neih-na', 'REFL-enemy-have-NMLZ'),  # enmity
-        'liim': ('liim', 'shadow'),                                  # shadow
         'liimte': ('liim-te', 'shadow-PL'),                         # shadows
         'pawldang': ('pawl-dang', 'group-other'),                   # other company
         'sawlkik': ('sawl-kik', 'send-ITER'),                       # send again
@@ -13034,7 +12957,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Round 142: More partial fixes
         'tutna': ('tut-na', 'sleep-NMLZ'),                          # bed/lying place
         'sagihna': ('sagih-na', 'seven-NMLZ'),                      # seventh
-        'zahtakna': ('zahtak-na', 'fear-NMLZ'),                     # fear (of God)
         'zanpi': ('zan-pi', 'night-big'),                           # in the night
         'zuazuate': ('zuazua-te', 'willing-PL'),                    # freewill offerings
         'namcin': ('nam-cin', 'nation-say'),                        # salutation
@@ -13051,9 +12973,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # 'kiimnai': see line ~10850
         # 'hehsa': see line ~12541
         # 'hutna': see line ~9453
-        'khekna': ('khek-na', 'give.in-NMLZ'),                      # give in exchange
         'khimsakin': ('khim-sak-in', 'crown-CAUS-INST'),            # put crown
-        'kiphasakte': ('ki-pha-sak-te', 'REFL-good-CAUS-PL'),       # afflicted saved
         'kimawlsak': ('ki-mawl-sak', 'REFL-mock-CAUS'),             # made sport
         'ngunseek': ('ngun-seek', 'silver-forge'),                  # founder (silversmith)
         'otsan': ('ot-san', 'cry-voice'),                           # aileth
@@ -13078,7 +12998,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         "kua-a'": ('kua-a', 'who-NOM.POSS'),                         # 3x - who's
         'khekna-in': ('khek-na-in', 'exchange-NMLZ-ERG'),            # 3x - in exchange
         "phulapa'": ('phu-la-pa', 'avenger-NMLZ-M.POSS'),            # 3x - avenger's
-        'phulapa': ('phu-la-pa', 'avenge-NMLZ-M'),                   # avenger (of blood)
         "thahatte'": ('tha-hat-te', 'strength-strong-PL.POSS'),      # 3x - mighty ones'
         "tupa'": ('tu-pa', 'grandson-M.POSS'),                       # 3x - grandson's
         "meigongnu'": ('meigong-nu', 'widow-F.POSS'),                # 3x - widow's (mei 'female' TB *mei)
@@ -13094,11 +13013,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         "sungpa'": ('sung-pa', 'inside-M.POSS'),                      # 2x - father-in-law's
         'sungpa': ('sung-pa', 'inside-M'),                            # father-in-law
         "kopte'": ('kop-te', 'frog-PL.POSS'),                         # 2x - frogs'
-        'kopte': ('kop-te', 'frog-PL'),                               # frogs
         "gukte'": ('guk-te', 'lice-PL.POSS'),                         # 2x - lice's
-        'gukte': ('guk-te', 'lice-PL'),                               # lice
         "lite'": ('li-te', 'river-PL.POSS'),                          # 2x - rivers'
-        'lite': ('li-te', 'river-PL'),                                # rivers
         "sun'": ('sun', 'day.POSS'),                                  # 2x - day's
         'mongte-ah': ('mong-te-ah', 'throat-PL-LOC'),                 # 2x - at throats/necks
         'li-a': ('li-a', 'river-LOC'),                                # 2x - at river/four
@@ -13309,7 +13225,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'taai': ('taai', 'flee'),                                     # 2x - flee
         'langpan': ('lang-pan', 'side-from'),                         # 2x - from side
         "tagahte'": ('ta-gah-te', 'child-fruit-PL.POSS'),             # 2x - offspring's
-        'tagahte': ('ta-gah-te', 'child-fruit-PL'),                   # offspring
         'neihsunte': ('neih-sun-te', 'have-day-PL'),                  # 2x - daily having
         'gawi-in': ('gawi-in', 'hook-ERG'),                           # 2x - with hook
         "meigongte'": ('meigong-te', 'widow-PL.POSS'),                # 2x - widows' (mei 'female' TB *mei)
@@ -13368,7 +13283,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'napna': ('nap-na', 'thick-NMLZ'),                        # thickness
         'namtuam': ('nam-tuam', 'tribe-kind'),                    # various tribes
         # Round 125: Hyphenated suffix forms
-        'napiun': ('napi-un', 'but-PL.IMP'),                       # but (imperative pl)
         'notea': ('no-te-a', 'young-PL-NOM'),                      # young ones
         'nomaua': ('no-mau-a', 'young-also-NOM'),                  # also young
         'nuaiate': ('nuai-a-te', 'below-NOM-PL'),                  # those below
@@ -13734,7 +13648,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bualte-a': ('bual-te-a', 'garden-PL-NOM'),
         'diphumna': ('dip-hum-na', 'dip-place-NMLZ'),              # dipping place
         'dip-humna': ('dip-hum-na', 'dip-place-NMLZ'),
-        'zonna': ('zo-na', 'finish-NMLZ'),                         # finishing
         'zo-na': ('zo-na', 'finish-NMLZ'),
         
         # === Other compounds ===
@@ -13816,7 +13729,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lawtkhia-in': ('lawt-khia-in', 'jump-exit-ERG'),
         'tuka': ('tu-ka', 'now-1SG'),                              # now I
         'tu-ka': ('tu-ka', 'now-1SG'),
-        'vasakalaohte': ('va-sa-kala-oh-te', 'bird-flesh-owl-type-PL'), # owls
         'vasa-kalaohte': ('va-sa-kala-oh-te', 'bird-flesh-owl-type-PL'),
         "vasa-kalaohte'": ("va-sa-kala-oh-te'", 'bird-flesh-owl-type-PL.POSS'),
         'nalnah': ('nal-na-ah', '2SG-NMLZ-LOC'),                   # your place
@@ -13977,7 +13889,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # 'hauh' = strong/vigor, thakhauhsak = make-strong = strengthen
         'thakhatin': ('thak-hat-in', 'new-strong-ERG'),             # freshly/recently (56x)
         'thakhauhsak': ('thak-hauh-sak', 'new-strong-CAUS'),        # strengthen (9x) 
-        'kithakhauhsak': ('ki-thak-hauh-sak', 'REFL-new-strong-CAUS'), # strengthen oneself
         'kithakhauhsakin': ('ki-thak-hauh-sak-in', 'REFL-new-strong-CAUS-ERG'),
         'thakhauhsakzaw': ('thak-hauh-sak-zaw', 'new-strong-CAUS-MORE'), # strengthen more
         
@@ -14040,7 +13951,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'taiibawl': ('taii-bawl', 'rebuke-make'),                   # upbraid (Matt 11:20)
         'popah': ('po-pah', 'spring-up'),                           # spring up (Matt 13:5)
         'lehmut': ('leh-mut', 'turn-contrary'),                     # contrary/toss (Matt 14:24)
-        'khenkhit': ('khen-khit', 'condemn-away'),                  # condemn (Matt 20:18)
         'henkhit': ('hen-khit', 'condemn-away'),                    # condemn variant
         'lehtai': ('leh-tai', 'turn-rebuke'),                       # rebuke (Mark 8:33)
         'kinakko': ('ki-nak-ko', 'REFL-cry-loud'),                  # cry out (Mark 15:14)
@@ -14111,7 +14021,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ansite': ('ansi-te', 'chaff-PL'),                           # chaff (Psalm 35:5)
         'kaisakin': ('ka-isak-in', '1SG-rise.CAUS-ERG'),             # rise (Psalm 135:7)
         'kongkhuam': ('kong-khuam', '1SG→3-threshold'),              # threshold (Ezekiel 43:8)
-        'antan': ('an-tan', '3PL-fast'),                             # fast (Jonah 3:5) - tan = fast
         'kamciamsa': ('ka-mciam-sa', '1SG-vow-NOM'),                  # vowed (Malachi 1:14)
         'santak': ('san-tak', 'stand-remain'),                       # stood (Matthew 2:9)
         'kahtohpih': ('kah-toh-pih', 'climb-up-with'),               # set (Matthew 4:5) - phonotactic fix
@@ -14213,22 +14122,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kipsaksa': ('kip-sak-sa', 'firm-CAUS-PERF'),                # established (3x)
         'kipsaknate': ('kip-sak-na-te', 'firm-CAUS-NMLZ-PL'),        # covenants (2x)
         # kihhuai (66x) - abomination - ki + huai (not ki + hhuai)
-        'kihhuai': ('ki-huai', 'REFL-abominate'),                    # abomination (Genesis 43:32)
-        'kihhuaina': ('ki-huai-na', 'REFL-abominate-NMLZ'),          # abomination (9x)
-        'kihhuaite': ('ki-huai-te', 'REFL-abominate-PL'),            # abominations (8x)
-        'kihhuainate': ('ki-huai-na-te', 'REFL-abominate-NMLZ-PL'),  # abominations (5x)
         'kihhuaisa': ('ki-huai-sa', 'REFL-abominate-PERF'),          # abominated (1x)
         # kahto compounds - should be kah-to (climb-up), not ka-hto
-        'kahtohna': ('kah-toh-na', 'climb-up-NMLZ'),                 # ascent (10x)
         'kahtoin': ('kah-to-in', 'climb-up-ERG'),                    # ascending
-        'kahto-in': ('kah-to-in', 'climb-up-ERG'),                   # ascending (hyphenated)
         # pahtawi (8x) - dwell with / honor - pah + tawi
         'pahtawiin': ('pah-tawi-in', 'honor-carry-ERG'),             # dwelling.with
-        'pahtawi-in': ('pah-tawi-in', 'honor-carry-ERG'),            # hyphenated
         # husanna - foreign word, leave unsegmented
         'husanna': ('husanna', 'hosanna'),                           # hosanna (13x)
         # anne - proper noun Anna
-        'anne': ('Anne', 'ANNA'),                                    # Anna (11x)
         # Round 169c: Fix kiC compounds being misanalyzed as ki-C
         # kim (66x standalone) = "fully/all" - compounds should be kim-X not ki-mX
         'kimin': ('kim-in', 'fully-ERG'),                            # completely (9x)
@@ -14237,9 +14138,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kinin': ('kin-in', 'quickly-ERG'),                          # quickly (7x)
         # Round 169d: More phonotactic fixes for invalid onsets
         # kilkel (5x) - 'clear/pure' (crystal, glass) - reduplication kil~kel
-        'kilkel': ('kil~kel', 'clear~RED'),                          # clear/pure (Jer 18:14, Rev 4:6)
         # kansak/kansakna - 'dry up' - lexicalized compound (kan here = dry, not ask)
-        'kansak': ('kansak', 'dry.up'),                              # dry up (Josh 4:23)
         'kansakna': ('kansak-na', 'dry.up-NMLZ'),                    # drying up (Josh 2:10)
         # Words with geminate nn - should not be segmented as a-nn...
         'annengte': ('Anneng-te', 'ANNENG-PL'),                      # proper name plural (2x)
@@ -14248,31 +14147,23 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'anneng': ('anneng', 'crumb'),                               # crumb (unsegmented)
         # Round 169e: More phonotactic fixes
         # hihlo/hihloh - 'nothing' - hih (this) + lo/loh (NEG)
-        'hihloh': ('hih-loh', 'this-NEG.NOM'),                       # nothing (6x)
-        'hihlo': ('hih-lo', 'this-NEG'),                             # nothing (4x)
         # kipsuak - 'remain/continue' - kip (firm) + suak (become)
         'kipsuak': ('kip-suak', 'firm-become'),                      # continue/remain (4x)
         # sotto - 'each other' (reduplication) - not so-tto
-        'sotto': ('so~tto', 'other~RED'),                            # each other (3x)
         # pahpah - reduplication for emphasis
         'pahpahte': ('pah~pah-te', 'honor~RED-PL'),                  # honorable ones (2x)
         'pahpahin': ('pah~pah-in', 'honor~RED-ERG'),                 # honorably (1x)
         # kihtakhuai - kih (abhor) + takhuai (despise)
-        'kihtakhuai': ('kih-takhuai', 'abhor-despise'),              # abhor completely (3x)
         'kihtakhuai-in': ('kih-takhuai-in', 'abhor-despise-ERG'),    # abhorring
         # naksiat - lexicalized 'ruin/destruction' (historically nak+siat)
-        'naksiat': ('naksiat', 'ruin'),                              # ruin/destruction (2x)
         # alsakkik - al (salt) + sak (CAUS) + kik (ITER) = 'salt again'
         'alsakkik': ('al-sak-kik', 'salt-CAUS-ITER'),                # salt again (2x)
         # antan - an (eat/food) + tan (endure) - lexicalized
-        'antan': ('antan', 'endure'),                                # endure (2x)  
         "antan'": ("antan'", 'endure.GEN'),                          # genitive form
         'antangte': ('antan-te', 'endure-PL'),                       # plural
         # Round 169f: More phonotactic fixes
         # kahtohpih - kah (climb) + toh (up) + pih (with) - not ka-htoh-pih
-        'kahtohpih': ('kah-toh-pih', 'climb-up-with'),               # take up (2x)
         # kamciamsa - kam (word) + ciam (promise) + sa (PERF) - not ka-mciam
-        'kamciamsa': ('kam-ciam-sa', 'word-promise-PERF'),           # vowed (2x)
         'kamciamnasa': ('kam-ciam-na-sa', 'word-promise-NMLZ-PERF'), # vow (1x)
         # ankungnote - an (food) + kungno (desire) + te (PL) - not a-nkungno
         'ankungnote': ('an-kungno-te', 'food-desire-PL'),            # gluttons (2x)
@@ -14344,7 +14235,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'natsak': ('nat-sak', 'pain-CAUS'),                          # cause pain (1x)
         'topsa': ('top-sa', 'gather-PERF'),                          # gathered (1x)
         'toksuah': ('tok-suah', 'sit-happen'),                       # (1x)
-        'namsau': ('nam-sau', 'sword-long'),                         # long sword (1x)
         "namsau'": ("nam-sau'", 'sword-long.GEN'),                   # (1x)
         'kahtosak': ('kah-to-sak', 'climb-up-CAUS'),                 # cause to ascend (1x)
         'khiamsak': ('khiam-sak', 'reduce-CAUS'),                    # reduce (1x)
@@ -14641,7 +14531,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Numbers
         'sawmgukte': ('sawm-guk-te', 'ten-six-PL'),
         # Reduplication - looking
-        'enen': ('en~en', 'look~RED'),                               # (2x) look at each other - Gen 42:1
         'enenin': ('en~en-in', 'look~RED-ERG'),
         # Reduplication - oppression
         'thopthopin': ('thop~thop-in', 'oppress~RED-ERG'),           # (2x) reproach - Ezek 22:4
@@ -14660,7 +14549,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Protest/teach
         'hilhkholin': ('hilh-khol-in', 'teach-alone-ERG'),           # (2x) protest.solemnly - 1Sam 8:9
         # Fruits/plants
-        'kawlsing': ('kawlsing', 'pomegranate'),                     # (2x) pomegranate - Exod 28:33
         'kawlsingte': ('kawlsing-te', 'pomegranate-PL'),
         # Body/appearance
         'khauhualpi': ('khau-hualpi', 'shave-big'),                  # (2x) baldness - Isa 3:24
@@ -14669,7 +14557,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Evil workers
         'miginalo': ('mi-gina-lo', 'person-true-NEG'),               # (2x) evil.worker - Phil 3:2
         # House parts
-        'innsun': ('inn-sun', 'house-shade'),                        # (2x) eaves - Gen 19:8 (context)
         'innsunte': ('inn-sun-te', 'house-shade-PL'),
         # Portions
         'pawkhat': ('paw-khat', 'portion-one'),                      # (2x) portion - Josh 19:1
@@ -14685,7 +14572,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'miteite': ('mi-tei-te', 'person-understand-PL'),
         # Sea creatures - gol = grow, pi = big (NOT go-lpi which violates phonotactics)
         # Containers
-        'ip': ('ip', 'sack'),                                        # (2x) sack - Gen 42:25
         'ipte': ('ip-te', 'sack-PL'),
         # Rising
         'tho': ('tho', 'rise'),                                      # (2x) rise/arise - Gen 19:2
@@ -15269,7 +15155,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tawmkhat': ('tawm-khat', 'few-one'),             # 55x - "a little"
         'gaias': ('Gaias', 'Gaius'),                      # 8x - personal name
         'maangin': ('maang-in', 'dim-ERG'),               # 6x - "eyes dim"
-        'maang': ('maang', 'dim'),                        # base form
         'tahumte': ('tahum-te', 'tares-PL'),              # 4x - "tares"
         "puansawppa'": ("puan-sawppa'", "cloth-fuller.POSS"),  # 3x - "fuller's" (cloth washer)
         'sawppa': ('sawppa', 'fuller'),                   # base form
@@ -15283,13 +15168,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'diktanna': ('dik-tan-na', 'right-stand-NMLZ'),   # 2x - righteousness
         'thuciamtehna': ('thu-ciam-teh-na', 'word-promise-establish-NMLZ'),  # 2x - covenant record
         'thakhauhin': ('tha-khauh-in', 'strength-strong-ERG'),  # 2x - strengthened
-        'thakhauhsak': ('tha-khauh-sak', 'strength-strong-CAUS'),  # strengthen
         'galbanum': ('galbanum', 'galbanum'),             # 1x - aromatic resin
         
         # Round 206: More partial fixes
         'nahthel': ('nahthel', 'leaf'),                   # 2x - leaf (Lev 26:36)
         'masalate': ('masala-te', 'fitches-PL'),          # 2x - fitches (grain)
-        'masala': ('masala', 'fitches'),                  # base form
         'tuateng': ('tua-teng', 'that-only'),             # 2x - "not only that"
         'thopi': ('thopi', 'bird'),                       # 2x - bird (Eccl 10:20)
         'limlangah': ('limlang-ah', 'mirror-LOC'),        # 2x - in a glass/mirror
@@ -15338,7 +15221,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'savokphual': ('savokphual', 'weasel'),           # 1x Lev 11:29 - animal
         'singmuat': ('sing-muat', 'wood-rot'),            # 1x Job 13:28 - rotten thing
         'hotna': ('hot-na', 'save-NMLZ'),                 # 1x Job 26:2 - saving
-        'hot': ('hot', 'save'),                           # base form
         'suangseeksate': ('suang-seek-sa-te', 'stone-hew-PRF-PL'),  # 1x - masons/stonecutters
         'suangseeksa': ('suang-seeksa', 'stone-carve.PRF'),  # base - mason
         'khialhkhaknate': ('khialh-khak-na-te', 'err-shut-NMLZ-PL'),  # 1x - iniquities
@@ -15353,7 +15235,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lapna': ('lap-na', 'wrap-NMLZ'),                 # 1x - wrapping
         'lap': ('lap', 'wrap'),                           # base form
         'nipna': ('nip-na', 'pinch-NMLZ'),                # 1x - pinching
-        'nip': ('nip', 'pinch'),                          # base form
         'kaptuk': ('kap-tuk', 'cry-meet'),                # 1x - crying together
         'mavanna': ('mavan-na', 'wonder-NMLZ'),           # 1x - wondering
         'ngongbawlna': ('ngong-bawl-na', 'self-make-NMLZ'),  # 1x - self-making
@@ -15413,7 +15294,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tucip': ('tucip', 'squeeze'),                    # 1x - squeeze/press
         'heengte': ('heeng-te', 'bare-PL'),               # 1x - bare ones
         'netumte': ('netum-te', 'young.woman-PL'),        # 1x - young women
-        'netum': ('netum', 'young.woman'),                # base form
         'gawpnate': ('gawp-na-te', 'weep-NMLZ-PL'),       # 1x - weepings
         'patlom': ('pat-lom', 'touch-bundle'),            # 1x - handle/bunch
         'khemul': ('khe-mul', 'foot-tip'),                # 1x - toe
@@ -15431,7 +15311,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thangko': ('thang-ko', 'spread-call'),           # 1x Isa 44:7 - declare
         'lamkaih': ('lam-kaih', 'way-lead'),              # 1x Isa 49:10 - guide/lead
         'leibatnate': ('lei-bat-na-te', 'debt-bind-NMLZ-PL'),  # 1x Isa 50:1 - creditors
-        'leibatna': ('lei-bat-na', 'debt-bind-NMLZ'),     # base - debt
         'leibat': ('lei-bat', 'debt-bind'),               # base - owe
         'eimau': ('ei-mau', '1PL.EXCL-self'),             # 1x Isa 53:6 - ourselves
         'lungzingin': ('lung-zing-in', 'heart-tremble-ERG'),  # 1x - trembling heart
