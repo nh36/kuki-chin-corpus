@@ -10049,8 +10049,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sim': ('sim', 'count'),                               # base - count
         'khawlcip': ('khawl-cip', 'rest-tight'),               # stand still
         'sawmkhat': ('sawm-khat', 'ten-one'),                  # eleven/ten
-        'vanvan': ('van~van', 'old~REDUP'),                      # ancient/very old
-        'van': ('van', 'old'),                                 # base - old
+        'vanvan': ('van~van', 'old~REDUP'),                      # ancient/very old (old sense)
+        # Note: standalone 'van' = 'sky' (NOUN_STEMS), reduplication 'vanvan' = 'old~REDUP' (ancient)
         'khengvalin': ('kheng-val-in', 'proud-presume-ERG'),   # presumptuously
         'kheng': ('kheng', 'proud'),                           # base - proud
         'nangzo': ('nang-zo', 'face-able'),                    # able to face
