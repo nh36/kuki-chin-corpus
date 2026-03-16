@@ -133,7 +133,55 @@ meaning definitively does NOT relate to the actual meaning:
   has lexicalized to mean "divination" with no transparent connection to intensification.
 - **Verdict:** Opaque lexicalized nominal. Treated as indivisible stem.
 
+### lupna 'bed'
+- **Apparent analysis:** lup (bow down) + na (NMLZ)
+- **Compositional meaning:** "bowing-place" or "place of bowing"
+- **Actual meaning:** bed, couch
+- **Evidence:** Gen 47:31 "upon the bed's head"; Gen 49:4 "thy father's bed" (85x total)
+- **Verdict:** Opaque. While lup does mean 'bow down', the nominalizer -na does not 
+  produce "bed" semantically. Treated as indivisible stem.
+
+### zatui 'medicine'
+- **Apparent analysis:** za (hear) + tui (water)
+- **Compositional meaning:** "hear-water" (?)
+- **Actual meaning:** medicine, balm, healing substance
+- **Evidence:** Jer 8:22 "balm in Gilead"; Gen 50:2 embalming; Rev 3:18 "eyesalve" (13x)
+- **Verdict:** Opaque. No semantic connection between hearing/water and medicine.
+
+### golhguk 'bribe'
+- **Apparent analysis:** golh (oppose) + guk (six)
+- **Compositional meaning:** "oppose-six" (?)
+- **Actual meaning:** bribe, undermine
+- **Evidence:** Ezra 4:5 "hired counsellors... to frustrate"; Ps 15:5 "taketh no reward" (5x)
+- **Verdict:** Opaque. No semantic connection to opposition or the number six.
+
+### kikal 'between'
+- **Apparent analysis:** ki (REFL) + kal (liver/gate)
+- **Compositional meaning:** "REFL-liver" or "REFL-gate" (?)
+- **Actual meaning:** between, among (relational)
+- **Evidence:** Gen 3:15 "between thee and the woman"; Gen 13:8 "between me and thee" (119x)
+- **Note:** Contains kal₂ 'middle' (see homophonous morphemes below), distinct from kal₁ 'liver'.
+  The etymological analysis ki-kal (REFL-middle → "mutual middle") yields "between".
+- **Verdict:** Transparent with correct root kal₂. See kal polysemy below.
+
 ## Morphemes with Multiple Meanings (Philological Notes)
+
+### kal - homophonous morphemes
+There are two distinct morphemes spelled kal:
+
+**kal₁ 'liver' (body part)**
+Used standalone for the internal organ:
+- **kal** = liver (Exod 29:13 "the caul above the liver") (27x standalone)
+- Found in sacrificial contexts describing animal anatomy
+
+**kal₂ 'middle' (spatial)**
+Used in compounds for spatial relations:
+- **lamkal** = lam (way) + kal (middle) → midway, halfway (21x)
+- **kikal** = ki (REFL) + kal (middle) → between, among (119x)
+
+Note: kal₁ and kal₂ are likely unrelated homophones. In ROOTS, kal = 'middle' 
+is the default. Standalone kal in sacrificial contexts gets overridden by explicit 
+COMPOUND entry with 'liver'.
 
 ### kholh - homophonous morphemes
 There are two distinct morphemes spelled -kholh-:
