@@ -259,4 +259,143 @@ for token, expected in tests:
 ```
 
 ---
+
+## 13. Stem Over-Parsing (Bug 10)
+
+Short stems (≤3 chars) were greedily matching prefixes of longer words:
+
+| Token | Wrong | Correct | Issue |
+|-------|-------|---------|-------|
+| angtang | an-gtang (food-?) | angtang | boast |
+| awlmang | aw-lmang (cloth-?) | awlmang | spirit |
+
+Fix: `is_remainder_parseable()` validates decompositions.
+
+---
+
+## 14. Phonotactic Violations
+
+Invalid consonant clusters in native words:
+
+| Token | Wrong | Correct | Issue |
+|-------|-------|---------|-------|
+| kipsak | ki-psak (*ps) | kip-sak | firm-CAUS (establish) |
+| kimin | ki-min (*m after ki) | kim-in | fully-ERG |
+| kinsak | ki-nsak (*ns) | kin-sak | quickly-CAUS |
+| paktat | pa-ktat (*kt) | pak-tat | quick-carry |
+
+**Rule**: Tedim has NO true consonant clusters. Valid digraphs: kh, th, ph, ng only.
+
+---
+
+## 15. Proper Noun Mis-Segmentation
+
+Names with prefix-like beginnings:
+
+| Token | Wrong | Correct | Issue |
+|-------|-------|---------|-------|
+| Hilkiah | Hi-lkiah (be-?) | HILKIAH | hi = verb |
+| Heman | He-man (be.II-?) | HEMAN | he = verb |
+| Asa | A-sa (3SG-flesh) | ASA | a = prefix |
+| Naomi | Na-omi (2SG.POSS-?) | NAOMI | na = prefix |
+
+---
+
+## 16. Form I/II Verb Alternation
+
+Henderson 1965: Form II (subjunctive) adds -h, -k, -t:
+
+| Form I | Form II | Pattern |
+|--------|---------|---------|
+| mu | muh | +h (see) |
+| za | zak | +k (know) |
+| nusia | nusiat | +t (abandon) |
+| theih | thei | -h (know) |
+
+VERB_STEM_PAIRS is single source of truth.
+
+---
+
+## 17. TAM Suffix Disambiguation
+
+| Morpheme | Context | Meaning |
+|----------|---------|---------|
+| sa | after verb | PERF (perfective) |
+| sa | standalone | flesh (noun) |
+| ta | after verb | PFV (perfective) |
+| ta | standalone | child (noun) |
+| hi | sentence-final | DECL (declarative) |
+| hi | with prefix | be (copula) |
+
+---
+
+## 18. Possessive vs Quotation Mark
+
+| Token | Wrong | Correct | Context |
+|-------|-------|---------|---------|
+| Topa' | strip apostrophe | Topa' (LORD.POSS) | possessive |
+| gulpi' | strip | gul-pi' (serpent-big.POSS) | compound possessive |
+
+Preserve apostrophe for possessives, strip only for quotation marks.
+
+---
+
+## 19. Semantic Corrections (Spot-Check)
+
+| Token | Wrong | Correct | KJV Evidence |
+|-------|-------|---------|--------------|
+| lauhlauh | fear~REDUP | rattle~REDUP | onomatopoeia |
+| tohtoh | up~REDUP | stand~REDUP | continuously |
+| ihmusip | ih-mu-sip | ihmu-sip | sleep-deep |
+| nakpau | nose-fat | nakpau | vehemently (lexicalized) |
+| kamka | word-bitter | kamka | ashamed (lexicalized) |
+| leibeel | lazy.person | leibeel | pot (earthen vessel) |
+
+---
+
+## Full Test Suite
+
+```python
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+
+tests = [
+    # 1. IRR marker
+    ('ding', 'IRR'),
+    # 2. Proper nouns  
+    ('sin', 'near'), ('Sin', 'SIN'),
+    ('lot', 'cast'), ('Lot', 'LOT'),
+    # 3-4. Polysemy & Opaque
+    ('kham', 'gold'), ('kikham', 'REFL-forbid'),
+    ('ahihleh', 'if'), ("ke'n", '1SG.PRO'),
+    # 7. Opaque lexemes
+    ('lupna', 'bed'), ('zatui', 'medicine'), ('namsau', 'sword'),
+    # 8. Homophonous roots
+    ('numei', 'woman'), ('meigong', 'widow'),
+    ('lopa', 'farmer'), ('lono', 'disobey'),
+    ('khuampi', 'pillar'), ('khuamial', 'night'),
+    # 10-11. ERG transparency & compounds
+    ('ciangin', 'then-ERG'), ('hangin', 'reason-ERG'),
+    ('kikal', 'between'), ('kidona', 'battle'),
+    # 14. Phonotactics
+    ('kipsak', 'firm-CAUS'), ('kimin', 'fully-ERG'),
+    # 15. Proper nouns (not mis-segmented)
+    ('Hilkiah', 'HILKIAH'), ('Heman', 'HEMAN'),
+    # 16. Form I/II
+    ('muh', 'see'), ('zak', 'know'),
+    # 17. TAM disambiguation
+    ('sa', 'flesh'),  # standalone = noun
+    # 18. Possessive
+    ("gulpi'", 'POSS'),  # should have POSS
+    # 19. Semantic fixes
+    ('nakpau', 'vehement'), ('kamka', 'asham'),
+]
+
+for token, expected in tests:
+    seg, gloss = analyze_word(token)
+    status = '✓' if expected in gloss else '✗'
+    print(f'{status} {token}: {gloss} (expected: {expected})')
+```
+
+---
 *Last updated: March 2026*
