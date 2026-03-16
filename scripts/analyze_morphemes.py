@@ -4634,8 +4634,9 @@ BINARY_COMPOUNDS = {
     'sihna': ('sih', 'na', 'death'),            # die-NMLZ → death (317x)
     'gamtat': ('gam', 'tat', 'kingdom'),        # land-strike → kingdom (398x)
     'pawlkhat': ('pawl', 'khat', 'some'),       # group-one → some (394x)
-    'nasem': ('na', 'sem', 'servant'),          # ?-serve → servant (350x) - na here is different
-    'nasep': ('na', 'sep', 'work'),             # ?-work → work (346x)
+    # nasem and nasep are OPAQUE - na- is NOT a prefix (na NMLZ is a suffix!)
+    'nasem': ('nasem', None, 'servant'),         # opaque: servant (350x)
+    'nasep': ('nasep', None, 'work'),            # opaque: work (573x)
     'kibawl': ('ki', 'bawl', 'be.made'),        # REFL-make → be made (345x)
     'kipia': ('ki', 'pia', 'be.given'),         # REFL-give → be given (339x)
     'kipan': ('ki', 'pan', 'begin'),            # REFL-begin → begin (409x)
@@ -5071,12 +5072,7 @@ TERNARY_COMPOUNDS = {
     },
     # High-frequency ternary compounds from corpus
     # [compound]-te (plural) patterns
-    'nasemte': {
-        'morphemes': ['na', 'sem', 'te'],
-        'structure': '(na-sem)-te',
-        'lexical': 'servants',
-        'head': 'left',
-    },
+    # nasemte removed - handled in COMPOUND_WORDS as opaque nasem + -te
     'minamte': {
         'morphemes': ['mi', 'nam', 'te'],
         'structure': '(mi-nam)-te',
@@ -5167,12 +5163,7 @@ TERNARY_COMPOUNDS = {
         'lexical': 'roads',
         'head': 'left',
     },
-    'nasepte': {
-        'morphemes': ['na', 'sep', 'te'],
-        'structure': '(na-sep)-te',
-        'lexical': 'works',
-        'head': 'left',
-    },
+    # nasepte removed - handled in COMPOUND_WORDS as opaque nasep + -te
     # [compound]-na (nominalization) patterns  
     'gamtatna': {
         'morphemes': ['gam', 'tat', 'na'],
@@ -5180,12 +5171,7 @@ TERNARY_COMPOUNDS = {
         'lexical': 'kingdom',
         'head': 'left',
     },
-    'nasepna': {
-        'morphemes': ['na', 'sep', 'na'],
-        'structure': '(na-sep)-na',
-        'lexical': 'work',
-        'head': 'left',
-    },
+    # nasepna removed - handled in COMPOUND_WORDS as opaque nasep + -na
     'lungkhamna': {
         'morphemes': ['lung', 'kham', 'na'],
         'structure': '(lung-kham)-na',
@@ -7723,7 +7709,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pawlkhat': ('pawl-khat', 'some-one'),
         'mihing': ('mi-hing', 'person-kind'),
         'minamte': ('mi-nam-te', 'person-kind-PL'),
-        'nasep': ('na-sep', 'work'),
+        'nasep': ('nasep', 'work'),                                # OPAQUE: not na-sep (na NMLZ is suffix!)
+        'nasem': ('nasem', 'servant'),                             # OPAQUE: not na-sem
         'suante': ('suan-te', 'offspring-PL'),
         'namsau': ('nam-sau', 'hair-long'),                      # long hair (transparent, nam=hair)
         'nangawn': ('na-ngawn', '2SG-own'),
@@ -16341,6 +16328,26 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ipin': ('ip-in', 'restrain-ERG'),                       # 1x - restraining
         'uatsaknate': ('uatsak-na-te', 'pride-NMLZ-PL'),         # 1x - pride/arrogance
         'ettehin': ('et-teh-in', 'care-hold-ERG'),               # 1x - comparing
+        
+        # Round 229: Opaque stems with suffixes (nasep, nasem are opaque)
+        'nasepna': ('nasep-na', 'work-NMLZ'),                    # 231x - working/work (opaque nasep)
+        'nasepte': ('nasep-te', 'work-PL'),                      # 12x - works (opaque nasep)
+        'nasemte': ('nasem-te', 'servant-PL'),                   # 389x - servants (opaque nasem)
+        'nasemin': ('nasem-in', 'servant-ERG'),                  # as servant
+        'naseppih': ('nasep-pih', 'work-APPL'),                  # 17x - work for/with
+        'naseppihte': ('nasep-pih-te', 'work-APPL-PL'),          # work for (plural)
+        'nasepah': ('nasep-ah', 'work-LOC'),                     # 1x - at work
+        'nasepin': ('nasep-in', 'work-ERG'),                     # 3x - work (ERG)
+        'nasepsa': ('nasep-sa', 'work-PAST'),                    # 3x - worked
+        'nasepsak': ('nasep-sak', 'work-CAUS'),                  # 1x - cause to work
+        'nasepteng': ('nasep-teng', 'work-dwell'),               # 1x - work continuously
+        'nasepnate': ('nasep-na-te', 'work-NMLZ-PL'),            # 48x - works (nominalized)
+        'nasepnasa': ('nasep-na-sa', 'work-NMLZ-PAST'),          # 1x - worked (past nom)
+        'nasempa': ('nasem-pa', 'servant-male'),                 # 328x - male servant
+        'nasemnu': ('nasem-nu', 'servant-female'),               # 39x - female servant
+        'nasemnute': ('nasem-nu-te', 'servant-female-PL'),       # 2x - female servants
+        'nasempate': ('nasem-pa-te', 'servant-male-PL'),         # 2x - male servants
+        'nasemkhawm': ('nasem-khawm', 'servant-together'),       # 3x - fellow servant
     }
 
 
