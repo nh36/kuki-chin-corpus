@@ -8507,7 +8507,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kulhkongpite': ('kulh-kong-pi-te', 'wall-road-big-PL'), # 14x - "walls"
         'khathei': ('kha-thei', 'one-able'),                 # 14x - "can one"
         'tauna': ('tau-na', 'store-NMLZ'),                   # 14x - "storing"
-        'kahto-in': ('ka-hto-in', '1SG-ascend-ERG'),         # 14x - "I ascending"
+        'kahto-in': ('kah-to-in', 'climb-up-ERG'),           # 14x - phonotactic fix (no ht cluster)
         'sawmsim': ('sawm-sim', 'ten-count'),                # 14x - "count by tens"
         'mawkmawkte': ('mawk-mawk-te', 'empty~empty-PL'),    # 14x - "empty ones"
         'galvilna': ('gal-vil-na', 'enemy-encircle-NMLZ'),   # 14x - "battle array"
@@ -8681,7 +8681,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'makaihna': ('ma-kaih-na', 'that-lead-NMLZ'),        # 11x - "leadership"
         'nate-ah': ('na-te-ah', '2SG-PL-LOC'),               # 11x - "at your"
         'citna': ('cit-na', 'say-NMLZ'),                     # 11x - "saying"
-        'kahtohna': ('ka-htoh-na', '1SG-ascend-NMLZ'),       # 11x - "my ascending"
+        'kahtohna': ('kah-toh-na', 'climb-up-NMLZ'),         # 11x - phonotactic fix (no ht cluster)
         'thatmang': ('that-mang', 'kill-chief'),             # 11x - "kill utterly"
         'delhna': ('delh-na', 'hide-NMLZ'),                  # 11x - "hiding"
         'kherub-te\'': ('kherub-te\'', 'cherub-PL.POSS'),    # 12x - "cherubim's"
@@ -9265,7 +9265,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'siamnate': ('siam-na-te', 'skilled-NMLZ-PL'),         # 8x - "skillful works"
         'santheih': ('san-theih', 'salt-can'),                 # 8x - "salted" (Mark 9:49)
         'lutpih': ('lut-pih', 'enter-CAUS'),                   # 8x - "bring in"
-        'pahtawi-in': ('pa-htawi-in', 'male-old.man-ERG'),     # 8x - "patriarch" (from htawi elder)
+        'pahtawi-in': ('pah-tawi-in', 'honor-carry-ERG'),     # 8x - "patriarch" (from htawi elder)
         'cimawhte\u2019': ('ci-mawh-te\u2019', 'say-sin-PL.POSS'), # 8x 
         "cimawhte'": ('ci-mawh-te\u2019', 'say-sin-PL.POSS'),
         'pannate': ('panna-te', 'petition-PL'),                # 8x - "petitions"
@@ -10366,8 +10366,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'gahpha': ('gah-pha', 'branch-good'),                  # flourishing
         'gah': ('gah', 'branch'),                              # base - branch
         'kikai': ('ki-kai', 'REFL-lead'),                      # be led away/captive
-        'kilkel': ('ki-lkel', 'REFL-leave'),                   # be forsaken
-        'lkel': ('lkel', 'leave'),                             # base - leave
+        'kilkel': ('kil-kel', 'clear-pure'),                   # phonotactic fix (no lk cluster)
+        'lkel': ('lkel', 'leave'),                             # leave - probably typo in Bible; opaque
         'gip': ('gip', 'seal'),                                # seal
         'lipkhap': ('lip-khap', 'freedom-loose'),              # liberty
         'lip': ('lip', 'freedom'),                             # base - freedom
@@ -12875,7 +12875,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sapnain': ('sap-na-in', 'stretch-NMLZ-INST'),             # stretch INST
         'khauhsakin': ('kauh-sak-in', 'harden-CAUS-INST'),         # harden INST
         'sianthonaah': ('sian-tho-na-ah', 'holy-rise-NMLZ-LOC'),   # holiness LOC
-        'kihtakhuaiin': ('ki-hta-khuai-in', 'REFL-fierce-mix-INST'), # fierce INST
+        'kihtakhuaiin': ('kih-takhuai-in', 'fierce-mix-INST'),     # phonotactic fix (no ht cluster)
         'sinsoin': ('sin-so-in', 'consume-INST'),                  # consume INST
         'puanbuka': ('puan-buk-a', 'cloth-tent-LOC'),              # tent LOC
         'khialhnaah': ('khialh-na-ah', 'sin-NMLZ-LOC'),            # sin LOC
@@ -14336,7 +14336,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'antan': ('an-tan', '3PL-fast'),                             # fast (Jonah 3:5) - tan = fast
         'kamciamsa': ('ka-mciam-sa', '1SG-vow-NOM'),                  # vowed (Malachi 1:14)
         'santak': ('san-tak', 'stand-remain'),                       # stood (Matthew 2:9)
-        'kahtohpih': ('ka-htoh-pih', '1SG-set-APPL'),                 # set (Matthew 4:5)
+        'kahtohpih': ('kah-toh-pih', 'climb-up-with'),               # set (Matthew 4:5) - phonotactic fix
         # Round 167j: More Gospel partials
         'dangate': ('dang-a-te', 'other-REL-PL'),                    # others (Ezekiel 40:28)
         'bate': ('ba-te', 'pledge-PL'),                              # pledges (Habakkuk 2:6)
@@ -16496,7 +16496,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kigelnate': ('ki-gel-na-te', 'REFL-go.in-NMLZ-PL'),     # 1x Ezek 43:11 - goings
         'kigengenna': ('ki-gen-gen-na', 'REFL-say-REDUP-NMLZ'),  # 1x Mark 6:14 - name spread
         'kihaltumna': ('ki-hal-tum-na', 'REFL-burn-all-NMLZ'),   # 1x 1Cor 13:3 - be burned
-        'kihtalua': ('ki-htal-ua', 'REFL-shake-very'),           # 1x Matt 28:4 - did shake
+        'kihtalua': ('kih-tal-ua', 'abhor-INTNS-very'),          # 1x Matt 28:4 - did shake (phonotactic fix)
         'kihutawm': ('ki-hu-tawm', 'REFL-guard-finish'),         # 1x Ezek 38:11 - at rest
         'kikhamvalte': ('ki-kham-val-te', 'REFL-prevent-left-PL'),  # 1x John 6:12 - fragments remain
         'kikopin': ('ki-kop-in', 'REFL-gather-ERG'),             # 1x Rom 15:17 - glory in
