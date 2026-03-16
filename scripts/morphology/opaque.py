@@ -100,13 +100,8 @@ OPAQUE_LEXEMES = {
     },
     
     # === Spatial/relational ===
-    'kikal': {
-        'gloss': 'between',
-        'would_be_parse': ('ki-kal', 'REFL-liver'),
-        'evidence': 'Gen 1:6 - "between the waters" - spatial meaning',
-        'frequency': 119,
-        'note': 'kal₂ = middle (spatial) is distinct from kal₁ = liver (body part)',
-    },
+    # kikal removed - now parses transparently as ki-kal = REFL-middle = "between"
+    # (after adding kal = 'middle' to NOUN_STEMS)
     
     # === Religious/cultural ===
     'singtawng': {

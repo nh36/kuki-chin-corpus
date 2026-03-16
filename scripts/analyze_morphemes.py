@@ -1426,6 +1426,7 @@ VERB_STEMS = {
     'bei': 'finish',     # 32x - "end, finish" (beina = ending)
     'pan': 'plead',          # 32x - "plead, argue for"
     'kido': 'fight',         # 31x - "fight" (galkidona = warfare)
+    'don': 'war',            # war/fight - enables ki-don-a = REFL-war-LOC = "battle"
     # Note: kidot (Form II) now in VERB_STEM_PAIRS
     'ciah': 'return',        # 31x - "return" (ciahsak = send back)
     'khol': 'denounce',      # 31x - "denounce" (genkhol = speak denounce)
@@ -1959,6 +1960,7 @@ NOUN_STEMS = {
     'innte': 'houses',
     'mun': 'place',          # 820
     'mung': 'place',         # variant form
+    'kal': 'middle',         # middle/between - enables ki-kal = REFL-middle = between
     'leitung': 'earth',      # 717
     'leitang': 'earth',      # 462 (variant)
     'vantung': 'heaven',     # 419
@@ -2028,7 +2030,7 @@ NOUN_STEMS = {
     'ganbuk': 'fold',        # animal fold/pen
     'kilungso': 'wait.patiently',  # rest in the LORD
     'phuang': 'upright',     # perfect/upright
-    'kidona': 'sword',       # 56x - (not ki-don-a)
+    # kidona removed - parses transparently as ki-don-a = REFL-war-LOC = "battle"
     'sakhital': 'hart', # 4x - deer species
     'tuzum': 'harrow',       # 2x - farming tool
     'khuahun': 'season',     # 2x - khua (town/weather) + hun (time)
@@ -7780,7 +7782,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nasep': ('nasep', 'work'),                                # OPAQUE: not na-sep (na NMLZ is suffix!)
         'nasem': ('nasem', 'servant'),                             # OPAQUE: not na-sem
         'suante': ('suan-te', 'offspring-PL'),
-        'namsau': ('nam-sau', 'hair-long'),                      # long hair (transparent, nam=hair)
+        'namsau': ('namsau', 'sword'),                             # OPAQUE: 234x - sword (not nam-sau)
         'nangawn': ('na-ngawn', '2SG-own'),
         'piang': ('piang', 'be.born'),
         'hihna': ('hih-na', 'this-NMLZ'),
@@ -7961,6 +7963,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'piansak': ('pian-sak', 'create-CAUS'),              # 32 - "creation"
         'lausak': ('lau-sak', 'fear-CAUS'),                  # 31 - "make afraid"
         'galkidona': ('gal-kido-na', 'enemy-fight-NMLZ'),    # 31 - "warfare"
+        'galkidonate': ('gal-kido-na-te', 'enemy-fight-NMLZ-PL'),  # 1x - "wars"
         'genkhol': ('gen-khol', 'speak-INTENS'),             # 31 - "denounce"
         'ciahsak': ('ciah-sak', 'return-CAUS'),              # 31 - "send back"
         'genkhia': ('gen-khia', 'speak-EXIT'),               # 32 - "utter forth"
@@ -8434,10 +8437,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thuakzawh': ('thuak-zawh', 'suffer-able'),         # 17x - "able to suffer"
         'naseppih': ('na-sep-pih', '2SG-work-APPL'),        # 17x - "work with you"
         'thawhkikna': ('thawh-kik-na', 'rise-again-NMLZ'),  # 17x - "resurrection"
-        'kikal-a': ('kikal-a', 'between-LOC'),              # 16x - "between" (opaque kikal)
-        'kikal': ('kikal', 'between'),                      # 70x - "between"
-        'kikalah': ('kikal-ah', 'between-LOC'),             # 119x - "between"
-        'kikalin': ('kikal-in', 'between-ERG'),             # 3x - "between"
+        # kikal: transparent analysis (overrides incorrect lexicon entry "gate")
+        'kikal': ('ki-kal', 'REFL-middle'),                 # 70x - "between"
+        'kikalah': ('ki-kal-ah', 'REFL-middle-LOC'),        # 119x - "between-LOC"
         'naihin': ('naih-in', 'near-ERG'),                  # 16x - "nearly"
         'sakhat': ('sak-hat', 'shaft-hard'),                # 16x - "candlestick shaft"
         'mizawngte\'': ('mi-zawng-te\'', 'person-poor-PL.POSS'), # 17x - "poor people's"
