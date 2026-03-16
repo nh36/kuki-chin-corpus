@@ -196,6 +196,74 @@ Before adding ANY vocabulary entry:
 - [ ] **Homophone check**: If multiple meanings, add to POLYSEMOUS_ROOTS
 - [ ] **Transparency check**: For `XYZna`, verify base `XYZ` exists first
 - [ ] **Duplicate check**: `grep` for existing entries before adding
+- [ ] **Phonotactic check**: No illegal onset clusters (see below)
+
+---
+
+## Phonotactic Constraints
+
+Tedim Chin has strict phonotactic constraints that prohibit certain consonant clusters at morpheme onset. Any segmentation that creates such clusters is WRONG.
+
+### Illegal Onset Clusters
+
+```python
+ILLEGAL_ONSETS = {
+    # Stop + Stop
+    'pt', 'pk', 'tp', 'tk', 'kp', 'kt',
+    # Stop + Fricative
+    'ps', 'ts', 'ks', 'bs', 'ds', 'gs',
+    # Nasal/Liquid/Continuant + Stop
+    'mp', 'mt', 'mk', 'np', 'nt', 'nk',
+    'lp', 'lt', 'lk', 'rp', 'rt', 'rk',
+    # Fricative/Continuant + Stop
+    'zp', 'zt', 'zk', 'vp', 'vt', 'vk',
+    'hp', 'ht', 'hk', 'hs',
+    # Triple clusters
+    'tph', 'kph', 'pph', 'pkh', 'tkh', 'skh'
+}
+```
+
+### Examples of Violations Fixed
+
+| Wrong | Correct | Rule |
+|-------|---------|------|
+| `ka-pkhia` | `kap-khia` | No `pk` cluster |
+| `ki-psak-na` | `kip-sak-na` | No `ps` cluster |
+| `na-ksiat` | `nak-siat` | No `ks` cluster |
+| `ka-htoh-na` | `kah-toh-na` | No `ht` cluster |
+| `ki-lkel` | `kil-kel` | No `lk` cluster |
+
+### Phonotactic Audit Script
+
+```python
+import re
+
+ILLEGAL_ONSETS = {'ps', 'pt', 'pk', 'ts', 'tp', 'tk', 'ks', 'kp', 'kt', 
+                   'bs', 'bp', 'bk', 'ds', 'dp', 'dk', 'gs', 'gp', 'gt', 'gk',
+                   'ms', 'mp', 'mt', 'mk', 'ns', 'np', 'nt', 'nk',
+                   'ls', 'lp', 'lt', 'lk', 'rs', 'rp', 'rt', 'rk',
+                   'zs', 'zp', 'zt', 'zk', 'vs', 'vp', 'vt', 'vk',
+                   'hs', 'hp', 'ht', 'hk'}
+
+def check_phonotactics(segmentation):
+    """Check if segmentation violates phonotactic constraints."""
+    morphemes = segmentation.replace("'", "").split('-')
+    violations = []
+    for m in morphemes:
+        if len(m) >= 2 and m[:2].lower() in ILLEGAL_ONSETS:
+            violations.append((m, m[:2]))
+    return violations
+
+# Run on all entries
+with open('scripts/analyze_morphemes.py', 'r') as f:
+    content = f.read()
+pattern = r"'([^']+)':\s*\('([^']+)',\s*'([^']+)'\)"
+for word, seg, gloss in re.findall(pattern, content):
+    v = check_phonotactics(seg)
+    if v:
+        print(f"VIOLATION: {word}: {seg} = {gloss}")
+        print(f"  Morphemes with illegal onsets: {v}")
+```
 
 ---
 
@@ -203,9 +271,10 @@ Before adding ANY vocabulary entry:
 
 | Phase | Task | Status | Notes |
 |-------|------|--------|-------|
-| 1.1 | Duplicate detection | ⬜ | ~17,000 entries |
-| 1.2 | Segmentation conflicts | ⬜ | ~17,000 entries |
-| 1.3 | Partial gloss completion | ⬜ | ~100 partials |
+| 1.1 | Duplicate detection | ✅ | 583 duplicates found, 353 removed |
+| 1.2 | Segmentation conflicts | ✅ | Phonotactic audit complete |
+| 1.3 | Partial gloss completion | ✅ | 0 partials remaining |
+| 1.4 | Phonotactic audit | ✅ | 15 violations fixed |
 | 2.1 | Root verification | ⬜ | ~2,000 roots |
 | 2.2 | Opacity audit | 🔄 | 1 fixed |
 | 2.3 | Gloss consistency | 🔄 | suang normalized |
@@ -228,9 +297,25 @@ Before adding ANY vocabulary entry:
 | `55b0457` | Fix sinsona', suangkeen glosses |
 | `d1d7765` | Remove erroneous sinsona segmentations |
 | `6622815` | Fix sinso/sinsona etymology |
+| `bf1f73a` | Create systematic quality audit documentation |
+| `6dff427` | Remove 327 duplicate/partial entries |
+| `b4eabb6` | Resolve 26 problematic partial-vs-complete conflicts |
+| `9efb103` | Create analysis files for 207 same-seg conflicts |
+| `cc0e07a` | Fix phonotactic violations and 22 remaining partials |
+| `1b9e09f` | Fix additional phonotactic violations (ht/lk clusters) |
 
 ---
 
-*Document version: 1.0*  
+## Current Coverage
+
+**100.0000%** (852,286/852,286 tokens)
+- Full analyses: 852,286
+- Partial analyses: 0
+- Unknown tokens: 0
+
+---
+
+*Document version: 1.1*  
 *Created: 2026-03-15*  
+*Last Updated: 2026-03-16*
 *Maintainer: Kuki-Chin Corpus Project*
