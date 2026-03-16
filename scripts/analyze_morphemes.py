@@ -230,7 +230,7 @@ CASE_MARKERS = {
 # TAM suffixes
 TAM_SUFFIXES = {
     # Tense/Aspect markers
-    'ding': 'PROSP',    # Prospective/future
+    'ding': 'IRR',    # Irrealis
     'ta': 'PFV',        # Perfective (completed action)
     'zo': 'COMPL',      # Completive (able to complete)
     'kik': 'ITER',      # Iterative (again)
@@ -715,11 +715,11 @@ AMBIGUOUS_MORPHEMES = {
         ('endure', 'verbal'),        # Endure/tolerate
     ],
     
-    # ding: 'stand' (verb) vs 'PROSP' (prospective aspect)
+    # ding: 'stand' (verb) vs 'IRR' (irrealis marker)
     # - 'stand' as main verb (ding-in = standing)
-    # - 'PROSP' as TAM suffix indicating future/intention
+    # - 'IRR' as TAM suffix indicating future/intention
     'ding': [
-        ('PROSP', 'suffix'),         # Prospective aspect (most common)
+        ('IRR', 'suffix'),         # Irrealis marker (most common)
         ('stand', 'verbal'),         # Stand (rare as main verb)
     ],
 }
@@ -887,7 +887,7 @@ FUNCTION_WORDS = {
     'hiam': 'Q',             # 2,766
     
     # === TAM Markers ===
-    'ding': 'PROSP',         # 18,980
+    'ding': 'IRR',         # 18,980
     # dingin and nadingun removed - parse transparently as ding-in, na-ding-un
     'ta': 'PFV',             # 1,106
     'zo': 'COMPL',
@@ -7267,12 +7267,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'a ci hi': ('a ci hi', '3SG say DECL'),
         
         # === TAM Compounds ===
-        'dingin': ('ding-in', 'PROSP-ERG'),
-        'nadingun': ('na-ding-un', '2SG-PROSP-IMP'),
-        'adingin': ('a-ding-in', '3SG-PROSP-ERG'),
-        'kadingin': ('ka-ding-in', '1SG-PROSP-ERG'),
-        'ading': ('a-ding', '3SG-PROSP'),
-        'kading': ('ka-ding', '1SG-PROSP'),
+        'dingin': ('ding-in', 'IRR-ERG'),
+        'nadingun': ('na-ding-un', '2SG-IRR-IMP'),
+        'adingin': ('a-ding-in', '3SG-IRR-ERG'),
+        'kadingin': ('ka-ding-in', '1SG-IRR-ERG'),
+        'ading': ('a-ding', '3SG-IRR'),
+        'kading': ('ka-ding', '1SG-IRR'),
         'tungta': ('tung-ta', 'arrive-PFV'),
         'kipanta': ('ki-pan-ta', 'REFL-begin-PFV'),
         'om ta': ('om ta', 'exist PFV'),
@@ -7627,7 +7627,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tampite': ('tam-pi-te', 'many-big-PL'),
         'pawlkhatte': ('pawl-khat-te', 'some-one-PL'),
         'dingte': ('ding-te', 'stand-PL'),
-        'dingun': ('ding-un', 'PROSP-PL.IMP'),
+        'dingun': ('ding-un', 'IRR-PL.IMP'),
         'pawi': ('pawi', 'Pawi'),
         'pang': ('pang', 'side'),
         'zing': ('zing', 'morning'),
@@ -7650,7 +7650,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tu-a': ('tu-a', 'now-LOC'),
         'nuai-ah': ('nuai-ah', 'below-LOC'),
         'thu-ah': ('thu-ah', 'word-LOC'),
-        'dinga': ('ding-a', 'PROSP-LOC'),
+        'dinga': ('ding-a', 'IRR-LOC'),
         
         # === More -in forms ===
         'hinapi-in': ('hi-na-pi-in', 'be-NMLZ-big-ERG'),
@@ -12912,7 +12912,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Round 130: More partial fixes
         'tawmkhatte': ('tawm-khat-te', 'few-one-PL'),               # those few
         'galsimte': ('gal-sim-te', 'enemy-count-PL'),               # spoilers
-        'lotte': ('lo-te', 'arrow-PL'),                             # arrows
+        'lotte': ('lot-te', 'cast-PL'),                             # (things) cast/shot - in "thaltang lotte" = arrows shot
         'kilate': ('kila-te', 'portion-PL'),                        # portions (spoil)
         'vankahte': ('van-kah-te', 'go.and-go-PL'),                 # familiar spirits
         'vankahthei': ('van-kah-thei', 'go.and-go-able'),           # has familiar spirit
