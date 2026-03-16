@@ -2392,8 +2392,8 @@ NOUN_STEMS = {
     'kihelh': 'bell',        # 1x Exod 39:25 - "golden bell"
     'sungvan': 'within',     # 1x Exod 40:9 - "anoint all within"
     'sanen': 'piece',        # 1x Lev 1:8 - "lay the parts"
-    'heektat': 'wring.off',  # 1x Lev 1:15 - "wring off his head"
-    'heeksat': 'offer',      # 1x Lev 5:8 - "offer for sin"
+    'heektat': 'fold-cut',   # 1x Lev 1:15 - "wring off" (fold + cut)
+    'heeksat': 'fold-apart', # 1x Lev 5:8 - "divide asunder" (NOT offer)
     'lohkik': 'make.amends', # 1x Lev 5:16 - "make amends"
     'kithehkhak': 'sprinkle', # 1x Lev 6:27 - "sprinkled"
     'kithehkha': 'sprinkle', # 1x Lev 6:27 - variant
@@ -10245,8 +10245,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tup': ('tup', 'roast'),                               # roast
         'piciang': ('pi-ciang', 'great-straight'),             # various/diverse
         'kiphattawm': ('ki-phat-tawm', 'REFL-praise-by'),      # be praised
-        'kiheek': ('ki-heek', 'REFL-oppose'),                  # resist/withstand
-        'heek': ('heek', 'oppose'),                            # base - oppose
+        'kiheek': ('ki-heek', 'REFL-fold'),                    # twine/braid/betray (fold together/fold in cards)
+        'heek': ('heek', 'fold'),                              # base - fold (wink=eye-fold, cord=folded, betray=fold)
         'suangngo': ('suang-ngo', 'stone-socket'),             # socket/base
         'ngo': ('ngo', 'socket'),                              # base - socket
         'bupun': ('bup-un', 'all-time'),                       # cluster
@@ -11782,7 +11782,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khasia': ('kha-sia', 'face-hide'),                        # hide face
         'khuisatna': ('khui-sat-na', 'sigh-NMLZ'),                 # sighing
         'tuithukpite': ('tui-thuk-pi-te', 'water-deep-great-PL'),  # deep waters
-        'mitheek': ('mi-theek', 'person-wrong'),                   # wrongfully
+        'mitheek': ('mik-heek', 'eye-fold'),                        # wink/beckon (fold eyelid)
         'tawnna': ('tawn-na', 'reproof-NMLZ'),                     # reproofs
         'gentham': ('gen-tham', 'speak-hand'),                     # handbreadth
         'nuihsatin': ('nuih-sat-in', 'reproach-NMLZ-INST'),        # reproach
@@ -13063,7 +13063,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'phungmai': ('phung-mai', 'law-face'),                        # 2x - before law
         'kihui': ('ki-hui', 'REFL-gather'),                           # 2x - gather together
         'dap': ('dap', 'war'),                                        # 2x - battle/war
-        'kihuiheek': ('ki-hui-heek', 'REFL-gather-scatter'),          # 2x - scatter
+        'kihuiheek': ('ki-hui-heek', 'REFL-wind-fold'),              # 2x - wreath/intertwine (1 Kgs 7:17)
         'tasam': ('ta-sam', 'child-call'),                            # 2x - adopt
         'guallelh': ('gual-lelh', 'outside-change'),                  # 2x - substitute
         "mante'": ('man-te', 'price-PL.POSS'),                        # 2x - prices'
@@ -15008,7 +15008,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Round 200: Job/Psalms/Numbers hapax vocabulary
         'lopi': ('lo-pi', 'NEG-EMPH'),                                # 1x Gen 21:23 - "falsely" (not falsely)
         'sucipsuk': ('su-cip-suk', 'push-tight-sink'),                # 1x Job 30:14 - "rolled upon me"
-        'heekcip': ('heek-cip', 'bind-tight'),                        # 1x Job 30:18 - "bindeth me about"
+        'heekcip': ('heek-cip', 'fold-tight'),                         # 1x Job 30:18 - "bindeth me about"
         'sehkholhin': ('seh-kholh-in', 'appoint-INTENS-ERG'),          # 1x Job 30:23 - "appointed"
         'sinkhamin': ('sin-kham-in', 'dark-mourn-ERG'),               # 1x Job 30:28 - "mourning"
         'dulhkhia': ('dulh-khia', 'peel-out'),                        # 1x Job 30:30 - "skin peeling off"
@@ -15804,10 +15804,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kiseepsa': ('ki-seep-sa', 'REFL-burn-already'),         # 1x - already burned
         'tuibempi': ('tui-bem-pi', 'water-edge-great'),          # 1x - great water edge
         'mettolna': ('met-tol-na', 'squeeze-hit-NMLZ'),          # 1x - squeezing
-        'huiheek': ('hui-heek', 'wind-blow'),                    # 1x - wind blow
+        'huiheek': ('hui-heek', 'wind-fold'),                    # 1x - wreath (KJV: "wreaths of chain work")
         'thangzakte': ('thang-zak-te', 'news-hear-PL'),          # 1x - news hearers
         'bengtumsuk': ('beng-tum-suk', 'side-stumble-push'),     # 1x - push stumble side
-        'kiheekheek': ('ki-heek-heek', 'REFL-blow-REDUP'),       # 1x - blowing repeatedly
+        'kiheekheek': ('ki-heek-heek', 'REFL-fold-REDUP'),         # 1x - writhe (repeated folding, Isa 26:18)
         'kikualvial': ('ki-kual-vial', 'REFL-hold-round'),       # 1x - holding round
         'kithukkim': ('ki-thuk-kim', 'REFL-word-complete'),      # 1x - complete word
         'dengawpna': ('den-gawp-na', 'strike-cover-NMLZ'),       # 1x - striking
