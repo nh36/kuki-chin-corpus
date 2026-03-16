@@ -4699,7 +4699,6 @@ BINARY_COMPOUNDS = {
     'ompih': ('om', 'pih', 'presence'),         # exist-APPL → presence (33x)
     'lauhuai': ('lau', 'huai', 'dread'),        # fear-dread → dread (32x)
     'paubaan': ('pau', 'baan', 'blasphemy'),    # speak-slander → blasphemy (32x)
-    'paktat': ('pak', 'tat', 'declare'),        # proclaim-strike → declaration (31x)
     'salsuah': ('sal', 'suah', 'slavery'),      # servant-become → slavery (31x)
     'galdo': ('gal', 'do', 'campaign'),          # war-go → military campaign (59x)
     'milian': ('mi', 'lian', 'noble'),          # person-great → noble (31x)
@@ -7115,6 +7114,34 @@ def analyze_word(word: str) -> Tuple[str, str]:
     
     # Check common compounds - EXPANDED from corpus frequency analysis
     COMPOUND_WORDS = {
+        # === Opaque Lexemes (no transparent morphological analysis) ===
+        'paktat': ('paktat', 'fornication'),  # 122x KJV: harlot/whore/fornication
+        
+        # === Quality audit fixes: 22 partials ===
+        'leizang': ('lei-zang', 'land-even'),         # Psalm 26:12 KJV "even place"
+        'kuamkeu': ('kuam-keu', 'valley-Baca'),       # Psalm 84:6 place name "valley of Baca"
+        'misusia': ('mi-su-sia', 'person-enemy-evil'), # Psalm 137:8 KJV "daughter of Babylon...destroyed"
+        "saphulipte'": ("sa-phulip-te'", 'animal-bittern-PL.POSS'), # Isaiah 14:23 KJV "bittern"
+        'hui': ('hui', 'fitches'),                    # Isaiah 28:25 KJV "fitches" (plant)
+        'eu': ('eu', 'dig'),                          # Isaiah 51:1 KJV "digged"
+        'maugua': ('mau-gua', 'bulrush-droop'),       # Isaiah 58:5 KJV "bulrush"
+        'zubeel': ('zubeel', 'bottle'),               # Jeremiah 13:12 KJV "bottle" (loanword?)
+        'gangawh': ('gan-gawh', 'week-half'),         # Daniel 9:27 KJV "midst of the week"
+        'tawlno': ('tawl-no', 'tax-raiser'),          # Daniel 11:20 KJV "raiser of taxes"
+        'sbawl': ('s-bawl', 'NMLZ-make'),             # Hosea 7:5 KJV "made...sick" (nominalized?)
+        'tuubuk': ('tuu-buk', 'flock-fold'),          # Micah 2:12 KJV "flock in...fold"
+        'gunva': ('gun-va', 'owl-night'),             # Zephaniah 2:14 KJV "cormorant" (bird)
+        "gunvapite": ("gun-va-pi-te", 'owl-night-big-PL'), # bittern (larger owl)
+        "'zuhai": ("'zuhai", 'glutton'),              # Matt 11:19, Luke 7:34 KJV "gluttonous"
+        'zuhai': ('zuhai', 'glutton'),                # glutton (without initial apostrophe)
+        "khuza'": ("khuza'", 'Chuza'),                # Luke 8:3 proper name
+        "tu'n": ("tu'n", 'now.EMPH'),                 # Luke 16:4 contraction "tu + in"
+        'saikhar': ('saikhar', 'Sychar'),             # John 4:5 proper name
+        'de': ('de', 'torch'),                        # John 18:3 KJV "torches"
+        "pirras'": ("pirras'", 'Pyrrhus'),            # Acts 20:4 proper name
+        'kaii': ('ka-ii', '1SG-vapor'),               # James 4:14 KJV "vapour"
+        'atul': ('a-tul', '3SG-ten.thousand'),        # Rev 5:11 KJV "ten thousand"
+        
         # === Noun + LOC Compounds (very common pattern) ===
         'sungah': ('sung-ah', 'inside-LOC'),
         'tungah': ('tung-ah', 'on-LOC'),
@@ -8828,7 +8855,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'taitehte': ('tai-teh-te', 'cut-measure-PL'),        # 9x - compound
         'siampipuan\'': ('siampi-puan\'', 'priest-cloth.POSS'), # 9x - "priest's robe"
         'kisan\'': ('ki-san\'', 'REFL-high.POSS'),           # 9x - compound
-        'kipsakna': ('ki-psak-na', 'REFL-bless-NMLZ'),       # 9x - "blessing"
+        'kipsakna': ('kip-sak-na', 'firm-CAUS-NMLZ'),        # 9x - "confirmation" (phonotactic: no ps cluster)
         'phulakna': ('phu-lak-na', 'carry-take-NMLZ'),       # 9x - compound
         'vah': ('vah', 'go.quickly'),                        # 9x - "go quickly"
         'nawt': ('nawt', 'push'),                            # 9x - "push"
@@ -9296,7 +9323,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'omnasa': ('om-na-sa', 'be-NMLZ-animal'),              # 6x - compound
         'hut': ('hut', 'shelter'),                             # 6x - "shelter, booth"
         'bangci-a': ('bang-ci-a', 'what-say-Q'),               # 6x - "what manner"
-        'kapkhia': ('ka-pkhia', '1SG-emerge'),                 # 6x - compound
+        'kapkhia': ('kap-khia', 'weep-out'),                   # 6x - phonotactic fix (no pk cluster)
         'zawl-ai': ('zawl-ai', 'valley-LOC'),                  # 6x - "in the valley"
         'thalawhsa': ('tha-lawh-sa', 'breath-reap-animal'),    # 6x - compound
         'zawte': ('zawh-te', 'finish-PL'),                     # 6x - "those who finished"
@@ -10477,8 +10504,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ging': ('ging', 'sound'),                             # base - sound
         'gel': ('gel', 'together'),                            # together
         'kizal': ('ki-zal', 'REFL-stretch'),                   # stretch forth
-        'kipsuak': ('ki-psuak', 'REFL-take'),                  # take by war
-        'psuak': ('psuak', 'take'),                            # base - take
         'dimlet': ('dim-let', 'fill-back'),                    # overflow
         'guallelin': ('gual-lel-in', 'enemy-change-ERG'),      # defeat
         'diam': ('diam', 'month'),                             # month
@@ -12945,7 +12970,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tuidawk': ('tui-dawk', 'water-border'),                   # border
         'zahtak': ('zah-tak', 'fear-true'),                        # fear/dread
         'sisate': ('si-sa-te', 'blood-PAST-PL'),                   # unclean PL
-        'paktat': ('pak-tat', 'harlot-deal'),                      # deal as harlot
         'theite': ('thei-te', 'fruit-PL'),                         # fruits
         'naungek': ('nau-ngek', 'child-birth'),                    # midwife
         'tuangte': ('tuang-te', 'chariot-PL'),                     # chariots
@@ -13130,7 +13154,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'inndap': ('inn-dap', 'house-cover'),                       # covered house
         'innsun': ('inn-sun', 'house-side'),                        # sides of house
         'pakkual': ('pak-kual', 'throw-corner'),                    # undersetters
-        'kipsaknate': ('ki-psak-na-te', 'REFL-ledge-NMLZ-PL'),      # ledges
         'vankoihna-ah': ('van-koih-na-ah', 'heaven-put-NMLZ-LOC'),  # treasures
         'zawngkhalna': ('zawng-khal-na', 'roam-consume-NMLZ'),      # consumption
         'lahnate': ('lah-na-te', 'take-NMLZ-PL'),                   # tents
@@ -14264,7 +14287,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lunggulhgulh': ('lung-gulh-gulh', 'heart-desire-REDUP'),    # desired (Micah 7:1)
         'genzak': ('gen-zak', 'speak-proclaim'),                     # publish (Isaiah 52:7)
         'cikhuk': ('ci-khuk', 'salt-preserve'),                      # to.salt (Ezekiel 47:11)
-        'atkhiat': ('a-tkhiat', '3SG-cut.off'),                      # cut off (1 Sam 24:5) 
+        'atkhiat': ('at-khiat', '3SG.cut-away'),                     # cut off (1 Sam 24:5) - phonotactic fix
         'kanzaw': ('ka-n-zaw', '1SG-DIR-leap'),                      # leap (1 Sam 20:19)
         'kanzo': ('ka-n-zo', '1SG-DIR-COMPL'),                       # leaped (2 Sam 22:30) - probably kanzo = 'ka-n-zo'
         # Round 167h more: OT partial-gloss fixes
@@ -14319,7 +14342,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bate': ('ba-te', 'pledge-PL'),                              # pledges (Habakkuk 2:6)
         'tungthamah': ('tung-thamah', 'on-outside'),                 # outwardly (Matthew 7:15)
         'sialtalling': ('sial-tal-ling', 'thorn-grow-wild'),         # thistles (Matthew 7:16)
-        'naksiat': ('na-ksiat', '2SG-fall'),                         # fall (Matthew 7:27) - ksiat = fall
+        'naksiat': ('nak-siat', '2SG.great-spoil'),                  # fall/ruin (Matthew 7:27) - phonotactic fix
         'kengthuah': ('keng-thuah', 'carry-extra'),                  # extra (Matthew 10:10)
         'sammal': ('sam-mal', 'hair-all'),                           # hairs.all (Matthew 10:30)
         'itzawte': ('it-zaw-te', 'love-more-PL'),                    # love.more (Matthew 10:37)
@@ -16504,7 +16527,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kongkaw': ('kong-kaw', '1SG→3-tear'),                   # 1x Mark 1:26 - torn him
         'kongkawcip': ('kong-kaw-cip', '1SG→3-tear-squeeze'),    # 1x Mark 9:18 - teareth and foameth
         'kongkawsak': ('kong-kaw-sak', '1SG→3-tear-CAUS'),       # 1x Mark 9:20 - spirit tare him
-        'kongkawtsak': ('kong-kaw-tsak', '1SG→3-tear-tight'),    # 1x Mark 9:26 - rent him sore
+        'kongkawtsak': ('kong-kawt-sak', '1SG→3-tear-CAUS'),     # 1x Mark 9:26 - rent him sore (kawt variant)
         'kongkhuamte': ('kong-khuam-te', '1SG→3-corner-PL'),     # 1x Ezek 45:19 - corners of settle
         'konglekong': ('kong-le-kong', '1SG→3-and-1SG→3'),       # 1x Ezek 40:27 - gate to gate
         'kongvangneute': ('kong-vang-neu-te', '1SG→3-space-small-PL'),  # 1x Ezek 41:16 - narrow windows
