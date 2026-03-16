@@ -2152,7 +2152,7 @@ NOUN_STEMS = {
     'sauveipi': 'flock',     # 46
     'mipil': 'wise.person',  # 47
     'aksi': 'star',          # 48x - "star" (vana aksi = star of heaven)
-    'lutang': 'chief',  # 56x - "duke, chief"
+    'lutang': 'head-leader', # 56x - "duke, chief" (lu=head + tang=leader)
     'ciatah': 'each',        # 48x - "each, every"
     'tuam': 'promise',       # base for phattuamna, tuamtuam
     'guh': 'bone',           # 44x - "bone" (guhte = bones)
@@ -4887,7 +4887,7 @@ BINARY_COMPOUNDS = {
     'tawisuang': ('tawi', 'suang', 'weights'),    # weigh-stone → scale weights (8x)
     
     # Round 185: Low-frequency (1-4x) lexicalized compounds
-    'singnai': ('sing', 'nai', 'onyx'),           # stone-precious → onyx/precious stone (4x)
+    'singnai': ('sing', 'nai', 'bdellium'),       # tree-precious → bdellium/tree resin (4x)
     'kultal': ('kul', 'tal', 'pitch'),            # tar-coat → pitch (4x)
     'khansung': ('khan', 'sung', 'lifetime'),     # generation-inside → lifetime/days (4x)
     'mimkhau': ('mim', 'khau', 'thread'),         # thread-fine → thread (4x)
@@ -7606,10 +7606,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # === More compound words ===
         'pasian-te': ('pasian-te', 'god-PL'),
-        'lonona': ('lo-no-na', 'disobedience'),
-        'puanbuk': ('puan-buk', 'tent'),
-        'lutang': ('lu-tang', 'pillow'),
-        'hotkhiatna': ('hot-khiat-na', 'salvation'),
+        'lonona': ('lo-no-na', 'NEG-obey-NMLZ'),                 # disobedience (transparent)
+        'puanbuk': ('puan-buk', 'cloth-shelter'),                # tent (transparent)
+        'lutang': ('lu-tang', 'head-leader'),                    # chief/head (NOT pillow - see Gen 36:21)
+        'hotkhiatna': ('hot-khiat-na', 'save-away-NMLZ'),        # salvation (transparent)
         'pawlpi': ('pawl-pi', 'group-big'),
         'khawl': ('khawl', 'rest'),
         'tungtawnin': ('tung-tawn-in', 'on-ever-ERG'),
@@ -7725,7 +7725,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'minamte': ('mi-nam-te', 'person-kind-PL'),
         'nasep': ('na-sep', 'work'),
         'suante': ('suan-te', 'offspring-PL'),
-        'namsau': ('nam-sau', 'long.hair'),
+        'namsau': ('nam-sau', 'hair-long'),                      # long hair (transparent, nam=hair)
         'nangawn': ('na-ngawn', '2SG-own'),
         'piang': ('piang', 'be.born'),
         'hihna': ('hih-na', 'this-NMLZ'),
@@ -7738,7 +7738,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lohna': ('loh-na', 'NEG-NMLZ'),
         'kam': ('kam', 'word'),
         'mual': ('mual', 'mountain'),
-        'sathau': ('sa-thau', 'fat'),
+        'sathau': ('sa-thau', 'flesh-fat'),                      # fat (transparent)
         'tuipi': ('tui-pi', 'water-big'),
         'hehna': ('heh-na', 'anger-NMLZ'),
         'upna': ('up-na', 'believe-NMLZ'),
@@ -7864,7 +7864,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # === Session 3: More compounds ===
         'letmat': ('let-mat', 'half-cubit'),                  # 34 - "cubit and a half"
         'thuciam': ('thu-ciam', 'word-promise'),              # 33 - "covenant, promise"
-        'thumin': ('thu-min', 'three'),                       # numeral "three"
+        'thumin': ('thum-in', 'three-ERG'),                   # transparent: three + ERG
         'kongkhakte': ('kongkha-te', 'door-PL'),              # 38 - "doors"
         'pawlte': ('pawl-te', 'group-PL'),                    # 33 - "companions, allies"
         'paikhawm': ('pai-khawm', 'go-together'),             # 33 - "come together"
@@ -12026,7 +12026,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kikhulna': ('ki-khul-na', 'REFL-cast-NMLZ'),              # cast
         # Round 107: More vocabulary for 99% (count=2)
         'limlemel': ('lim-le-mel', 'form-NEG-void'),               # without form
-        'singnai': ('sing-nai', 'precious.stone'),                 # sing=stone + nai=precious → onyx
+        'singnai': ('sing-nai', 'tree-precious'),                  # tree resin = bdellium (transparent)
         'nakguh': ('nak-guh', 'rib-take'),                         # took rib
         'kipiansakna': ('ki-pian-sak-na', 'REFL-create-CAUS-NMLZ'), # creation
         'minthangte': ('min-thang-te', 'name-famous-PL'),          # men of renown
