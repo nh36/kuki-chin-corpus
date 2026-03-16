@@ -1425,8 +1425,7 @@ VERB_STEMS = {
     'pian': 'create',   # 32x - "create, be born" (piansak = creation work)
     'bei': 'finish',     # 32x - "end, finish" (beina = ending)
     'pan': 'plead',          # 32x - "plead, argue for"
-    'kido': 'fight',         # 31x - "fight" (galkidona = warfare)
-    'don': 'war',            # war/fight - enables ki-don-a = REFL-war-LOC = "battle"
+    'kido': 'fight',         # 31x - "fight" = ki-do REFL-fight (galkidona = warfare)
     # Note: kidot (Form II) now in VERB_STEM_PAIRS
     'ciah': 'return',        # 31x - "return" (ciahsak = send back)
     'khol': 'denounce',      # 31x - "denounce" (genkhol = speak denounce)
@@ -1725,7 +1724,7 @@ VERB_STEMS = {
     'tangtawnga': 'beginning',     # beginning/old (of old)
     'cinasak': 'make.sick',        # make sick (maketh heart sick)
     'maitaisak': 'make.cheerful',  # make cheerful (cheerful countenance)
-    'kidon': 'beat',               # beaten (were beaten)
+    'kidon': 'beaten',             # kido-n = fight-INV = "be beaten" (2x)
     'awklawh': 'snare',            # snare/get a snare
     'mitphiat': 'set.eyes',        # set eyes (set thine eyes upon)
     # NOTE: 'mana' removed - causes over-segmentation with manawh (direct toward)
@@ -7963,7 +7962,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'piansak': ('pian-sak', 'create-CAUS'),              # 32 - "creation"
         'lausak': ('lau-sak', 'fear-CAUS'),                  # 31 - "make afraid"
         'galkidona': ('gal-kido-na', 'enemy-fight-NMLZ'),    # 31 - "warfare"
-        'galkidonate': ('gal-kido-na-te', 'enemy-fight-NMLZ-PL'),  # 1x - "wars"
+        'galkidonate': ('gal-ki-do-na-te', 'enemy-REFL-fight-NMLZ-PL'),  # 1x - "wars"
         'genkhol': ('gen-khol', 'speak-INTENS'),             # 31 - "denounce"
         'ciahsak': ('ciah-sak', 'return-CAUS'),              # 31 - "send back"
         'genkhia': ('gen-khia', 'speak-EXIT'),               # 32 - "utter forth"
@@ -8133,7 +8132,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Miscellaneous high-frequency
         'lo-a': ('lo-ah', 'field-LOC'),                      # 31 - "in the field"
         'hici': ('hi-ci', 'this-say'),                       # 27 - "do this, thus"
-        'kal': ('kal', 'liver'),                             # 32 - "liver" (body part)
+        'kal': ('kal', 'kidney'),                            # 32 - "kidney" (body part) - KJV "the two kidneys"
         'muhsa': ('muh-sa', 'see.II-PERF'),                  # 27 - "seen, having seen"
         'kipatna': ('ki-pat-na', 'REFL-begin-NMLZ'),         # 28 - "beginning"
         
@@ -12532,7 +12531,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ngaihsutna': ('ngaih-sut-na', 'think-NMLZ'),              # thoughts
         'thukhenna': ('thu-khen-na', 'word-judge-NMLZ'),           # judge
         'suksiatna': ('suk-siat-na', 'destroy-NMLZ'),              # destruction
-        'kidona': ('ki-don-a', 'REFL-war-LOC'),                    # war
+        'kidona': ('ki-do-na', 'REFL-fight-NMLZ'),                    # battle/warfare
         'sumkholna': ('sum-khol-na', 'silver-treasure-NMLZ'),      # treasuries
         # Round 115: Judges and historical vocabulary
         'kikhungto': ('ki-khung-to', 'REFL-go-up'),                # goeth up
