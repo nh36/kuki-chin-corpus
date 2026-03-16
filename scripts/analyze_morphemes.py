@@ -724,6 +724,22 @@ AMBIGUOUS_MORPHEMES = {
     ],
 }
 
+# English metadata words that appear in Bible file headers (not Tedim text)
+# These should be glossed as themselves to avoid mis-parsing
+METADATA_WORDS = {
+    'available': 'available',
+    'information': 'information',
+    'ctd': 'CTD',           # ISO 639-3 code
+    'scraped': 'scraped',
+    'from': 'from',
+    'original': 'original',
+    'source': 'source',
+    'https': 'HTTPS',
+    'www': 'WWW',
+    'bible': 'bible',
+    'com': 'COM',
+}
+
 # Common function words with glosses - expanded with frequencies
 FUNCTION_WORDS = {
     # === Conjunctions & Connectors ===
@@ -6906,6 +6922,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
     if not word:
         return ('', '')
     
+    # Handle pure numbers (years, verse numbers in metadata)
+    if word.isdigit():
+        return (word, 'NUM')
+    
+    # Handle URLs (metadata)
+    if word.startswith('http://') or word.startswith('https://'):
+        return (word, 'URL')
+    
     # Normalize curly apostrophes to straight apostrophes for dictionary lookups
     word = word.replace('\u2019', "'").replace('\u2018', "'")
     
@@ -6928,6 +6952,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         meaning = disambiguate_morpheme(word_lower, {'position': 'standalone'})
         if meaning:
             return (word, meaning)
+    
+    # Check METADATA_WORDS - English words in file headers (not Tedim text)
+    if word_lower in METADATA_WORDS:
+        return (word, METADATA_WORDS[word_lower])
     
     # Check OPAQUE LEXEMES early - these are words that LOOK decomposable
     # but have non-compositional meanings (e.g., sanggam = 'brother' NOT 'high-land')
@@ -16350,6 +16378,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ipin': ('ip-in', 'restrain-ERG'),                       # 1x - restraining
         'uatsaknate': ('uatsak-na-te', 'pride-NMLZ-PL'),         # 1x - pride/arrogance
         'ettehin': ('et-teh-in', 'care-hold-ERG'),               # 1x - comparing
+        
+        # Round 230: Fix remaining partials
+        'bawngnawithaukhal': ('bawngnawi-thaukhal', 'butter-cream'),  # 2x - dairy products (Gen 18:8, 2Sam 17:29)
         
         # Round 229: Opaque stems with suffixes (nasep, nasem are opaque)
         'nasepna': ('nasep-na', 'work-NMLZ'),                    # 231x - working/work (opaque nasep)
