@@ -16329,7 +16329,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 227: Final spot-check fixes
         'nawt': ('nawt', 'push'),                                # 9x - push/gore (Deut 33:17)
-        'pataukohna': ('pa-tau-koh-na', 'alarm-NMLZ'),           # 8x - trumpet alarm (Num 10:9)
+        'pataukohna': ('pa-tau-koh-na', 'male-signal-call-NMLZ'), # 8x - trumpet alarm (Num 10:9)
         'vatawt': ('vatawt', 'cuckoo'),                          # 6x - cuckoo bird (Lev 11:16)
         'golpi': ('gol-pi', 'creature-great'),                   # 2x - great creature/whale
         'golpite': ('gol-pi-te', 'creature-great-PL'),           # 2x - whales/great creatures (Gen 1:21)
