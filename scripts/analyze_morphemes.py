@@ -879,8 +879,7 @@ FUNCTION_WORDS = {
     # === Negation ===
     'lo': 'NEG',             # 6,018
     'kei': 'NEG.EMPH',       # 6,487
-    'loh': 'NEG.NOM',        # 885
-    'loin': 'NEG.ERG',       # 873
+    # loh and loin removed - parse transparently as lo-h, lo-in
     'kuamah': 'nobody',      # 595
     'bangmah': 'nothing',    # 495
     
@@ -889,8 +888,7 @@ FUNCTION_WORDS = {
     
     # === TAM Markers ===
     'ding': 'PROSP',         # 18,980
-    'dingin': 'PROSP.ERG',   # 4,798
-    'nadingun': '2PL.PROSP.IMP',  # 656
+    # dingin and nadingun removed - parse transparently as ding-in, na-ding-un
     'ta': 'PFV',             # 1,106
     'zo': 'COMPL',
     'kik': 'ITER',
@@ -1443,6 +1441,7 @@ VERB_STEMS = {
     'mindai': 'shame',       # 29x - "shame" (mindaina = shame)
     'sep': 'work',           # 28x - "work" (sepnate = works)
     'ngaihsut': 'think', # 27x - "think, imagine" (ngaihsutnate = thoughts)
+    'lot': 'cast',           # 7x - "cast, throw, shoot" (KJV "cast", "shot")
     
     # === Newly discovered stems from rare words analysis ===
     'dawn': 'top',               # 8x - Gen 11:4 "tower whose top may reach unto heaven"
@@ -1960,6 +1959,7 @@ NOUN_STEMS = {
     'mun': 'place',          # 820
     'mung': 'place',         # variant form
     'kal': 'middle',         # middle/between - enables ki-kal = REFL-middle = between
+    'nun': 'knop',           # decorative bud on lampstand (KJV "knop") - 16x
     'leitung': 'earth',      # 717
     'leitang': 'earth',      # 462 (variant)
     'vantung': 'heaven',     # 419
@@ -3087,7 +3087,7 @@ PROPER_NOUNS = {
     'abarim', 'jefunneh', 'agag', 'zimri', 'nebo', 'ahimaaz', 'netofah',
     'bani', 'jehoram', 'remaliah', 'amoz', 'mikhael', 'sairas', 'saipras',
     'saddusi', 'agrippa', 'abihu', 'ashtaroth', 'ashkelon', 'ner',
-    'ahithofel', 'ahithophel', 'jehu', 'esther', 'lot', 'beor', 'amram',
+    'ahithofel', 'ahithophel', 'jehu', 'esther', 'Lot', 'beor', 'amram',
     'izhar', 'ithamar', 'ahira', 'ira',
     # Round 162: Bulk proper noun addition - all remaining names
     'abaddon', 'abagtha', 'abda', 'abdeel', 'abdi', 'abdiel', 'abdon', 'abednego', 'abelbethmaakah', 'abelkeramim',
@@ -3275,7 +3275,7 @@ PROPER_NOUNS = {
     'nethanel', 'nethinim', 'netofah', 'netofathite', 'neziah', 'nezib', 'nibhaz', 'nibshan', 'nikanor', 'nikodemas',
     'nikolaitante', 'nikolas', 'nile', 'nimrah', 'nimrim', 'nimrod', 'nimshi', 'nineva', 'nisan', 'nisroch',
     'no', 'noadiah', 'noah', 'nob', 'nobah', 'nobai', 'nod', 'nodab', 'noe', 'nofah',
-    'nogah', 'noha', 'non', 'nophah', 'nun', 'nymphas',
+    'nogah', 'noha', 'non', 'nophah', 'Nun', 'nymphas',
     'obadiah', 'obal', 'obed', 'obededom', 'obil', 'oboth', 'ochran', 'oded', 'og', 'ohad',
     'ohel', 'oholah', 'oholiab', 'oholibah', 'oholibamah', 'okran', 'olive', 'olympas', 'omar', 'omega',
     'omri', 'on', 'onam', 'onan', 'onesiforas', 'onesimus', 'ono', 'ophel', 'ophir', 'ophni',
@@ -3623,8 +3623,18 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
         # 'forbid' with ki- prefix (kikham = refrain)
         if context.get('has_ki_prefix'):
             return 'forbid'
-        # 'gold' as standalone noun
+        # 'hold' after pawi (pawi kham = hold feast)
+        if context.get('prev_morpheme') == 'pawi':
+            return 'hold'
+        # 'gold' as standalone noun (default)
         return 'gold'
+    
+    elif morpheme == 'mang':
+        # 'obey' after thu (thu mang = obey word/command)
+        if context.get('prev_morpheme') == 'thu':
+            return 'obey'
+        # 'dream' as standalone noun (default)
+        return 'dream'
     
     elif morpheme == 'hi':
         # 'be' (copula) when preceded by subject prefix
@@ -3766,15 +3776,20 @@ def is_proper_noun(word: str) -> bool:
         return False
     clean_lower = clean.lower()
     
-    # Explicit proper noun check
-    if clean in PROPER_NOUNS or clean.title() in PROPER_NOUNS:
+    # Explicit proper noun check - must match case exactly OR be capitalized input
+    # If 'Lot' is in PROPER_NOUNS, only 'Lot' matches, not 'lot'
+    if clean in PROPER_NOUNS:
         return True
     
-    # If capitalized, only treat as proper noun if NOT a known common word
+    # For capitalized input, check if title-case is in PROPER_NOUNS
+    # BUT also check if lowercase is a known common word
     if clean[0].isupper():
         # Check if lowercase form is in common word dictionaries
         if clean_lower in VERB_STEMS or clean_lower in NOUN_STEMS or clean_lower in FUNCTION_WORDS:
             return False  # Known common word, not a proper noun
+        # Check if title form is a proper noun
+        if clean.title() in PROPER_NOUNS:
+            return True
         return True  # Unknown capitalized word, treat as proper noun
     
     return False
@@ -6998,8 +7013,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
         if word_lower.endswith(suffix):
             base = word[:-len(suffix)]
             base_clean = base.rstrip('-')  # Remove trailing hyphen if present
+            base_lower = base_clean.lower()
             base_title = base_clean.title()
-            if base_title in PROPER_NOUNS or base_clean in PROPER_NOUNS:
+            # Only treat as proper noun if base is in PROPER_NOUNS AND
+            # lowercase base is NOT a known common word
+            if (base_title in PROPER_NOUNS or base_clean in PROPER_NOUNS):
+                # Skip if lowercase form is a known common word
+                if base_lower in VERB_STEMS or base_lower in NOUN_STEMS:
+                    continue  # Let it fall through to COMPOUND_WORDS
                 return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_title.upper()}-{gloss}")
     
     # Handle possessive marker ' or ' (curly quote) at end of word
@@ -7894,7 +7915,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'puanhampi': ('puan-ham-pi', 'cloth-cover-big'),      # 45
         'sawt': ('sawt', 'long.time'),                         # 45
         'zawng': ('zawng', 'all'),                              # 45
-        'nun': ('nun', 'life'),                                 # 45
+        'nun': ('nun', 'knop'),                                # 45 - decorative bud on lampstand (KJV "knop")
         'piaksa': ('piak-sa', 'give-PL.POSS'),                 # 44
         'gamlapi': ('gam-la-pi', 'land-take-big'),            # 44
         'ahihlam': ('a-hih-lam', '3SG-be-way'),               # 43
@@ -8644,7 +8665,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khuhcip': ('khuh-cip', 'cover-trap'),               # 12x - "entangled"
         'theihtel': ('theih-tel', 'know.II-help'),           # 12x - "understand"
         'khumcip': ('khum-cip', 'cover-push'),               # 12x - "push/horn"
-        'thumang': ('thu-mang', 'word-chief'),               # 12x - "covenant"
+        'thumang': ('thu-mang', 'word-obey'),                # 12x - "obey word/command" (KJV "hearkened")
         'kizopna': ('ki-zop-na', 'REFL-join-NMLZ'),          # 12x - "joining"
         'neikhawm': ('nei-khawm', 'have-together'),          # 12x - "keep together"
         'maimangsak': ('mai-mang-sak', 'face-chief-CAUS'),   # 12x - "destroy name"
@@ -10293,8 +10314,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'bek': ('bek', 'only'),                                # base - only
         
         # Round 49: More vocabulary from Deuteronomy, Joshua, Judges, Proverbs, Ecclesiastes, etc.
-        'zunglot': ('zung-lot', 'root-pull'),                  # uproot
-        'lot': ('lot', 'pull'),                                # base - pull
+        'zunglot': ('zung-lot', 'root-cast'),                  # uproot
+        'lot': ('lot', 'cast'),                                # base - cast/throw/shoot (KJV "cast", "shot")
         'lazo': ('la-zo', 'take-able'),                        # able to take
         'meilah': ('mei-lah', 'fire-lamp'),                    # lamp
         'lah': ('lah', 'lamp'),                                # base - lamp
