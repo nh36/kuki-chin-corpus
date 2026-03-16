@@ -8834,7 +8834,6 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'kitangsapna': ('ki-tang-sap-na', 'REFL-force-call-NMLZ'), # 9x - compound
         'omkhak': ('om-khak', 'exist-command'),              # 9x - compound
         'lakkhia': ('lak-khia', 'take-exit'),                # 9x - "take out"
-        'nawt': ('nawt', '2SG.?'),                           # 9x - compound
         'ukpa\'': ('uk-pa\'', 'rule-father.POSS'),           # 9x - "ruler's"
         'genkhiat': ('gen-khiat', 'speak-depart'),           # 9x - "speak and depart"
         'lungmang': ('lung-mang', 'heart-forget'),           # 9x - "forget heart"
@@ -16327,6 +16326,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khuaisuahna': ('khua-i-suah-na', 'town-lack-become-NMLZ'),  # 1x Isa 47:9 - loss of children
         'khuaisuahte': ('khua-i-suah-te', 'town-lack-become-PL'),  # 1x Zech 12:10 - mourn
         'kihanthawntawm': ('ki-han-thawn-tawm', 'REFL-do-continue-end'),  # 1x Ezek 38:14 - dwell safely
+        
+        # Round 227: Final spot-check fixes
+        'nawt': ('nawt', 'push'),                                # 9x - push/gore (Deut 33:17)
+        'pataukohna': ('pa-tau-koh-na', 'alarm-NMLZ'),           # 8x - trumpet alarm (Num 10:9)
+        'vatawt': ('vatawt', 'cuckoo'),                          # 6x - cuckoo bird (Lev 11:16)
+        'golpi': ('gol-pi', 'creature-great'),                   # 2x - great creature/whale
+        'golpite': ('gol-pi-te', 'creature-great-PL'),           # 2x - whales/great creatures (Gen 1:21)
+        'paneah': ('paneah', 'PANEAH'),                          # 1x - proper name (Zaphnath-paneah)
+        'kikol': ('ki-kol', 'REFL-prevent'),                     # 1x - prevent/hinder
+        'nalna': ('nal-na', 'slippery-NMLZ'),                    # 1x - slippery place
+        'aknote': ('ak-no-te', 'raven-young-PL'),                # 1x - young ravens
+        'ipzote': ('ip-zo-te', 'close-join-PL'),                 # 1x - troubles
+        'ipin': ('ip-in', 'restrain-ERG'),                       # 1x - restraining
+        'uatsaknate': ('uatsak-na-te', 'pride-NMLZ-PL'),         # 1x - pride/arrogance
+        'ettehin': ('et-teh-in', 'care-hold-ERG'),               # 1x - comparing
     }
 
 
