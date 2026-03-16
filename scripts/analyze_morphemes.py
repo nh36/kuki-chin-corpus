@@ -439,8 +439,8 @@ AMBIGUOUS_MORPHEMES = {
     # - 'father' standalone or with possessive (ka pa = my father)
     # - 'NMLZ.AG' as suffix creating agent nouns (verb-pa = one who verbs)
     'pa': [
-        ('father', 'standalone'),  # Standalone or possessed
-        ('NMLZ.AG', 'suffix'),     # Agentive nominalizer
+        ('male', 'standalone'),  # Standalone noun: male/son/father (kinship term)
+        ('NMLZ.AG', 'suffix'),   # Agentive nominalizer
     ],
     
     # man: 'finish' vs 'reason' vs 'catch/take' vs 'price'
@@ -613,6 +613,16 @@ AMBIGUOUS_MORPHEMES = {
         ('ERG', 'case_marker'),      # Ergative case (most common)
         ('house', 'nominal'),        # Noun: house (standalone)
         ('QUOT', 'after_ci'),        # Quotative after ci 'say'
+    ],
+    
+    # mang: 'dream/vision' (noun) vs 'obey' (verb) vs 'fly' (verb/rare)
+    # - 'dream' in "mang sungah" = in a dream, "mang man" = dream
+    # - 'obey' in "thu mang" = obey word, "ka mang" = I obey
+    # - 'fly' rare, mainly in compounds
+    'mang': [
+        ('dream', 'standalone'),     # Noun: dream, vision (55+ occurrences)
+        ('obey', 'with_thu'),        # Verb: obey (143+ occurrences with thu)
+        ('fly', 'in_compound'),      # Rare: fly (2x, mainly in galkapmang)
     ],
     
     # ah: 'LOC' (locative) vs 'DAT' (dative/allative)
@@ -1884,9 +1894,9 @@ NOUN_STEMS = {
     'migilote': 'enemies',
     
     # Kinship
-    'pa': 'father',          # 2,265
+    'pa': 'male',          # 2,265 - male kinship term (father/son depending on context)
     'pate': 'fathers',
-    'nu': 'mother',          # 619
+    'nu': 'female',          # 619 - female kinship term (mother/daughter depending on context)
     'tapa': 'son',           # 1,906
     'tapate': 'sons',        # 411
     'tanu': 'daughter',
@@ -2756,7 +2766,7 @@ NOUN_STEMS = {
     # 'ih': REMOVED - was incorrectly glossed as 'lie.down'. kaihna actually means 'furrow/plow-area'
     'kaihna': 'furrow',      # 1x 1Sam 14:14 - "half acre" (area a yoke of oxen can plow)
     'zalh': 'lazy',          # 1x 2Kgs 17:19 - "slothful"
-    'leibeel': 'lazy.person', # 1x 2Kgs 17:28 - "sluggard"
+    'leibeel': 'pot',       # earthen vessel/clay pot (not "lazy person")
     'bepi': 'idle',          # 1x 2Kgs 17:28 - "idle person"
     'ngel': 'wander',        # 1x 2Kgs 18:11 - "wandering"
     'makhelh': 'backslide',  # 1x 2Kgs 18:23 - "backsliding"
@@ -2929,7 +2939,7 @@ NOUN_STEMS = {
     'phualpi': 'merchant.city', # 1x Isa 23:11 - "merchant cities"
     'pheek': 'bed',          # 1x Acts 5:15 - "beds"
     'phuhsa': 'planted',     # 1x Jer 45:4 - "planted"
-    'gai': 'lame',           # 1x Jer 31:8 - "lame"
+    'gai': 'conceive',       # 39x - "conceive" (become pregnant)
     'galkisim': 'war.signal', # 1x Jer 4:21 - "standard/trumpet"
     'gawhna': 'understanding', # 1x Mark 12:33 - "understanding"
     'gawng': 'lean',         # 1x Ezek 34:20 - "lean cattle"
@@ -3070,7 +3080,7 @@ PROPER_NOUNS = {
     'aija', 'aijalon', 'aineas', 'ainon', 'akan', 'akbor', 'akeldama', 'akhaikas', 'akhim', 'akhor',
     'akkad', 'akko', 'akkub', 'aklui', 'akpi', 'akrabbim', 'aksah', 'akshaf', 'akzib', 'alemeth',
     'alexander', 'alexandria', 'alfa', 'alfeas', 'aliah', 'allammelek', 'allon', 'allonbakuth', 'almodad', 'almon',
-    'almondiblathaim', 'alush', 'alvah', 'alvan', 'ama', 'amad', 'amana', 'amasai', 'amashsai', 'amasiah',
+    'almondiblathaim', 'alush', 'alvah', 'alvan', 'amad', 'amana', 'amasai', 'amashsai', 'amasiah',
     'amaw', 'amfipolis', 'amittai', 'ammah', 'ammiel', 'ammihud', 'amminadab', 'ammishaddai', 'ammizabad', 'amnon',
     'amok', 'ampliatas', 'amrafel', 'amzi', 'anab', 'anah', 'anaharath', 'anammelek', 'anani', 'ananiah',
     'anath', 'andronikas', 'anem', 'angkawmin', 'anim', 'anna', 'antak', 'anthak', 'anthothijah', 'antipas',
@@ -4306,7 +4316,7 @@ ATOMIC_GLOSSES = {
     'zep': 'clothe',       # kizep = REFL-clothe = join
     'phum': 'immerse',     # tuiphum = water-immerse = baptism
     'le': 'and',           # nulepa = mother-and-father
-    'mang': 'fly',         # kapmangte = shoot-fly-PL = captains
+    'mang': 'dream',       # dream/obey (polysemous, see AMBIGUOUS_MORPHEMES)
     'zin': 'travel',       # khualzin = village-travel = pilgrimage
     'pei': 'guide',        # leengpei = chariot-guide = chariot.leader
     'thah': 'slay',        # kithah = REFL-slay = murder
@@ -7578,7 +7588,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'phatna': ('phat-na', 'praise-NMLZ'),
         'khiatna': ('khiat-na', 'emerge-NMLZ'),
         'cihnopna': ('cih-nop-na', 'say.II-want-NMLZ'),  # cih is Form II of ci
-        'lupna': ('lup-na', 'bow.down-NMLZ'),
+        'lupna': ('lupna', 'bed'),                # opaque - bed/couch
+        'lupnate': ('lupna-te', 'bed-PL'),        # beds
         'mawkna': ('mawk-na', 'err-NMLZ'),
         'hauhna': ('hauh-na', 'shout-NMLZ'),
         'thugenna': ('thu-gen-na', 'word-speak-NMLZ'),
@@ -7697,7 +7708,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'inla': ('in-la', 'ERG-and'),
         'sunga': ('sung-a', 'inside-3SG'),
         'tunga': ('tung-a', 'on-3SG'),
-        'ama': ('a-ma', '3SG-self'),
+        'ama': ('ama', '3SG.POSS'),                          # his/her/its possessive
         'nau': ('nau', 'child'),
         'aana': ('a-ana', '3SG-child.PL'),
         'pah': ('pah', 'do.so'),
@@ -8368,7 +8379,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thuakzawh': ('thuak-zawh', 'suffer-able'),         # 17x - "able to suffer"
         'naseppih': ('na-sep-pih', '2SG-work-APPL'),        # 17x - "work with you"
         'thawhkikna': ('thawh-kik-na', 'rise-again-NMLZ'),  # 17x - "resurrection"
-        'kikal-a': ('ki-kal-a', 'REFL-between-LOC'),        # 16x - "between"
+        'kikal-a': ('kikal-a', 'between-LOC'),              # 16x - "between" (opaque kikal)
+        'kikal': ('kikal', 'between'),                      # 70x - "between"
+        'kikalah': ('kikal-ah', 'between-LOC'),             # 119x - "between"
+        'kikalin': ('kikal-in', 'between-ERG'),             # 3x - "between"
         'naihin': ('naih-in', 'near-ERG'),                  # 16x - "nearly"
         'sakhat': ('sak-hat', 'shaft-hard'),                # 16x - "candlestick shaft"
         'mizawngte\'': ('mi-zawng-te\'', 'person-poor-PL.POSS'), # 17x - "poor people's"
@@ -8427,7 +8441,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'keek': ('keek', 'fire'),                  # 15x - "fire/lightning"
         'zankim': ('zan-kim', 'night-half'),                 # 15x - "midnight"
         'sah': ('sah', 'witness'),                      # 15x - "witness heap"
-        'gukte': ('guk-te', 'almond-PL'),                    # 15x - "almonds"
+        'gukte': ('guk-te', 'six-PL'),                       # 15x - "six"
         'khuampeekte': ('khuam-peek-te', 'cubit-measure-PL'), # 15x - "cubits"
         'nunglam': ('nung-lam', 'live-side'),                # 15x - "living way"
         'puantungsilh': ('puan-tung-silh', 'cloth-head-wrap'), # 15x - "turban"
@@ -10207,9 +10221,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'puksuk': ('puk-suk', 'fall-down'),                    # sink down
         'zun': ('zun', 'urine'),                               # urine
         'kizat': ('ki-zat', 'REFL-use'),                       # be used
-        'golhguk': ('golh-guk', 'oppose-dig'),                 # undermine/frustrate
+        'golhguk': ('golhguk', 'bribe'),                       # opaque: bribe/undermine
         'golh': ('golh', 'oppose'),                            # base - oppose
-        'guk': ('guk', 'dig'),                                 # base - dig
         'kihisakin': ('ki-hi-sak-in', 'REFL-be-CAUS-ERG'),     # act proudly
         'kiphawkkha': ('ki-phawk-kha', 'REFL-remember-NEG'),   # be forgotten
         'phuan': ('phuan', 'refuge'),                          # refuge
