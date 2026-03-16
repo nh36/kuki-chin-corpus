@@ -15275,7 +15275,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'guhnatna': ('guh-nat-na', 'labor-pain-NMLZ'),    # 1x - labor pains
         'hehsaknate': ('heh-sak-na-te', 'anger-CAUS-NMLZ-PL'),  # 1x - provocations
         'kihilhte': ('ki-hilh-te', 'REFL-teach-PL'),      # 1x - taught ones
-        'zuaunate': ('zuau-na-te', 'rebel-NMLZ-PL'),      # 1x - rebellions
+        'zuaunate': ('zuau-na-te', 'lie-NMLZ-PL'),        # lies/falsehoods
+        'zadahin': ('zadah-in', 'utterly-ERG'),           # 1x - "utterly" intensifier
         'sawmnate': ('sawm-na-te', 'tempt-NMLZ-PL'),      # 1x - temptations
         'lahsate': ('lah-sa-te', 'take-PRF-PL'),          # 1x - taken ones
         'theithekte': ('thei-thek-te', 'know.I-cut-PL'),  # 1x - acquainted ones
