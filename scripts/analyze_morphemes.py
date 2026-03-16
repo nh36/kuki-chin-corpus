@@ -8533,7 +8533,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'valhtum': ('valh-tum', 'go.and-swallow'),           # 13x - "devoured"
         'hehpihhuai': ('hehpih-huai', 'angry-dread'),        # 13x - "ill favoured"
         'gentel': ('gen-tel', 'speak-help'),                 # 13x - "told"
-        'zatui': ('za-tui', 'hear.I-water'),                 # 13x - "embalm"
+        'zatui': ('zatui', 'medicine'),                    # 13x - balm/medicine/healing substance
         'tamna': ('tam-na', 'many-NMLZ'),                    # 13x - "abundance"
         'laktel': ('lak-tel', 'take-help'),                  # 13x - "cast"
         'kualte': ('kual-te', 'side-PL'),                    # 13x - "sides"
