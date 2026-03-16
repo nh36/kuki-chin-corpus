@@ -398,4 +398,197 @@ for token, expected in tests:
 ```
 
 ---
+
+## 20. PAST vs Flesh (-sa suffix)
+
+| Token | Wrong | Correct | Context |
+|-------|-------|---------|---------|
+| neihsa | have-flesh | neih-sa (have-PAST) | past tense |
+| gensa | tell-flesh | gen-sa (tell-PAST) | past tense |
+| bawlsa | do-flesh | bawl-sa (do-PAST) | past tense |
+| sa | - | flesh | standalone noun |
+
+---
+
+## 21. Homograph: tuucin (shepherd)
+
+| Token | Wrong | Correct |
+|-------|-------|---------|
+| tuucin | tuu-cin (throw-rope) | tuucin (shepherd) |
+| tuucingte | throw-rope-PL | tuucingte (shepherd-PL) |
+
+**Citation**: Shepherds throughout Gospels.
+
+---
+
+## 22. Prefix Mis-Segmentation
+
+| Token | Wrong | Correct |
+|-------|-------|---------|
+| innkuan | i-nnkuan (1PL-?) | inn-kuan (house-family) |
+| kankhia | ka-nkhia (1SG-?) | kan-khia (we-go.out) |
+| angvan | a-ngvan (3SG-?) | ang-van (boast-old) |
+
+---
+
+## 23. Hyphenated Suffix Chains
+
+| Token | Pattern | Analysis |
+|-------|---------|----------|
+| word-in | explicit hyphen | word-ERG |
+| word-ah | explicit hyphen | word-LOC |
+| word-a | explicit hyphen | word-LOC |
+
+HYPHEN_SUFFIXES: -in, -ah, -a, -a', -un
+
+---
+
+## 24. TAM Suffix Expansion
+
+These suffixes were added to TAM_SUFFIXES:
+
+| Suffix | Gloss | Category |
+|--------|-------|----------|
+| thei/theih | ABIL | ability |
+| zo | COMPL | completive |
+| gawp | INTENS | intensive |
+| khin | IMM | immediate |
+| kik | ITER | iterative |
+| khia/khiat | out/away | directional |
+| sak | CAUS | causative |
+| zaw | COMPAR | comparative |
+
+---
+
+## 25. Stem Matching Priority
+
+Prefer longer stem match:
+
+| Token | Wrong | Correct | Issue |
+|-------|-------|---------|-------|
+| mungte | mu-ng-te (see-?-PL) | mung-te (place-PL) | mu=2, mung=4 |
+| nungakte | nung-ak-te | nungak-te (girl-PL) | prefer 6-char |
+
+---
+
+## 26. Possessive Plural (-te', -pa')
+
+| Token | Wrong | Correct |
+|-------|-------|---------|
+| biate' | bia-te-' | bia-te' (worship-PL.POSS) |
+| veipa' | vei-pa-' | vei-pa' (sick-AG.POSS) |
+
+---
+
+## 27. Compound Verbs
+
+| Token | Wrong | Correct |
+|-------|-------|---------|
+| samsiatna | samsia-t-na (destroy-?-NMLZ) | samsiat-na (destroy-NMLZ) |
+
+`samsiat` = compound verb, not samsiat = samsia + t
+
+---
+
+## 28. Punctuation Stripping
+
+| Pattern | Action |
+|---------|--------|
+| word! | strip ! |
+| word!' | strip !' |
+| word, | strip , (carefully) |
+| word' | preserve (possessive) |
+
+---
+
+## 29. ki- Reflexive Prefix
+
+| Token | Analysis |
+|-------|----------|
+| kido | ki-do (REFL-fight) |
+| kikham | ki-kham (REFL-forbid) |
+| kilawm | ki-lawm (REFL-meet) |
+
+---
+
+## Comprehensive Test Suite (50 tests)
+
+```python
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+
+tests = [
+    # 1. IRR marker
+    ('ding', 'IRR'),
+    ('dingin', 'IRR-ERG'),
+    # 2-3. Proper nouns  
+    ('sin', 'near'), ('Sin', 'SIN'),
+    ('lot', 'cast'), ('Lot', 'LOT'),
+    ('Hilkiah', 'HILKIAH'), ('Heman', 'HEMAN'),
+    # 4-6. Polysemy, Opaque, Function
+    ('kham', 'gold'), ('kikham', 'REFL-forbid'),
+    ('ahihleh', 'if'), ("ke'n", '1SG.PRO'),
+    ('lupna', 'bed'), ('zatui', 'medicine'),
+    # 7-8. Homophonous roots
+    ('numei', 'woman'), ('meigong', 'widow'),
+    ('lopa', 'farmer'), ('lono', 'disobey'),
+    ('khuampi', 'pillar'), ('khuamial', 'night'),
+    # 9-11. ERG, compounds
+    ('ciangin', 'then-ERG'), ('hangin', 'reason-ERG'),
+    ('kikal', 'between'), ('kidona', 'battle'),
+    ('namsau', 'sword'),
+    # 12-14. Phonotactics, Form I/II
+    ('kipsak', 'firm-CAUS'), ('kimin', 'fully-ERG'),
+    ('muh', 'see'), ('zak', 'know'),
+    # 15-16. TAM disambiguation
+    ('sa', 'flesh'),
+    ("gulpi'", 'POSS'),
+    # 17-19. Semantic fixes
+    ('nakpau', 'vehement'), ('kamka', 'asham'),
+    ('tuucin', 'shepherd'),
+    # 20. PAST suffix
+    ('neihsa', 'PAST'), ('gensa', 'PAST'),
+    # 21-22. Prefix fixes
+    ('innkuan', 'house'), ('kankhia', 'go'),
+    # 23-24. TAM suffixes
+    ('mutheih', 'ABIL'), ('bawlzo', 'COMPL'),
+    ('neihgawp', 'INTENS'),
+    # 25. Stem priority
+    ('mungte', 'place-PL'),
+    # 26. Possessive plural
+    ("biate'", 'PL.POSS'),
+    # 27. Compound verbs
+    ('samsiatna', 'destroy-NMLZ'),
+    # 28-29. ki- reflexives
+    ('kilawm', 'REFL-meet'),
+    ('kido', 'REFL-fight'),
+    # 30-35. Reduplication
+    ('bangbang', 'REDUP'), ('vanvan', 'REDUP'),
+    ('hathat', 'REDUP'),
+    # 36-40. More compounds
+    ('sanggam', 'brother'), ('zungbuh', 'ring'),
+    ('thukham', 'law'), ('lungdam', 'joy'),
+    ('innpi', 'temple'),
+    # 41-45. More suffixes
+    ('neihtheih', 'ABIL'), ('bawlkhin', 'IMM'),
+    ('paihkhia', 'go.out'), ('lutkhiat', 'enter'),
+    ('sawlsak', 'CAUS'),
+    # 46-50. Final tests
+    ('veivei', 'REDUP'), ('thuahthuah', 'REDUP'),
+    ('khuavak', 'light'), ('ganhing', 'cattle'),
+    ('suangkhuam', 'cave'),
+]
+
+passed = 0
+for token, expected in tests:
+    seg, gloss = analyze_word(token)
+    ok = expected in gloss
+    passed += ok
+    status = '✓' if ok else '✗'
+    print(f'{status} {token}: {gloss} (expected: {expected})')
+
+print(f'\n{passed}/{len(tests)} tests passed')
+```
+
+---
 *Last updated: March 2026*
