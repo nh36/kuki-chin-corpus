@@ -791,8 +791,8 @@ FUNCTION_WORDS = {
     # === Adverbs - Temporal/Iterative ===
     'leuleu': 'again',       # 193x - reduplication of leu
     'leu': 'again',          # base form for leuleu
-    'nitakin': 'at.evening', # 35x - "in the evening" (ni-tak-in)
-    'nihin': 'today',        # 35x - "today" (ni-hin = day-this)
+    # nitakin removed - parses transparently as ni-tak-in = day-exact-ERG
+    'nihin': 'today',        # 35x - "today" (ni-hin = day-this) - keep for correct gloss
     
     # === Verbal particles ===
     'kawmin': 'while',       # 39x - "while, as" (temporal subordinator)
@@ -871,11 +871,10 @@ FUNCTION_WORDS = {
     'up': 'PL.Q',            # 60x - plural question marker
     
     # === Military vocabulary ===
-    'kidona': 'sword',       # 56x - sword (not ki-don-a)
+    # kidona removed - parses transparently as ki-don-a = REFL-war-LOC
     
     # === Nature vocabulary ===
-    'tuipi': 'sea',          # 256x - tui-pi = water-big = sea (not proper noun)
-    'Tuipi': 'sea',          # capitalized variant
+    # tuipi removed - parses transparently as tui-pi = water-big ("sea")
     
     # === Negation ===
     'lo': 'NEG',             # 6,018
@@ -915,7 +914,7 @@ FUNCTION_WORDS = {
     'giat': 'eight',
     'kua': 'nine',
     'sawm': 'ten',           # 679
-    'sawmnih': 'twenty',     # 263
+    # sawmnih removed - parses transparently as sawm-nih = ten-two ("twenty")
     'za': 'hundred',         # In number context (kum za = 100 years); also 'hear' - see AMBIGUOUS_MORPHEMES
     'tul': 'thousand',
     
@@ -932,7 +931,7 @@ FUNCTION_WORDS = {
     
     # === Adverbs ===
     'mahmah': 'very',
-    'tawntung': 'forever',   # 679
+    # tawntung removed - parses transparently as tawn-tung = ever-always ("forever")
     'tu': 'now',
     
     # === Interrogatives/Comparatives ===
