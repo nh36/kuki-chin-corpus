@@ -170,7 +170,7 @@ These words look like compounds but have idiomatic meanings:
 ### 8.3 khuam (darkness vs pillar)
 | Token | Wrong | Correct | Context |
 |-------|-------|---------|---------|
-| khuamial | pillar-? | darkness-moon | night |
+| khuamial | khua-mial (town-dark) | khuamial (darkness) | 123x: opaque compound like khuavak |
 | khuampi | darkness-big | pillar-big | pillar (44x) |
 | innkhuam | house-darkness | house-pillar | doorpost |
 
@@ -245,7 +245,7 @@ tests = [
     # 8. Homophonous roots
     ('numei', 'woman'), ('meigong', 'widow'), ('meivak', 'lamplight'),
     ('lopa', 'farmer'), ('lono', 'disobey'),
-    ('khuampi', 'pillar'), ('khuamial', 'night'),
+    ('khuampi', 'pillar'), ('khuamial', 'darkness'),  # opaque, like khuavak='light'
     # 10. ERG transparency
     ('ciangin', 'then-ERG'), ('hangin', 'reason-ERG'),
     # 11. Compound fixes
@@ -373,7 +373,7 @@ tests = [
     # 8. Homophonous roots
     ('numei', 'woman'), ('meigong', 'widow'),
     ('lopa', 'farmer'), ('lono', 'disobey'),
-    ('khuampi', 'pillar'), ('khuamial', 'night'),
+    ('khuampi', 'pillar'), ('khuamial', 'darkness'),  # opaque
     # 10-11. ERG transparency & compounds
     ('ciangin', 'then-ERG'), ('hangin', 'reason-ERG'),
     ('kikal', 'between'), ('kidona', 'battle'),
@@ -532,7 +532,7 @@ tests = [
     # 7-8. Homophonous roots
     ('numei', 'woman'), ('meigong', 'widow'),
     ('lopa', 'farmer'), ('lono', 'disobey'),
-    ('khuampi', 'pillar'), ('khuamial', 'dark'),  # darkness (khuam=dark, not town)
+    ('khuampi', 'pillar'), ('khuamial', 'darkness'),  # opaque (like khuavak='light')
     # 9-11. ERG, compounds
     ('ciangin', 'then-ERG'), ('hangin', 'because'),  # semantic gloss
     ('kikal', 'middle'),  # transparent: REFL-middle (semantic = between)

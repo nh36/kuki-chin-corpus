@@ -2017,6 +2017,7 @@ NOUN_STEMS = {
     'lote': 'non-X',         # 230
     'milim': 'idol',         # 230
     'khuavak': 'light',      # 188
+    'khuamial': 'darkness',  # 123x - atmosphere-dark → darkness (parallel to khuavak)
     'sakol': 'donkey',       # 155
     'anlum': 'food',         # 145
     'ganhing': 'animal',     # 164
@@ -7600,7 +7601,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'mihingte': ('mi-hing-te', 'person-kind-PL'),
         'zanin': ('zan-in', 'night-ERG'),
         'omkhawm': ('om-khawm', 'exist-gather'),
-        'khuamial': ('khua-mial', 'town-dark'),
+        'khuamial': ('khuamial', 'darkness'),  # opaque: khua=atmosphere + mial=dark (cf. khuavak=light)
         'omsak': ('om-sak', 'exist-CAUS'),
         'sawmnga': ('sawm-nga', 'ten-five'),
         'hoihtakin': ('hoih-tak-in', 'good-exact-ERG'),

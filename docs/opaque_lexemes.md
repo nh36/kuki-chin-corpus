@@ -508,3 +508,25 @@ Note: No "span" meaning is attested. "Span" (measurement) is letmat kua.
 ---
 *Last updated: March 2026*
 *Part of the Tedim Chin Morphological Analyzer project*
+
+## Opaque Atmospheric Terms
+
+### khuavak / khuamial
+These form a semantic pair:
+- **khuavak** (188x) = "light"
+- **khuamial** (123x) = "darkness"
+
+Both contain khua- which etymologically may relate to "sky/atmosphere" rather 
+than "town" (the usual modern meaning of khua). Compare the two-word form 
+`khua mial` which also means "darkness" (lit. "sky-dark").
+
+| Term | Segmentation | Gloss |
+|------|--------------|-------|
+| khuavak | opaque | light |
+| khuamial | opaque | darkness |
+
+Note: Both are treated as opaque rather than compositional because:
+1. The meaning of khua- in these compounds is archaic (atmosphere, not town)
+2. The semantic output (light/darkness) is lexicalized
+3. They form a natural antonymic pair
+
