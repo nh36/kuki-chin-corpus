@@ -3017,6 +3017,14 @@ PROPER_NOUNS = {
     'Zebulun', 'Issachar', 'Dan', 'Ishmael', 'Ruth', 'Boaz', 'Rahab',
     'Shuah', 'Giloh', 'Gilopa',  # Added
     
+    # Proper nouns that are homophones of common Tedim words
+    # These need capitalized forms to disambiguate from common words
+    'Sin',   # Wilderness of Sin (common word 'sin' = near/liver)
+    'Gilo',  # Place name Giloh (common word 'gilo' = enemy)
+    'Giah',  # Place name (common word 'giah' = camp)
+    'Zin',   # Wilderness of Zin (common word 'zin' = travel)
+    'Zia',   # Person name (common word 'zia' = manner)
+    
     # New Testament figures - Apostles
     'Johan', 'John', 'Peter', 'Piter', 'Paul', 'Paulus', 'Simon', 'Andru', 'Andrew',
     'James', 'Zebedi', 'Zebedee', 'Matthew', 'Mark', 'Luke', 'Thomas', 'Philip',
@@ -3777,34 +3785,44 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
 
 
 def is_proper_noun(word: str) -> bool:
-    """Check if word is a proper noun (case-insensitive matching).
+    """Check if word is a proper noun.
     
-    Returns True only if word is in PROPER_NOUNS set OR is capitalized AND
-    not a known common word (verb/noun stem). This prevents sentence-initial
-    common words like 'Pai' (go) from being treated as proper nouns.
+    Logic:
+    1. If the exact word (case-sensitive) is in PROPER_NOUNS → proper noun
+    2. If lowercase AND in common word dicts (VERB_STEMS, NOUN_STEMS, FUNCTION_WORDS) → NOT proper noun
+    3. If capitalized AND title-case in PROPER_NOUNS → proper noun
+    4. If capitalized AND lowercase in common word dicts → NOT proper noun (sentence-initial)
+    5. If capitalized AND unknown → treat as proper noun
+    
+    This allows both:
+    - 'sin' → common word (near)
+    - 'Sin' → proper noun (if 'Sin' is in PROPER_NOUNS)
     """
     clean = clean_word(word)
     if not clean:
         return False
     clean_lower = clean.lower()
     
-    # Explicit proper noun check - must match case exactly OR be capitalized input
-    # If 'Lot' is in PROPER_NOUNS, only 'Lot' matches, not 'lot'
+    # 1. Explicit proper noun check (case-sensitive)
+    # If 'Sin' is in PROPER_NOUNS, 'Sin' matches but 'sin' does not
     if clean in PROPER_NOUNS:
         return True
     
-    # For capitalized input, check if title-case is in PROPER_NOUNS
-    # BUT also check if lowercase is a known common word
-    if clean[0].isupper():
-        # Check if lowercase form is in common word dictionaries
-        if clean_lower in VERB_STEMS or clean_lower in NOUN_STEMS or clean_lower in FUNCTION_WORDS:
-            return False  # Known common word, not a proper noun
-        # Check if title form is a proper noun
-        if clean.title() in PROPER_NOUNS:
-            return True
-        return True  # Unknown capitalized word, treat as proper noun
+    # 2. Lowercase input that's a common word
+    if clean[0].islower():
+        return False  # Lowercase words are never proper nouns
     
-    return False
+    # 3. Capitalized input - check if title form is in PROPER_NOUNS
+    if clean.title() in PROPER_NOUNS:
+        return True
+    
+    # 4. Capitalized input - check if lowercase is a known common word
+    # This handles sentence-initial common words like 'Pai' (go)
+    if clean_lower in VERB_STEMS or clean_lower in NOUN_STEMS or clean_lower in FUNCTION_WORDS:
+        return False
+    
+    # 5. Unknown capitalized word - treat as proper noun
+    return True
 
 
 # =============================================================================
