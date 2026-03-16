@@ -8340,7 +8340,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khemsa-in': ('khem-sa-in', 'restrain-early-ERG'),  # 18x - "restraining"
         
         # === Session 4 Round 10: High-frequency remaining vocab ===
-        'thumu': ('thu-mu', 'trumpet'),                 # 18x - "trumpet"
+        'thumu': ('thumu', 'trumpet'),                   # 28x - "trumpet" (opaque lexeme)
         'kawmte': ('kawm-te', 'beam-PL'),                    # 18x - "beams/posts"
         'zahtakbawl': ('zahtak-bawl', 'honor-do'),          # 18x - "reverence"
         'puansan': ('puan-san', 'cloth-wear'),              # 18x - "apparel"
