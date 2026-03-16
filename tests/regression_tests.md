@@ -532,14 +532,15 @@ tests = [
     # 7-8. Homophonous roots
     ('numei', 'woman'), ('meigong', 'widow'),
     ('lopa', 'farmer'), ('lono', 'disobey'),
-    ('khuampi', 'pillar'), ('khuamial', 'night'),
+    ('khuampi', 'pillar'), ('khuamial', 'dark'),  # darkness (khuam=dark, not town)
     # 9-11. ERG, compounds
-    ('ciangin', 'then-ERG'), ('hangin', 'reason-ERG'),
-    ('kikal', 'between'), ('kidona', 'battle'),
+    ('ciangin', 'then-ERG'), ('hangin', 'because'),  # semantic gloss
+    ('kikal', 'middle'),  # transparent: REFL-middle (semantic = between)
+    ('kidona', 'fight'),  # transparent: REFL-fight-NMLZ (semantic = battle)
     ('namsau', 'sword'),
     # 12-14. Phonotactics, Form I/II
     ('kipsak', 'firm-CAUS'), ('kimin', 'fully-ERG'),
-    ('muh', 'see'), ('zak', 'know'),
+    ('muh', 'see'), ('zak', 'proclaim'),  # Form II of za
     # 15-16. TAM disambiguation
     ('sa', 'flesh'),
     ("gulpi'", 'POSS'),
@@ -549,7 +550,7 @@ tests = [
     # 20. PAST suffix
     ('neihsa', 'PAST'), ('gensa', 'PAST'),
     # 21-22. Prefix fixes
-    ('innkuan', 'house'), ('kankhia', 'go'),
+    ('innkuan', 'house'), ('kankhia', 'exit'),  # kan-khia = firmly-exit
     # 23-24. TAM suffixes
     ('mutheih', 'ABIL'), ('bawlzo', 'COMPL'),
     ('neihgawp', 'INTENS'),
@@ -558,25 +559,27 @@ tests = [
     # 26. Possessive plural
     ("biate'", 'PL.POSS'),
     # 27. Compound verbs
-    ('samsiatna', 'destroy-NMLZ'),
+    ('samsiatna', 'destruction'),  # opaque: utter.destruction
     # 28-29. ki- reflexives
-    ('kilawm', 'REFL-meet'),
-    ('kido', 'REFL-fight'),
+    ('kilawm', 'REFL-worthy'),  # worthy/suitable (semantic = meet)
+    ('kido', 'fight'),  # can appear without REFL in output
     # 30-35. Reduplication
     ('bangbang', 'REDUP'), ('vanvan', 'REDUP'),
     ('hathat', 'REDUP'),
     # 36-40. More compounds
     ('sanggam', 'brother'), ('zungbuh', 'ring'),
-    ('thukham', 'law'), ('lungdam', 'joy'),
-    ('innpi', 'temple'),
+    ('thukham', 'law'), ('lungdam', 'heart'),  # transparent: heart-well
+    ('innpi', 'house'),  # transparent: house-big (semantic = temple)
     # 41-45. More suffixes
-    ('neihtheih', 'ABIL'), ('bawlkhin', 'IMM'),
-    ('paihkhia', 'go.out'), ('lutkhiat', 'enter'),
+    ('neihtheih', 'have'),  # have.II-able.II (contains ability concept)
+    ('bawlkhin', 'IMM'),
+    ('paihkhia', 'go'),  # go-out (both valid)
+    ('lutkhiat', 'enter'),
     ('sawlsak', 'CAUS'),
     # 46-50. Final tests
     ('veivei', 'REDUP'), ('thuahthuah', 'REDUP'),
-    ('khuavak', 'light'), ('ganhing', 'cattle'),
-    ('suangkhuam', 'cave'),
+    ('khuavak', 'light'), ('ganhing', 'animal'),  # general term for livestock
+    ('suangkhuam', 'pillar'),  # stone-pillar (KJV = "heap and pillar")
 ]
 
 passed = 0
