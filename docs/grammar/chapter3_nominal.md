@@ -7,23 +7,134 @@ computational analysis of the Tedim Bible (850,906 tokens, 100% coverage).
 
 ---
 
-## 3.1 Overview of the Nominal Domain
+## 3.1 Noun Phrase Structure
 
-Tedim Chin nouns can take the following affixes:
+Before examining individual morphemes, we present the overall structure of
+the Tedim Chin noun phrase (NP).
 
-| Position | Affixes | Function |
-|----------|---------|----------|
-| Prefix | a-, ka-, na-, i-, ei- | Possession |
-| Suffix | -te, -uh | Plural |
-| Suffix | -in, -ah, -tawh, -pan(in) | Case |
-| Suffix | -na, -pa, -mi | Nominalization |
+### 3.1.1 Basic NP Template
 
-The maximal noun template:
+The maximal noun phrase follows this template:
+
 ```
-POSS.PREFIX + NOUN.STEM + PLURAL + CASE
+(DEM) + (POSS) + NOUN + (NUM) + (PL) + (CASE)
 ```
 
-Example: `a-sanggam-te-in` (3SG.POSS-brother-PL-ERG) 'by his brothers'
+Where:
+- **DEM**: Demonstrative (tua, hih, etc.)
+- **POSS**: Possessive prefix (a-, ka-, na-, i-)
+- **NOUN**: The noun stem
+- **NUM**: Numeral (khat, nih, thum...)
+- **PL**: Plural suffix -te
+- **CASE**: Case marker (-in, -ah, -tawh, -panin)
+
+Note: The 2nd/3rd person plural agreement clitic `uh` is NOT a noun plural
+marker. It appears VP-finally to mark plural agreement with 2nd/3rd person
+subjects/possessors (see Chapter 5).
+
+### 3.1.2 Paradigm: "father" (pa)
+
+| Form | Segmentation | Gloss | English |
+|------|--------------|-------|---------|
+| pa | pa | father | 'father' |
+| pa-in | pa-in | father-ERG | 'by (the) father' |
+| a pa | a pa | 3SG father | 'his/her father' |
+| ka pa | ka pa | 1SG father | 'my father' |
+| na pa | na pa | 2SG father | 'your father' |
+| a pa-in | a pa-in | 3SG father-ERG | 'by his father' |
+| pate | pa-te | father-PL | 'fathers' |
+| a pate | a pa-te | 3SG father-PL | 'their fathers' |
+
+#### Example: Gen 2:24
+
+**Tedim**: Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm
+
+**KJV**: Therefore shall a man leave his father and his mother, and cleave unto his wife
+
+| Token | Segmentation | Gloss |
+|-------|--------------|-------|
+| Tua | Tua | that |
+| thu | thu | word |
+| hangin | hang-in | because-ERG |
+| pasal | pasal | husband |
+| in | in | ERG |
+| a | a | 3SG |
+| nu | nu | mother |
+| le | le | and |
+| a | a | 3SG |
+| pa | pa | father |
+| nusia-in | nusia-in | abandon-ERG |
+| a | a | 3SG |
+| zi | zi | wife |
+| tawh | tawh | COM |
+| kigawm | ki-gawm | REFL-seize |
+
+Note: `a nu le a pa` = "his mother and his father" - possessive `a-` precedes each noun
+
+### 3.1.3 Paradigm: "house" (inn)
+
+| Form | Segmentation | Gloss | English |
+|------|--------------|-------|---------|
+| inn | inn | house | 'house' |
+| inn-ah | inn-ah | house-LOC | 'in/at the house' |
+| inn-in | inn-in | house-ERG | 'by the house' |
+| a inn | a inn | 3SG house | 'his/her house' |
+| ka inn | ka inn | 1SG house | 'my house' |
+| innte | inn-te | house-PL | 'houses' |
+| innsung | inn-sung | house-inside | 'inside the house' |
+| innsungah | inn-sung-ah | house-inside-LOC | 'in the interior of the house' |
+| biakinn | biak-inn | worship-house | 'temple' |
+
+#### Example: Gen 19:2
+
+**Tedim**: ... tua ni zanin no' pa inn-ah na hawh ding uh hi
+
+**KJV**: ... tarry all night ... in your servant's house
+
+| Token | Segmentation | Gloss |
+|-------|--------------|-------|
+| no' | no' | 2PL.POSS |
+| pa | pa | male |
+| inn-ah | inn-ah | house-LOC |
+| na | na | 2SG |
+| hawh | hawh | stay |
+| ding | ding | PROSP |
+| uh | uh | 2/3PL |
+| hi | hi | DECL |
+
+### 3.1.4 Paradigm: "person" (mi)
+
+| Form | Segmentation | Gloss | English |
+|------|--------------|-------|---------|
+| mi | mi | person | 'person' |
+| mite | mi-te | person-PL | 'people' |
+| mi-in | mi-in | person-ERG | 'by a person' |
+| mipa | mi-pa | person-male | 'man (male person)' |
+| numei | nu-mei | female-? | 'woman' |
+
+### 3.1.5 Complex NPs
+
+Tedim allows stacking of modifiers and embedding of possessive NPs:
+
+#### Example: Gen 17:16 - Multiple embedded possessors
+
+**Tedim**: Mihingte' kumpite ama sung pan hong piangkhia ding hi
+
+**KJV**: kings of people shall be of her
+
+| Token | Segmentation | Gloss |
+|-------|--------------|-------|
+| Mihingte' | mihing-te' | human-PL.POSS |
+| kumpite | kumpi-te | king-PL |
+| ama | ama | 3SG.POSS |
+| sung | sung | inside |
+| pan | pan | from |
+| hong | hong | 3→1 |
+| piangkhia | piang-khia | be.born-EXIT |
+| ding | ding | PROSP |
+| hi | hi | DECL |
+
+Analysis: `Mihingte' kumpite` = "kings of people" (genitive with ')
 
 ---
 
@@ -342,57 +453,51 @@ Note also `hen` (JUSS) marking jussive mood: "let there be light."
 | ci | ci | say |
 | hi | hi | DECL |
 
-### 3.3.2 Plural -uh
+### 3.3.2 Agreement Clitic -uh (NOT a noun plural)
 
-**Form**: -uh  
-**Gloss**: PL  
-**Function**: Alternative plural marker
+**IMPORTANT**: The clitic `uh` is NOT a noun plural marker. It is a **2nd/3rd
+person plural agreement marker** that appears at the VP boundary.
+
+**Form**: uh (standalone word or clitic)  
+**Gloss**: 2/3PL (2nd/3rd person plural agreement)  
+**Function**: Marks plural agreement with 2nd or 3rd person subject/possessor
+
+The distribution of `uh` is as follows:
+- It appears after verbs to agree with a plural subject
+- It appears in possessive NPs like `na X uh` to mark "your (PL) X"
+- It is DISTINCT from noun plural `-te`
 
 #### Example: Ruth 1:8
 
-**Tedim**: Ahih hangin Naomi in a mo nihte kiangah, “Pai un, na inn tuak uhah ciahkik unla, na nute uh tawh om un. A sisate hitaleh kei hitaleh nong limbawl uh mah bangin Topa in note hong limbawl tahen.
-**KJV**: And Naomi said unto her two daughters in law, Go, return each to her mother's house: the LORD deal kindly with you, as ye have dealt with the dead, and with me.
+**Tedim**: "Pai un, na inn tuak uhah ciahkik unla, na nute uh tawh om un."
 
-| Token | Segmentation | Gloss |
-|-------|--------------|-------|
-| Ahih | Ahih | be.3SG.REL |
-| hangin | hang-in | because-ERG |
-| Naomi | Naomi | NAOMI |
-| in | in | ERG |
-| a | a | 3SG |
-| mo | mo | bride |
-| nihte | nih-te | two-PL |
-| kiangah | kiang-ah | beside-LOC |
-| “Pai | Pai | go |
-| un | un | PL.IMP |
-| na | na | 2SG |
-| inn | inn | house |
-| tuak | tuak | receive |
-| uhah | uhah | PL.LOC |
-| ciahkik | ciah-kik | return-ITER |
-| unla | un-la | PL.IMP-and |
-| na | na | 2SG |
-| nute | nu-te | female-PL |
-| uh | uh | PL |
-| tawh | tawh | COM |
-| om | om | exist |
-| un | un | PL.IMP |
-| A | A | 3SG |
-| sisate | si-sa-te | blood-PAST-PL |
-| hitaleh | hitaleh | if.so |
-| kei | kei | NEG.EMPH |
-| hitaleh | hitaleh | if.so |
-| nong | nong | 2→1 |
-| limbawl | limbawl | prepare |
-| uh | uh | PL |
-| mah | mah | EMPH |
-| bangin | bang-in | like-ERG |
-| Topa | Topa | Lord |
-| in | in | ERG |
-| note | note | 2PL.PRO |
-| hong | hong | 3→1 |
-| limbawl | limbawl | prepare |
-| tahen | tahen | amen |
+**KJV**: "Go, return each to her mother's house... with your mothers..."
+
+| Token | Segmentation | Gloss | Note |
+|-------|--------------|-------|------|
+| Pai | Pai | go | verb |
+| un | un | IMP.PL | 2PL imperative |
+| na | na | 2SG | possessive (but with uh = 2PL) |
+| inn | inn | house | noun |
+| tuak | tuak | each | modifier |
+| uhah | uh-ah | 2/3PL-LOC | **agreement**, not plural |
+| ciahkik | ciah-kik | return-ITER | verb |
+| unla | un-la | IMP.PL-and | 2PL imperative |
+| na | na | 2SG | possessive |
+| nute | nu-te | mother-**PL** | **noun plural with -te** |
+| uh | uh | 2/3PL | **agreement clitic** |
+| tawh | tawh | COM | comitative |
+| om | om | exist | verb |
+| un | un | IMP.PL | 2PL imperative |
+
+**Analysis**: Notice how `nute` is the noun plural (mothers) marked with `-te`,
+while `uh` is the agreement marker agreeing with the 2PL possessor `na`. The
+pattern `na nute uh` means "your (plural) mothers" where:
+- `na` = 2SG possessive prefix (singular form)
+- `nute` = mother-PL (noun plural)
+- `uh` = 2/3PL agreement (marks that "your" is actually plural)
+
+This discontinuous pattern `na...uh` is the standard way to express 2PL possession.
 
 ---
 
@@ -516,8 +621,8 @@ Note also `hen` (JUSS) marking jussive mood: "let there be light."
 | LOC case | -ah | LOC | ~15,000 |
 | COM case | -tawh | COM | ~3,000 |
 | ABL case | -pan(in) | ABL | ~2,500 |
-| Plural | -te | PL | ~25,000 |
-| Plural | -uh | PL | ~5,000 |
+| Noun plural | -te | PL | ~25,000 |
+| 2/3PL agreement | uh | 2/3PL | ~22,000 |
 | Proximal dem | hih | PROX | ~2,000 |
 | Distal dem | tua | DIST | ~3,500 |
 
