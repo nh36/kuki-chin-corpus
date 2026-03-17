@@ -164,6 +164,12 @@ OPAQUE_LEXEMES = {
         'evidence': 'Oppression/affliction',
         'frequency': 8,
     },
+    'hente': {
+        'gloss': 'bundle',
+        'would_be_parse': ('hen-te', 'tie-PL'),
+        'evidence': 'Ruth 2:16 - "handfuls of purpose" (sheaves/bundles of grain)',
+        'frequency': 1,
+    },
 }
 
 

@@ -530,3 +530,17 @@ Note: Both are treated as opaque rather than compositional because:
 2. The semantic output (light/darkness) is lexicalized
 3. They form a natural antonymic pair
 
+## Opaque Verbal Derivatives
+
+### hente
+| Meaning | Transparent parse | Actual meaning |
+|---------|-------------------|----------------|
+| bundle/handful | hen-te (tie-PL) | bundles (of grain) |
+
+**Evidence**: Ruth 2:16 "Anlom hente lak panin..." (KJV: "handfuls of purpose")
+
+Note: While `hen` means "tie" as a verb, `hente` has lexicalized to mean 
+"bundles/handfuls" (tied sheaves of grain). The PL marker -te is reanalyzed 
+as part of the lexeme, similar to how "handful" in English is not simply 
+"hand + -ful" in usage.
+
