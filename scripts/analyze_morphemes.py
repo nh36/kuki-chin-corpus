@@ -817,7 +817,9 @@ FUNCTION_WORDS = {
     'cih': 'say.NOM',        # 2,827
     'ahi': 'be.3SG',         # 7,409
     'ahih': 'be.3SG.REL',
-    'hi': 'DECL',            # 35,961
+    'hi': 'DECL',            # 35,961 - declarative sentence-final
+    'hen': 'JUSS',           # 512x - jussive/optative "let/may" (om hen = "let there be")
+    'rawh': 'HORT',          # 0x in Bible - hortative (polite imperative)
     'om': 'exist',           # 5,068
     
     # === Independent Pronouns ===
@@ -3959,7 +3961,7 @@ SENTENCE_FINAL_MARKERS = {
     'hi': ('DECL', 'conclusive'),       # Declarative - conclusive sentence
     'leh': ('COND', 'inconclusive'),    # Conditional - inconclusive sentence  
     'hiam': ('Q', 'interrogative'),     # Question marker
-    'hen': ('IMP', 'imperative'),       # Imperative
+    'hen': ('JUSS', 'jussive'),         # Jussive/optative "let/may"
     'ta': ('PFV', 'perfective'),        # Perfective (can be sentence-final)
     'rawh': ('HORT', 'hortative'),      # Hortative/polite imperative
     'in': ('ERG', 'subordinate'),       # Ergative often marks subordinate clause

@@ -600,6 +600,10 @@ tests = [
     # in vs inn disambiguation (fixed 2026-03-17)
     ('in', 'ERG'),  # 21,383x - ergative case marker, NOT 'house'
     ('inn', 'house'),  # 924x - 'house' has double n
+    # hen = JUSS (jussive), not 'spread' (fixed 2026-03-17)
+    ('hen', 'JUSS'),  # 512x - "let/may" (om hen = "let there be")
+    ('hi', 'DECL'),   # 35,961x - declarative sentence-final
+    ('hiam', 'Q'),    # question marker
 ]
 
 passed = 0
