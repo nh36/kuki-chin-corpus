@@ -600,8 +600,11 @@ tests = [
     # in vs inn disambiguation (fixed 2026-03-17)
     ('in', 'ERG'),  # 21,383x - ergative case marker, NOT 'house'
     ('inn', 'house'),  # 924x - 'house' has double n
-    # hen = JUSS (jussive), not 'spread' (fixed 2026-03-17)
-    ('hen', 'JUSS'),  # 512x - "let/may" (om hen = "let there be")
+    # hen: JUSS (jussive) vs 'tie' (verb) - polysemous (fixed 2026-03-17)
+    ('hen', 'JUSS'),  # 512x standalone - "let/may" (om hen = "let there be")
+    ('kihen', 'REFL-tie'),  # ~7x - be bound (Judges 16)
+    ('henna', 'tie-NMLZ'),  # ~5x - bond, binding (Ps 2:3)
+    ('hente', 'tie-PL'),    # 1x Ruth 2:16 - bundles/handfuls
     ('hi', 'DECL'),   # 35,961x - declarative sentence-final
     ('hiam', 'Q'),    # question marker
 ]

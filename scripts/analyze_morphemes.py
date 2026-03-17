@@ -659,6 +659,15 @@ AMBIGUOUS_MORPHEMES = {
         ('also', 'additive'),        # Additive particle
     ],
     
+    # hen: 'JUSS' (jussive) vs 'tie' (verb)
+    # - 'JUSS' sentence-final (om hen = let there be) ~500x
+    # - 'tie' as verb with prefixes/suffixes (hong hen = tie me, hen uh = they tied) ~50x
+    # Context: JUSS when sentence-final; tie with object prefixes or plural uh
+    'hen': [
+        ('JUSS', 'sentence_final'),  # Jussive/optative "let/may" (default)
+        ('tie', 'verbal'),           # Verb: tie, bind (with hong-, hen uh, etc.)
+    ],
+    
     # mu: 'see' (Form I) - Form II is 'muh'
     # Henderson: mu (Form I) in conclusive sentences, muh (Form II) elsewhere
     'mu': [
@@ -818,7 +827,8 @@ FUNCTION_WORDS = {
     'ahi': 'be.3SG',         # 7,409
     'ahih': 'be.3SG.REL',
     'hi': 'DECL',            # 35,961 - declarative sentence-final
-    'hen': 'JUSS',           # 512x - jussive/optative "let/may" (om hen = "let there be")
+    # hen removed from FUNCTION_WORDS - it's ambiguous (JUSS vs 'tie')
+    # Standalone 'hen' handled via AMBIGUOUS_MORPHEMES with default JUSS
     'rawh': 'HORT',          # 0x in Bible - hortative (polite imperative)
     'om': 'exist',           # 5,068
     
@@ -1119,6 +1129,7 @@ VERB_STEMS = {
     'sil': 'wipe',     # sil-khia = wipe away
     'nung': 'live',          # life
     'piang': 'be.born',      # birth
+    'hen': 'tie',            # ~50x - tie/bind (hencip, kihen, henin, henna)
     
     # Motion verbs
     'pai': 'go',             # 2,350
@@ -1689,7 +1700,7 @@ VERB_STEMS = {
     'kinetniam': 'relieve',   # relieve oppressed (kinetniamna = relief)
     'meihal': 'burnt.offering', # burnt offering (meihalna = burnt offering)
     'kosiat': 'revile',       # revile/reproach (kosiatna = reviling)
-    'kihen': 'bundle',        # bundle/tie (kihenna = bundle)
+    # kihen removed - parses as ki-hen = REFL-tie (be bound)
     'kolbulh': 'stocks',      # put in stocks (kolbulhna = stocks)
     'kilei': 'buy',           # buy (kileina = purchase)
     'hehsuah': 'provoke.jealousy', # provoke to jealousy (hehsuahna = jealousy)
@@ -2494,7 +2505,7 @@ NOUN_STEMS = {
     'anvui': 'gleaning',     # 1x Ruth 2:2 - "glean ears of corn"
     'kuankha': 'gleaned',    # 1x Ruth 2:3 - "gleaned in the field"
     'anlom': 'sheaf',        # 1x Ruth 2:7 - "gather after the reapers"
-    'hen': 'handful',        # 1x Ruth 2:16 - "handfuls of purpose"
+    # hen removed - it's the verb 'tie' (hen-te = bundles/handfuls), not a separate word
     'ankhamval': 'parched.corn', # 1x Ruth 2:14 - "parched corn"
     'kuankhop': 'glean.close', # 1x Ruth 2:21 - "keep close by"
     'leem': 'mark.place',    # 1x Ruth 3:4 - "mark the place"
@@ -3744,6 +3755,17 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
             return 'COMPL'
         return 'south'
     
+    elif morpheme == 'hen':
+        # 'JUSS' (jussive) vs 'tie' (verb)
+        # - 'JUSS' when standalone/sentence-final (~500x): om hen = "let there be"
+        # - 'tie' when with verbal morphology (~50x): hong hen = "tie me", kihen = "be bound"
+        # Context: standalone defaults to JUSS; prefix context suggests 'tie'
+        if context.get('position') == 'standalone':
+            return 'JUSS'
+        if context.get('has_prefix') or context.get('position') == 'stem':
+            return 'tie'
+        return 'JUSS'  # Default to jussive
+    
     elif morpheme == 'in':
         # 'ERG' (ergative case) vs 'QUOT' (quotative)
         # Note: 'house' is spelled 'inn' (double n), not 'in'
@@ -4411,6 +4433,7 @@ ATOMIC_GLOSSES = {
     'nih': 'two',          # nihvei = two-time = second
     'vei': 'time',         # nihvei = two-time
     'hawl': 'drive',       # hawlkhiat = drive-out = persecution
+    'hen': 'tie',          # hencip = tie-tightly, kihen = REFL-tie, henna = tie-NMLZ (bond)
     'paih': 'pour',        # thangpaih = rise-pour = flood
     'duai': 'soft',        # lungduai = heart-soft = compassion
     'khum': 'cover',       # kikhum = REFL-cover = covering
@@ -9905,8 +9928,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tonu': ('tonu', 'mistress'),                          # mistress/lady
         'bai': ('bai', 'rise.early'),                          # rise early/arise
         'dampah': ('dam-pah', 'healthy-clear'),                # cleansed/healed
-        'henhan': ('hen-han', 'spread~REDUP'),                # spreading
-        'hen': ('hen', 'spread'),                              # base - spread
+        'henhan': ('hen~han', 'tie~REDUP'),                    # tying repeatedly
+        # hen removed from ATOMIC - it's in FUNCTION_WORDS as JUSS and VERB_STEMS as 'tie'
         'hitaseleh': ('hi-ta-se-leh', 'be-that-CONN-COND'),    # although that
         'bawlsiain': ('bawl-sia-in', 'make-evil-ERG'),         # doing evil
         
@@ -11043,7 +11066,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nektum': ('nek-tum', 'eat-end'),                      # destroy body
         'letkhiat': ('let-khiat', 'return-away'),              # depart from
         'suakkha': ('suak-kha', 'become-hard'),                # hardened
-        'henna': ('hen-na', 'cast-NMLZ'),                      # casting off (cords)
+        'henna': ('hen-na', 'tie-NMLZ'),                       # bond, binding (Ps 2:3)
         'linglawng': ('ling-lawng', 'hope-vex'),               # vex (in displeasure)
         'lungngai': ('lung-ngai', 'heart-meditate'),           # meditate
         'hingkhia': ('hing-khia', 'be-out'),                   # travail, bring forth
