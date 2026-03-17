@@ -542,11 +542,21 @@ AMBIGUOUS_MORPHEMES = {
     ],
     
     # ta: 'child' (noun) vs 'PFV' (perfective aspect)
-    # - 'child' in compounds (ta-pa = son, ta-nu = daughter)
-    # - 'PFV' after verbs (nei-ta = already have)
+    # - 'child' in compounds (ta-pa = son, ta-nu = daughter), after possessive (a ta)
+    # - 'PFV' after verbs when followed by sentence-final (ta hen, ta hi, ta uh)
     'ta': [
         ('child', 'nominal'),        # Noun: child, offspring
         ('PFV', 'after_verb'),       # Perfective aspect marker
+    ],
+    
+    # thei: 'know' (verb) vs 'ABIL' (abilitative suffix) vs 'fig' (noun)
+    # - 'know' when main verb with pronominal prefix (ka thei, na thei, a thei)
+    # - 'ABIL' when follows another verb (mu thei = can see, ne thei = can eat)
+    # - 'fig' in theigah (fig tree) - rare
+    'thei': [
+        ('know', 'main_verb'),       # Main verb: know
+        ('ABIL', 'after_verb'),      # Abilitative: can/able
+        ('fig', 'in_compound'),      # Noun: fig (rare)
     ],
     
     # tung: 'on/upon' (relational noun) vs 'arrive' (verb)
@@ -3685,11 +3695,25 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
         return 'flesh'
     
     elif morpheme == 'ta':
-        # 'PFV' after verbs (aspect marker)
+        # 'PFV' after verbs (aspect marker) - when followed by sentence-final
         if context.get('position') == 'suffix' and context.get('prev_is_verb'):
             return 'PFV'
-        # 'child' in nominal compounds (ta-pa, ta-nu)
+        # 'PFV' when standalone but followed by sentence-final markers
+        if context.get('next_morpheme') in ['hen', 'hi', 'uh', 'un', 'in', 'a']:
+            if context.get('prev_is_verb'):
+                return 'PFV'
+        # 'child' in nominal compounds (ta-pa, ta-nu) or after possessive
         return 'child'
+    
+    elif morpheme == 'thei':
+        # 'ABIL' when follows another verb (mu thei = can see)
+        if context.get('position') == 'suffix' and context.get('prev_is_verb'):
+            return 'ABIL'
+        # 'know' when main verb (ka thei, na thei, a thei hi)
+        if context.get('has_prefix') or context.get('position') == 'root':
+            return 'know'
+        # Default: 'know' for standalone
+        return 'know'
     
     elif morpheme == 'tung':
         # 'on' when followed by -ah

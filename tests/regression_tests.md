@@ -611,6 +611,17 @@ tests = [
     ('uh', '2/3PL'),   # 21,845x - plural agreement clitic, NOT noun plural
     ('un', 'IMP.PL'),  # imperative plural (2PL command)
     ('nute', 'female-PL'),  # nu-te = women/mothers (noun plural with -te)
+    # ta: 'child' (noun) vs 'PFV' (perfective aspect) - polysemous (fixed 2026-03-17)
+    ('ta', 'child'),      # standalone = child
+    ('tapa', 'child-male'),  # compound = son
+    ('tanu', 'child-female'), # compound = daughter
+    ('omta', 'exist-PFV'),   # verb+ta = perfective
+    ('neita', 'have-PFV'),   # verb+ta = perfective
+    # thei: 'know' (verb) vs 'ABIL' (abilitative) - polysemous (fixed 2026-03-17)
+    ('thei', 'know'),        # standalone = know
+    ('kathei', '1SG-know'),  # with prefix = know
+    ('neithei', 'have-ABIL'), # verb+thei = can/able
+    ('omthei', 'exist-can'),  # verb+thei = can (synonym for ABIL)
 ]
 
 passed = 0
