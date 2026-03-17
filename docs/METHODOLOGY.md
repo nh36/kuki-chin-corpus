@@ -308,18 +308,18 @@ if '-' in word:
 
 ### 5.1 Dictionary Size Guidelines
 
-Based on Tedim experience, expect approximately:
+Based on Tedim experience (actual counts):
 
 | Category | Entries | Coverage Contribution |
 |----------|---------|----------------------|
-| Function words | 100-150 | ~60% |
-| Verb stems | 2,000+ | ~15% |
-| Noun stems | 800+ | ~10% |
-| Compound words (simple) | 500-1,000 | ~8% |
-| Hierarchical compounds | 300-600 | ~3% |
-| Proper nouns | 2,500+ | ~2% |
-| Atomic glosses | 300+ | (compositional) |
-| **Total** | **~7,000+** | **~99%** |
+| Function words | 131 | ~60% |
+| Verb stems | 650 | ~15% |
+| Noun stems | 992 | ~10% |
+| Binary compounds | 315 | ~8% |
+| Ternary compounds | 266 | ~3% |
+| Proper nouns | 3,747 | ~2% |
+| Polysemous entries | 37 | (disambiguation) |
+| **Total** | **~6,138** | **100%** |
 
 ---
 

@@ -4,10 +4,10 @@
 
 This document describes the systematic quality audit process developed after achieving 99%+ coverage on Tedim Chin. The audit revealed that **coverage ≠ correctness** - rapid vocabulary expansion introduced systematic errors that must be identified and corrected before the methodology is applied to other languages.
 
-**Status:** In Progress  
+**Status:** ✅ Complete  
 **Language:** Tedim Chin (ctd)  
-**Coverage:** 99.9998% (832,202/832,204 tokens)  
-**Audit Start:** 2026-03-15
+**Coverage:** 100% (850,906 tokens)  
+**Audit Period:** 2026-03-15 to 2026-03-17
 
 ---
 
@@ -275,16 +275,50 @@ for word, seg, gloss in re.findall(pattern, content):
 | 1.2 | Segmentation conflicts | ✅ | Phonotactic audit complete |
 | 1.3 | Partial gloss completion | ✅ | 0 partials remaining |
 | 1.4 | Phonotactic audit | ✅ | 15 violations fixed |
-| 2.1 | Root verification | ⬜ | ~2,000 roots |
-| 2.2 | Opacity audit | 🔄 | 1 fixed |
-| 2.3 | Gloss consistency | 🔄 | suang normalized |
-| 3.1 | Homophone inventory | 🔄 | 4 documented |
-| 3.2 | Context-dependent | ✅ | lamna done |
-| 4.1 | Algorithm testing | ⬜ | |
-| 4.2 | Regression testing | ✅ | Ongoing |
-| 5.1 | Error documentation | 🔄 | This document |
-| 5.2 | Methodology update | ✅ | Done |
-| 5.3 | Replication guide | ⬜ | |
+| 2.1 | Root verification | ✅ | High-frequency roots verified via KJV |
+| 2.2 | Opacity audit | ✅ | 22 opaque lexemes documented |
+| 2.3 | Gloss consistency | ✅ | Terminology normalized |
+| 3.1 | Homophone inventory | ✅ | 37 polysemous morphemes documented |
+| 3.2 | Context-dependent | ✅ | docs/DISAMBIGUATION.md created |
+| 4.1 | Algorithm testing | ✅ | BINARY/TERNARY compounds verified |
+| 4.2 | Regression testing | ✅ | 64 tests in tests/regression_tests.md |
+| 5.1 | Error documentation | ✅ | docs/ERROR_PATTERNS.md created |
+| 5.2 | Methodology update | ✅ | docs/METHODOLOGY.md v4.0 |
+| 5.3 | Replication guide | ✅ | docs/REPLICATION_GUIDE.md created |
+
+---
+
+## Summary of Findings
+
+### Error Patterns Found
+
+| Error Type | Count | Resolution |
+|------------|-------|------------|
+| Duplicate entries | 353 | Removed, canonical kept |
+| Phonotactic violations | 15 | Resegmented |
+| Ghost entries | 4 | Removed (awk=ram, huh=blow, etc.) |
+| Wrong glosses | ~50 | Corrected via KJV |
+| Over-segmentation | ~25 | Added to COMPOUND_WORDS |
+| Under-documented polysemy | 37 | Added to AMBIGUOUS_MORPHEMES |
+
+### Quality Metrics
+
+| Metric | Before Audit | After Audit |
+|--------|--------------|-------------|
+| Coverage | 99.99% | 100% |
+| Duplicates | 353 | 0 |
+| Partial glosses | 22 | 0 |
+| Documented homophones | 4 | 37 |
+| Regression tests | 0 | 64 |
+
+### Documentation Created
+
+- `docs/DISAMBIGUATION.md` - 37 polysemous morphemes
+- `docs/ERROR_PATTERNS.md` - 10 error types with solutions
+- `docs/REPLICATION_GUIDE.md` - Step-by-step for new languages
+- `docs/MORPHEME_INVENTORY.md` - Full morpheme inventory
+- `docs/GRAMMAR_ARCHITECTURE.md` - Grammatical organization
+- `tests/regression_tests.md` - 64 regression tests
 
 ---
 
@@ -308,14 +342,14 @@ for word, seg, gloss in re.findall(pattern, content):
 
 ## Current Coverage
 
-**100.0000%** (852,286/852,286 tokens)
-- Full analyses: 852,286
+**100.0000%** (850,906/850,906 tokens)
+- Full analyses: 850,906
 - Partial analyses: 0
 - Unknown tokens: 0
 
 ---
 
-*Document version: 1.1*  
+*Document version: 2.0*  
 *Created: 2026-03-15*  
-*Last Updated: 2026-03-16*
+*Last Updated: 2026-03-17*
 *Maintainer: Kuki-Chin Corpus Project*
