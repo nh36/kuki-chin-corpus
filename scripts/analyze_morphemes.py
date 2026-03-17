@@ -3743,14 +3743,13 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
         return 'south'
     
     elif morpheme == 'in':
-        # 'ERG' (ergative case) vs 'house' vs 'QUOT'
-        # After ci: QUOT (quotative)
+        # 'ERG' (ergative case) vs 'QUOT' (quotative)
+        # Note: 'house' is spelled 'inn' (double n), not 'in'
+        # After ci: QUOT (quotative marker)
         if context.get('prev_morpheme') == 'ci':
             return 'QUOT'
-        # Standalone: house
-        if context.get('position') == 'standalone':
-            return 'house'
-        # Default: ERG (case marker)
+        # Default: ERG (ergative/instrumental case marker)
+        # Standalone 'in' is ERG 21,383x vs 'inn' (house) 924x
         return 'ERG'
     
     elif morpheme == 'ah':

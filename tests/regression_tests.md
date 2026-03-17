@@ -443,7 +443,24 @@ HYPHEN_SUFFIXES: -in, -ah, -a, -a', -un
 
 ---
 
-## 24. TAM Suffix Expansion
+## 24. in vs inn (ERG vs house)
+
+The standalone word `in` is the ergative case marker (21,383x), NOT 'house'.
+The word for 'house' is spelled `inn` with double n (924x).
+
+| Token | Wrong | Correct | Notes |
+|-------|-------|---------|-------|
+| in | house | ERG | Case marker after nouns |
+| inn | ? | house | House (double n) |
+| innpi | house | house-big | house-big (= temple) |
+| innkuan | ? | house-family | household |
+
+**Citation**: GEN 1:1 "Pasian in" (God ERG = by God)
+**Citation**: EXO 12:3 "inn" (house)
+
+---
+
+## 25. TAM Suffix Expansion
 
 These suffixes were added to TAM_SUFFIXES:
 
@@ -580,6 +597,9 @@ tests = [
     ('veivei', 'REDUP'), ('thuahthuah', 'REDUP'),
     ('khuavak', 'light'), ('ganhing', 'animal'),  # general term for livestock
     ('suangkhuam', 'pillar'),  # stone-pillar (KJV = "heap and pillar")
+    # in vs inn disambiguation (fixed 2026-03-17)
+    ('in', 'ERG'),  # 21,383x - ergative case marker, NOT 'house'
+    ('inn', 'house'),  # 924x - 'house' has double n
 ]
 
 passed = 0
