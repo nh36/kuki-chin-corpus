@@ -1858,7 +1858,7 @@ VERB_STEMS = {
     'dek': 'low',                  # low/cheap (sidek = low pit, sumdek = cheap)
     # Round 167h: More stems from partial-gloss analysis
     'em': 'bake',                  # bake (emna = bake-NMLZ, baking place)
-    'zak': 'proclaim',      # spread/proclaim (genzak = speak-proclaim)
+    # 'zak' removed - it's a verb 'hear' (Form II of za), not a noun 'proclaim'
     'zaw': 'leap',                 # leap (kanzaw = 1SG-leap, sugawpzo/zaw compounds)
     'pial': 'stray',               # stray/err (pialsakin = stray-CAUS-ERG)
     'tai': 'rebuke',               # rebuke (tainate = rebuke-NMLZ-PL) - NOTE: short form, taii is full form
@@ -17233,9 +17233,17 @@ def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -
     
     forms = {
         'bare': [],
-        'case': [],
-        'number': [],
-        'possessed': [],
+        'case_erg': [],      # Ergative -in
+        'case_loc': [],      # Locative -ah
+        'case_abl': [],      # Ablative -panin / -pan
+        'case_com': [],      # Comitative -tawh
+        'number_pl': [],     # Plural -te
+        'number_com_pl': [], # Comitative + Plural (N-tawh-te or N-te-tawh)
+        'poss_1sg': [],      # 1SG possessed (ka-N)
+        'poss_2sg': [],      # 2SG possessed (na-N)
+        'poss_3sg': [],      # 3SG possessed (a-N)
+        'poss_1pl': [],      # 1PL possessed (i-N)
+        'poss_case': [],     # Possessed + case (ka-N-ah, etc.)
         'compounds': [],
         'other': []
     }
@@ -17243,10 +17251,11 @@ def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -
     seen = set()
     stem_lower = stem.lower()
     
-    # Case markers to detect
-    case_markers = {'-ah', '-in', '-pan', '-panin'}
-    # Possession prefixes
-    poss_prefixes = {'ka-', 'na-', 'a-', 'i-'}
+    # Prefixes that can attach to nouns (possessive prefixes)
+    noun_prefixes = ('ka', 'na', 'a', 'i', 'kan', 'nan', 'an')
+    
+    # Case/number suffixes that can attach to nouns
+    noun_suffixes = ('ah', 'in', 'te', 'tawh', 'pan', 'panin', 'uh', 'na', 'khat')
     
     with open(corpus_file, 'r', encoding='utf-8') as f:
         for line in f:
@@ -17259,24 +17268,83 @@ def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -
             # Find words containing the stem
             for word in text.split():
                 word_clean = word.strip('.,;:!?"\'').lower()
+                
+                # Early filter: word must contain stem
                 if stem_lower not in word_clean:
                     continue
+                    
                 if word_clean in seen:
                     continue
                 seen.add(word_clean)
                 
+                # Now analyze the word
+                segmented, gloss = analyze_word(word_clean)
+                
+                # Skip if word doesn't actually contain our stem in segmentation
+                seg_parts = segmented.split('-') if segmented else [word_clean]
+                
+                # Check if stem appears as a morpheme boundary
+                stem_found = False
+                for i, part in enumerate(seg_parts):
+                    # Exact match
+                    if part == stem_lower:
+                        stem_found = True
+                        break
+                    # Stem with suffix (e.g., stem "pa", part "pate" meaning pa-te was not split)
+                    # This is tricky - rely on the segmentation 
+                    
+                if not stem_found:
+                    # Also check if stem is prefix of any part (for unsplit cases)
+                    for part in seg_parts:
+                        if part.startswith(stem_lower) and len(part) > len(stem_lower):
+                            # Check if rest is a known suffix
+                            rest = part[len(stem_lower):]
+                            if rest in noun_suffixes:
+                                stem_found = True
+                                break
+                    
+                if not stem_found:
+                    continue
+                
                 segmented, gloss = analyze_word(word_clean)
                 entry = (word_clean, segmented, gloss, verse_id)
                 
-                # Categorize
+                # Categorize based on segmented form and gloss
+                gloss_parts = gloss.split('-') if gloss else []
+                seg_parts = segmented.split('-') if segmented else []
+                
+                # Bare form
                 if word_clean == stem_lower:
                     forms['bare'].append(entry)
-                elif any(segmented.endswith(c) for c in case_markers):
-                    forms['case'].append(entry)
-                elif '-te' in segmented or segmented.endswith('-te'):
-                    forms['number'].append(entry)
-                elif any(segmented.startswith(p) for p in poss_prefixes):
-                    forms['possessed'].append(entry)
+                # Check for possessed + case combinations
+                elif any(segmented.startswith(p) for p in ('ka-', 'na-', 'a-', 'i-')) and \
+                     any(g in ('ERG', 'LOC', 'ABL', 'COM') for g in gloss_parts):
+                    forms['poss_case'].append(entry)
+                # Check for COM.PL (comitative + plural in either order)
+                elif 'COM' in gloss_parts and 'PL' in gloss_parts:
+                    forms['number_com_pl'].append(entry)
+                # Case markers (single case, not possessed)
+                elif gloss.endswith('-ABL') or 'ABL' in gloss_parts:
+                    forms['case_abl'].append(entry)
+                elif gloss.endswith('-ERG') or (segmented.endswith('-in') and 'ERG' in gloss_parts):
+                    forms['case_erg'].append(entry)
+                elif gloss.endswith('-LOC') or segmented.endswith('-ah'):
+                    forms['case_loc'].append(entry)
+                elif gloss.endswith('-COM') or 'COM' in gloss_parts:
+                    forms['case_com'].append(entry)
+                # Number marking (plural)
+                elif '-te' in segmented or segmented.endswith('-te') or 'PL' in gloss_parts:
+                    forms['number_pl'].append(entry)
+                # Possessed forms by person
+                elif segmented.startswith('ka-') or gloss.startswith('1SG'):
+                    forms['poss_1sg'].append(entry)
+                elif segmented.startswith('na-') or gloss.startswith('2SG'):
+                    forms['poss_2sg'].append(entry)
+                elif segmented.startswith('a-') or gloss.startswith('3SG'):
+                    forms['poss_3sg'].append(entry)
+                elif segmented.startswith('i-') or gloss.startswith('1PL'):
+                    forms['poss_1pl'].append(entry)
+                # Compounds
                 elif '-' in segmented and stem_lower in segmented:
                     forms['compounds'].append(entry)
                 else:
@@ -17300,9 +17368,17 @@ def format_paradigm(stem: str, forms: Dict, show_verses: bool = False) -> str:
     
     category_names = {
         'bare': 'Bare form',
-        'case': 'Case-marked',
-        'number': 'Number-marked',
-        'possessed': 'Possessed',
+        'case_erg': 'Ergative (-in)',
+        'case_loc': 'Locative (-ah)',
+        'case_abl': 'Ablative (-panin)',
+        'case_com': 'Comitative (-tawh)',
+        'number_pl': 'Plural (-te)',
+        'number_com_pl': 'Comitative + Plural',
+        'poss_1sg': 'Possessed 1SG (ka-)',
+        'poss_2sg': 'Possessed 2SG (na-)',
+        'poss_3sg': 'Possessed 3SG (a-)',
+        'poss_1pl': 'Possessed 1PL (i-)',
+        'poss_case': 'Possessed + Case',
         'compounds': 'In compounds',
         'other': 'Other forms'
     }

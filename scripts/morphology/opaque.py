@@ -100,8 +100,7 @@ OPAQUE_LEXEMES = {
     },
     
     # === Spatial/relational ===
-    # kikal removed - now parses transparently as ki-kal = REFL-middle = "between"
-    # (after adding kal = 'middle' to NOUN_STEMS)
+    # kikal: parses transparently as ki-kal = REFL-middle (semantic = "between")
     
     # === Religious/cultural ===
     'singtawng': {

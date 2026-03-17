@@ -1,370 +1,1049 @@
 # Tedim Chin Noun Paradigms
 
-*Generated from Bible corpus with verse citations*
-
-Each cell shows the first attested occurrence in the corpus.
-
----
-
-## Pa
-
-### Case Forms
-
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | pa | pa | father | Gen 2:24 |
-| ERG (-in) | pa-in | pa-in | father-INST | Gen 17:5 |
-| LOC (-ah) | — | — | — | (unattested) |
-| COM (tawh) | pa tawh | pa-tawh | father-COM | Gen 19:32 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | — | — | — | (unattested) |
-
-### Plural Forms
-
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | pate | pate | fathers | Gen 15:15 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | — | — | — | (unattested) |
-
-### Possessed Forms
-
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka pa | ka-pa | 1SG-father | Gen 20:13 |
-| 2SG (na) | na pa | na-pa | 2SG-father | Gen 12:1 |
-| 3SG (a) | a pa | a-pa | 3SG-father | Gen 2:24 |
-| 1PL.INCL (i) | i pa | i-pa | 1PL.INCL-father | Gen 19:31 |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
+Paradigms extracted from Bible corpus showing case, number, and possession forms.
+Each cell shows: word, segmentation, gloss, and verse citation.
 
 ---
 
-## Nu
+# Paradigm for 'pa'
 
-### Case Forms
+## Bare form (1 forms)
+  pa                   pa                        'father'
 
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | nu | nu | female | Gen 2:22 |
-| ERG (-in) | nu-in | nu-in | female-ERG | Ezek 16:45 |
-| LOC (-ah) | — | — | — | (unattested) |
-| COM (tawh) | nu tawh | nu-tawh | female-COM | Gen 25:2 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | — | — | — | (unattested) |
+## Ergative (-in) (1 forms)
+  kipaai-in            ki-pa-ai-in               'REFL-father-love-ERG'
 
-### Plural Forms
+## Locative (-ah) (1 forms)
+  pa-a                 pa-a                      'father-LOC'
 
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | nute | nu-te | female-PL | Gen 32:11 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | — | — | — | (unattested) |
+## Plural (-te) (2 forms)
+  lopate               lo-pa-te                  'field-father-PL'
+  nasempate            nasem-pa-te               'servant-male-PL'
 
-### Possessed Forms
+## In compounds (90 forms)
+  pana                 pa-na                     'father-NMLZ'
+  tapa                 ta-pa                     'child-male'
+  nupa                 nu-pa                     'female-male'
+  sabengpa             sa-beng-pa                'hunt-mighty-NMLZ'
+  tupa                 tu-pa                     'son-NMLZ'
+  kumpipa              kumpi-pa                  'king-male'
+  tapa)                ta-pa                     'child-male'
+  behpa                beh-pa                    'clan-male'
+  (kumpipa             kumpi-pa                  'king-male'
+  pa-in                pa-in                     'father-INST'
+  kileipa              kilei-pa                  'buy-NMLZ.AG'
+  sempa                sem-pa                    'serve-father'
+  nasempa              nasem-pa                  'servant-male'
+  “tangvalpa           tangval-pa                'youth-father'
+  siampa               siam-pa                   'skilled-male'
+  mangpa               mang-pa                   'chief-father'
+  tangvalpa            tangval-pa                'youth-father'
+  piakpa               piak-pa                   'give-NMLZ'
+  pahin                pa-hin                    'father-this'
+  hiangpa              hiang-pa                  'green-tree'
+  ulianpa              u-lian-pa                 'elder-great-M'
+  lopa                 lo-pa                     'farmer'
+  teekpa               teek-pa                   'in.law-father'
+  lawmpa               lawm-pa                   'worthy-NMLZ.AG'
+  ukpa-in              uk-pa-in                  'rule-NMLZ-INST'
+  piapa                pia-pa                    'give-M'
+  pipa                 pi-pa                     'great-man'
+  huanpipa             huan-pi-pa                'bread-great-man'
+  siampipa             siam-pi-pa                'priest'
+  ukpa                 uk-pa                     'rule-male'
+  zuakpa               zuak-pa                   'sell-NMLZ'
+  panun                pa-nun                    'father-life'
+  koihpa               koih-pa                   'place-NMLZ.M'
+  sungpa               sung-pa                   'inside-M'
+  vengpa               veng-pa                   'guard-M'
+  “nulepa              nu-le-pa                  'mother-and-father'
+  dikpa                dik-pa                    'right-NMLZ'
+  bawlpa               bawl-pa                   'make-person'
+  thukpa,”             thuk-pa                   'deep-person'
+  “ukpa                uk-pa                     'rule-male'
+  pano                 pa-no                     'male-young'
+  puapa                pua-pa                    'carry.back-father'
+  veipa                vei-pa                    'sick-NMLZ.AG'
+  paang                pa-ang                    'father-side'
+  phakpa               phak-pa                   'bare-NMLZ'
+  “siampipa            siam-pi-pa                'priest'
+  siangthosakpa        siangtho-sak-pa           'holy-CAUS-NMLZ'
+  kisunnapa            kisunna-pa                'anointing-NMLZ.AG'
+  leipa                lei-pa                    'buy-back'
+  khualmipa            khualmi-pa                'stranger-NMLZ'
+  paai                 pa-ai                     'father-love'
+  kileinapa            kilei-na-pa               'buy-NMLZ-NMLZ.AG'
+  (siampipa            siam-pi-pa                'priest'
+  pataukohna           pa-tau-koh-na             'male-signal-call-NMLZ'
+  paakin               pa-akin                   'male-certainly'
+  ninpa                nin-pa                    'clean-NMLZ'
+  vanglianpa           vanglian-pa               'almighty-NMLZ.M'
+  pataukoh             pa-tau-koh                'male-signal-call'
+  phulapa              phula-pa                  'avenger-NMLZ'
+  khapa                kha-pa                    'spirit-father'
+  “'nulepa             nu-le-pa                  'mother-and-father'
+  paipihpa             paipih-pa                 'accompany-NMLZ.AG'
+  nuampa               nuam-pa                   'pleasant-NMLZ'
+  sipa                 si-pa                     'die-NMLZ.AG'
+  satpa                sat-pa                    'build-father'
+  khutsiampa           khut-siam-pa              'hand-make-NMLZ'
+  nulepa               nu-le-pa                  'mother-and-father'
+  tengpa               teng-pa                   'dwell-NMLZ.AG'
+  pahtak               pa-tak                    'father-true'
+  paatgawpta           pa-atgawp-ta              'male-send.away-PFV'
+  honpa                hon-pa                    'flock-father'
+  “kumpipa             kumpi-pa                  'king-male'
+  thahatpa             tha-hat-pa                'strength-strong-NMLZ'
+  thugenpa             thu-gen-pa                'word-speak-NMLZ'
+  susiapa              su-sia-pa                 'enemy-bad-M'
+  puteekpa             puteek-pa                 'old.man-NMLZ'
+  tanaupa              tanau-pa                  'relative-NMLZ'
+  filistia-pa          filistia-pa               'FILISTIA-PA'
+  kumpipa!”            kumpi-pa                  'king-male'
+  pamah                pa-mah                    'father-self'
+  nasempa,”            nasem-pa                  'servant-male'
+  kumpipa,”            kumpi-pa                  'king-male'
+  “phulapa             phula-pa                  'avenger-NMLZ'
+  tapa!”               ta-pa                     'child-male'
+  suanpa               suan-pa                   'descendant-M'
+  egypt-pa             egypt-pa                  'EGYPT-man'
+  kipaai               ki-pa-ai                  'REFL-father-love'
+  hawlpa               hawl-pa                   'seek-venture'
+  sampa                sam-pa                    'call-AGT'
+  tawntungpa           tawntung-pa               'eternity-NMLZ.AG'
 
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka nu | ka-nu | 1SG-female | Josh 2:13 |
-| 2SG (na) | na nu | na-nu | 2SG-female | Gen 28:2 |
-| 3SG (a) | a nu | a-nu | 3SG-female | Gen 2:24 |
-| 1PL.INCL (i) | — | — | — | (unattested) |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
+## Other forms (5 forms)
+  pate                 pate                      'fathers'
+  “pa                  pa                        'father'
+  pa!”                 pa                        'father'
+  pa,”                 pa                        'father'
+  pa”                  pa                        'father'
 
----
-
-## Inn
-
-### Case Forms
-
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | inn | inn | house | Gen 12:1 |
-| ERG (-in) | — | — | — | (unattested) |
-| LOC (-ah) | inn-ah | inn-ah | house-LOC | Gen 18:33 |
-| COM (tawh) | inn tawh | inn-tawh | house-COM | Judg 12:1 |
-| ABL (pan) | inn pan | inn-pan | house-begin | Judg 11:7 |
-| ABL.ERG (panin) | inn panin | inn-pa-nin | house-male-ERG | Gen 12:1 |
-
-### Plural Forms
-
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | innte | inn-te | house-PL | Gen 41:56 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | innte-ah | inn-te-ah | house-PL-LOC | Deut 19:1 |
-
-### Possessed Forms
-
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka inn | ka-inn | 1SG-house | Gen 15:2 |
-| 2SG (na) | na inn | na-inn | 2SG-house | Gen 17:13 |
-| 3SG (a) | a inn | a-inn | 3SG-house | Gen 19:4 |
-| 1PL.INCL (i) | i inn | i-inn | 1PL.INCL-house | Judg 20:8 |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
-
----
-
-## Gam
-
-### Case Forms
-
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | gam | gam | land | Gen 2:5 |
-| ERG (-in) | gamin | gam-in | land-ERG | Ezek 25:7 |
-| LOC (-ah) | gamah | gam-ah | land-LOC | Gen 12:1 |
-| COM (tawh) | gam tawh | gam-tawh | land-COM | Gen 13:10 |
-| ABL (pan) | gam pan | gam-pan | land-begin | Gen 13:3 |
-| ABL.ERG (panin) | gam panin | gam-pa-nin | land-male-ERG | Gen 10:11 |
-
-### Plural Forms
-
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | gamte | gam-te | land-PL | Lev 25:34 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | gamte-ah | gam-te-ah | land-PL-LOC | 1Chr 5:26 |
-
-### Possessed Forms
-
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka gam | ka-gam | 1SG-land | Gen 34:10 |
-| 2SG (na) | na gam | na-gam | 2SG-land | Gen 12:1 |
-| 3SG (a) | a gam | a-gam | 3SG-land | Num 14:36 |
-| 1PL.INCL (i) | i gam | i-gam | 1PL.INCL-land | Gen 34:21 |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
-
----
-
-## Mi
-
-### Case Forms
-
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | mi | mi | person | Gen 2:5 |
-| ERG (-in) | mi-in | mi-in | person-ERG | Exod 12:15 |
-| LOC (-ah) | — | — | — | (unattested) |
-| COM (tawh) | mi tawh | mi-tawh | person-COM | Gen 9:19 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | — | — | — | (unattested) |
-
-### Plural Forms
-
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | mite | mite | people | Gen 4:26 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | — | — | — | (unattested) |
-
-### Possessed Forms
-
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka mi | ka-mi | 1SG-person | Exod 3:10 |
-| 2SG (na) | na mi | na-mi | 2SG-person | Gen 20:7 |
-| 3SG (a) | a mi | a-mi | 3SG-person | Gen 6:4 |
-| 1PL.INCL (i) | — | — | — | (unattested) |
-| 1PL.EXCL (ei) | ei mi | ei-mi | 1PL.EXCL-person | Rom 5:6 |
 
 ---
 
-## Thu
+# Paradigm for 'nu'
 
-### Case Forms
+## Bare form (1 forms)
+  nu                   nu                        'female'
 
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | thu | thu | word | Gen 2:16 |
-| ERG (-in) | thu-in | thu-in | word-ERG | Gen 27:45 |
-| LOC (-ah) | thu-ah | thu-ah | word-LOC | Gen 21:30 |
-| COM (tawh) | thu tawh | thu-tawh | word-COM | Gen 24:9 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | thu panin | thu-pa-nin | word-male-ERG | Deut 5:32 |
+## Ergative (-in) (3 forms)
+  meigongnu-in         meigong-nu-in             'widow-F-ERG'
+  nunungin             nu-nung-in                'mother-back-ERG'
+  nu-in                nu-in                     'female-ERG'
 
-### Plural Forms
+## Locative (-ah) (1 forms)
+  numei-a              nu-mei-a                  'woman-LOC'
 
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | thute | thu-te | word-PL | Gen 15:1 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | thute-ah | thu-te-ah | word-PL-LOC | Num 5:30 |
+## Plural (-te) (7 forms)
+  nute                 nu-te                     'female-PL'
+  nasemnute            nasem-nu-te               'servant-female-PL'
+  nutate               nu-ta-te                  'female-PFV-PL'
+  sanggamnute          sanggam-nu-te             'brother-female-PL'
+  nunungte             nu-nung-te                'female-live-PL'
+  kumpinute            kumpi-nu-te               'king-female-PL'
+  nupate               nu-pa-te                  'female-male-PL'
 
-### Possessed Forms
+## Possessed 2SG (na-) (1 forms)
+  naunu                na-u-nu                   '2SG-elder.sibling-mother'
 
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka thu | ka-thu | 1SG-word | Gen 22:18 |
-| 2SG (na) | na thu | na-thu | 2SG-word | Exod 4:9 |
-| 3SG (a) | a thu | a-thu | 3SG-word | Gen 21:4 |
-| 1PL.INCL (i) | i thu | i-thu | 1PL.INCL-word | 2Sam 12:18 |
-| 1PL.EXCL (ei) | ei thu | ei-thu | 1PL.EXCL-word | 1Tim 4:10 |
+## In compounds (51 forms)
+  numei                nu-mei                    'woman'
+  sanggamnu            sanggam-nu                'sibling-female'
+  tanu                 ta-nu                     'child-female'
+  nupa                 nu-pa                     'female-male'
+  nupi                 nu-pi                     'mother-big'
+  keelnu               keel-nu                   'heifer-female'
+  unu                  u-nu                      'elder.sibling-mother'
+  tuununo              tuu-nu-no                 'ewe-female-small'
+  nungaknu             nungak-nu                 'girl-female'
+  cingnu               cing-nu                   'prepare-mother'
+  nuhin                nu-hin                    'mother-this'
+  nunung               nu-nung                   'mother-back'
+  “nulepa              nu-le-pa                  'mother-and-father'
+  nasemnu              nasem-nu                  'servant-female'
+  tuanu                tua-nu                    'that-female'
+  “numei               nu-mei                    'woman'
+  khialnu              khial-nu                  'err-female'
+  kithatnu             ki-that-nu                'REFL-kill-female'
+  “'nulepa             nu-le-pa                  'mother-and-father'
+  nulepa               nu-le-pa                  'mother-and-father'
+  sungnu               sung-nu                   'inside-female'
+  nuainungin           nu-ainungin               'female-Anakims'
+  pilpennu             pil-pen-nu                'learn-TOP-female'
+  “hihnu               hih-nu                    'this-after'
+  lawmnu               lawm-nu                   'friend-female'
+  sungnungah           sung-nu-ngah              'mother.in.law-get'
+  nusian               nu-sian                   'mother-holy'
+  meigongnu            meigong-nu                'widow-F'
+  kemnu                kem-nu                    'guard-woman'
+  kumpinu              kumpi-nu                  'king-mother'
+  nulin                nu-lin                    'female-hope'
+  kamsangnu            kamsang-nu                'prophet-F'
+  kinusiat             ki-nu-siat                'REFL-mother-destroy'
+  (kumpinu             kumpi-nu                  'king-mother'
+  “kumpinu             kumpi-nu                  'king-mother'
+  nuaimang             nu-aimang                 'female-COMPL'
+  nusiatna             nu-siat-na                'woman-destruction'
+  “nupi                nu-pi                     'mother-big'
+  “nupa                nu-pa                     'female-male'
+  nuta                 nu-ta                     'female-PFV'
+  nunungna             nu-nung-na                'female-live-NMLZ'
+  hihnu                hih-nu                    'this-after'
+  behnu                beh-nu                    'tribe-female'
+  numeinu              nu-mei-nu                 'woman-woman'
+  nunungpen            nu-nung-pen               'female-live-TOP'
+  nulsaknu             nul-sak-nu                'push-CAUS-mother'
+  nuno                 nu-no                     'female-young'
+  nupa-un              nu-pa-un                  'female-male-IMP'
+  tanu-ngak            ta-nu-ngak                'child-female-young'
+  nukik                nu-kik                    'female-ITER'
+  silanu               sila-nu                   'servant-female'
 
----
+## Other forms (2 forms)
+  nu)                  nu                        'female'
+  “nu                  nu                        'female'
 
-## Topa
-
-### Case Forms
-
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | topa | topa | lord | Gen 2:4 |
-| ERG (-in) | topa-in | topa-in | lord-INST | Gen 27:37 |
-| LOC (-ah) | — | — | — | (unattested) |
-| COM (tawh) | topa tawh | topa-tawh | lord-COM | Gen 24:2 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | — | — | — | (unattested) |
-
-### Plural Forms
-
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | topate | topa-te | lord-PL | Deut 10:17 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | — | — | — | (unattested) |
-
-### Possessed Forms
-
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka topa | ka-topa | 1SG-lord | Gen 18:12 |
-| 2SG (na) | na topa | na-topa | 2SG-lord | Gen 15:7 |
-| 3SG (a) | a topa | a-topa | 3SG-lord | Gen 24:9 |
-| 1PL.INCL (i) | i topa | i-topa | 1PL.INCL-lord | Neh 8:10 |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
-
----
-
-## Zi
-
-### Case Forms
-
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | zi | zi | wife | Gen 2:24 |
-| ERG (-in) | zi-in | zi-in | wife-ERG | Gen 6:2 |
-| LOC (-ah) | — | — | — | (unattested) |
-| COM (tawh) | zi tawh | zi-tawh | wife-COM | Gen 2:24 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | — | — | — | (unattested) |
-
-### Plural Forms
-
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | zite | zi-te | wife-PL | Gen 4:23 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | — | — | — | (unattested) |
-
-### Possessed Forms
-
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka zi | ka-zi | 1SG-wife | Gen 12:19 |
-| 2SG (na) | na zi | na-zi | 2SG-wife | Gen 3:17 |
-| 3SG (a) | a zi | a-zi | 3SG-wife | Gen 2:24 |
-| 1PL.INCL (i) | — | — | — | (unattested) |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
 
 ---
 
-## Ta
+# Paradigm for 'inn'
 
-### Case Forms
+## Bare form (1 forms)
+  inn                  inn                       'house'
 
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | ta | ta | child | Gen 1:20 |
-| ERG (-in) | ta-in | ta-in | child-ERG | Deut 25:6 |
-| LOC (-ah) | — | — | — | (unattested) |
-| COM (tawh) | — | — | — | (unattested) |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | — | — | — | (unattested) |
+## Ergative (-in) (1 forms)
+  innkuankuanin        inn-kuan-kuan-in          'house-family~REDUP-ERG'
 
-### Plural Forms
+## Locative (-ah) (16 forms)
+  inn-ah               inn-ah                    'house-LOC'
+  inn-a                inn-ah                    'house-LOC'
+  innkongah            inn-kong-ah               'house-side-LOC'
+  innte-ah             inn-te-ah                 'house-PL-LOC'
+  innkuan-ah           inn-kuan-ah               'house-family-LOC'
+  inndei-ah            inn-dei-ah                'house-chamber-LOC'
+  innkhumzangah        inn-khum-zang-ah          'house-roof-top-LOC'
+  innkhumzanga         inn-khum-zang-a           'house-top-side-LOC'
+  innlimah             inn-lim-ah                'house-pillar-LOC'
+  “inn-ah              inn-ah                    'house-LOC'
+  biakinn-a            biak-inn-a                'pray-house-LOC'
+  innsunga             inn-sung-a                'house-inside-LOC'
+  innkuan-a            inn-kuan-a                'house-family-LOC'
+  inndeite-ah          inn-dei-te-ah             'house-chamber-PL-LOC'
+  innpua-ah            inn-pua-ah                'house-outside-LOC'
+  innpi-ah             inn-pi-ah                 'house-big-LOC'
 
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | tate | ta-te | child-PL | Gen 10:21 |
-| PL.ERG | tate-in | ta-te-in | child-PL-ERG | Rom 8:23 |
-| PL.LOC | — | — | — | (unattested) |
+## Plural (-te) (15 forms)
+  innkuante            inn-kuan-te               'house-household-PL'
+  innte                inn-te                    'house-PL'
+  innpite              inn-pi-te                 'house-big-PL'
+  innkamte             inn-kam-te                'house-chamber-PL'
+  innsunte             inn-sun-te                'house-shade-PL'
+  inndeite             inn-dei-te                'house-good-PL'
+  innkhuamte           inn-khuam-te              'house-pillar-PL'
+  inncingte            inn-cing-te               'house-faithful-PL'
+  inntualte            inn-tual-te               'house-place-PL'
+  innsungmangte        inn-sung-mang-te          'house-inside-ruin-PL'
+  innkhangte           inn-khang-te              'house-generation-PL'
+  innvengte            inn-veng-te               'house-guard-PL'
+  biakinnte            biak-inn-te               'temples'
+  innteek              inn-teek                  'house-master'
+  inn-ate              inn-a-te                  'house-NOM-PL'
 
-### Possessed Forms
+## In compounds (43 forms)
+  innkuanpih           inn-kuan-pih              'house-family-all'
+  innkuan              inn-kuan                  'house-family'
+  innsung              inn-sung                  'house-inside'
+  innluahza            inn-luah-za               'house-inherit-right'
+  inncing              inn-cing                  'house-clean'
+  inndei               inn-dei                   'house-chamber'
+  innkuanmi            inn-kuan-mi               'household-person'
+  biakinn              biak-inn                  'worship-house'
+  (biakinn             biak-inn                  'worship-house'
+  innlak               inn-lak                   'house-middle'
+  innkuankuan          inn-kuan-kuan             'house-family~REDUP'
+  innkuankuanun        inn-kuan-kuan-un          'house-family-REDUP-3PL'
+  innkhumzang          inn-khum-zang             'house-cover-use'
+  innkhum              inn-khum                  'house-cover'
+  “inndei              inn-dei                   'house-chamber'
+  innpi                inn-pi                    'house-big'
+  innveng              inn-veng                  'house-guard'
+  innkuansung          inn-kuan-sung             'house-family-inside'
+  innlam               inn-lam                   'house-side'
+  innluah              inn-luah                  'house-family'
+  innliim              inn-liim                  'house-feast'
+  innkam               inn-kam                   'house-chamber'
+  inndap               inn-dap                   'house-cover'
+  innsun               inn-sun                   'house-side'
+  innlim               inn-lim                   'house-form'
+  inntual              inn-tual                  'house-floor'
+  inncinna             inn-cin-na                'house-said-NMLZ'
+  inndeineu            inn-dei-neu               'house-say-small'
+  biakinnsung          biak-inn-sung             'pray-house-inside'
+  inntualah            inn-tu-a-lah              'house-stand-LOC-take'
+  “biakinn             biak-inn                  'worship-house'
+  innmong              inn-mong                  'house-hem'
+  “innsung             inn-sung                  'house-inside'
+  innkiu               inn-kiu                   'house-corner'
+  innkhuampi           inn-khuam-pi              'house-pillar-great'
+  thonginn             thong-inn                 'prison-house'
+  innsak               inn-sak                   'house-CAUS'
+  innbul               inn-bul                   'house-nave'
+  innkhuam             inn-khuam                 'house-pillar'
+  inndeipi             inn-dei-pi                'house-temple-great'
+  innkhumdawn          inn-khum-dawn             'tent.cover-top'
+  inntuan              inn-tuan                  'house-bear'
+  biakinncing          biak-inn-cing             'worship-house-betray'
 
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka ta | ka-ta | 1SG-child | Gen 16:2 |
-| 2SG (na) | na ta | na-ta | 2SG-child | Gen 27:19 |
-| 3SG (a) | a ta | a-ta | 3SG-child | Gen 21:16 |
-| 1PL.INCL (i) | — | — | — | (unattested) |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
+## Other forms (1 forms)
+  “inn                 inn                       'house'
+
 
 ---
 
-## Sanggam
+# Paradigm for 'gam'
 
-### Case Forms
+## Bare form (1 forms)
+  gam                  gam                       'land'
 
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | sanggam | sanggam | brother | Gen 4:9 |
-| ERG (-in) | — | — | — | (unattested) |
-| LOC (-ah) | — | — | — | (unattested) |
-| COM (tawh) | sanggam tawh | sanggam-tawh | brother-COM | Prov 18:19 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | — | — | — | (unattested) |
+## Ergative (-in) (3 forms)
+  gamtatin             gam-tat-in                'kingdom-ERG'
+  gamsai-in            gam-sai-in                'land-bitter-ERG'
+  gamin                gam-in                    'land-ERG'
 
-### Plural Forms
+## Locative (-ah) (12 forms)
+  “gamlakah            gam-lak-ah                'land-midst-LOC'
+  gamlakah             gam-lak-ah                'land-midst-LOC'
+  gamah                gam-ah                    'land-LOC'
+  gamla-ah             gam-la-ah                 'wilderness-LOC'
+  gamtatna-ah          gam-tat-na-ah             'earth-curse-NMLZ-LOC'
+  gamgi-ah             gam-gi-ah                 'land-year-LOC'
+  gamah!”              gam-ah                    'land-LOC'
+  gamte-ah             gam-te-ah                 'land-PL-LOC'
+  gamlapi-a            gam-la-pi-a               'land-field-great-LOC'
+  gambuppi-ah          gam-bup-pi-ah             'land-all-INTENS-LOC'
+  gamdangah            gam-dang-ah               'land-other-LOC'
+  gamdangte-ah         gam-dang-te-ah            'other.lands-LOC'
 
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | sanggamte | sanggamte | brothers | Gen 9:25 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | — | — | — | (unattested) |
+## Plural (-te) (13 forms)
+  gamte                gam-te                    'land-PL'
+  gamteng              gam-teng                  'land-all'
+  gamtatte             gam-tat-te                'kingdom-PL'
+  gamdangte            gam-dang-te               'other.lands'
+  gam-late             gam-la-te                 'wilderness-PL'
+  gamsialte            gam-sial-te               'land-chase-PL'
+  gamlumte             gam-lum-te                'south-PL'
+  kigamtatnate         ki-gam-tat-na-te          'REFL-land-each-NMLZ-PL'
+  gamlumnate           gam-lum-na-te             'land-sound-NMLZ-PL'
+  gamlakte             gam-lak-te                'land.midst-PL'
+  “gamdangte           gam-dang-te               'other.lands'
+  gamvengte            gam-veng-te               'land-guard-PL'
+  gamtateng            gam-ta-teng               'land-child-all'
 
-### Possessed Forms
+## In compounds (58 forms)
+  gamtang              gam-tang                  'land-force'
+  gamsa                gam-sa                    'land-meat'
+  gambup               gam-bup                   'land-whole'
+  gamlak               gam-lak                   'land-midst'
+  gamtat               gam-tat                   'land-rule'
+  gamdung              gam-dung                  'land-length'
+  gamvai               gam-vai                   'land-breadth'
+  gamgi                gam-gi                    'land-boundary'
+  gamdang              gam-dang                  'land-other'
+  gamla                gam-la                    'wilderness'
+  gamdangmi            gam-dang-mi               'other.land-person'
+  kigam                ki-gam                    'REFL-land'
+  gammang              gam-mang                  'land-chief'
+  gamlumna             gam-lum-na                'south'
+  “gamdang             gam-dang                  'land-other'
+  gamdaisakin          gam-dai-sakin             'land-quiet-CAUS.ERG'
+  gamgi-in             gam-gi-in                 'land-year-INST'
+  gamsial              gam-sial                  'land-strong'
+  taanggam             taang-gam                 'suburb'
+  gamtuu               gam-tuu                   'land-sheep'
+  gamlatna             gam-lat-na                'land-pursue-NMLZ'
+  gamdai               gam-dai                   'land-overcome'
+  gamlapi              gam-la-pi                 'land-take-big'
+  gamdong              gam-dong                  'land-collect'
+  gamtakha             gam-tak-ha                'land-send-go'
+  gampi                gam-pi                    'land-COMP'
+  gamdai-in            gam-dai-in                'land-edge-INST'
+  gamtatkha            gam-tat-kha               'land-cut-off'
+  gamlum               gam-lum                   'land-round'
+  gamtatsa             gam-tat-sa                'kingdom-PERF'
+  gamdaisak            gam-dai-sak               'land-quiet-CAUS'
+  gamzai               gam-zai                   'land-fat'
+  gamneu               gam-neu                   'land-small'
+  gamtatzia            gam-tat-zia               'land-cut-way'
+  “gambawngtal         gam-bawng-tal             'land-calf'
+  gambawngtal          gam-bawng-tal             'land-calf'
+  gamsialno            gam-sial-no               'land-chase-young'
+  gamkeu               gam-keu                   'land-cluster'
+  gamdaihna            gam-daih-na               'land-wide-NMLZ'
+  gamtatkhak           gam-tat-khak              'kingdom-offspring'
+  gamkhinna            gam-khin-na               'land-move-NMLZ'
+  gambulak             gam-bulak                 'land-waste'
+  gamlakpi             gam-lak-pi                'land-middle-great'
+  “gamlapi             gam-la-pi                 'land-take-big'
+  gamlelei             gam-lelei                 'land-tremble'
+  gamsai               gam-sai                   'land-bitter'
+  gammanpih            gam-man-pih               'land-true-APPL'
+  gamhal               gam-hal                   'land-burn'
+  gamtangsakkik        gam-tang-sak-kik          'land-rise-CAUS-again'
+  gamlazaw             gam-la-zaw                'wilderness-leap'
+  gam-ui               gam-ui                    'land-dog'
+  gamnuam              gam-nuam                  'land-want'
+  gamdaih              gam-daih                  'land-flat'
+  gamdaizaw            gam-dai-zaw               'land-quiet-MORE'
+  gamtatnop            gam-tat-nop               'kingdom-want'
+  gamtatzawh           gam-tat-zawh              'kingdom-able'
+  gamtatkik            gam-tat-kik               'kingdom-ITER'
+  gamdangpi            gam-dang-pi               'other.land-big'
 
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka sanggam | ka-sanggam | 1SG-brother | Gen 4:9 |
-| 2SG (na) | na sanggam | na-sanggam | 2SG-brother | Gen 42:15 |
-| 3SG (a) | a sanggam | a-sanggam | 3SG-brother | Gen 9:22 |
-| 1PL.INCL (i) | i sanggam | i-sanggam | 1PL.INCL-brother | Acts 11:12 |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
+## Other forms (3 forms)
+  “gam                 gam                       'land'
+  gam,”                gam                       'land'
+  (gam                 gam                       'land'
+
 
 ---
 
-## Innkuan
+# Paradigm for 'mi'
 
-### Case Forms
+## Bare form (1 forms)
+  mi                   mi                        'person'
 
-| Case | Form | Segmentation | Gloss | Citation |
-|------|------|--------------|-------|----------|
-| Bare/ABS | innkuan | inn-kuan | house-family | Gen 8:19 |
-| ERG (-in) | — | — | — | (unattested) |
-| LOC (-ah) | innkuan-ah | inn-kuan-ah | house-family-LOC | Josh 2:12 |
-| COM (tawh) | innkuan tawh | innkuan-tawh | house-family-COM | Exod 6:17 |
-| ABL (pan) | — | — | — | (unattested) |
-| ABL.ERG (panin) | innkuan panin | innkuan-pa-nin | household-male-ERG | Josh 22:14 |
+## Ergative (-in) (10 forms)
+  minamin              mi-nam-in                 'person-tribe-ERG'
+  milipin              mi-lip-in                 'person-crowd-ERG'
+  mi-in                mi-in                     'person-ERG'
+  mihingin             mi-hing-in                'mankind-ERG'
+  mihaipi-in           mi-hai-pi-in              'person-wise-big-ERG'
+  milimin              mi-lim-in                 'idol-ERG'
+  milianin             mi-lian-in                'noble-ERG'
+  migi-in              mi-gi-in                  'person-evil-ERG'
+  midikin              mi-dik-in                 'righteous-ERG'
+  mizawngin            mi-zawng-in               'everyone-ERG'
 
-### Plural Forms
+## Locative (-ah) (2 forms)
+  minam-ah             mi-nam-ah                 'person-kind-LOC'
+  mi-a                 mi-a                      'person-LOC'
 
-| Form | Tedim | Segmentation | Gloss | Citation |
-|------|-------|--------------|-------|----------|
-| PL | innkuante | inn-kuan-te | house-household-PL | Gen 33:19 |
-| PL.ERG | — | — | — | (unattested) |
-| PL.LOC | — | — | — | (unattested) |
+## Plural (-te) (28 forms)
+  “mihingte            mi-hing-te                'person-kind-PL'
+  mihingte             mi-hing-te                'person-kind-PL'
+  mipihte              mi-pih-te                 'person-APPL-PL'
+  minamte              mi-nam-te                 'person-kind-PL'
+  mizawngte            mi-zawng-te               'person-all-PL'
+  milimte              mi-lim-te                 'idol-PL'
+  khualmite            khual-mi-te               'sojourn-person-PL'
+  “milimte             mi-lim-te                 'idol-PL'
+  khangmite            khang-mi-te               'generation-person-PL'
+  khuamite             khua-mi-te                'townspeople'
+  miliante             mi-lian-te                'person-great-PL'
+  “mizawngte           mi-zawng-te               'person-all-PL'
+  mihaute              mi-hau-te                 'person-rich-PL'
+  mimawhte             mi-mawh-te                'person-sin-PL'
+  midikte              mi-dik-te                 'person-straight-PL'
+  mikhialte            mi-khial-te               'person-err-PL'
+  mikhemte             mi-khem-te                'person-restrain-PL'
+  misiate              mi-sia-te                 'person-evil-PL'
+  mipite               mi-pi-te                  'person-COMP-PL'
+  tangmite             tang-mi-te                'take.hold-person-PL'
+  “minamte             mi-nam-te                 'person-kind-PL'
+  mihatte              mi-hat-te                 'person-strong-PL'
+  taangmite            taang-mi-te               'messenger-person-PL'
+  misuamte             mi-suam-te                'person-wilderness-PL'
+  mibuppite            mi-buppi-te               'person-great-PL'
+  minautangte          mi-nau-tang-te            'person-young-stand-PL'
+  miteite              mi-tei-te                 'person-understand-PL'
+  mitei                mi-tei                    'person-understand'
 
-### Possessed Forms
+## In compounds (47 forms)
+  mihing               mi-hing                   'person-kind'
+  “mihing              mi-hing                   'person-kind'
+  minam                mi-nam                    'person-kind'
+  migi                 mi-gi                     'person-evil'
+  vantungmi            van-tung-mi               'angel'
+  migitna              mi-git-na                 'person-hate-NMLZ'
+  midik                mi-dik                    'person-righteous'
+  khualmi              khual-mi                  'sojourn-person'
+  mihonpi              mi-hon-pi                 'person-multitude'
+  gamdangmi            gam-dang-mi               'other.land-person'
+  mikhat               mi-khat                   'person-one'
+  milipun              mi-lipun                  'person-bundle'
+  khangmi              khang-mi                  'generation-NMLZ.AG'
+  mipih                mi-pih                    'person-APPL'
+  milip                mi-lip                    'person-crowd'
+  innkuanmi            inn-kuan-mi               'household-person'
+  minamdang            mi-nam-dang               'person-nation-other'
+  milim                mi-lim                    'idol'
+  “khualmi             khual-mi                  'sojourn-person'
+  mizawng              mi-zawng                  'person-poor'
+  miphak               mi-phak                   'person-half'
+  minam)               mi-nam                    'person-kind'
+  galmi                gal-mi                    'enemy-NMLZ.AG'
+  misia                mi-sia                    'person-evil'
+  mimi-in              mi-mi-in                  'person-REDUP-INST'
+  khuami               khua-mi                   'town-person'
+  migina               mi-gi-na                  'person-wealth-NMLZ'
+  mihau                mi-hau                    'person-rich'
+  milian               mi-lian                   'person-great'
+  milianpi             mi-lian-pi                'person-great-big'
+  “minam               mi-nam                    'person-kind'
+  mipi                 mi-pi                     'person-great'
+  mineu                mi-neu                    'person-small'
+  midangpi             mi-dang-pi                'person-other-big'
+  mipha                mi-pha                    'person-good'
+  mite-                mite-                     'people'
+  mikhem               mi-khem                   'person-all'
+  misusia              mi-su-sia                 'person-enemy-evil'
+  miginalo             mi-gina-lo                'person-true-NEG'
+  mimawh               mi-mawh                   'person-sin'
+  migit                mi-git                    'hatred'
+  misuam               mi-suam                   'person-robber'
+  mimawl               mi-mawl                   'person-mad'
+  mihaipi              mi-hai-pi                 'person-wise-big'
+  taangmi              taang-mi                  'star-person'
+  “milim               mi-lim                    'idol'
+  “mimawh              mi-mawh                   'person-sin'
 
-| Person | Form | Segmentation | Gloss | Citation |
-|--------|------|--------------|-------|----------|
-| 1SG (ka) | ka innkuan | ka-innkuan | 1SG-house-family | Judg 6:15 |
-| 2SG (na) | na innkuan | na-innkuan | 2SG-house-family | Gen 42:19 |
-| 3SG (a) | a innkuan | a-innkuan | 3SG-house-family | Gen 8:19 |
-| 1PL.INCL (i) | — | — | — | (unattested) |
-| 1PL.EXCL (ei) | — | — | — | (unattested) |
+## Other forms (9 forms)
+  mite                 mite                      'people'
+  “mi,”                mi                        'person'
+  “mi                  mi                        'person'
+  “mite                mite                      'people'
+  mite)                mite                      'people'
+  “'mi                 mi                        'person'
+  mi,”                 mi                        'person'
+  mite,”               mite                      'people'
+  (mi                  mi                        'person'
+
+
+---
+
+# Paradigm for 'tui'
+
+## Bare form (1 forms)
+  tui                  tui                       'water'
+
+## Ergative (-in) (2 forms)
+  guahtui-in           guah-tui-in               'rainwater-ERG'
+  tui-in               tui-in                    'water-ERG'
+
+## Locative (-ah) (9 forms)
+  tuipi)-ah            tui-pi-ah                 'water-big-LOC'
+  tuikhukah            tui-khuk-ah               'water-well-LOC'
+  tui-ah               tui-ah                    'water-LOC'
+  tuipi-ah             tui-pi-ah                 'water-big-LOC'
+  tuite-ah             tui-te-ah                 'water-PL-LOC'
+  tuinakah             tui-na-kah                'water-spring-LOC'
+  tuibeem-ah           tui-beem-ah               'water-collect-LOC'
+  tuiphualah           tui-phual-ah              'water-place-LOC'
+  tuikulh-ah           tui-kulh-ah               'island-LOC'
+
+## Plural (-te) (18 forms)
+  “tuite               tui-te                    'water-PL'
+  tuite                tui-te                    'water-PL'
+  tuikhukte            tui-khuk-te               'water-hollow-PL'
+  bualtuite            bual-tui-te               'lake-water-PL'
+  tuitawite            tui-tawi-te               'water-carry-PL'
+  tuikhangte           tui-khang-te              'water-generation-PL'
+  khituite             khi-tui-te                'eye-water-PL'
+  paknamtuite          pak-nam-tui-te            'share-nation-water-PL'
+  tuikuangte           tui-kuang-te              'water-trough-PL'
+  tuinakte             tui-nak-te                'springs'
+  tuibemte             tui-bem-te                'water-well-PL'
+  tuipite              tui-pi-te                 'sea-PL'
+  tuithukpite          tui-thuk-pi-te            'water-deep-great-PL'
+  luituite             lui-tui-te                'river-water-PL'
+  guntuite             gun-tui-te                'river-water-PL'
+  tuidawnte            tui-dawn-te               'water-drink-PL'
+  tuikhalte            tui-khal-te               'water-freeze-PL'
+  tuikulhte            tui-kulh-te               'island-PL'
+
+## In compounds (69 forms)
+  tuipi                tui-pi                    'water-big'
+  “tuipi”              tui-pi                    'water-big'
+  tuiciin              tui-ciin                  'water-pure'
+  namtui               nam-tui                   'kind-water'
+  ciktui               cik-tui                   'one-water'
+  tuikhuk              tui-khuk                  'water-ladle'
+  tuithawl             tui-thawl                 'water-bottle'
+  tuitawi              tui-tawi                  'water-draw'
+  tuibeel              tui-beel                  'water-pitcher'
+  tuikuang             tui-kuang                 'water-trough'
+  tuikhuka             tui-khu-ka                'water-well-edge'
+  tuiluang             tui-luang                 'water-flow'
+  paknamtui            pak-nam-tui               'ointment'
+  tuihual              tui-hual                  'water-wave'
+  leenggahtui          leeng-gah-tui             'grape-juice-water'
+  tuili                tui-li                    'water-flow'
+  tuisuak              tui-suak                  'water-become'
+  tuibuah              tui-buah                  'water-pour'
+  sumtui               sum-tui                   'gold-molten'
+  anletui              an-le-tui                 '3PL-and-water'
+  tuimu                tui-mu                    'water-bird'
+  tuinak               tui-nak                   'water-time'
+  tuibeem              tui-beem                  'water-collect'
+  guahtui              guah-tui                  'rainwater'
+  tuibuahna            tui-buah-na               'water-dish-NMLZ'
+  tuisia               tui-sia                   'water-evil'
+  tuithuk              tui-thuk                  'water-deep'
+  namtui-in            nam-tui-in                'sweet-savour-INST'
+  “tuikhuk             tui-khuk                  'water-ladle'
+  tuidawk              tui-dawk                  'water-border'
+  tuikhang             tui-khang                 'water-carry'
+  satui                sa-tui                    'meat-broth'
+  tuidawn              tui-dawn                  'water-fetch'
+  khitui               khi-tui                   'chain-water'
+  tuizawl              tui-zawl                  'water-channel'
+  “tuikhang            tui-khang                 'water-carry'
+  tuidawnin            tui-dawn-in               'water-drink-INST'
+  tuikuangpi           tui-kuang-pi              'water-pool-big'
+  tuidawnna            tui-dawn-na               'water-top-NMLZ'
+  tuilakna             tui-lak-na                'water-take-NMLZ'
+  “tuipi               tui-pi                    'water-big'
+  naptui               nap-tui                   'wet-water'
+  tuilim               tui-lim                   'water-submerge'
+  tuikulh              tui-kulh                  'island'
+  aktui                ak-tui                    'egg-water'
+  tuikhal              tui-khal                  'water-freeze'
+  vuttui               vut-tui                   'snow-water'
+  huantui              huan-tui                  'garden-water'
+  “tui-sakol           tui-sakol                 'water-donkey'
+  tuiso                tui-so                    'water-bubble'
+  leengtui             leeng-tui                 'corn-wine'
+  tuidam               tui-dam                   'water-well'
+  tuizeu               tui-zeu                   'water-deep'
+  luitui               lui-tui                   'river-water'
+  tuimang              tui-mang                  'water-COMPL'
+  tuiphih              tui-phih                  'water-cup'
+  guhtui               guh-tui                   'bone-water'
+  tuilak               tui-lak                   'water-midst'
+  tuivot               tui-vot                   'water-cold'
+  tuikhukpi            tui-khuk-pi               'pool-big'
+  tuikhaina            tui-khai-na               'water-hold-NMLZ'
+  namtuisak            nam-tui-sak               'sword-water-CAUS'
+  tuisiang             tui-siang                 'water-well'
+  tuikhia              tui-khia                  'water-out'
+  tuibempi             tui-bem-pi                'water-edge-great'
+  tuipeek              tui-peek                  'water-swim'
+  kultaltui            kul-tal-tui               'pitch-water'
+  tuimal               tui-mal                   'water-be.dry'
+  mehtui               meh-tui                   'broth-water'
+
+## Other forms (1 forms)
+  “tui                 tui                       'water'
+
+
+---
+
+# Paradigm for 'thu'
+
+## Bare form (1 forms)
+  thu                  thu                       'word'
+
+## Ergative (-in) (6 forms)
+  thutangin            thu-tang-in               'word-force-ERG'
+  thu-in               thu-in                    'word-ERG'
+  thuhilhin            thu-hilh-in               'word-teach-ERG'
+  thumanin             thu-man-in                'word-true-ERG'
+  thupha-in            thu-pha-in                'word-good-ERG'
+  thungenin            thu-ngen-in               'word-request-ERG'
+
+## Locative (-ah) (9 forms)
+  thu-ah               thu-ah                    'word-LOC'
+  thugenna-ah          thu-gen-na-ah             'word-speak-NMLZ-LOC'
+  thupi-a              thu-pi-a                  'word-great-LOC'
+  thunuama             thu-nuam-a                'word-want-LOC'
+  utthu-a              ut-thu-a                  'want-word-LOC'
+  (thunuama            thu-nuam-a                'word-want-LOC'
+  thukhenna-ah         thu-khen-na-ah            'word-judge-NMLZ-LOC'
+  thute-ah             thu-te-ah                 'word-PL-LOC'
+  thu-a                thu-a                     'word-LOC'
+
+## Plural (-te) (18 forms)
+  thute                thu-te                    'word-PL'
+  thumannate           thu-manna-te              'word-manna-PL'
+  thugente             thu-gen-te                'word-tell-PL'
+  thudangte            thu-dang-te               'word-other-PL'
+  thukhennate          thu-khen-na-te            'word-divide-NMLZ-PL'
+  thuneute             thu-neu-te                'word-small-PL'
+  thukhente            thu-khen-te               'word-judge-PL'
+  “thukhente           thu-khen-te               'word-judge-PL'
+  thusiate             thu-sia-te                'word-evil-PL'
+  thukhamte            thu-kham-te               'law-PL'
+  thuhilhte            thu-hilh-te               'word-teach-PL'
+  thupiaknate          thu-piak-na-te            'word-give.to-NMLZ-PL'
+  thupiangte           thu-piang-te              'word-be.born-PL'
+  thuahte              thuah-te                  'offer-PL'
+  thumante             thu-man-te                'word-true-PL'
+  thuneite             thu-nei-te                'word-have-PL'
+  thugennate           thu-gen-na-te             'word-speak-NMLZ-PL'
+  thuteng              thu-teng                  'word-tell'
+
+## In compounds (64 forms)
+  thupha               thu-pha                   'word-good'
+  tangthu              tang-thu                  'generation-word'
+  thugen               thu-gen                   'speech'
+  thuman               thu-man                   'word-reason'
+  thupiaksa            thu-piak-sa               'word-give-PL.POSS'
+  thukhenna            thu-khen-na               'word-judge-NMLZ'
+  thuciam              thu-ciam                  'word-promise'
+  thukim               thu-kim                   'word-keep'
+  “thuman              thu-man                   'word-reason'
+  thukhen              thu-khen                  'word-divide'
+  thudang              thu-dang                  'word-other'
+  thunget              thu-nget                  'word-request'
+  thungetna            thu-nget-na               'word-request-NMLZ'
+  thukan               thu-kan                   'word-hold'
+  “thupha              thu-pha                   'word-good'
+  thuhilh              thu-hilh                  'word-teach'
+  thuneu               thu-neu                   'word-small'
+  thupi                thu-pi                    'word-big'
+  sungthu              sung-thu                  'hand-matter'
+  thutak               thu-tak                   'word-true'
+  thupiang             thu-piang                 'word-born'
+  thukanin             thu-kan-in                'word-hard-INST'
+  thumantak            thu-man-tak               'word-true-real'
+  thuumna              thu-um-na                 'word-believe-NMLZ'
+  thupalsatna          thu-pal-sat-na            'word-cross-cut-NMLZ'
+  thudon               thu-don                   'word-preach'
+  thugenna             thu-gen-na                'word-speak-NMLZ'
+  thukham              thu-kham                  'law'
+  thukna               thu-k-na                  'word-NMLZ'
+  lakthuah             lak-thuah                 'take-another'
+  thuneihna            thu-neih-na               'word-have.II-NMLZ'
+  thutang              thu-tang                  'word-story'
+  thudonin             thu-don-in                'word-obey-INST'
+  thumang              thu-mang                  'word-obey'
+  thuap                thu-ap                    'measure-span'
+  thutakna             thu-tak-na                'word-true-NMLZ'
+  thuhilhna            thu-hilh-na               'word-teach-NMLZ'
+  thuhilhkik           thu-hilh-kik              'teach-ITER'
+  thuahin              thuah-in                  'spread-INST'
+  thukhat              thu-khat                  'word-one'
+  utthu                ut-thu                    'want-word'
+  thuthei              thu-thei                  'word-know'
+  genthuah             gen-thuah                 'speak-add'
+  thukhensatna         thu-khen-sat-na           'word-judge-sentence-NMLZ'
+  thukhualna           thu-khual-na              'word-sojourn-NMLZ'
+  thumong              thu-mong                  'word-end'
+  zuauthu              zuau-thu                  'vain-word'
+  thumun               thu-mun                   'word-blow'
+  thupizaw             thu-pi-zaw                'word-big-more'
+  thuhaksa             thu-hak-sa                'word-strong-PAST'
+  thuksak              thu-sak                   'word-CAUS'
+  thugenpa             thu-gen-pa                'word-speak-NMLZ'
+  thungen              thu-ngen                  'word-prayer'
+  thukhenin            thu-khen-in               'word-judge-INST'
+  thudong              thu-dong                  'word-inquire'
+  cithuah              ci-thuah                  'say-add'
+  thungip              thu-ngip                  'word-bag'
+  thukimna             thu-kim-na                'word-keep-NMLZ'
+  thupuak              thu-puak                  'word-make'
+  piangthuah           piang-thuah               'be.born-always'
+  thulamlak            thu-lamlak                'word-crooked'
+  neithuah             nei-thuah                 'have-more'
+  kithuah              ki-thuah                  'REFL-gird'
+  thukawi              thu-kawi                  'word-crooked'
+
+## Other forms (2 forms)
+  thuah                thuah                     'gird'
+  “thu                 thu                       'word'
+
+
+---
+
+# Paradigm for 'sum'
+
+## Bare form (1 forms)
+  sum                  sum                       'extinguish'
+
+## Ergative (-in) (2 forms)
+  sumin                sum-in                    'money-ERG'
+  sumbawlin            sum-bawl-in               'money-make-ERG'
+
+## Locative (-ah) (7 forms)
+  sumkoihna-ah         sum-koih-na-ah            'silver-set-NMLZ-LOC'
+  sumkoihnate-ah       sum-koih-na-te-ah         'money-place-NMLZ-PL-LOC'
+  sumkholna-ah         sum-khol-na-ah            'silver-treasure-NMLZ-LOC'
+  sumzuakna-ah         sum-zuak-na-ah            'money-sell-NMLZ-LOC'
+  sumbukah             sum-buk-ah                'money-place-LOC'
+  sumlei-a             sum-lei-a                 'money-buy-LOC'
+  sumte-ah             sum-te-ah                 'money-PL-LOC'
+
+## Plural (-te) (10 forms)
+  sumbukte             sum-buk-te                'money-merchant-PL'
+  sumbawlte            sum-bawl-te               'money-make-PL'
+  sumte                sum-te                    'money-PL'
+  sumlakte             sum-lak-te                'money-take-PL'
+  sumneite             sum-nei-te                'money-have-PL'
+  sumkuangte           sum-kuang-te              'money-trough-PL'
+  lingbulsumte         ling-bul-sum-te           'bell-ball-money-PL'
+  sumkhotte            sum-khot-te               'money-lack-PL'
+  sumteng              sum-teng                  'money-until'
+  sumlepaite           sum-le-pai-te             'money-and-go-PL'
+
+## In compounds (36 forms)
+  sumngo               sum-ngo                   'brass-iron'
+  sumgolh              sum-golh                  'money-desire'
+  sumtui               sum-tui                   'gold-molten'
+  sumsan               sum-san                   'money-lack'
+  sumgum               sum-gum                   'money-usury'
+  sumnen               sum-nen                   'money-part'
+  sumbuk               sum-buk                   'money-bundle'
+  sumit                sum-it                    'lamp-put.out'
+  sumkem               sum-kem                   'money-guard'
+  sumkholna            sum-khol-na               'silver-treasure-NMLZ'
+  bulsum               bul-sum                   'root-stock'
+  kisumit              ki-sum-it                 'REFL-extinguish-IT'
+  buisum               bui-sum                   'round-three'
+  sumzuak              sum-zuak                  'money-buy'
+  sumleina             sum-lei-na                'money-borrow-NMLZ'
+  sumbawl              sum-bawl                  'business-do'
+  sumlepai             sum-le-pai                'money-and-go'
+  sumdek               sum-dek                   'money-low'
+  sumbawlna            sum-bawl-na               'money-make-NMLZ'
+  sumbawm              sum-bawm                  'money-bag'
+  sumaimang            sum-aimang                'money-COMPL'
+  sumlei               sum-lei                   'money-buy'
+  sumzuakna            sum-zuak-na               'money-sell-NMLZ'
+  sumkoihna            sum-koih-na               'money-put-NMLZ'
+  summeet              sum-meet                  'money-poor'
+  lingbulsum           lingbul-sum               'thorn-three'
+  sumbawlpa            sum-bawl-pa               'money-make-NMLZ.AG'
+  sumnei               sum-nei                   'money-have'
+  sumtang              sum-tang                  'money-stand'
+  sumzah               sum-zah                   'money-INTENS'
+  sumpi                sum-pi                    'money-great'
+  khasum               kha-sum                   'spirit-money'
+  liausum              liau-sum                  'wander-money'
+  sumkuang             sum-kuang                 'money-basin'
+  sumngah              sum-ngah                  'money-get'
+  sumbuk,”             sum-buk                   'money-bundle'
+
+## Other forms (1 forms)
+  “sum                 sum                       'extinguish'
+
+
+---
+
+# Paradigm for 'ni'
+
+## Bare form (1 forms)
+  ni                   ni                        'day'
+
+## Ergative (-in) (7 forms)
+  ni-in                ni-in                     'day-ERG'
+  tuni-in              tu-ni-in                  'now-day-ERG'
+  nitakin              ni-tak-in                 'day-exact-ERG'
+  “tuni-in             tu-ni-in                  'now-day-ERG'
+  nidangin             ni-dang-in                'day-other-ERG'
+  “nidangin            ni-dang-in                'day-other-ERG'
+  nini-in              ni-ni-in                  'day-REDUP-ERG'
+
+## Locative (-ah) (6 forms)
+  tuni-a               tu-ni-a                   'now-day-LOC'
+  “tuni-a              tu-ni-a                   'now-day-LOC'
+  ni-a                 ni-a                      'day-LOC'
+  niamna-a             ni-am-na-a                'day-sink-NMLZ-LOC'
+  “nidanga             ni-dang-a                 'day-other-LOC'
+  nidanga              ni-dang-a                 'day-other-LOC'
+
+## Plural (-te) (7 forms)
+  “nipikalte           ni-pikal-te               'anniversary-PL'
+  niamte               ni-am-te                  'day-sink-PL'
+  nite                 ni-te                     'day-PL'
+  nite-in              ni-te-in                  'day-PL-INST'
+  nidangte             ni-dang-te                'day-other-PL'
+  nitumte              ni-tum-te                 'always-PL'
+  nisuhte              ni-suh-te                 'day-count-PL'
+
+## In compounds (49 forms)
+  nitak                ni-tak                    'day-exact'
+  nisuahna             ni-suah-na                'day-birth-NMLZ'
+  nitumna              ni-tum-na                 'day-all-NMLZ'
+  nisat                ni-sat                    'day-heat'
+  nikhat               ni-khat                   'day-one'
+  nipikal              ni-pi-kal                 'day-big-fold'
+  nidang               ni-dang                   'day-other'
+  nisim                ni-sim                    'day-count'
+  nisimin              ni-simin                  'day-always'
+  niloh                ni-loh                    'day-NEG'
+  nisuh                ni-suh                    'day-count'
+  “nitak               ni-tak                    'day-exact'
+  nitum                ni-tum                    'day-full'
+  ni-un                ni-un                     'day-3PL'
+  nipi                 ni-pi                     'day-great'
+  “nitumna             ni-tum-na                 'day-all-NMLZ'
+  “nisuahna            ni-suah-na                'day-birth-NMLZ'
+  niamna               ni-am-na                  'day-sink-NMLZ'
+  nihun                ni-hun                    'day-time'
+  nilohin              ni-loh-in                 'day-long-INST'
+  tuani                tua-ni                    'that-day'
+  niamta               ni-am-ta                  'day-sink-PFV'
+  niampen              ni-am-pen                 'day-sink-TOP'
+  zanni                zan-ni                    'yesterday-day'
+  nitaang              ni-taang                  'day-long'
+  ni-nai               ni-nai                    'day-near'
+  nisima               ni-sim-a                  'day-count-NOM'
+  niliim               ni-liim                   'day-feast'
+  nilohna              ni-loh-na                 'day-NEG-NMLZ'
+  lungniam             lung-ni-am                'feel-day-also'
+  nisuak               ni-suak                   'sneeze-out'
+  nisa                 ni-sa                     'day-hot'
+  sukniam              suk-ni-am                 'make.become-day-also'
+  “nitaang             ni-taang                  'day-long'
+  “nidang              ni-dang                   'day-other'
+  niamzaw              ni-am-zaw                 'day-sink-MORE'
+  nipisim              ni-pi-sim                 'day-COMP-ITER'
+  nizang               ni-zang                   'day-use'
+  niim                 ni-im                     'day-hide'
+  nisuah               ni-suah                   'birthday'
+  nitak-an             ni-tak-an                 'day-true-time'
+  “nikhat              ni-khat                   'day-one'
+  “tuani               tua-ni                    'that-day'
+  nitawp               ni-tawp                   'day-end'
+  “nitawp              ni-tawp                   'day-end'
+  tunni                tun-ni                    'arrive-day'
+  sani                 sa-ni                     'flesh-sun'
+  ninneng              ni-nneng                  'day-crumb'
+  zani                 za-ni                     'hear.I-sun'
+
+## Other forms (3 forms)
+  ni,”                 ni                        'day'
+  “ni                  ni                        'day'
+  ni!”                 ni                        'day'
+
+
+---
+
+# Paradigm for 'zan'
+
+## Bare form (1 forms)
+  zan                  zan                       'break'
+
+## Ergative (-in) (6 forms)
+  zanin                zan-in                    'night-ERG'
+  dengzanin            deng-zan-in               'cut-break-ERG'
+  “zanin               zan-in                    'night-ERG'
+  zankhuavak-in        zan-khua-vak-in           'night-town-walk-ERG'
+  suzanin              su-zan-in                 'strength-unicorn-ERG'
+  kisatzanin           ki-sat-zan-in             'strike-night-ERG'
+
+## Locative (-ah) (1 forms)
+  zan-a                zan-a                     'break-LOC'
+
+## Plural (-te) (1 forms)
+  zangawpte            zan-gawp-te               'night-cover-PL'
+
+## Possessed 1SG (ka-) (1 forms)
+  keizan               kei-zan                   '1SG-EMPH'
+
+## In compounds (31 forms)
+  zanih                zan-ih                    'night-NOM'
+  kibalzan             ki-bal-zan                'REFL-tear-pieces'
+  zankim               zan-kim                   'night-half'
+  balzan               bal-zan                   'tear-PERF'
+  kisuzan              ki-su-zan                 'REFL-tear-break'
+  suzan                su-zan                    'strength-unicorn'
+  gawizan              gawi-zan                  'stamp-break'
+  zanna                zan-na                    'night-NMLZ'
+  zanhal               zan-hal                   'night-burn'
+  zanni                zan-ni                    'yesterday-day'
+  zankhia              zan-khia                  'night-out'
+  zankhiat             zan-khiat                 'night-away'
+  zanpi                zan-pi                    'night-big'
+  zanthapai-in         zan-tha-pai-in            'night-weary-appoint-INST'
+  zan-gawp             zan-gawp                  'night-break'
+  dengzan              deng-zan                  'rod-iron'
+  kitamzan             ki-tam-zan                'REFL-many-break'
+  zansak               zan-sak                   'night-CAUS'
+  zanhak               zan-hak                   'night-INTENS'
+  zankhang             zan-khang                 'night-generation'
+  kizanlai             ki-zan-lai                'REFL-night-middle'
+  kizan                ki-zan                    'REFL-night'
+  cimzan               cim-zan                   'pierce-night'
+  kitapzanna           kitap-zan-na              'anguish-night-NMLZ'
+  sukhamzan            suk-ham-zan               'push-desire-night'
+  gawizansak           gawi-zan-sak              'stamp-break-CAUS'
+  zancip               zan-cip                   'night-tightly'
+  zantuam              zan-tuam                  'night-different'
+  zanpah               zan-pah                   'night-NEG.ABIL'
+  zanthapai            zan-tha-pai               'night-new-go'
+  kizangawp            ki-zan-gawp               'REFL-night-INTENS'
+
+## Other forms (2 forms)
+  “zan”                zan                       'break'
+  “zan                 zan                       'break'
+
+
+---
+
+# Paradigm for 'mun'
+
+## Bare form (1 forms)
+  mun                  mun                       'place'
+
+## Ergative (-in) (1 forms)
+  munin                mun-in                    'place-ERG'
+
+## Locative (-ah) (10 forms)
+  munah                mun-ah                    'place-LOC'
+  munte-ah             mun-te-ah                 'spot-PL-LOC'
+  munmuanhuai-ah       mun-muanhuai-ah           'place-trust-LOC'
+  ngahmunte-ah         ngah-mun-te-ah            'place-PL-LOC'
+  munmuanhuaina-ah     mun-muan-huai-na-ah       'place-safe-mix-NMLZ-LOC'
+  panmun-ah            pan-mun-ah                'plead-place-LOC'
+  panmunte-ah          pan-mun-te-ah             'plead-rare-PL-LOC'
+  ngahmunah            ngah-mun-ah               'receive-place-LOC'
+  khawlmun-ah          khawl-mun-ah              'rest-place-LOC'
+  mundangah            mun-dang-ah               'place-other-LOC'
+
+## Plural (-te) (9 forms)
+  munte                mun-te                    'place-PL'
+  ngahmunte            ngah-mun-te               'get-rare-PL'
+  munmuanhuaite        mun-muan-huai-te          'place-trust-dread-PL'
+  panmunte             pan-mun-te                'plead-rare-PL'
+  munsangte            mun-sang-te               'place-high-PL'
+  khawlmunte           khawl-mun-te              'rest-place-PL'
+  munnuamte            mun-nuam-te               'place-want-PL'
+  mundangte            mun-dang-te               'elsewhere-PL'
+  munteng              mun-teng                  'place-all'
+
+## Possessed 1SG (ka-) (1 forms)
+  kamun                ka-mun                    '1SG.GEN-place'
+
+## In compounds (24 forms)
+  lamun                la-mun                    'garment-cover'
+  mundang              mun-dang                  'place-other'
+  ngahmun              ngah-mun                  'get-place'
+  munmuanhuai          mun-muan-huai             'place-trust-worthy'
+  thumun               thu-mun                   'word-blow'
+  genmun               gen-mun                   'speak-rare'
+  ommun                om-mun                    'exist-rare'
+  munmuanhuaina        mun-muan-huai-na          'place-safe-mix-NMLZ'
+  “munmuanhuai         mun-muan-huai             'place-trust-worthy'
+  panmun               pan-mun                   'plead-place'
+  “panmun              pan-mun                   'plead-place'
+  limun                li-mun                    'hide-self'
+  panmunkip            pan-mun-kip               'plead-rare-keep'
+  munkip               mun-kip                   'place-near'
+  munbu                mun-bu                    'place-group'
+  galpanmun            gal-pan-mun               'enemy-protect-place'
+  munsang              mun-sang                  'place-high'
+  munphiah             mun-phiah                 'place-flat'
+  bukmun               buk-mun                   'ambush-place'
+  mundai               mun-dai                   'place-quiet'
+  munuam               mun-uam                   'place-pleasant'
+  tungthamun           tung-tha-mun              'upon-new-place'
+  munsimtham           mun-sim-tham              'place-think-new'
+  khawlmun             khawl-mun                 'rest-place'
+
+## Other forms (1 forms)
+  “mun                 mun                       'place'
+
 
 ---

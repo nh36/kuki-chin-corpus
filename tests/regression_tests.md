@@ -247,9 +247,9 @@ tests = [
     ('lopa', 'farmer'), ('lono', 'disobey'),
     ('khuampi', 'pillar'), ('khuamial', 'darkness'),  # opaque, like khuavak='light'
     # 10. ERG transparency
-    ('ciangin', 'then-ERG'), ('hangin', 'reason-ERG'),
+    ('ciangin', 'then-ERG'), ('hangin', 'because'),  # because-ERG
     # 11. Compound fixes
-    ('kikal', 'between'), ('kidona', 'battle'),
+    ('kikal', 'middle'), ('kidona', 'fight'),  # transparent: ki-kal=REFL-middle, ki-do-na=REFL-fight-NMLZ
 ]
 
 for token, expected in tests:
@@ -375,14 +375,14 @@ tests = [
     ('lopa', 'farmer'), ('lono', 'disobey'),
     ('khuampi', 'pillar'), ('khuamial', 'darkness'),  # opaque
     # 10-11. ERG transparency & compounds
-    ('ciangin', 'then-ERG'), ('hangin', 'reason-ERG'),
-    ('kikal', 'between'), ('kidona', 'battle'),
+    ('ciangin', 'then-ERG'), ('hangin', 'because'),  # because-ERG
+    ('kikal', 'middle'), ('kidona', 'fight'),  # transparent: ki-kal, ki-do-na
     # 14. Phonotactics
     ('kipsak', 'firm-CAUS'), ('kimin', 'fully-ERG'),
     # 15. Proper nouns (not mis-segmented)
     ('Hilkiah', 'HILKIAH'), ('Heman', 'HEMAN'),
     # 16. Form I/II
-    ('muh', 'see'), ('zak', 'know'),
+    ('muh', 'see'), ('zak', 'hear'),  # Form II of za 'hear' (not 'know' or 'proclaim')
     # 17. TAM disambiguation
     ('sa', 'flesh'),  # standalone = noun
     # 18. Possessive
@@ -557,7 +557,7 @@ tests = [
     ('namsau', 'sword'),
     # 12-14. Phonotactics, Form I/II
     ('kipsak', 'firm-CAUS'), ('kimin', 'fully-ERG'),
-    ('muh', 'see'), ('zak', 'proclaim'),  # Form II of za
+    ('muh', 'see'), ('zak', 'hear'),  # Form II of za 'hear'
     # 15-16. TAM disambiguation
     ('sa', 'flesh'),
     ("gulpi'", 'POSS'),
