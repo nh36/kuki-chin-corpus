@@ -622,6 +622,10 @@ tests = [
     ('kathei', '1SG-know'),  # with prefix = know
     ('neithei', 'have-ABIL'), # verb+thei = can/able
     ('omthei', 'exist-can'),  # verb+thei = can (synonym for ABIL)
+    # panin: ABL (ablative) must be recognized as unit before -in stripping (fixed 2026-03-17)
+    ('panin', 'ABL'),        # standalone = "from"
+    ('gampanin', 'land-ABL'), # gam-panin = "from the land" (NOT gam-pa-nin)
+    ('innpanin', 'house-ABL'), # inn-panin = "from the house"
 ]
 
 passed = 0

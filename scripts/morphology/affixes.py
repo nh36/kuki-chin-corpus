@@ -136,7 +136,7 @@ DERIVATIONAL_SUFFIXES = {
     
     # === Modal ===
     'thei': {
-        'gloss': 'able',
+        'gloss': 'ABIL',  # Standardized Leipzig gloss (not 'able')
         'category': 'modal',
         'description': 'Abilitative (can/able to)',
         'order': 4,
