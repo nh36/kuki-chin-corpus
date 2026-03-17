@@ -607,6 +607,10 @@ tests = [
     ('hente', 'bundle'),    # 1x Ruth 2:16 - OPAQUE: bundles/handfuls of grain
     ('hi', 'DECL'),   # 35,961x - declarative sentence-final
     ('hiam', 'Q'),    # question marker
+    # uh/un: 2nd/3rd person plural agreement clitic (fixed 2026-03-17)
+    ('uh', '2/3PL'),   # 21,845x - plural agreement clitic, NOT noun plural
+    ('un', 'IMP.PL'),  # imperative plural (2PL command)
+    ('nute', 'female-PL'),  # nu-te = women/mothers (noun plural with -te)
 ]
 
 passed = 0

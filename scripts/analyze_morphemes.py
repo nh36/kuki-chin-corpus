@@ -378,8 +378,8 @@ DEMONSTRATIVES = {
 NOMINALIZERS = {
     'mi': 'NMLZ.AG',  # Agent nominalizer
     'na': 'NMLZ',     # Nominalizer suffix
-    'te': 'PL',       # Plural
-    'uh': 'PL',       # Plural (separate word)
+    'te': 'PL',       # Noun plural
+    'uh': '2/3PL',    # 2nd/3rd person plural agreement clitic (separate word)
 }
 
 # =============================================================================
@@ -867,17 +867,17 @@ FUNCTION_WORDS = {
     # === Case Markers (standalone) ===
     'in': 'ERG',             # 22,726
     'ah': 'LOC',
-    'uh': 'PL',              # 21,924
-    'un': 'PL.IMP',
+    'uh': '2/3PL',           # 21,924 - 2nd/3rd person plural agreement clitic
+    'un': 'IMP.PL',          # Imperative plural (2PL command)
     'tawh': 'COM',           # 7,572
     'panin': 'ABL',          # 4,296
     # sangin removed - use transparent ERG analysis: sang-in = high-ERG (comparative)
     'dong': 'until',         # 647
     
     # Combinations with plural uh-
-    'uhah': 'PL.LOC',        # 507x - "in your/their (plural)"
-    'uhleh': 'PL.if',        # 306x - "if you (plural)"
-    'uha': 'PL.LOC',         # 56x - variant of uhah
+    'uhah': '2/3PL.LOC',     # 507x - "in your/their (plural)"
+    'uhleh': '2/3PL.if',     # 306x - "if you (plural)"
+    'uha': '2/3PL.LOC',      # 56x - variant of uhah
     'ulian': 'PL.elder',     # 96x - needs analysis (could be elder-great)
     'ung': 'PL.FUT',         # 30x - plural future marker
     'up': 'PL.Q',            # 60x - plural question marker
@@ -3872,8 +3872,8 @@ PHRASE_BOUNDARY_SUFFIXES = {
     'ah': 'LOC',      # Locative
     'tawh': 'COM',    # Comitative 'with'
     'pen': 'TOP',     # Topic marker
-    'te': 'PL',       # Plural (often NP-final)
-    'uh': 'PL.AGR',   # Plural agreement (VP marker)
+    'te': 'PL',       # Noun plural (NP-final)
+    'uh': '2/3PL',    # 2nd/3rd person plural agreement clitic (VP marker)
 }
 
 PHRASE_BOUNDARY_WORDS = {
@@ -16911,8 +16911,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
             'pen': 'TOP',       # topic/superlative
             # Nominal suffixes
             'na': 'NMLZ',       # nominalizer
-            'te': 'PL',         # plural
-            'uh': 'PL',         # plural variant
+            'te': 'PL',         # noun plural
+            'uh': '2/3PL',      # 2nd/3rd person plural agreement
             'in': 'ERG',        # ergative
             'ah': 'LOC',        # locative
         }
@@ -17202,6 +17202,222 @@ def format_interlinear(results: List[Tuple[str, str, str]],
 
 
 # =============================================================================
+# PARADIGM EXTRACTION
+# =============================================================================
+
+def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -> Dict[str, List[Tuple[str, str, str]]]:
+    """
+    Extract all attested forms of a word from the corpus.
+    
+    Returns a dict grouping forms by their morphological category:
+    {
+        'bare': [(word, segmented, gloss, verse_id), ...],
+        'case': [...],  # -ah, -in, etc.
+        'number': [...],  # -te
+        'possessed': [...],  # ka-, na-, a-
+        'compounds': [...],
+        'other': [...]
+    }
+    """
+    if corpus_file is None:
+        corpus_file = str(Path(__file__).parent.parent / 'bibles' / 'extracted' / 'ctd' / 'ctd-x-bible.txt')
+    
+    forms = {
+        'bare': [],
+        'case': [],
+        'number': [],
+        'possessed': [],
+        'compounds': [],
+        'other': []
+    }
+    
+    seen = set()
+    stem_lower = stem.lower()
+    
+    # Case markers to detect
+    case_markers = {'-ah', '-in', '-pan', '-panin'}
+    # Possession prefixes
+    poss_prefixes = {'ka-', 'na-', 'a-', 'i-'}
+    
+    with open(corpus_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) < 2:
+                continue
+            verse_id = parts[0]
+            text = parts[1]
+            
+            # Find words containing the stem
+            for word in text.split():
+                word_clean = word.strip('.,;:!?"\'').lower()
+                if stem_lower not in word_clean:
+                    continue
+                if word_clean in seen:
+                    continue
+                seen.add(word_clean)
+                
+                segmented, gloss = analyze_word(word_clean)
+                entry = (word_clean, segmented, gloss, verse_id)
+                
+                # Categorize
+                if word_clean == stem_lower:
+                    forms['bare'].append(entry)
+                elif any(segmented.endswith(c) for c in case_markers):
+                    forms['case'].append(entry)
+                elif '-te' in segmented or segmented.endswith('-te'):
+                    forms['number'].append(entry)
+                elif any(segmented.startswith(p) for p in poss_prefixes):
+                    forms['possessed'].append(entry)
+                elif '-' in segmented and stem_lower in segmented:
+                    forms['compounds'].append(entry)
+                else:
+                    forms['other'].append(entry)
+                
+                # Limit results
+                total = sum(len(v) for v in forms.values())
+                if total >= limit:
+                    break
+            
+            total = sum(len(v) for v in forms.values())
+            if total >= limit:
+                break
+    
+    return forms
+
+
+def format_paradigm(stem: str, forms: Dict, show_verses: bool = False) -> str:
+    """Format paradigm extraction as readable text."""
+    lines = [f"# Paradigm for '{stem}'", ""]
+    
+    category_names = {
+        'bare': 'Bare form',
+        'case': 'Case-marked',
+        'number': 'Number-marked',
+        'possessed': 'Possessed',
+        'compounds': 'In compounds',
+        'other': 'Other forms'
+    }
+    
+    for cat, entries in forms.items():
+        if not entries:
+            continue
+        lines.append(f"## {category_names[cat]} ({len(entries)} forms)")
+        for word, seg, gloss, verse_id in entries:
+            if show_verses:
+                lines.append(f"  {word:<20} {seg:<25} '{gloss}' [{verse_id}]")
+            else:
+                lines.append(f"  {word:<20} {seg:<25} '{gloss}'")
+        lines.append("")
+    
+    return '\n'.join(lines)
+
+
+def extract_verb_paradigm(stem: str, corpus_file: str = None, limit: int = 100) -> Dict[str, List]:
+    """
+    Extract all attested forms of a verb from the corpus.
+    
+    Groups by: bare, prefixed (ki-, pi-, etc.), TAM-marked, nominalized, compounds
+    """
+    if corpus_file is None:
+        corpus_file = str(Path(__file__).parent.parent / 'bibles' / 'extracted' / 'ctd' / 'ctd-x-bible.txt')
+    
+    forms = {
+        'bare': [],
+        'pronominal': [],  # ka-, na-, a-, kong-, hong-
+        'voice': [],  # ki-, pi-
+        'tam': [],  # -ta, -zo, -ding, -kik, etc.
+        'nominalized': [],  # -na, -pa, -te
+        'serial': [],  # compound verbs
+        'other': []
+    }
+    
+    seen = set()
+    stem_lower = stem.lower()
+    
+    # Voice/derivational prefixes
+    voice_prefixes = {'ki-', 'pi-', 'pua-'}
+    # Pronominal prefixes  
+    pron_prefixes = {'ka-', 'na-', 'a-', 'i-', 'kong-', 'hong-', 'nong-'}
+    # TAM suffixes
+    tam_suffixes = {'-ta', '-zo', '-ding', '-kik', '-nawn', '-khin', '-khit', '-thei', '-nuam', '-sak', '-pih'}
+    # Nominalizer suffixes
+    nmlz_suffixes = {'-na', '-pa', '-te', '-sate'}
+    
+    with open(corpus_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) < 2:
+                continue
+            verse_id = parts[0]
+            text = parts[1]
+            
+            for word in text.split():
+                word_clean = word.strip('.,;:!?"\'').lower()
+                if stem_lower not in word_clean:
+                    continue
+                if word_clean in seen:
+                    continue
+                seen.add(word_clean)
+                
+                segmented, gloss = analyze_word(word_clean)
+                entry = (word_clean, segmented, gloss, verse_id)
+                
+                # Categorize
+                if word_clean == stem_lower:
+                    forms['bare'].append(entry)
+                elif any(segmented.startswith(p) for p in voice_prefixes):
+                    forms['voice'].append(entry)
+                elif any(segmented.startswith(p) for p in pron_prefixes):
+                    forms['pronominal'].append(entry)
+                elif any(s in segmented for s in tam_suffixes):
+                    forms['tam'].append(entry)
+                elif any(segmented.endswith(s) for s in nmlz_suffixes):
+                    forms['nominalized'].append(entry)
+                elif '-' in segmented:
+                    forms['serial'].append(entry)
+                else:
+                    forms['other'].append(entry)
+                
+                total = sum(len(v) for v in forms.values())
+                if total >= limit:
+                    break
+            
+            total = sum(len(v) for v in forms.values())
+            if total >= limit:
+                break
+    
+    return forms
+
+
+def format_verb_paradigm(stem: str, forms: Dict, show_verses: bool = False) -> str:
+    """Format verb paradigm as readable text."""
+    lines = [f"# Verb paradigm for '{stem}'", ""]
+    
+    category_names = {
+        'bare': 'Bare stem',
+        'pronominal': 'Pronominal prefixes',
+        'voice': 'Voice/derivational',
+        'tam': 'TAM-marked',
+        'nominalized': 'Nominalized',
+        'serial': 'Serial/compound verbs',
+        'other': 'Other forms'
+    }
+    
+    for cat, entries in forms.items():
+        if not entries:
+            continue
+        lines.append(f"## {category_names[cat]} ({len(entries)} forms)")
+        for word, seg, gloss, verse_id in entries:
+            if show_verses:
+                lines.append(f"  {word:<20} {seg:<30} '{gloss}' [{verse_id}]")
+            else:
+                lines.append(f"  {word:<20} {seg:<30} '{gloss}'")
+        lines.append("")
+    
+    return '\n'.join(lines)
+
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
@@ -17209,9 +17425,23 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python analyze_morphemes.py <word>")
         print("       python analyze_morphemes.py --sentence 'Tedim sentence here'")
+        print("       python analyze_morphemes.py --paradigm <noun>")
+        print("       python analyze_morphemes.py --verb-paradigm <verb>")
         sys.exit(1)
     
-    if sys.argv[1] == '--sentence':
+    if sys.argv[1] == '--paradigm':
+        # Extract noun paradigm
+        stem = sys.argv[2]
+        forms = extract_word_paradigm(stem, limit=100)
+        print(format_paradigm(stem, forms, show_verses=True))
+    
+    elif sys.argv[1] == '--verb-paradigm':
+        # Extract verb paradigm
+        stem = sys.argv[2]
+        forms = extract_verb_paradigm(stem, limit=100)
+        print(format_verb_paradigm(stem, forms, show_verses=True))
+    
+    elif sys.argv[1] == '--sentence':
         sentence = ' '.join(sys.argv[2:])
         results = gloss_sentence(sentence)
         print(format_interlinear(results, show_segmentation=True))
