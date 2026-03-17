@@ -224,7 +224,8 @@ CASE_MARKERS = {
     'ah': 'LOC',      # Locative
     'a': 'LOC',       # Locative (short form)
     'tawh': 'COM',    # Comitative "with"
-    'panin': 'ABL',   # Ablative "from"
+    'pan': 'ABL',     # Ablative "from"
+    # panin: handled as pan-in (ABL-ERG) via suffix stripping
 }
 
 # TAM suffixes
@@ -242,8 +243,8 @@ TAM_SUFFIXES = {
     'pih': 'APPL',      # Applicative (with/for)
     'khawm': 'COM',     # Comitative (together)
     'gawp': 'INTENS',   # Intensive (forcefully)
-    'thei': 'ABIL',     # Abilitative (can/able)
-    'theih': 'ABIL',    # Abilitative variant
+    'thei': 'ABIL',     # Abilitative (also in DERIVATIONAL_SUFFIXES)
+    'theih': 'ABIL',    # Abilitative Form II variant
     'nuam': 'want',     # Desiderative (want to)
     'pah': 'NEG.ABIL',  # Negative ability (cannot)
     'tawm': 'DIMIN',    # Diminutive (a bit)
@@ -297,7 +298,7 @@ TAM_SUFFIXES = {
     'khap': 'forbid',   # Prohibitive
     'suak': 'become',   # Inchoative (become)
     'sung': 'inside',   # Locative (within)
-    'nin': 'ERG',       # Ergative variant (after consonant)
+    # nin: removed - NOT an ERG variant; words ending in -nin parsed differently
     'min': 'ERG',       # Ergative variant
     'nateng': 'NMLZ.until', # Nominalized + until
     'kikin': 'ITER.ERG',    # Iterative + ergative
@@ -880,7 +881,7 @@ FUNCTION_WORDS = {
     'uh': '2/3PL',           # 21,924 - 2nd/3rd person plural agreement clitic
     'un': 'IMP.PL',          # Imperative plural (2PL command)
     'tawh': 'COM',           # 7,572
-    'panin': 'ABL',          # 4,296
+    # panin: now parsed as pan-in (ABL-ERG) via suffix stripping
     # sangin removed - use transparent ERG analysis: sang-in = high-ERG (comparative)
     'dong': 'until',         # 647
     
@@ -1162,6 +1163,7 @@ VERB_STEMS = {
     'ngai': 'listen.I',
     'ngaih': 'listen.II',
     'en': 'look',
+    'leen': 'fly',           # fly (Job 5:7, Ezek 1:24)
     
     # Cognition verbs (with stem alternation)
     'thei': 'know.I',        # 2,543 (Stem I)
@@ -2860,6 +2862,7 @@ NOUN_STEMS = {
     'lehnawhzo': 'turn.away.able', # 1x 2Kgs 18:24 - "turn away the face"
     'vankia': 'prey',        # 1x 2Kgs 21:14 - "become a prey and spoil"
     'gat': 'weave',          # 1x 2Kgs 23:7 - "where women wove hangings"
+    'khakunin': 'full',      # 1x Dan 10:2 - "three full weeks" (full-ERG)
     # Note: thuap means 'span' (measurement) - see COMPOUND_WORDS line ~9950
     # ngahthuap = get-allowance (compound) in 2Kgs 25:30
     'tunu': 'daughter',      # 1x 1Chr 1:50 - variant of tanu (daughter)
@@ -3901,7 +3904,7 @@ PHRASE_BOUNDARY_SUFFIXES = {
 }
 
 PHRASE_BOUNDARY_WORDS = {
-    'panin': 'ABL',     # Ablative 'from'
+    # panin: now parsed as pan-in (ABL-ERG) via suffix stripping
     # sangin handled as sang-in = high-ERG (comparative marker)
     'dong': 'TERM',     # Terminative 'until'
     'tungah': 'on-LOC',
@@ -7523,7 +7526,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sawmahkhat': ('sawm-ah-khat', 'ten-LOC-one'),  # 47x - "tithe/tenth"
         
         # === Postposition + LOC ===
-        'panin': ('panin', 'ABL'),  # "from"
+        'panin': ('pan-in', 'ABL-ERG'),  # "from" (double case marking)
         'sangin': ('sang-in', 'high-ERG'),  # "than"
         'tawh': ('tawh', 'COM'),  # "with"
         
@@ -9952,10 +9955,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tonu': ('tonu', 'mistress'),                          # mistress/lady
         'bai': ('bai', 'rise.early'),                          # rise early/arise
         'dampah': ('dam-pah', 'healthy-clear'),                # cleansed/healed
-        'henhan': ('hen~han', 'tie~REDUP'),                    # tying repeatedly
+        'henhan': ('henhan', 'like'),                          # like/as in similes (9x)
+        'henhanin': ('henhan-in', 'like-ERG'),                 # by/as like (Acts 17:5)
         # hen removed from ATOMIC - it's in FUNCTION_WORDS as JUSS and VERB_STEMS as 'tie'
         'hitaseleh': ('hi-ta-se-leh', 'be-that-CONN-COND'),    # although that
         'bawlsiain': ('bawl-sia-in', 'make-evil-ERG'),         # doing evil
+        'puannin': ('puannin', 'rag'),                         # filthy rag (Isa 64:6)
         
         # Round 31: More high-frequency partial words
         'kongpuankhai': ('kong-puan-khai', 'door-cloth-hang'),   # hanging/curtain
@@ -12411,8 +12416,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khusa': ('khu-sa', 'feast-make'),                         # made feast
         'daai': ('daai', 'hedge'),                                 # hedge about
         'kiseelcip': ('ki-seel-cip', 'REFL-hide-INTENS'),          # hidden
-        'leen': ('leen', 'spark'),                                 # sparks
-        'kihencip': ('ki-hen-cip', 'REFL-stop-INTENS'),            # stopped
+        'leen': ('leen', 'fly'),                                   # fly (Job 5:7 sparks fly upward)
+        'kihencip': ('ki-hen-cip', 'REFL-tie-INTENS'),             # bound tightly
+        'kihencipna': ('ki-hen-cip-na', 'REFL-tie-INTENS-NMLZ'),   # bondage
+        'kihenna': ('ki-hen-na', 'REFL-tie-NMLZ'),                 # bands/bonds (Isa 52:2, Jer 2:20)
+        'kihente': ('ki-hen-te', 'REFL-tie-PL'),                   # bonds (plural)
+        'kihennate': ('ki-hen-na-te', 'REFL-tie-NMLZ-PL'),         # bonds (plural)
         'taangzaw': ('taang-zaw', 'clear-more'),                   # clearer
         'bulsum': ('bul-sum', 'root-stock'),                       # stock/root
         'kigimsak': ('ki-gim-sak', 'REFL-remove-CAUS'),            # removed
@@ -14794,6 +14803,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # Round 171: High-frequency remaining partials
         'tuhun': ('tu-hun', 'now-time'),                             # 56x - "at this time/season"
+        'tuhunin': ('tuhun-in', 'now.time-ERG'),                     # 9x - "this day" (by/at this time)
         'sinsona': ('sinso-na', 'be.angry-NMLZ'),                     # 19x - wrath (from sinso 'be angry')
         'sinsonain': ('sinso-na-in', 'be.angry-NMLZ-ERG'),
         "sinsona'": ("sinso-na'", 'be.angry-NMLZ.POSS'),               # 1x - possessive form
@@ -16808,10 +16818,13 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     # Strip suffix from end and check if what remains is valid
                     base = remaining[:-len(suffix)]
                     base_lower = base.lower()
-                    # Check if base is a known stem, Form II verb, or TAM suffix
-                    if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in VERB_STEM_PAIRS or base_lower in TAM_SUFFIXES:
+                    # Check if base is a known stem, Form II verb, TAM suffix, or CASE_MARKER
+                    if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in VERB_STEM_PAIRS or base_lower in TAM_SUFFIXES or base_lower in CASE_MARKERS:
                         segments.append(base)
-                        if base_lower in VERB_STEMS:
+                        if base_lower in CASE_MARKERS:
+                            # Prioritize case marker reading for suffix position
+                            glosses.append(CASE_MARKERS[base_lower])
+                        elif base_lower in VERB_STEMS:
                             glosses.append(VERB_STEMS[base_lower])
                         elif base_lower in NOUN_STEMS:
                             glosses.append(NOUN_STEMS[base_lower])
@@ -16921,7 +16934,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
             'na': 'NMLZ',       # nominalizer
             'te': 'PL',         # noun plural
             'uh': '2/3PL',      # 2nd/3rd person plural agreement
-            'panin': 'ABL',     # ablative "from" - must precede 'in' (5 > 2 chars)
+            'pan': 'ABL',       # ablative "from"
             'in': 'ERG',        # ergative
             'ah': 'LOC',        # locative
         }
@@ -17255,7 +17268,7 @@ def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -
     noun_prefixes = ('ka', 'na', 'a', 'i', 'kan', 'nan', 'an')
     
     # Case/number suffixes that can attach to nouns
-    noun_suffixes = ('ah', 'in', 'te', 'tawh', 'pan', 'panin', 'uh', 'na', 'khat')
+    noun_suffixes = ('ah', 'in', 'te', 'tawh', 'pan', 'uh', 'na', 'khat')
     
     with open(corpus_file, 'r', encoding='utf-8') as f:
         for line in f:

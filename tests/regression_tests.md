@@ -17,11 +17,12 @@ Each test shows:
 
 **Source**: Zam Ngaih Cing (2018) - "irrealis marker"
 
-| Token | Wrong | Correct |
-|-------|-------|---------|
-| ding | PROSP | IRR |
-| dinghi | PROSP-be | IRR-be |
-| dingin | PROSP-ERG | IRR-ERG |
+| Token | Wrong | Correct | Note |
+|-------|-------|---------|------|
+| ding | PROSP | IRR | Main IRR marker |
+| dingin | PROSP-ERG | IRR-ERG | IRR with ergative |
+
+**Note**: `dinghi` (0 occurrences in corpus) - if attested, would be `stand-DECL` (ding=stand verb + hi=DECL)
 
 **Citation**: Throughout corpus (13,000+ occurrences)
 
@@ -622,10 +623,17 @@ tests = [
     ('kathei', '1SG-know'),  # with prefix = know
     ('neithei', 'have-ABIL'), # verb+thei = can/able
     ('omthei', 'exist-can'),  # verb+thei = can (synonym for ABIL)
-    # panin: ABL (ablative) must be recognized as unit before -in stripping (fixed 2026-03-17)
-    ('panin', 'ABL'),        # standalone = "from"
-    ('gampanin', 'land-ABL'), # gam-panin = "from the land" (NOT gam-pa-nin)
-    ('innpanin', 'house-ABL'), # inn-panin = "from the house"
+    # panin: ABL-ERG (double case marking: pan-in = ABL-ERG) (fixed 2026-03-17)
+    ('panin', 'ABL-ERG'),         # standalone = "from" (pan-in = ABL-ERG)
+    ('gampanin', 'land-ABL-ERG'), # gam-pan-in = "from the land"
+    ('innpanin', 'house-ABL-ERG'), # inn-pan-in = "from the house"
+    ('tawhin', 'COM-ERG'),        # tawh-in = "with" + ERG (double case marking)
+    # leen: 'fly' verb (fixed 2026-03-17)
+    ('leen', 'fly'),             # fly (Job 5:7, Ezek 1:24)
+    ('leenin', 'fly-ERG'),       # fly-ERG (by flying)
+    # henhan: 'like' in similes (fixed 2026-03-17)
+    ('henhan', 'like'),          # like/as (9x in similes)
+    ('henhanin', 'like-ERG'),    # by/as like
 ]
 
 passed = 0
