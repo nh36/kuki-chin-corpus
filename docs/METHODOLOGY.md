@@ -1,12 +1,13 @@
-# Kuki-Chin Morphological Analyzer Methodology
+# Tedim Chin Morphological Analyzer Methodology
 
 ## Overview
 
 This document describes the methodology developed for building a morphological analyzer for Tedim Chin (ctd), designed to be replicated across 19 Kuki-Chin languages. The goal is Leipzig-style glossing with 95%+ token coverage.
 
-**Reference Implementation:** `scripts/analyze_morphemes.py` (Tedim Chin)  
-**Coverage Achieved:** 99.9998% (832,202 of 832,204 tokens)  
-**Development Time:** ~15 sessions of iterative work + quality audit
+**Reference Implementation:** `scripts/analyze_morphemes.py` (Tedim Chin, ~17,000 lines)  
+**Coverage Achieved:** 100% (850,906 tokens)  
+**Development Time:** ~15 sessions of iterative work + quality audit  
+**Regression Tests:** 64 tests in `tests/regression_tests.md`
 
 ---
 
@@ -469,10 +470,11 @@ analysis/{ISO}_unknown_words.tsv    # Remaining unknowns for manual review
 3. Document Stem I/II patterns early
 4. Keep parallel KJV always accessible
 5. Test coverage after every 20-30 additions
-6. Don't chase 100% - 97% is excellent
+6. Run regression tests before each commit
+7. 97% is excellent; 100% is achievable with persistence
 
 ---
 
-*Document version: 3.0*  
-*Last updated: 2026-03-15*  
-*Based on: Tedim Chin (ctd) analyzer development + quality audit*
+*Document version: 4.0*  
+*Last updated: 2026-03-17*  
+*Based on: Tedim Chin (ctd) analyzer development (100% coverage achieved)*

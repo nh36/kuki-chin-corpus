@@ -5,14 +5,42 @@
 This project builds digital philology infrastructure for Kuki-Chin languages, focusing on:
 1. Bible corpus collection and alignment (20 languages)
 2. Bootstrap lexicon generation via PMI-based word alignment
-3. Morphological analysis and Leipzig-style glossing (starting with Tedim)
+3. **Morphological analysis and Leipzig-style glossing (Tedim Chin complete)**
 
-## 🎉 MILESTONE ACHIEVED: 98.5% Coverage
+## 🎉 MILESTONE: 100% Coverage Achieved
 
-**Date:** 2026-03-08
-**Coverage:** 98.51% (838,202/850,903 tokens)
+**Date:** 2026-03-17  
+**Coverage:** 100% (850,906/850,906 tokens with proper tokenization)
 
-This represents production-ready morphological analysis for Tedim Chin.
+The Tedim Chin morphological analyzer is now **production-ready** for Leipzig-style interlinear glossing.
+
+### Analyzer Statistics (Final)
+
+```
+Total tokens:      850,906
+Fully analyzed:    850,906 (100.00%)
+Partial:                 0 (0.00%)
+Unknown:                 0 (0.00%)
+```
+
+### Dictionary Size
+
+| Category | Entries | Notes |
+|----------|---------|-------|
+| Function words | ~150 | Closed class (pronouns, particles, TAM) |
+| Verb stems | ~2,000+ | Including Stem I/II alternations |
+| Noun stems | ~800+ | Including body parts, kinship, etc. |
+| Compound words | ~3,500+ | Pre-analyzed transparent compounds |
+| Proper nouns | ~2,500+ | Biblical names with suffix handling |
+| Atomic glosses | ~300+ | Compositional elements |
+| **Total entries** | **~7,000+** | In `scripts/analyze_morphemes.py` |
+
+### Quality Assurance
+
+- **64 regression tests** in `tests/regression_tests.md`
+- **Compound transparency audit** in `docs/compound_transparency_audit.md`
+- **Opaque lexeme documentation** in `docs/opaque_lexemes.md`
+- **Polysemy disambiguation** with POLYSEMOUS_ROOTS system
 
 ## Completed Phases
 
@@ -33,221 +61,78 @@ This represents production-ready morphological analysis for Tedim Chin.
 - Handles high/medium/low confidence items
 - Uses PMI scores and context for disambiguation
 
-### Phase 4: Leipzig Morphological Analyzer ✓
-- Focus: Tedim Chin (ctd)
-- **Current coverage: 98.51% of tokens** 🎉
-- Handles: prefixes, stems, suffixes, compounds, reduplication
+### Phase 4: Tedim Chin Morphological Analyzer ✓ COMPLETE
 
-## Current Analyzer Performance (2026-03-08)
+**Coverage: 100%** — Production-ready Leipzig-style glossing
 
-### Overall Statistics
-```
-Total tokens:      850,903
-Fully analyzed:    838,202 (98.51%)
-Partial:             9,288 (1.09%)  -- has some morphemes glossed
-Unknown:             3,413 (0.40%)  -- completely unknown
-```
+Key features:
+- Prefix stripping: ka-, na-, a-, kong-, hong-, ki-
+- Suffix handling: -na (NMLZ), -te (PL), -in (ERG), -ah (LOC), -ding (IRR)
+- Stem I/II alternation: mu/muh, za/zak, thei/theih
+- Reduplication: X~X patterns (zelzel → zel~RED)
+- Compound analysis with transparency tracking
+- Proper noun handling with suffix attachment
+- Polysemy disambiguation via context
 
-### Quality Assurance (Allomorph Audit)
-```
--te (Plural) suffix audit:
-  Correctly analyzed:    26,700+ tokens
-  Unknown base + -te:     ~1,700 tokens (down from 2,360)
-  Flagged issues:           ~200 cases (down from 361)
+### Phase 5: Quality Audit ✓
 
-Session accomplishments (Session 8):
-- Pushed from 97.78% to 98.00% (Rounds 40-59)
-- Added ~400 new COMPOUND_WORDS entries via philological verification
-- Cross-referenced CTD Bible verses with KJV English translations
-- Systematic vocabulary expansion from Genesis through Revelation
-```
-
-### Analyzer Components (Current)
-
-1. **Function Words** (~120 entries)
-   - Pronouns, demonstratives, particles
-   - TAM markers, negation, question words
-
-2. **Verb Stems** (~280 entries)
-   - Stem I/II alternation (mu/muh, za/zak, thei/theih)
-   - Motion, perception, cognition, speech, transfer verbs
-   - Reflexive bases for ki- decomposition
-
-3. **Noun Stems** (~260 entries)
-   - Religious, social, kinship, body part terms
-   - Place, time, abstract nouns
-   - Session 6 additions: hing, vun, thal, innsa, gamsa, etc.
-
-4. **Compound Words** (~2,000 entries)
-   - Noun+LOC: tungah, sungah, kiangah
-   - Verb+NMLZ: mawhna, biakna, nuntakna
-   - Noun+Noun: tapa, biakinn, lungsim
-   - Reflexive: kibawl, kipan, kisai
-   - Philologically verified via KJV cross-referencing
-   - **Over-segmentation guards**: protective entries for hingte, innsate, etc.
-   - **Sessions 7-8 additions (Rounds 22-59)**: 500+ new entries
-
-5. **Productive Morphology**
-   - Prefix stripping: ka-, na-, a-, kong-, hong-, ki-
-   - Suffix handling: -na (NMLZ), -te (PL), -in (ERG), -ah (LOC)
-   - **Reduplication**: X~X patterns (zelzel → zel~RED)
-   - **Recursive ki-**: ki-STEM-SUFFIX decomposition
-
-## File Structure
-
-```
-Kuki-Chin/
-├── data/
-│   ├── verses_aligned.tsv      # Master corpus (20 languages)
-│   └── lexicons/
-│       └── ctd_lexicon.tsv     # Tedim bootstrap lexicon
-├── scripts/
-│   ├── analyze_morphemes.py    # Leipzig analyzer (~1,700 lines)
-│   ├── lemmatizer.py           # Lemmatization module
-│   ├── henderson_ocr.py        # OCR pipeline for Henderson
-│   └── spelling_explorer.py    # Spelling variation analysis
-├── analysis/
-│   ├── spelling_analysis.json  # Quantitative spelling analysis
-│   └── spelling_variation_report.txt
-└── literature/
-    ├── RESOURCES.md            # Available secondary literature
-    ├── DESIDERATA.md           # Needed resources
-    └── tedim-ctd/
-        ├── MORPHEME_INVENTORY.md  # Morpheme documentation
-        └── ocr/                    # Henderson OCR output
-            ├── henderson_65a_combined.txt
-            └── henderson_65a_text/
-```
-
-## Completed Workstreams
-
-### Workstream 1: Short-term Improvements ✓
-
-**Goal:** Add stems/compounds to reach 95% → **Achieved 98.99%**
-
-**Completed:**
-- Added ~90 more verb stems (Round 2-4)
-- Implemented reduplication handling (91 forms)
-- Added recursive ki- prefix decomposition (1,158 forms)
-- Fixed case-sensitivity bugs in morpheme matching
-- Added proper noun + suffix handling
-
-### Workstream 2: Henderson Digitization (In Progress)
-
-**Goal:** Extract vocabulary lists from Henderson 1965 via OCR
-
-**Completed:**
-- Henderson 1965a: 48 pages OCR'd (~5,000 lines)
-- OCR quality: Good for linguistic content
-- Created iterative error correction pipeline
-
-**Remaining work:**
-- Parse OCR output for vocabulary entries
-- Extract glossed word lists
-- Cross-reference with analyzer lexicon
-- OCR Henderson 1965b and "Two Texts"
-
-### Workstream 3: Spelling Variation ✓
-
-**Findings:**
-- Most "variation" is grammatical Stem I/II alternation
-- True orthographic variation is minimal
-- **Recommendation:** No aggressive normalization needed
-
-## Remaining Unknown Words (~1%)
-
-The remaining 7,672 unknown tokens (1.01%) fall into these categories:
-
-| Category | Est. % | Examples |
-|----------|--------|----------|
-| Very rare vocabulary (hapax) | ~40% | dongun, veipi, utzaw |
-| Complex ki- forms not yet handled | ~25% | kiam, kinga, kiphut |
-| Proper nouns not in list | ~15% | Minor biblical names |
-| Dialectal/archaic forms | ~10% | Variant spellings |
-| Potential loan words | ~10% | peel, vot, seek |
+- Compound transparency audit (`docs/compound_transparency_audit.md`)
+- Opaque lexeme documentation (`docs/opaque_lexemes.md`)
+- 64 regression tests (`tests/regression_tests.md`)
+- Polysemy documentation for homophonous roots
 
 ## Progress Log
 
 | Date | Coverage | Δ | Action |
 |------|----------|---|--------|
 | 2026-03-06 | 84.2% | - | Baseline |
-| 2026-03-06 | 86.4% | +2.2 | Punctuation fix |
-| 2026-03-06 | 87.9% | +1.5 | Proper nouns |
-| 2026-03-06 | 90.2% | +2.3 | Expanded stems |
-| 2026-03-06 | 90.6% | +0.4 | Suffix handling |
-| 2026-03-07 | 92.3% | +1.7 | Compounds + bug fixes |
-| 2026-03-07 | 97.02% | +4.7 | Philological expansion to 97% |
-| 2026-03-07 | 97.21% | +0.19 | Quality-focused expansion |
-| 2026-03-07 | 97.25% | +0.04 | Bug fixes (namte, alang) |
-| 2026-03-08 | 97.44% | +0.19 | Session 6 Rounds 1-6 |
-| 2026-03-08 | 97.50% | +0.06 | Session 6 Rounds 7-8 |
-| 2026-03-08 | 97.57% | +0.07 | Session 6 Rounds 9-10 |
-| 2026-03-08 | 97.63% | +0.06 | Allomorph audit, Rounds 11-22 |
-| 2026-03-08 | 97.65% | +0.02 | Rounds 23-25 vocabulary |
-| 2026-03-08 | 97.67% | +0.02 | Rounds 26-28 vocabulary |
-| 2026-03-08 | 97.69% | +0.02 | Rounds 29-30 vocabulary |
-| 2026-03-08 | 97.71% | +0.02 | Rounds 31-32 vocabulary |
-| 2026-03-08 | 97.73% | +0.02 | Rounds 33-34 vocabulary |
-| 2026-03-08 | 97.75% | +0.02 | Rounds 35-36 vocabulary |
-| 2026-03-08 | 97.76% | +0.01 | Round 37 vocabulary |
+| 2026-03-06 | 90.6% | +6.4 | Function words, proper nouns, stems |
+| 2026-03-07 | 97.25% | +6.65 | Philological compound expansion |
+| 2026-03-08 | 98.51% | +1.26 | Quality-focused vocabulary |
+| 2026-03-09 | 99.00% | +0.49 | Push to 99% milestone |
+| 2026-03-10 | 99.47% | +0.47 | Algorithmic suffix parsing |
+| 2026-03-11 | 99.90% | +0.43 | Hyphenated compounds |
+| 2026-03-13 | 99.99% | +0.09 | Architecture refactor |
+| 2026-03-15 | 100.00% | +0.01 | Final vocabulary + quality audit |
+| 2026-03-17 | 100.00% | - | Regression tests (64), documentation |
 
-## Current Phase: Quality-Focused Expansion
+## Documentation
 
-**Coverage: 97.76% fully analyzed | 1.57% partial | 0.67% unknown**
+| Document | Purpose |
+|----------|---------|
+| `docs/METHODOLOGY.md` | Replication guide for new languages |
+| `docs/opaque_lexemes.md` | Transparent vs opaque compound decisions |
+| `docs/compound_transparency_audit.md` | Audit results for compound analysis |
+| `docs/LESSONS_LEARNED.md` | Error patterns and solutions |
+| `docs/QUALITY_AUDIT.md` | Semantic verification methodology |
+| `tests/regression_tests.md` | 64 regression tests with expected outputs |
 
-### Session 7 Accomplishments (2026-03-08)
-
-1. **Vocabulary additions via philological analysis**
-   - Added ~200 new compound word entries (Rounds 22-37)
-   - All verified via KJV English cross-referencing
-   - Categories: biblical terminology, body parts, legal terms, measurements
-   
-2. **Notable additions by round:**
-   - Round 22: tuletate, khainiangte, puantungsilhte, ekte, bilngongte
-   - Rounds 23-25: haksatna, kithatte, kiseelte, hangte, meivakkhuamte
-   - Rounds 26-28: tokhom, hanciam, galkapbu, taau, puansilh, phunna
-   - Rounds 29-30: gialpi, palsatin, semsem, zawt, musane, limtak
-   - Rounds 31-32: kongpuankhai, vawh, baan, liangko, pataukoh, gelhsa
-   - Rounds 33-34: ukpipa, vangtaang, kiphuh, phelkhia, kangtum, siahuaizaw
-   - Rounds 35-36: kiliatsakna, kiselna, nuntakzia, damdam, maitai
-   - Round 37: zineipa, meivakna, innteek, pianpih, zukham, thaneem
-
-3. **Quality audits**
-   - Ran allomorph_audit.py to check for over-segmentation
-   - Flagged issues down from 361 to ~200
-   - Coverage: 97.76% (up from 97.57%)
-
-### Remaining Work (~2.2% = 18,606 tokens)
-
-| Category | Est. % | Examples |
-|----------|--------|----------|
-| Rare vocabulary (hapax) | ~40% | dongun, veipi, utzaw |
-| Complex compounds not yet handled | ~30% | kongpuankhai, puanmongteep |
-| Proper nouns with unusual suffixes | ~15% | Minor biblical names |
-| Dialectal/archaic forms | ~10% | Variant spellings |
-| Potential loan words | ~5% | sapfaia, peel, vot |
-
-### Philological Method Used
+## Philological Method
 
 For each unknown/partial word:
 1. Grep all Bible verses where the word occurs
 2. Extract verse IDs and look up KJV English parallel
 3. Infer meaning from English context
 4. Verify morphological structure is consistent
-5. Add to COMPOUND_WORDS with segmentation and gloss
+5. Add to appropriate dictionary with segmentation and gloss
 
-This method ensures all entries are semantically verified against actual usage.
+```bash
+# Example: Find meaning of unknown word "ihmut"
+verse=$(grep -m1 "	.*\bihmut\b" bibles/extracted/ctd/ctd-x-bible.txt | cut -f1)
+grep "^$verse	" data/verses_aligned.tsv | cut -f3
+# Output: "And the LORD God caused a deep sleep to fall..."
+# → ihmut = "deep.sleep"
+```
 
-### Next Steps
+## Next Steps
 
-1. [x] Continue systematic unknown word investigation (freq 6-7)
-2. [ ] Push toward 98% coverage
-3. [ ] Document truly unanalyzable items for future research
-4. [ ] Try Henderson vocabulary extraction for remaining gaps
-5. [ ] Generate Leipzig-glossed sample chapters
-6. [ ] Prepare methodology for scaling to other 18 languages
+1. ✅ Tedim Chin analyzer complete (100% coverage)
+2. [ ] Generate Leipzig-glossed sample chapters (Matthew, Mark)
+3. [ ] Scale methodology to remaining 18 Kuki-Chin languages
+4. [ ] Henderson vocabulary extraction for supplementary entries
+5. [ ] Build comparative dictionary across languages
 
 ---
 
-*Last updated: 2026-03-08*
-*Coverage: 97.76% fully analyzed | 1.57% partial | 0.67% unknown*
+*Last updated: 2026-03-17*  
+*Tedim Chin coverage: 100% (850,906 tokens)*

@@ -1,6 +1,19 @@
-# Kuki-Chin Bible Readers & Comparative Lexicon
+# Kuki-Chin Bible Corpus & Morphological Analysis
 
-Pipeline for producing linguistic readers, dictionaries, and comparative lexical resources from Bible translations in Kuki-Chin languages.
+A digital philology infrastructure for Kuki-Chin languages, featuring:
+- **20 Bible corpora** aligned by verse (422,676 unique wordforms)
+- **Tedim Chin morphological analyzer** achieving **100% coverage** (850,906 tokens)
+- Bootstrap lexicons and interlinear glossing tools
+
+## 🎉 Milestone: Tedim Chin Analyzer at 100% Coverage
+
+The Tedim Chin (ctd) morphological analyzer is now production-ready:
+- **850,906 tokens** fully analyzed with Leipzig-style glossing
+- **7,000+ dictionary entries** (compounds, stems, function words, proper nouns)
+- **64 regression tests** preventing future regressions
+- Comprehensive documentation in `docs/` and `tests/`
+
+See `scripts/analyze_morphemes.py` for the analyzer, `PROGRESS.md` for development history.
 
 ## Current Corpus Status
 
@@ -84,19 +97,26 @@ Lexicon sizes range from ~600 entries (Mark-only) to ~16,000 entries (full Bible
 
 ## Project Goals
 
-1. **Reader volumes** (Matthew, Mark, Luke–Acts) with:
+1. **Tedim Chin morphological analyzer** ✅ COMPLETE
+   - Leipzig-style interlinear glossing at 100% coverage
+   - See `scripts/analyze_morphemes.py` (~17,000 lines)
+
+2. **Reader volumes** (Matthew, Mark, Luke–Acts) with:
    - Original Kuki-Chin text
    - Leipzig-style interlinear glossing
    - English translation (from KJV, aligned by verse)
 
-2. **Per-language dictionaries** extracted from complete Bible
+3. **Per-language dictionaries** extracted from complete Bible
 
-3. **Comparative dictionary** across all Kuki-Chin languages with reconstructions
+4. **Comparative dictionary** across all Kuki-Chin languages with reconstructions
+
+5. **Scale to remaining 18 languages** using Tedim methodology (see `docs/METHODOLOGY.md`)
 
 ## Scripts
 
 | Script | Purpose |
 |--------|---------|
+| `scripts/analyze_morphemes.py` | **Tedim Chin morphological analyzer** (main deliverable) |
 | `scripts/extract_bibles.sh` | Extract original paralleltext.info zip files |
 | `scripts/scrape_bible.py` | Scrape Bibles from bible.com |
 | `scripts/build_wordform_inventory.py` | Build unified wordform list across all languages |
@@ -112,6 +132,7 @@ Kuki-Chin/
 ├── bibles/
 │   └── extracted/         # 20 language directories
 │       ├── eng/           # English KJV (reference)
+│       ├── ctd/           # Tedim Chin (primary analysis target)
 │       ├── bgr/           # Bawm Chin
 │       ├── ...            # Other languages
 │       └── czt-mbs/       # Zotung MBS 2002 (variant translation)
@@ -119,14 +140,39 @@ Kuki-Chin/
 │   ├── verses_aligned.tsv
 │   ├── wordforms_by_language.tsv
 │   ├── language_stats.tsv
-│   └── alignment_stats.tsv
-├── scripts/               # Processing pipelines
+│   └── lexicons/          # Bootstrap lexicons per language
+├── docs/                  # Methodology and analysis documentation
+│   ├── METHODOLOGY.md     # Replication guide for new languages
+│   ├── opaque_lexemes.md  # Transparent vs opaque compound analysis
+│   └── LESSONS_LEARNED.md # Error patterns and solutions
+├── tests/
+│   └── regression_tests.md  # 64 regression tests for analyzer
+├── scripts/
+│   └── analyze_morphemes.py # Tedim analyzer (~17,000 lines)
+├── PROGRESS.md            # Development history
 └── README.md
 ```
 
 ## Usage
 
 ```bash
+# Analyze a Tedim Chin word
+python3 -c "
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+print(analyze_word('biakinnpi'))  # ('biak-inn-pi', 'pray-house-big') = temple
+"
+
+# Run regression tests
+python3 << 'EOF'
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+tests = [('ding', 'IRR'), ('khuamial', 'darkness'), ('biakinn', 'temple')]
+for word, expected in tests:
+    seg, gloss = analyze_word(word)
+    print(f"{word}: {gloss} {'✓' if expected in gloss else '✗'}")
+EOF
+
 # Scrape a Bible from bible.com
 python scripts/scrape_bible.py --version-id 1 --iso eng --abbrev KJV --name "King James Version"
 
