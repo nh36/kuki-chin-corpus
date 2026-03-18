@@ -415,9 +415,54 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         '',
         '### Most Common Possessors Across All Relators',
         '',
-        '| Word | Total Count | Notes | Sample 1 | Sample 2 | Sample 3 |',
-        '|------|-------------|-------|----------|----------|----------|',
+        '| Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |',
+        '|------|-------|-------|-------|----------|----------|----------|',
     ])
+    
+    # Common possessor glosses
+    POSSESSOR_GLOSSES = {
+        'hong': 'hither',
+        'mite': 'people',
+        "mite'": 'people-GEN',
+        "topa'": 'Lord-GEN',
+        'topa': 'Lord',
+        'ama': '3SG',
+        'amah': '3SG.EMPH',
+        'amaute': '3PL',
+        "amaute'": '3PL-GEN',
+        "amau'": '3PL-GEN',
+        'note': '2PL',
+        "note'": '2PL-GEN',
+        'kei': '1SG',
+        "kei'": '1SG-GEN',
+        'khempeuh': 'all',
+        'a': '3SG.POSS',
+        'ka': '1SG.POSS',
+        'na': '2SG.POSS',
+        'i': '1PL.INCL.POSS',
+        'ko': '1PL.EXCL.POSS',
+        'nang': '2SG',
+        "nang'": '2SG-GEN',
+        'nangma': '2SG.EMPH',
+        'uh': '2/3PL',
+        'lu': 'head',
+        'pasian': 'God',
+        "pasian'": 'God-GEN',
+        'israel': 'Israel',
+        "israel'": 'Israel-GEN',
+        'tua': 'that',
+        'hih': 'this',
+        'mi': 'person',
+        "mi'": 'person-GEN',
+        'inn': 'house',
+        "inn'": 'house-GEN',
+        'tuipi': 'sea',
+        "tuipi'": 'sea-GEN',
+        'lei': 'earth',
+        "lei'": 'earth-GEN',
+        'gam': 'land',
+        "gam'": 'land-GEN',
+    }
     
     # Aggregate possessor counts and samples
     all_poss = defaultdict(lambda: (0, []))
@@ -428,6 +473,7 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
     
     top_all_poss = sorted(all_poss.items(), key=lambda x: -x[1][0])[:25]
     for word, (count, samples) in top_all_poss:
+        gloss = POSSESSOR_GLOSSES.get(word, '—')
         notes = ''
         if word.endswith("'"):
             notes = 'GEN'
@@ -439,10 +485,11 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         for j in range(3):
             if j < len(diverse):
                 verse_id, context, _ = diverse[j]
-                sample_cols.append(f'{format_verse_ref(verse_id)}')
+                kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
+                sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
             else:
                 sample_cols.append('—')
-        lines.append(f'| {word} | {count:,} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
+        lines.append(f'| {word} | {gloss} | {count:,} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
     
     return '\n'.join(lines)
 
