@@ -639,6 +639,29 @@ tests = [
     ('khakunin', 'be.cast.down-ERG'), # transparent parse with -in suffix
     # tuhunin: 'now.time-ERG' (verified transparent parse 2026-03-17)
     ('tuhunin', 'now.time-ERG'),     # tuhun-in = now.time + ERG
+    
+    # Round 155-164 regression tests (2026-03-18)
+    # Architecture: thei removed from TAM_SUFFIXES, now in VERBAL_DERIVATIONAL_SUFFIXES
+    ('muthei', 'ABIL'),              # see-ABIL (thei as suffix)
+    ('neithei', 'ABIL'),             # have-ABIL
+    ('thei', 'know'),                # standalone thei = know (verb)
+    # Double case marking (pan-in = ABL-ERG)
+    ('panin', 'ABL-ERG'),            # pan-in = ABL-ERG
+    ('gampanin', 'ABL-ERG'),         # land-ABL-ERG
+    ('tawhin', 'COM-ERG'),           # tawh-in = COM-ERG
+    # Transparent hapax parsing
+    ('mawhbaang', 'alike'),          # guilty-alike (10x)
+    ('samsiatnate', 'NMLZ'),         # destroy-NMLZ-PL (10x)
+    ('sikkhap', 'loose'),            # turn-loose (2x)
+    ('daina', 'NMLZ'),               # still-NMLZ (2x)
+    ('ngabeng', 'fisherman'),        # fisherman (2x)
+    ('tehkak', 'compare'),           # measure-compare (2x)
+    # Common suffix patterns
+    ('nopzawk', 'more'),             # like-more
+    ('pilzawk', 'more'),             # learn-more
+    ('sangpenin', 'SUPER'),          # high-SUPER-ERG
+    ('omkhawmna', 'gather'),         # exist-gather-NMLZ
+    ('seppihte', 'APPL'),            # work-APPL-PL
 ]
 
 passed = 0
