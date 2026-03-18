@@ -241,7 +241,8 @@ def main():
     # Parse arguments
     if len(sys.argv) < 2:
         print("Usage: python generate_paradigm.py <noun> [<gloss>]")
-        print("       python generate_paradigm.py --all")
+        print("       python generate_paradigm.py --all       # Common nouns (10)")
+        print("       python generate_paradigm.py --full      # All noun stems (991)")
         print("       python generate_paradigm.py --output FILE --all")
         sys.exit(1)
     
@@ -253,8 +254,14 @@ def main():
         output_file = args[idx + 1]
         args = args[:idx] + args[idx+2:]
     
-    if '--all' in args or args[0] == '--all':
-        # Generate for common nouns
+    if '--full' in args or args[0] == '--full':
+        # Generate for ALL noun stems from the analyzer
+        nouns = [(stem, gloss) for stem, gloss in NOUN_STEMS.items()]
+        # Sort by stem for consistency
+        nouns.sort(key=lambda x: x[0].lower())
+        print(f"Generating paradigms for {len(nouns)} noun stems...", file=sys.stderr)
+    elif '--all' in args or args[0] == '--all':
+        # Generate for common nouns (sample)
         nouns = [
             ('gam', 'land'),
             ('khut', 'hand'),
