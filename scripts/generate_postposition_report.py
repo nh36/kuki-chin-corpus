@@ -74,6 +74,60 @@ def load_kjv_translations(aligned_file: str) -> Dict[str, str]:
     return kjv
 
 
+# Gospel book codes (Matthew=40, Mark=41, Luke=42, John=43)
+GOSPEL_BOOKS = {'40', '41', '42', '43'}
+
+
+def select_diverse_samples(examples: List[Tuple], n: int = 3, verse_idx: int = 1) -> List[Tuple]:
+    """
+    Select up to n samples from different books, prioritizing gospels.
+    
+    Args:
+        examples: List of tuples where verse_id is at position verse_idx
+        n: Number of samples to select
+        verse_idx: Index of verse_id in the tuple (default 1)
+        
+    Returns:
+        List of up to n examples from different books, with gospel priority
+    """
+    if not examples:
+        return []
+    
+    # Group by book
+    by_book = defaultdict(list)
+    for ex in examples:
+        verse_id = ex[verse_idx] if len(ex) > verse_idx else ex[0]
+        book = verse_id[:2] if len(verse_id) >= 2 else '00'
+        by_book[book].append(ex)
+    
+    selected = []
+    used_books = set()
+    
+    # First, try to get one from gospels
+    for gospel in GOSPEL_BOOKS:
+        if gospel in by_book and len(selected) < n:
+            selected.append(by_book[gospel][0])
+            used_books.add(gospel)
+            break
+    
+    # Then fill with samples from different books
+    for book in sorted(by_book.keys()):
+        if book not in used_books and len(selected) < n:
+            selected.append(by_book[book][0])
+            used_books.add(book)
+    
+    # If still need more, take from any book not yet fully used
+    if len(selected) < n:
+        for book, exs in by_book.items():
+            for ex in exs[1:]:  # Skip first (already used if this book was picked)
+                if len(selected) >= n:
+                    break
+                if ex not in selected:
+                    selected.append(ex)
+    
+    return selected[:n]
+
+
 def find_postposition_contexts(corpus_file: str) -> Dict[str, List[Tuple[str, str, str, str, str]]]:
     """
     Find all instances of nouns with postpositions (both separate and attached).
@@ -224,7 +278,7 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
     
     lines.extend(['', '---', ''])
     
-    # Detailed sections for each postposition with 3 samples
+    # Detailed sections for each postposition with 3 diverse samples
     for postp, (gloss, meaning) in POSTPOSITIONS.items():
         examples = contexts[postp]
         lines.extend([
@@ -234,11 +288,12 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             '',
         ])
         
-        # Count by preceding word
-        word_counts = defaultdict(int)
-        for noun, _, _, _, _ in examples:
-            word_counts[noun.lower()] += 1
+        # Count by preceding word and collect samples
+        word_samples = defaultdict(list)
+        for noun, verse_id, context, form_type, full_word in examples:
+            word_samples[noun.lower()].append((noun, verse_id, context, form_type, full_word))
         
+        word_counts = {w: len(s) for w, s in word_samples.items()}
         top_words = sorted(word_counts.items(), key=lambda x: -x[1])[:30]
         
         lines.extend([
@@ -248,18 +303,14 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             '|------|-------|----------|----------|----------|',
         ])
         
-        # Get up to 3 samples for each top word
-        samples = defaultdict(list)
-        for noun, verse_id, context, form_type, full_word in examples:
-            if len(samples[noun.lower()]) < 3:
-                samples[noun.lower()].append((verse_id, context))
-        
         for word, count in top_words:
-            sample_list = samples.get(word, [])
+            samples = word_samples.get(word, [])
+            # Select diverse samples from different books
+            diverse = select_diverse_samples(samples, 3, verse_idx=1)
             sample_cols = []
             for j in range(3):
-                if j < len(sample_list):
-                    verse_id, context = sample_list[j]
+                if j < len(diverse):
+                    _, verse_id, context, _, _ = diverse[j]
                     kjv_text = kjv.get(verse_id, '')[:60] + ('...' if len(kjv.get(verse_id, '')) > 60 else '')
                     sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
                 else:
@@ -272,7 +323,7 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
     lines.extend([
         '## Detailed Entries by Noun',
         '',
-        'For each noun, showing all attested postposition combinations with 3 samples each.',
+        'For each noun, showing all attested postposition combinations with 3 diverse samples each.',
         '',
     ])
     
@@ -291,10 +342,13 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         for postp in ['pan', 'panin', 'tawh', 'tawhin']:
             examples_for_postp = by_noun[noun].get(postp, [])
             count = len(examples_for_postp)
+            # Convert to tuple format for select_diverse_samples (verse_id is at index 0)
+            examples_tuple = [(verse_id, context, form_type, full_word) for verse_id, context, form_type, full_word in examples_for_postp]
+            diverse = select_diverse_samples(examples_tuple, 3, verse_idx=0)
             sample_cols = []
             for j in range(3):
-                if j < len(examples_for_postp):
-                    verse_id, context, form_type, full_word = examples_for_postp[j]
+                if j < len(diverse):
+                    verse_id, context, form_type, full_word = diverse[j]
                     kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
                     sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
                 else:

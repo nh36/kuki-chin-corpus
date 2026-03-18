@@ -78,6 +78,59 @@ def load_kjv_translations(aligned_file: str) -> Dict[str, str]:
     return kjv
 
 
+# Gospel book codes (Matthew=40, Mark=41, Luke=42, John=43)
+GOSPEL_BOOKS = {'40', '41', '42', '43'}
+
+
+def select_diverse_samples(examples: List[Tuple], n: int = 3) -> List[Tuple]:
+    """
+    Select up to n samples from different books, prioritizing gospels.
+    
+    Args:
+        examples: List of tuples where first element is verse_id (BBCCCVVV format)
+        n: Number of samples to select
+        
+    Returns:
+        List of up to n examples from different books, with gospel priority
+    """
+    if not examples:
+        return []
+    
+    # Group by book
+    by_book = defaultdict(list)
+    for ex in examples:
+        verse_id = ex[0]
+        book = verse_id[:2] if len(verse_id) >= 2 else '00'
+        by_book[book].append(ex)
+    
+    selected = []
+    used_books = set()
+    
+    # First, try to get one from gospels
+    for gospel in GOSPEL_BOOKS:
+        if gospel in by_book and len(selected) < n:
+            selected.append(by_book[gospel][0])
+            used_books.add(gospel)
+            break
+    
+    # Then fill with samples from different books
+    for book in sorted(by_book.keys()):
+        if book not in used_books and len(selected) < n:
+            selected.append(by_book[book][0])
+            used_books.add(book)
+    
+    # If still need more, take from any book not yet fully used
+    if len(selected) < n:
+        for book, exs in by_book.items():
+            for ex in exs[1:]:  # Skip first (already used if this book was picked)
+                if len(selected) >= n:
+                    break
+                if ex not in selected:
+                    selected.append(ex)
+    
+    return selected[:n]
+
+
 def find_relator_contexts(corpus_file: str) -> Dict[str, Dict[str, List]]:
     """
     Find all instances of relator nouns in their various case forms.
@@ -142,21 +195,22 @@ def find_relator_contexts(corpus_file: str) -> Dict[str, Dict[str, List]]:
     return results
 
 
-def analyze_possessors(contexts: Dict[str, Dict[str, List]]) -> Dict[str, Dict[str, int]]:
+def analyze_possessors(contexts: Dict[str, Dict[str, List]]) -> Dict[str, Dict[str, Tuple[int, List]]]:
     """
     Analyze what words precede relator nouns (potential possessors).
     
-    Returns: {relator: {preceding_word: count}}
+    Returns: {relator: {preceding_word: (count, [(verse_id, context, prev_word), ...])}}
     """
     results = {}
     for relator, case_forms in contexts.items():
-        word_counts = defaultdict(int)
+        word_data = defaultdict(lambda: (0, []))
         for case_form, examples in case_forms.items():
             for verse_id, context, prev_word in examples:
                 # Check if preceding word ends in genitive marker
-                prev_clean = prev_word.strip('.,;:!?"')
-                word_counts[prev_clean.lower()] += 1
-        results[relator] = dict(word_counts)
+                prev_clean = prev_word.strip('.,;:!?"').lower()
+                count, samples = word_data[prev_clean]
+                word_data[prev_clean] = (count + 1, samples + [(verse_id, context, prev_word)])
+        results[relator] = dict(word_data)
     return results
 
 
@@ -276,10 +330,12 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             label, form = case_labels[case_name]
             examples = case_forms.get(case_name, [])
             count = len(examples)
+            # Select diverse samples from different books
+            diverse = select_diverse_samples(examples, 3)
             sample_cols = []
             for j in range(3):
-                if j < len(examples):
-                    verse_id, context, _ = examples[j]
+                if j < len(diverse):
+                    verse_id, context, _ = diverse[j]
                     kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
                     sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
                 else:
@@ -287,47 +343,59 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             lines.append(f'| {label} | {form} | {count:,} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
         
         # Top possessors (words that precede this relator)
-        poss_counts = possessors.get(relator, {})
-        top_poss = sorted(poss_counts.items(), key=lambda x: -x[1])[:15]
+        poss_data = possessors.get(relator, {})
+        top_poss = sorted(poss_data.items(), key=lambda x: -x[1][0])[:15]
         
         if top_poss:
             lines.extend([
                 '',
                 '### Most Common Preceding Words (Possessors)',
                 '',
-                '| Word | Count | Notes |',
-                '|------|-------|-------|',
+                '| Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |',
+                '|------|-------|-------|----------|----------|----------|',
             ])
             
-            for word, count in top_poss:
+            for word, (count, samples) in top_poss:
                 # Check if it ends in genitive marker
                 notes = ''
                 if word.endswith("'"):
-                    notes = 'genitive-marked'
+                    notes = 'GEN'
                 elif word in ('a', 'ka', 'na', 'i', 'ko'):
-                    notes = 'possessive prefix'
-                lines.append(f'| {word} | {count} | {notes} |')
+                    notes = 'POSS'
+                # Select diverse samples
+                diverse = select_diverse_samples(samples, 3)
+                sample_cols = []
+                for j in range(3):
+                    if j < len(diverse):
+                        verse_id, context, _ = diverse[j]
+                        kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
+                        sample_cols.append(f'{format_verse_ref(verse_id)}: "{kjv_text}"')
+                    else:
+                        sample_cols.append('—')
+                lines.append(f'| {word} | {count} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
         
-        # Sample sentences with KJV
+        # Sample sentences with KJV - get diverse samples from different books
         lines.extend([
             '',
             '### Sample Contexts with KJV',
             '',
         ])
         
-        # Get 3 diverse samples from different case forms
-        samples_shown = 0
+        # Collect all examples across case forms and select diverse ones
+        all_examples = []
         for case_name in case_order:
             examples = case_forms.get(case_name, [])
-            for ex in examples[:1]:  # Take 1 from each case
-                if samples_shown < 5:
-                    verse_id, context, prev = ex
-                    kjv_text = kjv.get(verse_id, 'N/A')
-                    lines.append(f'- **{case_labels[case_name][0]}** ({format_verse_ref(verse_id)}):')
-                    lines.append(f'  - Tedim: *{context}*')
-                    lines.append(f'  - KJV: "{kjv_text}"')
-                    lines.append('')
-                    samples_shown += 1
+            for ex in examples:
+                all_examples.append((case_name, ex))
+        
+        # Select diverse samples
+        diverse_all = select_diverse_samples([(ex[0], case_name, ex[1], ex[2]) for case_name, ex in all_examples], 5)
+        for verse_id, case_name, context, prev in diverse_all:
+            kjv_text = kjv.get(verse_id, 'N/A')
+            lines.append(f'- **{case_labels[case_name][0]}** ({format_verse_ref(verse_id)}):')
+            lines.append(f'  - Tedim: *{context}*')
+            lines.append(f'  - KJV: "{kjv_text}"')
+            lines.append('')
         
         lines.extend(['', '---', ''])
     
@@ -347,24 +415,34 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         '',
         '### Most Common Possessors Across All Relators',
         '',
-        '| Word | Total Count | Notes |',
-        '|------|-------------|-------|',
+        '| Word | Total Count | Notes | Sample 1 | Sample 2 | Sample 3 |',
+        '|------|-------------|-------|----------|----------|----------|',
     ])
     
-    # Aggregate possessor counts
-    all_poss = defaultdict(int)
+    # Aggregate possessor counts and samples
+    all_poss = defaultdict(lambda: (0, []))
     for relator, poss_dict in possessors.items():
-        for word, count in poss_dict.items():
-            all_poss[word] += count
+        for word, (count, samples) in poss_dict.items():
+            old_count, old_samples = all_poss[word]
+            all_poss[word] = (old_count + count, old_samples + samples)
     
-    top_all_poss = sorted(all_poss.items(), key=lambda x: -x[1])[:25]
-    for word, count in top_all_poss:
+    top_all_poss = sorted(all_poss.items(), key=lambda x: -x[1][0])[:25]
+    for word, (count, samples) in top_all_poss:
         notes = ''
         if word.endswith("'"):
-            notes = 'genitive-marked'
+            notes = 'GEN'
         elif word in ('a', 'ka', 'na', 'i', 'ko'):
-            notes = 'possessive prefix'
-        lines.append(f'| {word} | {count:,} | {notes} |')
+            notes = 'POSS'
+        # Select diverse samples
+        diverse = select_diverse_samples(samples, 3)
+        sample_cols = []
+        for j in range(3):
+            if j < len(diverse):
+                verse_id, context, _ = diverse[j]
+                sample_cols.append(f'{format_verse_ref(verse_id)}')
+            else:
+                sample_cols.append('—')
+        lines.append(f'| {word} | {count:,} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
     
     return '\n'.join(lines)
 
