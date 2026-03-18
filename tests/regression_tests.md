@@ -577,7 +577,7 @@ tests = [
     # 26. Possessive plural
     ("biate'", 'PL.POSS'),
     # 27. Compound verbs
-    ('samsiatna', 'destruction'),  # opaque: utter.destruction
+    ('samsiatna', 'destroy-NMLZ'),  # opaque: utter.destruction
     # 28-29. ki- reflexives
     ('kilawm', 'REFL-worthy'),  # worthy/suitable (semantic = meet)
     ('kido', 'fight'),  # can appear without REFL in output
@@ -634,6 +634,11 @@ tests = [
     # henhan: 'like' in similes (fixed 2026-03-17)
     ('henhan', 'like'),          # like/as (9x in similes)
     ('henhanin', 'like-ERG'),    # by/as like
+    # khakun: 'be.cast.down' (fixed 2026-03-17)
+    ('khakun', 'be.cast.down'),      # Ps 42:5, 42:11, 43:5
+    ('khakunin', 'be.cast.down-ERG'), # transparent parse with -in suffix
+    # tuhunin: 'now.time-ERG' (verified transparent parse 2026-03-17)
+    ('tuhunin', 'now.time-ERG'),     # tuhun-in = now.time + ERG
 ]
 
 passed = 0
