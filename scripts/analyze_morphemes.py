@@ -771,19 +771,53 @@ METADATA_WORDS = {
 # POSTPOSITIONS
 # ============================================================================
 # These are FREE words that follow nouns, NOT bound suffixes.
-# Unlike case markers (-in, -ah, -pan, -panin), these are written separately.
+# Unlike case markers (-in, -ah), these are written separately.
 # Example: "pa tawh" (with father) = two words, NOT "*patawh"
-#
-# TODO: Investigate whether there are other postpositions in the language
-# that we may have missed or incorrectly analyzed as suffixes.
 # ============================================================================
 POSTPOSITIONS = {
-    'tawh': 'COM',       # comitative "with" - 7,571 occurrences as standalone
+    'tawh': 'COM',       # comitative "with" - 7,806 occurrences as standalone
                          # Example: "amah tawh" = with him, "mei tawh" = with fire
-    'tawhin': 'COM.ERG', # comitative+ergative (rare: ~1 occurrence)
+    'tawhin': 'COM.ERG', # comitative+ergative (instrumental) - 2 occurrences
                          # Example: "mei tawhin moh a em hi" = he roasted bread with fire
-    # Note: -pan and -panin ARE bound suffixes (ablative), not postpositions
-    # Evidence: gampan, gampanin (land-ABL, land-ABL.ERG) vs "gam tawh" (with land)
+    'pan': 'ABL',        # ablative "from" - 603 standalone, also bound to proper nouns
+                         # Example: "sung pan" = from inside, "Jerusalempan" = from-Jerusalem
+    'panin': 'ABL.ERG',  # ablative+ergative - very common with relator nouns
+                         # Example: "sung panin" = from inside (as agent)
+}
+
+# ============================================================================
+# RELATOR NOUNS (Spatial/Relational Postpositions)
+# ============================================================================
+# These are NOUNS with spatial meanings that function like postpositions.
+# They take a genitive-marked possessor and can themselves be case-marked.
+# Pattern: [Possessor-GEN] [Relator-CASE]
+# Example: mite' sungah = people-GEN inside-LOC = "among the people"
+#
+# Unlike true postpositions (tawh, pan), these have full nominal morphology:
+# - Can take locative: tungah, sungah, lakah, kiangah
+# - Can take ergative: tungin, sungin, lakin
+# - Can take ablative: tung pan, sung pan, lak pan (usually written separately)
+# ============================================================================
+RELATOR_NOUNS = {
+    # Core spatial relators (high frequency)
+    'tung': 'on',        # 1,491 standalone; 6,072 as tungah; 84 as tungin
+                         # inn' tungah = on the house
+    'sung': 'inside',    # 2,289 standalone; 3,205 as sungah
+                         # inn' sungah = in the house
+    'kiang': 'beside',   # 611 standalone; 4,208 as kiangah
+                         # pa' kiangah = beside father
+    'lak': 'among',      # 564 standalone; 769 as lakah
+                         # mite' lakah = among the people
+    'mai': 'front',      # 1,353 standalone (also "face")
+                         # pa' maiah = in front of father
+    'nuai': 'below',     # 203 standalone
+                         # inn' nuaiah = below the house
+    'lang': 'side',      # 45 standalone (also "clear")
+                         # langkhat = one side
+    # Derived spatial relators
+    'pualam': 'outside', # 62 as pualamah = outside (pua-lam = other-direction)
+    # Note: These can combine with case markers and postpositions:
+    # sung-ah (inside-LOC), sung pan (inside from), sung panin (inside from-ERG)
 }
 
 # Common function words with glosses - expanded with frequencies

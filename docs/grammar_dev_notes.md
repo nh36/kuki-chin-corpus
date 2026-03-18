@@ -94,33 +94,75 @@ inn'           tungah          = "on the house"
 
 ### Revised Analysis
 
-**True Case Suffixes (6):**
+**True Case Suffixes (4):**
 1. Absolutive: ∅ (unmarked)
 2. Genitive: -' (glottal stop)
 3. Ergative: -in
 4. Locative: -ah
-5. Ablative: -pan
-6. Ablative-Ergative: -panin
 
-**Free Postpositions:**
-1. **tawh** "with" (comitative) - ALWAYS separate word
+**Nominal Postpositions (follow nouns):**
+1. **pan** "from" (ablative) - follows nouns directly
+   - Can take ergative: *panin* (very common)
+   - Nouns: *Jerusalem pan* "from Jerusalem"
+   - Spatials: *sung pan* "from inside"
+
+2. **tawh** "with" (comitative) - ALWAYS separate word
    - Attaches to bare noun: *pa tawh* "with father"
    - Can take ergative: *tawhin* (2 attestations)
    - Isaiah 44:15: *mei tawhin moh a em hi* "he bakes bread with fire"
    - Ezekiel 22:21: *mei tawhin...kong haltui ding* "with fire I will melt"
-   - The ergative *-in* marks instrumental use: "by means of (being) with"
 
-2. **ding** "for, in order to" (purposive) - 19,257 occurrences
-   - Very high frequency - marks purpose/intention
-   - *na nei ding* "for you to have" / "you will have"
-   - Functions as both postposition and future/irrealis marker
+### Comparison: pan/tawh vs. ding/dong
 
-3. **dong** "until" (terminative) - 712 occurrences
-   - Marks temporal/spatial endpoint
-   - *Gaza ciang dong* "until Gaza"
-   - *nitak dong* "until evening"
+**Arguments FOR grouping ding/dong with pan/tawh:**
 
-**Spatial/Relational Nouns (take GEN possessor):**
+| Feature | pan | tawh | ding | dong |
+|---------|-----|------|------|------|
+| Free-standing word | ✓ | ✓ | ✓ | ✓ |
+| Takes -in (ERG) | ✓ panin | ✓ tawhin | ✓ dingin | ✓ dongin |
+| Takes -ah (LOC) | ✗ | ✗ | ✓ dingah (15x) | ✓ dongah (52x) |
+| Single syllable | ✓ | ✓ | ✓ | ✓ |
+| Adpositional meaning | ✓ from | ✓ with | ✓ for | ✓ until |
+
+**Arguments AGAINST grouping ding/dong with pan/tawh:**
+
+| Feature | pan/tawh | ding/dong |
+|---------|----------|-----------|
+| What precedes | **NOUNS**: *amah tawh* "with him", *sung pan* "from inside" | **VERBS**: *lo ding* "will NEG", *pai ding* "will go", *ciang dong* "until arrives" |
+| Genitive marking | Rare (4 GEN+tawh) | Common with *a'* (298 *a' ding*) but *a'* is nominalizer, not genitive |
+| Primary function | Marks noun phrase role (spatial relation) | Marks **clause** type (purpose/terminus) |
+| Combinability | With case markers on preceding noun | With verbal morphology |
+
+**Key difference: What they attach to**
+
+- **pan/tawh** follow **noun phrases**: *pa tawh* "with father", *inn pan* "from house"
+- **ding/dong** follow **verb phrases/clauses**: *pai ding* "will go", *hong tung dong* "until arrives"
+
+**Evidence from corpus:**
+
+Top 10 words before each:
+
+| pan | tawh | ding | dong |
+|-----|------|------|------|
+| sung (spatial) | uh (plural) | lo (NEG) | ciang (arrive) |
+| kiang (spatial) | amah (pronoun) | kei (NEG.EMPH) | a (3SG) |
+| khat (numeral) | mite (noun) | hi (DECL) | hong (toward) |
+| tung (spatial) | khempeuh (all) | pia (give-verb) | thu (matter) |
+| lak (spatial) | thu (matter) | thei (know-verb) | zingsang (morning) |
+
+**Conclusion:**
+
+**pan** and **tawh** are **nominal postpositions** - they take noun phrases as complements.
+
+**ding** and **dong** are **clausal particles** - they take verb phrases or clauses as complements:
+- *ding* = irrealis/purposive marker (future intention)
+- *dong* = terminative marker (endpoint of action/state)
+
+This is a fundamental syntactic difference. They belong to different word classes:
+- **Postpositions**: pan, tawh (+ relator nouns: tung, sung, etc.)
+- **Clause-final particles**: ding, dong
+
+**Spatial/Relator Nouns (take GEN possessor):**
 1. **tung** "on, above" - inn' tungah "on the house"
 2. **sung** "inside" - inn' sungah "in the house"
 3. **nuai** "below" - inn' nuaiah "below the house"
