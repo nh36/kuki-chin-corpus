@@ -18064,6 +18064,71 @@ def format_verb_paradigm(stem: str, forms: Dict, show_verses: bool = False) -> s
 
 
 # =============================================================================
+# COVERAGE CHECKING
+# =============================================================================
+
+def check_coverage(corpus_file: str = None, verbose: bool = False) -> dict:
+    """
+    Check morphological analysis coverage on the Bible corpus.
+    
+    IMPORTANT: Do NOT lowercase words before analysis - proper noun detection
+    requires original case (e.g., 'Nazareth' → NAZARETH, 'nazareth' → 2SG-?).
+    
+    Returns:
+        dict with keys: total, full, partial, unknown, coverage_pct
+    """
+    if corpus_file is None:
+        corpus_file = str(Path(__file__).parent.parent / 'bibles' / 'extracted' / 'ctd' / 'ctd-x-bible.txt')
+    
+    total = 0
+    full = 0
+    partial = 0
+    unknown = 0
+    partial_words = []
+    unknown_words = []
+    
+    with open(corpus_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) < 2:
+                continue
+            text = parts[1]
+            for word in text.split():
+                if not word:
+                    continue
+                total += 1
+                # IMPORTANT: preserve original case for proper noun detection
+                seg, gloss = analyze_word(word)
+                if '?' in gloss:
+                    if gloss == '?':
+                        unknown += 1
+                        if verbose and len(unknown_words) < 50:
+                            unknown_words.append(word)
+                    else:
+                        partial += 1
+                        if verbose and len(partial_words) < 50:
+                            partial_words.append((word, seg, gloss))
+                else:
+                    full += 1
+    
+    coverage_pct = 100 * full / total if total > 0 else 0
+    
+    result = {
+        'total': total,
+        'full': full,
+        'partial': partial,
+        'unknown': unknown,
+        'coverage_pct': coverage_pct
+    }
+    
+    if verbose:
+        result['partial_words'] = partial_words
+        result['unknown_words'] = unknown_words
+    
+    return result
+
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
@@ -18073,7 +18138,25 @@ def main():
         print("       python analyze_morphemes.py --sentence 'Tedim sentence here'")
         print("       python analyze_morphemes.py --paradigm <noun>")
         print("       python analyze_morphemes.py --verb-paradigm <verb>")
+        print("       python analyze_morphemes.py --coverage [-v]")
         sys.exit(1)
+    
+    if sys.argv[1] == '--coverage':
+        verbose = '-v' in sys.argv or '--verbose' in sys.argv
+        result = check_coverage(verbose=verbose)
+        print(f"Total tokens:  {result['total']:,}")
+        print(f"Full glosses:  {result['full']:,} ({result['coverage_pct']:.4f}%)")
+        print(f"Partial:       {result['partial']:,}")
+        print(f"Unknown:       {result['unknown']:,}")
+        if verbose and result.get('partial_words'):
+            print("\nPartial glosses:")
+            for word, seg, gloss in result['partial_words'][:20]:
+                print(f"  {word:<20} -> {seg:<25} {gloss}")
+        if verbose and result.get('unknown_words'):
+            print("\nUnknown words:")
+            for word in result['unknown_words'][:20]:
+                print(f"  {word}")
+        sys.exit(0)
     
     if sys.argv[1] == '--paradigm':
         # Extract noun paradigm
