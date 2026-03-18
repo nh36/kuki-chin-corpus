@@ -291,6 +291,15 @@ Compounds only found inside larger compounds:
 
 ## 4. Research Log
 
+### 2026-03-18 (continued)
+- **Lexicon Internalization**: Made analyzer self-contained
+  - Discovered 574 words were getting glosses from external `ctd_lexicon.tsv`
+  - Moved 369 nouns into NOUN_STEMS (ngun 'silver', lam 'way', mei 'fire', etc.)
+  - Moved 37 verbs into VERB_STEMS (ngen 'pray', khawm 'gather', etc.)
+  - Moved 100 proper nouns into PROPER_NOUNS (david, moses, khrih, etc.)
+  - Analyzer no longer depends on external lexicon file
+  - Reduced "uncategorized" items in relator report from 10.9% to 5.9%
+
 ### 2026-03-18
 - Discovered comitative `-tawh` is a free postposition, not a case suffix
 - Reduced case system from 8 to 6 cases
