@@ -47,14 +47,18 @@ def format_verse_ref(verse_id: str) -> str:
 
 
 # Tedim Chin case system
-# Based on corpus analysis: ERG (53,915), LOC (25,569), ABL (4,343), COM (229)
+# Based on corpus analysis: ERG (53,915), LOC (25,569), ABL.ERG (4,343), ABL (32), COM (229), COM.ERG (2)
 # Note: -in marks both ERG (on nouns) and INST (on manner expressions)
+# -pan = simple ablative "from"; -panin = ablative+ergative (source as agent)
+# -tawh = simple comitative "with"; -tawhin = comitative+ergative (instrument as agent)
 CASE_SUFFIXES = [
     ('', 'ABS', 'Absolutive'),           # Unmarked
     ('in', 'ERG', 'Ergative'),           # Agent/instrument
     ('ah', 'LOC', 'Locative'),           # Location
-    ('panin', 'ABL', 'Ablative'),        # Source/from
-    ('tawh', 'COM', 'Comitative'),       # With/accompaniment
+    ('pan', 'ABL', 'Ablative'),          # Simple source/from
+    ('panin', 'ABL.ERG', 'Ablative-Ergative'),  # Source as agent
+    ('tawh', 'COM', 'Comitative'),       # Simple with/accompaniment
+    ('tawhin', 'COM.ERG', 'Comitative-Ergative'),  # Instrument as agent
 ]
 
 # Number marking
@@ -189,11 +193,18 @@ def generate_full_report(nouns: List[Tuple[str, str]], corpus_file: str) -> str:
         '',
         'Tedim Chin nouns inflect for:',
         '- **Number**: Singular (unmarked), Plural (*-te*)',
-        '- **Case**: Absolutive (unmarked), Ergative (*-in*), Locative (*-ah*), Ablative (*-panin*), Comitative (*-tawh*)',
+        '- **Case**:',
+        '  - Absolutive (unmarked)',
+        '  - Ergative (*-in*) — marks agent',
+        '  - Locative (*-ah*) — location',
+        '  - Ablative (*-pan*) — source/from',
+        '  - Ablative-Ergative (*-panin*) — source as agent',
+        '  - Comitative (*-tawh*) — accompaniment',
+        '  - Comitative-Ergative (*-tawhin*) — instrument as agent',
         '',
         'Suffix order: **STEM-PLURAL-CASE** (e.g., *gam-te-ah* = land-PL-LOC)',
         '',
-        'Citations show verse references where forms are attested in the Tedim Chin Bible.',
+        'Citations show verse references where forms are attested in the Tedim Chin Bible (30,422 verses, 66 books).',
         '"—" indicates the form is grammatically possible but not attested in the corpus.',
         '',
         '---',
