@@ -10,7 +10,7 @@ This report shows:
 1. Frequency and distribution of each relator noun
 2. What case markers they combine with
 3. What types of possessors they take
-4. Sample contexts
+4. Sample contexts with KJV translations
 
 Usage:
     python generate_relator_report.py              # Generate full report
@@ -63,6 +63,19 @@ def format_verse_ref(verse_id: str) -> str:
     verse = str(int(verse_id[5:8]))
     book_name = BOOK_ABBREVS.get(book, book)
     return f"{book_name} {chapter}:{verse}"
+
+
+def load_kjv_translations(aligned_file: str) -> Dict[str, str]:
+    """Load KJV translations from verses_aligned.tsv."""
+    kjv = {}
+    with open(aligned_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) >= 3:
+                verse_id = parts[0]
+                kjv_text = parts[2]
+                kjv[verse_id] = kjv_text
+    return kjv
 
 
 def find_relator_contexts(corpus_file: str) -> Dict[str, Dict[str, List]]:
@@ -147,8 +160,11 @@ def analyze_possessors(contexts: Dict[str, Dict[str, List]]) -> Dict[str, Dict[s
     return results
 
 
-def generate_report(corpus_file: str) -> str:
-    """Generate the full relator noun report."""
+def generate_report(corpus_file: str, kjv_file: str) -> str:
+    """Generate the full relator noun report with KJV translations."""
+    
+    print("Loading KJV translations...", file=sys.stderr)
+    kjv = load_kjv_translations(kjv_file)
     
     print("Finding relator noun contexts...", file=sys.stderr)
     contexts = find_relator_contexts(corpus_file)
@@ -243,8 +259,8 @@ def generate_report(corpus_file: str) -> str:
             '',
             '### Case Forms',
             '',
-            '| Case | Form | Count | Sample |',
-            '|------|------|-------|--------|',
+            '| Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |',
+            '|------|------|-------|----------|----------|----------|',
         ])
         
         case_order = ['bare', 'ah', 'in', 'pan', 'panin']
@@ -260,12 +276,15 @@ def generate_report(corpus_file: str) -> str:
             label, form = case_labels[case_name]
             examples = case_forms.get(case_name, [])
             count = len(examples)
-            if count > 0:
-                verse_id, context, _ = examples[0]
-                sample = f'{format_verse_ref(verse_id)}: *{context}*'
-            else:
-                sample = '—'
-            lines.append(f'| {label} | {form} | {count:,} | {sample} |')
+            sample_cols = []
+            for j in range(3):
+                if j < len(examples):
+                    verse_id, context, _ = examples[j]
+                    kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
+                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                else:
+                    sample_cols.append('—')
+            lines.append(f'| {label} | {form} | {count:,} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
         
         # Top possessors (words that precede this relator)
         poss_counts = possessors.get(relator, {})
@@ -289,21 +308,26 @@ def generate_report(corpus_file: str) -> str:
                     notes = 'possessive prefix'
                 lines.append(f'| {word} | {count} | {notes} |')
         
-        # Sample sentences
+        # Sample sentences with KJV
         lines.extend([
             '',
-            '### Sample Contexts',
+            '### Sample Contexts with KJV',
             '',
         ])
         
-        # Get diverse samples (one from each case form if available)
+        # Get 3 diverse samples from different case forms
         samples_shown = 0
         for case_name in case_order:
             examples = case_forms.get(case_name, [])
-            if examples and samples_shown < 5:
-                verse_id, context, prev = examples[0]
-                lines.append(f'- **{case_labels[case_name][0]}**: *{context}* ({format_verse_ref(verse_id)})')
-                samples_shown += 1
+            for ex in examples[:1]:  # Take 1 from each case
+                if samples_shown < 5:
+                    verse_id, context, prev = ex
+                    kjv_text = kjv.get(verse_id, 'N/A')
+                    lines.append(f'- **{case_labels[case_name][0]}** ({format_verse_ref(verse_id)}):')
+                    lines.append(f'  - Tedim: *{context}*')
+                    lines.append(f'  - KJV: "{kjv_text}"')
+                    lines.append('')
+                    samples_shown += 1
         
         lines.extend(['', '---', ''])
     
@@ -353,7 +377,8 @@ def main():
     parser.add_argument('--output', '-o', help='Output file (default: docs/paradigms/relator_nouns.md)')
     args = parser.parse_args()
     
-    report = generate_report(corpus_file)
+    kjv_file = str(Path(__file__).parent.parent / 'data' / 'verses_aligned.tsv')
+    report = generate_report(corpus_file, kjv_file)
     
     if args.output:
         output_path = Path(args.output)

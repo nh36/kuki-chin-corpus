@@ -5,12 +5,17 @@ Generate report of nominal postpositions (pan, tawh, panin, tawhin).
 Shows nouns occurring with these postpositions, similar to paradigm reports
 but focused on postpositional constructions rather than case suffixes.
 
+Includes both:
+- Separate postpositions: "sung pan" (inside from)
+- Attached postpositions: "gampan" (land-from)
+
 Usage:
     python generate_postposition_report.py              # Generate full report
     python generate_postposition_report.py --output FILE  # Write to file
 """
 
 import sys
+import re
 from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Tuple, Set
@@ -56,11 +61,25 @@ def format_verse_ref(verse_id: str) -> str:
     return f"{book_name} {chapter}:{verse}"
 
 
-def find_postposition_contexts(corpus_file: str) -> Dict[str, List[Tuple[str, str, str, str]]]:
+def load_kjv_translations(aligned_file: str) -> Dict[str, str]:
+    """Load KJV translations from verses_aligned.tsv."""
+    kjv = {}
+    with open(aligned_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) >= 3:
+                verse_id = parts[0]
+                kjv_text = parts[2]
+                kjv[verse_id] = kjv_text
+    return kjv
+
+
+def find_postposition_contexts(corpus_file: str) -> Dict[str, List[Tuple[str, str, str, str, str]]]:
     """
-    Find all instances of nouns followed by postpositions.
+    Find all instances of nouns with postpositions (both separate and attached).
     
-    Returns: {postposition: [(noun, verse_id, context_before, context_after), ...]}
+    Returns: {postposition: [(noun, verse_id, context, form_type, full_word), ...]}
+    where form_type is 'separate' or 'attached'
     """
     results = {postp: [] for postp in POSTPOSITIONS}
     
@@ -76,16 +95,28 @@ def find_postposition_contexts(corpus_file: str) -> Dict[str, List[Tuple[str, st
             for i, word in enumerate(words):
                 word_clean = word.strip('.,;:!?"').lower()
                 
+                # Check for SEPARATE postpositions (e.g., "sung pan")
                 if word_clean in POSTPOSITIONS:
-                    # Found a postposition - get preceding word
                     if i > 0:
                         prev_word = words[i - 1].strip('.,;:!?"')
-                        # Get context (2 words before, 2 words after)
                         start = max(0, i - 2)
                         end = min(len(words), i + 3)
                         context = ' '.join(words[start:end])
-                        
-                        results[word_clean].append((prev_word, verse_id, context, word_clean))
+                        results[word_clean].append((prev_word, verse_id, context, 'separate', word_clean))
+                
+                # Check for ATTACHED postpositions (e.g., "gampan", "gampanin")
+                # Must check panin before pan to avoid double-counting
+                for postp in ['panin', 'pan', 'tawhin', 'tawh']:
+                    if word_clean.endswith(postp) and len(word_clean) > len(postp):
+                        stem = word_clean[:-len(postp)]
+                        # Avoid matching words that just happen to end in these letters
+                        # Require stem to be at least 2 chars
+                        if len(stem) >= 2:
+                            start = max(0, i - 2)
+                            end = min(len(words), i + 3)
+                            context = ' '.join(words[start:end])
+                            results[postp].append((stem, verse_id, context, 'attached', word_clean))
+                            break  # Don't double-count panin as pan
     
     return results
 
@@ -94,13 +125,13 @@ def analyze_by_noun(contexts: Dict[str, List]) -> Dict[str, Dict[str, List]]:
     """
     Reorganize contexts by the noun that precedes the postposition.
     
-    Returns: {noun: {postposition: [(verse_id, context), ...]}}
+    Returns: {noun: {postposition: [(verse_id, context, form_type, full_word), ...]}}
     """
     by_noun = defaultdict(lambda: defaultdict(list))
     
     for postp, examples in contexts.items():
-        for noun, verse_id, context, _ in examples:
-            by_noun[noun.lower()][postp].append((verse_id, context))
+        for noun, verse_id, context, form_type, full_word in examples:
+            by_noun[noun.lower()][postp].append((verse_id, context, form_type, full_word))
     
     return dict(by_noun)
 
@@ -121,8 +152,11 @@ def get_top_nouns(by_noun: Dict, min_count: int = 3) -> List[Tuple[str, int, Dic
     return sorted(results, key=lambda x: -x[1])
 
 
-def generate_report(corpus_file: str) -> str:
-    """Generate the full postposition report."""
+def generate_report(corpus_file: str, kjv_file: str) -> str:
+    """Generate the full postposition report with KJV translations."""
+    
+    print("Loading KJV translations...", file=sys.stderr)
+    kjv = load_kjv_translations(kjv_file)
     
     print("Finding postposition contexts...", file=sys.stderr)
     contexts = find_postposition_contexts(corpus_file)
@@ -131,27 +165,33 @@ def generate_report(corpus_file: str) -> str:
     by_noun = analyze_by_noun(contexts)
     top_nouns = get_top_nouns(by_noun, min_count=2)
     
+    # Count separate vs attached forms
+    sep_count = sum(1 for postp in contexts.values() for ex in postp if ex[3] == 'separate')
+    att_count = sum(1 for postp in contexts.values() for ex in postp if ex[3] == 'attached')
+    
     lines = [
         '# Tedim Chin Postposition Report',
         '',
         '## Overview',
         '',
         'This report documents nouns occurring with nominal postpositions.',
-        'Unlike case suffixes (which attach directly to nouns), postpositions',
-        'are separate words that follow the noun phrase.',
+        'Includes both separate postpositions (*sung pan*) and attached forms (*gampan*).',
         '',
         '**Postpositions covered:**',
         '',
-        '| Postposition | Gloss | Meaning | Count |',
-        '|--------------|-------|---------|-------|',
+        '| Postposition | Gloss | Meaning | Separate | Attached | Total |',
+        '|--------------|-------|---------|----------|----------|-------|',
     ]
     
     for postp, (gloss, meaning) in POSTPOSITIONS.items():
-        count = len(contexts[postp])
-        lines.append(f'| {postp} | {gloss} | {meaning} | {count:,} |')
+        examples = contexts[postp]
+        sep = sum(1 for ex in examples if ex[3] == 'separate')
+        att = sum(1 for ex in examples if ex[3] == 'attached')
+        total_p = len(examples)
+        lines.append(f'| {postp} | {gloss} | {meaning} | {sep:,} | {att:,} | {total_p:,} |')
     
     total = sum(len(c) for c in contexts.values())
-    lines.append(f'| **Total** | | | **{total:,}** |')
+    lines.append(f'| **Total** | | | {sep_count:,} | {att_count:,} | **{total:,}** |')
     
     lines.extend([
         '',
@@ -160,6 +200,8 @@ def generate_report(corpus_file: str) -> str:
         '## Summary Statistics',
         '',
         f'- **Total postposition instances**: {total:,}',
+        f'- **Separate forms** (e.g., *sung pan*): {sep_count:,}',
+        f'- **Attached forms** (e.g., *gampan*): {att_count:,}',
         f'- **Unique preceding words**: {len(by_noun):,}',
         f'- **Words with 2+ instances**: {len(top_nouns):,}',
         '',
@@ -173,16 +215,16 @@ def generate_report(corpus_file: str) -> str:
         '|------|------|-------|-----|-------|------|--------|',
     ])
     
-    for i, (noun, total, postp_counts) in enumerate(top_nouns[:50], 1):
+    for i, (noun, total_n, postp_counts) in enumerate(top_nouns[:50], 1):
         pan = postp_counts.get('pan', 0)
         panin = postp_counts.get('panin', 0)
         tawh = postp_counts.get('tawh', 0)
         tawhin = postp_counts.get('tawhin', 0)
-        lines.append(f'| {i} | [{noun}](#{noun.replace(" ", "-")}) | {total} | {pan} | {panin} | {tawh} | {tawhin} |')
+        lines.append(f'| {i} | [{noun}](#{noun.replace(" ", "-")}) | {total_n} | {pan} | {panin} | {tawh} | {tawhin} |')
     
     lines.extend(['', '---', ''])
     
-    # Detailed sections for each postposition
+    # Detailed sections for each postposition with 3 samples
     for postp, (gloss, meaning) in POSTPOSITIONS.items():
         examples = contexts[postp]
         lines.extend([
@@ -194,7 +236,7 @@ def generate_report(corpus_file: str) -> str:
         
         # Count by preceding word
         word_counts = defaultdict(int)
-        for noun, _, _, _ in examples:
+        for noun, _, _, _, _ in examples:
             word_counts[noun.lower()] += 1
         
         top_words = sorted(word_counts.items(), key=lambda x: -x[1])[:30]
@@ -202,24 +244,27 @@ def generate_report(corpus_file: str) -> str:
         lines.extend([
             '### Most frequent preceding words',
             '',
-            '| Word | Count | Sample |',
-            '|------|-------|--------|',
+            '| Word | Count | Sample 1 | Sample 2 | Sample 3 |',
+            '|------|-------|----------|----------|----------|',
         ])
         
-        # Get sample for each top word
+        # Get up to 3 samples for each top word
         samples = defaultdict(list)
-        for noun, verse_id, context, _ in examples:
-            if len(samples[noun.lower()]) < 1:
+        for noun, verse_id, context, form_type, full_word in examples:
+            if len(samples[noun.lower()]) < 3:
                 samples[noun.lower()].append((verse_id, context))
         
         for word, count in top_words:
             sample_list = samples.get(word, [])
-            if sample_list:
-                verse_id, context = sample_list[0]
-                sample = f'{format_verse_ref(verse_id)}: *{context}*'
-            else:
-                sample = '—'
-            lines.append(f'| {word} | {count} | {sample} |')
+            sample_cols = []
+            for j in range(3):
+                if j < len(sample_list):
+                    verse_id, context = sample_list[j]
+                    kjv_text = kjv.get(verse_id, '')[:60] + ('...' if len(kjv.get(verse_id, '')) > 60 else '')
+                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                else:
+                    sample_cols.append('—')
+            lines.append(f'| {word} | {count} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
         
         lines.extend(['', '---', ''])
     
@@ -227,11 +272,11 @@ def generate_report(corpus_file: str) -> str:
     lines.extend([
         '## Detailed Entries by Noun',
         '',
-        'For each noun, showing all attested postposition combinations.',
+        'For each noun, showing all attested postposition combinations with 3 samples each.',
         '',
     ])
     
-    for noun, total, postp_counts in top_nouns[:100]:
+    for noun, total_n, postp_counts in top_nouns[:100]:
         # Get gloss if it's a known noun
         gloss = NOUN_STEMS.get(noun, noun)
         
@@ -239,19 +284,22 @@ def generate_report(corpus_file: str) -> str:
             f'### {noun}',
             f'**Gloss**: {gloss}',
             '',
-            '| Postposition | Count | Sample |',
-            '|--------------|-------|--------|',
+            '| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |',
+            '|--------------|-------|----------|----------|----------|',
         ])
         
         for postp in ['pan', 'panin', 'tawh', 'tawhin']:
             examples_for_postp = by_noun[noun].get(postp, [])
             count = len(examples_for_postp)
-            if count > 0:
-                verse_id, context = examples_for_postp[0]
-                sample = f'{format_verse_ref(verse_id)}: *{context}*'
-            else:
-                sample = '—'
-            lines.append(f'| {postp} | {count} | {sample} |')
+            sample_cols = []
+            for j in range(3):
+                if j < len(examples_for_postp):
+                    verse_id, context, form_type, full_word = examples_for_postp[j]
+                    kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
+                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                else:
+                    sample_cols.append('—')
+            lines.append(f'| {postp} | {count} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
         
         lines.extend(['', '---', ''])
     
@@ -260,25 +308,23 @@ def generate_report(corpus_file: str) -> str:
 
 def main():
     corpus_file = str(Path(__file__).parent.parent / 'bibles' / 'extracted' / 'ctd' / 'ctd-x-bible.txt')
+    kjv_file = str(Path(__file__).parent.parent / 'data' / 'verses_aligned.tsv')
     
     import argparse
     parser = argparse.ArgumentParser(description='Generate postposition report')
-    parser.add_argument('--output', '-o', help='Output file (default: stdout)')
+    parser.add_argument('--output', '-o', help='Output file (default: docs/paradigms/postpositions.md)')
     args = parser.parse_args()
     
-    report = generate_report(corpus_file)
+    report = generate_report(corpus_file, kjv_file)
     
     if args.output:
         output_path = Path(args.output)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(report, encoding='utf-8')
-        print(f"Written to {output_path}", file=sys.stderr)
     else:
-        # Default output location
         output_path = Path(__file__).parent.parent / 'docs' / 'paradigms' / 'postpositions.md'
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(report, encoding='utf-8')
-        print(f"Written to {output_path}", file=sys.stderr)
+    
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(report, encoding='utf-8')
+    print(f"Written to {output_path}", file=sys.stderr)
 
 
 if __name__ == '__main__':
