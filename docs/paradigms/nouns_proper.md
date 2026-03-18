@@ -2,12 +2,15 @@
 
 ## Overview
 
-Proper nouns (biblical names) inflect for case like common nouns.
+Proper nouns (biblical names) inflect for case like common nouns (6 cases).
 Total proper nouns in system: 3750
 Attested in corpus: 218
 
 This report shows paradigms for proper nouns actually found in the Tedim Chin Bible.
 Proper nouns do not typically take plural marking.
+
+**Note on comitative:** The comitative marker *tawh* is a free postposition,
+not a case suffix. Tedim uses "David tawh" (with David) as two words.
 
 ---
 
@@ -17,44 +20,44 @@ Proper nouns do not typically take plural marking.
 
 | Rank | Stem | Gloss | Cases | Pattern |
 |------|------|-------|-------|---------|
-| 1 | [Adam](#adam-adam) | Adam | 3/8 | ABS+GEN+LOC |
-| 2 | [Asher](#asher-asher) | Asher | 3/8 | ABS+GEN+LOC |
-| 3 | [Dan](#dan-dan) | Dan | 3/8 | ABS+GEN+ERG |
-| 4 | [dan](#dan-dan) | dan | 3/8 | ABS+GEN+ERG |
-| 5 | [Efrath](#efrath-efrath) | Efrath | 3/8 | ABS+GEN+LOC |
-| 6 | [en](#en-en) | en | 3/8 | ABS+GEN+ERG |
-| 7 | [Gilo](#gilo-gilo) | Gilo | 3/8 | ABS+GEN+ERG |
-| 8 | [gilo](#gilo-gilo) | gilo | 3/8 | ABS+GEN+ERG |
-| 9 | [ham](#ham-ham) | ham | 3/8 | ABS+GEN+ERG |
-| 10 | [Joel](#joel-joel) | Joel | 3/8 | ABS+GEN+LOC |
-| 11 | [khun](#khun-khun) | khun | 3/8 | ABS+GEN+ERG |
-| 12 | [no](#no-no) | no | 3/8 | ABS+GEN+LOC |
-| 13 | [puah](#puah-puah) | puah | 3/8 | ABS+GEN+ERG |
-| 14 | [Aaron](#aaron-aaron) | Aaron | 2/8 | ABS+GEN |
-| 15 | [Abimelek](#abimelek-abimelek) | Abimelek | 2/8 | ABS+GEN |
-| 16 | [Abner](#abner-abner) | Abner | 2/8 | ABS+GEN |
-| 17 | [Abraham](#abraham-abraham) | Abraham | 2/8 | ABS+GEN |
-| 18 | [Abram](#abram-abram) | Abram | 2/8 | ABS+GEN |
-| 19 | [Absalom](#absalom-absalom) | Absalom | 2/8 | ABS+GEN |
-| 20 | [Ahab](#ahab-ahab) | Ahab | 2/8 | ABS+GEN |
-| 21 | [ai](#ai-ai) | ai | 2/8 | ABS+LOC |
-| 22 | [Ai](#ai-ai) | Ai | 2/8 | ABS+LOC |
-| 23 | [Ammon](#ammon-ammon) | Ammon | 2/8 | ABS+GEN |
-| 24 | [Amor](#amor-amor) | Amor | 2/8 | ABS+GEN |
-| 25 | [Amos](#amos-amos) | Amos | 2/8 | ABS+GEN |
-| 26 | [Andru](#andru-andru) | Andru | 2/8 | ABS+GEN |
-| 27 | [Apollos](#apollos-apollos) | Apollos | 2/8 | ABS+GEN |
-| 28 | [awle](#awle-awle) | awle | 2/8 | ABS+GEN |
-| 29 | [Babylon](#babylon-babylon) | Babylon | 2/8 | ABS+GEN |
-| 30 | [Barnabas](#barnabas-barnabas) | Barnabas | 2/8 | ABS+GEN |
+| 1 | [Adam](#adam-adam) | Adam | 3/6 | ABS+GEN+LOC |
+| 2 | [Asher](#asher-asher) | Asher | 3/6 | ABS+GEN+LOC |
+| 3 | [dan](#dan-dan) | dan | 3/6 | ABS+GEN+ERG |
+| 4 | [Dan](#dan-dan) | Dan | 3/6 | ABS+GEN+ERG |
+| 5 | [Efrath](#efrath-efrath) | Efrath | 3/6 | ABS+GEN+LOC |
+| 6 | [en](#en-en) | en | 3/6 | ABS+GEN+ERG |
+| 7 | [gilo](#gilo-gilo) | gilo | 3/6 | ABS+GEN+ERG |
+| 8 | [Gilo](#gilo-gilo) | Gilo | 3/6 | ABS+GEN+ERG |
+| 9 | [ham](#ham-ham) | ham | 3/6 | ABS+GEN+ERG |
+| 10 | [Joel](#joel-joel) | Joel | 3/6 | ABS+GEN+LOC |
+| 11 | [khun](#khun-khun) | khun | 3/6 | ABS+GEN+ERG |
+| 12 | [no](#no-no) | no | 3/6 | ABS+GEN+LOC |
+| 13 | [puah](#puah-puah) | puah | 3/6 | ABS+GEN+ERG |
+| 14 | [Aaron](#aaron-aaron) | Aaron | 2/6 | ABS+GEN |
+| 15 | [Abimelek](#abimelek-abimelek) | Abimelek | 2/6 | ABS+GEN |
+| 16 | [Abner](#abner-abner) | Abner | 2/6 | ABS+GEN |
+| 17 | [Abraham](#abraham-abraham) | Abraham | 2/6 | ABS+GEN |
+| 18 | [Abram](#abram-abram) | Abram | 2/6 | ABS+GEN |
+| 19 | [Absalom](#absalom-absalom) | Absalom | 2/6 | ABS+GEN |
+| 20 | [Ahab](#ahab-ahab) | Ahab | 2/6 | ABS+GEN |
+| 21 | [ai](#ai-ai) | ai | 2/6 | ABS+LOC |
+| 22 | [Ai](#ai-ai) | Ai | 2/6 | ABS+LOC |
+| 23 | [Ammon](#ammon-ammon) | Ammon | 2/6 | ABS+GEN |
+| 24 | [Amor](#amor-amor) | Amor | 2/6 | ABS+GEN |
+| 25 | [Amos](#amos-amos) | Amos | 2/6 | ABS+GEN |
+| 26 | [Andru](#andru-andru) | Andru | 2/6 | ABS+GEN |
+| 27 | [Apollos](#apollos-apollos) | Apollos | 2/6 | ABS+GEN |
+| 28 | [awle](#awle-awle) | awle | 2/6 | ABS+GEN |
+| 29 | [Babylon](#babylon-babylon) | Babylon | 2/6 | ABS+GEN |
+| 30 | [Barnabas](#barnabas-barnabas) | Barnabas | 2/6 | ABS+GEN |
 
 ### Distribution by Number of Cases Attested
 
 | Cases Attested | Count | Percentage |
 |----------------|-------|------------|
-| 3/8 cases | 13 | 6.0% |
-| 2/8 cases | 128 | 58.7% |
-| 1/8 cases | 77 | 35.3% |
+| 3/6 cases | 13 | 6.0% |
+| 2/6 cases | 128 | 58.7% |
+| 1/6 cases | 77 | 35.3% |
 
 ### Case Attestation Frequency
 
@@ -68,8 +71,6 @@ How many noun stems have each case attested:
 | LOC | 7 | 3.2% |
 | ABL | 0 | 0.0% |
 | ABL.ERG | 0 | 0.0% |
-| COM | 0 | 0.0% |
-| COM.ERG | 0 | 0.0% |
 
 ### Most Common Case Patterns
 
@@ -79,7 +80,7 @@ Nouns grouped by which cases they are attested in:
 |---------|-------|---------------|
 | ABS+GEN | 119 | Aaron, Abimelek, Abner, Abraham, Abram (+114 more) |
 | ABS | 77 | angkawmin, Annas, antak, Aquila, Assiria (+72 more) |
-| ABS+GEN+ERG | 8 | Dan, dan, en, Gilo, gilo (+3 more) |
+| ABS+GEN+ERG | 8 | dan, Dan, en, gilo, Gilo (+3 more) |
 | ABS+ERG | 7 | phut, sem, Sin, sin, suah (+2 more) |
 | ABS+GEN+LOC | 5 | Adam, Asher, Efrath, Joel, no |
 | ABS+LOC | 2 | ai, Ai |
@@ -98,8 +99,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Aaronah | — |
 | Ablative | Aaronpan | — |
 | Ablative-Ergative | Aaronpanin | — |
-| Comitative | Aarontawh | — |
-| Comitative-Ergative | Aarontawhin | — |
 
 ---
 
@@ -113,8 +112,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Abimelekah | — |
 | Ablative | Abimelekpan | — |
 | Ablative-Ergative | Abimelekpanin | — |
-| Comitative | Abimelektawh | — |
-| Comitative-Ergative | Abimelektawhin | — |
 
 ---
 
@@ -128,8 +125,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Abnerah | — |
 | Ablative | Abnerpan | — |
 | Ablative-Ergative | Abnerpanin | — |
-| Comitative | Abnertawh | — |
-| Comitative-Ergative | Abnertawhin | — |
 
 ---
 
@@ -143,8 +138,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Abrahamah | — |
 | Ablative | Abrahampan | — |
 | Ablative-Ergative | Abrahampanin | — |
-| Comitative | Abrahamtawh | — |
-| Comitative-Ergative | Abrahamtawhin | — |
 
 ---
 
@@ -158,8 +151,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Abramah | — |
 | Ablative | Abrampan | — |
 | Ablative-Ergative | Abrampanin | — |
-| Comitative | Abramtawh | — |
-| Comitative-Ergative | Abramtawhin | — |
 
 ---
 
@@ -173,8 +164,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Absalomah | — |
 | Ablative | Absalompan | — |
 | Ablative-Ergative | Absalompanin | — |
-| Comitative | Absalomtawh | — |
-| Comitative-Ergative | Absalomtawhin | — |
 
 ---
 
@@ -188,8 +177,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Adamah | Jos 19:36 |
 | Ablative | Adampan | — |
 | Ablative-Ergative | Adampanin | — |
-| Comitative | Adamtawh | — |
-| Comitative-Ergative | Adamtawhin | — |
 
 ---
 
@@ -203,8 +190,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Ahabah | — |
 | Ablative | Ahabpan | — |
 | Ablative-Ergative | Ahabpanin | — |
-| Comitative | Ahabtawh | — |
-| Comitative-Ergative | Ahabtawhin | — |
 
 ---
 
@@ -218,8 +203,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | aiah | 1Ch 1:40 |
 | Ablative | aipan | — |
 | Ablative-Ergative | aipanin | — |
-| Comitative | aitawh | — |
-| Comitative-Ergative | aitawhin | — |
 
 ---
 
@@ -233,8 +216,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Aiah | 1Ch 1:40 |
 | Ablative | Aipan | — |
 | Ablative-Ergative | Aipanin | — |
-| Comitative | Aitawh | — |
-| Comitative-Ergative | Aitawhin | — |
 
 ---
 
@@ -248,8 +229,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Ammonah | — |
 | Ablative | Ammonpan | — |
 | Ablative-Ergative | Ammonpanin | — |
-| Comitative | Ammontawh | — |
-| Comitative-Ergative | Ammontawhin | — |
 
 ---
 
@@ -263,8 +242,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Amorah | — |
 | Ablative | Amorpan | — |
 | Ablative-Ergative | Amorpanin | — |
-| Comitative | Amortawh | — |
-| Comitative-Ergative | Amortawhin | — |
 
 ---
 
@@ -278,8 +255,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Amosah | — |
 | Ablative | Amospan | — |
 | Ablative-Ergative | Amospanin | — |
-| Comitative | Amostawh | — |
-| Comitative-Ergative | Amostawhin | — |
 
 ---
 
@@ -293,8 +268,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Andruah | — |
 | Ablative | Andrupan | — |
 | Ablative-Ergative | Andrupanin | — |
-| Comitative | Andrutawh | — |
-| Comitative-Ergative | Andrutawhin | — |
 
 ---
 
@@ -308,8 +281,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | angkawminah | — |
 | Ablative | angkawminpan | — |
 | Ablative-Ergative | angkawminpanin | — |
-| Comitative | angkawmintawh | — |
-| Comitative-Ergative | angkawmintawhin | — |
 
 ---
 
@@ -323,8 +294,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Annasah | — |
 | Ablative | Annaspan | — |
 | Ablative-Ergative | Annaspanin | — |
-| Comitative | Annastawh | — |
-| Comitative-Ergative | Annastawhin | — |
 
 ---
 
@@ -338,8 +307,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | antakah | — |
 | Ablative | antakpan | — |
 | Ablative-Ergative | antakpanin | — |
-| Comitative | antaktawh | — |
-| Comitative-Ergative | antaktawhin | — |
 
 ---
 
@@ -353,8 +320,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Apollosah | — |
 | Ablative | Apollospan | — |
 | Ablative-Ergative | Apollospanin | — |
-| Comitative | Apollostawh | — |
-| Comitative-Ergative | Apollostawhin | — |
 
 ---
 
@@ -368,8 +333,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Aquilaah | — |
 | Ablative | Aquilapan | — |
 | Ablative-Ergative | Aquilapanin | — |
-| Comitative | Aquilatawh | — |
-| Comitative-Ergative | Aquilatawhin | — |
 
 ---
 
@@ -383,8 +346,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Asherah | Exo 34:13, Deu 7:5, Deu 12:3 (+2) |
 | Ablative | Asherpan | — |
 | Ablative-Ergative | Asherpanin | — |
-| Comitative | Ashertawh | — |
-| Comitative-Ergative | Ashertawhin | — |
 
 ---
 
@@ -398,8 +359,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Assiriaah | — |
 | Ablative | Assiriapan | — |
 | Ablative-Ergative | Assiriapanin | — |
-| Comitative | Assiriatawh | — |
-| Comitative-Ergative | Assiriatawhin | — |
 
 ---
 
@@ -413,8 +372,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | awleah | — |
 | Ablative | awlepan | — |
 | Ablative-Ergative | awlepanin | — |
-| Comitative | awletawh | — |
-| Comitative-Ergative | awletawhin | — |
 
 ---
 
@@ -428,8 +385,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Babylonah | — |
 | Ablative | Babylonpan | — |
 | Ablative-Ergative | Babylonpanin | — |
-| Comitative | Babylontawh | — |
-| Comitative-Ergative | Babylontawhin | — |
 
 ---
 
@@ -443,8 +398,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bangciaah | — |
 | Ablative | bangciapan | — |
 | Ablative-Ergative | bangciapanin | — |
-| Comitative | bangciatawh | — |
-| Comitative-Ergative | bangciatawhin | — |
 
 ---
 
@@ -458,8 +411,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Barnabasah | — |
 | Ablative | Barnabaspan | — |
 | Ablative-Ergative | Barnabaspanin | — |
-| Comitative | Barnabastawh | — |
-| Comitative-Ergative | Barnabastawhin | — |
 
 ---
 
@@ -473,8 +424,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Bartholomewah | — |
 | Ablative | Bartholomewpan | — |
 | Ablative-Ergative | Bartholomewpanin | — |
-| Comitative | Bartholomewtawh | — |
-| Comitative-Ergative | Bartholomewtawhin | — |
 
 ---
 
@@ -488,8 +437,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | belaah | — |
 | Ablative | belapan | — |
 | Ablative-Ergative | belapanin | — |
-| Comitative | belatawh | — |
-| Comitative-Ergative | belatawhin | — |
 
 ---
 
@@ -503,8 +450,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Belshazzarah | — |
 | Ablative | Belshazzarpan | — |
 | Ablative-Ergative | Belshazzarpanin | — |
-| Comitative | Belshazzartawh | — |
-| Comitative-Ergative | Belshazzartawhin | — |
 
 ---
 
@@ -518,8 +463,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Benjaminah | — |
 | Ablative | Benjaminpan | — |
 | Ablative-Ergative | Benjaminpanin | — |
-| Comitative | Benjamintawh | — |
-| Comitative-Ergative | Benjamintawhin | — |
 
 ---
 
@@ -533,8 +476,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Bereaah | — |
 | Ablative | Bereapan | — |
 | Ablative-Ergative | Bereapanin | — |
-| Comitative | Bereatawh | — |
-| Comitative-Ergative | Bereatawhin | — |
 
 ---
 
@@ -548,8 +489,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | besanah | — |
 | Ablative | besanpan | — |
 | Ablative-Ergative | besanpanin | — |
-| Comitative | besantawh | — |
-| Comitative-Ergative | besantawhin | — |
 
 ---
 
@@ -563,8 +502,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Bethelah | — |
 | Ablative | Bethelpan | — |
 | Ablative-Ergative | Bethelpanin | — |
-| Comitative | Betheltawh | — |
-| Comitative-Ergative | Betheltawhin | — |
 
 ---
 
@@ -578,8 +515,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Bethlehemah | — |
 | Ablative | Bethlehempan | — |
 | Ablative-Ergative | Bethlehempanin | — |
-| Comitative | Bethlehemtawh | — |
-| Comitative-Ergative | Bethlehemtawhin | — |
 
 ---
 
@@ -593,8 +528,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Boazah | — |
 | Ablative | Boazpan | — |
 | Ablative-Ergative | Boazpanin | — |
-| Comitative | Boaztawh | — |
-| Comitative-Ergative | Boaztawhin | — |
 
 ---
 
@@ -608,8 +541,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ciktuiteah | — |
 | Ablative | ciktuitepan | — |
 | Ablative-Ergative | ciktuitepanin | — |
-| Comitative | ciktuitetawh | — |
-| Comitative-Ergative | ciktuitetawhin | — |
 
 ---
 
@@ -623,23 +554,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Damaskasah | — |
 | Ablative | Damaskaspan | — |
 | Ablative-Ergative | Damaskaspanin | — |
-| Comitative | Damaskastawh | — |
-| Comitative-Ergative | Damaskastawhin | — |
-
----
-
-## Dan
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Dan | Gen 6:15, Gen 9:5, Gen 14:14 (+2) |
-| Genitive | Dan' | Gen 46:23, Num 2:17 |
-| Ergative | Danin | Lev 25:54, Num 16:29, Deu 19:3 (+2) |
-| Locative | Danah | — |
-| Ablative | Danpan | — |
-| Ablative-Ergative | Danpanin | — |
-| Comitative | Dantawh | — |
-| Comitative-Ergative | Dantawhin | — |
 
 ---
 
@@ -653,8 +567,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | danah | — |
 | Ablative | danpan | — |
 | Ablative-Ergative | danpanin | — |
-| Comitative | dantawh | — |
-| Comitative-Ergative | dantawhin | — |
+
+---
+
+## Dan
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Dan | Gen 6:15, Gen 9:5, Gen 14:14 (+2) |
+| Genitive | Dan' | Gen 46:23, Num 2:17 |
+| Ergative | Danin | Lev 25:54, Num 16:29, Deu 19:3 (+2) |
+| Locative | Danah | — |
+| Ablative | Danpan | — |
+| Ablative-Ergative | Danpanin | — |
 
 ---
 
@@ -668,8 +593,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Danielah | — |
 | Ablative | Danielpan | — |
 | Ablative-Ergative | Danielpanin | — |
-| Comitative | Danieltawh | — |
-| Comitative-Ergative | Danieltawhin | — |
 
 ---
 
@@ -683,8 +606,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Davidah | — |
 | Ablative | Davidpan | — |
 | Ablative-Ergative | Davidpanin | — |
-| Comitative | Davidtawh | — |
-| Comitative-Ergative | Davidtawhin | — |
 
 ---
 
@@ -698,8 +619,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | dumahah | — |
 | Ablative | dumahpan | — |
 | Ablative-Ergative | dumahpanin | — |
-| Comitative | dumahtawh | — |
-| Comitative-Ergative | dumahtawhin | — |
 
 ---
 
@@ -713,8 +632,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Edomah | — |
 | Ablative | Edompan | — |
 | Ablative-Ergative | Edompanin | — |
-| Comitative | Edomtawh | — |
-| Comitative-Ergative | Edomtawhin | — |
 
 ---
 
@@ -728,8 +645,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Efraimah | — |
 | Ablative | Efraimpan | — |
 | Ablative-Ergative | Efraimpanin | — |
-| Comitative | Efraimtawh | — |
-| Comitative-Ergative | Efraimtawhin | — |
 
 ---
 
@@ -743,8 +658,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Efrathah | Rut 1:2, 1Sa 17:12, Mic 5:2 |
 | Ablative | Efrathpan | — |
 | Ablative-Ergative | Efrathpanin | — |
-| Comitative | Efrathtawh | — |
-| Comitative-Ergative | Efrathtawhin | — |
 
 ---
 
@@ -758,8 +671,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Egyptah | — |
 | Ablative | Egyptpan | — |
 | Ablative-Ergative | Egyptpanin | — |
-| Comitative | Egypttawh | — |
-| Comitative-Ergative | Egypttawhin | — |
 
 ---
 
@@ -773,8 +684,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Eliah | — |
 | Ablative | Elipan | — |
 | Ablative-Ergative | Elipanin | — |
-| Comitative | Elitawh | — |
-| Comitative-Ergative | Elitawhin | — |
 
 ---
 
@@ -788,8 +697,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Elijahah | — |
 | Ablative | Elijahpan | — |
 | Ablative-Ergative | Elijahpanin | — |
-| Comitative | Elijahtawh | — |
-| Comitative-Ergative | Elijahtawhin | — |
 
 ---
 
@@ -803,8 +710,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Elishaah | — |
 | Ablative | Elishapan | — |
 | Ablative-Ergative | Elishapanin | — |
-| Comitative | Elishatawh | — |
-| Comitative-Ergative | Elishatawhin | — |
 
 ---
 
@@ -818,8 +723,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | elnaah | — |
 | Ablative | elnapan | — |
 | Ablative-Ergative | elnapanin | — |
-| Comitative | elnatawh | — |
-| Comitative-Ergative | elnatawhin | — |
 
 ---
 
@@ -833,8 +736,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | enah | — |
 | Ablative | enpan | — |
 | Ablative-Ergative | enpanin | — |
-| Comitative | entawh | — |
-| Comitative-Ergative | entawhin | — |
 
 ---
 
@@ -848,8 +749,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Esauah | — |
 | Ablative | Esaupan | — |
 | Ablative-Ergative | Esaupanin | — |
-| Comitative | Esautawh | — |
-| Comitative-Ergative | Esautawhin | — |
 
 ---
 
@@ -863,8 +762,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Ethiopiaah | — |
 | Ablative | Ethiopiapan | — |
 | Ablative-Ergative | Ethiopiapanin | — |
-| Comitative | Ethiopiatawh | — |
-| Comitative-Ergative | Ethiopiatawhin | — |
 
 ---
 
@@ -878,8 +775,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Eveah | — |
 | Ablative | Evepan | — |
 | Ablative-Ergative | Evepanin | — |
-| Comitative | Evetawh | — |
-| Comitative-Ergative | Evetawhin | — |
 
 ---
 
@@ -893,8 +788,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Ezekielah | — |
 | Ablative | Ezekielpan | — |
 | Ablative-Ergative | Ezekielpanin | — |
-| Comitative | Ezekieltawh | — |
-| Comitative-Ergative | Ezekieltawhin | — |
 
 ---
 
@@ -908,8 +801,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Farisiah | — |
 | Ablative | Farisipan | — |
 | Ablative-Ergative | Farisipanin | — |
-| Comitative | Farisitawh | — |
-| Comitative-Ergative | Farisitawhin | — |
 
 ---
 
@@ -923,8 +814,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Faroah | — |
 | Ablative | Faropan | — |
 | Ablative-Ergative | Faropanin | — |
-| Comitative | Farotawh | — |
-| Comitative-Ergative | Farotawhin | — |
 
 ---
 
@@ -938,8 +827,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Filistiaah | — |
 | Ablative | Filistiapan | — |
 | Ablative-Ergative | Filistiapanin | — |
-| Comitative | Filistiatawh | — |
-| Comitative-Ergative | Filistiatawhin | — |
 
 ---
 
@@ -953,8 +840,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Gadah | — |
 | Ablative | Gadpan | — |
 | Ablative-Ergative | Gadpanin | — |
-| Comitative | Gadtawh | — |
-| Comitative-Ergative | Gadtawhin | — |
 
 ---
 
@@ -968,8 +853,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Galatiaah | — |
 | Ablative | Galatiapan | — |
 | Ablative-Ergative | Galatiapanin | — |
-| Comitative | Galatiatawh | — |
-| Comitative-Ergative | Galatiatawhin | — |
 
 ---
 
@@ -983,8 +866,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Galileeah | — |
 | Ablative | Galileepan | — |
 | Ablative-Ergative | Galileepanin | — |
-| Comitative | Galileetawh | — |
-| Comitative-Ergative | Galileetawhin | — |
 
 ---
 
@@ -998,8 +879,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Gentailah | — |
 | Ablative | Gentailpan | — |
 | Ablative-Ergative | Gentailpanin | — |
-| Comitative | Gentailtawh | — |
-| Comitative-Ergative | Gentailtawhin | — |
 
 ---
 
@@ -1013,8 +892,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Gershonah | — |
 | Ablative | Gershonpan | — |
 | Ablative-Ergative | Gershonpanin | — |
-| Comitative | Gershontawh | — |
-| Comitative-Ergative | Gershontawhin | — |
 
 ---
 
@@ -1028,8 +905,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Giahah | — |
 | Ablative | Giahpan | — |
 | Ablative-Ergative | Giahpanin | — |
-| Comitative | Giahtawh | — |
-| Comitative-Ergative | Giahtawhin | — |
 
 ---
 
@@ -1043,8 +918,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | giahah | — |
 | Ablative | giahpan | — |
 | Ablative-Ergative | giahpanin | — |
-| Comitative | giahtawh | — |
-| Comitative-Ergative | giahtawhin | — |
 
 ---
 
@@ -1058,8 +931,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Gideonah | — |
 | Ablative | Gideonpan | — |
 | Ablative-Ergative | Gideonpanin | — |
-| Comitative | Gideontawh | — |
-| Comitative-Ergative | Gideontawhin | — |
 
 ---
 
@@ -1073,23 +944,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Gileadah | — |
 | Ablative | Gileadpan | — |
 | Ablative-Ergative | Gileadpanin | — |
-| Comitative | Gileadtawh | — |
-| Comitative-Ergative | Gileadtawhin | — |
-
----
-
-## Gilo
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Gilo | Exo 23:7, Num 14:35, 1Sa 16:14 (+2) |
-| Genitive | Gilo' | Isa 11:8, Mat 6:13 |
-| Ergative | Giloin | Job 34:10, Psa 10:15, Mat 12:39 (+2) |
-| Locative | Giloah | — |
-| Ablative | Gilopan | — |
-| Ablative-Ergative | Gilopanin | — |
-| Comitative | Gilotawh | — |
-| Comitative-Ergative | Gilotawhin | — |
 
 ---
 
@@ -1103,8 +957,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | giloah | — |
 | Ablative | gilopan | — |
 | Ablative-Ergative | gilopanin | — |
-| Comitative | gilotawh | — |
-| Comitative-Ergative | gilotawhin | — |
+
+---
+
+## Gilo
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Gilo | Exo 23:7, Num 14:35, 1Sa 16:14 (+2) |
+| Genitive | Gilo' | Isa 11:8, Mat 6:13 |
+| Ergative | Giloin | Job 34:10, Psa 10:15, Mat 12:39 (+2) |
+| Locative | Giloah | — |
+| Ablative | Gilopan | — |
+| Ablative-Ergative | Gilopanin | — |
 
 ---
 
@@ -1118,8 +983,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Gilohah | — |
 | Ablative | Gilohpan | — |
 | Ablative-Ergative | Gilohpanin | — |
-| Comitative | Gilohtawh | — |
-| Comitative-Ergative | Gilohtawhin | — |
 
 ---
 
@@ -1133,8 +996,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Gilopaah | — |
 | Ablative | Gilopapan | — |
 | Ablative-Ergative | Gilopapanin | — |
-| Comitative | Gilopatawh | — |
-| Comitative-Ergative | Gilopatawhin | — |
 
 ---
 
@@ -1148,8 +1009,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | githaah | — |
 | Ablative | githapan | — |
 | Ablative-Ergative | githapanin | — |
-| Comitative | githatawh | — |
-| Comitative-Ergative | githatawhin | — |
 
 ---
 
@@ -1163,8 +1022,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Habakkukah | — |
 | Ablative | Habakkukpan | — |
 | Ablative-Ergative | Habakkukpanin | — |
-| Comitative | Habakkuktawh | — |
-| Comitative-Ergative | Habakkuktawhin | — |
 
 ---
 
@@ -1178,8 +1035,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Haggaiah | — |
 | Ablative | Haggaipan | — |
 | Ablative-Ergative | Haggaipanin | — |
-| Comitative | Haggaitawh | — |
-| Comitative-Ergative | Haggaitawhin | — |
 
 ---
 
@@ -1193,8 +1048,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hamah | — |
 | Ablative | hampan | — |
 | Ablative-Ergative | hampanin | — |
-| Comitative | hamtawh | — |
-| Comitative-Ergative | hamtawhin | — |
 
 ---
 
@@ -1208,8 +1061,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Hebronah | — |
 | Ablative | Hebronpan | — |
 | Ablative-Ergative | Hebronpanin | — |
-| Comitative | Hebrontawh | — |
-| Comitative-Ergative | Hebrontawhin | — |
 
 ---
 
@@ -1223,8 +1074,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Herodah | — |
 | Ablative | Herodpan | — |
 | Ablative-Ergative | Herodpanin | — |
-| Comitative | Herodtawh | — |
-| Comitative-Ergative | Herodtawhin | — |
 
 ---
 
@@ -1238,8 +1087,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Hezekiahah | — |
 | Ablative | Hezekiahpan | — |
 | Ablative-Ergative | Hezekiahpanin | — |
-| Comitative | Hezekiahtawh | — |
-| Comitative-Ergative | Hezekiahtawhin | — |
 
 ---
 
@@ -1253,8 +1100,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Horebah | — |
 | Ablative | Horebpan | — |
 | Ablative-Ergative | Horebpanin | — |
-| Comitative | Horebtawh | — |
-| Comitative-Ergative | Horebtawhin | — |
 
 ---
 
@@ -1268,8 +1113,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Horiah | — |
 | Ablative | Horipan | — |
 | Ablative-Ergative | Horipanin | — |
-| Comitative | Horitawh | — |
-| Comitative-Ergative | Horitawhin | — |
 
 ---
 
@@ -1283,8 +1126,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Horonaimah | — |
 | Ablative | Horonaimpan | — |
 | Ablative-Ergative | Horonaimpanin | — |
-| Comitative | Horonaimtawh | — |
-| Comitative-Ergative | Horonaimtawhin | — |
 
 ---
 
@@ -1298,8 +1139,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Hoseaah | — |
 | Ablative | Hoseapan | — |
 | Ablative-Ergative | Hoseapanin | — |
-| Comitative | Hoseatawh | — |
-| Comitative-Ergative | Hoseatawhin | — |
 
 ---
 
@@ -1313,8 +1152,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Isaacah | — |
 | Ablative | Isaacpan | — |
 | Ablative-Ergative | Isaacpanin | — |
-| Comitative | Isaactawh | — |
-| Comitative-Ergative | Isaactawhin | — |
 
 ---
 
@@ -1328,8 +1165,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Isaiahah | — |
 | Ablative | Isaiahpan | — |
 | Ablative-Ergative | Isaiahpanin | — |
-| Comitative | Isaiahtawh | — |
-| Comitative-Ergative | Isaiahtawhin | — |
 
 ---
 
@@ -1343,8 +1178,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Ishmaelah | — |
 | Ablative | Ishmaelpan | — |
 | Ablative-Ergative | Ishmaelpanin | — |
-| Comitative | Ishmaeltawh | — |
-| Comitative-Ergative | Ishmaeltawhin | — |
 
 ---
 
@@ -1358,8 +1191,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Israelah | — |
 | Ablative | Israelpan | — |
 | Ablative-Ergative | Israelpanin | — |
-| Comitative | Israeltawh | — |
-| Comitative-Ergative | Israeltawhin | — |
 
 ---
 
@@ -1373,8 +1204,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Issakharah | — |
 | Ablative | Issakharpan | — |
 | Ablative-Ergative | Issakharpanin | — |
-| Comitative | Issakhartawh | — |
-| Comitative-Ergative | Issakhartawhin | — |
 
 ---
 
@@ -1388,8 +1217,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jakobah | — |
 | Ablative | Jakobpan | — |
 | Ablative-Ergative | Jakobpanin | — |
-| Comitative | Jakobtawh | — |
-| Comitative-Ergative | Jakobtawhin | — |
 
 ---
 
@@ -1403,8 +1230,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jamesah | — |
 | Ablative | Jamespan | — |
 | Ablative-Ergative | Jamespanin | — |
-| Comitative | Jamestawh | — |
-| Comitative-Ergative | Jamestawhin | — |
 
 ---
 
@@ -1418,8 +1243,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jehoshafatah | — |
 | Ablative | Jehoshafatpan | — |
 | Ablative-Ergative | Jehoshafatpanin | — |
-| Comitative | Jehoshafattawh | — |
-| Comitative-Ergative | Jehoshafattawhin | — |
 
 ---
 
@@ -1433,8 +1256,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jeremiahah | — |
 | Ablative | Jeremiahpan | — |
 | Ablative-Ergative | Jeremiahpanin | — |
-| Comitative | Jeremiahtawh | — |
-| Comitative-Ergative | Jeremiahtawhin | — |
 
 ---
 
@@ -1448,8 +1269,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jeroboamah | — |
 | Ablative | Jeroboampan | — |
 | Ablative-Ergative | Jeroboampanin | — |
-| Comitative | Jeroboamtawh | — |
-| Comitative-Ergative | Jeroboamtawhin | — |
 
 ---
 
@@ -1463,8 +1282,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jerusalemah | — |
 | Ablative | Jerusalempan | — |
 | Ablative-Ergative | Jerusalempanin | — |
-| Comitative | Jerusalemtawh | — |
-| Comitative-Ergative | Jerusalemtawhin | — |
 
 ---
 
@@ -1478,8 +1295,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jesuhah | — |
 | Ablative | Jesuhpan | — |
 | Ablative-Ergative | Jesuhpanin | — |
-| Comitative | Jesuhtawh | — |
-| Comitative-Ergative | Jesuhtawhin | — |
 
 ---
 
@@ -1493,8 +1308,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jewah | — |
 | Ablative | Jewpan | — |
 | Ablative-Ergative | Jewpanin | — |
-| Comitative | Jewtawh | — |
-| Comitative-Ergative | Jewtawhin | — |
 
 ---
 
@@ -1508,8 +1321,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Joabah | — |
 | Ablative | Joabpan | — |
 | Ablative-Ergative | Joabpanin | — |
-| Comitative | Joabtawh | — |
-| Comitative-Ergative | Joabtawhin | — |
 
 ---
 
@@ -1523,8 +1334,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jobah | — |
 | Ablative | Jobpan | — |
 | Ablative-Ergative | Jobpanin | — |
-| Comitative | Jobtawh | — |
-| Comitative-Ergative | Jobtawhin | — |
 
 ---
 
@@ -1538,8 +1347,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Joelah | 1Ch 12:7 |
 | Ablative | Joelpan | — |
 | Ablative-Ergative | Joelpanin | — |
-| Comitative | Joeltawh | — |
-| Comitative-Ergative | Joeltawhin | — |
 
 ---
 
@@ -1553,8 +1360,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Johanah | — |
 | Ablative | Johanpan | — |
 | Ablative-Ergative | Johanpanin | — |
-| Comitative | Johantawh | — |
-| Comitative-Ergative | Johantawhin | — |
 
 ---
 
@@ -1568,8 +1373,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jonahah | — |
 | Ablative | Jonahpan | — |
 | Ablative-Ergative | Jonahpanin | — |
-| Comitative | Jonahtawh | — |
-| Comitative-Ergative | Jonahtawhin | — |
 
 ---
 
@@ -1583,8 +1386,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jonathanah | — |
 | Ablative | Jonathanpan | — |
 | Ablative-Ergative | Jonathanpanin | — |
-| Comitative | Jonathantawh | — |
-| Comitative-Ergative | Jonathantawhin | — |
 
 ---
 
@@ -1598,8 +1399,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Jordanah | — |
 | Ablative | Jordanpan | — |
 | Ablative-Ergative | Jordanpanin | — |
-| Comitative | Jordantawh | — |
-| Comitative-Ergative | Jordantawhin | — |
 
 ---
 
@@ -1613,8 +1412,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Josefah | — |
 | Ablative | Josefpan | — |
 | Ablative-Ergative | Josefpanin | — |
-| Comitative | Joseftawh | — |
-| Comitative-Ergative | Joseftawhin | — |
 
 ---
 
@@ -1628,8 +1425,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Joshuaah | — |
 | Ablative | Joshuapan | — |
 | Ablative-Ergative | Joshuapanin | — |
-| Comitative | Joshuatawh | — |
-| Comitative-Ergative | Joshuatawhin | — |
 
 ---
 
@@ -1643,8 +1438,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Josiahah | — |
 | Ablative | Josiahpan | — |
 | Ablative-Ergative | Josiahpanin | — |
-| Comitative | Josiahtawh | — |
-| Comitative-Ergative | Josiahtawhin | — |
 
 ---
 
@@ -1658,8 +1451,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Judahah | — |
 | Ablative | Judahpan | — |
 | Ablative-Ergative | Judahpanin | — |
-| Comitative | Judahtawh | — |
-| Comitative-Ergative | Judahtawhin | — |
 
 ---
 
@@ -1673,8 +1464,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Judasah | — |
 | Ablative | Judaspan | — |
 | Ablative-Ergative | Judaspanin | — |
-| Comitative | Judastawh | — |
-| Comitative-Ergative | Judastawhin | — |
 
 ---
 
@@ -1688,8 +1477,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Judeaah | — |
 | Ablative | Judeapan | — |
 | Ablative-Ergative | Judeapanin | — |
-| Comitative | Judeatawh | — |
-| Comitative-Ergative | Judeatawhin | — |
 
 ---
 
@@ -1703,8 +1490,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Kanaanah | — |
 | Ablative | Kanaanpan | — |
 | Ablative-Ergative | Kanaanpanin | — |
-| Comitative | Kanaantawh | — |
-| Comitative-Ergative | Kanaantawhin | — |
 
 ---
 
@@ -1718,8 +1503,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Kapernaumah | — |
 | Ablative | Kapernaumpan | — |
 | Ablative-Ergative | Kapernaumpanin | — |
-| Comitative | Kapernaumtawh | — |
-| Comitative-Ergative | Kapernaumtawhin | — |
 
 ---
 
@@ -1733,8 +1516,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khadetah | — |
 | Ablative | khadetpan | — |
 | Ablative-Ergative | khadetpanin | — |
-| Comitative | khadettawh | — |
-| Comitative-Ergative | khadettawhin | — |
 
 ---
 
@@ -1748,23 +1529,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Khaldeaah | — |
 | Ablative | Khaldeapan | — |
 | Ablative-Ergative | Khaldeapanin | — |
-| Comitative | Khaldeatawh | — |
-| Comitative-Ergative | Khaldeatawhin | — |
-
----
-
-## kherub
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | kherub | Exo 25:18, Exo 25:19, Exo 25:19 (+2) |
-| Genitive | kherub' | 1Ki 6:27 |
-| Ergative | kherubin | — |
-| Locative | kherubah | — |
-| Ablative | kherubpan | — |
-| Ablative-Ergative | kherubpanin | — |
-| Comitative | kherubtawh | — |
-| Comitative-Ergative | kherubtawhin | — |
 
 ---
 
@@ -1778,8 +1542,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | Kherubah | — |
 | Ablative | Kherubpan | — |
 | Ablative-Ergative | Kherubpanin | — |
-| Comitative | Kherubtawh | — |
-| Comitative-Ergative | Kherubtawhin | — |
+
+---
+
+## kherub
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | kherub | Exo 25:18, Exo 25:19, Exo 25:19 (+2) |
+| Genitive | kherub' | 1Ki 6:27 |
+| Ergative | kherubin | — |
+| Locative | kherubah | — |
+| Ablative | kherubpan | — |
+| Ablative-Ergative | kherubpanin | — |
 
 ---
 
@@ -1793,8 +1568,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Khrihah | — |
 | Ablative | Khrihpan | — |
 | Ablative-Ergative | Khrihpanin | — |
-| Comitative | Khrihtawh | — |
-| Comitative-Ergative | Khrihtawhin | — |
 
 ---
 
@@ -1808,8 +1581,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khrisopraseah | — |
 | Ablative | khrisoprasepan | — |
 | Ablative-Ergative | khrisoprasepanin | — |
-| Comitative | khrisoprasetawh | — |
-| Comitative-Ergative | khrisoprasetawhin | — |
 
 ---
 
@@ -1823,8 +1594,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khunah | — |
 | Ablative | khunpan | — |
 | Ablative-Ergative | khunpanin | — |
-| Comitative | khuntawh | — |
-| Comitative-Ergative | khuntawhin | — |
 
 ---
 
@@ -1838,8 +1607,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Kishonah | — |
 | Ablative | Kishonpan | — |
 | Ablative-Ergative | Kishonpanin | — |
-| Comitative | Kishontawh | — |
-| Comitative-Ergative | Kishontawhin | — |
 
 ---
 
@@ -1853,8 +1620,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Kohathah | — |
 | Ablative | Kohathpan | — |
 | Ablative-Ergative | Kohathpanin | — |
-| Comitative | Kohathtawh | — |
-| Comitative-Ergative | Kohathtawhin | — |
 
 ---
 
@@ -1868,8 +1633,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | konaah | — |
 | Ablative | konapan | — |
 | Ablative-Ergative | konapanin | — |
-| Comitative | konatawh | — |
-| Comitative-Ergative | konatawhin | — |
 
 ---
 
@@ -1883,8 +1646,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Korahah | — |
 | Ablative | Korahpan | — |
 | Ablative-Ergative | Korahpanin | — |
-| Comitative | Korahtawh | — |
-| Comitative-Ergative | Korahtawhin | — |
 
 ---
 
@@ -1898,8 +1659,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | korbanah | — |
 | Ablative | korbanpan | — |
 | Ablative-Ergative | korbanpanin | — |
-| Comitative | korbantawh | — |
-| Comitative-Ergative | korbantawhin | — |
 
 ---
 
@@ -1913,8 +1672,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Leahah | — |
 | Ablative | Leahpan | — |
 | Ablative-Ergative | Leahpanin | — |
-| Comitative | Leahtawh | — |
-| Comitative-Ergative | Leahtawhin | — |
 
 ---
 
@@ -1928,8 +1685,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Lebanonah | — |
 | Ablative | Lebanonpan | — |
 | Ablative-Ergative | Lebanonpanin | — |
-| Comitative | Lebanontawh | — |
-| Comitative-Ergative | Lebanontawhin | — |
 
 ---
 
@@ -1943,8 +1698,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Leviah | — |
 | Ablative | Levipan | — |
 | Ablative-Ergative | Levipanin | — |
-| Comitative | Levitawh | — |
-| Comitative-Ergative | Levitawhin | — |
 
 ---
 
@@ -1958,23 +1711,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Libyaah | — |
 | Ablative | Libyapan | — |
 | Ablative-Ergative | Libyapanin | — |
-| Comitative | Libyatawh | — |
-| Comitative-Ergative | Libyatawhin | — |
-
----
-
-## lot
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | lot | Gen 11:31, Gen 12:4, Gen 12:5 (+2) |
-| Genitive | lot' | Gen 11:27, Gen 13:7, Gen 13:8 (+2) |
-| Ergative | lotin | — |
-| Locative | lotah | — |
-| Ablative | lotpan | — |
-| Ablative-Ergative | lotpanin | — |
-| Comitative | lottawh | — |
-| Comitative-Ergative | lottawhin | — |
 
 ---
 
@@ -1988,23 +1724,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | Lotah | — |
 | Ablative | Lotpan | — |
 | Ablative-Ergative | Lotpanin | — |
-| Comitative | Lottawh | — |
-| Comitative-Ergative | Lottawhin | — |
 
 ---
 
-## lungdamna
+## lot
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | lungdamna | Gen 31:27, Deu 28:47, Jdg 8:35 (+2) |
-| Genitive | lungdamna' | — |
-| Ergative | lungdamnain | — |
-| Locative | lungdamnaah | — |
-| Ablative | lungdamnapan | — |
-| Ablative-Ergative | lungdamnapanin | — |
-| Comitative | lungdamnatawh | — |
-| Comitative-Ergative | lungdamnatawhin | — |
+| Absolutive | lot | Gen 11:31, Gen 12:4, Gen 12:5 (+2) |
+| Genitive | lot' | Gen 11:27, Gen 13:7, Gen 13:8 (+2) |
+| Ergative | lotin | — |
+| Locative | lotah | — |
+| Ablative | lotpan | — |
+| Ablative-Ergative | lotpanin | — |
 
 ---
 
@@ -2018,8 +1750,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | Lungdamnaah | — |
 | Ablative | Lungdamnapan | — |
 | Ablative-Ergative | Lungdamnapanin | — |
-| Comitative | Lungdamnatawh | — |
-| Comitative-Ergative | Lungdamnatawhin | — |
+
+---
+
+## lungdamna
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | lungdamna | Gen 31:27, Deu 28:47, Jdg 8:35 (+2) |
+| Genitive | lungdamna' | — |
+| Ergative | lungdamnain | — |
+| Locative | lungdamnaah | — |
+| Ablative | lungdamnapan | — |
+| Ablative-Ergative | lungdamnapanin | — |
 
 ---
 
@@ -2033,8 +1776,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Makpelahah | — |
 | Ablative | Makpelahpan | — |
 | Ablative-Ergative | Makpelahpanin | — |
-| Comitative | Makpelahtawh | — |
-| Comitative-Ergative | Makpelahtawhin | — |
 
 ---
 
@@ -2048,8 +1789,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Manassehah | — |
 | Ablative | Manassehpan | — |
 | Ablative-Ergative | Manassehpanin | — |
-| Comitative | Manassehtawh | — |
-| Comitative-Ergative | Manassehtawhin | — |
 
 ---
 
@@ -2063,8 +1802,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Marahah | — |
 | Ablative | Marahpan | — |
 | Ablative-Ergative | Marahpanin | — |
-| Comitative | Marahtawh | — |
-| Comitative-Ergative | Marahtawhin | — |
 
 ---
 
@@ -2078,8 +1815,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Marthaah | — |
 | Ablative | Marthapan | — |
 | Ablative-Ergative | Marthapanin | — |
-| Comitative | Marthatawh | — |
-| Comitative-Ergative | Marthatawhin | — |
 
 ---
 
@@ -2093,8 +1828,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Maryah | — |
 | Ablative | Marypan | — |
 | Ablative-Ergative | Marypanin | — |
-| Comitative | Marytawh | — |
-| Comitative-Ergative | Marytawhin | — |
 
 ---
 
@@ -2108,8 +1841,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Matthiasah | — |
 | Ablative | Matthiaspan | — |
 | Ablative-Ergative | Matthiaspanin | — |
-| Comitative | Matthiastawh | — |
-| Comitative-Ergative | Matthiastawhin | — |
 
 ---
 
@@ -2123,8 +1854,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Mediaah | — |
 | Ablative | Mediapan | — |
 | Ablative-Ergative | Mediapanin | — |
-| Comitative | Mediatawh | — |
-| Comitative-Ergative | Mediatawhin | — |
 
 ---
 
@@ -2138,8 +1867,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Merariah | — |
 | Ablative | Meraripan | — |
 | Ablative-Ergative | Meraripanin | — |
-| Comitative | Meraritawh | — |
-| Comitative-Ergative | Meraritawhin | — |
 
 ---
 
@@ -2153,8 +1880,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Methuselahah | — |
 | Ablative | Methuselahpan | — |
 | Ablative-Ergative | Methuselahpanin | — |
-| Comitative | Methuselahtawh | — |
-| Comitative-Ergative | Methuselahtawhin | — |
 
 ---
 
@@ -2168,8 +1893,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Midianah | — |
 | Ablative | Midianpan | — |
 | Ablative-Ergative | Midianpanin | — |
-| Comitative | Midiantawh | — |
-| Comitative-Ergative | Midiantawhin | — |
 
 ---
 
@@ -2183,8 +1906,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Miriamah | — |
 | Ablative | Miriampan | — |
 | Ablative-Ergative | Miriampanin | — |
-| Comitative | Miriamtawh | — |
-| Comitative-Ergative | Miriamtawhin | — |
 
 ---
 
@@ -2198,8 +1919,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Moabah | — |
 | Ablative | Moabpan | — |
 | Ablative-Ergative | Moabpanin | — |
-| Comitative | Moabtawh | — |
-| Comitative-Ergative | Moabtawhin | — |
 
 ---
 
@@ -2213,8 +1932,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Mosesah | — |
 | Ablative | Mosespan | — |
 | Ablative-Ergative | Mosespanin | — |
-| Comitative | Mosestawh | — |
-| Comitative-Ergative | Mosestawhin | — |
 
 ---
 
@@ -2228,8 +1945,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Naftaliah | — |
 | Ablative | Naftalipan | — |
 | Ablative-Ergative | Naftalipanin | — |
-| Comitative | Naftalitawh | — |
-| Comitative-Ergative | Naftalitawhin | — |
 
 ---
 
@@ -2243,8 +1958,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Nahumah | — |
 | Ablative | Nahumpan | — |
 | Ablative-Ergative | Nahumpanin | — |
-| Comitative | Nahumtawh | — |
-| Comitative-Ergative | Nahumtawhin | — |
 
 ---
 
@@ -2258,8 +1971,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Nathanah | — |
 | Ablative | Nathanpan | — |
 | Ablative-Ergative | Nathanpanin | — |
-| Comitative | Nathantawh | — |
-| Comitative-Ergative | Nathantawhin | — |
 
 ---
 
@@ -2273,8 +1984,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Nazarethah | — |
 | Ablative | Nazarethpan | — |
 | Ablative-Ergative | Nazarethpanin | — |
-| Comitative | Nazarethtawh | — |
-| Comitative-Ergative | Nazarethtawhin | — |
 
 ---
 
@@ -2288,8 +1997,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Nebukhadnezzarah | — |
 | Ablative | Nebukhadnezzarpan | — |
 | Ablative-Ergative | Nebukhadnezzarpanin | — |
-| Comitative | Nebukhadnezzartawh | — |
-| Comitative-Ergative | Nebukhadnezzartawhin | — |
 
 ---
 
@@ -2303,8 +2010,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | noah | Gen 5:29, Gen 5:32, Gen 6:8 (+2) |
 | Ablative | nopan | — |
 | Ablative-Ergative | nopanin | — |
-| Comitative | notawh | — |
-| Comitative-Ergative | notawhin | — |
 
 ---
 
@@ -2318,8 +2023,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Noahah | — |
 | Ablative | Noahpan | — |
 | Ablative-Ergative | Noahpanin | — |
-| Comitative | Noahtawh | — |
-| Comitative-Ergative | Noahtawhin | — |
 
 ---
 
@@ -2333,8 +2036,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nunah | — |
 | Ablative | nunpan | — |
 | Ablative-Ergative | nunpanin | — |
-| Comitative | nuntawh | — |
-| Comitative-Ergative | nuntawhin | — |
 
 ---
 
@@ -2348,8 +2049,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Nunah | — |
 | Ablative | Nunpan | — |
 | Ablative-Ergative | Nunpanin | — |
-| Comitative | Nuntawh | — |
-| Comitative-Ergative | Nuntawhin | — |
 
 ---
 
@@ -2363,8 +2062,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Obadiahah | — |
 | Ablative | Obadiahpan | — |
 | Ablative-Ergative | Obadiahpanin | — |
-| Comitative | Obadiahtawh | — |
-| Comitative-Ergative | Obadiahtawhin | — |
 
 ---
 
@@ -2378,23 +2075,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Orebah | — |
 | Ablative | Orebpan | — |
 | Ablative-Ergative | Orebpanin | — |
-| Comitative | Orebtawh | — |
-| Comitative-Ergative | Orebtawhin | — |
-
----
-
-## Pasian
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Pasian | Gen 1:1, Gen 1:3, Gen 1:4 (+2) |
-| Genitive | Pasian' | Gen 1:2, Gen 1:27, Gen 3:1 (+2) |
-| Ergative | Pasianin | — |
-| Locative | Pasianah | — |
-| Ablative | Pasianpan | — |
-| Ablative-Ergative | Pasianpanin | — |
-| Comitative | Pasiantawh | — |
-| Comitative-Ergative | Pasiantawhin | — |
 
 ---
 
@@ -2408,8 +2088,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | pasianah | — |
 | Ablative | pasianpan | — |
 | Ablative-Ergative | pasianpanin | — |
-| Comitative | pasiantawh | — |
-| Comitative-Ergative | pasiantawhin | — |
+
+---
+
+## Pasian
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Pasian | Gen 1:1, Gen 1:3, Gen 1:4 (+2) |
+| Genitive | Pasian' | Gen 1:2, Gen 1:27, Gen 3:1 (+2) |
+| Ergative | Pasianin | — |
+| Locative | Pasianah | — |
+| Ablative | Pasianpan | — |
+| Ablative-Ergative | Pasianpanin | — |
 
 ---
 
@@ -2423,8 +2114,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pauah | — |
 | Ablative | paupan | — |
 | Ablative-Ergative | paupanin | — |
-| Comitative | pautawh | — |
-| Comitative-Ergative | pautawhin | — |
 
 ---
 
@@ -2438,8 +2127,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Paulah | — |
 | Ablative | Paulpan | — |
 | Ablative-Ergative | Paulpanin | — |
-| Comitative | Paultawh | — |
-| Comitative-Ergative | Paultawhin | — |
 
 ---
 
@@ -2453,8 +2140,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Paulusah | — |
 | Ablative | Pauluspan | — |
 | Ablative-Ergative | Pauluspanin | — |
-| Comitative | Paulustawh | — |
-| Comitative-Ergative | Paulustawhin | — |
 
 ---
 
@@ -2468,8 +2153,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Pawiah | — |
 | Ablative | Pawipan | — |
 | Ablative-Ergative | Pawipanin | — |
-| Comitative | Pawitawh | — |
-| Comitative-Ergative | Pawitawhin | — |
 
 ---
 
@@ -2483,8 +2166,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pawiah | — |
 | Ablative | pawipan | — |
 | Ablative-Ergative | pawipanin | — |
-| Comitative | pawitawh | — |
-| Comitative-Ergative | pawitawhin | — |
 
 ---
 
@@ -2498,8 +2179,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pekahah | — |
 | Ablative | pekahpan | — |
 | Ablative-Ergative | pekahpanin | — |
-| Comitative | pekahtawh | — |
-| Comitative-Ergative | pekahtawhin | — |
 
 ---
 
@@ -2513,8 +2192,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Persiaah | — |
 | Ablative | Persiapan | — |
 | Ablative-Ergative | Persiapanin | — |
-| Comitative | Persiatawh | — |
-| Comitative-Ergative | Persiatawhin | — |
 
 ---
 
@@ -2528,8 +2205,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Peterah | — |
 | Ablative | Peterpan | — |
 | Ablative-Ergative | Peterpanin | — |
-| Comitative | Petertawh | — |
-| Comitative-Ergative | Petertawhin | — |
 
 ---
 
@@ -2543,8 +2218,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | phutah | — |
 | Ablative | phutpan | — |
 | Ablative-Ergative | phutpanin | — |
-| Comitative | phuttawh | — |
-| Comitative-Ergative | phuttawhin | — |
 
 ---
 
@@ -2558,8 +2231,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Pilatah | — |
 | Ablative | Pilatpan | — |
 | Ablative-Ergative | Pilatpanin | — |
-| Comitative | Pilattawh | — |
-| Comitative-Ergative | Pilattawhin | — |
 
 ---
 
@@ -2573,8 +2244,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puahah | — |
 | Ablative | puahpan | — |
 | Ablative-Ergative | puahpanin | — |
-| Comitative | puahtawh | — |
-| Comitative-Ergative | puahtawhin | — |
 
 ---
 
@@ -2588,8 +2257,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Putah | — |
 | Ablative | Putpan | — |
 | Ablative-Ergative | Putpanin | — |
-| Comitative | Puttawh | — |
-| Comitative-Ergative | Puttawhin | — |
 
 ---
 
@@ -2603,8 +2270,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Rachelah | — |
 | Ablative | Rachelpan | — |
 | Ablative-Ergative | Rachelpanin | — |
-| Comitative | Racheltawh | — |
-| Comitative-Ergative | Racheltawhin | — |
 
 ---
 
@@ -2618,8 +2283,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Rahabah | — |
 | Ablative | Rahabpan | — |
 | Ablative-Ergative | Rahabpanin | — |
-| Comitative | Rahabtawh | — |
-| Comitative-Ergative | Rahabtawhin | — |
 
 ---
 
@@ -2633,8 +2296,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Ramesesah | — |
 | Ablative | Ramesespan | — |
 | Ablative-Ergative | Ramesespanin | — |
-| Comitative | Ramesestawh | — |
-| Comitative-Ergative | Ramesestawhin | — |
 
 ---
 
@@ -2648,8 +2309,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Rebekahah | — |
 | Ablative | Rebekahpan | — |
 | Ablative-Ergative | Rebekahpanin | — |
-| Comitative | Rebekahtawh | — |
-| Comitative-Ergative | Rebekahtawhin | — |
 
 ---
 
@@ -2663,8 +2322,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Rehoboamah | — |
 | Ablative | Rehoboampan | — |
 | Ablative-Ergative | Rehoboampanin | — |
-| Comitative | Rehoboamtawh | — |
-| Comitative-Ergative | Rehoboamtawhin | — |
 
 ---
 
@@ -2678,8 +2335,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Reubenah | — |
 | Ablative | Reubenpan | — |
 | Ablative-Ergative | Reubenpanin | — |
-| Comitative | Reubentawh | — |
-| Comitative-Ergative | Reubentawhin | — |
 
 ---
 
@@ -2693,8 +2348,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | rubyah | — |
 | Ablative | rubypan | — |
 | Ablative-Ergative | rubypanin | — |
-| Comitative | rubytawh | — |
-| Comitative-Ergative | rubytawhin | — |
 
 ---
 
@@ -2708,8 +2361,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Ruthah | — |
 | Ablative | Ruthpan | — |
 | Ablative-Ergative | Ruthpanin | — |
-| Comitative | Ruthtawh | — |
-| Comitative-Ergative | Ruthtawhin | — |
 
 ---
 
@@ -2723,8 +2374,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sabbathah | — |
 | Ablative | sabbathpan | — |
 | Ablative-Ergative | sabbathpanin | — |
-| Comitative | sabbathtawh | — |
-| Comitative-Ergative | sabbathtawhin | — |
 
 ---
 
@@ -2738,8 +2387,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | saffronah | — |
 | Ablative | saffronpan | — |
 | Ablative-Ergative | saffronpanin | — |
-| Comitative | saffrontawh | — |
-| Comitative-Ergative | saffrontawhin | — |
 
 ---
 
@@ -2753,8 +2400,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | saihadialah | — |
 | Ablative | saihadialpan | — |
 | Ablative-Ergative | saihadialpanin | — |
-| Comitative | saihadialtawh | — |
-| Comitative-Ergative | saihadialtawhin | — |
 
 ---
 
@@ -2768,8 +2413,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Samariaah | — |
 | Ablative | Samariapan | — |
 | Ablative-Ergative | Samariapanin | — |
-| Comitative | Samariatawh | — |
-| Comitative-Ergative | Samariatawhin | — |
 
 ---
 
@@ -2783,8 +2426,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Samsonah | — |
 | Ablative | Samsonpan | — |
 | Ablative-Ergative | Samsonpanin | — |
-| Comitative | Samsontawh | — |
-| Comitative-Ergative | Samsontawhin | — |
 
 ---
 
@@ -2798,8 +2439,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Samuelah | — |
 | Ablative | Samuelpan | — |
 | Ablative-Ergative | Samuelpanin | — |
-| Comitative | Samueltawh | — |
-| Comitative-Ergative | Samueltawhin | — |
 
 ---
 
@@ -2813,8 +2452,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sapfiraah | — |
 | Ablative | sapfirapan | — |
 | Ablative-Ergative | sapfirapanin | — |
-| Comitative | sapfiratawh | — |
-| Comitative-Ergative | sapfiratawhin | — |
 
 ---
 
@@ -2828,8 +2465,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Sarahah | — |
 | Ablative | Sarahpan | — |
 | Ablative-Ergative | Sarahpanin | — |
-| Comitative | Sarahtawh | — |
-| Comitative-Ergative | Sarahtawhin | — |
 
 ---
 
@@ -2843,8 +2478,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Saraiah | — |
 | Ablative | Saraipan | — |
 | Ablative-Ergative | Saraipanin | — |
-| Comitative | Saraitawh | — |
-| Comitative-Ergative | Saraitawhin | — |
 
 ---
 
@@ -2858,8 +2491,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Satanah | — |
 | Ablative | Satanpan | — |
 | Ablative-Ergative | Satanpanin | — |
-| Comitative | Satantawh | — |
-| Comitative-Ergative | Satantawhin | — |
 
 ---
 
@@ -2873,8 +2504,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Saulah | — |
 | Ablative | Saulpan | — |
 | Ablative-Ergative | Saulpanin | — |
-| Comitative | Saultawh | — |
-| Comitative-Ergative | Saultawhin | — |
 
 ---
 
@@ -2888,8 +2517,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Sebaah | — |
 | Ablative | Sebapan | — |
 | Ablative-Ergative | Sebapanin | — |
-| Comitative | Sebatawh | — |
-| Comitative-Ergative | Sebatawhin | — |
 
 ---
 
@@ -2903,8 +2530,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | semah | — |
 | Ablative | sempan | — |
 | Ablative-Ergative | sempanin | — |
-| Comitative | semtawh | — |
-| Comitative-Ergative | semtawhin | — |
 
 ---
 
@@ -2918,8 +2543,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Sethah | — |
 | Ablative | Sethpan | — |
 | Ablative-Ergative | Sethpanin | — |
-| Comitative | Sethtawh | — |
-| Comitative-Ergative | Sethtawhin | — |
 
 ---
 
@@ -2933,8 +2556,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Shebaah | — |
 | Ablative | Shebapan | — |
 | Ablative-Ergative | Shebapanin | — |
-| Comitative | Shebatawh | — |
-| Comitative-Ergative | Shebatawhin | — |
 
 ---
 
@@ -2948,8 +2569,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | shekelah | — |
 | Ablative | shekelpan | — |
 | Ablative-Ergative | shekelpanin | — |
-| Comitative | shekeltawh | — |
-| Comitative-Ergative | shekeltawhin | — |
 
 ---
 
@@ -2963,8 +2582,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Shuahah | — |
 | Ablative | Shuahpan | — |
 | Ablative-Ergative | Shuahpanin | — |
-| Comitative | Shuahtawh | — |
-| Comitative-Ergative | Shuahtawhin | — |
 
 ---
 
@@ -2978,8 +2595,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siaah | — |
 | Ablative | siapan | — |
 | Ablative-Ergative | siapanin | — |
-| Comitative | siatawh | — |
-| Comitative-Ergative | siatawhin | — |
 
 ---
 
@@ -2993,8 +2608,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Silasah | — |
 | Ablative | Silaspan | — |
 | Ablative-Ergative | Silaspanin | — |
-| Comitative | Silastawh | — |
-| Comitative-Ergative | Silastawhin | — |
 
 ---
 
@@ -3008,8 +2621,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Simeonah | — |
 | Ablative | Simeonpan | — |
 | Ablative-Ergative | Simeonpanin | — |
-| Comitative | Simeontawh | — |
-| Comitative-Ergative | Simeontawhin | — |
 
 ---
 
@@ -3023,8 +2634,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Simonah | — |
 | Ablative | Simonpan | — |
 | Ablative-Ergative | Simonpanin | — |
-| Comitative | Simontawh | — |
-| Comitative-Ergative | Simontawhin | — |
 
 ---
 
@@ -3038,8 +2647,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Sinah | — |
 | Ablative | Sinpan | — |
 | Ablative-Ergative | Sinpanin | — |
-| Comitative | Sintawh | — |
-| Comitative-Ergative | Sintawhin | — |
 
 ---
 
@@ -3053,8 +2660,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sinah | — |
 | Ablative | sinpan | — |
 | Ablative-Ergative | sinpanin | — |
-| Comitative | sintawh | — |
-| Comitative-Ergative | sintawhin | — |
 
 ---
 
@@ -3068,8 +2673,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Sinaiah | — |
 | Ablative | Sinaipan | — |
 | Ablative-Ergative | Sinaipanin | — |
-| Comitative | Sinaitawh | — |
-| Comitative-Ergative | Sinaitawhin | — |
 
 ---
 
@@ -3083,8 +2686,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | soah | — |
 | Ablative | sopan | — |
 | Ablative-Ergative | sopanin | — |
-| Comitative | sotawh | — |
-| Comitative-Ergative | sotawhin | — |
 
 ---
 
@@ -3098,8 +2699,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Solomonah | — |
 | Ablative | Solomonpan | — |
 | Ablative-Ergative | Solomonpanin | — |
-| Comitative | Solomontawh | — |
-| Comitative-Ergative | Solomontawhin | — |
 
 ---
 
@@ -3113,8 +2712,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | suahah | — |
 | Ablative | suahpan | — |
 | Ablative-Ergative | suahpanin | — |
-| Comitative | suahtawh | — |
-| Comitative-Ergative | suahtawhin | — |
 
 ---
 
@@ -3128,8 +2725,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Syriaah | — |
 | Ablative | Syriapan | — |
 | Ablative-Ergative | Syriapanin | — |
-| Comitative | Syriatawh | — |
-| Comitative-Ergative | Syriatawhin | — |
 
 ---
 
@@ -3143,8 +2738,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tamahah | — |
 | Ablative | tamahpan | — |
 | Ablative-Ergative | tamahpanin | — |
-| Comitative | tamahtawh | — |
-| Comitative-Ergative | tamahtawhin | — |
 
 ---
 
@@ -3158,8 +2751,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | terebinthah | — |
 | Ablative | terebinthpan | — |
 | Ablative-Ergative | terebinthpanin | — |
-| Comitative | terebinthtawh | — |
-| Comitative-Ergative | terebinthtawhin | — |
 
 ---
 
@@ -3173,8 +2764,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Thomasah | — |
 | Ablative | Thomaspan | — |
 | Ablative-Ergative | Thomaspanin | — |
-| Comitative | Thomastawh | — |
-| Comitative-Ergative | Thomastawhin | — |
 
 ---
 
@@ -3188,23 +2777,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Titusah | — |
 | Ablative | Tituspan | — |
 | Ablative-Ergative | Tituspanin | — |
-| Comitative | Titustawh | — |
-| Comitative-Ergative | Titustawhin | — |
-
----
-
-## Topa
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Topa | Gen 2:4, Gen 2:5, Gen 2:7 (+2) |
-| Genitive | Topa' | Gen 4:1, Gen 4:3, Gen 4:13 (+2) |
-| Ergative | Topain | — |
-| Locative | Topaah | — |
-| Ablative | Topapan | — |
-| Ablative-Ergative | Topapanin | — |
-| Comitative | Topatawh | — |
-| Comitative-Ergative | Topatawhin | — |
 
 ---
 
@@ -3218,8 +2790,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | topaah | — |
 | Ablative | topapan | — |
 | Ablative-Ergative | topapanin | — |
-| Comitative | topatawh | — |
-| Comitative-Ergative | topatawhin | — |
+
+---
+
+## Topa
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Topa | Gen 2:4, Gen 2:5, Gen 2:7 (+2) |
+| Genitive | Topa' | Gen 4:1, Gen 4:3, Gen 4:13 (+2) |
+| Ergative | Topain | — |
+| Locative | Topaah | — |
+| Ablative | Topapan | — |
+| Ablative-Ergative | Topapanin | — |
 
 ---
 
@@ -3233,8 +2816,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Zadokah | — |
 | Ablative | Zadokpan | — |
 | Ablative-Ergative | Zadokpanin | — |
-| Comitative | Zadoktawh | — |
-| Comitative-Ergative | Zadoktawhin | — |
 
 ---
 
@@ -3248,8 +2829,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zazaah | — |
 | Ablative | zazapan | — |
 | Ablative-Ergative | zazapanin | — |
-| Comitative | zazatawh | — |
-| Comitative-Ergative | zazatawhin | — |
 
 ---
 
@@ -3263,8 +2842,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Zebediah | — |
 | Ablative | Zebedipan | — |
 | Ablative-Ergative | Zebedipanin | — |
-| Comitative | Zebeditawh | — |
-| Comitative-Ergative | Zebeditawhin | — |
 
 ---
 
@@ -3278,23 +2855,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Zebulunah | — |
 | Ablative | Zebulunpan | — |
 | Ablative-Ergative | Zebulunpanin | — |
-| Comitative | Zebuluntawh | — |
-| Comitative-Ergative | Zebuluntawhin | — |
-
----
-
-## Zia
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Zia | Gen 24:49, Exo 28:8, Exo 36:1 (+2) |
-| Genitive | Zia' | — |
-| Ergative | Ziain | — |
-| Locative | Ziaah | — |
-| Ablative | Ziapan | — |
-| Ablative-Ergative | Ziapanin | — |
-| Comitative | Ziatawh | — |
-| Comitative-Ergative | Ziatawhin | — |
 
 ---
 
@@ -3308,8 +2868,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | ziaah | — |
 | Ablative | ziapan | — |
 | Ablative-Ergative | ziapanin | — |
-| Comitative | ziatawh | — |
-| Comitative-Ergative | ziatawhin | — |
+
+---
+
+## Zia
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Zia | Gen 24:49, Exo 28:8, Exo 36:1 (+2) |
+| Genitive | Zia' | — |
+| Ergative | Ziain | — |
+| Locative | Ziaah | — |
+| Ablative | Ziapan | — |
+| Ablative-Ergative | Ziapanin | — |
 
 ---
 
@@ -3323,8 +2894,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Zinah | — |
 | Ablative | Zinpan | — |
 | Ablative-Ergative | Zinpanin | — |
-| Comitative | Zintawh | — |
-| Comitative-Ergative | Zintawhin | — |
 
 ---
 
@@ -3338,8 +2907,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zinah | — |
 | Ablative | zinpan | — |
 | Ablative-Ergative | zinpanin | — |
-| Comitative | zintawh | — |
-| Comitative-Ergative | zintawhin | — |
 
 ---
 
@@ -3353,7 +2920,5 @@ Nouns grouped by which cases they are attested in:
 | Locative | Zionah | — |
 | Ablative | Zionpan | — |
 | Ablative-Ergative | Zionpanin | — |
-| Comitative | Ziontawh | — |
-| Comitative-Ergative | Ziontawhin | — |
 
 ---

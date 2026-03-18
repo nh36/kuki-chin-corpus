@@ -105,12 +105,15 @@ def get_proper_nouns_attested(corpus_file: str) -> Set[str]:
     return attested
 
 
-# Tedim Chin case system
-# Based on corpus analysis: GEN (many), ERG (53,915), LOC (25,569), ABL.ERG (4,343), ABL (32), COM (229), COM.ERG (2)
+# Tedim Chin case system (6 cases)
+# Based on corpus analysis: GEN (many), ERG (53,915), LOC (25,569), ABL.ERG (4,343), ABL (32)
 # Note: -in marks both ERG (on nouns) and INST (on manner expressions)
 # -pan = simple ablative "from"; -panin = ablative+ergative (source as agent)
-# -tawh = simple comitative "with"; -tawhin = comitative+ergative (instrument as agent)
 # Genitive marked with apostrophe (glottal stop): pa' = father's
+#
+# NOTE: -tawh and -tawhin are NOT case suffixes - they are FREE POSTPOSITIONS
+# Tedim uses "pa tawh" (with father) as two words, NOT "*patawh"
+# See POSTPOSITIONS dict in analyze_morphemes.py
 CASE_SUFFIXES = [
     ('', 'ABS', 'Absolutive'),           # Unmarked
     ("'", 'GEN', 'Genitive'),            # Possessor (glottal stop)
@@ -118,8 +121,6 @@ CASE_SUFFIXES = [
     ('ah', 'LOC', 'Locative'),           # Location
     ('pan', 'ABL', 'Ablative'),          # Simple source/from
     ('panin', 'ABL.ERG', 'Ablative-Ergative'),  # Source as agent
-    ('tawh', 'COM', 'Comitative'),       # Simple with/accompaniment
-    ('tawhin', 'COM.ERG', 'Comitative-Ergative'),  # Instrument as agent
 ]
 
 # Number marking
@@ -311,7 +312,7 @@ def analyze_attestation_patterns(nouns: List[Tuple[str, str]], corpus_file: str)
         'stem_patterns': {},  # stem -> {cases_attested, pattern_str, attestation_counts}
     }
     
-    case_abbrevs = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG', 'COM', 'COM.ERG']
+    case_abbrevs = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG']  # 6 cases (no comitative)
     
     for stem, gloss in nouns:
         paradigm_forms = generate_paradigm_forms(stem)
@@ -367,7 +368,7 @@ def generate_index_section(analysis: Dict, report_type: str = 'free') -> str:
     lines.append('|------|------|-------|-------|---------|')
     
     for i, (stem, gloss, count, pattern) in enumerate(analysis['top_by_cases'][:30], 1):
-        lines.append(f'| {i} | [{stem}](#{stem.lower()}-{gloss.replace(".", "").replace(" ", "-").lower()}) | {gloss} | {count}/8 | {pattern} |')
+        lines.append(f'| {i} | [{stem}](#{stem.lower()}-{gloss.replace(".", "").replace(" ", "-").lower()}) | {gloss} | {count}/6 | {pattern} |')
     
     lines.append('')
     
@@ -381,7 +382,7 @@ def generate_index_section(analysis: Dict, report_type: str = 'free') -> str:
     for count in sorted(analysis['by_case_count'].keys(), reverse=True):
         stems = analysis['by_case_count'][count]
         pct = 100 * len(stems) / total if total > 0 else 0
-        lines.append(f'| {count}/8 cases | {len(stems)} | {pct:.1f}% |')
+        lines.append(f'| {count}/6 cases | {len(stems)} | {pct:.1f}% |')
     
     lines.append('')
     
@@ -393,7 +394,7 @@ def generate_index_section(analysis: Dict, report_type: str = 'free') -> str:
     lines.append('| Case | Stems with Attestation | Percentage |')
     lines.append('|------|------------------------|------------|')
     
-    case_order = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG', 'COM', 'COM.ERG']
+    case_order = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG']
     for case in case_order:
         count = analysis['case_frequencies'].get(case, 0)
         pct = 100 * count / total if total > 0 else 0
@@ -442,15 +443,16 @@ def generate_free_noun_report(corpus_file: str) -> str:
         '',
         'Tedim Chin nouns inflect for:',
         '- **Number**: Singular (unmarked), Plural (*-te*)',
-        '- **Case**:',
+        '- **Case** (6 cases):',
         '  - Absolutive (unmarked)',
         "  - Genitive (*-'*) — possessor (glottal stop)",
         '  - Ergative (*-in*) — marks agent',
         '  - Locative (*-ah*) — location',
         '  - Ablative (*-pan*) — source/from',
         '  - Ablative-Ergative (*-panin*) — source as agent',
-        '  - Comitative (*-tawh*) — accompaniment',
-        '  - Comitative-Ergative (*-tawhin*) — instrument as agent',
+        '',
+        '**Note on comitative:** The comitative marker *tawh* ("with") is a free postposition,',
+        'not a case suffix. Tedim uses "pa tawh" (with father) as two words, not "*patawh".',
         '',
         'Suffix order: **STEM-PLURAL-CASE** (e.g., *gam-te-ah* = land-PL-LOC)',
         '',
@@ -506,7 +508,15 @@ def generate_compound_report(corpus_file: str) -> str:
         f'Total: {len(BINARY_COMPOUNDS)} compounds from {len(compounds_by_stem)} unique stems',
         f'Bound stems (only occur in compounds): {len(bound_stems)}',
         '',
-        'Case marking follows the same pattern as simple nouns.',
+        '**Note on attestation:** Some compounds only appear inside larger compounds',
+        '(e.g., *gahzu* "sap" only appears in *leenggahzu* "wine"). These show 0/6 cases',
+        'because the bare compound is not attested as a standalone word.',
+        '',
+        'Case marking follows the same pattern as simple nouns (6 cases: ABS, GEN, ERG, LOC, ABL, ABL.ERG).',
+        '',
+        '**Note on comitative:** The comitative marker *tawh* is a free postposition',
+        '(written separately: *mi tawh* "with person"), not a case suffix.',
+        '',
         '"—" indicates the form is grammatically possible but not attested.',
         '',
         '---',
@@ -598,7 +608,7 @@ def analyze_proper_noun_patterns(names: List[str], corpus_file: str) -> Dict:
         'stem_patterns': {},
     }
     
-    case_abbrevs = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG', 'COM', 'COM.ERG']
+    case_abbrevs = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG']  # 6 cases (no comitative)
     
     for name in names:
         forms = [name]
@@ -653,12 +663,15 @@ def generate_proper_noun_report(corpus_file: str) -> str:
         '',
         '## Overview',
         '',
-        'Proper nouns (biblical names) inflect for case like common nouns.',
+        'Proper nouns (biblical names) inflect for case like common nouns (6 cases).',
         f'Total proper nouns in system: {len(PROPER_NOUNS)}',
         f'Attested in corpus: {len(attested)}',
         '',
         'This report shows paradigms for proper nouns actually found in the Tedim Chin Bible.',
         'Proper nouns do not typically take plural marking.',
+        '',
+        '**Note on comitative:** The comitative marker *tawh* is a free postposition,',
+        'not a case suffix. Tedim uses "David tawh" (with David) as two words.',
         '',
         '---',
         '',

@@ -8,7 +8,15 @@ by their constituent stems. Each compound appears under ALL its stems.
 Total: 315 compounds from 285 unique stems
 Bound stems (only occur in compounds): 140
 
-Case marking follows the same pattern as simple nouns.
+**Note on attestation:** Some compounds only appear inside larger compounds
+(e.g., *gahzu* "sap" only appears in *leenggahzu* "wine"). These show 0/6 cases
+because the bare compound is not attested as a standalone word.
+
+Case marking follows the same pattern as simple nouns (6 cases: ABS, GEN, ERG, LOC, ABL, ABL.ERG).
+
+**Note on comitative:** The comitative marker *tawh* is a free postposition
+(written separately: *mi tawh* "with person"), not a case suffix.
+
 "—" indicates the form is grammatically possible but not attested.
 
 ---
@@ -19,46 +27,46 @@ Case marking follows the same pattern as simple nouns.
 
 | Rank | Stem | Gloss | Cases | Pattern |
 |------|------|-------|-------|---------|
-| 1 | [lungsim](#lungsim-mind) | mind | 4/8 | ABS+GEN+ERG+LOC |
-| 2 | [pawlkhat](#pawlkhat-some) | some | 4/8 | ABS+GEN+ERG+LOC |
-| 3 | [thuman](#thuman-trueword) | true.word | 4/8 | ABS+GEN+ERG+LOC |
-| 4 | [tuamtuam](#tuamtuam-various) | various | 4/8 | ABS+GEN+ERG+LOC |
-| 5 | [gamdang](#gamdang-otherland) | other.land | 3/8 | ABS+GEN+LOC |
-| 6 | [gilkial](#gilkial-bowels) | bowels | 3/8 | ABS+GEN+ERG |
-| 7 | [khangham](#khangham-ancestor) | ancestor | 3/8 | ABS+GEN+ERG |
-| 8 | [kikoih](#kikoih-place) | place | 3/8 | ABS+GEN+ERG |
-| 9 | [kineihkhem](#kineihkhem-possessall) | possess.all | 3/8 | ABS+GEN+ERG |
-| 10 | [laitak](#laitak-exactmidst) | exact.midst | 3/8 | ABS+ERG+LOC |
-| 11 | [lamdang](#lamdang-otherway) | other.way | 3/8 | ABS+GEN+ERG |
-| 12 | [langpan](#langpan-advocate) | advocate | 3/8 | ABS+GEN+ERG |
-| 13 | [langpang](#langpang-beside) | beside | 3/8 | ABS+GEN+ERG |
-| 14 | [leitung](#leitung-earth) | earth | 3/8 | ABS+GEN+LOC |
-| 15 | [lungdam](#lungdam-joy) | joy | 3/8 | ABS+GEN+ERG |
-| 16 | [lungkim](#lungkim-peace) | peace | 3/8 | ABS+GEN+ERG |
-| 17 | [mawhsak](#mawhsak-causesin) | cause.sin | 3/8 | ABS+GEN+ERG |
-| 18 | [meigong](#meigong-widow) | widow | 3/8 | ABS+GEN+ERG |
-| 19 | [midik](#midik-righteous) | righteous | 3/8 | ABS+GEN+ERG |
-| 20 | [mihing](#mihing-mankind) | mankind | 3/8 | ABS+GEN+ERG |
-| 21 | [milian](#milian-noble) | noble | 3/8 | ABS+GEN+ERG |
-| 22 | [milim](#milim-idol) | idol | 3/8 | ABS+GEN+ERG |
-| 23 | [minam](#minam-nation) | nation | 3/8 | ABS+GEN+ERG |
-| 24 | [mizawng](#mizawng-everyone) | everyone | 3/8 | ABS+GEN+ERG |
-| 25 | [naupang](#naupang-child) | child | 3/8 | ABS+GEN+ERG |
-| 26 | [sawmnih](#sawmnih-twelve) | twelve | 3/8 | ABS+GEN+ERG |
-| 27 | [thahat](#thahat-strength) | strength | 3/8 | ABS+GEN+ERG |
-| 28 | [thugen](#thugen-speech) | speech | 3/8 | ABS+GEN+ERG |
-| 29 | [thukhen](#thukhen-judgment) | judgment | 3/8 | ABS+GEN+ERG |
-| 30 | [ulian](#ulian-elder) | elder | 3/8 | ABS+GEN+ERG |
+| 1 | [lungsim](#lungsim-mind) | mind | 4/6 | ABS+GEN+ERG+LOC |
+| 2 | [pawlkhat](#pawlkhat-some) | some | 4/6 | ABS+GEN+ERG+LOC |
+| 3 | [thuman](#thuman-trueword) | true.word | 4/6 | ABS+GEN+ERG+LOC |
+| 4 | [tuamtuam](#tuamtuam-various) | various | 4/6 | ABS+GEN+ERG+LOC |
+| 5 | [gamdang](#gamdang-otherland) | other.land | 3/6 | ABS+GEN+LOC |
+| 6 | [gilkial](#gilkial-bowels) | bowels | 3/6 | ABS+GEN+ERG |
+| 7 | [khangham](#khangham-ancestor) | ancestor | 3/6 | ABS+GEN+ERG |
+| 8 | [kikoih](#kikoih-place) | place | 3/6 | ABS+GEN+ERG |
+| 9 | [kineihkhem](#kineihkhem-possessall) | possess.all | 3/6 | ABS+GEN+ERG |
+| 10 | [laitak](#laitak-exactmidst) | exact.midst | 3/6 | ABS+ERG+LOC |
+| 11 | [lamdang](#lamdang-otherway) | other.way | 3/6 | ABS+GEN+ERG |
+| 12 | [langpan](#langpan-advocate) | advocate | 3/6 | ABS+GEN+ERG |
+| 13 | [langpang](#langpang-beside) | beside | 3/6 | ABS+GEN+ERG |
+| 14 | [leitung](#leitung-earth) | earth | 3/6 | ABS+GEN+LOC |
+| 15 | [lungdam](#lungdam-joy) | joy | 3/6 | ABS+GEN+ERG |
+| 16 | [lungkim](#lungkim-peace) | peace | 3/6 | ABS+GEN+ERG |
+| 17 | [mawhsak](#mawhsak-causesin) | cause.sin | 3/6 | ABS+GEN+ERG |
+| 18 | [meigong](#meigong-widow) | widow | 3/6 | ABS+GEN+ERG |
+| 19 | [midik](#midik-righteous) | righteous | 3/6 | ABS+GEN+ERG |
+| 20 | [mihing](#mihing-mankind) | mankind | 3/6 | ABS+GEN+ERG |
+| 21 | [milian](#milian-noble) | noble | 3/6 | ABS+GEN+ERG |
+| 22 | [milim](#milim-idol) | idol | 3/6 | ABS+GEN+ERG |
+| 23 | [minam](#minam-nation) | nation | 3/6 | ABS+GEN+ERG |
+| 24 | [mizawng](#mizawng-everyone) | everyone | 3/6 | ABS+GEN+ERG |
+| 25 | [naupang](#naupang-child) | child | 3/6 | ABS+GEN+ERG |
+| 26 | [sawmnih](#sawmnih-twelve) | twelve | 3/6 | ABS+GEN+ERG |
+| 27 | [thahat](#thahat-strength) | strength | 3/6 | ABS+GEN+ERG |
+| 28 | [thugen](#thugen-speech) | speech | 3/6 | ABS+GEN+ERG |
+| 29 | [thukhen](#thukhen-judgment) | judgment | 3/6 | ABS+GEN+ERG |
+| 30 | [ulian](#ulian-elder) | elder | 3/6 | ABS+GEN+ERG |
 
 ### Distribution by Number of Cases Attested
 
 | Cases Attested | Count | Percentage |
 |----------------|-------|------------|
-| 4/8 cases | 4 | 1.3% |
-| 3/8 cases | 27 | 8.6% |
-| 2/8 cases | 101 | 32.3% |
-| 1/8 cases | 158 | 50.5% |
-| 0/8 cases | 23 | 7.3% |
+| 4/6 cases | 4 | 1.3% |
+| 3/6 cases | 27 | 8.6% |
+| 2/6 cases | 101 | 32.3% |
+| 1/6 cases | 158 | 50.5% |
+| 0/6 cases | 23 | 7.3% |
 
 ### Case Attestation Frequency
 
@@ -72,8 +80,6 @@ How many noun stems have each case attested:
 | LOC | 24 | 7.7% |
 | ABL | 0 | 0.0% |
 | ABL.ERG | 0 | 0.0% |
-| COM | 0 | 0.0% |
-| COM.ERG | 0 | 0.0% |
 
 ### Most Common Case Patterns
 
@@ -110,8 +116,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ancil-ah | — | ancil-te-ah | — |
 | Ablative | ancil-pan | — | ancil-te-pan | — |
 | Ablative-Ergative | ancil-panin | — | ancil-te-panin | — |
-| Comitative | ancil-tawh | — | ancil-te-tawh | — |
-| Comitative-Ergative | ancil-tawhin | — | ancil-te-tawhin | — |
 
 ### ankuang "bosom" (an-kuang)
 
@@ -123,8 +127,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ankuang-ah | — | ankuang-te-ah | — |
 | Ablative | ankuang-pan | — | ankuang-te-pan | — |
 | Ablative-Ergative | ankuang-panin | — | ankuang-te-panin | — |
-| Comitative | ankuang-tawh | — | ankuang-te-tawh | — |
-| Comitative-Ergative | ankuang-tawhin | — | ankuang-te-tawhin | — |
 
 ### ankung "provision" (an-kung)
 
@@ -136,8 +138,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ankung-ah | — | ankung-te-ah | — |
 | Ablative | ankung-pan | — | ankung-te-pan | — |
 | Ablative-Ergative | ankung-panin | — | ankung-te-panin | — |
-| Comitative | ankung-tawh | — | ankung-te-tawh | — |
-| Comitative-Ergative | ankung-tawhin | — | ankung-te-tawhin | — |
 
 ---
 
@@ -155,8 +155,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paubaan-ah | — | paubaan-te-ah | — |
 | Ablative | paubaan-pan | — | paubaan-te-pan | — |
 | Ablative-Ergative | paubaan-panin | — | paubaan-te-panin | — |
-| Comitative | paubaan-tawh | — | paubaan-te-tawh | — |
-| Comitative-Ergative | paubaan-tawhin | — | paubaan-te-tawhin | — |
 
 ---
 
@@ -174,8 +172,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bilbah-ah | — | bilbah-te-ah | — |
 | Ablative | bilbah-pan | — | bilbah-te-pan | — |
 | Ablative-Ergative | bilbah-panin | — | bilbah-te-panin | — |
-| Comitative | bilbah-tawh | — | bilbah-te-tawh | — |
-| Comitative-Ergative | bilbah-tawhin | — | bilbah-te-tawhin | — |
 
 ### nakbah "earring" (nak-bah)
 
@@ -187,8 +183,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nakbah-ah | — | nakbah-te-ah | — |
 | Ablative | nakbah-pan | — | nakbah-te-pan | — |
 | Ablative-Ergative | nakbah-panin | — | nakbah-te-panin | — |
-| Comitative | nakbah-tawh | — | nakbah-te-tawh | — |
-| Comitative-Ergative | nakbah-tawhin | — | nakbah-te-tawhin | — |
 
 ---
 
@@ -206,8 +200,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bekbak-ah | — | bekbak-te-ah | — |
 | Ablative | bekbak-pan | — | bekbak-te-pan | — |
 | Ablative-Ergative | bekbak-panin | — | bekbak-te-panin | — |
-| Comitative | bekbak-tawh | — | bekbak-te-tawh | — |
-| Comitative-Ergative | bekbak-tawhin | — | bekbak-te-tawhin | — |
 
 ---
 
@@ -225,8 +217,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | banbulh-ah | — | banbulh-te-ah | — |
 | Ablative | banbulh-pan | — | banbulh-te-pan | — |
 | Ablative-Ergative | banbulh-panin | — | banbulh-te-panin | — |
-| Comitative | banbulh-tawh | — | banbulh-te-tawh | — |
-| Comitative-Ergative | banbulh-tawhin | — | banbulh-te-tawhin | — |
 
 ---
 
@@ -244,8 +234,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuibang-ah | — | tuibang-te-ah | — |
 | Ablative | tuibang-pan | — | tuibang-te-pan | — |
 | Ablative-Ergative | tuibang-panin | — | tuibang-te-panin | — |
-| Comitative | tuibang-tawh | — | tuibang-te-tawh | — |
-| Comitative-Ergative | tuibang-tawhin | — | tuibang-te-tawhin | — |
 
 ---
 
@@ -263,8 +251,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kibawl-ah | — | kibawl-te-ah | — |
 | Ablative | kibawl-pan | — | kibawl-te-pan | — |
 | Ablative-Ergative | kibawl-panin | — | kibawl-te-panin | — |
-| Comitative | kibawl-tawh | — | kibawl-te-tawh | — |
-| Comitative-Ergative | kibawl-tawhin | — | kibawl-te-tawhin | — |
 
 ---
 
@@ -282,8 +268,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawnghon-ah | — | bawnghon-te-ah | — |
 | Ablative | bawnghon-pan | — | bawnghon-te-pan | — |
 | Ablative-Ergative | bawnghon-panin | — | bawnghon-te-panin | — |
-| Comitative | bawnghon-tawh | — | bawnghon-te-tawh | — |
-| Comitative-Ergative | bawnghon-tawhin | — | bawnghon-te-tawhin | — |
 
 ### bawngno "calf" (bawng-no)
 
@@ -295,8 +279,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawngno-ah | — | bawngno-te-ah | — |
 | Ablative | bawngno-pan | — | bawngno-te-pan | — |
 | Ablative-Ergative | bawngno-panin | — | bawngno-te-panin | — |
-| Comitative | bawngno-tawh | — | bawngno-te-tawh | — |
-| Comitative-Ergative | bawngno-tawhin | — | bawngno-te-tawhin | — |
 
 ### bawngpi "bull" (bawng-pi)
 
@@ -308,8 +290,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawngpi-ah | — | bawngpi-te-ah | — |
 | Ablative | bawngpi-pan | — | bawngpi-te-pan | — |
 | Ablative-Ergative | bawngpi-panin | — | bawngpi-te-panin | — |
-| Comitative | bawngpi-tawh | — | bawngpi-te-tawh | — |
-| Comitative-Ergative | bawngpi-tawhin | — | bawngpi-te-tawhin | — |
 
 ### bawngtal "calf" (bawng-tal)
 
@@ -321,8 +301,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawngtal-ah | — | bawngtal-te-ah | — |
 | Ablative | bawngtal-pan | — | bawngtal-te-pan | — |
 | Ablative-Ergative | bawngtal-panin | — | bawngtal-te-panin | — |
-| Comitative | bawngtal-tawh | — | bawngtal-te-tawh | — |
-| Comitative-Ergative | bawngtal-tawhin | — | bawngtal-te-tawhin | — |
 
 ---
 
@@ -340,8 +318,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bekbak-ah | — | bekbak-te-ah | — |
 | Ablative | bekbak-pan | — | bekbak-te-pan | — |
 | Ablative-Ergative | bekbak-panin | — | bekbak-te-panin | — |
-| Comitative | bekbak-tawh | — | bekbak-te-tawh | — |
-| Comitative-Ergative | bekbak-tawhin | — | bekbak-te-tawhin | — |
 
 ### puanbek "piece.of.cloth" (puan-bek)
 
@@ -353,8 +329,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puanbek-ah | — | puanbek-te-ah | — |
 | Ablative | puanbek-pan | — | puanbek-te-pan | — |
 | Ablative-Ergative | puanbek-panin | — | puanbek-te-panin | — |
-| Comitative | puanbek-tawh | — | puanbek-te-tawh | — |
-| Comitative-Ergative | puanbek-tawhin | — | puanbek-te-tawhin | — |
 
 ---
 
@@ -372,8 +346,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | biakinn-ah | — | biakinn-te-ah | — |
 | Ablative | biakinn-pan | — | biakinn-te-pan | — |
 | Ablative-Ergative | biakinn-panin | — | biakinn-te-panin | — |
-| Comitative | biakinn-tawh | — | biakinn-te-tawh | — |
-| Comitative-Ergative | biakinn-tawhin | — | biakinn-te-tawhin | — |
 
 ### biakna "worship" (biak-na)
 
@@ -385,8 +357,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | biakna-ah | — | biakna-te-ah | — |
 | Ablative | biakna-pan | — | biakna-te-pan | — |
 | Ablative-Ergative | biakna-panin | — | biakna-te-panin | — |
-| Comitative | biakna-tawh | — | biakna-te-tawh | — |
-| Comitative-Ergative | biakna-tawhin | — | biakna-te-tawhin | — |
 
 ### biakpiak "offering" (biak-piak)
 
@@ -398,8 +368,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | biakpiak-ah | — | biakpiak-te-ah | — |
 | Ablative | biakpiak-pan | — | biakpiak-te-pan | — |
 | Ablative-Ergative | biakpiak-panin | — | biakpiak-te-panin | — |
-| Comitative | biakpiak-tawh | — | biakpiak-te-tawh | — |
-| Comitative-Ergative | biakpiak-tawhin | — | biakpiak-te-tawhin | — |
 
 ---
 
@@ -417,8 +385,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bilbah-ah | — | bilbah-te-ah | — |
 | Ablative | bilbah-pan | — | bilbah-te-pan | — |
 | Ablative-Ergative | bilbah-panin | — | bilbah-te-panin | — |
-| Comitative | bilbah-tawh | — | bilbah-te-tawh | — |
-| Comitative-Ergative | bilbah-tawhin | — | bilbah-te-tawhin | — |
 
 ---
 
@@ -436,8 +402,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuibuah-ah | — | tuibuah-te-ah | — |
 | Ablative | tuibuah-pan | — | tuibuah-te-pan | — |
 | Ablative-Ergative | tuibuah-panin | — | tuibuah-te-panin | — |
-| Comitative | tuibuah-tawh | — | tuibuah-te-tawh | — |
-| Comitative-Ergative | tuibuah-tawhin | — | tuibuah-te-tawhin | — |
 
 ---
 
@@ -455,8 +419,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | buhkung-ah | — | buhkung-te-ah | — |
 | Ablative | buhkung-pan | — | buhkung-te-pan | — |
 | Ablative-Ergative | buhkung-panin | — | buhkung-te-panin | — |
-| Comitative | buhkung-tawh | — | buhkung-te-tawh | — |
-| Comitative-Ergative | buhkung-tawhin | — | buhkung-te-tawhin | — |
 
 ### buhlom "sheaf" (buh-lom)
 
@@ -468,8 +430,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | buhlom-ah | — | buhlom-te-ah | — |
 | Ablative | buhlom-pan | — | buhlom-te-pan | — |
 | Ablative-Ergative | buhlom-panin | — | buhlom-te-panin | — |
-| Comitative | buhlom-tawh | — | buhlom-te-tawh | — |
-| Comitative-Ergative | buhlom-tawhin | — | buhlom-te-tawhin | — |
 
 ### buhvui "ears.of.corn" (buh-vui)
 
@@ -481,8 +441,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | buhvui-ah | — | buhvui-te-ah | — |
 | Ablative | buhvui-pan | — | buhvui-te-pan | — |
 | Ablative-Ergative | buhvui-panin | — | buhvui-te-panin | — |
-| Comitative | buhvui-tawh | — | buhvui-te-tawh | — |
-| Comitative-Ergative | buhvui-tawhin | — | buhvui-te-tawhin | — |
 
 ### zungbuh "ring" (zung-buh)
 
@@ -494,8 +452,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zungbuh-ah | — | zungbuh-te-ah | — |
 | Ablative | zungbuh-pan | — | zungbuh-te-pan | — |
 | Ablative-Ergative | zungbuh-panin | — | zungbuh-te-panin | — |
-| Comitative | zungbuh-tawh | — | zungbuh-te-tawh | — |
-| Comitative-Ergative | zungbuh-tawhin | — | zungbuh-te-tawhin | — |
 
 ---
 
@@ -513,8 +469,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bukkong-ah | Lev 1:3, Lev 4:7, Lev 4:18 (+2) | bukkong-te-ah | — |
 | Ablative | bukkong-pan | — | bukkong-te-pan | — |
 | Ablative-Ergative | bukkong-panin | — | bukkong-te-panin | — |
-| Comitative | bukkong-tawh | — | bukkong-te-tawh | — |
-| Comitative-Ergative | bukkong-tawhin | — | bukkong-te-tawhin | — |
 
 ---
 
@@ -532,8 +486,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | banbulh-ah | — | banbulh-te-ah | — |
 | Ablative | banbulh-pan | — | banbulh-te-pan | — |
 | Ablative-Ergative | banbulh-panin | — | banbulh-te-panin | — |
-| Comitative | banbulh-tawh | — | banbulh-te-tawh | — |
-| Comitative-Ergative | banbulh-tawhin | — | banbulh-te-tawhin | — |
 
 ---
 
@@ -551,8 +503,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kamciam-ah | — | kamciam-te-ah | — |
 | Ablative | kamciam-pan | — | kamciam-te-pan | — |
 | Ablative-Ergative | kamciam-panin | — | kamciam-te-panin | — |
-| Comitative | kamciam-tawh | — | kamciam-te-tawh | — |
-| Comitative-Ergative | kamciam-tawhin | — | kamciam-te-tawhin | — |
 
 ### kiciam "covenant" (ki-ciam)
 
@@ -564,8 +514,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kiciam-ah | — | kiciam-te-ah | — |
 | Ablative | kiciam-pan | — | kiciam-te-pan | — |
 | Ablative-Ergative | kiciam-panin | — | kiciam-te-panin | — |
-| Comitative | kiciam-tawh | — | kiciam-te-tawh | — |
-| Comitative-Ergative | kiciam-tawhin | — | kiciam-te-tawhin | — |
 
 ### thuciam "promise" (thu-ciam)
 
@@ -577,8 +525,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuciam-ah | — | thuciam-te-ah | — |
 | Ablative | thuciam-pan | — | thuciam-te-pan | — |
 | Ablative-Ergative | thuciam-panin | — | thuciam-te-panin | — |
-| Comitative | thuciam-tawh | — | thuciam-te-tawh | — |
-| Comitative-Ergative | thuciam-tawhin | — | thuciam-te-tawhin | — |
 
 ---
 
@@ -596,8 +542,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | cihtak-ah | — | cihtak-te-ah | — |
 | Ablative | cihtak-pan | — | cihtak-te-pan | — |
 | Ablative-Ergative | cihtak-panin | — | cihtak-te-panin | — |
-| Comitative | cihtak-tawh | — | cihtak-te-tawh | — |
-| Comitative-Ergative | cihtak-tawhin | — | cihtak-te-tawhin | — |
 
 ### kicih "say" (ki-cih)
 
@@ -609,8 +553,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kicih-ah | — | kicih-te-ah | — |
 | Ablative | kicih-pan | — | kicih-te-pan | — |
 | Ablative-Ergative | kicih-panin | — | kicih-te-panin | — |
-| Comitative | kicih-tawh | — | kicih-te-tawh | — |
-| Comitative-Ergative | kicih-tawhin | — | kicih-te-tawhin | — |
 
 ---
 
@@ -628,8 +570,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ancil-ah | — | ancil-te-ah | — |
 | Ablative | ancil-pan | — | ancil-te-pan | — |
 | Ablative-Ergative | ancil-panin | — | ancil-te-panin | — |
-| Comitative | ancil-tawh | — | ancil-te-tawh | — |
-| Comitative-Ergative | ancil-tawhin | — | ancil-te-tawhin | — |
 
 ---
 
@@ -647,8 +587,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | cingnu-ah | — | cingnu-te-ah | — |
 | Ablative | cingnu-pan | — | cingnu-te-pan | — |
 | Ablative-Ergative | cingnu-panin | — | cingnu-te-panin | — |
-| Comitative | cingnu-tawh | — | cingnu-te-tawh | — |
-| Comitative-Ergative | cingnu-tawhin | — | cingnu-te-tawhin | — |
 
 ### gancing "shepherd" (gan-cing)
 
@@ -660,8 +598,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gancing-ah | — | gancing-te-ah | — |
 | Ablative | gancing-pan | — | gancing-te-pan | — |
 | Ablative-Ergative | gancing-panin | — | gancing-te-panin | — |
-| Comitative | gancing-tawh | — | gancing-te-tawh | — |
-| Comitative-Ergative | gancing-tawhin | — | gancing-te-tawhin | — |
 
 ---
 
@@ -679,8 +615,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | muhdah-ah | — | muhdah-te-ah | — |
 | Ablative | muhdah-pan | — | muhdah-te-pan | — |
 | Ablative-Ergative | muhdah-panin | — | muhdah-te-panin | — |
-| Comitative | muhdah-tawh | — | muhdah-te-tawh | — |
-| Comitative-Ergative | muhdah-tawhin | — | muhdah-te-tawhin | — |
 
 ---
 
@@ -698,8 +632,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galdaih-ah | — | galdaih-te-ah | — |
 | Ablative | galdaih-pan | — | galdaih-te-pan | — |
 | Ablative-Ergative | galdaih-panin | — | galdaih-te-panin | — |
-| Comitative | galdaih-tawh | — | galdaih-te-tawh | — |
-| Comitative-Ergative | galdaih-tawhin | — | galdaih-te-tawhin | — |
 
 ### gamdaih "breadth" (gam-daih)
 
@@ -711,8 +643,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamdaih-ah | — | gamdaih-te-ah | — |
 | Ablative | gamdaih-pan | — | gamdaih-te-pan | — |
 | Ablative-Ergative | gamdaih-panin | — | gamdaih-te-panin | — |
-| Comitative | gamdaih-tawh | — | gamdaih-te-tawh | — |
-| Comitative-Ergative | gamdaih-tawhin | — | gamdaih-te-tawhin | — |
 
 ---
 
@@ -730,8 +660,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungdam-ah | — | lungdam-te-ah | — |
 | Ablative | lungdam-pan | — | lungdam-te-pan | — |
 | Ablative-Ergative | lungdam-panin | — | lungdam-te-panin | — |
-| Comitative | lungdam-tawh | — | lungdam-te-tawh | — |
-| Comitative-Ergative | lungdam-tawhin | — | lungdam-te-tawhin | — |
 
 ### tawldam "rest" (tawl-dam)
 
@@ -743,8 +671,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawldam-ah | — | tawldam-te-ah | — |
 | Ablative | tawldam-pan | — | tawldam-te-pan | — |
 | Ablative-Ergative | tawldam-panin | — | tawldam-te-panin | — |
-| Comitative | tawldam-tawh | — | tawldam-te-tawh | — |
-| Comitative-Ergative | tawldam-tawhin | — | tawldam-te-tawhin | — |
 
 ---
 
@@ -762,8 +688,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamdang-ah | Jer 48:11, Hos 9:4 | gamdang-te-ah | — |
 | Ablative | gamdang-pan | — | gamdang-te-pan | — |
 | Ablative-Ergative | gamdang-panin | — | gamdang-te-panin | — |
-| Comitative | gamdang-tawh | — | gamdang-te-tawh | — |
-| Comitative-Ergative | gamdang-tawhin | — | gamdang-te-tawhin | — |
 
 ### lamdang "other.way" (lam-dang)
 
@@ -775,8 +699,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamdang-ah | — | lamdang-te-ah | — |
 | Ablative | lamdang-pan | — | lamdang-te-pan | — |
 | Ablative-Ergative | lamdang-panin | — | lamdang-te-panin | — |
-| Comitative | lamdang-tawh | — | lamdang-te-tawh | — |
-| Comitative-Ergative | lamdang-tawhin | — | lamdang-te-tawhin | — |
 
 ### mundang "elsewhere" (mun-dang)
 
@@ -788,8 +710,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mundang-ah | Mar 5:10, Act 12:17 | mundang-te-ah | — |
 | Ablative | mundang-pan | — | mundang-te-pan | — |
 | Ablative-Ergative | mundang-panin | — | mundang-te-panin | — |
-| Comitative | mundang-tawh | — | mundang-te-tawh | — |
-| Comitative-Ergative | mundang-tawhin | — | mundang-te-tawhin | — |
 
 ### namdang "diverse" (nam-dang)
 
@@ -801,8 +721,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | namdang-ah | — | namdang-te-ah | — |
 | Ablative | namdang-pan | — | namdang-te-pan | — |
 | Ablative-Ergative | namdang-panin | — | namdang-te-panin | — |
-| Comitative | namdang-tawh | — | namdang-te-tawh | — |
-| Comitative-Ergative | namdang-tawhin | — | namdang-te-tawhin | — |
 
 ---
 
@@ -820,8 +738,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | dialkaih-ah | — | dialkaih-te-ah | — |
 | Ablative | dialkaih-pan | — | dialkaih-te-pan | — |
 | Ablative-Ergative | dialkaih-panin | — | dialkaih-te-panin | — |
-| Comitative | dialkaih-tawh | — | dialkaih-te-tawh | — |
-| Comitative-Ergative | dialkaih-tawhin | — | dialkaih-te-tawhin | — |
 
 ---
 
@@ -839,8 +755,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | diktat-ah | — | diktat-te-ah | — |
 | Ablative | diktat-pan | — | diktat-te-pan | — |
 | Ablative-Ergative | diktat-panin | — | diktat-te-panin | — |
-| Comitative | diktat-tawh | — | diktat-te-tawh | — |
-| Comitative-Ergative | diktat-tawhin | — | diktat-te-tawhin | — |
 
 ### midik "righteous" (mi-dik)
 
@@ -852,8 +766,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | midik-ah | — | midik-te-ah | — |
 | Ablative | midik-pan | — | midik-te-pan | — |
 | Ablative-Ergative | midik-panin | — | midik-te-panin | — |
-| Comitative | midik-tawh | — | midik-te-tawh | — |
-| Comitative-Ergative | midik-tawhin | — | midik-te-tawhin | — |
 
 ---
 
@@ -871,8 +783,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galdo-ah | — | galdo-te-ah | — |
 | Ablative | galdo-pan | — | galdo-te-pan | — |
 | Ablative-Ergative | galdo-panin | — | galdo-te-panin | — |
-| Comitative | galdo-tawh | — | galdo-te-tawh | — |
-| Comitative-Ergative | galdo-tawhin | — | galdo-te-tawhin | — |
 
 ---
 
@@ -890,8 +800,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siahdong-ah | — | siahdong-te-ah | — |
 | Ablative | siahdong-pan | — | siahdong-te-pan | — |
 | Ablative-Ergative | siahdong-panin | — | siahdong-te-panin | — |
-| Comitative | siahdong-tawh | — | siahdong-te-tawh | — |
-| Comitative-Ergative | siahdong-tawhin | — | siahdong-te-tawhin | — |
 
 ---
 
@@ -909,8 +817,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thudot-ah | — | thudot-te-ah | — |
 | Ablative | thudot-pan | — | thudot-te-pan | — |
 | Ablative-Ergative | thudot-panin | — | thudot-te-panin | — |
-| Comitative | thudot-tawh | — | thudot-te-tawh | — |
-| Comitative-Ergative | thudot-tawhin | — | thudot-te-tawhin | — |
 
 ---
 
@@ -928,8 +834,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungduai-ah | — | lungduai-te-ah | — |
 | Ablative | lungduai-pan | — | lungduai-te-pan | — |
 | Ablative-Ergative | lungduai-panin | — | lungduai-te-panin | — |
-| Comitative | lungduai-tawh | — | lungduai-te-tawh | — |
-| Comitative-Ergative | lungduai-tawhin | — | lungduai-te-tawhin | — |
 
 ---
 
@@ -947,8 +851,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamdung-ah | — | gamdung-te-ah | — |
 | Ablative | gamdung-pan | — | gamdung-te-pan | — |
 | Ablative-Ergative | gamdung-panin | — | gamdung-te-panin | — |
-| Comitative | gamdung-tawh | — | gamdung-te-tawh | — |
-| Comitative-Ergative | gamdung-tawhin | — | gamdung-te-tawhin | — |
 
 ---
 
@@ -966,8 +868,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamet-ah | — | lamet-te-ah | — |
 | Ablative | lamet-pan | — | lamet-te-pan | — |
 | Ablative-Ergative | lamet-panin | — | lamet-te-panin | — |
-| Comitative | lamet-tawh | — | lamet-te-tawh | — |
-| Comitative-Ergative | lamet-tawhin | — | lamet-te-tawhin | — |
 
 ---
 
@@ -985,8 +885,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gahzu-ah | — | gahzu-te-ah | — |
 | Ablative | gahzu-pan | — | gahzu-te-pan | — |
 | Ablative-Ergative | gahzu-panin | — | gahzu-te-panin | — |
-| Comitative | gahzu-tawh | — | gahzu-te-tawh | — |
-| Comitative-Ergative | gahzu-tawhin | — | gahzu-te-tawhin | — |
 
 ### leenggah "raisin" (leeng-gah)
 
@@ -998,8 +896,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leenggah-ah | — | leenggah-te-ah | — |
 | Ablative | leenggah-pan | — | leenggah-te-pan | — |
 | Ablative-Ergative | leenggah-panin | — | leenggah-te-panin | — |
-| Comitative | leenggah-tawh | — | leenggah-te-tawh | — |
-| Comitative-Ergative | leenggah-tawhin | — | leenggah-te-tawhin | — |
 
 ### singgah "fruit.tree" (sing-gah)
 
@@ -1011,8 +907,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singgah-ah | — | singgah-te-ah | — |
 | Ablative | singgah-pan | — | singgah-te-pan | — |
 | Ablative-Ergative | singgah-panin | — | singgah-te-panin | — |
-| Comitative | singgah-tawh | — | singgah-te-tawh | — |
-| Comitative-Ergative | singgah-tawhin | — | singgah-te-tawhin | — |
 
 ---
 
@@ -1030,8 +924,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galdaih-ah | — | galdaih-te-ah | — |
 | Ablative | galdaih-pan | — | galdaih-te-pan | — |
 | Ablative-Ergative | galdaih-panin | — | galdaih-te-panin | — |
-| Comitative | galdaih-tawh | — | galdaih-te-tawh | — |
-| Comitative-Ergative | galdaih-tawhin | — | galdaih-te-tawhin | — |
 
 ### galdo "campaign" (gal-do)
 
@@ -1043,8 +935,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galdo-ah | — | galdo-te-ah | — |
 | Ablative | galdo-pan | — | galdo-te-pan | — |
 | Ablative-Ergative | galdo-panin | — | galdo-te-panin | — |
-| Comitative | galdo-tawh | — | galdo-te-tawh | — |
-| Comitative-Ergative | galdo-tawhin | — | galdo-te-tawhin | — |
 
 ### galkah "warfare" (gal-kah)
 
@@ -1056,8 +946,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galkah-ah | — | galkah-te-ah | — |
 | Ablative | galkah-pan | — | galkah-te-pan | — |
 | Ablative-Ergative | galkah-panin | — | galkah-te-panin | — |
-| Comitative | galkah-tawh | — | galkah-te-tawh | — |
-| Comitative-Ergative | galkah-tawhin | — | galkah-te-tawhin | — |
 
 ### galkap "soldier" (gal-kap)
 
@@ -1069,8 +957,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galkap-ah | — | galkap-te-ah | — |
 | Ablative | galkap-pan | — | galkap-te-pan | — |
 | Ablative-Ergative | galkap-panin | — | galkap-te-panin | — |
-| Comitative | galkap-tawh | — | galkap-te-tawh | — |
-| Comitative-Ergative | galkap-tawhin | — | galkap-te-tawhin | — |
 
 ### galpan "fortress" (gal-pan)
 
@@ -1082,8 +968,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galpan-ah | — | galpan-te-ah | — |
 | Ablative | galpan-pan | — | galpan-te-pan | — |
 | Ablative-Ergative | galpan-panin | — | galpan-te-panin | — |
-| Comitative | galpan-tawh | — | galpan-te-tawh | — |
-| Comitative-Ergative | galpan-tawhin | — | galpan-te-tawhin | — |
 
 ### galsim "number" (gal-sim)
 
@@ -1095,8 +979,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galsim-ah | — | galsim-te-ah | — |
 | Ablative | galsim-pan | — | galsim-te-pan | — |
 | Ablative-Ergative | galsim-panin | — | galsim-te-panin | — |
-| Comitative | galsim-tawh | — | galsim-te-tawh | — |
-| Comitative-Ergative | galsim-tawhin | — | galsim-te-tawhin | — |
 
 ---
 
@@ -1114,8 +996,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galkapmang-ah | — | galkapmang-te-ah | — |
 | Ablative | galkapmang-pan | — | galkapmang-te-pan | — |
 | Ablative-Ergative | galkapmang-panin | — | galkapmang-te-panin | — |
-| Comitative | galkapmang-tawh | — | galkapmang-te-tawh | — |
-| Comitative-Ergative | galkapmang-tawhin | — | galkapmang-te-tawhin | — |
 
 ---
 
@@ -1133,8 +1013,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamdaih-ah | — | gamdaih-te-ah | — |
 | Ablative | gamdaih-pan | — | gamdaih-te-pan | — |
 | Ablative-Ergative | gamdaih-panin | — | gamdaih-te-panin | — |
-| Comitative | gamdaih-tawh | — | gamdaih-te-tawh | — |
-| Comitative-Ergative | gamdaih-tawhin | — | gamdaih-te-tawhin | — |
 
 ### gamdang "other.land" (gam-dang)
 
@@ -1146,8 +1024,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamdang-ah | Jer 48:11, Hos 9:4 | gamdang-te-ah | — |
 | Ablative | gamdang-pan | — | gamdang-te-pan | — |
 | Ablative-Ergative | gamdang-panin | — | gamdang-te-panin | — |
-| Comitative | gamdang-tawh | — | gamdang-te-tawh | — |
-| Comitative-Ergative | gamdang-tawhin | — | gamdang-te-tawhin | — |
 
 ### gamdung "length" (gam-dung)
 
@@ -1159,8 +1035,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamdung-ah | — | gamdung-te-ah | — |
 | Ablative | gamdung-pan | — | gamdung-te-pan | — |
 | Ablative-Ergative | gamdung-panin | — | gamdung-te-panin | — |
-| Comitative | gamdung-tawh | — | gamdung-te-tawh | — |
-| Comitative-Ergative | gamdung-tawhin | — | gamdung-te-tawhin | — |
 
 ### gamla "wilderness" (gam-la)
 
@@ -1172,8 +1046,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamla-ah | — | gamla-te-ah | — |
 | Ablative | gamla-pan | — | gamla-te-pan | — |
 | Ablative-Ergative | gamla-panin | — | gamla-te-panin | — |
-| Comitative | gamla-tawh | — | gamla-te-tawh | — |
-| Comitative-Ergative | gamla-tawhin | — | gamla-te-tawhin | — |
 
 ### gamlak "land.midst" (gam-lak)
 
@@ -1185,8 +1057,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamlak-ah | Gen 4:8, Gen 21:20, Gen 24:63 (+2) | gamlak-te-ah | — |
 | Ablative | gamlak-pan | — | gamlak-te-pan | — |
 | Ablative-Ergative | gamlak-panin | — | gamlak-te-panin | — |
-| Comitative | gamlak-tawh | — | gamlak-te-tawh | — |
-| Comitative-Ergative | gamlak-tawhin | — | gamlak-te-tawhin | — |
 
 ### gamlum "south" (gam-lum)
 
@@ -1198,8 +1068,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamlum-ah | — | gamlum-te-ah | — |
 | Ablative | gamlum-pan | — | gamlum-te-pan | — |
 | Ablative-Ergative | gamlum-panin | — | gamlum-te-panin | — |
-| Comitative | gamlum-tawh | — | gamlum-te-tawh | — |
-| Comitative-Ergative | gamlum-tawhin | — | gamlum-te-tawhin | — |
 
 ### gamtat "kingdom" (gam-tat)
 
@@ -1211,8 +1079,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamtat-ah | — | gamtat-te-ah | — |
 | Ablative | gamtat-pan | — | gamtat-te-pan | — |
 | Ablative-Ergative | gamtat-panin | — | gamtat-te-panin | — |
-| Comitative | gamtat-tawh | — | gamtat-te-tawh | — |
-| Comitative-Ergative | gamtat-tawhin | — | gamtat-te-tawhin | — |
 
 ### gamvai "breadth" (gam-vai)
 
@@ -1224,8 +1090,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamvai-ah | — | gamvai-te-ah | — |
 | Ablative | gamvai-pan | — | gamvai-te-pan | — |
 | Ablative-Ergative | gamvai-panin | — | gamvai-te-panin | — |
-| Comitative | gamvai-tawh | — | gamvai-te-tawh | — |
-| Comitative-Ergative | gamvai-tawhin | — | gamvai-te-tawhin | — |
 
 ### taanggam "suburb" (taang-gam)
 
@@ -1237,8 +1101,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | taanggam-ah | — | taanggam-te-ah | — |
 | Ablative | taanggam-pan | — | taanggam-te-pan | — |
 | Ablative-Ergative | taanggam-panin | — | taanggam-te-panin | — |
-| Comitative | taanggam-tawh | — | taanggam-te-tawh | — |
-| Comitative-Ergative | taanggam-tawhin | — | taanggam-te-tawhin | — |
 
 ---
 
@@ -1256,8 +1118,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kigamla-ah | — | kigamla-te-ah | — |
 | Ablative | kigamla-pan | — | kigamla-te-pan | — |
 | Ablative-Ergative | kigamla-panin | — | kigamla-te-panin | — |
-| Comitative | kigamla-tawh | — | kigamla-te-tawh | — |
-| Comitative-Ergative | kigamla-tawhin | — | kigamla-te-tawhin | — |
 
 ---
 
@@ -1275,8 +1135,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gancing-ah | — | gancing-te-ah | — |
 | Ablative | gancing-pan | — | gancing-te-pan | — |
 | Ablative-Ergative | gancing-panin | — | gancing-te-panin | — |
-| Comitative | gancing-tawh | — | gancing-te-tawh | — |
-| Comitative-Ergative | gancing-tawhin | — | gancing-te-tawhin | — |
 
 ---
 
@@ -1294,8 +1152,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kigelh-ah | — | kigelh-te-ah | — |
 | Ablative | kigelh-pan | — | kigelh-te-pan | — |
 | Ablative-Ergative | kigelh-panin | — | kigelh-te-panin | — |
-| Comitative | kigelh-tawh | — | kigelh-te-tawh | — |
-| Comitative-Ergative | kigelh-tawhin | — | kigelh-te-tawhin | — |
 
 ### laigelh "write" (lai-gelh)
 
@@ -1307,8 +1163,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | laigelh-ah | — | laigelh-te-ah | — |
 | Ablative | laigelh-pan | — | laigelh-te-pan | — |
 | Ablative-Ergative | laigelh-panin | — | laigelh-te-panin | — |
-| Comitative | laigelh-tawh | — | laigelh-te-tawh | — |
-| Comitative-Ergative | laigelh-tawhin | — | laigelh-te-tawhin | — |
 
 ---
 
@@ -1326,8 +1180,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | genkholh-ah | — | genkholh-te-ah | — |
 | Ablative | genkholh-pan | — | genkholh-te-pan | — |
 | Ablative-Ergative | genkholh-panin | — | genkholh-te-panin | — |
-| Comitative | genkholh-tawh | — | genkholh-te-tawh | — |
-| Comitative-Ergative | genkholh-tawhin | — | genkholh-te-tawhin | — |
 
 ### gentheih "eloquence" (gen-theih)
 
@@ -1339,8 +1191,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gentheih-ah | — | gentheih-te-ah | — |
 | Ablative | gentheih-pan | — | gentheih-te-pan | — |
 | Ablative-Ergative | gentheih-panin | — | gentheih-te-panin | — |
-| Comitative | gentheih-tawh | — | gentheih-te-tawh | — |
-| Comitative-Ergative | gentheih-tawhin | — | gentheih-te-tawhin | — |
 
 ### kigen "conversation" (ki-gen)
 
@@ -1352,8 +1202,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kigen-ah | — | kigen-te-ah | — |
 | Ablative | kigen-pan | — | kigen-te-pan | — |
 | Ablative-Ergative | kigen-panin | — | kigen-te-panin | — |
-| Comitative | kigen-tawh | — | kigen-te-tawh | — |
-| Comitative-Ergative | kigen-tawhin | — | kigen-te-tawhin | — |
 
 ### thugen "speech" (thu-gen)
 
@@ -1365,8 +1213,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thugen-ah | — | thugen-te-ah | — |
 | Ablative | thugen-pan | — | thugen-te-pan | — |
 | Ablative-Ergative | thugen-panin | — | thugen-te-panin | — |
-| Comitative | thugen-tawh | — | thugen-te-tawh | — |
-| Comitative-Ergative | thugen-tawhin | — | thugen-te-tawhin | — |
 
 ---
 
@@ -1384,8 +1230,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gilkial-ah | — | gilkial-te-ah | — |
 | Ablative | gilkial-pan | — | gilkial-te-pan | — |
 | Ablative-Ergative | gilkial-panin | — | gilkial-te-panin | — |
-| Comitative | gilkial-tawh | — | gilkial-te-tawh | — |
-| Comitative-Ergative | gilkial-tawhin | — | gilkial-te-tawhin | — |
 
 ---
 
@@ -1403,8 +1247,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gimnam-ah | — | gimnam-te-ah | — |
 | Ablative | gimnam-pan | — | gimnam-te-pan | — |
 | Ablative-Ergative | gimnam-panin | — | gimnam-te-panin | — |
-| Comitative | gimnam-tawh | — | gimnam-te-tawh | — |
-| Comitative-Ergative | gimnam-tawhin | — | gimnam-te-tawhin | — |
 
 ---
 
@@ -1422,8 +1264,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kheging-ah | — | kheging-te-ah | — |
 | Ablative | kheging-pan | — | kheging-te-pan | — |
 | Ablative-Ergative | kheging-panin | — | kheging-te-panin | — |
-| Comitative | kheging-tawh | — | kheging-te-tawh | — |
-| Comitative-Ergative | kheging-tawhin | — | kheging-te-tawhin | — |
 
 ---
 
@@ -1441,8 +1281,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | migit-ah | — | migit-te-ah | — |
 | Ablative | migit-pan | — | migit-te-pan | — |
 | Ablative-Ergative | migit-panin | — | migit-te-panin | — |
-| Comitative | migit-tawh | — | migit-te-tawh | — |
-| Comitative-Ergative | migit-tawhin | — | migit-te-tawhin | — |
 
 ---
 
@@ -1460,8 +1298,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | meigong-ah | — | meigong-te-ah | — |
 | Ablative | meigong-pan | — | meigong-te-pan | — |
 | Ablative-Ergative | meigong-panin | — | meigong-te-panin | — |
-| Comitative | meigong-tawh | — | meigong-te-tawh | — |
-| Comitative-Ergative | meigong-tawhin | — | meigong-te-tawhin | — |
 
 ---
 
@@ -1479,8 +1315,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | guahtui-ah | — | guahtui-te-ah | — |
 | Ablative | guahtui-pan | — | guahtui-te-pan | — |
 | Ablative-Ergative | guahtui-panin | — | guahtui-te-panin | — |
-| Comitative | guahtui-tawh | — | guahtui-te-tawh | — |
-| Comitative-Ergative | guahtui-tawhin | — | guahtui-te-tawhin | — |
 
 ---
 
@@ -1498,8 +1332,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leenggui-ah | — | leenggui-te-ah | — |
 | Ablative | leenggui-pan | — | leenggui-te-pan | — |
 | Ablative-Ergative | leenggui-panin | — | leenggui-te-panin | — |
-| Comitative | leenggui-tawh | — | leenggui-te-tawh | — |
-| Comitative-Ergative | leenggui-tawhin | — | leenggui-te-tawhin | — |
 
 ---
 
@@ -1517,8 +1349,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | haksat-ah | — | haksat-te-ah | — |
 | Ablative | haksat-pan | — | haksat-te-pan | — |
 | Ablative-Ergative | haksat-panin | — | haksat-te-panin | — |
-| Comitative | haksat-tawh | — | haksat-te-tawh | — |
-| Comitative-Ergative | haksat-tawhin | — | haksat-te-tawhin | — |
 
 ---
 
@@ -1536,8 +1366,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kihal-ah | — | kihal-te-ah | — |
 | Ablative | kihal-pan | — | kihal-te-pan | — |
 | Ablative-Ergative | kihal-panin | — | kihal-te-panin | — |
-| Comitative | kihal-tawh | — | kihal-te-tawh | — |
-| Comitative-Ergative | kihal-tawhin | — | kihal-te-tawhin | — |
 
 ---
 
@@ -1555,8 +1383,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hamphat-ah | — | hamphat-te-ah | — |
 | Ablative | hamphat-pan | — | hamphat-te-pan | — |
 | Ablative-Ergative | hamphat-panin | — | hamphat-te-panin | — |
-| Comitative | hamphat-tawh | — | hamphat-te-tawh | — |
-| Comitative-Ergative | hamphat-tawhin | — | hamphat-te-tawhin | — |
 
 ### hamsiat "reproach" (ham-siat)
 
@@ -1568,8 +1394,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hamsiat-ah | — | hamsiat-te-ah | — |
 | Ablative | hamsiat-pan | — | hamsiat-te-pan | — |
 | Ablative-Ergative | hamsiat-panin | — | hamsiat-te-panin | — |
-| Comitative | hamsiat-tawh | — | hamsiat-te-tawh | — |
-| Comitative-Ergative | hamsiat-tawhin | — | hamsiat-te-tawhin | — |
 
 ### huaiham "terror" (huai-ham)
 
@@ -1581,8 +1405,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | huaiham-ah | — | huaiham-te-ah | — |
 | Ablative | huaiham-pan | — | huaiham-te-pan | — |
 | Ablative-Ergative | huaiham-panin | — | huaiham-te-panin | — |
-| Comitative | huaiham-tawh | — | huaiham-te-tawh | — |
-| Comitative-Ergative | huaiham-tawhin | — | huaiham-te-tawhin | — |
 
 ### khangham "ancestor" (khang-ham)
 
@@ -1594,8 +1416,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khangham-ah | — | khangham-te-ah | — |
 | Ablative | khangham-pan | — | khangham-te-pan | — |
 | Ablative-Ergative | khangham-panin | — | khangham-te-panin | — |
-| Comitative | khangham-tawh | — | khangham-te-tawh | — |
-| Comitative-Ergative | khangham-tawhin | — | khangham-te-tawhin | — |
 
 ### lungham "wrath" (lung-ham)
 
@@ -1607,8 +1427,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungham-ah | — | lungham-te-ah | — |
 | Ablative | lungham-pan | — | lungham-te-pan | — |
 | Ablative-Ergative | lungham-panin | — | lungham-te-panin | — |
-| Comitative | lungham-tawh | — | lungham-te-tawh | — |
-| Comitative-Ergative | lungham-tawhin | — | lungham-te-tawhin | — |
 
 ### puanham "covering" (puan-ham)
 
@@ -1620,8 +1438,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puanham-ah | — | puanham-te-ah | — |
 | Ablative | puanham-pan | — | puanham-te-pan | — |
 | Ablative-Ergative | puanham-panin | — | puanham-te-panin | — |
-| Comitative | puanham-tawh | — | puanham-te-tawh | — |
-| Comitative-Ergative | puanham-tawhin | — | puanham-te-tawhin | — |
 
 ---
 
@@ -1639,8 +1455,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thahat-ah | — | thahat-te-ah | — |
 | Ablative | thahat-pan | — | thahat-te-pan | — |
 | Ablative-Ergative | thahat-panin | — | thahat-te-panin | — |
-| Comitative | thahat-tawh | — | thahat-te-tawh | — |
-| Comitative-Ergative | thahat-tawhin | — | thahat-te-tawhin | — |
 
 ---
 
@@ -1658,8 +1472,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mihau-ah | — | mihau-te-ah | — |
 | Ablative | mihau-pan | — | mihau-te-pan | — |
 | Ablative-Ergative | mihau-panin | — | mihau-te-panin | — |
-| Comitative | mihau-tawh | — | mihau-te-tawh | — |
-| Comitative-Ergative | mihau-tawhin | — | mihau-te-tawhin | — |
 
 ---
 
@@ -1677,8 +1489,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hawlkhiat-ah | — | hawlkhiat-te-ah | — |
 | Ablative | hawlkhiat-pan | — | hawlkhiat-te-pan | — |
 | Ablative-Ergative | hawlkhiat-panin | — | hawlkhiat-te-panin | — |
-| Comitative | hawlkhiat-tawh | — | hawlkhiat-te-tawh | — |
-| Comitative-Ergative | hawlkhiat-tawhin | — | hawlkhiat-te-tawhin | — |
 
 ---
 
@@ -1696,8 +1506,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | suanghawm-ah | Jdg 15:11 | suanghawm-te-ah | — |
 | Ablative | suanghawm-pan | — | suanghawm-te-pan | — |
 | Ablative-Ergative | suanghawm-panin | — | suanghawm-te-panin | — |
-| Comitative | suanghawm-tawh | — | suanghawm-te-tawh | — |
-| Comitative-Ergative | suanghawm-tawhin | — | suanghawm-te-tawhin | — |
 
 ### vaihawm "counsel" (vai-hawm)
 
@@ -1709,8 +1517,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vaihawm-ah | — | vaihawm-te-ah | — |
 | Ablative | vaihawm-pan | — | vaihawm-te-pan | — |
 | Ablative-Ergative | vaihawm-panin | — | vaihawm-te-panin | — |
-| Comitative | vaihawm-tawh | — | vaihawm-te-tawh | — |
-| Comitative-Ergative | vaihawm-tawhin | — | vaihawm-te-tawhin | — |
 
 ---
 
@@ -1728,8 +1534,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hehnep-ah | — | hehnep-te-ah | — |
 | Ablative | hehnep-pan | — | hehnep-te-pan | — |
 | Ablative-Ergative | hehnep-panin | — | hehnep-te-panin | — |
-| Comitative | hehnep-tawh | — | hehnep-te-tawh | — |
-| Comitative-Ergative | hehnep-tawhin | — | hehnep-te-tawhin | — |
 
 ### hehpih "grace" (heh-pih)
 
@@ -1741,8 +1545,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hehpih-ah | — | hehpih-te-ah | — |
 | Ablative | hehpih-pan | — | hehpih-te-pan | — |
 | Ablative-Ergative | hehpih-panin | — | hehpih-te-panin | — |
-| Comitative | hehpih-tawh | — | hehpih-te-tawh | — |
-| Comitative-Ergative | hehpih-tawhin | — | hehpih-te-tawhin | — |
 
 ---
 
@@ -1760,8 +1562,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singhiang-ah | — | singhiang-te-ah | — |
 | Ablative | singhiang-pan | — | singhiang-te-pan | — |
 | Ablative-Ergative | singhiang-panin | — | singhiang-te-panin | — |
-| Comitative | singhiang-tawh | — | singhiang-te-tawh | — |
-| Comitative-Ergative | singhiang-tawhin | — | singhiang-te-tawhin | — |
 
 ---
 
@@ -1779,8 +1579,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamhilh-ah | — | lamhilh-te-ah | — |
 | Ablative | lamhilh-pan | — | lamhilh-te-pan | — |
 | Ablative-Ergative | lamhilh-panin | — | lamhilh-te-panin | — |
-| Comitative | lamhilh-tawh | — | lamhilh-te-tawh | — |
-| Comitative-Ergative | lamhilh-tawhin | — | lamhilh-te-tawhin | — |
 
 ### thuhilh "teach" (thu-hilh)
 
@@ -1792,8 +1590,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuhilh-ah | — | thuhilh-te-ah | — |
 | Ablative | thuhilh-pan | — | thuhilh-te-pan | — |
 | Ablative-Ergative | thuhilh-panin | — | thuhilh-te-panin | — |
-| Comitative | thuhilh-tawh | — | thuhilh-te-tawh | — |
-| Comitative-Ergative | thuhilh-tawhin | — | thuhilh-te-tawhin | — |
 
 ---
 
@@ -1811,8 +1607,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hingkik-ah | — | hingkik-te-ah | — |
 | Ablative | hingkik-pan | — | hingkik-te-pan | — |
 | Ablative-Ergative | hingkik-panin | — | hingkik-te-panin | — |
-| Comitative | hingkik-tawh | — | hingkik-te-tawh | — |
-| Comitative-Ergative | hingkik-tawhin | — | hingkik-te-tawhin | — |
 
 ### mihing "mankind" (mi-hing)
 
@@ -1824,8 +1618,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mihing-ah | — | mihing-te-ah | — |
 | Ablative | mihing-pan | — | mihing-te-pan | — |
 | Ablative-Ergative | mihing-panin | — | mihing-te-panin | — |
-| Comitative | mihing-tawh | — | mihing-te-tawh | — |
-| Comitative-Ergative | mihing-tawhin | — | mihing-te-tawhin | — |
 
 ---
 
@@ -1843,8 +1635,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hopih-ah | — | hopih-te-ah | — |
 | Ablative | hopih-pan | — | hopih-te-pan | — |
 | Ablative-Ergative | hopih-panin | — | hopih-te-panin | — |
-| Comitative | hopih-tawh | — | hopih-te-tawh | — |
-| Comitative-Ergative | hopih-tawhin | — | hopih-te-tawhin | — |
 
 ### kiho "call" (ki-ho)
 
@@ -1856,8 +1646,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kiho-ah | — | kiho-te-ah | — |
 | Ablative | kiho-pan | — | kiho-te-pan | — |
 | Ablative-Ergative | kiho-panin | — | kiho-te-panin | — |
-| Comitative | kiho-tawh | — | kiho-te-tawh | — |
-| Comitative-Ergative | kiho-tawhin | — | kiho-te-tawhin | — |
 
 ---
 
@@ -1875,8 +1663,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hoihpen-ah | — | hoihpen-te-ah | — |
 | Ablative | hoihpen-pan | — | hoihpen-te-pan | — |
 | Ablative-Ergative | hoihpen-panin | — | hoihpen-te-panin | — |
-| Comitative | hoihpen-tawh | — | hoihpen-te-tawh | — |
-| Comitative-Ergative | hoihpen-tawhin | — | hoihpen-te-tawhin | — |
 
 ### hoihtak "good.truly" (hoih-tak)
 
@@ -1888,8 +1674,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hoihtak-ah | — | hoihtak-te-ah | — |
 | Ablative | hoihtak-pan | — | hoihtak-te-pan | — |
 | Ablative-Ergative | hoihtak-panin | — | hoihtak-te-panin | — |
-| Comitative | hoihtak-tawh | — | hoihtak-te-tawh | — |
-| Comitative-Ergative | hoihtak-tawhin | — | hoihtak-te-tawhin | — |
 
 ---
 
@@ -1907,8 +1691,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawnghon-ah | — | bawnghon-te-ah | — |
 | Ablative | bawnghon-pan | — | bawnghon-te-pan | — |
 | Ablative-Ergative | bawnghon-panin | — | bawnghon-te-panin | — |
-| Comitative | bawnghon-tawh | — | bawnghon-te-tawh | — |
-| Comitative-Ergative | bawnghon-tawhin | — | bawnghon-te-tawhin | — |
 
 ### honkhia "go.forth" (hon-khia)
 
@@ -1920,8 +1702,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | honkhia-ah | — | honkhia-te-ah | — |
 | Ablative | honkhia-pan | — | honkhia-te-pan | — |
 | Ablative-Ergative | honkhia-panin | — | honkhia-te-panin | — |
-| Comitative | honkhia-tawh | — | honkhia-te-tawh | — |
-| Comitative-Ergative | honkhia-tawhin | — | honkhia-te-tawhin | — |
 
 ### honpi "multitude" (hon-pi)
 
@@ -1933,8 +1713,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | honpi-ah | — | honpi-te-ah | — |
 | Ablative | honpi-pan | — | honpi-te-pan | — |
 | Ablative-Ergative | honpi-panin | — | honpi-te-panin | — |
-| Comitative | honpi-tawh | — | honpi-te-tawh | — |
-| Comitative-Ergative | honpi-tawhin | — | honpi-te-tawhin | — |
 
 ---
 
@@ -1952,8 +1730,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kihonkhia-ah | — | kihonkhia-te-ah | — |
 | Ablative | kihonkhia-pan | — | kihonkhia-te-pan | — |
 | Ablative-Ergative | kihonkhia-panin | — | kihonkhia-te-panin | — |
-| Comitative | kihonkhia-tawh | — | kihonkhia-te-tawh | — |
-| Comitative-Ergative | kihonkhia-tawhin | — | kihonkhia-te-tawhin | — |
 
 ---
 
@@ -1971,8 +1747,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hotkhiat-ah | — | hotkhiat-te-ah | — |
 | Ablative | hotkhiat-pan | — | hotkhiat-te-pan | — |
 | Ablative-Ergative | hotkhiat-panin | — | hotkhiat-te-panin | — |
-| Comitative | hotkhiat-tawh | — | hotkhiat-te-tawh | — |
-| Comitative-Ergative | hotkhiat-tawhin | — | hotkhiat-te-tawhin | — |
 
 ---
 
@@ -1990,8 +1764,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | huaiham-ah | — | huaiham-te-ah | — |
 | Ablative | huaiham-pan | — | huaiham-te-pan | — |
 | Ablative-Ergative | huaiham-panin | — | huaiham-te-panin | — |
-| Comitative | huaiham-tawh | — | huaiham-te-tawh | — |
-| Comitative-Ergative | huaiham-tawhin | — | huaiham-te-tawhin | — |
 
 ### lauhuai "dread" (lau-huai)
 
@@ -2003,8 +1775,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lauhuai-ah | — | lauhuai-te-ah | — |
 | Ablative | lauhuai-pan | — | lauhuai-te-pan | — |
 | Ablative-Ergative | lauhuai-panin | — | lauhuai-te-panin | — |
-| Comitative | lauhuai-tawh | — | lauhuai-te-tawh | — |
-| Comitative-Ergative | lauhuai-tawhin | — | lauhuai-te-tawhin | — |
 
 ---
 
@@ -2022,8 +1792,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuihual-ah | — | tuihual-te-ah | — |
 | Ablative | tuihual-pan | — | tuihual-te-pan | — |
 | Ablative-Ergative | tuihual-panin | — | tuihual-te-panin | — |
-| Comitative | tuihual-tawh | — | tuihual-te-tawh | — |
-| Comitative-Ergative | tuihual-tawhin | — | tuihual-te-tawhin | — |
 
 ---
 
@@ -2041,8 +1809,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kihuh-ah | — | kihuh-te-ah | — |
 | Ablative | kihuh-pan | — | kihuh-te-pan | — |
 | Ablative-Ergative | kihuh-panin | — | kihuh-te-panin | — |
-| Comitative | kihuh-tawh | — | kihuh-te-tawh | — |
-| Comitative-Ergative | kihuh-tawhin | — | kihuh-te-tawhin | — |
 
 ---
 
@@ -2060,8 +1826,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | biakinn-ah | — | biakinn-te-ah | — |
 | Ablative | biakinn-pan | — | biakinn-te-pan | — |
 | Ablative-Ergative | biakinn-panin | — | biakinn-te-panin | — |
-| Comitative | biakinn-tawh | — | biakinn-te-tawh | — |
-| Comitative-Ergative | biakinn-tawhin | — | biakinn-te-tawhin | — |
 
 ### innkhuam "house-pillar" (inn-khuam)
 
@@ -2073,8 +1837,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innkhuam-ah | — | innkhuam-te-ah | — |
 | Ablative | innkhuam-pan | — | innkhuam-te-pan | — |
 | Ablative-Ergative | innkhuam-panin | — | innkhuam-te-panin | — |
-| Comitative | innkhuam-tawh | — | innkhuam-te-tawh | — |
-| Comitative-Ergative | innkhuam-tawhin | — | innkhuam-te-tawhin | — |
 
 ### innkhum "tent.cover" (inn-khum)
 
@@ -2086,8 +1848,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innkhum-ah | — | innkhum-te-ah | — |
 | Ablative | innkhum-pan | — | innkhum-te-pan | — |
 | Ablative-Ergative | innkhum-panin | — | innkhum-te-panin | — |
-| Comitative | innkhum-tawh | — | innkhum-te-tawh | — |
-| Comitative-Ergative | innkhum-tawhin | — | innkhum-te-tawhin | — |
 
 ### innkuan "household" (inn-kuan)
 
@@ -2099,8 +1859,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innkuan-ah | — | innkuan-te-ah | — |
 | Ablative | innkuan-pan | — | innkuan-te-pan | — |
 | Ablative-Ergative | innkuan-panin | — | innkuan-te-panin | — |
-| Comitative | innkuan-tawh | — | innkuan-te-tawh | — |
-| Comitative-Ergative | innkuan-tawhin | — | innkuan-te-tawhin | — |
 
 ### innteek "landlord" (inn-teek)
 
@@ -2112,8 +1870,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innteek-ah | — | innteek-te-ah | — |
 | Ablative | innteek-pan | — | innteek-te-pan | — |
 | Ablative-Ergative | innteek-panin | — | innteek-te-panin | — |
-| Comitative | innteek-tawh | — | innteek-te-tawh | — |
-| Comitative-Ergative | innteek-tawhin | — | innteek-te-tawhin | — |
 
 ### sihinn "prison" (sih-inn)
 
@@ -2125,8 +1881,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sihinn-ah | — | sihinn-te-ah | — |
 | Ablative | sihinn-pan | — | sihinn-te-pan | — |
 | Ablative-Ergative | sihinn-panin | — | sihinn-te-panin | — |
-| Comitative | sihinn-tawh | — | sihinn-te-tawh | — |
-| Comitative-Ergative | sihinn-tawhin | — | sihinn-te-tawhin | — |
 
 ---
 
@@ -2144,8 +1898,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | itluat-ah | — | itluat-te-ah | — |
 | Ablative | itluat-pan | — | itluat-te-pan | — |
 | Ablative-Ergative | itluat-panin | — | itluat-te-panin | — |
-| Comitative | itluat-tawh | — | itluat-te-tawh | — |
-| Comitative-Ergative | itluat-tawhin | — | itluat-te-tawhin | — |
 
 ---
 
@@ -2163,8 +1915,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamka-ah | — | lamka-te-ah | — |
 | Ablative | lamka-pan | — | lamka-te-pan | — |
 | Ablative-Ergative | lamka-panin | — | lamka-te-panin | — |
-| Comitative | lamka-tawh | — | lamka-te-tawh | — |
-| Comitative-Ergative | lamka-tawhin | — | lamka-te-tawhin | — |
 
 ---
 
@@ -2182,8 +1932,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galkah-ah | — | galkah-te-ah | — |
 | Ablative | galkah-pan | — | galkah-te-pan | — |
 | Ablative-Ergative | galkah-panin | — | galkah-te-panin | — |
-| Comitative | galkah-tawh | — | galkah-te-tawh | — |
-| Comitative-Ergative | galkah-tawhin | — | galkah-te-tawhin | — |
 
 ---
 
@@ -2201,8 +1949,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | dialkaih-ah | — | dialkaih-te-ah | — |
 | Ablative | dialkaih-pan | — | dialkaih-te-pan | — |
 | Ablative-Ergative | dialkaih-panin | — | dialkaih-te-panin | — |
-| Comitative | dialkaih-tawh | — | dialkaih-te-tawh | — |
-| Comitative-Ergative | dialkaih-tawhin | — | dialkaih-te-tawhin | — |
 
 ### kamkaih "treachery" (kam-kaih)
 
@@ -2214,8 +1960,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kamkaih-ah | — | kamkaih-te-ah | — |
 | Ablative | kamkaih-pan | — | kamkaih-te-pan | — |
 | Ablative-Ergative | kamkaih-panin | — | kamkaih-te-panin | — |
-| Comitative | kamkaih-tawh | — | kamkaih-te-tawh | — |
-| Comitative-Ergative | kamkaih-tawhin | — | kamkaih-te-tawhin | — |
 
 ---
 
@@ -2233,8 +1977,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamkal-ah | Gen 48:7, Exo 23:20, Num 21:4 (+2) | lamkal-te-ah | — |
 | Ablative | lamkal-pan | — | lamkal-te-pan | — |
 | Ablative-Ergative | lamkal-panin | — | lamkal-te-panin | — |
-| Comitative | lamkal-tawh | — | lamkal-te-tawh | — |
-| Comitative-Ergative | lamkal-tawhin | — | lamkal-te-tawhin | — |
 
 ---
 
@@ -2252,8 +1994,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kamciam-ah | — | kamciam-te-ah | — |
 | Ablative | kamciam-pan | — | kamciam-te-pan | — |
 | Ablative-Ergative | kamciam-panin | — | kamciam-te-panin | — |
-| Comitative | kamciam-tawh | — | kamciam-te-tawh | — |
-| Comitative-Ergative | kamciam-tawhin | — | kamciam-te-tawhin | — |
 
 ### kamkaih "treachery" (kam-kaih)
 
@@ -2265,8 +2005,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kamkaih-ah | — | kamkaih-te-ah | — |
 | Ablative | kamkaih-pan | — | kamkaih-te-pan | — |
 | Ablative-Ergative | kamkaih-panin | — | kamkaih-te-panin | — |
-| Comitative | kamkaih-tawh | — | kamkaih-te-tawh | — |
-| Comitative-Ergative | kamkaih-tawhin | — | kamkaih-te-tawhin | — |
 
 ### kampi "mouth" (kam-pi)
 
@@ -2278,8 +2016,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kampi-ah | — | kampi-te-ah | — |
 | Ablative | kampi-pan | — | kampi-te-pan | — |
 | Ablative-Ergative | kampi-panin | — | kampi-te-panin | — |
-| Comitative | kampi-tawh | — | kampi-te-tawh | — |
-| Comitative-Ergative | kampi-tawhin | — | kampi-te-tawhin | — |
 
 ### kamsia "boast" (kam-sia)
 
@@ -2291,8 +2027,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kamsia-ah | — | kamsia-te-ah | — |
 | Ablative | kamsia-pan | — | kamsia-te-pan | — |
 | Ablative-Ergative | kamsia-panin | — | kamsia-te-panin | — |
-| Comitative | kamsia-tawh | — | kamsia-te-tawh | — |
-| Comitative-Ergative | kamsia-tawhin | — | kamsia-te-tawhin | — |
 
 ---
 
@@ -2310,8 +2044,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galkap-ah | — | galkap-te-ah | — |
 | Ablative | galkap-pan | — | galkap-te-pan | — |
 | Ablative-Ergative | galkap-panin | — | galkap-te-panin | — |
-| Comitative | galkap-tawh | — | galkap-te-tawh | — |
-| Comitative-Ergative | galkap-tawhin | — | galkap-te-tawhin | — |
 
 ---
 
@@ -2329,8 +2061,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sikkawi-ah | — | sikkawi-te-ah | — |
 | Ablative | sikkawi-pan | — | sikkawi-te-pan | — |
 | Ablative-Ergative | sikkawi-panin | — | sikkawi-te-panin | — |
-| Comitative | sikkawi-tawh | — | sikkawi-te-tawh | — |
-| Comitative-Ergative | sikkawi-tawhin | — | sikkawi-te-tawhin | — |
 
 ---
 
@@ -2348,8 +2078,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | keelmul-ah | — | keelmul-te-ah | — |
 | Ablative | keelmul-pan | — | keelmul-te-pan | — |
 | Ablative-Ergative | keelmul-panin | — | keelmul-te-panin | — |
-| Comitative | keelmul-tawh | — | keelmul-te-tawh | — |
-| Comitative-Ergative | keelmul-tawhin | — | keelmul-te-tawhin | — |
 
 ---
 
@@ -2367,8 +2095,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khasim-ah | — | khasim-te-ah | — |
 | Ablative | khasim-pan | — | khasim-te-pan | — |
 | Ablative-Ergative | khasim-panin | — | khasim-te-panin | — |
-| Comitative | khasim-tawh | — | khasim-te-tawh | — |
-| Comitative-Ergative | khasim-tawhin | — | khasim-te-tawhin | — |
 
 ---
 
@@ -2386,8 +2112,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puankhai-ah | — | puankhai-te-ah | — |
 | Ablative | puankhai-pan | — | puankhai-te-pan | — |
 | Ablative-Ergative | puankhai-panin | — | puankhai-te-panin | — |
-| Comitative | puankhai-tawh | — | puankhai-te-tawh | — |
-| Comitative-Ergative | puankhai-tawhin | — | puankhai-te-tawhin | — |
 
 ### tawikhai "balance" (tawi-khai)
 
@@ -2399,8 +2123,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawikhai-ah | — | tawikhai-te-ah | — |
 | Ablative | tawikhai-pan | — | tawikhai-te-pan | — |
 | Ablative-Ergative | tawikhai-panin | — | tawikhai-te-panin | — |
-| Comitative | tawikhai-tawh | — | tawikhai-te-tawh | — |
-| Comitative-Ergative | tawikhai-tawhin | — | tawikhai-te-tawhin | — |
 
 ---
 
@@ -2418,8 +2140,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lukham-ah | — | lukham-te-ah | — |
 | Ablative | lukham-pan | — | lukham-te-pan | — |
 | Ablative-Ergative | lukham-panin | — | lukham-te-panin | — |
-| Comitative | lukham-tawh | — | lukham-te-tawh | — |
-| Comitative-Ergative | lukham-tawhin | — | lukham-te-tawhin | — |
 
 ### lungkham "sorrow" (lung-kham)
 
@@ -2431,8 +2151,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungkham-ah | — | lungkham-te-ah | — |
 | Ablative | lungkham-pan | — | lungkham-te-pan | — |
 | Ablative-Ergative | lungkham-panin | — | lungkham-te-panin | — |
-| Comitative | lungkham-tawh | — | lungkham-te-tawh | — |
-| Comitative-Ergative | lungkham-tawhin | — | lungkham-te-tawhin | — |
 
 ### thukham "law" (thu-kham)
 
@@ -2444,8 +2162,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thukham-ah | — | thukham-te-ah | — |
 | Ablative | thukham-pan | — | thukham-te-pan | — |
 | Ablative-Ergative | thukham-panin | — | thukham-te-panin | — |
-| Comitative | thukham-tawh | — | thukham-te-tawh | — |
-| Comitative-Ergative | thukham-tawhin | — | thukham-te-tawhin | — |
 
 ---
 
@@ -2463,8 +2179,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khansung-ah | — | khansung-te-ah | — |
 | Ablative | khansung-pan | — | khansung-te-pan | — |
 | Ablative-Ergative | khansung-panin | — | khansung-te-panin | — |
-| Comitative | khansung-tawh | — | khansung-te-tawh | — |
-| Comitative-Ergative | khansung-tawhin | — | khansung-te-tawhin | — |
 
 ---
 
@@ -2482,8 +2196,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khangham-ah | — | khangham-te-ah | — |
 | Ablative | khangham-pan | — | khangham-te-pan | — |
 | Ablative-Ergative | khangham-panin | — | khangham-te-panin | — |
-| Comitative | khangham-tawh | — | khangham-te-tawh | — |
-| Comitative-Ergative | khangham-tawhin | — | khangham-te-tawhin | — |
 
 ### khangno "youth" (khang-no)
 
@@ -2495,8 +2207,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khangno-ah | — | khangno-te-ah | — |
 | Ablative | khangno-pan | — | khangno-te-pan | — |
 | Ablative-Ergative | khangno-panin | — | khangno-te-panin | — |
-| Comitative | khangno-tawh | — | khangno-te-tawh | — |
-| Comitative-Ergative | khangno-tawhin | — | khangno-te-tawhin | — |
 
 ### khangsim "genealogy" (khang-sim)
 
@@ -2508,8 +2218,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khangsim-ah | — | khangsim-te-ah | — |
 | Ablative | khangsim-pan | — | khangsim-te-pan | — |
 | Ablative-Ergative | khangsim-panin | — | khangsim-te-panin | — |
-| Comitative | khangsim-tawh | — | khangsim-te-tawh | — |
-| Comitative-Ergative | khangsim-tawhin | — | khangsim-te-tawhin | — |
 
 ---
 
@@ -2527,8 +2235,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | langkhat-ah | Exo 20:16, Exo 23:29, Exo 25:12 (+2) | langkhat-te-ah | — |
 | Ablative | langkhat-pan | — | langkhat-te-pan | — |
 | Ablative-Ergative | langkhat-panin | — | langkhat-te-panin | — |
-| Comitative | langkhat-tawh | — | langkhat-te-tawh | — |
-| Comitative-Ergative | langkhat-tawhin | — | langkhat-te-tawhin | — |
 
 ### pawlkhat "some" (pawl-khat)
 
@@ -2540,8 +2246,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pawlkhat-ah | Mar 6:40, Mar 6:40 | pawlkhat-te-ah | — |
 | Ablative | pawlkhat-pan | — | pawlkhat-te-pan | — |
 | Ablative-Ergative | pawlkhat-panin | — | pawlkhat-te-panin | — |
-| Comitative | pawlkhat-tawh | — | pawlkhat-te-tawh | — |
-| Comitative-Ergative | pawlkhat-tawhin | — | pawlkhat-te-tawhin | — |
 
 ---
 
@@ -2559,8 +2263,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mimkhau-ah | — | mimkhau-te-ah | — |
 | Ablative | mimkhau-pan | — | mimkhau-te-pan | — |
 | Ablative-Ergative | mimkhau-panin | — | mimkhau-te-panin | — |
-| Comitative | mimkhau-tawh | — | mimkhau-te-tawh | — |
-| Comitative-Ergative | mimkhau-tawhin | — | mimkhau-te-tawhin | — |
 
 ---
 
@@ -2578,8 +2280,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lokhawh-ah | — | lokhawh-te-ah | — |
 | Ablative | lokhawh-pan | — | lokhawh-te-pan | — |
 | Ablative-Ergative | lokhawh-panin | — | lokhawh-te-panin | — |
-| Comitative | lokhawh-tawh | — | lokhawh-te-tawh | — |
-| Comitative-Ergative | lokhawh-tawhin | — | lokhawh-te-tawhin | — |
 
 ---
 
@@ -2597,8 +2297,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kheging-ah | — | kheging-te-ah | — |
 | Ablative | kheging-pan | — | kheging-te-pan | — |
 | Ablative-Ergative | kheging-panin | — | kheging-te-panin | — |
-| Comitative | kheging-tawh | — | kheging-te-tawh | — |
-| Comitative-Ergative | kheging-tawhin | — | kheging-te-tawhin | — |
 
 ---
 
@@ -2616,8 +2314,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thukhen-ah | — | thukhen-te-ah | — |
 | Ablative | thukhen-pan | — | thukhen-te-pan | — |
 | Ablative-Ergative | thukhen-panin | — | thukhen-te-panin | — |
-| Comitative | thukhen-tawh | — | thukhen-te-tawh | — |
-| Comitative-Ergative | thukhen-tawhin | — | thukhen-te-tawhin | — |
 
 ---
 
@@ -2635,8 +2331,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | honkhia-ah | — | honkhia-te-ah | — |
 | Ablative | honkhia-pan | — | honkhia-te-pan | — |
 | Ablative-Ergative | honkhia-panin | — | honkhia-te-panin | — |
-| Comitative | honkhia-tawh | — | honkhia-te-tawh | — |
-| Comitative-Ergative | honkhia-tawhin | — | honkhia-te-tawhin | — |
 
 ### paikhia "go.out" (pai-khia)
 
@@ -2648,8 +2342,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paikhia-ah | — | paikhia-te-ah | — |
 | Ablative | paikhia-pan | — | paikhia-te-pan | — |
 | Ablative-Ergative | paikhia-panin | — | paikhia-te-panin | — |
-| Comitative | paikhia-tawh | — | paikhia-te-tawh | — |
-| Comitative-Ergative | paikhia-tawhin | — | paikhia-te-tawhin | — |
 
 ---
 
@@ -2667,8 +2359,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khialhna-ah | — | khialhna-te-ah | — |
 | Ablative | khialhna-pan | — | khialhna-te-pan | — |
 | Ablative-Ergative | khialhna-panin | — | khialhna-te-panin | — |
-| Comitative | khialhna-tawh | — | khialhna-te-tawh | — |
-| Comitative-Ergative | khialhna-tawhin | — | khialhna-te-tawhin | — |
 
 ### khialhsak "trespass" (khialh-sak)
 
@@ -2680,8 +2370,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khialhsak-ah | — | khialhsak-te-ah | — |
 | Ablative | khialhsak-pan | — | khialhsak-te-pan | — |
 | Ablative-Ergative | khialhsak-panin | — | khialhsak-te-panin | — |
-| Comitative | khialhsak-tawh | — | khialhsak-te-tawh | — |
-| Comitative-Ergative | khialhsak-tawhin | — | khialhsak-te-tawhin | — |
 
 ### tatkhialh "transgress" (tat-khialh)
 
@@ -2693,8 +2381,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tatkhialh-ah | — | tatkhialh-te-ah | — |
 | Ablative | tatkhialh-pan | — | tatkhialh-te-pan | — |
 | Ablative-Ergative | tatkhialh-panin | — | tatkhialh-te-panin | — |
-| Comitative | tatkhialh-tawh | — | tatkhialh-te-tawh | — |
-| Comitative-Ergative | tatkhialh-tawhin | — | tatkhialh-te-tawhin | — |
 
 ---
 
@@ -2712,8 +2398,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hawlkhiat-ah | — | hawlkhiat-te-ah | — |
 | Ablative | hawlkhiat-pan | — | hawlkhiat-te-pan | — |
 | Ablative-Ergative | hawlkhiat-panin | — | hawlkhiat-te-panin | — |
-| Comitative | hawlkhiat-tawh | — | hawlkhiat-te-tawh | — |
-| Comitative-Ergative | hawlkhiat-tawhin | — | hawlkhiat-te-tawhin | — |
 
 ### hotkhiat "save" (hot-khiat)
 
@@ -2725,8 +2409,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hotkhiat-ah | — | hotkhiat-te-ah | — |
 | Ablative | hotkhiat-pan | — | hotkhiat-te-pan | — |
 | Ablative-Ergative | hotkhiat-panin | — | hotkhiat-te-panin | — |
-| Comitative | hotkhiat-tawh | — | hotkhiat-te-tawh | — |
-| Comitative-Ergative | hotkhiat-tawhin | — | hotkhiat-te-tawhin | — |
 
 ### paikhiat "go.out" (pai-khiat)
 
@@ -2738,8 +2420,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paikhiat-ah | — | paikhiat-te-ah | — |
 | Ablative | paikhiat-pan | — | paikhiat-te-pan | — |
 | Ablative-Ergative | paikhiat-panin | — | paikhiat-te-panin | — |
-| Comitative | paikhiat-tawh | — | paikhiat-te-tawh | — |
-| Comitative-Ergative | paikhiat-tawhin | — | paikhiat-te-tawhin | — |
 
 ### piankhiat "birthright" (pian-khiat)
 
@@ -2751,8 +2431,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | piankhiat-ah | — | piankhiat-te-ah | — |
 | Ablative | piankhiat-pan | — | piankhiat-te-pan | — |
 | Ablative-Ergative | piankhiat-panin | — | piankhiat-te-panin | — |
-| Comitative | piankhiat-tawh | — | piankhiat-te-tawh | — |
-| Comitative-Ergative | piankhiat-tawhin | — | piankhiat-te-tawhin | — |
 
 ---
 
@@ -2770,8 +2448,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikhih-ah | — | kikhih-te-ah | — |
 | Ablative | kikhih-pan | — | kikhih-te-pan | — |
 | Ablative-Ergative | kikhih-panin | — | kikhih-te-panin | — |
-| Comitative | kikhih-tawh | — | kikhih-te-tawh | — |
-| Comitative-Ergative | kikhih-tawhin | — | kikhih-te-tawhin | — |
 
 ---
 
@@ -2789,8 +2465,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | genkholh-ah | — | genkholh-te-ah | — |
 | Ablative | genkholh-pan | — | genkholh-te-pan | — |
 | Ablative-Ergative | genkholh-panin | — | genkholh-te-panin | — |
-| Comitative | genkholh-tawh | — | genkholh-te-tawh | — |
-| Comitative-Ergative | genkholh-tawhin | — | genkholh-te-tawhin | — |
 
 ---
 
@@ -2808,8 +2482,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikhop-ah | — | kikhop-te-ah | — |
 | Ablative | kikhop-pan | — | kikhop-te-pan | — |
 | Ablative-Ergative | kikhop-panin | — | kikhop-te-panin | — |
-| Comitative | kikhop-tawh | — | kikhop-te-tawh | — |
-| Comitative-Ergative | kikhop-tawhin | — | kikhop-te-tawhin | — |
 
 ---
 
@@ -2827,8 +2499,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mitkhu-ah | — | mitkhu-te-ah | — |
 | Ablative | mitkhu-pan | — | mitkhu-te-pan | — |
 | Ablative-Ergative | mitkhu-panin | — | mitkhu-te-panin | — |
-| Comitative | mitkhu-tawh | — | mitkhu-te-tawh | — |
-| Comitative-Ergative | mitkhu-tawhin | — | mitkhu-te-tawhin | — |
 
 ---
 
@@ -2846,8 +2516,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuakulh-ah | 1Sa 31:10 | khuakulh-te-ah | — |
 | Ablative | khuakulh-pan | — | khuakulh-te-pan | — |
 | Ablative-Ergative | khuakulh-panin | — | khuakulh-te-panin | — |
-| Comitative | khuakulh-tawh | — | khuakulh-te-tawh | — |
-| Comitative-Ergative | khuakulh-tawhin | — | khuakulh-te-tawhin | — |
 
 ### khuami "townsman" (khua-mi)
 
@@ -2859,8 +2527,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuami-ah | — | khuami-te-ah | — |
 | Ablative | khuami-pan | — | khuami-te-pan | — |
 | Ablative-Ergative | khuami-panin | — | khuami-te-panin | — |
-| Comitative | khuami-tawh | — | khuami-te-tawh | — |
-| Comitative-Ergative | khuami-tawhin | — | khuami-te-tawhin | — |
 
 ### khuanawl "outskirts" (khua-nawl)
 
@@ -2872,8 +2538,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuanawl-ah | Mar 8:23, Luk 4:29, Act 14:19 | khuanawl-te-ah | — |
 | Ablative | khuanawl-pan | — | khuanawl-te-pan | — |
 | Ablative-Ergative | khuanawl-panin | — | khuanawl-te-panin | — |
-| Comitative | khuanawl-tawh | — | khuanawl-te-tawh | — |
-| Comitative-Ergative | khuanawl-tawhin | — | khuanawl-te-tawhin | — |
 
 ### khuaneu "village" (khua-neu)
 
@@ -2885,8 +2549,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuaneu-ah | — | khuaneu-te-ah | — |
 | Ablative | khuaneu-pan | — | khuaneu-te-pan | — |
 | Ablative-Ergative | khuaneu-panin | — | khuaneu-te-panin | — |
-| Comitative | khuaneu-tawh | — | khuaneu-te-tawh | — |
-| Comitative-Ergative | khuaneu-tawhin | — | khuaneu-te-tawhin | — |
 
 ### khuaphia "brightness" (khua-phia)
 
@@ -2898,8 +2560,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuaphia-ah | — | khuaphia-te-ah | — |
 | Ablative | khuaphia-pan | — | khuaphia-te-pan | — |
 | Ablative-Ergative | khuaphia-panin | — | khuaphia-te-panin | — |
-| Comitative | khuaphia-tawh | — | khuaphia-te-tawh | — |
-| Comitative-Ergative | khuaphia-tawhin | — | khuaphia-te-tawhin | — |
 
 ### khuapi "city" (khua-pi)
 
@@ -2911,8 +2571,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuapi-ah | — | khuapi-te-ah | — |
 | Ablative | khuapi-pan | — | khuapi-te-pan | — |
 | Ablative-Ergative | khuapi-panin | — | khuapi-te-panin | — |
-| Comitative | khuapi-tawh | — | khuapi-te-tawh | — |
-| Comitative-Ergative | khuapi-tawhin | — | khuapi-te-tawhin | — |
 
 ---
 
@@ -2930,8 +2588,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khualzin-ah | — | khualzin-te-ah | — |
 | Ablative | khualzin-pan | — | khualzin-te-pan | — |
 | Ablative-Ergative | khualzin-panin | — | khualzin-te-panin | — |
-| Comitative | khualzin-tawh | — | khualzin-te-tawh | — |
-| Comitative-Ergative | khualzin-tawhin | — | khualzin-te-tawhin | — |
 
 ### mikhual "stranger" (mi-khual)
 
@@ -2943,8 +2599,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mikhual-ah | — | mikhual-te-ah | — |
 | Ablative | mikhual-pan | — | mikhual-te-pan | — |
 | Ablative-Ergative | mikhual-panin | — | mikhual-te-panin | — |
-| Comitative | mikhual-tawh | — | mikhual-te-tawh | — |
-| Comitative-Ergative | mikhual-tawhin | — | mikhual-te-tawhin | — |
 
 ---
 
@@ -2962,8 +2616,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innkhuam-ah | — | innkhuam-te-ah | — |
 | Ablative | innkhuam-pan | — | innkhuam-te-pan | — |
 | Ablative-Ergative | innkhuam-panin | — | innkhuam-te-panin | — |
-| Comitative | innkhuam-tawh | — | innkhuam-te-tawh | — |
-| Comitative-Ergative | innkhuam-tawhin | — | innkhuam-te-tawhin | — |
 
 ### khuampi "pillar-great" (khuam-pi)
 
@@ -2975,8 +2627,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuampi-ah | — | khuampi-te-ah | — |
 | Ablative | khuampi-pan | — | khuampi-te-pan | — |
 | Ablative-Ergative | khuampi-panin | — | khuampi-te-panin | — |
-| Comitative | khuampi-tawh | — | khuampi-te-tawh | — |
-| Comitative-Ergative | khuampi-tawhin | — | khuampi-te-tawhin | — |
 
 ### suangkhuam "stone-pillar" (suang-khuam)
 
@@ -2988,8 +2638,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | suangkhuam-ah | — | suangkhuam-te-ah | — |
 | Ablative | suangkhuam-pan | — | suangkhuam-te-pan | — |
 | Ablative-Ergative | suangkhuam-panin | — | suangkhuam-te-panin | — |
-| Comitative | suangkhuam-tawh | — | suangkhuam-te-tawh | — |
-| Comitative-Ergative | suangkhuam-tawhin | — | suangkhuam-te-tawhin | — |
 
 ---
 
@@ -3007,8 +2655,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuikhuk-ah | Gen 24:16, Gen 24:20, Gen 24:42 (+2) | tuikhuk-te-ah | — |
 | Ablative | tuikhuk-pan | — | tuikhuk-te-pan | — |
 | Ablative-Ergative | tuikhuk-panin | — | tuikhuk-te-panin | — |
-| Comitative | tuikhuk-tawh | — | tuikhuk-te-tawh | — |
-| Comitative-Ergative | tuikhuk-tawhin | — | tuikhuk-te-tawhin | — |
 
 ---
 
@@ -3026,8 +2672,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innkhum-ah | — | innkhum-te-ah | — |
 | Ablative | innkhum-pan | — | innkhum-te-pan | — |
 | Ablative-Ergative | innkhum-panin | — | innkhum-te-panin | — |
-| Comitative | innkhum-tawh | — | innkhum-te-tawh | — |
-| Comitative-Ergative | innkhum-tawhin | — | innkhum-te-tawhin | — |
 
 ### kikhum "covering" (ki-khum)
 
@@ -3039,8 +2683,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikhum-ah | — | kikhum-te-ah | — |
 | Ablative | kikhum-pan | — | kikhum-te-pan | — |
 | Ablative-Ergative | kikhum-panin | — | kikhum-te-panin | — |
-| Comitative | kikhum-tawh | — | kikhum-te-tawh | — |
-| Comitative-Ergative | kikhum-tawhin | — | kikhum-te-tawhin | — |
 
 ---
 
@@ -3058,8 +2700,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khutsiam-ah | — | khutsiam-te-ah | — |
 | Ablative | khutsiam-pan | — | khutsiam-te-pan | — |
 | Ablative-Ergative | khutsiam-panin | — | khutsiam-te-panin | — |
-| Comitative | khutsiam-tawh | — | khutsiam-te-tawh | — |
-| Comitative-Ergative | khutsiam-tawhin | — | khutsiam-te-tawhin | — |
 
 ### khuttum "fist" (khut-tum)
 
@@ -3071,8 +2711,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuttum-ah | — | khuttum-te-ah | — |
 | Ablative | khuttum-pan | — | khuttum-te-pan | — |
 | Ablative-Ergative | khuttum-panin | — | khuttum-te-panin | — |
-| Comitative | khuttum-tawh | — | khuttum-te-tawh | — |
-| Comitative-Ergative | khuttum-tawhin | — | khuttum-te-tawhin | — |
 
 ---
 
@@ -3090,8 +2728,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kibawl-ah | — | kibawl-te-ah | — |
 | Ablative | kibawl-pan | — | kibawl-te-pan | — |
 | Ablative-Ergative | kibawl-panin | — | kibawl-te-panin | — |
-| Comitative | kibawl-tawh | — | kibawl-te-tawh | — |
-| Comitative-Ergative | kibawl-tawhin | — | kibawl-te-tawhin | — |
 
 ### kiciam "covenant" (ki-ciam)
 
@@ -3103,8 +2739,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kiciam-ah | — | kiciam-te-ah | — |
 | Ablative | kiciam-pan | — | kiciam-te-pan | — |
 | Ablative-Ergative | kiciam-panin | — | kiciam-te-panin | — |
-| Comitative | kiciam-tawh | — | kiciam-te-tawh | — |
-| Comitative-Ergative | kiciam-tawhin | — | kiciam-te-tawhin | — |
 
 ### kicih "say" (ki-cih)
 
@@ -3116,8 +2750,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kicih-ah | — | kicih-te-ah | — |
 | Ablative | kicih-pan | — | kicih-te-pan | — |
 | Ablative-Ergative | kicih-panin | — | kicih-te-panin | — |
-| Comitative | kicih-tawh | — | kicih-te-tawh | — |
-| Comitative-Ergative | kicih-tawhin | — | kicih-te-tawhin | — |
 
 ### kigamla "territory" (ki-gamla)
 
@@ -3129,8 +2761,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kigamla-ah | — | kigamla-te-ah | — |
 | Ablative | kigamla-pan | — | kigamla-te-pan | — |
 | Ablative-Ergative | kigamla-panin | — | kigamla-te-panin | — |
-| Comitative | kigamla-tawh | — | kigamla-te-tawh | — |
-| Comitative-Ergative | kigamla-tawhin | — | kigamla-te-tawhin | — |
 
 ### kigelh "scripture" (ki-gelh)
 
@@ -3142,8 +2772,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kigelh-ah | — | kigelh-te-ah | — |
 | Ablative | kigelh-pan | — | kigelh-te-pan | — |
 | Ablative-Ergative | kigelh-panin | — | kigelh-te-panin | — |
-| Comitative | kigelh-tawh | — | kigelh-te-tawh | — |
-| Comitative-Ergative | kigelh-tawhin | — | kigelh-te-tawhin | — |
 
 ### kigen "conversation" (ki-gen)
 
@@ -3155,8 +2783,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kigen-ah | — | kigen-te-ah | — |
 | Ablative | kigen-pan | — | kigen-te-pan | — |
 | Ablative-Ergative | kigen-panin | — | kigen-te-panin | — |
-| Comitative | kigen-tawh | — | kigen-te-tawh | — |
-| Comitative-Ergative | kigen-tawhin | — | kigen-te-tawhin | — |
 
 ### kihal "burn" (ki-hal)
 
@@ -3168,8 +2794,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kihal-ah | — | kihal-te-ah | — |
 | Ablative | kihal-pan | — | kihal-te-pan | — |
 | Ablative-Ergative | kihal-panin | — | kihal-te-panin | — |
-| Comitative | kihal-tawh | — | kihal-te-tawh | — |
-| Comitative-Ergative | kihal-tawhin | — | kihal-te-tawhin | — |
 
 ### kiho "call" (ki-ho)
 
@@ -3181,8 +2805,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kiho-ah | — | kiho-te-ah | — |
 | Ablative | kiho-pan | — | kiho-te-pan | — |
 | Ablative-Ergative | kiho-panin | — | kiho-te-panin | — |
-| Comitative | kiho-tawh | — | kiho-te-tawh | — |
-| Comitative-Ergative | kiho-tawhin | — | kiho-te-tawhin | — |
 
 ### kihonkhia "escape" (ki-honkhia)
 
@@ -3194,8 +2816,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kihonkhia-ah | — | kihonkhia-te-ah | — |
 | Ablative | kihonkhia-pan | — | kihonkhia-te-pan | — |
 | Ablative-Ergative | kihonkhia-panin | — | kihonkhia-te-panin | — |
-| Comitative | kihonkhia-tawh | — | kihonkhia-te-tawh | — |
-| Comitative-Ergative | kihonkhia-tawhin | — | kihonkhia-te-tawhin | — |
 
 ### kihuh "help" (ki-huh)
 
@@ -3207,8 +2827,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kihuh-ah | — | kihuh-te-ah | — |
 | Ablative | kihuh-pan | — | kihuh-te-pan | — |
 | Ablative-Ergative | kihuh-panin | — | kihuh-te-panin | — |
-| Comitative | kihuh-tawh | — | kihuh-te-tawh | — |
-| Comitative-Ergative | kihuh-tawhin | — | kihuh-te-tawhin | — |
 
 ### kikhih "bind" (ki-khih)
 
@@ -3220,8 +2838,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikhih-ah | — | kikhih-te-ah | — |
 | Ablative | kikhih-pan | — | kikhih-te-pan | — |
 | Ablative-Ergative | kikhih-panin | — | kikhih-te-panin | — |
-| Comitative | kikhih-tawh | — | kikhih-te-tawh | — |
-| Comitative-Ergative | kikhih-tawhin | — | kikhih-te-tawhin | — |
 
 ### kikhop "assemble" (ki-khop)
 
@@ -3233,8 +2849,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikhop-ah | — | kikhop-te-ah | — |
 | Ablative | kikhop-pan | — | kikhop-te-pan | — |
 | Ablative-Ergative | kikhop-panin | — | kikhop-te-panin | — |
-| Comitative | kikhop-tawh | — | kikhop-te-tawh | — |
-| Comitative-Ergative | kikhop-tawhin | — | kikhop-te-tawhin | — |
 
 ### kikhum "covering" (ki-khum)
 
@@ -3246,8 +2860,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikhum-ah | — | kikhum-te-ah | — |
 | Ablative | kikhum-pan | — | kikhum-te-pan | — |
 | Ablative-Ergative | kikhum-panin | — | kikhum-te-panin | — |
-| Comitative | kikhum-tawh | — | kikhum-te-tawh | — |
-| Comitative-Ergative | kikhum-tawhin | — | kikhum-te-tawhin | — |
 
 ### kikoih "place" (ki-koih)
 
@@ -3259,8 +2871,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikoih-ah | — | kikoih-te-ah | — |
 | Ablative | kikoih-pan | — | kikoih-te-pan | — |
 | Ablative-Ergative | kikoih-panin | — | kikoih-te-panin | — |
-| Comitative | kikoih-tawh | — | kikoih-te-tawh | — |
-| Comitative-Ergative | kikoih-tawhin | — | kikoih-te-tawhin | — |
 
 ### kilat "strengthen" (ki-lat)
 
@@ -3272,8 +2882,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kilat-ah | — | kilat-te-ah | — |
 | Ablative | kilat-pan | — | kilat-te-pan | — |
 | Ablative-Ergative | kilat-panin | — | kilat-te-panin | — |
-| Comitative | kilat-tawh | — | kilat-te-tawh | — |
-| Comitative-Ergative | kilat-tawhin | — | kilat-te-tawhin | — |
 
 ### kilem "prepare" (ki-lem)
 
@@ -3285,8 +2893,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kilem-ah | — | kilem-te-ah | — |
 | Ablative | kilem-pan | — | kilem-te-pan | — |
 | Ablative-Ergative | kilem-panin | — | kilem-te-panin | — |
-| Comitative | kilem-tawh | — | kilem-te-tawh | — |
-| Comitative-Ergative | kilem-tawhin | — | kilem-te-tawhin | — |
 
 ### kimaisak "appear" (ki-maisak)
 
@@ -3298,8 +2904,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kimaisak-ah | — | kimaisak-te-ah | — |
 | Ablative | kimaisak-pan | — | kimaisak-te-pan | — |
 | Ablative-Ergative | kimaisak-panin | — | kimaisak-te-panin | — |
-| Comitative | kimaisak-tawh | — | kimaisak-te-tawh | — |
-| Comitative-Ergative | kimaisak-tawhin | — | kimaisak-te-tawhin | — |
 
 ### kineihkhem "possess.all" (ki-neihkhem)
 
@@ -3311,8 +2915,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kineihkhem-ah | — | kineihkhem-te-ah | — |
 | Ablative | kineihkhem-pan | — | kineihkhem-te-pan | — |
 | Ablative-Ergative | kineihkhem-panin | — | kineihkhem-te-panin | — |
-| Comitative | kineihkhem-tawh | — | kineihkhem-te-tawh | — |
-| Comitative-Ergative | kineihkhem-tawhin | — | kineihkhem-te-tawhin | — |
 
 ### kingak "expect" (ki-ngak)
 
@@ -3324,8 +2926,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kingak-ah | — | kingak-te-ah | — |
 | Ablative | kingak-pan | — | kingak-te-pan | — |
 | Ablative-Ergative | kingak-panin | — | kingak-te-panin | — |
-| Comitative | kingak-tawh | — | kingak-te-tawh | — |
-| Comitative-Ergative | kingak-tawhin | — | kingak-te-tawhin | — |
 
 ### kipan "begin" (ki-pan)
 
@@ -3337,8 +2937,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipan-ah | — | kipan-te-ah | — |
 | Ablative | kipan-pan | — | kipan-te-pan | — |
 | Ablative-Ergative | kipan-panin | — | kipan-te-panin | — |
-| Comitative | kipan-tawh | — | kipan-te-tawh | — |
-| Comitative-Ergative | kipan-tawhin | — | kipan-te-tawhin | — |
 
 ### kipat "beginning" (ki-pat)
 
@@ -3350,8 +2948,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipat-ah | — | kipat-te-ah | — |
 | Ablative | kipat-pan | — | kipat-te-pan | — |
 | Ablative-Ergative | kipat-panin | — | kipat-te-panin | — |
-| Comitative | kipat-tawh | — | kipat-te-tawh | — |
-| Comitative-Ergative | kipat-tawhin | — | kipat-te-tawhin | — |
 
 ### kipawl "fellowship" (ki-pawl)
 
@@ -3363,8 +2959,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipawl-ah | — | kipawl-te-ah | — |
 | Ablative | kipawl-pan | — | kipawl-te-pan | — |
 | Ablative-Ergative | kipawl-panin | — | kipawl-te-panin | — |
-| Comitative | kipawl-tawh | — | kipawl-te-tawh | — |
-| Comitative-Ergative | kipawl-tawhin | — | kipawl-te-tawhin | — |
 
 ### kiphawk "remember" (ki-phawk)
 
@@ -3376,8 +2970,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kiphawk-ah | — | kiphawk-te-ah | — |
 | Ablative | kiphawk-pan | — | kiphawk-te-pan | — |
 | Ablative-Ergative | kiphawk-panin | — | kiphawk-te-panin | — |
-| Comitative | kiphawk-tawh | — | kiphawk-te-tawh | — |
-| Comitative-Ergative | kiphawk-tawhin | — | kiphawk-te-tawhin | — |
 
 ### kipia "be.given" (ki-pia)
 
@@ -3389,8 +2981,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipia-ah | — | kipia-te-ah | — |
 | Ablative | kipia-pan | — | kipia-te-pan | — |
 | Ablative-Ergative | kipia-panin | — | kipia-te-panin | — |
-| Comitative | kipia-tawh | — | kipia-te-tawh | — |
-| Comitative-Ergative | kipia-tawhin | — | kipia-te-tawhin | — |
 
 ### kisap "calling" (ki-sap)
 
@@ -3402,8 +2992,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisap-ah | — | kisap-te-ah | — |
 | Ablative | kisap-pan | — | kisap-te-pan | — |
 | Ablative-Ergative | kisap-panin | — | kisap-te-panin | — |
-| Comitative | kisap-tawh | — | kisap-te-tawh | — |
-| Comitative-Ergative | kisap-tawhin | — | kisap-te-tawhin | — |
 
 ### kisat "strike" (ki-sat)
 
@@ -3415,8 +3003,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisat-ah | — | kisat-te-ah | — |
 | Ablative | kisat-pan | — | kisat-te-pan | — |
 | Ablative-Ergative | kisat-panin | — | kisat-te-panin | — |
-| Comitative | kisat-tawh | — | kisat-te-tawh | — |
-| Comitative-Ergative | kisat-tawhin | — | kisat-te-tawhin | — |
 
 ### kisel "strife" (ki-sel)
 
@@ -3428,8 +3014,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisel-ah | — | kisel-te-ah | — |
 | Ablative | kisel-pan | — | kisel-te-pan | — |
 | Ablative-Ergative | kisel-panin | — | kisel-te-panin | — |
-| Comitative | kisel-tawh | — | kisel-te-tawh | — |
-| Comitative-Ergative | kisel-tawhin | — | kisel-te-tawhin | — |
 
 ### kisiansuah "sanctify" (ki-siansuah)
 
@@ -3441,8 +3025,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisiansuah-ah | — | kisiansuah-te-ah | — |
 | Ablative | kisiansuah-pan | — | kisiansuah-te-pan | — |
 | Ablative-Ergative | kisiansuah-panin | — | kisiansuah-te-panin | — |
-| Comitative | kisiansuah-tawh | — | kisiansuah-te-tawh | — |
-| Comitative-Ergative | kisiansuah-tawhin | — | kisiansuah-te-tawhin | — |
 
 ### kisik "turn" (ki-sik)
 
@@ -3454,8 +3036,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisik-ah | — | kisik-te-ah | — |
 | Ablative | kisik-pan | — | kisik-te-pan | — |
 | Ablative-Ergative | kisik-panin | — | kisik-te-panin | — |
-| Comitative | kisik-tawh | — | kisik-te-tawh | — |
-| Comitative-Ergative | kisik-tawhin | — | kisik-te-tawhin | — |
 
 ### kisil "wash" (ki-sil)
 
@@ -3467,8 +3047,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisil-ah | — | kisil-te-ah | — |
 | Ablative | kisil-pan | — | kisil-te-pan | — |
 | Ablative-Ergative | kisil-panin | — | kisil-te-panin | — |
-| Comitative | kisil-tawh | — | kisil-te-tawh | — |
-| Comitative-Ergative | kisil-tawhin | — | kisil-te-tawhin | — |
 
 ### kisuan "succession" (ki-suan)
 
@@ -3480,8 +3058,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisuan-ah | — | kisuan-te-ah | — |
 | Ablative | kisuan-pan | — | kisuan-te-pan | — |
 | Ablative-Ergative | kisuan-panin | — | kisuan-te-panin | — |
-| Comitative | kisuan-tawh | — | kisuan-te-tawh | — |
-| Comitative-Ergative | kisuan-tawhin | — | kisuan-te-tawhin | — |
 
 ### kithah "murder" (ki-thah)
 
@@ -3493,8 +3069,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kithah-ah | — | kithah-te-ah | — |
 | Ablative | kithah-pan | — | kithah-te-pan | — |
 | Ablative-Ergative | kithah-panin | — | kithah-te-panin | — |
-| Comitative | kithah-tawh | — | kithah-te-tawh | — |
-| Comitative-Ergative | kithah-tawhin | — | kithah-te-tawhin | — |
 
 ### kitot "circumcision" (ki-tot)
 
@@ -3506,8 +3080,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kitot-ah | — | kitot-te-ah | — |
 | Ablative | kitot-pan | — | kitot-te-pan | — |
 | Ablative-Ergative | kitot-panin | — | kitot-te-panin | — |
-| Comitative | kitot-tawh | — | kitot-te-tawh | — |
-| Comitative-Ergative | kitot-tawhin | — | kitot-te-tawhin | — |
 
 ### kivui "bury" (ki-vui)
 
@@ -3519,8 +3091,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kivui-ah | — | kivui-te-ah | — |
 | Ablative | kivui-pan | — | kivui-te-pan | — |
 | Ablative-Ergative | kivui-panin | — | kivui-te-panin | — |
-| Comitative | kivui-tawh | — | kivui-te-tawh | — |
-| Comitative-Ergative | kivui-tawhin | — | kivui-te-tawhin | — |
 
 ### kizep "joining" (ki-zep)
 
@@ -3532,8 +3102,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kizep-ah | — | kizep-te-ah | — |
 | Ablative | kizep-pan | — | kizep-te-pan | — |
 | Ablative-Ergative | kizep-panin | — | kizep-te-panin | — |
-| Comitative | kizep-tawh | — | kizep-te-tawh | — |
-| Comitative-Ergative | kizep-tawhin | — | kizep-te-tawhin | — |
 
 ---
 
@@ -3551,8 +3119,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungkia-ah | — | lungkia-te-ah | — |
 | Ablative | lungkia-pan | — | lungkia-te-pan | — |
 | Ablative-Ergative | lungkia-panin | — | lungkia-te-panin | — |
-| Comitative | lungkia-tawh | — | lungkia-te-tawh | — |
-| Comitative-Ergative | lungkia-tawhin | — | lungkia-te-tawhin | — |
 
 ---
 
@@ -3570,8 +3136,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gilkial-ah | — | gilkial-te-ah | — |
 | Ablative | gilkial-pan | — | gilkial-te-pan | — |
 | Ablative-Ergative | gilkial-panin | — | gilkial-te-panin | — |
-| Comitative | gilkial-tawh | — | gilkial-te-tawh | — |
-| Comitative-Ergative | gilkial-tawhin | — | gilkial-te-tawhin | — |
 
 ---
 
@@ -3589,8 +3153,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mulkiat-ah | — | mulkiat-te-ah | — |
 | Ablative | mulkiat-pan | — | mulkiat-te-pan | — |
 | Ablative-Ergative | mulkiat-panin | — | mulkiat-te-panin | — |
-| Comitative | mulkiat-tawh | — | mulkiat-te-tawh | — |
-| Comitative-Ergative | mulkiat-tawhin | — | mulkiat-te-tawhin | — |
 
 ### thongkiat "deliver" (thong-kiat)
 
@@ -3602,8 +3164,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thongkiat-ah | — | thongkiat-te-ah | — |
 | Ablative | thongkiat-pan | — | thongkiat-te-pan | — |
 | Ablative-Ergative | thongkiat-panin | — | thongkiat-te-panin | — |
-| Comitative | thongkiat-tawh | — | thongkiat-te-tawh | — |
-| Comitative-Ergative | thongkiat-tawhin | — | thongkiat-te-tawhin | — |
 
 ---
 
@@ -3621,8 +3181,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hingkik-ah | — | hingkik-te-ah | — |
 | Ablative | hingkik-pan | — | hingkik-te-pan | — |
 | Ablative-Ergative | hingkik-panin | — | hingkik-te-panin | — |
-| Comitative | hingkik-tawh | — | hingkik-te-tawh | — |
-| Comitative-Ergative | hingkik-tawhin | — | hingkik-te-tawhin | — |
 
 ### thawhkik "resurrection" (thawh-kik)
 
@@ -3634,8 +3192,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thawhkik-ah | — | thawhkik-te-ah | — |
 | Ablative | thawhkik-pan | — | thawhkik-te-pan | — |
 | Ablative-Ergative | thawhkik-panin | — | thawhkik-te-panin | — |
-| Comitative | thawhkik-tawh | — | thawhkik-te-tawh | — |
-| Comitative-Ergative | thawhkik-tawhin | — | thawhkik-te-tawhin | — |
 
 ---
 
@@ -3653,8 +3209,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungkim-ah | — | lungkim-te-ah | — |
 | Ablative | lungkim-pan | — | lungkim-te-pan | — |
 | Ablative-Ergative | lungkim-panin | — | lungkim-te-panin | — |
-| Comitative | lungkim-tawh | — | lungkim-te-tawh | — |
-| Comitative-Ergative | lungkim-tawhin | — | lungkim-te-tawhin | — |
 
 ### thukim "covenant" (thu-kim)
 
@@ -3666,8 +3220,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thukim-ah | — | thukim-te-ah | — |
 | Ablative | thukim-pan | — | thukim-te-pan | — |
 | Ablative-Ergative | thukim-panin | — | thukim-te-panin | — |
-| Comitative | thukim-tawh | — | thukim-te-tawh | — |
-| Comitative-Ergative | thukim-tawhin | — | thukim-te-tawhin | — |
 
 ---
 
@@ -3685,8 +3237,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipsak-ah | — | kipsak-te-ah | — |
 | Ablative | kipsak-pan | — | kipsak-te-pan | — |
 | Ablative-Ergative | kipsak-panin | — | kipsak-te-panin | — |
-| Comitative | kipsak-tawh | — | kipsak-te-tawh | — |
-| Comitative-Ergative | kipsak-tawhin | — | kipsak-te-tawhin | — |
 
 ---
 
@@ -3704,8 +3254,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kikoih-ah | — | kikoih-te-ah | — |
 | Ablative | kikoih-pan | — | kikoih-te-pan | — |
 | Ablative-Ergative | kikoih-panin | — | kikoih-te-panin | — |
-| Comitative | kikoih-tawh | — | kikoih-te-tawh | — |
-| Comitative-Ergative | kikoih-tawhin | — | kikoih-te-tawhin | — |
 
 ### vankoih "heaven" (van-koih)
 
@@ -3717,8 +3265,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vankoih-ah | — | vankoih-te-ah | — |
 | Ablative | vankoih-pan | — | vankoih-te-pan | — |
 | Ablative-Ergative | vankoih-panin | — | vankoih-te-panin | — |
-| Comitative | vankoih-tawh | — | vankoih-te-tawh | — |
-| Comitative-Ergative | vankoih-tawhin | — | vankoih-te-tawhin | — |
 
 ---
 
@@ -3736,8 +3282,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bukkong-ah | Lev 1:3, Lev 4:7, Lev 4:18 (+2) | bukkong-te-ah | — |
 | Ablative | bukkong-pan | — | bukkong-te-pan | — |
 | Ablative-Ergative | bukkong-panin | — | bukkong-te-panin | — |
-| Comitative | bukkong-tawh | — | bukkong-te-tawh | — |
-| Comitative-Ergative | bukkong-tawhin | — | bukkong-te-tawhin | — |
 
 ### kulhkong "gate" (kulh-kong)
 
@@ -3749,8 +3293,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kulhkong-ah | — | kulhkong-te-ah | — |
 | Ablative | kulhkong-pan | — | kulhkong-te-pan | — |
 | Ablative-Ergative | kulhkong-panin | — | kulhkong-te-panin | — |
-| Comitative | kulhkong-tawh | — | kulhkong-te-tawh | — |
-| Comitative-Ergative | kulhkong-tawhin | — | kulhkong-te-tawhin | — |
 
 ---
 
@@ -3768,8 +3310,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innkuan-ah | — | innkuan-te-ah | — |
 | Ablative | innkuan-pan | — | innkuan-te-pan | — |
 | Ablative-Ergative | innkuan-panin | — | innkuan-te-panin | — |
-| Comitative | innkuan-tawh | — | innkuan-te-tawh | — |
-| Comitative-Ergative | innkuan-tawhin | — | innkuan-te-tawhin | — |
 
 ---
 
@@ -3787,8 +3327,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ankuang-ah | — | ankuang-te-ah | — |
 | Ablative | ankuang-pan | — | ankuang-te-pan | — |
 | Ablative-Ergative | ankuang-panin | — | ankuang-te-panin | — |
-| Comitative | ankuang-tawh | — | ankuang-te-tawh | — |
-| Comitative-Ergative | ankuang-tawhin | — | ankuang-te-tawhin | — |
 
 ---
 
@@ -3806,8 +3344,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kultal-ah | — | kultal-te-ah | — |
 | Ablative | kultal-pan | — | kultal-te-pan | — |
 | Ablative-Ergative | kultal-panin | — | kultal-te-panin | — |
-| Comitative | kultal-tawh | — | kultal-te-tawh | — |
-| Comitative-Ergative | kultal-tawhin | — | kultal-te-tawhin | — |
 
 ---
 
@@ -3825,8 +3361,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuakulh-ah | 1Sa 31:10 | khuakulh-te-ah | — |
 | Ablative | khuakulh-pan | — | khuakulh-te-pan | — |
 | Ablative-Ergative | khuakulh-panin | — | khuakulh-te-panin | — |
-| Comitative | khuakulh-tawh | — | khuakulh-te-tawh | — |
-| Comitative-Ergative | khuakulh-tawhin | — | khuakulh-te-tawhin | — |
 
 ### kulhkong "gate" (kulh-kong)
 
@@ -3838,8 +3372,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kulhkong-ah | — | kulhkong-te-ah | — |
 | Ablative | kulhkong-pan | — | kulhkong-te-pan | — |
 | Ablative-Ergative | kulhkong-panin | — | kulhkong-te-panin | — |
-| Comitative | kulhkong-tawh | — | kulhkong-te-tawh | — |
-| Comitative-Ergative | kulhkong-tawhin | — | kulhkong-te-tawhin | — |
 
 ### tuikulh "island" (tui-kulh)
 
@@ -3851,8 +3383,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuikulh-ah | — | tuikulh-te-ah | — |
 | Ablative | tuikulh-pan | — | tuikulh-te-pan | — |
 | Ablative-Ergative | tuikulh-panin | — | tuikulh-te-panin | — |
-| Comitative | tuikulh-tawh | — | tuikulh-te-tawh | — |
-| Comitative-Ergative | tuikulh-tawhin | — | tuikulh-te-tawhin | — |
 
 ---
 
@@ -3870,8 +3400,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kumpipa-ah | — | kumpipa-te-ah | — |
 | Ablative | kumpipa-pan | — | kumpipa-te-pan | — |
 | Ablative-Ergative | kumpipa-panin | — | kumpipa-te-panin | — |
-| Comitative | kumpipa-tawh | — | kumpipa-te-tawh | — |
-| Comitative-Ergative | kumpipa-tawhin | — | kumpipa-te-tawhin | — |
 
 ---
 
@@ -3889,8 +3417,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ankung-ah | — | ankung-te-ah | — |
 | Ablative | ankung-pan | — | ankung-te-pan | — |
 | Ablative-Ergative | ankung-panin | — | ankung-te-panin | — |
-| Comitative | ankung-tawh | — | ankung-te-tawh | — |
-| Comitative-Ergative | ankung-tawhin | — | ankung-te-tawhin | — |
 
 ### buhkung "provender" (buh-kung)
 
@@ -3902,8 +3428,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | buhkung-ah | — | buhkung-te-ah | — |
 | Ablative | buhkung-pan | — | buhkung-te-pan | — |
 | Ablative-Ergative | buhkung-panin | — | buhkung-te-panin | — |
-| Comitative | buhkung-tawh | — | buhkung-te-tawh | — |
-| Comitative-Ergative | buhkung-tawhin | — | buhkung-te-tawhin | — |
 
 ### lingkung "thorns" (ling-kung)
 
@@ -3915,8 +3439,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lingkung-ah | — | lingkung-te-ah | — |
 | Ablative | lingkung-pan | — | lingkung-te-pan | — |
 | Ablative-Ergative | lingkung-panin | — | lingkung-te-panin | — |
-| Comitative | lingkung-tawh | — | lingkung-te-tawh | — |
-| Comitative-Ergative | lingkung-tawhin | — | lingkung-te-tawhin | — |
 
 ### singkung "tree" (sing-kung)
 
@@ -3928,8 +3450,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singkung-ah | — | singkung-te-ah | — |
 | Ablative | singkung-pan | — | singkung-te-pan | — |
 | Ablative-Ergative | singkung-panin | — | singkung-te-panin | — |
-| Comitative | singkung-tawh | — | singkung-te-tawh | — |
-| Comitative-Ergative | singkung-tawhin | — | singkung-te-tawhin | — |
 
 ---
 
@@ -3947,8 +3467,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamla-ah | — | gamla-te-ah | — |
 | Ablative | gamla-pan | — | gamla-te-pan | — |
 | Ablative-Ergative | gamla-panin | — | gamla-te-panin | — |
-| Comitative | gamla-tawh | — | gamla-te-tawh | — |
-| Comitative-Ergative | gamla-tawhin | — | gamla-te-tawhin | — |
 
 ### lasak "redeem" (la-sak)
 
@@ -3960,8 +3478,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lasak-ah | — | lasak-te-ah | — |
 | Ablative | lasak-pan | — | lasak-te-pan | — |
 | Ablative-Ergative | lasak-panin | — | lasak-te-panin | — |
-| Comitative | lasak-tawh | — | lasak-te-tawh | — |
-| Comitative-Ergative | lasak-tawhin | — | lasak-te-tawhin | — |
 
 ---
 
@@ -3979,8 +3495,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | laigelh-ah | — | laigelh-te-ah | — |
 | Ablative | laigelh-pan | — | laigelh-te-pan | — |
 | Ablative-Ergative | laigelh-panin | — | laigelh-te-panin | — |
-| Comitative | laigelh-tawh | — | laigelh-te-tawh | — |
-| Comitative-Ergative | laigelh-tawhin | — | laigelh-te-tawhin | — |
 
 ### laitak "exact.midst" (lai-tak)
 
@@ -3992,8 +3506,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | laitak-ah | Num 32:6, Jer 3:2, Jer 22:26 (+2) | laitak-te-ah | — |
 | Ablative | laitak-pan | — | laitak-te-pan | — |
 | Ablative-Ergative | laitak-panin | — | laitak-te-panin | — |
-| Comitative | laitak-tawh | — | laitak-te-tawh | — |
-| Comitative-Ergative | laitak-tawhin | — | laitak-te-tawhin | — |
 
 ### laizang "midst" (lai-zang)
 
@@ -4005,8 +3517,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | laizang-ah | Gen 1:6, Gen 2:9, Exo 14:27 (+2) | laizang-te-ah | — |
 | Ablative | laizang-pan | — | laizang-te-pan | — |
 | Ablative-Ergative | laizang-panin | — | laizang-te-panin | — |
-| Comitative | laizang-tawh | — | laizang-te-tawh | — |
-| Comitative-Ergative | laizang-tawhin | — | laizang-te-tawhin | — |
 
 ### omlai "present" (om-lai)
 
@@ -4018,8 +3528,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | omlai-ah | — | omlai-te-ah | — |
 | Ablative | omlai-pan | — | omlai-te-pan | — |
 | Ablative-Ergative | omlai-panin | — | omlai-te-panin | — |
-| Comitative | omlai-tawh | — | omlai-te-tawh | — |
-| Comitative-Ergative | omlai-tawhin | — | omlai-te-tawhin | — |
 
 ---
 
@@ -4037,8 +3545,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamlak-ah | Gen 4:8, Gen 21:20, Gen 24:63 (+2) | gamlak-te-ah | — |
 | Ablative | gamlak-pan | — | gamlak-te-pan | — |
 | Ablative-Ergative | gamlak-panin | — | gamlak-te-panin | — |
-| Comitative | gamlak-tawh | — | gamlak-te-tawh | — |
-| Comitative-Ergative | gamlak-tawhin | — | gamlak-te-tawhin | — |
 
 ### leilak "dust" (lei-lak)
 
@@ -4050,8 +3556,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leilak-ah | Gen 6:20, Gen 9:2, Gen 18:2 (+2) | leilak-te-ah | — |
 | Ablative | leilak-pan | — | leilak-te-pan | — |
 | Ablative-Ergative | leilak-panin | — | leilak-te-panin | — |
-| Comitative | leilak-tawh | — | leilak-te-tawh | — |
-| Comitative-Ergative | leilak-tawhin | — | leilak-te-tawhin | — |
 
 ### phulak "burden" (phu-lak)
 
@@ -4063,8 +3567,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | phulak-ah | — | phulak-te-ah | — |
 | Ablative | phulak-pan | — | phulak-te-pan | — |
 | Ablative-Ergative | phulak-panin | — | phulak-te-panin | — |
-| Comitative | phulak-tawh | — | phulak-te-tawh | — |
-| Comitative-Ergative | phulak-tawhin | — | phulak-te-tawhin | — |
 
 ---
 
@@ -4082,8 +3584,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamdang-ah | — | lamdang-te-ah | — |
 | Ablative | lamdang-pan | — | lamdang-te-pan | — |
 | Ablative-Ergative | lamdang-panin | — | lamdang-te-panin | — |
-| Comitative | lamdang-tawh | — | lamdang-te-tawh | — |
-| Comitative-Ergative | lamdang-tawhin | — | lamdang-te-tawhin | — |
 
 ### lamet "manner" (lam-et)
 
@@ -4095,8 +3595,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamet-ah | — | lamet-te-ah | — |
 | Ablative | lamet-pan | — | lamet-te-pan | — |
 | Ablative-Ergative | lamet-panin | — | lamet-te-panin | — |
-| Comitative | lamet-tawh | — | lamet-te-tawh | — |
-| Comitative-Ergative | lamet-tawhin | — | lamet-te-tawhin | — |
 
 ### lamhilh "guide" (lam-hilh)
 
@@ -4108,8 +3606,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamhilh-ah | — | lamhilh-te-ah | — |
 | Ablative | lamhilh-pan | — | lamhilh-te-pan | — |
 | Ablative-Ergative | lamhilh-panin | — | lamhilh-te-panin | — |
-| Comitative | lamhilh-tawh | — | lamhilh-te-tawh | — |
-| Comitative-Ergative | lamhilh-tawhin | — | lamhilh-te-tawhin | — |
 
 ### lamka "heights" (lam-ka)
 
@@ -4121,8 +3617,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamka-ah | — | lamka-te-ah | — |
 | Ablative | lamka-pan | — | lamka-te-pan | — |
 | Ablative-Ergative | lamka-panin | — | lamka-te-panin | — |
-| Comitative | lamka-tawh | — | lamka-te-tawh | — |
-| Comitative-Ergative | lamka-tawhin | — | lamka-te-tawhin | — |
 
 ### lamkal "midway" (lam-kal)
 
@@ -4134,8 +3628,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lamkal-ah | Gen 48:7, Exo 23:20, Num 21:4 (+2) | lamkal-te-ah | — |
 | Ablative | lamkal-pan | — | lamkal-te-pan | — |
 | Ablative-Ergative | lamkal-panin | — | lamkal-te-panin | — |
-| Comitative | lamkal-tawh | — | lamkal-te-tawh | — |
-| Comitative-Ergative | lamkal-tawhin | — | lamkal-te-tawhin | — |
 
 ### lampai "proceed" (lam-pai)
 
@@ -4147,8 +3639,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lampai-ah | — | lampai-te-ah | — |
 | Ablative | lampai-pan | — | lampai-te-pan | — |
 | Ablative-Ergative | lampai-panin | — | lampai-te-panin | — |
-| Comitative | lampai-tawh | — | lampai-te-tawh | — |
-| Comitative-Ergative | lampai-tawhin | — | lampai-te-tawhin | — |
 
 ### lampi "road" (lam-pi)
 
@@ -4160,8 +3650,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lampi-ah | — | lampi-te-ah | — |
 | Ablative | lampi-pan | — | lampi-te-pan | — |
 | Ablative-Ergative | lampi-panin | — | lampi-te-panin | — |
-| Comitative | lampi-tawh | — | lampi-te-tawh | — |
-| Comitative-Ergative | lampi-tawhin | — | lampi-te-tawhin | — |
 
 ---
 
@@ -4179,8 +3667,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | langkhat-ah | Exo 20:16, Exo 23:29, Exo 25:12 (+2) | langkhat-te-ah | — |
 | Ablative | langkhat-pan | — | langkhat-te-pan | — |
 | Ablative-Ergative | langkhat-panin | — | langkhat-te-panin | — |
-| Comitative | langkhat-tawh | — | langkhat-te-tawh | — |
-| Comitative-Ergative | langkhat-tawhin | — | langkhat-te-tawhin | — |
 
 ### langpan "advocate" (lang-pan)
 
@@ -4192,8 +3678,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | langpan-ah | — | langpan-te-ah | — |
 | Ablative | langpan-pan | — | langpan-te-pan | — |
 | Ablative-Ergative | langpan-panin | — | langpan-te-panin | — |
-| Comitative | langpan-tawh | — | langpan-te-tawh | — |
-| Comitative-Ergative | langpan-tawhin | — | langpan-te-tawhin | — |
 
 ### langpang "beside" (lang-pang)
 
@@ -4205,8 +3689,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | langpang-ah | — | langpang-te-ah | — |
 | Ablative | langpang-pan | — | langpang-te-pan | — |
 | Ablative-Ergative | langpang-panin | — | langpang-te-panin | — |
-| Comitative | langpang-tawh | — | langpang-te-tawh | — |
-| Comitative-Ergative | langpang-tawhin | — | langpang-te-tawhin | — |
 
 ### limlang "crystal" (lim-lang)
 
@@ -4218,8 +3700,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | limlang-ah | Jam 1:23, Jam 1:24 | limlang-te-ah | — |
 | Ablative | limlang-pan | — | limlang-te-pan | — |
 | Ablative-Ergative | limlang-panin | — | limlang-te-panin | — |
-| Comitative | limlang-tawh | — | limlang-te-tawh | — |
-| Comitative-Ergative | limlang-tawhin | — | limlang-te-tawhin | — |
 
 ---
 
@@ -4237,8 +3717,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kilat-ah | — | kilat-te-ah | — |
 | Ablative | kilat-pan | — | kilat-te-pan | — |
 | Ablative-Ergative | kilat-panin | — | kilat-te-panin | — |
-| Comitative | kilat-tawh | — | kilat-te-tawh | — |
-| Comitative-Ergative | kilat-tawhin | — | kilat-te-tawhin | — |
 
 ---
 
@@ -4256,8 +3734,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lauhuai-ah | — | lauhuai-te-ah | — |
 | Ablative | lauhuai-pan | — | lauhuai-te-pan | — |
 | Ablative-Ergative | lauhuai-panin | — | lauhuai-te-panin | — |
-| Comitative | lauhuai-tawh | — | lauhuai-te-tawh | — |
-| Comitative-Ergative | lauhuai-tawhin | — | lauhuai-te-tawhin | — |
 
 ---
 
@@ -4275,8 +3751,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nule-ah | — | nule-te-ah | — |
 | Ablative | nule-pan | — | nule-te-pan | — |
 | Ablative-Ergative | nule-panin | — | nule-te-panin | — |
-| Comitative | nule-tawh | — | nule-te-tawh | — |
-| Comitative-Ergative | nule-tawhin | — | nule-te-tawhin | — |
 
 ---
 
@@ -4294,8 +3768,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leenggah-ah | — | leenggah-te-ah | — |
 | Ablative | leenggah-pan | — | leenggah-te-pan | — |
 | Ablative-Ergative | leenggah-panin | — | leenggah-te-panin | — |
-| Comitative | leenggah-tawh | — | leenggah-te-tawh | — |
-| Comitative-Ergative | leenggah-tawhin | — | leenggah-te-tawhin | — |
 
 ### leenggui "grapevine" (leeng-gui)
 
@@ -4307,8 +3779,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leenggui-ah | — | leenggui-te-ah | — |
 | Ablative | leenggui-pan | — | leenggui-te-pan | — |
 | Ablative-Ergative | leenggui-panin | — | leenggui-te-panin | — |
-| Comitative | leenggui-tawh | — | leenggui-te-tawh | — |
-| Comitative-Ergative | leenggui-tawhin | — | leenggui-te-tawhin | — |
 
 ---
 
@@ -4326,8 +3796,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leilak-ah | Gen 6:20, Gen 9:2, Gen 18:2 (+2) | leilak-te-ah | — |
 | Ablative | leilak-pan | — | leilak-te-pan | — |
 | Ablative-Ergative | leilak-panin | — | leilak-te-panin | — |
-| Comitative | leilak-tawh | — | leilak-te-tawh | — |
-| Comitative-Ergative | leilak-tawhin | — | leilak-te-tawhin | — |
 
 ### leipi "earthquake" (lei-pi)
 
@@ -4339,8 +3807,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leipi-ah | — | leipi-te-ah | — |
 | Ablative | leipi-pan | — | leipi-te-pan | — |
 | Ablative-Ergative | leipi-panin | — | leipi-te-panin | — |
-| Comitative | leipi-tawh | — | leipi-te-tawh | — |
-| Comitative-Ergative | leipi-tawhin | — | leipi-te-tawhin | — |
 
 ### leitang "earth" (lei-tang)
 
@@ -4352,8 +3818,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leitang-ah | Gen 10:5, Gen 16:3, Gen 21:32 (+2) | leitang-te-ah | — |
 | Ablative | leitang-pan | — | leitang-te-pan | — |
 | Ablative-Ergative | leitang-panin | — | leitang-te-panin | — |
-| Comitative | leitang-tawh | — | leitang-te-tawh | — |
-| Comitative-Ergative | leitang-tawhin | — | leitang-te-tawhin | — |
 
 ### leitung "earth" (lei-tung)
 
@@ -4365,8 +3829,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leitung-ah | Gen 1:11, Gen 1:16, Gen 1:20 (+2) | leitung-te-ah | — |
 | Ablative | leitung-pan | — | leitung-te-pan | — |
 | Ablative-Ergative | leitung-panin | — | leitung-te-panin | — |
-| Comitative | leitung-tawh | — | leitung-te-tawh | — |
-| Comitative-Ergative | leitung-tawhin | — | leitung-te-tawhin | — |
 
 ### vanlei "world" (van-lei)
 
@@ -4378,8 +3840,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vanlei-ah | — | vanlei-te-ah | — |
 | Ablative | vanlei-pan | — | vanlei-te-pan | — |
 | Ablative-Ergative | vanlei-panin | — | vanlei-te-panin | — |
-| Comitative | vanlei-tawh | — | vanlei-te-tawh | — |
-| Comitative-Ergative | vanlei-tawhin | — | vanlei-te-tawhin | — |
 
 ---
 
@@ -4397,8 +3857,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kilem-ah | — | kilem-te-ah | — |
 | Ablative | kilem-pan | — | kilem-te-pan | — |
 | Ablative-Ergative | kilem-panin | — | kilem-te-panin | — |
-| Comitative | kilem-tawh | — | kilem-te-tawh | — |
-| Comitative-Ergative | kilem-tawhin | — | kilem-te-tawhin | — |
 
 ---
 
@@ -4416,8 +3874,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siklen-ah | — | siklen-te-ah | — |
 | Ablative | siklen-pan | — | siklen-te-pan | — |
 | Ablative-Ergative | siklen-panin | — | siklen-te-panin | — |
-| Comitative | siklen-tawh | — | siklen-te-tawh | — |
-| Comitative-Ergative | siklen-tawhin | — | siklen-te-tawhin | — |
 
 ---
 
@@ -4435,8 +3891,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | livei-ah | — | livei-te-ah | — |
 | Ablative | livei-pan | — | livei-te-pan | — |
 | Ablative-Ergative | livei-panin | — | livei-te-panin | — |
-| Comitative | livei-tawh | — | livei-te-tawh | — |
-| Comitative-Ergative | livei-tawhin | — | livei-te-tawhin | — |
 
 ### saili "sling" (sai-li)
 
@@ -4448,8 +3902,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | saili-ah | — | saili-te-ah | — |
 | Ablative | saili-pan | — | saili-te-pan | — |
 | Ablative-Ergative | saili-panin | — | saili-te-panin | — |
-| Comitative | saili-tawh | — | saili-te-tawh | — |
-| Comitative-Ergative | saili-tawhin | — | saili-te-tawhin | — |
 
 ### sawmli "forty" (sawm-li)
 
@@ -4461,8 +3913,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sawmli-ah | — | sawmli-te-ah | — |
 | Ablative | sawmli-pan | — | sawmli-te-pan | — |
 | Ablative-Ergative | sawmli-panin | — | sawmli-te-panin | — |
-| Comitative | sawmli-tawh | — | sawmli-te-tawh | — |
-| Comitative-Ergative | sawmli-tawhin | — | sawmli-te-tawhin | — |
 
 ---
 
@@ -4480,8 +3930,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | milian-ah | — | milian-te-ah | — |
 | Ablative | milian-pan | — | milian-te-pan | — |
 | Ablative-Ergative | milian-panin | — | milian-te-panin | — |
-| Comitative | milian-tawh | — | milian-te-tawh | — |
-| Comitative-Ergative | milian-tawhin | — | milian-te-tawhin | — |
 
 ### ulian "elder" (u-lian)
 
@@ -4493,8 +3941,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ulian-ah | — | ulian-te-ah | — |
 | Ablative | ulian-pan | — | ulian-te-pan | — |
 | Ablative-Ergative | ulian-panin | — | ulian-te-panin | — |
-| Comitative | ulian-tawh | — | ulian-te-tawh | — |
-| Comitative-Ergative | ulian-tawhin | — | ulian-te-tawhin | — |
 
 ---
 
@@ -4512,8 +3958,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vangliat-ah | — | vangliat-te-ah | — |
 | Ablative | vangliat-pan | — | vangliat-te-pan | — |
 | Ablative-Ergative | vangliat-panin | — | vangliat-te-panin | — |
-| Comitative | vangliat-tawh | — | vangliat-te-tawh | — |
-| Comitative-Ergative | vangliat-tawhin | — | vangliat-te-tawhin | — |
 
 ---
 
@@ -4531,8 +3975,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | limlang-ah | Jam 1:23, Jam 1:24 | limlang-te-ah | — |
 | Ablative | limlang-pan | — | limlang-te-pan | — |
 | Ablative-Ergative | limlang-panin | — | limlang-te-panin | — |
-| Comitative | limlang-tawh | — | limlang-te-tawh | — |
-| Comitative-Ergative | limlang-tawhin | — | limlang-te-tawhin | — |
 
 ### limtak "sign.true" (lim-tak)
 
@@ -4544,8 +3986,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | limtak-ah | — | limtak-te-ah | — |
 | Ablative | limtak-pan | — | limtak-te-pan | — |
 | Ablative-Ergative | limtak-panin | — | limtak-te-panin | — |
-| Comitative | limtak-tawh | — | limtak-te-tawh | — |
-| Comitative-Ergative | limtak-tawhin | — | limtak-te-tawhin | — |
 
 ### milim "idol" (mi-lim)
 
@@ -4557,8 +3997,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | milim-ah | — | milim-te-ah | — |
 | Ablative | milim-pan | — | milim-te-pan | — |
 | Ablative-Ergative | milim-panin | — | milim-te-panin | — |
-| Comitative | milim-tawh | — | milim-te-tawh | — |
-| Comitative-Ergative | milim-tawhin | — | milim-te-tawhin | — |
 
 ---
 
@@ -4576,8 +4014,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lingkung-ah | — | lingkung-te-ah | — |
 | Ablative | lingkung-pan | — | lingkung-te-pan | — |
 | Ablative-Ergative | lingkung-panin | — | lingkung-te-panin | — |
-| Comitative | lingkung-tawh | — | lingkung-te-tawh | — |
-| Comitative-Ergative | lingkung-tawhin | — | lingkung-te-tawhin | — |
 
 ---
 
@@ -4595,8 +4031,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lokhawh-ah | — | lokhawh-te-ah | — |
 | Ablative | lokhawh-pan | — | lokhawh-te-pan | — |
 | Ablative-Ergative | lokhawh-panin | — | lokhawh-te-panin | — |
-| Comitative | lokhawh-tawh | — | lokhawh-te-tawh | — |
-| Comitative-Ergative | lokhawh-tawhin | — | lokhawh-te-tawhin | — |
 
 ### lono "disobey" (lo-no)
 
@@ -4608,8 +4042,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lono-ah | — | lono-te-ah | — |
 | Ablative | lono-pan | — | lono-te-pan | — |
 | Ablative-Ergative | lono-panin | — | lono-te-panin | — |
-| Comitative | lono-tawh | — | lono-te-tawh | — |
-| Comitative-Ergative | lono-tawhin | — | lono-te-tawhin | — |
 
 ### lopa "farmer" (lo-pa)
 
@@ -4621,8 +4053,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lopa-ah | — | lopa-te-ah | — |
 | Ablative | lopa-pan | — | lopa-te-pan | — |
 | Ablative-Ergative | lopa-panin | — | lopa-te-panin | — |
-| Comitative | lopa-tawh | — | lopa-te-tawh | — |
-| Comitative-Ergative | lopa-tawhin | — | lopa-te-tawhin | — |
 
 ---
 
@@ -4640,8 +4070,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | buhlom-ah | — | buhlom-te-ah | — |
 | Ablative | buhlom-pan | — | buhlom-te-pan | — |
 | Ablative-Ergative | buhlom-panin | — | buhlom-te-panin | — |
-| Comitative | buhlom-tawh | — | buhlom-te-tawh | — |
-| Comitative-Ergative | buhlom-tawhin | — | buhlom-te-tawhin | — |
 
 ---
 
@@ -4659,8 +4087,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lukham-ah | — | lukham-te-ah | — |
 | Ablative | lukham-pan | — | lukham-te-pan | — |
 | Ablative-Ergative | lukham-panin | — | lukham-te-panin | — |
-| Comitative | lukham-tawh | — | lukham-te-tawh | — |
-| Comitative-Ergative | lukham-tawhin | — | lukham-te-tawhin | — |
 
 ### luzang "crown" (lu-zang)
 
@@ -4672,8 +4098,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | luzang-ah | — | luzang-te-ah | — |
 | Ablative | luzang-pan | — | luzang-te-pan | — |
 | Ablative-Ergative | luzang-panin | — | luzang-te-panin | — |
-| Comitative | luzang-tawh | — | luzang-te-tawh | — |
-| Comitative-Ergative | luzang-tawhin | — | luzang-te-tawhin | — |
 
 ---
 
@@ -4691,8 +4115,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singluang-ah | — | singluang-te-ah | — |
 | Ablative | singluang-pan | — | singluang-te-pan | — |
 | Ablative-Ergative | singluang-panin | — | singluang-te-panin | — |
-| Comitative | singluang-tawh | — | singluang-te-tawh | — |
-| Comitative-Ergative | singluang-tawhin | — | singluang-te-tawhin | — |
 
 ---
 
@@ -4710,8 +4132,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | itluat-ah | — | itluat-te-ah | — |
 | Ablative | itluat-pan | — | itluat-te-pan | — |
 | Ablative-Ergative | itluat-panin | — | itluat-te-panin | — |
-| Comitative | itluat-tawh | — | itluat-te-tawh | — |
-| Comitative-Ergative | itluat-tawhin | — | itluat-te-tawhin | — |
 
 ---
 
@@ -4729,8 +4149,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamlum-ah | — | gamlum-te-ah | — |
 | Ablative | gamlum-pan | — | gamlum-te-pan | — |
 | Ablative-Ergative | gamlum-panin | — | gamlum-te-panin | — |
-| Comitative | gamlum-tawh | — | gamlum-te-tawh | — |
-| Comitative-Ergative | gamlum-tawhin | — | gamlum-te-tawhin | — |
 
 ---
 
@@ -4748,8 +4166,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungdam-ah | — | lungdam-te-ah | — |
 | Ablative | lungdam-pan | — | lungdam-te-pan | — |
 | Ablative-Ergative | lungdam-panin | — | lungdam-te-panin | — |
-| Comitative | lungdam-tawh | — | lungdam-te-tawh | — |
-| Comitative-Ergative | lungdam-tawhin | — | lungdam-te-tawhin | — |
 
 ### lungduai "compassion" (lung-duai)
 
@@ -4761,8 +4177,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungduai-ah | — | lungduai-te-ah | — |
 | Ablative | lungduai-pan | — | lungduai-te-pan | — |
 | Ablative-Ergative | lungduai-panin | — | lungduai-te-panin | — |
-| Comitative | lungduai-tawh | — | lungduai-te-tawh | — |
-| Comitative-Ergative | lungduai-tawhin | — | lungduai-te-tawhin | — |
 
 ### lungham "wrath" (lung-ham)
 
@@ -4774,8 +4188,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungham-ah | — | lungham-te-ah | — |
 | Ablative | lungham-pan | — | lungham-te-pan | — |
 | Ablative-Ergative | lungham-panin | — | lungham-te-panin | — |
-| Comitative | lungham-tawh | — | lungham-te-tawh | — |
-| Comitative-Ergative | lungham-tawhin | — | lungham-te-tawhin | — |
 
 ### lungkham "sorrow" (lung-kham)
 
@@ -4787,8 +4199,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungkham-ah | — | lungkham-te-ah | — |
 | Ablative | lungkham-pan | — | lungkham-te-pan | — |
 | Ablative-Ergative | lungkham-panin | — | lungkham-te-panin | — |
-| Comitative | lungkham-tawh | — | lungkham-te-tawh | — |
-| Comitative-Ergative | lungkham-tawhin | — | lungkham-te-tawhin | — |
 
 ### lungkia "discourage" (lung-kia)
 
@@ -4800,8 +4210,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungkia-ah | — | lungkia-te-ah | — |
 | Ablative | lungkia-pan | — | lungkia-te-pan | — |
 | Ablative-Ergative | lungkia-panin | — | lungkia-te-panin | — |
-| Comitative | lungkia-tawh | — | lungkia-te-tawh | — |
-| Comitative-Ergative | lungkia-tawhin | — | lungkia-te-tawhin | — |
 
 ### lungkim "peace" (lung-kim)
 
@@ -4813,8 +4221,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungkim-ah | — | lungkim-te-ah | — |
 | Ablative | lungkim-pan | — | lungkim-te-pan | — |
 | Ablative-Ergative | lungkim-panin | — | lungkim-te-panin | — |
-| Comitative | lungkim-tawh | — | lungkim-te-tawh | — |
-| Comitative-Ergative | lungkim-tawhin | — | lungkim-te-tawhin | — |
 
 ### lungmit "attention" (lung-mit)
 
@@ -4826,8 +4232,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungmit-ah | — | lungmit-te-ah | — |
 | Ablative | lungmit-pan | — | lungmit-te-pan | — |
 | Ablative-Ergative | lungmit-panin | — | lungmit-te-panin | — |
-| Comitative | lungmit-tawh | — | lungmit-te-tawh | — |
-| Comitative-Ergative | lungmit-tawhin | — | lungmit-te-tawhin | — |
 
 ### lungmuan "confidence" (lung-muan)
 
@@ -4839,8 +4243,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungmuan-ah | — | lungmuan-te-ah | — |
 | Ablative | lungmuan-pan | — | lungmuan-te-pan | — |
 | Ablative-Ergative | lungmuan-panin | — | lungmuan-te-panin | — |
-| Comitative | lungmuan-tawh | — | lungmuan-te-tawh | — |
-| Comitative-Ergative | lungmuan-tawhin | — | lungmuan-te-tawhin | — |
 
 ### lungmuang "peace" (lung-muang)
 
@@ -4852,8 +4254,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungmuang-ah | — | lungmuang-te-ah | — |
 | Ablative | lungmuang-pan | — | lungmuang-te-pan | — |
 | Ablative-Ergative | lungmuang-panin | — | lungmuang-te-panin | — |
-| Comitative | lungmuang-tawh | — | lungmuang-te-tawh | — |
-| Comitative-Ergative | lungmuang-tawhin | — | lungmuang-te-tawhin | — |
 
 ### lungnem "meek" (lung-nem)
 
@@ -4865,8 +4265,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungnem-ah | — | lungnem-te-ah | — |
 | Ablative | lungnem-pan | — | lungnem-te-pan | — |
 | Ablative-Ergative | lungnem-panin | — | lungnem-te-panin | — |
-| Comitative | lungnem-tawh | — | lungnem-te-tawh | — |
-| Comitative-Ergative | lungnem-tawhin | — | lungnem-te-tawhin | — |
 
 ### lungnop "desire" (lung-nop)
 
@@ -4878,8 +4276,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungnop-ah | — | lungnop-te-ah | — |
 | Ablative | lungnop-pan | — | lungnop-te-pan | — |
 | Ablative-Ergative | lungnop-panin | — | lungnop-te-panin | — |
-| Comitative | lungnop-tawh | — | lungnop-te-tawh | — |
-| Comitative-Ergative | lungnop-tawhin | — | lungnop-te-tawhin | — |
 
 ### lungsim "mind" (lung-sim)
 
@@ -4891,8 +4287,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungsim-ah | Gen 18:16, Gen 43:30, Deu 24:15 (+2) | lungsim-te-ah | — |
 | Ablative | lungsim-pan | — | lungsim-te-pan | — |
 | Ablative-Ergative | lungsim-panin | — | lungsim-te-panin | — |
-| Comitative | lungsim-tawh | — | lungsim-te-tawh | — |
-| Comitative-Ergative | lungsim-tawhin | — | lungsim-te-tawhin | — |
 
 ### lungtang "courage" (lung-tang)
 
@@ -4904,8 +4298,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungtang-ah | Psa 45:5, Psa 143:4 | lungtang-te-ah | — |
 | Ablative | lungtang-pan | — | lungtang-te-pan | — |
 | Ablative-Ergative | lungtang-panin | — | lungtang-te-panin | — |
-| Comitative | lungtang-tawh | — | lungtang-te-tawh | — |
-| Comitative-Ergative | lungtang-tawhin | — | lungtang-te-tawhin | — |
 
 ### lungthim "conscience" (lung-thim)
 
@@ -4917,8 +4309,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungthim-ah | — | lungthim-te-ah | — |
 | Ablative | lungthim-pan | — | lungthim-te-pan | — |
 | Ablative-Ergative | lungthim-panin | — | lungthim-te-panin | — |
-| Comitative | lungthim-tawh | — | lungthim-te-tawh | — |
-| Comitative-Ergative | lungthim-tawhin | — | lungthim-te-tawhin | — |
 
 ### lungzin "brightness" (lung-zin)
 
@@ -4930,8 +4320,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungzin-ah | — | lungzin-te-ah | — |
 | Ablative | lungzin-pan | — | lungzin-te-pan | — |
 | Ablative-Ergative | lungzin-panin | — | lungzin-te-panin | — |
-| Comitative | lungzin-tawh | — | lungzin-te-tawh | — |
-| Comitative-Ergative | lungzin-tawhin | — | lungzin-te-tawhin | — |
 
 ---
 
@@ -4949,8 +4337,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maisak-ah | — | maisak-te-ah | — |
 | Ablative | maisak-pan | — | maisak-te-pan | — |
 | Ablative-Ergative | maisak-panin | — | maisak-te-panin | — |
-| Comitative | maisak-tawh | — | maisak-te-tawh | — |
-| Comitative-Ergative | maisak-tawhin | — | maisak-te-tawhin | — |
 
 ### maisiat "oppose" (mai-siat)
 
@@ -4962,8 +4348,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maisiat-ah | — | maisiat-te-ah | — |
 | Ablative | maisiat-pan | — | maisiat-te-pan | — |
 | Ablative-Ergative | maisiat-panin | — | maisiat-te-panin | — |
-| Comitative | maisiat-tawh | — | maisiat-te-tawh | — |
-| Comitative-Ergative | maisiat-tawhin | — | maisiat-te-tawhin | — |
 
 ### maitai "radiant" (mai-tai)
 
@@ -4975,8 +4359,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maitai-ah | — | maitai-te-ah | — |
 | Ablative | maitai-pan | — | maitai-te-pan | — |
 | Ablative-Ergative | maitai-panin | — | maitai-te-panin | — |
-| Comitative | maitai-tawh | — | maitai-te-tawh | — |
-| Comitative-Ergative | maitai-tawhin | — | maitai-te-tawhin | — |
 
 ### maizum "bow.down" (mai-zum)
 
@@ -4988,8 +4370,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maizum-ah | — | maizum-te-ah | — |
 | Ablative | maizum-pan | — | maizum-te-pan | — |
 | Ablative-Ergative | maizum-panin | — | maizum-te-panin | — |
-| Comitative | maizum-tawh | — | maizum-te-tawh | — |
-| Comitative-Ergative | maizum-tawhin | — | maizum-te-tawhin | — |
 
 ---
 
@@ -5007,8 +4387,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pammaih-ah | — | pammaih-te-ah | — |
 | Ablative | pammaih-pan | — | pammaih-te-pan | — |
 | Ablative-Ergative | pammaih-panin | — | pammaih-te-panin | — |
-| Comitative | pammaih-tawh | — | pammaih-te-tawh | — |
-| Comitative-Ergative | pammaih-tawhin | — | pammaih-te-tawhin | — |
 
 ---
 
@@ -5026,8 +4404,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kimaisak-ah | — | kimaisak-te-ah | — |
 | Ablative | kimaisak-pan | — | kimaisak-te-pan | — |
 | Ablative-Ergative | kimaisak-panin | — | kimaisak-te-panin | — |
-| Comitative | kimaisak-tawh | — | kimaisak-te-tawh | — |
-| Comitative-Ergative | kimaisak-tawhin | — | kimaisak-te-tawhin | — |
 
 ---
 
@@ -5045,8 +4421,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | manphat-ah | — | manphat-te-ah | — |
 | Ablative | manphat-pan | — | manphat-te-pan | — |
 | Ablative-Ergative | manphat-panin | — | manphat-te-panin | — |
-| Comitative | manphat-tawh | — | manphat-te-tawh | — |
-| Comitative-Ergative | manphat-tawhin | — | manphat-te-tawhin | — |
 
 ### thuman "true.word" (thu-man)
 
@@ -5058,8 +4432,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuman-ah | 2Pe 1:12 | thuman-te-ah | — |
 | Ablative | thuman-pan | — | thuman-te-pan | — |
 | Ablative-Ergative | thuman-panin | — | thuman-te-panin | — |
-| Comitative | thuman-tawh | — | thuman-te-tawh | — |
-| Comitative-Ergative | thuman-tawhin | — | thuman-te-tawhin | — |
 
 ---
 
@@ -5077,8 +4449,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galkapmang-ah | — | galkapmang-te-ah | — |
 | Ablative | galkapmang-pan | — | galkapmang-te-pan | — |
 | Ablative-Ergative | galkapmang-panin | — | galkapmang-te-panin | — |
-| Comitative | galkapmang-tawh | — | galkapmang-te-tawh | — |
-| Comitative-Ergative | galkapmang-tawhin | — | galkapmang-te-tawhin | — |
 
 ### mangpha "farewell" (mang-pha)
 
@@ -5090,8 +4460,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mangpha-ah | — | mangpha-te-ah | — |
 | Ablative | mangpha-pan | — | mangpha-te-pan | — |
 | Ablative-Ergative | mangpha-panin | — | mangpha-te-panin | — |
-| Comitative | mangpha-tawh | — | mangpha-te-tawh | — |
-| Comitative-Ergative | mangpha-tawhin | — | mangpha-te-tawhin | — |
 
 ---
 
@@ -5109,8 +4477,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mawhna-ah | — | mawhna-te-ah | — |
 | Ablative | mawhna-pan | — | mawhna-te-pan | — |
 | Ablative-Ergative | mawhna-panin | — | mawhna-te-panin | — |
-| Comitative | mawhna-tawh | — | mawhna-te-tawh | — |
-| Comitative-Ergative | mawhna-tawhin | — | mawhna-te-tawhin | — |
 
 ### mawhsak "cause.sin" (mawh-sak)
 
@@ -5122,8 +4488,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mawhsak-ah | — | mawhsak-te-ah | — |
 | Ablative | mawhsak-pan | — | mawhsak-te-pan | — |
 | Ablative-Ergative | mawhsak-panin | — | mawhsak-te-panin | — |
-| Comitative | mawhsak-tawh | — | mawhsak-te-tawh | — |
-| Comitative-Ergative | mawhsak-tawhin | — | mawhsak-te-tawhin | — |
 
 ---
 
@@ -5141,8 +4505,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | meigong-ah | — | meigong-te-ah | — |
 | Ablative | meigong-pan | — | meigong-te-pan | — |
 | Ablative-Ergative | meigong-panin | — | meigong-te-panin | — |
-| Comitative | meigong-tawh | — | meigong-te-tawh | — |
-| Comitative-Ergative | meigong-tawhin | — | meigong-te-tawhin | — |
 
 ### meivak "lamplight" (mei-vak)
 
@@ -5154,8 +4516,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | meivak-ah | — | meivak-te-ah | — |
 | Ablative | meivak-pan | — | meivak-te-pan | — |
 | Ablative-Ergative | meivak-panin | — | meivak-te-panin | — |
-| Comitative | meivak-tawh | — | meivak-te-tawh | — |
-| Comitative-Ergative | meivak-tawhin | — | meivak-te-tawhin | — |
 
 ### numei "woman" (nu-mei)
 
@@ -5167,8 +4527,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | numei-ah | — | numei-te-ah | — |
 | Ablative | numei-pan | — | numei-te-pan | — |
 | Ablative-Ergative | numei-panin | — | numei-te-panin | — |
-| Comitative | numei-tawh | — | numei-te-tawh | — |
-| Comitative-Ergative | numei-tawhin | — | numei-te-tawhin | — |
 
 ---
 
@@ -5186,8 +4544,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuami-ah | — | khuami-te-ah | — |
 | Ablative | khuami-pan | — | khuami-te-pan | — |
 | Ablative-Ergative | khuami-panin | — | khuami-te-panin | — |
-| Comitative | khuami-tawh | — | khuami-te-tawh | — |
-| Comitative-Ergative | khuami-tawhin | — | khuami-te-tawhin | — |
 
 ### midik "righteous" (mi-dik)
 
@@ -5199,8 +4555,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | midik-ah | — | midik-te-ah | — |
 | Ablative | midik-pan | — | midik-te-pan | — |
 | Ablative-Ergative | midik-panin | — | midik-te-panin | — |
-| Comitative | midik-tawh | — | midik-te-tawh | — |
-| Comitative-Ergative | midik-tawhin | — | midik-te-tawhin | — |
 
 ### migit "hatred" (mi-git)
 
@@ -5212,8 +4566,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | migit-ah | — | migit-te-ah | — |
 | Ablative | migit-pan | — | migit-te-pan | — |
 | Ablative-Ergative | migit-panin | — | migit-te-panin | — |
-| Comitative | migit-tawh | — | migit-te-tawh | — |
-| Comitative-Ergative | migit-tawhin | — | migit-te-tawhin | — |
 
 ### mihau "rich.one" (mi-hau)
 
@@ -5225,8 +4577,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mihau-ah | — | mihau-te-ah | — |
 | Ablative | mihau-pan | — | mihau-te-pan | — |
 | Ablative-Ergative | mihau-panin | — | mihau-te-panin | — |
-| Comitative | mihau-tawh | — | mihau-te-tawh | — |
-| Comitative-Ergative | mihau-tawhin | — | mihau-te-tawhin | — |
 
 ### mihing "mankind" (mi-hing)
 
@@ -5238,8 +4588,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mihing-ah | — | mihing-te-ah | — |
 | Ablative | mihing-pan | — | mihing-te-pan | — |
 | Ablative-Ergative | mihing-panin | — | mihing-te-panin | — |
-| Comitative | mihing-tawh | — | mihing-te-tawh | — |
-| Comitative-Ergative | mihing-tawhin | — | mihing-te-tawhin | — |
 
 ### mikhual "stranger" (mi-khual)
 
@@ -5251,8 +4599,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mikhual-ah | — | mikhual-te-ah | — |
 | Ablative | mikhual-pan | — | mikhual-te-pan | — |
 | Ablative-Ergative | mikhual-panin | — | mikhual-te-panin | — |
-| Comitative | mikhual-tawh | — | mikhual-te-tawh | — |
-| Comitative-Ergative | mikhual-tawhin | — | mikhual-te-tawhin | — |
 
 ### milian "noble" (mi-lian)
 
@@ -5264,8 +4610,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | milian-ah | — | milian-te-ah | — |
 | Ablative | milian-pan | — | milian-te-pan | — |
 | Ablative-Ergative | milian-panin | — | milian-te-panin | — |
-| Comitative | milian-tawh | — | milian-te-tawh | — |
-| Comitative-Ergative | milian-tawhin | — | milian-te-tawhin | — |
 
 ### milim "idol" (mi-lim)
 
@@ -5277,8 +4621,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | milim-ah | — | milim-te-ah | — |
 | Ablative | milim-pan | — | milim-te-pan | — |
 | Ablative-Ergative | milim-panin | — | milim-te-panin | — |
-| Comitative | milim-tawh | — | milim-te-tawh | — |
-| Comitative-Ergative | milim-tawhin | — | milim-te-tawhin | — |
 
 ### minam "nation" (mi-nam)
 
@@ -5290,8 +4632,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minam-ah | — | minam-te-ah | — |
 | Ablative | minam-pan | — | minam-te-pan | — |
 | Ablative-Ergative | minam-panin | — | minam-te-panin | — |
-| Comitative | minam-tawh | — | minam-te-tawh | — |
-| Comitative-Ergative | minam-tawhin | — | minam-te-tawhin | — |
 
 ### mipih "companion" (mi-pih)
 
@@ -5303,8 +4643,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mipih-ah | — | mipih-te-ah | — |
 | Ablative | mipih-pan | — | mipih-te-pan | — |
 | Ablative-Ergative | mipih-panin | — | mipih-te-panin | — |
-| Comitative | mipih-tawh | — | mipih-te-tawh | — |
-| Comitative-Ergative | mipih-tawhin | — | mipih-te-tawhin | — |
 
 ### mizawng "everyone" (mi-zawng)
 
@@ -5316,8 +4654,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mizawng-ah | — | mizawng-te-ah | — |
 | Ablative | mizawng-pan | — | mizawng-te-pan | — |
 | Ablative-Ergative | mizawng-panin | — | mizawng-te-panin | — |
-| Comitative | mizawng-tawh | — | mizawng-te-tawh | — |
-| Comitative-Ergative | mizawng-tawhin | — | mizawng-te-tawhin | — |
 
 ### vanmi "angel" (van-mi)
 
@@ -5329,8 +4665,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vanmi-ah | — | vanmi-te-ah | — |
 | Ablative | vanmi-pan | — | vanmi-te-pan | — |
 | Ablative-Ergative | vanmi-panin | — | vanmi-te-panin | — |
-| Comitative | vanmi-tawh | — | vanmi-te-tawh | — |
-| Comitative-Ergative | vanmi-tawhin | — | vanmi-te-tawhin | — |
 
 ---
 
@@ -5348,8 +4682,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mimkhau-ah | — | mimkhau-te-ah | — |
 | Ablative | mimkhau-pan | — | mimkhau-te-pan | — |
 | Ablative-Ergative | mimkhau-panin | — | mimkhau-te-panin | — |
-| Comitative | mimkhau-tawh | — | mimkhau-te-tawh | — |
-| Comitative-Ergative | mimkhau-tawhin | — | mimkhau-te-tawhin | — |
 
 ---
 
@@ -5367,8 +4699,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minphat-ah | — | minphat-te-ah | — |
 | Ablative | minphat-pan | — | minphat-te-pan | — |
 | Ablative-Ergative | minphat-panin | — | minphat-te-panin | — |
-| Comitative | minphat-tawh | — | minphat-te-tawh | — |
-| Comitative-Ergative | minphat-tawhin | — | minphat-te-tawhin | — |
 
 ### minsia "dishonor" (min-sia)
 
@@ -5380,8 +4710,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minsia-ah | — | minsia-te-ah | — |
 | Ablative | minsia-pan | — | minsia-te-pan | — |
 | Ablative-Ergative | minsia-panin | — | minsia-te-panin | — |
-| Comitative | minsia-tawh | — | minsia-te-tawh | — |
-| Comitative-Ergative | minsia-tawhin | — | minsia-te-tawhin | — |
 
 ### minthang "fame" (min-thang)
 
@@ -5393,8 +4721,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minthang-ah | — | minthang-te-ah | — |
 | Ablative | minthang-pan | — | minthang-te-pan | — |
 | Ablative-Ergative | minthang-panin | — | minthang-te-panin | — |
-| Comitative | minthang-tawh | — | minthang-te-tawh | — |
-| Comitative-Ergative | minthang-tawhin | — | minthang-te-tawhin | — |
 
 ---
 
@@ -5412,8 +4738,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungmit-ah | — | lungmit-te-ah | — |
 | Ablative | lungmit-pan | — | lungmit-te-pan | — |
 | Ablative-Ergative | lungmit-panin | — | lungmit-te-panin | — |
-| Comitative | lungmit-tawh | — | lungmit-te-tawh | — |
-| Comitative-Ergative | lungmit-tawhin | — | lungmit-te-tawhin | — |
 
 ### mitkhu "eyebrow" (mit-khu)
 
@@ -5425,8 +4749,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mitkhu-ah | — | mitkhu-te-ah | — |
 | Ablative | mitkhu-pan | — | mitkhu-te-pan | — |
 | Ablative-Ergative | mitkhu-panin | — | mitkhu-te-panin | — |
-| Comitative | mitkhu-tawh | — | mitkhu-te-tawh | — |
-| Comitative-Ergative | mitkhu-tawhin | — | mitkhu-te-tawhin | — |
 
 ---
 
@@ -5444,8 +4766,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puanmong-ah | — | puanmong-te-ah | — |
 | Ablative | puanmong-pan | — | puanmong-te-pan | — |
 | Ablative-Ergative | puanmong-panin | — | puanmong-te-panin | — |
-| Comitative | puanmong-tawh | — | puanmong-te-tawh | — |
-| Comitative-Ergative | puanmong-tawhin | — | puanmong-te-tawhin | — |
 
 ---
 
@@ -5463,8 +4783,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mualtung-ah | Gen 8:4, Gen 14:10, Gen 19:17 (+2) | mualtung-te-ah | — |
 | Ablative | mualtung-pan | — | mualtung-te-pan | — |
 | Ablative-Ergative | mualtung-panin | — | mualtung-te-panin | — |
-| Comitative | mualtung-tawh | — | mualtung-te-tawh | — |
-| Comitative-Ergative | mualtung-tawhin | — | mualtung-te-tawhin | — |
 
 ---
 
@@ -5482,8 +4800,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungmuan-ah | — | lungmuan-te-ah | — |
 | Ablative | lungmuan-pan | — | lungmuan-te-pan | — |
 | Ablative-Ergative | lungmuan-panin | — | lungmuan-te-panin | — |
-| Comitative | lungmuan-tawh | — | lungmuan-te-tawh | — |
-| Comitative-Ergative | lungmuan-tawhin | — | lungmuan-te-tawhin | — |
 
 ---
 
@@ -5501,8 +4817,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungmuang-ah | — | lungmuang-te-ah | — |
 | Ablative | lungmuang-pan | — | lungmuang-te-pan | — |
 | Ablative-Ergative | lungmuang-panin | — | lungmuang-te-panin | — |
-| Comitative | lungmuang-tawh | — | lungmuang-te-tawh | — |
-| Comitative-Ergative | lungmuang-tawhin | — | lungmuang-te-tawhin | — |
 
 ---
 
@@ -5520,8 +4834,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | muhdah-ah | — | muhdah-te-ah | — |
 | Ablative | muhdah-pan | — | muhdah-te-pan | — |
 | Ablative-Ergative | muhdah-panin | — | muhdah-te-panin | — |
-| Comitative | muhdah-tawh | — | muhdah-te-tawh | — |
-| Comitative-Ergative | muhdah-tawhin | — | muhdah-te-tawhin | — |
 
 ---
 
@@ -5539,8 +4851,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | keelmul-ah | — | keelmul-te-ah | — |
 | Ablative | keelmul-pan | — | keelmul-te-pan | — |
 | Ablative-Ergative | keelmul-panin | — | keelmul-te-panin | — |
-| Comitative | keelmul-tawh | — | keelmul-te-tawh | — |
-| Comitative-Ergative | keelmul-tawhin | — | keelmul-te-tawhin | — |
 
 ### mulkiat "shave" (mul-kiat)
 
@@ -5552,8 +4862,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mulkiat-ah | — | mulkiat-te-ah | — |
 | Ablative | mulkiat-pan | — | mulkiat-te-pan | — |
 | Ablative-Ergative | mulkiat-panin | — | mulkiat-te-panin | — |
-| Comitative | mulkiat-tawh | — | mulkiat-te-tawh | — |
-| Comitative-Ergative | mulkiat-tawhin | — | mulkiat-te-tawhin | — |
 
 ---
 
@@ -5571,8 +4879,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mundang-ah | Mar 5:10, Act 12:17 | mundang-te-ah | — |
 | Ablative | mundang-pan | — | mundang-te-pan | — |
 | Ablative-Ergative | mundang-panin | — | mundang-te-panin | — |
-| Comitative | mundang-tawh | — | mundang-te-tawh | — |
-| Comitative-Ergative | mundang-tawhin | — | mundang-te-tawhin | — |
 
 ---
 
@@ -5590,8 +4896,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | biakna-ah | — | biakna-te-ah | — |
 | Ablative | biakna-pan | — | biakna-te-pan | — |
 | Ablative-Ergative | biakna-panin | — | biakna-te-panin | — |
-| Comitative | biakna-tawh | — | biakna-te-tawh | — |
-| Comitative-Ergative | biakna-tawhin | — | biakna-te-tawhin | — |
 
 ### khialhna "sin" (khialh-na)
 
@@ -5603,8 +4907,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khialhna-ah | — | khialhna-te-ah | — |
 | Ablative | khialhna-pan | — | khialhna-te-pan | — |
 | Ablative-Ergative | khialhna-panin | — | khialhna-te-panin | — |
-| Comitative | khialhna-tawh | — | khialhna-te-tawh | — |
-| Comitative-Ergative | khialhna-tawhin | — | khialhna-te-tawhin | — |
 
 ### mawhna "sin" (mawh-na)
 
@@ -5616,8 +4918,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mawhna-ah | — | mawhna-te-ah | — |
 | Ablative | mawhna-pan | — | mawhna-te-pan | — |
 | Ablative-Ergative | mawhna-panin | — | mawhna-te-panin | — |
-| Comitative | mawhna-tawh | — | mawhna-te-tawh | — |
-| Comitative-Ergative | mawhna-tawhin | — | mawhna-te-tawhin | — |
 
 ### siatna "destruction" (siat-na)
 
@@ -5629,8 +4929,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siatna-ah | — | siatna-te-ah | — |
 | Ablative | siatna-pan | — | siatna-te-pan | — |
 | Ablative-Ergative | siatna-panin | — | siatna-te-panin | — |
-| Comitative | siatna-tawh | — | siatna-te-tawh | — |
-| Comitative-Ergative | siatna-tawhin | — | siatna-te-tawhin | — |
 
 ### sihna "death" (sih-na)
 
@@ -5642,8 +4940,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sihna-ah | — | sihna-te-ah | — |
 | Ablative | sihna-pan | — | sihna-te-pan | — |
 | Ablative-Ergative | sihna-panin | — | sihna-te-panin | — |
-| Comitative | sihna-tawh | — | sihna-te-tawh | — |
-| Comitative-Ergative | sihna-tawhin | — | sihna-te-tawhin | — |
 
 ---
 
@@ -5661,8 +4957,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singnai-ah | — | singnai-te-ah | — |
 | Ablative | singnai-pan | — | singnai-te-pan | — |
 | Ablative-Ergative | singnai-panin | — | singnai-te-panin | — |
-| Comitative | singnai-tawh | — | singnai-te-tawh | — |
-| Comitative-Ergative | singnai-tawhin | — | singnai-te-tawhin | — |
 
 ---
 
@@ -5680,8 +4974,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nakbah-ah | — | nakbah-te-ah | — |
 | Ablative | nakbah-pan | — | nakbah-te-pan | — |
 | Ablative-Ergative | nakbah-panin | — | nakbah-te-panin | — |
-| Comitative | nakbah-tawh | — | nakbah-te-tawh | — |
-| Comitative-Ergative | nakbah-tawhin | — | nakbah-te-tawhin | — |
 
 ### tuinak "spring" (tui-nak)
 
@@ -5693,8 +4985,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuinak-ah | 2Ki 2:21, Job 38:16, Ecc 1:7 | tuinak-te-ah | — |
 | Ablative | tuinak-pan | — | tuinak-te-pan | — |
 | Ablative-Ergative | tuinak-panin | — | tuinak-te-panin | — |
-| Comitative | tuinak-tawh | — | tuinak-te-tawh | — |
-| Comitative-Ergative | tuinak-tawhin | — | tuinak-te-tawhin | — |
 
 ---
 
@@ -5712,8 +5002,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gimnam-ah | — | gimnam-te-ah | — |
 | Ablative | gimnam-pan | — | gimnam-te-pan | — |
 | Ablative-Ergative | gimnam-panin | — | gimnam-te-panin | — |
-| Comitative | gimnam-tawh | — | gimnam-te-tawh | — |
-| Comitative-Ergative | gimnam-tawhin | — | gimnam-te-tawhin | — |
 
 ### minam "nation" (mi-nam)
 
@@ -5725,8 +5013,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minam-ah | — | minam-te-ah | — |
 | Ablative | minam-pan | — | minam-te-pan | — |
 | Ablative-Ergative | minam-panin | — | minam-te-panin | — |
-| Comitative | minam-tawh | — | minam-te-tawh | — |
-| Comitative-Ergative | minam-tawhin | — | minam-te-tawhin | — |
 
 ### namdang "diverse" (nam-dang)
 
@@ -5738,8 +5024,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | namdang-ah | — | namdang-te-ah | — |
 | Ablative | namdang-pan | — | namdang-te-pan | — |
 | Ablative-Ergative | namdang-panin | — | namdang-te-panin | — |
-| Comitative | namdang-tawh | — | namdang-te-tawh | — |
-| Comitative-Ergative | namdang-tawhin | — | namdang-te-tawhin | — |
 
 ### namtui "perfume" (nam-tui)
 
@@ -5751,8 +5035,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | namtui-ah | — | namtui-te-ah | — |
 | Ablative | namtui-pan | — | namtui-te-pan | — |
 | Ablative-Ergative | namtui-panin | — | namtui-te-panin | — |
-| Comitative | namtui-tawh | — | namtui-te-tawh | — |
-| Comitative-Ergative | namtui-tawhin | — | namtui-te-tawhin | — |
 
 ---
 
@@ -5770,8 +5052,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pulnat-ah | — | pulnat-te-ah | — |
 | Ablative | pulnat-pan | — | pulnat-te-pan | — |
 | Ablative-Ergative | pulnat-panin | — | pulnat-te-panin | — |
-| Comitative | pulnat-tawh | — | pulnat-te-tawh | — |
-| Comitative-Ergative | pulnat-tawhin | — | pulnat-te-tawhin | — |
 
 ---
 
@@ -5789,8 +5069,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | naupang-ah | — | naupang-te-ah | — |
 | Ablative | naupang-pan | — | naupang-te-pan | — |
 | Ablative-Ergative | naupang-panin | — | naupang-te-panin | — |
-| Comitative | naupang-tawh | — | naupang-te-tawh | — |
-| Comitative-Ergative | naupang-tawhin | — | naupang-te-tawhin | — |
 
 ---
 
@@ -5808,8 +5086,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuanawl-ah | Mar 8:23, Luk 4:29, Act 14:19 | khuanawl-te-ah | — |
 | Ablative | khuanawl-pan | — | khuanawl-te-pan | — |
 | Ablative-Ergative | khuanawl-panin | — | khuanawl-te-panin | — |
-| Comitative | khuanawl-tawh | — | khuanawl-te-tawh | — |
-| Comitative-Ergative | khuanawl-tawhin | — | khuanawl-te-tawhin | — |
 
 ### nawlnung "edge" (nawl-nung)
 
@@ -5821,8 +5097,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nawlnung-ah | — | nawlnung-te-ah | — |
 | Ablative | nawlnung-pan | — | nawlnung-te-pan | — |
 | Ablative-Ergative | nawlnung-panin | — | nawlnung-te-panin | — |
-| Comitative | nawlnung-tawh | — | nawlnung-te-tawh | — |
-| Comitative-Ergative | nawlnung-tawhin | — | nawlnung-te-tawhin | — |
 
 ---
 
@@ -5840,8 +5114,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | neihsa-ah | — | neihsa-te-ah | — |
 | Ablative | neihsa-pan | — | neihsa-te-pan | — |
 | Ablative-Ergative | neihsa-panin | — | neihsa-te-panin | — |
-| Comitative | neihsa-tawh | — | neihsa-te-tawh | — |
-| Comitative-Ergative | neihsa-tawhin | — | neihsa-te-tawhin | — |
 
 ---
 
@@ -5859,8 +5131,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kineihkhem-ah | — | kineihkhem-te-ah | — |
 | Ablative | kineihkhem-pan | — | kineihkhem-te-pan | — |
 | Ablative-Ergative | kineihkhem-panin | — | kineihkhem-te-panin | — |
-| Comitative | kineihkhem-tawh | — | kineihkhem-te-tawh | — |
-| Comitative-Ergative | kineihkhem-tawhin | — | kineihkhem-te-tawhin | — |
 
 ---
 
@@ -5878,8 +5148,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungnem-ah | — | lungnem-te-ah | — |
 | Ablative | lungnem-pan | — | lungnem-te-pan | — |
 | Ablative-Ergative | lungnem-panin | — | lungnem-te-panin | — |
-| Comitative | lungnem-tawh | — | lungnem-te-tawh | — |
-| Comitative-Ergative | lungnem-tawhin | — | lungnem-te-tawhin | — |
 
 ---
 
@@ -5897,8 +5165,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hehnep-ah | — | hehnep-te-ah | — |
 | Ablative | hehnep-pan | — | hehnep-te-pan | — |
 | Ablative-Ergative | hehnep-panin | — | hehnep-te-panin | — |
-| Comitative | hehnep-tawh | — | hehnep-te-tawh | — |
-| Comitative-Ergative | hehnep-tawhin | — | hehnep-te-tawhin | — |
 
 ---
 
@@ -5916,8 +5182,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | netniam-ah | — | netniam-te-ah | — |
 | Ablative | netniam-pan | — | netniam-te-pan | — |
 | Ablative-Ergative | netniam-panin | — | netniam-te-panin | — |
-| Comitative | netniam-tawh | — | netniam-te-tawh | — |
-| Comitative-Ergative | netniam-tawhin | — | netniam-te-tawhin | — |
 
 ---
 
@@ -5935,8 +5199,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuaneu-ah | — | khuaneu-te-ah | — |
 | Ablative | khuaneu-pan | — | khuaneu-te-pan | — |
 | Ablative-Ergative | khuaneu-panin | — | khuaneu-te-panin | — |
-| Comitative | khuaneu-tawh | — | khuaneu-te-tawh | — |
-| Comitative-Ergative | khuaneu-tawhin | — | khuaneu-te-tawhin | — |
 
 ---
 
@@ -5954,8 +5216,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ngahsa-ah | — | ngahsa-te-ah | — |
 | Ablative | ngahsa-pan | — | ngahsa-te-pan | — |
 | Ablative-Ergative | ngahsa-panin | — | ngahsa-te-panin | — |
-| Comitative | ngahsa-tawh | — | ngahsa-te-tawh | — |
-| Comitative-Ergative | ngahsa-tawhin | — | ngahsa-te-tawhin | — |
 
 ---
 
@@ -5973,8 +5233,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ngaihsut-ah | — | ngaihsut-te-ah | — |
 | Ablative | ngaihsut-pan | — | ngaihsut-te-pan | — |
 | Ablative-Ergative | ngaihsut-panin | — | ngaihsut-te-panin | — |
-| Comitative | ngaihsut-tawh | — | ngaihsut-te-tawh | — |
-| Comitative-Ergative | ngaihsut-tawhin | — | ngaihsut-te-tawhin | — |
 
 ---
 
@@ -5992,8 +5250,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kingak-ah | — | kingak-te-ah | — |
 | Ablative | kingak-pan | — | kingak-te-pan | — |
 | Ablative-Ergative | kingak-panin | — | kingak-te-panin | — |
-| Comitative | kingak-tawh | — | kingak-te-tawh | — |
-| Comitative-Ergative | kingak-tawhin | — | kingak-te-tawhin | — |
 
 ---
 
@@ -6011,8 +5267,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ngalpi-ah | — | ngalpi-te-ah | — |
 | Ablative | ngalpi-pan | — | ngalpi-te-pan | — |
 | Ablative-Ergative | ngalpi-panin | — | ngalpi-te-panin | — |
-| Comitative | ngalpi-tawh | — | ngalpi-te-tawh | — |
-| Comitative-Ergative | ngalpi-tawhin | — | ngalpi-te-tawhin | — |
 
 ---
 
@@ -6030,8 +5284,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | omngei-ah | — | omngei-te-ah | — |
 | Ablative | omngei-pan | — | omngei-te-pan | — |
 | Ablative-Ergative | omngei-panin | — | omngei-te-panin | — |
-| Comitative | omngei-tawh | — | omngei-te-tawh | — |
-| Comitative-Ergative | omngei-tawhin | — | omngei-te-tawhin | — |
 
 ---
 
@@ -6049,8 +5301,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thunget-ah | — | thunget-te-ah | — |
 | Ablative | thunget-pan | — | thunget-te-pan | — |
 | Ablative-Ergative | thunget-panin | — | thunget-te-panin | — |
-| Comitative | thunget-tawh | — | thunget-te-tawh | — |
-| Comitative-Ergative | thunget-tawhin | — | thunget-te-tawhin | — |
 
 ---
 
@@ -6068,8 +5318,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nipikal-ah | — | nipikal-te-ah | — |
 | Ablative | nipikal-pan | — | nipikal-te-pan | — |
 | Ablative-Ergative | nipikal-panin | — | nipikal-te-panin | — |
-| Comitative | nipikal-tawh | — | nipikal-te-tawh | — |
-| Comitative-Ergative | nipikal-tawhin | — | nipikal-te-tawhin | — |
 
 ### nisuah "birthday" (ni-suah)
 
@@ -6081,8 +5329,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nisuah-ah | — | nisuah-te-ah | — |
 | Ablative | nisuah-pan | — | nisuah-te-pan | — |
 | Ablative-Ergative | nisuah-panin | — | nisuah-te-panin | — |
-| Comitative | nisuah-tawh | — | nisuah-te-tawh | — |
-| Comitative-Ergative | nisuah-tawhin | — | nisuah-te-tawhin | — |
 
 ### nitawp "last.day" (ni-tawp)
 
@@ -6094,8 +5340,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nitawp-ah | — | nitawp-te-ah | — |
 | Ablative | nitawp-pan | — | nitawp-te-pan | — |
 | Ablative-Ergative | nitawp-panin | — | nitawp-te-panin | — |
-| Comitative | nitawp-tawh | — | nitawp-te-tawh | — |
-| Comitative-Ergative | nitawp-tawhin | — | nitawp-te-tawhin | — |
 
 ### nitum "always" (ni-tum)
 
@@ -6107,8 +5351,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nitum-ah | — | nitum-te-ah | — |
 | Ablative | nitum-pan | — | nitum-te-pan | — |
 | Ablative-Ergative | nitum-panin | — | nitum-te-panin | — |
-| Comitative | nitum-tawh | — | nitum-te-tawh | — |
-| Comitative-Ergative | nitum-tawhin | — | nitum-te-tawhin | — |
 
 ---
 
@@ -6126,8 +5368,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | netniam-ah | — | netniam-te-ah | — |
 | Ablative | netniam-pan | — | netniam-te-pan | — |
 | Ablative-Ergative | netniam-panin | — | netniam-te-panin | — |
-| Comitative | netniam-tawh | — | netniam-te-tawh | — |
-| Comitative-Ergative | netniam-tawhin | — | netniam-te-tawhin | — |
 
 ---
 
@@ -6145,8 +5385,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nihvei-ah | — | nihvei-te-ah | — |
 | Ablative | nihvei-pan | — | nihvei-te-pan | — |
 | Ablative-Ergative | nihvei-panin | — | nihvei-te-panin | — |
-| Comitative | nihvei-tawh | — | nihvei-te-tawh | — |
-| Comitative-Ergative | nihvei-tawhin | — | nihvei-te-tawhin | — |
 
 ### sawmnih "twelve" (sawm-nih)
 
@@ -6158,8 +5396,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sawmnih-ah | — | sawmnih-te-ah | — |
 | Ablative | sawmnih-pan | — | sawmnih-te-pan | — |
 | Ablative-Ergative | sawmnih-panin | — | sawmnih-te-panin | — |
-| Comitative | sawmnih-tawh | — | sawmnih-te-tawh | — |
-| Comitative-Ergative | sawmnih-tawhin | — | sawmnih-te-tawhin | — |
 
 ---
 
@@ -6177,8 +5413,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singniim-ah | — | singniim-te-ah | — |
 | Ablative | singniim-pan | — | singniim-te-pan | — |
 | Ablative-Ergative | singniim-panin | — | singniim-te-panin | — |
-| Comitative | singniim-tawh | — | singniim-te-tawh | — |
-| Comitative-Ergative | singniim-tawhin | — | singniim-te-tawhin | — |
 
 ---
 
@@ -6196,8 +5430,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawngno-ah | — | bawngno-te-ah | — |
 | Ablative | bawngno-pan | — | bawngno-te-pan | — |
 | Ablative-Ergative | bawngno-panin | — | bawngno-te-panin | — |
-| Comitative | bawngno-tawh | — | bawngno-te-tawh | — |
-| Comitative-Ergative | bawngno-tawhin | — | bawngno-te-tawhin | — |
 
 ### khangno "youth" (khang-no)
 
@@ -6209,8 +5441,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khangno-ah | — | khangno-te-ah | — |
 | Ablative | khangno-pan | — | khangno-te-pan | — |
 | Ablative-Ergative | khangno-panin | — | khangno-te-panin | — |
-| Comitative | khangno-tawh | — | khangno-te-tawh | — |
-| Comitative-Ergative | khangno-tawhin | — | khangno-te-tawhin | — |
 
 ### lono "disobey" (lo-no)
 
@@ -6222,8 +5452,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lono-ah | — | lono-te-ah | — |
 | Ablative | lono-pan | — | lono-te-pan | — |
 | Ablative-Ergative | lono-panin | — | lono-te-panin | — |
-| Comitative | lono-tawh | — | lono-te-tawh | — |
-| Comitative-Ergative | lono-tawhin | — | lono-te-tawhin | — |
 
 ---
 
@@ -6241,8 +5469,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungnop-ah | — | lungnop-te-ah | — |
 | Ablative | lungnop-pan | — | lungnop-te-pan | — |
 | Ablative-Ergative | lungnop-panin | — | lungnop-te-panin | — |
-| Comitative | lungnop-tawh | — | lungnop-te-tawh | — |
-| Comitative-Ergative | lungnop-tawhin | — | lungnop-te-tawhin | — |
 
 ---
 
@@ -6260,8 +5486,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | cingnu-ah | — | cingnu-te-ah | — |
 | Ablative | cingnu-pan | — | cingnu-te-pan | — |
 | Ablative-Ergative | cingnu-panin | — | cingnu-te-panin | — |
-| Comitative | cingnu-tawh | — | cingnu-te-tawh | — |
-| Comitative-Ergative | cingnu-tawhin | — | cingnu-te-tawhin | — |
 
 ### nule "parents" (nu-le)
 
@@ -6273,8 +5497,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nule-ah | — | nule-te-ah | — |
 | Ablative | nule-pan | — | nule-te-pan | — |
 | Ablative-Ergative | nule-panin | — | nule-te-panin | — |
-| Comitative | nule-tawh | — | nule-te-tawh | — |
-| Comitative-Ergative | nule-tawhin | — | nule-te-tawhin | — |
 
 ### numei "woman" (nu-mei)
 
@@ -6286,8 +5508,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | numei-ah | — | numei-te-ah | — |
 | Ablative | numei-pan | — | numei-te-pan | — |
 | Ablative-Ergative | numei-panin | — | numei-te-panin | — |
-| Comitative | numei-tawh | — | numei-te-tawh | — |
-| Comitative-Ergative | numei-tawhin | — | numei-te-tawhin | — |
 
 ### sungnu "mother.in.law" (sung-nu)
 
@@ -6299,8 +5519,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sungnu-ah | — | sungnu-te-ah | — |
 | Ablative | sungnu-pan | — | sungnu-te-pan | — |
 | Ablative-Ergative | sungnu-panin | — | sungnu-te-panin | — |
-| Comitative | sungnu-tawh | — | sungnu-te-tawh | — |
-| Comitative-Ergative | sungnu-tawhin | — | sungnu-te-tawhin | — |
 
 ---
 
@@ -6318,8 +5536,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nawlnung-ah | — | nawlnung-te-ah | — |
 | Ablative | nawlnung-pan | — | nawlnung-te-pan | — |
 | Ablative-Ergative | nawlnung-panin | — | nawlnung-te-panin | — |
-| Comitative | nawlnung-tawh | — | nawlnung-te-tawh | — |
-| Comitative-Ergative | nawlnung-tawhin | — | nawlnung-te-tawhin | — |
 
 ### nungzui "disciple" (nung-zui)
 
@@ -6331,8 +5547,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nungzui-ah | — | nungzui-te-ah | — |
 | Ablative | nungzui-pan | — | nungzui-te-pan | — |
 | Ablative-Ergative | nungzui-panin | — | nungzui-te-panin | — |
-| Comitative | nungzui-tawh | — | nungzui-te-tawh | — |
-| Comitative-Ergative | nungzui-tawhin | — | nungzui-te-tawhin | — |
 
 ---
 
@@ -6350,8 +5564,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | omlai-ah | — | omlai-te-ah | — |
 | Ablative | omlai-pan | — | omlai-te-pan | — |
 | Ablative-Ergative | omlai-panin | — | omlai-te-panin | — |
-| Comitative | omlai-tawh | — | omlai-te-tawh | — |
-| Comitative-Ergative | omlai-tawhin | — | omlai-te-tawhin | — |
 
 ### omngei "know" (om-ngei)
 
@@ -6363,8 +5575,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | omngei-ah | — | omngei-te-ah | — |
 | Ablative | omngei-pan | — | omngei-te-pan | — |
 | Ablative-Ergative | omngei-panin | — | omngei-te-panin | — |
-| Comitative | omngei-tawh | — | omngei-te-tawh | — |
-| Comitative-Ergative | omngei-tawhin | — | omngei-te-tawhin | — |
 
 ### ompih "presence" (om-pih)
 
@@ -6376,8 +5586,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ompih-ah | — | ompih-te-ah | — |
 | Ablative | ompih-pan | — | ompih-te-pan | — |
 | Ablative-Ergative | ompih-panin | — | ompih-te-panin | — |
-| Comitative | ompih-tawh | — | ompih-te-tawh | — |
-| Comitative-Ergative | ompih-tawhin | — | ompih-te-tawhin | — |
 
 ---
 
@@ -6395,8 +5603,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kumpipa-ah | — | kumpipa-te-ah | — |
 | Ablative | kumpipa-pan | — | kumpipa-te-pan | — |
 | Ablative-Ergative | kumpipa-panin | — | kumpipa-te-panin | — |
-| Comitative | kumpipa-tawh | — | kumpipa-te-tawh | — |
-| Comitative-Ergative | kumpipa-tawhin | — | kumpipa-te-tawhin | — |
 
 ### lopa "farmer" (lo-pa)
 
@@ -6408,8 +5614,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lopa-ah | — | lopa-te-ah | — |
 | Ablative | lopa-pan | — | lopa-te-pan | — |
 | Ablative-Ergative | lopa-panin | — | lopa-te-panin | — |
-| Comitative | lopa-tawh | — | lopa-te-tawh | — |
-| Comitative-Ergative | lopa-tawhin | — | lopa-te-tawhin | — |
 
 ### teekpa "father.in.law" (teek-pa)
 
@@ -6421,8 +5625,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | teekpa-ah | — | teekpa-te-ah | — |
 | Ablative | teekpa-pan | — | teekpa-te-pan | — |
 | Ablative-Ergative | teekpa-panin | — | teekpa-te-panin | — |
-| Comitative | teekpa-tawh | — | teekpa-te-tawh | — |
-| Comitative-Ergative | teekpa-tawhin | — | teekpa-te-tawhin | — |
 
 ---
 
@@ -6440,8 +5642,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paazu-ah | — | paazu-te-ah | — |
 | Ablative | paazu-pan | — | paazu-te-pan | — |
 | Ablative-Ergative | paazu-panin | — | paazu-te-panin | — |
-| Comitative | paazu-tawh | — | paazu-te-tawh | — |
-| Comitative-Ergative | paazu-tawhin | — | paazu-te-tawhin | — |
 
 ---
 
@@ -6459,8 +5659,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lampai-ah | — | lampai-te-ah | — |
 | Ablative | lampai-pan | — | lampai-te-pan | — |
 | Ablative-Ergative | lampai-panin | — | lampai-te-panin | — |
-| Comitative | lampai-tawh | — | lampai-te-tawh | — |
-| Comitative-Ergative | lampai-tawhin | — | lampai-te-tawhin | — |
 
 ### paikhia "go.out" (pai-khia)
 
@@ -6472,8 +5670,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paikhia-ah | — | paikhia-te-ah | — |
 | Ablative | paikhia-pan | — | paikhia-te-pan | — |
 | Ablative-Ergative | paikhia-panin | — | paikhia-te-panin | — |
-| Comitative | paikhia-tawh | — | paikhia-te-tawh | — |
-| Comitative-Ergative | paikhia-tawhin | — | paikhia-te-tawhin | — |
 
 ### paikhiat "go.out" (pai-khiat)
 
@@ -6485,8 +5681,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paikhiat-ah | — | paikhiat-te-ah | — |
 | Ablative | paikhiat-pan | — | paikhiat-te-pan | — |
 | Ablative-Ergative | paikhiat-panin | — | paikhiat-te-panin | — |
-| Comitative | paikhiat-tawh | — | paikhiat-te-tawh | — |
-| Comitative-Ergative | paikhiat-tawhin | — | paikhiat-te-tawhin | — |
 
 ---
 
@@ -6504,8 +5698,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thangpaih-ah | — | thangpaih-te-ah | — |
 | Ablative | thangpaih-pan | — | thangpaih-te-pan | — |
 | Ablative-Ergative | thangpaih-panin | — | thangpaih-te-panin | — |
-| Comitative | thangpaih-tawh | — | thangpaih-te-tawh | — |
-| Comitative-Ergative | thangpaih-tawhin | — | thangpaih-te-tawhin | — |
 
 ---
 
@@ -6523,8 +5715,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pammaih-ah | — | pammaih-te-ah | — |
 | Ablative | pammaih-pan | — | pammaih-te-pan | — |
 | Ablative-Ergative | pammaih-panin | — | pammaih-te-panin | — |
-| Comitative | pammaih-tawh | — | pammaih-te-tawh | — |
-| Comitative-Ergative | pammaih-tawhin | — | pammaih-te-tawhin | — |
 
 ---
 
@@ -6542,8 +5732,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galpan-ah | — | galpan-te-ah | — |
 | Ablative | galpan-pan | — | galpan-te-pan | — |
 | Ablative-Ergative | galpan-panin | — | galpan-te-panin | — |
-| Comitative | galpan-tawh | — | galpan-te-tawh | — |
-| Comitative-Ergative | galpan-tawhin | — | galpan-te-tawhin | — |
 
 ### kipan "begin" (ki-pan)
 
@@ -6555,8 +5743,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipan-ah | — | kipan-te-ah | — |
 | Ablative | kipan-pan | — | kipan-te-pan | — |
 | Ablative-Ergative | kipan-panin | — | kipan-te-panin | — |
-| Comitative | kipan-tawh | — | kipan-te-tawh | — |
-| Comitative-Ergative | kipan-tawhin | — | kipan-te-tawhin | — |
 
 ### langpan "advocate" (lang-pan)
 
@@ -6568,8 +5754,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | langpan-ah | — | langpan-te-ah | — |
 | Ablative | langpan-pan | — | langpan-te-pan | — |
 | Ablative-Ergative | langpan-panin | — | langpan-te-panin | — |
-| Comitative | langpan-tawh | — | langpan-te-tawh | — |
-| Comitative-Ergative | langpan-tawhin | — | langpan-te-tawhin | — |
 
 ---
 
@@ -6587,8 +5771,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | langpang-ah | — | langpang-te-ah | — |
 | Ablative | langpang-pan | — | langpang-te-pan | — |
 | Ablative-Ergative | langpang-panin | — | langpang-te-panin | — |
-| Comitative | langpang-tawh | — | langpang-te-tawh | — |
-| Comitative-Ergative | langpang-tawhin | — | langpang-te-tawhin | — |
 
 ### naupang "child" (nau-pang)
 
@@ -6600,8 +5782,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | naupang-ah | — | naupang-te-ah | — |
 | Ablative | naupang-pan | — | naupang-te-pan | — |
 | Ablative-Ergative | naupang-panin | — | naupang-te-panin | — |
-| Comitative | naupang-tawh | — | naupang-te-tawh | — |
-| Comitative-Ergative | naupang-tawhin | — | naupang-te-tawhin | — |
 
 ---
 
@@ -6619,8 +5799,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipat-ah | — | kipat-te-ah | — |
 | Ablative | kipat-pan | — | kipat-te-pan | — |
 | Ablative-Ergative | kipat-panin | — | kipat-te-panin | — |
-| Comitative | kipat-tawh | — | kipat-te-tawh | — |
-| Comitative-Ergative | kipat-tawhin | — | kipat-te-tawhin | — |
 
 ---
 
@@ -6638,8 +5816,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paubaan-ah | — | paubaan-te-ah | — |
 | Ablative | paubaan-pan | — | paubaan-te-pan | — |
 | Ablative-Ergative | paubaan-panin | — | paubaan-te-panin | — |
-| Comitative | paubaan-tawh | — | paubaan-te-tawh | — |
-| Comitative-Ergative | paubaan-tawhin | — | paubaan-te-tawhin | — |
 
 ---
 
@@ -6657,8 +5833,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipawl-ah | — | kipawl-te-ah | — |
 | Ablative | kipawl-pan | — | kipawl-te-pan | — |
 | Ablative-Ergative | kipawl-panin | — | kipawl-te-panin | — |
-| Comitative | kipawl-tawh | — | kipawl-te-tawh | — |
-| Comitative-Ergative | kipawl-tawhin | — | kipawl-te-tawhin | — |
 
 ### pawlkhat "some" (pawl-khat)
 
@@ -6670,8 +5844,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pawlkhat-ah | Mar 6:40, Mar 6:40 | pawlkhat-te-ah | — |
 | Ablative | pawlkhat-pan | — | pawlkhat-te-pan | — |
 | Ablative-Ergative | pawlkhat-panin | — | pawlkhat-te-panin | — |
-| Comitative | pawlkhat-tawh | — | pawlkhat-te-tawh | — |
-| Comitative-Ergative | pawlkhat-tawhin | — | pawlkhat-te-tawhin | — |
 
 ### pawlpi "elders" (pawl-pi)
 
@@ -6683,8 +5855,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pawlpi-ah | — | pawlpi-te-ah | — |
 | Ablative | pawlpi-pan | — | pawlpi-te-pan | — |
 | Ablative-Ergative | pawlpi-panin | — | pawlpi-te-panin | — |
-| Comitative | pawlpi-tawh | — | pawlpi-te-tawh | — |
-| Comitative-Ergative | pawlpi-tawhin | — | pawlpi-te-tawhin | — |
 
 ---
 
@@ -6702,8 +5872,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hoihpen-ah | — | hoihpen-te-ah | — |
 | Ablative | hoihpen-pan | — | hoihpen-te-pan | — |
 | Ablative-Ergative | hoihpen-panin | — | hoihpen-te-panin | — |
-| Comitative | hoihpen-tawh | — | hoihpen-te-tawh | — |
-| Comitative-Ergative | hoihpen-tawhin | — | hoihpen-te-tawhin | — |
 
 ---
 
@@ -6721,8 +5889,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mangpha-ah | — | mangpha-te-ah | — |
 | Ablative | mangpha-pan | — | mangpha-te-pan | — |
 | Ablative-Ergative | mangpha-panin | — | mangpha-te-panin | — |
-| Comitative | mangpha-tawh | — | mangpha-te-tawh | — |
-| Comitative-Ergative | mangpha-tawhin | — | mangpha-te-tawhin | — |
 
 ---
 
@@ -6740,8 +5906,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hamphat-ah | — | hamphat-te-ah | — |
 | Ablative | hamphat-pan | — | hamphat-te-pan | — |
 | Ablative-Ergative | hamphat-panin | — | hamphat-te-panin | — |
-| Comitative | hamphat-tawh | — | hamphat-te-tawh | — |
-| Comitative-Ergative | hamphat-tawhin | — | hamphat-te-tawhin | — |
 
 ### manphat "worthy" (man-phat)
 
@@ -6753,8 +5917,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | manphat-ah | — | manphat-te-ah | — |
 | Ablative | manphat-pan | — | manphat-te-pan | — |
 | Ablative-Ergative | manphat-panin | — | manphat-te-panin | — |
-| Comitative | manphat-tawh | — | manphat-te-tawh | — |
-| Comitative-Ergative | manphat-tawhin | — | manphat-te-tawhin | — |
 
 ### minphat "fame" (min-phat)
 
@@ -6766,8 +5928,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minphat-ah | — | minphat-te-ah | — |
 | Ablative | minphat-pan | — | minphat-te-pan | — |
 | Ablative-Ergative | minphat-panin | — | minphat-te-panin | — |
-| Comitative | minphat-tawh | — | minphat-te-tawh | — |
-| Comitative-Ergative | minphat-tawhin | — | minphat-te-tawhin | — |
 
 ### phattuam "vow" (phat-tuam)
 
@@ -6779,8 +5939,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | phattuam-ah | — | phattuam-te-ah | — |
 | Ablative | phattuam-pan | — | phattuam-te-pan | — |
 | Ablative-Ergative | phattuam-panin | — | phattuam-te-panin | — |
-| Comitative | phattuam-tawh | — | phattuam-te-tawh | — |
-| Comitative-Ergative | phattuam-tawhin | — | phattuam-te-tawhin | — |
 
 ---
 
@@ -6798,8 +5956,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kiphawk-ah | — | kiphawk-te-ah | — |
 | Ablative | kiphawk-pan | — | kiphawk-te-pan | — |
 | Ablative-Ergative | kiphawk-panin | — | kiphawk-te-panin | — |
-| Comitative | kiphawk-tawh | — | kiphawk-te-tawh | — |
-| Comitative-Ergative | kiphawk-tawhin | — | kiphawk-te-tawhin | — |
 
 ---
 
@@ -6817,8 +5973,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuaphia-ah | — | khuaphia-te-ah | — |
 | Ablative | khuaphia-pan | — | khuaphia-te-pan | — |
 | Ablative-Ergative | khuaphia-panin | — | khuaphia-te-panin | — |
-| Comitative | khuaphia-tawh | — | khuaphia-te-tawh | — |
-| Comitative-Ergative | khuaphia-tawhin | — | khuaphia-te-tawhin | — |
 
 ---
 
@@ -6836,8 +5990,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | phulak-ah | — | phulak-te-ah | — |
 | Ablative | phulak-pan | — | phulak-te-pan | — |
 | Ablative-Ergative | phulak-panin | — | phulak-te-panin | — |
-| Comitative | phulak-tawh | — | phulak-te-tawh | — |
-| Comitative-Ergative | phulak-tawhin | — | phulak-te-tawhin | — |
 
 ---
 
@@ -6855,8 +6007,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuiphum-ah | — | tuiphum-te-ah | — |
 | Ablative | tuiphum-pan | — | tuiphum-te-pan | — |
 | Ablative-Ergative | tuiphum-panin | — | tuiphum-te-panin | — |
-| Comitative | tuiphum-tawh | — | tuiphum-te-tawh | — |
-| Comitative-Ergative | tuiphum-tawhin | — | tuiphum-te-tawhin | — |
 
 ---
 
@@ -6874,8 +6024,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawngpi-ah | — | bawngpi-te-ah | — |
 | Ablative | bawngpi-pan | — | bawngpi-te-pan | — |
 | Ablative-Ergative | bawngpi-panin | — | bawngpi-te-panin | — |
-| Comitative | bawngpi-tawh | — | bawngpi-te-tawh | — |
-| Comitative-Ergative | bawngpi-tawhin | — | bawngpi-te-tawhin | — |
 
 ### honpi "multitude" (hon-pi)
 
@@ -6887,8 +6035,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | honpi-ah | — | honpi-te-ah | — |
 | Ablative | honpi-pan | — | honpi-te-pan | — |
 | Ablative-Ergative | honpi-panin | — | honpi-te-panin | — |
-| Comitative | honpi-tawh | — | honpi-te-tawh | — |
-| Comitative-Ergative | honpi-tawhin | — | honpi-te-tawhin | — |
 
 ### kampi "mouth" (kam-pi)
 
@@ -6900,8 +6046,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kampi-ah | — | kampi-te-ah | — |
 | Ablative | kampi-pan | — | kampi-te-pan | — |
 | Ablative-Ergative | kampi-panin | — | kampi-te-panin | — |
-| Comitative | kampi-tawh | — | kampi-te-tawh | — |
-| Comitative-Ergative | kampi-tawhin | — | kampi-te-tawhin | — |
 
 ### khuampi "pillar-great" (khuam-pi)
 
@@ -6913,8 +6057,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuampi-ah | — | khuampi-te-ah | — |
 | Ablative | khuampi-pan | — | khuampi-te-pan | — |
 | Ablative-Ergative | khuampi-panin | — | khuampi-te-panin | — |
-| Comitative | khuampi-tawh | — | khuampi-te-tawh | — |
-| Comitative-Ergative | khuampi-tawhin | — | khuampi-te-tawhin | — |
 
 ### khuapi "city" (khua-pi)
 
@@ -6926,8 +6068,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuapi-ah | — | khuapi-te-ah | — |
 | Ablative | khuapi-pan | — | khuapi-te-pan | — |
 | Ablative-Ergative | khuapi-panin | — | khuapi-te-panin | — |
-| Comitative | khuapi-tawh | — | khuapi-te-tawh | — |
-| Comitative-Ergative | khuapi-tawhin | — | khuapi-te-tawhin | — |
 
 ### lampi "road" (lam-pi)
 
@@ -6939,8 +6079,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lampi-ah | — | lampi-te-ah | — |
 | Ablative | lampi-pan | — | lampi-te-pan | — |
 | Ablative-Ergative | lampi-panin | — | lampi-te-panin | — |
-| Comitative | lampi-tawh | — | lampi-te-tawh | — |
-| Comitative-Ergative | lampi-tawhin | — | lampi-te-tawhin | — |
 
 ### leipi "earthquake" (lei-pi)
 
@@ -6952,8 +6090,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leipi-ah | — | leipi-te-ah | — |
 | Ablative | leipi-pan | — | leipi-te-pan | — |
 | Ablative-Ergative | leipi-panin | — | leipi-te-panin | — |
-| Comitative | leipi-tawh | — | leipi-te-tawh | — |
-| Comitative-Ergative | leipi-tawhin | — | leipi-te-tawhin | — |
 
 ### ngalpi "great.wolf" (ngal-pi)
 
@@ -6965,8 +6101,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ngalpi-ah | — | ngalpi-te-ah | — |
 | Ablative | ngalpi-pan | — | ngalpi-te-pan | — |
 | Ablative-Ergative | ngalpi-panin | — | ngalpi-te-panin | — |
-| Comitative | ngalpi-tawh | — | ngalpi-te-tawh | — |
-| Comitative-Ergative | ngalpi-tawhin | — | ngalpi-te-tawhin | — |
 
 ### pawlpi "elders" (pawl-pi)
 
@@ -6978,8 +6112,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pawlpi-ah | — | pawlpi-te-ah | — |
 | Ablative | pawlpi-pan | — | pawlpi-te-pan | — |
 | Ablative-Ergative | pawlpi-panin | — | pawlpi-te-panin | — |
-| Comitative | pawlpi-tawh | — | pawlpi-te-tawh | — |
-| Comitative-Ergative | pawlpi-tawhin | — | pawlpi-te-tawhin | — |
 
 ### sangpi "high.wall" (sang-pi)
 
@@ -6991,8 +6123,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sangpi-ah | — | sangpi-te-ah | — |
 | Ablative | sangpi-pan | — | sangpi-te-pan | — |
 | Ablative-Ergative | sangpi-panin | — | sangpi-te-panin | — |
-| Comitative | sangpi-tawh | — | sangpi-te-tawh | — |
-| Comitative-Ergative | sangpi-tawhin | — | sangpi-te-tawhin | — |
 
 ### siampi "priest" (siam-pi)
 
@@ -7004,8 +6134,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siampi-ah | — | siampi-te-ah | — |
 | Ablative | siampi-pan | — | siampi-te-pan | — |
 | Ablative-Ergative | siampi-panin | — | siampi-te-panin | — |
-| Comitative | siampi-tawh | — | siampi-te-tawh | — |
-| Comitative-Ergative | siampi-tawhin | — | siampi-te-tawhin | — |
 
 ### tampi "many" (tam-pi)
 
@@ -7017,8 +6145,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tampi-ah | — | tampi-te-ah | — |
 | Ablative | tampi-pan | — | tampi-te-pan | — |
 | Ablative-Ergative | tampi-panin | — | tampi-te-panin | — |
-| Comitative | tampi-tawh | — | tampi-te-tawh | — |
-| Comitative-Ergative | tampi-tawhin | — | tampi-te-tawhin | — |
 
 ### tuipi "sea" (tui-pi)
 
@@ -7030,8 +6156,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuipi-ah | — | tuipi-te-ah | — |
 | Ablative | tuipi-pan | — | tuipi-te-pan | — |
 | Ablative-Ergative | tuipi-panin | — | tuipi-te-panin | — |
-| Comitative | tuipi-tawh | — | tuipi-te-tawh | — |
-| Comitative-Ergative | tuipi-tawhin | — | tuipi-te-tawhin | — |
 
 ### tuupi "ram" (tuu-pi)
 
@@ -7043,8 +6167,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuupi-ah | — | tuupi-te-ah | — |
 | Ablative | tuupi-pan | — | tuupi-te-pan | — |
 | Ablative-Ergative | tuupi-panin | — | tuupi-te-panin | — |
-| Comitative | tuupi-tawh | — | tuupi-te-tawh | — |
-| Comitative-Ergative | tuupi-tawhin | — | tuupi-te-tawhin | — |
 
 ---
 
@@ -7062,8 +6184,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipia-ah | — | kipia-te-ah | — |
 | Ablative | kipia-pan | — | kipia-te-pan | — |
 | Ablative-Ergative | kipia-panin | — | kipia-te-panin | — |
-| Comitative | kipia-tawh | — | kipia-te-tawh | — |
-| Comitative-Ergative | kipia-tawhin | — | kipia-te-tawhin | — |
 
 ---
 
@@ -7081,8 +6201,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | biakpiak-ah | — | biakpiak-te-ah | — |
 | Ablative | biakpiak-pan | — | biakpiak-te-pan | — |
 | Ablative-Ergative | biakpiak-panin | — | biakpiak-te-panin | — |
-| Comitative | biakpiak-tawh | — | biakpiak-te-tawh | — |
-| Comitative-Ergative | biakpiak-tawhin | — | biakpiak-te-tawhin | — |
 
 ---
 
@@ -7100,8 +6218,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | piankhiat-ah | — | piankhiat-te-ah | — |
 | Ablative | piankhiat-pan | — | piankhiat-te-pan | — |
 | Ablative-Ergative | piankhiat-panin | — | piankhiat-te-panin | — |
-| Comitative | piankhiat-tawh | — | piankhiat-te-tawh | — |
-| Comitative-Ergative | piankhiat-tawhin | — | piankhiat-te-tawhin | — |
 
 ---
 
@@ -7119,8 +6235,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hehpih-ah | — | hehpih-te-ah | — |
 | Ablative | hehpih-pan | — | hehpih-te-pan | — |
 | Ablative-Ergative | hehpih-panin | — | hehpih-te-panin | — |
-| Comitative | hehpih-tawh | — | hehpih-te-tawh | — |
-| Comitative-Ergative | hehpih-tawhin | — | hehpih-te-tawhin | — |
 
 ### hopih "counsel" (ho-pih)
 
@@ -7132,8 +6246,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hopih-ah | — | hopih-te-ah | — |
 | Ablative | hopih-pan | — | hopih-te-pan | — |
 | Ablative-Ergative | hopih-panin | — | hopih-te-panin | — |
-| Comitative | hopih-tawh | — | hopih-te-tawh | — |
-| Comitative-Ergative | hopih-tawhin | — | hopih-te-tawhin | — |
 
 ### mipih "companion" (mi-pih)
 
@@ -7145,8 +6257,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mipih-ah | — | mipih-te-ah | — |
 | Ablative | mipih-pan | — | mipih-te-pan | — |
 | Ablative-Ergative | mipih-panin | — | mipih-te-panin | — |
-| Comitative | mipih-tawh | — | mipih-te-tawh | — |
-| Comitative-Ergative | mipih-tawhin | — | mipih-te-tawhin | — |
 
 ### ompih "presence" (om-pih)
 
@@ -7158,8 +6268,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ompih-ah | — | ompih-te-ah | — |
 | Ablative | ompih-pan | — | ompih-te-pan | — |
 | Ablative-Ergative | ompih-panin | — | ompih-te-panin | — |
-| Comitative | ompih-tawh | — | ompih-te-tawh | — |
-| Comitative-Ergative | ompih-tawhin | — | ompih-te-tawhin | — |
 
 ---
 
@@ -7177,8 +6285,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nipikal-ah | — | nipikal-te-ah | — |
 | Ablative | nipikal-pan | — | nipikal-te-pan | — |
 | Ablative-Ergative | nipikal-panin | — | nipikal-te-panin | — |
-| Comitative | nipikal-tawh | — | nipikal-te-tawh | — |
-| Comitative-Ergative | nipikal-tawhin | — | nipikal-te-tawhin | — |
 
 ---
 
@@ -7196,8 +6302,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puanbek-ah | — | puanbek-te-ah | — |
 | Ablative | puanbek-pan | — | puanbek-te-pan | — |
 | Ablative-Ergative | puanbek-panin | — | puanbek-te-panin | — |
-| Comitative | puanbek-tawh | — | puanbek-te-tawh | — |
-| Comitative-Ergative | puanbek-tawhin | — | puanbek-te-tawhin | — |
 
 ### puanham "covering" (puan-ham)
 
@@ -7209,8 +6313,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puanham-ah | — | puanham-te-ah | — |
 | Ablative | puanham-pan | — | puanham-te-pan | — |
 | Ablative-Ergative | puanham-panin | — | puanham-te-panin | — |
-| Comitative | puanham-tawh | — | puanham-te-tawh | — |
-| Comitative-Ergative | puanham-tawhin | — | puanham-te-tawhin | — |
 
 ### puankhai "curtain" (puan-khai)
 
@@ -7222,8 +6324,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puankhai-ah | — | puankhai-te-ah | — |
 | Ablative | puankhai-pan | — | puankhai-te-pan | — |
 | Ablative-Ergative | puankhai-panin | — | puankhai-te-panin | — |
-| Comitative | puankhai-tawh | — | puankhai-te-tawh | — |
-| Comitative-Ergative | puankhai-tawhin | — | puankhai-te-tawhin | — |
 
 ### puanmong "garment.hem" (puan-mong)
 
@@ -7235,8 +6335,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puanmong-ah | — | puanmong-te-ah | — |
 | Ablative | puanmong-pan | — | puanmong-te-pan | — |
 | Ablative-Ergative | puanmong-panin | — | puanmong-te-panin | — |
-| Comitative | puanmong-tawh | — | puanmong-te-tawh | — |
-| Comitative-Ergative | puanmong-tawhin | — | puanmong-te-tawhin | — |
 
 ### puantual "robe" (puan-tual)
 
@@ -7248,8 +6346,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puantual-ah | — | puantual-te-ah | — |
 | Ablative | puantual-pan | — | puantual-te-pan | — |
 | Ablative-Ergative | puantual-panin | — | puantual-te-panin | — |
-| Comitative | puantual-tawh | — | puantual-te-tawh | — |
-| Comitative-Ergative | puantual-tawhin | — | puantual-te-tawhin | — |
 
 ---
 
@@ -7267,8 +6363,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | pulnat-ah | — | pulnat-te-ah | — |
 | Ablative | pulnat-pan | — | pulnat-te-pan | — |
 | Ablative-Ergative | pulnat-panin | — | pulnat-te-panin | — |
-| Comitative | pulnat-tawh | — | pulnat-te-tawh | — |
-| Comitative-Ergative | pulnat-tawhin | — | pulnat-te-tawhin | — |
 
 ---
 
@@ -7286,8 +6380,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | neihsa-ah | — | neihsa-te-ah | — |
 | Ablative | neihsa-pan | — | neihsa-te-pan | — |
 | Ablative-Ergative | neihsa-panin | — | neihsa-te-panin | — |
-| Comitative | neihsa-tawh | — | neihsa-te-tawh | — |
-| Comitative-Ergative | neihsa-tawhin | — | neihsa-te-tawhin | — |
 
 ### ngahsa "acquire" (ngah-sa)
 
@@ -7299,8 +6391,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ngahsa-ah | — | ngahsa-te-ah | — |
 | Ablative | ngahsa-pan | — | ngahsa-te-pan | — |
 | Ablative-Ergative | ngahsa-panin | — | ngahsa-te-panin | — |
-| Comitative | ngahsa-tawh | — | ngahsa-te-tawh | — |
-| Comitative-Ergative | ngahsa-tawhin | — | ngahsa-te-tawhin | — |
 
 ---
 
@@ -7318,8 +6408,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | saili-ah | — | saili-te-ah | — |
 | Ablative | saili-pan | — | saili-te-pan | — |
 | Ablative-Ergative | saili-panin | — | saili-te-panin | — |
-| Comitative | saili-tawh | — | saili-te-tawh | — |
-| Comitative-Ergative | saili-tawhin | — | saili-te-tawhin | — |
 
 ---
 
@@ -7337,8 +6425,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khialhsak-ah | — | khialhsak-te-ah | — |
 | Ablative | khialhsak-pan | — | khialhsak-te-pan | — |
 | Ablative-Ergative | khialhsak-panin | — | khialhsak-te-panin | — |
-| Comitative | khialhsak-tawh | — | khialhsak-te-tawh | — |
-| Comitative-Ergative | khialhsak-tawhin | — | khialhsak-te-tawhin | — |
 
 ### kipsak "confirm" (kip-sak)
 
@@ -7350,8 +6436,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kipsak-ah | — | kipsak-te-ah | — |
 | Ablative | kipsak-pan | — | kipsak-te-pan | — |
 | Ablative-Ergative | kipsak-panin | — | kipsak-te-panin | — |
-| Comitative | kipsak-tawh | — | kipsak-te-tawh | — |
-| Comitative-Ergative | kipsak-tawhin | — | kipsak-te-tawhin | — |
 
 ### lasak "redeem" (la-sak)
 
@@ -7363,8 +6447,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lasak-ah | — | lasak-te-ah | — |
 | Ablative | lasak-pan | — | lasak-te-pan | — |
 | Ablative-Ergative | lasak-panin | — | lasak-te-panin | — |
-| Comitative | lasak-tawh | — | lasak-te-tawh | — |
-| Comitative-Ergative | lasak-tawhin | — | lasak-te-tawhin | — |
 
 ### maisak "appearance" (mai-sak)
 
@@ -7376,8 +6458,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maisak-ah | — | maisak-te-ah | — |
 | Ablative | maisak-pan | — | maisak-te-pan | — |
 | Ablative-Ergative | maisak-panin | — | maisak-te-panin | — |
-| Comitative | maisak-tawh | — | maisak-te-tawh | — |
-| Comitative-Ergative | maisak-tawhin | — | maisak-te-tawhin | — |
 
 ### mawhsak "cause.sin" (mawh-sak)
 
@@ -7389,8 +6469,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mawhsak-ah | — | mawhsak-te-ah | — |
 | Ablative | mawhsak-pan | — | mawhsak-te-pan | — |
 | Ablative-Ergative | mawhsak-panin | — | mawhsak-te-panin | — |
-| Comitative | mawhsak-tawh | — | mawhsak-te-tawh | — |
-| Comitative-Ergative | mawhsak-tawhin | — | mawhsak-te-tawhin | — |
 
 ### thahatsak "strengthen" (thahat-sak)
 
@@ -7402,8 +6480,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thahatsak-ah | — | thahatsak-te-ah | — |
 | Ablative | thahatsak-pan | — | thahatsak-te-pan | — |
 | Ablative-Ergative | thahatsak-panin | — | thahatsak-te-panin | — |
-| Comitative | thahatsak-tawh | — | thahatsak-te-tawh | — |
-| Comitative-Ergative | thahatsak-tawhin | — | thahatsak-te-tawhin | — |
 
 ### zaksak "testify" (zak-sak)
 
@@ -7415,8 +6491,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zaksak-ah | — | zaksak-te-ah | — |
 | Ablative | zaksak-pan | — | zaksak-te-pan | — |
 | Ablative-Ergative | zaksak-panin | — | zaksak-te-panin | — |
-| Comitative | zaksak-tawh | — | zaksak-te-tawh | — |
-| Comitative-Ergative | zaksak-tawhin | — | zaksak-te-tawhin | — |
 
 ---
 
@@ -7434,8 +6508,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | salsuah-ah | — | salsuah-te-ah | — |
 | Ablative | salsuah-pan | — | salsuah-te-pan | — |
 | Ablative-Ergative | salsuah-panin | — | salsuah-te-panin | — |
-| Comitative | salsuah-tawh | — | salsuah-te-tawh | — |
-| Comitative-Ergative | salsuah-tawhin | — | salsuah-te-tawhin | — |
 
 ### saltang "captive" (sal-tang)
 
@@ -7447,8 +6519,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | saltang-ah | — | saltang-te-ah | — |
 | Ablative | saltang-pan | — | saltang-te-pan | — |
 | Ablative-Ergative | saltang-panin | — | saltang-te-panin | — |
-| Comitative | saltang-tawh | — | saltang-te-tawh | — |
-| Comitative-Ergative | saltang-tawhin | — | saltang-te-tawhin | — |
 
 ---
 
@@ -7466,8 +6536,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sangpi-ah | — | sangpi-te-ah | — |
 | Ablative | sangpi-pan | — | sangpi-te-pan | — |
 | Ablative-Ergative | sangpi-panin | — | sangpi-te-panin | — |
-| Comitative | sangpi-tawh | — | sangpi-te-tawh | — |
-| Comitative-Ergative | sangpi-tawhin | — | sangpi-te-tawhin | — |
 
 ### zingsang "early" (zing-sang)
 
@@ -7479,8 +6547,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zingsang-ah | — | zingsang-te-ah | — |
 | Ablative | zingsang-pan | — | zingsang-te-pan | — |
 | Ablative-Ergative | zingsang-panin | — | zingsang-te-panin | — |
-| Comitative | zingsang-tawh | — | zingsang-te-tawh | — |
-| Comitative-Ergative | zingsang-tawhin | — | zingsang-te-tawhin | — |
 
 ---
 
@@ -7498,8 +6564,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisap-ah | — | kisap-te-ah | — |
 | Ablative | kisap-pan | — | kisap-te-pan | — |
 | Ablative-Ergative | kisap-panin | — | kisap-te-panin | — |
-| Comitative | kisap-tawh | — | kisap-te-tawh | — |
-| Comitative-Ergative | kisap-tawhin | — | kisap-te-tawhin | — |
 
 ---
 
@@ -7517,8 +6581,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | haksat-ah | — | haksat-te-ah | — |
 | Ablative | haksat-pan | — | haksat-te-pan | — |
 | Ablative-Ergative | haksat-panin | — | haksat-te-panin | — |
-| Comitative | haksat-tawh | — | haksat-te-tawh | — |
-| Comitative-Ergative | haksat-tawhin | — | haksat-te-tawhin | — |
 
 ### kisat "strike" (ki-sat)
 
@@ -7530,8 +6592,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisat-ah | — | kisat-te-ah | — |
 | Ablative | kisat-pan | — | kisat-te-pan | — |
 | Ablative-Ergative | kisat-panin | — | kisat-te-panin | — |
-| Comitative | kisat-tawh | — | kisat-te-tawh | — |
-| Comitative-Ergative | kisat-tawhin | — | kisat-te-tawhin | — |
 
 ### tatsat "continual" (tat-sat)
 
@@ -7543,8 +6603,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tatsat-ah | — | tatsat-te-ah | — |
 | Ablative | tatsat-pan | — | tatsat-te-pan | — |
 | Ablative-Ergative | tatsat-panin | — | tatsat-te-panin | — |
-| Comitative | tatsat-tawh | — | tatsat-te-tawh | — |
-| Comitative-Ergative | tatsat-tawhin | — | tatsat-te-tawhin | — |
 
 ---
 
@@ -7562,8 +6620,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sawmli-ah | — | sawmli-te-ah | — |
 | Ablative | sawmli-pan | — | sawmli-te-pan | — |
 | Ablative-Ergative | sawmli-panin | — | sawmli-te-panin | — |
-| Comitative | sawmli-tawh | — | sawmli-te-tawh | — |
-| Comitative-Ergative | sawmli-tawhin | — | sawmli-te-tawhin | — |
 
 ### sawmnih "twelve" (sawm-nih)
 
@@ -7575,8 +6631,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sawmnih-ah | — | sawmnih-te-ah | — |
 | Ablative | sawmnih-pan | — | sawmnih-te-pan | — |
 | Ablative-Ergative | sawmnih-panin | — | sawmnih-te-panin | — |
-| Comitative | sawmnih-tawh | — | sawmnih-te-tawh | — |
-| Comitative-Ergative | sawmnih-tawhin | — | sawmnih-te-tawhin | — |
 
 ---
 
@@ -7594,8 +6648,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisel-ah | — | kisel-te-ah | — |
 | Ablative | kisel-pan | — | kisel-te-pan | — |
 | Ablative-Ergative | kisel-panin | — | kisel-te-panin | — |
-| Comitative | kisel-tawh | — | kisel-te-tawh | — |
-| Comitative-Ergative | kisel-tawhin | — | kisel-te-tawhin | — |
 
 ---
 
@@ -7613,8 +6665,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kamsia-ah | — | kamsia-te-ah | — |
 | Ablative | kamsia-pan | — | kamsia-te-pan | — |
 | Ablative-Ergative | kamsia-panin | — | kamsia-te-panin | — |
-| Comitative | kamsia-tawh | — | kamsia-te-tawh | — |
-| Comitative-Ergative | kamsia-tawhin | — | kamsia-te-tawhin | — |
 
 ### minsia "dishonor" (min-sia)
 
@@ -7626,8 +6676,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minsia-ah | — | minsia-te-ah | — |
 | Ablative | minsia-pan | — | minsia-te-pan | — |
 | Ablative-Ergative | minsia-panin | — | minsia-te-panin | — |
-| Comitative | minsia-tawh | — | minsia-te-tawh | — |
-| Comitative-Ergative | minsia-tawhin | — | minsia-te-tawhin | — |
 
 ---
 
@@ -7645,8 +6693,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siahdong-ah | — | siahdong-te-ah | — |
 | Ablative | siahdong-pan | — | siahdong-te-pan | — |
 | Ablative-Ergative | siahdong-panin | — | siahdong-te-panin | — |
-| Comitative | siahdong-tawh | — | siahdong-te-tawh | — |
-| Comitative-Ergative | siahdong-tawhin | — | siahdong-te-tawhin | — |
 
 ---
 
@@ -7664,8 +6710,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khutsiam-ah | — | khutsiam-te-ah | — |
 | Ablative | khutsiam-pan | — | khutsiam-te-pan | — |
 | Ablative-Ergative | khutsiam-panin | — | khutsiam-te-panin | — |
-| Comitative | khutsiam-tawh | — | khutsiam-te-tawh | — |
-| Comitative-Ergative | khutsiam-tawhin | — | khutsiam-te-tawhin | — |
 
 ### siampi "priest" (siam-pi)
 
@@ -7677,8 +6721,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siampi-ah | — | siampi-te-ah | — |
 | Ablative | siampi-pan | — | siampi-te-pan | — |
 | Ablative-Ergative | siampi-panin | — | siampi-te-panin | — |
-| Comitative | siampi-tawh | — | siampi-te-tawh | — |
-| Comitative-Ergative | siampi-tawhin | — | siampi-te-tawhin | — |
 
 ---
 
@@ -7696,8 +6738,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siansuah-ah | — | siansuah-te-ah | — |
 | Ablative | siansuah-pan | — | siansuah-te-pan | — |
 | Ablative-Ergative | siansuah-panin | — | siansuah-te-panin | — |
-| Comitative | siansuah-tawh | — | siansuah-te-tawh | — |
-| Comitative-Ergative | siansuah-tawhin | — | siansuah-te-tawhin | — |
 
 ---
 
@@ -7715,8 +6755,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisiansuah-ah | — | kisiansuah-te-ah | — |
 | Ablative | kisiansuah-pan | — | kisiansuah-te-pan | — |
 | Ablative-Ergative | kisiansuah-panin | — | kisiansuah-te-panin | — |
-| Comitative | kisiansuah-tawh | — | kisiansuah-te-tawh | — |
-| Comitative-Ergative | kisiansuah-tawhin | — | kisiansuah-te-tawhin | — |
 
 ---
 
@@ -7734,8 +6772,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hamsiat-ah | — | hamsiat-te-ah | — |
 | Ablative | hamsiat-pan | — | hamsiat-te-pan | — |
 | Ablative-Ergative | hamsiat-panin | — | hamsiat-te-panin | — |
-| Comitative | hamsiat-tawh | — | hamsiat-te-tawh | — |
-| Comitative-Ergative | hamsiat-tawhin | — | hamsiat-te-tawhin | — |
 
 ### maisiat "oppose" (mai-siat)
 
@@ -7747,8 +6783,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maisiat-ah | — | maisiat-te-ah | — |
 | Ablative | maisiat-pan | — | maisiat-te-pan | — |
 | Ablative-Ergative | maisiat-panin | — | maisiat-te-panin | — |
-| Comitative | maisiat-tawh | — | maisiat-te-tawh | — |
-| Comitative-Ergative | maisiat-tawhin | — | maisiat-te-tawhin | — |
 
 ### siatna "destruction" (siat-na)
 
@@ -7760,8 +6794,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siatna-ah | — | siatna-te-ah | — |
 | Ablative | siatna-pan | — | siatna-te-pan | — |
 | Ablative-Ergative | siatna-panin | — | siatna-te-panin | — |
-| Comitative | siatna-tawh | — | siatna-te-tawh | — |
-| Comitative-Ergative | siatna-tawhin | — | siatna-te-tawhin | — |
 
 ### tatsiat "destroy" (tat-siat)
 
@@ -7773,8 +6805,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tatsiat-ah | — | tatsiat-te-ah | — |
 | Ablative | tatsiat-pan | — | tatsiat-te-pan | — |
 | Ablative-Ergative | tatsiat-panin | — | tatsiat-te-panin | — |
-| Comitative | tatsiat-tawh | — | tatsiat-te-tawh | — |
-| Comitative-Ergative | tatsiat-tawhin | — | tatsiat-te-tawhin | — |
 
 ---
 
@@ -7792,8 +6822,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sihinn-ah | — | sihinn-te-ah | — |
 | Ablative | sihinn-pan | — | sihinn-te-pan | — |
 | Ablative-Ergative | sihinn-panin | — | sihinn-te-panin | — |
-| Comitative | sihinn-tawh | — | sihinn-te-tawh | — |
-| Comitative-Ergative | sihinn-tawhin | — | sihinn-te-tawhin | — |
 
 ### sihna "death" (sih-na)
 
@@ -7805,8 +6833,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sihna-ah | — | sihna-te-ah | — |
 | Ablative | sihna-pan | — | sihna-te-pan | — |
 | Ablative-Ergative | sihna-panin | — | sihna-te-panin | — |
-| Comitative | sihna-tawh | — | sihna-te-tawh | — |
-| Comitative-Ergative | sihna-tawhin | — | sihna-te-tawhin | — |
 
 ---
 
@@ -7824,8 +6850,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisik-ah | — | kisik-te-ah | — |
 | Ablative | kisik-pan | — | kisik-te-pan | — |
 | Ablative-Ergative | kisik-panin | — | kisik-te-panin | — |
-| Comitative | kisik-tawh | — | kisik-te-tawh | — |
-| Comitative-Ergative | kisik-tawhin | — | kisik-te-tawhin | — |
 
 ### sikkawi "fishhook" (sik-kawi)
 
@@ -7837,8 +6861,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sikkawi-ah | — | sikkawi-te-ah | — |
 | Ablative | sikkawi-pan | — | sikkawi-te-pan | — |
 | Ablative-Ergative | sikkawi-panin | — | sikkawi-te-panin | — |
-| Comitative | sikkawi-tawh | — | sikkawi-te-tawh | — |
-| Comitative-Ergative | sikkawi-tawhin | — | sikkawi-te-tawhin | — |
 
 ### siklen "network" (sik-len)
 
@@ -7850,8 +6872,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siklen-ah | — | siklen-te-ah | — |
 | Ablative | siklen-pan | — | siklen-te-pan | — |
 | Ablative-Ergative | siklen-panin | — | siklen-te-panin | — |
-| Comitative | siklen-tawh | — | siklen-te-tawh | — |
-| Comitative-Ergative | siklen-tawhin | — | siklen-te-tawhin | — |
 
 ---
 
@@ -7869,8 +6889,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisil-ah | — | kisil-te-ah | — |
 | Ablative | kisil-pan | — | kisil-te-pan | — |
 | Ablative-Ergative | kisil-panin | — | kisil-te-panin | — |
-| Comitative | kisil-tawh | — | kisil-te-tawh | — |
-| Comitative-Ergative | kisil-tawhin | — | kisil-te-tawhin | — |
 
 ---
 
@@ -7888,8 +6906,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | galsim-ah | — | galsim-te-ah | — |
 | Ablative | galsim-pan | — | galsim-te-pan | — |
 | Ablative-Ergative | galsim-panin | — | galsim-te-panin | — |
-| Comitative | galsim-tawh | — | galsim-te-tawh | — |
-| Comitative-Ergative | galsim-tawhin | — | galsim-te-tawhin | — |
 
 ### khangsim "genealogy" (khang-sim)
 
@@ -7901,8 +6917,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khangsim-ah | — | khangsim-te-ah | — |
 | Ablative | khangsim-pan | — | khangsim-te-pan | — |
 | Ablative-Ergative | khangsim-panin | — | khangsim-te-panin | — |
-| Comitative | khangsim-tawh | — | khangsim-te-tawh | — |
-| Comitative-Ergative | khangsim-tawhin | — | khangsim-te-tawhin | — |
 
 ### khasim "new.moon" (kha-sim)
 
@@ -7914,8 +6928,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khasim-ah | — | khasim-te-ah | — |
 | Ablative | khasim-pan | — | khasim-te-pan | — |
 | Ablative-Ergative | khasim-panin | — | khasim-te-panin | — |
-| Comitative | khasim-tawh | — | khasim-te-tawh | — |
-| Comitative-Ergative | khasim-tawhin | — | khasim-te-tawhin | — |
 
 ### lungsim "mind" (lung-sim)
 
@@ -7927,8 +6939,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungsim-ah | Gen 18:16, Gen 43:30, Deu 24:15 (+2) | lungsim-te-ah | — |
 | Ablative | lungsim-pan | — | lungsim-te-pan | — |
 | Ablative-Ergative | lungsim-panin | — | lungsim-te-panin | — |
-| Comitative | lungsim-tawh | — | lungsim-te-tawh | — |
-| Comitative-Ergative | lungsim-tawhin | — | lungsim-te-tawhin | — |
 
 ---
 
@@ -7946,8 +6956,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sintuam-ah | — | sintuam-te-ah | — |
 | Ablative | sintuam-pan | — | sintuam-te-pan | — |
 | Ablative-Ergative | sintuam-panin | — | sintuam-te-panin | — |
-| Comitative | sintuam-tawh | — | sintuam-te-tawh | — |
-| Comitative-Ergative | sintuam-tawhin | — | sintuam-te-tawhin | — |
 
 ---
 
@@ -7965,8 +6973,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singgah-ah | — | singgah-te-ah | — |
 | Ablative | singgah-pan | — | singgah-te-pan | — |
 | Ablative-Ergative | singgah-panin | — | singgah-te-panin | — |
-| Comitative | singgah-tawh | — | singgah-te-tawh | — |
-| Comitative-Ergative | singgah-tawhin | — | singgah-te-tawhin | — |
 
 ### singhiang "branch" (sing-hiang)
 
@@ -7978,8 +6984,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singhiang-ah | — | singhiang-te-ah | — |
 | Ablative | singhiang-pan | — | singhiang-te-pan | — |
 | Ablative-Ergative | singhiang-panin | — | singhiang-te-panin | — |
-| Comitative | singhiang-tawh | — | singhiang-te-tawh | — |
-| Comitative-Ergative | singhiang-tawhin | — | singhiang-te-tawhin | — |
 
 ### singkung "tree" (sing-kung)
 
@@ -7991,8 +6995,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singkung-ah | — | singkung-te-ah | — |
 | Ablative | singkung-pan | — | singkung-te-pan | — |
 | Ablative-Ergative | singkung-panin | — | singkung-te-panin | — |
-| Comitative | singkung-tawh | — | singkung-te-tawh | — |
-| Comitative-Ergative | singkung-tawhin | — | singkung-te-tawhin | — |
 
 ### singluang "beam" (sing-luang)
 
@@ -8004,8 +7006,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singluang-ah | — | singluang-te-ah | — |
 | Ablative | singluang-pan | — | singluang-te-pan | — |
 | Ablative-Ergative | singluang-panin | — | singluang-te-panin | — |
-| Comitative | singluang-tawh | — | singluang-te-tawh | — |
-| Comitative-Ergative | singluang-tawhin | — | singluang-te-tawhin | — |
 
 ### singnai "bdellium" (sing-nai)
 
@@ -8017,8 +7017,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singnai-ah | — | singnai-te-ah | — |
 | Ablative | singnai-pan | — | singnai-te-pan | — |
 | Ablative-Ergative | singnai-panin | — | singnai-te-panin | — |
-| Comitative | singnai-tawh | — | singnai-te-tawh | — |
-| Comitative-Ergative | singnai-tawhin | — | singnai-te-tawhin | — |
 
 ### singniim "green.tree" (sing-niim)
 
@@ -8030,8 +7028,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singniim-ah | — | singniim-te-ah | — |
 | Ablative | singniim-pan | — | singniim-te-pan | — |
 | Ablative-Ergative | singniim-panin | — | singniim-te-panin | — |
-| Comitative | singniim-tawh | — | singniim-te-tawh | — |
-| Comitative-Ergative | singniim-tawhin | — | singniim-te-tawhin | — |
 
 ### singzung "root" (sing-zung)
 
@@ -8043,8 +7039,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singzung-ah | — | singzung-te-ah | — |
 | Ablative | singzung-pan | — | singzung-te-pan | — |
 | Ablative-Ergative | singzung-panin | — | singzung-te-panin | — |
-| Comitative | singzung-tawh | — | singzung-te-tawh | — |
-| Comitative-Ergative | singzung-tawhin | — | singzung-te-tawhin | — |
 
 ---
 
@@ -8062,8 +7056,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nisuah-ah | — | nisuah-te-ah | — |
 | Ablative | nisuah-pan | — | nisuah-te-pan | — |
 | Ablative-Ergative | nisuah-panin | — | nisuah-te-panin | — |
-| Comitative | nisuah-tawh | — | nisuah-te-tawh | — |
-| Comitative-Ergative | nisuah-tawhin | — | nisuah-te-tawhin | — |
 
 ### salsuah "slavery" (sal-suah)
 
@@ -8075,8 +7067,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | salsuah-ah | — | salsuah-te-ah | — |
 | Ablative | salsuah-pan | — | salsuah-te-pan | — |
 | Ablative-Ergative | salsuah-panin | — | salsuah-te-panin | — |
-| Comitative | salsuah-tawh | — | salsuah-te-tawh | — |
-| Comitative-Ergative | salsuah-tawhin | — | salsuah-te-tawhin | — |
 
 ### siansuah "sanctify" (sian-suah)
 
@@ -8088,8 +7078,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | siansuah-ah | — | siansuah-te-ah | — |
 | Ablative | siansuah-pan | — | siansuah-te-pan | — |
 | Ablative-Ergative | siansuah-panin | — | siansuah-te-panin | — |
-| Comitative | siansuah-tawh | — | siansuah-te-tawh | — |
-| Comitative-Ergative | siansuah-tawhin | — | siansuah-te-tawhin | — |
 
 ---
 
@@ -8107,8 +7095,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kisuan-ah | — | kisuan-te-ah | — |
 | Ablative | kisuan-pan | — | kisuan-te-pan | — |
 | Ablative-Ergative | kisuan-panin | — | kisuan-te-panin | — |
-| Comitative | kisuan-tawh | — | kisuan-te-tawh | — |
-| Comitative-Ergative | kisuan-tawhin | — | kisuan-te-tawhin | — |
 
 ---
 
@@ -8126,8 +7112,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | suanghawm-ah | Jdg 15:11 | suanghawm-te-ah | — |
 | Ablative | suanghawm-pan | — | suanghawm-te-pan | — |
 | Ablative-Ergative | suanghawm-panin | — | suanghawm-te-panin | — |
-| Comitative | suanghawm-tawh | — | suanghawm-te-tawh | — |
-| Comitative-Ergative | suanghawm-tawhin | — | suanghawm-te-tawhin | — |
 
 ### suangkhuam "stone-pillar" (suang-khuam)
 
@@ -8139,8 +7123,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | suangkhuam-ah | — | suangkhuam-te-ah | — |
 | Ablative | suangkhuam-pan | — | suangkhuam-te-pan | — |
 | Ablative-Ergative | suangkhuam-panin | — | suangkhuam-te-panin | — |
-| Comitative | suangkhuam-tawh | — | suangkhuam-te-tawh | — |
-| Comitative-Ergative | suangkhuam-tawhin | — | suangkhuam-te-tawhin | — |
 
 ### tawisuang "weights" (tawi-suang)
 
@@ -8152,8 +7134,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawisuang-ah | — | tawisuang-te-ah | — |
 | Ablative | tawisuang-pan | — | tawisuang-te-pan | — |
 | Ablative-Ergative | tawisuang-panin | — | tawisuang-te-panin | — |
-| Comitative | tawisuang-tawh | — | tawisuang-te-tawh | — |
-| Comitative-Ergative | tawisuang-tawhin | — | tawisuang-te-tawhin | — |
 
 ---
 
@@ -8171,8 +7151,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sulzuih-ah | — | sulzuih-te-ah | — |
 | Ablative | sulzuih-pan | — | sulzuih-te-pan | — |
 | Ablative-Ergative | sulzuih-panin | — | sulzuih-te-panin | — |
-| Comitative | sulzuih-tawh | — | sulzuih-te-tawh | — |
-| Comitative-Ergative | sulzuih-tawhin | — | sulzuih-te-tawhin | — |
 
 ---
 
@@ -8190,8 +7168,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khansung-ah | — | khansung-te-ah | — |
 | Ablative | khansung-pan | — | khansung-te-pan | — |
 | Ablative-Ergative | khansung-panin | — | khansung-te-panin | — |
-| Comitative | khansung-tawh | — | khansung-te-tawh | — |
-| Comitative-Ergative | khansung-tawhin | — | khansung-te-tawhin | — |
 
 ### sungnu "mother.in.law" (sung-nu)
 
@@ -8203,8 +7179,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sungnu-ah | — | sungnu-te-ah | — |
 | Ablative | sungnu-pan | — | sungnu-te-pan | — |
 | Ablative-Ergative | sungnu-panin | — | sungnu-te-panin | — |
-| Comitative | sungnu-tawh | — | sungnu-te-tawh | — |
-| Comitative-Ergative | sungnu-tawhin | — | sungnu-te-tawhin | — |
 
 ---
 
@@ -8222,8 +7196,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ngaihsut-ah | — | ngaihsut-te-ah | — |
 | Ablative | ngaihsut-pan | — | ngaihsut-te-pan | — |
 | Ablative-Ergative | ngaihsut-panin | — | ngaihsut-te-panin | — |
-| Comitative | ngaihsut-tawh | — | ngaihsut-te-tawh | — |
-| Comitative-Ergative | ngaihsut-tawhin | — | ngaihsut-te-tawhin | — |
 
 ---
 
@@ -8241,8 +7213,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | taanggam-ah | — | taanggam-te-ah | — |
 | Ablative | taanggam-pan | — | taanggam-te-pan | — |
 | Ablative-Ergative | taanggam-panin | — | taanggam-te-panin | — |
-| Comitative | taanggam-tawh | — | taanggam-te-tawh | — |
-| Comitative-Ergative | taanggam-tawhin | — | taanggam-te-tawhin | — |
 
 ### vangtaang "glory" (vang-taang)
 
@@ -8254,8 +7224,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vangtaang-ah | — | vangtaang-te-ah | — |
 | Ablative | vangtaang-pan | — | vangtaang-te-pan | — |
 | Ablative-Ergative | vangtaang-panin | — | vangtaang-te-panin | — |
-| Comitative | vangtaang-tawh | — | vangtaang-te-tawh | — |
-| Comitative-Ergative | vangtaang-tawhin | — | vangtaang-te-tawhin | — |
 
 ---
 
@@ -8273,8 +7241,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maitai-ah | — | maitai-te-ah | — |
 | Ablative | maitai-pan | — | maitai-te-pan | — |
 | Ablative-Ergative | maitai-panin | — | maitai-te-panin | — |
-| Comitative | maitai-tawh | — | maitai-te-tawh | — |
-| Comitative-Ergative | maitai-tawhin | — | maitai-te-tawhin | — |
 
 ---
 
@@ -8292,8 +7258,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | cihtak-ah | — | cihtak-te-ah | — |
 | Ablative | cihtak-pan | — | cihtak-te-pan | — |
 | Ablative-Ergative | cihtak-panin | — | cihtak-te-panin | — |
-| Comitative | cihtak-tawh | — | cihtak-te-tawh | — |
-| Comitative-Ergative | cihtak-tawhin | — | cihtak-te-tawhin | — |
 
 ### hoihtak "good.truly" (hoih-tak)
 
@@ -8305,8 +7269,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | hoihtak-ah | — | hoihtak-te-ah | — |
 | Ablative | hoihtak-pan | — | hoihtak-te-pan | — |
 | Ablative-Ergative | hoihtak-panin | — | hoihtak-te-panin | — |
-| Comitative | hoihtak-tawh | — | hoihtak-te-tawh | — |
-| Comitative-Ergative | hoihtak-tawhin | — | hoihtak-te-tawhin | — |
 
 ### laitak "exact.midst" (lai-tak)
 
@@ -8318,8 +7280,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | laitak-ah | Num 32:6, Jer 3:2, Jer 22:26 (+2) | laitak-te-ah | — |
 | Ablative | laitak-pan | — | laitak-te-pan | — |
 | Ablative-Ergative | laitak-panin | — | laitak-te-panin | — |
-| Comitative | laitak-tawh | — | laitak-te-tawh | — |
-| Comitative-Ergative | laitak-tawhin | — | laitak-te-tawhin | — |
 
 ### limtak "sign.true" (lim-tak)
 
@@ -8331,8 +7291,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | limtak-ah | — | limtak-te-ah | — |
 | Ablative | limtak-pan | — | limtak-te-pan | — |
 | Ablative-Ergative | limtak-panin | — | limtak-te-panin | — |
-| Comitative | limtak-tawh | — | limtak-te-tawh | — |
-| Comitative-Ergative | limtak-tawhin | — | limtak-te-tawhin | — |
 
 ### thutak "truth" (thu-tak)
 
@@ -8344,8 +7302,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutak-ah | — | thutak-te-ah | — |
 | Ablative | thutak-pan | — | thutak-te-pan | — |
 | Ablative-Ergative | thutak-panin | — | thutak-te-panin | — |
-| Comitative | thutak-tawh | — | thutak-te-tawh | — |
-| Comitative-Ergative | thutak-tawhin | — | thutak-te-tawhin | — |
 
 ---
 
@@ -8363,8 +7319,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | bawngtal-ah | — | bawngtal-te-ah | — |
 | Ablative | bawngtal-pan | — | bawngtal-te-pan | — |
 | Ablative-Ergative | bawngtal-panin | — | bawngtal-te-panin | — |
-| Comitative | bawngtal-tawh | — | bawngtal-te-tawh | — |
-| Comitative-Ergative | bawngtal-tawhin | — | bawngtal-te-tawhin | — |
 
 ### kultal "pitch" (kul-tal)
 
@@ -8376,8 +7330,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kultal-ah | — | kultal-te-ah | — |
 | Ablative | kultal-pan | — | kultal-te-pan | — |
 | Ablative-Ergative | kultal-panin | — | kultal-te-panin | — |
-| Comitative | kultal-tawh | — | kultal-te-tawh | — |
-| Comitative-Ergative | kultal-tawhin | — | kultal-te-tawhin | — |
 
 ---
 
@@ -8395,8 +7347,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tampi-ah | — | tampi-te-ah | — |
 | Ablative | tampi-pan | — | tampi-te-pan | — |
 | Ablative-Ergative | tampi-panin | — | tampi-te-panin | — |
-| Comitative | tampi-tawh | — | tampi-te-tawh | — |
-| Comitative-Ergative | tampi-tawhin | — | tampi-te-tawhin | — |
 
 ---
 
@@ -8414,8 +7364,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutan-ah | — | thutan-te-ah | — |
 | Ablative | thutan-pan | — | thutan-te-pan | — |
 | Ablative-Ergative | thutan-panin | — | thutan-te-panin | — |
-| Comitative | thutan-tawh | — | thutan-te-tawh | — |
-| Comitative-Ergative | thutan-tawhin | — | thutan-te-tawhin | — |
 
 ---
 
@@ -8433,8 +7381,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leitang-ah | Gen 10:5, Gen 16:3, Gen 21:32 (+2) | leitang-te-ah | — |
 | Ablative | leitang-pan | — | leitang-te-pan | — |
 | Ablative-Ergative | leitang-panin | — | leitang-te-panin | — |
-| Comitative | leitang-tawh | — | leitang-te-tawh | — |
-| Comitative-Ergative | leitang-tawhin | — | leitang-te-tawhin | — |
 
 ### lungtang "courage" (lung-tang)
 
@@ -8446,8 +7392,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungtang-ah | Psa 45:5, Psa 143:4 | lungtang-te-ah | — |
 | Ablative | lungtang-pan | — | lungtang-te-pan | — |
 | Ablative-Ergative | lungtang-panin | — | lungtang-te-panin | — |
-| Comitative | lungtang-tawh | — | lungtang-te-tawh | — |
-| Comitative-Ergative | lungtang-tawhin | — | lungtang-te-tawhin | — |
 
 ### saltang "captive" (sal-tang)
 
@@ -8459,8 +7403,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | saltang-ah | — | saltang-te-ah | — |
 | Ablative | saltang-pan | — | saltang-te-pan | — |
 | Ablative-Ergative | saltang-panin | — | saltang-te-panin | — |
-| Comitative | saltang-tawh | — | saltang-te-tawh | — |
-| Comitative-Ergative | saltang-tawhin | — | saltang-te-tawhin | — |
 
 ---
 
@@ -8478,8 +7420,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | diktat-ah | — | diktat-te-ah | — |
 | Ablative | diktat-pan | — | diktat-te-pan | — |
 | Ablative-Ergative | diktat-panin | — | diktat-te-panin | — |
-| Comitative | diktat-tawh | — | diktat-te-tawh | — |
-| Comitative-Ergative | diktat-tawhin | — | diktat-te-tawhin | — |
 
 ### gamtat "kingdom" (gam-tat)
 
@@ -8491,8 +7431,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamtat-ah | — | gamtat-te-ah | — |
 | Ablative | gamtat-pan | — | gamtat-te-pan | — |
 | Ablative-Ergative | gamtat-panin | — | gamtat-te-panin | — |
-| Comitative | gamtat-tawh | — | gamtat-te-tawh | — |
-| Comitative-Ergative | gamtat-tawhin | — | gamtat-te-tawhin | — |
 
 ### tatkhialh "transgress" (tat-khialh)
 
@@ -8504,8 +7442,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tatkhialh-ah | — | tatkhialh-te-ah | — |
 | Ablative | tatkhialh-pan | — | tatkhialh-te-pan | — |
 | Ablative-Ergative | tatkhialh-panin | — | tatkhialh-te-panin | — |
-| Comitative | tatkhialh-tawh | — | tatkhialh-te-tawh | — |
-| Comitative-Ergative | tatkhialh-tawhin | — | tatkhialh-te-tawhin | — |
 
 ### tatsat "continual" (tat-sat)
 
@@ -8517,8 +7453,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tatsat-ah | — | tatsat-te-ah | — |
 | Ablative | tatsat-pan | — | tatsat-te-pan | — |
 | Ablative-Ergative | tatsat-panin | — | tatsat-te-panin | — |
-| Comitative | tatsat-tawh | — | tatsat-te-tawh | — |
-| Comitative-Ergative | tatsat-tawhin | — | tatsat-te-tawhin | — |
 
 ### tatsiat "destroy" (tat-siat)
 
@@ -8530,8 +7464,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tatsiat-ah | — | tatsiat-te-ah | — |
 | Ablative | tatsiat-pan | — | tatsiat-te-pan | — |
 | Ablative-Ergative | tatsiat-panin | — | tatsiat-te-panin | — |
-| Comitative | tatsiat-tawh | — | tatsiat-te-tawh | — |
-| Comitative-Ergative | tatsiat-tawhin | — | tatsiat-te-tawhin | — |
 
 ---
 
@@ -8549,8 +7481,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawikhai-ah | — | tawikhai-te-ah | — |
 | Ablative | tawikhai-pan | — | tawikhai-te-pan | — |
 | Ablative-Ergative | tawikhai-panin | — | tawikhai-te-panin | — |
-| Comitative | tawikhai-tawh | — | tawikhai-te-tawh | — |
-| Comitative-Ergative | tawikhai-tawhin | — | tawikhai-te-tawhin | — |
 
 ### tawisuang "weights" (tawi-suang)
 
@@ -8562,8 +7492,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawisuang-ah | — | tawisuang-te-ah | — |
 | Ablative | tawisuang-pan | — | tawisuang-te-pan | — |
 | Ablative-Ergative | tawisuang-panin | — | tawisuang-te-panin | — |
-| Comitative | tawisuang-tawh | — | tawisuang-te-tawh | — |
-| Comitative-Ergative | tawisuang-tawhin | — | tawisuang-te-tawhin | — |
 
 ---
 
@@ -8581,8 +7509,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawldam-ah | — | tawldam-te-ah | — |
 | Ablative | tawldam-pan | — | tawldam-te-pan | — |
 | Ablative-Ergative | tawldam-panin | — | tawldam-te-panin | — |
-| Comitative | tawldam-tawh | — | tawldam-te-tawh | — |
-| Comitative-Ergative | tawldam-tawhin | — | tawldam-te-tawhin | — |
 
 ---
 
@@ -8600,8 +7526,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawmvei-ah | — | tawmvei-te-ah | — |
 | Ablative | tawmvei-pan | — | tawmvei-te-pan | — |
 | Ablative-Ergative | tawmvei-panin | — | tawmvei-te-panin | — |
-| Comitative | tawmvei-tawh | — | tawmvei-te-tawh | — |
-| Comitative-Ergative | tawmvei-tawhin | — | tawmvei-te-tawhin | — |
 
 ---
 
@@ -8619,8 +7543,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nitawp-ah | — | nitawp-te-ah | — |
 | Ablative | nitawp-pan | — | nitawp-te-pan | — |
 | Ablative-Ergative | nitawp-panin | — | nitawp-te-panin | — |
-| Comitative | nitawp-tawh | — | nitawp-te-tawh | — |
-| Comitative-Ergative | nitawp-tawhin | — | nitawp-te-tawhin | — |
 
 ---
 
@@ -8638,8 +7560,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | innteek-ah | — | innteek-te-ah | — |
 | Ablative | innteek-pan | — | innteek-te-pan | — |
 | Ablative-Ergative | innteek-panin | — | innteek-te-panin | — |
-| Comitative | innteek-tawh | — | innteek-te-tawh | — |
-| Comitative-Ergative | innteek-tawhin | — | innteek-te-tawhin | — |
 
 ### teekpa "father.in.law" (teek-pa)
 
@@ -8651,8 +7571,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | teekpa-ah | — | teekpa-te-ah | — |
 | Ablative | teekpa-pan | — | teekpa-te-pan | — |
 | Ablative-Ergative | teekpa-panin | — | teekpa-te-panin | — |
-| Comitative | teekpa-tawh | — | teekpa-te-tawh | — |
-| Comitative-Ergative | teekpa-tawhin | — | teekpa-te-tawhin | — |
 
 ---
 
@@ -8670,8 +7588,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | theihtel-ah | — | theihtel-te-ah | — |
 | Ablative | theihtel-pan | — | theihtel-te-pan | — |
 | Ablative-Ergative | theihtel-panin | — | theihtel-te-panin | — |
-| Comitative | theihtel-tawh | — | theihtel-te-tawh | — |
-| Comitative-Ergative | theihtel-tawhin | — | theihtel-te-tawhin | — |
 
 ### thutel "fulfill" (thu-tel)
 
@@ -8683,8 +7599,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutel-ah | — | thutel-te-ah | — |
 | Ablative | thutel-pan | — | thutel-te-pan | — |
 | Ablative-Ergative | thutel-panin | — | thutel-te-panin | — |
-| Comitative | thutel-tawh | — | thutel-te-tawh | — |
-| Comitative-Ergative | thutel-tawhin | — | thutel-te-tawhin | — |
 
 ---
 
@@ -8702,8 +7616,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thahat-ah | — | thahat-te-ah | — |
 | Ablative | thahat-pan | — | thahat-te-pan | — |
 | Ablative-Ergative | thahat-panin | — | thahat-te-panin | — |
-| Comitative | thahat-tawh | — | thahat-te-tawh | — |
-| Comitative-Ergative | thahat-tawhin | — | thahat-te-tawhin | — |
 
 ---
 
@@ -8721,8 +7633,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kithah-ah | — | kithah-te-ah | — |
 | Ablative | kithah-pan | — | kithah-te-pan | — |
 | Ablative-Ergative | kithah-panin | — | kithah-te-panin | — |
-| Comitative | kithah-tawh | — | kithah-te-tawh | — |
-| Comitative-Ergative | kithah-tawhin | — | kithah-te-tawhin | — |
 
 ---
 
@@ -8740,8 +7650,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thahatsak-ah | — | thahatsak-te-ah | — |
 | Ablative | thahatsak-pan | — | thahatsak-te-pan | — |
 | Ablative-Ergative | thahatsak-panin | — | thahatsak-te-panin | — |
-| Comitative | thahatsak-tawh | — | thahatsak-te-tawh | — |
-| Comitative-Ergative | thahatsak-tawhin | — | thahatsak-te-tawhin | — |
 
 ---
 
@@ -8759,8 +7667,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | minthang-ah | — | minthang-te-ah | — |
 | Ablative | minthang-pan | — | minthang-te-pan | — |
 | Ablative-Ergative | minthang-panin | — | minthang-te-panin | — |
-| Comitative | minthang-tawh | — | minthang-te-tawh | — |
-| Comitative-Ergative | minthang-tawhin | — | minthang-te-tawhin | — |
 
 ### thangpaih "pour.out" (thang-paih)
 
@@ -8772,8 +7678,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thangpaih-ah | — | thangpaih-te-ah | — |
 | Ablative | thangpaih-pan | — | thangpaih-te-pan | — |
 | Ablative-Ergative | thangpaih-panin | — | thangpaih-te-panin | — |
-| Comitative | thangpaih-tawh | — | thangpaih-te-tawh | — |
-| Comitative-Ergative | thangpaih-tawhin | — | thangpaih-te-tawhin | — |
 
 ---
 
@@ -8791,8 +7695,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thawhkik-ah | — | thawhkik-te-ah | — |
 | Ablative | thawhkik-pan | — | thawhkik-te-pan | — |
 | Ablative-Ergative | thawhkik-panin | — | thawhkik-te-panin | — |
-| Comitative | thawhkik-tawh | — | thawhkik-te-tawh | — |
-| Comitative-Ergative | thawhkik-tawhin | — | thawhkik-te-tawhin | — |
 
 ---
 
@@ -8810,8 +7712,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gentheih-ah | — | gentheih-te-ah | — |
 | Ablative | gentheih-pan | — | gentheih-te-pan | — |
 | Ablative-Ergative | gentheih-panin | — | gentheih-te-panin | — |
-| Comitative | gentheih-tawh | — | gentheih-te-tawh | — |
-| Comitative-Ergative | gentheih-tawhin | — | gentheih-te-tawhin | — |
 
 ### theihtel "wisdom" (theih-tel)
 
@@ -8823,8 +7723,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | theihtel-ah | — | theihtel-te-ah | — |
 | Ablative | theihtel-pan | — | theihtel-te-pan | — |
 | Ablative-Ergative | theihtel-panin | — | theihtel-te-panin | — |
-| Comitative | theihtel-tawh | — | theihtel-te-tawh | — |
-| Comitative-Ergative | theihtel-tawhin | — | theihtel-te-tawhin | — |
 
 ### thutheih "knowledge" (thu-theih)
 
@@ -8836,8 +7734,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutheih-ah | — | thutheih-te-ah | — |
 | Ablative | thutheih-pan | — | thutheih-te-pan | — |
 | Ablative-Ergative | thutheih-panin | — | thutheih-te-panin | — |
-| Comitative | thutheih-tawh | — | thutheih-te-tawh | — |
-| Comitative-Ergative | thutheih-tawhin | — | thutheih-te-tawhin | — |
 
 ---
 
@@ -8855,8 +7751,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungthim-ah | — | lungthim-te-ah | — |
 | Ablative | lungthim-pan | — | lungthim-te-pan | — |
 | Ablative-Ergative | lungthim-panin | — | lungthim-te-panin | — |
-| Comitative | lungthim-tawh | — | lungthim-te-tawh | — |
-| Comitative-Ergative | lungthim-tawhin | — | lungthim-te-tawhin | — |
 
 ---
 
@@ -8874,8 +7768,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thongkiat-ah | — | thongkiat-te-ah | — |
 | Ablative | thongkiat-pan | — | thongkiat-te-pan | — |
 | Ablative-Ergative | thongkiat-panin | — | thongkiat-te-panin | — |
-| Comitative | thongkiat-tawh | — | thongkiat-te-tawh | — |
-| Comitative-Ergative | thongkiat-tawhin | — | thongkiat-te-tawhin | — |
 
 ---
 
@@ -8893,8 +7785,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuciam-ah | — | thuciam-te-ah | — |
 | Ablative | thuciam-pan | — | thuciam-te-pan | — |
 | Ablative-Ergative | thuciam-panin | — | thuciam-te-panin | — |
-| Comitative | thuciam-tawh | — | thuciam-te-tawh | — |
-| Comitative-Ergative | thuciam-tawhin | — | thuciam-te-tawhin | — |
 
 ### thudot "question" (thu-dot)
 
@@ -8906,8 +7796,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thudot-ah | — | thudot-te-ah | — |
 | Ablative | thudot-pan | — | thudot-te-pan | — |
 | Ablative-Ergative | thudot-panin | — | thudot-te-panin | — |
-| Comitative | thudot-tawh | — | thudot-te-tawh | — |
-| Comitative-Ergative | thudot-tawhin | — | thudot-te-tawhin | — |
 
 ### thugen "speech" (thu-gen)
 
@@ -8919,8 +7807,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thugen-ah | — | thugen-te-ah | — |
 | Ablative | thugen-pan | — | thugen-te-pan | — |
 | Ablative-Ergative | thugen-panin | — | thugen-te-panin | — |
-| Comitative | thugen-tawh | — | thugen-te-tawh | — |
-| Comitative-Ergative | thugen-tawhin | — | thugen-te-tawhin | — |
 
 ### thuhilh "teach" (thu-hilh)
 
@@ -8932,8 +7818,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuhilh-ah | — | thuhilh-te-ah | — |
 | Ablative | thuhilh-pan | — | thuhilh-te-pan | — |
 | Ablative-Ergative | thuhilh-panin | — | thuhilh-te-panin | — |
-| Comitative | thuhilh-tawh | — | thuhilh-te-tawh | — |
-| Comitative-Ergative | thuhilh-tawhin | — | thuhilh-te-tawhin | — |
 
 ### thukham "law" (thu-kham)
 
@@ -8945,8 +7829,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thukham-ah | — | thukham-te-ah | — |
 | Ablative | thukham-pan | — | thukham-te-pan | — |
 | Ablative-Ergative | thukham-panin | — | thukham-te-panin | — |
-| Comitative | thukham-tawh | — | thukham-te-tawh | — |
-| Comitative-Ergative | thukham-tawhin | — | thukham-te-tawhin | — |
 
 ### thukhen "judgment" (thu-khen)
 
@@ -8958,8 +7840,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thukhen-ah | — | thukhen-te-ah | — |
 | Ablative | thukhen-pan | — | thukhen-te-pan | — |
 | Ablative-Ergative | thukhen-panin | — | thukhen-te-panin | — |
-| Comitative | thukhen-tawh | — | thukhen-te-tawh | — |
-| Comitative-Ergative | thukhen-tawhin | — | thukhen-te-tawhin | — |
 
 ### thukim "covenant" (thu-kim)
 
@@ -8971,8 +7851,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thukim-ah | — | thukim-te-ah | — |
 | Ablative | thukim-pan | — | thukim-te-pan | — |
 | Ablative-Ergative | thukim-panin | — | thukim-te-panin | — |
-| Comitative | thukim-tawh | — | thukim-te-tawh | — |
-| Comitative-Ergative | thukim-tawhin | — | thukim-te-tawhin | — |
 
 ### thuman "true.word" (thu-man)
 
@@ -8984,8 +7862,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuman-ah | 2Pe 1:12 | thuman-te-ah | — |
 | Ablative | thuman-pan | — | thuman-te-pan | — |
 | Ablative-Ergative | thuman-panin | — | thuman-te-panin | — |
-| Comitative | thuman-tawh | — | thuman-te-tawh | — |
-| Comitative-Ergative | thuman-tawhin | — | thuman-te-tawhin | — |
 
 ### thunget "pray" (thu-nget)
 
@@ -8997,8 +7873,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thunget-ah | — | thunget-te-ah | — |
 | Ablative | thunget-pan | — | thunget-te-pan | — |
 | Ablative-Ergative | thunget-panin | — | thunget-te-panin | — |
-| Comitative | thunget-tawh | — | thunget-te-tawh | — |
-| Comitative-Ergative | thunget-tawhin | — | thunget-te-tawhin | — |
 
 ### thutak "truth" (thu-tak)
 
@@ -9010,8 +7884,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutak-ah | — | thutak-te-ah | — |
 | Ablative | thutak-pan | — | thutak-te-pan | — |
 | Ablative-Ergative | thutak-panin | — | thutak-te-panin | — |
-| Comitative | thutak-tawh | — | thutak-te-tawh | — |
-| Comitative-Ergative | thutak-tawhin | — | thutak-te-tawhin | — |
 
 ### thutan "judge" (thu-tan)
 
@@ -9023,8 +7895,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutan-ah | — | thutan-te-ah | — |
 | Ablative | thutan-pan | — | thutan-te-pan | — |
 | Ablative-Ergative | thutan-panin | — | thutan-te-panin | — |
-| Comitative | thutan-tawh | — | thutan-te-tawh | — |
-| Comitative-Ergative | thutan-tawhin | — | thutan-te-tawhin | — |
 
 ### thutel "fulfill" (thu-tel)
 
@@ -9036,8 +7906,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutel-ah | — | thutel-te-ah | — |
 | Ablative | thutel-pan | — | thutel-te-pan | — |
 | Ablative-Ergative | thutel-panin | — | thutel-te-panin | — |
-| Comitative | thutel-tawh | — | thutel-te-tawh | — |
-| Comitative-Ergative | thutel-tawhin | — | thutel-te-tawhin | — |
 
 ### thutheih "knowledge" (thu-theih)
 
@@ -9049,8 +7917,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thutheih-ah | — | thutheih-te-ah | — |
 | Ablative | thutheih-pan | — | thutheih-te-pan | — |
 | Ablative-Ergative | thutheih-panin | — | thutheih-te-panin | — |
-| Comitative | thutheih-tawh | — | thutheih-te-tawh | — |
-| Comitative-Ergative | thutheih-tawhin | — | thutheih-te-tawhin | — |
 
 ### thuthuk "deep.word" (thu-thuk)
 
@@ -9062,8 +7928,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuthuk-ah | — | thuthuk-te-ah | — |
 | Ablative | thuthuk-pan | — | thuthuk-te-pan | — |
 | Ablative-Ergative | thuthuk-panin | — | thuthuk-te-panin | — |
-| Comitative | thuthuk-tawh | — | thuthuk-te-tawh | — |
-| Comitative-Ergative | thuthuk-tawhin | — | thuthuk-te-tawhin | — |
 
 ---
 
@@ -9081,8 +7945,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | thuthuk-ah | — | thuthuk-te-ah | — |
 | Ablative | thuthuk-pan | — | thuthuk-te-pan | — |
 | Ablative-Ergative | thuthuk-panin | — | thuthuk-te-panin | — |
-| Comitative | thuthuk-tawh | — | thuthuk-te-tawh | — |
-| Comitative-Ergative | thuthuk-tawhin | — | thuthuk-te-tawhin | — |
 
 ---
 
@@ -9100,8 +7962,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kitot-ah | — | kitot-te-ah | — |
 | Ablative | kitot-pan | — | kitot-te-pan | — |
 | Ablative-Ergative | kitot-panin | — | kitot-te-panin | — |
-| Comitative | kitot-tawh | — | kitot-te-tawh | — |
-| Comitative-Ergative | kitot-tawhin | — | kitot-te-tawhin | — |
 
 ---
 
@@ -9119,8 +7979,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | puantual-ah | — | puantual-te-ah | — |
 | Ablative | puantual-pan | — | puantual-te-pan | — |
 | Ablative-Ergative | puantual-panin | — | puantual-te-panin | — |
-| Comitative | puantual-tawh | — | puantual-te-tawh | — |
-| Comitative-Ergative | puantual-tawhin | — | puantual-te-tawhin | — |
 
 ---
 
@@ -9138,8 +7996,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | phattuam-ah | — | phattuam-te-ah | — |
 | Ablative | phattuam-pan | — | phattuam-te-pan | — |
 | Ablative-Ergative | phattuam-panin | — | phattuam-te-panin | — |
-| Comitative | phattuam-tawh | — | phattuam-te-tawh | — |
-| Comitative-Ergative | phattuam-tawhin | — | phattuam-te-tawhin | — |
 
 ### sintuam "liver.lobe" (sin-tuam)
 
@@ -9151,8 +8007,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sintuam-ah | — | sintuam-te-ah | — |
 | Ablative | sintuam-pan | — | sintuam-te-pan | — |
 | Ablative-Ergative | sintuam-panin | — | sintuam-te-panin | — |
-| Comitative | sintuam-tawh | — | sintuam-te-tawh | — |
-| Comitative-Ergative | sintuam-tawhin | — | sintuam-te-tawhin | — |
 
 ### tuamtuam "various" (tuam-tuam)
 
@@ -9164,8 +8018,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuamtuam-ah | Dan 9:7, Mat 24:7, Mar 13:8 (+1) | tuamtuam-te-ah | — |
 | Ablative | tuamtuam-pan | — | tuamtuam-te-pan | — |
 | Ablative-Ergative | tuamtuam-panin | — | tuamtuam-te-panin | — |
-| Comitative | tuamtuam-tawh | — | tuamtuam-te-tawh | — |
-| Comitative-Ergative | tuamtuam-tawhin | — | tuamtuam-te-tawhin | — |
 
 ### tuamtuam "various" (tuam-tuam)
 
@@ -9177,8 +8029,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuamtuam-ah | Dan 9:7, Mat 24:7, Mar 13:8 (+1) | tuamtuam-te-ah | — |
 | Ablative | tuamtuam-pan | — | tuamtuam-te-pan | — |
 | Ablative-Ergative | tuamtuam-panin | — | tuamtuam-te-panin | — |
-| Comitative | tuamtuam-tawh | — | tuamtuam-te-tawh | — |
-| Comitative-Ergative | tuamtuam-tawhin | — | tuamtuam-te-tawhin | — |
 
 ---
 
@@ -9196,8 +8046,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | guahtui-ah | — | guahtui-te-ah | — |
 | Ablative | guahtui-pan | — | guahtui-te-pan | — |
 | Ablative-Ergative | guahtui-panin | — | guahtui-te-panin | — |
-| Comitative | guahtui-tawh | — | guahtui-te-tawh | — |
-| Comitative-Ergative | guahtui-tawhin | — | guahtui-te-tawhin | — |
 
 ### namtui "perfume" (nam-tui)
 
@@ -9209,8 +8057,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | namtui-ah | — | namtui-te-ah | — |
 | Ablative | namtui-pan | — | namtui-te-pan | — |
 | Ablative-Ergative | namtui-panin | — | namtui-te-panin | — |
-| Comitative | namtui-tawh | — | namtui-te-tawh | — |
-| Comitative-Ergative | namtui-tawhin | — | namtui-te-tawhin | — |
 
 ### tuibang "flood" (tui-bang)
 
@@ -9222,8 +8068,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuibang-ah | — | tuibang-te-ah | — |
 | Ablative | tuibang-pan | — | tuibang-te-pan | — |
 | Ablative-Ergative | tuibang-panin | — | tuibang-te-panin | — |
-| Comitative | tuibang-tawh | — | tuibang-te-tawh | — |
-| Comitative-Ergative | tuibang-tawhin | — | tuibang-te-tawhin | — |
 
 ### tuibuah "libation" (tui-buah)
 
@@ -9235,8 +8079,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuibuah-ah | — | tuibuah-te-ah | — |
 | Ablative | tuibuah-pan | — | tuibuah-te-pan | — |
 | Ablative-Ergative | tuibuah-panin | — | tuibuah-te-panin | — |
-| Comitative | tuibuah-tawh | — | tuibuah-te-tawh | — |
-| Comitative-Ergative | tuibuah-tawhin | — | tuibuah-te-tawhin | — |
 
 ### tuihual "flood" (tui-hual)
 
@@ -9248,8 +8090,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuihual-ah | — | tuihual-te-ah | — |
 | Ablative | tuihual-pan | — | tuihual-te-pan | — |
 | Ablative-Ergative | tuihual-panin | — | tuihual-te-panin | — |
-| Comitative | tuihual-tawh | — | tuihual-te-tawh | — |
-| Comitative-Ergative | tuihual-tawhin | — | tuihual-te-tawhin | — |
 
 ### tuikhuk "pool" (tui-khuk)
 
@@ -9261,8 +8101,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuikhuk-ah | Gen 24:16, Gen 24:20, Gen 24:42 (+2) | tuikhuk-te-ah | — |
 | Ablative | tuikhuk-pan | — | tuikhuk-te-pan | — |
 | Ablative-Ergative | tuikhuk-panin | — | tuikhuk-te-panin | — |
-| Comitative | tuikhuk-tawh | — | tuikhuk-te-tawh | — |
-| Comitative-Ergative | tuikhuk-tawhin | — | tuikhuk-te-tawhin | — |
 
 ### tuikulh "island" (tui-kulh)
 
@@ -9274,8 +8112,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuikulh-ah | — | tuikulh-te-ah | — |
 | Ablative | tuikulh-pan | — | tuikulh-te-pan | — |
 | Ablative-Ergative | tuikulh-panin | — | tuikulh-te-panin | — |
-| Comitative | tuikulh-tawh | — | tuikulh-te-tawh | — |
-| Comitative-Ergative | tuikulh-tawhin | — | tuikulh-te-tawhin | — |
 
 ### tuinak "spring" (tui-nak)
 
@@ -9287,8 +8123,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuinak-ah | 2Ki 2:21, Job 38:16, Ecc 1:7 | tuinak-te-ah | — |
 | Ablative | tuinak-pan | — | tuinak-te-pan | — |
 | Ablative-Ergative | tuinak-panin | — | tuinak-te-panin | — |
-| Comitative | tuinak-tawh | — | tuinak-te-tawh | — |
-| Comitative-Ergative | tuinak-tawhin | — | tuinak-te-tawhin | — |
 
 ### tuiphum "baptism" (tui-phum)
 
@@ -9300,8 +8134,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuiphum-ah | — | tuiphum-te-ah | — |
 | Ablative | tuiphum-pan | — | tuiphum-te-pan | — |
 | Ablative-Ergative | tuiphum-panin | — | tuiphum-te-panin | — |
-| Comitative | tuiphum-tawh | — | tuiphum-te-tawh | — |
-| Comitative-Ergative | tuiphum-tawhin | — | tuiphum-te-tawhin | — |
 
 ### tuipi "sea" (tui-pi)
 
@@ -9313,8 +8145,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuipi-ah | — | tuipi-te-ah | — |
 | Ablative | tuipi-pan | — | tuipi-te-pan | — |
 | Ablative-Ergative | tuipi-panin | — | tuipi-te-panin | — |
-| Comitative | tuipi-tawh | — | tuipi-te-tawh | — |
-| Comitative-Ergative | tuipi-tawhin | — | tuipi-te-tawhin | — |
 
 ---
 
@@ -9332,8 +8162,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khuttum-ah | — | khuttum-te-ah | — |
 | Ablative | khuttum-pan | — | khuttum-te-pan | — |
 | Ablative-Ergative | khuttum-panin | — | khuttum-te-panin | — |
-| Comitative | khuttum-tawh | — | khuttum-te-tawh | — |
-| Comitative-Ergative | khuttum-tawhin | — | khuttum-te-tawhin | — |
 
 ### nitum "always" (ni-tum)
 
@@ -9345,8 +8173,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nitum-ah | — | nitum-te-ah | — |
 | Ablative | nitum-pan | — | nitum-te-pan | — |
 | Ablative-Ergative | nitum-panin | — | nitum-te-panin | — |
-| Comitative | nitum-tawh | — | nitum-te-tawh | — |
-| Comitative-Ergative | nitum-tawhin | — | nitum-te-tawhin | — |
 
 ---
 
@@ -9364,8 +8190,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zintun-ah | — | zintun-te-ah | — |
 | Ablative | zintun-pan | — | zintun-te-pan | — |
 | Ablative-Ergative | zintun-panin | — | zintun-te-panin | — |
-| Comitative | zintun-tawh | — | zintun-te-tawh | — |
-| Comitative-Ergative | zintun-tawhin | — | zintun-te-tawhin | — |
 
 ---
 
@@ -9383,8 +8207,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | leitung-ah | Gen 1:11, Gen 1:16, Gen 1:20 (+2) | leitung-te-ah | — |
 | Ablative | leitung-pan | — | leitung-te-pan | — |
 | Ablative-Ergative | leitung-panin | — | leitung-te-panin | — |
-| Comitative | leitung-tawh | — | leitung-te-tawh | — |
-| Comitative-Ergative | leitung-tawhin | — | leitung-te-tawhin | — |
 
 ### mualtung "mountaintop" (mual-tung)
 
@@ -9396,8 +8218,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mualtung-ah | Gen 8:4, Gen 14:10, Gen 19:17 (+2) | mualtung-te-ah | — |
 | Ablative | mualtung-pan | — | mualtung-te-pan | — |
 | Ablative-Ergative | mualtung-panin | — | mualtung-te-panin | — |
-| Comitative | mualtung-tawh | — | mualtung-te-tawh | — |
-| Comitative-Ergative | mualtung-tawhin | — | mualtung-te-tawhin | — |
 
 ### vantung "heaven" (van-tung)
 
@@ -9409,8 +8229,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vantung-ah | Gen 1:14, Gen 1:15, Gen 1:16 (+2) | vantung-te-ah | — |
 | Ablative | vantung-pan | — | vantung-te-pan | — |
 | Ablative-Ergative | vantung-panin | — | vantung-te-panin | — |
-| Comitative | vantung-tawh | — | vantung-te-tawh | — |
-| Comitative-Ergative | vantung-tawhin | — | vantung-te-tawhin | — |
 
 ---
 
@@ -9428,8 +8246,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tuupi-ah | — | tuupi-te-ah | — |
 | Ablative | tuupi-pan | — | tuupi-te-pan | — |
 | Ablative-Ergative | tuupi-panin | — | tuupi-te-panin | — |
-| Comitative | tuupi-tawh | — | tuupi-te-tawh | — |
-| Comitative-Ergative | tuupi-tawhin | — | tuupi-te-tawhin | — |
 
 ---
 
@@ -9447,8 +8263,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | ulian-ah | — | ulian-te-ah | — |
 | Ablative | ulian-pan | — | ulian-te-pan | — |
 | Ablative-Ergative | ulian-panin | — | ulian-te-panin | — |
-| Comitative | ulian-tawh | — | ulian-te-tawh | — |
-| Comitative-Ergative | ulian-tawhin | — | ulian-te-tawhin | — |
 
 ---
 
@@ -9466,8 +8280,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gamvai-ah | — | gamvai-te-ah | — |
 | Ablative | gamvai-pan | — | gamvai-te-pan | — |
 | Ablative-Ergative | gamvai-panin | — | gamvai-te-panin | — |
-| Comitative | gamvai-tawh | — | gamvai-te-tawh | — |
-| Comitative-Ergative | gamvai-tawhin | — | gamvai-te-tawhin | — |
 
 ### vaihawm "counsel" (vai-hawm)
 
@@ -9479,8 +8291,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vaihawm-ah | — | vaihawm-te-ah | — |
 | Ablative | vaihawm-pan | — | vaihawm-te-pan | — |
 | Ablative-Ergative | vaihawm-panin | — | vaihawm-te-panin | — |
-| Comitative | vaihawm-tawh | — | vaihawm-te-tawh | — |
-| Comitative-Ergative | vaihawm-tawhin | — | vaihawm-te-tawhin | — |
 
 ---
 
@@ -9498,8 +8308,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | meivak-ah | — | meivak-te-ah | — |
 | Ablative | meivak-pan | — | meivak-te-pan | — |
 | Ablative-Ergative | meivak-panin | — | meivak-te-panin | — |
-| Comitative | meivak-tawh | — | meivak-te-tawh | — |
-| Comitative-Ergative | meivak-tawhin | — | meivak-te-tawhin | — |
 
 ---
 
@@ -9517,8 +8325,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vankoih-ah | — | vankoih-te-ah | — |
 | Ablative | vankoih-pan | — | vankoih-te-pan | — |
 | Ablative-Ergative | vankoih-panin | — | vankoih-te-panin | — |
-| Comitative | vankoih-tawh | — | vankoih-te-tawh | — |
-| Comitative-Ergative | vankoih-tawhin | — | vankoih-te-tawhin | — |
 
 ### vanlei "world" (van-lei)
 
@@ -9530,8 +8336,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vanlei-ah | — | vanlei-te-ah | — |
 | Ablative | vanlei-pan | — | vanlei-te-pan | — |
 | Ablative-Ergative | vanlei-panin | — | vanlei-te-panin | — |
-| Comitative | vanlei-tawh | — | vanlei-te-tawh | — |
-| Comitative-Ergative | vanlei-tawhin | — | vanlei-te-tawhin | — |
 
 ### vanmi "angel" (van-mi)
 
@@ -9543,8 +8347,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vanmi-ah | — | vanmi-te-ah | — |
 | Ablative | vanmi-pan | — | vanmi-te-pan | — |
 | Ablative-Ergative | vanmi-panin | — | vanmi-te-panin | — |
-| Comitative | vanmi-tawh | — | vanmi-te-tawh | — |
-| Comitative-Ergative | vanmi-tawhin | — | vanmi-te-tawhin | — |
 
 ### vantung "heaven" (van-tung)
 
@@ -9556,8 +8358,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vantung-ah | Gen 1:14, Gen 1:15, Gen 1:16 (+2) | vantung-te-ah | — |
 | Ablative | vantung-pan | — | vantung-te-pan | — |
 | Ablative-Ergative | vantung-panin | — | vantung-te-panin | — |
-| Comitative | vantung-tawh | — | vantung-te-tawh | — |
-| Comitative-Ergative | vantung-tawhin | — | vantung-te-tawhin | — |
 
 ---
 
@@ -9575,8 +8375,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vangliat-ah | — | vangliat-te-ah | — |
 | Ablative | vangliat-pan | — | vangliat-te-pan | — |
 | Ablative-Ergative | vangliat-panin | — | vangliat-te-panin | — |
-| Comitative | vangliat-tawh | — | vangliat-te-tawh | — |
-| Comitative-Ergative | vangliat-tawhin | — | vangliat-te-tawhin | — |
 
 ### vangtaang "glory" (vang-taang)
 
@@ -9588,8 +8386,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | vangtaang-ah | — | vangtaang-te-ah | — |
 | Ablative | vangtaang-pan | — | vangtaang-te-pan | — |
 | Ablative-Ergative | vangtaang-panin | — | vangtaang-te-panin | — |
-| Comitative | vangtaang-tawh | — | vangtaang-te-tawh | — |
-| Comitative-Ergative | vangtaang-tawhin | — | vangtaang-te-tawhin | — |
 
 ---
 
@@ -9607,8 +8403,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | livei-ah | — | livei-te-ah | — |
 | Ablative | livei-pan | — | livei-te-pan | — |
 | Ablative-Ergative | livei-panin | — | livei-te-panin | — |
-| Comitative | livei-tawh | — | livei-te-tawh | — |
-| Comitative-Ergative | livei-tawhin | — | livei-te-tawhin | — |
 
 ### nihvei "second" (nih-vei)
 
@@ -9620,8 +8414,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nihvei-ah | — | nihvei-te-ah | — |
 | Ablative | nihvei-pan | — | nihvei-te-pan | — |
 | Ablative-Ergative | nihvei-panin | — | nihvei-te-panin | — |
-| Comitative | nihvei-tawh | — | nihvei-te-tawh | — |
-| Comitative-Ergative | nihvei-tawhin | — | nihvei-te-tawhin | — |
 
 ### tawmvei "moment" (tawm-vei)
 
@@ -9633,8 +8425,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | tawmvei-ah | — | tawmvei-te-ah | — |
 | Ablative | tawmvei-pan | — | tawmvei-te-pan | — |
 | Ablative-Ergative | tawmvei-panin | — | tawmvei-te-panin | — |
-| Comitative | tawmvei-tawh | — | tawmvei-te-tawh | — |
-| Comitative-Ergative | tawmvei-tawhin | — | tawmvei-te-tawhin | — |
 
 ---
 
@@ -9652,8 +8442,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | buhvui-ah | — | buhvui-te-ah | — |
 | Ablative | buhvui-pan | — | buhvui-te-pan | — |
 | Ablative-Ergative | buhvui-panin | — | buhvui-te-panin | — |
-| Comitative | buhvui-tawh | — | buhvui-te-tawh | — |
-| Comitative-Ergative | buhvui-tawhin | — | buhvui-te-tawhin | — |
 
 ### kivui "bury" (ki-vui)
 
@@ -9665,8 +8453,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kivui-ah | — | kivui-te-ah | — |
 | Ablative | kivui-pan | — | kivui-te-pan | — |
 | Ablative-Ergative | kivui-panin | — | kivui-te-panin | — |
-| Comitative | kivui-tawh | — | kivui-te-tawh | — |
-| Comitative-Ergative | kivui-tawhin | — | kivui-te-tawhin | — |
 
 ---
 
@@ -9684,8 +8470,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zaksak-ah | — | zaksak-te-ah | — |
 | Ablative | zaksak-pan | — | zaksak-te-pan | — |
 | Ablative-Ergative | zaksak-panin | — | zaksak-te-panin | — |
-| Comitative | zaksak-tawh | — | zaksak-te-tawh | — |
-| Comitative-Ergative | zaksak-tawhin | — | zaksak-te-tawhin | — |
 
 ---
 
@@ -9703,8 +8487,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | laizang-ah | Gen 1:6, Gen 2:9, Exo 14:27 (+2) | laizang-te-ah | — |
 | Ablative | laizang-pan | — | laizang-te-pan | — |
 | Ablative-Ergative | laizang-panin | — | laizang-te-panin | — |
-| Comitative | laizang-tawh | — | laizang-te-tawh | — |
-| Comitative-Ergative | laizang-tawhin | — | laizang-te-tawhin | — |
 
 ### luzang "crown" (lu-zang)
 
@@ -9716,8 +8498,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | luzang-ah | — | luzang-te-ah | — |
 | Ablative | luzang-pan | — | luzang-te-pan | — |
 | Ablative-Ergative | luzang-panin | — | luzang-te-panin | — |
-| Comitative | luzang-tawh | — | luzang-te-tawh | — |
-| Comitative-Ergative | luzang-tawhin | — | luzang-te-tawhin | — |
 
 ---
 
@@ -9735,8 +8515,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | mizawng-ah | — | mizawng-te-ah | — |
 | Ablative | mizawng-pan | — | mizawng-te-pan | — |
 | Ablative-Ergative | mizawng-panin | — | mizawng-te-panin | — |
-| Comitative | mizawng-tawh | — | mizawng-te-tawh | — |
-| Comitative-Ergative | mizawng-tawhin | — | mizawng-te-tawhin | — |
 
 ---
 
@@ -9754,8 +8532,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | kizep-ah | — | kizep-te-ah | — |
 | Ablative | kizep-pan | — | kizep-te-pan | — |
 | Ablative-Ergative | kizep-panin | — | kizep-te-panin | — |
-| Comitative | kizep-tawh | — | kizep-te-tawh | — |
-| Comitative-Ergative | kizep-tawhin | — | kizep-te-tawhin | — |
 
 ---
 
@@ -9773,8 +8549,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | khualzin-ah | — | khualzin-te-ah | — |
 | Ablative | khualzin-pan | — | khualzin-te-pan | — |
 | Ablative-Ergative | khualzin-panin | — | khualzin-te-panin | — |
-| Comitative | khualzin-tawh | — | khualzin-te-tawh | — |
-| Comitative-Ergative | khualzin-tawhin | — | khualzin-te-tawhin | — |
 
 ### lungzin "brightness" (lung-zin)
 
@@ -9786,8 +8560,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungzin-ah | — | lungzin-te-ah | — |
 | Ablative | lungzin-pan | — | lungzin-te-pan | — |
 | Ablative-Ergative | lungzin-panin | — | lungzin-te-panin | — |
-| Comitative | lungzin-tawh | — | lungzin-te-tawh | — |
-| Comitative-Ergative | lungzin-tawhin | — | lungzin-te-tawhin | — |
 
 ### zintun "arrive" (zin-tun)
 
@@ -9799,8 +8571,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zintun-ah | — | zintun-te-ah | — |
 | Ablative | zintun-pan | — | zintun-te-pan | — |
 | Ablative-Ergative | zintun-panin | — | zintun-te-panin | — |
-| Comitative | zintun-tawh | — | zintun-te-tawh | — |
-| Comitative-Ergative | zintun-tawhin | — | zintun-te-tawhin | — |
 
 ---
 
@@ -9818,8 +8588,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | zingsang-ah | — | zingsang-te-ah | — |
 | Ablative | zingsang-pan | — | zingsang-te-pan | — |
 | Ablative-Ergative | zingsang-panin | — | zingsang-te-panin | — |
-| Comitative | zingsang-tawh | — | zingsang-te-tawh | — |
-| Comitative-Ergative | zingsang-tawhin | — | zingsang-te-tawhin | — |
 
 ---
 
@@ -9837,8 +8605,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | gahzu-ah | — | gahzu-te-ah | — |
 | Ablative | gahzu-pan | — | gahzu-te-pan | — |
 | Ablative-Ergative | gahzu-panin | — | gahzu-te-panin | — |
-| Comitative | gahzu-tawh | — | gahzu-te-tawh | — |
-| Comitative-Ergative | gahzu-tawhin | — | gahzu-te-tawhin | — |
 
 ### paazu "wine" (paa-zu)
 
@@ -9850,8 +8616,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | paazu-ah | — | paazu-te-ah | — |
 | Ablative | paazu-pan | — | paazu-te-pan | — |
 | Ablative-Ergative | paazu-panin | — | paazu-te-panin | — |
-| Comitative | paazu-tawh | — | paazu-te-tawh | — |
-| Comitative-Ergative | paazu-tawhin | — | paazu-te-tawhin | — |
 
 ---
 
@@ -9869,8 +8633,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | nungzui-ah | — | nungzui-te-ah | — |
 | Ablative | nungzui-pan | — | nungzui-te-pan | — |
 | Ablative-Ergative | nungzui-panin | — | nungzui-te-panin | — |
-| Comitative | nungzui-tawh | — | nungzui-te-tawh | — |
-| Comitative-Ergative | nungzui-tawhin | — | nungzui-te-tawhin | — |
 
 ---
 
@@ -9888,8 +8650,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | sulzuih-ah | — | sulzuih-te-ah | — |
 | Ablative | sulzuih-pan | — | sulzuih-te-pan | — |
 | Ablative-Ergative | sulzuih-panin | — | sulzuih-te-panin | — |
-| Comitative | sulzuih-tawh | — | sulzuih-te-tawh | — |
-| Comitative-Ergative | sulzuih-tawhin | — | sulzuih-te-tawhin | — |
 
 ---
 
@@ -9907,8 +8667,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | maizum-ah | — | maizum-te-ah | — |
 | Ablative | maizum-pan | — | maizum-te-pan | — |
 | Ablative-Ergative | maizum-panin | — | maizum-te-panin | — |
-| Comitative | maizum-tawh | — | maizum-te-tawh | — |
-| Comitative-Ergative | maizum-tawhin | — | maizum-te-tawhin | — |
 
 ---
 
@@ -9926,8 +8684,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | singzung-ah | — | singzung-te-ah | — |
 | Ablative | singzung-pan | — | singzung-te-pan | — |
 | Ablative-Ergative | singzung-panin | — | singzung-te-panin | — |
-| Comitative | singzung-tawh | — | singzung-te-tawh | — |
-| Comitative-Ergative | singzung-tawhin | — | singzung-te-tawhin | — |
 
 ### zungbuh "ring" (zung-buh)
 
@@ -9939,7 +8695,5 @@ Nouns grouped by which cases they are attested in:
 | Locative | zungbuh-ah | — | zungbuh-te-ah | — |
 | Ablative | zungbuh-pan | — | zungbuh-te-pan | — |
 | Ablative-Ergative | zungbuh-panin | — | zungbuh-te-panin | — |
-| Comitative | zungbuh-tawh | — | zungbuh-te-tawh | — |
-| Comitative-Ergative | zungbuh-tawhin | — | zungbuh-te-tawhin | — |
 
 ---

@@ -767,6 +767,25 @@ METADATA_WORDS = {
     'com': 'COM',
 }
 
+# ============================================================================
+# POSTPOSITIONS
+# ============================================================================
+# These are FREE words that follow nouns, NOT bound suffixes.
+# Unlike case markers (-in, -ah, -pan, -panin), these are written separately.
+# Example: "pa tawh" (with father) = two words, NOT "*patawh"
+#
+# TODO: Investigate whether there are other postpositions in the language
+# that we may have missed or incorrectly analyzed as suffixes.
+# ============================================================================
+POSTPOSITIONS = {
+    'tawh': 'COM',       # comitative "with" - 7,571 occurrences as standalone
+                         # Example: "amah tawh" = with him, "mei tawh" = with fire
+    'tawhin': 'COM.ERG', # comitative+ergative (rare: ~1 occurrence)
+                         # Example: "mei tawhin moh a em hi" = he roasted bread with fire
+    # Note: -pan and -panin ARE bound suffixes (ablative), not postpositions
+    # Evidence: gampan, gampanin (land-ABL, land-ABL.ERG) vs "gam tawh" (with land)
+}
+
 # Common function words with glosses - expanded with frequencies
 FUNCTION_WORDS = {
     # === Conjunctions & Connectors ===
@@ -3230,7 +3249,7 @@ NOUN_STEM_TYPES = {
     'kauphe': 'free',
     'kawm': 'free',
     'kawngsa': 'free',
-    'ke': 'free',
+    'ke': 'ghost',  # 'foot' - not attested; 'ke' in corpus is ke'n (1SG-ERG)
     'keel': 'free',
     'ken': 'free',
     'kent': 'ghost',
@@ -3691,7 +3710,7 @@ NOUN_STEM_TYPES = {
     'siakkhia': 'free',
     'siakkhiat': 'free',
     'sial': 'free',
-    'sialh': 'free',
+    'sialh': 'ghost',  # 'tomorrow' - not attested; Tedim uses 'zing' instead
     'siampi': 'free',
     'siampipa': 'free',
     'siamte': 'free',
