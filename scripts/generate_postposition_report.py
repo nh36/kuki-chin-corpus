@@ -22,7 +22,7 @@ from typing import Dict, List, Tuple, Set
 
 # Add scripts directory to path
 sys.path.insert(0, str(Path(__file__).parent))
-from analyze_morphemes import NOUN_STEMS, NOUN_STEM_TYPES, PROPER_NOUNS
+from analyze_morphemes import NOUN_STEMS, NOUN_STEM_TYPES, PROPER_NOUNS, RELATOR_NOUNS
 
 # Book abbreviations for verse references
 BOOK_ABBREVS = {
@@ -42,6 +42,65 @@ BOOK_ABBREVS = {
     '65': 'Jud', '66': 'Rev',
 }
 
+# Additional glosses for common words not in NOUN_STEMS
+EXTRA_GLOSSES = {
+    # Pronouns and demonstratives
+    'ki': 'REFL/RECIP',
+    'uh': '2/3PL',
+    'amah': '3SG.EMPH',
+    'amaute': '3PL',
+    'kei': '1SG',
+    'nang': '2SG',
+    'nangma': '2SG.EMPH',
+    'note': '2PL',
+    'mite': 'people',
+    'khempeuh': 'all',
+    'khat': 'one',
+    'tua': 'that',
+    'hih': 'this',
+    'an': '3PL.POSS',
+    'min': 'name',
+    # Common nouns
+    'thu': 'word/matter',
+    'namsau': 'nation',
+    'mei': 'fire',
+    'lai': 'time/place',
+    'khua': 'village',
+    'gamte': 'lands',
+    'khut': 'hand',
+    'mah': 'self',
+    'sihna': 'death',
+    'mun': 'place',
+    'vangliatna': 'power',
+    'kham': 'cheek',
+    'bek': 'only',
+    'beh': 'tribe',
+    'suang': 'stone',
+    'leitang': 'earth',
+    'khuapi': 'city',
+    'omna': 'dwelling',
+    'siangtho': 'holy',
+    'sathau': 'fat',
+    'kam': 'mouth/word',
+    'hehna': 'anger',
+    'numei': 'woman',
+    'khutsung': 'hand.inside',
+    'vantung': 'heaven',
+    'pasian': 'God',
+    'leenggahzu': 'grape.wine',
+    'thei': 'able/fruit',
+    'tuipi': 'sea',
+    'biakna': 'worship',
+    # Proper nouns
+    'egypt': 'Egypt',
+    'jesuh': 'Jesus',
+    'khrih': 'Christ',
+    'israel': 'Israel',
+    'jerusalem': 'Jerusalem',
+    'david': 'David',
+    'moses': 'Moses',
+}
+
 # Postpositions to track
 POSTPOSITIONS = {
     'pan': ('ABL', 'from'),
@@ -49,6 +108,22 @@ POSTPOSITIONS = {
     'tawh': ('COM', 'with'),
     'tawhin': ('COM.ERG', 'with (as instrument)'),
 }
+
+
+def get_gloss(word: str) -> str:
+    """Get gloss for a word from multiple sources."""
+    word_lower = word.lower()
+    # Check in order: EXTRA_GLOSSES, NOUN_STEMS, RELATOR_NOUNS, PROPER_NOUNS
+    if word_lower in EXTRA_GLOSSES:
+        return EXTRA_GLOSSES[word_lower]
+    if word_lower in NOUN_STEMS:
+        return NOUN_STEMS[word_lower]
+    if word_lower in RELATOR_NOUNS:
+        return RELATOR_NOUNS[word_lower]
+    if word_lower in PROPER_NOUNS:
+        return PROPER_NOUNS[word_lower]
+    # Return empty string instead of word itself
+    return '—'
 
 def format_verse_ref(verse_id: str) -> str:
     """Convert BBCCCVVV format to readable form (e.g., 01002005 -> Gen 2:5)."""
@@ -328,8 +403,8 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
     ])
     
     for noun, total_n, postp_counts in top_nouns[:100]:
-        # Get gloss if it's a known noun
-        gloss = NOUN_STEMS.get(noun, noun)
+        # Get gloss using the multi-source lookup function
+        gloss = get_gloss(noun)
         
         lines.extend([
             f'### {noun}',
