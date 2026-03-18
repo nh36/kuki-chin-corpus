@@ -17688,36 +17688,60 @@ def format_interlinear(results: List[Tuple[str, str, str]],
 # PARADIGM EXTRACTION
 # =============================================================================
 
-def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -> Dict[str, List[Tuple[str, str, str]]]:
+def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 500) -> Dict[str, List[Tuple[str, str, str]]]:
     """
     Extract all attested forms of a word from the corpus.
     
     Returns a dict grouping forms by their morphological category:
-    {
-        'bare': [(word, segmented, gloss, verse_id), ...],
-        'case': [...],  # -ah, -in, etc.
-        'number': [...],  # -te
-        'possessed': [...],  # ka-, na-, a-
-        'compounds': [...],
-        'other': [...]
-    }
+    - Bare stem
+    - Case-marked (ERG, LOC, ABL, COM)
+    - Plural (-te) and Plural + Case
+    - Possessed (1SG, 2SG, 3SG, 1PL, 2PL, 3PL)
+    - Possessed + Case combinations
+    - Possessed + Plural combinations
+    - Possessed + Plural + Case combinations
+    - Compounds
     """
     if corpus_file is None:
         corpus_file = str(Path(__file__).parent.parent / 'bibles' / 'extracted' / 'ctd' / 'ctd-x-bible.txt')
     
     forms = {
+        # Basic forms
         'bare': [],
+        # Case-marked (singular)
         'case_erg': [],      # Ergative -in
         'case_loc': [],      # Locative -ah
         'case_abl': [],      # Ablative -panin / -pan
         'case_com': [],      # Comitative -tawh
+        # Plural
         'number_pl': [],     # Plural -te
-        'number_com_pl': [], # Comitative + Plural (N-tawh-te or N-te-tawh)
+        # Plural + Case
+        'pl_erg': [],        # N-te-in (PL-ERG)
+        'pl_loc': [],        # N-te-ah (PL-LOC)
+        'pl_abl': [],        # N-te-panin (PL-ABL)
+        'pl_com': [],        # N-te-tawh (PL-COM)
+        # Possessed forms
         'poss_1sg': [],      # 1SG possessed (ka-N)
         'poss_2sg': [],      # 2SG possessed (na-N)
         'poss_3sg': [],      # 3SG possessed (a-N)
-        'poss_1pl': [],      # 1PL possessed (i-N)
-        'poss_case': [],     # Possessed + case (ka-N-ah, etc.)
+        'poss_1pl': [],      # 1PL possessed (i-N / kan-N)
+        'poss_2pl': [],      # 2PL possessed (nan-N)
+        'poss_3pl': [],      # 3PL possessed (an-N)
+        # Possessed + Case
+        'poss_1sg_case': [], # ka-N-ah, ka-N-in, etc.
+        'poss_2sg_case': [], # na-N-ah, etc.
+        'poss_3sg_case': [], # a-N-ah, etc.
+        'poss_1pl_case': [], # i-N-ah, etc.
+        'poss_2pl_case': [], # nan-N-ah, etc.
+        'poss_3pl_case': [], # an-N-ah, etc.
+        # Possessed + Plural
+        'poss_1sg_pl': [],   # ka-N-te
+        'poss_2sg_pl': [],   # na-N-te
+        'poss_3sg_pl': [],   # a-N-te
+        'poss_pl_pl': [],    # i/kan/nan/an-N-te (all plural possessors)
+        # Possessed + Plural + Case
+        'poss_pl_case': [],  # POSS-N-te-CASE (any combination)
+        # Other
         'compounds': [],
         'other': []
     }
@@ -17725,11 +17749,8 @@ def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -
     seen = set()
     stem_lower = stem.lower()
     
-    # Prefixes that can attach to nouns (possessive prefixes)
-    noun_prefixes = ('ka', 'na', 'a', 'i', 'kan', 'nan', 'an')
-    
-    # Case/number suffixes that can attach to nouns
-    noun_suffixes = ('ah', 'in', 'te', 'tawh', 'pan', 'uh', 'na', 'khat')
+    # Case/number suffixes
+    case_suffixes = {'ah': 'LOC', 'in': 'ERG', 'pan': 'ABL', 'panin': 'ABL', 'tawh': 'COM', 'tawhin': 'COM'}
     
     with open(corpus_file, 'r', encoding='utf-8') as f:
         for line in f:
@@ -17739,11 +17760,13 @@ def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -
             verse_id = parts[0]
             text = parts[1]
             
-            # Find words containing the stem
             for word in text.split():
-                word_clean = word.strip('.,;:!?"\'').lower()
+                # Clean punctuation more aggressively
+                word_clean = word.strip('.,;:!?"\'()[]{}«»""''').lower()
+                # Skip words that still contain punctuation
+                if any(c in word_clean for c in '"\'()[]{}«»""'''):
+                    continue
                 
-                # Early filter: word must contain stem
                 if stem_lower not in word_clean:
                     continue
                     
@@ -17751,80 +17774,105 @@ def extract_word_paradigm(stem: str, corpus_file: str = None, limit: int = 50) -
                     continue
                 seen.add(word_clean)
                 
-                # Now analyze the word
                 segmented, gloss = analyze_word(word_clean)
-                
-                # Skip if word doesn't actually contain our stem in segmentation
                 seg_parts = segmented.split('-') if segmented else [word_clean]
                 
-                # Check if stem appears as a morpheme boundary
-                stem_found = False
-                for i, part in enumerate(seg_parts):
-                    # Exact match
-                    if part == stem_lower:
-                        stem_found = True
-                        break
-                    # Stem with suffix (e.g., stem "pa", part "pate" meaning pa-te was not split)
-                    # This is tricky - rely on the segmentation 
-                    
-                if not stem_found:
-                    # Also check if stem is prefix of any part (for unsplit cases)
-                    for part in seg_parts:
-                        if part.startswith(stem_lower) and len(part) > len(stem_lower):
-                            # Check if rest is a known suffix
-                            rest = part[len(stem_lower):]
-                            if rest in noun_suffixes:
-                                stem_found = True
-                                break
-                    
+                # Verify stem is actually in the segmentation
+                # Allow: exact match as morpheme, or word starts with stem (for unsegmented cases)
+                stem_found = (
+                    any(p == stem_lower for p in seg_parts) or  # exact morpheme match
+                    word_clean == stem_lower or                   # bare stem
+                    (word_clean.startswith(stem_lower) and len(word_clean) > len(stem_lower))  # stem + suffix
+                )
                 if not stem_found:
                     continue
                 
-                segmented, gloss = analyze_word(word_clean)
                 entry = (word_clean, segmented, gloss, verse_id)
-                
-                # Categorize based on segmented form and gloss
                 gloss_parts = gloss.split('-') if gloss else []
-                seg_parts = segmented.split('-') if segmented else []
                 
-                # Bare form
+                # Detect features from gloss
+                # Check for possessor prefixes first (these contain PL in 1PL, 2PL, 3PL)
+                poss_markers = ('1SG.POSS', '2SG.POSS', '3SG.POSS', '1PL.POSS', '2PL.POSS', '3PL.POSS',
+                                '1SG', '2SG', '3SG', '1PL', '2PL', '3PL', '1PL.INCL', '1PL.EXCL')
+                has_poss = any(g in poss_markers for g in gloss_parts)
+                
+                # PL as suffix (not as part of 1PL, 2PL, etc.)
+                has_pl = 'PL' in gloss_parts and not any(g in ('1PL', '2PL', '3PL', '1PL.INCL', '1PL.EXCL', '1PL.POSS', '2PL.POSS', '3PL.POSS') for g in gloss_parts if g == 'PL')
+                # Actually simpler: check if '-te' or '-PL' is at end or followed by case
+                has_pl = '-te' in segmented or any(g == 'PL' for g in gloss_parts)
+                
+                has_erg = 'ERG' in gloss_parts
+                has_loc = 'LOC' in gloss_parts
+                has_abl = 'ABL' in gloss_parts
+                has_com = 'COM' in gloss_parts
+                has_case = has_erg or has_loc or has_abl or has_com
+                
+                # Get possessor person if present
+                poss_person = None
+                for g in gloss_parts:
+                    if g in ('1SG.POSS', '1SG'):
+                        poss_person = '1sg'
+                    elif g in ('2SG.POSS', '2SG'):
+                        poss_person = '2sg'
+                    elif g in ('3SG.POSS', '3SG'):
+                        poss_person = '3sg'
+                    elif g in ('1PL.POSS', '1PL', '1PL.INCL', '1PL.EXCL'):
+                        poss_person = '1pl'
+                    elif g in ('2PL.POSS', '2PL'):
+                        poss_person = '2pl'
+                    elif g in ('3PL.POSS', '3PL'):
+                        poss_person = '3pl'
+                    if poss_person:
+                        break
+                
+                # Categorize hierarchically:
+                # POSS+PL+CASE > POSS+CASE > POSS+PL > PL+CASE > POSS > PL > CASE > BARE
+                
                 if word_clean == stem_lower:
                     forms['bare'].append(entry)
-                # Check for possessed + case combinations
-                elif any(segmented.startswith(p) for p in ('ka-', 'na-', 'a-', 'i-')) and \
-                     any(g in ('ERG', 'LOC', 'ABL', 'COM') for g in gloss_parts):
-                    forms['poss_case'].append(entry)
-                # Check for COM.PL (comitative + plural in either order)
-                elif 'COM' in gloss_parts and 'PL' in gloss_parts:
-                    forms['number_com_pl'].append(entry)
-                # Case markers (single case, not possessed)
-                elif gloss.endswith('-ABL') or 'ABL' in gloss_parts:
-                    forms['case_abl'].append(entry)
-                elif gloss.endswith('-ERG') or (segmented.endswith('-in') and 'ERG' in gloss_parts):
-                    forms['case_erg'].append(entry)
-                elif gloss.endswith('-LOC') or segmented.endswith('-ah'):
-                    forms['case_loc'].append(entry)
-                elif gloss.endswith('-COM') or 'COM' in gloss_parts:
-                    forms['case_com'].append(entry)
-                # Number marking (plural)
-                elif '-te' in segmented or segmented.endswith('-te') or 'PL' in gloss_parts:
+                elif has_poss and has_pl and has_case:
+                    forms['poss_pl_case'].append(entry)
+                elif has_poss and has_case:
+                    cat = f'poss_{poss_person}_case' if poss_person else 'poss_1sg_case'
+                    if cat in forms:
+                        forms[cat].append(entry)
+                    else:
+                        forms['poss_1sg_case'].append(entry)
+                elif has_poss and has_pl:
+                    if poss_person in ('1sg', '2sg', '3sg'):
+                        forms[f'poss_{poss_person}_pl'].append(entry)
+                    else:
+                        forms['poss_pl_pl'].append(entry)
+                elif has_pl and has_case:
+                    if has_erg:
+                        forms['pl_erg'].append(entry)
+                    elif has_loc:
+                        forms['pl_loc'].append(entry)
+                    elif has_abl:
+                        forms['pl_abl'].append(entry)
+                    elif has_com:
+                        forms['pl_com'].append(entry)
+                elif has_poss:
+                    if poss_person:
+                        forms[f'poss_{poss_person}'].append(entry)
+                    else:
+                        forms['poss_1sg'].append(entry)
+                elif has_pl:
                     forms['number_pl'].append(entry)
-                # Possessed forms by person
-                elif segmented.startswith('ka-') or gloss.startswith('1SG'):
-                    forms['poss_1sg'].append(entry)
-                elif segmented.startswith('na-') or gloss.startswith('2SG'):
-                    forms['poss_2sg'].append(entry)
-                elif segmented.startswith('a-') or gloss.startswith('3SG'):
-                    forms['poss_3sg'].append(entry)
-                elif segmented.startswith('i-') or gloss.startswith('1PL'):
-                    forms['poss_1pl'].append(entry)
-                # Compounds
-                elif '-' in segmented and stem_lower in segmented:
+                elif has_case:
+                    if has_erg:
+                        forms['case_erg'].append(entry)
+                    elif has_loc:
+                        forms['case_loc'].append(entry)
+                    elif has_abl:
+                        forms['case_abl'].append(entry)
+                    elif has_com:
+                        forms['case_com'].append(entry)
+                elif '-' in segmented:
                     forms['compounds'].append(entry)
                 else:
                     forms['other'].append(entry)
                 
-                # Limit results
                 total = sum(len(v) for v in forms.values())
                 if total >= limit:
                     break
@@ -17842,30 +17890,69 @@ def format_paradigm(stem: str, forms: Dict, show_verses: bool = False) -> str:
     
     category_names = {
         'bare': 'Bare form',
+        # Case (singular)
         'case_erg': 'Ergative (-in)',
         'case_loc': 'Locative (-ah)',
         'case_abl': 'Ablative (-panin)',
         'case_com': 'Comitative (-tawh)',
+        # Plural
         'number_pl': 'Plural (-te)',
-        'number_com_pl': 'Comitative + Plural',
+        # Plural + Case
+        'pl_erg': 'Plural + Ergative (-te-in)',
+        'pl_loc': 'Plural + Locative (-te-ah)',
+        'pl_abl': 'Plural + Ablative (-te-panin)',
+        'pl_com': 'Plural + Comitative (-te-tawh)',
+        # Possessed
         'poss_1sg': 'Possessed 1SG (ka-)',
         'poss_2sg': 'Possessed 2SG (na-)',
         'poss_3sg': 'Possessed 3SG (a-)',
-        'poss_1pl': 'Possessed 1PL (i-)',
-        'poss_case': 'Possessed + Case',
+        'poss_1pl': 'Possessed 1PL (i-/kan-)',
+        'poss_2pl': 'Possessed 2PL (nan-)',
+        'poss_3pl': 'Possessed 3PL (an-)',
+        # Possessed + Case
+        'poss_1sg_case': 'Possessed 1SG + Case (ka-N-CASE)',
+        'poss_2sg_case': 'Possessed 2SG + Case (na-N-CASE)',
+        'poss_3sg_case': 'Possessed 3SG + Case (a-N-CASE)',
+        'poss_1pl_case': 'Possessed 1PL + Case (i-N-CASE)',
+        'poss_2pl_case': 'Possessed 2PL + Case (nan-N-CASE)',
+        'poss_3pl_case': 'Possessed 3PL + Case (an-N-CASE)',
+        # Possessed + Plural
+        'poss_1sg_pl': 'Possessed 1SG + Plural (ka-N-te)',
+        'poss_2sg_pl': 'Possessed 2SG + Plural (na-N-te)',
+        'poss_3sg_pl': 'Possessed 3SG + Plural (a-N-te)',
+        'poss_pl_pl': 'Possessed PL + Plural (i/kan/nan/an-N-te)',
+        # Possessed + Plural + Case
+        'poss_pl_case': 'Possessed + Plural + Case (POSS-N-te-CASE)',
+        # Other
         'compounds': 'In compounds',
         'other': 'Other forms'
     }
     
-    for cat, entries in forms.items():
-        if not entries:
+    # Define display order
+    display_order = [
+        'bare',
+        'case_erg', 'case_loc', 'case_abl', 'case_com',
+        'number_pl',
+        'pl_erg', 'pl_loc', 'pl_abl', 'pl_com',
+        'poss_1sg', 'poss_2sg', 'poss_3sg', 'poss_1pl', 'poss_2pl', 'poss_3pl',
+        'poss_1sg_case', 'poss_2sg_case', 'poss_3sg_case', 'poss_1pl_case', 'poss_2pl_case', 'poss_3pl_case',
+        'poss_1sg_pl', 'poss_2sg_pl', 'poss_3sg_pl', 'poss_pl_pl',
+        'poss_pl_case',
+        'compounds', 'other'
+    ]
+    
+    for cat in display_order:
+        if cat not in forms or not forms[cat]:
             continue
-        lines.append(f"## {category_names[cat]} ({len(entries)} forms)")
-        for word, seg, gloss, verse_id in entries:
+        entries = forms[cat]
+        name = category_names.get(cat, cat)
+        lines.append(f"## {name} ({len(entries)} forms)")
+        for entry in entries:
+            word, seg, gloss, verse_id = entry
             if show_verses:
-                lines.append(f"  {word:<20} {seg:<25} '{gloss}' [{verse_id}]")
+                lines.append(f"  {word:<20} {seg:<30} '{gloss}' [{verse_id}]")
             else:
-                lines.append(f"  {word:<20} {seg:<25} '{gloss}'")
+                lines.append(f"  {word:<20} {seg:<30} '{gloss}'")
         lines.append("")
     
     return '\n'.join(lines)
