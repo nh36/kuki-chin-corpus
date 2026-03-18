@@ -1940,6 +1940,46 @@ VERB_STEMS = {
     'tukkhiat': 'pluck.off',       # 1x Gen 8:11 - olive leaf "pluckt off"
     'niamsuk': 'let.down',         # 1x Gen 24:18 - "let down her pitcher"
     # Note: tun (arrive) already in NOUN_STEMS line 4156 - tunpih = arrive-APPL = bring
+    
+    # === Lexicon internalization (2024-03-18) ===
+    # Verbs from external ctd_lexicon.tsv
+    'nasep': 'work',         # 345x
+    'ngen': 'pray',          # 329x
+    'phawk': 'remember',     # 328x
+    'huh': 'help',           # 299x
+    'khawm': 'gather',       # 252x
+    'hal': 'burn',           # 173x
+    'suan': 'plant',         # 171x
+    'hanga': 'offer',        # 170x
+    'dot': 'ask',            # 128x
+    'lamtak': 'know',        # 82x
+    'ten': 'dwell',          # 68x
+    'kia': 'fall',           # 66x
+    'lawng': 'touch',        # 57x
+    'hetloin': 'fear',       # 56x - compound
+    'tuh': 'sow',            # 29x
+    'huhpa': 'helper',       # 26x - nominalized
+    'din': 'stand',          # 23x
+    'longal': 'save',        # 21x
+    'phetun': 'hear',        # 18x
+    'kisil': 'wash',         # 17x
+    'phawkkha': 'remember',  # 17x
+    'kuaitan': 'break',      # 15x
+    'maw': 'see',            # 14x
+    'boksuk': 'fall',        # 14x - compound
+    'zuaupi': 'see',         # 14x
+    'bok': 'fall',           # 13x
+    'lencip': 'hold',        # 13x
+    'dok': 'draw',           # 12x
+    'kuaihtansak': 'break',  # 12x - causative
+    'pulh': 'fall',          # 11x
+    'tusuk': 'sit',          # 10x
+    'huging': 'hear',        # 10x
+    'lawngkha': 'touch',     # 8x
+    'bua': 'pour',           # 8x
+    'kipuaseh': 'cut',       # 5x
+    'lehhei': 'turn',        # 3x
+    'kitawng': 'strive',     # 15x - final lexicon internalization
 }
 
 
@@ -3042,6 +3082,319 @@ NOUN_STEMS = {
     'gisuang': 'boundary',   # 1x Job 24:2 - "landmarks"
     'gitta': 'sparrow',      # 1x Matt 10:29 - "sparrows"
     'guah': 'rain',          # for guahtui compound (rain-water)
+    
+    # === Lexicon internalization (2024-03-18) ===
+    # These words were previously only in external ctd_lexicon.tsv
+    # Now internalized for self-contained analyzer
+    
+    # High-frequency nouns (>100x)
+    'lam': 'way',            # 883x - road, path, direction
+    'lian': 'great',         # 364x - big, large, chief
+    'peuhmah': 'whosoever',  # 355x - anyone (indefinite pronoun)
+    'mei': 'fire',           # 350x
+    'mang': 'dream',         # 349x
+    'namsau': 'sword',       # 347x
+    'pumpi': 'body',         # 336x - physical body
+    'ngun': 'silver',        # 294x
+    'suang': 'stone',        # 293x
+    'pu': 'grandfather',     # 256x - also ancestor
+    'heh': 'anger',          # 253x
+    'manun': 'sin',          # 242x
+    'tahen': 'army',         # 230x - also "amen" (homophone)
+    'tokhom': 'throne',      # 198x
+    'pang': 'side',          # 191x
+    'khe': 'foot',           # 188x
+    'gun': 'river',          # 169x - also place name element
+    'takpi': 'indeed',       # 167x - emphatic adverb
+    'hai': 'cup',            # 167x
+    'beek': 'only',          # 165x - "neither" in context
+    'sehnel': 'wilderness',  # 152x
+    'leilu': 'north',        # 149x
+    'seh': 'appoint',        # 146x
+    'tuutal': 'ram',         # 144x
+    'teci': 'witness',       # 143x
+    'tegel': 'both',         # 140x - "two together"
+    'leitaw': 'south',       # 126x
+    'thaman': 'reward',      # 126x
+    'tuni': 'today',         # 121x
+    'makai': 'prince',       # 118x
+    'dim': 'full',           # 117x
+    'lecin': 'offend',       # 112x
+    'taklam': 'right',       # 110x - right side
+    'dih': 'consider',       # 109x
+    'thuk': 'deep',          # 105x
+    'thong': 'prison',       # 104x
+    'huih': 'wind',          # 102x
+    'muang': 'trust',        # 101x
+    'neu': 'small',          # 101x
+    
+    # Medium-frequency nouns (50-100x)
+    'tulkhat': 'thousand',   # 96x - one thousand
+    'phuak': 'utter',        # 95x - pronounce, call
+    'meii': 'cloud',         # 95x
+    'lehang': 'verily',      # 93x
+    'sungteng': 'nine',      # 92x
+    'zu': 'wine',            # 92x
+    'guan': 'spirit',        # 92x
+    'tham': 'moreover',      # 90x
+    'lupna': 'bed',          # 90x
+    'lianzaw': 'greater',    # 87x
+    'oliv': 'olive',         # 86x
+    'tha': 'strength',       # 86x
+    'don': 'regard',         # 84x
+    'tawlkhat': 'little',    # 83x
+    'koi': 'whence',         # 83x
+    'leivui': 'dust',        # 81x
+    'tacil': 'firstborn',    # 81x
+    'han': 'sepulchre',      # 79x - grave, tomb
+    'manpha': 'precious',    # 78x
+    'kuama': 'charge',       # 78x
+    'taamtak': 'cedar',      # 75x
+    'tanvei': 'long',        # 73x
+    'zuau': 'lie',           # 72x - falsehood
+    'kivui': 'bury',         # 71x
+    'phak': 'year',          # 69x
+    'gik': 'shekel',         # 69x
+    'phazah': 'number',      # 68x
+    'meigong': 'widow',      # 66x
+    'gunkuang': 'ship',      # 66x
+    'vasa': 'bird',          # 63x
+    'zut': 'overlay',        # 62x
+    'tulnih': 'two.thousand', # 62x
+    'hau': 'rich',           # 61x
+    'zon': 'seek',           # 61x
+    'pek': 'everlasting',    # 60x
+    'tuk': 'stumble',        # 57x
+    'dung': 'length',        # 56x
+    'lampang': 'side',       # 54x
+    'phot': 'first',         # 53x
+    'suangmanpha': 'precious.stone', # 53x
+    'vive': 'thing',         # 52x
+    'ngitnget': 'continually', # 52x
+    'po': 'grow',            # 51x
+    'suangpi': 'rock',       # 51x
+    'maang': 'vision',       # 50x
+    
+    # Lower-frequency nouns (20-50x)
+    'thehthang': 'scatter',  # 48x
+    'suangtum': 'stone',     # 48x
+    'leihawm': 'pit',        # 47x
+    'go': 'kill',            # 47x
+    'dawimangpa': 'devil',   # 47x
+    'kiu': 'corner',         # 46x
+    'tamzaw': 'greater',     # 46x
+    'tawn': 'loaf',          # 46x
+    'den': 'neither',        # 45x
+    'hanthawn': 'exhort',    # 43x
+    'belh': 'refuge',        # 43x
+    'pupi': 'ancestor',      # 42x - forefathers
+    'kimkot': 'round',       # 42x
+    'gul': 'viper',          # 42x
+    'leimong': 'end',        # 42x
+    'gual': 'row',           # 41x
+    'taam': 'tarry',         # 41x
+    'kimkhat': 'half',       # 40x
+    'ha': 'tooth',           # 40x
+    'tulthum': 'three.thousand', # 40x
+    'mangthang': 'perish',   # 40x
+    'pusuak': 'mouth',       # 40x
+    'tuaci': 'man',          # 39x
+    'themkhat': 'part',      # 39x
+    'se': 'dragon',          # 38x
+    'taangko': 'proclaim',   # 38x
+    'tausang': 'tower',      # 37x
+    'bawngno': 'calf',       # 37x
+    'hankhuk': 'sepulchre',  # 36x
+    'tulli': 'four.thousand', # 35x
+    'eima': 'our.god',       # 34x
+    'hehnem': 'comfort',     # 34x
+    'meikhu': 'smoke',       # 34x
+    'leitawi': 'lend',       # 34x
+    'kual': 'ring',          # 34x
+    'giak': 'lodge',         # 33x
+    'thawl': 'bottle',       # 32x
+    'harp': 'harp',          # 32x
+    'bel': 'trust',          # 32x
+    'mawknapi': 'vanity',    # 31x
+    'lamen': 'hope',         # 31x
+    'khristian': 'brother',  # 31x
+    'tawsaw': 'oak',         # 30x
+    'khedap': 'shoe',        # 30x
+    'hoh': 'today',          # 30x
+    'tulnga': 'five.thousand', # 30x
+    'leinuai': 'hell',       # 30x
+    'suangpek': 'table',     # 29x
+    'leiba': 'debt',         # 29x
+    'lehhek': 'betray',      # 29x
+    'moh': 'cake',           # 28x
+    'kisiansuah': 'sanctify', # 28x
+    'pumkhat': 'body',       # 28x
+    'kin': 'god',            # 27x
+    'khu': 'smoke',          # 27x
+    'phei': 'woof',          # 27x
+    'diang': 'rejoice',      # 27x
+    'tulsagih': 'seven.thousand', # 27x
+    'gitloh': 'wick',        # 26x
+    'zekai': 'tarry',        # 26x
+    'tavuan': 'bear',        # 26x
+    'melhoih': 'fair',       # 25x
+    'vut': 'ash',            # 25x
+    'gum': 'pit',            # 25x
+    'mul': 'hair',           # 24x
+    'haltum': 'firebrand',   # 24x
+    'liam': 'wound',         # 24x
+    'tuancil': 'tread',      # 24x
+    'dawl': 'chamber',       # 23x
+    'maa': 'prosper',        # 23x
+    'phiat': 'name',         # 23x
+    'kol': 'loose',          # 23x
+    'mangmat': 'dream',      # 23x
+    'hell': 'hell',          # 23x
+    'gunpi': 'river',        # 22x
+    'vom': 'black',          # 22x
+    'koh': 'thanksgiving',   # 22x
+    'denglum': 'stone',      # 22x
+    'jubilee': 'jubilee',    # 22x
+    'dawivei': 'devil',      # 22x
+    'bokvak': 'creep',       # 21x
+    'tawlet': 'window',      # 21x
+    'phalbi': 'winter',      # 21x
+    'buan': 'clay',          # 21x
+    'kheel': 'repent',       # 21x
+    'phun': 'murmur',        # 21x
+    'kih': 'abhor',          # 21x
+    'tulguk': 'six.thousand', # 21x
+    'tee': 'glitter',        # 21x
+    'hangtakin': 'boldly',   # 21x
+    'hawk': 'roar',          # 21x
+    'hahkat': 'man',         # 21x
+    'tuucing': 'shepherd',   # 20x
+    'kimkota': 'round',      # 20x
+    'bual': 'pool',          # 20x
+    'thutheihna': 'knowledge', # 20x
+    'gige': 'watch',         # 20x
+    'thawhkik': 'resurrection', # 20x
+    
+    # Lower-frequency nouns (10-20x)
+    'khek': 'change',        # 19x
+    'myrrh': 'myrrh',        # 19x
+    'zumhuai': 'shame',      # 19x
+    'hakkol': 'yoke',        # 19x
+    'dawm': 'god',           # 19x
+    'gungal': 'river',       # 19x
+    'thangzak': 'snare',     # 18x
+    'vil': 'watch',          # 18x
+    'bupa': 'centurion',     # 18x
+    'pusuah': 'lord',        # 17x
+    'pumpeeng': 'whole',     # 17x
+    'hupa': 'shield',        # 17x
+    'meet': 'usury',         # 17x
+    'sungun': 'day',         # 17x
+    'komau': 'thus',         # 17x
+    'huihlak': 'air',        # 16x
+    'ek': 'dung',            # 16x
+    'ui': 'dog',             # 16x
+    'seu': 'ephah',          # 16x
+    'moi': 'young',          # 15x
+    'tuucingpa': 'shepherd', # 15x
+    'gilpi': 'cover',        # 15x
+    'pakan': 'spoon',        # 15x
+    'daitakin': 'quietly',   # 15x
+    'golzaw': 'arch',        # 15x
+    'vanpi': 'heaven',       # 15x
+    'sehthumsuah': 'third',  # 15x
+    'lano': 'colt',          # 14x
+    'ngenthang': 'net',      # 14x
+    'tazen': 'god',          # 14x
+    'leiseek': 'brick',      # 13x
+    'ciing': 'barren',       # 13x
+    'leisung': 'earth',      # 13x
+    'molhtum': 'stave',      # 13x
+    'makpa': 'law',          # 13x
+    'beeng': 'smite',        # 13x
+    'dide': 'lord',          # 13x
+    'tamngai': 'pipe',       # 12x
+    'meh': 'pottage',        # 12x
+    'suangcian': 'heap',     # 12x
+    'tentan': 'imagination', # 12x
+    'biing': 'hin',          # 12x
+    'khul': 'fire',          # 12x
+    'phin': 'provoke',       # 12x
+    'guam': 'valley',        # 12x
+    'khebai': 'lame',        # 12x
+    'tambong': 'bath',       # 12x
+    'lianpa': 'king',        # 12x
+    'haihuai': 'foolishness', # 12x
+    'kohkhit': 'thank',      # 12x
+    'onik': 'onyx',          # 11x
+    'meiphualpi': 'lake',    # 11x
+    'lamlak': 'counsellor',  # 11x
+    'buhtu': 'straw',        # 11x
+    'tuum': 'water',         # 11x
+    'geihual': 'crown',      # 11x
+    'sek': 'hammer',         # 11x
+    'eknel': 'cud',          # 11x
+    'tulgiat': 'eighteen.thousand', # 11x
+    'sual': 'floor',         # 11x
+    'phiaukawi': 'sickle',   # 11x
+    'mothak': 'bride',       # 11x
+    'lamsang': 'evil',       # 11x
+    'pingpei': 'whirlwind',  # 11x
+    'tuumcip': 'water',      # 10x
+    'almond': 'almond',      # 10x
+    'tubang': 'morrow',      # 10x
+    'tuzan': 'night',        # 10x
+    'maavang': 'prosper',    # 10x
+    'vompi': 'bear',         # 10x
+    'tonu': 'mistress',      # 9x
+    'bem': 'round',          # 9x
+    'bit': 'full',           # 9x
+    'zungbuh': 'ring',       # 9x
+    'beem': 'homer',         # 9x
+    'lawnsuk': 'down',       # 9x
+    'guntui': 'river',       # 9x
+    'liamma': 'wound',       # 9x
+    'buannawng': 'mire',     # 9x
+    'mantak': 'verily',      # 9x
+    'donga': 'day',          # 8x
+    'leilam': 'bow',         # 8x
+    'meimatum': 'boil',      # 8x
+    'vok': 'swine',          # 8x
+    'mettol': 'head',        # 8x
+    'mangmu': 'tribute',     # 8x
+    'kuahawm': 'bottomless', # 8x
+    'pukkhak': 'lest',       # 8x
+    'liik': 'hand',          # 7x
+    'tanzau': 'large',       # 7x
+    'jasper': 'jasper',      # 7x
+    'khutpi': 'thumb',       # 7x
+    'liak': 'lord',          # 7x
+    'kuamsung': 'valley',    # 7x
+    'tamlawh': 'lamentation', # 7x
+    'suplawh': 'lose',       # 7x
+    'hagawi': 'gnash',       # 7x
+    'thampek': 'good',       # 7x
+    'gawt': 'hand',          # 6x
+    'gulhgawng': 'ill',      # 6x
+    'emerald': 'emerald',    # 6x
+    'iik': 'breast',         # 6x
+    'song': 'image',         # 6x
+    'leilesuang': 'mason',   # 6x
+    'suat': 'yoke',          # 6x
+    'darik': 'dram',         # 6x
+    'bualtui': 'water',      # 6x
+    'kuum': 'firmament',     # 6x
+    'efah': 'ephah',         # 5x
+    'topaz': 'topaz',        # 5x
+    'gerah': 'gerah',        # 5x
+    'luak': 'vomit',         # 5x
+    'zune': 'drink',         # 5x
+    'epel': 'apple',         # 5x
+    'lolai': 'field',        # 5x
+    'suangtumpi': 'stone',   # 4x
+    'awi': 'warm',           # 4x
+    'supai': 'down',         # 2x
+    'sunthapai': 'long',     # 2x
 }
 
 
@@ -4541,6 +4894,109 @@ PROPER_NOUNS = {
     'suf',           # Suf/Suph - Red Sea area (Deut 1:1)
     # Round 199: More proper nouns
     'reke',          # Rekem - Midianite king (Josh 13:21)
+    
+    # === Lexicon internalization (2024-03-18) ===
+    # Biblical proper nouns from external ctd_lexicon.tsv (lowercase forms)
+    'david',         # 1053x - King David
+    'moses',         # 866x
+    'khrih',         # 643x - Christ
+    'jew',           # 346x
+    'jakob',         # 339x - Jacob
+    'solomon',       # 303x
+    'josef',         # 271x - Joseph
+    'faro',          # 269x - Pharaoh
+    'joshua',        # 224x
+    'peter',         # 217x
+    'jordan',        # 190x
+    'johan',         # 169x - John
+    'benjamin',      # 153x
+    'manasseh',      # 146x
+    'jonathan',      # 120x
+    'syria',         # 119x
+    'hangun',        # 117x - Christ variant/compound
+    'esau',          # 110x
+    'jeroboam',      # 104x
+    'elijah',        # 96x
+    'ezekiel',       # 94x
+    'farisi',        # 93x - Pharisee
+    'reuben',        # 87x
+    'galilee',       # 85x
+    'jehoshafat',    # 85x - Jehoshaphat
+    'gad',           # 81x
+    'job',           # 69x
+    'daniel',        # 69x
+    'mary',          # 64x
+    'lebanon',       # 62x
+    'herod',         # 59x
+    'jerikho',       # 56x - Jericho
+    'josiah',        # 56x
+    'eufratis',      # 54x - Euphrates
+    'judea',         # 49x
+    'simeon',        # 48x
+    'gideon',        # 45x
+    'rom',           # 44x - Roman
+    'zebulun',       # 43x
+    'kohath',        # 42x
+    'judas',         # 41x
+    'james',         # 41x
+    'issakhar',      # 37x - Issachar
+    'ethiopia',      # 35x
+    'korah',         # 34x
+    'ginalo',        # 39x - Belial
+    'persia',        # 30x
+    'boaz',          # 29x
+    'jonah',         # 29x
+    'grik',          # 26x - Greek
+    'masedonia',     # 25x - Macedonia
+    'refaim',        # 17x - Rephaim
+    'kapernaum',     # 17x - Capernaum
+    'zebedi',        # 11x - Zebedee
+    'apollos',       # 11x
+    'ofir',          # 10x - Ophir
+    'molek',         # 10x - Molech
+    'shefelah',      # 10x - Shephelah
+    'thesalonika',   # 10x - Thessalonica
+    'korin',         # 10x - Corinth
+    'jakhin',        # 9x - Jachin
+    'jabeshgilead',  # 9x - Jabesh-Gilead
+    'shadrak',       # 9x - Shadrach
+    'kiriatharba',   # 8x - Kiriath-Arba
+    'sapfaia',       # 8x - Sapphire (place)
+    'maakath',       # 8x - Maachathite
+    'khereth',       # 8x - Cherethite
+    'meshek',        # 8x - Meshech
+    'khebar',        # 8x - Chebar river
+    'girgash',       # 7x - Girgashite
+    'hanok',         # 7x - Hanoch
+    'bethshemesh',   # 7x - Beth-Shemesh
+    'ahinoam',       # 7x
+    'tishbe',        # 7x - Tishbite
+    'sefarvaim',     # 7x - Sepharvaim
+    'memfis',        # 7x - Memphis
+    'amos',          # 7x
+    'filippi',       # 7x - Philippi
+    'bethaven',      # 6x - Beth-Aven
+    'taanak',        # 6x - Taanach
+    'bethshean',     # 6x - Beth-Shean
+    'hushah',        # 6x - Hushathite
+    'laodisia',      # 6x - Laodicea
+    'hofni',         # 5x - Hophni
+    'refaiah',       # 5x - Rephaiah
+    'ekanah',        # 5x - Elkanah
+    'tarsas',        # 5x - Tarsus
+    'tikhikas',      # 5x - Tychicus
+    'bethhoron',     # 14x - Beth-Horon
+    'andru',         # 13x - Andrew
+    'martha',        # 13x
+    'efesa',         # 21x - Ephesus
+    'elizabeth',     # 12x - Elisabeth
+    'marka',         # 11x - Mark
+    'kornelias',     # 9x - Cornelius
+    'elifelet',      # 7x - Eliphelet
+    'feliks',        # 7x - Felix
+    'eziongeber',    # 3x - Ezion-Geber
+    'refidim',       # 2x - Rephidim
+    'mediterranean', # 11x
 }
 
 # =============================================================================

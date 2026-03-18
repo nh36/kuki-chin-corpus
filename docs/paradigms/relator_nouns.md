@@ -82,8 +82,8 @@ Which cases do relator nouns most commonly appear in?
 | khempeuh | 243 |  | Mar 13:10: "And the gospel must first be published a..." | Gen 1:30: "And to every beast of the earth, and to ..." | Exo 16:1: "And they took their journey from Elim, a..." |
 | a | 166 | POSS | Mar 5:1: "And they came over unto the other side o..." | Gen 12:5: "And Abram took Sarai his wife, and Lot h..." | Exo 2:15: "Now when Pharaoh heard this thing, he so..." |
 | nang | 162 |  | Mar 1:11: "and there came a voice from heaven, sayi..." | Gen 3:16: "Unto the woman he said, I will greatly m..." | Exo 24:12: "And the LORD said unto Moses, Come up to..." |
-| nangma | 138 |  | Joh 17:19: "And for their sakes I sanctify myself, t..." | Gen 17:8: "And I will give unto thee, and to thy se..." | Exo 10:16: "Then Pharaoh called for Moses and Aaron ..." |
-| uh | 124 |  | Mat 7:11: "If ye then, being evil, know how to give..." | Gen 47:18: "When that year was ended, they came unto..." | Exo 3:22: "but every woman shall borrow of her neig..." |
+| nangma | 138 |  | Luk 1:35: "And the angel answered and said unto her..." | Gen 17:8: "And I will give unto thee, and to thy se..." | Exo 10:16: "Then Pharaoh called for Moses and Aaron ..." |
+| uh | 124 |  | Luk 11:13: "If ye then, being evil, know how to give..." | Gen 47:18: "When that year was ended, they came unto..." | Exo 3:22: "but every woman shall borrow of her neig..." |
 | lu | 98 |  | Mar 14:3: "And being in Bethany in the house of Sim..." | Gen 40:16: "When the chief baker saw that the interp..." | Exo 29:6: "and thou shalt put the mitre upon his he..." |
 | pasian | 97 |  | Mar 6:41: "And when he had taken the five loaves an..." | Gen 14:22: "And Abram said to the king of Sodom, I h..." | Exo 8:25: "And Pharaoh called for Moses and for Aar..." |
 | pasian' | 96 | GEN | Mar 12:17: "And Jesus answering said unto them, Rend..." | Gen 20:17: "So Abraham prayed unto God: and God heal..." | Exo 10:16: "Then Pharaoh called for Moses and Aaron ..." |
@@ -141,7 +141,7 @@ Which cases do relator nouns most commonly appear in?
 | khua | 108 |  | Mar 1:45: "But he went out, and began to publish it..." | Deu 17:8: "If there arise a matter too hard for the..." | Jos 10:30: "and the LORD delivered it also, and the ..." |
 | khat | 103 |  | Mar 6:25: "And she came in straightway with haste u..." | Gen 29:27: "Fulfil her week, and we will give thee t..." | Exo 12:2: "This month shall be unto you the beginni..." |
 | siangtho | 96 |  | Mar 1:2: "As it is written in the prophets, Behold..." | 1Sa 3:3: "and ere the lamp of God went out in the ..." | Neh 11:18: "All the Levites in the holy city were tw..." |
-| laibu | 93 |  | Joh 1:45: "Philip findeth Nathanael, and saith unto..." | Exo 17:14: "And the LORD said unto Moses, Write this..." | Num 21:14: "Wherefore it is said in the book of the ..." |
+| laibu | 93 |  | Luk 11:49: "Therefore also said the wisdom of God, I..." | Exo 17:14: "And the LORD said unto Moses, Write this..." | Num 21:14: "Wherefore it is said in the book of the ..." |
 | thum | 85 |  | Mar 15:33: "And when the sixth hour was come, there ..." | Gen 42:17: "And he put them all together into ward t..." | Exo 2:2: "And the woman conceived, and bare a son:..." |
 | hun | 81 |  | Mar 14:2: "But they said, Not on the feast day , le..." | Gen 29:28: "And Jacob did so, and fulfilled her week..." | Exo 34:21: "Six days thou shalt work, but on the sev..." |
 | lungsim | 79 |  | Mar 2:6: "But there were certain of the scribes si..." | Gen 8:21: "And the LORD smelled a sweet savour; and..." | Exo 4:14: "And the anger of the LORD was kindled ag..." |
@@ -201,8 +201,8 @@ Which cases do relator nouns most commonly appear in?
 | kumpipa | 151 |  | Mar 6:25: "And she came in straightway with haste u..." | Gen 14:22: "And Abram said to the king of Sodom, I h..." | Exo 3:18: "And they shall hearken to thy voice: and..." |
 | jesuh | 130 |  | Mar 1:32: "And at even, when the sun did set, they ..." | Mat 8:16: "When the even was come, they brought unt..." | Luk 4:3: "And the devil said unto him, If thou be ..." |
 | david | 97 |  | 1Sa 17:33: "And Saul said to David, Thou art not abl..." | 2Sa 1:2: "it came even to pass on the third day, t..." | 1Ki 1:13: "Go and get thee in unto king David, and ..." |
-| nang | 95 |  | Joh 18:30: "They answered and said unto him, If he w..." | Gen 6:20: "Of fowls after their kind, and of cattle..." | Exo 18:6: "and he said unto Moses, I thy father in ..." |
-| pasian | 87 |  | Joh 13:3: "Jesus knowing that the Father had given ..." | Gen 15:10: "And he took unto him all these, and divi..." | Exo 3:11: "And Moses said unto God, Who am I, that ..." |
+| nang | 95 |  | Luk 1:19: "And the angel answering said unto him, I..." | Gen 6:20: "Of fowls after their kind, and of cattle..." | Exo 18:6: "and he said unto Moses, I thy father in ..." |
+| pasian | 87 |  | Luk 6:12: "And it came to pass in those days, that ..." | Gen 15:10: "And he took unto him all these, and divi..." | Exo 3:11: "And Moses said unto God, Who am I, that ..." |
 | pa | 73 |  | Mar 9:21: "And he asked his father, How long is it ..." | Gen 27:10: "and thou shalt bring it to thy father, t..." | Exo 21:8: "If she please not her master, who hath b..." |
 | nungzuite | 52 |  | Mar 2:16: "And when the scribes and Pharisees saw h..." | Mat 8:18: "Now when Jesus saw great multitudes abou..." | Luk 8:25: "And he said unto them, Where is your fai..." |
 | mipa | 46 |  | Mar 2:5: "When Jesus saw their faith, he said unto..." | Gen 2:19: "And out of the ground the LORD God forme..." | Exo 2:13: "And when he went out the second day, beh..." |
@@ -254,10 +254,10 @@ Which cases do relator nouns most commonly appear in?
 |------|-------|-------|----------|----------|----------|
 | mite | 120 |  | Mar 8:38: "Whosoever therefore shall be ashamed of ..." | Exo 29:45: "And I will dwell among the children of I..." | Lev 27:29: "None devoted, which shall be devoted of ..." |
 | note | 94 |  | Mar 10:43: "But so shall it not be among you: but wh..." | Gen 23:4: "I am a stranger and a sojourner with you..." | Lev 16:29: "And this shall be a statute for ever unt..." |
-| a | 79 | POSS | Joh 4:35: "Say not ye, There are yet four months, a..." | Gen 25:20: "and Isaac was forty years old when he to..." | Exo 4:6: "And the LORD said furthermore unto him, ..." |
+| a | 79 | POSS | Luk 1:22: "And when he came out, he could not speak..." | Gen 25:20: "and Isaac was forty years old when he to..." | Exo 4:6: "And the LORD said furthermore unto him, ..." |
 | hong | 77 |  | Mar 14:15: "And he will shew you a large upper room ..." | Gen 24:12: "And he said, O LORD God of my master Abr..." | Exo 7:9: "When Pharaoh shall speak unto you, sayin..." |
 | khempeuh | 46 |  | Mar 4:31: "It is like a grain of mustard seed, whic..." | Gen 30:32: "I will pass through all thy flock to day..." | Lev 4:22: "When a ruler hath sinned, and done somew..." |
-| amaute | 44 |  | Joh 15:24: "If I had not done among them the works w..." | Lev 17:8: "And thou shalt say unto them, Whatsoever..." | Num 13:2: "Send thou men, that they may search the ..." |
+| amaute | 44 |  | Luk 6:2: "And certain of the Pharisees said unto t..." | Lev 17:8: "And thou shalt say unto them, Whatsoever..." | Num 13:2: "Send thou men, that they may search the ..." |
 | na | 35 | POSS | Gen 13:9: "Is not the whole land before thee? separ..." | Exo 4:9: "And it shall come to pass, if they will ..." | Lev 19:9: "And when ye reap the harvest of your lan..." |
 | mite' | 31 | GEN | Gen 23:10: "And Ephron dwelt among the children of H..." | Exo 11:4: "And Moses said, Thus saith the LORD , Ab..." | Lev 25:33: "And if a man purchase of the Levites, th..." |
 | note' | 30 | GEN | Joh 1:26: "John answered them, saying, I baptize wi..." | Gen 23:4: "I am a stranger and a sojourner with you..." | Exo 12:49: "One law shall be to him that is homeborn..." |
@@ -266,7 +266,7 @@ Which cases do relator nouns most commonly appear in?
 | dangte | 17 |  | Lev 26:33: "And I will scatter you among the heathen..." | 1Ch 16:24: "Declare his glory among the heathen; His..." | Neh 1:8: "Remember, I beseech thee, the word that ..." |
 | minamte | 17 |  | Num 23:9: "For from the top of the rocks I see him,..." | Deu 4:27: "And the LORD shall scatter you among the..." | 1Ch 23:14: "Now concerning Moses the man of God, his..." |
 | huih | 15 |  | Gen 1:30: "And to every beast of the earth, and to ..." | Deu 28:26: "And thy carcase shall be meat unto all f..." | 1Sa 17:44: "And the Philistine said to David, Come t..." |
-| mihon | 15 |  | Joh 7:26: "But, lo, he speaketh boldly, and they sa..." | Job 30:28: "I went mourning without the sun: I stood..." | Pro 24:7: "Wisdom is too high for a fool: He openet..." |
+| mihon | 15 |  | Luk 4:35: "And Jesus rebuked him, saying, Hold thy ..." | Job 30:28: "I went mourning without the sun: I stood..." | Pro 24:7: "Wisdom is too high for a fool: He openet..." |
 
 ### Sample Contexts with KJV
 
@@ -372,7 +372,7 @@ Which cases do relator nouns most commonly appear in?
 
 | Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|----------|----------|----------|
-| a | 41 | POSS | Mat 9:25: "But when the people were put forth, he w..." | Gen 15:5: "And he brought him forth abroad, and sai..." | Exo 16:25: "And Moses said, Eat that to day; for to ..." |
+| a | 41 | POSS | Luk 1:10: "And the whole multitude of the people we..." | Gen 15:5: "And he brought him forth abroad, and sai..." | Exo 16:25: "And Moses said, Eat that to day; for to ..." |
 | giahphual | 18 |  | Lev 8:17: "But the bullock, and his hide, his flesh..." | Num 12:14: "And the LORD said unto Moses, If her fat..." | Deu 23:10: "If there be among you any man, that is n..." |
 | khuapi | 13 |  | Gen 24:11: "And he made his camels to kneel down wit..." | Exo 9:33: "And Moses went out of the city from Phar..." | Lev 14:40: "then the priest shall command that they ..." |
 | khua | 4 |  | Gen 19:16: "And while he lingered, the men laid hold..." | Neh 13:20: "So the merchants and sellers of all kind..." | Eze 7:15: "The sword is without, and the pestilence..." |
@@ -380,7 +380,7 @@ Which cases do relator nouns most commonly appear in?
 | inn | 3 |  | Mar 3:31: "There came then his brethren and his mot..." | 1Ki 6:6: "the nethermost chamber was five cubits b..." | Sol 2:9: "My beloved is like a roe Or a young hart..." |
 | biakinn | 3 |  | Neh 11:16: "and Shabbethai and Jozabad, of the chief..." | Act 21:30: "And all the city was moved, and the peop..." | Rev 11:2: "But the court which is without the templ..." |
 | kongpi | 2 |  | Jer 22:19: "He shall be buried with the burial of an..." | Eze 47:2: "Then brought he me out of the way of the..." | — |
-| kong | 2 |  | Joh 18:16: "But Peter stood at the door without. The..." | Luk 13:25: "When once the master of the house is ris..." | — |
+| kong | 2 |  | Luk 13:25: "When once the master of the house is ris..." | Joh 18:16: "But Peter stood at the door without. The..." | — |
 | jerusalem | 2 |  | 2Ki 23:4: "And the king commanded Hilkiah the high ..." | 2Ki 23:6: "And he brought out the grove from the ho..." | — |
 | tual | 2 |  | Mar 14:68: "But he denied, saying, I know not, neith..." | Eze 40:17: "Then brought he me into the outward cour..." | — |
 | kongkhak | 2 |  | Mar 2:2: "And straightway many were gathered toget..." | Eze 41:25: "And there were made on them, on the door..." | — |
@@ -422,7 +422,7 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | lang | 43 | Mat 12:30: *peuhmah keima lang hi uh* — "He that is not with me is against me; and he that ..." | Gen 24:22: *in shekel lang a gik* — "And it came to pass, as the camels had done drinki..." | Exo 23:22: *uh' tungah lang ka hi* — "But if thou shalt indeed obey his voice, and do al..." |
+| Bare | lang | 43 | Luk 11:23: *peuhmah keima lang hi uh* — "He that is not with me is against me: and he that ..." | Gen 24:22: *in shekel lang a gik* — "And it came to pass, as the camels had done drinki..." | Exo 23:22: *uh' tungah lang ka hi* — "But if thou shalt indeed obey his voice, and do al..." |
 | Locative | langah | 34 | Luk 12:52: *phate, a langah thum, a* — "for from henceforth there shall be five in one hou..." | Gen 34:30: *Amaute kei' langah hong kikaikhawmin* — "And Jacob said to Simeon and Levi, Ye have trouble..." | Num 5:13: *manin a langah a pang* — "and a man lie with her carnally, and it be hid fro..." |
 | Ergative | langin | 0 | — | — | — |
 | Ablative | lang pan | 0 | — | — | — |
@@ -438,7 +438,7 @@ Which cases do relator nouns most commonly appear in?
 | shekel | 3 |  | Gen 24:22: "And it came to pass, as the camels had d..." | Exo 30:13: "This they shall give, every one that pas..." | Exo 30:15: "The rich shall not give more, and the po..." |
 | na | 3 | POSS | Luk 12:58: "When thou goest with thine adversary to ..." | Deu 11:25: "There shall no man be able to stand befo..." | Isa 54:17: "No weapon that is formed against thee sh..." |
 | kei' | 3 | GEN | Gen 34:30: "And Jacob said to Simeon and Levi, Ye ha..." | Jdg 20:5: "And the men of Gibeah rose against me, a..." | 2Sa 19:22: "And David said, What have I to do with y..." |
-| keima | 3 |  | Mat 12:30: "He that is not with me is against me; an..." | Psa 109:2: "For the mouth of the wicked and the mout..." | Luk 11:23: "He that is not with me is against me: an..." |
+| keima | 3 |  | Luk 11:23: "He that is not with me is against me: an..." | Psa 109:2: "For the mouth of the wicked and the mout..." | Mat 12:30: "He that is not with me is against me; an..." |
 | eite' | 2 | GEN | 1Sa 29:4: "And the princes of the Philistines were ..." | Lam 2:3: "He hath cut off in his fierce anger All ..." | — |
 | kha | 2 |  | 1Ki 6:24: "And five cubits was the one wing of the ..." | Gal 1:18: "Then after three years I went up to Jeru..." | — |
 | zah | 2 |  | Psa 55:23: "But thou, O God, shalt bring them down i..." | Eze 16:51: "Neither hath Samaria committed half of t..." | — |
@@ -450,9 +450,9 @@ Which cases do relator nouns most commonly appear in?
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 12:30):
+- **Bare** (Luk 11:23):
   - Tedim: *peuhmah keima lang hi uh*
-  - KJV: "He that is not with me is against me; and he that gathereth not with me scattereth abroad."
+  - KJV: "He that is not with me is against me: and he that gathereth not with me scattereth."
 
 - **Bare** (Gen 24:22):
   - Tedim: *in shekel lang a gik*
@@ -564,7 +564,7 @@ Pronouns, demonstratives, and other function words. High frequency with relator 
 | nangma | 2SG.EMPH | 189 |  | Mar 9:17: *manin nangma kiangah kong paipih* — "And one of the multitude answered and sa..." | Gen 17:8: *Nangma tung le nang'* — "And I will give unto thee, and to thy se..." | Exo 10:16: *le nangma tungah ka khial* — "Then Pharaoh called for Moses and Aaron ..." |
 | khat | one | 177 |  | Mar 6:25: *“Kuangdai khat sungah Tuiphumpa Johan'* — "And she came in straightway with haste u..." | Gen 26:1: *dang khat tung hi. Filistia* — "And there was a famine in the land, besi..." | Exo 4:20: *la khat tungah amaute tuangsakin,* — "And Moses took his wife and his sons, an..." |
 | uh | 2/3PL | 168 |  | Mar 16:13: *dangte uh kiangah gen uh* — "And they went and told it unto the resid..." | Gen 47:18: *topa uh tungah kong im* — "When that year was ended, they came unto..." | Exo 3:22: *tanute uh tungah tuate na* — "but every woman shall borrow of her neig..." |
-| na | 2SG.POSS | 142 | POSS | Joh 6:25: *lai na tung na hi* — "And when they had found him on the other..." | Gen 27:28: *in na tungah vantung daitui* — "Therefore God give thee of the dew of he..." | Exo 4:9: *tungah na sung ding a,* — "And it shall come to pass, if they will ..." |
+| na | 2SG.POSS | 142 | POSS | Luk 12:58: *in na tungah thu hong* — "When thou goest with thine adversary to ..." | Gen 27:28: *in na tungah vantung daitui* — "Therefore God give thee of the dew of he..." | Exo 4:9: *tungah na sung ding a,* — "And it shall come to pass, if they will ..." |
 | ka | 1SG.POSS | 135 | POSS | Mar 10:14: *unla, ka kiangah hong paisak* — "But when Jesus saw it , he was much disp..." | Gen 27:25: *nadingin ka kiangah hong paipih* — "And he said, Bring it near to me, and I ..." | Deu 1:22: *vekpi-un ka kiangah nong pai* — "And ye came near unto me every one of yo..." |
 | note' | 2PL-GEN | 117 | GEN | Joh 1:26: *mipa, note' lak mahah hong* — "John answered them, saying, I baptize wi..." | Gen 34:16: *uh note' tungah hong pia-in,* — "then will we give our daughters unto you..." | Exo 3:16: *sungah note' tungah hong kibawlna* — "Go, and gather the elders of Israel toge..." |
 | tua | that | 88 |  | Mar 11:15: *lutin tua sungah sumzuak sumlei-a* — "And they come to Jerusalem: and Jesus we..." | Gen 6:16: *inla, tua tung pi khat* — "A window shalt thou make to the ark, and..." | Exo 20:24: *unla, tua tungah na meihal* — "An altar of earth thou shalt make unto m..." |
@@ -574,7 +574,7 @@ Pronouns, demonstratives, and other function words. High frequency with relator 
 
 Lexical nouns expressing possession of spatial relation (e.g., "house's inside" = "inside the house").
 
-**Total instances**: 7,826 (1077 unique forms)
+**Total instances**: 8,441 (1157 unique forms)
 
 | Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|-------|----------|----------|----------|
@@ -588,18 +588,18 @@ Lexical nouns expressing possession of spatial relation (e.g., "house's inside" 
 | pa | father | 118 |  | Mar 6:2: *Hih pa tungah a kipia* — "And when the sabbath day was come, he be..." | Gen 4:15: *tua pa tungah a zah* — "And the LORD said unto him, Therefore wh..." | Exo 21:34: *nei pa tungah sum pia* — "the owner of the pit shall make it good,..." |
 | sagih | seven | 114 |  | Luk 2:36: *kum sagih sung a tenkhop* — "And there was one Anna, a prophetess, th..." | Gen 8:10: *ni sagih sung ngakin, teembaw* — "And he stayed yet other seven days; and ..." | Exo 12:15: *ni sagih sung silngo sawh* — "Seven days shall ye eat unleavened bread..." |
 | siangtho | holy | 108 |  | Mar 1:2: *Lai Siangtho sungah, “Nangma mai-ah* — "As it is written in the prophets, Behold..." | 1Sa 3:3: *mun siangtho sungah Samuel lum* — "and ere the lamp of God went out in the ..." | 1Ch 16:35: *min siangtho tungah lungdam kong* — "And say ye, Save us, O God of our salvat..." |
-| keima | 1SG.self | 104 |  | Joh 14:30: *in keima tungah aana nei* — "Hereafter I will not talk much with you:..." | Gen 21:23: *bangin keima tung le tawlkhat* — "now therefore swear unto me here by God ..." | Exo 3:16: *Pasian keima tungah hong kilang* — "Go, and gather the elders of Israel toge..." |
+| keima | 1SG.self | 104 |  | Luk 1:38: *bangin keima tungah hong piang* — "And Mary said, Behold the handmaid of th..." | Gen 21:23: *bangin keima tung le tawlkhat* — "now therefore swear unto me here by God ..." | Exo 3:16: *Pasian keima tungah hong kilang* — "Go, and gather the elders of Israel toge..." |
 | lu | head | 98 |  | Mar 14:3: *Jesuh' lu tungah a paknamtui* — "And being in Bethany in the house of Sim..." | Gen 40:16: *Ka lu tungah mohlawh thum* — "When the chief baker saw that the interp..." | Exo 29:6: *Ama lu tungah dialpi khim* — "and thou shalt put the mitre upon his he..." |
 | hun | time | 94 |  | Mar 14:2: *pawi hun sungin hih kei* — "But they said, Not on the feast day , le..." | Gen 35:16: *nausuah hun tung a, amah* — "And they journeyed from Beth-el; and the..." | Exo 34:21: *anlak hun sungin zong na* — "Six days thou shalt work, but on the sev..." |
-| laibu | book | 93 |  | Joh 1:45: *Thukham laibu sungah a gelh* — "Philip findeth Nathanael, and saith unto..." | Exo 17:14: *thu laibu sung khatah gelh* — "And the LORD said unto Moses, Write this..." | Num 21:14: *Gal Laibu sungah, “Sufa gam* — "Wherefore it is said in the book of the ..." |
-| mite' | people-GEN | 80 | GEN | Gen 19:8: *Hih mite' tungah bangmah gamta* — "Behold now, I have two daughters which h..." | Exo 8:21: *na mite' tung le na* — "Else, if thou wilt not let my people go,..." | Lev 25:33: *Israel mite' lakah amau' neihsa* — "And if a man purchase of the Levites, th..." |
+| laibu | book | 93 |  | Luk 11:49: *kici laibu sungah, 'Amaute kiangah* — "Therefore also said the wisdom of God, I..." | Exo 17:14: *thu laibu sung khatah gelh* — "And the LORD said unto Moses, Write this..." | Num 21:14: *Gal Laibu sungah, “Sufa gam* — "Wherefore it is said in the book of the ..." |
+| tokhom | throne | 82 |  | Mar 10:37: *kumpi tokhom tungah na tut* — "They said unto him, Grant unto us that w..." | Exo 25:22: *Hehpihna tokhom tung, thuciamna singkuang* — "And there I will meet with thee, and I w..." | Lev 16:15: *hehpihna tokhom tung le hehpihna* — "Then shall he kill the goat of the sin o..." |
 
 
 ### Proper Nouns as Possessors
 
 Names of people, places, and divine beings. Spatial constructions with proper nouns often indicate location or accompaniment.
 
-**Total instances**: 2,700 (318 unique forms)
+**Total instances**: 2,987 (361 unique forms)
 
 | Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|-------|----------|----------|----------|
@@ -609,40 +609,40 @@ Names of people, places, and divine beings. Spatial constructions with proper no
 | pasian | God | 189 |  | Mar 6:41: *ento-in Pasian tungah lungdamna a* — "And when he had taken the five loaves an..." | Gen 14:22: *Topa Pasian tungah ka kiciam* — "And Abram said to the king of Sodom, I h..." | Exo 8:25: *na Pasian tung uhah biakna* — "And Pharaoh called for Moses and for Aar..." |
 | jesuh | Jesus | 141 |  | Mar 1:32: *in Jesuh kiangah cina khempeuh* — "And at even, when the sun did set, they ..." | Mat 8:16: *in Jesuh kiangah dawivei mi* — "When the even was come, they brought unt..." | Luk 5:17: *vangliatna, Jesuh tungah kipia hi.* — "And it came to pass on a certain day, as..." |
 | topa | Lord | 131 |  | Mar 12:36: *keima Topa tungah thu gen* — "For David himself said by the Holy Ghost..." | Gen 18:31: *in, Topa tungah thu kong* — "And he said, Behold now, I have taken up..." | Exo 4:10: *in Topa kiangah, “Oh, ka* — "And Moses said unto the LORD , O my Lord..." |
-| david | david | 130 |  | 1Sa 30:21: *kiangah David tung hi. David* — "And David came to the two hundred men, w..." | 2Sa 17:24: *ah David tung hi. Absalom* — "Then David came to Mahanaim. And Absalom..." | 1Ki 1:47: *Kumpi David tungah lungdamna a* — "And moreover the king's servants came to..." |
+| david | DAVID | 130 |  | 1Sa 30:21: *kiangah David tung hi. David* — "And David came to the two hundred men, w..." | 2Sa 17:24: *ah David tung hi. Absalom* — "Then David came to Mahanaim. And Absalom..." | 1Ki 1:47: *Kumpi David tungah lungdamna a* — "And moreover the king's servants came to..." |
 | pasian' | God-GEN | 126 | GEN | Mar 12:17: *neihsate Pasian' tungah pia un,”* — "And Jesus answering said unto them, Rend..." | Gen 20:17: *in Pasian' tungah thu ngen* — "So Abraham prayed unto God: and God heal..." | Exo 10:16: *na Pasian' tung le nangma* — "Then Pharaoh called for Moses and Aaron ..." |
 | israel | Israel | 87 |  | Gen 46:2: *in Israel tungah zanin thu* — "And God spake unto Israel in the visions..." | Num 1:3: *Israel sungah kum sawmnih* — "from twenty years old and upward, all th..." | Deu 25:6: *min Israel tungah a maiman'* — "And it shall be, that the firstborn whic..." |
 | israel-te | ISRAEL-TE | 80 |  | Deu 17:4: *a, Israel-te sungah tua bang* — "and it be told thee, and thou hast heard..." | Jos 18:10: *ciat Israel-te tungah leitang a* — "And Joshua cast lots for them in Shiloh ..." | Jdg 2:14: *ciangin Israel-te tungah Topa sinso* — "And the anger of the LORD was hot agains..." |
-| faro' | pharaoh-GEN | 43 | GEN | Gen 40:14: *hi. Faro' tungah kei' thu* — "But think on me when it shall be well wi..." | Exo 18:8: *hangin Faro' tung le Egypt* — "And Moses told his father in law all tha..." | Deu 29:2: *in Faro' tung le ama* — "And Moses called unto all Israel, and sa..." |
+| faro' | FARO-GEN | 43 | GEN | Gen 40:14: *hi. Faro' tungah kei' thu* — "But think on me when it shall be well wi..." | Exo 18:8: *hangin Faro' tung le Egypt* — "And Moses told his father in law all tha..." | Deu 29:2: *in Faro' tung le ama* — "And Moses called unto all Israel, and sa..." |
 | saul | SAUL | 37 |  | 1Sa 9:3: *tapa Saul kiangah, “Nasemte khat* — "And the asses of Kish Saul's father were..." | 2Sa 2:5: *uh Saul tungah thumanna lakin* — "And David sent messengers unto the men o..." | 1Ch 12:19: *topa Saul kiangah David tai* — "And there fell some of Manasseh to David..." |
-| no | NO | 27 |  | Luk 6:33: *No tungah a hoihin* — "And if ye do good to them which do good ..." | Gen 19:8: *hi. No kiangah amaute hong* — "Behold now, I have two daughters which h..." | Lev 25:16: *leh no tungah hong zuak* — "according to the multitude of years thou..." |
-| jerusalem | JERUSALEM | 25 |  | 1Ki 9:19: *le Jerusalem sung, Lebanon sung,* — "and all the cities of store that Solomon..." | 2Ki 18:17: *paito-in Jerusalem tung uh hi.* — "And the king of Assyria sent Tartan and ..." | 1Ch 21:16: *omin Jerusalem tungah a zan* — "And David lifted up his eyes, and saw th..." |
-| aaron | AARON | 24 |  | Exo 6:13: *le Aaron tungah thu gen* — "And the LORD spake unto Moses and unto A..." | Lev 11:1: *le Aaron tungah,* — "And the LORD spake unto Moses and to Aar..." | Num 2:1: *le Aaron kiangah hih bangin* — "And the LORD spake unto Moses and unto A..." |
+| joshua | JOSHUA | 36 |  | Exo 17:9: *in Joshua kiangah, “Eite a* — "And Moses said unto Joshua, Choose us ou..." | Num 27:23: *bangin Joshua tungah za a* — "and he laid his hands upon him, and gave..." | Jos 15:13: *in Joshua tungah a thupiak* — "And unto Caleb the son of Jephunneh he g..." |
+| solomon | SOLOMON | 33 |  | 1Ki 5:12: *in Solomon tungah pilna pia* — "And the LORD gave Solomon wisdom, as he ..." | 2Ki 21:6: *tapa Solomon tungah, “Israel minam* — "And he made his son pass through the fir..." | 1Ch 28:11: *tapa Solomon tungah biakinn innliim,* — "Then David gave to Solomon his son the p..." |
+| jakob | JAKOB | 28 |  | Gen 25:30: *in Jakob kiangah, “Gilkialin phukhong* — "and Esau said to Jacob, Feed me, I pray ..." | Exo 33:1: *le Jakob tungah, 'Na suanlekhakte* — "And the LORD said unto Moses, Depart, an..." | Num 32:11: *le Jakob tungah piak dingin* — "Surely none of the men that came up out ..." |
 
 
 ### Uncategorized as Possessors
 
 Words not yet classified (may need dictionary additions).
 
-**Total instances**: 1,985 (349 unique forms)
+**Total instances**: 1,083 (226 unique forms)
 
 | Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|-------|----------|----------|----------|
-| tau | signal | 98 |  | Mat 23:18: *biakna tau tungah a kipia* — "And, Whosoever shall swear by the altar,..." | Gen 8:20: *biakna tau tungah meihal biakna* — "And Noah builded an altar unto the LORD ..." | Exo 20:26: *biakna tau tung kahtoh nading* — "Neither shalt thou go up by steps unto m..." |
+| tau | signal | 98 |  | Luk 1:9: *biakna tau tungah, paknamtui kua* — "according to the custom of the priest's ..." | Gen 8:20: *biakna tau tungah meihal biakna* — "And Noah builded an altar unto the LORD ..." | Exo 20:26: *biakna tau tung kahtoh nading* — "Neither shalt thou go up by steps unto m..." |
 | thum | three | 86 |  | Mar 15:33: *nai thum sung leitung khempeuhah* — "And when the sixth hour was come, there ..." | Gen 42:17: *ni thum sung amaute a* — "And he put them all together into ward t..." | Exo 2:2: *kha thum sung a seel* — "And the woman conceived, and bare a son:..." |
-| tokhom | throne | 82 |  | Mar 10:37: *kumpi tokhom tungah na tut* — "They said unto him, Grant unto us that w..." | Exo 25:22: *Hehpihna tokhom tung, thuciamna singkuang* — "And there I will meet with thee, and I w..." | Lev 16:15: *hehpihna tokhom tung le hehpihna* — "Then shall he kill the goat of the sin o..." |
 | nih | two | 66 |  | Mar 5:25: *le nih sung tawntung siluang* — "And a certain woman, which had an issue ..." | Gen 40:2: *mangte nih tungah Faro heh* — "And Pharaoh was wroth against two of his..." | Exo 12:16: *ni nih sung na bangmah* — "And in the first day there shall be an h..." |
-| thong | prison | 46 |  | Mar 1:14: *Thong sungah Johan a* — "Now after that John was put in prison, J..." | Gen 39:20: *kikhumna thong sungah amah koih* — "And Joseph's master took him, and put hi..." | Jdg 16:21: *in thong sung an gawina-ah* — "But the Philistines took him, and put ou..." |
-| guk | six | 42 |  | Joh 2:20: *kum guk sung a kilam* — "Then said the Jews, Forty and six years ..." | Gen 31:41: *kum guk sung kong thalawh* — "Thus have I been twenty years in thy hou..." | Exo 16:26: *ni guk sung na khawm* — "Six days ye shall gather it; but on the ..." |
-| joshua | joshua | 36 |  | Exo 17:9: *in Joshua kiangah, “Eite a* — "And Moses said unto Joshua, Choose us ou..." | Num 27:23: *bangin Joshua tungah za a* — "and he laid his hands upon him, and gave..." | Jos 15:13: *in Joshua tungah a thupiak* — "And unto Caleb the son of Jephunneh he g..." |
-| solomon | solomon | 33 |  | 1Ki 5:12: *in Solomon tungah pilna pia* — "And the LORD gave Solomon wisdom, as he ..." | 2Ki 21:6: *tapa Solomon tungah, “Israel minam* — "And he made his son pass through the fir..." | 1Ch 28:11: *tapa Solomon tungah biakinn innliim,* — "Then David gave to Solomon his son the p..." |
+| guk | six | 42 |  | Luk 13:14: *ni guk sung om hi.* — "And the ruler of the synagogue answered ..." | Gen 31:41: *kum guk sung kong thalawh* — "Thus have I been twenty years in thy hou..." | Exo 16:26: *ni guk sung na khawm* — "Six days ye shall gather it; but on the ..." |
 | peuhpeuh | every | 32 |  | Luk 4:6: *piaknop peuhpeuh tungah ka pia* — "And the devil said unto him, All this po..." | Exo 22:20: *khat peuhpeuh tungah biakna a* — "He that sacrificeth unto any god, save u..." | Lev 13:47: *khat peuhpeuh tungah phaknatna a* — "The garment also that the plague of lepr..." |
-| tawlkhat | little | 32 |  | Mat 13:21: *manin tawlkhat sung bek um* — "yet hath he not root in himself, but dur..." | Gen 12:10: *manin tawlkhat sung a om* — "And there was a famine in the land: and ..." | Exo 6:4: *Amaute tawlkhat sung a tenna* — "And I have also established my covenant ..." |
 | nuntak | live | 31 |  | Gen 3:14: *na nuntak sung tawntungin leivui* — "And the LORD God said unto the serpent, ..." | Deu 16:3: *na nuntak sung tawntung uh* — "Thou shalt eat no leavened bread with it..." | Jos 1:5: *Na nuntak sung tawntung kuamah* — "There shall not any man be able to stand..." |
 | tampi | many | 29 |  | Luk 12:19: *Kum tampi sung ka khom* — "And I will say to my soul, Soul, thou ha..." | Gen 37:34: *ni tampi sung a kap* — "And Jacob rent his clothes, and put sack..." | Lev 15:25: *ni tampi sung a si* — "And if a woman have an issue of her bloo..." |
-| han | sepulchre | 29 |  | Mar 15:46: *suang han sungah a sial* — "And he bought fine linen, and took him d..." | Gen 35:20: *ama han tungah mualsuang khat* — "And Jacob set a pillar upon her grave: t..." | 1Sa 10:2: *Rachel' han kiang Zelzah-ah mihing* — "When thou art departed from me to day, t..." |
-| lupna | bed | 28 |  | Mar 4:21: *leh lupna nuai peuhah koih* — "And he said unto them, Is a candle broug..." | Gen 48:2: *a lupna tungah a tu* — "And one told Jacob, and said, Behold, th..." | Exo 8:3: *na lupna tung, na nasemte* — "and the river shall bring forth frogs ab..." |
-| jakob | jacob | 28 |  | Gen 25:30: *in Jakob kiangah, “Gilkialin phukhong* — "and Esau said to Jacob, Feed me, I pray ..." | Exo 33:1: *le Jakob tungah, 'Na suanlekhakte* — "And the LORD said unto Moses, Depart, an..." | Num 32:11: *le Jakob tungah piak dingin* — "Surely none of the men that came up out ..." |
+| huang | village | 28 |  | Mar 11:15: *biakinn huang sungah Jesuh lutin* — "And they come to Jerusalem: and Jesus we..." | Exo 8:13: *le huang sung le lote* — "And the LORD did according to the word o..." | Deu 5:14: *na huang sung uha om* — "but the seventh day is the sabbath of th..." |
+| kuam | plain | 27 |  | Gen 19:17: *unla, kuam sungah zong khawl* — "And it came to pass, when they had broug..." | Num 13:23: *Eshkol kuam tung uh a,* — "And they came unto the brook of Eshcol, ..." | Deu 3:29: *gal-a kuam sungah i taam* — "So we abode in the valley over against B..." |
+| lo | NEG | 23 |  | Luk 13:7: *hangin lo sung mawk nawngkaisak* — "Then said he unto the dresser of his vin..." | Gen 2:5: *a, lo sung ankungte pokhia* — "and every plant of the field before it w..." | Exo 1:14: *le lo sungah nasep namkim* — "and they made their lives bitter with ha..." |
+| huan | bread | 21 |  | Joh 18:1: *tua huan sungah a nungzuite* — "When Jesus had spoken these words, he we..." | Gen 3:8: *ciangin huan sungah Topa Pasian* — "And they heard the voice of the LORD God..." | 2Ki 21:18: *inn huan sungah kivui hi.* — "And Manasseh slept with his fathers, and..." |
+| gil | stomach | 18 |  | Mar 7:19: *a gil sung bekah tum* — "because it entereth not into his heart, ..." | Gen 25:23: *“Na gil sungah mi nam* — "And the LORD said unto her, Two nations ..." | Num 5:22: *na gil sung zui hen* — "and this water that causeth the curse sh..." |
+| kong | 1SG→3 | 17 |  | Mar 2:10: *nadingun kong lak ding hi,”* — "But that ye may know that the Son of man..." | Exo 18:19: *thu kong lak ding hi.* — "Hearken now unto my voice, I will give t..." | Jdg 4:22: *zon kong lak ding hi,”* — "And, behold, as Barak pursued Sisera, Ja..." |
+| khuk | pool | 17 |  | Mar 9:43: *hell khuk sungah khut kim* — "And if thy hand offend thee, cut it off:..." | Job 3:12: *nu' khuk tungah hong kitawi* — "Why did the knees prevent me? Or why the..." | Pro 21:6: *sihna khuk sung hong tunpih* — "The getting of treasures by a lying tong..." |
+| kua | who | 17 |  | Joh 12:38: *vangliatna kua tungah kilak ahi* — "That the saying of Esaias the prophet mi..." | 2Ki 14:2: *le kua sung uk hi.* — "He was twenty and five years old when he..." | 2Ch 25:1: *le kua sung uk hi.* — "Amaziah was twenty and five years old wh..." |
 
 
 ### Possessor Category Comparison
@@ -650,9 +650,9 @@ Words not yet classified (may need dictionary additions).
 | Category | Unique Forms | Total Instances | % of Total |
 |----------|--------------|-----------------|------------|
 | Grammatical | 31 | 5,754 | 31.5% |
-| Common Nouns | 1077 | 7,826 | 42.8% |
-| Proper Nouns | 318 | 2,700 | 14.8% |
-| Uncategorized | 349 | 1,985 | 10.9% |
+| Common Nouns | 1157 | 8,441 | 46.2% |
+| Proper Nouns | 361 | 2,987 | 16.4% |
+| Uncategorized | 226 | 1,083 | 5.9% |
 
 **Observation**: The distribution of possessor types reveals how relator nouns are used:
 - High grammatical item frequency suggests grammaticalized spatial constructions
