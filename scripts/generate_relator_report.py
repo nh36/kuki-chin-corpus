@@ -25,7 +25,7 @@ from typing import Dict, List, Tuple, Set
 
 # Add scripts directory to path
 sys.path.insert(0, str(Path(__file__).parent))
-from analyze_morphemes import RELATOR_NOUNS
+from analyze_morphemes import RELATOR_NOUNS, NOUN_STEMS, PROPER_NOUNS
 
 # Book abbreviations for verse references
 BOOK_ABBREVS = {
@@ -53,6 +53,53 @@ RELATOR_CASES = [
     (' pan', 'ABL', 'Ablative (separate)'),
     (' panin', 'ABL.ERG', 'Ablative-Ergative (separate)'),
 ]
+
+
+def categorize_possessor(word: str) -> str:
+    """
+    Categorize a possessor word into grammatical type.
+    Returns: 'grammatical', 'proper', 'common', or 'unknown'
+    """
+    word_lower = word.lower()
+    
+    # Strip genitive marker for lookup
+    base = word_lower.rstrip("'")
+    
+    # Grammatical items (pronouns, demonstratives, particles)
+    grammatical_markers = {
+        'a', 'ka', 'na', 'i', 'ko',  # possessive prefixes
+        'ama', 'amah', 'amaute', 'amau',
+        'kei', 'nang', 'nangma', 'note', 'eite', 'kote',
+        'hong', 'uh', 'khempeuh', 'khat', 'tua', 'hih',
+    }
+    if base in grammatical_markers:
+        return 'grammatical'
+    
+    # Proper nouns
+    if base in PROPER_NOUNS or word_lower in PROPER_NOUNS:
+        return 'proper'
+    proper_markers = ['topa', 'pasian', 'israel', 'egypt', 'jesuh', 'khrih', 'moses', 
+                      'david', 'faro', 'abraham', 'jacob', 'esau', 'joseph',
+                      'judah', 'babylon', 'jerusalem', 'kumpipa']
+    if base in proper_markers:
+        return 'proper'
+    
+    # Common nouns
+    if base in NOUN_STEMS or word_lower in NOUN_STEMS:
+        return 'common'
+    if base in RELATOR_NOUNS:
+        return 'common'
+    
+    # Try morphological analysis
+    from analyze_morphemes import analyze_word
+    result = analyze_word(base)
+    if result and result[1]:
+        gloss = result[1]
+        if '-NMLZ' in gloss or any(c in gloss for c in ['-', '.']):
+            return 'common'
+    
+    return 'unknown'
+
 
 def format_verse_ref(verse_id: str) -> str:
     """Convert BBCCCVVV format to readable form."""
@@ -413,10 +460,6 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         "- *inn' tungah* = house-GEN on-LOC = 'on the house'",
         "- *amau' kiangah* = they-GEN beside-LOC = 'beside them'",
         '',
-        '### Most Common Possessors Across All Relators',
-        '',
-        '| Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |',
-        '|------|-------|-------|-------|----------|----------|----------|',
     ])
     
     # Common possessor glosses
@@ -462,6 +505,19 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         "lei'": 'earth-GEN',
         'gam': 'land',
         "gam'": 'land-GEN',
+        'kumpipa': 'king',
+        "kumpipa'": 'king-GEN',
+        'biakinn': 'temple',
+        "biakinn'": 'temple-GEN',
+        'moses': 'Moses',
+        "moses'": 'Moses-GEN',
+        'khuapi': 'city',
+        "khuapi'": 'city-GEN',
+        'khat': 'one',
+        'jesuh': 'Jesus',
+        "jesuh'": 'Jesus-GEN',
+        'khut': 'hand',
+        "khut'": 'hand-GEN',
     }
     
     # Aggregate possessor counts and samples
@@ -471,25 +527,121 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             old_count, old_samples = all_poss[word]
             all_poss[word] = (old_count + count, old_samples + samples)
     
-    top_all_poss = sorted(all_poss.items(), key=lambda x: -x[1][0])[:25]
-    for word, (count, samples) in top_all_poss:
-        gloss = POSSESSOR_GLOSSES.get(word, '—')
-        notes = ''
-        if word.endswith("'"):
-            notes = 'GEN'
-        elif word in ('a', 'ka', 'na', 'i', 'ko'):
-            notes = 'POSS'
-        # Select diverse samples
-        diverse = select_diverse_samples(samples, 3)
-        sample_cols = []
-        for j in range(3):
-            if j < len(diverse):
-                verse_id, context, _ = diverse[j]
-                kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
-                sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
-            else:
-                sample_cols.append('—')
-        lines.append(f'| {word} | {gloss} | {count:,} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
+    # Categorize possessors
+    poss_categories = {'grammatical': [], 'common': [], 'proper': [], 'unknown': []}
+    for word, (count, samples) in all_poss.items():
+        cat = categorize_possessor(word)
+        poss_categories[cat].append((word, count, samples))
+    
+    # Sort each category by count
+    for cat in poss_categories:
+        poss_categories[cat].sort(key=lambda x: -x[1])
+    
+    # Helper to generate possessor table for a category
+    def generate_possessor_category(items, category_name, description):
+        cat_lines = []
+        if not items:
+            return cat_lines
+        
+        total_count = sum(c for _, c, _ in items)
+        
+        cat_lines.extend([
+            f'### {category_name} as Possessors',
+            '',
+            description,
+            '',
+            f'**Total instances**: {total_count:,} ({len(items)} unique forms)',
+            '',
+            '| Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |',
+            '|------|-------|-------|-------|----------|----------|----------|',
+        ])
+        
+        for word, count, samples in items[:15]:  # Top 15 per category
+            gloss = POSSESSOR_GLOSSES.get(word, '—')
+            if gloss == '—':
+                # Try morphological analysis
+                from analyze_morphemes import analyze_word
+                base = word.rstrip("'")
+                result = analyze_word(base)
+                if result and result[1]:
+                    gloss = result[1]
+                    if word.endswith("'"):
+                        gloss += '-GEN'
+            
+            notes = ''
+            if word.endswith("'"):
+                notes = 'GEN'
+            elif word in ('a', 'ka', 'na', 'i', 'ko'):
+                notes = 'POSS'
+            
+            diverse = select_diverse_samples(samples, 3)
+            sample_cols = []
+            for j in range(3):
+                if j < len(diverse):
+                    verse_id, context, _ = diverse[j]
+                    kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
+                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                else:
+                    sample_cols.append('—')
+            cat_lines.append(f'| {word} | {gloss} | {count:,} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
+        
+        cat_lines.extend(['', ''])
+        return cat_lines
+    
+    # Generate categorized sections
+    lines.extend(generate_possessor_category(
+        poss_categories['grammatical'], 
+        'Grammatical Items',
+        'Pronouns, demonstratives, and other function words. High frequency with relator nouns suggests grammaticalized spatial constructions.'
+    ))
+    
+    lines.extend(generate_possessor_category(
+        poss_categories['common'],
+        'Common Nouns', 
+        'Lexical nouns expressing possession of spatial relation (e.g., "house\'s inside" = "inside the house").'
+    ))
+    
+    lines.extend(generate_possessor_category(
+        poss_categories['proper'],
+        'Proper Nouns',
+        'Names of people, places, and divine beings. Spatial constructions with proper nouns often indicate location or accompaniment.'
+    ))
+    
+    if poss_categories['unknown']:
+        lines.extend(generate_possessor_category(
+            poss_categories['unknown'],
+            'Uncategorized',
+            'Words not yet classified (may need dictionary additions).'
+        ))
+    
+    # Summary statistics comparing categories
+    lines.extend([
+        '### Possessor Category Comparison',
+        '',
+        '| Category | Unique Forms | Total Instances | % of Total |',
+        '|----------|--------------|-----------------|------------|',
+    ])
+    
+    # all_poss values are (count, samples) tuples
+    total_all = sum(c for c, _ in all_poss.values())
+    
+    for cat_name, items in [('Grammatical', poss_categories['grammatical']), 
+                            ('Common Nouns', poss_categories['common']),
+                            ('Proper Nouns', poss_categories['proper']),
+                            ('Uncategorized', poss_categories['unknown'])]:
+        if items:
+            cat_total = sum(c for _, c, _ in items)
+            pct = 100 * cat_total / total_all if total_all > 0 else 0
+            lines.append(f'| {cat_name} | {len(items)} | {cat_total:,} | {pct:.1f}% |')
+    
+    lines.extend([
+        '',
+        '**Observation**: The distribution of possessor types reveals how relator nouns are used:',
+        '- High grammatical item frequency suggests grammaticalized spatial constructions',
+        '- Common noun possessors indicate concrete spatial relationships',
+        '- Proper noun possessors often mark locations associated with named entities',
+        '',
+    ])
     
     return '\n'.join(lines)
 

@@ -122,8 +122,64 @@ def get_gloss(word: str) -> str:
         return RELATOR_NOUNS[word_lower]
     if word_lower in PROPER_NOUNS:
         return PROPER_NOUNS[word_lower]
-    # Return empty string instead of word itself
+    # Try morphological analysis for compound/derived forms
+    from analyze_morphemes import analyze_word
+    result = analyze_word(word_lower)
+    if result and result[1] and '?' not in result[1]:
+        return result[1]  # Use the morphological gloss
+    # Return em-dash for truly unknown words
     return '—'
+
+
+def categorize_word(word: str) -> str:
+    """
+    Categorize a word into grammatical type.
+    Returns: 'grammatical', 'proper', 'common', or 'unknown'
+    """
+    word_lower = word.lower()
+    
+    # Grammatical items (pronouns, demonstratives, particles, relators)
+    grammatical_markers = {
+        'ki', 'uh', 'un', 'amah', 'amaute', 'kei', 'nang', 'nangma', 'note',
+        'khempeuh', 'khat', 'tua', 'tuate', 'hih', 'an', 'eite', 'kote', 'dangte',
+        'ding', 'nading', 'lo', 'bek', 'mah', 'mahmah',
+    }
+    if word_lower in grammatical_markers:
+        return 'grammatical'
+    if word_lower in RELATOR_NOUNS:
+        return 'grammatical'
+    
+    # Proper nouns
+    if word_lower in PROPER_NOUNS:
+        return 'proper'
+    # Check for capitalized biblical names
+    proper_markers = ['egypt', 'israel', 'jerusalem', 'jesuh', 'khrih', 'moses', 
+                      'david', 'faro', 'abraham', 'jacob', 'esau', 'joseph',
+                      'judah', 'levite', 'babylon', 'assyria', 'sodom', 'gomorrah']
+    if word_lower in proper_markers:
+        return 'proper'
+    
+    # Common nouns (everything else that's in our dictionaries)
+    if word_lower in NOUN_STEMS:
+        return 'common'
+    if word_lower in EXTRA_GLOSSES:
+        # Check if it's a noun gloss vs grammatical
+        gloss = EXTRA_GLOSSES[word_lower]
+        if any(x in gloss for x in ['SG', 'PL', 'POSS', 'REFL', 'RECIP', 'IRR', 'NEG', 'PURP']):
+            return 'grammatical'
+        return 'common'
+    
+    # Try morphological analysis
+    from analyze_morphemes import analyze_word
+    result = analyze_word(word_lower)
+    if result and result[1]:
+        gloss = result[1]
+        # Nominalizations and compounds are common nouns
+        if '-NMLZ' in gloss or '-' in gloss:
+            return 'common'
+    
+    return 'unknown'
+
 
 def format_verse_ref(verse_id: str) -> str:
     """Convert BBCCCVVV format to readable form (e.g., 01002005 -> Gen 2:5)."""
@@ -394,43 +450,118 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         
         lines.extend(['', '---', ''])
     
-    # Detailed paradigm-style entries for top nouns
+    # Categorize all top nouns
+    categories = {'grammatical': [], 'common': [], 'proper': [], 'unknown': []}
+    for noun, total_n, postp_counts in top_nouns[:100]:
+        cat = categorize_word(noun)
+        categories[cat].append((noun, total_n, postp_counts))
+    
+    # Helper function to generate entries for a category
+    def generate_category_entries(items, category_name):
+        cat_lines = []
+        if not items:
+            return cat_lines
+        
+        # Calculate category statistics
+        total_instances = sum(t for _, t, _ in items)
+        pan_total = sum(pc.get('pan', 0) for _, _, pc in items)
+        panin_total = sum(pc.get('panin', 0) for _, _, pc in items)
+        tawh_total = sum(pc.get('tawh', 0) for _, _, pc in items)
+        tawhin_total = sum(pc.get('tawhin', 0) for _, _, pc in items)
+        
+        # Category header with statistics
+        cat_lines.extend([
+            f'### {category_name} ({len(items)} items)',
+            '',
+            f'**Total postposition instances**: {total_instances:,}',
+            '',
+            '| Postposition | Count | % of category |',
+            '|--------------|-------|---------------|',
+            f'| pan | {pan_total:,} | {100*pan_total/total_instances:.1f}% |' if total_instances else '| pan | 0 | 0% |',
+            f'| panin | {panin_total:,} | {100*panin_total/total_instances:.1f}% |' if total_instances else '| panin | 0 | 0% |',
+            f'| tawh | {tawh_total:,} | {100*tawh_total/total_instances:.1f}% |' if total_instances else '| tawh | 0 | 0% |',
+            f'| tawhin | {tawhin_total:,} | {100*tawhin_total/total_instances:.1f}% |' if total_instances else '| tawhin | 0 | 0% |',
+            '',
+        ])
+        
+        # Observations based on the data
+        if total_instances > 0:
+            dominant = max([('pan', pan_total), ('panin', panin_total), ('tawh', tawh_total), ('tawhin', tawhin_total)], key=lambda x: x[1])
+            cat_lines.append(f'**Observation**: {category_name} most frequently occur with *{dominant[0]}* ({100*dominant[1]/total_instances:.1f}%).')
+            if tawh_total > pan_total + panin_total:
+                cat_lines.append(f'Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these items commonly express accompaniment.')
+            elif pan_total + panin_total > tawh_total:
+                cat_lines.append(f'Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these items commonly express source/origin.')
+            cat_lines.append('')
+        
+        # Individual entries
+        for noun, total_n, postp_counts in items:
+            gloss = get_gloss(noun)
+            
+            cat_lines.extend([
+                f'#### {noun}',
+                f'**Gloss**: {gloss}',
+                '',
+                '| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |',
+                '|--------------|-------|----------|----------|----------|',
+            ])
+            
+            for postp in ['pan', 'panin', 'tawh', 'tawhin']:
+                examples_for_postp = by_noun[noun].get(postp, [])
+                count = len(examples_for_postp)
+                examples_tuple = [(verse_id, context, form_type, full_word) for verse_id, context, form_type, full_word in examples_for_postp]
+                diverse = select_diverse_samples(examples_tuple, 3, verse_idx=0)
+                sample_cols = []
+                for j in range(3):
+                    if j < len(diverse):
+                        verse_id, context, form_type, full_word = diverse[j]
+                        kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
+                        sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                    else:
+                        sample_cols.append('—')
+                cat_lines.append(f'| {postp} | {count} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
+            
+            cat_lines.extend(['', '---', ''])
+        
+        return cat_lines
+    
+    # Generate detailed entries section with categories
     lines.extend([
         '## Detailed Entries by Noun',
         '',
-        'For each noun, showing all attested postposition combinations with 3 diverse samples each.',
+        'Entries organized by grammatical category to reveal different postposition patterns.',
         '',
     ])
     
-    for noun, total_n, postp_counts in top_nouns[:100]:
-        # Get gloss using the multi-source lookup function
-        gloss = get_gloss(noun)
-        
-        lines.extend([
-            f'### {noun}',
-            f'**Gloss**: {gloss}',
-            '',
-            '| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |',
-            '|--------------|-------|----------|----------|----------|',
-        ])
-        
-        for postp in ['pan', 'panin', 'tawh', 'tawhin']:
-            examples_for_postp = by_noun[noun].get(postp, [])
-            count = len(examples_for_postp)
-            # Convert to tuple format for select_diverse_samples (verse_id is at index 0)
-            examples_tuple = [(verse_id, context, form_type, full_word) for verse_id, context, form_type, full_word in examples_for_postp]
-            diverse = select_diverse_samples(examples_tuple, 3, verse_idx=0)
-            sample_cols = []
-            for j in range(3):
-                if j < len(diverse):
-                    verse_id, context, form_type, full_word = diverse[j]
-                    kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
-                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
-                else:
-                    sample_cols.append('—')
-            lines.append(f'| {postp} | {count} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
-        
-        lines.extend(['', '---', ''])
+    # Grammatical items first
+    lines.append('## Grammatical Items (Pronouns, Demonstratives, Relators)')
+    lines.append('')
+    lines.append('These are function words: pronouns, demonstratives, quantifiers, and relator nouns.')
+    lines.append('Their postposition patterns reveal grammatical constructions.')
+    lines.append('')
+    lines.extend(generate_category_entries(categories['grammatical'], 'Grammatical Items'))
+    
+    # Common nouns
+    lines.append('## Common Nouns')
+    lines.append('')
+    lines.append('Lexical nouns including simple stems, compounds, and nominalizations.')
+    lines.append('')
+    lines.extend(generate_category_entries(categories['common'], 'Common Nouns'))
+    
+    # Proper nouns
+    lines.append('## Proper Nouns')
+    lines.append('')
+    lines.append('Names of people, places, and other entities.')
+    lines.append('')
+    lines.extend(generate_category_entries(categories['proper'], 'Proper Nouns'))
+    
+    # Unknown (if any)
+    if categories['unknown']:
+        lines.append('## Uncategorized')
+        lines.append('')
+        lines.append('Words not yet classified (may need dictionary additions).')
+        lines.append('')
+        lines.extend(generate_category_entries(categories['unknown'], 'Uncategorized'))
     
     return '\n'.join(lines)
 
