@@ -3,7 +3,7 @@
 ## Overview
 
 Free stems are nouns that can occur independently in the corpus.
-Total: 844 free noun stems
+Total: 819 free noun stems
 
 Tedim Chin nouns inflect for:
 - **Number**: Singular (unmarked), Plural (*-te*)
@@ -621,21 +621,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | beh-panin | — | beh-te-panin | — |
 | Comitative | beh-tawh | — | beh-te-tawh | — |
 | Comitative-Ergative | beh-tawhin | — | beh-te-tawhin | — |
-
----
-
-## behte "tribes"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | behte | Gen 16:12, Gen 24:2, Gen 24:38 (+2) | behte-te | — |
-| Genitive | behte-' | Gen 24:27, Gen 31:3, Gen 31:32 (+2) | behte-te-' | — |
-| Ergative | behte-in | — | behte-te-in | — |
-| Locative | behte-ah | — | behte-te-ah | — |
-| Ablative | behte-pan | — | behte-te-pan | — |
-| Ablative-Ergative | behte-panin | — | behte-te-panin | — |
-| Comitative | behte-tawh | — | behte-te-tawh | — |
-| Comitative-Ergative | behte-tawhin | — | behte-te-tawhin | — |
 
 ---
 
@@ -1584,21 +1569,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## galkapte "soldiers"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | galkapte | Gen 14:3, Exo 14:6, Exo 14:9 (+2) | galkapte-te | — |
-| Genitive | galkapte-' | Num 31:28, 1Sa 17:45, 1Ki 2:35 (+2) | galkapte-te-' | — |
-| Ergative | galkapte-in | — | galkapte-te-in | — |
-| Locative | galkapte-ah | — | galkapte-te-ah | — |
-| Ablative | galkapte-pan | — | galkapte-te-pan | — |
-| Ablative-Ergative | galkapte-panin | — | galkapte-te-panin | — |
-| Comitative | galkapte-tawh | — | galkapte-te-tawh | — |
-| Comitative-Ergative | galkapte-tawhin | — | galkapte-te-tawhin | — |
-
----
-
 ## galkhat "battle"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -1641,21 +1611,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | galsimna-panin | — | galsimna-te-panin | — |
 | Comitative | galsimna-tawh | — | galsimna-te-tawh | — |
 | Comitative-Ergative | galsimna-tawhin | — | galsimna-te-tawhin | — |
-
----
-
-## galte "enemies"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | galte | Gen 14:11, Gen 14:20, Exo 1:10 (+2) | galte-te | — |
-| Genitive | galte-' | Gen 22:17, Gen 49:8, Exo 32:25 (+2) | galte-te-' | — |
-| Ergative | galte-in | — | galte-te-in | — |
-| Locative | galte-ah | — | galte-te-ah | — |
-| Ablative | galte-pan | — | galte-te-pan | — |
-| Ablative-Ergative | galte-panin | — | galte-te-panin | — |
-| Comitative | galte-tawh | — | galte-te-tawh | — |
-| Comitative-Ergative | galte-tawhin | — | galte-te-tawhin | — |
 
 ---
 
@@ -1794,21 +1749,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## gamte "lands"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | gamte | Lev 25:34, Num 32:4, Num 35:2 (+2) | gamte-te | — |
-| Genitive | gamte-' | 2Ki 17:26, Est 8:10, Isa 47:5 (+1) | gamte-te-' | — |
-| Ergative | gamte-in | — | gamte-te-in | — |
-| Locative | gamte-ah | — | gamte-te-ah | — |
-| Ablative | gamte-pan | — | gamte-te-pan | — |
-| Ablative-Ergative | gamte-panin | — | gamte-te-panin | — |
-| Comitative | gamte-tawh | — | gamte-te-tawh | — |
-| Comitative-Ergative | gamte-tawhin | — | gamte-te-tawhin | — |
-
----
-
 ## ganbuk "fold"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -1836,21 +1776,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | ganhing-panin | — | ganhing-te-panin | — |
 | Comitative | ganhing-tawh | — | ganhing-te-tawh | — |
 | Comitative-Ergative | ganhing-tawhin | — | ganhing-te-tawhin | — |
-
----
-
-## ganhingte "animals"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | ganhingte | Gen 1:24, Gen 1:24, Gen 1:26 (+2) | ganhingte-te | — |
-| Genitive | ganhingte-' | Gen 31:39, Gen 33:14, Exo 9:4 (+2) | ganhingte-te-' | — |
-| Ergative | ganhingte-in | — | ganhingte-te-in | — |
-| Locative | ganhingte-ah | — | ganhingte-te-ah | — |
-| Ablative | ganhingte-pan | — | ganhingte-te-pan | — |
-| Ablative-Ergative | ganhingte-panin | — | ganhingte-te-panin | — |
-| Comitative | ganhingte-tawh | — | ganhingte-te-tawh | — |
-| Comitative-Ergative | ganhingte-tawhin | — | ganhingte-te-tawhin | — |
 
 ---
 
@@ -2769,21 +2694,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## innte "houses"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | innte | Gen 41:56, Exo 8:9, Exo 8:11 (+2) | innte-te | — |
-| Genitive | innte-' | — | innte-te-' | — |
-| Ergative | innte-in | — | innte-te-in | — |
-| Locative | innte-ah | — | innte-te-ah | — |
-| Ablative | innte-pan | — | innte-te-pan | — |
-| Ablative-Ergative | innte-panin | — | innte-te-panin | — |
-| Comitative | innte-tawh | — | innte-te-tawh | — |
-| Comitative-Ergative | innte-tawhin | — | innte-te-tawhin | — |
-
----
-
 ## innzom "neighbor"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -3696,21 +3606,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | khuapi-panin | — | khuapi-te-panin | — |
 | Comitative | khuapi-tawh | — | khuapi-te-tawh | — |
 | Comitative-Ergative | khuapi-tawhin | — | khuapi-te-tawhin | — |
-
----
-
-## khuapite "cities"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | khuapite | Gen 10:12, Gen 19:25, Gen 19:25 (+2) | khuapite-te | — |
-| Genitive | khuapite-' | Gen 13:12, Gen 35:5, Num 32:38 (+2) | khuapite-te-' | — |
-| Ergative | khuapite-in | — | khuapite-te-in | — |
-| Locative | khuapite-ah | — | khuapite-te-ah | — |
-| Ablative | khuapite-pan | — | khuapite-te-pan | — |
-| Ablative-Ergative | khuapite-panin | — | khuapite-te-panin | — |
-| Comitative | khuapite-tawh | — | khuapite-te-tawh | — |
-| Comitative-Ergative | khuapite-tawhin | — | khuapite-te-tawhin | — |
 
 ---
 
@@ -6384,21 +6279,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## midangte "others"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | midangte | Gen 9:6, Exo 15:14, Exo 35:34 (+2) | midangte-te | — |
-| Genitive | midangte-' | Deu 11:16, Rut 2:8, Neh 7:72 (+2) | midangte-te-' | — |
-| Ergative | midangte-in | — | midangte-te-in | — |
-| Locative | midangte-ah | — | midangte-te-ah | — |
-| Ablative | midangte-pan | — | midangte-te-pan | — |
-| Ablative-Ergative | midangte-panin | — | midangte-te-panin | — |
-| Comitative | midangte-tawh | — | midangte-te-tawh | — |
-| Comitative-Ergative | midangte-tawhin | — | midangte-te-tawhin | — |
-
----
-
 ## migilo "enemy"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -6411,21 +6291,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | migilo-panin | — | migilo-te-panin | — |
 | Comitative | migilo-tawh | — | migilo-te-tawh | — |
 | Comitative-Ergative | migilo-tawhin | — | migilo-te-tawhin | — |
-
----
-
-## migilote "enemies"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | migilote | Gen 18:23, Gen 18:25, Gen 18:25 (+2) | migilote-te | — |
-| Genitive | migilote-' | Num 16:26, 2Ki 17:20, Job 4:10 (+2) | migilote-te-' | — |
-| Ergative | migilote-in | — | migilote-te-in | — |
-| Locative | migilote-ah | — | migilote-te-ah | — |
-| Ablative | migilote-pan | — | migilote-te-pan | — |
-| Ablative-Ergative | migilote-panin | — | migilote-te-panin | — |
-| Comitative | migilote-tawh | — | migilote-te-tawh | — |
-| Comitative-Ergative | migilote-tawhin | — | migilote-te-tawhin | — |
 
 ---
 
@@ -6516,21 +6381,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | mihonpi-panin | — | mihonpi-te-panin | — |
 | Comitative | mihonpi-tawh | — | mihonpi-te-tawh | — |
 | Comitative-Ergative | mihonpi-tawhin | — | mihonpi-te-tawhin | — |
-
----
-
-## mihonte "poor.people"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | mihonte | Exo 7:4, Exo 12:6, Exo 12:17 (+2) | mihonte-te | — |
-| Genitive | mihonte-' | Lev 4:15, Num 4:33, Num 15:24 (+2) | mihonte-te-' | — |
-| Ergative | mihonte-in | — | mihonte-te-in | — |
-| Locative | mihonte-ah | — | mihonte-te-ah | — |
-| Ablative | mihonte-pan | — | mihonte-te-pan | — |
-| Ablative-Ergative | mihonte-panin | — | mihonte-te-panin | — |
-| Comitative | mihonte-tawh | — | mihonte-te-tawh | — |
-| Comitative-Ergative | mihonte-tawhin | — | mihonte-te-tawhin | — |
 
 ---
 
@@ -6639,21 +6489,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## misite "dead.PL"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | misite | Deu 14:1, Deu 26:14, Job 14:12 (+2) | misite-te | — |
-| Genitive | misite-' | Lev 21:3, Job 14:12, Job 17:13 (+2) | misite-te-' | — |
-| Ergative | misite-in | — | misite-te-in | — |
-| Locative | misite-ah | — | misite-te-ah | — |
-| Ablative | misite-pan | — | misite-te-pan | — |
-| Ablative-Ergative | misite-panin | — | misite-te-panin | — |
-| Comitative | misite-tawh | — | misite-te-tawh | — |
-| Comitative-Ergative | misite-tawhin | — | misite-te-tawhin | — |
-
----
-
 ## mit "eye"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -6666,21 +6501,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | mit-panin | — | mit-te-panin | — |
 | Comitative | mit-tawh | — | mit-te-tawh | — |
 | Comitative-Ergative | mit-tawhin | — | mit-te-tawhin | — |
-
----
-
-## mite "people"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | mite | Gen 4:26, Gen 6:1, Gen 6:2 (+2) | mite-te | — |
-| Genitive | mite-' | Gen 6:2, Gen 10:5, Gen 10:14 (+2) | mite-te-' | — |
-| Ergative | mite-in | — | mite-te-in | — |
-| Locative | mite-ah | — | mite-te-ah | — |
-| Ablative | mite-pan | — | mite-te-pan | — |
-| Ablative-Ergative | mite-panin | — | mite-te-panin | — |
-| Comitative | mite-tawh | — | mite-te-tawh | — |
-| Comitative-Ergative | mite-tawhin | — | mite-te-tawhin | — |
 
 ---
 
@@ -7086,21 +6906,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | nasempa-panin | — | nasempa-te-panin | — |
 | Comitative | nasempa-tawh | — | nasempa-te-tawh | — |
 | Comitative-Ergative | nasempa-tawhin | — | nasempa-te-tawhin | — |
-
----
-
-## nasemte "servants"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | nasemte | Gen 14:15, Gen 20:8, Gen 21:25 (+2) | nasemte-te | — |
-| Genitive | nasemte-' | Gen 22:19, Gen 32:16, Gen 44:9 (+2) | nasemte-te-' | — |
-| Ergative | nasemte-in | — | nasemte-te-in | — |
-| Locative | nasemte-ah | — | nasemte-te-ah | — |
-| Ablative | nasemte-pan | — | nasemte-te-pan | — |
-| Ablative-Ergative | nasemte-panin | — | nasemte-te-panin | — |
-| Comitative | nasemte-tawh | — | nasemte-te-tawh | — |
-| Comitative-Ergative | nasemte-tawhin | — | nasemte-te-tawhin | — |
 
 ---
 
@@ -7719,21 +7524,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## numeite "women"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | numeite | Gen 14:16, Gen 20:17, Gen 24:37 (+2) | numeite-te | — |
-| Genitive | numeite-' | Gen 24:11, Gen 27:46, Exo 38:8 (+2) | numeite-te-' | — |
-| Ergative | numeite-in | — | numeite-te-in | — |
-| Locative | numeite-ah | — | numeite-te-ah | — |
-| Ablative | numeite-pan | — | numeite-te-pan | — |
-| Ablative-Ergative | numeite-panin | — | numeite-te-panin | — |
-| Comitative | numeite-tawh | — | numeite-te-tawh | — |
-| Comitative-Ergative | numeite-tawhin | — | numeite-te-tawhin | — |
-
----
-
 ## nun "knop"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -7986,21 +7776,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | pasian-panin | — | pasian-te-panin | — |
 | Comitative | pasian-tawh | — | pasian-te-tawh | — |
 | Comitative-Ergative | pasian-tawhin | — | pasian-te-tawhin | — |
-
----
-
-## pate "fathers"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | pate | Gen 15:15, Gen 31:3, Gen 46:34 (+2) | pate-te | — |
-| Genitive | pate-' | Gen 31:53, Gen 48:21, Exo 13:5 (+2) | pate-te-' | — |
-| Ergative | pate-in | — | pate-te-in | — |
-| Locative | pate-ah | — | pate-te-ah | — |
-| Ablative | pate-pan | — | pate-te-pan | — |
-| Ablative-Ergative | pate-panin | — | pate-te-panin | — |
-| Comitative | pate-tawh | — | pate-te-tawh | — |
-| Comitative-Ergative | pate-tawhin | — | pate-te-tawhin | — |
 
 ---
 
@@ -8589,21 +8364,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## puante "clothes"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | puante | Gen 24:53, Gen 35:2, Gen 49:11 (+2) | puante-te | — |
-| Genitive | puante-' | — | puante-te-' | — |
-| Ergative | puante-in | — | puante-te-in | — |
-| Locative | puante-ah | — | puante-te-ah | — |
-| Ablative | puante-pan | — | puante-te-pan | — |
-| Ablative-Ergative | puante-panin | — | puante-te-panin | — |
-| Comitative | puante-tawh | — | puante-te-tawh | — |
-| Comitative-Ergative | puante-tawhin | — | puante-te-tawhin | — |
-
----
-
 ## puantualpi "robe"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -8886,21 +8646,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | sanggampa-panin | — | sanggampa-te-panin | — |
 | Comitative | sanggampa-tawh | — | sanggampa-te-tawh | — |
 | Comitative-Ergative | sanggampa-tawhin | — | sanggampa-te-tawhin | — |
-
----
-
-## sanggamte "brothers"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | sanggamte | Gen 19:7, Gen 22:21, Gen 25:18 (+2) | sanggamte-te | — |
-| Genitive | sanggamte-' | Gen 9:25, Gen 27:29, Gen 27:29 (+2) | sanggamte-te-' | — |
-| Ergative | sanggamte-in | — | sanggamte-te-in | — |
-| Locative | sanggamte-ah | — | sanggamte-te-ah | — |
-| Ablative | sanggamte-pan | — | sanggamte-te-pan | — |
-| Ablative-Ergative | sanggamte-panin | — | sanggamte-te-panin | — |
-| Comitative | sanggamte-tawh | — | sanggamte-te-tawh | — |
-| Comitative-Ergative | sanggamte-tawhin | — | sanggamte-te-tawhin | — |
 
 ---
 
@@ -9204,21 +8949,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## siampite "priests"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | siampite | Gen 47:22, Exo 19:22, Exo 19:24 (+2) | siampite-te | — |
-| Genitive | siampite-' | Gen 47:22, Gen 47:26, Exo 29:27 (+2) | siampite-te-' | — |
-| Ergative | siampite-in | — | siampite-te-in | — |
-| Locative | siampite-ah | — | siampite-te-ah | — |
-| Ablative | siampite-pan | — | siampite-te-pan | — |
-| Ablative-Ergative | siampite-panin | — | siampite-te-panin | — |
-| Comitative | siampite-tawh | — | siampite-te-tawh | — |
-| Comitative-Ergative | siampite-tawhin | — | siampite-te-tawhin | — |
-
----
-
 ## siamte "craftsmen"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -9261,21 +8991,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | siangtho-panin | — | siangtho-te-panin | — |
 | Comitative | siangtho-tawh | — | siangtho-te-tawh | — |
 | Comitative-Ergative | siangtho-tawhin | — | siangtho-te-tawhin | — |
-
----
-
-## siangthote "saints"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | siangthote | Gen 7:8, Exo 28:4, Exo 29:29 (+2) | siangthote-te | — |
-| Genitive | siangthote-' | Psa 79:2, Psa 89:5, Psa 89:5 (+2) | siangthote-te-' | — |
-| Ergative | siangthote-in | — | siangthote-te-in | — |
-| Locative | siangthote-ah | — | siangthote-te-ah | — |
-| Ablative | siangthote-pan | — | siangthote-te-pan | — |
-| Ablative-Ergative | siangthote-panin | — | siangthote-te-panin | — |
-| Comitative | siangthote-tawh | — | siangthote-te-tawh | — |
-| Comitative-Ergative | siangthote-tawhin | — | siangthote-te-tawhin | — |
 
 ---
 
@@ -9669,21 +9384,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## suanlekhakte "genealogies"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | suanlekhakte | Gen 3:15, Gen 3:15, Gen 9:9 (+2) | suanlekhakte-te | — |
-| Genitive | suanlekhakte-' | Gen 5:1, Gen 17:7, Gen 17:10 (+2) | suanlekhakte-te-' | — |
-| Ergative | suanlekhakte-in | — | suanlekhakte-te-in | — |
-| Locative | suanlekhakte-ah | — | suanlekhakte-te-ah | — |
-| Ablative | suanlekhakte-pan | — | suanlekhakte-te-pan | — |
-| Ablative-Ergative | suanlekhakte-panin | — | suanlekhakte-te-panin | — |
-| Comitative | suanlekhakte-tawh | — | suanlekhakte-te-tawh | — |
-| Comitative-Ergative | suanlekhakte-tawhin | — | suanlekhakte-te-tawhin | — |
-
----
-
 ## sucim "war.against"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -10029,21 +9729,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## tanute "daughters"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | tanute | Gen 6:1, Gen 6:2, Gen 6:4 (+2) | tanute-te | — |
-| Genitive | tanute-' | Gen 31:50, Num 18:11, Num 26:33 (+2) | tanute-te-' | — |
-| Ergative | tanute-in | — | tanute-te-in | — |
-| Locative | tanute-ah | — | tanute-te-ah | — |
-| Ablative | tanute-pan | — | tanute-te-pan | — |
-| Ablative-Ergative | tanute-panin | — | tanute-te-panin | — |
-| Comitative | tanute-tawh | — | tanute-te-tawh | — |
-| Comitative-Ergative | tanute-tawhin | — | tanute-te-tawhin | — |
-
----
-
 ## tapa "son"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -10056,21 +9741,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | tapa-panin | — | tapa-te-panin | — |
 | Comitative | tapa-tawh | — | tapa-te-tawh | — |
 | Comitative-Ergative | tapa-tawhin | — | tapa-te-tawhin | — |
-
----
-
-## tapate "sons"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | tapate | Gen 6:18, Gen 7:7, Gen 7:13 (+2) | tapate-te | — |
-| Genitive | tapate-' | Gen 6:18, Gen 7:7, Gen 7:13 (+2) | tapate-te-' | — |
-| Ergative | tapate-in | — | tapate-te-in | — |
-| Locative | tapate-ah | — | tapate-te-ah | — |
-| Ablative | tapate-pan | — | tapate-te-pan | — |
-| Ablative-Ergative | tapate-panin | — | tapate-te-panin | — |
-| Comitative | tapate-tawh | — | tapate-te-tawh | — |
-| Comitative-Ergative | tapate-tawhin | — | tapate-te-tawhin | — |
 
 ---
 
@@ -10989,21 +10659,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## thupiakte "commandments"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | thupiakte | Gen 18:19, Exo 15:26, Exo 16:28 (+2) | thupiakte-te | — |
-| Genitive | thupiakte-' | — | thupiakte-te-' | — |
-| Ergative | thupiakte-in | — | thupiakte-te-in | — |
-| Locative | thupiakte-ah | — | thupiakte-te-ah | — |
-| Ablative | thupiakte-pan | — | thupiakte-te-pan | — |
-| Ablative-Ergative | thupiakte-panin | — | thupiakte-te-panin | — |
-| Comitative | thupiakte-tawh | — | thupiakte-te-tawh | — |
-| Comitative-Ergative | thupiakte-tawhin | — | thupiakte-te-tawhin | — |
-
----
-
 ## thupina "pleasant.thing"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -11694,21 +11349,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
-## upate "elders"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | upate | Gen 50:7, Gen 50:7, Exo 3:16 (+2) | upate-te | — |
-| Genitive | upate-' | Exo 17:6, Num 11:16, Deu 25:9 (+2) | upate-te-' | — |
-| Ergative | upate-in | — | upate-te-in | — |
-| Locative | upate-ah | — | upate-te-ah | — |
-| Ablative | upate-pan | — | upate-te-pan | — |
-| Ablative-Ergative | upate-panin | — | upate-te-panin | — |
-| Comitative | upate-tawh | — | upate-te-tawh | — |
-| Comitative-Ergative | upate-tawhin | — | upate-te-tawhin | — |
-
----
-
 ## upmawhna "suspicion"
 
 | Case | Singular | Attested | Plural | Attested |
@@ -11961,21 +11601,6 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 | Ablative-Ergative | vantungmi-panin | — | vantungmi-te-panin | — |
 | Comitative | vantungmi-tawh | — | vantungmi-te-tawh | — |
 | Comitative-Ergative | vantungmi-tawhin | — | vantungmi-te-tawhin | — |
-
----
-
-## vantungte "heavenly.beings"
-
-| Case | Singular | Attested | Plural | Attested |
-|------|----------|----------|--------|----------|
-| Absolutive | vantungte | Gen 2:4, Deu 11:17, Deu 11:19 (+2) | vantungte-te | — |
-| Genitive | vantungte-' | Psa 108:5, Jon 1:9 | vantungte-te-' | — |
-| Ergative | vantungte-in | — | vantungte-te-in | — |
-| Locative | vantungte-ah | — | vantungte-te-ah | — |
-| Ablative | vantungte-pan | — | vantungte-te-pan | — |
-| Ablative-Ergative | vantungte-panin | — | vantungte-te-panin | — |
-| Comitative | vantungte-tawh | — | vantungte-te-tawh | — |
-| Comitative-Ergative | vantungte-tawhin | — | vantungte-te-tawhin | — |
 
 ---
 

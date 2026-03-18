@@ -1913,20 +1913,15 @@ NOUN_STEMS = {
     
     # Social terms
     'mi': 'person',          # 4,221
-    'mite': 'people',        # 6,569
     'minam': 'nation',       # 596
     'mihing': 'human',       # 354
     'kumpipa': 'king',       # 1,563
     'kumpi': 'king',
     'siampi': 'priest',      # 357
-    'siampite': 'priests',   # 255
     'siampipa': 'high.priest', # 172
-    'nasemte': 'servants',   # 389
     'nasempa': 'servant',
     'gal': 'enemy',          # enemy/war (base stem for galte, galkap, galmi, etc.)
-    'galte': 'enemies',
     'galkap': 'soldier',     # 233
-    'galkapte': 'soldiers',
     'galhiam': 'adversary',  # 50x - man of war / opponent
     'galhang': 'warrior',    # 39x - man of war
     'galkhat': 'battle',     # 36x - war-strike (battle)
@@ -1938,32 +1933,22 @@ NOUN_STEMS = {
     'kamsang': 'prophet',
     'kamtai': 'messenger',
     'upa': 'elder',          # 162
-    'upate': 'elders',
     'mihon': 'poor.person',  # 216
-    'mihonte': 'poor.people',
     'midang': 'other.person', # 181
-    'midangte': 'others',
     'migilo': 'enemy',       # 179
-    'migilote': 'enemies',
     
     # Kinship
     'pa': 'male',          # 2,265 - male kinship term (father/son depending on context)
-    'pate': 'fathers',
     'nu': 'female',          # 619 - female kinship term (mother/daughter depending on context)
     'tapa': 'son',           # 1,906
-    'tapate': 'sons',        # 411
     'tanu': 'daughter',
-    'tanute': 'daughters',
     'sanggam': 'brother',     # Opaque lexeme (not sang+gam compound)
-    'sanggamte': 'brothers',
     'sanggampa': 'brother',  # 210
     'zi': 'wife',            # 339
     'pasal': 'husband',      # 359
     'mipa': 'man',
     'numei': 'woman',
-    'numeite': 'women',      # 195
     'suanlekhak': 'genealogy', # 224
-    'suanlekhakte': 'genealogies', # plural form
     'innkuan': 'household',  # 205
     
     # Body parts
@@ -1982,12 +1967,9 @@ NOUN_STEMS = {
     
     # Place/Location
     'gam': 'land',           # 2,586
-    'gamte': 'lands',        # 173
     'khua': 'town',          # 919
     'khuapi': 'city',        # 1,050
-    'khuapite': 'cities',    # 253
     'inn': 'house',          # 715
-    'innte': 'houses',
     'mun': 'place',          # 820
     'mung': 'place',         # variant form
     'kal': 'middle',         # middle/between - enables ki-kal = REFL-middle = between
@@ -2042,9 +2024,7 @@ NOUN_STEMS = {
     'hoihna': 'goodness',    # 108
     'lum': 'warm',           # 149
     'puan': 'cloth',         # 168
-    'puante': 'clothes',
     'beh': 'tribe',          # 173
-    'behte': 'tribes',
     'omlai': 'dwelling',     # 236
     'lote': 'non-X',         # 230
     'milim': 'idol',         # 230
@@ -2053,7 +2033,6 @@ NOUN_STEMS = {
     'sakol': 'donkey',       # 155
     'anlum': 'food',         # 145
     'ganhing': 'animal',     # 164
-    'ganhingte': 'animals',
     'gankhahna': 'pasture',  # 3x - "pasture" (gan=animal + khah=tend + na=NMLZ)
     'sang': 'high',          # 209
     'nin': 'day',            # 200 variant
@@ -2082,13 +2061,10 @@ NOUN_STEMS = {
     'luang': 'corpse',
     'nungak': 'girl',        # 73
     'tuuhon': 'poor.person', # tuuhonte
-    'lute': 'heads',
     'mihoih': 'righteous',   # 70
     'mihai': 'wise',         # 89
-    'misite': 'dead.PL',
     'misi': 'dead',          # 70
     'mihonpi': 'noble',      # mihonpite
-    'siangthote': 'saints',
     
     # Nominalizations (productive -na pattern)
     'lamet': 'example',      # lametna = example.NMLZ
@@ -2158,7 +2134,6 @@ NOUN_STEMS = {
     'zawsop': 'judge',       # 52
     'ukpi': 'governor',      # 53
     'siamte': 'craftsmen',
-    'thupiakte': 'commandments',
     'ante': 'them',          # 50
     'pente': 'things',
     'khete': 'some',
@@ -2167,7 +2142,6 @@ NOUN_STEMS = {
     'bawlte': 'makers',
     'pute': 'ancestors',
     'taute': 'children',
-    'vantungte': 'heavenly.beings',
     'humpinelkai': 'lion',   # 125x - "lion"
     'nuamsa': 'prosperous',  # 51x - "well, prosperous, at ease"
     
@@ -3071,7 +3045,6 @@ NOUN_STEM_TYPES = {
     'bawngtal': 'free',
     'beel': 'free',
     'beh': 'free',
-    'behte': 'free',
     'bemeh': 'free',
     'bengbeng': 'bound',
     'bepi': 'free',
@@ -3144,13 +3117,11 @@ NOUN_STEM_TYPES = {
     'galhang': 'free',
     'galhiam': 'free',
     'galkap': 'free',
-    'galkapte': 'free',
     'galkhat': 'free',
     'galkidal': 'bound',
     'galkisim': 'bound',
     'galmatin': 'free',
     'galsimna': 'free',
-    'galte': 'free',
     'galvan': 'free',
     'galvil': 'free',
     'gam': 'free',
@@ -3160,10 +3131,8 @@ NOUN_STEM_TYPES = {
     'gammi': 'free',
     'gamtangzo': 'free',
     'gamtatna': 'free',
-    'gamte': 'free',
     'ganbuk': 'free',
     'ganhing': 'free',
-    'ganhingte': 'free',
     'gankhahna': 'free',
     'ganpi': 'bound',
     'gat': 'free',
@@ -3238,7 +3207,6 @@ NOUN_STEM_TYPES = {
     'innkuanpih': 'free',
     'innlelo': 'free',
     'innsual': 'bound',
-    'innte': 'free',
     'innzom': 'free',
     'ipen': 'bound',
     'ipip': 'bound',
@@ -3310,7 +3278,6 @@ NOUN_STEM_TYPES = {
     'khuangneu': 'free',
     'khuangtung': 'free',
     'khuapi': 'free',
-    'khuapite': 'free',
     'khuavak': 'free',
     'khukdin': 'free',
     'khupnelh': 'bound',
@@ -3471,7 +3438,6 @@ NOUN_STEM_TYPES = {
     'luppih': 'free',
     'lut': 'free',
     'lutang': 'free',
-    'lute': 'ghost',
     'luzepna': 'bound',
     'maan': 'free',
     'maangmuh': 'free',
@@ -3520,16 +3486,13 @@ NOUN_STEM_TYPES = {
     'miaimuai': 'free',
     'mial': 'free',
     'midang': 'free',
-    'midangte': 'free',
     'migilo': 'free',
-    'migilote': 'free',
     'migina': 'free',
     'mihai': 'free',
     'mihing': 'free',
     'mihoih': 'free',
     'mihon': 'free',
     'mihonpi': 'free',
-    'mihonte': 'free',
     'milim': 'free',
     'min': 'free',
     'minam': 'free',
@@ -3538,9 +3501,7 @@ NOUN_STEM_TYPES = {
     'mipa': 'free',
     'mipil': 'free',
     'misi': 'free',
-    'misite': 'free',
     'mit': 'free',
-    'mite': 'free',
     'mithuman': 'bound',
     'mitlawt': 'free',
     'mittaw': 'free',
@@ -3571,7 +3532,6 @@ NOUN_STEM_TYPES = {
     'namun': 'free',
     'nasem': 'free',
     'nasempa': 'free',
-    'nasemte': 'free',
     'nasepna': 'free',
     'nasia': 'free',
     'natui': 'free',
@@ -3618,7 +3578,6 @@ NOUN_STEM_TYPES = {
     'nuam': 'free',
     'nuamsa': 'free',
     'numei': 'free',
-    'numeite': 'free',
     'nun': 'free',
     'nungak': 'free',
     'nungdal': 'bound',
@@ -3639,7 +3598,6 @@ NOUN_STEM_TYPES = {
     'panun': 'free',
     'pasal': 'free',
     'pasian': 'free',
-    'pate': 'free',
     'patkhau': 'bound',
     'pawi': 'free',
     'pawl': 'free',
@@ -3690,7 +3648,6 @@ NOUN_STEM_TYPES = {
     'puandum': 'bound',
     'puangin': 'free',
     'puankek': 'bound',
-    'puante': 'free',
     'puantualpi': 'free',
     'puknah': 'free',
     'pul': 'free',
@@ -3714,7 +3671,6 @@ NOUN_STEM_TYPES = {
     'sang': 'free',
     'sanggam': 'free',
     'sanggampa': 'free',
-    'sanggamte': 'free',
     'sangkil': 'free',
     'sankhit': 'free',
     'sathaukhal': 'free',
@@ -3738,11 +3694,9 @@ NOUN_STEM_TYPES = {
     'sialh': 'free',
     'siampi': 'free',
     'siampipa': 'free',
-    'siampite': 'free',
     'siamte': 'free',
     'siang': 'free',
     'siangtho': 'free',
-    'siangthote': 'free',
     'sianthosaksa': 'free',
     'siasa': 'free',
     'siatgamtat': 'bound',
@@ -3776,7 +3730,6 @@ NOUN_STEM_TYPES = {
     'suangte': 'free',
     'suankhiat': 'free',
     'suanlekhak': 'free',
-    'suanlekhakte': 'free',
     'sucim': 'free',
     'sum': 'free',
     'sumkhek': 'bound',
@@ -3804,10 +3757,8 @@ NOUN_STEM_TYPES = {
     'tangteuh': 'free',
     'tangval': 'free',
     'tanu': 'free',
-    'tanute': 'free',
     'tanzum': 'bound',
     'tapa': 'free',
-    'tapate': 'free',
     'tapeeng': 'free',
     'tatolh': 'free',
     'tausangpi': 'free',
@@ -3876,7 +3827,6 @@ NOUN_STEM_TYPES = {
     'thupha': 'free',
     'thupiak': 'free',
     'thupiakna': 'free',
-    'thupiakte': 'free',
     'thupiangsa': 'bound',
     'thupina': 'free',
     'thusim': 'free',
@@ -3931,7 +3881,6 @@ NOUN_STEM_TYPES = {
     'umcih': 'free',
     'unau': 'free',
     'upa': 'free',
-    'upate': 'free',
     'upmawhna': 'free',
     'upna': 'free',
     'utong': 'free',
@@ -3949,7 +3898,6 @@ NOUN_STEM_TYPES = {
     'vankia': 'free',
     'vantung': 'free',
     'vantungmi': 'free',
-    'vantungte': 'free',
     'vanzat': 'bound',
     'vatgawp': 'free',
     'vengvang': 'bound',

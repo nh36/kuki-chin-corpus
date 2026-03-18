@@ -131,21 +131,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## ai
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | ai | Gen 12:8, Gen 13:3, Lev 16:8 (+2) |
-| Genitive | ai' | — |
-| Ergative | aiin | — |
-| Locative | aiah | 1Ch 1:40 |
-| Ablative | aipan | — |
-| Ablative-Ergative | aipanin | — |
-| Comitative | aitawh | — |
-| Comitative-Ergative | aitawhin | — |
-
----
-
 ## Ai
 
 | Case | Form | Attested |
@@ -158,6 +143,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | Aipanin | — |
 | Comitative | Aitawh | — |
 | Comitative-Ergative | Aitawhin | — |
+
+---
+
+## ai
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | ai | Gen 12:8, Gen 13:3, Lev 16:8 (+2) |
+| Genitive | ai' | — |
+| Ergative | aiin | — |
+| Locative | aiah | 1Ch 1:40 |
+| Ablative | aipan | — |
+| Ablative-Ergative | aipanin | — |
+| Comitative | aitawh | — |
+| Comitative-Ergative | aitawhin | — |
 
 ---
 
@@ -941,21 +941,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## giah
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | giah | Gen 24:23, Gen 24:25, 2Sa 2:24 (+2) |
-| Genitive | giah' | — |
-| Ergative | giahin | — |
-| Locative | giahah | — |
-| Ablative | giahpan | — |
-| Ablative-Ergative | giahpanin | — |
-| Comitative | giahtawh | — |
-| Comitative-Ergative | giahtawhin | — |
-
----
-
 ## Giah
 
 | Case | Form | Attested |
@@ -968,6 +953,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | Giahpanin | — |
 | Comitative | Giahtawh | — |
 | Comitative-Ergative | Giahtawhin | — |
+
+---
+
+## giah
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | giah | Gen 24:23, Gen 24:25, 2Sa 2:24 (+2) |
+| Genitive | giah' | — |
+| Ergative | giahin | — |
+| Locative | giahah | — |
+| Ablative | giahpan | — |
+| Ablative-Ergative | giahpanin | — |
+| Comitative | giahtawh | — |
+| Comitative-Ergative | giahtawhin | — |
 
 ---
 
@@ -1886,21 +1886,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## lot
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | lot | Gen 11:31, Gen 12:4, Gen 12:5 (+2) |
-| Genitive | lot' | Gen 11:27, Gen 13:7, Gen 13:8 (+2) |
-| Ergative | lotin | — |
-| Locative | lotah | — |
-| Ablative | lotpan | — |
-| Ablative-Ergative | lotpanin | — |
-| Comitative | lottawh | — |
-| Comitative-Ergative | lottawhin | — |
-
----
-
 ## Lot
 
 | Case | Form | Attested |
@@ -1916,18 +1901,18 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## Lungdamna
+## lot
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Lungdamna | Gen 31:27, Deu 28:47, Jdg 8:35 (+2) |
-| Genitive | Lungdamna' | — |
-| Ergative | Lungdamnain | — |
-| Locative | Lungdamnaah | — |
-| Ablative | Lungdamnapan | — |
-| Ablative-Ergative | Lungdamnapanin | — |
-| Comitative | Lungdamnatawh | — |
-| Comitative-Ergative | Lungdamnatawhin | — |
+| Absolutive | lot | Gen 11:31, Gen 12:4, Gen 12:5 (+2) |
+| Genitive | lot' | Gen 11:27, Gen 13:7, Gen 13:8 (+2) |
+| Ergative | lotin | — |
+| Locative | lotah | — |
+| Ablative | lotpan | — |
+| Ablative-Ergative | lotpanin | — |
+| Comitative | lottawh | — |
+| Comitative-Ergative | lottawhin | — |
 
 ---
 
@@ -1943,6 +1928,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | lungdamnapanin | — |
 | Comitative | lungdamnatawh | — |
 | Comitative-Ergative | lungdamnatawhin | — |
+
+---
+
+## Lungdamna
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Lungdamna | Gen 31:27, Deu 28:47, Jdg 8:35 (+2) |
+| Genitive | Lungdamna' | — |
+| Ergative | Lungdamnain | — |
+| Locative | Lungdamnaah | — |
+| Ablative | Lungdamnapan | — |
+| Ablative-Ergative | Lungdamnapanin | — |
+| Comitative | Lungdamnatawh | — |
+| Comitative-Ergative | Lungdamnatawhin | — |
 
 ---
 
@@ -2381,21 +2381,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## Pawi
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Pawi | Gen 1:14, Gen 8:22, Gen 21:8 (+2) |
-| Genitive | Pawi' | — |
-| Ergative | Pawiin | — |
-| Locative | Pawiah | — |
-| Ablative | Pawipan | — |
-| Ablative-Ergative | Pawipanin | — |
-| Comitative | Pawitawh | — |
-| Comitative-Ergative | Pawitawhin | — |
-
----
-
 ## pawi
 
 | Case | Form | Attested |
@@ -2408,6 +2393,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | pawipanin | — |
 | Comitative | pawitawh | — |
 | Comitative-Ergative | pawitawhin | — |
+
+---
+
+## Pawi
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Pawi | Gen 1:14, Gen 8:22, Gen 21:8 (+2) |
+| Genitive | Pawi' | — |
+| Ergative | Pawiin | — |
+| Locative | Pawiah | — |
+| Ablative | Pawipan | — |
+| Ablative-Ergative | Pawipanin | — |
+| Comitative | Pawitawh | — |
+| Comitative-Ergative | Pawitawhin | — |
 
 ---
 
@@ -2951,21 +2951,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## sin
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | sin | Gen 10:17, Exo 8:18, Exo 16:1 (+2) |
-| Genitive | sin' | — |
-| Ergative | sinin | Ezr 7:10, Act 2:42 |
-| Locative | sinah | — |
-| Ablative | sinpan | — |
-| Ablative-Ergative | sinpanin | — |
-| Comitative | sintawh | — |
-| Comitative-Ergative | sintawhin | — |
-
----
-
 ## Sin
 
 | Case | Form | Attested |
@@ -2978,6 +2963,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | Sinpanin | — |
 | Comitative | Sintawh | — |
 | Comitative-Ergative | Sintawhin | — |
+
+---
+
+## sin
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | sin | Gen 10:17, Exo 8:18, Exo 16:1 (+2) |
+| Genitive | sin' | — |
+| Ergative | sinin | Ezr 7:10, Act 2:42 |
+| Locative | sinah | — |
+| Ablative | sinpan | — |
+| Ablative-Ergative | sinpanin | — |
+| Comitative | sintawh | — |
+| Comitative-Ergative | sintawhin | — |
 
 ---
 
