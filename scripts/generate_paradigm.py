@@ -47,12 +47,14 @@ def format_verse_ref(verse_id: str) -> str:
 
 
 # Tedim Chin case system
-# Based on corpus analysis: ERG (53,915), LOC (25,569), ABL.ERG (4,343), ABL (32), COM (229), COM.ERG (2)
+# Based on corpus analysis: GEN (many), ERG (53,915), LOC (25,569), ABL.ERG (4,343), ABL (32), COM (229), COM.ERG (2)
 # Note: -in marks both ERG (on nouns) and INST (on manner expressions)
 # -pan = simple ablative "from"; -panin = ablative+ergative (source as agent)
 # -tawh = simple comitative "with"; -tawhin = comitative+ergative (instrument as agent)
+# Genitive marked with apostrophe (glottal stop): pa' = father's
 CASE_SUFFIXES = [
     ('', 'ABS', 'Absolutive'),           # Unmarked
+    ("'", 'GEN', 'Genitive'),            # Possessor (glottal stop)
     ('in', 'ERG', 'Ergative'),           # Agent/instrument
     ('ah', 'LOC', 'Locative'),           # Location
     ('pan', 'ABL', 'Ablative'),          # Simple source/from
@@ -85,7 +87,10 @@ def find_attestations(corpus_file: str, forms: List[str]) -> Dict[str, List[Tupl
             text = parts[1]
             
             for word in text.split():
-                word_clean = word.strip('.,;:!?"\'').lower()
+                # Strip punctuation but PRESERVE apostrophe (genitive marker)
+                word_clean = word.strip('.,;:!?"').lower()
+                # Remove trailing apostrophe only if followed by punctuation that was stripped
+                # Actually, we want to keep trailing apostrophe for genitive
                 if word_clean in forms_lower:
                     # Find the canonical form
                     for form in forms:
@@ -195,6 +200,7 @@ def generate_full_report(nouns: List[Tuple[str, str]], corpus_file: str) -> str:
         '- **Number**: Singular (unmarked), Plural (*-te*)',
         '- **Case**:',
         '  - Absolutive (unmarked)',
+        "  - Genitive (*-'*) — possessor (glottal stop)",
         '  - Ergative (*-in*) — marks agent',
         '  - Locative (*-ah*) — location',
         '  - Ablative (*-pan*) — source/from',
