@@ -129,9 +129,19 @@ NUMBER_SUFFIXES = [
     ('te', 'PL', 'Plural'),
 ]
 
-def find_attestations(corpus_file: str, forms: List[str]) -> Dict[str, List[Tuple[str, str]]]:
+# Postpositions that should not count preceding nouns as absolutive
+NOMINAL_POSTPOSITIONS = {'pan', 'tawh', 'panin', 'tawhin'}
+
+def find_attestations(corpus_file: str, forms: List[str], 
+                      exclude_prepostpositional: bool = False) -> Dict[str, List[Tuple[str, str]]]:
     """
     Find corpus attestations for a list of word forms.
+    
+    Args:
+        corpus_file: Path to corpus file
+        forms: List of word forms to search for
+        exclude_prepostpositional: If True, exclude bare stems that are followed
+            by postpositions (pan, tawh, panin, tawhin) - these are not true absolutives
     
     Returns dict mapping form -> [(verse_id, context), ...]
     """
@@ -145,8 +155,9 @@ def find_attestations(corpus_file: str, forms: List[str]) -> Dict[str, List[Tupl
                 continue
             verse_id = parts[0]
             text = parts[1]
+            words = text.split()
             
-            for word in text.split():
+            for i, word in enumerate(words):
                 # Strip punctuation but PRESERVE apostrophe (genitive marker)
                 word_clean = word.strip('.,;:!?"').lower()
                 # Remove trailing apostrophe only if followed by punctuation that was stripped
@@ -155,6 +166,15 @@ def find_attestations(corpus_file: str, forms: List[str]) -> Dict[str, List[Tupl
                     # Find the canonical form
                     for form in forms:
                         if form.lower().replace('-', '') == word_clean:
+                            # Check if this is a bare stem followed by postposition
+                            if exclude_prepostpositional and '-' not in form:
+                                # Check next word
+                                if i + 1 < len(words):
+                                    next_word = words[i + 1].strip('.,;:!?"').lower()
+                                    if next_word in NOMINAL_POSTPOSITIONS:
+                                        # Skip - this is NP + postposition, not absolutive
+                                        break
+                            
                             if len(attestations[form]) < 5:  # Limit examples
                                 attestations[form].append((verse_id, word))
                             break
@@ -282,8 +302,8 @@ def generate_full_report(nouns: List[Tuple[str, str]], corpus_file: str) -> str:
         paradigm_forms = generate_paradigm_forms(stem)
         forms_list = [f[0] for f in paradigm_forms]
         
-        # Find attestations
-        attestations = find_attestations(corpus_file, forms_list)
+        # Find attestations - exclude bare stems followed by postpositions
+        attestations = find_attestations(corpus_file, forms_list, exclude_prepostpositional=True)
         
         # Generate markdown
         lines.append(generate_paradigm_markdown(stem, gloss, attestations))
@@ -317,7 +337,8 @@ def analyze_attestation_patterns(nouns: List[Tuple[str, str]], corpus_file: str)
     for stem, gloss in nouns:
         paradigm_forms = generate_paradigm_forms(stem)
         forms_list = [f[0] for f in paradigm_forms]
-        attestations = find_attestations(corpus_file, forms_list)
+        # Exclude bare stems followed by postpositions from absolutive counts
+        attestations = find_attestations(corpus_file, forms_list, exclude_prepostpositional=True)
         
         # Track which cases are attested (singular or plural)
         cases_attested = set()
@@ -473,7 +494,8 @@ def generate_free_noun_report(corpus_file: str) -> str:
         stem_info = analysis['stem_patterns'].get(stem)
         paradigm_forms = generate_paradigm_forms(stem)
         forms_list = [f[0] for f in paradigm_forms]
-        attestations = find_attestations(corpus_file, forms_list)
+        # Exclude bare stems followed by postpositions
+        attestations = find_attestations(corpus_file, forms_list, exclude_prepostpositional=True)
         lines.append(generate_paradigm_markdown(stem, gloss, attestations))
         lines.append('')
         lines.append('---')
@@ -546,7 +568,8 @@ def generate_compound_report(corpus_file: str) -> str:
             # Generate paradigm for this compound
             paradigm_forms = generate_paradigm_forms(compound)
             forms_list = [f[0] for f in paradigm_forms]
-            attestations = find_attestations(corpus_file, forms_list)
+            # Exclude bare compounds followed by postpositions
+            attestations = find_attestations(corpus_file, forms_list, exclude_prepostpositional=True)
             
             lines.append(f'### {compound} "{gloss}" ({structure})')
             lines.append('')
@@ -616,7 +639,8 @@ def analyze_proper_noun_patterns(names: List[str], corpus_file: str) -> Dict:
             if case_suf:
                 forms.append(f"{name}{case_suf}")
         
-        attestations = find_attestations(corpus_file, forms)
+        # Exclude bare proper nouns followed by postpositions
+        attestations = find_attestations(corpus_file, forms, exclude_prepostpositional=True)
         
         cases_attested = set()
         attestation_counts = {}
@@ -690,7 +714,8 @@ def generate_proper_noun_report(corpus_file: str) -> str:
             if case_suf:
                 forms.append(f"{name}{case_suf}")  # No hyphen for proper nouns
         
-        attestations = find_attestations(corpus_file, forms)
+        # Exclude bare proper nouns followed by postpositions
+        attestations = find_attestations(corpus_file, forms, exclude_prepostpositional=True)
         
         # Only include if we found any attestations
         if any(attestations.values()):

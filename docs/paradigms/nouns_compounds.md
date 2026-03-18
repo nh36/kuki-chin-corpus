@@ -166,7 +166,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | bilbah | Jdg 8:24, Pro 25:12, Isa 3:19 | bilbah-te | Gen 35:4, Exo 32:2, Exo 32:3 (+2) |
+| Absolutive | bilbah | Jdg 8:24, Isa 3:19 | bilbah-te | Gen 35:4, Exo 32:2, Exo 32:3 (+2) |
 | Genitive | bilbah-' | — | bilbah-te-' | — |
 | Ergative | bilbah-in | — | bilbah-te-in | — |
 | Locative | bilbah-ah | — | bilbah-te-ah | — |
@@ -177,7 +177,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | nakbah | Gen 24:22, Gen 24:30, Gen 24:47 (+1) | nakbah-te | Eze 16:12 |
+| Absolutive | nakbah | Gen 24:22, Gen 24:30, Gen 24:47 | nakbah-te | Eze 16:12 |
 | Genitive | nakbah-' | — | nakbah-te-' | — |
 | Ergative | nakbah-in | — | nakbah-te-in | — |
 | Locative | nakbah-ah | — | nakbah-te-ah | — |
@@ -379,7 +379,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | bilbah | Jdg 8:24, Pro 25:12, Isa 3:19 | bilbah-te | Gen 35:4, Exo 32:2, Exo 32:3 (+2) |
+| Absolutive | bilbah | Jdg 8:24, Isa 3:19 | bilbah-te | Gen 35:4, Exo 32:2, Exo 32:3 (+2) |
 | Genitive | bilbah-' | — | bilbah-te-' | — |
 | Ergative | bilbah-in | — | bilbah-te-in | — |
 | Locative | bilbah-ah | — | bilbah-te-ah | — |
@@ -396,7 +396,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | tuibuah | Exo 29:40, Exo 29:41, Exo 30:9 (+2) | tuibuah-te | — |
+| Absolutive | tuibuah | Exo 29:40, Exo 30:9, Num 15:5 (+2) | tuibuah-te | — |
 | Genitive | tuibuah-' | — | tuibuah-te-' | — |
 | Ergative | tuibuah-in | — | tuibuah-te-in | — |
 | Locative | tuibuah-ah | — | tuibuah-te-ah | — |
@@ -446,7 +446,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | zungbuh | Gen 41:42, Est 3:10, Est 3:12 (+2) | zungbuh-te | Exo 35:22, Num 31:50, Sol 5:14 (+1) |
+| Absolutive | zungbuh | Gen 41:42, Est 3:10, Est 8:2 (+2) | zungbuh-te | Exo 35:22, Num 31:50, Sol 5:14 (+1) |
 | Genitive | zungbuh-' | — | zungbuh-te-' | — |
 | Ergative | zungbuh-in | — | zungbuh-te-in | — |
 | Locative | zungbuh-ah | — | zungbuh-te-ah | — |
@@ -715,7 +715,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | namdang | Lev 19:19, Num 36:7, Jer 7:6 (+1) | namdang-te | Isa 17:10, Oba 1:11 |
+| Absolutive | namdang | Num 36:7, Jer 7:6, Heb 7:11 | namdang-te | Isa 17:10, Oba 1:11 |
 | Genitive | namdang-' | — | namdang-te-' | Lam 4:12 |
 | Ergative | namdang-in | — | namdang-te-in | — |
 | Locative | namdang-ah | — | namdang-te-ah | — |
@@ -1241,7 +1241,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | gimnam | Gen 8:21, Gen 27:27, Gen 27:27 (+2) | gimnam-te | Gen 27:27 |
+| Absolutive | gimnam | Gen 8:21, Gen 27:27, Job 19:17 (+2) | gimnam-te | Gen 27:27 |
 | Genitive | gimnam-' | — | gimnam-te-' | — |
 | Ergative | gimnam-in | — | gimnam-te-in | — |
 | Locative | gimnam-ah | — | gimnam-te-ah | — |
@@ -1954,7 +1954,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | kamkaih | 2Ki 9:23, 2Ki 19:28, Psa 32:9 (+2) | kamkaih-te | — |
+| Absolutive | kamkaih | 2Ki 9:23, 2Ki 19:28, Pro 26:3 (+2) | kamkaih-te | — |
 | Genitive | kamkaih-' | — | kamkaih-te-' | — |
 | Ergative | kamkaih-in | — | kamkaih-te-in | — |
 | Locative | kamkaih-ah | — | kamkaih-te-ah | — |
@@ -1999,7 +1999,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | kamkaih | 2Ki 9:23, 2Ki 19:28, Psa 32:9 (+2) | kamkaih-te | — |
+| Absolutive | kamkaih | 2Ki 9:23, 2Ki 19:28, Pro 26:3 (+2) | kamkaih-te | — |
 | Genitive | kamkaih-' | — | kamkaih-te-' | — |
 | Ergative | kamkaih-in | — | kamkaih-te-in | — |
 | Locative | kamkaih-ah | — | kamkaih-te-ah | — |
@@ -2055,7 +2055,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | sikkawi | Job 41:1, Job 41:2, Isa 19:8 (+2) | sikkawi-te | 2Ch 33:11 |
+| Absolutive | sikkawi | Job 41:2, Isa 19:8, Isa 37:29 (+2) | sikkawi-te | 2Ch 33:11 |
 | Genitive | sikkawi-' | — | sikkawi-te-' | — |
 | Ergative | sikkawi-in | — | sikkawi-te-in | — |
 | Locative | sikkawi-ah | — | sikkawi-te-ah | — |
@@ -2072,7 +2072,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | keelmul | Exo 25:4, Exo 26:7, Exo 35:6 (+2) | keelmul-te | — |
+| Absolutive | keelmul | Exo 25:4, Exo 35:6, Exo 35:23 (+2) | keelmul-te | — |
 | Genitive | keelmul-' | — | keelmul-te-' | — |
 | Ergative | keelmul-in | — | keelmul-te-in | — |
 | Locative | keelmul-ah | — | keelmul-te-ah | — |
@@ -2257,7 +2257,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | mimkhau | Gen 14:23, Jdg 16:12, Jdg 16:13 | mimkhau-te | — |
+| Absolutive | mimkhau | Gen 14:23, Jdg 16:12 | mimkhau-te | — |
 | Genitive | mimkhau-' | — | mimkhau-te-' | — |
 | Ergative | mimkhau-in | — | mimkhau-te-in | — |
 | Locative | mimkhau-ah | — | mimkhau-te-ah | — |
@@ -2649,7 +2649,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | tuikhuk | Gen 16:14, Gen 21:19, Gen 21:25 (+2) | tuikhuk-te | Gen 7:11, Gen 26:18, Jos 15:19 (+2) |
+| Absolutive | tuikhuk | Gen 16:14, Gen 21:19, Gen 21:30 (+2) | tuikhuk-te | Gen 7:11, Gen 26:18, Jos 15:19 (+2) |
 | Genitive | tuikhuk-' | — | tuikhuk-te-' | — |
 | Ergative | tuikhuk-in | — | tuikhuk-te-in | — |
 | Locative | tuikhuk-ah | Gen 24:16, Gen 24:20, Gen 24:42 (+2) | tuikhuk-te-ah | — |
@@ -2705,7 +2705,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | khuttum | Exo 21:18, Job 15:25, Psa 38:2 (+2) | khuttum-te | — |
+| Absolutive | khuttum | Job 15:25, Psa 38:2, Isa 10:32 (+2) | khuttum-te | — |
 | Genitive | khuttum-' | — | khuttum-te-' | — |
 | Ergative | khuttum-in | — | khuttum-te-in | — |
 | Locative | khuttum-ah | — | khuttum-te-ah | — |
@@ -3550,7 +3550,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | leilak | Gen 2:7, Gen 4:10, Gen 28:14 (+2) | leilak-te | — |
+| Absolutive | leilak | Gen 2:7, Gen 28:14, Gen 33:3 (+2) | leilak-te | — |
 | Genitive | leilak-' | — | leilak-te-' | — |
 | Ergative | leilak-in | — | leilak-te-in | — |
 | Locative | leilak-ah | Gen 6:20, Gen 9:2, Gen 18:2 (+2) | leilak-te-ah | — |
@@ -3694,7 +3694,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | limlang | Job 28:17, Job 28:18, Job 37:18 (+2) | limlang-te | Exo 38:8 |
+| Absolutive | limlang | Job 37:18, 1Co 13:12, Rev 4:6 (+2) | limlang-te | Exo 38:8 |
 | Genitive | limlang-' | — | limlang-te-' | — |
 | Ergative | limlang-in | — | limlang-te-in | — |
 | Locative | limlang-ah | Jam 1:23, Jam 1:24 | limlang-te-ah | — |
@@ -3790,7 +3790,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | leilak | Gen 2:7, Gen 4:10, Gen 28:14 (+2) | leilak-te | — |
+| Absolutive | leilak | Gen 2:7, Gen 28:14, Gen 33:3 (+2) | leilak-te | — |
 | Genitive | leilak-' | — | leilak-te-' | — |
 | Ergative | leilak-in | — | leilak-te-in | — |
 | Locative | leilak-ah | Gen 6:20, Gen 9:2, Gen 18:2 (+2) | leilak-te-ah | — |
@@ -3969,7 +3969,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | limlang | Job 28:17, Job 28:18, Job 37:18 (+2) | limlang-te | Exo 38:8 |
+| Absolutive | limlang | Job 37:18, 1Co 13:12, Rev 4:6 (+2) | limlang-te | Exo 38:8 |
 | Genitive | limlang-' | — | limlang-te-' | — |
 | Ergative | limlang-in | — | limlang-te-in | — |
 | Locative | limlang-ah | Jam 1:23, Jam 1:24 | limlang-te-ah | — |
@@ -4676,7 +4676,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | mimkhau | Gen 14:23, Jdg 16:12, Jdg 16:13 | mimkhau-te | — |
+| Absolutive | mimkhau | Gen 14:23, Jdg 16:12 | mimkhau-te | — |
 | Genitive | mimkhau-' | — | mimkhau-te-' | — |
 | Ergative | mimkhau-in | — | mimkhau-te-in | — |
 | Locative | mimkhau-ah | — | mimkhau-te-ah | — |
@@ -4845,7 +4845,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | keelmul | Exo 25:4, Exo 26:7, Exo 35:6 (+2) | keelmul-te | — |
+| Absolutive | keelmul | Exo 25:4, Exo 35:6, Exo 35:23 (+2) | keelmul-te | — |
 | Genitive | keelmul-' | — | keelmul-te-' | — |
 | Ergative | keelmul-in | — | keelmul-te-in | — |
 | Locative | keelmul-ah | — | keelmul-te-ah | — |
@@ -4951,7 +4951,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | singnai | Gen 2:12, Gen 37:25, Gen 43:11 (+1) | singnai-te | — |
+| Absolutive | singnai | Gen 2:12, Gen 37:25, Gen 43:11 | singnai-te | — |
 | Genitive | singnai-' | — | singnai-te-' | — |
 | Ergative | singnai-in | — | singnai-te-in | — |
 | Locative | singnai-ah | — | singnai-te-ah | — |
@@ -4968,7 +4968,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | nakbah | Gen 24:22, Gen 24:30, Gen 24:47 (+1) | nakbah-te | Eze 16:12 |
+| Absolutive | nakbah | Gen 24:22, Gen 24:30, Gen 24:47 | nakbah-te | Eze 16:12 |
 | Genitive | nakbah-' | — | nakbah-te-' | — |
 | Ergative | nakbah-in | — | nakbah-te-in | — |
 | Locative | nakbah-ah | — | nakbah-te-ah | — |
@@ -4996,7 +4996,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | gimnam | Gen 8:21, Gen 27:27, Gen 27:27 (+2) | gimnam-te | Gen 27:27 |
+| Absolutive | gimnam | Gen 8:21, Gen 27:27, Job 19:17 (+2) | gimnam-te | Gen 27:27 |
 | Genitive | gimnam-' | — | gimnam-te-' | — |
 | Ergative | gimnam-in | — | gimnam-te-in | — |
 | Locative | gimnam-ah | — | gimnam-te-ah | — |
@@ -5018,7 +5018,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | namdang | Lev 19:19, Num 36:7, Jer 7:6 (+1) | namdang-te | Isa 17:10, Oba 1:11 |
+| Absolutive | namdang | Num 36:7, Jer 7:6, Heb 7:11 | namdang-te | Isa 17:10, Oba 1:11 |
 | Genitive | namdang-' | — | namdang-te-' | Lam 4:12 |
 | Ergative | namdang-in | — | namdang-te-in | — |
 | Locative | namdang-ah | — | namdang-te-ah | — |
@@ -5063,7 +5063,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | naupang | Gen 4:25, Gen 21:8, Gen 21:14 (+2) | naupang-te | Gen 25:27, Gen 31:43, Gen 32:11 (+2) |
+| Absolutive | naupang | Gen 4:25, Gen 21:8, Gen 21:15 (+2) | naupang-te | Gen 25:27, Gen 31:43, Gen 32:11 (+2) |
 | Genitive | naupang-' | Gen 21:17, Exo 2:8, Jdg 13:12 (+2) | naupang-te-' | Gen 31:43, Gen 33:14, Job 21:21 (+2) |
 | Ergative | naupang-in | Est 8:10 | naupang-te-in | — |
 | Locative | naupang-ah | — | naupang-te-ah | — |
@@ -5513,7 +5513,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | sungnu | Deu 27:23, Mat 8:14, Mar 1:30 (+1) | sungnu-te | — |
+| Absolutive | sungnu | Mat 8:14, Mar 1:30, Luk 4:38 | sungnu-te | — |
 | Genitive | sungnu-' | — | sungnu-te-' | — |
 | Ergative | sungnu-in | — | sungnu-te-in | — |
 | Locative | sungnu-ah | — | sungnu-te-ah | — |
@@ -5776,7 +5776,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | naupang | Gen 4:25, Gen 21:8, Gen 21:14 (+2) | naupang-te | Gen 25:27, Gen 31:43, Gen 32:11 (+2) |
+| Absolutive | naupang | Gen 4:25, Gen 21:8, Gen 21:15 (+2) | naupang-te | Gen 25:27, Gen 31:43, Gen 32:11 (+2) |
 | Genitive | naupang-' | Gen 21:17, Exo 2:8, Jdg 13:12 (+2) | naupang-te-' | Gen 31:43, Gen 33:14, Job 21:21 (+2) |
 | Ergative | naupang-in | Est 8:10 | naupang-te-in | — |
 | Locative | naupang-ah | — | naupang-te-ah | — |
@@ -6855,7 +6855,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | sikkawi | Job 41:1, Job 41:2, Isa 19:8 (+2) | sikkawi-te | 2Ch 33:11 |
+| Absolutive | sikkawi | Job 41:2, Isa 19:8, Isa 37:29 (+2) | sikkawi-te | 2Ch 33:11 |
 | Genitive | sikkawi-' | — | sikkawi-te-' | — |
 | Ergative | sikkawi-in | — | sikkawi-te-in | — |
 | Locative | sikkawi-ah | — | sikkawi-te-ah | — |
@@ -7011,7 +7011,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | singnai | Gen 2:12, Gen 37:25, Gen 43:11 (+1) | singnai-te | — |
+| Absolutive | singnai | Gen 2:12, Gen 37:25, Gen 43:11 | singnai-te | — |
 | Genitive | singnai-' | — | singnai-te-' | — |
 | Ergative | singnai-in | — | singnai-te-in | — |
 | Locative | singnai-ah | — | singnai-te-ah | — |
@@ -7173,7 +7173,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | sungnu | Deu 27:23, Mat 8:14, Mar 1:30 (+1) | sungnu-te | — |
+| Absolutive | sungnu | Mat 8:14, Mar 1:30, Luk 4:38 | sungnu-te | — |
 | Genitive | sungnu-' | — | sungnu-te-' | — |
 | Ergative | sungnu-in | — | sungnu-te-in | — |
 | Locative | sungnu-ah | — | sungnu-te-ah | — |
@@ -7218,7 +7218,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | vangtaang | 2Ch 5:14, 2Co 3:7, 2Co 3:9 (+2) | vangtaang-te | — |
+| Absolutive | vangtaang | 2Ch 5:14, 2Co 3:9, 2Co 3:9 (+2) | vangtaang-te | — |
 | Genitive | vangtaang-' | — | vangtaang-te-' | — |
 | Ergative | vangtaang-in | — | vangtaang-te-in | — |
 | Locative | vangtaang-ah | — | vangtaang-te-ah | — |
@@ -8073,7 +8073,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | tuibuah | Exo 29:40, Exo 29:41, Exo 30:9 (+2) | tuibuah-te | — |
+| Absolutive | tuibuah | Exo 29:40, Exo 30:9, Num 15:5 (+2) | tuibuah-te | — |
 | Genitive | tuibuah-' | — | tuibuah-te-' | — |
 | Ergative | tuibuah-in | — | tuibuah-te-in | — |
 | Locative | tuibuah-ah | — | tuibuah-te-ah | — |
@@ -8095,7 +8095,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | tuikhuk | Gen 16:14, Gen 21:19, Gen 21:25 (+2) | tuikhuk-te | Gen 7:11, Gen 26:18, Jos 15:19 (+2) |
+| Absolutive | tuikhuk | Gen 16:14, Gen 21:19, Gen 21:30 (+2) | tuikhuk-te | Gen 7:11, Gen 26:18, Jos 15:19 (+2) |
 | Genitive | tuikhuk-' | — | tuikhuk-te-' | — |
 | Ergative | tuikhuk-in | — | tuikhuk-te-in | — |
 | Locative | tuikhuk-ah | Gen 24:16, Gen 24:20, Gen 24:42 (+2) | tuikhuk-te-ah | — |
@@ -8156,7 +8156,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | khuttum | Exo 21:18, Job 15:25, Psa 38:2 (+2) | khuttum-te | — |
+| Absolutive | khuttum | Job 15:25, Psa 38:2, Isa 10:32 (+2) | khuttum-te | — |
 | Genitive | khuttum-' | — | khuttum-te-' | — |
 | Ergative | khuttum-in | — | khuttum-te-in | — |
 | Locative | khuttum-ah | — | khuttum-te-ah | — |
@@ -8380,7 +8380,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | vangtaang | 2Ch 5:14, 2Co 3:7, 2Co 3:9 (+2) | vangtaang-te | — |
+| Absolutive | vangtaang | 2Ch 5:14, 2Co 3:9, 2Co 3:9 (+2) | vangtaang-te | — |
 | Genitive | vangtaang-' | — | vangtaang-te-' | — |
 | Ergative | vangtaang-in | — | vangtaang-te-in | — |
 | Locative | vangtaang-ah | — | vangtaang-te-ah | — |
@@ -8689,7 +8689,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Singular | Attested | Plural | Attested |
 |------|----------|----------|--------|----------|
-| Absolutive | zungbuh | Gen 41:42, Est 3:10, Est 3:12 (+2) | zungbuh-te | Exo 35:22, Num 31:50, Sol 5:14 (+1) |
+| Absolutive | zungbuh | Gen 41:42, Est 3:10, Est 8:2 (+2) | zungbuh-te | Exo 35:22, Num 31:50, Sol 5:14 (+1) |
 | Genitive | zungbuh-' | — | zungbuh-te-' | — |
 | Ergative | zungbuh-in | — | zungbuh-te-in | — |
 | Locative | zungbuh-ah | — | zungbuh-te-ah | — |

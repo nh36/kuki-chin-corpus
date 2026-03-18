@@ -22,8 +22,8 @@ not a case suffix. Tedim uses "David tawh" (with David) as two words.
 |------|------|-------|-------|---------|
 | 1 | [Adam](#adam-adam) | Adam | 3/6 | ABS+GEN+LOC |
 | 2 | [Asher](#asher-asher) | Asher | 3/6 | ABS+GEN+LOC |
-| 3 | [dan](#dan-dan) | dan | 3/6 | ABS+GEN+ERG |
-| 4 | [Dan](#dan-dan) | Dan | 3/6 | ABS+GEN+ERG |
+| 3 | [Dan](#dan-dan) | Dan | 3/6 | ABS+GEN+ERG |
+| 4 | [dan](#dan-dan) | dan | 3/6 | ABS+GEN+ERG |
 | 5 | [Efrath](#efrath-efrath) | Efrath | 3/6 | ABS+GEN+LOC |
 | 6 | [en](#en-en) | en | 3/6 | ABS+GEN+ERG |
 | 7 | [gilo](#gilo-gilo) | gilo | 3/6 | ABS+GEN+ERG |
@@ -57,7 +57,8 @@ not a case suffix. Tedim uses "David tawh" (with David) as two words.
 |----------------|-------|------------|
 | 3/6 cases | 13 | 6.0% |
 | 2/6 cases | 128 | 58.7% |
-| 1/6 cases | 77 | 35.3% |
+| 1/6 cases | 76 | 34.9% |
+| 0/6 cases | 1 | 0.5% |
 
 ### Case Attestation Frequency
 
@@ -65,7 +66,7 @@ How many noun stems have each case attested:
 
 | Case | Stems with Attestation | Percentage |
 |------|------------------------|------------|
-| ABS | 218 | 100.0% |
+| ABS | 217 | 99.5% |
 | GEN | 132 | 60.6% |
 | ERG | 15 | 6.9% |
 | LOC | 7 | 3.2% |
@@ -79,11 +80,12 @@ Nouns grouped by which cases they are attested in:
 | Pattern | Count | Example Stems |
 |---------|-------|---------------|
 | ABS+GEN | 119 | Aaron, Abimelek, Abner, Abraham, Abram (+114 more) |
-| ABS | 77 | angkawmin, Annas, antak, Aquila, Assiria (+72 more) |
-| ABS+GEN+ERG | 8 | dan, Dan, en, gilo, Gilo (+3 more) |
-| ABS+ERG | 7 | phut, sem, Sin, sin, suah (+2 more) |
+| ABS | 76 | angkawmin, Annas, antak, Aquila, Assiria (+71 more) |
+| ABS+GEN+ERG | 8 | Dan, dan, en, gilo, Gilo (+3 more) |
+| ABS+ERG | 7 | phut, sem, sin, Sin, suah (+2 more) |
 | ABS+GEN+LOC | 5 | Adam, Asher, Efrath, Joel, no |
 | ABS+LOC | 2 | ai, Ai |
+| NONE | 1 | Paulus |
 
 ---
 
@@ -327,7 +329,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Aquila | Act 18:2, Act 18:2, Act 18:18 (+2) |
+| Absolutive | Aquila | Act 18:2, Act 18:2, Act 18:26 (+2) |
 | Genitive | Aquila' | — |
 | Ergative | Aquilain | — |
 | Locative | Aquilaah | — |
@@ -496,7 +498,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Bethel | Gen 12:8, Gen 12:8, Gen 13:3 (+2) |
+| Absolutive | Bethel | Gen 12:8, Gen 13:3, Gen 13:3 (+2) |
 | Genitive | Bethel' | — |
 | Ergative | Bethelin | — |
 | Locative | Bethelah | — |
@@ -557,19 +559,6 @@ Nouns grouped by which cases they are attested in:
 
 ---
 
-## dan
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | dan | Gen 6:15, Gen 9:5, Gen 14:14 (+2) |
-| Genitive | dan' | Gen 46:23, Num 2:17 |
-| Ergative | danin | Lev 25:54, Num 16:29, Deu 19:3 (+2) |
-| Locative | danah | — |
-| Ablative | danpan | — |
-| Ablative-Ergative | danpanin | — |
-
----
-
 ## Dan
 
 | Case | Form | Attested |
@@ -580,6 +569,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | Danah | — |
 | Ablative | Danpan | — |
 | Ablative-Ergative | Danpanin | — |
+
+---
+
+## dan
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | dan | Gen 6:15, Gen 9:5, Gen 14:14 (+2) |
+| Genitive | dan' | Gen 46:23, Num 2:17 |
+| Ergative | danin | Lev 25:54, Num 16:29, Deu 19:3 (+2) |
+| Locative | danah | — |
+| Ablative | danpan | — |
+| Ablative-Ergative | danpanin | — |
 
 ---
 
@@ -652,7 +654,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Efrath | Gen 35:16, Gen 35:19, Gen 48:7 (+2) |
+| Absolutive | Efrath | Gen 35:19, Gen 48:7, Gen 48:7 (+2) |
 | Genitive | Efrath' | 1Ch 2:50, 1Ch 4:2 |
 | Ergative | Efrathin | — |
 | Locative | Efrathah | Rut 1:2, 1Sa 17:12, Mic 5:2 |
@@ -717,7 +719,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | elna | Exo 23:1, Deu 19:16, Psa 41:5 |
+| Absolutive | elna | Deu 19:16 |
 | Genitive | elna' | — |
 | Ergative | elnain | — |
 | Locative | elnaah | — |
@@ -990,7 +992,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Gilopa | Mat 13:38, 2Th 2:3, 2Th 2:4 (+2) |
+| Absolutive | Gilopa | 2Th 2:3, 2Th 2:4, 2Th 2:6 (+2) |
 | Genitive | Gilopa' | Joh 17:15 |
 | Ergative | Gilopain | — |
 | Locative | Gilopaah | — |
@@ -1094,7 +1096,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Horeb | Exo 3:1, Exo 33:6, Deu 1:2 (+2) |
+| Absolutive | Horeb | Exo 3:1, Exo 33:6, Deu 1:19 (+2) |
 | Genitive | Horeb' | — |
 | Ergative | Horebin | — |
 | Locative | Horebah | — |
@@ -1146,7 +1148,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Isaac | Gen 17:19, Gen 17:21, Gen 21:3 (+2) |
+| Absolutive | Isaac | Gen 17:19, Gen 21:3, Gen 21:4 (+2) |
 | Genitive | Isaac' | Gen 22:6, Gen 24:2, Gen 25:19 (+2) |
 | Ergative | Isaacin | — |
 | Locative | Isaacah | — |
@@ -1380,7 +1382,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Jonathan | Jdg 18:30, 1Sa 13:2, 1Sa 13:3 (+2) |
+| Absolutive | Jonathan | Jdg 18:30, 1Sa 13:3, 1Sa 13:16 (+2) |
 | Genitive | Jonathan' | 1Sa 14:39, 1Sa 14:41, 1Sa 19:6 (+2) |
 | Ergative | Jonathanin | — |
 | Locative | Jonathanah | — |
@@ -1532,19 +1534,6 @@ Nouns grouped by which cases they are attested in:
 
 ---
 
-## Kherub
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Kherub | Exo 25:18, Exo 25:19, Exo 25:19 (+2) |
-| Genitive | Kherub' | 1Ki 6:27 |
-| Ergative | Kherubin | — |
-| Locative | Kherubah | — |
-| Ablative | Kherubpan | — |
-| Ablative-Ergative | Kherubpanin | — |
-
----
-
 ## kherub
 
 | Case | Form | Attested |
@@ -1555,6 +1544,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | kherubah | — |
 | Ablative | kherubpan | — |
 | Ablative-Ergative | kherubpanin | — |
+
+---
+
+## Kherub
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Kherub | Exo 25:18, Exo 25:19, Exo 25:19 (+2) |
+| Genitive | Kherub' | 1Ki 6:27 |
+| Ergative | Kherubin | — |
+| Locative | Kherubah | — |
+| Ablative | Kherubpan | — |
+| Ablative-Ergative | Kherubpanin | — |
 
 ---
 
@@ -1740,19 +1742,6 @@ Nouns grouped by which cases they are attested in:
 
 ---
 
-## Lungdamna
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Lungdamna | Gen 31:27, Deu 28:47, Jdg 8:35 (+2) |
-| Genitive | Lungdamna' | — |
-| Ergative | Lungdamnain | — |
-| Locative | Lungdamnaah | — |
-| Ablative | Lungdamnapan | — |
-| Ablative-Ergative | Lungdamnapanin | — |
-
----
-
 ## lungdamna
 
 | Case | Form | Attested |
@@ -1763,6 +1752,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | lungdamnaah | — |
 | Ablative | lungdamnapan | — |
 | Ablative-Ergative | lungdamnapanin | — |
+
+---
+
+## Lungdamna
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Lungdamna | Gen 31:27, Deu 28:47, Jdg 8:35 (+2) |
+| Genitive | Lungdamna' | — |
+| Ergative | Lungdamnain | — |
+| Locative | Lungdamnaah | — |
+| Ablative | Lungdamnapan | — |
+| Ablative-Ergative | Lungdamnapanin | — |
 
 ---
 
@@ -1796,7 +1798,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Marah | Exo 15:23, Exo 15:23, Exo 15:23 (+2) |
+| Absolutive | Marah | Exo 15:23, Exo 15:23, Exo 15:23 (+1) |
 | Genitive | Marah' | — |
 | Ergative | Marahin | — |
 | Locative | Marahah | — |
@@ -2026,19 +2028,6 @@ Nouns grouped by which cases they are attested in:
 
 ---
 
-## nun
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | nun | Exo 25:33, Exo 25:33, Exo 25:35 (+2) |
-| Genitive | nun' | Exo 33:11, Num 11:28, Num 13:3 (+2) |
-| Ergative | nunin | — |
-| Locative | nunah | — |
-| Ablative | nunpan | — |
-| Ablative-Ergative | nunpanin | — |
-
----
-
 ## Nun
 
 | Case | Form | Attested |
@@ -2049,6 +2038,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | Nunah | — |
 | Ablative | Nunpan | — |
 | Ablative-Ergative | Nunpanin | — |
+
+---
+
+## nun
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | nun | Exo 25:33, Exo 25:33, Exo 25:35 (+2) |
+| Genitive | nun' | Exo 33:11, Num 11:28, Num 13:3 (+2) |
+| Ergative | nunin | — |
+| Locative | nunah | — |
+| Ablative | nunpan | — |
+| Ablative-Ergative | nunpanin | — |
 
 ---
 
@@ -2078,19 +2080,6 @@ Nouns grouped by which cases they are attested in:
 
 ---
 
-## pasian
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | pasian | Gen 1:1, Gen 1:3, Gen 1:4 (+2) |
-| Genitive | pasian' | Gen 1:2, Gen 1:27, Gen 3:1 (+2) |
-| Ergative | pasianin | — |
-| Locative | pasianah | — |
-| Ablative | pasianpan | — |
-| Ablative-Ergative | pasianpanin | — |
-
----
-
 ## Pasian
 
 | Case | Form | Attested |
@@ -2101,6 +2090,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | Pasianah | — |
 | Ablative | Pasianpan | — |
 | Ablative-Ergative | Pasianpanin | — |
+
+---
+
+## pasian
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | pasian | Gen 1:1, Gen 1:3, Gen 1:4 (+2) |
+| Genitive | pasian' | Gen 1:2, Gen 1:27, Gen 3:1 (+2) |
+| Ergative | pasianin | — |
+| Locative | pasianah | — |
+| Ablative | pasianpan | — |
+| Ablative-Ergative | pasianpanin | — |
 
 ---
 
@@ -2130,16 +2132,16 @@ Nouns grouped by which cases they are attested in:
 
 ---
 
-## Paulus
+## pawi
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Paulus | Act 13:7 |
-| Genitive | Paulus' | — |
-| Ergative | Paulusin | — |
-| Locative | Paulusah | — |
-| Ablative | Pauluspan | — |
-| Ablative-Ergative | Pauluspanin | — |
+| Absolutive | pawi | Gen 1:14, Gen 8:22, Gen 21:8 (+2) |
+| Genitive | pawi' | — |
+| Ergative | pawiin | — |
+| Locative | pawiah | — |
+| Ablative | pawipan | — |
+| Ablative-Ergative | pawipanin | — |
 
 ---
 
@@ -2153,19 +2155,6 @@ Nouns grouped by which cases they are attested in:
 | Locative | Pawiah | — |
 | Ablative | Pawipan | — |
 | Ablative-Ergative | Pawipanin | — |
-
----
-
-## pawi
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | pawi | Gen 1:14, Gen 8:22, Gen 21:8 (+2) |
-| Genitive | pawi' | — |
-| Ergative | pawiin | — |
-| Locative | pawiah | — |
-| Ablative | pawipan | — |
-| Ablative-Ergative | pawipanin | — |
 
 ---
 
@@ -2290,7 +2279,7 @@ Nouns grouped by which cases they are attested in:
 
 | Case | Form | Attested |
 |------|------|----------|
-| Absolutive | Rameses | Gen 47:11, Exo 1:11, Exo 12:37 (+2) |
+| Absolutive | Rameses | Gen 47:11, Exo 1:11 |
 | Genitive | Rameses' | — |
 | Ergative | Ramesesin | — |
 | Locative | Ramesesah | — |
@@ -2637,19 +2626,6 @@ Nouns grouped by which cases they are attested in:
 
 ---
 
-## Sin
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Sin | Gen 10:17, Exo 8:18, Exo 16:1 (+2) |
-| Genitive | Sin' | — |
-| Ergative | Sinin | Ezr 7:10, Act 2:42 |
-| Locative | Sinah | — |
-| Ablative | Sinpan | — |
-| Ablative-Ergative | Sinpanin | — |
-
----
-
 ## sin
 
 | Case | Form | Attested |
@@ -2660,6 +2636,19 @@ Nouns grouped by which cases they are attested in:
 | Locative | sinah | — |
 | Ablative | sinpan | — |
 | Ablative-Ergative | sinpanin | — |
+
+---
+
+## Sin
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Sin | Gen 10:17, Exo 8:18, Exo 16:1 (+2) |
+| Genitive | Sin' | — |
+| Ergative | Sinin | Ezr 7:10, Act 2:42 |
+| Locative | Sinah | — |
+| Ablative | Sinpan | — |
+| Ablative-Ergative | Sinpanin | — |
 
 ---
 
