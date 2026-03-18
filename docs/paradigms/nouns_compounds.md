@@ -13,6 +13,89 @@ Case marking follows the same pattern as simple nouns.
 
 ---
 
+## Index and Summary
+
+### Nouns with Most Case Forms Attested
+
+| Rank | Stem | Gloss | Cases | Pattern |
+|------|------|-------|-------|---------|
+| 1 | [lungsim](#lungsim-mind) | mind | 4/8 | ABS+GEN+ERG+LOC |
+| 2 | [pawlkhat](#pawlkhat-some) | some | 4/8 | ABS+GEN+ERG+LOC |
+| 3 | [thuman](#thuman-trueword) | true.word | 4/8 | ABS+GEN+ERG+LOC |
+| 4 | [tuamtuam](#tuamtuam-various) | various | 4/8 | ABS+GEN+ERG+LOC |
+| 5 | [gamdang](#gamdang-otherland) | other.land | 3/8 | ABS+GEN+LOC |
+| 6 | [gilkial](#gilkial-bowels) | bowels | 3/8 | ABS+GEN+ERG |
+| 7 | [khangham](#khangham-ancestor) | ancestor | 3/8 | ABS+GEN+ERG |
+| 8 | [kikoih](#kikoih-place) | place | 3/8 | ABS+GEN+ERG |
+| 9 | [kineihkhem](#kineihkhem-possessall) | possess.all | 3/8 | ABS+GEN+ERG |
+| 10 | [laitak](#laitak-exactmidst) | exact.midst | 3/8 | ABS+ERG+LOC |
+| 11 | [lamdang](#lamdang-otherway) | other.way | 3/8 | ABS+GEN+ERG |
+| 12 | [langpan](#langpan-advocate) | advocate | 3/8 | ABS+GEN+ERG |
+| 13 | [langpang](#langpang-beside) | beside | 3/8 | ABS+GEN+ERG |
+| 14 | [leitung](#leitung-earth) | earth | 3/8 | ABS+GEN+LOC |
+| 15 | [lungdam](#lungdam-joy) | joy | 3/8 | ABS+GEN+ERG |
+| 16 | [lungkim](#lungkim-peace) | peace | 3/8 | ABS+GEN+ERG |
+| 17 | [mawhsak](#mawhsak-causesin) | cause.sin | 3/8 | ABS+GEN+ERG |
+| 18 | [meigong](#meigong-widow) | widow | 3/8 | ABS+GEN+ERG |
+| 19 | [midik](#midik-righteous) | righteous | 3/8 | ABS+GEN+ERG |
+| 20 | [mihing](#mihing-mankind) | mankind | 3/8 | ABS+GEN+ERG |
+| 21 | [milian](#milian-noble) | noble | 3/8 | ABS+GEN+ERG |
+| 22 | [milim](#milim-idol) | idol | 3/8 | ABS+GEN+ERG |
+| 23 | [minam](#minam-nation) | nation | 3/8 | ABS+GEN+ERG |
+| 24 | [mizawng](#mizawng-everyone) | everyone | 3/8 | ABS+GEN+ERG |
+| 25 | [naupang](#naupang-child) | child | 3/8 | ABS+GEN+ERG |
+| 26 | [sawmnih](#sawmnih-twelve) | twelve | 3/8 | ABS+GEN+ERG |
+| 27 | [thahat](#thahat-strength) | strength | 3/8 | ABS+GEN+ERG |
+| 28 | [thugen](#thugen-speech) | speech | 3/8 | ABS+GEN+ERG |
+| 29 | [thukhen](#thukhen-judgment) | judgment | 3/8 | ABS+GEN+ERG |
+| 30 | [ulian](#ulian-elder) | elder | 3/8 | ABS+GEN+ERG |
+
+### Distribution by Number of Cases Attested
+
+| Cases Attested | Count | Percentage |
+|----------------|-------|------------|
+| 4/8 cases | 4 | 1.3% |
+| 3/8 cases | 27 | 8.6% |
+| 2/8 cases | 101 | 32.3% |
+| 1/8 cases | 158 | 50.5% |
+| 0/8 cases | 23 | 7.3% |
+
+### Case Attestation Frequency
+
+How many noun stems have each case attested:
+
+| Case | Stems with Attestation | Percentage |
+|------|------------------------|------------|
+| ABS | 289 | 92.3% |
+| GEN | 57 | 18.2% |
+| ERG | 87 | 27.8% |
+| LOC | 24 | 7.7% |
+| ABL | 0 | 0.0% |
+| ABL.ERG | 0 | 0.0% |
+| COM | 0 | 0.0% |
+| COM.ERG | 0 | 0.0% |
+
+### Most Common Case Patterns
+
+Nouns grouped by which cases they are attested in:
+
+| Pattern | Count | Example Stems |
+|---------|-------|---------------|
+| ABS | 157 | namtui, guahtui, tuipi, lungnop, vanlei (+152 more) |
+| ABS+ERG | 59 | lungkham, lungmuang, gamtat, kibawl, kipan (+54 more) |
+| ABS+GEN | 26 | leenggui, kumpipa, khuapi, numei, mawhna (+21 more) |
+| NONE | 23 | tuibang, lungmit, lungthim, vanmi, gahzu (+18 more) |
+| ABS+GEN+ERG | 23 | lungdam, lungkim, mihing, minam, thugen (+18 more) |
+| ABS+LOC | 16 | tuikhuk, lungtang, leilak, leitang, gamlak (+11 more) |
+| ABS+GEN+ERG+LOC | 4 | lungsim, pawlkhat, tuamtuam, thuman |
+| ABS+GEN+LOC | 3 | vantung, leitung, gamdang |
+| ABS+ERG+LOC | 1 | laitak |
+| GEN | 1 | lungzin |
+
+---
+
+## Paradigms by Stem
+
 ## Compounds with "an" (food)
 
 *This stem also occurs independently*

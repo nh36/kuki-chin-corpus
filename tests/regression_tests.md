@@ -529,6 +529,30 @@ Prefer longer stem match:
 
 ---
 
+## 30. Plural Suffix Stripping (not pre-pluralized stems)
+
+Plural forms should be analyzed via suffix stripping (`STEM-te`), NOT as separate noun stems.
+This ensures paradigms correctly show singular stem with plural inflection.
+
+| Token | Wrong | Correct | Note |
+|-------|-------|---------|------|
+| behte | behte (tribes) | beh-te (tribe-PL) | tribe + PL suffix |
+| mite | mite (people) | mi-te (person-PL) | person + PL suffix |
+| galte | galte (enemies) | gal-te (enemy-PL) | enemy + PL suffix |
+| tapate | tapate (sons) | tapa-te (son-PL) | son + PL suffix |
+| siampite | siampite (priests) | siam-pi-te (?) | priest + PL suffix |
+| numeite | numeite (women) | numei-te (woman-PL) | woman + PL suffix |
+| innte | innte (houses) | inn-te (house-PL) | house + PL suffix |
+| upate | upate (elders) | upa-te (elder-PL) | elder + PL suffix |
+
+**Removed 26 pre-pluralized entries from NOUN_STEMS** (2026-03-18):
+behte, galkapte, galte, gamte, ganhingte, innte, khuapite, lute,
+midangte, migilote, mihonte, misite, mite, nasemte, numeite, pate,
+puante, sanggamte, siampite, siangthote, suanlekhakte, tanute,
+tapate, thupiakte, upate, vantungte
+
+---
+
 ## Comprehensive Test Suite (50 tests)
 
 ```python
@@ -662,6 +686,16 @@ tests = [
     ('sangpenin', 'SUPER'),          # high-SUPER-ERG
     ('omkhawmna', 'gather'),         # exist-gather-NMLZ
     ('seppihte', 'APPL'),            # work-APPL-PL
+    
+    # Round 166: Plural suffix stripping (not pre-pluralized stems)
+    # These must be analyzed as STEM-te, not as monolithic plural nouns
+    ('behte', 'tribe-PL'),           # beh-te (tribe-PL), NOT behte (tribes)
+    ('mite', 'person-PL'),           # mi-te (person-PL), NOT mite (people)
+    ('galte', 'enemy-PL'),           # gal-te (enemy-PL), NOT galte (enemies)
+    ('tapate', 'son-PL'),            # tapa-te (son-PL), NOT tapate (sons)
+    ('numeite', 'woman-PL'),         # numei-te (woman-PL), NOT numeite (women)
+    ('innte', 'house-PL'),           # inn-te (house-PL), NOT innte (houses)
+    ('upate', 'elder-PL'),           # upa-te (elder-PL), NOT upate (elders)
 ]
 
 passed = 0

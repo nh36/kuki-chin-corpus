@@ -11,6 +11,83 @@ Proper nouns do not typically take plural marking.
 
 ---
 
+## Index and Summary
+
+### Nouns with Most Case Forms Attested
+
+| Rank | Stem | Gloss | Cases | Pattern |
+|------|------|-------|-------|---------|
+| 1 | [Adam](#adam-adam) | Adam | 3/8 | ABS+GEN+LOC |
+| 2 | [Asher](#asher-asher) | Asher | 3/8 | ABS+GEN+LOC |
+| 3 | [Dan](#dan-dan) | Dan | 3/8 | ABS+GEN+ERG |
+| 4 | [dan](#dan-dan) | dan | 3/8 | ABS+GEN+ERG |
+| 5 | [Efrath](#efrath-efrath) | Efrath | 3/8 | ABS+GEN+LOC |
+| 6 | [en](#en-en) | en | 3/8 | ABS+GEN+ERG |
+| 7 | [Gilo](#gilo-gilo) | Gilo | 3/8 | ABS+GEN+ERG |
+| 8 | [gilo](#gilo-gilo) | gilo | 3/8 | ABS+GEN+ERG |
+| 9 | [ham](#ham-ham) | ham | 3/8 | ABS+GEN+ERG |
+| 10 | [Joel](#joel-joel) | Joel | 3/8 | ABS+GEN+LOC |
+| 11 | [khun](#khun-khun) | khun | 3/8 | ABS+GEN+ERG |
+| 12 | [no](#no-no) | no | 3/8 | ABS+GEN+LOC |
+| 13 | [puah](#puah-puah) | puah | 3/8 | ABS+GEN+ERG |
+| 14 | [Aaron](#aaron-aaron) | Aaron | 2/8 | ABS+GEN |
+| 15 | [Abimelek](#abimelek-abimelek) | Abimelek | 2/8 | ABS+GEN |
+| 16 | [Abner](#abner-abner) | Abner | 2/8 | ABS+GEN |
+| 17 | [Abraham](#abraham-abraham) | Abraham | 2/8 | ABS+GEN |
+| 18 | [Abram](#abram-abram) | Abram | 2/8 | ABS+GEN |
+| 19 | [Absalom](#absalom-absalom) | Absalom | 2/8 | ABS+GEN |
+| 20 | [Ahab](#ahab-ahab) | Ahab | 2/8 | ABS+GEN |
+| 21 | [ai](#ai-ai) | ai | 2/8 | ABS+LOC |
+| 22 | [Ai](#ai-ai) | Ai | 2/8 | ABS+LOC |
+| 23 | [Ammon](#ammon-ammon) | Ammon | 2/8 | ABS+GEN |
+| 24 | [Amor](#amor-amor) | Amor | 2/8 | ABS+GEN |
+| 25 | [Amos](#amos-amos) | Amos | 2/8 | ABS+GEN |
+| 26 | [Andru](#andru-andru) | Andru | 2/8 | ABS+GEN |
+| 27 | [Apollos](#apollos-apollos) | Apollos | 2/8 | ABS+GEN |
+| 28 | [awle](#awle-awle) | awle | 2/8 | ABS+GEN |
+| 29 | [Babylon](#babylon-babylon) | Babylon | 2/8 | ABS+GEN |
+| 30 | [Barnabas](#barnabas-barnabas) | Barnabas | 2/8 | ABS+GEN |
+
+### Distribution by Number of Cases Attested
+
+| Cases Attested | Count | Percentage |
+|----------------|-------|------------|
+| 3/8 cases | 13 | 6.0% |
+| 2/8 cases | 128 | 58.7% |
+| 1/8 cases | 77 | 35.3% |
+
+### Case Attestation Frequency
+
+How many noun stems have each case attested:
+
+| Case | Stems with Attestation | Percentage |
+|------|------------------------|------------|
+| ABS | 218 | 100.0% |
+| GEN | 132 | 60.6% |
+| ERG | 15 | 6.9% |
+| LOC | 7 | 3.2% |
+| ABL | 0 | 0.0% |
+| ABL.ERG | 0 | 0.0% |
+| COM | 0 | 0.0% |
+| COM.ERG | 0 | 0.0% |
+
+### Most Common Case Patterns
+
+Nouns grouped by which cases they are attested in:
+
+| Pattern | Count | Example Stems |
+|---------|-------|---------------|
+| ABS+GEN | 119 | Aaron, Abimelek, Abner, Abraham, Abram (+114 more) |
+| ABS | 77 | angkawmin, Annas, antak, Aquila, Assiria (+72 more) |
+| ABS+GEN+ERG | 8 | Dan, dan, en, Gilo, gilo (+3 more) |
+| ABS+ERG | 7 | phut, sem, Sin, sin, suah (+2 more) |
+| ABS+GEN+LOC | 5 | Adam, Asher, Efrath, Joel, no |
+| ABS+LOC | 2 | ai, Ai |
+
+---
+
+## Paradigms
+
 ## Aaron
 
 | Case | Form | Attested |
@@ -131,21 +208,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## Ai
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Ai | Gen 12:8, Gen 13:3, Lev 16:8 (+2) |
-| Genitive | Ai' | — |
-| Ergative | Aiin | — |
-| Locative | Aiah | 1Ch 1:40 |
-| Ablative | Aipan | — |
-| Ablative-Ergative | Aipanin | — |
-| Comitative | Aitawh | — |
-| Comitative-Ergative | Aitawhin | — |
-
----
-
 ## ai
 
 | Case | Form | Attested |
@@ -158,6 +220,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | aipanin | — |
 | Comitative | aitawh | — |
 | Comitative-Ergative | aitawhin | — |
+
+---
+
+## Ai
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Ai | Gen 12:8, Gen 13:3, Lev 16:8 (+2) |
+| Genitive | Ai' | — |
+| Ergative | Aiin | — |
+| Locative | Aiah | 1Ch 1:40 |
+| Ablative | Aipan | — |
+| Ablative-Ergative | Aipanin | — |
+| Comitative | Aitawh | — |
+| Comitative-Ergative | Aitawhin | — |
 
 ---
 
@@ -551,21 +628,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## dan
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | dan | Gen 6:15, Gen 9:5, Gen 14:14 (+2) |
-| Genitive | dan' | Gen 46:23, Num 2:17 |
-| Ergative | danin | Lev 25:54, Num 16:29, Deu 19:3 (+2) |
-| Locative | danah | — |
-| Ablative | danpan | — |
-| Ablative-Ergative | danpanin | — |
-| Comitative | dantawh | — |
-| Comitative-Ergative | dantawhin | — |
-
----
-
 ## Dan
 
 | Case | Form | Attested |
@@ -578,6 +640,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | Danpanin | — |
 | Comitative | Dantawh | — |
 | Comitative-Ergative | Dantawhin | — |
+
+---
+
+## dan
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | dan | Gen 6:15, Gen 9:5, Gen 14:14 (+2) |
+| Genitive | dan' | Gen 46:23, Num 2:17 |
+| Ergative | danin | Lev 25:54, Num 16:29, Deu 19:3 (+2) |
+| Locative | danah | — |
+| Ablative | danpan | — |
+| Ablative-Ergative | danpanin | — |
+| Comitative | dantawh | — |
+| Comitative-Ergative | dantawhin | — |
 
 ---
 
@@ -1886,21 +1963,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## Lot
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Lot | Gen 11:31, Gen 12:4, Gen 12:5 (+2) |
-| Genitive | Lot' | Gen 11:27, Gen 13:7, Gen 13:8 (+2) |
-| Ergative | Lotin | — |
-| Locative | Lotah | — |
-| Ablative | Lotpan | — |
-| Ablative-Ergative | Lotpanin | — |
-| Comitative | Lottawh | — |
-| Comitative-Ergative | Lottawhin | — |
-
----
-
 ## lot
 
 | Case | Form | Attested |
@@ -1913,6 +1975,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | lotpanin | — |
 | Comitative | lottawh | — |
 | Comitative-Ergative | lottawhin | — |
+
+---
+
+## Lot
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Lot | Gen 11:31, Gen 12:4, Gen 12:5 (+2) |
+| Genitive | Lot' | Gen 11:27, Gen 13:7, Gen 13:8 (+2) |
+| Ergative | Lotin | — |
+| Locative | Lotah | — |
+| Ablative | Lotpan | — |
+| Ablative-Ergative | Lotpanin | — |
+| Comitative | Lottawh | — |
+| Comitative-Ergative | Lottawhin | — |
 
 ---
 
@@ -2246,21 +2323,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## Nun
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | Nun | Exo 25:33, Exo 25:33, Exo 25:35 (+2) |
-| Genitive | Nun' | Exo 33:11, Num 11:28, Num 13:3 (+2) |
-| Ergative | Nunin | — |
-| Locative | Nunah | — |
-| Ablative | Nunpan | — |
-| Ablative-Ergative | Nunpanin | — |
-| Comitative | Nuntawh | — |
-| Comitative-Ergative | Nuntawhin | — |
-
----
-
 ## nun
 
 | Case | Form | Attested |
@@ -2273,6 +2335,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | nunpanin | — |
 | Comitative | nuntawh | — |
 | Comitative-Ergative | nuntawhin | — |
+
+---
+
+## Nun
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | Nun | Exo 25:33, Exo 25:33, Exo 25:35 (+2) |
+| Genitive | Nun' | Exo 33:11, Num 11:28, Num 13:3 (+2) |
+| Ergative | Nunin | — |
+| Locative | Nunah | — |
+| Ablative | Nunpan | — |
+| Ablative-Ergative | Nunpanin | — |
+| Comitative | Nuntawh | — |
+| Comitative-Ergative | Nuntawhin | — |
 
 ---
 
@@ -2381,21 +2458,6 @@ Proper nouns do not typically take plural marking.
 
 ---
 
-## pawi
-
-| Case | Form | Attested |
-|------|------|----------|
-| Absolutive | pawi | Gen 1:14, Gen 8:22, Gen 21:8 (+2) |
-| Genitive | pawi' | — |
-| Ergative | pawiin | — |
-| Locative | pawiah | — |
-| Ablative | pawipan | — |
-| Ablative-Ergative | pawipanin | — |
-| Comitative | pawitawh | — |
-| Comitative-Ergative | pawitawhin | — |
-
----
-
 ## Pawi
 
 | Case | Form | Attested |
@@ -2408,6 +2470,21 @@ Proper nouns do not typically take plural marking.
 | Ablative-Ergative | Pawipanin | — |
 | Comitative | Pawitawh | — |
 | Comitative-Ergative | Pawitawhin | — |
+
+---
+
+## pawi
+
+| Case | Form | Attested |
+|------|------|----------|
+| Absolutive | pawi | Gen 1:14, Gen 8:22, Gen 21:8 (+2) |
+| Genitive | pawi' | — |
+| Ergative | pawiin | — |
+| Locative | pawiah | — |
+| Ablative | pawipan | — |
+| Ablative-Ergative | pawipanin | — |
+| Comitative | pawitawh | — |
+| Comitative-Ergative | pawitawhin | — |
 
 ---
 

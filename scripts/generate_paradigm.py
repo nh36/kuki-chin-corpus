@@ -293,10 +293,144 @@ def generate_full_report(nouns: List[Tuple[str, str]], corpus_file: str) -> str:
     return '\n'.join(lines)
 
 
+def analyze_attestation_patterns(nouns: List[Tuple[str, str]], corpus_file: str) -> Dict:
+    """
+    Analyze case attestation patterns for nouns.
+    
+    Returns dict with:
+    - 'by_case_count': {count: [stems...]} - stems grouped by how many cases attested
+    - 'by_pattern': {pattern_str: [stems...]} - stems grouped by exact case pattern
+    - 'case_frequencies': {case: count} - how many stems have this case attested
+    - 'top_by_cases': [(stem, gloss, count, pattern)] - stems with most cases attested
+    """
+    results = {
+        'by_case_count': defaultdict(list),
+        'by_pattern': defaultdict(list),
+        'case_frequencies': defaultdict(int),
+        'top_by_cases': [],
+        'stem_patterns': {},  # stem -> {cases_attested, pattern_str, attestation_counts}
+    }
+    
+    case_abbrevs = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG', 'COM', 'COM.ERG']
+    
+    for stem, gloss in nouns:
+        paradigm_forms = generate_paradigm_forms(stem)
+        forms_list = [f[0] for f in paradigm_forms]
+        attestations = find_attestations(corpus_file, forms_list)
+        
+        # Track which cases are attested (singular or plural)
+        cases_attested = set()
+        attestation_counts = {}
+        
+        for case_suf, case_gloss, case_name in CASE_SUFFIXES:
+            sg_form = f"{stem}-{case_suf}" if case_suf else stem
+            pl_form = f"{stem}-te-{case_suf}" if case_suf else f"{stem}-te"
+            
+            sg_count = len(attestations.get(sg_form, []))
+            pl_count = len(attestations.get(pl_form, []))
+            total = sg_count + pl_count
+            
+            if total > 0:
+                cases_attested.add(case_gloss)
+                attestation_counts[case_gloss] = total
+                results['case_frequencies'][case_gloss] += 1
+        
+        # Create pattern string (sorted by standard case order)
+        pattern = '+'.join(c for c in case_abbrevs if c in cases_attested) or 'NONE'
+        num_cases = len(cases_attested)
+        
+        results['by_case_count'][num_cases].append((stem, gloss))
+        results['by_pattern'][pattern].append((stem, gloss))
+        results['stem_patterns'][stem] = {
+            'gloss': gloss,
+            'cases_attested': cases_attested,
+            'pattern': pattern,
+            'num_cases': num_cases,
+            'counts': attestation_counts,
+        }
+        results['top_by_cases'].append((stem, gloss, num_cases, pattern))
+    
+    # Sort top by cases (descending)
+    results['top_by_cases'].sort(key=lambda x: (-x[2], x[0].lower()))
+    
+    return results
+
+
+def generate_index_section(analysis: Dict, report_type: str = 'free') -> str:
+    """Generate index/summary section for report header."""
+    lines = ['## Index and Summary', '']
+    
+    # 1. Top nouns by case coverage
+    lines.append('### Nouns with Most Case Forms Attested')
+    lines.append('')
+    lines.append('| Rank | Stem | Gloss | Cases | Pattern |')
+    lines.append('|------|------|-------|-------|---------|')
+    
+    for i, (stem, gloss, count, pattern) in enumerate(analysis['top_by_cases'][:30], 1):
+        lines.append(f'| {i} | [{stem}](#{stem.lower()}-{gloss.replace(".", "").replace(" ", "-").lower()}) | {gloss} | {count}/8 | {pattern} |')
+    
+    lines.append('')
+    
+    # 2. Distribution by case count
+    lines.append('### Distribution by Number of Cases Attested')
+    lines.append('')
+    lines.append('| Cases Attested | Count | Percentage |')
+    lines.append('|----------------|-------|------------|')
+    
+    total = sum(len(stems) for stems in analysis['by_case_count'].values())
+    for count in sorted(analysis['by_case_count'].keys(), reverse=True):
+        stems = analysis['by_case_count'][count]
+        pct = 100 * len(stems) / total if total > 0 else 0
+        lines.append(f'| {count}/8 cases | {len(stems)} | {pct:.1f}% |')
+    
+    lines.append('')
+    
+    # 3. Case frequency (how many stems have each case)
+    lines.append('### Case Attestation Frequency')
+    lines.append('')
+    lines.append('How many noun stems have each case attested:')
+    lines.append('')
+    lines.append('| Case | Stems with Attestation | Percentage |')
+    lines.append('|------|------------------------|------------|')
+    
+    case_order = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG', 'COM', 'COM.ERG']
+    for case in case_order:
+        count = analysis['case_frequencies'].get(case, 0)
+        pct = 100 * count / total if total > 0 else 0
+        lines.append(f'| {case} | {count} | {pct:.1f}% |')
+    
+    lines.append('')
+    
+    # 4. Most common patterns
+    lines.append('### Most Common Case Patterns')
+    lines.append('')
+    lines.append('Nouns grouped by which cases they are attested in:')
+    lines.append('')
+    lines.append('| Pattern | Count | Example Stems |')
+    lines.append('|---------|-------|---------------|')
+    
+    patterns_sorted = sorted(analysis['by_pattern'].items(), key=lambda x: -len(x[1]))
+    for pattern, stems in patterns_sorted[:20]:
+        examples = ', '.join(f'{s}' for s, g in stems[:5])
+        if len(stems) > 5:
+            examples += f' (+{len(stems)-5} more)'
+        lines.append(f'| {pattern} | {len(stems)} | {examples} |')
+    
+    lines.append('')
+    lines.append('---')
+    lines.append('')
+    
+    return '\n'.join(lines)
+
+
 def generate_free_noun_report(corpus_file: str) -> str:
     """Generate paradigm report for free (independently attested) noun stems."""
     free_stems = get_free_stems()
     nouns = sorted(free_stems.items(), key=lambda x: x[0].lower())
+    
+    # First pass: analyze attestation patterns for index
+    print("  Analyzing attestation patterns...", file=sys.stderr)
+    analysis = analyze_attestation_patterns(nouns, corpus_file)
     
     lines = [
         '# Tedim Chin Noun Paradigms (Free Stems)',
@@ -327,7 +461,14 @@ def generate_free_noun_report(corpus_file: str) -> str:
         '',
     ]
     
+    # Add index section
+    lines.append(generate_index_section(analysis, 'free'))
+    lines.append('## Paradigms')
+    lines.append('')
+    
+    # Use pre-computed attestations from analysis
     for stem, gloss in nouns:
+        stem_info = analysis['stem_patterns'].get(stem)
         paradigm_forms = generate_paradigm_forms(stem)
         forms_list = [f[0] for f in paradigm_forms]
         attestations = find_attestations(corpus_file, forms_list)
@@ -343,6 +484,16 @@ def generate_compound_report(corpus_file: str) -> str:
     """Generate paradigm report for compounds, grouped by constituent stems."""
     compounds_by_stem = get_compounds_by_stem()
     bound_stems = get_bound_stems()
+    
+    # Build list of all compounds for analysis
+    all_compounds = []
+    for compound, (stem1, stem2, gloss) in BINARY_COMPOUNDS.items():
+        if stem1 is not None and stem2 is not None:
+            all_compounds.append((compound, gloss))
+    
+    # Analyze attestation patterns
+    print("  Analyzing compound attestation patterns...", file=sys.stderr)
+    analysis = analyze_attestation_patterns(all_compounds, corpus_file)
     
     lines = [
         '# Tedim Chin Compound Paradigms',
@@ -361,6 +512,11 @@ def generate_compound_report(corpus_file: str) -> str:
         '---',
         '',
     ]
+    
+    # Add index section
+    lines.append(generate_index_section(analysis, 'compounds'))
+    lines.append('## Paradigms by Stem')
+    lines.append('')
     
     # Process stems alphabetically
     for stem in sorted(compounds_by_stem.keys(), key=str.lower):
@@ -432,10 +588,65 @@ def generate_paradigm_table(stem: str, stem_gloss: str, attestations: Dict[str, 
     return '\n'.join(table_lines)
 
 
+def analyze_proper_noun_patterns(names: List[str], corpus_file: str) -> Dict:
+    """Analyze case attestation patterns for proper nouns (no plural forms)."""
+    results = {
+        'by_case_count': defaultdict(list),
+        'by_pattern': defaultdict(list),
+        'case_frequencies': defaultdict(int),
+        'top_by_cases': [],
+        'stem_patterns': {},
+    }
+    
+    case_abbrevs = ['ABS', 'GEN', 'ERG', 'LOC', 'ABL', 'ABL.ERG', 'COM', 'COM.ERG']
+    
+    for name in names:
+        forms = [name]
+        for case_suf, case_gloss, case_name in CASE_SUFFIXES:
+            if case_suf:
+                forms.append(f"{name}{case_suf}")
+        
+        attestations = find_attestations(corpus_file, forms)
+        
+        cases_attested = set()
+        attestation_counts = {}
+        
+        for case_suf, case_gloss, case_name in CASE_SUFFIXES:
+            form = f"{name}{case_suf}" if case_suf else name
+            count = len(attestations.get(form, []))
+            if count > 0:
+                cases_attested.add(case_gloss)
+                attestation_counts[case_gloss] = count
+                results['case_frequencies'][case_gloss] += 1
+        
+        pattern = '+'.join(c for c in case_abbrevs if c in cases_attested) or 'NONE'
+        num_cases = len(cases_attested)
+        
+        results['by_case_count'][num_cases].append((name, name))
+        results['by_pattern'][pattern].append((name, name))
+        results['stem_patterns'][name] = {
+            'gloss': name,
+            'cases_attested': cases_attested,
+            'pattern': pattern,
+            'num_cases': num_cases,
+            'counts': attestation_counts,
+        }
+        results['top_by_cases'].append((name, name, num_cases, pattern))
+    
+    results['top_by_cases'].sort(key=lambda x: (-x[2], x[0].lower()))
+    
+    return results
+
+
 def generate_proper_noun_report(corpus_file: str) -> str:
     """Generate paradigm report for proper nouns (biblical names)."""
     # Get attested proper nouns
     attested = get_proper_nouns_attested(corpus_file)
+    attested_list = sorted(attested, key=str.lower)
+    
+    # Analyze patterns
+    print("  Analyzing proper noun attestation patterns...", file=sys.stderr)
+    analysis = analyze_proper_noun_patterns(attested_list, corpus_file)
     
     lines = [
         '# Tedim Chin Proper Noun Paradigms',
@@ -453,8 +664,13 @@ def generate_proper_noun_report(corpus_file: str) -> str:
         '',
     ]
     
+    # Add index section
+    lines.append(generate_index_section(analysis, 'proper'))
+    lines.append('## Paradigms')
+    lines.append('')
+    
     # Generate paradigms for attested proper nouns (sorted)
-    for name in sorted(attested, key=str.lower):
+    for name in attested_list:
         # Generate forms (no plural for proper nouns)
         forms = [name]
         for case_suf, case_gloss, case_name in CASE_SUFFIXES:

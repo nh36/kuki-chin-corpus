@@ -24,6 +24,92 @@ Citations show verse references where forms are attested in the Tedim Chin Bible
 
 ---
 
+## Index and Summary
+
+### Nouns with Most Case Forms Attested
+
+| Rank | Stem | Gloss | Cases | Pattern |
+|------|------|-------|-------|---------|
+| 1 | [lang](#lang-side) | side | 5/8 | ABS+GEN+LOC+ABL+ABL.ERG |
+| 2 | [gal](#gal-enemy) | enemy | 4/8 | ABS+GEN+ERG+LOC |
+| 3 | [gam](#gam-land) | land | 4/8 | ABS+GEN+ERG+LOC |
+| 4 | [khat](#khat-one) | one | 4/8 | ABS+GEN+ERG+LOC |
+| 5 | [khuavak](#khuavak-light) | light | 4/8 | ABS+GEN+ERG+LOC |
+| 6 | [khut](#khut-hand) | hand | 4/8 | ABS+GEN+ERG+LOC |
+| 7 | [lungsim](#lungsim-heart) | heart | 4/8 | ABS+GEN+ERG+LOC |
+| 8 | [mahmah](#mahmah-very) | very | 4/8 | ABS+GEN+ERG+LOC |
+| 9 | [mit](#mit-eye) | eye | 4/8 | ABS+GEN+ERG+LOC |
+| 10 | [mual](#mual-mountain) | mountain | 4/8 | ABS+GEN+ERG+LOC |
+| 11 | [nuam](#nuam-pleased) | pleased | 4/8 | ABS+GEN+ERG+LOC |
+| 12 | [si](#si-die) | die | 4/8 | ABS+GEN+ERG+LOC |
+| 13 | [aisan](#aisan-magician) | magician | 3/8 | ABS+GEN+ERG |
+| 14 | [awng](#awng-young) | young | 3/8 | ABS+ERG+LOC |
+| 15 | [ban](#ban-arm) | arm | 3/8 | ABS+ERG+LOC |
+| 16 | [beh](#beh-tribe) | tribe | 3/8 | ABS+GEN+ERG |
+| 17 | [buk](#buk-ambush) | ambush | 3/8 | ABS+ERG+LOC |
+| 18 | [cing](#cing-faithful) | faithful | 3/8 | ABS+GEN+ERG |
+| 19 | [dang](#dang-other) | other | 3/8 | ABS+GEN+LOC |
+| 20 | [delh](#delh-overcome) | overcome | 3/8 | ABS+GEN+ERG |
+| 21 | [ganhing](#ganhing-animal) | animal | 3/8 | ABS+GEN+ERG |
+| 22 | [ham](#ham-full) | full | 3/8 | ABS+GEN+ERG |
+| 23 | [hat](#hat-strong) | strong | 3/8 | ABS+GEN+ERG |
+| 24 | [hing](#hing-alive) | alive | 3/8 | ABS+GEN+ERG |
+| 25 | [hon](#hon-flock) | flock | 3/8 | ABS+GEN+ERG |
+| 26 | [hun](#hun-time) | time | 3/8 | ABS+ERG+LOC |
+| 27 | [kal](#kal-middle) | middle | 3/8 | ABS+ERG+LOC |
+| 28 | [kam](#kam-mouth) | mouth | 3/8 | ABS+ERG+LOC |
+| 29 | [kamsang](#kamsang-prophet) | prophet | 3/8 | ABS+GEN+ERG |
+| 30 | [kawm](#kawm-edge) | edge | 3/8 | ABS+ERG+LOC |
+
+### Distribution by Number of Cases Attested
+
+| Cases Attested | Count | Percentage |
+|----------------|-------|------------|
+| 5/8 cases | 1 | 0.1% |
+| 4/8 cases | 11 | 1.3% |
+| 3/8 cases | 62 | 7.6% |
+| 2/8 cases | 205 | 25.0% |
+| 1/8 cases | 538 | 65.7% |
+| 0/8 cases | 2 | 0.2% |
+
+### Case Attestation Frequency
+
+How many noun stems have each case attested:
+
+| Case | Stems with Attestation | Percentage |
+|------|------------------------|------------|
+| ABS | 811 | 99.0% |
+| GEN | 137 | 16.7% |
+| ERG | 181 | 22.1% |
+| LOC | 52 | 6.3% |
+| ABL | 1 | 0.1% |
+| ABL.ERG | 1 | 0.1% |
+| COM | 0 | 0.0% |
+| COM.ERG | 0 | 0.0% |
+
+### Most Common Case Patterns
+
+Nouns grouped by which cases they are attested in:
+
+| Pattern | Count | Example Stems |
+|---------|-------|---------------|
+| ABS | 533 | angtanpih, anhai, ankhing, anlom, anlui (+528 more) |
+| ABS+ERG | 112 | angkawm, anlum, anpal, baih, beel (+107 more) |
+| ABS+GEN | 76 | aksi, alang, bawlte, bawng, bawngtal (+71 more) |
+| ABS+GEN+ERG | 38 | aisan, beh, cing, delh, ganhing (+33 more) |
+| ABS+ERG+LOC | 19 | awng, ban, buk, hun, kal (+14 more) |
+| ABS+LOC | 16 | an, bil, bul, galkhat, ganbuk (+11 more) |
+| ABS+GEN+ERG+LOC | 11 | gal, gam, khat, khuavak, khut (+6 more) |
+| GEN | 5 | bingphawn, khelpi, lamzan, lin, themlen |
+| ABS+GEN+LOC | 5 | dang, leitung, no, thu, vantung |
+| NONE | 2 | ke, sialh |
+| ABS+GEN+LOC+ABL+ABL.ERG | 1 | lang |
+| GEN+ERG | 1 | moken |
+
+---
+
+## Paradigms
+
 ## aisan "magician"
 
 | Case | Singular | Attested | Plural | Attested |
