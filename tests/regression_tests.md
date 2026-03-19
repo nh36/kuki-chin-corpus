@@ -778,3 +778,67 @@ print('\nAll no-slash tests passed')
 ```
 
 **Added**: 2026-03-19 after slash glosses found in report output
+
+---
+
+## 21. Analyzer Gloss Fixes (March 19, 2026)
+
+These are upstream analyzer fixes, not report-level overrides.
+
+### Fixed Glosses
+
+| Word | Wrong | Correct | Rationale |
+|------|-------|---------|-----------|
+| patna | trust-NMLZ | begin-NMLZ | "a patna pan a tawpna" = "first and last" (1Sa 3:12) |
+| kam | word | mouth | Body part primary; 'word' meaning is derived (kamciam=vow) |
+
+### Regression Test
+
+```python
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+
+# Upstream analyzer tests (not report overrides)
+analyzer_tests = [
+    # patna = begin-NMLZ (not trust-NMLZ)
+    ('patna', 'begin-NMLZ'),
+    
+    # kam = mouth (body part), not 'word'
+    ('kam', 'mouth'),
+    
+    # ki = REFL (not REFL/RECIP - no slashes)
+    ('ki', 'REFL'),
+    
+    # thu = word (not word/matter - no slashes)
+    ('thu', 'word'),
+    
+    # 2/3PL is the ONE allowed slash gloss
+    ('uh', '2/3PL'),
+    ('uhah', '2/3PL.LOC'),
+]
+
+for token, expected in analyzer_tests:
+    seg, gloss = analyze_word(token)
+    assert expected in gloss, f'{token}: expected {expected}, got {gloss}'
+    # Check no disallowed slashes
+    if '/' in gloss and '2/3PL' not in gloss:
+        raise AssertionError(f'{token}: disallowed slash in {gloss}')
+    print(f'✓ {token}: {gloss}')
+
+print('\nAll upstream analyzer tests passed')
+```
+
+### Note on Report-Level Overrides
+
+The following are context-aware overrides in the report generators only,
+NOT changes to the analyzer itself:
+
+| Word | Analyzer | Report Override | Context |
+|------|----------|-----------------|---------|
+| pan | begin | ABL | When used as postposition "from" |
+| kha | NEG.PERF | month | When followed by numbers |
+
+These overrides exist because the analyzer returns default glosses,
+but in postposition/relator reports the grammatical function is clear.
+
+**Added**: 2026-03-19

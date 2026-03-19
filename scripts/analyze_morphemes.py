@@ -9405,7 +9405,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'huh': ('huh', 'help'),
         'khuapite': ('khua-pi-te', 'town-big-PL'),
         'lohna': ('loh-na', 'NEG-NMLZ'),
-        'kam': ('kam', 'word'),
+        'kam': ('kam', 'mouth'),                                 # mouth (body part), not 'word'
         'mual': ('mual', 'mountain'),
         'sathau': ('sa-thau', 'flesh-fat'),                      # fat (transparent)
         'tuipi': ('tui-pi', 'water-big'),
