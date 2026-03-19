@@ -252,11 +252,37 @@ def find_relator_contexts(corpus_file: str) -> Dict[str, Dict[str, List]]:
     return results
 
 
+def get_lemma(word: str) -> str:
+    """
+    Get the lemma (base form) of a word.
+    Strips plural -te suffix and returns stem.
+    """
+    word_lower = word.lower()
+    
+    # Check if it's a plural form ending in -te
+    if word_lower.endswith('te') and len(word_lower) > 3:
+        stem = word_lower[:-2]
+        # Verify the stem exists in NOUN_STEMS or can be analyzed
+        if stem in NOUN_STEMS:
+            return stem
+        # Check for plurals like 'mite' -> 'mi', 'tate' -> 'ta'
+        from analyze_morphemes import analyze_word
+        result = analyze_word(word_lower)
+        if result and result[1] and '-PL' in result[1]:
+            # Extract stem from segmentation
+            seg = result[0]
+            if '-te' in seg:
+                return seg.split('-te')[0].replace('-', '')
+    
+    return word_lower
+
+
 def analyze_possessors(contexts: Dict[str, Dict[str, List]]) -> Dict[str, Dict[str, Tuple[int, List]]]:
     """
     Analyze what words precede relator nouns (potential possessors).
+    Lemmatizes plurals to group them with their singular forms.
     
-    Returns: {relator: {preceding_word: (count, [(verse_id, context, prev_word), ...])}}
+    Returns: {relator: {preceding_word_lemma: (count, [(verse_id, context, prev_word, surface_form), ...])}}
     """
     results = {}
     for relator, case_forms in contexts.items():
@@ -265,8 +291,9 @@ def analyze_possessors(contexts: Dict[str, Dict[str, List]]) -> Dict[str, Dict[s
             for verse_id, context, prev_word in examples:
                 # Check if preceding word ends in genitive marker
                 prev_clean = prev_word.strip('.,;:!?"').lower()
-                count, samples = word_data[prev_clean]
-                word_data[prev_clean] = (count + 1, samples + [(verse_id, context, prev_word)])
+                lemma = get_lemma(prev_clean)
+                count, samples = word_data[lemma]
+                word_data[lemma] = (count + 1, samples + [(verse_id, context, prev_word, prev_clean)])
         results[relator] = dict(word_data)
     return results
 
@@ -424,7 +451,7 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
                 sample_cols = []
                 for j in range(3):
                     if j < len(diverse):
-                        verse_id, context, _ = diverse[j]
+                        verse_id, context = diverse[j][:2]  # Handle both 3 and 4-tuple
                         kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
                         sample_cols.append(f'{format_verse_ref(verse_id)}: "{kjv_text}"')
                     else:
@@ -588,7 +615,7 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             sample_cols = []
             for j in range(3):
                 if j < len(diverse):
-                    verse_id, context, _ = diverse[j]
+                    verse_id, context = diverse[j][:2]  # Handle both 3 and 4-tuple
                     kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
                     sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
                 else:

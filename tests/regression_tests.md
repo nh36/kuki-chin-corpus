@@ -711,3 +711,70 @@ print(f'\n{passed}/{len(tests)} tests passed')
 
 ---
 *Last updated: March 2026*
+
+---
+
+## 20. No-Slash Gloss Rule
+
+**Design Principle**: Glosses must never contain slashes (/) except for the special case of `2/3PL` (2nd/3rd person plural agreement marker).
+
+If two meanings are similar → use the more generic term
+If two meanings are different → create separate lexical entries with contextual disambiguation
+
+### Allowed Exceptions
+
+| Gloss | Justification |
+|-------|---------------|
+| 2/3PL | Standard abbreviation for person/number marker that covers both 2nd and 3rd person |
+| 2/3PL.LOC | Locative-marked form of above |
+| 2/3PL.if | Conditional form of above |
+
+### Disallowed Patterns (Historical Errors)
+
+| Wrong | Correct | Fix Applied |
+|-------|---------|-------------|
+| REFL/RECIP | REFL | Use REFL as generic (both reflexive and reciprocal are self-directed) |
+| time/place | time | Use 'time' (lai primarily marks temporal rather than spatial reference) |
+| word/matter | word | Use 'word' (thu is primarily verbal content) |
+| mouth/word | mouth | Use 'mouth' (kam is body part; 'word' meaning derived) |
+| able/fruit | fruit | Use 'fruit' for thei as noun; ABIL for thei as suffix |
+
+### Regression Test
+
+```python
+# Test no-slash rule: glosses must not contain '/' except 2/3PL
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+
+# Words that must NOT have slashes in gloss
+no_slash_tests = [
+    ('ki', 'REFL'),      # not REFL/RECIP
+    ('thu', 'word'),     # not word/matter
+    ('lai', 'time'),     # not time/place  
+    ('kam', 'mouth'),    # not mouth/word
+    ('thei', 'know'),    # standalone = know, not able/fruit
+    ('gam', 'land'),     # not land/country
+]
+
+# Words where 2/3PL slash IS correct
+pl_tests = [
+    ('uh', '2/3PL'),
+    ('uhah', '2/3PL.LOC'),
+    ('uhleh', '2/3PL.if'),
+]
+
+for token, expected in no_slash_tests:
+    seg, gloss = analyze_word(token)
+    has_bad_slash = '/' in gloss and '2/3PL' not in gloss
+    assert not has_bad_slash, f'{token}: {gloss} contains disallowed slash'
+    print(f'✓ {token}: {gloss}')
+
+for token, expected in pl_tests:
+    seg, gloss = analyze_word(token)
+    assert expected in gloss, f'{token}: expected {expected}, got {gloss}'
+    print(f'✓ {token}: {gloss} (2/3PL allowed)')
+
+print('\nAll no-slash tests passed')
+```
+
+**Added**: 2026-03-19 after slash glosses found in report output

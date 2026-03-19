@@ -22,63 +22,63 @@ Includes both separate postpositions (*sung pan*) and attached forms (*gampan*).
 - **Total postposition instances**: 13,384
 - **Separate forms** (e.g., *sung pan*): 12,751
 - **Attached forms** (e.g., *gampan*): 633
-- **Unique preceding words**: 1,942
-- **Words with 2+ instances**: 922
+- **Unique preceding words**: 1,762
+- **Words with 2+ instances**: 868
 
 ## Top Nouns by Postposition Usage
 
 | Rank | Noun | Total | pan | panin | tawh | tawhin |
 |------|------|-------|-----|-------|------|--------|
-| 1 | [sung](#sung) | 812 | 121 | 689 | 2 | 0 |
-| 2 | [ki](#ki) | 628 | 409 | 213 | 6 | 0 |
+| 1 | [sung](#sung) | 813 | 121 | 690 | 2 | 0 |
+| 2 | [ki](#ki) | 629 | 409 | 213 | 7 | 0 |
 | 3 | [kiang](#kiang) | 430 | 60 | 370 | 0 | 0 |
-| 4 | [uh](#uh) | 359 | 7 | 45 | 307 | 0 |
-| 5 | [tung](#tung) | 312 | 31 | 280 | 1 | 0 |
-| 6 | [amah](#amah) | 264 | 0 | 0 | 264 | 0 |
-| 7 | [gam](#gam) | 259 | 18 | 225 | 16 | 0 |
-| 8 | [khempeuh](#khempeuh) | 253 | 1 | 88 | 164 | 0 |
+| 4 | [gam](#gam) | 359 | 19 | 231 | 109 | 0 |
+| 5 | [uh](#uh) | 359 | 7 | 45 | 307 | 0 |
+| 6 | [tung](#tung) | 312 | 31 | 280 | 1 | 0 |
+| 7 | [amah](#amah) | 264 | 0 | 0 | 264 | 0 |
+| 8 | [khempeuh](#khempeuh) | 255 | 1 | 88 | 166 | 0 |
 | 9 | [lak](#lak) | 211 | 20 | 191 | 0 | 0 |
-| 10 | [mite](#mite) | 176 | 0 | 4 | 172 | 0 |
-| 11 | [khat](#khat) | 168 | 43 | 24 | 101 | 0 |
-| 12 | [thu](#thu) | 152 | 0 | 10 | 142 | 0 |
+| 10 | [mi](#mi) | 194 | 0 | 4 | 190 | 0 |
+| 11 | [khat](#khat) | 171 | 43 | 24 | 104 | 0 |
+| 12 | [thu](#thu) | 163 | 0 | 10 | 153 | 0 |
 | 13 | [namsau](#namsau) | 140 | 0 | 6 | 134 | 0 |
 | 14 | [min](#min) | 137 | 0 | 0 | 137 | 0 |
-| 15 | [an](#an) | 136 | 0 | 0 | 136 | 0 |
+| 15 | [an](#an) | 137 | 0 | 0 | 137 | 0 |
 | 16 | [mei](#mei) | 134 | 0 | 1 | 131 | 2 |
 | 17 | [khutsung](#khutsung) | 132 | 17 | 115 | 0 | 0 |
 | 18 | [lai](#lai) | 124 | 1 | 116 | 7 | 0 |
-| 19 | [pasian](#pasian) | 115 | 0 | 1 | 114 | 0 |
-| 20 | [vantung](#vantung) | 108 | 1 | 104 | 3 | 0 |
-| 21 | [khua](#khua) | 106 | 8 | 91 | 7 | 0 |
-| 22 | [gamte](#gamte) | 100 | 1 | 6 | 93 | 0 |
+| 19 | [pasian](#pasian) | 120 | 0 | 1 | 119 | 0 |
+| 20 | [khua](#khua) | 110 | 8 | 95 | 7 | 0 |
+| 21 | [vantung](#vantung) | 108 | 1 | 104 | 3 | 0 |
+| 22 | [no](#no) | 105 | 0 | 0 | 105 | 0 |
 | 23 | [kei](#kei) | 100 | 0 | 0 | 100 | 0 |
-| 24 | [note](#note) | 99 | 0 | 0 | 99 | 0 |
-| 25 | [nang](#nang) | 97 | 0 | 0 | 97 | 0 |
-| 26 | [amaute](#amaute) | 94 | 0 | 0 | 94 | 0 |
-| 27 | [khut](#khut) | 89 | 1 | 12 | 76 | 0 |
+| 24 | [nang](#nang) | 97 | 0 | 0 | 97 | 0 |
+| 25 | [amaute](#amaute) | 94 | 0 | 0 | 94 | 0 |
+| 26 | [khut](#khut) | 90 | 1 | 12 | 77 | 0 |
+| 27 | [tua](#tua) | 83 | 0 | 32 | 51 | 0 |
 | 28 | [mah](#mah) | 80 | 0 | 7 | 73 | 0 |
-| 29 | [sihna](#sihna) | 73 | 3 | 59 | 11 | 0 |
-| 30 | [mun](#mun) | 73 | 1 | 69 | 3 | 0 |
-| 31 | [vangliatna](#vangliatna) | 68 | 0 | 10 | 58 | 0 |
-| 32 | [kham](#kham) | 68 | 0 | 0 | 68 | 0 |
-| 33 | [egypt](#egypt) | 65 | 0 | 64 | 1 | 0 |
-| 34 | [inn](#inn) | 58 | 3 | 48 | 7 | 0 |
-| 35 | [lam](#lam) | 56 | 9 | 45 | 2 | 0 |
-| 36 | [tua](#tua) | 56 | 0 | 29 | 27 | 0 |
-| 37 | [numei](#numei) | 55 | 0 | 1 | 54 | 0 |
-| 38 | [bek](#bek) | 54 | 1 | 1 | 52 | 0 |
-| 39 | [beh](#beh) | 53 | 3 | 24 | 26 | 0 |
+| 29 | [mun](#mun) | 76 | 1 | 70 | 5 | 0 |
+| 30 | [sihna](#sihna) | 73 | 3 | 59 | 11 | 0 |
+| 31 | [kham](#kham) | 70 | 0 | 0 | 70 | 0 |
+| 32 | [vangliatna](#vangliatna) | 68 | 0 | 10 | 58 | 0 |
+| 33 | [egypt](#egypt) | 66 | 0 | 64 | 2 | 0 |
+| 34 | [inn](#inn) | 62 | 3 | 51 | 8 | 0 |
+| 35 | [numei](#numei) | 62 | 0 | 1 | 61 | 0 |
+| 36 | [khuapi](#khuapi) | 61 | 2 | 42 | 17 | 0 |
+| 37 | [beh](#beh) | 58 | 3 | 24 | 31 | 0 |
+| 38 | [lam](#lam) | 56 | 9 | 45 | 2 | 0 |
+| 39 | [bek](#bek) | 54 | 1 | 1 | 52 | 0 |
 | 40 | [khrih](#khrih) | 53 | 0 | 0 | 53 | 0 |
-| 41 | [suang](#suang) | 48 | 0 | 2 | 46 | 0 |
+| 41 | [suang](#suang) | 52 | 0 | 2 | 50 | 0 |
 | 42 | [leenggahzu](#leenggahzu) | 48 | 0 | 0 | 48 | 0 |
 | 43 | [leitang](#leitang) | 47 | 1 | 40 | 6 | 0 |
-| 44 | [khuapi](#khuapi) | 47 | 2 | 35 | 10 | 0 |
+| 44 | [hoih](#hoih) | 45 | 0 | 4 | 41 | 0 |
 | 45 | [omna](#omna) | 44 | 1 | 42 | 1 | 0 |
-| 46 | [siangtho](#siangtho) | 43 | 0 | 7 | 36 | 0 |
-| 47 | [sathau](#sathau) | 42 | 0 | 0 | 42 | 0 |
-| 48 | [jesuh](#jesuh) | 42 | 0 | 0 | 42 | 0 |
-| 49 | [kam](#kam) | 40 | 1 | 20 | 19 | 0 |
-| 50 | [hehna](#hehna) | 40 | 0 | 10 | 30 | 0 |
+| 46 | [siangtho](#siangtho) | 44 | 0 | 8 | 36 | 0 |
+| 47 | [pa](#pa) | 43 | 0 | 0 | 43 | 0 |
+| 48 | [gamtatna](#gamtatna) | 42 | 1 | 3 | 38 | 0 |
+| 49 | [sathau](#sathau) | 42 | 0 | 0 | 42 | 0 |
+| 50 | [jesuh](#jesuh) | 42 | 0 | 0 | 42 | 0 |
 
 ---
 
@@ -92,15 +92,15 @@ Includes both separate postpositions (*sung pan*) and attached forms (*gampan*).
 |------|-------|----------|----------|----------|
 | ki | 409 | Luk 4:21: *thugen ding kipan a, “Note'* — "And he began to say unto them, This day is this scripture fu..." | Gen 4:26: *lawh ding kipan ta uh* — "And to Seth, to him also there was born a son; and he called..." | Exo 4:10: *gen a kipan hitaleh, kei* — "And Moses said unto the LORD , O my Lord, I am not eloquent,..." |
 | sung | 121 | Luk 8:2: *le a sungpan dawi a* — "and certain women, which had been healed of evil spirits and..." | Gen 10:15: *ama sung pan a suak* — "And Canaan begat Sidon his firstborn, and Heth," | Exo 13:15: *uh sung pan tacil khempeuh* — "and it came to pass, when Pharaoh would hardly let us go, th..." |
-| kiang | 60 | Mat 6:13: *Gilo' kiang pan hong honkhia* — "And lead us not into temptation, but deliver us from evil: F..." | Exo 8:29: *Faro' kiang pan, a nasemte'* — "And Moses said, Behold, I go out from thee, and I will intre..." | Num 32:17: *mite' kiang pan kihut nadingin* — "but we ourselves will go ready armed before the children of ..." |
+| kiang | 60 | Mar 11:31: *“Pasian kiang pan hi,” ci* — "And they reasoned with themselves, saying, If we shall say, ..." | Exo 8:29: *Faro' kiang pan, a nasemte'* — "And Moses said, Behold, I go out from thee, and I will intre..." | Num 32:17: *mite' kiang pan kihut nadingin* — "but we ourselves will go ready armed before the children of ..." |
 | khat | 43 | Luk 17:24: *mong khat pan mong khat* — "For as the lightning, that lighteneth out of the one part un..." | Exo 13:10: *kum khat pan kum khat,* — "Thou shalt therefore keep this ordinance in his season from ..." | Lev 27:6: *Kha khat pan kum nga* — "And if it be from a month old even unto five years old, then..." |
 | tung | 31 | Luk 12:48: *pa tung pan tampi kikal* — "But he that knew not, and did commit things worthy of stripe..." | Gen 30:37: *kungte tung pan ciangkhut ding* — "And Jacob took him rods of green poplar, and of the hazel an..." | Exo 21:30: *Ama tung pan tatkhiatna sum* — "If there be laid on him a sum of money, then he shall give f..." |
 | lak | 20 | Mat 5:19: *hih thukhamte lakpan a neupente* — "Whosoever therefore shall break one of these least commandme..." | Gen 8:20: *khempeuh lak pan khat ciat* — "And Noah builded an altar unto the LORD ; and took of every ..." | Lev 5:18: *Tuuhon lak pan a sitbaang* — "And he shall bring a ram without blemish out of the flock, w..." |
 | gam | 18 | Luk 23:5: *Galilee gam pan hong kipanin* — "And they were the more fierce, saying, He stirreth up the pe..." | Gen 13:3: *Negeb gam pan kipanin Bethel* — "And he went on his journeys from the south even to Beth-el, ..." | Num 32:11: *Egypt gam pan a paikhia* — "Surely none of the men that came up out of Egypt, from twent..." |
 | khutsung | 17 | Gen 32:11: *Esau' khutsung pan kei hong* — "Deliver me, I pray thee, from the hand of my brother, from t..." | Deu 3:8: *nihte' khutsung pan, Arnon kuam* — "And we took at that time out of the hand of the two kings of..." | Jdg 8:34: *galte' khutsung pan a honkhia* — "And the children of Israel remembered not the LORD their God..." |
 | thei | 12 | Luk 6:42: *lakhia thei pan ding uh* — "Either how canst thou say to thy brother, Brother, let me pu..." | Gen 29:8: *pia thei pan uh hi,”* — "And they said, We cannot, until all the flocks be gathered t..." | Num 31:24: *ciahkik thei pan ding uh* — "And ye shall wash your clothes on the seventh day, and ye sh..." |
-| lam | 9 | Mat 2:2: *Nisuahna lam pan ama aksi* — "saying, Where is he that is born King of the Jews? for we ha..." | Jos 19:14: *leilu lam pan, Hannathon lamah* — "and the border compasseth it on the north side to Hannathon:..." | Jdg 1:36: *leilu lam pan kipan hi.* — "And the coast of the Amorites was from the going up to Akrab..." |
-| hi | 9 | Mat 24:8: *nading hi pan hi.* — "All these are the beginning of sorrows." | 1Sa 17:33: *na hi pan a, amah* — "And Saul said to David, Thou art not able to go against this..." | Job 26:14: *bek hi pan a, i* — "Lo, these are parts of his ways: But how little a portion is..." |
+| lam | 9 | Mar 15:38: *tung lam pan a taw* — "And the veil of the temple was rent in twain from the top to..." | Jos 19:14: *leilu lam pan, Hannathon lamah* — "and the border compasseth it on the north side to Hannathon:..." | Jdg 1:36: *leilu lam pan kipan hi.* — "And the coast of the Amorites was from the going up to Akrab..." |
+| hi | 9 | Mar 13:8: *kipatna hi pan hi.* — "For nation shall rise against nation, and kingdom against ki..." | 1Sa 17:33: *na hi pan a, amah* — "And Saul said to David, Thou art not able to go against this..." | Job 26:14: *bek hi pan a, i* — "Lo, these are parts of his ways: But how little a portion is..." |
 | khua | 8 | Mar 3:22: *Jerusalem khua pan a hong* — "And the scribes which came down from Jerusalem said, He hath..." | Deu 2:8: *Eziongeber khua pan hong kipan* — "And when we passed by from our brethren the children of Esau..." | 2Sa 4:2: *Beeroth khua pan Benjamin mi* — "And Saul's son had two men that were captains of bands: the ..." |
 | uh | 7 | Deu 12:21: *bawnghon uh pan ahi a,* — "If the place which the LORD thy God hath chosen to put his n..." | Ezr 6:21: *nitna uh pan amau le* — "And the children of Israel, which were come again out of cap..." | Jer 18:11: *siatna uh pan kilehkik unla,* — "Now therefore go to, speak to the men of Judah, and to the i..." |
 | sawmthum | 5 | Num 4:3: *kum sawmthum pan kum sawmnga* — "from thirty years old and upward even until fifty years old,..." | Num 4:23: *kum sawmthum pan kum sawmnga* — "from thirty years old and upward until fifty years old shalt..." | Num 4:30: *kum sawmthum pan kum sawmnga* — "from thirty years old and upward even unto fifty years old s..." |
@@ -152,14 +152,14 @@ Includes both separate postpositions (*sung pan*) and attached forms (*gampan*).
 | leitang | 40 | Gen 5:29: *samsiatsa leitang panin hih pa* — "and he called his name Noah, saying, This same shall comfort..." | Exo 3:8: *tua leitang panin amaute la* — "and I am come down to deliver them out of the hand of the Eg..." | Deu 5:6: *Egypt leitang panin note a* — "I am the LORD thy God, which brought thee out of the land of..." |
 | khuapi | 35 | Mar 11:19: *ciangin khuapi panin Jesuh le* — "And when even was come, he went out of the city." | Gen 44:4: *hangin khuapi panin a nai* — "And when they were gone out of the city, and not yet far off..." | Num 21:28: *Sihon' khuapi panin meikuang piangkhia* — "For there is a fire gone out of Heshbon, A flame from the ci..." |
 | leitung | 31 | Joh 3:31: *hi. Leitung panin a piang* — "He that cometh from above is above all: he that is of the ea..." | Gen 2:6: *ciangin leitung panin meiilum kaaito-in,* — "But there went up a mist from the earth, and watered the who..." | Exo 9:15: *vatgawpin, leitung panin note hong* — "For now I will stretch out my hand, that I may smite thee an..." |
-| tua | 29 | Mat 15:17: *tawnin tua panin paikhiasuak hi* — "Do not ye yet understand, that whatsoever entereth in at the..." | Gen 18:22: *ciangin tua panin mite kihei-in* — "And the men turned their faces from thence, and went toward ..." | Lev 24:5: *inla, tua panin moh sawm* — "And thou shalt take fine flour, and bake twelve cakes thereo..." |
+| tua | 29 | Mar 7:19: *manin tua panin kithakhia lel* — "because it entereth not into his heart, but into the belly, ..." | Gen 18:22: *ciangin tua panin mite kihei-in* — "And the men turned their faces from thence, and went toward ..." | Lev 24:5: *inla, tua panin moh sawm* — "And thou shalt take fine flour, and bake twelve cakes thereo..." |
 | mai | 29 | Exo 14:19: *Amaute' mai panin meii khuam* — "And the angel of God, which went before the camp of Israel, ..." | Lev 9:24: *Topa' mai panin mei hong* — "And there came a fire out from before the LORD , and consume..." | Num 17:9: *Topa' mai panin Israel mite* — "And Moses brought out all the rods from before the LORD unto..." |
 | khat | 24 | Luk 8:4: *khua khat panin Jesuh kiangah* — "And when much people were gathered together, and were come t..." | Exo 36:33: *mong khat panin mong khat* — "And he made the middle bar to shoot through the boards from ..." | Num 3:34: *kha khat panin a tungsiah* — "And those that were numbered of them, according to the numbe..." |
 | beh | 24 | Ezr 2:36: *Jeshua-te beh panin Jedaiah suante* — "The priests: the children of Jedaiah, of the house of Jeshua..." | Neh 7:39: *Jeshua-te beh panin Jedaiah suante* — "The priests: the children of Jedaiah, of the house of Jeshua..." | Ezr 2:40: *Hodaviah-te beh panin Jeshua suante* — "The Levites: the children of Jeshua and Kadmiel, of the chil..." |
 | mual | 23 | Mat 8:1: *Tua mual panin Jesuh hong* — "When he was come down from the mountain, great multitudes fo..." | Exo 19:3: *in mual panin amah sam* — "And Moses went up unto God, and the LORD called unto him out..." | Num 10:33: *Topa' mual panin amaute dingkhia-in* — "And they departed from the mount of the LORD three days' jou..." |
 | pek | 23 | Mat 15:2: *tangtawng pek panin a hong* — "Why do thy disciples transgress the tradition of the elders?..." | 2Ki 19:25: *Tanglai pek panin ka geelkholhsa* — "Hast thou not heard long ago how I have done it, and of anci..." | Ezr 3:13: *Gamlapi pek panin tua awgingte* — "so that the people could not discern the noise of the shout ..." |
 | mualtung | 21 | Luk 6:17: *Tua mualtung panin Jesuh le* — "And he came down with them, and stood in the plain, and the ..." | Exo 19:14: *ciangin mualtung panin mite kiangah* — "And Moses went down from the mount unto the people, and sanc..." | Num 20:28: *ciangin mualtung panin Moses le* — "And Moses stripped Aaron of his garments, and put them upon ..." |
-| jerusalem | 21 | Joh 12:13: *dingin Jerusalem panin mihonpi paikhia-in* — "took branches of palm trees, and went forth to meet him, and..." | 2Sa 5:5: *a, Jerusalem panin kum sawmthum* — "In Hebron he reigned over Judah seven years and six months: ..." | 1Ki 2:41: *Jerusalem panin Gath-ah Shimei* — "And it was told Solomon that Shimei had gone from Jerusalem ..." |
+| jerusalem | 21 | Mar 7:1: *laitakin Jerusalem panin a hong* — "Then came together unto him the Pharisees, and certain of th..." | 2Sa 5:5: *a, Jerusalem panin kum sawmthum* — "In Hebron he reigned over Judah seven years and six months: ..." | 1Ki 2:41: *Jerusalem panin Gath-ah Shimei* — "And it was told Solomon that Shimei had gone from Jerusalem ..." |
 | kam | 20 | Num 30:12: *a kam panin a gingkhia* — "But if her husband hath utterly made them void on the day he..." | Job 37:2: *Ama kam panin a hong* — "Hear attentively the noise of his voice, And the sound that ..." | Psa 18:8: *Ama kam panin mei husia* — "There went up a smoke out of his nostrils, And fire out of h..." |
 
 ---
@@ -226,18 +226,18 @@ Entries organized by grammatical category to reveal different postposition patte
 These are function words: pronouns, demonstratives, quantifiers, and relator nouns.
 Their postposition patterns reveal grammatical constructions.
 
-### Grammatical Items (26 items)
+### Grammatical Items (23 items)
 
-**Total postposition instances**: 4,391
+**Total postposition instances**: 4,291
 
 | Postposition | Count | % of category |
 |--------------|-------|---------------|
-| pan | 700 | 15.9% |
-| panin | 2,013 | 45.8% |
-| tawh | 1,678 | 38.2% |
+| pan | 700 | 16.3% |
+| panin | 2,017 | 47.0% |
+| tawh | 1,574 | 36.7% |
 | tawhin | 0 | 0.0% |
 
-**Observation**: Grammatical Items most frequently occur with *panin* (45.8%).
+**Observation**: Grammatical Items most frequently occur with *panin* (47.0%).
 Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these items commonly express source/origin.
 
 #### sung
@@ -246,20 +246,20 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 121 | Luk 8:2: *le a sungpan dawi a* — "and certain women, which had been healed of evil s..." | Gen 10:15: *ama sung pan a suak* — "And Canaan begat Sidon his firstborn, and Heth," | Exo 13:15: *uh sung pan tacil khempeuh* — "and it came to pass, when Pharaoh would hardly let..." |
-| panin | 689 | Luk 1:5: *pawlte' sung panin Zekhariah minnei* — "There was in the days of Herod, the king of Judæa,..." | Gen 2:9: *lei sung panin Topa Pasian* — "And out of the ground made the LORD God to grow ev..." | Exo 1:22: *mite sung panin tapa a* — "And Pharaoh charged all his people, saying, Every ..." |
+| panin | 690 | Luk 1:5: *pawlte' sung panin Zekhariah minnei* — "There was in the days of Herod, the king of Judæa,..." | Gen 2:9: *lei sung panin Topa Pasian* — "And out of the ground made the LORD God to grow ev..." | Exo 1:22: *mite sung panin tapa a* — "And Pharaoh charged all his people, saying, Every ..." |
 | tawh | 2 | Num 32:33: *gam sung tawh, a gam* — "And Moses gave unto them, even to the children of ..." | Psa 90:4: *khat sung tawh ahi zongin* — "For a thousand years in thy sight are but as yeste..." | — |
 | tawhin | 0 | — | — | — |
 
 ---
 
 #### ki
-**Gloss**: REFL/RECIP
+**Gloss**: REFL
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 409 | Luk 4:21: *thugen ding kipan a, “Note'* — "And he began to say unto them, This day is this sc..." | Gen 4:26: *lawh ding kipan ta uh* — "And to Seth, to him also there was born a son; and..." | Exo 4:10: *gen a kipan hitaleh, kei* — "And Moses said unto the LORD , O my Lord, I am not..." |
 | panin | 213 | Luk 1:2: *cil a kipanin amau' mit* — "even as they delivered them unto us, which from th..." | Gen 4:26: *hun a kipanin mite in* — "And to Seth, to him also there was born a son; and..." | Exo 9:18: *kisat a kipanin tuhun dongin* — "Behold, to morrow about this time I will cause it ..." |
-| tawh | 6 | Exo 21:28: *a ki tawh a piklup* — "If an ox gore a man or a woman, that they die: the..." | Job 28:1: *“Ngun a kitawh khiatna a* — "Surely there is a vein for the silver, And a place..." | Psa 94:9: *khat a kitawh hun mateng,* — "He that planted the ear, shall he not hear? He tha..." |
+| tawh | 7 | Exo 21:28: *a ki tawh a piklup* — "If an ox gore a man or a woman, that they die: the..." | Deu 33:17: *gamsial kite tawh kibang hi.* — "His glory is like the firstling of his bullock, An..." | Job 28:1: *“Ngun a kitawh khiatna a* — "Surely there is a vein for the silver, And a place..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -269,7 +269,7 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
-| pan | 60 | Mat 6:13: *Gilo' kiang pan hong honkhia* — "And lead us not into temptation, but deliver us fr..." | Exo 8:29: *Faro' kiang pan, a nasemte'* — "And Moses said, Behold, I go out from thee, and I ..." | Num 32:17: *mite' kiang pan kihut nadingin* — "but we ourselves will go ready armed before the ch..." |
+| pan | 60 | Mar 11:31: *“Pasian kiang pan hi,” ci* — "And they reasoned with themselves, saying, If we s..." | Exo 8:29: *Faro' kiang pan, a nasemte'* — "And Moses said, Behold, I go out from thee, and I ..." | Num 32:17: *mite' kiang pan kihut nadingin* — "but we ourselves will go ready armed before the ch..." |
 | panin | 370 | Luk 1:38: *ama kiang panin vantungmi a* — "And Mary said, Behold the handmaid of the Lord; be..." | Gen 4:14: *nang kiang panin kei nong* — "Behold, thou hast driven me out this day from the ..." | Exo 2:15: *Faro kiang panin Moses tai-in* — "Now when Pharaoh heard this thing, he sought to sl..." |
 | tawh | 0 | — | — | — |
 | tawhin | 0 | — | — | — |
@@ -319,7 +319,7 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 1 | 2Ki 20:13: *sung khempeuh pan hitaleh Hezekiah* — "And Hezekiah hearkened unto them, and shewed them ..." | — | — |
 | panin | 88 | Luk 7:28: *sung khempeuh panin a lianpen* — "For I say unto you, Among those that are born of w..." | Gen 2:2: *nasep khempeuh panin ni sagih* — "And on the seventh day God ended his work which he..." | Exo 17:14: *mun khempeuh panin Amalek mite* — "And the LORD said unto Moses, Write this for a mem..." |
-| tawh | 164 | Luk 10:27: *pilna khempeuh tawh na it* — "And he answering said, Thou shalt love the Lord th..." | Gen 9:15: *nei khempeuh tawh ka thuciamna* — "and I will remember my covenant, which is between ..." | Exo 1:14: *namkim khempeuh tawh amau' nuntakna* — "and they made their lives bitter with hard bondage..." |
+| tawh | 166 | Luk 10:27: *pilna khempeuh tawh na it* — "And he answering said, Thou shalt love the Lord th..." | Gen 9:15: *nei khempeuh tawh ka thuciamna* — "and I will remember my covenant, which is between ..." | Exo 1:14: *namkim khempeuh tawh amau' nuntakna* — "and they made their lives bitter with hard bondage..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -343,7 +343,7 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 43 | Luk 17:24: *mong khat pan mong khat* — "For as the lightning, that lighteneth out of the o..." | Exo 13:10: *kum khat pan kum khat,* — "Thou shalt therefore keep this ordinance in his se..." | Lev 27:6: *Kha khat pan kum nga* — "And if it be from a month old even unto five years..." |
 | panin | 24 | Luk 8:4: *khua khat panin Jesuh kiangah* — "And when much people were gathered together, and w..." | Exo 36:33: *mong khat panin mong khat* — "And he made the middle bar to shoot through the bo..." | Num 3:34: *kha khat panin a tungsiah* — "And those that were numbered of them, according to..." |
-| tawh | 101 | Luk 13:19: *tang khat tawh kibang hi.* — "It is like a grain of mustard seed, which a man to..." | Gen 3:22: *eite khat tawh kibang a,* — "And the LORD God said, Behold, the man is become a..." | Exo 7:9: *nalamdang khat tawh hong lak* — "When Pharaoh shall speak unto you, saying, Shew a ..." |
+| tawh | 104 | Luk 13:19: *tang khat tawh kibang hi.* — "It is like a grain of mustard seed, which a man to..." | Gen 3:22: *eite khat tawh kibang a,* — "And the LORD God said, Behold, the man is become a..." | Exo 7:9: *nalamdang khat tawh hong lak* — "When Pharaoh shall speak unto you, saying, Shew a ..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -355,7 +355,7 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
-| tawh | 136 | Gen 47:19: *uh an tawh hong lei* — "wherefore shall we die before thine eyes, both we ..." | Exo 29:41: *biakna-in an tawh biakna le* — "And the other lamb thou shalt offer at even, and s..." | Lev 2:1: *tungah an tawh biakna hong* — "And when any will offer a meat offering unto the L..." |
+| tawh | 137 | Joh 6:58: *veve-na ante tawh kibang lo* — "This is that bread which came down from heaven: no..." | Gen 47:19: *uh an tawh hong lei* — "wherefore shall we die before thine eyes, both we ..." | Exo 29:41: *biakna-in an tawh biakna le* — "And the other lamb thou shalt offer at even, and s..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -368,18 +368,6 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
 | tawh | 100 | Luk 15:31: *lai-ah kei tawh a omkhawm* — "And he said unto him, Son, thou art ever with me, ..." | Gen 14:24: *le kei tawh hong kuan* — "save only that which the young men have eaten, and..." | Exo 9:14: *khempeuhah kei tawh a kibang* — "For I will at this time send all my plagues upon t..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### note
-**Gloss**: 2PL
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 0 | — | — | — |
-| tawh | 99 | Luk 22:15: *thuakma-in note tawh hih Paisan* — "And he said unto them, With desire I have desired ..." | Gen 9:10: *note tawh a om* — "and with every living creature that is with you, o..." | Exo 10:10: *leh note tawh Topa hong* — "And he said unto them, Let the LORD be so with you..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -408,6 +396,18 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 
 ---
 
+#### tua
+**Gloss**: that
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 32 | Mar 7:19: *manin tua panin kithakhia lel* — "because it entereth not into his heart, but into t..." | Gen 18:22: *ciangin tua panin mite kihei-in* — "And the men turned their faces from thence, and we..." | Lev 24:5: *inla, tua panin moh sawm* — "And thou shalt take fine flour, and bake twelve ca..." |
+| tawh | 51 | Exo 4:25: *a, tua tawh Moses lawngin,* — "Then Zipporah took a sharp stone, and cut off the ..." | Lev 8:7: *a, tua tawh ama tungah* — "And he put upon him the coat, and girded him with ..." | Num 1:50: *le tua tawh a kisai* — "but thou shalt appoint the Levites over the tabern..." |
+| tawhin | 0 | — | — | — |
+
+---
+
 #### mah
 **Gloss**: self
 
@@ -416,18 +416,6 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 | pan | 0 | — | — | — |
 | panin | 7 | Exo 11:2: *kiang mah panin ngun le* — "Speak now in the ears of the people, and let every..." | Psa 87:4: *lai mah panin a piang* — "I will make mention of Rahab and Babylon to them t..." | Jer 30:21: *sung mah panin a piang* — "And their nobles shall be of themselves, and their..." |
 | tawh | 73 | Luk 17:28: *huna mah tawh zong hong* — "Likewise also as it was in the days of Lot; they d..." | Gen 8:18: *zite mah tawh paikhia khawm* — "And Noah went forth, and his sons, and his wife, a..." | Exo 26:30: *kilak mah tawh kizui-in biakbuk* — "And thou shalt rear up the tabernacle according to..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### tua
-**Gloss**: that
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 29 | Mat 15:17: *tawnin tua panin paikhiasuak hi* — "Do not ye yet understand, that whatsoever entereth..." | Gen 18:22: *ciangin tua panin mite kihei-in* — "And the men turned their faces from thence, and we..." | Lev 24:5: *inla, tua panin moh sawm* — "And thou shalt take fine flour, and bake twelve ca..." |
-| tawh | 27 | Exo 4:25: *a, tua tawh Moses lawngin,* — "Then Zipporah took a sharp stone, and cut off the ..." | Lev 8:7: *a, tua tawh ama tungah* — "And he put upon him the coat, and girded him with ..." | Num 1:50: *le tua tawh a kisai* — "but thou shalt appoint the Levites over the tabern..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -451,7 +439,19 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 4 | Luk 22:71: *kam mahmah panin i za* — "And they said, What need we any further witness? f..." | Eze 9:6: *biakinn mahmah panin kipan pah* — "slay utterly old and young, both maids, and little..." | Act 20:30: *sung mahmah panin zong mi* — "Also of your own selves shall men arise, speaking ..." |
-| tawh | 34 | Luk 1:2: *mit mahmah tawh a mu* — "even as they delivered them unto us, which from th..." | Gen 41:42: *hoih mahmah tawh amah zemin,* — "And Pharaoh took off his ring from his hand, and p..." | Deu 4:34: *lauhuai mahmah tawh pasian dang* — "Or hath God assayed to go and take him a nation fr..." |
+| tawh | 35 | Luk 1:2: *mit mahmah tawh a mu* — "even as they delivered them unto us, which from th..." | Gen 41:42: *hoih mahmah tawh amah zemin,* — "And Pharaoh took off his ring from his hand, and p..." | Deu 4:34: *lauhuai mahmah tawh pasian dang* — "Or hath God assayed to go and take him a nation fr..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### lo
+**Gloss**: NEG
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 1 | Jos 24:13: *leenggui lo pan a gah* — "And I have given you a land for which ye did not l..." | — | — |
+| panin | 13 | Gen 30:16: *Nitakin lo panin Jakob hong* — "And Jacob came out of the field in the evening, an..." | Exo 8:13: *le lote panin uiphukte a* — "And the LORD did according to the word of Moses; a..." | Lev 25:12: *in lo panin a piang* — "For it is the jubile; it shall be holy unto you: y..." |
+| tawh | 18 | Mar 4:34: *Thugentehna lo tawh thu hilh* — "But without a parable spake he not unto them: and ..." | Gen 49:28: *a lo tawh a leikhop,* — "All these are the twelve tribes of Israel: and thi..." | Lev 25:31: *sung lote tawh a kibangin* — "But the houses of the villages which have no wall ..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -474,20 +474,8 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 3 | Deu 23:22: *bawl ding pan na kikep* — "But if thou shalt forbear to vow, it shall be no s..." | Psa 97:10: *siatna ding pan a kem* — "Ye that love the LORD , hate evil: He preserveth t..." | Pro 14:3: *siatna ding pan pengsak hi.* — "In the mouth of the foolish is a rod of pride: But..." |
-| panin | 10 | Mat 17:26: *piak ding panin a tate* — "Peter saith unto him, Of strangers. Jesus saith un..." | Exo 23:7: *mawhsak ding panin kikem unla,* — "Keep thee far from a false matter; and the innocen..." | Est 8:10: *hihna ding panin khua khempeuhah* — "And he wrote in the king Ahasuerus' name, and seal..." |
-| tawh | 13 | Mat 25:9: *a' ding tawh kicing nawn* — "But the wise answered, saying, Not so ; lest there..." | Exo 25:9: *lim ding tawh kisai-in nang'* — "According to all that I shew thee, after the patte..." | Lev 14:35: *om ding tawh kibang,' ci* — "and he that owneth the house shall come and tell t..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### tuate
-**Gloss**: DIST-PL
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 3 | 2Ki 13:2: *hi. Tuate panin amah kihemkhia* — "And he did that which was evil in the sight of the..." | 2Ki 16:17: *tankhia-in tuate panin a kuang* — "And king Ahaz cut off the borders of the bases, an..." | 2Ki 17:21: *dongin tuate panin amaute kihemkhia* — "For he rent Israel from the house of David; and th..." |
-| tawh | 23 | Lev 11:43: *a, tuate tawh nomau na* — "Ye shall not make yourselves abominable with any c..." | Num 4:26: *in tuate tawh a kizom* — "and the hangings of the court, and the hanging for..." | Deu 33:17: *in tuate tawh mite nawt* — "His glory is like the firstling of his bullock, An..." |
+| panin | 11 | Mat 17:26: *piak ding panin a tate* — "Peter saith unto him, Of strangers. Jesus saith un..." | Exo 23:7: *mawhsak ding panin kikem unla,* — "Keep thee far from a false matter; and the innocen..." | Est 8:10: *hihna ding panin khua khempeuhah* — "And he wrote in the king Ahasuerus' name, and seal..." |
+| tawh | 15 | Mat 25:9: *a' ding tawh kicing nawn* — "But the wise answered, saying, Not so ; lest there..." | Exo 25:9: *lim ding tawh kisai-in nang'* — "According to all that I shew thee, after the patte..." | Lev 14:35: *om ding tawh kibang,' ci* — "and he that owneth the house shall come and tell t..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -498,20 +486,8 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 2 | Job 5:20: *sih nading pan nang hong* — "In famine he shall redeem thee from death: And in ..." | Pro 10:2: *sih nading pan hong hon* — "Treasures of wickedness profit nothing: But righte..." | — |
-| panin | 19 | Joh 17:15: *bawlsiat nading panin na kep* — "I pray not that thou shouldest take them out of th..." | Exo 14:5: *sep nading panin Israel mite* — "And it was told the king of Egypt that the people ..." | Num 24:11: *liat nading panin Topa in* — "Therefore now flee thou to thy place: I thought to..." |
+| panin | 19 | Mar 6:20: *thuak nading panin hu hi.* — "for Herod feared John, knowing that he was a just ..." | Exo 14:5: *sep nading panin Israel mite* — "And it was told the king of Egypt that the people ..." | Num 24:11: *liat nading panin Topa in* — "Therefore now flee thou to thy place: I thought to..." |
 | tawh | 4 | Mat 26:39: *thuak nading tawh hong kipelhsak* — "And he went a little further, and fell on his face..." | 1Co 14:15: *theih nading tawh zong ka* — "What is it then? I will pray with the spirit, and ..." | 2Co 9:1: *huh nading tawh kisai-in lai* — "For as touching the ministering to the saints, it ..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### lo
-**Gloss**: NEG
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 1 | Jos 24:13: *leenggui lo pan a gah* — "And I have given you a land for which ye did not l..." | — | — |
-| panin | 9 | Gen 30:16: *Nitakin lo panin Jakob hong* — "And Jacob came out of the field in the evening, an..." | Exo 22:5: *leenggah lo panin a piangte* — "If a man shall cause a field or vineyard to be eat..." | Lev 25:12: *in lo panin a piang* — "For it is the jubile; it shall be holy unto you: y..." |
-| tawh | 14 | Mar 4:34: *Thugentehna lo tawh thu hilh* — "But without a parable spake he not unto them: and ..." | Gen 49:28: *a lo tawh a leikhop,* — "All these are the twelve tribes of Israel: and thi..." | Lev 27:10: *hoih lo tawh ahi zongin,* — "He shall not alter it, nor change it, a good for a..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -540,34 +516,22 @@ Ablative (*pan/panin*) dominates over comitative (*tawh*), suggesting these item
 
 ---
 
-#### dangte
-**Gloss**: other-PL
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 2 | 2Sa 22:24: *kisuanna dangte panin hoihtakin ka* — "I was also upright before him, And have kept mysel..." | 1Ch 9:33: *nasep dangte panin pengin biakinn* — "And these are the singers, chief of the fathers of..." | — |
-| tawh | 20 | Gen 42:5: *pai dangte tawh Israel' tapate* — "And the sons of Israel came to buy corn among thos..." | Exo 39:34: *savun dangte tawh a kibawl* — "and the covering of rams' skins dyed red, and the ..." | Deu 32:16: *pasian dangte tawh ama hazat* — "They provoked him to jealousy with strange gods , ..." |
-| tawhin | 0 | — | — | — |
-
----
-
 ## Common Nouns
 
 Lexical nouns including simple stems, compounds, and nominalizations.
 
-### Common Nouns (68 items)
+### Common Nouns (69 items)
 
-**Total postposition instances**: 3,732
+**Total postposition instances**: 3,924
 
 | Postposition | Count | % of category |
 |--------------|-------|---------------|
-| pan | 83 | 2.2% |
-| panin | 1,308 | 35.0% |
-| tawh | 2,339 | 62.7% |
+| pan | 83 | 2.1% |
+| panin | 1,349 | 34.4% |
+| tawh | 2,490 | 63.5% |
 | tawhin | 2 | 0.1% |
 
-**Observation**: Common Nouns most frequently occur with *tawh* (62.7%).
+**Observation**: Common Nouns most frequently occur with *tawh* (63.5%).
 Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these items commonly express accompaniment.
 
 #### gam
@@ -575,33 +539,33 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
-| pan | 18 | Luk 23:5: *Galilee gam pan hong kipanin* — "And they were the more fierce, saying, He stirreth..." | Gen 13:3: *Negeb gam pan kipanin Bethel* — "And he went on his journeys from the south even to..." | Num 32:11: *Egypt gam pan a paikhia* — "Surely none of the men that came up out of Egypt, ..." |
-| panin | 225 | Luk 23:49: *Galilee gam panin Jesuh a* — "And all his acquaintance, and the women that follo..." | Gen 10:11: *Tua gam panin Assiria gam* — "Out of that land went forth Asshur, and builded Ni..." | Exo 1:10: *hih gam panin taikhia kha* — "come on, let us deal wisely with them; lest they m..." |
-| tawh | 16 | Gen 13:10: *Egypt gam tawh hitaleh kibang* — "And Lot lifted up his eyes, and beheld all the pla..." | Jos 21:11: *lonona gam tawh amau tungah* — "And they gave them the city of Arba the father of ..." | Pro 27:20: *misite' gam tawh kibang a,* — "Hell and destruction are never full; So the eyes o..." |
+| pan | 19 | Luk 23:5: *Galilee gam pan hong kipanin* — "And they were the more fierce, saying, He stirreth..." | Gen 13:3: *Negeb gam pan kipanin Bethel* — "And he went on his journeys from the south even to..." | Num 32:11: *Egypt gam pan a paikhia* — "Surely none of the men that came up out of Egypt, ..." |
+| panin | 231 | Luk 23:49: *Galilee gam panin Jesuh a* — "And all his acquaintance, and the women that follo..." | Gen 10:11: *Tua gam panin Assiria gam* — "Out of that land went forth Asshur, and builded Ni..." | Exo 1:10: *hih gam panin taikhia kha* — "come on, let us deal wisely with them; lest they m..." |
+| tawh | 109 | Gen 13:10: *Egypt gam tawh hitaleh kibang* — "And Lot lifted up his eyes, and beheld all the pla..." | Num 35:7: *lonona gamte tawh hi ding* — "So all the cities which ye shall give to the Levit..." | Jos 19:46: *a gamte tawh a huam* — "and Me-jarkon, and Rakkon, with the border before ..." |
 | tawhin | 0 | — | — | — |
 
 ---
 
-#### mite
-**Gloss**: people
+#### mi
+**Gloss**: person
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 4 | 1Ch 12:21: *thei mite panin David huh* — "And they helped David against the band of the rove..." | Neh 10:28: *gamdang mite panin a tuam* — "And the rest of the people, the priests, the Levit..." | Pro 2:15: *ding mite panin nang hong* — "Whose ways are crooked, And they froward in their ..." |
-| tawh | 172 | Luk 5:30: *khial mite tawh an nekhawm* — "But their scribes and Pharisees murmured against h..." | Gen 25:8: *ama mite tawh kivui khawm* — "Then Abraham gave up the ghost, and died in a good..." | Exo 17:8: *Israel mite tawh Refidim-ah kido* — "Then came Amalek, and fought with Israel in Rephid..." |
+| tawh | 190 | Luk 5:30: *khial mite tawh an nekhawm* — "But their scribes and Pharisees murmured against h..." | Gen 9:19: *buppi mi tawh hong kidim* — "These are the three sons of Noah: and of them was ..." | Exo 12:4: *a mi tawh kituakin a* — "and if the household be too little for the lamb, l..." |
 | tawhin | 0 | — | — | — |
 
 ---
 
 #### thu
-**Gloss**: word/matter
+**Gloss**: word
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 10 | Mat 5:18: *uh thu panin: Van le* — "For verily I say unto you, Till heaven and earth p..." | Deu 5:32: *ama thu panin taklam hitaleh* — "Ye shall observe to do therefore as the LORD your ..." | Psa 119:157: *nangma thu panin kei ka* — "Many are my persecutors and mine enemies; Yet do I..." |
-| tawh | 142 | Luk 3:14: *“Zawhthawh thu tawh ahi a,* — "And the soldiers likewise demanded of him, saying,..." | Gen 24:9: *hih thu tawh kisai-in ama* — "And the servant put his hand under the thigh of Ab..." | Exo 3:19: *Thatanghat thu tawh a kisawlgawp* — "And I am sure that the king of Egypt will not let ..." |
+| tawh | 153 | Luk 3:14: *“Zawhthawh thu tawh ahi a,* — "And the soldiers likewise demanded of him, saying,..." | Gen 24:9: *hih thu tawh kisai-in ama* — "And the servant put his hand under the thigh of Ab..." | Exo 3:19: *Thatanghat thu tawh a kisawlgawp* — "And I am sure that the king of Egypt will not let ..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -655,7 +619,7 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 ---
 
 #### lai
-**Gloss**: time/place
+**Gloss**: time
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
@@ -673,7 +637,19 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 1 | 1Ki 11:8: *Israel Pasian panin a lungsim* — "And likewise did he for all his strange wives, whi..." | — | — |
-| tawh | 114 | Luk 5:21: *bangin Pasian tawh a kikimin* — "And the scribes and the Pharisees began to reason,..." | Gen 3:5: *thei-in, Pasian tawh na kibat* — "for God doth know that in the day ye eat thereof, ..." | Exo 8:10: *kote' Pasian tawh a kibang* — "And he said, To morrow. And he said, Be it accordi..." |
+| tawh | 119 | Luk 5:21: *bangin Pasian tawh a kikimin* — "And the scribes and the Pharisees began to reason,..." | Gen 3:5: *thei-in, Pasian tawh na kibat* — "for God doth know that in the day ye eat thereof, ..." | Exo 8:10: *kote' Pasian tawh a kibang* — "And he said, To morrow. And he said, Be it accordi..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### khua
+**Gloss**: village
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 8 | Mar 3:22: *Jerusalem khua pan a hong* — "And the scribes which came down from Jerusalem sai..." | Deu 2:8: *Eziongeber khua pan hong kipan* — "And when we passed by from our brethren the childr..." | 2Sa 4:2: *Beeroth khua pan Benjamin mi* — "And Saul's son had two men that were captains of b..." |
+| panin | 95 | Luk 2:4: *Nazareth khua panin David' suahna* — "And Joseph also went up from Galilee, out of the c..." | Gen 11:31: *Ur khua panin amaute a* — "And Terah took Abram his son, and Lot the son of H..." | Deu 23:4: *Pethor khua panin Beor' tapa* — "because they met you not with bread and with water..." |
+| tawh | 7 | 2Ki 19:8: *Libnah khua tawh a kidona* — "So Rab-shakeh returned, and found the king of Assy..." | Isa 1:1: *Jerusalem khua tawh kisai a* — "The vision of Isaiah the son of Amoz, which he saw..." | Jer 49:23: *Damaskas khua tawh kisai-in Vanglian* — "Concerning Damascus. Hamath is confounded, and Arp..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -690,30 +666,6 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### khua
-**Gloss**: village
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 8 | Mar 3:22: *Jerusalem khua pan a hong* — "And the scribes which came down from Jerusalem sai..." | Deu 2:8: *Eziongeber khua pan hong kipan* — "And when we passed by from our brethren the childr..." | 2Sa 4:2: *Beeroth khua pan Benjamin mi* — "And Saul's son had two men that were captains of b..." |
-| panin | 91 | Luk 2:4: *Nazareth khua panin David' suahna* — "And Joseph also went up from Galilee, out of the c..." | Gen 11:31: *Ur khua panin amaute a* — "And Terah took Abram his son, and Lot the son of H..." | Deu 23:4: *Pethor khua panin Beor' tapa* — "because they met you not with bread and with water..." |
-| tawh | 7 | 2Ki 19:8: *Libnah khua tawh a kidona* — "So Rab-shakeh returned, and found the king of Assy..." | Isa 1:1: *Jerusalem khua tawh kisai a* — "The vision of Isaiah the son of Amoz, which he saw..." | Jer 49:23: *Damaskas khua tawh kisai-in Vanglian* — "Concerning Damascus. Hamath is confounded, and Arp..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### gamte
-**Gloss**: lands
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 1 | Act 2:10: *Libya gamte pan ihi a,* — "Phrygia, and Pamphylia, in Egypt, and in the parts..." | — | — |
-| panin | 6 | Mar 3:8: *hih gamte panin mihon tampi* — "and from Jerusalem, and from Idumæa, and from beyo..." | Isa 11:11: *gei-a gamte panin ama mi* — "And it shall come to pass in that day, that the Lo..." | Jer 17:26: *Negeb gamte panin ahi zongin* — "And they shall come from the cities of Judah, and ..." |
-| tawh | 93 | Num 35:7: *lonona gamte tawh hi ding* — "So all the cities which ye shall give to the Levit..." | Jos 19:46: *a gamte tawh a huam* — "and Me-jarkon, and Rakkon, with the border before ..." | 1Ch 6:57: *lonona gamte tawh,* — "And to the sons of Aaron they gave the cities of J..." |
-| tawhin | 0 | — | — | — |
-
----
-
 #### khut
 **Gloss**: hand
 
@@ -721,7 +673,19 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 1 | 2Ch 32:15: *keima khut pan ahi a,* — "Now therefore let not Hezekiah deceive you, nor pe..." | — | — |
 | panin | 12 | Deu 26:4: *note' khut panin a lawh* — "And the priest shall take the basket out of thine ..." | Jdg 15:14: *a khut panin tolhkhia hi.* — "And when he came unto Lehi, the Philistines shoute..." | 2Sa 13:5: *ama khut panin an ka* — "And Jonadab said unto him, Lay thee down on thy be..." |
-| tawh | 76 | Luk 1:22: *a khut tawh a lim* — "And when he came out, he could not speak unto them..." | Gen 21:18: *na khut tawh kip takin* — "Arise, lift up the lad, and hold him in thine hand..." | Exo 31:18: *Pasian' khut tawh a kigelh* — "And he gave unto Moses, when he had made an end of..." |
+| tawh | 77 | Luk 1:22: *a khut tawh a lim* — "And when he came out, he could not speak unto them..." | Gen 21:18: *na khut tawh kip takin* — "Arise, lift up the lad, and hold him in thine hand..." | Exo 31:18: *Pasian' khut tawh a kigelh* — "And he gave unto Moses, when he had made an end of..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### mun
+**Gloss**: place
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 1 | Jer 28:3: *hih mun pan lakhia-in Babylon* — "Within two full years will I bring again into this..." | — | — |
+| panin | 70 | Luk 11:53: *Tua mun panin Jesuh a* — "And as he said these things unto them, the scribes..." | Gen 2:10: *tua mun panin gun hong* — "And a river went out of Eden to water the garden; ..." | Exo 11:1: *lai mun panin amah in* — "And the LORD said unto Moses, Yet will I bring one..." |
+| tawh | 5 | Luk 11:44: *sikkhakna munte tawh na kibang* — "Woe unto you, scribes and Pharisees, hypocrites! f..." | Num 33:2: *kipatna mun tawh kizui-in a* — "And Moses wrote their goings out according to thei..." | Isa 17:9: *uh munte tawh kibang ding* — "In that day shall his strong cities be as a forsak..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -738,14 +702,14 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### mun
-**Gloss**: place
+#### kham
+**Gloss**: cheek
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
-| pan | 1 | Jer 28:3: *hih mun pan lakhia-in Babylon* — "Within two full years will I bring again into this..." | — | — |
-| panin | 69 | Luk 11:53: *Tua mun panin Jesuh a* — "And as he said these things unto them, the scribes..." | Gen 2:10: *tua mun panin gun hong* — "And a river went out of Eden to water the garden; ..." | Exo 11:1: *lai mun panin amah in* — "And the LORD said unto Moses, Yet will I bring one..." |
-| tawh | 3 | Joh 19:41: *kithahna mun tawh kinai-ah huan* — "Now in the place where he was crucified there was ..." | Num 33:2: *kipatna mun tawh kizui-in a* — "And Moses wrote their goings out according to thei..." | Heb 9:1: *nading mun tawh kisai ngeina* — "Then verily the first covenant had also ordinances..." |
+| pan | 0 | — | — | — |
+| panin | 0 | — | — | — |
+| tawh | 70 | Mat 23:16: *om kham tawh a kiciam* — "Woe unto you, ye blind guides, which say, Whosoeve..." | Exo 3:22: *le kham tawh kibawl kizepnate* — "but every woman shall borrow of her neighbour, and..." | Num 31:50: *nadingin kham tawh a kibawl* — "We have therefore brought an oblation for the LORD..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -762,38 +726,14 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### kham
-**Gloss**: cheek
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 0 | — | — | — |
-| tawh | 68 | Mat 23:16: *om kham tawh a kiciam* — "Woe unto you, ye blind guides, which say, Whosoeve..." | Exo 3:22: *le kham tawh kibawl kizepnate* — "but every woman shall borrow of her neighbour, and..." | Num 31:50: *nadingin kham tawh a kibawl* — "We have therefore brought an oblation for the LORD..." |
-| tawhin | 0 | — | — | — |
-
----
-
 #### inn
 **Gloss**: house
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 3 | Jdg 11:7: *pa' inn pan hong hawlkhia* — "And Jephthah said unto the elders of Gilead, Did n..." | 2Sa 15:35: *kumpipa' inn pan na zak* — "And hast thou not there with thee Zadok and Abiath..." | Psa 50:9: *na inn pan uha bawngtal* — "I will take no bullock out of thy house, Nor he go..." |
-| panin | 48 | Luk 1:24: *sung inn panin koimahah a* — "And after those days his wife Elisabeth conceived,..." | Gen 12:1: *pa' inn panin nang kong* — "Now the LORD had said unto Abram, Get thee out of ..." | Exo 22:7: *mipa' inn panin a kiguk* — "If a man shall deliver unto his neighbour money or..." |
-| tawh | 7 | Jdg 12:1: *Na inn tawh nang kong* — "And the men of Ephraim gathered themselves togethe..." | 1Ki 16:17: *kumpipa' inn tawh amah mei-in* — "And Omri went up from Gibbethon, and all Israel wi..." | Psa 93:5: *na inn tawh a kilawm* — "Thy testimonies are very sure: Holiness becometh t..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### lam
-**Gloss**: way
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 9 | Mat 2:2: *Nisuahna lam pan ama aksi* — "saying, Where is he that is born King of the Jews?..." | Jos 19:14: *leilu lam pan, Hannathon lamah* — "and the border compasseth it on the north side to ..." | Jdg 1:36: *leilu lam pan kipan hi.* — "And the coast of the Amorites was from the going u..." |
-| panin | 45 | Luk 12:55: *Leitaw lam panin huih hong* — "And when ye see the south wind blow, ye say, There..." | Gen 10:19: *Sodom lam panin Gomorrah, Admah,* — "And the border of the Canaanites was from Sidon, a..." | Jos 19:34: *nisuahna lam panin Jordan-ah Judah* — "and then the coast turneth westward to Aznoth-tabo..." |
-| tawh | 2 | 1Ki 22:22: *'Bang lam tawh zol ding* — "And the LORD said unto him, Wherewith? And he said..." | 2Ch 18:20: *'Bang lam tawh zol ding* — "Then there came out a spirit, and stood before the..." | — |
+| panin | 51 | Luk 1:24: *sung inn panin koimahah a* — "And after those days his wife Elisabeth conceived,..." | Gen 12:1: *pa' inn panin nang kong* — "Now the LORD had said unto Abram, Get thee out of ..." | Exo 8:9: *na innte panin uiphukte a* — "And Moses said unto Pharaoh, Glory over me: when s..." |
+| tawh | 8 | Jdg 12:1: *Na inn tawh nang kong* — "And the men of Ephraim gathered themselves togethe..." | 1Ki 16:17: *kumpipa' inn tawh amah mei-in* — "And Omri went up from Gibbethon, and all Israel wi..." | Psa 93:5: *na inn tawh a kilawm* — "Thy testimonies are very sure: Holiness becometh t..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -805,7 +745,19 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 1 | 1Sa 21:4: *tangvalte numei panin a kikep* — "And the priest answered David, and said, There is ..." | — | — |
-| tawh | 54 | Luk 16:18: *tua numei tawh a mawh* — "Whosoever putteth away his wife, and marrieth anot..." | Exo 19:15: *un; numei tawh lumkhawm kei* — "And he said unto the people, Be ready against the ..." | Lev 15:33: *sungin numei tawh a lumkhawm* — "and of her that is sick of her flowers, and of him..." |
+| tawh | 61 | Luk 16:18: *tua numei tawh a mawh* — "Whosoever putteth away his wife, and marrieth anot..." | Exo 19:15: *un; numei tawh lumkhawm kei* — "And he said unto the people, Be ready against the ..." | Lev 15:33: *sungin numei tawh a lumkhawm* — "and of her that is sick of her flowers, and of him..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### khuapi
+**Gloss**: city
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 2 | Jer 50:8: *Babylon khuapi pan taikhia un.* — "Remove out of the midst of Babylon, and go forth o..." | Eze 25:13: *Teman khuapi pan a kipan* — "therefore thus saith the Lord GOD ; I will also st..." | — |
+| panin | 42 | Luk 6:17: *Sidon khuapite panin a hong* — "And he came down with them, and stood in the plain..." | Gen 44:4: *hangin khuapi panin a nai* — "And when they were gone out of the city, and not y..." | Num 21:28: *Sihon' khuapi panin meikuang piangkhia* — "For there is a fire gone out of Heshbon, A flame f..." |
+| tawh | 17 | Joh 19:20: *Jerusalem khuapi tawh kinai ahih* — "This title then read many of the Jews: for the pla..." | Deu 3:12: *a khuapite tawh ka pia* — "And this land, which we possessed at that time, fr..." | 1Ki 9:12: *tua khuapite tawh amah lungkim* — "And Hiram came out from Tyre to see the cities whi..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -817,7 +769,19 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 3 | Ezr 8:2: *Finehas-te beh pan ahi hi.* — "Of the sons of Phinehas; Gershom: of the sons of I..." | Ezr 8:2: *Ithamar-te beh pan ahi hi.* — "Of the sons of Phinehas; Gershom: of the sons of I..." | Ezr 8:14: *Bigvai-te beh pan hi uh* — "Of the sons also of Bigvai; Uthai, and Zabbud, and..." |
 | panin | 24 | Ezr 2:36: *Jeshua-te beh panin Jedaiah suante* — "The priests: the children of Jedaiah, of the house..." | Neh 7:39: *Jeshua-te beh panin Jedaiah suante* — "The priests: the children of Jedaiah, of the house..." | Ezr 2:40: *Hodaviah-te beh panin Jeshua suante* — "The Levites: the children of Jeshua and Kadmiel, o..." |
-| tawh | 26 | Num 2:34: *a beh tawh kizui-in a* — "And the children of Israel did according to all th..." | Jos 13:15: *amau' beh tawh kizui-in gamh* — "And Moses gave unto the tribe of the children of R..." | 1Ch 6:19: *amau' beh tawh kizui-in Levi* — "The sons of Merari; Mahli, and Mushi. And these ar..." |
+| tawh | 31 | Gen 25:17: *a behte tawh kivui khawm* — "And these are the years of the life of Ishmael, an..." | Lev 20:19: *nai behte tawh mawhna ahih* — "And thou shalt not uncover the nakedness of thy mo..." | Num 2:34: *a beh tawh kizui-in a* — "And the children of Israel did according to all th..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### lam
+**Gloss**: way
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 9 | Mar 15:38: *tung lam pan a taw* — "And the veil of the temple was rent in twain from ..." | Jos 19:14: *leilu lam pan, Hannathon lamah* — "and the border compasseth it on the north side to ..." | Jdg 1:36: *leilu lam pan kipan hi.* — "And the coast of the Amorites was from the going u..." |
+| panin | 45 | Luk 12:55: *Leitaw lam panin huih hong* — "And when ye see the south wind blow, ye say, There..." | Gen 10:19: *Sodom lam panin Gomorrah, Admah,* — "And the border of the Canaanites was from Sidon, a..." | Jos 19:34: *nisuahna lam panin Jordan-ah Judah* — "and then the coast turneth westward to Aznoth-tabo..." |
+| tawh | 2 | 1Ki 22:22: *'Bang lam tawh zol ding* — "And the LORD said unto him, Wherewith? And he said..." | 2Ch 18:20: *'Bang lam tawh zol ding* — "Then there came out a spirit, and stood before the..." | — |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -829,7 +793,7 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 2 | Deu 32:13: *kibang suang panin sathau a* — "He made him ride on the high places of the earth, ..." | Jdg 6:21: *A suang panin mei piangkhia-in,* — "Then the angel of the LORD put forth the end of th..." | — |
-| tawh | 46 | Luk 4:11: *nangawn suang tawh kitatin a* — "And in their hands they shall bear thee up, lest a..." | Exo 8:26: *in suang tawh kote hong* — "And Moses said, It is not meet so to do; for we sh..." | Lev 20:2: *in suang tawh denglum ding* — "Again, thou shalt say to the children of Israel, W..." |
+| tawh | 50 | Luk 4:11: *nangawn suang tawh kitatin a* — "And in their hands they shall bear thee up, lest a..." | Exo 8:26: *in suang tawh kote hong* — "And Moses said, It is not meet so to do; for we sh..." | Lev 20:2: *in suang tawh denglum ding* — "Again, thou shalt say to the children of Israel, W..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -858,18 +822,6 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### khuapi
-**Gloss**: city
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 2 | Jer 50:8: *Babylon khuapi pan taikhia un.* — "Remove out of the midst of Babylon, and go forth o..." | Eze 25:13: *Teman khuapi pan a kipan* — "therefore thus saith the Lord GOD ; I will also st..." | — |
-| panin | 35 | Mar 11:19: *ciangin khuapi panin Jesuh le* — "And when even was come, he went out of the city." | Gen 44:4: *hangin khuapi panin a nai* — "And when they were gone out of the city, and not y..." | Num 21:28: *Sihon' khuapi panin meikuang piangkhia* — "For there is a fire gone out of Heshbon, A flame f..." |
-| tawh | 10 | Joh 19:20: *Jerusalem khuapi tawh kinai ahih* — "This title then read many of the Jews: for the pla..." | Pro 25:28: *lo khuapi tawh kibang hi.* — "He that hath no rule over his own spirit Is like a..." | Isa 10:9: *Karkhemish khuapi tawh kibang hi* — "Is not Calno as Carchemish? is not Hamath as Arpad..." |
-| tawhin | 0 | — | — | — |
-
----
-
 #### omna
 **Gloss**: dwelling
 
@@ -888,8 +840,32 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
-| panin | 7 | Deu 26:15: *a siangtho panin hong ensuk* — "Look down from thy holy habitation, from heaven, a..." | Psa 3:4: *mual siangtho panin kei a* — "I cried unto the LORD with my voice, And he heard ..." | Jer 25:30: *a siangtho panin hong paukhia* — "Therefore prophesy thou against them all these wor..." |
+| panin | 8 | Lev 22:2: *a siangthote panin a kikep* — "Speak unto Aaron and to his sons, that they separa..." | Deu 26:15: *a siangtho panin hong ensuk* — "Look down from thy holy habitation, from heaven, a..." | Psa 3:4: *mual siangtho panin kei a* — "I cried unto the LORD with my voice, And he heard ..." |
 | tawh | 36 | Luk 1:15: *Kha Siangtho tawh kidim ding* — "For he shall be great in the sight of the Lord, an..." | Jer 31:21: *Nungak siangtho tawh a kibang* — "Set thee up waymarks, make thee high heaps: set th..." | Joh 3:5: *Kha Siangtho tawh a suahkik* — "Jesus answered, Verily, verily, I say unto thee, E..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### pa
+**Gloss**: male
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 0 | — | — | — |
+| tawh | 43 | Luk 2:48: *Na pa tawh lungkham mahmahin* — "And when they saw him, they were amazed: and his m..." | Gen 19:32: *i pa tawh suanlekhak i* — "come, let us make our father drink wine, and we wi..." | Exo 22:15: *nei pa tawh a omkhawm* — "But if the owner thereof be with it, he shall not ..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### gamtatna
+**Gloss**: kingdom
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 1 | Pro 21:16: *kilawm gamtatna pan a pialkhia* — "The man that wandereth out of the way of understan..." | — | — |
+| panin | 3 | Pro 13:19: *siat gamtatna panin mihaite pialkhia* — "The desire accomplished is sweet to the soul: But ..." | Zec 11:11: *ka gamtatna panin Topa' thugen* — "And it was broken in that day: and so the poor of ..." | Phi 4:9: *ka gamtatna panin thei-in na* — "Those things, which ye have both learned, and rece..." |
+| tawh | 38 | Luk 23:41: *i gamtatna tawh kizui-in thu* — "And we indeed justly; for we receive the due rewar..." | Deu 9:18: *sia gamtatna tawh note' khialhnate* — "And I fell down before the LORD , as at the first,..." | 2Sa 12:14: *bangin gamtatna tawh Topa thusim* — "Howbeit, because by this deed thou hast given grea..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -907,13 +883,25 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 ---
 
 #### kam
-**Gloss**: mouth/word
+**Gloss**: mouth
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 1 | Job 15:5: *na kam pan hong gingkhia* — "For thy mouth uttereth thine iniquity, And thou ch..." | — | — |
 | panin | 20 | Num 30:12: *a kam panin a gingkhia* — "But if her husband hath utterly made them void on ..." | Job 37:2: *Ama kam panin a hong* — "Hear attentively the noise of his voice, And the s..." | Psa 18:8: *Ama kam panin mei husia* — "There went up a smoke out of his nostrils, And fir..." |
 | tawh | 19 | Mat 21:16: *naupangte' kam tawh a cingtaak* — "and said unto him, Hearest thou what these say? An..." | Lev 5:4: *ama kam tawh a theih* — "Or if a soul swear, pronouncing with his lips to d..." | 1Ki 8:14: *a kam tawh a ciamsa* — "And the king turned his face about, and blessed al..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### thupiakna
+**Gloss**: commandment.NMLZ
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 6 | Deu 9:12: *ka thupiakna panin kiheikhia pak* — "And the LORD said unto me, Arise, get thee down qu..." | Psa 119:10: *Na thupiaknate panin kei hong* — "With my whole heart have I sought thee: O let me n..." | Deu 9:16: *hong thupiakna panin na kiheikhia* — "And I looked, and, behold, ye had sinned against t..." |
+| tawh | 34 | Mat 8:4: *Moses thupiakna tawh kizui-in biakna* — "And Jesus saith unto him, See thou tell no man; bu..." | Exo 24:12: *le thupiakna tawh, suangpek nang* — "And the LORD said unto Moses, Come up to me into t..." | Num 3:16: *Topa' thupiakna tawh kizui-in amaute* — "And Moses numbered them according to the word of t..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -926,18 +914,6 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | pan | 0 | — | — | — |
 | panin | 10 | Luk 3:7: *Pasian' hehna panin na suahtak* — "Then said he to the multitude that came forth to b..." | Deu 13:16: *ama hehna panin Topa kihei-in* — "And thou shalt gather all the spoil of it into the..." | Psa 7:6: *galte' hehna panin kei hong* — "Arise, O LORD , in thine anger, lift up thyself be..." |
 | tawh | 30 | Deu 19:6: *a hehna tawh phula nuampa* — "lest the avenger of the blood pursue the slayer, w..." | Job 9:5: *Ama hehna tawh mualte a* — "Which removeth the mountains, and they know not: W..." | Psa 2:5: *ciangin hehna tawh amau kiangah* — "Then shall he speak unto them in his wrath, And ve..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### gamtatna
-**Gloss**: kingdom
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 1 | Pro 21:16: *kilawm gamtatna pan a pialkhia* — "The man that wandereth out of the way of understan..." | — | — |
-| panin | 3 | Pro 13:19: *siat gamtatna panin mihaite pialkhia* — "The desire accomplished is sweet to the soul: But ..." | Zec 11:11: *ka gamtatna panin Topa' thugen* — "And it was broken in that day: and so the poor of ..." | Phi 4:9: *ka gamtatna panin thei-in na* — "Those things, which ye have both learned, and rece..." |
-| tawh | 35 | Luk 23:41: *i gamtatna tawh kizui-in thu* — "And we indeed justly; for we receive the due rewar..." | Deu 9:18: *sia gamtatna tawh note' khialhnate* — "And I fell down before the LORD , as at the first,..." | 2Sa 12:14: *bangin gamtatna tawh Topa thusim* — "Howbeit, because by this deed thou hast given grea..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -978,26 +954,26 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### thupiakna
-**Gloss**: commandment.NMLZ
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 4 | Deu 9:12: *ka thupiakna panin kiheikhia pak* — "And the LORD said unto me, Arise, get thee down qu..." | Psa 119:51: *nangma thupiakna panin kei ka* — "The proud have had me greatly in derision: Yet hav..." | Deu 9:16: *hong thupiakna panin na kiheikhia* — "And I looked, and, behold, ye had sinned against t..." |
-| tawh | 33 | Mat 8:4: *Moses thupiakna tawh kizui-in biakna* — "And Jesus saith unto him, See thou tell no man; bu..." | Exo 24:12: *le thupiakna tawh, suangpek nang* — "And the LORD said unto Moses, Come up to me into t..." | Num 3:16: *Topa' thupiakna tawh kizui-in amaute* — "And Moses numbered them according to the word of t..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### khuaneute
-**Gloss**: town-small-PL
+#### khuaneu
+**Gloss**: town-small
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 1 | Neh 12:28: *mite' khuaneute panin Levi mi* — "And the sons of the singers gathered themselves to..." | — | — |
 | tawh | 36 | Jos 13:23: *a khuaneute tawh Reuben mite'* — "And the border of the children of Reuben was Jorda..." | 2Ch 13:19: *a khuaneute tawh, Jeshanah a* — "And Abijah pursued after Jeroboam, and took cities..." | Jos 13:28: *a khuaneute tawh Gad mite'* — "This is the inheritance of the children of Gad aft..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### dang
+**Gloss**: other
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 3 | Joh 10:1: *mun dang panin kahin a* — "Verily, verily, I say unto you, He that entereth n..." | 2Sa 22:24: *kisuanna dangte panin hoihtakin ka* — "I was also upright before him, And have kept mysel..." | 1Ch 9:33: *nasep dangte panin pengin biakinn* — "And these are the singers, chief of the fathers of..." |
+| tawh | 32 | Mar 10:11: *numei dang tawh a teng* — "And he saith unto them, Whosoever shall put away h..." | Gen 25:6: *zi dang tawh a tate* — "But unto the sons of the concubines, which Abraham..." | Exo 22:27: *bang dang tawh lum ding* — "for that is his covering only, it is his raiment f..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1009,7 +985,19 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
-| tawh | 34 | Gen 6:14: *noah-taak sing tawh teembaw khat* — "Make thee an ark of gopher wood; rooms shalt thou ..." | Exo 25:10: *singkha sing tawh singkuang khat* — "And they shall make an ark of shittim wood: two cu..." | Lev 15:12: *a, sing tawh kibawl kuanglekeute* — "And the vessel of earth, that he toucheth which ha..." |
+| tawh | 35 | Gen 6:14: *noah-taak sing tawh teembaw khat* — "Make thee an ark of gopher wood; rooms shalt thou ..." | Exo 25:10: *singkha sing tawh singkuang khat* — "And they shall make an ark of shittim wood: two cu..." | Lev 15:12: *a, sing tawh kibawl kuanglekeute* — "And the vessel of earth, that he toucheth which ha..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### biakna
+**Gloss**: worship
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 8 | Exo 29:28: *amau' biakna panin Israel mite* — "and it shall be Aaron's and his sons' by a statute..." | Lev 2:9: *tawh biakna panin a phawkna* — "And the priest shall take from the meat offering a..." | 1Sa 9:25: *a biakna panin khuapi sungah* — "And when they were come down from the high place i..." |
+| tawh | 24 | Lev 7:7: *hanga biakna tawh kibang a,* — "As the sin offering is , so is the trespass offeri..." | Num 7:87: *an-a biaknate tawh; le khialhna* — "All the oxen for the burnt offering were twelve bu..." | Jdg 13:19: *an-a biakna tawh a keelno* — "So Manoah took a kid with a meat offering, and off..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1022,6 +1010,18 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
 | tawh | 32 | Gen 24:2: *ahi Topa tawh nang kong* — "And Abraham said unto his eldest servant of his ho..." | Exo 22:11: *kikalah Topa tawh kiciamna om* — "then shall an oath of the LORD be between them bot..." | Lev 25:50: *A topa tawh a omkhawm* — "And he shall reckon with him that bought him from ..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### puan
+**Gloss**: cloth
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 0 | — | — | — |
+| tawh | 32 | Luk 2:7: *nei-in, puan tawh tunin gan* — "And she brought forth her firstborn son, and wrapp..." | Gen 25:25: *nei puan tawh kibang hi.* — "And the first came out red, all over like an hairy..." | Exo 12:34: *kuangte puan tawh tunin a* — "And the people took their dough before it was leav..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1062,14 +1062,26 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### puan
-**Gloss**: cloth
+#### mual
+**Gloss**: mountain
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 2 | Exo 33:6: *Horeb Mual pan a kipanin* — "And the children of Israel stripped themselves of ..." | Psa 68:17: *Sinai mual pan siangtho munah* — "The chariots of God are twenty thousand, even thou..." | — |
+| panin | 25 | Mat 8:1: *Tua mual panin Jesuh hong* — "When he was come down from the mountain, great mul..." | Exo 19:3: *in mual panin amah sam* — "And Moses went up unto God, and the LORD called un..." | Num 10:33: *Topa' mual panin amaute dingkhia-in* — "And they departed from the mount of the LORD three..." |
+| tawh | 2 | Psa 36:6: *Pasian' mualte tawh kibang a,* — "Thy righteousness is like the great mountains; Thy..." | Psa 125:1: *Zion Mual tawh kibang hi.* — "They that trust in the LORD Shall be as mount Zion..." | — |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### zi
+**Gloss**: wife
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
-| tawh | 30 | Luk 2:7: *nei-in, puan tawh tunin gan* — "And she brought forth her firstborn son, and wrapp..." | Gen 25:25: *nei puan tawh kibang hi.* — "And the first came out red, all over like an hairy..." | Exo 12:34: *kuangte puan tawh tunin a* — "And the people took their dough before it was leav..." |
+| tawh | 29 | Mar 10:7: *a zi tawh kigawm ding* — "For this cause shall a man leave his father and mo..." | Gen 2:24: *a zi tawh kigawm a,* — "Therefore shall a man leave his father and his mot..." | Lev 18:20: *vengpa' zi tawh na lumkhawm* — "Moreover thou shalt not lie carnally with thy neig..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1082,6 +1094,18 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
 | tawh | 29 | Luk 10:21: *in lungdamna tawh Jesuh kidimsak* — "In that hour Jesus rejoiced in spirit, and said, I..." | Jdg 19:3: *ciangin lungdamna tawh a dawn* — "And her husband arose, and went after her, to spea..." | 2Sa 6:12: *khuapi-ah lungdamna tawh Pasian' Thuciamna* — "And it was told king David, saying, The LORD hath ..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### lasakna
+**Gloss**: take-CAUS-NMLZ
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 0 | — | — | — |
+| tawh | 29 | 1Sa 10:5: *laiza lasakna tawh laamin awng* — "After that thou shalt come to the hill of God, whe..." | 1Ch 15:28: *laiza lasaknate tawh nakpitakin la* — "Thus all Israel brought up the ark of the covenant..." | 2Ch 5:13: *adang lasaknate tawh, “ Topa'* — "it came even to pass, as the trumpeters and singer..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1110,14 +1134,14 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### zi
-**Gloss**: wife
+#### sum
+**Gloss**: money
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
-| panin | 0 | — | — | — |
-| tawh | 28 | Mat 15:19: *mi zi tawh mawhnopna, nungak* — "For out of the heart proceed evil thoughts, murder..." | Gen 2:24: *a zi tawh kigawm a,* — "Therefore shall a man leave his father and his mot..." | Lev 18:20: *vengpa' zi tawh na lumkhawm* — "Moreover thou shalt not lie carnally with thy neig..." |
+| panin | 2 | 2Ki 12:13: *kipaipih sumte panin kibawl lo* — "Howbeit there were not made for the house of the L..." | Ezr 6:4: *kumpi sum panin kipia ding* — "with three rows of great stones, and a row of new ..." | — |
+| tawh | 26 | Luk 15:13: *a sum tawh inn panin* — "And not many days after the younger son gathered a..." | Gen 17:13: *na sum tawh a kileipa* — "He that is born in thy house, and he that is bough..." | Exo 12:44: *hangin sum tawh a kilei* — "but every man's servant that is bought for money, ..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1158,18 +1182,6 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### biakna
-**Gloss**: worship
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 8 | Exo 29:28: *amau' biakna panin Israel mite* — "and it shall be Aaron's and his sons' by a statute..." | Lev 2:9: *tawh biakna panin a phawkna* — "And the priest shall take from the meat offering a..." | 1Sa 9:25: *a biakna panin khuapi sungah* — "And when they were come down from the high place i..." |
-| tawh | 19 | Lev 7:7: *hanga biakna tawh kibang a,* — "As the sin offering is , so is the trespass offeri..." | Jdg 13:19: *an-a biakna tawh a keelno* — "So Manoah took a kid with a meat offering, and off..." | Isa 19:21: *meihal biakna tawh bia ding* — "And the LORD shall be known to Egypt, and the Egyp..." |
-| tawhin | 0 | — | — | — |
-
----
-
 #### deihna
 **Gloss**: desire
 
@@ -1178,18 +1190,6 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
 | tawh | 27 | Mat 6:1: *ding deihna tawh a kilang* — "Take heed that ye do not your alms before men, to ..." | Ezr 7:18: *Pasian' deihna tawh kituakin hoih* — "And whatsoever shall seem good to thee, and to thy..." | Neh 6:9: *nading deihna tawh amaute in* — "For they all made us afraid, saying, Their hands s..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### mual
-**Gloss**: mountain
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 2 | Exo 33:6: *Horeb Mual pan a kipanin* — "And the children of Israel stripped themselves of ..." | Psa 68:17: *Sinai mual pan siangtho munah* — "The chariots of God are twenty thousand, even thou..." | — |
-| panin | 23 | Mat 8:1: *Tua mual panin Jesuh hong* — "When he was come down from the mountain, great mul..." | Exo 19:3: *in mual panin amah sam* — "And Moses went up unto God, and the LORD called un..." | Num 10:33: *Topa' mual panin amaute dingkhia-in* — "And they departed from the mount of the LORD three..." |
-| tawh | 1 | Psa 125:1: *Zion Mual tawh kibang hi.* — "They that trust in the LORD Shall be as mount Zion..." | — | — |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1206,26 +1206,26 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### sum
-**Gloss**: money
+#### minam
+**Gloss**: nation
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
-| panin | 1 | Ezr 6:4: *kumpi sum panin kipia ding* — "with three rows of great stones, and a row of new ..." | — | — |
-| tawh | 25 | Luk 15:13: *a sum tawh inn panin* — "And not many days after the younger son gathered a..." | Gen 17:13: *na sum tawh a kileipa* — "He that is born in thy house, and he that is bough..." | Exo 12:44: *hangin sum tawh a kilei* — "but every man's servant that is bought for money, ..." |
+| panin | 16 | Num 13:3: *Reuben minam panin Zakkur' tapa* — "And Moses by the commandment of the LORD sent them..." | Jos 21:17: *Benjamin minam panin Gibeon a* — "And out of the tribe of Benjamin, Gibeon with her ..." | Jdg 4:6: *Zebulun minam panin mi tul* — "And she sent and called Barak the son of Abinoam o..." |
+| tawh | 10 | Jos 11:23: *amau minam tawh kizui-in a* — "So Joshua took the whole land, according to all th..." | 1Ch 2:55: *Rekhab minamte tawh a kiteng* — "And the families of the scribes which dwelt at Jab..." | Jer 31:31: *Judah minamte tawh thuciamna thak* — "Behold, the days come, saith the LORD , that I wil..." |
 | tawhin | 0 | — | — | — |
 
 ---
 
-#### pa
-**Gloss**: male
+#### thukham
+**Gloss**: law
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
-| panin | 0 | — | — | — |
-| tawh | 26 | Luk 2:48: *Na pa tawh lungkham mahmahin* — "And when they saw him, they were amazed: and his m..." | Gen 19:32: *i pa tawh suanlekhak i* — "come, let us make our father drink wine, and we wi..." | Exo 22:15: *nei pa tawh a omkhawm* — "But if the owner thereof be with it, he shall not ..." |
+| panin | 5 | 2Sa 22:23: *ama thukhamte panin kei ka* — "For all his judgments were before me: And as for h..." | Mal 3:7: *ka thukhamte panin note na* — "Even from the days of your fathers ye are gone awa..." | Rom 7:2: *lencip thukham panin a suakta* — "For the woman which hath an husband is bound by th..." |
+| tawh | 20 | Luk 2:39: *Topa' Thukham tawh kizui-in hih* — "And when they had performed all things according t..." | 2Ki 23:25: *Moses thukham tawh kizui-in a* — "And like unto him was there no king before him, th..." | 2Ch 15:3: *lo, thukham tawh om lo* — "Now for a long season Israel hath been without the..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1237,7 +1237,19 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 2 | Deu 21:8: *hanga mawhna pan hong maisak* — "Be merciful, O LORD , unto thy people Israel, whom..." | 1Sa 26:9: *peuhpeuh mawhna pan peng ding* — "And David said to Abishai, Destroy him not: for wh..." | — |
 | panin | 8 | Psa 51:2: *ka mawhna panin kei hong* — "Wash me throughly from mine iniquity, And cleanse ..." | Isa 59:20: *a, mawhna panin a kiheikhia* — "And the Redeemer shall come to Zion, and unto them..." | 1Co 6:11: *hangin mawhna panin a hong* — "And such were some of you: but ye are washed, but ..." |
-| tawh | 13 | Joh 9:41: *le-uhcin mawhna tawh na kipelh* — "Jesus said unto them, If ye were blind, ye should ..." | Lev 19:29: *khempeuh, mawhna tawh a kidim* — "Do not prostitute thy daughter, to cause her to be..." | Ezr 9:15: *leh mawhna tawh nangma mai-ah* — "O LORD God of Israel, thou art righteous: for we r..." |
+| tawh | 14 | Joh 9:41: *le-uhcin mawhna tawh na kipelh* — "Jesus said unto them, If ye were blind, ye should ..." | Lev 19:29: *khempeuh, mawhna tawh a kidim* — "Do not prostitute thy daughter, to cause her to be..." | Ezr 9:15: *leh mawhna tawh nangma mai-ah* — "O LORD God of Israel, thou art righteous: for we r..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### lianpi
+**Gloss**: army
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 2 | 2Sa 20:12: *lam lianpi panin gamlakah Amasa* — "And Amasa wallowed in blood in the midst of the hi..." | 2Sa 20:13: *Lam lianpi panin amah a* — "When he was removed out of the highway, all the pe..." | — |
+| tawh | 21 | Exo 7:4: *nasepna lianpite tawh Egypt gam* — "But Pharaoh shall not hearken unto you, that I may..." | Deu 5:22: *awging lianpi tawh mualtung a* — "These words the LORD spake unto all your assembly ..." | 1Sa 7:10: *aw lianpi tawh tua ni-in* — "And as Samuel was offering up the burnt offering, ..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1248,7 +1260,7 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
-| panin | 17 | Mat 24:1: *Biakinn panin Jesuh a* — "And Jesus went out, and departed from the temple: ..." | 2Sa 22:7: *A biakinn panin amah in* — "In my distress I called upon the LORD , And cried ..." | 2Ki 11:19: *Topa' biakinn panin kumpipa paipihsuk* — "And he took the rulers over hundreds, and the capt..." |
+| panin | 17 | Mar 13:1: *Biakinn panin Jesuh a* — "And as he went out of the temple, one of his disci..." | 2Sa 22:7: *A biakinn panin amah in* — "In my distress I called upon the LORD , And cried ..." | 2Ki 11:19: *Topa' biakinn panin kumpipa paipihsuk* — "And he took the rulers over hundreds, and the capt..." |
 | tawh | 6 | Mat 23:16: *khat biakinn tawh a kiciam* — "Woe unto you, ye blind guides, which say, Whosoeve..." | 1Ki 6:10: *a biakinn tawh kizom hi.* — "And then he built chambers against all the house, ..." | Ezr 6:3: *Pasian' biakinn tawh kisai-in kumpipa* — "in the first year of Cyrus the king the same Cyrus..." |
 | tawhin | 0 | — | — | — |
 
@@ -1266,18 +1278,6 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### thukham
-**Gloss**: law
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 3 | Rom 7:2: *lencip thukham panin a suakta* — "For the woman which hath an husband is bound by th..." | Rom 7:6: *lencip thukham panin Pasian in* — "But now we are delivered from the law, that being ..." | Rom 8:2: *piangsak thukham panin kei hong* — "For the law of the Spirit of life in Christ Jesus ..." |
-| tawh | 20 | Luk 2:39: *Topa' Thukham tawh kizui-in hih* — "And when they had performed all things according t..." | 2Ki 23:25: *Moses thukham tawh kizui-in a* — "And like unto him was there no king before him, th..." | 2Ch 15:3: *lo, thukham tawh om lo* — "Now for a long season Israel hath been without the..." |
-| tawhin | 0 | — | — | — |
-
----
-
 #### pilna
 **Gloss**: learning
 
@@ -1286,6 +1286,18 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | pan | 0 | — | — | — |
 | panin | 0 | — | — | — |
 | tawh | 23 | Luk 2:47: *in pilna tawh thu genin* — "And all that heard him were astonished at his unde..." | Gen 41:16: *“Kei' pilna tawh mang a* — "And Joseph answered Pharaoh, saying, It is not in ..." | Deu 34:9: *lungsim pilna tawh a kidim* — "And Joshua the son of Nun was full of the spirit o..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### kha
+**Gloss**: spirit
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 0 | — | — | — |
+| tawh | 23 | Luk 13:34: *a kha tawh a note* — "O Jerusalem, Jerusalem, which killest the prophets..." | Exo 19:4: *a kha tawh a note* — "ye have seen what I did unto the Egyptians, and ho..." | Deu 32:11: *a kha tawh a note* — "As an eagle stirreth up her nest, Fluttereth over ..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1302,14 +1314,26 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### lianpi
-**Gloss**: army
+#### van
+**Gloss**: sky
 
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
-| panin | 2 | 2Sa 20:12: *lam lianpi panin gamlakah Amasa* — "And Amasa wallowed in blood in the midst of the hi..." | 2Sa 20:13: *Lam lianpi panin amah a* — "When he was removed out of the highway, all the pe..." | — |
-| tawh | 20 | Deu 5:22: *awging lianpi tawh mualtung a* — "These words the LORD spake unto all your assembly ..." | 1Sa 7:10: *aw lianpi tawh tua ni-in* — "And as Samuel was offering up the burnt offering, ..." | 1Ch 22:14: *gimna lianpi tawh Topa' biakinn* — "Now, behold, in my trouble I have prepared for the..." |
+| panin | 18 | Luk 17:29: *ni-in van panin kaat leh* — "but the same day that Lot went out of Sodom it rai..." | Lev 26:19: *susia-in, van panin guah hong* — "And I will break the pride of your power; and I wi..." | 2Sa 21:10: *kipan van panin amau' luanghawmte* — "And Rizpah the daughter of Aiah took sackcloth, an..." |
+| tawh | 4 | Exo 23:5: *a van tawh a puk* — "If thou see the ass of him that hateth thee lying ..." | Jer 5:27: *uh vante tawh a inn* — "As a cage is full of birds, so are their houses fu..." | Amo 3:10: *uh vante tawh a inn* — "For they know not to do right, saith the LORD , wh..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### innkuan
+**Gloss**: household
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 8 | Jos 22:14: *minam innkuan panin khat ciat,* — "and with him ten princes, of each chief house a pr..." | 1Sa 20:15: *Keima innkuan panin na thumanna* — "but also thou shalt not cut off thy kindness from ..." | 2Sa 3:8: *Saul' innkuan panin kumpi gam* — "Then was Abner very wroth for the words of Ish-bos..." |
+| tawh | 14 | Gen 50:22: *pa' innkuante tawh Egypt-ah teng* — "And Joseph dwelt in Egypt, he, and his father's ho..." | Exo 6:17: *Amau' innkuan tawh kizui-in Libni* — "The sons of Gershon; Libni, and Shimi, according t..." | Num 27:11: *ama innkuan tawh a kinai* — "And if his father have no brethren, then ye shall ..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1338,71 +1362,35 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 ---
 
-#### kumpipa
-**Gloss**: king
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 0 | — | — | — |
-| tawh | 22 | Joh 19:12: *uk Kumpipa tawh a kipawl* — "And from thenceforth Pilate sought to release him:..." | 1Sa 20:5: *a, kumpipa tawh sabuai-ah pel* — "And David said unto Jonathan, Behold, to morrow is..." | 2Sa 15:19: *inla, kumpipa tawh om in;* — "Then said the king to Ittai the Gittite, Wherefore..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### innkuan
-**Gloss**: household
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 8 | Jos 22:14: *minam innkuan panin khat ciat,* — "and with him ten princes, of each chief house a pr..." | 1Sa 20:15: *Keima innkuan panin na thumanna* — "but also thou shalt not cut off thy kindness from ..." | 2Sa 3:8: *Saul' innkuan panin kumpi gam* — "Then was Abner very wroth for the words of Ish-bos..." |
-| tawh | 13 | Exo 6:17: *Amau' innkuan tawh kizui-in Libni* — "The sons of Gershon; Libni, and Shimi, according t..." | Num 27:11: *ama innkuan tawh a kinai* — "And if his father have no brethren, then ye shall ..." | Jos 13:31: *amau' innkuan tawh kizui-in Makhir* — "and half Gilead, and Ashtaroth, and Edrei, cities ..." |
-| tawhin | 0 | — | — | — |
-
----
-
-#### muhna
-**Gloss**: see-NMLZ
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 19 | Luk 12:21: *Pasian' muhna panin mihau hi* — "So is he that layeth up treasure for himself, and ..." | Jos 23:5: *note' muhna panin hawlkhia ding* — "And the LORD your God, he shall expel them from be..." | Jdg 6:21: *ama muhna panin Topa' vantungmi* — "Then the angel of the LORD put forth the end of th..." |
-| tawh | 2 | Psa 17:15: *mel muhna tawh ka lungkim* — "As for me, I will behold thy face in righteousness..." | Isa 11:3: *bek muhna tawh thu khen* — "and shall make him of quick understanding in the f..." | — |
-| tawhin | 0 | — | — | — |
-
----
-
-#### phazah
-**Gloss**: number
-
-| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
-|--------------|-------|----------|----------|----------|
-| pan | 0 | — | — | — |
-| panin | 0 | — | — | — |
-| tawh | 21 | Exo 12:3: *innkuan phazah tawh kituakin amaute* — "Speak ye unto all the congregation of Israel, sayi..." | Lev 25:15: *kum phazah tawh kituakin note* — "according to the number of years after the jubile ..." | Num 14:34: *ni phazah tawh kizui-in, ni* — "After the number of the days in which ye searched ..." |
-| tawhin | 0 | — | — | — |
-
----
-
 ## Proper Nouns
 
 Names of people, places, and other entities.
 
-### Proper Nouns (4 items)
+### Proper Nouns (5 items)
 
-**Total postposition instances**: 188
+**Total postposition instances**: 294
 
 | Postposition | Count | % of category |
 |--------------|-------|---------------|
-| pan | 2 | 1.1% |
-| panin | 85 | 45.2% |
-| tawh | 101 | 53.7% |
+| pan | 2 | 0.7% |
+| panin | 85 | 28.9% |
+| tawh | 207 | 70.4% |
 | tawhin | 0 | 0.0% |
 
-**Observation**: Proper Nouns most frequently occur with *tawh* (53.7%).
+**Observation**: Proper Nouns most frequently occur with *tawh* (70.4%).
 Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these items commonly express accompaniment.
+
+#### no
+**Gloss**: young
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 0 | — | — | — |
+| tawh | 105 | Luk 22:15: *thuakma-in note tawh hih Paisan* — "And he said unto them, With desire I have desired ..." | Gen 9:10: *note tawh a om* — "and with every living creature that is with you, o..." | Exo 10:10: *leh note tawh Topa hong* — "And he said unto them, Let the LORD be so with you..." |
+| tawhin | 0 | — | — | — |
+
+---
 
 #### egypt
 **Gloss**: Egypt
@@ -1411,7 +1399,7 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 64 | Gen 13:1: *ciangin Egypt panin Abram, a* — "And Abram went up out of Egypt, he, and his wife, ..." | Exo 3:10: *in Egypt panin ka mi* — "Come now therefore, and I will send thee unto Phar..." | Num 11:20: *hangin Egypt panin paikhia ihi* — "but even a whole month, until it come out at your ..." |
-| tawh | 1 | Isa 19:1: *Egypt tawh kisai thu* — "The burden of Egypt. Behold, the LORD rideth upon ..." | — | — |
+| tawh | 2 | Isa 19:1: *Egypt tawh kisai thu* — "The burden of Egypt. Behold, the LORD rideth upon ..." | Hos 12:1: *a, Egypt-te tawh kizopna nei* — "Ephraim feedeth on wind, and followeth after the e..." | — |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1446,7 +1434,7 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 2 | Isa 37:32: *omlaite, Jerusalem pan ahi zongin* — "for out of Jerusalem shall go forth a remnant, and..." | Act 1:12: *ciangin Jerusalem pan tai lang* — "Then returned they unto Jerusalem from the mount c..." | — |
-| panin | 21 | Joh 12:13: *dingin Jerusalem panin mihonpi paikhia-in* — "took branches of palm trees, and went forth to mee..." | 2Sa 5:5: *a, Jerusalem panin kum sawmthum* — "In Hebron he reigned over Judah seven years and si..." | 1Ki 2:41: *Jerusalem panin Gath-ah Shimei* — "And it was told Solomon that Shimei had gone from ..." |
+| panin | 21 | Mar 7:1: *laitakin Jerusalem panin a hong* — "Then came together unto him the Pharisees, and cer..." | 2Sa 5:5: *a, Jerusalem panin kum sawmthum* — "In Hebron he reigned over Judah seven years and si..." | 1Ki 2:41: *Jerusalem panin Gath-ah Shimei* — "And it was told Solomon that Shimei had gone from ..." |
 | tawh | 5 | Ezr 4:8: *tungah Jerusalem tawh kisai thu* — "Rehum the chancellor and Shimshai the scribe wrote..." | Neh 2:20: *ahihleh Jerusalem tawh kisai-in thu* — "Then answered I them, and said unto them, The God ..." | Isa 2:1: *le Jerusalem tawh kisai thu* — "The word that Isaiah the son of Amoz saw concernin..." |
 | tawhin | 0 | — | — | — |
 
@@ -1456,18 +1444,18 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 
 Words not yet classified (may need dictionary additions).
 
-### Uncategorized (2 items)
+### Uncategorized (3 items)
 
-**Total postposition instances**: 51
+**Total postposition instances**: 100
 
 | Postposition | Count | % of category |
 |--------------|-------|---------------|
 | pan | 0 | 0.0% |
-| panin | 4 | 7.8% |
-| tawh | 47 | 92.2% |
+| panin | 6 | 6.0% |
+| tawh | 94 | 94.0% |
 | tawhin | 0 | 0.0% |
 
-**Observation**: Uncategorized most frequently occur with *tawh* (92.2%).
+**Observation**: Uncategorized most frequently occur with *tawh* (94.0%).
 Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these items commonly express accompaniment.
 
 #### hoih
@@ -1477,7 +1465,19 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
 | panin | 4 | Jos 23:13: *leitang hoih panin na sih* — "know for a certainty that the LORD your God will n..." | 1Ki 14:15: *gam hoih panin Israel zunglot* — "For the LORD shall smite Israel, as a reed is shak..." | Jos 23:14: *leitang hoih panin amah in* — "And, behold, this day I am going the way of all th..." |
-| tawh | 26 | Exo 26:1: *khau hoih tawh a kigan* — "Moreover thou shalt make the tabernacle with ten c..." | Lev 27:10: *a hoih tawh ahi zongin,* — "He shall not alter it, nor change it, a good for a..." | 1Sa 24:19: *a hoih tawh nang thaman* — "For if a man find his enemy, will he let him go we..." |
+| tawh | 41 | Exo 26:1: *khau hoih tawh a kigan* — "Moreover thou shalt make the tabernacle with ten c..." | Lev 27:10: *a hoih tawh ahi zongin,* — "He shall not alter it, nor change it, a good for a..." | 1Sa 24:19: *a hoih tawh nang thaman* — "For if a man find his enemy, will he let him go we..." |
+| tawhin | 0 | — | — | — |
+
+---
+
+#### nih
+**Gloss**: two
+
+| Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
+|--------------|-------|----------|----------|----------|
+| pan | 0 | — | — | — |
+| panin | 0 | — | — | — |
+| tawh | 30 | Luk 9:30: *mihing nih tawh a kiho-in* — "And, behold, there talked with him two men, which ..." | Gen 19:30: *tanu nihte tawh mualtungah a* — "And Lot went up out of Zoar, and dwelt in the moun..." | Exo 18:6: *tapa nihte tawh nang kiangah* — "and he said unto Moses, I thy father in law Jethro..." |
 | tawhin | 0 | — | — | — |
 
 ---
@@ -1488,8 +1488,8 @@ Comitative (*tawh*) dominates over ablative (*pan/panin*), suggesting these item
 | Postposition | Count | Sample 1 | Sample 2 | Sample 3 |
 |--------------|-------|----------|----------|----------|
 | pan | 0 | — | — | — |
-| panin | 0 | — | — | — |
-| tawh | 21 | Num 14:19: *itna kip tawh a kizui* — "Pardon, I beseech thee, the iniquity of this peopl..." | 2Ch 8:14: *ngeina kip tawh kizui-in, nasep* — "And he appointed, according to the order of David ..." | Psa 25:7: *itna kip tawh kizui-in kei* — "Remember not the sins of my youth, nor my transgre..." |
+| panin | 2 | Psa 119:102: *ngeina kipte panin kei ka* — "I have not departed From thy judgments: For thou h..." | Psa 119:118: *ngeina kipte panin a pialkhiate* — "Thou hast trodden down all them that err from thy ..." | — |
+| tawh | 23 | Num 14:19: *itna kip tawh a kizui* — "Pardon, I beseech thee, the iniquity of this peopl..." | 2Ch 8:14: *ngeina kip tawh kizui-in, nasep* — "And he appointed, according to the order of David ..." | Psa 25:7: *itna kip tawh kizui-in kei* — "Remember not the sins of my youth, nor my transgre..." |
 | tawhin | 0 | — | — | — |
 
 ---

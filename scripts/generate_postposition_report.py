@@ -45,7 +45,7 @@ BOOK_ABBREVS = {
 # Additional glosses for common words not in NOUN_STEMS
 EXTRA_GLOSSES = {
     # Pronouns and demonstratives
-    'ki': 'REFL/RECIP',
+    'ki': 'REFL',
     'uh': '2/3PL',
     'amah': '3SG.EMPH',
     'amaute': '3PL',
@@ -61,12 +61,12 @@ EXTRA_GLOSSES = {
     'an': '3PL.POSS',
     'min': 'name',
     # Common nouns
-    'thu': 'word/matter',
+    'thu': 'word',
     'namsau': 'nation',
     'mei': 'fire',
-    'lai': 'time/place',
+    'lai': 'time',
     'khua': 'village',
-    'gamte': 'lands',
+    # gamte removed - should be parsed as gam-te (land-PL)
     'khut': 'hand',
     'mah': 'self',
     'sihna': 'death',
@@ -81,14 +81,14 @@ EXTRA_GLOSSES = {
     'omna': 'dwelling',
     'siangtho': 'holy',
     'sathau': 'fat',
-    'kam': 'mouth/word',
+    'kam': 'mouth',
     'hehna': 'anger',
     'numei': 'woman',
     'khutsung': 'hand.inside',
     'vantung': 'heaven',
     'pasian': 'God',
     'leenggahzu': 'grape.wine',
-    'thei': 'able/fruit',
+    'thei': 'fruit',
     'tuipi': 'sea',
     'biakna': 'worship',
     # Proper nouns
@@ -306,17 +306,45 @@ def find_postposition_contexts(corpus_file: str) -> Dict[str, List[Tuple[str, st
     return results
 
 
+def get_lemma(word: str) -> str:
+    """
+    Get the lemma (base form) of a word.
+    Strips plural -te suffix and returns stem.
+    """
+    word_lower = word.lower()
+    
+    # Check if it's a plural form ending in -te
+    if word_lower.endswith('te') and len(word_lower) > 3:
+        stem = word_lower[:-2]
+        # Verify the stem exists in NOUN_STEMS or can be analyzed
+        if stem in NOUN_STEMS:
+            return stem
+        # Check for plurals like 'mite' -> 'mi', 'tate' -> 'ta'
+        from analyze_morphemes import analyze_word
+        result = analyze_word(word_lower)
+        if result and result[1] and '-PL' in result[1]:
+            # Extract stem from segmentation
+            seg = result[0]
+            if '-te' in seg:
+                return seg.split('-te')[0].replace('-', '')
+    
+    return word_lower
+
+
 def analyze_by_noun(contexts: Dict[str, List]) -> Dict[str, Dict[str, List]]:
     """
     Reorganize contexts by the noun that precedes the postposition.
+    Lemmatizes plurals to group them with their singular forms.
     
-    Returns: {noun: {postposition: [(verse_id, context, form_type, full_word), ...]}}
+    Returns: {noun_lemma: {postposition: [(verse_id, context, form_type, full_word, surface_form), ...]}}
     """
     by_noun = defaultdict(lambda: defaultdict(list))
     
     for postp, examples in contexts.items():
         for noun, verse_id, context, form_type, full_word in examples:
-            by_noun[noun.lower()][postp].append((verse_id, context, form_type, full_word))
+            lemma = get_lemma(noun)
+            surface_form = noun.lower()
+            by_noun[lemma][postp].append((verse_id, context, form_type, full_word, surface_form))
     
     return dict(by_noun)
 
@@ -509,7 +537,14 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             for postp in ['pan', 'panin', 'tawh', 'tawhin']:
                 examples_for_postp = by_noun[noun].get(postp, [])
                 count = len(examples_for_postp)
-                examples_tuple = [(verse_id, context, form_type, full_word) for verse_id, context, form_type, full_word in examples_for_postp]
+                # Handle both old (4-tuple) and new (5-tuple) formats
+                examples_tuple = []
+                for ex in examples_for_postp:
+                    if len(ex) == 5:
+                        verse_id, context, form_type, full_word, surface_form = ex
+                    else:
+                        verse_id, context, form_type, full_word = ex
+                    examples_tuple.append((verse_id, context, form_type, full_word))
                 diverse = select_diverse_samples(examples_tuple, 3, verse_idx=0)
                 sample_cols = []
                 for j in range(3):
