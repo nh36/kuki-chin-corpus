@@ -8797,6 +8797,12 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tawpna-ah': ('tawpna-ah', 'end.NMLZ-LOC'),  # end/latter
         'meikhukah': ('meikhuk-ah', 'furnace-LOC'),  # 9x - "furnace, smelting pot"
         
+        # === Relator Noun + ERG (parallel to +LOC forms) ===
+        'sungin': ('sung-in', 'inside-ERG'),
+        'tungin': ('tung-in', 'on-ERG'),
+        'kiangin': ('kiang-in', 'beside-ERG'),
+        'lakin': ('lak-in', 'among-ERG'),
+        
         # === Disambiguation compounds (stem + -ah where stem ends in vowel) ===
         'kimkotah': ('kimkot-ah', 'round-LOC'),      # 119x - not kimkota + h
         'dongah': ('dong-ah', 'until-LOC'),          # 52x - not donga + h  
