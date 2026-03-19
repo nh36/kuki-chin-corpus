@@ -828,17 +828,82 @@ for token, expected in analyzer_tests:
 print('\nAll upstream analyzer tests passed')
 ```
 
-### Note on Report-Level Overrides
+### Note on Contextual Overrides
 
-The following are context-aware overrides in the report generators only,
-NOT changes to the analyzer itself:
+The following requires context-aware handling in report generators:
 
-| Word | Analyzer | Report Override | Context |
-|------|----------|-----------------|---------|
-| pan | begin | ABL | When used as postposition "from" |
-| kha | NEG.PERF | month | When followed by numbers |
+| Word | Analyzer Default | Context Override | Context |
+|------|------------------|------------------|---------|
+| kha | NEG.PERF | month | When followed by numbers (kha khat = month one) |
 
-These overrides exist because the analyzer returns default glosses,
-but in postposition/relator reports the grammatical function is clear.
+Note: `pan` was fixed upstream (2026-03-19) - analyzer now correctly returns ABL.
+
+**Added**: 2026-03-19
+**Updated**: 2026-03-19 (pan moved to upstream)
+
+---
+
+## 22. pan/langpan Disambiguation (March 19, 2026)
+
+Upstream analyzer fixes for `pan` polysemy.
+
+### The Issue
+
+`pan` has multiple meanings:
+1. **ABL** (postposition "from") - 603x standalone
+2. **plead** (verb) - only in compounds: panna, panzui
+3. **begin** (verb) - only with ki-: kipan (REFL-begin)
+
+The analyzer was returning `begin` for standalone `pan`, but 99%+ of standalone uses are ABL.
+
+### Fixed in Analyzer
+
+| Word | Old | New | Rationale |
+|------|-----|-----|-----------|
+| pan | begin | ABL | Standalone = postposition (603x) |
+| panin | pan-in (begin-ERG) | pan-in (ABL-ERG) | Double case marking |
+| kipan | (unchanged) | ki-pan (REFL-begin) | Verb "begin" with REFL |
+| panna | (unchanged) | pan-na (plead-NMLZ) | Verb "plead" + NMLZ |
+| langpan | side-from | lang-pan (advocate) | Compound = "plead for" (88x) |
+| langpang | side-near | langpang (against) | Different word! (39x) |
+| langpangin | lang-pang-in | langpang-in (against-ERG) | langpang + ERG |
+
+### Regression Test
+
+```python
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+
+pan_tests = [
+    # pan standalone = ABL (postposition "from")
+    ('pan', 'pan', 'ABL'),
+    
+    # panin = double case marking ABL-ERG
+    ('panin', 'pan-in', 'ABL-ERG'),
+    
+    # kipan = verb "begin" (only with REFL)
+    ('kipan', 'ki-pan', 'REFL-begin'),
+    
+    # panna = plead-NMLZ (verb + nominalizer)
+    ('panna', 'pan-na', 'plead-NMLZ'),
+    
+    # langpan = advocate (compound, not "side-from")
+    ('langpan', 'lang-pan', 'advocate'),
+    
+    # langpang = against (different word from langpan!)
+    ('langpang', 'langpang', 'against'),
+    
+    # langpangin = against-ERG
+    ('langpangin', 'langpang-in', 'against-ERG'),
+]
+
+for token, exp_seg, exp_gloss in pan_tests:
+    seg, gloss = analyze_word(token)
+    assert seg == exp_seg, f'{token}: seg={seg}, expected {exp_seg}'
+    assert gloss == exp_gloss, f'{token}: gloss={gloss}, expected {exp_gloss}'
+    print(f'✓ {token}: {seg} ({gloss})')
+
+print('\nAll pan disambiguation tests passed')
+```
 
 **Added**: 2026-03-19

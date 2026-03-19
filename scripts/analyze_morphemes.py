@@ -9034,8 +9034,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # === Number Compounds ===
         'sawmahkhat': ('sawm-ah-khat', 'ten-LOC-one'),  # 47x - "tithe/tenth"
         
-        # === Postposition + LOC ===
-        'panin': ('pan-in', 'ABL-ERG'),  # "from" (double case marking)
+        # === Case Markers ===
+        'pan': ('pan', 'ABL'),            # ablative "from" - 603x standalone
+                                          # Note: pan as verb "plead" only in compounds (langpan, panna)
+        'panin': ('pan-in', 'ABL-ERG'),   # "from" (double case marking)
         'sangin': ('sang-in', 'high-ERG'),  # "than"
         'tawh': ('tawh', 'COM'),  # "with"
         
@@ -9075,7 +9077,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         
         # === Additional common forms ===
         'an': ('an', '3PL.POSS'),  # 3rd plural possessive
-        'pan': ('pan', 'begin'),
+        # pan removed - ABL postposition (not 'begin'); verb only in kipan (REFL-begin)
         'leitang': ('lei-tang', 'land-earth'),
         'thute': ('thu-te', 'word-PL'),
         'tu-in': ('tu-in', 'now-ERG'),
@@ -9564,8 +9566,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'dawng': ('dawng', 'receive'),                    # 387 - "get, receive, fetch"
         'dawngin': ('dawng-in', 'receive-ERG'),          # 143 - "getting, receiving"
         'langkhatah': ('lang-khat-ah', 'side-one-LOC'),      # 88 - "against" (at one side)
-        'langpangin': ('lang-pang-in', 'side-near-ERG'),     # 63 - "against" (near one side)
-        'langpang': ('lang-pang', 'side-near'),              # 39 - "against, side"
+        'langpangin': ('langpang-in', 'against-ERG'),     # 63 - "against"
+        'langpang': ('langpang', 'against'),              # 39 - "against, oppose"
         'langkhat': ('lang-khat', 'side-one'),               # 35 - "one side"
         'singlamteh': ('sing-lam-teh', 'wood-cross'),        # 65 - "cross" (the cross)
         'singkuang': ('sing-kuang', 'wood-box'),             # 45 - "ark" (wooden box)
@@ -14910,7 +14912,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nopnate': ('nop-na-te', 'willing-NMLZ-PL'),                  # 2x - willingnesses
         'kivuk': ('ki-vuk', 'REFL-wash'),                             # 2x - wash self
         'taai': ('taai', 'flee'),                                     # 2x - flee
-        'langpan': ('lang-pan', 'side-from'),                         # 2x - from side
+        'langpan': ('lang-pan', 'advocate'),                         # 88x - plead.for, support
+        # Etymology: lang 'side' + pan 'plead' → 'plead on behalf of, advocate'
         "tagahte'": ('ta-gah-te', 'child-fruit-PL.POSS'),             # 2x - offspring's
         'neihsunte': ('neih-sun-te', 'have-day-PL'),                  # 2x - daily having
         'gawi-in': ('gawi-in', 'hook-ERG'),                           # 2x - with hook

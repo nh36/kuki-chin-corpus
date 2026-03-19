@@ -143,10 +143,8 @@ def gloss_context(context: str) -> str:
     
     # Postposition-specific overrides for this report context
     POSTP_GLOSSES = {
-        'pan': 'ABL',           # from (ablative), not 'begin'
-        'panin': 'ABL-ERG',     # from (as agent)
-        'tawh': 'COM',          # with (comitative)
-        'tawhin': 'COM-ERG',    # with (as instrument)
+        # Note: pan/panin/tawh/tawhin now handled correctly by analyzer
+        # Only kha needs context-aware override (month when followed by number)
         'kha': 'month',         # Override NEG.PERF when likely 'month'
     }
     

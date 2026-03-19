@@ -2,8 +2,8 @@
 
 ## Overview
 
-Relator nouns (also called "spatial postpositions" or "relational nouns")
-are a class of nouns with spatial meanings that function like postpositions.
+Relator nouns (also called "spatial poWritten to /Users/nathanhill/Code/Kuki-Chin/docs/paradigms/relator_nouns.md
+gs that function like postpositions.
 
 **Key properties:**
 1. They take a **genitive-marked possessor**: *mite' sungah* "among the people"
@@ -62,9 +62,9 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | tung | 1,180 | Mat 2:1: *Jerusalem-ah hong tung uh a,* (JERUSALEM-LOC 3→1 on 2/3PL 3SG) — "Now when Jesus was born in Bethlehem of Judæa in t..." | Gen 1:2: *hi. Tuipi tung tengah khua* (DECL water-big on dwell-LOC town) — "And the earth was without form, and void; and dark..." | Exo 2:15: *gam a tung hi. Ni* (land 3SG on DECL day) — "Now when Pharaoh heard this thing, he sought to sl..." |
-| Locative | tungah | 6,072 | Mat 3:16: *kumsukin ama tungah a khawl* (cloud-pillar-INST 3SG.POSS on-LOC 3SG rest) — "And Jesus, when he was baptized, went up straightw..." | Gen 1:2: *tua tui tungah Pasian' Kha* (that water on-LOC god.POSS NEG.PERF) — "And the earth was without form, and void; and dark..." | Exo 1:10: *ni. Eite tungah gal hong* (day 1PL.PRO on-LOC enemy 3→1) — "come on, let us deal wisely with them; lest they m..." |
-| Ergative | tungin | 84 | Mat 10:11: *tuate' inn-ah tungin, tua khua* (DIST-PL.POSS house-LOC arrive-ERG that town) — "And into whatsoever city or town ye shall enter, e..." | Gen 19:27: *munah zingsang tungin Abraham va* (place-LOC morning-high arrive-ERG ABRAHAM go.and) — "And Abraham gat up early in the morning to the pla..." | Exo 32:19: *nai-ah amah tungin bawngno le* (near-LOC 3SG.PRO arrive-ERG calf and) — "And it came to pass, as soon as he came nigh unto ..." |
+| Bare | tung | 1,180 | Mar 1:19: *a gunkuang tung uhah a* (3SG ship on 2/3PL.LOC 3SG) — "And when he had gone a little farther thence, he s..." | Gen 1:2: *hi. Tuipi tung tengah khua* (DECL water-big on dwell-LOC town) — "And the earth was without form, and void; and dark..." | Exo 2:15: *gam a tung hi. Ni* (land 3SG on DECL day) — "Now when Pharaoh heard this thing, he sought to sl..." |
+| Locative | tungah | 6,072 | Mar 1:7: *in mite tungah thu hilh* (ERG person-PL on-LOC word tell) — "and preached, saying, There cometh one mightier th..." | Gen 1:2: *tua tui tungah Pasian' Kha* (that water on-LOC god.POSS NEG.PERF) — "And the earth was without form, and void; and dark..." | Exo 1:10: *ni. Eite tungah gal hong* (day 1PL.PRO on-LOC enemy 3→1) — "come on, let us deal wisely with them; lest they m..." |
+| Ergative | tungin | 84 | Mar 13:36: *thakhatin hong tungin na ihmut* (new-strong-ERG 3→1 arrive-ERG 2SG deep.sleep) — "lest coming suddenly he find you sleeping." | Gen 19:27: *munah zingsang tungin Abraham va* (place-LOC morning-high arrive-ERG ABRAHAM go.and) — "And Abraham gat up early in the morning to the pla..." | Exo 32:19: *nai-ah amah tungin bawngno le* (near-LOC 3SG.PRO arrive-ERG calf and) — "And it came to pass, as soon as he came nigh unto ..." |
 | Ablative | tung pan | 0 | — | — | — |
 | Abl-Erg | tung panin | 0 | — | — | — |
 
@@ -72,27 +72,27 @@ Which cases do relator nouns most commonly appear in?
 
 | Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|----------|----------|----------|
-| hong | 448 |  | Mat 2:1: "Now when Jesus was born in Bethlehem of ..." | Gen 1:5: "And God called the light Day, and the da..." | Exo 3:9: "Now therefore, behold, the cry of the ch..." |
-| mi | 442 |  | Mat 4:16: "The people which sat in darkness Saw gre..." | Gen 12:20: "And Pharaoh commanded his men concerning..." | Exo 3:14: "And God said unto Moses, I AM THAT I AM:..." |
+| hong | 448 |  | Mar 2:20: "But the days will come, when the bridegr..." | Gen 1:5: "And God called the light Day, and the da..." | Exo 3:9: "Now therefore, behold, the cry of the ch..." |
+| mi | 442 |  | Mar 1:7: "and preached, saying, There cometh one m..." | Gen 12:20: "And Pharaoh commanded his men concerning..." | Exo 3:14: "And God said unto Moses, I AM THAT I AM:..." |
 | topa' | 338 | GEN | Gen 4:3: "And in process of time it came to pass, ..." | Exo 16:8: "And Moses said, This shall be , when the..." | Lev 1:2: "Speak unto the children of Israel, and s..." |
-| ama | 313 |  | Mat 3:16: "And Jesus, when he was baptized, went up..." | Gen 9:5: "And surely your blood of your lives will..." | Exo 3:2: "And the angel of the LORD appeared unto ..." |
-| amaute | 292 |  | Mat 5:2: "and he opened his mouth, and taught them..." | Gen 1:28: "And God blessed them, and God said unto ..." | Exo 30:21: "so they shall wash their hands and their..." |
-| no | 278 |  | Mat 6:4: "that thine alms may be in secret: and th..." | Gen 1:29: "And God said, Behold, I have given you e..." | Exo 9:16: "And in very deed for this cause have I r..." |
-| khempeuh | 249 |  | Mat 24:14: "And this gospel of the kingdom shall be ..." | Gen 1:30: "And to every beast of the earth, and to ..." | Exo 16:1: "And they took their journey from Elim, a..." |
-| kei | 246 |  | Mat 11:27: "All things are delivered unto me of my F..." | Gen 4:10: "And he said, What hast thou done? the vo..." | Exo 22:27: "for that is his covering only, it is his..." |
-| a | 166 | POSS | Mat 14:34: "And when they were gone over, they came ..." | Gen 12:5: "And Abram took Sarai his wife, and Lot h..." | Exo 2:15: "Now when Pharaoh heard this thing, he so..." |
-| nang | 162 |  | Mat 16:22: "Then Peter took him, and began to rebuke..." | Gen 3:16: "Unto the woman he said, I will greatly m..." | Exo 24:12: "And the LORD said unto Moses, Come up to..." |
-| nangma | 138 |  | Mat 4:9: "and saith unto him, All these things wil..." | Gen 17:8: "And I will give unto thee, and to thy se..." | Exo 10:16: "Then Pharaoh called for Moses and Aaron ..." |
-| uh | 124 |  | Mat 7:11: "If ye then, being evil, know how to give..." | Gen 47:18: "When that year was ended, they came unto..." | Exo 3:22: "but every woman shall borrow of her neig..." |
-| pasian | 100 |  | Mat 5:23: "Therefore if thou bring thy gift to the ..." | Gen 14:22: "And Abram said to the king of Sodom, I h..." | Exo 8:25: "And Pharaoh called for Moses and for Aar..." |
-| lu | 98 |  | Mat 10:30: "But the very hairs of your head are all ..." | Gen 40:16: "When the chief baker saw that the interp..." | Exo 29:6: "and thou shalt put the mitre upon his he..." |
-| pasian' | 96 | GEN | Mat 22:21: "They say unto him, Cæsar's. Then saith h..." | Gen 20:17: "So Abraham prayed unto God: and God heal..." | Exo 10:16: "Then Pharaoh called for Moses and Aaron ..." |
+| ama | 313 |  | Mar 1:10: "And straightway coming up out of the wat..." | Gen 9:5: "And surely your blood of your lives will..." | Exo 3:2: "And the angel of the LORD appeared unto ..." |
+| amaute | 292 |  | Mar 6:7: "And he called unto him the twelve, and b..." | Gen 1:28: "And God blessed them, and God said unto ..." | Exo 30:21: "so they shall wash their hands and their..." |
+| no | 278 |  | Mar 4:11: "And he said unto them, Unto you it is gi..." | Gen 1:29: "And God said, Behold, I have given you e..." | Exo 9:16: "And in very deed for this cause have I r..." |
+| khempeuh | 249 |  | Mar 13:10: "And the gospel must first be published a..." | Gen 1:30: "And to every beast of the earth, and to ..." | Exo 16:1: "And they took their journey from Elim, a..." |
+| kei | 246 |  | Mar 14:6: "And Jesus said, Let her alone; why troub..." | Gen 4:10: "And he said, What hast thou done? the vo..." | Exo 22:27: "for that is his covering only, it is his..." |
+| a | 166 | POSS | Mar 5:1: "And they came over unto the other side o..." | Gen 12:5: "And Abram took Sarai his wife, and Lot h..." | Exo 2:15: "Now when Pharaoh heard this thing, he so..." |
+| nang | 162 |  | Mar 1:11: "and there came a voice from heaven, sayi..." | Gen 3:16: "Unto the woman he said, I will greatly m..." | Exo 24:12: "And the LORD said unto Moses, Come up to..." |
+| nangma | 138 |  | Luk 1:35: "And the angel answered and said unto her..." | Gen 17:8: "And I will give unto thee, and to thy se..." | Exo 10:16: "Then Pharaoh called for Moses and Aaron ..." |
+| uh | 124 |  | Luk 11:13: "If ye then, being evil, know how to give..." | Gen 47:18: "When that year was ended, they came unto..." | Exo 3:22: "but every woman shall borrow of her neig..." |
+| pasian | 100 |  | Mar 6:41: "And when he had taken the five loaves an..." | Gen 14:22: "And Abram said to the king of Sodom, I h..." | Exo 8:25: "And Pharaoh called for Moses and for Aar..." |
+| lu | 98 |  | Mar 14:3: "And being in Bethany in the house of Sim..." | Gen 40:16: "When the chief baker saw that the interp..." | Exo 29:6: "and thou shalt put the mitre upon his he..." |
+| pasian' | 96 | GEN | Mar 12:17: "And Jesus answering said unto them, Rend..." | Gen 20:17: "So Abraham prayed unto God: and God heal..." | Exo 10:16: "Then Pharaoh called for Moses and Aaron ..." |
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 2:1):
-  - Tedim: *Jerusalem-ah hong tung uh a,*
-  - KJV: "Now when Jesus was born in Bethlehem of Judæa in the days of Herod the king, behold, there came wise men from the east to Jerusalem,"
+- **Bare** (Mar 1:19):
+  - Tedim: *a gunkuang tung uhah a*
+  - KJV: "And when he had gone a little farther thence, he saw James the son of Zebedee, and John his brother, who also were in the ship mending their nets."
 
 - **Bare** (Gen 1:2):
   - Tedim: *hi. Tuipi tung tengah khua*
@@ -122,9 +122,9 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | sung | 1,482 | Mat 2:1: *tua gam sung Bethlehem khua-ah* (that land inside BETHLEHEM town-LOC) — "Now when Jesus was born in Bethlehem of Judæa in t..." | Gen 1:22: *pha-in, tuipi sung dim unla,* (branch-ERG water-big inside full PL.IMP-and) — "And God blessed them, saying, Be fruitful, and mul..." | Exo 2:2: *kha thum sung a seel* (month three inside 3SG hide) — "And the woman conceived, and bare a son: and when ..." |
-| Locative | sungah | 3,205 | Mat 1:20: *a mang sungah Topa' vantungmi* (3SG dream inside-LOC lord.POSS angel) — "But while he thought on these things, behold, the ..." | Gen 1:11: *a gah sungah tang a* (3SG branch inside-LOC embed 3SG) — "And God said, Let the earth bring forth grass, the..." | Exo 1:14: *le lo sungah nasep namkim* (and NEG inside-LOC work rainbow) — "and they made their lives bitter with hard bondage..." |
-| Ergative | sungin | 213 | Mat 9:15: *a om sungin a mopawi* (3SG exist inside-ERG 3SG bridechamber-mourn) — "And Jesus said unto them, Can the children of the ..." | Gen 4:3: *Tua hun sungin Kain in* (that time inside-ERG KAIN ERG) — "And in process of time it came to pass, that Cain ..." | Exo 13:5: *hih kha sungin hih bangin* (this NEG.PERF inside-ERG this like-ERG) — "And it shall be when the LORD shall bring thee int..." |
+| Bare | sung | 1,482 | Mar 1:13: *ni sawmli sung om a,* (day ten-four inside exist 3SG) — "And he was there in the wilderness forty days, tem..." | Gen 1:22: *pha-in, tuipi sung dim unla,* (branch-ERG water-big inside full PL.IMP-and) — "And God blessed them, saying, Be fruitful, and mul..." | Exo 2:2: *kha thum sung a seel* (month three inside 3SG hide) — "And the woman conceived, and bare a son: and when ..." |
+| Locative | sungah | 3,205 | Mar 1:2: *Lai Siangtho sungah, “Nangma mai-ah* (midst holy inside-LOC 2SG.self face-LOC) — "As it is written in the prophets, Behold, I send m..." | Gen 1:11: *a gah sungah tang a* (3SG branch inside-LOC embed 3SG) — "And God said, Let the earth bring forth grass, the..." | Exo 1:14: *le lo sungah nasep namkim* (and NEG inside-LOC work rainbow) — "and they made their lives bitter with hard bondage..." |
+| Ergative | sungin | 213 | Mar 4:27: *Tua kikal sungin a khaici* (that REFL-middle inside-ERG 3SG sow) — "and should sleep, and rise night and day, and the ..." | Gen 4:3: *Tua hun sungin Kain in* (that time inside-ERG KAIN ERG) — "And in process of time it came to pass, that Cain ..." | Exo 13:5: *hih kha sungin hih bangin* (this NEG.PERF inside-ERG this like-ERG) — "And it shall be when the LORD shall bring thee int..." |
 | Ablative | sung pan | 0 | — | — | — |
 | Abl-Erg | sung panin | 0 | — | — | — |
 
@@ -132,27 +132,27 @@ Which cases do relator nouns most commonly appear in?
 
 | Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|----------|----------|----------|
-| gam | 641 |  | Mat 2:18: "In Rama was there a voice heard, Lamenta..." | Gen 4:16: "And Cain went out from the presence of t..." | Exo 3:16: "Go, and gather the elders of Israel toge..." |
-| khut | 342 |  | Mat 3:13: "Then cometh Jesus from Galilee to Jordan..." | Gen 9:2: "And the fear of you and the dread of you..." | Exo 4:2: "And the LORD said unto him, What is that..." |
-| biakinn | 195 |  | Mat 12:5: "Or have ye not read in the law, how that..." | Lev 19:29: "Do not prostitute thy daughter, to cause..." | 1Sa 31:10: "And they put his armour in the house of ..." |
+| gam | 641 |  | Mar 1:3: "The voice of one crying in the wildernes..." | Gen 4:16: "And Cain went out from the presence of t..." | Exo 3:16: "Go, and gather the elders of Israel toge..." |
+| khut | 342 |  | Mar 9:31: "For he taught his disciples, and said un..." | Gen 9:2: "And the fear of you and the dread of you..." | Exo 4:2: "And the LORD said unto him, What is that..." |
+| biakinn | 195 |  | Mar 2:26: "How he went into the house of God in the..." | Lev 19:29: "Do not prostitute thy daughter, to cause..." | 1Sa 31:10: "And they put his armour in the house of ..." |
 | khuapi | 177 |  | Luk 2:11: "For unto you is born this day in the cit..." | Gen 18:24: "Peradventure there be fifty righteous wi..." | Lev 26:25: "And I will bring a sword upon you, that ..." |
-| inn | 176 |  | Mat 2:11: "And when they were come into the house, ..." | Gen 12:15: "The princes also of Pharaoh saw her, and..." | Exo 7:23: "And Pharaoh turned and went into his hou..." |
+| inn | 176 |  | Mar 1:21: "And they went into Capernaum; and straig..." | Gen 12:15: "The princes also of Pharaoh saw her, and..." | Exo 7:23: "And Pharaoh turned and went into his hou..." |
 | sagih | 115 |  | Luk 2:36: "And there was one Anna, a prophetess, th..." | Gen 8:10: "And he stayed yet other seven days; and ..." | Exo 12:15: "Seven days shall ye eat unleavened bread..." |
-| khua | 109 |  | Mat 10:5: "These twelve Jesus sent forth, and comma..." | Deu 17:8: "If there arise a matter too hard for the..." | Jos 10:30: "and the LORD delivered it also, and the ..." |
-| khat | 103 |  | Mat 14:8: "And she, being before instructed of her ..." | Gen 29:27: "Fulfil her week, and we will give thee t..." | Exo 12:2: "This month shall be unto you the beginni..." |
-| siangtho | 96 |  | Mat 4:4: "But he answered and said, It is written,..." | 1Sa 3:3: "and ere the lamp of God went out in the ..." | Neh 11:18: "All the Levites in the holy city were tw..." |
-| laibu | 94 |  | Joh 1:45: "Philip findeth Nathanael, and saith unto..." | Exo 17:14: "And the LORD said unto Moses, Write this..." | Num 21:14: "Wherefore it is said in the book of the ..." |
-| thum | 85 |  | Mat 12:40: "for as Jonas was three days and three ni..." | Gen 42:17: "And he put them all together into ward t..." | Exo 2:2: "And the woman conceived, and bare a son:..." |
-| hun | 82 |  | Mat 26:5: "But they said, Not on the feast day , le..." | Gen 29:28: "And Jacob did so, and fulfilled her week..." | Exo 34:21: "Six days thou shalt work, but on the sev..." |
-| lungsim | 79 |  | Mat 24:48: "But and if that evil servant shall say i..." | Gen 8:21: "And the LORD smelled a sweet savour; and..." | Exo 4:14: "And the anger of the LORD was kindled ag..." |
-| a | 72 | POSS | Mat 23:21: "And whoso shall swear by the temple, swe..." | Gen 1:12: "And the earth brought forth grass, and h..." | Exo 40:7: "And thou shalt set the laver between the..." |
-| tui | 61 |  | Mat 3:11: "I indeed baptize you with water unto rep..." | Exo 15:10: "Thou didst blow with thy wind, the sea c..." | Lev 6:28: "But the earthen vessel wherein it is sod..." |
+| khua | 109 |  | Mar 1:45: "But he went out, and began to publish it..." | Deu 17:8: "If there arise a matter too hard for the..." | Jos 10:30: "and the LORD delivered it also, and the ..." |
+| khat | 103 |  | Mar 6:25: "And she came in straightway with haste u..." | Gen 29:27: "Fulfil her week, and we will give thee t..." | Exo 12:2: "This month shall be unto you the beginni..." |
+| siangtho | 96 |  | Mar 1:2: "As it is written in the prophets, Behold..." | 1Sa 3:3: "and ere the lamp of God went out in the ..." | Neh 11:18: "All the Levites in the holy city were tw..." |
+| laibu | 94 |  | Luk 11:49: "Therefore also said the wisdom of God, I..." | Exo 17:14: "And the LORD said unto Moses, Write this..." | Num 21:14: "Wherefore it is said in the book of the ..." |
+| thum | 85 |  | Mar 15:33: "And when the sixth hour was come, there ..." | Gen 42:17: "And he put them all together into ward t..." | Exo 2:2: "And the woman conceived, and bare a son:..." |
+| hun | 82 |  | Mar 14:2: "But they said, Not on the feast day , le..." | Gen 29:28: "And Jacob did so, and fulfilled her week..." | Exo 34:21: "Six days thou shalt work, but on the sev..." |
+| lungsim | 79 |  | Mar 2:6: "But there were certain of the scribes si..." | Gen 8:21: "And the LORD smelled a sweet savour; and..." | Exo 4:14: "And the anger of the LORD was kindled ag..." |
+| a | 72 | POSS | Mar 5:12: "And all the devils besought him, saying,..." | Gen 1:12: "And the earth brought forth grass, and h..." | Exo 40:7: "And thou shalt set the laver between the..." |
+| tui | 61 |  | Mar 1:8: "I indeed have baptized you with water: b..." | Exo 15:10: "Thou didst blow with thy wind, the sea c..." | Lev 6:28: "But the earthen vessel wherein it is sod..." |
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 2:1):
-  - Tedim: *tua gam sung Bethlehem khua-ah*
-  - KJV: "Now when Jesus was born in Bethlehem of Judæa in the days of Herod the king, behold, there came wise men from the east to Jerusalem,"
+- **Bare** (Mar 1:13):
+  - Tedim: *ni sawmli sung om a,*
+  - KJV: "And he was there in the wilderness forty days, tempted of Satan; and was with the wild beasts; and the angels ministered unto him."
 
 - **Bare** (Gen 1:22):
   - Tedim: *pha-in, tuipi sung dim unla,*
@@ -182,8 +182,8 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | kiang | 181 | Mat 9:2: *pua-in Jesuh kiang a hong* (carry.on.back-ERG JESUH beside 3SG 3→1) — "And, behold, they brought to him a man sick of the..." | Gen 15:15: *na pate kiang na zuan* (2SG male-PL beside 2SG cross) — "And thou shalt go to thy fathers in peace; thou sh..." | Exo 2:23: *kikona Pasian kiang tung hi.* (REFL-cry-NMLZ god beside on DECL) — "And it came to pass in process of time, that the k..." |
-| Locative | kiangah | 4,207 | Mat 2:8: *ciangin kei kiangah thu hong* (then-ERG NEG.EMPH beside-LOC word 3→1) — "And he sent them to Bethlehem, and said, Go and se..." | Gen 2:19: *dingin mipa kiangah tuate a* (IRR-ERG man beside-LOC DIST-PL 3SG) — "And out of the ground the LORD God formed every be..." | Exo 1:9: *a mipihte kiangah, “En un,* (3SG person-APPL-PL beside-LOC EN IMP.PL) — "And he said unto his people, Behold, the people of..." |
+| Bare | kiang | 181 | Mar 5:12: *“Hua vokte kiang beekah hong* (garden pig-PL beside only-LOC 3→1) — "And all the devils besought him, saying, Send us i..." | Gen 15:15: *na pate kiang na zuan* (2SG male-PL beside 2SG cross) — "And thou shalt go to thy fathers in peace; thou sh..." | Exo 2:23: *kikona Pasian kiang tung hi.* (REFL-cry-NMLZ god beside on DECL) — "And it came to pass in process of time, that the k..." |
+| Locative | kiangah | 4,207 | Mar 1:17: *amau tegel kiangah, “Kei hong* (3PL.PRO both beside-LOC NEG.EMPH 3→1) — "And Jesus said unto them, Come ye after me, and I ..." | Gen 2:19: *dingin mipa kiangah tuate a* (IRR-ERG man beside-LOC DIST-PL 3SG) — "And out of the ground the LORD God formed every be..." | Exo 1:9: *a mipihte kiangah, “En un,* (3SG person-APPL-PL beside-LOC EN IMP.PL) — "And he said unto his people, Behold, the people of..." |
 | Ergative | kiangin | 0 | — | — | — |
 | Ablative | kiang pan | 0 | — | — | — |
 | Abl-Erg | kiang panin | 0 | — | — | — |
@@ -192,27 +192,27 @@ Which cases do relator nouns most commonly appear in?
 
 | Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|----------|----------|----------|
-| ama | 542 |  | Mat 4:3: "And when the tempter came to him, he sai..." | Gen 3:9: "And the LORD God called unto Adam, and s..." | Exo 2:8: "And Pharaoh's daughter said to her, Go. ..." |
-| amaute | 367 |  | Mat 3:7: "But when he saw many of the Pharisees an..." | Gen 20:8: "Therefore Abimelech rose early in the mo..." | Exo 1:18: "And the king of Egypt called for the mid..." |
-| kei | 275 |  | Mat 2:8: "And he sent them to Bethlehem, and said,..." | Gen 12:18: "And Pharaoh called Abram, and said, What..." | Exo 18:16: "when they have a matter, they come unto ..." |
-| no | 197 |  | Mat 5:22: "but I say unto you, That whosoever is an..." | Gen 19:8: "Behold now, I have two daughters which h..." | Exo 3:14: "And God said unto Moses, I AM THAT I AM:..." |
-| mi | 183 |  | Mat 12:46: "While he yet talked to the people, behol..." | Gen 19:6: "And Lot went out at the door unto them, ..." | Exo 3:13: "And Moses said unto God, Behold, when I ..." |
+| ama | 542 |  | Mar 1:30: "But Simon's wife's mother lay sick of a ..." | Gen 3:9: "And the LORD God called unto Adam, and s..." | Exo 2:8: "And Pharaoh's daughter said to her, Go. ..." |
+| amaute | 367 |  | Mar 2:2: "And straightway many were gathered toget..." | Gen 20:8: "Therefore Abimelech rose early in the mo..." | Exo 1:18: "And the king of Egypt called for the mid..." |
+| kei | 275 |  | Mar 8:2: "I have compassion on the multitude, beca..." | Gen 12:18: "And Pharaoh called Abram, and said, What..." | Exo 18:16: "when they have a matter, they come unto ..." |
+| no | 197 |  | Mar 11:24: "Therefore I say unto you, What things so..." | Gen 19:8: "Behold now, I have two daughters which h..." | Exo 3:14: "And God said unto Moses, I AM THAT I AM:..." |
+| mi | 183 |  | Mar 3:4: "And he saith unto them, Is it lawful to ..." | Gen 19:6: "And Lot went out at the door unto them, ..." | Exo 3:13: "And Moses said unto God, Behold, when I ..." |
 | moses | 162 |  | Mar 12:26: "And as touching the dead, that they rise..." | Exo 3:14: "And God said unto Moses, I AM THAT I AM:..." | Lev 4:1: "And the LORD spake unto Moses, saying," |
-| kumpipa | 151 |  | Mat 18:31: "So when his fellowservants saw what was ..." | Gen 14:22: "And Abram said to the king of Sodom, I h..." | Exo 3:18: "And they shall hearken to thy voice: and..." |
-| jesuh | 130 |  | Mat 8:16: "When the even was come, they brought unt..." | Mar 1:32: "And at even, when the sun did set, they ..." | Luk 4:3: "And the devil said unto him, If thou be ..." |
+| kumpipa | 151 |  | Mar 6:25: "And she came in straightway with haste u..." | Gen 14:22: "And Abram said to the king of Sodom, I h..." | Exo 3:18: "And they shall hearken to thy voice: and..." |
+| jesuh | 130 |  | Mar 1:32: "And at even, when the sun did set, they ..." | Mat 8:16: "When the even was come, they brought unt..." | Luk 4:3: "And the devil said unto him, If thou be ..." |
 | david | 97 |  | 1Sa 17:33: "And Saul said to David, Thou art not abl..." | 2Sa 1:2: "it came even to pass on the third day, t..." | 1Ki 1:13: "Go and get thee in unto king David, and ..." |
-| nang | 95 |  | Mat 14:28: "And Peter answered him and said, Lord, i..." | Gen 6:20: "Of fowls after their kind, and of cattle..." | Exo 18:6: "and he said unto Moses, I thy father in ..." |
-| pasian | 89 |  | Joh 13:3: "Jesus knowing that the Father had given ..." | Gen 15:10: "And he took unto him all these, and divi..." | Exo 3:11: "And Moses said unto God, Who am I, that ..." |
-| pa | 78 |  | Mat 18:10: "Take heed that ye despise not one of the..." | Gen 27:10: "and thou shalt bring it to thy father, t..." | Exo 21:8: "If she please not her master, who hath b..." |
-| nungzui | 52 |  | Mat 8:18: "Now when Jesus saw great multitudes abou..." | Mar 2:16: "And when the scribes and Pharisees saw h..." | Luk 8:25: "And he said unto them, Where is your fai..." |
-| mipa | 46 |  | Mat 9:2: "And, behold, they brought to him a man s..." | Gen 2:19: "And out of the ground the LORD God forme..." | Exo 2:13: "And when he went out the second day, beh..." |
-| khempeuh | 46 |  | Mat 26:64: "Jesus saith unto him, Thou hast said: ne..." | Gen 32:19: "And so commanded he the second, and the ..." | Lev 19:2: "Speak unto all the congregation of the c..." |
+| nang | 95 |  | Luk 1:19: "And the angel answering said unto him, I..." | Gen 6:20: "Of fowls after their kind, and of cattle..." | Exo 18:6: "and he said unto Moses, I thy father in ..." |
+| pasian | 89 |  | Luk 6:12: "And it came to pass in those days, that ..." | Gen 15:10: "And he took unto him all these, and divi..." | Exo 3:11: "And Moses said unto God, Who am I, that ..." |
+| pa | 78 |  | Mar 9:21: "And he asked his father, How long is it ..." | Gen 27:10: "and thou shalt bring it to thy father, t..." | Exo 21:8: "If she please not her master, who hath b..." |
+| nungzui | 52 |  | Mar 2:16: "And when the scribes and Pharisees saw h..." | Mat 8:18: "Now when Jesus saw great multitudes abou..." | Luk 8:25: "And he said unto them, Where is your fai..." |
+| mipa | 46 |  | Mar 2:5: "When Jesus saw their faith, he said unto..." | Gen 2:19: "And out of the ground the LORD God forme..." | Exo 2:13: "And when he went out the second day, beh..." |
+| khempeuh | 46 |  | Mar 5:16: "And they that saw it told them how it be..." | Gen 32:19: "And so commanded he the second, and the ..." | Lev 19:2: "Speak unto all the congregation of the c..." |
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 9:2):
-  - Tedim: *pua-in Jesuh kiang a hong*
-  - KJV: "And, behold, they brought to him a man sick of the palsy, lying on a bed: and Jesus seeing their faith said unto the sick of the palsy; Son, be of good cheer; thy sins be forgiven thee."
+- **Bare** (Mar 5:12):
+  - Tedim: *“Hua vokte kiang beekah hong*
+  - KJV: "And all the devils besought him, saying, Send us into the swine, that we may enter into them."
 
 - **Bare** (Gen 15:15):
   - Tedim: *na pate kiang na zuan*
@@ -242,8 +242,8 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | lak | 354 | Mat 8:10: *Israel mite lak nangawnah hih* (ISRAEL person-PL among forever this) — "When Jesus heard it , he marvelled, and said to th..." | Gen 1:30: *tung, huih lak vasate khempeuh* (on wind among go.and-PAST-PL all) — "And to every beast of the earth, and to every fowl..." | Exo 4:6: *in a lak khiat kik* (ERG 3SG among extract ITER) — "And the LORD said furthermore unto him, Put now th..." |
-| Locative | lakah | 769 | Mat 2:4: *uk khuate lakah a neu* (rule town-PL among-LOC 3SG small) — "And when he had gathered all the chief priests and..." | Gen 3:8: *sung singte lakah a bu* (inside tree-PL among-LOC 3SG heap) — "And they heard the voice of the LORD God walking i..." | Exo 2:3: *gei-a phaikungte lakah a koih* (edge-LOC bulrush-PL among-LOC 3SG put) — "And when she could not longer hide him, she took f..." |
+| Bare | lak | 354 | Mar 2:10: *nadingun kong lak ding hi,”* (2SG-IRR-IMP 1SG→3 among IRR DECL) — "But that ye may know that the Son of man hath powe..." | Gen 1:30: *tung, huih lak vasate khempeuh* (on wind among go.and-PAST-PL all) — "And to every beast of the earth, and to every fowl..." | Exo 4:6: *in a lak khiat kik* (ERG 3SG among extract ITER) — "And the LORD said furthermore unto him, Put now th..." |
+| Locative | lakah | 769 | Mar 4:31: *khaici khempeuh lakah a neu* (sow all among-LOC 3SG small) — "It is like a grain of mustard seed, which, when it..." | Gen 3:8: *sung singte lakah a bu* (inside tree-PL among-LOC 3SG heap) — "And they heard the voice of the LORD God walking i..." | Exo 2:3: *gei-a phaikungte lakah a koih* (edge-LOC bulrush-PL among-LOC 3SG put) — "And when she could not longer hide him, she took f..." |
 | Ergative | lakin | 8 | Num 16:5: *mi hong lakin, ama kiangah* (person 3→1 take-ERG 3SG.POSS beside-LOC) — "and he spake unto Korah and unto all his company, ..." | Deu 13:16: *migitna hong lakin, note tungah* (person-hate-NMLZ 3→1 take-ERG 2PL.PRO on-LOC) — "And thou shalt gather all the spoil of it into the..." | Rut 2:18: *a teeknu lakin, a ankhamvalte* (3SG mother.in.law take-ERG 3SG parched.corn-PL) — "And she took it up, and went into the city: and he..." |
 | Ablative | lak pan | 0 | — | — | — |
 | Abl-Erg | lak panin | 0 | — | — | — |
@@ -252,27 +252,27 @@ Which cases do relator nouns most commonly appear in?
 
 | Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|----------|----------|----------|
-| mi | 123 |  | Mat 8:10: "When Jesus heard it , he marvelled, and ..." | Exo 29:45: "And I will dwell among the children of I..." | Lev 27:29: "None devoted, which shall be devoted of ..." |
-| no | 94 |  | Mat 12:28: "But if I cast out devils by the Spirit o..." | Gen 23:4: "I am a stranger and a sojourner with you..." | Lev 16:29: "And this shall be a statute for ever unt..." |
-| a | 79 | POSS | Mat 24:1: "And Jesus went out, and departed from th..." | Gen 25:20: "and Isaac was forty years old when he to..." | Exo 4:6: "And the LORD said furthermore unto him, ..." |
-| hong | 77 |  | Mat 21:32: "For John came unto you in the way of rig..." | Gen 24:12: "And he said, O LORD God of my master Abr..." | Exo 7:9: "When Pharaoh shall speak unto you, sayin..." |
+| mi | 123 |  | Mar 8:38: "Whosoever therefore shall be ashamed of ..." | Exo 29:45: "And I will dwell among the children of I..." | Lev 27:29: "None devoted, which shall be devoted of ..." |
+| no | 94 |  | Mar 10:43: "But so shall it not be among you: but wh..." | Gen 23:4: "I am a stranger and a sojourner with you..." | Lev 16:29: "And this shall be a statute for ever unt..." |
+| a | 79 | POSS | Luk 1:22: "And when he came out, he could not speak..." | Gen 25:20: "and Isaac was forty years old when he to..." | Exo 4:6: "And the LORD said furthermore unto him, ..." |
+| hong | 77 |  | Mar 14:15: "And he will shew you a large upper room ..." | Gen 24:12: "And he said, O LORD God of my master Abr..." | Exo 7:9: "When Pharaoh shall speak unto you, sayin..." |
 | khempeuh | 50 |  | Mar 4:31: "It is like a grain of mustard seed, whic..." | Gen 30:32: "I will pass through all thy flock to day..." | Lev 4:22: "When a ruler hath sinned, and done somew..." |
-| amaute | 44 |  | Joh 15:24: "If I had not done among them the works w..." | Lev 17:8: "And thou shalt say unto them, Whatsoever..." | Num 13:2: "Send thou men, that they may search the ..." |
+| amaute | 44 |  | Luk 6:2: "And certain of the Pharisees said unto t..." | Lev 17:8: "And thou shalt say unto them, Whatsoever..." | Num 13:2: "Send thou men, that they may search the ..." |
 | na | 35 | POSS | Gen 13:9: "Is not the whole land before thee? separ..." | Exo 4:9: "And it shall come to pass, if they will ..." | Lev 19:9: "And when ye reap the harvest of your lan..." |
 | mite' | 31 | GEN | Gen 23:10: "And Ephron dwelt among the children of H..." | Exo 11:4: "And Moses said, Thus saith the LORD , Ab..." | Lev 25:33: "And if a man purchase of the Levites, th..." |
-| note' | 30 | GEN | Mat 20:27: "and whosoever will be chief among you, l..." | Gen 23:4: "I am a stranger and a sojourner with you..." | Exo 12:49: "One law shall be to him that is homeborn..." |
+| note' | 30 | GEN | Joh 1:26: "John answered them, saying, I baptize wi..." | Gen 23:4: "I am a stranger and a sojourner with you..." | Exo 12:49: "One law shall be to him that is homeborn..." |
 | amaute' | 29 | GEN | Luk 4:30: "But he passing through the midst of them..." | Gen 47:6: "the land of Egypt is before thee; in the..." | Exo 25:8: "And let them make me a sanctuary; that I..." |
 | kongzing | 26 |  | Mat 6:2: "Therefore when thou doest thine alms, do..." | Job 31:32: "The stranger did not lodge in the street..." | Psa 69:12: "They that sit in the gate speak against ..." |
-| mihon | 23 |  | Mat 23:7: "and greetings in the markets, and to be ..." | Num 16:47: "And Aaron took as Moses commanded, and r..." | Job 30:28: "I went mourning without the sun: I stood..." |
+| mihon | 23 |  | Luk 8:44: "came behind him , and touched the border..." | Num 16:47: "And Aaron took as Moses commanded, and r..." | Job 30:28: "I went mourning without the sun: I stood..." |
 | minam | 19 |  | Num 23:9: "For from the top of the rocks I see him,..." | Deu 4:27: "And the LORD shall scatter you among the..." | 1Ch 23:14: "Now concerning Moses the man of God, his..." |
 | dang | 17 |  | Lev 26:33: "And I will scatter you among the heathen..." | 1Ch 16:24: "Declare his glory among the heathen; His..." | Neh 1:8: "Remember, I beseech thee, the word that ..." |
 | huih | 15 |  | Gen 1:30: "And to every beast of the earth, and to ..." | Deu 28:26: "And thy carcase shall be meat unto all f..." | 1Sa 17:44: "And the Philistine said to David, Come t..." |
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 8:10):
-  - Tedim: *Israel mite lak nangawnah hih*
-  - KJV: "When Jesus heard it , he marvelled, and said to them that followed, Verily I say unto you, I have not found so great faith, no, not in Israel."
+- **Bare** (Mar 2:10):
+  - Tedim: *nadingun kong lak ding hi,”*
+  - KJV: "But that ye may know that the Son of man hath power on earth to forgive sins, (he saith to the sick of the palsy,)"
 
 - **Bare** (Gen 1:30):
   - Tedim: *tung, huih lak vasate khempeuh*
@@ -302,7 +302,7 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | mai | 279 | Mat 6:16: *manun gilkial mai pua-in a* (sin bowels face carry.on.back-ERG 3SG) — "Moreover when ye fast, be not, as the hypocrites, ..." | Gen 4:5: *a, a mai sia hi.* (3SG 3SG face evil DECL) — "but unto Cain and to his offering he had not respe..." | Exo 14:2: *kikal, Pihahiroth mai, Baalzefon nisuahna* (REFL-middle PIHAHIROTH face BAALZEFON day-birth-NMLZ) — "Speak unto the children of Israel, that they turn ..." |
+| Bare | mai | 279 | Mar 3:3: *“Hih a mai lamah hong* (this 3SG face way-LOC 3→1) — "And he saith unto the man which had the withered h..." | Gen 4:5: *a, a mai sia hi.* (3SG 3SG face evil DECL) — "but unto Cain and to his offering he had not respe..." | Exo 14:2: *kikal, Pihahiroth mai, Baalzefon nisuahna* (REFL-middle PIHAHIROTH face BAALZEFON day-birth-NMLZ) — "Speak unto the children of Israel, that they turn ..." |
 | Locative | maiah | 0 | — | — | — |
 | Ergative | maiin | 0 | — | — | — |
 | Ablative | mai pan | 0 | — | — | — |
@@ -312,8 +312,8 @@ Which cases do relator nouns most commonly appear in?
 
 | Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|----------|----------|----------|
-| a | 54 | POSS | Mat 26:28: "for this is my blood of the new testamen..." | Gen 4:5: "but unto Cain and to his offering he had..." | Exo 39:18: "And the two ends of the two wreathen cha..." |
-| na | 32 | POSS | Mat 6:17: "But thou, when thou fastest, anoint thin..." | Gen 4:6: "And the LORD said unto Cain, Why art tho..." | Exo 23:31: "And I will set thy bounds from the Red s..." |
+| a | 54 | POSS | Mar 3:3: "And he saith unto the man which had the ..." | Gen 4:5: "but unto Cain and to his offering he had..." | Exo 39:18: "And the two ends of the two wreathen cha..." |
+| na | 32 | POSS | Joh 9:7: "and said unto him, Go, wash in the pool ..." | Gen 4:6: "And the LORD said unto Cain, Why art tho..." | Exo 23:31: "And I will set thy bounds from the Red s..." |
 | topa' | 28 | GEN | Gen 24:52: "And it came to pass, that, when Abraham'..." | Exo 16:9: "And Moses spake unto Aaron, Say unto all..." | Lev 1:11: "And he shall kill it on the side of the ..." |
 | ka | 17 | POSS | Joh 9:11: "He answered and said, A man that is call..." | Gen 43:3: "And Judah spake unto him, saying, The ma..." | Deu 31:17: "Then my anger shall be kindled against t..." |
 | inn | 7 |  | 1Ki 6:3: "And the porch before the temple of the h..." | 2Ch 3:15: "Also he made before the house two pillar..." | Neh 3:10: "And next unto them repaired Jedaiah the ..." |
@@ -330,9 +330,9 @@ Which cases do relator nouns most commonly appear in?
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 6:16):
-  - Tedim: *manun gilkial mai pua-in a*
-  - KJV: "Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward."
+- **Bare** (Mar 3:3):
+  - Tedim: *“Hih a mai lamah hong*
+  - KJV: "And he saith unto the man which had the withered hand, Stand forth."
 
 - **Bare** (Gen 4:5):
   - Tedim: *a, a mai sia hi.*
@@ -362,8 +362,8 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | pualam | 53 | Mat 8:12: *mite ahihleh pualam khuamialna-ah kilawnkhia* (person-PL if outside town-dark-NMLZ-LOC cast-EXIT) — "But the children of the kingdom shall be cast out ..." | Gen 24:11: *laitakin khuapi pualam tuikhuk gei-ah* (midst-exact-ERG village-big outside water-ladle edge-LOC) — "And he made his camels to kneel down without the c..." | Exo 29:33: *hangin a pualam mi in* (because-ERG 3SG outside person ERG) — "And they shall eat those things wherewith the aton..." |
-| Locative | pualamah | 62 | Mat 9:25: *mihonpite a pualamah a kipaikhiatsak* (noble-PL 3SG outside-LOC 3SG REFL-send.away-CAUS) — "But when the people were put forth, he went in, an..." | Gen 15:5: *in a pualamah paipih a,* (ERG 3SG outside-LOC go-APPL 3SG) — "And he brought him forth abroad, and said, Look no..." | Exo 9:33: *pan khuapi pualamah Moses paikhia* (ABL village-big outside-LOC MOSES go-exit) — "And Moses went out of the city from Pharaoh, and s..." |
+| Bare | pualam | 53 | Mar 2:2: *khempeuh, kongkhak pualam nangawnah mi* (all 1SG→3-limit outside forever person) — "And straightway many were gathered together, insom..." | Gen 24:11: *laitakin khuapi pualam tuikhuk gei-ah* (midst-exact-ERG village-big outside water-ladle edge-LOC) — "And he made his camels to kneel down without the c..." | Exo 29:33: *hangin a pualam mi in* (because-ERG 3SG outside person ERG) — "And they shall eat those things wherewith the aton..." |
+| Locative | pualamah | 62 | Mar 3:31: *a, inn pualamah ngakin, Jesuh* (3SG house outside-LOC wait-ERG JESUH) — "There came then his brethren and his mother, and, ..." | Gen 15:5: *in a pualamah paipih a,* (ERG 3SG outside-LOC go-APPL 3SG) — "And he brought him forth abroad, and said, Look no..." | Exo 9:33: *pan khuapi pualamah Moses paikhia* (ABL village-big outside-LOC MOSES go-exit) — "And Moses went out of the city from Pharaoh, and s..." |
 | Ergative | pualamin | 0 | — | — | — |
 | Ablative | pualam pan | 0 | — | — | — |
 | Abl-Erg | pualam panin | 0 | — | — | — |
@@ -372,7 +372,7 @@ Which cases do relator nouns most commonly appear in?
 
 | Word | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|----------|----------|----------|
-| a | 41 | POSS | Mat 9:25: "But when the people were put forth, he w..." | Gen 15:5: "And he brought him forth abroad, and sai..." | Exo 16:25: "And Moses said, Eat that to day; for to ..." |
+| a | 41 | POSS | Luk 1:10: "And the whole multitude of the people we..." | Gen 15:5: "And he brought him forth abroad, and sai..." | Exo 16:25: "And Moses said, Eat that to day; for to ..." |
 | giahphual | 18 |  | Lev 8:17: "But the bullock, and his hide, his flesh..." | Num 12:14: "And the LORD said unto Moses, If her fat..." | Deu 23:10: "If there be among you any man, that is n..." |
 | khuapi | 13 |  | Gen 24:11: "And he made his camels to kneel down wit..." | Exo 9:33: "And Moses went out of the city from Phar..." | Lev 14:40: "then the priest shall command that they ..." |
 | khua | 4 |  | Gen 19:16: "And while he lingered, the men laid hold..." | Neh 13:20: "So the merchants and sellers of all kind..." | Eze 7:15: "The sword is without, and the pestilence..." |
@@ -380,7 +380,7 @@ Which cases do relator nouns most commonly appear in?
 | inn | 3 |  | Mar 3:31: "There came then his brethren and his mot..." | 1Ki 6:6: "the nethermost chamber was five cubits b..." | Sol 2:9: "My beloved is like a roe Or a young hart..." |
 | biakinn | 3 |  | Neh 11:16: "and Shabbethai and Jozabad, of the chief..." | Act 21:30: "And all the city was moved, and the peop..." | Rev 11:2: "But the court which is without the templ..." |
 | kongpi | 2 |  | Jer 22:19: "He shall be buried with the burial of an..." | Eze 47:2: "Then brought he me out of the way of the..." | — |
-| kong | 2 |  | Joh 18:16: "But Peter stood at the door without. The..." | Luk 13:25: "When once the master of the house is ris..." | — |
+| kong | 2 |  | Luk 13:25: "When once the master of the house is ris..." | Joh 18:16: "But Peter stood at the door without. The..." | — |
 | jerusalem | 2 |  | 2Ki 23:4: "And the king commanded Hilkiah the high ..." | 2Ki 23:6: "And he brought out the grove from the ho..." | — |
 | tual | 2 |  | Mar 14:68: "But he denied, saying, I know not, neith..." | Eze 40:17: "Then brought he me into the outward cour..." | — |
 | kongkhak | 2 |  | Mar 2:2: "And straightway many were gathered toget..." | Eze 41:25: "And there were made on them, on the door..." | — |
@@ -390,9 +390,9 @@ Which cases do relator nouns most commonly appear in?
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 8:12):
-  - Tedim: *mite ahihleh pualam khuamialna-ah kilawnkhia*
-  - KJV: "But the children of the kingdom shall be cast out into outer darkness: there shall be weeping and gnashing of teeth."
+- **Bare** (Mar 2:2):
+  - Tedim: *khempeuh, kongkhak pualam nangawnah mi*
+  - KJV: "And straightway many were gathered together, insomuch that there was no room to receive them , no, not so much as about the door: and he preached the word unto them."
 
 - **Bare** (Gen 24:11):
   - Tedim: *laitakin khuapi pualam tuikhuk gei-ah*
@@ -422,7 +422,7 @@ Which cases do relator nouns most commonly appear in?
 
 | Case | Form | Count | Sample 1 | Sample 2 | Sample 3 |
 |------|------|-------|----------|----------|----------|
-| Bare | lang | 43 | Mat 12:30: *peuhmah keima lang hi uh* (whosoever 1SG.self clear DECL 2/3PL) — "He that is not with me is against me; and he that ..." | Gen 24:22: *in shekel lang a gik* (ERG SHEKEL clear 3SG shekel) — "And it came to pass, as the camels had done drinki..." | Exo 23:22: *uh' tungah lang ka hi* (2/3PL.POSS on-LOC clear 1SG DECL) — "But if thou shalt indeed obey his voice, and do al..." |
+| Bare | lang | 43 | Luk 11:23: *peuhmah keima lang hi uh* (whosoever 1SG.self clear DECL 2/3PL) — "He that is not with me is against me: and he that ..." | Gen 24:22: *in shekel lang a gik* (ERG SHEKEL clear 3SG shekel) — "And it came to pass, as the camels had done drinki..." | Exo 23:22: *uh' tungah lang ka hi* (2/3PL.POSS on-LOC clear 1SG DECL) — "But if thou shalt indeed obey his voice, and do al..." |
 | Locative | langah | 34 | Luk 12:52: *phate, a langah thum, a* (good-PL 3SG side-LOC three 3SG) — "for from henceforth there shall be five in one hou..." | Gen 34:30: *Amaute kei' langah hong kikaikhawmin* (3PL.PRO NEG.EMPH.POSS side-LOC 3→1 gather-ERG) — "And Jacob said to Simeon and Levi, Ye have trouble..." | Num 5:13: *manin a langah a pang* (reason-ERG 3SG side-LOC 3SG side) — "and a man lie with her carnally, and it be hid fro..." |
 | Ergative | langin | 0 | — | — | — |
 | Ablative | lang pan | 0 | — | — | — |
@@ -438,7 +438,7 @@ Which cases do relator nouns most commonly appear in?
 | shekel | 3 |  | Gen 24:22: "And it came to pass, as the camels had d..." | Exo 30:13: "This they shall give, every one that pas..." | Exo 30:15: "The rich shall not give more, and the po..." |
 | na | 3 | POSS | Luk 12:58: "When thou goest with thine adversary to ..." | Deu 11:25: "There shall no man be able to stand befo..." | Isa 54:17: "No weapon that is formed against thee sh..." |
 | kei' | 3 | GEN | Gen 34:30: "And Jacob said to Simeon and Levi, Ye ha..." | Jdg 20:5: "And the men of Gibeah rose against me, a..." | 2Sa 19:22: "And David said, What have I to do with y..." |
-| keima | 3 |  | Mat 12:30: "He that is not with me is against me; an..." | Psa 109:2: "For the mouth of the wicked and the mout..." | Luk 11:23: "He that is not with me is against me: an..." |
+| keima | 3 |  | Luk 11:23: "He that is not with me is against me: an..." | Psa 109:2: "For the mouth of the wicked and the mout..." | Mat 12:30: "He that is not with me is against me; an..." |
 | eite' | 2 | GEN | 1Sa 29:4: "And the princes of the Philistines were ..." | Lam 2:3: "He hath cut off in his fierce anger All ..." | — |
 | kha | 2 |  | 1Ki 6:24: "And five cubits was the one wing of the ..." | Gal 1:18: "Then after three years I went up to Jeru..." | — |
 | zah | 2 |  | Psa 55:23: "But thou, O God, shalt bring them down i..." | Eze 16:51: "Neither hath Samaria committed half of t..." | — |
@@ -450,9 +450,9 @@ Which cases do relator nouns most commonly appear in?
 
 ### Sample Contexts with KJV
 
-- **Bare** (Mat 12:30):
+- **Bare** (Luk 11:23):
   - Tedim: *peuhmah keima lang hi uh*
-  - KJV: "He that is not with me is against me; and he that gathereth not with me scattereth abroad."
+  - KJV: "He that is not with me is against me: and he that gathereth not with me scattereth."
 
 - **Bare** (Gen 24:22):
   - Tedim: *in shekel lang a gik*
@@ -553,20 +553,20 @@ Pronouns, demonstratives, and other function words. High frequency with relator 
 
 | Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|-------|----------|----------|----------|
-| ama | 3SG | 877 |  | Mat 3:16: *kumsukin ama tungah a khawl* (cloud-pillar-INST 3SG.POSS on-LOC 3SG rest) — "And Jesus, when he was baptized, went up..." | Gen 9:5: *le ama tungah sihna dan* (and 3SG.POSS on-LOC blood-NMLZ manner) — "And surely your blood of your lives will..." | Exo 3:2: *panin ama tungah hong kilang* (ABL-ERG 3SG.POSS on-LOC 3→1 height) — "And the angel of the LORD appeared unto ..." |
-| amaute | 3PL | 715 |  | Mat 5:2: *ka-in amaute tungah thu hilh* (1SG-ERG 3PL.PRO on-LOC word tell) — "and he opened his mouth, and taught them..." | Gen 1:28: *in amaute tungah, “Ci pha-in* (ERG 3PL.PRO on-LOC say branch-ERG) — "And God blessed them, and God said unto ..." | Exo 30:21: *tawntungun amaute tung a kipanin* (eternity-PL.IMP 3PL.PRO on 3SG from) — "so they shall wash their hands and their..." |
-| hong | hither | 528 |  | Mat 2:1: *Jerusalem-ah hong tung uh a,* (JERUSALEM-LOC 3→1 on 2/3PL 3SG) — "Now when Jesus was born in Bethlehem of ..." | Gen 1:5: *zingsang hong tung a, ni* (morning-high 3→1 on 3SG day) — "And God called the light Day, and the da..." | Exo 3:9: *kiang hong tung khin a,* (beside 3→1 on IMM 3SG) — "Now therefore, behold, the cry of the ch..." |
-| kei | 1SG | 524 |  | Mat 11:27: *in kei tungah na khempeuh* (ERG NEG.EMPH on-LOC 2SG all) — "All things are delivered unto me of my F..." | Gen 4:10: *panin kei tungah hong kiko* (ABL-ERG NEG.EMPH on-LOC 3→1 cry.out) — "And he said, What hast thou done? the vo..." | Exo 22:27: *Amah kei tungah hong kiko* (3SG.PRO NEG.EMPH on-LOC 3→1 cry.out) — "for that is his covering only, it is his..." |
-| a | 3SG.POSS | 439 | POSS | Mat 14:34: *gamah a tung uh hi.* (land-LOC 3SG on 2/3PL DECL) — "And when they were gone over, they came ..." | Gen 12:5: *gam a tung uh hi.* (land 3SG on 2/3PL DECL) — "And Abram took Sarai his wife, and Lot h..." | Exo 2:15: *gam a tung hi. Ni* (land 3SG on DECL day) — "Now when Pharaoh heard this thing, he so..." |
-| khempeuh | all | 361 |  | Mat 24:14: *mi khempeuh tungah teci ahi* (person all on-LOC witness be.3SG) — "And this gospel of the kingdom shall be ..." | Gen 1:30: *ganhing khempeuhte tung, huih lak* (animal all-PL on wind among) — "And to every beast of the earth, and to ..." | Exo 16:1: *mihonte khempeuh tung uh hi.* (poor.person-PL all on 2/3PL DECL) — "And they took their journey from Elim, a..." |
-| nang | 2SG | 262 |  | Mat 16:22: *hen. Nang tungah hih bang* (JUSS 2SG.PRO on-LOC this like) — "Then Peter took him, and began to rebuke..." | Gen 3:16: *in nang tungah hong uk* (ERG 2SG.PRO on-LOC 3→1 rule) — "Unto the woman he said, I will greatly m..." | Exo 24:12: *suangpek nang tungah kong pia* (table 2SG.PRO on-LOC 1SG→3 give) — "And the LORD said unto Moses, Come up to..." |
-| nangma | 2SG.EMPH | 189 |  | Mat 4:9: *khempeuh nangma tungah kong pia* (all 2SG.self on-LOC 1SG→3 give) — "and saith unto him, All these things wil..." | Gen 17:8: *Nangma tung le nang'* (2SG.self on and 2SG.PRO.POSS) — "And I will give unto thee, and to thy se..." | Exo 10:16: *le nangma tungah ka khial* (and 2SG.self on-LOC 1SG err) — "Then Pharaoh called for Moses and Aaron ..." |
-| khat | one | 177 |  | Mat 6:24: *a, khat tungah thumanin khat* (3SG one on-LOC word-true-ERG one) — "No man can serve two masters: for either..." | Gen 26:1: *dang khat tung hi. Filistia* (other one on DECL FILISTIA) — "And there was a famine in the land, besi..." | Exo 4:20: *la khat tungah amaute tuangsakin,* (take one on-LOC 3PL.PRO feed-CAUS-INST) — "And Moses took his wife and his sons, an..." |
-| uh | 2/3PL | 168 |  | Mat 7:11: *tate uh tungah na hoih* (child-PL 2/3PL on-LOC 2SG good) — "If ye then, being evil, know how to give..." | Gen 47:18: *topa uh tungah kong im* (lord 2/3PL on-LOC 1SG→3 hide) — "When that year was ended, they came unto..." | Exo 3:22: *tanute uh tungah tuate na* (daughter-PL 2/3PL on-LOC DIST-PL 2SG) — "but every woman shall borrow of her neig..." |
-| na | 2SG.POSS | 144 | POSS | Mat 5:25: *khutsung na tung ding a,* (palm 2SG on IRR 3SG) — "Agree with thine adversary quickly, whil..." | Gen 27:28: *in na tungah vantung daitui* (ERG 2SG on-LOC sky-on dew) — "Therefore God give thee of the dew of he..." | Exo 4:9: *tungah na sung ding a,* (on-LOC 2SG inside IRR 3SG) — "And it shall come to pass, if they will ..." |
-| tua | that | 139 |  | Mat 21:12: *a, tua sungah van zuak* (3SG that inside-LOC sky sell) — "And Jesus went into the temple of God, a..." | Gen 6:16: *inla, tua tung pi khat* (and.then that on grandmother one) — "A window shalt thou make to the ark, and..." | Exo 20:24: *unla, tua tungah na meihal* (PL.IMP-and that on-LOC 2SG burnt.offering) — "An altar of earth thou shalt make unto m..." |
-| ka | 1SG.POSS | 135 | POSS | Mat 18:21: *khatpeuh ka tungah hong khialh* (one-every 1SG on-LOC 3→1 sin) — "Then came Peter to him, and said, Lord, ..." | Gen 27:25: *nadingin ka kiangah hong paipih* (PURP.ERG 1SG beside-LOC 3→1 go-APPL) — "And he said, Bring it near to me, and I ..." | Deu 1:22: *vekpi-un ka kiangah nong pai* (all-big-PL.IMP 1SG beside-LOC 2→1 go) — "And ye came near unto me every one of yo..." |
-| note' | 2PL-GEN | 117 | GEN | Mat 6:6: *un note' tungah thaman hong* (IMP.PL 2PL.PRO.POSS on-LOC reward 3→1) — "But thou, when thou prayest, enter into ..." | Gen 34:16: *uh note' tungah hong pia-in,* (2/3PL 2PL.PRO.POSS on-LOC 3→1 give-ERG) — "then will we give our daughters unto you..." | Exo 3:16: *sungah note' tungah hong kibawlna* (inside-LOC 2PL.PRO.POSS on-LOC 3→1 creation) — "Go, and gather the elders of Israel toge..." |
+| ama | 3SG | 877 |  | Mar 1:10: *kihongin, ama tungah vakhu bangin* (REFL-open-ERG 3SG.POSS on-LOC dove like-ERG) — "And straightway coming up out of the wat..." | Gen 9:5: *le ama tungah sihna dan* (and 3SG.POSS on-LOC blood-NMLZ manner) — "And surely your blood of your lives will..." | Exo 3:2: *panin ama tungah hong kilang* (ABL-ERG 3SG.POSS on-LOC 3→1 height) — "And the angel of the LORD appeared unto ..." |
+| amaute | 3PL | 715 |  | Mar 6:7: *a, amaute tungah dawi hawlkhiat* (3SG 3PL.PRO on-LOC fear persecute) — "And he called unto him the twelve, and b..." | Gen 1:28: *in amaute tungah, “Ci pha-in* (ERG 3PL.PRO on-LOC say branch-ERG) — "And God blessed them, and God said unto ..." | Exo 30:21: *tawntungun amaute tung a kipanin* (eternity-PL.IMP 3PL.PRO on 3SG from) — "so they shall wash their hands and their..." |
+| hong | hither | 528 |  | Mar 2:20: *hun hong tung ding a,* (time 3→1 on IRR 3SG) — "But the days will come, when the bridegr..." | Gen 1:5: *zingsang hong tung a, ni* (morning-high 3→1 on 3SG day) — "And God called the light Day, and the da..." | Exo 3:9: *kiang hong tung khin a,* (beside 3→1 on IMM 3SG) — "Now therefore, behold, the cry of the ch..." |
+| kei | 1SG | 524 |  | Mar 14:6: *hoihin kei tungah hong gamta* (be.good-ERG NEG.EMPH on-LOC 3→1 send.away) — "And Jesus said, Let her alone; why troub..." | Gen 4:10: *panin kei tungah hong kiko* (ABL-ERG NEG.EMPH on-LOC 3→1 cry.out) — "And he said, What hast thou done? the vo..." | Exo 22:27: *Amah kei tungah hong kiko* (3SG.PRO NEG.EMPH on-LOC 3→1 cry.out) — "for that is his covering only, it is his..." |
+| a | 3SG.POSS | 439 | POSS | Mar 5:1: *sung a tung uh hi.* (inside 3SG on 2/3PL DECL) — "And they came over unto the other side o..." | Gen 12:5: *gam a tung uh hi.* (land 3SG on 2/3PL DECL) — "And Abram took Sarai his wife, and Lot h..." | Exo 2:15: *gam a tung hi. Ni* (land 3SG on DECL day) — "Now when Pharaoh heard this thing, he so..." |
+| khempeuh | all | 361 |  | Mar 13:10: *mi khempeuh tungah Lungdamna Thu* (person all on-LOC rejoice-NMLZ word) — "And the gospel must first be published a..." | Gen 1:30: *ganhing khempeuhte tung, huih lak* (animal all-PL on wind among) — "And to every beast of the earth, and to ..." | Exo 16:1: *mihonte khempeuh tung uh hi.* (poor.person-PL all on 2/3PL DECL) — "And they took their journey from Elim, a..." |
+| nang | 2SG | 262 |  | Mar 1:11: *a, nang tungah ka lungkim* (3SG 2SG.PRO on-LOC 1SG heart-full) — "and there came a voice from heaven, sayi..." | Gen 3:16: *in nang tungah hong uk* (ERG 2SG.PRO on-LOC 3→1 rule) — "Unto the woman he said, I will greatly m..." | Exo 24:12: *suangpek nang tungah kong pia* (table 2SG.PRO on-LOC 1SG→3 give) — "And the LORD said unto Moses, Come up to..." |
+| nangma | 2SG.EMPH | 189 |  | Mar 9:17: *manin nangma kiangah kong paipih* (reason-ERG 2SG.self beside-LOC 1SG→3 go-APPL) — "And one of the multitude answered and sa..." | Gen 17:8: *Nangma tung le nang'* (2SG.self on and 2SG.PRO.POSS) — "And I will give unto thee, and to thy se..." | Exo 10:16: *le nangma tungah ka khial* (and 2SG.self on-LOC 1SG err) — "Then Pharaoh called for Moses and Aaron ..." |
+| khat | one | 177 |  | Mar 6:25: *“Kuangdai khat sungah Tuiphumpa Johan'* (trough-large one inside-LOC baptist JOHAN.POSS) — "And she came in straightway with haste u..." | Gen 26:1: *dang khat tung hi. Filistia* (other one on DECL FILISTIA) — "And there was a famine in the land, besi..." | Exo 4:20: *la khat tungah amaute tuangsakin,* (take one on-LOC 3PL.PRO feed-CAUS-INST) — "And Moses took his wife and his sons, an..." |
+| uh | 2/3PL | 168 |  | Mar 16:13: *dangte uh kiangah gen uh* (other-PL 2/3PL beside-LOC speak 2/3PL) — "And they went and told it unto the resid..." | Gen 47:18: *topa uh tungah kong im* (lord 2/3PL on-LOC 1SG→3 hide) — "When that year was ended, they came unto..." | Exo 3:22: *tanute uh tungah tuate na* (daughter-PL 2/3PL on-LOC DIST-PL 2SG) — "but every woman shall borrow of her neig..." |
+| na | 2SG.POSS | 144 | POSS | Luk 12:58: *in na tungah thu hong* (ERG 2SG on-LOC word 3→1) — "When thou goest with thine adversary to ..." | Gen 27:28: *in na tungah vantung daitui* (ERG 2SG on-LOC sky-on dew) — "Therefore God give thee of the dew of he..." | Exo 4:9: *tungah na sung ding a,* (on-LOC 2SG inside IRR 3SG) — "And it shall come to pass, if they will ..." |
+| tua | that | 139 |  | Mar 11:15: *lutin tua sungah sumzuak sumlei-a* (enter-ERG that inside-LOC money-buy money-buy-LOC) — "And they come to Jerusalem: and Jesus we..." | Gen 6:16: *inla, tua tung pi khat* (and.then that on grandmother one) — "A window shalt thou make to the ark, and..." | Exo 20:24: *unla, tua tungah na meihal* (PL.IMP-and that on-LOC 2SG burnt.offering) — "An altar of earth thou shalt make unto m..." |
+| ka | 1SG.POSS | 135 | POSS | Mar 10:14: *unla, ka kiangah hong paisak* (PL.IMP-and 1SG beside-LOC 3→1 go-CAUS) — "But when Jesus saw it , he was much disp..." | Gen 27:25: *nadingin ka kiangah hong paipih* (PURP.ERG 1SG beside-LOC 3→1 go-APPL) — "And he said, Bring it near to me, and I ..." | Deu 1:22: *vekpi-un ka kiangah nong pai* (all-big-PL.IMP 1SG beside-LOC 2→1 go) — "And ye came near unto me every one of yo..." |
+| note' | 2PL-GEN | 117 | GEN | Joh 1:26: *mipa, note' lak mahah hong* (man 2PL.PRO.POSS among likewise-LOC 3→1) — "John answered them, saying, I baptize wi..." | Gen 34:16: *uh note' tungah hong pia-in,* (2/3PL 2PL.PRO.POSS on-LOC 3→1 give-ERG) — "then will we give our daughters unto you..." | Exo 3:16: *sungah note' tungah hong kibawlna* (inside-LOC 2PL.PRO.POSS on-LOC 3→1 creation) — "Go, and gather the elders of Israel toge..." |
 | amaute' | 3PL-GEN | 86 | GEN | Luk 4:30: *zongin amaute' lak nawkin Jesuh* (although-ERG 3PL.PRO.POSS among again-INST JESUH) — "But he passing through the midst of them..." | Gen 23:8: *in amaute' kiangah, “Hih gamah* (ERG 3PL.PRO.POSS beside-LOC this land-LOC) — "And he communed with them, saying, If it..." | Exo 3:13: *leh, amaute' tungah bang ci* (and 3PL.PRO.POSS on-LOC like say) — "And Moses said unto God, Behold, when I ..." |
 
 
@@ -578,21 +578,21 @@ Lexical nouns expressing possession of spatial relation (e.g., "house's inside" 
 
 | Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|-------|----------|----------|----------|
-| mi | person | 759 |  | Mat 4:16: *teng mite tungah khuavak hong* (remain person-PL on-LOC light 3→1) — "The people which sat in darkness Saw gre..." | Gen 12:20: *a mite tungah thu a* (3SG person-PL on-LOC word 3SG) — "And Pharaoh commanded his men concerning..." | Exo 3:14: *“Israel mite tungah hih thu* (ISRAEL person-PL on-LOC this word) — "And God said unto Moses, I AM THAT I AM:..." |
-| gam | land | 653 |  | Mat 2:18: *Ramah gam sungah kiza hi.* (RAMAH land inside-LOC REFL-hear.I DECL) — "In Rama was there a voice heard, Lamenta..." | Gen 4:16: *Nod gam sungah a teng* (NOD land inside-LOC 3SG remain) — "And Cain went out from the presence of t..." | Exo 19:1: *sehnel gam tung uh hi.* (wilderness land on 2/3PL DECL) — "In the third month, when the children of..." |
-| khut | hand | 361 |  | Mat 3:13: *Johan' khut sungah a kituiphum* (JOHAN.POSS hand inside-LOC 3SG baptize) — "Then cometh Jesus from Galilee to Jordan..." | Gen 27:16: *ama khut tung le a* (3SG.POSS hand on and 3SG) — "and she put the skins of the kids of the..." | Exo 13:9: *na khut tung uhah lim,* (2SG hand on 2/3PL.LOC sign) — "And it shall be for a sign unto thee upo..." |
+| mi | person | 759 |  | Mar 1:7: *in mite tungah thu hilh* (ERG person-PL on-LOC word tell) — "and preached, saying, There cometh one m..." | Gen 12:20: *a mite tungah thu a* (3SG person-PL on-LOC word 3SG) — "And Pharaoh commanded his men concerning..." | Exo 3:14: *“Israel mite tungah hih thu* (ISRAEL person-PL on-LOC this word) — "And God said unto Moses, I AM THAT I AM:..." |
+| gam | land | 653 |  | Mar 6:53: *Gennesaret gam tung uh a,* (GENNESARET land on 2/3PL 3SG) — "And when they had passed over, they came..." | Gen 4:16: *Nod gam sungah a teng* (NOD land inside-LOC 3SG remain) — "And Cain went out from the presence of t..." | Exo 19:1: *sehnel gam tung uh hi.* (wilderness land on 2/3PL DECL) — "In the third month, when the children of..." |
+| khut | hand | 361 |  | Mar 9:31: *mihingte' khut sungah kipia-in amaute* (human-PL.POSS hand inside-LOC be.given-ERG 3PL.PRO) — "For he taught his disciples, and said un..." | Gen 27:16: *ama khut tung le a* (3SG.POSS hand on and 3SG) — "and she put the skins of the kids of the..." | Exo 13:9: *na khut tung uhah lim,* (2SG hand on 2/3PL.LOC sign) — "And it shall be for a sign unto thee upo..." |
 | khuapi | city | 208 |  | Luk 2:11: *David khuapi sungah, note a* (DAVID village-big inside-LOC 2PL.PRO 3SG) — "For unto you is born this day in the cit..." | Gen 18:24: *Tua khuapi sungah thuman mi* (that village-big inside-LOC word-reason person) — "Peradventure there be fifty righteous wi..." | Exo 9:33: *pan khuapi pualamah Moses paikhia* (ABL village-big outside-LOC MOSES go-exit) — "And Moses went out of the city from Phar..." |
-| biakinn | temple | 201 |  | Mat 12:5: *mahin biakinn sungah Sabbath thukham* (likewise-ERG worship-house inside-LOC SABBATH law) — "Or have ye not read in the law, how that..." | Lev 19:29: *uh biakinn sungah paktat dinga* (2/3PL worship-house inside-LOC fornication IRR-LOC) — "Do not prostitute thy daughter, to cause..." | 1Sa 31:10: *Ashtaroth biakinn sungah ama galhiam* (ASHTAROTH worship-house inside-LOC 3SG.POSS adversary) — "And they put his armour in the house of ..." |
-| inn | house | 191 |  | Mat 24:17: *inn tungah a om* (house on-LOC 3SG exist) — "let him which is on the house top not co..." | Gen 12:15: *Faro' inn sungah tua nupi* (FARO.POSS house inside-LOC that mother-big) — "The princes also of Pharaoh saw her, and..." | Exo 7:23: *a inn sungah pai a,* (3SG house inside-LOC go 3SG) — "And Pharaoh turned and went into his hou..." |
-| pa | father | 132 |  | Mat 20:11: *nei pa tungah phun uh* (have father on-LOC murmur 2/3PL) — "And when they had received it , they mur..." | Gen 4:15: *tua pa tungah a zah* (that father on-LOC 3SG fear) — "And the LORD said unto him, Therefore wh..." | Exo 21:34: *nei pa tungah sum pia* (have father on-LOC extinguish give) — "the owner of the pit shall make it good,..." |
-| khua | town | 129 |  | Mat 10:5: *mite khua sungah ahi zongin* (person-PL town inside-LOC be.3SG although-ERG) — "These twelve Jesus sent forth, and comma..." | Gen 19:24: *Gomorrah khuate tungah kaat le* (GOMORRAH town-PL on-LOC 1SG-cut and) — "Then the LORD rained upon Sodom and upon..." | Deu 17:8: *note' khua sungah khen ding* (2PL.PRO.POSS town inside-LOC divide IRR) — "If there arise a matter too hard for the..." |
+| biakinn | temple | 201 |  | Mar 2:26: *Pasian' biakinn sungah lutin Pasian* (god.POSS worship-house inside-LOC enter-ERG god) — "How he went into the house of God in the..." | Lev 19:29: *uh biakinn sungah paktat dinga* (2/3PL worship-house inside-LOC fornication IRR-LOC) — "Do not prostitute thy daughter, to cause..." | 1Sa 31:10: *Ashtaroth biakinn sungah ama galhiam* (ASHTAROTH worship-house inside-LOC 3SG.POSS adversary) — "And they put his armour in the house of ..." |
+| inn | house | 191 |  | Mar 1:21: *kikhopna inn sungah Jesuh pai-in* (REFL-gather-NMLZ house inside-LOC JESUH go-ERG) — "And they went into Capernaum; and straig..." | Gen 12:15: *Faro' inn sungah tua nupi* (FARO.POSS house inside-LOC that mother-big) — "The princes also of Pharaoh saw her, and..." | Exo 7:23: *a inn sungah pai a,* (3SG house inside-LOC go 3SG) — "And Pharaoh turned and went into his hou..." |
+| pa | father | 132 |  | Mar 6:2: *Hih pa tungah a kipia* (this father on-LOC 3SG be.given) — "And when the sabbath day was come, he be..." | Gen 4:15: *tua pa tungah a zah* (that father on-LOC 3SG fear) — "And the LORD said unto him, Therefore wh..." | Exo 21:34: *nei pa tungah sum pia* (have father on-LOC extinguish give) — "the owner of the pit shall make it good,..." |
+| khua | town | 129 |  | Mar 1:21: *Kapernaum khua tung uh a,* (KAPERNAUM town on 2/3PL 3SG) — "And they went into Capernaum; and straig..." | Gen 19:24: *Gomorrah khuate tungah kaat le* (GOMORRAH town-PL on-LOC 1SG-cut and) — "Then the LORD rained upon Sodom and upon..." | Deu 17:8: *note' khua sungah khen ding* (2PL.PRO.POSS town inside-LOC divide IRR) — "If there arise a matter too hard for the..." |
 | sagih | seven | 122 |  | Luk 2:36: *kum sagih sung a tenkhop* (year seven inside 3SG dwell-join) — "And there was one Anna, a prophetess, th..." | Gen 8:10: *ni sagih sung ngakin, teembaw* (day seven inside wait-ERG ark) — "And he stayed yet other seven days; and ..." | Exo 12:15: *ni sagih sung silngo sawh* (day seven inside feast correct) — "Seven days shall ye eat unleavened bread..." |
-| siangtho | holy | 108 |  | Mat 4:4: *“Lai Siangtho sungah, 'Anlum bek* (midst holy inside-LOC food only) — "But he answered and said, It is written,..." | 1Sa 3:3: *mun siangtho sungah Samuel lum* (place holy inside-LOC SAMUEL round) — "and ere the lamp of God went out in the ..." | 1Ch 16:35: *min siangtho tungah lungdam kong* (name holy on-LOC heart-well 1SG→3) — "And say ye, Save us, O God of our salvat..." |
-| keima | 1SG.self | 104 |  | Mat 26:12: *Keima tungah hih bangin* (1SG.self on-LOC this like-ERG) — "For in that she hath poured this ointmen..." | Gen 21:23: *bangin keima tung le tawlkhat* (like-ERG 1SG.self on and little) — "now therefore swear unto me here by God ..." | Exo 3:16: *Pasian keima tungah hong kilang* (god 1SG.self on-LOC 3→1 height) — "Go, and gather the elders of Israel toge..." |
-| tau | signal | 98 |  | Mat 23:18: *biakna tau tungah a kipia* (worship-NMLZ signal on-LOC 3SG be.given) — "And, Whosoever shall swear by the altar,..." | Gen 8:20: *biakna tau tungah meihal biakna* (worship-NMLZ signal on-LOC burnt.offering worship-NMLZ) — "And Noah builded an altar unto the LORD ..." | Exo 20:26: *biakna tau tung kahtoh nading* (worship-NMLZ signal on step-ascend PURP) — "Neither shalt thou go up by steps unto m..." |
-| lu | head | 98 |  | Mat 10:30: *na lu tung uha na* (2SG head on 2/3PL.LOC 2SG) — "But the very hairs of your head are all ..." | Gen 40:16: *Ka lu tungah mohlawh thum* (1SG head on-LOC whitebread three) — "When the chief baker saw that the interp..." | Exo 29:6: *Ama lu tungah dialpi khim* (3SG.POSS head on-LOC call-big edge) — "and thou shalt put the mitre upon his he..." |
-| hun | time | 95 |  | Mat 8:29: *A hun tung nai lopi-in* (3SG time on near NEG-big-ERG) — "And, behold, they cried out, saying, Wha..." | Gen 35:16: *nausuah hun tung a, amah* (child-give.birth time on 3SG 3SG.PRO) — "And they journeyed from Beth-el; and the..." | Exo 34:21: *anlak hun sungin zong na* (rice-harvest time inside-ERG also 2SG) — "Six days thou shalt work, but on the sev..." |
-| laibu | book | 94 |  | Joh 1:45: *Thukham laibu sungah a gelh* (law book inside-LOC 3SG write) — "Philip findeth Nathanael, and saith unto..." | Exo 17:14: *thu laibu sung khatah gelh* (word book inside one-LOC write) — "And the LORD said unto Moses, Write this..." | Num 21:14: *Gal Laibu sungah, “Sufa gam* (enemy book inside-LOC SUFA land) — "Wherefore it is said in the book of the ..." |
+| siangtho | holy | 108 |  | Mar 1:2: *Lai Siangtho sungah, “Nangma mai-ah* (midst holy inside-LOC 2SG.self face-LOC) — "As it is written in the prophets, Behold..." | 1Sa 3:3: *mun siangtho sungah Samuel lum* (place holy inside-LOC SAMUEL round) — "and ere the lamp of God went out in the ..." | 1Ch 16:35: *min siangtho tungah lungdam kong* (name holy on-LOC heart-well 1SG→3) — "And say ye, Save us, O God of our salvat..." |
+| keima | 1SG.self | 104 |  | Luk 1:38: *bangin keima tungah hong piang* (like-ERG 1SG.self on-LOC 3→1 be.born) — "And Mary said, Behold the handmaid of th..." | Gen 21:23: *bangin keima tung le tawlkhat* (like-ERG 1SG.self on and little) — "now therefore swear unto me here by God ..." | Exo 3:16: *Pasian keima tungah hong kilang* (god 1SG.self on-LOC 3→1 height) — "Go, and gather the elders of Israel toge..." |
+| tau | signal | 98 |  | Luk 1:9: *biakna tau tungah, paknamtui kua* (worship-NMLZ signal on-LOC ointment who) — "according to the custom of the priest's ..." | Gen 8:20: *biakna tau tungah meihal biakna* (worship-NMLZ signal on-LOC burnt.offering worship-NMLZ) — "And Noah builded an altar unto the LORD ..." | Exo 20:26: *biakna tau tung kahtoh nading* (worship-NMLZ signal on step-ascend PURP) — "Neither shalt thou go up by steps unto m..." |
+| lu | head | 98 |  | Mar 14:3: *Jesuh' lu tungah a paknamtui* (JESUH.POSS head on-LOC 3SG ointment) — "And being in Bethany in the house of Sim..." | Gen 40:16: *Ka lu tungah mohlawh thum* (1SG head on-LOC whitebread three) — "When the chief baker saw that the interp..." | Exo 29:6: *Ama lu tungah dialpi khim* (3SG.POSS head on-LOC call-big edge) — "and thou shalt put the mitre upon his he..." |
+| hun | time | 95 |  | Mar 14:2: *pawi hun sungin hih kei* (Pawi time inside-ERG this NEG.EMPH) — "But they said, Not on the feast day , le..." | Gen 35:16: *nausuah hun tung a, amah* (child-give.birth time on 3SG 3SG.PRO) — "And they journeyed from Beth-el; and the..." | Exo 34:21: *anlak hun sungin zong na* (rice-harvest time inside-ERG also 2SG) — "Six days thou shalt work, but on the sev..." |
+| laibu | book | 94 |  | Luk 11:49: *kici laibu sungah, 'Amaute kiangah* (called book inside-LOC 3PL.PRO beside-LOC) — "Therefore also said the wisdom of God, I..." | Exo 17:14: *thu laibu sung khatah gelh* (word book inside one-LOC write) — "And the LORD said unto Moses, Write this..." | Num 21:14: *Gal Laibu sungah, “Sufa gam* (enemy book inside-LOC SUFA land) — "Wherefore it is said in the book of the ..." |
 
 
 ### Proper Nouns as Possessors
@@ -603,15 +603,15 @@ Names of people, places, and divine beings. Spatial constructions with proper no
 
 | Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|-------|----------|----------|----------|
-| no | NO | 591 |  | Mat 6:4: *un note tungah thaman hong* (IMP.PL 2PL.PRO on-LOC reward 3→1) — "that thine alms may be in secret: and th..." | Gen 1:29: *khempeuh note tungah kong pia* (all 2PL.PRO on-LOC 1SG→3 give) — "And God said, Behold, I have given you e..." | Exo 9:16: *nadingin note tungah ka vangliatna* (PURP.ERG 2PL.PRO on-LOC 1SG strong-NMLZ) — "And in very deed for this cause have I r..." |
+| no | NO | 591 |  | Mar 4:11: *in note tungah hong gen* (ERG 2PL.PRO on-LOC 3→1 speak) — "And he said unto them, Unto you it is gi..." | Gen 1:29: *khempeuh note tungah kong pia* (all 2PL.PRO on-LOC 1SG→3 give) — "And God said, Behold, I have given you e..." | Exo 9:16: *nadingin note tungah ka vangliatna* (PURP.ERG 2PL.PRO on-LOC 1SG strong-NMLZ) — "And in very deed for this cause have I r..." |
 | topa' | Lord-GEN | 398 | GEN | Gen 4:3: *piakna Topa' tungah paipih a,* (give.to-NMLZ lord.POSS on-LOC go-APPL 3SG) — "And in process of time it came to pass, ..." | Exo 16:8: *loin Topa' tung ahi hi,”* (NEG-ERG lord.POSS on be.3SG DECL) — "And Moses said, This shall be , when the..." | Lev 1:2: *in Topa' tungah biakna na* (ERG lord.POSS on-LOC worship-NMLZ 2SG) — "Speak unto the children of Israel, and s..." |
-| kumpipa | king | 216 |  | Mat 18:31: *khempeuh kumpipa kiangah a ko* (all king-male beside-LOC 3SG long) — "So when his fellowservants saw what was ..." | Gen 14:22: *Sodom kumpipa kiangah, “Vantung le* (SODOM king-male beside-LOC sky-on and) — "And Abram said to the king of Sodom, I h..." | Exo 3:18: *Egypt kumpipa kiangah pai-in ama* (EGYPT king-male beside-LOC go-ERG 3SG.POSS) — "And they shall hearken to thy voice: and..." |
-| pasian | God | 195 |  | Mat 5:23: *manin Pasian tungah biakna a* (reason-ERG god on-LOC worship-NMLZ 3SG) — "Therefore if thou bring thy gift to the ..." | Gen 14:22: *Topa Pasian tungah ka kiciam* (lord god on-LOC 1SG covenant) — "And Abram said to the king of Sodom, I h..." | Exo 8:25: *na Pasian tung uhah biakna* (2SG god on 2/3PL.LOC worship-NMLZ) — "And Pharaoh called for Moses and for Aar..." |
+| kumpipa | king | 216 |  | Mar 6:25: *zong kumpipa kiangah hong paikik* (also king-male beside-LOC 3→1 go-ITER) — "And she came in straightway with haste u..." | Gen 14:22: *Sodom kumpipa kiangah, “Vantung le* (SODOM king-male beside-LOC sky-on and) — "And Abram said to the king of Sodom, I h..." | Exo 3:18: *Egypt kumpipa kiangah pai-in ama* (EGYPT king-male beside-LOC go-ERG 3SG.POSS) — "And they shall hearken to thy voice: and..." |
+| pasian | God | 195 |  | Mar 6:41: *ento-in Pasian tungah lungdamna a* (look-up-INST god on-LOC rejoice-NMLZ 3SG) — "And when he had taken the five loaves an..." | Gen 14:22: *Topa Pasian tungah ka kiciam* (lord god on-LOC 1SG covenant) — "And Abram said to the king of Sodom, I h..." | Exo 8:25: *na Pasian tung uhah biakna* (2SG god on 2/3PL.LOC worship-NMLZ) — "And Pharaoh called for Moses and for Aar..." |
 | moses | Moses | 191 |  | Mar 12:26: *in Moses kiangah, 'Kei pen* (ERG MOSES beside-LOC NEG.EMPH TOP) — "And as touching the dead, that they rise..." | Exo 2:21: *in Moses tungah a tanu* (ERG MOSES on-LOC 3SG child-female) — "And Moses was content to dwell with the ..." | Lev 21:16: *in Moses tungah,* (ERG MOSES on-LOC) — "And the LORD spake unto Moses, saying," |
-| jesuh | Jesus | 141 |  | Mat 8:16: *in Jesuh kiangah dawivei mi* (ERG JESUH beside-LOC devil person) — "When the even was come, they brought unt..." | Mar 1:32: *in Jesuh kiangah cina khempeuh* (ERG JESUH beside-LOC said-LOC all) — "And at even, when the sun did set, they ..." | Luk 5:17: *vangliatna, Jesuh tungah kipia hi.* (strong-NMLZ JESUH on-LOC be.given DECL) — "And it came to pass on a certain day, as..." |
-| topa | Lord | 131 |  | Mat 24:50: *a topa tung dingin a* (3SG lord on IRR-ERG 3SG) — "the lord of that servant shall come in a..." | Gen 18:31: *in, Topa tungah thu kong* (ERG lord on-LOC word 1SG→3) — "And he said, Behold now, I have taken up..." | Exo 4:10: *in Topa kiangah, “Oh, ka* (ERG lord beside-LOC INTERJ 1SG) — "And Moses said unto the LORD , O my Lord..." |
+| jesuh | Jesus | 141 |  | Mar 1:32: *in Jesuh kiangah cina khempeuh* (ERG JESUH beside-LOC said-LOC all) — "And at even, when the sun did set, they ..." | Mat 8:16: *in Jesuh kiangah dawivei mi* (ERG JESUH beside-LOC devil person) — "When the even was come, they brought unt..." | Luk 5:17: *vangliatna, Jesuh tungah kipia hi.* (strong-NMLZ JESUH on-LOC be.given DECL) — "And it came to pass on a certain day, as..." |
+| topa | Lord | 131 |  | Mar 12:36: *keima Topa tungah thu gen* (1SG.self lord on-LOC word speak) — "For David himself said by the Holy Ghost..." | Gen 18:31: *in, Topa tungah thu kong* (ERG lord on-LOC word 1SG→3) — "And he said, Behold now, I have taken up..." | Exo 4:10: *in Topa kiangah, “Oh, ka* (ERG lord beside-LOC INTERJ 1SG) — "And Moses said unto the LORD , O my Lord..." |
 | david | DAVID | 130 |  | 1Sa 30:21: *kiangah David tung hi. David* (beside-LOC DAVID on DECL DAVID) — "And David came to the two hundred men, w..." | 2Sa 17:24: *ah David tung hi. Absalom* (LOC DAVID on DECL ABSALOM) — "Then David came to Mahanaim. And Absalom..." | 1Ki 1:47: *Kumpi David tungah lungdamna a* (king DAVID on-LOC rejoice-NMLZ 3SG) — "And moreover the king's servants came to..." |
-| pasian' | God-GEN | 126 | GEN | Mat 22:21: *nate Pasian' tungah na pia* (2SG-PL god.POSS on-LOC 2SG give) — "They say unto him, Cæsar's. Then saith h..." | Gen 20:17: *in Pasian' tungah thu ngen* (ERG god.POSS on-LOC word pray) — "So Abraham prayed unto God: and God heal..." | Exo 10:16: *na Pasian' tung le nangma* (2SG god.POSS on and 2SG.self) — "Then Pharaoh called for Moses and Aaron ..." |
+| pasian' | God-GEN | 126 | GEN | Mar 12:17: *neihsate Pasian' tungah pia un,”* (possessions god.POSS on-LOC give IMP.PL) — "And Jesus answering said unto them, Rend..." | Gen 20:17: *in Pasian' tungah thu ngen* (ERG god.POSS on-LOC word pray) — "So Abraham prayed unto God: and God heal..." | Exo 10:16: *na Pasian' tung le nangma* (2SG god.POSS on and 2SG.self) — "Then Pharaoh called for Moses and Aaron ..." |
 | israel | Israel | 87 |  | Gen 46:2: *in Israel tungah zanin thu* (ERG ISRAEL on-LOC night-ERG word) — "And God spake unto Israel in the visions..." | Num 1:3: *Israel sungah kum sawmnih* (ISRAEL inside-LOC year ten-two) — "from twenty years old and upward, all th..." | Deu 25:6: *min Israel tungah a maiman'* (name ISRAEL on-LOC 3SG face.POSS) — "And it shall be, that the firstborn whic..." |
 | israel-te | ISRAEL-TE | 80 |  | Deu 17:4: *a, Israel-te sungah tua bang* (3SG ISRAEL-TE inside-LOC that like) — "and it be told thee, and thou hast heard..." | Jos 18:10: *ciat Israel-te tungah leitang a* (each ISRAEL-TE on-LOC land-earth 3SG) — "And Joshua cast lots for them in Shiloh ..." | Jdg 2:14: *ciangin Israel-te tungah Topa sinso* (then-ERG ISRAEL-TE on-LOC lord be.angry) — "And the anger of the LORD was hot agains..." |
 | faro' | FARO-GEN | 43 | GEN | Gen 40:14: *hi. Faro' tungah kei' thu* (DECL FARO.POSS on-LOC NEG.EMPH.POSS word) — "But think on me when it shall be well wi..." | Exo 18:8: *hangin Faro' tung le Egypt* (because-ERG FARO.POSS on and EGYPT) — "And Moses told his father in law all tha..." | Deu 29:2: *in Faro' tung le ama* (ERG FARO.POSS on and 3SG.POSS) — "And Moses called unto all Israel, and sa..." |
@@ -628,8 +628,8 @@ Words not yet classified (may need dictionary additions).
 
 | Word | Gloss | Count | Notes | Sample 1 | Sample 2 | Sample 3 |
 |------|-------|-------|-------|----------|----------|----------|
-| lo | NEG | 30 |  | Mat 13:31: *a lo sungah a vawh* (3SG NEG inside-LOC 3SG name) — "Another parable put he forth unto them, ..." | Gen 2:5: *a, lo sung ankungte pokhia* (3SG NEG inside herb-PL grow-out) — "and every plant of the field before it w..." | Exo 1:14: *le lo sungah nasep namkim* (and NEG inside-LOC work rainbow) — "and they made their lives bitter with ha..." |
-| kong | 1SG→3 | 17 |  | Mat 9:6: *nadingun kong lak ding hi,”* (2SG-IRR-IMP 1SG→3 among IRR DECL) — "But that ye may know that the Son of man..." | Exo 18:19: *thu kong lak ding hi.* (word 1SG→3 among IRR DECL) — "Hearken now unto my voice, I will give t..." | Jdg 4:22: *zon kong lak ding hi,”* (seek 1SG→3 among IRR DECL) — "And, behold, as Barak pursued Sisera, Ja..." |
+| lo | NEG | 30 |  | Luk 1:53: *nei lote tungah na manpha* (have NEG-PL on-LOC 2SG precious) — "He hath filled the hungry with good thin..." | Gen 2:5: *a, lo sung ankungte pokhia* (3SG NEG inside herb-PL grow-out) — "and every plant of the field before it w..." | Exo 1:14: *le lo sungah nasep namkim* (and NEG inside-LOC work rainbow) — "and they made their lives bitter with ha..." |
+| kong | 1SG→3 | 17 |  | Mar 2:10: *nadingun kong lak ding hi,”* (2SG-IRR-IMP 1SG→3 among IRR DECL) — "But that ye may know that the Son of man..." | Exo 18:19: *thu kong lak ding hi.* (word 1SG→3 among IRR DECL) — "Hearken now unto my voice, I will give t..." | Jdg 4:22: *zon kong lak ding hi,”* (seek 1SG→3 among IRR DECL) — "And, behold, as Barak pursued Sisera, Ja..." |
 | ' | — | 11 | GEN | Isa 12:4: *Topa ' tungah lungdam ko* (lord ['] on-LOC heart-well long) — "And in that day shall ye say, Praise the..." | Isa 12:5: *Topa ' tungah phatna la* (lord ['] on-LOC praise-NMLZ take) — "Sing unto the LORD ; for he hath done ex..." | Isa 18:7: *Topa ' tungah letsong hong* (lord ['] on-LOC gift 3→1) — "In that time shall the present be brough..." |
 | in | ERG | 7 |  | 2Ch 24:13: *nasep in mai nawt a,* (work ERG face push 3SG) — "So the workmen wrought, and the work was..." | Pro 24:20: *Amaute in mai lamah lamet* (3PL.PRO ERG face way-LOC manner) — "For there shall be no reward to the evil..." | Isa 44:10: *kua in sung ahi hiam?* (who ERG inside be.3SG Q) — "Who hath formed a god, or molten a grave..." |
 | nong | 2→1 | 7 |  | Gen 19:19: *tungah nong lak khin uh* (on-LOC 2→1 among IMM 2/3PL) — "behold now, thy servant hath found grace..." | 2Sa 7:19: *kei nong lak khin hi,* (NEG.EMPH 2→1 among IMM DECL) — "And this was yet a small thing in thy si..." | 1Ch 17:17: *kei nong lak khin hi,* (NEG.EMPH 2→1 among IMM DECL) — "And yet this was a small thing in thine ..." |

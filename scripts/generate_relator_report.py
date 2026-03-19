@@ -145,13 +145,8 @@ def gloss_context(context: str) -> str:
     """
     from analyze_morphemes import analyze_word
     
-    # Context-specific overrides for this report
-    POSTP_GLOSSES = {
-        'pan': 'ABL',           # from (ablative), not 'begin'
-        'panin': 'ABL-ERG',     # from (as agent)
-        'tawh': 'COM',          # with (comitative)
-        'tawhin': 'COM-ERG',    # with (as instrument)
-    }
+    # Note: pan/panin/tawh/tawhin now handled correctly by analyzer
+    # Only kha needs context-aware override (month when followed by number)
     
     # Clean context and split into words
     words = context.split()
@@ -164,11 +159,6 @@ def gloss_context(context: str) -> str:
             continue
         
         clean_lower = clean.lower()
-        
-        # Check for postposition overrides
-        if clean_lower in POSTP_GLOSSES:
-            glosses.append(POSTP_GLOSSES[clean_lower])
-            continue
         
         # Check for 'kha' as month (when followed by number)
         if clean_lower == 'kha':
