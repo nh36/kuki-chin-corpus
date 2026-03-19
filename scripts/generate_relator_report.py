@@ -25,7 +25,7 @@ from typing import Dict, List, Tuple, Set
 
 # Add scripts directory to path
 sys.path.insert(0, str(Path(__file__).parent))
-from analyze_morphemes import RELATOR_NOUNS, NOUN_STEMS, PROPER_NOUNS
+from analyze_morphemes import RELATOR_NOUNS, NOUN_STEMS, PROPER_NOUNS, VERB_STEMS
 
 # Book abbreviations for verse references
 BOOK_ABBREVS = {
@@ -84,18 +84,28 @@ def categorize_possessor(word: str) -> str:
     if base in proper_markers:
         return 'proper'
     
-    # Common nouns
+    # Common nouns (check NOUN_STEMS directly)
     if base in NOUN_STEMS or word_lower in NOUN_STEMS:
         return 'common'
     if base in RELATOR_NOUNS:
         return 'common'
     
-    # Try morphological analysis
+    # Verbs used as nominal possessors (verbal nouns)
+    if base in VERB_STEMS or word_lower in VERB_STEMS:
+        return 'common'  # Treat verbal nouns as common nouns
+    
+    # Try morphological analysis for compounds and derived forms
     from analyze_morphemes import analyze_word
     result = analyze_word(base)
     if result and result[1]:
         gloss = result[1]
-        if '-NMLZ' in gloss or any(c in gloss for c in ['-', '.']):
+        # Compounds (have hyphens) are common nouns
+        if '-' in gloss or '.' in gloss:
+            return 'common'
+        # Simple words with glosses are likely common nouns too
+        # (proper nouns already checked above)
+        if gloss and gloss.upper() != gloss:  # Not all-caps (not a proper noun)
+            return 'common'
             return 'common'
     
     return 'unknown'

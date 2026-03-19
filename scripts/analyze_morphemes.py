@@ -1980,6 +1980,7 @@ VERB_STEMS = {
     'kipuaseh': 'cut',       # 5x
     'lehhei': 'turn',        # 3x
     'kitawng': 'strive',     # 15x - final lexicon internalization
+    'tawng': 'contend',      # 13x - base verb (kitawng = ki- + tawng)
 }
 
 
@@ -8795,6 +8796,52 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khuapi-ah': ('khuapi-ah', 'city-LOC'),  # hyphenated city
         'tawpna-ah': ('tawpna-ah', 'end.NMLZ-LOC'),  # end/latter
         'meikhukah': ('meikhuk-ah', 'furnace-LOC'),  # 9x - "furnace, smelting pot"
+        
+        # === Disambiguation compounds (stem + -ah where stem ends in vowel) ===
+        'kimkotah': ('kimkot-ah', 'round-LOC'),      # 119x - not kimkota + h
+        'dongah': ('dong-ah', 'until-LOC'),          # 52x - not donga + h  
+        'bupah': ('bupa-ah', 'centurion-LOC'),       # 4x
+        'kimkota': ('kimkot-a', 'round-LOC'),        # variant without -h
+        'donga': ('dong-a', 'until-LOC'),            # variant
+        
+        # === Disambiguation: tuni (today) + suffixes ===
+        'tunin': ('tuni-in', 'today-ERG'),           # 8x - not tuni + n
+        
+        # === Disambiguation: ki-h... compounds (not kih 'abhor' + ...) ===
+        # These are ki- (REFL) + verb starting with h
+        'kihingkiksak': ('ki-hing-kik-sak', 'REFL-live-return-CAUS'),  # 12x resurrection
+        'kihangsak': ('ki-hang-sak', 'REFL-oppose-CAUS'),    # 2x - cause to oppose
+        'kihangkeu': ('ki-hang-keu', 'REFL-oppose-refuse'),  # 1x
+        'kihawmin': ('ki-hawm-in', 'REFL-share-ERG'),        # 1x
+        'kihausak': ('ki-hau-sak', 'REFL-rich-CAUS'),        # 1x
+        'kihauhlawh': ('ki-hauh-lawh', 'REFL-desire-able'),  # 1x
+        'kihawmsuak': ('ki-hawm-suak', 'REFL-share-become'), # 1x
+        'kihawmkeek': ('ki-hawm-keek', 'REFL-share-return'), # 1x
+        'kihaih': ('ki-haih', 'REFL-join'),                  # 1x
+        'kihingsakkik': ('ki-hing-sak-kik', 'REFL-live-CAUS-return'), # 1x
+        'kihaibawl': ('ki-hai-bawl', 'REFL-join-make'),      # 1x
+        
+        # === Disambiguation: ki-n... compounds (not kin 'god' + ...) ===
+        # These are ki- (REFL) + verb starting with n
+        'kinaipih': ('ki-nai-pih', 'REFL-near-APPL'),        # 4x - approach closely
+        'kininsaksa': ('ki-nin-sak-sa', 'REFL-pity-CAUS-PASS'), # 2x - be divorced
+        'kininsaktawm': ('ki-nin-sak-tawm', 'REFL-pity-CAUS-finish'), # 2x
+        'kinaih': ('ki-nai-h', 'REFL-near-NOM'),             # 1x
+        'kinawtkhia': ('ki-nawt-khia', 'REFL-scratch-out'),  # 1x
+        'kinawmvalhin': ('ki-nawm-val-hin', 'REFL-enjoy-good-QUOT'), # 1x - swallowed up pleasurably
+        
+        # === More disambiguations (remaining partials) ===
+        'phakik': ('pha-kik', 'year-return'),           # 2x - renew, anew
+        'thukip': ('thuk-ip', 'deep-INTENS'),           # 2x - very deep
+        'thukipin': ('thuk-ip-in', 'deep-INTENS-ERG'),  # variant
+        'kisilhsak': ('ki-silh-sak', 'REFL-clothe-CAUS'), # 2x - clothe oneself
+        'lianpenin': ('lian-pen-in', 'great-COMPAR-ERG'), # 3x - most greatly
+        'sukkhapte': ('suk-khap-te', 'make.become-close-PL'), # 1x
+        'siahsun': ('siah-sun', 'decay-think'),         # 1x - consider decay
+        'thukhupna': ('thuk-hup-na', 'deep-cover-NMLZ'), # 1x - covering depth
+        'guallelhsak': ('gual-lelh-sak', 'row-arrange-CAUS'), # 1x
+        'thamang': ('tha-mang', 'strength-dream'),      # 1x - (compound)
+        'tawnggawp': ('tawng-gawp', 'contend-INTENS'),  # 1x
         
         # === Intensifiers/Adverbs ===
         'dipkuathuai': ('dipkua-thuai', 'terrifying-INTENS'),  # 6x - "very terrible"
