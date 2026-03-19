@@ -135,6 +135,61 @@ def load_kjv_translations(aligned_file: str) -> Dict[str, str]:
     return kjv
 
 
+def gloss_context(context: str) -> str:
+    """
+    Add interlinear glossing to a Tedim context phrase.
+    Returns: "(gloss1 gloss2 gloss3)"
+    
+    Uses context-aware glossing where pan/panin/tawh/tawhin
+    get their grammatical function glosses.
+    """
+    from analyze_morphemes import analyze_word
+    
+    # Context-specific overrides for this report
+    POSTP_GLOSSES = {
+        'pan': 'ABL',           # from (ablative), not 'begin'
+        'panin': 'ABL-ERG',     # from (as agent)
+        'tawh': 'COM',          # with (comitative)
+        'tawhin': 'COM-ERG',    # with (as instrument)
+    }
+    
+    # Clean context and split into words
+    words = context.split()
+    glosses = []
+    
+    for i, word in enumerate(words):
+        # Remove punctuation for analysis
+        clean = word.strip('.,;:!?"*')
+        if not clean:
+            continue
+        
+        clean_lower = clean.lower()
+        
+        # Check for postposition overrides
+        if clean_lower in POSTP_GLOSSES:
+            glosses.append(POSTP_GLOSSES[clean_lower])
+            continue
+        
+        # Check for 'kha' as month (when followed by number)
+        if clean_lower == 'kha':
+            if i + 1 < len(words):
+                next_word = words[i + 1].strip('.,;:!?"*').lower()
+                if next_word in ('khat', 'nih', 'thum', 'li', 'nga', 'guk', 'sagih', 'giat', 'kua', 'sawm'):
+                    glosses.append('month')
+                    continue
+        
+        result = analyze_word(clean_lower)
+        if result and result[1] and '?' not in result[1]:
+            glosses.append(result[1])
+        else:
+            # Unknown word - use the word itself in brackets
+            glosses.append(f'[{clean}]')
+    
+    if glosses:
+        return f"({' '.join(glosses)})"
+    return ''
+
+
 # Gospel book codes (Matthew=40, Mark=41, Luke=42, John=43)
 GOSPEL_BOOKS = {'40', '41', '42', '43'}
 
@@ -421,7 +476,8 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
                 if j < len(diverse):
                     verse_id, context, _ = diverse[j]
                     kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
-                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                    gloss_str = gloss_context(context)
+                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* {gloss_str} — "{kjv_text}"')
                 else:
                     sample_cols.append('—')
             lines.append(f'| {label} | {form} | {count:,} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
@@ -617,7 +673,8 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
                 if j < len(diverse):
                     verse_id, context = diverse[j][:2]  # Handle both 3 and 4-tuple
                     kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
-                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                    gloss_str = gloss_context(context)
+                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* {gloss_str} — "{kjv_text}"')
                 else:
                     sample_cols.append('—')
             cat_lines.append(f'| {word} | {gloss} | {count:,} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')

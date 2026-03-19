@@ -131,6 +131,63 @@ def get_gloss(word: str) -> str:
     return '—'
 
 
+def gloss_context(context: str) -> str:
+    """
+    Add interlinear glossing to a Tedim context phrase.
+    Returns: "word1 word2 word3" → "(gloss1 gloss2 gloss3)"
+    
+    Uses postposition-aware glossing where pan/panin/tawh/tawhin
+    get their grammatical function glosses in this report context.
+    """
+    from analyze_morphemes import analyze_word
+    
+    # Postposition-specific overrides for this report context
+    POSTP_GLOSSES = {
+        'pan': 'ABL',           # from (ablative), not 'begin'
+        'panin': 'ABL-ERG',     # from (as agent)
+        'tawh': 'COM',          # with (comitative)
+        'tawhin': 'COM-ERG',    # with (as instrument)
+        'kha': 'month',         # Override NEG.PERF when likely 'month'
+    }
+    
+    # Clean context and split into words
+    words = context.split()
+    glosses = []
+    
+    for i, word in enumerate(words):
+        # Remove punctuation for analysis
+        clean = word.strip('.,;:!?"*')
+        if not clean:
+            continue
+        
+        clean_lower = clean.lower()
+        
+        # Check for postposition overrides
+        if clean_lower in POSTP_GLOSSES:
+            glosses.append(POSTP_GLOSSES[clean_lower])
+            continue
+        
+        # Check for 'kha' as month (when followed by number or 'khat')
+        if clean_lower == 'kha':
+            # Look ahead for number context
+            if i + 1 < len(words):
+                next_word = words[i + 1].strip('.,;:!?"*').lower()
+                if next_word in ('khat', 'nih', 'thum', 'li', 'nga', 'guk', 'sagih', 'giat', 'kua', 'sawm'):
+                    glosses.append('month')
+                    continue
+        
+        result = analyze_word(clean_lower)
+        if result and result[1] and '?' not in result[1]:
+            glosses.append(result[1])
+        else:
+            # Unknown word - use the word itself in brackets
+            glosses.append(f'[{clean}]')
+    
+    if glosses:
+        return f"({' '.join(glosses)})"
+    return ''
+
+
 def categorize_word(word: str) -> str:
     """
     Categorize a word into grammatical type.
@@ -470,8 +527,9 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
             for j in range(3):
                 if j < len(diverse):
                     _, verse_id, context, _, _ = diverse[j]
-                    kjv_text = kjv.get(verse_id, '')[:60] + ('...' if len(kjv.get(verse_id, '')) > 60 else '')
-                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                    kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
+                    gloss_str = gloss_context(context)
+                    sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* {gloss_str} — "{kjv_text}"')
                 else:
                     sample_cols.append('—')
             lines.append(f'| {word} | {count} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
@@ -551,7 +609,8 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
                     if j < len(diverse):
                         verse_id, context, form_type, full_word = diverse[j]
                         kjv_text = kjv.get(verse_id, '')[:50] + ('...' if len(kjv.get(verse_id, '')) > 50 else '')
-                        sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* — "{kjv_text}"')
+                        gloss_str = gloss_context(context)
+                        sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* {gloss_str} — "{kjv_text}"')
                     else:
                         sample_cols.append('—')
                 cat_lines.append(f'| {postp} | {count} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')

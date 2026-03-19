@@ -10835,7 +10835,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         "siampipuan'": ('siampi-puan\u2019', 'priest-cloth.POSS'),
         'ukpa\u2019': ('uk-pa\u2019', 'rule-father.POSS'),    # 9x
         "ukpa'": ('uk-pa\u2019', 'rule-father.POSS'),
-        'patna': ('pat-na', 'trust-NMLZ'),                    # 9x - "trust, faith"
+        'patna': ('pat-na', 'begin-NMLZ'),                    # 9x - "beginning, first (deed)"
         'cina-in': ('ci-na-in', 'say-NMLZ-ERG'),              # 9x - "saying"
         'ziate': ('zia-te', 'manner-PL'),                  # 9x - "his wives"
         
