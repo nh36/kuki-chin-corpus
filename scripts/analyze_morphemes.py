@@ -816,6 +816,9 @@ RELATOR_NOUNS = {
                          # langkhat = one side
     # Derived spatial relators
     'pualam': 'outside', # 62 as pualamah = outside (pua-lam = other-direction)
+    'langpang': 'against', # 39 standalone; 63 as langpangin
+                           # amah langpangin = against him
+                           # Etymology: lang 'side' + pang 'near' → adversative spatial
     # Note: These can combine with case markers and postpositions:
     # sung-ah (inside-LOC), sung pan (inside from), sung panin (inside from-ERG)
 }
