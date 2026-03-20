@@ -3,14 +3,14 @@
 Shared utilities for verb report generation.
 
 Provides common functions for loading Bible text, KJV translations,
-and finding diverse examples across books.
+and finding diverse examples across books with interlinear glossing.
 """
 
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from analyze_morphemes import analyze_word
+from analyze_morphemes import analyze_word, gloss_sentence
 
 # Book code to name mapping
 BOOK_NAMES = {
@@ -141,13 +141,33 @@ def find_diverse_examples(verses, kjv, pattern_check, limit=3, require_gospel=Tr
     return examples
 
 
-def format_example(ref, text, word, analysis, kjv_text):
-    """Format an example for markdown output."""
+def format_example(ref, text, word, analysis, kjv_text, show_gloss_tier=True):
+    """
+    Format an example for markdown output with interlinear glossing.
+    
+    Args:
+        ref: Verse reference (e.g., '01001001')
+        text: Full Tedim verse text
+        word: Target word being illustrated
+        analysis: Tuple of (segmented, gloss) from analyze_word
+        kjv_text: English KJV translation
+        show_gloss_tier: If True, include full interlinear gloss line
+    """
     lines = []
     lines.append(f"**{format_reference(ref)}**")
     lines.append(f"> {text}")
+    
+    # Add interlinear gloss tier
+    if show_gloss_tier:
+        glossed = gloss_sentence(text)
+        # Format as aligned interlinear (segmentation on one line, glosses below)
+        seg_parts = [g[1] for g in glossed]  # segmented forms
+        gloss_parts = [g[2] for g in glossed]  # glosses
+        lines.append(f"> *{' '.join(seg_parts)}*")
+        lines.append(f"> {' '.join(gloss_parts)}")
+    
     if kjv_text:
         lines.append(f"> KJV: *{kjv_text}*")
-    lines.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+    lines.append(f"> Target: *{word}* → {analysis[0]} → {analysis[1]}")
     lines.append("")
     return lines

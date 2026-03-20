@@ -231,8 +231,14 @@ def generate_report():
     for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        # Add interlinear gloss tier
+        glossed = gloss_sentence(text)
+        seg_parts = [g[1] for g in glossed]
+        gloss_parts = [g[2] for g in glossed]
+        report.append(f"> *{' '.join(seg_parts)}*")
+        report.append(f"> {' '.join(gloss_parts)}")
         report.append(f"> KJV: *{kjv_text}*")
-        report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+        report.append(f"> Target: *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
     # -ta (Perfective)
@@ -244,8 +250,13 @@ def generate_report():
     for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        glossed = gloss_sentence(text)
+        seg_parts = [g[1] for g in glossed]
+        gloss_parts = [g[2] for g in glossed]
+        report.append(f"> *{' '.join(seg_parts)}*")
+        report.append(f"> {' '.join(gloss_parts)}")
         report.append(f"> KJV: *{kjv_text}*")
-        report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+        report.append(f"> Target: *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
     # -zo (Completive)
@@ -257,8 +268,13 @@ def generate_report():
     for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        glossed = gloss_sentence(text)
+        seg_parts = [g[1] for g in glossed]
+        gloss_parts = [g[2] for g in glossed]
+        report.append(f"> *{' '.join(seg_parts)}*")
+        report.append(f"> {' '.join(gloss_parts)}")
         report.append(f"> KJV: *{kjv_text}*")
-        report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+        report.append(f"> Target: *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
     # -kik (Iterative)
@@ -270,8 +286,13 @@ def generate_report():
     for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        glossed = gloss_sentence(text)
+        seg_parts = [g[1] for g in glossed]
+        gloss_parts = [g[2] for g in glossed]
+        report.append(f"> *{' '.join(seg_parts)}*")
+        report.append(f"> {' '.join(gloss_parts)}")
         report.append(f"> KJV: *{kjv_text}*")
-        report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+        report.append(f"> Target: *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
     # -thei (Abilitative)
@@ -283,8 +304,13 @@ def generate_report():
     for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        glossed = gloss_sentence(text)
+        seg_parts = [g[1] for g in glossed]
+        gloss_parts = [g[2] for g in glossed]
+        report.append(f"> *{' '.join(seg_parts)}*")
+        report.append(f"> {' '.join(gloss_parts)}")
         report.append(f"> KJV: *{kjv_text}*")
-        report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+        report.append(f"> Target: *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
     # TAM stacking

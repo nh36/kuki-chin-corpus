@@ -228,7 +228,75 @@ CASE_MARKERS = {
     # panin: handled as pan-in (ABL-ERG) via suffix stripping
 }
 
-# TAM suffixes (Tense-Aspect-Mood)
+# =============================================================================
+# VP SLOT CATEGORIES
+# =============================================================================
+# The verbal template is: VERB-(DERIV)-(ASPECT)-(DIR)-(MODAL)
+# Each slot has its own dictionary for clear categorization
+
+# ASPECT SUFFIXES - mark viewpoint/completion of event
+ASPECT_SUFFIXES = {
+    'ta': 'PFV',        # Perfective (completed action)
+    'zo': 'COMPL',      # Completive (able to complete)
+    'kik': 'ITER',      # Iterative (again)
+    'nawn': 'CONT',     # Continuative (still doing)
+    'khin': 'IMM',      # Immediate (already/just)
+    'mang': 'COMPL',    # Completive (completely)
+    'kim': 'fully',     # Completive (fully)
+    'zawh': 'finish',   # Completive (finish V-ing)
+    'khit': 'COMPL',    # Sequential/completive
+    'to': 'CONT',       # Continuative
+}
+
+# DIRECTIONAL SUFFIXES - indicate path/direction of motion
+DIRECTIONAL_SUFFIXES = {
+    'khia': 'out',      # Outward motion
+    'khiat': 'away',    # Away from
+    'lut': 'in',        # Inward motion
+    'toh': 'up',        # Upward motion
+    'cip': 'down',      # Downward/tightly
+    'tang': 'arrive',   # Arrival at endpoint
+    'sawn': 'toward',   # Motion toward
+    'lam': 'DIR',       # General directional
+}
+
+# MODAL SUFFIXES - express modality (possibility, necessity, volition)
+MODAL_SUFFIXES = {
+    'ding': 'IRR',      # Irrealis/future
+    'thei': 'ABIL',     # Abilitative (can/able)
+    'theih': 'ABIL',    # Abilitative Form II
+    'nuam': 'want',     # Desiderative (want to)
+    'nop': 'want',      # Desiderative variant
+    'pah': 'NEG.ABIL',  # Negative ability
+    'pak': 'NEG.ABIL',  # Unable variant
+    'lawh': 'NEG.ABIL', # Unable
+    'kul': 'must',      # Deontic necessity
+    'lai': 'PROSP',     # Prospective (about to)
+    'mawk': 'perhaps',  # Dubitative
+    'ngei': 'EXP',      # Experiential (have done before)
+}
+
+# DERIVATIONAL SUFFIXES - change valency or add semantic content
+DERIVATIONAL_SUFFIXES = {
+    'sak': 'CAUS',      # Causative
+    'suk': 'CAUS',      # Causative variant
+    'pih': 'APPL',      # Applicative (benefactive)
+    'khawm': 'COM',     # Comitative (together)
+    'gawp': 'INTENS',   # Intensive (forcefully)
+    'nasa': 'INTENS',   # Intensive (strongly)
+    'zah': 'fear',      # Fear/respect
+    'hak': 'INTENS',    # Intensive variant
+    'tawm': 'DIMIN',    # Diminutive (a bit)
+    'khak': 'RES',      # Resultative
+    'zaw': 'MORE',      # Comparative
+    'lua': 'too',       # Excessive
+    'tel': 'each',      # Distributive
+    'khop': 'together', # Collective
+    'loh': 'NEG',       # Negative result
+    'suak': 'become',   # Inchoative
+}
+
+# Legacy TAM_SUFFIXES kept for backward compatibility
 TAM_SUFFIXES = {
     # Tense/Aspect markers
     'ding': 'IRR',    # Irrealis
