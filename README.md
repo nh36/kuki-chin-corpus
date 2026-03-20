@@ -133,22 +133,37 @@ Kuki-Chin/
 │   └── extracted/         # 20 language directories
 │       ├── eng/           # English KJV (reference)
 │       ├── ctd/           # Tedim Chin (primary analysis target)
-│       ├── bgr/           # Bawm Chin
-│       ├── ...            # Other languages
-│       └── czt-mbs/       # Zotung MBS 2002 (variant translation)
+│       └── ...            # Other languages
 ├── data/
 │   ├── verses_aligned.tsv
 │   ├── wordforms_by_language.tsv
-│   ├── language_stats.tsv
 │   └── lexicons/          # Bootstrap lexicons per language
-├── docs/                  # Methodology and analysis documentation
-│   ├── METHODOLOGY.md     # Replication guide for new languages
-│   ├── opaque_lexemes.md  # Transparent vs opaque compound analysis
-│   └── LESSONS_LEARNED.md # Error patterns and solutions
-├── tests/
-│   └── regression_tests.md  # 64 regression tests for analyzer
+├── docs/
+│   ├── README.md          # Documentation guide
+│   ├── SKELETON_GRAMMAR.md # Grammar overview
+│   ├── paradigms/         # Generated paradigm reports
+│   │   ├── 3-noun-*.md    # Nominal morphology (Ch 3)
+│   │   ├── 5-verb-*.md    # Verbal morphology (Ch 5)
+│   │   └── 7-nmlz-*.md    # Nominalization (Ch 7)
+│   ├── grammar/           # Reference materials
+│   │   ├── DISAMBIGUATION.md
+│   │   ├── MORPHEME_INVENTORY.md
+│   │   └── ...
+│   ├── methodology/       # How to build analyzers
+│   │   ├── METHODOLOGY.md
+│   │   ├── REPLICATION_GUIDE.md
+│   │   └── ...
+│   └── archive/           # Superseded documents
 ├── scripts/
-│   └── analyze_morphemes.py # Tedim analyzer (~17,000 lines)
+│   ├── README.md          # Script documentation
+│   ├── analyze_morphemes.py # Tedim analyzer (~19,000 lines)
+│   ├── generate_*_report.py # Report generators
+│   └── report_utils.py    # Shared report utilities
+├── tests/
+│   ├── test_coverage_reporting.py
+│   ├── test_vp_slots.py
+│   └── regression_tests.md
+├── analysis/              # Working analysis files
 ├── PROGRESS.md            # Development history
 └── README.md
 ```
