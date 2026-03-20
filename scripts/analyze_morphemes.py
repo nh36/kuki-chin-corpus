@@ -5619,7 +5619,26 @@ def get_word_class(word: str, gloss: str) -> str:
     """
     Determine the word class of a word based on its form and gloss.
     
-    Returns one of: DEM, N, N.PL, NUM, QUANT, PROP, COORD, CASE, GEN, REL, V, OTHER
+    Returns one of:
+    - DEM: Demonstrative (hih, tua)
+    - N: Noun
+    - N.PL: Plural noun
+    - N.PROP: Proper noun
+    - NUM: Numeral
+    - QUANT: Quantifier
+    - PROP: Property word (adjective-like)
+    - COORD: Coordinator (le)
+    - CASE: Case marker (in, ah, tawh, etc.)
+    - GEN: Genitive marker
+    - REL: Relator noun (tung, nuai, lai, etc.)
+    - V: Verb (lexical)
+    - V.AUX: Auxiliary verb (hi, om as copula)
+    - SUBORD: Subordinator (ciangin, hangin, leh, etc.)
+    - SFIN: Sentence-final particle (hi, hiam, hen)
+    - PRO: Pronoun
+    - ADV: Adverb
+    - NEG: Negation
+    - OTHER: Unclassified
     """
     word_lower = word.lower().rstrip('.,;:!?"\'')
     
@@ -5643,9 +5662,25 @@ def get_word_class(word: str, gloss: str) -> str:
     if word_lower in COORDINATOR:
         return 'COORD'
     
+    # Check subordinators
+    if word_lower in SUBORDINATORS:
+        return 'SUBORD'
+    
+    # Check negation
+    if word_lower in NEGATION or gloss in ('NEG', 'NEG.EMPH'):
+        return 'NEG'
+    
+    # Check agreement markers (standalone subject prefixes)
+    if gloss in ('1SG', '2SG', '3SG', '1PL', '2PL', '3PL', '1PL.INCL', '1PL.EXCL'):
+        return 'AGR'  # Agreement marker (proclitic to verb)
+    
+    # Check pronouns
+    if word_lower in PRONOUNS or gloss.endswith('.PRO') or gloss.endswith('.POSS'):
+        return 'PRO'
+    
     # Check case markers in gloss
-    case_endings = ('-ERG', '-LOC', '-COM', '-ABL', '-ALL', '-GEN')
-    case_glosses = ('ERG', 'LOC', 'COM', 'ABL', 'ALL')
+    case_endings = ('-ERG', '-LOC', '-COM', '-ABL', '-ALL', '-GEN', '-DAT', '-INS')
+    case_glosses = ('ERG', 'LOC', 'COM', 'ABL', 'ALL', 'DAT', 'INS', 'BEN')
     if any(gloss.endswith(e) for e in case_endings) or gloss in case_glosses:
         return 'CASE'
     
@@ -5657,16 +5692,86 @@ def get_word_class(word: str, gloss: str) -> str:
     if word_lower in RELATOR_NOUNS:
         return 'REL'
     
+    # Check sentence-final markers
+    if word_lower in SENTENCE_FINAL_MARKERS or gloss in ('DECL', 'Q', 'JUSS', 'HORT'):
+        return 'SFIN'
+    
+    # Check for verbs - multiple detection strategies
+    # 1. Verb stems in lexicon
+    if word_lower in VERB_STEMS:
+        return 'V'
+    
+    # 2. Verb with agreement prefix in gloss
+    if gloss.startswith(('1SG-', '2SG-', '3SG-', '1PL-', '2PL-', '3PL-', 'REFL-', '2→1', '3→1', '1→2', '1→3')):
+        return 'V'
+    
+    # 3. Verb stem markers in gloss (Form I/II, TAM, derivational)
+    verb_gloss_markers = ('.I', '.II', '-IRR', '-PFV', '-COMPL', '-ITER', '-CONT', '-CAUS', '-APPL', '-ABIL',
+                          '-exit', '-enter', '-up', '-down', '-out', '-in')  # directional suffixes
+    if any(m in gloss for m in verb_gloss_markers):
+        return 'V'
+    
+    # 4. Common verb glosses (base form before any suffix)
+    verb_glosses = {'see', 'hear', 'say', 'go', 'come', 'give', 'take', 'know', 'make', 'do',
+                    'exist', 'have', 'want', 'eat', 'drink', 'die', 'live', 'be.born', 'build',
+                    'rule', 'follow', 'help', 'love', 'believe', 'finish', 'divide', 'create',
+                    'cause', 'call', 'write', 'read', 'send', 'bring', 'carry', 'put', 'sit',
+                    'stand', 'lie', 'sleep', 'wake', 'rise', 'fall', 'run', 'walk', 'fly'}
+    gloss_base = gloss.split('-')[0].split('.')[0].lower()
+    if gloss_base in verb_glosses:
+        return 'V'
+    
+    # 5. Check if first component of compound is a verb stem
+    # e.g., khen-khia → divide-exit, where 'khen' is a verb
+    if '-' in gloss:
+        first_part = gloss.split('-')[0].lower()
+        if first_part in verb_glosses:
+            return 'V'
+        # Also check if first morpheme of segmentation is a verb
+        if '-' in word_lower:
+            first_morph = word_lower.split('-')[0]
+            if first_morph in VERB_STEMS:
+                return 'V'
+    
     # Check for plural nouns
     if '-PL' in gloss and not gloss.startswith('2/3'):
         return 'N.PL'
     
-    # Check for verbs (has agreement prefix)
-    if gloss.startswith(('1SG-', '2SG-', '3SG-', '1PL-', '2PL-', '3PL-', 'REFL-')):
-        return 'V'
+    # Check for proper nouns (all caps gloss = proper noun)
+    if gloss.isupper() and len(gloss) > 2 and not gloss.startswith(('1', '2', '3')):
+        return 'N.PROP'
     
     # Default to noun
     return 'N'
+
+
+# Subordinators - words that introduce subordinate clauses
+SUBORDINATORS = {
+    'ciangin': 'when',           # temporal - "when X happened"
+    'hangin': 'because',         # causal - "because of X"
+    'hanga': 'because.of',       # causal with object
+    'bangin': 'like',            # comparative - "like X"
+    'dingin': 'in.order.to',     # purpose
+    'ahih': 'being',             # "that being so"
+    'ahihmanin': 'therefore',    # consequence
+    'ahihleh': 'if.so',          # conditional
+    'zawkciangin': 'after',      # temporal sequence
+    'masaciangin': 'before',     # temporal precedence
+    'cianga': 'when',            # temporal variant
+}
+
+# Pronouns
+PRONOUNS = {
+    'kei': '1SG.PRO',            # I
+    'nang': '2SG.PRO',           # you (sg)
+    'amah': '3SG.PRO',           # he/she/it
+    'eite': '1PL.EXCL.PRO',      # we (exclusive)
+    'eimah': '1PL.EXCL.PRO',     # we (exclusive, emphatic)
+    'note': '2PL.PRO',           # you (pl)
+    'amaute': '3PL.PRO',         # they
+    'nangmah': '2SG.PRO.EMPH',   # you (emphatic)
+    'keimah': '1SG.PRO.EMPH',    # I (emphatic)
+}
 
 
 def analyze_np_structure(words: list) -> dict:
