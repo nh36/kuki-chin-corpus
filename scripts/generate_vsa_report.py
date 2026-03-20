@@ -21,7 +21,10 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from analyze_morphemes import analyze_word, gloss_sentence, VERB_STEMS
+from analyze_morphemes import (
+    analyze_word, gloss_sentence, VERB_STEMS,
+    detect_clause_boundaries, classify_clause, analyze_clause_structure
+)
 
 # =============================================================================
 # PSC to Tedim Cognate Mapping
@@ -168,7 +171,7 @@ def find_verb_position(words, stem):
 
 def classify_clause_type(text, stem):
     """
-    Classify the syntactic context of a verb occurrence.
+    Classify the syntactic context of a verb occurrence using enhanced clause detection.
     
     Returns one of:
     - 'affirmative': Affirmative main clause
@@ -176,44 +179,72 @@ def classify_clause_type(text, stem):
     - 'relative_as': A/S (subject/agent) relative clause
     - 'relative_p': P (patient/object) relative clause
     - 'subordinate': Subordinate clause (temporal/conditional/causal)
+    
+    Also returns verb form information.
     """
     words = text.split()
     words_lower = [w.lower().rstrip('.,;:!?"\'') for w in words]
     
     verb_idx = find_verb_position(words, stem)
     if verb_idx == -1:
-        return 'unknown'
+        return 'unknown', None
+    
+    verb_word = words_lower[verb_idx]
+    
+    # Determine verb form based on ending
+    # Form II often ends in -h, -k, -t (muh, zak, sit vs mu, za, si)
+    form = 'I'
+    if verb_word.endswith(('h', 'k', 't')) and verb_word != stem:
+        form = 'II'
     
     # Check for negation (within ±3 words of verb)
     for i in range(max(0, verb_idx - 3), min(len(words_lower), verb_idx + 4)):
         if words_lower[i] in NEGATION_MARKERS:
-            return 'negative'
+            return 'negative', form
     
-    # Check for subordinators
-    for sub in SUBORDINATORS:
-        if sub in words_lower:
-            return 'subordinate'
+    # Use enhanced clause detection
+    clause_analysis = analyze_clause_structure(text)
     
-    # Check for relative clause patterns
-    # Pattern 1: Verb + te/mi/pa/nu (likely A/S relative - "the one who Verbed")
-    # Pattern 2: Object + Verb-Form.II + na (likely P relative - "the thing that was Verbed")
+    # Find which clause contains our verb
+    for clause in clause_analysis['clauses']:
+        clause_start = clause.get('start', 0)
+        clause_end = clause.get('end', len(words) - 1)
+        
+        if clause_start <= verb_idx <= clause_end:
+            clause_type = clause['type']
+            
+            # Map clause types to VSA categories
+            if clause_type == 'temporal':
+                return 'subordinate', form
+            elif clause_type == 'causal':
+                return 'subordinate', form
+            elif clause_type == 'conditional':
+                return 'subordinate', form
+            elif clause_type == 'purpose':
+                return 'subordinate', form
+            elif clause_type == 'comparative':
+                return 'subordinate', form
+            elif clause_type == 'relative':
+                # Determine if A/S or P relative based on position
+                if verb_idx > 0:
+                    return 'relative_p', form
+                return 'relative_as', form
+    
+    # Check for relative clause patterns (verb + relativizer)
     if verb_idx < len(words_lower) - 1:
         next_word = words_lower[verb_idx + 1]
         if next_word in RELATIVE_MARKERS:
-            # Check if verb is Form II (ends in h/k/t)
-            verb_word = words_lower[verb_idx]
-            if verb_word.endswith(('h', 'k', 't', 'n')):
-                # More likely P relative if preceded by noun
-                if verb_idx > 0:
-                    return 'relative_p'
-            return 'relative_as'
+            # Form II before relativizer suggests P relative
+            if form == 'II':
+                return 'relative_p', form
+            return 'relative_as', form
     
-    # Check for 'a ... -h/-k/-t ... te' pattern (embedded relative)
-    for i, w in enumerate(words_lower):
-        if w in RELATIVE_MARKERS and i > verb_idx:
-            return 'relative_as'
+    # Check for subordinators anywhere in clause
+    for sub in SUBORDINATORS:
+        if sub in words_lower:
+            return 'subordinate', form
     
-    return 'affirmative'
+    return 'affirmative', form
 
 
 def get_verb_examples(verses, kjv, form1, form2, max_per_category=5):
@@ -221,6 +252,7 @@ def get_verb_examples(verses, kjv, form1, form2, max_per_category=5):
     Extract examples for a verb, categorized by syntactic context.
     
     Searches for both Form I and Form II stems.
+    Now also tracks detected verb form (I vs II) from morphology.
     """
     examples = {
         'affirmative': [],
@@ -229,6 +261,9 @@ def get_verb_examples(verses, kjv, form1, form2, max_per_category=5):
         'relative_p': [],
         'subordinate': [],
     }
+    
+    # Track form distribution for analysis
+    form_stats = {'I': 0, 'II': 0}
     
     stems = [form1]
     if form2 and form2 != form1:
@@ -244,14 +279,19 @@ def get_verb_examples(verses, kjv, form1, form2, max_per_category=5):
             matched = False
             for word in words_lower:
                 if word == stem or word.startswith(stem):
-                    clause_type = classify_clause_type(text, stem)
+                    clause_type, detected_form = classify_clause_type(text, stem)
+                    
+                    if detected_form:
+                        form_stats[detected_form] += 1
+                    
                     if clause_type in examples and len(examples[clause_type]) < max_per_category:
                         examples[clause_type].append({
                             'ref': ref,
                             'tedim': text,
                             'kjv': kjv.get(ref, ''),
                             'stem': stem,
-                            'form': 'I' if stem == form1 else 'II'
+                            'form': detected_form or ('I' if stem == form1 else 'II'),
+                            'clause_type': clause_type
                         })
                     matched = True
                     break

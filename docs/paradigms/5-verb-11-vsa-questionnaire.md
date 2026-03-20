@@ -28,17 +28,17 @@ by syntactic context.
 > 3SG beginning begin-ERG PASIAN ERG sky-on and land-on 3SG cause.birth DECL
 > KJV: *In the beginning God created the heaven and the earth.*
 
+**Genesis 1:2** (Form I)
+> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
+> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
+> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
+> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+
 **Genesis 1:4** (Form I)
 > Pasian in tua khuavak hoih hi, ci-in a mu hi. Pasian in khuamial panin khuavak
 > *Pasian in tua khuavak hoih hi ci-in a mu hi Pasian in khuamial pan-in khuavak*
 > PASIAN ERG that light good DECL say-QUOT 3SG see.I DECL PASIAN ERG darkness ABL-ERG light
 > KJV: *And God saw the light, that it was good: and God divided the light from the darkness.*
-
-**Genesis 1:5** (Form I)
-> Pasian in khuavak pen “Sun” ci a, khuamial pen “Zan” ci hi. Nitak hong bei-in,
-> *Pasian in khuavak pen Sun ci a khuamial pen zan ci hi Nitak hong bei-in*
-> PASIAN ERG light TOP SUN say 3SG darkness TOP break say DECL NITAK 3→1 finish-ERG
-> KJV: *And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.*
 
 ### Negative
 
@@ -62,39 +62,39 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:2** (Form I)
-> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
-> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
-> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
-> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+**Genesis 3:11** (Form I)
+> Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh
+> *Amah in Na guak-tang-a na om-na kua in hong gen ahi hiam Na nek lo-h*
+> 3SG.PRO ERG 2SG bare-body-LOC 2SG exist-NMLZ who ERG 3→1 speak be.3SG Q 2SG eat.II NEG-NOM
+> KJV: *And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?*
 
-**Genesis 1:29** (Form I)
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
-> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
-> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
-> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
+**Genesis 20:12** (Form I)
+> Tua tham loin a taktakin amah ka sanggamnu mah ahi hi. Pa kikhat, nu tuam
+> *Tua tham lo-in a taktak-in amah ka sanggam-nu mah ahi hi Pa kikhat nu tuam*
+> that moreover NEG-ERG 3SG surely-ERG 3SG.PRO 1SG sibling-female EMPH be.3SG DECL father one.heart female swell
+> KJV: *And yet indeed she is my sister; she is the daughter of my father, but not the daughter of my mother; and she became my wife.*
 
-**Genesis 2:7** (Form I)
-> Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu
-> *Topa Pasian in lei-lak pa-na leivui tawh mi-hing bawl a a nak sung-ah nuntak-na hu*
-> TOPA PASIAN ERG dust father-NMLZ dust COM person-kind make 3SG 3SG nose inside-LOC live-NMLZ help
-> KJV: *And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.*
+**Genesis 37:32** (Form I)
+> Amaute in a puantualpi bansau a pa uh kiangah puak uh a, “Hih puan ka
+> *Amaute in a puan-tual-pi ban-sau a pa uh kiang-ah puak uh a Hih puan ka*
+> 3PL.PRO ERG 3SG cloth-many.colored-big coat-long 3SG father 2/3PL beside-LOC send 2/3PL 3SG this cloth 1SG
+> KJV: *and they sent the coat of many colours, and they brought it to their father; and said, This have we found: know now whether it be thy son's coat or no...*
 
 ### P Relative
 
-**Genesis 5:29** (Form I)
+**Genesis 5:29** (Form II)
 > ama min Noah phuakin, “ Topa in a samsiatsa leitang panin hih pa in i
 > *ama min Noah phuak-in  Topa in a samsiat-sa lei-tang pan-in hih pa in i*
 > 3SG.POSS name NOAH utter-ERG  TOPA ERG 3SG destroy-PAST land-earth ABL-ERG this father ERG 1PL.INCL
 > KJV: *and he called his name Noah, saying, This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath c...*
 
-**Exodus 11:10** (Form I)
+**Exodus 11:10** (Form II)
 > Moses le Aaron in hih na lamdangte khempeuh Faro' mai-ah a bawl uh hi. Topa
 > *Moses le Aaron in hih na lam-dang-te khempeuh Faro' mai-ah a bawl uh hi Topa*
 > MOSES and AARON ERG this 2SG way-other-PL all FARO' face-LOC 3SG make 2/3PL DECL TOPA
 > KJV: *And Moses and Aaron did all these wonders before Pharaoh: and the LORD hardened Pharaoh's heart, so that he would not let the children of Israel go ou...*
 
-**Exodus 15:14** (Form I)
+**Exodus 15:14** (Form II)
 > Midangte in hih thu za khin uh a, amaute ling uh hi. Filistia-ah a teng
 > *Midangte in hih thu za khin uh a amaute ling uh hi Filistia-ah a teng*
 > MIDANGTE ERG this word hear IMM 2/3PL 3SG 3PL.PRO pile 2/3PL DECL FILISTIA-AH 3SG remain
@@ -128,19 +128,19 @@ by syntactic context.
 
 ### Affirmative
 
-**Genesis 1:1** (Form I)
+**Genesis 1:1** (Form II)
 > A kipat cil-in Pasian in vantung le leitung a piangsak hi
 > *A ki-pat cil-in Pasian in van-tung le lei-tung a piangsak hi*
 > 3SG beginning begin-ERG PASIAN ERG sky-on and land-on 3SG cause.birth DECL
 > KJV: *In the beginning God created the heaven and the earth.*
 
-**Genesis 1:12** (Form I)
+**Genesis 1:12** (Form II)
 > Leitung in kung tuamtuamte piangkhiasak a, kungnote in amau' nam ciatin tang piangsakin, singkung in
 > *lei-tung in kung tuam-tuam-te piang-khia-sak a kungno-te in amau' nam ciatin tang piangsak-in sing-kung in*
 > land-on ERG trunk different-REDUP-PL be.born-exit-CAUS 3SG herb-PL ERG 3PL.PRO.POSS nation each.kind.ERG embed cause.birth-ERG tree ERG
 > KJV: *And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and G...*
 
-**Genesis 1:20** (Form I)
+**Genesis 1:20** (Form II)
 > Pasian in, “Tuite in a nungta ganhing honpite piangsak hen la, vantung kantanin leitungah vasate
 > *Pasian in Tuite in a nung-ta ganhing hon-pi-te piangsak hen la van-tung kantan-in leitung-ah va-sa-te*
 > PASIAN ERG TUITE ERG 3SG life-PFV animal flock-big-PL cause.birth JUSS take sky-on cross.over-ERG earth-LOC go.and-PAST-PL
@@ -148,7 +148,7 @@ by syntactic context.
 
 ### Negative
 
-**Genesis 4:12** (Form I)
+**Genesis 4:12** (Form II)
 > Lo na khawh ciangin nang a dingin an hong piangsak nawn lo ding hi. Nang
 > *Lo na khawh ciang-in nang a ding-in an hong piangsak nawn lo ding hi Nang*
 > NEG 2SG able then-ERG 2SG.PRO 3SG IRR-ERG 3PL.POSS 3→1 cause.birth CONT NEG IRR DECL 2SG.PRO
@@ -168,13 +168,7 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:29** (Form I)
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
-> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
-> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
-> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
-
-**Genesis 10:29** (Form II)
+**Genesis 10:29** (Form I)
 > Ofir, Havilah, le Jobab' pianna pa ahi hi. Hihte khempeuh Joktan' tapate ahi hi
 > *Ofir Havilah le Jobab' pian-na pa ahi hi Hihte khempeuh Joktan' tapa-te ahi hi*
 > OFIR HAVILAH and JOBAB' birth-NMLZ father be.3SG DECL HIHTE all JOKTAN' son-PL be.3SG DECL
@@ -186,21 +180,27 @@ by syntactic context.
 > 1PL.INCL father and 2SG household-PL 2/3PL go.and take PL.IMP-and NEG.EMPH beside-LOC 3→1 go IMP.PL EGYPT
 > KJV: *and take your father and your households, and come unto me: and I will give you the good of the land of Egypt, and ye shall eat the fat of the land.*
 
+**Exodus 23:10** (Form I)
+> “Note in na leitang uhah kum guk sung khai tuhin a piangte na kaikhawm ding
+> *Note in na lei-tang uhah kum guk sung khai tuh-in a piang-te na kai-khawm ding*
+> 2PL.PRO ERG 2SG land-earth 2/3PL.LOC year six inside hang sit-ERG 3SG be.born-PL 2SG call-gather IRR
+> KJV: *And six years thou shalt sow thy land, and shalt gather in the fruits thereof:*
+
 ### P Relative
 
-**Job 19:6** (Form I)
+**Job 19:6** (Form II)
 > Hih thu hong piangsak pa Pasian ahihlam mu thei lo na hi hiam? Kei hong
 > *Hih thu hong piangsak pa Pasian a-hih-lam mu thei lo na hi hiam Kei hong*
 > this word 3→1 cause.birth father PASIAN 3SG-be-way see.I know NEG 2SG DECL Q NEG.EMPH 3→1
 > KJV: *Know now that God hath overthrown me, And hath compassed me with his net.*
 
-**Job 34:19** (Form I)
+**Job 34:19** (Form II)
 > Pasian pen mi khempeuh a hong piangsak pa hi a, amah in uliante panpih tuan
 > *Pasian pen mi khempeuh a hong piangsak pa hi a amah in ulian-te pan-pih tuan*
 > PASIAN TOP person all 3SG 3→1 cause.birth father DECL 3SG 3SG.PRO ERG elder-PL plead-APPL ride
 > KJV: *How much less to him that accepteth not the persons of princes, Nor regardeth the rich more than the poor? For they all are the work of his hands.*
 
-**Job 40:19** (Form I)
+**Job 40:19** (Form II)
 > “Ganhing khempeuh lak pan a lamdang pen hi a, amah a Piangsak pa bek mah
 > *Ganhing khempeuh lak pan a lam-dang pen hi a amah a Piangsak pa bek mah*
 > animal all among ABL 3SG other.way TOP DECL 3SG 3SG.PRO 3SG cause.birth father only EMPH
@@ -220,7 +220,7 @@ by syntactic context.
 > PASIAN ERG VANTUNGTE below-LOC exist water-PL place one-LOC REFL-gather JUSS take buy dry REFL-dry JUSS
 > KJV: *And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.*
 
-**Genesis 1:11** (Form I)
+**Genesis 1:11** (Form II)
 > Pasian in, “Leitung in kung tuamtuamte piangsak hen la, tang a nei kungnote, a gah
 > *Pasian in lei-tung in kung tuam-tuam-te piangsak hen la tang a nei kungno-te a gah*
 > PASIAN ERG land-on ERG trunk different-REDUP-PL cause.birth JUSS take embed 3SG have herb-PL 3SG branch
@@ -234,7 +234,7 @@ by syntactic context.
 
 ### Affirmative
 
-**1 Chronicles 4:20** (Form I)
+**1 Chronicles 4:20** (Form II)
 > Shimon' tapate: Amnon, Rinnah, Benhanan, le Tilon ahi uh hi. Ishi' tapate: Zoheth le Benzoheth
 > *Shimon' tapa-te Amnon Rinnah Benhanan le Tilon ahi uh hi Ishi' tapa-te Zoheth le Benzoheth*
 > SHIMON' son-PL AMNON RINNAH BENHANAN and TILON be.3SG 2/3PL DECL ISHI' son-PL ZOHETH and BENZOHETH
@@ -304,25 +304,11 @@ by syntactic context.
 
 ### A/S Relative
 
-**Exodus 28:27** (Form I)
-> Kham kual nih na bawl ding a, siampipuan liangkaih nihte' nuai a mailam, hoihtakin a
-> *Kham kual nih na bawl ding a siampi-puan liang-kaih nih-te' nuai a mailam hoih-tak-in a*
-> gold ring two 2SG make IRR 3SG priest-cloth shoulder-join two-PL.POSS below 3SG front good-exact-ERG 3SG
-> KJV: *And two other rings of gold thou shalt make, and shalt put them on the two sides of the ephod underneath, toward the forepart thereof, over against th...*
-
-**Exodus 32:21** (Form I)
-> Moses in Aaron kiangah, “Amaute' tungah khialhna lianpi khat na tunpih nadingin hih mite in
-> *Moses in Aaron kiang-ah Amaute' tung-ah khialh-na lianpi khat na tun-pih nadingin hih mi-te in*
-> MOSES ERG AARON beside-LOC AMAUTE' on-LOC wrong-NMLZ army one 2SG arrive-APPL PURP.ERG this person-PL ERG
-> KJV: *And Moses said unto Aaron, What did this people unto thee, that thou hast brought so great a sin upon them?*
-
 **Leviticus 19:15** (Form I)
 > “Note in thukhenna-ah thu a tang loin na khen kei ding uh hi. Mizawngte langgen
 > *Note in thu-khen-na-ah thu a tang lo-in na khen kei ding uh hi Mizawngte lang-gen*
 > 2PL.PRO ERG word-judge-NMLZ-LOC word 3SG embed NEG-ERG 2SG divide NEG.EMPH IRR 2/3PL DECL MIZAWNGTE side-speak
 > KJV: *Ye shall do no unrighteousness in judgment: thou shalt not respect the person of the poor, nor honour the person of the mighty: but in righteousness s...*
-
-### P Relative
 
 **Numbers 35:25** (Form I)
 > A phulapa' khutsung panin mihonpi in mi that pa honkhia-in, mihonpi in amah a va
@@ -336,11 +322,9 @@ by syntactic context.
 > priest-great great-SUPER father 3SG die self-ERG ambush-NMLZ city-LOC 3SG rebuke-PAST man 3SG land-LOC 3SG return-ITER
 > KJV: *And ye shall take no satisfaction for him that is fled to the city of his refuge, that he should come again to dwell in the land, until the death of t...*
 
-**2 Kings 22:4** (Form I)
-> “Kongcingte in mite tung panin a kaihkhop uh ahi Topa' biakinn sungah hong kipaipih sum
-> *Kongcingte in mi-te tung pan-in a kaih-khop uh ahi Topa' biak-inn sung-ah hong ki-paipih sum*
-> KONGCINGTE ERG person-PL on ABL-ERG 3SG gather-together 2/3PL be.3SG TOPA' worship-house inside-LOC 3→1 REFL-accompany extinguish
-> KJV: *Go up to Hilkiah the high priest, that he may sum the silver which is brought into the house of the LORD , which the keepers of the door have gathered...*
+### P Relative
+
+*No examples found in corpus.*
 
 ### Subordinate Clause
 
@@ -410,26 +394,6 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 49:17** (Form I)
-> Dan pen lampi-ah gulpi hi ding a, sul gei-ah gulgu nei hi ding hi. Sakol'
-> *Dan pen lampi-ah gul-pi hi ding a sul gei-ah gul-gu nei hi ding hi Sakol'*
-> DAN TOP way-LOC serpent-great DECL IRR 3SG snake edge-LOC coil-bite have DECL IRR DECL SAKOL'
-> KJV: *Dan shall be a serpent by the way, An adder in the path, That biteth the horse heels, So that his rider shall fall backward.*
-
-**Exodus 27:2** (Form I)
-> A kiu lite-ah ki na bawl ding hi. A kite pen a biakna tau tawh
-> *A kiu li-te-ah ki na bawl ding hi A ki-te pen a biak-na tau tawh*
-> 3SG corner four-PL-LOC REFL 2SG make IRR DECL 3SG REFL-PL TOP 3SG worship-NMLZ signal COM
-> KJV: *And thou shalt make the horns of it upon the four corners thereof: his horns shall be of the same: and thou shalt overlay it with brass.*
-
-**Exodus 29:6** (Form I)
-> Ama lu tungah dialpi khim sakin, dialpi tungah kumpi lukhu siangtho na khusak ding hi
-> *Ama lu tung-ah dial-pi khim sak-in dial-pi tung-ah kumpi lu-khu siangtho na khu-sak ding hi*
-> AMA head on-LOC call-big edge cause-ERG call-big on-LOC king head-crown holy 2SG smoke-CAUS IRR DECL
-> KJV: *and thou shalt put the mitre upon his head, and put the holy crown upon the mitre.*
-
-### P Relative
-
 **Ezekiel 16:39** (Form I)
 > Na lunggulh mite' khut sungah kong pia ding a, na paktat gamtatna munte le na
 > *Na lung-gulh mite' khut sung-ah kong pia ding a na paktat gamtat-na mun-te le na*
@@ -447,6 +411,10 @@ by syntactic context.
 > *Tua hi a Oholibah aw Egypt gam-ah nung-ak-in na om-lai-in na nawi hong ki-nuai-gawp sak-in*
 > that DECL 3SG OHOLIBAH voice EGYPT land-LOC live-dwell-ERG 2SG rest-still-INST 2SG butter 3→1 REFL-below-INTENS cause-ERG
 > KJV: *Thus thou calledst to remembrance the lewdness of thy youth, in bruising thy teats by the Egyptians for the paps of thy youth.*
+
+### P Relative
+
+*No examples found in corpus.*
 
 ### Subordinate Clause
 
@@ -482,21 +450,21 @@ by syntactic context.
 > 3SG beginning begin-ERG PASIAN ERG sky-on and land-on 3SG cause.birth DECL
 > KJV: *In the beginning God created the heaven and the earth.*
 
+**Genesis 1:2** (Form I)
+> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
+> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
+> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
+> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+
 **Genesis 1:10** (Form I)
 > Pasian in lei keu pen “Leitung” ci a, a kikaikhawm tuite pen “Tuipi” ci hi
 > *Pasian in lei keu pen lei-tung ci a a ki-kai-khawm tui-te pen tui-pi ci hi*
 > PASIAN ERG buy dry TOP land-on say 3SG 3SG assembly water-PL TOP water-big say DECL
 > KJV: *And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it was good.*
 
-**Genesis 1:12** (Form I)
-> Leitung in kung tuamtuamte piangkhiasak a, kungnote in amau' nam ciatin tang piangsakin, singkung in
-> *lei-tung in kung tuam-tuam-te piang-khia-sak a kungno-te in amau' nam ciatin tang piangsak-in sing-kung in*
-> land-on ERG trunk different-REDUP-PL be.born-exit-CAUS 3SG herb-PL ERG 3PL.PRO.POSS nation each.kind.ERG embed cause.birth-ERG tree ERG
-> KJV: *And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and G...*
-
 ### Negative
 
-**Genesis 4:10** (Form I)
+**Genesis 4:10** (Form II)
 > Topa in, “Bang hangin hici gamtat na hi hiam? Na sanggampa' sisan, leilak panin kei
 > *Topa in Bang hang-in hi-ci gam-tat na hi hiam Na sanggampa' sisan lei-lak pan-in kei*
 > TOPA ERG like because-ERG this-say land-rule 2SG DECL Q 2SG brother.POSS blood dust ABL-ERG NEG.EMPH
@@ -516,39 +484,39 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:2** (Form I)
-> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
-> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
-> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
-> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+**Genesis 20:15** (Form I)
+> Abimelek in, “En in, ka leitang, na mai-ah om hi. Nangmah in hoih na sakna
+> *Abimelek in En in ka lei-tang na mai-ah om hi Nangmah in hoih na sak-na*
+> ABIMELEK ERG look ERG 1SG land-earth 2SG face-LOC exist DECL 2SG.PRO ERG good 2SG cause-NMLZ
+> KJV: *And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee.*
 
-**Genesis 1:29** (Form I)
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
-> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
-> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
-> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
+**Genesis 28:4** (Form I)
+> Pasian in Abraham' tunga a piak, tawlkhat sung na omna leitang na neih theih nadingin
+> *Pasian in Abraham' tung-a a piak tawlkhat sung na om-na lei-tang na nei-h theih nadingin*
+> PASIAN ERG ABRAHAM' on-3SG 3SG give.to little inside 2SG exist-NMLZ land-earth 2SG have-NOM know.II PURP.ERG
+> KJV: *and give thee the blessing of Abraham, to thee, and to thy seed with thee; that thou mayest inherit the land wherein thou art a stranger, which God ga...*
 
-**Genesis 2:5** (Form I)
-> Topa Pasian in leitungah guah zusak nai lo a, leitang a kho ding mi om
-> *Topa Pasian in leitung-ah guah zu-sak nai lo a lei-tang a kho ding mi om*
-> TOPA PASIAN ERG earth-LOC rain wine-CAUS near NEG 3SG land-earth 3SG labor IRR person exist
-> KJV: *and every plant of the field before it was in the earth, and every herb of the field before it grew: for the LORD God had not caused it to rain upon t...*
+**Exodus 23:30** (Form I)
+> Note khangin tampi pha-in leitang na luah matengun note' mai panin tawm tawmin amaute ka
+> *Note khang-in tampi pha-in lei-tang na luah mateng-un note' mai pan-in tawm tawm-in amaute ka*
+> 2PL.PRO generation-ERG many branch-ERG land-earth 2SG carry until-PL.IMP 2PL.PRO.POSS face ABL-ERG produce DIMIN-ERG 3PL.PRO 1SG
+> KJV: *By little and little I will drive them out from before thee, until thou be increased, and inherit the land.*
 
 ### P Relative
 
-**Genesis 45:10** (Form I)
+**Genesis 45:10** (Form II)
 > Goshen leitangah na teng ding a, nang le na tate' tate le na tuuhonte le
 > *Goshen leitang-ah na teng ding a nang le na tate' ta-te le na tuuhon-te le*
 > GOSHEN earth-LOC 2SG remain IRR 3SG 2SG.PRO and 2SG child-PL.POSS child-PL and 2SG poor.person-PL and
 > KJV: *and thou shalt dwell in the land of Goshen, and thou shalt be near unto me, thou, and thy children, and thy children's children, and thy flocks, and t...*
 
-**Deuteronomy 4:32** (Form I)
+**Deuteronomy 4:32** (Form II)
 > “Pasian in leitungah mi a piansak ni a kipan, note' pian' ma-a hun beisa thu
 > *Pasian in leitung-ah mi a pian-sak ni a ki-pan note' pian' ma-a hun bei-sa thu*
 > PASIAN ERG earth-LOC person 3SG create-CAUS day 3SG REFL-begin 2PL.PRO.POSS birth.POSS that-LOC time end-PERF word
 > KJV: *For ask now of the days that are past, which were before thee, since the day that God created man upon the earth, and ask from the one side of heaven ...*
 
-**Deuteronomy 12:1** (Form I)
+**Deuteronomy 12:1** (Form II)
 > “Hihte pen, leitungah na nuntak laiteng uh Topa, na pu na pate uh Pasian in
 > *Hihte pen leitung-ah na nuntak lai-teng uh Topa na pu na pa-te uh Pasian in*
 > HIHTE TOP earth-LOC 2SG live middle-at 2/3PL TOPA 2SG grandfather 2SG male-PL 2/3PL PASIAN ERG
@@ -562,7 +530,7 @@ by syntactic context.
 > PASIAN ERG VANTUNGTE below-LOC exist water-PL place one-LOC REFL-gather JUSS take buy dry REFL-dry JUSS
 > KJV: *And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.*
 
-**Genesis 1:11** (Form I)
+**Genesis 1:11** (Form II)
 > Pasian in, “Leitung in kung tuamtuamte piangsak hen la, tang a nei kungnote, a gah
 > *Pasian in lei-tung in kung tuam-tuam-te piangsak hen la tang a nei kungno-te a gah*
 > PASIAN ERG land-on ERG trunk different-REDUP-PL cause.birth JUSS take embed 3SG have herb-PL 3SG branch
@@ -588,13 +556,13 @@ by syntactic context.
 > ADAH ERG child-male JABAL have DECL 3SG.PRO TOP cloth-cover-PL inside-LOC dwell-ERG animal 3SG have-PL.POSS birth-NMLZ
 > KJV: *And Adah bare Jabal: he was the father of such as dwell in tents, and of such as have cattle.*
 
-**Genesis 7:11** (Form II)
+**Genesis 7:11** (Form I)
 > Noah' nuntak kum zaguk kum, a kha nihna, tua kha ni sawm le sagih ni-in
 > *Noah' nuntak kum zaguk kum a kha nih-na tua kha ni sawm le sagih ni-in*
 > NOAH' live year winepress year 3SG NEG.PERF two-NMLZ that NEG.PERF day ten and seven day-ERG
 > KJV: *In the six hundredth year of Noah's life, in the second month, the seventeenth day of the month, the same day were all the fountains of the great deep...*
 
-**Genesis 9:21** (Form I)
+**Genesis 9:21** (Form II)
 > Amah in leenggahzu ne-in kham a, a puanbuk sungah bangmah silh loin a lum hi
 > *Amah in leeng-gah-zu ne-in kham a a puan-buk sung-ah bangmah silh lo-in a lum hi*
 > 3SG.PRO ERG grape.juice eat-ERG gold 3SG 3SG cloth-shelter inside-LOC nothing clothe NEG-ERG 3SG round DECL
@@ -602,7 +570,7 @@ by syntactic context.
 
 ### Negative
 
-**Genesis 27:13** (Form II)
+**Genesis 27:13** (Form I)
 > A nu in ama kiangah, “Nangma thuak ding samsiatna kei tungah hong tung ta hen,
 > *A nu in ama kiang-ah Nangma thuak ding samsiat-na kei tung-ah hong tung ta hen*
 > 3SG female ERG 3SG.POSS beside-LOC 2SG.self suffer IRR destroy-NMLZ NEG.EMPH on-LOC 3→1 on child JUSS
@@ -614,7 +582,7 @@ by syntactic context.
 > that be.3SG.REL then-ERG 2SG.PRO.POSS on father-NMLZ 1SG reward 3SG EN IRR-ERG 2→1 go then-ERG 1SG
 > KJV: *So shall my righteousness answer for me in time to come, when it shall come for my hire before thy face: every one that is not speckled and spotted am...*
 
-**Genesis 31:39** (Form II)
+**Genesis 31:39** (Form I)
 > Gamlak ganhingte' balzante, nang' kiangah kong puak kei hi. Tua banga supnate kei mahmah in
 > *Gamlak ganhingte' balzan-te nang' kiang-ah kong puak kei hi Tua bang-a supna-te kei mahmah in*
 > GAMLAK animal-PL.POSS torn.by.beasts-PL 2SG.PRO.POSS beside-LOC 1SG→3 send NEG.EMPH DECL that what-LOC loss-PL NEG.EMPH very ERG
@@ -622,47 +590,47 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 13:3** (Form I)
-> Amah Negeb gam pan kipanin Bethel ciang dong, a kipat cil-in a puanbuk omnasa mun
-> *Amah Negeb gam pan ki-pan-in Bethel ciang dong a ki-pat cil-in a puan-buk om-na-sa mun*
-> 3SG.PRO NEGEB land ABL from BETHEL then until 3SG beginning begin-ERG 3SG cloth-shelter be-NMLZ-animal place
-> KJV: *And he went on his journeys from the south even to Beth-el, unto the place where his tent had been at the beginning, between Beth-el and Hai;*
+**Exodus 25:11** (Form I)
+> Nangmah in kham citak tawh tua singkuang na zut ding a, a sung le a
+> *Nangmah in kham ci-tak tawh tua sing-kuang na zut ding a a sung le a*
+> 2SG.PRO ERG gold say-true COM that wood-box 2SG overlay IRR 3SG 3SG inside and 3SG
+> KJV: *And thou shalt overlay it with pure gold, within and without shalt thou overlay it, and shalt make upon it a crown of gold round about.*
 
-**Genesis 24:53** (Form I)
-> Nasempa in ngun le kham kizepnate le puante hong suahkhia-in Rebekah a pia hi. A
-> *nasem-pa in ngun le kham ki-zep-na-te le puan-te hong suah-khia-in Rebekah a pia hi A*
-> servant-male ERG silver and gold REFL-join-NMLZ-PL and cloth-PL 3→1 birth-out-ERG REBEKAH 3SG give DECL 3SG
-> KJV: *And the servant brought forth jewels of silver, and jewels of gold, and raiment, and gave them to Rebekah: he gave also to her brother and to her moth...*
+**Exodus 30:33** (Form I)
+> Tua tawh a kibangin a bawl mi peuhmah ahi a, a pualam mi khatpeuh tuate
+> *Tua tawh a kibang-in a bawl mi peuhmah ahi a a pualam mi khat-peuh tua-te*
+> that COM 3SG be.alike-ERG 3SG make person whosoever be.3SG 3SG 3SG outside person one-every DIST-PL
+> KJV: *Whosoever compoundeth any like it, or whosoever putteth any of it upon a stranger, shall even be cut off from his people.*
 
-**Genesis 37:32** (Form II)
-> Amaute in a puantualpi bansau a pa uh kiangah puak uh a, “Hih puan ka
-> *Amaute in a puan-tual-pi ban-sau a pa uh kiang-ah puak uh a Hih puan ka*
-> 3PL.PRO ERG 3SG cloth-many.colored-big coat-long 3SG father 2/3PL beside-LOC send 2/3PL 3SG this cloth 1SG
-> KJV: *and they sent the coat of many colours, and they brought it to their father; and said, This have we found: know now whether it be thy son's coat or no...*
+**Leviticus 13:46** (Form I)
+> Amah in a natna a neih laiteng a nin hi ding hi. Amah a nin
+> *Amah in a nat-na a nei-h lai-teng a nin hi ding hi Amah a nin*
+> 3SG.PRO ERG 3SG ill-NMLZ 3SG have-NOM middle-at 3SG day DECL IRR DECL 3SG.PRO 3SG day
+> KJV: *All the days wherein the plague shall be in him he shall be defiled; he is unclean: he shall dwell alone; without the camp shall his habitation be .*
 
 ### P Relative
 
-**Exodus 26:11** (Form I)
+**Exodus 26:11** (Form II)
 > Tua pen bup khat a suah theih nadingin nangmah in sumngo kilhna sawmnga bawlin, a
 > *Tua pen bup khat a suah theih nadingin nangmah in sum-ngo kilh-na sawm-nga bawl-in a*
 > that TOP all one 3SG SUAH know.II PURP.ERG 2SG.PRO ERG brass-iron join-NMLZ ten-five make-ERG 3SG
 > KJV: *And thou shalt make fifty taches of brass, and put the taches into the loops, and couple the tent together, that it may be one.*
 
-**Deuteronomy 24:11** (Form I)
+**Deuteronomy 24:11** (Form II)
 > A pualamah na ding ding uh a, leitawi na piakna mipa in nang kiangah a
 > *A pualam-ah na ding ding uh a leitawi na piak-na mipa in nang kiang-ah a*
 > 3SG outside-LOC 2SG IRR IRR 2/3PL 3SG lend 2SG give.to-NMLZ man ERG 2SG.PRO beside-LOC 3SG
 > KJV: *Thou shalt stand abroad, and the man to whom thou dost lend shall bring out the pledge abroad unto thee.*
 
-**1 Samuel 4:17** (Form II)
-> A thu hong puak pa in dawngin, “Filistia mite' mai-ah Israel-te tai uh a, mi
-> *A thu hong puak pa in dawng-in Filistia mite' mai-ah Israel-te tai uh a mi*
-> 3SG word 3→1 send father ERG receive-ERG FILISTIA person-PL.POSS face-LOC ISRAEL-TE check 2/3PL 3SG person
-> KJV: *And the messenger answered and said, Israel is fled before the Philistines, and there hath been also a great slaughter among the people, and thy two s...*
+**1 Chronicles 5:6** (Form II)
+> le a tapa Beerah hi a, Assiria kumpipa Tiglathpileser in amau' minam makai Beerah manin
+> *le a ta-pa Beerah hi a Assiria kumpi-pa Tiglathpileser in amau' mi-nam makai Beerah man-in*
+> and 3SG child-male BEERAH DECL 3SG ASSIRIA king-male TIGLATHPILESER ERG 3PL.PRO.POSS person-kind prince BEERAH reason-ERG
+> KJV: *Beerah his son, whom Tilgath-pilneser king of Assyria carried away captive: he was prince of the Reubenites.*
 
 ### Subordinate Clause
 
-**Genesis 3:7** (Form I)
+**Genesis 3:7** (Form II)
 > A nek khit phetun amau tegel in khua phawk uh a, a guaktangin a omlam
 > *A nek khit phetun amau tegel in khua phawk uh a a guak-tang-in a om-lam*
 > 3SG eat.II SEQ hear 3PL.PRO both ERG town remember 2/3PL 3SG 3SG back-toward-ERG 3SG exist-side
@@ -728,23 +696,7 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 3:11** (Form I)
-> Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh
-> *Amah in Na guak-tang-a na om-na kua in hong gen ahi hiam Na nek lo-h*
-> 3SG.PRO ERG 2SG bare-body-LOC 2SG exist-NMLZ who ERG 3→1 speak be.3SG Q 2SG eat.II NEG-NOM
-> KJV: *And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?*
-
-**Genesis 3:15** (Form I)
-> Nang le numei kikal na suanlekhakte le ama suanlekhakte kikalah kilangneihna ka omsak ding hi
-> *Nang le nu-mei ki-kal na suanlekhak-te le ama suanlekhak-te ki-kal-ah ki-lang-neih-na ka om-sak ding hi*
-> 2SG.PRO and woman REFL-middle 2SG genealogy-PL and 3SG.POSS genealogy-PL REFL-middle-LOC REFL-appear-have-NMLZ 1SG exist-CAUS IRR DECL
-> KJV: *and I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.*
-
-**Genesis 9:5** (Form I)
-> Mi khatpeuh in hong thah le ama tungah sihna dan ka pia ding hi. A
-> *Mi khat-peuh in hong thah le ama tung-ah sih-na dan ka pia ding hi A*
-> person one-every ERG 3→1 slay and 3SG.POSS on-LOC blood-NMLZ manner 1SG give IRR DECL 3SG
-> KJV: *And surely your blood of your lives will I require; at the hand of every beast will I require it, and at the hand of man; at the hand of every man's b...*
+*No examples found in corpus.*
 
 ### P Relative
 
@@ -784,17 +736,17 @@ by syntactic context.
 > 2PL.PRO ERG TOPA' on-LOC worship-NMLZ 2SG give IRR 2/3PL DECL 3SG give want whosoever ERG
 > KJV: *Take ye from among you an offering unto the LORD : whosoever is of a willing heart, let him bring it, an offering of the LORD ; gold, and silver, and ...*
 
-**Deuteronomy 33:12** (Form I)
-> Benjamin minamte' thu genin, “ Topa in a it mipa ama kiangah nuam takin om
-> *Benjamin minamte' thu gen-in  Topa in a it mipa ama kiang-ah nuam takin om*
-> BENJAMIN nation-PL.POSS word speak-ERG  TOPA ERG 3SG love man 3SG.POSS beside-LOC want really exist
-> KJV: *And of Benjamin he said, The beloved of the LORD shall dwell in safety by him; And the LORD shall cover him all the day long, And he shall dwell betwe...*
+**Exodus 35:29** (Form I)
+> Topa in Moses tunga a thupiaksa nasep nadingin na khat peuhpeuh a pia nuam numei
+> *Topa in Moses tung-a a thu-piak-sa nasep nadingin na khat peuhpeuh a pia nuam nu-mei*
+> TOPA ERG MOSES on-3SG 3SG word-give-PL.POSS work PURP.ERG 2SG one every 3SG give want woman
+> KJV: *The children of Israel brought a willing offering unto the LORD , every man and woman, whose heart made them willing to bring for all manner of work, ...*
 
-**Deuteronomy 33:23** (Form I)
-> Naftali minamte thu genin, “O Naftali, maipha tawh nuam a sa, Topa' thupha tawh a
-> *Naftali mi-nam-te thu gen-in O Naftali mai-pha tawh nuam a sa Topa' thu-pha tawh a*
-> NAFTALI person-kind-PL word speak-ERG O NAFTALI face-good COM want 3SG flesh TOPA' word-good COM 3SG
-> KJV: *And of Naphtali he said, O Naphtali, satisfied with favour, And full with the blessing of the LORD : Possess thou the west and the south.*
+**Deuteronomy 1:26** (Form I)
+> “Ahi zongin note paito nuam loin, Topa na Pasian un hong thupiak na nial uh
+> *Ahi zong-in note pai-to nuam lo-in Topa na Pasian un hong thupiak na nial uh*
+> be.3SG although-ERG 2PL.PRO go-UP want NEG-ERG TOPA 2SG PASIAN IMP.PL 3→1 commandment 2SG deny 2/3PL
+> KJV: *Notwithstanding ye would not go up, but rebelled against the commandment of the LORD your God:*
 
 ### Negative
 
@@ -824,37 +776,25 @@ by syntactic context.
 > ISRAEL person-PL ERG carry-pass 3SG strike count-ERG MOSES ERG cloth-shelter take-ERG carry-pass ABL-ERG 3SG wilderness
 > KJV: *And Moses took the tabernacle, and pitched it without the camp, afar off from the camp, and called it the Tabernacle of the congregation. And it came ...*
 
-**Exodus 35:29** (Form I)
-> Topa in Moses tunga a thupiaksa nasep nadingin na khat peuhpeuh a pia nuam numei
-> *Topa in Moses tung-a a thu-piak-sa nasep nadingin na khat peuhpeuh a pia nuam nu-mei*
-> TOPA ERG MOSES on-3SG 3SG word-give-PL.POSS work PURP.ERG 2SG one every 3SG give want woman
-> KJV: *The children of Israel brought a willing offering unto the LORD , every man and woman, whose heart made them willing to bring for all manner of work, ...*
-
-**Deuteronomy 1:26** (Form I)
-> “Ahi zongin note paito nuam loin, Topa na Pasian un hong thupiak na nial uh
-> *Ahi zong-in note pai-to nuam lo-in Topa na Pasian un hong thupiak na nial uh*
-> be.3SG although-ERG 2PL.PRO go-UP want NEG-ERG TOPA 2SG PASIAN IMP.PL 3→1 commandment 2SG deny 2/3PL
-> KJV: *Notwithstanding ye would not go up, but rebelled against the commandment of the LORD your God:*
-
-### P Relative
-
 **Deuteronomy 5:33** (Form I)
 > Note nungta-in, nuamsa-in na luah ding uh leitangah sawtpi na nuntak nadingun Topa na Pasian
 > *Note nung-ta-in nuam-sa-in na luah ding uh leitang-ah sawt-pi na nuntak na-ding-un Topa na Pasian*
 > 2PL.PRO life-PFV-ERG want-early-ERG 2SG carry IRR 2/3PL earth-LOC long-big 2SG live 2SG-IRR-IMP TOPA 2SG PASIAN
 > KJV: *Ye shall walk in all the ways which the LORD your God hath commanded you, that ye may live, and that it may be well with you, and that ye may prolong ...*
 
-**Job 11:19** (Form I)
-> Kuamah kihtak nei loin nuamtakin na om ding a, mi tampi in nangma maipha hong
-> *Kuamah kihtak nei lo-in nuam-tak-in na om ding a mi tampi in nangma mai-pha hong*
-> nobody dread have NEG-ERG want-exact-ERG 2SG exist IRR 3SG person many ERG 2SG.self face-good 3→1
-> KJV: *Also thou shalt lie down, and none shall make thee afraid; Yea, many shall make suit unto thee.*
+**Nehemiah 1:11** (Form I)
+> Keima hong thungetna le nangma min a zahtak nuam na nasemte' thungetna na bil hong
+> *Keima hong thu-nget-na le nangma min a zah-tak nuam na nasemte' thu-nget-na na bil hong*
+> 1SG.self 3→1 word-request-NMLZ and 2SG.self name 3SG fear-true want 2SG servant-PL.POSS word-request-NMLZ 2SG ear 3→1
+> KJV: *O Lord, I beseech thee, let now thine ear be attentive to the prayer of thy servant, and to the prayer of thy servants, who desire to fear thy name: a...*
 
-**Psalms 7:14** (Form I)
-> Migilo in thusia paii a, suak nuamin na a, zuauthu a hingkhia hi
-> *Migilo in thu-sia paii a suak nuam-in na a zuau-thu a hing-khia hi*
-> enemy ERG word-evil sorrow 3SG wither pleased-ERG 2SG 3SG vain-word 3SG be-out DECL
-> KJV: *Behold, he travaileth with iniquity, And hath conceived mischief, and brought forth falsehood.*
+### P Relative
+
+**Matthew 26:10** (Form II)
+> Ahi zongin Jesuh in hih thu phawk ahih manin amaute kiangah, “Hih numei bang nuammawh
+> *Ahi zong-in Jesuh in hih thu phawk ahih man-in amaute kiang-ah Hih nu-mei bang nuam-mawh*
+> be.3SG although-ERG JESUH ERG this word remember be.3SG.REL reason-ERG 3PL.PRO beside-LOC this woman like envy-wrong
+> KJV: *When Jesus understood it , he said unto them, Why trouble ye the woman? for she hath wrought a good work upon me.*
 
 ### Subordinate Clause
 
@@ -924,23 +864,7 @@ by syntactic context.
 
 ### A/S Relative
 
-**Job 22:14** (Form I)
-> Van khumzangah Pasian a paikawmin meii pailetin Pasian in hong musuk thei lo ding hi,
-> *Van khum-zang-ah Pasian a pai-kawm-in meii pai-let-in Pasian in hong mu-suk thei lo ding hi*
-> sky cover-all-LOC PASIAN 3SG go-dwell-ERG cloud go-enter-INST PASIAN ERG 3→1 see.I-CAUS know NEG IRR DECL
-> KJV: *Thick clouds are a covering to him, that he seeth not; And he walketh in the circuit of heaven.*
-
-**Proverbs 7:5** (Form I)
-> Tua hileh midangte' zi tungah na khialhkhak loh nading, kam khum tawh a hong zol
-> *Tua hi-leh midangte' zi tung-ah na khialh-khak lo-h nading kam khum tawh a hong zol*
-> that be-if other.person-PL.POSS wife on-LOC 2SG err-fall NEG-NOM PURP mouth cover COM 3SG 3→1 redeem
-> KJV: *That they may keep thee from the strange woman, From the stranger which flattereth with her words.*
-
-**Song of Solomon 4:10** (Form I)
-> Itluat ka lawm ngaih aw, nang tawh kingaih nuam mahmah hi. Na itna leenggahzu sangin
-> *Itluat ka lawm ngaih aw nang tawh ki-ngaih nuam mahmah hi Na it-na leeng-gah-zu sang-in*
-> ITLUAT 1SG worthy love voice 2SG.PRO COM REFL-love want very DECL 2SG love-NMLZ grape.juice high-ERG
-> KJV: *How fair is thy love, my sister, my spouse! How much better is thy love than wine! And the smell of thine ointments than all spices!*
+*No examples found in corpus.*
 
 ### P Relative
 
@@ -980,21 +904,21 @@ by syntactic context.
 > land-on ERG trunk different-REDUP-PL be.born-exit-CAUS 3SG herb-PL ERG 3PL.PRO.POSS nation each.kind.ERG embed cause.birth-ERG tree ERG
 > KJV: *And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and G...*
 
+**Genesis 1:29** (Form I)
+> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
+> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
+> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
+> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
+
 **Genesis 2:9** (Form I)
 > A deihhuai, nek dinga a hoih singkung nam khempeuh, huan laizangah nuntakna singkung, le a
 > *A deih-huai nek ding-a a hoih sing-kung nam khempeuh huan lai-zang-ah nuntak-na sing-kung le a*
 > 3SG want-plural eat.II IRR-LOC 3SG good tree nation all bread middle-side-LOC live-NMLZ tree and 3SG
 > KJV: *And out of the ground made the LORD God to grow every tree that is pleasant to the sight, and good for food; the tree of life also in the midst of the...*
 
-**Genesis 2:12** (Form I)
-> Tua gam a khamte hoih hi. Tua munah bedolak singnai le onik suang om hi
-> *Tua gam a kham-te hoih hi Tua mun-ah bedolak sing-nai le onik suang om hi*
-> that land 3SG forbid-PL good DECL that place-LOC bdellium tree-precious and onyx stone exist DECL
-> KJV: *and the gold of that land is good: there is bdellium and the onyx stone.*
-
 ### Negative
 
-**Genesis 3:3** (Form I)
+**Genesis 3:3** (Form II)
 > Ahih hangin Pasian in, 'Huan laizang a om singgah na ne kei ding uh hi,
 > *Ahih hang-in Pasian in huan lai-zang a om singgah na ne kei ding uh hi*
 > be.3SG.REL because-ERG PASIAN ERG bread middle-side 3SG exist hang 2SG eat NEG.EMPH IRR 2/3PL DECL
@@ -1014,53 +938,53 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:29** (Form I)
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
-> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
-> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
-> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
+**Exodus 15:13** (Form I)
+> Nangmah in na ciamsa zui-in na tatkhiatsa mite na paipih a, na hatna tawh a
+> *Nangmah in na ciam-sa zui-in na tat-khiat-sa mi-te na pai-pih a na hat-na tawh a*
+> 2SG.PRO ERG 2SG promise-PAST follow-ERG 2SG strike-depart-PAST person-PL 2SG go-APPL 3SG 2SG strong-NMLZ COM 3SG
+> KJV: *Thou in thy mercy hast led forth the people which thou hast redeemed: Thou hast guided them in thy strength unto thy holy habitation.*
 
-**Genesis 2:16** (Form I)
-> Topa Pasian in mipa thu pia a, “Na ut utin huan sung singkung gah khempeuh
-> *Topa Pasian in mipa thu pia a Na ut ut-in huan sung sing-kung gah khempeuh*
-> TOPA PASIAN ERG man word give 3SG 2SG will will-ERG bread inside tree branch all
-> KJV: *And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat:*
+**Exodus 25:11** (Form I)
+> Nangmah in kham citak tawh tua singkuang na zut ding a, a sung le a
+> *Nangmah in kham ci-tak tawh tua sing-kuang na zut ding a a sung le a*
+> 2SG.PRO ERG gold say-true COM that wood-box 2SG overlay IRR 3SG 3SG inside and 3SG
+> KJV: *And thou shalt overlay it with pure gold, within and without shalt thou overlay it, and shalt make upon it a crown of gold round about.*
 
-**Genesis 3:11** (Form I)
-> Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh
-> *Amah in Na guak-tang-a na om-na kua in hong gen ahi hiam Na nek lo-h*
-> 3SG.PRO ERG 2SG bare-body-LOC 2SG exist-NMLZ who ERG 3→1 speak be.3SG Q 2SG eat.II NEG-NOM
-> KJV: *And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?*
+**Exodus 26:33** (Form I)
+> A kilhnate-ah dalna puan khai sukin, dalna puan sung tua lai munah thuciamna singkuang na
+> *A kilhna-te-ah dalna puan khai suk-in dalna puan sung tua lai mun-ah thuciam-na sing-kuang na*
+> 3SG clasp-PL-LOC hindrance cloth hang make.become-ERG hindrance cloth inside that midst place-LOC promise-NMLZ wood-box 2SG
+> KJV: *And thou shalt hang up the vail under the taches, that thou mayest bring in thither within the vail the ark of the testimony: and the vail shall divid...*
 
 ### P Relative
 
-**Exodus 21:12** (Form I)
+**Exodus 21:12** (Form II)
 > “Mi khat satin a sisak mi peuhpeuh kithat ding hi
 > *Mi khat sat-in a si-sak mi peuhpeuh ki-that ding hi*
 > person one strike-ERG 3SG die-CAUS person every REFL-kill IRR DECL
 > KJV: *He that smiteth a man, so that he die, shall be surely put to death.*
 
-**Leviticus 3:17** (Form I)
-> Tua pen na khang tawntungun na tenna khempeuh uhah note in a thau le sisan
-> *Tua pen na khang tawntung-un na ten-na khempeuh uhah note in a thau le sisan*
-> that TOP 2SG generation eternity-PL.IMP 2SG dwell-NMLZ all 2/3PL.LOC 2PL.PRO ERG 3SG fat and blood
-> KJV: *It shall be a perpetual statute for your generations throughout all your dwellings, that ye eat neither fat nor blood.*
+**2 Kings 19:22** (Form II)
+> Kua zahko-in, a simmawh na hi hiam? Kua langpangin na aw sang sakin kihihsakna tawh
+> *Kua zah-ko-in a simmawh na hi hiam Kua langpang-in na aw sang sak-in ki-hih-sak-na tawh*
+> who gather-grapes-INST 3SG blaspheme 2SG DECL Q who against-ERG 2SG voice high cause-ERG REFL-do-CAUS-NMLZ COM
+> KJV: *Whom hast thou reproached and blasphemed? and against whom hast thou exalted thy voice, and lifted up thine eyes on high? even against the Holy One of...*
 
-**Leviticus 26:31** (Form I)
-> Keimah in na khuapite uh siasakin, na biakna munte uh gamkhing ka suaksak ding a,
-> *Keimah in na khua-pi-te uh sia-sak-in na biak-na mun-te uh gamkhing ka suak-sak ding a*
-> 1SG.PRO ERG 2SG town-big-PL 2/3PL bad-CAUS-INST 2SG worship-NMLZ place-PL 2/3PL desolate 1SG become-CAUS IRR 3SG
-> KJV: *And I will make your cities waste, and bring your sanctuaries unto desolation, and I will not smell the savour of your sweet odours.*
+**Job 15:13** (Form II)
+> Pasian' tungah a heh na hi a, amah a simmawh na hi hi
+> *Pasian' tung-ah a heh na hi a amah a simmawh na hi hi*
+> PASIAN' on-LOC 3SG anger 2SG DECL 3SG 3SG.PRO 3SG blaspheme 2SG DECL DECL
+> KJV: *That thou turnest thy spirit against God, And lettest such words go out of thy mouth?*
 
 ### Subordinate Clause
 
-**Genesis 1:11** (Form I)
+**Genesis 1:11** (Form II)
 > Pasian in, “Leitung in kung tuamtuamte piangsak hen la, tang a nei kungnote, a gah
 > *Pasian in lei-tung in kung tuam-tuam-te piangsak hen la tang a nei kungno-te a gah*
 > PASIAN ERG land-on ERG trunk different-REDUP-PL cause.birth JUSS take embed 3SG have herb-PL 3SG branch
 > KJV: *And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon...*
 
-**Genesis 2:3** (Form I)
+**Genesis 2:3** (Form II)
 > Tua ahih ciangin Pasian in ni sagih ni thupha pia-in siangthosak hi. Bang hang hiam
 > *Tua ahih ciang-in Pasian in ni sagih ni thu-pha pia-in siangtho-sak hi Bang hang hiam*
 > that be.3SG.REL then-ERG PASIAN ERG day seven day word-good give-ERG holy-CAUS DECL like reason Q
@@ -1086,7 +1010,7 @@ by syntactic context.
 > PASIAN ERG that light good DECL say-QUOT 3SG see.I DECL PASIAN ERG darkness ABL-ERG light
 > KJV: *And God saw the light, that it was good: and God divided the light from the darkness.*
 
-**Genesis 30:32** (Form I)
+**Genesis 30:32** (Form II)
 > Tuni-in na tuuhonte khempeuh lakah hong paisak inla, tua sung panin tuu a puang le
 > *Tuni-in na tuuhon-te khempeuh lak-ah hong pai-sak inla tua sung pan-in tuu a puang le*
 > TUNI-IN 2SG poor.person-PL all among-LOC 3→1 go-CAUS and.then that inside ABL-ERG climb 3SG speckled and
@@ -1120,26 +1044,6 @@ by syntactic context.
 
 ### A/S Relative
 
-**Exodus 18:26** (Form I)
-> Amaute in mite tungah a tawntungin thu khen uh hi. Amaute in thu haksate bek
-> *Amaute in mi-te tung-ah a tawntung-in thu khen uh hi Amaute in thu haksa-te bek*
-> 3PL.PRO ERG person-PL on-LOC 3SG eternity-ERG word divide 2/3PL DECL 3PL.PRO ERG word difficult-PL only
-> KJV: *And they judged the people at all seasons: the hard causes they brought unto Moses, but every small matter they judged themselves.*
-
-**Deuteronomy 25:1** (Form I)
-> “Mite kikalah thu kineihna om a, thukhen zumah amaute pai-in, thukhente in amau' thu khensakin,
-> *Mite ki-kal-ah thu kineihna om a thu-khen zum-ah amaute pai-in thu-khen-te in amau' thu khen-sakin*
-> MITE REFL-middle-LOC word controversy exist 3SG word-divide bow-LOC 3PL.PRO go-ERG word-judge-PL ERG 3PL.PRO.POSS word divide-CAUS.ERG
-> KJV: *If there be a controversy between men, and they come unto judgment, that the judges may judge them; then they shall justify the righteous, and condemn...*
-
-**Deuteronomy 28:35** (Form I)
-> Topa in note na kidamsakkik theih loh ding uh a nasia mahmah meimatumte tawh na
-> *Topa in note na ki-damsak-kik theih lo-h ding uh a nasia mahmah mei-matum-te tawh na*
-> TOPA ERG 2PL.PRO 2SG REFL-heal-ITER know.II NEG-NOM IRR 2/3PL 3SG severe very fire-boil-PL COM 2SG
-> KJV: *The LORD shall smite thee in the knees, and in the legs, with a sore botch that cannot be healed, from the sole of thy foot unto the top of thy head.*
-
-### P Relative
-
 **2 Chronicles 35:4** (Form I)
 > Note a khenkhenin na beh uh tawh kizui-in kithawi unla, Israel kumpipa David' lamlahna le
 > *Note a khenkhen-in na beh uh tawh ki-zui-in kithawi un-la Israel kumpi-pa David' lam-lah-na le*
@@ -1152,7 +1056,15 @@ by syntactic context.
 > PASIAN word 3SG take.hold-ERG 3SG divide father DECL 3SG enemy-PL on-LOC 3SG anger neither father
 > KJV: *God judgeth the righteous, And God is angry with the wicked every day.*
 
-**Psalms 8:8** (Form I)
+**Romans 16:20** (Form I)
+> Tua hileh eite tungah nopsakna a hong pia thei Pasian in Satan tuancilin note' khenuai
+> *Tua hi-leh eite tung-ah nop-sak-na a hong pia thei Pasian in Satan tuancil-in note' khe-nuai*
+> that be-if 1PL.PRO on-LOC want-CAUS-NMLZ 3SG 3→1 give know PASIAN ERG SATAN tread-ERG 2PL.PRO.POSS foot-beneath
+> KJV: *And the God of peace shall bruise Satan under your feet shortly. The grace of our Lord Jesus Christ be with you. Amen.*
+
+### P Relative
+
+**Psalms 8:8** (Form II)
 > huih lak a leng vasate, tui sunga om ngasate, tui, lampi-a a tawn khempeuhte, na
 > *huih lak a leng va-sa-te tui sung-a om ngasa-te tui lam-pi-a a tawn khempeuh-te na*
 > wind among 3SG line go.and-PAST-PL water inside-3SG exist fish-PL water road-LOC 3SG loaf all-PL 2SG
@@ -1226,25 +1138,11 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 18:7** (Form I)
-> Abraham zong bawnghon lakah tai-in bawngno a dawng a hoih khat la a, manlang taka
-> *Abraham zong bawng-hon lak-ah tai-in bawng-no a dawng a hoih khat la a manlang taka*
-> ABRAHAM also cattle-flock among-LOC flee-ERG calf 3SG receive 3SG good one take 3SG hastily truly
-> KJV: *And Abraham ran unto the herd, and fetcht a calf tender and good, and gave it unto a young man; and he hasted to dress it.*
-
-**Genesis 27:32** (Form I)
-> A pa Isaac in ama kiangah, “Kua na hi hiam?” a ci hi. Amah in
-> *A pa Isaac in ama kiang-ah Kua na hi hiam a ci hi Amah in*
-> 3SG father ISAAC ERG 3SG.POSS beside-LOC who 2SG DECL Q 3SG say DECL 3SG.PRO ERG
-> KJV: *And Isaac his father said unto him, Who art thou? And he said, I am thy son, thy firstborn Esau.*
-
-**Genesis 31:31** (Form I)
-> Jakob in Laban dawngin, “Kei' kiang panin na tanute thahat thu-in nong suh khak ding
-> *Jakob in Laban dawng-in Kei' kiang pan-in na tanu-te tha-hat thu-in nong suh khak ding*
-> JAKOB ERG LABAN receive-ERG KEI' beside ABL-ERG 2SG daughter-PL strong-firm word-ERG 2→1 well limit IRR
-> KJV: *And Jacob answered and said to Laban, Because I was afraid: for I said, Peradventure thou wouldest take by force thy daughters from me.*
-
-### P Relative
+**Leviticus 26:30** (Form I)
+> Keimah in mual dawna na biaknate uh susia-in, na paknamtui biakna taute uh phukin, note'
+> *Keimah in mual dawn-na na biakna-te uh su-sia-in na pak-nam-tui biak-na taute uh phuk-in note'*
+> 1SG.PRO ERG mountain receive-NMLZ 2SG worship-PL 2/3PL CAUS-bad-ERG 2SG ointment worship-NMLZ children 2/3PL hewers-ERG 2PL.PRO.POSS
+> KJV: *And I will destroy your high places, and cut down your images, and cast your carcases upon the carcases of your idols, and my soul shall abhor you.*
 
 **Psalms 118:5** (Form I)
 > Ka cihmawhna-ah Topa ka sam a, Topa in hong dawngin mun tanzau-ah hong koih hi
@@ -1252,17 +1150,19 @@ by syntactic context.
 > 1SG say.NOM-sin-NMLZ-LOC TOPA 1SG open 3SG TOPA ERG 3→1 receive-ERG place large-LOC 3→1 put DECL
 > KJV: *I called upon the LORD in distress: The LORD answered me, and set me in a large place.*
 
-**Obadiah 1:3** (Form I)
-> Na lungsim kiphatsakna un note a hong khemzo hi. Note in suang kulhpi beelin mual
-> *Na lung-sim ki-phatsak-na un note a hong khem-zo hi Note in suang kulh-pi beel-in mual*
-> 2SG stone-mind REFL-glorify-NMLZ IMP.PL 2PL.PRO 3SG 3→1 restrain-COMPL DECL 2PL.PRO ERG stone wall-big pan-ERG mountain
-> KJV: *The pride of thine heart hath deceived thee, thou that dwellest in the clefts of the rock, whose habitation is high; that saith in his heart, Who shal...*
-
 **1 Corinthians 11:27** (Form I)
 > Tua ahih manin a kilawm lopi-in Topa' anlum ne-in, a hai panin leenggahzu a dawn
 > *Tua ahih man-in a ki-lawm lo-pi-in Topa' anlum ne-in a hai pan-in leeng-gah-zu a dawn*
 > that be.3SG.REL reason-ERG 3SG REFL-worthy NEG-big-ERG TOPA' food eat-ERG 3SG cup ABL-ERG grape.juice 3SG top
 > KJV: *Wherefore whosoever shall eat this bread, and drink this cup of the Lord, unworthily, shall be guilty of the body and blood of the Lord.*
+
+### P Relative
+
+**Obadiah 1:3** (Form II)
+> Na lungsim kiphatsakna un note a hong khemzo hi. Note in suang kulhpi beelin mual
+> *Na lung-sim ki-phatsak-na un note a hong khem-zo hi Note in suang kulh-pi beel-in mual*
+> 2SG stone-mind REFL-glorify-NMLZ IMP.PL 2PL.PRO 3SG 3→1 restrain-COMPL DECL 2PL.PRO ERG stone wall-big pan-ERG mountain
+> KJV: *The pride of thine heart hath deceived thee, thou that dwellest in the clefts of the rock, whose habitation is high; that saith in his heart, Who shal...*
 
 ### Subordinate Clause
 
@@ -1292,6 +1192,12 @@ by syntactic context.
 
 ### Affirmative
 
+**Genesis 1:2** (Form I)
+> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
+> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
+> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
+> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+
 **Genesis 1:28** (Form I)
 > Pasian in amaute thupha pia a, Pasian in amaute tungah, “Ci pha-in tampi pha unla,
 > *Pasian in amaute thu-pha pia a Pasian in amaute tung-ah Ci pha-in tampi pha un-la*
@@ -1303,12 +1209,6 @@ by syntactic context.
 > *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
 > PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
 > KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
-
-**Genesis 2:7** (Form I)
-> Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu
-> *Topa Pasian in lei-lak pa-na leivui tawh mi-hing bawl a a nak sung-ah nuntak-na hu*
-> TOPA PASIAN ERG dust father-NMLZ dust COM person-kind make 3SG 3SG nose inside-LOC live-NMLZ help
-> KJV: *And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.*
 
 ### Negative
 
@@ -1332,43 +1232,43 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:2** (Form I)
-> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
-> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
-> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
-> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+**Genesis 27:16** (Form I)
+> Amah in keelnote' vun ama khut tung le a neelna mun a ngawng sanah silhsak
+> *Amah in keel-no-te' vun ama khut tung le a neel-na mun a ngawng sanah silh-sak*
+> 3SG.PRO ERG heel-young-PL.POSS skin 3SG.POSS hand on and 3SG smooth-NMLZ place 3SG neck in.front clothe-CAUS
+> KJV: *and she put the skins of the kids of the goats upon his hands, and upon the smooth of his neck:*
 
-**Genesis 3:11** (Form II)
-> Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh
-> *Amah in Na guak-tang-a na om-na kua in hong gen ahi hiam Na nek lo-h*
-> 3SG.PRO ERG 2SG bare-body-LOC 2SG exist-NMLZ who ERG 3→1 speak be.3SG Q 2SG eat.II NEG-NOM
-> KJV: *And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?*
+**Genesis 38:1** (Form I)
+> Tua hun laitakin Judah a sanggamte kiang panin paisukin, Adullam mi Hirah min nei mi
+> *Tua hun lai-tak-in Judah a sanggam-te kiang pan-in pai-suk-in Adullam mi Hirah min nei mi*
+> that time midst-exact-ERG JUDAH 3SG brother-PL beside ABL-ERG go-DOWN-ERG ADULLAM person HIRAH name have person
+> KJV: *And it came to pass at that time, that Judah went down from his brethren, and turned in to a certain Adullamite, whose name was Hirah.*
 
-**Genesis 4:1** (Form I)
-> Tu-in mipa in ama zi Eve luppih a, amah gai-in Kain nei a, “ Topa'
-> *Tu-in mipa in ama zi Eve luppih a amah gai-in Kain nei a  Topa'*
-> now-ERG man ERG 3SG.POSS wife EVE lay.down 3SG 3SG.PRO conceive-ERG KAIN have 3SG  TOPA'
-> KJV: *And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD .*
+**Genesis 38:25** (Form I)
+> Amah a kipaikhiatpih laitakin amah in a teekpa kiangah kam khak a, “Hih nate a
+> *Amah a ki-paikhiat-pih lai-tak-in amah in a teek-pa kiang-ah kam khak a Hih na-te a*
+> 3SG.PRO 3SG REFL-send.away-APPL midst-exact-ERG 3SG.PRO ERG 3SG in.law-father beside-LOC mouth limit 3SG this 2SG-PL 3SG
+> KJV: *When she was brought forth, she sent to her father in law, saying, By the man, whose these are, am I with child: and she said, Discern, I pray thee, w...*
 
 ### P Relative
 
-**Deuteronomy 8:12** (Form I)
-> Tua hikeileh, an ne-in na kham uh ciang, inn hoihte lamin tuate sungah na ten
-> *Tua hi-kei-leh an ne-in na kham uh ciang inn hoih-te lam-in tua-te sung-ah na ten*
-> that be-NEG.EMPH-if 3PL.POSS eat-ERG 2SG gold 2/3PL then house good-PL way-ERG DIST-PL inside-LOC 2SG dwell
-> KJV: *lest when thou hast eaten and art full, and hast built goodly houses, and dwelt therein ;*
-
-**2 Samuel 23:8** (Form I)
+**2 Samuel 23:8** (Form II)
 > David' neih mi thahatte' minte: Tahkhemon mi Joshebbasshebeth hi a, amah pen mi thumte a
 > *David' nei-h mi tha-hat-te' min-te Tahkhemon mi Joshebbasshebeth hi a amah pen mi thum-te a*
 > DAVID' have-NOM person strong-firm-PL.POSS name-PL TAHKHEMON person JOSHEBBASSHEBETH DECL 3SG 3SG.PRO TOP person three-PL 3SG
 > KJV: *These be the names of the mighty men whom David had: the Tachmonite that sat in the seat, chief among the captains; the same was Adino the Eznite: he ...*
 
-**Job 11:18** (Form I)
-> Lungnuam tak le lametna nei-in na om ding a, Pasian in nang hong hu-in, tawldamna
-> *Lungnuam tak le lam-et-na nei-in na om ding a Pasian in nang hong hu-in tawl-dam-na*
-> LUNGNUAM truly and path-example-NMLZ have-ERG 2SG exist IRR 3SG PASIAN ERG 2SG.PRO 3→1 help-ERG rest-well-NMLZ
-> KJV: *And thou shalt be secure, because there is hope; Yea, thou shalt dig about thee, and thou shalt take thy rest in safety.*
+**Psalms 137:9** (Form II)
+> Na taneute hong laksakin suangtumpi denna-in a hong neihsak pa in lungdamna ngah ta hen!
+> *Na taneu-te hong lak-sak-in suangtumpi den-na-in a hong neih-sak pa in lungdam-na ngah ta hen*
+> 2SG child.small-PL 3→1 take-CAUS-ERG stone judge-NMLZ-ERG 3SG 3→1 have-CAUS father ERG rejoice-NMLZ get child JUSS
+> KJV: *Happy shall he be , that taketh and dasheth thy little ones Against the stones.*
+
+**Galatians 6:6** (Form II)
+> Pasian thu hilhna a za mipa in ama neih na hoihte khempeuh zong, amah a
+> *Pasian thu hilh-na a za mipa in ama nei-h na hoih-te khempeuh zong amah a*
+> PASIAN word teach-NMLZ 3SG hear man ERG 3SG.POSS have-NOM 2SG good-PL all also 3SG.PRO 3SG
+> KJV: *Let him that is taught in the word communicate unto him that teacheth in all good things.*
 
 ### Subordinate Clause
 
@@ -1410,11 +1310,11 @@ by syntactic context.
 > land-on ERG trunk different-REDUP-PL be.born-exit-CAUS 3SG herb-PL ERG 3PL.PRO.POSS nation each.kind.ERG embed cause.birth-ERG tree ERG
 > KJV: *And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and G...*
 
-**Genesis 2:11** (Form I)
-> A masa pen gun a min Pishon hi a, kham a omna, Havilah gambup kimkotah
-> *A masa pen gun a min Pishon hi a kham a om-na Havilah gam-bup kimkot-ah*
-> 3SG first TOP river 3SG name PISHON DECL 3SG gold 3SG exist-NMLZ HAVILAH land-whole round-LOC
-> KJV: *The name of the first is Pison: that is it which compasseth the whole land of Havilah, where there is gold;*
+**Genesis 1:29** (Form I)
+> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
+> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
+> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
+> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
 
 ### Negative
 
@@ -1438,25 +1338,17 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:29** (Form I)
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
-> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
-> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
-> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
+**Genesis 13:3** (Form I)
+> Amah Negeb gam pan kipanin Bethel ciang dong, a kipat cil-in a puanbuk omnasa mun
+> *Amah Negeb gam pan ki-pan-in Bethel ciang dong a ki-pat cil-in a puan-buk om-na-sa mun*
+> 3SG.PRO NEGEB land ABL from BETHEL then until 3SG beginning begin-ERG 3SG cloth-shelter be-NMLZ-animal place
+> KJV: *And he went on his journeys from the south even to Beth-el, unto the place where his tent had been at the beginning, between Beth-el and Hai;*
 
-**Genesis 3:11** (Form I)
-> Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh
-> *Amah in Na guak-tang-a na om-na kua in hong gen ahi hiam Na nek lo-h*
-> 3SG.PRO ERG 2SG bare-body-LOC 2SG exist-NMLZ who ERG 3→1 speak be.3SG Q 2SG eat.II NEG-NOM
-> KJV: *And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?*
-
-**Genesis 3:15** (Form I)
-> Nang le numei kikal na suanlekhakte le ama suanlekhakte kikalah kilangneihna ka omsak ding hi
-> *Nang le nu-mei ki-kal na suanlekhak-te le ama suanlekhak-te ki-kal-ah ki-lang-neih-na ka om-sak ding hi*
-> 2SG.PRO and woman REFL-middle 2SG genealogy-PL and 3SG.POSS genealogy-PL REFL-middle-LOC REFL-appear-have-NMLZ 1SG exist-CAUS IRR DECL
-> KJV: *and I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.*
-
-### P Relative
+**Genesis 34:29** (Form I)
+> Amau' neihsa khempeuh, a naupangte khempeuh, a zite khempeuh, le inn sunga om na khempeuh
+> *Amau' neih-sa khempeuh a nau-pang-te khempeuh a zi-te khempeuh le inn sung-a om na khempeuh*
+> AMAU' have.II-PAST all 3SG child-small-PL all 3SG wife-PL all and house inside-3SG exist 2SG all
+> KJV: *and all their wealth, and all their little ones, and their wives took they captive, and spoiled even all that was in the house.*
 
 **Genesis 42:34** (Form I)
 > Na sanggam moi pen uh kei kiangah hong paipih un. Tua hileh note thukan hi
@@ -1464,17 +1356,9 @@ by syntactic context.
 > 2SG brother young TOP 2/3PL NEG.EMPH beside-LOC 3→1 go-APPL IMP.PL that be-if 2PL.PRO word-hold DECL
 > KJV: *and bring your youngest brother unto me: then shall I know that ye are no spies, but that ye are true men: so will I deliver you your brother, and ye ...*
 
-**Ezekiel 23:21** (Form I)
-> Tua hi a, Oholibah aw, Egypt gamah nungakin na omlai-in na nawi hong kinuaigawp sakin,
-> *Tua hi a Oholibah aw Egypt gam-ah nung-ak-in na om-lai-in na nawi hong ki-nuai-gawp sak-in*
-> that DECL 3SG OHOLIBAH voice EGYPT land-LOC live-dwell-ERG 2SG rest-still-INST 2SG butter 3→1 REFL-below-INTENS cause-ERG
-> KJV: *Thus thou calledst to remembrance the lewdness of thy youth, in bruising thy teats by the Egyptians for the paps of thy youth.*
+### P Relative
 
-**Acts 15:2** (Form I)
-> Hih thu huhau-in Paul le Barnabas, le hih mite kikalah nakpitakin thu kinialna omin thu
-> *Hih thu huhau-in Paul le Barnabas le hih mi-te ki-kal-ah nak-pi-tak-in thu ki-nial-na om-in thu*
-> this word surround-ERG PAUL and BARNABAS and this person-PL REFL-middle-LOC strong-big-exact-ERG word REFL-dispute-NMLZ exist-ERG word
-> KJV: *When therefore Paul and Barnabas had no small dissension and disputation with them, they determined that Paul and Barnabas, and certain other of them,...*
+*No examples found in corpus.*
 
 ### Subordinate Clause
 
@@ -1510,17 +1394,17 @@ by syntactic context.
 > SARAH conceive 3SG 3SG.POSS on-3SG PASIAN ERG 3SG speak-PAST time-ERG 3SG master able-ERG ABRAHAM COM
 > KJV: *For Sarah conceived, and bare Abraham a son in his old age, at the set time of which God had spoken to him.*
 
+**Genesis 44:20** (Form I)
+> Kote in ka topa uh kiangah, 'Kote in a teek pa khat le a teek
+> *Kote in ka topa uh kiang-ah Kote in a teek pa khat le a teek*
+> 1PL.PRO ERG 1SG lord 2/3PL beside-LOC 1PL.PRO ERG 3SG master father one and 3SG master
+> KJV: *And we said unto my lord, We have a father, an old man, and a child of his old age, a little one; and his brother is dead, and he alone is left of his...*
+
 **Exodus 7:25** (Form I)
 > Topa in gun a sat zawh ni sagih pha ta hi
 > *Topa in gun a sat zawh ni sagih pha ta hi*
 > TOPA ERG river 3SG strike able day seven branch child DECL
 > KJV: *And seven days were fulfilled, after that the LORD had smitten the river.*
-
-**Exodus 16:1** (Form I)
-> Elim panin amaute ding khia uh a, Egypt leitang panin a paikhiat zawh uh a
-> *Elim pan-in amaute ding khia uh a Egypt lei-tang pan-in a pai-khiat zawh uh a*
-> ELIM ABL-ERG 3PL.PRO IRR out 2/3PL 3SG EGYPT land-earth ABL-ERG 3SG go.out able 2/3PL 3SG
-> KJV: *And they took their journey from Elim, and all the congregation of the children of Israel came unto the wilderness of Sin, which is between Elim and S...*
 
 ### Negative
 
@@ -1544,23 +1428,7 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 44:20** (Form I)
-> Kote in ka topa uh kiangah, 'Kote in a teek pa khat le a teek
-> *Kote in ka topa uh kiang-ah Kote in a teek pa khat le a teek*
-> 1PL.PRO ERG 1SG lord 2/3PL beside-LOC 1PL.PRO ERG 3SG master father one and 3SG master
-> KJV: *And we said unto my lord, We have a father, an old man, and a child of his old age, a little one; and his brother is dead, and he alone is left of his...*
-
-**Deuteronomy 7:17** (Form I)
-> “Na lungsim uhah, 'Hih minamte ei sangin tamzaw hi. Amaute bangci suankhiat zawh ding ihi
-> *Na lung-sim uhah Hih mi-nam-te ei sang-in tamzaw hi Amaute bangci suankhiat zawh ding i-hi*
-> 2SG stone-mind 2/3PL.LOC this person-kind-PL 1PL.EXCL high-ERG greater DECL 3PL.PRO how deliver able IRR 1PL.INCL-be
-> KJV: *If thou shalt say in thine heart, These nations are more than I; how can I dispossess them?*
-
-**Judges 16:6** (Form I)
-> Delilah in Samson kiangah, “Na hatna lian koi-ah om a, mi khatpeuh in nang hong
-> *Delilah in Samson kiang-ah Na hat-na lian koi-ah om a mi khat-peuh in nang hong*
-> DELILAH ERG SAMSON beside-LOC 2SG strong-NMLZ great where-LOC exist 3SG person one-every ERG 2SG.PRO 3→1
-> KJV: *And Delilah said to Samson, Tell me, I pray thee, wherein thy great strength lieth , and wherewith thou mightest be bound to afflict thee.*
+*No examples found in corpus.*
 
 ### P Relative
 
@@ -1594,13 +1462,13 @@ by syntactic context.
 
 ### Affirmative
 
-**Genesis 17:9** (Form I)
+**Genesis 17:9** (Form II)
 > Pasian in Abraham' kiangah, “Nang le nang' khit cianga na suanlekhakte in zong ka thuciamna
 > *Pasian in Abraham' kiang-ah Nang le nang' khit ci-ang-a na suanlekhak-te in zong ka thuciam-na*
 > PASIAN ERG ABRAHAM' beside-LOC 2SG.PRO and 2SG.PRO.POSS SEQ say-FUT-NOM 2SG genealogy-PL ERG also 1SG promise-NMLZ
 > KJV: *And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.*
 
-**Genesis 17:10** (Form I)
+**Genesis 17:10** (Form II)
 > Hih pen nang le nang' khit cianga na suanlekhakte' zuih ding keima thuciamna ahi hi:
 > *Hih pen nang le nang' khit ci-ang-a na suanlekhakte' zui-h ding keima thuciam-na ahi hi*
 > this TOP 2SG.PRO and 2SG.PRO.POSS SEQ say-FUT-NOM 2SG genealogy-PL.POSS follow-NOM IRR 1SG.self promise-NMLZ be.3SG DECL
@@ -1620,7 +1488,7 @@ by syntactic context.
 > servant-male ERG 3SG.POSS beside-LOC 3SG woman ERG this land-LOC NEG.EMPH 3→1 follow want NEG.EMPH perhaps
 > KJV: *And the servant said unto him, Peradventure the woman will not be willing to follow me unto this land: must I needs bring thy son again unto the land ...*
 
-**Genesis 24:8** (Form I)
+**Genesis 24:8** (Form II)
 > Ahih hangin a numei in nang hong zuih nop kei leh keima thuciamna panin nang
 > *Ahih hang-in a nu-mei in nang hong zui-h nop kei leh keima thuciam-na pan-in nang*
 > be.3SG.REL because-ERG 3SG woman ERG 2SG.PRO 3→1 follow-NOM want NEG.EMPH and 1SG.self promise-NMLZ ABL-ERG 2SG.PRO
@@ -1634,31 +1502,17 @@ by syntactic context.
 
 ### A/S Relative
 
-**Exodus 16:28** (Form I)
-> Topa in Moses kiangah, “Ka thupiakte le ka thute zuih ding bang tanvei nial ding
-> *Topa in Moses kiang-ah Ka thupiak-te le ka thu-te zui-h ding bang tanvei nial ding*
-> TOPA ERG MOSES beside-LOC 1SG commandment-PL and 1SG word-PL follow-NOM IRR like long deny IRR
-> KJV: *And the LORD said unto Moses, How long refuse ye to keep my commandments and my laws?*
-
-**Exodus 34:11** (Form I)
-> “Tuni-a kong thupiak zui in. En in, na mai-ah Amor mite, Kanaan mite, Hit mite,
-> *Tuni-a kong thupiak zui in En in na mai-ah Amor mi-te Kanaan mi-te Hit mi-te*
-> TUNI-A 1SG→3 commandment follow ERG look ERG 2SG face-LOC AMOR person-PL KANAAN person-PL that person-PL
-> KJV: *Observe thou that which I command thee this day: behold, I drive out before thee the Amorite, and the Canaanite, and the Hittite, and the Perizzite, a...*
-
-**Leviticus 18:4** (Form I)
-> Note in keima biakna ngeina kipte semin ka thukhamte lenin tuate na zui ding uh
-> *Note in keima biak-na ngei-na kip-te sem-in ka thu-kham-te len-in tua-te na zui ding uh*
-> 2PL.PRO ERG 1SG.self worship-NMLZ know-NMLZ edge-PL serve-ERG 1SG law-PL net-ERG DIST-PL 2SG follow IRR 2/3PL
-> KJV: *Ye shall do my judgments, and keep mine ordinances, to walk therein: I am the LORD your God.*
-
-### P Relative
-
 **Exodus 15:13** (Form I)
 > Nangmah in na ciamsa zui-in na tatkhiatsa mite na paipih a, na hatna tawh a
 > *Nangmah in na ciam-sa zui-in na tat-khiat-sa mi-te na pai-pih a na hat-na tawh a*
 > 2SG.PRO ERG 2SG promise-PAST follow-ERG 2SG strike-depart-PAST person-PL 2SG go-APPL 3SG 2SG strong-NMLZ COM 3SG
 > KJV: *Thou in thy mercy hast led forth the people which thou hast redeemed: Thou hast guided them in thy strength unto thy holy habitation.*
+
+**1 Kings 18:18** (Form I)
+> Amah in dawngin, “Keimah in Israel mite ka lungkhamsak kei hi. Nang in Topa' thupiaknate
+> *Amah in dawng-in Keimah in Israel mi-te ka lung-kham-sak kei hi Nang in Topa' thu-piak-na-te*
+> 3SG.PRO ERG receive-ERG 1SG.PRO ERG ISRAEL person-PL 1SG cause.sorrow NEG.EMPH DECL 2SG.PRO ERG TOPA' word-give.to-NMLZ-PL
+> KJV: *And he answered, I have not troubled Israel; but thou, and thy father's house, in that ye have forsaken the commandments of the LORD , and thou hast f...*
 
 **Nehemiah 1:9** (Form I)
 > Ahi zongin kei kiangah hong ciahkikin ka thupiaknate zui-in na sep uhleh leimong dongah a
@@ -1666,7 +1520,9 @@ by syntactic context.
 > be.3SG although-ERG NEG.EMPH beside-LOC 3→1 return.again-ERG 1SG word-give.to-NMLZ-PL follow-ERG 2SG work 2/3PL.if end until-LOC 3SG
 > KJV: *but if ye turn unto me, and keep my commandments, and do them; though there were of you cast out unto the uttermost part of the heaven, yet will I gat...*
 
-**Ecclesiastes 7:18** (Form I)
+### P Relative
+
+**Ecclesiastes 7:18** (Form II)
 > A nih tuakin lenkip in. Pasian na zahtak nakleh khat peuhpeuh na zuihna-ah na maa
 > *A nih tuak-in lenkip in Pasian na zah-tak nakleh khat peuhpeuh na zuih-na-ah na maa*
 > 3SG two meet-ERG every ERG PASIAN 2SG fear-true otherwise one every 2SG turn-NMLZ-LOC 2SG prosper
@@ -1686,7 +1542,7 @@ by syntactic context.
 > that then-ERG that place ABL-ERG person-PL go-exit 3SG 3PL.PRO ERG SODOM way EN 2/3PL DECL
 > KJV: *And the men rose up from thence, and looked toward Sodom: and Abraham went with them to bring them on the way.*
 
-**Genesis 18:19** (Form I)
+**Genesis 18:19** (Form II)
 > Im kei ning. Bang hang hiam cih leh Topa in Abraham' tunga a ciamsa thu
 > *im kei ning Bang hang hiam cih leh Topa in Abraham' tung-a a ciam-sa thu*
 > hide NEG.EMPH will like reason Q say.NOM and TOPA ERG ABRAHAM' on-3SG 3SG promise-PAST word
@@ -1700,19 +1556,19 @@ by syntactic context.
 
 ### Affirmative
 
-**Genesis 1:1** (Form I)
+**Genesis 1:1** (Form II)
 > A kipat cil-in Pasian in vantung le leitung a piangsak hi
 > *A ki-pat cil-in Pasian in van-tung le lei-tung a piangsak hi*
 > 3SG beginning begin-ERG PASIAN ERG sky-on and land-on 3SG cause.birth DECL
 > KJV: *In the beginning God created the heaven and the earth.*
 
-**Genesis 1:12** (Form I)
+**Genesis 1:12** (Form II)
 > Leitung in kung tuamtuamte piangkhiasak a, kungnote in amau' nam ciatin tang piangsakin, singkung in
 > *lei-tung in kung tuam-tuam-te piang-khia-sak a kungno-te in amau' nam ciatin tang piangsak-in sing-kung in*
 > land-on ERG trunk different-REDUP-PL be.born-exit-CAUS 3SG herb-PL ERG 3PL.PRO.POSS nation each.kind.ERG embed cause.birth-ERG tree ERG
 > KJV: *And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and G...*
 
-**Genesis 1:20** (Form I)
+**Genesis 1:20** (Form II)
 > Pasian in, “Tuite in a nungta ganhing honpite piangsak hen la, vantung kantanin leitungah vasate
 > *Pasian in Tuite in a nung-ta ganhing hon-pi-te piangsak hen la van-tung kantan-in leitung-ah va-sa-te*
 > PASIAN ERG TUITE ERG 3SG life-PFV animal flock-big-PL cause.birth JUSS take sky-on cross.over-ERG earth-LOC go.and-PAST-PL
@@ -1720,13 +1576,13 @@ by syntactic context.
 
 ### Negative
 
-**Genesis 4:5** (Form II)
+**Genesis 4:5** (Form I)
 > ahih hangin Kain le ama piakna thusim lo hi. Tua ahih ciangin Kain heh mahmah
 > *ahih hang-in Kain le ama piak-na thusim lo hi Tua ahih ciang-in Kain heh mahmah*
 > be.3SG.REL because-ERG KAIN and 3SG.POSS give.to-NMLZ parable NEG DECL that be.3SG.REL then-ERG KAIN anger very
 > KJV: *but unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell.*
 
-**Genesis 4:12** (Form I)
+**Genesis 4:12** (Form II)
 > Lo na khawh ciangin nang a dingin an hong piangsak nawn lo ding hi. Nang
 > *Lo na khawh ciang-in nang a ding-in an hong piangsak nawn lo ding hi Nang*
 > NEG 2SG able then-ERG 2SG.PRO 3SG IRR-ERG 3PL.POSS 3→1 cause.birth CONT NEG IRR DECL 2SG.PRO
@@ -1740,43 +1596,43 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:29** (Form I)
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le
-> *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
-> PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
-> KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
+**Genesis 10:29** (Form I)
+> Ofir, Havilah, le Jobab' pianna pa ahi hi. Hihte khempeuh Joktan' tapate ahi hi
+> *Ofir Havilah le Jobab' pian-na pa ahi hi Hihte khempeuh Joktan' tapa-te ahi hi*
+> OFIR HAVILAH and JOBAB' birth-NMLZ father be.3SG DECL HIHTE all JOKTAN' son-PL be.3SG DECL
+> KJV: *and Ophir, and Havilah, and Jobab: all these were the sons of Joktan.*
 
-**Genesis 2:16** (Form I)
-> Topa Pasian in mipa thu pia a, “Na ut utin huan sung singkung gah khempeuh
-> *Topa Pasian in mipa thu pia a Na ut ut-in huan sung sing-kung gah khempeuh*
-> TOPA PASIAN ERG man word give 3SG 2SG will will-ERG bread inside tree branch all
-> KJV: *And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat:*
+**Genesis 40:2** (Form I)
+> An piapi pa le anhuan pipa ahi, ama nuai-a mangte nih tungah Faro heh a,
+> *an pia-pi pa le an-huan pi-pa ahi ama nuai-a mang-te nih tung-ah Faro heh a*
+> 3PL.POSS give-big father and 3PL-prepare great-man be.3SG 3SG.POSS below-LOC chief-PL two on-LOC FARO anger 3SG
+> KJV: *And Pharaoh was wroth against two of his officers, against the chief of the butlers, and against the chief of the bakers.*
 
-**Genesis 9:5** (Form I)
-> Mi khatpeuh in hong thah le ama tungah sihna dan ka pia ding hi. A
-> *Mi khat-peuh in hong thah le ama tung-ah sih-na dan ka pia ding hi A*
-> person one-every ERG 3→1 slay and 3SG.POSS on-LOC blood-NMLZ manner 1SG give IRR DECL 3SG
-> KJV: *And surely your blood of your lives will I require; at the hand of every beast will I require it, and at the hand of man; at the hand of every man's b...*
+**Genesis 40:23** (Form I)
+> Ahi zongin an piapi pa in Josef phawk nawn lo a, amah mangngilh ta hi
+> *Ahi zong-in an pia-pi pa in Josef phawk nawn lo a amah mangngilh ta hi*
+> be.3SG although-ERG 3PL.POSS give-big father ERG JOSEF remember CONT NEG 3SG 3SG.PRO forget child DECL
+> KJV: *Yet did not the chief butler remember Joseph, but forgat him.*
 
 ### P Relative
 
-**Deuteronomy 13:12** (Form II)
-> “ Topa na Pasian un tenna dinga hong piak na khuapite uh khat peuhpeuh sungah,
-> * Topa na Pasian un ten-na ding-a hong piak na khua-pi-te uh khat peuhpeuh sung-ah*
->  TOPA 2SG PASIAN IMP.PL dwell-NMLZ IRR-LOC 3→1 give.to 2SG town-big-PL 2/3PL one every inside-LOC
-> KJV: *If thou shalt hear say in one of thy cities, which the LORD thy God hath given thee to dwell there, saying,*
-
-**Job 19:6** (Form I)
+**Job 19:6** (Form II)
 > Hih thu hong piangsak pa Pasian ahihlam mu thei lo na hi hiam? Kei hong
 > *Hih thu hong piangsak pa Pasian a-hih-lam mu thei lo na hi hiam Kei hong*
 > this word 3→1 cause.birth father PASIAN 3SG-be-way see.I know NEG 2SG DECL Q NEG.EMPH 3→1
 > KJV: *Know now that God hath overthrown me, And hath compassed me with his net.*
 
-**Job 34:19** (Form I)
+**Job 34:19** (Form II)
 > Pasian pen mi khempeuh a hong piangsak pa hi a, amah in uliante panpih tuan
 > *Pasian pen mi khempeuh a hong piangsak pa hi a amah in ulian-te pan-pih tuan*
 > PASIAN TOP person all 3SG 3→1 cause.birth father DECL 3SG 3SG.PRO ERG elder-PL plead-APPL ride
 > KJV: *How much less to him that accepteth not the persons of princes, Nor regardeth the rich more than the poor? For they all are the work of his hands.*
+
+**Job 40:19** (Form II)
+> “Ganhing khempeuh lak pan a lamdang pen hi a, amah a Piangsak pa bek mah
+> *Ganhing khempeuh lak pan a lam-dang pen hi a amah a Piangsak pa bek mah*
+> animal all among ABL 3SG other.way TOP DECL 3SG 3SG.PRO 3SG cause.birth father only EMPH
+> KJV: *He is the chief of the ways of God: He that made him can make his sword to approach unto him .*
 
 ### Subordinate Clause
 
@@ -1792,7 +1648,7 @@ by syntactic context.
 > PASIAN ERG VANTUNGTE below-LOC exist water-PL place one-LOC REFL-gather JUSS take buy dry REFL-dry JUSS
 > KJV: *And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.*
 
-**Genesis 1:11** (Form I)
+**Genesis 1:11** (Form II)
 > Pasian in, “Leitung in kung tuamtuamte piangsak hen la, tang a nei kungnote, a gah
 > *Pasian in lei-tung in kung tuam-tuam-te piangsak hen la tang a nei kungno-te a gah*
 > PASIAN ERG land-on ERG trunk different-REDUP-PL cause.birth JUSS take embed 3SG have herb-PL 3SG branch
@@ -1806,19 +1662,19 @@ by syntactic context.
 
 ### Affirmative
 
-**Genesis 2:22** (Form I)
+**Genesis 2:22** (Form II)
 > Topa Pasian in mipa' tung panin a lakkhiat nakguh pen numei khatin bawl a, mipa
 > *Topa Pasian in mipa' tung pan-in a lakkhiat nak-guh pen nu-mei khat-in bawl a mipa*
 > TOPA PASIAN ERG man.POSS on ABL-ERG 3SG snatch rib-take TOP woman one-ERG make 3SG man
 > KJV: *and the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.*
 
-**Genesis 4:3** (Form I)
+**Genesis 4:3** (Form II)
 > Tua hun sungin Kain in lei pana piang gah piakna Topa' tungah paipih a,
 > *Tua hun sung-in Kain in lei pa-na piang gah piak-na Topa' tung-ah pai-pih a*
 > that time inside-ERG KAIN ERG buy father-NMLZ be.born branch give.to-NMLZ TOPA' on-LOC go-APPL 3SG
 > KJV: *And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD .*
 
-**Genesis 4:4** (Form I)
+**Genesis 4:4** (Form II)
 > Abel in a tuuhon tacilte le a sa limcite paipih hi. Topa in Abel le
 > *Abel in a tuuhon ta-cil-te le a sa limci-te pai-pih hi Topa in Abel le*
 > ABEL ERG 3SG poor.person stay-first-PL and 3SG flesh promise-PL go-APPL DECL TOPA ERG ABEL and
@@ -1826,19 +1682,19 @@ by syntactic context.
 
 ### Negative
 
-**Genesis 6:3** (Form I)
+**Genesis 6:3** (Form II)
 > Tua ciangin Topa in, “Mihingte sungah ka Kha om paisuak nawn lo ding hi. Bang
 > *Tua ciang-in Topa in Mihingte sung-ah ka kha om pai-suak nawn lo ding hi Bang*
 > that then-ERG TOPA ERG MIHINGTE inside-LOC 1SG NEG.PERF exist go-become CONT NEG IRR DECL like
 > KJV: *And the LORD said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years.*
 
-**Genesis 24:8** (Form I)
+**Genesis 24:8** (Form II)
 > Ahih hangin a numei in nang hong zuih nop kei leh keima thuciamna panin nang
 > *Ahih hang-in a nu-mei in nang hong zui-h nop kei leh keima thuciam-na pan-in nang*
 > be.3SG.REL because-ERG 3SG woman ERG 2SG.PRO 3→1 follow-NOM want NEG.EMPH and 1SG.self promise-NMLZ ABL-ERG 2SG.PRO
 > KJV: *And if the woman will not be willing to follow thee, then thou shalt be clear from this my oath: only bring not my son thither again.*
 
-**Genesis 24:48** (Form I)
+**Genesis 24:48** (Form II)
 > Tua ciangin ka lu kunin Topa ka bia a, a tapa a dingin ka topa'
 > *Tua ciang-in ka lu kun-in Topa ka bia a a ta-pa a ding-in ka topa'*
 > that then-ERG 1SG head bow-ERG TOPA 1SG worship 3SG 3SG child-male 3SG IRR-ERG 1SG lord.POSS
@@ -1846,25 +1702,17 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 9:18** (Form I)
-> Teembaw sung panin a paikhia Noah' tapate, Shem, Ham, le Jafeth ahi hi. Ham pen
-> *Teembaw sung pan-in a pai-khia Noah' tapa-te Shem Ham le Jafeth ahi hi Ham pen*
-> ark inside ABL-ERG 3SG go-exit NOAH' son-PL SHEM full and JAFETH be.3SG DECL full TOP
-> KJV: *And the sons of Noah, that went forth of the ark, were Shem, and Ham, and Japheth: and Ham is the father of Canaan.*
+**Genesis 28:7** (Form I)
+> Jakob in a nu le a pa' thu mangin Paddanaram-ah a paina thu tu-in Esau
+> *Jakob in a nu le a pa' thu mang-in Paddanaram-ah a pai-na thu tu-in Esau*
+> JAKOB ERG 3SG female and 3SG male.POSS word dream-ERG PADDANARAM-AH 3SG go-NMLZ word now-ERG ESAU
+> KJV: *and that Jacob obeyed his father and his mother, and was gone to Padan-aram;*
 
-**Genesis 13:4** (Form I)
-> a masa-a biakna tau khat a bawlnasa munah khualzinin a paisuak hi. Tua lai munah
-> *a masa-a biak-na tau khat a bawl-na-sa mun-ah khual-zin-in a pai-suak hi Tua lai mun-ah*
-> 3SG first-LOC worship-NMLZ signal one 3SG make-NMLZ-PAST place-LOC sojourn-road-ERG 3SG go-become DECL that midst place-LOC
-> KJV: *unto the place of the altar, which he had made there at the first: and there Abram called on the name of the LORD .*
-
-**Genesis 16:8** (Form I)
-> Amah in, “Sarai' sila numei Hagar aw, koi pan hong pai a, koi-ah pai ding
-> *Amah in Sarai' sila nu-mei Hagar aw koi pan hong pai a koi-ah pai ding*
-> 3SG.PRO ERG SARAI' servant woman HAGAR voice whence ABL 3→1 go 3SG where-LOC go IRR
-> KJV: *And he said, Hagar, Sarai's maid, whence camest thou? and whither wilt thou go? And she said, I flee from the face of my mistress Sarai.*
-
-### P Relative
+**Genesis 29:4** (Form I)
+> Jakob in amaute kiangah, “Sanggamte aw, koi pana hong pai na hi uh hiam?” a
+> *Jakob in amaute kiang-ah Sanggamte aw koi pa-na hong pai na hi uh hiam a*
+> JAKOB ERG 3PL.PRO beside-LOC SANGGAMTE voice whence father-NMLZ 3→1 go 2SG DECL 2/3PL Q 3SG
+> KJV: *And Jacob said unto them, My brethren, whence be ye? And they said, Of Haran are we.*
 
 **Genesis 31:13** (Form I)
 > Kei pen, nang in khuam khat sathau nuhin kei' tungah thuciamna nong bawlna mun Bethel
@@ -1872,21 +1720,29 @@ by syntactic context.
 > NEG.EMPH TOP 2SG.PRO ERG darkness one flesh-fat mother-this NEG.EMPH.POSS on-LOC promise-NMLZ 2→1 make-NMLZ place BETHEL
 > KJV: *I am the God of Beth-el, where thou anointedst the pillar, and where thou vowedst a vow unto me: now arise, get thee out from this land, and return un...*
 
-**Deuteronomy 4:1** (Form I)
-> “Tu-in Israel-te aw, note nungta-in, Topa, na pate uh Pasian in note hong piak leitangah
-> *Tu-in Israel-te aw note nung-ta-in Topa na pa-te uh Pasian in note hong piak leitang-ah*
-> now-ERG ISRAEL-TE voice 2PL.PRO life-PFV-ERG TOPA 2SG male-PL 2/3PL PASIAN ERG 2PL.PRO 3→1 give.to earth-LOC
-> KJV: *Now therefore hearken, O Israel, unto the statutes and unto the judgments, which I teach you, for to do them , that ye may live, and go in and possess...*
+### P Relative
 
-**Deuteronomy 8:1** (Form I)
-> “Note nungta-in tampi na phak theih nading uh le na pu na pate uh tungah
-> *Note nung-ta-in tampi na phak theih nading uh le na pu na pa-te uh tung-ah*
-> 2PL.PRO life-PFV-ERG many 2SG year know.II PURP 2/3PL and 2SG grandfather 2SG male-PL 2/3PL on-LOC
-> KJV: *All the commandments which I command thee this day shall ye observe to do, that ye may live, and multiply, and go in and possess the land which the LO...*
+**Deuteronomy 9:26** (Form II)
+> Topa' tungah thu ka ngen a, 'Topa Pasian aw, nangmah in na liatna tawh na
+> *Topa' tung-ah thu ka ngen a Topa Pasian aw nangmah in na liat-na tawh na*
+> TOPA' on-LOC word 1SG pray 3SG TOPA PASIAN voice 2SG.PRO ERG 2SG great-NMLZ COM 2SG
+> KJV: *I prayed therefore unto the LORD , and said, O Lord GOD , destroy not thy people and thine inheritance, which thou hast redeemed through thy greatness...*
+
+**Isaiah 43:25** (Form II)
+> Na thupalsatnate hong paihkhiatsak pa pen keimah ka hi a, kei ka hih manin na
+> *Na thupalsatna-te hong paih-khiat-sak pa pen keimah ka hi a kei ka hih man-in na*
+> 2SG transgression-PL 3→1 go-depart-APPL father TOP 1SG.PRO 1SG DECL 3SG NEG.EMPH 1SG this reason-ERG 2SG
+> KJV: *I, even I, am he that blotteth out thy transgressions for mine own sake, and will not remember thy sins.*
+
+**Ezekiel 27:36** (Form II)
+> Tu-in nang a maimang paisuak na hita a, nangma tuah bang a tuahkhak ding uh
+> *Tu-in nang a maimang pai-suak na hit-a a nangma tuah bang a tuah-khak ding uh*
+> now-ERG 2SG.PRO 3SG shame go-become 2SG that-LOC 3SG 2SG.self do like 3SG meet-give.command IRR 2/3PL
+> KJV: *The merchants among the people shall hiss at thee; thou shalt be a terror, and never shalt be any more.*
 
 ### Subordinate Clause
 
-**Genesis 2:19** (Form I)
+**Genesis 2:19** (Form II)
 > Tua ahih ciangin Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh
 > *Tua ahih ciang-in Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh*
 > that be.3SG.REL then-ERG TOPA PASIAN ERG land inside animal all and wind among bird all
@@ -1952,26 +1808,6 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 18:7** (Form I)
-> Abraham zong bawnghon lakah tai-in bawngno a dawng a hoih khat la a, manlang taka
-> *Abraham zong bawng-hon lak-ah tai-in bawng-no a dawng a hoih khat la a manlang taka*
-> ABRAHAM also cattle-flock among-LOC flee-ERG calf 3SG receive 3SG good one take 3SG hastily truly
-> KJV: *And Abraham ran unto the herd, and fetcht a calf tender and good, and gave it unto a young man; and he hasted to dress it.*
-
-**Genesis 45:23** (Form I)
-> Amah in a pa kiangah a nuai-ate a khak hi: Egypt na hoihte a pua
-> *Amah in a pa kiang-ah a nuai-a-te a khak hi Egypt na hoih-te a pua*
-> 3SG.PRO ERG 3SG father beside-LOC 3SG below-NOM-PL 3SG limit DECL EGYPT 2SG good-PL 3SG carry.on.back
-> KJV: *And to his father he sent after this manner ; ten asses laden with the good things of Egypt, and ten she asses laden with corn and bread and meat for ...*
-
-**Exodus 26:1** (Form I)
-> “Tua tham loin a kopin a kikhuk khau hoih tawh a kigan dalna puan sawm
-> *Tua tham lo-in a kop-in a ki-khuk khau hoih tawh a ki-gan dalna puan sawm*
-> that moreover NEG-ERG 3SG pair-ERG 3SG REFL-pool rope good COM 3SG REFL-bear hindrance cloth ten
-> KJV: *Moreover thou shalt make the tabernacle with ten curtains of fine twined linen, and blue, and purple, and scarlet: with cherubims of cunning work shal...*
-
-### P Relative
-
 **Genesis 20:15** (Form I)
 > Abimelek in, “En in, ka leitang, na mai-ah om hi. Nangmah in hoih na sakna
 > *Abimelek in En in ka lei-tang na mai-ah om hi Nangmah in hoih na sak-na*
@@ -1989,6 +1825,14 @@ by syntactic context.
 > *a tawpna-ah a hoih-in na gam-tat theih nading uh a deih-na-in note hong niam-khiat-in a*
 > 3SG end.NMLZ-LOC 3SG be.good-ERG 2SG land-rule know.II PURP 2/3PL 3SG want-NMLZ-ERG 2PL.PRO 3→1 low-out-INST 3SG
 > KJV: *who fed thee in the wilderness with manna, which thy fathers knew not, that he might humble thee, and that he might prove thee, to do thee good at thy...*
+
+### P Relative
+
+**2 Chronicles 6:41** (Form II)
+> Tu-in ding in, Topa Pasian aw, na tawlngakna ding munah na vangliatna lim Thuciamna Singkuang
+> *Tu-in ding in Topa Pasian aw na tawlngak-na ding mun-ah na vangliat-na lim thuciam-na Singkuang*
+> now-ERG IRR ERG TOPA PASIAN voice 2SG rest-NMLZ IRR place-LOC 2SG strong-NMLZ sign promise-NMLZ SINGKUANG
+> KJV: *Now therefore arise, O LORD God, into thy resting place, thou, and the ark of thy strength: let thy priests, O LORD God, be clothed with salvation, an...*
 
 ### Subordinate Clause
 
@@ -2018,6 +1862,12 @@ by syntactic context.
 
 ### Affirmative
 
+**Genesis 1:2** (Form I)
+> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
+> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
+> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
+> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+
 **Genesis 1:28** (Form I)
 > Pasian in amaute thupha pia a, Pasian in amaute tungah, “Ci pha-in tampi pha unla,
 > *Pasian in amaute thu-pha pia a Pasian in amaute tung-ah Ci pha-in tampi pha un-la*
@@ -2029,12 +1879,6 @@ by syntactic context.
 > *Pasian in En un lei-tung maitang khempeuh-ah a om tang a piangsak kungno-te khempeuh le*
 > PASIAN ERG look IMP.PL land-on forehead all-LOC 3SG exist embed 3SG cause.birth herb-PL all and
 > KJV: *And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of ...*
-
-**Genesis 2:7** (Form I)
-> Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu
-> *Topa Pasian in lei-lak pa-na leivui tawh mi-hing bawl a a nak sung-ah nuntak-na hu*
-> TOPA PASIAN ERG dust father-NMLZ dust COM person-kind make 3SG 3SG nose inside-LOC live-NMLZ help
-> KJV: *And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.*
 
 ### Negative
 
@@ -2050,7 +1894,7 @@ by syntactic context.
 > that time-ERG ABRAM' wife SARAI ERG child have near NEG DECL 3SG.PRO ERG HAGAR name
 > KJV: *Now Sarai Abram's wife bare him no children: and she had an handmaid, an Egyptian, whose name was Hagar.*
 
-**Genesis 22:16** (Form II)
+**Genesis 22:16** (Form I)
 > “Kei mahmah ka kiciam hi, Topa in ci hi. Bang hang hiam cih leh nang
 > *Kei mahmah ka ki-ciam hi Topa in ci hi Bang hang hiam cih leh nang*
 > NEG.EMPH very 1SG covenant DECL TOPA ERG say DECL like reason Q say.NOM and 2SG.PRO
@@ -2058,37 +1902,25 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 1:2** (Form I)
-> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek
-> *lei-tung in lim-le-mel nei lo-in a awng-thawl-pi ahi hi tui-pi tung teng-ah khua mial bik-bek*
-> land-on ERG form-NEG-void have NEG-ERG 3SG open-waste-big be.3SG DECL water-big on dwell-LOC town darkness small~REDUP
-> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
+**Genesis 38:1** (Form I)
+> Tua hun laitakin Judah a sanggamte kiang panin paisukin, Adullam mi Hirah min nei mi
+> *Tua hun lai-tak-in Judah a sanggam-te kiang pan-in pai-suk-in Adullam mi Hirah min nei mi*
+> that time midst-exact-ERG JUDAH 3SG brother-PL beside ABL-ERG go-DOWN-ERG ADULLAM person HIRAH name have person
+> KJV: *And it came to pass at that time, that Judah went down from his brethren, and turned in to a certain Adullamite, whose name was Hirah.*
 
-**Genesis 4:1** (Form I)
-> Tu-in mipa in ama zi Eve luppih a, amah gai-in Kain nei a, “ Topa'
-> *Tu-in mipa in ama zi Eve luppih a amah gai-in Kain nei a  Topa'*
-> now-ERG man ERG 3SG.POSS wife EVE lay.down 3SG 3SG.PRO conceive-ERG KAIN have 3SG  TOPA'
-> KJV: *And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD .*
+**Genesis 38:25** (Form I)
+> Amah a kipaikhiatpih laitakin amah in a teekpa kiangah kam khak a, “Hih nate a
+> *Amah a ki-paikhiat-pih lai-tak-in amah in a teek-pa kiang-ah kam khak a Hih na-te a*
+> 3SG.PRO 3SG REFL-send.away-APPL midst-exact-ERG 3SG.PRO ERG 3SG in.law-father beside-LOC mouth limit 3SG this 2SG-PL 3SG
+> KJV: *When she was brought forth, she sent to her father in law, saying, By the man, whose these are, am I with child: and she said, Discern, I pray thee, w...*
 
-**Genesis 6:4** (Form II)
-> Vana om mite in leitung mihing tanute luppihin, amaute in ta a neih hun laitak
-> *Vana om mi-te in lei-tung mi-hing tanu-te lup-pih-in amaute in ta a nei-h hun lai-tak*
-> VANA exist person-PL ERG land-on person-kind daughter-PL roll-with-INST 3PL.PRO ERG child 3SG have-NOM time middle-true
-> KJV: *There were giants in the earth in those days; and also after that, when the sons of God came in unto the daughters of men, and they bare children to t...*
+**Exodus 21:34** (Form I)
+> dum nei pa in loh ding hi. Amah in a nei pa tungah sum pia
+> *dum nei pa in lo-h ding hi Amah in a nei pa tung-ah sum pia*
+> siege.mound have father ERG NEG-NOM IRR DECL 3SG.PRO ERG 3SG have father on-LOC extinguish give
+> KJV: *the owner of the pit shall make it good, and give money unto the owner of them; and the dead beast shall be his.*
 
 ### P Relative
-
-**2 Samuel 23:8** (Form II)
-> David' neih mi thahatte' minte: Tahkhemon mi Joshebbasshebeth hi a, amah pen mi thumte a
-> *David' nei-h mi tha-hat-te' min-te Tahkhemon mi Joshebbasshebeth hi a amah pen mi thum-te a*
-> DAVID' have-NOM person strong-firm-PL.POSS name-PL TAHKHEMON person JOSHEBBASSHEBETH DECL 3SG 3SG.PRO TOP person three-PL 3SG
-> KJV: *These be the names of the mighty men whom David had: the Tachmonite that sat in the seat, chief among the captains; the same was Adino the Eznite: he ...*
-
-**Job 11:18** (Form I)
-> Lungnuam tak le lametna nei-in na om ding a, Pasian in nang hong hu-in, tawldamna
-> *Lungnuam tak le lam-et-na nei-in na om ding a Pasian in nang hong hu-in tawl-dam-na*
-> LUNGNUAM truly and path-example-NMLZ have-ERG 2SG exist IRR 3SG PASIAN ERG 2SG.PRO 3→1 help-ERG rest-well-NMLZ
-> KJV: *And thou shalt be secure, because there is hope; Yea, thou shalt dig about thee, and thou shalt take thy rest in safety.*
 
 **Psalms 137:9** (Form II)
 > Na taneute hong laksakin suangtumpi denna-in a hong neihsak pa in lungdamna ngah ta hen!
@@ -2130,7 +1962,7 @@ by syntactic context.
 > now-ERG serpent-great TOP TOPA PASIAN' make-PAST land-midst animal other-PL all high-ERG cunning-make more DECL 3SG.PRO
 > KJV: *Now the serpent was more subtil than any beast of the field which the LORD God had made. And he said unto the woman, Yea, hath God said, Ye shall not ...*
 
-**Genesis 4:24** (Form I)
+**Genesis 4:24** (Form II)
 > Kain a kithah manin a zah sagihin kithukkik ahihleh, Lamek a kithah manin a zah
 > *Kain a ki-thah man-in a zah sagih-in ki-thuk-kik ahihleh Lamek a ki-thah man-in a zah*
 > KAIN 3SG murder reason-ERG 3SG fear seven-ERG REFL-revenge-ITER if LAMEK 3SG murder reason-ERG 3SG fear
@@ -2144,7 +1976,7 @@ by syntactic context.
 
 ### Negative
 
-**Genesis 4:13** (Form I)
+**Genesis 4:13** (Form II)
 > Kain in Topa' tungah, “Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi
 > *Kain in Topa' tung-ah Keimah gim hong ki-piak-na ka thuak zawh ding hi lo hi*
 > KAIN ERG TOPA' on-LOC 1SG.PRO faint 3→1 REFL-give.to-NMLZ 1SG suffer able IRR DECL NEG DECL
@@ -2164,25 +1996,17 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 8:13** (Form I)
-> Noah a khan kum zaguk le a kum khatna, a kha masa, tua kha ni
-> *Noah a khan kum zaguk le a kum khat-na a kha masa tua kha ni*
-> NOAH 3SG generation year winepress and 3SG year one-NMLZ 3SG NEG.PERF first that NEG.PERF day
-> KJV: *And it came to pass in the six hundredth and first year, in the first month , the first day of the month, the waters were dried up from off the earth:...*
-
 **Genesis 11:2** (Form I)
 > Amaute, nisuahna lamah lal uh a, Shinar gam sungah zanglei mun khat mu-in tua lai-ah
 > *Amaute ni-suah-na lam-ah lal uh a Shinar gam sung-ah zang-lei mun khat mu-in tua lai-ah*
 > 3PL.PRO day-birth-NMLZ way-LOC plain 2/3PL 3SG SHINAR land inside-LOC use-buy place one see-ERG that midst-LOC
 > KJV: *And it came to pass, as they journeyed from the east, that they found a plain in the land of Shinar; and they dwelt there.*
 
-**Genesis 17:20** (Form I)
-> Ishmael a' ding na ngetna ahihleh ka za khin hi. En in, amah thupha pia-in
-> *Ishmael a' ding na nget-na ahihleh ka za khin hi En in amah thu-pha pia-in*
-> ISHMAEL 3SG.POSS IRR 2SG request-NMLZ if 1SG hear IMM DECL look ERG 3SG.PRO word-good give-ERG
-> KJV: *And as for Ishmael, I have heard thee: Behold, I have blessed him, and will make him fruitful, and will multiply him exceedingly; twelve princes shall...*
-
-### P Relative
+**Genesis 45:11** (Form I)
+> Hong tung ding kialpi kum nga omlai ahih manin tua lai-ah nang kong vak ding
+> *Hong tung ding kial-pi kum nga om-lai ahih man-in tua lai-ah nang kong vak ding*
+> 3→1 on IRR hunger-COMP year five rest-still be.3SG.REL reason-ERG that midst-LOC 2SG.PRO 1SG→3 walk IRR
+> KJV: *and there will I nourish thee; for yet there are five years of famine; lest thou, and thy household, and all that thou hast, come to poverty.*
 
 **Genesis 46:2** (Form I)
 > Pasian in Israel tungah zanin thu gen a, “Jakob, Jakob,” ci hi. Amah in, “Hiah
@@ -2190,17 +2014,25 @@ by syntactic context.
 > PASIAN ERG ISRAEL on-LOC night-ERG word speak 3SG JAKOB JAKOB say DECL 3SG.PRO ERG HIAH
 > KJV: *And God spake unto Israel in the visions of the night, and said, Jacob, Jacob. And he said, Here am I.*
 
-**Exodus 11:2** (Form II)
-> Pasal peuhmah in a vengte kiang pan, numei peuhmah in zong a vengte' kiang mah
-> *pasal peuhmah in a veng-te kiang pan nu-mei peuhmah in zong a veng-te' kiang mah*
-> husband whosoever ERG 3SG neighborhood-PL beside ABL woman whosoever ERG also 3SG guard-PL.POSS beside EMPH
-> KJV: *Speak now in the ears of the people, and let every man borrow of his neighbour, and every woman of her neighbour, jewels of silver, and jewels of gold...*
+### P Relative
 
-**Exodus 26:26** (Form I)
-> “Singkha sing, zawlin na bawl ding hi
-> *Singkha sing zawl-in na bawl ding hi*
-> SINGKHA shake open.space-ERG 2SG make IRR DECL
-> KJV: *And thou shalt make bars of shittim wood; five for the boards of the one side of the tabernacle,*
+**Deuteronomy 15:8** (Form II)
+> Ama tungah na cingh gamtat ding uh a, bangbang hitaleh ama kisap zah na leitawi
+> *Ama tung-ah na cing-h gam-tat ding uh a bang~bang hitaleh ama ki-sap zah na leitawi*
+> AMA on-LOC 2SG lend-COMP land-rule IRR 2/3PL 3SG what~REDUP if.so 3SG.POSS calling fear 2SG lend
+> KJV: *but thou shalt open thine hand wide unto him, and shalt surely lend him sufficient for his need, in that which he wanteth.*
+
+**Job 1:1** (Form II)
+> Uz gamah Job kici min nei mi khat a om hi. Tua mipa a paubaang
+> *Uz gam-ah Job kici min nei mi khat a om hi Tua mipa a pau-baang*
+> UZ land-LOC JOB called name have person one 3SG exist DECL that man 3SG speak-perfect
+> KJV: *There was a man in the land of Uz, whose name was Job; and that man was perfect and upright, and one that feared God, and eschewed evil.*
+
+**Psalms 22:23** (Form II)
+> Topa a zahtak mi khempeuh aw, amah phat un. Jakob' suan mi khempeuh aw, amah
+> *Topa a zah-tak mi khempeuh aw amah phat un Jakob' suan mi khempeuh aw amah*
+> TOPA 3SG fear-true person all voice 3SG.PRO worthy IMP.PL JAKOB' plant person all voice 3SG.PRO
+> KJV: *Ye that fear the LORD , praise him; All ye the seed of Jacob, glorify him; And fear him, all ye the seed of Israel.*
 
 ### Subordinate Clause
 
@@ -2230,6 +2062,12 @@ by syntactic context.
 
 ### Affirmative
 
+**Genesis 2:7** (Form I)
+> Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu
+> *Topa Pasian in lei-lak pa-na leivui tawh mi-hing bawl a a nak sung-ah nuntak-na hu*
+> TOPA PASIAN ERG dust father-NMLZ dust COM person-kind make 3SG 3SG nose inside-LOC live-NMLZ help
+> KJV: *And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.*
+
 **Genesis 2:8** (Form I)
 > Topa Pasian in nisuahna lamah Eden huan khat bawl hi. Tua lai munah ama bawlsa
 > *Topa Pasian in ni-suah-na lam-ah Eden huan khat bawl hi Tua lai mun-ah ama bawl-sa*
@@ -2241,12 +2079,6 @@ by syntactic context.
 > *A deih-huai nek ding-a a hoih sing-kung nam khempeuh huan lai-zang-ah nuntak-na sing-kung le a*
 > 3SG want-plural eat.II IRR-LOC 3SG good tree nation all bread middle-side-LOC live-NMLZ tree and 3SG
 > KJV: *And out of the ground made the LORD God to grow every tree that is pleasant to the sight, and good for food; the tree of life also in the midst of the...*
-
-**Genesis 4:3** (Form I)
-> Tua hun sungin Kain in lei pana piang gah piakna Topa' tungah paipih a,
-> *Tua hun sung-in Kain in lei pa-na piang gah piak-na Topa' tung-ah pai-pih a*
-> that time inside-ERG KAIN ERG buy father-NMLZ be.born branch give.to-NMLZ TOPA' on-LOC go-APPL 3SG
-> KJV: *And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD .*
 
 ### Negative
 
@@ -2270,26 +2102,6 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 2:7** (Form I)
-> Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu
-> *Topa Pasian in lei-lak pa-na leivui tawh mi-hing bawl a a nak sung-ah nuntak-na hu*
-> TOPA PASIAN ERG dust father-NMLZ dust COM person-kind make 3SG 3SG nose inside-LOC live-NMLZ help
-> KJV: *And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.*
-
-**Genesis 2:16** (Form I)
-> Topa Pasian in mipa thu pia a, “Na ut utin huan sung singkung gah khempeuh
-> *Topa Pasian in mipa thu pia a Na ut ut-in huan sung sing-kung gah khempeuh*
-> TOPA PASIAN ERG man word give 3SG 2SG will will-ERG bread inside tree branch all
-> KJV: *And the LORD God commanded the man, saying, Of every tree of the garden thou mayest freely eat:*
-
-**Genesis 4:1** (Form II)
-> Tu-in mipa in ama zi Eve luppih a, amah gai-in Kain nei a, “ Topa'
-> *Tu-in mipa in ama zi Eve luppih a amah gai-in Kain nei a  Topa'*
-> now-ERG man ERG 3SG.POSS wife EVE lay.down 3SG 3SG.PRO conceive-ERG KAIN have 3SG  TOPA'
-> KJV: *And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD .*
-
-### P Relative
-
 **Exodus 12:16** (Form I)
 > A ni masa ni le a ni sagih ni-in a siangtho biak kikhopna khat na
 > *A ni masa ni le a ni sagih ni-in a siangtho biak ki-khop-na khat na*
@@ -2302,11 +2114,31 @@ by syntactic context.
 > feast correct food COM 2SG eat NEG.EMPH IRR 2/3PL 3SG day seven inside feast correct
 > KJV: *Thou shalt eat no leavened bread with it; seven days shalt thou eat unleavened bread therewith, even the bread of affliction; for thou camest forth ou...*
 
-**Joshua 22:24** (Form I)
+**Psalms 89:26** (Form I)
+> Amah in kei kiangah, 'Nang pen keima Pa le ka Pasian na hi a, kei
+> *Amah in kei kiang-ah Nang pen keima Pa le ka Pasian na hi a kei*
+> 3SG.PRO ERG NEG.EMPH beside-LOC 2SG.PRO TOP 1SG.self father and 1SG PASIAN 2SG DECL 3SG NEG.EMPH
+> KJV: *He shall cry unto me, Thou art my father, My God, and the rock of my salvation.*
+
+### P Relative
+
+**Joshua 22:24** (Form II)
 > Tua bang hi het lo hi. Hong tung ding hunte-ah na tate un ko' tate
 > *Tua bang hi het lo hi Hong tung ding hun-te-ah na ta-te un ko’ ta-te*
 > that like DECL trouble NEG DECL 3→1 on IRR time-PL-LOC 2SG child-PL IMP.PL call.POSS child-PL
 > KJV: *and if we have not rather done it for fear of this thing, saying, In time to come your children might speak unto our children, saying, What have ye to...*
+
+**2 Samuel 23:27** (Form II)
+> Anathoth khuami Abiezer, Hushah mi Mebunnai,
+> *Anathoth khua-mi Abiezer Hushah mi Mebunnai*
+> ANATHOTH town-person ABIEZER HUSHAH person MEBUNNAI
+> KJV: *Abiezer the Anethothite, Mebunnai the Hushathite,*
+
+**Colossians 4:5** (Form II)
+> A pualam mite tungah a kilawm a kituakin gamta unla, hunhoih na ngah khempeuh uh
+> *A pualam mi-te tung-ah a ki-lawm a kituak-in gamta un-la hun-hoih na ngah khempeuh uh*
+> 3SG outside person-PL on-LOC 3SG REFL-worthy 3SG find-ERG send.away PL.IMP-and time-good 2SG get all 2/3PL
+> KJV: *Walk in wisdom toward them that are without, redeeming the time.*
 
 ### Subordinate Clause
 
@@ -2316,13 +2148,13 @@ by syntactic context.
 > PASIAN ERG SUN and break 3SG divide IRR-ERG heaven-LOC light-PL exist JUSS DIST-PL TOP Pawi
 > KJV: *And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for...*
 
-**Genesis 1:26** (Form I)
+**Genesis 1:26** (Form II)
 > Tua ciangin Pasian in, “Eima lim, eimah hong sunin mihing bawl ni. Tuipi ngasate tung,
 > *Tua ciang-in Pasian in Eima lim ei-mah hong sun-in mi-hing bawl ni tui-pi ngasa-te tung*
 > that then-ERG PASIAN ERG our.god sign 1PL.EXCL-EMPH 3→1 night-ERG person-kind make day water-big fish-PL on
 > KJV: *And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and...*
 
-**Genesis 1:30** (Form I)
+**Genesis 1:30** (Form II)
 > Leitung ganhing khempeuhte tung, huih lak vasate khempeuh tung, leitungah a bokvakte khempeuh tung, nuntakna
 > *lei-tung ganhing khempeuh-te tung huih lak va-sa-te khempeuh tung leitung-ah a bok-vak-te khempeuh tung nuntak-na*
 > land-on animal all-PL on wind among go.and-PAST-PL all on earth-LOC 3SG creep-creature-PL all on live-NMLZ
@@ -2336,7 +2168,7 @@ by syntactic context.
 
 ### Affirmative
 
-**Genesis 2:9** (Form II)
+**Genesis 2:9** (Form I)
 > A deihhuai, nek dinga a hoih singkung nam khempeuh, huan laizangah nuntakna singkung, le a
 > *A deih-huai nek ding-a a hoih sing-kung nam khempeuh huan lai-zang-ah nuntak-na sing-kung le a*
 > 3SG want-plural eat.II IRR-LOC 3SG good tree nation all bread middle-side-LOC live-NMLZ tree and 3SG
@@ -2376,43 +2208,27 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 18:25** (Form I)
-> Thuman mite, migilote tawh a kibat nadingin migilote tawh thuman mite thahkhawm ding, hi thei
-> *Thuman mi-te migilo-te tawh a ki-bat nadingin migilo-te tawh thu-man mi-te thah-khawm ding hi thei*
-> THUMAN person-PL enemy-PL COM 3SG REFL-bind PURP.ERG enemy-PL COM word-reason person-PL slay-COM IRR DECL know
-> KJV: *That be far from thee to do after this manner, to slay the righteous with the wicked: and that the righteous should be as the wicked, that be far from...*
+**Exodus 36:8** (Form I)
+> Nasem mite' lak panin a hih thei mi khempeuh in puan dal sawm tawh biakbuk
+> *nasem mite' lak pan-in a hih thei mi khempeuh in puan dal sawm tawh biak-buk*
+> servant person-PL.POSS among ABL-ERG 3SG this know person all ERG cloth hinder ten COM worship-tent
+> KJV: *And every wise hearted man among them that wrought the work of the tabernacle made ten curtains of fine twined linen, and blue, and purple, and scarle...*
 
-**Genesis 23:4** (Form II)
-> “Kei pen note lakah khualmi hi-in peemta ka hi hi. Ka zi ka vui theih
-> *Kei pen note lak-ah khual-mi hi-in peem-ta ka hi hi Ka zi ka vui theih*
-> NEG.EMPH TOP 2PL.PRO among-LOC sojourn-person be-ERG widow.son-PFV 1SG DECL DECL 1SG wife 1SG dust know.II
-> KJV: *I am a stranger and a sojourner with you: give me a possession of a buryingplace with you, that I may bury my dead out of my sight.*
+**2 Chronicles 29:5** (Form I)
+> amaute kiangah, “Levi mite aw, ka thugen hong za un! Tuni-in nomau kisiansuah unla, na
+> *amaute kiang-ah Levi mi-te aw ka thu-gen hong za un Tuni-in nomau ki-siansuah un-la na*
+> 3PL.PRO beside-LOC LEVI person-PL voice 1SG speech 3→1 hear IMP.PL TUNI-IN 2PL.PRO sanctify PL.IMP-and 2SG
+> KJV: *and said unto them, Hear me, ye Levites, sanctify now yourselves, and sanctify the house of the LORD God of your fathers, and carry forth the filthine...*
 
-**Genesis 24:21** (Form II)
-> Topa in ama khualzinna mavangsak ding hiam, vangsak lo ding hiam, cih a theih nadingin
-> *Topa in ama khual-zin-na ma-vang-sak ding hiam vang-sak lo ding hiam cih a theih nadingin*
-> TOPA ERG 3SG.POSS sojourn-travel-NMLZ that-wonder-CAUS IRR Q prosper-CAUS NEG IRR Q say.NOM 3SG know.II PURP.ERG
-> KJV: *And the man wondering at her held his peace, to wit whether the LORD had made his journey prosperous or not.*
+**Nehemiah 13:24** (Form I)
+> le a tate uh kimkhat in Ashdod kampau a zatna, le Judah kampau zang thei
+> *le a ta-te uh kimkhat in Ashdod kam-pau a zat-na le Judah kam-pau zang thei*
+> and 3SG child-PL 2/3PL half ERG ASHDOD word-speak 3SG hear.II-NMLZ and JUDAH word-speak use know
+> KJV: *and their children spake half in the speech of Ashdod, and could not speak in the Jews' language, but according to the language of each people.*
 
 ### P Relative
 
-**Proverbs 3:15** (Form II)
-> A manpha pen suangmanpha nangawn sangin pilna manpha zaw lai a, mihingte' deih theih na
-> *A manpha pen suangmanpha na-ngawn sang-in pilna manpha zaw lai a mihingte' deih theih na*
-> 3SG precious TOP precious.stone 2SG-own high-ERG learning precious more midst 3SG human-PL.POSS want know.II 2SG
-> KJV: *She is more precious than rubies: And all the things thou canst desire are not to be compared unto her.*
-
-**John 13:17** (Form I)
-> Hih thu thei-in na zuih uhleh na lung uh nuam mahmah ding hi
-> *Hih thu thei-in na zui-h uhleh na lung uh nuam mahmah ding hi*
-> this word know.I-ERG 2SG follow-NOM 2/3PL.if 2SG feel 2/3PL want very IRR DECL
-> KJV: *If ye know these things, happy are ye if ye do them.*
-
-**John 18:20** (Form II)
-> Jesuh in, “Mi khempeuh' theihin thu ka gen tawntung hi. Jew mihonpi a kikhopna innte
-> *Jesuh in Mi khempeuh' theih-in thu ka gen tawn-tung hi Jew mi-hon-pi a ki-khop-na inn-te*
-> JESUH ERG person all.POSS know-ERG word 1SG speak ever-always DECL JEW person-multitude 3SG REFL-gather-NMLZ house-PL
-> KJV: *Jesus answered him, I spake openly to the world; I ever taught in the synagogue, and in the temple, whither the Jews always resort; and in secret have...*
+*No examples found in corpus.*
 
 ### Subordinate Clause
 
@@ -2422,13 +2238,13 @@ by syntactic context.
 > that be.3SG.REL then-ERG PASIAN ERG water-big animal creature-great-PL and 3PL.PRO nation each.kind.ERG water-big inside-LOC many
 > KJV: *And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fow...*
 
-**Genesis 2:17** (Form II)
+**Genesis 2:17** (Form I)
 > Ahih hangin a pha le a sia theihna singkung gah pen na ne kei ding
 > *Ahih hang-in a pha le a sia theih-na sing-kung gah pen na ne kei ding*
 > be.3SG.REL because-ERG 3SG branch and 3SG evil know.II-NMLZ tree branch TOP 2SG eat NEG.EMPH IRR
 > KJV: *but of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.*
 
-**Genesis 2:19** (Form II)
+**Genesis 2:19** (Form I)
 > Tua ahih ciangin Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh
 > *Tua ahih ciang-in Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh*
 > that be.3SG.REL then-ERG TOPA PASIAN ERG land inside animal all and wind among bird all
@@ -2442,7 +2258,7 @@ by syntactic context.
 
 ### Affirmative
 
-**Genesis 2:9** (Form II)
+**Genesis 2:9** (Form I)
 > A deihhuai, nek dinga a hoih singkung nam khempeuh, huan laizangah nuntakna singkung, le a
 > *A deih-huai nek ding-a a hoih sing-kung nam khempeuh huan lai-zang-ah nuntak-na sing-kung le a*
 > 3SG want-plural eat.II IRR-LOC 3SG good tree nation all bread middle-side-LOC live-NMLZ tree and 3SG
@@ -2482,43 +2298,27 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 18:25** (Form I)
-> Thuman mite, migilote tawh a kibat nadingin migilote tawh thuman mite thahkhawm ding, hi thei
-> *Thuman mi-te migilo-te tawh a ki-bat nadingin migilo-te tawh thu-man mi-te thah-khawm ding hi thei*
-> THUMAN person-PL enemy-PL COM 3SG REFL-bind PURP.ERG enemy-PL COM word-reason person-PL slay-COM IRR DECL know
-> KJV: *That be far from thee to do after this manner, to slay the righteous with the wicked: and that the righteous should be as the wicked, that be far from...*
+**Exodus 36:8** (Form I)
+> Nasem mite' lak panin a hih thei mi khempeuh in puan dal sawm tawh biakbuk
+> *nasem mite' lak pan-in a hih thei mi khempeuh in puan dal sawm tawh biak-buk*
+> servant person-PL.POSS among ABL-ERG 3SG this know person all ERG cloth hinder ten COM worship-tent
+> KJV: *And every wise hearted man among them that wrought the work of the tabernacle made ten curtains of fine twined linen, and blue, and purple, and scarle...*
 
-**Genesis 23:4** (Form II)
-> “Kei pen note lakah khualmi hi-in peemta ka hi hi. Ka zi ka vui theih
-> *Kei pen note lak-ah khual-mi hi-in peem-ta ka hi hi Ka zi ka vui theih*
-> NEG.EMPH TOP 2PL.PRO among-LOC sojourn-person be-ERG widow.son-PFV 1SG DECL DECL 1SG wife 1SG dust know.II
-> KJV: *I am a stranger and a sojourner with you: give me a possession of a buryingplace with you, that I may bury my dead out of my sight.*
+**2 Chronicles 29:5** (Form I)
+> amaute kiangah, “Levi mite aw, ka thugen hong za un! Tuni-in nomau kisiansuah unla, na
+> *amaute kiang-ah Levi mi-te aw ka thu-gen hong za un Tuni-in nomau ki-siansuah un-la na*
+> 3PL.PRO beside-LOC LEVI person-PL voice 1SG speech 3→1 hear IMP.PL TUNI-IN 2PL.PRO sanctify PL.IMP-and 2SG
+> KJV: *and said unto them, Hear me, ye Levites, sanctify now yourselves, and sanctify the house of the LORD God of your fathers, and carry forth the filthine...*
 
-**Genesis 24:21** (Form II)
-> Topa in ama khualzinna mavangsak ding hiam, vangsak lo ding hiam, cih a theih nadingin
-> *Topa in ama khual-zin-na ma-vang-sak ding hiam vang-sak lo ding hiam cih a theih nadingin*
-> TOPA ERG 3SG.POSS sojourn-travel-NMLZ that-wonder-CAUS IRR Q prosper-CAUS NEG IRR Q say.NOM 3SG know.II PURP.ERG
-> KJV: *And the man wondering at her held his peace, to wit whether the LORD had made his journey prosperous or not.*
+**Nehemiah 13:24** (Form I)
+> le a tate uh kimkhat in Ashdod kampau a zatna, le Judah kampau zang thei
+> *le a ta-te uh kimkhat in Ashdod kam-pau a zat-na le Judah kam-pau zang thei*
+> and 3SG child-PL 2/3PL half ERG ASHDOD word-speak 3SG hear.II-NMLZ and JUDAH word-speak use know
+> KJV: *and their children spake half in the speech of Ashdod, and could not speak in the Jews' language, but according to the language of each people.*
 
 ### P Relative
 
-**Proverbs 3:15** (Form II)
-> A manpha pen suangmanpha nangawn sangin pilna manpha zaw lai a, mihingte' deih theih na
-> *A manpha pen suangmanpha na-ngawn sang-in pilna manpha zaw lai a mihingte' deih theih na*
-> 3SG precious TOP precious.stone 2SG-own high-ERG learning precious more midst 3SG human-PL.POSS want know.II 2SG
-> KJV: *She is more precious than rubies: And all the things thou canst desire are not to be compared unto her.*
-
-**John 13:17** (Form I)
-> Hih thu thei-in na zuih uhleh na lung uh nuam mahmah ding hi
-> *Hih thu thei-in na zui-h uhleh na lung uh nuam mahmah ding hi*
-> this word know.I-ERG 2SG follow-NOM 2/3PL.if 2SG feel 2/3PL want very IRR DECL
-> KJV: *If ye know these things, happy are ye if ye do them.*
-
-**John 18:20** (Form II)
-> Jesuh in, “Mi khempeuh' theihin thu ka gen tawntung hi. Jew mihonpi a kikhopna innte
-> *Jesuh in Mi khempeuh' theih-in thu ka gen tawn-tung hi Jew mi-hon-pi a ki-khop-na inn-te*
-> JESUH ERG person all.POSS know-ERG word 1SG speak ever-always DECL JEW person-multitude 3SG REFL-gather-NMLZ house-PL
-> KJV: *Jesus answered him, I spake openly to the world; I ever taught in the synagogue, and in the temple, whither the Jews always resort; and in secret have...*
+*No examples found in corpus.*
 
 ### Subordinate Clause
 
@@ -2528,13 +2328,13 @@ by syntactic context.
 > that be.3SG.REL then-ERG PASIAN ERG water-big animal creature-great-PL and 3PL.PRO nation each.kind.ERG water-big inside-LOC many
 > KJV: *And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fow...*
 
-**Genesis 2:17** (Form II)
+**Genesis 2:17** (Form I)
 > Ahih hangin a pha le a sia theihna singkung gah pen na ne kei ding
 > *Ahih hang-in a pha le a sia theih-na sing-kung gah pen na ne kei ding*
 > be.3SG.REL because-ERG 3SG branch and 3SG evil know.II-NMLZ tree branch TOP 2SG eat NEG.EMPH IRR
 > KJV: *but of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.*
 
-**Genesis 2:19** (Form II)
+**Genesis 2:19** (Form I)
 > Tua ahih ciangin Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh
 > *Tua ahih ciang-in Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh*
 > that be.3SG.REL then-ERG TOPA PASIAN ERG land inside animal all and wind among bird all
@@ -2548,23 +2348,23 @@ by syntactic context.
 
 ### Affirmative
 
+**Genesis 4:23** (Form I)
+> Lamek in a zite kiangah, “Adah le Zillah aw, ka aw ngai un. Lamek' zite
+> *Lamek in a zi-te kiang-ah Adah le Zillah aw ka aw ngai un Lamek' zi-te*
+> LAMEK ERG 3SG wife-PL beside-LOC ADAH and ZILLAH voice 1SG voice listen.I IMP.PL LAMEK' wife-PL
+> KJV: *And Lamech said unto his wives, Adah and Zillah, Hear my voice; Ye wives of Lamech, hearken unto my speech: For I have slain a man to my wounding, And...*
+
+**Genesis 6:5** (Form I)
+> Leitungah mihing a gitlohna a liatna le mihing lungsim ngaihsutna peuhmah a sia ahih ngitngetna
+> *Leitungah mi-hing a git-loh-na a liat-na le mi-hing lung-sim ngaih-sut-na peuhmah a sia ahih ngit-nget-na*
+> LEITUNGAH person-kind 3SG hate-NEG-NMLZ 3SG great-NMLZ and person-kind stone-mind think-NMLZ whosoever 3SG evil be.3SG.REL think-REDUP-NMLZ
+> KJV: *And GOD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually.*
+
 **Genesis 23:8** (Form I)
 > Amah in amaute' kiangah, “Hih gamah ka zi ka vui ding nong deih uhleh, ka
 > *Amah in amaute' kiang-ah Hih gam-ah ka zi ka vui ding nong deih uhleh ka*
 > 3SG.PRO ERG 3PL.PRO.POSS beside-LOC this land-LOC 1SG wife 1SG dust IRR 2→1 want 2/3PL.if 1SG
 > KJV: *And he communed with them, saying, If it be your mind that I should bury my dead out of my sight; hear me, and intreat for me to Ephron the son of Zoh...*
-
-**Genesis 30:17** (Form I)
-> Pasian in Leah' thu ngai a, amah gai-in Jakob tawh tapa a ngana a nei
-> *Pasian in Leah' thu ngai a amah gai-in Jakob tawh ta-pa a nga-na a nei*
-> PASIAN ERG LEAH' word listen.I 3SG 3SG.PRO conceive-ERG JAKOB COM child-male 3SG endure-NMLZ 3SG have
-> KJV: *And God hearkened unto Leah, and she conceived, and bare Jacob the fifth son.*
-
-**Genesis 37:6** (Form I)
-> Amah in amaute kiangah, “Keima mat hih mang ngai un:
-> *Amah in amaute kiang-ah Keima mat hih mang ngai un*
-> 3SG.PRO ERG 3PL.PRO beside-LOC 1SG.self steal this dream listen.I IMP.PL
-> KJV: *And he said unto them, Hear, I pray you, this dream which I have dreamed:*
 
 ### Negative
 
@@ -2574,13 +2374,13 @@ by syntactic context.
 > that land person-PL.POSS hear.II-NMLZ-LOC 3SG.PRO ERG EFRON' beside-LOC stone-mind indeed COM 2SG say.NOM if 3→1
 > KJV: *And he spake unto Ephron in the audience of the people of the land, saying, But if thou wilt give it , I pray thee, hear me: I will give thee money fo...*
 
-**Genesis 24:16** (Form II)
+**Genesis 24:16** (Form I)
 > Tua nu pen kuamah tawh a lumkhawm nai lo, nungak, a ngaihbaang mahmah khat ahi
 > *Tua nu pen kuamah tawh a lumkhawm nai lo nungak a ngaih-baang mahmah khat ahi*
 > that female TOP nobody COM 3SG lie.with near NEG girl 3SG think-alike very one be.3SG
 > KJV: *And the damsel was very fair to look upon, a virgin, neither had any man known her: and she went down to the well, and filled her pitcher, and came up...*
 
-**Genesis 31:15** (Form II)
+**Genesis 31:15** (Form I)
 > Amah in eite gamdangmi bangin hong ngaihsun hi lo ahi hiam? Bang hang hiam cih
 > *Amah in eite gam-dang-mi bang-in hong ngaihsun hi lo ahi hiam Bang hang hiam cih*
 > 3SG.PRO ERG 1PL.PRO other.land-person like-ERG 3→1 think DECL NEG be.3SG Q like reason Q say.NOM
@@ -2588,31 +2388,25 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 4:23** (Form I)
-> Lamek in a zite kiangah, “Adah le Zillah aw, ka aw ngai un. Lamek' zite
-> *Lamek in a zi-te kiang-ah Adah le Zillah aw ka aw ngai un Lamek' zi-te*
-> LAMEK ERG 3SG wife-PL beside-LOC ADAH and ZILLAH voice 1SG voice listen.I IMP.PL LAMEK' wife-PL
-> KJV: *And Lamech said unto his wives, Adah and Zillah, Hear my voice; Ye wives of Lamech, hearken unto my speech: For I have slain a man to my wounding, And...*
-
-**Genesis 6:5** (Form II)
-> Leitungah mihing a gitlohna a liatna le mihing lungsim ngaihsutna peuhmah a sia ahih ngitngetna
-> *Leitungah mi-hing a git-loh-na a liat-na le mi-hing lung-sim ngaih-sut-na peuhmah a sia ahih ngit-nget-na*
-> LEITUNGAH person-kind 3SG hate-NEG-NMLZ 3SG great-NMLZ and person-kind stone-mind think-NMLZ whosoever 3SG evil be.3SG.REL think-REDUP-NMLZ
-> KJV: *And GOD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually.*
-
-**Genesis 23:11** (Form I)
-> “Hi lo hi, ka topa aw, hong ngai in. Nang' tungah lo kong pia hi
-> *Hi lo hi ka topa aw hong ngai in Nang' tung-ah lo kong pia hi*
-> DECL NEG DECL 1SG lord voice 3→1 listen.I ERG NANG' on-LOC NEG 1SG→3 give DECL
-> KJV: *Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: b...*
-
-### P Relative
-
-**Deuteronomy 23:19** (Form II)
+**Deuteronomy 23:19** (Form I)
 > “Na sanggampa tungah sumgum hitaleh, ankhing hitaleh, a meet ngaihsutna-in na khat peuhpeuh leitawi na
 > *Na sanggampa tung-ah sum-gum hitaleh ankhing hitaleh a meet ngaihsut-na-in na khat peuhpeuh leitawi na*
 > 2SG brother on-LOC money-usury if.so victuals if.so 3SG usury think-NMLZ-ERG 2SG one every lend 2SG
 > KJV: *Thou shalt not lend upon usury to thy brother; usury of money, usury of victuals, usury of any thing that is lent upon usury:*
+
+**2 Samuel 14:1** (Form I)
+> Tu-in kumpipa in Absalom a ngaihna thu Zeruiah' tapa Joab in a phawk hi
+> *Tu-in kumpi-pa in Absalom a ngaih-na thu Zeruiah' ta-pa Joab in a phawk hi*
+> now-ERG king-male ERG ABSALOM 3SG think-NMLZ word ZERUIAH' child-male JOAB ERG 3SG remember DECL
+> KJV: *Now Joab the son of Zeruiah perceived that the king's heart was toward Absalom.*
+
+**Ezra 8:18** (Form I)
+> Tua hi a, hehpihna a nei eite' Pasian in hong ompih ahih manin Levi mi
+> *Tua hi a heh-pih-na a nei eite' Pasian in hong om-pih ahih man-in Levi mi*
+> that DECL 3SG favor-with-NMLZ 3SG have 1PL.PRO.POSS PASIAN ERG 3→1 exist-APPL be.3SG.REL reason-ERG LEVI person
+> KJV: *And by the good hand of our God upon us they brought us a man of understanding, of the sons of Mahli, the son of Levi, the son of Israel; and Sherebia...*
+
+### P Relative
 
 **Job 6:26** (Form II)
 > Kamging mawkmawk lelte heh taak sa a, huih' letmang cihmawh kamte thupi ngaihsut na hi
@@ -2620,15 +2414,21 @@ by syntactic context.
 > KAMGING vain~REDUP desperate-PL anger comb flesh 3SG wind.POSS return-COMPL say.NOM-sin word-PL word-big think 2SG DECL
 > KJV: *Do ye imagine to reprove words, And the speeches of one that is desperate, which are as wind?*
 
-**Job 10:5** (Form II)
-> Na nuntak hun tan kote' nuntak tan bang lelin ngaihsun na hi hiam?
-> *Na nuntak hun tan kote' nuntak tan bang lel-in ngaihsun na hi hiam*
-> 2SG live time assign 1PL.PRO.POSS live assign like laugh-ERG think 2SG DECL Q
-> KJV: *Are thy days as the days of man? Are thy years as man's days,*
+**Proverbs 16:25** (Form II)
+> Hoih hi, ci-in i ngaihsut thu khat pen sih theih nading thu na hi zawsop
+> *hoih hi ci-in i ngaih-sut thu khat pen sih theih nading thu na hi zawsop*
+> good DECL say-QUOT 1PL.INCL think word one TOP die know.II PURP word 2SG DECL judge
+> KJV: *There is a way that seemeth right unto a man, But the end thereof are the ways of death.*
+
+**Proverbs 19:21** (Form II)
+> Mihing' ngaihsutna-ah thu tampi om a, ahi zongin Topa' deihna tawh a kituakte bek kimang
+> *Mihing' ngaih-sut-na-ah thu tampi om a ahi zong-in Topa' deihna tawh a ki-tuak-te bek kimang*
+> MIHING' think-NMLZ-LOC word many exist 3SG be.3SG although-ERG TOPA' desire COM 3SG REFL-meet-PL only profit
+> KJV: *There are many devices in a man's heart; Nevertheless the counsel of the LORD , that shall stand.*
 
 ### Subordinate Clause
 
-**Genesis 8:21** (Form II)
+**Genesis 8:21** (Form I)
 > Topa in a namtui gimnam a zak ciangin, a lungsim sungah, “Mihing' gamtatna hangin leitang
 > *Topa in a nam-tui gim-nam a zak ciang-in a lung-sim sung-ah Mihing' gamtat-na hang-in lei-tang*
 > TOPA ERG 3SG kind-water suffer-taste 3SG hear.II then-ERG 3SG stone-mind inside-LOC MIHING' rule.land-NMLZ because-ERG land-earth
@@ -2640,7 +2440,7 @@ by syntactic context.
 > 3PL.PRO one ERG sit-ABIL NEG.PERF who SEQ then-ERG 1SG→3 go-ITER great~REDUP IRR 3SG 2SG wife
 > KJV: *And he said, I will certainly return unto thee according to the time of life; and, lo, Sarah thy wife shall have a son. And Sarah heard it in the tent...*
 
-**Genesis 20:10** (Form II)
+**Genesis 20:10** (Form I)
 > Tua ciangin Abimelek in Abraham' kiangah, “Hih banga na gamtat nadingin bang ngaihsun na hi
 > *Tua ciang-in Abimelek in Abraham' kiang-ah Hih bang-a na gam-tat nadingin bang ngaihsun na hi*
 > that then-ERG ABIMELEK ERG ABRAHAM' beside-LOC this what-LOC 2SG land-rule PURP.ERG like think 2SG DECL
@@ -2666,11 +2466,11 @@ by syntactic context.
 > HIHTE TOP 3SG be.given-redeem midst-LOC sky-on and land-on generation-word be.3SG DECL TOPA PASIAN ERG land-on
 > KJV: *These are the generations of the heavens and of the earth when they were created, in the day that the LORD God made the earth and the heavens,*
 
-**Genesis 2:8** (Form I)
-> Topa Pasian in nisuahna lamah Eden huan khat bawl hi. Tua lai munah ama bawlsa
-> *Topa Pasian in ni-suah-na lam-ah Eden huan khat bawl hi Tua lai mun-ah ama bawl-sa*
-> TOPA PASIAN ERG day-birth-NMLZ way-LOC EDEN bread one make DECL that midst place-LOC 3SG.POSS make-PAST
-> KJV: *And the LORD God planted a garden eastward in Eden; and there he put the man whom he had formed.*
+**Genesis 2:7** (Form I)
+> Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu
+> *Topa Pasian in lei-lak pa-na leivui tawh mi-hing bawl a a nak sung-ah nuntak-na hu*
+> TOPA PASIAN ERG dust father-NMLZ dust COM person-kind make 3SG 3SG nose inside-LOC live-NMLZ help
+> KJV: *And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.*
 
 ### Negative
 
@@ -2694,43 +2494,27 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 2:7** (Form I)
-> Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu
-> *Topa Pasian in lei-lak pa-na leivui tawh mi-hing bawl a a nak sung-ah nuntak-na hu*
-> TOPA PASIAN ERG dust father-NMLZ dust COM person-kind make 3SG 3SG nose inside-LOC live-NMLZ help
-> KJV: *And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.*
+**Genesis 31:13** (Form I)
+> Kei pen, nang in khuam khat sathau nuhin kei' tungah thuciamna nong bawlna mun Bethel
+> *Kei pen nang in khuam khat sa-thau nu-hin kei' tung-ah thuciam-na nong bawl-na mun Bethel*
+> NEG.EMPH TOP 2SG.PRO ERG darkness one flesh-fat mother-this NEG.EMPH.POSS on-LOC promise-NMLZ 2→1 make-NMLZ place BETHEL
+> KJV: *I am the God of Beth-el, where thou anointedst the pillar, and where thou vowedst a vow unto me: now arise, get thee out from this land, and return un...*
 
-**Genesis 2:22** (Form I)
-> Topa Pasian in mipa' tung panin a lakkhiat nakguh pen numei khatin bawl a, mipa
-> *Topa Pasian in mipa' tung pan-in a lakkhiat nak-guh pen nu-mei khat-in bawl a mipa*
-> TOPA PASIAN ERG man.POSS on ABL-ERG 3SG snatch rib-take TOP woman one-ERG make 3SG man
-> KJV: *and the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.*
+**Exodus 30:33** (Form I)
+> Tua tawh a kibangin a bawl mi peuhmah ahi a, a pualam mi khatpeuh tuate
+> *Tua tawh a kibang-in a bawl mi peuhmah ahi a a pualam mi khat-peuh tua-te*
+> that COM 3SG be.alike-ERG 3SG make person whosoever be.3SG 3SG 3SG outside person one-every DIST-PL
+> KJV: *Whosoever compoundeth any like it, or whosoever putteth any of it upon a stranger, shall even be cut off from his people.*
 
-**Genesis 6:6** (Form I)
-> Leitungah mihing a bawl pen Topa khial kisa a, tua thu in ama lungsim dahsak
-> *Leitungah mi-hing a bawl pen Topa khial ki-sa a tua thu in ama lung-sim dah-sak*
-> LEITUNGAH person-kind 3SG make TOP TOPA err REFL-PAST 3SG that word ERG 3SG.POSS stone-mind put-CAUS
-> KJV: *And it repented the LORD that he had made man on the earth, and it grieved him at his heart.*
+**Exodus 30:38** (Form I)
+> Tua tawh a kibangin paknamtui a bawl mi peuhmah ama mite' kiang panin kikhenkhia ding
+> *Tua tawh a kibang-in pak-nam-tui a bawl mi peuhmah ama mite' kiang pan-in ki-khen-khia ding*
+> that COM 3SG be.alike-ERG ointment 3SG make person whosoever 3SG.POSS person-PL.POSS beside ABL-ERG REFL-divide-AWAY IRR
+> KJV: *Whosoever shall make like unto that, to smell thereto, shall even be cut off from his people.*
 
 ### P Relative
 
-**Isaiah 23:3** (Form I)
-> Egypt gam a piang ante lei-in na zuak uh a, minam khempeuh tawh sum bawlin
-> *Egypt gam a piang an-te lei-in na zuak uh a mi-nam khempeuh tawh sum bawl-in*
-> EGYPT land 3SG be.born 3PL-PL buy-ERG 2SG sell 2/3PL 3SG person-kind all COM extinguish make-ERG
-> KJV: *And by great waters the seed of Sihor, the harvest of the river, is her revenue; and she is a mart of nations.*
-
-**Isaiah 60:17** (Form I)
-> Sumngo tangin kham kong puak ding a, sik tangin ngun kong paipih ding hi. Sing
-> *sum-ngo tang-in kham kong puak ding a sik tang-in ngun kong pai-pih ding hi sing*
-> brass-iron take.hold-ERG gold 1SG→3 send IRR 3SG repent take.hold-ERG silver 1SG→3 go-APPL IRR DECL shake
-> KJV: *For brass I will bring gold, and for iron I will bring silver, and for wood brass, and for stones iron: I will also make thy officers peace, and thine...*
-
-**Ezekiel 23:37** (Form I)
-> Amaute in milim biakna tawh nulepa mawhna bawlin mi zong that lai uh hi. Milimte
-> *Amaute in mi-lim biak-na tawh nu-le-pa mawh-na bawl-in mi zong that lai uh hi Milimte*
-> 3PL.PRO ERG idol worship-NMLZ COM mother-and-father err-NMLZ make-ERG person also kill midst 2/3PL DECL MILIMTE
-> KJV: *that they have committed adultery, and blood is in their hands, and with their idols have they committed adultery, and have also caused their sons, wh...*
+*No examples found in corpus.*
 
 ### Subordinate Clause
 
@@ -2793,18 +2577,6 @@ by syntactic context.
 > *Israel mi-te gam-lak-ah a om sungun Sabbath ni-in sing a tom mi khat mu uh*
 > ISRAEL person-PL land-midst-LOC 3SG exist day SABBATH day-ERG shake 3SG dwell person one see.I 2/3PL
 > KJV: *And while the children of Israel were in the wilderness, they found a man that gathered sticks upon the sabbath day.*
-
-**Ezra 9:8** (Form I)
-> Ahi zongin tu-in Topa ka Pasian un tomkha sung kote hong hehpih a, a suakta
-> *Ahi zong-in tu-in Topa ka Pasian un tom-kha sung kote hong heh-pih a a suak-ta*
-> be.3SG although-ERG now-ERG TOPA 1SG PASIAN IMP.PL cover-go inside 1PL.PRO 3→1 grace 3SG 3SG become-PFV
-> KJV: *And now for a little space grace hath been shewed from the LORD our God, to leave us a remnant to escape, and to give us a nail in his holy place, tha...*
-
-**Job 7:19** (Form I)
-> Tomkha sung beek hong pelh lo ding a, ka hu beek hong sangsak man lo
-> *Tomkha sung beek hong pelh lo ding a ka hu beek hong sang-sak man lo*
-> TOMKHA inside only 3→1 escape NEG IRR 3SG 1SG help only 3→1 high-CAUS finish NEG
-> KJV: *How long wilt thou not depart from me, Nor let me alone till I swallow down my spittle?*
 
 ### P Relative
 
@@ -2884,18 +2656,6 @@ by syntactic context.
 > ZEBULUN water-big edge-LOC remain IRR DECL 3SG.PRO ark rest-NMLZ place wither IRR 3SG SIDON then
 > KJV: *Zebulun shall dwell at the haven of the sea; And he shall be for an haven of ships; And his border shall be unto Zidon.*
 
-**Job 16:3** (Form I)
-> Khawl hun nei loin gengen lai ding na hi uh hiam? Na gen ding uh
-> *Khawl hun nei lo-in gen~gen lai ding na hi uh hiam Na gen ding uh*
-> KHAWL time have NEG-ERG speak~REDUP midst IRR 2SG DECL 2/3PL Q 2SG speak IRR 2/3PL
-> KJV: *Shall vain words have an end? Or what emboldeneth thee that thou answerest?*
-
-**Job 18:2** (Form I)
-> “Job aw, khawl hun nei thei lo ding na hi hiam? Hong khawl phot lecin,
-> *Job aw khawl hun nei thei lo ding na hi hiam Hong khawl phot lecin*
-> JOB voice rest time have know NEG IRR 2SG DECL Q 3→1 rest first offend
-> KJV: *How long will it be ere ye make an end of words? Mark, and afterwards we will speak.*
-
 ### P Relative
 
 *No examples found in corpus.*
@@ -2934,17 +2694,17 @@ by syntactic context.
 > PASIAN ERG 3PL.PRO word-good give 3SG PASIAN ERG 3PL.PRO on-LOC say branch-ERG many branch PL.IMP-and
 > KJV: *And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of th...*
 
+**Genesis 24:2** (Form I)
+> Abraham in ama neih khempeuh a uk, a inn sungah a upa pen a nasempa
+> *Abraham in ama nei-h khempeuh a uk a inn sung-ah a upa pen a nasem-pa*
+> ABRAHAM ERG 3SG.POSS have-NOM all 3SG rule 3SG house inside-LOC 3SG elder TOP 3SG servant-male
+> KJV: *And Abraham said unto his eldest servant of his house, that ruled over all that he had, Put, I pray thee, thy hand under my thigh:*
+
 **Genesis 36:31** (Form I)
 > Hihte pen Israel mite tungah kumpi khat beek in a uk ma-in Edom gam sunga
 > *Hihte pen Israel mi-te tung-ah kumpi khat beek in a uk ma-in Edom gam sung-a*
 > HIHTE TOP ISRAEL person-PL on-LOC king one only ERG 3SG rule self-ERG EDOM land inside-3SG
 > KJV: *And these are the kings that reigned in the land of Edom, before there reigned any king over the children of Israel.*
-
-**Genesis 36:32** (Form I)
-> Beor' tapa Bela in Edom gam sung uk a, ama khuapi min Dinhabah ahi hi
-> *Beor' ta-pa Bela in Edom gam sung uk a ama khua-pi min Dinhabah ahi hi*
-> BEOR' child-male BELA ERG EDOM land inside rule 3SG 3SG.POSS village-big name DINHABAH be.3SG DECL
-> KJV: *And Bela the son of Beor reigned in Edom: and the name of his city was Dinhabah.*
 
 ### Negative
 
@@ -2968,25 +2728,11 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 24:2** (Form I)
-> Abraham in ama neih khempeuh a uk, a inn sungah a upa pen a nasempa
-> *Abraham in ama nei-h khempeuh a uk a inn sung-ah a upa pen a nasem-pa*
-> ABRAHAM ERG 3SG.POSS have-NOM all 3SG rule 3SG house inside-LOC 3SG elder TOP 3SG servant-male
-> KJV: *And Abraham said unto his eldest servant of his house, that ruled over all that he had, Put, I pray thee, thy hand under my thigh:*
-
-**Exodus 5:6** (Form I)
-> Tua ni mahin Faro in nasem ukte le a nasem mapite thu pia a,
-> *Tua ni mah-in Faro in nasem uk-te le a nasem mapi-te thu pia a*
-> that day likewise-ERG FARO ERG servant rule-PL and 3SG servant officer-PL word give 3SG
-> KJV: *And Pharaoh commanded the same day the taskmasters of the people, and their officers, saying,*
-
-**Exodus 15:15** (Form I)
-> Tu-in Edom ukpite lungkia uh a, Moab makaite, lingcip uh hi. Kanaan-ah a teng mi
-> *Tu-in Edom ukpi-te lung-kia uh a Moab makai-te ling-cip uh hi Kanaan-ah a teng mi*
-> now-ERG EDOM duke-PL discourage 2/3PL 3SG MOAB leader-PL sorrow-INTENS 2/3PL DECL KANAAN-AH 3SG remain person
-> KJV: *Then the dukes of Edom shall be amazed; The mighty men of Moab, trembling shall take hold upon them; All the inhabitants of Canaan shall melt away.*
-
-### P Relative
+**Numbers 24:19** (Form I)
+> Jakob tawh ukna na kisem ding a, khuapi sunga a suaktate kisusia ding!” a ci
+> *Jakob tawh ukna na ki-sem ding a khua-pi sung-a a suak-ta-te ki-su-sia ding a ci*
+> JAKOB COM rule.NMLZ 2SG REFL-serve IRR 3SG village-big inside-3SG 3SG become-PAST-PL REFL-CAUS-bad IRR 3SG say
+> KJV: *Out of Jacob shall come he that shall have dominion, And shall destroy him that remaineth of the city.*
 
 **Joshua 13:3** (Form I)
 > (Kanaan mite' gam ci-a a kiciamteh, leilu lam Ekron gamgi lam, Egypt nisuahna lama om
@@ -3000,11 +2746,9 @@ by syntactic context.
 > now-ERG SYRIA king-male ERG 3SG.POSS chariot 3SG rule person ten-three and two-PL word give-ERG 3SG
 > KJV: *But the king of Syria commanded his thirty and two captains that had rule over his chariots, saying, Fight neither with small nor great, save only wit...*
 
-**Nehemiah 3:7** (Form I)
-> Amaute' zomah Gibeon le Mizpah khuami ahi, Gibeon mi Melatiah le Meronoth khuami Jadon in
-> *Amaute' zom-ah Gibeon le Mizpah khua-mi ahi Gibeon mi Melatiah le Meronoth khua-mi Jadon in*
-> AMAUTE' continue-LOC GIBEON and MIZPAH town-person be.3SG GIBEON person MELATIAH and MERONOTH town-person JADON ERG
-> KJV: *And next unto them repaired Melatiah the Gibeonite, and Jadon the Meronothite, the men of Gibeon, and of Mizpah, unto the throne of the governor on th...*
+### P Relative
+
+*No examples found in corpus.*
 
 ### Subordinate Clause
 
@@ -3074,43 +2818,43 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 13:3** (Form I)
-> Amah Negeb gam pan kipanin Bethel ciang dong, a kipat cil-in a puanbuk omnasa mun
-> *Amah Negeb gam pan ki-pan-in Bethel ciang dong a ki-pat cil-in a puan-buk om-na-sa mun*
-> 3SG.PRO NEGEB land ABL from BETHEL then until 3SG beginning begin-ERG 3SG cloth-shelter be-NMLZ-animal place
-> KJV: *And he went on his journeys from the south even to Beth-el, unto the place where his tent had been at the beginning, between Beth-el and Hai;*
+**Genesis 17:7** (Form I)
+> “Nang le nang' khit cianga na suanlekhakte tungah Pasian hihna ding tawntung thuciam nadingin kei
+> *Nang le nang' khit ci-ang-a na suanlekhak-te tung-ah Pasian hih-na ding tawn-tung thu-ciam nadingin kei*
+> 2SG.PRO and 2SG.PRO.POSS SEQ say-FUT-NOM 2SG genealogy-PL on-LOC PASIAN this-NMLZ IRR ever-always word-promise PURP.ERG NEG.EMPH
+> KJV: *And I will establish my covenant between me and thee and thy seed after thee in their generations for an everlasting covenant, to be a God unto thee, ...*
 
-**Genesis 14:20** (Form I)
-> Na galte na khut sungah a hong pia Sang Pen Pasian in thupha ngah hen,”
-> *Na gal-te na khut sung-ah a hong pia sang Pen Pasian in thu-pha ngah hen*
-> 2SG enemy-PL 2SG hand inside-LOC 3SG 3→1 give high TOP PASIAN ERG word-good get JUSS
-> KJV: *and blessed be the most high God, which hath delivered thine enemies into thy hand. And he gave him tithes of all.*
+**Genesis 17:8** (Form I)
+> Nangma tung le nang' khit cianga na suanlekhakte tungah tawlkhat na omna Kanaan leitang khempeuh
+> *Nangma tung le nang' khit ci-ang-a na suanlekhak-te tung-ah tawlkhat na om-na Kanaan lei-tang khempeuh*
+> 2SG.self on and 2SG.PRO.POSS SEQ say-FUT-NOM 2SG genealogy-PL on-LOC little 2SG exist-NMLZ KANAAN land-earth all
+> KJV: *And I will give unto thee, and to thy seed after thee, the land wherein thou art a stranger, all the land of Canaan, for an everlasting possession; an...*
 
-**Genesis 14:23** (Form I)
-> Nangmah in, 'Abram ka hausak hi,' ci kha ding na hih manin mimkhau ahi a,
-> *Nangmah in Abram ka hau-sak hi ci kha ding na hih man-in mim-khau ahi a*
-> 2SG.PRO ERG ABRAM 1SG rich-CAUS DECL say NEG.PERF IRR 2SG this reason-ERG thread-fine be.3SG 3SG
-> KJV: *that I will not take from a thread even to a shoelatchet, and that I will not take any thing that is thine, lest thou shouldest say, I have made Abram...*
+**Genesis 17:9** (Form I)
+> Pasian in Abraham' kiangah, “Nang le nang' khit cianga na suanlekhakte in zong ka thuciamna
+> *Pasian in Abraham' kiang-ah Nang le nang' khit ci-ang-a na suanlekhak-te in zong ka thuciam-na*
+> PASIAN ERG ABRAHAM' beside-LOC 2SG.PRO and 2SG.PRO.POSS SEQ say-FUT-NOM 2SG genealogy-PL ERG also 1SG promise-NMLZ
+> KJV: *And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.*
 
 ### P Relative
 
-**Exodus 4:17** (Form I)
+**Exodus 4:17** (Form II)
 > Nangmah in limte na bawl nading ahi hih ciangkhut na khut sungah na tawi ding
 > *Nangmah in lim-te na bawl nading ahi hih ciang-khut na khut sung-ah na tawi ding*
 > 2SG.PRO ERG sign-PL 2SG make PURP be.3SG this then-hand 2SG hand inside-LOC 2SG carry IRR
 > KJV: *And thou shalt take this rod in thine hand, wherewith thou shalt do signs.*
 
-**Exodus 9:29** (Form I)
-> Moses in ama kiangah, “Khuapi panin ka paikhiat khit phetin Topa' lamah ka khut ka
-> *Moses in ama kiang-ah khua-pi pan-in ka pai-khiat khit phet-in Topa' lam-ah ka khut ka*
-> MOSES ERG 3SG.POSS beside-LOC village-big ABL-ERG 1SG go.out SEQ twin-ERG TOPA' way-LOC 1SG hand 1SG
-> KJV: *And Moses said unto him, As soon as I am gone out of the city, I will spread abroad my hands unto the LORD ; and the thunder shall cease, neither shal...*
+**Exodus 16:16** (Form II)
+> Topa' thupiak hih bang ahi hi: 'Note in na milipun na khamzah ding uh khawm
+> *Topa' thupiak hih bang ahi hi Note in na mi-lipun na kham-zah ding uh khawm*
+> TOPA' commandment this like be.3SG DECL 2PL.PRO ERG 2SG person-bundle 2SG forbid-measure IRR 2/3PL gather
+> KJV: *This is the thing which the LORD hath commanded, Gather of it every man according to his eating, an omer for every man, according to the number of you...*
 
-**Exodus 13:8** (Form I)
-> Tua ni-in na tate uh kiangah, 'Egypt panin ka paikhiat lai-un Topa in ko a'
-> *Tua ni-in na ta-te uh kiang-ah Egypt pan-in ka pai-khiat lai-un Topa in ko a'*
-> that day-ERG 2SG child-PL 2/3PL beside-LOC EGYPT ABL-ERG 1SG go.out middle-PL.IMP TOPA ERG long 3SG.POSS
-> KJV: *And thou shalt shew thy son in that day, saying, This is done because of that which the LORD did unto me when I came forth out of Egypt.*
+**Exodus 17:5** (Form II)
+> Topa in Moses kiangah, “Israel upate pawlkhat samin mite' mai-ah pai in. Nail na satna
+> *Topa in Moses kiang-ah Israel upa-te pawl-khat sam-in mite' mai-ah pai in Nail na sat-na*
+> TOPA ERG MOSES beside-LOC ISRAEL elder-PL some-one call-ERG person-PL.POSS face-LOC go ERG NAIL 2SG strike-NMLZ
+> KJV: *And the LORD said unto Moses, Go on before the people, and take with thee of the elders of Israel; and thy rod, wherewith thou smotest the river, take...*
 
 ### Subordinate Clause
 
@@ -3180,31 +2924,11 @@ by syntactic context.
 
 ### A/S Relative
 
-**Genesis 13:4** (Form I)
-> a masa-a biakna tau khat a bawlnasa munah khualzinin a paisuak hi. Tua lai munah
-> *a masa-a biak-na tau khat a bawl-na-sa mun-ah khual-zin-in a pai-suak hi Tua lai mun-ah*
-> 3SG first-LOC worship-NMLZ signal one 3SG make-NMLZ-PAST place-LOC sojourn-road-ERG 3SG go-become DECL that midst place-LOC
-> KJV: *unto the place of the altar, which he had made there at the first: and there Abram called on the name of the LORD .*
-
-**Genesis 23:11** (Form II)
-> “Hi lo hi, ka topa aw, hong ngai in. Nang' tungah lo kong pia hi
-> *Hi lo hi ka topa aw hong ngai in Nang' tung-ah lo kong pia hi*
-> DECL NEG DECL 1SG lord voice 3→1 listen.I ERG NANG' on-LOC NEG 1SG→3 give DECL
-> KJV: *Nay, my lord, hear me: the field give I thee, and the cave that is therein, I give it thee; in the presence of the sons of my people give I it thee: b...*
-
-**Genesis 24:7** (Form I)
-> Ka pa' inn le ka suahna leitang panin kei hong la-in, kei kiangah thu hong
-> *Ka pa' inn le ka suah-na lei-tang pan-in kei hong la-in kei kiang-ah thu hong*
-> 1SG male.POSS house and 1SG become-NMLZ land-earth ABL-ERG NEG.EMPH 3→1 take-ERG NEG.EMPH beside-LOC word 3→1
-> KJV: *The LORD God of heaven, which took me from my father's house, and from the land of my kindred, and which spake unto me, and that sware unto me, saying...*
-
-### P Relative
-
-**Exodus 4:30** (Form II)
-> Topa in Moses kianga a gensa thute khempeuh Aaron in gen a, Moses in mite'
-> *Topa in Moses kia-nga a gen-sa thu-te khempeuh Aaron in gen a Moses in mite'*
-> TOPA ERG MOSES fall-fish 3SG speak-PAST word-PL all AARON ERG speak 3SG MOSES ERG person-PL.POSS
-> KJV: *and Aaron spake all the words which the LORD had spoken unto Moses, and did the signs in the sight of the people.*
+**Genesis 36:24** (Form I)
+> Zibeon' tapate: Ai-ah le Anah ahi hi. Amah pen a pa Zibeon' late a cin
+> *Zibeon' tapa-te Ai-ah le Anah ahi hi Amah pen a pa Zibeon' la-te a cin*
+> ZIBEON' son-PL AI-AH and ANAH be.3SG DECL 3SG.PRO TOP 3SG father ZIBEON' song-PL 3SG plant
+> KJV: *And these are the children of Zibeon; both Ajah, and Anah: this was that Anah that found the mules in the wilderness, as he fed the asses of Zibeon hi...*
 
 **Leviticus 19:30** (Form I)
 > Note in ka Sabbath ni tangin keimah hong kibiakna mun na zahtak ding uh hi;
@@ -3217,6 +2941,26 @@ by syntactic context.
 > *Note in ka sabbath-te tang-in keimah hong ki-biak-na mun na zah-tak ding uh hi kei*
 > 2PL.PRO ERG 1SG SABBATH-PL take.hold-ERG 1SG.PRO 3→1 worship place 2SG fear-true IRR 2/3PL DECL NEG.EMPH
 > KJV: *Ye shall keep my sabbaths, and reverence my sanctuary: I am the LORD .*
+
+### P Relative
+
+**Exodus 4:30** (Form II)
+> Topa in Moses kianga a gensa thute khempeuh Aaron in gen a, Moses in mite'
+> *Topa in Moses kia-nga a gen-sa thu-te khempeuh Aaron in gen a Moses in mite'*
+> TOPA ERG MOSES fall-fish 3SG speak-PAST word-PL all AARON ERG speak 3SG MOSES ERG person-PL.POSS
+> KJV: *and Aaron spake all the words which the LORD had spoken unto Moses, and did the signs in the sight of the people.*
+
+**Deuteronomy 14:25** (Form II)
+> tuate sum na suah ding uh a, a sumte tunin, Topa na Pasian un a
+> *tua-te sum na suah ding uh a a sum-te tuni-in Topa na Pasian un a*
+> DIST-PL extinguish 2SG SUAH IRR 2/3PL 3SG 3SG money-PL today-ERG TOPA 2SG PASIAN IMP.PL 3SG
+> KJV: *then shalt thou turn it into money, and bind up the money in thine hand, and shalt go unto the place which the LORD thy God shall choose:*
+
+**Deuteronomy 14:26** (Form II)
+> na deih peuhpeuh uh bawng ahi a, tuu ahi a, leenggahzu ahi a, khamtheihzu ahi
+> *na deih peuhpeuh uh bawng ahi a tuu ahi a leeng-gah-zu ahi a kham-theih-zu ahi*
+> 2SG want every 2/3PL cattle be.3SG 3SG climb be.3SG 3SG grape.juice be.3SG 3SG forbid-ABIL-NEG be.3SG
+> KJV: *and thou shalt bestow that money for whatsoever thy soul lusteth after, for oxen, or for sheep, or for wine, or for strong drink, or for whatsoever th...*
 
 ### Subordinate Clause
 
