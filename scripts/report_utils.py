@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+"""
+Shared utilities for verb report generation.
+
+Provides common functions for loading Bible text, KJV translations,
+and finding diverse examples across books.
+"""
+
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from analyze_morphemes import analyze_word
+
+# Book code to name mapping
+BOOK_NAMES = {
+    '01': 'Genesis', '02': 'Exodus', '03': 'Leviticus', '04': 'Numbers',
+    '05': 'Deuteronomy', '06': 'Joshua', '07': 'Judges', '08': 'Ruth',
+    '09': '1 Samuel', '10': '2 Samuel', '11': '1 Kings', '12': '2 Kings',
+    '13': '1 Chronicles', '14': '2 Chronicles', '15': 'Ezra', '16': 'Nehemiah',
+    '17': 'Esther', '18': 'Job', '19': 'Psalms', '20': 'Proverbs',
+    '21': 'Ecclesiastes', '22': 'Song of Solomon', '23': 'Isaiah', '24': 'Jeremiah',
+    '25': 'Lamentations', '26': 'Ezekiel', '27': 'Daniel', '28': 'Hosea',
+    '29': 'Joel', '30': 'Amos', '31': 'Obadiah', '32': 'Jonah',
+    '33': 'Micah', '34': 'Nahum', '35': 'Habakkuk', '36': 'Zephaniah',
+    '37': 'Haggai', '38': 'Zechariah', '39': 'Malachi',
+    '40': 'Matthew', '41': 'Mark', '42': 'Luke', '43': 'John',
+    '44': 'Acts', '45': 'Romans', '46': '1 Corinthians', '47': '2 Corinthians',
+    '48': 'Galatians', '49': 'Ephesians', '50': 'Philippians', '51': 'Colossians',
+    '52': '1 Thessalonians', '53': '2 Thessalonians', '54': '1 Timothy', '55': '2 Timothy',
+    '56': 'Titus', '57': 'Philemon', '58': 'Hebrews', '59': 'James',
+    '60': '1 Peter', '61': '2 Peter', '62': '1 John', '63': '2 John',
+    '64': '3 John', '65': 'Jude', '66': 'Revelation',
+}
+
+GOSPEL_CODES = {'40', '41', '42', '43'}
+
+
+def format_reference(ref):
+    """Convert 01001001 to Genesis 1:1 format."""
+    if len(ref) != 8 or not ref.isdigit():
+        return ref
+    book_code = ref[:2]
+    chapter = int(ref[2:5])
+    verse = int(ref[5:8])
+    book_name = BOOK_NAMES.get(book_code, f'Book {book_code}')
+    return f"{book_name} {chapter}:{verse}"
+
+
+def load_bible():
+    """Load the Tedim Chin Bible text."""
+    bible_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 
+                              '..', 'bibles', 'extracted', 'ctd', 'ctd-x-bible.txt')
+    verses = {}
+    with open(bible_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            if '\t' in line:
+                ref, text = line.strip().split('\t', 1)
+                verses[ref] = text
+    return verses
+
+
+def load_kjv():
+    """Load KJV translations from aligned verses."""
+    kjv = {}
+    aligned_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 
+                                '..', 'data', 'verses_aligned.tsv')
+    with open(aligned_path, 'r', encoding='utf-8') as f:
+        header = f.readline().strip().split('\t')
+        kjv_idx = header.index('eng_King James Version') if 'eng_King James Version' in header else 2
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) > kjv_idx:
+                ref = parts[0]
+                kjv[ref] = parts[kjv_idx]
+    return kjv
+
+
+def find_diverse_examples(verses, kjv, pattern_check, limit=3, require_gospel=True):
+    """
+    Find diverse examples matching a pattern with KJV translations.
+    
+    Args:
+        verses: Dict of ref -> Tedim text
+        kjv: Dict of ref -> KJV text
+        pattern_check: Function(word) -> bool to check if word matches
+        limit: Maximum examples to return
+        require_gospel: If True, ensure at least one Gospel example
+    
+    Returns:
+        List of (ref, tedim_text, word, analysis, kjv_text) tuples
+    """
+    examples = []
+    books_used = set()
+    gospel_found = False
+    
+    # First pass: try to include a Gospel example
+    if require_gospel:
+        for ref, text in sorted(verses.items()):
+            if len(ref) != 8 or not ref.isdigit():
+                continue
+            book_code = ref[:2]
+            if book_code not in GOSPEL_CODES:
+                continue
+            words = text.split()
+            for word in words:
+                clean = word.lower().rstrip('.,;:!?"\'')
+                if pattern_check(clean):
+                    analysis = analyze_word(clean)
+                    if analysis[1]:
+                        kjv_text = kjv.get(ref, '')
+                        examples.append((ref, text, word, analysis, kjv_text))
+                        books_used.add(book_code)
+                        gospel_found = True
+                        break
+            if gospel_found:
+                break
+    
+    # Second pass: fill remaining slots from diverse books
+    for ref, text in sorted(verses.items()):
+        if len(examples) >= limit:
+            break
+        if len(ref) != 8 or not ref.isdigit():
+            continue
+        book_code = ref[:2]
+        if book_code in books_used:
+            continue
+        words = text.split()
+        for word in words:
+            clean = word.lower().rstrip('.,;:!?"\'')
+            if pattern_check(clean):
+                analysis = analyze_word(clean)
+                if analysis[1]:
+                    kjv_text = kjv.get(ref, '')
+                    examples.append((ref, text, word, analysis, kjv_text))
+                    books_used.add(book_code)
+                    break
+        if len(examples) >= limit:
+            break
+    
+    return examples
+
+
+def format_example(ref, text, word, analysis, kjv_text):
+    """Format an example for markdown output."""
+    lines = []
+    lines.append(f"**{format_reference(ref)}**")
+    lines.append(f"> {text}")
+    if kjv_text:
+        lines.append(f"> KJV: *{kjv_text}*")
+    lines.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+    lines.append("")
+    return lines

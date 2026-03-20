@@ -35,30 +35,24 @@ VERB-na → 'the act of VERBing' / 'thing VERBed'
 | bawlna | bawl (make) | making, creation |
 | genkholhna | genkholh (promise) | promising, promise |
 | ciamna | ciam (swear) | oath, sworn thing |
-| thupiakna | thupiakna | commandment |
 | nuntakna | nuntak (live) | living, life |
 
 ### Corpus Examples
 
+**Matthew 1:1**
+> Abraham' suan David, David' suan Jesuh Khrih' khang ciaptehna hih bang ahi hi.
+> KJV: *The book of the generation of Jesus Christ, the son of David, the son of Abraham.*
+> *ciaptehna*: ciapteh-na → receive-NMLZ
+
 **Genesis 1:2**
 > Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek a, tua tui tungah Pasian' Kha in na a sem hi.
+> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
 > *na*: na → 2SG
 
 **Exodus 1:5**
 > Jakob' suanlekhakte khempeuh mi sawmsagih hi a, Josef pen Egypt-ah na om khinzo hi.
+> KJV: *And all the souls that came out of the loins of Jacob were seventy souls: for Joseph was in Egypt already .*
 > *na*: na → 2SG
-
-**Leviticus 1:1**
-> Topa in Moses sam a, kikhopna buk panin amah hopihin hih bangin ci hi:
-> *kikhopna*: ki-khop-na → REFL-gather-NMLZ
-
-**Numbers 1:1**
-> Amaute, Egypt gam panin a paikhiat zawh uh a kum nihna, a kha nihna a ni masa ni-in, Sinai sehnel gam kikhopna puanbuk sungah Topa in Moses hopihin hih bangin ci hi:
-> *nihna,*: nih-na → two-NMLZ
-
-**Deuteronomy 1:2**
-> Tua mun pen Horeb panin Seir Mual tawnin Kadeshbarnea lamah ni sawm le ni khat paina ahi hi. Heshbon gamah a teng Amor kumpipa Sihon, le Ashtaroth le Edrei gamah a teng Bashan kumpipa a zawh khit ciangin, a kum sawmlina, kha sawm le kha khatna, a ni masa ni-in, amaute' tungah thupiakna-in Topa in ama tungah a piak bangbangin Moses in Israel mite tungah a gen hi.
-> *paina*: pai-na → go-NMLZ
 
 ---
 
@@ -84,24 +78,19 @@ VERB-pa → 'one who VERBs (male)'
 
 ### Corpus Examples
 
+**Matthew 1:19**
+> A lawmpa Josef pen a manin a gamta nuam mi khat ahih manin a lawmnu maizumsak nuam lo a, kuama theih lohin maksim dingin a ngaihsun hi.
+> KJV: *Then Joseph her husband, being a just man , and not willing to make her a publick example, was minded to put her away privily.*
+> *lawmpa*: lawm-pa → worthy-NMLZ.AG
+
 **Genesis 2:4**
 > Hihte pen, a kipiansak lai-a vantung le leitung tangthu ahi hi. Topa Pasian in leitung le vantungte a bawl hi.
+> KJV: *These are the generations of the heavens and of the earth when they were created, in the day that the LORD God made the earth and the heavens,*
 > *Topa*: topa → lord
 
-**Exodus 1:1**
-> Jakob tawh Egypt-ah a hong pai, amau' innkuan ciat tawh ahi Israel' tapate' minte:
-> *tapate'*: tapa-te → son-PL
-
-**Leviticus 1:1**
-> Topa in Moses sam a, kikhopna buk panin amah hopihin hih bangin ci hi:
-> *Topa*: topa → lord
-
-**Numbers 1:1**
-> Amaute, Egypt gam panin a paikhiat zawh uh a kum nihna, a kha nihna a ni masa ni-in, Sinai sehnel gam kikhopna puanbuk sungah Topa in Moses hopihin hih bangin ci hi:
-> *Topa*: topa → lord
-
-**Deuteronomy 1:2**
-> Tua mun pen Horeb panin Seir Mual tawnin Kadeshbarnea lamah ni sawm le ni khat paina ahi hi. Heshbon gamah a teng Amor kumpipa Sihon, le Ashtaroth le Edrei gamah a teng Bashan kumpipa a zawh khit ciangin, a kum sawmlina, kha sawm le kha khatna, a ni masa ni-in, amaute' tungah thupiakna-in Topa in ama tungah a piak bangbangin Moses in Israel mite tungah a gen hi.
+**Exodus 1:15**
+> Tua ciangin Egypt kumpipa in Hebru mi nau a domsakte, khat' min Shifrah, adang khat' min Puah a kicite kiangah,
+> KJV: *And the king of Egypt spake to the Hebrew midwives, of which the name of the one was Shiphrah, and the name of the other Puah:*
 > *kumpipa*: kumpi-pa → king-male
 
 ---
@@ -116,43 +105,7 @@ The suffix -nu derives agent nouns referring to females.
 |----------|------|---------|
 | bawlnu | bawl (make) | maker (female) |
 | neihnu | neih (have) | owner (female) |
-| zinna | zin (travel) | traveler (female) |
-
----
-
-## mi- (Person Prefix)
-
-The prefix mi- (or noun *mi* 'person') can form agent-like compounds.
-
-### Examples
-
-| Form | Meaning |
-|------|---------|
-| mihing | human being |
-| mipa | man |
-| minu | woman |
-| misim | wise person |
-| milian | important person |
-
----
-
-## Nominalized Relative Clauses
-
-Tedim Chin uses nominalization to form relative clauses.
-The relativized NP is typically marked as the head, with the
-verb in Form II + -na or -pa/-nu.
-
-### Pattern
-```
-[CLAUSE + VERB-na] N
-'the N that was VERBed'
-```
-
-### Example Patterns
-
-- *Pathian in bawlna thil* 'thing that God made'
-- *Jesus' genpa thu* 'word that Jesus spoke'
-- *hih genmi thu* 'this spoken word'
+| zinu | zi (wife) | wife |
 
 ---
 

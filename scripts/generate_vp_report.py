@@ -7,98 +7,18 @@ Documents verb phrase template, serial verbs, auxiliaries, and sentence-final pa
 
 import sys
 import os
-from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from analyze_morphemes import analyze_word, gloss_sentence
-
-# Book names
-BOOK_NAMES = {
-    '01': 'Genesis', '02': 'Exodus', '03': 'Leviticus', '04': 'Numbers',
-    '05': 'Deuteronomy', '06': 'Joshua', '07': 'Judges', '08': 'Ruth',
-    '09': '1 Samuel', '10': '2 Samuel', '11': '1 Kings', '12': '2 Kings',
-    '13': '1 Chronicles', '14': '2 Chronicles', '15': 'Ezra', '16': 'Nehemiah',
-    '17': 'Esther', '18': 'Job', '19': 'Psalms', '20': 'Proverbs',
-    '21': 'Ecclesiastes', '22': 'Song of Solomon', '23': 'Isaiah', '24': 'Jeremiah',
-    '25': 'Lamentations', '26': 'Ezekiel', '27': 'Daniel', '28': 'Hosea',
-    '29': 'Joel', '30': 'Amos', '31': 'Obadiah', '32': 'Jonah',
-    '33': 'Micah', '34': 'Nahum', '35': 'Habakkuk', '36': 'Zephaniah',
-    '37': 'Haggai', '38': 'Zechariah', '39': 'Malachi',
-    '40': 'Matthew', '41': 'Mark', '42': 'Luke', '43': 'John',
-    '44': 'Acts', '45': 'Romans', '46': '1 Corinthians', '47': '2 Corinthians',
-    '48': 'Galatians', '49': 'Ephesians', '50': 'Philippians', '51': 'Colossians',
-    '52': '1 Thessalonians', '53': '2 Thessalonians', '54': '1 Timothy', '55': '2 Timothy',
-    '56': 'Titus', '57': 'Philemon', '58': 'Hebrews', '59': 'James',
-    '60': '1 Peter', '61': '2 Peter', '62': '1 John', '63': '2 John',
-    '64': '3 John', '65': 'Jude', '66': 'Revelation',
-}
-
-GOSPEL_CODES = {'40', '41', '42', '43'}
-
-def format_reference(ref):
-    """Convert 01001001 to Genesis 1:1."""
-    if len(ref) != 8 or not ref.isdigit():
-        return ref
-    book_code = ref[:2]
-    chapter = int(ref[2:5])
-    verse = int(ref[5:8])
-    book_name = BOOK_NAMES.get(book_code, f'Book {book_code}')
-    return f"{book_name} {chapter}:{verse}"
-
-
-def is_gospel(ref):
-    """Check if reference is from a Gospel."""
-    return ref[:2] in GOSPEL_CODES
-
-
-def load_bible():
-    """Load Bible text."""
-    bible_path = os.path.join(os.path.dirname(__file__), 
-                              '..', 'bibles', 'extracted', 'ctd', 'ctd-x-bible.txt')
-    verses = {}
-    with open(bible_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            if '\t' in line:
-                ref, text = line.strip().split('\t', 1)
-                verses[ref] = text
-    return verses
-
-
-def find_diverse_examples(verses, pattern_check, limit=3, require_gospel=True):
-    """Find examples from diverse books."""
-    examples = []
-    books_used = set()
-    gospel_found = False
-    
-    for ref, text in sorted(verses.items()):
-        if len(ref) != 8 or not ref.isdigit():
-            continue
-        
-        if pattern_check(text):
-            book_code = ref[:2]
-            if book_code in books_used:
-                continue
-            
-            is_gsp = book_code in GOSPEL_CODES
-            if is_gsp:
-                gospel_found = True
-            
-            glossed = gloss_sentence(text)
-            examples.append((ref, text, glossed))
-            books_used.add(book_code)
-            
-            if len(examples) >= limit:
-                if require_gospel and not gospel_found:
-                    continue
-                return examples
-    
-    return examples
+from report_utils import (format_reference, load_bible, load_kjv,
+                          find_diverse_examples, format_example)
 
 
 def generate_report():
     """Generate VP structure report."""
     print("Loading corpus...")
     verses = load_bible()
+    kjv = load_kjv()
     
     print("Analyzing VP patterns...")
     
@@ -133,16 +53,6 @@ def generate_report():
     report.append("| SFP | Sentence-final particle | hi, hiam, hen, aw |")
     report.append("")
     
-    # Illustrative paradigm
-    report.append("### Example Expansion")
-    report.append("")
-    report.append("```")
-    report.append("kong-hong-pai-sak-zo-khia-ding-hi")
-    report.append("1>3-INV-go-CAUS-COMPL-out-IRR-SFP")
-    report.append("'I will have completely made him go out'")
-    report.append("```")
-    report.append("")
-    
     # Form I vs Form II
     report.append("---")
     report.append("")
@@ -155,21 +65,7 @@ def generate_report():
     report.append("| Clause type | Main, conclusive | Subordinate, inconclusive |")
     report.append("| Shape | Open syllable | Closed syllable |")
     report.append("| Example | mu 'see' | muh 'see.II' |")
-    report.append("| Example | pai 'go' | pai 'go' (no change) |")
     report.append("| Example | nei 'have' | neih 'have.II' |")
-    report.append("")
-    report.append("### Distribution")
-    report.append("")
-    report.append("**Form I** appears in:")
-    report.append("- Main clauses")
-    report.append("- Declarative sentences")
-    report.append("- With sentence-final particle *hi*")
-    report.append("")
-    report.append("**Form II** appears in:")
-    report.append("- Subordinate clauses")
-    report.append("- Before nominalization")
-    report.append("- Before certain TAM markers")
-    report.append("- In relative clauses")
     report.append("")
     
     # Serial verbs
@@ -193,19 +89,9 @@ def generate_report():
     # Corpus examples - serial verbs
     report.append("### Illustrated Examples")
     report.append("")
-    
-    def has_serial_pattern(text):
-        patterns = ['khia ', 'lut ', 'toh ', 'cip ', 'kik ']
-        return any(p in text.lower() for p in patterns)
-    
-    examples = find_diverse_examples(verses, has_serial_pattern, limit=3)
-    for ref, text, glossed in examples:
-        report.append(f"**{format_reference(ref)}**")
-        report.append(f"> {text}")
-        # Show first few glossed words
-        gloss_str = ' '.join([f"{w[0]}={w[2]}" for w in glossed[:6]])
-        report.append(f"> {gloss_str}...")
-        report.append("")
+    examples = find_diverse_examples(verses, kjv, lambda w: 'khia' in w, limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
+        report.extend(format_example(ref, text, word, analysis, kjv_text))
     
     # Auxiliaries
     report.append("---")
@@ -223,34 +109,6 @@ def generate_report():
     report.append("| ding | will | Modal (future/intention) |")
     report.append("| kul | must | Modal (obligation) |")
     report.append("")
-    report.append("### om (existential/progressive)")
-    report.append("")
-    report.append("*om* 'exist, be' is used for existential statements and progressive aspect:")
-    report.append("")
-    
-    def has_om(text):
-        words = text.lower().split()
-        return 'om' in words or any(w.startswith('om') for w in words)
-    
-    examples = find_diverse_examples(verses, has_om, limit=2)
-    for ref, text, glossed in examples:
-        report.append(f"**{format_reference(ref)}**")
-        report.append(f"> {text}")
-        report.append("")
-    
-    report.append("### hi (copula)")
-    report.append("")
-    report.append("*hi* 'be' functions as a copula and sentence-final particle:")
-    report.append("")
-    
-    def has_hi(text):
-        return text.rstrip('.,;:!?"\'').endswith(' hi')
-    
-    examples = find_diverse_examples(verses, has_hi, limit=2)
-    for ref, text, glossed in examples:
-        report.append(f"**{format_reference(ref)}**")
-        report.append(f"> {text}")
-        report.append("")
     
     # Sentence-final particles
     report.append("---")
@@ -269,26 +127,6 @@ def generate_report():
     report.append("| lo | Imperative (hortative) | HORT |")
     report.append("| leh | Conditional consequence | then |")
     report.append("")
-    report.append("### hi (Assertive)")
-    report.append("Marks declarative statements:")
-    report.append("")
-    
-    examples = find_diverse_examples(verses, has_hi, limit=2)
-    for ref, text, glossed in examples:
-        report.append(f"> {text} — {format_reference(ref)}")
-        report.append("")
-    
-    report.append("### hiam (Interrogative)")
-    report.append("Marks yes/no questions:")
-    report.append("")
-    
-    def has_hiam(text):
-        return 'hiam' in text.lower()
-    
-    examples = find_diverse_examples(verses, has_hiam, limit=2)
-    for ref, text, glossed in examples:
-        report.append(f"> {text} — {format_reference(ref)}")
-        report.append("")
     
     # Negation
     report.append("---")
@@ -335,13 +173,7 @@ def generate_report():
     report.append("ka-pai-sak-hi 'I make go (send)'")
     report.append("```")
     report.append("")
-    report.append("### Type 4: Complex VP (Serial)")
-    report.append("```")
-    report.append("SUBJ.AGR + V1 + V2 + (TAM) + (SFP)")
-    report.append("a-lak-khia-hi 'he takes out'")
-    report.append("```")
-    report.append("")
-    report.append("### Type 5: Negated VP")
+    report.append("### Type 4: Negated VP")
     report.append("```")
     report.append("SUBJ.AGR + VERB + NEG + (SFP)")
     report.append("ka-pai-kei-hi 'I don't go'")
@@ -354,42 +186,19 @@ def generate_report():
     report.append("## Illustrated Examples by Type")
     report.append("")
     
-    # Simple VP
-    report.append("### Simple VP")
-    report.append("")
-    def is_simple_vp(text):
-        words = text.split()
-        return len(words) < 10 and any(w.startswith('a') for w in words)
-    
-    examples = find_diverse_examples(verses, is_simple_vp, limit=3)
-    for ref, text, glossed in examples[:3]:
-        report.append(f"**{format_reference(ref)}**")
-        report.append(f"> {text}")
-        report.append("")
-    
     # Transitive with agreement
     report.append("### Transitive VP (Object Agreement)")
     report.append("")
-    def has_object_agr(text):
-        return 'hong' in text.lower() or 'kong' in text.lower()
-    
-    examples = find_diverse_examples(verses, has_object_agr, limit=3)
-    for ref, text, glossed in examples[:3]:
-        report.append(f"**{format_reference(ref)}**")
-        report.append(f"> {text}")
-        report.append("")
+    examples = find_diverse_examples(verses, kjv, lambda w: w.startswith('hong') or w.startswith('kong'), limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
+        report.extend(format_example(ref, text, word, analysis, kjv_text))
     
     # Negated
     report.append("### Negated VP")
     report.append("")
-    def has_neg(text):
-        return ' kei' in text.lower() or text.lower().endswith('kei')
-    
-    examples = find_diverse_examples(verses, has_neg, limit=3)
-    for ref, text, glossed in examples[:3]:
-        report.append(f"**{format_reference(ref)}**")
-        report.append(f"> {text}")
-        report.append("")
+    examples = find_diverse_examples(verses, kjv, lambda w: w == 'kei' or w.endswith('kei'), limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
+        report.extend(format_example(ref, text, word, analysis, kjv_text))
     
     report.append("---")
     report.append("")

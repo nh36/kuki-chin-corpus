@@ -55,33 +55,54 @@ The object prefixes encode a hierarchy: 1 > 2 > 3
 
 ### ka- (1SG)
 
-**Genesis 4:1**
-> Tu-in mipa in ama zi Eve luppih a, amah gai-in Kain nei a, “ Topa' huhna tawh mi khat ka ngah khin hi,” ci hi.
-> *Kain*: kain → KAIN
+**Matthew 1:22**
+> Topa in kamsangpa tungtawnin a gensa thu a tun theih nadingin hih thute a piang ahi hi. Tua a genna-ah,
+> KJV: *Now all this was done, that it might be fulfilled which was spoken of the Lord by the prophet, saying,*
+> *kamsangpa*: kamsangpa → prophet
 
-**Exodus 3:8**
-> Egypt mite' khutsung panin amaute khahkhia-in, tua leitang panin amaute la khia-in a hoih a tanzau leitang, bawngnawi le khuaizu a luanna leitang, Kanaan mite, Hit mite, Amor mite, Perez mite, Hiv mite, le Jebus mite' omna-ah amaute a paipih dingin kong paisuk hi.
-> *Kanaan*: kanaan → KANAAN
+**Genesis 1:20**
+> Pasian in, “Tuite in a nungta ganhing honpite piangsak hen la, vantung kantanin leitungah vasate leeng ta hen,” ci hi.
+> KJV: *And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.*
+> *kantanin*: kantan-in → cross.over-ERG
 
-**Leviticus 14:34**
-> “Note a dingin kong piak Kanaan gamah na om ciangun note' leitang a inn khat sungah phaknatna kong tunsak ciangin,
-> *Kanaan*: kanaan → KANAAN
+**Exodus 2:6**
+> Amah in a hon ciangin naungek mu hi. Naungek kap ahih manin tua nu in hehpihhuai sa a, “Hih naungek, Hebru mite' ta khat ahi hi,” a ci hi.
+> KJV: *And when she had opened it , she saw the child: and, behold, the babe wept. And she had compassion on him, and said, This is one of the Hebrews' children.*
+> *kap*: kap → weep
 
 ### a- (3SG)
 
-**# year_long:**
-> Not available
-> *available*: available → available
+**Matthew 1:1**
+> Abraham' suan David, David' suan Jesuh Khrih' khang ciaptehna hih bang ahi hi.
+> KJV: *The book of the generation of Jesus Christ, the son of David, the son of Abraham.*
+> *Abraham'*: abraham → ABRAHAM
 
 **Genesis 1:2**
 > Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek a, tua tui tungah Pasian' Kha in na a sem hi.
+> KJV: *And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.*
 > *awngthawlpi*: awng-thawl-pi → open-waste-big
 
-**Exodus 1:4**
-> Dan le Naftali, Gad le Asher ahi hi.
-> *Asher*: asher → ASHER
+**Exodus 1:1**
+> Jakob tawh Egypt-ah a hong pai, amau' innkuan ciat tawh ahi Israel' tapate' minte:
+> KJV: *Now these are the names of the children of Israel, which came into Egypt; every man and his household came with Jacob.*
+> *amau'*: amau → 3PL.PRO
 
 ### hong- (3→1/2 Inverse)
+
+**Matthew 1:18**
+> Jesuh Khrih a hong suahna zia hih bang ahi hi. Mary pen Josef a dingin zuthawl piaksa hi a, ahi zongin a kiten taktak ma-un Kha Siangtho in amah a gaisakna thu Mary in a thei hi.
+> KJV: *Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost.*
+> *hong*: hong → 3→1
+
+**Genesis 1:5**
+> Pasian in khuavak pen “Sun” ci a, khuamial pen “Zan” ci hi. Nitak hong bei-in, zingsang hong tung a, ni khat ni ahi hi.
+> KJV: *And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.*
+> *hong*: hong → 3→1
+
+**Exodus 1:1**
+> Jakob tawh Egypt-ah a hong pai, amau' innkuan ciat tawh ahi Israel' tapate' minte:
+> KJV: *Now these are the names of the children of Israel, which came into Egypt; every man and his household came with Jacob.*
+> *hong*: hong → 3→1
 
 ---
 

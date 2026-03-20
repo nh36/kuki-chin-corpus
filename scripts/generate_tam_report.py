@@ -7,11 +7,11 @@ Documents the tense-aspect-mood suffix system.
 
 import sys
 import os
+import re
 from collections import defaultdict, Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from analyze_morphemes import (analyze_word, gloss_sentence, 
-                               TAM_SUFFIXES, VERBAL_DERIVATIONAL_SUFFIXES)
+from analyze_morphemes import analyze_word, gloss_sentence, TAM_SUFFIXES
 
 # Book names
 BOOK_NAMES = {
@@ -38,6 +38,8 @@ GOSPEL_CODES = {'40', '41', '42', '43'}
 
 def format_reference(ref):
     """Convert 01001001 to Genesis 1:1."""
+    if len(ref) != 8 or not ref.isdigit():
+        return ref
     book_code = ref[:2]
     chapter = int(ref[2:5])
     verse = int(ref[5:8])
@@ -58,53 +60,105 @@ def load_bible():
     return verses
 
 
-def find_tam_examples(verses, suffix_pattern, limit=5, require_gospel=True):
-    """Find diverse examples of a TAM suffix."""
+def load_kjv():
+    """Load KJV translations from aligned verses."""
+    kjv = {}
+    aligned_path = os.path.join(os.path.dirname(__file__), 
+                                '..', 'data', 'verses_aligned.tsv')
+    with open(aligned_path, 'r', encoding='utf-8') as f:
+        header = f.readline().strip().split('\t')
+        kjv_idx = header.index('eng_King James Version') if 'eng_King James Version' in header else 2
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) > kjv_idx:
+                ref = parts[0]
+                kjv[ref] = parts[kjv_idx]
+    return kjv
+
+
+def find_tam_examples(verses, kjv, suffix_pattern, gloss_pattern, limit=3, require_gospel=True):
+    """Find diverse examples of a TAM suffix with KJV translations.
+    
+    Uses gloss_pattern to verify the word actually contains the TAM marker.
+    """
     examples = []
     books_used = set()
     gospel_found = False
     
+    # First pass: try to include a Gospel example
+    if require_gospel:
+        for ref, text in sorted(verses.items()):
+            if len(ref) != 8 or not ref.isdigit():
+                continue
+            book_code = ref[:2]
+            if book_code not in GOSPEL_CODES:
+                continue
+            words = text.split()
+            for word in words:
+                clean = word.lower().rstrip('.,;:!?"\'')
+                if suffix_pattern in clean:
+                    analysis = analyze_word(clean)
+                    # Check if gloss contains the TAM marker
+                    if analysis[1] and gloss_pattern in analysis[1]:
+                        kjv_text = kjv.get(ref, '')
+                        examples.append((ref, text, word, analysis, kjv_text))
+                        books_used.add(book_code)
+                        gospel_found = True
+                        break
+            if gospel_found:
+                break
+    
+    # Second pass: fill remaining slots from diverse books
     for ref, text in sorted(verses.items()):
+        if len(examples) >= limit:
+            break
+        if len(ref) != 8 or not ref.isdigit():
+            continue
+        book_code = ref[:2]
+        if book_code in books_used:
+            continue
         words = text.split()
         for word in words:
             clean = word.lower().rstrip('.,;:!?"\'')
             if suffix_pattern in clean:
-                book_code = ref[:2]
-                
-                # Skip if we already have this book
-                if book_code in books_used:
-                    continue
-                
-                # Track gospel status
-                is_gospel = book_code in GOSPEL_CODES
-                if is_gospel:
-                    gospel_found = True
-                
                 analysis = analyze_word(clean)
-                if analysis[1]:  # Has valid gloss
-                    examples.append((ref, text, word, analysis))
+                # Check if gloss contains the TAM marker
+                if analysis[1] and gloss_pattern in analysis[1]:
+                    kjv_text = kjv.get(ref, '')
+                    examples.append((ref, text, word, analysis, kjv_text))
                     books_used.add(book_code)
-                    
-                    if len(examples) >= limit:
-                        if require_gospel and not gospel_found:
-                            continue  # Keep looking for gospel
-                        return examples
+                    break
+        if len(examples) >= limit:
+            break
     
     return examples
 
 
 def count_suffix_occurrences(verses):
-    """Count TAM suffix occurrences."""
+    """Count TAM suffix occurrences by simple pattern matching."""
     counts = Counter()
     
     for ref, text in verses.items():
         words = text.split()
         for word in words:
             clean = word.lower().rstrip('.,;:!?"\'')
-            # Check for TAM suffixes
-            for suffix in TAM_SUFFIXES:
-                if clean.endswith(suffix) or suffix in clean:
-                    counts[suffix] += 1
+            # Count by suffix presence in word
+            if clean.endswith('ding') or 'ding' in clean:
+                counts['ding'] += 1
+            elif clean.endswith('ta') or 'ta ' in clean:
+                counts['ta'] += 1
+            elif 'zo' in clean:
+                counts['zo'] += 1
+            elif 'kik' in clean:
+                counts['kik'] += 1
+            elif clean.endswith('nawn') or 'nawn' in clean:
+                counts['nawn'] += 1
+            elif 'khin' in clean:
+                counts['khin'] += 1
+            elif clean.endswith('lai'):
+                counts['lai'] += 1
+            elif 'thei' in clean:
+                counts['thei'] += 1
     
     return counts
 
@@ -113,6 +167,7 @@ def generate_report():
     """Generate TAM markers report."""
     print("Loading corpus...")
     verses = load_bible()
+    kjv = load_kjv()
     
     print("Analyzing TAM markers...")
     counts = count_suffix_occurrences(verses)
@@ -136,7 +191,7 @@ def generate_report():
     report.append("```")
     report.append("")
     
-    # Main TAM suffixes
+    # Main TAM suffixes - only true TAM markers
     report.append("---")
     report.append("")
     report.append("## Core TAM Suffixes")
@@ -144,20 +199,18 @@ def generate_report():
     report.append("| Suffix | Gloss | Function | Attestations |")
     report.append("|--------|-------|----------|--------------|")
     
-    core_tam = {
-        'ding': ('IRR', 'Irrealis/Future'),
-        'ta': ('PFV', 'Perfective'),
-        'zo': ('COMPL', 'Completive'),
-        'kik': ('ITER', 'Iterative/Again'),
-        'nawn': ('CONT', 'Continuative'),
-        'khin': ('IMM', 'Immediate'),
-        'in': ('PROG', 'Progressive/Adverbial'),
-        'lai': ('PROSP', 'Prospective'),
-        'ning': ('DUB', 'Dubitative'),
-        'thei': ('ABIL', 'Abilitative'),
-    }
+    core_tam = [
+        ('ding', 'IRR', 'Irrealis/Future'),
+        ('ta', 'PFV', 'Perfective'),
+        ('zo', 'COMPL', 'Completive'),
+        ('kik', 'ITER', 'Iterative/Again'),
+        ('nawn', 'CONT', 'Continuative'),
+        ('khin', 'IMM', 'Immediate'),
+        ('lai', 'PROSP', 'Prospective'),
+        ('thei', 'ABIL', 'Abilitative'),
+    ]
     
-    for suffix, (gloss, func) in sorted(core_tam.items(), key=lambda x: -counts.get(x[0], 0)):
+    for suffix, gloss, func in sorted(core_tam, key=lambda x: -counts.get(x[0], 0)):
         count = counts.get(suffix, 0)
         report.append(f"| -{suffix} | {gloss} | {func} | {count}x |")
     
@@ -174,10 +227,11 @@ def generate_report():
     report.append("")
     report.append("The irrealis marker expresses future, potential, or hypothetical events.")
     report.append("")
-    examples = find_tam_examples(verses, 'ding', limit=3)
-    for ref, text, word, analysis in examples:
+    examples = find_tam_examples(verses, kjv, 'ding', 'IRR', limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        report.append(f"> KJV: *{kjv_text}*")
         report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
@@ -186,23 +240,24 @@ def generate_report():
     report.append("")
     report.append("Marks completed actions, often with past time reference.")
     report.append("")
-    examples = find_tam_examples(verses, 'ta', limit=3)
-    for ref, text, word, analysis in examples:
-        if 'PFV' in analysis[1] or '-ta' in analysis[0]:
-            report.append(f"**{format_reference(ref)}**")
-            report.append(f"> {text}")
-            report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
-            report.append("")
+    examples = find_tam_examples(verses, kjv, 'ta', 'PFV', limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
+        report.append(f"**{format_reference(ref)}**")
+        report.append(f"> {text}")
+        report.append(f"> KJV: *{kjv_text}*")
+        report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+        report.append("")
     
     # -zo (Completive)
     report.append("### -zo (Completive)")
     report.append("")
     report.append("Indicates action completed to its endpoint.")
     report.append("")
-    examples = find_tam_examples(verses, 'zo', limit=3)
-    for ref, text, word, analysis in examples:
+    examples = find_tam_examples(verses, kjv, 'zo', 'COMPL', limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        report.append(f"> KJV: *{kjv_text}*")
         report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
@@ -211,38 +266,26 @@ def generate_report():
     report.append("")
     report.append("Marks repeated or returned action ('again').")
     report.append("")
-    examples = find_tam_examples(verses, 'kik', limit=3)
-    for ref, text, word, analysis in examples:
+    examples = find_tam_examples(verses, kjv, 'kik', 'ITER', limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
         report.append(f"**{format_reference(ref)}**")
         report.append(f"> {text}")
+        report.append(f"> KJV: *{kjv_text}*")
         report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
         report.append("")
     
-    # Directional suffixes
-    report.append("---")
+    # -thei (Abilitative)
+    report.append("### -thei (Abilitative)")
     report.append("")
-    report.append("## Directional Suffixes")
+    report.append("Marks ability or possibility to perform an action.")
     report.append("")
-    report.append("Directional markers indicate the path of motion or orientation of action.")
-    report.append("")
-    report.append("| Suffix | Gloss | Meaning | Attestations |")
-    report.append("|--------|-------|---------|--------------|")
-    
-    directionals = {
-        'khia': ('out', 'Outward motion'),
-        'lut': ('in', 'Inward motion'),
-        'toh': ('up', 'Upward motion'),
-        'khiat': ('away', 'Away from'),
-        'cip': ('down', 'Downward motion'),
-        'kik': ('back', 'Return motion'),
-        'tang': ('arrive', 'Motion with arrival'),
-    }
-    
-    for suffix, (gloss, meaning) in directionals.items():
-        count = counts.get(suffix, 0)
-        report.append(f"| -{suffix} | {gloss} | {meaning} | {count}x |")
-    
-    report.append("")
+    examples = find_tam_examples(verses, kjv, 'thei', 'ABIL', limit=3)
+    for ref, text, word, analysis, kjv_text in examples:
+        report.append(f"**{format_reference(ref)}**")
+        report.append(f"> {text}")
+        report.append(f"> KJV: *{kjv_text}*")
+        report.append(f"> *{word}*: {analysis[0]} → {analysis[1]}")
+        report.append("")
     
     # TAM stacking
     report.append("---")
@@ -267,8 +310,8 @@ def generate_report():
     report.append("Tedim Chin TAM system features:")
     report.append("")
     report.append("1. **Core aspectual markers**: -ta (PFV), -zo (COMPL), -kik (ITER)")
-    report.append("2. **Modal markers**: -ding (IRR), -thei (ABIL), -ning (DUB)")
-    report.append("3. **Directional markers**: -khia, -lut, -toh, -cip")
+    report.append("2. **Modal markers**: -ding (IRR), -thei (ABIL)")
+    report.append("3. **Continuative/Prospective**: -nawn (CONT), -lai (PROSP)")
     report.append("4. **Stacking**: Multiple markers can combine in fixed order")
     report.append("")
     report.append("---")

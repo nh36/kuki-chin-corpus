@@ -12,7 +12,6 @@ Tedim Chin has productive derivational morphology for changing verb valency:
 | -sak | Causative | CAUS | 8276x |
 | -pih | Applicative | APPL | 2883x |
 | -khawm | Comitative | COM | 1181x |
-| -gawp | Intensive | INTENS | 646x |
 | -thei | Abilitative | ABIL | 5725x |
 
 ---
@@ -35,25 +34,20 @@ Agent defocused: *kigen* 'be said, it is said'
 
 ### Examples
 
+**Matthew 1:11**
+> Josiah ta Jekhoniah le a sanggamte hi a, Babylon gamah Israel mite salin a kipaipih hun pawlin a suak ahi uh hi.
+> KJV: *and Josias begat Jechonias and his brethren, about the time they were carried away to Babylon:*
+> *kipaipih*: ki-paipih → REFL-accompany
+
 **Genesis 1:1**
 > A kipat cil-in Pasian in vantung le leitung a piangsak hi.
+> KJV: *In the beginning God created the heaven and the earth.*
 > *kipat*: ki-pat → beginning
 
-**Exodus 1:7**
-> Ahih hangin Israel' suanlekhakte pungin nakpitakin khang uh hi. Amaute tampi pha-in nakpitakin khang uh ahih manin Egypt gamah dim uh hi.
-> *nakpitakin*: nak-pi-tak-in → strong-big-exact-ERG
-
-**Leviticus 1:1**
-> Topa in Moses sam a, kikhopna buk panin amah hopihin hih bangin ci hi:
-> *kikhopna*: ki-khop-na → REFL-gather-NMLZ
-
-**Numbers 1:1**
-> Amaute, Egypt gam panin a paikhiat zawh uh a kum nihna, a kha nihna a ni masa ni-in, Sinai sehnel gam kikhopna puanbuk sungah Topa in Moses hopihin hih bangin ci hi:
-> *kikhopna*: ki-khop-na → REFL-gather-NMLZ
-
-**Deuteronomy 1:1**
-> Hihte pen Jordan galkhat gamlak, Suf galkhat Arabah gam sung, Paran le Tofel, Laban, Hazeroth le Dizahab kikalah Moses in Israel-te khempeuh tungah a gen thute ahi hi.
-> *kikalah*: ki-kal-ah → REFL-middle-LOC
+**Exodus 1:9**
+> Amah in a mipihte kiangah, “En un, Israel mite eite a dingin tam lua-in thahat lua uh hi.
+> KJV: *And he said unto his people, Behold, the people of the children of Israel are more and mightier than we:*
+> *kiangah,*: kiang-ah → beside-LOC
 
 ### Common ki- Forms
 
@@ -84,25 +78,20 @@ CAUSER + CAUSEE + VERB-sak
 
 ### Examples
 
+**Matthew 1:18**
+> Jesuh Khrih a hong suahna zia hih bang ahi hi. Mary pen Josef a dingin zuthawl piaksa hi a, ahi zongin a kiten taktak ma-un Kha Siangtho in amah a gaisakna thu Mary in a thei hi.
+> KJV: *Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost.*
+> *gaisakna*: gaisak-na → birth-NMLZ
+
 **Genesis 1:1**
 > A kipat cil-in Pasian in vantung le leitung a piangsak hi.
+> KJV: *In the beginning God created the heaven and the earth.*
 > *piangsak*: piangsak → cause.birth
 
 **Exodus 1:3**
 > Issakhar, Zebulun, le Benjamin,
+> KJV: *Issachar, Zebulun, and Benjamin,*
 > *Issakhar,*: issakhar → ISSAKHAR
-
-**Leviticus 1:15**
-> Tua ciangin siampipa in biakna tau-ah paipihin a lu heektat ding a, biakna tau tungah hal ding hi. Biakna tau pangah a si taakkhiasak ding hi.
-> *taakkhiasak*: taak-khia-sak → comb-exit-CAUS
-
-**Numbers 1:8**
-> Issakhar sung panin Zuar' tapa Nethanel;
-> *Issakhar*: issakhar → ISSAKHAR
-
-**Deuteronomy 1:10**
-> Topa na Pasian un note tampi hong phasakzo hi. En un, note tuhunin vantung aksite zahin tampi na pha uh hi.
-> *phasakzo*: phasak-zo → multiply-able
 
 ### Common -sak Forms
 
@@ -123,38 +112,20 @@ The suffix -pih adds a benefactive or comitative argument.
 
 ### Examples
 
+**Matthew 1:11**
+> Josiah ta Jekhoniah le a sanggamte hi a, Babylon gamah Israel mite salin a kipaipih hun pawlin a suak ahi uh hi.
+> KJV: *and Josias begat Jechonias and his brethren, about the time they were carried away to Babylon:*
+> *kipaipih*: ki-paipih → REFL-accompany
+
 **Genesis 2:19**
 > Tua ahih ciangin Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh lei tawh bawl a, mipa in tuate bang a ci hiam ci-in a theihna dingin mipa kiangah tuate a paipih hi. Nuntakna a nei khempeuhte pen mipa' cih bangbang a min hi pahpah hi.
+> KJV: *And out of the ground the LORD God formed every beast of the field, and every fowl of the air; and brought them unto Adam to see what he would call them: and whatsoever Adam called every living creature, that was the name thereof.*
 > *paipih*: pai-pih → go-APPL
 
 **Exodus 1:9**
 > Amah in a mipihte kiangah, “En un, Israel mite eite a dingin tam lua-in thahat lua uh hi.
+> KJV: *And he said unto his people, Behold, the people of the children of Israel are more and mightier than we:*
 > *mipihte*: mi-pih-te → person-APPL-PL
-
-**Leviticus 1:1**
-> Topa in Moses sam a, kikhopna buk panin amah hopihin hih bangin ci hi:
-> *hopihin*: ho-pih-in → greet-APPL-ERG
-
-**Numbers 1:1**
-> Amaute, Egypt gam panin a paikhiat zawh uh a kum nihna, a kha nihna a ni masa ni-in, Sinai sehnel gam kikhopna puanbuk sungah Topa in Moses hopihin hih bangin ci hi:
-> *hopihin*: ho-pih-in → greet-APPL-ERG
-
-**Deuteronomy 1:17**
-> Thukhenna-ah angvan na nei kei ding uh hi. A neu le a liante a kibangin a thu na ngai ding uh a, maitang zahtak tuam na nei kei ding uh hi. Bang hang hiam cih leh thukhenna pen Pasian-a' ahi hi. Note a dingin a haksa lua thute kei kiangah nong paipih ding uh a, keimah in tua thu ka za ding hi,' ka ci hi.
-> *paipih*: pai-pih → go-APPL
-
----
-
-## Other Derivational Suffixes
-
-### -khawm (Comitative)
-Action done together: *omkhawm* 'be together' (from *om* 'be')
-
-### -gawp (Intensive)
-Intensified action: *maitamgawp* 'burn intensely'
-
-### -thei (Abilitative)
-Ability to perform action: *bawlthei* 'able to make'
 
 ---
 
