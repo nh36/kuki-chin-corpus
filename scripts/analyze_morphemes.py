@@ -5837,6 +5837,114 @@ PRONOUNS = {
 }
 
 
+# =============================================================================
+# VERB ARGUMENT FRAMES
+# =============================================================================
+# Transitivity classification based on corpus analysis of ERG marker frequency:
+# - TRANS: >40% ERG marking - canonical transitives (agent acts on patient)
+# - AMBI: 20-40% ERG marking - ambitransitive (can be used trans or intrans)
+# - INTR: <20% ERG marking - intransitive (single argument)
+#
+# Case frame notation:
+# - ERG: Ergative (transitive subject)
+# - ABS: Absolutive (intransitive subject, transitive object)
+# - DAT: Dative (recipient, experiencer)
+# - LOC: Locative (location, goal)
+# - COM: Comitative (accompaniment)
+# - ABL: Ablative (source)
+# =============================================================================
+
+VERB_FRAMES = {
+    # Intransitive verbs (single argument, ABS subject)
+    'hi': ('INTR', ['ABS'], 'be/copula'),
+    'om': ('INTR', ['ABS', 'LOC'], 'exist/stay'),
+    'pai': ('INTR', ['ABS', 'LOC'], 'go'),
+    'sih': ('INTR', ['ABS'], 'die'),
+    'nungta': ('INTR', ['ABS'], 'live'),
+    'hong': ('INTR', ['ABS', 'ABL'], 'come'),  # Can take source
+    'suak': ('INTR', ['ABS'], 'become'),
+    'ki': ('INTR', ['ABS'], 'flee/run'),
+    
+    # Transitive verbs (two arguments: ERG agent, ABS patient)
+    'ngai': ('TRANS', ['ERG', 'ABS'], 'love/need'),
+    'dawt': ('TRANS', ['ERG', 'ABS'], 'love'),
+    'en': ('TRANS', ['ERG', 'ABS'], 'look.at'),
+    'hawl': ('TRANS', ['ERG', 'ABS'], 'seek'),
+    'bei': ('TRANS', ['ERG', 'ABS'], 'finish/complete'),
+    
+    # Ambitransitive verbs (can be used transitively or intransitively)
+    'mu': ('AMBI', ['ERG', 'ABS'], 'see'),
+    'muh': ('AMBI', ['ERG', 'ABS'], 'see.II'),
+    'za': ('AMBI', ['ERG', 'ABS'], 'hear'),
+    'zak': ('AMBI', ['ERG', 'ABS'], 'hear.II'),
+    'ci': ('AMBI', ['ERG', 'ABS', 'DAT'], 'say'),
+    'gen': ('AMBI', ['ERG', 'ABS', 'DAT'], 'tell'),
+    'bawl': ('AMBI', ['ERG', 'ABS'], 'make/do'),
+    'nei': ('AMBI', ['ERG', 'ABS'], 'have'),
+    'neih': ('AMBI', ['ERG', 'ABS'], 'have.II'),
+    'thei': ('AMBI', ['ERG', 'ABS'], 'know'),
+    'theih': ('AMBI', ['ERG', 'ABS'], 'know.II'),
+    'ne': ('AMBI', ['ERG', 'ABS'], 'eat'),
+    'nek': ('AMBI', ['ERG', 'ABS'], 'eat.II'),
+    'dawn': ('AMBI', ['ERG', 'ABS'], 'drink'),
+    
+    # Ditransitive verbs (three arguments: ERG agent, ABS theme, DAT recipient)
+    'pia': ('DITRANS', ['ERG', 'ABS', 'DAT'], 'give'),
+    'piak': ('DITRANS', ['ERG', 'ABS', 'DAT'], 'give.II'),
+    'pia(k)sak': ('DITRANS', ['ERG', 'ABS', 'DAT'], 'give.for'),
+    
+    # Verbs with oblique arguments
+    'zui': ('AMBI', ['ERG', 'ABS'], 'follow'),
+    'tom': ('AMBI', ['ERG', 'COM'], 'meet'),  # Takes comitative
+    'uk': ('AMBI', ['ERG', 'ABS'], 'rule'),
+    'huh': ('AMBI', ['ERG', 'ABS'], 'help'),
+    'bia': ('AMBI', ['ERG', 'ABS'], 'worship'),
+    'piang': ('AMBI', ['ABS'], 'be.born'),  # Usually intrans for passive
+    'piangsak': ('TRANS', ['ERG', 'ABS'], 'create/cause.birth'),  # Causative
+    'lak': ('AMBI', ['ERG', 'ABS', 'ABL'], 'take'),  # Takes source
+    'pua': ('AMBI', ['ERG', 'ABS'], 'carry'),
+    'khen': ('AMBI', ['ERG', 'ABS', 'ABL'], 'divide/separate'),
+    'zawh': ('AMBI', ['ERG', 'ABS'], 'finish'),
+    'lem': ('AMBI', ['ERG', 'ABS'], 'keep'),
+}
+
+
+def get_verb_frame(verb: str) -> tuple:
+    """
+    Get the argument frame for a verb.
+    
+    Args:
+        verb: The verb stem (Form I or II)
+        
+    Returns:
+        Tuple of (transitivity, case_list, gloss) or None if not found
+        
+    Example:
+        >>> get_verb_frame('mu')
+        ('AMBI', ['ERG', 'ABS'], 'see')
+    """
+    verb_lower = verb.lower().rstrip('.,;:!?"\'')
+    
+    # Direct lookup
+    if verb_lower in VERB_FRAMES:
+        return VERB_FRAMES[verb_lower]
+    
+    # Try stripping common suffixes
+    for suffix in ['ding', 'ta', 'zo', 'kik', 'nawn', 'thei', 'sak', 'pih', 'khawm']:
+        if verb_lower.endswith(suffix) and len(verb_lower) > len(suffix):
+            base = verb_lower[:-len(suffix)]
+            if base in VERB_FRAMES:
+                return VERB_FRAMES[base]
+    
+    # Check VERB_STEMS for transitivity hint
+    if verb_lower in VERB_STEMS:
+        gloss = VERB_STEMS[verb_lower]
+        # Default to AMBI for unknown verbs
+        return ('AMBI', ['ERG', 'ABS'], gloss)
+    
+    return None
+
+
 def analyze_np_structure(words: list) -> dict:
     """
     Analyze the structure of a noun phrase.

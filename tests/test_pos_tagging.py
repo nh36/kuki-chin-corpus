@@ -19,7 +19,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
 from analyze_morphemes import (
     analyze_word,
     get_word_class,
+    get_verb_frame,
     VERB_STEMS,
+    VERB_FRAMES,
     DEMONSTRATIVES,
     NUMERALS,
     QUANTIFIERS,
@@ -158,6 +160,63 @@ class TestPOSDictionaries(unittest.TestCase):
         """Numerals and quantifiers should not overlap."""
         overlap = set(NUMERALS.keys()) & set(QUANTIFIERS.keys())
         self.assertEqual(len(overlap), 0, f"Overlap: {overlap}")
+
+
+class TestVerbFrames(unittest.TestCase):
+    """Test verb frame functionality."""
+    
+    def test_verb_frames_dict_exists(self):
+        """VERB_FRAMES dict should exist and have entries."""
+        self.assertIsInstance(VERB_FRAMES, dict)
+        self.assertGreater(len(VERB_FRAMES), 20)
+    
+    def test_verb_frame_structure(self):
+        """Each frame should have (transitivity, cases, gloss)."""
+        for verb, frame in VERB_FRAMES.items():
+            self.assertEqual(len(frame), 3, f"{verb} frame should have 3 elements")
+            trans, cases, gloss = frame
+            self.assertIn(trans, ['TRANS', 'INTR', 'AMBI', 'DITRANS'])
+            self.assertIsInstance(cases, list)
+            self.assertIsInstance(gloss, str)
+    
+    def test_get_verb_frame_direct(self):
+        """get_verb_frame should find direct matches."""
+        frame = get_verb_frame('mu')
+        self.assertIsNotNone(frame)
+        trans, cases, gloss = frame
+        self.assertEqual(trans, 'AMBI')
+        self.assertEqual(gloss, 'see')
+    
+    def test_get_verb_frame_formII(self):
+        """get_verb_frame should find Form II from Form I."""
+        frame = get_verb_frame('muh')
+        self.assertIsNotNone(frame)
+        trans, cases, gloss = frame
+        self.assertEqual(trans, 'AMBI')
+        self.assertIn('see', gloss)
+    
+    def test_get_verb_frame_with_suffix(self):
+        """get_verb_frame should strip suffixes."""
+        frame = get_verb_frame('muding')
+        self.assertIsNotNone(frame)
+        trans, cases, gloss = frame
+        self.assertEqual(trans, 'AMBI')
+    
+    def test_get_verb_frame_intransitive(self):
+        """Intransitive verbs should have INTR frame."""
+        frame = get_verb_frame('pai')
+        self.assertIsNotNone(frame)
+        trans, cases, gloss = frame
+        self.assertEqual(trans, 'INTR')
+        self.assertIn('ABS', cases)
+    
+    def test_get_verb_frame_ditransitive(self):
+        """Ditransitive verbs should have DITRANS frame."""
+        frame = get_verb_frame('pia')
+        self.assertIsNotNone(frame)
+        trans, cases, gloss = frame
+        self.assertEqual(trans, 'DITRANS')
+        self.assertIn('DAT', cases)
 
 
 if __name__ == '__main__':
