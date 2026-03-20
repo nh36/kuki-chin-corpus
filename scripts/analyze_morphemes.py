@@ -5745,6 +5745,69 @@ def get_word_class(word: str, gloss: str) -> str:
     return 'N'
 
 
+def pos_tag_sentence(sentence: str) -> list:
+    """
+    POS-tag a sentence, returning full analysis for each word.
+    
+    Args:
+        sentence: A string of space-separated words
+        
+    Returns:
+        List of tuples: (word, segmentation, gloss, pos_tag)
+        
+    Example:
+        >>> pos_tag_sentence("Pasian in vantung a piangsak hi")
+        [('Pasian', 'Pasian', 'PASIAN', 'N.PROP'),
+         ('in', 'in', 'ERG', 'CASE'),
+         ('vantung', 'van-tung', 'sky-on', 'N'),
+         ('a', 'a', '3SG', 'AGR'),
+         ('piangsak', 'piangsak', 'cause.birth', 'V'),
+         ('hi', 'hi', 'DECL', 'SFIN')]
+    """
+    result = []
+    for word in sentence.split():
+        seg, gloss = analyze_word(word)
+        pos = get_word_class(word, gloss)
+        result.append((word, seg, gloss, pos))
+    return result
+
+
+def format_pos_tagged(sentence: str, format='inline') -> str:
+    """
+    Format a POS-tagged sentence for display.
+    
+    Args:
+        sentence: A string of space-separated words
+        format: 'inline' for word/POS, 'vertical' for aligned columns
+        
+    Returns:
+        Formatted string
+        
+    Example (inline):
+        "Pasian/N.PROP in/CASE vantung/N a/AGR piangsak/V hi/SFIN"
+        
+    Example (vertical):
+        Word       Seg            Gloss               POS
+        Pasian     Pasian         PASIAN              N.PROP
+        in         in             ERG                 CASE
+        ...
+    """
+    tagged = pos_tag_sentence(sentence)
+    
+    if format == 'inline':
+        return ' '.join(f"{word}/{pos}" for word, seg, gloss, pos in tagged)
+    
+    elif format == 'vertical':
+        lines = [f"{'Word':<12} {'Seg':<15} {'Gloss':<20} {'POS':<8}"]
+        lines.append("-" * 60)
+        for word, seg, gloss, pos in tagged:
+            lines.append(f"{word:<12} {seg:<15} {gloss:<20} {pos:<8}")
+        return '\n'.join(lines)
+    
+    else:
+        raise ValueError(f"Unknown format: {format}")
+
+
 # Subordinators - words that introduce subordinate clauses
 SUBORDINATORS = {
     'ciangin': 'when',           # temporal - "when X happened"
