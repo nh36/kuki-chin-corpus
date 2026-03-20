@@ -664,7 +664,7 @@ def main():
     
     import argparse
     parser = argparse.ArgumentParser(description='Generate postposition report')
-    parser.add_argument('--output', '-o', help='Output file (default: docs/paradigms/postpositions.md)')
+    parser.add_argument('--output', '-o', help='Output file (default: docs/paradigms/3-noun-05-postpositions.md)')
     args = parser.parse_args()
     
     report = generate_report(corpus_file, kjv_file)
@@ -672,7 +672,7 @@ def main():
     if args.output:
         output_path = Path(args.output)
     else:
-        output_path = Path(__file__).parent.parent / 'docs' / 'paradigms' / 'postpositions.md'
+        output_path = Path(__file__).parent.parent / 'docs' / 'paradigms' / '3-noun-05-postpositions.md'
     
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(report, encoding='utf-8')

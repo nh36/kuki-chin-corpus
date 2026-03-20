@@ -351,7 +351,7 @@ if __name__ == '__main__':
     report = generate_report()
     
     output_path = os.path.join(os.path.dirname(__file__), 
-                               '..', 'docs', 'paradigms', 'tam_markers.md')
+                               '..', 'docs', 'paradigms', '5-verb-04-tam.md')
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(report)
     

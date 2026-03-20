@@ -598,7 +598,7 @@ if __name__ == '__main__':
     
     # Write to file
     output_path = os.path.join(os.path.dirname(__file__), 
-                               '..', 'docs', 'paradigms', 'np_structure.md')
+                               '..', 'docs', 'paradigms', '3-noun-06-np-structure.md')
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(report)
     

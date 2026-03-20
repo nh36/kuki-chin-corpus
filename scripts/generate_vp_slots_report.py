@@ -313,16 +313,16 @@ def main():
     reports = [
         ('Aspect', ASPECT_SUFFIXES, 
          "Aspect suffixes mark the internal temporal structure of events: whether complete, ongoing, repeated, etc.",
-         'aspect_suffixes.md'),
+         '5-verb-05-aspect.md'),
         ('Directional', DIRECTIONAL_SUFFIXES,
          "Directional suffixes indicate the path or direction of motion associated with the verbal action.",
-         'directional_suffixes.md'),
+         '5-verb-06-directional.md'),
         ('Modal', MODAL_SUFFIXES,
          "Modal suffixes express modality: possibility, ability, necessity, desire, or epistemic stance.",
-         'modal_suffixes.md'),
+         '5-verb-07-modal.md'),
         ('Derivational', DERIVATIONAL_SUFFIXES,
          "Derivational suffixes change verb valency or add semantic content (causative, applicative, etc.).",
-         'derivational_suffixes.md'),
+         '5-verb-08-derivational.md'),
     ]
     
     print("\nGenerating reports...")
@@ -335,9 +335,9 @@ def main():
         print(f"  {filename}: {lines} lines")
     
     # Generate combinations report
-    output_path = os.path.join(output_dir, 'vp_combinations.md')
+    output_path = os.path.join(output_dir, '5-verb-10-combinations.md')
     lines = generate_combinations_report(combo_counts, combo_examples, kjv, output_path)
-    print(f"  vp_combinations.md: {lines} lines")
+    print(f"  5-verb-10-combinations.md: {lines} lines")
     
     print("\nDone!")
 
