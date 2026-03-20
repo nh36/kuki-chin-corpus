@@ -6222,8 +6222,303 @@ def extract_verb_prefix(analyzed_gloss: str) -> str:
 
 
 # =============================================================================
-# HIERARCHICAL COMPOUND ANALYSIS
+# CLAUSE STRUCTURE ANALYSIS
 # =============================================================================
+#
+# Tedim Chin clause structure (Henderson 1965):
+# - Main clauses: End with sentence-final particle (hi, hiam, etc.)
+# - Subordinate clauses: Marked by subordinators (ciangin, hangin, etc.)
+# - Relative clauses: Verb (Form II) + relativizer (te, mi, pa, nu)
+# - Conditional clauses: End with leh (if/when)
+#
+# Form I vs Form II:
+# - Form I: Main clause verb, conclusive sentence
+# - Form II: Subordinate clause verb, before relativizer
+#
+# =============================================================================
+
+# Clause boundary markers (morphemes that signal clause edges)
+CLAUSE_BOUNDARY_MARKERS = {
+    # Subordinators (clause-initial or clause-final)
+    'ciangin': 'when',       # Temporal
+    'hangin': 'because',     # Causal  
+    'bangin': 'like',        # Comparative/manner
+    'dingin': 'in.order.to', # Purpose
+    'ahih': 'being.that',    # Relative/causal
+    # Conditional/conditional
+    'leh': 'if/when',        # Conditional (clause-final)
+    # Quotative
+    'ci': 'say',             # Quotative (introduces reported speech)
+    'cih': 'say.II',
+    # Sentence-final (main clause)
+    'hi': 'DECL',            # Declarative (conclusive)
+    'hiam': 'Q',             # Interrogative
+    'hen': 'JUSS',           # Jussive
+    'rawh': 'HORT',          # Hortative
+}
+
+# Relativizers (turn verb into modifier)
+RELATIVIZERS = {
+    'te': 'PL/REL',          # Plural/relativizer
+    'mi': 'person.REL',      # Human relativizer
+    'pa': 'male.REL',        # Male relativizer  
+    'nu': 'female.REL',      # Female relativizer
+}
+
+# Switch reference markers (Henderson 1965)
+SWITCH_REFERENCE = {
+    'in': 'SS.ERG',          # Same-subject + ergative
+    'a': 'DS',               # Different-subject prefix
+}
+
+
+def detect_clause_boundaries(sentence: str) -> list:
+    """
+    Detect clause boundaries in a sentence.
+    
+    Clause boundaries are marked by:
+    1. Subordinators (ciangin, hangin, etc.) 
+    2. Sentence-final markers (hi, hiam, etc.)
+    3. Quotative verbs (ci, cih)
+    4. Relativizers after Form II verbs
+    
+    Args:
+        sentence: A sentence string
+        
+    Returns:
+        List of clause dictionaries, each with:
+        - text: The clause text
+        - start: Start word index
+        - end: End word index
+        - boundary_marker: What marks the boundary (or None)
+        - clause_type: 'main', 'temporal', 'causal', 'relative', 'conditional', 'quotative'
+    """
+    words = sentence.strip().split()
+    if not words:
+        return []
+    
+    clauses = []
+    current_start = 0
+    
+    for i, word in enumerate(words):
+        word_lower = word.lower().rstrip('.,;:!?"\'')
+        
+        # Check for subordinators (typically clause-final in Tedim)
+        is_boundary = False
+        clause_type = 'main'
+        marker = None
+        
+        # Temporal subordinators
+        if word_lower == 'ciangin':
+            is_boundary = True
+            clause_type = 'temporal'
+            marker = 'ciangin'
+        # Causal subordinators
+        elif word_lower == 'hangin':
+            is_boundary = True
+            clause_type = 'causal'
+            marker = 'hangin'
+        # Purpose subordinators
+        elif word_lower == 'dingin':
+            is_boundary = True  
+            clause_type = 'purpose'
+            marker = 'dingin'
+        # Comparative/manner
+        elif word_lower == 'bangin':
+            is_boundary = True
+            clause_type = 'comparative'
+            marker = 'bangin'
+        # Conditional
+        elif word_lower == 'leh' and i < len(words) - 1:
+            is_boundary = True
+            clause_type = 'conditional'
+            marker = 'leh'
+        # Quotative
+        elif word_lower in ('ci', 'cih', 'cin', 'ciin'):
+            is_boundary = True
+            clause_type = 'quotative'
+            marker = word_lower
+        # Sentence-final (main clause boundary)
+        elif word_lower == 'hi' and i == len(words) - 1:
+            is_boundary = True
+            clause_type = 'main'
+            marker = 'hi'
+        # Relative clause: check for relativizer after verb
+        elif word_lower in RELATIVIZERS:
+            # Look back for Form II verb
+            if i > 0:
+                prev_word = words[i-1].lower().rstrip('.,;:!?"\'')
+                if prev_word.endswith('h'):  # Form II often ends in -h
+                    is_boundary = True
+                    clause_type = 'relative'
+                    marker = word_lower
+        
+        if is_boundary:
+            clause_text = ' '.join(words[current_start:i+1])
+            clauses.append({
+                'text': clause_text,
+                'start': current_start,
+                'end': i,
+                'boundary_marker': marker,
+                'clause_type': clause_type
+            })
+            current_start = i + 1
+    
+    # Handle remaining words as final clause
+    if current_start < len(words):
+        clause_text = ' '.join(words[current_start:])
+        clauses.append({
+            'text': clause_text,
+            'start': current_start,
+            'end': len(words) - 1,
+            'boundary_marker': None,
+            'clause_type': 'main'
+        })
+    
+    return clauses
+
+
+def classify_clause(clause_text: str, position: str = 'unknown') -> dict:
+    """
+    Classify a clause by type and expected verb form.
+    
+    Args:
+        clause_text: Text of the clause
+        position: 'initial', 'medial', 'final', or 'unknown'
+        
+    Returns:
+        Dictionary with:
+        - type: 'main', 'temporal', 'causal', 'relative', 'conditional', 'purpose'
+        - expected_form: 'I' (indicative) or 'II' (subjunctive)
+        - subordinator: The subordinating morpheme (if any)
+        - has_verb: Whether a verb was detected
+    """
+    words = clause_text.strip().split()
+    if not words:
+        return {'type': 'unknown', 'expected_form': None, 'subordinator': None, 'has_verb': False}
+    
+    clause_type = 'main'
+    expected_form = 'I'  # Default to Form I for main clauses
+    subordinator = None
+    
+    # Check for subordinators
+    for word in words:
+        word_lower = word.lower().rstrip('.,;:!?"\'')
+        if word_lower == 'ciangin':
+            clause_type = 'temporal'
+            subordinator = 'ciangin'
+            expected_form = 'II'
+        elif word_lower == 'hangin':
+            clause_type = 'causal'
+            subordinator = 'hangin'
+            expected_form = 'II'
+        elif word_lower == 'dingin':
+            clause_type = 'purpose'
+            subordinator = 'dingin'
+            expected_form = 'II'
+        elif word_lower == 'bangin':
+            clause_type = 'comparative'
+            subordinator = 'bangin'
+            expected_form = 'II'
+        elif word_lower == 'leh':
+            clause_type = 'conditional'
+            subordinator = 'leh'
+            expected_form = 'II'
+    
+    # Check for verb presence
+    has_verb = False
+    for word in words:
+        word_lower = word.lower().rstrip('.,;:!?"\'')
+        if word_lower in VERB_STEMS or any(word_lower.startswith(v) for v in list(VERB_STEMS.keys())[:50]):
+            has_verb = True
+            break
+    
+    # Position-based refinement
+    if position == 'final' and clause_type == 'main':
+        expected_form = 'I'  # Final main clause uses Form I
+    elif position in ('initial', 'medial'):
+        # Non-final clauses typically use Form II
+        if subordinator is None:
+            expected_form = 'II'
+    
+    return {
+        'type': clause_type,
+        'expected_form': expected_form,
+        'subordinator': subordinator,
+        'has_verb': has_verb
+    }
+
+
+def analyze_clause_structure(sentence: str) -> dict:
+    """
+    Full clause structure analysis for a sentence.
+    
+    Args:
+        sentence: A sentence string
+        
+    Returns:
+        Dictionary with:
+        - clauses: List of clause analyses
+        - clause_count: Number of clauses
+        - main_clause_position: Index of main clause
+        - clause_chain: Description of clause chaining pattern
+        - verb_forms: Expected verb forms per clause
+    """
+    clauses = detect_clause_boundaries(sentence)
+    
+    if not clauses:
+        return {
+            'clauses': [],
+            'clause_count': 0,
+            'main_clause_position': None,
+            'clause_chain': 'empty',
+            'verb_forms': []
+        }
+    
+    n_clauses = len(clauses)
+    
+    # Analyze each clause with position info
+    analyzed_clauses = []
+    verb_forms = []
+    main_position = None
+    
+    for i, clause in enumerate(clauses):
+        if i == 0:
+            position = 'initial'
+        elif i == n_clauses - 1:
+            position = 'final'
+        else:
+            position = 'medial'
+        
+        analysis = classify_clause(clause['text'], position)
+        analysis['position'] = position
+        analysis['boundary_marker'] = clause.get('boundary_marker')
+        
+        if analysis['type'] == 'main' and position == 'final':
+            main_position = i
+        
+        analyzed_clauses.append(analysis)
+        verb_forms.append(analysis['expected_form'])
+    
+    # Determine clause chaining pattern
+    if n_clauses == 1:
+        chain_type = 'simple'
+    elif all(c['type'] == 'main' for c in analyzed_clauses):
+        chain_type = 'coordinate'
+    else:
+        subord_types = [c['type'] for c in analyzed_clauses if c['type'] != 'main']
+        if subord_types:
+            chain_type = f"subordinate:{'+'.join(set(subord_types))}"
+        else:
+            chain_type = 'complex'
+    
+    return {
+        'clauses': analyzed_clauses,
+        'clause_count': n_clauses,
+        'main_clause_position': main_position,
+        'clause_chain': chain_type,
+        'verb_forms': verb_forms
+    }
 # 
 # Tedim Chin compounds can be nested: singnamtui = sing + (nam + tui)
 # where namtui is itself a compound (nam=smell + tui=water → perfume)
