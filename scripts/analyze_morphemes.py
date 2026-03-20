@@ -376,10 +376,76 @@ NEGATION = {
     'kei': 'NEG.EMPH',
 }
 
-# Demonstratives
+# =============================================================================
+# WORD CLASSES FOR NP STRUCTURE
+# =============================================================================
+# These dictionaries organize words by part of speech for NP chunking and
+# structural analysis. Each category is used by the NP structure report.
+
+# Demonstratives (prenominal)
 DEMONSTRATIVES = {
-    'hih': 'PROX',    # this
-    'tua': 'DIST',    # that
+    'hih': 'PROX',      # this (4,025x)
+    'tua': 'DIST',      # that (9,156x)
+    'tuate': 'DIST.PL', # those
+    'hihte': 'PROX.PL', # these
+}
+
+# Numerals (post-nominal, directly follow nouns - no classifiers)
+NUMERALS = {
+    'khat': 'one',       # 4,303x - mi khat = one person
+    'nih': 'two',        # 598x
+    'thum': 'three',     # 626x
+    'li': 'four',
+    'nga': 'five',
+    'guk': 'six',
+    'sagih': 'seven',
+    'giat': 'eight',
+    'kua': 'nine',
+    'sawm': 'ten',       # 679x
+    'za': 'hundred',
+    'tul': 'thousand',
+}
+
+# Quantifiers (post-nominal, follow NP)
+QUANTIFIERS = {
+    'khempeuh': 'all',      # 4,783x - mi khempeuh = all people
+    'peuhpeuh': 'every',    # 431x - mi peuhpeuh = every person  
+    'tampi': 'many',        # 727x - mi tampi = many people
+    'teltel': 'each',       # teltel-in = each in turn
+    'vekpi': 'altogether',  # 213x - all together
+    'tuamtuam': 'various',  # 59x - different kinds
+    'khatpeuh': 'any',      # 79x - mi khatpeuh = anyone
+    'pawlkhat': 'some',     # 394x - some (of them)
+}
+
+# Property words (stative verbs that can be attributive or predicative)
+# Predicative: a hoih = it is good (3SG + property)
+# Attributive: mi hoih = good person (N + property)
+PROPERTY_WORDS = {
+    'hoih': 'good',         # 170x predicative, 30x attributive
+    'sia': 'evil',          # 163x predicative - a sia = it is evil
+    'lian': 'big',          # 124x - a lian = it is big
+    'neu': 'small',         # 39x - a neu = it is small
+    'gim': 'suffering',     # 57x - a gim = suffering
+    'tha': 'strong',        # 24x - a tha = it is strong
+    'ha': 'difficult',      # 12x - a ha = it is difficult
+    'nuam': 'pleasant',     # 21x - a nuam = it is pleasant
+    'tam': 'many',          # 54x - a tam = they are many
+    'tawm': 'few',          # 12x - a tawm = they are few
+    'sau': 'long',          # 22x - a sau = it is long
+    'toih': 'short',        # rare
+    'dau': 'deep',          # 5x - a dau = it is deep
+    'bel': 'wide',          # 7x - a bel = it is wide
+    'man': 'expensive',     # 18x attributive - thu man = valuable word
+    'mang': 'obedient',     # 35x - thu mang = obey (word + obey)
+    'om': 'exist',          # 1868x - a om = it exists (also PROPERTY_WORDS for attributive use)
+    'pha': 'good',          # 221x - a pha = it is good (quality)
+    'thei': 'able',         # 176x - a thei = able to (modal use)
+}
+
+# Coordinator (single morpheme in Tedim Chin)
+COORDINATOR = {
+    'le': 'and',            # 10,942x - N le N = N and N
 }
 
 # Nominalizers and plurals
@@ -5456,6 +5522,179 @@ def chunk_sentence(sentence: str) -> list:
         phrases.append(current_phrase)
     
     return phrases
+
+
+# =============================================================================
+# NP STRUCTURE ANALYSIS
+# =============================================================================
+# Tedim Chin NP structure (based on corpus analysis):
+#
+# Basic template:
+#   (POSS-GEN) (DEM) HEAD (PROP) (NUM) (QUANT) (-PL) (CASE)
+#
+# Examples:
+#   mi khat = person one = "one person" (N + NUM)
+#   hih mite = this people = "these people" (DEM + N.PL)
+#   mi khempeuh = person all = "all people" (N + QUANT)
+#   mite' tungah = people-GEN on-LOC = "on the people" (N.PL-GEN + REL-LOC)
+#   hih mite khempeuh in = this people all ERG = "all these people ERG" (DEM + N.PL + QUANT + CASE)
+#
+# Key observations:
+# - Demonstratives PRECEDE the head noun (prenominal)
+# - Numbers, property words, quantifiers FOLLOW the head (post-nominal)
+# - No classifiers - nouns directly precede numbers
+# - Plural -te attaches to head or to quantifier (khempeuhte)
+# - Case markers close the NP
+# =============================================================================
+
+def get_word_class(word: str, gloss: str) -> str:
+    """
+    Determine the word class of a word based on its form and gloss.
+    
+    Returns one of: DEM, N, N.PL, NUM, QUANT, PROP, COORD, CASE, GEN, REL, V, OTHER
+    """
+    word_lower = word.lower().rstrip('.,;:!?"\'')
+    
+    # Check demonstratives
+    if word_lower in DEMONSTRATIVES:
+        return 'DEM'
+    
+    # Check numerals
+    if word_lower in NUMERALS:
+        return 'NUM'
+    
+    # Check quantifiers
+    if word_lower in QUANTIFIERS:
+        return 'QUANT'
+    
+    # Check property words (bare form only)
+    if word_lower in PROPERTY_WORDS:
+        return 'PROP'
+    
+    # Check coordinator
+    if word_lower in COORDINATOR:
+        return 'COORD'
+    
+    # Check case markers in gloss
+    case_endings = ('-ERG', '-LOC', '-COM', '-ABL', '-ALL', '-GEN')
+    case_glosses = ('ERG', 'LOC', 'COM', 'ABL', 'ALL')
+    if any(gloss.endswith(e) for e in case_endings) or gloss in case_glosses:
+        return 'CASE'
+    
+    # Check for genitive (possessive)
+    if gloss.endswith('-GEN') or gloss.endswith('.GEN') or word_lower.endswith("'"):
+        return 'GEN'
+    
+    # Check for relator nouns (spatial)
+    if word_lower in RELATOR_NOUNS:
+        return 'REL'
+    
+    # Check for plural nouns
+    if '-PL' in gloss and not gloss.startswith('2/3'):
+        return 'N.PL'
+    
+    # Check for verbs (has agreement prefix)
+    if gloss.startswith(('1SG-', '2SG-', '3SG-', '1PL-', '2PL-', '3PL-', 'REFL-')):
+        return 'V'
+    
+    # Default to noun
+    return 'N'
+
+
+def analyze_np_structure(words: list) -> dict:
+    """
+    Analyze the structure of a noun phrase.
+    
+    Args:
+        words: List of (word, segmentation, gloss) tuples
+        
+    Returns:
+        Dictionary with:
+        - pattern: String describing the structure (e.g., "DEM + N.PL + QUANT + CASE")
+        - slots: Dict mapping word class to words in that slot
+        - head: The head noun (if identifiable)
+        - gloss_sequence: The full gloss as a string
+    """
+    word_classes = []
+    slots = {}
+    gloss_parts = []
+    
+    for word, seg, gloss in words:
+        wc = get_word_class(word, gloss)
+        word_classes.append(wc)
+        
+        if wc not in slots:
+            slots[wc] = []
+        slots[wc].append((word, seg, gloss))
+        gloss_parts.append(gloss)
+    
+    pattern = ' + '.join(word_classes)
+    
+    # Try to identify the head noun
+    head = None
+    for wc in ('N', 'N.PL'):
+        if wc in slots:
+            head = slots[wc][0]  # First noun is likely head
+            break
+    
+    return {
+        'pattern': pattern,
+        'slots': slots,
+        'head': head,
+        'gloss_sequence': ' '.join(gloss_parts),
+        'word_classes': word_classes,
+    }
+
+
+def extract_nps_from_sentence(sentence: str) -> list:
+    """
+    Extract noun phrases from a sentence.
+    
+    Uses phrase boundary detection to identify NP chunks, then analyzes
+    the structure of each potential NP.
+    
+    Args:
+        sentence: A string of space-separated words
+        
+    Returns:
+        List of NP analysis dictionaries
+    """
+    from analyze_morphemes import analyze_sentence
+    
+    analysis = analyze_sentence(sentence)
+    nps = []
+    current_np = []
+    
+    for word, seg, gloss, is_boundary in analysis:
+        wc = get_word_class(word, gloss)
+        
+        # Start collecting NP when we see DEM, N, or GEN
+        if wc in ('DEM', 'N', 'N.PL', 'GEN', 'REL') and not current_np:
+            current_np.append((word, seg, gloss))
+        elif current_np:
+            current_np.append((word, seg, gloss))
+            
+            # End NP at case marker or coordinator
+            if wc in ('CASE', 'COORD', 'V') or is_boundary:
+                if len(current_np) >= 1:
+                    np_analysis = analyze_np_structure(current_np)
+                    if 'N' in np_analysis['slots'] or 'N.PL' in np_analysis['slots']:
+                        nps.append({
+                            'words': current_np,
+                            'analysis': np_analysis,
+                        })
+                current_np = []
+    
+    # Handle any remaining NP
+    if current_np:
+        np_analysis = analyze_np_structure(current_np)
+        if 'N' in np_analysis['slots'] or 'N.PL' in np_analysis['slots']:
+            nps.append({
+                'words': current_np,
+                'analysis': np_analysis,
+            })
+    
+    return nps
 
 
 # =============================================================================
