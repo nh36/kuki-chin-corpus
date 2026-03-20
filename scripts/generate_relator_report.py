@@ -499,7 +499,8 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
                     if j < len(diverse):
                         verse_id, context = diverse[j][:2]  # Handle both 3 and 4-tuple
                         kjv_text = kjv.get(verse_id, '')[:40] + ('...' if len(kjv.get(verse_id, '')) > 40 else '')
-                        sample_cols.append(f'{format_verse_ref(verse_id)}: "{kjv_text}"')
+                        gloss_str = gloss_context(context)
+                        sample_cols.append(f'{format_verse_ref(verse_id)}: *{context}* {gloss_str} — "{kjv_text}"')
                     else:
                         sample_cols.append('—')
                 lines.append(f'| {word} | {count} | {notes} | {sample_cols[0]} | {sample_cols[1]} | {sample_cols[2]} |')
@@ -522,8 +523,9 @@ def generate_report(corpus_file: str, kjv_file: str) -> str:
         diverse_all = select_diverse_samples([(ex[0], case_name, ex[1], ex[2]) for case_name, ex in all_examples], 5)
         for verse_id, case_name, context, prev in diverse_all:
             kjv_text = kjv.get(verse_id, 'N/A')
+            gloss_str = gloss_context(context)
             lines.append(f'- **{case_labels[case_name][0]}** ({format_verse_ref(verse_id)}):')
-            lines.append(f'  - Tedim: *{context}*')
+            lines.append(f'  - Tedim: *{context}* {gloss_str}')
             lines.append(f'  - KJV: "{kjv_text}"')
             lines.append('')
         
