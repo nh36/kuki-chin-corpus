@@ -78,7 +78,7 @@ SUBJ  [VERB-in]  [VERB]  hi
 **Genesis 13:16**
 > Na suanlekhakte, leitung leivui zahin tampi ka phasak ding hi. Mi khatpeuh in leitung leivui...
 > *Na suanlekhak-te lei-tung leivui zah-in tampi ka pha-sak ding hi Mi khat-peuh in lei-tung leivui*
-> 2SG genealogy-PL land-on dust fear-ERG many 1SG reach-CAUS IRR DECL person one-every ERG land-on dust
+> 2SG genealogy-PL land-on dust fear-CVB many 1SG reach-CAUS IRR DECL person one-every ERG land-on dust
 > KJV: *And I will make thy seed as the dust of the earth: so that if a man can number the dust of the earth...*
 
 **ngenin** 'pray':
@@ -86,7 +86,7 @@ SUBJ  [VERB-in]  [VERB]  hi
 **Genesis 41:55**
 > Egypt gam khempeuh a kial ciangin, an ngenin mite Faro' tungah kiko uh hi. Faro...
 > *Egypt gam khempeuh a kial ciang-in an ngen-in mi-te Faro' tung-ah kiko uh hi Faro*
-> EGYPT land all 3SG hunger then-ERG 3PL.POSS pray-ERG person-PL FARO' on-LOC cry.out 2/3PL DECL FARO
+> EGYPT land all 3SG hunger then-ERG 3PL.POSS pray-CVB person-PL FARO' on-LOC cry.out 2/3PL DECL FARO
 > KJV: *And when all the land of Egypt was famished, the people cried to Pharaoh for bread: and Pharaoh said...*
 
 **lungdamin** 'rejoice':
@@ -122,7 +122,7 @@ Each converb clause maintains same-subject reference with the final main clause.
 **Genesis 1:12**
 > Leitung in kung tuamtuamte piangkhiasak a, kungnote in amau' nam ciatin tang piangsakin, singkung in...
 > *lei-tung in kung tuam-tuam-te piang-khia-sak a kungno-te in amau' nam ciatin tang piangsak-in sing-kung in*
-> land-on ERG trunk different-REDUP-PL be.born-exit-CAUS 3SG herb-PL ERG 3PL.PRO.POSS nation each.kind.ERG embed cause.birth-ERG tree ERG
+> land-on ERG trunk different-REDUP-PL be.born-exit-CAUS 3SG herb-PL ERG 3PL.PRO.POSS nation each.kind.ERG embed cause.birth-CVB tree ERG
 > KJV: *And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding frui...*
 
 **3-clause chain:**
