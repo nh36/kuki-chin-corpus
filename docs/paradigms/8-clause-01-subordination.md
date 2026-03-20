@@ -272,3 +272,64 @@ Tedim Chin clause structure shows typical SOV/verb-final patterns with:
 
 4. **Clause chaining** - Multiple subordinate clauses can chain before
    the main clause, creating complex sentences
+
+---
+
+## Nominalized Clauses vs. Converbs
+
+Tedim Chin has two distinct strategies for combining clauses that should not
+be confused:
+
+### Converbs (VERB-in)
+
+Converbs directly chain clauses, maintaining verbal semantics:
+
+```
+pai-in     ci    hi
+go-CVB     say   DECL
+"Going, he said" (same subject continues)
+```
+
+The converb `-in` marks **same-subject sequential action** and is a true
+clause-chaining device. The subject of the converb clause is necessarily
+the same as the subject of the following main clause.
+
+### Nominalized Locatives (VERB-na-ah)
+
+Nominalizations with locative case are **not clause chaining**:
+
+```
+lutna-ah        a    din
+enter-NMLZ-LOC  3SG  stand
+"At the entrance, he stood"
+```
+
+The nominalized verb `-na` creates a noun, which then takes locative case
+`-ah` like any other noun. This is fundamentally different from converbs:
+
+| Feature | Converb (-in) | Nominalized LOC (-na-ah) |
+|---------|---------------|--------------------------|
+| Category | Verbal | Nominal |
+| Subject tracking | Same-subject required | Independent subjects |
+| Case marking | None (verbal) | Takes case (-ah, -pan, etc.) |
+| Possession | No | Often possessed (X muhna-ah "in X's sight") |
+| Clause type | Adverbial (converb) | Noun phrase (adjunct) |
+
+### Common VERB-na-ah Patterns
+
+| Form | Gloss | Meaning | Count |
+|------|-------|---------|-------|
+| muhna-ah | see.II-NMLZ-LOC | "in X's sight" | 192 |
+| omna-ah | exist-NMLZ-LOC | "at the dwelling place" | 63 |
+| lutna-ah | enter-NMLZ-LOC | "at the entrance" | 15 |
+| tawpna-ah | end-NMLZ-LOC | "at the end" | 44 |
+| genna-ah | speak-NMLZ-LOC | "in the saying" | 16 |
+
+The most common pattern `X muhna-ah` ("in X's sight") is idiomatic:
+
+**Genesis 38:7**
+> Judah' ta masa Er pen **Topa' muhna-ah** hoih lo a
+> "Judah's firstborn Er was wicked **in the LORD's sight**"
+> KJV: "was wicked in the sight of the LORD"
+
+This construction functions as a nominal adjunct, not a clause chain.
