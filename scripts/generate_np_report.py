@@ -16,6 +16,44 @@ from analyze_morphemes import (
     PROPERTY_WORDS, COORDINATOR, RELATOR_NOUNS, CASE_MARKERS
 )
 
+# Book code to name mapping (standard Bible order)
+BOOK_NAMES = {
+    '01': 'Genesis', '02': 'Exodus', '03': 'Leviticus', '04': 'Numbers',
+    '05': 'Deuteronomy', '06': 'Joshua', '07': 'Judges', '08': 'Ruth',
+    '09': '1 Samuel', '10': '2 Samuel', '11': '1 Kings', '12': '2 Kings',
+    '13': '1 Chronicles', '14': '2 Chronicles', '15': 'Ezra', '16': 'Nehemiah',
+    '17': 'Esther', '18': 'Job', '19': 'Psalms', '20': 'Proverbs',
+    '21': 'Ecclesiastes', '22': 'Song of Solomon', '23': 'Isaiah', '24': 'Jeremiah',
+    '25': 'Lamentations', '26': 'Ezekiel', '27': 'Daniel', '28': 'Hosea',
+    '29': 'Joel', '30': 'Amos', '31': 'Obadiah', '32': 'Jonah',
+    '33': 'Micah', '34': 'Nahum', '35': 'Habakkuk', '36': 'Zephaniah',
+    '37': 'Haggai', '38': 'Zechariah', '39': 'Malachi',
+    '40': 'Matthew', '41': 'Mark', '42': 'Luke', '43': 'John',
+    '44': 'Acts', '45': 'Romans', '46': '1 Corinthians', '47': '2 Corinthians',
+    '48': 'Galatians', '49': 'Ephesians', '50': 'Philippians', '51': 'Colossians',
+    '52': '1 Thessalonians', '53': '2 Thessalonians', '54': '1 Timothy', '55': '2 Timothy',
+    '56': 'Titus', '57': 'Philemon', '58': 'Hebrews', '59': 'James',
+    '60': '1 Peter', '61': '2 Peter', '62': '1 John', '63': '2 John',
+    '64': '3 John', '65': 'Jude', '66': 'Revelation',
+}
+
+# Gospel book codes for filtering
+GOSPEL_CODES = {'40', '41', '42', '43'}
+
+
+def format_reference(ref):
+    """Convert 01001001 to Genesis 1:1 format."""
+    book_code = ref[:2]
+    chapter = int(ref[2:5])
+    verse = int(ref[5:8])
+    book_name = BOOK_NAMES.get(book_code, f'Book {book_code}')
+    return f"{book_name} {chapter}:{verse}"
+
+
+def is_gospel(ref):
+    """Check if reference is from a Gospel."""
+    return ref[:2] in GOSPEL_CODES
+
 
 def load_bible_text():
     """Load the Tedim Chin Bible text."""
@@ -65,11 +103,32 @@ def gloss_phrase(phrase):
     }
 
 
-def find_examples(verses, pattern, limit=3):
-    """Find verses containing a pattern and return with context."""
+def find_diverse_examples(verses, pattern, limit=3, require_gospel=True):
+    """
+    Find verses containing a pattern from different books.
+    
+    Args:
+        verses: Dict of ref -> text
+        pattern: Pattern to search for
+        limit: Number of examples to return
+        require_gospel: If True, ensure at least one example is from Gospels
+    
+    Returns:
+        List of example dicts with diverse book sources
+    """
     examples = []
+    seen_books = set()
+    gospel_examples = []
+    other_examples = []
+    
     for ref, text in verses.items():
         if pattern in text:
+            book_code = ref[:2]
+            
+            # Skip if we already have an example from this book
+            if book_code in seen_books:
+                continue
+            
             # Find the pattern in context
             idx = text.find(pattern)
             # Get surrounding context (up to 50 chars each side)
@@ -81,14 +140,40 @@ def find_examples(verses, pattern, limit=3):
             if end < len(text):
                 context = context + '...'
             
-            examples.append({
+            example = {
                 'ref': ref,
+                'formatted_ref': format_reference(ref),
                 'context': context,
                 'full_verse': text,
-            })
+                'book_code': book_code,
+            }
+            
+            seen_books.add(book_code)
+            
+            if is_gospel(ref):
+                gospel_examples.append(example)
+            else:
+                other_examples.append(example)
+    
+    # Build final list: ensure at least one Gospel if available
+    if require_gospel and gospel_examples:
+        examples.append(gospel_examples[0])
+        # Add from other books
+        for ex in other_examples:
             if len(examples) >= limit:
                 break
-    return examples
+            examples.append(ex)
+        # If still need more, add more gospels
+        for ex in gospel_examples[1:]:
+            if len(examples) >= limit:
+                break
+            examples.append(ex)
+    else:
+        # Mix from both
+        all_examples = other_examples + gospel_examples
+        examples = all_examples[:limit]
+    
+    return examples[:limit]
 
 
 def count_pattern(text, pattern):
@@ -165,9 +250,9 @@ def generate_report():
     # Example with full context
     report.append("### Examples")
     report.append("")
-    examples = find_examples(verses, 'hih mite', limit=2)
+    examples = find_diverse_examples(verses, 'hih mite', limit=2, require_gospel=True)
     for ex in examples:
-        report.append(f"**{ex['ref']}**")
+        report.append(f"**{ex['formatted_ref']}**")
         report.append("```")
         glossed = gloss_phrase(ex['context'].replace('...', '').strip())
         report.append(f"Tedim:  {glossed['tedim']}")
@@ -217,9 +302,9 @@ def generate_report():
     # Examples
     report.append("### Examples")
     report.append("")
-    examples = find_examples(verses, 'mi khat', limit=2)
+    examples = find_diverse_examples(verses, 'mi khat', limit=2, require_gospel=True)
     for ex in examples:
-        report.append(f"**{ex['ref']}**")
+        report.append(f"**{ex['formatted_ref']}**")
         report.append("```")
         glossed = gloss_phrase(ex['context'].replace('...', '').strip())
         report.append(f"Tedim:  {glossed['tedim']}")
@@ -407,7 +492,7 @@ def generate_report():
             report.append(f"| {pat} | {struct} | {count}x | '{trans}' |")
     report.append("")
     
-    # Summary section
+    # Summary section with illustrated examples
     report.append("---")
     report.append("")
     report.append("## Summary: NP Structure Template")
@@ -428,6 +513,79 @@ def generate_report():
     report.append("              tua         pa                    khat          = that one man")
     report.append("```")
     report.append("")
+    
+    # Add illustrated examples for each major pattern
+    report.append("---")
+    report.append("")
+    report.append("## Illustrated Examples")
+    report.append("")
+    report.append("The following examples illustrate each major NP pattern type, drawn from")
+    report.append("different books of the Bible (including at least one Gospel example per pattern).")
+    report.append("")
+    
+    # Pattern illustrations to include
+    illustrated_patterns = [
+        ('DEM + N', 'hih mite', 'Demonstrative precedes noun'),
+        ('N + NUM', 'mi khat', 'Numeral follows noun (no classifier)'),
+        ('N + QUANT', 'mi khempeuh', 'Quantifier follows noun'),
+        ('N + PROP', 'mi siangtho', 'Property word follows noun'),
+        ('N le N', 'numei le pasal', 'Coordination with le'),
+        ('POSS + N', "mite' tungah", 'Genitive possessor precedes'),
+    ]
+    
+    for pattern_name, search_pattern, description in illustrated_patterns:
+        report.append(f"### {pattern_name}: {description}")
+        report.append("")
+        
+        # Find diverse examples
+        examples = find_diverse_examples(verses, search_pattern, limit=3, require_gospel=True)
+        
+        if examples:
+            for i, ex in enumerate(examples, 1):
+                report.append(f"**Example {i}: {ex['formatted_ref']}**")
+                report.append("")
+                
+                # Get the full verse
+                full_verse = ex['full_verse']
+                
+                # Find the pattern and get a reasonable context window
+                idx = full_verse.find(search_pattern)
+                # Get word-aligned context
+                words = full_verse.split()
+                pattern_words = search_pattern.split()
+                
+                # Find which word index the pattern starts at
+                for wi, w in enumerate(words):
+                    if search_pattern in ' '.join(words[wi:wi+len(pattern_words)+5]):
+                        # Get context: 3 words before, pattern, 5 words after
+                        start_idx = max(0, wi - 3)
+                        end_idx = min(len(words), wi + len(pattern_words) + 5)
+                        context_words = words[start_idx:end_idx]
+                        break
+                else:
+                    # Fallback to simple context
+                    context_words = full_verse.split()[:12]
+                
+                context = ' '.join(context_words)
+                
+                # Gloss the context
+                glossed = gloss_phrase(context)
+                
+                report.append("```")
+                report.append(f"Tedim: {glossed['tedim']}")
+                report.append(f"Gloss: {glossed['gloss']}")
+                if ex['ref'] in kjv:
+                    kjv_text = kjv[ex['ref']]
+                    # Truncate KJV if too long
+                    if len(kjv_text) > 120:
+                        kjv_text = kjv_text[:120] + '...'
+                    report.append(f"KJV:   {kjv_text}")
+                report.append("```")
+                report.append("")
+        else:
+            report.append(f"*(No examples found for pattern: {search_pattern})*")
+            report.append("")
+    
     report.append("---")
     report.append("")
     report.append("*Generated from Tedim Chin Bible corpus analysis*")

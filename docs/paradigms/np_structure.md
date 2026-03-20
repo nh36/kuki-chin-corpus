@@ -48,18 +48,18 @@ Demonstratives precede the noun (prenominal position).
 
 ### Examples
 
-**01019013**
+**Matthew 6:2**
+```
+Tedim:  ei-in a hih uh bangin na hih kei un Tua bangin a hih mite in thaman a ngah khinta ahihna thu limtakin na ph
+Gloss:  1PL.EXCL-ERG 3SG this 2/3PL like-ERG 2SG this NEG.EMPH IMP.PL that like-ERG 3SG this person-PL ERG reward 3SG get move-NMLZ 3SG-be.NOM-NMLZ word sign-true-ERG 2SG ?
+KJV:    Therefore when thou doest thine alms, do not sound a trumpet before thee, as the hypocrites do in th...
+```
+
+**Genesis 19:13**
 ```
 Tedim:  Bang hang hiam cih leh hih mite a kimawhsakna thu Topa tungah tung khin a a sus
 Gloss:  like reason Q say.NOM and this person-PL 3SG REFL-wrong-CAUS-NMLZ word TOPA on-LOC on IMM 3SG 3SG ?
 KJV:    for we will destroy this place, because the cry of them is waxen great before the face of the LORD ;...
-```
-
-**01043016**
-```
-Tedim:  a gan khat go-in bawl in Bang hang hiam cih leh hih mite in sun ciangin kei tawh an ne ding uh hi,” a ci h
-Gloss:  3SG bear one kill-ERG make ERG like reason Q say.NOM and this person-PL ERG basket then-ERG NEG.EMPH COM 3PL.POSS eat IRR 2/3PL DECL 3SG say ?
-KJV:    And when Joseph saw Benjamin with them, he said to the ruler of his house, Bring these men home, and...
 ```
 
 ---
@@ -100,18 +100,18 @@ Numerals follow the noun directly. There are **no numeral classifiers** in Tedim
 
 ### Examples
 
-**01004001**
+**Matthew 1:19**
+```
+Tedim:  A lawmpa Josef pen a manin a gamta nuam mi khat ahih manin a lawmnu maizumsak nuam lo a kuama th
+Gloss:  3SG worthy-NMLZ.AG JOSEF TOP 3SG reason-ERG 3SG send.away want person one be.3SG.REL reason-ERG 3SG friend-female bow.face-CAUS want NEG 3SG charge ?
+KJV:    Then Joseph her husband, being a just man , and not willing to make her a publick example, was minde...
+```
+
+**Genesis 4:1**
 ```
 Tedim:  pih a amah gai-in Kain nei a “ Topa huhna tawh mi khat ka ngah khin hi,” ci hi
 Gloss:  APPL 3SG 3SG.PRO conceive-ERG KAIN have 3SG  TOPA blow-NMLZ COM person one 1SG get IMM DECL say DECL
 KJV:    And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the...
-```
-
-**01004023**
-```
-Tedim:  ite aw ka thugen ngai un Kei hong liamsak manin mi khat kei hong sat manin khanglai mi khat ka that khin
-Gloss:  ?-PL voice 1SG speech listen.I IMP.PL NEG.EMPH 3→1 wound-CAUS reason-ERG person one NEG.EMPH 3→1 strike reason-ERG generation-middle person one 1SG kill IMM
-KJV:    And Lamech said unto his wives, Adah and Zillah, Hear my voice; Ye wives of Lamech, hearken unto my ...
 ```
 
 ---
@@ -259,6 +259,169 @@ Examples filling different slots:
               hih         mi-te          khempeuh      in     = all these people (ERG)
 mite'                     tung                          -ah   = on the people
               tua         pa                    khat          = that one man
+```
+
+---
+
+## Illustrated Examples
+
+The following examples illustrate each major NP pattern type, drawn from
+different books of the Bible (including at least one Gospel example per pattern).
+
+### DEM + N: Demonstrative precedes noun
+
+**Example 1: Matthew 6:2**
+
+```
+Tedim: bangin na hih kei un Tua bangin a hih mite
+Gloss: like-ERG 2SG this NEG.EMPH IMP.PL that like-ERG 3SG this person-PL
+KJV:   Therefore when thou doest thine alms, do not sound a trumpet before thee, as the hypocrites do in the synagogues and in ...
+```
+
+**Example 2: Genesis 19:13**
+
+```
+Tedim: Bang hang hiam cih leh hih mite
+Gloss: like reason Q say.NOM and this person-PL
+KJV:   for we will destroy this place, because the cry of them is waxen great before the face of the LORD ; and the LORD hath s...
+```
+
+**Example 3: Exodus 5:5**
+
+```
+Tedim: Tua ciangin Faro in “En un tu-in hih mite
+Gloss: that then-ERG FARO ERG look IMP.PL now-ERG this person-PL
+KJV:   And Pharaoh said, Behold, the people of the land now are many, and ye make them rest from their burdens.
+```
+
+### N + NUM: Numeral follows noun (no classifier)
+
+**Example 1: Matthew 1:19**
+
+```
+Tedim: lawmpa Josef pen a manin a gamta nuam mi khat
+Gloss: worthy-NMLZ.AG JOSEF TOP 3SG reason-ERG 3SG send.away want person one
+KJV:   Then Joseph her husband, being a just man , and not willing to make her a publick example, was minded to put her away pr...
+```
+
+**Example 2: Genesis 4:1**
+
+```
+Tedim: gai-in Kain nei a “ Topa huhna tawh mi khat
+Gloss: conceive-ERG KAIN have 3SG  TOPA blow-NMLZ COM person one
+KJV:   And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD .
+```
+
+**Example 3: Exodus 2:11**
+
+```
+Tedim: kiangah pai-in amau gimnate va mu hi Egypt mi khat
+Gloss: beside-LOC go-ERG 3PL.PRO toil-NMLZ-PL go.and see.I DECL EGYPT person one
+KJV:   And it came to pass in those days, when Moses was grown, that he went out unto his brethren, and looked on their burdens...
+```
+
+### N + QUANT: Quantifier follows noun
+
+**Example 1: Matthew 2:3**
+
+```
+Tedim: thu a zak ciangin lamdangsa mahmah a Jerusalem khuami khempeuh
+Gloss: word 3SG hear.II then-ERG different-INTNS very 3SG JERUSALEM town-person all
+KJV:   When Herod the king had heard these things , he was troubled, and all Jerusalem with him.
+```
+
+**Example 2: Genesis 6:12**
+
+```
+Tedim: mu hi Bang hang hiam cih leh leitungah mi khempeuh
+Gloss: see.I DECL like reason Q say.NOM and earth-LOC person all
+KJV:   And God looked upon the earth, and, behold, it was corrupt; for all flesh had corrupted his way upon the earth.
+```
+
+**Example 3: Exodus 1:6**
+
+```
+Tedim: Tua ciangin Josef le a sanggamte le tua khangmi khempeuh
+Gloss: that then-ERG JOSEF and 3SG brother-PL and that generation-NMLZ.AG all
+KJV:   And Joseph died, and all his brethren, and all that generation.
+```
+
+### N + PROP: Property word follows noun
+
+**Example 1: Mark 1:24**
+
+```
+Tedim: hih lai-ah hong om na hi hiam Pasian mi siangtho
+Gloss: this midst-LOC 3→1 exist 2SG DECL Q PASIAN person holy
+KJV:   saying, Let us alone; what have we to do with thee, thou Jesus of Nazareth? art thou come to destroy us? I know thee who...
+```
+
+**Example 2: Deuteronomy 33:2**
+
+```
+Tedim: hong taangkhia a a taklam khutah meikuang tawi-in mi siangtho
+Gloss: 3→1 beautiful-EXIT 3SG 3SG right hand-LOC flaming carry-ERG person holy
+KJV:   And he said, The LORD came from Sinai, And rose up from Seir unto them; He shined forth from mount Paran, And he came wi...
+```
+
+**Example 3: 2 Kings 4:9**
+
+```
+Tedim: hih lai mun hong nawk tawntungpa pen Pasian mi siangtho
+Gloss: this midst place 3→1 again eternity-NMLZ.AG TOP PASIAN person holy
+KJV:   And she said unto her husband, Behold now, I perceive that this is an holy man of God, which passeth by us continually.
+```
+
+### N le N: Coordination with le
+
+**Example 1: Matthew 19:4**
+
+```
+Tedim: sungah 'A kipat cil-in a Piangsak pa in numei le pasal
+Gloss: inside-LOC 3SG beginning begin-ERG 3SG cause.birth father ERG woman and husband
+KJV:   And he answered and said unto them, Have ye not read, that he which made them at the beginning made them male and female...
+```
+
+**Example 2: Genesis 5:2**
+
+```
+Tedim: Amah in numei le pasal a piangsak hi
+Gloss: 3SG.PRO ERG woman and husband 3SG cause.birth DECL
+KJV:   male and female created he them; and blessed them, and called their name Adam, in the day when they were created.
+```
+
+**Example 3: Numbers 5:3**
+
+```
+Tedim: a nitsak loh nadingun hih bangin a nin numei le pasal
+Gloss: 3SG defile NEG-NOM 2SG-IRR-IMP this like-ERG 3SG day woman and husband
+KJV:   both male and female shall ye put out, without the camp shall ye put them; that they defile not their camps, in the mids...
+```
+
+### POSS + N: Genitive possessor precedes
+
+**Example 1: Genesis 19:8**
+
+```
+Tedim: na ut bangun amaute tungah gamta un Hih mite tungah
+Gloss: 2SG will what-PL 3PL.PRO on-LOC send.away IMP.PL this person-PL on-LOC
+KJV:   Behold now, I have two daughters which have not known man; let me, I pray you, bring them out unto you, and do ye to the...
+```
+
+**Example 2: Exodus 6:6**
+
+```
+Tedim: Tua ahih ciangin Israel mite tungah 'Kei
+Gloss: that be.3SG.REL then-ERG ISRAEL person-PL on-LOC NEG.EMPH
+KJV:   Wherefore say unto the children of Israel, I am the LORD , and I will bring you out from under the burdens of the Egypti...
+```
+
+**Example 3: Numbers 8:20**
+
+```
+Tedim: le Aaron le Israel mihonpite khempeuh in Levi mite tungah
+Gloss: and AARON and ISRAEL noble-PL all ERG LEVI person-PL on-LOC
+KJV:   And Moses, and Aaron, and all the congregation of the children of Israel, did to the Levites according unto all that the...
 ```
 
 ---
