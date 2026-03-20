@@ -158,5 +158,27 @@ class TestLegacyCompatibility(unittest.TestCase):
         self.assertGreater(len(VERBAL_DERIVATIONAL_SUFFIXES), 5)
 
 
+class TestVerbStemCounting(unittest.TestCase):
+    """Test verb stem counting logic for report generation."""
+    
+    def test_longer_stem_matched_before_shorter(self):
+        """Compound stems like 'nungta' should match before their components like 'nung'."""
+        from generate_verb_stems_report import count_verb_occurrences
+        
+        # Test data: sentences containing compound stems
+        test_verses = {
+            '01001001': 'nungta nung nungta',  # 2x nungta, 1x nung
+            '01001002': 'piangsak piang piangsak'  # 2x piangsak, 1x piang
+        }
+        
+        counts, _ = count_verb_occurrences(test_verses)
+        
+        # nungta should be counted independently from nung
+        self.assertEqual(counts.get('nungta', 0), 2, "nungta should count 2x")
+        self.assertEqual(counts.get('nung', 0), 1, "nung should count 1x (not 3)")
+        self.assertEqual(counts.get('piangsak', 0), 2, "piangsak should count 2x")
+        self.assertEqual(counts.get('piang', 0), 1, "piang should count 1x (not 3)")
+
+
 if __name__ == '__main__':
     unittest.main()

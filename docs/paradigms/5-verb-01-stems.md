@@ -1,7 +1,7 @@
 # Tedim Chin Verb Stems
 
 This report documents verb stems in Tedim Chin, organized by semantic domain.
-Total verb stems in lexicon: **690**
+Total verb stems in lexicon: **690** (682 attested in corpus, 8 from grammar reference)
 
 ## Overview
 
@@ -20,6 +20,11 @@ Tedim Chin verbs are characterized by:
 
 4. **Derivational morphology**
    - ki- (reflexive/middle), -sak (causative), -pih (applicative)
+
+**Note:** Stems marked "0x" are included in the lexicon from Henderson (1965) 
+or other grammatical references but do not occur as standalone forms in this 
+Bible corpus. They may occur only as bound elements in compounds or not appear
+in this text genre.
 
 ---
 
@@ -46,110 +51,110 @@ Many verbs have two stems that alternate based on clause type:
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
-| hi | be | 61103x | Genesis 1:1 |
-| ahi | be.3SG | 15201x | Genesis 1:2 |
-| om | exist | 6891x | Genesis 1:3 |
+| hi | be | 59969x | Genesis 1:1 |
+| ahi | be.3SG | 8756x | Genesis 1:2 |
+| om | exist | 6889x | Genesis 1:3 |
+| ahih | be.3SG.REL | 6445x | Genesis 1:21 |
 | hoih | be.good | 1328x | Genesis 1:4 |
-| nung | live | 1259x | Genesis 1:20 |
 | suak | become | 1182x | Genesis 2:7 |
 | teng | dwell | 1077x | Genesis 1:2 |
+| nung | live | 859x | Genesis 9:23 |
 | nuntak | live | 718x | Genesis 1:21 |
 | sih | die | 683x | Genesis 9:5 |
-| piang | be.born | 642x | Genesis 1:1 |
-| dam | be.well | 368x | Genesis 14:15 |
-| ahih | be.3SG.REL | 0x | — |
-| nungta | live | 0x | — |
+| piang | be.born | 385x | Genesis 1:7 |
+| nungta | live | 385x | Genesis 1:20 |
+| dam | be.well | 233x | Genesis 14:15 |
 
 ### Motion
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
 | hong | come | 15480x | Genesis 1:5 |
-| tung | arrive | 8434x | Genesis 1:2 |
-| pai | go | 6016x | Genesis 2:19 |
-| va | go.and | 4025x | Genesis 1:1 |
-| khia | exit | 1112x | Genesis 6:6 |
-| zui | follow | 1000x | Genesis 12:4 |
-| leen | fly | 873x | Genesis 1:20 |
-| ciah | return | 633x | Genesis 3:19 |
+| tung | arrive | 8221x | Genesis 1:2 |
+| pai | go | 4714x | Genesis 3:8 |
+| va | go.and | 3699x | Genesis 1:1 |
+| leen | fly | 870x | Genesis 1:20 |
+| zui | follow | 720x | Genesis 12:4 |
 | lut | enter | 544x | Genesis 3:15 |
+| ciah | return | 352x | Genesis 14:11 |
+| ciahkik | return.again | 281x | Genesis 3:19 |
+| vak | walk | 246x | Genesis 1:15 |
+| khia | exit | 205x | Genesis 12:5 |
 | let | return | 168x | Genesis 24:10 |
 | zuan | cross | 91x | Genesis 15:15 |
 | puakkik | return | 11x | Numbers 13:26 |
 | ciahpai | go.home | 0x | — |
 | liahpai | return | 0x | — |
-| ciahkik | return.again | 0x | — |
-| vak | walk | 0x | — |
 
 ### Perception
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
-| mu | see.I | 5142x | Genesis 1:4 |
-| za | hear.I | 4526x | Genesis 1:14 |
-| ngai | listen.I | 1526x | Genesis 4:23 |
-| en | look | 676x | Genesis 1:31 |
-| muh | see.II | 0x | — |
-| zak | hear.II | 0x | — |
-| ngaih | love | 0x | — |
+| mu | see.I | 2425x | Genesis 1:4 |
+| za | hear.I | 2016x | Genesis 1:14 |
+| muh | see.II | 888x | Genesis 3:6 |
+| en | look | 674x | Genesis 1:31 |
+| zak | hear.II | 634x | Genesis 5:5 |
+| ngai | listen.I | 477x | Genesis 4:23 |
+| ngaih | love | 121x | Genesis 42:21 |
 
 ### Cognition
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
-| thei | know.I | 4689x | Genesis 1:21 |
-| lung | feel | 3116x | Genesis 6:5 |
+| thei | know.I | 2959x | Genesis 1:21 |
+| lung | feel | 2079x | Genesis 6:5 |
+| theih | know.II | 1728x | Genesis 2:9 |
 | nuam | want | 750x | Genesis 4:7 |
 | deih | want | 699x | Genesis 2:9 |
 | um | believe | 638x | Genesis 19:4 |
+| ngaihsun | think | 462x | Genesis 20:10 |
+| ngaihsut | think | 444x | Genesis 6:5 |
+| muan | trust | 289x | Genesis 15:6 |
 | duh | want | 51x | Genesis 27:4 |
-| theih | know.II | 0x | — |
-| ngaihsun | think | 0x | — |
-| ngaihsut | think | 0x | — |
-| muan | trust | 0x | — |
 
 ### Speech
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
-| ci | say | 24202x | Genesis 1:1 |
+| ci | say | 9556x | Genesis 1:1 |
 | gen | speak | 3637x | Genesis 3:11 |
-| sam | call | 994x | Genesis 3:9 |
+| cih | say.NOM | 3483x | Genesis 2:3 |
+| sam | call | 908x | Genesis 3:9 |
 | thugen | preach | 753x | Genesis 4:23 |
 | pau | speak | 728x | Genesis 6:9 |
-| kiko | cry.out | 411x | Genesis 4:10 |
+| hilh | teach | 644x | Genesis 18:19 |
+| kiko | cry.out | 307x | Genesis 4:10 |
 | dei | say | 30x | Genesis 6:14 |
-| cih | say.NOM | 0x | — |
-| hilh | teach | 0x | — |
-| sampah | proclaim | 0x | — |
+| sampah | proclaim | 1x | Mark 1:20 |
 
 ### Transfer and Possession
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
-| pia | give | 3962x | Genesis 1:22 |
-| nei | have | 2845x | Genesis 1:2 |
-| lak | take | 1743x | Genesis 1:30 |
+| pia | give | 2487x | Genesis 1:22 |
+| nei | have | 2072x | Genesis 1:2 |
+| lak | take | 1691x | Genesis 1:30 |
+| piak | give.to | 1137x | Genesis 3:12 |
 | ngah | get | 1132x | Genesis 3:14 |
-| sawl | send | 921x | Genesis 3:23 |
+| sawl | send | 878x | Genesis 19:13 |
 | koih | put | 789x | Genesis 1:16 |
-| piak | give.to | 0x | — |
-| neih | have.II | 0x | — |
+| neih | have.II | 773x | Genesis 6:4 |
 
 ### Creation and Making
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
 | bawl | make | 2374x | Genesis 1:7 |
+| piangsak | cause.birth | 257x | Genesis 1:1 |
 | limbawl | prepare | 35x | Genesis 12:16 |
-| piangsak | cause.birth | 0x | — |
 
 ### Destruction
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
-| sat | strike | 801x | Genesis 2:21 |
-| that | kill | 672x | Genesis 4:8 |
+| sat | strike | 798x | Genesis 2:21 |
+| that | kill | 644x | Genesis 4:8 |
 | tat | strike | 459x | Genesis 10:21 |
 
 ### Physical Actions
@@ -157,15 +162,15 @@ Many verbs have two stems that alternate based on clause type:
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
 | ding | stand | 24512x | Genesis 1:14 |
-| to | sit | 8363x | Genesis 2:4 |
-| ne | eat | 1788x | Genesis 1:16 |
+| to | sit | 8240x | Genesis 2:4 |
+| ne | eat | 1418x | Genesis 1:16 |
+| nek | eat.II | 364x | Genesis 2:9 |
 | kap | weep | 282x | Genesis 21:16 |
 | gelh | write | 233x | Genesis 38:18 |
 | lup | bow.down | 192x | Genesis 4:1 |
 | tut | sleep | 124x | Genesis 20:9 |
+| ton | pull | 62x | Genesis 16:4 |
 | phum | immerse | 37x | Deuteronomy 21:23 |
-| nek | eat.II | 0x | — |
-| ton | pull | 0x | — |
 
 ### Social Actions
 
@@ -174,19 +179,19 @@ Many verbs have two stems that alternate based on clause type:
 | uk | rule | 1394x | Genesis 1:16 |
 | sem | serve | 964x | Genesis 1:2 |
 | it | love | 760x | Genesis 22:2 |
-| sep | work | 479x | Genesis 3:19 |
+| sep | work | 441x | Genesis 3:19 |
 | hehpih | be.angry | 411x | Genesis 18:3 |
+| zahtak | honor | 305x | Genesis 9:2 |
 | zol | redeem | 59x | Genesis 39:10 |
-| zahtak | honor | 0x | — |
 
 ### Emotion
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
+| lungdam | rejoice | 915x | Genesis 30:13 |
+| zah | fear | 418x | Genesis 4:15 |
 | huai | dread | 50x | 1 Kings 19:10 |
-| lungdam | rejoice | 0x | — |
-| zah | fear | 0x | — |
-| hite | hate | 0x | — |
+| hite | hate | 3x | Psalms 35:19 |
 
 ### Reflexive/Middle (ki-)
 
@@ -209,15 +214,15 @@ Many verbs have two stems that alternate based on clause type:
 
 | Stem | Gloss | Attestations | First Citation |
 |------|-------|--------------|----------------|
+| paipih | accompany | 730x | Genesis 2:19 |
 | sak | cause | 700x | Genesis 2:21 |
 | honkhia | bring.out | 389x | Genesis 37:21 |
+| paikhiat | send.away | 372x | Genesis 8:17 |
+| tungsak | lift.up | 213x | Genesis 6:17 |
+| paisak | send | 185x | Genesis 24:56 |
+| damsak | heal | 135x | Genesis 20:17 |
+| hisak | make.known | 26x | Genesis 9:26 |
 | siansak | sanctify | 14x | Leviticus 16:30 |
-| paisak | send | 0x | — |
-| damsak | heal | 0x | — |
-| paipih | accompany | 0x | — |
-| tungsak | lift.up | 0x | — |
-| paikhiat | send.away | 0x | — |
-| hisak | make.known | 0x | — |
 
 ---
 
@@ -225,56 +230,56 @@ Many verbs have two stems that alternate based on clause type:
 
 | Rank | Stem | Gloss | Count | First Citation |
 |------|------|-------|-------|----------------|
-| 1 | hi | be | 61103x | Genesis 1:1 |
-| 2 | u | elder.sibling | 28816x | Genesis 1:15 |
+| 1 | hi | be | 59969x | Genesis 1:1 |
+| 2 | u | elder.sibling | 28511x | Genesis 1:15 |
 | 3 | ding | stand | 24512x | Genesis 1:14 |
-| 4 | ci | say | 24202x | Genesis 1:1 |
-| 5 | am | sink | 19173x | Genesis 1:11 |
-| 6 | hong | come | 15480x | Genesis 1:5 |
-| 7 | ahi | be.3SG | 15201x | Genesis 1:2 |
-| 8 | ba | owe | 11361x | Genesis 1:7 |
-| 9 | tung | arrive | 8434x | Genesis 1:2 |
-| 10 | to | sit | 8363x | Genesis 2:4 |
-| 11 | om | exist | 6891x | Genesis 1:3 |
-| 12 | pai | go | 6016x | Genesis 2:19 |
-| 13 | khem | restrain | 5948x | Genesis 1:21 |
-| 14 | pan | plead | 5521x | Genesis 1:4 |
-| 15 | kia | fall | 5148x | Genesis 2:19 |
-| 16 | mu | see.I | 5142x | Genesis 1:4 |
-| 17 | thei | know.I | 4689x | Genesis 1:21 |
-| 18 | za | hear.I | 4526x | Genesis 1:14 |
-| 19 | va | go.and | 4025x | Genesis 1:1 |
-| 20 | pia | give | 3962x | Genesis 1:22 |
-| 21 | gen | speak | 3637x | Genesis 3:11 |
-| 22 | bia | worship | 3530x | Genesis 4:26 |
-| 23 | lung | feel | 3116x | Genesis 6:5 |
-| 24 | nei | have | 2845x | Genesis 1:2 |
+| 4 | am | sink | 19173x | Genesis 1:11 |
+| 5 | hong | come | 15480x | Genesis 1:5 |
+| 6 | ba | owe | 11347x | Genesis 1:7 |
+| 7 | cian | announce | 10696x | Genesis 1:3 |
+| 8 | ci | say | 9556x | Genesis 1:1 |
+| 9 | ahi | be.3SG | 8756x | Genesis 1:2 |
+| 10 | to | sit | 8240x | Genesis 2:4 |
+| 11 | tung | arrive | 8221x | Genesis 1:2 |
+| 12 | om | exist | 6889x | Genesis 1:3 |
+| 13 | ahih | be.3SG.REL | 6445x | Genesis 1:21 |
+| 14 | khem | restrain | 5948x | Genesis 1:21 |
+| 15 | pan | plead | 5521x | Genesis 1:4 |
+| 16 | kia | fall | 5148x | Genesis 2:19 |
+| 17 | pai | go | 4714x | Genesis 3:8 |
+| 18 | va | go.and | 3699x | Genesis 1:1 |
+| 19 | gen | speak | 3637x | Genesis 3:11 |
+| 20 | cih | say.NOM | 3483x | Genesis 2:3 |
+| 21 | biak | worship | 3236x | Genesis 8:20 |
+| 22 | thei | know.I | 2959x | Genesis 1:21 |
+| 23 | pia | give | 2487x | Genesis 1:22 |
+| 24 | mu | see.I | 2425x | Genesis 1:4 |
 | 25 | bawl | make | 2374x | Genesis 1:7 |
-| 26 | pua | carry.on.back | 1870x | Genesis 3:7 |
-| 27 | ne | eat | 1788x | Genesis 1:16 |
-| 28 | lak | take | 1743x | Genesis 1:30 |
-| 29 | suan | plant | 1529x | Genesis 2:12 |
-| 30 | ngai | listen.I | 1526x | Genesis 4:23 |
-| 31 | khin | move | 1419x | Genesis 1:29 |
-| 32 | uk | rule | 1394x | Genesis 1:16 |
-| 33 | hoih | be.good | 1328x | Genesis 1:4 |
-| 34 | siam | be.skilled | 1324x | Genesis 14:18 |
-| 35 | nung | live | 1259x | Genesis 1:20 |
-| 36 | mawh | guilty | 1254x | Genesis 4:7 |
-| 37 | suak | become | 1182x | Genesis 2:7 |
-| 38 | ngah | get | 1132x | Genesis 3:14 |
-| 39 | khia | exit | 1112x | Genesis 6:6 |
-| 40 | teng | dwell | 1077x | Genesis 1:2 |
-| 41 | nga | endure | 1044x | Genesis 1:23 |
-| 42 | zui | follow | 1000x | Genesis 12:4 |
-| 43 | sam | call | 994x | Genesis 3:9 |
+| 26 | lung | feel | 2079x | Genesis 6:5 |
+| 27 | nei | have | 2072x | Genesis 1:2 |
+| 28 | za | hear.I | 2016x | Genesis 1:14 |
+| 29 | theih | know.II | 1728x | Genesis 2:9 |
+| 30 | lak | take | 1691x | Genesis 1:30 |
+| 31 | suan | plant | 1529x | Genesis 2:12 |
+| 32 | pua | carry.on.back | 1523x | Genesis 3:7 |
+| 33 | mun | rare | 1444x | Genesis 1:9 |
+| 34 | khin | move | 1419x | Genesis 1:29 |
+| 35 | ne | eat | 1418x | Genesis 1:16 |
+| 36 | uk | rule | 1394x | Genesis 1:16 |
+| 37 | hoih | be.good | 1328x | Genesis 1:4 |
+| 38 | siam | be.skilled | 1324x | Genesis 14:18 |
+| 39 | mawh | guilty | 1254x | Genesis 4:7 |
+| 40 | suak | become | 1182x | Genesis 2:7 |
+| 41 | piak | give.to | 1137x | Genesis 3:12 |
+| 42 | ngah | get | 1132x | Genesis 3:14 |
+| 43 | teng | dwell | 1077x | Genesis 1:2 |
 | 44 | gamtat | kingdom | 972x | Genesis 3:13 |
 | 45 | sem | serve | 964x | Genesis 1:2 |
-| 46 | sawl | send | 921x | Genesis 3:23 |
-| 47 | leen | fly | 873x | Genesis 1:20 |
-| 48 | thuak | suffer | 871x | Genesis 4:13 |
-| 49 | sat | strike | 801x | Genesis 2:21 |
-| 50 | koih | put | 789x | Genesis 1:16 |
+| 46 | lungdam | rejoice | 915x | Genesis 30:13 |
+| 47 | sam | call | 908x | Genesis 3:9 |
+| 48 | muh | see.II | 888x | Genesis 3:6 |
+| 49 | sawl | send | 878x | Genesis 19:13 |
+| 50 | thuak | suffer | 871x | Genesis 4:13 |
 
 ---
 
@@ -282,28 +287,28 @@ Many verbs have two stems that alternate based on clause type:
 
 | Stem | Gloss | Domain | Attestations |
 |------|-------|--------|--------------|
-| ahi | be.3SG | existence | 15201x |
-| ahih | be.3SG.REL | existence | 0x |
+| ahi | be.3SG | existence | 8756x |
+| ahih | be.3SG.REL | existence | 6445x |
 | aisanna | familiar.spirit | other | 33x |
 | am | sink | other | 19173x |
 | ansite | chaff | other | 2x |
 | ap | press | other | 180x |
 | at | cut | other | 124x |
-| awk | snare | other | 62x |
-| awklawh | snare | other | 0x |
-| ba | owe | other | 11361x |
-| bahgawp | fled | other | 0x |
-| balgawp | die.naturally | other | 0x |
+| awk | snare | other | 60x |
+| awklawh | snare | other | 2x |
+| ba | owe | other | 11347x |
+| bahgawp | fled | other | 2x |
+| balgawp | die.naturally | other | 10x |
 | bangcih | how.say | other | 15x |
-| bangsakin | bring.again | other | 0x |
+| bangsakin | bring.again | other | 2x |
 | bat | bind | other | 43x |
 | bawl | make | creation | 2374x |
 | beellekuang | dish | other | 3x |
 | beemlepang | provision | other | 2x |
 | behlap | burden | other | 48x |
 | bei | finish | other | 526x |
-| bia | worship | other | 3530x |
-| biak | worship | other | 0x |
+| bia | worship | other | 294x |
+| biak | worship | other | 3236x |
 | bok | fall | other | 53x |
 | boksuk | fall | other | 17x |
 | bua | pour | other | 93x |
@@ -311,26 +316,26 @@ Many verbs have two stems that alternate based on clause type:
 | buak | fight | other | 25x |
 | buang | be.confused | other | 26x |
 | bunzo | pierce | other | 2x |
-| ci | say | speech | 24202x |
-| ciah | return | motion | 633x |
-| ciahkik | return.again | motion | 0x |
+| ci | say | speech | 9556x |
+| ciah | return | motion | 352x |
+| ciahkik | return.again | motion | 281x |
 | ciahpai | go.home | motion | 0x |
-| ciam | promise | other | 0x |
-| cian | announce | other | 0x |
-| ciapteh | receive | other | 0x |
-| cih | say.NOM | speech | 0x |
-| ciil | refined | other | 0x |
-| ciingin | fit | other | 0x |
-| cim | pierce | other | 0x |
-| cimawh | oppress | other | 0x |
-| cinasak | make.sick | causative | 0x |
-| dam | be.well | existence | 368x |
-| damsak | heal | causative | 0x |
-| dawn | top | other | 546x |
+| ciam | promise | other | 294x |
+| cian | announce | other | 10696x |
+| ciapteh | receive | other | 42x |
+| cih | say.NOM | speech | 3483x |
+| ciil | refined | other | 2x |
+| ciingin | fit | other | 2x |
+| cim | pierce | other | 32x |
+| cimawh | oppress | other | 92x |
+| cinasak | make.sick | causative | 3x |
+| dam | be.well | existence | 233x |
+| damsak | heal | causative | 135x |
+| dawn | top | other | 515x |
 | dawng | receive | other | 554x |
-| dawnkim | drink.all | other | 0x |
-| dawntheih | able.to.drink | other | 0x |
-| dawntuah | meet | other | 0x |
+| dawnkim | drink.all | other | 1x |
+| dawntheih | able.to.drink | other | 2x |
+| dawntuah | meet | other | 28x |
 | dei | say | speech | 30x |
 | deih | want | cognition | 699x |
 | dek | low | other | 74x |
@@ -343,8 +348,8 @@ Many verbs have two stems that alternate based on clause type:
 | din | stand | other | 60x |
 | ding | stand | physical | 24512x |
 | dinkhiat | stand.up | other | 11x |
-| dipkua | haste | other | 14x |
-| dipkuasak | sprinkle | causative | 0x |
+| dipkua | haste | other | 12x |
+| dipkuasak | sprinkle | causative | 2x |
 | dok | draw | other | 23x |
 | dokkik | oppose | other | 10x |
 | dongsim | ask.secretly | other | 2x |
@@ -354,8 +359,8 @@ Many verbs have two stems that alternate based on clause type:
 | dua | quiet | other | 4x |
 | duh | want | cognition | 51x |
 | em | bake | other | 32x |
-| en | look | perception | 676x |
-| engkha | envy | other | 0x |
+| en | look | perception | 674x |
+| engkha | envy | other | 2x |
 | gaih | grieve | other | 9x |
 | galtai | be.captive | other | 19x |
 | gammong | end | other | 3x |
@@ -390,8 +395,8 @@ Many verbs have two stems that alternate based on clause type:
 | hauhpak | vanity | other | 2x |
 | hawkkhiat | strip | other | 11x |
 | hawktui | troubled | other | 2x |
-| hawl | seek | other | 211x |
-| hawlkhia | drive.out | other | 0x |
+| hawl | seek | other | 32x |
+| hawlkhia | drive.out | other | 179x |
 | hawm | join | other | 145x |
 | hazat | jealous | other | 24x |
 | hehmai | boldness | other | 2x |
@@ -401,13 +406,13 @@ Many verbs have two stems that alternate based on clause type:
 | hen | tie | other | 730x |
 | hetloin | fear | other | 56x |
 | heuhau | amber | other | 2x |
-| hi | be | existence | 61103x |
-| hialhial | twins | other | 0x |
-| hihlohlam | in.vain | other | 0x |
-| hilh | teach | speech | 0x |
-| hin | life | other | 0x |
-| hisak | make.known | causative | 0x |
-| hite | hate | emotion | 0x |
+| hi | be | existence | 59969x |
+| hialhial | twins | other | 2x |
+| hihlohlam | in.vain | other | 2x |
+| hilh | teach | speech | 644x |
+| hin | life | other | 457x |
+| hisak | make.known | causative | 26x |
+| hite | hate | emotion | 3x |
 | hoi | arrange | other | 24x |
 | hoih | be.good | existence | 1328x |
 | hon | flock | other | 370x |
@@ -415,16 +420,16 @@ Many verbs have two stems that alternate based on clause type:
 | honkhia | bring.out | causative | 389x |
 | hop | snare | other | 216x |
 | hotkhiat | save | other | 184x |
-| hua | garden | other | 214x |
+| hua | garden | other | 40x |
 | huai | dread | emotion | 50x |
-| hual | roll | other | 0x |
+| hual | roll | other | 7x |
 | huam | possession | other | 36x |
-| huan | garden | other | 0x |
-| huang | village | other | 0x |
+| huan | garden | other | 115x |
+| huang | village | other | 52x |
 | huging | hear | other | 10x |
-| huh | help | other | 484x |
+| huh | help | other | 458x |
 | huhau | surround | other | 12x |
-| huhpa | helper | other | 0x |
+| huhpa | helper | other | 26x |
 | huihkua | treasury | other | 2x |
 | hum | cover | other | 165x |
 | husia | tempest | other | 10x |
@@ -449,19 +454,19 @@ Many verbs have two stems that alternate based on clause type:
 | kep | clutch | other | 51x |
 | keutumin | mourn | other | 2x |
 | khaging | noise | other | 2x |
-| khahkhia | deliver | other | 57x |
-| khahkhiatsa | let.go.free | other | 0x |
+| khahkhia | deliver | other | 55x |
+| khahkhiatsa | let.go.free | other | 2x |
 | khaktan | restrain | other | 40x |
 | khakun | be.cast.down | other | 4x |
-| kham | forbid | other | 680x |
-| khamsak | preserve | causative | 0x |
+| kham | forbid | other | 665x |
+| khamsak | preserve | causative | 15x |
 | khangsak | raise.up | causative | 43x |
 | khansihsak | take.away | causative | 2x |
 | khansuah | bring.forth | other | 3x |
 | khapsa | promise | other | 2x |
 | khataang | dim | other | 4x |
-| khawh | till | other | 61x |
-| khawhletzo | barbed | other | 0x |
+| khawh | till | other | 59x |
+| khawhletzo | barbed | other | 2x |
 | khawm | gather | other | 321x |
 | khazap | touch | other | 3x |
 | khecin | sharp | other | 18x |
@@ -472,18 +477,18 @@ Many verbs have two stems that alternate based on clause type:
 | khepek | legs | other | 4x |
 | kheuh | branch | other | 2x |
 | khezaw | lame | other | 8x |
-| khia | exit | motion | 1112x |
-| khial | err | other | 0x |
-| khialh | err | other | 0x |
-| khiat | depart | other | 0x |
+| khia | exit | motion | 205x |
+| khial | err | other | 255x |
+| khialh | err | other | 497x |
+| khiat | depart | other | 155x |
 | khin | move | other | 1419x |
 | khinsa | mock | other | 33x |
 | khip | veil | other | 4x |
 | khitsa | leave | other | 15x |
-| kho | labor | other | 221x |
-| khol | denounce | other | 0x |
-| kholh | accompany | other | 0x |
-| khoppih | lie.with | other | 0x |
+| kho | labor | other | 151x |
+| khol | denounce | other | 50x |
+| kholh | accompany | other | 18x |
+| khoppih | lie.with | other | 2x |
 | khuaipi | bees | other | 2x |
 | khual | sojourn | other | 173x |
 | khuh | cover | other | 72x |
@@ -498,8 +503,8 @@ Many verbs have two stems that alternate based on clause type:
 | kibawl | be.done | reflexive | 396x |
 | kibuluh | spoil | reflexive | 2x |
 | kicip | breach | reflexive | 3x |
-| kido | fight | reflexive | 129x |
-| kidon | beaten | reflexive | 0x |
+| kido | fight | reflexive | 90x |
+| kidon | beaten | reflexive | 39x |
 | kiget | eunuch | reflexive | 3x |
 | kihtak | dread | reflexive | 119x |
 | kiim | border | reflexive | 174x |
@@ -508,8 +513,8 @@ Many verbs have two stems that alternate based on clause type:
 | kikhel | differ | reflexive | 12x |
 | kikhen | separate | reflexive | 112x |
 | kikhia | depart | reflexive | 21x |
-| kiko | cry.out | speech | 411x |
-| kikoih | restore | reflexive | 0x |
+| kiko | cry.out | speech | 307x |
+| kikoih | restore | reflexive | 104x |
 | kilei | buy | reflexive | 14x |
 | kilem | prepare | reflexive | 176x |
 | kimap | live | reflexive | 2x |
@@ -549,19 +554,19 @@ Many verbs have two stems that alternate based on clause type:
 | kut | press | other | 6x |
 | laih | replace | other | 15x |
 | laitui | ink | other | 2x |
-| lak | take | transfer | 1743x |
-| lakkhiat | snatch | other | 0x |
+| lak | take | transfer | 1691x |
+| lakkhiat | snatch | other | 52x |
 | lamdang | different | other | 296x |
 | lampial | scatter | other | 19x |
 | lamtak | know | other | 82x |
 | lasak | take.CAUS | causative | 134x |
 | lawh | spread | other | 116x |
 | lawi | dislocate | other | 0x |
-| lawng | touch | other | 75x |
-| lawngkha | touch | other | 0x |
+| lawng | touch | other | 66x |
+| lawngkha | touch | other | 9x |
 | lawnthal | overthrow | other | 10x |
-| leen | fly | motion | 873x |
-| leentheih | fly | other | 0x |
+| leen | fly | motion | 870x |
+| leentheih | fly | other | 3x |
 | lehhei | turn | other | 7x |
 | lehlamin | upside.down | other | 2x |
 | leii | tongue | other | 37x |
@@ -582,23 +587,23 @@ Many verbs have two stems that alternate based on clause type:
 | lobuang | disturb | other | 14x |
 | logam | fruitful.place | other | 2x |
 | longal | save | other | 23x |
-| lot | cast | other | 297x |
-| loteng | field | other | 0x |
-| luan | flow | other | 275x |
-| luang | flow | other | 0x |
+| lot | cast | other | 295x |
+| loteng | field | other | 2x |
+| luan | flow | other | 41x |
+| luang | flow | other | 234x |
 | luh | plunder | other | 43x |
 | lumkhawm | lie.with | other | 41x |
-| lung | feel | cognition | 3116x |
-| lungdam | rejoice | emotion | 0x |
-| lunggimhuai | painful | other | 0x |
-| lunggimnate | distress | other | 0x |
-| lunggulh | delight | other | 0x |
-| lungkhamsak | encourage | causative | 0x |
-| lungkia | dismay | other | 0x |
-| lungngaihngaih | meditate | other | 0x |
-| lungsimmawl | brutish | other | 0x |
-| lungtaii | rejoice | other | 0x |
-| lungzuangin | lovesick | other | 0x |
+| lung | feel | cognition | 2079x |
+| lungdam | rejoice | emotion | 915x |
+| lunggimhuai | painful | other | 2x |
+| lunggimnate | distress | other | 2x |
+| lunggulh | delight | other | 40x |
+| lungkhamsak | encourage | causative | 14x |
+| lungkia | dismay | other | 56x |
+| lungngaihngaih | meditate | other | 2x |
+| lungsimmawl | brutish | other | 2x |
+| lungtaii | rejoice | other | 2x |
+| lungzuangin | lovesick | other | 2x |
 | lup | bow.down | physical | 192x |
 | lut | enter | motion | 544x |
 | maap | afterward | other | 2x |
@@ -632,47 +637,47 @@ Many verbs have two stems that alternate based on clause type:
 | mitphiat | set.eyes | other | 2x |
 | mitsuan | watch | other | 8x |
 | mizuau | deceitful | other | 2x |
-| mu | see.I | perception | 5142x |
-| muan | trust | cognition | 0x |
-| muangkha | trust | other | 0x |
-| muh | see.II | perception | 0x |
-| muhdah | trouble | other | 0x |
-| mulkim | horrible | other | 0x |
-| mun | rare | other | 0x |
-| mutgawp | drive.back | other | 0x |
-| mutmang | fan | other | 0x |
+| mu | see.I | perception | 2425x |
+| muan | trust | cognition | 289x |
+| muangkha | trust | other | 2x |
+| muh | see.II | perception | 888x |
+| muhdah | trouble | other | 76x |
+| mulkim | horrible | other | 10x |
+| mun | rare | other | 1444x |
+| mutgawp | drive.back | other | 5x |
+| mutmang | fan | other | 3x |
 | nasep | work | other | 668x |
 | nasiazaw | more | other | 2x |
 | naugil | door | other | 2x |
 | nawh | hurry | other | 35x |
 | nawlkhin | ways | other | 4x |
 | ncip | compass | other | 0x |
-| ne | eat | physical | 1788x |
-| nei | have | transfer | 2845x |
-| neih | have.II | transfer | 0x |
-| nek | eat.II | physical | 0x |
-| nencip | compass | other | 0x |
-| nengniami | deceive | other | 0x |
-| nga | endure | other | 1044x |
+| ne | eat | physical | 1418x |
+| nei | have | transfer | 2072x |
+| neih | have.II | transfer | 773x |
+| nek | eat.II | physical | 364x |
+| nencip | compass | other | 2x |
+| nengniami | deceive | other | 4x |
+| nga | endure | other | 624x |
 | ngah | get | transfer | 1132x |
-| ngai | listen.I | perception | 1526x |
-| ngaih | love | perception | 0x |
-| ngaihbaan | fair | other | 0x |
-| ngaihsun | think | cognition | 0x |
-| ngaihsut | think | cognition | 0x |
-| ngak | wait | other | 0x |
-| ngal | leap | other | 0x |
-| ngam | dare | other | 0x |
-| ngat | seek | other | 0x |
-| ngawlin | evil | other | 0x |
+| ngai | listen.I | perception | 477x |
+| ngaih | love | perception | 121x |
+| ngaihbaan | fair | other | 22x |
+| ngaihsun | think | cognition | 462x |
+| ngaihsut | think | cognition | 444x |
+| ngak | wait | other | 191x |
+| ngal | leap | other | 5x |
+| ngam | dare | other | 144x |
+| ngat | seek | other | 77x |
+| ngawlin | evil | other | 3x |
 | ngeingai | truly.want | other | 9x |
 | ngeisa | desire | other | 17x |
 | ngek | tender | other | 6x |
 | ngen | pray | other | 424x |
 | ngetsak | pray | causative | 66x |
 | ngeu | shake | other | 3x |
-| ngian | endure | other | 18x |
-| ngiano | fox | other | 0x |
+| ngian | endure | other | 16x |
+| ngiano | fox | other | 2x |
 | ngik | roar | other | 2x |
 | ngkawm | commit.adultery | other | 0x |
 | ngolh | chasten | other | 2x |
@@ -689,24 +694,24 @@ Many verbs have two stems that alternate based on clause type:
 | nnlelo | family | other | 0x |
 | noleno | cut.self | other | 2x |
 | nolh | reject | other | 10x |
-| nop | willing | other | 260x |
-| nopsak | please | causative | 0x |
+| nop | willing | other | 158x |
+| nopsak | please | causative | 102x |
 | notkhia | bring.out | other | 11x |
 | nsak | redeem | causative | 0x |
 | nuam | want | cognition | 750x |
 | nuih | laugh | other | 56x |
-| nung | live | existence | 1259x |
-| nungsak | revive | causative | 0x |
-| nungta | live | existence | 0x |
+| nung | live | existence | 859x |
+| nungsak | revive | causative | 15x |
+| nungta | live | existence | 385x |
 | nuntak | live | existence | 718x |
 | nusia | abandon | other | 349x |
-| om | exist | existence | 6891x |
-| omtual | dwelling | other | 0x |
-| pai | go | motion | 6016x |
-| paikhiasak | send.away | causative | 0x |
-| paikhiat | send.away | causative | 0x |
-| paipih | accompany | causative | 0x |
-| paisak | send | causative | 0x |
+| om | exist | existence | 6889x |
+| omtual | dwelling | other | 2x |
+| pai | go | motion | 4714x |
+| paikhiasak | send.away | causative | 15x |
+| paikhiat | send.away | causative | 372x |
+| paipih | accompany | causative | 730x |
+| paisak | send | causative | 185x |
 | palhin | flourish | other | 2x |
 | palhkhia | blossom | other | 2x |
 | pan | plead | other | 5521x |
@@ -719,10 +724,10 @@ Many verbs have two stems that alternate based on clause type:
 | peng | break.into | other | 19x |
 | phah | spread | other | 21x |
 | phang | stammer | other | 1x |
-| phat | praise | other | 557x |
-| phatsak | glorify | causative | 0x |
-| phawk | remember | other | 465x |
-| phawkkha | remember | other | 0x |
+| phat | praise | other | 552x |
+| phatsak | glorify | causative | 5x |
+| phawk | remember | other | 447x |
+| phawkkha | remember | other | 18x |
 | phel | clear | other | 91x |
 | phetun | hear | other | 18x |
 | phialphiah | swallow | other | 4x |
@@ -732,60 +737,60 @@ Many verbs have two stems that alternate based on clause type:
 | phum | immerse | physical | 37x |
 | phusuakin | pass.on | other | 2x |
 | phut | spray | other | 78x |
-| pia | give | transfer | 3962x |
-| piak | give.to | transfer | 0x |
-| piaksak | give.for | causative | 0x |
-| pial | stray | other | 0x |
-| pialpih | turn.aside | other | 0x |
-| pian | create | other | 0x |
-| piang | be.born | existence | 642x |
-| piangsak | cause.birth | creation | 0x |
-| piasak | cause.give | causative | 0x |
+| pia | give | transfer | 2487x |
+| piak | give.to | transfer | 1137x |
+| piaksak | give.for | causative | 13x |
+| pial | stray | other | 61x |
+| pialpih | turn.aside | other | 2x |
+| pian | create | other | 248x |
+| piang | be.born | existence | 385x |
+| piangsak | cause.birth | creation | 257x |
+| piasak | cause.give | causative | 14x |
 | pil | learn | other | 470x |
-| pua | carry.on.back | other | 1870x |
+| pua | carry.on.back | other | 1523x |
 | puah | divine | other | 102x |
-| puak | send | other | 0x |
+| puak | send | other | 345x |
 | puakkik | return | motion | 11x |
-| puanteng | nakedness | other | 0x |
+| puanteng | nakedness | other | 2x |
 | pulh | fall | other | 16x |
-| pung | increase | other | 39x |
-| pungsak | increase | causative | 0x |
+| pung | increase | other | 22x |
+| pungsak | increase | causative | 17x |
 | sahpi | thick.cloud | other | 14x |
 | saipa | steward | other | 2x |
 | sak | cause | causative | 700x |
-| sam | call | speech | 994x |
-| sameh | provide | other | 0x |
-| sampah | proclaim | speech | 0x |
-| samsiat | destroy | other | 0x |
+| sam | call | speech | 908x |
+| sameh | provide | other | 2x |
+| sampah | proclaim | speech | 1x |
+| samsiat | destroy | other | 83x |
 | sap | call | other | 131x |
-| sat | strike | destruction | 801x |
-| satzan | loose | other | 0x |
-| sawl | send | transfer | 921x |
-| sawlkhia | send.forth | other | 0x |
+| sat | strike | destruction | 798x |
+| satzan | loose | other | 3x |
+| sawl | send | transfer | 878x |
+| sawlkhia | send.forth | other | 43x |
 | sawtta | great | other | 2x |
 | sawtveipi | evidence | other | 2x |
 | sazuk | hind | other | 2x |
 | seek | sweep | other | 33x |
 | sel | slice | other | 42x |
 | sem | serve | social | 964x |
-| sep | work | social | 479x |
-| sepsak | serve | causative | 0x |
+| sep | work | social | 441x |
+| sepsak | serve | causative | 38x |
 | serafim | seraphim | other | 2x |
 | sesing | juniper | other | 2x |
 | siahil | wonder | other | 2x |
 | siam | be.skilled | other | 1324x |
 | siansak | sanctify | causative | 14x |
-| siat | spoil | other | 581x |
-| siatsak | destroy | causative | 0x |
+| siat | spoil | other | 566x |
+| siatsak | destroy | causative | 15x |
 | sih | die | existence | 683x |
 | siim | feast | other | 11x |
 | sil | wipe | other | 642x |
 | simmawh | blaspheme | other | 185x |
 | singbul | root | other | 2x |
 | singtawng | stock | other | 2x |
-| sit | cut.off | other | 133x |
-| sitawm | die.of.itself | other | 0x |
-| sitbaang | blemish | other | 0x |
+| sit | cut.off | other | 88x |
+| sitawm | die.of.itself | other | 2x |
+| sitbaang | blemish | other | 43x |
 | sithei | be.possible | other | 17x |
 | suahtak | redeem | other | 94x |
 | suak | become | existence | 1182x |
@@ -802,8 +807,8 @@ Many verbs have two stems that alternate based on clause type:
 | sut | spoil | other | 117x |
 | taankhiat | shine.forth | other | 3x |
 | taat | bend | other | 4x |
-| tai | rebuke | other | 635x |
-| taii | rebuke | other | 0x |
+| tai | rebuke | other | 583x |
+| taii | rebuke | other | 52x |
 | taikhiasim | flee | other | 2x |
 | taka | truly | other | 16x |
 | taksing | fir.tree | other | 7x |
@@ -812,10 +817,10 @@ Many verbs have two stems that alternate based on clause type:
 | tamkim | upright | other | 2x |
 | tamzan | break.many | other | 0x |
 | tanau | orphan | other | 26x |
-| tang | take.hold | other | 720x |
-| tangtawnga | beginning | other | 0x |
+| tang | take.hold | other | 556x |
+| tangtawnga | beginning | other | 2x |
 | tangtun | arrive | other | 43x |
-| tangval | young.man | other | 0x |
+| tangval | young.man | other | 162x |
 | tano | give.suck | other | 2x |
 | tat | strike | destruction | 459x |
 | tauna | mourning | other | 16x |
@@ -842,13 +847,13 @@ Many verbs have two stems that alternate based on clause type:
 | thaneihteng | strength | other | 2x |
 | thangtat | honest | other | 4x |
 | thanuam | diligent | other | 7x |
-| that | kill | destruction | 672x |
-| thatlum | slay | other | 0x |
+| that | kill | destruction | 644x |
+| thatlum | slay | other | 28x |
 | thawhbat | butter | other | 2x |
 | thawlpi | wine.vat | other | 2x |
-| thei | know.I | cognition | 4689x |
-| theih | know.II | cognition | 0x |
-| theipuam | herb | other | 0x |
+| thei | know.I | cognition | 2959x |
+| theih | know.II | cognition | 1728x |
+| theipuam | herb | other | 2x |
 | themcik | a.little | other | 2x |
 | then | thousand | other | 8x |
 | theu | cease | other | 2x |
@@ -864,16 +869,16 @@ Many verbs have two stems that alternate based on clause type:
 | thuphawk | wise | other | 4x |
 | thusel | resist | other | 2x |
 | thusit | condemn | other | 17x |
-| to | sit | physical | 8363x |
-| tokgawpin | divide | other | 0x |
-| tomlam | count | other | 0x |
-| ton | pull | physical | 0x |
-| tot | contend | other | 0x |
-| tovang | dig | other | 0x |
+| to | sit | physical | 8240x |
+| tokgawpin | divide | other | 2x |
+| tomlam | count | other | 2x |
+| ton | pull | physical | 62x |
+| tot | contend | other | 55x |
+| tovang | dig | other | 2x |
 | tuahpha | quickly | other | 4x |
 | tuakun | meet | other | 9x |
-| tuam | promise | other | 366x |
-| tuamin | cover | other | 0x |
+| tuam | promise | other | 348x |
+| tuamin | cover | other | 18x |
 | tuang | ride | other | 160x |
 | tuatcil | trample | other | 5x |
 | tuh | sow | other | 126x |
@@ -885,37 +890,37 @@ Many verbs have two stems that alternate based on clause type:
 | tukkhiat | pluck.off | other | 1x |
 | tulak | forest | other | 37x |
 | tuma | eloquent | other | 10x |
-| tung | arrive | motion | 8434x |
-| tungsak | lift.up | causative | 0x |
+| tung | arrive | motion | 8221x |
+| tungsak | lift.up | causative | 213x |
 | tunkhak | obstruct | other | 2x |
 | tunkhit | shut.in | other | 5x |
 | tusuk | sit | other | 12x |
 | tut | sleep | physical | 124x |
-| tuzaw | appointed.time | other | 6x |
-| tuzawh | appointed.time | other | 0x |
-| u | elder.sibling | other | 28816x |
-| uih | bark | other | 0x |
-| uisan | glutton | other | 0x |
+| tuzaw | appointed.time | other | 2x |
+| tuzawh | appointed.time | other | 4x |
+| u | elder.sibling | other | 28511x |
+| uih | bark | other | 15x |
+| uisan | glutton | other | 3x |
 | uk | rule | social | 1394x |
-| ulenau | brethren | other | 0x |
+| ulenau | brethren | other | 3x |
 | um | believe | cognition | 638x |
-| uplah | doubt | other | 0x |
-| ut | will | other | 0x |
-| utzaw | destruction | other | 0x |
-| va | go.and | motion | 4025x |
-| vaihawmsak | arrange | causative | 0x |
-| vak | walk | motion | 0x |
-| valkhong | redeem | other | 0x |
-| vangik | burden | other | 0x |
-| vankisut | proud | other | 0x |
-| vatmai | defeat | other | 0x |
-| vawhzo | pierce | other | 0x |
-| ve | do | other | 565x |
-| vei | sick | other | 0x |
+| uplah | doubt | other | 2x |
+| ut | will | other | 272x |
+| utzaw | destruction | other | 10x |
+| va | go.and | motion | 3699x |
+| vaihawmsak | arrange | causative | 16x |
+| vak | walk | motion | 246x |
+| valkhong | redeem | other | 2x |
+| vangik | burden | other | 43x |
+| vankisut | proud | other | 2x |
+| vatmai | defeat | other | 15x |
+| vawhzo | pierce | other | 2x |
+| ve | do | other | 411x |
+| vei | sick | other | 152x |
 | vekin | like | other | 12x |
-| vekun | shut.up | other | 0x |
-| vel | around | other | 48x |
-| velval | bitter | other | 0x |
+| vekun | shut.up | other | 2x |
+| vel | around | other | 39x |
+| velval | bitter | other | 9x |
 | ven | protect | other | 20x |
 | veng | guard | other | 136x |
 | vial | encircle | other | 20x |
@@ -926,21 +931,21 @@ Many verbs have two stems that alternate based on clause type:
 | vukcip | cover.over | other | 9x |
 | vul | flourish | other | 26x |
 | vum | breath | other | 2x |
-| za | hear.I | perception | 4526x |
-| zaak | spread | other | 0x |
-| zah | fear | emotion | 0x |
-| zahhuaisak | triumph | causative | 0x |
-| zahkona | distress | other | 0x |
-| zahtak | honor | social | 0x |
-| zahzahun | feathered | other | 0x |
-| zak | hear.II | perception | 0x |
-| zanei | official | other | 0x |
-| zang | use | other | 0x |
-| zavei | reproof | other | 0x |
-| zaw | leap | other | 0x |
-| zawh | be.able | other | 0x |
-| zawng | poor | other | 0x |
-| zawngkhal | tire.out | other | 0x |
+| za | hear.I | perception | 2016x |
+| zaak | spread | other | 2x |
+| zah | fear | emotion | 418x |
+| zahhuaisak | triumph | causative | 14x |
+| zahkona | distress | other | 11x |
+| zahtak | honor | social | 305x |
+| zahzahun | feathered | other | 2x |
+| zak | hear.II | perception | 634x |
+| zanei | official | other | 6x |
+| zang | use | other | 410x |
+| zavei | reproof | other | 2x |
+| zaw | leap | other | 378x |
+| zawh | be.able | other | 240x |
+| zawng | poor | other | 70x |
+| zawngkhal | tire.out | other | 18x |
 | zeek | account | other | 3x |
 | zeet | tempt | other | 0x |
 | zelzel | repeatedly | other | 35x |
@@ -963,15 +968,15 @@ Many verbs have two stems that alternate based on clause type:
 | zuauphuah | dark.saying | other | 2x |
 | zuaupi | see | other | 15x |
 | zuauthei | liar | other | 4x |
-| zui | follow | motion | 1000x |
-| zuih | follow | other | 0x |
-| zuihkhak | obstruct | other | 0x |
-| zuihzawh | receive | other | 0x |
-| zuisak | follow.for | causative | 0x |
+| zui | follow | motion | 720x |
+| zuih | follow | other | 261x |
+| zuihkhak | obstruct | other | 2x |
+| zuihzawh | receive | other | 4x |
+| zuisak | follow.for | causative | 13x |
 | zukham | intoxicated | other | 40x |
-| zung | ring | other | 68x |
-| zungpi | chief.ring | other | 0x |
-| zungthuk | engraved.ring | other | 0x |
+| zung | ring | other | 64x |
+| zungpi | chief.ring | other | 2x |
+| zungthuk | engraved.ring | other | 2x |
 
 ---
 

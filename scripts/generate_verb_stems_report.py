@@ -62,12 +62,16 @@ def count_verb_occurrences(verses):
     counts = defaultdict(int)
     first_ref = {}
     
+    # Sort stems by length (longest first) so longer stems match before shorter ones
+    # This ensures 'nungta' matches before 'nung', 'piangsak' before 'piang', etc.
+    sorted_stems = sorted(VERB_STEMS.keys(), key=len, reverse=True)
+    
     for ref, text in verses.items():
         words = text.split()
         for word in words:
             clean = word.lower().rstrip('.,;:!?"\'')
-            # Check if it starts with a verb stem
-            for stem in VERB_STEMS:
+            # Check if it starts with a verb stem (longest match first)
+            for stem in sorted_stems:
                 if clean == stem or clean.startswith(stem):
                     counts[stem] += 1
                     if stem not in first_ref:
@@ -258,7 +262,7 @@ if __name__ == '__main__':
     report = generate_report()
     
     output_path = os.path.join(os.path.dirname(__file__), 
-                               '..', 'docs', 'paradigms', 'verb_stems.md')
+                               '..', 'docs', 'paradigms', '5-verb-01-stems.md')
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(report)
     
