@@ -907,3 +907,64 @@ print('\nAll pan disambiguation tests passed')
 ```
 
 **Added**: 2026-03-19
+
+---
+
+## 37. -in Suffix Disambiguation: CVB (Converb) vs ERG (Ergative)
+
+The suffix `-in` functions differently on verbs vs nouns:
+- **VERB-in** → CVB (Converb): Same-subject sequential marker
+  - The verb is NOT nominalized before -in attaches
+  - Marks "doing X, ..." or "having done X, ..."
+- **NOUN-in** → ERG (Ergative): Transitive subject marker
+  - Marks the agent of a transitive verb
+
+**Citation**: Henderson (1965), Osburne (1975)
+
+| Token | Segmentation | Gloss | Context |
+|-------|--------------|-------|---------|
+| bawlin | bawl-in | make-CVB | having made... |
+| paiin | pai-in | go-CVB | having gone... |
+| cihin | cih-in | say-CVB | having said... |
+| gimbawlin | gim-bawl-in | difficulty-make-CVB | making difficulty |
+| kobawlin | ko-bawl-in | cry-make-CVB | making cry |
+| kihongin | ki-hong-in | REFL-open-CVB | opening oneself |
+| gamin | gam-in | land-ERG | (by) land |
+| tuiin | tui-in | water-ERG | (by) water |
+| miin | mi-in | person-ERG | (by) person |
+| innin | inn-in | house-ERG | (by) house |
+
+**Test Code**:
+```python
+from analyze_morphemes import analyze_word
+
+in_tests = [
+    # Verb stems → CVB (converb)
+    ('bawlin', 'bawl-in', 'make-CVB'),
+    ('paiin', 'pai-in', 'go-CVB'),
+    ('cihin', 'cih-in', 'say-CVB'),
+    
+    # Compound verbs → CVB
+    ('gimbawlin', 'gim-bawl-in', 'difficulty-make-CVB'),
+    ('kobawlin', 'ko-bawl-in', 'cry-make-CVB'),
+    
+    # Reflexive verbs → CVB
+    ('kihongin', 'ki-hong-in', 'REFL-open-CVB'),
+    
+    # Noun stems → ERG (ergative)
+    ('gamin', 'gam-in', 'land-ERG'),
+    ('tuiin', 'tui-in', 'water-ERG'),
+    ('miin', 'mi-in', 'person-ERG'),
+    ('innin', 'inn-in', 'house-ERG'),
+]
+
+for token, exp_seg, exp_gloss in in_tests:
+    seg, gloss = analyze_word(token)
+    assert seg == exp_seg, f'{token}: seg={seg}, expected {exp_seg}'
+    assert gloss == exp_gloss, f'{token}: gloss={gloss}, expected {exp_gloss}'
+    print(f'✓ {token}: {seg} ({gloss})')
+
+print('\nAll -in CVB/ERG disambiguation tests passed')
+```
+
+**Added**: 2026-03-19
