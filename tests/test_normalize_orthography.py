@@ -292,6 +292,70 @@ class TestRealWorldExamples(unittest.TestCase):
         self.assertEqual(result, "kei pai-khin")
 
 
+class TestPrecomposedTonedVowels(unittest.TestCase):
+    """Test words with precomposed toned vowels (no IPA chars)."""
+    
+    def test_macron_vowels(self):
+        """Words with macron (mid tone) should be normalized."""
+        self.assertEqual(normalize_to_bible('paī'), 'pai')
+        self.assertEqual(normalize_to_bible('laī'), 'lai')
+        self.assertEqual(normalize_to_bible('sīŋ'), 'sing')
+    
+    def test_grave_vowels(self):
+        """Words with grave accent (low tone) should be normalized."""
+        self.assertEqual(normalize_to_bible('kià'), 'kia')
+        self.assertEqual(normalize_to_bible('xià'), 'khia')
+        self.assertEqual(normalize_to_bible('zàn'), 'zan')
+    
+    def test_acute_vowels(self):
+        """Words with acute accent (high tone) should be normalized."""
+        self.assertEqual(normalize_to_bible('siál'), 'sial')
+        self.assertEqual(normalize_to_bible('púk'), 'puk')
+        self.assertEqual(normalize_to_bible('múk'), 'muk')
+    
+    def test_mixed_tones(self):
+        """Words with multiple different tones."""
+        self.assertEqual(normalize_to_bible('lisàk'), 'lisak')
+        self.assertEqual(normalize_to_bible('lisák'), 'lisak')
+        self.assertEqual(normalize_to_bible('cīŋnɔ̄'), 'cingnaw')
+    
+    def test_hyphenated_with_tones(self):
+        """Hyphenated words with tone marks."""
+        self.assertEqual(normalize_to_bible('-laī'), '-lai')
+        self.assertEqual(normalize_to_bible('-sàk'), '-sak')
+        self.assertEqual(normalize_to_bible('pai-xín-tà'), 'pai-khin-ta')
+
+
+class TestReportProcessingTonedWords(unittest.TestCase):
+    """Test that report processing captures toned words."""
+    
+    def test_toned_words_in_text(self):
+        """Words with only tones (no IPA) should be annotated."""
+        content = "paī means 'stay'"
+        result = add_bible_tier_to_examples(content)
+        self.assertIn('[≈pai]', result)
+    
+    def test_toned_words_in_tables(self):
+        """Toned words in tables should be annotated."""
+        content = "| kià | low tone |"
+        result = add_bible_tier_to_examples(content)
+        self.assertIn('[≈kia]', result)
+    
+    def test_toned_words_in_code_spans(self):
+        """Toned words in backticks should be annotated."""
+        content = "`siál hǎn tʰàt` means ..."
+        result = add_bible_tier_to_examples(content)
+        self.assertIn('[≈sial]', result)
+        self.assertIn('[≈that]', result)
+    
+    def test_words_inside_brackets_skipped(self):
+        """Words inside phonetic brackets should not get nested annotations."""
+        content = "The phoneme [ɔ] is written as 'aw'"
+        result = add_bible_tier_to_examples(content)
+        # Should not have [≈aw] inside the brackets
+        self.assertNotIn('[ɔ [≈', result)
+
+
 def run_tests():
     """Run all tests and report results."""
     loader = unittest.TestLoader()
@@ -306,6 +370,8 @@ def run_tests():
     suite.addTests(loader.loadTestsFromTestCase(TestEdgeCases))
     suite.addTests(loader.loadTestsFromTestCase(TestReportProcessing))
     suite.addTests(loader.loadTestsFromTestCase(TestRealWorldExamples))
+    suite.addTests(loader.loadTestsFromTestCase(TestPrecomposedTonedVowels))
+    suite.addTests(loader.loadTestsFromTestCase(TestReportProcessingTonedWords))
     
     # Run with verbosity
     runner = unittest.TextTestRunner(verbosity=2)

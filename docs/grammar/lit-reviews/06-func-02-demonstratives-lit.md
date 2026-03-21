@@ -22,7 +22,7 @@ These appear in various constructions throughout her analyzed texts.
 | Form | Gloss | Distance |
 |------|-------|----------|
 | híʔ [≈hih] | 'this' | Proximal |
-| huā | 'that' | Distal |
+| huā [≈hua] | 'that' | Distal |
 
 > "A demonstrative pronoun occupies the pre-head modifying position in a noun phrase. It is used to point out something (object) from the rest of the entity."
 
@@ -30,8 +30,8 @@ These appear in various constructions throughout her analyzed texts.
 
 Plural demonstratives are formed by suffixing -té [≈-te]:
 
-- (100) `híʔ [≈hih]-té [≈-te]` 'these'
-- (101) `huā-té [≈-te]` 'those'
+- (100) `híʔ-té [≈hih-te]` 'these'
+- (101) `huā-té [≈hua-te]` 'those'
 
 > "There is no separate plural demonstrative pronoun. The plurals are formed by the affixation of the plural marker -té [≈-te] to the singular demonstratives."
 
@@ -41,20 +41,20 @@ Locative forms are derived from demonstrative + progressive + locative:
 
 | Base | Derived | Contracted | Gloss |
 |------|---------|------------|-------|
-| híʔ [≈hih] | híɁ [≈hih]-laī-áɁ [≈-ah] | hiáɁ | 'here' |
-| huā | huā-laī-áɁ [≈-ah] | huáɁ | 'there' |
+| híʔ [≈hih] | híɁ-laī-áɁ [≈hih-lai-ah] | hiáɁ [≈hiah] | 'here' |
+| huā [≈hua] | huā-laī-áɁ [≈hua-lai-ah] | huáɁ [≈huah] | 'there' |
 
 ### 2.4 Syntactic Position
 
 Demonstratives occupy the **pre-head modifying position** in the NP:
 
-- (104) `híɁ [≈hih] sám [≈sam]-zāŋ [≈zang]...` "this hair-strand..."
+- (104) `híɁ [≈hih] sám-zāŋ [≈sam-zang]...` "this hair-strand..."
 
 ### 2.5 Discourse Functions (§3.3.5.1)
 
 Demonstratives function in discourse deixis:
 
-> "The demonstrative pronouns híʔ [≈hih] 'this' and huā 'that' are derived from the demonstrative pronouns and the locative marker -àʔ [≈-ah]."
+> "The demonstrative pronouns híʔ [≈hih] 'this' and huā [≈hua] 'that' are derived from the demonstrative pronouns and the locative marker -àʔ [≈-ah]."
 
 ---
 
@@ -82,7 +82,7 @@ All sources document a simple **proximal-distal** contrast:
 | | Proximal | Distal |
 |---|----------|--------|
 | Henderson | hih | tua |
-| Zam Ngaih Cing | híʔ [≈hih] | huā |
+| Zam Ngaih Cing | híʔ [≈hih] | huā [≈hua] |
 | Sukte (Singh) | hiʔ [≈hih] | huə [≈hua] |
 
 ### 4.2 Cognate Forms
@@ -97,7 +97,7 @@ The demonstrative forms are clearly cognate across Kuki-Chin:
 |----------|-------|-------|
 | Position | Pre-nominal | Pre-nominal |
 | Plural marker | -té [≈-te] | -te |
-| Locative derivation | DEM + -laī-áɁ [≈-ah] | Not documented |
+| Locative derivation | DEM + -laī-áɁ [≈-lai-ah] | Not documented |
 
 ---
 

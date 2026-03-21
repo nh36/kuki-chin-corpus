@@ -266,76 +266,173 @@ def process_markdown_report(content: str) -> str:
 
 def add_bible_tier_to_examples(content: str) -> str:
     """
-    More aggressive normalization: find all IPA examples and add Bible tier.
+    Comprehensive normalization: find all IPA/toned examples and add Bible tier.
     
-    This looks for patterns like:
-    - IPA words with tone marks
-    - Words in phonemic notation
-    - Interlinear glossed examples
+    This handles:
+    - IPA words with special characters (ɔ, ŋ, ʔ, etc.)
+    - Words with tone diacritics (both precomposed and combining)
+    - Code spans with Tedim content
+    - Table cells
+    - Full passages in Tedim
     """
     lines = content.split('\n')
     result_lines = []
     
-    # Words to skip (proper names, common English/French words)
+    # Words/patterns to skip (proper names, common English/French words, metalanguage)
     skip_words = {
         'Eugénie', 'Eugenie', 'café', 'naïve', 'résumé', 'exposé',
-        'Déclaration', 'première', 'à', 'é', 'è', 'ê', 'ô', 'î', 'û',
-        'Zürich', 'Müller', 'über', 'für',
+        'Déclaration', 'première', 'Zürich', 'Müller', 'über', 'für',
+        # Single accented vowels that are likely not Tedim
+        'à', 'é', 'è', 'ê', 'ô', 'î', 'û', 'ä', 'ö', 'ü',
     }
     
-    # Combining diacritics (tone marks, etc.)
-    COMBINING = '\u0300\u0301\u0302\u0304\u0306\u030c\u0303'  # grave, acute, circumflex, macron, breve, caron, tilde
-    # Modifier letters (superscript h for aspiration, etc.)
-    MODIFIERS = '\u02b0\u02b1\u02b2\u02b7\u02bc'  # ʰ ʱ ʲ ʷ ʼ
-    # IPA characters that trigger processing
-    IPA_CHARS = 'ɔŋʔɂəɛͻɁıʰ'  # Added ʰ (superscript h for aspiration)
+    # Skip patterns (regex)
+    skip_patterns = [
+        r'^\*\*Source:\*\*',  # Source lines
+        r'^[-–] Henderson',   # Bibliography
+        r'^[-–] Zam Ngaih',   # Bibliography
+        r'^[-–] Singh',       # Bibliography
+        r'^[-–] Otsuka',      # Bibliography
+        r'^\d{4}\.',          # Year references
+        r'pp?\.\s*\d+',       # Page numbers
+    ]
+    skip_re = re.compile('|'.join(skip_patterns))
     
-    # Pattern to find IPA-style words (contain IPA chars or tone diacritics)
-    # Must contain at least one clear IPA character
-    # Include combining diacritics and modifier letters to keep words together
-    ipa_word_pattern = re.compile(
-        r'(?<![a-zA-Z/])(-?[a-zA-Z' + COMBINING + MODIFIERS + r']*[' + IPA_CHARS + r'][a-zA-Z' + IPA_CHARS + r'áéíóúàèìòùāēīōū' + COMBINING + MODIFIERS + r']*)'
-        r'|'
-        r'(?<![a-zA-Z/])(-?[bcdfghjklmnpqrstvwxz' + COMBINING + MODIFIERS + r']*[áéíóúàèìòùāēīōū][a-zA-ZáéíóúàèìòùāēīōūɔŋʔɂəɛͻɁıʰ' + COMBINING + MODIFIERS + r']*)'
+    # Characters that indicate Tedim/IPA content
+    # IPA characters
+    IPA_CHARS = 'ɔŋʔɂəɛͻɁıʰ'
+    # Precomposed toned vowels (both with tone marks and length marks)
+    TONED_VOWELS = 'áéíóúàèìòùāēīōūâêîôûǎěǐǒǔ'
+    # Combining diacritics
+    COMBINING = '\u0300\u0301\u0302\u0304\u0306\u030c\u0303'
+    # Modifier letters
+    MODIFIERS = '\u02b0\u02b1\u02b2\u02b7\u02bc'
+    
+    # All special characters that indicate potential Tedim content
+    TEDIM_MARKERS = IPA_CHARS + TONED_VOWELS + COMBINING + MODIFIERS
+    
+    # Pattern to find Tedim words:
+    # Must contain at least one marker character
+    # Can start with hyphen (for affixes)
+    # Can contain standard letters, markers, and hyphens within
+    tedim_word_pattern = re.compile(
+        r'(?<![a-zA-Z])(-?[a-zA-Z' + re.escape(TEDIM_MARKERS) + r']*[' + re.escape(TEDIM_MARKERS) + r'][a-zA-Z' + re.escape(TEDIM_MARKERS) + r'-]*)',
+        re.UNICODE
     )
     
-    for i, line in enumerate(lines):
-        # Skip headers, code blocks, and already-processed lines
-        if line.startswith('#') or line.startswith('```') or '[≈' in line:
+    def should_skip_word(word: str) -> bool:
+        """Check if a word should be skipped."""
+        if word in skip_words:
+            return True
+        # Skip single characters
+        if len(word) <= 1:
+            return True
+        # Skip if it's just a hyphen plus one char
+        if word.startswith('-') and len(word) <= 2:
+            return True
+        return False
+    
+    def process_line(line: str) -> str:
+        """Process a single line, adding Bible annotations."""
+        # Skip bibliographic/reference lines
+        if skip_re.search(line):
+            return line
+        
+        # Find all potential Tedim words
+        matches = list(tedim_word_pattern.finditer(line))
+        if not matches:
+            return line
+        
+        # Process from end to start to preserve positions
+        new_line = line
+        for match in reversed(matches):
+            original = match.group(1)
+            if not original or should_skip_word(original):
+                continue
+            
+            start, end = match.span(1)
+            
+            # Skip if this word is already annotated (has [≈...] immediately after)
+            after_match = line[end:end+10]
+            if after_match.startswith(' [≈'):
+                continue
+            
+            # Skip if inside square brackets (phonetic transcription)
+            # Check if we're between [ and ] without a [ before ]
+            before = line[:start]
+            open_bracket = before.rfind('[')
+            close_bracket = before.rfind(']')
+            if open_bracket > close_bracket:
+                # We're inside brackets - skip unless it's a table cell marker
+                if not before.endswith('|'):
+                    continue
+            
+            normalized = normalize_to_bible(original)
+            # Only annotate if normalization produces a different result
+            if original != normalized:
+                new_line = new_line[:end] + f' [≈{normalized}]' + new_line[end:]
+        
+        return new_line
+    
+    def process_code_span(text: str) -> str:
+        """Process content inside backticks."""
+        # Find words with Tedim markers and annotate them
+        def replace_word(match):
+            word = match.group(1)
+            if should_skip_word(word):
+                return word
+            normalized = normalize_to_bible(word)
+            if word != normalized:
+                return f'{word} [≈{normalized}]'
+            return word
+        
+        return tedim_word_pattern.sub(replace_word, text)
+    
+    def process_table_cell(cell: str) -> str:
+        """Process a table cell."""
+        # Skip header cells or cells that are just labels
+        if cell.strip() in ('', 'Form', 'Gloss', 'Source', 'Function', 'Marker', 'Description', 'Category', 'Feature'):
+            return cell
+        return process_line(cell)
+    
+    in_code_block = False
+    
+    for line in lines:
+        # Track fenced code blocks
+        if line.strip().startswith('```'):
+            in_code_block = not in_code_block
             result_lines.append(line)
             continue
         
-        # Skip bibliographic lines (Source:, References, etc.)
-        if '**Source:**' in line or line.startswith('- ') and ('1965' in line or '2017' in line or '2018' in line or '2024' in line):
+        # Skip inside fenced code blocks
+        if in_code_block:
             result_lines.append(line)
             continue
         
-        # Find IPA words and add Bible equivalents
-        matches = list(ipa_word_pattern.finditer(line))
-        if matches:
-            # Process from end to start to preserve positions
-            new_line = line
-            for match in reversed(matches):
-                # Get whichever group matched (group 1 or 2)
-                original = match.group(1) or match.group(2)
-                if not original:
-                    continue
-                    
-                # Skip words in the skip list
-                if original in skip_words:
-                    continue
-                    
-                normalized = normalize_to_bible(original)
-                if original != normalized and len(original) > 1:
-                    # Insert normalized form
-                    if match.group(1):
-                        start, end = match.span(1)
-                    else:
-                        start, end = match.span(2)
-                    new_line = new_line[:end] + f' [≈{normalized}]' + new_line[end:]
-            result_lines.append(new_line)
-        else:
+        # Skip markdown headers
+        if line.startswith('#'):
             result_lines.append(line)
+            continue
+        
+        # Handle table rows specially
+        if '|' in line:
+            cells = line.split('|')
+            processed_cells = [process_table_cell(cell) for cell in cells]
+            result_lines.append('|'.join(processed_cells))
+            continue
+        
+        # Handle inline code spans: `content`
+        if '`' in line:
+            # Process code spans
+            def process_code_match(m):
+                content = m.group(1)
+                processed = process_code_span(content)
+                return f'`{processed}`'
+            
+            line = re.sub(r'`([^`]+)`', process_code_match, line)
+        
+        # Process regular line content
+        result_lines.append(process_line(line))
     
     return '\n'.join(result_lines)
 

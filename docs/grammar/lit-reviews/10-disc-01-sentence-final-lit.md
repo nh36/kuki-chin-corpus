@@ -47,11 +47,11 @@ This report compiles previous scholarship on sentence-final particles in Tedim C
 > "In Tedim Chin, the declarative clause is marked in informal speech with **'e'** or **'ei'** which both occurs at the final position. 'e' is the more polite form of marking declarative and 'ei' gives a strong assertion as compared to 'e'."
 
 ```
-dām [≈dam]    kīm [≈kim]       úŋ [≈ung]       ē
+dām    kīm       úŋ       ē
 heal.1 complete  1PL.RLS  DECL
 'We are all fine' (polite)
 
-dām [≈dam]    kīm [≈kim]       úŋ [≈ung]       eí
+dām    kīm       úŋ       eí
 heal.1 complete  1PL.RLS  DECL
 'We are all fine' (strong assertion)
 ```
@@ -69,7 +69,7 @@ heal.1 complete  1PL.RLS  DECL
 
 Example from narrative:
 ```
-vàn [≈van]-ā     āksínélkaī [≈aksinelkai]  deìɁ-laī    íŋ [≈ing]       cì [≈ci]    mɔ́k [≈mawk]
+vàn-ā     āksínélkaī  deìɁ-laī    íŋ       cì    mɔ́k
 sky-LOC   comet       want-PROG   1SG.RLS  say.1 INTJ
 'She said she still wanted comet from the sky'
 ```
@@ -79,11 +79,11 @@ sky-LOC   comet       want-PROG   1SG.RLS  say.1 INTJ
 > "An imperative mood occurs with Stem 1 verb. It is marked by **ɔù [≈o]**, **dìɁ [≈dih]** and **vē [≈ve]**."
 
 ```
-paī   ɔú [≈o]
+paī   ɔú
 go.1  IMP
 'Go'
 
-tú [≈tu]    vē [≈ve]
+tú    vē
 sit.1 IMP
 'Sit'
 ```
@@ -104,7 +104,7 @@ See dedicated report on interrogatives. Key particles:
 > "Declarative clause in Sukte is expressed by the declarative suffix **hi**."
 
 ```
-əməʔ [≈amah]-in   ə      iʔmu [≈ihmu]    ta    hὶ
+əməʔ-in   ə      iʔmu    ta    hὶ
 he-NOM    3SG    sleep   PST   DECL
 'He slept.'
 
@@ -116,7 +116,7 @@ John-NOM  mango   3SG   eat   DECL
 ### 3.2 Imperative Marker in (§8.1.2)
 
 ```
-hiʔ [≈hih]   laibu   sim   in
+hiʔ   laibu   sim   in
 this  book    read  IMP
 'Read this book.'
 
@@ -131,7 +131,7 @@ sit   IMP
 - **diam** — irrealis question (< diŋ [≈ding] + hiam)
 
 ```
-nəŋ [≈nang]   saŋsia [≈sangsia]   nə [≈na]    hiam?
+nəŋ   saŋsia   nə    hiam?
 you   teacher  2SG   QM
 'Are you teacher?'
 ```
@@ -139,7 +139,7 @@ you   teacher  2SG   QM
 ### 3.4 Wish Marker təhen (§8.1.2.3)
 
 ```
-pasian-in   nəŋ [≈nang]   hoŋ [≈hong]   hon   təhen [≈tahen]
+pasian-in   nəŋ   hoŋ   hon   təhen
 God-NOM     you   DIR   save  WISH
 'May God save you.'
 ```

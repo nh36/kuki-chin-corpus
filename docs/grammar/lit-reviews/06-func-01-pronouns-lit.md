@@ -57,7 +57,7 @@ Zam Ngaih Cing provides the most comprehensive treatment of pronouns in Tedim Ch
 
 | Person | Singular | Plural |
 |--------|----------|--------|
-| First | keí 'I' | ì 'us (incl.)'; eí 'us (incl.)' |
+| First | keí [≈kei] 'I' | ì 'us (incl.)'; eí [≈ei] 'us (incl.)' |
 | Second | náŋ [≈nang] 'you' | nɔú [≈no] 'you' |
 | Third | ámàʔ [≈amah] 'he/she' | àmaù [≈amau] 'they' |
 
@@ -71,14 +71,14 @@ Key observations:
 
 | Person | Singular | Plural |
 |--------|----------|--------|
-| First | kà [≈ka] 'my' | ì 'our (excl.)'; eí 'our (incl.)' |
+| First | kà [≈ka] 'my' | ì 'our (excl.)'; eí [≈ei] 'our (incl.)' |
 | Second | nà [≈na] 'your' | — |
 | Third | à 'his/her' | — |
 
 > "The possessive occupies the pre-head modifying position in a noun phrase."
 
 Example:
-- (98) `kà [≈ka] neù-laí-ā [≈-a] kà [≈ka] pí [≈pi] ɔ́ŋ [≈awng] gèn [≈gen] dàn [≈dan] īn [≈in]...`
+- (98) `kà [≈ka] neù-laí-ā [≈neu-lai-a] kà [≈ka] pí [≈pi] ɔ́ŋ [≈awng] gèn [≈gen] dàn [≈dan] īn [≈in]...`
   - "...my grandmother used to tell me when I was young..."
 
 ### 2.3 Demonstrative Pronouns (§3.2.3)
@@ -86,13 +86,13 @@ Example:
 | Form | Gloss |
 |------|-------|
 | híʔ [≈hih] | 'this' |
-| huā | 'that' |
-| híʔ [≈hih]-té [≈-te] | 'these' |
-| huā-té [≈-te] | 'those' |
+| huā [≈hua] | 'that' |
+| híʔ-té [≈hih-te] | 'these' |
+| huā-té [≈hua-te] | 'those' |
 
 Derived locative demonstratives:
-- `híɁ [≈hih]-laī-áɁ [≈-ah]` (hiáɁ) 'here (at this place)'
-- `huā-laī-áɁ [≈-ah]` (huáɁ) 'there (at that place)'
+- `híɁ-laī-áɁ [≈hih-lai-ah]` (hiáɁ [≈hiah]) 'here (at this place)'
+- `huā-laī-áɁ [≈hua-lai-ah]` (huáɁ [≈huah]) 'there (at that place)'
 
 > "There is no separate plural demonstrative pronoun. The plurals are formed by the affixation of the plural marker -té [≈-te] to the singular demonstratives."
 
@@ -103,13 +103,13 @@ Derived locative demonstratives:
 | bàŋ [≈bang] | 'what' |
 | kɔí [≈koi] | 'which' |
 | cìk [≈cik] | 'when' |
-| kuà | 'who' |
+| kuà [≈kua] | 'who' |
 | bàŋcì [≈bangci] | 'how' |
 
-> "The interrogative pronoun kuà is used to ask question about a person/people. It can be used as a possessive interrogative pronoun 'whose' when question is asked about ownership."
+> "The interrogative pronoun kuà [≈kua] is used to ask question about a person/people. It can be used as a possessive interrogative pronoun 'whose' when question is asked about ownership."
 
 Example:
-- (106) `kuā sám [≈sam] hì [≈hi] mɔ́k [≈mawk] hi-ám [≈am] cì [≈ci] īn [≈in]...`
+- (106) `kuā [≈kua] sám [≈sam] hì [≈hi] mɔ́k [≈mawk] hi-ám [≈am] cì [≈ci] īn [≈in]...`
   - "Whose hair is this?, he said..."
 
 ### 2.5 Reflexive Pronouns (§3.2.5)
@@ -118,12 +118,12 @@ Reflexive pronouns are formed by **repeating a pronoun** and joining them with `
 
 | Person | Singular | Plural |
 |--------|----------|--------|
-| First | keí lèʔ [≈leh] keí 'myself' | kͻú [≈kawu] lèʔ [≈leh] kͻú [≈kawu] 'ourselves (excl.)'; eí lèʔ [≈leh] eí 'ourselves (incl.)' |
+| First | keí [≈kei] lèʔ [≈leh] keí [≈kei] 'myself' | kͻú [≈kawu] lèʔ [≈leh] kͻú [≈kawu] 'ourselves (excl.)'; eí [≈ei] lèʔ [≈leh] eí [≈ei] 'ourselves (incl.)' |
 | Second | náŋ [≈nang] lèʔ [≈leh] náŋ [≈nang] 'yourself' | nͻú [≈nawu] lèʔ [≈leh] nͻú [≈nawu] 'yourselves' |
 | Third | ámàʔ [≈amah] lèʔ [≈leh] ámàʔ [≈amah] 'him/herself' | ámaú [≈amau] lèʔ [≈leh] ámaú [≈amau] 'themselves' |
 
 Example:
-- (107) `keí lèɁ [≈leh] keí ɔ́ŋ [≈awng] kì [≈ki]-tʰàt [≈-that] níŋ [≈ning] īn [≈in]...`
+- (107) `keí [≈kei] lèɁ [≈leh] keí [≈kei] ɔ́ŋ [≈awng] kì-tʰàt [≈ki-that] níŋ [≈ning] īn [≈in]...`
   - "I will kill myself..."
 
 ### 2.6 Emphatic Pronouns (§3.2.6)
@@ -132,13 +132,13 @@ Emphatic pronouns are formed by suffixing `-màʔ [≈-mah]` to personal pronoun
 
 | Form | Gloss |
 |------|-------|
-| keí-màʔ [≈-mah] | 'I myself' |
-| náŋ [≈nang]-màʔ [≈-mah] | 'you yourself' |
-| ámàʔ [≈amah]-màʔ [≈-mah] | 'he himself/she herself' |
-| āmaū [≈amau]-màʔ [≈-mah] | 'they themselves' |
+| keí-màʔ [≈kei-mah] | 'I myself' |
+| náŋ-màʔ [≈nang-mah] | 'you yourself' |
+| ámàʔ-màʔ [≈amah-mah] | 'he himself/she herself' |
+| āmaū-màʔ [≈amau-mah] | 'they themselves' |
 
 Example:
-- (110) `keí-màʔ [≈-mah] nà [≈na] pī [≈pi] úɁ [≈uh] hìŋ [≈hing]`
+- (110) `keí-màʔ [≈kei-mah] nà [≈na] pī [≈pi] úɁ [≈uh] hìŋ [≈hing]`
   - "I myself am your master's wife"
 
 ### 2.7 Indefinite Pronouns (§3.2.7)
@@ -146,13 +146,13 @@ Example:
 | Form | Gloss |
 |------|-------|
 | plxát [≈plkhat] | 'some' |
-| kuàmàʔ [≈mah] | 'no one' |
+| kuàmàʔ [≈kuamah] | 'no one' |
 | bàŋmàʔ [≈bangmah] | 'nothing' |
 | xàtpeùʔ [≈khatpeuh] | 'anyone/anything' |
-| kuàhiámxàt [≈mkhat] | 'someone/somebody' |
+| kuàhiámxàt [≈kuahiamkhat] | 'someone/somebody' |
 | nàxàt [≈nakhat] | 'something' |
 
-> "An indefinite pronoun which starts with kuà meaning 'who' refers to a human being and those with bàŋ [≈bang] 'what' is normally used with reference to non-human object."
+> "An indefinite pronoun which starts with kuà [≈kua] meaning 'who' refers to a human being and those with bàŋ [≈bang] 'what' is normally used with reference to non-human object."
 
 ---
 
@@ -189,14 +189,14 @@ Not fully documented in the excerpts, but includes standard Kuki-Chin forms.
 
 | Feature | Tedim | Sukte |
 |---------|-------|-------|
-| 1SG | keí | kei |
+| 1SG | keí [≈kei] | kei |
 | 2SG | náŋ [≈nang] | nəŋ [≈nang] |
 | 3SG | ámàʔ [≈amah] | əməʔ [≈amah] |
-| 1PL.INCL | ì, eí | ko |
+| 1PL.INCL | ì, eí [≈ei] | ko |
 | 1PL.EXCL | — | — |
 | INCL/EXCL distinction | Yes | Not documented |
 | Demonstrative proximal | híʔ [≈hih] | hiʔ [≈hih] |
-| Demonstrative distal | huā | huə [≈hua] |
+| Demonstrative distal | huā [≈hua] | huə [≈hua] |
 
 ---
 
@@ -208,10 +208,10 @@ All sources document a three-person system with singular/plural distinction:
 
 | Person | Henderson | Zam Ngaih Cing | Sukte (Singh) |
 |--------|-----------|----------------|---------------|
-| 1SG | kei, keimah | keí | kei |
+| 1SG | kei, keimah | keí [≈kei] | kei |
 | 2SG | nang, nangmah | náŋ [≈nang] | nəŋ [≈nang] |
 | 3SG | amah | ámàʔ [≈amah] | əməʔ [≈amah] |
-| 1PL.INCL | ei, eite | ì, eí | — |
+| 1PL.INCL | ei, eite | ì, eí [≈ei] | — |
 | 1PL.EXCL | ko, kote | — | ko |
 | 2PL | no, note | nɔú [≈no] | no |
 | 3PL | — | àmaù [≈amau] | əmau [≈amau] |
@@ -225,7 +225,7 @@ The inclusive-exclusive distinction is a significant areal feature:
 | | Henderson | Zam Ngaih Cing | Sukte |
 |---|-----------|----------------|-------|
 | INCL/EXCL documented | Yes | Yes | No |
-| INCL forms | ei, eite | ì, eí | — |
+| INCL forms | ei, eite | ì, eí [≈ei] | — |
 | EXCL forms | ko, kote | — | ko |
 
 ### 4.3 Pronoun Formation Strategies
@@ -235,8 +235,8 @@ The inclusive-exclusive distinction is a significant areal feature:
 | Reflexive | PRO + lèʔ [≈leh] + PRO | — |
 | Emphatic | PRO + -màʔ [≈-mah] | — |
 | Plural demonstrative | DEM + -té [≈-te] | DEM + -te |
-| Indefinite human | kuà- forms | — |
-| Indefinite non-human | bàŋ [≈bang]- forms | — |
+| Indefinite human | kuà- [≈kua-] forms | — |
+| Indefinite non-human | bàŋ- [≈bang-] forms | — |
 
 ### 4.4 Proto-Tibeto-Burman Cognates
 
@@ -257,7 +257,7 @@ Other likely PTB cognates:
 | Inclusive-exclusive | Yes | Yes | Not documented |
 | Reflexive formation | No | PRO + lèʔ [≈leh] + PRO | No |
 | Emphatic -màʔ [≈-mah] | No | Yes | No |
-| Indefinite system | No | Yes (kuà-/bàŋ-) | No |
+| Indefinite system | No | Yes (kuà- [≈kua-]/bàŋ- [≈bang-]) | No |
 | Pronominal prefixes | Yes (detailed) | Yes (as possessives) | Implicit |
 
 ---
@@ -268,11 +268,11 @@ Other likely PTB cognates:
 
 2. **Gender distinction**: No source documents grammatical gender in pronouns. Are there any honorific or social distinctions?
 
-3. **Reflexive kì [≈ki]-**: The verbal prefix kì [≈ki]- marks reflexive on verbs. How does this interact with reflexive pronouns?
+3. **Reflexive kì- [≈ki-]**: The verbal prefix kì- [≈ki-] marks reflexive on verbs. How does this interact with reflexive pronouns?
 
 4. **Emphatic vs. focus**: Is -màʔ [≈-mah] purely emphatic, or does it also mark contrastive focus?
 
-5. **Indefinite paradigm**: The kuà-/bàŋ- indefinite system mirrors interrogative pronouns. Is this a general Kuki-Chin pattern?
+5. **Indefinite paradigm**: The kuà- [≈kua-]/bàŋ- [≈bang-] indefinite system mirrors interrogative pronouns. Is this a general Kuki-Chin pattern?
 
 ---
 

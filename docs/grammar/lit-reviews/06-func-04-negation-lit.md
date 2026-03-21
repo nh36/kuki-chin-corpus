@@ -24,7 +24,7 @@ The negative **-kei** is described as an adverb that attaches to verbs.
 
 ### 2.1 Negative Markers (§5.8.2.1)
 
-> "There are two types of negative markers in Tedim Chin: **-keí** and **-lɔù [≈-lo]**. These negative morphemes are marked on the verb."
+> "There are two types of negative markers in Tedim Chin: **-keí [≈-kei]** and **-lɔù [≈-lo]**. These negative morphemes are marked on the verb."
 
 **Distribution by verb stem:**
 
@@ -32,7 +32,7 @@ The negative **-kei** is described as an adverb that attaches to verbs.
 |--------|------|-----------|
 | -lɔù [≈-lo] | Stem 1 | -lɔùʔ [≈-loh] |
 | -lɔùʔ [≈-loh] | Stem 2 | — |
-| -keí | Both stems | — |
+| -keí [≈-kei] | Both stems | — |
 
 > "These two can never interchange their position."
 
@@ -40,7 +40,7 @@ The negative **-kei** is described as an adverb that attaches to verbs.
 
 Used with irrealis **díŋ [≈ding]**:
 ```
-náŋ [≈nang]   íʔmú [≈ihmu]-lɔù [≈-lo]      díŋ [≈ding]
+náŋ   íʔmú-lɔù      díŋ
 2SG   sleep.1-NEG.1 PURP
 'You will not sleep'
 ```
@@ -49,32 +49,32 @@ náŋ [≈nang]   íʔmú [≈ihmu]-lɔù [≈-lo]      díŋ [≈ding]
 
 Used with imperatives and first person:
 ```
-íʔmú [≈ihmu]-keí      ɔú [≈o]
+íʔmú-keí      ɔú
 sleep.1-NEG   IMP
 'You don't sleep' (prohibitive)
 
-keí   paī-kéŋ [≈-keng]
+keí   paī-kéŋ
 1SG   go.1-NEG.1SG.RLS
 'I didn't go'
 ```
 
-> "The first person agreement markers occur with the negative marker -keí"
+> "The first person agreement markers occur with the negative marker -keí [≈-kei]"
 
-**Ungrammatical**: *keí paī-lɔú [≈-lo] ìŋ [≈ing] (cannot use -lɔù [≈-lo] with 1SG realis)
+**Ungrammatical**: *keí [≈kei] paī-lɔú [≈pai-lo] ìŋ [≈ing] (cannot use -lɔù [≈-lo] with 1SG realis)
 
 ### 2.4 Informal Negative -dàʔ (§5.8.2.1)
 
 > "Another negative morpheme **-dàʔ [≈-dah]** is not commonly used in written form but it is usually used in informal speech."
 
 ```
-né [≈ne]-dàʔ [≈-dah]      níŋ [≈ning]
+né-dàʔ      níŋ
 eat.1-NEG   1SG.IRR
 'I will rather not eat'
 ```
 
 Note: **dàʔ [≈dah]** also means 'sad' as a stative verb:
 ```
-dàʔ [≈dah]   lua     iŋ [≈ing]
+dàʔ   lua     iŋ
 sad   very    1SG.RLS
 'I am very sad'
 ```
@@ -85,14 +85,14 @@ sad   very    1SG.RLS
 
 **Stem 1** (ongoing/stative reading):
 ```
-naūŋék [≈ngek]    kàp [≈kap]-lɔù [≈lo]
+naūŋék    kàp-lɔù
 baby      cry.1-NEG.1
 'The baby is not crying'
 ```
 
 **Stem 2** (perfective/resultative reading):
 ```
-naūŋék [≈ngek]    kàɁ [≈kah]-lɔù [≈-lo]
+naūŋék    kàɁ-lɔù
 baby      cry.2-NEG.1
 'Didn't cry for the baby' (i.e., no crying happened)
 ```
@@ -102,21 +102,21 @@ baby      cry.2-NEG.1
 > "The order of negative marker and verb is VNeg. Dryer (2008: 72) stated that 'negative morphemes in Tibeto-Burman languages are either affixes or particles'. This holds true for Tedim Chin."
 
 ```
-túnī [≈tuni]      guàɁ  zù [≈zu]-lɔù [≈-lo]
+túnī      guàɁ  zù-lɔù
 today     rain  pour.1-NEG.1
 'Today, it didn't rain'
 ```
 
 ### 2.7 Negative Imperative/Prohibitive (§7.4.2.3)
 
-> "In negative imperative or prohibitive, the negative particle keí is used to negate the imperative clause."
+> "In negative imperative or prohibitive, the negative particle keí [≈kei] is used to negate the imperative clause."
 
 ```
-paī   keí   ɔú [≈o]
+paī   keí   ɔú
 go.1  NEG   IMP
 'Don't go'
 
-taī   keí   ɔú [≈o]
+taī   keí   ɔú
 run.1 NEG   IMP
 'Don't run'
 ```
@@ -134,18 +134,18 @@ run.1 NEG   IMP
 > "In Sukte, the negator kei are used to negate the verbal predicate."
 
 ```
-buʔsiʔ [≈buhsih]    kə [≈ka]      ne     kei   hi
+buʔsiʔ    kə      ne     kei   hi
 rice      1SG     eat    NEG   DECL
 'I do not eat rice.'
 
-əməʔ [≈amah]      boŋnoi [≈bongnoi]  ə      don   kei   hi
+əməʔ      boŋnoi  ə      don   kei   hi
 he        milk    3SG    drink NEG   DECL
 'He does not drink milk.'
 ```
 
 Also with possessives:
 ```
-laikuŋ [≈laikung]    kə [≈ka]      nei    kei   hi
+laikuŋ    kə      nei    kei   hi
 pen       1SG     POSS   NEG   DECL
 'I do not have pen.'
 ```
@@ -155,11 +155,11 @@ pen       1SG     POSS   NEG   DECL
 > "In Sukte, the negator lo is used with prefix hi for emphasising to negate nominal predicate."
 
 ```
-əməʔ [≈amah]  siəvuən [≈siavuan]   hi    lo    hi
+əməʔ  siəvuən   hi    lo    hi
 he    doctor    EMP   NEG   COP
 'He is not a doctor.'
 
-pəlik [≈palik]    kə [≈ka]     hi    lo    hi
+pəlik    kə     hi    lo    hi
 police   1SG    EMP   NEG   COP
 'I am not a police.'
 ```
@@ -173,7 +173,7 @@ mi       tai    ken
 person   chide  NEG.IMP
 'Do not chide to others.'
 
-sə [≈sa]       thət [≈that]   ken
+sə       thət   ken
 animal   kill   NEG.IMP
 'Do not kill animal.'
 ```
@@ -186,11 +186,11 @@ animal   kill   NEG.IMP
 
 | | Tedim | Sukte | Function |
 |---|-------|-------|----------|
-| General verbal | -keí | kei | Main clausal negator |
-| Stem-sensitive | -lɔù [≈-lo]/-lɔùʔ [≈loh] | — | Stems 1/2 |
+| General verbal | -keí [≈-kei] | kei | Main clausal negator |
+| Stem-sensitive | -lɔù [≈-lo]/-lɔùʔ [≈-loh] | — | Stems 1/2 |
 | Informal | -dàʔ [≈-dah] | — | Colloquial |
 | Nominal | — | lo | Copular/nominal |
-| Prohibitive | keí + ɔú [≈o] | ken | Negative imperative |
+| Prohibitive | keí [≈kei] + ɔú [≈o] | ken | Negative imperative |
 
 ### 4.2 Structural Properties
 
@@ -209,7 +209,7 @@ animal   kill   NEG.IMP
 ### 4.3 Distinctive Findings
 
 **Zam Ngaih Cing's unique contributions**:
-1. Two-negator system (-keí vs. -lɔù [≈-lo])
+1. Two-negator system (-keí [≈-kei] vs. -lɔù [≈-lo])
 2. Stem-sensitive negator alternation
 3. Informal register negator -dàʔ [≈-dah]
 4. Semantic difference tied to verb stem selection
@@ -222,7 +222,7 @@ animal   kill   NEG.IMP
 
 ## 5. Open Questions
 
-1. **Etymology**: Are Tedim -keí and Sukte kei cognate? What is the source?
+1. **Etymology**: Are Tedim -keí [≈-kei] and Sukte kei cognate? What is the source?
 2. **-lɔù [≈-lo] origin**: Is -lɔù [≈-lo] related to Mizo lo or a separate development?
 3. **Scope**: What is the interaction of negation with focus, quantifiers?
 4. **Double negation**: Are there constructions with multiple negators?

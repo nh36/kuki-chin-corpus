@@ -31,7 +31,7 @@ Henderson identifies **18 initial consonants** and **9 final consonants**:
 - **c-** is an affricate pronounced "with the tongue-tip down, and with contact of the blade of the tongue in the alveolar region" [p. 9]
 - **z-** "represents a voiced alveolar fricative, pronounced with the tip down" often palatalized before front vowels
 - Final **-h** represents glottal stop [ʔ] "in the great majority of cases"
-- Final **-lh** represents [lʔ [≈lh]] (lateral + glottal stop sequence)
+- Final **-lh** represents [lʔ] (lateral + glottal stop sequence)
 
 Henderson also notes **ʔw [≈w]** (pre-glottalized labiovelar continuant) in limited contexts.
 
@@ -64,7 +64,7 @@ Henderson's vowel system (extracted from orthographic conventions):
 - iu: diphthong [iu] or [iːu]
 - oi: short diphthong [oi]
 - **aw**: represents [ɔː] (long half-open back rounded)
-- **awh**: represents [ɔʔ [≈awh]] (short + glottal stop)
+- **awh**: represents [ɔʔ] (short + glottal stop)
 
 **Triphthongs:** iai, iau, uai, uau
 
@@ -112,7 +112,7 @@ ZNC identifies **19 consonant phonemes**:
 
 **Key differences from Henderson:**
 - Explicitly includes glottal stop /ʔ/ as a phoneme
-- Identifies /x/ as velar fricative (not /kʰ/ or /χ/)
+- Identifies /x/ as velar fricative (not /kʰ [≈kh]/ or /χ/)
 - Notes that /v/ is classified as voiceless fricative (unusual)
 
 ZNC compares inventories [p. 25-26]:
@@ -158,11 +158,11 @@ ZNC uses **diacritics** to mark three tones:
 ZNC documents a constraint on tone sequences:
 > "Tedim Chin does not permit the combination of Mid + Low tone. So in places where the Low tone is expected to occur, it is usually replaced by a High tone" [p. 57]
 
-Example: Expected *lisàk → Actual lisák 'cause to be tasty'
+Example: Expected *lisàk [≈lisak] → Actual lisák [≈lisak] 'cause to be tasty'
 
 **Grammatical tone:**
 Tonal change marks possession on proper nouns:
-- thāŋpū [≈thangpu] 'Thangpu (name)' → thāŋpú [≈thangpu] 'Thangpu's' [p. 60]
+- thāŋpū 'Thangpu (name)' → thāŋpú 'Thangpu's' [p. 60]
 - cīŋnɔ̄ [≈cingnaw] 'Cingno' → cīŋnɔ́ [≈cingnaw] 'Cingno's'
 
 ### 2.4 Syllable Structure
@@ -185,11 +185,11 @@ ZNC classifies Tedim Chin syllable structure as "moderately complex":
 
 **Gemination** occurs at syllable boundaries in disyllables:
 - Stops: ìppí [≈ippi] 'sack', mìttɔ̀ [≈mittaw] 'blind', síkkeu [≈sikkeu] 'spoon'
-- Nasals: liàmma 'wound', dìnna [≈dinna] 'standing place', máŋŋìlʔ [≈mangilh] 'forget'
-- Lateral: guallèl 'defeated'
+- Nasals: liàmma [≈liamma] 'wound', dìnna [≈dinna] 'standing place', máŋŋìlʔ [≈mangilh] 'forget'
+- Lateral: guallèl [≈guallel] 'defeated'
 
 **Glottalization** marks Stem 2 verbs:
-- laú (Stem 1) → laùʔ (Stem 2) 'afraid'
+- laú [≈lau] (Stem 1) → laùʔ [≈lauh] (Stem 2) 'afraid'
 
 **Vowel coalescence** in compounds and affixation.
 
@@ -212,7 +212,7 @@ Singh identifies **19 consonant phonemes**:
 | Nasals | m | | n | | ŋ | |
 | Lateral | | | l | | | |
 
-**Key difference:** Singh includes aspirated velar /kʰ/ rather than fricative /x/
+**Key difference:** Singh includes aspirated velar /kʰ [≈kh]/ rather than fricative /x/
 > "There are nineteen consonant phonemes found in the language" [p. 42]
 
 ### 3.2 Vowel Inventory
@@ -227,7 +227,7 @@ Singh identifies **6 vowel phonemes** (one more than ZNC):
 | Open | | a | |
 
 The schwa /ə/ and rounded /o/ distinguish Sukte from Tedim orthography:
-- Sukte: /kə/ '1st person pronoun' vs. Tedim: usually written *ka*
+- Sukte: /kə [≈ka]/ '1st person pronoun' vs. Tedim: usually written *ka*
 - Sukte: /hon/ 'crowd' vs. Tedim: uncertain correspondence
 
 ### 3.3 Tone System
@@ -238,7 +238,7 @@ Singh identifies **three tones** marked with diacritics:
 - **Low tone**: (`) - e.g., nài [≈nai] 'pus'
 
 Minimal triplets demonstrate contrast:
-- zám [≈zam] 'reach by hand' / zam 'gong' / zàm [≈zam] 'creep or crawl' [p. 66]
+- zám 'reach by hand' / zam 'gong' / zàm 'creep or crawl' [p. 66]
 - lél [≈lel] 'just like that' / lel 'lose' / lèl [≈lel] 'a kind of basket'
 
 ### 3.4 Syllable Structure
@@ -263,13 +263,13 @@ Otsuka's papers focus on specific morphosyntactic topics and do not provide syst
 | Phoneme | Henderson | ZNC (IPA) | Singh (Sukte) | Bible |
 |---------|-----------|-----------|---------------|-------|
 | /p/ | p | p | p | p |
-| /pʰ/ | ph | pʰ [≈ph] | ph | ph |
+| /pʰ [≈ph]/ | ph | pʰ [≈ph] | ph | ph |
 | /b/ | b | b | b | b |
 | /t/ | t | t | t | t |
-| /tʰ/ | th | tʰ [≈th] | th | th |
+| /tʰ [≈th]/ | th | tʰ [≈th] | th | th |
 | /d/ | d | d | d | d |
 | /k/ | k | k | k | k |
-| /x/ or /kʰ/ | **kh** | **x** | **kh** | **kh** |
+| /x/ or /kʰ [≈kh]/ | **kh** | **x** | **kh** | **kh** |
 | /g/ | g | g | g | g |
 | /ʔ/ | **-h** (final) | **ʔ** | **ʔ** | **-h** (final) |
 | /c/ | c | c | c | c |
@@ -281,7 +281,7 @@ Otsuka's papers focus on specific morphosyntactic topics and do not provide syst
 | /n/ | n | n | n | n |
 | /ŋ/ | **ng** | **ŋ** | **ŋ** | **ng** |
 | /l/ | l | l | l | l |
-| /lʔ/ | **-lh** | **lʔ [≈lh]** | — | **-lh** |
+| /lʔ [≈lh]/ | **-lh** | **lʔ [≈lh]** | — | **-lh** |
 
 ### 5.2 Vowel Correspondences
 
@@ -305,7 +305,7 @@ Otsuka's papers focus on specific morphosyntactic topics and do not provide syst
 | /eu/ | eu | eu | eu |
 | /ia/ | ia | ia | ia |
 | /iu/ | iu | iu | iu |
-| /ɔi/ | oi | ɔi [≈oi] | oi |
+| /ɔi [≈oi]/ | oi | ɔi [≈oi] | oi |
 | /ui/ | ui | ui | ui |
 
 ### 5.4 Tone Representation
@@ -330,7 +330,7 @@ Based on corpus sampling:
 
 4. **Glottal stop**: Written as final **-h** in many contexts (ahih 'it being', cih 'saying')
    - But often not written where ZNC would transcribe /ʔ/
-   - Compare: ZNC neìʔ 'have' vs. Bible *neih* or *nei*
+   - Compare: ZNC neìʔ [≈neih] 'have' vs. Bible *neih* or *nei*
 
 5. **Vowel length**: Generally not distinguished orthographically
    - ZNC notes this as an unresolved issue: "Some people used single vowel whereas some others used double vowels" [§2.4.2.1]
@@ -365,7 +365,7 @@ Based on corpus sampling:
 **All sources agree on:**
 - Voiceless unaspirated stops: /p, t, k/
 - Voiced stops: /b, d, g/
-- Aspirated bilabial and alveolar: /pʰ, tʰ [≈th]/
+- Aspirated bilabial and alveolar: /pʰ [≈ph], tʰ [≈th]/
 - Fricatives: /s, z, v, h/
 - Palatal affricate: /c/
 - Nasals: /m, n, ŋ/
@@ -373,7 +373,7 @@ Based on corpus sampling:
 
 **Point of divergence:** The velar aspirate/fricative
 - Henderson: writes "kh" but describes it as [x] (velar fricative)
-- ZNC: /x/ (velar fricative), explicitly contrasts with Thang's /kʰ/
+- ZNC: /x/ (velar fricative), explicitly contrasts with Thang's /kʰ [≈kh]/
 - Singh (Sukte): /kʰ/ (aspirated stop)
 - Bible: writes "kh" (phonetic value underdetermined)
 
@@ -410,7 +410,7 @@ This variation may reflect:
 
 ## 7. Open Questions
 
-1. **Is the velar obstruent /x/ or /kʰ/?** Dialectal investigation needed.
+1. **Is the velar obstruent /x/ or /kʰ [≈kh]/?** Dialectal investigation needed.
 
 2. **How systematic is vowel length?** ZNC treats it as phonemic; practical orthography doesn't mark it consistently.
 

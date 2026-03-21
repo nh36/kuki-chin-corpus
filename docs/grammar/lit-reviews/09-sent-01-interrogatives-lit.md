@@ -17,11 +17,11 @@ Henderson does not provide a dedicated section on interrogatives. Her texts are 
 > "The question particle in Tedim Chin occurs at the end of the sentence. It can also occur with wh-question which occurs at the beginning of the sentence."
 
 ```
-nà [≈na]    paī-út [≈-ut]        hí [≈hi]-á [≈-a]
+nà    paī-út        hí-á
 2SG   go.1-want.1   COP-Q
 'Do you want to go?'
 
-kɔí [≈koi]-àɁ [≈-ah]     téŋ [≈teng]      ná [≈na]    hī [≈hi]-ā [≈-a]
+kɔí-àɁ     téŋ      ná    hī-ā
 where-LOC  live.1   2SG   COP-Q
 'Where do you live?'
 ```
@@ -35,14 +35,14 @@ where-LOC  live.1   2SG   COP-Q
 > "In yes-no question, the answer is expected to be given with 'yes' or 'no'. It is also called polar interrogatives (Hartmann 2009: 310)."
 
 ```
-nà [≈na]    pá [≈pa]       tʰɔú [≈tho]-tà [≈-ta]    m
+nà    pá       tʰɔú-tà    m
 2POSS father   get.up-PFV Q
 'Has your father got up already?'
 ```
 
 Polite response repeats part of the question:
 ```
-hè [≈he]    kà [≈ka]      pá [≈pa]       tʰɔú [≈tho]-tà [≈-ta]
+hè    kà      pá       tʰɔú-tà
 yes   2POSS   father   get.up-PFV
 'Yes, my father has got up already'
 ```
@@ -53,7 +53,7 @@ yes   2POSS   father   get.up-PFV
 
 **High abrupt pitch** = speaker is unhappy OR confirming known information:
 ```
-paī   mɔ̀ [≈maw]
+paī   mɔ̀
 go.1  Q
 'Did you go/You go?' (with abrupt high pitch)
 ```
@@ -76,7 +76,7 @@ go.1  Q
 
 **diam** combines irrealis + question, functions as request:
 ```
-vɔ̀k [≈vawk]-té [≈te]   án [≈an]    nà [≈na]    piá     diàm
+vɔ̀k-té   án    nà    piá     diàm
 pig-PL   food  2SG   give.1  PURP-Q
 'Will you feed the pigs?'
 ```
@@ -86,7 +86,7 @@ pig-PL   food  2SG   give.1  PURP-Q
 > "Tag question is a form of yes/no question... The expected response from the other person is an affirmative answer."
 
 ```
-náŋ [≈nang]   ciàʔ        díŋ [≈ding]    hì [≈hi]-màʔ [≈-mah]    lɔù [≈lo]     ná [≈na]    hí [≈hi]-á [≈-a]
+náŋ   ciàʔ        díŋ    hì-màʔ    lɔù     ná    hí-á
 2SG   return.home PURP   COP.EMPH  NEG.1   2SG   COP-Q
 'You are going home, aren't you?'
 ```
@@ -98,8 +98,8 @@ Three basic question words with derivatives:
 | Base | Gloss | Derived | Gloss |
 |------|-------|---------|-------|
 | bàŋ [≈bang] | 'what' | bàŋháŋ [≈banghang] | 'why' |
-| kuà | 'who' | kuāá | 'whose' |
-| | | kuàn | 'whom' |
+| kuà [≈kua] | 'who' | kuāá [≈kuaa] | 'whose' |
+| | | kuàn [≈kuan] | 'whom' |
 | kɔí [≈koi] | 'which' | kɔíàɁ [≈koiah] | 'where' |
 | cìkciáŋ [≈cikciang] | 'when' | — | — |
 
@@ -109,14 +109,14 @@ Three basic question words with derivatives:
 
 **In-situ** (Stem 1):
 ```
-náŋ [≈nang]   tú [≈tu]     zīŋsāŋ [≈zingsang]     bàŋ [≈bang]    né [≈ne]
+náŋ   tú     zīŋsāŋ     bàŋ    né
 2SG   now    morning    what   eat.1
 'What did you eat this morning?'
 ```
 
 **Fronted** (Stem 2):
 ```
-tú [≈tu]    zīŋsāŋ [≈zingsang]     bàŋ [≈bang]-à [≈-a]    nà [≈na]    nék [≈nek]
+tú    zīŋsāŋ     bàŋ-à    nà    nék
 now   morning    what-Q   2SG   eat.2
 'What did you eat this morning?'
 ```
@@ -139,11 +139,11 @@ now   morning    what-Q   2SG   eat.2
 | bəŋhun [≈banghun] | 'when' |
 
 ```
-nəŋ [≈nang]    kuə [≈kua]    nə [≈na]    hiam?
+nəŋ    kuə    nə    hiam?
 you    who    2SG   QP
 'Who are you?'
 
-əməʔ [≈amah]-in   bəŋ [≈bang]   sem    ə    hiam?
+əməʔ-in   bəŋ   sem    ə    hiam?
 he-NOM    what  do     3SG  QP
 'What does he do?'
 ```
@@ -153,11 +153,11 @@ he-NOM    what  do     3SG  QP
 > "In Sukte, the interrogative clause is also formed by the question particles **hiam**, **diam** etc. It is important to note that the particle **diam** is mutually derived from **diŋ [≈ding]** 'will/shall' and **hiam** 'question particle'."
 
 ```
-huətak [≈huatak]   əʔ [≈ah]     kə [≈ka]    pai    diam?
+huətak   əʔ     kə    pai    diam?
 there    LOC    1SG   go     QM
 'Shall I go there?'
 
-nəŋ [≈nang]   saŋsia [≈sangsia]    nə [≈na]    hiam?
+nəŋ   saŋsia    nə    hiam?
 you   teacher   2SG   QM
 'Are you teacher?'
 ```
@@ -167,7 +167,7 @@ you   teacher   2SG   QM
 > "Like most of the languages in the world, the yes-no interrogative clause in Sukte can also be formed from the declarative sentences by using the rising intonation."
 
 ```
-nəŋ [≈nang]   zatui      nə [≈na]    ne    hi
+nəŋ   zatui      nə    ne    hi
 you   medicine   2SG   eat   DECL
 'You eat the medicine?' (with rising intonation)
 ```
@@ -189,7 +189,7 @@ you   medicine   2SG   eat   DECL
 | Gloss | Tedim | Sukte |
 |-------|-------|-------|
 | 'what' | bàŋ [≈bang] | bəŋ [≈bang] |
-| 'who' | kuà | kuə [≈kua] |
+| 'who' | kuà [≈kua] | kuə [≈kua] |
 | 'where' | kɔíàɁ [≈koiah] | koi-əʔ [≈ah] |
 | 'when' | cìkciáŋ [≈cikciang] | bəŋhun [≈banghun] |
 | 'why' | bàŋháŋ [≈banghang] | — |

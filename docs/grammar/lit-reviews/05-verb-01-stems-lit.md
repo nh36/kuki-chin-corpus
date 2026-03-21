@@ -153,10 +153,10 @@ Table 31: Verb Stems
 | mù [≈mu] | mùʔ [≈muh] | 'see' |
 | ŋèn [≈ngen] | ŋèt [≈nget] | 'ask' |
 | kàp [≈kap] | kàʔ [≈kah] | 'cry' |
-| muāŋ | muàn | 'trust' |
+| muāŋ [≈muang] | muàn [≈muan] | 'trust' |
 | sám [≈sam] | sàp [≈sap] | 'call' |
 | tēl [≈tel] | tèl [≈tel] | 'choose' |
-| paī | paì | 'go' |
+| paī [≈pai] | paì [≈pai] | 'go' |
 
 ### Phonological Patterns
 

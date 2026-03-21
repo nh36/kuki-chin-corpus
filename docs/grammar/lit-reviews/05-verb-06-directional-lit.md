@@ -11,8 +11,8 @@ Directional affixes are a characteristic feature of Tibeto-Burman languages, mar
 | Scholar | Year | "Away" (Andative) | "Toward" (Venitive) | Position |
 |---------|------|-------------------|---------------------|----------|
 | Henderson | 1965 | *va-* | *hong* | Pre-verbal |
-| Zam Ngaih Cing | 2018 | *và [≈va]* | *ɔ́ŋ [≈awng]/hɔ́ŋ [≈ng]* | Pre-verbal |
-| Otsuka | 2017 | *va³-* | *oŋ [≈ong]¹-/hoŋ¹-* | Pre-verbal prefix |
+| Zam Ngaih Cing | 2018 | *và [≈va]* | *ɔ́ŋ [≈awng]/hɔ́ŋ [≈hawng]* | Pre-verbal |
+| Otsuka | 2017 | *va³-* | *oŋ [≈ong]¹-/hoŋ [≈hong]¹-* | Pre-verbal prefix |
 
 ---
 
@@ -80,15 +80,15 @@ Zam Ngaih Cing provides a more systematic treatment of directional affixes as a 
 
 ### Pre-Verbal Directionals
 
-> "The pre-verb slot can be occupied by the directional markers **ɔ́ŋ [≈awng]/hɔ́ŋ [≈ng]** and **và [≈va]** which both refers to 'away' and 'towards' from the reference point or deictic center. **và [≈va]** is used when the goal is away from the subject. **ɔ́ŋ [≈awng]/hɔ́ŋ [≈ng]** is used when the goal is directed towards the speaker." (§5.8.1.3)
+> "The pre-verb slot can be occupied by the directional markers **ɔ́ŋ [≈awng]/hɔ́ŋ [≈hawng]** and **và [≈va]** which both refers to 'away' and 'towards' from the reference point or deictic center. **và [≈va]** is used when the goal is away from the subject. **ɔ́ŋ [≈awng]/hɔ́ŋ [≈hawng]** is used when the goal is directed towards the speaker." (§5.8.1.3)
 
 ### Examples
 
 **Andative *và [≈va]* (motion away):**
-> *và [≈va] paī ún [≈un]* 'Go!' (lit. 'away go IMP.PL')
+> *và [≈va] paī [≈pai] ún [≈un]* 'Go!' (lit. 'away go IMP.PL')
 
 **Venitive *ɔ́ŋ [≈awng]* (motion toward):**
-> *klmāŋ [≈klmang]-pá [≈-pa]-n à zì [≈zi] díŋ [≈ding] á ā **ɔ́ŋ [≈awng]** lá [≈la]-xá [≈-kha] díŋ [≈ding] hì [≈hi]*
+> *klmāŋ-pá-n [≈klmang-pa-n] à zì [≈zi] díŋ [≈ding] á ā **ɔ́ŋ [≈awng]** lá-xá [≈la-kha] díŋ [≈ding] hì [≈hi]*
 > 'The Burmese officer might take you unexpectedly as/for his wife'
 
 ### Co-occurrence of Directionals
@@ -98,20 +98,20 @@ Zam Ngaih Cing makes an important observation about ordering:
 > "When both the directional markers *và [≈va]* and *ɔ́ŋ [≈awng]* occur adjacent to each other, it is always *ɔ́ŋ [≈awng]* which precedes the other marker but not the other way." (§5.8.1.3.1)
 
 Example:
-> *vān [≈van]-ā āksínélkaī [≈aksinelkai] **ɔ́ŋ [≈awng] và [≈va]** lák [≈lak]-sàk [≈sak] núŋ [≈nung] cì [≈ci]*
+> *vān-ā [≈van-a] āksínélkaī [≈aksinelkai] **ɔ́ŋ [≈awng] và [≈va]** lák-sàk [≈lak-sak] núŋ [≈nung] cì [≈ci]*
 > 'They said, "We will go and get comet from the sky"'
 
 ### Other Directionals
 
 Zam Ngaih Cing identifies an additional directional marker:
 
-> "In Tedim Chin, a directional marker denoting 'forward or advance' is identified with **mā [≈ma]-**. It means front or ahead." (§5.8.1.3.2)
+> "In Tedim Chin, a directional marker denoting 'forward or advance' is identified with **mā- [≈ma-]**. It means front or ahead." (§5.8.1.3.2)
 
 Examples:
 - *mánɔ̀Ɂ [≈manawh]* 'approach front'
 - *málép [≈malep]* 'action done before the actual time'
-- *mápaī [≈mapai]* 'going smoothly' vs. *má [≈ma] paì* 'go in advance'
-- *mákaì [≈makai]* 'leader' vs. *mā [≈ma] kaì* 'lead the front'
+- *mápaī [≈mapai]* 'going smoothly' vs. *má [≈ma] paì [≈pai]* 'go in advance'
+- *mákaì [≈makai]* 'leader' vs. *mā [≈ma] kaì [≈kai]* 'lead the front'
 
 ### Post-Verbal Directional Marking
 
@@ -121,20 +121,20 @@ Zam Ngaih Cing distinguishes pre-verbal directionals (deictic) from post-verbal 
 
 | Direction | Suffix | Example |
 |-----------|--------|---------|
-| Upward | *-tɔù [≈-to]* | *kàʔ [≈kah]-tɔù [≈-to]* 'ascend upward' |
-| Downward | *-sùk [≈-suk]* | *kúm [≈kum]-sùk [≈suk]* 'descend downward' |
-| Horizontal | *-pʰeī [≈-phei]* | *paī-pʰeī [≈-phei]* 'go level (straight)' |
+| Upward | *-tɔù [≈-to]* | *kàʔ-tɔù [≈kah-to]* 'ascend upward' |
+| Downward | *-sùk [≈-suk]* | *kúm-sùk [≈kum-suk]* 'descend downward' |
+| Horizontal | *-pʰeī [≈-phei]* | *paī-pʰeī [≈pai-phei]* 'go level (straight)' |
 
 Locational directionals:
-- *sàk [≈sak]-lám [≈lam]-àʔ [≈ah]* 'towards the higher side'
-- *xāŋ [≈khang]-lám [≈-lam]-àʔ [≈ah]* 'towards the lower side'
+- *sàk-lám-àʔ [≈sak-lam-ah]* 'towards the higher side'
+- *xāŋ-lám-àʔ [≈khang-lam-ah]* 'towards the lower side'
 
 ### Key Distinctions in Zam Ngaih Cing
 
 1. **Systematic classification**: She treats directionals as a distinct grammatical category within verb phrase structure
-2. **Co-occurrence constraints**: She documents the fixed order ɔ́ŋ [≈awng]-và [≈-va] when both occur
+2. **Co-occurrence constraints**: She documents the fixed order ɔ́ŋ-và [≈awng-va] when both occur
 3. **Elevational vs. deictic**: She clearly distinguishes pre-verbal deictic directionals from post-verbal elevational suffixes
-4. **Additional marker *mā [≈ma]-***: She identifies 'forward/advance' as a separate directional category
+4. **Additional marker *mā- [≈ma-]***: She identifies 'forward/advance' as a separate directional category
 
 ---
 
@@ -148,7 +148,7 @@ Otsuka provides the most detailed theoretical treatment of Tedim Chin directiona
 
 Otsuka adopts cross-linguistic terminology:
 - **Andative** (*去辞*): *va³-* — motion away from deictic center
-- **Venitive** (*来辞*): *oŋ [≈ong]¹-/hoŋ¹-* — motion toward deictic center
+- **Venitive** (*来辞*): *oŋ [≈ong]¹-/hoŋ [≈hong]¹-* — motion toward deictic center
 
 ### Morphological Position
 
@@ -236,9 +236,9 @@ Otsuka cites Henderson's *na-* prefix and shows it can co-occur with the venitiv
 
 Otsuka traces the origins:
 
-**Venitive *oŋ [≈ong]-/hoŋ-*:**
+**Venitive *oŋ- [≈ong-]/hoŋ- [≈hong-]*:**
 - Related to PKC \**huŋ [≈hung]* 'COME' (VanBik 2009)
-- *hoŋ* used as the verb 'come' in Valvum dialect (Henderson 1965: 113)
+- *hoŋ [≈hong]* used as the verb 'come' in Valvum dialect (Henderson 1965: 113)
 
 **Andative *va-*:**
 - Cognates found throughout Kuki-Chin (DeLancey 1985: 372-374)
@@ -285,8 +285,8 @@ All three scholars agree on:
 **Zam Ngaih Cing (2018):**
 - Systematic treatment within verb phrase structure
 - Documents elevational suffixes as separate category
-- Identifies forward/advance marker *mā [≈ma]-*
-- Notes fixed order constraint: *ɔ́ŋ [≈awng]-và [≈-va]* (never \**và [≈va]-ɔ́ŋ [≈-awng]*)
+- Identifies forward/advance marker *mā- [≈ma-]*
+- Notes fixed order constraint: *ɔ́ŋ-và [≈awng-va]* (never \**và-ɔ́ŋ [≈va-awng]*)
 
 **Otsuka (2017):**
 - Most theoretically sophisticated treatment
@@ -304,7 +304,7 @@ All three scholars agree on:
 3. **Discourse functions**: Limited analysis of how directionals function in narrative structure
 4. **Dialectal variation**: Only Henderson notes the Valvum data; more comparative data needed
 5. **Interaction with other prefixes**: The full paradigm of prefix combinations needs documentation
-6. **Semantic bleaching**: The extent to which *oŋ [≈ong]-* has grammaticalized beyond motion is not fully quantified
+6. **Semantic bleaching**: The extent to which *oŋ- [≈ong-]* has grammaticalized beyond motion is not fully quantified
 
 ---
 
@@ -316,7 +316,7 @@ All three scholars agree on:
 - DeLancey, Scott. 1985. The analysis-synthesis-lexis cycle in Tibeto-Burman. In John Haiman (ed.), *Iconicity in Syntax*, 367-389.
 - Heine, Bernd & Tania Kuteva. 2002. *World Lexicon of Grammaticalization*. Cambridge University Press.
 - Henderson, Eugénie J.A. 1965. *Tiddim Chin: A Descriptive Analysis of Two Texts*. Oxford University Press.
-- Otsuka, Yukinori (大塚行誠). 2009. ティディム・チン語における方向接頭辞 óŋ [≈ong]-. *東京大学言語学論集* 28: 197-218.
+- Otsuka, Yukinori (大塚行誠). 2009. ティディム・チン語における方向接頭辞 óŋ-. *東京大学言語学論集* 28: 197-218.
 - Otsuka, Yukinori. 2017. ティディム・チン語とジンポー語における方向接辞の対照. Conference paper.
 - So-Hartmann, Helga. 2009. *A Descriptive Grammar of Daai Chin*. STEDT.
 - VanBik, Kenneth. 2009. *Proto-Kuki-Chin*. STEDT Monograph 7.

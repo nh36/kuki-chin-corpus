@@ -27,8 +27,8 @@ Henderson does not provide a dedicated section on numerals but uses numerals in 
 | ŋā [≈nga] | five |
 | gùk [≈guk] | six |
 | ságìʔ [≈sagih] | seven |
-| giát | eight |
-| kuá | nine |
+| giát [≈giat] | eight |
+| kuá [≈kua] | nine |
 | sɔ̀m [≈sawm] | ten |
 | zà [≈za] | hundred |
 | tùl [≈tul] | thousand |
@@ -38,8 +38,8 @@ Henderson does not provide a dedicated section on numerals but uses numerals in 
 ### 2.3 Decimal Compounding
 
 Higher numerals are formed through:
-1. **Multiplication**: 20 = 10×2 (sɔ̀m [≈sawm]-nìʔ [≈nih])
-2. **Addition**: 11-19 = 10+N (sɔ̀m [≈sawm]-xàt [≈khat], etc.)
+1. **Multiplication**: 20 = 10×2 (sɔ̀m-nìʔ [≈sawm-nih])
+2. **Addition**: 11-19 = 10+N (sɔ̀m-xàt [≈sawm-khat], etc.)
 3. **Combined**: 25 = 10×2+5
 
 ### 2.4 Ordinals (§3.3.3.5.2)
@@ -80,9 +80,9 @@ Formed by **total reduplication** of cardinals:
 
 > "Gil (2013: 3) stated reduplication to be 'the most common morphological strategy for the formation of distributive numerals across the world's languages'."
 
-Also formed with **ciát/ték** 'each':
-- `xàt [≈khat] ciát` 'one each'
-- `lī [≈li] ciát` 'four each'
+Also formed with **ciát [≈ciat]/ték [≈tek]** 'each':
+- `xàt [≈khat] ciát [≈ciat]` 'one each'
+- `lī [≈li] ciát [≈ciat]` 'four each'
 
 ---
 
@@ -126,8 +126,8 @@ Sukte uses **leʔ [≈leh]** as additive marker:
 | five | ŋā [≈nga] | ŋə [≈nga] | *ŋa [≈nga] |
 | six | gùk [≈guk] | guk | — |
 | seven | ságìʔ [≈sagih] | səgiʔ [≈sagih] | — |
-| eight | giát | giət [≈giat] | — |
-| nine | kuá | kuə [≈kua] | *ku |
+| eight | giát [≈giat] | giət [≈giat] | — |
+| nine | kuá [≈kua] | kuə [≈kua] | *ku |
 | ten | sɔ̀m [≈sawm] | som | — |
 
 ### 4.2 Ordinal Formation
@@ -142,7 +142,7 @@ Sukte uses **leʔ [≈leh]** as additive marker:
 | Strategy | Tedim | Sukte |
 |----------|-------|-------|
 | Reduplication | xàt [≈khat]~xàt [≈khat] | — |
-| Each marker | ciát/ték | — |
+| Each marker | ciát [≈ciat]/ték [≈tek] | — |
 
 ---
 

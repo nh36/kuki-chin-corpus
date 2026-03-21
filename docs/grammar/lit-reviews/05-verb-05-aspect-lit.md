@@ -51,7 +51,7 @@ Zam Ngaih Cing identifies five major aspectual categories:
 |--------|--------|------|-------|
 | Perfective | -tà [≈-ta] | suffix | 'already, completed' |
 | Completive | -xín [≈-khin] | suffix | 'already finished' |
-| Progressive | -laī | suffix | 'ongoing, in progress' |
+| Progressive | -laī [≈-lai] | suffix | 'ongoing, in progress' |
 | Durative | -dén [≈-den] | suffix | 'for extended period' |
 | Habitual | (various) | particles | (see below) |
 
@@ -60,8 +60,8 @@ Zam Ngaih Cing identifies five major aspectual categories:
 > "The perfective -tà [≈-ta] marks for the action that has taken place."
 
 Examples:
-- (313) `ū á nìʔ [≈nih] īn [≈in] kì [≈ki]-kím [≈-kim]-tà [≈ta]` "Elder brother, the two are of equal size..."
-- (314) `tuā nītūm [≈nitum] dék [≈dek]-tá [≈ta] ìn [≈in] túŋ [≈tung]-tʰeí [≈-thei] hét [≈het]-lɔú [≈lo]` "The sun was about to set and (she) never reached..."
+- (313) `ū á nìʔ [≈nih] īn [≈in] kì-kím-tà [≈ki-kim-ta]` "Elder brother, the two are of equal size..."
+- (314) `tuā [≈tua] nītūm [≈nitum] dék-tá [≈dek-ta] ìn [≈in] túŋ-tʰeí [≈tung-thei] hét-lɔú [≈het-lo]` "The sun was about to set and (she) never reached..."
 
 ### 2.4 Completive -xín (§5.6.2)
 
@@ -69,14 +69,14 @@ Examples:
 
 This shows a **perfective-completive distinction** and possible combination:
 
-- (315) `keí paī-xín [≈-khin]` "I had already gone/I went"
-- (316) `keí paī-xín [≈-khin]-tà [≈ta]` "I had already gone" (COMPLETIVE + PERFECTIVE)
+- (315) `keí [≈kei] paī-xín [≈pai-khin]` "I had already gone/I went"
+- (316) `keí [≈kei] paī-xín-tà [≈pai-khin-ta]` "I had already gone" (COMPLETIVE + PERFECTIVE)
 
 ### 2.5 Progressive -laī (§5.6.3)
 
-> "The progressive in Tedim Chin indicate that the action is in progress. It is expressed by -laī."
+> "The progressive in Tedim Chin indicate that the action is in progress. It is expressed by -laī [≈-lai]."
 
-- (317) `vàn [≈van]-ā āksínélkaī [≈aksinelkai] deìɁ-laī ìŋ [≈ing] cì [≈ci] mɔ́k [≈mawk]` "She said she still wanted comet from the sky"
+- (317) `vàn-ā [≈van-a] āksínélkaī [≈aksinelkai] deìɁ-laī [≈deih-lai] ìŋ [≈ing] cì [≈ci] mɔ́k [≈mawk]` "She said she still wanted comet from the sky"
 
 ### 2.6 Habitual (§5.6.4)
 
@@ -105,19 +105,19 @@ Zam Ngaih Cing identifies **four habitual subtypes**:
 > "Iterative is marked by kík [≈kik] 'again'. Iterative indicates repetition of an action that has already occurred before. The literal meaning of kík [≈kik] is 'to return'."
 
 - (321) `nà [≈na] sèm [≈sem] kík [≈kik] íŋ [≈ing]` "I work again"
-- (322) `naū táŋmaī [≈tangmai] và [≈va] én [≈en] vē [≈ve] cì [≈ci] kík [≈kik] ín [≈in]` "'Younger brother, go and see the cucumber', he said again"
+- (322) `naū [≈nau] táŋmaī [≈tangmai] và [≈va] én [≈en] vē [≈ve] cì [≈ci] kík [≈kik] ín [≈in]` "'Younger brother, go and see the cucumber', he said again"
 
 ### 2.7 Durative -dén (§5.6.5)
 
 > "Durative aspect emphasised about the duration of the action or event."
 
-- (323) `nuī-dén [≈-den]` "Laugh for a long period/time"
-- (324) `zuí-dén [≈-den]` "Follow for a long period/time"
+- (323) `nuī-dén [≈nui-den]` "Laugh for a long period/time"
+- (324) `zuí-dén [≈zui-den]` "Follow for a long period/time"
 
 ### 2.8 Unique Contributions
 
-1. **Four-way habitual distinction**: Zam Ngaih Cing alone documents the ŋeí [≈ngei]/gìgè [≈ge]/zél/kík system
-2. **Perfective-Completive stacking**: Shows -xín [≈-khin]-tà [≈ta] combination
+1. **Four-way habitual distinction**: Zam Ngaih Cing alone documents the ŋeí [≈ngei]/gìgè [≈gige]/zél [≈zel]/kík [≈kik] system
+2. **Perfective-Completive stacking**: Shows -xín-tà [≈-khin-ta] combination
 3. **Explicit claim**: Aspect is primary, tense is not grammaticalized
 4. **Adverbial analysis**: Treats aspect markers as "adverbial/verbal particles"
 
@@ -155,14 +155,14 @@ Sukte has four aspectual categories:
 
 > "The progressive aspect is expressed by the marker lai."
 
-- (88) `boŋ [≈bong]-in lopə [≈lopa] ə ne lai hi` "The cow is grazing"
+- (88) `boŋ-in [≈bong-in] lopə [≈lopa] ə ne lai hi` "The cow is grazing"
 - (89) `kei saŋ [≈sang] əʔ [≈ah] kə [≈ka] pai lai hi` "I am going to the school"
 
 ### 3.5 Perfective ta
 
 > "The perfective aspect in Sukte is expressed by the marker ta."
 
-- (94) `əməʔ [≈amah]-in buʔ [≈buh] ə huən [≈huan] ta hi` "He cooked the rice"
+- (94) `əməʔ-in [≈amah-in] buʔ [≈buh] ə huən [≈huan] ta hi` "He cooked the rice"
 - (95) `kei-in zi əʔ [≈ah] kə [≈ka] pai ta hi` "I went to the market"
 
 ### 3.6 Irrealis diŋ
@@ -170,7 +170,7 @@ Sukte has four aspectual categories:
 > "The irrealis aspect is expressed by the marker diŋ [≈ding]."
 
 - (98) `kei zi əʔ [≈ah] kə [≈ka] pai diŋ [≈ding] hi` "I will go to market"
-- (99) `əmau [≈amau]-in gənhiŋkhoinə [≈ganhingkhoina] ə mu diŋ [≈ding] uʔ [≈uh] hi` "They will see the zoo"
+- (99) `əmau-in [≈amau-in] gənhiŋkhoinə [≈ganhingkhoina] ə mu diŋ [≈ding] uʔ [≈uh] hi` "They will see the zoo"
 
 ### 3.7 Comparison: Sukte vs. Tedim
 
@@ -178,7 +178,7 @@ Sukte has four aspectual categories:
 |----------|------------|-------|
 | Perfective | -tà [≈-ta] | ta |
 | Completive | -xín [≈-khin] | — |
-| Progressive | -laī | lai |
+| Progressive | -laī [≈-lai] | lai |
 | Durative | -dén [≈-den] | — |
 | Habitual Past | ŋeí [≈ngei] | — |
 | Habitual | gìgè [≈gige] | — |
@@ -187,7 +187,7 @@ Sukte has four aspectual categories:
 | Irrealis/Future | — (see diŋ [≈ding] below) | diŋ [≈ding] |
 
 Key observations:
-1. **Shared markers**: Perfective *ta/tà* and progressive *lai/laī* are cognate
+1. **Shared markers**: Perfective *ta/tà [≈ta]* and progressive *lai/laī [≈lai]* are cognate
 2. **Tedim elaboration**: Tedim has richer habitual/aspectual distinctions
 3. **Irrealis diŋ [≈ding]**: Singh treats this as aspect; Tedim uses *ding* primarily as purposive marker
 
@@ -230,7 +230,7 @@ All sources agree on two core aspect markers, with cognate forms across Kuki-Chi
 | Marker | Tedim | Sukte | Function |
 |--------|-------|-------|----------|
 | *tà [≈ta]/ta | -tà [≈-ta] | ta | Perfective |
-| *lai | -laī | lai | Progressive |
+| *lai | -laī [≈-lai] | lai | Progressive |
 
 ### 5.2 Tedim-Specific Elaborations
 
@@ -276,7 +276,7 @@ This difference may reflect:
 |---------|-----------|----------------|---------------|
 | Perfective marker | — | -tà [≈-ta] | ta |
 | Completive marker | — | -xín [≈-khin] | — |
-| Progressive marker | — | -laī | lai |
+| Progressive marker | — | -laī [≈-lai] | lai |
 | Durative marker | — | -dén [≈-den] | — |
 | Habitual system | — | 4-way distinction | — |
 | Irrealis/future | — | (ding as purposive) | diŋ [≈ding] |
