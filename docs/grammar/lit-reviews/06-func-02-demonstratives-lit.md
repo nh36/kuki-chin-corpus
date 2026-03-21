@@ -21,19 +21,23 @@ These appear in various constructions throughout her analyzed texts.
 
 | Form | Gloss | Distance |
 |------|-------|----------|
-| híʔ [≈hih] | 'this' | Proximal |
-| huā [≈hua] | 'that' | Distal |
+| híʔ | 'this' | Proximal | <!-- ≈Bible: hih -->
+| huā | 'that' | Distal | <!-- ≈Bible: hua -->
 
 > "A demonstrative pronoun occupies the pre-head modifying position in a noun phrase. It is used to point out something (object) from the rest of the entity."
 
 ### 2.2 Plural Formation
 
-Plural demonstratives are formed by suffixing -té [≈-te]:
+Plural demonstratives are formed by suffixing -té:
+[≈Bible: -te]
 
-- (100) `híʔ-té [≈hih-te]` 'these'
-- (101) `huā-té [≈hua-te]` 'those'
+- (100) `híʔ-té` 'these'
+[≈Bible: hih-te]
+- (101) `huā-té` 'those'
+[≈Bible: hua-te]
 
-> "There is no separate plural demonstrative pronoun. The plurals are formed by the affixation of the plural marker -té [≈-te] to the singular demonstratives."
+> "There is no separate plural demonstrative pronoun. The plurals are formed by the affixation of the plural marker -té to the singular demonstratives."
+[≈Bible: -te]
 
 ### 2.3 Locative Demonstratives
 
@@ -41,20 +45,22 @@ Locative forms are derived from demonstrative + progressive + locative:
 
 | Base | Derived | Contracted | Gloss |
 |------|---------|------------|-------|
-| híʔ [≈hih] | híɁ-laī-áɁ [≈hih-lai-ah] | hiáɁ [≈hiah] | 'here' |
-| huā [≈hua] | huā-laī-áɁ [≈hua-lai-ah] | huáɁ [≈huah] | 'there' |
+| híʔ | híɁ-laī-áɁ | hiáɁ | 'here' | <!-- ≈Bible: hih hih-lai-ah hiah -->
+| huā | huā-laī-áɁ | huáɁ | 'there' | <!-- ≈Bible: hua hua-lai-ah huah -->
 
 ### 2.4 Syntactic Position
 
 Demonstratives occupy the **pre-head modifying position** in the NP:
 
-- (104) `híɁ [≈hih] sám-zāŋ [≈sam-zang]...` "this hair-strand..."
+- (104) `híɁ sám-zāŋ...` "this hair-strand..."
+[≈Bible: hih sam-zang...]
 
 ### 2.5 Discourse Functions (§3.3.5.1)
 
 Demonstratives function in discourse deixis:
 
-> "The demonstrative pronouns híʔ [≈hih] 'this' and huā [≈hua] 'that' are derived from the demonstrative pronouns and the locative marker -àʔ [≈-ah]."
+> "The demonstrative pronouns híʔ 'this' and huā 'that' are derived from the demonstrative pronouns and the locative marker -àʔ."
+[≈Bible: hih hua -ah]
 
 ---
 
@@ -64,10 +70,10 @@ Demonstratives function in discourse deixis:
 
 | Form | Gloss | Distance |
 |------|-------|----------|
-| hiʔ [≈hih] | 'this' | Proximal |
-| huə [≈hua] | 'that' | Distal |
-| hiʔte [≈hihte] | 'these' | Proximal plural |
-| huəte [≈huate] | 'those' | Distal plural |
+| hiʔ | 'this' | Proximal | <!-- ≈Bible: hih -->
+| huə | 'that' | Distal | <!-- ≈Bible: hua -->
+| hiʔte | 'these' | Proximal plural | <!-- ≈Bible: hihte -->
+| huəte | 'those' | Distal plural | <!-- ≈Bible: huate -->
 
 > "The Demonstrative pronoun may be classified in terms of place or in terms of the speaker's attitude. Because of this distinction (as in Huddleston 1984: 296) called proximal and distal demonstrative pronoun."
 
@@ -82,8 +88,8 @@ All sources document a simple **proximal-distal** contrast:
 | | Proximal | Distal |
 |---|----------|--------|
 | Henderson | hih | tua |
-| Zam Ngaih Cing | híʔ [≈hih] | huā [≈hua] |
-| Sukte (Singh) | hiʔ [≈hih] | huə [≈hua] |
+| Zam Ngaih Cing | híʔ | huā | <!-- ≈Bible: hih hua -->
+| Sukte (Singh) | hiʔ | huə | <!-- ≈Bible: hih hua -->
 
 ### 4.2 Cognate Forms
 
@@ -96,8 +102,8 @@ The demonstrative forms are clearly cognate across Kuki-Chin:
 | Property | Tedim | Sukte |
 |----------|-------|-------|
 | Position | Pre-nominal | Pre-nominal |
-| Plural marker | -té [≈-te] | -te |
-| Locative derivation | DEM + -laī-áɁ [≈-lai-ah] | Not documented |
+| Plural marker | -té | -te | <!-- ≈Bible: -te -->
+| Locative derivation | DEM + -laī-áɁ | Not documented | <!-- ≈Bible: -lai-ah -->
 
 ---
 

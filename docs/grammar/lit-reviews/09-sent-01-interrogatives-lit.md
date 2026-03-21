@@ -70,7 +70,7 @@ go.1  Q
 | Formal | Informal | Function |
 |--------|----------|----------|
 | hiam | hia | General question |
-| diam | dia | Irrealis question (< díŋ [≈ding] + hiam) |
+| diam | dia | Irrealis question (< díŋ + hiam) | <!-- ≈Bible: ding -->
 
 > "'hia' and 'dia' are more casual and used in informal occasion whereas 'hiam' and 'diam' are more formal."
 
@@ -97,11 +97,11 @@ Three basic question words with derivatives:
 
 | Base | Gloss | Derived | Gloss |
 |------|-------|---------|-------|
-| bàŋ [≈bang] | 'what' | bàŋháŋ [≈banghang] | 'why' |
-| kuà [≈kua] | 'who' | kuāá [≈kuaa] | 'whose' |
-| | | kuàn [≈kuan] | 'whom' |
-| kɔí [≈koi] | 'which' | kɔíàɁ [≈koiah] | 'where' |
-| cìkciáŋ [≈cikciang] | 'when' | — | — |
+| bàŋ | 'what' | bàŋháŋ | 'why' | <!-- ≈Bible: bang banghang -->
+| kuà | 'who' | kuāá | 'whose' | <!-- ≈Bible: kua kuaa -->
+| | | kuàn | 'whom' | <!-- ≈Bible: kuan -->
+| kɔí | 'which' | kɔíàɁ | 'where' | <!-- ≈Bible: koi koiah -->
+| cìkciáŋ | 'when' | — | — | <!-- ≈Bible: cikciang -->
 
 ### 2.3 Wh-Question Position and Verb Stem (§7.4.1.5)
 
@@ -133,10 +133,10 @@ now   morning    what-Q   2SG   eat.2
 
 | Sukte | Gloss |
 |-------|-------|
-| bəŋ [≈bang] | 'what' |
-| kuə [≈kua] | 'who' |
-| koi-əʔ [≈ah] | 'where' |
-| bəŋhun [≈banghun] | 'when' |
+| bəŋ | 'what' | <!-- ≈Bible: bang -->
+| kuə | 'who' | <!-- ≈Bible: kua -->
+| koi-əʔ | 'where' | <!-- ≈Bible: koi-ah -->
+| bəŋhun | 'when' | <!-- ≈Bible: banghun -->
 
 ```
 nəŋ    kuə    nə    hiam?
@@ -150,7 +150,8 @@ he-NOM    what  do     3SG  QP
 
 ### 3.3 Question Particles (§8.1.3.2)
 
-> "In Sukte, the interrogative clause is also formed by the question particles **hiam**, **diam** etc. It is important to note that the particle **diam** is mutually derived from **diŋ [≈ding]** 'will/shall' and **hiam** 'question particle'."
+> "In Sukte, the interrogative clause is also formed by the question particles **hiam**, **diam** etc. It is important to note that the particle **diam** is mutually derived from **diŋ** 'will/shall' and **hiam** 'question particle'."
+[≈Bible: ding]
 
 ```
 huətak   əʔ     kə    pai    diam?
@@ -182,17 +183,17 @@ you   medicine   2SG   eat   DECL
 |----------|-------|-------|
 | General Q | hiam / hia | hiam |
 | Irrealis Q | diam / dia | diam |
-| Simple Q | m / mɔ̀ [≈maw] | — |
+| Simple Q | m / mɔ̀ | — | <!-- ≈Bible: maw -->
 
 ### 4.2 Question Word Cognates
 
 | Gloss | Tedim | Sukte |
 |-------|-------|-------|
-| 'what' | bàŋ [≈bang] | bəŋ [≈bang] |
-| 'who' | kuà [≈kua] | kuə [≈kua] |
-| 'where' | kɔíàɁ [≈koiah] | koi-əʔ [≈ah] |
-| 'when' | cìkciáŋ [≈cikciang] | bəŋhun [≈banghun] |
-| 'why' | bàŋháŋ [≈banghang] | — |
+| 'what' | bàŋ | bəŋ | <!-- ≈Bible: bang bang -->
+| 'who' | kuà | kuə | <!-- ≈Bible: kua kua -->
+| 'where' | kɔíàɁ | koi-əʔ | <!-- ≈Bible: koiah koi-ah -->
+| 'when' | cìkciáŋ | bəŋhun | <!-- ≈Bible: cikciang banghun -->
+| 'why' | bàŋháŋ | — | <!-- ≈Bible: banghang -->
 
 ### 4.3 Question Formation Strategies
 
@@ -219,7 +220,8 @@ you   medicine   2SG   eat   DECL
 
 ## 5. Open Questions
 
-1. **diam etymology**: Is the reanalysis of díŋ [≈ding] + hiam > diam shared?
+1. **diam etymology**: Is the reanalysis of díŋ + hiam > diam shared?
+[≈Bible: ding]
 2. **Pitch contrasts**: How systematic is the intonation-meaning mapping?
 3. **Focus**: Does wh-fronting involve focus movement?
 4. **Echo questions**: Are there specialized echo question forms?

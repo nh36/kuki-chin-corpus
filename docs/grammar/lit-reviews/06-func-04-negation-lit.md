@@ -24,21 +24,23 @@ The negative **-kei** is described as an adverb that attaches to verbs.
 
 ### 2.1 Negative Markers (§5.8.2.1)
 
-> "There are two types of negative markers in Tedim Chin: **-keí [≈-kei]** and **-lɔù [≈-lo]**. These negative morphemes are marked on the verb."
+> "There are two types of negative markers in Tedim Chin: **-keí** and **-lɔù**. These negative morphemes are marked on the verb."
+[≈Bible: -kei -lo]
 
 **Distribution by verb stem:**
 
 | Marker | Stem | Alternant |
 |--------|------|-----------|
-| -lɔù [≈-lo] | Stem 1 | -lɔùʔ [≈-loh] |
-| -lɔùʔ [≈-loh] | Stem 2 | — |
-| -keí [≈-kei] | Both stems | — |
+| -lɔù | Stem 1 | -lɔùʔ | <!-- ≈Bible: -lo -loh -->
+| -lɔùʔ | Stem 2 | — | <!-- ≈Bible: -loh -->
+| -keí | Both stems | — | <!-- ≈Bible: -kei -->
 
 > "These two can never interchange their position."
 
 ### 2.2 -lɔù / -lɔùʔ NEG
 
-Used with irrealis **díŋ [≈ding]**:
+Used with irrealis **díŋ**:
+[≈Bible: ding]
 ```
 náŋ   íʔmú-lɔù      díŋ
 2SG   sleep.1-NEG.1 PURP
@@ -58,13 +60,16 @@ keí   paī-kéŋ
 'I didn't go'
 ```
 
-> "The first person agreement markers occur with the negative marker -keí [≈-kei]"
+> "The first person agreement markers occur with the negative marker -keí"
+[≈Bible: -kei]
 
-**Ungrammatical**: *keí [≈kei] paī-lɔú [≈pai-lo] ìŋ [≈ing] (cannot use -lɔù [≈-lo] with 1SG realis)
+**Ungrammatical**: *keí paī-lɔú ìŋ (cannot use -lɔù with 1SG realis)
+[≈Bible: kei pai-lo ing -lo]
 
 ### 2.4 Informal Negative -dàʔ (§5.8.2.1)
 
-> "Another negative morpheme **-dàʔ [≈-dah]** is not commonly used in written form but it is usually used in informal speech."
+> "Another negative morpheme **-dàʔ** is not commonly used in written form but it is usually used in informal speech."
+[≈Bible: -dah]
 
 ```
 né-dàʔ      níŋ
@@ -72,7 +77,8 @@ eat.1-NEG   1SG.IRR
 'I will rather not eat'
 ```
 
-Note: **dàʔ [≈dah]** also means 'sad' as a stative verb:
+Note: **dàʔ** also means 'sad' as a stative verb:
+[≈Bible: dah]
 ```
 dàʔ   lua     iŋ
 sad   very    1SG.RLS
@@ -109,7 +115,8 @@ today     rain  pour.1-NEG.1
 
 ### 2.7 Negative Imperative/Prohibitive (§7.4.2.3)
 
-> "In negative imperative or prohibitive, the negative particle keí [≈kei] is used to negate the imperative clause."
+> "In negative imperative or prohibitive, the negative particle keí is used to negate the imperative clause."
+[≈Bible: kei]
 
 ```
 paī   keí   ɔú
@@ -186,11 +193,11 @@ animal   kill   NEG.IMP
 
 | | Tedim | Sukte | Function |
 |---|-------|-------|----------|
-| General verbal | -keí [≈-kei] | kei | Main clausal negator |
-| Stem-sensitive | -lɔù [≈-lo]/-lɔùʔ [≈-loh] | — | Stems 1/2 |
-| Informal | -dàʔ [≈-dah] | — | Colloquial |
+| General verbal | -keí | kei | Main clausal negator | <!-- ≈Bible: -kei -->
+| Stem-sensitive | -lɔù/-lɔùʔ | — | Stems 1/2 | <!-- ≈Bible: -lo -loh -->
+| Informal | -dàʔ | — | Colloquial | <!-- ≈Bible: -dah -->
 | Nominal | — | lo | Copular/nominal |
-| Prohibitive | keí [≈kei] + ɔú [≈o] | ken | Negative imperative |
+| Prohibitive | keí + ɔú | ken | Negative imperative | <!-- ≈Bible: kei o -->
 
 ### 4.2 Structural Properties
 
@@ -199,7 +206,8 @@ animal   kill   NEG.IMP
 - Clausal scope (not constituent negation)
 
 **Tedim-specific**:
-- Stem alternation affects negator form (-lɔù [≈-lo] vs. -lɔùʔ [≈-loh])
+- Stem alternation affects negator form (-lɔù vs. -lɔùʔ)
+[≈Bible: -lo -loh]
 - Semantic difference between Stem 1-NEG (ongoing) vs. Stem 2-NEG (perfective)
 
 **Sukte-specific**:
@@ -209,9 +217,11 @@ animal   kill   NEG.IMP
 ### 4.3 Distinctive Findings
 
 **Zam Ngaih Cing's unique contributions**:
-1. Two-negator system (-keí [≈-kei] vs. -lɔù [≈-lo])
+1. Two-negator system (-keí vs. -lɔù)
+[≈Bible: -kei -lo]
 2. Stem-sensitive negator alternation
-3. Informal register negator -dàʔ [≈-dah]
+3. Informal register negator -dàʔ
+[≈Bible: -dah]
 4. Semantic difference tied to verb stem selection
 
 **Singh's unique contributions**:
@@ -222,11 +232,14 @@ animal   kill   NEG.IMP
 
 ## 5. Open Questions
 
-1. **Etymology**: Are Tedim -keí [≈-kei] and Sukte kei cognate? What is the source?
-2. **-lɔù [≈-lo] origin**: Is -lɔù [≈-lo] related to Mizo lo or a separate development?
+1. **Etymology**: Are Tedim -keí and Sukte kei cognate? What is the source?
+[≈Bible: -kei]
+2. **-lɔù origin**: Is -lɔù related to Mizo lo or a separate development?
+[≈Bible: -lo -lo]
 3. **Scope**: What is the interaction of negation with focus, quantifiers?
 4. **Double negation**: Are there constructions with multiple negators?
-5. **-dàʔ [≈-dah] etymology**: Is the 'sad' meaning primary or derived?
+5. **-dàʔ etymology**: Is the 'sad' meaning primary or derived?
+[≈Bible: -dah]
 
 ---
 

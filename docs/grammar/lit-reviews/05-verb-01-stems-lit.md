@@ -67,7 +67,8 @@ Examples:
 
 > "The following have a final velar nasal in Form I and a final alveolar nasal in Form II" (p. 74):
 
-- *-xaiŋ [≈-khaing], -xain* 'to lift up'
+- *-xaiŋ, -xain* 'to lift up'
+[≈Bible: -khaing]
 - *-pa:ŋ, -pa:n* 'to defend'
 - *-tua:ŋ, -tua:n* 'to perch'
 
@@ -150,13 +151,13 @@ Table 31: Verb Stems
 
 | Stem 1 | Stem 2 | Gloss |
 |--------|--------|-------|
-| mù [≈mu] | mùʔ [≈muh] | 'see' |
-| ŋèn [≈ngen] | ŋèt [≈nget] | 'ask' |
-| kàp [≈kap] | kàʔ [≈kah] | 'cry' |
-| muāŋ [≈muang] | muàn [≈muan] | 'trust' |
-| sám [≈sam] | sàp [≈sap] | 'call' |
-| tēl [≈tel] | tèl [≈tel] | 'choose' |
-| paī [≈pai] | paì [≈pai] | 'go' |
+| mù | mùʔ | 'see' | <!-- ≈Bible: mu muh -->
+| ŋèn | ŋèt | 'ask' | <!-- ≈Bible: ngen nget -->
+| kàp | kàʔ | 'cry' | <!-- ≈Bible: kap kah -->
+| muāŋ | muàn | 'trust' | <!-- ≈Bible: muang muan -->
+| sám | sàp | 'call' | <!-- ≈Bible: sam sap -->
+| tēl | tèl | 'choose' | <!-- ≈Bible: tel tel -->
+| paī | paì | 'go' | <!-- ≈Bible: pai pai -->
 
 ### Phonological Patterns
 
@@ -179,13 +180,16 @@ Zam Ngaih Cing provides detailed syntactic environments:
 - Declarative affirmative (§5.5.2)
 - Interrogative (§5.5.3)
 - Conditional protasis (§5.5.5)
-- With causative suffix *-sàk [≈-sak]* (§5.8.2.2)
+- With causative suffix *-sàk* (§5.8.2.2)
+[≈Bible: -sak]
 - Pre-verbal directionals (§5.8.1.3)
 
 **Stem 2 environments:**
 - Negative clauses (§5.5.4): "The Stem 2 verb occurs before the negative marker"
-- With benefactive *-sàk [≈-sak]* (§6.6.1.2.1): "When Stem 2 verb occurs with the suffix *-sàk [≈-sak]*, it acts as a valence increasing operator and gives a benefactive meaning"
-- With comitative *-pìɁ [≈-pih]* (§6.6.1.2.2): "A comitative applicative occurs after Stem 2 verb"
+- With benefactive *-sàk* (§6.6.1.2.1): "When Stem 2 verb occurs with the suffix *-sàk*, it acts as a valence increasing operator and gives a benefactive meaning"
+[≈Bible: -sak -sak]
+- With comitative *-pìɁ* (§6.6.1.2.2): "A comitative applicative occurs after Stem 2 verb"
+[≈Bible: -pih]
 - Nominalization (§3.3.6.5.2.1): "In nominalization, the verb is in Stem 2"
 
 ### Adjective Stem Alternation
@@ -196,9 +200,9 @@ Zam Ngaih Cing also documents that adjectives show the same alternation pattern:
 
 | Stem 1 | Stem 2 | Gloss |
 |--------|--------|-------|
-| hɔìʔ [≈hoih] | hɔìʔ [≈hoih] | 'good' |
-| sāŋ [≈sang] | saǹ | 'tall' |
-| tʰaū [≈thau] | tʰaù [≈thau] | 'fat' |
+| hɔìʔ | hɔìʔ | 'good' | <!-- ≈Bible: hoih hoih -->
+| sāŋ | saǹ | 'tall' | <!-- ≈Bible: sang -->
+| tʰaū | tʰaù | 'fat' | <!-- ≈Bible: thau thau -->
 
 ---
 

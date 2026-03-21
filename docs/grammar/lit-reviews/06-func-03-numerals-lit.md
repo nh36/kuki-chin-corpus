@@ -20,53 +20,61 @@ Henderson does not provide a dedicated section on numerals but uses numerals in 
 
 | Tedim Chin | English |
 |------------|---------|
-| xàt [≈khat] | one |
-| nìʔ [≈nih] | two |
-| tʰūm [≈thum] | three |
-| lī [≈li] | four |
-| ŋā [≈nga] | five |
-| gùk [≈guk] | six |
-| ságìʔ [≈sagih] | seven |
-| giát [≈giat] | eight |
-| kuá [≈kua] | nine |
-| sɔ̀m [≈sawm] | ten |
-| zà [≈za] | hundred |
-| tùl [≈tul] | thousand |
+| xàt | one | <!-- ≈Bible: khat -->
+| nìʔ | two | <!-- ≈Bible: nih -->
+| tʰūm | three | <!-- ≈Bible: thum -->
+| lī | four | <!-- ≈Bible: li -->
+| ŋā | five | <!-- ≈Bible: nga -->
+| gùk | six | <!-- ≈Bible: guk -->
+| ságìʔ | seven | <!-- ≈Bible: sagih -->
+| giát | eight | <!-- ≈Bible: giat -->
+| kuá | nine | <!-- ≈Bible: kua -->
+| sɔ̀m | ten | <!-- ≈Bible: sawm -->
+| zà | hundred | <!-- ≈Bible: za -->
+| tùl | thousand | <!-- ≈Bible: tul -->
 
-> "All the numerals from 1 to 10 are monosyllabic with ságìʔ [≈sagih] 'seven' as an exception which is disyllabic."
+> "All the numerals from 1 to 10 are monosyllabic with ságìʔ 'seven' as an exception which is disyllabic."
+[≈Bible: sagih]
 
 ### 2.3 Decimal Compounding
 
 Higher numerals are formed through:
-1. **Multiplication**: 20 = 10×2 (sɔ̀m-nìʔ [≈sawm-nih])
-2. **Addition**: 11-19 = 10+N (sɔ̀m-xàt [≈sawm-khat], etc.)
+1. **Multiplication**: 20 = 10×2 (sɔ̀m-nìʔ)
+[≈Bible: sawm-nih]
+2. **Addition**: 11-19 = 10+N (sɔ̀m-xàt, etc.)
+[≈Bible: sawm-khat]
 3. **Combined**: 25 = 10×2+5
 
 ### 2.4 Ordinals (§3.3.3.5.2)
 
-Ordinals are formed by suffixing **-nā [≈-na]** to cardinals:
+Ordinals are formed by suffixing **-nā** to cardinals:
+[≈Bible: -na]
 
 | Tedim Chin | English |
 |------------|---------|
-| xàtnā [≈khatna] | first |
-| nìʔnā [≈nihna] | second |
-| tʰūmnā [≈thumna] | third |
-| līnā [≈lina] | fourth |
-| ŋānā [≈ngana] | fifth |
+| xàtnā | first | <!-- ≈Bible: khatna -->
+| nìʔnā | second | <!-- ≈Bible: nihna -->
+| tʰūmnā | third | <!-- ≈Bible: thumna -->
+| līnā | fourth | <!-- ≈Bible: lina -->
+| ŋānā | fifth | <!-- ≈Bible: ngana -->
 
-> "The ordinal number for first xàtnā [≈khatna] is also used interchangeably with másà [≈masa] which is not a cardinal number."
+> "The ordinal number for first xàtnā is also used interchangeably with másà which is not a cardinal number."
+[≈Bible: khatna masa]
 
-**másà [≈masa]** vs. **xàtnā [≈khatna]**:
-- **xàtnā [≈khatna]**: merit-wise ranking
-- **másà [≈masa]**: temporal/sequential "first" (before vs. after)
+**másà** vs. **xàtnā**:
+[≈Bible: masa khatna]
+- **xàtnā**: merit-wise ranking
+[≈Bible: khatna]
+- **másà**: temporal/sequential "first" (before vs. after)
+[≈Bible: masa]
 
 ### 2.5 Fractionals (§3.3.3.5.3)
 
 | Form | Gloss |
 |------|-------|
-| lāŋ [≈lang] | 'half' |
-| sèʔlísuàʔsèʔxàt [≈sehlisuahsehkhat] | 'one-fourth' |
-| sèʔŋásuàʔsèʔtʰūm [≈sehngasuahsehthum] | 'three-fifth' |
+| lāŋ | 'half' | <!-- ≈Bible: lang -->
+| sèʔlísuàʔsèʔxàt | 'one-fourth' | <!-- ≈Bible: sehlisuahsehkhat -->
+| sèʔŋásuàʔsèʔtʰūm | 'three-fifth' | <!-- ≈Bible: sehngasuahsehthum -->
 
 ### 2.6 Distributives (§3.3.3.5.4)
 
@@ -74,15 +82,18 @@ Formed by **total reduplication** of cardinals:
 
 | Form | Gloss |
 |------|-------|
-| xàt [≈khat]~xàt [≈khat] | 'one by one' |
-| nìʔ [≈nih]~nìʔ [≈nih] | 'two by two' |
-| tʰūm [≈thum]~tʰūm [≈thum] | 'three by three' |
+| xàt~xàt | 'one by one' | <!-- ≈Bible: khat khat -->
+| nìʔ~nìʔ | 'two by two' | <!-- ≈Bible: nih nih -->
+| tʰūm~tʰūm | 'three by three' | <!-- ≈Bible: thum thum -->
 
 > "Gil (2013: 3) stated reduplication to be 'the most common morphological strategy for the formation of distributive numerals across the world's languages'."
 
-Also formed with **ciát [≈ciat]/ték [≈tek]** 'each':
-- `xàt [≈khat] ciát [≈ciat]` 'one each'
-- `lī [≈li] ciát [≈ciat]` 'four each'
+Also formed with **ciát/ték** 'each':
+[≈Bible: ciat tek]
+- `xàt ciát` 'one each'
+[≈Bible: khat ciat]
+- `lī ciát` 'four each'
+[≈Bible: li ciat]
 
 ---
 
@@ -92,24 +103,28 @@ Also formed with **ciát [≈ciat]/ték [≈tek]** 'each':
 
 | Sukte | Gloss | PTB |
 |-------|-------|-----|
-| khət [≈khat] | 'one' | — |
-| niʔ [≈nih] | 'two' | *nyi |
+| khət | 'one' | — | <!-- ≈Bible: khat -->
+| niʔ | 'two' | *nyi | <!-- ≈Bible: nih -->
 | thum | 'three' | — |
 | li | 'four' | *li |
-| ŋə [≈nga] | 'five' | *ŋa [≈nga] |
+| ŋə | 'five' | *ŋa | <!-- ≈Bible: nga nga -->
 | guk | 'six' | — |
-| səgiʔ [≈sagih] | 'seven' | — |
-| giət [≈giat] | 'eight' | — |
-| kuə [≈kua] | 'nine' | *ku |
+| səgiʔ | 'seven' | — | <!-- ≈Bible: sagih -->
+| giət | 'eight' | — | <!-- ≈Bible: giat -->
+| kuə | 'nine' | *ku | <!-- ≈Bible: kua -->
 | som | 'ten' | — |
 
-> "Numeral roots like niʔ [≈nih] 'two', li 'four', ŋə [≈nga] 'five', and kuə [≈kua] 'nine' seems to be Proto-Tibeto-Burman numerals as *nyi, *li, *ŋa [≈nga], *ku respectively (Benedict 1972, Matisoff 2003)."
+> "Numeral roots like niʔ 'two', li 'four', ŋə 'five', and kuə 'nine' seems to be Proto-Tibeto-Burman numerals as *nyi, *li, *ŋa, *ku respectively (Benedict 1972, Matisoff 2003)."
+[≈Bible: nih nga kua nga]
 
 ### 3.2 Compound Formation (§4.4.1.2)
 
-Sukte uses **leʔ [≈leh]** as additive marker:
-- `som + leʔ [≈leh] + khət [≈khat]` = 'eleven' (10 + 1)
-- `som + leʔ [≈leh] + niʔ [≈nih]` = 'twelve' (10 + 2)
+Sukte uses **leʔ** as additive marker:
+[≈Bible: leh]
+- `som + leʔ + khət` = 'eleven' (10 + 1)
+[≈Bible: som + leh + khat]
+- `som + leʔ + niʔ` = 'twelve' (10 + 2)
+[≈Bible: som + leh + nih]
 
 ---
 
@@ -119,38 +134,40 @@ Sukte uses **leʔ [≈leh]** as additive marker:
 
 | Gloss | Tedim | Sukte | PTB |
 |-------|-------|-------|-----|
-| one | xàt [≈khat] | khət [≈khat] | — |
-| two | nìʔ [≈nih] | niʔ [≈nih] | *nyi |
-| three | tʰūm [≈thum] | thum | — |
-| four | lī [≈li] | li | *li |
-| five | ŋā [≈nga] | ŋə [≈nga] | *ŋa [≈nga] |
-| six | gùk [≈guk] | guk | — |
-| seven | ságìʔ [≈sagih] | səgiʔ [≈sagih] | — |
-| eight | giát [≈giat] | giət [≈giat] | — |
-| nine | kuá [≈kua] | kuə [≈kua] | *ku |
-| ten | sɔ̀m [≈sawm] | som | — |
+| one | xàt | khət | — | <!-- ≈Bible: khat khat -->
+| two | nìʔ | niʔ | *nyi | <!-- ≈Bible: nih nih -->
+| three | tʰūm | thum | — | <!-- ≈Bible: thum -->
+| four | lī | li | *li | <!-- ≈Bible: li -->
+| five | ŋā | ŋə | *ŋa | <!-- ≈Bible: nga nga nga -->
+| six | gùk | guk | — | <!-- ≈Bible: guk -->
+| seven | ságìʔ | səgiʔ | — | <!-- ≈Bible: sagih sagih -->
+| eight | giát | giət | — | <!-- ≈Bible: giat giat -->
+| nine | kuá | kuə | *ku | <!-- ≈Bible: kua kua -->
+| ten | sɔ̀m | som | — | <!-- ≈Bible: sawm -->
 
 ### 4.2 Ordinal Formation
 
 | | Tedim | Sukte |
 |---|-------|-------|
-| Ordinal suffix | -nā [≈-na] | Not documented |
-| "First" alternate | másà [≈masa] | — |
+| Ordinal suffix | -nā | Not documented | <!-- ≈Bible: -na -->
+| "First" alternate | másà | — | <!-- ≈Bible: masa -->
 
 ### 4.3 Distributive Strategies
 
 | Strategy | Tedim | Sukte |
 |----------|-------|-------|
-| Reduplication | xàt [≈khat]~xàt [≈khat] | — |
-| Each marker | ciát [≈ciat]/ték [≈tek] | — |
+| Reduplication | xàt~xàt | — | <!-- ≈Bible: khat khat -->
+| Each marker | ciát/ték | — | <!-- ≈Bible: ciat tek -->
 
 ---
 
 ## 5. Open Questions
 
 1. **Classifiers**: Do numerals require classifiers? Zam Ngaih Cing documents noun classifiers but not numeral classifiers.
-2. **Ordinal etymology**: What is the origin of ordinal suffix -nā [≈-na]?
-3. **másà [≈masa]**: Is this related to PTB *ma 'first'?
+2. **Ordinal etymology**: What is the origin of ordinal suffix -nā?
+[≈Bible: -na]
+3. **másà**: Is this related to PTB *ma 'first'?
+[≈Bible: masa]
 
 ---
 

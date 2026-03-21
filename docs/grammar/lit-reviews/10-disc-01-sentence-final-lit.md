@@ -64,8 +64,8 @@ heal.1 complete  1PL.RLS  DECL
 
 | | Singular | Plural |
 |---|----------|--------|
-| First person | iŋ [≈ing] (RLS) / niŋ [≈ning] (IRR) | uŋ [≈ung] (excl.) / haŋ [≈hang] (incl.) |
-| Second person | teɁ [≈teh] | uɁteɁ [≈uhteh] |
+| First person | iŋ (RLS) / niŋ (IRR) | uŋ (excl.) / haŋ (incl.) | <!-- ≈Bible: ing ning ung hang -->
+| Second person | teɁ | uɁteɁ | <!-- ≈Bible: teh uhteh -->
 
 Example from narrative:
 ```
@@ -76,7 +76,8 @@ sky-LOC   comet       want-PROG   1SG.RLS  say.1 INTJ
 
 ### 2.3 Imperative Markers (§5.7.1)
 
-> "An imperative mood occurs with Stem 1 verb. It is marked by **ɔù [≈o]**, **dìɁ [≈dih]** and **vē [≈ve]**."
+> "An imperative mood occurs with Stem 1 verb. It is marked by **ɔù**, **dìɁ** and **vē**."
+[≈Bible: o dih ve]
 
 ```
 paī   ɔú
@@ -92,8 +93,10 @@ sit.1 IMP
 
 See dedicated report on interrogatives. Key particles:
 - **hiam / hia** — question particle
-- **diam / dia** — irrealis question (< díŋ [≈ding] + hiam)
-- **m / mɔ̀ [≈maw]** — simple question
+- **diam / dia** — irrealis question (< díŋ + hiam)
+[≈Bible: ding]
+- **m / mɔ̀** — simple question
+[≈Bible: maw]
 
 ---
 
@@ -128,7 +131,8 @@ sit   IMP
 ### 3.3 Question Particles (§8.1.3)
 
 - **hiam** — general question particle
-- **diam** — irrealis question (< diŋ [≈ding] + hiam)
+- **diam** — irrealis question (< diŋ + hiam)
+[≈Bible: ding]
 
 ```
 nəŋ   saŋsia   nə    hiam?
@@ -156,10 +160,10 @@ God-NOM     you   DIR   save  WISH
 | Sequential | leh | — | Inconclusive |
 | Polite DECL | e | — | — |
 | Strong DECL | ei | — | — |
-| Imperative | ɔù [≈o], dìɁ [≈dih], vē [≈ve] | in | — |
+| Imperative | ɔù, dìɁ, vē | in | — | <!-- ≈Bible: o dih ve -->
 | Question | hiam, m | hiam | — |
 | Irrealis Q | diam | diam | — |
-| Wish | — | təhen [≈tahen] | — |
+| Wish | — | təhen | — | <!-- ≈Bible: tahen -->
 
 ### 4.2 Person Agreement as Sentence-Final
 
@@ -167,11 +171,11 @@ Tedim Chin has **person agreement markers** that appear sentence-finally:
 
 | | Realis | Irrealis |
 |---|--------|----------|
-| 1SG | iŋ [≈ing] | niŋ [≈ning] |
-| 1PL.EXCL | uŋ [≈ung] | — |
-| 1PL.INCL | haŋ [≈hang] | — |
-| 2SG | teɁ [≈teh] | — |
-| 2PL | uɁteɁ [≈uhteh] | — |
+| 1SG | iŋ | niŋ | <!-- ≈Bible: ing ning -->
+| 1PL.EXCL | uŋ | — | <!-- ≈Bible: ung -->
+| 1PL.INCL | haŋ | — | <!-- ≈Bible: hang -->
+| 2SG | teɁ | — | <!-- ≈Bible: teh -->
+| 2PL | uɁteɁ | — | <!-- ≈Bible: uhteh -->
 
 ### 4.3 Mood-Particle Correlations (Henderson)
 
@@ -200,7 +204,8 @@ Tedim Chin has **person agreement markers** that appear sentence-finally:
 ## 5. Open Questions
 
 1. **e/ei distribution**: What contexts trigger each declarative marker?
-2. **leh grammaticalization**: Is leh related to leɁ [≈leh] 'if' (conditional)?
+2. **leh grammaticalization**: Is leh related to leɁ 'if' (conditional)?
+[≈Bible: leh]
 3. **Person markers**: Are these clitics or independent particles?
 4. **Evidentiality**: Are there evidential distinctions in sentence-final position?
 5. **Mirativity**: Are there markers for unexpected information?

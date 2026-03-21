@@ -24,8 +24,8 @@ This suggests awareness of possessive prefix patterns without systematic treatme
 
 | Person | Singular | Plural |
 |--------|----------|--------|
-| First | kà [≈ka] 'my' | ì 'our (excl.)', eí [≈ei] 'our (incl.)' |
-| Second | nà [≈na] 'your' | — |
+| First | kà 'my' | ì 'our (excl.)', eí 'our (incl.)' | <!-- ≈Bible: ka ei -->
+| Second | nà 'your' | — | <!-- ≈Bible: na -->
 | Third | à 'his/her' | — |
 
 **Key observation**: Tedim Chin has an **inclusive-exclusive distinction** in first person plural possession.
@@ -66,11 +66,14 @@ keí         → keí (with tonal modification)
 
 ### 2.4 Genitive Case (§3.3.3.3.4)
 
-> "Genitive case is marked by -á. It marks for ownership. The possessive pronouns such as kà [≈ka], nà [≈na] and à also represents ownership for first person, second person and third person respectively."
+> "Genitive case is marked by -á. It marks for ownership. The possessive pronouns such as kà, nà and à also represents ownership for first person, second person and third person respectively."
+[≈Bible: -a ka na]
 
 **Three strategies for marking possession**:
-1. Possessive pronouns: kà [≈ka], nà [≈na], à
+1. Possessive pronouns: kà, nà, à
+[≈Bible: ka na]
 2. Genitive suffix: -á
+[≈Bible: -a]
 3. Tonal modification on personal names/pronouns
 
 Example with genitive:
@@ -90,9 +93,9 @@ keí         á
 
 | Prefix | Gloss |
 |--------|-------|
-| kə- [≈ka-] | 1SG |
-| nə- [≈na-] | 2SG |
-| ə- [≈a-] | 3SG |
+| kə- | 1SG | <!-- ≈Bible: ka -->
+| nə- | 2SG | <!-- ≈Bible: na -->
+| ə- | 3SG |
 
 ### 3.2 Kinship Terms (§4.2)
 
@@ -100,10 +103,10 @@ keí         á
 
 | Form | Gloss |
 |------|-------|
-| kə-nu [≈ka-nu] | 'my mother' |
-| kə-pa [≈ka-pa] | 'my father' |
-| nə-nu [≈na-nu] | 'your mother' |
-| ə-pa [≈a-pa] | 'his/her father' |
+| kə-nu | 'my mother' | <!-- ≈Bible: ka-nu -->
+| kə-pa | 'my father' | <!-- ≈Bible: ka-pa -->
+| nə-nu | 'your mother' | <!-- ≈Bible: na-nu -->
+| ə-pa | 'his/her father' | <!-- ≈Bible: a-pa -->
 
 ### 3.3 Body Parts
 
@@ -111,10 +114,10 @@ keí         á
 
 | Form | Gloss |
 |------|-------|
-| ə-keŋ [≈a-keng] | 'his/her foot' |
-| nə-khut [≈na-khut] | 'your hand' |
-| kə-keŋ [≈ka-keng] | 'my foot' |
-| ə-ŋoŋ [≈a-ngong] | 'his/her neck' |
+| ə-keŋ | 'his/her foot' | <!-- ≈Bible: a-keng -->
+| nə-khut | 'your hand' | <!-- ≈Bible: na-khut -->
+| kə-keŋ | 'my foot' | <!-- ≈Bible: ka-keng -->
+| ə-ŋoŋ | 'his/her neck' | <!-- ≈Bible: a-ngong -->
 
 ### 3.4 Genitive Case Marker -i (§4.5.4)
 
@@ -134,18 +137,18 @@ this     Merry-GEN      house COP
 
 | | Tedim | Sukte |
 |---|-------|-------|
-| 1SG | kà [≈ka] | kə [≈ka] |
-| 2SG | nà [≈na] | nə [≈na] |
+| 1SG | kà | kə | <!-- ≈Bible: ka ka -->
+| 2SG | nà | nə | <!-- ≈Bible: na na -->
 | 3SG | à | ə |
 | 1PL.EXCL | ì | — |
-| 1PL.INCL | eí [≈ei] | — |
+| 1PL.INCL | eí | — | <!-- ≈Bible: ei -->
 
 ### 4.2 Possession Strategies
 
 | Strategy | Tedim | Sukte |
 |----------|-------|-------|
 | Pronominal prefixes | ✓ | ✓ |
-| Genitive suffix | -á | -i |
+| Genitive suffix | -á | -i | <!-- ≈Bible: -a -->
 | Tonal marking | ✓ (ZNC) | Not documented |
 
 ### 4.3 Inalienable Possession
@@ -161,6 +164,7 @@ Both languages treat **kinship terms** and **body parts** as inherently possesse
 
 **Singh's contribution**:
 - Documents genitive marker -i in Sukte (cognate with Tedim -á?)
+[≈Bible: -a]
 - Shows systematic bound roots for kin terms and body parts
 
 ---
@@ -169,6 +173,7 @@ Both languages treat **kinship terms** and **body parts** as inherently possesse
 
 1. **Tonal possession**: Is this productive or limited to certain contexts?
 2. **Genitive cognates**: Are Tedim -á and Sukte -i historically related?
+[≈Bible: -a]
 3. **Alienability**: Is there a systematic alienable/inalienable distinction beyond kin terms and body parts?
 4. **Plural possession**: How is plural possessor marked when possessee is inherently possessed?
 

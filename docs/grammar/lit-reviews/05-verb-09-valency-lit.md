@@ -72,12 +72,12 @@ Following Payne (1997), Zam Ngaih Cing identifies **suppletive causative pairs**
 
 | Non-Causative | Gloss | Causative | Gloss |
 |---------------|-------|-----------|-------|
-| sī [≈si] | 'die' | tʰàt [≈that] | 'kill' |
-| paī [≈pai] | 'go' | sl | 'send' |
-| né [≈ne] | 'eat' | bāk [≈bak] | 'feed' |
-| lùm [≈lum] | 'lie down' | siál [≈sial] | 'lay down' |
-| sín [≈sin] | 'learn' | hìlɁ [≈hilh] | 'teach' |
-| mù [≈mu] | 'see' | làk [≈lak] | 'show' |
+| sī | 'die' | tʰàt | 'kill' | <!-- ≈Bible: si that -->
+| paī | 'go' | sl | 'send' | <!-- ≈Bible: pai -->
+| né | 'eat' | bāk | 'feed' | <!-- ≈Bible: ne bak -->
+| lùm | 'lie down' | siál | 'lay down' | <!-- ≈Bible: lum sial -->
+| sín | 'learn' | hìlɁ | 'teach' | <!-- ≈Bible: sin hilh -->
+| mù | 'see' | làk | 'show' | <!-- ≈Bible: mu lak -->
 
 ### 2.3 Aspiration-Based Causatives (Table 37)
 
@@ -85,41 +85,53 @@ Zam Ngaih Cing documents causative pairs distinguished by aspiration in bilabial
 
 | Non-Causative | Causative | Gloss |
 |---------------|-----------|-------|
-| púk [≈puk] 'fall' | pʰúk [≈phuk] 'fell' | |
-| tām [≈tam] 'stay back' | tʰām [≈tham] 'delayed stay' | |
-| kià [≈kia] 'fall down' | xià [≈khia] 'drop' | |
-| kaī [≈kai] 'suspense' | xaī [≈khai] 'hang' | |
+| púk 'fall' | pʰúk 'fell' | | <!-- ≈Bible: puk phuk -->
+| tām 'stay back' | tʰām 'delayed stay' | | <!-- ≈Bible: tam tham -->
+| kià 'fall down' | xià 'drop' | | <!-- ≈Bible: kia khia -->
+| kaī 'suspense' | xaī 'hang' | | <!-- ≈Bible: kai khai -->
 
 > "The aspirated stop shows causative action and increase the number of argument to one whereas the unaspirated stop occurs in an intransitive clause."
 
 Examples:
-- (426) `klsíŋ-kúŋ [≈klsing-kung] púk-sùk [≈puk-suk]` "The guava tree fell down" (NON-CAUSATIVE)
-- (428) `génpū-ín [≈genpu-in] heì [≈hei] tɔ̀Ɂ [≈tawh] klsíŋ-kúŋ [≈klsing-kung] pʰúk [≈phuk]` "Genpu felled the guava tree with an axe" (CAUSATIVE)
+- (426) `klsíŋ-kúŋ púk-sùk` "The guava tree fell down" (NON-CAUSATIVE)
+[≈Bible: klsing-kung puk-suk]
+- (428) `génpū-ín heì tɔ̀Ɂ klsíŋ-kúŋ pʰúk` "Genpu felled the guava tree with an axe" (CAUSATIVE)
+[≈Bible: genpu-in hei tawh klsing-kung phuk]
 
 ### 2.4 Morphological Causative (§6.6.1.1.2)
 
 Zam Ngaih Cing confirms Henderson's analysis:
 
-> "According to Henderson (1965: 83), when Stem 1 verb (which she called it as Form I) is followed by -sàk [≈-sak], it resulted in derived causative verbs."
+> "According to Henderson (1965: 83), when Stem 1 verb (which she called it as Form I) is followed by -sàk, it resulted in derived causative verbs."
+[≈Bible: -sak]
 
 Example:
-- (430) `zātɔúpá-n [≈zatopa-n] dāmlɔú-té [≈damlo-te] tùtná-nuám-àɁ [≈tutna-nuam-ah] tú-sàk [≈tu-sak]`
+- (430) `zātɔúpá-n dāmlɔú-té tùtná-nuám-àɁ tú-sàk`
+[≈Bible: zatopa-n damlo-te tutna-nuam-ah tu-sak]
   - 'The doctor made/let the patients sit on a comfortable seat'
 
 She also documents two additional causative prefixes:
-1. **sù- [≈su-]** prefix: Changes meaning to "action done by another person"
-   - (433) `meí [≈mei] mìt [≈mit]` "The light goes off"
-   - (434) `íncíŋpá-n [≈incingpa-n] meí [≈mei] sù-mìt [≈su-mit] dèn [≈den]` "The watchman regularly puts off the light"
+1. **sù-** prefix: Changes meaning to "action done by another person"
+[≈Bible: su]
+   - (433) `meí mìt` "The light goes off"
+   [≈Bible: mei mit]
+   - (434) `íncíŋpá-n meí sù-mìt dèn` "The watchman regularly puts off the light"
+   [≈Bible: incingpa-n mei su-mit den]
 
-2. **hìɁ [≈hih]** "do/make": Used with stative verbs
-   - (436) `hìɁ [≈hih] vm` "make it black/blacken"
-   - (437) `hìɁ [≈hih] tuí [≈tui]` "make it watery/liquify"
+2. **hìɁ** "do/make": Used with stative verbs
+[≈Bible: hih]
+   - (436) `hìɁ vm` "make it black/blacken"
+   [≈Bible: hih vm]
+   - (437) `hìɁ tuí` "make it watery/liquify"
+   [≈Bible: hih tui]
 
 ### 2.5 Double Causatives (§6.6.1.1.3)
 
 Morphological causatives can co-occur:
-- (438) `māŋpū-ín [≈mangpu-in] lámpí [≈lampi] mͻ̄tͻ̄ [≈mawtaw] hìɁ-siá-sàk [≈hih-sia-sak]` "Mangpu caused/made the vehicle to destroy the road"
-- (439) `à pū-ún [≈pu-un] naūpáŋ-té [≈naupang-te] meí [≈mei] sù-mìt-sàk [≈su-mit-sak]` "Their grandfather caused/made the children put off the light"
+- (438) `māŋpū-ín lámpí mͻ̄tͻ̄ hìɁ-siá-sàk` "Mangpu caused/made the vehicle to destroy the road"
+[≈Bible: mangpu-in lampi mawtaw hih-sia-sak]
+- (439) `à pū-ún naūpáŋ-té meí sù-mìt-sàk` "Their grandfather caused/made the children put off the light"
+[≈Bible: a pu-un naupang-te mei su-mit-sak]
 
 ### 2.6 Applicatives (§6.6.1.2)
 
@@ -127,64 +139,87 @@ Zam Ngaih Cing identifies four applicative constructions, **all requiring Stem 2
 
 #### 2.6.1 Benefactive -sàk (§6.6.1.2.1)
 
-> "When Stem 2 verb occurs with the suffix -sàk [≈-sak], it acts as a valence increasing operator and gives a benefactive meaning."
+> "When Stem 2 verb occurs with the suffix -sàk, it acts as a valence increasing operator and gives a benefactive meaning."
+[≈Bible: -sak]
 
-- (440) `kàmpū-ín [≈kampu-in] dìmnú [≈dimnu] sáŋsáp [≈sangsap] díŋ [≈ding] piák-sàk [≈piak-sak]` "Kampu paid for Dimnu's school fee"
-- (441) `niāŋpí-ín [≈niangpi-in] à nú [≈nu] puánzā [≈puanza] díŋ [≈ding] leì-sàk [≈lei-sak]` "Niangpi bought a shawl for her mother"
+- (440) `kàmpū-ín dìmnú sáŋsáp díŋ piák-sàk` "Kampu paid for Dimnu's school fee"
+[≈Bible: kampu-in dimnu sangsap ding piak-sak]
+- (441) `niāŋpí-ín à nú puánzā díŋ leì-sàk` "Niangpi bought a shawl for her mother"
+[≈Bible: niangpi-in a nu puanza ding lei-sak]
 
 #### 2.6.2 Comitative -pìɁ (§6.6.1.2.2)
 
-> "A comitative applicative occurs after Stem 2 verb. It is marked by -pìɁ [≈-pih]."
+> "A comitative applicative occurs after Stem 2 verb. It is marked by -pìɁ."
+[≈Bible: -pih]
 
-- (443) `pá [≈pa] hāŋ-ín [≈hang-in] à ín-àɁ [≈in-ah] zín-té [≈zin-te] án [≈an] nék-pìɁ [≈nek-pih]` "Uncle Hang ate food (together) with the guests"
-- (444) *`pá [≈pa] hāŋ-ín [≈hang-in] à ín-àɁ [≈in-ah] zín-té [≈zin-te] án [≈an] né-pìɁ [≈ne-pih]` (UNGRAMMATICAL - Stem 1)
+- (443) `pá hāŋ-ín à ín-àɁ zín-té án nék-pìɁ` "Uncle Hang ate food (together) with the guests"
+[≈Bible: pa hang-in a in-ah zin-te an nek-pih]
+- (444) *`pá hāŋ-ín à ín-àɁ zín-té án né-pìɁ` (UNGRAMMATICAL - Stem 1)
+[≈Bible: pa hang-in a in-ah zin-te an ne-pih]
 
 #### 2.6.3 Relinquitive -sàn (§6.6.1.2.3)
 
-> "Relinquitive is another subtype of applicative in Tedim Chin. It involves two participants, one which is stative and the other which does the action. It is marked with -sàn [≈-san] and occurs with Stem 2 verb."
+> "Relinquitive is another subtype of applicative in Tedim Chin. It involves two participants, one which is stative and the other which does the action. It is marked with -sàn and occurs with Stem 2 verb."
+[≈Bible: -san]
 
 The term "relinquitive" comes from Peterson (1998) for Hakha Lai.
 
-- (448) `gìnpū [≈ginpu] ín-àɁ [≈in-ah] ciàɁ [≈ciah]` "Ginpu went/returned home"
-- (449) `gìnpū-ín [≈ginpu-in] à nī [≈ni] ín-àɁ [≈in-ah] ciàɁ-sàn [≈ciah-san]` "Ginpu left his aunt for home"
+- (448) `gìnpū ín-àɁ ciàɁ` "Ginpu went/returned home"
+[≈Bible: ginpu in-ah ciah]
+- (449) `gìnpū-ín à nī ín-àɁ ciàɁ-sàn` "Ginpu left his aunt for home"
+[≈Bible: ginpu-in a ni in-ah ciah-san]
 
 #### 2.6.4 Additional Benefactive -xɔ̀m (§6.6.1.2.4)
 
 > "Valency can also be increased by another type of verb suffix which occurs with Stem 1 verb."
 
-- (450) `kà [≈ka] ínvéŋ-pá-ín [≈inveng-pa-in] kà [≈ka] síŋ [≈sing] díŋ [≈ding] zɔ́ŋ [≈zawng] puá-xɔ̀m [≈pua-khawm]` "My neighbour carried (for) my firewood also"
+- (450) `kà ínvéŋ-pá-ín kà síŋ díŋ zɔ́ŋ puá-xɔ̀m` "My neighbour carried (for) my firewood also"
+[≈Bible: ka inveng-pa-in ka sing ding zawng pua-khawm]
 
 ### 2.7 Valence Decreasing (§6.6.2)
 
 #### 2.7.1 Reflexives (§6.6.2.1)
 
 Two types:
-1. **Nominal reflexive**: Pronoun + `lèɁ [≈leh]` + pronoun
-   - (451) `ámàɁ [≈amah] lèɁ [≈leh] ámàɁ [≈amah] kī-nɔ́t [≈ki-nawt]` "He scrubbed himself"
+1. **Nominal reflexive**: Pronoun + `lèɁ` + pronoun
+[≈Bible: leh]
+   - (451) `ámàɁ lèɁ ámàɁ kī-nɔ́t` "He scrubbed himself"
+   [≈Bible: amah leh amah ki-nawt]
 
-2. **Verbal reflexive**: kì- [≈ki-] prefix
-   - (454) `ámàɁ [≈amah] kì-sèp [≈ki-sep]` "He/she did by him/herself"
+2. **Verbal reflexive**: kì- prefix
+[≈Bible: ki]
+   - (454) `ámàɁ kì-sèp` "He/she did by him/herself"
+   [≈Bible: amah ki-sep]
 
 #### 2.7.2 Reciprocals (§6.6.2.2)
 
-The reciprocal marker is `tuàɁ [≈tuah]`, requiring a plural subject:
-- (455) `ámaú [≈amau] kì-hùɁ [≈ki-huh] tuàɁ [≈tuah] ùɁ [≈uh]` "They helped each other"
+The reciprocal marker is `tuàɁ`, requiring a plural subject:
+[≈Bible: tuah]
+- (455) `ámaú kì-hùɁ tuàɁ ùɁ` "They helped each other"
+[≈Bible: amau ki-huh tuah uh]
 
 #### 2.7.3 Passive-like Construction (§6.6.2.3)
 
 Tedim Chin lacks a dedicated passive marker. Passive-like meaning is achieved through:
 1. Object topicalization
-2. Agent omission with kì- [≈ki-] prefix
+2. Agent omission with kì- prefix
+[≈Bible: ki]
 
-- (457) `cīŋnú-ìn [≈cingnu-in] án [≈an] huán [≈huan]` "Cingnu cooks food" (ACTIVE)
-- (458) `án [≈an] (pēn [≈pen]) cīŋnù-ìn [≈cingnu-in] huán [≈huan]` "Food is cooked by Cingnu" (PASSIVE)
-- (459) `án [≈an] kì-huán [≈ki-huan]` "Food is cooked" (AGENTLESS PASSIVE)
+- (457) `cīŋnú-ìn án huán` "Cingnu cooks food" (ACTIVE)
+[≈Bible: cingnu-in an huan]
+- (458) `án (pēn) cīŋnù-ìn huán` "Food is cooked by Cingnu" (PASSIVE)
+[≈Bible: an (pen) cingnu-in huan]
+- (459) `án kì-huán` "Food is cooked" (AGENTLESS PASSIVE)
+[≈Bible: an ki-huan]
 
 ### 2.8 Unique Contributions
 
-1. First to document **sù- [≈su-]** causative prefix
-2. First to systematically describe **hìɁ [≈hih]** as causative auxiliary
-3. Only source documenting **-xɔ̀m [≈-khawm]** benefactive with Stem 1
+1. First to document **sù-** causative prefix
+[≈Bible: su]
+2. First to systematically describe **hìɁ** as causative auxiliary
+[≈Bible: hih]
+3. Only source documenting **-xɔ̀m** benefactive with Stem 1
+[≈Bible: -khawm]
 4. Provides explicit grammaticality judgments (* marking) for stem requirements
 
 ---
@@ -198,7 +233,8 @@ Otsuka argues -sak is a **bound morpheme/suffix**, not a verb, because:
 2. It always occurs immediately after a verb
 3. It does not alternate between Form I/II (unlike true verbs)
 
-> "It could be possible to consider the benefactive suffix -sàk [≈-sak] and the causative suffix -sàk [≈-sak] to be different from each other and treated as coincidentally homophonic morphemes, but the causative and benefactive suffix -sàk [≈-sak] should be classified as an identical suffix for the following reasons. First, the benefactive suffix -sàk [≈-sak] and the causative suffix -sàk [≈-sak] never co-occur..."
+> "It could be possible to consider the benefactive suffix -sàk and the causative suffix -sàk to be different from each other and treated as coincidentally homophonic morphemes, but the causative and benefactive suffix -sàk should be classified as an identical suffix for the following reasons. First, the benefactive suffix -sàk and the causative suffix -sàk never co-occur..."
+[≈Bible: -sak -sak -sak -sak -sak]
 
 ### 3.2 Form I + -sàk: Causative
 
@@ -209,15 +245,19 @@ The causative construction:
 > "The subject of the causative construction, i.e. causer, is marked with the ergative case marker -in."
 
 Example:
-- (25) `kèn [≈ken] liàn [≈lian] tú [≈tu] -sàk [≈-sak]` "I made Lian sit" (1SG.ERG Lian sit.I -SAK)
+- (25) `kèn liàn tú -sàk` "I made Lian sit" (1SG.ERG Lian sit.I -SAK)
+[≈Bible: ken lian tu -sak]
 
 ### 3.3 Form II + -sàk: Benefactive
 
-> "The use of -sàk [≈-sak] following a Form II verb often indicates the addition of another participant, which is semantically the beneficiary."
+> "The use of -sàk following a Form II verb often indicates the addition of another participant, which is semantically the beneficiary."
+[≈Bible: -sak]
 
 Examples:
-- (31) `liàn [≈lian] ìn [≈in] kì [≈ki]:kìm [≈kim] ú:i bèn [≈ben] -sàk [≈-sak]` "Lian drove out the dog for Kikim"
-- (32) `nú [≈nu] hà [≈ha]:u ìn [≈in] (*kéi [≈kei]) zùm [≈zum] àʔ [≈ah] óŋ [≈ong] pài [≈pai] -sàk [≈-sak]` "Aunty Hau went to the office for me"
+- (31) `liàn ìn kì:kìm ú:i bèn -sàk` "Lian drove out the dog for Kikim"
+[≈Bible: lian in ki:kim u:i ben -sak]
+- (32) `nú hà:u ìn (*kéi) zùm àʔ óŋ pài -sàk` "Aunty Hau went to the office for me"
+[≈Bible: nu ha:u in (*kei) zum ah ong pai -sak]
   - Note: Beneficiary with intransitive verbs cannot be overtly coded
 
 ### 3.4 Semantic Extensions
@@ -226,20 +266,26 @@ Beyond core benefactive, Form II + -sak can express:
 1. **Substitutive**: "X does something instead of Y" (Peterson 1989 for Hakha Lai)
 2. **Malefactive**: Action to Y's detriment
 
-> "The added participant by suffixing -sàk [≈-sak] to a Form II verb denotes not only a beneficiary, but also a person that is supposed to be involved in the effected event, and the maleficiary."
+> "The added participant by suffixing -sàk to a Form II verb denotes not only a beneficiary, but also a person that is supposed to be involved in the effected event, and the maleficiary."
+[≈Bible: -sak]
 
 ### 3.5 Interaction with Inverse Marking
 
-The inverse marker óŋ- [≈ong-] must appear when causee or beneficiary is a speech-act participant:
+The inverse marker óŋ- must appear when causee or beneficiary is a speech-act participant:
+[≈Bible: ong]
 
-- (23) `nú [≈nu] hà [≈ha]:u ìn [≈in] kéi [≈kei]/náŋ [≈nang] óŋ- [≈ong-] án [≈an] huán [≈huan] -sàk [≈-sak]` "Aunty Hau made me/you cook a meal"
-- (24) `nú [≈nu] hà [≈ha]:u ìn [≈in] kéi [≈kei]/náŋ [≈nang] óŋ- [≈ong-] án [≈an] huàn [≈huan] -sàk [≈-sak]` "Aunty Hau cooked a meal for me/you"
+- (23) `nú hà:u ìn kéi/náŋ óŋ- án huán -sàk` "Aunty Hau made me/you cook a meal"
+[≈Bible: nu ha:u in kei/nang ong- an huan -sak]
+- (24) `nú hà:u ìn kéi/náŋ óŋ- án huàn -sàk` "Aunty Hau cooked a meal for me/you"
+[≈Bible: nu ha:u in kei/nang ong- an huan -sak]
 
 ### 3.6 Middle + Causative: Pretense
 
-The combination kì- [≈ki-] (middle) + VERB.I + -sak yields "X pretends to do something":
+The combination kì- (middle) + VERB.I + -sak yields "X pretends to do something":
+[≈Bible: ki]
 
-- (30) `sà [≈sa]:nnù [≈nnu]: kì- [≈ki-] hòiʔ [≈hoih] -sàk [≈-sak]` "Sannu pretends to be beautiful"
+- (30) `sà:nnù: kì- hòiʔ -sàk` "Sannu pretends to be beautiful"
+[≈Bible: sa:nnu: ki- hoih -sak]
 
 ### 3.7 Unique Contributions
 
@@ -259,22 +305,25 @@ Otsuka identifies three productive applicative markers in Tedim Chin:
 | Marker | Function | Stem Requirement |
 |--------|----------|------------------|
 | -sak³ | Benefactive | Stem 2 (Form II) |
-| -piʔ [≈-pih]³ | Comitative | Stem 2 (Form II) |
+| -piʔ³ | Comitative | Stem 2 (Form II) | <!-- ≈Bible: -pih -->
 | -san³ | Relinquitive | Stem 2 (Form II) |
 
 ### 4.2 Benefactive -sak³
 
 When -sak³ follows Stem 2, it adds a beneficiary argument:
 
-> "受益接辞 -sak³，随伴接辞 -piʔ [≈-pih]³，放置接辞 -san³ をまとめて適用態標識（applicative marker）と呼ぶことにする"
+> "受益接辞 -sak³，随伴接辞 -piʔ³，放置接辞 -san³ をまとめて適用態標識（applicative marker）と呼ぶことにする"
+[≈Bible: -pih]
 > ["We will collectively call benefactive suffix -sak³, comitative suffix -piʔ³, and relinquitive suffix -san³ applicative markers"]
+[≈Bible: -pih]
 
 ### 4.3 Comitative -piʔ³
 
 The comitative applicative adds an accompaniment argument - someone who does the action together with the agent:
 
 Example (from Henderson 1965):
-- `sa¹xiː² in³ a¹ leʔ [≈leh]³lam¹ in² a¹ taːi³-piʔ [≈-pih]³ hiː³`
+- `sa¹xiː² in³ a¹ leʔ³lam¹ in² a¹ taːi³-piʔ³ hiː³`
+[≈Bible: sa¹khiː² in³ a¹ leh³lam¹ in² a¹ taːi³-pih³ hiː³]
   - "The deer ran in the opposite direction, taking (the chameleon) along with it"
 
 ### 4.4 Relinquitive -san³
@@ -293,17 +342,21 @@ This paper provides the most detailed analysis of **applicatives as a coherent c
 
 ### 5.1 Reflexive: kì- prefix
 
-The prefix kì- [≈ki-] marks reflexive:
-- `ámà [≈ama] kì-kìl [≈ki-kil]` "He looked at himself"
+The prefix kì- marks reflexive:
+[≈Bible: ki]
+- `ámà kì-kìl` "He looked at himself"
+[≈Bible: ama ki-kil]
 
 ### 5.2 Reciprocal: kì- + plural
 
 Reciprocal uses the same prefix with plural subjects:
-- `án [≈an] kì-gúp [≈ki-gup] ùɁ [≈uh]` "They hit each other"
+- `án kì-gúp ùɁ` "They hit each other"
+[≈Bible: an ki-gup uh]
 
 ### 5.3 Middle Voice
 
-The kì- [≈ki-] prefix also functions as a middle voice marker with various semantic extensions.
+The kì- prefix also functions as a middle voice marker with various semantic extensions.
+[≈Bible: ki]
 
 ---
 
@@ -313,16 +366,21 @@ Singh's grammar of Sukte (a closely related Kuki-Chin language) provides compara
 
 ### 6.1 Causative -sək
 
-> "Typologically, Sukte has morphological causative. So, causativisation in Sukte is formed by adding a causative suffix sək [≈sak] to the verb stem."
+> "Typologically, Sukte has morphological causative. So, causativisation in Sukte is formed by adding a causative suffix sək to the verb stem."
+[≈Bible: sak]
 
 Examples:
-- (420) `əməʔ [≈amah] kə [≈ka] kəp [≈kap] sək [≈sak] hi` "I make him cry"
-- (421) `əməʔ [≈amah] kə [≈ka] nui sək [≈sak] hi` "I make him laugh"
-- (424) `ram-in rani ə lam sək [≈sak] hi` "Ram makes Rani dance"
+- (420) `əməʔ kə kəp sək hi` "I make him cry"
+[≈Bible: amah ka kap sak hi]
+- (421) `əməʔ kə nui sək hi` "I make him laugh"
+[≈Bible: amah ka nui sak hi]
+- (424) `ram-in rani ə lam sək hi` "Ram makes Rani dance"
+[≈Bible: ram-in rani a lam sak hi]
 
 ### 6.2 Comparison with Tedim
 
-Unlike Tedim Chin's Form I/II distinction for causative vs. benefactive, Singh does not document a parallel benefactive use of -sək [≈-sak] in Sukte. This may indicate:
+Unlike Tedim Chin's Form I/II distinction for causative vs. benefactive, Singh does not document a parallel benefactive use of -sək in Sukte. This may indicate:
+[≈Bible: -sak]
 1. The Form I/II causative/benefactive distinction is a Tedim innovation
 2. Or Singh's description is incomplete
 
@@ -345,27 +403,27 @@ Tedim Chin has multiple causative strategies:
 
 | Strategy | Example | Source |
 |----------|---------|--------|
-| Lexical suppletion | sī [≈si] 'die' → tʰàt [≈that] 'kill' | Zam Ngaih Cing |
-| Aspiration alternation | kià [≈kia] 'fall' → xià [≈khia] 'drop' | Henderson, ZNC |
-| Suffix -sak (Form I) | tú [≈tu] 'sit' → tú-sàk [≈tu-sak] 'make sit' | All sources |
-| Prefix sù- [≈su-] | mìt [≈mit] 'go off' → sù-mìt [≈su-mit] 'put off' | Zam Ngaih Cing |
-| Auxiliary hìɁ [≈hih] | hìɁ [≈hih] vm 'make black' | Zam Ngaih Cing |
+| Lexical suppletion | sī 'die' → tʰàt 'kill' | Zam Ngaih Cing | <!-- ≈Bible: si that -->
+| Aspiration alternation | kià 'fall' → xià 'drop' | Henderson, ZNC | <!-- ≈Bible: kia khia -->
+| Suffix -sak (Form I) | tú 'sit' → tú-sàk 'make sit' | All sources | <!-- ≈Bible: tu tu-sak -->
+| Prefix sù- | mìt 'go off' → sù-mìt 'put off' | Zam Ngaih Cing | <!-- ≈Bible: su mit su-mit -->
+| Auxiliary hìɁ | hìɁ vm 'make black' | Zam Ngaih Cing | <!-- ≈Bible: hih hih -->
 
 ### 7.3 Applicative System
 
 | Marker | Function | Stem | First Documented |
 |--------|----------|------|------------------|
 | -sak³ | Benefactive | II | Henderson 1965 |
-| -piʔ [≈-pih]³ | Comitative | II | Zam Ngaih Cing 2017 |
+| -piʔ³ | Comitative | II | Zam Ngaih Cing 2017 | <!-- ≈Bible: -pih -->
 | -san³ | Relinquitive | II | Zam Ngaih Cing 2017 |
-| -xɔ̀m [≈-khawm] | Benefactive | I | Zam Ngaih Cing 2017 |
+| -xɔ̀m | Benefactive | I | Zam Ngaih Cing 2017 | <!-- ≈Bible: -khawm -->
 
 ### 7.4 Voice/Valence Decreasing
 
 | Marker | Function | Sources |
 |--------|----------|---------|
-| kì- [≈ki-] (verb prefix) | Reflexive, reciprocal, middle, passive | All sources |
-| tuàɁ [≈tuah] (particle) | Reciprocal | Zam Ngaih Cing |
+| kì- (verb prefix) | Reflexive, reciprocal, middle, passive | All sources | <!-- ≈Bible: ki -->
+| tuàɁ (particle) | Reciprocal | Zam Ngaih Cing | <!-- ≈Bible: tuah -->
 | Topicalization | Passive-like | Zam Ngaih Cing |
 
 ### 7.5 Key Distinctions by Author
@@ -374,10 +432,10 @@ Tedim Chin has multiple causative strategies:
 |-------------|-----------|----------------|--------|
 | Form I/II determines CAUS/BENEF | ✓ | ✓ | ✓ |
 | Lexical/aspiration causatives | ✓ | ✓ | |
-| sù- [≈su-] causative prefix | | ✓ | |
-| hìɁ [≈hih] causative auxiliary | | ✓ | |
-| -xɔ̀m [≈-khawm] benefactive (Form I) | | ✓ | |
-| Pretense construction (kì- [≈ki-] + CAUS) | | | ✓ |
+| sù- causative prefix | | ✓ | | <!-- ≈Bible: su -->
+| hìɁ causative auxiliary | | ✓ | | <!-- ≈Bible: hih -->
+| -xɔ̀m benefactive (Form I) | | ✓ | | <!-- ≈Bible: -khawm -->
+| Pretense construction (kì- + CAUS) | | | ✓ | <!-- ≈Bible: ki -->
 | Malefactive/substitutive readings | | | ✓ |
 | Applicatives as unified class | | ✓ | ✓ |
 
@@ -385,13 +443,16 @@ Tedim Chin has multiple causative strategies:
 
 ## 8. Open Questions
 
-1. **-xɔ̀m [≈-khawm]**: Zam Ngaih Cing documents a benefactive suffix -xɔ̀m [≈-khawm] that takes Stem 1, unlike -sak. Why does this marker not follow the Form I/II pattern?
+1. **-xɔ̀m**: Zam Ngaih Cing documents a benefactive suffix -xɔ̀m that takes Stem 1, unlike -sak. Why does this marker not follow the Form I/II pattern?
+[≈Bible: -khawm -khawm]
 
-2. **sù- [≈su-] vs. -sak causative**: When is the prefix sù- [≈su-] used versus suffix -sak? Are there semantic or syntactic differences?
+2. **sù- vs. -sak causative**: When is the prefix sù- used versus suffix -sak? Are there semantic or syntactic differences?
+[≈Bible: su su]
 
 3. **Beneficiary encoding**: Otsuka notes that beneficiaries with intransitive-based benefactives cannot be overtly coded. What governs this restriction?
 
-4. **Lexical causatives**: Are the aspiration-alternation causative pairs (kià [≈kia]/xià [≈khia]) still productive, or are they frozen pairs?
+4. **Lexical causatives**: Are the aspiration-alternation causative pairs (kià/xià) still productive, or are they frozen pairs?
+[≈Bible: kia khia]
 
 ---
 
@@ -399,7 +460,8 @@ Tedim Chin has multiple causative strategies:
 
 Henderson, E. J. A. (1965). *Tiddim Chin: A Descriptive Analysis of Two Texts*. London: Oxford University Press.
 
-Otsuka, K. (2009). Causative and benefactive suffix -sàk [≈-sak] in Tiddim Chin. *思言: 東京外国語大学記述言語学論集*, 5, 3-22.
+Otsuka, K. (2009). Causative and benefactive suffix -sàk in Tiddim Chin. *思言: 東京外国語大学記述言語学論集*, 5, 3-22.
+[≈Bible: -sak]
 
 Otsuka, K. (2022). Voice in Tiddim Chin. [Questionnaire responses]
 

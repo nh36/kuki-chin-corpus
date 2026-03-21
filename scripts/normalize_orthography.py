@@ -266,173 +266,174 @@ def process_markdown_report(content: str) -> str:
 
 def add_bible_tier_to_examples(content: str) -> str:
     """
-    Comprehensive normalization: find all IPA/toned examples and add Bible tier.
+    Add Bible orthography tier to examples in literature reviews.
     
-    This handles:
-    - IPA words with special characters (ɔ, ŋ, ʔ, etc.)
-    - Words with tone diacritics (both precomposed and combining)
-    - Code spans with Tedim content
-    - Table cells
-    - Full passages in Tedim
+    Instead of inline annotations, this adds a separate line below each
+    line containing IPA/toned Tedim content with the normalized version.
+    
+    Format:
+        Original: mànnɔú-ín à naú-nú-tɔ̀Ɂ tuí tɔī
+        [≈Bible: manno-in a nau-nu-tawh tui toi]
     """
     lines = content.split('\n')
     result_lines = []
     
-    # Words/patterns to skip (proper names, common English/French words, metalanguage)
+    # Words/patterns to skip (proper names, common English/French words)
     skip_words = {
         'Eugénie', 'Eugenie', 'café', 'naïve', 'résumé', 'exposé',
         'Déclaration', 'première', 'Zürich', 'Müller', 'über', 'für',
-        # Single accented vowels that are likely not Tedim
-        'à', 'é', 'è', 'ê', 'ô', 'î', 'û', 'ä', 'ö', 'ü',
     }
     
-    # Skip patterns (regex)
-    skip_patterns = [
-        r'^\*\*Source:\*\*',  # Source lines
-        r'^[-–] Henderson',   # Bibliography
-        r'^[-–] Zam Ngaih',   # Bibliography
-        r'^[-–] Singh',       # Bibliography
-        r'^[-–] Otsuka',      # Bibliography
-        r'^\d{4}\.',          # Year references
-        r'pp?\.\s*\d+',       # Page numbers
+    # Lines to skip entirely
+    skip_line_patterns = [
+        r'^\*\*Source:\*\*',
+        r'^[-–] Henderson',
+        r'^[-–] Zam Ngaih', 
+        r'^[-–] Singh',
+        r'^[-–] Otsuka',
+        r'^#{1,6}\s',  # Headers
+        r'^\s*$',  # Empty lines
+        r'^\[≈Bible:',  # Already normalized
     ]
-    skip_re = re.compile('|'.join(skip_patterns))
+    skip_line_re = re.compile('|'.join(skip_line_patterns))
     
     # Characters that indicate Tedim/IPA content
-    # IPA characters
     IPA_CHARS = 'ɔŋʔɂəɛͻɁıʰ'
-    # Precomposed toned vowels (both with tone marks and length marks)
     TONED_VOWELS = 'áéíóúàèìòùāēīōūâêîôûǎěǐǒǔ'
-    # Combining diacritics
     COMBINING = '\u0300\u0301\u0302\u0304\u0306\u030c\u0303'
-    # Modifier letters
     MODIFIERS = '\u02b0\u02b1\u02b2\u02b7\u02bc'
-    
-    # All special characters that indicate potential Tedim content
     TEDIM_MARKERS = IPA_CHARS + TONED_VOWELS + COMBINING + MODIFIERS
     
-    # Pattern to find Tedim words:
-    # Must contain at least one marker character
-    # Can start with hyphen (for affixes)
-    # Can contain standard letters, markers, and hyphens within
-    tedim_word_pattern = re.compile(
-        r'(?<![a-zA-Z])(-?[a-zA-Z' + re.escape(TEDIM_MARKERS) + r']*[' + re.escape(TEDIM_MARKERS) + r'][a-zA-Z' + re.escape(TEDIM_MARKERS) + r'-]*)',
-        re.UNICODE
-    )
-    
-    def should_skip_word(word: str) -> bool:
-        """Check if a word should be skipped."""
-        if word in skip_words:
-            return True
-        # Skip single characters
-        if len(word) <= 1:
-            return True
-        # Skip if it's just a hyphen plus one char
-        if word.startswith('-') and len(word) <= 2:
-            return True
+    def has_tedim_content(text: str) -> bool:
+        """Check if text contains IPA/toned characters."""
+        for char in text:
+            if char in TEDIM_MARKERS:
+                return True
         return False
     
-    def process_line(line: str) -> str:
-        """Process a single line, adding Bible annotations."""
-        # Skip bibliographic/reference lines
-        if skip_re.search(line):
-            return line
+    def normalize_line_content(text: str) -> str:
+        """Normalize all Tedim words in a line."""
+        # Pattern to find words (including hyphenated)
+        word_pattern = re.compile(r'[a-zA-Z' + re.escape(TEDIM_MARKERS) + r']+(?:-[a-zA-Z' + re.escape(TEDIM_MARKERS) + r']+)*', re.UNICODE)
         
-        # Find all potential Tedim words
-        matches = list(tedim_word_pattern.finditer(line))
-        if not matches:
-            return line
-        
-        # Process from end to start to preserve positions
-        new_line = line
-        for match in reversed(matches):
-            original = match.group(1)
-            if not original or should_skip_word(original):
-                continue
-            
-            start, end = match.span(1)
-            
-            # Skip if this word is already annotated (has [≈...] immediately after)
-            after_match = line[end:end+10]
-            if after_match.startswith(' [≈'):
-                continue
-            
-            # Skip if inside square brackets (phonetic transcription)
-            # Check if we're between [ and ] without a [ before ]
-            before = line[:start]
-            open_bracket = before.rfind('[')
-            close_bracket = before.rfind(']')
-            if open_bracket > close_bracket:
-                # We're inside brackets - skip unless it's a table cell marker
-                if not before.endswith('|'):
-                    continue
-            
-            normalized = normalize_to_bible(original)
-            # Only annotate if normalization produces a different result
-            if original != normalized:
-                new_line = new_line[:end] + f' [≈{normalized}]' + new_line[end:]
-        
-        return new_line
-    
-    def process_code_span(text: str) -> str:
-        """Process content inside backticks."""
-        # Find words with Tedim markers and annotate them
         def replace_word(match):
-            word = match.group(1)
-            if should_skip_word(word):
+            word = match.group(0)
+            if word in skip_words:
                 return word
             normalized = normalize_to_bible(word)
-            if word != normalized:
-                return f'{word} [≈{normalized}]'
-            return word
+            return normalized
         
-        return tedim_word_pattern.sub(replace_word, text)
+        return word_pattern.sub(replace_word, text)
     
-    def process_table_cell(cell: str) -> str:
-        """Process a table cell."""
-        # Skip header cells or cells that are just labels
-        if cell.strip() in ('', 'Form', 'Gloss', 'Source', 'Function', 'Marker', 'Description', 'Category', 'Feature'):
-            return cell
-        return process_line(cell)
+    def extract_tedim_content(line: str) -> list:
+        """Extract Tedim phrases from a line (in backticks, quotes, or standalone)."""
+        tedim_phrases = []
+        
+        # Extract content in backticks - these are always Tedim examples
+        backtick_matches = re.findall(r'`([^`]+)`', line)
+        for match in backtick_matches:
+            if has_tedim_content(match):
+                tedim_phrases.append(match)
+        
+        # If we found backtick content, that's the primary source - return it
+        if tedim_phrases:
+            return tedim_phrases
+        
+        # Extract content in single quotes (linguistic examples)
+        # Be careful not to grab English glosses
+        quote_matches = re.findall(r"'([^']+)'", line)
+        for match in quote_matches:
+            if has_tedim_content(match) and not match.startswith(('the ', 'a ', 'to ')):
+                tedim_phrases.append(match)
+        
+        if tedim_phrases:
+            return tedim_phrases
+        
+        # For lines without quotes/backticks, extract only the Tedim words
+        # (not the surrounding English)
+        word_pattern = re.compile(
+            r'-?[a-zA-Z' + re.escape(TEDIM_MARKERS) + r']+(?:-[a-zA-Z' + re.escape(TEDIM_MARKERS) + r']+)*',
+            re.UNICODE
+        )
+        
+        tedim_words = []
+        for match in word_pattern.finditer(line):
+            word = match.group(0)
+            # Include words with 2+ chars if they have Tedim markers
+            if has_tedim_content(word) and len(word) >= 2:
+                tedim_words.append(word)
+        
+        if tedim_words:
+            # Return as a single phrase of just the Tedim words
+            tedim_phrases.append(' '.join(tedim_words))
+        
+        return tedim_phrases
+    
+    def get_indent(line: str) -> str:
+        """Get the indentation of a line."""
+        match = re.match(r'^(\s*)', line)
+        return match.group(1) if match else ''
     
     in_code_block = False
+    i = 0
     
-    for line in lines:
+    while i < len(lines):
+        line = lines[i]
+        
         # Track fenced code blocks
         if line.strip().startswith('```'):
             in_code_block = not in_code_block
             result_lines.append(line)
+            i += 1
             continue
         
         # Skip inside fenced code blocks
         if in_code_block:
             result_lines.append(line)
+            i += 1
             continue
         
-        # Skip markdown headers
-        if line.startswith('#'):
+        # Skip lines that shouldn't be processed
+        if skip_line_re.search(line):
             result_lines.append(line)
+            i += 1
             continue
         
-        # Handle table rows specially
-        if '|' in line:
-            cells = line.split('|')
-            processed_cells = [process_table_cell(cell) for cell in cells]
-            result_lines.append('|'.join(processed_cells))
+        # Skip if next line is already a normalization
+        if i + 1 < len(lines) and lines[i + 1].strip().startswith('[≈Bible:'):
+            result_lines.append(line)
+            i += 1
             continue
         
-        # Handle inline code spans: `content`
-        if '`' in line:
-            # Process code spans
-            def process_code_match(m):
-                content = m.group(1)
-                processed = process_code_span(content)
-                return f'`{processed}`'
+        # Check for Tedim content
+        if has_tedim_content(line):
+            result_lines.append(line)
             
-            line = re.sub(r'`([^`]+)`', process_code_match, line)
+            # Extract and normalize Tedim phrases
+            phrases = extract_tedim_content(line)
+            if phrases:
+                # Create normalized versions
+                normalized_phrases = []
+                for phrase in phrases:
+                    norm = normalize_line_content(phrase)
+                    if norm != phrase:  # Only add if different
+                        normalized_phrases.append(norm)
+                
+                if normalized_phrases:
+                    # Add normalization line with appropriate indent
+                    indent = get_indent(line)
+                    # For table rows, add inline comment at end
+                    if '|' in line:
+                        # Add normalization as comment after the row
+                        norm_text = ' '.join(normalized_phrases)
+                        result_lines[-1] = result_lines[-1] + f' <!-- ≈Bible: {norm_text} -->'
+                    else:
+                        norm_line = indent + '[≈Bible: ' + ' | '.join(normalized_phrases) + ']'
+                        result_lines.append(norm_line)
+        else:
+            result_lines.append(line)
         
-        # Process regular line content
-        result_lines.append(process_line(line))
+        i += 1
     
     return '\n'.join(result_lines)
 

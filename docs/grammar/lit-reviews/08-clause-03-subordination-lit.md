@@ -63,21 +63,24 @@ ZNC identifies four types of clause combination:
 
 Three temporal adverbial functions:
 
-**Before** (-má [≈-ma] 'before'):
+**Before** (-má 'before'):
+[≈Bible: -ma]
 ```
 kà    án    nék-má         ín        kì-síl       másà
 1POSS food  eat.2-before   CONJ      REFL-wash.1  first
 'Before I eat food, I will take bath first'
 ```
 
-**After** (-xìt [≈-khit] 'after'):
+**After** (-xìt 'after'):
+[≈Bible: -khit]
 ```
 ká    nà    sèp-xìt       ciāŋ      tɔ̀ldām     út     ìŋ
 1POSS thing work.2-after  TEMP      rest       want.1 1SG.RLS
 'After I work, I want to rest'
 ```
 
-**During** (-súŋ [≈-sung] 'within', -kál [≈-kal] 'between'):
+**During** (-súŋ 'within', -kál 'between'):
+[≈Bible: -sung -kal]
 ```
 ká    ɔ́m-lɔùɁ-kál         ín        ná    kàp-keí    ɔú
 1POSS EXIST-NEG.2-between CONJ      2SG   cry.1-NEG  IMP
@@ -86,7 +89,8 @@ ká    ɔ́m-lɔùɁ-kál         ín        ná    kàp-keí    ɔú
 
 #### 2.2.2 Manner Clauses (§7.5.1.2)
 
-Manner is marked by **bàŋ [≈bang]** 'like' + **īn [≈in]**:
+Manner is marked by **bàŋ** 'like' + **īn**:
+[≈Bible: bang in]
 ```
 á     ŋèt   bàŋ   īn        ŋàɁ      lèɁ     út      ìŋ
 3SG   ask.2 like  CONJ      receive  COND    want.1  1SG.RLS
@@ -95,7 +99,8 @@ Manner is marked by **bàŋ [≈bang]** 'like' + **īn [≈in]**:
 
 #### 2.2.3 Purpose Clauses (§7.5.1.3)
 
-Purpose is marked by **díŋ [≈ding]** (irrealis marker) + **īn [≈in]**:
+Purpose is marked by **díŋ** (irrealis marker) + **īn**:
+[≈Bible: ding in]
 ```
 kà    pá      mèɁ   leí    díŋ    īn     vák-xià
 1POSS father  curry buy.1  PURP   CONJ   roam.1-away
@@ -104,14 +109,16 @@ kà    pá      mèɁ   leí    díŋ    īn     vák-xià
 
 #### 2.2.4 Reason Clauses (§7.5.1.4)
 
-Reason is marked by **háŋ [≈hang]** + **īn [≈in]**:
+Reason is marked by **háŋ** + **īn**:
+[≈Bible: hang in]
 ```
 dàmlɔùɁnā háŋ      īn        sáŋnaūpáŋ  támpí     sáŋ     kàɁ   tʰeì-lɔù    ùɁ
 sickness  reason   CONJ      student    many      school  attend able.1-NEG PL
 'Due to sickness, many students could not attend classes'
 ```
 
-Result marked by **mán [≈man]** + **īn [≈in]**:
+Result marked by **mán** + **īn**:
+[≈Bible: man in]
 ```
 ní    tʰūm-sūŋ     guàɁ  zùk    mán     īn      tuí-lét
 day   three-within rain  pour.2 result  CONJ    water-overflow
@@ -120,7 +127,8 @@ day   three-within rain  pour.2 result  CONJ    water-overflow
 
 #### 2.2.5 Simultaneous Clauses (§7.5.1.5)
 
-Marked by **-súŋ [≈-sung]** 'within' + **ín [≈in]**:
+Marked by **-súŋ** 'within' + **ín**:
+[≈Bible: -sung in]
 ```
 ká    tùt-súŋ      ín        xuā      ɔ́ŋ       miál    pàʔ
 1SG   sit.2-within CONJ      village  toward   dark    soon
@@ -129,35 +137,40 @@ ká    tùt-súŋ      ín        xuā      ɔ́ŋ       miál    pàʔ
 
 #### 2.2.6 Conditional Clauses (§7.5.1.6)
 
-**Simple conditional** (-lèɁ [≈-leh]):
+**Simple conditional** (-lèɁ):
+[≈Bible: -leh]
 ```
 guàɁ  á     zùk    lèɁ      kà      puán  pʰɔú-té    kɔ́t    díŋ
 rain  3SG   drizzle COND    1POSS   cloth spread-PL wet    PURP
 'If it rains, my clothes will get wet'
 ```
 
-**Hypothetical** (hì [≈hi] lèŋ [≈leng]):
+**Hypothetical** (hì lèŋ):
+[≈Bible: hi leng]
 ```
 naūpáŋ   xàt   hì    lèŋ       ū-té        tʰú    màn-sm    níŋ
 child    one   COP   COND      elder-PL    word   obey.2-plan 1SG.IRR
 'If I were a child, I'll try to obey my elders'
 ```
 
-**Counterfactual** (-lècìn [≈-lecin]):
+**Counterfactual** (-lècìn):
+[≈Bible: -lecin]
 ```
 ín-àɁ       ɔ́m     hì-lècìn    ɔ́ŋ      mù     díŋ    naìvè
 house-LOC   EXIST  COP-COND    toward  see.1  PURP   2SG.COP.IMP
 'If you had been at home, you would have seen me'
 ```
 
-**Concessive** (tà-lèɁ [≈ta-leh]):
+**Concessive** (tà-lèɁ):
+[≈Bible: ta-leh]
 ```
 nī    sá    tà-lèɁ       zɔ̀ŋ   paī   vé~vè   nì
 sun   hot   PFV-COND     also   go.1  still   1PL.INCL
 'Even if it's sunny also, we'll still go'
 ```
 
-**Negative conditional** (-keí [≈-kei] buāŋ [≈buang] lèɁ [≈leh]):
+**Negative conditional** (-keí buāŋ lèɁ):
+[≈Bible: -kei buang leh]
 ```
 guàɁ  á     zùk-keí      buāŋ    léɁ     puán    sɔ́p     díŋ
 rain  3SG   rain.2-NEG   unless  COND    cloth   wash.1  PURP
@@ -166,7 +179,8 @@ rain  3SG   rain.2-NEG   unless  COND    cloth   wash.1  PURP
 
 #### 2.2.7 Concessive Clauses (§7.5.1.6.6)
 
-Marked by **háŋ [≈hang]** + **īn [≈in]**:
+Marked by **háŋ** + **īn**:
+[≈Bible: hang in]
 ```
 á     xè    á     nàt    háŋ    īn     ámá-n      bɔ̀Ɂlúŋ   suì     vè~vè
 3POSS leg   3SG   pain.2 reason CONJ   3SG-ERG    ball      kick.1  still
@@ -175,7 +189,8 @@ Marked by **háŋ [≈hang]** + **īn [≈in]**:
 
 #### 2.2.8 Substitutive Clauses (§7.5.1.6.7)
 
-Marked by **sáŋ [≈sang]** 'instead':
+Marked by **sáŋ** 'instead':
+[≈Bible: sang]
 ```
 kɔú      ín-àɁ        mèɁ   huàn   sáŋ      cì    ìn
 1PL.INCL house-LOC    curry cook.2 instead  say.1 CONJ
@@ -188,7 +203,8 @@ kɔú      ín-àɁ        mèɁ   huàn   sáŋ      cì    ìn
 
 ### 3.1 Temporal Clauses (§8.1.4)
 
-> "Temporal clause in Sukte is formed [with] the subordinating words such as mə [≈ma] 'before' and khit 'after' which is placed before the finite verb."
+> "Temporal clause in Sukte is formed [with] the subordinating words such as mə 'before' and khit 'after' which is placed before the finite verb."
+[≈Bible: ma]
 
 **After** (khit):
 ```
@@ -197,7 +213,8 @@ class      finish after   go     IMP
 'Go after class finish.'
 ```
 
-**Before** (mə [≈ma]) + **ciaŋin [≈ciangin]** 'when':
+**Before** (mə) + **ciaŋin** 'when':
+[≈Bible: ma ciangin]
 ```
 john ən    ne     mə      ciaŋin ə     tai    ta    hi
 John rice  eat    before  when   3SG   run    PST   DECL
@@ -206,7 +223,8 @@ John rice  eat    before  when   3SG   run    PST   DECL
 
 ### 3.2 Conditional Clauses (§8.1.6)
 
-> "The conditional clause in Sukte is expressed by suffixing leʔ [≈leh] to the verb root."
+> "The conditional clause in Sukte is expressed by suffixing leʔ to the verb root."
+[≈Bible: leh]
 
 ```
 nəŋ    don    leʔ    əməʔ  ə      don    diŋ    hi
@@ -216,7 +234,8 @@ you    drink  COND   he    3SG    drink  IRL    DECL
 
 ### 3.3 Desiderative Clauses (§8.1.5)
 
-> "The desiderative clause in Sukte is expressed by using the desiderative verb deiʔ [≈deih]."
+> "The desiderative clause in Sukte is expressed by using the desiderative verb deiʔ."
+[≈Bible: deih]
 
 ```
 kei    frans    əʔ      kə     pai    deiʔ   hi
@@ -232,34 +251,42 @@ I      France   LOC     1SG    go     DES    DECL
 
 | Function | Tedim Chin | Sukte |
 |----------|------------|-------|
-| **Temporal 'when'** | ciangin | ciaŋin [≈ciangin] |
-| **After** | -xìt [≈-khit] ciangin | khit ciaŋin [≈ciangin] |
-| **Before** | -má [≈-ma] ín [≈in] | mə [≈ma] ciaŋin [≈ciangin] |
-| **During** | -súŋ [≈-sung] ín [≈in] | — |
-| **Purpose** | díŋ [≈ding] ín [≈in] | díŋ [≈ding] |
-| **Reason** | háŋ [≈hang] ín [≈in] | — |
-| **Result** | mán [≈man] ín [≈in] | — |
-| **Manner** | bàŋ [≈bang] ín [≈in] | — |
-| **Conditional** | lèɁ [≈leh] | leʔ [≈leh] |
-| **Counterfactual** | lècìn [≈lecin] | — |
-| **Concessive** | tàlèɁ [≈taleh] | — |
-| **Unless** | -keí [≈-kei] buāŋ [≈buang] lèɁ [≈leh] | — |
-| **Instead** | sáŋ [≈sang] | — |
+| **Temporal 'when'** | ciangin | ciaŋin | <!-- ≈Bible: ciangin -->
+| **After** | -xìt ciangin | khit ciaŋin | <!-- ≈Bible: -khit ciangin -->
+| **Before** | -má ín | mə ciaŋin | <!-- ≈Bible: -ma in ma ciangin -->
+| **During** | -súŋ ín | — | <!-- ≈Bible: -sung in -->
+| **Purpose** | díŋ ín | díŋ | <!-- ≈Bible: ding in ding -->
+| **Reason** | háŋ ín | — | <!-- ≈Bible: hang in -->
+| **Result** | mán ín | — | <!-- ≈Bible: man in -->
+| **Manner** | bàŋ ín | — | <!-- ≈Bible: bang in -->
+| **Conditional** | lèɁ | leʔ | <!-- ≈Bible: leh leh -->
+| **Counterfactual** | lècìn | — | <!-- ≈Bible: lecin -->
+| **Concessive** | tàlèɁ | — | <!-- ≈Bible: taleh -->
+| **Unless** | -keí buāŋ lèɁ | — | <!-- ≈Bible: -kei buang leh -->
+| **Instead** | sáŋ | — | <!-- ≈Bible: sang -->
 
 ### 4.2 Key Patterns
 
-**Common pattern**: SUBORDINATOR + **ín [≈in]/in** (conjunctive particle)
+**Common pattern**: SUBORDINATOR + **ín/in** (conjunctive particle)
+[≈Bible: in]
 
 Most subordinate clauses in Tedim Chin are marked by:
-1. A semantic subordinator (háŋ [≈hang] 'reason', bàŋ [≈bang] 'manner', díŋ [≈ding] 'purpose')
-2. Followed by **ín [≈in]** (conjunctive marker)
+1. A semantic subordinator (háŋ 'reason', bàŋ 'manner', díŋ 'purpose')
+[≈Bible: hang bang ding]
+2. Followed by **ín** (conjunctive marker)
+[≈Bible: in]
 
 **Conditional paradigm** (Zam Ngaih Cing's unique contribution):
-- Simple: -lèɁ [≈-leh]
-- Hypothetical: hì [≈hi] lèŋ [≈leng]
-- Counterfactual: -lècìn [≈-lecin]
-- Concessive: tà-lèɁ [≈ta-leh]
-- Negative: -keí [≈-kei] buāŋ [≈buang] lèɁ [≈leh]
+- Simple: -lèɁ
+[≈Bible: -leh]
+- Hypothetical: hì lèŋ
+[≈Bible: hi leng]
+- Counterfactual: -lècìn
+[≈Bible: -lecin]
+- Concessive: tà-lèɁ
+[≈Bible: ta-leh]
+- Negative: -keí buāŋ lèɁ
+[≈Bible: -kei buang leh]
 
 ### 4.3 Distinctive Findings
 
@@ -273,14 +300,16 @@ Most subordinate clauses in Tedim Chin are marked by:
 - Clear examples with morpheme glossing
 
 **Singh's contribution**:
-- Shows cognate subordinators in Sukte (ciaŋin [≈ciangin], khit, leʔ [≈leh])
+- Shows cognate subordinators in Sukte (ciaŋin, khit, leʔ)
+[≈Bible: ciangin leh]
 - Documents desiderative clause type
 
 ---
 
 ## 5. Open Questions
 
-1. **Converb vs. subordinator**: Is -in on VERB+in (converb) related to ín [≈in] (conjunction)?
+1. **Converb vs. subordinator**: Is -in on VERB+in (converb) related to ín (conjunction)?
+[≈Bible: in]
 2. **Relative clauses**: How do relativization strategies compare across sources?
 3. **Serial verbs**: How do multi-verb constructions differ from clause chaining?
 4. **Complement clauses**: What are the complementizer strategies?
