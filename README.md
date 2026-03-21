@@ -141,10 +141,6 @@ Kuki-Chin/
 ├── docs/
 │   ├── README.md          # Documentation guide
 │   ├── SKELETON_GRAMMAR.md # Grammar overview
-│   ├── paradigms/         # Generated paradigm reports
-│   │   ├── 3-noun-*.md    # Nominal morphology (Ch 3)
-│   │   ├── 5-verb-*.md    # Verbal morphology (Ch 5)
-│   │   └── 7-nmlz-*.md    # Nominalization (Ch 7)
 │   ├── grammar/           # Reference materials
 │   │   ├── DISAMBIGUATION.md
 │   │   ├── MORPHEME_INVENTORY.md
@@ -154,6 +150,15 @@ Kuki-Chin/
 │   │   ├── REPLICATION_GUIDE.md
 │   │   └── ...
 │   └── archive/           # Superseded documents
+├── grammar/
+│   └── reports/           # Generated grammar reports (33 files)
+│       ├── 03-noun-*.md   # Nominal morphology (Ch 3)
+│       ├── 05-verb-*.md   # Verbal morphology (Ch 5)
+│       ├── 06-func-*.md   # Function words (Ch 6)
+│       ├── 07-*.md        # Derivation/Nominalization (Ch 7)
+│       ├── 08-clause-*.md # Clause structure (Ch 8)
+│       ├── 09-sent-*.md   # Sentence types (Ch 9)
+│       └── 10-disc-*.md   # Discourse (Ch 10)
 ├── scripts/
 │   ├── README.md          # Script documentation
 │   ├── analyze_morphemes.py # Tedim analyzer (~19,000 lines)

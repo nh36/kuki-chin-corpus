@@ -315,4 +315,4 @@ Compounds only found inside larger compounds:
 - Bible corpus: bibles/extracted/ctd/ctd-x-bible.txt (831,431 tokens)
 - Analyzer: scripts/analyze_morphemes.py
 - Paradigm generator: scripts/generate_paradigm.py
-- Paradigm reports: docs/paradigms/
+- Paradigm reports: grammar/reports/

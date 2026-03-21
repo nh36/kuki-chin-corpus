@@ -1,17 +1,13 @@
 # Tedim Chin Grammar Documentation
 
-This directory contains the linguistic documentation for Tedim Chin,
-organized to align with the structure of a reference grammar.
+This directory contains supporting documentation for Tedim Chin analysis.
+The main grammar reports are in `grammar/reports/` at the repository root.
 
 ## Directory Structure
 
 ```
 docs/
 ├── SKELETON_GRAMMAR.md      # Main grammar overview (working draft)
-├── paradigms/               # Detailed paradigm reports (machine-generated)
-│   ├── 3-noun-*.md         # Nominal morphology (Chapter 3)
-│   ├── 5-verb-*.md         # Verbal morphology (Chapter 5)
-│   └── 7-nmlz-*.md         # Nominalization (Chapter 7)
 ├── grammar/                 # Reference materials
 │   ├── noun/               # Noun-specific documentation
 │   ├── verb/               # Verb-specific documentation
@@ -26,70 +22,86 @@ docs/
 └── archive/                # Superseded planning documents
 ```
 
-## Paradigm Report Naming Convention
+## Grammar Reports
 
-Reports are numbered to match grammar chapter structure:
+Grammar reports are now located in `grammar/reports/` (repository root):
 
 | Prefix | Chapter | Content |
 |--------|---------|---------|
-| `3-noun-` | Ch 3: Nominal Morphology | Nouns, postpositions, NP structure |
-| `5-verb-` | Ch 5: Verbal Morphology | Verbs, TAM, agreement, valency |
-| `7-nmlz-` | Ch 7: Nominalization | Deverbal nominals |
+| `03-noun-` | Ch 3: Nominal Morphology | Nouns, postpositions, NP structure |
+| `04-np-` | Ch 4: Noun Phrases | Possession |
+| `05-verb-` | Ch 5: Verbal Morphology | Verbs, TAM, agreement, valency |
+| `06-func-` | Ch 6: Function Words | Pronouns, demonstratives, negation |
+| `07-*` | Ch 7: Derivation | Nominalization, reduplication |
+| `08-clause-` | Ch 8: Clause Structure | Subordination, switch reference |
+| `09-sent-` | Ch 9: Sentence Types | Interrogatives |
+| `10-disc-` | Ch 10: Discourse | Sentence-final particles |
 
 Within each section, reports are ordered from foundational to complex:
 - `01-` = Lexical inventory (stems, simple forms)
 - `02-` = Structure (templates, combinations)
 - Higher numbers = More specialized topics
 
-## Grammar Chapter Outline
-
-1. Introduction
-2. Phonology
-3. **Nominal Morphology** ← `3-noun-*` reports
-4. Pronominal System
-5. **Verbal Morphology** ← `5-verb-*` reports
-6. Sentence-Final Markers
-7. **Nominalization** ← `7-nmlz-*` reports
-8. Compounds
-
 ## Report Descriptions
 
-### Noun Reports (3-noun-*)
+### Noun Reports (03-noun-*)
 
 | File | Description |
 |------|-------------|
-| `3-noun-01-simple.md` | Simple nouns with case paradigms |
-| `3-noun-02-compounds.md` | Compound nouns with case paradigms |
-| `3-noun-03-proper.md` | Proper nouns (names, places) |
-| `3-noun-04-relators.md` | Relator nouns (spatial postpositions) |
-| `3-noun-05-postpositions.md` | Free postpositions |
-| `3-noun-06-np-structure.md` | Noun phrase structure patterns |
+| `03-noun-01-simple.md` | Simple nouns with case paradigms |
+| `03-noun-02-compounds.md` | Compound nouns with case paradigms |
+| `03-noun-03-proper.md` | Proper nouns (names, places) |
+| `03-noun-04-relators.md` | Relator nouns (spatial postpositions) |
+| `03-noun-05-postpositions.md` | Free postpositions |
+| `03-noun-06-np-structure.md` | Noun phrase structure patterns |
 
-### Verb Reports (5-verb-*)
-
-| File | Description |
-|------|-------------|
-| `5-verb-00-paradigm-tables.md` | Individual verb paradigms (om, pai, ci) |
-| `5-verb-01-stems.md` | Verb stem inventory by semantic domain |
-| `5-verb-02-vp-structure.md` | Verb phrase template |
-| `5-verb-03-agreement.md` | Subject/object agreement prefixes |
-| `5-verb-04-tam.md` | Tense-aspect-mood suffixes |
-| `5-verb-05-aspect.md` | Aspectual suffixes (PFV, COMPL, ITER) |
-| `5-verb-06-directional.md` | Directional suffixes (in, out, up) |
-| `5-verb-07-modal.md` | Modal suffixes (IRR, ABIL, want) |
-| `5-verb-08-derivational.md` | Derivational suffixes (CAUS, APPL) |
-| `5-verb-09-valency.md` | Valency and voice (ki-, -sak, -pih) |
-| `5-verb-10-combinations.md` | Attested suffix combinations |
-
-### Nominalization Reports (7-nmlz-*)
+### Verb Reports (05-verb-*)
 
 | File | Description |
 |------|-------------|
-| `7-nmlz-01-deverbal.md` | Deverbal nominalization (-na, -pa, -nu) |
+| `05-verb-00-paradigm-tables.md` | Individual verb paradigms (om, pai, ci) |
+| `05-verb-01-stems.md` | Verb stem inventory by semantic domain |
+| `05-verb-02-vp-structure.md` | Verb phrase template |
+| `05-verb-03-agreement.md` | Subject/object agreement prefixes |
+| `05-verb-04-tam.md` | Tense-aspect-mood suffixes |
+| `05-verb-05-aspect.md` | Aspectual suffixes (PFV, COMPL, ITER) |
+| `05-verb-06-directional.md` | Directional suffixes (in, out, up) |
+| `05-verb-07-modal.md` | Modal suffixes (IRR, ABIL, want) |
+| `05-verb-08-derivational.md` | Derivational suffixes (CAUS, APPL) |
+| `05-verb-09-valency.md` | Valency and voice (ki-, -sak, -pih) |
+| `05-verb-10-combinations.md` | Attested suffix combinations |
+| `05-verb-11-vsa-questionnaire.md` | VSA-style questionnaire data |
+| `05-verb-12-transitivity.md` | Verb transitivity classes |
+
+### Function Words (06-func-*)
+
+| File | Description |
+|------|-------------|
+| `06-func-01-pronouns.md` | Personal, possessive, reflexive pronouns |
+| `06-func-02-demonstratives.md` | Proximal/distal demonstratives |
+| `06-func-03-numerals.md` | Cardinals, ordinals, classifiers |
+| `06-func-04-negation.md` | Negation markers and NPIs |
+| `06-func-05-quantifiers.md` | Universal, existential quantifiers |
+| `06-func-06-coordinators.md` | Coordination and disjunction |
+
+### Derivation (07-*)
+
+| File | Description |
+|------|-------------|
+| `07-nmlz-01-deverbal.md` | Deverbal nominalization (-na, -pa, -nu) |
+| `07-deriv-02-reduplication.md` | Reduplication patterns |
+
+### Clause Structure (08-clause-*)
+
+| File | Description |
+|------|-------------|
+| `08-clause-01-subordination.md` | Subordinators and clause types |
+| `08-clause-02-switch-reference.md` | Same/different subject marking |
+| `08-clause-03-relatives.md` | Relative clause formation |
 
 ## Regenerating Reports
 
-Reports in `paradigms/` are generated by scripts in `scripts/`:
+Reports in `grammar/reports/` are generated by scripts in `scripts/`:
 
 ```bash
 # Regenerate noun paradigm reports
