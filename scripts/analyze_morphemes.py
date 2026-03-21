@@ -12565,7 +12565,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thehthangna': ('theh-thang-na', 'throw-scatter-NMLZ'), # scattering
         'theh': ('theh', 'throw'),                             # base - throw
         'kihuhna': ('ki-huh-na', 'REFL-help-NMLZ'),             # help/safety
-        'muhsak': ('muh-sak', 'see-CAUS'),                     # show/cause to see
+        'muhsak': ('muh-sak', 'see.II-BENF'),                  # show (for someone) - Form II + sak
         'ensim': ('en-sim', 'look-count'),                     # view/survey
         'sim': ('sim', 'count'),                               # base - count
         'khawlcip': ('khawl-cip', 'rest-tight'),               # stand still
@@ -13406,7 +13406,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thukhual': ('thu-khual', 'word-strange'),             # strange, enemy
         'thudong': ('thu-dong', 'word-inquire'),               # enquire, ask
         'thuciamteh': ('thu-ciam-teh', 'word-promise-measure'), # covenant (confirm)
-        'theihsak': ('theih-sak', 'know-CAUS'),                # make known
+        'theihsak': ('theih-sak', 'know.II-BENF'),             # know for (someone) - Form II + sak
         'tektek': ('tek~tek', 'bend~REDUP'),                   # bend (tongues)
         'teello': ('teel-lo', 'choose-NEG'),                   # not chosen
         'teelkhiat': ('teel-khiat', 'choose-away'),            # reject, forsake
@@ -14085,7 +14085,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thumantak': ('thu-man-tak', 'word-true-real'),            # truly, kindly
         'sattat': ('sat-tat', 'cut~REDUP'),                          # slew, killed
         'noptuak': ('nop-tuak', 'good-pleasant'),                  # pleasant, good
-        'cihsak': ('cih-sak', 'say-CAUS'),                         # made to swear
+        'cihsak': ('cih-sak', 'say.II-BENF'),                      # say for (someone) - Form II + sak
         'khoisak': ('khoi-sak', 'call-CAUS'),                      # call to, summon
         'sapsak': ('sap-sak', 'suckle-CAUS'),                      # nurse
         'anthul': ('an-thul', 'grain-smitten'),                    # smitten grain
@@ -14662,7 +14662,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'khialzaw': ('khial-zaw', 'fault-more'),                   # fault
         'uihgawp': ('uih-gawp', 'stink-INTENS'),                   # stink
         'thokangte': ('tho-kang-te', 'magician-PL'),               # magicians
-        'neihsak': ('neih-sak', 'have-CAUS'),                      # give us
+        'neihsak': ('neih-sak', 'have.II-BENF'),                   # have for (someone) - Form II + sak
         'mahmahsa': ('mah-mah-sa', 'self-REDUP-PAST'),             # themselves
         'bangtungzawl': ('bang-tung-zawl', 'door-above-post'),     # upper door post
         'talsuante': ('tal-suan-te', 'forehead-mark-PL'),          # frontlets
@@ -19653,12 +19653,19 @@ def analyze_word(word: str) -> Tuple[str, str]:
         # Sort by length (descending), then priority (ascending)
         candidates.sort(key=lambda x: (-len(x[0][0]), x[1]))
         stem, gloss = candidates[0][0]
+        # Track whether we selected a Form II stem
+        is_form_ii_stem = (candidates[0][1] == 0)  # Priority 0 = Form II
     else:
         stem, gloss = None, None
+        is_form_ii_stem = False
     
     if stem:
         segments.append(stem)
-        glosses.append(gloss)
+        # Add .II marker for Form II stems (Henderson 1965)
+        if is_form_ii_stem:
+            glosses.append(f"{gloss}.II")
+        else:
+            glosses.append(gloss)
         remaining = remaining[len(stem):]
         stem_found = True
     
@@ -19696,6 +19703,16 @@ def analyze_word(word: str) -> Tuple[str, str]:
                             glosses.append('CVB')  # Same-subject converb marker
                         else:
                             glosses.append(gloss)
+                    # Round 197: Disambiguate -sak: BENF after Form II, CAUS otherwise
+                    elif suffix == 'sak' and segments:
+                        prev_seg = segments[-2].lower() if len(segments) >= 2 else ''
+                        prev_gloss = glosses[-1] if glosses else ''
+                        # Check if previous segment is Form II verb stem
+                        is_form_ii = prev_seg in VERB_STEM_PAIRS or '.II' in prev_gloss
+                        if is_form_ii:
+                            glosses.append('BENF')  # Benefactive (Form II + sak)
+                        else:
+                            glosses.append(gloss)
                     else:
                         glosses.append(gloss)
                     remaining = ''
@@ -19708,6 +19725,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     # Check if base is a known stem, Form II verb, or another strippable suffix
                     if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in VERB_STEM_PAIRS or base_lower in STRIPPABLE_SUFFIXES:
                         segments.append(base)
+                        is_form_ii = False  # Track if base is Form II
                         if base_lower in CASE_MARKERS:
                             # Prioritize case marker reading for suffix position
                             glosses.append(CASE_MARKERS[base_lower])
@@ -19717,13 +19735,17 @@ def analyze_word(word: str) -> Tuple[str, str]:
                             glosses.append(NOUN_STEMS[base_lower])
                         elif base_lower in VERB_STEM_PAIRS:
                             form_i, base_gloss = VERB_STEM_PAIRS[base_lower]
-                            glosses.append(base_gloss)
+                            glosses.append(f"{base_gloss}.II")  # Mark Form II
+                            is_form_ii = True
                         else:
                             glosses.append(STRIPPABLE_SUFFIXES[base_lower])
                         segments.append(suffix)
                         # Disambiguate -in: CVB after verb stems, ERG after nouns
                         if suffix == 'in' and (base_lower in VERB_STEMS or base_lower in VERB_STEM_PAIRS):
                             glosses.append('CVB')  # Converb (same-subject sequential)
+                        # Disambiguate -sak: BENF after Form II, CAUS after Form I/nouns
+                        elif suffix == 'sak' and is_form_ii:
+                            glosses.append('BENF')  # Benefactive (Form II + sak)
                         else:
                             glosses.append(gloss)
                         remaining = ''
@@ -19841,33 +19863,44 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 # Round 196: Disambiguate -in as CVB (converb) after verb stems, ERG after nouns
                 # When -in attaches directly to a verb stem without nominalizer, it marks
                 # same-subject sequential action (converb), not ergative case
-                def get_suffix_gloss_for_stem(suffix, suf_gloss, is_verb_base):
-                    """Disambiguate -in suffix: CVB after verbs, ERG after nouns."""
+                def get_suffix_gloss_for_stem(suffix, suf_gloss, is_verb_base, is_form_ii=False):
+                    """Disambiguate suffix glosses based on stem type.
+                    
+                    -in: CVB (converb) after verbs, ERG after nouns
+                    -sak: BENF (benefactive) after Form II, CAUS (causative) after Form I/nouns
+                    
+                    Based on Otsuka (2009): Form I + -sak = causative, Form II + -sak = benefactive
+                    """
                     if suffix == 'in' and is_verb_base:
                         return 'CVB'  # Same-subject converb marker
+                    if suffix == 'sak' and is_verb_base and is_form_ii:
+                        return 'BENF'  # Benefactive (Form II + -sak)
                     return suf_gloss
                 
                 if base_lower in ATOMIC_GLOSSES:
-                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, base_lower in VERB_STEMS)
+                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, base_lower in VERB_STEMS, base_lower in VERB_STEM_PAIRS)
                     return (f"{base}-{suffix}", f"{ATOMIC_GLOSSES[base_lower]}-{final_suf_gloss}")
                 elif base_lower in VERB_STEMS:
-                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, True)
+                    # Form I verb stem - CAUS for -sak
+                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, True, False)
                     return (f"{base}-{suffix}", f"{VERB_STEMS[base_lower]}-{final_suf_gloss}")
                 elif base_lower in NOUN_STEMS:
-                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, False)
+                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, False, False)
                     return (f"{base}-{suffix}", f"{NOUN_STEMS[base_lower]}-{final_suf_gloss}")
                 # Check Form II verb stems (Henderson 1965)
                 elif base_lower in VERB_STEM_PAIRS:
                     form_i, base_gloss = VERB_STEM_PAIRS[base_lower]
-                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, True)
-                    return (f"{base}-{suffix}", f"{base_gloss}-{final_suf_gloss}")
+                    # Form II verb stem - BENF for -sak
+                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, True, True)
+                    return (f"{base}-{suffix}", f"{base_gloss}.II-{final_suf_gloss}")
                 
                 # Lexicon lookup as fallback (for words not in curated dictionaries)
                 lex_gloss = lookup_lexicon(base_lower)
                 if lex_gloss:
                     # Check if lexicon entry is a verb (heuristic: look for typical verb glosses)
                     is_verb_lex = any(v_ind in lex_gloss.lower() for v_ind in ['go', 'come', 'make', 'give', 'take', 'say', 'see', 'hear', 'do', 'put', 'get'])
-                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, is_verb_lex)
+                    # Lexicon doesn't track Form I/II, default to Form I (CAUS)
+                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, is_verb_lex, False)
                     return (f"{base}-{suffix}", f"{lex_gloss}-{final_suf_gloss}")
                 
                 # RECURSIVE: Try analyzing the base as a complex form
@@ -19878,7 +19911,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     # Check if recursive analysis indicates a verb base (contains verb glosses)
                     is_verb_base = any(v_ind in base_gloss for v_ind in ['CAUS', 'ITER', 'ABIL', 'APPL', 'REFL', 'RECP'])
                     is_verb_base = is_verb_base or base_lower.startswith('ki') or base_lower in VERB_STEMS
-                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, is_verb_base)
+                    # Check if Form II by looking for .II marker in gloss
+                    is_form_ii = '.II' in base_gloss
+                    final_suf_gloss = get_suffix_gloss_for_stem(suffix, suf_gloss, is_verb_base, is_form_ii)
                     return (f"{base_seg}-{suffix}", f"{base_gloss}-{final_suf_gloss}")
         
         # === KI- REFLEXIVE PREFIX HANDLING (Round 154) ===
