@@ -19407,6 +19407,25 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ulianpipi': ('u-lian-pi~pi', 'elder-great-big~INTENS'),  # greatest elder
         'seelloin': ('seel-lo-in', 'basket-NEG-ERG'),             # without basket
         'thuaklahin': ('thuak-lah-in', 'suffer-far-ERG'),         # suffering long
+        
+        # Round 165: suk- prefix compounds (causative/factitive "make/cause to become")
+        # Note: suk- as prefix = causative; -suk as suffix = DOWN (directional)
+        'suksakna': ('suk-sak-na', 'cause.become-CAUS-NMLZ'),     # humiliation (make low)
+        'suktaak': ('suk-taak', 'cause.become-comb'),             # make combed/groomed
+        'sukkhakna': ('suk-khak-na', 'cause.become-restrain-NMLZ'), # restraining
+        'kisuktat': ('ki-suk-tat', 'REFL-cause.become-cut'),      # be cut down
+        'sukcipna': ('suk-cip-na', 'cause.become-tight-NMLZ'),    # tightening
+        'sukniam': ('suk-niam', 'cause.become-low'),              # abase/humble
+        'suksiatnate': ('suk-siat-na-te', 'cause.become-destroy-NMLZ-PL'), # destructions
+        'suktat': ('suk-tat', 'cause.become-cut'),                # cut down
+        'sukpaih': ('suk-paih', 'cause.become-pour'),             # pour out
+        'suktan': ('suk-tan', 'cause.become-broken'),             # break
+        'suktai': ('suk-tai', 'cause.become-bright'),             # illuminate/brighten
+        'sukmai': ('suk-mai', 'cause.become-face'),               # turn face toward
+        'suksiatzawh': ('suk-siat-zawh', 'cause.become-destroy-COMPL'), # completely destroy
+        'suktuah': ('suk-tuah', 'cause.become-do'),               # cause to do
+        'sukpai': ('suk-pai', 'cause.become-go'),                 # cause to go/send
+        'sukmit': ('suk-mit', 'cause.become-eye'),                # open eyes
     }
 
 
