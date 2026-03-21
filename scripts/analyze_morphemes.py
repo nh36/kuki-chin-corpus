@@ -246,6 +246,8 @@ ASPECT_SUFFIXES = {
     'zawh': 'finish',   # Completive (finish V-ing)
     'khit': 'COMPL',    # Sequential/completive
     'to': 'CONT',       # Continuative
+    'zel': 'HAB.CONT',  # Habitual continuative (ZNC §6.6.2.3) - continuing to do
+    'gige': 'HAB',      # Habitual (ZNC §6.6.2.3) - always does
 }
 
 # DIRECTIONAL SUFFIXES - indicate path/direction of motion
@@ -318,6 +320,9 @@ TAM_SUFFIXES = {
     'phei': 'HORIZ',    # Horizontal/level - ZNC: -pʰeī
     'to': 'CONT',       # Continuative
     'cip': 'tightly',   # Intensifier (firmly/tightly)
+    # Habitual markers - ZNC §6.6.2.3
+    'zel': 'HAB.CONT',  # Habitual continuative (continuing to do)
+    'gige': 'HAB',      # Habitual (always does)
     # Other aspect markers
     'mang': 'COMPL',    # Completive (completely)
     'kim': 'fully',     # Completive (fully)
@@ -3417,7 +3422,7 @@ NOUN_STEMS = {
     'kimkota': 'round',      # 20x
     'bual': 'pool',          # 20x
     'thutheihna': 'knowledge', # 20x
-    'gige': 'watch',         # 20x
+    'gige': 'HAB',           # 20x - habitual "always" (ZNC §6.6.2.3)
     'thawhkik': 'resurrection', # 20x
     
     # Lower-frequency nouns (10-20x)
