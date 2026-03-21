@@ -737,7 +737,7 @@ def main():
     
     import argparse
     parser = argparse.ArgumentParser(description='Generate relator noun report')
-    parser.add_argument('--output', '-o', help='Output file (default: docs/paradigms/3-noun-04-relators.md)')
+    parser.add_argument('--output', '-o', help='Output file (default: grammar/reports/03-noun-04-relators.md)')
     args = parser.parse_args()
     
     kjv_file = str(Path(__file__).parent.parent / 'data' / 'verses_aligned.tsv')
