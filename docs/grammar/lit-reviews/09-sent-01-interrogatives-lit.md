@@ -17,11 +17,11 @@ Henderson does not provide a dedicated section on interrogatives. Her texts are 
 > "The question particle in Tedim Chin occurs at the end of the sentence. It can also occur with wh-question which occurs at the beginning of the sentence."
 
 ```
-nà    paī-út        hí-á
+nà [≈na]    paī-út [≈-ut]        hí [≈hi]-á [≈-a]
 2SG   go.1-want.1   COP-Q
 'Do you want to go?'
 
-kɔí-àɁ     téŋ      ná    hī-ā
+kɔí [≈koi]-àɁ [≈-ah]     téŋ [≈teng]      ná [≈na]    hī [≈hi]-ā [≈-a]
 where-LOC  live.1   2SG   COP-Q
 'Where do you live?'
 ```
@@ -35,14 +35,14 @@ where-LOC  live.1   2SG   COP-Q
 > "In yes-no question, the answer is expected to be given with 'yes' or 'no'. It is also called polar interrogatives (Hartmann 2009: 310)."
 
 ```
-nà    pá       tʰɔú-tà    m
+nà [≈na]    pá [≈pa]       tʰɔú [≈tho]-tà [≈-ta]    m
 2POSS father   get.up-PFV Q
 'Has your father got up already?'
 ```
 
 Polite response repeats part of the question:
 ```
-hè    kà      pá       tʰɔú-tà
+hè [≈he]    kà [≈ka]      pá [≈pa]       tʰɔú [≈tho]-tà [≈-ta]
 yes   2POSS   father   get.up-PFV
 'Yes, my father has got up already'
 ```
@@ -53,7 +53,7 @@ yes   2POSS   father   get.up-PFV
 
 **High abrupt pitch** = speaker is unhappy OR confirming known information:
 ```
-paī   mɔ̀
+paī   mɔ̀ [≈maw]
 go.1  Q
 'Did you go/You go?' (with abrupt high pitch)
 ```
@@ -70,13 +70,13 @@ go.1  Q
 | Formal | Informal | Function |
 |--------|----------|----------|
 | hiam | hia | General question |
-| diam | dia | Irrealis question (< díŋ + hiam) |
+| diam | dia | Irrealis question (< díŋ [≈ding] + hiam) |
 
 > "'hia' and 'dia' are more casual and used in informal occasion whereas 'hiam' and 'diam' are more formal."
 
 **diam** combines irrealis + question, functions as request:
 ```
-vɔ̀k-té   án    nà    piá     diàm
+vɔ̀k [≈vawk]-té [≈te]   án [≈an]    nà [≈na]    piá     diàm
 pig-PL   food  2SG   give.1  PURP-Q
 'Will you feed the pigs?'
 ```
@@ -86,7 +86,7 @@ pig-PL   food  2SG   give.1  PURP-Q
 > "Tag question is a form of yes/no question... The expected response from the other person is an affirmative answer."
 
 ```
-náŋ   ciàʔ        díŋ    hì-màʔ    lɔù     ná    hí-á
+náŋ [≈nang]   ciàʔ        díŋ [≈ding]    hì [≈hi]-màʔ [≈-mah]    lɔù [≈lo]     ná [≈na]    hí [≈hi]-á [≈-a]
 2SG   return.home PURP   COP.EMPH  NEG.1   2SG   COP-Q
 'You are going home, aren't you?'
 ```
@@ -97,11 +97,11 @@ Three basic question words with derivatives:
 
 | Base | Gloss | Derived | Gloss |
 |------|-------|---------|-------|
-| bàŋ | 'what' | bàŋháŋ | 'why' |
+| bàŋ [≈bang] | 'what' | bàŋháŋ [≈banghang] | 'why' |
 | kuà | 'who' | kuāá | 'whose' |
 | | | kuàn | 'whom' |
-| kɔí | 'which' | kɔíàɁ | 'where' |
-| cìkciáŋ | 'when' | — | — |
+| kɔí [≈koi] | 'which' | kɔíàɁ [≈koiah] | 'where' |
+| cìkciáŋ [≈cikciang] | 'when' | — | — |
 
 ### 2.3 Wh-Question Position and Verb Stem (§7.4.1.5)
 
@@ -109,14 +109,14 @@ Three basic question words with derivatives:
 
 **In-situ** (Stem 1):
 ```
-náŋ   tú     zīŋsāŋ     bàŋ    né
+náŋ [≈nang]   tú [≈tu]     zīŋsāŋ [≈zingsang]     bàŋ [≈bang]    né [≈ne]
 2SG   now    morning    what   eat.1
 'What did you eat this morning?'
 ```
 
 **Fronted** (Stem 2):
 ```
-tú    zīŋsāŋ     bàŋ-à    nà    nék
+tú [≈tu]    zīŋsāŋ [≈zingsang]     bàŋ [≈bang]-à [≈-a]    nà [≈na]    nék [≈nek]
 now   morning    what-Q   2SG   eat.2
 'What did you eat this morning?'
 ```
@@ -133,31 +133,31 @@ now   morning    what-Q   2SG   eat.2
 
 | Sukte | Gloss |
 |-------|-------|
-| bəŋ | 'what' |
-| kuə | 'who' |
-| koi-əʔ | 'where' |
-| bəŋhun | 'when' |
+| bəŋ [≈bang] | 'what' |
+| kuə [≈kua] | 'who' |
+| koi-əʔ [≈ah] | 'where' |
+| bəŋhun [≈banghun] | 'when' |
 
 ```
-nəŋ    kuə    nə    hiam?
+nəŋ [≈nang]    kuə [≈kua]    nə [≈na]    hiam?
 you    who    2SG   QP
 'Who are you?'
 
-əməʔ-in   bəŋ   sem    ə    hiam?
+əməʔ [≈amah]-in   bəŋ [≈bang]   sem    ə    hiam?
 he-NOM    what  do     3SG  QP
 'What does he do?'
 ```
 
 ### 3.3 Question Particles (§8.1.3.2)
 
-> "In Sukte, the interrogative clause is also formed by the question particles **hiam**, **diam** etc. It is important to note that the particle **diam** is mutually derived from **diŋ** 'will/shall' and **hiam** 'question particle'."
+> "In Sukte, the interrogative clause is also formed by the question particles **hiam**, **diam** etc. It is important to note that the particle **diam** is mutually derived from **diŋ [≈ding]** 'will/shall' and **hiam** 'question particle'."
 
 ```
-huətak   əʔ     kə    pai    diam?
+huətak [≈huatak]   əʔ [≈ah]     kə [≈ka]    pai    diam?
 there    LOC    1SG   go     QM
 'Shall I go there?'
 
-nəŋ   saŋsia    nə    hiam?
+nəŋ [≈nang]   saŋsia [≈sangsia]    nə [≈na]    hiam?
 you   teacher   2SG   QM
 'Are you teacher?'
 ```
@@ -167,7 +167,7 @@ you   teacher   2SG   QM
 > "Like most of the languages in the world, the yes-no interrogative clause in Sukte can also be formed from the declarative sentences by using the rising intonation."
 
 ```
-nəŋ   zatui      nə    ne    hi
+nəŋ [≈nang]   zatui      nə [≈na]    ne    hi
 you   medicine   2SG   eat   DECL
 'You eat the medicine?' (with rising intonation)
 ```
@@ -182,17 +182,17 @@ you   medicine   2SG   eat   DECL
 |----------|-------|-------|
 | General Q | hiam / hia | hiam |
 | Irrealis Q | diam / dia | diam |
-| Simple Q | m / mɔ̀ | — |
+| Simple Q | m / mɔ̀ [≈maw] | — |
 
 ### 4.2 Question Word Cognates
 
 | Gloss | Tedim | Sukte |
 |-------|-------|-------|
-| 'what' | bàŋ | bəŋ |
-| 'who' | kuà | kuə |
-| 'where' | kɔíàɁ | koi-əʔ |
-| 'when' | cìkciáŋ | bəŋhun |
-| 'why' | bàŋháŋ | — |
+| 'what' | bàŋ [≈bang] | bəŋ [≈bang] |
+| 'who' | kuà | kuə [≈kua] |
+| 'where' | kɔíàɁ [≈koiah] | koi-əʔ [≈ah] |
+| 'when' | cìkciáŋ [≈cikciang] | bəŋhun [≈banghun] |
+| 'why' | bàŋháŋ [≈banghang] | — |
 
 ### 4.3 Question Formation Strategies
 
@@ -219,7 +219,7 @@ you   medicine   2SG   eat   DECL
 
 ## 5. Open Questions
 
-1. **diam etymology**: Is the reanalysis of díŋ + hiam > diam shared?
+1. **diam etymology**: Is the reanalysis of díŋ [≈ding] + hiam > diam shared?
 2. **Pitch contrasts**: How systematic is the intonation-meaning mapping?
 3. **Focus**: Does wh-fronting involve focus movement?
 4. **Echo questions**: Are there specialized echo question forms?

@@ -47,11 +47,11 @@ This report compiles previous scholarship on sentence-final particles in Tedim C
 > "In Tedim Chin, the declarative clause is marked in informal speech with **'e'** or **'ei'** which both occurs at the final position. 'e' is the more polite form of marking declarative and 'ei' gives a strong assertion as compared to 'e'."
 
 ```
-dām    kīm       úŋ       ē
+dām [≈dam]    kīm [≈kim]       úŋ [≈ung]       ē
 heal.1 complete  1PL.RLS  DECL
 'We are all fine' (polite)
 
-dām    kīm       úŋ       eí
+dām [≈dam]    kīm [≈kim]       úŋ [≈ung]       eí
 heal.1 complete  1PL.RLS  DECL
 'We are all fine' (strong assertion)
 ```
@@ -64,26 +64,26 @@ heal.1 complete  1PL.RLS  DECL
 
 | | Singular | Plural |
 |---|----------|--------|
-| First person | iŋ (RLS) / niŋ (IRR) | uŋ (excl.) / haŋ (incl.) |
-| Second person | teɁ | uɁteɁ |
+| First person | iŋ [≈ing] (RLS) / niŋ [≈ning] (IRR) | uŋ [≈ung] (excl.) / haŋ [≈hang] (incl.) |
+| Second person | teɁ [≈teh] | uɁteɁ [≈uhteh] |
 
 Example from narrative:
 ```
-vàn-ā     āksínélkaī  deìɁ-laī    íŋ       cì    mɔ́k
+vàn [≈van]-ā     āksínélkaī [≈aksinelkai]  deìɁ-laī    íŋ [≈ing]       cì [≈ci]    mɔ́k [≈mawk]
 sky-LOC   comet       want-PROG   1SG.RLS  say.1 INTJ
 'She said she still wanted comet from the sky'
 ```
 
 ### 2.3 Imperative Markers (§5.7.1)
 
-> "An imperative mood occurs with Stem 1 verb. It is marked by **ɔù**, **dìɁ** and **vē**."
+> "An imperative mood occurs with Stem 1 verb. It is marked by **ɔù [≈o]**, **dìɁ [≈dih]** and **vē [≈ve]**."
 
 ```
-paī   ɔú
+paī   ɔú [≈o]
 go.1  IMP
 'Go'
 
-tú    vē
+tú [≈tu]    vē [≈ve]
 sit.1 IMP
 'Sit'
 ```
@@ -92,8 +92,8 @@ sit.1 IMP
 
 See dedicated report on interrogatives. Key particles:
 - **hiam / hia** — question particle
-- **diam / dia** — irrealis question (< díŋ + hiam)
-- **m / mɔ̀** — simple question
+- **diam / dia** — irrealis question (< díŋ [≈ding] + hiam)
+- **m / mɔ̀ [≈maw]** — simple question
 
 ---
 
@@ -104,7 +104,7 @@ See dedicated report on interrogatives. Key particles:
 > "Declarative clause in Sukte is expressed by the declarative suffix **hi**."
 
 ```
-əməʔ-in   ə      iʔmu    ta    hὶ
+əməʔ [≈amah]-in   ə      iʔmu [≈ihmu]    ta    hὶ
 he-NOM    3SG    sleep   PST   DECL
 'He slept.'
 
@@ -116,7 +116,7 @@ John-NOM  mango   3SG   eat   DECL
 ### 3.2 Imperative Marker in (§8.1.2)
 
 ```
-hiʔ   laibu   sim   in
+hiʔ [≈hih]   laibu   sim   in
 this  book    read  IMP
 'Read this book.'
 
@@ -128,10 +128,10 @@ sit   IMP
 ### 3.3 Question Particles (§8.1.3)
 
 - **hiam** — general question particle
-- **diam** — irrealis question (< diŋ + hiam)
+- **diam** — irrealis question (< diŋ [≈ding] + hiam)
 
 ```
-nəŋ   saŋsia   nə    hiam?
+nəŋ [≈nang]   saŋsia [≈sangsia]   nə [≈na]    hiam?
 you   teacher  2SG   QM
 'Are you teacher?'
 ```
@@ -139,7 +139,7 @@ you   teacher  2SG   QM
 ### 3.4 Wish Marker təhen (§8.1.2.3)
 
 ```
-pasian-in   nəŋ   hoŋ   hon   təhen
+pasian-in   nəŋ [≈nang]   hoŋ [≈hong]   hon   təhen [≈tahen]
 God-NOM     you   DIR   save  WISH
 'May God save you.'
 ```
@@ -156,10 +156,10 @@ God-NOM     you   DIR   save  WISH
 | Sequential | leh | — | Inconclusive |
 | Polite DECL | e | — | — |
 | Strong DECL | ei | — | — |
-| Imperative | ɔù, dìɁ, vē | in | — |
+| Imperative | ɔù [≈o], dìɁ [≈dih], vē [≈ve] | in | — |
 | Question | hiam, m | hiam | — |
 | Irrealis Q | diam | diam | — |
-| Wish | — | təhen | — |
+| Wish | — | təhen [≈tahen] | — |
 
 ### 4.2 Person Agreement as Sentence-Final
 
@@ -167,11 +167,11 @@ Tedim Chin has **person agreement markers** that appear sentence-finally:
 
 | | Realis | Irrealis |
 |---|--------|----------|
-| 1SG | iŋ | niŋ |
-| 1PL.EXCL | uŋ | — |
-| 1PL.INCL | haŋ | — |
-| 2SG | teɁ | — |
-| 2PL | uɁteɁ | — |
+| 1SG | iŋ [≈ing] | niŋ [≈ning] |
+| 1PL.EXCL | uŋ [≈ung] | — |
+| 1PL.INCL | haŋ [≈hang] | — |
+| 2SG | teɁ [≈teh] | — |
+| 2PL | uɁteɁ [≈uhteh] | — |
 
 ### 4.3 Mood-Particle Correlations (Henderson)
 
@@ -200,7 +200,7 @@ Tedim Chin has **person agreement markers** that appear sentence-finally:
 ## 5. Open Questions
 
 1. **e/ei distribution**: What contexts trigger each declarative marker?
-2. **leh grammaticalization**: Is leh related to leɁ 'if' (conditional)?
+2. **leh grammaticalization**: Is leh related to leɁ [≈leh] 'if' (conditional)?
 3. **Person markers**: Are these clitics or independent particles?
 4. **Evidentiality**: Are there evidential distinctions in sentence-final position?
 5. **Mirativity**: Are there markers for unexpected information?

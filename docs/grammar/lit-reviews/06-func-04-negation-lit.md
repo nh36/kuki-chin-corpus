@@ -24,23 +24,23 @@ The negative **-kei** is described as an adverb that attaches to verbs.
 
 ### 2.1 Negative Markers (§5.8.2.1)
 
-> "There are two types of negative markers in Tedim Chin: **-keí** and **-lɔù**. These negative morphemes are marked on the verb."
+> "There are two types of negative markers in Tedim Chin: **-keí** and **-lɔù [≈-lo]**. These negative morphemes are marked on the verb."
 
 **Distribution by verb stem:**
 
 | Marker | Stem | Alternant |
 |--------|------|-----------|
-| -lɔù | Stem 1 | -lɔùʔ |
-| -lɔùʔ | Stem 2 | — |
+| -lɔù [≈-lo] | Stem 1 | -lɔùʔ [≈-loh] |
+| -lɔùʔ [≈-loh] | Stem 2 | — |
 | -keí | Both stems | — |
 
 > "These two can never interchange their position."
 
 ### 2.2 -lɔù / -lɔùʔ NEG
 
-Used with irrealis **díŋ**:
+Used with irrealis **díŋ [≈ding]**:
 ```
-náŋ   íʔmú-lɔù      díŋ
+náŋ [≈nang]   íʔmú [≈ihmu]-lɔù [≈-lo]      díŋ [≈ding]
 2SG   sleep.1-NEG.1 PURP
 'You will not sleep'
 ```
@@ -49,32 +49,32 @@ náŋ   íʔmú-lɔù      díŋ
 
 Used with imperatives and first person:
 ```
-íʔmú-keí      ɔú
+íʔmú [≈ihmu]-keí      ɔú [≈o]
 sleep.1-NEG   IMP
 'You don't sleep' (prohibitive)
 
-keí   paī-kéŋ
+keí   paī-kéŋ [≈-keng]
 1SG   go.1-NEG.1SG.RLS
 'I didn't go'
 ```
 
 > "The first person agreement markers occur with the negative marker -keí"
 
-**Ungrammatical**: *keí paī-lɔú ìŋ (cannot use -lɔù with 1SG realis)
+**Ungrammatical**: *keí paī-lɔú [≈-lo] ìŋ [≈ing] (cannot use -lɔù [≈-lo] with 1SG realis)
 
 ### 2.4 Informal Negative -dàʔ (§5.8.2.1)
 
-> "Another negative morpheme **-dàʔ** is not commonly used in written form but it is usually used in informal speech."
+> "Another negative morpheme **-dàʔ [≈-dah]** is not commonly used in written form but it is usually used in informal speech."
 
 ```
-né-dàʔ      níŋ
+né [≈ne]-dàʔ [≈-dah]      níŋ [≈ning]
 eat.1-NEG   1SG.IRR
 'I will rather not eat'
 ```
 
-Note: **dàʔ** also means 'sad' as a stative verb:
+Note: **dàʔ [≈dah]** also means 'sad' as a stative verb:
 ```
-dàʔ   lua     iŋ
+dàʔ [≈dah]   lua     iŋ [≈ing]
 sad   very    1SG.RLS
 'I am very sad'
 ```
@@ -85,14 +85,14 @@ sad   very    1SG.RLS
 
 **Stem 1** (ongoing/stative reading):
 ```
-naūŋék    kàp-lɔù
+naūŋék [≈ngek]    kàp [≈kap]-lɔù [≈lo]
 baby      cry.1-NEG.1
 'The baby is not crying'
 ```
 
 **Stem 2** (perfective/resultative reading):
 ```
-naūŋék    kàɁ-lɔù
+naūŋék [≈ngek]    kàɁ [≈kah]-lɔù [≈-lo]
 baby      cry.2-NEG.1
 'Didn't cry for the baby' (i.e., no crying happened)
 ```
@@ -102,7 +102,7 @@ baby      cry.2-NEG.1
 > "The order of negative marker and verb is VNeg. Dryer (2008: 72) stated that 'negative morphemes in Tibeto-Burman languages are either affixes or particles'. This holds true for Tedim Chin."
 
 ```
-túnī      guàɁ  zù-lɔù
+túnī [≈tuni]      guàɁ  zù [≈zu]-lɔù [≈-lo]
 today     rain  pour.1-NEG.1
 'Today, it didn't rain'
 ```
@@ -112,11 +112,11 @@ today     rain  pour.1-NEG.1
 > "In negative imperative or prohibitive, the negative particle keí is used to negate the imperative clause."
 
 ```
-paī   keí   ɔú
+paī   keí   ɔú [≈o]
 go.1  NEG   IMP
 'Don't go'
 
-taī   keí   ɔú
+taī   keí   ɔú [≈o]
 run.1 NEG   IMP
 'Don't run'
 ```
@@ -134,18 +134,18 @@ run.1 NEG   IMP
 > "In Sukte, the negator kei are used to negate the verbal predicate."
 
 ```
-buʔsiʔ    kə      ne     kei   hi
+buʔsiʔ [≈buhsih]    kə [≈ka]      ne     kei   hi
 rice      1SG     eat    NEG   DECL
 'I do not eat rice.'
 
-əməʔ      boŋnoi  ə      don   kei   hi
+əməʔ [≈amah]      boŋnoi [≈bongnoi]  ə      don   kei   hi
 he        milk    3SG    drink NEG   DECL
 'He does not drink milk.'
 ```
 
 Also with possessives:
 ```
-laikuŋ    kə      nei    kei   hi
+laikuŋ [≈laikung]    kə [≈ka]      nei    kei   hi
 pen       1SG     POSS   NEG   DECL
 'I do not have pen.'
 ```
@@ -155,11 +155,11 @@ pen       1SG     POSS   NEG   DECL
 > "In Sukte, the negator lo is used with prefix hi for emphasising to negate nominal predicate."
 
 ```
-əməʔ  siəvuən   hi    lo    hi
+əməʔ [≈amah]  siəvuən [≈siavuan]   hi    lo    hi
 he    doctor    EMP   NEG   COP
 'He is not a doctor.'
 
-pəlik    kə     hi    lo    hi
+pəlik [≈palik]    kə [≈ka]     hi    lo    hi
 police   1SG    EMP   NEG   COP
 'I am not a police.'
 ```
@@ -173,7 +173,7 @@ mi       tai    ken
 person   chide  NEG.IMP
 'Do not chide to others.'
 
-sə       thət   ken
+sə [≈sa]       thət [≈that]   ken
 animal   kill   NEG.IMP
 'Do not kill animal.'
 ```
@@ -187,10 +187,10 @@ animal   kill   NEG.IMP
 | | Tedim | Sukte | Function |
 |---|-------|-------|----------|
 | General verbal | -keí | kei | Main clausal negator |
-| Stem-sensitive | -lɔù/-lɔùʔ | — | Stems 1/2 |
-| Informal | -dàʔ | — | Colloquial |
+| Stem-sensitive | -lɔù [≈-lo]/-lɔùʔ [≈loh] | — | Stems 1/2 |
+| Informal | -dàʔ [≈-dah] | — | Colloquial |
 | Nominal | — | lo | Copular/nominal |
-| Prohibitive | keí + ɔú | ken | Negative imperative |
+| Prohibitive | keí + ɔú [≈o] | ken | Negative imperative |
 
 ### 4.2 Structural Properties
 
@@ -199,7 +199,7 @@ animal   kill   NEG.IMP
 - Clausal scope (not constituent negation)
 
 **Tedim-specific**:
-- Stem alternation affects negator form (-lɔù vs. -lɔùʔ)
+- Stem alternation affects negator form (-lɔù [≈-lo] vs. -lɔùʔ [≈-loh])
 - Semantic difference between Stem 1-NEG (ongoing) vs. Stem 2-NEG (perfective)
 
 **Sukte-specific**:
@@ -209,9 +209,9 @@ animal   kill   NEG.IMP
 ### 4.3 Distinctive Findings
 
 **Zam Ngaih Cing's unique contributions**:
-1. Two-negator system (-keí vs. -lɔù)
+1. Two-negator system (-keí vs. -lɔù [≈-lo])
 2. Stem-sensitive negator alternation
-3. Informal register negator -dàʔ
+3. Informal register negator -dàʔ [≈-dah]
 4. Semantic difference tied to verb stem selection
 
 **Singh's unique contributions**:
@@ -223,10 +223,10 @@ animal   kill   NEG.IMP
 ## 5. Open Questions
 
 1. **Etymology**: Are Tedim -keí and Sukte kei cognate? What is the source?
-2. **-lɔù origin**: Is -lɔù related to Mizo lo or a separate development?
+2. **-lɔù [≈-lo] origin**: Is -lɔù [≈-lo] related to Mizo lo or a separate development?
 3. **Scope**: What is the interaction of negation with focus, quantifiers?
 4. **Double negation**: Are there constructions with multiple negators?
-5. **-dàʔ etymology**: Is the 'sad' meaning primary or derived?
+5. **-dàʔ [≈-dah] etymology**: Is the 'sad' meaning primary or derived?
 
 ---
 

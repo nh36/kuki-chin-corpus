@@ -58,8 +58,8 @@ Zam Ngaih Cing provides the most comprehensive treatment of pronouns in Tedim Ch
 | Person | Singular | Plural |
 |--------|----------|--------|
 | First | keí 'I' | ì 'us (incl.)'; eí 'us (incl.)' |
-| Second | náŋ 'you' | nɔú 'you' |
-| Third | ámàʔ 'he/she' | àmaù 'they' |
+| Second | náŋ [≈nang] 'you' | nɔú [≈no] 'you' |
+| Third | ámàʔ [≈amah] 'he/she' | àmaù [≈amau] 'they' |
 
 Key observations:
 - No gender distinction in third person
@@ -71,88 +71,88 @@ Key observations:
 
 | Person | Singular | Plural |
 |--------|----------|--------|
-| First | kà 'my' | ì 'our (excl.)'; eí 'our (incl.)' |
-| Second | nà 'your' | — |
+| First | kà [≈ka] 'my' | ì 'our (excl.)'; eí 'our (incl.)' |
+| Second | nà [≈na] 'your' | — |
 | Third | à 'his/her' | — |
 
 > "The possessive occupies the pre-head modifying position in a noun phrase."
 
 Example:
-- (98) `kà neù-laí-ā kà pí ɔ́ŋ gèn dàn īn...`
+- (98) `kà [≈ka] neù-laí-ā [≈-a] kà [≈ka] pí [≈pi] ɔ́ŋ [≈awng] gèn [≈gen] dàn [≈dan] īn [≈in]...`
   - "...my grandmother used to tell me when I was young..."
 
 ### 2.3 Demonstrative Pronouns (§3.2.3)
 
 | Form | Gloss |
 |------|-------|
-| híʔ | 'this' |
+| híʔ [≈hih] | 'this' |
 | huā | 'that' |
-| híʔ-té | 'these' |
-| huā-té | 'those' |
+| híʔ [≈hih]-té [≈-te] | 'these' |
+| huā-té [≈-te] | 'those' |
 
 Derived locative demonstratives:
-- `híɁ-laī-áɁ` (hiáɁ) 'here (at this place)'
-- `huā-laī-áɁ` (huáɁ) 'there (at that place)'
+- `híɁ [≈hih]-laī-áɁ [≈-ah]` (hiáɁ) 'here (at this place)'
+- `huā-laī-áɁ [≈-ah]` (huáɁ) 'there (at that place)'
 
-> "There is no separate plural demonstrative pronoun. The plurals are formed by the affixation of the plural marker -té to the singular demonstratives."
+> "There is no separate plural demonstrative pronoun. The plurals are formed by the affixation of the plural marker -té [≈-te] to the singular demonstratives."
 
 ### 2.4 Interrogative Pronouns (§3.2.4)
 
 | Form | Gloss |
 |------|-------|
-| bàŋ | 'what' |
-| kɔí | 'which' |
-| cìk | 'when' |
+| bàŋ [≈bang] | 'what' |
+| kɔí [≈koi] | 'which' |
+| cìk [≈cik] | 'when' |
 | kuà | 'who' |
-| bàŋcì | 'how' |
+| bàŋcì [≈bangci] | 'how' |
 
 > "The interrogative pronoun kuà is used to ask question about a person/people. It can be used as a possessive interrogative pronoun 'whose' when question is asked about ownership."
 
 Example:
-- (106) `kuā sám hì mɔ́k hi-ám cì īn...`
+- (106) `kuā sám [≈sam] hì [≈hi] mɔ́k [≈mawk] hi-ám [≈am] cì [≈ci] īn [≈in]...`
   - "Whose hair is this?, he said..."
 
 ### 2.5 Reflexive Pronouns (§3.2.5)
 
-Reflexive pronouns are formed by **repeating a pronoun** and joining them with `lèʔ` 'and':
+Reflexive pronouns are formed by **repeating a pronoun** and joining them with `lèʔ [≈leh]` 'and':
 
 | Person | Singular | Plural |
 |--------|----------|--------|
-| First | keí lèʔ keí 'myself' | kͻú lèʔ kͻú 'ourselves (excl.)'; eí lèʔ eí 'ourselves (incl.)' |
-| Second | náŋ lèʔ náŋ 'yourself' | nͻú lèʔ nͻú 'yourselves' |
-| Third | ámàʔ lèʔ ámàʔ 'him/herself' | ámaú lèʔ ámaú 'themselves' |
+| First | keí lèʔ [≈leh] keí 'myself' | kͻú [≈kawu] lèʔ [≈leh] kͻú [≈kawu] 'ourselves (excl.)'; eí lèʔ [≈leh] eí 'ourselves (incl.)' |
+| Second | náŋ [≈nang] lèʔ [≈leh] náŋ [≈nang] 'yourself' | nͻú [≈nawu] lèʔ [≈leh] nͻú [≈nawu] 'yourselves' |
+| Third | ámàʔ [≈amah] lèʔ [≈leh] ámàʔ [≈amah] 'him/herself' | ámaú [≈amau] lèʔ [≈leh] ámaú [≈amau] 'themselves' |
 
 Example:
-- (107) `keí lèɁ keí ɔ́ŋ kì-tʰàt níŋ īn...`
+- (107) `keí lèɁ [≈leh] keí ɔ́ŋ [≈awng] kì [≈ki]-tʰàt [≈-that] níŋ [≈ning] īn [≈in]...`
   - "I will kill myself..."
 
 ### 2.6 Emphatic Pronouns (§3.2.6)
 
-Emphatic pronouns are formed by suffixing `-màʔ` to personal pronouns:
+Emphatic pronouns are formed by suffixing `-màʔ [≈-mah]` to personal pronouns:
 
 | Form | Gloss |
 |------|-------|
-| keí-màʔ | 'I myself' |
-| náŋ-màʔ | 'you yourself' |
-| ámàʔ-màʔ | 'he himself/she herself' |
-| āmaū-màʔ | 'they themselves' |
+| keí-màʔ [≈-mah] | 'I myself' |
+| náŋ [≈nang]-màʔ [≈-mah] | 'you yourself' |
+| ámàʔ [≈amah]-màʔ [≈-mah] | 'he himself/she herself' |
+| āmaū [≈amau]-màʔ [≈-mah] | 'they themselves' |
 
 Example:
-- (110) `keí-màʔ nà pī úɁ hìŋ`
+- (110) `keí-màʔ [≈-mah] nà [≈na] pī [≈pi] úɁ [≈uh] hìŋ [≈hing]`
   - "I myself am your master's wife"
 
 ### 2.7 Indefinite Pronouns (§3.2.7)
 
 | Form | Gloss |
 |------|-------|
-| plxát | 'some' |
-| kuàmàʔ | 'no one' |
-| bàŋmàʔ | 'nothing' |
-| xàtpeùʔ | 'anyone/anything' |
-| kuàhiámxàt | 'someone/somebody' |
-| nàxàt | 'something' |
+| plxát [≈plkhat] | 'some' |
+| kuàmàʔ [≈mah] | 'no one' |
+| bàŋmàʔ [≈bangmah] | 'nothing' |
+| xàtpeùʔ [≈khatpeuh] | 'anyone/anything' |
+| kuàhiámxàt [≈mkhat] | 'someone/somebody' |
+| nàxàt [≈nakhat] | 'something' |
 
-> "An indefinite pronoun which starts with kuà meaning 'who' refers to a human being and those with bàŋ 'what' is normally used with reference to non-human object."
+> "An indefinite pronoun which starts with kuà meaning 'who' refers to a human being and those with bàŋ [≈bang] 'what' is normally used with reference to non-human object."
 
 ---
 
@@ -165,10 +165,10 @@ Singh documents five pronoun types in Sukte, providing valuable comparative data
 | Person | Singular | Plural |
 |--------|----------|--------|
 | First | kei 'I' | ko 'we' |
-| Second | nəŋ 'you' | no 'you' |
-| Third | əməʔ 'he/she' | əmau 'they' |
+| Second | nəŋ [≈nang] 'you' | no 'you' |
+| Third | əməʔ [≈amah] 'he/she' | əmau [≈amau] 'they' |
 
-> "It is also worth mentioning here that the second person singular pronoun nəŋ seems to be Proto Tibeto-Burman *naŋ (Benedict 1972)."
+> "It is also worth mentioning here that the second person singular pronoun nəŋ [≈nang] seems to be Proto Tibeto-Burman *naŋ [≈nang] (Benedict 1972)."
 
 **No inclusive-exclusive distinction** documented in Sukte.
 
@@ -176,10 +176,10 @@ Singh documents five pronoun types in Sukte, providing valuable comparative data
 
 | Form | Gloss |
 |------|-------|
-| hiʔ | 'this' |
-| huə | 'that' |
-| hiʔte | 'these' |
-| huəte | 'those' |
+| hiʔ [≈hih] | 'this' |
+| huə [≈hua] | 'that' |
+| hiʔte [≈hihte] | 'these' |
+| huəte [≈huate] | 'those' |
 
 ### 3.3 Interrogative Pronouns (§4.6.3)
 
@@ -190,13 +190,13 @@ Not fully documented in the excerpts, but includes standard Kuki-Chin forms.
 | Feature | Tedim | Sukte |
 |---------|-------|-------|
 | 1SG | keí | kei |
-| 2SG | náŋ | nəŋ |
-| 3SG | ámàʔ | əməʔ |
+| 2SG | náŋ [≈nang] | nəŋ [≈nang] |
+| 3SG | ámàʔ [≈amah] | əməʔ [≈amah] |
 | 1PL.INCL | ì, eí | ko |
 | 1PL.EXCL | — | — |
 | INCL/EXCL distinction | Yes | Not documented |
-| Demonstrative proximal | híʔ | hiʔ |
-| Demonstrative distal | huā | huə |
+| Demonstrative proximal | híʔ [≈hih] | hiʔ [≈hih] |
+| Demonstrative distal | huā | huə [≈hua] |
 
 ---
 
@@ -209,12 +209,12 @@ All sources document a three-person system with singular/plural distinction:
 | Person | Henderson | Zam Ngaih Cing | Sukte (Singh) |
 |--------|-----------|----------------|---------------|
 | 1SG | kei, keimah | keí | kei |
-| 2SG | nang, nangmah | náŋ | nəŋ |
-| 3SG | amah | ámàʔ | əməʔ |
+| 2SG | nang, nangmah | náŋ [≈nang] | nəŋ [≈nang] |
+| 3SG | amah | ámàʔ [≈amah] | əməʔ [≈amah] |
 | 1PL.INCL | ei, eite | ì, eí | — |
 | 1PL.EXCL | ko, kote | — | ko |
-| 2PL | no, note | nɔú | no |
-| 3PL | — | àmaù | əmau |
+| 2PL | no, note | nɔú [≈no] | no |
+| 3PL | — | àmaù [≈amau] | əmau [≈amau] |
 
 ### 4.2 Inclusive-Exclusive Distinction
 
@@ -232,22 +232,22 @@ The inclusive-exclusive distinction is a significant areal feature:
 
 | Strategy | Tedim | Sukte |
 |----------|-------|-------|
-| Reflexive | PRO + lèʔ + PRO | — |
-| Emphatic | PRO + -màʔ | — |
-| Plural demonstrative | DEM + -té | DEM + -te |
+| Reflexive | PRO + lèʔ [≈leh] + PRO | — |
+| Emphatic | PRO + -màʔ [≈-mah] | — |
+| Plural demonstrative | DEM + -té [≈-te] | DEM + -te |
 | Indefinite human | kuà- forms | — |
-| Indefinite non-human | bàŋ- forms | — |
+| Indefinite non-human | bàŋ [≈bang]- forms | — |
 
 ### 4.4 Proto-Tibeto-Burman Cognates
 
 Singh notes the PTB cognate for 2SG:
 
-> "The second person singular pronoun nəŋ seems to be Proto Tibeto-Burman *naŋ (Benedict 1972)."
+> "The second person singular pronoun nəŋ [≈nang] seems to be Proto Tibeto-Burman *naŋ [≈nang] (Benedict 1972)."
 
 Other likely PTB cognates:
-- 1SG *ka / *ŋa → ka-, kei
+- 1SG *ka / *ŋa [≈nga] → ka-, kei
 - 3 *a → a-
-- Demonstrative *hi → híʔ
+- Demonstrative *hi → híʔ [≈hih]
 
 ### 4.5 Key Distinctions by Author
 
@@ -255,8 +255,8 @@ Other likely PTB cognates:
 |---------|-----------|----------------|---------------|
 | Pronoun types | 2 (personal, possessive) | 7 (full inventory) | 5 |
 | Inclusive-exclusive | Yes | Yes | Not documented |
-| Reflexive formation | No | PRO + lèʔ + PRO | No |
-| Emphatic -màʔ | No | Yes | No |
+| Reflexive formation | No | PRO + lèʔ [≈leh] + PRO | No |
+| Emphatic -màʔ [≈-mah] | No | Yes | No |
 | Indefinite system | No | Yes (kuà-/bàŋ-) | No |
 | Pronominal prefixes | Yes (detailed) | Yes (as possessives) | Implicit |
 
@@ -268,9 +268,9 @@ Other likely PTB cognates:
 
 2. **Gender distinction**: No source documents grammatical gender in pronouns. Are there any honorific or social distinctions?
 
-3. **Reflexive kì-**: The verbal prefix kì- marks reflexive on verbs. How does this interact with reflexive pronouns?
+3. **Reflexive kì [≈ki]-**: The verbal prefix kì [≈ki]- marks reflexive on verbs. How does this interact with reflexive pronouns?
 
-4. **Emphatic vs. focus**: Is -màʔ purely emphatic, or does it also mark contrastive focus?
+4. **Emphatic vs. focus**: Is -màʔ [≈-mah] purely emphatic, or does it also mark contrastive focus?
 
 5. **Indefinite paradigm**: The kuà-/bàŋ- indefinite system mirrors interrogative pronouns. Is this a general Kuki-Chin pattern?
 

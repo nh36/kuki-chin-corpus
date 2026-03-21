@@ -11,8 +11,8 @@ Directional affixes are a characteristic feature of Tibeto-Burman languages, mar
 | Scholar | Year | "Away" (Andative) | "Toward" (Venitive) | Position |
 |---------|------|-------------------|---------------------|----------|
 | Henderson | 1965 | *va-* | *hong* | Pre-verbal |
-| Zam Ngaih Cing | 2018 | *và* | *ɔ́ŋ/hɔ́ŋ* | Pre-verbal |
-| Otsuka | 2017 | *va³-* | *oŋ¹-/hoŋ¹-* | Pre-verbal prefix |
+| Zam Ngaih Cing | 2018 | *và [≈va]* | *ɔ́ŋ [≈awng]/hɔ́ŋ [≈ng]* | Pre-verbal |
+| Otsuka | 2017 | *va³-* | *oŋ [≈ong]¹-/hoŋ¹-* | Pre-verbal prefix |
 
 ---
 
@@ -60,9 +60,9 @@ She further notes:
 
 Henderson provides a crucial note on the etymology of *hong*:
 
-> "Henderson (1965) によれば，hoŋ がティディム近郊のヴァルヴムでは動詞「来る」として用いられる (Henderson 1965: 113)."
+> "Henderson (1965) によれば，hoŋ [≈hong] がティディム近郊のヴァルヴムでは動詞「来る」として用いられる (Henderson 1965: 113)."
 
-(According to Henderson 1965, *hoŋ* is used as the verb 'come' in Valvum, near Tedim.)
+(According to Henderson 1965, *hoŋ [≈hong]* is used as the verb 'come' in Valvum, near Tedim.)
 
 ### Key Distinctions in Henderson
 
@@ -80,38 +80,38 @@ Zam Ngaih Cing provides a more systematic treatment of directional affixes as a 
 
 ### Pre-Verbal Directionals
 
-> "The pre-verb slot can be occupied by the directional markers **ɔ́ŋ/hɔ́ŋ** and **và** which both refers to 'away' and 'towards' from the reference point or deictic center. **và** is used when the goal is away from the subject. **ɔ́ŋ/hɔ́ŋ** is used when the goal is directed towards the speaker." (§5.8.1.3)
+> "The pre-verb slot can be occupied by the directional markers **ɔ́ŋ [≈awng]/hɔ́ŋ [≈ng]** and **và [≈va]** which both refers to 'away' and 'towards' from the reference point or deictic center. **và [≈va]** is used when the goal is away from the subject. **ɔ́ŋ [≈awng]/hɔ́ŋ [≈ng]** is used when the goal is directed towards the speaker." (§5.8.1.3)
 
 ### Examples
 
-**Andative *và* (motion away):**
-> *và paī ún* 'Go!' (lit. 'away go IMP.PL')
+**Andative *và [≈va]* (motion away):**
+> *và [≈va] paī ún [≈un]* 'Go!' (lit. 'away go IMP.PL')
 
-**Venitive *ɔ́ŋ* (motion toward):**
-> *klmāŋ-pá-n à zì díŋ á ā **ɔ́ŋ** lá-xá díŋ hì*
+**Venitive *ɔ́ŋ [≈awng]* (motion toward):**
+> *klmāŋ [≈klmang]-pá [≈-pa]-n à zì [≈zi] díŋ [≈ding] á ā **ɔ́ŋ [≈awng]** lá [≈la]-xá [≈-kha] díŋ [≈ding] hì [≈hi]*
 > 'The Burmese officer might take you unexpectedly as/for his wife'
 
 ### Co-occurrence of Directionals
 
 Zam Ngaih Cing makes an important observation about ordering:
 
-> "When both the directional markers *và* and *ɔ́ŋ* occur adjacent to each other, it is always *ɔ́ŋ* which precedes the other marker but not the other way." (§5.8.1.3.1)
+> "When both the directional markers *và [≈va]* and *ɔ́ŋ [≈awng]* occur adjacent to each other, it is always *ɔ́ŋ [≈awng]* which precedes the other marker but not the other way." (§5.8.1.3.1)
 
 Example:
-> *vān-ā āksínélkaī **ɔ́ŋ và** lák-sàk núŋ cì*
+> *vān [≈van]-ā āksínélkaī [≈aksinelkai] **ɔ́ŋ [≈awng] và [≈va]** lák [≈lak]-sàk [≈sak] núŋ [≈nung] cì [≈ci]*
 > 'They said, "We will go and get comet from the sky"'
 
 ### Other Directionals
 
 Zam Ngaih Cing identifies an additional directional marker:
 
-> "In Tedim Chin, a directional marker denoting 'forward or advance' is identified with **mā-**. It means front or ahead." (§5.8.1.3.2)
+> "In Tedim Chin, a directional marker denoting 'forward or advance' is identified with **mā [≈ma]-**. It means front or ahead." (§5.8.1.3.2)
 
 Examples:
-- *mánɔ̀Ɂ* 'approach front'
-- *málép* 'action done before the actual time'
-- *mápaī* 'going smoothly' vs. *má paì* 'go in advance'
-- *mákaì* 'leader' vs. *mā kaì* 'lead the front'
+- *mánɔ̀Ɂ [≈manawh]* 'approach front'
+- *málép [≈malep]* 'action done before the actual time'
+- *mápaī [≈mapai]* 'going smoothly' vs. *má [≈ma] paì* 'go in advance'
+- *mákaì [≈makai]* 'leader' vs. *mā [≈ma] kaì* 'lead the front'
 
 ### Post-Verbal Directional Marking
 
@@ -121,20 +121,20 @@ Zam Ngaih Cing distinguishes pre-verbal directionals (deictic) from post-verbal 
 
 | Direction | Suffix | Example |
 |-----------|--------|---------|
-| Upward | *-tɔù* | *kàʔ-tɔù* 'ascend upward' |
-| Downward | *-sùk* | *kúm-sùk* 'descend downward' |
-| Horizontal | *-pʰeī* | *paī-pʰeī* 'go level (straight)' |
+| Upward | *-tɔù [≈-to]* | *kàʔ [≈kah]-tɔù [≈-to]* 'ascend upward' |
+| Downward | *-sùk [≈-suk]* | *kúm [≈kum]-sùk [≈suk]* 'descend downward' |
+| Horizontal | *-pʰeī [≈-phei]* | *paī-pʰeī [≈-phei]* 'go level (straight)' |
 
 Locational directionals:
-- *sàk-lám-àʔ* 'towards the higher side'
-- *xāŋ-lám-àʔ* 'towards the lower side'
+- *sàk [≈sak]-lám [≈lam]-àʔ [≈ah]* 'towards the higher side'
+- *xāŋ [≈khang]-lám [≈-lam]-àʔ [≈ah]* 'towards the lower side'
 
 ### Key Distinctions in Zam Ngaih Cing
 
 1. **Systematic classification**: She treats directionals as a distinct grammatical category within verb phrase structure
-2. **Co-occurrence constraints**: She documents the fixed order ɔ́ŋ-và when both occur
+2. **Co-occurrence constraints**: She documents the fixed order ɔ́ŋ [≈awng]-và [≈-va] when both occur
 3. **Elevational vs. deictic**: She clearly distinguishes pre-verbal deictic directionals from post-verbal elevational suffixes
-4. **Additional marker *mā-***: She identifies 'forward/advance' as a separate directional category
+4. **Additional marker *mā [≈ma]-***: She identifies 'forward/advance' as a separate directional category
 
 ---
 
@@ -148,12 +148,12 @@ Otsuka provides the most detailed theoretical treatment of Tedim Chin directiona
 
 Otsuka adopts cross-linguistic terminology:
 - **Andative** (*去辞*): *va³-* — motion away from deictic center
-- **Venitive** (*来辞*): *oŋ¹-/hoŋ¹-* — motion toward deictic center
+- **Venitive** (*来辞*): *oŋ [≈ong]¹-/hoŋ¹-* — motion toward deictic center
 
 ### Morphological Position
 
-> "ティディム・チン語の去辞 va³-と来辞 oŋ¹-は，どちらも動詞の前に現れる接頭辞である"
-> (Tedim Chin's andative *va³-* and venitive *oŋ¹-* both appear as prefixes before the verb.)
+> "ティディム・チン語の去辞 va³-と来辞 oŋ [≈ong]¹-は，どちらも動詞の前に現れる接頭辞である"
+> (Tedim Chin's andative *va³-* and venitive *oŋ [≈ong]¹-* both appear as prefixes before the verb.)
 
 Verb complex structure:
 > (Person)=(Directional)-(Reflexive/Reciprocal)-VERB=(Auxiliary)=(TAM/Number/Person)
@@ -165,7 +165,7 @@ Verb complex structure:
 > (The andative marks physical movement where the moving entity departs from the perspective or domain of discourse participants.)
 
 Example:
-> *tut³naː² **va³-**la¹=pak³=niŋ¹ =ei³*
+> *tut³naː² **va³-**la¹=pak³=niŋ [≈ning]¹ =ei³*
 > 'I'll just go get a seat over there'
 
 **Semantic restrictions:**
@@ -177,11 +177,11 @@ Otsuka notes that unlike related languages (Mizo, Lai), Tedim Chin's andative do
 ### The Venitive *oŋ¹-/hoŋ¹-*
 
 **Basic meaning:**
-> "ティディム・チン語の来辞 oŋ¹-およびジンポー語の来辞-r は，移動物が談話参加者の視点や領域に向かう物理的移動を表す"
+> "ティディム・チン語の来辞 oŋ [≈ong]¹-およびジンポー語の来辞-r は，移動物が談話参加者の視点や領域に向かう物理的移動を表す"
 > (The venitive marks physical movement where the moving entity approaches the perspective or domain of discourse participants.)
 
 Example:
-> *siŋ¹hiaŋ² **oŋ¹-**kia³=in²teʔ¹*
+> *siŋ [≈sing]¹hiaŋ [≈hiang]² **oŋ [≈ong]¹-**kia³=in²teʔ [≈teh]¹*
 > 'A branch will fall (toward me/you/us)'
 
 **Derived meanings:**
@@ -189,55 +189,55 @@ Example:
 Unlike the andative, the venitive has extensive derived uses:
 
 1. **Change of state:**
-> *tua² haːi² =peːn² dam²dam²=in² **oŋ¹-**naːi²=taː³*
+> *tua² haːi² =peːn² dam²dam²=in² **oŋ [≈ong]¹-**naːi²=taː³*
 > 'That mango has gradually become yellow' (VEN-yellow)
 
 2. **Emergence/Appearance:**
-> *oŋ¹-suak¹* (VEN-born) 'to be born'
-> *oŋ¹-doːk¹* (VEN-appear) 'to appear'
+> *oŋ [≈ong]¹-suak¹* (VEN-born) 'to be born'
+> *oŋ [≈ong]¹-doːk¹* (VEN-appear) 'to appear'
 
 3. **Obligatory with speech act participant affected:**
 
-When the patient, recipient, or causee includes a speech act participant (1st or 2nd person), *oŋ¹-* is obligatory:
+When the patient, recipient, or causee includes a speech act participant (1st or 2nd person), *oŋ [≈ong]¹-* is obligatory:
 
-> *kei¹ **oŋ¹-**tʰei³=ni¹teʔ³* 'You know me'
-> \**kei¹ tʰei³=ni¹teʔ³* (ungrammatical without *oŋ¹-*)
+> *kei¹ **oŋ [≈ong]¹-**tʰei [≈thei]³=ni¹teʔ [≈teh]³* 'You know me'
+> \**kei¹ tʰei [≈thei]³=ni¹teʔ [≈teh]³* (ungrammatical without *oŋ [≈ong]¹-*)
 
-> *naŋ¹ let¹suŋ² xat³ **oŋ¹-**pia¹=iŋ³* 'I gave you a present'
+> *naŋ [≈nang]¹ let¹suŋ [≈sung]² xat³ **oŋ [≈ong]¹-**pia¹=iŋ [≈ing]³* 'I gave you a present'
 
 4. **With valency-increasing suffixes:**
 
-When *-sak* (substitutive/benefactive), *-piʔ* (associative), or *-san* (relinquitive) add a speech act participant, *oŋ¹-* is required:
+When *-sak* (substitutive/benefactive), *-piʔ [≈-pih]* (associative), or *-san* (relinquitive) add a speech act participant, *oŋ [≈ong]¹-* is required:
 
-> *lian³ =in³ kei¹ **oŋ¹-**vaːk³-piʔ³* 'Lian went out with me' (VEN-walk-ASS)
+> *lian³ =in³ kei¹ **oŋ [≈ong]¹-**vaːk³-piʔ [≈-pih]³* 'Lian went out with me' (VEN-walk-ASS)
 
 ### Co-occurrence of Andative and Venitive
 
-Otsuka documents that *oŋ¹-* and *va³-* can co-occur:
+Otsuka documents that *oŋ [≈ong]¹-* and *va³-* can co-occur:
 
-> *tua² ui¹ **oŋ¹-va³-**hoːl³kʰiat¹-sak³=iŋ³ =ei³*
+> *tua² ui¹ **oŋ [≈ong]¹-va³-**hoːl³kʰiat [≈khiat]¹-sak³=iŋ [≈ing]³ =ei³*
 > 'I drove that dog away for your sake' (VEN-AND-drive.away-SUBS)
 
-In such cases, *oŋ¹-* no longer marks physical motion toward the speaker but rather functions as an **inverse marker** indicating that a speech act participant is affected.
+In such cases, *oŋ [≈ong]¹-* no longer marks physical motion toward the speaker but rather functions as an **inverse marker** indicating that a speech act participant is affected.
 
 ### Interaction with *na-* Prefix
 
 Otsuka cites Henderson's *na-* prefix and shows it can co-occur with the venitive:
 
-> *nu¹-ciŋ² =in³ naŋ¹ **oŋ¹-na¹-**taːi³-san³ =moː³*
+> *nu¹-ciŋ [≈-cing]² =in³ naŋ [≈nang]¹ **oŋ [≈ong]¹-na¹-**taːi³-san³ =moː³*
 > 'Aunt Cing left you behind and ran off' (VEN-NA-run-RELNQ)
 
 ### Register Variation
 
-> "ティディム・チン語の来辞 oŋ¹-は，フォーマルな場面では，hoŋ¹-という形式でも用いる。"
-> (In formal contexts, the venitive appears as *hoŋ¹-*.)
+> "ティディム・チン語の来辞 oŋ [≈ong]¹-は，フォーマルな場面では，hoŋ [≈hong]¹-という形式でも用いる。"
+> (In formal contexts, the venitive appears as *hoŋ [≈hong]¹-*.)
 
 ### Historical Etymology
 
 Otsuka traces the origins:
 
-**Venitive *oŋ-/hoŋ-*:**
-- Related to PKC \**huŋ* 'COME' (VanBik 2009)
+**Venitive *oŋ [≈ong]-/hoŋ-*:**
+- Related to PKC \**huŋ [≈hung]* 'COME' (VanBik 2009)
 - *hoŋ* used as the verb 'come' in Valvum dialect (Henderson 1965: 113)
 
 **Andative *va-*:**
@@ -247,7 +247,7 @@ Otsuka traces the origins:
 ### Key Distinctions in Otsuka
 
 1. **Asymmetry between andative and venitive**: The venitive is far more developed, with obligatory uses and derived meanings; the andative is restricted to physical motion
-2. **Inverse function**: When *oŋ¹-* co-occurs with *va³-*, it functions as an inverse marker rather than a directional
+2. **Inverse function**: When *oŋ [≈ong]¹-* co-occurs with *va³-*, it functions as an inverse marker rather than a directional
 3. **Speech act participant requirement**: The venitive becomes obligatory when any added argument (patient, beneficiary, etc.) is a speech act participant
 4. **Grammaticalization pathway**: Otsuka situates the venitive's development within Heine & Kuteva's (2002) COME > VENITIVE pathway
 
@@ -285,8 +285,8 @@ All three scholars agree on:
 **Zam Ngaih Cing (2018):**
 - Systematic treatment within verb phrase structure
 - Documents elevational suffixes as separate category
-- Identifies forward/advance marker *mā-*
-- Notes fixed order constraint: *ɔ́ŋ-và* (never \**và-ɔ́ŋ*)
+- Identifies forward/advance marker *mā [≈ma]-*
+- Notes fixed order constraint: *ɔ́ŋ [≈awng]-và [≈-va]* (never \**và [≈va]-ɔ́ŋ [≈-awng]*)
 
 **Otsuka (2017):**
 - Most theoretically sophisticated treatment
@@ -304,7 +304,7 @@ All three scholars agree on:
 3. **Discourse functions**: Limited analysis of how directionals function in narrative structure
 4. **Dialectal variation**: Only Henderson notes the Valvum data; more comparative data needed
 5. **Interaction with other prefixes**: The full paradigm of prefix combinations needs documentation
-6. **Semantic bleaching**: The extent to which *oŋ-* has grammaticalized beyond motion is not fully quantified
+6. **Semantic bleaching**: The extent to which *oŋ [≈ong]-* has grammaticalized beyond motion is not fully quantified
 
 ---
 
@@ -316,7 +316,7 @@ All three scholars agree on:
 - DeLancey, Scott. 1985. The analysis-synthesis-lexis cycle in Tibeto-Burman. In John Haiman (ed.), *Iconicity in Syntax*, 367-389.
 - Heine, Bernd & Tania Kuteva. 2002. *World Lexicon of Grammaticalization*. Cambridge University Press.
 - Henderson, Eugénie J.A. 1965. *Tiddim Chin: A Descriptive Analysis of Two Texts*. Oxford University Press.
-- Otsuka, Yukinori (大塚行誠). 2009. ティディム・チン語における方向接頭辞 óŋ-. *東京大学言語学論集* 28: 197-218.
+- Otsuka, Yukinori (大塚行誠). 2009. ティディム・チン語における方向接頭辞 óŋ [≈ong]-. *東京大学言語学論集* 28: 197-218.
 - Otsuka, Yukinori. 2017. ティディム・チン語とジンポー語における方向接辞の対照. Conference paper.
 - So-Hartmann, Helga. 2009. *A Descriptive Grammar of Daai Chin*. STEDT.
 - VanBik, Kenneth. 2009. *Proto-Kuki-Chin*. STEDT Monograph 7.

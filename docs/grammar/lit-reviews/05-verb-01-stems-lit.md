@@ -67,7 +67,7 @@ Examples:
 
 > "The following have a final velar nasal in Form I and a final alveolar nasal in Form II" (p. 74):
 
-- *-xaiŋ, -xain* 'to lift up'
+- *-xaiŋ [≈-khaing], -xain* 'to lift up'
 - *-pa:ŋ, -pa:n* 'to defend'
 - *-tua:ŋ, -tua:n* 'to perch'
 
@@ -150,12 +150,12 @@ Table 31: Verb Stems
 
 | Stem 1 | Stem 2 | Gloss |
 |--------|--------|-------|
-| mù | mùʔ | 'see' |
-| ŋèn | ŋèt | 'ask' |
-| kàp | kàʔ | 'cry' |
+| mù [≈mu] | mùʔ [≈muh] | 'see' |
+| ŋèn [≈ngen] | ŋèt [≈nget] | 'ask' |
+| kàp [≈kap] | kàʔ [≈kah] | 'cry' |
 | muāŋ | muàn | 'trust' |
-| sám | sàp | 'call' |
-| tēl | tèl | 'choose' |
+| sám [≈sam] | sàp [≈sap] | 'call' |
+| tēl [≈tel] | tèl [≈tel] | 'choose' |
 | paī | paì | 'go' |
 
 ### Phonological Patterns
@@ -179,13 +179,13 @@ Zam Ngaih Cing provides detailed syntactic environments:
 - Declarative affirmative (§5.5.2)
 - Interrogative (§5.5.3)
 - Conditional protasis (§5.5.5)
-- With causative suffix *-sàk* (§5.8.2.2)
+- With causative suffix *-sàk [≈-sak]* (§5.8.2.2)
 - Pre-verbal directionals (§5.8.1.3)
 
 **Stem 2 environments:**
 - Negative clauses (§5.5.4): "The Stem 2 verb occurs before the negative marker"
-- With benefactive *-sàk* (§6.6.1.2.1): "When Stem 2 verb occurs with the suffix *-sàk*, it acts as a valence increasing operator and gives a benefactive meaning"
-- With comitative *-pìɁ* (§6.6.1.2.2): "A comitative applicative occurs after Stem 2 verb"
+- With benefactive *-sàk [≈-sak]* (§6.6.1.2.1): "When Stem 2 verb occurs with the suffix *-sàk [≈-sak]*, it acts as a valence increasing operator and gives a benefactive meaning"
+- With comitative *-pìɁ [≈-pih]* (§6.6.1.2.2): "A comitative applicative occurs after Stem 2 verb"
 - Nominalization (§3.3.6.5.2.1): "In nominalization, the verb is in Stem 2"
 
 ### Adjective Stem Alternation
@@ -196,9 +196,9 @@ Zam Ngaih Cing also documents that adjectives show the same alternation pattern:
 
 | Stem 1 | Stem 2 | Gloss |
 |--------|--------|-------|
-| hɔìʔ | hɔìʔ | 'good' |
-| sāŋ | saǹ | 'tall' |
-| tʰaū | tʰaù | 'fat' |
+| hɔìʔ [≈hoih] | hɔìʔ [≈hoih] | 'good' |
+| sāŋ [≈sang] | saǹ | 'tall' |
+| tʰaū [≈thau] | tʰaù [≈thau] | 'fat' |
 
 ---
 

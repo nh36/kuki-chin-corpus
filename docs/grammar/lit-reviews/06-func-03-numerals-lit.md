@@ -20,53 +20,53 @@ Henderson does not provide a dedicated section on numerals but uses numerals in 
 
 | Tedim Chin | English |
 |------------|---------|
-| xàt | one |
-| nìʔ | two |
-| tʰūm | three |
-| lī | four |
-| ŋā | five |
-| gùk | six |
-| ságìʔ | seven |
+| xàt [≈khat] | one |
+| nìʔ [≈nih] | two |
+| tʰūm [≈thum] | three |
+| lī [≈li] | four |
+| ŋā [≈nga] | five |
+| gùk [≈guk] | six |
+| ságìʔ [≈sagih] | seven |
 | giát | eight |
 | kuá | nine |
-| sɔ̀m | ten |
-| zà | hundred |
-| tùl | thousand |
+| sɔ̀m [≈sawm] | ten |
+| zà [≈za] | hundred |
+| tùl [≈tul] | thousand |
 
-> "All the numerals from 1 to 10 are monosyllabic with ságìʔ 'seven' as an exception which is disyllabic."
+> "All the numerals from 1 to 10 are monosyllabic with ságìʔ [≈sagih] 'seven' as an exception which is disyllabic."
 
 ### 2.3 Decimal Compounding
 
 Higher numerals are formed through:
-1. **Multiplication**: 20 = 10×2 (sɔ̀m-nìʔ)
-2. **Addition**: 11-19 = 10+N (sɔ̀m-xàt, etc.)
+1. **Multiplication**: 20 = 10×2 (sɔ̀m [≈sawm]-nìʔ [≈nih])
+2. **Addition**: 11-19 = 10+N (sɔ̀m [≈sawm]-xàt [≈khat], etc.)
 3. **Combined**: 25 = 10×2+5
 
 ### 2.4 Ordinals (§3.3.3.5.2)
 
-Ordinals are formed by suffixing **-nā** to cardinals:
+Ordinals are formed by suffixing **-nā [≈-na]** to cardinals:
 
 | Tedim Chin | English |
 |------------|---------|
-| xàtnā | first |
-| nìʔnā | second |
-| tʰūmnā | third |
-| līnā | fourth |
-| ŋānā | fifth |
+| xàtnā [≈khatna] | first |
+| nìʔnā [≈nihna] | second |
+| tʰūmnā [≈thumna] | third |
+| līnā [≈lina] | fourth |
+| ŋānā [≈ngana] | fifth |
 
-> "The ordinal number for first xàtnā is also used interchangeably with másà which is not a cardinal number."
+> "The ordinal number for first xàtnā [≈khatna] is also used interchangeably with másà [≈masa] which is not a cardinal number."
 
-**másà** vs. **xàtnā**:
-- **xàtnā**: merit-wise ranking
-- **másà**: temporal/sequential "first" (before vs. after)
+**másà [≈masa]** vs. **xàtnā [≈khatna]**:
+- **xàtnā [≈khatna]**: merit-wise ranking
+- **másà [≈masa]**: temporal/sequential "first" (before vs. after)
 
 ### 2.5 Fractionals (§3.3.3.5.3)
 
 | Form | Gloss |
 |------|-------|
-| lāŋ | 'half' |
-| sèʔlísuàʔsèʔxàt | 'one-fourth' |
-| sèʔŋásuàʔsèʔtʰūm | 'three-fifth' |
+| lāŋ [≈lang] | 'half' |
+| sèʔlísuàʔsèʔxàt [≈sehlisuahsehkhat] | 'one-fourth' |
+| sèʔŋásuàʔsèʔtʰūm [≈sehngasuahsehthum] | 'three-fifth' |
 
 ### 2.6 Distributives (§3.3.3.5.4)
 
@@ -74,15 +74,15 @@ Formed by **total reduplication** of cardinals:
 
 | Form | Gloss |
 |------|-------|
-| xàt~xàt | 'one by one' |
-| nìʔ~nìʔ | 'two by two' |
-| tʰūm~tʰūm | 'three by three' |
+| xàt [≈khat]~xàt [≈khat] | 'one by one' |
+| nìʔ [≈nih]~nìʔ [≈nih] | 'two by two' |
+| tʰūm [≈thum]~tʰūm [≈thum] | 'three by three' |
 
 > "Gil (2013: 3) stated reduplication to be 'the most common morphological strategy for the formation of distributive numerals across the world's languages'."
 
 Also formed with **ciát/ték** 'each':
-- `xàt ciát` 'one each'
-- `lī ciát` 'four each'
+- `xàt [≈khat] ciát` 'one each'
+- `lī [≈li] ciát` 'four each'
 
 ---
 
@@ -92,24 +92,24 @@ Also formed with **ciát/ték** 'each':
 
 | Sukte | Gloss | PTB |
 |-------|-------|-----|
-| khət | 'one' | — |
-| niʔ | 'two' | *nyi |
+| khət [≈khat] | 'one' | — |
+| niʔ [≈nih] | 'two' | *nyi |
 | thum | 'three' | — |
 | li | 'four' | *li |
-| ŋə | 'five' | *ŋa |
+| ŋə [≈nga] | 'five' | *ŋa [≈nga] |
 | guk | 'six' | — |
-| səgiʔ | 'seven' | — |
-| giət | 'eight' | — |
-| kuə | 'nine' | *ku |
+| səgiʔ [≈sagih] | 'seven' | — |
+| giət [≈giat] | 'eight' | — |
+| kuə [≈kua] | 'nine' | *ku |
 | som | 'ten' | — |
 
-> "Numeral roots like niʔ 'two', li 'four', ŋə 'five', and kuə 'nine' seems to be Proto-Tibeto-Burman numerals as *nyi, *li, *ŋa, *ku respectively (Benedict 1972, Matisoff 2003)."
+> "Numeral roots like niʔ [≈nih] 'two', li 'four', ŋə [≈nga] 'five', and kuə [≈kua] 'nine' seems to be Proto-Tibeto-Burman numerals as *nyi, *li, *ŋa [≈nga], *ku respectively (Benedict 1972, Matisoff 2003)."
 
 ### 3.2 Compound Formation (§4.4.1.2)
 
-Sukte uses **leʔ** as additive marker:
-- `som + leʔ + khət` = 'eleven' (10 + 1)
-- `som + leʔ + niʔ` = 'twelve' (10 + 2)
+Sukte uses **leʔ [≈leh]** as additive marker:
+- `som + leʔ [≈leh] + khət [≈khat]` = 'eleven' (10 + 1)
+- `som + leʔ [≈leh] + niʔ [≈nih]` = 'twelve' (10 + 2)
 
 ---
 
@@ -119,29 +119,29 @@ Sukte uses **leʔ** as additive marker:
 
 | Gloss | Tedim | Sukte | PTB |
 |-------|-------|-------|-----|
-| one | xàt | khət | — |
-| two | nìʔ | niʔ | *nyi |
-| three | tʰūm | thum | — |
-| four | lī | li | *li |
-| five | ŋā | ŋə | *ŋa |
-| six | gùk | guk | — |
-| seven | ságìʔ | səgiʔ | — |
-| eight | giát | giət | — |
-| nine | kuá | kuə | *ku |
-| ten | sɔ̀m | som | — |
+| one | xàt [≈khat] | khət [≈khat] | — |
+| two | nìʔ [≈nih] | niʔ [≈nih] | *nyi |
+| three | tʰūm [≈thum] | thum | — |
+| four | lī [≈li] | li | *li |
+| five | ŋā [≈nga] | ŋə [≈nga] | *ŋa [≈nga] |
+| six | gùk [≈guk] | guk | — |
+| seven | ságìʔ [≈sagih] | səgiʔ [≈sagih] | — |
+| eight | giát | giət [≈giat] | — |
+| nine | kuá | kuə [≈kua] | *ku |
+| ten | sɔ̀m [≈sawm] | som | — |
 
 ### 4.2 Ordinal Formation
 
 | | Tedim | Sukte |
 |---|-------|-------|
-| Ordinal suffix | -nā | Not documented |
-| "First" alternate | másà | — |
+| Ordinal suffix | -nā [≈-na] | Not documented |
+| "First" alternate | másà [≈masa] | — |
 
 ### 4.3 Distributive Strategies
 
 | Strategy | Tedim | Sukte |
 |----------|-------|-------|
-| Reduplication | xàt~xàt | — |
+| Reduplication | xàt [≈khat]~xàt [≈khat] | — |
 | Each marker | ciát/ték | — |
 
 ---
@@ -149,8 +149,8 @@ Sukte uses **leʔ** as additive marker:
 ## 5. Open Questions
 
 1. **Classifiers**: Do numerals require classifiers? Zam Ngaih Cing documents noun classifiers but not numeral classifiers.
-2. **Ordinal etymology**: What is the origin of ordinal suffix -nā?
-3. **másà**: Is this related to PTB *ma 'first'?
+2. **Ordinal etymology**: What is the origin of ordinal suffix -nā [≈-na]?
+3. **másà [≈masa]**: Is this related to PTB *ma 'first'?
 
 ---
 

@@ -49,34 +49,34 @@ Zam Ngaih Cing identifies five major aspectual categories:
 
 | Aspect | Marker | Form | Gloss |
 |--------|--------|------|-------|
-| Perfective | -tà | suffix | 'already, completed' |
-| Completive | -xín | suffix | 'already finished' |
+| Perfective | -tà [≈-ta] | suffix | 'already, completed' |
+| Completive | -xín [≈-khin] | suffix | 'already finished' |
 | Progressive | -laī | suffix | 'ongoing, in progress' |
-| Durative | -dén | suffix | 'for extended period' |
+| Durative | -dén [≈-den] | suffix | 'for extended period' |
 | Habitual | (various) | particles | (see below) |
 
 ### 2.3 Perfective -tà (§5.6.1)
 
-> "The perfective -tà marks for the action that has taken place."
+> "The perfective -tà [≈-ta] marks for the action that has taken place."
 
 Examples:
-- (313) `ū á nìʔ īn kì-kím-tà` "Elder brother, the two are of equal size..."
-- (314) `tuā nītūm dék-tá ìn túŋ-tʰeí hét-lɔú` "The sun was about to set and (she) never reached..."
+- (313) `ū á nìʔ [≈nih] īn [≈in] kì [≈ki]-kím [≈-kim]-tà [≈ta]` "Elder brother, the two are of equal size..."
+- (314) `tuā nītūm [≈nitum] dék [≈dek]-tá [≈ta] ìn [≈in] túŋ [≈tung]-tʰeí [≈-thei] hét [≈het]-lɔú [≈lo]` "The sun was about to set and (she) never reached..."
 
 ### 2.4 Completive -xín (§5.6.2)
 
-> "Completed action in Tedim Chin is marked with -xín. It can be followed by the perfective marker."
+> "Completed action in Tedim Chin is marked with -xín [≈-khin]. It can be followed by the perfective marker."
 
 This shows a **perfective-completive distinction** and possible combination:
 
-- (315) `keí paī-xín` "I had already gone/I went"
-- (316) `keí paī-xín-tà` "I had already gone" (COMPLETIVE + PERFECTIVE)
+- (315) `keí paī-xín [≈-khin]` "I had already gone/I went"
+- (316) `keí paī-xín [≈-khin]-tà [≈ta]` "I had already gone" (COMPLETIVE + PERFECTIVE)
 
 ### 2.5 Progressive -laī (§5.6.3)
 
 > "The progressive in Tedim Chin indicate that the action is in progress. It is expressed by -laī."
 
-- (317) `vàn-ā āksínélkaī deìɁ-laī ìŋ cì mɔ́k` "She said she still wanted comet from the sky"
+- (317) `vàn [≈van]-ā āksínélkaī [≈aksinelkai] deìɁ-laī ìŋ [≈ing] cì [≈ci] mɔ́k [≈mawk]` "She said she still wanted comet from the sky"
 
 ### 2.6 Habitual (§5.6.4)
 
@@ -84,40 +84,40 @@ Zam Ngaih Cing identifies **four habitual subtypes**:
 
 #### 2.6.1 Habitual Past: ŋeí
 
-> "Habitual past is marked by ŋeí 'before but not now'."
+> "Habitual past is marked by ŋeí [≈ngei] 'before but not now'."
 
-- (318) `nà sèm ŋeí íŋ` "I used to work but not now (not anymore)"
+- (318) `nà [≈na] sèm [≈sem] ŋeí [≈ngei] íŋ [≈ing]` "I used to work but not now (not anymore)"
 
 #### 2.6.2 General Habitual: gìgè
 
-> "Habitual is marked by gìgè 'always'."
+> "Habitual is marked by gìgè [≈gige] 'always'."
 
-- (319) `nà sèm gìgè ìŋ` "I always work"
+- (319) `nà [≈na] sèm [≈sem] gìgè [≈gige] ìŋ [≈ing]` "I always work"
 
 #### 2.6.3 Repetitive: zél
 
-> "Repetitive is marked by zél 'continuing previous action'."
+> "Repetitive is marked by zél [≈zel] 'continuing previous action'."
 
-- (320) `nà sèm zél íŋ` "I continue/repeat to work"
+- (320) `nà [≈na] sèm [≈sem] zél [≈zel] íŋ [≈ing]` "I continue/repeat to work"
 
 #### 2.6.4 Iterative: kík
 
-> "Iterative is marked by kík 'again'. Iterative indicates repetition of an action that has already occurred before. The literal meaning of kík is 'to return'."
+> "Iterative is marked by kík [≈kik] 'again'. Iterative indicates repetition of an action that has already occurred before. The literal meaning of kík [≈kik] is 'to return'."
 
-- (321) `nà sèm kík íŋ` "I work again"
-- (322) `naū táŋmaī và én vē cì kík ín` "'Younger brother, go and see the cucumber', he said again"
+- (321) `nà [≈na] sèm [≈sem] kík [≈kik] íŋ [≈ing]` "I work again"
+- (322) `naū táŋmaī [≈tangmai] và [≈va] én [≈en] vē [≈ve] cì [≈ci] kík [≈kik] ín [≈in]` "'Younger brother, go and see the cucumber', he said again"
 
 ### 2.7 Durative -dén (§5.6.5)
 
 > "Durative aspect emphasised about the duration of the action or event."
 
-- (323) `nuī-dén` "Laugh for a long period/time"
-- (324) `zuí-dén` "Follow for a long period/time"
+- (323) `nuī-dén [≈-den]` "Laugh for a long period/time"
+- (324) `zuí-dén [≈-den]` "Follow for a long period/time"
 
 ### 2.8 Unique Contributions
 
-1. **Four-way habitual distinction**: Zam Ngaih Cing alone documents the ŋeí/gìgè/zél/kík system
-2. **Perfective-Completive stacking**: Shows -xín-tà combination
+1. **Four-way habitual distinction**: Zam Ngaih Cing alone documents the ŋeí [≈ngei]/gìgè [≈ge]/zél/kík system
+2. **Perfective-Completive stacking**: Shows -xín [≈-khin]-tà [≈ta] combination
 3. **Explicit claim**: Aspect is primary, tense is not grammaticalized
 4. **Adverbial analysis**: Treats aspect markers as "adverbial/verbal particles"
 
@@ -142,54 +142,54 @@ Sukte has four aspectual categories:
 | Simple | ∅ | unmarked |
 | Progressive | lai | post-verbal |
 | Perfective | ta | post-verbal |
-| Irrealis | diŋ | post-verbal |
+| Irrealis | diŋ [≈ding] | post-verbal |
 
 ### 3.3 Simple Aspect (Unmarked)
 
 > "Simple aspect in Sukte is unmarked i.e., morphologically null."
 
-- (83) `kei-in əməʔ kə mu hi` "I see him"
-- (86) `ram-in buʔ ə huən hi` "Ram cooks rice"
+- (83) `kei-in əməʔ [≈amah] kə [≈ka] mu hi` "I see him"
+- (86) `ram-in buʔ [≈buh] ə huən [≈huan] hi` "Ram cooks rice"
 
 ### 3.4 Progressive lai
 
 > "The progressive aspect is expressed by the marker lai."
 
-- (88) `boŋ-in lopə ə ne lai hi` "The cow is grazing"
-- (89) `kei saŋ əʔ kə pai lai hi` "I am going to the school"
+- (88) `boŋ [≈bong]-in lopə [≈lopa] ə ne lai hi` "The cow is grazing"
+- (89) `kei saŋ [≈sang] əʔ [≈ah] kə [≈ka] pai lai hi` "I am going to the school"
 
 ### 3.5 Perfective ta
 
 > "The perfective aspect in Sukte is expressed by the marker ta."
 
-- (94) `əməʔ-in buʔ ə huən ta hi` "He cooked the rice"
-- (95) `kei-in zi əʔ kə pai ta hi` "I went to the market"
+- (94) `əməʔ [≈amah]-in buʔ [≈buh] ə huən [≈huan] ta hi` "He cooked the rice"
+- (95) `kei-in zi əʔ [≈ah] kə [≈ka] pai ta hi` "I went to the market"
 
 ### 3.6 Irrealis diŋ
 
-> "The irrealis aspect is expressed by the marker diŋ."
+> "The irrealis aspect is expressed by the marker diŋ [≈ding]."
 
-- (98) `kei zi əʔ kə pai diŋ hi` "I will go to market"
-- (99) `əmau-in gənhiŋkhoinə ə mu diŋ uʔ hi` "They will see the zoo"
+- (98) `kei zi əʔ [≈ah] kə [≈ka] pai diŋ [≈ding] hi` "I will go to market"
+- (99) `əmau [≈amau]-in gənhiŋkhoinə [≈ganhingkhoina] ə mu diŋ [≈ding] uʔ [≈uh] hi` "They will see the zoo"
 
 ### 3.7 Comparison: Sukte vs. Tedim
 
 | Category | Tedim Chin | Sukte |
 |----------|------------|-------|
-| Perfective | -tà | ta |
-| Completive | -xín | — |
+| Perfective | -tà [≈-ta] | ta |
+| Completive | -xín [≈-khin] | — |
 | Progressive | -laī | lai |
-| Durative | -dén | — |
-| Habitual Past | ŋeí | — |
-| Habitual | gìgè | — |
-| Repetitive | zél | — |
-| Iterative | kík | — |
-| Irrealis/Future | — (see diŋ below) | diŋ |
+| Durative | -dén [≈-den] | — |
+| Habitual Past | ŋeí [≈ngei] | — |
+| Habitual | gìgè [≈gige] | — |
+| Repetitive | zél [≈zel] | — |
+| Iterative | kík [≈kik] | — |
+| Irrealis/Future | — (see diŋ [≈ding] below) | diŋ [≈ding] |
 
 Key observations:
 1. **Shared markers**: Perfective *ta/tà* and progressive *lai/laī* are cognate
 2. **Tedim elaboration**: Tedim has richer habitual/aspectual distinctions
-3. **Irrealis diŋ**: Singh treats this as aspect; Tedim uses *ding* primarily as purposive marker
+3. **Irrealis diŋ [≈ding]**: Singh treats this as aspect; Tedim uses *ding* primarily as purposive marker
 
 ---
 
@@ -229,7 +229,7 @@ All sources agree on two core aspect markers, with cognate forms across Kuki-Chi
 
 | Marker | Tedim | Sukte | Function |
 |--------|-------|-------|----------|
-| *tà/ta | -tà | ta | Perfective |
+| *tà [≈ta]/ta | -tà [≈-ta] | ta | Perfective |
 | *lai | -laī | lai | Progressive |
 
 ### 5.2 Tedim-Specific Elaborations
@@ -238,12 +238,12 @@ Zam Ngaih Cing documents several markers not found in Singh's Sukte description:
 
 | Marker | Function | Possible Etymology |
 |--------|----------|-------------------|
-| -xín | Completive | < khin 'already'? |
-| -dén | Durative | verbal origin |
-| ŋeí | Habitual past | < ngei 'be accustomed' |
-| gìgè | Habitual | < reduplication of *gege 'always' |
-| zél | Continuative | < zel 'continue' |
-| kík | Iterative | < kik 'return' |
+| -xín [≈-khin] | Completive | < khin 'already'? |
+| -dén [≈-den] | Durative | verbal origin |
+| ŋeí [≈ngei] | Habitual past | < ngei 'be accustomed' |
+| gìgè [≈gige] | Habitual | < reduplication of *gege 'always' |
+| zél [≈zel] | Continuative | < zel 'continue' |
+| kík [≈kik] | Iterative | < kik 'return' |
 
 ### 5.3 Absence of Grammaticalized Tense
 
@@ -263,7 +263,7 @@ Temporal reference is conveyed through:
 | Source | Form | Analysis |
 |--------|------|----------|
 | Zam Ngaih Cing | ding | Purposive marker (§5.7) |
-| Singh | diŋ | Irrealis aspect |
+| Singh | diŋ [≈ding] | Irrealis aspect |
 
 This difference may reflect:
 1. Different grammaticalization stages in the two languages
@@ -274,12 +274,12 @@ This difference may reflect:
 
 | Feature | Henderson | Zam Ngaih Cing | Singh (Sukte) |
 |---------|-----------|----------------|---------------|
-| Perfective marker | — | -tà | ta |
-| Completive marker | — | -xín | — |
+| Perfective marker | — | -tà [≈-ta] | ta |
+| Completive marker | — | -xín [≈-khin] | — |
 | Progressive marker | — | -laī | lai |
-| Durative marker | — | -dén | — |
+| Durative marker | — | -dén [≈-den] | — |
 | Habitual system | — | 4-way distinction | — |
-| Irrealis/future | — | (ding as purposive) | diŋ |
+| Irrealis/future | — | (ding as purposive) | diŋ [≈ding] |
 | Tense grammaticalized | Not discussed | No | No |
 
 ---
@@ -288,11 +288,11 @@ This difference may reflect:
 
 1. **Form I/II and aspect**: If Form II derives from Proto-TB *-d perfective, why doesn't it function aspectually in modern Tedim? What caused the shift to clause-type marking?
 
-2. **-xín vs. -tà**: What is the precise semantic distinction? Both relate to completion/perfective. Is -xín result-focused while -tà is simply past?
+2. **-xín [≈-khin] vs. -tà [≈-ta]**: What is the precise semantic distinction? Both relate to completion/perfective. Is -xín [≈-khin] result-focused while -tà [≈-ta] is simply past?
 
-3. **Habitual markers**: Are ŋeí, gìgè, zél, kík fully grammaticalized or still closer to adverbs/auxiliaries?
+3. **Habitual markers**: Are ŋeí [≈ngei], gìgè [≈gige], zél [≈zel], kík [≈kik] fully grammaticalized or still closer to adverbs/auxiliaries?
 
-4. **ding**: Is Tedim *ding* grammaticalizing toward irrealis like Sukte diŋ?
+4. **ding**: Is Tedim *ding* grammaticalizing toward irrealis like Sukte diŋ [≈ding]?
 
 5. **Interaction with mood**: How do aspect markers interact with imperative, hortative, optative moods documented by Zam Ngaih Cing?
 
@@ -304,7 +304,7 @@ Henderson, E. J. A. (1965). *Tiddim Chin: A Descriptive Analysis of Two Texts*. 
 
 Nishida, T. (1989). Chinsho go [Chin languages]. In T. Kamei, R. Kōno, & E. Chino (Eds.), *Gengogaku Daijiten* (Vol. 2, pp. 995-999). Tokyo: Sanseidō.
 
-Otsuka, K. (2009). Causative and benefactive suffix -sàk in Tiddim Chin. *思言*, 5, 3-22.
+Otsuka, K. (2009). Causative and benefactive suffix -sàk [≈-sak] in Tiddim Chin. *思言*, 5, 3-22.
 
 Singh, L. S. (2018). *A Descriptive Grammar of Sukte*. Imphal: Grassroot Publications.
 

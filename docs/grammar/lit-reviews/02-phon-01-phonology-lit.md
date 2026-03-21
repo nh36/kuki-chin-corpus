@@ -17,13 +17,13 @@ Henderson identifies **18 initial consonants** and **9 final consonants**:
 |--------|--------|----------|-------|---------|
 | Voiceless stops | p | t | k | |
 | Voiced stops | b | d | g | |
-| Aspirated stops | pʰ | tʰ | | |
+| Aspirated stops | pʰ [≈ph] | tʰ [≈th] | | |
 | Fricatives | v | s, z | x | h |
 | Affricate | | c | | |
 | Nasals | m | n | ŋ | |
 | Lateral | | l | | |
 
-**Syllable-final:** /p, t, k, m, n, ŋ, l, lʔ, ʔ/
+**Syllable-final:** /p, t, k, m, n, ŋ, l, lʔ [≈lh], ʔ/
 
 **Key observations:**
 - The velar fricative is written **kh-** but represents [x]
@@ -31,9 +31,9 @@ Henderson identifies **18 initial consonants** and **9 final consonants**:
 - **c-** is an affricate pronounced "with the tongue-tip down, and with contact of the blade of the tongue in the alveolar region" [p. 9]
 - **z-** "represents a voiced alveolar fricative, pronounced with the tip down" often palatalized before front vowels
 - Final **-h** represents glottal stop [ʔ] "in the great majority of cases"
-- Final **-lh** represents [lʔ] (lateral + glottal stop sequence)
+- Final **-lh** represents [lʔ [≈lh]] (lateral + glottal stop sequence)
 
-Henderson also notes **ʔw** (pre-glottalized labiovelar continuant) in limited contexts.
+Henderson also notes **ʔw [≈w]** (pre-glottalized labiovelar continuant) in limited contexts.
 
 ### 1.2 Vowel Inventory
 
@@ -64,7 +64,7 @@ Henderson's vowel system (extracted from orthographic conventions):
 - iu: diphthong [iu] or [iːu]
 - oi: short diphthong [oi]
 - **aw**: represents [ɔː] (long half-open back rounded)
-- **awh**: represents [ɔʔ] (short + glottal stop)
+- **awh**: represents [ɔʔ [≈awh]] (short + glottal stop)
 
 **Triphthongs:** iai, iau, uai, uau
 
@@ -104,7 +104,7 @@ ZNC identifies **19 consonant phonemes**:
 |-------|----------|-------------|----------|---------|-------|---------|
 | Stop (vl. unasp) | p | | t | c | k | ʔ |
 | Stop (vd. unasp) | b | | d | | g | |
-| Stop (vl. asp) | pʰ | | tʰ | | | |
+| Stop (vl. asp) | pʰ [≈ph] | | tʰ [≈th] | | | |
 | Nasal | m | | n | | ŋ | |
 | Fricative (vl.) | | v | s | | x | h |
 | Fricative (vd.) | | | z | | | |
@@ -121,7 +121,7 @@ ZNC compares inventories [p. 25-26]:
 **Consonant distribution:**
 - All consonants except /ʔ/ occur initially
 - Only /p, t, k, ʔ, m, n, ŋ, l/ occur finally
-- Voiced stops, aspirates, and fricatives (/b, d, g, pʰ, tʰ, v, s, z, h, x, c/) are restricted to initial/medial
+- Voiced stops, aspirates, and fricatives (/b, d, g, pʰ [≈ph], tʰ [≈th], v, s, z, h, x, c/) are restricted to initial/medial
 
 ### 2.2 Vowel Inventory
 
@@ -138,19 +138,19 @@ ZNC identifies **5 vowel phonemes**:
 > "Vowel length is distinguished in Tedim Chin where the meaning of words changes depending on whether the vowel is long or short" [p. 37]
 
 Examples:
-- sīŋ 'shake' vs. sī:ŋ 'ginger'
-- kāl 'footstep' vs. kā:l 'week'
+- sīŋ [≈sing] 'shake' vs. sī [≈si]:ŋ 'ginger'
+- kāl [≈kal] 'footstep' vs. kā [≈ka]:l 'week'
 
-**Diphthongs** (8 total): /ai, au, ei, eu, ia, iu, ɔi, ui/
+**Diphthongs** (8 total): /ai, au, ei, eu, ia, iu, ɔi [≈oi], ui/
 
 **Triphthongs** (4 total): /iai, iau, uai, uau/
 
 ### 2.3 Tone System
 
 ZNC uses **diacritics** to mark three tones:
-- **High tone**: acute (á) - e.g., zá 'hear'
-- **Mid tone**: macron (ā) - e.g., zā 'medicine/cigarette'  
-- **Low tone**: grave (à) - e.g., zà 'hundred'
+- **High tone**: acute (á) - e.g., zá [≈za] 'hear'
+- **Mid tone**: macron (ā) - e.g., zā [≈za] 'medicine/cigarette'  
+- **Low tone**: grave (à) - e.g., zà [≈za] 'hundred'
 
 **Tonal restrictions:**
 > "The Stem 1 verbs can carry either High, Mid or Low tones but Stem 2 can have only the High and Low tones" [p. 59]
@@ -162,8 +162,8 @@ Example: Expected *lisàk → Actual lisák 'cause to be tasty'
 
 **Grammatical tone:**
 Tonal change marks possession on proper nouns:
-- thāŋpū 'Thangpu (name)' → thāŋpú 'Thangpu's' [p. 60]
-- cīŋnɔ̄ 'Cingno' → cīŋnɔ́ 'Cingno's'
+- thāŋpū [≈thangpu] 'Thangpu (name)' → thāŋpú [≈thangpu] 'Thangpu's' [p. 60]
+- cīŋnɔ̄ [≈cingnaw] 'Cingno' → cīŋnɔ́ [≈cingnaw] 'Cingno's'
 
 ### 2.4 Syllable Structure
 
@@ -178,14 +178,14 @@ ZNC classifies Tedim Chin syllable structure as "moderately complex":
 
 **Constraints:**
 - No consonant clusters in onset
-- Only /l/ + /ʔ/ permitted as coda cluster (rare): kìlʔ 'lock', vàlʔ 'swallow'
+- Only /l/ + /ʔ/ permitted as coda cluster (rare): kìlʔ [≈kilh] 'lock', vàlʔ [≈valh] 'swallow'
 - Final consonants are unreleased [p⌝, t⌝, k⌝]
 
 ### 2.5 Phonological Processes
 
 **Gemination** occurs at syllable boundaries in disyllables:
-- Stops: ìppí 'sack', mìttɔ̀ 'blind', síkkeu 'spoon'
-- Nasals: liàmma 'wound', dìnna 'standing place', máŋŋìlʔ 'forget'
+- Stops: ìppí [≈ippi] 'sack', mìttɔ̀ [≈mittaw] 'blind', síkkeu [≈sikkeu] 'spoon'
+- Nasals: liàmma 'wound', dìnna [≈dinna] 'standing place', máŋŋìlʔ [≈mangilh] 'forget'
 - Lateral: guallèl 'defeated'
 
 **Glottalization** marks Stem 2 verbs:
@@ -206,7 +206,7 @@ Singh identifies **19 consonant phonemes**:
 | Manner | Bilabial | Labio-dental | Alveolar | Palatal | Velar | Glottal |
 |--------|----------|--------------|----------|---------|-------|---------|
 | Stop (unasp) | p, b | | t, d | | k, g | ʔ |
-| Stop (asp) | pʰ | | tʰ | | kʰ | |
+| Stop (asp) | pʰ [≈ph] | | tʰ [≈th] | | kʰ [≈kh] | |
 | Fricatives | | v | s, z | | | h |
 | Affricate | | | | c | | |
 | Nasals | m | | n | | ŋ | |
@@ -233,13 +233,13 @@ The schwa /ə/ and rounded /o/ distinguish Sukte from Tedim orthography:
 ### 3.3 Tone System
 
 Singh identifies **three tones** marked with diacritics:
-- **High tone**: (´) - e.g., nái 'watch'
+- **High tone**: (´) - e.g., nái [≈nai] 'watch'
 - **Mid tone**: (unmarked) - e.g., nai 'near'
-- **Low tone**: (`) - e.g., nài 'pus'
+- **Low tone**: (`) - e.g., nài [≈nai] 'pus'
 
 Minimal triplets demonstrate contrast:
-- zám 'reach by hand' / zam 'gong' / zàm 'creep or crawl' [p. 66]
-- lél 'just like that' / lel 'lose' / lèl 'a kind of basket'
+- zám [≈zam] 'reach by hand' / zam 'gong' / zàm [≈zam] 'creep or crawl' [p. 66]
+- lél [≈lel] 'just like that' / lel 'lose' / lèl [≈lel] 'a kind of basket'
 
 ### 3.4 Syllable Structure
 
@@ -263,10 +263,10 @@ Otsuka's papers focus on specific morphosyntactic topics and do not provide syst
 | Phoneme | Henderson | ZNC (IPA) | Singh (Sukte) | Bible |
 |---------|-----------|-----------|---------------|-------|
 | /p/ | p | p | p | p |
-| /pʰ/ | ph | pʰ | ph | ph |
+| /pʰ/ | ph | pʰ [≈ph] | ph | ph |
 | /b/ | b | b | b | b |
 | /t/ | t | t | t | t |
-| /tʰ/ | th | tʰ | th | th |
+| /tʰ/ | th | tʰ [≈th] | th | th |
 | /d/ | d | d | d | d |
 | /k/ | k | k | k | k |
 | /x/ or /kʰ/ | **kh** | **x** | **kh** | **kh** |
@@ -281,7 +281,7 @@ Otsuka's papers focus on specific morphosyntactic topics and do not provide syst
 | /n/ | n | n | n | n |
 | /ŋ/ | **ng** | **ŋ** | **ŋ** | **ng** |
 | /l/ | l | l | l | l |
-| /lʔ/ | **-lh** | **lʔ** | — | **-lh** |
+| /lʔ/ | **-lh** | **lʔ [≈lh]** | — | **-lh** |
 
 ### 5.2 Vowel Correspondences
 
@@ -305,7 +305,7 @@ Otsuka's papers focus on specific morphosyntactic topics and do not provide syst
 | /eu/ | eu | eu | eu |
 | /ia/ | ia | ia | ia |
 | /iu/ | iu | iu | iu |
-| /ɔi/ | oi | ɔi | oi |
+| /ɔi/ | oi | ɔi [≈oi] | oi |
 | /ui/ | ui | ui | ui |
 
 ### 5.4 Tone Representation
@@ -346,14 +346,14 @@ Based on corpus sampling:
 - ŋ → ng
 - ɔ → aw
 - Remove tone diacritics
-- lʔ → lh
+- lʔ [≈lh] → lh
 
 **To interpret Bible orthography → ZNC IPA:**
 - kh → x (initial) or context-dependent
 - ng → ŋ
 - aw → ɔ
 - -h → ʔ (when word-final after vowel)
-- -lh → lʔ
+- -lh → lʔ [≈lh]
 - Add tone from dictionary/context (unpredictable from spelling)
 
 ---
@@ -365,7 +365,7 @@ Based on corpus sampling:
 **All sources agree on:**
 - Voiceless unaspirated stops: /p, t, k/
 - Voiced stops: /b, d, g/
-- Aspirated bilabial and alveolar: /pʰ, tʰ/
+- Aspirated bilabial and alveolar: /pʰ, tʰ [≈th]/
 - Fricatives: /s, z, v, h/
 - Palatal affricate: /c/
 - Nasals: /m, n, ŋ/
