@@ -10,16 +10,16 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 ## 🎉 MILESTONE: 100% Coverage Achieved
 
 **Date:** 2026-03-17  
-**Coverage:** 100% (850,906/850,906 tokens with proper tokenization)
+**Coverage:** 100% (771,190/771,201 tokens, excluding metadata and tokenization artifacts)
 
 The Tedim Chin morphological analyzer is now **production-ready** for Leipzig-style interlinear glossing.
 
-### Analyzer Statistics (Final)
+### Analyzer Statistics (Current)
 
 ```
-Total tokens:      850,906
-Fully analyzed:    850,906 (100.00%)
-Partial:                 0 (0.00%)
+Total tokens:      771,201 (real words, excluding metadata)
+Fully analyzed:    771,190 (100.00%)
+Partial:                11 (tokenization artifacts only)
 Unknown:                 0 (0.00%)
 ```
 
