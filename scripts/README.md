@@ -11,33 +11,33 @@ This directory contains Python scripts for morphological analysis and report gen
 
 ## Report Generators
 
-Reports are output to `grammar/reports/` (repository root).
+Reports are output to `docs/grammar/reports/` (repository root).
 
 ### Noun Reports
 
 | Script | Output | Description |
 |--------|--------|-------------|
-| `generate_paradigm.py` | `grammar/reports/03-noun-01-simple.md` etc | Noun paradigm tables |
-| `generate_relator_report.py` | `grammar/reports/03-noun-04-relators.md` | Relator nouns |
-| `generate_postposition_report.py` | `grammar/reports/03-noun-05-postpositions.md` | Free postpositions |
-| `generate_np_report.py` | `grammar/reports/03-noun-06-np-structure.md` | NP structure patterns |
+| `generate_paradigm.py` | `docs/grammar/reports/03-noun-01-simple.md` etc | Noun paradigm tables |
+| `generate_relator_report.py` | `docs/grammar/reports/03-noun-04-relators.md` | Relator nouns |
+| `generate_postposition_report.py` | `docs/grammar/reports/03-noun-05-postpositions.md` | Free postpositions |
+| `generate_np_report.py` | `docs/grammar/reports/03-noun-06-np-structure.md` | NP structure patterns |
 
 ### Verb Reports
 
 | Script | Output | Description |
 |--------|--------|-------------|
-| `generate_verb_stems_report.py` | `grammar/reports/05-verb-01-stems.md` | Verb stem inventory |
-| `generate_vp_report.py` | `grammar/reports/05-verb-02-vp-structure.md` | VP template |
-| `generate_pronominal_report.py` | `grammar/reports/05-verb-03-agreement.md` | Agreement prefixes |
-| `generate_tam_report.py` | `grammar/reports/05-verb-04-tam.md` | TAM suffixes |
-| `generate_vp_slots_report.py` | `grammar/reports/05-verb-05-*.md` | Aspect/Dir/Modal/Deriv |
-| `generate_valency_report.py` | `grammar/reports/05-verb-09-valency.md` | Valency/voice |
+| `generate_verb_stems_report.py` | `docs/grammar/reports/05-verb-01-stems.md` | Verb stem inventory |
+| `generate_vp_report.py` | `docs/grammar/reports/05-verb-02-vp-structure.md` | VP template |
+| `generate_pronominal_report.py` | `docs/grammar/reports/05-verb-03-agreement.md` | Agreement prefixes |
+| `generate_tam_report.py` | `docs/grammar/reports/05-verb-04-tam.md` | TAM suffixes |
+| `generate_vp_slots_report.py` | `docs/grammar/reports/05-verb-05-*.md` | Aspect/Dir/Modal/Deriv |
+| `generate_valency_report.py` | `docs/grammar/reports/05-verb-09-valency.md` | Valency/voice |
 
 ### Other Reports
 
 | Script | Output | Description |
 |--------|--------|-------------|
-| `generate_nominalization_report.py` | `grammar/reports/07-nmlz-01-deverbal.md` | Nominalization |
+| `generate_nominalization_report.py` | `docs/grammar/reports/07-nmlz-01-deverbal.md` | Nominalization |
 
 ## Utility Scripts
 

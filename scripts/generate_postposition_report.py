@@ -664,7 +664,7 @@ def main():
     
     import argparse
     parser = argparse.ArgumentParser(description='Generate postposition report')
-    parser.add_argument('--output', '-o', help='Output file (default: grammar/reports/03-noun-05-postpositions.md)')
+    parser.add_argument('--output', '-o', help='Output file (default: docs/grammar/reports/03-noun-05-postpositions.md)')
     args = parser.parse_args()
     
     report = generate_report(corpus_file, kjv_file)
