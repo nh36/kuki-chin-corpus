@@ -249,15 +249,18 @@ ASPECT_SUFFIXES = {
 }
 
 # DIRECTIONAL SUFFIXES - indicate path/direction of motion
+# ZNC (2018) §5.8.2.3 documents 3-way elevational system: -toh UP, -suk DOWN, -phei HORIZ
 DIRECTIONAL_SUFFIXES = {
     'khia': 'out',      # Outward motion
     'khiat': 'away',    # Away from
     'lut': 'in',        # Inward motion
-    'toh': 'up',        # Upward motion
-    'cip': 'down',      # Downward/tightly
-    'tang': 'arrive',   # Arrival at endpoint
-    'sawn': 'toward',   # Motion toward
-    'lam': 'DIR',       # General directional
+    'toh': 'UP',        # Upward motion (elevational) - ZNC: -tɔù
+    'suk': 'DOWN',      # Downward motion (elevational) - ZNC: -sùk (was missing)
+    'phei': 'HORIZ',    # Horizontal/level motion - ZNC: -pʰeī (was missing)
+    'cip': 'down',      # Downward/tightly (questionable - may be lexical)
+    'tang': 'arrive',   # Arrival at endpoint (questionable - may be lexical)
+    'sawn': 'toward',   # Motion toward (questionable - may be lexical)
+    'lam': 'TOWARD',    # Goal directional - ZNC: -lám
 }
 
 # MODAL SUFFIXES - express modality (possibility, necessity, volition)
@@ -278,8 +281,8 @@ MODAL_SUFFIXES = {
 
 # DERIVATIONAL SUFFIXES - change valency or add semantic content
 DERIVATIONAL_SUFFIXES = {
-    'sak': 'CAUS',      # Causative
-    'suk': 'CAUS',      # Causative variant
+    'sak': 'CAUS',      # Causative (Form I) / Benefactive (Form II)
+    # NOTE: -suk is DIRECTIONAL (DOWN), not causative - see DIRECTIONAL_SUFFIXES
     'pih': 'APPL',      # Applicative (benefactive)
     'khawm': 'COM',     # Comitative (together)
     'gawp': 'INTENS',   # Intensive (forcefully)
@@ -306,11 +309,13 @@ TAM_SUFFIXES = {
     'nawn': 'CONT',     # Continuative
     'khin': 'IMM',      # Immediate/intensifier
     'sa': 'PAST',       # Past tense
-    # Directional/motion suffixes (aspectual)
+    # Directional/motion suffixes (aspectual) - ZNC §5.8.2.3
     'khia': 'out',      # Directional out
     'khiat': 'away',    # Directional away
     'lut': 'in',        # Directional in
-    'toh': 'up',        # Directional up
+    'toh': 'UP',        # Upward (elevational) - ZNC: -tɔù
+    'suk': 'DOWN',      # Downward (elevational) - ZNC: -sùk
+    'phei': 'HORIZ',    # Horizontal/level - ZNC: -pʰeī
     'to': 'CONT',       # Continuative
     'cip': 'tightly',   # Intensifier (firmly/tightly)
     # Other aspect markers
@@ -318,7 +323,7 @@ TAM_SUFFIXES = {
     'kim': 'fully',     # Completive (fully)
     'san': 'at',        # Locative relation
     'sim': 'ITER',      # Iterative variant
-    'lam': 'DIR',       # Directional/manner
+    'lam': 'TOWARD',    # Goal directional - ZNC: -lám
     'zia': 'manner',    # Manner nominal
     'sakin': 'CAUS.ERG', # Causative + ergative
     'sakkik': 'CAUS.ITER', # Causative + iterative
@@ -331,9 +336,8 @@ TAM_SUFFIXES = {
 
 # Derivational suffixes (change verb meaning/valency)
 VERBAL_DERIVATIONAL_SUFFIXES = {
-    'sak': 'CAUS',      # Causative
-    'suk': 'CAUS',      # Causative variant (make.become)
-    'pih': 'APPL',      # Applicative (with/for)
+    'sak': 'CAUS',      # Causative (Form I) / Benefactive (Form II) - see STEM_DEPENDENT_GLOSSES
+    'pih': 'APPL',      # Applicative (with/for) - Form II only
     'khawm': 'COM',     # Comitative (together)
     'gawp': 'INTENS',   # Intensive (forcefully)
     'thei': 'ABIL',     # Abilitative (can/able)
@@ -1414,7 +1418,7 @@ VERB_STEMS = {
     'to': 'sit',
     'ton': 'pull',           # "pull, draw" (tonsak = cause.to.pull)
     'tut': 'sleep',
-    'suk': 'make.become',
+    # NOTE: 'suk' as standalone is rare - usually directional suffix -suk (DOWN)
     'khen': 'divide',
     'khecin': 'sharp',       # 18x - sharp (adj) - khecinte = sharp-PL
     'gelh': 'write',
@@ -9739,7 +9743,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'thukipin': ('thuk-ip-in', 'deep-INTENS-ERG'),  # variant
         'kisilhsak': ('ki-silh-sak', 'REFL-clothe-CAUS'), # 2x - clothe oneself
         'lianpenin': ('lian-pen-in', 'great-COMPAR-ERG'), # 3x - most greatly
-        'sukkhapte': ('suk-khap-te', 'make.become-close-PL'), # 1x
+        'sukkhapte': ('suk-khap-te', 'push-close-PL'),        # 1x - push shut
         'siahsun': ('siah-sun', 'decay-think'),         # 1x - consider decay
         'thukhupna': ('thuk-hup-na', 'deep-cover-NMLZ'), # 1x - covering depth
         'guallelhsak': ('gual-lelh-sak', 'row-arrange-CAUS'), # 1x
@@ -9854,7 +9858,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'damsak': ('dam-sak', 'well-CAUS'),
         'suaksak': ('suak-sak', 'become-CAUS'),
         'maisak': ('mai-sak', 'face-CAUS'),
-        'kumsuk': ('kum-suk', 'bow-CAUS'),
+        'kumsuk': ('kum-suk', 'bow-DOWN'),  # bow down (directional)
         'sepsak': ('sep-sak', 'work-CAUS'),  # 35x - "make to work, serve"
         
         # === Applicative Compounds ===
@@ -11151,7 +11155,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'paii': ('paii', 'sorrow'),                          # 12x - "sorrow"
         'piangkhia': ('piang-khia', 'be.born-exit'),         # 12x - "brought forth"
         'thunget': ('thu-nget', 'word-request'),             # 12x - "speaking/praying"
-        'khiasuk': ('khia-suk', 'exit-make.become'),         # 12x - "let down"
+        'khiasuk': ('khia-suk', 'exit-DOWN'),                # 12x - "let down" (directional)
         'lungngaingai': ('lung-ngai-ngai', 'heart-think~think'), # 12x - "meditate"
         'matsa': ('mat-sa', 'grasp-meat'),                   # 12x - "venison"
         'bawngpi': ('bawng-pi', 'cattle-big'),               # 12x - "milch cow"
@@ -11270,7 +11274,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'maingat': ('mai-ngat', 'face-sit'),                 # 10x - "shoulders"
         'sempa': ('sem-pa', 'serve-father'),                 # 10x - "servant"
         'lumlet': ('lum-let', 'warm-return'),                # 10x - "overthrow"
-        'lumsuk': ('lum-suk', 'warm-make.become'),           # 10x - "lighted/tarried"
+        'lumsuk': ('lum-suk', 'rest-DOWN'),                  # 10x - "lighted/tarried" (directional)
         'hanciamna': ('han-ciam-na', 'follow-promise-NMLZ'), # 10x - "wrestlings"
         'tuangsak': ('tuang-sak', 'ride-CAUS'),              # 10x - "set upon"
         'khiatsak': ('khiat-sak', 'depart-CAUS'),            # 10x - "cause to wander"
@@ -11282,7 +11286,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'zahtakhuai': ('zahtak-huai', 'honor-dread'),        # 10x - "honourable"
         'satkham': ('sat-kham', 'strike-forbid'),            # 10x - "nigh"
         'tumna': ('tum-na', 'full-NMLZ'),                    # 10x - "mountain"
-        'ensuk': ('en-suk', 'look-make.become'),             # 10x - "look down"
+        'ensuk': ('en-suk', 'look-DOWN'),                    # 10x - "look down" (directional)
         'lampial': ('lam-pial', 'way-spot'),                 # 10x - "spot"
         'thatanghat': ('tha-tang-hat', 'strength-force-hard'), # 10x - "burn"
         'silsak': ('sil-sak', 'clothe-CAUS'),                # 10x - "bowed"
@@ -11401,8 +11405,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'saupi': ('sau-pi', 'long-big'),                     # 9x - "very long"
         'aisante': ('ai-san-te', '3SG-high-PL'),             # 9x - compound
         'sihsak': ('sih-sak', 'die-CAUS'),                   # 9x - "cause to die"
-        'sukgawp': ('suk-gawp', 'make.become-grasp'),        # 9x - compound
-        'paipihsuk': ('pai-pih-suk', 'go-APPL-make.become'), # 9x - compound
+        'sukgawp': ('suk-gawp', 'DOWN-grasp'),               # 9x - "push down and grasp"
+        'paipihsuk': ('pai-pih-suk', 'go-APPL-DOWN'),       # 9x - "go down (for someone)"
         'innkhumzang': ('inn-khum-zang', 'house-cover-use'), # 9x - compound
         'gamtatsiat': ('gamtat-siat', 'kingdom-destroy'),    # 9x - "destroy kingdom"
         'kitangsapna': ('ki-tang-sap-na', 'REFL-force-call-NMLZ'), # 9x - compound
@@ -11418,7 +11422,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'samkhia': ('sam-khia', 'call-exit'),                # 9x - "call out"
         'munmuanhuaite': ('mun-muan-huai-te', 'place-trust-dread-PL'), # 9x - compound
         'omlaiteng': ('om-lai-teng', 'exist-middle-all'),    # 9x - "exist among all"
-        'sukkhak': ('suk-khak', 'make.become-command'),      # 9x - compound
+        'sukkhak': ('suk-khak', 'DOWN-restrain'),            # 9x - "push down"
         
         # === Session 4 Round 20: Push clearly over 97% ===
         'hehnepna': ('heh-nep-na', 'angry-soft-NMLZ'),       # 9x - "wrath"
@@ -11607,7 +11611,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ate': ('a-te', 'NOM-PL'),                            # 3x - "those" (nominalizer + plural)
         'nasiat': ('nasiat', 'severe.II'),                    # 2x - "severe/great" (Stem II of nasia)
         'huate': ('hua-te', 'these-PL'),                      # 2x - "these/them" (Ezek 8:17, Mark 14:70)
-        'tunpihsuk': ('tun-pih-suk', 'arrive-APPL-CAUS'),     # 1x - "bring" (Deut 1:25)
+        'tunpihsuk': ('tun-pih-suk', 'arrive-APPL-DOWN'),     # 1x - "bring down" (Deut 1:25)
         'tunpite': ('tunpi-te', 'hornet-PL'),                 # 1x - "hornets" (Josh 24:12)
         'meette': ('meet-te', 'shearer-PL'),                  # 1x - "shearers" (1 Sam 25:11)
         'halte': ('hal-te', 'burn-PL'),                       # 1x - "those who burned" (2 Ki 23:5)
@@ -11781,7 +11785,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'ciahsakkik': ('ciah-sak-kik', 'return-CAUS-ITER'),    # 8x - "send back"
         'suh': ('suh', 'well'),                                # 8x - "well" (water source)
         'hawmguakin': ('hawm-guak-in', 'empty-ADV'),           # 8x - "empty, empty-handed"
-        'suksak': ('suk-sak', 'become-CAUS'),                  # 8x - "make become"
+        'suksak': ('suk-sak', 'push.down-CAUS'),               # 8x - "push down and cause"
         'tuisuak': ('tui-suak', 'water-become'),               # 8x - "melt"
         'teelkhia': ('teel-khia', 'choose-emerge'),            # 8x - "choose out, select"
         'khuttum': ('khut-tum', 'hand-bunch'),                 # 8x - "fist"
@@ -13841,7 +13845,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'sazang': ('sa-zang', 'flesh-fiber'),                      # sinews, muscle
         'baihta': ('baih-ta', 'certain-PRF'),                      # certainly, surely (go)
         'banzo': ('ban-zo', 'reach-ABIL'),                         # reach, attain
-        'suksuk': ('suk~suk', 'make.become~REDUP'),                       # continually, repeatedly
+        'suksuk': ('suk~suk', 'DOWN~REDUP'),                          # continually push down
         'awle': ('awle', 'AWLE'),                             # leviathan, sea monster
         # Round 85: KJV-verified vocabulary
         'khinkhian': ('khin-khian', 'wait-INTENS'),                # wait, lie in wait
