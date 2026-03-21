@@ -19970,6 +19970,33 @@ def analyze_word(word: str) -> Tuple[str, str]:
             segments = [word]
             glosses = ['?']
     
+    # Round 197: Distinguish agreement vs possessive for pronominal prefixes
+    # Henderson (1965): ka-/na-/a- on verbs = agreement, on nouns = possessive
+    # Post-process to change 1SG/2SG/3SG to POSS variants when followed by noun
+    if len(segments) >= 2 and len(glosses) >= 2:
+        first_seg = segments[0].lower()
+        first_gloss = glosses[0]
+        second_seg = segments[1].lower()
+        second_gloss = glosses[1]
+        
+        # Check if first segment is a pronominal prefix
+        if first_seg in PRONOMINAL_PREFIXES and first_gloss in ['1SG', '2SG', '3SG', '1PL.INCL']:
+            # Check if second segment is a noun (not a verb)
+            is_noun_following = (second_seg in NOUN_STEMS or 
+                                 second_gloss in NOUN_STEMS.values() or
+                                 any(nom in second_gloss for nom in ['NMLZ', 'house', 'father', 'mother', 
+                                     'child', 'person', 'man', 'woman', 'place', 'thing', 'name', 'day',
+                                     'night', 'hand', 'head', 'heart', 'body', 'land', 'water', 'fire']))
+            is_verb_following = (second_seg in VERB_STEMS or 
+                                 second_seg in VERB_STEM_PAIRS or
+                                 any(v_marker in second_gloss for v_marker in ['.II', 'CAUS', 'BENF', 
+                                     'APPL', 'ITER', 'ABIL', 'REFL', 'go', 'come', 'see', 'say', 'do', 
+                                     'make', 'give', 'take', 'know', 'hear', 'eat', 'drink']))
+            
+            # If noun follows (and not verb), use possessive gloss
+            if is_noun_following and not is_verb_following:
+                glosses[0] = first_gloss + '.POSS'
+    
     # Build output
     if len(segments) > 1:
         segmented = '-'.join(segments)
