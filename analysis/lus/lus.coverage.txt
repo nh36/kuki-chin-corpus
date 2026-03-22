@@ -1,0 +1,59 @@
+Coverage report for lus
+========================================
+Total tokens : 844,734
+Analyzed     : 694,722
+Unknown      : 150,012
+Coverage     : 82.24%
+
+Top 50 unknown word types (by token frequency):
+----------------------------------------
+  a                              99,866
+  i                               8,210
+  u                               4,844
+  A                               2,644
+  I                               1,753
+  e                               1,637
+  â                                 129
+  siamin                             30
+  law                                29
+  chhui                              28
+  bâk                                25
+  inang                              25
+  lohnaah                            25
+  khawh                              24
+  inpe                               24
+  chûngah                            23
+  danga                              23
+  awp                                22
+  bosan                              21
+  duhna                              20
+  ngen                               20
+  inti                               20
+  ngaihtuahin                        20
+  lamahte                            20
+  dan                                20
+  E                                  20
+  tle                                20
+  keimahah                           20
+  zeta                               19
+  chuh                               19
+  keinin                             19
+  vaiin                              19
+  amahin                             19
+  thuhmun                            19
+  mana                               19
+  ngat                               19
+  engtiziaa                          18
+  changin                            18
+  hlawp                              18
+  zîngahte                           17
+  ṭhenin                             17
+  veka                               17
+  tawha                              17
+  duhâm                              17
+  bâkah                              16
+  rang                               16
+  sauh                               16
+  keimaha                            16
+  ngaia                              16
+  saa                                16

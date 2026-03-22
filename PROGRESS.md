@@ -81,6 +81,45 @@ Key features:
 - 64 regression tests (`tests/regression_tests.md`)
 - Polysemy documentation for homophonous roots
 
+### Phase 6: Bootstrap Pipeline for New Languages ✓
+
+**Script:** `scripts/bootstrap_language.py`
+
+To avoid repeating the painful manual process that was required for Tedim Chin,
+a unified bootstrap pipeline now automates the path from a bilingual Bible corpus
+to a working initial morphological analyzer in a single command.
+
+**Key features:**
+- **Automated setup** – one command runs all steps: preprocess → inventory → lexicon → analyzer → coverage → work queue
+- **Work queue** – the core output: every unknown word ranked by frequency, each with up to 5 aligned English verse contexts so meanings can be inferred without manual cross-referencing
+- **Initial analyzer** – pre-populated with ~5,000 entries from the bootstrap lexicon (proper nouns, function word candidates, stem candidates)
+- **Coverage baseline** – immediately shows how many tokens the initial analyzer handles
+
+**Mizo (lus) initial results:**
+```
+Total tokens  : 844,734
+Analyzed      : 694,722  (82.24%)
+Unknown types : 13,663
+Work queue    : 6,318 entries (freq ≥ 2) + English contexts
+```
+
+**Usage:**
+```bash
+# Full pipeline (first run for a new language):
+python scripts/bootstrap_language.py lus
+
+# After manually adding words to scripts/lus_analyzer.py, re-check progress:
+python scripts/bootstrap_language.py lus --steps coverage,queue
+```
+
+Outputs go to `analysis/{lang}/`:
+- `{lang}.wordfreq.tsv`   – word frequency inventory
+- `{lang}.coverage.txt`  – coverage report
+- `{lang}.work_queue.tsv`– unknowns + English contexts (the work driver)
+
+And to `scripts/`:
+- `{lang}_analyzer.py`   – initial analyzer to iteratively enrich
+
 ## Progress Log
 
 | Date | Coverage | Δ | Action |
@@ -127,12 +166,15 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 ## Next Steps
 
 1. ✅ Tedim Chin analyzer complete (100% coverage)
-2. [ ] Generate Leipzig-glossed sample chapters (Matthew, Mark)
-3. [ ] Scale methodology to remaining 18 Kuki-Chin languages
-4. [ ] Henderson vocabulary extraction for supplementary entries
-5. [ ] Build comparative dictionary across languages
+2. ✅ Bootstrap pipeline (`scripts/bootstrap_language.py`) for rapid replication
+3. [ ] Mizo (lus) analyzer – iterate on `scripts/lus_analyzer.py` using `analysis/lus/lus.work_queue.tsv`
+4. [ ] Generate Leipzig-glossed sample chapters (Matthew, Mark)
+5. [ ] Scale methodology to remaining 17 Kuki-Chin languages
+6. [ ] Henderson vocabulary extraction for supplementary entries
+7. [ ] Build comparative dictionary across languages
 
 ---
 
-*Last updated: 2026-03-17*  
-*Tedim Chin coverage: 100% (850,906 tokens)*
+*Last updated: 2026-03-22*  
+*Tedim Chin coverage: 100% (850,906 tokens)*  
+*Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*
