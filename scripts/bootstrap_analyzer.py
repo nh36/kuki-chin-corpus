@@ -1140,6 +1140,12 @@ def main():
     args = parser.parse_args()
 
     iso = args.iso.lower()
+    # Validate ISO code: must be 2-4 lowercase alphanumeric characters,
+    # optionally followed by a hyphen+extension (e.g. czt-mbs).
+    # This prevents any path traversal or injection via the iso argument.
+    if not re.match(r'^[a-z]{2,4}(-[a-z]{1,6})?$', iso):
+        print(f"ERROR: Invalid ISO code '{iso}'. Must be 2-4 lowercase letters (e.g. lus, cfm).")
+        sys.exit(1)
     function_word_top_n = args.function_words
 
     print(f"\n{'='*60}")
