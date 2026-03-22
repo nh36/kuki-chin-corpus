@@ -1,6 +1,9 @@
 # Ignore original zip files (large, already tracked elsewhere)
 *.zip
 
+# Raw backup files created by bootstrap_language.py preprocess step
+*.raw.txt
+
 # macOS
 .DS_Store
 
