@@ -59,6 +59,7 @@ cik	cik		L	tight	Weera 1998	high
 cikh	cikh		L	tight.II	Henderson 1965	high
 cing	cìng		L	know	Henderson 1965	high
 cing	cíŋ		H		ZNC via 06-derivational	high
+cip	cìp		L	down	ZNC 2018	high
 da	dà		L		ZNC via 06-derivational	high
 da	dā		M		ZNC via 06-derivational	high
 dai	dai		H	cut.I	Henderson 1965	high
@@ -105,6 +106,7 @@ gamh	gamh		L	dry.II	Henderson 1965	high
 gan	gan		H	profuse.I	Henderson 1965	high
 ganh	ganh		L	profuse.II	Henderson 1965	high
 gawh	gàwh		L	desire	Henderson 1965	high
+gawp	gàwp		L	INTENS	ZNC 2018	high
 ge	gé		H		ZNC via 06-derivational	high
 gel	gèl		L	each/every	ZNC 2018	high
 gem	gem		H	tell.I	Henderson 1965	high
@@ -113,6 +115,7 @@ gen	gen		M	speak.I	Henderson 1965	high
 genh	genh		L	speak.II	Henderson 1965	high
 giat	giat		H	rib.I	Henderson 1965	high
 giath	giath		L	rib.II	Henderson 1965	high
+gige	gìgè		LL	HAB	ZNC 2018	high
 gim	gìm		L	tired/difficult	ZNC 2018	high
 gip	gip		L	lac.I	Henderson 1965	high
 giph	giph		L	lac.II	Henderson 1965	high
@@ -217,6 +220,7 @@ keu	keu		M	dry.I	Henderson 1965	high
 keuh	keuh		L	dry.II	Henderson 1965	high
 kha	kha		H	bitter.I	Henderson 1965	high
 khah	khah		L	bitter.II	Henderson 1965	high
+khak	khàk		L	RES	ZNC 2018	high
 kham	khàm		L	prohibit/forbid	Henderson 1965	high
 khat	khàt		L	one	ZNC 2018	high
 khawm	khàwm		L	collect/gather	ZNC 2018	high
@@ -231,6 +235,7 @@ khit	khìt		L	SEQ.II	Henderson 1965	high
 khit	khit		L	finish.II	Henderson 1965	high
 khit	khit		L	finish.II.I	Henderson 1965	high
 khith	khith		L	finish.II.II	Henderson 1965	high
+khop	khòp		L	together	ZNC 2018	high
 khua	khùa		L	village	Henderson 1965	high
 khut	khùt		L	hand	Henderson 1965	high
 ki	kī		M		ZNC via 06-derivational	high
@@ -255,6 +260,7 @@ kuan	kuan		H	go.to.work.I	Henderson 1965	high
 kuanh	kuanh		L	go.to.work.II	Henderson 1965	high
 kuk	kuk		H	reverse.I	Henderson 1965	high
 kukh	kukh		L	reverse.II	Henderson 1965	high
+kul	kùl		L	must	ZNC 2018	high
 kum	kum		H	bow.I	Henderson 1965	high
 kumh	kumh		L	bow.II	Henderson 1965	high
 kumpi	kùmpì		LL	king	ZNC 2018	high
@@ -280,6 +286,7 @@ lamh	lamh		L	dance.II	Henderson 1965	high
 lamh	lamh		L	build.II	Henderson 1965	high
 lap	lap		L	wing	Weera 1998	high
 laph	laph		L	wing.II	Henderson 1965	high
+lawh	làwh		L	NEG.ABIL	ZNC 2018	high
 lawu	lɔú		HH		ZNC via 06-derivational	high
 le	lè		L	and	ZNC 2018	high
 leh	lèh		L	then	ZNC 2018	high
@@ -331,6 +338,7 @@ maui	maui		M	null.I	Henderson 1965	high
 mauih	mauih		L	null.II	Henderson 1965	high
 maw	màw		L	Q	Henderson 1965	high
 mawh	màwh		L	sin/wrong	ZNC 2018	high
+mawk	màwk		L	perhaps	ZNC 2018	high
 mei	mei		H	fire.I	Henderson 1965	high
 meih	meih		L	fire.II	Henderson 1965	high
 met	met		H	eight.I	Henderson 1965	high
@@ -372,6 +380,7 @@ nang	nàng		L	2SG.EMPH	Henderson 1965	high
 nangma	nàngmà		LL	2SG.EMPH	Henderson 1965	high
 nap	nap		L	snot	Weera 1998	high
 naph	naph		L	snot.II	Henderson 1965	high
+nasa	nàsà		LL	INTENS	ZNC 2018	high
 nasem	nàsèm		LL	2SG.work	ZNC compound	high
 nau	nàu		L	child	Henderson 1965	high
 nawn	nàwn		L	CONT	ZNC 2018	high
@@ -504,6 +513,7 @@ sanh	sanh		L	red.II	Henderson 1965	high
 saun	saun		H	long.I	Henderson 1965	high
 saunh	saunh		L	long.II	Henderson 1965	high
 sawm	sàwm		L	ten	ZNC 2018	high
+sawn	sàwn		L	toward	ZNC 2018	high
 seip	seip		M	winnow.I	Henderson 1965	high
 seiph	seiph		L	winnow.II	Henderson 1965	high
 sem	sèm		L	serve/work	ZNC 2018	high
@@ -558,6 +568,7 @@ tanh	tanh		L	cut.II	Henderson 1965	high
 tau	tau		H	groan.I	Henderson 1965	high
 tauh	tauh		L	groan.II	Henderson 1965	high
 tawh	tɔ̀Ɂ		L	COM	ZNC 2018	high
+tawm	tàwm		L	DIMIN	ZNC 2018	high
 tawn	tàwn		L	experience/meet	ZNC 2018	high
 tawu	tɔú		HH		ZNC via 06-derivational	high
 tawu	tɔù		HL		ZNC via 04-directional	high
@@ -566,6 +577,7 @@ te	tè		L	PL	Henderson 1965	high
 te	té		H		ZNC via 06-derivational	high
 tek	tek		L	glitter.II.I	Henderson 1965	high
 tekh	tekh		L	glitter.II.II	Henderson 1965	high
+tel	tèl		L	each	ZNC 2018	high
 teng	tèng		L	all/every	ZNC 2018	high
 tep	tep		H	suck.I	Henderson 1965	high
 teph	teph		L	suck.II	Henderson 1965	high
@@ -583,6 +595,8 @@ thou	thou		H	spring.up.I	Henderson 1965	high
 thu	thù		L	word	Henderson 1965	high
 thuak	thuàk		L	endure/suffer	ZNC 2018	high
 thum	thùm		L	three	ZNC 2018	high
+to	tò		L	CONT	ZNC 2018	high
+toh	tòh		L	UP	ZNC 2018	high
 tom	tòm		L	gather	Henderson 1965	high
 top	top		M	stop.I	Henderson 1965	high
 toph	toph		L	stop.II	Henderson 1965	high
@@ -674,6 +688,7 @@ zap	zap		H	fan.I	Henderson 1965	high
 zaph	zaph		L	fan.II	Henderson 1965	high
 zat	zat		L	broad.II.I	Henderson 1965	high
 zath	zath		L	broad.II.II	Henderson 1965	high
+zaw	zàw		L	MORE	ZNC 2018	high
 zawh	zàwh		L	COMPL	ZNC 2018	high
 zel	zèl		L	HAB.CONT	ZNC 2018	high
 zin	zìn		L	travel	Henderson 1965	high

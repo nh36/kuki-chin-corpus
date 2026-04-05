@@ -562,6 +562,29 @@ def extract_grammatical_morpheme_tones():
         ('bulh', 'bùlh', 'L', 'sprinkle', 'Henderson 1965'),
         ('va', 'và', 'L', 'go.and', 'Henderson 1965'),
         
+        # Missing directional suffixes (from ZNC morpheme docs)
+        ('toh', 'tòh', 'L', 'UP', 'ZNC 2018'),  # ZNC: -tɔù (grave = L)
+        ('cip', 'cìp', 'L', 'down', 'ZNC 2018'),  # tightly/downward
+        ('sawn', 'sàwn', 'L', 'toward', 'ZNC 2018'),
+        
+        # Missing modal suffixes
+        ('lawh', 'làwh', 'L', 'NEG.ABIL', 'ZNC 2018'),
+        ('kul', 'kùl', 'L', 'must', 'ZNC 2018'),
+        ('mawk', 'màwk', 'L', 'perhaps', 'ZNC 2018'),
+        
+        # Missing derivational suffixes
+        ('gawp', 'gàwp', 'L', 'INTENS', 'ZNC 2018'),
+        ('nasa', 'nàsà', 'LL', 'INTENS', 'ZNC 2018'),
+        ('zaw', 'zàw', 'L', 'MORE', 'ZNC 2018'),  # comparative
+        ('tawm', 'tàwm', 'L', 'DIMIN', 'ZNC 2018'),
+        ('khak', 'khàk', 'L', 'RES', 'ZNC 2018'),  # resultative
+        ('tel', 'tèl', 'L', 'each', 'ZNC 2018'),
+        ('khop', 'khòp', 'L', 'together', 'ZNC 2018'),
+        
+        # Missing aspect suffixes
+        ('to', 'tò', 'L', 'CONT', 'ZNC 2018'),  # continuative
+        ('gige', 'gìgè', 'LL', 'HAB', 'ZNC 2018'),  # habitual
+        
         # Lexical meanings for homophonous morphemes (Henderson 1965)
         # These are distinct from the grammatical morphemes with same spelling
         ('ta', 'ta', 'H', 'child', 'Henderson 1965'),  # vs ta=PFV (L)
