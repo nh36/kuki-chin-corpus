@@ -12485,7 +12485,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'cin': ('cin', 'plant'),                               # base - plant
         'kiatna': ('kiat-na', 'fall-NMLZ'),                    # falling place
         'kiat': ('kiat', 'fall'),                              # base - fall
-        'samzang': ('sam-zang', 'throw-INSTR'),                # sling
+        'samzang': ('samzang', 'hair'),                         # hair (of head)
+        'samzangte': ('samzang-te', 'hair-PL'),                  # hairs
         'zang': ('zang', 'use'),                               # base - use
         'kidop': ('ki-dop', 'REFL-guard'),                     # take heed
         'dop': ('dop', 'guard'),                               # base - guard
