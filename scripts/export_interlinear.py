@@ -186,9 +186,9 @@ def generate_latex(verses_data, title, output_path):
 
 \geometry{margin=0.75in}
 
-% Font setup - DejaVu has good Unicode/diacritic support
-\setmainfont{DejaVu Serif}
-\setsansfont{DejaVu Sans}
+% Font setup - use system fonts with good Unicode support
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica}
 
 % Colors for translation line
 \definecolor{kjvcolor}{RGB}{80,80,120}
