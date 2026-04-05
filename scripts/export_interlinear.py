@@ -1,0 +1,370 @@
+#!/usr/bin/env python3
+"""
+Export interlinear Bible text to LaTeX/PDF.
+
+Creates a multi-tier interlinear display using gb4e package:
+  1. Tone-marked orthography (with morpheme boundaries)
+  2. Leipzig-style glosses (auto-aligned via gb4e's gll command)
+  3. Free translation (KJV)
+
+The tone restoration already runs the morphological analyzer internally
+to disambiguate homophones, so tone and glosses are consistent.
+
+Usage:
+    python scripts/export_interlinear.py --book 41 --output output/mark_interlinear.tex
+    python scripts/export_interlinear.py --book 41 --chapter 1 --output output/mark1.tex
+    python scripts/export_interlinear.py --verses 41001001-41001010 --output output/mark_sample.tex
+"""
+
+import argparse
+import os
+import sys
+import re
+from pathlib import Path
+
+# Add scripts to path
+sys.path.insert(0, str(Path(__file__).parent))
+
+from analyze_morphemes import analyze_word
+from restore_tone import load_tone_dictionary, restore_word_tone
+
+
+# Book name mapping (numeric code to name)
+BOOK_NAMES = {
+    1: "Genesis", 2: "Exodus", 3: "Leviticus", 4: "Numbers", 5: "Deuteronomy",
+    6: "Joshua", 7: "Judges", 8: "Ruth", 9: "1 Samuel", 10: "2 Samuel",
+    11: "1 Kings", 12: "2 Kings", 13: "1 Chronicles", 14: "2 Chronicles",
+    15: "Ezra", 16: "Nehemiah", 17: "Esther", 18: "Job", 19: "Psalms",
+    20: "Proverbs", 21: "Ecclesiastes", 22: "Song of Solomon", 23: "Isaiah",
+    24: "Jeremiah", 25: "Lamentations", 26: "Ezekiel", 27: "Daniel",
+    28: "Hosea", 29: "Joel", 30: "Amos", 31: "Obadiah", 32: "Jonah",
+    33: "Micah", 34: "Nahum", 35: "Habakkuk", 36: "Zephaniah", 37: "Haggai",
+    38: "Zechariah", 39: "Malachi",
+    40: "Matthew", 41: "Mark", 42: "Luke", 43: "John", 44: "Acts",
+    45: "Romans", 46: "1 Corinthians", 47: "2 Corinthians", 48: "Galatians",
+    49: "Ephesians", 50: "Philippians", 51: "Colossians", 52: "1 Thessalonians",
+    53: "2 Thessalonians", 54: "1 Timothy", 55: "2 Timothy", 56: "Titus",
+    57: "Philemon", 58: "Hebrews", 59: "James", 60: "1 Peter", 61: "2 Peter",
+    62: "1 John", 63: "2 John", 64: "3 John", 65: "Jude", 66: "Revelation"
+}
+
+
+def load_bible(filepath):
+    """Load Bible text as dict of verse_id -> text."""
+    verses = {}
+    with open(filepath, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            parts = line.split('\t')
+            if len(parts) >= 2:
+                verse_id = parts[0]
+                text = parts[1]
+                verses[verse_id] = text
+    return verses
+
+
+def load_kjv(filepath):
+    """Load KJV translations from aligned verses file."""
+    kjv = {}
+    with open(filepath, 'r', encoding='utf-8') as f:
+        header = f.readline()
+        cols = header.strip().split('\t')
+        eng_idx = cols.index('eng_King James Version') if 'eng_King James Version' in cols else 2
+        
+        for line in f:
+            parts = line.strip().split('\t')
+            if len(parts) > eng_idx:
+                verse_id = parts[0]
+                kjv[verse_id] = parts[eng_idx]
+    return kjv
+
+
+def parse_verse_id(verse_id):
+    """Parse verse ID like '41001005' into (book, chapter, verse)."""
+    book = int(verse_id[:2])
+    chapter = int(verse_id[2:5])
+    verse = int(verse_id[5:])
+    return book, chapter, verse
+
+
+def format_reference(verse_id):
+    """Format verse ID as human-readable reference."""
+    book, chapter, verse = parse_verse_id(verse_id)
+    book_name = BOOK_NAMES.get(book, f"Book {book}")
+    return f"{book_name} {chapter}:{verse}"
+
+
+def analyze_verse(text, tone_dict):
+    """
+    Analyze a verse and return aligned word lists.
+    
+    The tone restoration internally uses analyze_word() to disambiguate
+    homophones, so the tone and gloss are consistent.
+    
+    Returns dict with parallel lists:
+      - toned_words: tone-marked forms (preserving original capitalization)
+      - gloss_words: Leipzig glosses (one per word)
+    Plus:
+      - kjv: will be added by caller
+    """
+    words = text.split()
+    
+    toned_words = []
+    gloss_words = []
+    
+    for word in words:
+        # Preserve and strip punctuation
+        punct = ''
+        clean_word = word
+        if word and word[-1] in '.,;:!?"\'':
+            punct = word[-1]
+            clean_word = word[:-1]
+        
+        # Track if original was capitalized
+        was_capitalized = clean_word and clean_word[0].isupper()
+        
+        # Get morphological analysis
+        result = analyze_word(clean_word.lower())
+        if result:
+            seg, gloss = result
+            # Get tone-marked form
+            toned, conf, analysis = restore_word_tone(clean_word, tone_dict)
+            # Restore capitalization if original was capitalized
+            if was_capitalized and toned:
+                toned = toned[0].upper() + toned[1:]
+            toned_words.append(toned + punct)
+            gloss_words.append(gloss)
+        else:
+            # Unknown word - pass through preserving case
+            toned_words.append(clean_word + punct)
+            # Proper noun in CAPS, unknown as ??
+            if was_capitalized:
+                gloss_words.append(clean_word.upper())
+            else:
+                gloss_words.append('??')
+    
+    return {
+        'toned_words': toned_words,
+        'gloss_words': gloss_words,
+    }
+
+
+def escape_latex(text):
+    """Escape special LaTeX characters."""
+    replacements = [
+        ('\\', r'\textbackslash{}'),
+        ('&', r'\&'),
+        ('%', r'\%'),
+        ('$', r'\$'),
+        ('#', r'\#'),
+        ('_', r'\_'),
+        ('{', r'\{'),
+        ('}', r'\}'),
+        ('~', r'\textasciitilde{}'),
+        ('^', r'\textasciicircum{}'),
+    ]
+    for old, new in replacements:
+        text = text.replace(old, new)
+    return text
+
+
+def generate_latex(verses_data, title, output_path):
+    """Generate LaTeX document with interlinear glosses using gb4e."""
+    
+    latex_header = r"""\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{gb4e}  % Standard linguistics interlinear package
+\noautomath  % Prevent gb4e from messing with math mode
+
+\geometry{margin=0.75in}
+
+% Font setup - DejaVu has good Unicode/diacritic support
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+
+% Colors for translation line
+\definecolor{kjvcolor}{RGB}{80,80,120}
+
+% Title formatting
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+
+% Header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textit{""" + escape_latex(title) + r"""}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{""" + escape_latex(title) + r""" \\ \large Interlinear Edition with Tone Marking}
+\author{Generated from Tedim Chin Bible Corpus}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Conventions}
+\begin{itemize}
+\item Tone diacritics: \textbf{á} = High, \textbf{ā} = Mid, \textbf{à} = Low
+\item Morpheme boundaries shown with hyphens
+\item Glosses use Leipzig Glossing Rules abbreviations
+\item \textcolor{kjvcolor}{\textit{Italics}}: King James Version translation
+\end{itemize}
+
+\tableofcontents
+\newpage
+
+"""
+
+    latex_footer = r"""
+\end{document}
+"""
+
+    # Group verses by chapter
+    chapters = {}
+    for verse_id, data in verses_data.items():
+        book, chapter, verse = parse_verse_id(verse_id)
+        if chapter not in chapters:
+            chapters[chapter] = []
+        chapters[chapter].append((verse_id, verse, data))
+    
+    # Sort
+    for chapter in chapters:
+        chapters[chapter].sort(key=lambda x: x[1])
+    
+    # Generate body
+    body_parts = []
+    
+    for chapter in sorted(chapters.keys()):
+        body_parts.append(f"\\section*{{Chapter {chapter}}}")
+        body_parts.append(f"\\addcontentsline{{toc}}{{section}}{{Chapter {chapter}}}")
+        body_parts.append("")
+        body_parts.append("\\begin{exe}")
+        
+        for verse_id, verse_num, data in chapters[chapter]:
+            # Format as gb4e example with interlinear gloss
+            toned_line = ' '.join(escape_latex(w) for w in data['toned_words'])
+            gloss_line = ' '.join(escape_latex(w) for w in data['gloss_words'])
+            kjv = escape_latex(data.get('kjv', ''))
+            
+            block = []
+            # Use \exi for custom verse number label
+            block.append(f"\\exi{{{verse_num}}}")
+            block.append(f"\\gll {toned_line} \\\\")
+            block.append(f"     {gloss_line} \\\\")
+            if kjv:
+                block.append(f"\\glt \\textcolor{{kjvcolor}}{{\\textit{{{kjv}}}}}")
+            block.append("")
+            
+            body_parts.append('\n'.join(block))
+        
+        body_parts.append("\\end{exe}")
+        body_parts.append("\\newpage")
+        body_parts.append("")
+    
+    # Write output
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(latex_header)
+        f.write('\n'.join(body_parts))
+        f.write(latex_footer)
+    
+    return output_path
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Export interlinear Bible text to LaTeX')
+    parser.add_argument('--book', type=int, help='Book number (e.g., 41 for Mark)')
+    parser.add_argument('--chapter', type=int, help='Chapter number (optional)')
+    parser.add_argument('--verses', type=str, help='Verse range (e.g., 41001001-41001010)')
+    parser.add_argument('--output', type=str, required=True, help='Output .tex file path')
+    parser.add_argument('--compile', action='store_true', help='Compile to PDF with xelatex')
+    
+    args = parser.parse_args()
+    
+    # Paths
+    base_dir = Path(__file__).parent.parent
+    bible_path = base_dir / 'bibles/extracted/ctd/ctd-x-bible.txt'
+    aligned_path = base_dir / 'data/verses_aligned.tsv'
+    
+    print("Loading resources...")
+    bible = load_bible(bible_path)
+    kjv = load_kjv(aligned_path)
+    tone_dict = load_tone_dictionary()
+    
+    print(f"Loaded {len(bible)} verses, {len(kjv)} KJV translations, {len(tone_dict)} tone entries")
+    
+    # Filter verses
+    if args.verses:
+        # Parse range like "41001001-41001010"
+        if '-' in args.verses:
+            start, end = args.verses.split('-')
+            verse_ids = [v for v in bible.keys() if start <= v <= end]
+        else:
+            verse_ids = [args.verses] if args.verses in bible else []
+    elif args.book:
+        book_prefix = f"{args.book:02d}"
+        if args.chapter:
+            chapter_prefix = f"{args.book:02d}{args.chapter:03d}"
+            verse_ids = [v for v in bible.keys() if v.startswith(chapter_prefix)]
+        else:
+            verse_ids = [v for v in bible.keys() if v.startswith(book_prefix)]
+    else:
+        parser.error("Must specify --book, --chapter, or --verses")
+    
+    verse_ids = sorted(verse_ids)
+    print(f"Processing {len(verse_ids)} verses...")
+    
+    # Analyze verses
+    verses_data = {}
+    for i, verse_id in enumerate(verse_ids):
+        if (i + 1) % 50 == 0:
+            print(f"  Processed {i + 1}/{len(verse_ids)} verses...")
+        
+        text = bible[verse_id]
+        data = analyze_verse(text, tone_dict)
+        data['kjv'] = kjv.get(verse_id, '')
+        verses_data[verse_id] = data
+    
+    # Generate title
+    if args.book:
+        book_name = BOOK_NAMES.get(args.book, f"Book {args.book}")
+        if args.chapter:
+            title = f"{book_name} Chapter {args.chapter}"
+        else:
+            title = book_name
+    else:
+        title = "Tedim Chin Bible Selection"
+    
+    # Generate LaTeX
+    output_path = Path(args.output)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    generate_latex(verses_data, title, output_path)
+    print(f"Generated: {output_path}")
+    
+    # Optionally compile
+    if args.compile:
+        import subprocess
+        print("Compiling with xelatex...")
+        result = subprocess.run(
+            ['xelatex', '-output-directory', str(output_path.parent), str(output_path)],
+            capture_output=True,
+            text=True
+        )
+        if result.returncode == 0:
+            pdf_path = output_path.with_suffix('.pdf')
+            print(f"Generated PDF: {pdf_path}")
+        else:
+            print(f"LaTeX compilation failed:\n{result.stderr}")
+
+
+if __name__ == '__main__':
+    main()
