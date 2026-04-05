@@ -814,13 +814,15 @@ AMBIGUOUS_MORPHEMES = {
         ('DIM', 'diminutive'),       # Diminutive (rare)
     ],
     
-    # thum: 'three' (numeral) vs 'entreat/beseech' (verb)
-    # - 'three' in numeral contexts (ni thum = day three, kum thum = year three) ~500x
-    # - 'entreat' as verb with verbal morphology (a thum hi = he entreated) ~130x
-    # Context: 'three' when following numerals/classifiers; 'entreat' with 3SG prefix
+    # thum: 'three' (numeral) vs 'entreat' (verb) vs 'mourn' (verb)
+    # - 'three' in numeral contexts (ni thum = day three, kum thum = year three) ~200x
+    # - 'entreat' with 1SG/2SG markers: kong thum, hong thum ~140x
+    # - 'mourn' with kapin (weep): kapin thum, or 3SG in mourning context ~25x
+    # Disambiguation: kong/hong → entreat; kapin → mourn; ni/kum/kha → three
     'thum': [
-        ('three', 'numeral'),        # Numeral (default before classifiers)
-        ('entreat', 'verbal'),       # Verb: entreat, beseech, implore
+        ('three', 'numeral'),        # Numeral (default in numeric contexts)
+        ('entreat', 'verbal'),       # Verb: entreat, beseech, implore (kong/hong thum)
+        ('mourn', 'verbal'),         # Verb: mourn, lament, bewail (kapin thum)
     ],
     
     # pi: 'grandmother/big' vs 'also/give'
@@ -5340,21 +5342,40 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
         return 'know'
     
     elif morpheme == 'thum':
-        # 'three' (numeral) vs 'entreat' (verb)
-        # 'three' after classifiers/numerals: ni thum, kum thum, tul thum
-        if context.get('prev_morpheme') in ('ni', 'kum', 'tul', 'sawm', 'za', 'khat', 'nih', 'li', 'nga'):
+        # 'three' (numeral) vs 'entreat' (verb) vs 'mourn' (verb)
+        prev = context.get('prev_morpheme', '')
+        prev_word = context.get('prev_word', '')
+        next_m = context.get('next_morpheme', '')
+        
+        # NUMERAL: after classifiers/time units/numerals
+        numeral_triggers = ('ni', 'kum', 'tul', 'sawm', 'za', 'khat', 'nih', 'li', 'nga', 
+                            'guk', 'sagih', 'giat', 'kha', 'zan', 'tapa', 'tanu', 'mi',
+                            'hiang', 'hai', 'lawh', 'nai')
+        if prev in numeral_triggers:
             return 'three'
-        # 'three' before -vei (times): thumvei = three times
-        if context.get('next_morpheme') == 'vei':
+        # NUMERAL: before -vei (times): thumvei = three times
+        if next_m == 'vei':
             return 'three'
-        # 'entreat' when preceded by prefix a- and followed by hi/uh (verbal)
-        if context.get('has_prefix'):
+        # NUMERAL: in compound numbers (sawmthum le thum = 33)
+        if prev in ('le',) and context.get('position') != 'sentence_final':
+            return 'three'
+        
+        # ENTREAT: 1SG/2SG object markers kong/hong clearly indicate entreating
+        if prev in ('kong', 'hong', 'nong'):
             return 'entreat'
-        # 'entreat' standalone at sentence end (a thum hi pattern)
-        if context.get('position') == 'standalone':
-            # Default to 'three' for isolated numbers, but consider context
-            return 'three'
-        # Default to numeral (more common overall)
+        # ENTREAT: ka thum (my entreating) in verbal context
+        if prev == 'ka' and context.get('is_verbal'):
+            return 'entreat'
+        
+        # MOURN: kapin thum = weep-mourn (clear mourning indicator)
+        if prev_word.endswith('kapin') or prev == 'kapin':
+            return 'mourn'
+        # MOURN: dahin thum = wailing-mourn
+        if prev == 'dahin':
+            return 'mourn'
+        
+        # Default by frequency: numeral > entreat > mourn
+        # For ambiguous cases, let sentence-level disambiguation handle it
         return 'three'
     
     elif morpheme == 'tung':
@@ -5600,6 +5621,9 @@ def analyze_sentence(sentence: str) -> list:
     """
     Analyze a sentence and return word-by-word analysis with phrase boundaries.
     
+    Includes sentence-level disambiguation for homophonous words like 'thum'
+    (three/entreat/mourn) that require neighboring word context.
+    
     Args:
         sentence: A string of space-separated words
         
@@ -5609,8 +5633,31 @@ def analyze_sentence(sentence: str) -> list:
     results = []
     words = sentence.split()
     
-    for word in words:
+    for i, word in enumerate(words):
         seg, gloss = analyze_word(word)
+        
+        # Sentence-level disambiguation for 'thum' homophone
+        clean = word.lower().rstrip('.,;:!?"\'')
+        if clean == 'thum' and gloss == 'three':
+            prev_word = words[i-1].lower().rstrip('.,;:!?"\'') if i > 0 else ''
+            prev2_word = words[i-2].lower().rstrip('.,;:!?"\'') if i > 1 else ''
+            next_word = words[i+1].lower().rstrip('.,;:!?"\'') if i < len(words)-1 else ''
+            
+            # kong/hong/nong thum = entreat (1SG/2SG object marker + verb)
+            if prev_word in ('kong', 'hong', 'nong'):
+                gloss = 'entreat'
+            # ka thum + verbal marker = I entreat
+            elif prev_word == 'ka' and next_word in ('hi', 'uh', 'ing', 'ding', 'theih'):
+                gloss = 'entreat'
+            # kapin [a] thum = weep-ERG [3SG] mourn (look 1-2 words back for kapin)
+            elif prev_word == 'kapin' or prev2_word == 'kapin':
+                gloss = 'mourn'
+            # dahin thum = wail-mourn
+            elif prev_word == 'dahin' or prev2_word == 'dahin':
+                gloss = 'mourn'
+            # a thum hi/uh in mourning context (3SG mourn) - when followed by hi/uh
+            # This is ambiguous without KJV - default to numeral
+        
         boundary = is_phrase_boundary(word, gloss)
         results.append((word, seg, gloss, boundary))
     
@@ -20110,6 +20157,49 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 pass  # TODO: Add logging or alternative parse strategy
     
     return (segmented, gloss)
+
+
+def analyze_word_with_context(word: str, prev_word: str = '', next_word: str = '', 
+                              prev2_word: str = '') -> Tuple[str, str]:
+    """
+    Analyze a word with sentence context for better disambiguation.
+    
+    This wraps analyze_word() and applies sentence-level disambiguation
+    for homophonous words like 'thum' (three/entreat/mourn).
+    
+    Args:
+        word: The word to analyze
+        prev_word: Previous word in sentence (for left context)
+        next_word: Next word in sentence (for right context)
+        prev2_word: Word two positions back (for patterns like "kapin a thum")
+        
+    Returns:
+        Tuple of (segmented_form, gloss)
+    """
+    seg, gloss = analyze_word(word)
+    
+    # Apply sentence-level disambiguation
+    clean = word.lower().rstrip('.,;:!?"\'')
+    prev_clean = prev_word.lower().rstrip('.,;:!?"\'') if prev_word else ''
+    prev2_clean = prev2_word.lower().rstrip('.,;:!?"\'') if prev2_word else ''
+    next_clean = next_word.lower().rstrip('.,;:!?"\'') if next_word else ''
+    
+    # thum: three (numeral) vs entreat (verb) vs mourn (verb)
+    if clean == 'thum' and gloss == 'three':
+        # kong/hong/nong thum = entreat (1SG/2SG object marker + verb)
+        if prev_clean in ('kong', 'hong', 'nong'):
+            gloss = 'entreat'
+        # ka thum + verbal marker = I entreat
+        elif prev_clean == 'ka' and next_clean in ('hi', 'uh', 'ing', 'ding', 'theih'):
+            gloss = 'entreat'
+        # kapin [a] thum = weep-ERG [3SG] mourn (look 1-2 words back)
+        elif prev_clean == 'kapin' or prev2_clean == 'kapin':
+            gloss = 'mourn'
+        # dahin [a] thum = wail-ERG [3SG] mourn
+        elif prev_clean == 'dahin' or prev2_clean == 'dahin':
+            gloss = 'mourn'
+    
+    return (seg, gloss)
 
 
 # Lexicon cache
