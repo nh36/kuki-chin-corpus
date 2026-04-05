@@ -2441,7 +2441,8 @@ NOUN_STEMS = {
     'tuam': 'promise',       # base for phattuamna, tuamtuam
     'guh': 'bone',           # 44x - "bone" (guhte = bones)
     'liat': 'great',         # 44x - "great, much" (liatna = greatness)
-    'kapin': 'among',        # 46x - "among, before" (came unto)
+    # kapin: removed - actually kap-in "weep-ERG" in 89% of cases (39/44)
+    # The one "among" case (Judg 20:16) is unclear and may be compositional
     'innkuanpih': 'household', # 46x - "household" (inn-kuan-pih)
     # khuampi moved to BINARY_COMPOUNDS as khuam-pi (pillar-great)
     'ngawng': 'neck',        # 43x - "neck"
@@ -3793,7 +3794,7 @@ NOUN_STEM_TYPES = {
     'kamsangpa': 'free',
     'kamtai': 'free',
     'kangtum': 'free',
-    'kapin': 'free',
+    # kapin: removed from 'free' - it's kap-in "weep-ERG"
     'kauphe': 'free',
     'kawm': 'free',
     'kawngsa': 'free',
