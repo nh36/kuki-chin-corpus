@@ -85,13 +85,13 @@ TEDIM_SPECIFIC = {
     '3→1': 'third person acting on first person',
     '2→1': 'second person acting on first person',
     'AG': 'agent (nominalizer)',
+    'AUG': 'augmentative (big/great)',
     'DOWN': 'downward directional',
     'UP': 'upward directional',
     'TOWARD': 'goal directional',
     'HAB.CONT': 'habitual continuative',
     'NEG.ABIL': 'negative abilitative (cannot)',
-    'MORE': 'comparative (more)',
-    'COMP': 'comparative',
+    'MORE': 'comparative (more X)',
 }
 
 
@@ -515,8 +515,16 @@ def main():
         # Check for xelatex in standard locations
         xelatex_cmd = shutil.which('xelatex')
         if not xelatex_cmd:
-            # Try standard MacTeX location
-            for tex_path in ['/Library/TeX/texbin/xelatex', '/usr/local/texlive/2024/bin/universal-darwin/xelatex']:
+            # Try standard locations including TinyTeX
+            home = os.path.expanduser('~')
+            tex_paths = [
+                f'{home}/TinyTeX/bin/universal-darwin/xelatex',
+                f'{home}/Library/TinyTeX/bin/universal-darwin/xelatex',
+                '/Library/TeX/texbin/xelatex',
+                '/usr/local/texlive/2024/bin/universal-darwin/xelatex',
+                '/usr/local/texlive/2025/bin/universal-darwin/xelatex',
+            ]
+            for tex_path in tex_paths:
                 if os.path.exists(tex_path):
                     xelatex_cmd = tex_path
                     break

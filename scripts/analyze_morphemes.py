@@ -368,7 +368,7 @@ VERBAL_DERIVATIONAL_SUFFIXES = {
     'khop': 'together', # Collective
     'hak': 'INTENS',    # Intensive variant
     'loh': 'NEG',       # Negative result
-    'pi': 'COMP',       # Comparative (more/-er)
+    'pi': 'AUG',        # Augmentative (big/great) - NOT comparative; see -zaw for true comparative
     'pa': 'NMLZ.AG',    # Agent nominalizer (one who V-s)
     'ngei': 'EXP',      # Experiential (have V-ed before, know how to V)
 }
