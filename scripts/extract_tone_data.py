@@ -434,6 +434,7 @@ def extract_grammatical_morpheme_tones():
         ('ta', 'tà', 'L', 'PFV', 'ZNC 2018'),
         ('zo', 'zò', 'L', 'COMPL', 'ZNC 2018'),
         ('khin', 'xín', 'H', 'SEQ', 'ZNC 2018'),
+        ('khin', 'xín', 'H', 'IMM', 'ZNC 2018'),  # alias for SEQ (analyzer uses IMM)
         ('kik', 'kík', 'H', 'ITER', 'ZNC 2018'),
         ('nawn', 'nàwn', 'L', 'CONT', 'ZNC 2018'),
         
@@ -559,6 +560,17 @@ def extract_grammatical_morpheme_tones():
         ('tunga', 'tùngà', 'LL', 'on.LOC', 'ZNC 2018'),
         ('bulh', 'bùlh', 'L', 'sprinkle', 'Henderson 1965'),
         ('va', 'và', 'L', 'go.and', 'Henderson 1965'),
+        
+        # Lexical meanings for homophonous morphemes (Henderson 1965)
+        # These are distinct from the grammatical morphemes with same spelling
+        ('ta', 'ta', 'H', 'child', 'Henderson 1965'),  # vs ta=PFV (L)
+        ('thei', 'thei', 'H', 'know', 'Henderson 1965'),  # vs thei=ABIL (L)
+        ('lai', 'lai', 'H', 'midst', 'Henderson 1965'),  # vs lai=PROSP (varies)
+        ('sa', 'sa', 'H', 'flesh', 'Henderson 1965'),  # vs sa=PAST (varies)
+        ('lam', 'lam', 'M', 'way', 'Henderson 1965'),  # vs lam=TOWARD (M)
+        ('lak', 'lak', 'M', 'among', 'Henderson 1965'),  # vs lak=expose.I (M)
+        ('nam', 'nam', 'M', 'nation', 'Henderson 1965'),  # vs nam=smelly.I (M)
+        ('tua', 'tua', 'H', 'DIST', 'Henderson 1965'),  # demonstrative
         
         # Common nouns and morphemes (from ZNC and Henderson)
         ('hoih', 'hòih', 'L', 'good', 'Henderson 1965'),
@@ -688,22 +700,19 @@ def deduplicate_entries(entries):
         
         for tone, telist in by_tone.items():
             if len(telist) == 1:
-                # Single entry - check if gloss should be aligned
-                entry = telist[0]
-                if orth in canonical and entry['gloss']:
-                    # Update gloss to canonical if it's a grammatical morpheme
-                    entry = dict(entry)  # Copy
-                    entry['gloss'] = canonical[orth]
-                result.append(entry)
+                # Single entry - keep as-is (don't replace lexical with grammatical)
+                result.append(telist[0])
             else:
                 # Multiple entries with same tone - check if they can be merged
                 glosses = [e['gloss'] for e in telist]
                 base_glosses = set(normalize_gloss(g) for g in glosses if g)
                 
                 if len(base_glosses) <= 1:
-                    # Same base meaning - merge, use canonical or first gloss
+                    # Same base meaning - merge, prefer shortest gloss
                     merged = dict(telist[0])
-                    if orth in canonical:
+                    # Only use canonical if the base gloss matches the canonical
+                    canonical_base = normalize_gloss(canonical.get(orth, ''))
+                    if base_glosses and canonical_base in base_glosses:
                         merged['gloss'] = canonical[orth]
                     elif glosses[0]:
                         # Use shortest/cleanest gloss
