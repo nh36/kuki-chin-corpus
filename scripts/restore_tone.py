@@ -276,15 +276,22 @@ def restore_word_tone(word, tone_dict, context=None):
     - confidence: 'high', 'medium', 'low', or 'unknown'
     - analysis: list of (morpheme, tone, gloss) tuples
     """
-    # First, try the whole word
-    word_lower = word.lower().strip('.,;:!?"\'')
+    # Handle genitive apostrophe specially - preserve it but lookup base word
+    has_genitive = word.endswith("'")
     
-    if word_lower in tone_dict:
-        entries = tone_dict[word_lower]
+    # Strip punctuation but NOT apostrophe (it's the genitive marker)
+    word_lower = word.lower().strip('.,;:!?"')
+    
+    # For tone lookup, use base without genitive marker
+    lookup_word = word_lower.rstrip("'") if has_genitive else word_lower
+    genitive_suffix = "'" if has_genitive else ""
+    
+    if lookup_word in tone_dict:
+        entries = tone_dict[lookup_word]
         if len(entries) == 1:
             entry = entries[0]
-            toned = mark_syllable_tones(word_lower, entry['tone'])
-            return (toned, 'high', [(word_lower, entry['tone'], entry['gloss'])])
+            toned = mark_syllable_tones(lookup_word, entry['tone']) + genitive_suffix
+            return (toned, 'high', [(lookup_word, entry['tone'], entry['gloss'])])
         else:
             # Ambiguous whole word - try morphological analysis first for gloss info
             result = analyze_word(word_lower)
@@ -293,21 +300,21 @@ def restore_word_tone(word, tone_dict, context=None):
                 # Use gloss to disambiguate
                 whole_context = dict(context or {})
                 whole_context['gloss'] = gloss_str
-                entry, conf = disambiguate_tone_with_gloss(word_lower, entries, whole_context)
+                entry, conf = disambiguate_tone_with_gloss(lookup_word, entries, whole_context)
                 if entry:
-                    toned = mark_syllable_tones(word_lower, entry['tone'])
-                    return (toned, conf, [(word_lower, entry['tone'], entry['gloss'])])
+                    toned = mark_syllable_tones(lookup_word, entry['tone']) + genitive_suffix
+                    return (toned, conf, [(lookup_word, entry['tone'], entry['gloss'])])
                 else:
                     # No matching entry for this meaning - leave unmarked
-                    return (word, 'low', [(word_lower, '?', gloss_str)])
+                    return (word_lower, 'low', [(lookup_word, '?', gloss_str)])
             else:
                 # No analysis available - we can't disambiguate, leave unmarked
-                return (word, 'low', [(word_lower, '?', '')])
+                return (word_lower, 'low', [(lookup_word, '?', '')])
     
     # Try morphological analysis
     result = analyze_word(word_lower)
     if not result:
-        return (word, 'unknown', [])
+        return (word_lower, 'unknown', [])
     
     segmentation, gloss_str = result
     morphemes = segmentation.replace('~', '-').split('-')

@@ -181,17 +181,17 @@ def analyze_verse(text, tone_dict):
     gloss_words = []
     
     for word in words:
-        # Preserve and strip punctuation
+        # Preserve and strip punctuation - BUT keep apostrophe as it's the genitive marker
         punct = ''
         clean_word = word
-        if word and word[-1] in '.,;:!?"\'':
+        if word and word[-1] in '.,;:!?"':  # Note: apostrophe removed from this list
             punct = word[-1]
             clean_word = word[:-1]
         
         # Track if original was capitalized
         was_capitalized = clean_word and clean_word[0].isupper()
         
-        # Get morphological analysis
+        # Get morphological analysis (keep apostrophe for genitive)
         result = analyze_word(clean_word.lower())
         if result:
             seg, gloss = result
@@ -342,6 +342,10 @@ def generate_latex(verses_data, title, output_path):
 % Font setup - use system fonts with good Unicode support
 \setmainfont{Times New Roman}
 \setsansfont{Helvetica}
+
+% Fake small caps: slightly smaller uppercase letters
+% This ensures consistent rendering across systems
+\renewcommand{\textsc}[1]{{\footnotesize\MakeUppercase{#1}}}
 
 % Colors for translation line
 \definecolor{kjvcolor}{RGB}{80,80,120}
