@@ -1,0 +1,1632 @@
+Linguistics of the Tibeto-Burman Area
+Volume 21.1 — Spring 1998
+
+TIDDIM CHIN TONES IN HISTORICAL
+PERSPECTIVE*
+Weera Ostapirat
+University of California, Berkeley
+Tiddim Chin shows three tones in smooth syllables (syllables ending with
+sonorants and vowels): rising, level and falling, which are numbered by
+
+Henderson (1965) as tones 1, 2 and 3 respectively.
+
+Long checked syllables
+
+(syllables with long vowels ending with stops) also occur with these three
+
+tones.
+
+Short checked syllables only occur with a low level tone, which has
+
+been considered to be an allotone of tone 3. For convenience of discussion in
+
+this article I will refer to this latter tone as tone 4.
+In this paper, I propose that the three tones in smooth syllables arise from
+different types of laryngeal endings interacting with vowel length, and that
+
+original checked syllables only took two tones, also depending on vowel
+length. Tiddim verbs have two alternating forms, usually with different tones,
+
+labelled as Form I and Form II.
+
+Since the latter is a derivation of the former,
+
+Form
+I verbs will be taken as the basis for our discussion.
+
+We will comment
+
+on the verbal derivation in our last section.!
+1.
+
+CHECKED SYLLABLES:
+
+SHORT (TONE 4)
+
+VS
+
+LONG
+
+(TONE 1)
+
+1.1. I shall first demonstrate that only two tones were original to checked
+syllables, depending on the length of the preceding vowels.
+checked syllables always take tone 4.
+
+Synchronic short
+
+Long checked syllables, however, are
+
+recorded with all three of the other tones.
+
+Among these, tone 1 (which occurs
+
+most frequently) historically reflects early long checked syllables;
+tone 3 do not.
+
+tone 2 and
+
+See Tables 1 and 2; Lushai forms are also provided for
+
+comparison.
+This paper was first written in 1995 under support from the Chao Yuenren Fellowship at
+the University of California, Berkeley, to which I would like to express my gratitude.
+
+1!
+
+Language name abbreviations:
+TB
+WB
+
+Tibeto-Burman
+Written Burmese
+
+oc
+
+Old Chinese
+235
+
+PTB
+WT
+
+Proto-Tibeto-Burman
+Written Tibetan
+
+rGy
+
+rGyalrong
+
+236
+
+Weera Ostapirat
+
+Tiddim
+
+Lushai
+
+‘weep’
+
+kap*
+
+tap
+
+‘snot’
+
+nap*
+
+hnap
+
+‘lac’
+
+gip*
+
+khrip (WB)
+
+‘eye’
+
+mit*
+
+mit
+
+‘kill’
+
+that*
+
+sat (WB)
+
+‘six’
+
+guk*
+
+ruk
+
+‘pig’
+
+vok*
+
+vok
+
+‘pungent’
+
+thak*
+
+thak
+
+‘rain’
+
+gua?*
+
+rua?
+
+‘plant (v.)’
+
+tu?*
+
+tu?
+
+Table 1.
+
+Checked syllables with short vowels.
+
+Tiddim
+
+Lushai
+
+‘fan’
+
+Za:p!
+
+Za:p
+
+‘suck’
+
+te:p!
+
+fe:p
+
+‘lungs’
+
+tuap!
+
+cuap
+
+‘leech’
+
+list!
+
+hli:t
+
+‘worm’
+
+hu:t!
+
+hu:t
+
+‘shave’
+
+me:t!
+
+me:t
+
+‘eight’
+
+giat!
+
+riat
+
+‘rib’
+
+na:k!
+
+na:k
+
+‘walk’
+
+va:k!
+
+va:k
+
+‘lick’
+
+liak!
+
+liak
+
+‘thunderbolt’
+
+ke:k!
+
+te:k
+
+Table 2.
+
+Checked syllables with long vowels.
+
+With tones 2 and 3, synchronic checked syllables with velar [-k] ending
+usually come from original syllables with final *-r. See Table 3; again Lushai
+forms are also provided.
+
+Tiddim Chin tones in historical perspective
+
+Tiddim
+
+237
+
+Lushai
+
+‘fowl’
+
+a:k?
+
+a:r
+
+‘bell’
+
+da:k?
+
+da:r
+
+‘flower’
+
+pa:k?
+
+pa:r
+
+‘leprosy’
+
+pha:k?
+
+pha:r
+
+‘pine tree’
+
+ta:k?
+
+ta:r
+
+‘light’ (v.)
+
+va:k?
+
+va:r ‘light (not dark)’
+
+‘spread’
+
+za:k?
+
+Zar
+
+‘sell’
+
+zuak?
+
+zuar
+
+‘nose’
+
+na:k>
+
+hna:r
+
+Table 3. Synchronic checked syllables from original syllables ending with *-r.
+
+A few other words, especially ones with final -p
+
+and -t,
+
+cannot be
+
+explained as derived from *-r. But most are likely to be recent loans coming
+with economic and social changes.
+Sa:p’ ‘pay rent’, da:
+
+For examples, ma.t?
+
+‘electricity’, etc.
+
+‘a quarter dollar’,
+
+It should also be noted that checked
+
+syllables with tone 3 are indeed rare, and are often derived forms having a
+
+specific meaning or a different part of speech, e.g. a ‘cut on someone’s
+behalf’ from a:t! ‘cut’, na:k? ‘nose’ (the nominal form of na-k? ‘breathe’).
+1.2.
+
+So, we may set up historical tones for checked syllables based on
+
+vowel length as follows (Table 4). I use -k to represent stop endings in general;
+
+-v stands for short vowels and -vv for long vowels and diphthongs.
+
+Checked endings
+
+*-k
+
+*.y
+
+vk‘
+
+*.vV
+
+vvk!
+
+Table 4. Historical tones for checked syllables based on vowel length.
+
+238
+
+2.
+
+Weera Ostapirat
+
+TENSE SYLLABLES: SHORT (TONE 4) vs. LONG (TONE 1)
+
+2.1.
+
+Short checked syllables may end with an oral or glottal stop (-vp, -vt,
+
+-vk and -v? ; cf. Table 1). However, the glottal stop ending does not occur with
+
+long checked syllables. That the glottal stop may only occur with short vowels
+is not surprising. Synchronically, the syllable type -v? may be interpreted as a
+counterpart of the -vv type, i.e. open syllables whose vowels are always long.
+The possibility that there used to be a *-vv? type cannot be ruled out, however.
+
+If this *-vv? type did exist, it would most likely behave like *-vvk in
+developing tone 1, in contrast with short stopped syllables (*-vk and *-v7)
+
+which take tone 4.
+
+This, together with the fact that tone 1 in open syllables is
+
+frequently accompanied by glottal constriction, leads to my hypothesis that the
+synchronic open rime with tone 1 (rising tone) originally came from syllables
+with long vowels ending with a glottal stop.
+
+Cognates found in Chepang
+
+(Central Nepal) consistently support this hypothesis.
+
+See Table 5 (Chepang
+
+data from Caughley 1972).
+
+Tiddim
+
+Chepang
+
+‘bird’
+
+va:!
+
+‘rat’
+
+zu:
+
+wa?
+yu?
+
+‘dog’
+
+2wi:!
+
+kuy?
+
+‘child’
+
+ta:!
+
+co?
+
+‘water’
+
+tu:i!
+
+ti?
+
+‘flesh’
+
+sa!
+
+sja?
+
+‘blood’
+
+si:!
+
+wai?
+
+‘thin’
+
+pa:!
+
+be?
+
+‘tail’
+
+mei!
+
+me?
+
+‘buy’
+
+lei!
+
+le?
+
+‘fire’
+
+mei!
+
+hme?
+
+‘steal’
+
+gu:!
+
+ku?
+
+‘fish’
+
+ya:!
+
+na?
+
+‘left’
+
+vei!
+
+we?
+
+‘bitter’
+
+xa:!
+
+kha? (Karen Pho-Moulmein)
+
+‘chin’
+
+kha:!
+
+ka? (Tangsa)
+
+Table 5.
+
+Synchronic open syllables with tone 1 originally from
+
+syllables ending with *-?, 2
+
+2
+
+Lolo-Burmese cognates to these forms are all reflexes of PLB Tone *2. This extremely
+
+interesting fact suggests that at least one of the sources of PLB *2 is final glottal stop. [Ed.]
+
+Tiddim Chin tones in historical perspective
+
+2.2.
+
+239
+
+Setting the glottal stop ending apart from oral stops will revise our
+
+historical tonal scheme as shown in Table 6.
+
+*.?
+
+*k
+
+¥.y
+
+v?4
+
+vk‘
+
+*-vy
+
+vv!
+
+vvk}
+
+Table 6. Revised historical tones based on vowel length.
+
+3.
+
+LAX SYLLABLES:
+3.1.
+
+SHORT (TONE 4) vS. LONG (TONE 3)
+
+In addition to such words as ‘rain’, Tiddim gua”, Chepang wa/?,
+
+where the origin of the glottal stop ending is straightforward (-? < *-2), a
+
+number of synchronic Tiddim words ending with a glottal stop etymologically
+go back to those with TB final *-s. The last two examples in Table 7 also show
+interesting corresponding Old Chinese forms with complex finals of the type
+stop +S.
+
+Tiddim
+
+Chepang
+
+‘bone’
+
+gu?*
+
+hrus
+
+‘visit’
+
+ho?*
+
+krus
+
+‘two’
+
+ni?*
+
+nis
+
+‘sleep’
+
+i?*
+
+2is
+
+‘angry’
+
+he?*
+
+ris
+
+‘lower lip’
+
+ne?*
+
+cnas
+
+‘seven’
+
+sa'gi?4
+
+kesnes (rGy)
+
+‘rice’
+
+bu?*
+
+bras (WT)
+
+‘bear fruit’
+
+ga?
+
+fibras (WT)
+
+‘thick’
+
+sal
+
+tat®> (Dulong)3
+
+‘tie’
+
+xe?*
+
+OC *keks 4
+
+‘cover’
+
+xu?
+
+OC *kaps &
+
+(cf. rGy khes)
+(rGy)
+
+(cf. WT khebs ‘a cover’)
+
+Table 7. Synchronic short syllables with glottal stop originally from
+
+Early Tiddim short syllables ending with *-h.4
+
+3
+4
+
+For Dulong -t: PTB *-s, cf. ‘seven’, Dulong sus?! pit.
+The PLB or Loloish cognates to these words are also from PLB Tone *2 (BONE, TWO,
+
+SEVEN), unless they descend from earlier syllables with final stop (SLEEP < PTB*yip). [Ed.]
+
+240
+
+Weera Ostapirat
+
+The correspondence Tiddim -? / PTB *-s has been well known among
+
+scholars in the field (cf. Benedict 1972); however, it has remained phonetically
+mysterious how -s would develop into a glottal stop -?. I propose that -s first
+became -h, a normal change evidenced in many Southeast Asian languages.
+The glottal spirant -h, which needed enough continuum as domain, then became
+
+-? due to the relative abruptness of preceding short vowels.5 The change must
+have occurred earlier than the time of the tone split in Tiddim, since all words of
+this type have perfectly integrated themselves with the regular -v? type.
+3.2.
+
+We would expect there to be corresponding long syllables plus
+
+spirant of the *-vvh type.
+
+This final -h, like its glottal stop counterpart, has
+
+become lost after long vowels. The trace of the contrastive finals is then found
+in the tones: *-vvh becomes open syllables with tone 3 while *-vv? becomes
+open syllables with tone 1. Again, cognates in Chepang are found to retain this
+
+-h ending (see Table 8).
+
+Tiddim
+
+Chepang
+
+‘know’
+
+thei?
+
+tayh (cf. WT ces)
+
+‘say’
+
+ci}
+
+dayh
+
+‘moon’
+
+xa:>
+
+lah
+
+‘spleen’
+
+la:
+
+leh
+
+‘wind’
+
+hui?
+
+hut (Hayu)®
+
+Table 8.
+
+Synchronic open syllables with tone 3 originally from
+
+Early Tiddim long syllables ending with *-h.7
+3.3. At this point our historical tonal scheme is that shown in Table 9:
+*-h
+
+#2
+
+#k
+
+¥y
+
+v4
+
+v7
+
+vk‘
+
+*-vy
+
+| vv?
+
+vv!
+
+vvk!
+
+Table 9. Further revision of historic tones.
+
+5
+6
+7
+
+See Appendix 1.
+For Hayu -t: PTB *-s, cf. ‘bone’ Hayu mut.
+Atleast two of these words have Lolo-Burmese cognates descending from PLB Tone *3:
+
+MOON (PLB */a?), KNOW (WB si’). [Ed.]
+
+Tiddim Chin tones in historical perspective
+
+4.
+
+241
+
+PLAIN OPEN SYLLABLES AND TONE 2
+4.1.
+
+Open rimes with tone 1 and tone 3 have been shown to come from
+
+long vowels plus laryngeals *-? and *-h respectively. What we have left now is
+the open rimes with tone 2, which I propose come from plain open syllables.
+
+Tiddim
+
+Chepang
+
+‘tongue’
+
+lei?
+
+‘die’
+
+si?
+
+le
+si
+
+‘fat’
+
+tha:u?
+
+chaw
+
+‘bamboo’
+
+gua?
+
+cawe
+
+‘laugh’
+
+nu:i?
+
+ni
+
+Table 10. Examples of synchronic open syllables with tone 2 originally from
+
+Early Tiddim plain open syllables.8
+4.2. Vocalic length is neutralized in plain open rimes, as in most Southeast
+
+Asian languages. So we do not have syllables of the *-v type contrasting with
+
+*-vvy.2 Our historical tonal scheme is thus completed (Table 11):
+
+#9
+
+*_h
+
+#2
+
+*_k
+
+_
+
+v4
+
+v?4
+
+vk
+
+*-vv_ | vv?
+
+vv?
+
+vv!
+
+vvk!
+
+¥_y
+
+Table 11.
+
+5.
+
+Final historical tonal scheme.
+
+SUMMARY OF TIDDIM TONAL DEVELOPMENT
+5.1. In syllables with long vowels, glottal stop (tense) and glottal spirant
+
+(lax) endings induce rising and falling pitches respectively.
+
+became
+
+prominent
+
+(i.e.
+
+became
+
+tones)
+
+as
+
+the
+
+endings
+
+These pitches
+
+weakened
+
+into
+
+corresponding laryngealized qualities, creaky and breathy; the latter later became
+
+lost while the former is still found to co-occur with the respective tone.
+
+The
+
+plain syllables (zero ending) stay neutral by taking level tone (Table 12).
+
+8
+9
+
+LB cognates to these words descend from PLB *1, except for BAMBOO (PLB *wa’). (Ed.]
+Bhaskararao (1996) also recorded short open rimes (-v) contrasting with long open rimes
+
+(-vv). I follow Henderson’s material here.
+
+242
+
+Weera Ostapirat
+
+*-vv?
+
+>
+
+*-vv?
+
+>
+
+-vv'
+
+*-vvh
+
+>
+
+*-yvy>
+
+>
+
+-vv> = (falling)
+
+*-vv¢
+
+Table 12.
+
+= (rising)
+
+-vv?_—
+
+(level)
+
+Development of tone in syllables with long vowels and glottal
+
+Stop/glottal spirant/zero endings.
+
+5.2.
+
+In syllables with short vowels, both glottal stop and glottal spirant
+
+neutralized in favor of the former. The merger was phonetically motivated by
+the shared quality of relative abruptness between the glottal stop and the short
+
+vowels. This syllable type then took the low tone (Table 13).!0
+
+*.y?
+
+>
+
+*-vh
+
+*.y? wa
+
+-v?* ~— (low)
+
+*-v?
+
+Table 13. Development of tone in syllables with short vowels and glottal
+stop/glottal spirant endings.
+
+5.3. Checked syllables, which originally did not possess tones, associated
+themselves with tense syllables, motivated by their shared stopped quality.
+
+Thus, short checked joined with short tense to take tone four, and long checked
+joined with long tense to take tone 1.
+
+*.v?
+
+>
+
+v4
+
+*-vv?
+
+>
+
+= -vv?l
+
+*-vk
+
+>
+
+vk‘
+
+*.vvk
+
+>
+
+— -vwvk!
+
+Table 14.
+
+5.4.
+
+(>-vv)
+
+Development of tone in checked syllables.
+
+So far we have not discussed the syllables ending with sonorants
+
+(*-vN type; I use -N to stand for sonorant endings in general).
+
+But we would
+
+expect that the parallel development should apply to them as well. That is, the
+syllable types *-v(v)N?, *-v(v)N@ and *-v(v)Nh should join with the syllable
+
+10 If there ever was an early *-vg type, it could have become -v? as well.
+
+Tiddim Chin tones in historical perspective
+
+types *vv?, *vvg and *vvh to take tones 1, 2 and 3 respectively.!!
+
+243
+
+Table 15
+
+illustrates this point.
+
+Tiddim
+
+Chepang
+
+‘tree’
+
+sin!
+
+sin?
+
+‘hair/feature’
+
+mul!
+
+men?
+man?
+
+‘dream’
+
+man!
+
+‘fire’
+
+xa]!
+
+wail (Garo)
+
+‘you’
+
+nay!
+
+na?n (Garo)
+
+‘stand’
+
+din?
+
+cin
+
+‘star’
+
+a:k?
+
+kar
+
+‘bear’ (n.)
+
+vom?
+
+yom
+
+‘heart’
+
+lun?
+
+hlun
+
+‘forehead’
+
+tal?
+
+jelh
+
+‘liver’
+
+sin?
+
+sinh
+
+‘yawn’
+
+ha:m3
+
+kamh
+
+‘smell’
+
+nam?
+
+namh
+
+Table 15.
+
+Tiddim tones in syllables ending with sonorants.12
+
+The Tiddim tonal system in historical perspective thus looks like a version
+
+11 There are a few words in tone 4 which show Tiddim -/? and -k corresponding to Lushai -/?
+and -r? respectively. This is the only group of words where Lushai shows glottalized sonorant
+endings. These few words must have different origins from our type at hand and are perhaps
+better interpreted as more recently integrated into the languages.
+
+Tiddim
+
+Lushai
+
+‘wear’
+
+sil?*
+
+sil?
+
+‘lock’
+
+kal?
+
+kil?
+
+‘awake’
+
+hak*
+
+har?
+
+‘swamp’
+
+cik*
+
+cir?
+
+Chepang also sometimes shows counter-examples to the scheme. For example, ‘road’
+Chepang ljam / Tiddim lam! (we would expect the Chepang form to have a glottalized nasal
+ending).
+
+But, in the light of the overall regularity of the system, we must consider such
+
+forms as exceptions.
+
+12 Here comparisons with LB are not illuminating. Among the cognate words, TREE and
+DREAM have LB final stops (*sik, *mak); SMELL, YOU, and BEAR are < *1; LIVER is <
+*2; HAIR shows *1 ~ *2 variation. [Ed.]
+
+244
+
+Weera Ostapirat
+
+of Haudricourt’s classic tonogenetic scheme.
+
+Weidert (1987) must have had a
+
+similar scheme in mind
+
+when working out his thesis
+
+laryngeals and tonology.
+
+The system independently reached here, however,
+
+on
+
+Tibeto-Burman
+
+has developed primarily from pieces of evidence within Tiddim, though the
+concrete support for these hypotheses has come from comparison with such
+
+languages as Chepang (also stressed as an important language in this connection
+by Weidert). This study has also taken vocalic length, in addition to postvocalic
+segments,
+
+as
+
+development.
+
+another important
+
+mechanism
+
+which
+
+shaped
+
+Tiddim
+
+tonal
+
+The checked syllables and the syllables with early sibilant final
+
+are also simultaneously integrated into the whole system.
+
+In fact, it is through
+
+consideration of all these interrelated aspects that the jigsaw puzzle of the
+Tiddim historical tonal system has been put together.
+
+6.
+
+TENSE-LAX ALTERNATION: THE SWEEPING VERBAL
+DERIVATION
+
+6.1.
+
+Tiddim verbs are known to have two alternating forms: Form 1 as a
+
+base and Form 2 as a derivation.
+
+The derivation primarily involves the change
+
+of tonal categories, namely from tones 1 and 2 to tone 3.
+
+I propose that the
+
+underlying mechanism of this verbal derivation is Tense-Lax Alternation, i.e.
+
+the original tense (-? ) syllable becomes lax and the original lax (“) syllable
+becomes tense.
+
+(Other changes, such as vowel shortening, may then be
+
+entailed by the alternation).
+I adapt (in Table 16) information given by Henderson (1965:72-82) to show
+this Tense-Lax Alternation scheme for regular verbs (I incorporate
+
+some of
+
+Henderson’s irregular verbs as well). Closed syllables here also include those
+which end in glides (-i and -u).
+
+We shall now discuss a few points from the above scheme.
+
+First, the
+
+tensing of the Lax type has concurrent shortening effect on the preceding
+
+vowel. Asa
+
+result, the tone 3 base verbs become tone 4 instead of tone 1.!3
+
+Second, the neutral syllable type (*-¢) may join with either the Tense type
+(to become lax, cf. closed syllables) or the Lax type (to become tense, cf. open
+syllables). However, some phonetic motivation may cause this split behavior.
+
+In open syllables, the *-vvg type is closer to the *-vv’ type in term of both
+
+13° It may be useful at this point to provide a rough reminder of the phonetic attributes of
+these cover terms Tense and Lax:
+vocal cords
+
+duration/airflow
+
+*)
+
+close-tense
+
+short-constricted
+
+*h
+
+open-lax
+
+long-continuant
+
+Tiddim Chin tones in historical perspective
+
+245
+
+duration and continuant airflow. On the other hand, if we assume that all finals
+are unreleased, which is the case in most Southeast Asian languages, plain
+
+Closed syllables
+Form I
+
+Form II
+
+tone 1 (*-?)
+
+>
+
+tone 3 (-h)
+
+tone 3 (*-h)——___— >
+
+tone 4 (-?)
+
+tone 2 g—
+Examples:
+
+lei!
+
+>
+
+lei*
+
+‘buy’
+
+la:m?
+
+>
+
+la:m?
+
+‘dance’
+
+la:m*
+
+>
+
+lap*
+
+‘lift up’
+
+Open syllables
+Form I
+
+Form II
+
+tone 1 (*-)——__
+>
+
+tone 1 (long checked)
+
+tone 2 paean
+tone 3 (*-h)
+
+>
+
+tone 4 (short checked)
+
+Examples:
+
+pa:!
+
+>
+
+pa:t!
+
+‘thin’
+
+ba:?
+
+>
+
+bat*
+
+‘owe’
+
+pha:?
+
+>
+
+phat*
+
+‘good’
+
+Table 16.
+
+Tense-lax alternation in verbs.
+
+closed syllables are then closer to Tense type syllables in terms of their relative
+
+abruptness.
+
+The semi-vowels -i and -u seem to be best interpreted in this
+
+context as glide endings rather than a part of diphthongs.
+
+Third, checked syllables behave like Tense syllables (compare examples
+[la] with [1b] and [2a] with [2b] below).
+
+Long checked with tone 1 become
+
+lax with tone 3 (*-vvk! > *-vvkh > -vvk?).
+
+Short checked (tone 4), however,
+
+remain checked (tone 4).
+
+As we have already discussed, the glottal spirant 4
+
+needs enough preceding voicing continuum as its domain. Therefore, when the
+
+246
+
+Weera Ostapirat
+
+regular Tense-Lax Alternation applied to the short checked syllables, the lax
+
+quality is simultaneously cancelled (*-vk* > *-vkh > -vk*).
+
+What remains is
+
+thus the same short checked type for both basic and derived forms:
+(la)
+
+‘fan’
+
+za:p!
+
+> =
+
+za:p?
+
+(1b)
+
+‘fall?
+
+= zam'
+
+>
+
+= za:m>
+
+(2a)
+
+‘bite’
+
+bak*
+
+> _ bak*
+
+(2b)
+
+‘tired’
+
+ba?
+
+>
+
+ba?*
+
+Fourth, why in open syllables do the alternations often result in checked
+
+syllables?
+
+Henderson in fact described these as an irregular type of verb.
+
+However, they also possess apparent regularities, especially in terms of TenseLax
+
+Alternation (i.e. Lax
+
+syllables
+
+become
+
+‘short’
+
+checked
+
+while Tense
+
+syllables become ‘long’ checked). Moreover, it would be strange if most open
+syllables were irregular.
+
+It is tempting to think that a stop suffix, namely *-t,
+
+might be involved in this verbal derivation. This *-t survives in open syllables
+and thus puts the derived forms into the checked type (see Table 16).
+
+In closed
+
+syllables, this *-t has become lost, but may leave its trace in the final alternation
+from velar nasal (base forms) to alveolar nasal (derived forms).
+
+In other word,
+
+the velar > alveolar change resulted from assimilation of the base velar to the
+alveolar suffix -t. Examples:
+
+(3)
+
+‘defend’
+
+pa:y!
+
+>
+
+pa:n?
+
+(4)
+
+‘perch’
+
+tuan?
+
+>
+
+tuan?
+
+(5)
+
+‘pale’
+
+da:1°
+
+>
+
+dat*
+
+A difficulty with this suggestion is that in open syllables we also have a
+
+number of derived forms ending with velar -k (e.g., za’> zack!
+
+‘hear’, sa2 >
+
+sak‘ ‘hot’). This problem will have to be left for future studies.!4
+6.2.
+Our proposal in this section further substantiates our earlier
+conclusion that the Tiddim tonal system was or has been laryngeal-based.
+Whether or not these features and system may be pushed back to the Proto-Chin
+or Proto-Tibeto-Burman levels is, however, another story.!5
+
+14 One possibility is to assume a suffix *-r, which according to a regular Tiddim sound
+
+change became -k post-vocalically. Still, the proposal that the alternation between velar-final
+base forms and alveolar-final derived forms might have resulted from the influence of
+alveolar
+suffixes can still be valid.
+
+15
+
+This paper is in fact a considerable contribution to TB tonogenetics in general. [Ed.]
+
+Tiddim Chin tones in historical perspective
+
+247
+
+APPENDIX
+The change from glottal spirant -h to -? after short vowels may be more
+readily understood in terms of morae.
+
+Most Tiddim syllables are two-morae
+
+(either vowels or sonorant endings can be counted as one mora; long vowels are
+two morae). Only those with short vowels plus non-sonorant endings are onemora. For example:
+
+Two-morae syllables
+
+wow
+
+wou
+
+-aa
+
+-am ,
+etc.
+
+Ho
+
+ou
+
+-am ,
+etc.
+
+wh
+
+“ap»
+
+op
+
+etc.
+
+One-mora syllables
+
+2
+
+k
+
+a
+wu
+
+-ap ,
+
+a
+
+h
+
+u
+
+1)
+-a?
+
+**-ah
+
+Spirant -h needs a two-morae time duration to maintain its continuant
+property.
+
+See also section 6.1, where -h cannot co-occur with short checked
+
+syllables for proper verbal derivation.
+
+248
+
+Weera Ostapirat
+
+REFERENCES
+
+BENEDICT, Paul K.
+
+1972. Sino-Tibetan: A Conspectus.
+
+James A. Matisoff,
+
+contributing ed. Cambridge: Cambridge University Press.
+BHASKARARAO, Peri.
+Chin
+
+and
+
+1996.
+
+Lushai.”
+
+“A computerized lexical database of Tiddim
+A
+
+computer-assisted
+
+study
+
+of
+
+South-Asian
+
+languages, ed. by Tsuyoshi Nara and Kazuhiko Machida, 27-143.
+
+Tokyo: Tokyo University of Foreign Studies.
+CAUGHLEY, Ross C.
+
+1972.
+
+A Vocabulary of the Chepang Language.
+
+Kirtipur: SIL and Tribhuvan University.
+
+HAUDRICOURT, André G.
+
+1954.
+
+“De l’origine des tons en vietnamien.”
+
+Journal Asiatique 242:68-82.
+
+HENDERSON, Eugénie J. A. 1965. Tiddim Chin: A Descriptive Analysis of
+Two Texts. London: Oxford University Press.
+WEIDERT, Alfons. 1987. Tibeto-Burman Tonology. Amsterdam: John Benjamins.
+
+

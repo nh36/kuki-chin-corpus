@@ -121,33 +121,99 @@ def disambiguate_tone(morpheme, entries, context=None):
     """
     Resolve ambiguous tone entries using context.
     
-    Rules:
-    1. hi: 'be' (H) vs 'DECL' (L) - DECL is sentence-final
-    2. na: '2SG' (L) vs 'smell' (H) - 2SG is prefix position
-    3. thei: 'know' (H) vs 'ABIL' (L) - ABIL follows verb
-    """
-    glosses = [e['gloss'] for e in entries]
+    Disambiguation rules based on Henderson 1965 and ZNC 2018:
     
-    # Rule 1: hi - if context suggests verb, use H; if sentence-final, use L
-    if morpheme == 'hi' and context:
+    1. hi: be.I (H) vs DECL particle (L)
+       - Sentence-final → DECL (L)
+       - After a- prefix → be.I (H)
+       
+    2. na: 2SG (L) vs smell.I (H) 
+       - Word-initial (prefix) → 2SG (L)
+       - After verb → smell (H)
+       
+    3. thei: know.I (H) vs ABIL suffix (L)
+       - After verb stem → ABIL (L)
+       - Standalone/initial → know (H)
+       
+    4. hih: this (H) vs be.II (L)
+       - Before noun → this (H)
+       - Sentence-final/after verb → be.II (L)
+       
+    5. pa: father (L) vs NMLZ.AGT (H)
+       - After verb → NMLZ.AGT (H)
+       - After noun/initial → father (L)
+       
+    6. Form I vs Form II verbs:
+       - Before -in (converb) → Form II (L)
+       - Before TAM markers → Form I (H/M)
+    """
+    if not context:
+        context = {}
+    
+    glosses = [e['gloss'] for e in entries]
+    tones = [e['tone'] for e in entries]
+    
+    # Rule 1: hi - DECL is sentence-final
+    if morpheme == 'hi':
         if context.get('position') == 'final':
             return next((e for e in entries if 'DECL' in e['gloss']), entries[0])
+        elif context.get('prev_morph') == 'a':
+            # a hi = 3SG + be
+            return next((e for e in entries if e['tone'] == 'H'), entries[0])
         else:
             return next((e for e in entries if e['tone'] == 'H'), entries[0])
     
-    # Rule 2: na - prefix position suggests 2SG (L)
-    if morpheme == 'na' and context:
-        if context.get('position') == 'prefix':
+    # Rule 2: na - 2SG is prefix/initial
+    if morpheme == 'na':
+        if context.get('morph_position') == 0:  # First morpheme
             return next((e for e in entries if '2SG' in e['gloss']), entries[0])
+        else:
+            # After something - likely verb 'smell'
+            return next((e for e in entries if e['tone'] == 'H'), entries[0])
     
-    # Rule 3: thei - after verb stem suggests ABIL (L)
-    if morpheme == 'thei' and context:
-        if context.get('position') == 'suffix':
+    # Rule 3: thei - ABIL is suffix
+    if morpheme == 'thei':
+        if context.get('morph_position', 0) > 0:  # Not first morpheme
             return next((e for e in entries if 'ABIL' in e['gloss']), entries[0])
         else:
-            return next((e for e in entries if e['tone'] == 'H'), entries[0])
+            return next((e for e in entries if 'know' in e['gloss'].lower()), entries[0])
     
-    # Default: return first entry (usually most common)
+    # Rule 4: hih - proximal demonstrative vs be.II
+    if morpheme == 'hih':
+        if context.get('position') == 'final':
+            return next((e for e in entries if 'be.II' in e['gloss'] or e['tone'] == 'L'), entries[0])
+        elif context.get('next_is_noun'):
+            return next((e for e in entries if e['tone'] == 'H'), entries[0])
+        else:
+            return entries[0]
+    
+    # Rule 5: pa - after verb = NMLZ.AGT
+    if morpheme == 'pa':
+        if context.get('prev_is_verb'):
+            return next((e for e in entries if 'AGT' in e['gloss'] or 'male' in e['gloss']), entries[0])
+        else:
+            return next((e for e in entries if 'father' in e['gloss'].lower() or e['tone'] == 'L'), entries[0])
+    
+    # Rule 6: Form I/II verb detection
+    # If morpheme ends in -h and has L tone, likely Form II
+    # The preceding morpheme being a verb stem suggests this is Form II
+    if morpheme.endswith('h') and any(e['tone'] == 'L' for e in entries):
+        if context.get('next_morph') == 'in':  # converb marker
+            return next((e for e in entries if e['tone'] == 'L'), entries[0])
+    
+    # Rule 7: tua - demonstrative 'that' (H tone, very common)
+    if morpheme == 'tua':
+        return next((e for e in entries if e['tone'] == 'H'), entries[0])
+    
+    # Rule 8: a- prefix is always L (3SG/AGR)
+    if morpheme == 'a' and context.get('morph_position') == 0:
+        return next((e for e in entries if e['tone'] == 'L'), entries[0])
+    
+    # Default: prefer most common usage (usually first entry)
+    # For verbs, prefer Form I (H/M) over Form II (L) in isolation
+    if 'H' in tones:
+        return next((e for e in entries if e['tone'] == 'H'), entries[0])
+    
     return entries[0]
 
 def restore_word_tone(word, tone_dict, context=None):
@@ -186,8 +252,20 @@ def restore_word_tone(word, tone_dict, context=None):
     analysis = []
     overall_confidence = 'high'
     
-    for morph in morphemes:
+    for i, morph in enumerate(morphemes):
         morph_lower = morph.lower()
+        
+        # Build morpheme-level context
+        morph_context = {
+            'morph_position': i,
+            'prev_morph': morphemes[i-1].lower() if i > 0 else None,
+            'next_morph': morphemes[i+1].lower() if i < len(morphemes) - 1 else None,
+            'total_morphemes': len(morphemes),
+        }
+        # Merge with word-level context
+        if context:
+            morph_context.update(context)
+        
         if morph_lower in tone_dict:
             entries = tone_dict[morph_lower]
             if len(entries) == 1:
@@ -195,8 +273,8 @@ def restore_word_tone(word, tone_dict, context=None):
                 toned_parts.append(mark_syllable_tones(morph, entry['tone']))
                 analysis.append((morph_lower, entry['tone'], entry['gloss']))
             else:
-                # Ambiguous
-                entry = disambiguate_tone(morph_lower, entries)
+                # Ambiguous - try to disambiguate with context
+                entry = disambiguate_tone(morph_lower, entries, morph_context)
                 toned_parts.append(mark_syllable_tones(morph, entry['tone']))
                 analysis.append((morph_lower, entry['tone'] + '?', entry['gloss']))
                 overall_confidence = 'medium'
