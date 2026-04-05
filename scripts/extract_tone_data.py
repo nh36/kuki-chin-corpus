@@ -438,12 +438,12 @@ def extract_grammatical_morpheme_tones():
         ('nawn', 'nàwn', 'L', 'CONT', 'ZNC 2018'),
         
         # Modal markers
-        ('ding', 'dìŋ', 'L', 'IRR', 'ZNC 2018'),
+        ('ding', 'dìng', 'L', 'IRR', 'ZNC 2018'),
         ('thei', 'thèi', 'L', 'ABIL', 'ZNC 2018'),
         ('nuam', 'nuàm', 'L', 'DESID', 'ZNC 2018'),
         
         # Derivational
-        ('sak', 'sàk', 'L', 'CAUS/BENF', 'ZNC 2018'),
+        ('sak', 'sàk', 'L', 'CAUS', 'ZNC 2018'),
         ('pih', 'pìh', 'L', 'APPL', 'ZNC 2018'),
         
         # Pronominal prefixes (from Henderson)
@@ -545,12 +545,10 @@ def extract_grammatical_morpheme_tones():
         ('te', 'tè', 'L', 'PL', 'Henderson 1965'),
         ('lian', 'liàn', 'L', 'big', 'ZNC 2018'),
         ('suak', 'suàk', 'L', 'become', 'ZNC 2018'),
-        ('ding', 'dìng', 'L', 'FUT/IRR', 'ZNC 2018'),
         ('nuai', 'nuài', 'L', 'under', 'ZNC 2018'),
         ('tungah', 'tùngàh', 'LL', 'on.LOC', 'ZNC 2018'),
         ('sam', 'sàm', 'L', 'call/invite', 'Henderson 1965'),
         ('loh', 'lòh', 'L', 'NEG.NOM', 'Henderson 1965'),
-        ('pih', 'pìh', 'L', 'APPL', 'ZNC 2018'),
         ('vek', 'vèk', 'L', 'together', 'ZNC 2018'),
         ('nih', 'nìh', 'L', 'two', 'ZNC 2018'),
         ('khit', 'khìt', 'L', 'SEQ.II', 'Henderson 1965'),
@@ -561,7 +559,6 @@ def extract_grammatical_morpheme_tones():
         ('tunga', 'tùngà', 'LL', 'on.LOC', 'ZNC 2018'),
         ('bulh', 'bùlh', 'L', 'sprinkle', 'Henderson 1965'),
         ('va', 'và', 'L', 'go.and', 'Henderson 1965'),
-        ('ding', 'dìng', 'L', 'IRR', 'ZNC 2018'),
         
         # Common nouns and morphemes (from ZNC and Henderson)
         ('hoih', 'hòih', 'L', 'good', 'Henderson 1965'),
@@ -629,18 +626,96 @@ def extract_grammatical_morpheme_tones():
     
     return entries
 
+def get_canonical_glosses():
+    """Get canonical glosses from morphological analyzer for alignment."""
+    import sys
+    sys.path.insert(0, 'scripts')
+    try:
+        from analyze_morphemes import (
+            PRONOMINAL_PREFIXES, OBJECT_PREFIXES,
+            ASPECT_SUFFIXES, DIRECTIONAL_SUFFIXES, MODAL_SUFFIXES,
+            DERIVATIONAL_SUFFIXES, TAM_SUFFIXES, ADDITIONAL_VERBAL_SUFFIXES,
+            CASE_MARKERS
+        )
+        
+        canonical = {}
+        
+        # Prefixes
+        for d in [PRONOMINAL_PREFIXES, OBJECT_PREFIXES]:
+            for k, v in d.items():
+                canonical[k.rstrip('-')] = v
+        
+        # Suffixes
+        for d in [ASPECT_SUFFIXES, DIRECTIONAL_SUFFIXES, MODAL_SUFFIXES, 
+                  DERIVATIONAL_SUFFIXES, TAM_SUFFIXES, ADDITIONAL_VERBAL_SUFFIXES,
+                  CASE_MARKERS]:
+            for k, v in d.items():
+                canonical[k.lstrip('-')] = v
+        
+        return canonical
+    except ImportError:
+        return {}
+
+
+def normalize_gloss(gloss):
+    """Normalize gloss for comparison (strip .I/.II, lowercase)."""
+    return gloss.split('.')[0].split('/')[0].lower()
+
+
 def deduplicate_entries(entries):
-    """Deduplicate entries, keeping highest confidence."""
-    seen = {}
+    """
+    Deduplicate entries by (orthographic, tone_pattern).
+    
+    Rules:
+    1. Merge entries with same orth + tone + similar glosses (e.g., 'full' vs 'full.I')
+    2. Keep distinct homophonous words (e.g., 'burn.I' vs 'foolish.I' for 'chai')
+    3. Align glosses with analyzer's canonical glosses where possible
+    """
+    canonical = get_canonical_glosses()
+    
+    # Group by orthographic form
+    by_orth = defaultdict(list)
     for entry in entries:
-        key = (entry['orthographic'], entry['gloss'])
-        if key not in seen:
-            seen[key] = entry
-        else:
-            # Keep if higher confidence or more info
-            if entry['confidence'] == 'high' and seen[key]['confidence'] != 'high':
-                seen[key] = entry
-    return list(seen.values())
+        by_orth[entry['orthographic']].append(entry)
+    
+    result = []
+    
+    for orth, elist in by_orth.items():
+        # Group by tone pattern
+        by_tone = defaultdict(list)
+        for e in elist:
+            by_tone[e['tone_pattern']].append(e)
+        
+        for tone, telist in by_tone.items():
+            if len(telist) == 1:
+                # Single entry - check if gloss should be aligned
+                entry = telist[0]
+                if orth in canonical and entry['gloss']:
+                    # Update gloss to canonical if it's a grammatical morpheme
+                    entry = dict(entry)  # Copy
+                    entry['gloss'] = canonical[orth]
+                result.append(entry)
+            else:
+                # Multiple entries with same tone - check if they can be merged
+                glosses = [e['gloss'] for e in telist]
+                base_glosses = set(normalize_gloss(g) for g in glosses if g)
+                
+                if len(base_glosses) <= 1:
+                    # Same base meaning - merge, use canonical or first gloss
+                    merged = dict(telist[0])
+                    if orth in canonical:
+                        merged['gloss'] = canonical[orth]
+                    elif glosses[0]:
+                        # Use shortest/cleanest gloss
+                        merged['gloss'] = min((g for g in glosses if g), key=len)
+                    result.append(merged)
+                else:
+                    # Different meanings - keep separate (true homophony)
+                    for e in telist:
+                        result.append(e)
+    
+    return result
+
 
 def main():
     print("Extracting tone data from local resources...")
