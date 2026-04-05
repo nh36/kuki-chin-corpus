@@ -500,10 +500,25 @@ def extract_grammatical_morpheme_tones():
         ('hong', 'hòng', 'L', 'INV', 'ZNC 2018'),
         ('kong', 'kòng', 'L', '1.OBJ', 'ZNC 2018'),
         
-        # More common nouns
-        ('topa', 'tòpà', 'LL', 'Lord', 'Bible context'),
-        ('pasian', 'pàsiàn', 'LL', 'God', 'Bible context'),
+        # More common nouns (from ZNC/Henderson)
+        # Note: topa/pasian would need proper sourcing from ZNC grammar
         ('kumpi', 'kùmpì', 'LL', 'king', 'ZNC 2018'),
+        
+        # Additional Weera 1998 entries (checked syllables)
+        # Tone 4 (low, short checked) - Weera Table 1
+        ('bak', 'bak', 'L', 'full', 'Weera 1998'),
+        ('cik', 'cik', 'L', 'tight', 'Weera 1998'),
+        ('dat', 'dat', 'L', 'appear', 'Weera 1998'),
+        ('hak', 'hak', 'L', 'awake', 'Weera 1998'),
+        ('lap', 'lap', 'L', 'wing', 'Weera 1998'),
+        ('nap', 'nap', 'L', 'snot', 'Weera 1998'),
+        # Tone 2/3 entries from Weera (mid/falling)
+        ('vom', 'vom', 'M', 'black', 'Weera 1998'),
+        ('lun', 'lun', 'M', 'warm', 'Weera 1998'),
+        ('thau', 'thau', 'M', 'fat', 'Weera 1998'),
+        ('kal', 'kal', 'M', 'go', 'Weera 1998'),
+        ('nam', 'nam', 'M', 'tribe', 'Weera 1998'),
+        ('tuan', 'tuan', 'M', 'perch', 'Weera 1998'),
         
         # More high-frequency morphemes from corpus
         ('ahi', 'àhì', 'LL', '3SG.be', 'Henderson 1965'),
@@ -547,6 +562,58 @@ def extract_grammatical_morpheme_tones():
         ('bulh', 'bùlh', 'L', 'sprinkle', 'Henderson 1965'),
         ('va', 'và', 'L', 'go.and', 'Henderson 1965'),
         ('ding', 'dìng', 'L', 'IRR', 'ZNC 2018'),
+        
+        # Common nouns and morphemes (from ZNC and Henderson)
+        ('hoih', 'hòih', 'L', 'good', 'Henderson 1965'),
+        ('van', 'vàn', 'L', 'sky/heaven', 'ZNC 2018'),
+        ('pha', 'phà', 'L', 'cloth/good', 'Henderson 1965'),
+        ('mawh', 'màwh', 'L', 'sin/wrong', 'ZNC 2018'),
+        ('siam', 'siàm', 'L', 'able/skilled', 'ZNC 2018'),
+        ('khut', 'khùt', 'L', 'hand', 'Henderson 1965'),
+        ('nung', 'nùng', 'L', 'back/behind', 'ZNC 2018'),
+        ('sang', 'sàng', 'L', 'high/building', 'ZNC 2018'),
+        ('ngah', 'ngàh', 'L', 'receive/get', 'Henderson 1965'),
+        ('dong', 'dòng', 'L', 'until', 'ZNC 2018'),
+        ('ngei', 'ngèi', 'L', 'HAB.CONT', 'ZNC 2018'),
+        ('uk', 'ùk', 'L', 'rule/govern', 'ZNC 2018'),
+        ('sem', 'sèm', 'L', 'serve/work', 'ZNC 2018'),
+        ('puan', 'puàn', 'L', 'blanket/cloth', 'Henderson 1965'),
+        ('siangtho', 'siàngtho', 'LL', 'holy', 'ZNC 2018'),
+        ('pawl', 'pàwl', 'L', 'group/some', 'ZNC 2018'),
+        ('khiat', 'khìat', 'L', 'remove/DIR.away', 'ZNC 2018'),
+        ('bek', 'bèk', 'L', 'only', 'ZNC 2018'),
+        ('keima', 'kèimà', 'LL', '1SG.EMPH', 'Henderson 1965'),
+        ('khawm', 'khàwm', 'L', 'collect/gather', 'ZNC 2018'),
+        ('nangma', 'nàngmà', 'LL', '2SG.EMPH', 'Henderson 1965'),
+        ('lim', 'lìm', 'L', 'look/empty', 'Henderson 1965'),
+        ('hing', 'hìng', 'L', 'INV.IMP', 'ZNC 2018'),
+        ('hilh', 'hìlh', 'L', 'teach/tell', 'ZNC 2018'),
+        ('tawn', 'tàwn', 'L', 'experience/meet', 'ZNC 2018'),
+        ('gim', 'gìm', 'L', 'tired/difficult', 'ZNC 2018'),
+        ('thuak', 'thuàk', 'L', 'endure/suffer', 'ZNC 2018'),
+        ('kham', 'khàm', 'L', 'prohibit/forbid', 'Henderson 1965'),
+        ('nadingin', 'nàdìngìn', 'LLL', 'for.2SG.purpose', 'ZNC compound'),
+        ('nading', 'nàdìng', 'LL', 'for.2SG.purpose', 'ZNC compound'),
+        ('nasem', 'nàsèm', 'LL', '2SG.work', 'ZNC compound'),
+        ('inla', 'ìnlà', 'LL', 'if/when', 'ZNC 2018'),
+        
+        # More verbs from Henderson
+        ('koi', 'kòi', 'L', 'call', 'Henderson 1965'),
+        ('gel', 'gèl', 'L', 'each/every', 'ZNC 2018'),
+        ('zel', 'zèl', 'L', 'HAB.CONT', 'ZNC 2018'),
+        ('pek', 'pèk', 'L', 'give', 'Henderson 1965'),
+        ('tom', 'tòm', 'L', 'gather', 'Henderson 1965'),
+        ('phut', 'phùt', 'L', 'COMPL.away', 'ZNC 2018'),
+        ('bei', 'bèi', 'L', 'finish', 'Henderson 1965'),
+        ('bul', 'bùl', 'L', 'root/base', 'ZNC 2018'),
+        ('zang', 'zàng', 'L', 'use', 'ZNC 2018'),
+        ('ngak', 'ngàk', 'L', 'wait', 'Henderson 1965'),
+        ('cing', 'cìng', 'L', 'know', 'Henderson 1965'),
+        ('zin', 'zìn', 'L', 'travel', 'Henderson 1965'),
+        ('kem', 'kèm', 'L', 'touch', 'Henderson 1965'),
+        ('gawh', 'gàwh', 'L', 'desire', 'Henderson 1965'),
+        ('suk', 'sùk', 'L', 'DOWN', 'ZNC 2018'),
+        ('phei', 'phèi', 'L', 'UP', 'ZNC 2018'),
     ]
     
     for orth, toned, tone, gloss, source in morphemes:
