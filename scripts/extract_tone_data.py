@@ -497,6 +497,7 @@ def extract_grammatical_morpheme_tones():
         ('lai', 'làì', 'L', 'FUT.CONT', 'ZNC 2018'),
         ('leh', 'lèh', 'L', 'then', 'ZNC 2018'),
         ('tak', 'tàk', 'L', 'very/true', 'ZNC 2018'),
+        ('tak', 'tàk', 'L', 'exact', 'ZNC 2018'),  # alias - analyzer uses 'exact'
         ('tua', 'tùa', 'H', 'that', 'Henderson 1965'),
         ('hong', 'hòng', 'L', 'INV', 'ZNC 2018'),
         ('kong', 'kòng', 'L', '1.OBJ', 'ZNC 2018'),

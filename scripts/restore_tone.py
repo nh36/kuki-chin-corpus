@@ -221,12 +221,15 @@ def disambiguate_tone_with_gloss(morpheme, entries, context):
     """
     Resolve ambiguous tone using analyzer's gloss for high-confidence matches.
     
-    Returns: (entry, confidence) where confidence is 'high' if gloss matched,
-             'medium' if context-based disambiguation was used.
+    Returns: (entry_or_None, confidence) where:
+    - confidence='high' if gloss matched an entry (we know the tone)
+    - confidence='unknown' if gloss didn't match (we don't have tone for this meaning)
+    
+    The 'medium' category is eliminated: either we know the tone or we don't.
     """
     analyzer_gloss = context.get('gloss', '')
     
-    # First, try to match by gloss - this gives HIGH confidence
+    # Try to match by gloss - this gives HIGH confidence
     if analyzer_gloss:
         # Normalize for comparison
         gloss_lower = analyzer_gloss.lower()
@@ -259,9 +262,9 @@ def disambiguate_tone_with_gloss(morpheme, entries, context):
                 if match:
                     return (match, 'high')
     
-    # Fall back to context-based disambiguation - this is MEDIUM confidence
-    entry = disambiguate_tone(morpheme, entries, context)
-    return (entry, 'medium')
+    # No gloss match - we don't have documented tone for this specific meaning
+    # Return None to signal that tone should be left unmarked
+    return (None, 'unknown')
 
 
 def restore_word_tone(word, tone_dict, context=None):
@@ -291,13 +294,15 @@ def restore_word_tone(word, tone_dict, context=None):
                 whole_context = dict(context or {})
                 whole_context['gloss'] = gloss_str
                 entry, conf = disambiguate_tone_with_gloss(word_lower, entries, whole_context)
-                toned = mark_syllable_tones(word_lower, entry['tone'])
-                return (toned, conf, [(word_lower, entry['tone'], entry['gloss'])])
+                if entry:
+                    toned = mark_syllable_tones(word_lower, entry['tone'])
+                    return (toned, conf, [(word_lower, entry['tone'], entry['gloss'])])
+                else:
+                    # No matching entry for this meaning - leave unmarked
+                    return (word, 'low', [(word_lower, '?', gloss_str)])
             else:
-                # No analysis available - fall back to context-only disambiguation
-                entry = disambiguate_tone(word_lower, entries, context)
-                toned = mark_syllable_tones(word_lower, entry['tone'])
-                return (toned, 'medium', [(word_lower, entry['tone'], entry['gloss'])])
+                # No analysis available - we can't disambiguate, leave unmarked
+                return (word, 'low', [(word_lower, '?', '')])
     
     # Try morphological analysis
     result = analyze_word(word_lower)
@@ -339,20 +344,21 @@ def restore_word_tone(word, tone_dict, context=None):
                 toned_parts.append(mark_syllable_tones(morph, entry['tone']))
                 analysis.append((morph_lower, entry['tone'], entry['gloss']))
             else:
-                # Ambiguous - try to disambiguate with context AND gloss
+                # Ambiguous - try to disambiguate with gloss
                 entry, conf = disambiguate_tone_with_gloss(morph_lower, entries, morph_context)
-                toned_parts.append(mark_syllable_tones(morph, entry['tone']))
-                if conf == 'high':
+                if entry and conf == 'high':
+                    toned_parts.append(mark_syllable_tones(morph, entry['tone']))
                     analysis.append((morph_lower, entry['tone'], entry['gloss']))
                 else:
-                    analysis.append((morph_lower, entry['tone'] + '?', entry['gloss']))
-                    if overall_confidence == 'high':
-                        overall_confidence = 'medium'
+                    # No matching entry for this meaning - leave morpheme unmarked
+                    toned_parts.append(morph)
+                    analysis.append((morph_lower, '?', morph_gloss))
+                    overall_confidence = 'low'
         else:
-            # Unknown tone
+            # Unknown morpheme - leave unmarked
             toned_parts.append(morph)
-            analysis.append((morph_lower, '?', ''))
-            overall_confidence = 'low' if overall_confidence != 'unknown' else overall_confidence
+            analysis.append((morph_lower, '?', morph_gloss))
+            overall_confidence = 'low'
     
     return ('-'.join(toned_parts), overall_confidence, analysis)
 
@@ -361,10 +367,11 @@ def restore_verse_tone(verse_text, tone_dict):
     Restore tones for an entire verse.
     
     Returns: (toned_text, stats)
+    Stats: 'high' = tone confidently marked, 'low' = tone unknown (left unmarked)
     """
     words = verse_text.split()
     toned_words = []
-    stats = {'high': 0, 'medium': 0, 'low': 0, 'unknown': 0}
+    stats = {'high': 0, 'low': 0}
     
     for i, word in enumerate(words):
         # Build context
@@ -376,7 +383,11 @@ def restore_verse_tone(verse_text, tone_dict):
         
         toned, confidence, analysis = restore_word_tone(word, tone_dict, context)
         toned_words.append(toned)
-        stats[confidence] += 1
+        # Collapse to binary: either we know (high) or we don't (low/unknown)
+        if confidence == 'high':
+            stats['high'] += 1
+        else:
+            stats['low'] += 1
     
     return (' '.join(toned_words), stats)
 
