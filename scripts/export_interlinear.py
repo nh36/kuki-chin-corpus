@@ -4,7 +4,7 @@ Export interlinear Bible text to LaTeX/PDF.
 
 Creates a multi-tier interlinear display using gb4e package:
   1. Tone-marked orthography (with morpheme boundaries)
-  2. Leipzig-style glosses (auto-aligned via gb4e's gll command)
+  2. Leipzig-style glosses (auto-aligned via gb4e's gll command) - in small caps
   3. Free translation (KJV)
 
 The tone restoration already runs the morphological analyzer internally
@@ -27,6 +27,72 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from analyze_morphemes import analyze_word
 from restore_tone import load_tone_dictionary, restore_word_tone
+
+
+# =============================================================================
+# ABBREVIATIONS LIST
+# =============================================================================
+# Standard Leipzig Glossing Rules abbreviations (https://www.eva.mpg.de/lingua/resources/glossing-rules.php)
+# Plus Tedim Chin-specific extensions
+
+STANDARD_LEIPZIG = {
+    '1': 'first person',
+    '2': 'second person',
+    '3': 'third person',
+    'ABL': 'ablative',
+    'ABIL': 'abilitative',
+    'ALL': 'allative',
+    'APPL': 'applicative',
+    'CAUS': 'causative',
+    'COM': 'comitative',
+    'COMPL': 'completive',
+    'CONT': 'continuative',
+    'CVB': 'converb',
+    'DAT': 'dative',
+    'DIMIN': 'diminutive',
+    'ERG': 'ergative',
+    'EXCL': 'exclusive',
+    'EXP': 'experiential',
+    'GEN': 'genitive',
+    'HAB': 'habitual',
+    'HORIZ': 'horizontal',
+    'IMP': 'imperative',
+    'IMM': 'immediate',
+    'INCL': 'inclusive',
+    'INS': 'instrumental',
+    'INTENS': 'intensive',
+    'IRR': 'irrealis',
+    'ITER': 'iterative',
+    'LOC': 'locative',
+    'NEG': 'negative',
+    'NMLZ': 'nominalizer',
+    'PFV': 'perfective',
+    'PL': 'plural',
+    'POSS': 'possessive',
+    'PROSP': 'prospective',
+    'Q': 'question particle',
+    'RECIP': 'reciprocal',
+    'REFL': 'reflexive',
+    'REL': 'relativizer',
+    'RES': 'resultative',
+    'SG': 'singular',
+}
+
+TEDIM_SPECIFIC = {
+    'I': 'verb form I (citation form)',
+    'II': 'verb form II (dependent form)',
+    '1SG→3': 'first singular acting on third person',
+    '3→1': 'third person acting on first person',
+    '2→1': 'second person acting on first person',
+    'AG': 'agent (nominalizer)',
+    'DOWN': 'downward directional',
+    'UP': 'upward directional',
+    'TOWARD': 'goal directional',
+    'HAB.CONT': 'habitual continuative',
+    'NEG.ABIL': 'negative abilitative (cannot)',
+    'MORE': 'comparative (more)',
+    'COMP': 'comparative',
+}
 
 
 # Book name mapping (numeric code to name)
@@ -170,6 +236,93 @@ def escape_latex(text):
     return text
 
 
+def format_gloss_smallcaps(gloss):
+    """
+    Format a gloss string with grammatical abbreviations in small caps.
+    
+    Converts uppercase grammatical glosses (e.g., NMLZ, ERG, PL) to 
+    LaTeX small caps while keeping lexical glosses lowercase.
+    
+    Examples:
+        'word-NMLZ' -> 'word-\\textsc{nmlz}'
+        '1SG→3-give.II' -> '\\textsc{1sg→3}-give.\\textsc{ii}'
+    """
+    # Pattern to match grammatical abbreviations (uppercase letters, numbers, arrows, periods)
+    # These are: 1SG, 2PL, NMLZ, ERG, 1SG→3, etc.
+    
+    def replace_abbrev(match):
+        abbrev = match.group(0)
+        # Convert to lowercase for small caps
+        return r'\textsc{' + abbrev.lower() + '}'
+    
+    # Match sequences of: uppercase letters, digits, arrows, that are grammatical
+    # Grammatical glosses: sequences of caps/numbers/special chars
+    # But NOT: proper nouns (we keep those as-is)
+    
+    # Split by hyphens and periods to process each morpheme
+    parts = re.split(r'([-.])', gloss)
+    result = []
+    
+    for part in parts:
+        if part in ['-', '.']:
+            result.append(part)
+        elif re.match(r'^[A-Z0-9→]+$', part):
+            # All caps/numbers - grammatical gloss -> small caps
+            result.append(r'\textsc{' + part.lower() + '}')
+        else:
+            # Lexical item or mixed - keep as is, but escape
+            result.append(escape_latex(part))
+    
+    return ''.join(result)
+
+
+def generate_abbreviations_section():
+    """Generate LaTeX for the abbreviations section."""
+    
+    lines = [
+        r"\section*{Abbreviations}",
+        r"\addcontentsline{toc}{section}{Abbreviations}",
+        r"",
+        r"\subsection*{Standard Leipzig Glossing Abbreviations}",
+        r"\begin{tabular}{@{}ll@{\hspace{2em}}ll@{}}",
+    ]
+    
+    # Sort and format standard abbreviations in two columns
+    abbrevs = sorted(STANDARD_LEIPZIG.items())
+    mid = (len(abbrevs) + 1) // 2
+    
+    for i in range(mid):
+        left = abbrevs[i]
+        right = abbrevs[i + mid] if i + mid < len(abbrevs) else ('', '')
+        
+        left_fmt = f"\\textsc{{{left[0].lower()}}} & {left[1]}"
+        right_fmt = f"\\textsc{{{right[0].lower()}}} & {right[1]}" if right[0] else "& "
+        
+        lines.append(f"{left_fmt} & {right_fmt} \\\\")
+    
+    lines.append(r"\end{tabular}")
+    lines.append(r"")
+    lines.append(r"\vspace{1em}")
+    lines.append(r"\subsection*{Tedim Chin-Specific Conventions}")
+    lines.append(r"\begin{tabular}{@{}ll@{}}")
+    
+    for abbrev, meaning in sorted(TEDIM_SPECIFIC.items()):
+        # Handle special arrow character
+        abbrev_display = abbrev.replace('→', r'$\rightarrow$')
+        lines.append(f"\\textsc{{{abbrev_display.lower()}}} & {meaning} \\\\")
+    
+    lines.append(r"\end{tabular}")
+    lines.append(r"")
+    lines.append(r"\vspace{1em}")
+    lines.append(r"\noindent\textbf{Verb Forms:} Tedim Chin verbs have two conjugation forms.")
+    lines.append(r"\textsc{i} (Form I) is the citation/independent form; \textsc{ii} (Form II)")
+    lines.append(r"appears in dependent clauses and certain constructions.")
+    lines.append(r"")
+    lines.append(r"\newpage")
+    
+    return '\n'.join(lines)
+
+
 def generate_latex(verses_data, title, output_path):
     """Generate LaTeX document with interlinear glosses using gb4e."""
     
@@ -213,9 +366,9 @@ def generate_latex(verses_data, title, output_path):
 
 \section*{Conventions}
 \begin{itemize}
-\item Tone diacritics: \textbf{á} = High, \textbf{ā} = Mid, \textbf{à} = Low
+\item Tone diacritics: \textbf{á} = High, \textbf{ā} = Mid, \textbf{à} = Low (unmarked = tone unknown)
 \item Morpheme boundaries shown with hyphens
-\item Glosses use Leipzig Glossing Rules abbreviations
+\item Glosses use Leipzig Glossing Rules abbreviations in \textsc{small caps}
 \item \textcolor{kjvcolor}{\textit{Italics}}: King James Version translation
 \end{itemize}
 
@@ -243,6 +396,9 @@ def generate_latex(verses_data, title, output_path):
     # Generate body
     body_parts = []
     
+    # Add abbreviations section first
+    body_parts.append(generate_abbreviations_section())
+    
     for chapter in sorted(chapters.keys()):
         body_parts.append(f"\\section*{{Chapter {chapter}}}")
         body_parts.append(f"\\addcontentsline{{toc}}{{section}}{{Chapter {chapter}}}")
@@ -252,7 +408,8 @@ def generate_latex(verses_data, title, output_path):
         for verse_id, verse_num, data in chapters[chapter]:
             # Format as gb4e example with interlinear gloss
             toned_line = ' '.join(escape_latex(w) for w in data['toned_words'])
-            gloss_line = ' '.join(escape_latex(w) for w in data['gloss_words'])
+            # Apply small caps to grammatical glosses
+            gloss_line = ' '.join(format_gloss_smallcaps(w) for w in data['gloss_words'])
             kjv = escape_latex(data.get('kjv', ''))
             
             block = []
@@ -353,17 +510,41 @@ def main():
     # Optionally compile
     if args.compile:
         import subprocess
-        print("Compiling with xelatex...")
-        result = subprocess.run(
-            ['xelatex', '-output-directory', str(output_path.parent), str(output_path)],
-            capture_output=True,
-            text=True
-        )
-        if result.returncode == 0:
-            pdf_path = output_path.with_suffix('.pdf')
-            print(f"Generated PDF: {pdf_path}")
-        else:
-            print(f"LaTeX compilation failed:\n{result.stderr}")
+        import shutil
+        
+        # Check for xelatex in standard locations
+        xelatex_cmd = shutil.which('xelatex')
+        if not xelatex_cmd:
+            # Try standard MacTeX location
+            for tex_path in ['/Library/TeX/texbin/xelatex', '/usr/local/texlive/2024/bin/universal-darwin/xelatex']:
+                if os.path.exists(tex_path):
+                    xelatex_cmd = tex_path
+                    break
+        
+        if not xelatex_cmd:
+            print("Error: xelatex not found. Please install MacTeX or TeX Live:")
+            print("  brew install --cask mactex-no-gui")
+            print(f"\nLaTeX file ready for manual compilation: {output_path}")
+            return
+        
+        print(f"Compiling with xelatex ({xelatex_cmd})...")
+        # Run xelatex twice for TOC to be correct
+        for pass_num in [1, 2]:
+            result = subprocess.run(
+                [xelatex_cmd, '-interaction=nonstopmode', '-output-directory', str(output_path.parent), str(output_path)],
+                capture_output=True,
+                text=True
+            )
+            if result.returncode != 0:
+                print(f"LaTeX compilation failed (pass {pass_num}):")
+                # Print just the error lines
+                for line in result.stdout.split('\n'):
+                    if line.startswith('!') or 'Error' in line:
+                        print(line)
+                return
+        
+        pdf_path = output_path.with_suffix('.pdf')
+        print(f"Generated PDF: {pdf_path}")
 
 
 if __name__ == '__main__':
