@@ -216,6 +216,54 @@ def disambiguate_tone(morpheme, entries, context=None):
     
     return entries[0]
 
+
+def disambiguate_tone_with_gloss(morpheme, entries, context):
+    """
+    Resolve ambiguous tone using analyzer's gloss for high-confidence matches.
+    
+    Returns: (entry, confidence) where confidence is 'high' if gloss matched,
+             'medium' if context-based disambiguation was used.
+    """
+    analyzer_gloss = context.get('gloss', '')
+    
+    # First, try to match by gloss - this gives HIGH confidence
+    if analyzer_gloss:
+        # Normalize for comparison
+        gloss_lower = analyzer_gloss.lower()
+        
+        for entry in entries:
+            entry_gloss = entry['gloss'].lower()
+            # Check for exact or partial match
+            if gloss_lower == entry_gloss or gloss_lower in entry_gloss or entry_gloss in gloss_lower:
+                return (entry, 'high')
+            
+            # Handle Form I/II markers in gloss
+            if '.I' in analyzer_gloss or '.II' in analyzer_gloss:
+                base_gloss = analyzer_gloss.replace('.I', '').replace('.II', '').lower()
+                if base_gloss in entry_gloss:
+                    # Match Form based on tone: Form II typically L, Form I typically H/M
+                    if '.II' in analyzer_gloss and entry['tone'] == 'L':
+                        return (entry, 'high')
+                    elif '.I' in analyzer_gloss and entry['tone'] in ('H', 'M'):
+                        return (entry, 'high')
+        
+        # Check for grammatical markers
+        gloss_to_tone = {
+            'DECL': 'L', 'AGR': 'L', '3SG': 'L', '2SG': 'L', '1SG': 'L',
+            'ABIL': 'L', 'IRR': 'L', 'FUT': 'L', 'NEG': 'L',
+            'NMLZ': 'H', 'AGT': 'H', 'CAUS': 'L', 'REFL': 'L', 'RECIP': 'L',
+        }
+        for marker, expected_tone in gloss_to_tone.items():
+            if marker in analyzer_gloss:
+                match = next((e for e in entries if e['tone'] == expected_tone), None)
+                if match:
+                    return (match, 'high')
+    
+    # Fall back to context-based disambiguation - this is MEDIUM confidence
+    entry = disambiguate_tone(morpheme, entries, context)
+    return (entry, 'medium')
+
+
 def restore_word_tone(word, tone_dict, context=None):
     """
     Restore tone for a single word.
@@ -235,18 +283,34 @@ def restore_word_tone(word, tone_dict, context=None):
             toned = mark_syllable_tones(word_lower, entry['tone'])
             return (toned, 'high', [(word_lower, entry['tone'], entry['gloss'])])
         else:
-            # Ambiguous - try to disambiguate
-            entry = disambiguate_tone(word_lower, entries, context)
-            toned = mark_syllable_tones(word_lower, entry['tone'])
-            return (toned, 'medium', [(word_lower, entry['tone'], entry['gloss'])])
+            # Ambiguous whole word - try morphological analysis first for gloss info
+            result = analyze_word(word_lower)
+            if result:
+                _, gloss_str = result
+                # Use gloss to disambiguate
+                whole_context = dict(context or {})
+                whole_context['gloss'] = gloss_str
+                entry, conf = disambiguate_tone_with_gloss(word_lower, entries, whole_context)
+                toned = mark_syllable_tones(word_lower, entry['tone'])
+                return (toned, conf, [(word_lower, entry['tone'], entry['gloss'])])
+            else:
+                # No analysis available - fall back to context-only disambiguation
+                entry = disambiguate_tone(word_lower, entries, context)
+                toned = mark_syllable_tones(word_lower, entry['tone'])
+                return (toned, 'medium', [(word_lower, entry['tone'], entry['gloss'])])
     
     # Try morphological analysis
     result = analyze_word(word_lower)
     if not result:
         return (word, 'unknown', [])
     
-    segmentation, gloss = result
+    segmentation, gloss_str = result
     morphemes = segmentation.replace('~', '-').split('-')
+    glosses = gloss_str.replace('~', '-').split('-')
+    
+    # Align morphemes with glosses
+    if len(glosses) != len(morphemes):
+        glosses = [''] * len(morphemes)  # Fallback if misaligned
     
     toned_parts = []
     analysis = []
@@ -254,13 +318,15 @@ def restore_word_tone(word, tone_dict, context=None):
     
     for i, morph in enumerate(morphemes):
         morph_lower = morph.lower()
+        morph_gloss = glosses[i] if i < len(glosses) else ''
         
-        # Build morpheme-level context
+        # Build morpheme-level context with gloss info
         morph_context = {
             'morph_position': i,
             'prev_morph': morphemes[i-1].lower() if i > 0 else None,
             'next_morph': morphemes[i+1].lower() if i < len(morphemes) - 1 else None,
             'total_morphemes': len(morphemes),
+            'gloss': morph_gloss,  # Pass analyzer's gloss for disambiguation
         }
         # Merge with word-level context
         if context:
@@ -273,11 +339,15 @@ def restore_word_tone(word, tone_dict, context=None):
                 toned_parts.append(mark_syllable_tones(morph, entry['tone']))
                 analysis.append((morph_lower, entry['tone'], entry['gloss']))
             else:
-                # Ambiguous - try to disambiguate with context
-                entry = disambiguate_tone(morph_lower, entries, morph_context)
+                # Ambiguous - try to disambiguate with context AND gloss
+                entry, conf = disambiguate_tone_with_gloss(morph_lower, entries, morph_context)
                 toned_parts.append(mark_syllable_tones(morph, entry['tone']))
-                analysis.append((morph_lower, entry['tone'] + '?', entry['gloss']))
-                overall_confidence = 'medium'
+                if conf == 'high':
+                    analysis.append((morph_lower, entry['tone'], entry['gloss']))
+                else:
+                    analysis.append((morph_lower, entry['tone'] + '?', entry['gloss']))
+                    if overall_confidence == 'high':
+                        overall_confidence = 'medium'
         else:
             # Unknown tone
             toned_parts.append(morph)
