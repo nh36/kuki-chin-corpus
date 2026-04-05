@@ -814,6 +814,15 @@ AMBIGUOUS_MORPHEMES = {
         ('DIM', 'diminutive'),       # Diminutive (rare)
     ],
     
+    # thum: 'three' (numeral) vs 'entreat/beseech' (verb)
+    # - 'three' in numeral contexts (ni thum = day three, kum thum = year three) ~500x
+    # - 'entreat' as verb with verbal morphology (a thum hi = he entreated) ~130x
+    # Context: 'three' when following numerals/classifiers; 'entreat' with 3SG prefix
+    'thum': [
+        ('three', 'numeral'),        # Numeral (default before classifiers)
+        ('entreat', 'verbal'),       # Verb: entreat, beseech, implore
+    ],
+    
     # pi: 'grandmother/big' vs 'also/give'
     # - 'big' as intensifier (khua-pi = big-town = city)
     # - 'grandmother' standalone
@@ -5330,6 +5339,24 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
         # Default: 'know' for standalone
         return 'know'
     
+    elif morpheme == 'thum':
+        # 'three' (numeral) vs 'entreat' (verb)
+        # 'three' after classifiers/numerals: ni thum, kum thum, tul thum
+        if context.get('prev_morpheme') in ('ni', 'kum', 'tul', 'sawm', 'za', 'khat', 'nih', 'li', 'nga'):
+            return 'three'
+        # 'three' before -vei (times): thumvei = three times
+        if context.get('next_morpheme') == 'vei':
+            return 'three'
+        # 'entreat' when preceded by prefix a- and followed by hi/uh (verbal)
+        if context.get('has_prefix'):
+            return 'entreat'
+        # 'entreat' standalone at sentence end (a thum hi pattern)
+        if context.get('position') == 'standalone':
+            # Default to 'three' for isolated numbers, but consider context
+            return 'three'
+        # Default to numeral (more common overall)
+        return 'three'
+    
     elif morpheme == 'tung':
         # 'on' when followed by -ah
         if context.get('next_morpheme') == 'ah':
@@ -7320,6 +7347,7 @@ BINARY_COMPOUNDS = {
     'galdaih': ('gal', 'daih', 'warfare'),        # enemy-able → warfare (6x)
     'zintun': ('zin', 'tun', 'arrive'),           # journey-arrive → destination (5x)
     'zaksak': ('zak', 'sak', 'testify'),          # hear-CAUS → testimony (5x)
+    'thumsak': ('thum', 'sak', 'intercede'),      # entreat-CAUS → intercede/pray.for (19x)
     'thutel': ('thu', 'tel', 'fulfill'),          # word-fulfill → fulfillment (5x)
     'thutan': ('thu', 'tan', 'judge'),            # word-judge → judgment (5x)
     'tawldam': ('tawl', 'dam', 'rest'),           # rest-well → rest (5x)
@@ -10672,7 +10700,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'nuamsak': ('nuam-sak', 'pleasant-CAUS'),           # 17 - "make pleasant, please"
         'nesak': ('ne-sak', 'eat-CAUS'),                    # 18 - "feed"
         'hingsak': ('hing-sak', 'be.alive-CAUS'),           # 19 - "make alive, resurrect"
-        'thumsak': ('thum-sak', 'three-CAUS'),              # 19 - contextual
+        'thumsak': ('thum-sak', 'entreat-CAUS'),             # 19 - "intercede, pray for"
         'mindaisak': ('mindai-sak', 'shame-CAUS'),          # 18 - "cause shame"
         'hingkiksak': ('hing-kik-sak', 'be.alive-ITER-CAUS'), # 18 - "resurrect"
         'honsak': ('hon-sak', 'flock-CAUS'),                # 17 - "shepherd, tend flock"
