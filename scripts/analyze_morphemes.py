@@ -5585,7 +5585,7 @@ def is_proper_noun(word: str) -> bool:
     
     # 4. Capitalized input - check if lowercase is a known common word
     # This handles sentence-initial common words like 'Pai' (go)
-    if clean_lower in VERB_STEMS or clean_lower in NOUN_STEMS or clean_lower in FUNCTION_WORDS:
+    if is_known_word(clean_lower):
         return False
     
     # 5. Unknown capitalized word - treat as proper noun
@@ -9326,6 +9326,44 @@ def get_morpheme_gloss(morpheme: str, position: str = 'default') -> Optional[str
     return None
 
 
+def is_known_word(word: str) -> bool:
+    """
+    Check if word exists in any morpheme dictionary.
+    
+    Used to determine if a word/stem is a known Tedim morpheme,
+    regardless of part of speech. Checks VERB_STEMS, NOUN_STEMS,
+    ATOMIC_GLOSSES, FUNCTION_WORDS, and VERB_STEM_PAIRS.
+    
+    Args:
+        word: The word to check (case-insensitive)
+    
+    Returns:
+        True if word is found in any dictionary
+    """
+    w = word.lower()
+    return (w in VERB_STEMS or w in NOUN_STEMS or 
+            w in ATOMIC_GLOSSES or w in FUNCTION_WORDS or
+            w in VERB_STEM_PAIRS)
+
+
+def is_known_stem(word: str) -> bool:
+    """
+    Check if word is a known lexical stem (noun or verb).
+    
+    Unlike is_known_word(), this does NOT include function words,
+    which is important for stem-splitting logic where we don't want
+    to over-segment based on function word matches.
+    
+    Args:
+        word: The word to check (case-insensitive)
+    
+    Returns:
+        True if word is found in VERB_STEMS, NOUN_STEMS, or VERB_STEM_PAIRS
+    """
+    w = word.lower()
+    return w in VERB_STEMS or w in NOUN_STEMS or w in VERB_STEM_PAIRS
+
+
 def analyze_binary_compound(word: str) -> Optional[CompoundStructure]:
     """
     Analyze a two-morpheme compound, returning its full structure.
@@ -9794,7 +9832,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
             # lowercase base is NOT a known common word
             if (base_title in PROPER_NOUNS or base_clean in PROPER_NOUNS):
                 # Skip if lowercase form is a known common word (in any lexicon)
-                if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in ATOMIC_GLOSSES:
+                if is_known_word(base_lower):
                     continue  # Let it fall through to COMPOUND_WORDS
                 return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_title.upper()}-{gloss}")
     
@@ -9927,7 +9965,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 # Skip if remainder starts with doubled consonant (suggests it's part of stem)
                 if len(after_prefix) >= 2 and after_prefix[0] == after_prefix[1] and after_prefix[0].isalpha():
                     continue
-                # Skip if the full word or longer prefix is a known stem
+                # Skip if the full word is a known stem (don't include function words)
                 if remaining_lower in NOUN_STEMS or remaining_lower in VERB_STEMS:
                     continue
                 # Check for known longer stems starting with the prefix
@@ -10001,9 +10039,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         if rem_lower in TAM_SUFFIXES or rem_lower in CASE_MARKERS or rem_lower in NOMINALIZERS:
             return True
         # Check if remainder is a known stem (N+N compound)
-        if rem_lower in NOUN_STEMS or rem_lower in VERB_STEMS or rem_lower in VERB_STEM_PAIRS:
-            return True
-        if rem_lower in ATOMIC_GLOSSES:
+        # Use is_known_stem, not is_known_word, to avoid matching function words
+        if is_known_stem(rem_lower) or rem_lower in ATOMIC_GLOSSES:
             return True
         # Check if remainder starts with known stem (stem+suffix pattern)
         # This handles cases like "neihna" = neih-na
@@ -10163,7 +10200,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
                     base = remaining[:-len(suffix)]
                     base_lower = base.lower()
                     # Check if base is a known stem, Form II verb, or another strippable suffix
-                    if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in VERB_STEM_PAIRS or base_lower in STRIPPABLE_SUFFIXES:
+                    if is_known_word(base_lower) or base_lower in STRIPPABLE_SUFFIXES:
                         segments.append(base)
                         is_form_ii = False  # Track if base is Form II
                         if base_lower in CASE_MARKERS:
@@ -10177,8 +10214,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
                             form_i, base_gloss = VERB_STEM_PAIRS[base_lower]
                             glosses.append(f"{base_gloss}.II")  # Mark Form II
                             is_form_ii = True
-                        else:
+                        elif base_lower in STRIPPABLE_SUFFIXES:
                             glosses.append(STRIPPABLE_SUFFIXES[base_lower])
+                        elif base_lower in ATOMIC_GLOSSES:
+                            glosses.append(ATOMIC_GLOSSES[base_lower])
+                        elif base_lower in FUNCTION_WORDS:
+                            glosses.append(FUNCTION_WORDS[base_lower])
+                        else:
+                            glosses.append('?')  # Shouldn't happen, but safe fallback
                         segments.append(suffix)
                         # Disambiguate -in: CVB after verb stems, ERG after nouns
                         if suffix == 'in' and (base_lower in VERB_STEMS or base_lower in VERB_STEM_PAIRS):
