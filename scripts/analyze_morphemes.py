@@ -9707,8 +9707,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
             # Only treat as proper noun if base is in PROPER_NOUNS AND
             # lowercase base is NOT a known common word
             if (base_title in PROPER_NOUNS or base_clean in PROPER_NOUNS):
-                # Skip if lowercase form is a known common word
-                if base_lower in VERB_STEMS or base_lower in NOUN_STEMS:
+                # Skip if lowercase form is a known common word (in any lexicon)
+                if base_lower in VERB_STEMS or base_lower in NOUN_STEMS or base_lower in ATOMIC_GLOSSES:
                     continue  # Let it fall through to COMPOUND_WORDS
                 return (f"{base_clean}-{suffix.lstrip('-')}", f"{base_title.upper()}-{gloss}")
     
