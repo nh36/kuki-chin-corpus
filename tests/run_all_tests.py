@@ -59,6 +59,7 @@ def main():
     simple_tests = [
         'test_habitual_markers.py',
         'test_thei_theih_allomorphy.py',
+        'test_proper_noun_homophones.py',
     ]
     
     test_dir = os.path.dirname(__file__)

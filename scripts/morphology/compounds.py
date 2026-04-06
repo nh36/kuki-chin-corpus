@@ -3145,7 +3145,7 @@ COMPOUND_WORDS = {
     'tawngnung': ('tawng-nung', 'speak-later'),            # back area/cave
     'nung': ('nung', 'later'),                             # base - later
     'mansuah': ('man-suah', 'price-escape'),               # missing
-    'suah': ('suah', 'SUAH'),                            # base - escape
+    'suah': ('suah', 'birth'),                            # base - birth/escape (not SUAH proper noun)
     'lohlam': ('loh-lam', 'NEG-way'),                      # not the way
     'khezaw': ('khe-zaw', 'foot-weak'),                    # lame
     'kilawnsuk': ('ki-lawn-suk', 'REFL-throw-fall'),       # be thrown
@@ -3484,7 +3484,7 @@ COMPOUND_WORDS = {
     'mimawh': ('mi-mawh', 'person-sin'),                   # innocent/sinner
     'sumlei': ('sum-lei', 'money-buy'),                    # buyer/seller
     'pauthei': ('pau-thei', 'speak-ABIL'),                 # able to speak
-    'pau': ('pau', 'PAU'),                               # base - speak
+    'pau': ('pau', 'speak'),                               # base - speak (not PAU proper noun)
     'simun': ('sim-un', 'count-time'),                     # without ceasing
     'muthei': ('mu-thei', 'see-ABIL'),                     # able to see
     'mu': ('mu', 'see.I'),                                   # base - see

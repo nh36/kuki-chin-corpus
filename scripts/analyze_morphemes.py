@@ -4665,7 +4665,7 @@ PROPER_NOUNS = {
     'amaziah', 'hiv', 'hivite', 'kaleb', 'uriah', 'zikri', 'jessi', 'jehoiada',
     'zif', 'abijah', 'baruk', 'kadesh', 'zedekiah', 'hezekiah',
     # Round 157: More proper nouns from partials
-    'heman', 'aner', 'puah', 'enan', 'adonijah', 'mikaiah', 'on',
+    'heman', 'aner', 'Puah', 'enan', 'adonijah', 'mikaiah', 'on',  # puah→Puah (divine/bet)
     'arnon', 'karmel', 'carmel', 'ahaziah', 'uzziah', 'nebat', 'athaliah',
     'antiok', 'iram', 'arabah', 'abiathar', 'nadab', 'khadet', 'kedar',
     'akhan', 'achan', 'sisera', 'jabin', 'joash', 'joab', 'omri',
@@ -4676,8 +4676,9 @@ PROPER_NOUNS = {
     'anathoth', 'naomi', 'naaman', 'mikhal', 'michal', 'shafan', 'shaphan',
     'nebuzaradan', 'nethaniah', 'aroer', 'ahijah', 'nabal', 'ziba', 'amasa',
     # Round 159: Short proper nouns that conflict with prefixes
-    'uz', 'ar', 'on', 'or', 'ir', 'en', 'ed',
-    # Note: 'ai' removed from here - conflicts with common word 'ai' (lot for divination)
+    # Note: removed lowercase versions of words with common meanings:
+    # - 'ai' (lot), 'en' (look), removed to allow common word analysis
+    'uz', 'ar', 'on', 'or', 'ir', 'ed',
     # Round 160: More proper nouns from unknowns
     'elim', 'zeeb', 'doeg', 'harar', 'meunim', 'hagri', 'hananel', 'thebes',
     'oholah', 'derbe', 'husham', 'shimron', 'hushim', 'pihahiroth', 'zered',
@@ -4774,7 +4775,7 @@ PROPER_NOUNS = {
     'haahashtari', 'habaiah', 'habakkuk', 'habazziniah', 'habergeon', 'habor', 'hachaliah', 'hachilah', 'hachmoni', 'hadadezer',
     'hadashah', 'hadattah', 'haddah', 'hadid', 'hadlai', 'hadoram', 'hadrakh', 'hagab', 'hagabah', 'hagar',
     'haggai', 'haggai-te', 'haggedolim', 'haggiah', 'haggith', 'hagri', 'haifa', 'hakkatan', 'hakkoz', 'hakufa',
-    'halah', 'halak', 'halhul', 'hali', 'hallohesh', 'ham', 'haman', 'hamath', 'hamathite', 'hamathzobah',
+    'halah', 'halak', 'halhul', 'hali', 'hallohesh', 'Ham', 'haman', 'hamath', 'hamathite', 'hamathzobah',  # ham→Ham (also/full/cover)
     'hammedatha', 'hammiphkad', 'hammon', 'hammuel', 'hamonah', 'hamongog', 'hamor', 'hamuel', 'hamul', 'hamutal',
     'hanamel', 'hanan', 'hananeel', 'hanani', 'hananiah', 'hanes', 'haniel', 'hannah', 'hannathon', 'hanniel',
     'hanun', 'haphraim', 'happizzez', 'hara', 'haradah', 'haralah', 'haran', 'harar', 'hararhiah', 'harbona',
@@ -4879,7 +4880,7 @@ PROPER_NOUNS = {
     'nergal', 'nergal-sharezer', 'neri', 'neriah', 'netaim', 'netaneel', 'netanel', 'netaniah', 'nethaneel', 'nethaniah',
     'nethanel', 'nethinim', 'netofah', 'netofathite', 'neziah', 'nezib', 'nibhaz', 'nibshan', 'nikanor', 'nikodemas',
     'nikolaitante', 'nikolas', 'nile', 'nimrah', 'nimrim', 'nimrod', 'nimshi', 'nineva', 'nisan', 'nisroch',
-    'no', 'noadiah', 'noah', 'nob', 'nobah', 'nobai', 'nod', 'nodab', 'noe', 'nofah',
+    'No', 'noadiah', 'noah', 'nob', 'nobah', 'nobai', 'nod', 'nodab', 'noe', 'nofah',  # no→No (young/obey)
     'nogah', 'noha', 'non', 'nophah', 'Nun', 'nymphas',
     'obadiah', 'obal', 'obed', 'obededom', 'obil', 'oboth', 'ochran', 'oded', 'og', 'ohad',
     'ohel', 'oholah', 'oholiab', 'oholibah', 'oholibamah', 'okran', 'olive', 'olympas', 'omar', 'omega',
@@ -4890,16 +4891,16 @@ PROPER_NOUNS = {
     # Note: 'pai' removed - conflicts with verb 'pai' (go, 2998x). Place name only 1x in 1Ch 1:50.
     'palti', 'paltiel', 'paltite', 'pamfilia', 'pannag', 'paphos', 'parah', 'paran', 'parbar', 'parmashta',
     'parmenas', 'parnach', 'parosh', 'parshandatha', 'partahia', 'parthian', 'paruah', 'parvaim', 'pasach', 'pasdammim',
-    'paseah', 'pashhur', 'pathros', 'pathrusim', 'patmos', 'patrobas', 'pau', 'pedael', 'pedahel', 'pedahzur',
+    'paseah', 'pashhur', 'pathros', 'pathrusim', 'patmos', 'patrobas', 'Pau', 'pedael', 'pedahel', 'pedahzur',  # pau→Pau (speak)
     'pedaiah', 'pekah', 'pekahiah', 'pekod', 'pelaiah', 'pelaliah', 'pelatiah', 'peleg', 'pelet', 'peleth',
     'pelethite', 'pelonite', 'peniel', 'peninnah', 'pentekost', 'penuel', 'peor', 'perazim', 'peresh', 'perez',
     'perezzah', 'perga', 'pergamos', 'perida', 'perizzite', 'persis', 'peruda', 'petahiah', 'pethahiah', 'pethor',
     'pethuel', 'peulthai', 'phanuel', 'pharathoni', 'pharaoh', 'pharez', 'pharisee-te', 'pharosh', 'pharpar', 'phaselis',
     'phebe', 'phenice', 'phichol', 'philadelpheia', 'philemon', 'philetas', 'philippe', 'philippi', 'philippian', 'philip',
-    'phinehas', 'phlegon', 'phoenicia', 'phrygia', 'phurah', 'phut', 'phuvah', 'phygellas', 'pi-beseth', 'pibeset',
+    'phinehas', 'phlegon', 'phoenicia', 'phrygia', 'phurah', 'Phut', 'phuvah', 'phygellas', 'pi-beseth', 'pibeset',  # phut→Phut (spray)
     'pihahiroth', 'pilate', 'pildash', 'pileha', 'piltai', 'pinon', 'piraham', 'pirathon', 'pirathonite', 'pisgah',
     'pisidia', 'pison', 'pispah', 'pithom', 'pithon', 'pochereth-hazzebaim', 'pontius', 'pontus', 'poratha', 'potifar',
-    'potifera', 'potiphar', 'priscilla', 'priska', 'prochorus', 'ptolomais', 'puah', 'publius', 'pudens', 'puhite',
+    'potifera', 'potiphar', 'priscilla', 'priska', 'prochorus', 'ptolomais', 'Puah', 'publius', 'pudens', 'puhite',  # puah→Puah (divine/bet)
     'pul', 'punite', 'punon', 'pur', 'purim', 'put', 'puteoli', 'putiel', 'puvah',
     'quartus',
     'raamah', 'raamses', 'rabbah', 'rabbath', 'rabbi', 'rabbith', 'rabboni', 'rabmag', 'rabsaris', 'rabshakeh',
@@ -4918,7 +4919,7 @@ PROPER_NOUNS = {
     'sanballat', 'sansannah', 'saph', 'saphir', 'sapphira', 'sarah', 'sarai', 'saraph', 'sardine', 'sardis',
     'sarepta', 'sargon', 'sarid', 'saron', 'sarsechim', 'saruhen', 'sasai', 'satan', 'saul-te', 'sceva',
     'seah', 'seba', 'sebam', 'secachah', 'sechu', 'secundus', 'segub', 'seir', 'seirah', 'sela',
-    'selah', 'selahammahlekoth', 'seled', 'seleucia', 'sem', 'semachiah', 'semei', 'senaah', 'seneh', 'senir',
+    'selah', 'selahammahlekoth', 'seled', 'seleucia', 'Sem', 'semachiah', 'semei', 'senaah', 'seneh', 'senir',  # sem→Sem (serve)
     'sennacherib', 'senuah', 'seorim', 'sephar', 'sepharad', 'sepharvaim', 'sepharvite', 'serah', 'seraiah', 'sered',
     'sergius-paulas', 'serug', 'seth', 'sethar', 'shaalabbin', 'shaalbbim', 'shaalbim', 'shaalbonite', 'shaaph', 'shaaraim',
     'shaashgaz', 'shabbethai', 'shachia', 'shaddai', 'shadrach', 'shage', 'shaharaim', 'shahazimah', 'shahazumah', 'shalem',
@@ -4947,7 +4948,7 @@ PROPER_NOUNS = {
     'sinite', 'sion', 'siphmoth', 'sippai', 'sirah', 'sirion', 'sisamai', 'sisar', 'sisera', 'sismai',
     'sithri', 'sitnah', 'sivan', 'smyrna', 'so', 'soco', 'socoh', 'sodi', 'sokoh', 'solomon-te',
     'sopater', 'sopatros', 'sophereth', 'sorek', 'sosipater', 'sosthenes', 'sotai', 'spain', 'stachys', 'stephanas',
-    'stephenias', 'stoik', 'suah', 'succoth', 'succothbenoth', 'sukkoth', 'suph', 'suphah', 'sur', 'susah',
+    'stephenias', 'stoik', 'Suah', 'succoth', 'succothbenoth', 'sukkoth', 'suph', 'suphah', 'sur', 'susah',  # suah→Suah (birth)
     'susi', 'suthelah', 'sychar', 'syene', 'syntyche', 'syracuse', 'syria-te', 'syrophoenician', 'syrtis',
     'taanach', 'taanath-shiloh', 'tabbaoth', 'tabbath', 'tabeal', 'tabeel', 'taberah', 'tabitha', 'tabor', 'tabrimon',
     'tadmor', 'tahan', 'tahanite', 'tahash', 'tahath', 'tahpanhes', 'tahpenes', 'tahrea', 'tahtim-hodshi', 'talitha',
