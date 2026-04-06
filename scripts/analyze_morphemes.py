@@ -5683,13 +5683,36 @@ def analyze_sentence(sentence: str) -> list:
         # Dictionary: ngen = "net, fishing net" AND "pray, petition"
         # Context: fishing vocabulary (nga 'fish', tuili 'lake/river') → net
         #          prayer vocabulary (thu 'word', pasian 'god') → pray (default)
-        if clean == 'ngen':
+        if clean == 'ngen' or clean.startswith('ngen'):
             # Look for fishing context words
-            fishing_words = {'nga', 'ngaman', 'ngakim', 'tuili', 'tuipi', 'ngakaih', 'khawl'}
-            sentence_words = {w.lower().rstrip('.,;:!?"\'') for w in words}
-            if sentence_words & fishing_words:  # Any intersection
-                seg = 'ngen'
-                gloss = 'net'
+            # ngabeng = fisherman, nusia = abandon (abandoning nets), khuh = cover (casting nets)
+            # tuili/tuipi = lake/sea, nga = fish, gunkuang = boat
+            fishing_stems = {'nga', 'ngaman', 'ngakim', 'tuili', 'tuipi', 'ngakaih', 'khawl', 
+                             'ngabeng', 'nusia', 'khuh', 'gunkuang'}
+            # Check if any fishing stem appears in any word
+            sentence_words = [w.lower().rstrip('.,;:!?"\'') for w in words]
+            has_fishing_context = any(
+                stem in word or word.startswith(stem)
+                for word in sentence_words 
+                for stem in fishing_stems
+            )
+            if has_fishing_context:
+                # Reparse with 'net' base
+                if clean == 'ngen':
+                    seg = 'ngen'
+                    gloss = 'net'
+                elif clean == 'ngente':
+                    seg = 'ngen-te'
+                    gloss = 'net-PL'
+                elif clean.startswith('ngen'):
+                    # Handle other inflected forms generically
+                    suffix = clean[4:]  # After 'ngen'
+                    if suffix:
+                        seg = f'ngen-{suffix}'
+                        gloss = f'net-{suffix.upper()}'
+                    else:
+                        seg = 'ngen'
+                        gloss = 'net'
         
         # Sentence-level disambiguation for 'kei' (NEG vs 1SG.PRO)
         # Dictionary: kei (adv) = "not"; kei (pro) = "I, myself"

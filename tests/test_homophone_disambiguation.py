@@ -157,6 +157,73 @@ def run_tests():
         failed += 1
     
     # ====================
+    # ADDITIONAL NGEN TESTS
+    # ====================
+    
+    # Test 14: ngente (plural nets) with nusia (abandon)
+    result = analyze_sentence("a ngente uh nusia-in")
+    ngente_gloss = next((g for w, s, g, _ in result if 'ngente' in w.lower()), None)
+    if ngente_gloss == 'net-PL':
+        print("✓ test_ngente_with_nusia")
+        passed += 1
+    else:
+        print(f"✗ test_ngente_with_nusia: expected 'net-PL', got '{ngente_gloss}'")
+        failed += 1
+    
+    # Test 15: ngen with gunkuang (boat) = net
+    result = analyze_sentence("gunkuang tung ah ngen uh")
+    ngen_gloss = next((g for w, s, g, _ in result if w == 'ngen'), None)
+    if ngen_gloss == 'net':
+        print("✓ test_ngen_with_gunkuang")
+        passed += 1
+    else:
+        print(f"✗ test_ngen_with_gunkuang: expected 'net', got '{ngen_gloss}'")
+        failed += 1
+    
+    # Test 16: ngen with ngabeng (fisherman) = net
+    result = analyze_sentence("ngabengte in ngen tawh")
+    ngen_gloss = next((g for w, s, g, _ in result if w == 'ngen'), None)
+    if ngen_gloss == 'net':
+        print("✓ test_ngen_with_ngabeng")
+        passed += 1
+    else:
+        print(f"✗ test_ngen_with_ngabeng: expected 'net', got '{ngen_gloss}'")
+        failed += 1
+    
+    # Test 17: Mark 1:16 full verse - ngen should be net
+    verse_16 = "Galilee Tuili gei tawnin Jesuh a pai laitakin Simon le a nau Andru ngabengte ahih manun ngen tawh nga khuhin a om a mu hi"
+    result = analyze_sentence(verse_16)
+    ngen_gloss = next((g for w, s, g, _ in result if w == 'ngen'), None)
+    if ngen_gloss == 'net':
+        print("✓ test_mark_1_16_ngen_is_net")
+        passed += 1
+    else:
+        print(f"✗ test_mark_1_16_ngen_is_net: expected 'net', got '{ngen_gloss}'")
+        failed += 1
+    
+    # Test 18: Mark 1:18 - abandoning nets
+    verse_18 = "Amau tegel in zong a ngen uh nusia-in Jesuh a zuipah uh hi"
+    result = analyze_sentence(verse_18)
+    ngen_gloss = next((g for w, s, g, _ in result if w == 'ngen'), None)
+    if ngen_gloss == 'net':
+        print("✓ test_mark_1_18_ngen_is_net")
+        passed += 1
+    else:
+        print(f"✗ test_mark_1_18_ngen_is_net: expected 'net', got '{ngen_gloss}'")
+        failed += 1
+    
+    # Test 19: Mark 1:19 - mending nets in boat
+    verse_19 = "Tawmkhat a pai khit ciangin Zebedi tapa James le a nau Johan zong a gunkuang tung uhah a ngen uh khui-in a om a mu leuleu hi"
+    result = analyze_sentence(verse_19)
+    ngen_gloss = next((g for w, s, g, _ in result if w == 'ngen'), None)
+    if ngen_gloss == 'net':
+        print("✓ test_mark_1_19_ngen_is_net")
+        passed += 1
+    else:
+        print(f"✗ test_mark_1_19_ngen_is_net: expected 'net', got '{ngen_gloss}'")
+        failed += 1
+    
+    # ====================
     # SUMMARY
     # ====================
     print(f"\n{passed} passed, {failed} failed")

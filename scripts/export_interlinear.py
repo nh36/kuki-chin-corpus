@@ -25,7 +25,7 @@ from pathlib import Path
 # Add scripts to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from analyze_morphemes import analyze_word
+from analyze_morphemes import analyze_word, analyze_sentence
 from restore_tone import load_tone_dictionary, restore_word_tone
 
 
@@ -166,6 +166,7 @@ def analyze_verse(text, tone_dict):
     """
     Analyze a verse and return aligned word lists.
     
+    Uses analyze_sentence() for context-aware disambiguation (e.g., ngen pray vs net).
     The tone restoration internally uses analyze_word() to disambiguate
     homophones, so the tone and gloss are consistent.
     
@@ -177,10 +178,13 @@ def analyze_verse(text, tone_dict):
     """
     words = text.split()
     
+    # Get sentence-level analysis for context-aware disambiguation
+    sentence_analysis = analyze_sentence(text)
+    
     toned_words = []
     gloss_words = []
     
-    for word in words:
+    for i, word in enumerate(words):
         # Preserve and strip punctuation - BUT keep apostrophe as it's the genitive marker
         punct = ''
         clean_word = word
@@ -191,25 +195,24 @@ def analyze_verse(text, tone_dict):
         # Track if original was capitalized
         was_capitalized = clean_word and clean_word[0].isupper()
         
-        # Get morphological analysis (keep apostrophe for genitive)
-        result = analyze_word(clean_word.lower())
-        if result:
-            seg, gloss = result
-            # Get tone-marked form
-            toned, conf, analysis = restore_word_tone(clean_word, tone_dict)
-            # Restore capitalization if original was capitalized
-            if was_capitalized and toned:
-                toned = toned[0].upper() + toned[1:]
-            toned_words.append(toned + punct)
-            gloss_words.append(gloss)
+        # Use sentence-level analysis if available (for context-aware disambiguation)
+        if i < len(sentence_analysis):
+            _, seg, gloss, _ = sentence_analysis[i]
         else:
-            # Unknown word - pass through preserving case
-            toned_words.append(clean_word + punct)
-            # Proper noun in CAPS, unknown as ??
-            if was_capitalized:
-                gloss_words.append(clean_word.upper())
+            # Fallback to word-level
+            result = analyze_word(clean_word.lower())
+            if result:
+                seg, gloss = result
             else:
-                gloss_words.append('??')
+                seg, gloss = clean_word, '??'
+        
+        # Get tone-marked form
+        toned, conf, analysis = restore_word_tone(clean_word, tone_dict)
+        # Restore capitalization if original was capitalized
+        if was_capitalized and toned:
+            toned = toned[0].upper() + toned[1:]
+        toned_words.append(toned + punct)
+        gloss_words.append(gloss)
     
     return {
         'toned_words': toned_words,
