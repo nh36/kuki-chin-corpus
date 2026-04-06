@@ -906,6 +906,26 @@ AMBIGUOUS_MORPHEMES = {
         ('IRR', 'suffix'),         # Irrealis marker (most common)
         ('stand', 'verbal'),         # Stand (rare as main verb)
     ],
+    
+    # ngen: 'pray' (verb) vs 'net' (noun)
+    # Dictionary: "ngen (len), n. net, fishing net"
+    # - 'pray' with thu = "pray word" = pray/petition/ask
+    # - 'net' in fishing contexts (with nga = fish, tuili = lake/river)
+    # Context: fishing vocabulary → net; prayer vocabulary → pray
+    'ngen': [
+        ('pray', 'verbal'),          # Pray, petition (default; most common)
+        ('net', 'nominal'),          # Fishing net (Mark 1:16-19)
+    ],
+    
+    # kei: 'NEG' (negation) vs '1SG.PRO' (pronoun)
+    # Dictionary: kei (adv) = "not in no manner"; kei (pro) = "I, myself"
+    # - NEG: negative marker in verb phrases (V kei = not V)
+    # - 1SG.PRO: first person pronoun "I, me" (kei sangin = "than me")
+    # Context: after verb → NEG; with postpositions/sangin → 1SG.PRO
+    'kei': [
+        ('NEG', 'negation'),         # Negative marker (default in verbal contexts)
+        ('1SG.PRO', 'pronoun'),      # First person pronoun "I, me"
+    ],
 }
 
 # English metadata words that appear in Bible file headers (not Tedim text)
@@ -5658,6 +5678,33 @@ def analyze_sentence(sentence: str) -> list:
                 gloss = 'mourn'
             # a thum hi/uh in mourning context (3SG mourn) - when followed by hi/uh
             # This is ambiguous without KJV - default to numeral
+        
+        # Sentence-level disambiguation for 'ngen' (pray vs net)
+        # Dictionary: ngen = "net, fishing net" AND "pray, petition"
+        # Context: fishing vocabulary (nga 'fish', tuili 'lake/river') → net
+        #          prayer vocabulary (thu 'word', pasian 'god') → pray (default)
+        if clean == 'ngen':
+            # Look for fishing context words
+            fishing_words = {'nga', 'ngaman', 'ngakim', 'tuili', 'tuipi', 'ngakaih', 'khawl'}
+            sentence_words = {w.lower().rstrip('.,;:!?"\'') for w in words}
+            if sentence_words & fishing_words:  # Any intersection
+                seg = 'ngen'
+                gloss = 'net'
+        
+        # Sentence-level disambiguation for 'kei' (NEG vs 1SG.PRO)
+        # Dictionary: kei (adv) = "not"; kei (pro) = "I, myself"
+        # Context: with sangin/tawh = pronoun "than me/with me"
+        #          after verb = negative marker
+        if clean == 'kei' and seg == 'kei' and gloss == 'NEG':
+            next_kei_word = words[i+1].lower().rstrip('.,;:!?"\'') if i < len(words)-1 else ''
+            # Check if followed by comparison/comitative markers → pronoun
+            if next_kei_word in ('sangin', 'tawh', 'tawhin', 'tungah', 'panin'):
+                seg = 'kei'
+                gloss = '1SG.PRO'
+            # "kei ka" = "I + 1SG" = emphatic first person
+            elif next_kei_word == 'ka':
+                seg = 'kei'
+                gloss = '1SG.PRO'
         
         boundary = is_phrase_boundary(word, gloss)
         results.append((word, seg, gloss, boundary))
@@ -12980,8 +13027,8 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'lopipi-in': ('lo-pi-pi-in', 'NEG-great-great-ERG'),   # powerfully
         
         # Round 52: Massive batch from Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, Samuel
-        'khuituah': ('khui-tuah', 'fold-do'),                  # double/fold together
-        'khui': ('khui', 'fold'),                              # base - fold
+        'khuituah': ('khui-tuah', 'sew-do'),                   # sew together (curtains, etc.)
+        'khui': ('khui', 'sew'),                               # sew, stitch, mend (not 'fold')
         'kuak': ('kuak', 'hollow'),                            # hollow
         'guat': ('guat', 'work'),                              # work/craft
         'liimsun': ('liim-sun', 'wing-spread'),                # spread wings
