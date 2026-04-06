@@ -2540,6 +2540,7 @@ NOUN_STEMS = {
     'dang': 'other',         # "other" (nidang = day-other = before)
     'ham': 'full',           # "full" (khangham = full of years)
     'an': 'food',       # 30x - "rice, food" (anlak = harvest)
+    'ai': 'lot',        # lot for casting/divination (ai san = cast lots)
     'nawi': 'butter',        # "butter" (bawngnawi = cow-butter)
     'kalaoh': 'camel',       # 30x - "camel" (kalaohte = camels)
     'liangko': 'shoulder',   # 29x - "shoulder"
@@ -4647,7 +4648,8 @@ PROPER_NOUNS = {
     'samuel', 'sabbath', 'isaac', 'absalom', 'zion', 'samaria', 'ahab',
     'nebukhadnezzar', 'abimelek', 'abner', 'abram', 'isaiah', 'ishmael',
     'damaskas', 'zadok', 'pilat', 'satan', 'naftali', 'khaldea',
-    'gentail', 'filistia', 'amor', 'kherub', 'ai',
+    'gentail', 'filistia', 'amor', 'kherub',
+    # Note: 'ai' removed - conflicts with common word 'ai' (lot for casting)
     # Additional proper nouns from corpus frequency analysis
     'ahaz', 'samson', 'midian', 'amalek', 'asher', 'nathan', 'saihadial',
     'moab', 'edom', 'gilead', 'sheba', 'laban', 'rebekah', 'leah', 'rachel',
@@ -4674,7 +4676,8 @@ PROPER_NOUNS = {
     'anathoth', 'naomi', 'naaman', 'mikhal', 'michal', 'shafan', 'shaphan',
     'nebuzaradan', 'nethaniah', 'aroer', 'ahijah', 'nabal', 'ziba', 'amasa',
     # Round 159: Short proper nouns that conflict with prefixes
-    'uz', 'ar', 'ai', 'on', 'or', 'ir', 'en', 'ed',
+    'uz', 'ar', 'on', 'or', 'ir', 'en', 'ed',
+    # Note: 'ai' removed from here - conflicts with common word 'ai' (lot for divination)
     # Round 160: More proper nouns from unknowns
     'elim', 'zeeb', 'doeg', 'harar', 'meunim', 'hagri', 'hananel', 'thebes',
     'oholah', 'derbe', 'husham', 'shimron', 'hushim', 'pihahiroth', 'zered',
@@ -7010,7 +7013,7 @@ ATOMIC_GLOSSES = {
     'hau': 'rich',         # mihau = person-rich = rich.one
     'khang': 'generation', # khangnote = generation-young-PL = youth
     'thawh': 'rise',       # thawhkik = rise-again = resurrection
-    'ai': 'persecute',     # aisan = persecute-rely = persecution
+    'ai': 'lot',           # ai san = lot-cast = cast.lots (divination)
     'kong': 'side',        # kongcing = side-pure = faithful
     'cing': 'pure',        # kongcing = side-pure
     'cil': 'thresh',       # ancil = rice-thresh = threshing

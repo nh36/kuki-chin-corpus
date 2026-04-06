@@ -16,11 +16,14 @@ COMPOUND_WORDS = {
     
     # === Round 201: Final coverage fixes ===
     # 5 remaining tokens: aite (3x), dante (1x), suksiatsakte' (1x)
-    'aite': ('ai-te', 'charm-PL'),                # Isa 3:20, Ezk 13:18,20 - amulets/charms (homophone of 'persecute')
-    'aite;': ('ai-te', 'charm-PL'),               # with trailing semicolon
+    'aite': ('ai-te', 'lot-PL'),                  # Isa 3:20, Ezk 13:18,20 - lots/charms (ai=lot for divination)
+    'aite;': ('ai-te', 'lot-PL'),                 # with trailing semicolon
     'dante': ('dan-te', 'manner-PL'),             # Jer 26:13 - ways/customs
     'suksiatsakte': ('suk-siat-sak-te', 'make-destroy-CAUS-PL'),  # Ezk 39:10 - plunderers
     "suksiatsakte'": ("suk-siat-sak-te'", 'make-destroy-CAUS-PL.POSS'),  # their plunderers
+    'aisanna': ('ai-san-na', 'lot-cast-NMLZ'),    # divination (casting of lots)
+    # Disambiguation: ainn = a-inn (3SG.POSS-house), not ai-nn
+    'ainn': ('a-inn', '3SG.POSS-house'),          # his/her house (a- possessive + inn house)
     
     # === Quality audit fixes: 22 partials ===
     'leizang': ('lei-zang', 'land-even'),         # Psalm 26:12 KJV "even place"
@@ -1054,7 +1057,7 @@ COMPOUND_WORDS = {
     
     # More -na nominalizer compounds
     'paubaanna': ('pau-baan-na', 'speak-slander-NMLZ'), # 30 - "slander, blasphemy"
-    'aisanna': ('ai-san-na', 'burn-flee-NMLZ'),         # 29 - context-specific
+    # Note: aisanna entry moved to Round 201 fixes (lot-cast-NMLZ = divination)
     'sawmna': ('sawm-na', 'ten-NMLZ'),                  # 28 - "tithing"
     'sanna': ('san-na', 'flee-NMLZ'),                   # 26 - "fleeing"
     'migitna': ('mi-git-na', 'person-hate-NMLZ'),       # 25 - "hatred of people"
