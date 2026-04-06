@@ -9364,6 +9364,43 @@ def is_known_stem(word: str) -> bool:
     return w in VERB_STEMS or w in NOUN_STEMS or w in VERB_STEM_PAIRS
 
 
+def longest_first(d: dict):
+    """
+    Iterate dictionary items in longest-key-first order.
+    
+    Essential for morphological parsing where longer morphemes must match
+    before shorter ones (e.g., 'khia' before 'khi', 'sak' before 'sa').
+    
+    Args:
+        d: Dictionary to iterate
+    
+    Yields:
+        (key, value) tuples sorted by descending key length
+    
+    Example:
+        for suffix, gloss in longest_first(SUFFIXES):
+            if word.endswith(suffix):
+                ...
+    """
+    return sorted(d.items(), key=lambda x: -len(x[0]))
+
+
+def longest_keys_first(d: dict):
+    """
+    Iterate dictionary keys in longest-first order.
+    
+    Like longest_first() but returns only keys, not (key, value) pairs.
+    Useful when you only need to check key matches.
+    
+    Args:
+        d: Dictionary whose keys to iterate
+    
+    Yields:
+        Keys sorted by descending length
+    """
+    return sorted(d.keys(), key=lambda x: -len(x))
+
+
 def analyze_binary_compound(word: str) -> Optional[CompoundStructure]:
     """
     Analyze a two-morpheme compound, returning its full structure.
@@ -9822,7 +9859,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'pa': 'man',        # without hyphen
         'ah': 'LOC',        # without hyphen
     }
-    for suffix, gloss in sorted(proper_suffixes.items(), key=lambda x: -len(x[0])):
+    for suffix, gloss in longest_first(proper_suffixes):
         if word_lower.endswith(suffix):
             base = word[:-len(suffix)]
             base_clean = base.rstrip('-')  # Remove trailing hyphen if present
@@ -9910,7 +9947,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         '-un': 'IMP',      # imperative plural
         '-a': 'LOC',
     }
-    for hyph_suffix, suffix_gloss in sorted(HYPHEN_SUFFIXES.items(), key=lambda x: -len(x[0])):
+    for hyph_suffix, suffix_gloss in longest_first(HYPHEN_SUFFIXES):
         if word_lower.endswith(hyph_suffix) or word.endswith(hyph_suffix):
             stem = word[:-len(hyph_suffix)]
             stem_result = analyze_word(stem)
@@ -9949,14 +9986,14 @@ def analyze_word(word: str) -> Tuple[str, str]:
     # Round 188 fix: Don't strip single-char prefixes if remaining would start with
     # a consonant cluster that suggests a longer stem (e.g., 'innpiah' starts with 'inn')
     remaining_lower = remaining.lower()
-    for prefix, gloss in sorted(OBJECT_PREFIXES.items(), key=lambda x: -len(x[0])):
+    for prefix, gloss in longest_first(OBJECT_PREFIXES):
         if remaining_lower.startswith(prefix):
             segments.append(prefix)
             glosses.append(gloss)
             remaining = remaining[len(prefix):]
             break
     else:
-        for prefix, gloss in sorted(PRONOMINAL_PREFIXES.items(), key=lambda x: -len(x[0])):
+        for prefix, gloss in longest_first(PRONOMINAL_PREFIXES):
             if remaining_lower.startswith(prefix) and len(remaining) > len(prefix):
                 # Check if stripping prefix would leave a phonotactically invalid onset
                 # or if a longer stem exists (e.g., 'inn' vs 'i' + 'nn')
@@ -10044,7 +10081,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
             return True
         # Check if remainder starts with known stem (stem+suffix pattern)
         # This handles cases like "neihna" = neih-na
-        for stem in sorted(VERB_STEMS.keys(), key=lambda x: -len(x)):
+        for stem in longest_keys_first(VERB_STEMS):
             if rem_lower.startswith(stem) and len(rem_lower) > len(stem):
                 suffix_part = rem_lower[len(stem):]
                 if suffix_part in TAM_SUFFIXES or suffix_part in NOMINALIZERS or suffix_part in CASE_MARKERS:
@@ -10052,7 +10089,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 # Also check for common grammatical suffixes
                 if suffix_part in ['te', 'na', 'in', 'ah', 'ding', 'zo', 'ta', 'sak', 'pih']:
                     return True
-        for stem in sorted(NOUN_STEMS.keys(), key=lambda x: -len(x)):
+        for stem in longest_keys_first(NOUN_STEMS):
             if rem_lower.startswith(stem) and len(rem_lower) > len(stem):
                 suffix_part = rem_lower[len(stem):]
                 if suffix_part in TAM_SUFFIXES or suffix_part in NOMINALIZERS or suffix_part in CASE_MARKERS:
@@ -10060,10 +10097,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 if suffix_part in ['te', 'na', 'in', 'ah', 'ding']:
                     return True
         # Check if remainder starts with known suffix chain
-        for suf in sorted(TAM_SUFFIXES.keys(), key=lambda x: -len(x)):
+        for suf in longest_keys_first(TAM_SUFFIXES):
             if rem_lower.startswith(suf):
                 return True
-        for suf in sorted(CASE_MARKERS.keys(), key=lambda x: -len(x)):
+        for suf in longest_keys_first(CASE_MARKERS):
             if rem_lower.startswith(suf):
                 return True
         # Check for common verb suffixes
@@ -10075,7 +10112,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
     
     # Find best verb stem match
     best_verb = None
-    for stem, gloss in sorted(VERB_STEMS.items(), key=lambda x: -len(x[0])):
+    for stem, gloss in longest_first(VERB_STEMS):
         if remaining_lower.startswith(stem):
             # Round 189: For short stems (<=3 chars), verify remainder is parseable
             if len(stem) <= 3:
@@ -10087,7 +10124,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
     
     # Find best noun stem match  
     best_noun = None
-    for stem, gloss in sorted(NOUN_STEMS.items(), key=lambda x: -len(x[0])):
+    for stem, gloss in longest_first(NOUN_STEMS):
         if remaining_lower.startswith(stem):
             # Round 189: For short stems (<=3 chars), verify remainder is parseable
             if len(stem) <= 3:
@@ -10099,7 +10136,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
     
     # Find best Form II verb stem match (Henderson 1965)
     best_form_ii = None
-    for stem, (form_i, gloss) in sorted(VERB_STEM_PAIRS.items(), key=lambda x: -len(x[0])):
+    for stem, (form_i, gloss) in longest_first(VERB_STEM_PAIRS):
         if remaining_lower.startswith(stem):
             # Check for disambiguation - some Form II stems conflict with stem+suffix patterns
             if stem in FORM_II_DISAMBIGUATION:
@@ -10163,7 +10200,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
             # This ensures proper linguistic categorization while allowing unified suffix stripping
             
             # Check combined suffixes (longest first)
-            for suffix, gloss in sorted(STRIPPABLE_SUFFIXES.items(), key=lambda x: -len(x[0])):
+            for suffix, gloss in longest_first(STRIPPABLE_SUFFIXES):
                 if remaining_lower == suffix:
                     segments.append(suffix)
                     # Round 196: Disambiguate -in: CVB after verb stems, ERG after nouns
@@ -10336,7 +10373,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         }
         
         # Try suffix stripping with RECURSIVE analysis of base
-        for suffix, suf_gloss in sorted(suffix_glosses.items(), key=lambda x: -len(x[0])):
+        for suffix, suf_gloss in longest_first(suffix_glosses):
             if remaining.lower().endswith(suffix) and len(remaining) > len(suffix) + 1:
                 base = remaining[:-len(suffix)]
                 base_lower = base.lower()
