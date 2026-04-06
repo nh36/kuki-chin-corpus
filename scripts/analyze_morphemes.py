@@ -4559,13 +4559,20 @@ NOUN_STEM_TYPES = {
     'zulhzau': 'free',
 }
 
+# Transparent proper nouns - show Tedim etymology in glossing
+# These are proper nouns in context but have meaningful Tedim morphology
+TRANSPARENT_PROPER_NOUNS = {
+    # Divine terms with Tedim etymology
+    'Pasian': ('Pasian', 'God'),           # pa-sian 'father-holy' → God
+    'Topa': ('Topa', 'Lord'),              # to-pa 'master-male' → Lord  
+    'Lungdamna': ('lungdam-na', 'good.news-NMLZ'),  # lungdam 'rejoice' + -na → Gospel
+    'Khanpugol': ('khan-pu-gol', 'generation-father-origin'),  # ancestor/patriarch
+}
+
 # Proper nouns (don't gloss with lowercase - return as-is with uppercase marker)
 # Expanded from corpus frequency analysis - 200+ entries
 PROPER_NOUNS = {
-    # Divine titles (moved from NOUN_STEMS)
-    'Pasian', 'Topa', 'Lungdamna',  # God, Lord, Gospel
-    
-    # Jesus and titles
+    # Jesus and titles (foreign names - no Tedim etymology)
     'Jesuh', 'Jesus', 'Khrih', 'Christ', 'Kristu', 'Zeisu', 'Khrih',
     
     # Old Testament figures - Patriarchs
@@ -5943,8 +5950,13 @@ def get_word_class(word: str, gloss: str) -> str:
     if '-PL' in gloss and not gloss.startswith('2/3'):
         return 'N.PL'
     
-    # Check for proper nouns (all caps gloss = proper noun)
+    # Check for proper nouns
+    # 1. All caps gloss = opaque proper noun (JERUSALEM, GALILI)
     if gloss.isupper() and len(gloss) > 2 and not gloss.startswith(('1', '2', '3')):
+        return 'N.PROP'
+    # 2. Transparent proper nouns (Pasian→God, Topa→Lord, Lungdamna→good.news-NMLZ)
+    word_title = word.title() if word else ''
+    if word_title in TRANSPARENT_PROPER_NOUNS:
         return 'N.PROP'
     
     # Default to noun
@@ -9624,12 +9636,16 @@ def analyze_word(word: str) -> Tuple[str, str]:
         return (word, FUNCTION_WORDS[word_no_hyphen_lower])
     
     # Handle possessive marker ' at end of word BEFORE proper noun check
-    # This ensures Pasian' → PASIAN.POSS not PASIAN'
+    # This ensures Pasian' → God.POSS not PASIAN'
     if word.endswith("'") or word.endswith("\u2019"):
         base = word.rstrip("'\u2019")
         base_lower = base.lower()
         base_title = base.title()
-        # Check proper nouns first (most common case for possessive)
+        # Check transparent proper nouns first (e.g., Pasian' → God.POSS)
+        if base[0].isupper() and base_title in TRANSPARENT_PROPER_NOUNS:
+            seg, gloss = TRANSPARENT_PROPER_NOUNS[base_title]
+            return (f"{seg}'", f"{gloss}.POSS")
+        # Check opaque proper nouns
         if base_title in PROPER_NOUNS or base in PROPER_NOUNS:
             return (f"{base}'", f"{base_title.upper()}.POSS")
         # Check if base is a function word
@@ -9646,6 +9662,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
             stem_title = stem.title()
             if stem_title in PROPER_NOUNS:
                 return (f"{base}'", f"{stem_title.upper()}-PL.POSS")
+    
+    # Check for transparent proper nouns (Tedim words used as proper nouns)
+    # Only match if word is capitalized - lowercase should use common noun glosses
+    # These show Tedim morphology instead of opaque ALL-CAPS
+    if word and word[0].isupper():
+        word_title = word.title()
+        if word_title in TRANSPARENT_PROPER_NOUNS:
+            return TRANSPARENT_PROPER_NOUNS[word_title]
+        # Handle transparent proper noun + possessive (Pasian', Topa')
+        if word.endswith("'") or word.endswith("\u2019"):
+            base = word.rstrip("'\u2019")
+            base_title = base.title()
+            if base_title in TRANSPARENT_PROPER_NOUNS:
+                seg, gloss = TRANSPARENT_PROPER_NOUNS[base_title]
+                return (f"{seg}'", f"{gloss}.POSS")
     
     # Check if proper noun (only AFTER function words and possessive check)
     if is_proper_noun(word):
