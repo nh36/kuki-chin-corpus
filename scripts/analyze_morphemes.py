@@ -9566,6 +9566,115 @@ def get_full_compound_analysis(word: str) -> Optional[CompoundStructure]:
     return None
 
 
+def analyze_possessive(word: str) -> Optional[Tuple[str, str]]:
+    """
+    Consolidated handler for all possessive (') patterns.
+    
+    This function replaces the previous triple possessive handling blocks
+    that were scattered through analyze_word(). All possessive logic is
+    now in one place, making it easier to maintain and extend.
+    
+    Args:
+        word: The word to analyze (may or may not end in ')
+        
+    Returns:
+        (segmentation, gloss) tuple if word is possessive, None otherwise
+        
+    Examples:
+        >>> analyze_possessive("Pasian'")
+        ("Pasian'", 'God.POSS')
+        >>> analyze_possessive("gilote'")
+        ("gilote'", 'enemy-PL.POSS')
+        >>> analyze_possessive("hello")
+        None
+    """
+    # Only handle words ending in possessive marker
+    if not (word.endswith("'") or word.endswith("\u2019")):
+        return None
+    
+    base = word.rstrip("'\u2019")
+    if not base:
+        return None
+    
+    base_lower = base.lower()
+    base_title = base.title()
+    
+    # 1. Transparent proper nouns (Pasian' → God.POSS, Topa' → Lord.POSS)
+    if base and base[0].isupper() and base_title in TRANSPARENT_PROPER_NOUNS:
+        seg, gloss = TRANSPARENT_PROPER_NOUNS[base_title]
+        return (f"{seg}'", f"{gloss}.POSS")
+    
+    # 2. Opaque proper nouns (Jerusalem' → JERUSALEM.POSS)
+    if base_title in PROPER_NOUNS or base in PROPER_NOUNS:
+        return (f"{base}'", f"{base_title.upper()}.POSS")
+    
+    # 3. Function words (tua' → DIST.POSS)
+    if base_lower in FUNCTION_WORDS:
+        return (f"{base}'", f"{FUNCTION_WORDS[base_lower]}.POSS")
+    
+    # 4. Direct noun stems (pa' → father.POSS)
+    if base_lower in NOUN_STEMS:
+        return (f"{base}'", f"{NOUN_STEMS[base_lower]}.POSS")
+    
+    # 5. Plural forms ending in -te (gilote' → enemy-PL.POSS)
+    if base_lower.endswith('te') and len(base_lower) > 2:
+        stem = base_lower[:-2]
+        # Check all lexicons for the stem
+        if stem in NOUN_STEMS:
+            return (f"{base}'", f"{NOUN_STEMS[stem]}-PL.POSS")
+        if stem in ATOMIC_GLOSSES:
+            return (f"{base}'", f"{ATOMIC_GLOSSES[stem]}-PL.POSS")
+        if stem in VERB_STEMS:
+            return (f"{base}'", f"{VERB_STEMS[stem]}-PL.POSS")
+        # Proper noun plurals (Israelite' → ISRAEL-PL.POSS)
+        stem_title = stem.title()
+        if stem_title in PROPER_NOUNS:
+            return (f"{base}'", f"{stem_title.upper()}-PL.POSS")
+    
+    # 6. Agent nominalizer forms ending in -pa (veipa' → do-NMLZ.AG.POSS)
+    if base_lower.endswith('pa') and len(base_lower) > 2:
+        stem = base_lower[:-2]
+        if stem in VERB_STEMS:
+            return (f"{stem}-pa'", f"{VERB_STEMS[stem]}-NMLZ.AG.POSS")
+    
+    # 7. Common possessive words (hard-coded for high frequency items)
+    # These are kept for efficiency - they're checked before expensive recursion
+    poss_map = {
+        'amau': '3PL.POSS',
+        'mite': 'people.POSS',
+        'note': '2PL.POSS',
+        'amaute': '3PL.POSS',
+        'kumpipa': 'king.POSS',
+        'kei': '1SG.POSS',
+        'kote': '1PL.POSS',
+        'eite': '1PL.EXCL.POSS',
+        'khempeuh': 'all.POSS',
+        'nang': '2SG.POSS',
+        'kan': '1SG.POSS',
+    }
+    if base_lower in poss_map:
+        return (f"{base}'", poss_map[base_lower])
+    
+    # 8. Try COMPOUND_WORDS for explicit entries
+    if base_lower in COMPOUND_WORDS:
+        seg, gloss = COMPOUND_WORDS[base_lower]
+        return (f"{seg}'", f"{gloss}.POSS")
+    
+    # 9. Recursive analysis - analyze base and add .POSS
+    # Import here to avoid circular dependency issues
+    base_seg, base_gloss = _analyze_word_internal(base)
+    if base_gloss and '?' not in base_gloss:
+        return (f"{base_seg}'", f"{base_gloss}.POSS")
+    
+    # No possessive analysis found
+    return None
+
+
+# Forward declaration for recursive calls within analyze_possessive
+# This will be set to analyze_word after it's defined
+_analyze_word_internal = None
+
+
 def analyze_word(word: str) -> Tuple[str, str]:
     """
     Analyze a Tedim word and return (segmentation, gloss).
@@ -10551,6 +10660,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
                 pass  # TODO: Add logging or alternative parse strategy
     
     return (segmented, gloss)
+
+
+# Set the internal reference for recursive calls in analyze_possessive
+_analyze_word_internal = analyze_word
 
 
 def analyze_word_with_context(word: str, prev_word: str = '', next_word: str = '', 
