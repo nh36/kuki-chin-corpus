@@ -9754,17 +9754,11 @@ def analyze_word(word: str) -> Tuple[str, str]:
     # Check for transparent proper nouns (Tedim words used as proper nouns)
     # Only match if word is capitalized - lowercase should use common noun glosses
     # These show Tedim morphology instead of opaque ALL-CAPS
+    # Note: Possessive forms (Pasian', Topa') are handled by analyze_possessive above
     if word and word[0].isupper():
         word_title = word.title()
         if word_title in TRANSPARENT_PROPER_NOUNS:
             return TRANSPARENT_PROPER_NOUNS[word_title]
-        # Handle transparent proper noun + possessive (Pasian', Topa')
-        if word.endswith("'") or word.endswith("\u2019"):
-            base = word.rstrip("'\u2019")
-            base_title = base.title()
-            if base_title in TRANSPARENT_PROPER_NOUNS:
-                seg, gloss = TRANSPARENT_PROPER_NOUNS[base_title]
-                return (f"{seg}'", f"{gloss}.POSS")
     
     # Check if proper noun (only AFTER function words and possessive check)
     if is_proper_noun(word):
