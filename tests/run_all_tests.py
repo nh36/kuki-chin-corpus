@@ -118,5 +118,17 @@ def main():
     
     return 0 if total_failed == 0 else 1
 
+
+def run_validation():
+    """Run analyzer validation checks."""
+    import subprocess
+    result = subprocess.run(
+        ['python3', 'scripts/validate_analyzer.py'],
+        capture_output=True, text=True, 
+        cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    )
+    return result.returncode == 0
+
+
 if __name__ == '__main__':
     sys.exit(main())
