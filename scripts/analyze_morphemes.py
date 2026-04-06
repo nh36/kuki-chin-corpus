@@ -5655,10 +5655,19 @@ def analyze_sentence(sentence: str) -> list:
     words = sentence.split()
     
     for i, word in enumerate(words):
+        # First try with original case
         seg, gloss = analyze_word(word)
         
-        # Sentence-level disambiguation for 'thum' homophone
+        # If analyzed as a proper noun (ALL CAPS gloss) but it's not in PROPER_NOUNS,
+        # try lowercase to see if it parses as a common word
+        # This handles cases like "Nungzuite" which should be "life-follow-PL" not "NUNGZUITE"
         clean = word.lower().rstrip('.,;:!?"\'')
+        if gloss == word.upper() and word.title() not in PROPER_NOUNS:
+            lower_seg, lower_gloss = analyze_word(word.lower())
+            if lower_gloss != word.lower().upper():  # If lowercase version parses differently
+                seg, gloss = lower_seg, lower_gloss
+        
+        # Sentence-level disambiguation for 'thum' homophone
         if clean == 'thum' and gloss == 'three':
             prev_word = words[i-1].lower().rstrip('.,;:!?"\'') if i > 0 else ''
             prev2_word = words[i-2].lower().rstrip('.,;:!?"\'') if i > 1 else ''
@@ -9587,7 +9596,31 @@ def analyze_word(word: str) -> Tuple[str, str]:
     if word_no_hyphen_lower in FUNCTION_WORDS:
         return (word, FUNCTION_WORDS[word_no_hyphen_lower])
     
-    # Check if proper noun (only AFTER function words check)
+    # Handle possessive marker ' at end of word BEFORE proper noun check
+    # This ensures Pasian' → PASIAN.POSS not PASIAN'
+    if word.endswith("'") or word.endswith("\u2019"):
+        base = word.rstrip("'\u2019")
+        base_lower = base.lower()
+        base_title = base.title()
+        # Check proper nouns first (most common case for possessive)
+        if base_title in PROPER_NOUNS or base in PROPER_NOUNS:
+            return (f"{base}'", f"{base_title.upper()}.POSS")
+        # Check if base is a function word
+        if base_lower in FUNCTION_WORDS:
+            return (word, FUNCTION_WORDS[base_lower] + '.POSS')
+        # Check if base is a noun stem
+        if base_lower in NOUN_STEMS:
+            return (f"{base}'", f"{NOUN_STEMS[base_lower]}.POSS")
+        # Check if it's a compound that ends in a known stem
+        if base_lower.endswith('te') and len(base_lower) > 2:
+            stem = base_lower[:-2]
+            if stem in NOUN_STEMS:
+                return (f"{base}'", f"{NOUN_STEMS[stem]}-PL.POSS")
+            stem_title = stem.title()
+            if stem_title in PROPER_NOUNS:
+                return (f"{base}'", f"{stem_title.upper()}-PL.POSS")
+    
+    # Check if proper noun (only AFTER function words and possessive check)
     if is_proper_noun(word):
         return (word, word.upper())
     
@@ -10388,7 +10421,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'hi-in': ('hi-in', 'be-ERG'),
         'biakinn-ah': ('biakinn-ah', 'temple-LOC'),
         'vekpi-un': ('vek-pi-un', 'all-big-PL.IMP'),
-        'nungzui': ('nung-zui', 'life-follow'),
+        'nungzui': ('nungzui', 'disciple'),         # back-follow → disciple (per dictionary)
+        'nungzuite': ('nungzui-te', 'disciple-PL'), # disciples
+        'cina': ('cina', 'sick'),                   # ill, sick (adj) - dictionary: "cina (damlo), adj. ill; sick"
+        'cinate': ('cina-te', 'sick.person-PL'),    # patients, sick persons - dictionary: "cinate, n. patients; sick person"
         'khatvei': ('khat-vei', 'one-time'),
         'naungek': ('nau-ngek', 'child-small'),
         'kongkhak': ('kong-khak', '1SG→3-limit'),
@@ -10471,7 +10507,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'tuipi': ('tui-pi', 'water-big'),
         'hehna': ('heh-na', 'anger-NMLZ'),
         'upna': ('up-na', 'believe-NMLZ'),
-        'nungzuite': ('nung-zui-te', 'life-follow-PL'),
+        'nungzuite': ('nungzui-te', 'disciple-PL'),              # disciples (not life-follow-PL)
         'khawm': ('khawm', 'gather'),
         'ciat': ('ciat', 'each'),
         'dangte': ('dang-te', 'other-PL'),
@@ -11156,7 +11192,7 @@ def analyze_word(word: str) -> Tuple[str, str]:
         'halna': ('hal-na', 'terror-NMLZ'),                  # 16x - "terror"
         'mihaute': ('mi-hau-te', 'person-rich-PL'),          # 16x - "rich people"
         'etteh': ('et-teh', 'care-measure'),                 # 16x - "sign/proverb"
-        'cinate': ('ci-na-te', 'say-NMLZ-PL'),               # 16x - "sayings/sick"
+        'cinate': ('cina-te', 'sick.person-PL'),             # 16x - patients (per dictionary)
         'puanpak': ('puan-pak', 'cloth-share'),              # 15x - "hangings"
         'khenkhia': ('khen-khia', 'divide-exit'),            # 15x - "divided"
         'gambup': ('gam-bup', 'land-whole'),                 # 15x - "whole land"
