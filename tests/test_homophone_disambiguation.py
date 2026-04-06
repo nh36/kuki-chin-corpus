@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Test homophone disambiguation for ngen, kei, and khui.
+Test homophone disambiguation for ngen, kei, khui, and hu.
 
 These tests verify that context-based disambiguation works correctly:
 - ngen: 'pray' (default) vs 'net' (fishing context)
 - kei: 'NEG' (default) vs '1SG.PRO' (with sangin/tawh)
 - khui: 'sew' (fixed from incorrect 'fold')
+- hu: 'help' (default) vs 'breath' (with nuntakna or in idiom 'hu tawpna')
 """
 
 import sys
@@ -221,6 +222,59 @@ def run_tests():
         passed += 1
     else:
         print(f"✗ test_mark_1_19_ngen_is_net: expected 'net', got '{ngen_gloss}'")
+        failed += 1
+    
+    # ====================
+    # HU TESTS (breath vs help)
+    # ====================
+    
+    # Test 20: hu alone defaults to 'help'
+    seg, gloss = analyze_word('hu')
+    if gloss == 'help':
+        print("✓ test_hu_default_help")
+        passed += 1
+    else:
+        print(f"✗ test_hu_default_help: expected 'help', got '{gloss}'")
+        failed += 1
+    
+    # Test 21: "nuntakna hu" = breath of life (Gen 2:7)
+    result = analyze_sentence("nuntakna hu sang suk hi")
+    hu_gloss = next((g for w, s, g, _ in result if w == 'hu'), None)
+    if hu_gloss == 'breath':
+        print("✓ test_hu_after_nuntakna_is_breath")
+        passed += 1
+    else:
+        print(f"✗ test_hu_after_nuntakna_is_breath: expected 'breath', got '{hu_gloss}'")
+        failed += 1
+    
+    # Test 22: "hu tawpna" = give up ghost (Gen 25:8)
+    result = analyze_sentence("a hu tawpna sang a")
+    hu_gloss = next((g for w, s, g, _ in result if w == 'hu'), None)
+    if hu_gloss == 'breath':
+        print("✓ test_hu_tawpna_is_breath")
+        passed += 1
+    else:
+        print(f"✗ test_hu_tawpna_is_breath: expected 'breath', got '{hu_gloss}'")
+        failed += 1
+    
+    # Test 23: "hu sang" = give up ghost (alternative form)
+    result = analyze_sentence("nunung pen a hu sang")
+    hu_gloss = next((g for w, s, g, _ in result if w == 'hu'), None)
+    if hu_gloss == 'breath':
+        print("✓ test_hu_sang_is_breath")
+        passed += 1
+    else:
+        print(f"✗ test_hu_sang_is_breath: expected 'breath', got '{hu_gloss}'")
+        failed += 1
+    
+    # Test 24: "hong hu" = help (verb) - should NOT be breath
+    result = analyze_sentence("nang ka hong hu ding")
+    hu_gloss = next((g for w, s, g, _ in result if w == 'hu'), None)
+    if hu_gloss == 'help':
+        print("✓ test_hong_hu_is_help")
+        passed += 1
+    else:
+        print(f"✗ test_hong_hu_is_help: expected 'help', got '{hu_gloss}'")
         failed += 1
     
     # ====================

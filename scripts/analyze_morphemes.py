@@ -926,6 +926,16 @@ AMBIGUOUS_MORPHEMES = {
         ('NEG', 'negation'),         # Negative marker (default in verbal contexts)
         ('1SG.PRO', 'pronoun'),      # First person pronoun "I, me"
     ],
+    
+    # hu: 'help' (verb) vs 'breath' (noun)
+    # Dictionary: hu (n) = "breath"; hu (v) = "to block" (but Bible shows 'help')
+    # - help: verbal action "to help/protect" (hong hu = help you)
+    # - breath: noun, esp. in "nuntakna hu" = breath of life
+    # Context: after 'nuntakna' → breath; in 'hu tawpna/sang' idiom → breath
+    'hu': [
+        ('help', 'verb'),            # Help/protect (default verbal meaning)
+        ('breath', 'noun'),          # Breath, in 'breath of life' and 'give up ghost'
+    ],
 }
 
 # English metadata words that appear in Bible file headers (not Tedim text)
@@ -5737,6 +5747,22 @@ def analyze_sentence(sentence: str) -> list:
             elif next_kei_word == 'ka':
                 seg = 'kei'
                 gloss = '1SG.PRO'
+        
+        # Sentence-level disambiguation for 'hu' (help vs breath)
+        # Dictionary: hu (n) = "breath"; hu (v) = "to block" (Bible shows 'help')
+        # Context: "nuntakna hu" = breath of life; "hu tawpna/sang" = give up ghost
+        #          Otherwise: help (verb)
+        if clean == 'hu' and gloss == 'help':
+            prev_word = words[i-1].lower().rstrip('.,;:!?"\'') if i > 0 else ''
+            next_hu_word = words[i+1].lower().rstrip('.,;:!?"\'') if i < len(words)-1 else ''
+            # "nuntakna hu" = breath of life (Gen 2:7)
+            if prev_word == 'nuntakna' or prev_word.startswith('nuntak'):
+                seg = 'hu'
+                gloss = 'breath'
+            # "hu tawpna/sang" = give up ghost/breathe last (Gen 25:8)
+            elif next_hu_word in ('tawpna', 'sang', 'sang,'):
+                seg = 'hu'
+                gloss = 'breath'
         
         boundary = is_phrase_boundary(word, gloss)
         results.append((word, seg, gloss, boundary))
