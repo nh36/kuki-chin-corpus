@@ -9659,6 +9659,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
             stem = base_lower[:-2]
             if stem in NOUN_STEMS:
                 return (f"{base}'", f"{NOUN_STEMS[stem]}-PL.POSS")
+            # Check ATOMIC_GLOSSES (e.g., gilote' = enemy-PL.POSS)
+            if stem in ATOMIC_GLOSSES:
+                return (f"{base}'", f"{ATOMIC_GLOSSES[stem]}-PL.POSS")
             stem_title = stem.title()
             if stem_title in PROPER_NOUNS:
                 return (f"{base}'", f"{stem_title.upper()}-PL.POSS")
@@ -9732,6 +9735,9 @@ def analyze_word(word: str) -> Tuple[str, str]:
             stem = base_lower[:-2]
             if stem in NOUN_STEMS:
                 return (f"{base}'", f"{NOUN_STEMS[stem]}-PL.POSS")
+            # Check ATOMIC_GLOSSES (e.g., gilote' = enemy-PL.POSS)
+            if stem in ATOMIC_GLOSSES:
+                return (f"{base}'", f"{ATOMIC_GLOSSES[stem]}-PL.POSS")
             # Check if stem is a proper noun (e.g., sraelte' = SRAEL-PL.POSS)
             stem_title = stem.title()
             if stem_title in PROPER_NOUNS:
