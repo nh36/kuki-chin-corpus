@@ -14,6 +14,14 @@ COMPOUND_WORDS = {
     'lokho': ('lokho', 'husbandman'),  # KJV: husbandman, plowman
     'lokho-in': ('lokho-in', 'farmer-ERG'),
     
+    # === Round 201: Final coverage fixes ===
+    # 5 remaining tokens: aite (3x), dante (1x), suksiatsakte' (1x)
+    'aite': ('ai-te', 'charm-PL'),                # Isa 3:20, Ezk 13:18,20 - amulets/charms (homophone of 'persecute')
+    'aite;': ('ai-te', 'charm-PL'),               # with trailing semicolon
+    'dante': ('dan-te', 'manner-PL'),             # Jer 26:13 - ways/customs
+    'suksiatsakte': ('suk-siat-sak-te', 'make-destroy-CAUS-PL'),  # Ezk 39:10 - plunderers
+    "suksiatsakte'": ("suk-siat-sak-te'", 'make-destroy-CAUS-PL.POSS'),  # their plunderers
+    
     # === Quality audit fixes: 22 partials ===
     'leizang': ('lei-zang', 'land-even'),         # Psalm 26:12 KJV "even place"
     'kuamkeu': ('kuam-keu', 'valley-Baca'),       # Psalm 84:6 place name "valley of Baca"
