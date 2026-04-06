@@ -340,6 +340,12 @@ def generate_latex(verses_data, title, output_path):
 \usepackage{gb4e}  % Standard linguistics interlinear package
 \noautomath  % Prevent gb4e from messing with math mode
 
+% Add horizontal spacing between word-gloss pairs for readability
+\let\oldeachwordone\eachwordone
+\renewcommand{\eachwordone}{\oldeachwordone\hspace{0.3em}}
+\let\oldeachwordtwo\eachwordtwo  
+\renewcommand{\eachwordtwo}{\oldeachwordtwo\hspace{0.3em}}
+
 \geometry{margin=0.75in}
 
 % Font setup - use system fonts with good Unicode support
