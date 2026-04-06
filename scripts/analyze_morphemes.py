@@ -9746,34 +9746,10 @@ def analyze_word(word: str) -> Tuple[str, str]:
     
     # Handle possessive marker ' at end of word BEFORE proper noun check
     # This ensures Pasian' → God.POSS not PASIAN'
-    if word.endswith("'") or word.endswith("\u2019"):
-        base = word.rstrip("'\u2019")
-        base_lower = base.lower()
-        base_title = base.title()
-        # Check transparent proper nouns first (e.g., Pasian' → God.POSS)
-        if base[0].isupper() and base_title in TRANSPARENT_PROPER_NOUNS:
-            seg, gloss = TRANSPARENT_PROPER_NOUNS[base_title]
-            return (f"{seg}'", f"{gloss}.POSS")
-        # Check opaque proper nouns
-        if base_title in PROPER_NOUNS or base in PROPER_NOUNS:
-            return (f"{base}'", f"{base_title.upper()}.POSS")
-        # Check if base is a function word
-        if base_lower in FUNCTION_WORDS:
-            return (word, FUNCTION_WORDS[base_lower] + '.POSS')
-        # Check if base is a noun stem
-        if base_lower in NOUN_STEMS:
-            return (f"{base}'", f"{NOUN_STEMS[base_lower]}.POSS")
-        # Check if it's a compound that ends in a known stem
-        if base_lower.endswith('te') and len(base_lower) > 2:
-            stem = base_lower[:-2]
-            if stem in NOUN_STEMS:
-                return (f"{base}'", f"{NOUN_STEMS[stem]}-PL.POSS")
-            # Check ATOMIC_GLOSSES (e.g., gilote' = enemy-PL.POSS)
-            if stem in ATOMIC_GLOSSES:
-                return (f"{base}'", f"{ATOMIC_GLOSSES[stem]}-PL.POSS")
-            stem_title = stem.title()
-            if stem_title in PROPER_NOUNS:
-                return (f"{base}'", f"{stem_title.upper()}-PL.POSS")
+    # (Consolidated in analyze_possessive function)
+    poss_result = analyze_possessive(word)
+    if poss_result:
+        return poss_result
     
     # Check for transparent proper nouns (Tedim words used as proper nouns)
     # Only match if word is capitalized - lowercase should use common noun glosses
