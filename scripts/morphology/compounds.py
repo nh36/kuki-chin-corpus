@@ -462,7 +462,6 @@ COMPOUND_WORDS = {
     'kongpi': ('kong-pi', 'road-big'),
     'kawikawi': ('kawi~kawi', 'crooked~REDUP'),
     'thutang': ('thu-tang', 'word-story'),
-    'citak': ('ci-tak', 'say-exact'),
     'ompih': ('om-pih', 'exist-APPL'),
     'thupi': ('thu-pi', 'word-big'),
     'huhna': ('huh-na', 'blow-NMLZ'),
@@ -682,7 +681,6 @@ COMPOUND_WORDS = {
     'tuipi': ('tui-pi', 'water-big'),
     'hehna': ('heh-na', 'anger-NMLZ'),
     'upna': ('up-na', 'believe-NMLZ'),
-    'nungzuite': ('nungzui-te', 'disciple-PL'),              # disciples (not life-follow-PL)
     'khawm': ('khawm', 'gather'),
     'ciat': ('ciat', 'each'),
     'dangte': ('dang-te', 'other-PL'),
@@ -1342,7 +1340,6 @@ COMPOUND_WORDS = {
     'sawpin': ('sawp-in', 'body-ERG'),                   # 16x - "carcase"
     'tuinak': ('tui-nak', 'water-time'),                 # 16x - "fountain"
     'khamul': ('kha-mul', 'spirit-shave'),               # 16x - "shave"
-    'samsiat': ('sam-siat', 'call-destroy'),             # 16x - "cursed"
     'zatna': ('zat-na', 'hear.II-NMLZ'),                 # 16x - "spreading (plague)"
     'lamlahna': ('lam-lah-na', 'way-drop-NMLZ'),         # 16x - "trespass"
     'nulepa': ('nu-le-pa', 'mother-and-father'),         # 16x - "beast/parents"
@@ -1367,8 +1364,6 @@ COMPOUND_WORDS = {
     'halna': ('hal-na', 'terror-NMLZ'),                  # 16x - "terror"
     'mihaute': ('mi-hau-te', 'person-rich-PL'),          # 16x - "rich people"
     'etteh': ('et-teh', 'care-measure'),                 # 16x - "sign/proverb"
-    'cinate': ('cina-te', 'sick.person-PL'),             # 16x - patients (per dictionary)
-    'puanpak': ('puan-pak', 'cloth-share'),              # 15x - "hangings"
     'khenkhia': ('khen-khia', 'divide-exit'),            # 15x - "divided"
     'gambup': ('gam-bup', 'land-whole'),                 # 15x - "whole land"
     'omlam': ('om-lam', 'exist-side'),                   # 15x - "eyes opened/state"
@@ -1637,7 +1632,6 @@ COMPOUND_WORDS = {
     'sempa': ('sem-pa', 'serve-father'),                 # 10x - "servant"
     'lumlet': ('lum-let', 'warm-return'),                # 10x - "overthrow"
     'lumsuk': ('lum-suk', 'rest-DOWN'),                  # 10x - "lighted/tarried" (directional)
-    'hanciamna': ('han-ciam-na', 'follow-promise-NMLZ'), # 10x - "wrestlings"
     'tuangsak': ('tuang-sak', 'ride-CAUS'),              # 10x - "set upon"
     'khiatsak': ('khiat-sak', 'depart-CAUS'),            # 10x - "cause to wander"
     'keusak': ('keu-sak', 'dig-CAUS'),                   # 10x - "blasted"
@@ -1822,7 +1816,6 @@ COMPOUND_WORDS = {
     'cithak': ('ci-thak', 'say-true'),                   # 16x - "said truly"
     'kuangdai': ('kuang-dai', 'trough-large'),           # 16x - "large trough"
     'taina': ('tai-na', 'stay-NMLZ'),                    # 16x - "dwelling"
-    'ommawk': ('om-mawk', 'exist-empty'),                # 16x - "void, desolate"
     'paktatte': ('pak-tat-te', 'share-cut-PL'),          # 16x - "portions"
     'langpangte': ('lang-pang-te', 'side-board-PL'),     # 16x - "sides, ribs"
     'bawngla': ('bawng-la', 'cattle-young.female'),      # 15x - "heifer"
@@ -2420,7 +2413,6 @@ COMPOUND_WORDS = {
     'kolte': ('kol-te', 'wheel-PL'),                       # 7x - "wheels"
     'sahna': ('sah-na', 'grind-NMLZ'),                     # 7x - "grinding"
     'innkuankuanin': ('inn-kuan-kuan-in', 'house-family~REDUP-ERG'), # 7x - compound
-    'apna': ('ap-na', 'cover-NMLZ'),                       # 7x - "covering"
     'nawksak': ('nawk-sak', 'again-CAUS'),                 # 7x - compound
     
     # Session 6 Round 11: Allomorph audit fixes - prevent over-segmentation
@@ -2506,7 +2498,6 @@ COMPOUND_WORDS = {
     'kuamte': ('kuam-te', 'plain-PL'),                     # plains/valleys
     'kuam': ('kuam', 'plain'),                             # base - plain/valley
     'huhte': ('huh-te', 'help-PL'),                        # helpers
-    'huh': ('huh', 'help'),                                # base - help
     
     # Session 6 Round 16: More over-segmentation fixes  
     'taktakte': ('taktak-te', 'genuine-PL'),               # genuine/true ones
@@ -2675,7 +2666,6 @@ COMPOUND_WORDS = {
     'phunna': ('phun-na', 'murmur-NMLZ'),                  # murmuring
     'phun': ('phun', 'murmur'),                            # base - murmur
     'kuangdaite': ('kuangdai-te', 'dish-PL'),              # dishes
-    'dai': ('dai', 'flat'),                                # base - flat
     'kilhnate': ('kilhna-te', 'clasp-PL'),                 # clasps/taches
     'kilhna': ('kilh-na', 'join-NMLZ'),                    # clasp
     'kilh': ('kilh', 'join'),                              # base - join
@@ -2711,7 +2701,6 @@ COMPOUND_WORDS = {
     'ciangkhutte': ('ciangkhut-te', 'stripe-PL'),          # stripes/white streaks
     
     # Round 29: High-frequency partial words
-    'gialpi': ('gial-pi', 'hail-big'),                     # grievous hail
     'pi': ('pi', 'grandmother'),                                   # base - big/great
     'palsatin': ('palsat-in', 'transgress-ERG'),           # transgressing
     'semsemin': ('semsem-in', 'breathe-ERG'),              # breathing/dying
@@ -2878,7 +2867,6 @@ COMPOUND_WORDS = {
     'len': ('len', 'net'),                                 # base - net
     'simsiam': ('sim-siam', 'count-make'),                 # network/workmanship
     'thuap': ('thu-ap', 'measure-span'),                   # span (measurement)
-    'ap': ('ap', 'entrust'),                                  # base - span
     'khutsiam': ('khut-siam', 'hand-skill'),               # workmanship
     'siam': ('siam', 'skill'),                             # base - skill
     
@@ -3895,7 +3883,6 @@ COMPOUND_WORDS = {
     'muantheih': ('muan-theih', 'trust-ABIL'),              # directeth (way)
     'nuamtak': ('nuam-tak', 'peace-true'),                 # in peace
     'ngaihsutpi': ('ngaih-sut-pi', 'think-measure-great'), # guide heart (wisdom)
-    'luhgawp': ('luh-gawp', 'enter-strike'),               # spoil dwelling
     'nuammawh': ('nuam-mawh', 'envy-wrong'),               # envious of wicked
     'al': ('al', 'cubit'),                                 # cubit
     'leengto': ('leeng-to', 'chariot-fly'),                # swallow (bird)
@@ -4241,7 +4228,6 @@ COMPOUND_WORDS = {
     'kiliansak': ('ki-lian-sak', 'REFL-great-CAUS'),           # exalt oneself
     'geelgeel': ('geel~geel', 'plan~REDUP'),                   # ponder, meditate, devise
     'cihcih': ('cih~cih', 'say.NOM~REDUP'),                        # say repeatedly, continually say
-    'thalpi': ('thal-pi', 'bow-great'),                        # bow (weapon)
     'kiuhkeuh': ('ki-uh-keuh', 'REFL-wash-INTENS'),            # thoroughly wash
     'siklukhu': ('sik-lukhu', 'iron-helmet'),                  # helmet, strength of head
     'minthannate': ('minthan-na-te', 'glory-NMLZ-PL'),         # glories, majesties
@@ -4258,7 +4244,6 @@ COMPOUND_WORDS = {
     'khialhkhak': ('khialh-khak', 'err-fall'),                 # stumble into sin
     'muhtangpi': ('muh-tangpi', 'see.II-before'),              # in sight of, before (eyes)
     'awkna': ('awk-na', 'trap-NMLZ'),                          # trap, snare, slaughter
-    'awk': ('awk', 'trap'),                                    # trap, snare
     # Round 89: KJV-verified vocabulary
     'sinkhamna': ('sin-kham-na', 'heart-tight-NMLZ'),          # anguish, distress
     'thungaihsut': ('thu-ngaihsut', 'word-think'),             # understanding, discretion
@@ -5380,7 +5365,6 @@ COMPOUND_WORDS = {
     'hawng': ('hawng', 'husk'),                                # husk
     'napi': ('napi', 'but'),                       # distress
     'khangsimna': ('khang-sim-na', 'generation-divide-NMLZ'),  # generations
-    'simna': ('sim-na', 'count-NMLZ'),                         # numbered
     'note': ('note', '2PL.PRO'),                               # you
     'sangna': ('sang-na', 'high-NMLZ'),                        # high places
     'ancilna': ('an-cil-na', 'corn-thresh-NMLZ'),              # threshingfloor
@@ -9280,7 +9264,6 @@ COMPOUND_WORDS = {
     'nawt': ('nawt', 'push'),                                # 9x - push/gore (Deut 33:17)
     'pataukohna': ('pa-tau-koh-na', 'male-signal-call-NMLZ'), # 8x - trumpet alarm (Num 10:9)
     'vatawt': ('vatawt', 'cuckoo'),                          # 6x - cuckoo bird (Lev 11:16)
-    'golpi': ('gol-pi', 'creature-great'),                   # 2x - great creature/whale
     'golpite': ('gol-pi-te', 'creature-great-PL'),           # 2x - whales/great creatures (Gen 1:21)
     'paneah': ('paneah', 'PANEAH'),                          # 1x - proper name (Zaphnath-paneah)
     'kikol': ('ki-kol', 'REFL-prevent'),                     # 1x - prevent/hinder
@@ -9299,20 +9282,13 @@ COMPOUND_WORDS = {
     'nasepte': ('nasep-te', 'work-PL'),                      # 12x - works (opaque nasep)
     'nasemte': ('nasem-te', 'servant-PL'),                   # 389x - servants (opaque nasem)
     'nasemin': ('nasem-in', 'servant-ERG'),                  # as servant
-    'naseppih': ('nasep-pih', 'work-APPL'),                  # 17x - work for/with
-    'naseppihte': ('nasep-pih-te', 'work-APPL-PL'),          # work for (plural)
     'nasepah': ('nasep-ah', 'work-LOC'),                     # 1x - at work
     'nasepin': ('nasep-in', 'work-ERG'),                     # 3x - work (ERG)
-    'nasepsa': ('nasep-sa', 'work-PAST'),                    # 3x - worked
     'nasepsak': ('nasep-sak', 'work-CAUS'),                  # 1x - cause to work
     'nasepteng': ('nasep-teng', 'work-dwell'),               # 1x - work continuously
-    'nasepnate': ('nasep-na-te', 'work-NMLZ-PL'),            # 48x - works (nominalized)
     'nasepnasa': ('nasep-na-sa', 'work-NMLZ-PAST'),          # 1x - worked (past nom)
-    'nasempa': ('nasem-pa', 'servant-male'),                 # 328x - male servant
-    'nasemnu': ('nasem-nu', 'servant-female'),               # 39x - female servant
     'nasemnute': ('nasem-nu-te', 'servant-female-PL'),       # 2x - female servants
     'nasempate': ('nasem-pa-te', 'servant-male-PL'),         # 2x - male servants
-    'nasemkhawm': ('nasem-khawm', 'servant-together'),       # 3x - fellow servant
     
     # Round 155: Fix remaining partials for 100% coverage
     # mawhbaang: guilty-alike (10x)
@@ -9355,15 +9331,12 @@ COMPOUND_WORDS = {
     'simmawhin': ('simmawh-in', 'blaspheme-ERG'),             # blaspheming
     # kikonate: kiko-na-te (2x)
     'kikonate': ('ki-ko-na-te', 'REFL-cry-NMLZ-PL'),          # 2x - cries
-    'kikona': ('ki-ko-na', 'REFL-cry-NMLZ'),                  # cry
     # vanpite: vanpi-te (2x)
     'vanpite': ('vanpi-te', 'sky.big-PL'),                    # 2x - heavens
-    'vanpi': ('vanpi', 'heaven'),                             # heaven (sky-big)
     # dakdak: dak~dak (2x)
     'dakdak': ('dak~dak', 'strong~REDUP'),                    # 2x - very strong
     # satgawpna: satgawp-na (2x) 
     'satgawpna': ('sat-gawp-na', 'strike-grasp-NMLZ'),        # 2x - striking
-    'satgawp': ('sat-gawp', 'strike-grasp'),                  # strike
     # kipzaw: kipzaw (2x)
     'kipzaw': ('kip-zaw', 'diligent-more'),                   # 2x - more diligent
     # ommawkna: ommawk-na (2x)
@@ -9376,9 +9349,7 @@ COMPOUND_WORDS = {
     # Round 156: More partial fixes
     'dak': ('dak', 'look'),                                   # 2x - look/gaze
     'kikhenthangte': ('ki-khen-thang-te', 'REFL-separate-ABIL-PL'), # 2x - dispersed ones
-    'kikhenthang': ('ki-khen-thang', 'REFL-separate-ABIL'),   # disperse/scatter
     'neihnate': ('neih-na-te', 'have-NMLZ-PL'),               # 2x - possessions
-    'neihna': ('neih-na', 'have-NMLZ'),                       # possession
     'luhgawpte': ('luh-gawp-te', 'enter-grasp-PL'),           # 2x - robbers/spoilers
     'luhgawp': ('luh-gawp', 'enter-grasp'),                   # rob/spoil
     'tehkak': ('teh-kak', 'measure-compare'),                 # 2x - compare/liken
@@ -9406,11 +9377,9 @@ COMPOUND_WORDS = {
     'khasiathuai': ('kha-siat-huai', 'spirit-evil-full'),     # 2x - compassion/moved
     'paisuakpah': ('pai-suak-pah', 'go-become-unable'),       # 2x - forthwith
     'mipite': ('mi-pi-te', 'person-great-PL'),                # 2x - multitude/nobles
-    'mipi': ('mi-pi', 'person-great'),                        # noble/great person
     'semsemzaw': ('sem~sem-zaw', 'serve~REDUP-more'),         # 2x - grow worse
     'gawpte': ('gawp-te', 'all-PL'),                          # 2x - gatherers
     'nauzawpa': ('nau-zaw-pa', 'child-more-male'),            # 2x - younger son
-    'nauzaw': ('nau-zaw', 'child-more'),                      # younger child
     'seppihna': ('sep-pih-na', 'work-APPL-NMLZ'),             # 2x - working together
     'khollohte': ('khol-loh-te', 'denounce-fail-PL'),         # 2x - uncomely/less honorable
     'kholloh': ('khol-loh', 'denounce-fail'),                 # less honorable
@@ -9424,7 +9393,6 @@ COMPOUND_WORDS = {
     'tawmluat': ('tawm-luat', 'produce-exceed'),              # 1x - too little
     'sihlohna': ('sih-loh-na', 'die-NEG-NMLZ'),               # 1x - not dead
     'thuneute': ('thu-neu-te', 'word-small-PL'),              # 1x - small matters
-    'thuneu': ('thu-neu', 'word-small'),                      # small matter
     'zingciang': ('zing-ciang', 'morning-then'),              # 1x - tomorrow
     'suksiatkhak': ('suk-siat-khak', 'make-destroy-stop'),    # 1x - perish/destroy
     'lahte': ('lah-te', 'lamp-PL'),                           # 1x - lamps/instruments
@@ -9448,7 +9416,6 @@ COMPOUND_WORDS = {
     'zuihlah': ('zuih-lah', 'follow-far'),                    # 1x - far off
     'omkhawmte': ('om-khawm-te', 'exist-gather-PL'),          # 1x - those with
     'lungkhauhnate': ('lung-khauh-na-te', 'heart-strong-NMLZ-PL'), # 1x - stubborn ways
-    'lungkhauhna': ('lung-khauh-na', 'heart-strong-NMLZ'),    # stubborn way
     'pilpennu': ('pil-pen-nu', 'learn-SUPER-female'),         # 1x - wise lady
     'pilpen': ('pil-pen', 'learn-SUPER'),                     # wisest
     "kileinapa,": ('ki-lei-na-pa', 'REFL-buy-NMLZ-male'),     # 1x - buyer (jubilee)
@@ -9489,7 +9456,6 @@ COMPOUND_WORDS = {
     'siangpente': ('siang-pen-te', 'holy-SUPER-PL'),          # 1x - most holy
     'siangpen': ('siang-pen', 'holy-SUPER'),                  # most holy
     'beinate': ('bei-na-te', 'stone-NMLZ-PL'),                # 1x - great stones
-    'beina': ('bei-na', 'stone-NMLZ'),                        # stones
     'nilohna': ('ni-loh-na', 'day-fail-NMLZ'),                # 1x - day and night
     "citakzaw,": ('ci-tak-zaw', 'say-true-more'),             # 1x - more faithful
     'citakzaw': ('ci-tak-zaw', 'say-true-more'),              # more faithful
@@ -9508,10 +9474,8 @@ COMPOUND_WORDS = {
     'thumawkna': ('thu-mawk-na', 'word-wonder-NMLZ'),         # 1x - vanity/leasing
     'panmunkip': ('pan-mun-kip', 'begin-place-diligent'),     # 1x - ordained strength
     'gamsialno': ('gam-sial-no', 'land-ride-young'),          # 1x - young unicorn
-    'gamsial': ('gam-sial', 'land-ride'),                     # unicorn
     'teitangzang': ('tei-tang-zang', 'wise-hold-measure'),    # 1x - spear
     'hatluate': ('hat-lua-te', 'strong-exceed-PL'),           # 1x - too strong
-    'hatlua': ('hat-lua', 'strong-exceed'),                   # too strong
     'kisuncip': ('ki-sun-cip', 'REFL-in-press'),              # 1x - cast down
     'kitelsiang': ('ki-tel-siang', 'REFL-know-clear'),        # 1x - understanding
     'tuaksuksuak': ('tuak-suk-suak', 'meet-move-become'),     # 1x - consume
@@ -9527,7 +9491,6 @@ COMPOUND_WORDS = {
     "kikhennate,": ('ki-khen-na-te', 'REFL-separate-NMLZ-PL'), # 1x
     'kikhennate': ('ki-khen-na-te', 'REFL-separate-NMLZ-PL'), # separations
     'sawlnate': ('sawl-na-te', 'send-NMLZ-PL'),               # 1x - sendings
-    'sawlna': ('sawl-na', 'send-NMLZ'),                       # sending
     'laknate': ('lak-na-te', 'take-NMLZ-PL'),                 # 1x - takings
     'lakna': ('lak-na', 'take-NMLZ'),                         # taking
     "hihnasate,": ('hih-nasa-te', 'be-much-PL'),              # 1x
@@ -9661,7 +9624,6 @@ COMPOUND_WORDS = {
     'lungdampihna': ('lungdam-pih-na', 'rejoice-APPL-NMLZ'),  # rejoicing together
     'khanglosak': ('khang-lo-sak', 'generation-NEG-CAUS'),    # not continue
     'nitnateng': ('nit-na-teng', 'defile-NMLZ-all'),          # defilements
-    'mittawpite': ('mit-tawp-i-te', 'eye-end-?-PL'),          # blind ones
     'ngamlah': ('ngam-lah', 'dare-far'),                      # far away
     'mawkmai': ('mawk-mai', 'wonder-face'),                   # wonder face
     'cihtakzawk': ('cih-tak-zawk', 'say-true-more'),          # speak more truly
@@ -9671,7 +9633,6 @@ COMPOUND_WORDS = {
     'sumbawlpa': ('sum-bawl-pa', 'money-make-male'),          # money maker
     'sangpena': ('sang-pen-a', 'high-SUPER-NOM'),             # most high
     'tutnate': ('tut-na-te', 'sleep-NMLZ-PL'),                # sleeps
-    'tutna': ('tut-na', 'sleep-NMLZ'),                        # sleep
     'nuampente': ('nuam-pen-te', 'pleased-SUPER-PL'),         # most pleased
     'nuampen': ('nuam-pen', 'pleased-SUPER'),                 # most pleased
     'ngahsunte': ('ngah-sun-te', 'get-time-PL'),              # getting times
@@ -9744,7 +9705,6 @@ COMPOUND_WORDS = {
     'nuihnate': ('nuih-na-te', 'laugh-NMLZ-PL'),              # laughs
     'nuihna': ('nuih-na', 'laugh-NMLZ'),                      # laugh
     'lungdamnate': ('lungdam-na-te', 'rejoice-NMLZ-PL'),      # rejoicings
-    'lungdamna': ('lungdam-na', 'rejoice-NMLZ'),              # rejoicing
     'silhnate': ('silh-na-te', 'clothe-NMLZ-PL'),             # clothings
     'silhna': ('silh-na', 'clothe-NMLZ'),                     # clothing
     'duhluatna': ('duh-luat-na', 'want-exceed-NMLZ'),         # excessive want
