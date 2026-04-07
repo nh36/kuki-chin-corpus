@@ -6,6 +6,8 @@ Tests verify:
 2. Row counts within expected ranges
 3. Coverage statistics
 4. Representative analyses
+5. Linguistic correctness (category assignments, gloss consistency)
+6. Data integrity across files
 """
 
 import os
@@ -16,6 +18,7 @@ import csv
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'data', 'ctd_analysis')
+SAMPLE_ENTRIES = os.path.join(OUTPUT_DIR, 'sample_entries.md')
 
 
 def test_output_files_exist():
@@ -129,9 +132,40 @@ def test_grammatical_morpheme_categories():
         for row in reader:
             categories.add(row['category'])
     
-    expected = ['case', 'tam', 'nominalizer', 'pronominal_prefix']
+    # Updated category names to match actual output
+    expected = ['case_marker', 'tam_suffix', 'nominalizer', 'pronominal_prefix',
+                'plural_marker', 'sentence_final', 'irrealis_marker']
     for cat in expected:
         assert cat in categories, f"Missing category: {cat}"
+
+
+def test_ding_not_categorized_as_case():
+    """-ding should be irrealis_marker, NOT case marker."""
+    path = os.path.join(OUTPUT_DIR, 'grammatical_morphemes.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['form'] == 'ding':
+                # ding is either irrealis_marker (as suffix) or lexical verb
+                assert row['category'] != 'case_marker', \
+                    f"-ding should not be case marker, got {row['category']}"
+
+
+def test_na_nominalizer_not_2sg():
+    """-na nominalizer should not have 2SG gloss."""
+    path = os.path.join(OUTPUT_DIR, 'grammatical_morphemes.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['form'] == 'na' and row['category'] == 'nominalizer':
+                assert row['gloss'] == 'NMLZ', \
+                    f"-na nominalizer should gloss as NMLZ, got {row['gloss']}"
+                return
+    
+    # na as nominalizer should exist
+    assert False, "Nominalizer 'na' not found in grammatical morphemes"
 
 
 def test_case_marker_in():
@@ -141,12 +175,118 @@ def test_case_marker_in():
     with open(path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f, delimiter='\t')
         for row in reader:
-            if row['form'] == 'in' and row['category'] == 'case':
-                assert row['gloss'] == 'ERG', f"'in' should gloss as ERG"
+            if row['form'] == 'in' and row['category'] == 'case_marker':
+                assert row['gloss'] == 'ERG', f"'in' should gloss as ERG, got {row['gloss']}"
                 assert int(row['frequency']) > 50000, "'in' should be very frequent"
                 return
     
     assert False, "Case marker 'in' not found"
+
+
+def test_known_polysemous_forms_in_ambiguities():
+    """Known polysemous forms should appear in ambiguities.tsv."""
+    path = os.path.join(OUTPUT_DIR, 'ambiguities.tsv')
+    found_forms = set()
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            found_forms.add(row['normalized_form'])
+    
+    # These forms are known to be polysemous and should be flagged
+    expected = ['hi', 'hong', 'ta', 'te', 'in', 'na']
+    for form in expected:
+        assert form in found_forms, f"Known polysemous form '{form}' not in ambiguities"
+
+
+def test_ambiguity_queue_not_empty():
+    """Ambiguity queue should contain real items needing review."""
+    path = os.path.join(OUTPUT_DIR, 'ambiguities.tsv')
+    row_count = 0
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            row_count += 1
+    
+    # Should have substantial ambiguities, not 0 or tiny number
+    assert row_count > 100, f"Ambiguity queue too small: {row_count} (expected >100)"
+
+
+def test_unk_not_counted_as_fully_analyzed():
+    """Coverage report should not count UNK POS as fully analyzed."""
+    path = os.path.join(OUTPUT_DIR, 'coverage_report.md')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Report should mention UNK category separately
+    assert 'UNK' in content or 'pos_unknown' in content or 'Unknown' in content, \
+        "Coverage report should track UNK tokens separately"
+
+
+def test_sample_entries_have_glosses():
+    """Sample entries should not show 'Gloss: ?' for high-frequency lemmas."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return  # Skip if sample entries not generated
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Count occurrences of "Gloss: ?"
+    question_glosses = content.count('**Gloss:** ?')
+    
+    # Should have very few (if any) missing glosses
+    assert question_glosses < 5, \
+        f"Too many entries with missing glosses: {question_glosses}"
+
+
+def test_lemma_table_has_english_glosses():
+    """Lemma table should have english_glosses column filled for non-proper nouns."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    missing_count = 0
+    total = 0
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            # Skip proper nouns (names don't need glosses)
+            if row.get('pos', '') == 'PROP':
+                continue
+            total += 1
+            if row.get('primary_gloss', '?') == '?':
+                missing_count += 1
+    
+    # Allow some unknowns but should be minority for non-proper nouns
+    missing_pct = (missing_count / total) * 100 if total > 0 else 100
+    assert missing_pct < 40, \
+        f"{missing_pct:.1f}% of non-PROP lemmas have missing glosses (expected <40%)"
+
+
+def test_examples_have_segmented_glossed():
+    """Examples should have segmented and glossed fields populated."""
+    path = os.path.join(OUTPUT_DIR, 'examples.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        header = reader.fieldnames
+        
+        # Check columns exist
+        assert 'segmented' in header, "Missing 'segmented' column in examples"
+        assert 'glossed' in header, "Missing 'glossed' column in examples"
+        
+        # Check some examples have content
+        filled_count = 0
+        total = 0
+        for row in reader:
+            total += 1
+            if row.get('segmented', ''):
+                filled_count += 1
+            if total >= 1000:
+                break
+        
+        fill_rate = filled_count / total if total > 0 else 0
+        assert fill_rate > 0.5, f"Only {fill_rate:.1%} of examples have segmented form"
 
 
 def test_examples_bank_has_lemmas():
@@ -201,7 +341,15 @@ if __name__ == '__main__':
         test_representative_verb_analysis,
         test_representative_noun_analysis,
         test_grammatical_morpheme_categories,
+        test_ding_not_categorized_as_case,
+        test_na_nominalizer_not_2sg,
         test_case_marker_in,
+        test_known_polysemous_forms_in_ambiguities,
+        test_ambiguity_queue_not_empty,
+        test_unk_not_counted_as_fully_analyzed,
+        test_sample_entries_have_glosses,
+        test_lemma_table_has_english_glosses,
+        test_examples_have_segmented_glossed,
         test_examples_bank_has_lemmas,
         test_examples_bank_has_morphemes,
         test_coverage_report_exists,

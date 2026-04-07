@@ -45,6 +45,114 @@ from analyze_morphemes import (
 from morphology.compounds import COMPOUND_WORDS
 
 # =============================================================================
+# GLOSS MAPPING: Convert analyzer glosses to English meanings
+# =============================================================================
+
+# Map common grammatical glosses to human-readable descriptions
+GLOSS_TO_ENGLISH = {
+    # Pronominal
+    '1SG': 'I/my', '2SG': 'you/your', '3SG': 'he/she/it',
+    '1PL': 'we/our', '1PL.INCL': 'we.inclusive', '1PL.EXCL': 'we.exclusive',
+    '2PL': 'you.all', '3PL': 'they/their',
+    # TAM
+    'PST': 'past', 'FUT': 'future', 'PERF': 'perfect', 'PFV': 'perfective',
+    'PROG': 'progressive', 'HAB': 'habitual', 'CONT': 'continuous',
+    'IRR': 'irrealis', 'PROSP': 'prospective',
+    # Case
+    'ERG': 'ergative', 'LOC': 'locative', 'ABL': 'ablative',
+    'COM': 'comitative', 'DAT': 'dative', 'GEN': 'genitive',
+    # Derivation
+    'NMLZ': 'nominalizer', 'CAUS': 'causative', 'APPL': 'applicative',
+    'REFL': 'reflexive', 'RECIP': 'reciprocal',
+    # Other
+    'PL': 'plural', 'NEG': 'negative', 'Q': 'question',
+    'IMP': 'imperative', 'HORT': 'hortative', 'DECL': 'declarative',
+    'EMPH': 'emphatic', 'TOP': 'topic', 'FOC': 'focus',
+    'ABIL': 'ability', 'COP': 'copula', 'EXCL': 'exclamative',
+    'SIM': 'similative', 'DIR': 'directional',
+    # Verbs with grammaticalized uses
+    'be': 'be', 'do': 'do', 'go': 'go', 'come': 'come',
+    'say': 'say', 'give': 'give', 'take': 'take', 'see': 'see',
+    # Common stems
+    'exist': 'exist/be', 'become': 'become', 'stand': 'stand',
+}
+
+# Known polysemous forms that need review
+POLYSEMOUS_FORMS = {
+    'hi': ['be', 'DECL', 'this'],
+    'in': ['ERG', 'house', 'IMP'],
+    'hong': ['come.DIR', 'DIR'],
+    'ta': ['PFV', 'child'],
+    'te': ['PL', 'small'],
+    'na': ['2SG', 'NMLZ', 'pain'],
+    'za': ['hundred', 'hear'],
+    'zo': ['finish', 'able'],
+    'pan': ['ABL', 'board', 'think'],
+    'tung': ['arrive', 'on/above'],
+    'thei': ['ABIL', 'know', 'fruit'],
+    'khat': ['one', 'a/some'],
+    'ding': ['PROSP', 'stand', 'IRR'],
+    'bang': ['SIM', 'what', 'wall'],
+    'tawh': ['COM', 'already'],
+}
+
+def get_english_gloss(stem: str, analyzer_gloss: str) -> str:
+    """
+    Get English meaning for a stem, using analyzer data.
+    
+    Priority:
+    1. ATOMIC_GLOSSES (most reliable)
+    2. VERB_STEMS / NOUN_STEMS
+    3. COMPOUND_WORDS
+    4. Grammatical gloss mapping
+    5. The analyzer gloss itself as fallback
+    """
+    stem_lower = stem.lower()
+    
+    # 1. Check ATOMIC_GLOSSES
+    if stem_lower in ATOMIC_GLOSSES:
+        return ATOMIC_GLOSSES[stem_lower]
+    
+    # 2. Check VERB_STEMS
+    if stem_lower in VERB_STEMS:
+        return VERB_STEMS[stem_lower]
+    
+    # 3. Check NOUN_STEMS
+    if stem_lower in NOUN_STEMS:
+        return NOUN_STEMS[stem_lower]
+    
+    # 4. Check COMPOUND_WORDS for stem
+    if stem_lower in COMPOUND_WORDS:
+        _, gloss = COMPOUND_WORDS[stem_lower]
+        # Convert compound gloss format
+        if '-' in gloss:
+            # e.g., 'disciple-PL' -> 'disciple'
+            base_gloss = gloss.split('-')[0]
+            if base_gloss and not base_gloss.isupper():
+                return base_gloss
+        elif not gloss.isupper():
+            return gloss
+    
+    # 5. Map grammatical glosses
+    if analyzer_gloss in GLOSS_TO_ENGLISH:
+        return GLOSS_TO_ENGLISH[analyzer_gloss]
+    
+    # 6. Try first part of hyphenated gloss
+    if '-' in analyzer_gloss:
+        first = analyzer_gloss.split('-')[0]
+        if first in GLOSS_TO_ENGLISH:
+            return GLOSS_TO_ENGLISH[first]
+        if not first.isupper() and first.isalpha():
+            return first
+    
+    # 7. If it's not all caps (grammatical marker), use as-is
+    if analyzer_gloss and not analyzer_gloss.isupper():
+        return analyzer_gloss
+    
+    # 8. Fallback
+    return '?'
+
+# =============================================================================
 # DATA CLASSES
 # =============================================================================
 
@@ -89,16 +197,20 @@ class LemmaEntry:
     lemma: str
     citation_form: str
     pos: str
-    glosses: Set[str] = field(default_factory=set)
+    primary_gloss: str = ''  # Best English gloss
+    all_glosses: Set[str] = field(default_factory=set)  # All attested glosses
+    english_glosses: Set[str] = field(default_factory=set)  # English meanings
     inflected_forms: Set[str] = field(default_factory=set)
     token_count: int = 0
     form_count: int = 0
     derivational_family: Set[str] = field(default_factory=set)
     compounds: Set[str] = field(default_factory=set)
     collocates: Dict[str, int] = field(default_factory=dict)
-    example_verses: List[Tuple[str, str, str]] = field(default_factory=list)  # (verse_id, tedim, kjv)
+    example_verses: List[Tuple[str, str, str, str, str]] = field(default_factory=list)  # (verse_id, tedim, kjv, segmented, glossed)
     polysemy_notes: str = ''
     grammaticalization_notes: str = ''
+    is_polysemous: bool = False
+    needs_review: bool = False
 
 @dataclass
 class GrammaticalMorpheme:
@@ -106,11 +218,14 @@ class GrammaticalMorpheme:
     form: str
     gloss: str
     category: str  # case, tam, particle, nominalizer, prefix, etc.
+    subcategory: str = ''  # More specific classification
     frequency: int = 0
     environments: Set[str] = field(default_factory=set)  # prefix, suffix, clitic, etc.
-    example_verses: List[Tuple[str, str, str]] = field(default_factory=list)
+    example_verses: List[Tuple[str, str, str, str, str]] = field(default_factory=list)  # With segmented/glossed
     ambiguity_notes: str = ''
+    review_reasons: List[str] = field(default_factory=list)
     status: str = 'auto'
+    is_polysemous: bool = False
 
 @dataclass
 class ExampleEntry:
@@ -126,75 +241,214 @@ class ExampleEntry:
     word_count: int
 
 # =============================================================================
-# MORPHEME CLASSIFICATION
+# MORPHEME CLASSIFICATION (Context-Sensitive)
 # =============================================================================
 
-# Grammatical morpheme categories
-GRAMMATICAL_CATEGORIES = {
-    'case': {
-        'in': 'ERG', 'ah': 'LOC', 'pan': 'ABL', 'tawh': 'COM',
-        'ding': 'PROSP', 'dingin': 'PROSP', 'bang': 'SIM',
+# Define grammatical categories with their gloss patterns
+# Format: category -> {form: set of valid glosses for this form in this category}
+MORPHEME_CATEGORIES = {
+    'case_marker': {
+        'in': {'ERG'},  # Ergative (not IMP, not house)
+        'ah': {'LOC', 'DAT'},  # Locative/dative
+        'pan': {'ABL'},  # Ablative (not 'board' or 'think')
+        'tawh': {'COM'},  # Comitative (not 'already')
     },
-    'tam': dict(TAM_SUFFIXES),
-    'nominalizer': dict(NOMINALIZERS),
-    'pronominal_prefix': dict(PRONOMINAL_PREFIXES),
-    'object_prefix': dict(OBJECT_PREFIXES),
-    'particle': {
-        'ahi': 'COP', 'hi': 'PROX', 'kha': 'DIST', 'le': 'and',
-        'leh': 'if/and', 'pen': 'TOP', 'zong': 'also', 'ham': 'also',
-        'mah': 'EMPH', 'bek': 'only', 'peuhmah': 'any', 'peuh': 'every',
+    'tam_suffix': {
+        'ta': {'PFV'},  # Perfective (not 'child')
+        'zo': {'COMPL'},  # Completive (not 'finish')
+        'khin': {'COMPL'},
+        'lai': {'CONT', 'still'},
+        'zel': {'CONT'},
+        'ngei': {'EXPER'},
+        'gige': {'HAB'},
+        'kik': {'again'},
+        'pah': {'INCH', 'immediately'},
+        'sak': {'CAUS', 'BEN'},
+        'pih': {'APPL'},
+    },
+    'irrealis_marker': {
+        'ding': {'IRR', 'PROSP'},  # NOT case marker
+        'dingin': {'IRR', 'PROSP'},
+    },
+    'plural_marker': {
+        'te': {'PL'},  # NOT nominalizer
+        'uh': {'PL'},
+    },
+    'nominalizer': {
+        'na': {'NMLZ'},  # Only when gloss is NMLZ, not 2SG
+    },
+    'pronominal_prefix': {
+        'ka': {'1SG'},
+        'na': {'2SG'},  # Only when gloss is 2SG, not NMLZ
+        'a': {'3SG'},
+        'i': {'1PL.INCL'},
+        'ei': {'1PL.EXCL'},
+    },
+    'object_marker': {
+        'hong': {'1SG.OBJ', '1PL.OBJ', 'DIR'},  # Directional/object
+        'min': {'2SG.OBJ'},
     },
     'sentence_final': {
-        'hi': 'DECL', 'hiam': 'Q', 'hen': 'HORT', 'in': 'IMP',
-        'ang': 'FUT', 'ding': 'PROSP', 've': 'EMPH', 'eh': 'EXCL',
-    },
-    'directional': {
-        'khia': 'out', 'lut': 'in', 'tung': 'up', 'tang': 'down',
-        'pai': 'go', 'hong': 'come.DIR', 'kik': 'back',
+        'hi': {'DECL'},  # Only sentence-final declarative
+        'hiam': {'Q'},
+        'hen': {'HORT'},
+        'ang': {'FUT'},
+        've': {'EMPH'},
+        'eh': {'EXCL'},
     },
     'auxiliary': {
-        'thei': 'ABIL', 'theih': 'ABIL.II', 'nuam': 'want',
-        'ding': 'PROSP', 'kik': 'again', 'zel': 'CONT',
-        'ngei': 'EXPER', 'gige': 'HAB',
+        'thei': {'ABIL'},  # Ability (not 'know' or 'fruit')
+        'theih': {'ABIL.II'},
+        'nuam': {'want'},
+    },
+    'directional_verb': {
+        'khia': {'out'},
+        'lut': {'in'},
+        'pai': {'go'},
+        'hong': {'come'},  # As main verb
+        'kik': {'back'},
+        'tung': {'arrive', 'up'},
+        'tang': {'down'},
+    },
+    'particle': {
+        'pen': {'TOP'},
+        'zong': {'also'},
+        'mah': {'EMPH'},
+        'bek': {'only'},
+        'peuh': {'every', 'any'},
+        'leh': {'and', 'if'},
+        'le': {'and'},
+    },
+    'copula': {
+        'ahi': {'COP', 'be.3SG'},
+        'ahih': {'COP.REL', 'be.3SG.REL'},
     },
 }
 
-def classify_morpheme(morpheme: str, gloss: str, position: str = 'suffix') -> Tuple[str, str]:
+def classify_morpheme_contextual(morpheme: str, gloss: str, position: str, 
+                                 is_final: bool = False, full_gloss: str = '') -> Tuple[str, str, bool]:
     """
-    Classify a morpheme as lexical or grammatical.
+    Classify a morpheme using context-sensitive rules.
+    
+    Args:
+        morpheme: The morpheme form
+        gloss: The gloss for this specific morpheme
+        position: 'prefix', 'stem', 'suffix', or 'standalone'
+        is_final: Whether this is the final morpheme in the word
+        full_gloss: The full word gloss for context
     
     Returns:
-        (category, subcategory) - e.g., ('grammatical', 'case') or ('lexical', 'verb')
+        (type, category, is_polysemous) where:
+        - type: 'grammatical', 'lexical', or 'ambiguous'
+        - category: specific category like 'case_marker', 'tam_suffix', etc.
+        - is_polysemous: whether this form needs review
     """
     m_lower = morpheme.lower()
+    g_upper = gloss.upper() if gloss else ''
     
-    # Check grammatical categories
-    for cat, morphemes in GRAMMATICAL_CATEGORIES.items():
-        if m_lower in morphemes:
-            return ('grammatical', cat)
+    # Check if this is a known polysemous form
+    is_polysemous = m_lower in POLYSEMOUS_FORMS
     
-    # Check if it's a known stem
+    # Check each category with gloss matching
+    for category, forms in MORPHEME_CATEGORIES.items():
+        if m_lower in forms:
+            valid_glosses = forms[m_lower]
+            # Check if the actual gloss matches expected glosses for this category
+            if g_upper in valid_glosses or gloss in valid_glosses:
+                return ('grammatical', category, is_polysemous)
+    
+    # Special handling for ambiguous cases based on position and context
+    
+    # 'na' as prefix = 2SG, as suffix = NMLZ
+    if m_lower == 'na':
+        if position == 'prefix' and g_upper == '2SG':
+            return ('grammatical', 'pronominal_prefix', True)
+        elif position == 'suffix' and g_upper == 'NMLZ':
+            return ('grammatical', 'nominalizer', True)
+        elif g_upper == '2SG':
+            return ('grammatical', 'pronominal_prefix', True)
+        elif g_upper == 'NMLZ':
+            return ('grammatical', 'nominalizer', True)
+        # Unknown use
+        return ('ambiguous', 'unknown', True)
+    
+    # 'hi' at end of sentence = DECL, otherwise lexical verb 'be'
+    if m_lower == 'hi':
+        if is_final and g_upper == 'DECL':
+            return ('grammatical', 'sentence_final', True)
+        elif gloss.lower() in ('be', 'this', 'prox'):
+            return ('lexical', 'verb', True)
+        return ('ambiguous', 'copula_or_decl', True)
+    
+    # 'ding' is TAM/irrealis, not case
+    if m_lower == 'ding':
+        if g_upper in ('IRR', 'PROSP'):
+            return ('grammatical', 'irrealis_marker', True)
+        elif gloss.lower() == 'stand':
+            return ('lexical', 'verb', True)
+        return ('grammatical', 'irrealis_marker', True)  # Default to grammatical
+    
+    # 'te' is plural marker, not nominalizer
+    if m_lower == 'te':
+        if g_upper == 'PL':
+            return ('grammatical', 'plural_marker', True)
+        elif gloss.lower() == 'small':
+            return ('lexical', 'adjective', True)
+        return ('grammatical', 'plural_marker', True)
+    
+    # 'in' as suffix = ERG, as standalone/prefix = different
+    if m_lower == 'in':
+        if position == 'suffix' and g_upper == 'ERG':
+            return ('grammatical', 'case_marker', True)
+        elif g_upper == 'IMP':
+            return ('grammatical', 'sentence_final', True)
+        elif gloss.lower() == 'house':
+            return ('lexical', 'noun', True)
+        return ('grammatical', 'case_marker', True)
+    
+    # 'hong' as directional vs object marker
+    if m_lower == 'hong':
+        if position == 'prefix':
+            return ('grammatical', 'object_marker', True)
+        elif gloss.lower() in ('come', 'come.dir'):
+            return ('grammatical', 'directional_verb', True)
+        return ('grammatical', 'directional_verb', True)
+    
+    # Check if it's a known lexical stem
     if m_lower in VERB_STEMS:
-        return ('lexical', 'verb')
+        return ('lexical', 'verb', is_polysemous)
     if m_lower in NOUN_STEMS:
-        return ('lexical', 'noun')
+        return ('lexical', 'noun', is_polysemous)
     if m_lower in VERB_STEM_PAIRS:
-        return ('lexical', 'verb_ii')
+        return ('lexical', 'verb_ii', is_polysemous)
     
     # Check function words
     if m_lower in FUNCTION_WORDS:
-        return ('grammatical', 'function')
+        return ('grammatical', 'function_word', is_polysemous)
     
     # Check if gloss suggests grammatical function
     gram_glosses = {'ERG', 'LOC', 'ABL', 'COM', 'DAT', 'GEN', 'POSS',
                     'PL', 'SG', 'NMLZ', 'CAUS', 'APPL', 'REFL', 'RECIP',
-                    'PST', 'FUT', 'PERF', 'PROG', 'HAB', 'CONT',
+                    'PST', 'FUT', 'PERF', 'PROG', 'HAB', 'CONT', 'PFV',
                     '1SG', '2SG', '3SG', '1PL', '2PL', '3PL',
-                    'Q', 'NEG', 'IMP', 'HORT', 'DECL', 'EXCL'}
-    if gloss.upper() in gram_glosses:
-        return ('grammatical', 'inflection')
+                    'Q', 'NEG', 'IMP', 'HORT', 'DECL', 'EXCL',
+                    'IRR', 'PROSP', 'ABIL', 'COP', 'TOP', 'EMPH'}
+    if g_upper in gram_glosses:
+        return ('grammatical', 'inflection', is_polysemous)
     
-    return ('lexical', 'unknown')
+    # Default to lexical unknown
+    return ('lexical', 'unknown', is_polysemous)
+
+
+def classify_morpheme(morpheme: str, gloss: str, position: str = 'suffix') -> Tuple[str, str]:
+    """
+    Legacy wrapper for classify_morpheme_contextual.
+    
+    Returns:
+        (category, subcategory) - e.g., ('grammatical', 'case') or ('lexical', 'verb')
+    """
+    mtype, cat, _ = classify_morpheme_contextual(morpheme, gloss, position)
+    return (mtype, cat)
 
 def extract_lemma(surface: str, segmentation: str, gloss: str, pos: str) -> str:
     """
@@ -468,49 +722,73 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                 wf.sample_verses.append(verse_id)
             
             # Aggregate lemmas (skip unknowns and function words for main lemma table)
-            if confidence != 'unknown' and pos not in ('FUNC', 'UNK'):
+            if confidence != 'unknown' and pos not in ('FUNC',):
                 if lemma not in lemmas:
+                    # Get primary English gloss for this lemma
+                    primary_gloss = get_english_gloss(lemma, gloss.split('-')[0] if '-' in gloss else gloss)
                     lemmas[lemma] = LemmaEntry(
                         lemma=lemma,
                         citation_form=lemma,
-                        pos=pos
+                        pos=pos,
+                        primary_gloss=primary_gloss,
+                        is_polysemous=lemma.lower() in POLYSEMOUS_FORMS,
+                        needs_review=pos == 'UNK' or lemma.lower() in POLYSEMOUS_FORMS
                     )
                 lem = lemmas[lemma]
-                lem.glosses.add(gloss.split('-')[0] if '-' in gloss else gloss)
+                
+                # Collect all attested glosses
+                first_gloss = gloss.split('-')[0] if '-' in gloss else gloss
+                lem.all_glosses.add(first_gloss)
+                
+                # Try to get English meaning
+                eng = get_english_gloss(stem_form, first_gloss)
+                if eng and eng != '?':
+                    lem.english_glosses.add(eng)
+                
                 lem.inflected_forms.add(normalized)
                 lem.token_count += 1
                 if len(lem.example_verses) < 10:
-                    lem.example_verses.append((verse_id, tedim_text, kjv_text))
+                    lem.example_verses.append((verse_id, tedim_text, kjv_text, segmentation, gloss))
                 
                 # Track collocations
                 if prev_lemma and prev_lemma != lemma:
                     collocations[prev_lemma][lemma] += 1
                     collocations[lemma][prev_lemma] += 1
             
-            # Extract grammatical morphemes
+            # Extract grammatical morphemes using context-sensitive classification
             gloss_parts = gloss.split('-')
             seg_parts = segmentation.replace("'", '').split('-')
+            is_final_word = (idx == len(words) - 1)
             
             for i, (seg_part, gloss_part) in enumerate(zip(seg_parts, gloss_parts)):
-                cat_type, cat_sub = classify_morpheme(seg_part, gloss_part)
+                position = 'prefix' if i == 0 else ('suffix' if i == len(seg_parts) - 1 else 'stem')
+                is_final_morph = (i == len(seg_parts) - 1)
+                
+                cat_type, cat_sub, is_poly = classify_morpheme_contextual(
+                    seg_part, gloss_part, position, 
+                    is_final=is_final_morph and is_final_word,
+                    full_gloss=gloss
+                )
+                
                 if cat_type == 'grammatical':
-                    gm_key = seg_part.lower()
+                    # Use form+gloss as key to distinguish polysemous uses
+                    gm_key = (seg_part.lower(), gloss_part)
                     if gm_key not in gram_morphemes:
                         gram_morphemes[gm_key] = GrammaticalMorpheme(
                             form=seg_part.lower(),
                             gloss=gloss_part,
-                            category=cat_sub
+                            category=cat_sub,
+                            is_polysemous=is_poly
                         )
                     gm = gram_morphemes[gm_key]
                     gm.frequency += 1
-                    env = 'prefix' if i == 0 else ('suffix' if i == len(seg_parts) - 1 else 'infix')
-                    gm.environments.add(env)
+                    gm.environments.add(position)
                     if len(gm.example_verses) < 10:
-                        gm.example_verses.append((verse_id, tedim_text, kjv_text))
+                        gm.example_verses.append((verse_id, tedim_text, kjv_text, segmentation, gloss))
             
             prev_lemma = lemma if pos not in ('FUNC', 'UNK', 'PROP') else prev_lemma
     
-    # Post-process: add collocates to lemmas
+    # Post-process: add collocates to lemmas and finalize glosses
     for lemma_key, lem in lemmas.items():
         if lemma_key in collocations:
             lem.collocates = dict(sorted(
@@ -518,11 +796,27 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                 key=lambda x: -x[1]
             )[:20])
         lem.form_count = len(lem.inflected_forms)
+        
+        # Set primary gloss from English glosses if available
+        if lem.english_glosses:
+            # Pick the most informative (non-grammatical) gloss
+            eng_list = sorted(lem.english_glosses)
+            for g in eng_list:
+                if g not in GLOSS_TO_ENGLISH.values() and g != '?':
+                    lem.primary_gloss = g
+                    break
+            if not lem.primary_gloss or lem.primary_gloss == '?':
+                lem.primary_gloss = eng_list[0] if eng_list else '?'
+        
+        # Mark polysemous items
+        if len(lem.english_glosses) > 2:
+            lem.is_polysemous = True
+            lem.needs_review = True
     
     return tokens, wordforms, lemmas, gram_morphemes
 
 def select_examples(lemmas: Dict[str, LemmaEntry], 
-                    gram_morphemes: Dict[str, GrammaticalMorpheme],
+                    gram_morphemes: Dict,
                     target_per_item: int = 5) -> List[ExampleEntry]:
     """
     Select high-quality examples for each lemma and grammatical morpheme.
@@ -530,8 +824,10 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
     Selection criteria:
     - shortest: Shortest verse containing the item
     - canonical: Most frequent/typical usage
-    - transparent: Clear morphological structure
+    - transparent: Clear morphological structure (few affixes)
     - marked: Secondary or less prototypical function
+    
+    Examples now include segmented and glossed forms.
     """
     examples = []
     
@@ -540,6 +836,7 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
         if not entry.example_verses:
             continue
         
+        # example_verses format: (verse_id, tedim, kjv, segmented, glossed)
         # Sort by verse length to find shortest
         sorted_by_len = sorted(entry.example_verses, key=lambda x: len(x[1]))
         
@@ -549,32 +846,63 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
         if sorted_by_len:
             ex = sorted_by_len[0]
             if ex[0] not in selected:
+                # ex format: (verse_id, tedim, kjv, segmented, glossed)
+                segmented = ex[3] if len(ex) > 3 else ''
+                glossed = ex[4] if len(ex) > 4 else ''
                 examples.append(ExampleEntry(
                     item_type='lemma',
                     item_id=lemma,
                     verse_id=ex[0],
                     tedim_text=ex[1],
-                    segmented='',  # Will be filled by caller if needed
-                    glossed='',
+                    segmented=segmented,
+                    glossed=glossed,
                     kjv_text=ex[2],
                     example_quality='shortest',
                     word_count=len(ex[1].split())
                 ))
                 selected.add(ex[0])
         
-        # 2-4. Additional diverse examples
+        # Find transparent example (minimal affixation)
+        transparent_found = False
+        for ex in sorted_by_len:
+            if len(selected) >= target_per_item:
+                break
+            if ex[0] in selected:
+                continue
+            segmented = ex[3] if len(ex) > 3 else ''
+            # Prefer examples with minimal segmentation (fewer hyphens)
+            if segmented and segmented.count('-') <= 2:
+                glossed = ex[4] if len(ex) > 4 else ''
+                examples.append(ExampleEntry(
+                    item_type='lemma',
+                    item_id=lemma,
+                    verse_id=ex[0],
+                    tedim_text=ex[1],
+                    segmented=segmented,
+                    glossed=glossed,
+                    kjv_text=ex[2],
+                    example_quality='transparent',
+                    word_count=len(ex[1].split())
+                ))
+                selected.add(ex[0])
+                transparent_found = True
+                break
+        
+        # Fill remaining with canonical/additional examples
         for ex in entry.example_verses:
             if len(selected) >= target_per_item:
                 break
             if ex[0] not in selected:
+                segmented = ex[3] if len(ex) > 3 else ''
+                glossed = ex[4] if len(ex) > 4 else ''
                 quality = 'canonical' if len(selected) == 1 else 'additional'
                 examples.append(ExampleEntry(
                     item_type='lemma',
                     item_id=lemma,
                     verse_id=ex[0],
                     tedim_text=ex[1],
-                    segmented='',
-                    glossed='',
+                    segmented=segmented,
+                    glossed=glossed,
                     kjv_text=ex[2],
                     example_quality=quality,
                     word_count=len(ex[1].split())
@@ -582,23 +910,26 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
                 selected.add(ex[0])
     
     # Process grammatical morphemes
-    for form, entry in gram_morphemes.items():
+    for key, entry in gram_morphemes.items():
         if not entry.example_verses:
             continue
         
+        # Sort by verse length to find shortest
         sorted_by_len = sorted(entry.example_verses, key=lambda x: len(x[1]))
         selected = set()
         
         for i, ex in enumerate(sorted_by_len[:target_per_item]):
             if ex[0] not in selected:
                 quality = 'shortest' if i == 0 else ('canonical' if i == 1 else 'additional')
+                segmented = ex[3] if len(ex) > 3 else ''
+                glossed = ex[4] if len(ex) > 4 else ''
                 examples.append(ExampleEntry(
                     item_type='morpheme',
-                    item_id=form,
+                    item_id=entry.form,  # Use the form, not the key (form, gloss)
                     verse_id=ex[0],
                     tedim_text=ex[1],
-                    segmented='',
-                    glossed='',
+                    segmented=segmented,
+                    glossed=glossed,
                     kjv_text=ex[2],
                     example_quality=quality,
                     word_count=len(ex[1].split())
@@ -608,29 +939,91 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
     return examples
 
 def collect_ambiguities(tokens: List[TokenAnalysis], 
-                        wordforms: Dict) -> List[Dict]:
-    """Collect ambiguous analyses into review queue."""
+                        wordforms: Dict, lemmas: Dict) -> List[Dict]:
+    """
+    Collect ambiguous analyses into a comprehensive review queue.
+    
+    Flag items when:
+    - Same normalized form maps to multiple segmentations
+    - Same normalized form maps to multiple lemmas
+    - Same form has both lexical and grammatical analyses
+    - Form belongs to known polysemous inventory
+    - Form has unstable POS assignment
+    - Gloss contains '?' 
+    - POS is UNK
+    """
     ambiguities = []
     seen = set()
     
+    # Track forms with multiple analyses
+    form_to_segmentations = defaultdict(set)
+    form_to_lemmas = defaultdict(set)
+    form_to_pos = defaultdict(set)
+    form_to_tokens = defaultdict(list)
+    
     for token in tokens:
-        if token.is_ambiguous:
-            key = (token.normalized_form, token.segmentation)
-            if key not in seen:
-                seen.add(key)
-                ambiguities.append({
-                    'surface_form': token.surface_form,
-                    'normalized_form': token.normalized_form,
-                    'segmentation': token.segmentation,
-                    'gloss': token.gloss,
-                    'confidence': token.confidence,
-                    'pos': token.pos,
-                    'first_verse': token.verse_id,
-                    'frequency': sum(1 for t in tokens 
-                                    if t.normalized_form == token.normalized_form),
-                    'issue': 'unknown' if token.confidence == 'unknown' else 'partial_gloss',
-                    'status': 'pending_review'
-                })
+        nf = token.normalized_form
+        form_to_segmentations[nf].add(token.segmentation)
+        form_to_lemmas[nf].add(token.lemma)
+        form_to_pos[nf].add(token.pos)
+        form_to_tokens[nf].append(token)
+    
+    # Build review queue
+    for nf, token_list in form_to_tokens.items():
+        if nf in seen:
+            continue
+        
+        review_reasons = []
+        first_token = token_list[0]
+        freq = len(token_list)
+        
+        # Check for multiple segmentations
+        if len(form_to_segmentations[nf]) > 1:
+            review_reasons.append(f'multi_segmentation:{len(form_to_segmentations[nf])}')
+        
+        # Check for multiple lemmas
+        if len(form_to_lemmas[nf]) > 1:
+            review_reasons.append(f'multi_lemma:{len(form_to_lemmas[nf])}')
+        
+        # Check for multiple POS
+        if len(form_to_pos[nf]) > 1:
+            review_reasons.append(f'multi_pos:{"|".join(sorted(form_to_pos[nf]))}')
+        
+        # Check for known polysemous forms
+        if nf in POLYSEMOUS_FORMS:
+            review_reasons.append('known_polysemous')
+        
+        # Check for unknown
+        if first_token.pos == 'UNK':
+            review_reasons.append('pos_unknown')
+        
+        # Check for partial gloss
+        if '?' in first_token.gloss:
+            review_reasons.append('partial_gloss')
+        
+        # Check for low confidence
+        if first_token.confidence in ('low', 'unknown'):
+            review_reasons.append(f'confidence_{first_token.confidence}')
+        
+        # Add to queue if any issues found
+        if review_reasons:
+            seen.add(nf)
+            ambiguities.append({
+                'surface_form': first_token.surface_form,
+                'normalized_form': nf,
+                'segmentation': first_token.segmentation,
+                'alt_segmentations': '|'.join(sorted(form_to_segmentations[nf] - {first_token.segmentation})),
+                'gloss': first_token.gloss,
+                'lemma': first_token.lemma,
+                'alt_lemmas': '|'.join(sorted(form_to_lemmas[nf] - {first_token.lemma})),
+                'pos': first_token.pos,
+                'alt_pos': '|'.join(sorted(form_to_pos[nf] - {first_token.pos})),
+                'confidence': first_token.confidence,
+                'first_verse': first_token.verse_id,
+                'frequency': freq,
+                'review_reasons': '|'.join(review_reasons),
+                'status': 'pending_review'
+            })
     
     return sorted(ambiguities, key=lambda x: -x['frequency'])
 
@@ -708,9 +1101,10 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerow([
-            'lemma', 'citation_form', 'pos', 'glosses', 'inflected_forms',
-            'token_count', 'form_count', 'compounds', 'top_collocates',
-            'example_verses', 'polysemy_notes', 'grammaticalization_notes'
+            'lemma', 'citation_form', 'pos', 'primary_gloss', 'english_glosses',
+            'all_glosses', 'inflected_forms', 'token_count', 'form_count', 
+            'compounds', 'top_collocates', 'example_verses', 
+            'is_polysemous', 'needs_review', 'polysemy_notes', 'grammaticalization_notes'
         ])
         
         for lem in lem_list:
@@ -721,16 +1115,19 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
             
             writer.writerow([
                 lem.lemma, lem.citation_form, lem.pos,
-                '|'.join(sorted(lem.glosses)),
+                lem.primary_gloss,
+                '|'.join(sorted(lem.english_glosses)) if lem.english_glosses else '',
+                '|'.join(sorted(lem.all_glosses)) if lem.all_glosses else '',
                 '|'.join(sorted(lem.inflected_forms)[:20]),
                 lem.token_count, lem.form_count,
                 '|'.join(sorted(lem.compounds)),
                 colloc_str, ex_str,
+                '1' if lem.is_polysemous else '0',
+                '1' if lem.needs_review else '0',
                 lem.polysemy_notes, lem.grammaticalization_notes
             ])
 
-def write_grammatical_morphemes_tsv(gram_morphemes: Dict[str, GrammaticalMorpheme], 
-                                     output_path: str):
+def write_grammatical_morphemes_tsv(gram_morphemes: Dict, output_path: str):
     """Write grammatical morphemes table."""
     # Sort by frequency
     gm_list = sorted(gram_morphemes.values(), key=lambda x: -x.frequency)
@@ -738,17 +1135,19 @@ def write_grammatical_morphemes_tsv(gram_morphemes: Dict[str, GrammaticalMorphem
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerow([
-            'form', 'gloss', 'category', 'frequency', 'environments',
-            'example_verses', 'ambiguity_notes', 'status'
+            'form', 'gloss', 'category', 'subcategory', 'frequency', 'environments',
+            'example_verses', 'is_polysemous', 'review_reasons', 'status'
         ])
         
         for gm in gm_list:
             ex_str = '|'.join(ex[0] for ex in gm.example_verses[:5])
             
             writer.writerow([
-                gm.form, gm.gloss, gm.category, gm.frequency,
+                gm.form, gm.gloss, gm.category, gm.subcategory, gm.frequency,
                 '|'.join(sorted(gm.environments)), ex_str,
-                gm.ambiguity_notes, gm.status
+                '1' if gm.is_polysemous else '0',
+                '|'.join(gm.review_reasons) if gm.review_reasons else '',
+                gm.status
             ])
 
 def write_examples_tsv(examples: List[ExampleEntry], output_path: str):
@@ -757,13 +1156,14 @@ def write_examples_tsv(examples: List[ExampleEntry], output_path: str):
         writer = csv.writer(f, delimiter='\t')
         writer.writerow([
             'item_type', 'item_id', 'verse_id', 'tedim_text',
-            'kjv_text', 'example_quality', 'word_count'
+            'segmented', 'glossed', 'kjv_text', 'example_quality', 'word_count'
         ])
         
         for ex in examples:
             writer.writerow([
                 ex.item_type, ex.item_id, ex.verse_id, ex.tedim_text,
-                ex.kjv_text, ex.example_quality, ex.word_count
+                ex.segmented, ex.glossed, ex.kjv_text, 
+                ex.example_quality, ex.word_count
             ])
 
 def write_ambiguities_tsv(ambiguities: List[Dict], output_path: str):
@@ -771,16 +1171,19 @@ def write_ambiguities_tsv(ambiguities: List[Dict], output_path: str):
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerow([
-            'surface_form', 'normalized_form', 'segmentation', 'gloss',
-            'confidence', 'pos', 'first_verse', 'frequency', 'issue', 'status'
+            'surface_form', 'normalized_form', 'segmentation', 'alt_segmentations',
+            'gloss', 'lemma', 'alt_lemmas', 'pos', 'alt_pos', 'confidence',
+            'first_verse', 'frequency', 'review_reasons', 'status'
         ])
         
         for amb in ambiguities:
             writer.writerow([
                 amb['surface_form'], amb['normalized_form'],
-                amb['segmentation'], amb['gloss'], amb['confidence'],
-                amb['pos'], amb['first_verse'], amb['frequency'],
-                amb['issue'], amb['status']
+                amb['segmentation'], amb.get('alt_segmentations', ''),
+                amb['gloss'], amb.get('lemma', ''), amb.get('alt_lemmas', ''),
+                amb['pos'], amb.get('alt_pos', ''), amb['confidence'],
+                amb['first_verse'], amb['frequency'],
+                amb.get('review_reasons', ''), amb['status']
             ])
 
 def write_coverage_report(tokens: List[TokenAnalysis], wordforms: Dict,
@@ -788,16 +1191,35 @@ def write_coverage_report(tokens: List[TokenAnalysis], wordforms: Dict,
                           ambiguities: List[Dict], output_path: str):
     """Write coverage statistics report."""
     total_tokens = len(tokens)
-    analyzed = sum(1 for t in tokens if t.confidence in ('high', 'medium'))
-    partial = sum(1 for t in tokens if t.confidence == 'low')
-    unknown = sum(1 for t in tokens if t.confidence == 'unknown')
     
-    coverage = 100 * analyzed / total_tokens if total_tokens else 0
+    # More nuanced coverage categories:
+    # - fully_analyzed: high/medium confidence AND known POS
+    # - needs_review: known POS but has issues (polysemous, multi-analysis)
+    # - partial: low confidence (has ?)
+    # - unknown: confidence unknown OR POS is UNK
+    
+    fully_analyzed = sum(1 for t in tokens 
+                         if t.confidence in ('high', 'medium') and t.pos != 'UNK')
+    needs_review = sum(1 for t in tokens 
+                       if t.confidence in ('high', 'medium') and t.pos != 'UNK'
+                       and t.normalized_form in POLYSEMOUS_FORMS)
+    partial = sum(1 for t in tokens if t.confidence == 'low')
+    pos_unknown = sum(1 for t in tokens if t.pos == 'UNK')
+    gloss_unknown = sum(1 for t in tokens if t.confidence == 'unknown')
+    
+    # Effective coverage excludes UNK POS tokens
+    effective_analyzed = fully_analyzed - needs_review  # Non-ambiguous fully analyzed
+    coverage = 100 * fully_analyzed / total_tokens if total_tokens else 0
+    effective_coverage = 100 * effective_analyzed / total_tokens if total_tokens else 0
     
     # POS distribution
     pos_counts = defaultdict(int)
     for t in tokens:
         pos_counts[t.pos] += 1
+    
+    # Count lemmas needing review
+    lemmas_need_review = sum(1 for l in lemmas.values() if l.needs_review)
+    lemmas_polysemous = sum(1 for l in lemmas.values() if l.is_polysemous)
     
     report = f"""# Tedim Chin Bible Analysis Coverage Report
 
@@ -808,11 +1230,15 @@ Generated: {__import__('datetime').datetime.now().isoformat()}
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | Total tokens | {total_tokens:,} | 100% |
-| Fully analyzed | {analyzed:,} | {100*analyzed/total_tokens:.2f}% |
-| Partial analysis | {partial:,} | {100*partial/total_tokens:.2f}% |
-| Unknown | {unknown:,} | {100*unknown/total_tokens:.4f}% |
+| Fully analyzed (known POS) | {fully_analyzed:,} | {100*fully_analyzed/total_tokens:.2f}% |
+| Fully analyzed (non-ambiguous) | {effective_analyzed:,} | {100*effective_analyzed/total_tokens:.2f}% |
+| Needs review (polysemous) | {needs_review:,} | {100*needs_review/total_tokens:.2f}% |
+| Partial analysis (has ?) | {partial:,} | {100*partial/total_tokens:.2f}% |
+| Unknown POS | {pos_unknown:,} | {100*pos_unknown/total_tokens:.2f}% |
+| Unknown gloss | {gloss_unknown:,} | {100*gloss_unknown/total_tokens:.4f}% |
 
-**Coverage: {coverage:.4f}%**
+**Lexicographic Coverage: {coverage:.2f}%** (tokens with known POS)
+**Effective Coverage: {effective_coverage:.2f}%** (excluding ambiguous items)
 
 ## Inventory Counts
 
@@ -820,8 +1246,10 @@ Generated: {__import__('datetime').datetime.now().isoformat()}
 |----------|-------|
 | Distinct wordforms | {len(wordforms):,} |
 | Lemmas | {len(lemmas):,} |
+| Lemmas needing review | {lemmas_need_review:,} |
+| Polysemous lemmas | {lemmas_polysemous:,} |
 | Grammatical morphemes | {len(gram_morphemes):,} |
-| Items needing review | {len(ambiguities):,} |
+| Items in review queue | {len(ambiguities):,} |
 
 ## Part of Speech Distribution
 
@@ -851,27 +1279,40 @@ Generated: {__import__('datetime').datetime.now().isoformat()}
     report += f"""
 ## Top 20 Lemmas by Frequency
 
-| Lemma | POS | Token Count | Form Count |
-|-------|-----|-------------|------------|
+| Lemma | POS | Gloss | Token Count | Form Count |
+|-------|-----|-------|-------------|------------|
 """
     top_lemmas = sorted(lemmas.values(), key=lambda x: -x.token_count)[:20]
     for lem in top_lemmas:
-        report += f"| {lem.lemma} | {lem.pos} | {lem.token_count:,} | {lem.form_count} |\n"
+        gloss = lem.primary_gloss if lem.primary_gloss else '?'
+        report += f"| {lem.lemma} | {lem.pos} | {gloss} | {lem.token_count:,} | {lem.form_count} |\n"
+    
+    # Summarize review reasons
+    reason_counts = defaultdict(int)
+    for amb in ambiguities:
+        for reason in amb.get('review_reasons', '').split('|'):
+            if reason:
+                reason_counts[reason.split(':')[0]] += 1
     
     report += f"""
 ## Ambiguity Summary
 
-- Total ambiguous wordforms: {len(ambiguities)}
-- Unknown tokens: {sum(1 for a in ambiguities if a['issue'] == 'unknown')}
-- Partial glosses: {sum(1 for a in ambiguities if a['issue'] == 'partial_gloss')}
+- Total items in review queue: {len(ambiguities)}
+- Known polysemous forms: {sum(1 for a in ambiguities if 'known_polysemous' in a.get('review_reasons', ''))}
+- Multiple segmentations: {reason_counts.get('multi_segmentation', 0)}
+- Multiple lemmas: {reason_counts.get('multi_lemma', 0)}
+- Multiple POS: {reason_counts.get('multi_pos', 0)}
+- Unknown POS: {reason_counts.get('pos_unknown', 0)}
+- Partial glosses: {reason_counts.get('partial_gloss', 0)}
 
-### Top 10 Most Frequent Ambiguous Forms
+### Top 10 Most Frequent Review Items
 
-| Form | Frequency | Issue |
-|------|-----------|-------|
+| Form | Frequency | Review Reasons |
+|------|-----------|----------------|
 """
     for amb in ambiguities[:10]:
-        report += f"| {amb['surface_form']} | {amb['frequency']} | {amb['issue']} |\n"
+        reasons = amb.get('review_reasons', 'unknown')
+        report += f"| {amb['surface_form']} | {amb['frequency']} | {reasons} |\n"
     
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(report)
@@ -918,7 +1359,7 @@ def main():
     print(f"  Selected {len(examples):,} examples")
     
     print("Collecting ambiguities...")
-    ambiguities = collect_ambiguities(tokens, wordforms)
+    ambiguities = collect_ambiguities(tokens, wordforms, lemmas)
     print(f"  Found {len(ambiguities):,} ambiguous forms")
     
     print("Writing output files...")

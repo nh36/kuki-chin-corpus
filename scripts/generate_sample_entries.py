@@ -76,7 +76,6 @@ def load_examples() -> Dict[str, List[dict]]:
                 examples[item] = []
             examples[item].append(row)
     return examples
-    return examples
 
 
 def select_lexical_stems(lemmas: Dict[str, dict], n: int = 70) -> List[dict]:
@@ -140,30 +139,31 @@ def select_grammatical_words(lemmas: Dict[str, dict], morphemes: Dict[str, dict]
 
 
 def select_affixes(morphemes: Dict[str, dict], n: int = 10) -> List[dict]:
-    """Select n affixes/clitics."""
+    """Select n affixes/clitics from diverse categories."""
     affixes = []
+    seen_forms = set()  # Avoid duplicates
     
-    # Case markers
-    case_markers = [m for m in morphemes.values() if m['category'] == 'case']
-    case_markers.sort(key=lambda x: -int(x['frequency']))
+    # Categories in order of priority
+    categories = [
+        ('case_marker', 2),
+        ('tam_suffix', 2),
+        ('irrealis_marker', 1),
+        ('pronominal_prefix', 2),
+        ('plural_marker', 1),
+        ('sentence_final', 1),
+        ('nominalizer', 1),
+        ('auxiliary', 1),
+        ('directional_verb', 1),
+    ]
     
-    # TAM markers
-    tam_markers = [m for m in morphemes.values() if m['category'] == 'tam']
-    tam_markers.sort(key=lambda x: -int(x['frequency']))
-    
-    # Pronominal prefixes
-    pronominal = [m for m in morphemes.values() if m['category'] == 'pronominal_prefix']
-    pronominal.sort(key=lambda x: -int(x['frequency']))
-    
-    # Nominalizers
-    nominalizers = [m for m in morphemes.values() if m['category'] == 'nominalizer']
-    nominalizers.sort(key=lambda x: -int(x['frequency']))
-    
-    # Select mix
-    affixes.extend(case_markers[:3])
-    affixes.extend(tam_markers[:2])
-    affixes.extend(pronominal[:3])
-    affixes.extend(nominalizers[:2])
+    for category, count in categories:
+        items = [m for m in morphemes.values() 
+                 if m['category'] == category and m['form'] not in seen_forms]
+        items.sort(key=lambda x: -int(x['frequency']))
+        for m in items[:count]:
+            if len(affixes) < n:
+                affixes.append(m)
+                seen_forms.add(m['form'])
     
     return affixes[:n]
 
@@ -179,7 +179,8 @@ def get_entry_examples(item: str, all_examples: Dict[str, List[dict]], n: int = 
         result.append({
             'verse_id': ex['verse_id'],
             'tedim': ex.get('tedim_text', ''),
-            'gloss': '',
+            'segmented': ex.get('segmented', ''),
+            'glossed': ex.get('glossed', ''),
             'english': ex.get('kjv_text', '')
         })
     return result
@@ -192,20 +193,47 @@ def format_lexical_entry(lemma: dict, examples: List[Dict[str, str]]) -> str:
     lines.append("")
     lines.append(f"**Citation form:** {lemma.get('citation_form', lemma['lemma'])}")
     lines.append(f"**POS:** {lemma['pos']}")
-    lines.append(f"**Gloss:** {lemma.get('english_glosses', '?')}")
+    
+    # Use primary_gloss first, fall back to english_glosses
+    gloss = lemma.get('primary_gloss', '')
+    if not gloss or gloss == '?':
+        eng_glosses = lemma.get('english_glosses', '')
+        if eng_glosses:
+            gloss = eng_glosses.split('|')[0] if '|' in eng_glosses else eng_glosses
+    lines.append(f"**Gloss:** {gloss if gloss else '?'}")
+    
+    # Show all English glosses if multiple
+    all_eng = lemma.get('english_glosses', '')
+    if all_eng and '|' in all_eng:
+        lines.append(f"**All glosses:** {all_eng.replace('|', ', ')}")
+    
     lines.append(f"**Frequency:** {lemma['token_count']} tokens")
     
-    # Attested forms
-    forms = lemma.get('attested_forms', '').split('; ')[:5]
-    if forms and forms[0]:
-        lines.append(f"**Attested forms:** {', '.join(forms)}")
+    # Attested forms - field is now 'inflected_forms' with pipe delimiter
+    forms_str = lemma.get('inflected_forms', '')
+    if forms_str:
+        forms = forms_str.split('|')[:5]
+        if forms and forms[0]:
+            lines.append(f"**Attested forms:** {', '.join(forms)}")
+    
+    # Polysemy flag
+    if lemma.get('is_polysemous') == '1':
+        lines.append(f"**Note:** Polysemous - needs review")
     
     # Examples
     if examples:
         lines.append("")
         lines.append("**Examples:**")
         for i, ex in enumerate(examples[:3], 1):
-            lines.append(f"{i}. [{ex['verse_id']}] {ex.get('tedim', '')} — {ex.get('english', '')}")
+            tedim = ex.get('tedim', '')
+            english = ex.get('english', '')
+            segmented = ex.get('segmented', '')
+            glossed = ex.get('glossed', '')
+            lines.append(f"{i}. [{ex['verse_id']}] {tedim}")
+            if segmented and glossed:
+                lines.append(f"   *{segmented}* / {glossed}")
+            if english:
+                lines.append(f"   — {english}")
     
     lines.append("")
     return '\n'.join(lines)
@@ -219,7 +247,15 @@ def format_grammatical_entry(item: dict, examples: List[Dict[str, str]]) -> str:
     lines.append("")
     lines.append(f"**Citation form:** {item.get('citation_form', lemma)}")
     lines.append(f"**POS:** {item.get('pos', 'FUNC')}")
-    lines.append(f"**Gloss:** {item.get('english_glosses', item.get('gloss', '?'))}")
+    
+    # Get gloss from primary_gloss or english_glosses
+    gloss = item.get('primary_gloss', '')
+    if not gloss or gloss == '?':
+        eng_glosses = item.get('english_glosses', item.get('gloss', ''))
+        if eng_glosses:
+            gloss = eng_glosses.split('|')[0] if '|' in eng_glosses else eng_glosses
+    lines.append(f"**Gloss:** {gloss if gloss else '?'}")
+    
     lines.append(f"**Category:** {item.get('category', 'function word')}")
     freq = item.get('token_count', item.get('frequency', '?'))
     lines.append(f"**Frequency:** {freq} tokens")
@@ -228,7 +264,11 @@ def format_grammatical_entry(item: dict, examples: List[Dict[str, str]]) -> str:
         lines.append("")
         lines.append("**Examples:**")
         for i, ex in enumerate(examples[:3], 1):
-            lines.append(f"{i}. [{ex['verse_id']}] {ex.get('tedim', '')} — {ex.get('english', '')}")
+            tedim = ex.get('tedim', '')
+            english = ex.get('english', '')
+            lines.append(f"{i}. [{ex['verse_id']}] {tedim}")
+            if english:
+                lines.append(f"   — {english}")
     
     lines.append("")
     return '\n'.join(lines)
@@ -240,8 +280,8 @@ def format_affix_entry(morpheme: dict, examples: List[Dict[str, str]]) -> str:
     form = morpheme['form']
     category = morpheme['category']
     
-    # Determine if prefix or suffix
-    if category in ('pronominal_prefix', 'object_prefix'):
+    # Determine if prefix or suffix based on category
+    if category in ('pronominal_prefix', 'object_prefix', 'object_marker'):
         display = f"{form}-"
     else:
         display = f"-{form}"
@@ -256,13 +296,21 @@ def format_affix_entry(morpheme: dict, examples: List[Dict[str, str]]) -> str:
     # Environments
     envs = morpheme.get('environments', '')
     if envs:
-        lines.append(f"**Environments:** {envs[:100]}...")
+        lines.append(f"**Environments:** {envs}")
+    
+    # Polysemy note
+    if morpheme.get('is_polysemous') == '1':
+        lines.append(f"**Note:** Polysemous form")
     
     if examples:
         lines.append("")
         lines.append("**Examples:**")
         for i, ex in enumerate(examples[:3], 1):
-            lines.append(f"{i}. [{ex['verse_id']}] {ex.get('tedim', '')} — {ex.get('english', '')}")
+            tedim = ex.get('tedim', '')
+            english = ex.get('english', '')
+            lines.append(f"{i}. [{ex['verse_id']}] {tedim}")
+            if english:
+                lines.append(f"   — {english}")
     
     lines.append("")
     return '\n'.join(lines)
