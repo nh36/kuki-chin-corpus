@@ -1,6 +1,6 @@
 # Tedim Chin Bible Analysis Coverage Report
 
-Generated: 2026-04-07T21:35:05.905067
+Generated: 2026-04-07T21:59:21.383839
 
 ## Overall Statistics
 
@@ -23,8 +23,8 @@ Generated: 2026-04-07T21:35:05.905067
 |----------|-------|
 | Distinct wordforms | 22,023 |
 | Lemmas | 7,952 |
-| Lemmas needing review | 1,610 |
-| Polysemous lemmas | 229 |
+| Lemmas needing review | 1,813 |
+| Polysemous lemmas | 262 |
 | Grammatical morphemes | 480 |
 | Items in review queue | 4,144 |
 
@@ -61,26 +61,26 @@ Generated: 2026-04-07T21:35:05.905067
 
 | Lemma | POS | Gloss | Token Count | Form Count |
 |-------|-----|-------|-------------|------------|
-| hi | V | this | 54,836 | 103 |
-| ding | V | stand | 25,225 | 39 |
-| hong | V | come | 15,578 | 3 |
+| hi | V | DECL | 54,836 | 103 |
+| ding | V | IRR | 25,225 | 39 |
+| hong | V | ? | 15,578 | 3 |
 | mi | N | person | 14,743 | 76 |
 | ci | V | say | 11,934 | 111 |
-| ciang | UNK | animal | 10,643 | 28 |
-| thu | N | portion | 10,608 | 204 |
-| ahi | V | be.3SG | 8,634 | 7 |
-| tung | V | above | 8,218 | 49 |
-| topa | N | lord | 7,900 | 6 |
-| om | V | be | 6,767 | 88 |
-| pasian | N | god | 5,934 | 8 |
-| pai | V | pour | 5,819 | 119 |
-| ahih | V | be.3SG.REL | 5,804 | 4 |
-| pan | V | begin | 5,686 | 23 |
+| ciang | UNK | then | 10,643 | 28 |
+| thu | N | word | 10,608 | 204 |
+| ahi | V | ? | 8,634 | 7 |
+| tung | V | on | 8,218 | 49 |
+| topa | N | Lord | 7,900 | 6 |
+| om | V | exist | 6,767 | 88 |
+| pasian | N | God | 5,934 | 8 |
+| pai | V | go | 5,819 | 119 |
+| ahih | V | ? | 5,804 | 4 |
+| pan | V | ABL | 5,686 | 23 |
 | khat | N | one | 5,547 | 20 |
-| thei | V | fig | 4,743 | 98 |
+| thei | V | know | 4,743 | 98 |
 | gam | N | land | 4,681 | 80 |
-| pia | V | offer | 4,014 | 71 |
-| ama | UNK | ? | 3,770 | 4 |
+| pia | V | give | 4,014 | 71 |
+| ama | UNK | 3SG.POSS | 3,770 | 4 |
 
 ## Ambiguity Summary
 

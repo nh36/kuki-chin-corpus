@@ -96,32 +96,92 @@ POLYSEMOUS_FORMS = {
     'tawh': ['COM', 'already'],
 }
 
+# High-frequency items that need strict sanity checking
+# Maps lemma -> dominant function based on corpus analysis
+HIGH_FREQUENCY_SEMANTIC_MAP = {
+    'hi': {'dominant': 'DECL', 'type': 'grammatical', 'note': 'sentence-final declarative marker (88% of uses)'},
+    'ding': {'dominant': 'IRR', 'type': 'grammatical', 'note': 'irrealis/prospective marker'},
+    'hong': {'dominant': 'DIR', 'type': 'grammatical', 'note': 'directional (toward speaker)'},
+    'ci': {'dominant': 'say', 'type': 'lexical', 'note': 'quotative verb'},
+    'ahi': {'dominant': 'be.3SG', 'type': 'grammatical', 'note': 'copula 3rd person'},
+    'ahih': {'dominant': 'be.NOM', 'type': 'grammatical', 'note': 'copula nominalized'},
+    'tung': {'dominant': 'on', 'type': 'lexical', 'note': 'on/above; also "arrive"'},
+    'om': {'dominant': 'exist', 'type': 'lexical', 'note': 'exist/be present'},
+    'pai': {'dominant': 'go', 'type': 'lexical', 'note': 'go (not pour)'},
+    'pan': {'dominant': 'ABL', 'type': 'grammatical', 'note': 'ablative case marker'},
+    'thei': {'dominant': 'know', 'type': 'lexical', 'note': 'know/able (not fig)'},
+    'thu': {'dominant': 'word', 'type': 'lexical', 'note': 'word/matter (not portion)'},
+    'mu': {'dominant': 'see', 'type': 'lexical', 'note': 'see (not kiss)'},
+    'kha': {'dominant': 'spirit', 'type': 'lexical', 'note': 'spirit/month (polysemous)'},
+    'khat': {'dominant': 'one', 'type': 'lexical', 'note': 'one/a (numeral/article)'},
+    'ta': {'dominant': 'PFV', 'type': 'grammatical', 'note': 'perfective aspect marker'},
+    'te': {'dominant': 'PL', 'type': 'grammatical', 'note': 'plural marker'},
+    'in': {'dominant': 'ERG', 'type': 'grammatical', 'note': 'ergative case marker'},
+    'na': {'dominant': 'NMLZ', 'type': 'grammatical', 'note': 'nominalizer (also 2SG prefix)'},
+    'lai': {'dominant': 'place', 'type': 'lexical', 'note': 'place/middle'},
+    'mahmah': {'dominant': 'very', 'type': 'lexical', 'note': 'intensifier'},
+}
+
+# Glosses that are clearly grammatical (not lexical)
+GRAMMATICAL_GLOSSES = {
+    'DECL', 'IRR', 'PROSP', 'PFV', 'PL', 'ERG', 'LOC', 'ABL', 'COM', 'DAT',
+    'NMLZ', 'CAUS', 'APPL', '1SG', '2SG', '3SG', '1PL', '2PL', '3PL',
+    '1PL.INCL', '1PL.EXCL', 'REFL', 'RECIP', 'NEG', 'Q', 'IMP', 'HORT',
+    'EMPH', 'TOP', 'FOC', 'PERF', 'CONT', 'HAB', 'DIR', 'CVB', 'QUOT',
+}
+
+def is_grammatical_gloss(gloss: str) -> bool:
+    """Check if a gloss is purely grammatical."""
+    if not gloss:
+        return False
+    # Check base gloss (before hyphen)
+    base = gloss.split('-')[0] if '-' in gloss else gloss
+    # Check for .I/.II verb forms
+    if '.' in base:
+        base = base.split('.')[0]
+    return base.upper() == base and base in GRAMMATICAL_GLOSSES
+
 def get_english_gloss(stem: str, analyzer_gloss: str) -> str:
     """
     Get English meaning for a stem, using analyzer data.
     
     Priority:
-    1. ATOMIC_GLOSSES (most reliable)
-    2. VERB_STEMS / NOUN_STEMS
-    3. COMPOUND_WORDS
-    4. Grammatical gloss mapping
-    5. The analyzer gloss itself as fallback
+    1. HIGH_FREQUENCY_SEMANTIC_MAP (corpus-validated dominant glosses)
+    2. If analyzer_gloss is clearly lexical (not all caps), use it
+    3. VERB_STEMS / NOUN_STEMS
+    4. COMPOUND_WORDS
+    5. Grammatical gloss mapping
+    6. The analyzer gloss itself as fallback
     """
     stem_lower = stem.lower()
     
-    # 1. Check ATOMIC_GLOSSES
-    if stem_lower in ATOMIC_GLOSSES:
-        return ATOMIC_GLOSSES[stem_lower]
+    # 1. Check HIGH_FREQUENCY_SEMANTIC_MAP for corpus-validated glosses
+    if stem_lower in HIGH_FREQUENCY_SEMANTIC_MAP:
+        sem_info = HIGH_FREQUENCY_SEMANTIC_MAP[stem_lower]
+        # Return the dominant gloss (which is corpus-validated)
+        return sem_info['dominant']
     
-    # 2. Check VERB_STEMS
+    # 2. If analyzer_gloss is clearly lexical (not all caps), prefer it
+    if analyzer_gloss and not analyzer_gloss.isupper():
+        # Strip Form II markers for cleaner output
+        clean_gloss = analyzer_gloss.replace('.I', '').replace('.II', '')
+        if clean_gloss.isalpha():
+            return clean_gloss
+    
+    # 3. Check VERB_STEMS
     if stem_lower in VERB_STEMS:
-        return VERB_STEMS[stem_lower]
+        gloss = VERB_STEMS[stem_lower]
+        return gloss.replace('.I', '').replace('.II', '')
     
-    # 3. Check NOUN_STEMS
+    # 4. Check NOUN_STEMS
     if stem_lower in NOUN_STEMS:
         return NOUN_STEMS[stem_lower]
     
-    # 4. Check COMPOUND_WORDS for stem
+    # 5. Check ATOMIC_GLOSSES (but not for polysemous items)
+    if stem_lower in ATOMIC_GLOSSES and stem_lower not in POLYSEMOUS_FORMS:
+        return ATOMIC_GLOSSES[stem_lower]
+    
+    # 6. Check COMPOUND_WORDS for stem
     if stem_lower in COMPOUND_WORDS:
         _, gloss = COMPOUND_WORDS[stem_lower]
         # Convert compound gloss format
@@ -133,11 +193,11 @@ def get_english_gloss(stem: str, analyzer_gloss: str) -> str:
         elif not gloss.isupper():
             return gloss
     
-    # 5. Map grammatical glosses
+    # 7. Map grammatical glosses
     if analyzer_gloss in GLOSS_TO_ENGLISH:
         return GLOSS_TO_ENGLISH[analyzer_gloss]
     
-    # 6. Try first part of hyphenated gloss
+    # 8. Try first part of hyphenated gloss
     if '-' in analyzer_gloss:
         first = analyzer_gloss.split('-')[0]
         if first in GLOSS_TO_ENGLISH:
@@ -145,11 +205,11 @@ def get_english_gloss(stem: str, analyzer_gloss: str) -> str:
         if not first.isupper() and first.isalpha():
             return first
     
-    # 7. If it's not all caps (grammatical marker), use as-is
+    # 9. If it's not all caps (grammatical marker), use as-is
     if analyzer_gloss and not analyzer_gloss.isupper():
         return analyzer_gloss
     
-    # 8. Fallback
+    # 10. Fallback
     return '?'
 
 # =============================================================================
@@ -197,8 +257,11 @@ class LemmaEntry:
     lemma: str
     citation_form: str
     pos: str
-    primary_gloss: str = ''  # Best English gloss
+    primary_gloss: str = ''  # Best English gloss (corpus-validated)
+    gloss_candidates: List[str] = field(default_factory=list)  # All gloss candidates
+    review_gloss_summary: str = ''  # For ambiguous items: "be | DECL | this"
     all_glosses: Set[str] = field(default_factory=set)  # All attested glosses
+    gloss_counts: Dict[str, int] = field(default_factory=dict)  # Frequency per gloss
     english_glosses: Set[str] = field(default_factory=set)  # English meanings
     inflected_forms: Set[str] = field(default_factory=set)
     token_count: int = 0
@@ -211,6 +274,8 @@ class LemmaEntry:
     grammaticalization_notes: str = ''
     is_polysemous: bool = False
     needs_review: bool = False
+    entry_status: str = 'auto'  # 'clean', 'polysemous_review', 'mixed_lex_gram', 'unsafe_gloss'
+    is_grammatical: bool = False  # True if primarily grammatical function
 
 @dataclass
 class GrammaticalMorpheme:
@@ -621,6 +686,130 @@ def normalize_form(word: str) -> str:
     # Lowercase for matching
     return word.lower()
 
+
+def _finalize_lemma_gloss(lem: LemmaEntry) -> None:
+    """
+    Finalize primary gloss using corpus frequency evidence.
+    
+    Strategy:
+    1. For known high-frequency items, use curated semantic map
+    2. For polysemous items, use frequency-dominant gloss (if >70%)
+    3. Otherwise, mark for review with gloss summary
+    """
+    lemma_lower = lem.lemma.lower()
+    
+    # Build gloss candidates sorted by frequency
+    sorted_glosses = sorted(lem.gloss_counts.items(), key=lambda x: -x[1])
+    lem.gloss_candidates = [g for g, _ in sorted_glosses[:5]]
+    
+    # Check for known high-frequency semantic mappings
+    if lemma_lower in HIGH_FREQUENCY_SEMANTIC_MAP:
+        sem_info = HIGH_FREQUENCY_SEMANTIC_MAP[lemma_lower]
+        
+        # Check if corpus supports the expected dominant gloss
+        if sorted_glosses:
+            top_gloss, top_count = sorted_glosses[0]
+            dominance = top_count / lem.token_count if lem.token_count > 0 else 0
+            
+            # If the item is primarily grammatical, mark it
+            if sem_info['type'] == 'grammatical':
+                lem.is_grammatical = True
+                
+                # Check if grammatical use dominates (>60%)
+                gram_count = sum(c for g, c in lem.gloss_counts.items() 
+                               if is_grammatical_gloss(g))
+                gram_ratio = gram_count / lem.token_count if lem.token_count > 0 else 0
+                
+                if gram_ratio > 0.6:
+                    # Use expected grammatical gloss
+                    lem.primary_gloss = sem_info['dominant']
+                    lem.entry_status = 'clean' if gram_ratio > 0.8 else 'polysemous_review'
+                else:
+                    # Mixed use - needs review
+                    lem.primary_gloss = ''
+                    lem.review_gloss_summary = ' | '.join(lem.gloss_candidates[:3])
+                    lem.entry_status = 'mixed_lex_gram'
+                    lem.needs_review = True
+            else:
+                # Lexical item - use corpus-dominant lexical gloss
+                lexical_glosses = [(g, c) for g, c in sorted_glosses 
+                                  if not is_grammatical_gloss(g)]
+                if lexical_glosses:
+                    lem.primary_gloss = get_english_gloss(lem.lemma, lexical_glosses[0][0])
+                    lex_dominance = lexical_glosses[0][1] / lem.token_count
+                    if lex_dominance > 0.7:
+                        lem.entry_status = 'clean'
+                    else:
+                        lem.entry_status = 'polysemous_review'
+                        lem.needs_review = True
+                else:
+                    lem.primary_gloss = sem_info['dominant']
+        
+        lem.grammaticalization_notes = sem_info.get('note', '')
+        return
+    
+    # For non-high-frequency items, use corpus evidence
+    if not sorted_glosses:
+        lem.primary_gloss = '?'
+        lem.entry_status = 'unsafe_gloss'
+        lem.needs_review = True
+        return
+    
+    top_gloss, top_count = sorted_glosses[0]
+    dominance = top_count / lem.token_count if lem.token_count > 0 else 0
+    
+    # Check for grammatical vs lexical split
+    gram_count = sum(c for g, c in lem.gloss_counts.items() if is_grammatical_gloss(g))
+    lex_count = lem.token_count - gram_count
+    
+    # Strong grammatical dominance
+    if gram_count > lex_count * 2 and gram_count > 100:
+        lem.is_grammatical = True
+        lem.primary_gloss = top_gloss
+        lem.entry_status = 'clean'
+        return
+    
+    # Mixed lexical-grammatical
+    if gram_count > 0 and lex_count > 0 and min(gram_count, lex_count) / max(gram_count, lex_count) > 0.2:
+        lem.entry_status = 'mixed_lex_gram'
+        lem.review_gloss_summary = ' | '.join(lem.gloss_candidates[:3])
+        lem.needs_review = True
+        # Use the dominant non-grammatical gloss
+        lex_glosses = [(g, c) for g, c in sorted_glosses if not is_grammatical_gloss(g)]
+        if lex_glosses:
+            lem.primary_gloss = get_english_gloss(lem.lemma, lex_glosses[0][0])
+        else:
+            lem.primary_gloss = top_gloss
+        return
+    
+    # Clear dominance (>70%) - assign confidently
+    if dominance > 0.7:
+        lem.primary_gloss = get_english_gloss(lem.lemma, top_gloss)
+        lem.entry_status = 'clean'
+        return
+    
+    # Multiple competing glosses - polysemous review
+    if len(sorted_glosses) >= 2:
+        second_count = sorted_glosses[1][1]
+        competition_ratio = second_count / top_count if top_count > 0 else 0
+        
+        if competition_ratio > 0.3:
+            # Significant competition between glosses
+            lem.entry_status = 'polysemous_review'
+            lem.review_gloss_summary = ' | '.join(lem.gloss_candidates[:3])
+            lem.needs_review = True
+            lem.is_polysemous = True
+            # Still set primary to most frequent
+            lem.primary_gloss = get_english_gloss(lem.lemma, top_gloss)
+            return
+    
+    # Default: use top gloss
+    lem.primary_gloss = get_english_gloss(lem.lemma, top_gloss)
+    lem.entry_status = 'clean' if dominance > 0.5 else 'polysemous_review'
+    if lem.entry_status == 'polysemous_review':
+        lem.needs_review = True
+
+
 # =============================================================================
 # MAIN ANALYSIS PIPELINE
 # =============================================================================
@@ -724,21 +913,23 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
             # Aggregate lemmas (skip unknowns and function words for main lemma table)
             if confidence != 'unknown' and pos not in ('FUNC',):
                 if lemma not in lemmas:
-                    # Get primary English gloss for this lemma
-                    primary_gloss = get_english_gloss(lemma, gloss.split('-')[0] if '-' in gloss else gloss)
                     lemmas[lemma] = LemmaEntry(
                         lemma=lemma,
                         citation_form=lemma,
                         pos=pos,
-                        primary_gloss=primary_gloss,
                         is_polysemous=lemma.lower() in POLYSEMOUS_FORMS,
                         needs_review=pos == 'UNK' or lemma.lower() in POLYSEMOUS_FORMS
                     )
                 lem = lemmas[lemma]
                 
-                # Collect all attested glosses
+                # Collect all attested glosses with frequency counts
                 first_gloss = gloss.split('-')[0] if '-' in gloss else gloss
                 lem.all_glosses.add(first_gloss)
+                lem.gloss_counts[first_gloss] = lem.gloss_counts.get(first_gloss, 0) + 1
+                
+                # Track if this is a grammatical use
+                if is_grammatical_gloss(first_gloss):
+                    lem.is_grammatical = True
                 
                 # Try to get English meaning
                 eng = get_english_gloss(stem_form, first_gloss)
@@ -788,7 +979,7 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
             
             prev_lemma = lemma if pos not in ('FUNC', 'UNK', 'PROP') else prev_lemma
     
-    # Post-process: add collocates to lemmas and finalize glosses
+    # Post-process: finalize glosses using corpus frequency evidence
     for lemma_key, lem in lemmas.items():
         if lemma_key in collocations:
             lem.collocates = dict(sorted(
@@ -797,21 +988,8 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
             )[:20])
         lem.form_count = len(lem.inflected_forms)
         
-        # Set primary gloss from English glosses if available
-        if lem.english_glosses:
-            # Pick the most informative (non-grammatical) gloss
-            eng_list = sorted(lem.english_glosses)
-            for g in eng_list:
-                if g not in GLOSS_TO_ENGLISH.values() and g != '?':
-                    lem.primary_gloss = g
-                    break
-            if not lem.primary_gloss or lem.primary_gloss == '?':
-                lem.primary_gloss = eng_list[0] if eng_list else '?'
-        
-        # Mark polysemous items
-        if len(lem.english_glosses) > 2:
-            lem.is_polysemous = True
-            lem.needs_review = True
+        # Determine primary gloss using corpus frequency evidence
+        _finalize_lemma_gloss(lem)
     
     return tokens, wordforms, lemmas, gram_morphemes
 
@@ -1101,10 +1279,12 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerow([
-            'lemma', 'citation_form', 'pos', 'primary_gloss', 'english_glosses',
-            'all_glosses', 'inflected_forms', 'token_count', 'form_count', 
+            'lemma', 'citation_form', 'pos', 'primary_gloss', 'gloss_candidates',
+            'review_gloss_summary', 'english_glosses', 'all_glosses', 'gloss_counts',
+            'inflected_forms', 'token_count', 'form_count', 
             'compounds', 'top_collocates', 'example_verses', 
-            'is_polysemous', 'needs_review', 'polysemy_notes', 'grammaticalization_notes'
+            'is_polysemous', 'is_grammatical', 'needs_review', 'entry_status',
+            'polysemy_notes', 'grammaticalization_notes'
         ])
         
         for lem in lem_list:
@@ -1112,18 +1292,26 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
             colloc_str = '|'.join(f"{k}:{v}" for k, v in list(lem.collocates.items())[:10])
             # Format examples as verse IDs
             ex_str = '|'.join(ex[0] for ex in lem.example_verses[:5])
+            # Format gloss counts
+            gloss_counts_str = '|'.join(f"{g}:{c}" for g, c in 
+                sorted(lem.gloss_counts.items(), key=lambda x: -x[1])[:10])
             
             writer.writerow([
                 lem.lemma, lem.citation_form, lem.pos,
                 lem.primary_gloss,
+                '|'.join(lem.gloss_candidates[:5]) if lem.gloss_candidates else '',
+                lem.review_gloss_summary,
                 '|'.join(sorted(lem.english_glosses)) if lem.english_glosses else '',
                 '|'.join(sorted(lem.all_glosses)) if lem.all_glosses else '',
+                gloss_counts_str,
                 '|'.join(sorted(lem.inflected_forms)[:20]),
                 lem.token_count, lem.form_count,
                 '|'.join(sorted(lem.compounds)),
                 colloc_str, ex_str,
                 '1' if lem.is_polysemous else '0',
+                '1' if lem.is_grammatical else '0',
                 '1' if lem.needs_review else '0',
+                lem.entry_status,
                 lem.polysemy_notes, lem.grammaticalization_notes
             ])
 

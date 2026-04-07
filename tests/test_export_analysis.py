@@ -329,6 +329,178 @@ def test_coverage_report_exists():
     assert 'Lemmas' in content, "Coverage report should contain lemma count"
 
 
+# =============================================================================
+# SEMANTIC CORRECTNESS TESTS
+# =============================================================================
+
+def test_hi_not_glossed_as_this():
+    """hi is primarily DECL (88%), not 'this'."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'hi':
+                gloss = row.get('primary_gloss', '')
+                # Should be DECL or declarative, not 'this'
+                assert gloss != 'this', \
+                    f"hi should not have primary_gloss='this' (is DECL ~88% of time)"
+                return
+    
+    assert False, "lemma 'hi' not found"
+
+
+def test_thei_not_glossed_as_fig():
+    """thei is primarily 'know', not 'fig'."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'thei':
+                gloss = row.get('primary_gloss', '')
+                # Should be 'know' or similar, not 'fig'
+                assert gloss != 'fig', \
+                    f"thei should not have primary_gloss='fig' (is 'know' in corpus)"
+                return
+
+
+def test_mu_not_glossed_as_kiss():
+    """mu is primarily 'see', not 'kiss'."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'mu':
+                gloss = row.get('primary_gloss', '')
+                # Should be 'see' or similar, not 'kiss'
+                assert gloss != 'kiss', \
+                    f"mu should not have primary_gloss='kiss' (is 'see' in corpus)"
+                return
+
+
+def test_pai_not_glossed_as_pour():
+    """pai is primarily 'go', not 'pour'."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'pai':
+                gloss = row.get('primary_gloss', '')
+                # Should be 'go' or similar, not 'pour'
+                assert gloss != 'pour', \
+                    f"pai should not have primary_gloss='pour' (is 'go' in corpus)"
+                return
+
+
+def test_te_plural_not_glossed_loc():
+    """Plural marker -te should not have LOC as dominant gloss."""
+    path = os.path.join(OUTPUT_DIR, 'grammatical_morphemes.tsv')
+    
+    te_entries = []
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['form'] == 'te' and row['category'] == 'plural_marker':
+                te_entries.append((row['gloss'], int(row['frequency'])))
+    
+    # Should have at least one PL entry
+    pl_entries = [e for e in te_entries if e[0] == 'PL']
+    assert pl_entries, "Plural marker -te should have a PL gloss entry"
+    
+    # The PL gloss should be dominant (most frequent)
+    te_entries.sort(key=lambda x: -x[1])
+    if te_entries:
+        assert te_entries[0][0] == 'PL', \
+            f"Plural marker -te should have PL as most frequent gloss, got {te_entries[0][0]}"
+
+
+def test_case_marker_not_lexical_gloss():
+    """Case markers should not have lexical glosses as dominant entry."""
+    path = os.path.join(OUTPUT_DIR, 'grammatical_morphemes.tsv')
+    lexical_glosses = {'take', 'house', 'go', 'come', 'stand', 'sit', 'give', 
+                       'fly', 'leaf', 'with'}
+    
+    # Group by form and find dominant gloss
+    case_markers = {}
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['category'] == 'case_marker':
+                form = row['form']
+                freq = int(row['frequency'])
+                if form not in case_markers or freq > case_markers[form][1]:
+                    case_markers[form] = (row['gloss'], freq)
+    
+    # Check that the dominant gloss for each case marker is grammatical
+    for form, (gloss, freq) in case_markers.items():
+        gloss_lower = gloss.lower()
+        assert gloss_lower not in lexical_glosses, \
+            f"Case marker {form} should not have lexical gloss '{gloss}' as dominant (freq={freq})"
+
+
+def test_review_file_exists():
+    """Review entries file should exist."""
+    path = os.path.join(OUTPUT_DIR, 'review_entries.md')
+    assert os.path.exists(path), "review_entries.md should exist"
+
+
+def test_high_frequency_items_properly_classified():
+    """High-frequency items should be marked as grammatical or have stable gloss."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    # These items are known to be primarily grammatical
+    primarily_grammatical = {'hi', 'ding', 'hong', 'ta', 'te', 'in', 'na', 'pan'}
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            lemma = row['lemma'].lower()
+            if lemma in primarily_grammatical:
+                # Should be marked as grammatical or needing review
+                is_gram = row.get('is_grammatical') == '1'
+                needs_review = row.get('needs_review') == '1'
+                status = row.get('entry_status', 'auto')
+                
+                # At least one of these should be true
+                properly_handled = is_gram or needs_review or status in ('mixed_lex_gram', 'polysemous_review')
+                assert properly_handled, \
+                    f"High-frequency item '{lemma}' should be marked grammatical or review-needed"
+
+
+def test_no_duplicate_entries_in_sample():
+    """Same form should not appear in both lexical and grammatical sections."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Split into sections
+    parts = content.split('## Part')
+    if len(parts) < 3:
+        return
+    
+    lexical_section = parts[1] if len(parts) > 1 else ''
+    grammatical_section = parts[2] if len(parts) > 2 else ''
+    
+    # Extract entry names (lines starting with ### )
+    import re
+    lexical_entries = set(re.findall(r'^### (\w+)', lexical_section, re.MULTILINE))
+    grammatical_entries = set(re.findall(r'^### (\w+)', grammatical_section, re.MULTILINE))
+    
+    overlap = lexical_entries & grammatical_entries
+    
+    # Allow some overlap for items explicitly split by sense
+    allowed_overlap = {'tua', 'hih', 'bang'}  # Known function words
+    
+    unexpected_overlap = overlap - allowed_overlap
+    assert not unexpected_overlap, \
+        f"Forms appear in both lexical and grammatical sections: {unexpected_overlap}"
+
+
 if __name__ == '__main__':
     # Run as simple test functions
     tests = [
@@ -353,6 +525,16 @@ if __name__ == '__main__':
         test_examples_bank_has_lemmas,
         test_examples_bank_has_morphemes,
         test_coverage_report_exists,
+        # Semantic correctness tests
+        test_hi_not_glossed_as_this,
+        test_thei_not_glossed_as_fig,
+        test_mu_not_glossed_as_kiss,
+        test_pai_not_glossed_as_pour,
+        test_te_plural_not_glossed_loc,
+        test_case_marker_not_lexical_gloss,
+        test_review_file_exists,
+        test_high_frequency_items_properly_classified,
+        test_no_duplicate_entries_in_sample,
     ]
     
     passed = 0
