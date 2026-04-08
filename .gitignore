@@ -4,6 +4,10 @@
 # Raw backup files created by bootstrap_language.py preprocess step
 *.raw.txt
 
+# Large export files (regenerated from Bible text)
+data/ctd_analysis/tokens.tsv
+data/ctd_analysis/verses.tsv
+
 # macOS
 .DS_Store
 

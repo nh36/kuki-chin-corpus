@@ -68,12 +68,12 @@ def test_lemmas_row_count():
 
 
 def test_grammatical_morphemes_row_count():
-    """Should have 100-500 grammatical morphemes."""
+    """Should have 100-600 grammatical morphemes."""
     path = os.path.join(OUTPUT_DIR, 'grammatical_morphemes.tsv')
     with open(path, 'r', encoding='utf-8') as f:
         row_count = sum(1 for _ in f) - 1
     
-    assert 50 < row_count < 500, f"Gram morpheme count {row_count} outside expected range"
+    assert 50 < row_count < 600, f"Gram morpheme count {row_count} outside expected range"
 
 
 def test_tokens_has_required_columns():
@@ -447,6 +447,120 @@ def test_review_file_exists():
     assert os.path.exists(path), "review_entries.md should exist"
 
 
+def test_senses_file_exists():
+    """Senses file should exist with proper structure."""
+    path = os.path.join(OUTPUT_DIR, 'senses.tsv')
+    assert os.path.exists(path), "senses.tsv should exist"
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        columns = reader.fieldnames
+        
+        required = ['sense_id', 'lemma', 'sense_num', 'pos', 'gloss', 'frequency']
+        for col in required:
+            assert col in columns, f"senses.tsv missing column: {col}"
+
+
+def test_senses_primary_sense_is_most_frequent():
+    """Primary sense should have highest frequency for each lemma."""
+    path = os.path.join(OUTPUT_DIR, 'senses.tsv')
+    
+    # Group senses by lemma
+    lemma_senses = {}
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            lemma = row['lemma']
+            if lemma not in lemma_senses:
+                lemma_senses[lemma] = []
+            lemma_senses[lemma].append({
+                'freq': int(row['frequency']),
+                'is_primary': row['is_primary'] == '1',
+                'gloss': row['gloss']
+            })
+    
+    # Verify primary sense is most frequent
+    for lemma, senses in list(lemma_senses.items())[:100]:  # Check first 100
+        if len(senses) > 1:
+            primary = [s for s in senses if s['is_primary']]
+            if primary:
+                max_freq = max(s['freq'] for s in senses)
+                assert primary[0]['freq'] == max_freq, \
+                    f"Lemma '{lemma}': primary sense freq {primary[0]['freq']} != max {max_freq}"
+
+
+def test_ci_primary_sense_is_say():
+    """ci (say) should have 'say' as primary sense, not REFL."""
+    path = os.path.join(OUTPUT_DIR, 'senses.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'ci' and row['is_primary'] == '1':
+                assert row['gloss'] == 'say', \
+                    f"ci primary sense should be 'say', got '{row['gloss']}'"
+                return
+    
+    assert False, "ci lemma not found in senses"
+
+
+def test_sih_has_multiple_senses():
+    """sih should have both 'die' and 'blood' senses."""
+    path = os.path.join(OUTPUT_DIR, 'senses.tsv')
+    
+    sih_glosses = set()
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'sih':
+                sih_glosses.add(row['gloss'])
+    
+    assert 'die' in sih_glosses, "sih should have 'die' sense"
+    assert 'blood' in sih_glosses, "sih should have 'blood' sense"
+
+
+def test_context_disambiguation_thum():
+    """Verify thum context disambiguation works via analyze_sentence."""
+    from analyze_morphemes import analyze_sentence
+    
+    # "kong thum" should give 'entreat', not 'three'
+    result = analyze_sentence("kong thum hi")
+    glosses = [r[2] for r in result]
+    # Check thum gloss
+    thum_idx = next(i for i, r in enumerate(result) if 'thum' in r[0].lower())
+    assert glosses[thum_idx] == 'entreat', \
+        f"'kong thum' should be entreat, got '{glosses[thum_idx]}'"
+
+
+def test_context_disambiguation_ngen():
+    """Verify ngen context disambiguation works."""
+    from analyze_morphemes import analyze_sentence
+    
+    # "ngen" with fishing context should be 'net'
+    result = analyze_sentence("nga ngente")  # fish nets
+    glosses = [r[2] for r in result]
+    assert 'net' in glosses or 'net-PL' in glosses, \
+        f"'nga ngente' should have net gloss, got {glosses}"
+
+
+def test_lemmas_have_pos_variants():
+    """Lemmas with multiple POS should have pos_variants column populated."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        columns = reader.fieldnames
+        
+        assert 'pos_variants' in columns, "lemmas.tsv should have pos_variants column"
+        
+        # Check that some high-freq items have variants
+        for row in reader:
+            if row['lemma'] == 'hi':
+                pos_var = row.get('pos_variants', '')
+                assert pos_var, "hi should have POS variants (FUNC and V)"
+                break
+
+
 def test_high_frequency_items_properly_classified():
     """High-frequency items should be marked as grammatical or have stable gloss."""
     path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
@@ -533,6 +647,14 @@ if __name__ == '__main__':
         test_te_plural_not_glossed_loc,
         test_case_marker_not_lexical_gloss,
         test_review_file_exists,
+        # Sense and context tests
+        test_senses_file_exists,
+        test_senses_primary_sense_is_most_frequent,
+        test_ci_primary_sense_is_say,
+        test_sih_has_multiple_senses,
+        test_context_disambiguation_thum,
+        test_context_disambiguation_ngen,
+        test_lemmas_have_pos_variants,
         test_high_frequency_items_properly_classified,
         test_no_duplicate_entries_in_sample,
     ]

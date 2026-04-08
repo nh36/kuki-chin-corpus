@@ -251,12 +251,25 @@ class WordformEntry:
     is_ambiguous: bool = False
     status: str = 'auto'  # auto, needs_review, reviewed
 
+@dataclass
+class SenseEntry:
+    """A single sense/meaning of a lemma."""
+    sense_id: str  # e.g., "sih.1" for first sense of sih
+    gloss: str  # English gloss for this sense
+    pos: str  # POS for this sense (may differ from other senses)
+    frequency: int = 0  # Token count for this sense
+    is_primary: bool = False  # True if this is the dominant sense
+    is_grammatical: bool = False  # True if this sense is grammatical function
+    example_verses: List[Tuple[str, str, str, str, str]] = field(default_factory=list)
+    inflected_forms: Set[str] = field(default_factory=set)
+    notes: str = ''
+
 @dataclass 
 class LemmaEntry:
-    """Lemma-level dictionary entry."""
+    """Lemma-level dictionary entry with multiple senses."""
     lemma: str
     citation_form: str
-    pos: str
+    pos: str  # Primary POS (most frequent)
     primary_gloss: str = ''  # Best English gloss (corpus-validated)
     gloss_candidates: List[str] = field(default_factory=list)  # All gloss candidates
     review_gloss_summary: str = ''  # For ambiguous items: "be | DECL | this"
@@ -270,6 +283,9 @@ class LemmaEntry:
     compounds: Set[str] = field(default_factory=set)
     collocates: Dict[str, int] = field(default_factory=dict)
     example_verses: List[Tuple[str, str, str, str, str]] = field(default_factory=list)  # (verse_id, tedim, kjv, segmented, glossed)
+    # Sense tracking
+    senses: List[SenseEntry] = field(default_factory=list)  # Multiple senses for this lemma
+    pos_variants: Dict[str, int] = field(default_factory=dict)  # POS -> frequency (for headword splitting)
     polysemy_notes: str = ''
     grammaticalization_notes: str = ''
     is_polysemous: bool = False
@@ -810,6 +826,95 @@ def _finalize_lemma_gloss(lem: LemmaEntry) -> None:
         lem.needs_review = True
 
 
+def _build_senses(lem: LemmaEntry) -> None:
+    """
+    Build sense entries from collected gloss and POS data.
+    
+    Strategy:
+    - Different POS = different headwords (stored as separate senses with pos marker)
+    - Same POS, different English gloss = different senses of same headword
+    - Merge analyzer glosses that resolve to the same English gloss
+    - Group examples by the sense they attest
+    """
+    # Step 1: Map each analyzer gloss to (POS, English gloss)
+    # This will let us merge glosses that are really the same meaning
+    gloss_to_english = {}
+    gloss_to_pos = {}
+    
+    for analyzer_gloss, count in lem.gloss_counts.items():
+        # Determine POS
+        if is_grammatical_gloss(analyzer_gloss):
+            pos = 'FUNC'
+            eng_gloss = analyzer_gloss  # Keep grammatical glosses as-is
+        else:
+            # Use the most common POS variant for lexical glosses
+            if lem.pos_variants:
+                lex_pos = [(p, c) for p, c in lem.pos_variants.items() if p not in ('FUNC', 'UNK')]
+                if lex_pos:
+                    pos = max(lex_pos, key=lambda x: x[1])[0]
+                else:
+                    pos = lem.pos
+            else:
+                pos = lem.pos
+            # Get English gloss
+            eng_gloss = get_english_gloss(lem.lemma, analyzer_gloss)
+        
+        gloss_to_english[analyzer_gloss] = eng_gloss
+        gloss_to_pos[analyzer_gloss] = pos
+    
+    # Step 2: Group by (POS, English gloss) and sum frequencies
+    # Key: (pos, english_gloss) -> {total_freq, analyzer_glosses}
+    sense_groups = {}
+    for analyzer_gloss, count in lem.gloss_counts.items():
+        pos = gloss_to_pos[analyzer_gloss]
+        eng = gloss_to_english[analyzer_gloss]
+        key = (pos, eng)
+        
+        if key not in sense_groups:
+            sense_groups[key] = {
+                'frequency': 0,
+                'analyzer_glosses': [],
+                'is_grammatical': is_grammatical_gloss(analyzer_gloss)
+            }
+        sense_groups[key]['frequency'] += count
+        sense_groups[key]['analyzer_glosses'].append(analyzer_gloss)
+    
+    # Step 3: Sort senses by frequency (highest first)
+    # Primary sense should be the most frequent regardless of POS
+    sorted_senses = sorted(sense_groups.items(), 
+                          key=lambda x: -x[1]['frequency'])
+    
+    # Step 4: Build sense entries
+    lem.senses = []
+    sense_num = 1
+    
+    for (pos, eng_gloss), data in sorted_senses:
+        sense = SenseEntry(
+            sense_id=f"{lem.lemma}.{sense_num}",
+            gloss=eng_gloss,
+            pos=pos,
+            frequency=data['frequency'],
+            is_primary=(sense_num == 1),
+            is_grammatical=data['is_grammatical']
+        )
+        
+        # Find examples that match any of the analyzer glosses for this sense
+        matching_glosses = set(data['analyzer_glosses'])
+        for ex in lem.example_verses:
+            verse_id, tedim, kjv, seg, full_gloss = ex
+            first_gloss = full_gloss.split('-')[0] if '-' in full_gloss else full_gloss
+            if first_gloss in matching_glosses and len(sense.example_verses) < 5:
+                sense.example_verses.append(ex)
+                sense.inflected_forms.add(seg.split('-')[0] if '-' in seg else seg)
+        
+        lem.senses.append(sense)
+        sense_num += 1
+    
+    # Update lemma's primary POS to the most frequent one
+    if lem.pos_variants:
+        lem.pos = max(lem.pos_variants.items(), key=lambda x: x[1])[0]
+
+
 # =============================================================================
 # MAIN ANALYSIS PIPELINE
 # =============================================================================
@@ -838,6 +943,11 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
         tedim_text = verse_data['tedim']
         kjv_text = verse_data.get('kjv', '')
         
+        # Use sentence-level analysis for context-aware disambiguation
+        # This handles homophones like thum (three/entreat/mourn), ngen (pray/net),
+        # kei (NEG/1SG.PRO), hu (help/breath) based on surrounding words
+        sentence_analysis = analyze_sentence(tedim_text)
+        
         # Tokenize
         words = tedim_text.split()
         prev_lemma = None
@@ -848,8 +958,12 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
             if not clean_word:
                 continue
             
-            # Analyze
-            segmentation, gloss = analyze_word(clean_word)
+            # Use sentence-level analysis if available (context-aware)
+            if idx < len(sentence_analysis):
+                _, segmentation, gloss, _ = sentence_analysis[idx]
+            else:
+                # Fallback to word-level analysis
+                segmentation, gloss = analyze_word(clean_word)
             normalized = normalize_form(clean_word)
             
             # Determine properties
@@ -922,6 +1036,9 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                     )
                 lem = lemmas[lemma]
                 
+                # Track POS variants for this lemma (for headword splitting)
+                lem.pos_variants[pos] = lem.pos_variants.get(pos, 0) + 1
+                
                 # Collect all attested glosses with frequency counts
                 first_gloss = gloss.split('-')[0] if '-' in gloss else gloss
                 lem.all_glosses.add(first_gloss)
@@ -938,7 +1055,10 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                 
                 lem.inflected_forms.add(normalized)
                 lem.token_count += 1
-                if len(lem.example_verses) < 10:
+                
+                # Store examples with their specific gloss for sense-level tracking
+                # Format: (verse_id, tedim, kjv, segmented, full_gloss)
+                if len(lem.example_verses) < 20:  # Store more examples for sense selection
                     lem.example_verses.append((verse_id, tedim_text, kjv_text, segmentation, gloss))
                 
                 # Track collocations
@@ -974,7 +1094,15 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                     gm = gram_morphemes[gm_key]
                     gm.frequency += 1
                     gm.environments.add(position)
-                    if len(gm.example_verses) < 10:
+                    
+                    # Only store examples where the morpheme is in the expected position
+                    # and the gloss matches the grammatical function
+                    position_valid = (
+                        (position == 'prefix' and cat_sub in ('pronominal_prefix', 'directional_prefix', 'reflexive_prefix')) or
+                        (position == 'suffix' and cat_sub in ('case_marker', 'tam_suffix', 'nominalizer', 'plural_marker', 'possessive', 'relativizer')) or
+                        (position == 'stem' and cat_sub in ('sentence_final', 'quotative', 'auxiliary', 'function_word', 'conjunction'))
+                    )
+                    if len(gm.example_verses) < 10 and position_valid:
                         gm.example_verses.append((verse_id, tedim_text, kjv_text, segmentation, gloss))
             
             prev_lemma = lemma if pos not in ('FUNC', 'UNK', 'PROP') else prev_lemma
@@ -990,6 +1118,9 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
         
         # Determine primary gloss using corpus frequency evidence
         _finalize_lemma_gloss(lem)
+        
+        # Build sense entries from gloss/POS data
+        _build_senses(lem)
     
     return tokens, wordforms, lemmas, gram_morphemes
 
@@ -1284,7 +1415,8 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
             'inflected_forms', 'token_count', 'form_count', 
             'compounds', 'top_collocates', 'example_verses', 
             'is_polysemous', 'is_grammatical', 'needs_review', 'entry_status',
-            'polysemy_notes', 'grammaticalization_notes'
+            'polysemy_notes', 'grammaticalization_notes',
+            'sense_count', 'pos_variants'
         ])
         
         for lem in lem_list:
@@ -1295,6 +1427,9 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
             # Format gloss counts
             gloss_counts_str = '|'.join(f"{g}:{c}" for g, c in 
                 sorted(lem.gloss_counts.items(), key=lambda x: -x[1])[:10])
+            # Format POS variants
+            pos_var_str = '|'.join(f"{p}:{c}" for p, c in 
+                sorted(lem.pos_variants.items(), key=lambda x: -x[1])[:5])
             
             writer.writerow([
                 lem.lemma, lem.citation_form, lem.pos,
@@ -1312,8 +1447,34 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
                 '1' if lem.is_grammatical else '0',
                 '1' if lem.needs_review else '0',
                 lem.entry_status,
-                lem.polysemy_notes, lem.grammaticalization_notes
+                lem.polysemy_notes, lem.grammaticalization_notes,
+                len(lem.senses), pos_var_str
             ])
+
+
+def write_senses_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
+    """Write expanded sense table for dictionary building."""
+    with open(output_path, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f, delimiter='\t')
+        writer.writerow([
+            'sense_id', 'lemma', 'sense_num', 'pos', 'gloss', 
+            'frequency', 'is_primary', 'is_grammatical',
+            'inflected_forms', 'example_verses', 'notes'
+        ])
+        
+        # Sort lemmas by frequency, then output all senses
+        for lem in sorted(lemmas.values(), key=lambda x: -x.token_count):
+            for i, sense in enumerate(lem.senses):
+                ex_str = '|'.join(ex[0] for ex in sense.example_verses[:3])
+                forms_str = '|'.join(sorted(sense.inflected_forms)[:10])
+                
+                writer.writerow([
+                    sense.sense_id, lem.lemma, i + 1, sense.pos, sense.gloss,
+                    sense.frequency, '1' if sense.is_primary else '0',
+                    '1' if sense.is_grammatical else '0',
+                    forms_str, ex_str, sense.notes
+                ])
+
 
 def write_grammatical_morphemes_tsv(gram_morphemes: Dict, output_path: str):
     """Write grammatical morphemes table."""
@@ -1563,6 +1724,9 @@ def main():
     
     write_lemmas_tsv(lemmas, os.path.join(output_dir, 'lemmas.tsv'))
     print(f"  Written: lemmas.tsv")
+    
+    write_senses_tsv(lemmas, os.path.join(output_dir, 'senses.tsv'))
+    print(f"  Written: senses.tsv")
     
     write_grammatical_morphemes_tsv(gram_morphemes, 
                                      os.path.join(output_dir, 'grammatical_morphemes.tsv'))
