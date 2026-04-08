@@ -141,6 +141,71 @@ def is_grammatical_gloss(gloss: str) -> bool:
         base = base.split('.')[0]
     return base.upper() == base and base in GRAMMATICAL_GLOSSES
 
+
+# Forms that have distinct lexical and grammatical uses
+# Maps form -> {'lexical': {glosses}, 'grammatical': {glosses}}
+MIXED_LEXICAL_GRAMMATICAL = {
+    'hi': {'lexical': {'be', 'this'}, 'grammatical': {'DECL', '3SG', '1PL.INCL'}},
+    'ding': {'lexical': {'stand'}, 'grammatical': {'IRR', 'PROSP'}},
+    'pan': {'lexical': {'board', 'think'}, 'grammatical': {'ABL'}},
+    'na': {'lexical': set(), 'grammatical': {'2SG', 'NMLZ'}},
+    'te': {'lexical': set(), 'grammatical': {'PL', 'TE'}},
+    'in': {'lexical': {'house', 'drink', 'IMP'}, 'grammatical': {'ERG', 'CVB', 'QUOT', 'INST'}},
+    'hong': {'lexical': set(), 'grammatical': {'DIR', '3→1'}},
+    'ci': {'lexical': {'say'}, 'grammatical': {'QUOT'}},
+    'ahi': {'lexical': {'be.3SG'}, 'grammatical': {'DECL'}},
+    'ahih': {'lexical': {'be.3SG.REL'}, 'grammatical': {'DECL.REL'}},
+    'ciang': {'lexical': set(), 'grammatical': {'then', 'TEMP'}},
+    'tua': {'lexical': {'that'}, 'grammatical': {'DEM'}},
+    'hih': {'lexical': {'this'}, 'grammatical': {'DEM'}},
+    'bang': {'lexical': set(), 'grammatical': {'like', 'Q'}},
+    'lai': {'lexical': {'middle', 'place'}, 'grammatical': {'still', 'CONT'}},
+    'thei': {'lexical': {'fig'}, 'grammatical': {'ABIL', 'POT'}},
+    'ta': {'lexical': set(), 'grammatical': {'PFV', 'PERF'}},
+    'zo': {'lexical': {'finish'}, 'grammatical': {'COMPL'}},
+    'kha': {'lexical': {'spirit'}, 'grammatical': {'KHA'}},
+    'pai': {'lexical': {'go'}, 'grammatical': {'DIR'}},
+}
+
+
+def determine_usage_type(form: str, gloss: str, pos: str, 
+                         is_sentence_final: bool = False) -> Tuple[str, str]:
+    """
+    Determine if a token's use is lexical, grammatical, or mixed.
+    
+    Returns (usage_type, function_type):
+        usage_type: 'lexical', 'grammatical', 'mixed', or 'ambiguous'
+        function_type: specific function for grammatical uses (e.g., 'DECL', 'ERG')
+    """
+    form_lower = form.lower()
+    gloss_base = gloss.split('-')[0] if '-' in gloss else gloss
+    if '.' in gloss_base:
+        gloss_base = gloss_base.split('.')[0]
+    
+    # Check if this form has known mixed uses
+    if form_lower in MIXED_LEXICAL_GRAMMATICAL:
+        mixed_info = MIXED_LEXICAL_GRAMMATICAL[form_lower]
+        
+        if gloss_base in mixed_info['grammatical'] or gloss in mixed_info['grammatical']:
+            return 'grammatical', gloss_base
+        elif gloss_base in mixed_info['lexical'] or gloss in mixed_info['lexical']:
+            return 'lexical', ''
+        else:
+            # Unknown gloss for this mixed form
+            return 'ambiguous', gloss_base
+    
+    # Use POS as primary indicator
+    if pos == 'FUNC':
+        return 'grammatical', gloss_base
+    
+    # Check for grammatical glosses
+    if is_grammatical_gloss(gloss):
+        return 'grammatical', gloss_base
+    
+    # Default to lexical
+    return 'lexical', ''
+
+
 def get_english_gloss(stem: str, analyzer_gloss: str) -> str:
     """
     Get English meaning for a stem, using analyzer data.
@@ -235,6 +300,10 @@ class TokenAnalysis:
     is_ambiguous: bool
     confidence: str  # 'high', 'medium', 'low', 'unknown'
     kjv_text: str
+    # New fields for explicit lexical/grammatical modeling
+    usage_type: str = 'lexical'  # 'lexical', 'grammatical', 'mixed', 'ambiguous'
+    function_type: str = ''  # For grammatical: specific function (DECL, IRR, ERG, etc.)
+    is_sentence_final: bool = False  # Position indicator for grammatical analysis
     
 @dataclass
 class WordformEntry:
@@ -255,6 +324,7 @@ class WordformEntry:
 class SenseEntry:
     """A single sense/meaning of a lemma."""
     sense_id: str  # e.g., "sih.1" for first sense of sih
+    lemma: str  # The lemma this sense belongs to
     gloss: str  # English gloss for this sense
     pos: str  # POS for this sense (may differ from other senses)
     frequency: int = 0  # Token count for this sense
@@ -292,10 +362,17 @@ class LemmaEntry:
     needs_review: bool = False
     entry_status: str = 'auto'  # 'clean', 'polysemous_review', 'mixed_lex_gram', 'unsafe_gloss'
     is_grammatical: bool = False  # True if primarily grammatical function
+    # New fields for explicit lexical/grammatical modeling
+    entry_type: str = 'lexical'  # 'lexical', 'grammatical', 'mixed', 'unresolved'
+    lexical_frequency: int = 0  # Token count for lexical uses
+    grammatical_frequency: int = 0  # Token count for grammatical uses
+    split_candidates: List[str] = field(default_factory=list)  # Suggested headword splits
+    review_priority: str = 'low'  # 'high', 'medium', 'low'
+    backend_issues: List[str] = field(default_factory=list)  # Specific problems to fix
 
 @dataclass
 class GrammaticalMorpheme:
-    """Grammatical morpheme entry."""
+    """Grammatical morpheme entry - one row per form+function combination."""
     form: str
     gloss: str
     category: str  # case, tam, particle, nominalizer, prefix, etc.
@@ -307,11 +384,17 @@ class GrammaticalMorpheme:
     review_reasons: List[str] = field(default_factory=list)
     status: str = 'auto'
     is_polysemous: bool = False
+    # New fields for function-specific modeling
+    function_id: str = ''  # Unique ID: form.gloss.category (e.g., 'in.ERG.case_marker')
+    clean_environments: Set[str] = field(default_factory=set)  # Environments from clean instances only
+    lexical_contamination: float = 0.0  # 0.0-1.0, proportion of potentially lexical uses
+    usage_type: str = 'grammatical'  # 'grammatical_only', 'mixed', 'lexical_contaminated'
+    review_priority: str = 'low'  # 'high', 'medium', 'low'
 
 @dataclass
 class ExampleEntry:
     """Curated example for dictionary/grammar."""
-    item_type: str  # 'lemma' or 'morpheme'
+    item_type: str  # 'lemma', 'morpheme', or 'sense'
     item_id: str  # lemma or morpheme form
     verse_id: str
     tedim_text: str
@@ -320,6 +403,10 @@ class ExampleEntry:
     kjv_text: str
     example_quality: str  # 'shortest', 'canonical', 'transparent', 'marked'
     word_count: int
+    # New fields for sense-level linkage
+    sense_id: str = ''  # e.g., 'hi.1' for first sense of hi
+    usage_type: str = ''  # 'lexical', 'grammatical', 'mixed'
+    function_match: bool = True  # True if example gloss matches target sense
 
 # =============================================================================
 # MORPHEME CLASSIFICATION (Context-Sensitive)
@@ -891,6 +978,7 @@ def _build_senses(lem: LemmaEntry) -> None:
     for (pos, eng_gloss), data in sorted_senses:
         sense = SenseEntry(
             sense_id=f"{lem.lemma}.{sense_num}",
+            lemma=lem.lemma,  # Store lemma explicitly
             gloss=eng_gloss,
             pos=pos,
             frequency=data['frequency'],
@@ -974,6 +1062,12 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
             confidence = assess_confidence(segmentation, gloss)
             is_proper = pos == 'PROP'
             is_ambig = '?' in gloss or confidence in ('low', 'unknown')
+            is_final = (idx == len(words) - 1)
+            
+            # Determine usage type (lexical vs grammatical)
+            usage_type, function_type = determine_usage_type(
+                clean_word, gloss, pos, is_sentence_final=is_final
+            )
             
             # Find stem form
             parts = segmentation.replace("'", '').split('-')
@@ -1001,7 +1095,10 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                 is_proper_noun=is_proper,
                 is_ambiguous=is_ambig,
                 confidence=confidence,
-                kjv_text=kjv_text
+                kjv_text=kjv_text,
+                usage_type=usage_type,
+                function_type=function_type,
+                is_sentence_final=is_final
             )
             tokens.append(token)
             
@@ -1044,9 +1141,16 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                 lem.all_glosses.add(first_gloss)
                 lem.gloss_counts[first_gloss] = lem.gloss_counts.get(first_gloss, 0) + 1
                 
-                # Track if this is a grammatical use
-                if is_grammatical_gloss(first_gloss):
+                # Track lexical vs grammatical frequency
+                if usage_type == 'grammatical':
+                    lem.grammatical_frequency += 1
                     lem.is_grammatical = True
+                elif usage_type == 'lexical':
+                    lem.lexical_frequency += 1
+                else:
+                    # Mixed or ambiguous - count toward both
+                    lem.lexical_frequency += 1
+                    lem.grammatical_frequency += 1
                 
                 # Try to get English meaning
                 eng = get_english_gloss(stem_form, first_gloss)
@@ -1056,8 +1160,8 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                 lem.inflected_forms.add(normalized)
                 lem.token_count += 1
                 
-                # Store examples with their specific gloss for sense-level tracking
-                # Format: (verse_id, tedim, kjv, segmented, full_gloss)
+                # Store examples with their specific gloss and usage type for sense-level tracking
+                # Format: (verse_id, tedim, kjv, segmented, full_gloss, usage_type)
                 if len(lem.example_verses) < 20:  # Store more examples for sense selection
                     lem.example_verses.append((verse_id, tedim_text, kjv_text, segmentation, gloss))
                 
@@ -1082,32 +1186,40 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
                 )
                 
                 if cat_type == 'grammatical':
-                    # Use form+gloss as key to distinguish polysemous uses
-                    gm_key = (seg_part.lower(), gloss_part)
+                    # Use form+gloss+category as key for function-specific rows
+                    gm_key = (seg_part.lower(), gloss_part, cat_sub)
+                    function_id = f"{seg_part.lower()}.{gloss_part}.{cat_sub}"
+                    
                     if gm_key not in gram_morphemes:
                         gram_morphemes[gm_key] = GrammaticalMorpheme(
                             form=seg_part.lower(),
                             gloss=gloss_part,
                             category=cat_sub,
-                            is_polysemous=is_poly
+                            is_polysemous=is_poly,
+                            function_id=function_id
                         )
                     gm = gram_morphemes[gm_key]
                     gm.frequency += 1
                     gm.environments.add(position)
                     
-                    # Only store examples where the morpheme is in the expected position
-                    # and the gloss matches the grammatical function
+                    # Check if this is a clean grammatical use (position matches category)
                     position_valid = (
-                        (position == 'prefix' and cat_sub in ('pronominal_prefix', 'directional_prefix', 'reflexive_prefix')) or
-                        (position == 'suffix' and cat_sub in ('case_marker', 'tam_suffix', 'nominalizer', 'plural_marker', 'possessive', 'relativizer')) or
-                        (position == 'stem' and cat_sub in ('sentence_final', 'quotative', 'auxiliary', 'function_word', 'conjunction'))
+                        (position == 'prefix' and cat_sub in ('pronominal_prefix', 'directional_prefix', 'reflexive_prefix', 'inflection')) or
+                        (position == 'suffix' and cat_sub in ('case_marker', 'tam_suffix', 'nominalizer', 'plural_marker', 'possessive', 'relativizer', 'inflection')) or
+                        (position == 'stem' and cat_sub in ('sentence_final', 'quotative', 'auxiliary', 'function_word', 'conjunction', 'copula'))
                     )
+                    
+                    # Track clean environments (where position matches expected category)
+                    if position_valid:
+                        gm.clean_environments.add(position)
+                    
+                    # Store examples only from clean instances
                     if len(gm.example_verses) < 10 and position_valid:
                         gm.example_verses.append((verse_id, tedim_text, kjv_text, segmentation, gloss))
             
             prev_lemma = lemma if pos not in ('FUNC', 'UNK', 'PROP') else prev_lemma
     
-    # Post-process: finalize glosses using corpus frequency evidence
+    # Post-process lemmas: finalize glosses and determine entry types
     for lemma_key, lem in lemmas.items():
         if lemma_key in collocations:
             lem.collocates = dict(sorted(
@@ -1116,16 +1228,70 @@ def analyze_corpus(verses: Dict[str, Dict]) -> Tuple[List[TokenAnalysis], Dict, 
             )[:20])
         lem.form_count = len(lem.inflected_forms)
         
+        # Determine entry_type based on lexical/grammatical frequency balance
+        total = lem.lexical_frequency + lem.grammatical_frequency
+        if total > 0:
+            gram_ratio = lem.grammatical_frequency / total
+            if gram_ratio >= 0.9:
+                lem.entry_type = 'grammatical'
+            elif gram_ratio <= 0.1:
+                lem.entry_type = 'lexical'
+            elif gram_ratio >= 0.4 and gram_ratio <= 0.6:
+                lem.entry_type = 'mixed'
+            else:
+                lem.entry_type = 'unresolved'
+        
+        # Identify backend issues for this lemma
+        if lem.entry_type == 'mixed':
+            lem.backend_issues.append('mixed_lex_gram_needs_split')
+        if len(lem.pos_variants) > 1:
+            lem.backend_issues.append('multiple_pos_variants')
+        if lem.is_polysemous:
+            lem.backend_issues.append('polysemous_needs_sense_split')
+        
+        # Set review priority
+        if lem.token_count > 1000 and lem.backend_issues:
+            lem.review_priority = 'high'
+        elif lem.token_count > 100 and lem.backend_issues:
+            lem.review_priority = 'medium'
+        else:
+            lem.review_priority = 'low'
+        
         # Determine primary gloss using corpus frequency evidence
         _finalize_lemma_gloss(lem)
         
         # Build sense entries from gloss/POS data
         _build_senses(lem)
     
+    # Post-process grammatical morphemes: calculate usage types and contamination
+    for gm_key, gm in gram_morphemes.items():
+        # Calculate lexical contamination ratio
+        all_envs = len(gm.environments)
+        clean_envs = len(gm.clean_environments)
+        if all_envs > 0:
+            gm.lexical_contamination = 1.0 - (clean_envs / all_envs)
+        
+        # Determine usage type
+        if gm.lexical_contamination <= 0.1:
+            gm.usage_type = 'grammatical_only'
+        elif gm.lexical_contamination >= 0.5:
+            gm.usage_type = 'lexical_contaminated'
+        else:
+            gm.usage_type = 'mixed'
+        
+        # Set review priority for morphemes
+        if gm.frequency > 1000 and gm.usage_type != 'grammatical_only':
+            gm.review_priority = 'high'
+            gm.review_reasons.append('high_freq_contamination')
+        elif gm.frequency > 100 and gm.lexical_contamination > 0.3:
+            gm.review_priority = 'medium'
+            gm.review_reasons.append('moderate_contamination')
+    
     return tokens, wordforms, lemmas, gram_morphemes
 
 def select_examples(lemmas: Dict[str, LemmaEntry], 
                     gram_morphemes: Dict,
+                    senses: List[SenseEntry] = None,
                     target_per_item: int = 5) -> List[ExampleEntry]:
     """
     Select high-quality examples for each lemma and grammatical morpheme.
@@ -1136,9 +1302,16 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
     - transparent: Clear morphological structure (few affixes)
     - marked: Secondary or less prototypical function
     
-    Examples now include segmented and glossed forms.
+    Examples now include segmented and glossed forms, plus sense linkage.
     """
     examples = []
+    
+    # Build sense lookup: (lemma, gloss) -> sense_id
+    sense_lookup = {}
+    if senses:
+        for sense in senses:
+            key = (sense.lemma, sense.gloss)
+            sense_lookup[key] = sense.sense_id
     
     # Process lemmas
     for lemma, entry in lemmas.items():
@@ -1151,6 +1324,9 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
         
         selected = set()
         
+        # Determine entry-level usage type
+        lemma_usage_type = entry.entry_type if entry.entry_type else 'lexical'
+        
         # 1. Shortest clear example
         if sorted_by_len:
             ex = sorted_by_len[0]
@@ -1158,6 +1334,17 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
                 # ex format: (verse_id, tedim, kjv, segmented, glossed)
                 segmented = ex[3] if len(ex) > 3 else ''
                 glossed = ex[4] if len(ex) > 4 else ''
+                
+                # Try to determine sense_id from the glossed output
+                sense_id = ''
+                function_match = True  # Assume match for shortest example
+                if glossed:
+                    # Extract the gloss for this lemma from the glossed string
+                    # The gloss should correspond to entry.primary_gloss
+                    sense_key = (lemma, entry.primary_gloss)
+                    if sense_key in sense_lookup:
+                        sense_id = sense_lookup[sense_key]
+                
                 examples.append(ExampleEntry(
                     item_type='lemma',
                     item_id=lemma,
@@ -1167,7 +1354,10 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
                     glossed=glossed,
                     kjv_text=ex[2],
                     example_quality='shortest',
-                    word_count=len(ex[1].split())
+                    word_count=len(ex[1].split()),
+                    sense_id=sense_id,
+                    usage_type=lemma_usage_type,
+                    function_match=function_match
                 ))
                 selected.add(ex[0])
         
@@ -1182,6 +1372,12 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
             # Prefer examples with minimal segmentation (fewer hyphens)
             if segmented and segmented.count('-') <= 2:
                 glossed = ex[4] if len(ex) > 4 else ''
+                
+                sense_id = ''
+                sense_key = (lemma, entry.primary_gloss)
+                if sense_key in sense_lookup:
+                    sense_id = sense_lookup[sense_key]
+                
                 examples.append(ExampleEntry(
                     item_type='lemma',
                     item_id=lemma,
@@ -1191,7 +1387,10 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
                     glossed=glossed,
                     kjv_text=ex[2],
                     example_quality='transparent',
-                    word_count=len(ex[1].split())
+                    word_count=len(ex[1].split()),
+                    sense_id=sense_id,
+                    usage_type=lemma_usage_type,
+                    function_match=True
                 ))
                 selected.add(ex[0])
                 transparent_found = True
@@ -1205,6 +1404,12 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
                 segmented = ex[3] if len(ex) > 3 else ''
                 glossed = ex[4] if len(ex) > 4 else ''
                 quality = 'canonical' if len(selected) == 1 else 'additional'
+                
+                sense_id = ''
+                sense_key = (lemma, entry.primary_gloss)
+                if sense_key in sense_lookup:
+                    sense_id = sense_lookup[sense_key]
+                
                 examples.append(ExampleEntry(
                     item_type='lemma',
                     item_id=lemma,
@@ -1214,7 +1419,10 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
                     glossed=glossed,
                     kjv_text=ex[2],
                     example_quality=quality,
-                    word_count=len(ex[1].split())
+                    word_count=len(ex[1].split()),
+                    sense_id=sense_id,
+                    usage_type=lemma_usage_type,
+                    function_match=True
                 ))
                 selected.add(ex[0])
     
@@ -1227,11 +1435,22 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
         sorted_by_len = sorted(entry.example_verses, key=lambda x: len(x[1]))
         selected = set()
         
+        # Use function_id or construct sense_id from (form, gloss, category)
+        morpheme_sense_id = entry.function_id if entry.function_id else f"{entry.form}_{entry.gloss}_{entry.category}"
+        morpheme_usage_type = entry.usage_type if entry.usage_type else 'grammatical'
+        
         for i, ex in enumerate(sorted_by_len[:target_per_item]):
             if ex[0] not in selected:
                 quality = 'shortest' if i == 0 else ('canonical' if i == 1 else 'additional')
                 segmented = ex[3] if len(ex) > 3 else ''
                 glossed = ex[4] if len(ex) > 4 else ''
+                
+                # Check if this example's gloss matches the morpheme's expected gloss
+                function_match = True
+                if glossed and entry.gloss:
+                    # Check if the expected gloss appears in the glossed output
+                    function_match = entry.gloss in glossed
+                
                 examples.append(ExampleEntry(
                     item_type='morpheme',
                     item_id=entry.form,  # Use the form, not the key (form, gloss)
@@ -1241,7 +1460,10 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
                     glossed=glossed,
                     kjv_text=ex[2],
                     example_quality=quality,
-                    word_count=len(ex[1].split())
+                    word_count=len(ex[1].split()),
+                    sense_id=morpheme_sense_id,
+                    usage_type=morpheme_usage_type,
+                    function_match=function_match
                 ))
                 selected.add(ex[0])
     
@@ -1367,7 +1589,8 @@ def write_tokens_tsv(tokens: List[TokenAnalysis], output_path: str):
             'verse_id', 'token_index', 'surface_form', 'normalized_form',
             'segmentation', 'gloss', 'lemma', 'pos', 'stem_form',
             'stem_alternation', 'prefix_chain', 'suffix_chain',
-            'is_proper_noun', 'is_ambiguous', 'confidence', 'kjv_text'
+            'is_proper_noun', 'is_ambiguous', 'confidence', 'kjv_text',
+            'usage_type', 'function_type', 'is_sentence_final'  # New columns
         ])
         
         for token in tokens:
@@ -1378,7 +1601,9 @@ def write_tokens_tsv(tokens: List[TokenAnalysis], output_path: str):
                 token.prefix_chain, token.suffix_chain,
                 '1' if token.is_proper_noun else '0',
                 '1' if token.is_ambiguous else '0',
-                token.confidence, token.kjv_text
+                token.confidence, token.kjv_text,
+                token.usage_type, token.function_type,
+                '1' if token.is_sentence_final else '0'
             ])
 
 def write_wordforms_tsv(wordforms: Dict, output_path: str):
@@ -1416,7 +1641,10 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
             'compounds', 'top_collocates', 'example_verses', 
             'is_polysemous', 'is_grammatical', 'needs_review', 'entry_status',
             'polysemy_notes', 'grammaticalization_notes',
-            'sense_count', 'pos_variants'
+            'sense_count', 'pos_variants',
+            # New columns for explicit lexical/grammatical modeling
+            'entry_type', 'lexical_frequency', 'grammatical_frequency',
+            'review_priority', 'backend_issues'
         ])
         
         for lem in lem_list:
@@ -1448,7 +1676,13 @@ def write_lemmas_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
                 '1' if lem.needs_review else '0',
                 lem.entry_status,
                 lem.polysemy_notes, lem.grammaticalization_notes,
-                len(lem.senses), pos_var_str
+                len(lem.senses), pos_var_str,
+                # New fields
+                lem.entry_type,
+                lem.lexical_frequency,
+                lem.grammatical_frequency,
+                lem.review_priority,
+                '|'.join(lem.backend_issues) if lem.backend_issues else ''
             ])
 
 
@@ -1477,7 +1711,7 @@ def write_senses_tsv(lemmas: Dict[str, LemmaEntry], output_path: str):
 
 
 def write_grammatical_morphemes_tsv(gram_morphemes: Dict, output_path: str):
-    """Write grammatical morphemes table."""
+    """Write grammatical morphemes table with function-specific rows."""
     # Sort by frequency
     gm_list = sorted(gram_morphemes.values(), key=lambda x: -x.frequency)
     
@@ -1485,7 +1719,10 @@ def write_grammatical_morphemes_tsv(gram_morphemes: Dict, output_path: str):
         writer = csv.writer(f, delimiter='\t')
         writer.writerow([
             'form', 'gloss', 'category', 'subcategory', 'frequency', 'environments',
-            'example_verses', 'is_polysemous', 'review_reasons', 'status'
+            'example_verses', 'is_polysemous', 'review_reasons', 'status',
+            # New columns for function-specific modeling
+            'function_id', 'clean_environments', 'lexical_contamination',
+            'usage_type', 'review_priority'
         ])
         
         for gm in gm_list:
@@ -1496,23 +1733,34 @@ def write_grammatical_morphemes_tsv(gram_morphemes: Dict, output_path: str):
                 '|'.join(sorted(gm.environments)), ex_str,
                 '1' if gm.is_polysemous else '0',
                 '|'.join(gm.review_reasons) if gm.review_reasons else '',
-                gm.status
+                gm.status,
+                # New fields
+                gm.function_id,
+                '|'.join(sorted(gm.clean_environments)) if gm.clean_environments else '',
+                f"{gm.lexical_contamination:.2f}",
+                gm.usage_type,
+                gm.review_priority
             ])
 
 def write_examples_tsv(examples: List[ExampleEntry], output_path: str):
-    """Write curated examples bank."""
+    """Write curated examples bank with sense linkage."""
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f, delimiter='\t')
         writer.writerow([
             'item_type', 'item_id', 'verse_id', 'tedim_text',
-            'segmented', 'glossed', 'kjv_text', 'example_quality', 'word_count'
+            'segmented', 'glossed', 'kjv_text', 'example_quality', 'word_count',
+            # New columns for sense linkage
+            'sense_id', 'usage_type', 'function_match'
         ])
         
         for ex in examples:
             writer.writerow([
                 ex.item_type, ex.item_id, ex.verse_id, ex.tedim_text,
                 ex.segmented, ex.glossed, ex.kjv_text, 
-                ex.example_quality, ex.word_count
+                ex.example_quality, ex.word_count,
+                # New fields
+                ex.sense_id, ex.usage_type, 
+                '1' if ex.function_match else '0'
             ])
 
 def write_ambiguities_tsv(ambiguities: List[Dict], output_path: str):
@@ -1703,8 +1951,14 @@ def main():
     print(f"  Found {len(lemmas):,} lemmas")
     print(f"  Found {len(gram_morphemes):,} grammatical morphemes")
     
+    # Extract all senses from lemmas for example selection
+    all_senses = []
+    for lem in lemmas.values():
+        all_senses.extend(lem.senses)
+    print(f"  Built {len(all_senses):,} senses from lemmas")
+    
     print("Selecting examples...")
-    examples = select_examples(lemmas, gram_morphemes)
+    examples = select_examples(lemmas, gram_morphemes, senses=all_senses)
     print(f"  Selected {len(examples):,} examples")
     
     print("Collecting ambiguities...")

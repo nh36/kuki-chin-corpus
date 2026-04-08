@@ -2925,12 +2925,12 @@ environment labels inconsistent with their function.
 3. [01001005] Pasian in khuavak pen “Sun” ci a, khuamial pen “Zan” ci hi. Nitak hong bei-in, zingsang hong tung a, ni khat ni ahi hi.
    *a* / 3SG
    — And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.
-4. [01003012] Mipa in, “Kei tawh a om dinga nong piak numei in singgah hong pia a, ke'n ka ne hi,” ci hi.
-   *ding-a* / IRR-LOC
-   — And the man said, The woman whom thou gavest to be with me, she gave me of the tree, and I did eat.
-5. [01005030] Noah' suah khit ciangin Lamek kum zanga le kum sawmkua le nga nungta a, tanu le tapa dang nei lai hi.
-   *zang-a* / use-LOC
-   — And Lamech lived after he begat Noah five hundred ninety and five years, and begat sons and daughters:
+4. [19089043] Ama galhiamte a mawkna na suaksak a, gal kidona-ah amah na guallelsak hi.
+   *ki-don-a-ah* / REFL-war-LOC-LOC
+   — Thou hast also turned the edge of his sword, And hast not made him to stand in the battle.
+5. [19040014] Kei a hong that nuamte zahhuaisak inla, maisiasak in. Keima siatna ding a deihte nungkiksak inla minsiasak in.
+   *mai-si-a-sak* / face-die-LOC-CAUS
+   — Let them be ashamed and confounded together That seek after my soul to destroy it; Let them be driven backward and put to shame that wish me evil.
 
 ### in
 
@@ -3112,7 +3112,7 @@ environment labels inconsistent with their function.
 **Citation form:** hong
 **POS:** AFFIX (object_marker)
 **Entry status:** affix_review_needed
-**Frequency:** 15591 tokens
+**Frequency:** 15590 tokens
 **Tentative primary:** 3→1
 
 **Examples (for review):**
@@ -3365,20 +3365,6 @@ environment labels inconsistent with their function.
 **Frequency:** 6402 tokens
 **Tentative primary:** 3SG.PRO
 
-**Examples (for review):**
-1. [01003011] Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi hiam?” ci hi.
-   *Amah* / 3SG.PRO
-   — And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?
-2. [01002018] Tua ciangin Topa Pasian in, “Mipa amah guak a om ding hoih lo hi. Ama a' ding a kituak a huh ding ka bawlsak ding hi,” ci hi.
-   *amah* / 3SG.PRO
-   — And the LORD God said, It is not good that the man should be alone; I will make him an help meet for him.
-3. [01003010] Amah in, “Nangma gin na huan sungah ka za a, ka lau hi. Bang hang hiam cih leh ka guaktangin om ka hih manin ka bucip hi,” a ci hi.
-   *Amah* / 3SG.PRO
-   — And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.
-4. [01001027] Tua ahih ciangin Pasian in ama lim bangin mihing piangsakin, Pasian' lim bangin amah a piangsak hi. Amah in pasal le numei a piangsak hi.
-   *amah* / 3SG.PRO
-   — So God created man in his own image, in the image of God created he him; male and female created he them.
-
 ### ahih
 
 **Citation form:** ahih
@@ -3412,23 +3398,6 @@ environment labels inconsistent with their function.
 **Frequency:** 5689 tokens
 **Tentative primary:** 3PL.PRO
 
-**Examples (for review):**
-1. [01003021] Topa Pasian in mipa le a zi a dingin savun puan bawl a, amaute silhsak hi.
-   *amaute* / 3PL.PRO
-   — Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.
-2. [01005002] Amah in numei le pasal a piangsak hi. Amaute a kipiansakin amah in amaute, “Mi,” ci a, amaute thupha a pia hi.
-   *Amaute* / 3PL.PRO
-   — male and female created he them; and blessed them, and called their name Adam, in the day when they were created.
-3. [01001022] Pasian in amaute thupha pia a, “Ci pha-in tampi pha-in, tuipi sung dim unla, leitungah vasate tampi pha un,” ci hi.
-   *amaute* / 3PL.PRO
-   — And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.
-4. [01019004] Ahih hangin amaute' lup ma-in Sodom khua mite, a moi a hamin mi khempeuh in a inn umcih uh hi.
-   *amaute'* / 3PL.PRO.POSS
-   — But before they lay down, the men of the city, even the men of Sodom, compassed the house round, both old and young, all the people from every quarter:
-5. [01025016] Hihte pen a khua, a phual, a behin ulian sawm le nihte ahi Ishmael' tate le amaute' min ahi hi.
-   *amaute'* / 3PL.PRO.POSS
-   — these are the sons of Ishmael, and these are their names, by their towns, and by their castles; twelve princes according to their nations.
-
 ### pai
 
 **Citation form:** pai
@@ -3461,23 +3430,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 5623 tokens
 **Tentative primary:** all
-
-**Examples (for review):**
-1. [01001025] Innsa, gamsa, le a bokvak ganhing khempeuh amau nam ciatin Pasian in a piangsak hi. Pasian in tua pen hoih hi, ci-in a mu hi.
-   *khempeuh* / all
-   — And God made the beast of the earth after his kind, and cattle after their kind, and every thing that creepeth upon the earth after his kind: and God saw that it was good.
-2. [01001026] Tua ciangin Pasian in, “Eima lim, eimah hong sunin mihing bawl ni. Tuipi ngasate tung, huihlak vasate tung, ganhingte tung, le leitung a a bokvakte khempeuh tungah ukna neisak ni,” a ci hi.
-   *khempeuh* / all
-   — And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.
-3. [01001029] Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le a gah sungah tang a om singkung khempeuh note tungah kong pia khinta hi. Tuate an-in na nei ding uh hi.
-   *khempeuh-ah* / all-LOC
-   — And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.
-4. [01010021] Eber mi khempeuh' pianna pupi, Jafeth' u, Shem' sung panin zong tate hong piang hi.
-   *khempeuh'* / all.POSS
-   — Unto Shem also, the father of all the children of Eber, the brother of Japheth the elder, even to him were children born.
-5. [01004021] A sanggampa' min Jubal hi a, laiza lasakna le tamngai tumte khempeuh' pianna pupi ahi hi.
-   *khempeuh'* / all.POSS
-   — And his brother's name was Jubal: he was the father of all such as handle the harp and organ.
 
 ### sak
 
@@ -3516,18 +3468,18 @@ environment labels inconsistent with their function.
 1. [23049002] Amah in ka thugente, namsau hiam bangsak a, ama khut tawh keimah hong hu hi. Amah in a kinawtngil thaltang bangin kei hong bawl a, a hiamsa-in zat pah dingin a thallawng sungah kei hong koih hi.
    *hiam-sa-in* / sharpen-PAST-ERG
    — And he hath made my mouth like a sharp sword; in the shadow of his hand hath he hid me, and made me a polished shaft; in his quiver hath he hid me;
-2. [01003009] Ahih hangin Topa Pasian in mipa samin ama kiangah, “Koi lai-ah om na hi hiam?” a ci hi.
-   *hiam* / Q
-   — And the LORD God called unto Adam, and said unto him, Where art thou?
-3. [01003011] Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi hiam?” ci hi.
-   *hiam* / Q
-   — And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?
-4. [01003010] Amah in, “Nangma gin na huan sungah ka za a, ka lau hi. Bang hang hiam cih leh ka guaktangin om ka hih manin ka bucip hi,” a ci hi.
-   *hiam* / Q
-   — And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.
-5. [01002017] Ahih hangin a pha le a sia theihna singkung gah pen na ne kei ding hi. Bang hang hiam cih leh tua na nek ni-in na si ding hi,” a ci hi.
-   *hiam* / Q
-   — but of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.
+2. [10001027] “A vanglianpa bangci-in tuk, galhiamte bangci-in sia!” a ci hi.
+   *gal-hiam-te* / enemy-fierce-PL
+   — How are the mighty fallen, And the weapons of war perished!
+3. [19076003] Amah in tua lai-ah thaltangte, lum, namsau, le galhiamte a kuaitan hi.
+   *gal-hiam-te* / enemy-fierce-PL
+   — There brake he the arrows of the bow, The shield, and the sword, and the battle. Selah.
+4. [19089043] Ama galhiamte a mawkna na suaksak a, gal kidona-ah amah na guallelsak hi.
+   *gal-hiam-te* / enemy-fierce-PL
+   — Thou hast also turned the edge of his sword, And hast not made him to stand in the battle.
+5. [19007013] Amah in mei thaltang bawl a, sih theihna ama galhiamte a baihsa-in a koihzo hi.
+   *gal-hiam-te* / enemy-fierce-PL
+   — He hath also prepared for him the instruments of death; He ordaineth his arrows against the persecutors.
 
 ### pan
 
@@ -3586,23 +3538,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 4819 tokens
 **Tentative primary:** beside
-
-**Examples (for review):**
-1. [01003004] Ahih hangin gulpi in numei kiangah, “Na si kei ding uh hi.
-   *kiang-ah* / beside-LOC
-   — And the serpent said unto the woman, Ye shall not surely die:
-2. [01003002] Numei in gulpi kiangah, “Huan sung singgahte ka ne thei ding uh hi.
-   *kiang-ah* / beside-LOC
-   — And the woman said unto the serpent, We may eat of the fruit of the trees of the garden:
-3. [01003009] Ahih hangin Topa Pasian in mipa samin ama kiangah, “Koi lai-ah om na hi hiam?” a ci hi.
-   *kiang-ah* / beside-LOC
-   — And the LORD God called unto Adam, and said unto him, Where art thou?
-4. [01002022] Topa Pasian in mipa' tung panin a lakkhiat nakguh pen numei khatin bawl a, mipa kiangah tua nu a paipih hi.
-   *kiang-ah* / beside-LOC
-   — and the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.
-5. [01003013] Tua ciangin Topa Pasian in numei kiangah, “Bangci a hici gamtat na hi hiam?” a ci hi. Numei in, “Gulpi in kei hong khem a, ka ne hi,” ci hi.
-   *kiang-ah* / beside-LOC
-   — And the LORD God said unto the woman, What is this that thou hast done? And the woman said, The serpent beguiled me, and I did eat.
 
 ### ta
 
@@ -3737,23 +3672,6 @@ environment labels inconsistent with their function.
 **Frequency:** 3294 tokens
 **Tentative primary:** 2PL.PRO
 
-**Examples (for review):**
-1. [01009009] “En un, note le note' khit a na suanlekhakte uh le,
-   *note* / 2PL.PRO
-   — And I, behold, I establish my covenant with you, and with your seed after you;
-2. [01009007] “Note, pungin khang unla, leitungah tampi tak piangkhia-in, tampi pha-in khang un,” a ci hi.
-   *Note* / 2PL.PRO
-   — And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein.
-3. [01009003] A nungta a gamtang peuhmah, note a dingin an hi ding hi. Kung hing khempeuh ka hong piak bangin na khempeuh zong note ka hong pia hi.
-   *note* / 2PL.PRO
-   — Every moving thing that liveth shall be meat for you; even as the green herb have I given you all things.
-4. [01009012] Tua ciangin Pasian in, “Hih pen, kei le note le note tawh a om nuntakna a nei khempeuh kikalah mailam khang tawntung ah thuciamna lim ahi hi.
-   *note* / 2PL.PRO
-   — And God said, This is the token of the covenant which I make between me and you and every living creature that is with you, for perpetual generations:
-5. [01009009] “En un, note le note' khit a na suanlekhakte uh le,
-   *note'* / 2PL.PRO.POSS
-   — And I, behold, I establish my covenant with you, and with your seed after you;
-
 ### un
 
 **Citation form:** un
@@ -3761,23 +3679,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 3276 tokens
 **Tentative primary:** IMP.PL
-
-**Examples (for review):**
-1. [01009007] “Note, pungin khang unla, leitungah tampi tak piangkhia-in, tampi pha-in khang un,” a ci hi.
-   *un-la* / PL.IMP-and
-   — And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein.
-2. [01009001] Pasian in Noah le a tapate thupha pia a, amaute tungah, “Pung unla, tampi pha-in, leitung dim un.
-   *un-la* / PL.IMP-and
-   — And God blessed Noah and his sons, and said unto them, Be fruitful, and multiply, and replenish the earth.
-3. [01001022] Pasian in amaute thupha pia a, “Ci pha-in tampi pha-in, tuipi sung dim unla, leitungah vasate tampi pha un,” ci hi.
-   *un-la* / PL.IMP-and
-   — And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.
-4. [01003005] Bang hang hiam cih leh tua singgah na nek ciangun na mitte uh hong vak ding a, a pha le a sia thei-in, Pasian tawh na kibat ding lamtak uh Pasian in thei hi,” a ci hi.
-   *ciang-un* / then-PL.IMP
-   — for God doth know that in the day ye eat thereof, then your eyes shall be opened, and ye shall be as gods, knowing good and evil.
-5. [01018008] Tua ciangin amah in, bawngnawi-thaukhal, bawngnawi, le a minsa bawngsa la-in amau' mai-ah a lui hi. Amaute in a nek laitakun sing nuai-ah amau' kiangah amah a ding hi.
-   *lai-tak-un* / middle-true-PL.IMP
-   — And he took butter, and milk, and the calf which he had dressed, and set it before them; and he stood by them under the tree, and they did eat.
 
 ### kong
 
@@ -3788,21 +3689,21 @@ environment labels inconsistent with their function.
 **Tentative primary:** 1SG→3
 
 **Examples (for review):**
-1. [01009014] Vantungah meii kong kaisak ciangin meii sungah sakhituihup a kimuh leh,
-   *kong* / 1SG→3
-   — And it shall come to pass, when I bring a cloud over the earth, that the bow shall be seen in the cloud:
-2. [01012001] Topa in Abram kiangah, “Na gam, na beh, le na pa' inn panin nang kong lah ding gamah pai in.
-   *kong* / 1SG→3
-   — Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee:
-3. [01013015] Bang hang hiam cih leh na muh gam khempeuh nang le na suanlekhakte kong pia paisuak ding hi.
-   *kong* / 1SG→3
-   — for all the land which thou seest, to thee will I give it, and to thy seed for ever.
-4. [01012002] Thupha a ngah dingin minam lian khatin nang hong bawlin, thupha hong pia-in, na min kong liansak ding hi.
-   *kong* / 1SG→3
-   — and I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing:
-5. [01003011] Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi hiam?” ci hi.
-   *kong* / 1SG→3
-   — And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?
+1. [01023018] khuapi kulhkongpi-ah a kikhawm mite khempeuh' mai, Hit mite' omna-ah Abraham' neih dingin kipia hi.
+   *kulh-kong-pi-ah* / gate-big-LOC
+   — unto Abraham for a possession in the presence of the children of Heth, before all that went in at the gate of his city.
+2. [06006001] Tu-in Israel mite' hangin Jerikho kulhkongpi kikhakcip a, kuamah pusuak thei lo, sungtum thei lo hi.
+   *kulh-kong-pi* / gate-big
+   — Now Jericho was straitly shut up because of the children of Israel: none went out, and none came in.
+3. [06002007] Tua ahih ciangin mite in Jordan lamah ngahmun dong delh uh a, a delhte a paikhiat phetin kulhkongpi kikhak hi.
+   *kulh-kong-pi* / gate-big
+   — And the men pursued after them the way to Jordan unto the fords: and as soon as they which pursued after them were gone out, they shut the gate.
+4. [01023010] Tua laitakin Hit mite' lakah Efron zong a om ahi hi. Khuapi kulhkongpi-ah a hong pai Hit mite khempeuh' zakna-ah Hit mi Efron in Abraham dawng a,
+   *kulh-kong-pi-ah* / gate-big-LOC
+   — And Ephron dwelt among the children of Heth: and Ephron the Hittite answered Abraham in the audience of the children of Heth, even of all that went in at the gate of his city, saying,
+5. [01034024] Khuapi kulhkongpi-ah a pai mi khempeuh in Hamor le a tapa Shekhem' thu a mang uh hi. Khuapi kulhkongpi-ah a hong pai pasal khempeuh a vun ki-at uh hi.
+   *kulh-kong-pi-ah* / gate-big-LOC
+   — And unto Hamor and unto Shechem his son hearkened all that went out of the gate of his city; and every male was circumcised, all that went out of the gate of his city.
 
 ### nang
 
@@ -3844,15 +3745,15 @@ environment labels inconsistent with their function.
 2. [02011008] Tua ciangin Moses in Faro' kiangah, “Na uliante khempeuh keima kiangah hong paisukin, keima kiangah hong kun ding uh a, 'Nang le nangmah hong zui khempeuh paikhia un,' hong ci ding uh hi. Tua khit ciangin kei ka paikhia ding hi,” ci thuah lai hi. Tua ciangin Faro' kiang panin amah a heh mahmahsa-in a paikhia hi.
    *mah-mah-sa-in* / self-REDUP-PAST-ERG
    — And all these thy servants shall come down unto me, and bow down themselves unto me, saying, Get thee out, and all the people that follow thee: and after that I will go out. And he went out from Pharaoh in a great anger.
-3. [01006022] Noah zong tua bangmahin gamta a, Pasian' thupiak khempeuh a hih hi.
-   *bang-mah-in* / what-EMPH-ERG
-   — Thus did Noah; according to all that God commanded him, so did he.
-4. [01001015] leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi. Tua mah bangin a piang pah hi.
-   *mah* / EMPH
-   — and let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.
-5. [01001009] Pasian in, “Vantungte nuai-a om tuite mun khatah kikhawm hen la, lei keu kidawk hen,” ci hi. Tua mah bangin a piang pah hi.
-   *mah* / EMPH
-   — And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.
+3. [05018019] Amah in keima min tawh a gen ka thute a don lo mi peuhmahte kei mahmah in ka thuk ding hi.
+   *peuh-mah-te* / each-self-PL
+   — And it shall come to pass, that whosoever will not hearken unto my words which he shall speak in my name, I will require it of him.
+4. [03011024] “Hihte tawh note a nin na suak ding uh hi. A sisa a lawng peuhmahte a nitak mateng a nin hi ding a,
+   *peuh-mah-te* / each-self-PL
+   — And for these ye shall be unclean: whosoever toucheth the carcase of them shall be unclean until the even.
+5. [01009006] Mi a that peuhmahte pen, midangte in amah that ding hi. Bang hang hiam cih leh Pasian in ama lim bangin mi bawl hi.
+   *peuh-mah-te* / each-self-PL
+   — Whoso sheddeth man's blood, by man shall his blood be shed: for in the image of God made he man.
 
 ### sawm
 
@@ -3962,23 +3863,6 @@ environment labels inconsistent with their function.
 **Frequency:** 1671 tokens
 **Tentative primary:** PURP.ERG
 
-**Examples (for review):**
-1. [01007003] huih lak vasate zong nupa kop sagih, leitungah amau' nam a manthan loh nadingin la in.
-   *nadingin* / PURP.ERG
-   — Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth.
-2. [01012019] Ka zi dingin amah ka lak theih nadingin, 'Amah ka sanggamnu hi,' bang hangin hong ci na hi hiam? Tu-in hih lai-ah na zi om hi. Amah la in la pai un,” a ci hi.
-   *nadingin* / PURP.ERG
-   — Why saidst thou, She is my sister? so I might have taken her to me to wife: now therefore behold thy wife, take her , and go thy way.
-3. [01015007] Tua ciangin ama kiangah, “Hih leitang na neih nadingin nangma tungah a hong pia dingin Khaldea gam Ur khua panin a hong paikhiatpih pa pen keimah na Topa ka hi hi,” a ci hi.
-   *nadingin* / PURP.ERG
-   — And he said unto him, I am the LORD that brought thee out of Ur of the Chaldees, to give thee this land to inherit it.
-4. [01009011] Nuntakna a nei khempeuh, tuiciin tawh susia kik ngei nawn loin, leitung a susia dingin tuiciin ka tunsakkik ngei nawn loh nadingin note tawh ka thuciamna ka kipsak hi,” a ci hi.
-   *nadingin* / PURP.ERG
-   — And I will establish my covenant with you; neither shall all flesh be cut off any more by the waters of a flood; neither shall there any more be a flood to destroy the earth.
-5. [01008017] Nang tawh a omkhawm nuntakna a nei khempeuh - vasate, ganhingte le leitung a a bokvak peuhmah - leitungah tampi suakin, pungin leitungah a tam theih nadingin paikhiatpih in,” a ci hi.
-   *nadingin* / PURP.ERG
-   — Bring forth with thee every living thing that is with thee, of all flesh, both of fowl, and of cattle, and of every creeping thing that creepeth upon the earth; that they may breed abundantly in the earth, and be fruitful, and multiply upon the earth.
-
 ### la
 
 **Citation form:** la
@@ -4087,23 +3971,6 @@ environment labels inconsistent with their function.
 **Frequency:** 1140 tokens
 **Tentative primary:** PURP
 
-**Examples (for review):**
-1. [01019007] “Ka sanggamte aw, tua banga na gitloh gamtat loh nading uh kong thum hi.
-   *nading* / PURP
-   — and said, I pray you, brethren, do not so wickedly.
-2. [01019021] Amah in ama kiangah, “En in, na gensa khuapi ka lumlet loh nading, hih maipha zong nang kong pia hi.
-   *nading* / PURP
-   — And he said unto him, See, I have accepted thee concerning this thing also, that I will not overthrow this city, for the which thou hast spoken.
-3. [01015008] Ahih hangin amah in, “Topa Pasian aw, keimah in tua leitang ka neih nading bangci theih ding ka hi hiam?” a ci hi.
-   *nading* / PURP
-   — And he said, Lord GOD , whereby shall I know that I shall inherit it?
-4. [01001014] Pasian in, “Sun le zan a khen dingin vantungah khuavakte om hen; tuate pen pawi hun le khuahun, ni le kumte khen nading hi hen la,
-   *nading* / PURP
-   — And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:
-5. [01006015] Na bawl nading dan hih bang ahi hi: Teembaw a sauna pi zali sawmnga, a zaina pi sawmsagih le nga, a sanna pi sawmli le nga hi ding hi.
-   *nading* / PURP
-   — And this is the fashion which thou shalt make it of: The length of the ark shall be three hundred cubits, the breadth of it fifty cubits, and the height of it thirty cubits.
-
 ### nawn
 
 **Citation form:** nawn
@@ -4116,18 +3983,6 @@ environment labels inconsistent with their function.
 1. [14029005] amaute kiangah, “Levi mite aw, ka thugen hong za un! Tuni-in nomau kisiansuah unla, na pu na pate uh Pasian, Topa' biakinn siangthosakin a ninsak thei na khempeuh siangtho mun panin nawnkhia un.
    *nawn-khia* / remain-out
    — and said unto them, Hear me, ye Levites, sanctify now yourselves, and sanctify the house of the LORD God of your fathers, and carry forth the filthiness out of the holy place .
-2. [01005024] Enok pen Pasian tawh kikhawl hi. Enok kimu nawn lo hi; bang hang hiam cih leh Pasian in amah la hi.
-   *nawn* / CONT
-   — and Enoch walked with God: and he was not; for God took him.
-3. [01008012] Tua ciangin ni sagih sung ngak leuleu-in a vakhu khah hi. Tua vakhu pen ama kiangah hong ciahkik nawn lo hi.
-   *nawn* / CONT
-   — And he stayed yet other seven days; and sent forth the dove; which returned not again unto him any more.
-4. [01004012] Lo na khawh ciangin nang a dingin an hong piangsak nawn lo ding hi. Nang pen a galtai, leitung a a vakvai na hi ding hi,” a ci hi.
-   *nawn* / CONT
-   — when thou tillest the ground, it shall not henceforth yield unto thee her strength; a fugitive and a vagabond shalt thou be in the earth.
-5. [01009015] kei le note le nuntakna a nei khempeuh tawh ka thuciamna ka phawk ding hi. Tuite pen, nuntakna a nei khempeuh a susia ding tuiciin suakkik ngei nawn lo ding hi.
-   *nawn* / CONT
-   — and I will remember my covenant, which is between me and you and every living creature of all flesh; and the waters shall no more become a flood to destroy all flesh.
 
 ### khit
 
@@ -4162,23 +4017,6 @@ environment labels inconsistent with their function.
 **Frequency:** 1017 tokens
 **Tentative primary:** 1SG.self
 
-**Examples (for review):**
-1. [01015003] Ta nong pia kei a, ka inn sunga a suak sila in keima gamh a luah ding hi ta hi,” a ci hi.
-   *keima* / 1SG.self
-   — And Abram said, Behold, to me thou hast given no seed: and, lo, one born in my house is mine heir.
-2. [01017010] Hih pen nang le nang' khit cianga na suanlekhakte' zuih ding keima thuciamna ahi hi: Note' lak panin pasal peuhmah a vun ki-at ding hi.
-   *keima* / 1SG.self
-   — This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised.
-3. [01017014] A vun dawn a ki-at lo pasal peuhmah a mipihte kiang panin kihawlkhia ding hi. Bang hang hiam cih leh amah in keima thuciamna palsat hi,” a ci hi.
-   *keima* / 1SG.self
-   — And the uncircumcised man child whose flesh of his foreskin is not circumcised, that soul shall be cut off from his people; he hath broken my covenant.
-4. [01002023] Tua ciangin mipa in, “Tu petpetin hih pen keima guhte le keima sate ahi hi. Amah pen mipa sung panin a kilakhia ahih manin 'Numei' kici ding hi,” a ci hi.
-   *keima* / 1SG.self
-   — And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.
-5. [02034019] “Mihing le ganhing tacil a pa khempeuh keima-a' ahi hi.
-   *keima-a'* / 1SG.self.GEN
-   — All that openeth the matrix is mine; and every firstling among thy cattle, whether ox or sheep, that is male .
-
 ### nangma
 
 **Citation form:** nangma
@@ -4187,23 +4025,6 @@ environment labels inconsistent with their function.
 **Frequency:** 1016 tokens
 **Tentative primary:** 2SG.self
 
-**Examples (for review):**
-1. [01003010] Amah in, “Nangma gin na huan sungah ka za a, ka lau hi. Bang hang hiam cih leh ka guaktangin om ka hih manin ka bucip hi,” a ci hi.
-   *Nangma* / 2SG.self
-   — And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.
-2. [01012013] Nang pen ka sanggamnu ci lehang, nangma hangin kei a dingin thu hong hoihzaw ding a, nangma hangin ka suakta thei kha ding hi,” a ci hi.
-   *nangma* / 2SG.self
-   — Say, I pray thee, thou art my sister: that it may be well with me for thy sake; and my soul shall live because of thee.
-3. [01015004] Tua ciangin ama tungah Topa' thu hong tung a, “Hih mipa pen nangma gamhluah pa hi lo ding hi. Nangma tapa mahmah na gamhluah pa hi ding hi,” a ci hi.
-   *nangma* / 2SG.self
-   — And, behold, the word of the LORD came unto him, saying, This shall not be thine heir; but he that shall come forth out of thine own bowels shall be thine heir.
-4. [09026017] Saul in David' aw khenthei a, “Ka tapa David, tu-a a ging nangma' aw ahi hiam?” a ci hi. David in, “Ka topa, kumpipa aw, keima' aw ahi hi,” a ci hi.
-   *nangma'* / 2SG.self.POSS
-   — And Saul knew David's voice, and said, Is this thy voice, my son David? And David said, It is my voice, my lord, O king.
-5. [01027037] Isaac in Esau dawngin, “En in, amah nangma' topa-in ka bawl khin a, a sanggamte khempeuh ama tungah nasemin ka pia khin a, an le leenggahzu tawh amah ka hingsak hi. Tua ahih ciangin ka ta aw, nang a dingin bang hih thei nawn ding ka hi hiam?” a ci hi.
-   *nangma'* / 2SG.self.POSS
-   — And Isaac answered and said unto Esau, Behold, I have made him thy lord, and all his brethren have I given to him for servants; and with corn and wine have I sustained him: and what shall I do now unto thee, my son?
-
 ### inla
 
 **Citation form:** inla
@@ -4211,23 +4032,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 986 tokens
 **Tentative primary:** and.then
-
-**Examples (for review):**
-1. [01006021] A kine an nam khempeuh zong la inla khol in. Tuate pen nang le amaute a dingin an ding ahi hi,” a ci hi.
-   *inla* / and.then
-   — And take thou unto thee of all food that is eaten, and thou shalt gather it to thee; and it shall be for food for thee, and for them.
-2. [01014021] Sodom kumpipa in Abram' kiangah, “A mite hong pia inla, ahih hangin a nate nang a dingin la in,” a ci hi.
-   *inla* / and.then
-   — And the king of Sodom said unto Abram, Give me the persons, and take the goods to thyself.
-3. [01013017] Ding inla, gamdung gamvai kantanin pai in. Bang hang hiam cih leh nang' tungah kong pia ding hi,” a ci hi.
-   *inla* / and.then
-   — Arise, walk through the land in the length of it and in the breadth of it; for I will give it unto thee.
-4. [01016009] Tua ciangin Topa' vantungmi in ama kiangah, “Na tonu' kiangah ciahkik inla, ama tungah ki-ap in,” a ci hi.
-   *inla* / and.then
-   — And the angel of the LORD said unto her, Return to thy mistress, and submit thyself under her hands.
-5. [01006014] Nang a dingin noah-taak sing tawh teembaw khat bawl in. Teembaw sungah a deite bawl inla, a sung le a pua kultal tui tawh zut in.
-   *inla* / and.then
-   — Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch.
 
 ### thum
 
@@ -4262,23 +4066,6 @@ environment labels inconsistent with their function.
 **Frequency:** 936 tokens
 **Tentative primary:** 1SG.PRO
 
-**Examples (for review):**
-1. [01004013] Kain in Topa' tungah, “Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi.
-   *Keimah* / 1SG.PRO
-   — And Cain said unto the LORD , My punishment is greater than I can bear.
-2. [01015008] Ahih hangin amah in, “Topa Pasian aw, keimah in tua leitang ka neih nading bangci theih ding ka hi hiam?” a ci hi.
-   *keimah* / 1SG.PRO
-   — And he said, Lord GOD , whereby shall I know that I shall inherit it?
-3. [01021026] Abimelek in, “Kua in hih hiam ka thei kei hi. Nang nong gen kei a, keimah in tuni dong ka za nai kei hi,” a ci hi.
-   *keimah* / 1SG.PRO
-   — And Abimelech said, I wot not who hath done this thing: neither didst thou tell me, neither yet heard I of it , but to day.
-4. [01018027] Abraham in thu gen leuleu a, “En in, leivui le vut bang ahi lel keimah in Topa' tungah thu kong gen ngamna hong maisak in.
-   *keimah* / 1SG.PRO
-   — And Abraham answered and said, Behold now, I have taken upon me to speak unto the Lord, which am but dust and ashes:
-5. [01017006] Keimah in suanlekhak tampi kong neisak ding hi. Nang sung panin minamte ka piangsak ding a, nang sung panin kumpite hong piangkhia ding hi.
-   *Keimah* / 1SG.PRO
-   — And I will make thee exceeding fruitful, and I will make nations of thee, and kings shall come out of thee.
-
 ### bek
 
 **Citation form:** bek
@@ -4286,23 +4073,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 805 tokens
 **Tentative primary:** only
-
-**Examples (for review):**
-1. [02009026] Israel mite a omna Goshen gam bekah gialpi kia lo hi.
-   *bek-ah* / sleep-LOC
-   — Only in the land of Goshen, where the children of Israel were , was there no hail.
-2. [01015012] Ni a tum ciangin Abram a ihmut nak suah mahmah a, khua mial bekbak a, lau mahmah hi.
-   *bek-bak* / sleep-deep
-   — And when the sun was going down, a deep sleep fell upon Abram; and, lo, an horror of great darkness fell upon him.
-3. [05002027] 'Na gam sung hong nawksak in. Lampi bekah ka pai ding uh a, taklam ahi a, veilamah ahi zongin ka pial kei ding uh hi.
-   *bek-ah* / sleep-LOC
-   — Let me pass through thy land: I will go along by the high way, I will neither turn unto the right hand nor to the left.
-4. [02008011] Nang le na innte le na nasemte le na mite' kiang panin uiphukte paikhia ding uh a, Nail gun sung bekah omlai ding hi,” a ci hi.
-   *bek-ah* / sleep-LOC
-   — And the frogs shall depart from thee, and from thy houses, and from thy servants, and from thy people; they shall remain in the river only.
-5. [03013023] Ahih hangin a natna mun pen mun khat bekah omin a kilawh kei leh meimatum pawn hi a, siampipa in amah a siang hi, ci-in gen ding hi.
-   *bek-ah* / sleep-LOC
-   — But if the bright spot stay in his place, and spread not, it is a burning boil; and the priest shall pronounce him clean.
 
 ### zo
 
@@ -4362,20 +4132,6 @@ environment labels inconsistent with their function.
 **Frequency:** 752 tokens
 **Tentative primary:** 2→1
 
-**Examples (for review):**
-1. [01015003] Ta nong pia kei a, ka inn sunga a suak sila in keima gamh a luah ding hi ta hi,” a ci hi.
-   *nong* / 2→1
-   — And Abram said, Behold, to me thou hast given no seed: and, lo, one born in my house is mine heir.
-2. [01003012] Mipa in, “Kei tawh a om dinga nong piak numei in singgah hong pia a, ke'n ka ne hi,” ci hi.
-   *nong* / 2→1
-   — And the man said, The woman whom thou gavest to be with me, she gave me of the tree, and I did eat.
-3. [01017009] Pasian in Abraham' kiangah, “Nang le nang' khit cianga na suanlekhakte in zong ka thuciamna na zuih ding uh nong thukim ding uh ahi hi.
-   *nong* / 2→1
-   — And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.
-4. [01004014] En in, tuni-in nangmah in leitung panin kei nong hawlkhia a, nang kiang panin kei nong notkhia hi. Kei pen a galtai, leitungah a vakvai ka hi ding a, kei hong mu peuhmah in hong that ding hi,” a ci hi.
-   *nong* / 2→1
-   — Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me.
-
 ### tampi
 
 **Citation form:** tampi
@@ -4383,23 +4139,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 732 tokens
 **Tentative primary:** many
-
-**Examples (for review):**
-1. [01009007] “Note, pungin khang unla, leitungah tampi tak piangkhia-in, tampi pha-in khang un,” a ci hi.
-   *tampi* / many
-   — And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein.
-2. [01009001] Pasian in Noah le a tapate thupha pia a, amaute tungah, “Pung unla, tampi pha-in, leitung dim un.
-   *tampi* / many
-   — And God blessed Noah and his sons, and said unto them, Be fruitful, and multiply, and replenish the earth.
-3. [01001022] Pasian in amaute thupha pia a, “Ci pha-in tampi pha-in, tuipi sung dim unla, leitungah vasate tampi pha un,” ci hi.
-   *tampi* / many
-   — And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.
-4. [20007026] Tua bang numei in mi tampi tak siasakin, simzawh loh ding mi tampi' sihna a piangsak hi.
-   *tampi'* / many.POSS
-   — For she hath cast down many wounded: Yea, many strong men have been slain by her.
-5. [54006012] Upna thu-ah hoihtakin nawksuak inla, mi tampi' zakin na pulaksa, Pasian in nangmah a hong piak nuntak tawntungna lenkip in.
-   *tampi'* / many.POSS
-   — Fight the good fight of faith, lay hold on eternal life, whereunto thou art also called, and hast professed a good profession before many witnesses.
 
 ### nuam
 
@@ -4459,23 +4198,6 @@ environment labels inconsistent with their function.
 **Frequency:** 710 tokens
 **Tentative primary:** 2SG.PRO
 
-**Examples (for review):**
-1. [01020015] Abimelek in, “En in, ka leitang, na mai-ah om hi. Nangmah in hoih na sakna munah teng in,” a ci hi.
-   *Nangmah* / 2SG.PRO
-   — And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee.
-2. [01024037] Ka topa in kei hong kiciamsak a, 'Nangmah in amau' gamah ka tenna Kanaan numeite lak panin ka tapa' zi ding la kei inla,
-   *Nangmah* / 2SG.PRO
-   — And my master made me swear, saying, Thou shalt not take a wife to my son of the daughters of the Canaanites, in whose land I dwell:
-3. [01014023] Nangmah in, 'Abram ka hausak hi,' ci kha ding na hih manin mimkhau ahi a, khedap khau ahi a, nangma a' ahi na khat peuhpeuh ahi zongin ka la kei ding hi.
-   *Nangmah* / 2SG.PRO
-   — that I will not take from a thread even to a shoelatchet, and that I will not take any thing that is thine, lest thou shouldest say, I have made Abram rich:
-4. [01021030] Amah in, “Keimah in hih tuikhuk ka tawhna thu-ah nang in keima a dingin teci na hih theih nadingin nangmah in ka khutsung panin hih tuununo sagihte na la ding hi,” a ci hi.
-   *nangmah* / 2SG.PRO
-   — And he said, For these seven ewe lambs shalt thou take of my hand, that they may be a witness unto me, that I have digged this well.
-5. [01004014] En in, tuni-in nangmah in leitung panin kei nong hawlkhia a, nang kiang panin kei nong notkhia hi. Kei pen a galtai, leitungah a vakvai ka hi ding a, kei hong mu peuhmah in hong that ding hi,” a ci hi.
-   *nangmah* / 2SG.PRO
-   — Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me.
-
 ### kote
 
 **Citation form:** kote
@@ -4484,23 +4206,6 @@ environment labels inconsistent with their function.
 **Frequency:** 682 tokens
 **Tentative primary:** 1PL.PRO
 
-**Examples (for review):**
-1. [01034009] Kote tawh kitenna hong bawl un. Na tanute uh kote' tungah hong pia unla, no a dingin ka tanute uh la un.
-   *Kote* / 1PL.PRO
-   — And make ye marriages with us, and give your daughters unto us, and take our daughters unto you.
-2. [01026016] Abimelek in Isaac kiangah, “Kote' kiang panin paikhia in. Bang hang hiam cih leh kote sangin nang na vanglian zaw hi,” a ci hi.
-   *kote* / 1PL.PRO
-   — And Abimelech said unto Isaac, Go from us; for thou art much mightier than we.
-3. [01034017] Ahih hangin note in ka thu uh hong ngai loin, vun na ki-at kei uh le, ka tanu uh ka la ding uh a, kote ka paikhia ding uh hi,” a ci uh hi.
-   *kote* / 1PL.PRO
-   — But if ye will not hearken unto us, to be circumcised; then will we take our daughter, and we will be gone.
-4. [01034015] Hih bangin nong gamtat uhleh ka thukim bek ding uh hi: Note' sung panin pasal khempeuh vun ki-at le-uhcin kote mah bang na suak ding uh hi.
-   *kote* / 1PL.PRO
-   — but in this will we consent unto you: If ye will be as we be , that every male of you be circumcised;
-5. [01034016] Tua ciangin ka tanute uh note' tungah hong pia-in, na tanute uh kote a dingin kong la ding uh a, note tawh kote hong tengin mikhat i suak ding hi.
-   *kote* / 1PL.PRO
-   — then will we give our daughters unto you, and we will take your daughters to us, and we will dwell with you, and we will become one people.
-
 ### kuamah
 
 **Citation form:** kuamah
@@ -4508,23 +4213,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 664 tokens
 **Tentative primary:** nobody
-
-**Examples (for review):**
-1. [02002012] Amah khuadak kawikawi a, kuamah mu lo ahih manin Egypt mipa thatin sehnel sungah a seel hi.
-   *kuamah* / nobody
-   — And he looked this way and that way, and when he saw that there was no man, he slew the Egyptian, and hid him in the sand.
-2. [01006012] Pasian in leitung en a, a kisiagawp mu hi. Bang hang hiam cih leh leitungah mi khempeuh a sia-in a gamta lo kuamah om lo hi.
-   *kuamah* / nobody
-   — And God looked upon the earth, and, behold, it was corrupt; for all flesh had corrupted his way upon the earth.
-3. [01024016] Tua nu pen kuamah tawh a lumkhawm nai lo, nungak, a ngaihbaang mahmah khat ahi hi. Amah tuikhukah paisukin a beel dim a, hong paito hi.
-   *kuamah* / nobody
-   — And the damsel was very fair to look upon, a virgin, neither had any man known her: and she went down to the well, and filled her pitcher, and came up.
-4. [01031050] Ka tanute na bawl siat a, ka tanute' banah zi na lak beh leh, eite tawh kuamah a om loh hangin nang le kei' kikalah, Pasian, teci ahihna phawk in,” a ci hi.
-   *kuamah* / nobody
-   — If thou shalt afflict my daughters, or if thou shalt take other wives beside my daughters, no man is with us; see, God is witness betwixt me and thee.
-5. [01041015] Faro in Josef kiangah, “Mang khat ka man a, a khiatna a gen thei kuamah om lo hi. Nang in mang na zak ciangin a khiatna gen thei, ci-in hong kigenna ka za hi,” a ci hi.
-   *kuamah* / nobody
-   — And Pharaoh said unto Joseph, I have dreamed a dream, and there is none that can interpret it: and I have heard say of thee, that thou canst understand a dream to interpret it.
 
 ### loh
 
@@ -4559,23 +4247,6 @@ environment labels inconsistent with their function.
 **Frequency:** 618 tokens
 **Tentative primary:** 1PL.PRO
 
-**Examples (for review):**
-1. [01019031] A u pen in a nau tungah, “I pa lah teek ta a, leitung ngeina bangin eite hong luppih ding pasal khat zong om lo hi.
-   *eite* / 1PL.PRO
-   — And the firstborn said unto the younger, Our father is old, and there is not a man in the earth to come in unto us after the manner of all the earth:
-2. [01011007] Hong pai un, amaute khatlekhat' thugen a kitheih loh nadingun eite paisukin amau' kampau va kitukalhsak ni,” a ci hi.
-   *eite* / 1PL.PRO
-   — Go to, let us go down, and there confound their language, that they may not understand one another's speech.
-3. [01005029] ama min Noah phuakin, “ Topa in a samsiatsa leitang panin hih pa in i nasepna le i gimnate-ah eite hong khahkhia ding hi,” a ci hi.
-   *eite* / 1PL.PRO
-   — and he called his name Noah, saying, This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath cursed.
-4. [01013008] Tua ciangin Abram in Lot' kiangah, “Nang le kei' kikal, nang' gancingte le kei' gancingte' kikalah kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi.
-   *eite* / 1PL.PRO
-   — And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.
-5. [01031015] Amah in eite gamdangmi bangin hong ngaihsun hi lo ahi hiam? Bang hang hiam cih leh amah in eite hong zuak khin a, eite a' ding hong kipia sum amah in zang mang khin hi.
-   *eite* / 1PL.PRO
-   — Are we not counted of him strangers? for he hath sold us, and hath quite devoured also our money.
-
 ### kua
 
 **Citation form:** kua
@@ -4609,23 +4280,6 @@ environment labels inconsistent with their function.
 **Frequency:** 522 tokens
 **Tentative primary:** nothing
 
-**Examples (for review):**
-1. [01009021] Amah in leenggahzu ne-in kham a, a puanbuk sungah bangmah silh loin a lum hi.
-   *bangmah* / nothing
-   — and he drank of the wine, and was drunken; and he was uncovered within his tent.
-2. [01014024] Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi. Aner, Eshkol, le Mamre-te amau' tanh ding pia in,” a ci hi.
-   *bangmah* / nothing
-   — save only that which the young men have eaten, and the portion of the men which went with me, Aner, Eshcol, and Mamre; let them take their portion.
-3. [01030031] Amah in, “Nang bang hong pia ding ka hi hiam?” a ci hi. Jakob in, “Bangmah dang nong pia kei ding hi. Hih bangin nong hih nakleh na tuuhonte vak kikin ka kem ding hi.
-   *Bangmah* / nothing
-   — And he said, What shall I give thee? And Jacob said, Thou shalt not give me any thing: if thou wilt do this thing for me, I will again feed and keep thy flock.
-4. [01034005] Tu-in Jakob in a tanu Dinah a kisiatsakna za hi. Ahih hangin a tate, a ganhingte tawh gamlakah om ahih manin amaute hong tun matengin Jakob in bangmah gen loin om hi.
-   *bangmah* / nothing
-   — And Jacob heard that he had defiled Dinah his daughter: now his sons were with his cattle in the field: and Jacob held his peace until they were come.
-5. [01019022] Kinawh inla, tua lai-ah tai in. Bang hang hiam cih leh tua lai-ah nang na tun mateng ke'n bangmah ka hih thei kei hi,” a ci hi. Tua ahih ciangin tua khuapi min Zoar kici hi.
-   *bangmah* / nothing
-   — Haste thee, escape thither; for I cannot do any thing till thou be come thither. Therefore the name of the city was called Zoar.
-
 ### peuhpeuh
 
 **Citation form:** peuhpeuh
@@ -4634,23 +4288,6 @@ environment labels inconsistent with their function.
 **Frequency:** 513 tokens
 **Tentative primary:** every
 
-**Examples (for review):**
-1. [01034011] Shekhem in a numei' pa le a numei' sanggamte' kiangah, “Note' mai-ah maipha hong musak unla, kei' tunga nong cih peuhpeuh uh kong pia ding hi.
-   *peuhpeuh* / every
-   — And Shechem said unto her father and unto her brethren, Let me find grace in your eyes, and what ye shall say unto me I will give.
-2. [01014023] Nangmah in, 'Abram ka hausak hi,' ci kha ding na hih manin mimkhau ahi a, khedap khau ahi a, nangma a' ahi na khat peuhpeuh ahi zongin ka la kei ding hi.
-   *peuhpeuh* / every
-   — that I will not take from a thread even to a shoelatchet, and that I will not take any thing that is thine, lest thou shouldest say, I have made Abram rich:
-3. [01018014] Na khat peuhpeuh Topa a dingin haksa lua ahi hiam? A kisehsa tuzawh kha kua ciangin nang kiangah kong paikik ding a, Sarah in tapa khat nei ding hi,” a ci hi.
-   *peuhpeuh* / every
-   — Is any thing too hard for the LORD ? At the time appointed I will return unto thee, according to the time of life, and Sarah shall have a son.
-4. [01019012] Tua ciangin mi nihte in Lot kiangah, “Hih lai-ah tanau dang na nei hiam? Makte, tapate, ahih kei leh khua sunga nang' mi peuhpeuh hih mun panin paikhiatpih in.
-   *peuhpeuh* / every
-   — And the men said unto Lot, Hast thou here any besides? son in law, and thy sons, and thy daughters, and whatsoever thou hast in the city, bring them out of this place:
-5. [01031016] I pa' tung panin Pasian in a lakkhiatsa neihsa khempeuh eite le i tate a' ahi hi. Tua ahih ciangin tu-in, nang' tunga Pasian' hong cih peuhpeuh hih in,” a ci uh hi.
-   *peuhpeuh* / every
-   — For all the riches which God hath taken from our father, that is our's, and our children's: now then, whatsoever God hath said unto thee, do.
-
 ### uhah
 
 **Citation form:** uhah
@@ -4658,23 +4295,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 507 tokens
 **Tentative primary:** 2/3PL.LOC
-
-**Examples (for review):**
-1. [01043012] Na sum uh a zah nih pua un. Na van gong uhah a kikoihkik sumte puakik un, a kikhial hi kha ding hi.
-   *uhah* / 2/3PL.LOC
-   — and take double money in your hand; and the money that was brought again in the mouth of your sacks, carry it again in your hand; peradventure it was an oversight:
-2. [01034010] Kote' lakah nong teng ding uh hi. No a dingin leitang hong kipia ding hi. Ka gam sung uhah tengin sum bawl unla, neihsa lam un,” a ci hi.
-   *uhah* / 2/3PL.LOC
-   — And ye shall dwell with us: and the land shall be before you; dwell and trade ye therein, and get you possessions therein.
-3. [01042035] Amau' vante a suah ciangun, a milipun a sumte uh a van sung ciat uhah na om hi. Amaute le a pa un amaute' sum kihente a muh uh ciangin, lungkham uh hi.
-   *uhah* / 2/3PL.LOC
-   — And it came to pass as they emptied their sacks, that, behold, every man's bundle of money was in his sack: and when both they and their father saw the bundles of money, they were afraid.
-4. [01032018] note in, 'Na nasempa Jakob-a' ahi hi. Hihte pen ka topa Esau' tungah letsongin hong kipuak ahi hi. Tua tham loin amah ka nung uhah om hi,' ci un,” a ci hi.
-   *uhah* / 2/3PL.LOC
-   — Then thou shalt say, They be thy servant Jacob's; it is a present sent unto my lord Esau: and, behold, also he is behind us.
-5. [01026031] Zingsangin amaute tho baih uh a, khatlekhat kiciamna a bawl uh hi. Isaac in amaute a lampi ding uhah kha a, ama kiang panin amaute lungnuam takin a paikhia uh hi.
-   *uhah* / 2/3PL.LOC
-   — And they rose up betimes in the morning, and sware one to another: and Isaac sent them away, and they departed from him in peace.
 
 ### li
 
@@ -4709,23 +4329,6 @@ environment labels inconsistent with their function.
 **Frequency:** 415 tokens
 **Tentative primary:** if
 
-**Examples (for review):**
-1. [01032021] Tua ahih ciangin letsong a piak dingte, ama mai-ah paisak a, amah ahihleh tua zanin giahphual ah a giak lai hi.
-   *ahihleh* / if
-   — So went the present over before him: and himself lodged that night in the company.
-2. [01017015] Tua ciangin Pasian in Abraham' kiangah, “Na zi Sarai ahihleh, ama min Sarai na ci nawn kei ding a, ama min Sarah hi ding hi.
-   *ahihleh* / if
-   — And God said unto Abraham, As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be .
-3. [01004024] Kain a kithah manin a zah sagihin kithukkik ahihleh, Lamek a kithah manin a zah sawmsagihin kithukkik taktak ding hi,” a ci hi.
-   *ahihleh* / if
-   — If Cain shall be avenged sevenfold, Truly Lamech seventy and sevenfold.
-4. [01025027] Tua naupangte a khan ciangin, Esau pen gam sung mi sabet siam khat hi a, Jakob ahihleh inn-ah om hithiatin a cingkam khat ahi hi.
-   *ahihleh* / if
-   — And the boys grew: and Esau was a cunning hunter, a man of the field; and Jacob was a plain man, dwelling in tents.
-5. [01025022] Ama sungah a naute kilaigawp hi. Amah in, “Hih bang ahihleh bang hangin nungta se ka hi hiam?” a ci hi. Tua ahih ciangin Topa kiangah thukan dingin amah pai hi.
-   *ahihleh* / if
-   — And the children struggled together within her; and she said, If it be so, why am I thus? And she went to enquire of the LORD .
-
 ### hitaleh
 
 **Citation form:** hitaleh
@@ -4734,17 +4337,6 @@ environment labels inconsistent with their function.
 **Frequency:** 380 tokens
 **Tentative primary:** if.so
 
-**Examples (for review):**
-1. [01017013] na inn sunga suak hitaleh, na sum tawh a kileipa hitaleh a vun ki-at tuak ding hi. Tua ahih ciangin tawntung thuciamna ahi keima thuciamna pen nomau' satak sungah om ding hi.
-   *hitaleh* / if.so
-   — He that is born in thy house, and he that is bought with thy money, must needs be circumcised: and my covenant shall be in your flesh for an everlasting covenant.
-2. [01013010] Lot zong khuadak a, Jordan gun kuam mun khempeuh in limtakin tui ngahin Topa' huan hitaleh, Zoar lama Egypt gam tawh hitaleh kibang hi, ci-in mu hi. Hih pen Topa in Sodom le Gomorrah a suksiat hun ma ahi hi.
-   *hitaleh* / if.so
-   — And Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where, before the LORD destroyed Sodom and Gomorrah, even as the garden of the LORD , like the land of Egypt, as thou comest unto Zoar.
-3. [01017012] Note' lak panin ni giat a pha peuhmah pa a vun ki-at ding hi. Note' khang tawntungin pasal peuhmah, note' inn sunga suak hitaleh, note' ta ahi lo, gamdang mi khatpeuh kiang panin na sum uh tawh na lei uh hitaleh
-   *hitaleh* / if.so
-   — And he that is eight days old shall be circumcised among you, every man child in your generations, he that is born in the house, or bought with money of any stranger, which is not of thy seed.
-
 ### masa
 
 **Citation form:** masa
@@ -4752,23 +4344,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 352 tokens
 **Tentative primary:** first
-
-**Examples (for review):**
-1. [01010015] Kanaan pen ama sung pan a suak masa Sidon, Heth,
-   *masa* / first
-   — And Canaan begat Sidon his firstborn, and Heth,
-2. [01009020] Noah pen lo kho masa pa hi a, amah in leenggui lo khat a bawl hi.
-   *masa* / first
-   — And Noah began to be an husbandman, and he planted a vineyard:
-3. [01010008] Kush in Nimrod kici tapa khat nei a, amah pen leitungah a vanglian masa mi ahi hi.
-   *masa* / first
-   — And Cush begat Nimrod: he began to be a mighty one in the earth.
-4. [01002011] A masa pen gun a min Pishon hi a, kham a omna, Havilah gambup kimkotah a luang pen ahi hi.
-   *masa* / first
-   — The name of the first is Pison: that is it which compasseth the whole land of Havilah, where there is gold;
-5. [01013004] a masa-a biakna tau khat a bawlnasa munah khualzinin a paisuak hi. Tua lai munah Abram in Topa' tungah thu a ngen hi.
-   *masa-a* / first-LOC
-   — unto the place of the altar, which he had made there at the first: and there Abram called on the name of the LORD .
 
 ### peuh
 
@@ -4807,18 +4382,9 @@ environment labels inconsistent with their function.
 1. [66005011] Tua ciangin ka khuadak leh tokhom le ganhing lite le upate' kimkotah atul-amakin a ding miaimuai vantung mite' awging ka za hi.
    *a-tul-ama-kin* / 3SG-follow-3PL-also
    — And I beheld, and I heard the voice of many angels round about the throne and the beasts and the elders: and the number of them was ten thousand times ten thousand, and thousands of thousands;
-2. [02020006] ahih hangin kei hong itin ka thupiakte a zui mi a tul tampite tungah itna kip a lak pa ka hi hi.
-   *tul* / thousand
-   — and shewing mercy unto thousands of them that love me, and keep my commandments.
-3. [02012037] Israel mite numei le naupang kisim loin pasal tul zaguk Rameses panin Sukkoth-ah khe-in pai uh hi.
-   *tul* / thousand
-   — And the children of Israel journeyed from Rameses to Succoth, about six hundred thousand on foot that were men, beside children.
-4. [03026008] Note nga in zakhat zo-in, note zakhat in tul sawm na zo ding uh hi. Note' mai-ah namsau in na galte uh puksak ding hi.
-   *tul* / thousand
-   — And five of you shall chase an hundred, and an hundred of you shall put ten thousand to flight: and your enemies shall fall before you by the sword.
-5. [02018025] Israel mi khempeuh sung panin Moses in mipil mi siamte teel a, mite a tul, a za, a sawmnga, a sawmte tungah a ukin mite' lutangin amaute a bawl hi.
-   *tul* / thousand
-   — And Moses chose able men out of all Israel, and made them heads over the people, rulers of thousands, rulers of hundreds, rulers of fifties, and rulers of tens.
+2. [66005011] Tua ciangin ka khuadak leh tokhom le ganhing lite le upate' kimkotah atul-amakin a ding miaimuai vantung mite' awging ka za hi.
+   *a-tul-ama-kin* / 3SG-follow-3PL-also
+   — And I beheld, and I heard the voice of many angels round about the throne and the beasts and the elders: and the number of them was ten thousand times ten thousand, and thousands of thousands;
 
 ### ulian
 
@@ -4828,23 +4394,6 @@ environment labels inconsistent with their function.
 **Frequency:** 315 tokens
 **Tentative primary:** elder
 
-**Examples (for review):**
-1. [02015004] “Faro' leengte le a mihonpite tuipi sungah lawn a, a kitengkhia ama uliante San Tuipi sungah tum hi.
-   *ulian-te* / elder-PL
-   — Pharaoh's chariots and his host hath he cast into the sea: His chosen captains also are drowned in the Red sea.
-2. [01012015] Faro' uliante in amah a muh uh ciangin Faro' kiangah amah phat uh hi. Faro' inn sungah tua nupi kila hi.
-   *ulian-te* / elder-PL
-   — The princes also of Pharaoh saw her, and commended her before Pharaoh: and the woman was taken into Pharaoh's house.
-3. [02023008] Sumgolh na la kei ding uh hi. Bang hang hiam cih leh sumgolh in uliante' mit tawsak a, thuman mite' thu heikhiatsak hi.
-   *ulian-te'* / elder-PL.POSS
-   — And thou shalt take no gift: for the gift blindeth the wise, and perverteth the words of the righteous.
-4. [01041043] Ama leeng nihna tungah Josef tuangsak a, ama mai-ah uliante kiko a, “Khukdin' un!” ci hi. Tua ahih ciangin Egypt gam khempeuh a ukin amah koih hi.
-   *ulian-te* / elder-PL
-   — and he made him to ride in the second chariot which he had; and they cried before him, Bow the knee: and he made him ruler over all the land of Egypt.
-5. [04021018] Kumpi ciangkhut le amau' ciangkhutte tawh mite' uliante in a tawh, kumpi tate in a tawh tuikhuk aw,” a ci uh hi. Gamlak panin amaute Mattanah munah pai uh a,
-   *ulian-te* / elder-PL
-   — The princes digged the well, The nobles of the people digged it, By the direction of the lawgiver, with their staves. And from the wilderness they went to Mattanah:
-
 ### uhleh
 
 **Citation form:** uhleh
@@ -4852,23 +4401,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 306 tokens
 **Tentative primary:** 2/3PL.if
-
-**Examples (for review):**
-1. [01023008] Amah in amaute' kiangah, “Hih gamah ka zi ka vui ding nong deih uhleh, ka thu hong ngai un. Zohar' tapa Efron in
-   *uhleh* / 2/3PL.if
-   — And he communed with them, saying, If it be your mind that I should bury my dead out of my sight; hear me, and intreat for me to Ephron the son of Zohar,
-2. [02004008] Pasian in, “Amaute in nang hong up kei a, lim masa a thudon kei uhleh zong, amaute in lim nunung um kha ding uh hi.
-   *uhleh* / 2/3PL.if
-   — And it shall come to pass, if they will not believe thee, neither hearken to the voice of the first sign, that they will believe the voice of the latter sign.
-3. [01034015] Hih bangin nong gamtat uhleh ka thukim bek ding uh hi: Note' sung panin pasal khempeuh vun ki-at le-uhcin kote mah bang na suak ding uh hi.
-   *uhleh* / 2/3PL.if
-   — but in this will we consent unto you: If ye will be as we be , that every male of you be circumcised;
-4. [01042019] Note, thuman mi na hih uhleh thong sungah na sanggamte uh khat omsak lai unla, a dangte pai-in na innkuan uh a gilkialte a dingin an pua unla,
-   *uhleh* / 2/3PL.if
-   — if ye be true men , let one of your brethren be bound in the house of your prison: go ye, carry corn for the famine of your houses:
-5. [01043003] Ahih hangin Judah in ama kiangah, “Mipa in thupi takin kote hong hilhkhol a, 'Na sanggampa uh tawh nong ton kei uhleh ka mai na mu kei ding uh hi,' hong ci hi.
-   *uhleh* / 2/3PL.if
-   — And Judah spake unto him, saying, The man did solemnly protest unto us, saying, Ye shall not see my face, except your brother be with you.
 
 ### up
 
@@ -4978,23 +4510,6 @@ environment labels inconsistent with their function.
 **Frequency:** 214 tokens
 **Tentative primary:** until
 
-**Examples (for review):**
-1. [01008007] va-ak khat khah hi. Leitung panin tuite a keu mateng leeng kawikawi hi.
-   *mateng* / until
-   — and he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth.
-2. [01027044] na sanggampa' hehna a dam mateng tua lai ama kiangah tawlkhat sung va om in.
-   *mateng* / until
-   — and tarry with him a few days, until thy brother's fury turn away;
-3. [01039016] Tua ciangin Josef' topa inn-ah hong ciah mateng amah in a kiangah a puan koih hi.
-   *mateng* / until
-   — And she laid up his garment by her, until his lord came home.
-4. [01024019] Amah in tua mipa tui a dawnsak khit ciangin, “Na kalaohte in a kham matengun a dawn ding zong tui kong tawisak ding hi,” a ci hi.
-   *mateng-un* / until-PL.IMP
-   — And when she had done giving him drink, she said, I will draw water for thy camels also, until they have done drinking.
-5. [01038017] Amah in dawngin, “Keelhon panin keelno khat hong puak ning,” a ci hi. Tua nu in, “Nong puak mateng khapna khat nong pia ding hiam?” a ci hi.
-   *mateng* / until
-   — And he said, I will send thee a kid from the flock. And she said, Wilt thou give me a pledge, till thou send it?
-
 ### leuleu
 
 **Citation form:** leuleu
@@ -5002,23 +4517,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 193 tokens
 **Tentative primary:** again
-
-**Examples (for review):**
-1. [01008010] Amah in ni sagih sung ngakin, teembaw panin a vakhu khah leuleu hi.
-   *leuleu* / again
-   — And he stayed yet other seven days; and again he sent forth the dove out of the ark;
-2. [01004002] Tua ciangin a sanggampa Abel nei leuleu hi. Tu-in Abel, tuu kem pa hi a, Kain, lo khopa ahi hi.
-   *leuleu* / again
-   — And she again bare his brother Abel. And Abel was a keeper of sheep, but Cain was a tiller of the ground.
-3. [01008012] Tua ciangin ni sagih sung ngak leuleu-in a vakhu khah hi. Tua vakhu pen ama kiangah hong ciahkik nawn lo hi.
-   *leuleu-in* / again-ERG
-   — And he stayed yet other seven days; and sent forth the dove; which returned not again unto him any more.
-4. [01018027] Abraham in thu gen leuleu a, “En in, leivui le vut bang ahi lel keimah in Topa' tungah thu kong gen ngamna hong maisak in.
-   *leuleu* / again
-   — And Abraham answered and said, Behold now, I have taken upon me to speak unto the Lord, which am but dust and ashes:
-5. [01026021] Tua ciangin amaute in tuikhuk dang khat to uh a, tua tungtangah zong amaute kitawng leuleu uh hi. Tua ahih ciangin amah in tua pen Sitnah ci-in min a phuak hi.
-   *leuleu* / again
-   — And they digged another well, and strove for that also: and he called the name of it Sitnah.
 
 ### tung
 
@@ -5053,23 +4551,6 @@ environment labels inconsistent with their function.
 **Frequency:** 180 tokens
 **Tentative primary:** how
 
-**Examples (for review):**
-1. [01037030] a sanggamte kiangah ciahkikin, “Tangvalpa om nawn lo hi. Kei bangci ding ka hi hiam?” a ci hi.
-   *bangci* / how
-   — And he returned unto his brethren, and said, The child is not; and I, whither shall I go?
-2. [01015008] Ahih hangin amah in, “Topa Pasian aw, keimah in tua leitang ka neih nading bangci theih ding ka hi hiam?” a ci hi.
-   *bangci* / how
-   — And he said, Lord GOD , whereby shall I know that I shall inherit it?
-3. [01044015] Josef in amaute kiangah, “Note' gamtatna a bangci gamtat ahi hiam? Kei bang ahi mi in thu ka theihna thei lo na hi uh hiam?” a ci hi.
-   *bangci* / how
-   — And Joseph said unto them, What deed is this that ye have done? wot ye not that such a man as I can certainly divine?
-4. [01003013] Tua ciangin Topa Pasian in numei kiangah, “Bangci a hici gamtat na hi hiam?” a ci hi. Numei in, “Gulpi in kei hong khem a, ka ne hi,” ci hi.
-   *Bangci* / how
-   — And the LORD God said unto the woman, What is this that thou hast done? And the woman said, The serpent beguiled me, and I did eat.
-5. [01044008] En in, ka van gong uha ka muh uh sumte, Kanaan gam panin nang kiangah kong puak kik uh hi. Tua ahih teh na topa' inn panin ngun hitaleh kham hitaleh bangci guk ding ka hi uh hiam?
-   *bangci* / how
-   — behold, the money, which we found in our sacks' mouths, we brought again unto thee out of the land of Canaan: how then should we steal out of thy lord's house silver or gold?
-
 ### veve
 
 **Citation form:** veve
@@ -5077,23 +4558,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 137 tokens
 **Tentative primary:** still
-
-**Examples (for review):**
-1. [02022017] A numei' pa in ama tungah tua nu a piak nop kei leh zong, tua mipa in nungak moman letsong zah numei' pa' tungah sum pia veve ding hi.
-   *veve* / still
-   — If her father utterly refuse to give her unto him, he shall pay money according to the dowry of virgins.
-2. [03015003] Amah a ninsak a natui paikhia tawh kisai-in ngeina hih bang ahi hi: A natui a paipai a, a khawl zongin, ama sungah nitna mah hi veve hi.
-   *veve* / still
-   — And this shall be his uncleanness in his issue: whether his flesh run with his issue, or his flesh be stopped from his issue, it is his uncleanness.
-3. [03026018] “Tua bang hinapi-in note in ka thu nong ngaih kei veve uhleh, keimah in na khialhna hangun a zah sagih vei-in note kong thuhilhkik ding a,
-   *veve* / still
-   — And if ye will not yet for all this hearken unto me, then I will punish you seven times more for your sins.
-4. [04032030] Ahih hangin hiam tawi-in note tawh hong galkah kei uhleh zong amaute in Kanaan gam sungah note mah bangin ngah nei veve ding uh hi,” a ci hi.
-   *veve* / still
-   — but if they will not pass over with you armed, they shall have possessions among you in the land of Canaan.
-5. [04014044] Ahih hangin Topa' thuciamna singkuang hitaleh Moses hitaleh giahphual panin ding khia lo napi-in gamlak mual dawnah kuantoh ding amaute in ngaihsun veve uh hi.
-   *veve* / still
-   — But they presumed to go up unto the hill top: nevertheless the ark of the covenant of the LORD , and Moses, departed not out of the camp.
 
 ### hinapi
 
@@ -5103,23 +4567,6 @@ environment labels inconsistent with their function.
 **Frequency:** 129 tokens
 **Tentative primary:** but.ERG
 
-**Examples (for review):**
-1. [20001012] I muh tungin a cidam, a hing kimlai hinapi, i suk khit ciangin a sisa hi ding!
-   *hinapi* / but
-   — Let us swallow them up alive as the grave; And whole, as those that go down into the pit:
-2. [18034006] Kei a thuman hinapi zuauthu genin hong seh hi. Kei a khial hi lo napi gim thuakin ka cimawh hi,' a ci hi.
-   *hinapi* / but
-   — Should I lie against my right? My wound is incurable without transgression.
-3. [19028003] Amau' lungsim sungah siatna a om hinapi a vengte tawh kilemna thu a gen khem, siatna bawlte, migilote tawh kei hong lakhiakhawm kei in.
-   *hinapi* / but
-   — Draw me not away with the wicked, and with the workers of iniquity, Which speak peace to their neighbours, but mischief is in their hearts.
-4. [24003010] Hih bang teng hinapi a sanggamnu, numei ginalo Judah, a lungsim takpi tawh hong kilehkik loin, a kilehkik hong kineihkhem bek hi, Topa in kong ci hi,” hong ci hi.
-   *hinapi* / but
-   — And yet for all this her treacherous sister Judah hath not turned unto me with her whole heart, but feignedly, saith the LORD .
-5. [08002010] Tua ciangin amah a mai-in lei-ah puk a, leilakah kunin ama kiangah, “Kei gamdang mi khat hinapi, hih banga kei nong phawkna dingin bang hangin na mai-ah maipha ngah thei ka hi hiam?” a ci hi.
-   *hinapi* / but
-   — Then she fell on her face, and bowed herself to the ground, and said unto him, Why have I found grace in thine eyes, that thou shouldest take knowledge of me, seeing I am a stranger?
-
 ### pualam
 
 **Citation form:** pualam
@@ -5127,23 +4574,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 128 tokens
 **Tentative primary:** outside
-
-**Examples (for review):**
-1. [01009022] Kanaan' pa Ham in a pa guaktangin a omna mu a, a pualama om a sanggam nihte kiangah a gen hi.
-   *pualam-a* / outside-LOC
-   — And Ham, the father of Canaan, saw the nakedness of his father, and told his two brethren without.
-2. [01024011] Numeite' nitak tuitawi hun laitakin khuapi pualam tuikhuk gei-ah amah in a kalaohte boksak hi.
-   *pualam* / outside
-   — And he made his camels to kneel down without the city by a well of water at the time of the evening, even the time that women go out to draw water .
-3. [02016025] Moses in, “Tuni-in ne un; tuni pen Topa a dingin Sabbath ahi hi. Tuni-in a pualamah na mu kei ding uh hi.
-   *pualam-ah* / outside-LOC
-   — And Moses said, Eat that to day; for to day is a sabbath unto the LORD : to day ye shall not find it in the field.
-4. [02026035] Dalna puan pualamah sabuai koihin, sabuai tawh a kisan biakbuk leitaw lampangah meivakkhuam na koih ding a, leilu lampangah sabuai na koih ding hi.
-   *pualam-ah* / outside-LOC
-   — And thou shalt set the table without the vail, and the candlestick over against the table on the side of the tabernacle toward the south: and thou shalt put the table on the north side.
-5. [01015005] Amah in a pualamah paipih a, “Vantung lam enin aksite sim in; na sim thei hiam?” a ci hi. Tua ciangin amah in, “Na suanlekhakte, tua mah bang ding hi,” a ci hi.
-   *pualam-ah* / outside-LOC
-   — And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them: and he said unto him, So shall thy seed be.
 
 ### giat
 
@@ -5178,23 +4608,6 @@ environment labels inconsistent with their function.
 **Frequency:** 99 tokens
 **Tentative primary:** until
 
-**Examples (for review):**
-1. [01033003] Amah ahihleh amaute' mai-ah pai-in, a sanggampa' kiang nai a tun matengin leilak lamah sagihvei a kun hi.
-   *matengin* / until
-   — And he passed over before them, and bowed himself to the ground seven times, until he came near to his brother.
-2. [02034035] Israel mite in Moses' maitang vun a taang mu uh hi. Amah tawh a kiho dingin a pai matengin Moses in kiliahna puan tawh a maitang a khuh kik hi.
-   *matengin* / until
-   — And the children of Israel saw the face of Moses, that the skin of Moses' face shone: and Moses put the vail upon his face again, until he went in to speak with him.
-3. [01024033] Tua ciangin nek dingin a mai-ah an kilui hi. Ahih hangin amah in, “Ka thu ka gen khit matengin an ka ne kei ding hi,” a cih ciangin amah in, “Gen in,” a ci hi.
-   *matengin* / until
-   — And there was set meat before him to eat: but he said, I will not eat, until I have told mine errand. And he said, Speak on.
-4. [01034005] Tu-in Jakob in a tanu Dinah a kisiatsakna za hi. Ahih hangin a tate, a ganhingte tawh gamlakah om ahih manin amaute hong tun matengin Jakob in bangmah gen loin om hi.
-   *matengin* / until
-   — And Jacob heard that he had defiled Dinah his daughter: now his sons were with his cattle in the field: and Jacob held his peace until they were come.
-5. [01033014] Na nasempa' mai-ah ka topa na pai inla, Seir-ah ka topa' kiang kong tun matengin ka mai-a om ganhingte' thahatna le naupangte' hatna tawh kituakin damdamin kong makaih ding hi,” a ci hi.
-   *matengin* / until
-   — Let my lord, I pray thee, pass over before his servant: and I will lead on softly, according as the cattle that goeth before me and the children be able to endure, until I come unto my lord unto Seir.
-
 ### nomau
 
 **Citation form:** nomau
@@ -5202,23 +4615,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 73 tokens
 **Tentative primary:** 2PL.PRO
-
-**Examples (for review):**
-1. [02020009] Ni guk sung nomau' na semin na nasep ding khempeuh uh na hih ding uh hi.
-   *nomau'* / 2PL.POSS
-   — Six days shalt thou labour, and do all thy work:
-2. [03025013] “Hih jubilee kum sungin note khempeuh in nomau' neihsa ciat na ngahkik ding uh hi.
-   *nomau'* / 2PL.POSS
-   — In the year of this jubile ye shall return every man unto his possession.
-3. [03026031] Keimah in na khuapite uh siasakin, na biakna munte uh gamkhing ka suaksak ding a, nomau' hong biakna a gim namtuite ka diik kei ding hi.
-   *nomau'* / 2PL.POSS
-   — And I will make your cities waste, and bring your sanctuaries unto desolation, and I will not smell the savour of your sweet odours.
-4. [03019018] Note in nomau' mipihte tungah phu la loin, amau na lungsim neih kei ding uh a, nomau na ki-it uh bangin na vengte uh na it ding uh hi; kei pen Topa ka hi hi.
-   *nomau'* / 2PL.POSS
-   — Thou shalt not avenge, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD .
-5. [02010011] Tua bang hi lo ding! Note' lak panin pasalte pai unla, Topa va bia un. Bang hang hiam cih leh tua pen nomau' ut ahi hi,” a ci hi. Faro' omna panin amaute kihawlkhia hi.
-   *nomau'* / 2PL.POSS
-   — Not so: go now ye that are men, and serve the LORD ; for that ye did desire. And they were driven out from Pharaoh's presence.
 
 ### tuamtuam
 
@@ -5228,23 +4624,6 @@ environment labels inconsistent with their function.
 **Frequency:** 63 tokens
 **Tentative primary:** various
 
-**Examples (for review):**
-1. [15001009] Tua nate a phazah: Kham kuang tulkhat, ngun kuang tulkhat, umlebeel a nam tuamtuam sawmnih le kua,
-   *tuamtuam* / various
-   — And this is the number of them: thirty chargers of gold, a thousand chargers of silver, nine and twenty knives,
-2. [15001010] kham kuang-uk sawmthum, ngun kuang-uk a nam tuamtuam zali sawmkhat, le umlebeel adang tulkhat ahi hi.
-   *tuamtuam* / various
-   — thirty basons of gold, silver basons of a second sort four hundred and ten, and other vessels a thousand.
-3. [16013020] Tua ahih manin sumbukte le na nam tuamtuam a zuakte, khatvei nihvei khawng Jerusalem khua pualamah giak uh hi.
-   *tuamtuam* / various
-   — So the merchants and sellers of all kind of ware lodged without Jerusalem once or twice.
-4. [13001005] Jafeth' tapate: Gomer, Magog, Madai, Javan, Tubal, Meshek, le Tiras hi a, amau' min ciat pua-in minam tuamtuam a piang hi.
-   *tuamtuam* / various
-   — The sons of Japheth; Gomer, and Magog, and Madai, and Javan, and Tubal, and Meshech, and Tiras.
-5. [18010016] Mavanna khatpeuh neisun leng zong, humpinelkai bangin ka siatna ding na zong a, kei' gimtheih nadingin nalamdang tuamtuam nangawn na bawl liang hi.
-   *tuamtuam* / various
-   — For it increaseth. Thou huntest me as a fierce lion: And again thou shewest thyself marvellous upon me.
-
 ### uha
 
 **Citation form:** uha
@@ -5252,23 +4631,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 56 tokens
 **Tentative primary:** 2/3PL.LOC
-
-**Examples (for review):**
-1. [03026020] Na leitang un an piangsak loin, na gam sung uha kungte in amau' gah gah lo ding ahih manin note' thatang a mawkna-in a bei hi ding hi.
-   *uha* / 2/3PL.LOC
-   — and your strength shall be spent in vain: for your land shall not yield her increase, neither shall the trees of the land yield their fruits.
-2. [04016034] Amaute' kikona hangin a kiim uha om Israel mite khempeuh tai uh hi. Bang hang hiam cih leh amaute in, “Leitang in hong valhtum kha in teh!” ci uh hi.
-   *uha* / 2/3PL.LOC
-   — And all Israel that were round about them fled at the cry of them: for they said, Lest the earth swallow us up also .
-3. [03025044] Note in na neih theih ding uh sila numei le sila pasalte hih bang ahi hi: Na kimkot uha om minam dangte lak panin sila numei le sila pasal na lei thei ding uh hi.
-   *uha* / 2/3PL.LOC
-   — Both thy bondmen, and thy bondmaids, which thou shalt have, shall be of the heathen that are round about you; of them shall ye buy bondmen and bondmaids.
-4. [01035004] Tua ahih ciangin amaute in Jakob' tungah amau' neih gamdang pasian khempeuh le a bil uha om bilbahte a pia uh hi. Jakob in Shekhem khua gei-a tawsaw nuai-ah tuate a seel hi.
-   *uha* / 2/3PL.LOC
-   — And they gave unto Jacob all the strange gods which were in their hand, and all their earrings which were in their ears; and Jacob hid them under the oak which was by Shechem.
-5. [01044008] En in, ka van gong uha ka muh uh sumte, Kanaan gam panin nang kiangah kong puak kik uh hi. Tua ahih teh na topa' inn panin ngun hitaleh kham hitaleh bangci guk ding ka hi uh hiam?
-   *uha* / 2/3PL.LOC
-   — behold, the money, which we found in our sacks' mouths, we brought again unto thee out of the land of Canaan: how then should we steal out of thy lord's house silver or gold?
 
 ### ei
 
@@ -5303,17 +4665,6 @@ environment labels inconsistent with their function.
 **Frequency:** 45 tokens
 **Tentative primary:** each.kind.ERG
 
-**Examples (for review):**
-1. [01001025] Innsa, gamsa, le a bokvak ganhing khempeuh amau nam ciatin Pasian in a piangsak hi. Pasian in tua pen hoih hi, ci-in a mu hi.
-   *ciatin* / each.kind.ERG
-   — And God made the beast of the earth after his kind, and cattle after their kind, and every thing that creepeth upon the earth after his kind: and God saw that it was good.
-2. [01006020] Vasate amau' nam ciatin, ganhingte amau' nam ciatin, leilakah a bokvak ganhingte peuhmah amau' nam ciatin, a suakta dingin nam khatah nih ciat nang kiangah hong pai ding uh hi.
-   *ciatin* / each.kind.ERG
-   — Of fowls after their kind, and of cattle after their kind, of every creeping thing of the earth after his kind, two of every sort shall come unto thee, to keep them alive.
-3. [01001024] Pasian in, “Nuntakna a nei ganhingte amau nam ciatin leitung in piangsak hen: Innsa, gamsa, le a bokvak ganhingte amau nam ciatin piang ta hen,” a ci hi. Tua mah bangin a piang pah hi.
-   *ciatin* / each.kind.ERG
-   — And God said, Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.
-
 ### nangawnin
 
 **Citation form:** nangawnin
@@ -5321,23 +4672,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 43 tokens
 **Tentative primary:** henceforth
-
-**Examples (for review):**
-1. [19116010] “Nakpi takin gimna ka thuak hi,” ka cih hun ciang nangawnin ka upna mah ka len cinten hi.
-   *nangawnin* / henceforth
-   — I believed, therefore have I spoken: I was greatly afflicted:
-2. [18028026] guah zukna ding mun thu pia-in, khuaphialep in a zuih ding lampi bawlin a vaihawm laitak nangawnin,
-   *nangawnin* / henceforth
-   — When he made a decree for the rain, And a way for the lightning of the thunder:
-3. [18019016] Ka nasemte khatpeuh ka sap ciangin hong dawng nuam lo uh a, hong huhna ding uh ka thum ciang nangawnin hong thudon lo uh hi.
-   *nangawnin* / henceforth
-   — I called my servant, and he gave me no answer; I intreated him with my mouth.
-4. [05023002] “Zawlta peuhmah, Topa a' ding kikhopna sungah lut lo ding hi. A suan a khak khang sawmna dong nangawnin Topa a' ding kikhopna sungah tua bang mi kuamah lut thei lo ding hi.
-   *nangawnin* / henceforth
-   — A bastard shall not enter into the congregation of the LORD ; even to his tenth generation shall he not enter into the congregation of the LORD .
-5. [10017009] Tu nangawnin amah dum khat sungah ahi a, mundang khatah ahi zongin bu khin ding hi. Kisim cilna-ah mi pawlkhat si leh tua thu a za mi peuhpeuh in, 'Absalom a zui mite lakah a si om khin hi,' ci ding hi.
-   *nangawnin* / henceforth
-   — Behold, he is hid now in some pit, or in some other place: and it will come to pass, when some of them be overthrown at the first, that whosoever heareth it will say, There is a slaughter among the people that follow Absalom.
 
 ### itin
 
@@ -5347,23 +4681,6 @@ environment labels inconsistent with their function.
 **Frequency:** 41 tokens
 **Tentative primary:** lovingly
 
-**Examples (for review):**
-1. [01034003] Amah in Jakob' tanu Dinah hoihsa mahmah ahih manin itin kamkhum takin hopih hi.
-   *itin* / lovingly
-   — And his soul clave unto Dinah the daughter of Jacob, and he loved the damsel, and spake kindly unto the damsel.
-2. [02020006] ahih hangin kei hong itin ka thupiakte a zui mi a tul tampite tungah itna kip a lak pa ka hi hi.
-   *itin* / lovingly
-   — and shewing mercy unto thousands of them that love me, and keep my commandments.
-3. [05005010] ahih hangin kei hong itin ka thupiakte a zui mi a tul tampite' tungah itna kip a lak pa ka hi hi.
-   *itin* / lovingly
-   — and shewing mercy unto thousands of them that love me and keep my commandments.
-4. [05010018] Amah in pa nei lote le meigong numeite a dingin thutang semin, peemtate itin an le puan a pia hi.
-   *itin* / lovingly
-   — he doth execute the judgment of the fatherless and widow, and loveth the stranger, in giving him food and raiment.
-5. [05004037] Amah in na pate uh itin, amau' suanlekhakte hong teel a, amahmah in ama vanglian tawh Egypt panin note hong paikhiatpih a,
-   *itin* / lovingly
-   — And because he loved thy fathers, therefore he chose their seed after them, and brought thee out in his sight with his mighty power out of Egypt;
-
 ### kawmin
 
 **Citation form:** kawmin
@@ -5372,23 +4689,6 @@ environment labels inconsistent with their function.
 **Frequency:** 39 tokens
 **Tentative primary:** while
 
-**Examples (for review):**
-1. [01032031] A khelpi' hangin amah bai kawmin Peniel a kantan laitakin ni hong suak hi.
-   *kawmin* / while
-   — And as he passed over Penuel the sun rose upon him, and he halted upon his thigh.
-2. [10016007] Shimei in a samsiat kawmin, “Pai mang, pai mang, nang mi that pa, bangmah man lo mipa!
-   *kawmin* / while
-   — And thus said Shimei when he cursed, Come out, come out, thou bloody man, and thou man of Belial:
-3. [01045015] Tua ciangin a kah kawmin a sanggamte khempeuh ngawng kawi-in a nam hi. Tua khit ciangin a sanggamte in amah hopih uh hi.
-   *kawmin* / while
-   — Moreover he kissed all his brethren, and wept upon them: and after that his brethren talked with him.
-4. [15009005] Tua hi a, nitak biakpiak hun ciangin khua phawk kikin ka puankekpi mah silh kawmin khukdinin Topa Pasian' lamah ka khut zakin,
-   *kawmin* / while
-   — And at the evening sacrifice I arose up from my heaviness; and having rent my garment and my mantle, I fell upon my knees, and spread out my hands unto the LORD my God,
-5. [01028006] Isaac in Jakob thupha pia-in, zi la dingin Paddanaram-ah sawl a, thupha a piak kawmin amah thuhilhin, “Kanaan numeite na tenpih kei ding hi,” a cihna le,
-   *kawmin* / while
-   — When Esau saw that Isaac had blessed Jacob, and sent him away to Padan-aram, to take him a wife from thence; and that as he blessed him he gave him a charge, saying, Thou shalt not take a wife of the daughters of Canaan;
-
 ### napi
 
 **Citation form:** napi
@@ -5396,23 +4696,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 39 tokens
 **Tentative primary:** but
-
-**Examples (for review):**
-1. [18005003] Mihai pa in limtakin zung kha ngei napi, ama inn thakhatin a kizunglot ka mu ngei hi.
-   *napi* / but
-   — I have seen the foolish taking root: But suddenly I cursed his habitation.
-2. [18003021] sih ding lunggulh ngeungau napi, a si thei lo, sum phum zon sangin sih ding a lim zonzaw,
-   *napi* / but
-   — Which long for death, but it cometh not; And dig for it more than for hid treasures;
-3. [06008028] Tua ahih ciangin Joshua in Ai hal a, tuni donga a om mah bangin nin khol napi khatin piangsak den hi.
-   *napi* / but
-   — And Joshua burnt Ai, and made it an heap for ever, even a desolation unto this day.
-4. [18034006] Kei a thuman hinapi zuauthu genin hong seh hi. Kei a khial hi lo napi gim thuakin ka cimawh hi,' a ci hi.
-   *napi* / but
-   — Should I lie against my right? My wound is incurable without transgression.
-5. [01048011] Israel in Josef kiangah, “Na maitang a hong mu kik dingin ka kingaihsun kei hi. Tua hi napi, Pasian in na tate zong kei hong musak hi,” a ci hi.
-   *napi* / but
-   — And Israel said unto Joseph, I had not thought to see thy face: and, lo, God hath shewed me also thy seed.
 
 ### ung
 
@@ -5447,23 +4730,6 @@ environment labels inconsistent with their function.
 **Frequency:** 36 tokens
 **Tentative primary:** forever
 
-**Examples (for review):**
-1. [02007023] Faro kihei-in a inn sungah pai a, amah in a lungsim nangawnah tua thu ngaihsutin nei nawn lo hi.
-   *nangawnah* / forever
-   — And Pharaoh turned and went into his house, neither did he set his heart to this also.
-2. [07009040] Abimelek in Gaal delh a, ama mai-ah Gaal a tai hi. Kulhkongpi lutna ciang dong nangawnah mi tampi liamin tuk hi.
-   *nangawnah* / forever
-   — And Abimelech chased him, and he fled before him, and many were overthrown and wounded, even unto the entering of the gate.
-3. [05009008] Horeb mual nangawnah a heh nadingin Topa na phin uh a, note' tungah Topa heh a, amah in note hong susia dektak hi.
-   *nangawnah* / forever
-   — Also in Horeb ye provoked the LORD to wrath, so that the LORD was angry with you to have destroyed you.
-4. [08002015] Tua nu ansang tawm dingin a din ciangin Boaz in a tangvalte hilh a, “Anlomte lak nangawnah tawmsak unla, amah ko sia kei un.
-   *nangawnah* / forever
-   — And when she was risen up to glean, Boaz commanded his young men, saying, Let her glean even among the sheaves, and reproach her not:
-5. [04014045] Tua ciangin mualtung gamah a teng Amalek mite le Kanaan mite hong paisuk uh a, amaute zo-in Hormah ciang dong nangawnah amaute a delh uh hi.
-   *nangawnah* / forever
-   — Then the Amalekites came down, and the Canaanites which dwelt in that hill, and smote them, and discomfited them, even unto Hormah.
-
 ### nihin
 
 **Citation form:** nihin
@@ -5471,23 +4737,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 35 tokens
 **Tentative primary:** today
-
-**Examples (for review):**
-1. [04010003] A nihin a kitum ciangin kikhopna bukkong nangma kiangah mihon khempeuh hong kikhawm ding uh hi.
-   *nihin* / today
-   — And when they shall blow with them, all the assembly shall assemble themselves to thee at the door of the tabernacle of the congregation.
-2. [03024006] Nangmah in kham citak sabuai tungah tuate gual nihin na koih ding a, gual khatah guk om ding hi.
-   *nihin* / today
-   — And thou shalt set them in two rows, six on a row, upon the pure table before the LORD .
-3. [02039009] Tua awmdal a ning kikim a, thuap nihin kibawl a, a kikhep ciangin a dung letmat kua, a vai letmat kua mah a pha hi.
-   *nihin* / today
-   — It was foursquare; they made the breastplate double: a span was the length thereof, and a span the breadth thereof, being doubled.
-4. [01032007] Tua ciangin Jakob nakpitakin lau-in lungkham hi. Amah in ama kianga om mite, tuuhonte, bawnghonte, le kalaohte pawl nihin khen a,
-   *nihin* / today
-   — Then Jacob was greatly afraid and distressed: and he divided the people that was with him, and the flocks, and herds, and the camels, into two bands;
-5. [11016021] Tua ciangin Israel mite pawl nihin kikhen uh hi. Mi pawlkhat in kumpi-in a bawl dingin Ginath' tapa Tibni zui uh a, a pawlkhat in Omri zui uh hi.
-   *nihin* / today
-   — Then were the people of Israel divided into two parts: half of the people followed Tibni the son of Ginath, to make him king; and half followed Omri.
 
 ### pat
 
@@ -5622,23 +4871,6 @@ environment labels inconsistent with their function.
 **Frequency:** 26 tokens
 **Tentative primary:** 2SG.EMPH.REDUP
 
-**Examples (for review):**
-1. [01030029] Jakob in ama kiangah, “Nangma na kong sepsak khitna le keima kep sungin na ganhingte tampi a phakna nangmahmah in na thei hi.
-   *nangmahmah* / 2SG.EMPH.REDUP
-   — And he said unto him, Thou knowest how I have served thee, and how thy cattle was with me.
-2. [02034012] Na paina leitangah a teng mite tawh thuciamna bawlkha kei inla, tua pen note a dingin thangzak a suahkhak loh nadingin nangmahmah kidawm in.
-   *nangmahmah* / 2SG.EMPH.REDUP
-   — Take heed to thyself, lest thou make a covenant with the inhabitants of the land whither thou goest, lest it be for a snare in the midst of thee:
-3. [01038029] Ahih hangin a khut a dawh tum kik laitakin, en in, a sanggampa hong suakkhia hi. Amah in, “Nang a dingin a vang nangmahmah in bawltawm!” a ci hi. Tua ahih ciangin ama min Perez kiphuak hi.
-   *nangmahmah* / 2SG.EMPH.REDUP
-   — And it came to pass, as he drew back his hand, that, behold, his brother came out: and she said, How hast thou broken forth? this breach be upon thee: therefore his name was called Pharez.
-4. [10017011] Ahih hangin keima ngaihsutna hih bang ahi hi: Dan panin Beersheba ciang dong, tuipi gei-a sehnel bangin a tam Israel mi khempeuh nang kiangah khawmin galsim dingin nangmahmah na kuan ding hi.
-   *nangmahmah* / 2SG.EMPH.REDUP
-   — Therefore I counsel that all Israel be generally gathered unto thee, from Dan even to Beer-sheba, as the sand that is by the sea for multitude; and that thou go to battle in thine own person.
-5. [02019023] Moses in Topa' tungah, “Sinai Mual dongah mite hong pai thei lo hi. Bang hang hiam cih leh nangmahmah in kote nong thuhilh a, 'Mual kimkotah dalnate bawl inla, siangthosak in,' nong ci hi,” a ci hi.
-   *nangmahmah* / 2SG.EMPH.REDUP
-   — And Moses said unto the LORD , The people cannot come up to mount Sinai: for thou chargedst us, saying, Set bounds about the mount, and sanctify it.
-
 ### gige
 
 **Citation form:** gige
@@ -5722,23 +4954,6 @@ environment labels inconsistent with their function.
 **Frequency:** 12 tokens
 **Tentative primary:** NMLZ
 
-**Examples (for review):**
-1. [19088006] Kei pen, mialin a thukna mun, Leihawm thuk sungah nong koih khinta hi.
-   *thu-k-na* / word-NMLZ
-   — Thou hast laid me in the lowest pit, In darkness, in the deeps.
-2. [02015005] Tui in amaute tuum a, suangtum bangin a thukna sungah amaute kia suk uh hi.
-   *thu-k-na* / word-NMLZ
-   — The depths have covered them: They sank into the bottom as a stone.
-3. [19135006] Vantung le leitung, tuipi le a thukna sung khempeuhah Topa in ama ut peuhpeuh a bawl hi.
-   *thu-k-na* / word-NMLZ
-   — Whatsoever the LORD pleased, that did he in heaven, and in earth, In the seas, and all deep places.
-4. [19058010] Heh thukna a muh ciangin thuman mipa lungdam ding a, migilote' sisan sungah amah in a khete sil ding hi.
-   *thu-k-na* / word-NMLZ
-   — The righteous shall rejoice when he seeth the vengeance: He shall wash his feet in the blood of the wicked.
-5. [20006034] A numei' pasal a hehzawk theih nading thudang om nawn lo a, a heh thukna-ah khawl hun cih nei thei lo hi.
-   *thu-k-na-ah* / word-NMLZ-LOC
-   — For jealousy is the rage of a man: Therefore he will not spare in the day of vengeance.
-
 ### ite
 
 **Citation form:** ite
@@ -5771,23 +4986,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 11 tokens
 **Tentative primary:** ABIL.II
-
-**Examples (for review):**
-1. [47009008] Note in na kisap khempeuh uh na neihtheih nading uh le midangte huh nading zong na neihthuah theih nadingun Pasian in hong pia thei hi.
-   *neih-theih* / have.II-ABIL.II
-   — And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things , may abound to every good work:
-2. [45007008] Thukham a omna hangin mawhna in nuamtak sa-in hazatna a tuamtuam ka neihtheih nading hong piangsak hi. Thukham om kei leh mawhna in bangmah sem thei lo hi.
-   *neih-theih* / have.II-ABIL.II
-   — But sin, taking occasion by the commandment, wrought in me all manner of concupiscence. For without the law sin was dead.
-3. [43017013] Tu-in nangma kiangah a hong paita ding ka hih manin keimah bangin amaute in lungdamna cingtaak a neihtheih nadingun leitungah ka om lai-in hih thute a gen ka hi hi.
-   *neih-theih* / have.II-ABIL.II
-   — And now come I to thee; and these things I speak in the world, that they might have my joy fulfilled in themselves.
-4. [28009012] Amaute in ta khoi mah ta le-uh zong, suanlekhak a neihtheih ma-un ka khansihsak khin ding hi. Hih mite ka nungngat ciangin amaute tungah a lungkhamhuai lianpite a tung ding hi.
-   *neih-theih* / have.II-ABIL.II
-   — Though they bring up their children, yet will I bereave them, that there shall not be a man left: yea, woe also to them when I depart from them!
-5. [43010010] Gutate pen a gu ding, a that ding, le a siasak ding bekin hong pai hi. Kei ka hih leh tuute a nungta maimai bek hi loin nuntakna cingtaak a neihtheih nadingun a hong pai ka hi hi.
-   *neih-theih* / have.II-ABIL.II
-   — The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly.
 
 ### nate
 
@@ -5826,18 +5024,6 @@ environment labels inconsistent with their function.
 1. [20026015] Thadahpa in a khutin ankuang sawksuk a, a kamah a bahtoh kik ding nangawn gim zungzung kisa hi.
    *bah-toh* / owe-up
    — The slothful hideth his hand in his bosom; It grieveth him to bring it again to his mouth.
-2. [26016012] Nakbahte, bilbahte, le na khuk ding kumpi lukhu hoih kong guan hi.
-   *bil-bah-te* / earring-PL
-   — And I put a jewel on thy forehead, and earrings in thine ears, and a beautiful crown upon thine head.
-3. [02032003] Tua ahih ciangin mi khempeuh in amau' bil-a om kham bilbahte sutkhia-in Aaron' kiangah tuate a paipih uh hi.
-   *bil-bah-te* / earring-PL
-   — And all the people brake off the golden earrings which were in their ears, and brought them unto Aaron.
-4. [02032002] Aaron in amaute kiangah, “Na zite, na tapate, le na tanute uh bil tungah a om kham bilbahte sutkhia unla, kei kiangah tuate hong paipih un,” a ci hi.
-   *bil-bah-te* / earring-PL
-   — And Aaron said unto them, Break off the golden earrings, which are in the ears of your wives, of your sons, and of your daughters, and bring them unto me.
-5. [01035004] Tua ahih ciangin amaute in Jakob' tungah amau' neih gamdang pasian khempeuh le a bil uha om bilbahte a pia uh hi. Jakob in Shekhem khua gei-a tawsaw nuai-ah tuate a seel hi.
-   *bil-bah-te* / earring-PL
-   — And they gave unto Jacob all the strange gods which were in their hand, and all their earrings which were in their ears; and Jacob hid them under the oak which was by Shechem.
 
 ### tin
 
@@ -5972,23 +5158,6 @@ environment labels inconsistent with their function.
 **Frequency:** 7 tokens
 **Tentative primary:** altogether
 
-**Examples (for review):**
-1. [15002064] Mi a vekpi - tul sawmli le tulnih le zathum sawmguk pha uh a,
-   *vekpi* / altogether
-   — The whole congregation together was forty and two thousand three hundred and threescore,
-2. [04026051] Hihte pen Israel mi vekpi a phazah hi a, mi tul zaguk le tul khat le zasagih le sawmthum ahi uh hi.
-   *vekpi* / altogether
-   — These were the numbered of the children of Israel, six hundred thousand and a thousand seven hundred and thirty.
-3. [04035007] Levi mite tungah na piak ding uh khuapi vekpi sawmli le giat hi-in, a lonona gamte tawh hi ding hi.
-   *vekpi* / altogether
-   — So all the cities which ye shall give to the Levites shall be forty and eight cities: them shall ye give with their suburbs.
-4. [46010004] a vekpi mahun kha tawh kisai tui na dawn uh hi. Bang hang hiam cih leh amaute a tonpih, kha tawh kisai suangpi panin tui na dawn uh a, tua suangpi pen Khrih ahi hi.
-   *vekpi* / altogether
-   — and did all drink the same spiritual drink: for they drank of that spiritual Rock that followed them: and that Rock was Christ.
-5. [07020026] Tua ciangin Israel mite khempeuh, galkap vekpi paito-in Bethel-ah tungin a kap uh hi. Tua lai mun Topa' mai-ah amaute tu-in nitak dong tua ni an tang uh a, Topa' mai-ah meihal biakna le thunuama biakna a pia uh hi.
-   *vekpi* / altogether
-   — Then all the children of Israel, and all the people, went up, and came unto the house of God, and wept, and sat there before the LORD , and fasted that day until even, and offered burnt offerings and peace offerings before the LORD .
-
 ### tuazawh
 
 **Citation form:** tuazawh
@@ -5996,23 +5165,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 7 tokens
 **Tentative primary:** after.that
-
-**Examples (for review):**
-1. [44009023] Tuazawh ni tampi khit ciangin Jew mite kikaikhawmin Saul thahsawm uh a,
-   *Tuazawh* / after.that
-   — And after that many days were fulfilled, the Jews took counsel to kill him:
-2. [48002001] Tuazawh kum sawm le li khit ciangin Barnabas tawh Jerusalem khua-ah ka paikik a, Titus zong ka tonpih hi.
-   *Tuazawh* / after.that
-   — Then fourteen years after I went up again to Jerusalem with Barnabas, and took Titus with me also.
-3. [41002001] Tuazawh ni tawmkhat khit ciangin Kapernaum khua-ah Jesuh hong paikik a, inn-ah a omna thu hong kitheithang hi.
-   *Tuazawh* / after.that
-   — And again he entered into Capernaum after some days; and it was noised that he was in the house.
-4. [48001018] Tuazawh kum thum khit ciangin Peter kiangah a hawh dingin Jerusalem khua-ah ka pai a, ama kiangah kha lang sung ka taam hi.
-   *Tuazawh* / after.that
-   — Then after three years I went up to Jerusalem to see Peter, and abode with him fifteen days.
-5. [40026073] Tuazawh a sawt loin a gei-a omte khat in Peter kiangah, “Na kampau zia uh kibang ahih manin nang zong hua mite tawh a kipawl mah na hi takpi hi,” a ci leuleu hi.
-   *Tuazawh* / after.that
-   — And after a while came unto him they that stood by, and said to Peter, Surely thou also art one of them; for thy speech bewrayeth thee.
 
 ### siansuah
 
@@ -6685,11 +5837,6 @@ environment labels inconsistent with their function.
 **Frequency:** 1 tokens
 **Tentative primary:** each.kind~REDUP
 
-**Examples (for review):**
-1. [01001012] Leitung in kung tuamtuamte piangkhiasak a, kungnote in amau' nam ciatin tang piangsakin, singkung in a sungah tang a om gahte piangsakin, amau' nam ciatciatin piangsak hi. Pasian in tua pen hoih hi, ci-in a mu hi.
-   *ciatciatin* / each.kind~REDUP
-   — And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it was good.
-
 ### bak
 
 **Citation form:** bak
@@ -6792,11 +5939,6 @@ environment labels inconsistent with their function.
 **Frequency:** 1 tokens
 **Tentative primary:** PL
 
-**Examples (for review):**
-1. [19097002] Meiipite le khuamial sahpite ama kiimah om a, thumanna le thutannate ama tokhom bulpi ahi hi.
-   *thu-tanna-te* / judgment-PL
-   — Clouds and darkness are round about him: Righteousness and judgment are the habitation of his throne.
-
 ### duai
 
 **Citation form:** duai
@@ -6809,12 +5951,6 @@ environment labels inconsistent with their function.
 1. [26003008] Tu-in amaute mah bangin a khauh mahmah, a duai mahmahin nang kong bawl ding hi.
    *duai* / soft
    — Behold, I have made thy face strong against their faces, and thy forehead strong against their foreheads.
-2. [20014029] A lungduaite mipil hi a, lungtomna pen haina kilatna ahi hi.
-   *lung-duai-te* / compassion-PL
-   — He that is slow to wrath is of great understanding: But he that is hasty of spirit exalteth folly.
-3. [20019011] Pilna in mi lungduaisak a, mi' hong hehsaknate kiphawkmawh bawlna in minthanna ahi hi.
-   *lung-duai-sak* / compassion-CAUS
-   — The discretion of a man deferreth his anger; And it is his glory to pass over a transgression.
 
 ### tum
 
@@ -6874,11 +6010,6 @@ environment labels inconsistent with their function.
 **Frequency:** 1 tokens
 **Tentative primary:** PL
 
-**Examples (for review):**
-1. [23033008] Lam lianpite gambulak suak a, kuamah khualzinin pai ngam nawn lo uh hi. Thuciamnate kipeksatin, thukimnasate kipalsat a, khatlekhat kizahtakna om nawn lo hi.
-   *thu-kimnasa-te* / covenant-PL
-   — The highways lie waste, the wayfaring man ceaseth: he hath broken the covenant, he hath despised the cities, he regardeth no man.
-
 ### khop
 
 **Citation form:** khop
@@ -6911,11 +6042,6 @@ environment labels inconsistent with their function.
 **Entry status:** affix_review_needed
 **Frequency:** 1 tokens
 **Tentative primary:** PL
-
-**Examples (for review):**
-1. [25001007] Tu-in Jerusalem kisiazo ta a, nidanga a thupinate a nung phawkkik hi. Galte in a sim laitakin a huh ding khat beek a om kei hi. Guallel ahih manin a galte in a nuihsan uh hi.
-   *thu-pina-te* / pleasant.thing-PL
-   — Jerusalem remembered In the days of her affliction and of her miseries All her pleasant things That she had in the days of old, When her people fell into the hand of the enemy, And none did help her: The adversaries saw her, And did mock at her sabbaths.
 
 ### s
 

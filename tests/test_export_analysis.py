@@ -811,6 +811,178 @@ def test_review_file_has_problem_forms():
         "High-frequency problem form 'ciang' not in review file"
 
 
+# ============================================================================
+# BACKEND STRUCTURE TESTS (new fields and data quality)
+# ============================================================================
+
+def test_tokens_have_usage_type():
+    """Tokens should have usage_type field with valid values."""
+    path = os.path.join(OUTPUT_DIR, 'tokens.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        columns = reader.fieldnames
+        
+        assert 'usage_type' in columns, "tokens.tsv missing usage_type column"
+        assert 'function_type' in columns, "tokens.tsv missing function_type column"
+        assert 'is_sentence_final' in columns, "tokens.tsv missing is_sentence_final column"
+
+
+def test_tokens_usage_type_distribution():
+    """Tokens should have reasonable distribution of usage_type values."""
+    path = os.path.join(OUTPUT_DIR, 'tokens.tsv')
+    
+    usage_counts = {'lexical': 0, 'grammatical': 0, 'ambiguous': 0}
+    total = 0
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            usage = row.get('usage_type', '')
+            if usage in usage_counts:
+                usage_counts[usage] += 1
+            total += 1
+    
+    # Should have both lexical and grammatical tokens
+    assert usage_counts['lexical'] > 100000, \
+        f"Too few lexical tokens: {usage_counts['lexical']}"
+    assert usage_counts['grammatical'] > 100000, \
+        f"Too few grammatical tokens: {usage_counts['grammatical']}"
+
+
+def test_lemmas_have_entry_type():
+    """Lemmas should have entry_type field with valid values."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        columns = reader.fieldnames
+        
+        assert 'entry_type' in columns, "lemmas.tsv missing entry_type column"
+        assert 'lexical_frequency' in columns, "lemmas.tsv missing lexical_frequency column"
+        assert 'grammatical_frequency' in columns, "lemmas.tsv missing grammatical_frequency column"
+
+
+def test_lemmas_entry_type_values():
+    """Lemmas entry_type should have valid values."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    valid_types = {'lexical', 'grammatical', 'mixed', 'unresolved'}
+    entry_types = set()
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            entry_type = row.get('entry_type', '')
+            entry_types.add(entry_type)
+    
+    invalid = entry_types - valid_types
+    assert not invalid, f"Invalid entry_type values: {invalid}"
+
+
+def test_grammatical_morphemes_function_specific():
+    """Grammatical morphemes should be split by function (one row per form+function)."""
+    path = os.path.join(OUTPUT_DIR, 'grammatical_morphemes.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        columns = reader.fieldnames
+        
+        # Check for new columns
+        assert 'function_id' in columns, "grammatical_morphemes.tsv missing function_id column"
+        assert 'clean_environments' in columns, "grammatical_morphemes.tsv missing clean_environments column"
+        assert 'lexical_contamination' in columns, "grammatical_morphemes.tsv missing lexical_contamination column"
+        assert 'usage_type' in columns, "grammatical_morphemes.tsv missing usage_type column"
+
+
+def test_in_morpheme_split_by_function():
+    """'in' morpheme should appear as separate rows for ERG, CVB, QUOT, INST."""
+    path = os.path.join(OUTPUT_DIR, 'grammatical_morphemes.tsv')
+    
+    in_glosses = set()
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['form'] == 'in':
+                in_glosses.add(row['gloss'])
+    
+    # Should have multiple function-specific rows
+    expected = {'ERG', 'CVB', 'QUOT', 'INST'}
+    found = expected & in_glosses
+    
+    assert len(found) >= 3, \
+        f"'in' morpheme should be split by function. Found glosses: {in_glosses}"
+
+
+def test_examples_have_sense_linkage():
+    """Examples should have sense_id for sense-level linkage."""
+    path = os.path.join(OUTPUT_DIR, 'examples.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        columns = reader.fieldnames
+        
+        assert 'sense_id' in columns, "examples.tsv missing sense_id column"
+        assert 'usage_type' in columns, "examples.tsv missing usage_type column"
+        assert 'function_match' in columns, "examples.tsv missing function_match column"
+
+
+def test_hi_lemma_is_primarily_grammatical():
+    """'hi' lemma should be classified as primarily grammatical (entry_type grammatical or unresolved with high gram_freq)."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'hi':
+                entry_type = row.get('entry_type', '')
+                # 'hi' can be grammatical or unresolved (since it has ~12% lexical uses as "be/this")
+                assert entry_type in ('grammatical', 'unresolved'), \
+                    f"'hi' should be grammatical/unresolved, got {entry_type}"
+                
+                gram_freq = int(row.get('grammatical_frequency', 0))
+                lex_freq = int(row.get('lexical_frequency', 0))
+                # Grammatical uses should dominate
+                assert gram_freq > lex_freq * 5, \
+                    f"'hi' grammatical freq ({gram_freq}) should be >> lexical ({lex_freq})"
+                return
+    
+    assert False, "'hi' lemma not found"
+
+
+def test_ding_lemma_is_grammatical():
+    """'ding' lemma should be classified as grammatical entry_type."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'ding':
+                entry_type = row.get('entry_type', '')
+                assert entry_type == 'grammatical', \
+                    f"'ding' should be grammatical, got {entry_type}"
+                return
+    
+    assert False, "'ding' lemma not found"
+
+
+def test_sih_lemma_is_lexical():
+    """'sih' (die/blood) lemma should be classified as lexical entry_type."""
+    path = os.path.join(OUTPUT_DIR, 'lemmas.tsv')
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['lemma'] == 'sih':
+                entry_type = row.get('entry_type', '')
+                assert entry_type == 'lexical', \
+                    f"'sih' should be lexical, got {entry_type}"
+                return
+    
+    assert False, "'sih' lemma not found"
+
+
 if __name__ == '__main__':
     # Run as simple test functions
     tests = [
@@ -861,6 +1033,17 @@ if __name__ == '__main__':
         test_sentence_final_no_prefix_env,
         test_grammatical_entries_have_func_pos,
         test_review_file_has_problem_forms,
+        # Backend structure tests
+        test_tokens_have_usage_type,
+        test_tokens_usage_type_distribution,
+        test_lemmas_have_entry_type,
+        test_lemmas_entry_type_values,
+        test_grammatical_morphemes_function_specific,
+        test_in_morpheme_split_by_function,
+        test_examples_have_sense_linkage,
+        test_hi_lemma_is_primarily_grammatical,
+        test_ding_lemma_is_grammatical,
+        test_sih_lemma_is_lexical,
     ]
     
     passed = 0

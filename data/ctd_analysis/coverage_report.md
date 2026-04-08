@@ -1,6 +1,6 @@
 # Tedim Chin Bible Analysis Coverage Report
 
-Generated: 2026-04-08T07:45:59.136603
+Generated: 2026-04-08T22:28:56.075561
 
 ## Overall Statistics
 
@@ -25,7 +25,7 @@ Generated: 2026-04-08T07:45:59.136603
 | Lemmas | 7,400 |
 | Lemmas needing review | 2,792 |
 | Polysemous lemmas | 360 |
-| Grammatical morphemes | 518 |
+| Grammatical morphemes | 519 |
 | Items in review queue | 5,015 |
 
 ## Part of Speech Distribution
@@ -45,12 +45,12 @@ Generated: 2026-04-08T07:45:59.136603
 | auxiliary | 3 | 965 |
 | case_marker | 12 | 122,125 |
 | copula | 2 | 14,438 |
-| directional_verb | 6 | 6,611 |
+| directional_verb | 7 | 6,612 |
 | function_word | 373 | 162,414 |
 | inflection | 85 | 12,688 |
 | irrealis_marker | 3 | 24,986 |
 | nominalizer | 1 | 22,912 |
-| object_marker | 1 | 15,591 |
+| object_marker | 1 | 15,590 |
 | particle | 9 | 26,541 |
 | plural_marker | 6 | 29,887 |
 | pronominal_prefix | 5 | 112,173 |
