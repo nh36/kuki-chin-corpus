@@ -1469,19 +1469,74 @@ def select_examples(lemmas: Dict[str, LemmaEntry],
     
     return examples
 
+
+def _are_case_variants(segmentations: set) -> bool:
+    """Check if multiple segmentations are just case/apostrophe variants."""
+    if len(segmentations) <= 1:
+        return True
+    normalized = set()
+    for seg in segmentations:
+        normalized.add(seg.lower().replace("'", "").replace("-", ""))
+    return len(normalized) == 1
+
+
+def _auto_resolve_status(review_reasons: list, freq: int, pos: str, 
+                         gloss: str, form: str, segmentations: set) -> str:
+    """
+    Determine if an item can be auto-resolved or needs human review.
+    
+    Returns:
+        'auto_resolved': Analyzer is trusted, no human review needed
+        'low_priority': Minor issues, can be deferred
+        'needs_review': Genuine ambiguity or quality issue
+    """
+    # Rule 1: Low frequency (<5 occurrences) - trust analyzer
+    if freq < 5:
+        return 'auto_resolved'
+    
+    # Rule 2: Only case/apostrophe variants in segmentation
+    if _are_case_variants(segmentations):
+        # Check if there are other issues
+        other_issues = [r for r in review_reasons 
+                       if not r.startswith('multi_segmentation')]
+        if not other_issues:
+            return 'auto_resolved'
+        # If only pos_unknown and it's a proper noun (capitalized), resolve
+        if other_issues == ['pos_unknown'] and form and form[0].isupper():
+            return 'auto_resolved'
+    
+    # Rule 3: UNK POS with capitalized form = proper noun, auto-resolve
+    if pos == 'UNK' and form and form[0].isupper() and '?' not in gloss:
+        return 'auto_resolved'
+    
+    # Rule 4: Known polysemous but analyzer gives clear answer
+    if 'known_polysemous' in review_reasons and '?' not in gloss and pos != 'UNK':
+        # If only known_polysemous flag, auto-resolve
+        other_issues = [r for r in review_reasons 
+                       if r != 'known_polysemous' and not r.startswith('multi_segmentation')]
+        if not other_issues:
+            return 'auto_resolved'
+    
+    # Rule 5: Medium frequency (5-50) with minor issues = low priority
+    if freq < 50 and 'partial_gloss' not in review_reasons:
+        return 'low_priority'
+    
+    # Default: needs review
+    return 'needs_review'
+
+
 def collect_ambiguities(tokens: List[TokenAnalysis], 
                         wordforms: Dict, lemmas: Dict) -> List[Dict]:
     """
     Collect ambiguous analyses into a comprehensive review queue.
     
-    Flag items when:
-    - Same normalized form maps to multiple segmentations
-    - Same normalized form maps to multiple lemmas
-    - Same form has both lexical and grammatical analyses
-    - Form belongs to known polysemous inventory
-    - Form has unstable POS assignment
-    - Gloss contains '?' 
-    - POS is UNK
+    Uses automatic resolution rules to minimize human review burden:
+    - Low frequency items (<5): trust analyzer
+    - Case/apostrophe variants: not real ambiguity
+    - Capitalized UNK POS: proper noun, auto-resolve
+    - Known polysemous with clear gloss: auto-resolve
+    
+    Only items with genuine issues are flagged as 'needs_review'.
     """
     ambiguities = []
     seen = set()
@@ -1538,6 +1593,12 @@ def collect_ambiguities(tokens: List[TokenAnalysis],
         
         # Add to queue if any issues found
         if review_reasons:
+            # Determine auto-resolution status
+            status = _auto_resolve_status(
+                review_reasons, freq, first_token.pos, first_token.gloss,
+                nf, form_to_segmentations[nf]
+            )
+            
             seen.add(nf)
             ambiguities.append({
                 'surface_form': first_token.surface_form,
@@ -1553,7 +1614,7 @@ def collect_ambiguities(tokens: List[TokenAnalysis],
                 'first_verse': first_token.verse_id,
                 'frequency': freq,
                 'review_reasons': '|'.join(review_reasons),
-                'status': 'pending_review'
+                'status': status
             })
     
     return sorted(ambiguities, key=lambda x: -x['frequency'])

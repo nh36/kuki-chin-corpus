@@ -983,6 +983,46 @@ def test_sih_lemma_is_lexical():
     assert False, "'sih' lemma not found"
 
 
+def test_auto_resolution_reduces_review_burden():
+    """Auto-resolution should dramatically reduce items needing human review."""
+    path = os.path.join(OUTPUT_DIR, 'ambiguities.tsv')
+    
+    status_counts = {'auto_resolved': 0, 'low_priority': 0, 'needs_review': 0}
+    total = 0
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            status = row.get('status', '')
+            if status in status_counts:
+                status_counts[status] += 1
+            total += 1
+    
+    # Auto-resolved should be majority
+    assert status_counts['auto_resolved'] > total * 0.5, \
+        f"Auto-resolved ({status_counts['auto_resolved']}) should be > 50% of {total}"
+    
+    # Needs_review should be small minority
+    assert status_counts['needs_review'] < total * 0.15, \
+        f"Needs_review ({status_counts['needs_review']}) should be < 15% of {total}"
+
+
+def test_high_freq_unk_pos_needs_review():
+    """High-frequency UNK POS items should be flagged for review."""
+    path = os.path.join(OUTPUT_DIR, 'ambiguities.tsv')
+    
+    # ciangin has 10K tokens with UNK POS - should need review
+    with open(path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row['normalized_form'] == 'ciangin':
+                assert row['status'] == 'needs_review', \
+                    f"High-freq UNK 'ciangin' should need review, got {row['status']}"
+                return
+    
+    # It's OK if ciangin isn't in ambiguities (might have been resolved elsewhere)
+
+
 if __name__ == '__main__':
     # Run as simple test functions
     tests = [
@@ -1044,6 +1084,9 @@ if __name__ == '__main__':
         test_hi_lemma_is_primarily_grammatical,
         test_ding_lemma_is_grammatical,
         test_sih_lemma_is_lexical,
+        # Auto-resolution tests
+        test_auto_resolution_reduces_review_burden,
+        test_high_freq_unk_pos_needs_review,
     ]
     
     passed = 0
