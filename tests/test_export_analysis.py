@@ -615,6 +615,202 @@ def test_no_duplicate_entries_in_sample():
         f"Forms appear in both lexical and grammatical sections: {unexpected_overlap}"
 
 
+# ============================================================================
+# PRECISION TESTS (new round of quality enforcement)
+# ============================================================================
+
+def test_no_unk_pos_in_grammatical_section():
+    """Polished grammatical section should not contain POS: UNK."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Find grammatical section
+    parts = content.split('## Part 2: Grammatical Words')
+    if len(parts) < 2:
+        return
+    
+    gram_section = parts[1].split('## Part 3:')[0] if '## Part 3:' in parts[1] else parts[1]
+    
+    assert 'POS: UNK' not in gram_section, \
+        "Grammatical section contains POS: UNK entries"
+
+
+def test_problem_forms_not_in_polished_grammatical():
+    """Problem forms like zong, leh, maw, hiam should not be in polished grammatical section."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Find grammatical section
+    parts = content.split('## Part 2: Grammatical Words')
+    if len(parts) < 2:
+        return
+    
+    gram_section = parts[1].split('## Part 3:')[0] if '## Part 3:' in parts[1] else parts[1]
+    
+    problem_forms = {'ciang', 'zong', 'leh', 'maw', 'hiam'}
+    
+    import re
+    entries = set(re.findall(r'^### (\w+)', gram_section, re.MULTILINE))
+    
+    found_problems = entries & problem_forms
+    assert not found_problems, \
+        f"Polished grammatical section contains problem forms: {found_problems}"
+
+
+def test_affix_section_no_lexical_glosses():
+    """Affix section should not contain case markers with lexical glosses like 'take'."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Find affix section
+    parts = content.split('## Part 3: Affixes')
+    if len(parts) < 2:
+        return
+    
+    affix_section = parts[1]
+    
+    # Check for lexical glosses that shouldn't appear
+    bad_glosses = ['Gloss: take', 'Gloss: go', 'Gloss: come', 'Gloss: put']
+    
+    for bad in bad_glosses:
+        assert bad not in affix_section, \
+            f"Affix section contains lexical gloss: {bad}"
+
+
+def test_affix_section_no_mismatched_categories():
+    """Affix section should not contain plural markers with LOC gloss."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Find affix section
+    parts = content.split('## Part 3: Affixes')
+    if len(parts) < 2:
+        return
+    
+    affix_section = parts[1]
+    
+    # Parse entries
+    import re
+    entries = re.split(r'^### ', affix_section, flags=re.MULTILINE)[1:]
+    
+    for entry in entries:
+        lines = entry.strip().split('\n')
+        category = None
+        gloss = None
+        
+        for line in lines:
+            if line.startswith('**Category:**'):
+                category = line.split(':**')[1].strip()
+            if line.startswith('**Gloss:**'):
+                gloss = line.split(':**')[1].strip()
+        
+        if category == 'plural_marker':
+            assert gloss != 'LOC', \
+                f"Plural marker has LOC gloss"
+        
+        if category == 'tam_suffix':
+            assert gloss != 'CAUS', \
+                f"TAM suffix has CAUS gloss (should be in derivational category)"
+
+
+def test_sentence_final_no_prefix_env():
+    """Sentence-final items should not show prefix as environment."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Find affix section
+    parts = content.split('## Part 3: Affixes')
+    if len(parts) < 2:
+        return
+    
+    affix_section = parts[1]
+    
+    import re
+    entries = re.split(r'^### ', affix_section, flags=re.MULTILINE)[1:]
+    
+    for entry in entries:
+        lines = entry.strip().split('\n')
+        category = None
+        envs = None
+        form = lines[0].strip() if lines else ''
+        
+        for line in lines:
+            if line.startswith('**Category:**'):
+                category = line.split(':**')[1].strip()
+            if line.startswith('**Environments:**'):
+                envs = line.split(':**')[1].strip()
+        
+        if category == 'sentence_final':
+            assert envs is None or 'prefix' not in envs, \
+                f"Sentence-final item {form} has prefix environment: {envs}"
+
+
+def test_grammatical_entries_have_func_pos():
+    """Grammatical entries with grammatical glosses should show FUNC POS, not V/N."""
+    if not os.path.exists(SAMPLE_ENTRIES):
+        return
+    
+    with open(SAMPLE_ENTRIES, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Find grammatical section
+    parts = content.split('## Part 2: Grammatical Words')
+    if len(parts) < 2:
+        return
+    
+    gram_section = parts[1].split('## Part 3:')[0] if '## Part 3:' in parts[1] else parts[1]
+    
+    import re
+    entries = re.split(r'^### ', gram_section, flags=re.MULTILINE)[1:]
+    
+    gram_glosses = {'DECL', 'IRR', 'ABL', 'ERG', 'LOC', 'DIR', 'Q'}
+    
+    for entry in entries:
+        lines = entry.strip().split('\n')
+        form = lines[0].strip() if lines else ''
+        pos = None
+        gloss = None
+        
+        for line in lines:
+            if line.startswith('**POS:**'):
+                pos = line.split(':**')[1].strip()
+            if line.startswith('**Gloss:**'):
+                gloss = line.split(':**')[1].strip()
+        
+        if gloss in gram_glosses:
+            assert pos == 'FUNC', \
+                f"Grammatical entry {form} has gloss {gloss} but POS is {pos}, expected FUNC"
+
+
+def test_review_file_has_problem_forms():
+    """Review file should capture high-frequency problem forms."""
+    review_file = os.path.join(OUTPUT_DIR, 'review_entries.md')
+    if not os.path.exists(review_file):
+        return
+    
+    with open(review_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # ciang is high-frequency (10K+) and should be in review
+    assert '### ciang' in content, \
+        "High-frequency problem form 'ciang' not in review file"
+
+
 if __name__ == '__main__':
     # Run as simple test functions
     tests = [
@@ -657,6 +853,14 @@ if __name__ == '__main__':
         test_lemmas_have_pos_variants,
         test_high_frequency_items_properly_classified,
         test_no_duplicate_entries_in_sample,
+        # Precision tests (quality enforcement)
+        test_no_unk_pos_in_grammatical_section,
+        test_problem_forms_not_in_polished_grammatical,
+        test_affix_section_no_lexical_glosses,
+        test_affix_section_no_mismatched_categories,
+        test_sentence_final_no_prefix_env,
+        test_grammatical_entries_have_func_pos,
+        test_review_file_has_problem_forms,
     ]
     
     passed = 0
