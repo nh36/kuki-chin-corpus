@@ -1,21 +1,21 @@
 # Tedim Chin Bible Analysis Coverage Report
 
-Generated: 2026-04-09T07:26:35.584837
+Generated: 2026-04-09T07:36:27.201070
 
 ## Overall Statistics
 
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | Total tokens | 831,175 | 100% |
-| Fully analyzed (known POS) | 814,318 | 97.97% |
-| Fully analyzed (non-ambiguous) | 667,479 | 80.31% |
+| Fully analyzed (known POS) | 819,844 | 98.64% |
+| Fully analyzed (non-ambiguous) | 673,005 | 80.97% |
 | Needs review (polysemous) | 146,839 | 17.67% |
 | Partial analysis (has ?) | 12 | 0.00% |
-| Unknown POS | 16,843 | 2.03% |
+| Unknown POS | 11,317 | 1.36% |
 | Unknown gloss | 8 | 0.0010% |
 
-**Lexicographic Coverage: 97.97%** (tokens with known POS)
-**Effective Coverage: 80.31%** (excluding ambiguous items)
+**Lexicographic Coverage: 98.64%** (tokens with known POS)
+**Effective Coverage: 80.97%** (excluding ambiguous items)
 
 ## Inventory Counts
 
@@ -23,27 +23,28 @@ Generated: 2026-04-09T07:26:35.584837
 |----------|-------|
 | Distinct wordforms | 22,485 |
 | Lemmas | 7,149 |
-| Lemmas needing review | 1,993 |
+| Lemmas needing review | 1,933 |
 | Polysemous lemmas | 351 |
 | Grammatical morphemes | 519 |
-| Items in review queue | 3,968 |
+| Items in review queue | 3,580 |
 
 ## Part of Speech Distribution
 
 | POS | Count | Percentage |
 |-----|-------|------------|
-| ADJ | 1,722 | 0.21% |
-| ADV | 4,082 | 0.49% |
+| ADJ | 2,087 | 0.25% |
+| ADV | 4,369 | 0.53% |
 | AUX | 569 | 0.07% |
 | CONJ | 10,647 | 1.28% |
-| DET | 1,659 | 0.20% |
-| FUNC | 320,731 | 38.59% |
+| DET | 1,993 | 0.24% |
+| FUNC | 320,196 | 38.52% |
 | INTERROG | 196 | 0.02% |
-| N | 178,505 | 21.48% |
+| N | 180,607 | 21.73% |
+| PREP | 48 | 0.01% |
 | PRON | 4,353 | 0.52% |
 | PROP | 35,052 | 4.22% |
-| UNK | 16,843 | 2.03% |
-| V | 256,816 | 30.90% |
+| UNK | 11,317 | 1.36% |
+| V | 259,741 | 31.25% |
 
 ## Grammatical Morpheme Categories
 
@@ -91,12 +92,12 @@ Generated: 2026-04-09T07:26:35.584837
 
 ## Ambiguity Summary
 
-- Total items in review queue: 3968
+- Total items in review queue: 3580
 - Known polysemous forms: 15
 - Multiple segmentations: 1606
 - Multiple lemmas: 356
-- Multiple POS: 326
-- Unknown POS: 2454
+- Multiple POS: 330
+- Unknown POS: 2045
 - Partial glosses: 18
 
 ### Top 10 Most Frequent Review Items
