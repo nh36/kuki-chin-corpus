@@ -35,7 +35,7 @@ import hashlib
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 
 from analyze_morphemes import (
-    analyze_word, analyze_sentence,
+    analyze_word, analyze_sentence, get_word_class,
     VERB_STEMS, NOUN_STEMS, VERB_STEM_PAIRS, ATOMIC_GLOSSES,
     FUNCTION_WORDS, PROPER_NOUNS, TRANSPARENT_PROPER_NOUNS,
     TAM_SUFFIXES, CASE_MARKERS, NOMINALIZERS,
@@ -658,213 +658,15 @@ def extract_lemma(surface: str, segmentation: str, gloss: str, pos: str) -> str:
     return stem
 
 
-# =============================================================================
-# EXPLICIT POS MAPPINGS - Based on philological analysis (recommendations.tsv)
-# =============================================================================
-
-# High-frequency items that were UNK but have now been analyzed
-EXPLICIT_POS_MAP = {
-    # Temporal conjunctions/connectives
-    'ciangin': 'CONJ',   # "and then" - temporal conjunction
-    'ciang': 'CONJ',     # "then/when" - temporal
-    
-    # Experiential/aspectual particles
-    'ngei': 'FUNC',      # experiential marker "ever/never"
-    
-    # Adjectives/adverbs
-    'kibang': 'ADJ',     # "like/same as"
-    'nai': 'ADV',        # "yet/still/near"
-    'hawm': 'ADV',       # "together"
-    'takin': 'ADV',      # "really/truly"
-    'tak': 'ADV',        # "truly"
-    
-    # Verbs (high-frequency stems that should be V not UNK)
-    'tun': 'V',          # "arrive"
-    'pha': 'V',          # "multiply/branch"
-    'dam': 'V',          # "live/be well"
-    'ging': 'V',         # "believe"
-    'sawl': 'V',         # "send"
-    'suan': 'V',         # "bear/beget"
-    'sak': 'V',          # "cause" (verb and suffix)
-    'khia': 'V',         # "go out"
-    'om': 'V',           # "exist/be"
-    'kal': 'V',          # "go"
-    'mat': 'V',          # "catch"
-    'pian': 'V',         # "be born"
-    'ning': 'V',         # "think"
-    'kem': 'V',          # "keep/guard"
-    'din': 'V',          # "stand"
-    'pai': 'V',          # "go" (motion away)
-    'kulh': 'V',         # "steal"
-    'kici': 'V',         # "called/say.PASS"
-    'pah': 'V',          # "do.so"
-    'tum': 'V',          # "complete/all"
-    'tuu': 'V',          # "climb"
-    'tawm': 'V',         # "produce"
-    'do': 'V',           # "rise"
-    'san': 'V',          # "flee"
-    'tho': 'V',          # "rise"
-    'dah': 'V',          # "put"
-    'tuan': 'V',         # "ride"
-    'het': 'V',          # "trouble"
-    'kang': 'V',         # "suffer"
-    'pat': 'V',          # "stroke"
-    'hu': 'V',           # "help"
-    'puk': 'V',          # "attack"
-    'lel': 'V',          # "desperate/escape"
-    'ling': 'V',         # "pile/heap"
-    'khawl': 'V',        # "rest"
-    
-    # Nouns
-    'tau': 'N',          # "altar/tower" (NOT "signal")
-    'gim': 'N',          # "suffering/toil"
-    'vei': 'N',          # "time/occasion"
-    'tual': 'N',         # "earth/ground"
-    'lung': 'N',         # "heart/stone"
-    'mi': 'N',           # "person"
-    'mite': 'N',         # "people"
-    'nungzui': 'N',      # "disciple"
-    'pi': 'N',           # "grandmother/ancestor"
-    'gei': 'N',          # "edge"
-    'sai': 'N',          # "ashes"
-    'sun': 'N',          # "basket"
-    'hei': 'N',          # "path"
-    'vui': 'N',          # "dust"
-    'gah': 'N',          # "branch"
-    'khuam': 'N',        # "darkness"
-    'kung': 'N',         # "trunk/tree"
-    'lah': 'N',          # "lamp"
-    'lui': 'N',          # "river"
-    'kim': 'N',          # "nation"
-    'khan': 'N',         # "generation"
-    
-    # Pronouns
-    'ama': 'PRON',       # "3SG.POSS - he/she/their"
-    
-    # Determiners/quantifiers/adverbs
-    'ciat': 'DET',       # "each/every"
-    'tam': 'DET',        # "many"
-    'kip': 'ADJ',        # "firm/all"
-    'ma': 'DET',         # "alone/only"
-    'ko': 'ADJ',         # "long"
-    'mawk': 'ADV',       # "perhaps"
-    'gawp': 'DET',       # "all"
-    'peuh': 'DET',       # "every"
-    'langpang': 'ADV',   # "against"
-    'dai': 'ADV',        # "still/silent"
-    
-    # More verbs
-    'zat': 'V',          # "use"
-    'tel': 'V',          # "know"
-    'lawn': 'V',         # "throw"
-    'dawi': 'V',         # "fear"
-    'mong': 'V',         # "hem/edge"
-    'leng': 'V',         # "line/wander"
-    'gan': 'V',          # "bear"
-    'kan': 'V',          # "stay"
-    'zin': 'V',          # "travel"
-    'zel': 'V',          # "scatter"
-    'sawh': 'V',         # "correct"
-    'hhuai': 'V',        # "abominate"
-    'kiat': 'V',         # "fall"
-    
-    # More nouns
-    'kuam': 'N',         # "plain"
-    'khau': 'N',         # "rope"
-    'sal': 'N',          # "slave"
-    'cil': 'N',          # "beginning"
-    'mel': 'N',          # "appearance/form"
-    'guak': 'N',         # "back"
-    'bu': 'N',           # "heap/group"
-    'zia': 'N',          # "manner"
-    'mawhsak': 'N',      # "adversary"
-    'lehdo': 'N',        # "rebellious"
-    'khuk': 'N',         # "pool/knee"
-    'hel': 'N',          # "hell"
-    'gamh': 'N',         # "land"
-    'gilo': 'N',         # "enemy"
-    'cik': 'N',          # "fountain"
-    'len': 'N',          # "net"
-    'phet': 'N',         # "twin"
-    'phual': 'N',        # "field"
-    'paktat': 'N',       # "fornication"
-    'dum': 'N',          # "siege.mound"
-    'peek': 'N',         # "breadth"
-    'zai': 'N',          # "song"
-    'kawng': 'N',        # "road"
-    'teek': 'N',         # "master"
-    'gu': 'N',           # "tree"
-    'gual': 'N',         # "row"
-    
-    # More verbs
-    'ing': 'V',          # "be.able"
-    'theh': 'V',         # "throw"
-    'kaih': 'V',         # "lead"
-    'pelh': 'V',         # "escape"
-    'zum': 'V',          # "bow"
-    'vat': 'V',          # "go.quickly"
-    'vawh': 'V',         # "name/call"
-    'thawh': 'V',        # "rise"
-    'cina': 'V',         # "sick"
-    'sawp': 'V',         # "wrap"
-    'khih': 'V',         # "bind"
-    'sim': 'V',          # "count"
-    'phu': 'V',          # "carry"
-    'kul': 'V',          # "tar/seal"
-    'thuah': 'V',        # "gird"
-    'gol': 'V',          # "divide"
-    'ip': 'V',           # "cover"
-    'neng': 'V',         # "oppress"
-    'gawh': 'V',         # "touch"
-    'zal': 'V',          # "spread"
-    'sap': 'V',          # "call"
-    'khek': 'V',         # "change"
-    'tawng': 'V',        # "contend"
-    'taan': 'V',         # "withhold"
-    'mut': 'V',          # "see"
-    'met': 'V',          # "shear"
-    'vet': 'V',          # "do"
-    'lom': 'V',          # "wave"
-    
-    # More nouns
-    'zo': 'N',           # "south"
-    'kop': 'N',          # "pair"
-    'dalna': 'N',        # "hindrance"
-    'gak': 'N',          # "trap"
-    'liah': 'N',         # "circuit"
-    'siit': 'N',         # "sacrifice"
-    'pum': 'N',          # "body"
-    'nawl': 'N',         # "place"
-    'sungnung': 'N',     # "inner.room"
-    'vuk': 'N',          # "frost"
-    'leilak': 'N',       # "dust"
-    'nuh': 'N',          # "mother"
-    'liim': 'N',         # "wing"
-    'thongkia': 'N',     # "prison"
-    'mo': 'N',           # "bride"
-    'meima': 'N',        # "wound"
-    
-    # More adjectives/adverbs
-    'taang': 'ADJ',      # "beautiful"
-    'bal': 'ADJ',        # "tired"
-    'lat': 'ADJ',        # "strong"
-    'sawt': 'ADJ',       # "long.time"
-    'kawi': 'ADV',       # "forth"
-    'nail': 'ADV',       # "always"
-    'taw': 'PREP',       # "with"
-    
-    # Interrogatives
-    'koi': 'INTERROG',   # "where"
-    
-    # Auxiliary/aspectual
-    'dawn': 'AUX',       # "about to" (prospective)
-}
-
-
 def determine_pos(segmentation: str, gloss: str, surface: str) -> str:
-    """Determine part of speech from analysis."""
+    """
+    Determine part of speech from analysis.
+    
+    This function delegates to get_word_class() from the analyzer for most POS
+    determination, but preserves proper noun detection logic specific to the
+    export pipeline.
+    """
     gloss_upper = gloss.upper()
-    seg_lower = segmentation.lower()
     surface_lower = surface.lower()
     
     # Proper nouns (all caps gloss that matches surface)
@@ -878,39 +680,34 @@ def determine_pos(segmentation: str, gloss: str, surface: str) -> str:
         gloss_base not in GRAMMATICAL_GLOSSES):
         return 'PROP'
     
-    # Check explicit POS mappings first (from philological analysis)
-    parts = seg_lower.replace("'", '').split('-')
-    for part in parts:
-        if part in EXPLICIT_POS_MAP:
-            return EXPLICIT_POS_MAP[part]
-    # Also check full surface form
-    if surface_lower in EXPLICIT_POS_MAP:
-        return EXPLICIT_POS_MAP[surface_lower]
+    # Use the analyzer's get_word_class for everything else
+    word_class = get_word_class(surface, gloss)
     
-    # Check for grammatical markers in gloss
-    if any(g in gloss_upper for g in ['ERG', 'LOC', 'ABL', 'COM', 'DAT']):
-        # Has case marking - check stem
-        pass
+    # Map analyzer categories to export POS tags
+    pos_mapping = {
+        'DEM': 'DET',       # Demonstrative -> Determiner
+        'N': 'N',
+        'N.PL': 'N',        # Plural noun -> Noun
+        'N.PROP': 'PROP',   # Proper noun
+        'NUM': 'NUM',
+        'QUANT': 'DET',     # Quantifier -> Determiner
+        'PROP': 'ADJ',      # Property word -> Adjective
+        'COORD': 'CONJ',    # Coordinator -> Conjunction
+        'SUBORD': 'CONJ',   # Subordinator -> Conjunction
+        'SFIN': 'FUNC',     # Sentence-final -> Function
+        'CASE': 'FUNC',     # Case marker -> Function
+        'GEN': 'FUNC',      # Genitive -> Function
+        'REL': 'N',         # Relator noun -> Noun
+        'V': 'V',
+        'V.AUX': 'AUX',
+        'PRO': 'PRON',
+        'AGR': 'FUNC',      # Agreement marker -> Function
+        'ADV': 'ADV',
+        'CONJ': 'CONJ',     # From TEMPORAL_CONNECTIVES
+        'NEG': 'FUNC',
+    }
     
-    # Find stem in segmentation
-    for part in parts:
-        if part in VERB_STEMS or part in VERB_STEM_PAIRS:
-            return 'V'
-        if part in NOUN_STEMS:
-            return 'N'
-    
-    # Check gloss patterns
-    if 'NMLZ' in gloss_upper:
-        return 'N'
-    if any(t in gloss_upper for t in ['PST', 'FUT', 'PERF', 'PROG', 'ABIL', 'CAUS']):
-        return 'V'
-    
-    # Function words
-    first_part = parts[0] if parts else ''
-    if first_part in FUNCTION_WORDS:
-        return 'FUNC'
-    
-    return 'UNK'
+    return pos_mapping.get(word_class, 'UNK')
 
 def extract_affixes(segmentation: str, gloss: str) -> Tuple[str, str]:
     """Extract prefix and suffix chains from segmentation."""

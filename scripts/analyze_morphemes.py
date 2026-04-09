@@ -519,11 +519,60 @@ PROPERTY_WORDS = {
     'om': 'exist',          # 1868x - a om = it exists (also PROPERTY_WORDS for attributive use)
     'pha': 'good',          # 221x - a pha = it is good (quality)
     'thei': 'able',         # 176x - a thei = able to (modal use)
+    # Additional property words from corpus analysis
+    'taang': 'beautiful',   # a taang = it is beautiful
+    'bal': 'tired',         # a bal = tired/weary
+    'lat': 'strong',        # a lat = strong
+    'sawt': 'long.time',    # a sawt = long time
+    'ko': 'long',           # a ko = long (time/space)
+    'kibang': 'like',       # kibang = same/like
 }
 
 # Coordinator (single morpheme in Tedim Chin)
 COORDINATOR = {
     'le': 'and',            # 10,942x - N le N = N and N
+}
+
+# Adverbs (manner, degree, time modifiers)
+ADVERBS = {
+    # Manner adverbs
+    'takin': 'truly',       # intensifier "really/truly"
+    'tak': 'truly',         # intensifier base
+    'hawm': 'together',     # "together/jointly"
+    'kawi': 'forth',        # directional "forth"
+    'langpang': 'against',  # adversative (also in RELATOR_NOUNS)
+    'dai': 'still',         # "still/silent"
+    'nail': 'always',       # "always/continuously"
+    'mawk': 'perhaps',      # epistemic "perhaps/maybe"
+    'nai': 'still',         # "still/yet/near"
+    'ngei': 'ever',         # experiential "ever/never" (with NEG)
+    # Degree adverbs
+    'tham': 'very',         # degree intensifier
+    'bek': 'only',          # restrictive
+    'zong': 'also',         # additive
+}
+
+# Temporal connectives (clause-linking temporal words)
+TEMPORAL_CONNECTIVES = {
+    'ciang': 'then',        # "then/when" - base form
+    'ciangin': 'then',      # "then" with ERG - temporal subordinator
+    'tua': 'that',          # often "tua ciangin" = "and then"
+    'tu': 'now',            # "now"
+    'tuni': 'today',        # "today"
+    'zingsang': 'tomorrow', # "tomorrow"
+    'nitak': 'yesterday',   # "yesterday"
+    'zawkciangin': 'after', # "after that"
+    'masaciangin': 'before',# "before that"
+}
+
+# Expanded quantifiers
+QUANTIFIERS_EXTENDED = {
+    'ciat': 'each',         # distributive "each/every"
+    'gawp': 'all',          # "all/entire"
+    'peuh': 'every',        # "every/any"
+    'kip': 'firm',          # "firm/all" (intensive)
+    'ma': 'alone',          # "alone/only"
+    'tam': 'many',          # "many" - quantifier sense (also in PROPERTY_WORDS)
 }
 
 # Nominalizers and plurals
@@ -2172,6 +2221,71 @@ VERB_STEMS = {
     'lehhei': 'turn',        # 3x
     'kitawng': 'strive',     # 15x - final lexicon internalization
     'tawng': 'contend',      # 13x - base verb (kitawng = ki- + tawng)
+    
+    # Additional verbs from corpus analysis (export POS consolidation)
+    'tun': 'arrive',         # arrive at destination
+    'pha': 'multiply',       # increase/branch
+    'ging': 'believe',       # believe/trust
+    'kal': 'go',             # go/walk
+    'ning': 'think',         # think/consider
+    'kulh': 'steal',         # steal/rob
+    'kici': 'call.PASS',     # be called (ki-ci)
+    'pah': 'do.so',          # do thus
+    'tum': 'complete',       # complete/finish (also "all")
+    'tuu': 'climb',          # climb/ascend
+    'tawm': 'produce',       # produce/yield (also 'few')
+    'do': 'rise',            # rise/rebel
+    'san': 'flee',           # flee/escape
+    'tho': 'rise',           # rise/awaken
+    'dah': 'put',            # put/place
+    'tuan': 'ride',          # ride/mount
+    'het': 'trouble',        # trouble/disturb
+    'kang': 'suffer',        # suffer/endure
+    'pat': 'stroke',         # stroke/strike
+    'hu': 'help',            # help/assist
+    'puk': 'attack',         # attack/ambush
+    'lel': 'escape',         # escape/desperate
+    'ling': 'pile',          # pile/heap
+    'khawl': 'rest',         # rest/cease
+    'zat': 'use',            # use/employ
+    'tel': 'know',           # know/understand
+    'lawn': 'throw',         # throw/cast
+    'dawi': 'fear',          # fear/be afraid
+    'mong': 'hem',           # hem/edge
+    'leng': 'wander',        # wander/roam
+    'gan': 'bear',           # bear/carry (also 'cattle')
+    'kan': 'stay',           # stay/remain
+    'zin': 'travel',         # travel/journey
+    'zel': 'scatter',        # scatter/disperse
+    'sawh': 'correct',       # correct/rectify
+    'hhuai': 'abominate',    # abominate/detest
+    'kiat': 'fall',          # fall down
+    'ing': 'be.able',        # be able/can
+    'theh': 'throw',         # throw/hurl
+    'kaih': 'lead',          # lead/guide
+    'pelh': 'escape',        # escape/flee
+    'zum': 'bow',            # bow/bend
+    'vat': 'go.quickly',     # go quickly
+    'vawh': 'call',          # call/name
+    'thawh': 'rise',         # rise/get up
+    'cina': 'sick',          # be sick
+    'sawp': 'wrap',          # wrap/cover
+    'khih': 'bind',          # bind/tie
+    'sim': 'count',          # count/reckon
+    'phu': 'carry',          # carry (on back)
+    'kul': 'seal',           # seal/tar
+    'thuah': 'gird',         # gird/wrap
+    'gol': 'divide',         # divide/separate
+    'ip': 'cover',           # cover/hide
+    'neng': 'oppress',       # oppress/press
+    'gawh': 'touch',         # touch/contact
+    'zal': 'spread',         # spread out
+    'khek': 'change',        # change/exchange
+    'taan': 'withhold',      # withhold/restrain
+    'mut': 'see',            # see/perceive
+    'met': 'shear',          # shear/cut
+    'vet': 'do',             # do/act
+    'lom': 'wave',           # wave/shake
 }
 
 
@@ -3589,6 +3703,67 @@ NOUN_STEMS = {
     'awi': 'warm',           # 4x
     'supai': 'down',         # 2x
     'sunthapai': 'long',     # 2x
+    
+    # Additional nouns from corpus analysis (export POS consolidation)
+    'tau': 'altar',          # altar/tower (NOT signal)
+    'gim': 'suffering',      # suffering/toil
+    'vei': 'time',           # time/occasion
+    'lung': 'heart',         # heart/stone
+    'mite': 'people',        # people (mi-te)
+    'nungzui': 'disciple',   # disciple/follower
+    'pi': 'grandmother',     # grandmother/ancestor
+    'gei': 'edge',           # edge/border
+    'sai': 'ashes',          # ashes/dust
+    'sun': 'basket',         # basket
+    'hei': 'path',           # path/way
+    'vui': 'dust',           # dust/powder
+    'gah': 'branch',         # branch/bough
+    'khuam': 'darkness',     # darkness/night
+    'kung': 'trunk',         # trunk/tree
+    'lah': 'lamp',           # lamp/light
+    'lui': 'river',          # river/stream
+    'kim': 'nation',         # nation (also 'whole')
+    'khan': 'generation',    # generation/age
+    'kuam': 'plain',         # plain/valley
+    'khau': 'rope',          # rope/cord
+    'sal': 'slave',          # slave/servant
+    'cil': 'beginning',      # beginning/origin
+    'mel': 'appearance',     # appearance/form
+    'guak': 'back',          # back/rear
+    'bu': 'heap',            # heap/group
+    'zia': 'manner',         # manner/way
+    'mawhsak': 'adversary',  # adversary/enemy
+    'lehdo': 'rebellious',   # rebellious one
+    'khuk': 'pool',          # pool/knee
+    'hel': 'hell',           # hell/underworld
+    'gamh': 'land',          # land/territory
+    'gilo': 'enemy',         # enemy/foe
+    'cik': 'fountain',       # fountain/spring
+    'len': 'net',            # net/snare
+    'phet': 'twin',          # twin
+    'phual': 'field',        # field/plain
+    'paktat': 'fornication', # fornication/harlotry
+    'dum': 'siege.mound',    # siege mound
+    'peek': 'breadth',       # breadth/width
+    'zai': 'song',           # song/psalm
+    'kawng': 'road',         # road/path
+    'teek': 'master',        # master/lord
+    'gu': 'tree',            # tree (variant)
+    'zo': 'south',           # south
+    'kop': 'pair',           # pair/couple
+    'dalna': 'hindrance',    # hindrance/obstacle
+    'gak': 'trap',           # trap/snare
+    'liah': 'circuit',       # circuit/round
+    'siit': 'sacrifice',     # sacrifice/offering
+    'pum': 'body',           # body/trunk
+    'nawl': 'place',         # place/area
+    'sungnung': 'inner.room', # inner room/chamber
+    'leilak': 'dust',        # dust (variant)
+    'nuh': 'mother',         # mother
+    'liim': 'wing',          # wing
+    'thongkia': 'prison',    # prison/jail
+    'mo': 'bride',           # bride
+    'meima': 'wound',        # wound/injury
 }
 
 
@@ -5855,9 +6030,18 @@ def get_word_class(word: str, gloss: str) -> str:
     - PRO: Pronoun
     - ADV: Adverb
     - NEG: Negation
+    - CONJ: Conjunction/Connective
     - OTHER: Unclassified
     """
     word_lower = word.lower().rstrip('.,;:!?"\'')
+    
+    # Check adverbs (before other categories - specific)
+    if word_lower in ADVERBS:
+        return 'ADV'
+    
+    # Check temporal connectives
+    if word_lower in TEMPORAL_CONNECTIVES:
+        return 'CONJ'
     
     # Check demonstratives
     if word_lower in DEMONSTRATIVES:
@@ -5867,8 +6051,8 @@ def get_word_class(word: str, gloss: str) -> str:
     if word_lower in NUMERALS:
         return 'NUM'
     
-    # Check quantifiers
-    if word_lower in QUANTIFIERS:
+    # Check quantifiers (both original and extended)
+    if word_lower in QUANTIFIERS or word_lower in QUANTIFIERS_EXTENDED:
         return 'QUANT'
     
     # Check property words (bare form only)
@@ -5912,6 +6096,17 @@ def get_word_class(word: str, gloss: str) -> str:
     # Check sentence-final markers
     if word_lower in SENTENCE_FINAL_MARKERS or gloss in ('DECL', 'Q', 'JUSS', 'HORT'):
         return 'SFIN'
+    
+    # Check for nouns FIRST by gloss when word is ambiguous
+    # Some words appear in both VERB_STEMS and NOUN_STEMS (e.g., lung = feel/heart)
+    # Use gloss to disambiguate before checking stem dictionaries
+    noun_glosses = {'heart', 'stone', 'altar', 'path', 'road', 'river', 'tree', 'house', 
+                    'person', 'people', 'hand', 'eye', 'head', 'body', 'land', 'place',
+                    'word', 'time', 'day', 'year', 'water', 'fire', 'light', 'name',
+                    'king', 'lord', 'son', 'father', 'mother', 'child', 'man', 'woman'}
+    gloss_base = gloss.split('-')[0].split('.')[0].lower()
+    if gloss_base in noun_glosses:
+        return 'N'
     
     # Check for verbs - multiple detection strategies
     # 1. Verb stems in lexicon
