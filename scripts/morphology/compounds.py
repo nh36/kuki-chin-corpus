@@ -2747,8 +2747,8 @@ COMPOUND_WORDS = {
     'vawhin': ('vawh-in', 'arise-ERG'),                    # arising
     'baan': ('baan', 'lay'),                               # base - lay/put
     'liangkoah': ('liangko-ah', 'shoulder-LOC'),           # on shoulders
-    'pataukoh': ('pa-tau-koh', 'male-signal-call'),        # alarm/trumpet call
-    'tau': ('tau', 'signal'),                              # base - signal
+    'pataukoh': ('pa-tau-koh', 'male-altar-call'),         # alarm/trumpet call
+    'tau': ('tau', 'altar'),                               # base - altar/tower
     'gelhsa': ('gelh-sa', 'write-PERF'),                   # written
     'nilhin': ('nilh-in', 'anoint-ERG'),                   # anointing
     
@@ -3315,8 +3315,8 @@ COMPOUND_WORDS = {
     # Round 53: Another massive batch from Samuel, Kings, Chronicles, Ezra, Job, Psalms, Proverbs
     'kinawhin': ('ki-nawh-in', 'REFL-meet-CVB'),           # meet/come to meet
     'nawh': ('nawh', 'meet'),                              # base - meet
-    'gimlua': ('gim-lua', 'faint-excessive'),              # exhausted
-    'gim': ('gim', 'faint'),                               # base - faint
+    'gimlua': ('gim-lua', 'suffer-excessive'),              # exhausted
+    'gim': ('gim', 'suffering'),                           # base - suffering/toil
     'kikekin': ('ki-kek-in', 'REFL-scratch-CVB'),          # rent/torn
     'kilok': ('ki-lok', 'REFL-shake'),                     # cast away
     'kheging': ('khe-ging', 'foot-sound'),                 # sound of going

@@ -1,0 +1,31 @@
+form	freq	segmentation	gloss	pos_current	pos_recommend	category	rationale	action
+ciangin	9994	ciang-in	then-ERG	UNK	CONJ	temporal_conj	tua ciangin = and then; functions as temporal conjunction; KJV 'And'	ASSIGN_POS
+ngei	742	ngei	EXP	UNK	FUNC	experiential	marks experiential aspect ever/never; KJV 'any more', 'neither...again'	ASSIGN_POS
+kibang	626	ki-bang	REFL-same	UNK	ADJ	adjective	like/same as; derives from ki- + bang; functions as adjective	ASSIGN_POS
+tun	498	tun	arrive	UNK	V	verb	arrive/reach; note vantung has tung not tun	ASSIGN_POS
+pha	461	pha	branch	UNK	V	polysemous	1) branch (N), 2) multiply/be fruitful (V); KJV 'multiply'	SPLIT_SENSES
+ciang	451	ciang	then	UNK	CONJ	temporal	bare form of temporal then/when; usually with -in as ciangin	ASSIGN_POS
+tau	427	tau	altar	UNK	N	noun	altar/tower; KJV 'altar', 'tower'; NOT 'signal'	FIX_GLOSS
+nai	405	nai	near	UNK	ADV	adverb	yet/still/near; appears in 'nai lo' (not yet)	ASSIGN_POS
+gim	365	gim	suffering	UNK	N	noun	suffering/toil/sorrow; KJV 'sorrow', 'punishment'	FIX_GLOSS
+ciat	323	ciat	each	UNK	DET	determiner	each/every; appears in 'nam ciatin' (after its kind)	ASSIGN_POS
+dam	310	dam	live	UNK	V	verb	live/be well; KJV 'live'	ASSIGN_POS
+ging	299	ging	believe	UNK	V	verb	believe/trust; appears in 'um ging'	ASSIGN_POS
+sawl	285	sawl	send	UNK	V	verb	send/commission; KJV 'send'	ASSIGN_POS
+dawn	275	dawn	about.to	UNK	AUX	auxiliary	irrealis/prospective marker 'about to'	ASSIGN_POS
+suan	270	suan	bear	UNK	V	verb	bear/beget; KJV 'beget', 'bear'	ASSIGN_POS
+vei	265	vei	time	UNK	N	noun	time/occasion; appears in 'vei tam' (many times)	ASSIGN_POS
+tual	262	tual	earth	UNK	N	noun	earth/ground/land; variant of 'lei'	ASSIGN_POS
+sak	258	sak	cause	UNK	V	polysemous	causative verb root; appears as both verb and suffix	SPLIT_SENSES
+khia	254	khia	go.out	UNK	V	verb	go out/exit; directional verb	ASSIGN_POS
+om	248	om	exist	UNK	V	verb	exist/be/stay; existential; KJV 'let there be'	ASSIGN_POS
+kal	241	kal	go	UNK	V	verb	go/walk; motion verb	ASSIGN_POS
+mat	240	mat	catch	UNK	V	verb	catch/hold; KJV 'take'	ASSIGN_POS
+lung	238	lung	heart	UNK	N	noun	heart/stone; appears in 'lungsim'	ASSIGN_POS
+pian	236	pian	born	UNK	V	verb	be born/appear; KJV 'born'	ASSIGN_POS
+hawm	232	hawm	together	UNK	ADV	adverb	together/jointly; appears in 'kihawm'	ASSIGN_POS
+koi	230	koi	where	UNK	INTERROG	interrogative	interrogative 'where'	ASSIGN_POS
+ning	228	ning	think	UNK	V	verb	think/intend	ASSIGN_POS
+kem	225	kem	keep	UNK	V	verb	keep/guard; KJV 'keep'	ASSIGN_POS
+din	222	din	stand	UNK	V	verb	stand; positional verb	ASSIGN_POS
+pai	220	pai	go	UNK	V	verb	go (motion away); distinct from kal	ASSIGN_POS

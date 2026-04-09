@@ -1,42 +1,49 @@
 # Tedim Chin Bible Analysis Coverage Report
 
-Generated: 2026-04-08T22:50:03.946399
+Generated: 2026-04-09T07:26:35.584837
 
 ## Overall Statistics
 
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | Total tokens | 831,175 | 100% |
-| Fully analyzed (known POS) | 778,051 | 93.61% |
-| Fully analyzed (non-ambiguous) | 631,212 | 75.94% |
+| Fully analyzed (known POS) | 814,318 | 97.97% |
+| Fully analyzed (non-ambiguous) | 667,479 | 80.31% |
 | Needs review (polysemous) | 146,839 | 17.67% |
 | Partial analysis (has ?) | 12 | 0.00% |
-| Unknown POS | 53,110 | 6.39% |
+| Unknown POS | 16,843 | 2.03% |
 | Unknown gloss | 8 | 0.0010% |
 
-**Lexicographic Coverage: 93.61%** (tokens with known POS)
-**Effective Coverage: 75.94%** (excluding ambiguous items)
+**Lexicographic Coverage: 97.97%** (tokens with known POS)
+**Effective Coverage: 80.31%** (excluding ambiguous items)
 
 ## Inventory Counts
 
 | Category | Count |
 |----------|-------|
 | Distinct wordforms | 22,485 |
-| Lemmas | 7,400 |
-| Lemmas needing review | 2,792 |
-| Polysemous lemmas | 360 |
+| Lemmas | 7,149 |
+| Lemmas needing review | 1,993 |
+| Polysemous lemmas | 351 |
 | Grammatical morphemes | 519 |
-| Items in review queue | 5,015 |
+| Items in review queue | 3,968 |
 
 ## Part of Speech Distribution
 
 | POS | Count | Percentage |
 |-----|-------|------------|
-| FUNC | 320,258 | 38.53% |
-| N | 174,503 | 20.99% |
-| PROP | 28,892 | 3.48% |
-| UNK | 53,110 | 6.39% |
-| V | 254,412 | 30.61% |
+| ADJ | 1,722 | 0.21% |
+| ADV | 4,082 | 0.49% |
+| AUX | 569 | 0.07% |
+| CONJ | 10,647 | 1.28% |
+| DET | 1,659 | 0.20% |
+| FUNC | 320,731 | 38.59% |
+| INTERROG | 196 | 0.02% |
+| N | 178,505 | 21.48% |
+| PRON | 4,353 | 0.52% |
+| PROP | 35,052 | 4.22% |
+| UNK | 16,843 | 2.03% |
+| V | 256,816 | 30.90% |
 
 ## Grammatical Morpheme Categories
 
@@ -67,29 +74,29 @@ Generated: 2026-04-08T22:50:03.946399
 | mi | N | person | 13,792 | 78 |
 | ci | V | say | 11,943 | 111 |
 | thu | N | word | 10,771 | 209 |
-| ciang | UNK | then | 10,644 | 28 |
+| ciang | CONJ | then | 10,644 | 28 |
 | ahi | V | ? | 8,634 | 7 |
 | tung | V | on | 8,222 | 48 |
 | topa | N | Lord | 7,896 | 5 |
 | om | V | exist | 6,782 | 88 |
-| pasian | N | God | 5,945 | 9 |
+| pasian | N | God | 5,937 | 9 |
 | pai | V | go | 5,821 | 119 |
 | ahih | V | ? | 5,804 | 4 |
 | pan | V | ABL | 5,686 | 23 |
 | khat | N | one | 5,563 | 20 |
-| thei | V | know | 4,751 | 99 |
+| thei | V | know | 4,750 | 98 |
 | gam | N | land | 4,741 | 82 |
-| ama | UNK | 3SG.POSS | 4,352 | 4 |
+| ama | PRON | 3SG.POSS | 4,352 | 4 |
 | pia | V | give | 4,016 | 71 |
 
 ## Ambiguity Summary
 
-- Total items in review queue: 5015
+- Total items in review queue: 3968
 - Known polysemous forms: 15
 - Multiple segmentations: 1606
-- Multiple lemmas: 966
-- Multiple POS: 931
-- Unknown POS: 3683
+- Multiple lemmas: 356
+- Multiple POS: 326
+- Unknown POS: 2454
 - Partial glosses: 18
 
 ### Top 10 Most Frequent Review Items
@@ -105,4 +112,4 @@ Generated: 2026-04-08T22:50:03.946399
 | hong | 15492 | multi_segmentation:2|known_polysemous |
 | ka | 13431 | multi_segmentation:2 |
 | tua | 12528 | multi_segmentation:2 |
-| ciangin | 9994 | pos_unknown |
+| ahi | 8594 | multi_segmentation:2 |

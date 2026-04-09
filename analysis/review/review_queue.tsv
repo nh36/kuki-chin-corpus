@@ -1,0 +1,344 @@
+surface_form	normalized_form	segmentation	alt_segmentations	gloss	lemma	alt_lemmas	pos	alt_pos	confidence	first_verse	frequency	review_reasons	status
+ciangin	ciangin	ciang-in		then-ERG	ciang		UNK		high	01001003	9994	pos_unknown	needs_review
+mite	mite	mi-te	Mite|Mite'|mite'	person-PL	mi	Mite|mite	N	PROP|UNK	high	01004026	7200	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+ama	ama	ama	Ama|ama'	3SG.POSS	ama	Ama	UNK	PROP	high	01001027	4306	multi_segmentation:3|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+tapa	tapa	tapa'	Tapa'|ta-pa	son.POSS	tapa	ta	N		high	01004017	2188	multi_segmentation:3|multi_lemma:2	needs_review
+Israel	israel	Israel	Israel'	ISRAEL	Israel	israel	PROP	UNK	high	01032028	2007	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+kumpipa	kumpipa	kumpi-pa	Kumpipa'|kumpipa'	king-male	kumpi	kumpipa	N		high	01014001	1852	multi_segmentation:3|multi_lemma:2	needs_review
+Jesuh	jesuh	Jesuh	Jesuh'	JESUH	Jesuh	jesuh	PROP	UNK	high	40001001	1834	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+khuapi	khuapi	khua-pi	khuapi'	village-big	khua	khuapi	N		high	01004017	1161	multi_segmentation:2|multi_lemma:2	needs_review
+David	david	David'	David	DAVID.POSS	david	David	UNK	PROP	high	08004017	1052	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+lungsim	lungsim	lung-sim	lungsim'	stone-mind	lung	lungsim	V	N	high	01006005	988	multi_segmentation:2|multi_lemma:2|multi_pos:N|V	needs_review
+leitung	leitung	lei-tung	leitung'	land-on	lei	leitung	V	N	high	01001001	882	multi_segmentation:2|multi_lemma:2|multi_pos:N|V	needs_review
+Moses	moses	Moses	Moses'	MOSES	Moses	moses	PROP	UNK	high	02002010	866	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Judah	judah	Judah	Judah'	JUDAH	Judah	judah	PROP	UNK	high	01029035	820	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+ngei	ngei	ngei		EXP	ngei		UNK		high	01008021	742	pos_unknown	needs_review
+numei	numei	nu-mei	Numei'|numei'	woman	nu	numei	N		high	01001027	739	multi_segmentation:3|multi_lemma:2	needs_review
+mawhna	mawhna	mawh-na	Mawhna'|mawhna'	err-NMLZ	mawh	mawhna	V	N	high	01004007	724	multi_segmentation:3|multi_lemma:2|multi_pos:N|V	needs_review
+minam	minam	mi-nam	minam'	person-kind	mi	minam	N		high	01010032	695	multi_segmentation:2|multi_lemma:2	needs_review
+Egypt	egypt	Egypt	Egypt'	EGYPT	Egypt	egypt	PROP	UNK	high	01010006	684	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Khrih	khrih	Khrih'	Khrih	KHRIH.POSS	khrih	Khrih	UNK	PROP	high	40001001	643	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+pai-in	pai-in	pai-in	Pai-in	go-ERG	pai	Pai-In	V	PROP	high	01009023	638	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+Jerusalem	jerusalem	Jerusalem	Jerusalem'	JERUSALEM	Jerusalem	jerusalem	PROP	UNK	high	01014018	627	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+kibang	kibang	ki-bang		REFL-same	bang		UNK		high	01003022	626	pos_unknown	needs_review
+tapate	tapate	tapa-te	tapate'	son-PL	tapa	tapate	N	UNK	high	01006018	609	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+tuate	tuate	tua-te	Tuate|tua-te'	DIST-PL	tua	Tuate	FUNC	PROP	high	01001014	606	multi_segmentation:3|multi_lemma:2|multi_pos:FUNC|PROP	needs_review
+Israel-te	israel-te	Israel-te	Israel-te'	ISRAEL-TE	Israel-Te	israel	PROP	UNK	high	01047027	575	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+thuman	thuman	thu-man	Thuman	word-reason	thu	Thuman	N	PROP	high	01006009	515	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+thute	thute	thu-te	thute'	word-PL	thu	thute	N	UNK	high	01015001	515	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+tun	tun	tun		arrive	tun		UNK		high	01007006	498	pos_unknown	needs_review
+mihing	mihing	mi-hing	Mihing'|mihing'	person-kind	mi	mihing	N		high	01001026	474	multi_segmentation:3|multi_lemma:2	needs_review
+pha	pha	pha	Pha	branch	pha		UNK		high	01001021	461	multi_segmentation:2|pos_unknown	needs_review
+ciang	ciang	ciang		then	ciang		UNK		high	01003019	451	pos_unknown	needs_review
+Saul	saul	Saul	Saul'	SAUL	Saul	saul	PROP	UNK	high	09009002	440	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Thukham	thukham	thu-kham	Thukham'|thukham'	law	thu	thukham	N		high	02013009	438	multi_segmentation:3|multi_lemma:2	needs_review
+galte	galte	gal-te	Galte|Galte'|galte'	enemy-PL	gal	Galte|galte	N	PROP|UNK	high	01014011	430	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+tau	tau	tau		signal	tau		UNK		high	01008020	427	pos_unknown	needs_review
+nasemte	nasemte	nasem-te	nasemte'	servant-PL	nasem	nasemte	N	UNK	high	01014015	413	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+nai	nai	nai		near	nai		UNK		high	01002005	405	pos_unknown	needs_review
+gimna	gimna	gim-na	Gimna	suffer-NMLZ	gim	Gimna	N	PROP	high	01003016	405	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+pate	pate	pa-te	Pate'|pate'	male-PL	pa	pate	N	UNK	high	01015015	398	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+minamte	minamte	mi-nam-te	Minamte|Minamte'|minamte'	person-kind-PL	mi	Minamte|minamte	N	PROP|UNK	high	01010032	386	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+nate	nate	na-te	nate'	2SG-PL	te	nate	FUNC	N	high	01014021	379	multi_segmentation:2|multi_lemma:2|multi_pos:FUNC|N	needs_review
+dangte	dangte	dang-te	dangte'	other-PL	dang	dangte	N	UNK	high	01003001	373	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+gim	gim	gim		faint	gim		UNK		high	01004013	365	pos_unknown	needs_review
+ciat	ciat	ciat	ciat'	each	ciat		UNK		high	01006019	365	multi_segmentation:2|pos_unknown	needs_review
+Levi	levi	Levi	Levi'	LEVI	Levi	levi	PROP	UNK	high	01029034	363	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+kici	kici	kici		called	kici		UNK		high	01002023	354	pos_unknown	needs_review
+takin	takin	takin		really	takin		UNK		high	01021018	346	pos_unknown	needs_review
+kip	kip	kip		firm	kip		UNK		high	01021018	343	pos_unknown	needs_review
+Jakob	jakob	Jakob	Jakob'	JAKOB	Jakob	jakob	PROP	UNK	high	01025026	338	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+sanggamte	sanggamte	sanggamte'	sanggam-te	brother-PL.POSS	sanggamte	sanggam	UNK	N	high	01009025	337	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK|pos_unknown	needs_review
+“	“						UNK		high	01004001	335	pos_unknown	needs_review
+suante	suante	suan-te	suante'	offspring-PL	suan	suante	V	UNK	high	01036015	333	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+nasempa	nasempa	nasempa'	nasem-pa	servant.POSS	nasempa	nasem	N		high	01018003	332	multi_segmentation:2|multi_lemma:2	needs_review
+Aaron	aaron	Aaron	Aaron'	AARON	Aaron	aaron	PROP	UNK	high	02004014	326	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Siampite	siampite	Siampite'	Siampite|siam-pi-te|siampite'	priest-PL.POSS	siampite	Siampite|siam	UNK	PROP|V	high	01047022	325	multi_segmentation:4|multi_lemma:3|multi_pos:PROP|UNK|V|pos_unknown	needs_review
+taktak	taktak	tak~tak		great~REDUP	tak~tak		UNK		high	01004024	314	pos_unknown	needs_review
+Babylon	babylon	Babylon	Babylon'	BABYLON	Babylon	babylon	PROP	UNK	high	12017024	310	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Solomon	solomon	Solomon	Solomon'	SOLOMON	Solomon	solomon	PROP	UNK	high	10005014	302	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+lei	lei	lei		buy	lei		UNK		high	01001009	300	pos_unknown	needs_review
+khuapite	khuapite	khua-pi-te	khuapite'	town-big-PL	khua	khuapite	N	UNK	high	01010012	296	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+sathau	sathau	sa-thau	Sathau	flesh-fat	sa	Sathau	N	PROP	high	01028018	287	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+tanu	tanu	ta-nu	tanu'	child-female	ta	tanu	N		high	01005004	286	multi_segmentation:2|multi_lemma:2	needs_review
+pi	pi	pi	Pi|pi'	grandmother	pi		UNK		high	01006015	281	multi_segmentation:3|pos_unknown	needs_review
+kikhopna	kikhopna	ki-khop-na	Kikhopna	REFL-gather-NMLZ	khop	Kikhopna	N	PROP	high	02012016	279	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Abraham	abraham	Abraham	Abraham'	ABRAHAM	Abraham	abraham	PROP	UNK	high	01017005	276	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+pawi	pawi	pawi	Pawi	Pawi	pawi	Pawi	N	PROP	high	01001014	274	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+nungzuite	nungzuite	nungzui-te	nungzui-te'	disciple-PL	nungzui		UNK		high	01024054	273	multi_segmentation:2|pos_unknown	needs_review
+No	no	No	no|no'	NO	No	no	PROP	N	high	01019008	272	multi_segmentation:3|multi_lemma:2|multi_pos:N|PROP	needs_review
+Hihte	hihte	hih-te	Hihte	this-PL	hi	Hihte	V	PROP	high	01002004	271	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+Josef	josef	Josef	Josef'	JOSEF	Josef	josef	PROP	UNK	high	01030024	270	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+susia	susia	su-sia	Susia	CAUS-bad	su	Susia	N	PROP	high	01006013	269	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Faro	faro	Faro'	Faro	FARO.POSS	faro	Faro	UNK	PROP	high	01012015	269	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+tak	tak	tak		truly	tak		UNK		high	01009007	259	pos_unknown	needs_review
+kumpite	kumpite	kumpi-te	Kumpite|Kumpite'|kumpite'	king-PL	kumpi	Kumpite|kumpite	N	PROP|UNK	high	01014002	257	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+Paul	paul	Paul	Paul'	PAUL	Paul	paul	PROP	UNK	high	44013013	255	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+nihte	nihte	nih-te	nihte'	two-PL	nih	nihte	FUNC	UNK	high	01009022	251	multi_segmentation:2|multi_lemma:2|multi_pos:FUNC|UNK	needs_review
+leitungah	leitungah	leitung-ah	Leitungah	earth-LOC	leitung	Leitungah	N	PROP	high	01001011	249	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+pau	pau	pau	Pau	speak	pau	Pau	V	PROP	high	01010005	248	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+vantungmi	vantungmi	van-tung-mi	vantungmi'	angel	van	vantungmi	N		high	01016007	248	multi_segmentation:2|multi_lemma:2	needs_review
+mihonte	mihonte	mihon-te	Mihonte'|mihonte'	poor.person-PL	mihon	mihonte	N	UNK	high	02007004	248	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+milim	milim	mi-lim	milim'	idol	mi	milim	N		high	02020004	248	multi_segmentation:2|multi_lemma:2	needs_review
+ko	ko	ko	Ko|ko'	long	ko	Ko	UNK	PROP	high	01019005	242	multi_segmentation:3|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+galkapte	galkapte	gal-kap-te	Galkapte'|galkapte'	war-throw-PL	gal	galkapte	N	UNK	high	01014003	241	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+migilote	migilote	migilo-te	Migilote|Migilote'|migilote'	enemy-PL	migilo	Migilote|migilote	N	PROP|UNK	high	01018023	241	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+lel	lel	lel		desperate	lel		UNK		high	01018027	236	pos_unknown	needs_review
+mihingte	mihingte	mi-hing-te	Mihingte|Mihingte'|mihingte'	person-kind-PL	mi	Mihingte|mihingte	N	PROP|UNK	high	01006003	231	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+siampipa	siampipa	siam-pi-pa	Siampipa'|siampipa'	priest	siam	siampipa	V	N	high	01041045	231	multi_segmentation:3|multi_lemma:2|multi_pos:N|V	needs_review
+lote	lote	lo-te	lote'	NEG-PL	lo	lote	FUNC	N	high	01027028	230	multi_segmentation:2|multi_lemma:2|multi_pos:FUNC|N	needs_review
+suanlekhakte	suanlekhakte	suanlekhak-te	suanlekhakte'	genealogy-PL	suanlekhak	suanlekhakte	N	UNK	high	01003015	223	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+Joshua	joshua	Joshua	Joshua'	JOSHUA	Joshua	joshua	PROP	UNK	high	02017009	223	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+midangte	midangte	midang-te	Midangte'|midangte'	other.person-PL	midang	midangte	N	UNK	high	01009006	222	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+kamsangte	kamsangte	kamsang-te	Kamsangte|Kamsangte'|kamsangte'	prophet-PL	kamsang	Kamsangte|kamsangte	N	PROP|UNK	high	04011025	215	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+Peter	peter	Peter	Peter'	PETER	Peter	peter	PROP	UNK	high	40004018	215	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Jerusalem-ah	jerusalem-ah	jerusalem-ah		JERUSALEM-LOC	jerusalem		UNK		high	06015063	210	pos_unknown	needs_review
+innkuan	innkuan	inn-kuan	innkuan'	house-family	inn	innkuan	N		high	01008019	208	multi_segmentation:2|multi_lemma:2	needs_review
+numeite	numeite	numei-te	Numeite|Numeite'|numeite'	woman-PL	numei	Numeite|numeite	N	PROP|UNK	high	01014016	207	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+Singkuang	singkuang	sing-kuang	Singkuang|sing-kuang'	wood-box	sing	Singkuang	N	PROP	high	02016034	205	multi_segmentation:3|multi_lemma:2|multi_pos:N|PROP	needs_review
+thugente	thugente	thu-gen-te	thugente'	word-tell-PL	thu	thugente	N	UNK	high	01034018	197	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+Moab	moab	Moab	Moab'	MOAB	Moab	moab	PROP	UNK	high	01019037	193	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+tum	tum	tum		all	tum		UNK		high	01007013	189	pos_unknown	needs_review
+tuan	tuan	tuan		ride	tuan		UNK		high	02016018	181	pos_unknown	needs_review
+suah	suah	suah	Suah	birth	suah	Suah	N	PROP	high	01005004	174	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+het	het	het		trouble	het		UNK		high	01020011	174	pos_unknown	needs_review
+gamte	gamte	gam-te	gamte'	land-PL	gam	gamte	N	UNK	high	03025034	174	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+behte	behte	beh-te	behte'	tribe-PL	beh	behte	N	UNK	high	01016012	170	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+Johan	johan	Johan	Johan'	JOHAN	Johan	johan	PROP	UNK	high	40003001	169	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+ganhingte	ganhingte	ganhing-te	ganhingte'	animal-PL	ganhing	ganhingte	N	UNK	high	01001024	165	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+kisai-in	kisai-in	ki-sai-in		REFL-concern-CVB	sai		UNK		high	01012020	165	pos_unknown	needs_review
+upate	upate	upa-te	Upate|upate'	elder-PL	upa	Upate|upate	N	PROP|UNK	high	01050007	165	multi_segmentation:3|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+gei-ah	gei-ah	gei-ah		edge-LOC	gei		UNK		high	01013018	164	pos_unknown	needs_review
+do	do	do		rise	do		UNK		high	01014015	164	pos_unknown	needs_review
+kongpi	kongpi	kong-pi	Kongpi	road-big	pi	Kongpi	FUNC	PROP	high	01028017	163	multi_segmentation:2|multi_lemma:2|multi_pos:FUNC|PROP	needs_review
+sun	sun	sun	Sun|sun'	basket	sun	Sun	UNK	PROP	high	01001016	162	multi_segmentation:3|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+ukte	ukte	uk-te	ukte'	rule-PL	uk	ukte	V	UNK	high	02001011	161	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+gah	gah	gah		branch	gah		UNK		high	01001011	159	pos_unknown	needs_review
+semsem	semsem	sem~sem		serve~REDUP	sem~sem		UNK		high	01007017	159	pos_unknown	needs_review
+pah	pah	pah		do.so	pah		UNK		high	01001003	158	pos_unknown	needs_review
+tam	tam	tam		many	tam		UNK		high	01006001	157	pos_unknown	needs_review
+Kanaan	kanaan	Kanaan'	Kanaan	KANAAN.POSS	kanaan	Kanaan	UNK	PROP	high	01009018	154	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+paito	paito	pai-to	Paito	go-UP	pai	Paito	V	PROP	high	01013001	154	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+Benjamin	benjamin	Benjamin	Benjamin'	BENJAMIN	Benjamin	benjamin	PROP	UNK	high	01035018	153	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+gamlakah	gamlakah	gam-lak-ah	Gamlakah	land-midst-LOC	gam	Gamlakah	N	PROP	high	01004008	152	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+natna	natna	nat-na	Natna	ill-NMLZ	nat	Natna	N	PROP	high	02005003	152	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+kulh	kulh	kulh		steal	kulh		UNK		high	01049022	150	pos_unknown	needs_review
+san	san	san		flee	san		UNK		high	01025030	149	pos_unknown	needs_review
+Joab	joab	Joab'	Joab	JOAB.POSS	joab	Joab	UNK	PROP	high	09026006	148	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+Nitak	nitak	ni-tak	Nitak	day-exact	ni	Nitak	N	PROP	high	01001005	146	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Ammon	ammon	Ammon	Ammon'	AMMON	Ammon	ammon	PROP	UNK	high	01019038	146	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+tuni-in	tuni-in	tu-ni-in	Tuni-in	now-day-ERG	tu	Tuni-In	N	PROP	high	01004014	145	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Manasseh	manasseh	Manasseh	Manasseh'	MANASSEH	Manasseh	manasseh	PROP	UNK	high	01041051	145	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+ma-in	ma-in	ma-in		self-ERG	ma		UNK		high	01002002	144	pos_unknown	needs_review
+Samuel	samuel	Samuel	Samuel'	SAMUEL	Samuel	samuel	PROP	UNK	high	09001020	141	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+liante	liante	lian-te	liante'	big-PL	lian	liante	N	UNK	high	01007020	140	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+Efraim	efraim	Efraim	Efraim'	EFRAIM	Efraim	efraim	PROP	UNK	high	01041052	137	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+sabbath	sabbath	sabbath	Sabbath	SABBATH	sabbath	Sabbath	UNK	PROP	high	02016023	137	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+vekpi-in	vekpi-in	vek-pi-in		all-big-ERG	vek		UNK		high	01046015	136	pos_unknown	needs_review
+adang	adang	a-dang	Adang	3SG-other	dang	Adang	N	PROP	high	01004019	135	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+naupang	naupang	nau-pang	Naupang'|naupang'	child-small	nau	naupang	N		high	01004025	135	multi_segmentation:3|multi_lemma:2	needs_review
+Isaac	isaac	Isaac	Isaac'	ISAAC	Isaac	isaac	PROP	UNK	high	01017019	135	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+tuu	tuu	tuu		climb	tuu		UNK		high	01004002	132	pos_unknown	needs_review
+pawlkhatte	pawlkhatte	pawl-khat-te	Pawlkhatte|pawl-khat-te'	some-one-PL	pawl	Pawlkhatte	N	PROP	high	09008012	130	multi_segmentation:3|multi_lemma:2|multi_pos:N|PROP	needs_review
+shekel	shekel	shekel		SHEKEL	shekel		UNK		high	01023015	129	pos_unknown	needs_review
+tanute	tanute	tanu-te	tanute'	daughter-PL	tanu	tanute	N	UNK	high	01006001	128	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+milimte	milimte	mi-lim-te	Milimte'|milimte'	idol-PL	mi	milimte	N	UNK	high	02034013	128	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+Hezekiah	hezekiah	Hezekiah	Hezekiah'	HEZEKIAH	Hezekiah	hezekiah	PROP	UNK	high	12016020	127	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+kuan	kuan	kuan		family	kuan		UNK		high	01014024	126	pos_unknown	needs_review
+lawmte	lawmte	lawm-te	Lawmte|Lawmte'|lawmte'	friend-PL	lawm	Lawmte|lawmte	N	PROP|UNK	high	05020008	125	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+humpinelkai	humpinelkai	hum-pinelkai	Humpinelkai'	cover-ornament	hum	humpinelkai	V	N	high	01049009	123	multi_segmentation:2|multi_lemma:2|multi_pos:N|V	needs_review
+Thutang	thutang	thu-tang	Thutang	word-story	thu	Thutang	N	PROP	high	02023002	123	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+kung	kung	kung	Kung	trunk	kung		UNK		high	01001011	121	multi_segmentation:2|pos_unknown	needs_review
+kihei	kihei	ki-hei		REFL-path	hei		UNK		high	01014007	121	pos_unknown	needs_review
+kihta	kihta	kih-ta	Kihta	abhor-PFV	kih	Kihta	N	PROP	high	02001012	121	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+hotkhiatna	hotkhiatna	hot-khiat-na	Hotkhiatna	save-away-NMLZ	hot	Hotkhiatna	V	PROP	high	02014013	121	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+Jonathan	jonathan	Jonathan	Jonathan'	JONATHAN	Jonathan	jonathan	PROP	UNK	high	07018030	120	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Syria	syria	Syria	Syria'	SYRIA	Syria	syria	PROP	UNK	high	07010006	119	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+lah	lah	lah		lamp	lah		UNK		high	01012001	118	pos_unknown	needs_review
+tawm	tawm	tawm		produce	tawm		UNK		high	01013009	118	pos_unknown	needs_review
+hu	hu	hu		breath	hu		UNK		high	01001030	117	pos_unknown	needs_review
+hangun	hangun	hangun		HANGUN	hangun		UNK		high	01019011	117	pos_unknown	needs_review
+vantungah	vantungah	vantung-ah	Vantungah	heaven-LOC	vantung	Vantungah	N	PROP	high	01001014	116	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+lungkhamna	lungkhamna	lung-kham-na	Lungkhamna	heart-anxiety-NMLZ	lung	Lungkhamna	V	PROP	high	01042021	116	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+kawikawi	kawikawi	kawi~kawi		crooked~REDUP	kawi~kawi		UNK		high	01008007	111	pos_unknown	needs_review
+lui	lui	lui		river	lui		UNK		high	01018008	111	pos_unknown	needs_review
+lua	lua	lua		exceed	lua		UNK		high	01018014	111	pos_unknown	needs_review
+kisai	kisai	ki-sai		REFL-concern	sai		UNK		high	01021025	111	pos_unknown	needs_review
+Gilead	gilead	Gilead	Gilead'	GILEAD	Gilead	gilead	PROP	UNK	high	01031021	111	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+-	-	-		-			UNK		high	01008017	110	pos_unknown	needs_review
+Esau	esau	Esau	Esau'	ESAU	Esau	esau	PROP	UNK	high	01025025	110	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+zat	zat	zat		use	zat		UNK		high	01028018	110	pos_unknown	needs_review
+tuute	tuute	tuu-te	tuute'	grandchild-PL	tuu	tuute	UNK		high	01029003	110	multi_segmentation:2|multi_lemma:2|pos_unknown	needs_review
+“Israel	“israel	Israel	Israel'	ISRAEL	israel		UNK		high	02003013	110	multi_segmentation:2|pos_unknown	needs_review
+kuam	kuam	kuam	Kuam	plain	kuam	Kuam	UNK	PROP	high	01013010	108	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+Absalom	absalom	Absalom	Absalom'	ABSALOM	Absalom	absalom	PROP	UNK	high	10003003	108	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Ling	ling	ling		pile	ling		UNK		high	01003018	107	pos_unknown	needs_review
+“Mihing	“mihing	Mihing'	mi-hing	human.POSS	mihing	mi	N		high	01008021	107	multi_segmentation:2|multi_lemma:2	needs_review
+gei-a	gei-a	gei-a		edge-LOC	gei		UNK		high	01010005	107	pos_unknown	needs_review
+tampite	tampite	tam-pi-te	tam-pi-te'	many-big-PL	tam		UNK		high	01050020	107	multi_segmentation:2|pos_unknown	needs_review
+gawp	gawp	gawp		all	gawp		UNK		high	01011004	106	pos_unknown	needs_review
+khawl	khawl	khawl		rest	khawl		UNK		high	01008009	104	pos_unknown	needs_review
+dingte	dingte	ding-te	dingte'	stand-PL	ding	dingte	V	UNK	high	01014024	104	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+leng	leng	leng		line	leng		UNK		high	02003013	104	pos_unknown	needs_review
+Jeroboam	jeroboam	Jeroboam	Jeroboam'	JEROBOAM	Jeroboam	jeroboam	PROP	UNK	high	11011026	104	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Filistia-te	filistia-te	filistia-te	Filistia-te|Filistia-te'	FILISTIA-PL	filistia	Filistia-Te	UNK	PROP	high	09005002	103	multi_segmentation:3|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+tho	tho	tho	Tho	rise	tho	Tho	UNK	PROP	high	01019002	102	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+Zion	zion	Zion	Zion'	ZION	Zion	zion	PROP	UNK	high	10005007	100	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+vui	vui	vui		dust	vui		UNK		high	01023002	99	pos_unknown	needs_review
+phatna	phatna	phat-na	Phatna	praise-NMLZ	phat	Phatna	V	PROP	high	02015001	98	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+Samaria	samaria	Samaria	Samaria'	SAMARIA	Samaria	samaria	PROP	UNK	high	11013032	97	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+tuite	tuite	tui-te	tuite'	water-PL	tui	tuite	N	UNK	high	01001007	96	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+kipte	kipte	kip-te		edge-PL	kip		UNK		high	02015026	96	pos_unknown	needs_review
+Elijah	elijah	Elijah	Elijah'	ELIJAH	Elijah	elijah	PROP	UNK	high	11017001	96	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+makaite	makaite	makai-te	makaite'	leader-PL	makai	makaite	N	UNK	high	02015015	95	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+mel	mel	mel		void	mel		UNK		high	01012014	94	pos_unknown	needs_review
+Ahab	ahab	Ahab	Ahab'	AHAB	Ahab	ahab	PROP	UNK	high	11016028	93	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+mong	mong	mong	Mong	hem	mong		UNK		high	02025018	92	multi_segmentation:2|pos_unknown	needs_review
+khatvei	khatvei	khat-vei	Khatvei	one-time	khat	Khatvei	N	PROP	high	01018032	91	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+mawk	mawk	mawk		perhaps	mawk		UNK		high	01008021	90	pos_unknown	needs_review
+siate	siate	sia-te	siate'	evil-PL	sia	siate	N	UNK	high	05007015	89	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+khuasung	khuasung	khua-sung	Khuasung	town-inside	khua	Khuasung	N	PROP	high	05012012	89	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Amor	amor	Amor	Amor'	AMOR	Amor	amor	PROP	UNK	high	01010016	88	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Reuben	reuben	Reuben	Reuben'	REUBEN	Reuben	reuben	PROP	UNK	high	01029032	87	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+mihaite	mihaite	mihai-te	Mihaite|Mihaite'|mihaite'	wise-PL	mihai	Mihaite|mihaite	N	PROP|UNK	high	18011012	87	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+dan	dan	dan	Dan|Dan'	manner	dan	Dan	UNK	PROP	high	01006015	86	multi_segmentation:3|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+khau	khau	khau		rope	khau		UNK		high	01014023	86	pos_unknown	needs_review
+peuh	peuh	peuh	peuh'	every	peuh		UNK		high	01017018	86	multi_segmentation:2|pos_unknown	needs_review
+mawhsak	mawhsak	mawhsak		adversary	mawhsak		UNK		high	02022009	86	pos_unknown	needs_review
+mipilte	mipilte	mipil-te	Mipilte'|mipilte'	wise.person-PL	mipil	mipilte	N	UNK	high	02007011	85	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+Jehoshafat	jehoshafat	Jehoshafat	Jehoshafat'	JEHOSHAFAT	Jehoshafat	jehoshafat	PROP	UNK	high	10008016	85	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+neite	neite	nei-te	neite'	have-PL	nei	neite	V	UNK	high	01001030	84	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+leilakah	leilakah	leilak-ah		ground-LOC	leilak		UNK		high	01006020	84	pos_unknown	needs_review
+Ai	ai	Ai	ai	AI	Ai	ai	PROP	N	high	01012008	84	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Nebukhadnezzar	nebukhadnezzar	Nebukhadnezzar	Nebukhadnezzar'	NEBUKHADNEZZAR	Nebukhadnezzar	nebukhadnezzar	PROP	UNK	high	12024001	84	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+khuadak	khuadak	khua-dak	Khuadak	town-near	khua	Khuadak	N	PROP	high	01008013	82	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+zia	zia	zia	Zia	manner	zia	Zia	UNK	PROP	high	01024049	82	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+nopsakna	nopsakna	nop-sak-na	Nopsakna	want-CAUS-NMLZ	nop	Nopsakna	V	PROP	high	03026006	82	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+salin	salin	sa-lin	Salin	meat-hope	sa	Salin	N	PROP	high	01014014	81	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Gad	gad	Gad	Gad'	GAD	Gad	gad	PROP	UNK	high	01030011	81	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+sakolte	sakolte	sakol-te	Sakolte|sakolte'	donkey-PL	sakol	Sakolte|sakolte	N	PROP|UNK	high	01047017	81	multi_segmentation:3|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+sanggamnu	sanggamnu	sanggam-nu	Sanggamnu|sanggam-nu'	sibling-female	sanggam	Sanggamnu	N	PROP	high	01004022	80	multi_segmentation:3|multi_lemma:2|multi_pos:N|PROP	needs_review
+khan	khan	khan		generation	khan		UNK		high	01005008	80	pos_unknown	needs_review
+paktat	paktat	paktat		fornication	paktat		UNK		high	01034031	79	pos_unknown	needs_review
+misite	misite	misite'	Misite'|misi-te	dead-PL.POSS	misite	misi	UNK	N	high	03021003	79	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK|pos_unknown	needs_review
+kipat	kipat	ki-pat		beginning	pat		UNK		high	01001001	78	pos_unknown	needs_review
+bu	bu	bu		heap	bu		UNK		high	01003008	78	pos_unknown	needs_review
+pak	pak	pak		divide	pak		UNK		high	01019009	78	pos_unknown	needs_review
+gamtatnate	gamtatnate	gamtatna-te	gamtatnate'	kingdom-PL	gamtatna	gamtatnate	N	UNK	high	01037002	78	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+puk	puk	puk		attack	puk		UNK		high	01050018	78	pos_unknown	needs_review
+naungek	naungek	nau-ngek	Naungek|nau-ngek'	child-small	nau	Naungek	V	PROP	high	02001016	78	multi_segmentation:3|multi_lemma:2|multi_pos:PROP|V	needs_review
+dawi	dawi	dawi		fear	dawi		UNK		high	14011013	78	pos_unknown	needs_review
+ma	ma	ma		alone	ma		UNK		high	01013010	77	pos_unknown	needs_review
+lehdo	lehdo	lehdo		rebellious	lehdo		UNK		high	01014004	77	pos_unknown	needs_review
+vengte	vengte	veng-te	vengte'	neighborhood-PL	veng	vengte	V	UNK	high	02003022	77	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+khuam	khuam	khuam		darkness	khuam		UNK		high	01019026	76	pos_unknown	needs_review
+pasalte	pasalte	pasal-te	pasalte'	husband-PL	pasal	pasalte	N	UNK	high	01020014	76	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+taang	taang	taang		beautiful	taang		UNK		high	02015016	76	pos_unknown	needs_review
+nungzui	nungzui	nungzui		disciple	nungzui		UNK		high	05011028	76	pos_unknown	needs_review
+Eleazar	eleazar	Eleazar	Eleazar'	ELEAZAR	Eleazar	eleazar	PROP	UNK	high	02006023	75	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Simon	simon	Simon	Simon'	SIMON	Simon	simon	PROP	UNK	high	40004018	75	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+vasate	vasate	va-sa-te	vasate'	go.and-PAST-PL	va	vasate	V	UNK	high	01001020	74	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+gamh	gamh	gamh		land.II	gamh		UNK		high	01015003	74	pos_unknown	needs_review
+sawh	sawh	sawh		correct	sawh		UNK		high	01019003	74	pos_unknown	needs_review
+kamtaite	kamtaite	kamtai-te	Kamtaite|kamtaite'	messenger-PL	kamtai	Kamtaite|kamtaite	N	PROP|UNK	high	01032003	74	multi_segmentation:3|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+sal	sal	sal		slave	sal		UNK		high	02006006	74	pos_unknown	needs_review
+omte	omte	om-te	omte'	exist-PL	om	omte	V	UNK	high	01002001	73	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+ging	ging	ging		sound	ging		UNK		high	01003008	73	pos_unknown	needs_review
+phetin	phetin	phet-in		twin-ERG	phet		UNK		high	01027030	73	pos_unknown	needs_review
+zin	zin	zin	Zin	travel	zin	Zin	UNK	PROP	high	01041045	73	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+kihel	kihel	ki-hel		REFL-hell	hel		UNK		high	01049006	73	pos_unknown	needs_review
+buppi	buppi	bup-pi	bup-pi'	all-big	bup		UNK		high	01009019	72	multi_segmentation:2|pos_unknown	needs_review
+gei	gei	gei		edge	gei		UNK		high	01016007	72	pos_unknown	needs_review
+kangtum	kangtum	kang-tum		burn-all	kang		UNK		high	01019015	72	pos_unknown	needs_review
+dum	dum	dum		siege.mound	dum		UNK		high	01037020	72	pos_unknown	needs_review
+nopna	nopna	nop-na	Nopna	want-NMLZ	nop	Nopna	V	PROP	high	02008015	72	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|V	needs_review
+kan	kan	kan	kan'	stay	kan		UNK		high	02018015	72	multi_segmentation:2|pos_unknown	needs_review
+vai	vai	vai		foreigner	vai		UNK		high	02025010	72	pos_unknown	needs_review
+sawltakte	sawltakte	sawl-tak-te	sawltakte'	send-exact-PL	sawl	sawltakte	V	UNK	high	06007022	72	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+kungte	kungte	kung-te	kungte'	trunk-PL	kung	kungte	UNK		high	01001011	71	multi_segmentation:2|multi_lemma:2|pos_unknown	needs_review
+kivui	kivui	ki-vui		bury	vui		UNK		high	01015015	71	pos_unknown	needs_review
+tuuhonte	tuuhonte	tuuhon-te	Tuuhonte'|tuuhonte'	poor.person-PL	tuuhon	tuuhonte	N	UNK	high	01029002	71	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+koi-ah	koi-ah	koi-ah	Koi-ah	where-LOC	koi	Koi-Ah	N	PROP	high	01004009	70	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+vekpi-un	vekpi-un	vek-pi-un		all-big-PL.IMP	vek		UNK		high	05001022	70	pos_unknown	needs_review
+Zedekiah	zedekiah	Zedekiah	Zedekiah'	ZEDEKIAH	Zedekiah	zedekiah	PROP	UNK	high	11022011	70	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+zel	zel	zel		scatter	zel		UNK		high	01013007	69	pos_unknown	needs_review
+Job	job	Job	Job'	JOB	Job	job	PROP	UNK	high	01046013	69	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Balaam	balaam	Balaam	Balaam'	BALAAM	Balaam	balaam	PROP	UNK	high	04022005	69	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Daniel	daniel	Daniel	Daniel'	DANIEL	Daniel	daniel	PROP	UNK	high	13003001	69	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+mihonpite	mihonpite	mihonpi-te	Mihonpite'|mihonpite'	noble-PL	mihonpi	mihonpite	N	UNK	high	02012041	68	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+Jehu	jehu	Jehu	Jehu'	JEHU	Jehu	jehu	PROP	UNK	high	11016001	68	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Pilat	pilat	Pilat	Pilat'	PILAT	Pilat	pilat	PROP	UNK	high	40027002	68	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+kihhuai	kihhuai	ki-hhuai		REFL-abominate	hhuai		UNK		high	01043032	67	pos_unknown	needs_review
+Puah	puah	Puah	Puah'|puah	PUAH	Puah	pua	PROP	V	high	02001015	67	multi_segmentation:3|multi_lemma:2|multi_pos:PROP|V	needs_review
+gilo	gilo	gilo	Gilo|Gilo'|gilo'	enemy	gilo	Gilo	UNK	PROP	high	02023007	67	multi_segmentation:4|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+cil	cil	cil		beginning	cil		UNK		high	03015008	67	pos_unknown	needs_review
+mualtungah	mualtungah	mual-tung-ah	Mualtungah	mountain-top-LOC	mual	Mualtungah	N	PROP	high	01008004	66	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+kang	kang	kang		suffer	kang		UNK		high	01030035	66	pos_unknown	needs_review
+kim	kim	kim		nation	kim		UNK		high	06021045	66	pos_unknown	needs_review
+sagihte	sagihte	sagih-te	sagihte'	seven-PL	sagih	sagihte	N	UNK	high	01021029	65	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+dah	dah	dah	Dah	put	dah		UNK		high	01027041	65	multi_segmentation:2|pos_unknown	needs_review
+innkuante	innkuante	innkuante'	inn-kuan-te	household-PL.POSS	innkuante	inn	UNK	N	high	01033019	65	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK|pos_unknown	needs_review
+Abimelek	abimelek	Abimelek	Abimelek'	ABIMELEK	Abimelek	abimelek	PROP	UNK	high	01020002	64	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Mary	mary	Mary'	Mary	MARY.POSS	mary	Mary	UNK	PROP	high	40001016	64	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+tunpih	tunpih	tun-pih		arrive-APPL	tun		UNK		high	01008011	63	pos_unknown	needs_review
+Tangvalte	tangvalte	Tangvalte'	tangval-te|tangvalte'	youth-PL.POSS	tangvalte	tangval	UNK	V	high	01014024	63	multi_segmentation:3|multi_lemma:2|multi_pos:UNK|V|pos_unknown	needs_review
+langpangin	langpangin	langpang-in		against-ERG	langpang		UNK		high	01016012	63	pos_unknown	needs_review
+nai-ah	nai-ah	nai-ah		near-LOC	nai		UNK		high	01027021	63	pos_unknown	needs_review
+lohin	lohin	loh-in		NEG-ERG	loh		UNK		high	01034025	63	pos_unknown	needs_review
+Elisha	elisha	Elisha	Elisha'	ELISHA	Elisha	elisha	PROP	UNK	high	11019016	63	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+kituakin	kituakin	kituak-in		find-ERG	kituak		UNK		high	01033014	62	pos_unknown	needs_review
+Abner	abner	Abner	Abner'	ABNER	Abner	abner	PROP	UNK	high	09014050	62	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Mordekai	mordekai	Mordekai	Mordekai'	MORDEKAI	Mordekai	mordekai	PROP	UNK	high	15002002	62	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+launa	launa	lau-na	Launa	fear-NMLZ	lau	Launa	N	PROP	high	01031031	61	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+haksatna	haksatna	haksat-na	Haksatna	difficult-NMLZ	haksat	Haksatna	N	PROP	high	01034030	61	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+lite	lite	li-te	lite'	four-PL	li	lite	FUNC	UNK	high	02026032	61	multi_segmentation:2|multi_lemma:2|multi_pos:FUNC|UNK	needs_review
+Kulhkongpi	kulhkongpi	kulh-kong-pi		gate-big	kulh		UNK		high	06002005	61	pos_unknown	needs_review
+Isaiah	isaiah	Isaiah	Isaiah'	ISAIAH	Isaiah	isaiah	PROP	UNK	high	12019002	61	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Noah	noah	Noah	Noah'	NOAH	Noah	noah	PROP	UNK	high	01005029	60	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Abram	abram	Abram	Abram'	ABRAM	Abram	abram	PROP	UNK	high	01011026	60	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+teltakin	teltakin	tel-takin		each-really	tel		UNK		high	01026027	60	pos_unknown	needs_review
+Asa	asa	Asa	Asa'	ASA	Asa	asa	PROP	UNK	high	11015008	60	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+suk	suk	suk		collapse	suk		UNK		high	01002007	59	pos_unknown	needs_review
+kidawm	kidawm	ki-dawm	Kidawm	REFL-god	dawm	Kidawm	N	PROP	high	01031024	59	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+Zekhariah	zekhariah	Zekhariah	Zekhariah'	ZEKHARIAH	Zekhariah	zekhariah	PROP	UNK	high	12014029	59	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Herod	herod	Herod	Herod'	HEROD	Herod	herod	PROP	UNK	high	40002001	59	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Kherub-te	kherub-te	kherub-te	Kherub-te'|kherub-te'	KHERUB-PL	kherub		UNK		high	01003024	58	multi_segmentation:3|pos_unknown	needs_review
+neute	neute	neu-te	neute'	small-PL	neu	neute	N	UNK	high	01019011	58	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+bawngtalte	bawngtalte	bawng-tal-te	Bawngtalte|Bawngtalte'|bawngtalte'	cow-calf-PL	bawng	Bawngtalte|bawngtalte	N	PROP|UNK	high	01020014	58	multi_segmentation:4|multi_lemma:3|multi_pos:N|PROP|UNK	needs_review
+guak	guak	guak		back	guak		UNK		high	01002018	57	pos_unknown	needs_review
+Shekhem	shekhem	Shekhem	Shekhem'	SHEKHEM	Shekhem	shekhem	PROP	UNK	high	01012006	57	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+kihei-in	kihei-in	ki-hei-in		REFL-angry-CVB	hei		UNK		high	01018022	57	pos_unknown	needs_review
+lawn	lawn	lawn	lawn'	throw	lawn		UNK		high	01021015	57	multi_segmentation:2|pos_unknown	needs_review
+Laban	laban	Laban	Laban'	LABAN	Laban	laban	PROP	UNK	high	01024029	57	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+bekbek	bekbek	bek~bek		alone~REDUP	bek~bek		UNK		high	01047009	57	pos_unknown	needs_review
+Jerusalem-a	jerusalem-a	jerusalem-a	Jerusalem-a	JERUSALEM-LOC	jerusalem	Jerusalem-A	UNK	PROP	high	06015063	57	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+Jeremiah	jeremiah	Jeremiah'	Jeremiah	JEREMIAH.POSS	jeremiah	Jeremiah	UNK	PROP	high	12023031	57	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+ing	ing	ing		be.able	ing		UNK		high	01022007	56	pos_unknown	needs_review
+Josiah	josiah	Josiah	Josiah'	JOSIAH	Josiah	josiah	PROP	UNK	high	11013002	56	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+gil	gil	gil	Gil	stomach	gil		UNK		high	01025023	55	multi_segmentation:2|pos_unknown	needs_review
+naupangte	naupangte	nau-pang-te	Naupangte'|naupangte'	child-small-PL	nau	naupangte	N	UNK	high	01025027	55	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+lutangte	lutangte	lutang-te	lutangte'	chief-PL	lutang	lutangte	N	UNK	high	01036019	55	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+Satan	satan	Satan	Satan'	SATAN	Satan	satan	PROP	UNK	high	13021001	55	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+ei	ei	ei	ei'	1PL.EXCL	ei		UNK		high	01011004	54	multi_segmentation:2|pos_unknown	needs_review
+Ishmael	ishmael	Ishmael	Ishmael'	ISHMAEL	Ishmael	ishmael	PROP	UNK	high	01016011	54	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+lau-in	lau-in	lau-in	Lau-in	fear-ERG	lau	Lau-In	N	PROP	high	01032007	54	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	needs_review
+lamdangte	lamdangte	lam-dang-te	lamdangte'	way-other-PL	lam	lamdangte	N	UNK	high	02003020	54	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+ki	ki	ki	Ki|ki'	REFL	ki		UNK		high	01021012	53	multi_segmentation:3|pos_unknown	needs_review
+peek	peek	peek		breadth	peek		UNK		high	02025025	53	pos_unknown	needs_review
+mualte	mualte	mual-te	Mualte'|mualte'	mountain-PL	mual	mualte	N	UNK	high	04023007	53	multi_segmentation:3|multi_lemma:2|multi_pos:N|UNK	needs_review
+Jehoiada	jehoiada	Jehoiada'	Jehoiada	JEHOIADA.POSS	jehoiada	Jehoiada	UNK	PROP	high	10008018	53	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+theite	theite	thei-te	theite'	know.I-PL	thei	theite	V	UNK	high	12021006	53	multi_segmentation:2|multi_lemma:2|multi_pos:UNK|V	needs_review
+Esther	esther	Esther	Esther'	ESTHER	Esther	esther	PROP	UNK	high	17002007	53	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+siangthote	siangthote	siangtho-te	siangthote'	holy-PL	siangtho	siangthote	N	UNK	high	01007008	52	multi_segmentation:2|multi_lemma:2|multi_pos:N|UNK	needs_review
+Damaskas	damaskas	Damaskas	Damaskas'	DAMASKAS	Damaskas	damaskas	PROP	UNK	high	01014015	52	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+phual	phual	phual		field	phual		UNK		high	01025016	52	pos_unknown	needs_review
+kimaisak	kimaisak	ki-maisak		appear	maisak		UNK		high	03004020	52	pos_unknown	needs_review
+Zadok	zadok	Zadok	Zadok'	ZADOK	Zadok	zadok	PROP	UNK	high	10008017	52	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+gengen	gengen	gen~gen		speak~REDUP	gen~gen		UNK		high	05006007	51	pos_unknown	needs_review
+“Kumpipa	“kumpipa	kumpi-pa	Kumpipa'	king-male	kumpi	kumpipa	N		high	07003019	51	multi_segmentation:2|multi_lemma:2	needs_review
+Joash	joash	Joash	Joash'	JOASH	Joash	joash	PROP	UNK	high	07006011	51	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+Rehoboam	rehoboam	Rehoboam	Rehoboam'	REHOBOAM	Rehoboam	rehoboam	PROP	UNK	high	11011043	51	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review
+teek	teek	teek		master	teek		UNK		high	01018011	50	pos_unknown	needs_review
+“Ama	“ama	Ama		AMA	ama		UNK		high	01041038	50	pos_unknown	needs_review
+Jessi	jessi	Jessi'	Jessi	JESSI.POSS	jessi	Jessi	UNK	PROP	high	08004017	50	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK|pos_unknown	needs_review
+Haman	haman	Haman	Haman'	HAMAN	Haman	haman	PROP	UNK	high	17003001	50	multi_segmentation:2|multi_lemma:2|multi_pos:PROP|UNK	needs_review

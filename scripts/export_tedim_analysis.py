@@ -657,14 +657,132 @@ def extract_lemma(surface: str, segmentation: str, gloss: str, pos: str) -> str:
     
     return stem
 
+
+# =============================================================================
+# EXPLICIT POS MAPPINGS - Based on philological analysis (recommendations.tsv)
+# =============================================================================
+
+# High-frequency items that were UNK but have now been analyzed
+EXPLICIT_POS_MAP = {
+    # Temporal conjunctions/connectives
+    'ciangin': 'CONJ',   # "and then" - temporal conjunction
+    'ciang': 'CONJ',     # "then/when" - temporal
+    
+    # Experiential/aspectual particles
+    'ngei': 'FUNC',      # experiential marker "ever/never"
+    
+    # Adjectives/adverbs
+    'kibang': 'ADJ',     # "like/same as"
+    'nai': 'ADV',        # "yet/still/near"
+    'hawm': 'ADV',       # "together"
+    'takin': 'ADV',      # "really/truly"
+    'tak': 'ADV',        # "truly"
+    
+    # Verbs (high-frequency stems that should be V not UNK)
+    'tun': 'V',          # "arrive"
+    'pha': 'V',          # "multiply/branch"
+    'dam': 'V',          # "live/be well"
+    'ging': 'V',         # "believe"
+    'sawl': 'V',         # "send"
+    'suan': 'V',         # "bear/beget"
+    'sak': 'V',          # "cause" (verb and suffix)
+    'khia': 'V',         # "go out"
+    'om': 'V',           # "exist/be"
+    'kal': 'V',          # "go"
+    'mat': 'V',          # "catch"
+    'pian': 'V',         # "be born"
+    'ning': 'V',         # "think"
+    'kem': 'V',          # "keep/guard"
+    'din': 'V',          # "stand"
+    'pai': 'V',          # "go" (motion away)
+    'kulh': 'V',         # "steal"
+    'kici': 'V',         # "called/say.PASS"
+    'pah': 'V',          # "do.so"
+    'tum': 'V',          # "complete/all"
+    'tuu': 'V',          # "climb"
+    'tawm': 'V',         # "produce"
+    'do': 'V',           # "rise"
+    'san': 'V',          # "flee"
+    'tho': 'V',          # "rise"
+    'dah': 'V',          # "put"
+    'tuan': 'V',         # "ride"
+    'het': 'V',          # "trouble"
+    'kang': 'V',         # "suffer"
+    'pat': 'V',          # "stroke"
+    'hu': 'V',           # "help"
+    'puk': 'V',          # "attack"
+    'lel': 'V',          # "desperate/escape"
+    'ling': 'V',         # "pile/heap"
+    'khawl': 'V',        # "rest"
+    
+    # Nouns
+    'tau': 'N',          # "altar/tower" (NOT "signal")
+    'gim': 'N',          # "suffering/toil"
+    'vei': 'N',          # "time/occasion"
+    'tual': 'N',         # "earth/ground"
+    'lung': 'N',         # "heart/stone"
+    'mi': 'N',           # "person"
+    'mite': 'N',         # "people"
+    'nungzui': 'N',      # "disciple"
+    'pi': 'N',           # "grandmother/ancestor"
+    'gei': 'N',          # "edge"
+    'sai': 'N',          # "ashes"
+    'sun': 'N',          # "basket"
+    'hei': 'N',          # "path"
+    'vui': 'N',          # "dust"
+    'gah': 'N',          # "branch"
+    'khuam': 'N',        # "darkness"
+    'kung': 'N',         # "trunk/tree"
+    'lah': 'N',          # "lamp"
+    'lui': 'N',          # "river"
+    'kim': 'N',          # "nation"
+    'khan': 'N',         # "generation"
+    
+    # Pronouns
+    'ama': 'PRON',       # "3SG.POSS - he/she/their"
+    
+    # Determiners/quantifiers/adverbs
+    'ciat': 'DET',       # "each/every"
+    'tam': 'DET',        # "many"
+    'kip': 'ADJ',        # "firm/all"
+    'ma': 'DET',         # "alone/only"
+    'ko': 'ADJ',         # "long"
+    'mawk': 'ADV',       # "perhaps"
+    'gawp': 'DET',       # "all"
+    
+    # Interrogatives
+    'koi': 'INTERROG',   # "where"
+    
+    # Auxiliary/aspectual
+    'dawn': 'AUX',       # "about to" (prospective)
+}
+
+
 def determine_pos(segmentation: str, gloss: str, surface: str) -> str:
     """Determine part of speech from analysis."""
     gloss_upper = gloss.upper()
     seg_lower = segmentation.lower()
+    surface_lower = surface.lower()
     
-    # Proper nouns (all caps gloss)
-    if gloss == surface.upper() and surface[0].isupper():
+    # Proper nouns (all caps gloss that matches surface)
+    # Handle: Israel/ISRAEL, Israel'/ISRAEL.POSS, Israel-te/ISRAEL-TE, "Israel/ISRAEL
+    gloss_base = gloss.split('.')[0] if '.' in gloss else gloss
+    gloss_base = gloss_base.split('-')[0] if '-' in gloss_base else gloss_base
+    surface_clean = surface.strip('"').rstrip("'").split('-')[0]
+    if (gloss_base.upper() == surface_clean.upper() and 
+        gloss_base == gloss_base.upper() and 
+        len(gloss_base) > 1 and
+        gloss_base not in GRAMMATICAL_GLOSSES):
         return 'PROP'
+    
+    # Check explicit POS mappings first (from philological analysis)
+    parts = seg_lower.replace("'", '').split('-')
+    for part in parts:
+        if part in EXPLICIT_POS_MAP:
+            return EXPLICIT_POS_MAP[part]
+    # Also check full surface form
+    if surface_lower in EXPLICIT_POS_MAP:
+        return EXPLICIT_POS_MAP[surface_lower]
     
     # Check for grammatical markers in gloss
     if any(g in gloss_upper for g in ['ERG', 'LOC', 'ABL', 'COM', 'DAT']):
@@ -672,7 +790,6 @@ def determine_pos(segmentation: str, gloss: str, surface: str) -> str:
         pass
     
     # Find stem in segmentation
-    parts = seg_lower.replace("'", '').split('-')
     for part in parts:
         if part in VERB_STEMS or part in VERB_STEM_PAIRS:
             return 'V'
@@ -795,15 +912,29 @@ def _finalize_lemma_gloss(lem: LemmaEntry) -> None:
     Finalize primary gloss using corpus frequency evidence.
     
     Strategy:
-    1. For known high-frequency items, use curated semantic map
-    2. For polysemous items, use frequency-dominant gloss (if >70%)
-    3. Otherwise, mark for review with gloss summary
+    1. For proper nouns, use the name directly
+    2. For known high-frequency items, use curated semantic map
+    3. For polysemous items, use frequency-dominant gloss (if >70%)
+    4. Otherwise, mark for review with gloss summary
     """
     lemma_lower = lem.lemma.lower()
     
     # Build gloss candidates sorted by frequency
     sorted_glosses = sorted(lem.gloss_counts.items(), key=lambda x: -x[1])
     lem.gloss_candidates = [g for g, _ in sorted_glosses[:5]]
+    
+    # Handle proper nouns early
+    if sorted_glosses:
+        top_gloss = sorted_glosses[0][0]
+        # Proper noun: gloss is all caps and matches lemma (case-insensitive)
+        if (top_gloss == top_gloss.upper() and 
+            top_gloss.lower() == lemma_lower and 
+            len(top_gloss) > 1 and
+            top_gloss not in GRAMMATICAL_GLOSSES):
+            lem.pos = 'PROP'
+            lem.primary_gloss = top_gloss.title()  # "Israel" not "ISRAEL"
+            lem.entry_status = 'clean'
+            return
     
     # Check for known high-frequency semantic mappings
     if lemma_lower in HIGH_FREQUENCY_SEMANTIC_MAP:
