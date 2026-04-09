@@ -180,5 +180,45 @@ class TestVerbStemCounting(unittest.TestCase):
         self.assertEqual(counts.get('piang', 0), 1, "piang should count 1x (not 3)")
 
 
+class TestStemConflictPrevention(unittest.TestCase):
+    """Regression tests for stem conflict architecture.
+    
+    These tests ensure that shorter stems in one dictionary don't
+    incorrectly intercept longer stems in another dictionary.
+    See commit fixing 'taan' vs 'taang' conflict.
+    """
+    
+    def test_taang_not_intercepted_by_taan(self):
+        """'taangsak' should parse as taang-sak (beautiful-CAUS), not taan-gsak."""
+        seg, gloss = analyze_word('taangsak')
+        self.assertIn('beautiful', gloss.lower(), f"Expected 'beautiful' in gloss, got {gloss}")
+        self.assertIn('taang', seg, f"Expected 'taang' in segmentation, got {seg}")
+    
+    def test_kap_is_weep_not_fight(self):
+        """'kapin' should be weep-CVB, not fight-CVB."""
+        seg, gloss = analyze_word('kapin')
+        self.assertEqual(gloss, 'weep-CVB', f"Expected weep-CVB, got {gloss}")
+    
+    def test_ngei_is_exp(self):
+        """'ngei' should be EXP (experiential), not 'often'."""
+        seg, gloss = analyze_word('ngei')
+        self.assertEqual(gloss, 'EXP', f"Expected EXP, got {gloss}")
+    
+    def test_galkap_is_soldier(self):
+        """'galkap' should parse as soldier (compound)."""
+        seg, gloss = analyze_word('galkap')
+        self.assertIn('soldier', gloss.lower(), f"Expected 'soldier' in gloss, got {gloss}")
+    
+    def test_khauh_hard_not_intercepted(self):
+        """'khauh' (hard) should parse correctly."""
+        seg, gloss = analyze_word('khauh')
+        self.assertIn('hard', gloss.lower(), f"Expected 'hard' in gloss, got {gloss}")
+    
+    def test_kicing_enough(self):
+        """'kicingin' should parse as kicing-in (enough-CVB)."""
+        seg, gloss = analyze_word('kicingin')
+        self.assertIn('kicing', seg, f"Expected 'kicing' in segmentation, got {seg}")
+
+
 if __name__ == '__main__':
     unittest.main()

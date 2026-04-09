@@ -2228,6 +2228,7 @@ VERB_STEMS = {
     'ning': 'think',         # think/consider
     'kulh': 'steal',         # steal/rob
     'kici': 'call.PASS',     # be called (ki-ci)
+    'kicing': 'enough',      # enough/full/sufficient (64x) - distinct from kici
     'pah': 'do.so',          # do thus
     'tum': 'complete',       # complete/finish (also "all")
     'tuu': 'climb',          # climb/ascend
@@ -2317,6 +2318,7 @@ NOUN_STEMS = {
     'siampi': 'priest',      # 357
     'siampipa': 'high.priest', # 172
     'nasempa': 'servant',
+    'kicial': 'hired',       # 18x - hired servant (kicial nasempa)
     'gal': 'enemy',          # enemy/war (base stem for galte, galkap, galmi, etc.)
     'galkap': 'soldier',     # 233
     'galhiam': 'adversary',  # 50x - man of war / opponent
@@ -3734,7 +3736,7 @@ NOUN_STEMS = {
     'lehdo': 'rebellious',   # rebellious one
     'khuk': 'pool',          # pool/knee
     'hel': 'hell',           # hell/underworld
-    'gamh': 'land',          # land/territory
+    # Note: 'gamh' removed - there is no Form II of 'gam', it was conflicting with gam-hal
     'gilo': 'enemy',         # enemy/foe
     'cik': 'fountain',       # fountain/spring
     'len': 'net',            # net/snare
@@ -7121,7 +7123,7 @@ ATOMIC_GLOSSES = {
     'khop': 'gather',    # kikhop = REFL-gather
     'zui': 'follow',     # nungzui = back-follow = disciple
     'gal': 'enemy',  # galte = enemies
-    'kap': 'fight',# galkap = soldiers
+    # 'kap' removed - conflicts with verb stem 'kap' (weep); use compound for galkap
     'heh': 'anger',# hehpih = grace
     'pih': 'APPL',       # applicative
     'suah': 'birth',     # nisuah = day-birth = birthday
@@ -7309,6 +7311,7 @@ ATOMIC_GLOSSES = {
     'kul': 'tar',          # kultal = tar-coat = pitch
     'mim': 'thread',       # mimkhau = thread-fine
     'khau': 'fine',        # mimkhau = thread-fine
+    'khauh': 'hard',       # lungkhauh = heart-hard = stubborn; khauh pau = speak roughly (37x)
     'bek': 'sleep',        # bekbak = sleep-deep
     'bak': 'deep',         # bekbak = sleep-deep
     'dung': 'length',      # gamdung = land-length
@@ -7378,7 +7381,7 @@ ATOMIC_GLOSSES = {
     'ling': 'awake',       # lingling = watchful
     'luang': 'flow',       # tuiluang = river
     'luat': 'exceed',      # itluat = beloved
-    'ngei': 'often',       # ngei-ngei = continually
+    # 'ngei' removed - conflicts with TAM suffix 'ngei' (EXP); use compound for ngeingei
     'paa': 'father',       # pasal-paa = husband-father
     'pat': 'weave',        # patna = weaving
     'pau': 'speak',        # paupui = counsel
@@ -10353,8 +10356,29 @@ def analyze_word(word: str) -> Tuple[str, str]:
             best_form_ii = (stem, gloss)
             break
     
-    # Choose the longest match (prefer Form II > noun > verb for ties)
-    candidates = [(best_form_ii, 0), (best_noun, 1), (best_verb, 2)]
+    # Find best ATOMIC_GLOSSES stem match
+    # This ensures stems like 'taang' (beautiful) in ATOMIC_GLOSSES
+    # are considered alongside stems in VERB_STEMS/NOUN_STEMS,
+    # preventing conflicts where shorter stems (e.g., 'taan') intercept
+    # longer atomic stems (e.g., 'taang' in 'taangsak')
+    best_atomic = None
+    for stem, gloss in longest_first(ATOMIC_GLOSSES):
+        if remaining_lower.startswith(stem):
+            # For short stems (<=3 chars), verify remainder is parseable
+            if len(stem) <= 3:
+                remainder_after = remaining_lower[len(stem):]
+                if remainder_after and not is_remainder_parseable(remainder_after):
+                    continue  # Skip this short stem, try next
+            best_atomic = (stem, gloss)
+            break
+    
+    # Choose the longest match (prefer Form II > atomic > noun > verb for ties)
+    # Priority order ensures longest match wins; for ties, prefer:
+    # - Form II (inflected verb forms)
+    # - Atomic glosses (bound morphemes that form compounds)
+    # - Noun stems
+    # - Verb stems
+    candidates = [(best_form_ii, 0), (best_atomic, 1), (best_noun, 2), (best_verb, 3)]
     candidates = [(c, p) for c, p in candidates if c is not None]
     if candidates:
         # Sort by length (descending), then priority (ascending)

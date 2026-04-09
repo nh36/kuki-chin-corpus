@@ -5179,6 +5179,7 @@ COMPOUND_WORDS = {
     'tul': ('tul', 'thousand'),                                    # on foot
     'pipi': ('pi~pi', 'cubit~REDUP'),                          # to grind
     'gal': ('gal', 'enemy'),                               # enemy/war (not 'little')
+    'galkap': ('gal-kap', 'soldier'),                        # war-fight = soldier
     'leung': ('le-ung', 'would.God-OPTATIVE'),                 # would God
     'sealt': ('se-alt', 'beast-island'),                       # island beasts
     'kua': ('kua', 'who'),                                     # who
