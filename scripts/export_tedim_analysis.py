@@ -145,7 +145,7 @@ def is_grammatical_gloss(gloss: str) -> bool:
 # Forms that have distinct lexical and grammatical uses
 # Maps form -> {'lexical': {glosses}, 'grammatical': {glosses}}
 MIXED_LEXICAL_GRAMMATICAL = {
-    'hi': {'lexical': {'be', 'this'}, 'grammatical': {'DECL', '3SG', '1PL.INCL'}},
+    'hi': {'lexical': {'be'}, 'grammatical': {'DECL', '3SG', '1PL.INCL', 'this'}},  # 'this' is demonstrative (functional)
     'ding': {'lexical': {'stand'}, 'grammatical': {'IRR', 'PROSP'}},
     'pan': {'lexical': {'board', 'think'}, 'grammatical': {'ABL'}},
     'na': {'lexical': set(), 'grammatical': {'2SG', 'NMLZ'}},
@@ -156,8 +156,8 @@ MIXED_LEXICAL_GRAMMATICAL = {
     'ahi': {'lexical': {'be.3SG'}, 'grammatical': {'DECL'}},
     'ahih': {'lexical': {'be.3SG.REL'}, 'grammatical': {'DECL.REL'}},
     'ciang': {'lexical': set(), 'grammatical': {'then', 'TEMP'}},
-    'tua': {'lexical': {'that'}, 'grammatical': {'DEM'}},
-    'hih': {'lexical': {'this'}, 'grammatical': {'DEM'}},
+    'tua': {'lexical': set(), 'grammatical': {'that', 'DEM'}},  # demonstrative is functional
+    'hih': {'lexical': set(), 'grammatical': {'this', 'DEM'}},  # demonstrative is functional
     'bang': {'lexical': set(), 'grammatical': {'like', 'Q'}},
     'lai': {'lexical': {'middle', 'place'}, 'grammatical': {'still', 'CONT'}},
     'thei': {'lexical': {'fig'}, 'grammatical': {'ABIL', 'POT'}},

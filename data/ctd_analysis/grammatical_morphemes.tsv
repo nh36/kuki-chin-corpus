@@ -1,18 +1,18 @@
 form	gloss	category	subcategory	frequency	environments	example_verses	is_polysemous	review_reasons	status	function_id	clean_environments	lexical_contamination	usage_type	review_priority
 a	3SG	pronominal_prefix		77812	prefix|stem|suffix	01001001|01001001|01001002|01001002|01001002	0	high_freq_contamination	auto	a.3SG.pronominal_prefix	prefix	0.67	lexical_contaminated	high
-in	ERG	case_marker		77553	prefix|stem|suffix	01001001|01001002|01001003|01001004|01001005	1	high_freq_contamination	auto	in.ERG.case_marker	suffix	0.67	lexical_contaminated	high
+in	ERG	case_marker		77557	prefix|stem|suffix	01001001|01001002|01001003|01001004|01001005	1	high_freq_contamination	auto	in.ERG.case_marker	suffix	0.67	lexical_contaminated	high
 hi	DECL	sentence_final		47720	prefix|suffix		1	high_freq_contamination	auto	hi.DECL.sentence_final		1.00	lexical_contaminated	high
+te	PL	plural_marker		28507	prefix|stem|suffix	01001007|01001007|01001009|01001010|01001011	1	high_freq_contamination	auto	te.PL.plural_marker	suffix	0.67	lexical_contaminated	high
 ding	IRR	irrealis_marker		24982	prefix|stem|suffix		1	high_freq_contamination	auto	ding.IRR.irrealis_marker		1.00	lexical_contaminated	high
 ah	LOC	case_marker		24878	prefix|stem|suffix	01001002|01001002|01001006|01001009|01001011	0	high_freq_contamination	auto	ah.LOC.case_marker	suffix	0.67	lexical_contaminated	high
 na	NMLZ	nominalizer		22902	prefix|stem|suffix	01001021|01001024|01001030|01002003|01002007	1	high_freq_contamination	auto	na.NMLZ.nominalizer	suffix	0.67	lexical_contaminated	high
-te	PL	plural_marker		22370	prefix|stem|suffix	01001007|01001007|01001009|01001010|01001011	1	high_freq_contamination	auto	te.PL.plural_marker	suffix	0.67	lexical_contaminated	high
 uh	2/3PL	function_word		22045	prefix|suffix		0	high_freq_contamination	auto	uh.2/3PL.function_word		1.00	lexical_contaminated	high
 na	2SG	pronominal_prefix		18661	prefix	01001002|01001029|01002016|01002016|01002017	1		auto	na.2SG.pronominal_prefix	prefix	0.00	grammatical_only	low
 hong	3→1	object_marker		15590	prefix		1	high_freq_contamination	auto	hong.3→1.object_marker		1.00	lexical_contaminated	high
 ka	1SG	pronominal_prefix		13875	prefix|stem|suffix	01001030|01002006|01002018|01003002|01003010	0	high_freq_contamination	auto	ka.1SG.pronominal_prefix	prefix	0.67	lexical_contaminated	high
 tua	that	function_word		12868	prefix		0	high_freq_contamination	auto	tua.that.function_word		1.00	lexical_contaminated	high
 le	and	particle		11339	prefix|stem		0	high_freq_contamination	auto	le.and.particle		1.00	lexical_contaminated	high
-ki	REFL	inflection		11056	prefix|stem	01001006|01001009|01001009|01002018|01002020	0	high_freq_contamination	auto	ki.REFL.inflection	prefix	0.50	lexical_contaminated	high
+ki	REFL	inflection		11055	prefix|stem	01001006|01001009|01001009|01002018|01002020	0	high_freq_contamination	auto	ki.REFL.inflection	prefix	0.50	lexical_contaminated	high
 lo	NEG	function_word		9223	prefix|stem|suffix	01030042|05032021|05032036|07016014|07016020	0	high_freq_contamination	auto	lo.NEG.function_word	stem	0.67	lexical_contaminated	high
 ahi	be.3SG	copula		8634	prefix		0	high_freq_contamination	auto	ahi.be.3SG.copula		1.00	lexical_contaminated	high
 bang	like	function_word		8358	prefix|stem|suffix	46008009	1	high_freq_contamination	auto	bang.like.function_word	stem	0.67	lexical_contaminated	high
@@ -29,7 +29,7 @@ hiam	Q	sentence_final		5230	prefix		0	high_freq_contamination	auto	hiam.Q.senten
 pan	ABL	case_marker		4944	prefix|suffix	40005019	1	high_freq_contamination	auto	pan.ABL.case_marker	suffix	0.50	lexical_contaminated	high
 kiang	beside	function_word		4819	prefix		0	high_freq_contamination	auto	kiang.beside.function_word		1.00	lexical_contaminated	high
 pen	TOP	particle		4816	prefix|suffix		0	high_freq_contamination	auto	pen.TOP.particle		1.00	lexical_contaminated	high
-in	CVB	case_marker		4217	suffix	01001012|01001012|01001027|01002010|01002016	1		auto	in.CVB.case_marker	suffix	0.00	grammatical_only	low
+in	CVB	case_marker		4213	suffix	01001012|01001012|01001027|01002010|01002016	1		auto	in.CVB.case_marker	suffix	0.00	grammatical_only	low
 ta	child	function_word		3975	prefix|stem|suffix	14006016|14007018|15006009|18005024|20031011	1	high_freq_contamination	auto	ta.child.function_word	stem	0.67	lexical_contaminated	high
 man	reason	function_word		3614	prefix|suffix		0	high_freq_contamination	auto	man.reason.function_word		1.00	lexical_contaminated	high
 hang	because	function_word		3548	prefix		0	high_freq_contamination	auto	hang.because.function_word		1.00	lexical_contaminated	high

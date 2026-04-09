@@ -1,6 +1,6 @@
 # Tedim Chin Bible Analysis Coverage Report
 
-Generated: 2026-04-09T07:57:22.658111
+Generated: 2026-04-09T20:11:14.839903
 
 ## Overall Statistics
 
@@ -22,7 +22,7 @@ Generated: 2026-04-09T07:57:22.658111
 | Category | Count |
 |----------|-------|
 | Distinct wordforms | 22,481 |
-| Lemmas | 7,361 |
+| Lemmas | 7,365 |
 | Lemmas needing review | 512 |
 | Polysemous lemmas | 304 |
 | Grammatical morphemes | 488 |
@@ -34,14 +34,14 @@ Generated: 2026-04-09T07:57:22.658111
 |-----|-------|------------|
 | ADJ | 12,637 | 1.52% |
 | ADV | 6,448 | 0.78% |
-| CONJ | 53,599 | 6.45% |
-| DET | 14,130 | 1.70% |
-| FUNC | 270,189 | 32.51% |
-| N | 218,900 | 26.34% |
+| CONJ | 41,071 | 4.94% |
+| DET | 26,658 | 3.21% |
+| FUNC | 270,193 | 32.51% |
+| N | 221,672 | 26.67% |
 | NUM | 9,354 | 1.13% |
 | PRON | 39,273 | 4.72% |
-| PROP | 58,328 | 7.02% |
-| V | 148,317 | 17.84% |
+| PROP | 58,359 | 7.02% |
+| V | 145,510 | 17.51% |
 
 ## Grammatical Morpheme Categories
 
@@ -52,12 +52,12 @@ Generated: 2026-04-09T07:57:22.658111
 | copula | 2 | 14,438 |
 | directional_verb | 7 | 6,655 |
 | function_word | 368 | 161,812 |
-| inflection | 59 | 12,501 |
+| inflection | 59 | 12,500 |
 | irrealis_marker | 3 | 24,986 |
 | nominalizer | 1 | 22,902 |
 | object_marker | 1 | 15,590 |
 | particle | 9 | 26,531 |
-| plural_marker | 6 | 23,727 |
+| plural_marker | 6 | 29,864 |
 | pronominal_prefix | 5 | 112,170 |
 | sentence_final | 4 | 52,988 |
 | tam_suffix | 8 | 9,282 |
@@ -69,7 +69,8 @@ Generated: 2026-04-09T07:57:22.658111
 | ding | V | IRR | 25,066 | 28 |
 | uh | N | ? | 22,122 | 3 |
 | hong | V | ? | 15,578 | 3 |
-| tua | CONJ | that | 13,793 | 44 |
+| tua | DET | that | 13,793 | 44 |
+| mi | N | person | 13,740 | 67 |
 | ci | V | say | 11,622 | 90 |
 | le | CONJ | and | 11,124 | 6 |
 | ciang | CONJ | then | 10,636 | 21 |
@@ -77,8 +78,6 @@ Generated: 2026-04-09T07:57:22.658111
 | bang | N | like | 9,269 | 37 |
 | ahi | V | ? | 8,634 | 7 |
 | topa | N | Lord | 7,896 | 5 |
-| mi | N | person | 7,603 | 63 |
-| mite | N | people | 7,235 | 5 |
 | hi | DET | ? | 7,219 | 83 |
 | om | ADJ | exist | 6,772 | 83 |
 | amah | PRON | 3SG.PRO | 6,402 | 4 |
@@ -86,14 +85,15 @@ Generated: 2026-04-09T07:57:22.658111
 | hang | CONJ | because | 5,892 | 11 |
 | ahih | CONJ | ? | 5,804 | 4 |
 | khempeuh | DET | all | 5,366 | 3 |
+| khat | NUM | one | 5,281 | 10 |
 
 ## Ambiguity Summary
 
 - Total items in review queue: 1662
 - Known polysemous forms: 15
 - Multiple segmentations: 1602
-- Multiple lemmas: 401
-- Multiple POS: 664
+- Multiple lemmas: 404
+- Multiple POS: 665
 - Unknown POS: 0
 - Partial glosses: 46
 

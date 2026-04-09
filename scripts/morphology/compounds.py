@@ -14,6 +14,12 @@ COMPOUND_WORDS = {
     'lokho': ('lokho', 'husbandman'),  # KJV: husbandman, plowman
     'lokho-in': ('lokho-in', 'farmer-ERG'),
     
+    # === ABIL compounds with tu (sit) ===
+    # tu has multiple meanings: 'now' (temporal) vs 'sit' (Form I verb)
+    # These explicit entries ensure tu-thei = sit-ABIL, not now-able
+    'tuthei': ('tu-thei', 'sit-ABIL'),
+    'tuhtheih': ('tuh-theih', 'sit.II-ABIL'),
+    
     # === Round 201: Final coverage fixes ===
     # 5 remaining tokens: aite (3x), dante (1x), suksiatsakte' (1x)
     'aite': ('ai-te', 'lot-PL'),                  # Isa 3:20, Ezk 13:18,20 - lots/charms (ai=lot for divination)
@@ -647,6 +653,13 @@ COMPOUND_WORDS = {
     'sal': ('sal', 'slave'),
     'kan': ('kan', 'stay'),
     'vai': ('vai', 'foreigner'),
+    
+    # ka-nei/neih compounds (1SG-have) - prevent kan+ei misparse
+    'kanei': ('ka-nei', '1SG-have'),
+    'kaneih': ('ka-neih', '1SG-have.II'),
+    'nanei': ('na-nei', '2SG-have'),
+    'naneih': ('na-neih', '2SG-have.II'),
+    
     'kumpi-in': ('kumpi-in', 'king-ERG'),
     'khuaneute': ('khua-neu-te', 'town-small-PL'),
     'tuamtuamte': ('tuam-tuam-te', 'different-REDUP-PL'),

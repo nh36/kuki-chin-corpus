@@ -553,16 +553,14 @@ ADVERBS = {
 }
 
 # Temporal connectives (clause-linking temporal words)
+# Note: ciangin/hangin/bangin are SUBORDINATORS - check SUBORDINATORS dict
+# Note: tua is a DEMONSTRATIVE - check DEMONSTRATIVES dict
 TEMPORAL_CONNECTIVES = {
-    'ciang': 'then',        # "then/when" - base form
-    'ciangin': 'then',      # "then" with ERG - temporal subordinator
-    'tua': 'that',          # often "tua ciangin" = "and then"
+    'ciang': 'then',        # "then/when" - base form (not ciangin which is subordinator)
     'tu': 'now',            # "now"
     'tuni': 'today',        # "today"
     'zingsang': 'tomorrow', # "tomorrow"
     'nitak': 'yesterday',   # "yesterday"
-    'zawkciangin': 'after', # "after that"
-    'masaciangin': 'before',# "before that"
 }
 
 # Expanded quantifiers
@@ -2256,7 +2254,7 @@ VERB_STEMS = {
     'gan': 'bear',           # bear/carry (also 'cattle')
     'kan': 'stay',           # stay/remain
     'zin': 'travel',         # travel/journey
-    'zel': 'scatter',        # scatter/disperse
+    # Note: zel is HAB.CONT suffix, not verb 'scatter'
     'sawh': 'correct',       # correct/rectify
     'hhuai': 'abominate',    # abominate/detest
     'kiat': 'fall',          # fall down
@@ -3709,7 +3707,7 @@ NOUN_STEMS = {
     'gim': 'suffering',      # suffering/toil
     'vei': 'time',           # time/occasion
     'lung': 'heart',         # heart/stone
-    'mite': 'people',        # people (mi-te)
+    # Note: mite should be analyzed as mi-te (person-PL), not a lexeme
     'nungzui': 'disciple',   # disciple/follower
     'pi': 'grandmother',     # grandmother/ancestor
     'gei': 'edge',           # edge/border
@@ -6035,17 +6033,17 @@ def get_word_class(word: str, gloss: str) -> str:
     """
     word_lower = word.lower().rstrip('.,;:!?"\'')
     
-    # Check adverbs (before other categories - specific)
+    # Check demonstratives FIRST (tua, hih, etc.)
+    if word_lower in DEMONSTRATIVES:
+        return 'DEM'
+    
+    # Check adverbs
     if word_lower in ADVERBS:
         return 'ADV'
     
-    # Check temporal connectives
+    # Check temporal connectives (ciang, tu, tuni, etc.)
     if word_lower in TEMPORAL_CONNECTIVES:
         return 'CONJ'
-    
-    # Check demonstratives
-    if word_lower in DEMONSTRATIVES:
-        return 'DEM'
     
     # Check numerals
     if word_lower in NUMERALS:
@@ -6097,11 +6095,15 @@ def get_word_class(word: str, gloss: str) -> str:
     if word_lower in SENTENCE_FINAL_MARKERS or gloss in ('DECL', 'Q', 'JUSS', 'HORT'):
         return 'SFIN'
     
-    # Check for nouns FIRST by gloss when word is ambiguous
+    # Check for plural nouns EARLY (before noun_glosses check)
+    if '-PL' in gloss and not gloss.startswith('2/3'):
+        return 'N.PL'
+    
+    # Check for nouns by gloss when word is ambiguous
     # Some words appear in both VERB_STEMS and NOUN_STEMS (e.g., lung = feel/heart)
     # Use gloss to disambiguate before checking stem dictionaries
     noun_glosses = {'heart', 'stone', 'altar', 'path', 'road', 'river', 'tree', 'house', 
-                    'person', 'people', 'hand', 'eye', 'head', 'body', 'land', 'place',
+                    'person', 'hand', 'eye', 'head', 'body', 'land', 'place',
                     'word', 'time', 'day', 'year', 'water', 'fire', 'light', 'name',
                     'king', 'lord', 'son', 'father', 'mother', 'child', 'man', 'woman'}
     gloss_base = gloss.split('-')[0].split('.')[0].lower()
@@ -6144,10 +6146,6 @@ def get_word_class(word: str, gloss: str) -> str:
             first_morph = word_lower.split('-')[0]
             if first_morph in VERB_STEMS:
                 return 'V'
-    
-    # Check for plural nouns
-    if '-PL' in gloss and not gloss.startswith('2/3'):
-        return 'N.PL'
     
     # Check for proper nouns
     # 1. All caps gloss = opaque proper noun (JERUSALEM, GALILI)
@@ -9915,7 +9913,7 @@ def analyze_possessive(word: str) -> Optional[Tuple[str, str]]:
     # These are kept for efficiency - they're checked before expensive recursion
     poss_map = {
         'amau': '3PL.POSS',
-        'mite': 'people.POSS',
+        # Note: mite should be analyzed as mi-te (person-PL), not possessive
         'note': '2PL.POSS',
         'amaute': '3PL.POSS',
         'kumpipa': 'king.POSS',
