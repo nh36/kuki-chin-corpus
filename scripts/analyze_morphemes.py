@@ -1591,7 +1591,7 @@ VERB_STEMS = {
     'vial': 'encircle',      # 10x
     'tangtun': 'arrive',     # 10x
     'hawm': 'join',
-    'cim': 'pierce',
+    'cim': 'melt',           # collapse/melt/fall (kicimgawp = melt together)
     'zop': 'join',           # 10x
     'kho': 'labor',          # 10x
     # Note: khot='labor.II' removed - conflicts with kho-te (labor-PL)

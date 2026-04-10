@@ -9769,4 +9769,86 @@ COMPOUND_WORDS = {
     'suktuah': ('suk-tuah', 'cause.become-do'),               # cause to do
     'sukpai': ('suk-pai', 'cause.become-go'),                 # cause to go/send
     'sukmit': ('suk-mit', 'cause.become-eye'),                # open eyes
+    
+    # Round 166: Complex ki- prefix compounds (fix 164 partials)
+    # These are ki-V-SUFFIX forms where V is not recognized without explicit entry
+    'kisaktheihpih': ('ki-sak-theih-pih', 'REFL-CAUS-know-APPL'),  # be able to boast/pride oneself
+    'kisaktheihpihin': ('ki-sak-theih-pih-in', 'REFL-CAUS-know-APPL-CVB'),
+    'kipahtawi': ('ki-pah-tawi', 'REFL-do-carry'),            # defer/hesitate (not hurry)
+    'kipahtawiin': ('ki-pah-tawi-in', 'REFL-do-carry-CVB'),
+    'kipahtawisak': ('ki-pah-tawi-sak', 'REFL-do-carry-CAUS'),
+    'kikaihkhop': ('ki-kaih-khop', 'REFL-lead-gather'),       # be gathered together
+    'kitasam': ('ki-ta-sam', 'REFL-firmly-promise'),          # be promised/kept (covenant)
+    'kikaikhawmin': ('ki-kai-khawm-in', 'REFL-share-together-CVB'),  # be troubled (made to stink)
+    'kikaikhawmsak': ('ki-kai-khawm-sak', 'REFL-share-together-CAUS'),
+    'kikaikhawmsa': ('ki-kai-khawm-sa', 'REFL-share-together-PERF'),
+    'kikhaknelh': ('ki-khak-nelh', 'REFL-shut-close'),        # flee/take refuge
+    'kizelh': ('ki-zelh', 'REFL-spread'),                     # spread (intransitive)
+    'kipaai': ('ki-paai', 'REFL-cast.out'),                   # be scattered
+    'kipaaiin': ('ki-paai-in', 'REFL-cast.out-CVB'),
+    'kipaih': ('ki-paih', 'REFL-pour'),                       # be poured out
+    'kipaipihin': ('ki-pai-pih-in', 'REFL-go-APPL-CVB'),      # go along with
+    'kipalsat': ('ki-pal-sat', 'REFL-roll-strike'),           # roll/overthrow
+    'kipasalsak': ('ki-pasal-sak', 'REFL-male-CAUS'),         # be married (male)
+    'kipaithangin': ('ki-pai-thang-in', 'REFL-go-fall-CVB'),  # fall away
+    'kipaihkhiat': ('ki-paih-khiat', 'REFL-pour-away'),       # pour out completely
+    'kitomtom': ('ki-tom~tom', 'REFL-grow~REDUP'),            # grow up
+    'kikhawng': ('ki-khawng', 'REFL-oppose'),                 # be against
+    'kitankhiasa': ('ki-tan-khia-sa', 'REFL-stand-out-PERF'), # stand forth
+    'kitankhiazo': ('ki-tan-khia-zo', 'REFL-stand-out-COMPL'),
+    'kitokgawpsak': ('ki-tok-gawp-sak', 'REFL-meet-together-CAUS'),
+    'kisawk': ('ki-sawk', 'REFL-seek'),                       # be sought
+    'kitanhkiksak': ('ki-tanh-kik-sak', 'REFL-?-ITER-CAUS'),  # (context needed)
+    'kitawldamsak': ('ki-tawl-dam-sak', 'REFL-help-well-CAUS'),  # be healed
+    'kikhakcipin': ('ki-khak-cip-in', 'REFL-shut-tight-CVB'), # shut up tightly
+    'kimaituah': ('ki-mai-tuah', 'REFL-face-do'),             # show face/appear
+    'kisangtawi': ('ki-sang-tawi', 'REFL-high-carry'),        # be exalted
+    'kicimsa': ('ki-cim-sa', 'REFL-?-PERF'),                  # (context needed)
+    'kicimgawp': ('ki-cim-gawp', 'REFL-?-together'),          # (context needed)
+    'kicimsuk': ('ki-cim-suk', 'REFL-?-DOWN'),                # (context needed)
+    'kicimmang': ('ki-cim-mang', 'REFL-?-COMPL'),             # (context needed)
+    'kikhailup': ('ki-khai-lup', 'REFL-hang-down'),           # hang down
+    'kikhailupsak': ('ki-khai-lup-sak', 'REFL-hang-down-CAUS'),
+    'kikhawi': ('ki-khawi', 'REFL-hang'),                     # hang (intrans)
+    'kimaizumsak': ('ki-mai-zum-sak', 'REFL-face-cover-CAUS'), # cover face
+    'kiciangtansa': ('ki-ciang-tan-sa', 'REFL-certain-stand-PERF'),
+    'kikawmin': ('ki-kawm-in', 'REFL-?-CVB'),                 # (context needed)
+    'kikhahkhong': ('ki-khah-khong', 'REFL-?-?'),             # (context needed)
+    'kicilsa': ('ki-cil-sa', 'REFL-thresh-PERF'),             # be threshed
+    'kitaisanin': ('ki-tai-san-in', 'REFL-bright-flee-CVB'),  # (context needed)
+    'kitoksa': ('ki-tok-sa', 'REFL-meet-PERF'),               # be met
+    'kikhamcipin': ('ki-kham-cip-in', 'REFL-forbid-tight-CVB'),
+    'kiteelteel': ('ki-teel~teel', 'REFL-twist~REDUP'),       # be twisted
+    'kicilgawp': ('ki-cil-gawp', 'REFL-thresh-together'),     # thresh together
+    'kikantanin': ('ki-kan-tan-in', 'REFL-hold-stand-CVB'),   # withstand
+    'kisatnen': ('ki-sat-nen', 'REFL-hard-establish'),        # be established firmly
+    'kisanek': ('ki-sa-nek', 'REFL-bitter-eat'),              # be embittered
+    'kitangsam': ('ki-tang-sam', 'REFL-stand-call'),          # be called to stand
+    'kisimmawhbawl': ('ki-sim-mawh-bawl', 'REFL-count-fault-make'),  # be counted guilty
+    'kisatheisak': ('ki-sa-thei-sak', 'REFL-know-able-CAUS'), # be able to know
+    'kisatheikha': ('ki-sa-thei-kha', 'REFL-know-able-still'),
+    'kitomlak': ('ki-tom-lak', 'REFL-grow-among'),            # grow among
+    'kitangcingsak': ('ki-tang-cing-sak', 'REFL-stand-pure-CAUS'),
+    'kitoktok': ('ki-tok~tok', 'REFL-meet~REDUP'),            # meet repeatedly
+    'kiciangin': ('ki-ciang-in', 'REFL-certain-CVB'),         # certainly
+    'kiciangkik': ('ki-ciang-kik', 'REFL-certain-ITER'),      # certainly again
+    'kikalin': ('ki-kal-in', 'REFL-middle-CVB'),              # in between
+    'mimawl': ('mi-mawl', 'person-lazy'),                     # lazy person
+    'kimawlin': ('ki-mawl-in', 'REFL-lazy-CVB'),              # lazily
+    'taanzaihsak': ('taan-zaih-sak', 'withhold-little-CAUS'), # withhold a little
+    'liausak': ('liau-sak', 'exceed-CAUS'),                   # cause to exceed
+    
+    # Round 167: Final partials
+    'kitanhkiksak': ('ki-tanh-kik-sak', 'REFL-redeem-ITER-CAUS'),  # grant redemption
+    'kikawmin': ('ki-kawm-in', 'REFL-solace-CVB'),            # solace oneself
+    'kikhahkhong': ('ki-khah-khong', 'REFL-leave-alone'),     # be left alone
+    
+    # ki-cim compounds (cim = melt/collapse)
+    'kicimgawp': ('ki-cim-gawp', 'REFL-melt-together'),       # melt together
+    'kicimsuk': ('ki-cim-suk', 'REFL-melt-DOWN'),             # collapse down
+    'kicimsa': ('ki-cim-sa', 'REFL-melt-PERF'),               # be melted/broken
+    'kicimmang': ('ki-cim-mang', 'REFL-melt-COMPL'),          # melt completely
+    
+    # Round 168: Fix test regression
+    'paingei': ('pai-ngei', 'go-EXP'),                        # have gone (experiential)
 }
