@@ -1444,7 +1444,7 @@ VERB_STEMS = {
     'pai': 'go',             # 2,350
     'va': 'go.and',          # 817
     'lut': 'enter',
-    'khia': 'exit',
+    'khia': 'out',           # synced with ATOMIC_GLOSSES (directional)
     'tung': 'arrive',
     'zui': 'follow',         # 504
     'ciahpai': 'go.home',
@@ -1492,7 +1492,7 @@ VERB_STEMS = {
     'nei': 'have',           # 1,770
     'koih': 'put',           # 592
     'sawl': 'send',          # 541
-    'sak': 'cause',          # 220 causative
+    'sak': 'CAUS',           # synced with ATOMIC_GLOSSES (causative suffix/verb)
     
     # Action verbs
     'bawl': 'make',          # 1,532
@@ -1554,7 +1554,7 @@ VERB_STEMS = {
     'paisak': 'send',        # pai-sak "go-CAUS"
     'damsak': 'heal',        # dam-sak "well-CAUS"
     'paipih': 'accompany',   # 599 pai-pih "go-APPL"
-    'honkhia': 'bring.out',
+    'honkhia': 'deliver',    # synced with ATOMIC_GLOSSES (opaque lexeme)
     # Note: honkhiat (Form II) now in VERB_STEM_PAIRS
     'piangsak': 'cause.birth', # 221
     'tungsak': 'lift.up',    # 197
@@ -1635,7 +1635,7 @@ VERB_STEMS = {
     'diak': 'be.different',  # 14x
     'galtai': 'be.captive',  # 13x
     'taleng': 'gather',      # 13x
-    'huai': 'dread',         # 12x
+    'huai': 'terrible',      # synced with ATOMIC_GLOSSES (adjective)
     'dei': 'say',            # 11x - variant of ci
     'ngongtat': 'oppose',    # 10x
     'mal': 'be.dry',         # 14x
@@ -1744,7 +1744,7 @@ VERB_STEMS = {
     'dawng': 'receive',  # 387x - "get, receive, fetch" (bawngno a dawng = fetched a calf)
     'luan': 'flow',          # 32x - "flow" (luanna = flowing)
     'khiat': 'depart', # 32x - "depart, leave"
-    'pian': 'create',   # 32x - "create, be born" (piansak = creation work)
+    'pian': 'be.born',  # synced with ATOMIC_GLOSSES (piansak = be.born-CAUS = create)
     'bei': 'finish',     # 32x - "end, finish" (beina = ending)
     'pan': 'plead',          # 32x - "plead, argue for"
     'kido': 'fight',         # 31x - "fight" = ki-do REFL-fight (galkidona = warfare)
@@ -1757,7 +1757,7 @@ VERB_STEMS = {
     'zah': 'fear',   # 30x - "fear, respect" (zahzah = reduplicated)
     'kihtak': 'dread',       # 30x - "dread" (kihtakna = dread)
     'suahtak': 'redeem',     # 30x - "redeem" (suahtakna = redemption)
-    'nop': 'willing',   # 52x - "willing, want" (a numei in nang hong zuih nop)
+    'nop': 'want',      # synced with ATOMIC_GLOSSES (a numei in nang hong zuih nop)
     'ngaih': 'love',   # 33x - "think lovingly of, love"
     'muhdah': 'trouble',     # 29x - "trouble, make stink"
     'geel': 'plan',  # 29x - "plan, design" (geelna = pattern)
@@ -1860,7 +1860,7 @@ VERB_STEMS = {
     'kimkotteng': 'brightness',  # Ezek 1:4 "brightness was about it"
     
     # === Session 4 Round 9: More verb stems for -sak causatives ===
-    'khialh': 'err',     # khialhsak = cause to sin
+    'khialh': 'sin',     # synced with ATOMIC_GLOSSES (khialhsak = cause to sin)
     'piasak': 'cause.give',  # pia-sak = give-CAUS
     'siatsak': 'destroy',    # siat-sak = spoil-CAUS
     'khamsak': 'preserve',   # kham-sak = keep-CAUS
@@ -1882,7 +1882,7 @@ VERB_STEMS = {
     'diah': 'dip',           # kidiah = REFL-dip (put in water)
     'khin': 'move',          # kikhin = REFL-move (set forward)
     'phah': 'spread',        # kiphah = REFL-spread (spread forth)
-    'sut': 'spoil',          # kisut = REFL-spoil
+    'sut': 'break',          # synced with ATOMIC_GLOSSES (kisut = REFL-break)
     'nitsak': 'defile',      # kinitsak = REFL-defile
     'nit': 'defile',         # base for nitsak
     'phel': 'clear',         # kiphel = REFL-clear
@@ -2474,8 +2474,8 @@ NOUN_STEMS = {
     'mahmah': 'very',        # mahmahna
     'pian': 'birth',         # pianna
     'lut': 'enter',          # lutna
-    'neih': 'have',          # neihna
-    'muh': 'see',            # muhna
+    'neih': 'have.II',       # synced with VERB_STEMS (neihna)
+    'muh': 'see.II',         # synced with VERB_STEMS (muhna)
     'lau': 'fear',           # launa
     'lawm': 'worthy',        # kilawm (258x) = REFL-worthy = be fitting/suitable
     'kah': 'fight',          # kahna
@@ -7055,7 +7055,7 @@ ATOMIC_GLOSSES = {
     'hon': 'flock',
     
     # Qualities
-    'dam': 'well',
+    'dam': 'be.well',    # synced with VERB_STEMS
     'sat': 'hard',
     'nem': 'soft',
     'tang': 'stand',
@@ -7065,7 +7065,7 @@ ATOMIC_GLOSSES = {
     'kim': 'complete',
     'muang': 'calm',
     'thim': 'dark',
-    'siam': 'skilled',
+    'siam': 'be.skilled',  # synced with VERB_STEMS (stative verb)
     'mawh': 'guilty',
     'siat': 'spoil',
     'khialh': 'sin',
@@ -7108,7 +7108,7 @@ ATOMIC_GLOSSES = {
     'sak': 'CAUS',       # causative
     'kik': 'ITER',       # iterative (do again)
     'khia': 'out',       # directional out
-    'let': 'back',       # directional back
+    'let': 'return',     # synced with VERB_STEMS (directional return)
     'khin': 'COMPL',     # completive
     'tat': 'strike',     # gamtat = kingdom
     'gen': 'speak',      # thugen = speech
@@ -7129,9 +7129,9 @@ ATOMIC_GLOSSES = {
     'suah': 'birth',     # nisuah = day-birth = birthday
     'ngaih': 'love', # ngaihsut = think
     'sut': 'break',  # ngaihsut = deliberate
-    'khiat': 'out', # paikhiat = go.out
+    'khiat': 'depart', # synced with VERB_STEMS (paikhiat = go-depart)
     'biak': 'worship',   # biakna = worship (NMLZ)
-    'piak': 'offer',     # biakpiak = worship-offer
+    'piak': 'give.to',   # synced with VERB_STEMS (biakpiak = worship-give.to)
     
     # Round 173: Additional verbal/adjectival roots
     'tha': 'strength',   # thahat = strong
@@ -7141,7 +7141,7 @@ ATOMIC_GLOSSES = {
     'nget': 'pray',      # thunget = word-pray = prayer
     'zawng': 'all',      # mizawng = person-all
     'tam': 'many',       # tampi = many-big
-    'khen': 'judge',     # thukhen = word-judge = judgment
+    'khen': 'divide',    # synced with VERB_STEMS (thukhen = word-divide = judgment)
     'hilh': 'teach',     # thuhilh = word-teach = teaching
     'neu': 'small',      # khuaneu = village-small
     'tuam': 'various',   # tuamtuam = various-REDUP
@@ -7169,7 +7169,7 @@ ATOMIC_GLOSSES = {
     'man': 'true',       # thuman = word-true = truth
     'tual': 'generation',# puantual = cloth-generation = robe
     'phat': 'praise',    # kiphat = REFL-praise
-    'cih': 'say',        # cihnop = say-want = meaning
+    'cih': 'say.NOM',    # cihnop = say.NOM-want = meaning (synced with VERB_STEMS)
     'mai': 'face',       # maizum = face-bow, kimaisak = appear
     
     # Sizes/degrees
@@ -7205,7 +7205,7 @@ ATOMIC_GLOSSES = {
     'gelh': 'write',       # kigelh = REFL-write = scripture
     'tel': 'know',         # theihtel = know-know = wisdom
     'kuang': 'basin',   # tuikuang = water-box = pool
-    'theih': 'know',       # thutheih = word-know = knowledge
+    'theih': 'know.II',    # synced with VERB_STEMS (thutheih = word-know.II = knowledge)
     'hau': 'rich',         # mihau = person-rich = rich.one
     'khang': 'generation', # khangnote = generation-young-PL = youth
     'thawh': 'rise',       # thawhkik = rise-again = resurrection
@@ -7220,7 +7220,7 @@ ATOMIC_GLOSSES = {
     'hawm': 'counsel',     # vaihawm = plan-counsel
     'nih': 'two',          # nihvei = two-time = second
     'vei': 'time',         # nihvei = two-time
-    'hawl': 'drive',       # hawlkhiat = drive-out = persecution
+    'hawl': 'seek',        # synced with VERB_STEMS (hawlkhiat = seek-out)
     'hen': 'tie',          # hencip = tie-tightly, kihen = REFL-tie, henna = tie-NMLZ (bond)
     'paih': 'pour',        # thangpaih = rise-pour = flood
     'duai': 'soft',        # lungduai = heart-soft = compassion
@@ -7229,7 +7229,7 @@ ATOMIC_GLOSSES = {
     'gong': 'alone',       # meigong = female-alone = widow (mei 'female' TB *mei)
     
     # Round 177: Additional atomic glosses (5-9x compounds)
-    'kiat': 'release',     # thongkiat = prison-release = deliverance
+    'kiat': 'fall',        # synced with VERB_STEMS (thongkiat = prison-fall = deliverance)
     'nep': 'soft',         # hehnep = angry-soft = patience
     'lat': 'strong',       # kilat = REFL-strong = strengthen
     'kip': 'firm',         # kipsak = firm-CAUS = confirm
@@ -7273,10 +7273,10 @@ ATOMIC_GLOSSES = {
     # The INTENS meaning is in SUFFIXES dict; 'accompany' applies to ki- compounds only
     'gan': 'cattle',       # gancing = cattle-care = shepherd
     'tun': 'arrive',       # zintun = journey-arrive = destination
-    'zak': 'hear',         # zaksak = hear-CAUS = testimony
+    'zak': 'hear.II',      # synced with VERB_STEMS (zaksak = hear.II-CAUS = testimony)
     'tan': 'judge',        # thutan = word-judge = judgment
     'tawl': 'rest',        # tawldam = rest-well = rest
-    'tawi': 'weigh',       # tawikhai = weigh-balance = balance
+    'tawi': 'carry',       # synced with VERB_STEMS (tawikhai = carry-balance)
     'khai': 'balance',     # tawikhai = weigh-balance
     'thuk': 'deep',        # thuthuk = word-deep = deep word
     
@@ -7329,10 +7329,10 @@ ATOMIC_GLOSSES = {
     'dah': 'put',          # used in compounds
     'it': 'love',          # itna = love-NMLZ
     'lau': 'fear',         # milauna = fear-NMLZ
-    'muh': 'see',          # muhdahna = see-put-NMLZ = vision
-    'neih': 'have',        # neihsa = have-PERF
+    'muh': 'see.II',       # synced with VERB_STEMS (muhdahna = see.II-put-NMLZ = vision)
+    'neih': 'have.II',     # synced with VERB_STEMS (neihsa = have.II-PERF)
     'ngah': 'get',         # ngahsa = get-PERF
-    'om': 'be',            # omna = being-NMLZ = place
+    'om': 'exist',         # synced with VERB_STEMS (omna = exist-NMLZ = place)
     'pai': 'go',           # paite = those.going
     'pha': 'reach',        # phate = arrived.ones
     'sih': 'die',          # sihna = death
@@ -7345,7 +7345,7 @@ ATOMIC_GLOSSES = {
     
     # Descriptive
     'gim': 'heavy',        # gimna = weight
-    'hoih': 'good',        # hoihpen = best
+    'hoih': 'be.good',     # synced with VERB_STEMS (hoihpen = be.good-SUPER = best)
     'hak': 'difficult',    # haksat = difficult
     
     # Direction/location
@@ -7372,12 +7372,12 @@ ATOMIC_GLOSSES = {
     'thahat': 'strong',    # thahat = strength-firm
     'neihkhem': 'possess', # neihkhem = have-hold
     'maisak': 'despise',   # maisak = face-discard
-    'honkhia': 'spare',    # honkhia = flock-out
+    'honkhia': 'deliver',  # honkhia = deliver/rescue (opaque, not hon-khia)
     
     # Less common but needed
     'hih': 'this',         # demonstrative
     'kai': 'roast',        # meikai = fire-roast
-    'khawm': 'together',   # khawmpi = congregation
+    'khawm': 'gather',     # synced with VERB_STEMS (khawmpi = gather-AUG = congregation)
     'ling': 'awake',       # lingling = watchful
     'luang': 'flow',       # tuiluang = river
     'luat': 'exceed',      # itluat = beloved

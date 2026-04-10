@@ -102,6 +102,14 @@ OPAQUE_LEXEMES = {
     # === Spatial/relational ===
     # kikal: parses transparently as ki-kal = REFL-middle (semantic = "between")
     
+    # === Verbs with opaque morphology ===
+    'honkhia': {
+        'gloss': 'deliver',
+        'would_be_parse': ('hon-khia', 'flock-exit'),
+        'evidence': 'Gen 37:21 "delivered him" - rescue/deliver, not flock-related',
+        'frequency': 351,
+    },
+    
     # === Religious/cultural ===
     'singtawng': {
         'gloss': 'stock',

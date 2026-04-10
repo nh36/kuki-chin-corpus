@@ -25,11 +25,11 @@ class TestNoNewDangerousOverlaps(unittest.TestCase):
     But we should not ADD new ones that cause regression bugs.
     """
     
-    # Baseline count of known overlaps (as of April 2026)
+    # Baseline count of known overlaps (updated April 2026 after sync)
     # If this fails, either:
     # 1. A new overlap was added (bad - investigate and fix)
     # 2. An overlap was removed (good - update this number)
-    BASELINE_ATOMIC_VERB_OVERLAPS = 75
+    BASELINE_ATOMIC_VERB_OVERLAPS = 50
     BASELINE_ATOMIC_TAM_OVERLAPS = 10
     
     def test_atomic_verb_overlap_count_stable(self):
@@ -111,6 +111,51 @@ class TestStemSuffixParsing(unittest.TestCase):
         # paitheih = can go
         seg, gloss = analyze_word('paitheih')
         self.assertIn('go', gloss.lower(), f"paitheih should have 'go', got {gloss}")
+
+
+class TestSyncedGlosses(unittest.TestCase):
+    """Ensure glosses stay synchronized between ATOMIC_GLOSSES and VERB_STEMS.
+    
+    These forms were synced to prevent architecture-dependent behavior.
+    If these tests fail, the dictionaries have diverged again.
+    """
+    
+    def test_hoih_synced(self):
+        """'hoih' should have same gloss in both dictionaries."""
+        self.assertEqual(ATOMIC_GLOSSES.get('hoih'), 'be.good')
+    
+    def test_khia_synced(self):
+        """'khia' should have same gloss in both dictionaries."""
+        from analyze_morphemes import VERB_STEMS
+        self.assertEqual(ATOMIC_GLOSSES.get('khia'), VERB_STEMS.get('khia'))
+    
+    def test_khialh_synced(self):
+        """'khialh' should have same gloss in both dictionaries."""
+        from analyze_morphemes import VERB_STEMS
+        self.assertEqual(ATOMIC_GLOSSES.get('khialh'), VERB_STEMS.get('khialh'))
+    
+    def test_nop_synced(self):
+        """'nop' should have same gloss in both dictionaries."""
+        from analyze_morphemes import VERB_STEMS
+        self.assertEqual(ATOMIC_GLOSSES.get('nop'), VERB_STEMS.get('nop'))
+    
+    def test_muh_form_ii_preserved(self):
+        """'muh' should be glossed as see.II (Form II)."""
+        self.assertEqual(ATOMIC_GLOSSES.get('muh'), 'see.II')
+    
+    def test_theih_form_ii_preserved(self):
+        """'theih' should be glossed as know.II (Form II)."""
+        self.assertEqual(ATOMIC_GLOSSES.get('theih'), 'know.II')
+    
+    def test_zak_form_ii_preserved(self):
+        """'zak' should be glossed as hear.II (Form II)."""
+        self.assertEqual(ATOMIC_GLOSSES.get('zak'), 'hear.II')
+    
+    def test_honkhia_is_opaque(self):
+        """'honkhia' should parse as opaque 'deliver', not hon-khia."""
+        seg, gloss = analyze_word('honkhia')
+        self.assertEqual(seg, 'honkhia')
+        self.assertEqual(gloss, 'deliver')
 
 
 if __name__ == '__main__':
