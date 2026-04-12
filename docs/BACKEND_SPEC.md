@@ -413,37 +413,139 @@ ORDER BY rq.created_at;
 
 ## API Surface
 
-The backend will be accessed via a Python module: `scripts/backend.py`
+The backend is implemented in `scripts/backend.py` as a Python module.
 
 ```python
 from backend import Backend
 
 db = Backend('data/ctd_backend.db')
 
-# Dictionary lookup
-entry = db.get_lemma('pai')
-senses = db.get_senses('pai')
-examples = db.get_examples_for_sense('pai.1', limit=3)
+# --- Dictionary Access ---
 
-# Grammar access
-markers = db.get_grammatical_morphemes(category='tam_suffix')
-examples = db.get_examples_for_morpheme('ding.IRR.tam_suffix')
+# Get a lemma by citation form
+lemma = db.get_lemma('pai')  # Returns Lemma or None
 
-# Corpus access
-verse = db.get_source('41001001')
-tokens = db.get_tokens_for_source('41001001')
+# Get all senses for a lemma
+senses = db.get_senses('pai')  # Returns List[Sense]
 
-# Review queue
-items = db.get_review_items(priority='high', status='open')
+# Get a specific sense
+sense = db.get_sense('pai.1')  # Returns Sense or None
+
+# Get lemmas by POS and type
+verbs = db.get_lemmas_by_pos('V', entry_type='lexical', limit=100)
+
+# Get wordforms for a lemma
+forms = db.get_wordforms_for_lemma('pai')  # Returns List[Dict]
+
+# Get sense frequency distribution
+dist = db.get_sense_distribution('in')  # Returns Dict[str, int]
+
+# --- Grammar Access ---
+
+# Get grammatical morphemes by category
+tam_markers = db.get_grammatical_morphemes(category='tam_suffix')
+case_markers = db.get_grammatical_morphemes(category='case_marker')
+
+# Get morphemes by form (handles polysemy)
+morphemes = db.get_morpheme_by_form('in')  # Returns List[GrammaticalMorpheme]
+
+# --- Examples ---
+
+# Examples for a sense (ranked by quality)
+examples = db.get_examples_for_sense('pai.1', limit=3, quality='good')
+
+# Examples for a morpheme
+examples = db.get_examples_for_morpheme('ding.IRR.tam_suffix', limit=5)
+
+# Examples for a lemma (any sense)
+examples = db.get_examples_for_lemma('pa', limit=3)
+
+# --- Corpus Access ---
+
+# Get a verse
+verse = db.get_source('41001001')  # Returns Source or None
+
+# Get verses by book
+mark_verses = db.get_sources_for_book('41')  # Returns List[Source]
+
+# Get wordform details
+wf = db.get_wordform('kapaiding')  # Returns Dict or None
+
+# --- Review Queue ---
+
+items = db.get_review_items(status='open', priority='high')
 db.resolve_review_item(item_id, resolution='Fixed gloss')
+db.add_review_item('lemma', 'example_id', 'uncertain_gloss', priority='medium')
+
+# --- Statistics ---
+
+stats = db.get_stats()  # Returns Dict[str, int]
 ```
+
+### Example Quality Ranking
+
+Examples are consistently ranked using explicit quality ordering:
+
+| Rank | Quality | Description |
+|------|---------|-------------|
+| 1 | `excellent` | Manually curated, ideal for documentation |
+| 2 | `good` | Clean, representative usage |
+| 3 | `acceptable` | Usable but not ideal |
+| 4 | `auto` | Auto-generated from corpus |
+
+All `get_examples_*` methods use this ranking by default.
 
 ---
 
-## Next Steps
+## Migration Summary
 
-1. **Implement `scripts/backend.py`** - SQLite wrapper with query methods
-2. **Migrate Tedim data** - Convert TSV exports to SQLite
-3. **Refactor `lookup_word.py`** - Read from backend instead of lexicons
-4. **Refactor one grammar report** - Read from backend
-5. **Document Tedim-specific assumptions** - `docs/GENERALIZATION_NOTES.md`
+After running `backend.py migrate`, a summary is printed:
+
+```
+============================================================
+MIGRATION SUMMARY
+============================================================
+
+Examples:
+  Direct from TSV (with sense_id): 21,626
+  Linked to morphemes (heuristic): 3,450
+  Auto-generated from corpus:      892
+  Sent to review (unlinked):       127
+
+Database statistics:
+  sources: 31,173
+  lemmas: 7,139
+  senses: 11,245
+  grammatical_morphemes: 156
+  examples: 26,095
+  review_items: 127
+============================================================
+```
+
+This makes the heuristic parts of the pipeline transparent.
+
+---
+
+## Current Status
+
+### Completed
+
+- ✓ `scripts/backend.py` implemented with full query API
+- ✓ Tedim (ctd) data migrated from TSV exports to SQLite
+- ✓ `lookup_word.py` refactored to read from backend
+- ✓ TAM grammar report proof-of-concept reading from backend
+- ✓ Example-morpheme linking with heuristic fallback
+- ✓ Consistent quality ranking across all example queries
+
+### Known Limitations
+
+- Tokens table not yet populated (placeholder for future corpus-level queries)
+- Some morpheme examples auto-generated; may need manual curation
+- Constructions and grammar_topics tables defined but not yet populated
+
+### Next Steps for Generalization
+
+1. **Mizo pilot** - Apply the same pipeline to Mizo (lus) data
+2. **Cross-language schema** - Test that schema handles Mizo-specific features
+3. **Populate constructions** - Model serial verbs, aspect chains
+4. **Grammar topic linking** - Connect morphemes to grammar chapters

@@ -121,96 +121,6 @@ class ReviewItem:
 
 
 # =============================================================================
-# Sense Disambiguation Mappings
-# =============================================================================
-
-# Maps (lemma, gloss) to sense_id for high-frequency polysemous forms
-# Based on analyzer gloss output to determine which sense is active
-GLOSS_TO_SENSE = {
-    # hi: DECL (sentence-final) vs pronoun senses
-    ('hi', 'DECL'): 'hi.1',
-    ('hi', '3SG'): 'hi.2',
-    ('hi', '1PL.INCL'): 'hi.3',
-    ('hi', 'REFL'): 'hi.4',
-    ('hi', '1SG'): 'hi.5',
-    ('hi', 'this'): 'hi.1',  # demonstrative use
-    
-    # in: ERG (case marker) vs other uses
-    ('in', 'ERG'): 'in.1',
-    ('in', 'REFL'): 'in.2',
-    
-    # ding: IRR (irrealis/prospective) vs verb
-    ('ding', 'IRR'): 'ding.1',
-    ('ding', '2SG'): 'ding.2',
-    ('ding', 'stand'): 'ding.3',
-    ('ding', '3SG'): 'ding.4',
-    ('ding', 'REFL'): 'ding.5',
-    
-    # na: possessive prefix vs nominalizer suffix
-    ('na', '2SG.POSS'): 'na.1',
-    ('na', 'NMLZ'): 'nate.1',  # -na nominalizer
-    
-    # hong: directional vs verb
-    ('hong', 'DIR'): 'hong.1',
-    ('hong', 'come'): 'hong.1',  # often same sense
-    
-    # tawh: comitative vs perfective vs verb
-    ('tawh', 'with'): 'tawh.4',
-    ('tawh', 'COM'): 'tawh.4',
-    ('tawh', 'PERF'): 'tawh.2',
-    ('tawh', 'burn'): 'tawh.1',
-    ('tawh', 'meet'): 'tawh.2',
-    
-    # khat: NUM (one) vs INDEF (a/an)
-    ('khat', 'one'): 'khat.1',
-    ('khat', 'INDEF'): 'khat.2',
-    
-    # thei: know vs fig (plant)
-    ('thei', 'know.I'): 'thei.1',
-    ('thei', 'know'): 'thei.1',
-    ('thei', 'fig'): 'thei.2',
-    ('thei', 'ABIL'): 'thei.3',  # ability suffix
-    
-    # ta: PFV (perfective) vs child
-    ('ta', 'PFV'): 'ta.1',
-    ('ta', 'child'): 'ta.2',
-    
-    # za: hear vs feel
-    ('za', 'hear.I'): 'za.1',
-    ('za', 'feel'): 'za.2',
-    
-    # pan: ABL (ablative) vs begin
-    ('pan', 'ABL'): 'pan.1',
-    ('pan', 'begin'): 'pan.2',
-    
-    # zo: COMPL (completive) vs Zo (ethnic name)
-    ('zo', 'COMPL'): 'zo.1',
-    ('zo', 'able'): 'zo.2',
-}
-
-
-def get_sense_id(lemma: str, gloss: str) -> Optional[str]:
-    """
-    Get sense_id for a (lemma, gloss) pair.
-    
-    Uses the GLOSS_TO_SENSE mapping for known polysemous forms,
-    falls back to lemma.1 for unambiguous forms.
-    """
-    # Check explicit mapping
-    sense_id = GLOSS_TO_SENSE.get((lemma.lower(), gloss))
-    if sense_id:
-        return sense_id
-    
-    # Check with uppercase gloss
-    sense_id = GLOSS_TO_SENSE.get((lemma.lower(), gloss.upper()))
-    if sense_id:
-        return sense_id
-    
-    # Default to primary sense
-    return f'{lemma.lower()}.1'
-
-
-# =============================================================================
 # Backend Class
 # =============================================================================
 
@@ -684,7 +594,8 @@ class Backend:
                     CASE quality 
                         WHEN 'excellent' THEN 1 
                         WHEN 'good' THEN 2 
-                        ELSE 3 
+                        WHEN 'acceptable' THEN 3
+                        ELSE 4
                     END
                 LIMIT ?
             ''', (sense_id, limit)).fetchall()
@@ -697,7 +608,13 @@ class Backend:
             rows = conn.execute('''
                 SELECT * FROM examples 
                 WHERE morpheme_id = ?
-                ORDER BY quality DESC
+                ORDER BY 
+                    CASE quality 
+                        WHEN 'excellent' THEN 1 
+                        WHEN 'good' THEN 2 
+                        WHEN 'acceptable' THEN 3
+                        ELSE 4
+                    END
                 LIMIT ?
             ''', (morpheme_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
@@ -715,7 +632,8 @@ class Backend:
                     CASE e.quality 
                         WHEN 'excellent' THEN 1 
                         WHEN 'good' THEN 2 
-                        ELSE 3 
+                        WHEN 'acceptable' THEN 3
+                        ELSE 4 
                     END
                 LIMIT ?
             ''', (lemma_id, limit)).fetchall()
@@ -772,71 +690,8 @@ class Backend:
             ''', (resolution, datetime.datetime.now().isoformat(), review_id))
     
     # =========================================================================
-    # Sense Disambiguation Methods
+    # Sense Query Methods
     # =========================================================================
-    
-    def link_examples_to_senses(self) -> Tuple[int, int]:
-        """
-        Link examples to specific senses based on their glossed field.
-        
-        Uses GLOSS_TO_SENSE mapping to assign sense_ids to examples
-        that have a target_form and glossed field.
-        
-        Returns:
-            Tuple of (linked_count, skipped_count)
-        """
-        linked = 0
-        skipped = 0
-        
-        with self._connection() as conn:
-            # Get examples without sense_id that have glossed content
-            examples = conn.execute('''
-                SELECT example_id, target_form, glossed
-                FROM examples
-                WHERE (sense_id IS NULL OR sense_id = '')
-                AND glossed IS NOT NULL AND glossed != ''
-            ''').fetchall()
-            
-            for row in examples:
-                example_id, target_form, glossed = row
-                
-                # Extract gloss for the target form from the glossed field
-                # Format: word1-morpheme / gloss1-GLOSS word2 / gloss2 ...
-                target_lower = target_form.lower() if target_form else ''
-                
-                sense_id = None
-                
-                # Try to find matching gloss in glossed field
-                parts = glossed.split()
-                for i, part in enumerate(parts):
-                    if '/' in part:
-                        # This is a gloss, check if previous part matches target
-                        if i > 0:
-                            word_part = parts[i-1] if i > 0 else ''
-                            if target_lower in word_part.lower():
-                                gloss = part.strip('/')
-                                sense_id = get_sense_id(target_form, gloss)
-                                break
-                
-                if sense_id:
-                    conn.execute(
-                        'UPDATE examples SET sense_id = ? WHERE example_id = ?',
-                        (sense_id, example_id)
-                    )
-                    linked += 1
-                else:
-                    # Default to primary sense
-                    if target_form:
-                        sense_id = f'{target_form.lower()}.1'
-                        conn.execute(
-                            'UPDATE examples SET sense_id = ? WHERE example_id = ?',
-                            (sense_id, example_id)
-                        )
-                        linked += 1
-                    else:
-                        skipped += 1
-        
-        return (linked, skipped)
     
     def get_sense_distribution(self, lemma_id: str) -> Dict[str, int]:
         """Get distribution of examples across senses for a lemma."""
@@ -1366,13 +1221,49 @@ def migrate_from_tsv(tsv_dir: str, db_path: str, iso: str = 'ctd'):
         db.add_example(example)
         added_examples += 1
     
-    print(f"    Generated {added_examples} additional morpheme examples")
+    # Migration summary
+    print("\n" + "=" * 60)
+    print("MIGRATION SUMMARY")
+    print("=" * 60)
     
-    # Print stats
+    # Count examples by type
+    with db._connection() as conn:
+        # Examples with sense_id from TSV
+        direct_sense = conn.execute('''
+            SELECT COUNT(*) FROM examples 
+            WHERE sense_id IS NOT NULL AND sense_id != '' 
+            AND example_type = 'lemma'
+        ''').fetchone()[0]
+        
+        # Examples linked to morphemes
+        morpheme_linked = conn.execute('''
+            SELECT COUNT(*) FROM examples 
+            WHERE morpheme_id IS NOT NULL AND morpheme_id != ''
+        ''').fetchone()[0]
+        
+        # Auto-generated examples
+        auto_generated = conn.execute('''
+            SELECT COUNT(*) FROM examples 
+            WHERE quality = 'auto' AND notes LIKE '%auto-generated%'
+        ''').fetchone()[0]
+        
+        # Total examples
+        total_examples = conn.execute('SELECT COUNT(*) FROM examples').fetchone()[0]
+    
+    print(f"\nExamples:")
+    print(f"  Direct from TSV (with sense_id): {direct_sense:,}")
+    print(f"  Linked to morphemes (heuristic): {linked_count:,}")
+    print(f"  Auto-generated from corpus:      {added_examples:,}")
+    print(f"  Sent to review (unlinked):       {review_count:,}")
+    print(f"  Total examples:                  {total_examples:,}")
+    
+    # Print full stats
     stats = db.get_stats()
-    print("\nMigration complete. Database statistics:")
+    print(f"\nDatabase statistics:")
     for key, value in stats.items():
         print(f"  {key}: {value:,}")
+    
+    print("\n" + "=" * 60)
     
     return db
 
