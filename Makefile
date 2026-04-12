@@ -41,8 +41,9 @@ clean-backend:
 
 # Generate grammar reports from backend
 grammar-reports: backend-check
-	@echo "Generating TAM report..."
+	@echo "Generating grammar reports..."
 	$(PYTHON) scripts/generate_tam_report_backend.py
+	$(PYTHON) scripts/generate_case_report_backend.py
 	@echo "Grammar reports generated in output/"
 
 # Generate dictionary outputs from backend  
