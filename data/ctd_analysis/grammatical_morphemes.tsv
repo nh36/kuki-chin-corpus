@@ -1,36 +1,36 @@
 form	gloss	category	subcategory	frequency	environments	example_verses	is_polysemous	review_reasons	status	function_id	clean_environments	lexical_contamination	usage_type	review_priority
 a	3SG	pronominal_prefix		77812	prefix|stem|suffix	01001001|01001001|01001002|01001002|01001002	0	high_freq_contamination	auto	a.3SG.pronominal_prefix	prefix	0.67	lexical_contaminated	high
-in	ERG	case_marker		77557	prefix|stem|suffix	01001001|01001002|01001003|01001004|01001005	1	high_freq_contamination	auto	in.ERG.case_marker	suffix	0.67	lexical_contaminated	high
+in	ERG	case_marker		77717	prefix|stem|suffix	01001001|01001002|01001003|01001004|01001005	1	high_freq_contamination	auto	in.ERG.case_marker	suffix	0.67	lexical_contaminated	high
 hi	DECL	sentence_final		47720	prefix|suffix		1	high_freq_contamination	auto	hi.DECL.sentence_final		1.00	lexical_contaminated	high
 te	PL	plural_marker		28507	prefix|stem|suffix	01001007|01001007|01001009|01001010|01001011	1	high_freq_contamination	auto	te.PL.plural_marker	suffix	0.67	lexical_contaminated	high
 ding	IRR	irrealis_marker		24982	prefix|stem|suffix		1	high_freq_contamination	auto	ding.IRR.irrealis_marker		1.00	lexical_contaminated	high
-ah	LOC	case_marker		24878	prefix|stem|suffix	01001002|01001002|01001006|01001009|01001011	0	high_freq_contamination	auto	ah.LOC.case_marker	suffix	0.67	lexical_contaminated	high
+ah	LOC	case_marker		24889	prefix|stem|suffix	01001002|01001002|01001006|01001009|01001011	0	high_freq_contamination	auto	ah.LOC.case_marker	suffix	0.67	lexical_contaminated	high
 na	NMLZ	nominalizer		22902	prefix|stem|suffix	01001021|01001024|01001030|01002003|01002007	1	high_freq_contamination	auto	na.NMLZ.nominalizer	suffix	0.67	lexical_contaminated	high
-uh	2/3PL	function_word		22045	prefix|suffix		0	high_freq_contamination	auto	uh.2/3PL.function_word		1.00	lexical_contaminated	high
+uh	2/3PL	function_word		22044	prefix|suffix		0	high_freq_contamination	auto	uh.2/3PL.function_word		1.00	lexical_contaminated	high
 na	2SG	pronominal_prefix		18661	prefix	01001002|01001029|01002016|01002016|01002017	1		auto	na.2SG.pronominal_prefix	prefix	0.00	grammatical_only	low
 hong	3→1	object_marker		15590	prefix		1	high_freq_contamination	auto	hong.3→1.object_marker		1.00	lexical_contaminated	high
 ka	1SG	pronominal_prefix		13875	prefix|stem|suffix	01001030|01002006|01002018|01003002|01003010	0	high_freq_contamination	auto	ka.1SG.pronominal_prefix	prefix	0.67	lexical_contaminated	high
 tua	that	function_word		12868	prefix		0	high_freq_contamination	auto	tua.that.function_word		1.00	lexical_contaminated	high
 le	and	particle		11339	prefix|stem		0	high_freq_contamination	auto	le.and.particle		1.00	lexical_contaminated	high
-ki	REFL	inflection		11055	prefix|stem	01001006|01001009|01001009|01002018|01002020	0	high_freq_contamination	auto	ki.REFL.inflection	prefix	0.50	lexical_contaminated	high
-lo	NEG	function_word		9223	prefix|stem|suffix	01030042|05032021|05032036|07016014|07016020	0	high_freq_contamination	auto	lo.NEG.function_word	stem	0.67	lexical_contaminated	high
+ki	REFL	inflection		11262	prefix|stem	01001006|01001009|01001009|01002018|01002020	0	high_freq_contamination	auto	ki.REFL.inflection	prefix	0.50	lexical_contaminated	high
+lo	NEG	function_word		9287	prefix|stem|suffix	01030042|05032021|05032036|07016014|07016020	0	high_freq_contamination	auto	lo.NEG.function_word	stem	0.67	lexical_contaminated	high
 ahi	be.3SG	copula		8634	prefix		0	high_freq_contamination	auto	ahi.be.3SG.copula		1.00	lexical_contaminated	high
 bang	like	function_word		8358	prefix|stem|suffix	46008009	1	high_freq_contamination	auto	bang.like.function_word	stem	0.67	lexical_contaminated	high
-tawh	COM	case_marker		7815	prefix|suffix	18028001|19094009	1	high_freq_contamination	auto	tawh.COM.case_marker	suffix	0.50	lexical_contaminated	high
+tawh	COM	case_marker		7808	prefix|suffix	18028001|19094009	1	high_freq_contamination	auto	tawh.COM.case_marker	suffix	0.50	lexical_contaminated	high
 sung	inside	function_word		6814	prefix|stem|suffix	03019004|12020015|12020017|17001012|17002021	0	high_freq_contamination	auto	sung.inside.function_word	stem	0.67	lexical_contaminated	high
 kei	NEG	function_word		6581	prefix|suffix		0	high_freq_contamination	auto	kei.NEG.function_word		1.00	lexical_contaminated	high
 amah	3SG.PRO	function_word		6402	prefix		0	high_freq_contamination	auto	amah.3SG.PRO.function_word		1.00	lexical_contaminated	high
+sak	CAUS	tam_suffix		5807	prefix|stem|suffix	01001006|01001012|01001015|01001016|01001026	0	high_freq_contamination	auto	sak.CAUS.tam_suffix	suffix	0.67	lexical_contaminated	high
 ahih	be.3SG.REL	copula		5804	prefix		0	high_freq_contamination	auto	ahih.be.3SG.REL.copula		1.00	lexical_contaminated	high
 amaute	3PL.PRO	function_word		5689	prefix		0	high_freq_contamination	auto	amaute.3PL.PRO.function_word		1.00	lexical_contaminated	high
-pai	go	directional_verb		5658	prefix|stem|suffix		0	high_freq_contamination	auto	pai.go.directional_verb		1.00	lexical_contaminated	high
+pai	go	directional_verb		5659	prefix|stem|suffix		0	high_freq_contamination	auto	pai.go.directional_verb		1.00	lexical_contaminated	high
 khempeuh	all	function_word		5623	prefix		0	high_freq_contamination	auto	khempeuh.all.function_word		1.00	lexical_contaminated	high
-sak	CAUS	tam_suffix		5316	prefix|stem|suffix	01001006|01001012|01001015|01001016|01001026	0	high_freq_contamination	auto	sak.CAUS.tam_suffix	suffix	0.67	lexical_contaminated	high
 hiam	Q	sentence_final		5230	prefix		0	high_freq_contamination	auto	hiam.Q.sentence_final		1.00	lexical_contaminated	high
 pan	ABL	case_marker		4944	prefix|suffix	40005019	1	high_freq_contamination	auto	pan.ABL.case_marker	suffix	0.50	lexical_contaminated	high
 kiang	beside	function_word		4819	prefix		0	high_freq_contamination	auto	kiang.beside.function_word		1.00	lexical_contaminated	high
-pen	TOP	particle		4816	prefix|suffix		0	high_freq_contamination	auto	pen.TOP.particle		1.00	lexical_contaminated	high
-in	CVB	case_marker		4213	suffix	01001012|01001012|01001027|01002010|01002016	1		auto	in.CVB.case_marker	suffix	0.00	grammatical_only	low
-ta	child	function_word		3975	prefix|stem|suffix	14006016|14007018|15006009|18005024|20031011	1	high_freq_contamination	auto	ta.child.function_word	stem	0.67	lexical_contaminated	high
+pen	TOP	particle		4815	prefix|suffix		0	high_freq_contamination	auto	pen.TOP.particle		1.00	lexical_contaminated	high
+in	CVB	case_marker		4331	suffix	01001012|01001012|01001027|01002010|01002016	1		auto	in.CVB.case_marker	suffix	0.00	grammatical_only	low
+ta	child	function_word		3963	prefix|stem|suffix	23024014|23043004|27002043|40007021|40010028	1	high_freq_contamination	auto	ta.child.function_word	stem	0.67	lexical_contaminated	high
 man	reason	function_word		3614	prefix|suffix		0	high_freq_contamination	auto	man.reason.function_word		1.00	lexical_contaminated	high
 hang	because	function_word		3548	prefix		0	high_freq_contamination	auto	hang.because.function_word		1.00	lexical_contaminated	high
 zong	also	particle		3512	prefix		0	high_freq_contamination	auto	zong.also.particle		1.00	lexical_contaminated	high
@@ -44,13 +44,13 @@ nang	2SG.PRO	function_word		2115	prefix		0	high_freq_contamination	auto	nang.2SG
 mah	EMPH	particle		1992	prefix|stem|suffix		0	high_freq_contamination	auto	mah.EMPH.particle		1.00	lexical_contaminated	high
 a	LOC	function_word		1974	prefix|stem|suffix	10011025|14006013|14014011|14020017|14035022	0	high_freq_contamination	auto	a.LOC.function_word	stem	0.67	lexical_contaminated	high
 in	QUOT	case_marker		1938	suffix	01001004|01001010|01001012|01001016|01001021	1		auto	in.QUOT.case_marker	suffix	0.00	grammatical_only	low
-pih	APPL	tam_suffix		1894	prefix|stem|suffix	01002019|01002022|01004003|01004004|01006019	0	high_freq_contamination	auto	pih.APPL.tam_suffix	suffix	0.67	lexical_contaminated	high
-sawm	ten	function_word		1892	prefix|stem|suffix	66011013|66012004	0	high_freq_contamination	auto	sawm.ten.function_word	stem	0.67	lexical_contaminated	high
+pih	APPL	tam_suffix		1898	prefix|stem|suffix	01002019|01002022|01004003|01004004|01006019	0	high_freq_contamination	auto	pih.APPL.tam_suffix	suffix	0.67	lexical_contaminated	high
+sawm	ten	function_word		1894	prefix|stem|suffix	66011013|66012004	0	high_freq_contamination	auto	sawm.ten.function_word	stem	0.67	lexical_contaminated	high
 i	1PL.INCL	pronominal_prefix		1774	prefix	01003022|01005029|01005029|01011004|01013008	0		auto	i.1PL.INCL.pronominal_prefix	prefix	0.00	grammatical_only	low
 tu	now	function_word		1756	prefix		0	high_freq_contamination	auto	tu.now.function_word		1.00	lexical_contaminated	high
 nadingin	PURP.ERG	function_word		1671	prefix		0	high_freq_contamination	auto	nadingin.PURP.ERG.function_word		1.00	lexical_contaminated	high
-la	take	function_word		1591	prefix|stem|suffix	03002014|05028048|06003016|06009006|06009013	0	high_freq_contamination	auto	la.take.function_word	stem	0.67	lexical_contaminated	high
-kik	ITER	function_word		1577	prefix|stem|suffix	03025026|03025033|05030008|05032035|06004018	0	high_freq_contamination	auto	kik.ITER.function_word	stem	0.67	lexical_contaminated	high
+kik	ITER	function_word		1639	prefix|stem|suffix	03025024|03025026|03025033|05030008|05032035	0	high_freq_contamination	auto	kik.ITER.function_word	stem	0.67	lexical_contaminated	high
+la	take	function_word		1553	prefix|stem|suffix	05028048|06003016|06009006|06009013|08002003	0	high_freq_contamination	auto	la.take.function_word	stem	0.67	lexical_contaminated	high
 amau	3PL.PRO.POSS	function_word		1407	prefix		0	high_freq_contamination	auto	amau.3PL.PRO.POSS.function_word		1.00	lexical_contaminated	high
 nih	two	function_word		1384	prefix|stem|suffix	01018031|02026019|02026020|02036024|10009013	0	high_freq_contamination	auto	nih.two.function_word	stem	0.67	lexical_contaminated	high
 un	PL.IMP	function_word		1217	prefix|suffix		0	high_freq_contamination	auto	un.PL.IMP.function_word		1.00	lexical_contaminated	high
@@ -60,28 +60,28 @@ khit	SEQ	function_word		1022	prefix|stem	09016001|40008004|43005006|43016030|440
 keima	1SG.self	function_word		1017	prefix		0	high_freq_contamination	auto	keima.1SG.self.function_word		1.00	lexical_contaminated	high
 nangma	2SG.self	function_word		1016	prefix		0	high_freq_contamination	auto	nangma.2SG.self.function_word		1.00	lexical_contaminated	high
 inla	and.then	function_word		986	prefix		0	moderate_contamination	auto	inla.and.then.function_word		1.00	lexical_contaminated	medium
-ta	PFV	tam_suffix		975	prefix|stem|suffix	01001020|01005004|01005007|01005010|01005013	1	moderate_contamination	auto	ta.PFV.tam_suffix	suffix	0.67	lexical_contaminated	medium
-thum	three	function_word		967	prefix|stem|suffix	10023013|10023018|10023018|10023019|10023023	0	moderate_contamination	auto	thum.three.function_word	stem	0.67	lexical_contaminated	medium
+ta	PFV	tam_suffix		979	prefix|stem|suffix	01001020|01005004|01005007|01005010|01005013	1	moderate_contamination	auto	ta.PFV.tam_suffix	suffix	0.67	lexical_contaminated	medium
+thum	three	function_word		968	prefix|stem|suffix	10023013|10023018|10023018|10023019|10023023	0	moderate_contamination	auto	thum.three.function_word	stem	0.67	lexical_contaminated	medium
 keimah	1SG.PRO	function_word		936	prefix		0	moderate_contamination	auto	keimah.1SG.PRO.function_word		1.00	lexical_contaminated	medium
+khia	out	directional_verb		861	prefix|stem|suffix		0	moderate_contamination	auto	khia.out.directional_verb		1.00	lexical_contaminated	medium
 bek	only	particle		805	prefix|stem|suffix		0	moderate_contamination	auto	bek.only.particle		1.00	lexical_contaminated	medium
 dong	until	function_word		786	prefix|stem	23033018|40005046|40009011|40011019|40017024	0	moderate_contamination	auto	dong.until.function_word	stem	0.50	lexical_contaminated	medium
 note	2PL.PRO.POSS	function_word		785	prefix		0	moderate_contamination	auto	note.2PL.PRO.POSS.function_word		1.00	lexical_contaminated	medium
 la	and	function_word		782	suffix		0	moderate_contamination	auto	la.and.function_word		1.00	lexical_contaminated	medium
-khia	out	directional_verb		776	prefix|stem|suffix		0	moderate_contamination	auto	khia.out.directional_verb		1.00	lexical_contaminated	medium
 nong	2→1	function_word		752	prefix		0	moderate_contamination	auto	nong.2→1.function_word		1.00	lexical_contaminated	medium
 tampi	many	function_word		732	prefix		0	moderate_contamination	auto	tampi.many.function_word		1.00	lexical_contaminated	medium
 nuam	want	auxiliary		732	prefix|stem|suffix	02020024|02024005|02029028|02032006|03003001	0	moderate_contamination	auto	nuam.want.auxiliary	stem	0.67	lexical_contaminated	medium
 nangmah	2SG.PRO	function_word		710	prefix		0	moderate_contamination	auto	nangmah.2SG.PRO.function_word		1.00	lexical_contaminated	medium
+zo	COMPL	tam_suffix		702	stem|suffix	01014022|01019019|01026032|01029032|01031009	1	moderate_contamination	auto	zo.COMPL.tam_suffix	suffix	0.50	lexical_contaminated	medium
 in	INST	case_marker		701	suffix	01002010|01003017|01006004|01007018|01007020	1		auto	in.INST.case_marker	suffix	0.00	grammatical_only	low
 un	IMP	function_word		687	suffix		0	moderate_contamination	auto	un.IMP.function_word		1.00	lexical_contaminated	medium
-zo	COMPL	tam_suffix		684	stem|suffix	01014022|01019019|01026032|01029032|01031009	1	moderate_contamination	auto	zo.COMPL.tam_suffix	suffix	0.50	lexical_contaminated	medium
 kote	1PL.PRO	function_word		682	prefix		0	moderate_contamination	auto	kote.1PL.PRO.function_word		1.00	lexical_contaminated	medium
 kuamah	nobody	function_word		664	prefix		0	moderate_contamination	auto	kuamah.nobody.function_word		1.00	lexical_contaminated	medium
-loh	NEG	inflection		658	prefix|stem|suffix	01021025|01022012|01030001|01031002|01031005	0	moderate_contamination	auto	loh.NEG.inflection	prefix|suffix	0.33	mixed	medium
 bang	same	function_word		629	stem|suffix	42023040|45014005|48003028	1	moderate_contamination	auto	bang.same.function_word	stem	0.50	lexical_contaminated	medium
 eite	1PL.PRO	function_word		618	prefix		0	moderate_contamination	auto	eite.1PL.PRO.function_word		1.00	lexical_contaminated	medium
 amaute	3PL.PRO.POSS	function_word		610	prefix		0	moderate_contamination	auto	amaute.3PL.PRO.POSS.function_word		1.00	lexical_contaminated	medium
 tua	DIST	function_word		603	prefix		0	moderate_contamination	auto	tua.DIST.function_word		1.00	lexical_contaminated	medium
+loh	NEG	inflection		597	prefix|stem|suffix	01021025|01022012|01030001|01031002|01031005	0	moderate_contamination	auto	loh.NEG.inflection	prefix|suffix	0.33	mixed	medium
 man	finish	function_word		590	prefix		0	moderate_contamination	auto	man.finish.function_word		1.00	lexical_contaminated	medium
 kua	who	function_word		555	prefix|stem	02012009|03001009|03001013|03003003|03003009	0	moderate_contamination	auto	kua.who.function_word	stem	0.50	lexical_contaminated	medium
 bang	what	function_word		536	prefix		1	moderate_contamination	auto	bang.what.function_word		1.00	lexical_contaminated	medium
@@ -106,23 +106,24 @@ ulian	elder	function_word		315	prefix		0	moderate_contamination	auto	ulian.elder
 uhleh	2/3PL.if	function_word		306	prefix		0	moderate_contamination	auto	uhleh.2/3PL.if.function_word		1.00	lexical_contaminated	medium
 te	TE.POSS	plural_marker		299	suffix	01010001|01014001|01014011|02005003|02006003	1		auto	te.TE.POSS.plural_marker	suffix	0.00	grammatical_only	low
 up	believe	function_word		295	prefix		0	moderate_contamination	auto	up.believe.function_word		1.00	lexical_contaminated	medium
-pen	SUPER	function_word		270	prefix|stem|suffix	01027015|05032014|05033013|05033014|05033014	0	moderate_contamination	auto	pen.SUPER.function_word	stem	0.67	lexical_contaminated	medium
-nuai	below	function_word		258	prefix|stem|suffix	01014004|01045008|02020004|04004033|05005008	0	moderate_contamination	auto	nuai.below.function_word	stem	0.67	lexical_contaminated	medium
+khin	COMPL	tam_suffix		271	prefix		0	moderate_contamination	auto	khin.COMPL.tam_suffix		1.00	lexical_contaminated	medium
+pen	SUPER	function_word		271	prefix|stem|suffix	01027015|05032014|05033013|05033014|05033014	0	moderate_contamination	auto	pen.SUPER.function_word	stem	0.67	lexical_contaminated	medium
+nuai	below	function_word		259	prefix|stem|suffix	01014004|01045008|02020004|04004033|05005008	0	moderate_contamination	auto	nuai.below.function_word	stem	0.67	lexical_contaminated	medium
 guk	six	function_word		258	prefix|stem|suffix	05003004|06013030|07017002|26045013|26045013	0	moderate_contamination	auto	guk.six.function_word	stem	0.67	lexical_contaminated	medium
 lai	still	tam_suffix		258	stem|suffix	01008022|01011025|01014010|01015002|01019016	0	moderate_contamination	auto	lai.still.tam_suffix	suffix	0.50	lexical_contaminated	medium
 ta	NMLZ	function_word		227	stem|suffix	13029015|19069002|25003054|26022007|26022029	1	moderate_contamination	auto	ta.NMLZ.function_word	stem	0.50	lexical_contaminated	medium
-thei	ABIL	auxiliary		220	stem|suffix	05030005|18042010|20027012|23013011|24009024	1	moderate_contamination	auto	thei.ABIL.auxiliary	stem	0.50	lexical_contaminated	medium
+thei	ABIL	auxiliary		219	stem|suffix	05030005|18042010|20027012|23013011|24009024	1	moderate_contamination	auto	thei.ABIL.auxiliary	stem	0.50	lexical_contaminated	medium
 kong	road	function_word		217	prefix|stem|suffix	06006026|07005011|13009023|14014007|14023019	0	moderate_contamination	auto	kong.road.function_word	stem	0.67	lexical_contaminated	medium
 mateng	until	function_word		214	prefix		0	moderate_contamination	auto	mateng.until.function_word		1.00	lexical_contaminated	medium
 kote	1PL.PRO.POSS	function_word		206	prefix		0	moderate_contamination	auto	kote.1PL.PRO.POSS.function_word		1.00	lexical_contaminated	medium
 leuleu	again	function_word		193	prefix		0	moderate_contamination	auto	leuleu.again.function_word		1.00	lexical_contaminated	medium
-tung	arrive	directional_verb		193	prefix|stem|suffix		1	moderate_contamination	auto	tung.arrive.directional_verb		1.00	lexical_contaminated	medium
 kei	NEG.EMPH.POSS	function_word		187	prefix		0	moderate_contamination	auto	kei.NEG.EMPH.POSS.function_word		1.00	lexical_contaminated	medium
 bangci	how	function_word		180	prefix		0	moderate_contamination	auto	bangci.how.function_word		1.00	lexical_contaminated	medium
 eite	1PL.PRO.POSS	function_word		176	prefix		0	moderate_contamination	auto	eite.1PL.PRO.POSS.function_word		1.00	lexical_contaminated	medium
 thum	entreat	function_word		160	prefix		0	moderate_contamination	auto	thum.entreat.function_word		1.00	lexical_contaminated	medium
 tu	that	function_word		157	prefix		0	moderate_contamination	auto	tu.that.function_word		1.00	lexical_contaminated	medium
 veve	still	function_word		137	prefix		0	moderate_contamination	auto	veve.still.function_word		1.00	lexical_contaminated	medium
+tung	arrive	directional_verb		136	prefix|stem|suffix		1	moderate_contamination	auto	tung.arrive.directional_verb		1.00	lexical_contaminated	medium
 kik	again	tam_suffix		131	prefix|stem|suffix	01050015|02032034|05032041|09018025|14029035	0	moderate_contamination	auto	kik.again.tam_suffix	suffix	0.67	lexical_contaminated	medium
 hinapi	but.ERG	function_word		129	prefix		0	moderate_contamination	auto	hinapi.but.ERG.function_word		1.00	lexical_contaminated	medium
 pualam	outside	function_word		128	prefix		0	moderate_contamination	auto	pualam.outside.function_word		1.00	lexical_contaminated	medium
@@ -131,8 +132,8 @@ khempeuh	all.POSS	function_word		122	prefix		0	moderate_contamination	auto	khemp
 bek	sleep	function_word		116	prefix|suffix		0	moderate_contamination	auto	bek.sleep.function_word		1.00	lexical_contaminated	medium
 uh	PL	plural_marker		115	stem		0	moderate_contamination	auto	uh.PL.plural_marker		1.00	lexical_contaminated	medium
 a	NOM	function_word		106	prefix|stem|suffix	01045023|04010005|04010006|12018005|13002050	0	moderate_contamination	auto	a.NOM.function_word	stem	0.67	lexical_contaminated	medium
+man	true	function_word		104	prefix|stem|suffix	01047029|05016019|05022020|07009016|07009019	0	moderate_contamination	auto	man.true.function_word	stem	0.67	lexical_contaminated	medium
 nang	2SG.PRO.POSS	function_word		104	prefix		0	moderate_contamination	auto	nang.2SG.PRO.POSS.function_word		1.00	lexical_contaminated	medium
-man	true	function_word		103	prefix|stem|suffix	01047029|05016019|05022020|07009016|07009019	0	moderate_contamination	auto	man.true.function_word	stem	0.67	lexical_contaminated	medium
 in	IN	case_marker		102	suffix	01024042|01035001|01041009|01041055|02006011	1		auto	in.IN.case_marker	suffix	0.00	grammatical_only	low
 matengin	until	function_word		99	prefix		0		auto	matengin.until.function_word		1.00	lexical_contaminated	low
 ulian	PL.elder	function_word		98	prefix		0		auto	ulian.PL.elder.function_word		1.00	lexical_contaminated	low
@@ -150,11 +151,12 @@ lo	field	function_word		72	prefix|stem	28002017	0		auto	lo.field.function_word	s
 mah	self	function_word		71	prefix|stem|suffix	01009006|02011006|02027019|02034010|03011024	0		auto	mah.self.function_word	stem	0.67	lexical_contaminated	low
 khit	after	function_word		65	prefix|suffix		0		auto	khit.after.function_word		1.00	lexical_contaminated	low
 tuamtuam	various	function_word		63	prefix		0		auto	tuamtuam.various.function_word		1.00	lexical_contaminated	low
-kik	return	function_word		60	prefix|stem|suffix	03025024|06023012|12003027|12008001|12008005	0		auto	kik.return.function_word	stem	0.67	lexical_contaminated	low
 up	PL.Q	function_word		60	prefix		0		auto	up.PL.Q.function_word		1.00	lexical_contaminated	low
+kik	return	function_word		59	prefix|stem|suffix	06023012|12003027|12008001|12008005|12008005	0		auto	kik.return.function_word	stem	0.67	lexical_contaminated	low
 uha	2/3PL.LOC	function_word		56	prefix		0		auto	uha.2/3PL.LOC.function_word		1.00	lexical_contaminated	low
 ah	AH	function_word		55	stem|suffix	05026012	0		auto	ah.AH.function_word	stem	0.50	lexical_contaminated	low
 kei	NEG.EMPH	function_word		54	stem	02028043|03008035|03018028|03019017|03022009	0		auto	kei.NEG.EMPH.function_word	stem	0.00	grammatical_only	low
+la	field	function_word		53	prefix|stem|suffix	03002014|20025025|23005026|23033013|23049001	0		auto	la.field.function_word	stem	0.67	lexical_contaminated	low
 ih	1PL	inflection		52	prefix	01028011|01031040|09009025|09026007|09026012	0		auto	ih.1PL.inflection	prefix	0.00	grammatical_only	low
 tu	son	function_word		49	prefix		0		auto	tu.son.function_word		1.00	lexical_contaminated	low
 ei	1PL.EXCL	pronominal_prefix		48	prefix	01001026|01011004|01031037|01034023|01042002	0		auto	ei.1PL.EXCL.pronominal_prefix	prefix	0.00	grammatical_only	low
@@ -164,9 +166,9 @@ ciatin	each.kind.ERG	function_word		45	prefix		0		auto	ciatin.each.kind.ERG.func
 kua	nine	function_word		45	suffix		0		auto	kua.nine.function_word		1.00	lexical_contaminated	low
 uh	PL.IMP	function_word		44	suffix		0		auto	uh.PL.IMP.function_word		1.00	lexical_contaminated	low
 nangawnin	henceforth	function_word		43	prefix		0		auto	nangawnin.henceforth.function_word		1.00	lexical_contaminated	low
-man	price	function_word		42	prefix|stem|suffix	11010010|14009001|14009009|14009010|14032027	0		auto	man.price.function_word	stem	0.67	lexical_contaminated	low
 un	time	function_word		42	suffix		0		auto	un.time.function_word		1.00	lexical_contaminated	low
 itin	lovingly	function_word		41	prefix		0		auto	itin.lovingly.function_word		1.00	lexical_contaminated	low
+man	price	function_word		41	prefix|stem|suffix	11010010|14009001|14009009|14009010|14032027	0		auto	man.price.function_word	stem	0.67	lexical_contaminated	low
 kawmin	while	function_word		39	prefix		0		auto	kawmin.while.function_word		1.00	lexical_contaminated	low
 napi	but	function_word		39	prefix		0		auto	napi.but.function_word		1.00	lexical_contaminated	low
 bangci	how.ERG	function_word		38	prefix		0		auto	bangci.how.ERG.function_word		1.00	lexical_contaminated	low
@@ -190,9 +192,9 @@ hinapi	but	function_word		27	prefix		0		auto	hinapi.but.function_word		1.00	lexi
 man	finish.POSS	function_word		26	prefix		0		auto	man.finish.POSS.function_word		1.00	lexical_contaminated	low
 nangmahmah	2SG.EMPH.REDUP	function_word		26	prefix		0		auto	nangmahmah.2SG.EMPH.REDUP.function_word		1.00	lexical_contaminated	low
 a	LOC.POSS	function_word		26	suffix		0		auto	a.LOC.POSS.function_word		1.00	lexical_contaminated	low
+hong	come	directional_verb		25	stem|suffix		1		auto	hong.come.directional_verb		1.00	lexical_contaminated	low
 li	flow	function_word		25	stem|suffix	40017027|41003007|41007031	0		auto	li.flow.function_word	stem	0.50	lexical_contaminated	low
 giat	hate	function_word		25	prefix		0		auto	giat.hate.function_word		1.00	lexical_contaminated	low
-hong	come	directional_verb		22	stem|suffix		1		auto	hong.come.directional_verb		1.00	lexical_contaminated	low
 a	A.POSS	function_word		21	suffix		0		auto	a.A.POSS.function_word		1.00	lexical_contaminated	low
 gige	HAB	tam_suffix		20	prefix		0		auto	gige.HAB.tam_suffix		1.00	lexical_contaminated	low
 a	A	function_word		19	suffix		0		auto	a.A.function_word		1.00	lexical_contaminated	low
@@ -219,8 +221,8 @@ hang	battle	function_word		13	stem	04031027|07021010|13005024|13007002|13007007	
 sung	mother.in.law	function_word		13	prefix		0		auto	sung.mother.in.law.function_word		1.00	lexical_contaminated	low
 khit	end	function_word		13	suffix		0		auto	khit.end.function_word		1.00	lexical_contaminated	low
 k	NMLZ	inflection		12	stem		0		auto	k.NMLZ.inflection		1.00	lexical_contaminated	low
+ta	firmly	function_word		12	stem	14006016|14007018|15006009|18005024|20031011	1		auto	ta.firmly.function_word	stem	0.00	grammatical_only	low
 man	time	function_word		12	prefix		0		auto	man.time.function_word		1.00	lexical_contaminated	low
-ta	PERF	function_word		12	stem|suffix	23037031|23045020|23049006|36002009|38008011	1		auto	ta.PERF.function_word	stem	0.50	lexical_contaminated	low
 a	NOM.POSS	function_word		11	suffix		0		auto	a.NOM.POSS.function_word		1.00	lexical_contaminated	low
 dong	reach	function_word		11	suffix		0		auto	dong.reach.function_word		1.00	lexical_contaminated	low
 kong	door	function_word		11	prefix		0		auto	kong.door.function_word		1.00	lexical_contaminated	low
@@ -231,7 +233,6 @@ nate	NMLZ	inflection		10	prefix	03006002|05004019|05028067|12012004|18036018	0		
 ka	1SG.POSS	function_word		10	prefix		0		auto	ka.1SG.POSS.function_word		1.00	lexical_contaminated	low
 tu	stand	function_word		10	stem	14006013|15010009|17005002|17006005|40026058	0		auto	tu.stand.function_word	stem	0.00	grammatical_only	low
 ka	high	function_word		10	stem|suffix	26038012|30005016|34002004|40011016|42007032	0		auto	ka.high.function_word	stem	0.50	lexical_contaminated	low
-la	field	function_word		10	prefix|stem|suffix	20025025|23005026|23033013|23049001|26023040	0		auto	la.field.function_word	stem	0.67	lexical_contaminated	low
 ka	edge	function_word		9	stem|suffix	01019016	0		auto	ka.edge.function_word	stem	0.50	lexical_contaminated	low
 la	LOC	function_word		9	stem	01022004|02020018|02020021|09026013|20027010	0		auto	la.LOC.function_word	stem	0.00	grammatical_only	low
 bah	PL	inflection		9	stem		0		auto	bah.PL.inflection		1.00	lexical_contaminated	low
@@ -261,13 +262,13 @@ man	ERG	function_word		7	stem	12025029|12025030|16010031|16010031|24033020	0		au
 guk	good	function_word		7	prefix		0		auto	guk.good.function_word		1.00	lexical_contaminated	low
 kei	with	function_word		7	suffix		0		auto	kei.with.function_word		1.00	lexical_contaminated	low
 sung	from	function_word		7	suffix		0		auto	sung.from.function_word		1.00	lexical_contaminated	low
+ta	PERF	function_word		7	stem	23037031|23045020|23049006|36002009|38008011	1		auto	ta.PERF.function_word	stem	0.00	grammatical_only	low
 tuazawh	after.that	function_word		7	prefix		0		auto	tuazawh.after.that.function_word		1.00	lexical_contaminated	low
-tawh	meet	function_word		6	prefix		1		auto	tawh.meet.function_word		1.00	lexical_contaminated	low
 a	Q	function_word		6	suffix		0		auto	a.Q.function_word		1.00	lexical_contaminated	low
 siansuah	ERG	inflection		6	stem		0		auto	siansuah.ERG.inflection		1.00	lexical_contaminated	low
+tu	this	function_word		6	prefix		0		auto	tu.this.function_word		1.00	lexical_contaminated	low
 hloh	NEG	inflection		6	suffix	03026013|06011015|09025026|40026063|47012011	0		auto	hloh.NEG.inflection	suffix	0.00	grammatical_only	low
 bang	equal	function_word		6	stem	04010007|19035005|19129003|19129005|46016017	1		auto	bang.equal.function_word	stem	0.00	grammatical_only	low
-tawh	burn	function_word		6	prefix|stem	19106040|24015014|24017004	1		auto	tawh.burn.function_word	stem	0.50	lexical_contaminated	low
 sawm	ten.thousand	function_word		6	prefix		0		auto	sawm.ten.thousand.function_word		1.00	lexical_contaminated	low
 daih	ABIL	inflection		6	stem		0		auto	daih.ABIL.inflection		1.00	lexical_contaminated	low
 n	PST	inflection		6	suffix	12009016|14021004|41004036|42023027|43010001	0		auto	n.PST.inflection	suffix	0.00	grammatical_only	low
@@ -279,7 +280,6 @@ la	harvest	function_word		6	suffix		0		auto	la.harvest.function_word		1.00	lexic
 kong	way	function_word		6	prefix		0		auto	kong.way.function_word		1.00	lexical_contaminated	low
 lem	ERG	inflection		6	stem		0		auto	lem.ERG.inflection		1.00	lexical_contaminated	low
 up	look	function_word		6	prefix		0		auto	up.look.function_word		1.00	lexical_contaminated	low
-tu	this	function_word		5	prefix		0		auto	tu.this.function_word		1.00	lexical_contaminated	low
 kei	owl	function_word		5	prefix		0		auto	kei.owl.function_word		1.00	lexical_contaminated	low
 ta	cut	function_word		5	prefix		1		auto	ta.cut.function_word		1.00	lexical_contaminated	low
 hang	stallion	function_word		5	prefix		0		auto	hang.stallion.function_word		1.00	lexical_contaminated	low
@@ -298,7 +298,6 @@ amau	3PL	function_word		5	prefix		0		auto	amau.3PL.function_word		1.00	lexical_c
 ul	EMPH	inflection		4	suffix	01003019|18037017|26044018|42022044	0		auto	ul.EMPH.inflection	suffix	0.00	grammatical_only	low
 man	person	function_word		4	suffix		0		auto	man.person.function_word		1.00	lexical_contaminated	low
 note	NOTE	function_word		4	prefix		0		auto	note.NOTE.function_word		1.00	lexical_contaminated	low
-li	separate	function_word		4	prefix		0		auto	li.separate.function_word		1.00	lexical_contaminated	low
 li	river	function_word		4	prefix		0		auto	li.river.function_word		1.00	lexical_contaminated	low
 peuhpeuh	every.POSS	function_word		4	prefix		0		auto	peuhpeuh.every.POSS.function_word		1.00	lexical_contaminated	low
 lo	garlic	function_word		4	prefix		0		auto	lo.garlic.function_word		1.00	lexical_contaminated	low
@@ -312,7 +311,6 @@ ta	PRF	function_word		4	suffix		1		auto	ta.PRF.function_word		1.00	lexical_conta
 tak	ERG	inflection		4	stem		0		auto	tak.ERG.inflection		1.00	lexical_contaminated	low
 hong	open	directional_verb		4	stem		1		auto	hong.open.directional_verb		1.00	lexical_contaminated	low
 kei	1SG	function_word		4	prefix|stem|suffix	22004008	0		auto	kei.1SG.function_word	stem	0.67	lexical_contaminated	low
-al	PL	inflection		4	stem		0		auto	al.PL.inflection		1.00	lexical_contaminated	low
 dong	beat	function_word		4	prefix|stem	24023035	0		auto	dong.beat.function_word	stem	0.50	lexical_contaminated	low
 khit	still	function_word		4	suffix		0		auto	khit.still.function_word		1.00	lexical_contaminated	low
 leh	again	function_word		4	prefix		0		auto	leh.again.function_word		1.00	lexical_contaminated	low
@@ -327,6 +325,7 @@ giat	train	function_word		3	prefix		0		auto	giat.train.function_word		1.00	lexic
 ta	hold	function_word		3	suffix		1		auto	ta.hold.function_word		1.00	lexical_contaminated	low
 bang	door	function_word		3	prefix		1		auto	bang.door.function_word		1.00	lexical_contaminated	low
 masa	first.POSS	function_word		3	prefix		0		auto	masa.first.POSS.function_word		1.00	lexical_contaminated	low
+li	separate	function_word		3	prefix		0		auto	li.separate.function_word		1.00	lexical_contaminated	low
 i	curtain	function_word		3	stem	02026009|02036010|02036016	0		auto	i.curtain.function_word	stem	0.00	grammatical_only	low
 hang	oppose	function_word		3	stem	03002014|10010012|27010019	0		auto	hang.oppose.function_word	stem	0.00	grammatical_only	low
 man	value	function_word		3	prefix		0		auto	man.value.function_word		1.00	lexical_contaminated	low
@@ -344,7 +343,6 @@ zong	more~REDUP	function_word		3	prefix		0		auto	zong.more~REDUP.function_word		
 ding	tree	irrealis_marker		3	suffix		1		auto	ding.tree.irrealis_marker		1.00	lexical_contaminated	low
 kong	mouth	function_word		3	prefix		0		auto	kong.mouth.function_word		1.00	lexical_contaminated	low
 lo	tribute	function_word		3	prefix		0		auto	lo.tribute.function_word		1.00	lexical_contaminated	low
-tawh	with	function_word		3	prefix|stem	23022005	1		auto	tawh.with.function_word	stem	0.50	lexical_contaminated	low
 li	hide	function_word		3	prefix		0		auto	li.hide.function_word		1.00	lexical_contaminated	low
 la	drop	function_word		3	prefix		0		auto	la.drop.function_word		1.00	lexical_contaminated	low
 ta	again	function_word		3	stem	19085006|26037005|26037006	1		auto	ta.again.function_word	stem	0.00	grammatical_only	low
@@ -456,7 +454,6 @@ zong	accustom	function_word		1	prefix		0		auto	zong.accustom.function_word		1.00
 le	or	function_word		1	stem	24015005	0		auto	le.or.function_word	stem	0.00	grammatical_only	low
 nuai	oppress	function_word		1	prefix		0		auto	nuai.oppress.function_word		1.00	lexical_contaminated	low
 pina	PL	inflection		1	stem		0		auto	pina.PL.inflection		1.00	lexical_contaminated	low
-tawh	?	function_word		1	stem	26015004	1		auto	tawh.?.function_word	stem	0.00	grammatical_only	low
 ka	1SG.GEN	function_word		1	prefix		0		auto	ka.1SG.GEN.function_word		1.00	lexical_contaminated	low
 pen	thing	function_word		1	prefix		0		auto	pen.thing.function_word		1.00	lexical_contaminated	low
 lem	PL	inflection		1	stem		0		auto	lem.PL.inflection		1.00	lexical_contaminated	low

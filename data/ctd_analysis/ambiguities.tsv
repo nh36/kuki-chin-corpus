@@ -479,7 +479,6 @@ Jeremiah	jeremiah	Jeremiah'	Jeremiah	JEREMIAH.POSS	Jeremiah		PROP		high	12023031
 tuuhon	tuuhon	tuuhon	Tuuhon	poor.person	tuuhon		N		high	01004004	56	multi_segmentation:2	auto_resolved
 Josiah	josiah	Josiah	Josiah'	JOSIAH	Josiah		PROP		high	11013002	56	multi_segmentation:2	auto_resolved
 sawltak	sawltak	sawltak	Sawltak	servant	sawltak		N		high	14024011	56	multi_segmentation:2	auto_resolved
-gil	gil	gil	Gil	stomach	gil		N		high	01025023	55	multi_segmentation:2	auto_resolved
 naupangte	naupangte	nau-pang-te	Naupangte'|naupangte'	child-small-PL	nau	naupangte	N	PRON	high	01025027	55	multi_segmentation:3|multi_lemma:2|multi_pos:N|PRON	needs_review
 lutangte	lutangte	lutang-te	lutangte'	chief-PL	lutang	lutangte	N	PRON	high	01036019	55	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	needs_review
 hiang	hiang	hiang	Hiang	branch	hiang		N		high	01040010	55	multi_segmentation:2	auto_resolved
@@ -490,7 +489,7 @@ khialh	khialh	khialh	Khialh	sin	khial		V		high	01020006	54	multi_segmentation:2	
 lau-in	lau-in	lau-in	Lau-in	fear-ERG	lau	Lau-In	FUNC	PROP	high	01032007	54	multi_segmentation:2|multi_lemma:2|multi_pos:FUNC|PROP	needs_review
 pian	pian	pian	pian'	be.born	pian		V	PRON	high	01050020	54	multi_segmentation:2|multi_pos:PRON|V	needs_review
 lamdangte	lamdangte	lam-dang-te	lamdangte'	way-other-PL	lam	lamdangte	N	PRON	high	02003020	54	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	needs_review
-ki	ki	ki	Ki|ki'	REFL	Ki	ki	PROP	PRON	high	01021012	53	multi_segmentation:3|multi_lemma:2|multi_pos:PRON|PROP	needs_review
+ki	ki	ki	ki'	REFL	Ki	ki	PROP	PRON	high	01021012	53	multi_segmentation:2|multi_lemma:2|multi_pos:PRON|PROP	needs_review
 suangmanpha	suangmanpha	suangmanpha	Suangmanpha	precious.stone	suangmanpha		N		high	02024010	53	multi_segmentation:2	auto_resolved
 ukpi	ukpi	ukpi	Ukpi	duke	ukpi		N		high	04003024	53	multi_segmentation:2	auto_resolved
 mualte	mualte	mual-te	Mualte'|mualte'	mountain-PL	mual	mualte	N	PRON	high	04023007	53	multi_segmentation:3|multi_lemma:2|multi_pos:N|PRON	needs_review
@@ -576,7 +575,6 @@ James	james	James	James'	JAMES	James		PROP		high	40004021	41	multi_segmentation:
 Judas	judas	Judas	Judas'	JUDAS	Judas		PROP		high	40010004	41	multi_segmentation:2	auto_resolved
 Hebron	hebron	Hebron	Hebron'	HEBRON	Hebron		PROP		high	01013018	40	multi_segmentation:2	auto_resolved
 Asher	asher	Asher	Asher'	ASHER	Asher		PROP		high	01030013	40	multi_segmentation:2	auto_resolved
-khauh	khauh	khau-h		rope-?	khau		N		low	01042007	40	partial_gloss|confidence_low	needs_review
 ha	ha	ha	Ha|ha'	tooth	ha		ADJ		high	01049012	40	multi_segmentation:3	auto_resolved
 site	site	si-te	site'	die-PL	si	site	N	PRON	high	02014030	40	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
 Amaziah	amaziah	Amaziah	Amaziah'	AMAZIAH	Amaziah		PROP		high	12012021	40	multi_segmentation:2	auto_resolved
@@ -587,7 +585,7 @@ Tuaci	tuaci	Tuaci	tuaci	man	tuaci		N		high	01031027	39	multi_segmentation:2	auto
 ulianpa	ulianpa	u-lian-pa	u-lian-pa'	elder-great-M	u		N	PRON	high	01034002	39	multi_segmentation:2|multi_pos:N|PRON	low_priority
 gamkhing	gamkhing	gamkhing	Gamkhing	desolate	gamkhing		N		high	02023029	39	multi_segmentation:2	auto_resolved
 Sin	sin	Sin	sin	SIN	Sin	sin	PROP	N	high	01010017	38	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	low_priority
-langte	langte	lang-te	langte'	side-PL	lang	langte	N	PRON	high	02015007	38	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
+langte	langte	lang-te	langte'	clear-PL	lang	langte	N	PRON	high	02015007	38	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
 meiipi	meiipi	meiipi	Meiipi	leprous	meiipi		V		high	04012010	38	multi_segmentation:2	auto_resolved
 Kaleb	kaleb	Kaleb	Kaleb'	KALEB	Kaleb		PROP		high	04013003	38	multi_segmentation:2	auto_resolved
 cimawhte	cimawhte	cimawh-te	cimawhte'	oppress-PL	cimawh	cimawhte	N	PRON	high	09002008	38	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
@@ -798,7 +796,6 @@ hawk	hawk	hawk	Hawk	roar	hawk		N		high	14029034	21	multi_segmentation:2	auto_res
 Sairas	sairas	Sairas'	Sairas	SAIRAS.POSS	Sairas		PROP		high	14036022	21	multi_segmentation:2	auto_resolved
 hahkat	hahkat	hahkat	Hahkat	man	hahkat		N		high	16006009	21	multi_segmentation:2	auto_resolved
 mihaute	mihaute	mi-hau-te	mi-hau-te'	person-rich-PL	mi		N	PRON	high	18034019	21	multi_segmentation:2|multi_pos:N|PRON	low_priority
-kicingin	kicingin	kici-ngin		call.PASS-?	kici		V		low	01015015	20	partial_gloss|confidence_low	needs_review
 Naaman	naaman	Naaman	Naaman'	NAAMAN	Naaman		PROP		high	01046021	20	multi_segmentation:2	auto_resolved
 khangnote	khangnote	khang-no-te	Khangnote'|khang-no-te'	youth	khang	Khangnote	N	PRON|PROP	high	02010009	20	multi_segmentation:3|multi_lemma:2|multi_pos:N|PRON|PROP	low_priority
 “Numei	“numei	nu-mei	Numei'	woman	nu	numei	N	PRON	high	02022018	20	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
@@ -812,10 +809,9 @@ Kush	kush	Kush	Kush'	KUSH	Kush		PROP		high	01002013	19	multi_segmentation:2	auto
 Shem	shem	Shem	Shem'	SHEM	Shem		PROP		high	01005032	19	multi_segmentation:2	auto_resolved
 sinsona	sinsona	sinso-na	sinso-na'	be.angry-NMLZ	sinso		N	PRON	high	01027045	19	multi_segmentation:2|multi_pos:N|PRON	low_priority
 khatte	khatte	khat-te	khatte'	one-PL	khat	khatte	N	PRON	high	01032022	19	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
-kicial	kicial	kici-al		call.PASS-?	kici		V		low	02012045	19	partial_gloss|confidence_low	needs_review
 veng	veng	veng	Veng	guard	veng		V		high	02022011	19	multi_segmentation:2	auto_resolved
 mittawte	mittawte	mittawte'	mittaw-te	blind-PL.POSS	mittawte	mittaw	PRON	N	high	03019014	19	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
-kitan	kitan	ki-tan	ki-tan'	REFL-assign	tan		V	PRON	high	03024020	19	multi_segmentation:2|multi_pos:PRON|V	low_priority
+kitan	kitan	ki-tan	ki-tan'	REFL-judge	tan		V	PRON	high	03024020	19	multi_segmentation:2|multi_pos:PRON|V	low_priority
 leengguite	leengguite	leeng-gui-te	leengguite'	chariot-wheel-PL	leeng	leengguite	N	PRON	high	03025011	19	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
 kikhawmte	kikhawmte	ki-khawm-te	ki-khawm-te'	REFL-gather-PL	khawm		N	PRON	high	04014005	19	multi_segmentation:2|multi_pos:N|PRON	low_priority
 Kuam-ah	kuam-ah	Kuam-ah	kuam-ah	nobody	kuam		N		high	04021012	19	multi_segmentation:2	auto_resolved
@@ -840,13 +836,12 @@ geel	geel	geel	Geel	plan	geel		V		high	02031002	18	multi_segmentation:2	auto_res
 Abigail	abigail	Abigail	Abigail'	ABIGAIL	Abigail		PROP		high	09025003	18	multi_segmentation:2	auto_resolved
 Amasa	amasa	Amasa	Amasa'	AMASA	Amasa		PROP		high	10017025	18	multi_segmentation:2	auto_resolved
 Jehoash	jehoash	Jehoash	Jehoash'	JEHOASH	Jehoash		PROP		high	12013009	18	multi_segmentation:2	auto_resolved
-taangsak	taangsak	taan-gsak		withhold-?	taan		N		low	19004006	18	partial_gloss|confidence_low	needs_review
 Lazaras	lazaras	Lazaras	Lazaras'	LAZARAS	Lazaras		PROP		high	42016020	18	multi_segmentation:2	auto_resolved
 Stefen	stefen	Stefen	Stefen'	STEFEN	Stefen		PROP		high	44006005	18	multi_segmentation:2	auto_resolved
 “Mihingte	“mihingte	Mihingte	Mihingte'	MIHINGTE	“Mihingte	mihingte	PROP	PRON	high	01006003	17	multi_segmentation:2|multi_lemma:2|multi_pos:PRON|PROP	low_priority
 Eber	eber	Eber	Eber'	EBER	Eber		PROP		high	01010021	17	multi_segmentation:2	auto_resolved
 Haran	haran	Haran	Haran'	HARAN	Haran		PROP		high	01011026	17	multi_segmentation:2	auto_resolved
-nute	nute	nu-te	nute'	female-PL	nu	nute	N	PRON	high	01032011	17	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
+nute	nute	nu-te	nute'	woman-PL	nu	nute	N	PRON	high	01032011	17	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
 pumpeeng	pumpeeng	pumpeeng	Pumpeeng	whole	pumpeeng		N		high	02002003	17	multi_segmentation:2	auto_resolved
 Uzziel	uzziel	Uzziel	Uzziel'	UZZIEL	Uzziel		PROP		high	02006018	17	multi_segmentation:2	auto_resolved
 Amminadab	amminadab	Amminadab'	Amminadab	AMMINADAB.POSS	Amminadab		PROP		high	02006023	17	multi_segmentation:2	auto_resolved
@@ -1004,7 +999,7 @@ Artakzaksis	artakzaksis	Artakzaksis	Artakzaksis'	ARTAKZAKSIS	Artakzaksis		PROP		
 Vashti	vashti	Vashti	Vashti'	VASHTI	Vashti		PROP		high	17001009	12	multi_segmentation:2	auto_resolved
 mimawhte	mimawhte	mi-mawh-te	Mimawhte|mi-mawh-te'	person-sin-PL	mi	Mimawhte	N	PRON|PROP	high	18036006	12	multi_segmentation:3|multi_lemma:2|multi_pos:N|PRON|PROP	low_priority
 pahtakna	pahtakna	pah-tak-na	Pahtakna	trust-true-NMLZ	pah	Pahtakna	N	PROP	high	18037013	12	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	low_priority
-hatte	hatte	hat-te	hatte'	strong-PL	hat	hatte	N	PRON	high	19022012	12	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
+hatte	hatte	hat-te	hatte'	firm-PL	hat	hatte	N	PRON	high	19022012	12	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
 galtai	galtai	galtai	Galtai	be.captive	galtai		V		high	01004012	11	multi_segmentation:2	auto_resolved
 Seth	seth	Seth	Seth'	SETH	Seth		PROP		high	01004025	11	multi_segmentation:2	auto_resolved
 Dedan	dedan	Dedan	Dedan'	DEDAN	Dedan		PROP		high	01010007	11	multi_segmentation:2	auto_resolved
@@ -1094,7 +1089,7 @@ Peleg	peleg	Peleg	Peleg'	PELEG	Peleg		PROP		high	01010025	9	multi_segmentation:2
 tonu	tonu	tonu	tonu'	mistress	tonu		N	PRON	high	01016004	9	multi_segmentation:2|multi_pos:N|PRON	low_priority
 “Abraham	“abraham	Abraham	Abraham'	ABRAHAM	“Abraham	abraham	PROP	PRON	high	01018016	9	multi_segmentation:2|multi_lemma:2|multi_pos:PRON|PROP	low_priority
 “Jakob	“jakob	Jakob	Jakob'	JAKOB	“Jakob	jakob	PROP	PRON	high	01031001	9	multi_segmentation:2|multi_lemma:2|multi_pos:PRON|PROP	low_priority
-keelte	keelte	keel-te	keelte'	heel-PL	keel	keelte	N	PRON	high	01031012	9	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
+keelte	keelte	keel-te	keelte'	foot-PL	keel	keelte	N	PRON	high	01031012	9	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
 Deborah	deborah	Deborah		Deborah	deborah	Deborah	N	PROP	high	01035008	9	multi_lemma:2|multi_pos:N|PROP	low_priority
 Shobal	shobal	Shobal	Shobal'	SHOBAL	Shobal		PROP		high	01036020	9	multi_segmentation:2	auto_resolved
 thongkiate	thongkiate	thongkia-te	Thongkiate'|thongkiate'	prison-PL	thongkia	thongkiate	N	PRON	high	01039020	9	multi_segmentation:3|multi_lemma:2|multi_pos:N|PRON	low_priority
@@ -1159,7 +1154,6 @@ angvan	angvan	ang-van	ang-van'	face-see	ang		N	PRON	high	05001017	8	multi_segmen
 papi	papi	papi	Papi	elder	papi	Papi	N	PROP	high	05002034	8	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	low_priority
 hilote	hilote	hi-lo-te	hi-lo-te'	be-NEG-PL	hi		N	PRON	high	05032021	8	multi_segmentation:2|multi_pos:N|PRON	low_priority
 nete	nete	ne-te	nete'	eat-PL	ne	nete	N	PRON	high	05032025	8	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
-taangkhia	taangkhia	taan-gkhia		withhold-?	taan		N		low	05033002	8	partial_gloss|confidence_low	needs_review
 Jabin	jabin	Jabin	Jabin'	JABIN	Jabin		PROP		high	06011001	8	multi_segmentation:2	auto_resolved
 Tanglai-in	tanglai-in	Tanglai-in	tang-lai-in	TANGLAI-IN	Tanglai-In	tang	PROP	N	high	06024002	8	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	low_priority
 Jether	jether	Jether	Jether'	JETHER	Jether		PROP		high	07008020	8	multi_segmentation:2	auto_resolved
@@ -1279,7 +1273,7 @@ Raamah	raamah	Raamah	Raamah'	RAAMAH	Raamah		PROP		high	01010007	5	multi_segmenta
 Ur	ur	Ur	Ur'	UR	Ur		PROP		high	01011028	5	multi_segmentation:2	auto_resolved
 Khedorlaomer	khedorlaomer	Khedorlaomer	Khedorlaomer'	KHEDORLAOMER	Khedorlaomer		PROP		high	01014001	5	multi_segmentation:2	auto_resolved
 Nebaioth	nebaioth	Nebaioth	Nebaioth'	NEBAIOTH	Nebaioth		PROP		high	01025013	5	multi_segmentation:2	auto_resolved
-keelnote	keelnote	keel-no-te	keel-no-te'	heel-young-PL	keel		N	PRON	high	01027013	5	multi_segmentation:2|multi_pos:N|PRON	low_priority
+keelnote	keelnote	keel-no-te	keel-no-te'	foot-young-PL	keel		N	PRON	high	01027013	5	multi_segmentation:2|multi_pos:N|PRON	low_priority
 ciangkangte	ciangkangte	ciangkang-te	ciangkang-te'	rod-PL	ciangkang		N	PRON	high	01030038	5	multi_segmentation:2|multi_pos:N|PRON	low_priority
 Dishan	dishan	Dishan	Dishan'	DISHAN	Dishan		PROP		high	01036021	5	multi_segmentation:2	auto_resolved
 “Josef	“josef	Josef'	Josef	JOSEF.POSS	josef	“Josef	PRON	PROP	high	01041055	5	multi_segmentation:2|multi_lemma:2|multi_pos:PRON|PROP	low_priority
@@ -1307,7 +1301,6 @@ Aiah	aiah	Aiah'	Aiah	AIAH.POSS	Aiah		PROP		high	10003007	5	multi_segmentation:2	
 Uzzah	uzzah	Uzzah	Uzzah'	UZZAH	Uzzah		PROP		high	10006002	5	multi_segmentation:2	auto_resolved
 Mika	mika	Mika	Mika'	MIKA	Mika		PROP		high	10009012	5	multi_segmentation:2	auto_resolved
 Helez	helez	Helez	Helez'	HELEZ	Helez		PROP		high	10023026	5	multi_segmentation:2	auto_resolved
-kicingsak	kicingsak	kici-ngsak		call.PASS-?	kici		V		low	11005009	5	partial_gloss|confidence_low	needs_review
 Khenaanah	khenaanah	Khenaanah'	Khenaanah	KHENAANAH.POSS	Khenaanah		PROP		high	11022011	5	multi_segmentation:2	auto_resolved
 Shimea	shimea	Shimea	Shimea'	SHIMEA	Shimea		PROP		high	13002013	5	multi_segmentation:2	auto_resolved
 Ishi	ishi	Ishi	Ishi'	ISHI	Ishi		PROP		high	13002031	5	multi_segmentation:2	auto_resolved
@@ -1388,7 +1381,7 @@ thupite	thupite	thu-pi-te	thu-pi-te'	word-great-PL	thu		N	PRON	high	17009032	4	m
 dahte	dahte	dah-te	dahte'	sad-PL	dah	dahte	N	PRON	high	18005011	4	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
 vasa-kalaohte	vasa-kalaohte	va-sa-kala-oh-te	va-sa-kala-oh-te'	bird-flesh-owl-type-PL	va		N	PRON	high	18030029	4	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 lungdamte	lungdamte	lung-dam-te	lungdamte'	joyful.ones	lung	lungdamte	N	PRON	high	19035026	4	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
-sutte	sutte	sut-te	sutte'	spoil-PL	sut	sutte	N	PRON	high	20001019	4	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
+sutte	sutte	sut-te	sutte'	break-PL	sut	sutte	N	PRON	high	20001019	4	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
 mutheite	mutheite	mut-hei-te	mut-hei-te'	see-path-PL	mut		N	PRON	high	20008009	4	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 Zingsol	zingsol	Zingsol	zingsol	morning.star	zingsol		V		high	23014012	4	multi_segmentation:2	auto_resolved
 sumbawlna	sumbawlna	sum-bawl-na	Sumbawlna	money-make-NMLZ	sum	Sumbawlna	N	PROP	high	23023010	4	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	auto_resolved
@@ -1431,7 +1424,7 @@ lungzuang	lungzuang	lung-zuang	Lungzuang	heart-feeble	lung	Lungzuang	N	PROP	high
 Abiel	abiel	Abiel	Abiel'	ABIEL	Abiel		PROP		high	09009001	3	multi_segmentation:2	auto_resolved
 Egypt-pa	egypt-pa	Egypt-pa'	egypt-pa	EGYPT-PA.POSS	Egypt-Pa		PROP		high	10023021	3	multi_segmentation:2	auto_resolved
 Baana	baana	Baana	Baana'	BAANA	Baana		PROP		high	11004012	3	multi_segmentation:2	auto_resolved
-sakhite	sakhite	sak-hi-te	sak-hi-te'	cause-be-PL	sak		N	PRON	high	11004023	3	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
+sakhite	sakhite	sak-hi-te	sak-hi-te'	CAUS-be-PL	sak		N	PRON	high	11004023	3	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 Tahpenes	tahpenes	Tahpenes'	Tahpenes	TAHPENES.POSS	Tahpenes		PROP		high	11011019	3	multi_segmentation:2	auto_resolved
 Shemer	shemer	Shemer'	Shemer	SHEMER.POSS	Shemer		PROP		high	11016024	3	multi_segmentation:2	auto_resolved
 Segub	segub	Segub'	Segub	SEGUB.POSS	Segub		PROP		high	11016034	3	multi_segmentation:2	auto_resolved
@@ -1501,10 +1494,9 @@ kikoihte	kikoihte	kikoihte'	kikoih-te	restore-PL.POSS	kikoihte	kikoih	PRON	N	hig
 “Asher	“asher	Asher'	Asher	ASHER.POSS	asher	“Asher	PRON	PROP	high	01049020	2	multi_segmentation:2|multi_lemma:2|multi_pos:PRON|PROP	auto_resolved
 thote	thote	thote'	tho-te	rise-PL.POSS	thote	tho	PRON	N	high	02008024	2	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
 suangphahpek	suangphahpek	suangphahpek	Suangphahpek	pavement	suangphahpek		N		high	02024010	2	multi_segmentation:2	auto_resolved
-Theihlohna	theihlohna	theih-loh-na		know.II-?-NMLZ	thei		V		low	03005018	2	partial_gloss|confidence_low	auto_resolved
 veipa	veipa	vei-pa'	vei-pa	sick-NMLZ.AG.POSS	vei		PRON	N	high	03013012	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 khuapite-a	khuapite-a	khua-pi-te-a	khua-pi-te-a'	town-big-PL-LOC	khua		FUNC	PRON	high	03025032	2	multi_segmentation:2|multi_pos:FUNC|PRON	auto_resolved
-dialkhaite	dialkhaite	dial-khai-te	dial-khai-te'	call-hold-PL	dial		N	PRON	high	04002002	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
+dialkhaite	dialkhaite	dial-khai-te	dial-khai-te'	belt-hold-PL	dial		N	PRON	high	04002002	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 tuuvun	tuuvun	tuuvun	Tuuvun	badger.skin	tuuvun		N		high	04004025	2	multi_segmentation:2	auto_resolved
 Hobab	hobab	Hobab	Hobab'	HOBAB	Hobab		PROP		high	04010029	2	multi_segmentation:2	auto_resolved
 vaante	vaante	va-an-te'	va-an-te	go.and-food-PL.POSS	va		PRON	N	high	04014006	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
@@ -1573,7 +1565,6 @@ guneite	guneite	gunei-te'	gunei-te	viper-PL.POSS	gunei		PRON	N	high	18020016	2	m
 lungnemte	lungnemte	lung-nem-te'	lung-nem-te	heart-soft-PL.POSS	lung		PRON	N	high	19010017	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 kithuahpihte	kithuahpihte	ki-thuah-pih-te	ki-thuah-pih-te'	REFL-associate-APPL-PL	thuah		N	PRON	high	19038011	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 gote	gote	gote'	go-te	kill-PL.POSS	gote	go	PRON	N	high	19044022	2	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
-kicimgawp	kicimgawp	kici-mgawp		call.PASS-?	kici		V		low	19046006	2	partial_gloss|confidence_low	auto_resolved
 lungkimte	lungkimte	lung-kim-te'	lung-kim-te	peaceful.ones.POSS	lung		PRON	N	high	19049013	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 gulpite	gulpite	gulpi-te'	gulpi-te	dragon-PL.POSS	gulpi		PRON	N	high	19074013	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 Ciktuite	ciktuite	Ciktuite	ciktuite	CIKTUITE	Ciktuite		PROP		high	19074015	2	multi_segmentation:2	auto_resolved
@@ -1585,10 +1576,9 @@ angkawmin	angkawmin	angkawmin	Angkawmin	ANGKAWMIN	Angkawmin		PROP		high	24005007
 “Gamdangte	“gamdangte	Gamdangte	Gamdangte'	GAMDANGTE	“Gamdangte	gamdangte	PROP	PRON	high	24006018	2	multi_segmentation:2|multi_lemma:2|multi_pos:PRON|PROP	auto_resolved
 zuaute	zuaute	zuaute'	zuau-te	lie-PL.POSS	zuaute	zuau	PRON	N	high	24014022	2	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
 tonpihte	tonpihte	ton-pih-te'	ton-pih-te	pull-APPL-PL.POSS	ton		PRON	N	high	24019010	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
-khawmte	khawmte	khawmte'	khawm-te	together-PL.POSS	khawmte	khawm	PRON	N	high	24025024	2	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
+khawmte	khawmte	khawmte'	khawm-te	gather-PL.POSS	khawmte	khawm	PRON	N	high	24025024	2	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
 Babylon-te	babylon-te	babylon-te	Babylon-te'	BABYLON-PL	Babylon-Te		PROP		high	24037008	2	multi_segmentation:2	auto_resolved
 laksakte	laksakte	laksakte'	laksak-te	redeem-PL.POSS	laksakte	laksak	PRON	N	high	24049002	2	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	auto_resolved
-taangzo	taangzo	taan-gzo		withhold-?	taan		N		low	25001014	2	partial_gloss|confidence_low	auto_resolved
 siangthopa	siangthopa	siangtho-pa	siangtho-pa'	holy-NMLZ.AG	siangtho		N	PRON	high	26028025	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 lo,”	lo,”	lo	Lo	NEG	lo		FUNC		high	28001010	2	multi_segmentation:2	auto_resolved
 mite,”	mite,”	mi-te	Mite	person-PL	mi	Mite,”	N	PROP	high	28002001	2	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	auto_resolved
@@ -1625,39 +1615,4 @@ Mnason	mnason	Mnason'	Mnason	MNASON.POSS	Mnason		PROP		high	44021016	2	multi_seg
 Julias	julias	Julias'	Julias	JULIAS.POSS	Julias		PROP		high	44027001	2	multi_segmentation:2	auto_resolved
 miteite	miteite	mi-tei-te'	mi-tei-te	person-understand-PL.POSS	mi		PRON	N	high	46001019	2	multi_segmentation:2|multi_pos:N|PRON	auto_resolved
 thu,”	thu,”	thu	Thu	word	thu		N		high	46001021	2	multi_segmentation:2	auto_resolved
-kicingzaw	kicingzaw	kici-ngzaw		call.PASS-?	kici		V		low	52004001	2	partial_gloss|confidence_low	auto_resolved
 Not	not	not		?	not		N		unknown	# year_long:	1	partial_gloss|confidence_unknown	auto_resolved
-kicingzo	kicingzo	kici-ngzo		call.PASS-?	kici		V		low	02009028	1	partial_gloss|confidence_low	auto_resolved
-taangsakin	taangsakin	taan-gsakin		withhold-?	taan		N		low	04006025	1	partial_gloss|confidence_low	auto_resolved
-kicimsuk	kicimsuk	kici-msuk		call.PASS-?	kici		V		low	07016030	1	partial_gloss|confidence_low	auto_resolved
-Amal	amal	am-al		sink-?	am		N		low	13007035	1	partial_gloss|confidence_low	auto_resolved
-kimaituah	kimaituah	kim-aituah		nation-?	kim		N		low	13026016	1	partial_gloss|confidence_low	auto_resolved
-kicingzah	kicingzah	kici-ngzah		call.PASS-?	kici		V		low	14030003	1	partial_gloss|confidence_low	auto_resolved
-kicimsa	kicimsa	kici-msa		call.PASS-?	kici		V		low	16002013	1	partial_gloss|confidence_low	auto_resolved
-Ihmulum	ihmulum	i-hmulum		1PL.INCL-?	hmulum		V		low	19013003	1	partial_gloss|confidence_low	auto_resolved
-Lauthawngna	lauthawngna	lauthawng-na		?-NMLZ	Lauthawngna		PROP		unknown	19031022	1	partial_gloss|confidence_unknown	auto_resolved
-kimaizumsak	kimaizumsak	kim-aizumsak		nation-?	kim		N		low	19037019	1	partial_gloss|confidence_low	auto_resolved
-Thu-helhawt	thu-helhawt	thuh-elhawt		word.II-?	thu		N		low	19086014	1	partial_gloss|confidence_low	auto_resolved
-kiciangtansa	kiciangtansa	kici-angtansa		call.PASS-?	kici		V		low	19102013	1	partial_gloss|confidence_low	auto_resolved
-Ihmumu	ihmumu	i-hmumu		1PL.INCL-?	hmumu		V		low	20006004	1	partial_gloss|confidence_low	auto_resolved
-Mualkolh	mualkolh	mual-kolh		mountain-?	mual		N		low	23013002	1	partial_gloss|confidence_low	auto_resolved
-kicilsa	kicilsa	kici-lsa		call.PASS-?	kici		V		low	23021010	1	partial_gloss|confidence_low	auto_resolved
-Tomnokhat	tomnokhat	tomnokhat		?	tomnokhat		N		unknown	23066008	1	partial_gloss|confidence_unknown	auto_resolved
-kicilgawp	kicilgawp	kici-lgawp		call.PASS-?	kici		V		low	24051033	1	partial_gloss|confidence_low	auto_resolved
-Meitawhna	meitawhna	mei-tawh-na		fire-?-NMLZ	mei		N		low	26015004	1	partial_gloss|confidence_low	auto_resolved
-Puanphan	puanphan	puan-phan		cloth-?	puan		N		low	26016010	1	partial_gloss|confidence_low	auto_resolved
-gamhal	gamhal	gamh-al		land-?	gamh		N		low	26020047	1	partial_gloss|confidence_low	auto_resolved
-kicimmang	kicimmang	kici-mmang		call.PASS-?	kici		V		low	26038020	1	partial_gloss|confidence_low	auto_resolved
-khauhkik	khauhkik	khau-hkik		rope-?	khau		N		low	27010018	1	partial_gloss|confidence_low	auto_resolved
-taangkhawm	taangkhawm	taan-gkhawm		withhold-?	taan		N		low	27012003	1	partial_gloss|confidence_low	auto_resolved
-kiciangin	kiciangin	kici-angin		call.PASS-?	kici		V		low	34003003	1	partial_gloss|confidence_low	auto_resolved
-kiciangkik	kiciangkik	kici-angkik		call.PASS-?	kici		V		low	38001016	1	partial_gloss|confidence_low	auto_resolved
-kimawlin	kimawlin	kim-awlin		nation-?	kim		N		low	38008005	1	partial_gloss|confidence_low	auto_resolved
-taangin	taangin	taan-gin		withhold-?	taan		N		low	40017002	1	partial_gloss|confidence_low	auto_resolved
-taanzaihsak	taanzaihsak	taan-zaihsak		withhold-?	taan		N		low	40024027	1	partial_gloss|confidence_low	auto_resolved
-Cidamsuak	cidamsuak	cidamsuak		?	cidamsuak		N		unknown	41005034	1	partial_gloss|confidence_unknown	auto_resolved
-Khaituh	khaituh	khai-t-uh		hold-?-2/3PL	khai		N		low	43004036	1	partial_gloss|confidence_low	auto_resolved
-kicingkim	kicingkim	kici-ngkim		call.PASS-?	kici		V		low	50004018	1	partial_gloss|confidence_low	auto_resolved
-Tui-al	tui-al	tui-al		water-?	tui		N		low	59003012	1	partial_gloss|confidence_low	auto_resolved
-Tunung	tunung	tunu-ng		daughter-?	tunu		N		low	66004001	1	partial_gloss|confidence_low	auto_resolved
-taangkhia-in	taangkhia-in	taan-gkhiain		withhold-?	taan		N		low	66004005	1	partial_gloss|confidence_low	auto_resolved

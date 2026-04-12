@@ -1,32 +1,32 @@
 # Tedim Chin Bible Analysis Coverage Report
 
-Generated: 2026-04-09T20:11:14.839903
+Generated: 2026-04-12T20:49:56.659696
 
 ## Overall Statistics
 
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | Total tokens | 831,175 | 100% |
-| Fully analyzed (known POS) | 831,020 | 99.98% |
-| Fully analyzed (non-ambiguous) | 684,181 | 82.31% |
+| Fully analyzed (known POS) | 831,172 | 100.00% |
+| Fully analyzed (non-ambiguous) | 684,333 | 82.33% |
 | Needs review (polysemous) | 146,839 | 17.67% |
-| Partial analysis (has ?) | 149 | 0.02% |
+| Partial analysis (has ?) | 0 | 0.00% |
 | Unknown POS | 0 | 0.00% |
-| Unknown gloss | 6 | 0.0007% |
+| Unknown gloss | 3 | 0.0004% |
 
-**Lexicographic Coverage: 99.98%** (tokens with known POS)
-**Effective Coverage: 82.31%** (excluding ambiguous items)
+**Lexicographic Coverage: 100.00%** (tokens with known POS)
+**Effective Coverage: 82.33%** (excluding ambiguous items)
 
 ## Inventory Counts
 
 | Category | Count |
 |----------|-------|
-| Distinct wordforms | 22,481 |
-| Lemmas | 7,365 |
-| Lemmas needing review | 512 |
+| Distinct wordforms | 22,479 |
+| Lemmas | 7,340 |
+| Lemmas needing review | 513 |
 | Polysemous lemmas | 304 |
-| Grammatical morphemes | 488 |
-| Items in review queue | 1,662 |
+| Grammatical morphemes | 485 |
+| Items in review queue | 1,617 |
 
 ## Part of Speech Distribution
 
@@ -36,31 +36,31 @@ Generated: 2026-04-09T20:11:14.839903
 | ADV | 6,448 | 0.78% |
 | CONJ | 41,071 | 4.94% |
 | DET | 26,658 | 3.21% |
-| FUNC | 270,193 | 32.51% |
-| N | 221,672 | 26.67% |
+| FUNC | 270,015 | 32.49% |
+| N | 221,886 | 26.70% |
 | NUM | 9,354 | 1.13% |
 | PRON | 39,273 | 4.72% |
-| PROP | 58,359 | 7.02% |
-| V | 145,510 | 17.51% |
+| PROP | 58,452 | 7.03% |
+| V | 145,381 | 17.49% |
 
 ## Grammatical Morpheme Categories
 
 | Category | Count | Total Frequency |
 |----------|-------|-----------------|
-| auxiliary | 3 | 963 |
-| case_marker | 12 | 122,155 |
+| auxiliary | 3 | 962 |
+| case_marker | 12 | 122,437 |
 | copula | 2 | 14,438 |
-| directional_verb | 7 | 6,655 |
-| function_word | 368 | 161,812 |
-| inflection | 59 | 12,500 |
+| directional_verb | 7 | 6,687 |
+| function_word | 365 | 161,925 |
+| inflection | 58 | 12,642 |
 | irrealis_marker | 3 | 24,986 |
 | nominalizer | 1 | 22,902 |
 | object_marker | 1 | 15,590 |
-| particle | 9 | 26,531 |
+| particle | 9 | 26,530 |
 | plural_marker | 6 | 29,864 |
 | pronominal_prefix | 5 | 112,170 |
 | sentence_final | 4 | 52,988 |
-| tam_suffix | 8 | 9,282 |
+| tam_suffix | 9 | 10,070 |
 
 ## Top 20 Lemmas by Frequency
 
@@ -71,9 +71,9 @@ Generated: 2026-04-09T20:11:14.839903
 | hong | V | ? | 15,578 | 3 |
 | tua | DET | that | 13,793 | 44 |
 | mi | N | person | 13,740 | 67 |
-| ci | V | say | 11,622 | 90 |
+| ci | V | say | 11,623 | 91 |
 | le | CONJ | and | 11,124 | 6 |
-| ciang | CONJ | then | 10,636 | 21 |
+| ciang | CONJ | then | 10,639 | 24 |
 | thu | N | word | 10,379 | 179 |
 | bang | N | like | 9,269 | 37 |
 | ahi | V | ? | 8,634 | 7 |
@@ -89,13 +89,13 @@ Generated: 2026-04-09T20:11:14.839903
 
 ## Ambiguity Summary
 
-- Total items in review queue: 1662
+- Total items in review queue: 1617
 - Known polysemous forms: 15
-- Multiple segmentations: 1602
+- Multiple segmentations: 1601
 - Multiple lemmas: 404
 - Multiple POS: 665
 - Unknown POS: 0
-- Partial glosses: 46
+- Partial glosses: 2
 
 ### Top 10 Most Frequent Review Items
 

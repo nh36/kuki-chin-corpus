@@ -9851,4 +9851,20 @@ COMPOUND_WORDS = {
     
     # Round 168: Fix test regression
     'paingei': ('pai-ngei', 'go-EXP'),                        # have gone (experiential)
+    
+    # Round 169: Rare hapax compounds from KJV cross-reference
+    'theihlohna': ('theih-loh-na', 'know.II-NEG-NMLZ'),       # ignorance (Lev 5:18)
+    'kipasalsakin': ('ki-pasal-sak-in', 'REFL-man-CAUS-ERG'), # gird up like a man (Job 38:3)
+    'ihmulum': ('i-hmul-um', '1PL.INCL-sleep-1PL'),           # we sleep (Ps 13:3)
+    'lauthawngna': ('lau-thawng-na', 'fear-haste-NMLZ'),      # haste/alarm (Ps 31:22)
+    'thu-helhawt': ('thu-hel-hawt', 'word-oppose-violent'),   # violent men (Ps 86:14)
+    'ihmumu': ('i-hmu~mu', '1PL.INCL-slumber~REDUP'),         # slumber (Prov 6:4) - reduplicated hmu
+    'mualkolh': ('mual-kolh', 'mountain-high'),               # high mountain (Isa 13:2)
+    'tomnokhat': ('tom-no-khat', 'moment-small-one'),         # at once (Isa 66:8)
+    'meitawhna': ('mei-tawh-na', 'fire-burn-NMLZ'),           # fuel (Ezek 15:4)
+    'puanphan': ('puan-phan', 'cloth-embroider'),             # embroidered work (Ezek 16:10)
+    'cidamsuak': ('ci-dam-suak', 'be-well-INCH'),             # become whole (Mark 5:34)
+    'khaituh': ('khai-tuh', 'balance-sow'),                   # reaper (John 4:36) - tuh = sow/harvest
+    'tui-al': ('tui-al', 'water-salt'),                       # salt water (James 3:12)
+    'tunung': ('tu-nung', 'this-after'),                      # hereafter (Rev 4:1)
 }

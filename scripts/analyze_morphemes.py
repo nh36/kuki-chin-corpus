@@ -2285,6 +2285,16 @@ VERB_STEMS = {
     'met': 'shear',          # shear/cut
     'vet': 'do',             # do/act
     'lom': 'wave',           # wave/shake
+    
+    # Round 169: Rare hapax stems from KJV cross-reference
+    'hmul': 'sleep',         # hmulum = sleep-? (Ps 13:3 "lest I sleep the sleep of death")
+    'hmu': 'slumber',        # i-hmu-mu = 1PL.INCL-slumber-? (Prov 6:4 "slumber to thine eyelids")
+    'kolh': 'high',          # mual-kolh = mountain-high (Isa 13:2 "high mountain")
+    'phan': 'embroider',     # puan-phan = cloth-embroider (Ezek 16:10 "broidered work")
+    'tawh': 'burn',          # mei-tawh-na = fire-burn-NMLZ (Ezek 15:4 "for fuel")
+    'al': 'salt',            # tui-al = water-salt (James 3:12 "salt water")
+    'thawng': 'haste',       # lau-thawng-na = fear-haste-NMLZ (Ps 31:22 "in my haste")
+    'hawt': 'violent',       # thu-hel-hawt = word-oppose-violent (Ps 86:14 "violent men")
 }
 
 
