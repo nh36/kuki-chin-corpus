@@ -459,7 +459,7 @@ morphemes = db.get_morpheme_by_form('in')  # Returns List[GrammaticalMorpheme]
 examples = db.get_examples_for_sense('pai.1', limit=3)
 
 # Examples for a morpheme
-examples = db.get_examples_for_morpheme('ding.IRR.tam_suffix', limit=5)
+examples = db.get_examples_for_morpheme('ding.IRR.irrealis_marker', limit=5)
 
 # Examples for a lemma (any sense)
 examples = db.get_examples_for_lemma('pa', limit=3)
@@ -479,7 +479,7 @@ wf = db.get_wordform('kapaiding')  # Returns Dict or None
 
 items = db.get_review_items(status='open', priority='high')
 db.resolve_review_item(item_id, resolution='Fixed gloss')
-db.add_review_item('lemma', 'example_id', 'uncertain_gloss', priority='medium')
+db.add_review_item('lemma', 'pai', 'uncertain_gloss', priority='medium')
 
 # --- Statistics ---
 
@@ -539,9 +539,9 @@ This makes the heuristic parts of the pipeline transparent.
 
 ### Implemented and Working
 
-The following are fully implemented and tested:
+The following are implemented and in use:
 
-- **`scripts/backend.py`**: SQLite backend with complete query API
+- **`scripts/backend.py`**: SQLite backend with query API
 - **Tedim (ctd) corpus migration**: All TSV exports loaded into normalized tables
   - `sources`: 30,422 verses
   - `tokens`: 831,152 token occurrences
@@ -551,7 +551,7 @@ The following are fully implemented and tested:
   - `grammatical_morphemes`: 485 affixes/particles
   - `examples`: 21,908 example sentences
 - **Dictionary lookup**: `lookup_word.py` reads from backend
-- **Grammar report**: TAM report proof-of-concept reads from backend
+- **Grammar report**: TAM report reads from backend
 - **Quality ranking**: Consistent ordering (excellent > good > acceptable > auto)
 
 ### Implemented but Provisional
