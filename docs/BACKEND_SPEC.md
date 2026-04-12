@@ -312,12 +312,12 @@ The existing `data/ctd_analysis/*.tsv` files map to backend tables:
 
 | Current File | Backend Table(s) | Notes |
 |--------------|------------------|-------|
-| `verses.tsv` | `sources` | Full migration |
-| `tokens.tsv` | `tokens` | Full migration (~831K rows) |
-| `wordforms.tsv` | `wordforms` | Full migration (~22K rows) |
-| `lemmas.tsv` | `lemmas` | Full migration |
-| `senses.tsv` | `senses` | Full migration |
-| `grammatical_morphemes.tsv` | `grammatical_morphemes` | Full migration |
+| `verses.tsv` | `sources` | 30,422 verses |
+| `tokens.tsv` | `tokens` | 831,152 token occurrences |
+| `wordforms.tsv` | `wordforms` | 20,677 distinct forms |
+| `lemmas.tsv` | `lemmas` | 7,339 headwords |
+| `senses.tsv` | `senses` | 9,962 senses |
+| `grammatical_morphemes.tsv` | `grammatical_morphemes` | 485 morphemes |
 | `examples.tsv` | `examples` | With morpheme_id derivation |
 | `ambiguities.tsv` | `review_queue` | Filtered to needs_review |
 
@@ -363,7 +363,6 @@ python scripts/backend.py migrate --tsv-dir data/ctd_analysis --db data/ctd_back
 # Verify
 python scripts/backend.py stats
 ```
-```
 
 ---
 
@@ -380,7 +379,11 @@ ORDER BY s.frequency DESC;
 
 SELECT e.* FROM examples e
 WHERE e.sense_id LIKE 'pai.%'
-ORDER BY e.quality DESC
+ORDER BY CASE e.quality 
+    WHEN 'excellent' THEN 1 
+    WHEN 'good' THEN 2 
+    WHEN 'acceptable' THEN 3 
+    ELSE 4 END
 LIMIT 5;
 ```
 
@@ -391,7 +394,8 @@ SELECT gm.*, e.source_id, e.tedim_text, e.glossed, e.kjv_text
 FROM grammatical_morphemes gm
 LEFT JOIN examples e ON gm.morpheme_id = e.morpheme_id
 WHERE gm.category = 'case_marker'
-ORDER BY gm.frequency DESC, e.quality DESC;
+ORDER BY gm.frequency DESC, 
+    CASE e.quality WHEN 'excellent' THEN 1 WHEN 'good' THEN 2 ELSE 3 END;
 ```
 
 ### Review: High-priority items
@@ -451,8 +455,8 @@ morphemes = db.get_morpheme_by_form('in')  # Returns List[GrammaticalMorpheme]
 
 # --- Examples ---
 
-# Examples for a sense (ranked by quality)
-examples = db.get_examples_for_sense('pai.1', limit=3, quality='good')
+# Examples for a sense (ranked by quality: excellent > good > acceptable > auto)
+examples = db.get_examples_for_sense('pai.1', limit=3)
 
 # Examples for a morpheme
 examples = db.get_examples_for_morpheme('ding.IRR.tam_suffix', limit=5)
@@ -499,7 +503,8 @@ All `get_examples_*` methods use this ranking by default.
 
 ## Migration Summary
 
-After running `backend.py migrate`, a summary is printed:
+After running `backend.py migrate`, a summary is printed showing exact counts
+for each migration category:
 
 ```
 ============================================================
@@ -507,18 +512,22 @@ MIGRATION SUMMARY
 ============================================================
 
 Examples:
-  Direct from TSV (with sense_id): 21,626
-  Linked to morphemes (heuristic): 3,450
-  Auto-generated from corpus:      892
-  Sent to review (unlinked):       127
+  Direct from TSV (with sense_id): 13,935
+  Linked to morphemes (heuristic): 569
+  Auto-generated from corpus:      297
+  Sent to review (unlinked):       3
+  Total examples:                  21,908
 
 Database statistics:
-  sources: 31,173
-  lemmas: 7,139
-  senses: 11,245
-  grammatical_morphemes: 156
-  examples: 26,095
-  review_items: 127
+  sources: 30,422
+  tokens: 831,152
+  wordforms: 20,677
+  lemmas: 7,339
+  senses: 9,962
+  grammatical_morphemes: 485
+  examples: 21,908
+  review_open: 237
+  review_resolved: 0
 ============================================================
 ```
 
@@ -528,24 +537,44 @@ This makes the heuristic parts of the pipeline transparent.
 
 ## Current Status
 
-### Completed
+### Implemented and Working
 
-- ✓ `scripts/backend.py` implemented with full query API
-- ✓ Tedim (ctd) data migrated from TSV exports to SQLite
-- ✓ `lookup_word.py` refactored to read from backend
-- ✓ TAM grammar report proof-of-concept reading from backend
-- ✓ Example-morpheme linking with heuristic fallback
-- ✓ Consistent quality ranking across all example queries
+The following are fully implemented and tested:
 
-### Known Limitations
+- **`scripts/backend.py`**: SQLite backend with complete query API
+- **Tedim (ctd) corpus migration**: All TSV exports loaded into normalized tables
+  - `sources`: 30,422 verses
+  - `tokens`: 831,152 token occurrences
+  - `wordforms`: 20,677 distinct analyzed forms
+  - `lemmas`: 7,339 dictionary headwords
+  - `senses`: 9,962 distinct senses
+  - `grammatical_morphemes`: 485 affixes/particles
+  - `examples`: 21,908 example sentences
+- **Dictionary lookup**: `lookup_word.py` reads from backend
+- **Grammar report**: TAM report proof-of-concept reads from backend
+- **Quality ranking**: Consistent ordering (excellent > good > acceptable > auto)
 
-- Tokens table not yet populated (placeholder for future corpus-level queries)
-- Some morpheme examples auto-generated; may need manual curation
-- Constructions and grammar_topics tables defined but not yet populated
+### Implemented but Provisional
 
-### Next Steps for Generalization
+These features work but involve heuristic processing:
 
-1. **Mizo pilot** - Apply the same pipeline to Mizo (lus) data
-2. **Cross-language schema** - Test that schema handles Mizo-specific features
-3. **Populate constructions** - Model serial verbs, aspect chains
-4. **Grammar topic linking** - Connect morphemes to grammar chapters
+- **Morpheme-example linking**: 569 examples linked via gloss pattern matching.
+  Accuracy is high but depends on consistent glossing conventions.
+- **Auto-generated examples**: 297 examples created from corpus for under-represented
+  morphemes. Quality is `auto` and may need manual curation.
+- **Review queue**: 237 items flagged for attention. Includes ambiguous forms and
+  uncertain morpheme links.
+
+### Not Yet Implemented
+
+- **`constructions` table**: Schema defined but not populated. Intended for modeling
+  serial verb patterns, aspect chains, and other multi-morpheme constructions.
+- **`grammar_topics` table**: Schema defined but not populated. Intended for organizing
+  morphemes into grammar chapter structure.
+
+### Next Generalization Steps
+
+1. **Mizo pilot**: Apply pipeline to Mizo (lus) using existing analyzer
+2. **Cross-language schema validation**: Confirm schema handles Mizo-specific features
+3. **Constructions modeling**: Populate serial verb and aspect chain patterns
+4. **Grammar topic linking**: Connect morphemes to grammar chapter structure
