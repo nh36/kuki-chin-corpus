@@ -953,6 +953,83 @@ def migrate_from_tsv(tsv_dir: str, db_path: str, iso: str = 'ctd'):
                 count += 1
         print(f"    Loaded {count} examples")
     
+    # Migrate wordforms
+    wordforms_file = tsv_dir / 'wordforms.tsv'
+    if wordforms_file.exists():
+        print("  Loading wordforms...")
+        count = 0
+        with open(wordforms_file, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f, delimiter='\t')
+            for row in reader:
+                surface = row.get('surface_form', '')
+                if not surface or surface.startswith('#'):
+                    continue
+                
+                normalized = row.get('normalized_form', surface.lower())
+                wordform_id = normalized  # Use normalized form as ID
+                
+                db.add_wordform(
+                    wordform_id=wordform_id,
+                    surface=surface,
+                    normalized=normalized,
+                    lemma_id=row.get('lemma', ''),
+                    segmentation=row.get('segmentation', ''),
+                    gloss=row.get('gloss', ''),
+                    pos=row.get('pos', ''),
+                    frequency=int(row.get('frequency', 0) or 0),
+                    is_ambiguous=row.get('is_ambiguous', '0') == '1',
+                    status=row.get('status', 'auto')
+                )
+                count += 1
+        print(f"    Loaded {count} wordforms")
+    
+    # Migrate tokens (batch insert for performance)
+    tokens_file = tsv_dir / 'tokens.tsv'
+    if tokens_file.exists():
+        print("  Loading tokens (this may take a moment)...")
+        with db._connection() as conn:
+            count = 0
+            batch = []
+            batch_size = 10000
+            
+            with open(tokens_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f, delimiter='\t')
+                for row in reader:
+                    source_id = row.get('verse_id', '')
+                    if not source_id or source_id.startswith('#'):
+                        continue
+                    
+                    normalized = row.get('normalized_form', row.get('surface_form', '').lower())
+                    
+                    batch.append((
+                        source_id,
+                        int(row.get('token_index', 0) or 0),
+                        row.get('surface_form', ''),
+                        normalized,
+                        normalized,  # wordform_id = normalized
+                        1 if row.get('is_sentence_final', '0') == '1' else 0
+                    ))
+                    count += 1
+                    
+                    if len(batch) >= batch_size:
+                        conn.executemany('''
+                            INSERT INTO tokens 
+                            (source_id, position, surface, normalized, wordform_id, is_sentence_final)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        ''', batch)
+                        batch = []
+                        print(f"    ... {count:,} tokens")
+            
+            # Final batch
+            if batch:
+                conn.executemany('''
+                    INSERT INTO tokens 
+                    (source_id, position, surface, normalized, wordform_id, is_sentence_final)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                ''', batch)
+        
+        print(f"    Loaded {count:,} tokens")
+    
     # Migrate ambiguities to review queue
     ambig_file = tsv_dir / 'ambiguities.tsv'
     if ambig_file.exists():
@@ -970,6 +1047,156 @@ def migrate_from_tsv(tsv_dir: str, db_path: str, iso: str = 'ctd'):
                     )
                     count += 1
         print(f"    Loaded {count} review items")
+    
+    # Build morpheme_id index from grammatical_morphemes for example linking
+    print("  Linking examples to morphemes...")
+    morpheme_index = {}  # Maps (form, gloss) -> morpheme_id
+    with db._connection() as conn:
+        rows = conn.execute('SELECT morpheme_id, form, gloss FROM grammatical_morphemes').fetchall()
+        for row in rows:
+            key = (row['form'].lower(), row['gloss'].upper())
+            morpheme_index[key] = row['morpheme_id']
+    
+    # Now re-process examples to derive morpheme_id from glossed field
+    linked_count = 0
+    unlinked = []  # Collect items needing review
+    
+    with db._connection() as conn:
+        examples = conn.execute('''
+            SELECT example_id, glossed, target_form, example_type FROM examples
+        ''').fetchall()
+        
+        for ex in examples:
+            example_id = ex['example_id']
+            glossed = ex['glossed'] or ''
+            target = ex['target_form'] or ''
+            ex_type = ex['example_type']
+            
+            # Skip lemma examples - they're already sense-linked
+            if ex_type == 'lemma':
+                continue
+            
+            # Try to find morpheme matches in the gloss
+            morpheme_id = None
+            
+            # Parse glossed string for morpheme glosses
+            # Format is typically: stem-SUFFIX or PREFIX-stem-SUFFIX
+            parts = glossed.replace('.', '-').split('-')
+            
+            for part in parts:
+                part_upper = part.upper().strip()
+                target_lower = target.lower().strip()
+                
+                # Check if this part matches a known grammatical morpheme
+                key = (target_lower, part_upper)
+                if key in morpheme_index:
+                    morpheme_id = morpheme_index[key]
+                    break
+                
+                # Also try just the gloss with common forms
+                for form in [target_lower, target_lower.rstrip('aeiou')]:
+                    key = (form, part_upper)
+                    if key in morpheme_index:
+                        morpheme_id = morpheme_index[key]
+                        break
+                if morpheme_id:
+                    break
+            
+            if morpheme_id:
+                conn.execute('''
+                    UPDATE examples SET morpheme_id = ? WHERE example_id = ?
+                ''', (morpheme_id, example_id))
+                linked_count += 1
+            elif ex_type == 'morpheme' and target:
+                # Collect for review (add outside this connection)
+                unlinked.append((example_id, target, glossed[:50]))
+    
+    # Add review items for unlinked morpheme examples (outside the connection)
+    review_count = 0
+    for example_id, target, glossed_snippet in unlinked:
+        db.add_review_item(
+            entity_type='example',
+            entity_id=str(example_id),
+            reason=f'Could not link morpheme example: target={target}, glossed={glossed_snippet}',
+            priority='low'
+        )
+        review_count += 1
+    
+    print(f"    Linked {linked_count} examples to morphemes, {review_count} sent to review")
+    
+    # Generate morpheme examples from corpus if we have few linked examples
+    print("  Generating additional morpheme examples from corpus...")
+    
+    # First, collect all the data we need
+    examples_to_add = []
+    
+    with db._connection() as conn:
+        # Get morphemes that have few or no examples
+        morphemes = conn.execute('''
+            SELECT gm.morpheme_id, gm.form, gm.gloss, gm.category,
+                   COUNT(e.example_id) as example_count
+            FROM grammatical_morphemes gm
+            LEFT JOIN examples e ON gm.morpheme_id = e.morpheme_id
+            GROUP BY gm.morpheme_id
+            HAVING example_count < 3
+            ORDER BY gm.frequency DESC
+            LIMIT 100
+        ''').fetchall()
+        
+        for morph in morphemes:
+            morpheme_id = morph['morpheme_id']
+            form = morph['form']
+            gloss = morph['gloss']
+            
+            # Find tokens containing this morpheme in their gloss
+            pattern = f'%{gloss}%'
+            candidates = conn.execute('''
+                SELECT wf.normalized, wf.segmentation, wf.gloss, 
+                       s.source_id, s.text, s.kjv_text
+                FROM wordforms wf
+                JOIN tokens t ON wf.wordform_id = t.wordform_id
+                JOIN sources s ON t.source_id = s.source_id
+                WHERE wf.gloss LIKE ?
+                AND wf.segmentation LIKE ?
+                GROUP BY s.source_id
+                ORDER BY RANDOM()
+                LIMIT 5
+            ''', (pattern, f'%{form}%')).fetchall()
+            
+            morpheme_example_count = 0
+            for cand in candidates:
+                # Check if we already have an example from this source
+                existing = conn.execute('''
+                    SELECT 1 FROM examples 
+                    WHERE morpheme_id = ? AND source_id = ?
+                ''', (morpheme_id, cand['source_id'])).fetchone()
+                
+                if not existing:
+                    examples_to_add.append(Example(
+                        example_id=0,
+                        source_id=cand['source_id'],
+                        sense_id='',
+                        morpheme_id=morpheme_id,
+                        target_form=cand['normalized'],
+                        tedim_text=cand['text'],
+                        segmented=cand['segmentation'],
+                        glossed=cand['gloss'],
+                        kjv_text=cand['kjv_text'] or '',
+                        quality='auto',
+                        example_type='morpheme',
+                        notes='auto-generated from corpus'
+                    ))
+                    morpheme_example_count += 1
+                    if morpheme_example_count >= 3:
+                        break
+    
+    # Now add examples outside the connection
+    added_examples = 0
+    for example in examples_to_add:
+        db.add_example(example)
+        added_examples += 1
+    
+    print(f"    Generated {added_examples} additional morpheme examples")
     
     # Print stats
     stats = db.get_stats()

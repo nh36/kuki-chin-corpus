@@ -188,7 +188,7 @@ Chapter/section markers for grammar report generation.
 | `topic_id` | TEXT PK | e.g., 'tam_markers' |
 | `title` | TEXT | Chapter/section title |
 | `parent_id` | TEXT FK | → grammar_topics (for hierarchy) |
-| `order` | INT | Display order |
+| `display_order` | INT | Display order within parent |
 | `description` | TEXT | |
 | `construction_ids` | TEXT | Related constructions |
 | `morpheme_ids` | TEXT | Related morphemes |
@@ -310,16 +310,24 @@ lemmas: hi (entry_type='mixed')
 
 The existing `data/ctd_analysis/*.tsv` files map to backend tables:
 
-| Current File | Backend Table(s) |
-|--------------|------------------|
-| `verses.tsv` | `sources` |
-| `tokens.tsv` | `tokens` |
-| `wordforms.tsv` | `wordforms` |
-| `lemmas.tsv` | `lemmas` |
-| `senses.tsv` | `senses` |
-| `grammatical_morphemes.tsv` | `grammatical_morphemes` |
-| `examples.tsv` | `examples` |
-| `ambiguities.tsv` | `review_queue` |
+| Current File | Backend Table(s) | Notes |
+|--------------|------------------|-------|
+| `verses.tsv` | `sources` | Full migration |
+| `tokens.tsv` | `tokens` | Full migration (~831K rows) |
+| `wordforms.tsv` | `wordforms` | Full migration (~22K rows) |
+| `lemmas.tsv` | `lemmas` | Full migration |
+| `senses.tsv` | `senses` | Full migration |
+| `grammatical_morphemes.tsv` | `grammatical_morphemes` | Full migration |
+| `examples.tsv` | `examples` | With morpheme_id derivation |
+| `ambiguities.tsv` | `review_queue` | Filtered to needs_review |
+
+### Morpheme-Example Linking
+
+During migration, `examples.morpheme_id` is derived from the `glossed` field:
+1. Parse the gloss string for grammatical morpheme patterns
+2. Match against known morphemes in `grammatical_morphemes`
+3. Unmatched morpheme examples are flagged for review
+4. Additional examples are auto-generated from corpus for under-represented morphemes
 
 ### Build Process
 
@@ -329,13 +337,32 @@ analyze_morphemes.py (analyzer)
         ▼
 export_tedim_analysis.py
         │
-        ├──▶ data/ctd_analysis/*.tsv (derived, for external tools)
-        │
-        └──▶ data/ctd_backend.db (primary backend)
+        └──▶ data/ctd_analysis/*.tsv (intermediate exports)
                 │
-                ├──▶ lookup_word.py (dictionary lookup)
-                ├──▶ generate_sample_entries.py (dictionary)
-                └──▶ generate_*_report.py (grammar)
+                ▼
+        backend.py migrate
+                │
+                └──▶ data/ctd_backend.db (generated, not committed)
+                        │
+                        ├──▶ lookup_word.py (dictionary lookup)
+                        ├──▶ generate_sample_entries.py (dictionary)
+                        └──▶ generate_*_report_backend.py (grammar)
+```
+
+### Regenerating the Backend
+
+The database is a generated artifact. To rebuild:
+
+```bash
+# Remove old database
+rm -f data/ctd_backend.db
+
+# Regenerate from TSV exports
+python scripts/backend.py migrate --tsv-dir data/ctd_analysis --db data/ctd_backend.db
+
+# Verify
+python scripts/backend.py stats
+```
 ```
 
 ---

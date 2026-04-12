@@ -8,6 +8,10 @@
 data/ctd_analysis/tokens.tsv
 data/ctd_analysis/verses.tsv
 
+# SQLite backend databases (generated, not canonical)
+# Regenerate with: python scripts/backend.py migrate
+data/*_backend.db
+
 # macOS
 .DS_Store
 
