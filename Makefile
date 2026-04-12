@@ -48,5 +48,8 @@ grammar-reports: backend-check
 
 # Generate dictionary outputs from backend  
 dictionary: backend-check
-	@echo "Dictionary generation not yet implemented"
-	@echo "TODO: generate_sample_entries.py from backend"
+	@echo "Generating sample dictionary entries..."
+	$(PYTHON) scripts/generate_sample_entries_backend.py --pos V --limit 50 --output output/sample_entries_verbs.md
+	$(PYTHON) scripts/generate_sample_entries_backend.py --pos N --limit 50 --output output/sample_entries_nouns.md
+	$(PYTHON) scripts/generate_sample_entries_backend.py --type grammatical --limit 30 --output output/sample_entries_grammatical.md
+	@echo "Dictionary outputs generated in output/"
