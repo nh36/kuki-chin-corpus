@@ -10,18 +10,15 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 ## 🎉 MILESTONE: 100% Coverage Achieved
 
 **Date:** 2026-03-17  
-**Coverage:** 100% (771,190/771,201 tokens, excluding metadata and tokenization artifacts)
+**Coverage:** 100% (see `output/ctd_metrics.json` for current numbers)
 
 The Tedim Chin morphological analyzer is now **production-ready** for Leipzig-style interlinear glossing.
 
-### Analyzer Statistics (Current)
+### Analyzer Statistics
 
-```
-Total tokens:      771,201 (real words, excluding metadata)
-Fully analyzed:    771,190 (100.00%)
-Partial:                11 (tokenization artifacts only)
-Unknown:                 0 (0.00%)
-```
+Run `make metrics` to generate the full metrics report. Current canonical metrics are stored in:
+- `output/ctd_metrics.json` (machine-readable)
+- `output/ctd_metrics.md` (human-readable report)
 
 ### Dictionary Size
 
@@ -37,7 +34,7 @@ Unknown:                 0 (0.00%)
 
 ### Quality Assurance
 
-- **64 regression tests** in `tests/regression_tests.md`
+- **350+ tests** ensuring analyzer stability (`pytest tests/`)
 - **Compound transparency audit** in `docs/compound_transparency_audit.md`
 - **Opaque lexeme documentation** in `docs/opaque_lexemes.md`
 - **Polysemy disambiguation** with POLYSEMOUS_ROOTS system
@@ -167,14 +164,15 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 1. ✅ Tedim Chin analyzer complete (100% coverage)
 2. ✅ Bootstrap pipeline (`scripts/bootstrap_language.py`) for rapid replication
-3. [ ] Mizo (lus) analyzer – iterate on `scripts/lus_analyzer.py` using `analysis/lus/lus.work_queue.tsv`
-4. [ ] Generate Leipzig-glossed sample chapters (Matthew, Mark)
-5. [ ] Scale methodology to remaining 17 Kuki-Chin languages
-6. [ ] Henderson vocabulary extraction for supplementary entries
-7. [ ] Build comparative dictionary across languages
+3. ✅ Backend-driven workflow (`make backend`, `make metrics`)
+4. [ ] Mizo (lus) analyzer – iterate on `scripts/lus_analyzer.py` using `analysis/lus/lus.work_queue.tsv`
+5. [ ] Generate Leipzig-glossed sample chapters (Matthew, Mark)
+6. [ ] Scale methodology to remaining 17 Kuki-Chin languages
+7. [ ] Henderson vocabulary extraction for supplementary entries
+8. [ ] Build comparative dictionary across languages
 
 ---
 
-*Last updated: 2026-03-22*  
-*Tedim Chin coverage: 100% (850,906 tokens)*  
+*Last updated: 2026-04-13*  
+*Run `make metrics` for current Tedim Chin statistics*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*

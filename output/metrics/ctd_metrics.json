@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "generated": "2026-04-13T20:54:16.377013",
+    "generator": "scripts/generate_metrics.py",
+    "git_commit": "15abb8c8",
+    "source": "data/ctd_backend.db",
+    "language": "ctd",
+    "language_name": "Tedim Chin"
+  },
+  "metrics": {
+    "total_tokens": 831152,
+    "total_sources": 30422,
+    "tokens_with_known_pos": 831152,
+    "tokens_with_unknown_pos": 0,
+    "tokens_ambiguous": 0,
+    "tokens_non_ambiguous": 831152,
+    "wordform_count": 20677,
+    "lemma_count": 7339,
+    "sense_count": 9962,
+    "grammatical_morpheme_count": 206,
+    "example_count": 42009,
+    "examples_linked_to_sense": 42009,
+    "examples_linked_to_morpheme": 21908,
+    "review_queue_total": 237,
+    "review_queue_open": 0,
+    "review_queue_resolved": 237,
+    "review_high_priority": 22,
+    "review_medium_priority": 212,
+    "review_low_priority": 3,
+    "construction_count": 31,
+    "grammar_topic_count": 17,
+    "senses_with_examples": 10094,
+    "high_freq_lemmas_stable": 426,
+    "high_freq_lemmas_total": 1000,
+    "coverage_known_pos_pct": 100.0,
+    "coverage_non_ambiguous_pct": 100.0,
+    "examples_linked_pct": 100.0,
+    "senses_with_examples_pct": 101.33
+  },
+  "pos_distribution": {
+    "PRON": 271236,
+    "V": 142427,
+    "N": 130619,
+    "FUNC": 129424,
+    "PROP": 62751,
+    "CONJ": 40927,
+    "DET": 25788,
+    "ADJ": 12178,
+    "NUM": 9354,
+    "ADV": 6448
+  },
+  "morpheme_categories": {
+    "case_marker": {
+      "count": 7,
+      "frequency": 122328
+    },
+    "pronominal_prefix": {
+      "count": 5,
+      "frequency": 112170
+    },
+    "function_word": {
+      "count": 114,
+      "frequency": 83197
+    },
+    "sentence_final": {
+      "count": 4,
+      "frequency": 52988
+    },
+    "plural_marker": {
+      "count": 3,
+      "frequency": 29088
+    },
+    "irrealis_marker": {
+      "count": 1,
+      "frequency": 24982
+    },
+    "nominalizer": {
+      "count": 1,
+      "frequency": 22902
+    },
+    "object_marker": {
+      "count": 1,
+      "frequency": 15590
+    },
+    "copula": {
+      "count": 2,
+      "frequency": 14438
+    },
+    "inflection": {
+      "count": 57,
+      "frequency": 12641
+    },
+    "tam_suffix": {
+      "count": 6,
+      "frequency": 9677
+    },
+    "particle": {
+      "count": 2,
+      "frequency": 6807
+    },
+    "auxiliary": {
+      "count": 2,
+      "frequency": 230
+    },
+    "directional_verb": {
+      "count": 1,
+      "frequency": 1
+    }
+  },
+  "definitions": {
+    "total_tokens": {
+      "description": "Total tokens in corpus (from tokens.tsv)",
+      "denominator": null,
+      "inclusion_rule": "All rows in tokens table, each representing one token occurrence in the Bible text"
+    },
+    "total_sources": {
+      "description": "Number of verse sources (Bible verses)",
+      "denominator": null,
+      "inclusion_rule": "Distinct verse IDs in sources table"
+    },
+    "tokens_with_known_pos": {
+      "description": "Tokens where analyzer assigned a known POS",
+      "denominator": "total_tokens",
+      "inclusion_rule": "Tokens where pos IS NOT NULL AND pos != \"?\""
+    },
+    "tokens_with_unknown_pos": {
+      "description": "Tokens where POS could not be determined",
+      "denominator": "total_tokens",
+      "inclusion_rule": "Tokens where pos IS NULL OR pos = \"?\""
+    },
+    "tokens_non_ambiguous": {
+      "description": "Tokens with single, clear analysis (no review needed)",
+      "denominator": "total_tokens",
+      "inclusion_rule": "Tokens not flagged for review, single segmentation/lemma/POS"
+    },
+    "tokens_ambiguous": {
+      "description": "Tokens requiring editorial review",
+      "denominator": "total_tokens",
+      "inclusion_rule": "Tokens with multiple possible analyses or flagged for review"
+    },
+    "wordform_count": {
+      "description": "Distinct surface forms in corpus",
+      "denominator": null,
+      "inclusion_rule": "Distinct wordforms in wordforms table"
+    },
+    "lemma_count": {
+      "description": "Dictionary headwords (lexemes)",
+      "denominator": null,
+      "inclusion_rule": "All entries in lemmas table"
+    },
+    "sense_count": {
+      "description": "Distinct word senses (polysemy expansion)",
+      "denominator": null,
+      "inclusion_rule": "All entries in senses table"
+    },
+    "grammatical_morpheme_count": {
+      "description": "Bound morphemes and function words",
+      "denominator": null,
+      "inclusion_rule": "All entries in grammatical_morphemes table"
+    },
+    "example_count": {
+      "description": "Total usage examples",
+      "denominator": null,
+      "inclusion_rule": "All entries in examples table"
+    },
+    "examples_linked_to_sense": {
+      "description": "Examples with sense assignment",
+      "denominator": "example_count",
+      "inclusion_rule": "Examples where sense_id IS NOT NULL"
+    },
+    "examples_linked_to_morpheme": {
+      "description": "Examples illustrating grammatical morphemes",
+      "denominator": null,
+      "inclusion_rule": "Examples where morpheme_id IS NOT NULL"
+    },
+    "review_queue_total": {
+      "description": "Total items requiring editorial review",
+      "denominator": null,
+      "inclusion_rule": "All entries in review_queue table (resolved and open)"
+    },
+    "review_queue_open": {
+      "description": "Unresolved review items",
+      "denominator": "review_queue_total",
+      "inclusion_rule": "review_queue entries where resolution IS NULL"
+    },
+    "review_queue_resolved": {
+      "description": "Resolved review items",
+      "denominator": "review_queue_total",
+      "inclusion_rule": "review_queue entries where resolution IS NOT NULL"
+    },
+    "review_high_priority": {
+      "description": "High priority review items",
+      "denominator": "review_queue_total",
+      "inclusion_rule": "review_queue entries where priority = \"high\""
+    },
+    "construction_count": {
+      "description": "Grammatical constructions modeled",
+      "denominator": null,
+      "inclusion_rule": "All entries in constructions table"
+    },
+    "grammar_topic_count": {
+      "description": "Grammar topics for chaptered export",
+      "denominator": null,
+      "inclusion_rule": "All entries in grammar_topics table"
+    },
+    "senses_with_examples": {
+      "description": "Senses that have at least one example",
+      "denominator": "sense_count",
+      "inclusion_rule": "Senses with at least one linked example"
+    },
+    "high_freq_lemmas_stable": {
+      "description": "Top-1000 frequency lemmas with stable primary gloss",
+      "denominator": null,
+      "inclusion_rule": "Lemmas in top 1000 by frequency where primary sense is unambiguous"
+    }
+  }
+}
