@@ -115,6 +115,7 @@ class ReviewItem:
     reason: str
     priority: str = 'medium'
     status: str = 'open'
+    assigned_to: str = ''
     resolution: str = ''
     created_at: str = ''
     resolved_at: str = ''
