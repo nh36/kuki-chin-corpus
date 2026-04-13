@@ -50,6 +50,8 @@ grammar-reports: backend-check
 	@echo "Generating grammar reports..."
 	$(PYTHON) scripts/generate_tam_report_backend.py
 	$(PYTHON) scripts/generate_case_report_backend.py
+	$(PYTHON) scripts/generate_grammar_from_backend.py
+	$(PYTHON) scripts/generate_grammar_from_backend.py --full --output output/grammar_full.md
 	@echo "Grammar reports generated in output/"
 
 # Generate dictionary outputs from backend  
