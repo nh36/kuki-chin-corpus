@@ -1,30 +1,68 @@
-# Tedim Chin Grammar Documentation
+# Tedim Chin Documentation
 
-This directory contains supporting documentation for Tedim Chin analysis.
-The main grammar reports are in `docs/grammar/reports/` at the repository root.
+This directory contains documentation for Tedim Chin analysis and the shared backend architecture.
+
+## Architecture Overview
+
+The Tedim Chin system uses a **backend-centered workflow**:
+
+1. **Authoring Layer** (`scripts/analyze_morphemes.py`)
+   - Human-curated morphological analyzer
+   - Lexicon with compounds, stems, function words
+   - Disambiguation rules for homophonous forms
+
+2. **Intermediate Exports** (`data/ctd_analysis/*.tsv`)
+   - Generated TSV files from the analyzer
+   - sources, tokens, wordforms, lemmas, senses, examples, grammatical_morphemes
+
+3. **Normalized Backend** (`data/ctd_backend.db`)
+   - SQLite database with stable IDs and relationships
+   - Senses linked to examples with quality rankings
+   - Constructions and grammar topics layer
+   - Review queue for uncertain items
+
+4. **Outputs** (grammar reports, dictionary entries)
+   - All generated from the backend, not directly from analyzer
+   - See `output/` for generated reports
+
+## Key Documents
+
+| Document | Description |
+|----------|-------------|
+| `BACKEND_SPEC.md` | **Backend specification** - schema, API, workflow |
+| `SKELETON_GRAMMAR.md` | Grammar overview (working draft) |
+| `GENERALIZATION_NOTES.md` | Notes for scaling to other Kuki-Chin languages |
 
 ## Directory Structure
 
 ```
 docs/
-├── SKELETON_GRAMMAR.md      # Main grammar overview (working draft)
-├── grammar/                 # Reference materials
-│   ├── noun/               # Noun-specific documentation
-│   ├── verb/               # Verb-specific documentation
-│   ├── DISAMBIGUATION.md   # Homophony resolution rules
-│   ├── MORPHEME_INVENTORY.md
-│   └── ...
-├── methodology/            # How the analyzer was built
-│   ├── METHODOLOGY.md      # Main methodology document
+├── BACKEND_SPEC.md      # Backend specification (read first)
+├── SKELETON_GRAMMAR.md  # Main grammar overview
+├── GENERALIZATION_NOTES.md # Scaling notes
+├── grammar/             # Reference materials
+│   ├── reports/         # Generated grammar reports
+│   ├── noun/            # Noun-specific docs
+│   ├── verb/            # Verb-specific docs
+│   ├── DISAMBIGUATION.md
+│   └── MORPHEME_INVENTORY.md
+├── methodology/         # How the analyzer was built
+│   ├── METHODOLOGY.md
 │   ├── REPLICATION_GUIDE.md
-│   ├── QUALITY_AUDIT.md
-│   └── ...
-└── archive/                # Superseded planning documents
+│   └── QUALITY_AUDIT.md
+└── archive/             # Superseded documents
 ```
 
 ## Grammar Reports
 
-Grammar reports are now located in `docs/grammar/reports/` (repository root):
+Grammar reports in `grammar/reports/` are now generated from the backend:
+
+```bash
+# Generate all grammar reports
+make grammar-reports
+```
+
+Reports are organized by chapter:
 
 | Prefix | Chapter | Content |
 |--------|---------|---------|
@@ -37,81 +75,31 @@ Grammar reports are now located in `docs/grammar/reports/` (repository root):
 | `09-sent-` | Ch 9: Sentence Types | Interrogatives |
 | `10-disc-` | Ch 10: Discourse | Sentence-final particles |
 
-Within each section, reports are ordered from foundational to complex:
-- `01-` = Lexical inventory (stems, simple forms)
-- `02-` = Structure (templates, combinations)
-- Higher numbers = More specialized topics
+## Backend-Driven Outputs
 
-## Report Descriptions
-
-### Noun Reports (03-noun-*)
+New outputs are generated from the backend in `output/`:
 
 | File | Description |
 |------|-------------|
-| `03-noun-01-simple.md` | Simple nouns with case paradigms |
-| `03-noun-02-compounds.md` | Compound nouns with case paradigms |
-| `03-noun-03-proper.md` | Proper nouns (names, places) |
-| `03-noun-04-relators.md` | Relator nouns (spatial postpositions) |
-| `03-noun-05-postpositions.md` | Free postpositions |
-| `03-noun-06-np-structure.md` | Noun phrase structure patterns |
+| `grammar_constructions.md` | Constructions organized by category |
+| `grammar_full.md` | Full grammar organized by topics |
+| `tam_report_backend.md` | TAM morphemes with corpus examples |
+| `case_report_backend.md` | Case markers with examples |
+| `sample_entries_*.md` | Dictionary entry samples |
 
-### Verb Reports (05-verb-*)
-
-| File | Description |
-|------|-------------|
-| `05-verb-00-paradigm-tables.md` | Individual verb paradigms (om, pai, ci) |
-| `05-verb-01-stems.md` | Verb stem inventory by semantic domain |
-| `05-verb-02-vp-structure.md` | Verb phrase template |
-| `05-verb-03-agreement.md` | Subject/object agreement prefixes |
-| `05-verb-04-tam.md` | Tense-aspect-mood suffixes |
-| `05-verb-05-aspect.md` | Aspectual suffixes (PFV, COMPL, ITER) |
-| `05-verb-06-directional.md` | Directional suffixes (in, out, up) |
-| `05-verb-07-modal.md` | Modal suffixes (IRR, ABIL, want) |
-| `05-verb-08-derivational.md` | Derivational suffixes (CAUS, APPL) |
-| `05-verb-09-valency.md` | Valency and voice (ki-, -sak, -pih) |
-| `05-verb-10-combinations.md` | Attested suffix combinations |
-| `05-verb-11-vsa-questionnaire.md` | VSA-style questionnaire data |
-| `05-verb-12-transitivity.md` | Verb transitivity classes |
-
-### Function Words (06-func-*)
-
-| File | Description |
-|------|-------------|
-| `06-func-01-pronouns.md` | Personal, possessive, reflexive pronouns |
-| `06-func-02-demonstratives.md` | Proximal/distal demonstratives |
-| `06-func-03-numerals.md` | Cardinals, ordinals, classifiers |
-| `06-func-04-negation.md` | Negation markers and NPIs |
-| `06-func-05-quantifiers.md` | Universal, existential quantifiers |
-| `06-func-06-coordinators.md` | Coordination and disjunction |
-
-### Derivation (07-*)
-
-| File | Description |
-|------|-------------|
-| `07-nmlz-01-deverbal.md` | Deverbal nominalization (-na, -pa, -nu) |
-| `07-deriv-02-reduplication.md` | Reduplication patterns |
-
-### Clause Structure (08-clause-*)
-
-| File | Description |
-|------|-------------|
-| `08-clause-01-subordination.md` | Subordinators and clause types |
-| `08-clause-02-switch-reference.md` | Same/different subject marking |
-| `08-clause-03-relatives.md` | Relative clause formation |
-
-## Regenerating Reports
-
-Reports in `docs/grammar/reports/` are generated by scripts in `scripts/`:
+## Regenerating Outputs
 
 ```bash
-# Regenerate noun paradigm reports
-python3 scripts/generate_noun_paradigms.py
-
-# Regenerate verb reports
-python3 scripts/generate_verb_stems_report.py
-python3 scripts/generate_tam_report.py
-python3 scripts/generate_vp_slots_report.py
-# ... etc.
+# Canonical workflow
+make backend          # Rebuild from TSV exports
+make backend-check    # Verify integrity
+make link-examples    # Link examples to senses
+make grammar-reports  # Generate grammar outputs
+make dictionary       # Generate dictionary outputs
 ```
 
-See `scripts/README.md` for full list of report generators.
+## See Also
+
+- `BACKEND_SPEC.md` for the backend schema and API
+- `scripts/README.md` for script documentation
+- `PROGRESS.md` (repo root) for development history

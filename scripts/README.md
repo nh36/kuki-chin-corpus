@@ -1,54 +1,96 @@
 # Tedim Chin Analysis Scripts
 
-This directory contains Python scripts for morphological analysis and report generation.
+This directory contains Python scripts for morphological analysis and the backend-centered workflow.
 
-## Core Analyzer
+## Architecture
+
+Scripts are organized into three layers:
+
+1. **Authoring Layer** - Human-curated analyzer
+2. **Backend Layer** - Normalized SQLite database
+3. **Generation Layer** - Reports and outputs from backend
+
+## Core Components
+
+### Authoring Layer
 
 | Script | Description |
 |--------|-------------|
 | `analyze_morphemes.py` | **Main morphological analyzer** - 100% coverage on Tedim Bible |
-| `report_utils.py` | Shared utilities for report generation |
+| `export_analysis.py` | Export analyzer data to TSV files |
 
-## Report Generators
-
-Reports are output to `docs/grammar/reports/` (repository root).
-
-### Noun Reports
-
-| Script | Output | Description |
-|--------|--------|-------------|
-| `generate_paradigm.py` | `docs/grammar/reports/03-noun-01-simple.md` etc | Noun paradigm tables |
-| `generate_relator_report.py` | `docs/grammar/reports/03-noun-04-relators.md` | Relator nouns |
-| `generate_postposition_report.py` | `docs/grammar/reports/03-noun-05-postpositions.md` | Free postpositions |
-| `generate_np_report.py` | `docs/grammar/reports/03-noun-06-np-structure.md` | NP structure patterns |
-
-### Verb Reports
-
-| Script | Output | Description |
-|--------|--------|-------------|
-| `generate_verb_stems_report.py` | `docs/grammar/reports/05-verb-01-stems.md` | Verb stem inventory |
-| `generate_vp_report.py` | `docs/grammar/reports/05-verb-02-vp-structure.md` | VP template |
-| `generate_pronominal_report.py` | `docs/grammar/reports/05-verb-03-agreement.md` | Agreement prefixes |
-| `generate_tam_report.py` | `docs/grammar/reports/05-verb-04-tam.md` | TAM suffixes |
-| `generate_vp_slots_report.py` | `docs/grammar/reports/05-verb-05-*.md` | Aspect/Dir/Modal/Deriv |
-| `generate_valency_report.py` | `docs/grammar/reports/05-verb-09-valency.md` | Valency/voice |
-
-### Other Reports
-
-| Script | Output | Description |
-|--------|--------|-------------|
-| `generate_nominalization_report.py` | `docs/grammar/reports/07-nmlz-01-deverbal.md` | Nominalization |
-
-## Utility Scripts
+### Backend Layer
 
 | Script | Description |
 |--------|-------------|
-| `gloss_verse.py` | Gloss a single verse interactively |
-| `lookup_word.py` | Look up a word in the analyzer |
-| `lemmatizer.py` | Extract lemmas from analyzed forms |
-| `spelling_explorer.py` | Analyze spelling variations |
+| `backend.py` | **SQLite backend** - schema, migration, API |
+| `check_backend.py` | Verify backend integrity and counts |
+| `link_examples_to_senses.py` | Link examples to senses, generate corpus examples |
 
-## Data Processing
+### Generation Layer (Backend-Driven)
+
+| Script | Description |
+|--------|-------------|
+| `generate_tam_report_backend.py` | TAM report with corpus examples |
+| `generate_case_report_backend.py` | Case markers with examples |
+| `generate_grammar_from_backend.py` | Grammar constructions and topics |
+| `generate_sample_entries_backend.py` | Dictionary entries |
+| `lookup_word.py` | Dictionary lookup (reads from backend) |
+
+### Shared Utilities
+
+| Script | Description |
+|--------|-------------|
+| `report_utils.py` | Shared utilities for report generation |
+| `lemmatizer.py` | Extract lemmas from analyzed forms |
+
+## Canonical Workflow
+
+```bash
+# 1. Edit the analyzer (add vocabulary, fix glosses)
+#    scripts/analyze_morphemes.py
+
+# 2. Export to TSV
+python scripts/export_analysis.py
+
+# 3. Rebuild backend
+make backend
+
+# 4. Verify integrity
+make backend-check
+
+# 5. Link examples to senses
+make link-examples
+
+# 6. Generate outputs
+make grammar-reports
+make dictionary
+```
+
+Or use the Makefile targets directly:
+
+```bash
+make backend          # Steps 2-3
+make link-examples    # Step 5
+make grammar-reports  # Step 6 (grammar)
+make dictionary       # Step 6 (dictionary)
+```
+
+## Legacy Report Generators
+
+These scripts generate reports directly from the analyzer (pre-backend):
+
+| Script | Output | Status |
+|--------|--------|--------|
+| `generate_paradigm.py` | Noun paradigm tables | Legacy |
+| `generate_verb_stems_report.py` | Verb stem inventory | Legacy |
+| `generate_tam_report.py` | TAM suffixes | Superseded by `*_backend.py` |
+| `generate_vp_slots_report.py` | VP slot analysis | Legacy |
+| `generate_valency_report.py` | Valency patterns | Legacy |
+
+New development should use the backend-driven generators.
+
+## Data Processing Scripts
 
 | Script | Description |
 |--------|-------------|
@@ -57,32 +99,42 @@ Reports are output to `docs/grammar/reports/` (repository root).
 | `build_verse_alignment.py` | Align parallel Bible verses |
 | `build_wordform_inventory.py` | Extract unique wordforms |
 | `build_bootstrap_lexicon.py` | Create initial lexicon |
+| `scrape_bible.py` | Scrape Bibles from bible.com |
 
-## Usage
+## Usage Examples
 
 ```bash
 # Analyze a word
-python3 scripts/analyze_morphemes.py
+python3 -c "
+import sys; sys.path.insert(0, 'scripts')
+from analyze_morphemes import analyze_word
+print(analyze_word('biakinnpi'))  # ('biak-inn-pi', 'pray-house-big')
+"
 
-# Generate all verb reports
-python3 scripts/generate_verb_stems_report.py
-python3 scripts/generate_tam_report.py
-python3 scripts/generate_vp_slots_report.py
-python3 scripts/generate_valency_report.py
-python3 scripts/generate_pronominal_report.py
-python3 scripts/generate_nominalization_report.py
-python3 scripts/generate_vp_report.py
+# Look up a word using the backend
+python scripts/lookup_word.py ctd tapa
+# Output: son (91.5% confidence), child, boy...
 
-# Generate noun reports
-python3 scripts/generate_np_report.py
-python3 scripts/generate_relator_report.py
-python3 scripts/generate_postposition_report.py
+# Reverse lookup
+python scripts/lookup_word.py -r ctd water
+# Output: tui, tuipi, tuibang...
+
+# Check backend statistics
+python scripts/check_backend.py
 ```
 
 ## Testing
 
 ```bash
-# Run all tests
-python3 tests/test_coverage_reporting.py
-python3 tests/test_vp_slots.py
+# Run all tests (336 tests)
+python -m pytest tests/ -q
+
+# Run backend-native tests only (43 tests)
+python -m pytest tests/test_backend.py -v
 ```
+
+## See Also
+
+- `docs/BACKEND_SPEC.md` for backend schema and API
+- `docs/README.md` for documentation overview
+- `tests/` for test suite

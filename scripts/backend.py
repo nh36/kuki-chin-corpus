@@ -23,6 +23,38 @@ from contextlib import contextmanager
 
 
 # =============================================================================
+# Example Quality System
+# =============================================================================
+
+# Authoritative quality vocabulary and ordering (highest to lowest)
+EXAMPLE_QUALITY_ORDER = [
+    'canonical',    # Editor-curated exemplar for this sense/morpheme
+    'excellent',    # Clear, complete, reasonably short example
+    'good',         # Good example, perhaps longer or more complex
+    'transparent',  # Good transparency for linguistic structure
+    'shortest',     # Shortest available example (useful for tables)
+    'acceptable',   # Usable but not ideal (default for manual)
+    'additional',   # Extra examples beyond the primary set
+    'auto',         # Machine-generated from corpus (lowest priority)
+]
+
+# SQL CASE expression for quality ordering
+QUALITY_ORDER_SQL = '''
+    CASE quality 
+        WHEN 'canonical' THEN 1
+        WHEN 'excellent' THEN 2
+        WHEN 'good' THEN 3
+        WHEN 'transparent' THEN 4
+        WHEN 'shortest' THEN 5
+        WHEN 'acceptable' THEN 6
+        WHEN 'additional' THEN 7
+        WHEN 'auto' THEN 8
+        ELSE 9
+    END
+'''
+
+
+# =============================================================================
 # Data Classes
 # =============================================================================
 
@@ -588,16 +620,10 @@ class Backend:
                                 limit: int = 5) -> List[Example]:
         """Get examples for a sense."""
         with self._connection() as conn:
-            rows = conn.execute('''
+            rows = conn.execute(f'''
                 SELECT * FROM examples 
                 WHERE sense_id = ?
-                ORDER BY 
-                    CASE quality 
-                        WHEN 'excellent' THEN 1 
-                        WHEN 'good' THEN 2 
-                        WHEN 'acceptable' THEN 3
-                        ELSE 4
-                    END
+                ORDER BY {QUALITY_ORDER_SQL}
                 LIMIT ?
             ''', (sense_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
@@ -606,16 +632,10 @@ class Backend:
                                    limit: int = 5) -> List[Example]:
         """Get examples for a grammatical morpheme."""
         with self._connection() as conn:
-            rows = conn.execute('''
+            rows = conn.execute(f'''
                 SELECT * FROM examples 
                 WHERE morpheme_id = ?
-                ORDER BY 
-                    CASE quality 
-                        WHEN 'excellent' THEN 1 
-                        WHEN 'good' THEN 2 
-                        WHEN 'acceptable' THEN 3
-                        ELSE 4
-                    END
+                ORDER BY {QUALITY_ORDER_SQL}
                 LIMIT ?
             ''', (morpheme_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
@@ -624,18 +644,15 @@ class Backend:
                                 limit: int = 10) -> List[Example]:
         """Get examples for any sense of a lemma."""
         with self._connection() as conn:
-            rows = conn.execute('''
+            # Alias quality column for proper CASE reference
+            quality_sql = QUALITY_ORDER_SQL.replace('quality', 'e.quality')
+            rows = conn.execute(f'''
                 SELECT e.* FROM examples e
                 JOIN senses s ON e.sense_id = s.sense_id
                 WHERE s.lemma_id = ?
                 ORDER BY 
                     s.is_primary DESC,
-                    CASE e.quality 
-                        WHEN 'excellent' THEN 1 
-                        WHEN 'good' THEN 2 
-                        WHEN 'acceptable' THEN 3
-                        ELSE 4 
-                    END
+                    {quality_sql}
                 LIMIT ?
             ''', (lemma_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]

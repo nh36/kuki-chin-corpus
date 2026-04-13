@@ -2,18 +2,51 @@
 
 A digital philology infrastructure for Kuki-Chin languages, featuring:
 - **20 Bible corpora** aligned by verse (422,676 unique wordforms)
-- **Tedim Chin morphological analyzer** achieving **100% coverage** (771,190 tokens, excluding metadata)
+- **Tedim Chin morphological analyzer** achieving **100% coverage** (771,190 tokens)
+- **Shared SQLite backend** serving both dictionary and grammar generation
 - Bootstrap lexicons and interlinear glossing tools
 
 ## 🎉 Milestone: Tedim Chin Analyzer at 100% Coverage
 
-The Tedim Chin (ctd) morphological analyzer is now production-ready:
+The Tedim Chin (ctd) morphological analyzer is production-ready:
 - **771,190 tokens** fully analyzed with Leipzig-style glossing
 - **7,000+ dictionary entries** (compounds, stems, function words, proper nouns)
-- **64 regression tests** preventing future regressions
+- **336 automated tests** (including 43 backend-native tests)
 - Comprehensive documentation in `docs/` and `tests/`
 
-See `scripts/analyze_morphemes.py` for the analyzer, `PROGRESS.md` for development history.
+## Architecture
+
+For Tedim Chin, the system follows a **backend-centered workflow**:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│  AUTHORING LAYER                                                    │
+│  scripts/analyze_morphemes.py + export scripts                      │
+│  (Human-curated analyzer with lexicon, rules, disambiguation)       │
+└────────────────────────────┬────────────────────────────────────────┘
+                             │ make export-analysis
+                             ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│  INTERMEDIATE ARTIFACTS (data/ctd_analysis/*.tsv)                   │
+│  sources.tsv, tokens.tsv, wordforms.tsv, lemmas.tsv, senses.tsv,    │
+│  examples.tsv, grammatical_morphemes.tsv                            │
+└────────────────────────────┬────────────────────────────────────────┘
+                             │ make backend
+                             ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│  NORMALIZED BACKEND (data/ctd_backend.db)                           │
+│  SQLite database: stable IDs, linked senses, quality-ranked         │
+│  examples, constructions, grammar topics, review queue              │
+└────────────────────────────┬────────────────────────────────────────┘
+                             │ make grammar-reports / make dictionary
+                             ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│  OUTPUTS                                                            │
+│  Grammar reports, dictionary entries, lookup results, statistics    │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+**Key principle:** The SQLite backend is the canonical serving layer. Grammar reports and dictionary outputs are generated from it, not directly from the analyzer.
 
 ## Current Corpus Status
 
@@ -99,30 +132,55 @@ Lexicon sizes range from ~600 entries (Mark-only) to ~16,000 entries (full Bible
 
 1. **Tedim Chin morphological analyzer** ✅ COMPLETE
    - Leipzig-style interlinear glossing at 100% coverage
-   - See `scripts/analyze_morphemes.py` (~17,000 lines)
+   - See `scripts/analyze_morphemes.py` (~19,000 lines)
 
-2. **Reader volumes** (Matthew, Mark, Luke–Acts) with:
+2. **Shared backend architecture** ✅ COMPLETE
+   - SQLite backend serving dictionary and grammar from same data
+   - See `docs/BACKEND_SPEC.md` for specification
+
+3. **Reader volumes** (Matthew, Mark, Luke–Acts) with:
    - Original Kuki-Chin text
    - Leipzig-style interlinear glossing
    - English translation (from KJV, aligned by verse)
 
-3. **Per-language dictionaries** extracted from complete Bible
+4. **Per-language dictionaries** extracted from backend
 
-4. **Comparative dictionary** across all Kuki-Chin languages with reconstructions
+5. **Comparative dictionary** across all Kuki-Chin languages with reconstructions
 
-5. **Scale to remaining 18 languages** using Tedim methodology (see `docs/METHODOLOGY.md`)
+6. **Scale to remaining 18 languages** using Tedim methodology (see `docs/METHODOLOGY.md`)
 
 ## Scripts
 
+### Core Components
+
 | Script | Purpose |
 |--------|---------|
-| `scripts/analyze_morphemes.py` | **Tedim Chin morphological analyzer** (main deliverable) |
+| `scripts/analyze_morphemes.py` | **Tedim Chin morphological analyzer** (authoring layer) |
+| `scripts/backend.py` | **SQLite backend** - normalized serving layer |
+| `scripts/lookup_word.py` | Dictionary lookup (reads from backend) |
+| `scripts/export_analysis.py` | Export analyzer data to TSV |
+| `scripts/report_utils.py` | Shared report utilities |
+
+### Backend & Generation
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/check_backend.py` | Verify backend integrity |
+| `scripts/link_examples_to_senses.py` | Link examples to senses, generate corpus examples |
+| `scripts/generate_tam_report_backend.py` | TAM report from backend |
+| `scripts/generate_case_report_backend.py` | Case marking report from backend |
+| `scripts/generate_grammar_from_backend.py` | Grammar constructions report |
+| `scripts/generate_sample_entries_backend.py` | Dictionary entries from backend |
+
+### Corpus Processing
+
+| Script | Purpose |
+|--------|---------|
 | `scripts/extract_bibles.sh` | Extract original paralleltext.info zip files |
 | `scripts/scrape_bible.py` | Scrape Bibles from bible.com |
-| `scripts/build_wordform_inventory.py` | Build unified wordform list across all languages |
-| `scripts/build_verse_alignment.py` | Create aligned verse table for parallel comparison |
-| `scripts/build_bootstrap_lexicon.py` | Generate word co-occurrence lexicons for all languages |
-| `scripts/lookup_word.py` | Interactive lookup tool (forward and reverse) |
+| `scripts/build_wordform_inventory.py` | Build unified wordform list |
+| `scripts/build_verse_alignment.py` | Create aligned verse table |
+| `scripts/build_bootstrap_lexicon.py` | Generate word co-occurrence lexicons |
 
 ## Directory Structure
 
@@ -135,86 +193,88 @@ Kuki-Chin/
 │       ├── ctd/           # Tedim Chin (primary analysis target)
 │       └── ...            # Other languages
 ├── data/
+│   ├── ctd_analysis/      # Intermediate TSV exports (generated)
+│   │   ├── sources.tsv
+│   │   ├── tokens.tsv
+│   │   ├── wordforms.tsv
+│   │   ├── lemmas.tsv
+│   │   ├── senses.tsv
+│   │   └── ...
+│   ├── ctd_backend.db     # SQLite backend (generated, gitignored)
 │   ├── verses_aligned.tsv
 │   ├── wordforms_by_language.tsv
 │   └── lexicons/          # Bootstrap lexicons per language
 ├── docs/
 │   ├── README.md          # Documentation guide
+│   ├── BACKEND_SPEC.md    # Backend specification
 │   ├── SKELETON_GRAMMAR.md # Grammar overview
+│   ├── GENERALIZATION_NOTES.md # Notes for scaling to other languages
 │   ├── grammar/           # Grammar reference materials
 │   │   ├── reports/       # Generated grammar reports (33 files)
 │   │   │   ├── 03-noun-*.md   # Nominal morphology (Ch 3)
 │   │   │   ├── 05-verb-*.md   # Verbal morphology (Ch 5)
-│   │   │   ├── 06-func-*.md   # Function words (Ch 6)
-│   │   │   ├── 07-*.md        # Derivation/Nominalization (Ch 7)
-│   │   │   ├── 08-clause-*.md # Clause structure (Ch 8)
-│   │   │   ├── 09-sent-*.md   # Sentence types (Ch 9)
-│   │   │   └── 10-disc-*.md   # Discourse (Ch 10)
-│   │   ├── DISAMBIGUATION.md
-│   │   ├── MORPHEME_INVENTORY.md
+│   │   │   └── ...
 │   │   └── ...
-│   ├── methodology/       # How to build analyzers
-│   │   ├── METHODOLOGY.md
-│   │   ├── REPLICATION_GUIDE.md
-│   │   └── ...
-│   └── archive/           # Superseded documents
+│   └── methodology/       # How to build analyzers
+│       ├── METHODOLOGY.md
+│       └── REPLICATION_GUIDE.md
 ├── scripts/
 │   ├── README.md          # Script documentation
-│   ├── analyze_morphemes.py # Tedim analyzer (~19,000 lines)
-│   ├── generate_*_report.py # Report generators
-│   └── report_utils.py    # Shared report utilities
+│   ├── analyze_morphemes.py # Tedim analyzer (authoring layer)
+│   ├── backend.py         # SQLite backend (serving layer)
+│   ├── lookup_word.py     # Dictionary lookup
+│   ├── generate_*_backend.py # Backend-driven report generators
+│   └── report_utils.py    # Shared utilities
 ├── tests/
-│   ├── test_coverage_reporting.py
-│   ├── test_vp_slots.py
-│   └── regression_tests.md
-├── analysis/              # Working analysis files
+│   ├── test_backend.py    # Backend-native tests (43 tests)
+│   ├── test_export_analysis.py
+│   └── ...                # 336 total tests
+├── output/                # Generated reports
+│   ├── grammar_constructions.md
+│   ├── grammar_full.md
+│   ├── tam_report_backend.md
+│   └── ...
+├── Makefile               # Build targets (backend, grammar-reports, etc.)
 ├── PROGRESS.md            # Development history
 └── README.md
 ```
 
-## Usage
+## Quick Start
 
 ```bash
-# Analyze a Tedim Chin word
-python3 -c "
-import sys; sys.path.insert(0, 'scripts')
-from analyze_morphemes import analyze_word
-print(analyze_word('biakinnpi'))  # ('biak-inn-pi', 'pray-house-big') = temple
-"
+# Rebuild the backend from exported analysis
+make backend
 
-# Run regression tests
-python3 << 'EOF'
-import sys; sys.path.insert(0, 'scripts')
-from analyze_morphemes import analyze_word
-tests = [('ding', 'IRR'), ('khuamial', 'darkness'), ('biakinn', 'temple')]
-for word, expected in tests:
-    seg, gloss = analyze_word(word)
-    print(f"{word}: {gloss} {'✓' if expected in gloss else '✗'}")
-EOF
+# Verify backend integrity
+make backend-check
 
-# Scrape a Bible from bible.com
-python scripts/scrape_bible.py --version-id 1 --iso eng --abbrev KJV --name "King James Version"
+# Link examples to senses (sense disambiguation)
+make link-examples
 
-# Build wordform inventory
-python scripts/build_wordform_inventory.py
+# Generate grammar reports from backend
+make grammar-reports
 
-# Build verse alignment table
-python scripts/build_verse_alignment.py
+# Generate dictionary outputs from backend
+make dictionary
 
-# Generate bootstrap lexicons for all languages
-python scripts/build_bootstrap_lexicon.py
-
-# Look up a word (KC -> English)
+# Look up a word using the backend
 python scripts/lookup_word.py ctd tapa
-# Output: son (91.5% confidence), and, the, of, he...
 
-# Reverse lookup (English -> KC words across all languages)
-python scripts/lookup_word.py --all -r water
-# Output: tui-related words in most languages (tuithawl, tuidam, tuiahte, etc.)
-
-# Look up English word in a specific language
-python scripts/lookup_word.py -r ctd water
+# Run all tests
+python -m pytest tests/ -q
 ```
+
+## Workflow
+
+The canonical workflow for Tedim Chin is:
+
+1. **Edit** `scripts/analyze_morphemes.py` (add vocabulary, fix glosses)
+2. **Export** analysis to TSV: `python scripts/export_analysis.py`
+3. **Rebuild** backend: `make backend`
+4. **Link** examples to senses: `make link-examples`
+5. **Generate** outputs: `make grammar-reports` or `make dictionary`
+
+The backend database (`data/ctd_backend.db`) is a generated artifact and should not be committed to git. It can always be rebuilt from the TSV exports.
 
 ## Data Sources
 

@@ -159,9 +159,25 @@ Curated example sentences linked to senses or morphemes.
 | `segmented` | TEXT | Morpheme-segmented |
 | `glossed` | TEXT | Interlinear gloss |
 | `kjv_text` | TEXT | English translation |
-| `quality` | TEXT | 'excellent', 'good', 'acceptable' |
+| `quality` | TEXT | See quality vocabulary below |
 | `example_type` | TEXT | 'sense', 'morpheme', 'construction' |
 | `notes` | TEXT | |
+
+**Example Quality Vocabulary** (authoritative ordering, highest to lowest):
+
+| Value | Description |
+|-------|-------------|
+| `canonical` | Editor-curated exemplar for this sense/morpheme |
+| `excellent` | Clear, complete, reasonably short example |
+| `good` | Good example, perhaps longer or more complex |
+| `transparent` | Good transparency for linguistic structure |
+| `shortest` | Shortest available example (useful for tables) |
+| `acceptable` | Usable but not ideal (default for manual examples) |
+| `additional` | Extra examples beyond the primary set |
+| `auto` | Machine-generated from corpus (lowest priority) |
+
+All example retrieval methods (`get_examples_for_sense`, `get_examples_for_morpheme`, 
+`get_examples_for_lemma`) return examples sorted by this quality ordering.
 
 ### 9. `constructions`
 
@@ -488,14 +504,19 @@ stats = db.get_stats()  # Returns Dict[str, int]
 
 ### Example Quality Ranking
 
-Examples are consistently ranked using explicit quality ordering:
+Examples are consistently ranked using the `EXAMPLE_QUALITY_ORDER` constant
+defined in `scripts/backend.py`:
 
 | Rank | Quality | Description |
 |------|---------|-------------|
-| 1 | `excellent` | Manually curated, ideal for documentation |
-| 2 | `good` | Clean, representative usage |
-| 3 | `acceptable` | Usable but not ideal |
-| 4 | `auto` | Auto-generated from corpus |
+| 1 | `canonical` | Editor-curated exemplar for this sense/morpheme |
+| 2 | `excellent` | Clear, complete, reasonably short example |
+| 3 | `good` | Good example, perhaps longer or more complex |
+| 4 | `transparent` | Good transparency for linguistic structure |
+| 5 | `shortest` | Shortest available example (useful for tables) |
+| 6 | `acceptable` | Usable but not ideal |
+| 7 | `additional` | Extra examples beyond the primary set |
+| 8 | `auto` | Auto-generated from corpus (lowest priority) |
 
 All `get_examples_*` methods use this ranking by default.
 
@@ -539,42 +560,62 @@ This makes the heuristic parts of the pipeline transparent.
 
 ### Implemented and Working
 
-The following are implemented and in use:
+The following are implemented and in use for Tedim Chin:
 
+**Core Factual Layer:**
 - **`scripts/backend.py`**: SQLite backend with query API
 - **Tedim (ctd) corpus migration**: All TSV exports loaded into normalized tables
-  - `sources`: 30,422 verses
-  - `tokens`: 831,152 token occurrences
-  - `wordforms`: 20,677 distinct analyzed forms
-  - `lemmas`: 7,339 dictionary headwords
-  - `senses`: 9,962 distinct senses
-  - `grammatical_morphemes`: 485 affixes/particles
-  - `examples`: 21,908 example sentences
+  - `sources`: ~30,422 verses
+  - `tokens`: ~831,152 token occurrences
+  - `wordforms`: ~20,677 distinct analyzed forms
+  - `lemmas`: ~7,339 dictionary headwords
+  - `senses`: ~9,962 distinct senses
+  - `grammatical_morphemes`: ~206 affixes/particles (cleaned from 485)
+  - `examples`: ~42,000 example sentences
+
+**Editorial/Organizational Layer:**
+- **`constructions`**: 31 grammatical constructions populated across 10 categories
+  (case, aspect, modal, voice, serial verb, clause-final, negation, subordination,
+  nominalization, agreement)
+- **`grammar_topics`**: 17 topics with hierarchical organization linking to constructions
+
+**Access Paths:**
 - **Dictionary lookup**: `lookup_word.py` reads from backend
-- **Grammar report**: TAM report reads from backend
-- **Quality ranking**: Consistent ordering (excellent > good > acceptable > auto)
+- **Grammar reports**: TAM report, case report, constructions report read from backend
+- **Quality ranking**: Consistent ordering using `EXAMPLE_QUALITY_ORDER` constant
+
+### Conceptual Distinction
+
+The backend maintains a clear distinction between two layers:
+
+1. **Factual Base Layer**: `lemmas`, `senses`, `grammatical_morphemes`, `examples`,
+   `tokens`, `wordforms`, `sources`. These represent the analyzed corpus data and are
+   primarily derived from the analyzer's output.
+
+2. **Editorial/Organizational Layer**: `constructions`, `grammar_topics`. These represent
+   human-organized grammatical knowledge built on top of the factual base. They provide
+   structure for grammar documentation but do not change the underlying analysis.
 
 ### Implemented but Provisional
 
 These features work but involve heuristic processing:
 
-- **Morpheme-example linking**: 569 examples linked via gloss pattern matching.
-  Accuracy is high but depends on consistent glossing conventions.
-- **Auto-generated examples**: 297 examples created from corpus for under-represented
-  morphemes. Quality is `auto` and may need manual curation.
-- **Review queue**: 237 items flagged for attention. Includes ambiguous forms and
-  uncertain morpheme links.
+- **Sense-example linking**: Uses conservative matching (monosemous lemmas get direct
+  links; polysemous lemmas require exact gloss match; ambiguous cases go to review queue).
+- **Morpheme-example linking**: Examples linked via morpheme_id field. Coverage varies.
+- **Auto-generated examples**: Corpus examples created for senses lacking manual examples.
+  Quality is `auto` and appears last in quality ordering.
+- **Review queue**: Items flagged for attention including ambiguous forms and uncertain links.
 
 ### Not Yet Implemented
 
-- **`constructions` table**: Schema defined but not populated. Intended for modeling
-  serial verb patterns, aspect chains, and other multi-morpheme constructions.
-- **`grammar_topics` table**: Schema defined but not populated. Intended for organizing
-  morphemes into grammar chapter structure.
+- **Multi-language support**: Schema is language-agnostic but only Tedim is currently populated.
+- **Cross-construction examples**: Constructions link to morpheme examples, but construction-
+  specific example curation is minimal.
 
 ### Next Generalization Steps
 
 1. **Mizo pilot**: Apply pipeline to Mizo (lus) using existing analyzer
 2. **Cross-language schema validation**: Confirm schema handles Mizo-specific features
-3. **Constructions modeling**: Populate serial verb and aspect chain patterns
-4. **Grammar topic linking**: Connect morphemes to grammar chapter structure
+3. **Construction example curation**: Add canonical examples specifically for constructions
+4. **Review queue workflow**: Establish operational process for resolving flagged items

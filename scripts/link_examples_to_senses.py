@@ -4,8 +4,10 @@ Link examples to senses based on target_form and gloss matching.
 
 This script populates the sense_id field in examples table by:
 1. Direct match: target_form matches lemma_id for single-sense lemmas
-2. Gloss match: For multi-sense lemmas, match example gloss to sense gloss
-3. Heuristic: Apply rules for common patterns (e.g., DECL for hi)
+2. Strong match: For multi-sense lemmas, exact gloss match to sense
+3. Review queue: Ambiguous cases go to review rather than forcing an assignment
+
+Principle: Prefer missing linkage over wrong linkage.
 """
 
 import sqlite3
@@ -27,16 +29,28 @@ def normalize_gloss(gloss: str) -> str:
                 return p.upper()
     return gloss.upper()
 
+
+# Quality labels in descending order of preference
+QUALITY_ORDER = ['canonical', 'excellent', 'good', 'transparent', 'shortest', 'acceptable', 'auto', 'additional']
+
+
 def link_examples_to_senses(db_path: str, dry_run: bool = False):
-    """Link unlinked examples to their senses."""
+    """
+    Link unlinked examples to their senses.
+    
+    Uses conservative matching:
+    - Monosemous lemmas: direct link (no ambiguity)
+    - Polysemous lemmas: only link on strong gloss match
+    - Ambiguous cases: send to review queue instead of guessing
+    """
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     
     stats = {
-        'direct_single': 0,
-        'gloss_match': 0,
-        'heuristic': 0,
-        'skipped': 0,
+        'direct_single': 0,      # Monosemous lemma (no ambiguity)
+        'strong_match': 0,       # Exact gloss match for polysemous
+        'review_routed': 0,      # Sent to review queue (ambiguous)
+        'skipped_no_lemma': 0,   # Target doesn't match any lemma
         'total_unlinked': 0
     }
     
@@ -61,6 +75,7 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
     stats['total_unlinked'] = len(unlinked)
     
     updates = []
+    review_items = []
     
     for row in unlinked:
         example_id = row['example_id']
@@ -68,7 +83,7 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
         glossed = row['glossed']
         
         if not target:
-            stats['skipped'] += 1
+            stats['skipped_no_lemma'] += 1
             continue
             
         # Check if target matches a lemma
@@ -76,58 +91,64 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
             # Try without quotes/punctuation
             target_clean = re.sub(r'^["\']|["\']$', '', target)
             if target_clean not in senses_by_lemma:
-                stats['skipped'] += 1
+                stats['skipped_no_lemma'] += 1
                 continue
             target = target_clean
         
         senses = senses_by_lemma[target]
         
-        # Case 1: Single sense - direct link
+        # Case 1: Monosemous lemma - direct link (safe, no ambiguity)
         if len(senses) == 1:
             updates.append((senses[0]['sense_id'], example_id))
             stats['direct_single'] += 1
             continue
         
-        # Case 2: Multi-sense - try gloss matching
+        # Case 2: Polysemous lemma - require strong match
         norm_glossed = normalize_gloss(glossed)
         matched = None
+        match_type = None
         
         for sense in senses:
             norm_sense = normalize_gloss(sense['gloss'])
-            if norm_sense == norm_glossed:
+            # Exact match only - strong confidence
+            if norm_sense and norm_glossed and norm_sense == norm_glossed:
                 matched = sense['sense_id']
-                break
-            # Partial match
-            if norm_sense in norm_glossed or norm_glossed in norm_sense:
-                matched = sense['sense_id']
+                match_type = 'exact'
                 break
         
         if matched:
             updates.append((matched, example_id))
-            stats['gloss_match'] += 1
+            stats['strong_match'] += 1
             continue
         
-        # Case 3: Heuristics for common patterns
-        # For 'hi', default to DECL (most common)
-        if target == 'hi':
-            for sense in senses:
-                if sense['gloss'] == 'DECL':
-                    updates.append((sense['sense_id'], example_id))
-                    stats['heuristic'] += 1
-                    matched = True
-                    break
-        
-        if not matched:
-            # Default to first sense for multi-sense
-            updates.append((senses[0]['sense_id'], example_id))
-            stats['heuristic'] += 1
+        # Case 3: No strong match - route to review queue
+        # Do NOT default to first sense - that's the dangerous behavior we're avoiding
+        review_items.append({
+            'entity_type': 'example',
+            'entity_id': example_id,
+            'issue_type': 'ambiguous_sense',
+            'description': f"Polysemous '{target}' with {len(senses)} senses, no strong gloss match. Glossed: {glossed}",
+            'priority': 'medium',
+            'status': 'open'
+        })
+        stats['review_routed'] += 1
     
     # Apply updates
-    if not dry_run and updates:
-        conn.executemany(
-            'UPDATE examples SET sense_id = ? WHERE example_id = ?',
-            updates
-        )
+    if not dry_run:
+        if updates:
+            conn.executemany(
+                'UPDATE examples SET sense_id = ? WHERE example_id = ?',
+                updates
+            )
+        
+        # Add review items for ambiguous cases
+        if review_items:
+            conn.executemany('''
+                INSERT OR IGNORE INTO review_queue 
+                (entity_type, entity_id, issue_type, description, priority, status)
+                VALUES (:entity_type, :entity_id, :issue_type, :description, :priority, :status)
+            ''', review_items)
+        
         conn.commit()
     
     conn.close()
@@ -194,28 +215,35 @@ def generate_corpus_examples(db_path: str, limit_per_sense: int = 5, max_senses:
 if __name__ == '__main__':
     import argparse
     
-    parser = argparse.ArgumentParser(description='Link examples to senses')
+    parser = argparse.ArgumentParser(description='Link examples to senses (conservative)')
     parser.add_argument('--db', default='data/ctd_backend.db', help='Database path')
     parser.add_argument('--dry-run', action='store_true', help='Dry run without updates')
     parser.add_argument('--generate', action='store_true', help='Also generate corpus examples')
     parser.add_argument('--max-senses', type=int, default=500, help='Max senses for corpus generation')
     args = parser.parse_args()
     
-    print("=== Linking existing examples to senses ===")
+    print("=== Linking existing examples to senses (conservative mode) ===")
+    print("Principle: Prefer missing linkage over wrong linkage\n")
+    
     stats, updated = link_examples_to_senses(args.db, args.dry_run)
     
-    print(f"\nResults:")
-    print(f"  Total unlinked: {stats['total_unlinked']}")
-    print(f"  Direct (single-sense): {stats['direct_single']}")
-    print(f"  Gloss match: {stats['gloss_match']}")
-    print(f"  Heuristic: {stats['heuristic']}")
-    print(f"  Skipped: {stats['skipped']}")
-    print(f"  Updated: {updated}")
+    print("Results:")
+    print(f"  Total unlinked:     {stats['total_unlinked']:,}")
+    print()
+    print("  LINKED:")
+    print(f"    Direct (single-sense): {stats['direct_single']:,} - monosemous lemmas")
+    print(f"    Strong match:          {stats['strong_match']:,} - exact gloss match for polysemous")
+    print()
+    print("  NOT LINKED:")
+    print(f"    Review routed:         {stats['review_routed']:,} - sent to review queue (ambiguous)")
+    print(f"    Skipped (no lemma):    {stats['skipped_no_lemma']:,} - target not in lexicon")
+    print()
+    print(f"  Total updated: {updated:,}")
     
     if args.generate:
         print("\n=== Generating corpus examples for senses without ===")
         generated = generate_corpus_examples(args.db, max_senses=args.max_senses, dry_run=args.dry_run)
-        print(f"  Generated: {generated} new examples")
+        print(f"  Generated: {generated:,} new examples")
     
     if args.dry_run:
         print("\n[DRY RUN - no changes made]")
