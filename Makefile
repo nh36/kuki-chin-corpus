@@ -10,7 +10,7 @@ EXPECTED_SOURCES := 30000
 EXPECTED_TOKENS := 830000
 EXPECTED_LEMMAS := 7000
 
-.PHONY: help backend backend-check clean-backend grammar-reports dictionary
+.PHONY: help backend backend-check clean-backend grammar-reports dictionary link-examples
 
 help:
 	@echo "Kuki-Chin Corpus Build Targets"
@@ -18,6 +18,7 @@ help:
 	@echo ""
 	@echo "  make backend        - Rebuild Tedim SQLite backend from TSV exports"
 	@echo "  make backend-check  - Verify backend counts are sane"
+	@echo "  make link-examples  - Link examples to senses and generate corpus examples"
 	@echo "  make clean-backend  - Remove generated database"
 	@echo "  make grammar-reports - Generate all grammar reports from backend"
 	@echo "  make dictionary     - Generate dictionary outputs from backend"
@@ -34,6 +35,11 @@ backend: clean-backend
 backend-check:
 	@echo "Checking backend integrity..."
 	@$(PYTHON) scripts/check_backend.py --db $(DB_PATH)
+
+# Link examples to senses and generate corpus examples
+link-examples: backend-check
+	@echo "Linking examples to senses..."
+	$(PYTHON) scripts/link_examples_to_senses.py --generate --max-senses 10000
 
 # Remove generated database
 clean-backend:
