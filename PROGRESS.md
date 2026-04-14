@@ -7,18 +7,32 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 2. Bootstrap lexicon generation via PMI-based word alignment
 3. **Morphological analysis and Leipzig-style glossing (Tedim Chin complete)**
 
-## 🎉 MILESTONE: 100% Coverage Achieved
+## Tedim Chin Analyzer: Current Status
 
-**Date:** 2026-03-17  
-**Coverage:** 100% (see `output/ctd_metrics.json` for current numbers)
+**Coverage achieved:** 2026-03-17
 
-The Tedim Chin morphological analyzer is now **production-ready** for Leipzig-style interlinear glossing.
+The Tedim Chin morphological analyzer is production-ready for Leipzig-style interlinear glossing.
 
-### Analyzer Statistics
+### Canonical Metrics
 
-Run `make metrics` to generate the full metrics report. Current canonical metrics are stored in:
-- `output/ctd_metrics.json` (machine-readable)
-- `output/ctd_metrics.md` (human-readable report)
+All Tedim metrics are generated from one source of truth. Regenerate with `make metrics`.
+
+| Artifact | Path | Description |
+|----------|------|-------------|
+| Metrics JSON | `output/metrics/ctd_metrics.json` | Machine-readable canonical metrics |
+| Metrics report | `output/metrics/ctd_metrics.md` | Human-readable summary |
+| Editorial blockers | `output/editorial_blockers.md` | Prioritized publication blockers |
+| Draft dictionary | `output/dictionary/draft_dictionary.md` | Full dictionary draft |
+| Draft grammar | `output/grammar/draft_grammar.md` | Chaptered grammar draft |
+
+### Publication Blockers
+
+The analyzer has full token coverage, but publication-quality outputs require resolving:
+- High-frequency items with empty or unclear glosses
+- Polysemous lemmas needing sense disambiguation
+- Mixed lexical/grammatical items needing POS cleanup
+
+Run `make editorial-blockers` for the current prioritized list.
 
 ### Dictionary Size
 

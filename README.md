@@ -2,19 +2,23 @@
 
 A digital philology infrastructure for Kuki-Chin languages, featuring:
 - **20 Bible corpora** aligned by verse (422,676 unique wordforms)
-- **Tedim Chin morphological analyzer** achieving **100% coverage** (see `output/ctd_metrics.json` for current metrics)
+- **Tedim Chin morphological analyzer** with full coverage and backend-driven outputs
 - Bootstrap lexicons and interlinear glossing tools
 
-## 🎉 Milestone: Tedim Chin Analyzer at 100% Coverage
+## Tedim Chin Analyzer Status
 
-The Tedim Chin (ctd) morphological analyzer is now production-ready:
-- **100% token coverage** with Leipzig-style glossing
-- **7,300+ dictionary entries** (compounds, stems, function words, proper nouns)
-- **350+ tests** ensuring analyzer quality
-- Comprehensive documentation in `docs/` and `tests/`
+The Tedim Chin (ctd) analyzer is production-ready for Leipzig-style glossing.
 
-See `scripts/analyze_morphemes.py` for the analyzer, `PROGRESS.md` for development history,
-and run `make metrics` to regenerate the canonical metrics report.
+**Canonical metrics** (regenerate with `make metrics`):
+- Token coverage, lemma/sense counts, example counts: `output/metrics/ctd_metrics.json`
+- Human-readable report: `output/metrics/ctd_metrics.md`
+- Editorial blockers: `output/editorial_blockers.md`
+
+**Current publication blockers:**
+- High-frequency items with empty/unclear glosses need resolution
+- Run `make editorial-blockers` for the prioritized editorial list
+
+See `scripts/analyze_morphemes.py` for the analyzer and `PROGRESS.md` for development history.
 
 ## Current Corpus Status
 

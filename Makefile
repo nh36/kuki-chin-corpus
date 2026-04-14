@@ -76,6 +76,12 @@ metrics-check: metrics
 	@echo "Checking for metric drift..."
 	@$(PYTHON) scripts/check_metrics.py --db $(DB_PATH)
 
+# Generate editorial blockers report (publication-priority issues)
+editorial-blockers: backend-check
+	@echo "Generating editorial blockers report..."
+	$(PYTHON) scripts/generate_editorial_blockers.py --db $(DB_PATH)
+	@echo "Blockers written to output/editorial_blockers.md"
+
 # Generate editorial dashboard showing priorities for dictionary/grammar work
 editorial-dashboard: backend-check
 	@echo "Generating editorial dashboard..."
