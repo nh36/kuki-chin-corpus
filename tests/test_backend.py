@@ -25,7 +25,10 @@ import pytest
 # Add scripts to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
-from backend import Backend, Lemma, Sense, Example, GrammaticalMorpheme
+from backend import (
+    Backend, Lemma, Sense, Example, GrammaticalMorpheme,
+    EXAMPLE_QUALITY_ORDER
+)
 
 # Path to the production database
 DB_PATH = os.path.join(os.path.dirname(__file__), '..', 'data', 'ctd_backend.db')
@@ -53,6 +56,16 @@ def temp_backend():
         yield db
     finally:
         os.unlink(temp_path)
+
+
+@pytest.fixture
+def canonical_metrics():
+    """Load canonical metrics from the metrics JSON file."""
+    metrics_path = os.path.join(os.path.dirname(__file__), '..', 'output', 'metrics', 'ctd_metrics.json')
+    if not os.path.exists(metrics_path):
+        pytest.skip("Canonical metrics file not found - run 'make metrics' first")
+    with open(metrics_path) as f:
+        return json.load(f)['metrics']
 
 
 # =============================================================================
@@ -131,74 +144,86 @@ class TestMigration:
 # =============================================================================
 
 class TestTableCounts:
-    """Tests for expected row counts in key tables."""
+    """Tests for expected row counts in key tables.
     
-    def test_sources_count(self, backend):
-        """Sources should contain ~30,000 verses."""
+    Uses canonical metrics with tight tolerances for regression protection.
+    """
+    
+    def test_sources_count_matches_metrics(self, backend, canonical_metrics):
+        """Sources should match canonical metrics exactly."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM sources").fetchone()[0]
         
-        assert 29000 < count < 32000, f"Source count {count} outside expected range"
+        expected = canonical_metrics['total_sources']
+        assert count == expected, f"Source count {count} != canonical {expected}"
     
-    def test_tokens_count(self, backend):
-        """Tokens should contain ~831,000 tokens."""
+    def test_tokens_count_matches_metrics(self, backend, canonical_metrics):
+        """Tokens should match canonical metrics exactly."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM tokens").fetchone()[0]
         
-        assert 800000 < count < 900000, f"Token count {count} outside expected range"
+        expected = canonical_metrics['total_tokens']
+        assert count == expected, f"Token count {count} != canonical {expected}"
     
-    def test_wordforms_count(self, backend):
-        """Wordforms should contain ~20,000 distinct forms."""
+    def test_wordforms_count_matches_metrics(self, backend, canonical_metrics):
+        """Wordforms should match canonical metrics exactly."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM wordforms").fetchone()[0]
         
-        assert 18000 < count < 25000, f"Wordform count {count} outside expected range"
+        expected = canonical_metrics['wordform_count']
+        assert count == expected, f"Wordform count {count} != canonical {expected}"
     
-    def test_lemmas_count(self, backend):
-        """Lemmas should contain ~7,000 entries."""
+    def test_lemmas_count_matches_metrics(self, backend, canonical_metrics):
+        """Lemmas should match canonical metrics exactly."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM lemmas").fetchone()[0]
         
-        assert 6000 < count < 9000, f"Lemma count {count} outside expected range"
+        expected = canonical_metrics['lemma_count']
+        assert count == expected, f"Lemma count {count} != canonical {expected}"
     
-    def test_senses_count(self, backend):
-        """Senses should contain ~10,000 entries."""
+    def test_senses_count_matches_metrics(self, backend, canonical_metrics):
+        """Senses should match canonical metrics exactly."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM senses").fetchone()[0]
         
-        assert 8000 < count < 12000, f"Sense count {count} outside expected range"
+        expected = canonical_metrics['sense_count']
+        assert count == expected, f"Sense count {count} != canonical {expected}"
     
-    def test_grammatical_morphemes_count(self, backend):
-        """Grammatical morphemes should contain 150-550 entries."""
+    def test_grammatical_morphemes_count_matches_metrics(self, backend, canonical_metrics):
+        """Grammatical morphemes should match canonical metrics exactly."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM grammatical_morphemes").fetchone()[0]
         
-        assert 150 < count < 550, f"Grammatical morpheme count {count} outside expected range"
+        expected = canonical_metrics['grammatical_morpheme_count']
+        assert count == expected, f"Morpheme count {count} != canonical {expected}"
     
-    def test_examples_count(self, backend):
-        """Examples should contain ~20,000+ entries."""
+    def test_examples_count_matches_metrics(self, backend, canonical_metrics):
+        """Examples should match canonical metrics exactly."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM examples").fetchone()[0]
         
-        assert count > 20000, f"Example count {count} too low"
+        expected = canonical_metrics['example_count']
+        assert count == expected, f"Example count {count} != canonical {expected}"
     
-    def test_constructions_count(self, backend):
-        """Constructions layer is optional but should be valid if present."""
+    def test_constructions_count_matches_metrics(self, backend, canonical_metrics):
+        """Constructions layer should match metrics (optional layer)."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM constructions").fetchone()[0]
         
-        # Constructions are an optional editorial layer
-        # If present, should have reasonable content
+        expected = canonical_metrics['construction_count']
+        assert count == expected, f"Construction count {count} != canonical {expected}"
+        
         if count == 0:
             pytest.skip("Constructions layer not populated (optional)")
-        assert count >= 10, f"Construction count {count} too low if layer is populated"
     
-    def test_grammar_topics_count(self, backend):
-        """Grammar topics layer is optional but should be valid if present."""
+    def test_grammar_topics_count_matches_metrics(self, backend, canonical_metrics):
+        """Grammar topics layer should match metrics (optional layer)."""
         with backend._connection() as conn:
             count = conn.execute("SELECT COUNT(*) FROM grammar_topics").fetchone()[0]
         
-        # Grammar topics are an optional editorial layer
+        expected = canonical_metrics['grammar_topic_count']
+        assert count == expected, f"Grammar topics count {count} != canonical {expected}"
+        
         if count == 0:
             pytest.skip("Grammar topics layer not populated (optional)")
         assert count >= 5, f"Grammar topic count {count} too low if layer is populated"
@@ -331,7 +356,8 @@ class TestSenseExampleLinking:
 class TestExampleQualityOrdering:
     """Tests for example quality ranking."""
     
-    QUALITY_ORDER = ['canonical', 'excellent', 'good', 'transparent', 'shortest', 'acceptable', 'auto', 'additional']
+    # Use the canonical order from backend.py
+    QUALITY_ORDER = EXAMPLE_QUALITY_ORDER
     
     def test_quality_values_valid(self, backend):
         """All quality values should be recognized."""
@@ -345,48 +371,82 @@ class TestExampleQualityOrdering:
         for q in qualities:
             assert q in valid_qualities, f"Unknown quality value: {q}"
     
-    def test_get_examples_ordered_by_quality(self, backend):
-        """Examples should be retrievable in quality order."""
+    def test_get_examples_for_sense_respects_quality_order(self, backend):
+        """API method get_examples_for_sense should return examples in quality order."""
+        # Find a sense with multiple examples of different qualities
         with backend._connection() as conn:
-            # Get examples for a sense with multiple qualities
-            examples = list(conn.execute('''
-                SELECT quality FROM examples
+            # Get a sense that has examples with different quality values
+            sense_with_varied = conn.execute('''
+                SELECT sense_id, COUNT(DISTINCT quality) as q_count
+                FROM examples
                 WHERE sense_id IS NOT NULL AND sense_id != ''
-                ORDER BY CASE quality
-                    WHEN 'canonical' THEN 1
-                    WHEN 'excellent' THEN 2
-                    WHEN 'good' THEN 3
-                    WHEN 'transparent' THEN 4
-                    WHEN 'shortest' THEN 5
-                    WHEN 'acceptable' THEN 6
-                    WHEN 'auto' THEN 7
-                    WHEN 'additional' THEN 8
-                    ELSE 9
-                END
-                LIMIT 20
-            '''))
+                  AND quality IS NOT NULL
+                GROUP BY sense_id
+                HAVING q_count >= 2
+                ORDER BY COUNT(*) DESC
+                LIMIT 1
+            ''').fetchone()
         
-        # Verify ordering (canonical/excellent should come first if present)
-        assert len(examples) > 0
+        if not sense_with_varied:
+            pytest.skip("No sense found with multiple quality levels")
+        
+        sense_id = sense_with_varied[0]
+        
+        # Get examples via the API
+        examples = backend.get_examples_for_sense(sense_id, limit=20)
+        
+        # Verify they come out in correct order
+        quality_ranks = {q: i for i, q in enumerate(self.QUALITY_ORDER)}
+        prev_rank = -1
+        for ex in examples:
+            if ex.quality:
+                rank = quality_ranks.get(ex.quality, 99)
+                assert rank >= prev_rank, \
+                    f"Quality order violation: {examples[prev_rank].quality if prev_rank >= 0 else 'start'} -> {ex.quality}"
+                prev_rank = rank
+    
+    def test_get_examples_for_morpheme_respects_quality_order(self, backend):
+        """API method get_examples_for_morpheme should return examples in quality order."""
+        # Test with a common morpheme
+        examples = backend.get_examples_for_morpheme('in.ERG.case_marker', limit=20)
+        
+        if not examples:
+            pytest.skip("No examples found for ERG morpheme")
+        
+        quality_ranks = {q: i for i, q in enumerate(self.QUALITY_ORDER)}
+        prev_rank = -1
+        for ex in examples:
+            if ex.quality:
+                rank = quality_ranks.get(ex.quality, 99)
+                assert rank >= prev_rank, \
+                    f"Quality order violation for morpheme examples"
+                prev_rank = rank
     
     def test_auto_quality_not_primary(self, backend):
         """Auto-generated examples shouldn't dominate primary positions."""
+        # Find a sense that has both auto and non-auto examples
         with backend._connection() as conn:
-            # For senses with both auto and non-auto examples,
-            # non-auto should be available
-            senses_with_mixed = conn.execute('''
-                SELECT sense_id, 
-                       SUM(CASE WHEN quality = 'auto' THEN 1 ELSE 0 END) as auto_ct,
-                       SUM(CASE WHEN quality != 'auto' THEN 1 ELSE 0 END) as manual_ct
+            sense_id = conn.execute('''
+                SELECT sense_id
                 FROM examples
                 WHERE sense_id IS NOT NULL AND sense_id != ''
                 GROUP BY sense_id
-                HAVING auto_ct > 0 AND manual_ct > 0
-                LIMIT 10
-            ''').fetchall()
+                HAVING SUM(CASE WHEN quality = 'auto' THEN 1 ELSE 0 END) > 0
+                   AND SUM(CASE WHEN quality != 'auto' THEN 1 ELSE 0 END) > 0
+                LIMIT 1
+            ''').fetchone()
         
-        # Just verify the query runs - structure is correct
-        assert isinstance(senses_with_mixed, list)
+        if not sense_id:
+            pytest.skip("No sense found with both auto and manual examples")
+        
+        # Use API to get top examples
+        examples = backend.get_examples_for_sense(sense_id[0], limit=3)
+        
+        # The first example shouldn't be 'auto' if there are better ones
+        if len(examples) > 1:
+            first_quality = examples[0].quality
+            assert first_quality != 'auto' or all(e.quality == 'auto' for e in examples), \
+                f"Auto example ranked first but better examples exist"
 
 
 # =============================================================================
@@ -715,3 +775,137 @@ class TestDataIntegrity:
             ''').fetchone()[0]
         
         assert orphan_tokens == 0, f"Found {orphan_tokens} tokens with invalid source_id"
+
+
+# =============================================================================
+# End-to-End Integration Tests
+# =============================================================================
+
+class TestEndToEndWorkflow:
+    """Integration tests for the complete backend workflow.
+    
+    These tests verify the actual workflow encoded in the Makefile,
+    exercising real end-to-end semantics rather than isolated table properties.
+    """
+    
+    def test_full_lookup_workflow(self, backend):
+        """Test complete word lookup workflow: lemma → senses → examples."""
+        # Pick a common word
+        lemma_id = 'pai'
+        
+        # Step 1: Get lemma
+        lemma = backend.get_lemma(lemma_id)
+        assert lemma is not None, f"Lemma '{lemma_id}' should exist"
+        assert lemma.citation_form == 'pai'
+        assert lemma.pos == 'V'
+        assert lemma.primary_gloss, "Should have primary gloss"
+        
+        # Step 2: Get senses for the lemma
+        senses = backend.get_senses(lemma_id)
+        assert len(senses) >= 1, "Should have at least one sense"
+        
+        # Step 3: Get examples for primary sense
+        primary_sense = [s for s in senses if s.is_primary]
+        if primary_sense:
+            examples = backend.get_examples_for_sense(primary_sense[0].sense_id)
+            assert len(examples) > 0, "Primary sense should have examples"
+            
+            # Verify example structure
+            ex = examples[0]
+            assert ex.target_form, "Example should have target form"
+            assert ex.glossed, "Example should have glossed text"
+            assert ex.source_id, "Example should have source reference"
+    
+    def test_morpheme_lookup_workflow(self, backend):
+        """Test grammatical morpheme lookup: morpheme → examples with gloss."""
+        # Look up ergative marker -in
+        morpheme_id = 'in.ERG.case_marker'
+        
+        # Step 1: Get morpheme
+        morpheme = backend.get_morpheme(morpheme_id)
+        assert morpheme is not None, f"Morpheme '{morpheme_id}' should exist"
+        assert morpheme.form == 'in'
+        assert morpheme.gloss == 'ERG'
+        assert morpheme.category == 'case_marker'
+        
+        # Step 2: Get examples
+        examples = backend.get_examples_for_morpheme(morpheme_id, limit=10)
+        assert len(examples) > 0, "ERG marker should have examples"
+        
+        # Step 3: Verify examples show the morpheme
+        has_matching_example = any(
+            'ERG' in (ex.glossed or '') for ex in examples
+        )
+        assert has_matching_example, "At least one example should contain ERG gloss"
+    
+    def test_example_quality_determines_selection(self, backend):
+        """Test that example quality affects which examples are returned first."""
+        # Find a sense with multiple examples
+        with backend._connection() as conn:
+            sense_id = conn.execute('''
+                SELECT sense_id FROM examples
+                WHERE sense_id IS NOT NULL AND sense_id != ''
+                GROUP BY sense_id
+                HAVING COUNT(*) >= 5
+                LIMIT 1
+            ''').fetchone()[0]
+        
+        # Get examples via API
+        examples = backend.get_examples_for_sense(sense_id, limit=10)
+        
+        # Verify they're in quality order
+        quality_ranks = {q: i for i, q in enumerate(EXAMPLE_QUALITY_ORDER)}
+        
+        prev_rank = -1
+        for ex in examples:
+            if ex.quality:
+                rank = quality_ranks.get(ex.quality, 99)
+                assert rank >= prev_rank, \
+                    f"Examples should be ordered by quality, got {ex.quality} after better quality"
+                prev_rank = rank
+    
+    def test_backend_stats_match_canonical_metrics(self, backend, canonical_metrics):
+        """Backend get_stats() should match canonical metrics."""
+        stats = backend.get_stats()
+        
+        # Key counts should match exactly
+        assert stats['sources'] == canonical_metrics['total_sources']
+        assert stats['tokens'] == canonical_metrics['total_tokens']
+        assert stats['lemmas'] == canonical_metrics['lemma_count']
+        assert stats['senses'] == canonical_metrics['sense_count']
+        assert stats['grammatical_morphemes'] == canonical_metrics['grammatical_morpheme_count']
+        assert stats['examples'] == canonical_metrics['example_count']
+    
+    def test_all_lemmas_have_glosses(self, backend, canonical_metrics):
+        """Verify no unglossed lemmas (regression protection)."""
+        with backend._connection() as conn:
+            unglossed = conn.execute('''
+                SELECT COUNT(*) FROM lemmas 
+                WHERE (primary_gloss IS NULL OR primary_gloss = '' OR primary_gloss = '?')
+            ''').fetchone()[0]
+        
+        assert unglossed == 0, f"Found {unglossed} unglossed lemmas (should be 0)"
+    
+    def test_senses_with_examples_matches_metrics(self, backend, canonical_metrics):
+        """Verify senses_with_examples count matches canonical."""
+        # Must match the exact query used by generate_metrics.py
+        with backend._connection() as conn:
+            with_examples = conn.execute('''
+                SELECT COUNT(DISTINCT sense_id) FROM examples WHERE sense_id IS NOT NULL
+            ''').fetchone()[0]
+        
+        expected = canonical_metrics['senses_with_examples']
+        assert with_examples == expected, \
+            f"Senses with examples {with_examples} != canonical {expected}"
+    
+    def test_review_queue_fully_resolved(self, backend, canonical_metrics):
+        """Verify review queue state matches canonical."""
+        with backend._connection() as conn:
+            open_items = conn.execute('''
+                SELECT COUNT(*) FROM review_queue 
+                WHERE resolution IS NULL OR resolution = ''
+            ''').fetchone()[0]
+        
+        expected = canonical_metrics['review_queue_open']
+        assert open_items == expected, \
+            f"Open review items {open_items} != canonical {expected}"

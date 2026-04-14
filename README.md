@@ -3,9 +3,46 @@
 A digital philology infrastructure for Kuki-Chin languages, featuring:
 - **20 Bible corpora** aligned by verse (422,676 unique wordforms)
 - **Tedim Chin morphological analyzer** with Leipzig-style glossing
+- **SQLite backend** for normalized dictionary/grammar data
 - Bootstrap lexicons and interlinear glossing tools
 
-## Tedim Chin Analyzer: Current Metrics
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Authoring Layer                              │
+│  scripts/analyze_morphemes.py → data/ctd_analysis/*.tsv        │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    Backend (SQLite)                             │
+│  data/ctd_backend.db ← scripts/backend.py                      │
+│  Tables: lemmas, senses, wordforms, examples, morphemes...     │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│                    Publication Outputs                          │
+│  output/dictionary/  output/grammar/  output/metrics/          │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+## Quick Start
+
+```bash
+# Build the backend from TSV exports
+make backend
+
+# Run all tests (354 tests)
+make test
+
+# Generate publication outputs
+make dictionary-draft grammar-draft metrics
+
+# Check documentation matches canonical metrics
+make metrics-check
+```
+
+## Tedim Chin: Current Metrics
 
 | Metric | Value | Notes |
 |--------|-------|-------|
@@ -19,6 +56,19 @@ A digital philology infrastructure for Kuki-Chin languages, featuring:
 
 Regenerate metrics: `make metrics` → `output/metrics/ctd_metrics.json`
 
+### Test Coverage
+
+| Suite | Tests | Purpose |
+|-------|-------|---------|
+| Backend tests | 51 | Database integrity, API behavior, end-to-end workflow |
+| Export tests | 56 | TSV export correctness |
+| Orthography tests | 49 | Normalization and tone restoration |
+| Metrics tests | 10 | Publication readiness gates |
+| Other analyzer tests | 188 | POS tagging, morphology, disambiguation |
+| **Total** | **354** | |
+
+Run tests: `pytest tests/` or `make test`
+
 ### Publication Status
 
 The analyzer achieves **100% coverage** with all lemmas glossed.
@@ -30,7 +80,9 @@ Current state:
 - 26,898 corpus examples linked
 - 5,812 senses (58%) have corpus examples
 
-**Note:** The constructions and grammar topics layer is not yet populated.
+**Backend layer status:**
+- Constructions table: not yet populated
+- Grammar topics table: not yet populated
 
 ## Current Corpus Status
 
@@ -131,15 +183,26 @@ Lexicon sizes range from ~600 entries (Mark-only) to ~16,000 entries (full Bible
 
 ## Scripts
 
+### Backend Pipeline (Tedim Chin)
+
 | Script | Purpose |
 |--------|---------|
-| `scripts/analyze_morphemes.py` | **Tedim Chin morphological analyzer** (main deliverable) |
-| `scripts/extract_bibles.sh` | Extract original paralleltext.info zip files |
+| `scripts/analyze_morphemes.py` | Morphological analyzer (authoring layer) |
+| `scripts/backend.py` | SQLite backend class and migration |
+| `scripts/generate_metrics.py` | Canonical metrics from backend |
+| `scripts/generate_dictionary_draft.py` | Draft dictionary from backend |
+| `scripts/generate_grammar_draft.py` | Draft grammar from backend |
+| `scripts/sync_docs_to_metrics.py` | Sync README/PROGRESS to metrics |
+| `scripts/lookup_word.py` | Interactive lookup (reads backend) |
+
+### Corpus Building
+
+| Script | Purpose |
+|--------|---------|
 | `scripts/scrape_bible.py` | Scrape Bibles from bible.com |
-| `scripts/build_wordform_inventory.py` | Build unified wordform list across all languages |
-| `scripts/build_verse_alignment.py` | Create aligned verse table for parallel comparison |
-| `scripts/build_bootstrap_lexicon.py` | Generate word co-occurrence lexicons for all languages |
-| `scripts/lookup_word.py` | Interactive lookup tool (forward and reverse) |
+| `scripts/build_wordform_inventory.py` | Build wordform list across languages |
+| `scripts/build_verse_alignment.py` | Create aligned verse table |
+| `scripts/build_bootstrap_lexicon.py` | Generate word co-occurrence lexicons |
 
 ## Directory Structure
 

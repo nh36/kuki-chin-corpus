@@ -23,6 +23,39 @@ from contextlib import contextmanager
 
 
 # =============================================================================
+# Constants
+# =============================================================================
+
+# Canonical example quality ordering (best to worst)
+# This order is used by all API methods and should match test expectations
+EXAMPLE_QUALITY_ORDER = [
+    'canonical',     # Hand-picked exemplary examples
+    'excellent',     # Excellent natural examples
+    'good',          # Good illustrative examples
+    'transparent',   # Morphologically transparent
+    'shortest',      # Short/simple examples
+    'acceptable',    # Acceptable but not ideal
+    'auto',          # Auto-generated from corpus
+    'additional',    # Additional bulk examples
+]
+
+# SQL CASE expression for quality ordering
+QUALITY_ORDER_SQL = '''
+    CASE quality
+        WHEN 'canonical' THEN 1
+        WHEN 'excellent' THEN 2
+        WHEN 'good' THEN 3
+        WHEN 'transparent' THEN 4
+        WHEN 'shortest' THEN 5
+        WHEN 'acceptable' THEN 6
+        WHEN 'auto' THEN 7
+        WHEN 'additional' THEN 8
+        ELSE 9
+    END
+'''
+
+
+# =============================================================================
 # Data Classes
 # =============================================================================
 
@@ -566,6 +599,18 @@ class Backend:
                 results.append(GrammaticalMorpheme(**d))
             return results
     
+    def get_morpheme(self, morpheme_id: str) -> Optional[GrammaticalMorpheme]:
+        """Get a morpheme by its ID."""
+        with self._connection() as conn:
+            row = conn.execute('''
+                SELECT * FROM grammatical_morphemes WHERE morpheme_id = ?
+            ''', (morpheme_id,)).fetchone()
+            if row:
+                d = dict(row)
+                d['is_polysemous'] = bool(d['is_polysemous'])
+                return GrammaticalMorpheme(**d)
+            return None
+    
     # =========================================================================
     # Example Methods
     # =========================================================================
@@ -586,56 +631,39 @@ class Backend:
     
     def get_examples_for_sense(self, sense_id: str, 
                                 limit: int = 5) -> List[Example]:
-        """Get examples for a sense."""
+        """Get examples for a sense, ordered by quality."""
         with self._connection() as conn:
-            rows = conn.execute('''
+            rows = conn.execute(f'''
                 SELECT * FROM examples 
                 WHERE sense_id = ?
-                ORDER BY 
-                    CASE quality 
-                        WHEN 'excellent' THEN 1 
-                        WHEN 'good' THEN 2 
-                        WHEN 'acceptable' THEN 3
-                        ELSE 4
-                    END
+                ORDER BY {QUALITY_ORDER_SQL}
                 LIMIT ?
             ''', (sense_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
     
     def get_examples_for_morpheme(self, morpheme_id: str,
                                    limit: int = 5) -> List[Example]:
-        """Get examples for a grammatical morpheme."""
+        """Get examples for a grammatical morpheme, ordered by quality."""
         with self._connection() as conn:
-            rows = conn.execute('''
+            rows = conn.execute(f'''
                 SELECT * FROM examples 
                 WHERE morpheme_id = ?
-                ORDER BY 
-                    CASE quality 
-                        WHEN 'excellent' THEN 1 
-                        WHEN 'good' THEN 2 
-                        WHEN 'acceptable' THEN 3
-                        ELSE 4
-                    END
+                ORDER BY {QUALITY_ORDER_SQL}
                 LIMIT ?
             ''', (morpheme_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
     
     def get_examples_for_lemma(self, lemma_id: str, 
                                 limit: int = 10) -> List[Example]:
-        """Get examples for any sense of a lemma."""
+        """Get examples for any sense of a lemma, ordered by quality."""
         with self._connection() as conn:
-            rows = conn.execute('''
+            rows = conn.execute(f'''
                 SELECT e.* FROM examples e
                 JOIN senses s ON e.sense_id = s.sense_id
                 WHERE s.lemma_id = ?
                 ORDER BY 
                     s.is_primary DESC,
-                    CASE e.quality 
-                        WHEN 'excellent' THEN 1 
-                        WHEN 'good' THEN 2 
-                        WHEN 'acceptable' THEN 3
-                        ELSE 4 
-                    END
+                    {QUALITY_ORDER_SQL}
                 LIMIT ?
             ''', (lemma_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
