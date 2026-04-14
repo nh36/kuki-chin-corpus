@@ -13,23 +13,24 @@ A digital philology infrastructure for Kuki-Chin languages, featuring:
 | Lemmas | 7,339 | All with glosses |
 | Senses | 9,962 | Including polysemous items |
 | Grammatical morphemes | 485 | Affixes and clitics |
-| Corpus examples | 21,908 | Linked to senses/morphemes |
+| Corpus examples | 26,898 | Linked to senses/morphemes |
 | Coverage (known POS) | 100.0% | Full morphological analysis |
-| Review queue | 237 | Items for editorial attention |
+| Senses with examples | 5,812 | 58% of senses |
 
 Regenerate metrics: `make metrics` → `output/metrics/ctd_metrics.json`
 
 ### Publication Status
 
-The analyzer achieves **100% coverage** with all lemmas glossed. The review queue tracks 237 items needing editorial attention (22 high-priority).
+The analyzer achieves **100% coverage** with all lemmas glossed.
 
-Key achievements:
+Current state:
 - All 7,339 lemmas have English glosses
 - 9,962 distinct senses catalogued
 - 485 grammatical morphemes documented
-- 21,908 corpus examples linked
+- 26,898 corpus examples linked
+- 5,812 senses (58%) have corpus examples
 
-Run `make editorial-blockers` for the prioritized editorial task list.
+**Note:** The constructions and grammar topics layer is not yet populated.
 
 ## Current Corpus Status
 

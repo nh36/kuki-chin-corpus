@@ -17,19 +17,36 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 | Lemmas (headwords) | 7,339 |
 | Senses | 9,962 |
 | Grammatical morphemes | 485 |
-| Linked examples | 21,908 |
+| Linked examples | 26,898 |
+| Senses with examples | 5,812 (58%) |
 | Coverage (known POS) | 100.0% |
 
-### Editorial Review Queue
 
-| Priority | Count | Description |
-|----------|-------|-------------|
-| High | 22 | Core function words |
+### Review Queue (Resolved)
+
+The formal review queue tracked ambiguous wordforms needing disambiguation:
+
+| Priority | Resolved | Description |
+|----------|----------|-------------|
+| High | 22 | Core function words (a, hi, na, etc.) |
 | Medium | 212 | Compounds, plurals, nominalizations |
 | Low | 3 | Example linking edge cases |
-| **Total** | **237** | Items for editorial attention |
+| **Total** | **237** | All resolved |
 
-All 7,339 lemmas now have English glosses. The review queue tracks items needing editorial refinement for publication-quality outputs.
+Each item received a documented resolution (primary POS, analysis notes).
+
+### Live Editorial Work
+
+Beyond the formal review queue, ongoing editorial tasks remain:
+
+| Task | Count | Status |
+|------|-------|--------|
+| Polysemous lemmas | ~975 | Need context-sensitive disambiguation |
+| Senses without examples | ~4,150 | 42% of senses lack corpus examples |
+| Constructions layer | 0 | Not yet populated |
+| Grammar topics layer | 0 | Not yet populated |
+
+Run `make editorial-blockers` for the current prioritized work list.
 
 ### Generated Outputs
 

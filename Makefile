@@ -75,6 +75,13 @@ metrics: backend-check
 metrics-check: metrics
 	@echo "Checking for metric drift..."
 	@$(PYTHON) scripts/check_metrics.py --db $(DB_PATH)
+	@$(PYTHON) scripts/sync_docs_to_metrics.py --check
+
+# Sync README/PROGRESS to canonical metrics
+sync-docs: metrics
+	@echo "Syncing documentation to canonical metrics..."
+	$(PYTHON) scripts/sync_docs_to_metrics.py
+	@echo "Documentation synced"
 
 # Generate editorial blockers report (publication-priority issues)
 editorial-blockers: backend-check

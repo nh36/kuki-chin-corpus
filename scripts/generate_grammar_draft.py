@@ -484,6 +484,27 @@ def generate_grammar_draft(conn) -> str:
     lines.append(f'- **Major gaps (stubs):** {status_counts["stub"]} sections')
     lines.append('')
     
+    # Backend layer status
+    construction_count = conn.execute('SELECT COUNT(*) FROM constructions').fetchone()[0]
+    topic_count = conn.execute('SELECT COUNT(*) FROM grammar_topics').fetchone()[0]
+    
+    lines.append('## Backend Layer Status')
+    lines.append('')
+    if construction_count == 0 and topic_count == 0:
+        lines.append('**Note:** The constructions and grammar topics tables in the backend are not yet populated.')
+        lines.append('')
+        lines.append('This grammar draft is generated from:')
+        lines.append('- Grammatical morpheme inventory (485 affixes/clitics)')
+        lines.append('- Corpus examples linked to morphemes')
+        lines.append('- Manual section content based on corpus analysis')
+        lines.append('')
+        lines.append('Future work: Populate `constructions` and `grammar_topics` tables to enable')
+        lines.append('structured cross-referencing between grammar sections and backend data.')
+    else:
+        lines.append(f'- **Constructions:** {construction_count} documented')
+        lines.append(f'- **Grammar topics:** {topic_count} documented')
+    lines.append('')
+    
     # Table of contents
     lines.append('---')
     lines.append('')

@@ -80,6 +80,18 @@ def get_senses_without_examples(conn, limit=30):
     ''', (limit,)).fetchall()
 
 
+def get_review_stats(conn):
+    """Get review queue statistics."""
+    stats = {}
+    stats['open'] = conn.execute(
+        "SELECT COUNT(*) FROM review_queue WHERE status = 'open'"
+    ).fetchone()[0]
+    stats['resolved'] = conn.execute(
+        "SELECT COUNT(*) FROM review_queue WHERE status = 'resolved'"
+    ).fetchone()[0]
+    return stats
+
+
 def get_summary_stats(conn):
     """Get summary statistics for blockers."""
     stats = {}
@@ -131,12 +143,26 @@ def generate_blockers_report(conn):
     lines.append('')
     lines.append(f'**Generated:** {datetime.now().isoformat()}')
     lines.append('')
-    lines.append('This report identifies the highest-priority items to resolve before publication.')
+    lines.append('This report identifies the live editorial work for publication.')
     lines.append('')
     
-    # Summary
+    # Review queue status (distinguished from live work)
+    review_stats = get_review_stats(conn)
+    lines.append('## Review Queue Status')
+    lines.append('')
+    lines.append(f"The formal review queue is **{'empty' if review_stats['open'] == 0 else 'active'}**:")
+    lines.append(f"- Open items: {review_stats['open']}")
+    lines.append(f"- Resolved items: {review_stats['resolved']}")
+    lines.append('')
+    if review_stats['open'] == 0 and review_stats['resolved'] > 0:
+        lines.append('All formal review items have been processed with documented resolutions.')
+        lines.append('')
+    
+    # Live editorial work summary
     stats = get_summary_stats(conn)
-    lines.append('## Summary')
+    lines.append('## Live Editorial Work')
+    lines.append('')
+    lines.append('These are ongoing tasks that remain independent of the review queue:')
     lines.append('')
     lines.append('| Issue | Count | Impact |')
     lines.append('|-------|-------|--------|')
