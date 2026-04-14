@@ -2,23 +2,33 @@
 
 A digital philology infrastructure for Kuki-Chin languages, featuring:
 - **20 Bible corpora** aligned by verse (422,676 unique wordforms)
-- **Tedim Chin morphological analyzer** with full coverage and backend-driven outputs
+- **Tedim Chin morphological analyzer** with Leipzig-style glossing
 - Bootstrap lexicons and interlinear glossing tools
 
-## Tedim Chin Analyzer Status
+## Tedim Chin Analyzer: Current Metrics
 
-The Tedim Chin (ctd) analyzer is production-ready for Leipzig-style glossing.
+| Metric | Value | Notes |
+|--------|-------|-------|
+| Corpus tokens | 831,152 | Full Bible text |
+| Lemmas | 7,339 | Dictionary headwords |
+| Senses | 9,962 | Including polysemous items |
+| Grammatical morphemes | 206 | Affixes and clitics |
+| Corpus examples | 42,009 | Linked to senses |
+| **Entries needing gloss** | **1,406** | ~7% of lemmas |
+| Tokens in unglossed entries | 57,273 | ~7% of corpus |
 
-**Canonical metrics** (regenerate with `make metrics`):
-- Token coverage, lemma/sense counts, example counts: `output/metrics/ctd_metrics.json`
-- Human-readable report: `output/metrics/ctd_metrics.md`
-- Editorial blockers: `output/editorial_blockers.md`
+Regenerate metrics: `make metrics` → `output/metrics/ctd_metrics.json`
 
-**Current publication blockers:**
-- High-frequency items with empty/unclear glosses need resolution
-- Run `make editorial-blockers` for the prioritized editorial list
+### Publication Status
 
-See `scripts/analyze_morphemes.py` for the analyzer and `PROGRESS.md` for development history.
+The analyzer achieves full token coverage for morphological segmentation, but **publication-quality dictionary and grammar outputs require resolving 1,406 unglossed entries**.
+
+Top blockers (by token frequency):
+1. **uh** (22,122 tokens) — unclear function word
+2. **hong** (15,578 tokens) — empty gloss
+3. **ahih** (5,804 tokens) — empty gloss
+
+Run `make editorial-blockers` for the full prioritized list.
 
 ## Current Corpus Status
 

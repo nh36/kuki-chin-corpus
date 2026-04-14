@@ -354,8 +354,90 @@ def generate_generic_section(conn, section) -> str:
         lines.append(f"The grammar includes **{func_count:,}** function words.\n")
         return '\n'.join(lines) + '\n'
     
-    # Default: show as placeholder
-    return '*See morpheme tables and examples in related sections.*\n'
+    # Noun classification
+    if 'noun classification' in title:
+        noun_count = conn.execute("SELECT COUNT(*) FROM lemmas WHERE pos = 'N'").fetchone()[0]
+        lines.append(f"The corpus contains **{noun_count:,}** noun lemmas.\n")
+        return '\n'.join(lines) + '\n'
+    
+    # Possession
+    if 'possession' in title:
+        lines.append('Possession is marked by pronominal prefixes on possessed nouns:\n')
+        lines.append('- **ka-** (1SG): ka-inn "my house"')
+        lines.append('- **na-** (2SG): na-inn "your house"')
+        lines.append('- **a-** (3SG): a-inn "his/her house"')
+        return '\n'.join(lines) + '\n'
+    
+    # Demonstratives
+    if 'demonstrative' in title:
+        lines.append('Demonstrative pronouns distinguish proximal and distal:\n')
+        lines.append('- **hi** — proximal "this"')
+        lines.append('- **tua** — distal "that"')
+        return '\n'.join(lines) + '\n'
+    
+    # Interrogatives
+    if 'interrogative' in title:
+        lines.append('Question words include:\n')
+        lines.append('- **bang** — "what"')
+        lines.append('- **kua** — "who"')
+        lines.append('- **koizah** — "where"')
+        lines.append('- **banghang** — "why"')
+        return '\n'.join(lines) + '\n'
+    
+    # Morphological processes
+    if 'morphological process' in title:
+        lines.append('Major morphological processes:\n')
+        lines.append('- **Prefixation:** pronominal agreement (ka-, na-, a-)')
+        lines.append('- **Suffixation:** TAM, case, nominalization')
+        lines.append('- **Compounding:** N+N, V+N, N+V')
+        lines.append('- **Reduplication:** intensity, plurality')
+        return '\n'.join(lines) + '\n'
+    
+    # Reduplication
+    if 'reduplication' in title:
+        lines.append('Reduplication marks intensity or plurality:\n')
+        lines.append('- **zel~zel** "very far" (from zel "far")')
+        lines.append('- **nuam~nuam** "comfortable" (from nuam "pleasant")')
+        return '\n'.join(lines) + '\n'
+    
+    # Conjunctions
+    if 'conjunction' in title:
+        conj = conn.execute('''
+            SELECT citation_form, primary_gloss, token_count
+            FROM lemmas WHERE pos = 'CONJ'
+            ORDER BY token_count DESC LIMIT 10
+        ''').fetchall()
+        if conj:
+            lines.append('| Form | Gloss | Tokens |')
+            lines.append('|------|-------|--------|')
+            for c in conj:
+                lines.append(f"| {c['citation_form']} | {c['primary_gloss'] or '—'} | {c['token_count']:,} |")
+            return '\n'.join(lines) + '\n'
+    
+    # Basic clause types
+    if 'basic clause' in title:
+        lines.append('Tedim Chin has declarative, interrogative, and imperative clauses.\n')
+        lines.append('- **Declarative:** Verb-final with sentence-final particle')
+        lines.append('- **Interrogative:** Question word or rising intonation')
+        lines.append('- **Imperative:** Bare stem or with imperative particle')
+        return '\n'.join(lines) + '\n'
+    
+    # Argument structure
+    if 'argument structure' in title:
+        lines.append('Tedim Chin shows ergative-absolutive alignment:\n')
+        lines.append('- Transitive agent marked with **-in** (ERG)')
+        lines.append('- Intransitive subject and transitive patient unmarked')
+        return '\n'.join(lines) + '\n'
+    
+    # Coordination
+    if 'coordination' in title:
+        lines.append('Coordination uses **le** "and" and **ahibale** "but":\n')
+        lines.append('- NP le NP "NP and NP"')
+        lines.append('- Clause, ahibale clause "Clause, but clause"')
+        return '\n'.join(lines) + '\n'
+    
+    # Default: section needs content
+    return '*[Content to be written]*\n'
 
 
 def generate_grammar_draft(conn) -> str:

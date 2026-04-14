@@ -5,52 +5,58 @@
 This project builds digital philology infrastructure for Kuki-Chin languages, focusing on:
 1. Bible corpus collection and alignment (20 languages)
 2. Bootstrap lexicon generation via PMI-based word alignment
-3. **Morphological analysis and Leipzig-style glossing (Tedim Chin complete)**
+3. **Morphological analysis and Leipzig-style glossing (Tedim Chin in progress)**
 
-## Tedim Chin Analyzer: Current Status
+## Tedim Chin: Current State
 
-**Coverage achieved:** 2026-03-17
+### Corpus Metrics (as of 2026-04)
 
-The Tedim Chin morphological analyzer is production-ready for Leipzig-style interlinear glossing.
-
-### Canonical Metrics
-
-All Tedim metrics are generated from one source of truth. Regenerate with `make metrics`.
-
-| Artifact | Path | Description |
-|----------|------|-------------|
-| Metrics JSON | `output/metrics/ctd_metrics.json` | Machine-readable canonical metrics |
-| Metrics report | `output/metrics/ctd_metrics.md` | Human-readable summary |
-| Editorial blockers | `output/editorial_blockers.md` | Prioritized publication blockers |
-| Draft dictionary | `output/dictionary/draft_dictionary.md` | Full dictionary draft |
-| Draft grammar | `output/grammar/draft_grammar.md` | Chaptered grammar draft |
+| Metric | Value |
+|--------|-------|
+| Corpus tokens | 831,152 |
+| Lemmas (headwords) | 7,339 |
+| Senses | 9,962 |
+| Grammatical morphemes | 206 |
+| Linked examples | 42,009 |
 
 ### Publication Blockers
 
-The analyzer has full token coverage, but publication-quality outputs require resolving:
-- High-frequency items with empty or unclear glosses
-- Polysemous lemmas needing sense disambiguation
-- Mixed lexical/grammatical items needing POS cleanup
+| Issue | Count | Token Impact |
+|-------|-------|--------------|
+| Entries with empty/unclear gloss | 1,406 | 57,273 tokens (7%) |
+| Polysemous lemmas | 976 | Need disambiguation |
+| Senses without examples | 27 | Need linking |
 
-Run `make editorial-blockers` for the current prioritized list.
+**Top 5 unglossed items by frequency:**
+1. uh (22,122 tokens)
+2. hong (15,578 tokens)
+3. ahih (5,804 tokens)
+4. ta (2,860 tokens)
+5. Nadingin (1,671 tokens)
 
-### Dictionary Size
+### Generated Outputs
 
-| Category | Entries | Notes |
-|----------|---------|-------|
-| Function words | ~150 | Closed class (pronouns, particles, TAM) |
-| Verb stems | ~2,000+ | Including Stem I/II alternations |
-| Noun stems | ~800+ | Including body parts, kinship, etc. |
-| Compound words | ~3,500+ | Pre-analyzed transparent compounds |
-| Proper nouns | ~2,500+ | Biblical names with suffix handling |
-| Atomic glosses | ~300+ | Compositional elements |
-| **Total entries** | **~7,000+** | In `scripts/analyze_morphemes.py` |
+| Output | Path | Command |
+|--------|------|---------|
+| Metrics JSON | `output/metrics/ctd_metrics.json` | `make metrics` |
+| Editorial blockers | `output/editorial_blockers.md` | `make editorial-blockers` |
+| Draft dictionary | `output/dictionary/draft_dictionary.md` | `make dictionary-draft` |
+| Draft grammar | `output/grammar/draft_grammar.md` | `make grammar-draft` |
+
+### Dictionary Composition
+
+| Category | Entries |
+|----------|---------|
+| Nouns | ~2,100 |
+| Verbs | ~770 |
+| Proper nouns | ~4,060 |
+| Pronouns | ~300 |
+| Function words | ~100 |
 
 ### Quality Assurance
 
-- **350+ tests** ensuring analyzer stability (`pytest tests/`)
+- **52 backend tests** ensuring data integrity
 - **Compound transparency audit** in `docs/compound_transparency_audit.md`
-- **Opaque lexeme documentation** in `docs/opaque_lexemes.md`
 - **Polysemy disambiguation** with POLYSEMOUS_ROOTS system
 
 ## Completed Phases

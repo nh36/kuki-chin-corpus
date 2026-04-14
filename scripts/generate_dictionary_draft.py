@@ -122,6 +122,38 @@ def format_entry(conn, lemma):
     return '\n'.join(lines)
 
 
+def get_glossed_lemmas_by_letter(conn, letter):
+    """Get glossed lemmas starting with a specific letter."""
+    return conn.execute('''
+        SELECT 
+            l.lemma_id, l.citation_form, l.pos, l.entry_type,
+            l.primary_gloss, l.token_count, l.needs_review
+        FROM lemmas l
+        WHERE UPPER(SUBSTR(l.citation_form, 1, 1)) = ?
+          AND l.citation_form NOT LIKE '"%'
+          AND l.citation_form NOT LIKE "'%"
+          AND l.primary_gloss IS NOT NULL
+          AND l.primary_gloss != ''
+          AND l.primary_gloss NOT LIKE '%?%'
+        ORDER BY l.token_count DESC
+    ''', (letter,)).fetchall()
+
+
+def get_unglossed_lemmas(conn, limit=100):
+    """Get unglossed lemmas ordered by frequency."""
+    return conn.execute('''
+        SELECT 
+            l.lemma_id, l.citation_form, l.pos, l.entry_type,
+            l.primary_gloss, l.token_count, l.needs_review
+        FROM lemmas l
+        WHERE l.primary_gloss IS NULL
+           OR l.primary_gloss = ''
+           OR l.primary_gloss LIKE '%?%'
+        ORDER BY l.token_count DESC
+        LIMIT ?
+    ''', (limit,)).fetchall()
+
+
 def generate_dictionary_draft(conn) -> str:
     """Generate the complete dictionary draft."""
     
@@ -133,26 +165,29 @@ def generate_dictionary_draft(conn) -> str:
     
     # Get statistics
     total_lemmas = conn.execute('SELECT COUNT(*) FROM lemmas').fetchone()[0]
-    unclear_count = conn.execute('''
+    glossed_count = conn.execute('''
         SELECT COUNT(*) FROM lemmas
-        WHERE primary_gloss LIKE '%?%' OR primary_gloss IS NULL OR primary_gloss = ''
+        WHERE primary_gloss IS NOT NULL 
+          AND primary_gloss != '' 
+          AND primary_gloss NOT LIKE '%?%'
     ''').fetchone()[0]
+    unclear_count = total_lemmas - glossed_count
     
     lines = [provenance, '']
     lines.append('# Tedim Chin Dictionary Draft')
     lines.append('')
     lines.append(f'Generated: {datetime.now().strftime("%Y-%m-%d")}')
     lines.append('')
-    lines.append(f'**{total_lemmas:,} entries** | {unclear_count:,} unglossed')
+    lines.append(f'**{glossed_count:,} glossed entries** | {unclear_count:,} unresolved (see end)')
     lines.append('')
     lines.append('---')
     lines.append('')
     
-    # Process by letter
+    # Part 1: Glossed entries by letter
     letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     
     for letter in letters:
-        lemmas = get_lemmas_by_letter(conn, letter)
+        lemmas = get_glossed_lemmas_by_letter(conn, letter)
         
         if not lemmas:
             continue
@@ -166,6 +201,26 @@ def generate_dictionary_draft(conn) -> str:
         
         lines.append('---')
         lines.append('')
+    
+    # Part 2: Unresolved entries (separate section)
+    lines.append('# UNRESOLVED ENTRIES')
+    lines.append('')
+    lines.append('The following entries need glosses assigned before publication.')
+    lines.append('Sorted by corpus frequency (highest first).')
+    lines.append('')
+    
+    unglossed = get_unglossed_lemmas(conn, limit=200)
+    
+    lines.append('| Rank | Form | POS | Tokens | Current |')
+    lines.append('|------|------|-----|--------|---------|')
+    for i, lemma in enumerate(unglossed, 1):
+        current = lemma['primary_gloss'] or '(empty)'
+        lines.append(f"| {i} | **{lemma['citation_form']}** | {lemma['pos'] or '?'} | {lemma['token_count']:,} | {current} |")
+    
+    if unclear_count > 200:
+        lines.append(f"\n*({unclear_count - 200} more unresolved entries not shown)*")
+    
+    lines.append('')
     
     return '\n'.join(lines)
 
