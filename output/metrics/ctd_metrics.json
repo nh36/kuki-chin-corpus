@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated": "2026-04-14T07:10:09.149941",
+    "generated": "2026-04-14T07:56:50.811410",
     "generator": "scripts/generate_metrics.py",
-    "git_commit": "d4cf4941",
+    "git_commit": "4f9783f9",
     "source": "data/ctd_backend.db",
     "language": "ctd",
     "language_name": "Tedim Chin"
@@ -18,24 +18,24 @@
     "lemma_count": 7339,
     "sense_count": 9962,
     "grammatical_morpheme_count": 485,
-    "example_count": 21908,
-    "examples_linked_to_sense": 21908,
+    "example_count": 26898,
+    "examples_linked_to_sense": 26898,
     "examples_linked_to_morpheme": 21908,
     "review_queue_total": 237,
-    "review_queue_open": 237,
-    "review_queue_resolved": 0,
+    "review_queue_open": 0,
+    "review_queue_resolved": 237,
     "review_high_priority": 22,
     "review_medium_priority": 212,
     "review_low_priority": 3,
     "construction_count": 0,
     "grammar_topic_count": 0,
-    "senses_with_examples": 4719,
+    "senses_with_examples": 5812,
     "high_freq_lemmas_stable": 426,
     "high_freq_lemmas_total": 1000,
     "coverage_known_pos_pct": 100.0,
     "coverage_non_ambiguous_pct": 100.0,
     "examples_linked_pct": 100.0,
-    "senses_with_examples_pct": 47.37
+    "senses_with_examples_pct": 58.34
   },
   "pos_distribution": {
     "PRON": 271236,
