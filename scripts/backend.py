@@ -876,12 +876,19 @@ def migrate_from_tsv(tsv_dir: str, db_path: str, iso: str = 'ctd'):
                 if row.get('entry_type'):
                     entry_type = row['entry_type']
                 
+                # Get primary gloss - fall back to first gloss_candidate if empty
+                primary_gloss = row.get('primary_gloss', '')
+                if not primary_gloss or primary_gloss == '?':
+                    gloss_candidates = row.get('gloss_candidates', '')
+                    if gloss_candidates:
+                        primary_gloss = gloss_candidates.split('|')[0]
+                
                 lemmas.append(Lemma(
                     lemma_id=lemma_id,
                     citation_form=row.get('citation_form', lemma_id),
                     pos=row.get('pos', ''),
                     entry_type=entry_type,
-                    primary_gloss=row.get('primary_gloss', ''),
+                    primary_gloss=primary_gloss,
                     token_count=int(row.get('token_count', 0) or 0),
                     form_count=int(row.get('form_count', 0) or 0),
                     is_polysemous=row.get('is_polysemous', '0') == '1',

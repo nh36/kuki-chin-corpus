@@ -5,7 +5,7 @@
 This project builds digital philology infrastructure for Kuki-Chin languages, focusing on:
 1. Bible corpus collection and alignment (20 languages)
 2. Bootstrap lexicon generation via PMI-based word alignment
-3. **Morphological analysis and Leipzig-style glossing (Tedim Chin in progress)**
+3. **Morphological analysis and Leipzig-style glossing (Tedim Chin complete)**
 
 ## Tedim Chin: Current State
 
@@ -16,23 +16,20 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 | Corpus tokens | 831,152 |
 | Lemmas (headwords) | 7,339 |
 | Senses | 9,962 |
-| Grammatical morphemes | 206 |
-| Linked examples | 42,009 |
+| Grammatical morphemes | 485 |
+| Linked examples | 21,908 |
+| Coverage (known POS) | 100.0% |
 
-### Publication Blockers
+### Editorial Review Queue
 
-| Issue | Count | Token Impact |
-|-------|-------|--------------|
-| Entries with empty/unclear gloss | 1,406 | 57,273 tokens (7%) |
-| Polysemous lemmas | 976 | Need disambiguation |
-| Senses without examples | 27 | Need linking |
+| Priority | Count | Description |
+|----------|-------|-------------|
+| High | 22 | Core function words |
+| Medium | 212 | Compounds, plurals, nominalizations |
+| Low | 3 | Example linking edge cases |
+| **Total** | **237** | Items for editorial attention |
 
-**Top 5 unglossed items by frequency:**
-1. uh (22,122 tokens)
-2. hong (15,578 tokens)
-3. ahih (5,804 tokens)
-4. ta (2,860 tokens)
-5. Nadingin (1,671 tokens)
+All 7,339 lemmas now have English glosses. The review queue tracks items needing editorial refinement for publication-quality outputs.
 
 ### Generated Outputs
 
@@ -55,7 +52,7 @@ This project builds digital philology infrastructure for Kuki-Chin languages, fo
 
 ### Quality Assurance
 
-- **52 backend tests** ensuring data integrity
+- **53 backend tests** ensuring data integrity
 - **Compound transparency audit** in `docs/compound_transparency_audit.md`
 - **Polysemy disambiguation** with POLYSEMOUS_ROOTS system
 

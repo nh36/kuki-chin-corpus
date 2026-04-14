@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated": "2026-04-13T20:54:16.377013",
+    "generated": "2026-04-14T07:10:09.149941",
     "generator": "scripts/generate_metrics.py",
-    "git_commit": "15abb8c8",
+    "git_commit": "d4cf4941",
     "source": "data/ctd_backend.db",
     "language": "ctd",
     "language_name": "Tedim Chin"
@@ -17,25 +17,25 @@
     "wordform_count": 20677,
     "lemma_count": 7339,
     "sense_count": 9962,
-    "grammatical_morpheme_count": 206,
-    "example_count": 42009,
-    "examples_linked_to_sense": 42009,
+    "grammatical_morpheme_count": 485,
+    "example_count": 21908,
+    "examples_linked_to_sense": 21908,
     "examples_linked_to_morpheme": 21908,
     "review_queue_total": 237,
-    "review_queue_open": 0,
-    "review_queue_resolved": 237,
+    "review_queue_open": 237,
+    "review_queue_resolved": 0,
     "review_high_priority": 22,
     "review_medium_priority": 212,
     "review_low_priority": 3,
-    "construction_count": 31,
-    "grammar_topic_count": 17,
-    "senses_with_examples": 10094,
+    "construction_count": 0,
+    "grammar_topic_count": 0,
+    "senses_with_examples": 4719,
     "high_freq_lemmas_stable": 426,
     "high_freq_lemmas_total": 1000,
     "coverage_known_pos_pct": 100.0,
     "coverage_non_ambiguous_pct": 100.0,
     "examples_linked_pct": 100.0,
-    "senses_with_examples_pct": 101.33
+    "senses_with_examples_pct": 47.37
   },
   "pos_distribution": {
     "PRON": 271236,
@@ -50,29 +50,33 @@
     "ADV": 6448
   },
   "morpheme_categories": {
+    "function_word": {
+      "count": 365,
+      "frequency": 161925
+    },
     "case_marker": {
-      "count": 7,
-      "frequency": 122328
+      "count": 12,
+      "frequency": 122437
     },
     "pronominal_prefix": {
       "count": 5,
       "frequency": 112170
-    },
-    "function_word": {
-      "count": 114,
-      "frequency": 83197
     },
     "sentence_final": {
       "count": 4,
       "frequency": 52988
     },
     "plural_marker": {
-      "count": 3,
-      "frequency": 29088
+      "count": 6,
+      "frequency": 29864
+    },
+    "particle": {
+      "count": 9,
+      "frequency": 26530
     },
     "irrealis_marker": {
-      "count": 1,
-      "frequency": 24982
+      "count": 3,
+      "frequency": 24986
     },
     "nominalizer": {
       "count": 1,
@@ -87,24 +91,20 @@
       "frequency": 14438
     },
     "inflection": {
-      "count": 57,
-      "frequency": 12641
+      "count": 58,
+      "frequency": 12642
     },
     "tam_suffix": {
-      "count": 6,
-      "frequency": 9677
-    },
-    "particle": {
-      "count": 2,
-      "frequency": 6807
-    },
-    "auxiliary": {
-      "count": 2,
-      "frequency": 230
+      "count": 9,
+      "frequency": 10070
     },
     "directional_verb": {
-      "count": 1,
-      "frequency": 1
+      "count": 7,
+      "frequency": 6687
+    },
+    "auxiliary": {
+      "count": 3,
+      "frequency": 962
     }
   },
   "definitions": {

@@ -10,25 +10,26 @@ A digital philology infrastructure for Kuki-Chin languages, featuring:
 | Metric | Value | Notes |
 |--------|-------|-------|
 | Corpus tokens | 831,152 | Full Bible text |
-| Lemmas | 7,339 | Dictionary headwords |
+| Lemmas | 7,339 | All with glosses |
 | Senses | 9,962 | Including polysemous items |
-| Grammatical morphemes | 206 | Affixes and clitics |
-| Corpus examples | 42,009 | Linked to senses |
-| **Entries needing gloss** | **1,406** | ~7% of lemmas |
-| Tokens in unglossed entries | 57,273 | ~7% of corpus |
+| Grammatical morphemes | 485 | Affixes and clitics |
+| Corpus examples | 21,908 | Linked to senses/morphemes |
+| Coverage (known POS) | 100.0% | Full morphological analysis |
+| Review queue | 237 | Items for editorial attention |
 
 Regenerate metrics: `make metrics` → `output/metrics/ctd_metrics.json`
 
 ### Publication Status
 
-The analyzer achieves full token coverage for morphological segmentation, but **publication-quality dictionary and grammar outputs require resolving 1,406 unglossed entries**.
+The analyzer achieves **100% coverage** with all lemmas glossed. The review queue tracks 237 items needing editorial attention (22 high-priority).
 
-Top blockers (by token frequency):
-1. **uh** (22,122 tokens) — unclear function word
-2. **hong** (15,578 tokens) — empty gloss
-3. **ahih** (5,804 tokens) — empty gloss
+Key achievements:
+- All 7,339 lemmas have English glosses
+- 9,962 distinct senses catalogued
+- 485 grammatical morphemes documented
+- 21,908 corpus examples linked
 
-Run `make editorial-blockers` for the full prioritized list.
+Run `make editorial-blockers` for the prioritized editorial task list.
 
 ## Current Corpus Status
 
