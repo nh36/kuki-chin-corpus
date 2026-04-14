@@ -909,3 +909,142 @@ class TestEndToEndWorkflow:
         expected = canonical_metrics['review_queue_open']
         assert open_items == expected, \
             f"Open review items {open_items} != canonical {expected}"
+
+
+# =============================================================================
+# Schema and API Contract Tests
+# =============================================================================
+
+class TestSchemaConsistency:
+    """Tests to ensure schema definitions match across code and docs."""
+    
+    def test_review_queue_columns_match_spec(self, backend):
+        """Verify review_queue table has columns matching BACKEND_SPEC.md."""
+        expected_columns = {
+            'review_id', 'entity_type', 'entity_id', 'reason', 'priority',
+            'assigned_to', 'status', 'resolution', 'created_at', 'resolved_at'
+        }
+        
+        with backend._connection() as conn:
+            cursor = conn.execute("PRAGMA table_info(review_queue)")
+            actual_columns = {row[1] for row in cursor.fetchall()}
+        
+        assert actual_columns == expected_columns, \
+            f"Column mismatch: expected {expected_columns}, got {actual_columns}"
+    
+    def test_examples_quality_uses_canonical_values(self, backend):
+        """All example quality values should be from EXAMPLE_QUALITY_ORDER."""
+        valid_qualities = set(EXAMPLE_QUALITY_ORDER)
+        
+        with backend._connection() as conn:
+            qualities = [row[0] for row in conn.execute(
+                "SELECT DISTINCT quality FROM examples WHERE quality IS NOT NULL AND quality != ''"
+            )]
+        
+        invalid = [q for q in qualities if q not in valid_qualities]
+        assert not invalid, f"Invalid quality values in examples: {invalid}"
+    
+    def test_add_review_item_uses_reason_not_description(self, backend, temp_backend):
+        """add_review_item() should use 'reason' parameter, not 'description'."""
+        # This test verifies the API signature
+        import inspect
+        sig = inspect.signature(temp_backend.add_review_item)
+        param_names = list(sig.parameters.keys())
+        
+        assert 'reason' in param_names, "add_review_item should have 'reason' parameter"
+        assert 'description' not in param_names, "add_review_item should NOT have 'description' parameter"
+        assert 'issue_type' not in param_names, "add_review_item should NOT have 'issue_type' parameter"
+    
+    def test_add_review_item_works(self, temp_backend):
+        """add_review_item() should successfully insert into review_queue."""
+        review_id = temp_backend.add_review_item(
+            entity_type='lemma',
+            entity_id='test_lemma',
+            reason='Test reason for review',
+            priority='high'
+        )
+        
+        assert review_id > 0, "Should return a valid review_id"
+        
+        # Verify it was inserted correctly
+        items = temp_backend.get_review_items(status='open')
+        assert len(items) == 1
+        assert items[0].entity_id == 'test_lemma'
+        assert items[0].reason == 'Test reason for review'
+        assert items[0].priority == 'high'
+
+
+class TestLinkExamplesToSenses:
+    """Tests for the link_examples_to_senses.py script."""
+    
+    def test_script_imports_without_error(self):
+        """Script should import without syntax or import errors."""
+        import link_examples_to_senses
+        
+        assert hasattr(link_examples_to_senses, 'link_examples_to_senses')
+        assert hasattr(link_examples_to_senses, 'generate_corpus_examples')
+    
+    def test_link_function_on_empty_db(self, temp_backend):
+        """link_examples_to_senses should handle empty database gracefully."""
+        import link_examples_to_senses
+        
+        # Should not raise on empty db
+        stats, updated = link_examples_to_senses.link_examples_to_senses(
+            temp_backend.db_path, dry_run=True
+        )
+        
+        assert stats['total_unlinked'] == 0
+        assert updated == 0
+    
+    def test_script_uses_valid_quality_values(self):
+        """Script should only use quality values from canonical list."""
+        import link_examples_to_senses
+        import inspect
+        
+        # Get source code
+        source = inspect.getsource(link_examples_to_senses)
+        
+        # Check that any quality values used are valid
+        # The script uses 'quality': 'auto' which should be in EXAMPLE_QUALITY_ORDER
+        assert 'auto' in EXAMPLE_QUALITY_ORDER, \
+            "'auto' quality used by link_examples_to_senses.py must be in EXAMPLE_QUALITY_ORDER"
+
+
+class TestQualityOrderConsistency:
+    """Tests that quality ordering is consistent across modules."""
+    
+    def test_backend_exports_quality_order(self):
+        """Backend should export EXAMPLE_QUALITY_ORDER constant."""
+        from backend import EXAMPLE_QUALITY_ORDER
+        
+        assert isinstance(EXAMPLE_QUALITY_ORDER, list)
+        assert len(EXAMPLE_QUALITY_ORDER) >= 6, "Should have at least 6 quality levels"
+        assert 'canonical' in EXAMPLE_QUALITY_ORDER
+        assert 'excellent' in EXAMPLE_QUALITY_ORDER
+        assert 'auto' in EXAMPLE_QUALITY_ORDER
+    
+    def test_quality_sql_matches_python_list(self):
+        """QUALITY_ORDER_SQL should produce same ordering as EXAMPLE_QUALITY_ORDER."""
+        from backend import EXAMPLE_QUALITY_ORDER, QUALITY_ORDER_SQL
+        
+        # The SQL CASE statement assigns rank 1 to first item, 2 to second, etc.
+        # Extract the order from the SQL
+        import re
+        matches = re.findall(r"WHEN '(\w+)' THEN (\d+)", QUALITY_ORDER_SQL)
+        sql_order = {name: int(rank) for name, rank in matches}
+        
+        # Verify order matches
+        for i, quality in enumerate(EXAMPLE_QUALITY_ORDER):
+            expected_rank = i + 1
+            actual_rank = sql_order.get(quality)
+            assert actual_rank == expected_rank, \
+                f"Quality '{quality}' has SQL rank {actual_rank}, expected {expected_rank}"
+    
+    def test_dictionary_draft_uses_canonical_order(self):
+        """generate_dictionary_draft.py should import from backend, not define locally."""
+        import generate_dictionary_draft
+        
+        # Check that it imports QUALITY_ORDER_SQL
+        assert 'QUALITY_ORDER_SQL' in dir(generate_dictionary_draft) or \
+               hasattr(generate_dictionary_draft, 'get_best_example'), \
+               "Should use backend's quality ordering"

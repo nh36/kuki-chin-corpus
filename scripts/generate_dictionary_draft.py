@@ -25,6 +25,7 @@ from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
+from backend import QUALITY_ORDER_SQL
 from report_utils import generate_provenance_header, format_reference
 
 
@@ -65,14 +66,12 @@ def get_senses_for_lemma(conn, lemma_id):
 
 
 def get_best_example(conn, sense_id):
-    """Get one high-quality example for a sense."""
-    return conn.execute('''
+    """Get one high-quality example for a sense using canonical quality ordering."""
+    return conn.execute(f'''
         SELECT tedim_text, kjv_text, source_id
         FROM examples
         WHERE sense_id = ?
-          AND quality IN ('excellent', 'good')
-        ORDER BY 
-            CASE quality WHEN 'excellent' THEN 1 WHEN 'good' THEN 2 ELSE 3 END
+        ORDER BY {QUALITY_ORDER_SQL}
         LIMIT 1
     ''', (sense_id,)).fetchone()
 
