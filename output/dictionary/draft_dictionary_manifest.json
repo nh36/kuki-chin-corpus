@@ -24,8 +24,152 @@
     "grammatical": 127,
     "mixed": 57
   },
-  "top_unresolved": [],
-  "ready_for_draft": true,
-  "git_commit": "2e2a6e5",
-  "generated": "2026-04-15T12:41:26.837794"
+  "unresolved_count": 238,
+  "mixed_count": 57,
+  "lexical_cleanup_needed": 295,
+  "top_unresolved": [
+    {
+      "form": "bang",
+      "pos": "N",
+      "tokens": 9269,
+      "current": "like",
+      "entry_type": "mixed"
+    },
+    {
+      "form": "hi",
+      "pos": "DET",
+      "tokens": 7219,
+      "current": "this",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "thei",
+      "pos": "ADJ",
+      "tokens": 4672,
+      "current": "know",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "bawl",
+      "pos": "V",
+      "tokens": 2684,
+      "current": "make",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "lai",
+      "pos": "N",
+      "tokens": 1772,
+      "current": "place",
+      "entry_type": "mixed"
+    },
+    {
+      "form": "an",
+      "pos": "PRON",
+      "tokens": 1312,
+      "current": "3PL.POSS",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "zui",
+      "pos": "V",
+      "tokens": 1136,
+      "current": "follow",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "Kha",
+      "pos": "PROP",
+      "tokens": 1056,
+      "current": "spirit",
+      "entry_type": "mixed"
+    },
+    {
+      "form": "koih",
+      "pos": "V",
+      "tokens": 880,
+      "current": "put",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "dang",
+      "pos": "N",
+      "tokens": 867,
+      "current": "other",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "that",
+      "pos": "V",
+      "tokens": 832,
+      "current": "kill",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "sam",
+      "pos": "V",
+      "tokens": 744,
+      "current": "open",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "pan",
+      "pos": "V",
+      "tokens": 739,
+      "current": "REFL",
+      "entry_type": "mixed"
+    },
+    {
+      "form": "sia",
+      "pos": "N",
+      "tokens": 724,
+      "current": "evil",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "lo",
+      "pos": "N",
+      "tokens": 573,
+      "current": "NEG",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "ciam",
+      "pos": "N",
+      "tokens": 565,
+      "current": "promise",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "ngaihsun",
+      "pos": "V",
+      "tokens": 552,
+      "current": "think",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "khen",
+      "pos": "V",
+      "tokens": 540,
+      "current": "divide",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "su",
+      "pos": "N",
+      "tokens": 533,
+      "current": "touch",
+      "entry_type": "unresolved"
+    },
+    {
+      "form": "lawm",
+      "pos": "V",
+      "tokens": 490,
+      "current": "friend",
+      "entry_type": "mixed"
+    }
+  ],
+  "ready_for_draft": false,
+  "git_commit": "b62ed01",
+  "generated": "2026-04-15T12:59:29.963846"
 }

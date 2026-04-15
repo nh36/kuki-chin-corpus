@@ -28,7 +28,9 @@ STAMPED_FILES = [
     'metrics/ctd_metrics.json',
     'metrics/ctd_metrics.md',
     'dictionary/draft_dictionary.md',
+    'dictionary/draft_dictionary_manifest.json',
     'grammar/draft_grammar.md',
+    'grammar/draft_grammar_manifest.json',
     'publication_dashboard.md',
     'editorial_blockers.md',
     'editorial_dashboard.md',
@@ -39,10 +41,12 @@ REGENERATE_COMMANDS = {
     'metrics/ctd_metrics.json': 'make metrics',
     'metrics/ctd_metrics.md': 'make metrics',
     'dictionary/draft_dictionary.md': 'make dictionary-draft',
+    'dictionary/draft_dictionary_manifest.json': 'make dictionary-draft',
     'grammar/draft_grammar.md': 'make grammar-draft',
+    'grammar/draft_grammar_manifest.json': 'make grammar-draft',
     'publication_dashboard.md': 'python3 scripts/generate_publication_dashboard.py',
     'editorial_blockers.md': 'python3 scripts/generate_editorial_blockers.py',
-    'editorial_dashboard.md': 'python3 scripts/generate_editorial_blockers.py',
+    'editorial_dashboard.md': 'python3 scripts/generate_editorial_dashboard.py',
 }
 
 
@@ -66,7 +70,14 @@ def extract_commit_stamp(filepath: Path) -> str:
     if filepath.suffix == '.json':
         try:
             data = json.loads(content)
-            return data.get('meta', {}).get('git_commit', None)
+            # Try meta.git_commit first (ctd_metrics.json format)
+            stamp = data.get('meta', {}).get('git_commit', None)
+            if stamp:
+                return stamp
+            # Try top-level git_commit (manifest format)
+            stamp = data.get('git_commit', None)
+            if stamp:
+                return stamp
         except json.JSONDecodeError:
             pass
     
@@ -75,7 +86,7 @@ def extract_commit_stamp(filepath: Path) -> str:
     if match:
         return match.group(1)
     
-    # Try "git_commit": "abc123" format
+    # Try "git_commit": "abc123" format (fallback regex)
     match = re.search(r'"git_commit":\s*"([a-f0-9]+)"', content)
     if match:
         return match.group(1)

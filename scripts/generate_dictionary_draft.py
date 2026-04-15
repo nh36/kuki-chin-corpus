@@ -199,21 +199,38 @@ def generate_dictionary_manifest(conn) -> dict:
     ''').fetchall():
         entry_type_breakdown[row['entry_type'] or 'unknown'] = row['cnt']
     
-    # Top unresolved by frequency
+    # Top unresolved by frequency (include unresolved and mixed entry types)
     unresolved_sample = []
     for row in conn.execute('''
-        SELECT citation_form, pos, token_count, primary_gloss
+        SELECT citation_form, pos, token_count, primary_gloss, entry_type
         FROM lemmas
-        WHERE primary_gloss IS NULL OR primary_gloss = '' OR primary_gloss LIKE '%?%'
+        WHERE primary_gloss IS NULL 
+           OR primary_gloss = '' 
+           OR primary_gloss LIKE '%?%'
+           OR entry_type IN ('unresolved', 'mixed')
         ORDER BY token_count DESC
-        LIMIT 10
+        LIMIT 20
     ''').fetchall():
         unresolved_sample.append({
             'form': row['citation_form'],
             'pos': row['pos'],
             'tokens': row['token_count'],
-            'current': row['primary_gloss']
+            'current': row['primary_gloss'],
+            'entry_type': row['entry_type']
         })
+    
+    # Count items needing lexical cleanup
+    unresolved_count = conn.execute('''
+        SELECT COUNT(*) FROM lemmas WHERE entry_type = 'unresolved'
+    ''').fetchone()[0]
+    
+    mixed_count = conn.execute('''
+        SELECT COUNT(*) FROM lemmas WHERE entry_type = 'mixed'
+    ''').fetchone()[0]
+    
+    # Draft readiness: all glossed AND no unresolved/mixed entries
+    lexical_cleanup_needed = unresolved_count + mixed_count
+    ready_for_draft = (glossed_count == total_lemmas) and (lexical_cleanup_needed == 0)
     
     return {
         'total_lemmas': total_lemmas,
@@ -226,8 +243,11 @@ def generate_dictionary_manifest(conn) -> dict:
         'percent_with_examples': round(100 * with_examples / total_lemmas, 2) if total_lemmas else 0,
         'by_pos': pos_breakdown,
         'by_entry_type': entry_type_breakdown,
+        'unresolved_count': unresolved_count,
+        'mixed_count': mixed_count,
+        'lexical_cleanup_needed': lexical_cleanup_needed,
         'top_unresolved': unresolved_sample,
-        'ready_for_draft': glossed_count == total_lemmas
+        'ready_for_draft': ready_for_draft
     }
 
 

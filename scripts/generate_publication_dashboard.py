@@ -54,6 +54,10 @@ def get_dictionary_status(output_dir):
             'percent_with_examples': manifest.get('percent_with_examples', 0),
             'top_unresolved': manifest.get('top_unresolved', []),
             'by_pos': manifest.get('by_pos', {}),
+            'by_entry_type': manifest.get('by_entry_type', {}),
+            'unresolved_count': manifest.get('unresolved_count', 0),
+            'mixed_count': manifest.get('mixed_count', 0),
+            'lexical_cleanup_needed': manifest.get('lexical_cleanup_needed', 0),
             'ready_for_draft': manifest.get('ready_for_draft', False),
             'source': 'manifest',
             'path': str(output_dir / 'dictionary' / 'draft_dictionary.md')
@@ -245,14 +249,27 @@ def generate_dashboard(conn, output_dir, metrics_path):
             lines.append(f"- **Entries with examples:** {dict_status['with_examples']:,} ({dict_status['percent_with_examples']}%)")
             lines.append(f"- **Total senses:** {dict_status['senses']:,}")
             
-            if dict_status.get('unglossed', 0) > 0:
-                lines.append(f"- **Unglossed entries:** {dict_status['unglossed']:,}")
+            # Entry type breakdown
+            by_type = dict_status.get('by_entry_type', {})
+            if by_type:
+                lines.append('')
+                lines.append('**Entry types:**')
+                for etype, count in sorted(by_type.items(), key=lambda x: -x[1]):
+                    marker = '⚠' if etype in ('unresolved', 'mixed') else ''
+                    lines.append(f"  - {etype}: {count:,} {marker}")
+            
+            # Lexical cleanup needed
+            cleanup = dict_status.get('lexical_cleanup_needed', 0)
+            if cleanup > 0:
+                lines.append('')
+                lines.append(f"**⚠ Lexical cleanup needed:** {cleanup} entries (unresolved: {dict_status.get('unresolved_count', 0)}, mixed: {dict_status.get('mixed_count', 0)})")
             
             if dict_status.get('top_unresolved'):
                 lines.append('')
-                lines.append('**Top unresolved items:**')
+                lines.append('**Top items needing attention:**')
                 for item in dict_status['top_unresolved'][:5]:
-                    lines.append(f"  - {item['form']} ({item['pos'] or '?'}) — {item['tokens']:,} tokens")
+                    etype = item.get('entry_type', '?')
+                    lines.append(f"  - {item['form']} ({item['pos'] or '?'}, {etype}) — {item['tokens']:,} tokens")
         else:
             # Fallback markdown parsing
             lines.append(f"- **Entries:** {dict_status['entries']:,}")
@@ -355,15 +372,22 @@ def generate_dashboard(conn, output_dir, metrics_path):
         else:
             gates.append(('⚠', 'Review queue cleared', f'{open_items} open'))
     
-    # Dictionary gate
+    # Dictionary gate - now considers entry_type cleanup
     if dict_status['exists']:
         if dict_status.get('source') == 'manifest':
-            # Use manifest: all glossed = ready
+            # Use manifest: check ready_for_draft (glossed AND no unresolved/mixed)
             if dict_status.get('ready_for_draft', False):
-                gates.append(('✓', 'Dictionary all glossed', f"100% glossed"))
+                gates.append(('✓', 'Dictionary ready', f"All clean"))
             else:
+                # Report what's blocking
                 unglossed = dict_status.get('unglossed', 0)
-                gates.append(('⚠', 'Dictionary all glossed', f"{unglossed} unglossed"))
+                cleanup = dict_status.get('lexical_cleanup_needed', 0)
+                if unglossed > 0:
+                    gates.append(('❌', 'Dictionary ready', f"{unglossed} unglossed"))
+                elif cleanup > 0:
+                    gates.append(('⚠', 'Dictionary ready', f"{cleanup} unresolved/mixed"))
+                else:
+                    gates.append(('⚠', 'Dictionary ready', 'Unknown blocker'))
         else:
             # Fallback: use review flags
             review_flags = dict_status.get('with_review_flags', 0)
