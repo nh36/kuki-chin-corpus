@@ -28,7 +28,14 @@ def normalize_gloss(gloss: str) -> str:
     return gloss.upper()
 
 def link_examples_to_senses(db_path: str, dry_run: bool = False):
-    """Link unlinked examples to their senses."""
+    """Link unlinked examples to their senses.
+    
+    Linking policy (conservative for publication safety):
+    - Monosemous lemmas: direct link (safe)
+    - Polysemous lemmas with exact gloss match: link (confident)
+    - Polysemous lemmas with partial gloss match: link if match is strong
+    - Polysemous lemmas with no match: route to review queue (never force first sense)
+    """
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     
@@ -36,6 +43,7 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
         'direct_single': 0,
         'gloss_match': 0,
         'heuristic': 0,
+        'review_routed': 0,
         'skipped': 0,
         'total_unlinked': 0
     }
@@ -61,6 +69,7 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
     stats['total_unlinked'] = len(unlinked)
     
     updates = []
+    review_items = []
     
     for row in unlinked:
         example_id = row['example_id']
@@ -82,7 +91,7 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
         
         senses = senses_by_lemma[target]
         
-        # Case 1: Single sense - direct link
+        # Case 1: Single sense - direct link (safe: monosemous)
         if len(senses) == 1:
             updates.append((senses[0]['sense_id'], example_id))
             stats['direct_single'] += 1
@@ -97,18 +106,19 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
             if norm_sense == norm_glossed:
                 matched = sense['sense_id']
                 break
-            # Partial match
-            if norm_sense in norm_glossed or norm_glossed in norm_sense:
-                matched = sense['sense_id']
-                break
+            # Partial match - must be strong substring match
+            if len(norm_sense) > 2 and len(norm_glossed) > 2:
+                if norm_sense in norm_glossed or norm_glossed in norm_sense:
+                    matched = sense['sense_id']
+                    break
         
         if matched:
             updates.append((matched, example_id))
             stats['gloss_match'] += 1
             continue
         
-        # Case 3: Heuristics for common patterns
-        # For 'hi', default to DECL (most common)
+        # Case 3: Heuristics for specific common patterns
+        # For 'hi', default to DECL (dominant use as declarative)
         if target == 'hi':
             for sense in senses:
                 if sense['gloss'] == 'DECL':
@@ -117,17 +127,34 @@ def link_examples_to_senses(db_path: str, dry_run: bool = False):
                     matched = True
                     break
         
+        # Case 4: CONSERVATIVE - ambiguous multi-sense with no match
+        # Do NOT default to first sense - add to review queue instead
         if not matched:
-            # Default to first sense for multi-sense
-            updates.append((senses[0]['sense_id'], example_id))
-            stats['heuristic'] += 1
+            review_items.append({
+                'entity_type': 'example',
+                'entity_id': str(example_id),
+                'reason': f"Ambiguous sense for polysemous lemma '{target}' ({len(senses)} senses)",
+                'priority': 'low'
+            })
+            stats['review_routed'] += 1
     
-    # Apply updates
+    # Apply sense updates
     if not dry_run and updates:
         conn.executemany(
             'UPDATE examples SET sense_id = ? WHERE example_id = ?',
             updates
         )
+        conn.commit()
+    
+    # Add ambiguous cases to review queue
+    if not dry_run and review_items:
+        import datetime
+        now = datetime.datetime.now().isoformat()
+        conn.executemany('''
+            INSERT OR IGNORE INTO review_queue 
+            (entity_type, entity_id, reason, priority, status, created_at)
+            VALUES (:entity_type, :entity_id, :reason, :priority, 'open', ?)
+        '''.replace('?', f"'{now}'"), review_items)
         conn.commit()
     
     conn.close()
@@ -202,14 +229,16 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     print("=== Linking existing examples to senses ===")
+    print("Policy: conservative (ambiguous → review queue, never force first sense)")
     stats, updated = link_examples_to_senses(args.db, args.dry_run)
     
     print(f"\nResults:")
     print(f"  Total unlinked: {stats['total_unlinked']}")
-    print(f"  Direct (single-sense): {stats['direct_single']}")
-    print(f"  Gloss match: {stats['gloss_match']}")
-    print(f"  Heuristic: {stats['heuristic']}")
-    print(f"  Skipped: {stats['skipped']}")
+    print(f"  Direct (monosemous): {stats['direct_single']}")
+    print(f"  Gloss match (confident): {stats['gloss_match']}")
+    print(f"  Heuristic (known patterns): {stats['heuristic']}")
+    print(f"  Review routed (ambiguous): {stats['review_routed']}")
+    print(f"  Skipped (no lemma match): {stats['skipped']}")
     print(f"  Updated: {updated}")
     
     if args.generate:

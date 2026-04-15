@@ -19,6 +19,7 @@ Options:
 import argparse
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -38,6 +39,52 @@ def load_metrics():
     
     with open(METRICS_JSON) as f:
         return json.load(f)
+
+
+def get_test_counts():
+    """Get actual test counts by running pytest --collect-only."""
+    try:
+        result = subprocess.run(
+            ['python3', '-m', 'pytest', '--collect-only', '-q', 'tests/'],
+            capture_output=True, text=True, cwd=REPO_ROOT, timeout=30
+        )
+        # Parse output like "364 tests collected in 0.11s"
+        match = re.search(r'(\d+) tests? collected', result.stdout)
+        if match:
+            return int(match.group(1))
+    except (subprocess.TimeoutExpired, FileNotFoundError):
+        pass
+    return None
+
+
+def get_test_breakdown():
+    """Get test counts per category."""
+    counts = {'backend': 0, 'export': 0, 'orthography': 0, 'metrics': 0, 'other': 0}
+    
+    try:
+        for test_file in (REPO_ROOT / 'tests').glob('test_*.py'):
+            result = subprocess.run(
+                ['python3', '-m', 'pytest', '--collect-only', '-q', str(test_file)],
+                capture_output=True, text=True, cwd=REPO_ROOT, timeout=15
+            )
+            match = re.search(r'(\d+) tests? collected', result.stdout)
+            if match:
+                count = int(match.group(1))
+                name = test_file.stem
+                if 'backend' in name:
+                    counts['backend'] += count
+                elif 'export' in name:
+                    counts['export'] += count
+                elif 'orthography' in name or 'normalize' in name or 'restore' in name:
+                    counts['orthography'] += count
+                elif 'metrics' in name:
+                    counts['metrics'] += count
+                else:
+                    counts['other'] += count
+    except (subprocess.TimeoutExpired, FileNotFoundError):
+        pass
+    
+    return counts
 
 
 def generate_readme_metrics_table(metrics: dict) -> str:
@@ -65,6 +112,20 @@ def generate_readme_metrics_table(metrics: dict) -> str:
 | Corpus examples | {m['example_count']:,} | Linked to senses/morphemes |
 | Coverage (known POS) | {m['coverage_known_pos_pct']}% | Full morphological analysis |
 | Senses with examples | {m['senses_with_examples']:,} | {m['senses_with_examples_pct']:.0f}% of senses |"""
+
+
+def generate_test_coverage_table(test_counts: dict, total: int) -> str:
+    """Generate the test coverage table for README.md."""
+    return f"""| Suite | Tests | Purpose |
+|-------|-------|---------|
+| Backend tests | {test_counts['backend']} | Database integrity, API behavior, end-to-end workflow |
+| Export tests | {test_counts['export']} | TSV export correctness |
+| Orthography tests | {test_counts['orthography']} | Normalization and tone restoration |
+| Metrics tests | {test_counts['metrics']} | Publication readiness gates |
+| Other analyzer tests | {test_counts['other']} | POS tagging, morphology, disambiguation |
+| **Total** | **{total}** | |
+
+Run tests: `pytest tests/` or `make test`"""
 
 
 def generate_readme_status(metrics: dict) -> str:
@@ -135,20 +196,31 @@ Beyond the formal review queue, ongoing editorial tasks include:
     return section
 
 
-def update_readme(metrics: dict, check_only: bool = False) -> bool:
-    """Update README.md with canonical metrics. Returns True if changes needed."""
+def update_readme(metrics: dict, test_counts: dict, total_tests: int, check_only: bool = False) -> bool:
+    """Update README.md with canonical metrics and test counts. Returns True if changes needed."""
     content = README.read_text()
     original = content
     
     # Pattern to match the metrics table section
-    metrics_pattern = r'(## Tedim Chin Analyzer: Current Metrics\n\n)\| Metric \| Value \| Notes \|.*?(?=\n\nRegenerate metrics:)'
+    metrics_pattern = r'(## Tedim Chin: Current Metrics\n\n)\| Metric \| Value \| Notes \|.*?(?=\n\nRegenerate metrics:)'
     new_table = generate_readme_metrics_table(metrics)
     content = re.sub(metrics_pattern, r'\1' + new_table, content, flags=re.DOTALL)
     
     # Pattern to match the publication status section  
-    status_pattern = r'(### Publication Status\n\n).*?(?=\n\n## Current Corpus Status)'
+    status_pattern = r'(### Publication Status\n\n).*?(?=\n\n\*\*Backend layer status|\n\n## Current Corpus Status)'
     new_status = generate_readme_status(metrics)
     content = re.sub(status_pattern, r'\1' + new_status, content, flags=re.DOTALL)
+    
+    # Pattern to match test coverage table
+    test_pattern = r'(### Test Coverage\n\n)\| Suite \| Tests \| Purpose \|.*?\n\nRun tests:.*'
+    if test_counts and total_tests:
+        new_tests = generate_test_coverage_table(test_counts, total_tests)
+        content = re.sub(test_pattern, r'\1' + new_tests, content, flags=re.DOTALL)
+    
+    # Update Quick Start test count
+    quickstart_pattern = r'# Run all tests \(\d+ tests\)'
+    if total_tests:
+        content = re.sub(quickstart_pattern, f'# Run all tests ({total_tests} tests)', content)
     
     changed = content != original
     
@@ -202,15 +274,21 @@ def main():
     print("Loading canonical metrics...")
     metrics = load_metrics()
     
+    print("Counting tests...")
+    total_tests = get_test_counts()
+    test_counts = get_test_breakdown() if total_tests else {}
+    
     print(f"\nCanonical values from {METRICS_JSON}:")
     m = metrics['metrics']
     print(f"  Examples: {m['example_count']:,}")
     print(f"  Senses with examples: {m['senses_with_examples']:,}")
     print(f"  Review queue open: {m['review_queue_open']}")
     print(f"  Constructions: {m['construction_count']}")
+    if total_tests:
+        print(f"  Tests: {total_tests}")
     
     print("\nSyncing documentation...")
-    readme_changed = update_readme(metrics, args.check)
+    readme_changed = update_readme(metrics, test_counts, total_tests, args.check)
     progress_changed = update_progress(metrics, args.check)
     
     if args.check:

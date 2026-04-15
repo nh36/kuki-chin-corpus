@@ -1048,3 +1048,37 @@ class TestQualityOrderConsistency:
         assert 'QUALITY_ORDER_SQL' in dir(generate_dictionary_draft) or \
                hasattr(generate_dictionary_draft, 'get_best_example'), \
                "Should use backend's quality ordering"
+
+
+class TestConservativeLinkingPolicy:
+    """Tests for conservative example-to-sense linking behavior."""
+    
+    def test_link_script_has_review_routed_stat(self):
+        """Script should track review_routed for ambiguous cases."""
+        import link_examples_to_senses
+        import inspect
+        
+        source = inspect.getsource(link_examples_to_senses.link_examples_to_senses)
+        assert 'review_routed' in source, \
+            "link_examples_to_senses should track review_routed stats"
+    
+    def test_link_script_does_not_default_to_first_sense(self):
+        """Script should NOT have 'default to first sense' fallback."""
+        import link_examples_to_senses
+        import inspect
+        
+        source = inspect.getsource(link_examples_to_senses.link_examples_to_senses)
+        # Check for dangerous patterns that indicate defaulting to first sense
+        assert 'senses[0]' not in source.split('# Case 4')[1] if '# Case 4' in source else True, \
+            "Ambiguous cases should not default to first sense"
+    
+    def test_link_script_routes_ambiguous_to_review(self):
+        """Ambiguous polysemous cases should go to review queue."""
+        import link_examples_to_senses
+        import inspect
+        
+        source = inspect.getsource(link_examples_to_senses.link_examples_to_senses)
+        assert 'review_items.append' in source, \
+            "Ambiguous cases should be appended to review_items"
+        assert 'INSERT' in source and 'review_queue' in source, \
+            "Script should insert ambiguous cases into review_queue"
