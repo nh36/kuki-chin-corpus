@@ -10,7 +10,7 @@ EXPECTED_SOURCES := 30000
 EXPECTED_TOKENS := 830000
 EXPECTED_LEMMAS := 7000
 
-.PHONY: help backend backend-check clean-backend grammar-reports dictionary link-examples metrics metrics-check editorial-dashboard dictionary-draft
+.PHONY: help backend backend-check clean-backend grammar-reports dictionary link-examples metrics metrics-check editorial-dashboard dictionary-draft outputs
 
 help:
 	@echo "Kuki-Chin Corpus Build Targets"
@@ -112,3 +112,11 @@ publication-dashboard: metrics editorial-dashboard dictionary-draft grammar-draf
 	@echo "Generating publication dashboard..."
 	$(PYTHON) scripts/generate_publication_dashboard.py --db $(DB_PATH)
 	@echo "Dashboard written to output/publication_dashboard.md"
+
+# Generate all publication outputs (canonical artifacts)
+outputs: metrics editorial-blockers editorial-dashboard dictionary-draft grammar-draft publication-dashboard
+	@echo "All outputs generated"
+
+# Check output consistency (all outputs have matching commit stamps)
+output-check:
+	@$(PYTHON) scripts/check_output_consistency.py

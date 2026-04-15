@@ -1082,3 +1082,140 @@ class TestConservativeLinkingPolicy:
             "Ambiguous cases should be appended to review_items"
         assert 'INSERT' in source and 'review_queue' in source, \
             "Script should insert ambiguous cases into review_queue"
+
+
+class TestConservativeLinkingBehavior:
+    """End-to-end behavioral tests for conservative example-to-sense linking.
+    
+    These tests use a real temporary database to verify actual database behavior,
+    not just source code inspection.
+    """
+    
+    def test_polysemous_unmatched_goes_to_review(self, temp_backend):
+        """Polysemous lemma with unmatched gloss should create review item, not link."""
+        import link_examples_to_senses
+        
+        # Set up: Create a polysemous lemma with 2 senses
+        with temp_backend._connection() as conn:
+            # Add lemma
+            conn.execute('''
+                INSERT INTO lemmas (lemma_id, citation_form, pos, entry_type, primary_gloss)
+                VALUES ('test', 'test', 'V', 'lexical', 'examine')
+            ''')
+            # Add two senses (polysemous)
+            conn.execute('''
+                INSERT INTO senses (sense_id, lemma_id, gloss, is_primary)
+                VALUES ('test.1', 'test', 'examine', 1)
+            ''')
+            conn.execute('''
+                INSERT INTO senses (sense_id, lemma_id, gloss, is_primary)
+                VALUES ('test.2', 'test', 'trial', 0)
+            ''')
+            # Add unlinked example with gloss that doesn't match either sense
+            conn.execute('''
+                INSERT INTO examples (example_id, source_id, target_form, glossed, sense_id)
+                VALUES (1, 'GEN001001', 'test', 'UNKNOWN_GLOSS', NULL)
+            ''')
+            conn.commit()
+        
+        # Act: Run the linking script
+        stats, updated = link_examples_to_senses.link_examples_to_senses(
+            temp_backend.db_path, dry_run=False
+        )
+        
+        # Assert: Example should NOT be linked (remains NULL)
+        with temp_backend._connection() as conn:
+            example = conn.execute(
+                'SELECT sense_id FROM examples WHERE example_id = 1'
+            ).fetchone()
+            assert example[0] is None or example[0] == '', \
+                "Ambiguous example should NOT be linked to any sense"
+        
+        # Assert: Review item should be created
+        with temp_backend._connection() as conn:
+            review_count = conn.execute(
+                "SELECT COUNT(*) FROM review_queue WHERE entity_type = 'example'"
+            ).fetchone()[0]
+            assert review_count >= 1, \
+                "Review item should be created for ambiguous example"
+        
+        # Assert: Stats should show review_routed
+        assert stats['review_routed'] >= 1, \
+            "Stats should track review_routed count"
+    
+    def test_monosemous_links_directly(self, temp_backend):
+        """Monosemous lemma should link directly without review."""
+        import link_examples_to_senses
+        
+        # Set up: Create a monosemous lemma
+        with temp_backend._connection() as conn:
+            conn.execute('''
+                INSERT INTO lemmas (lemma_id, citation_form, pos, entry_type, primary_gloss)
+                VALUES ('mono', 'mono', 'N', 'lexical', 'single')
+            ''')
+            conn.execute('''
+                INSERT INTO senses (sense_id, lemma_id, gloss, is_primary)
+                VALUES ('mono.1', 'mono', 'single', 1)
+            ''')
+            conn.execute('''
+                INSERT INTO examples (example_id, source_id, target_form, glossed, sense_id)
+                VALUES (1, 'GEN001001', 'mono', 'anything', NULL)
+            ''')
+            conn.commit()
+        
+        # Act
+        stats, updated = link_examples_to_senses.link_examples_to_senses(
+            temp_backend.db_path, dry_run=False
+        )
+        
+        # Assert: Should be linked directly
+        with temp_backend._connection() as conn:
+            example = conn.execute(
+                'SELECT sense_id FROM examples WHERE example_id = 1'
+            ).fetchone()
+            assert example[0] == 'mono.1', \
+                "Monosemous example should be linked directly"
+        
+        assert stats['direct_single'] >= 1
+        assert stats['review_routed'] == 0
+    
+    def test_polysemous_with_gloss_match_links(self, temp_backend):
+        """Polysemous lemma with matching gloss should link confidently."""
+        import link_examples_to_senses
+        
+        # Set up: Polysemous lemma, example gloss matches one sense
+        with temp_backend._connection() as conn:
+            conn.execute('''
+                INSERT INTO lemmas (lemma_id, citation_form, pos, entry_type, primary_gloss)
+                VALUES ('poly', 'poly', 'V', 'lexical', 'go')
+            ''')
+            conn.execute('''
+                INSERT INTO senses (sense_id, lemma_id, gloss, is_primary)
+                VALUES ('poly.1', 'poly', 'GO', 1)
+            ''')
+            conn.execute('''
+                INSERT INTO senses (sense_id, lemma_id, gloss, is_primary)
+                VALUES ('poly.2', 'poly', 'LEAVE', 0)
+            ''')
+            # Example gloss matches 'GO'
+            conn.execute('''
+                INSERT INTO examples (example_id, source_id, target_form, glossed, sense_id)
+                VALUES (1, 'GEN001001', 'poly', 'GO-PST', NULL)
+            ''')
+            conn.commit()
+        
+        # Act
+        stats, updated = link_examples_to_senses.link_examples_to_senses(
+            temp_backend.db_path, dry_run=False
+        )
+        
+        # Assert: Should be linked to matching sense
+        with temp_backend._connection() as conn:
+            example = conn.execute(
+                'SELECT sense_id FROM examples WHERE example_id = 1'
+            ).fetchone()
+            assert example[0] == 'poly.1', \
+                "Example with matching gloss should be linked"
+        
+        assert stats['gloss_match'] >= 1
+        assert stats['review_routed'] == 0

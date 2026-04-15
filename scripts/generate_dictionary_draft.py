@@ -153,6 +153,84 @@ def get_unglossed_lemmas(conn, limit=100):
     ''', (limit,)).fetchall()
 
 
+def generate_dictionary_manifest(conn) -> dict:
+    """Generate structured manifest for dictionary readiness."""
+    
+    total_lemmas = conn.execute('SELECT COUNT(*) FROM lemmas').fetchone()[0]
+    
+    glossed_count = conn.execute('''
+        SELECT COUNT(*) FROM lemmas
+        WHERE primary_gloss IS NOT NULL 
+          AND primary_gloss != '' 
+          AND primary_gloss NOT LIKE '%?%'
+    ''').fetchone()[0]
+    
+    with_examples = conn.execute('''
+        SELECT COUNT(DISTINCT l.lemma_id)
+        FROM lemmas l
+        JOIN senses s ON l.lemma_id = s.lemma_id
+        JOIN examples e ON s.sense_id = e.sense_id
+    ''').fetchone()[0]
+    
+    total_senses = conn.execute('SELECT COUNT(*) FROM senses').fetchone()[0]
+    
+    senses_with_examples = conn.execute('''
+        SELECT COUNT(DISTINCT sense_id) FROM examples
+    ''').fetchone()[0]
+    
+    pos_breakdown = {}
+    for row in conn.execute('''
+        SELECT pos, COUNT(*) as cnt
+        FROM lemmas
+        WHERE primary_gloss IS NOT NULL 
+          AND primary_gloss != '' 
+          AND primary_gloss NOT LIKE '%?%'
+        GROUP BY pos
+        ORDER BY cnt DESC
+    ''').fetchall():
+        pos_breakdown[row['pos'] or 'UNK'] = row['cnt']
+    
+    entry_type_breakdown = {}
+    for row in conn.execute('''
+        SELECT entry_type, COUNT(*) as cnt
+        FROM lemmas
+        GROUP BY entry_type
+        ORDER BY cnt DESC
+    ''').fetchall():
+        entry_type_breakdown[row['entry_type'] or 'unknown'] = row['cnt']
+    
+    # Top unresolved by frequency
+    unresolved_sample = []
+    for row in conn.execute('''
+        SELECT citation_form, pos, token_count, primary_gloss
+        FROM lemmas
+        WHERE primary_gloss IS NULL OR primary_gloss = '' OR primary_gloss LIKE '%?%'
+        ORDER BY token_count DESC
+        LIMIT 10
+    ''').fetchall():
+        unresolved_sample.append({
+            'form': row['citation_form'],
+            'pos': row['pos'],
+            'tokens': row['token_count'],
+            'current': row['primary_gloss']
+        })
+    
+    return {
+        'total_lemmas': total_lemmas,
+        'glossed_lemmas': glossed_count,
+        'unglossed_lemmas': total_lemmas - glossed_count,
+        'lemmas_with_examples': with_examples,
+        'total_senses': total_senses,
+        'senses_with_examples': senses_with_examples,
+        'percent_glossed': round(100 * glossed_count / total_lemmas, 2) if total_lemmas else 0,
+        'percent_with_examples': round(100 * with_examples / total_lemmas, 2) if total_lemmas else 0,
+        'by_pos': pos_breakdown,
+        'by_entry_type': entry_type_breakdown,
+        'top_unresolved': unresolved_sample,
+        'ready_for_draft': glossed_count == total_lemmas
+    }
+
+
 def generate_dictionary_draft(conn) -> str:
     """Generate the complete dictionary draft."""
     
@@ -225,6 +303,8 @@ def generate_dictionary_draft(conn) -> str:
 
 
 def main():
+    import json
+    
     parser = argparse.ArgumentParser(description='Generate Tedim dictionary draft')
     parser.add_argument('--db', default='data/ctd_backend.db', help='Path to backend database')
     parser.add_argument('--output', default='output/dictionary/draft_dictionary.md', help='Output path')
@@ -246,7 +326,31 @@ def main():
     
     print(f"  → {args.output}")
     
+    # Generate JSON manifest
+    manifest = generate_dictionary_manifest(conn)
+    manifest['git_commit'] = get_git_commit()
+    manifest['generated'] = datetime.now().isoformat()
+    
+    manifest_path = args.output.replace('.md', '_manifest.json')
+    with open(manifest_path, 'w') as f:
+        json.dump(manifest, f, indent=2)
+    
+    print(f"  → {manifest_path}")
+    
     return 0
+
+
+def get_git_commit():
+    """Get current git commit hash."""
+    import subprocess
+    try:
+        result = subprocess.run(
+            ['git', 'rev-parse', '--short', 'HEAD'],
+            capture_output=True, text=True, check=True
+        )
+        return result.stdout.strip()
+    except Exception:
+        return 'unknown'
 
 
 if __name__ == '__main__':

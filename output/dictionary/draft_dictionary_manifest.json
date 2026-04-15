@@ -1,0 +1,31 @@
+{
+  "total_lemmas": 7339,
+  "glossed_lemmas": 7339,
+  "unglossed_lemmas": 0,
+  "lemmas_with_examples": 4660,
+  "total_senses": 9962,
+  "senses_with_examples": 5812,
+  "percent_glossed": 100.0,
+  "percent_with_examples": 63.5,
+  "by_pos": {
+    "PROP": 4060,
+    "N": 2146,
+    "V": 773,
+    "PRON": 304,
+    "DET": 13,
+    "ADJ": 13,
+    "NUM": 11,
+    "ADV": 10,
+    "CONJ": 9
+  },
+  "by_entry_type": {
+    "lexical": 6917,
+    "unresolved": 238,
+    "grammatical": 127,
+    "mixed": 57
+  },
+  "top_unresolved": [],
+  "ready_for_draft": true,
+  "git_commit": "de83b70",
+  "generated": "2026-04-15T12:38:01.450596"
+}

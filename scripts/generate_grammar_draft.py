@@ -561,7 +561,70 @@ def generate_grammar_draft(conn) -> str:
     return '\n'.join(lines)
 
 
+def generate_grammar_manifest(conn) -> dict:
+    """Generate structured manifest for grammar readiness."""
+    
+    # Count status
+    status_counts = {'stable': 0, 'provisional': 0, 'stub': 0}
+    chapter_summary = []
+    
+    for chapter in GRAMMAR_CHAPTERS:
+        chapter_status = {'id': chapter['id'], 'title': chapter['title'], 'sections': []}
+        for section in chapter['sections']:
+            status_counts[section['status']] = status_counts.get(section['status'], 0) + 1
+            chapter_status['sections'].append({
+                'id': section['id'],
+                'title': section['title'],
+                'status': section['status']
+            })
+        chapter_summary.append(chapter_status)
+    
+    total_sections = sum(status_counts.values())
+    
+    # Get morpheme counts
+    morpheme_count = conn.execute('SELECT COUNT(*) FROM grammatical_morphemes').fetchone()[0]
+    morphemes_with_examples = conn.execute('''
+        SELECT COUNT(DISTINCT morpheme_id) FROM examples 
+        WHERE morpheme_id IS NOT NULL
+    ''').fetchone()[0]
+    
+    construction_count = conn.execute('SELECT COUNT(*) FROM constructions').fetchone()[0]
+    topic_count = conn.execute('SELECT COUNT(*) FROM grammar_topics').fetchone()[0]
+    
+    # Category breakdown
+    category_breakdown = {}
+    for row in conn.execute('''
+        SELECT category, COUNT(*) as cnt
+        FROM grammatical_morphemes
+        GROUP BY category
+        ORDER BY cnt DESC
+    ''').fetchall():
+        category_breakdown[row['category'] or 'uncategorized'] = row['cnt']
+    
+    stubs = [s['id'] + ' ' + s['title'] for ch in GRAMMAR_CHAPTERS 
+             for s in ch['sections'] if s['status'] == 'stub']
+    
+    return {
+        'total_chapters': len(GRAMMAR_CHAPTERS),
+        'total_sections': total_sections,
+        'status_counts': status_counts,
+        'percent_stable': round(100 * status_counts['stable'] / total_sections, 2) if total_sections else 0,
+        'percent_complete': round(100 * (status_counts['stable'] + status_counts['provisional']) / total_sections, 2) if total_sections else 0,
+        'grammatical_morphemes': morpheme_count,
+        'morphemes_with_examples': morphemes_with_examples,
+        'constructions_documented': construction_count,
+        'grammar_topics_documented': topic_count,
+        'morpheme_categories': category_breakdown,
+        'stub_sections': stubs,
+        'chapters': chapter_summary,
+        'ready_for_draft': status_counts['stub'] == 0
+    }
+
+
 def main():
+    import json
+    import subprocess
+    
     parser = argparse.ArgumentParser(
         description='Generate Tedim grammar draft'
     )
@@ -586,6 +649,28 @@ def main():
         f.write(report)
     
     print(f"  → {args.output}")
+    
+    # Generate JSON manifest
+    manifest = generate_grammar_manifest(conn)
+    
+    # Get git commit
+    try:
+        result = subprocess.run(
+            ['git', 'rev-parse', '--short', 'HEAD'],
+            capture_output=True, text=True, check=True
+        )
+        manifest['git_commit'] = result.stdout.strip()
+    except Exception:
+        manifest['git_commit'] = 'unknown'
+    
+    manifest['generated'] = datetime.now().isoformat()
+    
+    manifest_path = args.output.replace('.md', '_manifest.json')
+    with open(manifest_path, 'w') as f:
+        json.dump(manifest, f, indent=2)
+    
+    print(f"  → {manifest_path}")
+    
     return 0
 
 

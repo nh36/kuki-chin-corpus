@@ -36,7 +36,30 @@ def load_metrics(metrics_path):
 
 
 def get_dictionary_status(output_dir):
-    """Check dictionary draft status."""
+    """Check dictionary draft status from manifest or markdown."""
+    manifest_path = output_dir / 'dictionary' / 'draft_dictionary_manifest.json'
+    
+    # Prefer manifest if available (structured, reliable)
+    if manifest_path.exists():
+        with open(manifest_path) as f:
+            manifest = json.load(f)
+        return {
+            'exists': True,
+            'entries': manifest.get('glossed_lemmas', 0),
+            'total_lemmas': manifest.get('total_lemmas', 0),
+            'unglossed': manifest.get('unglossed_lemmas', 0),
+            'with_examples': manifest.get('lemmas_with_examples', 0),
+            'senses': manifest.get('total_senses', 0),
+            'percent_glossed': manifest.get('percent_glossed', 0),
+            'percent_with_examples': manifest.get('percent_with_examples', 0),
+            'top_unresolved': manifest.get('top_unresolved', []),
+            'by_pos': manifest.get('by_pos', {}),
+            'ready_for_draft': manifest.get('ready_for_draft', False),
+            'source': 'manifest',
+            'path': str(output_dir / 'dictionary' / 'draft_dictionary.md')
+        }
+    
+    # Fall back to parsing markdown
     draft_path = output_dir / 'dictionary' / 'draft_dictionary.md'
     if not draft_path.exists():
         return {'exists': False, 'entries': 0, 'with_review_flags': 0}
@@ -54,12 +77,41 @@ def get_dictionary_status(output_dir):
         'exists': True,
         'entries': entries,
         'with_review_flags': review_flags,
+        'source': 'markdown',
         'path': str(draft_path)
     }
 
 
 def get_grammar_status(output_dir):
-    """Check grammar draft status."""
+    """Check grammar draft status from manifest or markdown."""
+    manifest_path = output_dir / 'grammar' / 'draft_grammar_manifest.json'
+    
+    # Prefer manifest if available (structured, reliable)
+    if manifest_path.exists():
+        with open(manifest_path) as f:
+            manifest = json.load(f)
+        
+        status_counts = manifest.get('status_counts', {})
+        return {
+            'exists': True,
+            'sections': manifest.get('total_sections', 0),
+            'chapters': manifest.get('total_chapters', 0),
+            'stable': status_counts.get('stable', 0),
+            'provisional': status_counts.get('provisional', 0),
+            'stubs': status_counts.get('stub', 0),
+            'stable_pct': manifest.get('percent_stable', 0),
+            'complete_pct': manifest.get('percent_complete', 0),
+            'grammatical_morphemes': manifest.get('grammatical_morphemes', 0),
+            'morphemes_with_examples': manifest.get('morphemes_with_examples', 0),
+            'constructions': manifest.get('constructions_documented', 0),
+            'topics': manifest.get('grammar_topics_documented', 0),
+            'stub_sections': manifest.get('stub_sections', []),
+            'ready_for_draft': manifest.get('ready_for_draft', False),
+            'source': 'manifest',
+            'path': str(output_dir / 'grammar' / 'draft_grammar.md')
+        }
+    
+    # Fall back to parsing markdown
     draft_path = output_dir / 'grammar' / 'draft_grammar.md'
     if not draft_path.exists():
         return {'exists': False, 'sections': 0, 'stable': 0, 'provisional': 0, 'stubs': 0}
@@ -81,6 +133,7 @@ def get_grammar_status(output_dir):
         'stubs': stubs,
         'stable_pct': round(100 * stable / total_sections, 1) if total_sections > 0 else 0,
         'complete_pct': round(100 * (stable + provisional) / total_sections, 1) if total_sections > 0 else 0,
+        'source': 'markdown',
         'path': str(draft_path)
     }
 
@@ -185,12 +238,28 @@ def generate_dashboard(conn, output_dir, metrics_path):
     if dict_status['exists']:
         lines.append(f"✓ Draft dictionary generated: `{dict_status['path']}`")
         lines.append('')
-        lines.append(f"- **Entries:** {dict_status['entries']:,}")
-        lines.append(f"- **Entries with review flags:** {dict_status['with_review_flags']:,}")
         
-        if dict_status['with_review_flags'] > 0:
-            pct_clean = 100 * (dict_status['entries'] - dict_status['with_review_flags']) / dict_status['entries']
-            lines.append(f"- **Clean entries:** {pct_clean:.1f}%")
+        if dict_status.get('source') == 'manifest':
+            # Rich data from manifest
+            lines.append(f"- **Glossed entries:** {dict_status['entries']:,} / {dict_status['total_lemmas']:,} ({dict_status['percent_glossed']}%)")
+            lines.append(f"- **Entries with examples:** {dict_status['with_examples']:,} ({dict_status['percent_with_examples']}%)")
+            lines.append(f"- **Total senses:** {dict_status['senses']:,}")
+            
+            if dict_status.get('unglossed', 0) > 0:
+                lines.append(f"- **Unglossed entries:** {dict_status['unglossed']:,}")
+            
+            if dict_status.get('top_unresolved'):
+                lines.append('')
+                lines.append('**Top unresolved items:**')
+                for item in dict_status['top_unresolved'][:5]:
+                    lines.append(f"  - {item['form']} ({item['pos'] or '?'}) — {item['tokens']:,} tokens")
+        else:
+            # Fallback markdown parsing
+            lines.append(f"- **Entries:** {dict_status['entries']:,}")
+            if dict_status.get('with_review_flags', 0) > 0:
+                lines.append(f"- **Entries with review flags:** {dict_status['with_review_flags']:,}")
+                pct_clean = 100 * (dict_status['entries'] - dict_status['with_review_flags']) / dict_status['entries']
+                lines.append(f"- **Clean entries:** {pct_clean:.1f}%")
     else:
         lines.append('❌ Draft dictionary not generated. Run `make dictionary-draft`.')
     lines.append('')
@@ -203,10 +272,30 @@ def generate_dashboard(conn, output_dir, metrics_path):
     if grammar_status['exists']:
         lines.append(f"✓ Draft grammar generated: `{grammar_status['path']}`")
         lines.append('')
-        lines.append(f"- **Total sections:** {grammar_status['sections']}")
-        lines.append(f"- **Stable (✓):** {grammar_status['stable']} ({grammar_status['stable_pct']}%)")
-        lines.append(f"- **Provisional (⚠):** {grammar_status['provisional']}")
-        lines.append(f"- **Stubs (❌):** {grammar_status['stubs']}")
+        
+        if grammar_status.get('source') == 'manifest':
+            # Rich data from manifest
+            lines.append(f"- **Chapters:** {grammar_status.get('chapters', 'N/A')}")
+            lines.append(f"- **Sections:** {grammar_status['sections']}")
+            lines.append(f"- **Stable (✓):** {grammar_status['stable']} ({grammar_status['stable_pct']}%)")
+            lines.append(f"- **Provisional (⚠):** {grammar_status['provisional']}")
+            lines.append(f"- **Stubs (❌):** {grammar_status['stubs']}")
+            lines.append('')
+            lines.append(f"- **Grammatical morphemes:** {grammar_status.get('grammatical_morphemes', 0):,}")
+            lines.append(f"- **Morphemes with examples:** {grammar_status.get('morphemes_with_examples', 0):,}")
+            lines.append(f"- **Constructions documented:** {grammar_status.get('constructions', 0)}")
+            
+            if grammar_status.get('stub_sections'):
+                lines.append('')
+                lines.append('**Sections needing content:**')
+                for stub in grammar_status['stub_sections'][:5]:
+                    lines.append(f"  - {stub}")
+        else:
+            # Fallback markdown parsing
+            lines.append(f"- **Total sections:** {grammar_status['sections']}")
+            lines.append(f"- **Stable (✓):** {grammar_status['stable']} ({grammar_status['stable_pct']}%)")
+            lines.append(f"- **Provisional (⚠):** {grammar_status['provisional']}")
+            lines.append(f"- **Stubs (❌):** {grammar_status['stubs']}")
         lines.append('')
         
         if grammar_status['stubs'] > 0:
@@ -268,10 +357,20 @@ def generate_dashboard(conn, output_dir, metrics_path):
     
     # Dictionary gate
     if dict_status['exists']:
-        if dict_status['with_review_flags'] < dict_status['entries'] * 0.1:
-            gates.append(('✓', 'Dictionary <10% review flags', f"{dict_status['with_review_flags']} flags"))
+        if dict_status.get('source') == 'manifest':
+            # Use manifest: all glossed = ready
+            if dict_status.get('ready_for_draft', False):
+                gates.append(('✓', 'Dictionary all glossed', f"100% glossed"))
+            else:
+                unglossed = dict_status.get('unglossed', 0)
+                gates.append(('⚠', 'Dictionary all glossed', f"{unglossed} unglossed"))
         else:
-            gates.append(('⚠', 'Dictionary <10% review flags', f"{dict_status['with_review_flags']} flags"))
+            # Fallback: use review flags
+            review_flags = dict_status.get('with_review_flags', 0)
+            if review_flags < dict_status['entries'] * 0.1:
+                gates.append(('✓', 'Dictionary <10% review flags', f"{review_flags} flags"))
+            else:
+                gates.append(('⚠', 'Dictionary <10% review flags', f"{review_flags} flags"))
     else:
         gates.append(('❌', 'Dictionary draft exists', 'Not generated'))
     
