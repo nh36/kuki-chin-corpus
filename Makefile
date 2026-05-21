@@ -10,7 +10,7 @@ EXPECTED_SOURCES := 30000
 EXPECTED_TOKENS := 830000
 EXPECTED_LEMMAS := 7000
 
-.PHONY: help backend backend-check clean-backend grammar-reports dictionary link-examples metrics metrics-check editorial-dashboard dictionary-draft outputs
+.PHONY: help backend backend-check clean-backend grammar-reports grammar-integration-report dictionary link-examples metrics metrics-check editorial-dashboard dictionary-draft outputs test test-analyzer test-backend
 
 help:
 	@echo "Kuki-Chin Corpus Build Targets"
@@ -24,6 +24,10 @@ help:
 	@echo "  make dictionary        - Generate dictionary outputs from backend"
 	@echo "  make metrics           - Generate canonical Tedim metrics (JSON + Markdown)"
 	@echo "  make metrics-check     - Verify README/PROGRESS metrics match canonical"
+	@echo "  make test-analyzer     - Run the legacy analyzer test runner"
+	@echo "  make test-backend      - Rebuild backend/metrics and run backend-native pytest tests"
+	@echo "  make test              - Run analyzer runner, prepare backend, then run full pytest suite"
+	@echo "  make grammar-integration-report - Generate Tedim grammar source integration dashboard"
 	@echo "  make editorial-dashboard - Generate editorial priorities report"
 	@echo ""
 
@@ -55,7 +59,14 @@ grammar-reports: backend-check
 	$(PYTHON) scripts/generate_case_report_backend.py --output output/grammar/case_marking_report.md
 	$(PYTHON) scripts/generate_grammar_from_backend.py --output output/grammar/grammar_constructions.md
 	$(PYTHON) scripts/generate_grammar_from_backend.py --full --output output/grammar/grammar_full.md
+	$(PYTHON) scripts/generate_grammar_integration_report.py --db $(DB_PATH) --output output/grammar_integration_report.md
 	@echo "Grammar reports generated in output/grammar/"
+
+# Generate grammar integration report from Tedim source map
+grammar-integration-report: backend-check
+	@echo "Generating Tedim grammar integration report..."
+	$(PYTHON) scripts/generate_grammar_integration_report.py --db $(DB_PATH) --output output/grammar_integration_report.md
+	@echo "Integration report written to output/grammar_integration_report.md"
 
 # Generate dictionary outputs from backend  
 dictionary: backend-check
@@ -120,3 +131,23 @@ outputs: metrics editorial-blockers editorial-dashboard dictionary-draft grammar
 # Check output consistency (all outputs have matching commit stamps)
 output-check:
 	@$(PYTHON) scripts/check_output_consistency.py
+
+# Run the legacy analyzer runner
+test-analyzer:
+	@echo "Running legacy analyzer test runner..."
+	$(PYTHON) tests/run_all_tests.py -v
+
+# Rebuild backend/metrics, then run backend-native pytest tests
+test-backend:
+	@$(MAKE) backend
+	@$(MAKE) metrics
+	@echo "Running backend-native pytest suite..."
+	$(PYTHON) -m pytest tests/test_backend.py tests/test_metrics.py -v --tb=short
+
+# Standard repository test workflow
+test:
+	@$(MAKE) test-analyzer
+	@$(MAKE) backend
+	@$(MAKE) metrics
+	@echo "Running full pytest suite..."
+	$(PYTHON) -m pytest tests/ -v --tb=short

@@ -2,13 +2,15 @@
 """
 Shared helpers for Tedim grammar integration.
 
-This module loads the grammar source map, renders related-material sections,
-and pulls example material from the backend for source-map-driven outputs.
+This module loads the Tedim grammar source map, renders related-material
+sections, and pulls interlinear examples from the backend for integration
+reports and future grammar-drafting workflows.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import sqlite3
 from pathlib import Path
 from typing import Dict, Iterable, List
@@ -69,59 +71,9 @@ def repo_path(path_str: str) -> Path:
 
 def markdown_link(from_file: Path, target: str, label: str | None = None) -> str:
     """Build a relative markdown link from one file to another."""
-    target_path = repo_path(target)
-    relative = Path(Path(target_path).relative_to(REPO_ROOT))
-    link_path = Path(target_path).relative_to(REPO_ROOT)
-    rel = Path(
-        Path(
-            Path(target_path).relative_to(REPO_ROOT)
-        )
-    )
-    relative_link = Path(
-        Path(
-            Path(
-                Path(target_path)
-            )
-        )
-    )
-    rel_text = Path(
-        Path(target_path).relative_to(from_file.parent.resolve()) if False else Path()
-    )
-    rel_posix = Path(
-        Path(target_path).relative_to(REPO_ROOT)
-    )
-    computed = Path(target_path).relative_to(REPO_ROOT)
-    markdown_rel = Path(target_path).relative_to(REPO_ROOT)
-    relative_href = Path(target_path).relative_to(REPO_ROOT)
-    href = Path(target_path)
-    rel_path = Path(target_path).relative_to(REPO_ROOT)
-    final = Path(
-        Path(
-            Path(target_path)
-        )
-    )
-    # Use os-like relative paths without importing os just for link formatting.
-    relative_path = Path(
-        Path(target_path).relative_to(REPO_ROOT)
-    )
-    resolved = target_path.resolve()
-    from_parent = from_file.resolve().parent
-    rel_link = Path(
-        resolved.relative_to(REPO_ROOT)
-    )
-    link = resolved.relative_to(REPO_ROOT)
-    # pathlib cannot emit parent-directory traversals, so fall back to manual URI path.
-    uri = Path(
-        Path(target_path).relative_to(REPO_ROOT)
-    ).as_posix()
-    try:
-        import os
-
-        uri = os.path.relpath(resolved, start=from_parent)
-    except ValueError:
-        uri = target
-    label = label or target
-    return f'[{label}]({uri})'
+    target_path = repo_path(target).resolve()
+    href = os.path.relpath(target_path, start=from_file.resolve().parent)
+    return f'[{label or target}]({href})'
 
 
 def bullet_link_lines(from_file: Path, paths: Iterable[str]) -> List[str]:
@@ -202,7 +154,7 @@ def _fetch_examples_by_grammar_metadata(conn: sqlite3.Connection, entry: Dict, l
 
 
 def _fallback_source_examples(conn: sqlite3.Connection, entry: Dict, limit: int) -> List[Dict]:
-    """Fetch verse-level examples by text search when examples table lacks linked rows."""
+    """Fetch verse-level examples by text search when linked examples are absent."""
     terms = entry.get('example_search_terms') or entry.get('example_forms') or []
     if not terms:
         return []
@@ -256,13 +208,15 @@ def fetch_examples_for_entry(conn: sqlite3.Connection, entry: Dict, limit: int =
         if len(examples) >= limit:
             return examples
 
-    for row in _fallback_source_examples(conn, entry, limit - len(examples)):
-        if row['source_id'] in seen:
-            continue
-        seen.add(row['source_id'])
-        examples.append(row)
-        if len(examples) >= limit:
-            break
+    remaining = max(limit - len(examples), 0)
+    if remaining:
+        for row in _fallback_source_examples(conn, entry, remaining):
+            if row['source_id'] in seen:
+                continue
+            seen.add(row['source_id'])
+            examples.append(row)
+            if len(examples) >= limit:
+                break
 
     return examples
 

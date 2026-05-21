@@ -3,6 +3,27 @@
 This directory contains supporting documentation for Tedim Chin analysis.
 The main grammar reports are in `docs/grammar/reports/` at the repository root.
 
+## Standard Commands
+
+```bash
+make backend
+make backend-check
+make grammar-reports
+make dictionary
+make test
+```
+
+## Grammar Workflow Layers
+
+The Tedim grammar workflow is organized in layers:
+
+1. **Analyzer/backend = data layer**: `scripts/analyze_morphemes.py`, `data/ctd_analysis/*.tsv`, and `data/ctd_backend.db`
+2. **Generated corpus reports = empirical evidence layer**: `docs/grammar/reports/` and backend-driven reports under `output/grammar/`
+3. **Morpheme and literature documents = scholarly source layer**: `docs/grammar/morphemes/`, `docs/grammar/lit-reviews/`, `docs/grammar/DISAMBIGUATION.md`, and analyzer-gap notes
+4. **Grammar source map = integration layer**: `docs/grammar/grammar_source_map.json` and `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md`
+5. **Generated grammar outputs = drafting layer**: `output/grammar/`, `output/grammar_integration_report.md`, and `output/dictionary/`
+6. **Final grammar/dictionary/chrestomathy = edited scholarly outputs**: these are the publication targets built from the earlier layers rather than handwritten from scratch
+
 ## Directory Structure
 
 ```
