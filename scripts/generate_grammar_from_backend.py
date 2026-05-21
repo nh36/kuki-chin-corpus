@@ -1,251 +1,168 @@
 #!/usr/bin/env python3
 """
-Generate grammar documentation from the backend constructions layer.
+Generate Tedim grammar documentation from the backend/source-map integration layer.
 
-This script generates markdown grammar reports organized by grammar topics,
-with constructions and examples pulled from the backend database.
+When the backend `grammar_topics` and `constructions` tables are empty, this
+script falls back to the Tedim grammar source map so the generated grammar can
+still route each major topic to the existing grammar materials.
 """
 
-import sqlite3
-import json
+from __future__ import annotations
+
 import argparse
+import sqlite3
 from pathlib import Path
 
-
-def format_example(example: dict) -> str:
-    """Format an example for display."""
-    lines = []
-    if example.get('tedim_text'):
-        lines.append(f"> {example['tedim_text']}")
-    if example.get('segmented'):
-        lines.append(f"> *{example['segmented']}*")
-    if example.get('glossed'):
-        lines.append(f"> {example['glossed']}")
-    if example.get('kjv_text'):
-        lines.append(f"> '{example['kjv_text']}'")
-    return '\n'.join(lines)
+from grammar_integration import (
+    backend_counts,
+    fetch_examples_for_entry,
+    format_example_block,
+    grouped_topic_entries,
+    load_source_map,
+    render_related_material,
+)
+from report_utils import generate_provenance_header
 
 
-def generate_construction_section(conn, construction_id: str) -> str:
-    """Generate markdown section for a construction."""
-    row = conn.execute('''
-        SELECT name, category, pattern, description, morpheme_ids, frequency, example_ids
-        FROM constructions WHERE construction_id = ?
-    ''', (construction_id,)).fetchone()
-    
-    if not row:
-        return ""
-    
-    name, category, pattern, description, morpheme_ids_json, frequency, example_ids_json = row
-    
-    lines = [
-        f"### {name}",
-        "",
-        f"**Pattern:** `{pattern}`",
-        "",
-        description,
-        "",
-        f"**Frequency:** ~{frequency:,}",
-        "",
-    ]
-    
-    # Add morphemes involved
-    if morpheme_ids_json and morpheme_ids_json != '[]':
-        morpheme_ids = json.loads(morpheme_ids_json)
-        morphemes = []
-        for mid in morpheme_ids:
-            mrow = conn.execute('''
-                SELECT form, gloss FROM grammatical_morphemes WHERE morpheme_id = ?
-            ''', (mid,)).fetchone()
-            if mrow:
-                morphemes.append(f"-{mrow[0]} ({mrow[1]})")
-        if morphemes:
-            lines.append(f"**Morphemes:** {', '.join(morphemes)}")
-            lines.append("")
-    
-    # Add examples
-    if example_ids_json and example_ids_json != '[]':
-        example_ids = json.loads(example_ids_json)
-        lines.append("**Examples:**")
-        lines.append("")
-        
-        for eid in example_ids[:3]:
-            ex = conn.execute('''
-                SELECT source_id, tedim_text, segmented, glossed, kjv_text
-                FROM examples WHERE example_id = ?
-            ''', (eid,)).fetchone()
-            if ex:
-                src_row = conn.execute('''
-                    SELECT book_code, chapter, verse FROM sources WHERE source_id = ?
-                ''', (ex[0],)).fetchone()
-                if src_row:
-                    ref = f"({src_row[0]} {src_row[1]}:{src_row[2]})"
-                else:
-                    ref = ""
-                
-                lines.append(f"**{ref}**")
-                if ex[1]:
-                    lines.append(f"> {ex[1][:100]}{'...' if len(ex[1]) > 100 else ''}")
-                if ex[4]:
-                    lines.append(f"> *'{ex[4][:80]}...'*" if len(ex[4]) > 80 else f"> *'{ex[4]}'*")
-                lines.append("")
-    
-    return '\n'.join(lines)
+def render_source_map_entry(entry: dict, conn: sqlite3.Connection, output_path: Path, compact: bool = False) -> list[str]:
+    """Render a source-map entry as a grammar section."""
+    lines = [f"### {entry['title']}", '']
+
+    backend_refs = entry.get('backend_topic_ids', []) + entry.get('construction_ids', [])
+    if backend_refs:
+        lines.append(f"**Backend topics/constructions:** {', '.join(f'`{item}`' for item in backend_refs)}")
+        lines.append('')
+
+    if entry.get('relevant_morphemes'):
+        lines.append(f"**Relevant morphemes:** {', '.join(f'`{item}`' for item in entry['relevant_morphemes'])}")
+        lines.append('')
+
+    lines.extend(render_related_material(entry, output_path))
+
+    examples = fetch_examples_for_entry(conn, entry, limit=1 if compact else 2)
+    if examples:
+        lines.append('**Examples**')
+        lines.append('')
+        for example in examples:
+            lines.extend(format_example_block(example))
+
+    lines.append('**Human review**')
+    lines.append(f"- {entry.get('notes_human_review', 'No additional note.')}")
+    lines.append('')
+    return lines
 
 
-def generate_topic_section(conn, topic_id: str, level: int = 2) -> str:
-    """Generate markdown section for a grammar topic."""
-    row = conn.execute('''
-        SELECT title, description, construction_ids, morpheme_ids
-        FROM grammar_topics WHERE topic_id = ?
-    ''', (topic_id,)).fetchone()
-    
-    if not row:
-        return ""
-    
-    title, description, construction_ids_json, morpheme_ids_json = row
-    
-    heading = '#' * level
-    lines = [
-        f"{heading} {title}",
-        "",
-        description,
-        "",
-    ]
-    
-    # Add constructions
-    if construction_ids_json and construction_ids_json != '[]':
-        construction_ids = json.loads(construction_ids_json)
-        for cid in construction_ids:
-            section = generate_construction_section(conn, cid)
-            if section:
-                lines.append(section)
-                lines.append("")
-    
-    # Add child topics
-    children = list(conn.execute('''
-        SELECT topic_id FROM grammar_topics 
-        WHERE parent_id = ? ORDER BY display_order
-    ''', (topic_id,)))
-    
-    for child in children:
-        child_section = generate_topic_section(conn, child[0], level + 1)
-        if child_section:
-            lines.append(child_section)
-    
-    return '\n'.join(lines)
-
-
-def generate_full_grammar(conn) -> str:
-    """Generate full grammar documentation."""
-    lines = [
-        "# Tedim Chin Grammar",
-        "",
-        "Generated from corpus backend with constructions and examples.",
-        "",
-        "---",
-        "",
-    ]
-    
-    # Get top-level topics
-    topics = list(conn.execute('''
-        SELECT topic_id FROM grammar_topics 
-        WHERE parent_id IS NULL ORDER BY display_order
-    '''))
-    
-    for topic in topics:
-        section = generate_topic_section(conn, topic[0])
-        if section:
-            lines.append(section)
-            lines.append("---")
-            lines.append("")
-    
-    # Add construction inventory
-    lines.append("## Construction Inventory")
-    lines.append("")
-    lines.append("| ID | Name | Category | Pattern | Frequency |")
-    lines.append("|---|---|---|---|---|")
-    
-    for row in conn.execute('''
+def render_backend_inventory(conn: sqlite3.Connection) -> list[str]:
+    """Render current backend construction inventory without duplicating sections."""
+    lines = ['## Backend construction inventory', '']
+    rows = list(conn.execute('''
         SELECT construction_id, name, category, pattern, frequency
-        FROM constructions ORDER BY category, frequency DESC
-    '''):
-        lines.append(f"| {row[0]} | {row[1]} | {row[2]} | `{row[3]}` | {row[4]:,} |")
-    
-    lines.append("")
-    lines.append("---")
-    lines.append("")
-    lines.append("*Generated from backend database*")
-    
-    return '\n'.join(lines)
-
-
-def generate_constructions_report(conn) -> str:
-    """Generate a focused constructions report."""
-    lines = [
-        "# Tedim Chin Constructions",
-        "",
-        "This report documents grammatical constructions in Tedim Chin,",
-        "organized by category with pattern descriptions and corpus examples.",
-        "",
-        "---",
-        "",
-    ]
-    
-    # Get categories
-    categories = list(conn.execute('''
-        SELECT DISTINCT category FROM constructions ORDER BY category
+        FROM constructions
+        ORDER BY category, frequency DESC, construction_id
     '''))
-    
-    for cat in categories:
-        cat_name = cat[0].replace('_', ' ').title()
-        lines.append(f"## {cat_name}")
-        lines.append("")
-        
-        constructions = list(conn.execute('''
-            SELECT construction_id FROM constructions 
-            WHERE category = ? ORDER BY frequency DESC
-        ''', (cat[0],)))
-        
-        for c in constructions:
-            section = generate_construction_section(conn, c[0])
-            if section:
-                lines.append(section)
-                lines.append("")
-        
-        lines.append("---")
-        lines.append("")
-    
-    return '\n'.join(lines)
+    if not rows:
+        lines.append('_No backend constructions are populated in the current Tedim database._')
+        lines.append('')
+        return lines
+
+    lines.append('| ID | Name | Category | Pattern | Frequency |')
+    lines.append('|----|------|----------|---------|-----------|')
+    for row in rows:
+        lines.append(f"| `{row['construction_id']}` | {row['name']} | {row['category']} | `{row['pattern']}` | {row['frequency']:,} |")
+    lines.append('')
+    return lines
+
+
+def generate_full_grammar(conn: sqlite3.Connection, source_map: dict, output_path: Path) -> str:
+    """Generate a full grammar draft driven by the Tedim source map."""
+    counts = backend_counts(conn)
+    lines = [
+        generate_provenance_header(
+            'scripts/generate_grammar_from_backend.py',
+            inputs=['data/ctd_backend.db', 'docs/grammar/grammar_source_map.json'],
+            command='make grammar-reports',
+        ).rstrip(),
+        '# Tedim Chin Grammar',
+        '',
+        'Generated from the Tedim backend and grammar source map.',
+        '',
+        f"- Backend grammar topics: **{counts['grammar_topics']}**",
+        f"- Backend constructions: **{counts['constructions']}**",
+        '',
+    ]
+
+    if counts['grammar_topics'] == 0 and counts['constructions'] == 0:
+        lines.extend([
+            '> **Current limitation:** the backend topic/construction layer is not yet populated, so this draft is organized from the Tedim grammar source map and linked legacy materials.',
+            '',
+        ])
+
+    for chapter_area, entries in grouped_topic_entries(source_map):
+        lines.append(f"## {chapter_area}")
+        lines.append('')
+        for entry in entries:
+            lines.extend(render_source_map_entry(entry, conn, output_path, compact=False))
+
+    lines.extend(render_backend_inventory(conn))
+    lines.append('*Generated from the Tedim backend/source-map integration layer*')
+    return '\n'.join(lines).rstrip() + '\n'
+
+
+def generate_constructions_report(conn: sqlite3.Connection, source_map: dict, output_path: Path) -> str:
+    """Generate a focused topic/construction routing report."""
+    counts = backend_counts(conn)
+    lines = [
+        generate_provenance_header(
+            'scripts/generate_grammar_from_backend.py',
+            inputs=['data/ctd_backend.db', 'docs/grammar/grammar_source_map.json'],
+            command='make grammar-reports',
+        ).rstrip(),
+        '# Tedim Chin Constructions',
+        '',
+        'This report routes Tedim grammar topics and constructions to the legacy materials that support grammar writing.',
+        '',
+        f"- Backend grammar topics: **{counts['grammar_topics']}**",
+        f"- Backend constructions: **{counts['constructions']}**",
+        '',
+    ]
+
+    for chapter_area, entries in grouped_topic_entries(source_map):
+        lines.append(f"## {chapter_area}")
+        lines.append('')
+        for entry in entries:
+            lines.extend(render_source_map_entry(entry, conn, output_path, compact=True))
+
+    lines.extend(render_backend_inventory(conn))
+    return '\n'.join(lines).rstrip() + '\n'
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate grammar documentation from backend')
+    parser = argparse.ArgumentParser(description='Generate grammar documentation from backend/source map')
     parser.add_argument('--db', default='data/ctd_backend.db', help='Database path')
-    parser.add_argument('--output', default='output/grammar_constructions.md', help='Output file')
+    parser.add_argument('--source-map', default='docs/grammar/grammar_source_map.json', help='Source map JSON path')
+    parser.add_argument('--output', default='output/grammar/grammar_constructions.md', help='Output file')
     parser.add_argument('--full', action='store_true', help='Generate full grammar (vs constructions only)')
     args = parser.parse_args()
-    
+
     conn = sqlite3.connect(args.db)
     conn.row_factory = sqlite3.Row
-    
-    if args.full:
-        content = generate_full_grammar(conn)
-    else:
-        content = generate_constructions_report(conn)
-    
+    source_map = load_source_map(args.source_map)
+
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(content)
-    
+
+    if args.full:
+        content = generate_full_grammar(conn, source_map, output_path)
+    else:
+        content = generate_constructions_report(conn, source_map, output_path)
+
+    output_path.write_text(content, encoding='utf-8')
     print(f"Generated {args.output}")
-    
-    # Print stats
-    print(f"\nStats:")
-    print(f"  Constructions: {conn.execute('SELECT COUNT(*) FROM constructions').fetchone()[0]}")
-    print(f"  Grammar topics: {conn.execute('SELECT COUNT(*) FROM grammar_topics').fetchone()[0]}")
-    print(f"  With examples: {conn.execute('SELECT COUNT(*) FROM constructions WHERE example_ids IS NOT NULL').fetchone()[0]}")
-    
+    print("\nStats:")
+    counts = backend_counts(conn)
+    print(f"  Constructions: {counts['constructions']}")
+    print(f"  Grammar topics: {counts['grammar_topics']}")
+    print(f"  Source-map topics: {len(source_map.get('topic_mappings', []))}")
     conn.close()
 
 

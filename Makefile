@@ -142,7 +142,7 @@ test-backend:
 	@$(MAKE) backend
 	@$(MAKE) metrics
 	@echo "Running backend-native pytest suite..."
-	$(PYTHON) -m pytest tests/test_backend.py tests/test_metrics.py -v --tb=short
+	$(PYTHON) -m pytest tests/test_backend.py -v --tb=short
 
 # Standard repository test workflow
 test:

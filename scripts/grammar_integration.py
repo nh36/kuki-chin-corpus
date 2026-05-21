@@ -35,6 +35,75 @@ CASE e.quality
 END
 """
 
+DEFAULT_EXAMPLE_FILTERS = {
+    'pronominal-prefixes': {
+        'example_glosses': ['1SG→3', '3→1'],
+    },
+    'ergative-marking': {
+        'example_glosses': ['ERG'],
+    },
+    'locative-marking': {
+        'example_glosses': ['LOC'],
+    },
+    'ablative-marking': {
+        'example_glosses': ['ABL'],
+    },
+    'comitative-marking': {
+        'example_glosses': ['COM'],
+    },
+    'verb-stem-alternation': {
+        'example_search_terms': ['muh', 'theih', 'cih'],
+    },
+    'perfective-ta': {
+        'example_glosses': ['PFV'],
+    },
+    'completive-zo': {
+        'example_glosses': ['COMPL'],
+    },
+    'irrealis-ding': {
+        'example_glosses': ['IRR'],
+    },
+    'ability-thei-theih': {
+        'example_glosses': ['ABIL', 'ABIL.II'],
+    },
+    'directional-suffixes': {
+        'example_glosses': ['UP', 'DOWN', 'HORIZ', 'out', 'away', 'in'],
+    },
+    'inverse-hong': {
+        'example_glosses': ['3→1'],
+    },
+    'causative-sak': {
+        'example_glosses': ['CAUS'],
+    },
+    'benefactive-sak': {
+        'example_search_terms': ['muhsak', 'cihsak', 'theihsak', 'tuahsak'],
+    },
+    'applicative-pih': {
+        'example_glosses': ['APPL'],
+    },
+    'reflexive-ki': {
+        'example_glosses': ['REFL'],
+    },
+    'negation-lo-kei': {
+        'example_glosses': ['NEG', 'NEG.EMPH'],
+    },
+    'nominalization-na': {
+        'example_glosses': ['NMLZ'],
+    },
+    'interrogative-hiam': {
+        'example_glosses': ['Q'],
+    },
+    'declarative-hi': {
+        'example_glosses': ['DECL'],
+    },
+    'topic-marker-pen': {
+        'example_glosses': ['TOP'],
+    },
+    'major-subordination': {
+        'example_search_terms': ['ciangin', 'dingin', 'hangin', 'ahih', 'leh'],
+    },
+}
+
 
 def load_source_map(source_map_path: str | Path | None = None) -> Dict:
     """Load the Tedim grammar source map JSON."""
@@ -67,6 +136,15 @@ def grouped_topic_entries(source_map: Dict) -> List[tuple[str, List[Dict]]]:
 def repo_path(path_str: str) -> Path:
     """Resolve a repository-relative path."""
     return REPO_ROOT / path_str
+
+
+def merged_entry_filters(entry: Dict) -> Dict:
+    """Merge built-in example filters with any source-map overrides."""
+    merged = dict(DEFAULT_EXAMPLE_FILTERS.get(entry.get('topic_id', ''), {}))
+    for key, value in entry.items():
+        if key.startswith('example_'):
+            merged[key] = value
+    return merged
 
 
 def markdown_link(from_file: Path, target: str, label: str | None = None) -> str:
@@ -109,13 +187,19 @@ def render_related_material(entry: Dict, output_path: Path) -> List[str]:
 
 def _fetch_examples_by_grammar_metadata(conn: sqlite3.Connection, entry: Dict, limit: int) -> List[sqlite3.Row]:
     """Fetch examples linked to grammatical morphemes that match a source-map entry."""
-    forms = entry.get('example_forms', [])
-    categories = entry.get('example_categories', [])
-    search_terms = entry.get('example_search_terms', [])
+    filters = merged_entry_filters(entry)
+    morpheme_ids = filters.get('example_morpheme_ids', [])
+    forms = filters.get('example_forms', [])
+    categories = filters.get('example_categories', [])
+    glosses = filters.get('example_glosses', [])
 
     conditions: List[str] = []
     params: List[str] = []
 
+    if morpheme_ids:
+        placeholders = ', '.join('?' for _ in morpheme_ids)
+        conditions.append(f'gm.morpheme_id IN ({placeholders})')
+        params.extend(morpheme_ids)
     if forms:
         placeholders = ', '.join('?' for _ in forms)
         conditions.append(f'gm.form IN ({placeholders})')
@@ -124,12 +208,11 @@ def _fetch_examples_by_grammar_metadata(conn: sqlite3.Connection, entry: Dict, l
         placeholders = ', '.join('?' for _ in categories)
         conditions.append(f'gm.category IN ({placeholders})')
         params.extend(categories)
-    if search_terms:
-        term_conditions = []
-        for term in search_terms:
-            term_conditions.append('(e.target_form LIKE ? OR e.tedim_text LIKE ?)')
-            params.extend([f'%{term}%', f'%{term}%'])
-        conditions.append('(' + ' OR '.join(term_conditions) + ')')
+    if glosses:
+        placeholders = ', '.join('?' for _ in glosses)
+        conditions.append(f'(gm.gloss IN ({placeholders}) OR gm.function IN ({placeholders}))')
+        params.extend(glosses)
+        params.extend(glosses)
 
     if not conditions:
         return []
@@ -145,7 +228,7 @@ def _fetch_examples_by_grammar_metadata(conn: sqlite3.Connection, entry: Dict, l
             e.quality
         FROM examples e
         LEFT JOIN grammatical_morphemes gm ON e.morpheme_id = gm.morpheme_id
-        WHERE {' OR '.join(conditions)}
+        WHERE {' AND '.join(conditions)}
         ORDER BY {EXAMPLE_QUALITY_ORDER_SQL}, LENGTH(COALESCE(e.tedim_text, '')), e.example_id
         LIMIT ?
     '''
@@ -155,7 +238,8 @@ def _fetch_examples_by_grammar_metadata(conn: sqlite3.Connection, entry: Dict, l
 
 def _fallback_source_examples(conn: sqlite3.Connection, entry: Dict, limit: int) -> List[Dict]:
     """Fetch verse-level examples by text search when linked examples are absent."""
-    terms = entry.get('example_search_terms') or entry.get('example_forms') or []
+    filters = merged_entry_filters(entry)
+    terms = filters.get('example_search_terms') or filters.get('example_forms') or []
     if not terms:
         return []
 
