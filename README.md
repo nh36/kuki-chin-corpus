@@ -6,6 +6,11 @@ A digital philology infrastructure for Kuki-Chin languages, featuring:
 - **SQLite backend** for normalized dictionary/grammar data
 - Bootstrap lexicons and interlinear glossing tools
 
+## Current publication priority
+
+The current publication phase is focused on the **Tedim Chin** package: **grammar, dictionary, and chrestomathy/reader**.
+Scaling the same workflow to **Mizo/lus** and the remaining Kuki-Chin languages is a later phase, after the Tedim publication outputs are in publishable form.
+
 ## Architecture
 
 ```
