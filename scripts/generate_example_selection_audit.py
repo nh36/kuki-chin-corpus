@@ -13,43 +13,73 @@ import sqlite3
 from pathlib import Path
 
 from grammar_integration import (
+    audit_examples_for_entry,
     backend_counts,
     format_example_block,
     grouped_topic_entries,
     load_source_map,
     render_source_of_truth_lines,
-    select_examples_for_entry,
 )
 from report_utils import generate_provenance_header
 
 
+def render_candidate_block(candidate: dict) -> list[str]:
+    """Render one audited candidate with status metadata."""
+    lines = [f"**Status:** {candidate['selection_status']}"]
+    lines.append(f"**Drafting quality:** {candidate['drafting_quality']}")
+    lines.append(f"**Reason:** {candidate['selection_reason']}")
+    if candidate.get('matched_fields'):
+        lines.append(f"**Matched fields:** {', '.join(candidate['matched_fields'])}")
+    if candidate.get('selection_note'):
+        lines.append(f"**Note:** {candidate['selection_note']}")
+    if candidate.get('used_in_grammar'):
+        lines.append('**Used in grammar output:** yes')
+    lines.append('')
+    lines.extend(format_example_block(candidate))
+    return lines
+
+
 def render_topic_audit(entry: dict, conn: sqlite3.Connection) -> list[str]:
     """Render audit details for one mapped topic."""
-    selections = select_examples_for_entry(conn, entry, limit=3, include_non_safe=True)
-    safe_count = sum(1 for item in selections if item['selection_status'] == 'safe')
+    candidates = audit_examples_for_entry(conn, entry, limit=3)
+    selected_safe = [item for item in candidates if item.get('used_in_grammar')]
+    safe_but_unused = [
+        item for item in candidates
+        if item['selection_status'] == 'safe' and not item.get('used_in_grammar')
+    ]
+    fallback_only = [item for item in candidates if item['selection_status'] == 'fallback only']
+    rejected = [item for item in candidates if item['selection_status'] == 'rejected']
 
     lines = [f"### {entry['title']}", '']
     lines.append(f"**Topic ID:** `{entry['topic_id']}`")
     lines.append('')
-    if safe_count:
-        lines.append(f"**Drafting status:** {safe_count} safe example(s) selected for grammar output.")
+    if selected_safe:
+        lines.append(f"**Drafting status:** {len(selected_safe)} draft-ready example(s) selected for grammar output.")
     else:
-        lines.append('**Drafting status:** No safe backend example selected.')
+        lines.append('**Drafting status:** No draft-ready backend example selected.')
     lines.append('')
 
-    if not selections:
+    if not candidates:
         lines.append('- No example candidate matched the current selection rules.')
         lines.append('')
         return lines
 
-    for selection in selections:
-        lines.append(f"**Status:** {selection['selection_status']}")
-        lines.append(f"**Why selected:** {selection['selection_reason']}")
-        lines.append(f"**Matched fields:** {', '.join(selection['matched_fields'])}")
-        if selection.get('selection_note'):
-            lines.append(f"**Note:** {selection['selection_note']}")
+    sections = [
+        ('Selected safe examples', selected_safe),
+        ('Other safe candidates not used in grammar', safe_but_unused),
+        ('Fallback-only candidates', fallback_only),
+        ('Rejected candidates', rejected),
+    ]
+
+    for heading, items in sections:
+        lines.append(f"**{heading}:**")
+        if not items:
+            lines.append('- None.')
+            lines.append('')
+            continue
         lines.append('')
-        lines.extend(format_example_block(selection))
+        for item in items:
+            lines.extend(render_candidate_block(item))
 
     return lines
 
@@ -76,7 +106,7 @@ def generate_audit(db_path: str, source_map_path: str, output_path: Path) -> str
         f"- Grammar topics in backend: **{counts['grammar_topics']}**",
         f"- Constructions in backend: **{counts['constructions']}**",
         *render_source_of_truth_lines(source_map, output_path),
-        '- Drafting policy: grammar outputs include only examples marked **safe** here; fallback-only candidates remain in this audit and are not used in drafting output.',
+        '- Drafting policy: grammar outputs include only examples with `selection_status = safe` and `drafting_quality = exemplar` or `usable`.',
         '',
     ]
 

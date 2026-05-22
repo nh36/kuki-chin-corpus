@@ -14,7 +14,7 @@ import pytest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'scripts'))
 
-from grammar_integration import load_source_map, select_examples_for_entry
+from grammar_integration import audit_examples_for_entry, load_source_map, select_examples_for_entry
 from generate_grammar_integration_report import generate_report
 
 
@@ -53,7 +53,8 @@ def test_ergative_marking_refuses_unsafe_examples(conn, source_map):
     reviewed = select_examples_for_entry(conn, entry, limit=2, include_non_safe=True)
 
     assert safe == []
-    assert reviewed == []
+    assert reviewed
+    assert all(example['selection_status'] == 'rejected' for example in reviewed)
 
 
 def test_comitative_marking_selects_plain_tawh(conn, source_map):
@@ -74,7 +75,8 @@ def test_declarative_hi_excludes_decl_poss_examples(conn, source_map):
     reviewed = select_examples_for_entry(conn, entry, limit=2, include_non_safe=True)
 
     assert safe == []
-    assert reviewed == []
+    assert reviewed
+    assert all(example['selection_status'] == 'rejected' for example in reviewed)
 
 
 def test_pronominal_prefixes_distinguish_agreement_and_possession(conn, source_map):
@@ -97,6 +99,74 @@ def test_benefactive_sak_stays_out_of_safe_drafting_examples(conn, source_map):
     assert reviewed
     assert all(example['selection_status'] == 'fallback only' for example in reviewed)
     assert all(example['matched_fields'] == ['fallback text search'] for example in reviewed)
+
+
+def test_directionals_reject_tuni_in_and_keep_it_out_of_drafting(conn, source_map):
+    """Directional selection should reject Tuni-in and keep only directional suffix examples."""
+    entry = get_entry(source_map, 'directional-suffixes')
+    safe = select_examples_for_entry(conn, entry, limit=2)
+    audit = audit_examples_for_entry(conn, entry, limit=3)
+
+    assert safe
+    assert all(example['segmented'] != 'Tuni-in' for example in safe)
+    assert all(example['drafting_quality'] in {'exemplar', 'usable'} for example in safe)
+    assert any(example['selection_status'] == 'rejected' and example['segmented'] == 'Tuni-in' for example in audit)
+
+
+def test_nominalization_prefers_nuntak_na(conn, source_map):
+    """Nominalization should keep productive-looking -na and reject pa-na."""
+    entry = get_entry(source_map, 'nominalization-na')
+    safe = select_examples_for_entry(conn, entry, limit=2)
+    audit = audit_examples_for_entry(conn, entry, limit=3)
+
+    assert [example['segmented'] for example in safe] == ['nuntak-na']
+    assert any(example['selection_status'] == 'rejected' and example['segmented'] == 'pa-na' for example in audit)
+
+
+def test_interrogative_hiam_excludes_formulaic_reason_expression(conn, source_map):
+    """Interrogative hiam should keep ordinary questions and reject Bang hang hiam formulas."""
+    entry = get_entry(source_map, 'interrogative-hiam')
+    safe = select_examples_for_entry(conn, entry, limit=2)
+    audit = audit_examples_for_entry(conn, entry, limit=3)
+
+    assert safe
+    assert all('Bang hang hiam ci' not in example['tedim_text'] for example in safe)
+    assert any(example['selection_status'] == 'rejected' for example in audit)
+
+
+def test_ability_prefers_transparent_abilitative_examples(conn, source_map):
+    """Ability examples should prefer transparent mu-/pau-thei rows over opaque cithei forms."""
+    entry = get_entry(source_map, 'ability-thei-theih')
+    safe = select_examples_for_entry(conn, entry, limit=2)
+    audit = audit_examples_for_entry(conn, entry, limit=4)
+
+    assert {example['segmented'] for example in safe} == {'mu-thei-in', 'pau-thei-in'}
+    assert any(example['drafting_quality'] == 'safe_but_poor' for example in audit)
+    assert all(example['segmented'] != 'ci-thei-sak-kik' for example in safe)
+
+
+def test_topic_marker_pen_keeps_bad_backend_rows_out_of_drafting(conn, source_map):
+    """Topic marker pen should show rejected linked rows and no draft-ready example yet."""
+    entry = get_entry(source_map, 'topic-marker-pen')
+    safe = select_examples_for_entry(conn, entry, limit=2)
+    audit = audit_examples_for_entry(conn, entry, limit=3)
+
+    assert safe == []
+    assert any(example['selection_status'] == 'rejected' for example in audit)
+    assert any(example['selection_status'] == 'fallback only' for example in audit)
+
+
+def test_agentive_prefers_clear_agent_nominalization(conn, source_map):
+    """Agent nominalization should use tax-collector AGT examples, not fallback Genesis rows."""
+    entry = get_entry(source_map, 'agentive-pa-mi')
+    safe = select_examples_for_entry(conn, entry, limit=2)
+    audit = audit_examples_for_entry(conn, entry, limit=4)
+
+    assert safe
+    assert safe[0]['segmented'] == 'siah-dong-pa'
+    assert safe[0]['drafting_quality'] == 'exemplar'
+    assert all(example['source_id'] != '01001001' for example in safe)
+    assert any(example['selection_status'] == 'rejected' for example in audit)
 
 
 def test_integration_report_declares_source_map_canonical(tmp_path):

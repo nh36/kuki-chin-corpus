@@ -24,8 +24,8 @@ help:
 	@echo "  make dictionary        - Generate dictionary outputs from backend"
 	@echo "  make metrics           - Generate canonical Tedim metrics (JSON + Markdown)"
 	@echo "  make test-analyzer     - Run the legacy analyzer test runner"
-	@echo "  make test-backend      - Rebuild backend/metrics and run backend-native pytest tests"
-	@echo "  make test              - Run analyzer runner, prepare backend, then run full pytest suite"
+	@echo "  make test-backend      - Rebuild backend and run backend-native pytest tests"
+	@echo "  make test              - Run analyzer runner, rebuild backend, then run full pytest suite"
 	@echo "  make grammar-integration-report - Generate Tedim grammar source integration dashboard"
 	@echo "  make grammar-example-audit - Generate Tedim backend example-selection audit"
 	@echo ""
@@ -93,10 +93,9 @@ test-analyzer:
 	@echo "Running legacy analyzer test runner..."
 	$(PYTHON) tests/run_all_tests.py -v
 
-# Rebuild backend/metrics, then run backend-native pytest tests
+# Rebuild backend, then run backend-native pytest tests
 test-backend:
 	@$(MAKE) backend
-	@$(MAKE) metrics
 	@echo "Running backend-native pytest suite..."
 	$(PYTHON) -m pytest tests/test_backend.py -v --tb=short
 
@@ -104,6 +103,5 @@ test-backend:
 test:
 	@$(MAKE) test-analyzer
 	@$(MAKE) backend
-	@$(MAKE) metrics
 	@echo "Running full pytest suite..."
 	$(PYTHON) -m pytest tests/ -v --tb=short

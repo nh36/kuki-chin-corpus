@@ -49,7 +49,7 @@ def render_source_map_entry(entry: dict, conn: sqlite3.Connection, output_path: 
     else:
         lines.append('**Examples**')
         lines.append('')
-        lines.append('- No safe backend example selected.')
+        lines.append('- No draft-ready backend example selected.')
         lines.append('')
 
     lines.append('**Human review**')

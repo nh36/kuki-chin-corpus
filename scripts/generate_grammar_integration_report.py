@@ -181,13 +181,13 @@ def render_entry(entry: dict, conn: sqlite3.Connection, output_path: Path) -> li
     lines.append('')
 
     examples = fetch_examples_for_entry(conn, entry, limit=2)
-    lines.append('**Safe backend examples:**')
+    lines.append('**Draft-ready backend examples:**')
     if examples:
         lines.append('')
         for example in examples:
             lines.extend(format_example_block(example))
     else:
-        lines.append('- No safe backend example selected.')
+        lines.append('- No draft-ready backend example selected.')
         lines.append('')
 
     missing = []

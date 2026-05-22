@@ -32,14 +32,12 @@ A digital philology infrastructure for Kuki-Chin languages, featuring:
 # Build the backend from TSV exports
 make backend
 
-# Run all tests (370 tests)
+# Run the standard test workflow
 make test
 
-# Generate publication outputs
-make dictionary-draft grammar-draft metrics
-
-# Check documentation matches canonical metrics
-make metrics-check
+# Generate backend-driven drafting outputs
+make grammar-reports
+make dictionary
 ```
 
 Standard workflow commands:
@@ -48,7 +46,7 @@ Standard workflow commands:
 - `make backend-check` - verify backend counts and integrity
 - `make grammar-reports` - generate backend-driven grammar reports, including the integration dashboard
 - `make dictionary` - generate backend-driven dictionary sample outputs
-- `make test` - run the analyzer test runner, rebuild backend/metrics, then run the full pytest suite
+- `make test` - run the analyzer test runner, rebuild backend, then run the full pytest suite
 
 ## Tedim Chin: Current Metrics
 

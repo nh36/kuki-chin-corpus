@@ -46,6 +46,22 @@ def get_git_tree_state():
     return 'tree state unknown'
 
 
+def get_git_branch():
+    """Get current git branch name."""
+    try:
+        result = subprocess.run(
+            ['git', 'branch', '--show-current'],
+            capture_output=True, text=True,
+            cwd=os.path.dirname(os.path.abspath(__file__))
+        )
+        if result.returncode == 0:
+            branch = result.stdout.strip()
+            return branch or 'detached HEAD'
+    except (OSError, subprocess.SubprocessError):
+        pass
+    return 'unknown'
+
+
 def generate_provenance_header(script_name: str, inputs: list = None, 
                                 command: str = None) -> str:
     """
@@ -61,6 +77,7 @@ def generate_provenance_header(script_name: str, inputs: list = None,
     """
     timestamp = datetime.now().isoformat()
     commit = get_git_commit()
+    branch = get_git_branch()
     tree_state = get_git_tree_state()
     
     lines = [
@@ -73,6 +90,7 @@ def generate_provenance_header(script_name: str, inputs: list = None,
             lines.append(f'<!-- From: {inp} -->')
     
     lines.append(f'<!-- At: {timestamp} -->')
+    lines.append(f'<!-- Branch: {branch} -->')
     lines.append(f'<!-- Commit: {commit} -->')
     lines.append(f'<!-- Tree state: {tree_state} -->')
     

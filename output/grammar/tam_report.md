@@ -90,17 +90,17 @@ Core TAM markers that attach to verb stems.
 
 #### khin (COMPL)
 
-**1 Kings 1:25**
-> Bang hang hiam cih leh tuni-in amah paisuk khinin, bawngtalte, ganno thaute, le tuute, tampi tak biakna-in pia a, kumpipa' tapate khempeuh, galkapte a ukpa Joab, le siampi Abiathar sam hi. Amaute in ama a' ding pawi bawl uh a, 'Kumpi Adonijah a khansau hen!' ci uh hi.
-> *khin-in*
-> COMPL-CVB
-> KJV: *For he is gone down this day, and hath slain oxen and fat cattle and sheep in abundance, and hath called all the king's sons, and the captains of the host, and Abiathar the priest; and, behold, they eat and drink before him, and say, God save king Adonijah.*
-
-**Jeremiah 31:11**
-> Bang hang hiam cih leh Topa in Jakob ka suaktasak khinzo a, a zawhzawh loh khutte' sung pan ka honkhiazo hi.
+**Numbers 24:10**
+> Balaam' tungah Balak heh mahmah a, amah in a khut le a khut a tuum hi. Balak in Balaam kiangah, “Ka galte a samsia dingin nang kong sam hi. En in, nang in amaute thumvei tak thupha na pia khinzo hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *For the LORD hath redeemed Jacob, and ransomed him from the hand of him that was stronger than he.*
+> KJV: *And Balak's anger was kindled against Balaam, and he smote his hands together: and Balak said unto Balaam, I called thee to curse mine enemies, and, behold, thou hast altogether blessed them these three times.*
+
+**Jeremiah 50:43**
+> Babylon kumpipa in tua thu za khinzo a, bangmah a cih thei kei hi. Lungkhamin lumcip a, nupi nausuak ding bangin na a sa hi.
+> *khin-zo*
+> COMPL-COMPL
+> KJV: *The king of Babylon hath heard the report of them, and his hands waxed feeble: anguish took hold of him, and pangs as of a woman in travail.*
 
 ---
 
@@ -119,31 +119,31 @@ Particles that mark sentence mood and illocutionary force.
 
 #### hi (DECL)
 
-**Ezra 10:19**
-> Amaute in a zite a mak ding uh kiciam uh a, amau' mawhna hangin biakna-in tuuhon panin tuutal khat hong paipih uh hi.
+**Habakkuk 1:3**
+> Bang hangin hih bang siatnate le lungkhamnate hong musak na hi hiam? Kisuksiatna le kisukgawpna in hong umcih a, kitotna le kiselna, mun citengah om hi.
 > *hi'*
 > DECL.POSS
-> KJV: *And they gave their hands that they would put away their wives; and being guilty, they offered a ram of the flock for their trespass.*
+> KJV: *Why dost thou shew me iniquity, and cause me to behold grievance? for spoiling and violence are before me: and there are that raise up strife and contention.*
 
-**Exodus 9:22**
-> Topa in Moses kiangah, “Egypt gam sung khempeuh a mihing le ganhing le gamlak kungte khempeuh tungah gialpi a kiat theih nadingin vantung lamah na khut zan in,” a ci hi.
-> *hi'*
-> DECL.POSS
-> KJV: *And the LORD said unto Moses, Stretch forth thine hand toward heaven, that there may be hail in all the land of Egypt, upon man, and upon beast, and upon every herb of the field, throughout the land of Egypt.*
+**2 Chronicles 6:2**
+> a tawntungin na tenna ding a lian biakinn khat hih lai-ah kong lamsak khin hi,” a ci hi.
+> *hi*
+> DECL
+> KJV: *But I have built an house of habitation for thee, and a place for thy dwelling for ever.*
 
 #### hiam (Q)
 
-**Genesis 31:37**
-> Ka van khempeuh na thawi khit hangin na innsung nate mu na hi hiam? Ei tegel kikalah amaute in thu a khen theih nadingin keima behte le nangma behte' mai-ah, na muh a om leh hong koihkhia in.
-> *Hiam*
+**Joshua 17:14**
+> Tua ciangin Josef minam in Joshua kiangah thu genin, “ Topa in kote thu hong pia khin a, kote mi tampi hi napi-in bang hangin ngah khat le tanh khat bek gamh-in hong pia na hi hiam?” a ci uh hi.
+> *hiam*
 > Q
-> KJV: *Whereas thou hast searched all my stuff, what hast thou found of all thy household stuff? set it here before my brethren and thy brethren, that they may judge betwixt us both.*
+> KJV: *And the children of Joseph spake unto Joshua, saying, Why hast thou given me but one lot and one portion to inherit, seeing I am a great people, forasmuch as the LORD hath blessed me hitherto?*
 
-**Amos 5:18**
-> Topa' ni hong tun ding a ngaklah note a dingin bangzah takin lauhuai ding ahi hiam? Note a dingin tua ni a hoihna hong om ding ahi hiam? Tua ni pen lungzin' ni hi a, lungtaii ni hi lo hi.
+**Genesis 47:4**
+> Amaute in Faro kiangah, “Hih gamah tawlkhat a om dingin kong pai uh hi. Bang hang hiam cih leh Kanaan gamah kialpi nasia lua ahih manin tua lai-ah na nasemte' tuuhonte a' ding lonona om nawn lo hi. Tu-in kong thum uh hi. Goshen gamah na nasemte hong tengsak in,” a ci uh hi.
 > *Hiam*
 > Q
-> KJV: *Woe unto you that desire the day of the LORD ! to what end is it for you? the day of the LORD is darkness, and not light.*
+> KJV: *They said moreover unto Pharaoh, For to sojourn in the land are we come; for thy servants have no pasture for their flocks; for the famine is sore in the land of Canaan: now therefore, we pray thee, let thy servants dwell in the land of Goshen.*
 
 #### ang (FUT)
 

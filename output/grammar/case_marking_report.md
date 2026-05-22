@@ -153,11 +153,11 @@ Marks accompaniment ("with, together with"). Can extend to instrumental uses.
 > REFL-COM
 > 'Surely there is a vein for the silver, And a place for gold where they fine it .'
 
-**Hebrews 4:5**
-> Hih thu mah na kigenkik a, “Ka tawlngakna munah hong pai-in kei tawh hong tawlnga ngei lo ding uh hi,” na ci kik hi.
+**Isaiah 36:12**
+> Ahih hangin a ulianpa in, “Hih thute na topa uh le note' tung bekah gen ding a, amau' ek mah ne-in amau' zun mah dawnin note tawh a siakhawm ding kulh tunga a tu mite tungah a gen lo dingin ka topa in hong sawl sa na hi uh hiam?” a ci hi.
 > *tawh*
 > COM
-> 'And in this place again, If they shall enter into my rest.'
+> 'But Rabshakeh said, Hath my master sent me to thy master and to thee to speak these words? hath he not sent me to the men that sit upon the wall, that they may eat their own dung, and drink their own piss with you?'
 
 ---
 
@@ -179,17 +179,17 @@ Marks source or origin ("from"). Used for spatial, temporal, and abstract origin
 > midst-ABL
 > 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them , the same shall be called great in the kingdom of heaven.'
 
-**Isaiah 48:21**
-> Amah in sehnel gam kantanin amaute a paipih ciangin a dang uh taak lo hi. Suangpi panin amau a dingin amah in tui a luangsak hi. Amah in suangpi khangkhamsak a, tui a phulkhia hi.
+**Nehemiah 7:46**
+> Biakinn nasemte sung panin a hong ciahkikte: Ziha suante, Hasufa suante, Tabbaoth suante,
 > *pan-in*
 > ABL-ERG
-> 'And they thirsted not when he led them through the deserts: he caused the waters to flow out of the rock for them: he clave the rock also, and the waters gushed out.'
+> 'The Nethinims: the children of Ziha, the children of Hashupha, the children of Tabbaoth,'
 
-**Hebrews 11:7**
-> Noah in zong a upna hang mah tawh mailam a thupiang ding a muh theih lohpi mahin Pasian' thugenna na mang a, teembaw khat bawlin a innkuanpihte tawh na suakta hi. Hih bangin a gamtatna tawh leitung midangte a mawh ahihna kilangsak a, a upna hangin mihoih hihna thu Pasian kiang panin a ngah hi.
+**Acts 13:30**
+> Ahi zongin Pasian in sihna panin amah hingkiksak a,
 > *pan-in*
 > ABL-ERG
-> 'By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark to the saving of his house; by the which he condemned the world, and became heir of the righteousness which is by faith.'
+> 'But God raised him from the dead:'
 
 ---
 

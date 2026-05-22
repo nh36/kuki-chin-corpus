@@ -4,8 +4,8 @@ Shared helpers for Tedim grammar integration.
 
 This module loads the Tedim grammar source map, renders related-material
 sections, and pulls backend examples conservatively enough for grammar-drafting
-workflows. When no safe backend example can be identified, callers should
-surface that explicitly instead of guessing.
+workflows. Example selection distinguishes technical safety from drafting
+quality so grammar outputs can stay stricter than the audit dashboard.
 """
 
 from __future__ import annotations
@@ -36,6 +36,8 @@ CASE e.quality
     ELSE 9
 END
 """
+
+DRAFT_READY_QUALITIES = {'exemplar', 'usable'}
 
 DEFAULT_EXAMPLE_FILTERS = {
     'pronominal-prefixes': {
@@ -69,7 +71,7 @@ DEFAULT_EXAMPLE_FILTERS = {
         'example_glosses': ['ABIL', 'ABIL.II'],
     },
     'directional-suffixes': {
-        'example_glosses': ['UP', 'DOWN', 'HORIZ', 'OUT', 'AWAY', 'IN'],
+        'example_search_terms': ['khia', 'khiat', 'lut', 'toh', 'suk', 'phei'],
     },
     'inverse-hong': {
         'example_glosses': ['3→1'],
@@ -111,6 +113,7 @@ STRICT_SELECTION_RULES = {
         {
             'name': '3SG agreement prefix a-',
             'status': 'safe',
+            'drafting_quality': 'usable',
             'max_examples': 1,
             'morpheme_ids': ['a.3SG.pronominal_prefix'],
             'sense_ids': ['a.3SG.pronominal_prefix'],
@@ -121,6 +124,7 @@ STRICT_SELECTION_RULES = {
         {
             'name': '3SG possessive a',
             'status': 'safe',
+            'drafting_quality': 'usable',
             'max_examples': 1,
             'morpheme_ids': ['a.3SG.POSS.function_word'],
             'target_forms': ['a'],
@@ -130,20 +134,20 @@ STRICT_SELECTION_RULES = {
     ],
     'ergative-marking': [
         {
-            'name': 'Exact ergative -in token',
-            'status': 'safe',
+            'name': 'Reject current backend -in rows',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
             'max_examples': 2,
             'morpheme_ids': ['in.ERG.case_marker'],
-            'sense_ids': ['in.ERG.case_marker'],
             'target_forms': ['in'],
-            'segmented_exact': ['in'],
-            'gloss_exact': ['ERG'],
+            'reason_note': 'Current backend-linked -in examples attach ERG to lexical stems or clause-final material, so they are not reliable drafting examples for ergative case marking.',
         },
     ],
     'comitative-marking': [
         {
             'name': 'Plain comitative tawh',
             'status': 'safe',
+            'drafting_quality': 'usable',
             'max_examples': 2,
             'morpheme_ids': ['tawh.COM.case_marker'],
             'target_forms': ['tawh'],
@@ -155,32 +159,242 @@ STRICT_SELECTION_RULES = {
         {
             'name': 'Sentence-final declarative hi',
             'status': 'safe',
+            'drafting_quality': 'usable',
             'max_examples': 2,
             'morpheme_ids': ['hi.DECL.sentence_final'],
             'target_forms': ['hi'],
             'segmented_exact': ['hi'],
             'gloss_exact': ['DECL'],
         },
+        {
+            'name': 'Reject current hi rows with mismatched glossing',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 2,
+            'morpheme_ids': ['hi.DECL.sentence_final'],
+            'target_forms': ['hi'],
+            'reason_note': 'Current linked hi examples are still glossed as DECL.POSS or otherwise fail the sentence-final declarative filter.',
+        },
+    ],
+    'directional-suffixes': [
+        {
+            'name': 'Draft-ready directional examples',
+            'status': 'safe',
+            'drafting_quality': 'usable',
+            'max_examples': 2,
+            'segmented_query_terms': ['khen-khia', 'khia-suk', 'lawn-khia', 'phul-khia'],
+            'segmented_exact': ['khen-khia', 'khia-suk', 'lawn-khia', 'phul-khia'],
+            'gloss_tokens': ['out', 'exit', 'down'],
+        },
+        {
+            'name': 'Technically directional but poor drafting examples',
+            'status': 'safe',
+            'drafting_quality': 'safe_but_poor',
+            'max_examples': 4,
+            'segmented_query_terms': ['-khia', '-khiat', '-lut', '-toh', '-suk', '-phei'],
+            'segmented_contains': ['khia', 'khiat', 'lut', 'toh', 'suk', 'phei'],
+            'gloss_tokens': ['out', 'exit', 'away', 'down', 'up', 'horiz', 'in'],
+            'exclude_segmented_exact': ['khen-khia', 'khia-suk', 'lawn-khia', 'phul-khia'],
+            'exclude_segmented_contains': ['tuni'],
+            'exclude_gloss_tokens': ['nmlz'],
+            'reason_note': 'The example contains directional morphology, but the lexical content is too opaque or too context-dependent to be a good grammar exemplar.',
+        },
+        {
+            'name': 'Reject false directional Tuni-in examples',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 2,
+            'segmented_query_terms': ['tuni-in'],
+            'segmented_exact': ['Tuni-in'],
+            'reason_note': 'Tuni-in is a lexical time expression, not a directional suffix example.',
+        },
+        {
+            'name': 'Directional fallback text search',
+            'status': 'fallback only',
+            'drafting_quality': 'review_only',
+            'max_examples': 2,
+            'text_search_terms': ['khia', 'khiat', 'lut', 'toh', 'suk', 'phei'],
+            'reason_note': 'No additional draft-ready linked directional example was found, so these text-search hits remain review-only.',
+        },
     ],
     'causative-sak': [
         {
             'name': 'Causative -sak with explicit CAUS gloss',
             'status': 'safe',
+            'drafting_quality': 'usable',
             'max_examples': 2,
             'morpheme_ids': ['sak.CAUS.tam_suffix'],
             'sense_ids': ['sak.CAUS.tam_suffix'],
             'target_forms': ['sak'],
             'segmented_contains': ['sak'],
-            'gloss_tokens': ['CAUS'],
+            'gloss_tokens': ['caus'],
         },
     ],
     'benefactive-sak': [
         {
             'name': 'Benefactive -sak fallback text search',
             'status': 'fallback only',
+            'drafting_quality': 'review_only',
             'max_examples': 2,
             'text_search_terms': ['muhsak', 'muh sak', 'cihsak', 'cih sak', 'theihsak', 'theih sak', 'tuahsak', 'tuah sak'],
             'reason_note': 'No distinct benefactive morpheme ID or sense ID is currently populated in the backend, so only text-search candidates are available.',
+        },
+    ],
+    'ability-thei-theih': [
+        {
+            'name': 'Transparent abilitative examples',
+            'status': 'safe',
+            'drafting_quality': 'usable',
+            'max_examples': 2,
+            'morpheme_ids': ['thei.ABIL.auxiliary', 'theih.ABIL.II.auxiliary'],
+            'segmented_query_terms': ['mu-thei', 'pau-thei'],
+            'segmented_exact': ['mu-thei-in', 'pau-thei-in'],
+            'gloss_tokens': ['abil'],
+        },
+        {
+            'name': 'Technically abilitative but poor drafting examples',
+            'status': 'safe',
+            'drafting_quality': 'safe_but_poor',
+            'max_examples': 4,
+            'morpheme_ids': ['thei.ABIL.auxiliary', 'theih.ABIL.II.auxiliary'],
+            'segmented_query_terms': ['thei', 'theih'],
+            'segmented_contains': ['thei', 'theih'],
+            'gloss_tokens': ['abil'],
+            'exclude_segmented_exact': ['mu-thei-in', 'pau-thei-in'],
+            'reason_note': 'The example is technically abilitative, but extra derivational or discourse material makes it a poor grammar exemplar.',
+        },
+        {
+            'name': 'Ability fallback text search',
+            'status': 'fallback only',
+            'drafting_quality': 'review_only',
+            'max_examples': 2,
+            'text_search_terms': ['thei', 'theih'],
+            'reason_note': 'No additional transparent linked abilitative example was found, so these candidates remain review-only.',
+        },
+    ],
+    'nominalization-na': [
+        {
+            'name': 'Deverbal -na nominalization',
+            'status': 'safe',
+            'drafting_quality': 'usable',
+            'max_examples': 2,
+            'morpheme_ids': ['na.NMLZ.nominalizer'],
+            'sense_ids': ['na.NMLZ.nominalizer'],
+            'source_ids': ['01002009'],
+            'segmented_exact': ['nuntak-na'],
+            'gloss_exact': ['live-NMLZ'],
+        },
+        {
+            'name': 'Reject opaque or lexicalized -na examples',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 4,
+            'morpheme_ids': ['na.NMLZ.nominalizer'],
+            'segmented_exact': ['pa-na', 'ni-suah-na'],
+            'reason_note': 'The backend links these rows to NMLZ, but they are too lexicalized or semantically opaque to use as drafting examples for productive nominalization.',
+        },
+    ],
+    'agentive-pa-mi': [
+        {
+            'name': 'Clear agent nominalization in -pa',
+            'status': 'safe',
+            'drafting_quality': 'exemplar',
+            'max_examples': 1,
+            'source_ids': ['42018010'],
+            'segmented_exact': ['siah-dong-pa'],
+            'gloss_exact': ['tax-collect-AGT'],
+        },
+        {
+            'name': 'Other agentive -pa/-mi candidates',
+            'status': 'safe',
+            'drafting_quality': 'usable',
+            'max_examples': 2,
+            'segmented_query_terms': ['-pa', '-mi'],
+            'segmented_contains': ['pa', 'mi'],
+            'gloss_tokens': ['agt', 'nmlz.ag'],
+            'exclude_segmented_exact': ['siah-dong-pa'],
+        },
+        {
+            'name': 'Reject lexical -pa/-mi endings',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 4,
+            'segmented_query_terms': ['-pa', '-mi'],
+            'segmented_contains': ['pa', 'mi'],
+            'reason_note': 'The example contains -pa/-mi on the surface, but it is lexical, gender-marking, or otherwise unrelated to productive agent nominalization.',
+        },
+    ],
+    'interrogative-hiam': [
+        {
+            'name': 'Ordinary interrogative hiam',
+            'status': 'safe',
+            'drafting_quality': 'usable',
+            'max_examples': 2,
+            'morpheme_ids': ['hiam.Q.sentence_final'],
+            'target_forms': ['hiam'],
+            'segmented_exact': ['Hiam'],
+            'gloss_exact': ['Q'],
+            'exclude_text_contains': ['Bang hang hiam ci', 'Bang hang hiam cih'],
+        },
+        {
+            'name': 'Reject formulaic Bang hang hiam expressions',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 2,
+            'morpheme_ids': ['hiam.Q.sentence_final'],
+            'target_forms': ['hiam'],
+            'segmented_exact': ['Hiam'],
+            'gloss_exact': ['Q'],
+            'text_contains': ['Bang hang hiam ci', 'Bang hang hiam cih'],
+            'reason_note': 'This is the formulaic reason expression “Bang hang hiam cih leh/ci leh”, not an ordinary question-particle exemplar.',
+        },
+        {
+            'name': 'Reject formulaic Bang hang hiam source-text hits',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 2,
+            'text_search_terms': ['Bang hang hiam ci', 'Bang hang hiam cih'],
+            'reason_note': 'These verse-level hits contain the formulaic reason expression “Bang hang hiam cih leh/ci leh”, so they remain audit-only rejected candidates.',
+        },
+    ],
+    'declarative-hi': [
+        {
+            'name': 'Sentence-final declarative hi',
+            'status': 'safe',
+            'drafting_quality': 'usable',
+            'max_examples': 2,
+            'morpheme_ids': ['hi.DECL.sentence_final'],
+            'target_forms': ['hi'],
+            'segmented_exact': ['hi'],
+            'gloss_exact': ['DECL'],
+        },
+        {
+            'name': 'Reject current hi rows with mismatched glossing',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 2,
+            'morpheme_ids': ['hi.DECL.sentence_final'],
+            'target_forms': ['hi'],
+            'reason_note': 'Current linked hi examples are still glossed as DECL.POSS or otherwise fail the sentence-final declarative filter.',
+        },
+    ],
+    'topic-marker-pen': [
+        {
+            'name': 'Reject current linked pen rows',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 3,
+            'morpheme_ids': ['pen.TOP.particle'],
+            'target_forms': ['pen'],
+            'reason_note': 'The backend links these rows to pen.TOP, but their segmented/glossed tiers still read TOP.POSS, so they are not safe topic-marker exemplars yet.',
+        },
+        {
+            'name': 'Topic marker pen fallback text search',
+            'status': 'fallback only',
+            'drafting_quality': 'review_only',
+            'max_examples': 2,
+            'text_search_terms': [' pen '],
+            'reason_note': 'Fallback text-search hits show likely topic-marking contexts, but no clean backend-linked topic-marker example is available yet.',
         },
     ],
 }
@@ -298,6 +512,11 @@ def _normalized_tokens(value: str | None) -> set[str]:
     return {_normalize_form(token) for token in _split_morph_tokens(value)}
 
 
+def _normalized_gloss_tokens(value: str | None) -> set[str]:
+    """Return lowercase gloss tokens for robust matching."""
+    return {token.lower() for token in _split_morph_tokens(value)}
+
+
 def _normalize_target_forms(values: Iterable[str]) -> set[str]:
     """Normalize a collection of target forms."""
     return {_normalize_form(value) for value in values if value}
@@ -318,6 +537,7 @@ def _selection_rules_for_entry(entry: Dict) -> List[Dict[str, Any]]:
     linked_rule: Dict[str, Any] = {
         'name': 'Backend-linked example match',
         'status': 'safe',
+        'drafting_quality': 'usable',
         'max_examples': 2,
         'morpheme_ids': filters.get('example_morpheme_ids', []),
         'gm_forms': filters.get('example_forms', []),
@@ -325,7 +545,7 @@ def _selection_rules_for_entry(entry: Dict) -> List[Dict[str, Any]]:
         'gm_glosses': filters.get('example_glosses', []),
         'target_forms': filters.get('example_forms', []),
         'segmented_contains': filters.get('example_forms', []),
-        'gloss_tokens': filters.get('example_glosses', []),
+        'gloss_tokens': [value.lower() for value in filters.get('example_glosses', [])],
     }
     if any(linked_rule.get(key) for key in ('morpheme_ids', 'gm_forms', 'gm_categories', 'gm_glosses')):
         rules.append(linked_rule)
@@ -336,6 +556,7 @@ def _selection_rules_for_entry(entry: Dict) -> List[Dict[str, Any]]:
             {
                 'name': 'Fallback text search',
                 'status': 'fallback only',
+                'drafting_quality': 'review_only',
                 'max_examples': 2,
                 'text_search_terms': fallback_terms,
                 'reason_note': 'No fully safe backend-linked example matched, so only text-search candidates are available for review.',
@@ -343,6 +564,37 @@ def _selection_rules_for_entry(entry: Dict) -> List[Dict[str, Any]]:
         )
 
     return rules
+
+
+def _append_or_group(
+    conditions: List[str],
+    params: List[Any],
+    column_sql: str,
+    values: Iterable[str],
+    transform=lambda value: value,
+) -> None:
+    """Append an OR group of scalar comparisons to SQL conditions."""
+    prepared = [transform(value) for value in values if value]
+    if not prepared:
+        return
+    placeholders = ', '.join('?' for _ in prepared)
+    conditions.append(f'{column_sql} IN ({placeholders})')
+    params.extend(prepared)
+
+
+def _append_like_group(
+    conditions: List[str],
+    params: List[Any],
+    column_sql: str,
+    values: Iterable[str],
+) -> None:
+    """Append an OR group of LIKE comparisons to SQL conditions."""
+    prepared = [value.lower() for value in values if value]
+    if not prepared:
+        return
+    like_parts = [f'{column_sql} LIKE ?' for _ in prepared]
+    conditions.append(f"({' OR '.join(like_parts)})")
+    params.extend([f'%{value}%' for value in prepared])
 
 
 def _linked_rule_query(rule: Dict[str, Any]) -> tuple[str, List[Any]] | None:
@@ -366,17 +618,10 @@ def _linked_rule_query(rule: Dict[str, Any]) -> tuple[str, List[Any]] | None:
     if id_parts:
         conditions.append(f"({' OR '.join(id_parts)})")
 
-    gm_forms = rule.get('gm_forms', [])
-    if gm_forms:
-        placeholders = ', '.join('?' for _ in gm_forms)
-        conditions.append(f'gm.form IN ({placeholders})')
-        params.extend(gm_forms)
-
-    gm_categories = rule.get('gm_categories', [])
-    if gm_categories:
-        placeholders = ', '.join('?' for _ in gm_categories)
-        conditions.append(f'gm.category IN ({placeholders})')
-        params.extend(gm_categories)
+    _append_or_group(conditions, params, 'e.source_id', rule.get('source_ids', []))
+    _append_or_group(conditions, params, 'e.target_form', rule.get('target_forms', []))
+    _append_or_group(conditions, params, 'gm.form', rule.get('gm_forms', []))
+    _append_or_group(conditions, params, 'gm.category', rule.get('gm_categories', []))
 
     gm_glosses = rule.get('gm_glosses', [])
     if gm_glosses:
@@ -384,6 +629,12 @@ def _linked_rule_query(rule: Dict[str, Any]) -> tuple[str, List[Any]] | None:
         conditions.append(f'(gm.gloss IN ({placeholders}) OR gm.function IN ({placeholders}))')
         params.extend(gm_glosses)
         params.extend(gm_glosses)
+
+    _append_or_group(conditions, params, 'e.segmented', rule.get('segmented_exact', []))
+    _append_like_group(conditions, params, 'LOWER(COALESCE(e.segmented, \'\'))', rule.get('segmented_query_terms', []))
+    _append_or_group(conditions, params, 'e.glossed', rule.get('gloss_exact', []))
+    _append_like_group(conditions, params, 'LOWER(COALESCE(e.glossed, \'\'))', rule.get('gloss_query_terms', []))
+    _append_like_group(conditions, params, 'LOWER(COALESCE(e.tedim_text, \'\'))', rule.get('text_query_terms', []))
 
     if not conditions:
         return None
@@ -413,13 +664,25 @@ def _linked_rule_query(rule: Dict[str, Any]) -> tuple[str, List[Any]] | None:
     return query, params
 
 
+def _text_matches_any(text: str | None, snippets: Iterable[str]) -> bool:
+    """Return whether the given text contains any snippet, case-insensitively."""
+    haystack = (text or '').lower()
+    return any(snippet.lower() in haystack for snippet in snippets if snippet)
+
+
 def _row_matches_rule(row: sqlite3.Row, rule: Dict[str, Any]) -> List[str]:
     """Return matched fields if a linked example row satisfies a rule."""
     matched_fields: List[str] = []
     segmented_tokens = _normalized_tokens(row['segmented'])
-    gloss_tokens = set(_split_morph_tokens(row['glossed']))
+    gloss_tokens = _normalized_gloss_tokens(row['glossed'])
     normalized_segmented = _normalize_form(row['segmented'])
     normalized_target = _normalize_form(row['target_form'])
+
+    source_ids = rule.get('source_ids', [])
+    if source_ids:
+        if row['source_id'] not in source_ids:
+            return []
+        matched_fields.append('source_id')
 
     morpheme_ids = rule.get('morpheme_ids', [])
     if morpheme_ids:
@@ -445,6 +708,10 @@ def _row_matches_rule(row: sqlite3.Row, rule: Dict[str, Any]) -> List[str]:
             return []
         matched_fields.append('segmentation')
 
+    exclude_segmented_exact = rule.get('exclude_segmented_exact', [])
+    if exclude_segmented_exact and row['segmented'] in exclude_segmented_exact:
+        return []
+
     segmented_normalized = _normalize_target_forms(rule.get('segmented_normalized', []))
     if segmented_normalized:
         if normalized_segmented not in segmented_normalized:
@@ -463,7 +730,7 @@ def _row_matches_rule(row: sqlite3.Row, rule: Dict[str, Any]) -> List[str]:
             return []
         matched_fields.append('gloss')
 
-    gloss_tokens_required = rule.get('gloss_tokens', [])
+    gloss_tokens_required = {token.lower() for token in rule.get('gloss_tokens', []) if token}
     if gloss_tokens_required:
         if not any(token in gloss_tokens for token in gloss_tokens_required):
             return []
@@ -473,11 +740,36 @@ def _row_matches_rule(row: sqlite3.Row, rule: Dict[str, Any]) -> List[str]:
     if excluded_segmented and any(term in segmented_tokens for term in excluded_segmented):
         return []
 
-    excluded_gloss_tokens = rule.get('exclude_gloss_tokens', [])
+    excluded_gloss_tokens = {token.lower() for token in rule.get('exclude_gloss_tokens', []) if token}
     if excluded_gloss_tokens and any(token in gloss_tokens for token in excluded_gloss_tokens):
         return []
 
+    if rule.get('text_contains'):
+        if not _text_matches_any(row['tedim_text'], rule['text_contains']):
+            return []
+        matched_fields.append('text')
+
+    if rule.get('exclude_text_contains') and _text_matches_any(row['tedim_text'], rule['exclude_text_contains']):
+        return []
+
     return list(dict.fromkeys(matched_fields))
+
+
+def _default_drafting_quality(rule: Dict[str, Any], row: sqlite3.Row | None) -> str:
+    """Compute the default drafting quality for a rule/candidate pair."""
+    if rule.get('drafting_quality'):
+        return rule['drafting_quality']
+
+    status = rule.get('status', 'safe')
+    if status == 'fallback only':
+        return 'review_only'
+    if status == 'rejected':
+        return 'rejected'
+
+    quality = (row['quality'] if row is not None and row['quality'] else '').lower()
+    if quality in {'canonical', 'excellent'}:
+        return 'exemplar'
+    return 'usable'
 
 
 def _fetch_linked_examples_for_rule(conn: sqlite3.Connection, rule: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -487,7 +779,7 @@ def _fetch_linked_examples_for_rule(conn: sqlite3.Connection, rule: Dict[str, An
         return []
 
     query, params = query_data
-    fetch_limit = max(rule.get('max_examples', 2) * 8, 16)
+    fetch_limit = max(rule.get('max_examples', 2) * 10, 20)
     rows = conn.execute(query, params + [fetch_limit]).fetchall()
     examples: List[Dict[str, Any]] = []
 
@@ -497,6 +789,7 @@ def _fetch_linked_examples_for_rule(conn: sqlite3.Connection, rule: Dict[str, An
             continue
         candidate = dict(row)
         candidate['selection_status'] = rule.get('status', 'safe')
+        candidate['drafting_quality'] = _default_drafting_quality(rule, row)
         candidate['selection_reason'] = rule['name']
         candidate['selection_note'] = rule.get('reason_note', '')
         candidate['matched_fields'] = matched_fields
@@ -515,8 +808,8 @@ def _fallback_source_examples(conn: sqlite3.Connection, rule: Dict[str, Any]) ->
     conditions = []
     params: List[str] = []
     for term in terms:
-        conditions.append('(text LIKE ? OR text_normalized LIKE ?)')
-        params.extend([f'%{term}%', f'%{term.lower()}%'])
+        conditions.append('(LOWER(text) LIKE ? OR LOWER(text_normalized) LIKE ?)')
+        params.extend([f'%{term.lower()}%', f'%{term.lower()}%'])
 
     query = f'''
         SELECT source_id, text, kjv_text
@@ -544,6 +837,7 @@ def _fallback_source_examples(conn: sqlite3.Connection, rule: Dict[str, Any]) ->
                 'glossed': glossed,
                 'kjv_text': row['kjv_text'],
                 'selection_status': rule.get('status', 'fallback only'),
+                'drafting_quality': _default_drafting_quality(rule, None),
                 'selection_reason': rule['name'],
                 'selection_note': rule.get('reason_note', ''),
                 'matched_fields': ['fallback text search'],
@@ -554,43 +848,63 @@ def _fallback_source_examples(conn: sqlite3.Connection, rule: Dict[str, Any]) ->
     return examples
 
 
+def _is_draft_ready(candidate: Dict[str, Any]) -> bool:
+    """Return whether a candidate can be used in grammar-drafting output."""
+    return candidate['selection_status'] == 'safe' and candidate['drafting_quality'] in DRAFT_READY_QUALITIES
+
+
+def _annotate_grammar_usage(candidates: List[Dict[str, Any]], limit: int) -> List[Dict[str, Any]]:
+    """Mark which candidates are actually used in grammar-drafting outputs."""
+    used = 0
+    for candidate in candidates:
+        candidate['used_in_grammar'] = False
+        if used >= limit:
+            continue
+        if _is_draft_ready(candidate):
+            candidate['used_in_grammar'] = True
+            used += 1
+    return candidates
+
+
 def select_examples_for_entry(
     conn: sqlite3.Connection,
     entry: Dict,
     limit: int = 3,
     include_non_safe: bool = False,
 ) -> List[Dict[str, Any]]:
-    """Select examples for a topic entry, optionally including review-only candidates."""
-    selected: List[Dict[str, Any]] = []
+    """Select example candidates for one source-map entry."""
+    candidates: List[Dict[str, Any]] = []
     seen_source_ids: set[str] = set()
 
     for rule in _selection_rules_for_entry(entry):
         per_rule_count = 0
-        candidates = (
-            _fetch_linked_examples_for_rule(conn, rule)
-            if not rule.get('text_search_terms')
-            else _fallback_source_examples(conn, rule)
+        rule_candidates = (
+            _fallback_source_examples(conn, rule)
+            if rule.get('text_search_terms')
+            else _fetch_linked_examples_for_rule(conn, rule)
         )
-        for candidate in candidates:
+        for candidate in rule_candidates:
             if candidate['source_id'] in seen_source_ids:
                 continue
-            if not include_non_safe and candidate['selection_status'] != 'safe':
-                continue
-
             seen_source_ids.add(candidate['source_id'])
-            selected.append(candidate)
+            candidates.append(candidate)
             per_rule_count += 1
-
-            if len(selected) >= limit:
-                return selected
             if per_rule_count >= rule.get('max_examples', limit):
                 break
 
-    return selected
+    candidates = _annotate_grammar_usage(candidates, limit)
+    if include_non_safe:
+        return candidates
+    return [candidate for candidate in candidates if candidate['used_in_grammar']]
+
+
+def audit_examples_for_entry(conn: sqlite3.Connection, entry: Dict, limit: int = 3) -> List[Dict[str, Any]]:
+    """Return all audit-visible candidates for one source-map entry."""
+    return select_examples_for_entry(conn, entry, limit=limit, include_non_safe=True)
 
 
 def fetch_examples_for_entry(conn: sqlite3.Connection, entry: Dict, limit: int = 3) -> List[Dict]:
-    """Fetch only drafting-safe examples for a source-map entry."""
+    """Fetch only draft-ready examples for a source-map entry."""
     return select_examples_for_entry(conn, entry, limit=limit, include_non_safe=False)
 
 
