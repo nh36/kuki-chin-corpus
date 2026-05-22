@@ -1,5 +1,7 @@
 # Tedim Chin Sample Dictionary Entries
 
+> **Sample/draft output only.** This file is working material for dictionary drafting, not final dictionary text.
+
 Generated from the corpus backend. Each entry includes senses,
 wordforms, frequencies, and ranked example sentences.
 
@@ -7,48 +9,17 @@ wordforms, frequencies, and ranked example sentences.
 
 ## Statistics
 
-- **Entries shown:** 50
+- **Entries considered:** 2146
+- **Entries emitted:** 50
 - **POS filter:** N
+- **Include needs_review entries:** no
 
----
+## Generation Audit
 
-## uh
-
-**N** | freq: 22,122 | forms: 3
-
-'?'
-
-### Senses
-
-**1.** ? ★
-   *freq: 22,117*
-
-**2.** REFL
-   *freq: 5*
-
-### Forms
-
-uh (79), kiuhkeuh (5), uh!” (2)
-
-### Examples
-
-**Genesis 3:4** [transparent]
-> Ahih hangin gulpi in numei kiangah, “Na si kei ding uh hi.
-> *uh*
-> 2/3PL
-> 'And the serpent said unto the woman, Ye shall not surely die:'
-
-**Genesis 2:25** [shortest]
-> Mipa le a zi a guaktangin om uh a, maizum lo uh hi.
-> *uh*
-> 2/3PL
-> 'And they were both naked, the man and his wife, and were not ashamed.'
-
-**Genesis 1:15** [additional]
-> leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi. Tua mah bangin a piang pah hi.
-> *uh*
-> 2/3PL
-> 'and let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.'
+- **Skipped for empty primary_gloss:** 1
+- **Skipped for `?` primary_gloss:** 5
+- **Skipped for needs_review:** 153
+- **Skipped for entry_type mismatch:** 145
 
 ---
 
@@ -134,58 +105,6 @@ thupha (491), thugen (380), Thu (192), thukhamte (125), thupi (112), thungetna (
 > *thu-pha*
 > word-good
 > 'And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.'
-
----
-
-## bang
-
-**N** [MIXED] | freq: 9,269 | forms: 37
-
-'like'
-
-### Senses
-
-**1.** like ★
-   *freq: 8,350*
-
-**2.** REFL
-   *freq: 635*
-
-**3.** what
-   *freq: 279*
-
-**4.** door
-   *freq: 3*
-
-**5.** which
-   *freq: 2*
-
-### Forms
-
-bangin (4,077), Bang (1,686), kibang (626), “Bang (204), bangmahin (115), bangun (84), banga (79), bangzah (64), bangte (32), bangzahin (28)
-*... and 38 more forms*
-
-### Examples
-
-**Genesis 3:20** [transparent]
-> Mipa in a zi' min pen Eve, ci hi. Bang hang hiam cih leh amah pen mihing khempeuh' nu ahi hi.
-> *Bang*
-> like
-> 'And Adam called his wife's name Eve; because she was the mother of all living.'
-
-**Genesis 4:6** [shortest]
-> Topa in Kain tungah, “Bang hangin nang heh a, bang hangin na mai sia ahi hiam?
-> *Bang*
-> like
-> 'And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?'
-
-**Genesis 1:7** [additional]
-> Pasian in van kuumpi bawl a, van kuumpi tunga om tuite le van kuumpi nuai-a om tuite a khen hi. Tua mah bangin a piang pah hi.
-> *bang-in*
-> like-ERG
-> 'And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.'
-
-⚠️ *Needs review*
 
 ---
 
@@ -326,76 +245,6 @@ panun (102), pana (74), Pa (39), paai (25), pahtak (19), palikte (16), “Pa (14
 
 ---
 
-## khua
-
-**N** | freq: 3,248 | forms: 61
-
-'town'
-
-### Senses
-
-**1.** town ★
-   *freq: 1,944*
-
-**2.** village
-   *freq: 1,182*
-
-**3.** townspeople
-   *freq: 75*
-
-**4.** sky
-   *freq: 16*
-
-**5.** spirit
-   *freq: 12*
-
-**6.** cloud
-   *freq: 10*
-
-**7.** time
-   *freq: 2*
-
-**8.** place
-   *freq: 2*
-
-**9.** weather
-   *freq: 2*
-
-**10.** mind
-   *freq: 2*
-
-**11.** townI
-   *freq: 1*
-
-### Forms
-
-khua-ah (320), khuami (214), khua-a (119), khuasunga (34), khuakhal (23), khuamluzepna (19), khuapite-ah (16), khuamite (15), khuate-ah (13), “Khuapi (12)
-*... and 63 more forms*
-
-### Examples
-
-**Genesis 15:12** [transparent]
-> Ni a tum ciangin Abram a ihmut nak suah mahmah a, khua mial bekbak a, lau mahmah hi.
-> *khua*
-> town
-> 'And when the sun was going down, a deep sleep fell upon Abram; and, lo, an horror of great darkness fell upon him.'
-
-**Genesis 11:5** [shortest]
-> Tua ciangin mihingte' lamsa khuapi le tausangpi a en dingin Topa hong paisuk hi.
-> *khua-pi*
-> village-big
-> 'And the LORD came down to see the city and the tower, which the children of men builded.'
-
-**Genesis 1:2** [additional]
-> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek a, tua tui tungah Pasian' Kha in na a sem hi.
-> *khua*
-> town
-> 'And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.'
-
-⚠️ *Needs review*
-
----
-
 ## sung
 
 **N** | freq: 3,030 | forms: 20
@@ -529,126 +378,6 @@ biakna (1,314), biakinn (800), bia (219), biakbuk (135), biakpiakna (126), biakp
 
 ---
 
-## ta
-
-**N** | freq: 2,860 | forms: 30
-
-''
-
-### Senses
-
-**1.** PFV ★
-   *freq: 2,842*
-
-**2.** REFL
-   *freq: 12*
-
-**3.** PFV
-   *freq: 3*
-
-**4.** PFV.POSS
-   *freq: 3*
-
-### Forms
-
-tate (23), tacilte (14), kitasam (12), ta-in (8), tamasak (5), tasel (4), tahum (4), ta!” (3), tasak (3), ta (3)
-*... and 21 more forms*
-
-⚠️ *Needs review*
-
----
-
-## lung
-
-**N** | freq: 2,471 | forms: 116
-
-'heart'
-
-### Senses
-
-**1.** heart ★
-   *freq: 1,262*
-
-**2.** stone
-   *freq: 986*
-
-**3.** gladly
-   *freq: 93*
-
-**4.** discourage
-   *freq: 36*
-
-**5.** desire
-   *freq: 29*
-
-**6.** feel
-   *freq: 20*
-
-**7.** confidence
-   *freq: 19*
-
-**8.** mind
-   *freq: 9*
-
-**9.** REFL
-   *freq: 5*
-
-**10.** peace
-   *freq: 2*
-
-**11.** compassion
-   *freq: 2*
-
-**12.** comfort
-   *freq: 2*
-
-**13.** meek
-   *freq: 1*
-
-**14.** brightness
-   *freq: 1*
-
-**15.** joy
-   *freq: 1*
-
-**16.** wrath
-   *freq: 1*
-
-**17.** tempt
-   *freq: 1*
-
-**18.** contentment
-   *freq: 1*
-
-### Forms
-
-lungdam (320), lungkim (130), lungdamin (93), lungkham (82), lungmuang (51), lungdamsak (50), lunghimawh (44), lungkia (36), lungnuam (34), lungtang (29)
-*... and 122 more forms*
-
-### Examples
-
-**Genesis 6:6** [transparent]
-> Leitungah mihing a bawl pen Topa khial kisa a, tua thu in ama lungsim dahsak hi.
-> *lung-sim*
-> stone-mind
-> 'And it repented the LORD that he had made man on the earth, and it grieved him at his heart.'
-
-**Genesis 28:21** [shortest]
-> lungnuam takin ka pa' inn-ah ka ciahkik leh, Topa pen keima Pasian hi ding a,
-> *lung-nuam*
-> heart-pleased
-> 'so that I come again to my father's house in peace; then shall the LORD be my God:'
-
-**Genesis 6:5** [additional]
-> Leitungah mihing a gitlohna a liatna le mihing lungsim ngaihsutna peuhmah a sia ahih ngitngetna thu Topa in mu hi.
-> *lung-sim*
-> stone-mind
-> 'And GOD saw that the wickedness of man was great in the earth, and that every imagination of the thoughts of his heart was only evil continually.'
-
-⚠️ *Needs review*
-
----
-
 ## ni
 
 **N** | freq: 2,470 | forms: 37
@@ -760,49 +489,6 @@ Kong (32), “Kong (25), kong-a (2)
 > *kong*
 > 1SG→3
 > 'And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.'
-
----
-
-## tung
-
-**N** | freq: 1,949 | forms: 37
-
-'on'
-
-### Senses
-
-**1.** on ★
-   *freq: 1,946*
-
-**2.** REFL
-   *freq: 3*
-
-### Forms
-
-tungah (6,072), tung (1,491), tunga (243), tungtawnin (102), tungin (84), tungta (50), tungnung (27), tungsiah (26), tungzo (16), tungkik (15)
-*... and 38 more forms*
-
-### Examples
-
-**Genesis 1:19** [transparent]
-> Nitak hong bei-in zingsang hong tung a, ni li ni ahi hi.
-> *tung*
-> on
-> 'And the evening and the morning were the fourth day.'
-
-**Genesis 7:10** [shortest]
-> A ni sagih ni-in leitungah tuiciin tung hi.
-> *tung*
-> on
-> 'And it came to pass after seven days, that the waters of the flood were upon the earth.'
-
-**Genesis 1:2** [additional]
-> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek a, tua tui tungah Pasian' Kha in na a sem hi.
-> *tung*
-> on
-> 'And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.'
-
-⚠️ *Needs review*
 
 ---
 
@@ -986,49 +672,6 @@ lamah (444), lampi (287), lamdang (142), lametna (80), nalamdang (76), lama (65)
 
 ---
 
-## lai
-
-**N** [MIXED] | freq: 1,772 | forms: 54
-
-'place'
-
-### Senses
-
-**1.** place ★
-   *freq: 1,761*
-
-**2.** REFL
-   *freq: 11*
-
-### Forms
-
-laitakin (632), lai-ah (564), lai-in (212), Lai (164), laitakun (125), lai-a (110), laitak (87), laiteng (46), laizangah (41), laizang (39)
-*... and 56 more forms*
-
-### Examples
-
-**Genesis 7:20** [transparent]
-> Mual liante tungah tui omto lai a, tuate tungah pi sawmnih le nih thuk-in tuumcip hi.
-> *lai*
-> midst
-> 'Fifteen cubits upward did the waters prevail; and the mountains were covered.'
-
-**Genesis 5:19** [shortest]
-> Enok' suah khit ciangin Jared kum zagiat nungta a, tanu le tapa dang nei lai hi.
-> *lai*
-> midst
-> 'and Jared lived after he begat Enoch eight hundred years, and begat sons and daughters:'
-
-**Genesis 2:8** [additional]
-> Topa Pasian in nisuahna lamah Eden huan khat bawl hi. Tua lai munah ama bawlsa mipa koih hi.
-> *lai*
-> midst
-> 'And the LORD God planted a garden eastward in Eden; and there he put the man whom he had formed.'
-
-⚠️ *Needs review*
-
----
-
 ## tui
 
 **N** | freq: 1,626 | forms: 83
@@ -1129,119 +772,6 @@ inn-ah (299), innsung (128), inndei (126), innte (67), Inn (41), inn-a (25), inn
 > *inn-kuan-pih*
 > house-family-all
 > 'And the LORD said unto Noah, Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation.'
-
----
-
-## nu
-
-**N** | freq: 1,532 | forms: 25
-
-'woman'
-
-### Senses
-
-**1.** woman ★
-   *freq: 729*
-
-**2.** female
-   *freq: 661*
-
-**3.** mother
-   *freq: 140*
-
-**4.** REFL
-   *freq: 2*
-
-### Forms
-
-nupi (56), nunung (40), nulepa (19), nupa (14), nuhin (14), nusian (11), nunungte (4), numei-a (2), kinusiat (2), Nu (2)
-*... and 15 more forms*
-
-### Examples
-
-**Genesis 7:2** [transparent]
-> Ganhing siangtho nupa kop sagih, ganhing a siang lo nupa kop khat,
-> *nu-pa*
-> female-male
-> 'Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female.'
-
-**Genesis 3:4** [shortest]
-> Ahih hangin gulpi in numei kiangah, “Na si kei ding uh hi.
-> *nu-mei*
-> woman
-> 'And the serpent said unto the woman, Ye shall not surely die:'
-
-**Genesis 1:27** [additional]
-> Tua ahih ciangin Pasian in ama lim bangin mihing piangsakin, Pasian' lim bangin amah a piangsak hi. Amah in pasal le numei a piangsak hi.
-> *nu-mei*
-> woman
-> 'So God created man in his own image, in the image of God created he him; male and female created he them.'
-
-⚠️ *Needs review*
-
----
-
-## gal
-
-**N** | freq: 1,472 | forms: 60
-
-'enemy'
-
-### Senses
-
-**1.** enemy ★
-   *freq: 812*
-
-**2.** soldier
-   *freq: 278*
-
-**3.** war
-   *freq: 240*
-
-**4.** number
-   *freq: 46*
-
-**5.** campaign
-   *freq: 43*
-
-**6.** warfare
-   *freq: 36*
-
-**7.** REFL
-   *freq: 12*
-
-**8.** battle
-   *freq: 3*
-
-**9.** far
-   *freq: 2*
-
-### Forms
-
-galkap (275), gal (263), galsim (44), galdo (42), galkah (33), galkidona (32), Galdona (26), galsung (20), galhiamte (15), galsimna (15)
-*... and 61 more forms*
-
-### Examples
-
-**Genesis 14:3** [transparent]
-> Hih kumpi ngate in kipawlna bawlin Siddim Kuam (Ci Tuipi)-ah a galkapte uh gawm uh hi.
-> *gal-kap-te*
-> war-throw-PL
-> 'All these were joined together in the vale of Siddim, which is the salt sea.'
-
-**Exodus 14:6** [shortest]
-> Tua ahih ciangin amah in a leeng kithawisakin ama galkapte la-in,
-> *gal-kap-te*
-> war-throw-PL
-> 'And he made ready his chariot, and took his people with him:'
-
-**Genesis 14:11** [additional]
-> Tua ahih ciangin galte in Sodom le Gomorrah-te' na khempeuh le a an khempeuh uh la-in a ciah uh hi.
-> *gal-te*
-> enemy-PL
-> 'And they took all the goods of Sodom and Gomorrah, and all their victuals, and went their way.'
-
-⚠️ *Needs review*
 
 ---
 
@@ -1492,70 +1022,6 @@ vantung (508), vante (35), “Vantung (29), vana (25), vankoihna (23), Van (22),
 
 ---
 
-## siam
-
-**N** | freq: 1,182 | forms: 27
-
-'priest'
-
-### Senses
-
-**1.** priest ★
-   *freq: 658*
-
-**2.** priests
-   *freq: 280*
-
-**3.** skilled
-   *freq: 143*
-
-**4.** skill
-   *freq: 76*
-
-**5.** be.skilled
-   *freq: 9*
-
-**6.** weave
-   *freq: 7*
-
-**7.** make
-   *freq: 5*
-
-**8.** create
-   *freq: 2*
-
-**9.** REFL
-   *freq: 2*
-
-### Forms
-
-siampi (419), siamna (119), siam (76), siamnate (8), “Siampi (7), “Siampipa (5), siampi-in (5), siamin (3), siamlawngpi (3), siampipihte (3)
-*... and 15 more forms*
-
-### Examples
-
-**Genesis 41:50** [transparent]
-> Kialpi kum hong tun ma-in Josef in On khua siampipa Potifera' tanu Asenath tawh tapa nih nei hi.
-> *siam-pi-pa*
-> priest
-> 'And unto Joseph were born two sons before the years of famine came, which Asenath the daughter of Poti-pherah priest of On bare unto him.'
-
-**Genesis 46:20** [shortest]
-> Josef in Egypt gamah On khua siampipa Potifera' tanu Asenath tawh Manasseh le Efraim nei hi.
-> *siam-pi-pa*
-> priest
-> 'And unto Joseph in the land of Egypt were born Manasseh and Ephraim, which Asenath the daughter of Poti-pherah priest of On bare unto him.'
-
-**Genesis 14:18** [additional]
-> Tua ciangin Jerusalem kumpipa Melkhizedek in an le leenggahzu hong pusuah hi. Amah pen Sang Pen Pasian' siampi zong ahi hi.
-> *siam-pi*
-> priest-great
-> 'And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God.'
-
-⚠️ *Needs review*
-
----
-
 ## siangtho
 
 **N** | freq: 1,129 | forms: 13
@@ -1767,122 +1233,6 @@ khutnuai-ah (35), khutah (27), khutin (22), khutme (21), khutnuai (18), khutsiam
 
 ---
 
-## pawl
-
-**N** | freq: 1,027 | forms: 28
-
-'some'
-
-### Senses
-
-**1.** some ★
-   *freq: 514*
-
-**2.** group
-   *freq: 333*
-
-**3.** fellowship
-   *freq: 137*
-
-**4.** REFL
-   *freq: 41*
-
-**5.** ally
-   *freq: 2*
-
-### Forms
-
-pawlkhat (391), kipawl (120), pawl (116), kipawlna (35), kipawlin (25), pawlpih (23), pawlin (17), pawlpawlin (15), kipawlthei (10), pawlpi (5)
-*... and 21 more forms*
-
-### Examples
-
-**Genesis 14:3** [transparent]
-> Hih kumpi ngate in kipawlna bawlin Siddim Kuam (Ci Tuipi)-ah a galkapte uh gawm uh hi.
-> *ki-pawl-na*
-> REFL-associate-NMLZ
-> 'All these were joined together in the vale of Siddim, which is the salt sea.'
-
-**Exodus 1:20** [shortest]
-> Tua ahih ciangin Pasian in naudomte limbawl hi. Mite khangin pawlcing semsem uh hi.
-> *pawl-cing*
-> group-pure
-> 'Therefore God dealt well with the midwives: and the people multiplied, and waxed very mighty.'
-
-**Genesis 14:5** [additional]
-> A kum sawm le lina ciangin Khedorlaomer le amah tawh a kipawl kumpite hong pai-in sehnel gamgi Elparan ciang dongah Ashteroth Karnaim gam a Refaim, Ham gam a Zuzim, Shavehkiriathaim gam a Emim,
-> *ki-pawl*
-> fellowship
-> 'And in the fourteenth year came Chedorlaomer, and the kings that were with him, and smote the Rephaims in Ashteroth Karnaim, and the Zuzims in Ham, and the Emims in Shaveh Kiriathaim,'
-
-⚠️ *Needs review*
-
----
-
-## heh
-
-**N** | freq: 1,023 | forms: 36
-
-'anger'
-
-### Senses
-
-**1.** anger ★
-   *freq: 594*
-
-**2.** favor
-   *freq: 238*
-
-**3.** grace
-   *freq: 146*
-
-**4.** angry
-   *freq: 23*
-
-**5.** REFL
-   *freq: 7*
-
-**6.** patience
-   *freq: 7*
-
-**7.** fury
-   *freq: 3*
-
-**8.** compassion
-   *freq: 3*
-
-**9.** pity
-   *freq: 2*
-
-### Forms
-
-hehpihna (231), hehpih (144), hehsak (40), hehin (17), hehnepna (9), hehluatna (9), hehnep (7), hehlua (7), hehpihin (7), hehsakna (6)
-*... and 32 more forms*
-
-### Examples
-
-**Genesis 27:44** [transparent]
-> na sanggampa' hehna a dam mateng tua lai ama kiangah tawlkhat sung va om in.
-> *heh-na*
-> anger-NMLZ
-> 'and tarry with him a few days, until thy brother's fury turn away;'
-
-**Genesis 40:2** [shortest]
-> An piapi pa le anhuan pipa ahi, ama nuai-a mangte nih tungah Faro heh a,
-> *heh*
-> anger
-> 'And Pharaoh was wroth against two of his officers, against the chief of the butlers, and against the chief of the bakers.'
-
-**Genesis 4:5** [additional]
-> ahih hangin Kain le ama piakna thusim lo hi. Tua ahih ciangin Kain heh mahmah a, a mai sia hi.
-> *heh*
-> anger
-> 'but unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell.'
-
-⚠️ *Needs review*
-
----
-
 ## kum
 
 **N** | freq: 1,021 | forms: 15
@@ -1977,86 +1327,6 @@ munah (403), munte (53), Mun (35), munmuanhuai (26), munkip (11), munin (10), mu
 
 ---
 
-## keima
-
-**N** [GRAM] | freq: 1,018 | forms: 2
-
-'1SG.self'
-
-### Senses
-
-**1.** 1SG.self ★
-   *freq: 1,017*
-
-**2.** 1SG.self.POSS
-   *freq: 1*
-
-### Forms
-
-“Keima (39), keima-a (31), keima (1)
-
-### Examples
-
-**Genesis 15:3** [transparent]
-> Ta nong pia kei a, ka inn sunga a suak sila in keima gamh a luah ding hi ta hi,” a ci hi.
-> *keima*
-> 1SG.self
-> 'And Abram said, Behold, to me thou hast given no seed: and, lo, one born in my house is mine heir.'
-
-**Genesis 28:21** [shortest]
-> lungnuam takin ka pa' inn-ah ka ciahkik leh, Topa pen keima Pasian hi ding a,
-> *keima*
-> 1SG.self
-> 'so that I come again to my father's house in peace; then shall the LORD be my God:'
-
-**Genesis 2:23** [additional]
-> Tua ciangin mipa in, “Tu petpetin hih pen keima guhte le keima sate ahi hi. Amah pen mipa sung panin a kilakhia ahih manin 'Numei' kici ding hi,” a ci hi.
-> *keima*
-> 1SG.self
-> 'And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.'
-
----
-
-## nangma
-
-**N** [GRAM] | freq: 1,018 | forms: 2
-
-'2SG.self'
-
-### Senses
-
-**1.** 2SG.self ★
-   *freq: 1,016*
-
-**2.** 2SG.self.POSS
-   *freq: 2*
-
-### Forms
-
-“Nangma (33), nangma (2)
-
-### Examples
-
-**Genesis 3:10** [transparent]
-> Amah in, “Nangma gin na huan sungah ka za a, ka lau hi. Bang hang hiam cih leh ka guaktangin om ka hih manin ka bucip hi,” a ci hi.
-> *Nangma*
-> 2SG.self
-> 'And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.'
-
-**Genesis 21:13** [shortest]
-> Sila numei' tapa zong nangma ta mah ahih manin, minam khatin ka bawl ding hi,” a ci hi.
-> *nangma*
-> 2SG.self
-> 'And also of the son of the bondwoman will I make a nation, because he is thy seed.'
-
-**Genesis 3:17** [additional]
-> Tua ciangin mipa kiangah, “Nang in na zi' thu mangin, 'Nang in na ne kei ding hi,' ci-in nang kong thupiak singgah ne na hih ciangin, nangma hangin leitang in samsiatna ngah hi. Na nuntak tawntung gimpi-in na semin na annek ding na zong ding hi.
-> *nangma*
-> 2SG.self
-> 'And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life;'
-
----
-
 ## inla
 
 **N** | freq: 986 | forms: 1
@@ -2086,247 +1356,6 @@ inla (986)
 > *inla*
 > and.then
 > 'Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch.'
-
----
-
-## lak
-
-**N** | freq: 910 | forms: 39
-
-'among'
-
-### Senses
-
-**1.** among ★
-   *freq: 564*
-
-**2.** take
-   *freq: 243*
-
-**3.** REFL
-   *freq: 74*
-
-**4.** midst
-   *freq: 27*
-
-**5.** spoil
-   *freq: 2*
-
-### Forms
-
-lakah (769), lak (564), lakhia (96), kilak (57), laksak (56), laksakin (15), lakna (14), laktel (13), lakkhiatsak (12), laksa (9)
-*... and 34 more forms*
-
-### Examples
-
-**Genesis 17:10** [transparent]
-> Hih pen nang le nang' khit cianga na suanlekhakte' zuih ding keima thuciamna ahi hi: Note' lak panin pasal peuhmah a vun ki-at ding hi.
-> *lak*
-> among
-> 'This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised.'
-
-**Genesis 7:3** [shortest]
-> huih lak vasate zong nupa kop sagih, leitungah amau' nam a manthan loh nadingin la in.
-> *lak*
-> among
-> 'Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth.'
-
-**Genesis 1:30** [additional]
-> Leitung ganhing khempeuhte tung, huih lak vasate khempeuh tung, leitungah a bokvakte khempeuh tung, nuntakna hu a neite khempeuh tungah an dingin kung hing khempeuh ka hong pia khinta hi,” a ci hi. Tua mah bangin a piang pah hi.
-> *lak*
-> among
-> 'And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so.'
-
-⚠️ *Needs review*
-
----
-
-## dang
-
-**N** | freq: 867 | forms: 15
-
-'other'
-
-### Senses
-
-**1.** other ★
-   *freq: 694*
-
-**2.** 3SG
-   *freq: 135*
-
-**3.** 3SG.POSS
-   *freq: 33*
-
-**4.** thirst
-   *freq: 4*
-
-**5.** REFL
-   *freq: 1*
-
-### Forms
-
-dangah (34), adangte (30), dangtak (24), dangtakin (14), dangka (10), dangte-ah (6), dangtakna (4), dangteng (3), dangte-a (3), dangtawng (2)
-*... and 10 more forms*
-
-### Examples
-
-**Genesis 5:19** [transparent]
-> Enok' suah khit ciangin Jared kum zagiat nungta a, tanu le tapa dang nei lai hi.
-> *dang*
-> other
-> 'and Jared lived after he begat Enoch eight hundred years, and begat sons and daughters:'
-
-**Genesis 4:19** [shortest]
-> Lamek in zi nih nei hi. A khat' min Adah hi a, adang khat' min Zillah ahi hi.
-> *a-dang*
-> 3SG-other
-> 'And Lamech took unto him two wives: the name of the one was Adah, and the name of the other Zillah.'
-
-**Genesis 3:1** [additional]
-> Tu-in gulpi pen, Topa Pasian' bawlsa gamlak ganhing dangte khempeuh sangin ngiansiam zaw hi. Amah in numei kiangah, “Pasian in, 'Huan sung singgah khat peuhpeuh ne lo ding,' hong ci ahi hiam?” ci hi.
-> *dang-te*
-> other-PL
-> 'Now the serpent was more subtil than any beast of the field which the LORD God had made. And he said unto the woman, Yea, hath God said, Ye shall not eat of every tree of the garden?'
-
-⚠️ *Needs review*
-
----
-
-## gim
-
-**N** | freq: 839 | forms: 23
-
-'suffer'
-
-### Senses
-
-**1.** suffer ★
-   *freq: 420*
-
-**2.** suffering
-   *freq: 366*
-
-**3.** toil
-   *freq: 27*
-
-**4.** heavy
-   *freq: 8*
-
-**5.** REFL
-   *freq: 4*
-
-**6.** trouble
-   *freq: 3*
-
-**7.** sorrow
-   *freq: 2*
-
-**8.** vex
-   *freq: 2*
-
-**9.** labor
-   *freq: 2*
-
-**10.** difficulty
-   *freq: 2*
-
-**11.** pain
-   *freq: 2*
-
-**12.** savour
-   *freq: 1*
-
-### Forms
-
-gim (365), gimnate (16), gimpiakna (11), gimnam (8), gimin (6), gimpih (6), gimlua (4), gimna-ah (4), gimpiakna-in (3), kigimsak (3)
-*... and 17 more forms*
-
-### Examples
-
-**Genesis 4:13** [transparent]
-> Kain in Topa' tungah, “Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi.
-> *gim*
-> suffering
-> 'And Cain said unto the LORD , My punishment is greater than I can bear.'
-
-**Exodus 1:13** [shortest]
-> Tua ahih ciangin amaute in Israel mite a gim mahmahin na semsak uh a,
-> *gim*
-> suffering
-> 'And the Egyptians made the children of Israel to serve with rigour:'
-
-**Genesis 3:16** [additional]
-> Tua ciangin numei kiangah, “Naupaiina-ah na gimna nakpitakin ka khangsak ding a, na a sapipi-in nau na nei ding hi. Ahi zongin na pasal mah na deih ding a, amah in nang tungah hong uk ding hi,” a ci hi.
-> *gim-na*
-> suffer-NMLZ
-> 'Unto the woman he said, I will greatly multiply thy sorrow and thy conception; in sorrow thou shalt bring forth children; and thy desire shall be to thy husband, and he shall rule over thee.'
-
-⚠️ *Needs review*
-
----
-
-## leeng
-
-**N** | freq: 815 | forms: 27
-
-'grape'
-
-### Senses
-
-**1.** chariot ★
-   *freq: 489*
-
-**2.** grape
-   *freq: 309*
-
-**3.** eagle
-   *freq: 4*
-
-**4.** yoke
-   *freq: 3*
-
-**5.** corn
-   *freq: 3*
-
-**6.** bird
-   *freq: 3*
-
-**7.** vine
-   *freq: 2*
-
-**8.** raisin
-   *freq: 1*
-
-**9.** grapevine
-   *freq: 1*
-
-### Forms
-
-leenggahzu (232), leenggui (129), leenggah (97), leengte (68), leengpei (14), leengkhia (13), leengin (11), leenggahkeu (6), leengmang (6), leenggahtui (5)
-*... and 21 more forms*
-
-### Examples
-
-**Genesis 8:7** [transparent]
-> va-ak khat khah hi. Leitung panin tuite a keu mateng leeng kawikawi hi.
-> *leeng*
-> chariot
-> 'and he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth.'
-
-**Genesis 9:20** [shortest]
-> Noah pen lo kho masa pa hi a, amah in leenggui lo khat a bawl hi.
-> *leeng-gui*
-> grape-vine
-> 'And Noah began to be an husbandman, and he planted a vineyard:'
-
-**Genesis 1:20** [additional]
-> Pasian in, “Tuite in a nungta ganhing honpite piangsak hen la, vantung kantanin leitungah vasate leeng ta hen,” ci hi.
-> *leeng*
-> chariot
-> 'And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.'
-
-⚠️ *Needs review*
 
 ---
 
@@ -2453,6 +1482,758 @@ mual (430), mualtung (224), Mual-ah (19), mualah (13), mualpang (10), mualsang (
 > *mipa*
 > man
 > 'And the LORD God planted a garden eastward in Eden; and there he put the man whom he had formed.'
+
+---
+
+## dong
+
+**N** | freq: 748 | forms: 14
+
+'until'
+
+### Senses
+
+**1.** until ★
+   *freq: 712*
+
+**2.** REFL
+   *freq: 15*
+
+**3.** collect
+   *freq: 12*
+
+**4.** stumble
+   *freq: 4*
+
+**5.** way
+   *freq: 2*
+
+**6.** beat
+   *freq: 2*
+
+**7.** end
+   *freq: 1*
+
+### Forms
+
+dong (712), dongin (302), dongah (52), kidong (11), donga (8), dongkik (5), dongsak (5), dongtangsak (4), kidongsa (3), dongin!” (1)
+*... and 10 more forms*
+
+### Examples
+
+**Genesis 32:24** [transparent]
+> Jakob amah guak bek omlai a, zingsang khuavak dong mi khat in amah a lai hi.
+> *dong*
+> until
+> 'And Jacob was left alone; and there wrestled a man with him until the breaking of the day.'
+
+**Genesis 24:57** [shortest]
+> Amaute in, “A numei samin amah i dong ding hi,” a ci uh hi.
+> *dong*
+> until
+> 'And they said, We will call the damsel, and enquire at her mouth.'
+
+**Genesis 8:5** [additional]
+> A kha sawmna ciang dong tuite kiamkiam lai hi. Kha sawmna, tua kha ni khat ni-in mual dawnte kidawk hi.
+> *dong*
+> until
+> 'And the waters decreased continually until the tenth month: in the tenth month , on the first day of the month, were the tops of the mountains seen.'
+
+---
+
+## tawn
+
+**N** | freq: 744 | forms: 8
+
+'ever'
+
+### Senses
+
+**1.** ever ★
+   *freq: 690*
+
+**2.** loaf
+   *freq: 47*
+
+**3.** reproof
+   *freq: 3*
+
+**4.** meet
+   *freq: 2*
+
+**5.** eternal
+   *freq: 1*
+
+**6.** prosper
+   *freq: 1*
+
+### Forms
+
+tawntung (689), tawnin (74), tawnna (3), tawnnate (2), tawntungnate (1), tawnun (1), tawntung!” (1), tawnsak (1), tawn (1)
+
+### Examples
+
+**Genesis 31:54** [transparent]
+> Jakob in mualtungah biakpiakna pia-in an ne dingin a behte a sam hi. Amaute in an ne uh a, zan tawntung mualtungah a om uh hi.
+> *tawn-tung*
+> ever-always
+> 'Then Jacob offered sacrifice upon the mount, and called his brethren to eat bread: and they did eat bread, and tarried all night in the mount.'
+
+**Genesis 21:33** [shortest]
+> Abraham in Beersheba-ah makeng kung khat suan a, tua lai munah Tawntung Pasian, Topa a bia hi.
+> *tawn-tung*
+> ever-always
+> 'And Abraham planted a grove in Beer-sheba, and called there on the name of the LORD , the everlasting God.'
+
+**Genesis 3:17** [additional]
+> Tua ciangin mipa kiangah, “Nang in na zi' thu mangin, 'Nang in na ne kei ding hi,' ci-in nang kong thupiak singgah ne na hih ciangin, nangma hangin leitang in samsiatna ngah hi. Na nuntak tawntung gimpi-in na semin na annek ding na zong ding hi.
+> *tawn-tung*
+> ever-always
+> 'And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life;'
+
+---
+
+## kuamah
+
+**N** | freq: 664 | forms: 2
+
+'nobody'
+
+### Forms
+
+Kuamah (58), “Kuamah (11)
+
+### Examples
+
+**Exodus 2:12** [transparent]
+> Amah khuadak kawikawi a, kuamah mu lo ahih manin Egypt mipa thatin sehnel sungah a seel hi.
+> *kuamah*
+> nobody
+> 'And he looked this way and that way, and when he saw that there was no man, he slew the Egyptian, and hid him in the sand.'
+
+**Exodus 16:19** [shortest]
+> Moses in amaute' kiangah, “Kuamah in zingsang dong koih kei un,” a ci hi.
+> *Kuamah*
+> nobody
+> 'And Moses said, Let no man leave of it till the morning.'
+
+**Genesis 6:12** [additional]
+> Pasian in leitung en a, a kisiagawp mu hi. Bang hang hiam cih leh leitungah mi khempeuh a sia-in a gamta lo kuamah om lo hi.
+> *kuamah*
+> nobody
+> 'And God looked upon the earth, and, behold, it was corrupt; for all flesh had corrupted his way upon the earth.'
+
+---
+
+## tapa
+
+**N** | freq: 622 | forms: 2
+
+'son'
+
+### Forms
+
+Tapa (15)
+
+### Examples
+
+**Genesis 10:6** [transparent]
+> Ham' tapate: Kush, Egypt, Put, le Kanaan ahi hi.
+> *tapa-te*
+> son-PL
+> 'And the sons of Ham; Cush, and Mizraim, and Phut, and Canaan.'
+
+**Genesis 10:23** [shortest]
+> Aram' tapate: Uz, Hul, Gether, le Mash ahi hi.
+> *tapa-te*
+> son-PL
+> 'And the children of Aram; Uz, and Hul, and Gether, and Mash.'
+
+**Genesis 4:17** [additional]
+> Kain in a zi luppih a, amah gai-in Enok a nei hi. Kain in khuapi khat sat a, tua khuapi min dingin ama tapa' min tamin Enok a phuak hi.
+> *tapa'*
+> son.POSS
+> 'And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch.'
+
+---
+
+## kiang
+
+**N** | freq: 611 | forms: 1
+
+'beside'
+
+### Forms
+
+kiangah (4,207), kiang (611), kiangah) (1)
+
+### Examples
+
+**Genesis 15:15** [transparent]
+> Nang na hih leh, nuamtakin na pu na pate kiang na zuan ding a, khan kicingin hong kivui ding hi.
+> *kiang*
+> beside
+> 'And thou shalt go to thy fathers in peace; thou shalt be buried in a good old age.'
+
+**Genesis 17:22** [shortest]
+> Amah tawh a kiho a man khit ciangin Abraham' kiang panin Pasian paikhia to hi.
+> *kiang*
+> beside
+> 'And he left off talking with him, and God went up from Abraham.'
+
+**Genesis 4:14** [additional]
+> En in, tuni-in nangmah in leitung panin kei nong hawlkhia a, nang kiang panin kei nong notkhia hi. Kei pen a galtai, leitungah a vakvai ka hi ding a, kei hong mu peuhmah in hong that ding hi,” a ci hi.
+> *kiang*
+> beside
+> 'Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me.'
+
+---
+
+## zi
+
+**N** | freq: 594 | forms: 13
+
+'wife'
+
+### Senses
+
+**1.** wife ★
+   *freq: 588*
+
+**2.** shadow
+   *freq: 6*
+
+### Forms
+
+zite (91), zi-in (24), zinei (9), Zi (8), zial (6), “Zi (4), ziau (4), zipi (2), zidangte (1), zidang (1)
+*... and 5 more forms*
+
+### Examples
+
+**Genesis 3:21** [transparent]
+> Topa Pasian in mipa le a zi a dingin savun puan bawl a, amaute silhsak hi.
+> *zi*
+> wife
+> 'Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.'
+
+**Genesis 2:25** [shortest]
+> Mipa le a zi a guaktangin om uh a, maizum lo uh hi.
+> *zi*
+> wife
+> 'And they were both naked, the man and his wife, and were not ashamed.'
+
+**Genesis 2:24** [additional]
+> Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm a, amau tegel pum khat a bang uh hi.
+> *zi*
+> wife
+> 'Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.'
+
+---
+
+## mei
+
+**N** | freq: 558 | forms: 31
+
+'fire'
+
+### Senses
+
+**1.** fire ★
+   *freq: 493*
+
+**2.** lamplight
+   *freq: 54*
+
+**3.** cloud
+   *freq: 11*
+
+### Forms
+
+meivak (52), meivakkhuam (35), mei-am (19), mei-in (8), meiphual (8), Meivakna (8), meiilum (6), meisuang (6), meidawi (6), “Mei (5)
+*... and 24 more forms*
+
+### Examples
+
+**Genesis 2:6** [transparent]
+> Tua ciangin leitung panin meiilum kaaito-in, lei maitang khempeuh a buah hunin
+> *mei-ilum*
+> fire-mist
+> 'But there went up a mist from the earth, and watered the whole face of the ground.'
+
+**Exodus 13:22** [shortest]
+> Sunin meii khuam le zanin mei khuamte, mite' mai-ah om tawntung hi.
+> *mei*
+> fire
+> 'he took not away the pillar of the cloud by day, nor the pillar of fire by night, from before the people.'
+
+**Genesis 15:17** [additional]
+> Ni tumin khua a mial khit ciangin, en in, hih sate kikalah mei beel khu le a kuang meivak a pai hi.
+> *mei*
+> fire
+> 'And it came to pass, that, when the sun went down, and it was dark, behold a smoking furnace, and a burning lamp that passed between those pieces.'
+
+---
+
+## thuciam
+
+**N** | freq: 548 | forms: 2
+
+'promise'
+
+### Forms
+
+thuciamna (543), “Thuciamna (5), thuciamna-ah (5), thuciamna-in (3)
+
+### Examples
+
+**Genesis 17:11** [transparent]
+> Note' vun dawn ki-at ding a, tua pen kei le note' kikalah thuciamna lim khat hi ding hi.
+> *thuciam-na*
+> promise-NMLZ
+> 'And ye shall circumcise the flesh of your foreskin; and it shall be a token of the covenant betwixt me and you.'
+
+**Genesis 17:2** [shortest]
+> Nang tawh thuciamna ka bawl ding a, nang tampi tak kong phasak ding hi,” a ci hi.
+> *thuciam-na*
+> promise-NMLZ
+> 'And I will make my covenant between me and thee, and will multiply thee exceedingly.'
+
+**Genesis 6:18** [additional]
+> Ahih hangin nang tawh ka thuciamna ka kipsak ding hi. Teembaw sungah nang na hong pai ding hi. Nang, na tapate, na zi le na tapate' zite tawh na paikhawm ding uh hi.
+> *thuciam-na*
+> promise-NMLZ
+> 'But with thee will I establish my covenant; and thou shalt come into the ark, thou, and thy sons, and thy wife, and thy sons' wives with thee.'
+
+---
+
+## bangmah
+
+**N** | freq: 522 | forms: 2
+
+'nothing'
+
+### Forms
+
+Bangmah (17), “Bangmah (10)
+
+### Examples
+
+**Exodus 16:27** [transparent]
+> A ni sagih ni-in a kaikhawm dingin mi pawlkhat kuankhia uh a, ahi zongin amaute in bangmah mu lo uh hi.
+> *bangmah*
+> nothing
+> 'And it came to pass, that there went out some of the people on the seventh day for to gather, and they found none.'
+
+**Genesis 9:21** [shortest]
+> Amah in leenggahzu ne-in kham a, a puanbuk sungah bangmah silh loin a lum hi.
+> *bangmah*
+> nothing
+> 'and he drank of the wine, and was drunken; and he was uncovered within his tent.'
+
+**Genesis 14:24** [additional]
+> Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi. Aner, Eshkol, le Mamre-te amau' tanh ding pia in,” a ci hi.
+> *bangmah*
+> nothing
+> 'save only that which the young men have eaten, and the portion of the men which went with me, Aner, Eshcol, and Mamre; let them take their portion.'
+
+---
+
+## sanggam
+
+**N** | freq: 517 | forms: 6
+
+'brother'
+
+### Senses
+
+**1.** brother ★
+   *freq: 438*
+
+**2.** sibling
+   *freq: 79*
+
+### Forms
+
+sanggam (116), “Sanggam (3), sanggamnute (1), “Sanggam,” (1)
+
+### Examples
+
+**Genesis 19:7** [transparent]
+> “Ka sanggamte aw, tua banga na gitloh gamtat loh nading uh kong thum hi.
+> *sanggam-te*
+> brother-PL
+> 'and said, I pray you, brethren, do not so wickedly.'
+
+**Genesis 22:21** [shortest]
+> Uz a u pen hi. A sanggamte pen Buz, Aram' pa Kemuel,
+> *sanggam-te*
+> brother-PL
+> 'Huz his firstborn, and Buz his brother, and Kemuel the father of Aram,'
+
+**Genesis 4:9** [additional]
+> Tua ciangin Topa in Kain tungah, “Na sanggampa Abel koi-ah om ahi hiam?” a ci hi. Amah in, “Ka thei kei hi. Kei, ka sanggam a kem pa ka hi hiam?” ci hi.
+> *sanggam*
+> brother
+> 'And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?'
+
+---
+
+## pasal
+
+**N** | freq: 510 | forms: 5
+
+'husband'
+
+### Senses
+
+**1.** husband ★
+   *freq: 506*
+
+**2.** man
+   *freq: 3*
+
+**3.** REFL
+   *freq: 1*
+
+### Forms
+
+pasal (22), “Pasal (6), pasalnei (3), kipasalsak (1), Kipasalsakin (1), pasalin (1)
+
+### Examples
+
+**Genesis 2:24** [transparent]
+> Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm a, amau tegel pum khat a bang uh hi.
+> *pasal*
+> husband
+> 'Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.'
+
+**Genesis 24:29** [shortest]
+> Rebekah in Laban min nei sanggam pasal khat nei hi. Laban zong tuikhuka mipa kiangah a tai hi.
+> *pasal*
+> husband
+> 'And Rebekah had a brother, and his name was Laban: and Laban ran out unto the man, unto the well.'
+
+**Genesis 1:27** [additional]
+> Tua ahih ciangin Pasian in ama lim bangin mihing piangsakin, Pasian' lim bangin amah a piangsak hi. Amah in pasal le numei a piangsak hi.
+> *pasal*
+> husband
+> 'So God created man in his own image, in the image of God created he him; male and female created he them.'
+
+---
+
+## beh
+
+**N** | freq: 499 | forms: 10
+
+'tribe'
+
+### Senses
+
+**1.** tribe ★
+   *freq: 485*
+
+**2.** REFL
+   *freq: 7*
+
+**3.** clan
+   *freq: 4*
+
+**4.** beside
+   *freq: 3*
+
+### Forms
+
+behlap (40), behbehin (32), kibehlap (7), behin (3), behtangun (3), behpa (2), behlephung (2), behnai (1), Beh (1), behlaplap (1)
+*... and 1 more forms*
+
+### Examples
+
+**Genesis 12:1** [transparent]
+> Topa in Abram kiangah, “Na gam, na beh, le na pa' inn panin nang kong lah ding gamah pai in.
+> *beh*
+> tribe
+> 'Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee:'
+
+**Genesis 30:24** [shortest]
+> Amah in a min Josef phuak a, “ Topa in tapa khat hong pia beh hen!” a ci hi.
+> *beh*
+> tribe
+> 'and she called his name Joseph; and said, The LORD shall add to me another son.'
+
+**Genesis 10:5** [additional]
+> Hihte pen tuipi gei-a teng mite' pulepa ahi uh hi. Amaute' leitangah amau' kam pau ciat zangin, a beh, a minamin a om uh hi.
+> *beh*
+> tribe
+> 'By these were the isles of the Gentiles divided in their lands; every one after his tongue, after their families, in their nations.'
+
+---
+
+## khang
+
+**N** | freq: 494 | forms: 42
+
+'generation'
+
+### Senses
+
+**1.** generation ★
+   *freq: 448*
+
+**2.** youth
+   *freq: 23*
+
+**3.** grow
+   *freq: 13*
+
+**4.** prevail
+   *freq: 4*
+
+**5.** ancestor
+   *freq: 4*
+
+**6.** age
+   *freq: 2*
+
+### Forms
+
+Khang (55), khangin (43), khangno (33), khangham (30), khanglo (20), khangto (15), khanglai (10), khangsimna (8), khangkhangin (8), khanglui (7)
+*... and 39 more forms*
+
+### Examples
+
+**Genesis 9:7** [transparent]
+> “Note, pungin khang unla, leitungah tampi tak piangkhia-in, tampi pha-in khang un,” a ci hi.
+> *khang*
+> generation
+> 'And you, be ye fruitful, and multiply; bring forth abundantly in the earth, and multiply therein.'
+
+**Genesis 7:18** [shortest]
+> Tui khangto-in leitungah tam mahmah hi. Tui tungah teembaw laam hi.
+> *khang-to-in*
+> prevail-up-INST
+> 'And the waters prevailed, and were increased greatly upon the earth; and the ark went upon the face of the waters.'
+
+**Genesis 4:23** [additional]
+> Lamek in a zite kiangah, “Adah le Zillah aw, ka aw ngai un. Lamek' zite aw, ka thugen ngai un. Kei hong liamsak manin mi khat, kei hong sat manin khanglai mi khat ka that khin hi.
+> *khang-lai*
+> generation-middle
+> 'And Lamech said unto his wives, Adah and Zillah, Hear my voice; Ye wives of Lamech, hearken unto my speech: For I have slain a man to my wounding, And a young man to my hurt.'
+
+---
+
+## siat
+
+**N** | freq: 493 | forms: 24
+
+'destroy'
+
+### Senses
+
+**1.** destroy ★
+   *freq: 439*
+
+**2.** spoil
+   *freq: 30*
+
+**3.** REFL
+   *freq: 23*
+
+**4.** destruction
+   *freq: 1*
+
+### Forms
+
+siatna (382), siat (51), siatnate (10), kisiatna (10), kisiat (9), siatloh (4), siatkik (4), kisiatsakna (2), siatlawh (2), siattat (2)
+*... and 15 more forms*
+
+### Examples
+
+**Genesis 50:15** [transparent]
+> Josef' sanggamte in a pa uh a sih khit ciangin, “Josef in eite hong mudahin ama tunga siatna i bawl khempeuh hong thukkik kha ding hi,” ci uh hi.
+> *siat-na*
+> destroy-NMLZ
+> 'And when Joseph's brethren saw that their father was dead, they said, Joseph will peradventure hate us, and will certainly requite us all the evil which we did unto him.'
+
+**Genesis 41:36** [shortest]
+> Kialpi hangin gam sung a siatloh nadingin Egypt gam sungah a hong tung ding kum sagih kialpi dal nadingin a kikoihcing an hi ding hi,” a ci hi.
+> *siat-loh*
+> destroy-NEG
+> 'And that food shall be for store to the land against the seven years of famine, which shall be in the land of Egypt; that the land perish not through the famine.'
+
+**Genesis 19:9** [additional]
+> Ahih hangin amaute in, “Taikhia in. Kote kiangah hong peem pak a, tu-in nang thukhen hong kineih ding na hi hiam? Tu-in amaute sangin nang kong siatbawl zaw ding uh hi,” a ci uh hi. Tua ciangin amaute in nakpitakin Lot' lam hong neh uh a, kongkhak a phukham zah dongin hong neh uh hi.
+> *siat-bawl*
+> spoil-make
+> 'And they said, Stand back. And they said again , This one fellow came in to sojourn, and he will needs be a judge: now will we deal worse with thee, than with them. And they pressed sore upon the man, even Lot, and came near to break the door.'
+
+---
+
+## ganhing
+
+**N** | freq: 484 | forms: 5
+
+'animal'
+
+### Forms
+
+“Ganhing (5), ganhingin (4), (ganhing (1), “'Ganhing (1), ganhing (1)
+
+### Examples
+
+**Genesis 4:20** [transparent]
+> Adah in tapa Jabal nei hi. Amah pen puanbukte sungah tengin ganhing a neite' pianna pupi ahi hi.
+> *ganhing*
+> animal
+> 'And Adah bare Jabal: he was the father of such as dwell in tents, and of such as have cattle.'
+
+**Genesis 7:2** [shortest]
+> Ganhing siangtho nupa kop sagih, ganhing a siang lo nupa kop khat,
+> *Ganhing*
+> animal
+> 'Of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female.'
+
+**Genesis 1:20** [additional]
+> Pasian in, “Tuite in a nungta ganhing honpite piangsak hen la, vantung kantanin leitungah vasate leeng ta hen,” ci hi.
+> *ganhing*
+> animal
+> 'And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.'
+
+---
+
+## kam
+
+**N** | freq: 483 | forms: 35
+
+'mouth'
+
+### Senses
+
+**1.** mouth ★
+   *freq: 365*
+
+**2.** word
+   *freq: 118*
+
+### Forms
+
+kam (297), kampau (61), kamsung (13), kamciamna (13), kampaunate (12), kampaute (11), kampi (9), kamte (7), kamkei (7), kamciam (6)
+*... and 28 more forms*
+
+### Examples
+
+**Genesis 10:20** [transparent]
+> Hihte pen a innkuan, a kam pau, a leitang, a minamin Ham' suanlekhakte ahi hi.
+> *kam*
+> mouth
+> 'These are the sons of Ham, after their families, after their tongues, in their countries, and in their nations.'
+
+**Genesis 11:1** [shortest]
+> Tua laitakin leitung buppi in kampau khat le kammal tawmno bek nei hi.
+> *kam-pau*
+> word-speak
+> 'And the whole earth was of one language, and of one speech.'
+
+**Genesis 4:11** [additional]
+> Na sanggampa' sisan a hup dingin a kam a ka leitang tungah tu-in nang hong kisamsiat hi.
+> *kam*
+> mouth
+> 'And now art thou cursed from the earth, which hath opened her mouth to receive thy brother's blood from thy hand;'
+
+---
+
+## vang
+
+**N** | freq: 480 | forms: 12
+
+'power'
+
+### Senses
+
+**1.** power ★
+   *freq: 353*
+
+**2.** because
+   *freq: 107*
+
+**3.** glory
+   *freq: 8*
+
+**4.** way
+   *freq: 6*
+
+**5.** prosper
+   *freq: 4*
+
+**6.** cause
+   *freq: 2*
+
+### Forms
+
+vanglian (329), vang (106), “Vanglian (20), vanging (18), vangtaang (7), kongvang (6), vangsak (4), vangah (3), vangte (2), vangliat (2)
+*... and 7 more forms*
+
+### Examples
+
+**Exodus 24:17** [transparent]
+> Tu-in Topa' vangliatna vang pen Israel mite' muhna-ah mualvum dawn a kangtum meikuang tawh kibang hi.
+> *vang*
+> because
+> 'And the sight of the glory of the LORD was like devouring fire on the top of the mount in the eyes of the children of Israel.'
+
+**Genesis 10:8** [shortest]
+> Kush in Nimrod kici tapa khat nei a, amah pen leitungah a vanglian masa mi ahi hi.
+> *vang-lian*
+> power-big
+> 'And Cush begat Nimrod: he began to be a mighty one in the earth.'
+
+**Genesis 17:1** [additional]
+> Abram kum sawmkua le kua a phak ciangin ama tungah Topa kilang a, “Kei, Vanglian Pasian ka hi hi. Hoihtakin gamta inla, paubaang kei in.
+> *vang-lian*
+> power-big
+> 'And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him, I am the Almighty God; walk before me, and be thou perfect.'
+
+---
+
+## tau
+
+**N** | freq: 458 | forms: 6
+
+'altar'
+
+### Senses
+
+**1.** altar ★
+   *freq: 430*
+
+**2.** store
+   *freq: 27*
+
+**3.** gourd
+   *freq: 1*
+
+### Forms
+
+tau (427), tau-ah (18), tauna (14), tau-in (3), tausangpi (2), tau-a (2), tau,” (1), taubeel (1), taukhawm (1)
+
+### Examples
+
+**Genesis 33:20** [transparent]
+> Tua lai-ah amah in biakna tau khat bawl a, El-Elohe-Israel, ci-in min a phuak hi.
+> *tau*
+> altar
+> 'And he erected there an altar, and called it El-elohe-Israel.'
+
+**Genesis 11:5** [shortest]
+> Tua ciangin mihingte' lamsa khuapi le tausangpi a en dingin Topa hong paisuk hi.
+> *tau-sang-pi*
+> altar-high.wall
+> 'And the LORD came down to see the city and the tower, which the children of men builded.'
+
+**Genesis 8:20** [additional]
+> Tua ciangin Noah in Topa a' ding biakna tau khat lam a, a siangtho ganhing khempeuh le a siangtho vasa khempeuh lak pan khat ciat la-in, biakna tau tungah meihal biakna a pia hi.
+> *tau*
+> altar
+> 'And Noah builded an altar unto the LORD ; and took of every clean beast, and of every clean fowl, and offered burnt offerings on the altar.'
 
 ---
 

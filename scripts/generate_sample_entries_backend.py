@@ -15,13 +15,110 @@ Usage:
 import argparse
 import os
 import sys
+from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from backend import Backend, Lemma, Sense, Example
+from backend import Backend, Lemma
 from report_utils import format_reference
+
+
+@dataclass
+class DictionaryGenerationAudit:
+    """Summary counts for one dictionary sample generation run."""
+    considered: int = 0
+    emitted: int = 0
+    skipped_empty_gloss: int = 0
+    skipped_unknown_gloss: int = 0
+    skipped_needs_review: int = 0
+    skipped_entry_type_mismatch: int = 0
+
+
+def _row_to_lemma(row) -> Lemma:
+    """Convert one SQLite row into a Lemma dataclass."""
+    data = dict(row)
+    data['is_polysemous'] = bool(data['is_polysemous'])
+    data['needs_review'] = bool(data['needs_review'])
+    return Lemma(**data)
+
+
+def _fetch_candidate_lemmas(
+    db: Backend,
+    pos: Optional[str] = None,
+    entry_type: Optional[str] = None,
+    lemmas: Optional[List[str]] = None,
+) -> List[Lemma]:
+    """Fetch candidate lemmas in backend frequency order."""
+    if lemmas:
+        entries = []
+        for lemma_id in lemmas:
+            lemma = db.get_lemma(lemma_id)
+            if lemma:
+                entries.append(lemma)
+        return entries
+
+    with db._connection() as conn:
+        sql = 'SELECT * FROM lemmas WHERE 1=1'
+        params = []
+        if pos:
+            sql += ' AND pos = ?'
+            params.append(pos)
+        if entry_type:
+            sql += ' AND entry_type = ?'
+            params.append(entry_type)
+        sql += ' ORDER BY token_count DESC, citation_form'
+        rows = conn.execute(sql, params).fetchall()
+    return [_row_to_lemma(row) for row in rows]
+
+
+def _is_lexical_sample_request(pos: Optional[str], entry_type: Optional[str]) -> bool:
+    """Return whether this request is for a lexical POS sample."""
+    return pos is not None and entry_type in (None, 'lexical')
+
+
+def select_sample_lemmas(
+    db: Backend,
+    pos: Optional[str] = None,
+    entry_type: Optional[str] = None,
+    lemmas: Optional[List[str]] = None,
+    limit: int = 20,
+    include_review: bool = False,
+) -> Tuple[List[Lemma], DictionaryGenerationAudit]:
+    """Select lemmas suitable for one sample dictionary output."""
+    audit = DictionaryGenerationAudit()
+    candidates = _fetch_candidate_lemmas(db, pos=pos, entry_type=None if lemmas else entry_type if not _is_lexical_sample_request(pos, entry_type) else None, lemmas=lemmas)
+    lexical_sample = _is_lexical_sample_request(pos, entry_type)
+
+    selected: List[Lemma] = []
+    for lemma in candidates:
+        audit.considered += 1
+        gloss = (lemma.primary_gloss or '').strip()
+
+        if not gloss:
+            audit.skipped_empty_gloss += 1
+            continue
+        if gloss == '?':
+            audit.skipped_unknown_gloss += 1
+            continue
+
+        if lexical_sample:
+            if lemma.entry_type != 'lexical':
+                audit.skipped_entry_type_mismatch += 1
+                continue
+            if lemma.needs_review and not include_review:
+                audit.skipped_needs_review += 1
+                continue
+        elif entry_type and lemma.entry_type != entry_type:
+            audit.skipped_entry_type_mismatch += 1
+            continue
+
+        if len(selected) < limit:
+            selected.append(lemma)
+
+    audit.emitted = len(selected)
+    return selected, audit
 
 
 def format_entry(db: Backend, lemma: Lemma, 
@@ -119,12 +216,15 @@ def generate_sample_entries(db: Backend,
                             lemmas: Optional[List[str]] = None,
                             limit: int = 20,
                             include_wordforms: bool = True,
-                            include_examples: bool = True) -> List[str]:
+                            include_examples: bool = True,
+                            include_review: bool = False) -> List[str]:
     """Generate sample dictionary entries from backend."""
     lines = []
     
     # Header
     lines.append("# Tedim Chin Sample Dictionary Entries")
+    lines.append("")
+    lines.append("> **Sample/draft output only.** This file is working material for dictionary drafting, not final dictionary text.")
     lines.append("")
     lines.append("Generated from the corpus backend. Each entry includes senses,")
     lines.append("wordforms, frequencies, and ranked example sentences.")
@@ -132,26 +232,33 @@ def generate_sample_entries(db: Backend,
     lines.append("---")
     lines.append("")
     
-    # Get lemmas
-    if lemmas:
-        # Specific lemmas requested
-        entries = []
-        for lemma_id in lemmas:
-            lemma = db.get_lemma(lemma_id)
-            if lemma:
-                entries.append(lemma)
-    else:
-        # Filter by POS/type
-        entries = db.get_lemmas_by_pos(pos or 'V', entry_type=entry_type, limit=limit)
+    selected_pos = pos or ('V' if entry_type is None else None)
+    entries, audit = select_sample_lemmas(
+        db,
+        pos=selected_pos,
+        entry_type=entry_type,
+        lemmas=lemmas,
+        limit=limit,
+        include_review=include_review,
+    )
     
     # Statistics
     lines.append(f"## Statistics")
     lines.append("")
-    lines.append(f"- **Entries shown:** {len(entries)}")
-    if pos:
-        lines.append(f"- **POS filter:** {pos}")
+    lines.append(f"- **Entries considered:** {audit.considered}")
+    lines.append(f"- **Entries emitted:** {audit.emitted}")
+    if selected_pos:
+        lines.append(f"- **POS filter:** {selected_pos}")
     if entry_type:
         lines.append(f"- **Type filter:** {entry_type}")
+    lines.append(f"- **Include needs_review entries:** {'yes' if include_review else 'no'}")
+    lines.append("")
+    lines.append("## Generation Audit")
+    lines.append("")
+    lines.append(f"- **Skipped for empty primary_gloss:** {audit.skipped_empty_gloss}")
+    lines.append(f"- **Skipped for `?` primary_gloss:** {audit.skipped_unknown_gloss}")
+    lines.append(f"- **Skipped for needs_review:** {audit.skipped_needs_review}")
+    lines.append(f"- **Skipped for entry_type mismatch:** {audit.skipped_entry_type_mismatch}")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -183,6 +290,8 @@ def main():
                         help='Filter by entry type (lexical, grammatical, mixed)')
     parser.add_argument('--limit', type=int, default=20,
                         help='Maximum entries to generate')
+    parser.add_argument('--include-review', action='store_true',
+                        help='Include lemmas flagged needs_review in lexical draft samples')
     parser.add_argument('--no-wordforms', action='store_true',
                         help='Omit wordform lists')
     parser.add_argument('--no-examples', action='store_true',
@@ -201,7 +310,8 @@ def main():
         lemmas=args.lemmas,
         limit=args.limit,
         include_wordforms=not args.no_wordforms,
-        include_examples=not args.no_examples
+        include_examples=not args.no_examples,
+        include_review=args.include_review,
     )
     
     # Write output
