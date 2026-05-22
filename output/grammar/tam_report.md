@@ -90,17 +90,17 @@ Core TAM markers that attach to verb stems.
 
 #### khin (COMPL)
 
-**Jeremiah 4:10**
-> Tua ciangin keimah in, “Ah, Topa Pasian aw, nangmah in hih mite le Jerusalem khuamite khem cih takin na khem khinzo hi. Bang hang hiam cih leh amau kiangah, 'Nopna hong om ding hi,' ci napi-in, amau a sunlum dingin namsau khat a om gige hi,” ka ci hi.
+**Jeremiah 3:6**
+> Kumpi Josiah in a uk laitakin Topa in kei hong hopih a, “A zulhzau Israel, mualsang tung khempeuhah pai-in singliim nuai khempeuhah numei paktat bangin a om kawikawina na mu khinzo hiam?
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *Then said I, Ah, Lord GOD ! surely thou hast greatly deceived this people and Jerusalem, saying, Ye shall have peace; whereas the sword reacheth unto the soul.*
+> KJV: *The LORD said also unto me in the days of Josiah the king, Hast thou seen that which backsliding Israel hath done? she is gone up upon every high mountain and under every green tree, and there hath played the harlot.*
 
-**1 Kings 1:35**
-> Tua ciangin ama nungah note nong pai ding uh a, amah hong pai-in ka kumpi tokhom tungah hong tu ding hi; bang hang hiam cih leh keima tangin amah kumpi hi ding hi. Israel le Judah a ukpa dingin amah ka seh khinzo hi,” a ci hi.
-> *khin-zo*
-> COMPL-COMPL
-> KJV: *Then ye shall come up after him, that he may come and sit upon my throne; for he shall be king in my stead: and I have appointed him to be ruler over Israel and over Judah.*
+**1 Chronicles 10:7**
+> Kuam sungah a om Israel mite khempeuh in galkapte tai khinin, Saul le a tapate a sihna a theih uh ciangin amaute in a khuapite uh nusia-in a tai uh hi. Tua ciangin Filistia mite hong pai-in tua khuate sungah a teng uh hi.
+> *khin-in*
+> COMPL-CVB
+> KJV: *And when all the men of Israel that were in the valley saw that they fled, and that Saul and his sons were dead, then they forsook their cities, and fled: and the Philistines came and dwelt in them.*
 
 ---
 
@@ -119,31 +119,31 @@ Particles that mark sentence mood and illocutionary force.
 
 #### hi (DECL)
 
-**Acts 22:16**
-> Tu-in bang ngak lai ding na hi hiam? Tho inla, Pasian kiangah thu ngenin kituiphum inla, na mawhnate silsiangsak in,' hong ci hi.
+**1 Chronicles 26:14**
+> Nisuahna lama dingin ai, Shelemiah tungah tu hi. A tapa, a pil thulamlak pa Zekhariah a dingin zong ai san uh a, leilu lama dingin ai pha hi.
 > *hi'*
 > DECL.POSS
-> KJV: *And now why tarriest thou? arise, and be baptized, and wash away thy sins, calling on the name of the Lord.*
+> KJV: *And the lot eastward fell to Shelemiah. Then for Zechariah his son, a wise counsellor, they cast lots; and his lot came out northward.*
 
-**Psalms 37:26**
-> Amah in mi citpiak ngitngetin, mi tungah leitawi piakhia a, a suanlekhakte zong thupha ngah mi a suak hi.
+**Mark 10:16**
+> Tua ciangin naupangnote la-in a ang-ah tawi a, a tung uhah a khut nga-in thupha a pia hi.
 > *hi'*
 > DECL.POSS
-> KJV: *He is ever merciful, and lendeth; And his seed is blessed.*
+> KJV: *And he took them up in his arms, put his hands upon them, and blessed them.*
 
 #### hiam (Q)
 
-**Judges 6:13**
-> Gideon in ama kiangah, “Kong thum hi, sia aw, Topa in kote hong ompih ahihleh, bang hangin hih thu khempeuh ko tungah hong tung ahi hiam? Ka pate un kote tungah hong genin, ' Topa in Egypt panin eite hong paipih hi lo ahi hiam?' a cih uh a lamdang ama sepnate khempeuh koi-ah om ta ahi hiam? Ahih hangin tu-in Topa in kote hong paaikhia-in Midian-te' khut sungah hong pia khin hi,” a ci hi.
-> *Hiam*
+**Judges 6:29**
+> Amaute khatlekhat kiangah, “Hih na kua in hih ahi hiam?” kici uh hi. Amaute in a thu kanin a dot uh ciangin, “Joash' tapa Gideon in hih hi,” kici uh hi.
+> *hiam*
 > Q
-> KJV: *And Gideon said unto him, Oh my Lord, if the LORD be with us, why then is all this befallen us? and where be all his miracles which our fathers told us of, saying, Did not the LORD bring us up from Egypt? but now the LORD hath forsaken us, and delivered us into the hands of the Midianites.*
+> KJV: *And they said one to another, Who hath done this thing? And when they enquired and asked, they said, Gideon the son of Joash hath done this thing.*
 
-**Jeremiah 27:13**
-> Bang hangin namsau tawh, kialpi tawh, pulnatna tawh nang le na mite si ding uh ahi hiam? Babylon kumpipa' na a sem lo gam khat peuhpeuh tuaci sih ding, ci-in Topa in a gen hi.
+**Psalms 139:7**
+> Nangmah a pelh dingin koi-ah pai ding a, nangma omna panin koi lai-ah taikhia ding ka hi hiam?
 > *Hiam*
 > Q
-> KJV: *Why will ye die, thou and thy people, by the sword, by the famine, and by the pestilence, as the LORD hath spoken against the nation that will not serve the king of Babylon?*
+> KJV: *Whither shall I go from thy spirit? Or whither shall I flee from thy presence?*
 
 #### ang (FUT)
 

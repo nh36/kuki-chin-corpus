@@ -153,11 +153,11 @@ Marks accompaniment ("with, together with"). Can extend to instrumental uses.
 > REFL-COM
 > 'Surely there is a vein for the silver, And a place for gold where they fine it .'
 
-**Numbers 23:21**
-> Amah in Jakob mite tungah mawhna mu lo a, Israel mite tungah gamtatsiatna mu lo hi. Topa amau' Pasian, amaute tawh om a, kumpipa phatna awging amaute' lakah om hi.
+**Psalms 86:12**
+> Topa ka Pasian aw, ka lungsim khempeuh tawh na tungah ka lungdam a, nangma min ka thangsak ngitnget ding hi.
 > *tawh*
 > COM
-> 'He hath not beheld iniquity in Jacob, Neither hath he seen perverseness in Israel: The LORD his God is with him, And the shout of a king is among them.'
+> 'I will praise thee, O Lord my God, with all my heart: And I will glorify thy name for evermore.'
 
 ---
 
@@ -179,17 +179,17 @@ Marks source or origin ("from"). Used for spatial, temporal, and abstract origin
 > midst-ABL
 > 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them , the same shall be called great in the kingdom of heaven.'
 
-**Exodus 12:17**
-> Note in silngo sawh loh anlum pawi na bawl ding uh hi. Bang hang hiam cih leh hih ni teekteekin Egypt leitang panin na mihonte uh ka paikhiatpih hi. Tua ahih ciangin note in na khan tawntungun hih ni pen biakna ngeina kip khatin na nei tawntung ding uh hi.
+**Ezekiel 23:24**
+> Amaute in leilu lam panin nang hong sim ding uh a, leeng galkap le vanpua leeng tampi hong kengin galkap tampi tak tawh hong kuan ding uh hi. Lumte le siklukhute tawh kidalin amaute in nang hong umcih ding uh hi. Amaute' khut sungah nang kong ap ding a, amaute' ngeina om bangin nang' tungah thu hong khen ding uh hi.
 > *pan-in*
 > ABL-ERG
-> 'And ye shall observe the feast of unleavened bread; for in this selfsame day have I brought your armies out of the land of Egypt: therefore shall ye observe this day in your generations by an ordinance for ever.'
+> 'And they shall come against thee with chariots, wagons, and wheels, and with an assembly of people, which shall set against thee buckler and shield and helmet round about: and I will set judgment before them, and they shall judge thee according to their judgments.'
 
-**Revelation 19:5**
-> Tua ciangin tokhom panin aw khat hong ging a, “Amah a kihta a lian a neu mite, le ama nasem khempeuhte aw, eite' Pasian phat un,” a ci hi.
+**Isaiah 49:21**
+> Tua ciangin na lungsimah, 'Kua in keima a dingin hih mite hong hinkhiatsak ahi hiam? Kei hong kinusia-in tang-awlin ka om a, salin hong kikoihin hong kipaikhiatpih hi. Hihte kua in hong khoisak ahi hiam? Keimah guakin hong kinusia hi. Tua ahih manin koi lai panin hihte hong piang ahi hiam?' na ci ding hi,” a ci hi.
 > *pan-in*
 > ABL-ERG
-> 'And a voice came out of the throne, saying, Praise our God, all ye his servants, and ye that fear him, both small and great.'
+> 'Then shalt thou say in thine heart, Who hath begotten me these, seeing I have lost my children, and am desolate, a captive, and removing to and fro? and who hath brought up these? Behold, I was left alone; these, where had they been?'
 
 ---
 
