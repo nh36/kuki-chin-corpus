@@ -165,16 +165,14 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. ✅ Tedim Chin analyzer complete (100% coverage)
-2. ✅ Bootstrap pipeline (`scripts/bootstrap_language.py`) for rapid replication
-3. [ ] Mizo (lus) analyzer – iterate on `scripts/lus_analyzer.py` using `analysis/lus/lus.work_queue.tsv`
-4. [ ] Generate Leipzig-glossed sample chapters (Matthew, Mark)
-5. [ ] Scale methodology to remaining 17 Kuki-Chin languages
-6. [ ] Henderson vocabulary extraction for supplementary entries
-7. [ ] Build comparative dictionary across languages
+1. [ ] Review and merge the clean Tedim grammar-integration branch (`tedim-grammar-integration-clean`).
+2. [ ] Generate and review the Tedim grammar draft, using `docs/grammar/grammar_source_map.json` as the current topic/construction source of truth when backend `grammar_topics` and `constructions` remain empty.
+3. [ ] Generate and review the Tedim dictionary draft.
+4. [ ] Build the Tedim chrestomathy/reader pipeline, starting with one sample chapter.
+5. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim grammar, dictionary, and chrestomathy package is in publishable form.
 
 ---
 
-*Last updated: 2026-03-22*  
+*Last updated: 2026-05-22*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*

@@ -1,0 +1,1077 @@
+{
+  "meta": {
+    "title": "Tedim grammar source map",
+    "focus": "Tedim Chin only",
+    "description": "Integration layer that maps Tedim grammar topics to legacy grammar materials, analyzer-gap notes, and generated outputs.",
+    "canonical_topic_layer": "docs/grammar/grammar_source_map.json",
+    "source_inventory": "docs/grammar/GRAMMAR_SOURCE_INVENTORY.md",
+    "backend_topic_tables_note": "scripts/backend.py migrate creates the grammar_topics and constructions tables, but the current Tedim pipeline does not populate them; use this source map as the canonical topic/construction layer."
+  },
+  "topic_mappings": [
+    {
+      "topic_id": "pronominal-prefixes",
+      "title": "Pronominal prefixes, subject agreement, and possessive prefixes",
+      "chapter_area": "4. Pronouns and pronominal marking",
+      "sort_order": 10,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/01-prefixes.md",
+        "docs/grammar/reports/05-verb-03-agreement.md",
+        "docs/grammar/reports/06-func-01-pronouns.md",
+        "docs/grammar/lit-reviews/06-func-01-pronouns-lit.md",
+        "docs/grammar/lit-reviews/04-np-07-possession-lit.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_LITERATURE_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "ka-",
+        "na-",
+        "a-",
+        "i-",
+        "kong-",
+        "hong-"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-03-agreement.md",
+        "docs/grammar/reports/06-func-01-pronouns.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/06-func-01-pronouns-lit.md",
+        "docs/grammar/lit-reviews/04-np-07-possession-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/01-prefixes.md"
+      ],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_LITERATURE_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "4.2 Pronominal Prefixes; 4.3 Object Prefixes",
+      "example_forms": [
+        "kong",
+        "hong"
+      ],
+      "example_categories": [
+        "pronominal_prefix",
+        "object_marker"
+      ],
+      "notes_human_review": "Agreement vs. possession is regression-tested, but the older analyzer-gap documents still describe this contrast as open and need to be reconciled with current output."
+    },
+    {
+      "topic_id": "ergative-marking",
+      "title": "Ergative marking",
+      "chapter_area": "3. Nominal morphology and case",
+      "sort_order": 20,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/02-case-markers.md",
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/05-verb-08-derivational.md",
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md",
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md",
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-in"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/05-verb-08-derivational.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md",
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/02-case-markers.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "3.1.1 Ergative -in",
+      "example_forms": [
+        "in"
+      ],
+      "example_categories": [
+        "case_marker"
+      ],
+      "notes_human_review": "Ergative marking is well covered in corpus and literature layers, but valency-changing sections should still check whether examples are pure ergative tokens rather than converbs or quotative -in."
+    },
+    {
+      "topic_id": "locative-marking",
+      "title": "Locative marking",
+      "chapter_area": "3. Nominal morphology and case",
+      "sort_order": 30,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/02-case-markers.md",
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/03-noun-04-relators.md",
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md",
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-ah"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/03-noun-04-relators.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/02-case-markers.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "3.1.2 Locative -ah",
+      "example_forms": [
+        "ah"
+      ],
+      "example_categories": [
+        "case_marker"
+      ],
+      "notes_human_review": "The case-marking layer is current, but locative examples should be checked against relator-noun material because some spatial uses are better handled as relational constructions."
+    },
+    {
+      "topic_id": "ablative-marking",
+      "title": "Ablative and source marking",
+      "chapter_area": "3. Nominal morphology and case",
+      "sort_order": 40,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/02-case-markers.md",
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md",
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-pan",
+        "-panin"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/03-noun-05-postpositions.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/02-case-markers.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "3.1.4 Ablative -pan(in)",
+      "example_forms": [
+        "pan"
+      ],
+      "example_categories": [
+        "case_marker"
+      ],
+      "notes_human_review": "Source-marking is straightforward in the case inventory, but mixed spellings and fused forms still need manual checking when cited in grammar prose."
+    },
+    {
+      "topic_id": "comitative-marking",
+      "title": "Comitative and postposition marking",
+      "chapter_area": "3. Nominal morphology and case",
+      "sort_order": 50,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/02-case-markers.md",
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/03-noun-04-relators.md",
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md",
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-tawh"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/03-noun-04-relators.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/02-case-markers.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/case_marking_report.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "3.1.3 Comitative -tawh",
+      "example_forms": [
+        "tawh"
+      ],
+      "example_categories": [
+        "case_marker"
+      ],
+      "notes_human_review": "Comitative uses overlap with relator and applicative material, so the final grammar should distinguish simple accompaniment from valency-increasing uses of related morphology."
+    },
+    {
+      "topic_id": "relator-nouns",
+      "title": "Relator nouns and spatial relational constructions",
+      "chapter_area": "3. Nominal morphology and case",
+      "sort_order": 60,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/grammar/DISAMBIGUATION.md",
+        "docs/grammar/reports/03-noun-04-relators.md",
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/03-noun-06-np-structure.md",
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "tung",
+        "sung",
+        "kiang",
+        "lak",
+        "nuai",
+        "mai"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/03-noun-04-relators.md",
+        "docs/grammar/reports/03-noun-05-postpositions.md",
+        "docs/grammar/reports/03-noun-06-np-structure.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md"
+      ],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "3.1 Case Markers (complementary to spatial case sections)",
+      "example_forms": [],
+      "example_search_terms": [
+        "tungah",
+        "sungah",
+        "kiangah",
+        "lakah",
+        "nuaiah"
+      ],
+      "notes_human_review": "Relator nouns are described in current reports and disambiguation notes, but they still need a clean routing path into the chaptered grammar and chrestomathy commentary."
+    },
+    {
+      "topic_id": "verb-stem-alternation",
+      "title": "Verb stem alternation",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 70,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/reports/05-verb-01-stems.md",
+        "docs/grammar/reports/05-verb-00-paradigm-tables.md",
+        "docs/grammar/reports/05-verb-11-vsa-questionnaire.md",
+        "docs/grammar/lit-reviews/05-verb-01-stems-lit.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "Stem I",
+        "Stem II"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-01-stems.md",
+        "docs/grammar/reports/05-verb-00-paradigm-tables.md",
+        "docs/grammar/reports/05-verb-11-vsa-questionnaire.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-01-stems-lit.md"
+      ],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "5.1 Stem Alternation (Form I / Form II)",
+      "example_search_terms": [
+        "muh",
+        "theih",
+        "cih"
+      ],
+      "notes_human_review": "Stem alternation is well represented, but any grammar prose that treats Form II as purely subordinate should still be checked against valency and nominalization sections."
+    },
+    {
+      "topic_id": "perfective-ta",
+      "title": "Perfective -ta",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 80,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/03-aspect.md",
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-05-aspect.md",
+        "docs/grammar/lit-reviews/05-verb-05-aspect-lit.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-ta"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-05-aspect.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-05-aspect-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/03-aspect.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.3.3 Perfective -ta",
+      "example_forms": [
+        "ta"
+      ],
+      "example_categories": [
+        "tam_suffix"
+      ],
+      "notes_human_review": "Perfective material is current, but examples should be screened for lexicalized forms where surface -ta is not a clean perfective suffix."
+    },
+    {
+      "topic_id": "completive-zo",
+      "title": "Completive -zo",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 90,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/03-aspect.md",
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-05-aspect.md",
+        "docs/grammar/lit-reviews/05-verb-05-aspect-lit.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-zo"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-05-aspect.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-05-aspect-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/03-aspect.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.3.2 Completive -zo",
+      "example_forms": [
+        "zo"
+      ],
+      "example_categories": [
+        "tam_suffix"
+      ],
+      "notes_human_review": "Completive coverage is rich in reports, but final grammar prose should distinguish pure completive -zo from lexicalized compounds ending in zo."
+    },
+    {
+      "topic_id": "irrealis-ding",
+      "title": "Irrealis -ding",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 100,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/05-modal.md",
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-07-modal.md",
+        "docs/grammar/lit-reviews/05-verb-05-aspect-lit.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-ding"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-07-modal.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-05-aspect-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/05-modal.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.3.1 Irrealis -ding",
+      "example_forms": [
+        "ding"
+      ],
+      "example_categories": [
+        "irrealis_marker",
+        "tam_suffix"
+      ],
+      "notes_human_review": "Irrealis morphology is current and frequent, but purpose-clause forms in -dingin need to stay connected to the subordination chapter as well as TAM."
+    },
+    {
+      "topic_id": "ability-thei-theih",
+      "title": "Ability -thei / -theih",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 110,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/05-modal.md",
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-07-modal.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_LITERATURE_GAPS.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-thei",
+        "-theih"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-04-tam.md",
+        "docs/grammar/reports/05-verb-07-modal.md"
+      ],
+      "relevant_literature_reviews": [],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/05-modal.md"
+      ],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_LITERATURE_GAPS.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.2.5 Ability -theih",
+      "example_search_terms": [
+        "thei",
+        "theih"
+      ],
+      "notes_human_review": "Current regression tests cover the Form I/Form II allomorphy, but the older analyzer-gap analysis still treats abilitative coverage as incomplete."
+    },
+    {
+      "topic_id": "directional-suffixes",
+      "title": "Directional suffixes",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 120,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/04-directional.md",
+        "docs/grammar/reports/05-verb-06-directional.md",
+        "docs/grammar/lit-reviews/05-verb-06-directional-lit.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_LITERATURE_GAPS.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-khia",
+        "-khiat",
+        "-lut",
+        "-toh",
+        "-suk",
+        "-phei"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-06-directional.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-06-directional-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/04-directional.md"
+      ],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_LITERATURE_GAPS.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.2.3 Directional Suffixes",
+      "example_search_terms": [
+        "khia",
+        "khiat",
+        "lut",
+        "toh",
+        "suk",
+        "phei"
+      ],
+      "notes_human_review": "The directional inventory is partly verified by current tests, but the morpheme literature file still marks several items as unconfirmed and should remain the review anchor."
+    },
+    {
+      "topic_id": "inverse-hong",
+      "title": "Deictic and inverse prefix hong-",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 130,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/01-prefixes.md",
+        "docs/grammar/reports/05-verb-03-agreement.md",
+        "docs/grammar/reports/06-func-01-pronouns.md",
+        "docs/grammar/DISAMBIGUATION.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "hong-"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-03-agreement.md",
+        "docs/grammar/reports/06-func-01-pronouns.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/06-func-01-pronouns-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/01-prefixes.md"
+      ],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "4.3 Object Prefixes",
+      "example_forms": [
+        "hong"
+      ],
+      "example_categories": [
+        "object_marker"
+      ],
+      "notes_human_review": "The inverse prefix is present in current reports and disambiguation rules, but the specific hong- plus -sak constraint documented in older gap notes still needs explicit verification."
+    },
+    {
+      "topic_id": "causative-sak",
+      "title": "Causative -sak",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 140,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/06-derivational.md",
+        "docs/grammar/reports/05-verb-08-derivational.md",
+        "docs/grammar/reports/05-verb-09-valency.md",
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-sak"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-08-derivational.md",
+        "docs/grammar/reports/05-verb-09-valency.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/06-derivational.md"
+      ],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.2.1 Causative -sak",
+      "example_forms": [
+        "sak"
+      ],
+      "example_search_terms": [
+        "sak"
+      ],
+      "notes_human_review": "Current tests support the Form I causative reading, but grammar prose should keep causative and benefactive uses distinct rather than collapsing them under a single suffix section."
+    },
+    {
+      "topic_id": "benefactive-sak",
+      "title": "Benefactive -sak",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 150,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/grammar/morphemes/06-derivational.md",
+        "docs/grammar/reports/05-verb-08-derivational.md",
+        "docs/grammar/reports/05-verb-09-valency.md",
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-sak"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-08-derivational.md",
+        "docs/grammar/reports/05-verb-09-valency.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/06-derivational.md"
+      ],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.2.1 Causative -sak (benefactive split not yet routed separately)",
+      "example_search_terms": [
+        "muhsak",
+        "cihsak",
+        "theihsak"
+      ],
+      "notes_human_review": "Benefactive -sak is regression-tested for Form II stems, but the legacy gap documents still describe the distinction as unfinished, so this remains a review checkpoint."
+    },
+    {
+      "topic_id": "applicative-pih",
+      "title": "Applicative -pih",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 160,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/06-derivational.md",
+        "docs/grammar/reports/05-verb-08-derivational.md",
+        "docs/grammar/reports/05-verb-09-valency.md",
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-pih"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-08-derivational.md",
+        "docs/grammar/reports/05-verb-09-valency.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/06-derivational.md"
+      ],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.2.2 Applicative -pih",
+      "example_forms": [
+        "pih"
+      ],
+      "example_search_terms": [
+        "pih"
+      ],
+      "notes_human_review": "Applicative coverage exists in reports and tests, but Otsuka-style argument-structure constraints are still documented mainly in the legacy literature layer."
+    },
+    {
+      "topic_id": "reflexive-ki",
+      "title": "Reflexive and reciprocal ki-",
+      "chapter_area": "5. Verb morphology",
+      "sort_order": 170,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/morphemes/01-prefixes.md",
+        "docs/grammar/reports/05-verb-09-valency.md",
+        "docs/grammar/DISAMBIGUATION.md",
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "ki-"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/05-verb-09-valency.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/05-verb-09-valency-lit.md"
+      ],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/01-prefixes.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "4.4 Reflexive Prefix ki-",
+      "example_forms": [
+        "ki"
+      ],
+      "example_search_terms": [
+        "ki-"
+      ],
+      "notes_human_review": "Reflexive/reciprocal uses are documented, but final grammar chapters should still separate productive reflexive morphology from lexicalized ki- stems."
+    },
+    {
+      "topic_id": "negation-lo-kei",
+      "title": "Negation lo and kei",
+      "chapter_area": "6. Clause and discourse",
+      "sort_order": 180,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/reports/06-func-04-negation.md",
+        "docs/grammar/lit-reviews/06-func-04-negation-lit.md",
+        "docs/grammar/DISAMBIGUATION.md",
+        "docs/grammar/README_ANALYZER_GAPS.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "lo",
+        "kei"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/06-func-04-negation.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/06-func-04-negation-lit.md"
+      ],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [
+        "docs/grammar/README_ANALYZER_GAPS.md"
+      ],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "5.4.1 Simple Negation lo; 5.4.2 Emphatic Negation kei",
+      "example_forms": [
+        "lo",
+        "kei"
+      ],
+      "example_search_terms": [
+        "om kei",
+        "ne kei"
+      ],
+      "notes_human_review": "Current analyzer tests cover key negation patterns, but the final grammar still needs a clean bridge between negation reports, disambiguation notes, and sentence-level discussion."
+    },
+    {
+      "topic_id": "nominalization-na",
+      "title": "Nominalization -na",
+      "chapter_area": "7. Nominalization and derivation",
+      "sort_order": 190,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/reports/07-nmlz-01-deverbal.md",
+        "docs/grammar/morphemes/06-derivational.md",
+        "docs/grammar/DISAMBIGUATION.md",
+        "output/grammar/grammar_constructions.md"
+      ],
+      "relevant_morphemes": [
+        "-na"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/07-nmlz-01-deverbal.md"
+      ],
+      "relevant_literature_reviews": [],
+      "relevant_morpheme_files": [
+        "docs/grammar/morphemes/06-derivational.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/grammar_constructions.md"
+      ],
+      "skeleton_grammar_section": "7.1 -na (Nominalization)",
+      "example_forms": [
+        "na"
+      ],
+      "example_categories": [
+        "nominalizer"
+      ],
+      "notes_human_review": "The nominalizer is current in reports and disambiguation notes, but examples should be checked carefully because surface na is also a high-frequency pronominal form."
+    },
+    {
+      "topic_id": "agentive-pa-mi",
+      "title": "Agent nominalization -pa and -mi",
+      "chapter_area": "7. Nominalization and derivation",
+      "sort_order": 200,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/reports/07-nmlz-01-deverbal.md",
+        "docs/grammar/DISAMBIGUATION.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "-pa",
+        "-mi"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/07-nmlz-01-deverbal.md"
+      ],
+      "relevant_literature_reviews": [],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "7.2 -pa / -mi (Agentive)",
+      "example_search_terms": [
+        "pa",
+        "mi"
+      ],
+      "notes_human_review": "Agentive morphology is covered in the skeleton chapter, but the report layer still needs to be routed explicitly into grammar and dictionary workflows."
+    },
+    {
+      "topic_id": "interrogative-hiam",
+      "title": "Interrogative hiam",
+      "chapter_area": "6. Clause and discourse",
+      "sort_order": 210,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/reports/09-sent-01-interrogatives.md",
+        "docs/grammar/lit-reviews/09-sent-01-interrogatives-lit.md",
+        "docs/grammar/MORPHEME_INVENTORY.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "hiam"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/09-sent-01-interrogatives.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/09-sent-01-interrogatives-lit.md"
+      ],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "6.2 Interrogative hiam",
+      "example_forms": [
+        "hiam"
+      ],
+      "example_search_terms": [
+        "hiam"
+      ],
+      "notes_human_review": "Interrogative coverage is concentrated in one report and one literature review, so the integration layer should keep those attached to sentence-type drafting."
+    },
+    {
+      "topic_id": "declarative-hi",
+      "title": "Declarative hi",
+      "chapter_area": "6. Clause and discourse",
+      "sort_order": 220,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/DISAMBIGUATION.md",
+        "docs/grammar/MORPHEME_INVENTORY.md",
+        "docs/grammar/reports/10-disc-01-sentence-final.md",
+        "docs/grammar/lit-reviews/10-disc-01-sentence-final-lit.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "hi"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/10-disc-01-sentence-final.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/10-disc-01-sentence-final-lit.md"
+      ],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "6.1 Declarative hi",
+      "example_forms": [
+        "hi"
+      ],
+      "example_categories": [
+        "sentence_final"
+      ],
+      "notes_human_review": "Because hi is polysemous with copular forms, the declarative section should stay tied to disambiguation rules as well as sentence-final literature."
+    },
+    {
+      "topic_id": "topic-marker-pen",
+      "title": "Topic marker pen",
+      "chapter_area": "6. Clause and discourse",
+      "sort_order": 230,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/SKELETON_GRAMMAR.md",
+        "docs/grammar/reports/10-disc-01-sentence-final.md",
+        "docs/grammar/lit-reviews/10-disc-01-sentence-final-lit.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "pen"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/10-disc-01-sentence-final.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/10-disc-01-sentence-final-lit.md"
+      ],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "6.3 Topicalizer pen",
+      "example_forms": [
+        "pen"
+      ],
+      "example_search_terms": [
+        " pen "
+      ],
+      "notes_human_review": "Topicalization is visible in the sentence-final material but still needs consistent routing into clause/discourse chapter writing."
+    },
+    {
+      "topic_id": "major-subordination",
+      "title": "Major subordination patterns",
+      "chapter_area": "6. Clause and discourse",
+      "sort_order": 240,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/grammar/reports/08-clause-01-subordination.md",
+        "docs/grammar/reports/08-clause-02-switch-reference.md",
+        "docs/grammar/reports/08-clause-03-relatives.md",
+        "docs/grammar/lit-reviews/08-clause-03-subordination-lit.md",
+        "docs/SKELETON_GRAMMAR.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "ciangin",
+        "dingin",
+        "hangin",
+        "leh",
+        "ahih"
+      ],
+      "relevant_corpus_reports": [
+        "docs/grammar/reports/08-clause-01-subordination.md",
+        "docs/grammar/reports/08-clause-02-switch-reference.md",
+        "docs/grammar/reports/08-clause-03-relatives.md"
+      ],
+      "relevant_literature_reviews": [
+        "docs/grammar/lit-reviews/08-clause-03-subordination-lit.md"
+      ],
+      "relevant_morpheme_files": [],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "8. Complex Sentences (subordination still draft-level in chaptered grammar)",
+      "example_search_terms": [
+        "ciangin",
+        "dingin",
+        "hangin",
+        " ahih ",
+        " leh "
+      ],
+      "notes_human_review": "The corpus reports are current, but chaptered grammar and skeleton coverage are still thin, so this section should remain explicitly flagged for human synthesis."
+    },
+    {
+      "topic_id": "dictionary-chrestomathy-support",
+      "title": "Dictionary and chrestomathy support material",
+      "chapter_area": "8. Dictionary and chrestomathy support",
+      "sort_order": 250,
+      "backend_topic_ids": [],
+      "construction_ids": [],
+      "relevant_source_files": [
+        "docs/grammar/RARE_WORDS.md",
+        "docs/grammar/lexical_notes.md",
+        "docs/grammar/compound_transparency_audit.md",
+        "docs/grammar/opaque_lexemes.md",
+        "docs/grammar/MORPHEME_INVENTORY.md",
+        "output/dictionary/draft_dictionary.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "relevant_morphemes": [
+        "rare lexemes",
+        "opaque compounds",
+        "lexical notes"
+      ],
+      "relevant_corpus_reports": [],
+      "relevant_literature_reviews": [],
+      "relevant_morpheme_files": [
+        "docs/grammar/MORPHEME_INVENTORY.md"
+      ],
+      "relevant_analyzer_gap_documents": [],
+      "relevant_generated_outputs": [
+        "output/dictionary/draft_dictionary.md",
+        "output/grammar/draft_grammar.md"
+      ],
+      "skeleton_grammar_section": "Whole-grammar support material rather than one skeleton section",
+      "example_search_terms": [
+        "rare",
+        "opaque"
+      ],
+      "notes_human_review": "These materials support edited dictionary and chrestomathy work rather than direct backend topics, so the integration layer should route them as supporting evidence instead of treating them as constructions."
+    }
+  ]
+}
