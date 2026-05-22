@@ -153,11 +153,11 @@ Marks accompaniment ("with, together with"). Can extend to instrumental uses.
 > REFL-COM
 > 'Surely there is a vein for the silver, And a place for gold where they fine it .'
 
-**Isaiah 36:12**
-> Ahih hangin a ulianpa in, “Hih thute na topa uh le note' tung bekah gen ding a, amau' ek mah ne-in amau' zun mah dawnin note tawh a siakhawm ding kulh tunga a tu mite tungah a gen lo dingin ka topa in hong sawl sa na hi uh hiam?” a ci hi.
+**Numbers 23:21**
+> Amah in Jakob mite tungah mawhna mu lo a, Israel mite tungah gamtatsiatna mu lo hi. Topa amau' Pasian, amaute tawh om a, kumpipa phatna awging amaute' lakah om hi.
 > *tawh*
 > COM
-> 'But Rabshakeh said, Hath my master sent me to thy master and to thee to speak these words? hath he not sent me to the men that sit upon the wall, that they may eat their own dung, and drink their own piss with you?'
+> 'He hath not beheld iniquity in Jacob, Neither hath he seen perverseness in Israel: The LORD his God is with him, And the shout of a king is among them.'
 
 ---
 
@@ -179,17 +179,17 @@ Marks source or origin ("from"). Used for spatial, temporal, and abstract origin
 > midst-ABL
 > 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them , the same shall be called great in the kingdom of heaven.'
 
-**Nehemiah 7:46**
-> Biakinn nasemte sung panin a hong ciahkikte: Ziha suante, Hasufa suante, Tabbaoth suante,
+**Exodus 12:17**
+> Note in silngo sawh loh anlum pawi na bawl ding uh hi. Bang hang hiam cih leh hih ni teekteekin Egypt leitang panin na mihonte uh ka paikhiatpih hi. Tua ahih ciangin note in na khan tawntungun hih ni pen biakna ngeina kip khatin na nei tawntung ding uh hi.
 > *pan-in*
 > ABL-ERG
-> 'The Nethinims: the children of Ziha, the children of Hashupha, the children of Tabbaoth,'
+> 'And ye shall observe the feast of unleavened bread; for in this selfsame day have I brought your armies out of the land of Egypt: therefore shall ye observe this day in your generations by an ordinance for ever.'
 
-**Acts 13:30**
-> Ahi zongin Pasian in sihna panin amah hingkiksak a,
+**Revelation 19:5**
+> Tua ciangin tokhom panin aw khat hong ging a, “Amah a kihta a lian a neu mite, le ama nasem khempeuhte aw, eite' Pasian phat un,” a ci hi.
 > *pan-in*
 > ABL-ERG
-> 'But God raised him from the dead:'
+> 'And a voice came out of the throne, saying, Praise our God, all ye his servants, and ye that fear him, both small and great.'
 
 ---
 

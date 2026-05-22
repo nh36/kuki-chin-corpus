@@ -90,17 +90,17 @@ Core TAM markers that attach to verb stems.
 
 #### khin (COMPL)
 
-**Numbers 24:10**
-> Balaam' tungah Balak heh mahmah a, amah in a khut le a khut a tuum hi. Balak in Balaam kiangah, “Ka galte a samsia dingin nang kong sam hi. En in, nang in amaute thumvei tak thupha na pia khinzo hi.
+**Jeremiah 4:10**
+> Tua ciangin keimah in, “Ah, Topa Pasian aw, nangmah in hih mite le Jerusalem khuamite khem cih takin na khem khinzo hi. Bang hang hiam cih leh amau kiangah, 'Nopna hong om ding hi,' ci napi-in, amau a sunlum dingin namsau khat a om gige hi,” ka ci hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *And Balak's anger was kindled against Balaam, and he smote his hands together: and Balak said unto Balaam, I called thee to curse mine enemies, and, behold, thou hast altogether blessed them these three times.*
+> KJV: *Then said I, Ah, Lord GOD ! surely thou hast greatly deceived this people and Jerusalem, saying, Ye shall have peace; whereas the sword reacheth unto the soul.*
 
-**Jeremiah 50:43**
-> Babylon kumpipa in tua thu za khinzo a, bangmah a cih thei kei hi. Lungkhamin lumcip a, nupi nausuak ding bangin na a sa hi.
+**1 Kings 1:35**
+> Tua ciangin ama nungah note nong pai ding uh a, amah hong pai-in ka kumpi tokhom tungah hong tu ding hi; bang hang hiam cih leh keima tangin amah kumpi hi ding hi. Israel le Judah a ukpa dingin amah ka seh khinzo hi,” a ci hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *The king of Babylon hath heard the report of them, and his hands waxed feeble: anguish took hold of him, and pangs as of a woman in travail.*
+> KJV: *Then ye shall come up after him, that he may come and sit upon my throne; for he shall be king in my stead: and I have appointed him to be ruler over Israel and over Judah.*
 
 ---
 
@@ -119,31 +119,31 @@ Particles that mark sentence mood and illocutionary force.
 
 #### hi (DECL)
 
-**Habakkuk 1:3**
-> Bang hangin hih bang siatnate le lungkhamnate hong musak na hi hiam? Kisuksiatna le kisukgawpna in hong umcih a, kitotna le kiselna, mun citengah om hi.
+**Acts 22:16**
+> Tu-in bang ngak lai ding na hi hiam? Tho inla, Pasian kiangah thu ngenin kituiphum inla, na mawhnate silsiangsak in,' hong ci hi.
 > *hi'*
 > DECL.POSS
-> KJV: *Why dost thou shew me iniquity, and cause me to behold grievance? for spoiling and violence are before me: and there are that raise up strife and contention.*
+> KJV: *And now why tarriest thou? arise, and be baptized, and wash away thy sins, calling on the name of the Lord.*
 
-**2 Chronicles 6:2**
-> a tawntungin na tenna ding a lian biakinn khat hih lai-ah kong lamsak khin hi,” a ci hi.
-> *hi*
-> DECL
-> KJV: *But I have built an house of habitation for thee, and a place for thy dwelling for ever.*
+**Psalms 37:26**
+> Amah in mi citpiak ngitngetin, mi tungah leitawi piakhia a, a suanlekhakte zong thupha ngah mi a suak hi.
+> *hi'*
+> DECL.POSS
+> KJV: *He is ever merciful, and lendeth; And his seed is blessed.*
 
 #### hiam (Q)
 
-**Joshua 17:14**
-> Tua ciangin Josef minam in Joshua kiangah thu genin, “ Topa in kote thu hong pia khin a, kote mi tampi hi napi-in bang hangin ngah khat le tanh khat bek gamh-in hong pia na hi hiam?” a ci uh hi.
-> *hiam*
-> Q
-> KJV: *And the children of Joseph spake unto Joshua, saying, Why hast thou given me but one lot and one portion to inherit, seeing I am a great people, forasmuch as the LORD hath blessed me hitherto?*
-
-**Genesis 47:4**
-> Amaute in Faro kiangah, “Hih gamah tawlkhat a om dingin kong pai uh hi. Bang hang hiam cih leh Kanaan gamah kialpi nasia lua ahih manin tua lai-ah na nasemte' tuuhonte a' ding lonona om nawn lo hi. Tu-in kong thum uh hi. Goshen gamah na nasemte hong tengsak in,” a ci uh hi.
+**Judges 6:13**
+> Gideon in ama kiangah, “Kong thum hi, sia aw, Topa in kote hong ompih ahihleh, bang hangin hih thu khempeuh ko tungah hong tung ahi hiam? Ka pate un kote tungah hong genin, ' Topa in Egypt panin eite hong paipih hi lo ahi hiam?' a cih uh a lamdang ama sepnate khempeuh koi-ah om ta ahi hiam? Ahih hangin tu-in Topa in kote hong paaikhia-in Midian-te' khut sungah hong pia khin hi,” a ci hi.
 > *Hiam*
 > Q
-> KJV: *They said moreover unto Pharaoh, For to sojourn in the land are we come; for thy servants have no pasture for their flocks; for the famine is sore in the land of Canaan: now therefore, we pray thee, let thy servants dwell in the land of Goshen.*
+> KJV: *And Gideon said unto him, Oh my Lord, if the LORD be with us, why then is all this befallen us? and where be all his miracles which our fathers told us of, saying, Did not the LORD bring us up from Egypt? but now the LORD hath forsaken us, and delivered us into the hands of the Midianites.*
+
+**Jeremiah 27:13**
+> Bang hangin namsau tawh, kialpi tawh, pulnatna tawh nang le na mite si ding uh ahi hiam? Babylon kumpipa' na a sem lo gam khat peuhpeuh tuaci sih ding, ci-in Topa in a gen hi.
+> *Hiam*
+> Q
+> KJV: *Why will ye die, thou and thy people, by the sword, by the famine, and by the pestilence, as the LORD hath spoken against the nation that will not serve the king of Babylon?*
 
 #### ang (FUT)
 
