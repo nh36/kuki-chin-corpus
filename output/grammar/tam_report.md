@@ -90,17 +90,17 @@ Core TAM markers that attach to verb stems.
 
 #### khin (COMPL)
 
-**Judges 16:18**
-> Ama tungah a lungsim khempeuh gen khin hi, ci-in Delilah in a theih ciangin amah in mi sawlin Filistia mi uliante sam a, “Tu-a khatvei hong pai un; bang hang hiam cih leh amah in a lungsim khempeuh kei kiangah hong gen khinzo hi,” a ci hi. Tua ciangin Filistia uliante tua nu kiangah hong pai-in sum zong hong pua uh hi.
+**Romans 10:18**
+> Tua ahihleh amaute in thu za lo uh ahi hiam? Lai Siangtho sungah, “Amau' awgingte leitung khempeuh ah kizel a, a thugente uh in mun khempeuh a ban hi,” ci-in a kigelh mah bangin amaute in thu za khinzo uh hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *And when Delilah saw that he had told her all his heart, she sent and called for the lords of the Philistines, saying, Come up this once, for he hath shewed me all his heart. Then the lords of the Philistines came up unto her, and brought money in their hand.*
+> KJV: *But I say, Have they not heard? Yes verily, Their sound went into all the earth, And their words unto the ends of the world.*
 
-**Micah 6:8**
-> Mun khempeuhah a om no mihingte aw, Topa in a hoih nate hong gen khinzo hi. Topa in note tung panin hong kalh thu in: Thuman thutang sem ding a, itna kip nei tawntungin, kiniamkhiatna tawh Pasian' thu man' ding ahi hi.
+**Jeremiah 3:5**
+> nang keima tungah heh tawntung ding na hi hiam? A tawp dongin lungham den ding na hi hiam?' na hong ci hi. En in, tua bang na cih hangin, siatna na hih theih khempeuh na hih khinzo hi,” a ci hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?*
+> KJV: *Will he reserve his anger for ever? will he keep it to the end? Behold, thou hast spoken and done evil things as thou couldest.*
 
 ---
 
@@ -119,31 +119,31 @@ Particles that mark sentence mood and illocutionary force.
 
 #### hi (DECL)
 
-**Psalms 77:11**
-> Topa' sepnate ka lungsimah ka phawk ding a, hun lui lai-a nangma na lamdangte ka ciamteh ding hi.
+**Daniel 7:15**
+> Ka maangmuhnate in hong linglawng sakin a hong patausak mahmah hi.
 > *hi'*
 > DECL.POSS
-> KJV: *I will remember the works of the LORD : Surely I will remember thy wonders of old.*
+> KJV: *I Daniel was grieved in my spirit in the midst of my body, and the visions of my head troubled me.*
 
-**Daniel 11:18**
-> Tua khit ciangin tuipi tungtawnin minam dangte sim ding a, tampi tak mah a zo ding hi. Ahih hangin gamdang makai khat in amah zogawp ding a, a minthanna teng a beisak ding hi.
+**Psalms 119:142**
+> Nangma thumanna kip tawntung a, na thukham zong man tawntung hi.
 > *hi'*
 > DECL.POSS
-> KJV: *After this shall he turn his face unto the isles, and shall take many: but a prince for his own behalf shall cause the reproach offered by him to cease; without his own reproach he shall cause it to turn upon him.*
+> KJV: *Thy righteousness is an everlasting righteousness, And thy law is the truth.*
 
 #### hiam (Q)
 
-**John 12:39**
-> Tua ahih manin amaute in um nuam lo uh hi. Bang hang hiam cih leh Isaiah mah in,
+**Matthew 11:23**
+> Kapernaum khuapi mite aw, van a sangna munah hong kipahtawi ding sa na hi uh hiam? Hell khuk sungah hong kilawnsuk ding hi. Bang hang hiam cih leh note' khuasunga hong kibawl na lamdangte, Sodom khua sungah kibawl hileh tuni dongin tua khua kip lai ding hi.
 > *Hiam*
 > Q
-> KJV: *Therefore they could not believe, because that Esaias said again,*
+> KJV: *And thou, Capernaum, which art exalted unto heaven, shalt be brought down to hell: for if the mighty works, which have been done in thee, had been done in Sodom, it would have remained until this day.*
 
-**2 Corinthians 5:1**
-> Bang hang hiam cih leh hih ka tenna ka leitung pumpi uh a sih ciangin mihingte bawl ahi lo, Pasian in a kip tawntung dingin kote a dingin a hong bawlsak inn, vantungah a nei ding ka hihna uh ka thei uh hi.
+**Ruth 3:1**
+> Tua ciangin a teeknu Naomi in ama kiangah, “Ka tanu aw, inn khat na suantheih nadingin na pasal ding kong vaihawmsak ding kilawm hi lo ahi hiam?
 > *Hiam*
 > Q
-> KJV: *For we know that if our earthly house of this tabernacle were dissolved, we have a building of God, an house not made with hands, eternal in the heavens.*
+> KJV: *Then Naomi her mother in law said unto her, My daughter, shall I not seek rest for thee, that it may be well with thee?*
 
 #### ang (FUT)
 

@@ -153,11 +153,11 @@ Marks accompaniment ("with, together with"). Can extend to instrumental uses.
 > REFL-COM
 > 'Surely there is a vein for the silver, And a place for gold where they fine it .'
 
-**Ezekiel 20:7**
-> Kei pen Topa amaute' Pasian ka hih manin a muhdahhuai a milim itte uh paikhia-in, Egypt mite' pasian man lote tawh a kinitsak loh nading uh ka gen hi.
+**John 18:18**
+> Khua dam mahmah ahih manin nasemte le palikte in meihol cih a, tua mei awi-in a kiimah ding uh ahih manin Peter zong va pai-in mei awi-in amaute tawh a dingkhawm hi.
 > *tawh*
 > COM
-> 'then said I unto them, Cast ye away every man the abominations of his eyes, and defile not yourselves with the idols of Egypt; I am the LORD your God.'
+> 'And the servants and officers stood there, who had made a fire of coals; for it was cold: and they warmed themselves: and Peter stood with them, and warmed himself.'
 
 ---
 
@@ -179,17 +179,17 @@ Marks source or origin ("from"). Used for spatial, temporal, and abstract origin
 > midst-ABL
 > 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them , the same shall be called great in the kingdom of heaven.'
 
-**Joshua 2:13**
-> Ka nu, ka pa, ka sanggamnute, ka sanggampate, le amaute tawh a kizomte khempeuh hong hon unla, sihna panin kote hong suaktasak un,” a ci hi.
+**Isaiah 38:17**
+> Gimna lianpi ka thuakna pen keima lungnopna hong suak ding hi. Lauhuaina khempeuh panin kei nong honkhia a, ka mawhna khempeuh na hong maisak hi.
 > *pan-in*
 > ABL-ERG
-> 'and that ye will save alive my father, and my mother, and my brethren, and my sisters, and all that they have, and deliver our lives from death.'
+> 'Behold, for peace I had great bitterness: But thou hast in love to my soul delivered it from the pit of corruption: For thou hast cast all my sins behind thy back.'
 
-**1 Kings 6:24**
-> Kherub kha langkhat, pi sagih le alang sau-in, kherub kha lang dang khat, pi sagih le alang mah sau a, a kha langkhat mong panin a mong langkhat dong pi sawm le nga ahi hi.
+**Ruth 4:9**
+> Tua ciangin Boaz in upate le mi khempeuh kiangah, “Tuni-in note pen Naomi' tung panin Elimelek le Khilion le Mahlon' neihsa khempeuh ka lei khitna thu teci na hi uh hi.
 > *pan-in*
 > ABL-ERG
-> 'And five cubits was the one wing of the cherub, and five cubits the other wing of the cherub: from the uttermost part of the one wing unto the uttermost part of the other were ten cubits.'
+> 'And Boaz said unto the elders, and unto all the people, Ye are witnesses this day, that I have bought all that was Elimelech's, and all that was Chilion's and Mahlon's, of the hand of Naomi.'
 
 ---
 
