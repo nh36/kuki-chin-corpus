@@ -67,11 +67,11 @@ dingin (4,833), nadingun (671), dingun (103), dinga (83), dingteng (19), dingsak
 > IRR-ERG
 > 'And the LORD God took the man, and put him into the garden of Eden to dress it and to keep it.'
 
-**Genesis 1:14** [additional]
-> Pasian in, “Sun le zan a khen dingin vantungah khuavakte om hen; tuate pen pawi hun le khuahun, ni le kumte khen nading hi hen la,
+**Genesis 1:15** [additional]
+> leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi. Tua mah bangin a piang pah hi.
 > *ding-in*
 > IRR-ERG
-> 'And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:'
+> 'and let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.'
 
 ⚠️ *Needs review*
 
@@ -131,11 +131,11 @@ tua (3,670), “Tua (297), tuak (100), kituak (53), tuah (47), tuakah (26), kitu
 > that
 > 'And God said, Let there be light: and there was light.'
 
-**Genesis 1:2** [additional]
-> Leitung in limlemel nei loin a awngthawlpi ahi hi. Tuipi tung tengah khua mial bikbek a, tua tui tungah Pasian' Kha in na a sem hi.
+**Genesis 1:6** [additional]
+> Pasian in, “Tuite' laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.
 > *tua*
 > that
-> 'And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.'
+> 'And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.'
 
 ---
 
@@ -163,11 +163,11 @@ Amah (1,854), “Amah (120), (Amah (2), “'Amah (1)
 > 3SG.PRO
 > 'And Adam called his wife's name Eve; because she was the mother of all living.'
 
-**Genesis 1:16** [additional]
-> Pasian in khuavak lian nih bawl a, khuavak lianzaw pen sun a uk ding, khuavak neuzaw pen zan a uk dingin bawl a, amah in aksite zong a bawl hi. Leitungah khua a vaksak ding, sun le zan a uk ding, khuamial panin khuavak a khenkhia dingin Pasian in vantungah tuate a koih hi. Pasian in tua pen hoih hi, ci-in a mu hi.
+**Genesis 2:18** [additional]
+> Tua ciangin Topa Pasian in, “Mipa amah guak a om ding hoih lo hi. Ama a' ding a kituak a huh ding ka bawlsak ding hi,” ci hi.
 > *amah*
 > 3SG.PRO
-> 'And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.'
+> 'And the LORD God said, It is not good that the man should be alone; I will make him an help meet for him.'
 
 ---
 
@@ -231,11 +231,11 @@ Amaute (144), “Amaute (14), amaute-a (4), “'Amaute (1), (Amaute (1)
 > TOP
 > 'And the name of the second river is Gihon: the same is it that compasseth the whole land of Ethiopia.'
 
-**Genesis 1:5** [additional]
-> Pasian in khuavak pen “Sun” ci a, khuamial pen “Zan” ci hi. Nitak hong bei-in, zingsang hong tung a, ni khat ni ahi hi.
+**Genesis 1:8** [additional]
+> Pasian in van kuumpi pen “Vantung” ci hi. Nitak hong bei-in zingsang hong tung a, ni nih ni ahi hi.
 > *pen*
 > TOP
-> 'And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.'
+> 'And God called the firmament Heaven. And the evening and the morning were the second day.'
 
 ---
 
@@ -271,11 +271,11 @@ Ama (1)
 > 3SG.POSS
 > 'And it came to pass at the end of forty days, that Noah opened the window of the ark which he had made:'
 
-**Genesis 1:27** [additional]
-> Tua ahih ciangin Pasian in ama lim bangin mihing piangsakin, Pasian' lim bangin amah a piangsak hi. Amah in pasal le numei a piangsak hi.
+**Genesis 2:2** [additional]
+> Ni sagih ma-in Pasian in a nasepte zo khinta a, ama hihsa nasep khempeuh panin ni sagih ni-in a tawlnga hi.
 > *ama*
 > 3SG.POSS
-> 'So God created man in his own image, in the image of God created he him; male and female created he them.'
+> 'And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made.'
 
 ---
 
@@ -314,11 +314,11 @@ Note (122), “Note (26), “Note-a (1), (Note (1)
 > 2PL.PRO
 > 'And I, behold, I establish my covenant with you, and with your seed after you;'
 
-**Genesis 1:29** [additional]
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le a gah sungah tang a om singkung khempeuh note tungah kong pia khinta hi. Tuate an-in na nei ding uh hi.
+**Genesis 9:3** [additional]
+> A nungta a gamtang peuhmah, note a dingin an hi ding hi. Kung hing khempeuh ka hong piak bangin na khempeuh zong note ka hong pia hi.
 > *note*
 > 2PL.PRO
-> 'And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.'
+> 'Every moving thing that liveth shall be meat for you; even as the green herb have I given you all things.'
 
 ---
 
@@ -342,11 +342,11 @@ Note (122), “Note (26), “Note-a (1), (Note (1)
 > IMP.PL
 > 'And I, behold, I establish my covenant with you, and with your seed after you;'
 
-**Genesis 1:28** [additional]
-> Pasian in amaute thupha pia a, Pasian in amaute tungah, “Ci pha-in tampi pha unla, leitung dimin zo un. Tuipi ngasate tung, leitungah a gamtang, a nungtate khempeuh tungah ukna nei ta un,” a ci hi.
+**Genesis 3:22** [additional]
+> Tua ciangin Topa Pasian in, “En un, mipa pen eite khat tawh kibang a, a pha le a sia thei hi. Amah in nuntakna singgah ne-in a hin tawntung khak loh nadingin i vaihawm ding hi,” ci hi.
 > *un*
 > IMP.PL
-> 'And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.'
+> 'And the LORD God said, Behold, the man is become as one of us, to know good and evil: and now, lest he put forth his hand, and take also of the tree of life, and eat, and live for ever:'
 
 ---
 
@@ -391,11 +391,11 @@ Nang (13), “Nang (8), nangzo (6), nangzote (2), nangpipi (1), nangnuam (1), na
 > 2SG.PRO
 > 'And the LORD said unto Cain, Why art thou wroth? and why is thy countenance fallen?'
 
-**Genesis 3:14** [additional]
-> Tua ciangin Topa Pasian in gulpi kiangah, “Nang, hih bangin gamta khin na hih manin, ganhing khempeuhte le gamlak ganhing khempeuhte sangin samsiatna na ngahzaw hi. Na gilpi-in lam na pai ding a, na nuntak sung tawntungin leivui na ne ding hi.
+**Genesis 3:15** [additional]
+> Nang le numei kikal na suanlekhakte le ama suanlekhakte kikalah kilangneihna ka omsak ding hi. Amah in na lutang hong sunim ding a, nang in ama khetul na sunim ding hi,” a ci hi.
 > *Nang*
 > 2SG.PRO
-> 'And the LORD God said unto the serpent, Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:'
+> 'and I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head, and thou shalt bruise his heel.'
 
 ---
 
@@ -462,11 +462,11 @@ Amau (56), “Amau (9), amauteng (5)
 > EMPH
 > 'And Arphaxad begat Salah; and Salah begat Eber.'
 
-**Genesis 1:7** [additional]
-> Pasian in van kuumpi bawl a, van kuumpi tunga om tuite le van kuumpi nuai-a om tuite a khen hi. Tua mah bangin a piang pah hi.
+**Genesis 1:9** [additional]
+> Pasian in, “Vantungte nuai-a om tuite mun khatah kikhawm hen la, lei keu kidawk hen,” ci hi. Tua mah bangin a piang pah hi.
 > *mah*
 > EMPH
-> 'And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.'
+> 'And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.'
 
 ---
 
@@ -534,11 +534,11 @@ nawn (1,022)
 > 1SG.self
 > 'so that I come again to my father's house in peace; then shall the LORD be my God:'
 
-**Genesis 2:23** [additional]
-> Tua ciangin mipa in, “Tu petpetin hih pen keima guhte le keima sate ahi hi. Amah pen mipa sung panin a kilakhia ahih manin 'Numei' kici ding hi,” a ci hi.
+**Genesis 17:10** [additional]
+> Hih pen nang le nang' khit cianga na suanlekhakte' zuih ding keima thuciamna ahi hi: Note' lak panin pasal peuhmah a vun ki-at ding hi.
 > *keima*
 > 1SG.self
-> 'And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.'
+> 'This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised.'
 
 ---
 
@@ -574,11 +574,11 @@ nawn (1,022)
 > 2SG.self
 > 'And also of the son of the bondwoman will I make a nation, because he is thy seed.'
 
-**Genesis 3:17** [additional]
-> Tua ciangin mipa kiangah, “Nang in na zi' thu mangin, 'Nang in na ne kei ding hi,' ci-in nang kong thupiak singgah ne na hih ciangin, nangma hangin leitang in samsiatna ngah hi. Na nuntak tawntung gimpi-in na semin na annek ding na zong ding hi.
+**Genesis 12:13** [additional]
+> Nang pen ka sanggamnu ci lehang, nangma hangin kei a dingin thu hong hoihzaw ding a, nangma hangin ka suakta thei kha ding hi,” a ci hi.
 > *nangma*
 > 2SG.self
-> 'And unto Adam he said, Because thou hast hearkened unto the voice of thy wife, and hast eaten of the tree, of which I commanded thee, saying, Thou shalt not eat of it: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life;'
+> 'Say, I pray thee, thou art my sister: that it may be well with me for thy sake; and my soul shall live because of thee.'
 
 ---
 
@@ -638,11 +638,11 @@ loh (913)
 > NEG-NOM
 > 'and said, I pray you, brethren, do not so wickedly.'
 
-**Genesis 3:8** [additional]
-> A nitak ciangin huan sungah Topa Pasian a hong paina ging amaute in za uh a, Topa Pasian' muh loh dingin mipa le a zi, huan sung singte lakah a bu uh hi.
+**Genesis 3:11** [additional]
+> Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi hiam?” ci hi.
 > *lo-h*
 > NEG-NOM
-> 'And they heard the voice of the LORD God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden.'
+> 'And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?'
 
 ---
 
@@ -678,11 +678,11 @@ Kote (44), “Kote (15)
 > 1PL.PRO.POSS
 > 'and said, Whose daughter art thou? tell me, I pray thee: is there room in thy father's house for us to lodge in?'
 
-**Genesis 19:9** [additional]
-> Ahih hangin amaute in, “Taikhia in. Kote kiangah hong peem pak a, tu-in nang thukhen hong kineih ding na hi hiam? Tu-in amaute sangin nang kong siatbawl zaw ding uh hi,” a ci uh hi. Tua ciangin amaute in nakpitakin Lot' lam hong neh uh a, kongkhak a phukham zah dongin hong neh uh hi.
-> *Kote*
-> 1PL.PRO
-> 'And they said, Stand back. And they said again , This one fellow came in to sojourn, and he will needs be a judge: now will we deal worse with thee, than with them. And they pressed sore upon the man, even Lot, and came near to break the door.'
+**Genesis 24:60** [additional]
+> Amaute in Rebekah thupha pia-in ama kiangah, “Kote' sanggamnu aw, a tultul a thenthente' nu hi ta in. Na suanlekhakte in amau a mudahte' khuapite luah ta uh hen!” a ci uh hi.
+> *Kote'*
+> 1PL.PRO.POSS
+> 'And they blessed Rebekah, and said unto her, Thou art our sister, be thou the mother of thousands of millions, and let thy seed possess the gate of those which hate them.'
 
 ---
 
@@ -718,11 +718,11 @@ Eite (33), “Eite (4)
 > 1PL.PRO
 > 'And the firstborn said unto the younger, Our father is old, and there is not a man in the earth to come in unto us after the manner of all the earth:'
 
-**Genesis 3:22** [additional]
-> Tua ciangin Topa Pasian in, “En un, mipa pen eite khat tawh kibang a, a pha le a sia thei hi. Amah in nuntakna singgah ne-in a hin tawntung khak loh nadingin i vaihawm ding hi,” ci hi.
+**Genesis 5:29** [additional]
+> ama min Noah phuakin, “ Topa in a samsiatsa leitang panin hih pa in i nasepna le i gimnate-ah eite hong khahkhia ding hi,” a ci hi.
 > *eite*
 > 1PL.PRO
-> 'And the LORD God said, Behold, the man is become as one of us, to know good and evil: and now, lest he put forth his hand, and take also of the tree of life, and eat, and live for ever:'
+> 'and he called his name Noah, saying, This same shall comfort us concerning our work and toil of our hands, because of the ground which the LORD hath cursed.'
 
 ---
 
@@ -790,11 +790,11 @@ Nangmah (230), “Nangmah (42), “'Nangmah (1)
 > 2SG.PRO
 > 'And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee.'
 
-**Genesis 4:14** [additional]
-> En in, tuni-in nangmah in leitung panin kei nong hawlkhia a, nang kiang panin kei nong notkhia hi. Kei pen a galtai, leitungah a vakvai ka hi ding a, kei hong mu peuhmah in hong that ding hi,” a ci hi.
-> *nangmah*
+**Genesis 14:23** [additional]
+> Nangmah in, 'Abram ka hausak hi,' ci kha ding na hih manin mimkhau ahi a, khedap khau ahi a, nangma a' ahi na khat peuhpeuh ahi zongin ka la kei ding hi.
+> *Nangmah*
 > 2SG.PRO
-> 'Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me.'
+> 'that I will not take from a thread even to a shoelatchet, and that I will not take any thing that is thine, lest thou shouldest say, I have made Abram rich:'
 
 ---
 
@@ -948,11 +948,11 @@ ngawn (12), ngawn,” (1), nangawn (1)
 > 2SG-own
 > 'None devoted, which shall be devoted of men, shall be redeemed; but shall surely be put to death.'
 
-**Genesis 41:44** [additional]
-> Tua tham loin Faro in Josef kiangah, “Kei pen Faro ka hi hi. Nangma thukim lohin Egypt gam sung khempeuhah kuamah in a khut a khe nangawn uh liik lo ding uh hi,” a ci hi.
+**Exodus 2:19** [additional]
+> Amaute in, “Egypt mi khat in tuucing dangte' khutsung panin kote hong honkhia a, ko a dingin tui nangawn hong tawisakin tuuhonte tui pia hi,” ci uh hi.
 > *na-ngawn*
 > 2SG-own
-> 'And Pharaoh said unto Joseph, I am Pharaoh, and without thee shall no man lift up his hand or foot in all the land of Egypt.'
+> 'And they said, An Egyptian delivered us out of the hand of the shepherds, and also drew water enough for us, and watered the flock.'
 
 ---
 
@@ -1000,11 +1000,11 @@ kisai-in (165), kisai (111), saiha (13), kisai-ah (13), sai (3), kisai-a (2), sa
 > REFL-concern
 > 'and for the leprosy of a garment, and of a house,'
 
-**Genesis 12:20** [additional]
-> Faro in amah tawh kisai-in a mite tungah thu a pia hi. Amaute in a zi le ama neih khempeuh tawh lampi-ah a khakhia uh hi.
-> *ki-sai-in*
-> REFL-concern-CVB
-> 'And Pharaoh commanded his men concerning him: and they sent him away, and his wife, and all that he had.'
+**Genesis 21:25** [additional]
+> Abimelek' nasemte in a suhsa tuikhuk tawh kisai thu Abraham in a lungkim lohna Abimelek' kiangah a gen ciangin,
+> *ki-sai*
+> REFL-concern
+> 'And Abraham reproved Abimelech because of a well of water, which Abimelech's servants had violently taken away.'
 
 ---
 
@@ -1072,11 +1072,11 @@ Nomau (4), “Nomau (2)
 > 2PL.POSS
 > 'Six days shalt thou labour, and do all thy work:'
 
-**Genesis 17:13** [additional]
-> na inn sunga suak hitaleh, na sum tawh a kileipa hitaleh a vun ki-at tuak ding hi. Tua ahih ciangin tawntung thuciamna ahi keima thuciamna pen nomau' satak sungah om ding hi.
-> *nomau'*
-> 2PL.POSS
-> 'He that is born in thy house, and he that is bought with thy money, must needs be circumcised: and my covenant shall be in your flesh for an everlasting covenant.'
+**Genesis 35:2** [additional]
+> Tua ahih ciangin Jakob in a innkuanpihte le amah tawh a omte khempeuh kiangah, “Note lakah a om gamdang pasian-te koihkhia unla, nomau kisiansuahin, na puante uh khek un.
+> *nomau*
+> 2PL.PRO
+> 'Then Jacob said unto his household, and to all that were with him, Put away the strange gods that are among you, and be clean, and change your garments:'
 
 ---
 
@@ -1118,11 +1118,11 @@ mahin (188), mahah (122), kamah (8), mah (3), amahmah (2), mahmahsa-in (1), mahm
 > 3SG-self~REDUP.POSS
 > 'and the priest shall pour of the oil into the palm of his own left hand:'
 
-**Genesis 17:17** [additional]
-> Tua ciangin Abraham mai kun sukin nui a, amahmah tungah, “Kum za a pha pasal khat in ta nei ding ahi hiam? Kum sawmkua a pha Sarah in ta nei ding ahi hiam?” kici hi.
+**Genesis 18:12** [additional]
+> Tua ahih ciangin Sarah amahmah nui-in, “Kei ka teek khit, ka topa zong a teek khitin tua bang hi thei nawn ding ahi hiam?” a ci hi.
 > *a-mah-mah*
 > 3SG-self~REDUP
-> 'Then Abraham fell upon his face, and laughed, and said in his heart, Shall a child be born unto him that is an hundred years old? and shall Sarah, that is ninety years old, bear?'
+> 'Therefore Sarah laughed within herself, saying, After I am waxed old shall I have pleasure, my lord being old also?'
 
 ---
 

@@ -56,11 +56,11 @@ cih (2,827), ci-in (1,937), cihna (195), cihin-ah (184), citak (112), cihnopna (
 > say
 > 'And God said, Let there be light: and there was light.'
 
-**Genesis 1:5** [additional]
-> Pasian in khuavak pen “Sun” ci a, khuamial pen “Zan” ci hi. Nitak hong bei-in, zingsang hong tung a, ni khat ni ahi hi.
+**Genesis 1:8** [additional]
+> Pasian in van kuumpi pen “Vantung” ci hi. Nitak hong bei-in zingsang hong tung a, ni nih ni ahi hi.
 > *ci*
 > say
-> 'And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.'
+> 'And God called the firmament Heaven. And the evening and the morning were the second day.'
 
 ---
 
@@ -97,11 +97,11 @@ paipih (602), paikhia (368), paikhiatpih (185), paisuak (178), paisak (167), pai
 > go-APPL
 > 'And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD .'
 
-**Genesis 2:19** [additional]
-> Tua ahih ciangin Topa Pasian in gam sung ganhing khempeuh le huih lak vasa khempeuh lei tawh bawl a, mipa in tuate bang a ci hiam ci-in a theihna dingin mipa kiangah tuate a paipih hi. Nuntakna a nei khempeuhte pen mipa' cih bangbang a min hi pahpah hi.
+**Genesis 2:22** [additional]
+> Topa Pasian in mipa' tung panin a lakkhiat nakguh pen numei khatin bawl a, mipa kiangah tua nu a paipih hi.
 > *pai-pih*
 > go-APPL
-> 'And out of the ground the LORD God formed every beast of the field, and every fowl of the air; and brought them unto Adam to see what he would call them: and whatsoever Adam called every living creature, that was the name thereof.'
+> 'and the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man.'
 
 ---
 
@@ -244,11 +244,11 @@ khin (895), khinzo (220), khinta (219), kikhin (8), khinkhia (7), kikhinin (4), 
 > IMM
 > 'Thus the heavens and the earth were finished, and all the host of them.'
 
-**Genesis 1:29** [additional]
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le a gah sungah tang a om singkung khempeuh note tungah kong pia khinta hi. Tuate an-in na nei ding uh hi.
+**Genesis 2:2** [additional]
+> Ni sagih ma-in Pasian in a nasepte zo khinta a, ama hihsa nasep khempeuh panin ni sagih ni-in a tawlnga hi.
 > *khin-ta*
 > move-NMLZ
-> 'And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.'
+> 'And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made.'
 
 ---
 
@@ -347,11 +347,11 @@ ngah (831), ngahtheih (40), ngahkik (37), ngahsak (29), ngahin (23), ngahkhawm (
 > get
 > 'And he said, Cursed be Canaan; A servant of servants shall he be unto his brethren.'
 
-**Genesis 3:14** [additional]
-> Tua ciangin Topa Pasian in gulpi kiangah, “Nang, hih bangin gamta khin na hih manin, ganhing khempeuhte le gamlak ganhing khempeuhte sangin samsiatna na ngahzaw hi. Na gilpi-in lam na pai ding a, na nuntak sung tawntungin leivui na ne ding hi.
-> *ngah-zaw*
-> get-more
-> 'And the LORD God said unto the serpent, Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:'
+**Genesis 4:1** [additional]
+> Tu-in mipa in ama zi Eve luppih a, amah gai-in Kain nei a, “ Topa' huhna tawh mi khat ka ngah khin hi,” ci hi.
+> *ngah*
+> get
+> 'And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD .'
 
 ---
 
@@ -391,11 +391,11 @@ ukin (32), uksawn (14), uksak (12), ukzo (10), ukpa (9), ukzawh (9), ki-uk (7), 
 > rule
 > 'And Hadad died, and Samlah of Masrekah reigned in his stead.'
 
-**Genesis 1:16** [additional]
-> Pasian in khuavak lian nih bawl a, khuavak lianzaw pen sun a uk ding, khuavak neuzaw pen zan a uk dingin bawl a, amah in aksite zong a bawl hi. Leitungah khua a vaksak ding, sun le zan a uk ding, khuamial panin khuavak a khenkhia dingin Pasian in vantungah tuate a koih hi. Pasian in tua pen hoih hi, ci-in a mu hi.
+**Genesis 3:16** [additional]
+> Tua ciangin numei kiangah, “Naupaiina-ah na gimna nakpitakin ka khangsak ding a, na a sapipi-in nau na nei ding hi. Ahi zongin na pasal mah na deih ding a, amah in nang tungah hong uk ding hi,” a ci hi.
 > *uk*
 > rule
-> 'And God made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.'
+> 'Unto the woman he said, I will greatly multiply thy sorrow and thy conception; in sorrow thou shalt bring forth children; and thy desire shall be to thy husband, and he shall rule over thee.'
 
 ---
 
@@ -491,11 +491,11 @@ sisa (42), si-in (40), sisak (39), sikhawm (12), Si (11), siluang (10), sialin (
 > die
 > 'all in whose nostrils was the breath of life, of all that was in the dry land , died.'
 
-**Genesis 2:17** [additional]
-> Ahih hangin a pha le a sia theihna singkung gah pen na ne kei ding hi. Bang hang hiam cih leh tua na nek ni-in na si ding hi,” a ci hi.
+**Genesis 5:5** [additional]
+> Tua ahih ciangin Adam' nuntak hun sungteng pen kum zakua le kum sawmthum hi a, tua ciangin amah si hi.
 > *si*
 > die
-> 'but of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.'
+> 'and all the days that Adam lived were nine hundred and thirty years: and he died.'
 
 ---
 
@@ -535,11 +535,11 @@ sisa (42), si-in (40), sisak (39), sikhawm (12), Si (11), siluang (10), sialin (
 > bird-crow
 > 'and he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth.'
 
-**Genesis 1:20** [additional]
-> Pasian in, “Tuite in a nungta ganhing honpite piangsak hen la, vantung kantanin leitungah vasate leeng ta hen,” ci hi.
+**Genesis 1:22** [additional]
+> Pasian in amaute thupha pia a, “Ci pha-in tampi pha-in, tuipi sung dim unla, leitungah vasate tampi pha un,” ci hi.
 > *va-sa-te*
 > go.and-PAST-PL
-> 'And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.'
+> 'And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.'
 
 ---
 
@@ -579,11 +579,11 @@ thuakna (76), thuaksak (61), thuakin (42), thuakzo (27), thuaknate (21), thuakza
 > suffer
 > 'And Cain said unto the LORD , My punishment is greater than I can bear.'
 
-**Genesis 16:11** [additional]
-> Tua ciangin Topa' vantungmi in ama kiangah, “En in, nau na paii a, tapa khat na nei ding hi. Ama min Ishmael na phuak ding hi. Bang hang hiam cih leh Topa in nangma thuakna hong mu khin hi.
-> *thuak-na*
-> suffer-NMLZ
-> 'And the angel of the LORD said unto her, Behold, thou art with child, and shalt bear a son, and shalt call his name Ishmael; because the LORD hath heard thy affliction.'
+**Genesis 27:13** [additional]
+> A nu in ama kiangah, “Nangma thuak ding samsiatna kei tungah hong tung ta hen, ka ta aw; ka thu hong mang peuh inla, pai-in keelnote kei' kiangah hong puak in,” a ci hi.
+> *thuak*
+> suffer
+> 'And his mother said unto him, Upon me be thy curse, my son: only obey my voice, and go fetch me them .'
 
 ---
 
@@ -632,11 +632,11 @@ sawlin (91), sawlna (58), kisawl (21), sawlpang (9), sawlkik (5), sawlteng (5), 
 > cast-throw
 > 'And the water was spent in the bottle, and she cast the child under one of the shrubs.'
 
-**Genesis 19:13** [additional]
-> Bang hang hiam cih leh hih mite a kimawhsakna thu Topa' tungah tung khin a, a susia dingin Topa in hong sawl khin ahih ciangin hih khua a susia ta ding ka hi uh hi,” a ci uh hi.
-> *sawl*
-> send
-> 'for we will destroy this place, because the cry of them is waxen great before the face of the LORD ; and the LORD hath sent us to destroy it.'
+**Genesis 20:2** [additional]
+> Abraham in a zi Sarah pen, “Ka sanggamnu hi,” ci hi. Gerar kumpipa Abimelek in mi sawlin Sarah samsak hi.
+> *sawl-in*
+> send-CVB
+> 'And Abraham said of Sarah his wife, She is my sister: and Abimelech king of Gerar sent, and took Sarah.'
 
 ---
 
@@ -726,11 +726,11 @@ sem (612), semin (58), semsak (19), semkhawm (19), kisem (13), semkhia (10), sem
 > look
 > 'And I, behold, I establish my covenant with you, and with your seed after you;'
 
-**Genesis 1:29** [additional]
-> Pasian in, “En un, leitung maitang khempeuhah a om, tang a piangsak kungnote khempeuh le a gah sungah tang a om singkung khempeuh note tungah kong pia khinta hi. Tuate an-in na nei ding uh hi.
-> *En*
+**Genesis 1:31** [additional]
+> Pasian in a bawlsate khempeuh en a, hoih sa mahmah hi. Nitak hong bei-in zingsang hong tung a, a ni guk ni ahi hi.
+> *en*
 > look
-> 'And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat.'
+> 'And God saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day.'
 
 ---
 
@@ -758,11 +758,11 @@ Nong (19), “Nong (13)
 > 2→1
 > 'And Abram said, Behold, to me thou hast given no seed: and, lo, one born in my house is mine heir.'
 
-**Genesis 4:14** [additional]
-> En in, tuni-in nangmah in leitung panin kei nong hawlkhia a, nang kiang panin kei nong notkhia hi. Kei pen a galtai, leitungah a vakvai ka hi ding a, kei hong mu peuhmah in hong that ding hi,” a ci hi.
+**Genesis 17:9** [additional]
+> Pasian in Abraham' kiangah, “Nang le nang' khit cianga na suanlekhakte in zong ka thuciamna na zuih ding uh nong thukim ding uh ahi hi.
 > *nong*
 > 2→1
-> 'Behold, thou hast driven me out this day from the face of the earth; and from thy face shall I be hid; and I shall be a fugitive and a vagabond in the earth; and it shall come to pass, that every one that findeth me shall slay me.'
+> 'And God said unto Abraham, Thou shalt keep my covenant therefore, thou, and thy seed after thee in their generations.'
 
 ---
 
@@ -791,11 +791,11 @@ nuntakna (423), Nuntak (8), nuntakzia (7), nuntaksak (3), “Nuntak (2), “Nunt
 > live-NMLZ
 > 'all in whose nostrils was the breath of life, of all that was in the dry land , died.'
 
-**Genesis 1:21** [additional]
-> Tua ahih ciangin Pasian in tuipi ganhing golpite le amau nam ciatin tuipi sungah tampi a pha, nuntakna a nei a gamtang thei ganhing namkim le kha a nei vasa khempeuh amau nam ciatin a piangsak hi. Pasian in tua pen hoih hi, ci-in a mu hi.
+**Genesis 1:24** [additional]
+> Pasian in, “Nuntakna a nei ganhingte amau nam ciatin leitung in piangsak hen: Innsa, gamsa, le a bokvak ganhingte amau nam ciatin piang ta hen,” a ci hi. Tua mah bangin a piang pah hi.
 > *nuntak-na*
 > live-NMLZ
-> 'And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and God saw that it was good.'
+> 'And God said, Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.'
 
 ---
 
@@ -832,11 +832,11 @@ itna (329), itte (40), ki-it (27), itzaw (12), itluat (9), it-huai (4), ki-itin 
 > love-more
 > 'And Isaac loved Esau, because he did eat of his venison: but Rebekah loved Jacob.'
 
-**Genesis 22:2** [additional]
-> Amah in, “Na it, na tapa neihsun Isaac, la inla Moriah gamah pai in. Tua lai mun a nang kiangah kong gen ding mual khat tungah meihal biakpiakna-in amah hong pia in,” a ci hi.
-> *it*
-> love
-> 'And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.'
+**Genesis 24:12** [additional]
+> Amah in, “Ka topa Abraham' Pasian, Topa aw, tuni-in ka maa hong vangsak in. Nang tungah thu kong ngen hi, ka topa Abraham' tungah itna kip hong lak in.
+> *it-na*
+> love-NMLZ
+> 'And he said, O LORD God of my master Abraham, I pray thee, send me good speed this day, and shew kindness unto my master Abraham.'
 
 ---
 
@@ -891,11 +891,11 @@ tun (498), tunpih (63), tunsak (51), tunkik (18), tuntheih (12), tunpihkik (8), 
 > arrive
 > 'And Noah was six hundred years old when the flood of waters was upon the earth.'
 
-**Genesis 8:11** [additional]
-> Nitak ciangin ama kiangah a vakhu hong ciahkik a, oliv teh a tukkhiat thak khat a mukah petin hong tunpih hi. Tua ahih ciangin leitung panin tuite kiam khinta hi, ci-in Noah in a thei hi.
-> *tun-pih*
-> arrive-APPL
-> 'and the dove came in to him in the evening; and, lo, in her mouth was an olive leaf pluckt off: so Noah knew that the waters were abated from off the earth.'
+**Genesis 9:28** [additional]
+> Tuiciin a tun khit ciangin Noah kum zathum le kum sawmnga nungta hi.
+> *tun*
+> arrive
+> 'And Noah lived after the flood three hundred and fifty years.'
 
 ---
 
@@ -934,11 +934,11 @@ gamta (634), gamta-in (50), gamtate (27), gamtasak (10), kigamta (4), gamtakik (
 > send.away
 > 'Now therefore, my son, obey my voice according to that which I command thee.'
 
-**Genesis 3:14** [additional]
-> Tua ciangin Topa Pasian in gulpi kiangah, “Nang, hih bangin gamta khin na hih manin, ganhing khempeuhte le gamlak ganhing khempeuhte sangin samsiatna na ngahzaw hi. Na gilpi-in lam na pai ding a, na nuntak sung tawntungin leivui na ne ding hi.
+**Genesis 15:6** [additional]
+> Amah in Topa muang hi. Tua ahih manin ahi ding bangin Abram gamta hi, ci-in Topa in a ciamteh hi.
 > *gamta*
 > send.away
-> 'And the LORD God said unto the serpent, Because thou hast done this, thou art cursed above all cattle, and above every beast of the field; upon thy belly shalt thou go, and dust shalt thou eat all the days of thy life:'
+> 'And he believed in the LORD ; and he counted it to him for righteousness.'
 
 ---
 
@@ -981,11 +981,11 @@ hilh (481), kihilh (35), hilhin (30), hilhna (26), hilhkhol (16), hilhkholhna (1
 > tell
 > 'And he hath put in his heart that he may teach, both he, and Aholiab, the son of Ahisamach, of the tribe of Dan.'
 
-**Genesis 14:14** [additional]
-> Ama behpa salin a kimatna Abram in a zak ciangin, ama inn sunga a suak, a kihilhsa ama mi zathum le sawm le giatte makaihin Dan ciang dong a delhin a pai uh hi.
-> *ki-hilh-sa*
-> REFL-teach-PAST
-> 'And when Abram heard that his brother was taken captive, he armed his trained servants , born in his own house, three hundred and eighteen, and pursued them unto Dan.'
+**Genesis 32:4** [additional]
+> amaute hilhin, “Note in ka topa Esau kiangah hih bangin na ci ding uh hi: Na nasempa Jakob in, 'Laban' kiangah peemta-in tu ciang dong ka om hi.
+> *hilh-in*
+> teach-CVB
+> 'And he commanded them, saying, Thus shall ye speak unto my lord Esau; Thy servant Jacob saith thus, I have sojourned with Laban, and stayed there until now:'
 
 ---
 
@@ -1090,11 +1090,11 @@ khamte (37), Kham (31), khamin (18), khamtheihzu (16), kikham (9), khamkhop (8),
 > gold
 > 'And Abram was very rich in cattle, in silver, and in gold.'
 
-**Genesis 2:11** [additional]
-> A masa pen gun a min Pishon hi a, kham a omna, Havilah gambup kimkotah a luang pen ahi hi.
+**Genesis 9:21** [additional]
+> Amah in leenggahzu ne-in kham a, a puanbuk sungah bangmah silh loin a lum hi.
 > *kham*
 > gold
-> 'The name of the first is Pison: that is it which compasseth the whole land of Havilah, where there is gold;'
+> 'and he drank of the wine, and was drunken; and he was uncovered within his tent.'
 
 ---
 
@@ -1167,11 +1167,11 @@ ciahkik (254), ciahpih (68), ciahsak (31), ciahin (9), ciahsakkik (8), ciahsuk (
 > return-ITER
 > 'so that I come again to my father's house in peace; then shall the LORD be my God:'
 
-**Genesis 3:19** [additional]
-> Lei-ah na ciahkik matengin khua-ul kai-in na na sep ciang bekin an na ne ding hi. Bang hang hiam cih leh lei sung panin nang hong kipiangsak a, nang, leivui na hih manin, leivui mah na suakkik ding hi,” a ci hi.
+**Genesis 8:9** [additional]
+> Ahih hangin, leitung khempeuhah tuite omlai-in, a khawl nading mu lo ahih manin teembaw-ah hong ciahkik hi. Tua ahih ciangin amah in a khut zanin a vakhu man a, teembaw sungah paipih hi.
 > *ciah-kik*
 > return-ITER
-> 'in the sweat of thy face shalt thou eat bread, till thou return unto the ground; for out of it wast thou taken: for dust thou art , and unto dust shalt thou return.'
+> 'but the dove found no rest for the sole of her foot, and she returned unto him into the ark, for the waters were on the face of the whole earth: then he put forth his hand, and took her, and pulled her in unto him into the ark.'
 
 ---
 
@@ -1226,11 +1226,11 @@ zah (182), zahtak (150), zahin (110), zahtakna (74), zahko (25), zahpih (10), za
 > fear
 > 'Then Isaac sowed in that land, and received in the same year an hundredfold: and the LORD blessed him.'
 
-**Genesis 4:15** [additional]
-> Tua ciangin Topa in ama kiangah, “Tua bang hi lo ding hi. Khatpeuh in Kain a thah le tua pa tungah a zah sagihin kithuk ding hi,” a ci hi. Amah a tuakpeuh in a thahkhak loh nadingin Topa in Kain' tungah ciaptehna khat a koih hi.
+**Genesis 4:24** [additional]
+> Kain a kithah manin a zah sagihin kithukkik ahihleh, Lamek a kithah manin a zah sawmsagihin kithukkik taktak ding hi,” a ci hi.
 > *zah*
 > fear
-> 'And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him.'
+> 'If Cain shall be avenged sevenfold, Truly Lamech seventy and sevenfold.'
 
 ---
 
@@ -1311,11 +1311,11 @@ sep (206), sepna (109), nasepna-ah (55), sepsak (35), sepsa (23), septe (13), se
 > work-NMLZ
 > 'And ye know that with all my power I have served your father.'
 
-**Genesis 3:19** [additional]
-> Lei-ah na ciahkik matengin khua-ul kai-in na na sep ciang bekin an na ne ding hi. Bang hang hiam cih leh lei sung panin nang hong kipiangsak a, nang, leivui na hih manin, leivui mah na suakkik ding hi,” a ci hi.
-> *sep*
-> work
-> 'in the sweat of thy face shalt thou eat bread, till thou return unto the ground; for out of it wast thou taken: for dust thou art , and unto dust shalt thou return.'
+**Genesis 15:14** [additional]
+> Ahi zongin na a sepsak uh minamte' tungah thukhenna ka tungsak ding a, tua khit ciangin neihsa tampi tawh amaute paikhia ding uh hi.
+> *sep-sak*
+> work-CAUS
+> 'and also that nation, whom they shall serve, will I judge: and afterward shall they come out with great substance.'
 
 ---
 
@@ -1364,11 +1364,11 @@ huh (299), huhna (113), huhin (15), kihuh (8), huhte (7), kihuhna (6), huhnate (
 > help
 > 'And these are the names of the men that shall stand with you: of the tribe of Reuben; Elizur the son of Shedeur.'
 
-**Genesis 2:18** [additional]
-> Tua ciangin Topa Pasian in, “Mipa amah guak a om ding hoih lo hi. Ama a' ding a kituak a huh ding ka bawlsak ding hi,” ci hi.
-> *huh*
-> help
-> 'And the LORD God said, It is not good that the man should be alone; I will make him an help meet for him.'
+**Genesis 4:1** [additional]
+> Tu-in mipa in ama zi Eve luppih a, amah gai-in Kain nei a, “ Topa' huhna tawh mi khat ka ngah khin hi,” ci hi.
+> *huh-na*
+> blow-NMLZ
+> 'And Adam knew Eve his wife; and she conceived, and bare Cain, and said, I have gotten a man from the LORD .'
 
 ---
 
@@ -1461,11 +1461,11 @@ sat (215), satin (36), satna (21), kisat (18), satgawp (15), satnen (12), sathau
 > strike
 > 'And seven days were fulfilled, after that the LORD had smitten the river.'
 
-**Genesis 4:17** [additional]
-> Kain in a zi luppih a, amah gai-in Enok a nei hi. Kain in khuapi khat sat a, tua khuapi min dingin ama tapa' min tamin Enok a phuak hi.
+**Genesis 10:12** [additional]
+> Nineveh le Kalah kikal-a om Resen khuapite a sat hi. Tua Kalah khuapi pen khuapi lian ahi hi.
 > *sat*
 > strike
-> 'And Cain knew his wife; and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch.'
+> 'and Resen between Nineveh and Calah: the same is a great city.'
 
 ---
 
@@ -1633,11 +1633,11 @@ ngen (95), ngenin (15), ngenthang (6), kingen (5), ngenthuah (1), kingensak (1),
 > net
 > 'And Moses went out from Pharaoh, and intreated the LORD .'
 
-**Genesis 12:3** [additional]
-> Nang thupha hong piate thupha ka pia ding a, nang hong samsiate ka samsia ding hi. Nang' thupha ngah bangin thupha a ngah nadingun leitung midang khempeuh in hong ngen ding uh hi,” a ci hi.
+**Genesis 13:4** [additional]
+> a masa-a biakna tau khat a bawlnasa munah khualzinin a paisuak hi. Tua lai munah Abram in Topa' tungah thu a ngen hi.
 > *ngen*
 > net
-> 'and I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.'
+> 'unto the place of the altar, which he had made there at the first: and there Abram called on the name of the LORD .'
 
 ---
 
@@ -1677,11 +1677,11 @@ paubaanna (32), paubaang (23), pau-in (23), paunak (21), pauna (19), paute (11),
 > speak-perfect
 > 'Thou shalt be perfect with the LORD thy God.'
 
-**Genesis 6:9** [additional]
-> Noah' tangthu hih bang ahi hi. Noah a thuman mi khat hi a, ama khangah paubaang lo hi. Noah pen Pasian tawh kikhawl hi.
-> *pau-baang*
-> speak-perfect
-> 'These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God.'
+**Genesis 10:31** [additional]
+> Hihte pen a innkuan, a kam pau, a leitang, a minamin Shem' suanlekhakte ahi hi.
+> *pau*
+> speak
+> 'These are the sons of Shem, after their families, after their tongues, in their lands, after their nations.'
 
 ---
 
@@ -1717,11 +1717,11 @@ gamtatna (317), gamtatnasa (45), gamtatsia (17), gamtatsiatna (15), gamtatsiat (
 > kingdom-NMLZ-PL.POSS
 > 'And the servant told Isaac all things that he had done.'
 
-**Genesis 8:21** [additional]
-> Topa in a namtui gimnam a zak ciangin, a lungsim sungah, “Mihing' gamtatna hangin leitang ka samsia kik ngei nawn kei ding hi. Bang hang hiam cih leh mihing' lungsim ngaihsutna pen a tangval lai panin a gi lo hi mawk hi. Tu-a ka hih bangin nuntakna a nei khempeuh zong ka susia ngei nawn kei ding hi.
+**Genesis 9:24** [additional]
+> Noah a zukhamna panin a pilvan' ciangin ama tungah a tapa Ham' gamtatna thei a,
 > *gamtat-na*
 > rule.land-NMLZ
-> 'And the LORD smelled a sweet savour; and the LORD said in his heart, I will not again curse the ground any more for man's sake; for the imagination of man's heart is evil from his youth; neither will I again smite any more every thing living, as I have done.'
+> 'And Noah awoke from his wine, and knew what his younger son had done unto him.'
 
 ---
 
@@ -1814,11 +1814,11 @@ piang (319), piangkhia (12), piangkhia-in (3), piangthei (3), piangsakkha (2), p
 > be.born
 > 'And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD .'
 
-**Genesis 1:7** [additional]
-> Pasian in van kuumpi bawl a, van kuumpi tunga om tuite le van kuumpi nuai-a om tuite a khen hi. Tua mah bangin a piang pah hi.
+**Genesis 1:9** [additional]
+> Pasian in, “Vantungte nuai-a om tuite mun khatah kikhawm hen la, lei keu kidawk hen,” ci hi. Tua mah bangin a piang pah hi.
 > *piang*
 > be.born
-> 'And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.'
+> 'And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.'
 
 ---
 
@@ -1855,11 +1855,11 @@ kici (354), kicite (5), kiciamnasa (4), kici) (3), kici-in (2), kiciamsakin (1),
 > called
 > 'And Salah lived thirty years, and begat Eber:'
 
-**Genesis 2:23** [additional]
-> Tua ciangin mipa in, “Tu petpetin hih pen keima guhte le keima sate ahi hi. Amah pen mipa sung panin a kilakhia ahih manin 'Numei' kici ding hi,” a ci hi.
+**Genesis 5:12** [additional]
+> Kenan kum sawmsagih a phak ciangin, Mahalalel kici tapa khat nei hi.
 > *kici*
 > called
-> 'And Adam said, This is now bone of my bones, and flesh of my flesh: she shall be called Woman, because she was taken out of Man.'
+> 'And Cainan lived seventy years, and begat Mahalaleel:'
 
 ---
 
@@ -1954,11 +1954,11 @@ kuan (126), kuankhia (88), kuanto (54), kuankhia-in (24), kuansak (15), kuanin (
 > family
 > 'and he took six hundred chosen chariots, and all the chariots of Egypt, and captains over every one of them.'
 
-**Genesis 14:8** [additional]
-> Tua ciangin Sodom kumpipa, Gomorrah kumpipa, Admah kumpipa, Zeboiim kumpipa, le Bela (Zoar) kumpipa kuankhia uh a, amaute kipawlin Siddim Kuam ah
-> *kuan-khia*
-> family-out
-> 'And there went out the king of Sodom, and the king of Gomorrah, and the king of Admah, and the king of Zeboiim, and the king of Bela (the same is Zoar;) and they joined battle with them in the vale of Siddim;'
+**Genesis 27:5** [additional]
+> Isaac in a tapa Esau a hopih laitakin Rebekah in na ngaisim hi. Sa bengin a ciahpih dingin Esau gamlakah a kuan ciangin,
+> *kuan*
+> family
+> 'And Rebekah heard when Isaac spake to Esau his son. And Esau went to the field to hunt for venison, and to bring it .'
 
 ---
 
@@ -2092,11 +2092,11 @@ hal (173), kihal (64), halin (22), halna (16), kihaltum (12), halsak (7), kihaln
 > burn
 > 'And thou shalt make an altar to burn incense upon: of shittim wood shalt thou make it.'
 
-**Genesis 11:3** [additional]
-> Amaute khatlekhat kiangah, “Hong pai un, leiseek seekin limtakin hal ni,” kici uh hi. Amaute in suang dingin leiseek nei uh a, a buan dingin kultal tui nei uh hi.
-> *hal*
-> burn
-> 'And they said one to another, Go to, let us make brick, and burn them throughly. And they had brick for stone, and slime had they for morter.'
+**Genesis 32:16** [additional]
+> Amah in hihte a nasemte' khut sungah amau' hon ciatin pia a, ama nasemte kiangah, “Ka mai-ah na paisuak unla, hon khat le hon khat kikal kihalsak un,” a ci hi.
+> *ki-hal-sak*
+> burn-CAUS
+> 'And he delivered them into the hand of his servants, every drove by themselves; and said unto his servants, Pass over before me, and put a space betwixt drove and drove.'
 
 ---
 
@@ -2124,11 +2124,11 @@ Meihal (25), “Meihal (2), meihalna (2)
 > burnt.offering
 > 'and the altar of burnt offering with all his furniture, and the laver and his foot,'
 
-**Genesis 8:20** [additional]
-> Tua ciangin Noah in Topa a' ding biakna tau khat lam a, a siangtho ganhing khempeuh le a siangtho vasa khempeuh lak pan khat ciat la-in, biakna tau tungah meihal biakna a pia hi.
+**Genesis 22:2** [additional]
+> Amah in, “Na it, na tapa neihsun Isaac, la inla Moriah gamah pai in. Tua lai mun a nang kiangah kong gen ding mual khat tungah meihal biakpiakna-in amah hong pia in,” a ci hi.
 > *meihal*
 > burnt.offering
-> 'And Noah builded an altar unto the LORD ; and took of every clean beast, and of every clean fowl, and offered burnt offerings on the altar.'
+> 'And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.'
 
 ---
 
@@ -2189,11 +2189,11 @@ tum (189), tumin (30), kitum (22), tumsak (11), tumna (10), tumpih (6), tumpihin
 > complete
 > 'And when the sun was going down, a deep sleep fell upon Abram; and, lo, an horror of great darkness fell upon him.'
 
-**Genesis 7:13** [additional]
-> Tua ni teekteekin Noah le a tapate Shem, Ham, Jafeth, le Noah' zi le a tapate' zi thumte, amau tawh teembaw sungah a tum uh hi.
+**Genesis 12:11** [additional]
+> Egypt gam a tum ding ciangin amah in a zi Sarai' kiangah, “Nang pen nupi melhoih khat na hihna ka thei hi.
 > *tum*
 > complete
-> 'In the selfsame day entered Noah, and Shem, and Ham, and Japheth, the sons of Noah, and Noah's wife, and the three wives of his sons with them, into the ark;'
+> 'And it came to pass, when he was come near to enter into Egypt, that he said unto Sarai his wife, Behold now, I know that thou art a fair woman to look upon:'
 
 ---
 
@@ -2239,11 +2239,11 @@ hopih (161), kiho (40), hopihna (25), hopihin (16), kiho-in (8), kihona (7), kih
 > REFL-call-NMLZ
 > 'And God went up from him in the place where he talked with him.'
 
-**Genesis 27:5** [additional]
-> Isaac in a tapa Esau a hopih laitakin Rebekah in na ngaisim hi. Sa bengin a ciahpih dingin Esau gamlakah a kuan ciangin,
+**Genesis 34:3** [additional]
+> Amah in Jakob' tanu Dinah hoihsa mahmah ahih manin itin kamkhum takin hopih hi.
 > *ho-pih*
 > greet-APPL
-> 'And Rebekah heard when Isaac spake to Esau his son. And Esau went to the field to hunt for venison, and to bring it .'
+> 'And his soul clave unto Dinah the daughter of Jacob, and he loved the damsel, and spake kindly unto the damsel.'
 
 ---
 
@@ -2320,11 +2320,11 @@ kipiangsak (18), piangsakin (16), Piangsak (12), piangsakte (2), piangsakkik (1)
 > cause.birth
 > 'And in the seven plenteous years the earth brought forth by handfuls.'
 
-**Genesis 1:11** [additional]
-> Pasian in, “Leitung in kung tuamtuamte piangsak hen la, tang a nei kungnote, a gah sungah tang a om singgah kungte, amau' nam ciatin leitungah piangsak hen,” ci hi. Tua mah bangin a piang pah hi.
+**Genesis 1:20** [additional]
+> Pasian in, “Tuite in a nungta ganhing honpite piangsak hen la, vantung kantanin leitungah vasate leeng ta hen,” ci hi.
 > *piangsak*
 > cause.birth
-> 'And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.'
+> 'And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.'
 
 ---
 

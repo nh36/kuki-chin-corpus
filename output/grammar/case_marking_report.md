@@ -153,11 +153,11 @@ Marks accompaniment ("with, together with"). Can extend to instrumental uses.
 > REFL-COM
 > 'Surely there is a vein for the silver, And a place for gold where they fine it .'
 
-**John 18:18**
-> Khua dam mahmah ahih manin nasemte le palikte in meihol cih a, tua mei awi-in a kiimah ding uh ahih manin Peter zong va pai-in mei awi-in amaute tawh a dingkhawm hi.
+**Genesis 2:21**
+> Tua ahih ciangin Topa Pasian in mipa ihmut suak mahmah sak a, ama ihmut kalin a nakguhte khat la-in tua mun pen satak tawh a dimsak hi.
 > *tawh*
 > COM
-> 'And the servants and officers stood there, who had made a fire of coals; for it was cold: and they warmed themselves: and Peter stood with them, and warmed himself.'
+> 'And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof;'
 
 ---
 
@@ -179,17 +179,17 @@ Marks source or origin ("from"). Used for spatial, temporal, and abstract origin
 > midst-ABL
 > 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them , the same shall be called great in the kingdom of heaven.'
 
-**Isaiah 38:17**
-> Gimna lianpi ka thuakna pen keima lungnopna hong suak ding hi. Lauhuaina khempeuh panin kei nong honkhia a, ka mawhna khempeuh na hong maisak hi.
+**Genesis 1:4**
+> Pasian in tua khuavak hoih hi, ci-in a mu hi. Pasian in khuamial panin khuavak khenkhia hi.
 > *pan-in*
 > ABL-ERG
-> 'Behold, for peace I had great bitterness: But thou hast in love to my soul delivered it from the pit of corruption: For thou hast cast all my sins behind thy back.'
+> 'And God saw the light, that it was good: and God divided the light from the darkness.'
 
-**Ruth 4:9**
-> Tua ciangin Boaz in upate le mi khempeuh kiangah, “Tuni-in note pen Naomi' tung panin Elimelek le Khilion le Mahlon' neihsa khempeuh ka lei khitna thu teci na hi uh hi.
+**Genesis 2:2**
+> Ni sagih ma-in Pasian in a nasepte zo khinta a, ama hihsa nasep khempeuh panin ni sagih ni-in a tawlnga hi.
 > *pan-in*
 > ABL-ERG
-> 'And Boaz said unto the elders, and unto all the people, Ye are witnesses this day, that I have bought all that was Elimelech's, and all that was Chilion's and Mahlon's, of the hand of Naomi.'
+> 'And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made.'
 
 ---
 

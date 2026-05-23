@@ -46,6 +46,34 @@ def get_entry(source_map, topic_id):
     return next(entry for entry in source_map['topic_mappings'] if entry['topic_id'] == topic_id)
 
 
+def selected_source_ids(conn, source_map, topic_id, *, limit=3, include_non_safe=False):
+    """Return selected source IDs for one topic."""
+    entry = get_entry(source_map, topic_id)
+    return [
+        example['source_id']
+        for example in select_examples_for_entry(conn, entry, limit=limit, include_non_safe=include_non_safe)
+    ]
+
+
+@pytest.mark.parametrize(
+    ('topic_id', 'limit', 'include_non_safe'),
+    [
+        ('comitative-marking', 2, False),
+        ('ablative-marking', 2, False),
+        ('irrealis-ding', 2, False),
+        ('interrogative-hiam', 3, False),
+        ('inverse-hong', 3, False),
+        ('inverse-hong', 8, True),
+    ],
+)
+def test_selection_is_deterministic_for_important_topics(conn, source_map, topic_id, limit, include_non_safe):
+    """Repeated selection should return the same source IDs for important topics."""
+    first = selected_source_ids(conn, source_map, topic_id, limit=limit, include_non_safe=include_non_safe)
+    second = selected_source_ids(conn, source_map, topic_id, limit=limit, include_non_safe=include_non_safe)
+
+    assert first == second
+
+
 def test_ergative_marking_refuses_unsafe_examples(conn, source_map):
     """Ergative output should not surface misleading -in examples as draft-safe."""
     entry = get_entry(source_map, 'ergative-marking')
@@ -179,6 +207,21 @@ def test_inverse_hong_refuses_current_opaque_backend_examples(conn, source_map):
     assert all(example['selection_status'] == 'rejected' for example in audit)
     assert all(example['selection_reason'] == 'Reject current backend hong rows' for example in audit)
     assert {example['source_id'] for example in audit} <= linked_source_ids
+
+
+def test_inverse_hong_audit_is_deterministic(conn, source_map):
+    """inverse-hong audit rows should stay stable across repeated selection calls."""
+    entry = get_entry(source_map, 'inverse-hong')
+    first = [
+        (example['source_id'], example['selection_status'], example['selection_reason'])
+        for example in audit_examples_for_entry(conn, entry, limit=8)
+    ]
+    second = [
+        (example['source_id'], example['selection_status'], example['selection_reason'])
+        for example in audit_examples_for_entry(conn, entry, limit=8)
+    ]
+
+    assert first == second
 
 
 def test_ability_prefers_transparent_abilitative_examples(conn, source_map):

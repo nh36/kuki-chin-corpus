@@ -10,7 +10,6 @@ and provenance headers for generated files.
 import os
 import subprocess
 import sys
-from datetime import datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from analyze_morphemes import analyze_word, gloss_sentence
@@ -75,7 +74,6 @@ def generate_provenance_header(script_name: str, inputs: list = None,
     Returns:
         Multi-line markdown comment string
     """
-    timestamp = datetime.now().isoformat()
     commit = get_git_commit()
     branch = get_git_branch()
     tree_state = get_git_tree_state()
@@ -89,7 +87,6 @@ def generate_provenance_header(script_name: str, inputs: list = None,
         for inp in inputs:
             lines.append(f'<!-- From: {inp} -->')
     
-    lines.append(f'<!-- At: {timestamp} -->')
     lines.append(f'<!-- Branch at generation: {branch} -->')
     lines.append(f'<!-- Generation base commit: {commit} -->')
     lines.append(f'<!-- Tree state at generation: {tree_state} -->')

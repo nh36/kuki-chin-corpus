@@ -53,6 +53,24 @@ QUALITY_ORDER_SQL = '''
     END
 '''
 
+EXAMPLE_STABLE_TIEBREAK_SQL = '''
+    LENGTH(COALESCE(tedim_text, '')),
+    source_id,
+    LOWER(COALESCE(target_form, '')),
+    LOWER(COALESCE(segmented, '')),
+    LOWER(COALESCE(glossed, '')),
+    example_id
+'''
+
+EXAMPLE_STABLE_TIEBREAK_SQL_E = '''
+    LENGTH(COALESCE(e.tedim_text, '')),
+    e.source_id,
+    LOWER(COALESCE(e.target_form, '')),
+    LOWER(COALESCE(e.segmented, '')),
+    LOWER(COALESCE(e.glossed, '')),
+    e.example_id
+'''
+
 
 # =============================================================================
 # Data Classes
@@ -624,7 +642,8 @@ class Backend:
                 SELECT * FROM examples 
                 WHERE sense_id = ?
                 ORDER BY 
-                    {QUALITY_ORDER_SQL}
+                    {QUALITY_ORDER_SQL},
+                    {EXAMPLE_STABLE_TIEBREAK_SQL}
                 LIMIT ?
             ''', (sense_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
@@ -637,7 +656,8 @@ class Backend:
                 SELECT * FROM examples 
                 WHERE morpheme_id = ?
                 ORDER BY 
-                    {QUALITY_ORDER_SQL}
+                    {QUALITY_ORDER_SQL},
+                    {EXAMPLE_STABLE_TIEBREAK_SQL}
                 LIMIT ?
             ''', (morpheme_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
@@ -652,7 +672,8 @@ class Backend:
                 WHERE s.lemma_id = ?
                 ORDER BY 
                     s.is_primary DESC,
-                    {QUALITY_ORDER_SQL.replace('CASE quality', 'CASE e.quality')}
+                    {QUALITY_ORDER_SQL.replace('CASE quality', 'CASE e.quality')},
+                    {EXAMPLE_STABLE_TIEBREAK_SQL_E}
                 LIMIT ?
             ''', (lemma_id, limit)).fetchall()
             return [Example(**dict(row)) for row in rows]
@@ -1194,15 +1215,35 @@ def migrate_from_tsv(tsv_dir: str, db_path: str, iso: str = 'ctd'):
             # Find tokens containing this morpheme in their gloss
             pattern = f'%{gloss}%'
             candidates = conn.execute('''
-                SELECT wf.normalized, wf.segmentation, wf.gloss, 
-                       s.source_id, s.text, s.kjv_text
-                FROM wordforms wf
-                JOIN tokens t ON wf.wordform_id = t.wordform_id
-                JOIN sources s ON t.source_id = s.source_id
-                WHERE wf.gloss LIKE ?
-                AND wf.segmentation LIKE ?
-                GROUP BY s.source_id
-                ORDER BY RANDOM()
+                SELECT normalized, segmentation, gloss, source_id, text, kjv_text
+                FROM (
+                    SELECT
+                        wf.normalized AS normalized,
+                        wf.segmentation AS segmentation,
+                        wf.gloss AS gloss,
+                        s.source_id AS source_id,
+                        s.text AS text,
+                        s.kjv_text AS kjv_text,
+                        ROW_NUMBER() OVER (
+                            PARTITION BY s.source_id
+                            ORDER BY
+                                LENGTH(COALESCE(wf.segmentation, '')),
+                                LOWER(COALESCE(wf.normalized, '')),
+                                LOWER(COALESCE(wf.segmentation, '')),
+                                LOWER(COALESCE(wf.gloss, ''))
+                        ) AS row_num
+                    FROM wordforms wf
+                    JOIN tokens t ON wf.wordform_id = t.wordform_id
+                    JOIN sources s ON t.source_id = s.source_id
+                    WHERE wf.gloss LIKE ?
+                    AND wf.segmentation LIKE ?
+                )
+                WHERE row_num = 1
+                ORDER BY
+                    source_id,
+                    LOWER(COALESCE(normalized, '')),
+                    LOWER(COALESCE(segmentation, '')),
+                    LOWER(COALESCE(gloss, ''))
                 LIMIT 5
             ''', (pattern, f'%{form}%')).fetchall()
             

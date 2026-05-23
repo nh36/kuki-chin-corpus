@@ -165,13 +165,13 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Regenerate and verify the Tedim grammar outputs on `main`, using `docs/grammar/grammar_source_map.json` as the current topic/construction source of truth when backend `grammar_topics` and `constructions` remain empty.
-2. [ ] Generate and review the Tedim dictionary draft.
+1. [x] Stabilize deterministic generated-output regeneration.
+2. [ ] Review the Tedim dictionary sample outputs and decide the dictionary draft format.
 3. [ ] Build the Tedim chrestomathy/reader pipeline, starting with one sample chapter.
-4. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim grammar, dictionary, and chrestomathy package is publishable.
+4. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim package is publishable.
 
 ---
 
-*Last updated: 2026-05-22*  
+*Last updated: 2026-05-23*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*

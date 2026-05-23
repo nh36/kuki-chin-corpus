@@ -90,17 +90,17 @@ Core TAM markers that attach to verb stems.
 
 #### khin (COMPL)
 
-**Romans 10:18**
-> Tua ahihleh amaute in thu za lo uh ahi hiam? Lai Siangtho sungah, “Amau' awgingte leitung khempeuh ah kizel a, a thugente uh in mun khempeuh a ban hi,” ci-in a kigelh mah bangin amaute in thu za khinzo uh hi.
+**Genesis 14:22**
+> Ahih hangin Abram in Sodom kumpipa kiangah, “Vantung le leitung a bawl Sang Pen Topa Pasian tungah ka kiciam khinzo hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *But I say, Have they not heard? Yes verily, Their sound went into all the earth, And their words unto the ends of the world.*
+> KJV: *And Abram said to the king of Sodom, I have lift up mine hand unto the LORD , the most high God, the possessor of heaven and earth,*
 
-**Jeremiah 3:5**
-> nang keima tungah heh tawntung ding na hi hiam? A tawp dongin lungham den ding na hi hiam?' na hong ci hi. En in, tua bang na cih hangin, siatna na hih theih khempeuh na hih khinzo hi,” a ci hi.
-> *khin-zo*
-> COMPL-COMPL
-> KJV: *Will he reserve his anger for ever? will he keep it to the end? Behold, thou hast spoken and done evil things as thou couldest.*
+**Genesis 13:12**
+> Kuam sunga khuapite' lakah Lot tengin, a puanbukte Sodom ciang dongah khinin a om laitakin Kanaan gam sungah Abram teng hi.
+> *khin-in*
+> COMPL-CVB
+> KJV: *Abram dwelled in the land of Canaan, and Lot dwelled in the cities of the plain, and pitched his tent toward Sodom.*
 
 ---
 
@@ -119,31 +119,31 @@ Particles that mark sentence mood and illocutionary force.
 
 #### hi (DECL)
 
-**Daniel 7:15**
-> Ka maangmuhnate in hong linglawng sakin a hong patausak mahmah hi.
+**Genesis 1:1**
+> A kipat cil-in Pasian in vantung le leitung a piangsak hi.
 > *hi'*
 > DECL.POSS
-> KJV: *I Daniel was grieved in my spirit in the midst of my body, and the visions of my head troubled me.*
+> KJV: *In the beginning God created the heaven and the earth.*
 
-**Psalms 119:142**
-> Nangma thumanna kip tawntung a, na thukham zong man tawntung hi.
+**Genesis 1:3**
+> Pasian in, “Khuavak om hen,” ci hi; tua ciangin khuavak om pah hi.
 > *hi'*
 > DECL.POSS
-> KJV: *Thy righteousness is an everlasting righteousness, And thy law is the truth.*
+> KJV: *And God said, Let there be light: and there was light.*
 
 #### hiam (Q)
 
-**Matthew 11:23**
-> Kapernaum khuapi mite aw, van a sangna munah hong kipahtawi ding sa na hi uh hiam? Hell khuk sungah hong kilawnsuk ding hi. Bang hang hiam cih leh note' khuasunga hong kibawl na lamdangte, Sodom khua sungah kibawl hileh tuni dongin tua khua kip lai ding hi.
+**Genesis 2:17**
+> Ahih hangin a pha le a sia theihna singkung gah pen na ne kei ding hi. Bang hang hiam cih leh tua na nek ni-in na si ding hi,” a ci hi.
 > *Hiam*
 > Q
-> KJV: *And thou, Capernaum, which art exalted unto heaven, shalt be brought down to hell: for if the mighty works, which have been done in thee, had been done in Sodom, it would have remained until this day.*
+> KJV: *but of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.*
 
-**Ruth 3:1**
-> Tua ciangin a teeknu Naomi in ama kiangah, “Ka tanu aw, inn khat na suantheih nadingin na pasal ding kong vaihawmsak ding kilawm hi lo ahi hiam?
+**Genesis 2:3**
+> Tua ahih ciangin Pasian in ni sagih ni thupha pia-in siangthosak hi. Bang hang hiam cih leh piansak nasepna ama nasep khempeuh panin tua ni-in Pasian a tawlnga hi.
 > *Hiam*
 > Q
-> KJV: *Then Naomi her mother in law said unto her, My daughter, shall I not seek rest for thee, that it may be well with thee?*
+> KJV: *And God blessed the seventh day, and sanctified it: because that in it he had rested from all his work which God created and made.*
 
 #### ang (FUT)
 

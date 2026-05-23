@@ -37,6 +37,16 @@ CASE e.quality
 END
 """
 
+STABLE_LINKED_EXAMPLE_ORDER_SQL = f"""
+{EXAMPLE_QUALITY_ORDER_SQL},
+LENGTH(COALESCE(e.tedim_text, '')),
+e.source_id,
+LOWER(COALESCE(e.target_form, '')),
+LOWER(COALESCE(e.segmented, '')),
+LOWER(COALESCE(e.glossed, '')),
+e.example_id
+"""
+
 DRAFT_READY_QUALITIES = {'exemplar', 'usable'}
 
 DEFAULT_EXAMPLE_FILTERS = {
@@ -682,7 +692,7 @@ def _linked_rule_query(rule: Dict[str, Any]) -> tuple[str, List[Any]] | None:
         FROM examples e
         LEFT JOIN grammatical_morphemes gm ON e.morpheme_id = gm.morpheme_id
         WHERE {' AND '.join(conditions)}
-        ORDER BY {EXAMPLE_QUALITY_ORDER_SQL}, LENGTH(COALESCE(e.tedim_text, '')), e.example_id
+        ORDER BY {STABLE_LINKED_EXAMPLE_ORDER_SQL}
         LIMIT ?
     '''
     return query, params
