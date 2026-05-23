@@ -153,11 +153,11 @@ Marks accompaniment ("with, together with"). Can extend to instrumental uses.
 > REFL-COM
 > 'Surely there is a vein for the silver, And a place for gold where they fine it .'
 
-**2 Samuel 24:24**
-> Ahih hangin kumpipa in Araunah kiangah, “Hilo hi; nangma tung panin hihte a man tawh kituakin kong lei ding hi. Topa ka Pasian' tungah kei' sum bei loin meihal biaknate ka pia kei ding hi,” a ci hi. Tua ahih ciangin David in ngun shekel sawmnga tawh ancilna mun le bawngtalte a lei hi.
+**Ezekiel 20:7**
+> Kei pen Topa amaute' Pasian ka hih manin a muhdahhuai a milim itte uh paikhia-in, Egypt mite' pasian man lote tawh a kinitsak loh nading uh ka gen hi.
 > *tawh*
 > COM
-> 'And the king said unto Araunah, Nay; but I will surely buy it of thee at a price: neither will I offer burnt offerings unto the LORD my God of that which doth cost me nothing. So David bought the threshingfloor and the oxen for fifty shekels of silver.'
+> 'then said I unto them, Cast ye away every man the abominations of his eyes, and defile not yourselves with the idols of Egypt; I am the LORD your God.'
 
 ---
 
@@ -179,17 +179,17 @@ Marks source or origin ("from"). Used for spatial, temporal, and abstract origin
 > midst-ABL
 > 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them , the same shall be called great in the kingdom of heaven.'
 
-**Judges 14:3**
-> Ahih hangin a nu le a pa in ama kiangah, “Nang pai-in dawibia Filistia mite kiang panin zi na lak nadingin na tanaute' lak ahi a, i mipih khempeuh lakah ahi zongin numei khat beek om lo ahi hiam?” a ci uh hi.
+**Joshua 2:13**
+> Ka nu, ka pa, ka sanggamnute, ka sanggampate, le amaute tawh a kizomte khempeuh hong hon unla, sihna panin kote hong suaktasak un,” a ci hi.
 > *pan-in*
 > ABL-ERG
-> 'Then his father and his mother said unto him, Is there never a woman among the daughters of thy brethren, or among all my people, that thou goest to take a wife of the uncircumcised Philistines? And Samson said unto his father, Get her for me; for she pleaseth me well.'
+> 'and that ye will save alive my father, and my mother, and my brethren, and my sisters, and all that they have, and deliver our lives from death.'
 
-**Mark 11:23**
-> Upna na neih nak-uhleh hih mual kiangah, 'Na omna panin paikhia-in tuipi sung kidenna in,' ci le-uhcin, na lungsim sung uhah uplahna om loin na gen bangun piang taktak ding hi, ci-in na up nak-uhleh, na cih bangun hong piang ding hi.
+**1 Kings 6:24**
+> Kherub kha langkhat, pi sagih le alang sau-in, kherub kha lang dang khat, pi sagih le alang mah sau a, a kha langkhat mong panin a mong langkhat dong pi sawm le nga ahi hi.
 > *pan-in*
 > ABL-ERG
-> 'For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea; and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith.'
+> 'And five cubits was the one wing of the cherub, and five cubits the other wing of the cherub: from the uttermost part of the one wing unto the uttermost part of the other were ten cubits.'
 
 ---
 

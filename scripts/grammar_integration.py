@@ -334,7 +334,20 @@ STRICT_SELECTION_RULES = {
             'target_forms': ['hiam'],
             'segmented_exact': ['Hiam'],
             'gloss_exact': ['Q'],
+            'text_contains': ['?'],
             'exclude_text_contains': ['Bang hang hiam ci', 'Bang hang hiam cih'],
+        },
+        {
+            'name': 'Reject lexical sharp hiam contexts',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 2,
+            'morpheme_ids': ['hiam.Q.sentence_final'],
+            'target_forms': ['hiam'],
+            'segmented_exact': ['Hiam'],
+            'gloss_exact': ['Q'],
+            'text_contains': ['langnih a hiam', 'namsau', 'a hiam ciat uh'],
+            'reason_note': 'This row is a lexical “sharp/two-edged” context, not an interrogative-particle example.',
         },
         {
             'name': 'Reject formulaic Bang hang hiam expressions',
@@ -355,6 +368,17 @@ STRICT_SELECTION_RULES = {
             'max_examples': 2,
             'text_search_terms': ['Bang hang hiam ci', 'Bang hang hiam cih'],
             'reason_note': 'These verse-level hits contain the formulaic reason expression “Bang hang hiam cih leh/ci leh”, so they remain audit-only rejected candidates.',
+        },
+    ],
+    'inverse-hong': [
+        {
+            'name': 'Reject current backend hong rows',
+            'status': 'rejected',
+            'drafting_quality': 'rejected',
+            'max_examples': 3,
+            'morpheme_ids': ['hong.3→1.object_marker'],
+            'target_forms': ['hong'],
+            'reason_note': 'Current backend-linked hong rows are too semantically opaque or contextually unclear to serve as clean inverse/deictic exemplars.',
         },
     ],
     'declarative-hi': [

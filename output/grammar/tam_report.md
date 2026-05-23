@@ -90,17 +90,17 @@ Core TAM markers that attach to verb stems.
 
 #### khin (COMPL)
 
-**Ezekiel 9:11**
-> Tua ciangin saihadial puan silhin lai gelhna a tawi mipa in Topa' kiangah thu hong zasakkik a, “Nong sawl bangin ka sem khinzo hi,” hong ci hi.
+**Judges 16:18**
+> Ama tungah a lungsim khempeuh gen khin hi, ci-in Delilah in a theih ciangin amah in mi sawlin Filistia mi uliante sam a, “Tu-a khatvei hong pai un; bang hang hiam cih leh amah in a lungsim khempeuh kei kiangah hong gen khinzo hi,” a ci hi. Tua ciangin Filistia uliante tua nu kiangah hong pai-in sum zong hong pua uh hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *And, behold, the man clothed with linen, which had the inkhorn by his side, reported the matter, saying, I have done as thou hast commanded me.*
+> KJV: *And when Delilah saw that he had told her all his heart, she sent and called for the lords of the Philistines, saying, Come up this once, for he hath shewed me all his heart. Then the lords of the Philistines came up unto her, and brought money in their hand.*
 
-**Jeremiah 31:18**
-> Efraim' kahna aw ka zazo a, ' Topa aw, bawngtal sin loh bangin kei nong thuhilh khinzo hi. Kong ciahkik theih nadingin hong lakik in; bang hang hiam cih leh nang pen Topa ka Pasian na hi hi.
+**Micah 6:8**
+> Mun khempeuhah a om no mihingte aw, Topa in a hoih nate hong gen khinzo hi. Topa in note tung panin hong kalh thu in: Thuman thutang sem ding a, itna kip nei tawntungin, kiniamkhiatna tawh Pasian' thu man' ding ahi hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *I have surely heard Ephraim bemoaning himself thus ; Thou hast chastised me, and I was chastised, as a bullock unaccustomed to the yoke: turn thou me, and I shall be turned; for thou art the LORD my God.*
+> KJV: *He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?*
 
 ---
 
@@ -119,31 +119,31 @@ Particles that mark sentence mood and illocutionary force.
 
 #### hi (DECL)
 
-**Exodus 12:7**
-> Tua ciangin amaute in a si kimkhat la-in a nekna uh inn kongkhak khuam nihte le a bangtungzawl nuh ding uh hi.
+**Psalms 77:11**
+> Topa' sepnate ka lungsimah ka phawk ding a, hun lui lai-a nangma na lamdangte ka ciamteh ding hi.
 > *hi'*
 > DECL.POSS
-> KJV: *And they shall take of the blood, and strike it on the two side posts and on the upper door post of the houses, wherein they shall eat it.*
+> KJV: *I will remember the works of the LORD : Surely I will remember thy wonders of old.*
 
-**Job 7:15**
-> Tua ahih manin gui-awk ding ka utzaw a, hih bang ka thuak sangin ka si nuamzaw hi.
+**Daniel 11:18**
+> Tua khit ciangin tuipi tungtawnin minam dangte sim ding a, tampi tak mah a zo ding hi. Ahih hangin gamdang makai khat in amah zogawp ding a, a minthanna teng a beisak ding hi.
 > *hi'*
 > DECL.POSS
-> KJV: *So that my soul chooseth strangling, And death rather than my life.*
+> KJV: *After this shall he turn his face unto the isles, and shall take many: but a prince for his own behalf shall cause the reproach offered by him to cease; without his own reproach he shall cause it to turn upon him.*
 
 #### hiam (Q)
 
-**Revelation 1:16**
-> A taklam khutah aksi sagih tawi-in, a kam sung panin langnih a hiam namsau khat hong pusuak a, a maitang sun nitaang a bang hi.
+**John 12:39**
+> Tua ahih manin amaute in um nuam lo uh hi. Bang hang hiam cih leh Isaiah mah in,
 > *Hiam*
 > Q
-> KJV: *And he had in his right hand seven stars: and out of his mouth went a sharp twoedged sword: and his countenance was as the sun shineth in his strength.*
+> KJV: *Therefore they could not believe, because that Esaias said again,*
 
-**Psalms 69:4**
-> Thu om lopi-in kei a hong mudah mi, ka lu tunga samzangte sangin tamzaw uh hi. Kei a hong susia ding, zuauthu tawh a hong dote hat mahmah uh hi. Kei' guk lohpi ke'n loh ding ka hi hiam?
+**2 Corinthians 5:1**
+> Bang hang hiam cih leh hih ka tenna ka leitung pumpi uh a sih ciangin mihingte bawl ahi lo, Pasian in a kip tawntung dingin kote a dingin a hong bawlsak inn, vantungah a nei ding ka hihna uh ka thei uh hi.
 > *Hiam*
 > Q
-> KJV: *They that hate me without a cause are more than the hairs of mine head: They that would destroy me, being mine enemies wrongfully, are mighty: Then I restored that which I took not away.*
+> KJV: *For we know that if our earthly house of this tabernacle were dissolved, we have a building of God, an house not made with hands, eternal in the heavens.*
 
 #### ang (FUT)
 

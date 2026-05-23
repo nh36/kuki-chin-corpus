@@ -124,14 +124,61 @@ def test_nominalization_prefers_nuntak_na(conn, source_map):
 
 
 def test_interrogative_hiam_excludes_formulaic_reason_expression(conn, source_map):
-    """Interrogative hiam should keep ordinary questions and reject Bang hang hiam formulas."""
+    """Interrogative hiam should keep formulaic reason expressions out of draft-ready output."""
     entry = get_entry(source_map, 'interrogative-hiam')
-    safe = select_examples_for_entry(conn, entry, limit=2)
-    audit = audit_examples_for_entry(conn, entry, limit=3)
+    safe = select_examples_for_entry(conn, entry, limit=3)
+    audit = audit_examples_for_entry(conn, entry, limit=5)
 
-    assert safe
     assert all('Bang hang hiam ci' not in example['tedim_text'] for example in safe)
-    assert any(example['selection_status'] == 'rejected' for example in audit)
+    formulaic = [example for example in audit if 'Bang hang hiam ci' in example['tedim_text']]
+    assert formulaic
+    assert all(example['selection_status'] == 'rejected' for example in formulaic)
+
+
+def test_interrogative_hiam_rejects_revelation_sharp_example(conn, source_map):
+    """Revelation 1:16 should not be treated as an interrogative-particle example."""
+    entry = get_entry(source_map, 'interrogative-hiam')
+    safe = select_examples_for_entry(conn, entry, limit=3)
+    audit = audit_examples_for_entry(conn, entry, limit=5)
+
+    assert all(example['source_id'] != '66001016' for example in safe)
+    assert all(example['source_id'] != '66001016' for example in audit if example['selection_status'] == 'safe')
+
+
+def test_interrogative_hiam_safe_examples_exclude_lexical_sharp_use(conn, source_map):
+    """Audited hiam material should not admit lexical 'sharp/two-edged' uses as safe examples."""
+    entry = get_entry(source_map, 'interrogative-hiam')
+    safe = select_examples_for_entry(conn, entry, limit=3)
+    audit = audit_examples_for_entry(conn, entry, limit=5)
+
+    assert all('namsau' not in example['tedim_text'] for example in safe)
+    assert all('sharp twoedged sword' not in (example['kjv_text'] or '').lower() for example in audit)
+    lexical = [
+        example for example in audit
+        if 'namsau' in example['tedim_text']
+        or 'a hiam ciat uh' in example['tedim_text']
+        or 'sharp twoedged sword' in (example['kjv_text'] or '').lower()
+    ]
+    assert all(example['selection_status'] == 'rejected' for example in lexical)
+
+
+def test_inverse_hong_refuses_current_opaque_backend_examples(conn, source_map):
+    """hong- should fail closed until the backend supplies clear inverse/deictic exemplars."""
+    entry = get_entry(source_map, 'inverse-hong')
+    safe = select_examples_for_entry(conn, entry, limit=3)
+    audit = audit_examples_for_entry(conn, entry, limit=8)
+    linked_source_ids = {
+        row['source_id']
+        for row in conn.execute(
+            "SELECT source_id FROM examples WHERE morpheme_id = 'hong.3→1.object_marker'"
+        )
+    }
+
+    assert safe == []
+    assert audit
+    assert all(example['selection_status'] == 'rejected' for example in audit)
+    assert all(example['selection_reason'] == 'Reject current backend hong rows' for example in audit)
+    assert {example['source_id'] for example in audit} <= linked_source_ids
 
 
 def test_ability_prefers_transparent_abilitative_examples(conn, source_map):
