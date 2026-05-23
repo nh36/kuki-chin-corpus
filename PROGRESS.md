@@ -165,9 +165,9 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [x] Stabilize deterministic generated-output regeneration.
-2. [ ] Review the Tedim dictionary sample outputs and decide the dictionary draft format.
-3. [ ] Build the Tedim chrestomathy/reader pipeline, starting with one sample chapter.
+1. [ ] Review the case-marking grammar/dictionary print slice.
+2. [ ] If the slice is satisfactory, produce the next print slice, probably pronouns/pronominal marking or TAM.
+3. [ ] Only after grammar and dictionary print slices are working, return to the Tedim chrestomathy/reader.
 4. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim package is publishable.
 
 ---

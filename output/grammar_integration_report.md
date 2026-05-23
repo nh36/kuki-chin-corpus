@@ -3,7 +3,7 @@
 <!-- From: data/ctd_backend.db -->
 <!-- From: docs/grammar/grammar_source_map.json -->
 <!-- Branch at generation: main -->
-<!-- Generation base commit: e2b48ed6 -->
+<!-- Generation base commit: cce100d4 -->
 <!-- Tree state at generation: working tree dirty -->
 <!-- Regenerate with: make grammar-integration-report -->
 # Tedim Grammar Integration Report
