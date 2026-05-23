@@ -90,9 +90,9 @@ def generate_provenance_header(script_name: str, inputs: list = None,
             lines.append(f'<!-- From: {inp} -->')
     
     lines.append(f'<!-- At: {timestamp} -->')
-    lines.append(f'<!-- Branch: {branch} -->')
-    lines.append(f'<!-- Commit: {commit} -->')
-    lines.append(f'<!-- Tree state: {tree_state} -->')
+    lines.append(f'<!-- Branch at generation: {branch} -->')
+    lines.append(f'<!-- Generation base commit: {commit} -->')
+    lines.append(f'<!-- Tree state at generation: {tree_state} -->')
     
     if command:
         lines.append(f'<!-- Regenerate with: {command} -->')

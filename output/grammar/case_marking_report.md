@@ -153,11 +153,11 @@ Marks accompaniment ("with, together with"). Can extend to instrumental uses.
 > REFL-COM
 > 'Surely there is a vein for the silver, And a place for gold where they fine it .'
 
-**Psalms 86:12**
-> Topa ka Pasian aw, ka lungsim khempeuh tawh na tungah ka lungdam a, nangma min ka thangsak ngitnget ding hi.
+**2 Samuel 24:24**
+> Ahih hangin kumpipa in Araunah kiangah, “Hilo hi; nangma tung panin hihte a man tawh kituakin kong lei ding hi. Topa ka Pasian' tungah kei' sum bei loin meihal biaknate ka pia kei ding hi,” a ci hi. Tua ahih ciangin David in ngun shekel sawmnga tawh ancilna mun le bawngtalte a lei hi.
 > *tawh*
 > COM
-> 'I will praise thee, O Lord my God, with all my heart: And I will glorify thy name for evermore.'
+> 'And the king said unto Araunah, Nay; but I will surely buy it of thee at a price: neither will I offer burnt offerings unto the LORD my God of that which doth cost me nothing. So David bought the threshingfloor and the oxen for fifty shekels of silver.'
 
 ---
 
@@ -179,17 +179,17 @@ Marks source or origin ("from"). Used for spatial, temporal, and abstract origin
 > midst-ABL
 > 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven: but whosoever shall do and teach them , the same shall be called great in the kingdom of heaven.'
 
-**Ezekiel 23:24**
-> Amaute in leilu lam panin nang hong sim ding uh a, leeng galkap le vanpua leeng tampi hong kengin galkap tampi tak tawh hong kuan ding uh hi. Lumte le siklukhute tawh kidalin amaute in nang hong umcih ding uh hi. Amaute' khut sungah nang kong ap ding a, amaute' ngeina om bangin nang' tungah thu hong khen ding uh hi.
+**Judges 14:3**
+> Ahih hangin a nu le a pa in ama kiangah, “Nang pai-in dawibia Filistia mite kiang panin zi na lak nadingin na tanaute' lak ahi a, i mipih khempeuh lakah ahi zongin numei khat beek om lo ahi hiam?” a ci uh hi.
 > *pan-in*
 > ABL-ERG
-> 'And they shall come against thee with chariots, wagons, and wheels, and with an assembly of people, which shall set against thee buckler and shield and helmet round about: and I will set judgment before them, and they shall judge thee according to their judgments.'
+> 'Then his father and his mother said unto him, Is there never a woman among the daughters of thy brethren, or among all my people, that thou goest to take a wife of the uncircumcised Philistines? And Samson said unto his father, Get her for me; for she pleaseth me well.'
 
-**Isaiah 49:21**
-> Tua ciangin na lungsimah, 'Kua in keima a dingin hih mite hong hinkhiatsak ahi hiam? Kei hong kinusia-in tang-awlin ka om a, salin hong kikoihin hong kipaikhiatpih hi. Hihte kua in hong khoisak ahi hiam? Keimah guakin hong kinusia hi. Tua ahih manin koi lai panin hihte hong piang ahi hiam?' na ci ding hi,” a ci hi.
+**Mark 11:23**
+> Upna na neih nak-uhleh hih mual kiangah, 'Na omna panin paikhia-in tuipi sung kidenna in,' ci le-uhcin, na lungsim sung uhah uplahna om loin na gen bangun piang taktak ding hi, ci-in na up nak-uhleh, na cih bangun hong piang ding hi.
 > *pan-in*
 > ABL-ERG
-> 'Then shalt thou say in thine heart, Who hath begotten me these, seeing I have lost my children, and am desolate, a captive, and removing to and fro? and who hath brought up these? Behold, I was left alone; these, where had they been?'
+> 'For verily I say unto you, That whosoever shall say unto this mountain, Be thou removed, and be thou cast into the sea; and shall not doubt in his heart, but shall believe that those things which he saith shall come to pass; he shall have whatsoever he saith.'
 
 ---
 

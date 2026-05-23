@@ -5,6 +5,8 @@
 Generated from the corpus backend. Each entry includes senses,
 wordforms, frequencies, and ranked example sentences.
 
+> Grammatical samples include particles, pronouns, determiners, clitics, and other function items. POS labels reflect the current backend classification and may still need editorial review.
+
 ---
 
 ## Statistics
@@ -12,7 +14,7 @@ wordforms, frequencies, and ranked example sentences.
 - **Entries considered:** 127
 - **Entries emitted:** 30
 - **Type filter:** grammatical
-- **Include needs_review entries:** no
+- **Include needs_review entries:** yes (grammatical sample policy)
 
 ## Generation Audit
 

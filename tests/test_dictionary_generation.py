@@ -123,6 +123,26 @@ def test_generated_sample_file_includes_audit_summary(temp_backend):
     assert "Sample/draft output only" in content
 
 
+def test_generated_grammatical_sample_includes_review_policy_note(temp_backend):
+    add_lemma(
+        temp_backend,
+        'ding',
+        'V',
+        'IRR',
+        token_count=1200,
+        entry_type='grammatical',
+        needs_review=True,
+    )
+
+    lines = generate_sample_entries(temp_backend, entry_type='grammatical', limit=10)
+    content = '\n'.join(lines)
+
+    assert "- **Include needs_review entries:** yes (grammatical sample policy)" in content
+    assert "Grammatical samples include particles, pronouns, determiners, clitics, and other function items." in content
+    assert "## ding" in content
+    assert "⚠️ *Needs review*" in content
+
+
 def test_uh_is_not_first_lexical_noun_entry_in_production_backend(backend):
     entries, _ = select_sample_lemmas(backend, pos='N', limit=10)
 
@@ -145,3 +165,9 @@ def test_ding_routes_to_grammatical_sample_in_production_backend(backend):
     entry_ids = {entry.lemma_id for entry in entries}
 
     assert 'ding' in entry_ids
+
+
+def test_production_grammatical_sample_header_matches_review_policy(backend):
+    content = '\n'.join(generate_sample_entries(backend, entry_type='grammatical', limit=5))
+
+    assert "- **Include needs_review entries:** yes (grammatical sample policy)" in content

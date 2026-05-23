@@ -90,17 +90,17 @@ Core TAM markers that attach to verb stems.
 
 #### khin (COMPL)
 
-**Jeremiah 3:6**
-> Kumpi Josiah in a uk laitakin Topa in kei hong hopih a, “A zulhzau Israel, mualsang tung khempeuhah pai-in singliim nuai khempeuhah numei paktat bangin a om kawikawina na mu khinzo hiam?
+**Ezekiel 9:11**
+> Tua ciangin saihadial puan silhin lai gelhna a tawi mipa in Topa' kiangah thu hong zasakkik a, “Nong sawl bangin ka sem khinzo hi,” hong ci hi.
 > *khin-zo*
 > COMPL-COMPL
-> KJV: *The LORD said also unto me in the days of Josiah the king, Hast thou seen that which backsliding Israel hath done? she is gone up upon every high mountain and under every green tree, and there hath played the harlot.*
+> KJV: *And, behold, the man clothed with linen, which had the inkhorn by his side, reported the matter, saying, I have done as thou hast commanded me.*
 
-**1 Chronicles 10:7**
-> Kuam sungah a om Israel mite khempeuh in galkapte tai khinin, Saul le a tapate a sihna a theih uh ciangin amaute in a khuapite uh nusia-in a tai uh hi. Tua ciangin Filistia mite hong pai-in tua khuate sungah a teng uh hi.
-> *khin-in*
-> COMPL-CVB
-> KJV: *And when all the men of Israel that were in the valley saw that they fled, and that Saul and his sons were dead, then they forsook their cities, and fled: and the Philistines came and dwelt in them.*
+**Jeremiah 31:18**
+> Efraim' kahna aw ka zazo a, ' Topa aw, bawngtal sin loh bangin kei nong thuhilh khinzo hi. Kong ciahkik theih nadingin hong lakik in; bang hang hiam cih leh nang pen Topa ka Pasian na hi hi.
+> *khin-zo*
+> COMPL-COMPL
+> KJV: *I have surely heard Ephraim bemoaning himself thus ; Thou hast chastised me, and I was chastised, as a bullock unaccustomed to the yoke: turn thou me, and I shall be turned; for thou art the LORD my God.*
 
 ---
 
@@ -119,31 +119,31 @@ Particles that mark sentence mood and illocutionary force.
 
 #### hi (DECL)
 
-**1 Chronicles 26:14**
-> Nisuahna lama dingin ai, Shelemiah tungah tu hi. A tapa, a pil thulamlak pa Zekhariah a dingin zong ai san uh a, leilu lama dingin ai pha hi.
+**Exodus 12:7**
+> Tua ciangin amaute in a si kimkhat la-in a nekna uh inn kongkhak khuam nihte le a bangtungzawl nuh ding uh hi.
 > *hi'*
 > DECL.POSS
-> KJV: *And the lot eastward fell to Shelemiah. Then for Zechariah his son, a wise counsellor, they cast lots; and his lot came out northward.*
+> KJV: *And they shall take of the blood, and strike it on the two side posts and on the upper door post of the houses, wherein they shall eat it.*
 
-**Mark 10:16**
-> Tua ciangin naupangnote la-in a ang-ah tawi a, a tung uhah a khut nga-in thupha a pia hi.
+**Job 7:15**
+> Tua ahih manin gui-awk ding ka utzaw a, hih bang ka thuak sangin ka si nuamzaw hi.
 > *hi'*
 > DECL.POSS
-> KJV: *And he took them up in his arms, put his hands upon them, and blessed them.*
+> KJV: *So that my soul chooseth strangling, And death rather than my life.*
 
 #### hiam (Q)
 
-**Judges 6:29**
-> Amaute khatlekhat kiangah, “Hih na kua in hih ahi hiam?” kici uh hi. Amaute in a thu kanin a dot uh ciangin, “Joash' tapa Gideon in hih hi,” kici uh hi.
-> *hiam*
-> Q
-> KJV: *And they said one to another, Who hath done this thing? And when they enquired and asked, they said, Gideon the son of Joash hath done this thing.*
-
-**Psalms 139:7**
-> Nangmah a pelh dingin koi-ah pai ding a, nangma omna panin koi lai-ah taikhia ding ka hi hiam?
+**Revelation 1:16**
+> A taklam khutah aksi sagih tawi-in, a kam sung panin langnih a hiam namsau khat hong pusuak a, a maitang sun nitaang a bang hi.
 > *Hiam*
 > Q
-> KJV: *Whither shall I go from thy spirit? Or whither shall I flee from thy presence?*
+> KJV: *And he had in his right hand seven stars: and out of his mouth went a sharp twoedged sword: and his countenance was as the sun shineth in his strength.*
+
+**Psalms 69:4**
+> Thu om lopi-in kei a hong mudah mi, ka lu tunga samzangte sangin tamzaw uh hi. Kei a hong susia ding, zuauthu tawh a hong dote hat mahmah uh hi. Kei' guk lohpi ke'n loh ding ka hi hiam?
+> *Hiam*
+> Q
+> KJV: *They that hate me without a cause are more than the hairs of mine head: They that would destroy me, being mine enemies wrongfully, are mighty: Then I restored that which I took not away.*
 
 #### ang (FUT)
 

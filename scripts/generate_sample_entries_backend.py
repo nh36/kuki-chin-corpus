@@ -220,6 +220,8 @@ def generate_sample_entries(db: Backend,
                             include_review: bool = False) -> List[str]:
     """Generate sample dictionary entries from backend."""
     lines = []
+    grammatical_sample = entry_type == 'grammatical'
+    effective_include_review = include_review or grammatical_sample
     
     # Header
     lines.append("# Tedim Chin Sample Dictionary Entries")
@@ -229,6 +231,9 @@ def generate_sample_entries(db: Backend,
     lines.append("Generated from the corpus backend. Each entry includes senses,")
     lines.append("wordforms, frequencies, and ranked example sentences.")
     lines.append("")
+    if grammatical_sample:
+        lines.append("> Grammatical samples include particles, pronouns, determiners, clitics, and other function items. POS labels reflect the current backend classification and may still need editorial review.")
+        lines.append("")
     lines.append("---")
     lines.append("")
     
@@ -239,7 +244,7 @@ def generate_sample_entries(db: Backend,
         entry_type=entry_type,
         lemmas=lemmas,
         limit=limit,
-        include_review=include_review,
+        include_review=effective_include_review,
     )
     
     # Statistics
@@ -251,7 +256,10 @@ def generate_sample_entries(db: Backend,
         lines.append(f"- **POS filter:** {selected_pos}")
     if entry_type:
         lines.append(f"- **Type filter:** {entry_type}")
-    lines.append(f"- **Include needs_review entries:** {'yes' if include_review else 'no'}")
+    if grammatical_sample and not include_review:
+        lines.append("- **Include needs_review entries:** yes (grammatical sample policy)")
+    else:
+        lines.append(f"- **Include needs_review entries:** {'yes' if effective_include_review else 'no'}")
     lines.append("")
     lines.append("## Generation Audit")
     lines.append("")
