@@ -78,6 +78,58 @@ b. Segmentation: nei-h
 c. Gloss: have.II-NOM
 d. Translation: "These be the names of the mighty men whom David had: the Tachmonite that sat in the seat, chief among the captains"
 
+## za ~ zak
+
+Category: verb; perception; often transitive
+
+Stem forms: Form I `za`, Form II `zak`
+
+Gloss: "hear"
+
+Cross-reference: *Grammar review slice, "Coverage in the Bible corpus"*
+
+Status: print-usable with caveat
+
+`za ~ zak` is strong enough to enter the print dictionary, but under a visible caveat. Both exact forms are common enough in the Bible corpus, and `zak` has a good dependent-clause example in `a zak ciangin`. The caution is that some `zak` uses broaden into wider sensory or lexicalized readings, so the entry should stay with manually checked hearing contexts rather than treating every surface `zak` as equally diagnostic.
+
+(@dict:za-1)
+a. Tedim: A nitak ciangin huan sungah Topa Pasian a hong paina ging amaute in za uh a, Topa Pasian' muh loh dingin mipa le a zi, huan sung singte lakah a bu uh hi.
+b. Segmentation: za
+c. Gloss: hear.I
+d. Translation: "And they heard the voice of the LORD God walking in the garden in the cool of the day: and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden."
+
+(@dict:za-2)
+a. Tedim: Abraham' nasempa in amau' kammalte a zak ciangin Topa' mai leilakah a kunsuk hi.
+b. Segmentation: zak
+c. Gloss: hear.II
+d. Translation: "And it came to pass, that, when Abraham's servant heard their words, he worshipped the LORD, bowing himself to the earth."
+
+## nusia ~ nusiat
+
+Category: verb; separation and abandonment; often transitive
+
+Stem forms: Form I `nusia`, Form II `nusiat`
+
+Gloss: "leave, forsake"
+
+Cross-reference: *Grammar review slice, "Coverage in the Bible corpus"*
+
+Status: print-usable with caveat
+
+`nusia ~ nusiat` is a real and constructionally promising pair, but it is not yet as reader-friendly as `mu ~ muh` or `ne ~ nek`. Form I is easy to show in ordinary finite or serial uses, while Form II is concentrated in dependent, irrealis, and clause-linking contexts. That makes the pair worth adding now as an important next-stage dictionary entry, but not as a fully solved showcase.
+
+(@dict:nusia-1)
+a. Tedim: Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm a, amau tegel pum khat a bang uh hi.
+b. Segmentation: nusia
+c. Gloss: abandon.I
+d. Translation: "Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh."
+
+(@dict:nusia-2)
+a. Tedim: Amaute tungah Topa a kiciam mah bangin galsim mi ahi tua khangmite khempeuh gam sungah a sih khit dong ahi, Kadeshbarnea i nusiat a kipan Zered lui i kantan dong kikal kum sawmthum le kum giat ahi hi.
+b. Segmentation: nusiat
+c. Gloss: abandon.II
+d. Translation: "And the space in which we came from Kadesh-barnea, until we were come over the brook Zered, was thirty and eight years; until all the generation of the men of war were wasted out from among the host, as the LORD sware unto them."
+
 ## thei ~ theih
 
 Category: verb; cognition; usually transitive or complement-taking

@@ -16,7 +16,7 @@ The current report layer is not yet reliable enough to auto-generate this chapte
 
 The biggest remaining descriptive problem is environmental overstatement. The literature review supports a broad association of Form II with negatives, nominalizations, and certain derived constructions, but the current questionnaire summary does not line up cleanly enough to let the printed chapter collapse everything into one rigid rule. The present slice handles this correctly by making the nominalized and dependent evidence central and by keeping the negative distribution slightly hedged.
 
-Some candidate verb pairs were also omitted on purpose. `za/zak`, `pua/puak`, and some automatically surfaced `pia/piak` material still need closer manual review before they are safe as routine print examples. The slice is better for being selective.
+Some candidate verb pairs are still omitted on purpose. `ngai/ngaih` remains dossier-only because of the `ngaihsun/ngaihsut` lexical-family problem, `pua/puak` still needs closer manual review, and `honkhia/honkhiat` plus `hu/huh` remain excluded from simple stem-alternation treatment. The slice is better for being selective, even after the controlled expansion.
 
 # Dossier note
 
@@ -36,4 +36,6 @@ The key editorial principle is to keep the pair together while allowing uneven s
 
 # Decision for next slice
 
-This stem-alternation packet is good enough to stand as a third print-facing model for Tedim editorial work. It shows that a core verbal morphology topic can be assembled from literature, corpus evidence, and dictionary formatting without changing analyzer logic. The next slice can now move forward, but it should remain comparably narrow and manually curated rather than jumping immediately to a broad TAM chapter.
+The dossier justifies a controlled expansion of the print slice rather than a wholesale rewrite. The grammar slice should now include a coverage table; `za ~ zak` should enter the prose as print-usable with caveat; `za ~ zak` and `nusia ~ nusiat` should enter the dictionary slice with explicit statuses; and `ngai ~ ngaih`, `honkhia ~ honkhiat`, and `hu ~ huh` should remain dossier-only or excluded for now.
+
+After that expansion, the stem-alternation packet can be treated as a solid print-facing model. It shows that a core verbal morphology topic can be assembled from literature, corpus evidence, and dictionary formatting without changing analyzer logic, while still keeping derivational filtering and manual example review explicit. The next slice can now move forward, but it should remain comparably narrow and manually curated rather than jumping immediately to a broad TAM chapter.
