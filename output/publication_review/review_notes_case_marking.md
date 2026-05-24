@@ -14,7 +14,7 @@ The slice is still not fully automated. The automatic example-selection layer re
 
 The source discussion around `-panin` is also intentionally conservative. The form is frequent and clearly source-marking, but the exact relationship between bare `-pan` and `-panin` still needs a fuller structural review before the dictionary can treat the latter as fully settled.
 
-One bibliographic issue also remains. The repository bibliography already has usable Pandoc keys for Henderson and Zam Ngaih Cing, but the citations used here for `@otsuka2009` and `@singh2018` are provisional review-draft keys. Before final Pandoc citeproc output is expected, those keys should be reconciled with `literature/bibliography.bib` or the bibliography file should be expanded so that the review slice resolves cleanly.
+The citation-key problem is now resolved: the grammar slice cites only keys that exist in `literature/bibliography.bib`. Henderson, Zam Ngaih Cing, Otsuka, and the Sukte grammar now all resolve under Pandoc without ad hoc review-draft keys.
 
 # Recommended next editorial task
 

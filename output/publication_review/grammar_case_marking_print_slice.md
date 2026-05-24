@@ -13,13 +13,13 @@ This review slice presents a short draft chapter on nominal case marking and clo
 
 # Case marking in outline
 
-Earlier descriptions agree that Tedim marks nominal relations after the noun phrase, but they differ in how they analyze those forms. Henderson describes them structurally as phrase-final or post-nominal particles rather than as a semantic case system [@henderson1965, 59; @henderson1965, 104]. Zam Ngaih Cing, by contrast, offers a seven-case analysis with explicit ergative, locative, ablative, and comitative categories [@zamngaihcing2018, sec. 3.3.3.3]. Comparative Sukte evidence points in the same direction for several core markers, even though Singh labels the cognate `-in` as nominative rather than ergative [@singh2018, sec. 4.5.1].
+Earlier descriptions agree that Tedim marks nominal relations after the noun phrase, but they differ in how they analyze those forms. Henderson describes them structurally as phrase-final or post-nominal particles rather than as a semantic case system [@henderson1965, 59; @henderson1965, 104]. Zam Ngaih Cing, by contrast, offers a seven-case analysis with explicit ergative, locative, ablative, and comitative categories [@zamngaihcing2018, sec. 3.3.3.3]. Comparative Sukte evidence points in the same direction for several core markers, even though Singh labels the cognate `-in` as nominative rather than ergative [@sukte_grammar, sec. 4.5.1].
 
 For a printed grammar, the most useful generalization is therefore twofold. First, the language is well described by a case-marking analysis in the modern sense. Second, the most natural corpus examples often combine case markers with relational nominal stems, so a final chapter should not force an artificial boundary between “case suffixes” and “spatial nouns”.
 
 # Ergative `-in`
 
-The ergative marker `-in` marks the transitive subject in Tedim Chin [@zamngaihcing2018, sec. 3.3.3.3.1]. Henderson does not use the label *ergative*, but her treatment of phrase-final nominal particles is compatible with the later analysis [@henderson1965, 59]. Otsuka likewise assumes ergative `-in` in discussing causers in causative constructions [@otsuka2009]. Comparative Sukte retains a cognate `-in` marker, though Singh describes it as nominative [@singh2018, sec. 4.5.1].
+The ergative marker `-in` marks the transitive subject in Tedim Chin [@zamngaihcing2018, sec. 3.3.3.3.1]. Henderson does not use the label *ergative*, but her treatment of phrase-final nominal particles is compatible with the later analysis [@henderson1965, 59]. Otsuka likewise assumes ergative `-in` in discussing causers in causative constructions [@otsuka_causative]. Comparative Sukte retains a cognate `-in` marker, though Singh describes it as nominative [@sukte_grammar, sec. 4.5.1].
 
 In this slice, the example below is selected manually after corpus review. Many retrieved Bible candidates for `-in` are formally ambiguous because the same string also appears in homographic verbal uses, whereas Genesis 4:3 gives a clear nominal subject marked by `-in`.
 
@@ -51,7 +51,7 @@ The first example shows especially clearly that `-ah` often completes a larger r
 
 # Source marking: `-pan` and `-panin`
 
-Zam Ngaih Cing describes `-pan` as the ablative marker indicating source or point of departure [@zamngaihcing2018, sec. 3.3.3.3.5]. Comparative Sukte has a cognate `-pan`, which strengthens the historical plausibility of the analysis [@singh2018]. Henderson does not present an ablative category in the modern sense, but the source-marking behavior is nevertheless compatible with her structural account of post-nominal particles [@henderson1965, 104].
+Zam Ngaih Cing describes `-pan` as the ablative marker indicating source or point of departure [@zamngaihcing2018, sec. 3.3.3.3.5]. Comparative Sukte has a cognate `-pan`, which strengthens the historical plausibility of the analysis [@sukte_grammar]. Henderson does not present an ablative category in the modern sense, but the source-marking behavior is nevertheless compatible with her structural account of post-nominal particles [@henderson1965, 104].
 
 (@ex:pan)
 a. Tedim: Tua ahih manin hih thukhamte lakpan a neupente khat bek nangawn zuikha loin, midangte in zong a zuih loh nadingin a gen mite pen vantung ki-ukna sungah mi neupen hi ding uh hi.
@@ -102,8 +102,8 @@ This slice now supports a modest but genuine draft chapter. Ergative `-in` can b
 # References
 
 - Henderson, Eugénie J. A. 1965. *Tiddim Chin: A Descriptive Analysis of Two Texts*. London: Oxford University Press.
-- Otsuka, Kosei. 2009. “Causative and benefactive suffix -sàk in Tiddim Chin.” *思言* 5: 3-22. Details to verify against the repository bibliography and Pandoc citation key.
-- Singh, L. S. 2018. *A Descriptive Grammar of Sukte*. Imphal: Grassroot Publications. Details to verify against the repository bibliography and Pandoc citation key.
+- Otsuka, Kosei. 2009. “Causative and benefactive suffix -sàk in Tiddim Chin.” *思言* 5: 3-22.
+- Singh, L. S. 2018. *A Descriptive Grammar of Sukte*. Imphal: Grassroot Publications.
 - Zam Ngaih Cing. 2018. *A Descriptive Grammar of Tedim Chin*. PhD dissertation, University of New England.
 
 [^tawh-extension]: The currently available biblical examples for `-tawh` are semantically good enough for review, but they do not all illustrate the most prototypical accompaniment reading. That is why the present slice pairs one accompaniment example with one extension example rather than treating Genesis 2:7 or Genesis 2:21 as if they were ordinary companion phrases.
