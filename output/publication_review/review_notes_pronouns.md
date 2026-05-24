@@ -24,6 +24,10 @@ The grammar slice cites only bibliography keys that already exist in `literature
 
 Henderson is the anchor source for the independent-pronoun paradigm, the clusivity contrast, and the concord-prefix mapping. Zam Ngaih Cing provides the strongest support for the pronoun subclasses, possessive pronouns, emphatic `-mah`, and the broader presence of clusivity in Tedim. Singh is used only as a comparative check, mainly to show that Sukte does not straightforwardly reproduce the same clusivity pattern. Otsuka is used narrowly for the person-sensitive `hong-/kong-` domain, not as a general citation for the whole pronoun chapter.
 
+# Clusivity dossier note
+
+A separate dossier now exists at `output/publication_review/dossier_pronoun_clusivity.md`. The generated pronoun report should not be corrected until that dossier conclusion has been reviewed.
+
 # Decision for next slice
 
-This slice is close to being reusable as the next model, but one issue should be fixed before expanding the same workflow much further into person-marking material: the generated pronoun report should stop reversing the inclusive/exclusive labels for `eite` and `kote`. The present slice can work around that problem editorially, but carrying the same workaround into later slices would make the review burden unnecessarily high.
+This slice is close to being reusable as the next model, but one issue should be reviewed before expanding the same workflow much further into person-marking material: the new clusivity dossier shows that the `eite/ei` versus `kote/ko` problem is not yet settled well enough for an automatic report correction. The present slice can remain provisional, but later person-marking slices should wait for an editorial decision on that dossier.
