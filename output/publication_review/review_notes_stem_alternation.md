@@ -20,7 +20,7 @@ Some candidate verb pairs are still omitted on purpose. `ngai/ngaih` remains dos
 
 # Dossier note
 
-A broader evidence dossier now exists at `output/publication_review/dossier_stem_alternation.md`. The current stem-alternation slice should not be treated as finalized until that dossier has been reviewed, because the dossier widens the candidate set, ranks the evidence quality, and separates clean stem evidence from derivational or lexical noise.
+A broader evidence dossier now exists at `output/publication_review/dossier_stem_alternation.md`, and it has now been reviewed and incorporated into the expanded print slice. The grammar slice includes a coverage table; `za ~ zak` has entered the prose as print-usable with caveat; `za ~ zak` and `nusia ~ nusiat` now have dictionary entries with explicit statuses; and `ngai ~ ngaih`, `honkhia ~ honkhiat`, and `hu ~ huh` remain dossier-only or excluded for now.
 
 # Citation and source audit
 
@@ -30,12 +30,14 @@ Source use is appropriately layered. The literature review establishes the high-
 
 # Dictionary integration notes
 
-Dictionary representation of stem alternation now looks viable. The paired-headword format works well for `mu ~ muh`, `ne ~ nek`, and `nei ~ neih`, where the relation is easy to explain and the examples are clean. It also works for less settled pairs such as `thei ~ theih`, `piang ~ pian`, and `pia ~ piak`, provided that the entry status line remains visible and the prose tells the reader where the evidence is strongest.
+Dictionary representation of stem alternation now looks viable. The paired-headword format works well for `mu ~ muh`, `ne ~ nek`, and `nei ~ neih`, where the relation is easy to explain and the examples are clean. It now also works for `za ~ zak` as a print-usable entry with caveat and for `nusia ~ nusiat` as a next-stage caveated entry, because both pairs now have manually checked examples and visible status labels.
+
+Less settled pairs such as `thei ~ theih`, `piang ~ pian`, and `pia ~ piak` remain in the slice with explicit caution rather than being forced into draft-ready status. `ngai ~ ngaih`, `honkhia ~ honkhiat`, and `hu ~ huh` remain outside the dictionary slice for now because the lexical-family, derivational, or category-mixing problems are still too large.
 
 The key editorial principle is to keep the pair together while allowing uneven statuses. Not every verb needs to be called draft-ready at once. A mixed packet with some draft-ready entries and some clearly flagged review entries is better than either a false sense of closure or a refusal to print anything until every alternating verb is solved.
 
 # Decision for next slice
 
-The dossier justifies a controlled expansion of the print slice rather than a wholesale rewrite. The grammar slice should now include a coverage table; `za ~ zak` should enter the prose as print-usable with caveat; `za ~ zak` and `nusia ~ nusiat` should enter the dictionary slice with explicit statuses; and `ngai ~ ngaih`, `honkhia ~ honkhiat`, and `hu ~ huh` should remain dossier-only or excluded for now.
+The dossier has now been reviewed and incorporated into the expanded print slice. The grammar slice includes a coverage table; `za ~ zak` has entered the prose as print-usable with caveat; `za ~ zak` and `nusia ~ nusiat` now have dictionary entries with explicit statuses; and `ngai ~ ngaih`, `honkhia ~ honkhiat`, and `hu ~ huh` remain dossier-only or excluded for now.
 
-After that expansion, the stem-alternation packet can be treated as a solid print-facing model. It shows that a core verbal morphology topic can be assembled from literature, corpus evidence, and dictionary formatting without changing analyzer logic, while still keeping derivational filtering and manual example review explicit. The next slice can now move forward, but it should remain comparably narrow and manually curated rather than jumping immediately to a broad TAM chapter.
+The stem-alternation packet is now good enough to serve as a solid third print-facing model. It shows that a core verbal morphology topic can be assembled from literature, corpus evidence, and dictionary formatting without changing analyzer logic, while still keeping derivational filtering and manual example review explicit. The next slice can now begin, but it should remain comparably narrow and manually curated rather than jumping immediately to a broad TAM chapter.
