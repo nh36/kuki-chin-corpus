@@ -30,4 +30,4 @@ A separate dossier now exists at `output/publication_review/dossier_pronoun_clus
 
 # Decision for next slice
 
-This slice is now close to being reusable as the next model. The clusivity dossier supports a partial correction: the old report wording that treated `kote` as inclusive should stay removed, because sampled dialogue contexts consistently support `ko/kote` as exclusive. The dossier does not yet support a full global statement that `eite` is always inclusive, since `eite/ei` has mixed Bible-corpus behavior. The print slice therefore treats `kote` as exclusive and keeps `eite` under review while using Genesis 13:8 as a clear inclusive example.
+This slice is now good enough to serve as the model for another print-facing slice. The clusivity dossier supports the partial correction already made: `ko/kote` should remain treated as exclusive, while `ei/eite` should remain flagged as under review rather than treated as globally solved. With that caution kept visible, the next substantive grammar-and-dictionary slice can now begin.

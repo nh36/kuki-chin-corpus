@@ -102,7 +102,7 @@ Category: independent first-person plural pronoun
 
 Gloss: `1PL`; 'we, us' (clear inclusive uses; exact clusivity under review)
 
-Cross-reference: *Grammar review slice, "Inclusive and exclusive first-person plural"*
+Cross-reference: *Grammar review slice, "First-person plural forms and clusivity"*
 
 Status: analytically provisional
 
@@ -120,7 +120,7 @@ Category: independent first-person plural pronoun
 
 Gloss: `1PL.EXCL`; 'we, us' (hearer excluded)
 
-Cross-reference: *Grammar review slice, "Inclusive and exclusive first-person plural"*
+Cross-reference: *Grammar review slice, "First-person plural forms and clusivity"*
 
 Status: draft-ready as exclusive
 

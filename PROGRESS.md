@@ -141,6 +141,7 @@ And to `scripts/`:
 - The pronoun grammar slice, dictionary slice, and review notes have been created in `output/publication_review/`.
 - A separate pronoun clusivity dossier has been created at `output/publication_review/dossier_pronoun_clusivity.md`.
 - A safe partial correction is now in place: `ko/kote` is treated as exclusive, while `ei/eite` remains under review pending further evidence.
+- The pronoun slice is now polished enough to serve as the model for the next print-facing grammar-and-dictionary section, provided the unresolved `ei/eite` question stays explicitly flagged.
 
 ## Documentation
 
@@ -172,8 +173,8 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Harden the pronoun print slice after the partial clusivity correction.
-2. [ ] If the pronoun slice is satisfactory, decide which print-facing section should come next.
+1. [ ] Decide which print-facing grammar-and-dictionary section should come next after the pronoun model slice.
+2. [ ] Keep the unresolved `ei/eite` question flagged in later person-marking work unless new evidence settles it.
 3. [ ] Only after grammar and dictionary print slices are working, return to the Tedim chrestomathy/reader.
 4. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim package is publishable.
 
