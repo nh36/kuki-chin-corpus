@@ -144,6 +144,7 @@ And to `scripts/`:
 - The pronoun slice is now polished enough to serve as the model for the next print-facing grammar-and-dictionary section, provided the unresolved `ei/eite` question stays explicitly flagged.
 - A third print-review packet on verb stem alternation has now been expanded and synchronized in `output/publication_review/` with a grammar slice, a dictionary slice, review notes, and a supporting evidence dossier.
 - The stem-alternation packet treats case-marking and pronouns as completed editorial models, argues that the Form I / Form II contrast is real, and now includes a Bible-corpus coverage table plus cautious `za ~ zak` and `nusia ~ nusiat` expansions.
+- A negation evidence dossier has now been created at `output/publication_review/dossier_negation.md`; the next active editorial step is to review it and then draft a narrow negation print slice rather than jumping to TAM or directionals.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim print-facing packet is being finalized and the next narrow slice is chosen.
 
 ## Documentation
@@ -176,7 +177,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Decide which narrow print-facing grammar-and-dictionary section should follow the now-expanded stem-alternation packet, but do not jump straight to a broad TAM chapter yet.
+1. [ ] Review the new negation dossier and draft a narrow negation grammar/dictionary slice, but do not jump straight to a broad TAM chapter or directionals yet.
 2. [ ] Keep the unresolved `ei/eite` question flagged in later person-marking work unless new evidence settles it.
 3. [ ] Only after grammar and dictionary print slices are working, return to the Tedim chrestomathy/reader.
 4. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim package is publishable.
