@@ -25,3 +25,7 @@ Two uncertainties remain explicit in the bibliography. The exact venue and year 
 # Recommended next editorial task
 
 The next task should still be reviewing this case-marking slice itself rather than moving on to a new section. The specific questions are now clearer: whether the manual treatment of ergative `-in` is sufficient for a model slice, whether `-panin` should remain a cautious source-marking entry, and how fully relator nouns should be integrated into the final printed chapter. Only after those questions are settled should the project reuse this slice as the model for a later pronoun or TAM section.
+
+# Decision for next slice
+
+This case-marking slice is now good enough to serve as the model for the next print-facing grammar and dictionary slice. The main remaining editorial question is how fully relator nouns should be integrated into the printed chapter structure, but that question is now clear enough to carry forward as a controlled design decision rather than a blocker.

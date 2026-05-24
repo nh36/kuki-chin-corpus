@@ -103,7 +103,7 @@ This slice now supports a modest but genuine draft chapter. Ergative `-in` can b
 
 - Henderson, Eugénie J. A. 1965. *Tiddim Chin: A Descriptive Analysis of Two Texts*. London: Oxford University Press.
 - Otsuka, Kosei. 2009. “Causative and benefactive suffix -sàk in Tiddim Chin.” *思言: 東京外国語大学記述言語学論集* 5: 3-24.
-- Singh, L. S. 2018. *A Descriptive Grammar of Sukte*. Imphal: Grassroot Publications.
+- Singh, L. S. 2018. *A Descriptive Grammar of Sukte (Salhte)*. Imphal: Grassroot Publications.
 - Zam Ngaih Cing. 2017. *A Descriptive Grammar of Tedim Chin*. PhD dissertation, North-Eastern Hill University, Shillong.
 
 [^tawh-extension]: The currently available biblical examples for `-tawh` are semantically good enough for review, but they do not all illustrate the most prototypical accompaniment reading. That is why the present slice pairs one accompaniment example with one extension example rather than treating Genesis 2:7 or Genesis 2:21 as if they were ordinary companion phrases.
