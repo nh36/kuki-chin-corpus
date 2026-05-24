@@ -18,6 +18,10 @@ The biggest remaining descriptive problem is environmental overstatement. The li
 
 Some candidate verb pairs were also omitted on purpose. `za/zak`, `pua/puak`, and some automatically surfaced `pia/piak` material still need closer manual review before they are safe as routine print examples. The slice is better for being selective.
 
+# Dossier note
+
+A broader evidence dossier now exists at `output/publication_review/dossier_stem_alternation.md`. The current stem-alternation slice should not be treated as finalized until that dossier has been reviewed, because the dossier widens the candidate set, ranks the evidence quality, and separates clean stem evidence from derivational or lexical noise.
+
 # Citation and source audit
 
 The grammar slice cites only bibliography keys that already exist in `literature/bibliography.bib`: `@henderson1965` and `@zamngaihcing2017`. No new bibliography entry was needed.
