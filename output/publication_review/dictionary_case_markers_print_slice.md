@@ -1,124 +1,155 @@
-# Tedim Chin Dictionary Review Slice: Case Markers and Postpositions
-
-## Editorial scope
-
-These draft entries are print-facing dictionary experiments for the case-marking slice of the Tedim publication package. They are not backend dumps. Each entry keeps only the information that is useful for a reader-facing grammar-dictionary workflow: a headword, grammatical category, concise explanation, one or two examples, a cross-reference to the matching grammar slice, and an explicit editorial status.
-
+---
+title: "Tedim Chin Dictionary Review Slice: Case Markers and Postpositions"
 ---
 
-## **-ah**
+# Editorial scope
 
-**Category:** locative case marker / postpositional suffix  
-**Concise gloss:** *LOC; at, in, on, to*  
-**Cross-reference:** *Grammar Case Marking Print Slice, §4 Locative -ah*  
-**Editorial status:** **draft-ready**
+These entries are short print-facing dictionary drafts for the case-marking slice. They are meant to be readable in a grammar-and-dictionary workflow rather than as raw corpus notes. Each entry gives a category, a reader-facing gloss, an editorial status, a short explanation, and one or two examples.
 
-The suffix **-ah** marks location and, in many contexts, destination. In corpus usage it attaches both to ordinary nouns and to relational nouns, so printed explanation should not imply that it occurs only on simple place names. The current safest Bible examples come from clearly spatial phrases and support a broad locative description.
+## -ah
 
-> **Genesis 1:15**  
-> leitung khua a vaksak dingin **vantungah** khuavak hi uh hen,” ci hi.  
-> *vantung-ah* ‘heaven-LOC’
+Category: locative case marker / postpositional suffix
 
-> **Genesis 1:6**  
-> Tuite' **laizangah** van kuumpi om hen la …  
-> *lai-zang-ah* ‘middle-side-LOC’
+Gloss: `LOC`; ‘at, in, on, to’
 
-**Editorial note:** The second example is especially important because it shows that **-ah** often appears on relational stems. A print dictionary entry should therefore point readers to the grammar discussion of relator nouns rather than treating all **-ah** forms as morphologically identical place adverbs.
+Cross-reference: *Grammar review slice, “Locative `-ah`”*
 
----
+Status: draft-ready
 
-## **-in**
+The suffix `-ah` marks location and, in many contexts, destination. It attaches both to simple place nouns and to relational nouns, so it should not be treated only as a bare place suffix.
 
-**Category:** ergative case marker (homographic with several verbal/other suffixes)  
-**Concise gloss:** *ERG*  
-**Cross-reference:** *Grammar Case Marking Print Slice, §3 Ergative -in*  
-**Editorial status:** **needs review**
+(@dict:ah-1)
+a. Tedim: leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi.
+b. Segmentation: vantung-ah
+c. Gloss: heaven-LOC
+d. Translation: ‘and let them be for lights in the firmament of the heaven to give light upon the earth’
 
-Descriptive work on Tedim regularly treats **-in** as the ergative marker of transitive subjects. That grammatical analysis is secure in the literature. The problem for the present print slice is not the description but the evidence pipeline: the current backend-linked Bible candidates are dominated by forms that are better analyzed as converbal or otherwise non-nominal **-in** strings.
+(@dict:ah-2)
+a. Tedim: Tuite' laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen.
+b. Segmentation: lai-zang-ah
+c. Gloss: middle-side-LOC
+d. Translation: ‘Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.’
 
-No Bible example is printed here as a model ergative citation, because the current automatically selected candidates are unsafe for print. The chapter should first be supplied with a manually checked nominal example before this entry is promoted from review status to draft-ready.
+The second example is important because it shows `-ah` after a relational stem rather than after a simple place noun.
 
-**Editorial note:** This entry should stay in the print packet precisely because it reveals an important gap between grammatical knowledge and automatic example extraction.
+## -in
 
----
+Category: ergative case marker
 
-## **-pan**
+Gloss: `ERG`
 
-**Category:** ablative / source marker  
-**Concise gloss:** *ABL; from, out of*  
-**Cross-reference:** *Grammar Case Marking Print Slice, §5 Ablative and source marking*  
-**Editorial status:** **draft-ready**
+Cross-reference: *Grammar review slice, “Ergative `-in`”*
 
-The suffix **-pan** marks source or point of departure. In practice it occurs both after simple nouns and after relational nouns, and the latter are often the clearest corpus examples. The present print slice uses a form with *lak* ‘among’, which is stylistically less elementary than textbook *inn-pan* but more secure as actual Tedim evidence.
+Status: draft-ready with manually selected example
 
-> **Matthew 5:19**  
-> hih thukhamte **lakpan** a neupente khat bek nangawn zuikha loin …  
-> *lak-pan* ‘midst-ABL’
+The marker `-in` marks the transitive subject. Many corpus examples for `-in` are complicated by homographic verbal forms, so this entry uses a manually confirmed example rather than a mechanically ranked one.
 
-The entry should be glossed broadly as a source marker rather than restricted to literal motion away from a place. Corpus evidence shows spatial, abstract, and discourse-structural source readings.
+(@dict:in-1)
+a. Tedim: Tua hun sungin Kain in lei pana piang gah piakna Topa' tungah paipih a,
+b. Segmentation: Kain in
+c. Gloss: Cain ERG
+d. Translation: ‘And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.’
 
----
+Editorial note: the grammatical analysis is secure, but fuller automation of this entry is still blocked pending better discrimination between nominal and verbal `-in`.
 
-## **-panin**
+## -pan
 
-**Category:** source-marking extension / ablative-related postposition sequence  
-**Concise gloss:** *ABL.ERG / from, from out of*  
-**Cross-reference:** *Grammar Case Marking Print Slice, §5 Ablative and source marking*  
-**Editorial status:** **needs review**
+Category: ablative / source marker
 
-The form **-panin** is frequent in the corpus reports and clearly belongs to the Tedim source-marking domain, but its print treatment still needs editorial normalization. Some occurrences look like straightforward extensions of **-pan**; others behave more like fused adverbial or clause-linking forms. For that reason the present packet keeps the entry but does not yet treat it as fully stabilized.
+Gloss: `ABL`; ‘from, out of’
 
-The safest current editorial practice is to gloss **-panin** provisionally as a source-marking form related to **-pan**, while flagging the need for manual review of segmentation and syntactic function before it is printed as a settled dictionary headword.
+Cross-reference: *Grammar review slice, “Source marking: `-pan` and `-panin`”*
 
----
+Status: draft-ready
 
-## **-tawh**
+The suffix `-pan` marks source, origin, or point of departure. Many natural occurrences are built on relational nouns rather than on simple lexical nouns.
 
-**Category:** comitative / associated-postposition marker  
-**Concise gloss:** *COM; with, together with, by means of*  
-**Cross-reference:** *Grammar Case Marking Print Slice, §6 Comitative -tawh*  
-**Editorial status:** **draft-ready**
+(@dict:pan-1)
+a. Tedim: hih thukhamte lakpan a neupente khat bek nangawn zuikha loin
+b. Segmentation: lak-pan
+c. Gloss: midst-ABL
+d. Translation: ‘from among these commandments, even the least one’
 
-The marker **-tawh** covers straightforward accompaniment but also extends into material and instrument-like uses. That wider range matters for print: a dictionary entry that glosses it only as ‘with’ would be serviceable, but incomplete.
+This example shows clearly that `-pan` can mark source on a relational noun phrase, not only on a simple place expression.
 
-> **Genesis 2:21**  
-> tua mun pen **satak tawh** a dimsak hi.  
-> *tawh* ‘with; with flesh / by means of flesh’
+## -panin
 
-> **Genesis 2:7**  
-> **leivui tawh** mihing bawl a …  
-> *tawh* ‘with; from/with dust as material’
+Category: source-marking form related to `-pan`
 
-The preferred print entry should therefore begin with ‘with’ but immediately note extension into accompaniment, association, material, and some instrumental readings.
+Gloss: ‘from; from out of; source-marking form related to `-pan`’
 
----
+Cross-reference: *Grammar review slice, “Source marking: `-pan` and `-panin`”*
 
-## Related relator nouns (for cross-reference)
+Status: needs review
 
-### **kiang**
+The form `-panin` is frequent and clearly expresses source, but its precise structural analysis still needs review. In some contexts it behaves like an extended source form closely related to `-pan`; in others it appears in tighter or more fused patterns that deserve separate editorial checking.
 
-**Category:** relator noun  
-**Concise gloss:** *beside, near, in the presence of*  
-**Cross-reference:** *Grammar Case Marking Print Slice, §7 Relator nouns*  
-**Editorial status:** **draft-ready**
+(@dict:panin-1)
+a. Tedim: Na gam, na beh, le na pa' inn panin nang kong lah ding gamah pai in.
+b. Segmentation: inn panin
+c. Gloss: house from
+d. Translation: ‘Get thee out of thy country, and from thy kindred, and from thy father’s house.’
 
-The noun **kiang** functions as a relational stem meaning roughly ‘beside, at someone’s side, in someone’s vicinity’. In the corpus it very often appears with case marking, especially in forms such as *kiangah* and *kiang panin*. It should therefore be cross-referenced from the case-marker entries, especially **-ah** and **-pan / -panin**.
+Editorial note: the uncertainty belongs in the analysis, not in the headline gloss. The entry should therefore read as a source-marking form first, with structural cautions reserved for the prose note.
 
-> **Genesis 15:15**  
-> nuamtakin na pu na pate **kiang** na zuan ding a …  
-> *kiang* ‘beside; to the side/presence of’
+## -tawh
 
-### **sung**
+Category: comitative / associative postposition
 
-**Category:** relator noun  
-**Concise gloss:** *inside, within, among*  
-**Cross-reference:** *Grammar Case Marking Print Slice, §7 Relator nouns*  
-**Editorial status:** **draft-ready**
+Gloss: `COM`; ‘with, together with’; by extension also ‘with, by means of’
 
-The noun **sung** is one of the most productive relational stems in the corpus. It combines readily with **-ah**, **-in**, and **-pan / -panin**, and it is one of the clearest signs that Tedim spatial grammar cannot be reduced to a list of bare case suffixes.
+Cross-reference: *Grammar review slice, “Comitative `-tawh`”*
 
-> **Genesis 5:4**  
-> Seth a suah khit ciangin Adam kum zagiat **sung** nungta lai hi.  
-> *sung* ‘inside; within’
+Status: draft-ready
 
-**Editorial note:** A fuller printed dictionary will eventually need a family treatment of relator nouns rather than isolated entries, but *kiang* and *sung* are enough for this first review slice.
+The core use of `-tawh` is comitative or associative: it marks a companion or accompanying participant. In the biblical corpus it also extends into material and instrument-like meanings, so both uses should be represented honestly in the entry.
+
+(@dict:tawh-1)
+a. Tedim: Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi.
+b. Segmentation: kei tawh
+c. Gloss: 1SG COM
+d. Translation: ‘save only that which the young men have eaten, and the portion of the men which went with me’
+
+(@dict:tawh-2)
+a. Tedim: Topa Pasian in leilak pana leivui tawh mihing bawl a
+b. Segmentation: leivui tawh
+c. Gloss: dust COM
+d. Translation: ‘And the LORD God formed man of the dust of the ground’
+
+The first example illustrates accompaniment. The second illustrates a broader material or means reading.
+
+## kiang
+
+Category: relator noun
+
+Gloss: ‘beside, near, in the presence of’
+
+Cross-reference: *Grammar review slice, “Relator nouns”*
+
+Status: draft-ready
+
+The noun `kiang` is a relational stem meaning ‘beside, near, at someone’s side’. It frequently combines with locative and source marking, especially in forms such as `kiangah` and `kiang panin`.
+
+(@dict:kiang-1)
+a. Tedim: nang na hih leh, nuamtakin na pu na pate kiang na zuan ding a
+b. Segmentation: kiang
+c. Gloss: beside
+d. Translation: ‘thou shalt go to thy fathers in peace’
+
+## sung
+
+Category: relator noun
+
+Gloss: ‘inside, within, among’
+
+Cross-reference: *Grammar review slice, “Relator nouns”*
+
+Status: draft-ready
+
+The noun `sung` is one of the most productive relational stems in the corpus. It combines freely with locative and source marking and is central to the way Tedim builds spatial expressions.
+
+(@dict:sung-1)
+a. Tedim: Seth a suah khit ciangin Adam kum zagiat sung nungta lai hi.
+b. Segmentation: sung
+c. Gloss: inside
+d. Translation: ‘And the days of Adam after he had begotten Seth were eight hundred years.’
