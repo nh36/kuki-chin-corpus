@@ -135,6 +135,13 @@ And to `scripts/`:
 | 2026-03-15 | 100.00% | +0.01 | Final vocabulary + quality audit |
 | 2026-03-17 | 100.00% | - | Regression tests (64), documentation |
 
+## Recent Tedim publication-review work
+
+- The case-marking grammar/dictionary review packet is now the editorial model for Tedim print-facing slices.
+- The pronoun grammar slice, dictionary slice, and review notes have been created in `output/publication_review/`.
+- A separate pronoun clusivity dossier has been created at `output/publication_review/dossier_pronoun_clusivity.md`.
+- A safe partial correction is now in place: `ko/kote` is treated as exclusive, while `ei/eite` remains under review pending further evidence.
+
 ## Documentation
 
 | Document | Purpose |
@@ -165,13 +172,13 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Review the case-marking grammar/dictionary print slice.
-2. [ ] If the slice is satisfactory, produce the next print slice, probably pronouns/pronominal marking or TAM.
+1. [ ] Harden the pronoun print slice after the partial clusivity correction.
+2. [ ] If the pronoun slice is satisfactory, decide which print-facing section should come next.
 3. [ ] Only after grammar and dictionary print slices are working, return to the Tedim chrestomathy/reader.
 4. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim package is publishable.
 
 ---
 
-*Last updated: 2026-05-23*  
+*Last updated: 2026-05-24*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*

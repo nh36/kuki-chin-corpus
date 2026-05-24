@@ -8,7 +8,7 @@ of the Bible corpus (830,741 tokens).
 Tedim Chin has a rich pronoun system with the following distinctions:
 - **Person**: 1st, 2nd, 3rd
 - **Number**: singular, plural
-- **Clusivity**: 1st person distinguishes inclusive (kote) vs exclusive (eite)
+- **Clusivity**: `ko/kote` behaves as exclusive, while `ei/eite` remains under review
 - **Emphasis**: plain vs emphatic (-mah suffix)
 - **Function**: independent, possessive (prefixal), emphatic
 
@@ -20,7 +20,7 @@ Tedim Chin has a rich pronoun system with the following distinctions:
 
 | Person | Singular | Plural | Corpus Count |
 |--------|----------|--------|--------------|
-| 1st | kei | kote (INCL), eite (EXCL) | 7,206 / 888 / 794 |
+| 1st | kei | eite (1PL; review), kote (1PL.EXCL) | 7,206 / 794 / 888 |
 | 2nd | nang | note | 2,219 / 4,089 |
 | 3rd | amah | amaute | 6,402 / 6,299 |
 
@@ -98,23 +98,23 @@ The -mah suffix adds emphasis or contrast:
 
 ---
 
-## Clusivity Distinction
+## First-Person Plural Contrast
 
-Tedim Chin distinguishes inclusive vs exclusive 1st person plural:
+Tedim Chin has two first-person plural series, `ei/eite` and `ko/kote`, corresponding to Henderson's contrast between `i-` and `ka-` pronominal concord prefixes. Sampled Bible dialogue contexts strongly support `ko/kote` as exclusive. The status of `ei/eite` is more complex in the Bible corpus: it has clear inclusive uses, but it also appears in contexts where the addressee is excluded. This report therefore treats `kote` as exclusive and treats `eite` as a first-person plural form still needing further clusivity review.
 
 | Pronoun | Type | Meaning | Count |
 |---------|------|---------|-------|
-| kote | inclusive | we (including hearer) | 888 |
-| eite | exclusive | we (excluding hearer) | 794 |
-| eimah | excl. emphatic | we ourselves (not you) | 3 |
+| eite | mixed / under review | we, us; includes clear inclusive uses | 794 |
+| kote | exclusive | we, us (hearer excluded) | 888 |
+| eimah | emphatic / under review | we ourselves | 3 |
 
-**Example of exclusive** (speaker's group, hearer excluded):
-> **Eite** kiangah hong gawm in
-> "Come near to **us** (exclusive)"
+**Inclusive use of `eite`** (speaker and hearer grouped together):
+> Bang hang hiam cih leh **eite** beh khat ihi hi.
+> "for **we** be brethren"
 
-**Example of inclusive** (speaker and hearer together):
-> **Kote** pai ding
-> "**We** (inclusive) will go"
+**Exclusive `kote`** (speaker's group, hearer excluded):
+> **Kote** tawh kitenna hong bawl un.
+> "And make ye marriages with **us**"
 
 ---
 
@@ -218,7 +218,7 @@ These suffixes agree with subjects but are distinct from pronouns:
 
 ## Summary
 
-1. **Person/number/clusivity**: Full 7-way distinction (1SG, 2SG, 3SG, 1PL.INCL, 1PL.EXCL, 2PL, 3PL)
+1. **Person/number/1PL contrast**: robust person-number system with `ko/kote` behaving as exclusive and `ei/eite` still under review
 2. **Emphasis**: -mah suffix for emphatic forms
 3. **Possession**: Prefixal possessives (ka-, na-, a-, kan-, nan-, an-)
 4. **Reflexive**: ki- verbal prefix, not a pronoun

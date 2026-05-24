@@ -183,7 +183,7 @@ DIST  land   LOC  gold      3SG-exist DECL
 
 | Person | Singular | Plural |
 |--------|----------|--------|
-| 1 | kei | eite (EXCL), eimite (INCL) |
+| 1 | kei | eite (1PL; review), kote (1PL.EXCL) |
 | 2 | nang | note |
 | 3 | amah | amaute |
 

@@ -12,7 +12,7 @@ The treatment of `hong-` and `kong-` is cautious in the right way. They are incl
 
 # What does not yet work
 
-The main unresolved issue is the inclusive/exclusive labeling conflict. The current generated pronoun report labels `kote` as inclusive and `eite` as exclusive, while Henderson's paradigm and the associated prefix evidence point the other way. The print slice handles this honestly by following the literature provisionally and naming the conflict explicitly, but the upstream report remains out of alignment.
+The main unresolved issue is now narrower than it was in the first draft. The clusivity dossier supports a safe partial correction: sampled dialogue contexts consistently support `ko/kote` as exclusive, so the old `kote`-inclusive report wording should not return. The harder problem is `ei/eite`, which still shows mixed Bible-corpus behavior and therefore remains under review rather than receiving a simple global inclusive label.
 
 The boundary between possessive prefixes and verbal agreement prefixes is also only partly normalized in the project documentation. In the print slice this is manageable, because noun-attached examples are usually easy to interpret. In the wider project, however, some older analyzer-gap notes still describe the contrast as unresolved even though the current outputs are more stable than that wording suggests.
 
@@ -26,8 +26,8 @@ Henderson is the anchor source for the independent-pronoun paradigm, the clusivi
 
 # Clusivity dossier note
 
-A separate dossier now exists at `output/publication_review/dossier_pronoun_clusivity.md`. The generated pronoun report should not be corrected until that dossier conclusion has been reviewed.
+A separate dossier now exists at `output/publication_review/dossier_pronoun_clusivity.md`. That dossier now supports a safe partial correction: remove the old report wording that treated `kote` as inclusive, treat `ko/kote` as exclusive, and keep `ei/eite` under review rather than forcing a full global label swap.
 
 # Decision for next slice
 
-This slice is close to being reusable as the next model, but one issue should be reviewed before expanding the same workflow much further into person-marking material: the new clusivity dossier shows that the `eite/ei` versus `kote/ko` problem is not yet settled well enough for an automatic report correction. The present slice can remain provisional, but later person-marking slices should wait for an editorial decision on that dossier.
+This slice is now close to being reusable as the next model. The clusivity dossier supports a partial correction: the old report wording that treated `kote` as inclusive should stay removed, because sampled dialogue contexts consistently support `ko/kote` as exclusive. The dossier does not yet support a full global statement that `eite` is always inclusive, since `eite/ei` has mixed Bible-corpus behavior. The print slice therefore treats `kote` as exclusive and keeps `eite` under review while using Genesis 13:8 as a clear inclusive example.

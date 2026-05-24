@@ -8,7 +8,7 @@ reference-section-title: "References"
 
 # Scope
 
-This review slice presents a short print-facing chapter on Tedim personal pronouns and closely related pronominal marking. It covers independent personal pronouns, the first-person inclusive/exclusive contrast, possessive prefixes, emphatic forms in `-mah`, reflexive and reciprocal marking with `ki-`, and a cautious first treatment of `hong-` and `kong-`. It does not attempt a full account of demonstratives, interrogatives, quantifiers, TAM, or the wider verbal agreement system.
+This review slice presents a short print-facing chapter on Tedim personal pronouns and closely related pronominal marking. It covers independent personal pronouns, the first-person plural clusivity problem, possessive prefixes, emphatic forms in `-mah`, reflexive and reciprocal marking with `ki-`, and a cautious first treatment of `hong-` and `kong-`. It does not attempt a full account of demonstratives, interrogatives, quantifiers, TAM, or the wider verbal agreement system.
 
 # Personal pronouns
 
@@ -36,13 +36,13 @@ These examples are ordinary independent pronouns rather than bound agreement mar
 
 # Inclusive and exclusive first-person plural
 
-The main editorial problem in this slice is not whether Tedim has clusivity, but which plural form should be labeled inclusive and which exclusive in the present print draft. Henderson is explicit: `ei, eite` are inclusive, while `ko, kote` are exclusive [@henderson1965, 32-33]. The prefixal system points in the same direction, since Henderson pairs inclusive `ei` with `i-` and exclusive `ko` with `ka-` [@henderson1965, 32-33]. Zam Ngaih Cing likewise treats clusivity as a real feature of Tedim person marking, even though her presentation of the plural forms is not identical in surface detail [@zamngaihcing2017, sec. 3.2.1; @zamngaihcing2017, sec. 3.2.2]. Comparative Sukte is useful here mainly as a contrast, since Singh does not describe the same inclusive/exclusive opposition for Sukte [@sukte_grammar, sec. 4.6.1].
+The main editorial problem in this slice is not whether Tedim has clusivity, but how far the current evidence supports global labels for the two first-person plural series. Henderson clearly distinguishes `ei/eite` from `ko/kote` through pronominal-concord prefixes, pairing the former with `i-` and the latter with `ka-` [@henderson1965, 32-33]. Zam Ngaih Cing likewise treats clusivity as a real feature of Tedim person marking, even though her presentation of the plural forms is not identical in surface detail [@zamngaihcing2017, sec. 3.2.1; @zamngaihcing2017, sec. 3.2.2]. The separate clusivity dossier for this slice shows that sampled Bible dialogue contexts strongly support `ko/kote` as exclusive, but that `ei/eite` has both clear inclusive uses and less straightforward uses in the current Bible evidence. Comparative Sukte is useful here mainly as a contrast, since Singh does not describe the same inclusive/exclusive opposition for Sukte [@sukte_grammar, sec. 4.6.1].
 
 (@ex:pro-eite)
-a. Tedim: Hong pai un, amaute khatlekhat' thugen a kitheih loh nadingun eite paisukin amau' kampau va kitukalhsak ni, a ci hi.
+a. Tedim: Tua ciangin Abram in Lot' kiangah, "Nang le kei' kikal, nang' gancingte le kei' gancingte' kikalah kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi."
 b. Segmentation: eite
 c. Gloss: 1PL.PRO
-d. Translation: 'Go to, let us go down, and there confound their language, that they may not understand one another's speech.'
+d. Translation: 'And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.'
 
 (@ex:pro-kote)
 a. Tedim: Kote tawh kitenna hong bawl un. Na tanute uh kote' tungah hong pia unla, no a dingin ka tanute uh la un.
@@ -50,7 +50,7 @@ b. Segmentation: kote
 c. Gloss: 1PL.PRO
 d. Translation: 'And make ye marriages with us, and give your daughters unto us, and take our daughters unto you.'
 
-This slice therefore prints `eite` as the inclusive plural and `kote` as the exclusive plural, following Henderson provisionally. The current corpus report reverses those labels, but that reversal should be treated as a report-level review problem rather than as a fact to reproduce in print.[^clusivity]
+Genesis 13:8 shows a genuinely inclusive use of `eite`, since Abram explicitly includes Lot in the relevant group. It does not prove that every `eite` token is inclusive. Genesis 34:9, by contrast, is a strong diagnostic for exclusive `kote`, since Hamor addresses Jacob's family from a distinct in-group. The present slice therefore treats `kote` as exclusive and leaves the exact global status of `eite` under review.[^clusivity]
 
 # Possessive prefixes
 
@@ -68,7 +68,7 @@ b. Segmentation: a zi'
 c. Gloss: 3SG.POSS wife
 d. Translation: 'And the man called his wife's name Eve.'
 
-The same pattern is visible in `ka pa' inn` 'my father's house' and in the inclusive prefix `i-`, which Henderson associates with the inclusive first-person plural [@henderson1965, 32-33]. Singh's Sukte comparison is also helpful here, since it shows cognate person-marking prefixes in possessive use even though the wider systems are not identical [@sukte_grammar, sec. 4.5.4]. Plural verbal markers such as `-uh` belong to the later agreement chapter rather than to the pronoun inventory itself.
+The same pattern is visible in `ka pa' inn` 'my father's house' and in the `i-` prefix that Henderson associates with the `ei/eite` series [@henderson1965, 32-33]. Singh's Sukte comparison is also helpful here, since it shows cognate person-marking prefixes in possessive use even though the wider systems are not identical [@sukte_grammar, sec. 4.5.4]. Plural verbal markers such as `-uh` belong to the later agreement chapter rather than to the pronoun inventory itself.
 
 # Emphatic pronouns in `-mah`
 
@@ -102,7 +102,7 @@ For print purposes, `ki-` can already be described as a productive reflexive or 
 
 # Pronominal prefixes and inverse/directional marking
 
-Henderson's discussion of pronominal concord is still the best starting point for the bound prefix system. She pairs `kei` with `ka-`, `nang` with `na-`, inclusive `ei/eite` with `i-`, exclusive `ko/kote` with `ka-`, `no/note` with `na-`, and all other nominals with `a-` [@henderson1965, 32-33]. Zam Ngaih Cing's discussion of nominal prefixes confirms the same basic person-marking inventory in noun phrases [@zamngaihcing2017, sec. 3.3.4.1.1]. A printed chapter on pronouns does not need the whole verbal paradigm yet, but it does need to note that the independent pronouns belong to a wider system of bound person marking.
+Henderson's discussion of pronominal concord is still the best starting point for the bound prefix system. She pairs `kei` with `ka-`, `nang` with `na-`, the `ei/eite` series with `i-`, the `ko/kote` series with `ka-`, `no/note` with `na-`, and all other nominals with `a-` [@henderson1965, 32-33]. Zam Ngaih Cing's discussion of nominal prefixes confirms the same basic person-marking inventory in noun phrases [@zamngaihcing2017, sec. 3.3.4.1.1]. A printed chapter on pronouns does not need the whole verbal paradigm yet, but it does need to note that the independent pronouns belong to a wider system of bound person marking.
 
 The harder question concerns `hong-` and `kong-`. The literature treats them as participant-oriented preverbal prefixes with directional or inverse-like behavior, and Otsuka's causative discussion shows that first- and second-person objects are structurally important to their distribution [@zamngaihcing2017, sec. 5.8.1.3; @otsuka_causative]. The current corpus outputs, however, do not yet yield a stable automatic example set for `hong-`, so the present slice uses only narrow, manually checked illustrations.[^hong-kong]
 
@@ -126,6 +126,6 @@ This slice now supports a real draft chapter on pronouns and pronominal marking.
 
 # References
 
-[^clusivity]: The immediate conflict is between the current generated pronoun report, which labels `kote` inclusive and `eite` exclusive, and the literature-based paradigm plus prefix evidence, which point the other way. This slice follows the literature provisionally and keeps the conflict visible.
+[^clusivity]: The earlier report-level reversal `kote` inclusive versus `eite` exclusive has now been removed. The safer editorial position is narrower: `ko/kote` can already be treated as exclusive, but `ei/eite` still shows mixed Bible-corpus behavior and should remain under review rather than receiving a single global label.
 
 [^hong-kong]: The present editorial problem is not whether these forms exist, but how narrowly they should be defined in a first print chapter. The current wording stays close to cases that can be read directly from the verse context without relying on a fully solved backend analysis.

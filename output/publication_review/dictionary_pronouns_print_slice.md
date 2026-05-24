@@ -100,31 +100,31 @@ d. Translation: 'And I, behold, I establish my covenant with you, and with your 
 
 Category: independent first-person plural pronoun
 
-Gloss: `1PL`; 'we, us' (inclusive in this print slice)
+Gloss: `1PL`; 'we, us' (clear inclusive uses; exact clusivity under review)
 
 Cross-reference: *Grammar review slice, "Inclusive and exclusive first-person plural"*
 
 Status: analytically provisional
 
-This slice prints `eite` as the inclusive first-person plural, following Henderson's paradigm and the corresponding `i-` prefix pattern. The form itself is secure, but the current generated pronoun report reverses the inclusive/exclusive labels, so the printed label remains provisional pending review of the report layer.
+`eite` is a first-person plural pronoun with clear inclusive uses in the Bible corpus, including contexts where the addressee is explicitly part of the group. The same dossier evidence also shows that `eite/ei` is not yet cleanly settled as a globally inclusive series in every sampled context, so the entry should stay provisional rather than forcing a single clusivity label.
 
 (@dict:eite-1)
-a. Tedim: Hong pai un, amaute khatlekhat' thugen a kitheih loh nadingun eite paisukin amau' kampau va kitukalhsak ni, a ci hi.
+a. Tedim: Tua ciangin Abram in Lot' kiangah, "Nang le kei' kikal, nang' gancingte le kei' gancingte' kikalah kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi."
 b. Segmentation: eite
 c. Gloss: 1PL.PRO
-d. Translation: 'Go to, let us go down, and there confound their language, that they may not understand one another's speech.'
+d. Translation: 'And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.'
 
 ## kote
 
 Category: independent first-person plural pronoun
 
-Gloss: `1PL`; 'we, us' (exclusive in this print slice)
+Gloss: `1PL.EXCL`; 'we, us' (hearer excluded)
 
 Cross-reference: *Grammar review slice, "Inclusive and exclusive first-person plural"*
 
-Status: analytically provisional
+Status: draft-ready as exclusive
 
-This slice prints `kote` as the exclusive first-person plural, again following Henderson and the contrast between `i-` and `ka-`. The current generated report reverses the label, so the clusivity tag should be treated as a controlled editorial decision rather than as a settled backend fact.
+The clusivity dossier gives strong dialogue-context evidence that `kote` is an exclusive first-person plural form. This entry can therefore be printed as `1PL.EXCL`, even though the wider `ei/eite` series still needs review before the full Tedim plural system is treated as closed.
 
 (@dict:kote-1)
 a. Tedim: Kote tawh kitenna hong bawl un. Na tanute uh kote' tungah hong pia unla, no a dingin ka tanute uh la un.
