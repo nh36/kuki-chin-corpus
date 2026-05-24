@@ -13,13 +13,13 @@ This review slice presents a short draft chapter on nominal case marking and clo
 
 # Case marking in outline
 
-Earlier descriptions agree that Tedim marks nominal relations after the noun phrase, but they differ in how they analyze those forms. Henderson describes them structurally as phrase-final or post-nominal particles rather than as a semantic case system [@henderson1965, 59; @henderson1965, 104]. Zam Ngaih Cing, by contrast, offers a seven-case analysis with explicit ergative, locative, ablative, and comitative categories [@zamngaihcing2018, sec. 3.3.3.3]. Comparative Sukte evidence points in the same direction for several core markers, even though Singh labels the cognate `-in` as nominative rather than ergative [@sukte_grammar, sec. 4.5.1].
+Earlier descriptions agree that Tedim marks nominal relations after the noun phrase, but they differ in how they analyze those forms. Henderson describes them structurally as phrase-final or post-nominal particles rather than as a semantic case system [@henderson1965, 59; @henderson1965, 104]. Zam Ngaih Cing, by contrast, offers a seven-case analysis with explicit ergative, locative, ablative, and comitative categories [@zamngaihcing2017, sec. 3.3.3.3]. Comparative Sukte evidence points in the same direction for several core markers, even though Singh labels the cognate `-in` as nominative rather than ergative [@sukte_grammar, sec. 4.5.1].
 
 For a printed grammar, the most useful generalization is therefore twofold. First, the language is well described by a case-marking analysis in the modern sense. Second, the most natural corpus examples often combine case markers with relational nominal stems, so a final chapter should not force an artificial boundary between “case suffixes” and “spatial nouns”.
 
 # Ergative `-in`
 
-The ergative marker `-in` marks the transitive subject in Tedim Chin [@zamngaihcing2018, sec. 3.3.3.3.1]. Henderson does not use the label *ergative*, but her treatment of phrase-final nominal particles is compatible with the later analysis [@henderson1965, 59]. Otsuka likewise assumes ergative `-in` in discussing causers in causative constructions [@otsuka_causative]. Comparative Sukte retains a cognate `-in` marker, though Singh describes it as nominative [@sukte_grammar, sec. 4.5.1].
+The ergative marker `-in` marks the transitive subject in Tedim Chin [@zamngaihcing2017, sec. 3.3.3.3.1]. Henderson does not use the label *ergative*, but her treatment of phrase-final nominal particles is compatible with the later analysis [@henderson1965, 59]. Otsuka likewise assumes ergative `-in` in discussing causers in causative constructions [@otsuka_causative]. Comparative Sukte retains a cognate `-in` marker, though Singh describes it as nominative [@sukte_grammar, sec. 4.5.1].
 
 In this slice, the example below is selected manually after corpus review. Many retrieved Bible candidates for `-in` are formally ambiguous because the same string also appears in homographic verbal uses, whereas Genesis 4:3 gives a clear nominal subject marked by `-in`.
 
@@ -33,7 +33,7 @@ This example is sufficient for a draft chapter because it shows the essential pa
 
 # Locative `-ah`
 
-The locative `-ah` marks both location and destination [@zamngaihcing2018, sec. 3.3.3.3.3]. Henderson already treats `-ah` as a locative post-nominal particle and discusses its phonological behavior in locative nominal figures [@henderson1965, 54-56]. In the corpus, however, many of the most natural examples involve relational nouns rather than bare place nouns, so the printed description should be slightly richer than a simple gloss “at/in”.
+The locative `-ah` marks both location and destination [@zamngaihcing2017, sec. 3.3.3.3.3]. Henderson already treats `-ah` as a locative post-nominal particle and discusses its phonological behavior in locative nominal figures [@henderson1965, 54-56]. In the corpus, however, many of the most natural examples involve relational nouns rather than bare place nouns, so the printed description should be slightly richer than a simple gloss “at/in”.
 
 (@ex:loc-ah)
 a. Tedim: Pasian in, “Tuite' laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.
@@ -51,7 +51,7 @@ The first example shows especially clearly that `-ah` often completes a larger r
 
 # Source marking: `-pan` and `-panin`
 
-Zam Ngaih Cing describes `-pan` as the ablative marker indicating source or point of departure [@zamngaihcing2018, sec. 3.3.3.3.5]. Comparative Sukte has a cognate `-pan`, which strengthens the historical plausibility of the analysis [@sukte_grammar]. Henderson does not present an ablative category in the modern sense, but the source-marking behavior is nevertheless compatible with her structural account of post-nominal particles [@henderson1965, 104].
+Zam Ngaih Cing describes `-pan` as the ablative marker indicating source or point of departure [@zamngaihcing2017, sec. 3.3.3.3.5]. Comparative Sukte has a cognate `-pan`, which strengthens the historical plausibility of the analysis [@sukte_grammar]. Henderson does not present an ablative category in the modern sense, but the source-marking behavior is nevertheless compatible with her structural account of post-nominal particles [@henderson1965, 104].
 
 (@ex:pan)
 a. Tedim: Tua ahih manin hih thukhamte lakpan a neupente khat bek nangawn zuikha loin, midangte in zong a zuih loh nadingin a gen mite pen vantung ki-ukna sungah mi neupen hi ding uh hi.
@@ -73,7 +73,7 @@ For that reason, a printed grammar can already gloss `-panin` as a source form r
 
 # Comitative `-tawh`
 
-The comitative `-tawh` is described in the literature as the marker of accompaniment [@zamngaihcing2018, sec. 3.3.3.3.6]. Henderson also lists `tawh` among the post-nominal particles [@henderson1965, 104]. In the biblical corpus, however, the most accessible examples are semantically broader than simple human accompaniment. A printed chapter should therefore distinguish the core comitative use from its material and instrumental extensions rather than treating all examples as equivalent.[^tawh-extension]
+The comitative `-tawh` is described in the literature as the marker of accompaniment [@zamngaihcing2017, sec. 3.3.3.3.6]. Henderson also lists `tawh` among the post-nominal particles [@henderson1965, 104]. In the biblical corpus, however, the most accessible examples are semantically broader than simple human accompaniment. A printed chapter should therefore distinguish the core comitative use from its material and instrumental extensions rather than treating all examples as equivalent.[^tawh-extension]
 
 (@ex:tawh-accompaniment)
 a. Tedim: Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi.
@@ -91,7 +91,7 @@ Genesis 14:24 illustrates the core accompaniment use well enough for print: `kei
 
 # Relator nouns
 
-The locative and source examples already show that Tedim spatial grammar is not exhausted by a list of case markers. Relator nouns such as `lak`, `sung`, `kiang`, and `tung` regularly host locative and ablative marking, and they do so at very high frequency in the corpus reports. Henderson’s structural treatment makes room for this by analyzing many such forms in terms of nominal figures rather than sharply separated case suffixes [@henderson1965, 59]. Zam Ngaih Cing’s case system, meanwhile, makes the semantic contribution of the markers clearer [@zamngaihcing2018, sec. 3.3.3.3].
+The locative and source examples already show that Tedim spatial grammar is not exhausted by a list of case markers. Relator nouns such as `lak`, `sung`, `kiang`, and `tung` regularly host locative and ablative marking, and they do so at very high frequency in the corpus reports. Henderson’s structural treatment makes room for this by analyzing many such forms in terms of nominal figures rather than sharply separated case suffixes [@henderson1965, 59]. Zam Ngaih Cing’s case system, meanwhile, makes the semantic contribution of the markers clearer [@zamngaihcing2017, sec. 3.3.3.3].
 
 For a final chapter, the best solution will probably be to treat the system in two layers: first the case markers themselves, then the class of relational nouns that commonly host them. The present review slice stops short of a full relator-noun section, but it already makes clear that the two layers belong in the same part of the grammar.
 
@@ -102,8 +102,8 @@ This slice now supports a modest but genuine draft chapter. Ergative `-in` can b
 # References
 
 - Henderson, Eugénie J. A. 1965. *Tiddim Chin: A Descriptive Analysis of Two Texts*. London: Oxford University Press.
-- Otsuka, Kosei. 2009. “Causative and benefactive suffix -sàk in Tiddim Chin.” *思言* 5: 3-22.
+- Otsuka, Kosei. 2009. “Causative and benefactive suffix -sàk in Tiddim Chin.” *思言: 東京外国語大学記述言語学論集* 5: 3-24.
 - Singh, L. S. 2018. *A Descriptive Grammar of Sukte*. Imphal: Grassroot Publications.
-- Zam Ngaih Cing. 2018. *A Descriptive Grammar of Tedim Chin*. PhD dissertation, University of New England.
+- Zam Ngaih Cing. 2017. *A Descriptive Grammar of Tedim Chin*. PhD dissertation, North-Eastern Hill University, Shillong.
 
 [^tawh-extension]: The currently available biblical examples for `-tawh` are semantically good enough for review, but they do not all illustrate the most prototypical accompaniment reading. That is why the present slice pairs one accompaniment example with one extension example rather than treating Genesis 2:7 or Genesis 2:21 as if they were ordinary companion phrases.

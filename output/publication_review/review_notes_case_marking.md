@@ -16,6 +16,12 @@ The source discussion around `-panin` is also intentionally conservative. The fo
 
 The citation-key problem is now resolved: the grammar slice cites only keys that exist in `literature/bibliography.bib`. Henderson, Zam Ngaih Cing, Otsuka, and the Sukte grammar now all resolve under Pandoc without ad hoc review-draft keys.
 
+# Bibliography correction note
+
+The uploaded source PDFs were checked directly and the Tedim bibliography entries were corrected against those files. This includes the Otsuka causative, applicative, Burmese loanwords, and voice papers, the Otsuka-Kurabe directional-affixes handout, and the Zam Ngaih Cing thesis metadata used by the case-marking slice.
+
+Two uncertainties remain explicit in the bibliography. The exact venue and year of the Otsuka-Kurabe directional-affixes handout still need independent confirmation beyond the uploaded PDF, so the entry is kept conservative. The Zam thesis is cited here as 2017 following Otsuka’s own reference lists, while the local split PDF filenames still contain 2018.
+
 # Recommended next editorial task
 
 The next task should still be reviewing this case-marking slice itself rather than moving on to a new section. The specific questions are now clearer: whether the manual treatment of ergative `-in` is sufficient for a model slice, whether `-panin` should remain a cautious source-marking entry, and how fully relator nouns should be integrated into the final printed chapter. Only after those questions are settled should the project reuse this slice as the model for a later pronoun or TAM section.
