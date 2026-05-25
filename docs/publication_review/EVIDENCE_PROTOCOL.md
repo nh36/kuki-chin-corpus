@@ -114,6 +114,12 @@ Suggested values:
 3. Preserve analyzer-aware spans in the candidate row so later dossier work can cite actual token indices, segmentation, glossing, and POS information.
 4. Promote examples to print prose only after they reach Level 3.
 
+## Curated pilots and future automation
+
+The current demonstratives extractor is curated and analyzer-validated. That is acceptable for publication-review work because print examples must still be manually reviewed even when candidate extraction is reproducible.
+
+Future work may add more automatic discovery, but automatic discovery should never bypass the evidence levels defined above. The key guarantee is not full automation. It is that every promoted example has an explicit candidate row with analyzer-backed spans, review status, and a documented reason for acceptance, exclusion, or deferral.
+
 ## Pilot topic: demonstratives/deixis
 
 The first pilot under this protocol is `output/publication_review/candidates_demonstratives.tsv`.

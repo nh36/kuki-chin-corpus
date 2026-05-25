@@ -6,7 +6,16 @@ This script establishes a reusable scaffold for publication-review evidence
 work. The current pilot topic is demonstratives/deixis, using the exported
 Tedim token analysis in data/ctd_analysis/tokens.tsv.
 
+Extension pattern:
+    - build_<topic>_specs() defines curated CandidateSpec rows for one topic.
+    - build_specs(topic) routes the topic name to its spec builder.
+    - Future topics should follow the same pattern: add a topic-specific spec
+      builder, add it to the router, and commit the resulting candidate TSV.
+    - Automatic discovery may be added later, but current publication-review
+      candidates are intentionally curated and analyzer-validated.
+
 Usage:
+    python3 scripts/publication_review/extract_candidates.py --list-topics
     python3 scripts/publication_review/extract_candidates.py demonstratives
 """
 
@@ -21,6 +30,7 @@ ROOT = Path(__file__).resolve().parents[2]
 TOKENS_PATH = ROOT / "data" / "ctd_analysis" / "tokens.tsv"
 VERSES_PATH = ROOT / "data" / "verses_aligned.tsv"
 OUTPUT_DIR = ROOT / "output" / "publication_review"
+SUPPORTED_TOPICS = ("demonstratives",)
 
 CANDIDATE_COLUMNS = [
     "candidate_id",
@@ -115,15 +125,29 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "topic",
-        choices=("demonstratives",),
+        nargs="?",
+        choices=SUPPORTED_TOPICS,
         help="Publication-review topic to extract.",
+    )
+    parser.add_argument(
+        "--list-topics",
+        action="store_true",
+        help="List supported topics and exit.",
     )
     parser.add_argument(
         "--output",
         type=Path,
         help="Optional explicit output path. Defaults to output/publication_review/candidates_<topic>.tsv.",
     )
-    return parser.parse_args()
+    args = parser.parse_args()
+    if not args.list_topics and not args.topic:
+        parser.error("topic is required unless --list-topics is used")
+    return args
+
+
+def list_topics() -> None:
+    for topic in SUPPORTED_TOPICS:
+        print(topic)
 
 
 def require_tokens_export() -> None:
@@ -382,11 +406,20 @@ def write_candidates(topic: str, output_path: Path) -> None:
                 raise SystemExit(f"Reference not found in data/verses_aligned.tsv: {spec.reference}")
             writer.writerow(candidate_row(spec, verse_meta, tokens_by_verse))
 
-    print(f"Wrote {output_path.relative_to(ROOT)} using data/ctd_analysis/tokens.tsv")
+    try:
+        display_path = output_path.relative_to(ROOT)
+    except ValueError:
+        display_path = output_path
+
+    print(f"Wrote {display_path} using data/ctd_analysis/tokens.tsv")
 
 
 def main() -> None:
     args = parse_args()
+    if args.list_topics:
+        list_topics()
+        return
+
     output_path = args.output or OUTPUT_DIR / f"candidates_{args.topic}.tsv"
     write_candidates(args.topic, output_path)
 
