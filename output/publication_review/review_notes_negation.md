@@ -32,6 +32,14 @@ Negation now also has an analyzer-aware candidate file at `output/publication_re
 
 The packet should now be read in the order `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`. That keeps the grammar and dictionary slices anchored to analyzer-backed candidate rows rather than to raw string searches or report-level shortcuts.
 
+# Analyzer/export caveats in the candidate layer
+
+The candidate file uses analyzer-export spans, but some lemma and POS fields are still imperfect. Accepted status therefore rests on a three-part combination: analyzer-confirmed surface or token windows, manual verse review, and the constructional interpretation already established in the dossier and print packet.
+
+The main caveats are visible in a small number of rows. In accepted dependent-negation rows, `loh` still exports with `Loh` and `PROP`-like values, and in Exodus 10:5 the following purposive token `nadingin` also surfaces with `PROP`-like export metadata. In the accepted cessative row, `nawn` currently exports as `Nawn` with POS `PROP` even though the construction itself is clear in context. In excluded Genesis 2:25, the export currently treats `uh` as POS `N`, which is another reminder that analyzer-backed does not mean analyzer-infallible.
+
+These artifacts are not fatal for the current packet because the candidate layer is not pretending to be a fully automatic truth source. It is an auditable bridge between analyzer output and manual publication-review judgment. The important guarantee is that every promoted or excluded negation example now has an explicit analyzer-backed span and an explicit note when the export metadata itself is noisy.
+
 # Report-correction notes
 
 The generated negation report is useful but too simple. Its most serious error for print purposes is the prohibitive section: Genesis 2:25 `maizum lo uh hi` is not a prohibitive and must not be used that way. It is an ordinary declarative plural negative clause, "they were not ashamed".

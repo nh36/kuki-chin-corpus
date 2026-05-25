@@ -406,6 +406,7 @@ def build_negation_specs() -> list[CandidateSpec]:
             token_indices=(13, 14, 15),
             confidence="high",
             why_selected="Analyzer-confirmed `nek loh dinga` supports dependent or derived negation rather than a random spelling variant of `lo`.",
+            notes="Export caveat: the token window is correct, but the export currently lemmatizes `loh` as `Loh` and tags it `PROP`; accepted status rests on the confirmed surface window plus manual constructional review.",
             expected_normalized=("nek", "loh", "dinga"),
         ),
         accepted(
@@ -426,6 +427,7 @@ def build_negation_specs() -> list[CandidateSpec]:
             token_indices=(18, 19, 20),
             confidence="high",
             why_selected="Analyzer-confirmed `nawn lo hi` gives a clean cessative or no-longer construction.",
+            notes="Export caveat: the token window is correct, but `nawn` currently surfaces with lemma `Nawn` and POS `PROP`; the row is accepted because the surface span and verse context are unambiguous.",
             expected_normalized=("nawn", "lo", "hi"),
         ),
         accepted(
@@ -446,6 +448,7 @@ def build_negation_specs() -> list[CandidateSpec]:
             token_indices=(5, 6, 7),
             confidence="high",
             why_selected="Analyzer-confirmed `theih loh nadingin` preserves the dependent ability-negation pattern that the packet treats separately from simple `thei lo`.",
+            notes="Export caveat: the token window is correct, but the export currently shows `loh` and `nadingin` with `PROP`-like lemma/POS values (`Loh`, `Nadingin`); accepted status depends on the analyzer-backed span plus manual verse review.",
             expected_normalized=("theih", "loh", "nadingin"),
         ),
         accepted(
@@ -477,7 +480,7 @@ def build_negation_specs() -> list[CandidateSpec]:
             confidence="high",
             why_selected="Retain the old report-level pitfall so future work does not reclassify raw `V lo uh` as prohibitive evidence.",
             why_excluded="Genesis 2:25 is an ordinary declarative plural negative clause (`maizum lo uh hi`), not a prohibitive or directive.",
-            notes="Problem type: raw-string overgeneration plus constructional ambiguity. `V lo uh` cannot be accepted as prohibitive evidence without an independently directive context.",
+            notes="Problem type: raw-string overgeneration plus constructional ambiguity. Export caveat: the surface window is correct, but `uh` currently appears as POS `N`; this row remains excluded because `V lo uh` cannot be accepted as prohibitive evidence without an independently directive context.",
             expected_normalized=("maizum", "lo", "uh", "hi"),
         ),
         excluded(
@@ -489,7 +492,7 @@ def build_negation_specs() -> list[CandidateSpec]:
             confidence="high",
             why_selected="Raw `kei` searches are tempting because negative `kei` is central to the packet, so the candidate layer needs one explicit pronoun false friend.",
             why_excluded="In `kei sangin`, the analyzer marks `kei` as 1SG pronoun, not as a negator, so this row cannot support negation prose.",
-            notes="Problem type: analyzer-backed ambiguity handling. Exact `kei` counts must distinguish 1SG pronoun uses from negative uses.",
+            notes="Problem type: analyzer-backed ambiguity handling. Export caveat: `kei` is correctly interpreted as `1SG.PRO`, but the POS field still reads `FUNC`; exact `kei` counts must therefore be checked by function as well as by POS.",
             expected_normalized=("kei", "sangin"),
         ),
         excluded(
@@ -501,7 +504,7 @@ def build_negation_specs() -> list[CandidateSpec]:
             confidence="high",
             why_selected="The dossier already flags non-NPI `bangmah` uses, so one explicit exclusion row helps keep raw `bangmah` searches from overcounting negation evidence.",
             why_excluded="`tua bangmah hi-in` is a non-NPI lexical expression ('likewise / in the same way'), not negative-polarity evidence.",
-            notes="Problem type: raw-string overgeneration. `bangmah` requires polarity-context checking before it can support negation prose.",
+            notes="Problem type: raw-string overgeneration. Export caveat: `bangmah` still glosses as `nothing`, but the broader span lacks negative licensing; `bangmah` requires polarity-context checking before it can support negation prose.",
             expected_normalized=("tua", "bangmah", "hi-in"),
         ),
     ]

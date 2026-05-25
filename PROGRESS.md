@@ -146,15 +146,16 @@ And to `scripts/`:
 - The stem-alternation packet treats case-marking and pronouns as completed editorial models, argues that the Form I / Form II contrast is real, and now includes a Bible-corpus coverage table plus cautious `za ~ zak` and `nusia ~ nusiat` expansions.
 - The negation evidence dossier at `output/publication_review/dossier_negation.md` has now been converted into a synchronized grammar slice, dictionary slice, review notes, a corrected generated-report caveat, and an analyzer-aware candidate file at `output/publication_review/candidates_negation.tsv`.
 - The negation packet treats `lo`, `loh`, and `kei` as part of one negation system, and Genesis 2:25 plus the old `V lo uh` prohibitive analysis now remain blocked both in packet prose and in the new candidate layer.
+- The negation candidate retrofit has now been hardened with explicit notes for analyzer/export caveats such as `Loh`/`Nadingin` export artifacts, `Nawn` as a `PROP`-like lemma/POS value, and the excluded Genesis 2:25 `uh` row.
 - Demonstratives/deixis remains the protocol pilot topic, while negation is now the first retrospective retrofit under the candidate-first workflow.
 - A cross-topic analyzer-aware publication-review evidence protocol now lives at `docs/publication_review/EVIDENCE_PROTOCOL.md`.
 - The evidence protocol now has a documented candidate-extraction workflow in `docs/publication_review/CANDIDATE_EXTRACTION.md`.
 - Demonstratives/deixis is the pilot topic for the new candidate-extraction layer in `output/publication_review/candidates_demonstratives.tsv`, and the committed TSV is reproducible from `scripts/publication_review/extract_candidates.py`.
 - A retrospective evidence-protocol audit now exists at `output/publication_review/evidence_protocol_retrofit_audit.md`.
 - Earlier publication-review packets are now being checked against the newer candidate-first standard rather than treated as automatically protocol-complete.
-- Demonstratives is already protocol-backed, and negation is now being retrofitted through an explicit analyzer-aware candidate layer.
+- Demonstratives is already protocol-backed, and negation now has a hardened analyzer-aware candidate layer with caveats documented rather than hidden.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
-- No new topic should begin until the negation candidate layer is reviewed and hardened enough to serve as the first retrofit model.
+- With the negation candidate layer now hardened, the next retrofit step can be pronoun/clusivity rather than a brand-new topic.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -187,7 +188,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Review and harden the new negation candidate file before moving to pronoun/clusivity retrofit or any new topic.
+1. [ ] Begin the pronoun/clusivity retrofit now that the negation candidate layer has been hardened.
 2. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 3. [ ] Keep the unresolved `ei/eite` question flagged in any later person-marking work unless new evidence settles it.
 

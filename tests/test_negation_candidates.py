@@ -60,3 +60,23 @@ def test_negation_candidate_file_keeps_core_accepted_and_old_false_friend_out():
 
         if row["construction_id"] == "lo-uh-prohibitive":
             assert row["candidate_status"] != "accepted"
+
+
+def test_negation_candidate_file_keeps_false_friend_audit_rows():
+    _, rows = load_candidates()
+
+    by_construction = {row["construction_id"]: row for row in rows}
+
+    kei_row = by_construction["kei-pronoun"]
+    assert kei_row["candidate_status"] == "excluded"
+    assert "1SG pronoun" in kei_row["why_excluded"]
+    assert kei_row["notes"]
+
+    bangmah_row = by_construction["bangmah-npi"]
+    assert bangmah_row["candidate_status"] == "excluded"
+    assert "non-NPI" in bangmah_row["why_excluded"]
+    assert bangmah_row["notes"]
+
+    loh_row = by_construction["loh"]
+    assert loh_row["notes"]
+    assert "PROP" in loh_row["notes"]
