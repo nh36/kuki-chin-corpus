@@ -23,7 +23,7 @@ Under this standard, earlier publication-review packets are analytically usable,
 | pronouns | no separate pronoun dossier; clusivity handled in a separate dossier | yes | yes | yes | no | `tests/test_pronoun_clusivity_docs.py` | yes: `docs/grammar/reports/06-func-01-pronouns.md` now treats `ko/kote` as exclusive and keeps `ei/eite` under review | unresolved `ei/eite`, `ko/kote`, possessive vs agreement prefixes, `hong-/kong-` | usable packet with a partial report correction, but not yet candidate-backed | retrofit after negation; likely share work with the clusivity dossier rather than force a full pronoun rewrite |
 | pronoun clusivity | yes (`dossier_pronoun_clusivity.md`) | no | no | no separate review note | no | `tests/test_pronoun_clusivity_docs.py` | yes, via the partial correction in `docs/grammar/reports/06-func-01-pronouns.md` | mixed `ei/eite`, more stable `ko/kote`, dialogue-context sensitivity | dossier-only support layer that still feeds the pronoun packet | treat as part of the pronoun retrofit rather than as a stand-alone print packet |
 | stem alternation | yes | yes | yes | yes | no | no packet-specific publication-review test located | no explicit report correction located; review notes instead describe noisy report/questionnaire layers | Form I / Form II distribution, noisy questionnaire output, lexical-family contamination (`ngai/ngaih`), caveated expansions such as `za ~ zak` and `nusia ~ nusiat` | strong packet, but still depends on manual filtering rather than explicit candidate rows | third retrofit candidate; add a candidate file for core pairs and explicitly excluded pairs |
-| negation | yes | yes | yes | yes | no | no packet-specific publication-review test located | yes: `docs/grammar/reports/06-func-04-negation.md` was minimally corrected so Genesis 2:25 and `V lo uh` no longer mislead the packet | `kei` negator vs pronoun, `lo` vs `loh`, `V lo uh`, `kuamah`, `bangmah`, `thei lo / theih loh` | analytically polished and synchronized, but created before candidate-first protocol | first retrofit candidate: create `output/publication_review/candidates_negation.tsv` |
+| negation | yes | yes | yes | yes | yes (`candidates_negation.tsv`) | `tests/test_negation_candidates.py` plus extractor reproducibility coverage | yes: `docs/grammar/reports/06-func-04-negation.md` was minimally corrected so Genesis 2:25 and `V lo uh` no longer mislead the packet | `kei` negator vs pronoun, `lo` vs `loh`, `V lo uh`, `kuamah`, `bangmah`, `thei lo / theih loh` | first retrofit now completed under the candidate-first workflow | review and harden the new negation candidate file before moving to pronouns |
 | demonstratives/deixis | yes | yes | yes | yes | yes (`candidates_demonstratives.tsv`) | `tests/test_demonstratives_docs.py`, `tests/test_publication_evidence_protocol.py`, `tests/test_publication_candidate_extractor.py` | yes: `docs/grammar/reports/06-func-02-demonstratives.md` now carries explicit correction notes | `hi`, exact `hih ciangin`, `tua` / `hua`, raw-search false friends | current pilot for the protocol-backed workflow | no immediate retrofit needed beyond maintenance and future topic extension |
 
 ## Topic-by-topic audit notes
@@ -34,7 +34,7 @@ Demonstratives is already protocol-backed. It has a dossier, synchronized print 
 
 ### Negation
 
-Negation is the highest-priority retrofit. The packet is analytically strong and already synchronized, but it was built before candidate files existed. Its ambiguity profile is also unusually high: `kei` is homographic with the first-person singular pronoun, `lo` and `loh` need constructional rather than string-based handling, `V lo uh` has already proved easy to misread, and `kuamah` / `bangmah` overgenerate under raw search. This is the clearest case where a new `candidates_negation.tsv` would make the packet fully compliant with the newer protocol.
+Negation was the highest-priority retrofit, and it now has an analyzer-aware candidate file. That retrofit was warranted because the packet has an unusually high ambiguity profile: `kei` is homographic with the first-person singular pronoun, `lo` and `loh` need constructional rather than string-based handling, `V lo uh` has already proved easy to misread, and `kuamah` / `bangmah` overgenerate under raw search. The new `candidates_negation.tsv` now makes the packet substantially closer to the newer protocol standard.
 
 ### Pronouns
 
@@ -54,14 +54,13 @@ Case marking remains the editorial model, but it predates the candidate-first pr
 
 ## Recommended retrofit order
 
-The practical retrofit order should be:
+With negation now retrofitted, the remaining practical order should be:
 
-1. **Negation first** — highest ambiguity risk and already a fresh, synchronized packet.
-2. **Pronouns / clusivity second** — unresolved `ei/eite` makes candidate-level evidence especially useful.
-3. **Stem alternation third** — needs explicit candidate rows for core pairs and exclusions.
-4. **Case marking fourth** — worthwhile, but lower urgency unless a specific extraction problem becomes pressing.
-5. **Demonstratives maintenance only** — already protocol-backed.
+1. **Pronouns / clusivity next** — unresolved `ei/eite` makes candidate-level evidence especially useful.
+2. **Stem alternation after that** — needs explicit candidate rows for core pairs and exclusions.
+3. **Case marking after stem alternation** — worthwhile, but lower urgency unless a specific extraction problem becomes pressing.
+4. **Demonstratives maintenance only** — already protocol-backed.
 
 ## Conclusion
 
-The retrofit audit supports a clear next step: the first new candidate file should be `output/publication_review/candidates_negation.tsv`. No new grammar topic should begin before the project decides and begins that retrofit sequence. Demonstratives already satisfies the new standard closely enough to serve as the model; the rest of the backlog should now be brought toward that same candidate-first architecture in the order above.
+The retrofit audit now supports a clear updated next step: review and harden `output/publication_review/candidates_negation.tsv`, then move to the pronoun / clusivity retrofit rather than opening a brand-new grammar topic. Demonstratives remains the protocol pilot, negation is now the first retrofit, and the remaining backlog should move toward the same candidate-first architecture in the order above.

@@ -8,7 +8,10 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT_PATH = ROOT / "scripts/publication_review/extract_candidates.py"
 TOKENS_PATH = ROOT / "data/ctd_analysis/tokens.tsv"
-COMMITTED_CANDIDATES_PATH = ROOT / "output/publication_review/candidates_demonstratives.tsv"
+COMMITTED_CANDIDATE_PATHS = {
+    "demonstratives": ROOT / "output/publication_review/candidates_demonstratives.tsv",
+    "negation": ROOT / "output/publication_review/candidates_negation.tsv",
+}
 
 
 def run_extractor(*args: str) -> subprocess.CompletedProcess[str]:
@@ -23,16 +26,18 @@ def run_extractor(*args: str) -> subprocess.CompletedProcess[str]:
 
 def test_candidate_extractor_lists_supported_topics():
     result = run_extractor("--list-topics")
-    assert result.stdout.strip().splitlines() == ["demonstratives"]
+    assert result.stdout.strip().splitlines() == ["demonstratives", "negation"]
 
 
-def test_demonstratives_candidates_are_reproducible(tmp_path):
+@pytest.mark.parametrize("topic", ["demonstratives", "negation"])
+def test_candidates_are_reproducible(tmp_path, topic):
     if not TOKENS_PATH.exists():
         pytest.skip("data/ctd_analysis/tokens.tsv is absent; candidate reproducibility cannot be checked")
 
-    output_path = tmp_path / "candidates_demonstratives.tsv"
-    run_extractor("demonstratives", "--output", str(output_path))
+    output_path = tmp_path / f"candidates_{topic}.tsv"
+    run_extractor(topic, "--output", str(output_path))
 
     assert output_path.exists()
-    assert COMMITTED_CANDIDATES_PATH.exists()
-    assert output_path.read_text(encoding="utf-8") == COMMITTED_CANDIDATES_PATH.read_text(encoding="utf-8")
+    committed_path = COMMITTED_CANDIDATE_PATHS[topic]
+    assert committed_path.exists()
+    assert output_path.read_text(encoding="utf-8") == committed_path.read_text(encoding="utf-8")

@@ -105,6 +105,12 @@ The direct scan confirms the broad outline of the literature, but not in the sim
 | Numbers 14:42 | `kuanto kei un ... do kei un` | "Go not up, neither fight" | double imperative negation with `kei un` | print-ready |
 | Genesis 2:25 | `maizum lo uh hi` | "they were not ashamed" | declarative plural negative, not a command | unsuitable |
 
+## Analyzer-aware candidate audit
+
+The original negation dossier relied on raw verse-level scans as distributional clues. Those counts remain useful for orientation, but they are not the preferred evidence layer for future publication-review work because raw `kei`, `bangmah`, and `V lo uh` searches overgenerate.
+
+Negation now has an analyzer-aware candidate file at `output/publication_review/candidates_negation.tsv`. That file records accepted, excluded, and deferred negation candidates with analyzer-backed token spans, verse references, and manual review notes. The existing packet should now be read through the sequence `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`, so the dossier interprets filtered candidate evidence rather than doing the first major cleanup of raw-string noise.
+
 ## Negative clauses relevant to stem alternation
 
 | Reference | Tedim | KJV | Grammatical note | Status |

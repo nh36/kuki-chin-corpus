@@ -120,6 +120,8 @@ The current demonstratives extractor is curated and analyzer-validated. That is 
 
 Future work may add more automatic discovery, but automatic discovery should never bypass the evidence levels defined above. The key guarantee is not full automation. It is that every promoted example has an explicit candidate row with analyzer-backed spans, review status, and a documented reason for acceptance, exclusion, or deferral.
 
+After demonstratives, negation is the first retrospective retrofit topic under this same candidate-first workflow. That retrofit uses the same curated, analyzer-aware pattern rather than a broad automatic discovery engine.
+
 ## Pilot topic: demonstratives/deixis
 
 The first pilot under this protocol is `output/publication_review/candidates_demonstratives.tsv`.

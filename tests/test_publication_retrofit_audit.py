@@ -23,5 +23,5 @@ def test_publication_retrofit_audit_recommends_priority():
     text = AUDIT_PATH.read_text()
 
     assert "Recommended retrofit order" in text
-    assert "Negation first" in text
+    assert "Pronouns / clusivity next" in text
     assert "candidates_negation.tsv" in text

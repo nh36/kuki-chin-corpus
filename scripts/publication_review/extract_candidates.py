@@ -17,6 +17,7 @@ Extension pattern:
 Usage:
     python3 scripts/publication_review/extract_candidates.py --list-topics
     python3 scripts/publication_review/extract_candidates.py demonstratives
+    python3 scripts/publication_review/extract_candidates.py negation
 """
 
 from __future__ import annotations
@@ -30,7 +31,7 @@ ROOT = Path(__file__).resolve().parents[2]
 TOKENS_PATH = ROOT / "data" / "ctd_analysis" / "tokens.tsv"
 VERSES_PATH = ROOT / "data" / "verses_aligned.tsv"
 OUTPUT_DIR = ROOT / "output" / "publication_review"
-SUPPORTED_TOPICS = ("demonstratives",)
+SUPPORTED_TOPICS = ("demonstratives", "negation")
 
 CANDIDATE_COLUMNS = [
     "candidate_id",
@@ -384,9 +385,133 @@ def build_demonstratives_specs() -> list[CandidateSpec]:
     ]
 
 
+def build_negation_specs() -> list[CandidateSpec]:
+    topic = "negation"
+    return [
+        accepted(
+            candidate_id="neg-lo-gen-4-5",
+            topic=topic,
+            construction_id="lo",
+            reference="Genesis 4:5",
+            token_indices=(6, 7, 8),
+            confidence="high",
+            why_selected="Analyzer-confirmed `thusim lo hi` gives a clean clause-level negative predicate for the core `lo` entry.",
+            expected_normalized=("thusim", "lo", "hi"),
+        ),
+        accepted(
+            candidate_id="neg-loh-gen-3-11",
+            topic=topic,
+            construction_id="loh",
+            reference="Genesis 3:11",
+            token_indices=(13, 14, 15),
+            confidence="high",
+            why_selected="Analyzer-confirmed `nek loh dinga` supports dependent or derived negation rather than a random spelling variant of `lo`.",
+            expected_normalized=("nek", "loh", "dinga"),
+        ),
+        accepted(
+            candidate_id="neg-kei-prohibitive-gen-15-1",
+            topic=topic,
+            construction_id="kei-prohibitive",
+            reference="Genesis 15:1",
+            token_indices=(15, 16, 17),
+            confidence="high",
+            why_selected="Analyzer-confirmed `lau kei in` is a compact prohibitive and supports `kei` as the strongest current prohibitive marker.",
+            expected_normalized=("lau", "kei", "in"),
+        ),
+        accepted(
+            candidate_id="neg-nawn-lo-gen-8-12",
+            topic=topic,
+            construction_id="nawn-lo",
+            reference="Genesis 8:12",
+            token_indices=(18, 19, 20),
+            confidence="high",
+            why_selected="Analyzer-confirmed `nawn lo hi` gives a clean cessative or no-longer construction.",
+            expected_normalized=("nawn", "lo", "hi"),
+        ),
+        accepted(
+            candidate_id="neg-thei-lo-gen-27-23",
+            topic=topic,
+            construction_id="thei-lo",
+            reference="Genesis 27:23",
+            token_indices=(14, 15, 16),
+            confidence="high",
+            why_selected="Analyzer-confirmed `thei lo hi` gives a print-safe inability or non-recognition pattern for ordinary ability negation.",
+            expected_normalized=("thei", "lo", "hi"),
+        ),
+        accepted(
+            candidate_id="neg-theih-loh-exod-10-5",
+            topic=topic,
+            construction_id="theih-loh",
+            reference="Exodus 10:5",
+            token_indices=(5, 6, 7),
+            confidence="high",
+            why_selected="Analyzer-confirmed `theih loh nadingin` preserves the dependent ability-negation pattern that the packet treats separately from simple `thei lo`.",
+            expected_normalized=("theih", "loh", "nadingin"),
+        ),
+        accepted(
+            candidate_id="neg-kuamah-exod-2-12",
+            topic=topic,
+            construction_id="kuamah",
+            reference="Exodus 2:12",
+            token_indices=(4, 5, 6),
+            confidence="high",
+            why_selected="Analyzer-confirmed `kuamah mu lo` gives a manually checked negative-polarity environment rather than a raw string hit only.",
+            expected_normalized=("kuamah", "mu", "lo"),
+        ),
+        accepted(
+            candidate_id="neg-bangmah-gen-39-9",
+            topic=topic,
+            construction_id="bangmah",
+            reference="Genesis 39:9",
+            token_indices=(25, 26, 27, 28),
+            confidence="high",
+            why_selected="Analyzer-confirmed `bangmah om lo hi` gives a clean negative-polarity or negative-existential environment for `bangmah`.",
+            expected_normalized=("bangmah", "om", "lo", "hi"),
+        ),
+        excluded(
+            candidate_id="neg-lo-uh-prohibitive-gen-2-25",
+            topic=topic,
+            construction_id="lo-uh-prohibitive",
+            reference="Genesis 2:25",
+            token_indices=(9, 10, 11, 12),
+            confidence="high",
+            why_selected="Retain the old report-level pitfall so future work does not reclassify raw `V lo uh` as prohibitive evidence.",
+            why_excluded="Genesis 2:25 is an ordinary declarative plural negative clause (`maizum lo uh hi`), not a prohibitive or directive.",
+            notes="Problem type: raw-string overgeneration plus constructional ambiguity. `V lo uh` cannot be accepted as prohibitive evidence without an independently directive context.",
+            expected_normalized=("maizum", "lo", "uh", "hi"),
+        ),
+        excluded(
+            candidate_id="neg-kei-pronoun-gen-39-9",
+            topic=topic,
+            construction_id="kei-pronoun",
+            reference="Genesis 39:9",
+            token_indices=(3, 4),
+            confidence="high",
+            why_selected="Raw `kei` searches are tempting because negative `kei` is central to the packet, so the candidate layer needs one explicit pronoun false friend.",
+            why_excluded="In `kei sangin`, the analyzer marks `kei` as 1SG pronoun, not as a negator, so this row cannot support negation prose.",
+            notes="Problem type: analyzer-backed ambiguity handling. Exact `kei` counts must distinguish 1SG pronoun uses from negative uses.",
+            expected_normalized=("kei", "sangin"),
+        ),
+        excluded(
+            candidate_id="neg-bangmah-npi-exod-27-11",
+            topic=topic,
+            construction_id="bangmah-npi",
+            reference="Exodus 27:11",
+            token_indices=(7, 8, 9),
+            confidence="high",
+            why_selected="The dossier already flags non-NPI `bangmah` uses, so one explicit exclusion row helps keep raw `bangmah` searches from overcounting negation evidence.",
+            why_excluded="`tua bangmah hi-in` is a non-NPI lexical expression ('likewise / in the same way'), not negative-polarity evidence.",
+            notes="Problem type: raw-string overgeneration. `bangmah` requires polarity-context checking before it can support negation prose.",
+            expected_normalized=("tua", "bangmah", "hi-in"),
+        ),
+    ]
+
+
 def build_specs(topic: str) -> list[CandidateSpec]:
     if topic == "demonstratives":
         return build_demonstratives_specs()
+    if topic == "negation":
+        return build_negation_specs()
     raise SystemExit(f"Unsupported topic: {topic}")
 
 

@@ -26,6 +26,12 @@ The grammar slice cites only bibliography keys that already exist in `literature
 
 Source use is appropriately layered. The literature review establishes the expectation that Tedim negation includes both `-kei` and `-lou/-louh`; the generated report shows where the current backend remains too simple; the dossier records the corrected evidence picture; and the aligned Bible corpus supplies the actual print examples.
 
+# Candidate-layer note
+
+Negation now also has an analyzer-aware candidate file at `output/publication_review/candidates_negation.tsv`. That layer records accepted, excluded, and deferred rows for the main negation constructions, including the old Genesis 2:25 `lo uh` pitfall and non-negative or non-NPI false friends such as pronoun `kei` and lexical `bangmah` expressions.
+
+The packet should now be read in the order `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`. That keeps the grammar and dictionary slices anchored to analyzer-backed candidate rows rather than to raw string searches or report-level shortcuts.
+
 # Report-correction notes
 
 The generated negation report is useful but too simple. Its most serious error for print purposes is the prohibitive section: Genesis 2:25 `maizum lo uh hi` is not a prohibitive and must not be used that way. It is an ordinary declarative plural negative clause, "they were not ashamed".
