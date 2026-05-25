@@ -11,6 +11,8 @@ Tedim Chin has a two-way proximal/distal demonstrative system:
 
 Both have plural forms and extensive use in discourse deixis.
 
+> **Editorial caution:** This report remains a discovery-oriented corpus summary. The current dossier and print-facing slice correct several provisional claims here: exact-token `hi` is deferred rather than treated as a settled demonstrative headword, exact `hih ciangin` is not yet a strong demonstrative temporal construction, Genesis 6:22 has `tua bangmahin` rather than plain `hih bangin`, and John 1:19 is not a clean `hi` demonstrative example. See `output/publication_review/dossier_demonstratives.md` and `output/publication_review/grammar_demonstratives_print_slice.md`.
+
 ---
 
 ## Demonstrative Inventory
@@ -22,8 +24,9 @@ Both have plural forms and extensive use in discourse deixis.
 | Proximal | hih | hihte | 5,432 / 301 |
 | Distal | tua | tuate | 12,852 / 609 |
 
-**Note**: `hi` (47,789x) is the short form of proximal demonstrative but
-also functions as a sentence-final marker (see Report 10-disc-01).
+**Note**: exact-token `hi` is highly ambiguous in the Bible corpus and is
+better deferred to copular or sentence-final material than treated here as a
+stable demonstrative headword.
 
 ### Function Summary
 
@@ -33,7 +36,7 @@ also functions as a sentence-final marker (see Report 10-disc-01).
 | tua | DIST | distal demonstrative "that" |
 | hihte | PROX-PL | proximal plural "these" |
 | tuate | DIST-PL | distal plural "those" |
-| hi | PROX.COP | proximal copula/demonstrative |
+| hi | ambiguous hi-form | deferred: copular/sentence-final and related material |
 | tu | DIST | distal (archaic/rare) |
 
 ---
@@ -102,24 +105,24 @@ Demonstratives can stand alone as pronouns:
 | hih bangin | PROX like-CVB | "like this, thus" | 693 |
 | tua bangin | DIST like-CVB | "like that, thus" | 403 |
 
-**Genesis 6:22**:
-> Pasian in gen bangin Noah in **hih bangin** bawl hi
-> *PASIAN ERG speak like-CVB NOAH ERG PROX like-CVB do PROX.COP*
-> "**Thus** did Noah; according to all that God commanded"
+**Genesis 32:4**:
+> amaute hilhin, “Note in ka topa Esau kiangah **hih bangin** na ci ding uh hi
+> *3PL teach-CVB note ERG 1SG lord ESAU toward PROX like-CVB 2PL say IRR 2/3PL PROX.COP*
+> "Thus shall ye speak unto my lord Esau"
 
 ### Temporal Adverbials
 
 | Pattern | Structure | Meaning | Count |
 |---------|-----------|---------|-------|
-| hih ciangin | PROX time-CVB | "at this time" | 1,531 |
+| hih ciangin | apparent PROX time-CVB | many exact hits are not demonstrative; manual filtering required | 19 |
 | tua ciangin | DIST time-CVB | "at that time, then" | 4,305 |
 | hih nung | PROX after | "after this" | 5 |
 | tua nung | DIST after | "after that" | 8 |
 
-**Genesis 18:10**:
-> **Hih ciangin** ka hong ciahkik ding
-> *PROX time-CVB 1SG 3→1 return IRR*
-> "**At this time** I will return unto thee"
+**Genesis 1:3**:
+> Pasian in, “Khuavak om hen,” ci hi; **tua ciangin** khuavak om pah hi.
+> *PASIAN ERG light exist JUSS say PROX.COP DIST time-CVB light exist immediately PROX.COP*
+> "And God said, Let there be light: and there was light."
 
 ---
 
@@ -152,22 +155,14 @@ Demonstratives are heavily used for textual reference:
 
 ---
 
-## Demonstrative + Copula
+## Deferred hi-related material
 
-### hih...hi / tua...hi patterns
-
-The sentence-final `hi` often pairs with demonstratives:
-
-| Pattern | Function |
-|---------|----------|
-| hih X hi | "this is X" (equative) |
-| tua X hi | "that is X" (equative) |
-| X hih hi | "X is this" (identity) |
-
-**John 1:19**:
-> **Hih** pen John thusimna **ahi** hi
-> *PROX TOP JOHN testimony be.3SG PROX.COP*
-> "**This** is the record of John"
+The exact-token form `hi` is too ambiguous in the current Bible corpus to serve
+as a stable demonstrative example in this report. It often appears in copular,
+sentence-final, or identity-question environments. The aligned John 1:19 line,
+for example, has `na hi hiam?`, not a clean proximal demonstrative citation.
+For the current print-facing treatment, `hi` is therefore deferred rather than
+promoted as part of the settled demonstrative inventory.
 
 ---
 
@@ -195,6 +190,6 @@ The sentence-final `hi` often pairs with demonstratives:
 5. **High frequency**: ~19,000 demonstrative tokens (2.3% of corpus)
 
 **Key collocations**:
-- Temporal: tua ciangin "then" (4,305x), hih ciangin "now" (1,531x)
+- Temporal: tua ciangin "then" (4,305x); exact hih ciangin hits need manual filtering
 - Manner: hih bangin "thus" (693x), tua bangin "thus" (403x)
 - Connective: tua ahih ciangin "that being so" (1,444x)

@@ -146,8 +146,10 @@ And to `scripts/`:
 - The stem-alternation packet treats case-marking and pronouns as completed editorial models, argues that the Form I / Form II contrast is real, and now includes a Bible-corpus coverage table plus cautious `za ~ zak` and `nusia ~ nusiat` expansions.
 - The negation evidence dossier at `output/publication_review/dossier_negation.md` has now been converted into a synchronized grammar slice, dictionary slice, review notes, and a corrected generated-report caveat.
 - The negation packet treats `lo`, `loh`, and `kei` as part of one negation system, and Genesis 2:25 plus the old `V lo uh` prohibitive analysis have been corrected as report-level pitfalls rather than carried into print prose.
-- The next substantive Tedim publication-review step is a new narrow topic, beginning with a demonstratives/deixis evidence dossier rather than reopening negation or jumping to a broad TAM chapter.
-- Chrestomathy work and all Mizo/lus work remain deferred while the Tedim print-facing packet is being finalized and the next narrow slice is chosen.
+- The demonstratives/deixis dossier at `output/publication_review/dossier_demonstratives.md` has now been reviewed and converted into a grammar slice, dictionary slice, review notes, and a minimal generated-report correction.
+- The demonstratives packet treats `hih` as the core proximal form, `tua` as the core distal/anaphoric form, and `hihte` / `tuate` plus `bangin` and `tua ciangin` constructions as the strongest first-round extensions while keeping `hi` and exact `hih ciangin` deferred.
+- A selection-method audit now records that the analyzer already has a demonstrative inventory, but older report helpers can still surface raw string matches before construction-level filtering, so promoted demonstrative examples must remain analyzer-aware and manually checked.
+- Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
 
@@ -179,7 +181,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Begin a demonstratives/deixis evidence dossier as the next narrow Tedim publication-review topic.
+1. [ ] Choose the next narrow Tedim publication-review topic after demonstratives/deixis.
 2. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 3. [ ] Keep the unresolved `ei/eite` question flagged in any later person-marking work unless new evidence settles it.
 
