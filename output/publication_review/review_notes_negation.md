@@ -32,7 +32,9 @@ The generated negation report is useful but too simple. Its most serious error f
 
 The print packet therefore corrects three report-level problems explicitly. First, the negation system is not flattened to `lo`. Second, `V lo uh` is not presented as the prohibitive construction. Third, `loh` is represented as a real dependent or derived negative form rather than ignored as orthographic noise.
 
-The report itself was not hand-edited in this task because it is part of the generated report layer. The correction is recorded here and in the new print-facing packet, and the generated negation report should be regenerated or otherwise fixed later so that it no longer points readers to Genesis 2:25 as a prohibitive.
+This hardening pass also cleaned workflow language out of the grammar slice, added explicit biblical references to every example block in the grammar and dictionary slices, and minimally corrected the old negation report so that it no longer points readers to Genesis 2:25 as a prohibitive.
+
+The underlying analysis was not changed in this pass. The packet still treats `lo`, `loh`, and `kei` as parts of one negation system, still distinguishes `thei lo` from `theih loh`, and still keeps the NPI section tied to manually checked examples rather than raw exact-string counts.
 
 # Dictionary integration notes
 

@@ -5,11 +5,13 @@ of the Bible corpus (830,741 tokens).
 
 ## Overview
 
-Tedim Chin uses post-verbal negation with the primary negative marker **lo**
-appearing after the verb. The system includes:
-- Standard negation: lo (6,408x)
-- Negative polarity items: kuamah "nobody", bangmah "nothing"
-- Aspectual negation: nawn lo "no longer"
+Tedim Chin uses post-verbal negation with several important forms visible in the
+Bible corpus. Clause-level **lo** is very common, but it is not the whole
+system: exact **loh** is also well attested in dependent or derived negative
+environments, and **kei** is central in real prohibitives and many
+directive/irrealis-heavy negatives. This report remains a discovery-oriented
+corpus summary; for the current print-facing synthesis, see
+`output/publication_review/grammar_negation_print_slice.md`.
 
 ---
 
@@ -42,16 +44,28 @@ appearing after the verb. The system includes:
 
 ## Prohibitive (Negative Imperative)
 
-Prohibitive commands use **lo** with plural marker **-uh**:
+Current Bible evidence points first to **kei**-based patterns for real
+prohibitives. The surface string **V lo uh** is common, but it often marks an
+ordinary plural negative clause rather than an imperative, so it should not be
+treated as the prohibitive construction on its own.
 
-| Pattern | Meaning | Count |
-|---------|---------|-------|
-| V lo uh | "don't V!" (plural) | 749 |
-| V lo ding hi | "must not V" | 658 |
-| ding hi lo | "must not" | 84 |
-| pih lo | "don't" (specific) | 65 |
+| Pattern | Meaning | Note |
+|---------|---------|------|
+| V kei in | "don't V" (sg.) | strongest current prohibitive pattern |
+| V kei un | "don't V" (pl.) | strongest current prohibitive pattern |
+| V lo uh | plural negative surface string | often declarative, not automatically prohibitive |
 
-**Genesis 2:25**:
+**Genesis 15:1**:
+> Lau **kei** in
+> *fear NEG IMP*
+> "Fear **not**"
+
+**Genesis 22:12**:
+> Tangvalpa su **kei** in. Ama tungah bangmah hih **kei** in.
+> *lad strike NEG IMP / anything do NEG IMP*
+> "Lay **not** thine hand upon the lad, neither do thou any thing unto him"
+
+**Genesis 2:25** is **not** a prohibitive:
 > maizum **lo uh** hi
 > *shame NEG 2/3PL PROX.COP*
 > "they were **not** ashamed"
@@ -180,7 +194,7 @@ Basic negative clause structure:
 ## Summary
 
 1. **Post-verbal negation**: lo follows verb
-2. **Prohibitive**: V lo uh (plural imperative)
+2. **Prohibitive**: chiefly `kei`-based patterns such as `V kei in` and `V kei un`, not `V lo uh` on its own
 3. **NPIs**: kuamah "nobody", bangmah "nothing" (require negative)
 4. **Cessative**: nawn lo "no longer"
 5. **Inability**: thei(h) lo "cannot"
