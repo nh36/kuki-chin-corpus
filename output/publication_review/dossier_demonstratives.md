@@ -57,6 +57,14 @@ The case-normalized verse scan gives the following broad profile:
 
 These counts already show two important asymmetries. First, `tua` is much commoner than `hih`, which makes sense in narrative discourse where anaphoric "that/then" expressions dominate. Second, `hi` is so frequent and so collocationally diffuse that it cannot simply be folded into the demonstratives dossier as if it were the short form of `hih`.
 
+# Analyzer-aware candidate audit
+
+The original dossier used raw verse-level counts only as distributional clues. That remains acceptable for broad orientation, but it is not a safe primary evidence layer for print-facing grammar or dictionary drafting.
+
+A new analyzer-aware candidate file now lives at `output/publication_review/candidates_demonstratives.tsv`. It records accepted, excluded, and deferred demonstrative candidates using exported token analysis from `data/ctd_analysis/tokens.tsv`, including token indices, segmentation, gloss spans, and verse-linked review notes. The accepted rows preserve the strongest `hih`, `tua`, `hihte`, `tuate`, `hih bangin`, `tua bangin`, `tua ciangin`, and `tua ahih ciangin` examples, while excluded or deferred rows record the `hi` problem and the old Genesis 6:22 and Genesis 18:10 report-level pitfalls.
+
+Future demonstratives print prose should therefore be based on the candidate file plus manual verse review, not on raw counts alone. The raw counts remain useful for distributional shape, but the candidate layer is now the preferred place to record what the analyzer supports, what manual review accepts, and what must stay excluded or deferred.
+
 # Core demonstratives: `hih` and `tua`
 
 The Bible corpus strongly supports a two-way core system built around `hih` and `tua`. `Hih` is the clearest proximal form in equative or deictic identification:
