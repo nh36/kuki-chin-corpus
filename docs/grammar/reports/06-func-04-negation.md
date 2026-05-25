@@ -10,14 +10,14 @@ Bible corpus. Clause-level **lo** is very common, but it is not the whole
 system: exact **loh** is also well attested in dependent or derived negative
 environments, and **kei** is central in real prohibitives and many
 directive/irrealis-heavy negatives. This report remains a discovery-oriented
-corpus summary; for the current print-facing synthesis, see
+corpus summary; for fuller descriptive treatment, see
 `output/publication_review/grammar_negation_print_slice.md`.
 
 ---
 
 ## Negation Markers
 
-### Primary Marker: lo
+### Common Clause-Level Marker: lo
 
 | Form | Position | Function | Count |
 |------|----------|----------|-------|
@@ -37,7 +37,7 @@ corpus summary; for the current print-facing synthesis, see
 | V lo hi | V NEG COP | "is not V" | 1,695 |
 | V lo ding | V NEG IRR | "will not V" | 1,202 |
 | V lo ding hi | V NEG IRR COP | "should not V" | 658 |
-| V lo uh | V NEG 2/3PL | "don't V (pl.)" | 749 |
+| V lo uh | V NEG 2/3PL | plural negative clause; not automatically prohibitive | 749 |
 | om lo | exist NEG | "doesn't exist" | 684 |
 
 ---
@@ -94,13 +94,17 @@ These require a negative context (unlike English "anyone/anything"):
 
 ## Ability/Potential Negation
 
-Inability is expressed with **thei lo** or specific ability verbs + lo:
+Inability is expressed with **thei lo**, with dependent or derived **theih loh**
+patterns, and with other ability verbs + lo:
 
 | Pattern | Meaning | Count |
 |---------|---------|-------|
 | thei lo | cannot (know/able) | 668 |
 | theih lo | cannot (nominalized) | 151 |
 | ngah lo | cannot get | 43 |
+
+Dependent and derived **theih loh** patterns are also important in the corpus
+and should not be collapsed into exact **theih lo** alone.
 
 **1 Kings 1:18**:
 > na **theih lo** hangin

@@ -2,9 +2,9 @@
 title: "Tedim Chin Dictionary Slice: Negation"
 ---
 
-# Editorial scope
+# Scope
 
-These entries are short print-facing dictionary drafts for the negation slice. Each entry gives the construction or form, a reader-facing gloss, an editorial status, and one or two manually checked Bible examples. The goal is not to list every negative string in the backend, but to show how the main negation system can be represented cleanly in print without collapsing it to `lo` alone.
+These entries give a compact dictionary treatment of the negation slice. Each entry gives the construction or form, a gloss, a status, and one or two manually checked Bible examples. The goal is not to list every negative string in the corpus, but to show how the main negation system can be represented clearly without collapsing it to `lo` alone.
 
 ## lo
 
@@ -12,11 +12,11 @@ Category: negator
 
 Gloss: NEG
 
-Cross-reference: *Grammar review slice, "Clause-level negation with `lo`"*
+Cross-reference: *Grammar slice, "Clause-level negation with `lo`"*
 
-Status: draft-ready for ordinary clause-level negation
+Status: stable for ordinary clause-level negation
 
-`Lo` is the safest dictionary starting point for Tedim negation. It is the ordinary clause-level negator in many straightforward negative predicates and negative existential clauses, and it also participates in larger constructions such as `V lo ding` and `nawn lo`. The print entry should present it as the core clause-level negator without pretending that it is the whole negation system.
+`Lo` is the safest dictionary starting point for Tedim negation. It is the ordinary clause-level negator in many straightforward negative predicates and negative existential clauses, and it also participates in larger constructions such as `V lo ding` and `nawn lo`. The entry should present it as the core clause-level negator without pretending that it is the whole negation system.
 
 (@dict:lo-1) Genesis 4:5
 a. Tedim: ahih hangin Kain le ama piakna thusim lo hi. Tua ahih ciangin Kain heh mahmah a, a mai sia hi.
@@ -36,9 +36,9 @@ Category: dependent / derived negative form
 
 Gloss: NEG.DEP
 
-Cross-reference: *Grammar review slice, "Dependent and derived negation with `loh`"*
+Cross-reference: *Grammar slice, "Dependent and derived negation with `loh`"*
 
-Status: draft-ready with caveat
+Status: usable with caveat
 
 `Loh` is best treated as the dependent or derived negative form visible in purposive, clause-linking, and other non-finite environments. The Bible corpus does not support reducing it to a random orthographic variant of `lo`. The caveat is descriptive rather than evidential: the exact boundary between dependent negation and stem-sensitive negation is real, but still not rigid enough to print as a single mechanical rule.
 
@@ -60,9 +60,9 @@ Category: negator / prohibitive negator
 
 Gloss: NEG; PROH in imperative contexts
 
-Cross-reference: *Grammar review slice, "`kei` in prohibitives and irrealis-heavy negation"*
+Cross-reference: *Grammar slice, "`kei` in prohibitives and irrealis-heavy negation"*
 
-Status: draft-ready with caveat because of homography with 1SG pronoun
+Status: usable with caveat because of homography with 1SG pronoun
 
 `Kei` must be represented in the print dictionary because it is central to real Bible prohibitives and also appears in ordinary negative clauses. The caveat is practical: the same spelling is also the 1SG pronoun, so examples have to be selected manually rather than by raw exact-string counting.
 
@@ -84,9 +84,9 @@ Category: negative polarity indefinite pronoun
 
 Gloss: "nobody; no one"
 
-Cross-reference: *Grammar review slice, "Negative polarity items"*
+Cross-reference: *Grammar slice, "Negative polarity items"*
 
-Status: draft-ready with manually checked examples
+Status: stable with manually checked examples
 
 `Kuamah` works well as a print dictionary entry once the examples are filtered manually. In real NPI uses it appears under a negative predicate or inside negative existence. Raw corpus counts overgenerate because the same string can appear in other lexical environments, so the dictionary should quote only clear cases.
 
@@ -102,11 +102,11 @@ Category: negative polarity indefinite / emphatic indefinite
 
 Gloss: "nothing; anything under negation"
 
-Cross-reference: *Grammar review slice, "Negative polarity items"*
+Cross-reference: *Grammar slice, "Negative polarity items"*
 
-Status: draft-ready with caveat because of non-NPI uses such as `tua bangmah hi-in`
+Status: usable with caveat because of non-NPI uses such as `tua bangmah hi-in`
 
-`Bangmah` is strong negation-slice material, but the entry needs an explicit caveat. In real NPI uses it is licensed by negation and means "nothing" or "anything" under negation. But the same string also appears in non-NPI expressions such as `tua bangmah hi-in` "likewise", so the print entry must stay with manually checked negative examples.
+`Bangmah` is strong negation material, but the entry needs an explicit caveat. In real NPI uses it is licensed by negation and means "nothing" or "anything" under negation. But the same string also appears in non-NPI expressions such as `tua bangmah hi-in` "likewise", so the entry must stay with manually checked negative examples.
 
 (@dict:bangmah-1) Genesis 22:12
 a. Tedim: Amah in, “Tangvalpa su kei in. Ama tungah bangmah hih kei in. Bang hang hiam cih leh nang in Pasian na zahtakna tu-in ka thei a, na tapa khat neihsun keima a dingin na humcip lohna ka mu hi,” a ci hi.
@@ -126,9 +126,9 @@ Category: cessative negative construction
 
 Gloss: "no longer; not again"
 
-Cross-reference: *Grammar review slice, "Negative existence and cessative negation"*
+Cross-reference: *Grammar slice, "Negative existence and cessative negation"*
 
-Status: draft-ready as constructional entry
+Status: stable as a constructional entry
 
 `Nawn lo` is best represented as a constructional dictionary entry rather than as a second basic negator. It combines the continuative or "again/still" element `nawn` with negation to express cessation, discontinuation, or "not again".
 
@@ -150,11 +150,11 @@ Category: inability construction
 
 Gloss: "cannot; be unable; unknowable / impossible in dependent contexts"
 
-Cross-reference: *Grammar review slice, "Ability and inability"*
+Cross-reference: *Grammar slice, "Ability and inability"*
 
-Status: print-usable with caveat
+Status: usable with caveat
 
-The best print treatment is a paired constructional entry. `Thei lo` is common and easy to understand as ordinary inability or non-recognition, while `theih loh` is especially visible in dependent or purposive environments. The caveat is that exact `theih lo` is much rarer than the report suggests, so the entry should not overstate that narrower string as the norm.
+The clearest treatment is a paired constructional entry. `Thei lo` is common and easy to understand as ordinary inability or non-recognition, while `theih loh` is especially visible in dependent or purposive environments. The caveat is that exact `theih lo` is much rarer than the report suggests, so the entry should not overstate that narrower string as the norm.
 
 (@dict:thei-lo-1) Genesis 27:23
 a. Tedim: A khutte in a sanggampa Esau’ khut bangin mul nei ahih manin amah in thei lo hi. Tua ahih ciangin amah in thupha pia dingin kithawi a,

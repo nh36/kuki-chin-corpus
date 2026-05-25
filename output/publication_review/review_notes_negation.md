@@ -46,6 +46,6 @@ The one necessary caveat is example filtering. `Kei` is homographic with the 1SG
 
 # Decision for next slice
 
-The negation dossier has now been reviewed and converted into a print-facing grammar slice, dictionary slice, and review note packet. This is enough to treat negation as the next real Tedim publication-review model after stem alternation.
+With this cleanup and the standard validation rerun, the negation dossier, grammar slice, dictionary slice, and review notes can be treated as synchronized enough for the current publication-review workflow. Negation can now stand with the case-marking, pronoun, and stem-alternation packets as a stable narrow model.
 
-The immediate next step is not TAM or directionals. It is to harden and synchronize the negation packet itself: review the current wording, confirm that the chosen examples remain the best small set, and then bring the packet into the same polished state as the case-marking, pronoun, and stem-alternation slices. Only after that should the project consider moving on to a different narrow topic.
+The next substantive step should be to choose another narrow print-facing topic. It should not be a broad TAM chapter, and it should not move into directionals, chrestomathy, or Mizo/lus. The priority is to keep building the Tedim packet one synchronized narrow topic at a time.
