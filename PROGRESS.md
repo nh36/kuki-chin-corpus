@@ -144,8 +144,9 @@ And to `scripts/`:
 - The pronoun slice is now polished enough to serve as the model for the next print-facing grammar-and-dictionary section, provided the unresolved `ei/eite` question stays explicitly flagged.
 - A third print-review packet on verb stem alternation has now been expanded and synchronized in `output/publication_review/` with a grammar slice, a dictionary slice, review notes, and a supporting evidence dossier.
 - The stem-alternation packet treats case-marking and pronouns as completed editorial models, argues that the Form I / Form II contrast is real, and now includes a Bible-corpus coverage table plus cautious `za ~ zak` and `nusia ~ nusiat` expansions.
-- The negation evidence dossier at `output/publication_review/dossier_negation.md` has now been reviewed, and a corresponding grammar slice, dictionary slice, and review note packet has been drafted in `output/publication_review/`.
-- The current negation packet treats `lo`, `loh`, and `kei` as part of one print-facing system, and the next editorial step is to harden and synchronize that packet before moving on.
+- The negation evidence dossier at `output/publication_review/dossier_negation.md` has now been converted into a synchronized grammar slice, dictionary slice, review notes, and a corrected generated-report caveat.
+- The negation packet treats `lo`, `loh`, and `kei` as part of one negation system, and Genesis 2:25 plus the old `V lo uh` prohibitive analysis have been corrected as report-level pitfalls rather than carried into print prose.
+- The next substantive Tedim publication-review step is a new narrow topic, beginning with a demonstratives/deixis evidence dossier rather than reopening negation or jumping to a broad TAM chapter.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim print-facing packet is being finalized and the next narrow slice is chosen.
 
 ## Documentation
@@ -178,13 +179,12 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Harden and review the new negation grammar/dictionary slice, but do not move to a broad TAM chapter or directionals until the negation packet is synchronized.
-2. [ ] Keep the unresolved `ei/eite` question flagged in later person-marking work unless new evidence settles it.
-3. [ ] Only after grammar and dictionary print slices are working, return to the Tedim chrestomathy/reader.
-4. [ ] Keep Mizo/lus and the remaining Kuki-Chin languages **deferred, not abandoned**, until the Tedim package is publishable.
+1. [ ] Begin a demonstratives/deixis evidence dossier as the next narrow Tedim publication-review topic.
+2. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
+3. [ ] Keep the unresolved `ei/eite` question flagged in any later person-marking work unless new evidence settles it.
 
 ---
 
-*Last updated: 2026-05-24*  
+*Last updated: 2026-05-25*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*
