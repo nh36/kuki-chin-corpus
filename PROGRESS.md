@@ -151,8 +151,11 @@ And to `scripts/`:
 - A cross-topic analyzer-aware publication-review evidence protocol now lives at `docs/publication_review/EVIDENCE_PROTOCOL.md`.
 - The evidence protocol now has a documented candidate-extraction workflow in `docs/publication_review/CANDIDATE_EXTRACTION.md`.
 - Demonstratives/deixis is the pilot topic for the new candidate-extraction layer in `output/publication_review/candidates_demonstratives.tsv`, and the committed TSV is reproducible from `scripts/publication_review/extract_candidates.py`.
+- A retrospective evidence-protocol audit now exists at `output/publication_review/evidence_protocol_retrofit_audit.md`.
+- Earlier publication-review packets are now being checked against the newer candidate-first standard rather than treated as automatically protocol-complete.
+- Demonstratives is already protocol-backed, while negation now looks like the likely first retrofit candidate.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
-- The next grammar topic waited until this hardening pass was complete; the next step can now be to choose another narrow candidate-first topic.
+- No new topic should begin until the retrofit priority is decided and the first retrofit candidate is chosen.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -185,7 +188,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Choose the next narrow candidate-first Tedim topic now that the publication-review evidence workflow is documented and reproducible.
+1. [ ] Decide and begin the first protocol retrofit candidate, with negation currently the leading candidate.
 2. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 3. [ ] Keep the unresolved `ei/eite` question flagged in any later person-marking work unless new evidence settles it.
 
