@@ -1,6 +1,6 @@
 # Tedim Chin Bible Analysis Coverage Report
 
-Generated: 2026-04-12T20:49:56.659696
+Generated: 2026-05-26T11:28:31.786215
 
 ## Overall Statistics
 
@@ -21,8 +21,8 @@ Generated: 2026-04-12T20:49:56.659696
 
 | Category | Count |
 |----------|-------|
-| Distinct wordforms | 22,479 |
-| Lemmas | 7,340 |
+| Distinct wordforms | 22,482 |
+| Lemmas | 7,339 |
 | Lemmas needing review | 513 |
 | Polysemous lemmas | 304 |
 | Grammatical morphemes | 485 |
@@ -32,16 +32,16 @@ Generated: 2026-04-12T20:49:56.659696
 
 | POS | Count | Percentage |
 |-----|-------|------------|
-| ADJ | 12,637 | 1.52% |
+| ADJ | 12,555 | 1.51% |
 | ADV | 6,448 | 0.78% |
 | CONJ | 41,071 | 4.94% |
 | DET | 26,658 | 3.21% |
-| FUNC | 270,015 | 32.49% |
-| N | 221,886 | 26.70% |
+| FUNC | 269,375 | 32.41% |
+| N | 221,817 | 26.69% |
 | NUM | 9,354 | 1.13% |
-| PRON | 39,273 | 4.72% |
-| PROP | 58,452 | 7.03% |
-| V | 145,381 | 17.49% |
+| PRON | 40,072 | 4.82% |
+| PROP | 58,447 | 7.03% |
+| V | 145,378 | 17.49% |
 
 ## Grammatical Morpheme Categories
 
@@ -92,8 +92,8 @@ Generated: 2026-04-12T20:49:56.659696
 - Total items in review queue: 1617
 - Known polysemous forms: 15
 - Multiple segmentations: 1601
-- Multiple lemmas: 404
-- Multiple POS: 665
+- Multiple lemmas: 403
+- Multiple POS: 668
 - Unknown POS: 0
 - Partial glosses: 2
 

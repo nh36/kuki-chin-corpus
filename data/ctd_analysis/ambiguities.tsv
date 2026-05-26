@@ -12,7 +12,7 @@ ahi	ahi	ahi	Ahi	be.3SG	ahi		V		high	01001002	8594	multi_segmentation:2	auto_reso
 tawh	tawh	tawh		COM	tawh		FUNC		high	01002007	7806	known_polysemous	auto_resolved
 Topa	topa	Topa	Topa'|topa|topa'	Lord	topa		N	PRON	high	01002004	7756	multi_segmentation:4|multi_pos:N|PRON	needs_review
 mite	mite	mi-te	Mite|Mite'|mite'	person-PL	mi	Mite|mite	N	PRON|PROP	high	01004026	7200	multi_segmentation:4|multi_lemma:3|multi_pos:N|PRON|PROP	needs_review
-kei	kei	kei	Kei|Kei'|kei'	NEG	kei		FUNC		high	01002017	6995	multi_segmentation:4	auto_resolved
+kei	kei	kei	Kei|Kei'|kei'	NEG	kei		FUNC	PRON	high	01002017	6995	multi_segmentation:4|multi_pos:FUNC|PRON	needs_review
 lo	lo	lo	Lo	NEG	lo		FUNC		high	01002005	6330	multi_segmentation:2	auto_resolved
 amah	amah	amah	Amah	3SG.PRO	amah		PRON		high	01001016	6269	multi_segmentation:2	auto_resolved
 amaute	amaute	amaute	Amaute|Amaute'|amaute'	3PL.PRO	amaute		PRON		high	01001022	6184	multi_segmentation:4	auto_resolved
@@ -105,7 +105,7 @@ Khrih	khrih	Khrih'	Khrih	KHRIH.POSS	Khrih		PROP		high	40001001	643	multi_segment
 nu	nu	nu	Nu|nu'	female	nu		N	PRON	high	01002022	640	multi_segmentation:3|multi_pos:N|PRON	needs_review
 pai-in	pai-in	pai-in	Pai-in	go-ERG	pai	Pai-In	FUNC	PROP	high	01009023	638	multi_segmentation:2|multi_lemma:2|multi_pos:FUNC|PROP	needs_review
 Jerusalem	jerusalem	Jerusalem	Jerusalem'	JERUSALEM	Jerusalem		PROP		high	01014018	627	multi_segmentation:2	auto_resolved
-man	man	man	Man|man'	finish	man		ADJ		high	01008009	612	multi_segmentation:3	auto_resolved
+man	man	man	Man|man'	finish	man		ADJ	PRON	high	01008009	612	multi_segmentation:3|multi_pos:ADJ|PRON	needs_review
 tapate	tapate	tapa-te	tapate'	son-PL	tapa	tapate	N	PRON	high	01006018	609	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	needs_review
 tuate	tuate	tua-te	Tuate|tua-te'	DIST-PL	tua	Tuate	DET	PROP	high	01001014	606	multi_segmentation:3|multi_lemma:2|multi_pos:DET|PROP	needs_review
 pan	pan	pan	pan'	ABL	pan		FUNC	PRON	high	01008020	603	multi_segmentation:2|multi_pos:FUNC|PRON|known_polysemous	needs_review
@@ -203,7 +203,7 @@ vantungmi	vantungmi	van-tung-mi	vantungmi'	angel	van	vantungmi	N	PRON	high	01016
 mihonte	mihonte	mihon-te	Mihonte'|mihonte'	poor.person-PL	mihon	mihonte	N	PRON	high	02007004	248	multi_segmentation:3|multi_lemma:2|multi_pos:N|PRON	needs_review
 milim	milim	mi-lim	milim'	idol	mi	milim	N	PRON	high	02020004	248	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	needs_review
 deihna	deihna	deihna	Deihna	desire	deihna		N		high	03017005	245	multi_segmentation:2	auto_resolved
-ko	ko	ko	Ko|ko'	long	ko	Ko	ADJ	PROP	high	01019005	242	multi_segmentation:3|multi_lemma:2|multi_pos:ADJ|PROP	needs_review
+ko	ko	ko	Ko|ko'	1PL.EXCL.PRO	ko		PRON	ADJ	high	01019005	242	multi_segmentation:3|multi_pos:ADJ|PRON	needs_review
 galkapte	galkapte	gal-kap-te	Galkapte'|galkapte'	war-throw-PL	gal	galkapte	N	PRON	high	01014003	241	multi_segmentation:3|multi_lemma:2|multi_pos:N|PRON	needs_review
 migilote	migilote	migilo-te	Migilote|Migilote'|migilote'	enemy-PL	migilo	Migilote|migilote	N	PRON|PROP	high	01018023	241	multi_segmentation:4|multi_lemma:3|multi_pos:N|PRON|PROP	needs_review
 piangsak	piangsak	piangsak	Piangsak	cause.birth	piangsak		V		high	01001001	233	multi_segmentation:2	auto_resolved
@@ -575,7 +575,7 @@ James	james	James	James'	JAMES	James		PROP		high	40004021	41	multi_segmentation:
 Judas	judas	Judas	Judas'	JUDAS	Judas		PROP		high	40010004	41	multi_segmentation:2	auto_resolved
 Hebron	hebron	Hebron	Hebron'	HEBRON	Hebron		PROP		high	01013018	40	multi_segmentation:2	auto_resolved
 Asher	asher	Asher	Asher'	ASHER	Asher		PROP		high	01030013	40	multi_segmentation:2	auto_resolved
-ha	ha	ha	Ha|ha'	tooth	ha		ADJ		high	01049012	40	multi_segmentation:3	auto_resolved
+ha	ha	ha	Ha|ha'	tooth	ha		ADJ	PRON	high	01049012	40	multi_segmentation:3|multi_pos:ADJ|PRON	low_priority
 site	site	si-te	site'	die-PL	si	site	N	PRON	high	02014030	40	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
 Amaziah	amaziah	Amaziah	Amaziah'	AMAZIAH	Amaziah		PROP		high	12012021	40	multi_segmentation:2	auto_resolved
 pawlte	pawlte	pawl-te	pawlte'	group-PL	pawl	pawlte	N	PRON	high	01014015	39	multi_segmentation:2|multi_lemma:2|multi_pos:N|PRON	low_priority
@@ -1137,7 +1137,7 @@ Gomer	gomer	Gomer	Gomer'	GOMER	Gomer		PROP		high	01010002	8	multi_segmentation:2
 Jobab	jobab	Jobab'	Jobab	JOBAB.POSS	Jobab		PROP		high	01010029	8	multi_segmentation:2	auto_resolved
 Hori	hori	Hori	Hori'	HORI	Hori		PROP		high	01014006	8	multi_segmentation:2	auto_resolved
 giah	giah	giah	Giah	camp	giah	Giah	N	PROP	high	01024023	8	multi_segmentation:2|multi_lemma:2|multi_pos:N|PROP	low_priority
-“Ko	“ko	Ko	ko'	KO	ko		N	PRON	high	01026010	8	multi_segmentation:2|multi_pos:N|PRON	low_priority
+“Ko	“ko	Ko	ko'	1PL.EXCL.PRO	ko		PRON	N	high	01026010	8	multi_segmentation:2|multi_pos:N|PRON	low_priority
 Elon	elon	Elon'	Elon	ELON.POSS	Elon		PROP		high	01026034	8	multi_segmentation:2	auto_resolved
 Dinah	dinah	Dinah	Dinah'	DINAH	Dinah		PROP		high	01030021	8	multi_segmentation:2	auto_resolved
 Efrath	efrath	Efrath	Efrath'	EFRATH	Efrath		PROP		high	01035016	8	multi_segmentation:2	auto_resolved

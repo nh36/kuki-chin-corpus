@@ -189,12 +189,12 @@ tun	tun	tun	tun	arrive	V	498	01007006	01007006|01009028|01010001|01010032|010110
 bangmah	bangmah	bangmah	bangmah	nothing	N	495	01009021	01009021|01014024|01019008|01019022|01022012	0	auto
 kham	kham	kham	kham	gold	V	494	01002011	01002011|01009021|01013002|01024019|01024022	0	auto
 siangtho	siangtho	siangtho	siangtho	holy	N	494	01007002	01007002|01008020|01008020|02003005|02012016	0	auto
-thum	thum	thum	thum	three	NUM	493	01001013	01001013|01005032|01006010|01015009|01015009	0	auto
 thupha	thupha	thu	thu-pha	word-good	N	491	01001022	01001022|01001028|01002003|01005002|01009001	0	auto
 puan	puan	puan	puan	cloth	N	490	01003021	01003021|01009023|01024065|01025025|01027015	0	auto
 hilh	hilh	hilh	hilh	tell	V	481	01018019	01018019|01032017|02004012|02004015|02018020	0	auto
 nuam	nuam	nuam	nuam	want	ADJ	480	01004007	01004007|01021011|01024005|01024039|02004019	0	auto
 that	that	that	that	kill	V	479	01004008	01004008|01004014|01004023|01004025|01009005	0	auto
+thum	thum	thum	thum	three	NUM	477	01001013	01001013|01005032|01006010|01015009|01015009	0	auto
 Siangtho	siangtho	siangtho	Siangtho	holy	N	473	02026034	02026034|03016017|03016027|03024011|03024016	0	auto
 Tu-in	tu-in	tu	Tu-in	now-ERG	FUNC	467	01003001	01003001|01004001|01004002|01006011|01011006	0	auto
 pha	pha	pha	pha	branch	ADJ	460	01001021	01001021|01001022|01001028|01002009|01002010	0	auto
@@ -205,7 +205,7 @@ Mi	mi	mi	Mi	person	N	454	01009005	01009005|01009006|01013016|01020016|02012019	0
 peuhpeuh	peuhpeuh	peuhpeuh	peuhpeuh	every	DET	451	01003001	01003001|01014023|01018014|01019012|01026010	0	auto
 ciang	ciang	ciang	ciang	then	CONJ	451	01003019	01003019|01008005|01010019|01010019|01013003	0	auto
 amaute	amaute	amaute	amaute'	3PL.PRO.POSS	PRON	451	01017008	01017008|01017023|01018020|01018026|01019004	0	auto
-kei	kei	kei	kei	1SG.PRO	FUNC	447	01004010	01004010|01014024|01019019|01020006|01021023	0	auto
+kei	kei	kei	kei	1SG.PRO	PRON	447	01004010	01004010|01014024|01019019|01020006|01021023	0	auto
 lamah	lamah	lam	lam-ah	direction-LOC	FUNC	444	01002008	01002008|01002014|01003024|01010030|01011002	0	auto
 zi	zi	zi	zi	wife	N	439	01002024	01002024|01002025|01003008|01003021|01004001	0	auto
 gamah	gamah	gam	gam-ah	land-LOC	FUNC	438	01012001	01012001|01012005|01013007|01020001|01022002	0	auto
@@ -403,7 +403,6 @@ sing	sing	sing	sing	shake	N	219	01006014	01006014|01018003|01018008|01022003|010
 bia	bia	bia	bia	worship	V	219	01021033	01021033|01022005|01024026|01024048|01026025	0	auto
 sang	sang	sang	sang	high	N	218	01002007	01002007|01014018|01014019|01014020|01014022	0	auto
 khatlekhat	khatlekhat	khat	khat-le-khat	one-and-one	N	218	01011003	01011003|01026031|01031049|01037019|01042001	0	auto
-ko	ko	ko	ko	long	ADJ	218	01019005	01019005|01020009|01024055|01026020|01034014	0	auto
 zan	zan	zan	zan	break	N	217	01001014	01001014|01001016|01001016|01007004|01007012	0	auto
 sia	sia	sia	sia	evil	ADJ	217	01002009	01002009|01002017|01003005|01003022|01004005	0	auto
 David	david	David	David'	DAVID.POSS	PROP	217	08004017	08004017|08004022|09017031|09017050|09018019	0	auto
@@ -498,6 +497,7 @@ hanga	hanga	hanga	hanga	offer	CONJ	170	01032029	01032029|02029014|02029036|02029
 gamte	gamte	gam	gam-te	land-PL	N	170	03025034	03025034|04032004|04035002|04035003|04035004	0	auto
 kamsangte	kamsangte	kamsang	kamsang-te	prophet-PL	N	170	04011025	04011025|04011026|09010011|09028006|09028015	0	auto
 theihna	theihna	thei	theih-na	know.II-NMLZ	V	169	01002009	01002009|01002017|01002019|01008008|01015013	0	auto
+ko	ko	ko	ko	long	ADJ	169	01044016	01044016|01046034|02013008|05026003|06002012	0	auto
 khatah	khatah	khat	khat-ah	one-LOC	FUNC	168	01001009	01001009|01006019|01006020|01013006|01016007	0	auto
 tang	tang	tang	tang	embed	V	168	01001011	01001011|01001011|01001012|01001012|01001029	0	auto
 leeng	leeng	leeng	leeng	chariot	N	168	01001020	01001020|01008007|01041043|01045019|01045021	0	auto
@@ -531,7 +531,8 @@ kongpi	kongpi	pi	kong-pi	road-big	N	159	01028017	01028017|02027014|02027016|0203
 pah	pah	pah	pah	do.so	V	158	01001003	01001003|01001007|01001009|01001011|01001015	0	auto
 khutsung	khutsung	khutsung	khutsung	palm	N	158	01021030	01021030|01032011|01033010|01037021|01037022	0	auto
 tam	tam	tam	tam	many	DET	157	01006001	01006001|01007017|01007018|01008017|01013006	0	auto
-kei	kei	kei	kei'	NEG.EMPH.POSS	FUNC	156	01013008	01013008|01013008|01016005|01020009|01020013	0	auto
+thum	thum	thum	thum	entreat	NUM	157	01019002	01019002|01019007|01030014|01032011|01032029	0	auto
+kei	kei	kei	kei'	NEG.EMPH.POSS	PRON	156	01013008	01013008|01013008|01016005|01020009|01020013	0	auto
 buk	buk	buk	buk	ambush	N	155	01004007	01004007|02027021|02029004|02029010|02029011	0	auto
 lum	lum	lum	lum	round	N	155	01009021	01009021|01016002|01019033|01019034|01019035	0	auto
 sakol	sakol	sakol	sakol	donkey	N	155	01050009	01050009|02014009|02014017|02014018|02014023	0	auto
@@ -581,7 +582,6 @@ tuutal	tuutal	tuutal	tuutal	ram	N	142	01015009	01015009|01022013|01022013|010310
 lamdang	lamdang	lam	lam-dang	other.way	V	142	02003003	02003003|07006013|07013018|09018015|10001026	0	auto
 hunin	hunin	hun	hun-in	time-ERG	FUNC	141	01002006	01002006|01010025|01012006|01014015|01016001	0	auto
 ut	ut	ut	ut	will	V	141	01002016	01002016|01016006|01019008|02006001|02006001	0	auto
-thum	thum	thum	thum	entreat	NUM	141	01019002	01019002|01019007|01030014|01032011|01032029	0	auto
 zui-in	zui-in	zui	zui-in	follow-ERG	FUNC	141	01033016	01033016|02015013|02023002|03019037|03020022	0	auto
 ukte	ukte	uk	uk-te	rule-PL	N	141	02001011	02001011|02005006|02005010|02005013|02005014	0	auto
 guk	guk	guk	guk	six	NUM	140	01001031	01001031|01016016|01030020|01031041|01044008	0	auto
@@ -1630,6 +1630,7 @@ laiza	laiza	lai	lai-za	middle-place	N	38	01004021	01004021|01031027|09010005|090
 khahkhia	khahkhia	khahkhia	khahkhia	deliver	V	38	01005029	01005029|01032011|02006006|02015007|02018010	0	auto
 khualzin	khualzin	khual	khual-zin	pilgrimage	N	38	01012009	01012009|01035021|01046001|02040036|02040038	0	auto
 manlang	manlang	manlang	manlang	hastily	N	38	01018007	01018007|01041014|05028048|06023014|09028024	0	auto
+ko	ko	ko	ko	1PL.EXCL.PRO	PRON	38	01019005	01019005|01020009|01024055|01026020|01034014	0	auto
 sauveipi	sauveipi	sauveipi	sauveipi	flock	N	38	01021034	01021034|01026008|02019013|03026010|04020015	0	auto
 kammalte	kammalte	kammal	kammal-te	word-PL	N	38	01024052	01024052|01027034|01045027|02034028|05028012	0	auto
 se	se	se	se	dragon	N	38	01025022	01025022|12014010|18003012|18003012|18021013	0	auto
@@ -1948,7 +1949,7 @@ lopi	lopi	Lopi	lo-pi	NEG-EMPH	PROP	30	02023007	02023007|07016015|19035019|190350
 geelna	geelna	geel	geel-na	plan-NMLZ	N	30	02026030	02026030|13028011|13028018|13028018|14003003	0	auto
 kisung	kisung	sung	ki-sung	REFL-inside	V	30	02030032	02030032|02032004|02032008|02034017|04033052	0	auto
 tulnga	tulnga	tulnga	tulnga	five.thousand	N	30	04001016	04001016|04001016|04002002|04002017|04026041	0	auto
-adangte	adangte	dang	a-dang-te	3SG.POSS-other-PL	N	30	04001047	04001047|15010025|18032004|20028012|26010011	0	auto
+adangte	adangte	dang	a-dang-te	3SG.POSS-other-PL	PRON	30	04001047	04001047|15010025|18032004|20028012|26010011	0	auto
 Heshbon	heshbon	Heshbon	Heshbon	HESHBON	PROP	30	04021025	04021025|04021026|04021028|04021030|04032003	0	auto
 kilehkik	kilehkik	kileh	kileh-kik	return-ITER	V	30	05017016	05017016|08001012|09015026|09015031|12009018	0	auto
 muan	muan	muan	muan	trust	V	30	05028052	05028052|10021017|18031024|19041009|19062005	0	auto
@@ -2113,7 +2114,7 @@ samsak	samsak	sam	sam-sak	call-CAUS	V	26	01020002	01020002|01041008|01041014|040
 piakik	piakik	pia	piak-kik	give.to-ITER	V	26	01020007	01020007|03025052|05022002|05024013|07011013	0	auto
 nawi	nawi	nawi	nawi	butter	N	26	01021007	01021007|01021008|01021008|05032025|09001022	0	auto
 Beersheba	beersheba	Beersheba	Beersheba	BEERSHEBA	PROP	26	01021014	01021014|01021031|01026033|01028010|01046001	0	auto
-man	man	man	man'	finish.POSS	ADJ	26	01024040	01024040|04027020|05026017|05028002|05030002	0	auto
+man	man	man	man'	finish.POSS	PRON	26	01024040	01024040|04027020|05026017|05028002|05030002	0	auto
 gukna	gukna	guk	guk-na	dog-NMLZ	N	26	01030019	01030019|02026009|06019032|10003005|11016008	0	auto
 Mizpah	mizpah	Mizpah	Mizpah	MIZPAH	PROP	26	01031049	01031049|06011003|07011011|07011029|09007011	0	auto
 “Note	“note	note	Note'	2PL.PRO.POSS	PRON	26	01034011	01034011|01042014|01044015|01045012|02023023	0	auto
@@ -2591,7 +2592,7 @@ sauna	sauna	sau	sau-na	long-NMLZ	N	19	01006015	01006015|02027011|05003011|110060
 Aram	aram	Aram	Aram	ARAM	PROP	19	01010022	01010022|01025020|01025020|01028005|01031020	0	auto
 Shelah	shelah	Shelah	Shelah	SHELAH	PROP	19	01010024	01010024|01010024|01011012|01011013|01011014	0	auto
 buan	buan	buan	buan	clay	N	19	01011003	01011003|02001014|02002003|05027002|05027004	0	auto
-Kei	kei	kei	Kei'	NEG.EMPH.POSS	FUNC	19	01013009	01013009|01034012|01034030|02032026|18017013	0	auto
+Kei	kei	kei	Kei'	NEG.EMPH.POSS	PRON	19	01013009	01013009|01034012|01034030|02032026|18017013	0	auto
 phasak	phasak	pha	pha-sak	reach-CAUS	V	19	01013016	01013016|01017002|01017020|01022017|01026004	0	auto
 kawi	kawi	kawi	kawi	forth	ADV	19	01016005	01016005|01033004|01048010|05032005|06015009	0	auto
 taw	taw	taw	taw	with	N	19	01019005	01019005|07019022|11022035|12003016|12003017	0	auto
@@ -2602,7 +2603,7 @@ Nong	nong	nong	Nong	2→1	V	19	01027019	01027019|04032005|09002001|16013021|1700
 hingsak	hingsak	hing	hing-sak	be.alive-CAUS	V	19	01027037	01027037|01045007|04022033|06009020|06009021	0	auto
 vaihawmna	vaihawmna	vai	vai-hawm-na	go-together-NMLZ	V	19	01027042	01027042|02038021|10014019|12007012|14025020	0	auto
 tuucingte	tuucingte	tuucing	tuucing-te	shepherd-PL	N	19	01029003	01029003|09025007|18001016|21012011|23013020	0	auto
-ko	ko	ko	ko'	long.POSS	ADJ	19	01029026	01029026|04036003|05005027|06002014|06022024	0	auto
+ko	ko	ko	ko'	long.POSS	PRON	19	01029026	01029026|04036003|05005027|06002014|06022024	0	auto
 met	met	met	met	shear	V	19	01031019	01031019|01038013|03019027|04006009|04006018	0	auto
 nupite	nupite	nupi	nupi-te	woman-PL	N	19	01033005	01033005|04031009|07021010|08001019|08004014	0	auto
 khek	khek	khek	khek	change	V	19	01035002	01035002|01041014|03027010|03027010|03027033	0	auto
@@ -2783,7 +2784,7 @@ Sisaria	sisaria	Sisaria	Sisaria	SISARIA	PROP	18	40016013	40016013|41008027|44008
 khawhlawhte	khawhlawhte	khawh	khawh-lawh-te	able-earn-PL	N	18	40021033	40021033|40021034|40021035|40021038|40021040	0	auto
 thawhkikna	thawhkikna	thawh	thawh-kik-na	rise-again-NMLZ	V	18	40022023	40022023|40022031|41012018|41012026|42020037	0	auto
 uptheih	uptheih	up	up-theih	elder.sibling-ABIL	V	18	43001007	43001007|43005047|43006030|43009036|43011015	0	auto
-Asia	asia	sia	a-sia	3SG.POSS-evil	N	18	44002009	44002009|44006009|44016006|44019010|44019022	0	auto
+Asia	asia	sia	a-sia	3SG.POSS-evil	PRON	18	44002009	44002009|44006009|44016006|44019010|44019022	0	auto
 vaksak	vaksak	vak	vak-sak	shine-CAUS	V	17	01001015	01001015|01001016|02025037|10022029|16009012	0	auto
 ngasate	ngasate	ngasa	ngasa-te	fish-PL	N	17	01001026	01001026|01001028|02007018|02007021|04011005	0	auto
 Kush	kush	Kush	Kush	KUSH	PROP	17	01002013	01002013|01010006|01010008|04012001|04012001	0	auto
@@ -3352,6 +3353,7 @@ danin	danin	dan	dan-in	manner-ERG	FUNC	13	03025054	03025054|04016029|05019003|07
 dialkhai	dialkhai	dial	dial-khai	call-pitch	V	13	04001052	04001052|04002002|04002002|04002002|04002017	0	auto
 kidalna	kidalna	dal	ki-dal-na	REFL-hinder-NMLZ	V	13	04003031	04003031|04004005|04014009|05032038|10022031	0	auto
 Nazir	nazir	Nazir	Nazir	NAZIR	PROP	13	04006002	04006002|04006013|04006018|04006019|04006020	0	auto
+Ko	ko	ko	Ko	long	ADJ	13	04010029	04010029|11003018|18009033|24002031|24008008	0	auto
 Jefunneh	jefunneh	Jefunneh	Jefunneh'	JEFUNNEH.POSS	PROP	13	04013003	04013003|04014006|04014030|04014038|04026065	0	auto
 Zin	zin	Zin	Zin	ZIN	PROP	13	04013021	04013021|04020001|04027014|04027014|04033036	0	auto
 zuat	zuat	zuat	zuat	prepare	V	13	04014024	04014024|05001022|09018006|10007012|13017011	0	auto
@@ -4457,7 +4459,7 @@ Simon	simon	Simon	Simon'	SIMON.POSS	PROP	9	41001030	41001030|41014003|42004038|4
 septheih	septheih	sep	sep-theih	work-ABIL	V	9	41007037	41007037|46007035|46009023|46012006|46016009	0	auto
 pupite	pupite	pupi	pupi-te	grandparent-PL	N	9	43004020	43004020|44003013|44007008|44007011|44007012	0	auto
 Kornelias	kornelias	Kornelias	Kornelias	KORNELIAS	PROP	9	44010001	44010001|44010007|44010017|44010022|44010024	0	auto
-Akhaia	akhaia	khai	a-khai-a	3SG.POSS-balance-LOC	FUNC	9	44018012	44018012|44018027|44018027|44019021|46016015	0	auto
+Akhaia	akhaia	khai	a-khai-a	3SG.POSS-balance-LOC	PRON	9	44018012	44018012|44018027|44018027|44019021|46016015	0	auto
 Apollos	apollos	Apollos	Apollos	APOLLOS	PROP	9	44018024	44018024|44018026|44018027|44019001|46003005	0	auto
 bikbek	bikbek	bik	bik-bek	small~REDUP	N	8	01001002	01001002|02010022|07016013|07016014|18041015	0	auto
 neuzaw	neuzaw	neu	neu-zaw	young-more	N	8	01001016	01001016|18013002|19008005|26042005|26043017	0	auto
@@ -4901,7 +4903,6 @@ tultul	tultul	tul~tul	tul~tul	thousand~REDUP	N	7	01024060	01024060|10018001|1302
 Hanok	hanok	Hanok	Hanok	HANOK	PROP	7	01025004	01025004|01046009|02006014|04026005|04026005	0	auto
 hithiatin	hithiatin	hi	hi-thiat-in	be-cease-ERG	FUNC	7	01025027	01025027|04032006|23017002|25003028|28002018	0	auto
 leitangte	leitangte	lei	lei-tang-te	earth-PL	N	7	01026003	01026003|06012006|06019049|18024018|19049011	0	auto
-“Ko	“ko	ko	Ko	KO	N	7	01026010	01026010|01042013|09014012|24041008|41010028	0	auto
 kinin	kinin	kin	kin-in	quickly-ERG	FUNC	7	01026022	01026022|19102017|46007032|46007033|46007034	0	auto
 hiamte	hiamte	hi	hi-am-te	be-sink-PL	N	7	01027003	01027003|09020040|09021008|12010002|19045005	0	auto
 suankhia	suankhia	suan	suan-khia	plant-out	V	7	01027036	01027036|04021032|04032039|05002019|05011023	0	auto
@@ -6004,6 +6005,7 @@ kemsak	kemsak	kem	kem-sak	guard-CAUS	V	5	01040004	01040004|01041035|19091011|430
 theihnate	theihnate	theihna	theihna-te	knowledge-PL	N	5	01040008	01040008|23047010|42024035|45011033|46013012	0	auto
 leenggahte	leenggahte	leenggah	leenggah-te	grape-PL	N	5	01040011	01040011|09008015|18024011|24048032|30009013	0	auto
 On	on	On	On	ON	PROP	5	01041045	01041045|01041050|01046020|04016001|26030017	0	auto
+“Ko	“ko	ko	Ko	long	N	5	01042013	01042013|24041008|41010028|42018028|43021003	0	auto
 kihihsak	kihihsak	kihih	kihih-sak	thi-CAUS	V	5	01042025	01042025|12004013|12004014|18040010|19031018	0	auto
 gongah	gongah	gong	gong-ah	alone-LOC	FUNC	5	01042027	01042027|01042028|01044002|06010027|11007031	0	auto
 om!”	om!”	om	om	exist	V	5	01042028	01042028|12004040|12009023|20026013|43019014	0	auto
@@ -6509,7 +6511,6 @@ khapi	khapi	khapi	khapi	moon	N	5	18025005	18025005|19072007|19089037|19104019|23
 lungno	lungno	lungno	lungno	worm	N	5	18025006	18025006|19022006|23041014|23051008|32004007	0	auto
 honna	honna	hon	hon-na	flock-NMLZ	N	5	18027018	18027018|22005005|40021033|66009001|66020001	0	auto
 hahkatin	hahkatin	hahkat	hahkat-in	man-ERG	FUNC	5	18028003	18028003|20002004|21008016|32001013|54004015	0	auto
-Ko	ko	Ko	Ko	KO	PROP	5	18028014	18028014|24002031|24008008|24042020|24050007	0	auto
 paubaan	paubaan	pau	pau-baan	speak-true	N	5	18031006	18031006|19119001|20028006|47007011|52002010	0	auto
 mawhsaknate	mawhsaknate	mawhsakna	mawhsakna-te	sin.offering-PL	N	5	18031036	18031036|40027013|44023029|44024013|44025007	0	auto
 kithun	kithun	thun	ki-thun	REFL-press	V	5	18032019	18032019|22005013|40009017|40009017|58007019	0	auto
@@ -6551,7 +6552,7 @@ kingaihsunin	kingaihsunin	ngaihsun	ki-ngaihsun-in	REFL-think-CVB	V	5	19049018	19
 kiuhkeuh	kiuhkeuh	uh	ki-uh-keuh	REFL-wash-INTENS	V	5	19051002	19051002|22005012|22005013|28009010|66014005	0	auto
 Sumzuak	sumzuak	sum	sum-zuak	money-buy	N	5	19055011	19055011|26007012|38014021|41011015|42017028	0	auto
 Heh	heh	heh	Heh	anger	N	5	19058010	19058010|19079005|21007009|25003043|28012014	0	auto
-kama	kama	ma	ka-ma	1SG.POSS-lip	N	5	19059012	19059012|19066012|20029019|23006005|60001008	0	auto
+kama	kama	ma	ka-ma	1SG.POSS-lip	PRON	5	19059012	19059012|19066012|20029019|23006005|60001008	0	auto
 siklukhu	siklukhu	sik	sik-lukhu	iron-helmet	N	5	19060007	19060007|19108008|26038005|49006017|52005008	0	auto
 dide-in	dide-in	dide	dide-in	lord-ERG	FUNC	5	19062001	19062001|19083001|19109001|23064012|35002020	0	auto
 Leimong	leimong	leimong	Leimong	end	N	5	19067007	19067007|19139009|23024016|23041005|23062011	0	auto
@@ -6972,7 +6973,7 @@ talkolh	talkolh	tal	tal-kolh	bald-head	N	4	03013041	03013041|03013042|03013042|0
 kizelin	kizelin	zel	ki-zel-in	REFL-HAB.CONT-ERG	FUNC	4	03013051	03013051|23054003|44006007|44012024	0	auto
 balkhia	balkhia	bal	bal-khia	tear-out	V	4	03013056	03013056|11011012|11011013|11011031	0	auto
 kimkhatte	kimkhatte	kim	kim-khat-te	side-one-PL	N	4	03014016	03014016|03014017|05003013|10019040	0	auto
-an-a	an-a	an	an-a	3PL.POSS-LOC	FUNC	4	03014031	03014031|04007087|07013019|42022007	0	auto
+an-a	an-a	an	an-a	3PL.POSS-LOC	PRON	4	03014031	03014031|04007087|07013019|42022007	0	auto
 zawk	zawk	zawk	zawk	more	N	4	03014037	03014037|10002026|19096004|46006003	0	auto
 themte	themte	them	them-te	scrape-PL	N	4	03014041	03014041|23030014|26023034|40015037	0	auto
 kikhakcip	kikhakcip	khak	ki-khak-cip	REFL-lock-tight	V	4	03014046	03014046|06006001|23024010|26046001	0	auto
@@ -8837,6 +8838,7 @@ silhloin	silhloin	silh	silh-lo-in	clothe-NEG-INST	N	3	18024007	18024007|18024010
 toncip	toncip	ton	ton-cip	wet-INTENS	N	3	18024008	18024008|19022015|19137006	0	auto
 git	git	git	git	bound	N	3	18026010	18026010|23028024|26004001	0	auto
 leivuite	leivuite	lei	lei-vui-te	earth-dust-PL	N	3	18028006	18028006|18038036|19102014	0	auto
+Ko	ko	ko	Ko	1PL.EXCL.PRO	PRON	3	18028014	18028014|19004006|24042020	0	auto
 kileizo	kileizo	lei	ki-lei-zo	REFL-get-ABIL	V	3	18028015	18028015|18028016|18028016	0	auto
 pelhna	pelhna	pelh	pelh-na	depart-NMLZ	N	3	18028028	18028028|20020003|39002014	0	auto
 limun	limun	li	li-mun	hide-self	N	3	18029008	18029008|33001016|44014014	0	auto
@@ -9458,7 +9460,7 @@ khuahun	khuahun	khuahun	khuahun	season	N	2	01001014	01001014|21011004	0	auto
 golpite	golpite	gol	gol-pi-te	creature-great-PL	N	2	01001021	01001021|23013021	0	auto
 Innsa	innsa	Innsa	Innsa	INNSA	PROP	2	01001024	01001024|01001025	0	auto
 “Eima	“eima	eima	Eima	our.god	N	2	01001026	01001026|30006013	0	auto
-an-in	an-in	an	an-in	3PL.POSS-ERG	FUNC	2	01001029	01001029|19042003	0	auto
+an-in	an-in	an	an-in	3PL.POSS-ERG	PRON	2	01001029	01001029|19042003	0	auto
 bedolak	bedolak	bedolak	bedolak	bdellium	N	2	01002012	01002012|04011007	0	auto
 nakguh	nakguh	nak	nak-guh	rib-take	N	2	01002022	01002022|27007005	0	auto
 “Huan	“huan	huan	huan	bread	N	2	01003002	01003002|43018026	0	auto
@@ -9587,6 +9589,7 @@ sang-in	sang-in	sang	sang-in	high-ERG	FUNC	2	01025017	01025017|01049033	0	auto
 nene	nene	ne~ne	ne~ne	eat~REDUP	N	2	01025028	01025028|23056012	0	auto
 phukhong	phukhong	phu	phu-khong	sod-pottage	N	2	01025029	01025029|01025030	0	auto
 ciangin,”	ciangin,”	ciang	ciang-in	then-ERG	FUNC	2	01026007	01026007|09027011	0	auto
+“Ko	“ko	ko	Ko	1PL.EXCL.PRO	PRON	2	01026010	01026010|09014012	0	auto
 hucipin	hucipin	hu	hu-cip-in	stop-INTENS-INST	N	2	01026015	01026015|40027060	0	auto
 Beeri	beeri	Beeri	Beeri'	BEERI.POSS	PROP	2	01026034	01026034|28001001	0	auto
 Elon	elon	Elon	Elon'	ELON.POSS	PROP	2	01026034	01026034|01036002	0	auto
@@ -10522,7 +10525,7 @@ kumpipa,”	kumpipa,”	kumpi	kumpi-pa	king-male	N	2	10014004	10014004|41015026	
 “Peengkul	“peengkul	peengkul	Peengkul	trumpet	N	2	10015010	10015010|24006017	0	auto
 musakkik	musakkik	mu	mu-sak-kik	see.I-CAUS-ITER	V	2	10015025	10015025|40020033	0	auto
 sawmsimte	sawmsimte	sawm	sawm-sim-te	incite-count-PL	N	2	10015031	10015031|12021024	0	auto
-amkhamsak	amkhamsak	am	am-kham-sak	3SG.POSS-forbid-CAUS	V	2	10017002	10017002|38014013	0	auto
+amkhamsak	amkhamsak	am	am-kham-sak	3SG.POSS-forbid-CAUS	PRON	2	10017002	10017002|38014013	0	auto
 “Arkhi	“arkhi	“Arkhi	Arkhi	ARKHI	PROP	2	10017005	10017005|10017014	0	auto
 kisiit	kisiit	siit	ki-siit	REFL-wipe	V	2	10017012	10017012|12020017	0	auto
 Hushai	hushai	Hushai	Hushai'	HUSHAI.POSS	PROP	2	10017014	10017014|11004016	0	auto
@@ -12048,7 +12051,7 @@ khuaphawk	khuaphawk	khua	khua-phawk	town-remember	N	2	26030009	26030009|38001011
 hauhnateng	hauhnateng	hauhna	hauhna-teng	riches-whole	N	2	26030010	26030010|28012008	0	auto
 “Milim	“milim	mi	mi-lim	idol	N	2	26030013	26030013|46010028	0	auto
 Pelusium	pelusium	Pelusium	Pelusium	PELUSIUM	PROP	2	26030015	26030015|26030016	0	auto
-adangteng	adangteng	dang	a-dang-teng	3SG.POSS-other-until	N	2	26030017	26030017|27001019	0	auto
+adangteng	adangteng	dang	a-dang-teng	3SG.POSS-other-until	PRON	2	26030017	26030017|27001019	0	auto
 nusiacip	nusiacip	nusia	nusia-cip	forsake-tightly	N	2	26031012	26031012|44002027	0	auto
 kuansakin	kuansakin	kuan	kuan-sakin	family-CAUS.ERG	V	2	26032003	26032003|40022007	0	auto
 Mualteng	mualteng	mual	mual-teng	mountain-until	N	2	26032005	26032005|26032006	0	auto
@@ -13257,7 +13260,7 @@ kigam	kigam	gam	ki-gam	REFL-land	V	1	02021022	02021022	0	auto
 suksiatkhak	suksiatkhak	suk	suk-siat-khak	make-destroy-stop	V	1	02021026	02021026	0	auto
 mit	mit	mit	mit'	eye.POSS	PRON	1	02021026	02021026	0	auto
 tupkhiat	tupkhiat	tupkhiat	tupkhiat	knock.out	N	1	02021027	02021027	0	auto
-ha	ha	ha	ha'	tooth.POSS	ADJ	1	02021027	02021027	0	auto
+ha	ha	ha	ha'	tooth.POSS	PRON	1	02021027	02021027	0	auto
 piklup	piklup	piklup	piklup	gore	N	1	02021028	02021028	0	auto
 beisa-ah	beisa-ah	bei	bei-sa-ah	end-PERF-LOC	FUNC	1	02021029	02021029	0	auto
 kiguk	kiguk	guk	ki-guk	REFL-six	V	1	02022007	02022007	0	auto
@@ -13394,13 +13397,13 @@ taaubeelin	taaubeelin	taaubeelin	taaubeelin	rinse	N	1	03006028	03006028	0	auto
 kikiatin	kikiatin	kiat	ki-kiat-in	REFL-fall-CVB	V	1	03006028	03006028	0	auto
 meithau	meithau	meithau	meithau	rump.fat	N	1	03007003	03007003	0	auto
 tuamte	tuamte	tuam	tuam-te	various-PL	N	1	03007004	03007004	0	auto
-nadangin	nadangin	dang	na-dang-in	2SG.POSS-other-ERG	FUNC	1	03007024	03007024	0	auto
+nadangin	nadangin	dang	na-dang-in	2SG.POSS-other-ERG	PRON	1	03007024	03007024	0	auto
 kisemnen	kisemnen	sem	ki-sem-nen	REFL-cut-pieces	V	1	03008020	03008020	0	auto
 ki-atnente	ki-atnente	at	ki-at-nen-te	REFL-burn-fire-PL	N	1	03008020	03008020	0	auto
 bilteepte	bilteepte	bilteep	bilteep-te	ear.tip-PL	N	1	03008024	03008024	0	auto
 nen	nen	nen	nen	pieces	N	1	03009013	03009013	0	auto
 nenin	nenin	ne	ne-nin	eat-day	V	1	03009013	03009013	0	auto
-katlup	katlup	tlup	ka-tlup	1SG.POSS-generation	N	1	03010006	03010006	0	auto
+katlup	katlup	tlup	ka-tlup	1SG.POSS-generation	PRON	1	03010006	03010006	0	auto
 Ithamar-te	ithamar-te	Ithamar-Te	Ithamar-te'	ITHAMAR-TE.POSS	PROP	1	03010016	03010016	0	auto
 kate	kate	te	ka-te	1SG-PL	N	1	03011004	03011004	0	auto
 Sakikh	sakikh	sakikh	Sakikh	cud.chewer	N	1	03011005	03011005	0	auto
@@ -13684,7 +13687,7 @@ Amaw	amaw	Amaw	Amaw	AMAW	PROP	1	04022005	04022005	0	auto
 Pethor-ah	pethor-ah	Pethor-Ah	pethor-ah	PETHOR-LOC	PROP	1	04022005	04022005	0	auto
 “Balaam	“balaam	“Balaam	Balaam	BALAAM	PROP	1	04022014	04022014	0	auto
 kikol-awksak	kikol-awksak	kol	ki-kol-awk-sak	REFL-cry-all-CAUS	V	1	04022016	04022016	0	auto
-kawcikah	kawcikah	wcikah	ka-wcikah	1SG.POSS-vineyard	N	1	04022024	04022024	0	auto
+kawcikah	kawcikah	wcikah	ka-wcikah	1SG.POSS-vineyard	PRON	1	04022024	04022024	0	auto
 “Thumvei	“thumvei	thumvei	Thumvei	three.times	N	1	04022028	04022028	0	auto
 mawlpihna	mawlpihna	mawlpih	mawlpih-na	curse-NMLZ	N	1	04022029	04022029	0	auto
 dinlam	dinlam	dinlam	dinlam	westward	N	1	04022034	04022034	0	auto
@@ -13871,7 +13874,7 @@ Gudgodah	gudgodah	Gudgodah	Gudgodah	GUDGODAH	PROP	1	05010007	05010007	0	auto
 ciangin)	ciangin)	ciang	ciang-in	then-ERG	FUNC	1	05011002	05011002	0	auto
 sungtengun	sungtengun	sungtengun	sungtengun	among	N	1	05011005	05011005	0	auto
 Abiram-te	abiram-te	Abiram-Te	abiram-te	ABIRAM-PL	PROP	1	05011006	05011006	0	auto
-nawmvalhna	nawmvalhna	wmvalh	na-wmvalh-na	2SG.POSS-desire-NMLZ	N	1	05011006	05011006	0	auto
+nawmvalhna	nawmvalhna	wmvalh	na-wmvalh-na	2SG.POSS-desire-NMLZ	PRON	1	05011006	05011006	0	auto
 Vantungte	vantungte	Vantungte	Vantungte	VANTUNGTE	PROP	1	05011019	05011019	0	auto
 sikna	sikna	sik	sik-na	turn-NMLZ	N	1	05011024	05011024	0	auto
 beimangsakin	beimangsakin	bei	bei-mang-sakin	finish-dream-CAUS.ERG	V	1	05012029	05012029	0	auto
@@ -14439,7 +14442,7 @@ buangawpin	buangawpin	buangawp	buangawp-in	confuse-ERG	FUNC	1	07020005	07020005	
 lanluatna	lanluatna	lanluat	lanluat-na	exceed-NMLZ	N	1	07020010	07020010	0	auto
 galsiam	galsiam	gal	gal-siam	enemy-be.skilled	N	1	07020017	07020017	0	auto
 pangkik	pangkik	pang	pang-kik	small-ITER	V	1	07020022	07020022	0	auto
-naihkik	naihkik	ihkik	na-ihkik	2SG.POSS-sleep	N	1	07020023	07020023	0	auto
+naihkik	naihkik	ihkik	na-ihkik	2SG.POSS-sleep	PRON	1	07020023	07020023	0	auto
 Baaltamar-ah	baaltamar-ah	Baaltamar-Ah	baaltamar-ah	BAALTAMAR-LOC	PROP	1	07020033	07020033	0	auto
 kivattuk	kivattuk	vat	ki-vat-tuk	REFL-climb-up	V	1	07020039	07020039	0	auto
 suakto	suakto	suak	suak-to	become-CONT	V	1	07020040	07020040	0	auto
@@ -14484,7 +14487,7 @@ hente	hente	hente	hente	bundle	N	1	08002016	08002016	0	auto
 dokkhia-in	dokkhia-in	dok	dok-khia-in	draw-out-ERG	FUNC	1	08002016	08002016	0	auto
 topsa	topsa	top	top-sa	gather-PERF	N	1	08002017	08002017	0	auto
 ankhamvalte	ankhamvalte	ankhamval	ankhamval-te	parched.corn-PL	N	1	08002018	08002018	0	auto
-naipen	naipen	ipen	na-ipen	2SG.POSS-gather	N	1	08002020	08002020	0	auto
+naipen	naipen	ipen	na-ipen	2SG.POSS-gather	PRON	1	08002020	08002020	0	auto
 kuankhop	kuankhop	kuankhop	kuankhop	glean.close	N	1	08002022	08002022	0	auto
 suantheih	suantheih	suan	suan-theih	plant-ABIL	V	1	08003001	08003001	0	auto
 leemin	leemin	leem	leem-in	mark.place-ERG	FUNC	1	08003004	08003004	0	auto
@@ -14671,7 +14674,7 @@ kitunin	kitunin	tun	ki-tun-in	REFL-arrive-CVB	V	1	09021009	09021009	0	auto
 Akhish	akhish	Akhish	Akhish'	AKHISH.POSS	PROP	1	09021011	09021011	0	auto
 kulhkongkhakte	kulhkongkhakte	kulhkongkhak	kulhkongkhak-te	city.gate-PL	N	1	09021013	09021013	0	auto
 kui	kui	kui	kui	tear	N	1	09021013	09021013	0	auto
-kaisuksak	kaisuksak	isuksak	ka-isuksak	1SG.POSS-restore	N	1	09021013	09021013	0	auto
+kaisuksak	kaisuksak	isuksak	ka-isuksak	1SG.POSS-restore	PRON	1	09021013	09021013	0	auto
 mihai-a	mihai-a	mihai	mihai-a	wise-LOC	FUNC	1	09021015	09021015	0	auto
 “Munmuanhuai	“munmuanhuai	“Munmuanhuai	Munmuanhuai	MUNMUANHUAI	PROP	1	09022005	09022005	0	auto
 Hereth	hereth	Hereth	Hereth	HERETH	PROP	1	09022005	09022005	0	auto
@@ -14855,7 +14858,7 @@ maipuksuk	maipuksuk	maipuksuk	maipuksuk	bow.face	N	1	10014022	10014022	0	auto
 tenin	tenin	ten	ten-in	dwell-CVB	N	1	10014024	10014024	0	auto
 (kum	(kum	kum	kum	year	N	1	10014026	10014026	0	auto
 gih	gih	gih	gih	pierce	N	1	10014026	10014026	0	auto
-kawivak	kawivak	wivak	ka-wivak	1SG.POSS-surround	N	1	10015020	10015020	0	auto
+kawivak	kawivak	wivak	ka-wivak	1SG.POSS-surround	PRON	1	10015020	10015020	0	auto
 thuko	thuko	thuko	thuko	lie.down	V	1	10015028	10015028	0	auto
 tuamsa-in	tuamsa-in	tuam	tuam-sa-in	various-PAST-ERG	FUNC	1	10015030	10015030	0	auto
 khuhsa-in	khuhsa-in	khuh	khuh-sa-in	cover-PAST-ERG	FUNC	1	10015030	10015030	0	auto
@@ -15168,7 +15171,7 @@ anvui	anvui	anvui	anvui	gleaning	N	1	12004042	12004042	0	auto
 khatte	khatte	khatte	khatte'	one-PL.POSS	PRON	1	12004043	12004043	0	auto
 na	na	na	na'	2SG.POSS	PRON	1	12005002	12005002	0	auto
 balkekna	balkekna	bal	bal-kek-na	bear-break-NMLZ	N	1	12005008	12005008	0	auto
-Abana	abana	ban	a-ban-a	3SG.POSS-arm-LOC	FUNC	1	12005012	12005012	0	auto
+Abana	abana	ban	a-ban-a	3SG.POSS-arm-LOC	PRON	1	12005012	12005012	0	auto
 Farpar	farpar	Farpar	Farpar	FARPAR	PROP	1	12005012	12005012	0	auto
 kamgen	kamgen	kam	kam-gen	mouth-speak	N	1	12005014	12005014	0	auto
 puakkhop	puakkhop	pua	puak-khop	spill.II-together	V	1	12005017	12005017	0	auto
@@ -15843,7 +15846,7 @@ suangpak	suangpak	suangpak	suangpak	onyx.stones	N	1	13029002	13029002	0	auto
 takte	takte	tak	tak-te	true-PL	N	1	13029002	13029002	0	auto
 siamneelte	siamneelte	siam	siam-neel-te	be.skilled-smooth-PL	N	1	13029005	13029005	0	auto
 thumanna-ah	thumanna-ah	thuman	thuman-na-ah	truth-NMLZ-LOC	FUNC	1	13029017	13029017	0	auto
-nasa	nasa	sa	na-sa	2SG.POSS-animal	N	1	14001004	14001004	0	auto
+nasa	nasa	sa	na-sa	2SG.POSS-animal	PRON	1	14001004	14001004	0	auto
 khit-ate	khit-ate	khit	khit-a-te	after-NOM-PL	N	1	14001012	14001012	0	auto
 “Tenna	“tenna	“Tenna	Tenna	TENNA	PROP	1	14002003	14002003	0	auto
 lamzo	lamzo	lam	lam-zo	direction-COMPL	V	1	14002006	14002006	0	auto
@@ -16897,7 +16900,7 @@ enkhong	enkhong	en	en-khong	look-how.long	N	1	19035017	19035017	0	auto
 Ha	ha	ha	Ha	tooth	ADJ	1	19035021	19035021	0	auto
 tuptup	tuptup	tup~tup	tup~tup	swallow~REDUP	N	1	19035025	19035025	0	auto
 kicisak	kicisak	ci	ki-ci-sak	REFL-say-CAUS	V	1	19035025	19035025	0	auto
-nawmvalhtum	nawmvalhtum	wmvalh	na-wmvalh-tum	2SG.POSS-desire-all	N	1	19035025	19035025	0	auto
+nawmvalhtum	nawmvalhtum	wmvalh	na-wmvalh-tum	2SG.POSS-desire-all	PRON	1	19035025	19035025	0	auto
 zahhuaigawp	zahhuaigawp	zahhuai	zahhuai-gawp	asham-INTENS	N	1	19035026	19035026	0	auto
 kidawkkhia	kidawkkhia	dawk	ki-dawk-khia	REFL-dry-EXIT	V	1	19036002	19036002	0	auto
 kimawkphat	kimawkphat	mawkphat	ki-mawkphat	REFL-flatter	V	1	19036002	19036002	0	auto
@@ -16997,7 +17000,7 @@ tawnun	tawnun	tawn	tawn-un	prosper-PROG	N	1	19058003	19058003	0	auto
 khiimte	khiimte	khi	khi-im-te'	chain-hide-PL.POSS	PRON	1	19058003	19058003	0	auto
 hatu-te	hatu-te	hat	hat-u-te	firm-elder.sibling-PL	N	1	19058006	19058006	0	auto
 luangkhiate	luangkhiate	luang	luang-khia-te	flow-out-PL	N	1	19058007	19058007	0	auto
-naai	naai	ai	na-ai	2SG.POSS-lot	N	1	19058008	19058008	0	auto
+naai	naai	ai	na-ai	2SG.POSS-lot	PRON	1	19058008	19058008	0	auto
 toktol	toktol	tok	tok-tol	peck-hit	N	1	19058008	19058008	0	auto
 nuamte	nuamte	nuamte	nuamte'	pleased-PL.POSS	PRON	1	19059002	19059002	0	auto
 hilopi-in	hilopi-in	hi	hi-lo-pi-in	be-NEG-big-ERG	FUNC	1	19059004	19059004	0	auto
@@ -17045,7 +17048,7 @@ pumtuam	pumtuam	pum	pum-tuam	body-cover	N	1	19069007	19069007	0	auto
 konate	konate	kona	kona-te	KONA-PL	N	1	19069009	19069009	0	auto
 lehsuak	lehsuak	leh	leh-suak	return-out	V	1	19069010	19069010	0	auto
 tumsukna	tumsukna	tumsuk	tumsuk-na	draught-NMLZ	N	1	19069014	19069014	0	auto
-nawmvalhsak	nawmvalhsak	wmvalh	na-wmvalh-sak	2SG.POSS-desire-CAUS	V	1	19069015	19069015	0	auto
+nawmvalhsak	nawmvalhsak	wmvalh	na-wmvalh-sak	2SG.POSS-desire-CAUS	PRON	1	19069015	19069015	0	auto
 kuavang	kuavang	kua	kua-vang	pit-mouth	N	1	19069015	19069015	0	auto
 khaknelhsak	khaknelhsak	khak	khak-nelh-sak	firm-press-CAUS	V	1	19069015	19069015	0	auto
 dangtakna-ah	dangtakna-ah	dang	dang-tak-na-ah	thirst-ADV-NMLZ-LOC	FUNC	1	19069021	19069021	0	auto
@@ -18471,7 +18474,7 @@ tuiphul	tuiphul	tui	tui-phul	water-cast	N	1	24006007	24006007	0	auto
 bing	bing	bing	bing	uncircumcised	N	1	24006010	24006010	0	auto
 lungdamna-in	lungdamna-in	lungdam	lungdam-na-in	rejoice-NMLZ-ERG	FUNC	1	24006010	24006010	0	auto
 piteek	piteek	pi	pi-teek	big-pour	N	1	24006011	24006011	0	auto
-kabomah	kabomah	bom	ka-bom-ah	1SG.POSS-blossom-LOC	FUNC	1	24006016	24006016	0	auto
+kabomah	kabomah	bom	ka-bom-ah	1SG.POSS-blossom-LOC	PRON	1	24006016	24006016	0	auto
 “Gamdangte	“gamdangte	“Gamdangte	Gamdangte	GAMDANGTE	PROP	1	24006018	24006018	0	auto
 kizap	kizap	zap	ki-zap	REFL-flutter	V	1	24006029	24006029	0	auto
 kizapzap	kizapzap	zap	ki-zap-zap	REFL-burn~REDUP	V	1	24006029	24006029	0	auto
@@ -20241,7 +20244,7 @@ tengpa	tengpa	teng	teng-pa	dwell-NMLZ.AG	N	1	40023021	40023021	0	auto
 nusiakha	nusiakha	nusia	nusia-kha	forsake-still	N	1	40023024	40023024	0	auto
 dawnkhop	dawnkhop	dawn	dawn-khop	top-together	N	1	40023024	40023024	0	auto
 thovai	thovai	tho	tho-vai	awake-chaff	N	1	40023024	40023024	0	auto
-nawmvalhkha	nawmvalhkha	wmvalh	na-wmvalh-kha	2SG.POSS-desire-still	N	1	40023024	40023024	0	auto
+nawmvalhkha	nawmvalhkha	wmvalh	na-wmvalh-kha	2SG.POSS-desire-still	PRON	1	40023024	40023024	0	auto
 mualsuangte	mualsuangte	mual	mual-suang-te	grave-stone-PL	N	1	40023029	40023029	0	auto
 Barakhiah	barakhiah	Barakhiah	Barakhiah'	BARAKHIAH.POSS	PROP	1	40023035	40023035	0	auto
 kilawnkeek	kilawnkeek	lawn	ki-lawn-keek	REFL-throw-reverse	V	1	40024002	40024002	0	auto
@@ -21823,7 +21826,7 @@ siatlawhkhak	siatlawhkhak	siat	siat-lawh-khak	spoil-spread-RES	N	1	48005015	4800
 kilangpang	kilangpang	lang	ki-lang-pang	REFL-beside	V	1	48005017	48005017	0	auto
 bumna	bumna	bum	bum-na	deceive-NMLZ	N	1	48005020	48005020	0	auto
 pawltuam	pawltuam	pawl	pawl-tuam	group-various	N	1	48005020	48005020	0	auto
-adangdangte	adangdangte	dang	a-dang-dang-te	3SG.POSS-other-other-PL	N	1	48005021	48005021	0	auto
+adangdangte	adangdangte	dang	a-dang-dang-te	3SG.POSS-other-other-PL	PRON	1	48005021	48005021	0	auto
 genkikin-ah	genkikin-ah	gen	gen-ki-kin-ah	say-REFL-again-LOC	FUNC	1	48005021	48005021	0	auto
 kiphin	kiphin	phin	ki-phin	REFL-provoke	V	1	48005026	48005026	0	auto
 kihaza	kihaza	haza	ki-haza	REFL-revel	V	1	48005026	48005026	0	auto

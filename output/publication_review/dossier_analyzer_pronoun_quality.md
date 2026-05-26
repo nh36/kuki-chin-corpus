@@ -171,12 +171,54 @@ Recommended follow-up:
 
 # 10. Decision before continuing retrofits
 
-The publication-review pronoun packet does **not** need to be rolled back. Its hardened candidate layer is doing what it should do: it preserves `ko/kote` as exclusive on philological grounds and keeps `ei/eite` unresolved.
+The publication-review pronoun packet does **not** need to be rolled back. Its hardened candidate layer was already doing the right thing: it preserved `ko/kote` as exclusive on philological grounds and kept `ei/eite` unresolved.
 
-But the analyzer/export layer should not be treated as trustworthy enough to carry the current `ko` behavior into another analyzer-backed retrofit. The issue looks **systematic**, not isolated to Genesis 24:55, and it is best described as:
+The diagnosis above also identified the core source of the problem correctly. The issue was **systematic**, not isolated to Genesis 24:55, and it was best described as:
 
 - primarily an **analyzer inventory / lexical-priority problem** for standalone `ko`,
 - compounded by **missing ambiguity handling**,
-- and only secondarily an **export classification** problem.
+- and secondarily an **export classification** problem when pronominal glosses were still allowed to fall through to lexical POS routing.
 
-The recommended next step is therefore a **small analyzer-quality follow-up on `ko` before returning to stem alternation**. If that fix proves unexpectedly risky, the alternative is not to pretend the export is fine; it is to keep the current publication-layer caveat explicit and defer analyzer-backed stem work until the `ko` issue is either fixed or formally fenced off with regression coverage.
+# 11. Follow-up fix
+
+The sections above document the pre-fix diagnosis. A narrow upstream fix has now been applied and the downstream export regenerated.
+
+## 11.1 Upstream analyzer change
+
+The fix landed in `scripts/analyze_morphemes.py` and did four things:
+
+1. Added `ko` to `AMBIGUOUS_MORPHEMES` as a contrast between lexical `long` and pronominal `1PL.EXCL.PRO`.
+2. Added `ko` to the `PRONOUNS` inventory so a pronominal `ko` gloss has an explicit home parallel to `kote`.
+3. Extended sentence-level context disambiguation so `ko` is promoted to `1PL.EXCL.PRO` in the attested discourse-clear frames audited in this dossier: `ko tawh`, `ko tungah`, `ko kiangah`, `ko a' hi`, and `ko a dingin`.
+4. Corrected `get_word_class()` so a pronominal gloss is classified as `PRO` before lexical property-word fallback. This matters for `ko`, and it also corrects the long-standing `kei` pronoun-vs-`FUNC` POS mismatch in the accepted pronoun row.
+
+This is justified by philological evidence first. The fix does **not** simply force Henderson's concord table onto the export. It teaches the analyzer to recognize the pronominal reading only in the discourse environments already shown by manually checked Tedim examples to be exclusive first-person plural contexts.
+
+## 11.2 Updated audited contexts
+
+After regenerating `data/ctd_analysis/tokens.tsv`, the audited `ko` contexts now export as follows:
+
+| Reference | Tedim span | Updated export gloss / POS | Export agrees now? |
+| --- | --- | --- | --- |
+| Genesis 20:9 | `ko tungah` | `1PL.EXCL.PRO` / `PRON` | yes |
+| Genesis 24:55 | `ko tawh` | `1PL.EXCL.PRO` / `PRON` | yes |
+| Genesis 26:20 | `ko a' hi` | `1PL.EXCL.PRO` / `PRON` | yes |
+| Genesis 34:14 | `ko a dingin` | `1PL.EXCL.PRO` / `PRON` | yes |
+| Exodus 20:19 | `ko tungah` | `1PL.EXCL.PRO` / `PRON` | yes |
+
+So the specific publication-review problem has been repaired upstream: the audited pronominal `ko` rows no longer export as lexical `long` / `ADJ`.
+
+## 11.3 Lexical `ko = long` remains available
+
+The fix is disambiguation, not erasure. Bare `analyze_word("ko")` still returns lexical `long`, and the lexical long reading remains represented in the analyzer's property-word and compound inventories. The change therefore preserves a genuine lexical `ko = long` analysis while blocking that lexical reading from automatically overriding the audited pronoun environments.
+
+## 11.4 Other pronoun behavior after the fix
+
+- `kote` remains stable and unchanged as a pronoun in the audited exclusive contexts.
+- `ei/eite` remain unresolved at the publication level. No new analyzer change was introduced to force a global clusivity decision there.
+- `kei` negator behavior remains unchanged in the negation row.
+- Free pronominal `kei` now exports more cleanly as `PRON` rather than being collapsed into the generic function-word POS bucket.
+
+## 11.5 Updated decision
+
+The `ko` analyzer issue has now been addressed upstream far enough for the publication-review workflow to trust the audited exclusive examples again. The next step can therefore return to the planned **stem alternation retrofit**, while still keeping `ei/eite` explicitly unresolved in later person-marking work.

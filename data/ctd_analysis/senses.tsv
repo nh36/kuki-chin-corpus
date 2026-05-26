@@ -250,7 +250,7 @@ khin.3	khin	3	V	breath	4	0	0
 khin.4	khin	4	V	wait	4	0	0			
 hun.1	hun	1	N	time	1322	1	0	hun	01001014|01004003|01004026	
 hun.2	hun	2	N	day	2	0	0			
-an.1	an	1	FUNC	3PL.POSS	949	1	1	an	01001030|01003019|01004012	
+an.1	an	1	FUNC	3PL.POSS	955	1	1	an	01001029|01001030|01003019	
 an.2	an	2	FUNC	3PL	212	0	1	an	01003017	
 an.3	an	3	PRON	rice	35	0	0	an	01008022	
 an.4	an	4	PRON	grain	35	0	0			
@@ -406,21 +406,22 @@ lak.4	lak	4	N	midst	27	0	0
 lak.5	lak	5	N	spoil	2	0	0			
 kote.1	kote	1	FUNC	1PL.PRO	682	1	1	Kote|kote	01019009|01023006|01026016	
 kote.2	kote	2	FUNC	1PL.PRO.POSS	206	0	1	Kote'|kote'	01023006|01023006|01023006	
-thum.1	thum	1	NUM	three	712	1	0	thum	01001013|01002014|01005032	
-thum.2	thum	2	NUM	entreat	160	0	0	thum	01019002|01019007|01023009	
+thum.1	thum	1	NUM	three	696	1	0	thum	01001013|01002014|01005032	
+thum.2	thum	2	NUM	entreat	176	0	0	thum	01019002|01019007|01023009	
 thum.3	thum	3	NUM	mourn	15	0	0			
 koih.1	koih	1	V	put	740	1	0	koih	01001016|01002008|01002015	
 koih.2	koih	2	FUNC	REFL	92	0	1			
 koih.3	koih	3	V	set	37	0	0	koih	01021029|01030040|01030040	
 koih.4	koih	4	V	place	11	0	0			
-thuak.1	thuak	1	V	suffer	859	1	0	thuak	01004013|01012017|01016011	
-thuak.2	thuak	2	FUNC	REFL	6	0	1			
-thuak.3	thuak	3	V	endure	3	0	0			
 dang.1	dang	1	N	other	694	1	0	dang	01003001|01005004|01005007	
 dang.2	dang	2	FUNC	3SG	135	0	1	a	01004019	
 dang.3	dang	3	FUNC	3SG.POSS	33	0	1			
 dang.4	dang	4	N	thirst	4	0	0			
-dang.5	dang	5	FUNC	REFL	1	0	1			
+dang.5	dang	5	FUNC	2SG.POSS	1	0	1			
+dang.6	dang	6	FUNC	REFL	1	0	1			
+thuak.1	thuak	1	V	suffer	859	1	0	thuak	01004013|01012017|01016011	
+thuak.2	thuak	2	FUNC	REFL	6	0	1			
+thuak.3	thuak	3	V	endure	3	0	0			
 Moses.1	Moses	1	PROP	?	866	1	0	Moses	02002010|02002011|02002014	
 sawl.1	sawl	1	V	send	807	1	0	sawl	01019013|01019015|01020002	
 sawl.2	sawl	2	FUNC	REFL	28	0	1	ki	01042016	
@@ -608,6 +609,12 @@ kip.4	kip	4	DET	confirm	6	0	0
 kip.5	kip	5	DET	diligent	5	0	0			
 kip.6	kip	6	DET	endure	1	0	0			
 kuamah.1	kuamah	1	N	nobody	664	1	0	kuamah	01006012|01023006|01024016	
+kei.1	kei	1	FUNC	1SG.PRO	447	1	1	kei	01004010|01014024|01019019	
+kei.2	kei	2	FUNC	NEG.EMPH.POSS	187	0	1	Kei'|kei'	01013008|01013008|01013009	
+kei.3	kei	3	PRON	wolf	7	0	0			
+kei.4	kei	4	PRON	owl	5	0	0			
+kei.5	kei	5	FUNC	1SG.EMPH	5	0	1			
+kei.6	kei	6	FUNC	1SG	2	0	1			
 sih.1	sih	1	V	die	330	1	0	sih	01011028|01020007|01021016	
 sih.2	sih	2	V	blood	311	0	0	sih	01009005|01027041|01042022	
 sih.3	sih	3	V	pass	6	0	0			
@@ -1147,6 +1154,11 @@ pu.3	pu	3	N	grandpa	1	0	0
 giah.1	giah	1	V	carry	244	1	0	giah	01032021|02013020|02014002	
 giah.2	giah	2	V	camp	16	0	0	giah	01024023|01024025|01042027	
 giah.3	giah	3	V	place	3	0	0			
+ko.1	ko	1	ADJ	long	207	1	0	Ko|ko|ko'	01029026|01042013|01044016	
+ko.2	ko	2	FUNC	1PL.EXCL.PRO	43	0	1	Ko|ko	01019005|01020009|01024055	
+ko.3	ko	3	FUNC	REFL	8	0	1			
+ko.4	ko	4	ADJ	cry	3	0	0			
+ko.5	ko	5	FUNC	1PL.EXCL	1	0	1			
 dam.1	dam	1	V	well	139	1	0	dam	01020017|01020017|02015026	
 dam.2	dam	2	V	good	74	0	0	dam	01027044|01029006|01043027	
 dam.3	dam	3	V	be.well	38	0	0	dam	02021019|05028027	
@@ -1170,10 +1182,6 @@ ten.1	ten	1	N	dwell	187	1	0	ten	01010030|01016003|01019029
 ten.2	ten	2	N	stay	62	0	0	ten	01019014|01020012|01027046	
 ten.3	ten	3	FUNC	REFL	9	0	1	ki	01034009	
 ten.4	ten	4	N	before	1	0	0			
-ko.1	ko	1	ADJ	long	245	1	0	Ko|ko	01019005|01020009|01024055	
-ko.2	ko	2	FUNC	REFL	8	0	1			
-ko.3	ko	3	ADJ	cry	3	0	0			
-ko.4	ko	4	FUNC	1PL.EXCL	1	0	1			
 cing.1	cing	1	N	throw	135	1	0	cing	01003024|01023009|01032010	
 cing.2	cing	2	N	faithful	42	0	0			
 cing.3	cing	3	N	road	26	0	0			
@@ -1643,6 +1651,12 @@ khawl.2	khawl	2	FUNC	REFL	3	0	1	ki	01008002
 khawl.3	khawl	3	V	dry	2	0	0			
 khawl.4	khawl	4	V	cease	1	0	0			
 Kanaan.1	Kanaan	1	PROP	?	154	1	0	Kanaan|Kanaan'	01009018|01009022|01009026	
+khai.1	khai	1	N	hang	72	1	0	khai	01026012|01040019|01040022	
+khai.2	khai	2	FUNC	REFL	48	0	1	ki	01041013|02027009|02027011	
+khai.3	khai	3	N	hold	13	0	0	khai	01041042|02028014|02028022	
+khai.4	khai	4	N	balance	10	0	0	khai	02038015	
+khai.5	khai	5	FUNC	3SG.POSS	9	0	1			
+khai.6	khai	6	N	lift	2	0	0			
 hawm.1	hawm	1	ADV	together	82	1	0	hawm	01030014|01037024|01041006	
 hawm.2	hawm	2	ADV	join	16	0	0	hawm	03014036	
 hawm.3	hawm	3	FUNC	REFL	16	0	1	ki	04026053	
@@ -1668,11 +1682,6 @@ khual.4	khual	4	FUNC	REFL	3	0	1
 Ammon.1	Ammon	1	PROP	?	146	1	0	Ammon	01019038|04021024|04021024	
 Filistia.1	Filistia	1	PROP	?	146	1	0	Filistia	01021032|01021034|01026001	
 dot.1	dot	1	V	ask	146	1	0	dot	01026007|01032017|01043007	
-khai.1	khai	1	N	hang	72	1	0	khai	01026012|01040019|01040022	
-khai.2	khai	2	FUNC	REFL	48	0	1	ki	01041013|02027009|02027011	
-khai.3	khai	3	N	hold	13	0	0	khai	01041042|02028014|02028022	
-khai.4	khai	4	N	balance	10	0	0	khai	02038015	
-khai.5	khai	5	N	lift	2	0	0			
 Manasseh.1	Manasseh	1	PROP	?	145	1	0	Manasseh|Manasseh'	01041051|01046020|01048001	
 ging.1	ging	1	V	sound	95	1	0	ging	01003008|02009023|02009024	
 ging.2	ging	2	FUNC	REFL	23	0	1	ki	02012039|04032017|09014043	
@@ -1800,6 +1809,14 @@ kal.7	kal	7	V	walk	2	0	0
 lawh.1	lawh	1	FUNC	PERF	95	1	1	lawh	01004026|01018006|01023016	
 lawh.2	lawh	2	V	spread	20	0	0	lawh	02016016|02016018|02016022	
 lawh.3	lawh	3	FUNC	REFL	9	0	1	ki	02009009|02009010	
+ban.1	ban	1	N	besides	85	1	0	ban	01010019|01010019|01010030	
+ban.2	ban	2	N	side	16	0	0	ban	02026028	
+ban.3	ban	3	N	spread	7	0	0	ban	03013050|03013054|03013055	
+ban.4	ban	4	N	coat	4	0	0	ban	01037003|01037023|01037032	
+ban.5	ban	5	N	bracelet	4	0	0	ban	02035022	
+ban.6	ban	6	N	reach	4	0	0			
+ban.7	ban	7	N	arm	3	0	0			
+ban.8	ban	8	FUNC	3SG.POSS	1	0	1			
 awng.1	awng	1	N	open	100	1	0	awng	01001002|01024023|03009024	
 awng.2	awng	2	N	call	6	0	0			
 awng.3	awng	3	N	young	3	0	0			
@@ -1815,13 +1832,6 @@ keu.4	keu	4	N	melt	3	0	0
 keu.5	keu	5	N	digI	1	0	0			
 keu.6	keu	6	N	back	1	0	0			
 keu.7	keu	7	N	scratch	1	0	0			
-ban.1	ban	1	N	besides	85	1	0	ban	01010019|01010019|01010030	
-ban.2	ban	2	N	side	16	0	0	ban	02026028	
-ban.3	ban	3	N	spread	7	0	0	ban	03013050|03013054|03013055	
-ban.4	ban	4	N	coat	4	0	0	ban	01037003|01037023|01037032	
-ban.5	ban	5	N	bracelet	4	0	0	ban	02035022	
-ban.6	ban	6	N	reach	4	0	0			
-ban.7	ban	7	N	arm	3	0	0			
 gawp.1	gawp	1	DET	all	113	1	0	gawp	01011004|01037033|02023024	
 gawp.2	gawp	2	DET	trample	5	0	0	gawp	16009010	
 gawp.3	gawp	3	DET	rigor	3	0	0	gawp	03025043|03025046|03025053	
@@ -3169,11 +3179,6 @@ kawi.5	kawi	5	FUNC	REFL	2	0	1	ki	21003005
 zop.1	zop	1	FUNC	REFL	26	1	1	ki	01019032|01019034|02028007	
 zop.2	zop	2	V	join	5	0	0	zop	05025007|07008019	
 Rebekah.1	Rebekah	1	PROP	?	31	1	0	Rebekah|Rebekah'	01022023|01024015|01024029	
-kei.1	kei	1	FUNC	NEG.EMPH.POSS	12	1	1	Kei'	01025033|01030016|01031031	
-kei.2	kei	2	PRON	wolf	7	0	0	kei	01049027|23011006	
-kei.3	kei	3	PRON	owl	5	0	0	kei	03011017|05014016|23034011	
-kei.4	kei	4	FUNC	1SG.EMPH	5	0	1	kei	19016006|19066016|23043001	
-kei.5	kei	5	FUNC	1SG	2	0	1			
 Ung.1	Ung	1	FUNC	PL.FUT	31	1	1	ung	01026027|01034014|01042010	
 nakpi.1	nakpi	1	N	night	31	1	0	Nakpi|nakpi	01027034|01030008|01035016	
 tuumul.1	tuumul	1	N	barley	31	1	0	tuumul	01031019|01038012|02028006	
@@ -5193,7 +5198,6 @@ dangtak.1	dangtak	1	N	weary	5	1	0	dangtak	18022007|19107009|23012003
 thungetna.1	thungetna	1	N	prayer	5	1	0	thungetna	18024012|19072020|27009018	
 khapi.1	khapi	1	N	moon	5	1	0	khapi	18025005|19072007|19089037	
 lungno.1	lungno	1	N	worm	5	1	0	lungno	18025006|19022006|23041014	
-Ko.1	Ko	1	PROP	long	5	1	0	Ko	18028014|24002031|24008008	
 ciim.1	ciim	1	N	mire	4	1	0	ciim	18030019|26032014|40006022	
 ciim.2	ciim	2	N	shut	1	0	0	ciim	20001005	
 mawhsakna.1	mawhsakna	1	N	err	5	1	0	mawhsakna	18031036|40027013|44023029	
@@ -5305,6 +5309,9 @@ Samlah.1	Samlah	1	PROP	?	4	1	0	Samlah	01036036|01036037|13001047
 Mehetabel.1	Mehetabel	1	PROP	?	4	1	0	Mehetabel|Mehetabel'	01036039|01036039|13001050	
 thugente.1	thugente	1	PRON	preach	4	1	0	thugente'	01037008|11020034|23044025	
 zong~zong.1	zong~zong	1	N	neither~REDUP	4	1	0	zong~zong	01037015|18033010|20016027	
+bom.1	bom	1	N	blossom	2	1	0	bom	01040010|23065008	
+bom.2	bom	2	FUNC	REFL	1	0	1	ki	23022024	
+bom.3	bom	3	FUNC	1SG.POSS	1	0	1	ka	24006016	
 “Lampi-Ah.1	“Lampi-Ah	1	PROP	?	4	1	0	Lampi	01045024|20026013|41009033	
 Er.1	Er	1	PROP	Er	4	1	0	Er	01046012|13002003|13004021	
 Hamul.1	Hamul	1	PROP	?	4	1	0	Hamul	01046012|04026021|04026021	
@@ -5662,8 +5669,6 @@ Manahath.1	Manahath	1	PROP	?	3	1	0	Manahath	01036023|13001040|13002054
 Ithran.1	Ithran	1	PROP	?	3	1	0	Ithran	01036026|13001041|13007037	
 Matred.1	Matred	1	PROP	?	3	1	0	Matred|Matred'	01036039|01036039|13001050	
 Dothan-Ah.1	Dothan-Ah	1	PROP	?	3	1	0	Dothan|dothan	01037017|01037017|12006013	
-bom.1	bom	1	N	blossom	2	1	0	bom	01040010|23065008	
-bom.2	bom	2	FUNC	REFL	1	0	1	ki	23022024	
 theem.1	theem	1	V	blast	2	1	0	theem	01041006|01041027	
 theem.2	theem	2	V	blasted	1	0	0	theem	01041023	
 Potifera.1	Potifera	1	PROP	?	3	1	0	Potifera'	01041045|01041050|01046020	

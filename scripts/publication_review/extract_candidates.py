@@ -497,7 +497,7 @@ def build_negation_specs() -> list[CandidateSpec]:
             confidence="high",
             why_selected="Raw `kei` searches are tempting because negative `kei` is central to the packet, so the candidate layer needs one explicit pronoun false friend.",
             why_excluded="In `kei sangin`, the analyzer marks `kei` as 1SG pronoun, not as a negator, so this row cannot support negation prose.",
-            notes="Problem type: analyzer-backed ambiguity handling. Export caveat: `kei` is correctly interpreted as `1SG.PRO`, but the POS field still reads `FUNC`; exact `kei` counts must therefore be checked by function as well as by POS.",
+            notes="Problem type: analyzer-backed ambiguity handling. Export caveat: `kei` is correctly interpreted as `1SG.PRO` and now exports with pronoun POS in this row, but exact `kei` counts still need function-level checking so pronominal and negative uses do not get conflated.",
             expected_normalized=("kei", "sangin"),
         ),
         excluded(
@@ -526,7 +526,7 @@ def build_pronouns_specs() -> list[CandidateSpec]:
             token_indices=(16,),
             confidence="high",
             why_selected="Analyzer-confirmed `kei` gives a manually checked free 1SG pronoun in ordinary argument position without relying on the negation packet.",
-            notes="Export caveat: the token is glossed `1SG.PRO` with function `1SG`, but the POS field still reads `FUNC`; accepted status rests on the verse context plus the analyzer-backed token window.",
+            notes="Analyzer fix side effect: the same POS-routing correction that repaired pronominal `ko` now also preserves this `kei` row as `PRON` rather than collapsing it into the generic function-word class.",
             expected_normalized=("kei",),
         ),
         accepted(
@@ -587,7 +587,7 @@ def build_pronouns_specs() -> list[CandidateSpec]:
             token_indices=(14, 15),
             confidence="high",
             why_selected="The token window is analyzer-confirmed, and the dossier already treats this addressed-dialogue context as strong exclusive evidence for the shorter `ko` series.",
-            notes="Export caveat: `ko` currently surfaces as gloss `long` with POS `ADJ`, but the `ko tawh` window and the speaker/addressee contrast still make this a strong exclusive row.",
+            notes="Analyzer fix: `ko` now exports as `1PL.EXCL.PRO` in this addressed-dialogue window, while lexical `ko = long` remains available outside the clear pronoun contexts audited in the dossier.",
             expected_normalized=("ko", "tawh"),
         ),
         needs_review(

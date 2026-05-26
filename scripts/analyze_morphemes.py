@@ -974,6 +974,16 @@ AMBIGUOUS_MORPHEMES = {
         ('NEG', 'negation'),         # Negative marker (default in verbal contexts)
         ('1SG.PRO', 'pronoun'),      # First person pronoun "I, me"
     ],
+
+    # ko: 'long' (property word) vs '1PL.EXCL.PRO' (pronoun)
+    # Philological control from the pronoun dossier shows clear exclusive uses in
+    # addressed dialogue when ko is followed by postpositions/relators such as
+    # tawh, tungah, and kiangah, or by pronominal frames like ko a hi / ko a dingin.
+    # Outside those contexts, keep the older lexical reading available.
+    'ko': [
+        ('long', 'property'),            # Lexical/property default
+        ('1PL.EXCL.PRO', 'pronoun'),     # Exclusive 1PL pronoun in clear discourse contexts
+    ],
     
     # hu: 'help' (verb) vs 'breath' (noun)
     # Dictionary: hu (n) = "breath"; hu (v) = "to block" (but Bible shows 'help')
@@ -5605,6 +5615,19 @@ def disambiguate_morpheme(morpheme: str, context: dict) -> str:
         # Default by frequency: numeral > entreat > mourn
         # For ambiguous cases, let sentence-level disambiguation handle it
         return 'three'
+
+    elif morpheme == 'ko':
+        next_word = context.get('next_word', '')
+        next2_word = context.get('next2_word', '')
+
+        # Clear pronominal environments from the audited discourse examples:
+        # ko tawh, ko tungah, ko kiangah, ko a hi, ko a dingin.
+        if next_word in ('tawh', 'tungah', 'kiangah'):
+            return '1PL.EXCL.PRO'
+        if next_word in ('a', "a'") and next2_word in ('hi', 'ding', 'dingin'):
+            return '1PL.EXCL.PRO'
+
+        return 'long'
     
     elif morpheme == 'tung':
         # 'on' when followed by -ah
@@ -5827,7 +5850,7 @@ def is_phrase_boundary(word: str, gloss: str) -> bool:
     Returns:
         True if this word ends a phrase (NP or VP)
     """
-    word_lower = word.lower().rstrip('.,;:!?"\'')
+    word_lower = clean_word(word).lower()
     
     # Check if word itself is a boundary marker
     if word_lower in PHRASE_BOUNDARY_WORDS:
@@ -5850,7 +5873,8 @@ def analyze_sentence(sentence: str) -> list:
     Analyze a sentence and return word-by-word analysis with phrase boundaries.
     
     Includes sentence-level disambiguation for homophonous words like 'thum'
-    (three/entreat/mourn) that require neighboring word context.
+    (three/entreat/mourn) and `ko` (long vs. 1PL.EXCL pronoun) that require
+    neighboring word context.
     
     Args:
         sentence: A string of space-separated words
@@ -5862,38 +5886,28 @@ def analyze_sentence(sentence: str) -> list:
     words = sentence.split()
     
     for i, word in enumerate(words):
-        # First try with original case
-        seg, gloss = analyze_word(word)
+        prev_word = words[i-1] if i > 0 else ''
+        prev2_word = words[i-2] if i > 1 else ''
+        next_word = words[i+1] if i < len(words)-1 else ''
+        next2_word = words[i+2] if i < len(words)-2 else ''
+
+        # First try with original case plus local context
+        seg, gloss = analyze_word_with_context(
+            word,
+            prev_word=prev_word,
+            next_word=next_word,
+            prev2_word=prev2_word,
+            next2_word=next2_word,
+        )
         
         # If analyzed as a proper noun (ALL CAPS gloss) but it's not in PROPER_NOUNS,
         # try lowercase to see if it parses as a common word
         # This handles cases like "Nungzuite" which should be "life-follow-PL" not "NUNGZUITE"
-        clean = word.lower().rstrip('.,;:!?"\'')
+        clean = clean_word(word).lower()
         if gloss == word.upper() and word.title() not in PROPER_NOUNS:
             lower_seg, lower_gloss = analyze_word(word.lower())
             if lower_gloss != word.lower().upper():  # If lowercase version parses differently
                 seg, gloss = lower_seg, lower_gloss
-        
-        # Sentence-level disambiguation for 'thum' homophone
-        if clean == 'thum' and gloss == 'three':
-            prev_word = words[i-1].lower().rstrip('.,;:!?"\'') if i > 0 else ''
-            prev2_word = words[i-2].lower().rstrip('.,;:!?"\'') if i > 1 else ''
-            next_word = words[i+1].lower().rstrip('.,;:!?"\'') if i < len(words)-1 else ''
-            
-            # kong/hong/nong thum = entreat (1SG/2SG object marker + verb)
-            if prev_word in ('kong', 'hong', 'nong'):
-                gloss = 'entreat'
-            # ka thum + verbal marker = I entreat
-            elif prev_word == 'ka' and next_word in ('hi', 'uh', 'ing', 'ding', 'theih'):
-                gloss = 'entreat'
-            # kapin [a] thum = weep-ERG [3SG] mourn (look 1-2 words back for kapin)
-            elif prev_word == 'kapin' or prev2_word == 'kapin':
-                gloss = 'mourn'
-            # dahin thum = wail-mourn
-            elif prev_word == 'dahin' or prev2_word == 'dahin':
-                gloss = 'mourn'
-            # a thum hi/uh in mourning context (3SG mourn) - when followed by hi/uh
-            # This is ambiguous without KJV - default to numeral
         
         # Sentence-level disambiguation for 'ngen' (pray vs net)
         # Dictionary: ngen = "net, fishing net" AND "pray, petition"
@@ -6065,6 +6079,18 @@ def get_word_class(word: str, gloss: str) -> str:
     if word_lower in QUANTIFIERS or word_lower in QUANTIFIERS_EXTENDED:
         return 'QUANT'
     
+    # Check pronouns before lexical property words or negation.
+    # This lets context-disambiguated glosses like ko -> 1PL.EXCL.PRO and
+    # kei -> 1SG.PRO classify as pronouns rather than falling back to ADJ/FUNC.
+    if (
+        (word_lower in PRONOUNS and gloss.startswith(('1SG', '2SG', '3SG', '1PL', '2PL', '3PL')))
+        or gloss.endswith('.PRO')
+        or '.PRO.' in gloss
+        or gloss.endswith('.POSS')
+        or '.POSS' in gloss
+    ):
+        return 'PRO'
+
     # Check property words (bare form only)
     if word_lower in PROPERTY_WORDS:
         return 'PROP'
@@ -6084,10 +6110,6 @@ def get_word_class(word: str, gloss: str) -> str:
     # Check agreement markers (standalone subject prefixes)
     if gloss in ('1SG', '2SG', '3SG', '1PL', '2PL', '3PL', '1PL.INCL', '1PL.EXCL'):
         return 'AGR'  # Agreement marker (proclitic to verb)
-    
-    # Check pronouns
-    if word_lower in PRONOUNS or gloss.endswith('.PRO') or gloss.endswith('.POSS'):
-        return 'PRO'
     
     # Check case markers in gloss
     case_endings = ('-ERG', '-LOC', '-COM', '-ABL', '-ALL', '-GEN', '-DAT', '-INS')
@@ -6255,6 +6277,7 @@ PRONOUNS = {
     'kei': '1SG.PRO',            # I
     'nang': '2SG.PRO',           # you (sg)
     'amah': '3SG.PRO',           # he/she/it
+    'ko': '1PL.EXCL.PRO',        # we (exclusive, short form; context-sensitive)
     'eite': '1PL.EXCL.PRO',      # we (exclusive)
     'eimah': '1PL.EXCL.PRO',     # we (exclusive, emphatic)
     'note': '2PL.PRO',           # you (pl)
@@ -10811,19 +10834,21 @@ def analyze_word(word: str) -> Tuple[str, str]:
 _analyze_word_internal = analyze_word
 
 
-def analyze_word_with_context(word: str, prev_word: str = '', next_word: str = '', 
-                              prev2_word: str = '') -> Tuple[str, str]:
+def analyze_word_with_context(word: str, prev_word: str = '', next_word: str = '',
+                              prev2_word: str = '', next2_word: str = '') -> Tuple[str, str]:
     """
     Analyze a word with sentence context for better disambiguation.
     
     This wraps analyze_word() and applies sentence-level disambiguation
-    for homophonous words like 'thum' (three/entreat/mourn).
+    for homophonous words like 'thum' (three/entreat/mourn) and `ko`
+    (long vs. 1PL.EXCL pronoun).
     
     Args:
         word: The word to analyze
         prev_word: Previous word in sentence (for left context)
         next_word: Next word in sentence (for right context)
         prev2_word: Word two positions back (for patterns like "kapin a thum")
+        next2_word: Word two positions ahead (for patterns like "ko a dingin")
         
     Returns:
         Tuple of (segmented_form, gloss)
@@ -10831,10 +10856,11 @@ def analyze_word_with_context(word: str, prev_word: str = '', next_word: str = '
     seg, gloss = analyze_word(word)
     
     # Apply sentence-level disambiguation
-    clean = word.lower().rstrip('.,;:!?"\'')
-    prev_clean = prev_word.lower().rstrip('.,;:!?"\'') if prev_word else ''
-    prev2_clean = prev2_word.lower().rstrip('.,;:!?"\'') if prev2_word else ''
-    next_clean = next_word.lower().rstrip('.,;:!?"\'') if next_word else ''
+    clean = clean_word(word).lower()
+    prev_clean = clean_word(prev_word).lower() if prev_word else ''
+    prev2_clean = clean_word(prev2_word).lower() if prev2_word else ''
+    next_clean = clean_word(next_word).lower() if next_word else ''
+    next2_clean = clean_word(next2_word).lower() if next2_word else ''
     
     # thum: three (numeral) vs entreat (verb) vs mourn (verb)
     if clean == 'thum' and gloss == 'three':
@@ -10850,6 +10876,22 @@ def analyze_word_with_context(word: str, prev_word: str = '', next_word: str = '
         # dahin [a] thum = wail-ERG [3SG] mourn
         elif prev_clean == 'dahin' or prev2_clean == 'dahin':
             gloss = 'mourn'
+
+    # ko: long (lexical) vs 1PL.EXCL.PRO in clear discourse-pronominal contexts
+    if clean == 'ko' and gloss == 'long':
+        resolved = disambiguate_morpheme(
+            'ko',
+            {
+                'position': 'standalone',
+                'prev_word': prev_clean,
+                'prev2_word': prev2_clean,
+                'next_word': next_clean,
+                'next2_word': next2_clean,
+                'next_morpheme': next_clean,
+            },
+        )
+        if resolved:
+            gloss = resolved
     
     return (seg, gloss)
 

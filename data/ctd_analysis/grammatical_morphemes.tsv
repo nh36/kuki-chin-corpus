@@ -61,7 +61,7 @@ keima	1SG.self	function_word		1017	prefix		0	high_freq_contamination	auto	keima.
 nangma	2SG.self	function_word		1016	prefix		0	high_freq_contamination	auto	nangma.2SG.self.function_word		1.00	lexical_contaminated	high
 inla	and.then	function_word		986	prefix		0	moderate_contamination	auto	inla.and.then.function_word		1.00	lexical_contaminated	medium
 ta	PFV	tam_suffix		979	prefix|stem|suffix	01001020|01005004|01005007|01005010|01005013	1	moderate_contamination	auto	ta.PFV.tam_suffix	suffix	0.67	lexical_contaminated	medium
-thum	three	function_word		968	prefix|stem|suffix	10023013|10023018|10023018|10023019|10023023	0	moderate_contamination	auto	thum.three.function_word	stem	0.67	lexical_contaminated	medium
+thum	three	function_word		952	prefix|stem|suffix	10023013|10023018|10023018|10023019|10023023	0	moderate_contamination	auto	thum.three.function_word	stem	0.67	lexical_contaminated	medium
 keimah	1SG.PRO	function_word		936	prefix		0	moderate_contamination	auto	keimah.1SG.PRO.function_word		1.00	lexical_contaminated	medium
 khia	out	directional_verb		861	prefix|stem|suffix		0	moderate_contamination	auto	khia.out.directional_verb		1.00	lexical_contaminated	medium
 bek	only	particle		805	prefix|stem|suffix		0	moderate_contamination	auto	bek.only.particle		1.00	lexical_contaminated	medium
@@ -120,7 +120,7 @@ leuleu	again	function_word		193	prefix		0	moderate_contamination	auto	leuleu.aga
 kei	NEG.EMPH.POSS	function_word		187	prefix		0	moderate_contamination	auto	kei.NEG.EMPH.POSS.function_word		1.00	lexical_contaminated	medium
 bangci	how	function_word		180	prefix		0	moderate_contamination	auto	bangci.how.function_word		1.00	lexical_contaminated	medium
 eite	1PL.PRO.POSS	function_word		176	prefix		0	moderate_contamination	auto	eite.1PL.PRO.POSS.function_word		1.00	lexical_contaminated	medium
-thum	entreat	function_word		160	prefix		0	moderate_contamination	auto	thum.entreat.function_word		1.00	lexical_contaminated	medium
+thum	entreat	function_word		176	prefix		0	moderate_contamination	auto	thum.entreat.function_word		1.00	lexical_contaminated	medium
 tu	that	function_word		157	prefix		0	moderate_contamination	auto	tu.that.function_word		1.00	lexical_contaminated	medium
 veve	still	function_word		137	prefix		0	moderate_contamination	auto	veve.still.function_word		1.00	lexical_contaminated	medium
 tung	arrive	directional_verb		136	prefix|stem|suffix		1	moderate_contamination	auto	tung.arrive.directional_verb		1.00	lexical_contaminated	medium

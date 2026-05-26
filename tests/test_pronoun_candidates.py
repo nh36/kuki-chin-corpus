@@ -53,6 +53,8 @@ def test_pronoun_candidate_file_keeps_core_pronouns_and_exclusive_ko_kote():
         assert required in accepted
 
     assert by_construction["ko-exclusive"]["candidate_status"] == "accepted"
+    assert "long" not in by_construction["ko-exclusive"]["gloss_span"]
+    assert "ADJ" not in by_construction["ko-exclusive"]["pos_span"]
 
 
 def test_pronoun_candidate_file_keeps_ei_series_unresolved_and_negative_kei_out():

@@ -36,9 +36,9 @@ The packet should now be read in the order `candidate file -> dossier -> grammar
 
 # Analyzer/export caveats in the candidate layer
 
-The pronoun candidate file uses analyzer-export spans, but some of the exported labels remain imperfect. The clearest accepted `kei` row is glossed `1SG.PRO` and functioned as first person, yet its POS field still reads `FUNC` rather than `PRON`. The accepted `ko` row is also discourse-clear while still exporting with the lexical gloss `long` and POS `ADJ`. In the shorter `ei` series, some rows already export as `1PL.EXCL` or `1PL.EXCL.POSS`, even though the clusivity dossier still treats `ei/eite` as mixed and unresolved at the publication level.
+The pronoun candidate file uses analyzer-export spans, and the most urgent `ko` mismatch has now been corrected upstream. In the accepted `ko` row, the analyzer now exports `ko` as `1PL.EXCL.PRO` with pronoun POS in the discourse-clear exclusive window. The accepted `kei` row also now surfaces as `PRON` rather than collapsing into the generic function-word class. In the shorter `ei` series, however, some rows still export as `1PL.EXCL` or `1PL.EXCL.POSS`, even though the clusivity dossier still treats `ei/eite` as mixed and unresolved at the publication level.
 
-These caveats do not invalidate the candidate layer, but they do mean the layer is analyzer-backed rather than analyzer-infallible. Accepted status depends on the combination of confirmed token windows, manual verse review, and the constructional interpretation already established in the dossier and packet prose.
+These caveats do not invalidate the candidate layer, but they do mean the layer is analyzer-backed rather than analyzer-infallible. Accepted status still depends on the combination of confirmed token windows, manual verse review, and the constructional interpretation already established in the dossier and packet prose, especially for the unresolved `ei/eite` series.
 
 # Decision for next slice
 
