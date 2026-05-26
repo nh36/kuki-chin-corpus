@@ -205,15 +205,15 @@ The existing packet should therefore be read through `candidate file -> dossier 
 
 # Corpus-wide analyzer audit
 
-The new candidate TSV is still only a curated publication-review sample. Stem alternation needs more than that, because the underlying grammatical question is distributional: which Form I and Form II shapes are actually attested across the corpus, how often they occur, and which local environments favor them. A broader analyzer-based audit now exists in:
+The new candidate TSV is still only a curated publication-review sample. Stem alternation needs more than that, because the underlying grammatical question is distributional: which Form I and Form II shapes are actually attested across the corpus, how often they occur, and which local environments favor them. A broader analyzer-based audit now exists, but its outputs are split by purpose:
 
-- `output/publication_review/stem_alternation_corpus_audit.tsv`
-- `output/publication_review/stem_alternation_environment_summary.tsv`
-- `output/publication_review/stem_alternation_pair_summary.tsv`
+- `output/publication_review/stem_alternation_corpus_audit.tsv` is the full row-level audit. It is generated locally from the analyzer export and intentionally not tracked in git.
+- `output/publication_review/stem_alternation_environment_summary.tsv` and `output/publication_review/stem_alternation_pair_summary.tsv` are tracked compact summaries.
+- `output/publication_review/stem_alternation_example_matrix.tsv` is the tracked representative example matrix, with one example per pair × stem side × inferred environment.
 
-These files use the analyzer inventory plus the local token export to map attested stem-family tokens across the Tedim Bible. They are designed to answer where the analyzer sees Form I or Form II material, where the evidence is concentrated in nominalized, temporal, or clause-linking environments, and where apparent pairs are actually derivational, lexicalized, or otherwise noisy. The environment classifier is deliberately conservative. It is useful for corpus triage and packet revision, but it should not be mistaken for a full syntactic parser.
+Together these files use the analyzer inventory plus the local token export to map attested stem-family tokens across the Tedim Bible. They are designed to answer where the analyzer sees Form I or Form II material, where the evidence is concentrated in nominalized, temporal, or clause-linking environments, and where apparent pairs are actually derivational, lexicalized, or otherwise noisy. The environment classifier is deliberately conservative. It is useful for corpus triage and packet revision, but it should not be mistaken for a full syntactic parser.
 
-The next interpretive step should therefore start from these audit tables rather than from curated examples alone. The packet now has both a print-evidence candidate layer and a broader corpus-distribution layer; any later revision of the grammar or dictionary slice should use both.
+The next interpretive step should therefore start from the tracked summary tables and representative example matrix rather than from curated examples alone. The packet now has both a print-evidence candidate layer and a broader corpus-distribution layer; any later revision of the grammar or dictionary slice should use both.
 
 # Recommendation
 

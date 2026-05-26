@@ -50,7 +50,7 @@ The analyzer-quality dossier adds one methodological clarification that remains 
 
 ### Stem alternation
 
-Stem alternation is a strong packet, and it now has both an analyzer-aware candidate file and a broader corpus audit. The candidate TSV preserves the packet's strongest core pairs and explicitly blocks report/questionnaire traps such as `piangsak`, `ngaihsutna`, and solitary `honkhiat`. The new audit layer now also maps attested stem-family tokens across conservative environment buckets in `output/publication_review/stem_alternation_corpus_audit.tsv`, `output/publication_review/stem_alternation_environment_summary.tsv`, and `output/publication_review/stem_alternation_pair_summary.tsv`, which is the right next step for a distributional topic like Form I / Form II alternation. The review notes are still right that the report layer is too uneven to auto-generate the chapter safely, so the next task is interpretive review of this broader audit rather than a rush to declare the packet hardened.
+Stem alternation is a strong packet, and it now has both an analyzer-aware candidate file and a broader corpus audit. The candidate TSV preserves the packet's strongest core pairs and explicitly blocks report/questionnaire traps such as `piangsak`, `ngaihsutna`, and solitary `honkhiat`. The new audit layer now keeps the full row-level audit local and generated-only in `output/publication_review/stem_alternation_corpus_audit.tsv`, while tracking the reviewable compact outputs in `output/publication_review/stem_alternation_environment_summary.tsv`, `output/publication_review/stem_alternation_pair_summary.tsv`, and `output/publication_review/stem_alternation_example_matrix.tsv`. That is the right next step for a distributional topic like Form I / Form II alternation. The review notes are still right that the report layer is too uneven to auto-generate the chapter safely, so the next task is interpretive review of this broader audit rather than a rush to declare the packet hardened.
 
 ### Case marking
 
@@ -58,7 +58,7 @@ Case marking remains the editorial model, but it predates the candidate-first pr
 
 ## Recommended retrofit order
 
-With negation now retrofitted, pronouns / clusivity now hardened at the publication layer and repaired upstream for `ko`, and stem alternation now given both an explicit candidate TSV and a broader corpus audit, the remaining practical order should be:
+With negation now retrofitted, pronouns / clusivity now hardened at the publication layer and repaired upstream for `ko`, and stem alternation now given both an explicit candidate TSV and a broader corpus audit with tracked summaries and an example matrix, the remaining practical order should be:
 
 1. **Stem alternation interpretation next** — review the new corpus audit and use it to revise or confirm the packet's claims about Form I / Form II distribution before calling the topic hardened.
 2. **Case marking after stem alternation** — worthwhile, but lower urgency unless a specific extraction problem becomes pressing.
@@ -66,4 +66,4 @@ With negation now retrofitted, pronouns / clusivity now hardened at the publicat
 
 ## Conclusion
 
-The retrofit audit now supports a more distribution-aware next step. Demonstratives remains the protocol pilot, negation is the first hardened retrofit, pronouns / clusivity is the second hardened retrofit with its `ko` analyzer issue addressed upstream, and stem alternation now has both a curated candidate TSV and a broader corpus audit. The immediate next step is to interpret that audit against the current packet before moving on to case marking.
+The retrofit audit now supports a more distribution-aware next step. Demonstratives remains the protocol pilot, negation is the first hardened retrofit, pronouns / clusivity is the second hardened retrofit with its `ko` analyzer issue addressed upstream, and stem alternation now has both a curated candidate TSV and a broader corpus audit whose large row-level file stays local while tracked summaries and a tracked example matrix support review. The immediate next step is to interpret that audit against the current packet before moving on to case marking.

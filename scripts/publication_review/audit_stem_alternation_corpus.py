@@ -6,10 +6,13 @@ Outputs:
     - output/publication_review/stem_alternation_corpus_audit.tsv
     - output/publication_review/stem_alternation_environment_summary.tsv
     - output/publication_review/stem_alternation_pair_summary.tsv
+    - output/publication_review/stem_alternation_example_matrix.tsv
 
 The audit uses the analyzer's stem-pair inventory plus the local Tedim token
 export. `data/ctd_analysis/tokens.tsv` remains generated local build output and
-is intentionally not tracked in git.
+is intentionally not tracked in git. The row-level audit is likewise generated
+locally, while the smaller summaries and representative example matrix are
+intended for git tracking.
 """
 
 from __future__ import annotations
@@ -28,10 +31,12 @@ OUTPUT_DIR = ROOT / "output" / "publication_review"
 CORPUS_AUDIT_PATH = OUTPUT_DIR / "stem_alternation_corpus_audit.tsv"
 ENV_SUMMARY_PATH = OUTPUT_DIR / "stem_alternation_environment_summary.tsv"
 PAIR_SUMMARY_PATH = OUTPUT_DIR / "stem_alternation_pair_summary.tsv"
+EXAMPLE_MATRIX_PATH = OUTPUT_DIR / "stem_alternation_example_matrix.tsv"
 CANDIDATES_PATH = OUTPUT_DIR / "candidates_stem_alternation.tsv"
 GRAMMAR_PACKET_PATH = OUTPUT_DIR / "grammar_stem_alternation_print_slice.md"
 DICTIONARY_PACKET_PATH = OUTPUT_DIR / "dictionary_stem_alternation_print_slice.md"
 REVIEW_NOTES_PATH = OUTPUT_DIR / "review_notes_stem_alternation.md"
+DOSSIER_PATH = OUTPUT_DIR / "dossier_stem_alternation.md"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from analyze_morphemes import VERB_STEM_PAIRS  # noqa: E402
@@ -94,6 +99,32 @@ PAIR_SUMMARY_COLUMNS = [
     "candidate_statuses",
     "publication_status",
     "recommendation",
+    "notes",
+]
+
+EXAMPLE_MATRIX_COLUMNS = [
+    "pair_id",
+    "form_i",
+    "form_ii",
+    "gloss",
+    "alternation_type",
+    "stem_side",
+    "attested_form",
+    "environment",
+    "environment_count_for_side",
+    "verse_id",
+    "reference",
+    "token_index",
+    "surface_form",
+    "normalized_form",
+    "segmentation",
+    "gloss_span",
+    "lemma",
+    "pos",
+    "local_context",
+    "kjv",
+    "print_status",
+    "selection_reason",
     "notes",
 ]
 
@@ -185,11 +216,12 @@ def alternation_type(form_i: str, form_ii: str) -> str:
     return "other / irregular / uncertain"
 
 
-def load_candidate_statuses() -> tuple[dict[str, set[str]], dict[str, bool]]:
+def load_candidate_statuses() -> tuple[dict[str, set[str]], dict[str, bool], dict[str, set[str]]]:
     statuses: dict[str, set[str]] = defaultdict(set)
     present: dict[str, bool] = defaultdict(bool)
+    references: dict[str, set[str]] = defaultdict(set)
     if not CANDIDATES_PATH.exists():
-        return statuses, present
+        return statuses, present, references
 
     with CANDIDATES_PATH.open(encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
@@ -201,7 +233,8 @@ def load_candidate_statuses() -> tuple[dict[str, set[str]], dict[str, bool]]:
             if pair_id in {"mu-muh", "ne-nek", "nei-neih", "pia-piak", "za-zak", "nusia-nusiat", "thei-theih", "piang-pian", "ngai-ngaih", "honkhia-honkhiat"}:
                 present[pair_id] = True
                 statuses[pair_id].add(row["candidate_status"])
-    return statuses, present
+                references[pair_id].add(row["reference"])
+    return statuses, present, references
 
 
 def load_print_packet_text() -> str:
@@ -211,8 +244,15 @@ def load_print_packet_text() -> str:
     return "\n".join(text_parts)
 
 
+def load_review_bundle_text() -> str:
+    text_parts = []
+    for path in (DOSSIER_PATH, GRAMMAR_PACKET_PATH, DICTIONARY_PACKET_PATH, REVIEW_NOTES_PATH):
+        text_parts.append(path.read_text(encoding="utf-8") if path.exists() else "")
+    return "\n".join(text_parts)
+
+
 def build_pair_inventory() -> dict[str, PairMeta]:
-    candidate_statuses, in_candidate = load_candidate_statuses()
+    candidate_statuses, in_candidate, _ = load_candidate_statuses()
     print_packet_text = load_print_packet_text()
 
     pairs: dict[str, PairMeta] = {}
@@ -531,16 +571,89 @@ def join_top(counter: Counter, limit: int = 3) -> str:
     return "; ".join(f"{name}:{count}" for name, count in counter.most_common(limit))
 
 
+def analysis_clarity_score(row: dict[str, str]) -> int:
+    score = 0
+    if row["segmentation"].strip() and row["segmentation"] not in {"?", "-"}:
+        score += 1
+    if row["lemma"].strip() and row["lemma"] not in {"?", "-"}:
+        score += 1
+    if row["pos"].strip() and row["pos"] not in {"UNK", "X", "?"}:
+        score += 1
+    if "inferred from export metadata" not in row["notes"] and "token belongs to the pair family" not in row["notes"]:
+        score += 1
+    return score
+
+
+def selection_priority(
+    row: dict[str, str],
+    candidate_references: set[str],
+    review_bundle_text: str,
+    order_index: int,
+) -> tuple[int, int, int, int, int]:
+    return (
+        1 if row["environment"] != "unknown_or_needs_review" else 0,
+        analysis_clarity_score(row),
+        2 if row["reference"] in candidate_references else 1 if row["reference"] in review_bundle_text else 0,
+        -len(row["local_context"].split()),
+        -order_index,
+    )
+
+
+def build_selection_reason(
+    row: dict[str, str],
+    candidate_references: set[str],
+    review_bundle_text: str,
+) -> str:
+    reasons = []
+    if row["reference"] in candidate_references:
+        reasons.append("preferred because this verse already appears in the curated candidate TSV")
+    elif row["reference"] in review_bundle_text:
+        reasons.append("preferred because this verse is already cited in the dossier or packet")
+
+    if row["environment"] == "unknown_or_needs_review":
+        reasons.append("retained as the clearest available review-bucket example for this pair and stem side")
+    else:
+        reasons.append("kept as the clearest analyzed example for this pair, stem side, and environment")
+
+    if analysis_clarity_score(row) >= 3:
+        reasons.append("analyzer segmentation and POS are explicit enough for write-up use")
+
+    return "; ".join(reasons)
+
+
+def merge_notes(*parts: str) -> str:
+    merged = []
+    seen = set()
+    for part in parts:
+        text = part.strip()
+        if not text or text in seen:
+            continue
+        seen.add(text)
+        merged.append(text)
+    return " ".join(merged)
+
+
+def display_path(path: Path) -> Path:
+    try:
+        return path.relative_to(ROOT)
+    except ValueError:
+        return path
+
+
 def write_corpus_audit() -> None:
     require_tokens_export()
 
     pairs = build_pair_inventory()
     verses = load_verse_metadata()
+    _, _, candidate_references = load_candidate_statuses()
+    review_bundle_text = load_review_bundle_text()
     form_ii_counts = count_form_ii_hits(pairs)
     form_i_index, form_ii_index, canonical_by_form_i = build_indexes(pairs, form_ii_counts)
 
     pair_counts: dict[str, Counter] = defaultdict(Counter)
     pair_form_env_counts: dict[str, dict[str, Counter]] = defaultdict(lambda: {"I": Counter(), "II": Counter(), "": Counter()})
+    example_counts: Counter = Counter()
+    best_examples: dict[tuple[str, str, str], dict[str, object]] = {}
     env_summary: dict[tuple[str, str], dict[str, object]] = defaultdict(
         lambda: {
             "form_i_count": 0,
@@ -552,6 +665,7 @@ def write_corpus_audit() -> None:
     )
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    row_order = 0
     with CORPUS_AUDIT_PATH.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=CORPUS_COLUMNS, delimiter="\t")
         writer.writeheader()
@@ -571,36 +685,36 @@ def write_corpus_audit() -> None:
                 environment, env_confidence, env_note = infer_environment(verse_tokens, index, pair, row)
                 notes = " ".join(note for note in (pair.notes, pair_note, attested_note, env_note) if note)
                 print_status = row_print_status(pair, environment)
+                context = local_context(verse_tokens, index)
+                audit_row = {
+                    "pair_id": pair.pair_id,
+                    "form_i": pair.form_i,
+                    "form_ii": pair.form_ii,
+                    "attested_form": attested_form,
+                    "stem_form": row["stem_form"],
+                    "verse_id": verse_id,
+                    "reference": verse_meta["reference"],
+                    "token_index": row["token_index"],
+                    "surface_form": row["surface_form"],
+                    "normalized_form": row["normalized_form"],
+                    "segmentation": row["segmentation"],
+                    "gloss": row["gloss"],
+                    "lemma": row["lemma"],
+                    "pos": row["pos"],
+                    "stem_alternation": stem_alt,
+                    "prefix_chain": row["prefix_chain"],
+                    "suffix_chain": row["suffix_chain"],
+                    "usage_type": row["usage_type"],
+                    "function_type": row["function_type"],
+                    "local_context": context,
+                    "kjv": verse_meta["kjv"],
+                    "inferred_environment": environment,
+                    "environment_confidence": env_confidence,
+                    "print_status": print_status,
+                    "notes": notes,
+                }
 
-                writer.writerow(
-                    {
-                        "pair_id": pair.pair_id,
-                        "form_i": pair.form_i,
-                        "form_ii": pair.form_ii,
-                        "attested_form": attested_form,
-                        "stem_form": row["stem_form"],
-                        "verse_id": verse_id,
-                        "reference": verse_meta["reference"],
-                        "token_index": row["token_index"],
-                        "surface_form": row["surface_form"],
-                        "normalized_form": row["normalized_form"],
-                        "segmentation": row["segmentation"],
-                        "gloss": row["gloss"],
-                        "lemma": row["lemma"],
-                        "pos": row["pos"],
-                        "stem_alternation": stem_alt,
-                        "prefix_chain": row["prefix_chain"],
-                        "suffix_chain": row["suffix_chain"],
-                        "usage_type": row["usage_type"],
-                        "function_type": row["function_type"],
-                        "local_context": local_context(verse_tokens, index),
-                        "kjv": verse_meta["kjv"],
-                        "inferred_environment": environment,
-                        "environment_confidence": env_confidence,
-                        "print_status": print_status,
-                        "notes": notes,
-                    }
-                )
+                writer.writerow(audit_row)
 
                 pair_counts[pair.pair_id]["total"] += 1
                 if stem_alt == "I":
@@ -619,6 +733,48 @@ def write_corpus_audit() -> None:
                 if verse_meta["reference"] not in env_bucket["references"] and len(env_bucket["references"]) < 5:
                     env_bucket["references"].append(verse_meta["reference"])
                 env_bucket["notes"][env_note] += 1
+
+                if stem_alt in {"I", "II"}:
+                    key = (pair.pair_id, stem_alt, environment)
+                    example_counts[key] += 1
+                    example_row = {
+                        "pair_id": pair.pair_id,
+                        "form_i": pair.form_i,
+                        "form_ii": pair.form_ii,
+                        "gloss": pair.gloss,
+                        "alternation_type": pair.alternation_type,
+                        "stem_side": "form_i" if stem_alt == "I" else "form_ii",
+                        "attested_form": attested_form,
+                        "environment": environment,
+                        "verse_id": verse_id,
+                        "reference": verse_meta["reference"],
+                        "token_index": row["token_index"],
+                        "surface_form": row["surface_form"],
+                        "normalized_form": row["normalized_form"],
+                        "segmentation": row["segmentation"],
+                        "gloss_span": row["gloss"],
+                        "lemma": row["lemma"],
+                        "pos": row["pos"],
+                        "local_context": context,
+                        "kjv": verse_meta["kjv"],
+                        "print_status": print_status,
+                        "notes": merge_notes(
+                            notes,
+                            "Review bucket only; not a clean syntactic construction." if environment == "unknown_or_needs_review" else "",
+                            "Candidate for print." if print_status in {"print_ready", "print_usable_with_caveat"} else "",
+                            "Needs review before print use." if print_status in {"dossier_only", "needs_analyzer_review"} else "",
+                        ),
+                    }
+                    priority = selection_priority(
+                        example_row,
+                        candidate_references.get(pair.pair_id, set()),
+                        review_bundle_text,
+                        row_order,
+                    )
+                    current = best_examples.get(key)
+                    if current is None or priority > current["priority"]:
+                        best_examples[key] = {"priority": priority, "row": example_row}
+                row_order += 1
 
     with ENV_SUMMARY_PATH.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=ENV_SUMMARY_COLUMNS, delimiter="\t")
@@ -680,9 +836,24 @@ def write_corpus_audit() -> None:
                 }
             )
 
-    print(f"Wrote {CORPUS_AUDIT_PATH.relative_to(ROOT)}")
-    print(f"Wrote {ENV_SUMMARY_PATH.relative_to(ROOT)}")
-    print(f"Wrote {PAIR_SUMMARY_PATH.relative_to(ROOT)}")
+    with EXAMPLE_MATRIX_PATH.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=EXAMPLE_MATRIX_COLUMNS, delimiter="\t")
+        writer.writeheader()
+        for key in sorted(best_examples, key=lambda item: (item[0], item[1] != "I", item[2])):
+            pair_id, stem_alt, environment = key
+            example = dict(best_examples[key]["row"])
+            example["environment_count_for_side"] = str(example_counts[key])
+            example["selection_reason"] = build_selection_reason(
+                example,
+                candidate_references.get(pair_id, set()),
+                review_bundle_text,
+            )
+            writer.writerow(example)
+
+    print(f"Wrote {display_path(CORPUS_AUDIT_PATH)}")
+    print(f"Wrote {display_path(ENV_SUMMARY_PATH)}")
+    print(f"Wrote {display_path(PAIR_SUMMARY_PATH)}")
+    print(f"Wrote {display_path(EXAMPLE_MATRIX_PATH)}")
 
 
 def main() -> None:

@@ -28,3 +28,5 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
     assert "stem_alternation_corpus_audit.tsv" in text
+    assert "stem_alternation_example_matrix.tsv" in text
+    assert "generated-only" in text or "generated-only" in text.lower() or "generated" in text

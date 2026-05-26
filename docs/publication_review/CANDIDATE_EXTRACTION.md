@@ -76,16 +76,22 @@ Candidate files fit into the publication-review workflow like this:
 
 The candidate file is the evidence layer. The dossier interprets that evidence. Any later print-facing slice should promote only manually reviewed examples from the candidate layer.
 
-Stem alternation now needs a second layer in addition to that curated candidate TSV. `output/publication_review/candidates_stem_alternation.tsv` is the print-evidence sample layer, but the broader distribution question is handled by corpus-audit outputs such as:
+Stem alternation now needs three linked output layers in addition to that curated candidate TSV:
 
-- `output/publication_review/stem_alternation_corpus_audit.tsv`
-- `output/publication_review/stem_alternation_environment_summary.tsv`
-- `output/publication_review/stem_alternation_pair_summary.tsv`
+1. **Full local row-level audit** — `output/publication_review/stem_alternation_corpus_audit.tsv`
+   - generated from the local analyzer export;
+   - intentionally untracked in git because it is too large for GitHub-friendly review;
+   - useful when doing broad corpus analysis or regenerating compact derivatives.
+2. **Tracked summary tables** — `output/publication_review/stem_alternation_environment_summary.tsv` and `output/publication_review/stem_alternation_pair_summary.tsv`
+   - compact tracked summaries of pair totals and environment distributions.
+3. **Tracked representative example matrix** — `output/publication_review/stem_alternation_example_matrix.tsv`
+   - one representative example per verb pair × stem side × inferred environment;
+   - intended to support interpretive review and eventual write-up.
 
 In other words, stem alternation now has both:
 
 1. a curated candidate layer for print-safe or explicitly blocked packet evidence; and
-2. a broader corpus audit for mapping Form I / Form II distribution across environments.
+2. a broader corpus audit layer for mapping Form I / Form II distribution across environments, with tracked summaries and a tracked example matrix for GitHub review.
 
 ## What the current extractor does
 
