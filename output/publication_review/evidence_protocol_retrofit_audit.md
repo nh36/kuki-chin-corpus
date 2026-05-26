@@ -20,8 +20,8 @@ Under this standard, earlier publication-review packets are analytically usable,
 | Topic | Dossier | Grammar slice | Dictionary slice | Review notes | Candidate TSV | Related tests | Related generated-report correction | Known ambiguity risks | Current status | Recommended next action |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | case marking | no dossier located | yes | yes | yes | no | no packet-specific publication-review test located; general integration and export tests touch case markers | no explicit report-level correction located during this audit | homographic `-in`, conservative `-panin`, source vs relator-noun boundaries, raw orthographic overgeneration for `-ah`, `-a`, `-pan`, `-tawh` | editorial model, but predates candidate-first workflow | lower-priority retrofit; add a candidate file later unless a specific extraction problem becomes urgent |
-| pronouns | no separate pronoun dossier; clusivity handled in a separate dossier | yes | yes | yes | no | `tests/test_pronoun_clusivity_docs.py` | yes: `docs/grammar/reports/06-func-01-pronouns.md` now treats `ko/kote` as exclusive and keeps `ei/eite` under review | unresolved `ei/eite`, `ko/kote`, possessive vs agreement prefixes, `hong-/kong-` | usable packet with a partial report correction, but not yet candidate-backed | retrofit after negation; likely share work with the clusivity dossier rather than force a full pronoun rewrite |
-| pronoun clusivity | yes (`dossier_pronoun_clusivity.md`) | no | no | no separate review note | no | `tests/test_pronoun_clusivity_docs.py` | yes, via the partial correction in `docs/grammar/reports/06-func-01-pronouns.md` | mixed `ei/eite`, more stable `ko/kote`, dialogue-context sensitivity | dossier-only support layer that still feeds the pronoun packet | treat as part of the pronoun retrofit rather than as a stand-alone print packet |
+| pronouns | no separate pronoun dossier; clusivity handled in a separate dossier | yes | yes | yes | yes (`candidates_pronouns.tsv`) | `tests/test_pronoun_candidates.py`, `tests/test_pronoun_clusivity_docs.py`, and extractor reproducibility coverage | yes: `docs/grammar/reports/06-func-01-pronouns.md` now treats `ko/kote` as exclusive and keeps `ei/eite` under review | unresolved `ei/eite`, `ko/kote`, possessive vs agreement prefixes, `hong-/kong-` | candidate TSV added; packet now has an explicit analyzer-aware evidence layer without forcing a full clusivity resolution | review and harden the pronoun candidate layer before moving to stem alternation |
+| pronoun clusivity | yes (`dossier_pronoun_clusivity.md`) | no | no | no separate review note | yes, via `candidates_pronouns.tsv` | `tests/test_pronoun_candidates.py`, `tests/test_pronoun_clusivity_docs.py` | yes, via the partial correction in `docs/grammar/reports/06-func-01-pronouns.md` | mixed `ei/eite`, more stable `ko/kote`, dialogue-context sensitivity | support-layer dossier now paired with a shared pronoun candidate TSV | keep `ei/eite` unresolved in the candidate layer until a later hardening pass genuinely settles more of the evidence |
 | stem alternation | yes | yes | yes | yes | no | no packet-specific publication-review test located | no explicit report correction located; review notes instead describe noisy report/questionnaire layers | Form I / Form II distribution, noisy questionnaire output, lexical-family contamination (`ngai/ngaih`), caveated expansions such as `za ~ zak` and `nusia ~ nusiat` | strong packet, but still depends on manual filtering rather than explicit candidate rows | third retrofit candidate; add a candidate file for core pairs and explicitly excluded pairs |
 | negation | yes | yes | yes | yes | yes (`candidates_negation.tsv`) | `tests/test_negation_candidates.py` plus extractor reproducibility coverage | yes: `docs/grammar/reports/06-func-04-negation.md` was minimally corrected so Genesis 2:25 and `V lo uh` no longer mislead the packet | `kei` negator vs pronoun, `lo` vs `loh`, `V lo uh`, `kuamah`, `bangmah`, `thei lo / theih loh` | first retrofit candidate TSV added and hardened, with export caveats now documented in the audit trail | pronouns / clusivity can now become the next retrofit priority |
 | demonstratives/deixis | yes | yes | yes | yes | yes (`candidates_demonstratives.tsv`) | `tests/test_demonstratives_docs.py`, `tests/test_publication_evidence_protocol.py`, `tests/test_publication_candidate_extractor.py` | yes: `docs/grammar/reports/06-func-02-demonstratives.md` now carries explicit correction notes | `hi`, exact `hih ciangin`, `tua` / `hua`, raw-search false friends | current pilot for the protocol-backed workflow | no immediate retrofit needed beyond maintenance and future topic extension |
@@ -38,11 +38,11 @@ Negation was the highest-priority retrofit, and it now has an analyzer-aware can
 
 ### Pronouns
 
-The pronoun packet itself is usable, but it is only partly protocol-hardened. A separate clusivity dossier exists, and the generated pronoun report has already been partially corrected so that `ko/kote` stays exclusive while `ei/eite` remains under review. That means the packet should not be reopened broadly, but it does need a future candidate layer that can separate stable person-marking evidence from the still unresolved clusivity material.
+The pronoun packet itself is usable, and it now has an analyzer-aware candidate file. A separate clusivity dossier still carries the hardest interpretive work, and the generated pronoun report remains only partially corrected: `ko/kote` stays exclusive while `ei/eite` remains under review. The new candidate layer therefore does not reopen the whole packet; it makes the stable rows, unresolved clusivity rows, and false friends explicit.
 
 ### Pronoun clusivity
 
-Pronoun clusivity should be treated as a support-layer retrofit rather than as its own print packet. The dossier remains valuable because it established the current partial correction, but it does not yet have a candidate TSV or a packet-specific review-note layer. Any later candidate extraction here should be designed to preserve the mixed `ei/eite` evidence instead of forcing a premature resolution.
+Pronoun clusivity should still be treated as a support-layer retrofit rather than as its own print packet. The dossier remains valuable because it established the current partial correction, and the new shared pronoun candidate TSV now gives that dossier an analyzer-aware evidence layer. Any later hardening should continue to preserve the mixed `ei/eite` evidence instead of forcing a premature resolution.
 
 ### Stem alternation
 
@@ -54,13 +54,13 @@ Case marking remains the editorial model, but it predates the candidate-first pr
 
 ## Recommended retrofit order
 
-With negation now retrofitted, the remaining practical order should be:
+With negation now retrofitted and pronouns / clusivity now started, the remaining practical order should be:
 
-1. **Pronouns / clusivity next** — unresolved `ei/eite` makes candidate-level evidence especially useful.
+1. **Harden pronouns / clusivity next** — the candidate TSV now exists, but `ei/eite` still needs cautious review before the packet is treated as fully hardened.
 2. **Stem alternation after that** — needs explicit candidate rows for core pairs and exclusions.
 3. **Case marking after stem alternation** — worthwhile, but lower urgency unless a specific extraction problem becomes pressing.
 4. **Demonstratives maintenance only** — already protocol-backed.
 
 ## Conclusion
 
-The retrofit audit now supports a clear updated next step: move to the pronoun / clusivity retrofit rather than opening a brand-new grammar topic. Demonstratives remains the protocol pilot, negation is now the first retrofit plus hardening pass, and the remaining backlog should move toward the same candidate-first architecture in the order above.
+The retrofit audit now supports a clear updated next step: review and harden the new pronoun / clusivity candidate layer before moving to stem alternation rather than opening a brand-new grammar topic. Demonstratives remains the protocol pilot, negation is the first hardened retrofit, pronouns / clusivity is now the active retrofit, and the remaining backlog should move toward the same candidate-first architecture in the order above.

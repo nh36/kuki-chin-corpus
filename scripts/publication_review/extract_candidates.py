@@ -18,6 +18,7 @@ Usage:
     python3 scripts/publication_review/extract_candidates.py --list-topics
     python3 scripts/publication_review/extract_candidates.py demonstratives
     python3 scripts/publication_review/extract_candidates.py negation
+    python3 scripts/publication_review/extract_candidates.py pronouns
 """
 
 from __future__ import annotations
@@ -31,7 +32,7 @@ ROOT = Path(__file__).resolve().parents[2]
 TOKENS_PATH = ROOT / "data" / "ctd_analysis" / "tokens.tsv"
 VERSES_PATH = ROOT / "data" / "verses_aligned.tsv"
 OUTPUT_DIR = ROOT / "output" / "publication_review"
-SUPPORTED_TOPICS = ("demonstratives", "negation")
+SUPPORTED_TOPICS = ("demonstratives", "negation", "pronouns")
 
 CANDIDATE_COLUMNS = [
     "candidate_id",
@@ -120,6 +121,10 @@ def excluded(**kwargs: object) -> CandidateSpec:
 
 def deferred(**kwargs: object) -> CandidateSpec:
     return CandidateSpec(candidate_status="deferred", manual_review_status="reviewed", **kwargs)
+
+
+def needs_review(**kwargs: object) -> CandidateSpec:
+    return CandidateSpec(candidate_status="needs_review", manual_review_status="reviewed", **kwargs)
 
 
 def parse_args() -> argparse.Namespace:
@@ -510,11 +515,128 @@ def build_negation_specs() -> list[CandidateSpec]:
     ]
 
 
+def build_pronouns_specs() -> list[CandidateSpec]:
+    topic = "pronouns"
+    return [
+        accepted(
+            candidate_id="pro-kei-gen-24-7",
+            topic=topic,
+            construction_id="kei-pronoun",
+            reference="Genesis 24:7",
+            token_indices=(16,),
+            confidence="high",
+            why_selected="Analyzer-confirmed `kei` gives a manually checked free 1SG pronoun in ordinary argument position without relying on the negation packet.",
+            notes="Export caveat: the token is glossed `1SG.PRO` with function `1SG`, but the POS field still reads `FUNC`; accepted status rests on the verse context plus the analyzer-backed token window.",
+            expected_normalized=("kei",),
+        ),
+        accepted(
+            candidate_id="pro-nang-gen-4-11",
+            topic=topic,
+            construction_id="nang-pronoun",
+            reference="Genesis 4:11",
+            token_indices=(13,),
+            confidence="high",
+            why_selected="Analyzer-confirmed `nang` provides a straightforward free 2SG pronoun example.",
+            expected_normalized=("nang",),
+        ),
+        accepted(
+            candidate_id="pro-amah-gen-3-20",
+            topic=topic,
+            construction_id="amah-pronoun",
+            reference="Genesis 3:20",
+            token_indices=(14,),
+            confidence="high",
+            why_selected="Analyzer-confirmed `amah` is a clean free 3SG pronoun in a stable discourse example already used by the packet.",
+            expected_normalized=("amah",),
+        ),
+        accepted(
+            candidate_id="pro-amaute-gen-3-21",
+            topic=topic,
+            construction_id="amaute-pronoun",
+            reference="Genesis 3:21",
+            token_indices=(13,),
+            confidence="high",
+            why_selected="Analyzer-confirmed `amaute` supplies a print-safe 3PL independent pronoun row for the packet's paradigm.",
+            expected_normalized=("amaute",),
+        ),
+        accepted(
+            candidate_id="pro-note-gen-9-9",
+            topic=topic,
+            construction_id="note-pronoun",
+            reference="Genesis 9:9",
+            token_indices=(2,),
+            confidence="high",
+            why_selected="Analyzer-confirmed `note` gives a clear 2PL independent pronoun distinct from the following possessive-looking `note'` token in the same verse.",
+            expected_normalized=("note",),
+        ),
+        accepted(
+            candidate_id="pro-kote-gen-34-9",
+            topic=topic,
+            construction_id="kote-exclusive",
+            reference="Genesis 34:9",
+            token_indices=(0,),
+            confidence="high",
+            why_selected="The analyzer confirms `kote`, and the addressed-dialogue context already documented in the clusivity dossier makes this a strong exclusive 1PL example.",
+            expected_normalized=("kote",),
+        ),
+        needs_review(
+            candidate_id="pro-eite-gen-13-8",
+            topic=topic,
+            construction_id="eite-inclusive-context",
+            reference="Genesis 13:8",
+            token_indices=(25,),
+            confidence="high",
+            why_selected="Genesis 13:8 is a strong inclusive discourse context and therefore belongs in the candidate layer as explicit evidence for why `eite` is tempting to treat as globally inclusive.",
+            why_excluded="This verse supports an inclusive reading in context, but the clusivity dossier also contains clear exclusive `eite` uses, so the form cannot yet support a final global print claim.",
+            notes="Analyzer caveat: the nearby predicate `ihi` is glossed `1PL.INCL`, but the candidate row remains unresolved because the broader `eite/ei` series is still mixed in the Bible dossier.",
+            expected_normalized=("eite",),
+        ),
+        needs_review(
+            candidate_id="pro-eite-gen-31-15",
+            topic=topic,
+            construction_id="eite-exclusive-context",
+            reference="Genesis 31:15",
+            token_indices=(2,),
+            confidence="high",
+            why_selected="This row preserves the strongest dossier-level counterexample to a simple inclusive label for `eite`.",
+            why_excluded="Rachel and Leah address Jacob while excluding him from the `eite` group, so this verse blocks any automatic promotion of `eite` to a settled inclusive headword.",
+            notes="The candidate layer keeps this verse precisely because it conflicts with Genesis 13:8; the mixed discourse evidence is the reason `eite` remains unresolved.",
+            expected_normalized=("eite",),
+        ),
+        deferred(
+            candidate_id="pro-ei-gen-42-2",
+            topic=topic,
+            construction_id="ei-clusivity",
+            reference="Genesis 42:2",
+            token_indices=(16,),
+            confidence="medium",
+            why_selected="Keep one shorter-form `ei` token in the candidate file so the unresolved clusivity question is not reduced to `eite` alone.",
+            why_excluded="Genesis 42:2 is compatible with an inclusive reading, but the smaller `ei` sample is mixed and the export itself currently assigns clusivity-like labels that the dossier does not yet treat as decisive.",
+            notes="Export caveat: this token is glossed `1PL.EXCL` and tagged `FUNC`, while nearby `i` is glossed `1PL.INCL`; the candidate file records the conflict instead of normalizing it away.",
+            expected_normalized=("ei",),
+        ),
+        excluded(
+            candidate_id="pro-kei-negator-gen-15-1",
+            topic=topic,
+            construction_id="kei-negator",
+            reference="Genesis 15:1",
+            token_indices=(15, 16, 17),
+            confidence="high",
+            why_selected="Raw `kei` discovery overlaps directly with the negation packet, so the pronoun candidate layer needs one explicit negator false friend.",
+            why_excluded="`lau kei in` is prohibitive negation, not 1SG pronoun evidence, and therefore cannot support pronoun prose.",
+            notes="Cross-topic caveat: the analyzer export correctly treats this `kei` as NEG/FUNC, matching the negation candidate layer rather than the pronoun layer.",
+            expected_normalized=("lau", "kei", "in"),
+        ),
+    ]
+
+
 def build_specs(topic: str) -> list[CandidateSpec]:
     if topic == "demonstratives":
         return build_demonstratives_specs()
     if topic == "negation":
         return build_negation_specs()
+    if topic == "pronouns":
+        return build_pronouns_specs()
     raise SystemExit(f"Unsupported topic: {topic}")
 
 

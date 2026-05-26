@@ -10,8 +10,9 @@ Current supported topics:
 
 - `demonstratives`
 - `negation`
+- `pronouns`
 
-The current demonstratives implementation is a curated pilot, and negation is the first retrospective retrofit under the same candidate-first architecture. Both use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, and excluded rows.
+The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, and pronouns / clusivity is the second retrofit topic. All three use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
 
 ## Required input
 
@@ -45,10 +46,17 @@ Regenerate the negation candidate file:
 python3 scripts/publication_review/extract_candidates.py negation
 ```
 
+Regenerate the pronoun candidate file:
+
+```bash
+python3 scripts/publication_review/extract_candidates.py pronouns
+```
+
 Expected output:
 
 - `output/publication_review/candidates_demonstratives.tsv`
 - `output/publication_review/candidates_negation.tsv`
+- `output/publication_review/candidates_pronouns.tsv`
 
 ## Workflow position
 
@@ -60,7 +68,7 @@ The candidate file is the evidence layer. The dossier interprets that evidence. 
 
 ## What the current extractor does
 
-For the current demonstratives and negation layers, the extractor:
+For the current demonstratives, negation, and pronoun layers, the extractor:
 
 1. loads `data/ctd_analysis/tokens.tsv`;
 2. looks up curated verse/token windows;
@@ -90,4 +98,4 @@ In practice, that means adding:
 
 ## Why the current layers are curated
 
-The first demonstratives implementation and the first negation retrofit are intentionally curated because publication-review work needs explicit reviewable evidence rows more than it needs a broad automatic discovery engine. Future automation may expand candidate discovery, but publication-review examples must still be analyzer-backed, construction-checked, and manually reviewed before they reach print prose.
+The first demonstratives implementation, the first negation retrofit, and the first pronoun retrofit are intentionally curated because publication-review work needs explicit reviewable evidence rows more than it needs a broad automatic discovery engine. Future automation may expand candidate discovery, but publication-review examples must still be analyzer-backed, construction-checked, and manually reviewed before they reach print prose.
