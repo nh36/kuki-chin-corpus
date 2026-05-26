@@ -160,7 +160,9 @@ And to `scripts/`:
 - Demonstratives is already protocol-backed, and negation now has a hardened analyzer-aware candidate layer with caveats documented rather than hidden.
 - Pronouns / clusivity is now a hardened retrospective retrofit, and `ei/eite` remains explicitly unresolved even after the added `ko/kote` evidence.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
-- With the `ko` issue now addressed upstream and the pronoun candidate layer regenerated from corrected export output, stem alternation can resume as the next retrofit.
+- Stem alternation now also has an analyzer-aware candidate file at `output/publication_review/candidates_stem_alternation.tsv`, with accepted core pair evidence (`mu ~ muh`, `ne ~ nek`, `nei ~ neih`, plus manually controlled `pia ~ piak`, `za ~ zak`, and `nusia ~ nusiat`) and explicit blocked questionnaire/report-noise rows such as `piangsak`, `ngaihsutna`, and `honkhiat`.
+- `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
+- With the `ko` issue now addressed upstream and the pronoun candidate layer regenerated from corrected export output, stem alternation has begun its own retrofit and the next step is to harden that new candidate layer before moving to case marking.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -193,7 +195,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Begin the stem alternation retrofit now that the `ko` analyzer-quality follow-up has landed upstream.
+1. [ ] Review and harden the new stem-alternation candidate layer against the packet prose before moving to case marking.
 2. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 3. [ ] Keep the unresolved `ei/eite` question flagged in any later person-marking work unless new evidence settles it.
 

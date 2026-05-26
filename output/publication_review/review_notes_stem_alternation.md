@@ -22,6 +22,12 @@ Some candidate verb pairs are still omitted on purpose. `ngai/ngaih` remains dos
 
 A broader evidence dossier now exists at `output/publication_review/dossier_stem_alternation.md`, and it has now been reviewed and incorporated into the expanded print slice. The grammar slice includes a coverage table; `za ~ zak` has entered the prose as print-usable with caveat; `za ~ zak` and `nusia ~ nusiat` now have dictionary entries with explicit statuses; and `ngai ~ ngaih`, `honkhia ~ honkhiat`, and `hu ~ huh` remain dossier-only or excluded for now.
 
+# Candidate-layer note
+
+Stem alternation now also has an analyzer-aware candidate file at `output/publication_review/candidates_stem_alternation.tsv`. That file records accepted core pair evidence, including the packet's central `mu ~ muh`, `ne ~ nek`, and `nei ~ neih` rows plus manually controlled `pia ~ piak`, `za ~ zak`, and `nusia ~ nusiat` evidence, while also preserving excluded or cautionary rows for questionnaire/report noise such as `piangsak`, `ngaihsutna`, and solitary `honkhiat`.
+
+The packet should now be read in the order `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`. The candidate layer does not mean every report/questionnaire pair is print-safe. It means the packet now has an explicit analyzer-aware record of which rows survive manual review and which still do not.
+
 # Citation and source audit
 
 The grammar slice cites only bibliography keys that already exist in `literature/bibliography.bib`: `@henderson1965` and `@zamngaihcing2017`. No new bibliography entry was needed.

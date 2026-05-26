@@ -197,6 +197,12 @@ Causative and other derivational material repeatedly confuse the picture. `piang
 
 Bible translation style may also matter. The corpus overrepresents quotative, purposive, temporal, and formulaic subordinate structures. That is useful for exposing Form II, but it may also skew the evidence toward nominalized and dependent uses rather than the full range of spoken finite distribution. This remains a hypothesis rather than a conclusion.
 
+# Candidate-layer note
+
+Stem alternation now also has an analyzer-aware candidate file at `output/publication_review/candidates_stem_alternation.tsv`. That file records accepted core evidence for the packet's strongest pairs, plus explicit `needs_review` and `excluded` rows for constructionally mixed or report-noise material such as `theihna`, `pianna`, `piangsak`, `ngaihsutna`, and `honkhiat`.
+
+The existing packet should therefore be read through `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`. The candidate layer does not imply that every report or questionnaire pair is now print-safe. It makes the packet's accepted and blocked evidence explicit in one reproducible analyzer-aware layer.
+
 # Recommendation
 
 **B. The current print slice should stay narrow, but with a stronger evidence table.**

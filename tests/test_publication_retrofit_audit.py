@@ -23,6 +23,7 @@ def test_publication_retrofit_audit_recommends_priority():
     text = AUDIT_PATH.read_text()
 
     assert "Recommended retrofit order" in text
-    assert "**Stem alternation next**" in text
+    assert "**Stem alternation hardening next**" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
+    assert "candidates_stem_alternation.tsv" in text

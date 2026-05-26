@@ -19,6 +19,7 @@ Usage:
     python3 scripts/publication_review/extract_candidates.py demonstratives
     python3 scripts/publication_review/extract_candidates.py negation
     python3 scripts/publication_review/extract_candidates.py pronouns
+    python3 scripts/publication_review/extract_candidates.py stem_alternation
 """
 
 from __future__ import annotations
@@ -32,7 +33,7 @@ ROOT = Path(__file__).resolve().parents[2]
 TOKENS_PATH = ROOT / "data" / "ctd_analysis" / "tokens.tsv"
 VERSES_PATH = ROOT / "data" / "verses_aligned.tsv"
 OUTPUT_DIR = ROOT / "output" / "publication_review"
-SUPPORTED_TOPICS = ("demonstratives", "negation", "pronouns")
+SUPPORTED_TOPICS = ("demonstratives", "negation", "pronouns", "stem_alternation")
 
 CANDIDATE_COLUMNS = [
     "candidate_id",
@@ -653,6 +654,155 @@ def build_pronouns_specs() -> list[CandidateSpec]:
     ]
 
 
+def build_stem_alternation_specs() -> list[CandidateSpec]:
+    topic = "stem_alternation"
+    return [
+        accepted(
+            candidate_id="stem-mu-form-i-gen-1-4",
+            topic=topic,
+            construction_id="mu-muh",
+            reference="Genesis 1:4",
+            token_indices=(8,),
+            confidence="high",
+            why_selected="`a mu hi` is the packet's clearest finite Form I example for `mu ~ muh` and remains analyzer-confirmed in a straightforward clause-final predicate.",
+            expected_normalized=("mu",),
+        ),
+        accepted(
+            candidate_id="stem-muh-derived-gen-19-19",
+            topic=topic,
+            construction_id="mu-muh",
+            reference="Genesis 19:19",
+            token_indices=(3,),
+            confidence="high",
+            why_selected="`muhna-ah` is the dossier's clean nominalized Form II example and makes the derived-vs-finite contrast explicit for `mu ~ muh`.",
+            expected_normalized=("muhna-ah",),
+        ),
+        accepted(
+            candidate_id="stem-ne-nek-gen-2-17",
+            topic=topic,
+            construction_id="ne-nek",
+            reference="Genesis 2:17",
+            token_indices=(12, 23),
+            confidence="high",
+            why_selected="Genesis 2:17 remains the strongest same-verse contrast in the packet: finite `ne` in the prohibition and Form II `nek` in the dependent temporal clause.",
+            expected_normalized=("ne", "nek"),
+        ),
+        accepted(
+            candidate_id="stem-nei-form-i-gen-11-30",
+            topic=topic,
+            construction_id="nei-neih",
+            reference="Genesis 11:30",
+            token_indices=(5,),
+            confidence="high",
+            why_selected="Finite `nei` in Genesis 11:30 is one of the packet's stable Form I possession examples.",
+            expected_normalized=("nei",),
+        ),
+        accepted(
+            candidate_id="stem-neih-derived-2sam-23-8",
+            topic=topic,
+            construction_id="nei-neih",
+            reference="2 Samuel 23:8",
+            token_indices=(1,),
+            confidence="high",
+            why_selected="`neih` in `David' neih mi` gives the print-facing derived/attributive Form II side of `nei ~ neih` that the packet already uses.",
+            expected_normalized=("neih",),
+        ),
+        accepted(
+            candidate_id="stem-pia-piak-gen-3-12",
+            topic=topic,
+            construction_id="pia-piak",
+            reference="Genesis 3:12",
+            token_indices=(8, 13),
+            confidence="high",
+            why_selected="Genesis 3:12 is the manually checked same-turn contrast for `pia ~ piak`; it is safe packet evidence even though the broader questionnaire is noisy.",
+            notes="Report-layer caveat: this accepted row is manual packet evidence, not a license to trust questionnaire hits contaminated by `piangsak` and related derivations.",
+            expected_normalized=("piak", "pia"),
+        ),
+        accepted(
+            candidate_id="stem-zak-dependent-gen-24-52",
+            topic=topic,
+            construction_id="za-zak",
+            reference="Genesis 24:52",
+            token_indices=(6, 7),
+            confidence="high",
+            why_selected="`a zak ciangin` is the packet's best analyzer-backed dependent-clause example for the caveated `za ~ zak` expansion.",
+            notes="Packet caveat: `zak` is safe here as a hearing example, but the dossier warns that not every surface `zak` token should be promoted without manual review.",
+            expected_normalized=("zak", "ciangin"),
+        ),
+        accepted(
+            candidate_id="stem-nusiat-dependent-deut-2-14",
+            topic=topic,
+            construction_id="nusia-nusiat",
+            reference="Deuteronomy 2:14",
+            token_indices=(22, 23, 24),
+            confidence="high",
+            why_selected="`i nusiat a kipan` preserves the dossier's strongest dependent/clause-linking Form II evidence for the caveated `nusia ~ nusiat` pair.",
+            notes="Export caveat: the analyzer currently surfaces `nusiat` with noun-like POS here, so accepted status depends on the analyzer-backed span plus manual packet review rather than POS alone.",
+            expected_normalized=("nusiat", "a", "kipan"),
+        ),
+        needs_review(
+            candidate_id="stem-theihna-gen-2-17",
+            topic=topic,
+            construction_id="thei-theih",
+            reference="Genesis 2:17",
+            token_indices=(7,),
+            confidence="high",
+            why_selected="`theihna` keeps the real `thei ~ theih` pair visible in the candidate layer because the packet and dossier both treat it as genuine but constructionally mixed evidence.",
+            why_excluded="This row shows Form II through a nominalized derivative, not through a reader-friendly bare contrast, so it should not by itself settle print prose for the whole pair.",
+            notes="The packet keeps `thei ~ theih` caveated because the Form I side overlaps with modal/ability uses and the Form II side is overrepresented in nominalized or purposive material.",
+            expected_normalized=("theihna",),
+        ),
+        needs_review(
+            candidate_id="stem-pianna-gen-10-29",
+            topic=topic,
+            construction_id="piang-pian",
+            reference="Genesis 10:29",
+            token_indices=(4,),
+            confidence="medium",
+            why_selected="`pianna` records the dossier's main reason for keeping `piang ~ pian` visible even though the pair is still more derived than pedagogically neat.",
+            why_excluded="The Form II side is mostly visible through derived forms such as `pianna`, so this row cannot yet carry a simple print-safe bare-stem contrast on its own.",
+            notes="The packet keeps `piang ~ pian` provisional rather than excluded: the pair is real, but the evidence is still dominated by nominalized and purposive environments.",
+            expected_normalized=("pianna",),
+        ),
+        excluded(
+            candidate_id="stem-piangsak-noise-gen-1-1",
+            topic=topic,
+            construction_id="pia-piak-report-noise",
+            reference="Genesis 1:1",
+            token_indices=(9,),
+            confidence="high",
+            why_selected="The questionnaire/report layer repeatedly tempts `pia ~ piak` work with creation verses, so the candidate file needs one explicit derivational false friend.",
+            why_excluded="`piangsak` is a causative/derived verb and cannot count as direct `piak` evidence for the simple Form I / Form II pair.",
+            notes="Problem type: report noise plus derivational contamination. This row preserves the packet's warning that `piak` examples must be insulated from `piangsak`.",
+            expected_normalized=("piangsak",),
+        ),
+        excluded(
+            candidate_id="stem-ngaihsutna-noise-gen-6-5",
+            topic=topic,
+            construction_id="ngai-ngaih-family",
+            reference="Genesis 6:5",
+            token_indices=(9,),
+            confidence="high",
+            why_selected="The packet explicitly says `ngai/ngaih` remains dossier-only because raw `ngaih` discovery is swamped by the `ngaihsun/ngaihsut` lexical family.",
+            why_excluded="`ngaihsutna` is a lexical-family derivative, not clean `ngaih` stem evidence, so this row cannot support print-safe stem-alternation prose.",
+            notes="Problem type: lexical-family contamination rather than simple analyzer failure. The candidate layer keeps this row so `ngai/ngaih` cannot be silently promoted from noisy family material.",
+            expected_normalized=("ngaihsutna",),
+        ),
+        excluded(
+            candidate_id="stem-honkhiat-rev-6-1",
+            topic=topic,
+            construction_id="honkhia-honkhiat",
+            reference="Revelation 6:1",
+            token_indices=(11,),
+            confidence="high",
+            why_selected="The dossier treats `honkhia ~ honkhiat` as a tempting report-visible pair because exact `honkhiat` does occur once.",
+            why_excluded="The solitary `honkhiat` hit and the overwhelmingly lexicalized/compound-like `honkhia` family make this unsafe as simple stem-pair evidence.",
+            notes="Problem type: insufficient evidence plus likely lexicalization. The candidate layer keeps the one exact Form II-looking hit visible while blocking it from print promotion.",
+            expected_normalized=("honkhiat",),
+        ),
+    ]
+
+
 def build_specs(topic: str) -> list[CandidateSpec]:
     if topic == "demonstratives":
         return build_demonstratives_specs()
@@ -660,6 +810,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
         return build_negation_specs()
     if topic == "pronouns":
         return build_pronouns_specs()
+    if topic == "stem_alternation":
+        return build_stem_alternation_specs()
     raise SystemExit(f"Unsupported topic: {topic}")
 
 

@@ -122,6 +122,8 @@ Future work may add more automatic discovery, but automatic discovery should nev
 
 After demonstratives, negation is the first retrospective retrofit topic under this same candidate-first workflow. Pronouns / clusivity is the second retrofit topic, and its candidate layer intentionally preserves the still-unresolved `ei/eite` evidence instead of forcing a premature clusivity resolution.
 
+Stem alternation is now the third retrospective retrofit topic. Its candidate layer records accepted core Form I / Form II evidence alongside explicit excluded or cautionary rows for questionnaire/report noise and lexical-family contamination.
+
 ## Pilot topic: demonstratives/deixis
 
 The first pilot under this protocol is `output/publication_review/candidates_demonstratives.tsv`.

@@ -12,6 +12,7 @@ COMMITTED_CANDIDATE_PATHS = {
     "demonstratives": ROOT / "output/publication_review/candidates_demonstratives.tsv",
     "negation": ROOT / "output/publication_review/candidates_negation.tsv",
     "pronouns": ROOT / "output/publication_review/candidates_pronouns.tsv",
+    "stem_alternation": ROOT / "output/publication_review/candidates_stem_alternation.tsv",
 }
 
 
@@ -27,10 +28,10 @@ def run_extractor(*args: str) -> subprocess.CompletedProcess[str]:
 
 def test_candidate_extractor_lists_supported_topics():
     result = run_extractor("--list-topics")
-    assert result.stdout.strip().splitlines() == ["demonstratives", "negation", "pronouns"]
+    assert result.stdout.strip().splitlines() == ["demonstratives", "negation", "pronouns", "stem_alternation"]
 
 
-@pytest.mark.parametrize("topic", ["demonstratives", "negation", "pronouns"])
+@pytest.mark.parametrize("topic", ["demonstratives", "negation", "pronouns", "stem_alternation"])
 def test_candidates_are_reproducible(tmp_path, topic):
     if not TOKENS_PATH.exists():
         pytest.skip("data/ctd_analysis/tokens.tsv is absent; candidate reproducibility cannot be checked")
