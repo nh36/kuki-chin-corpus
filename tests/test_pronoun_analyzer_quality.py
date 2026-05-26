@@ -2,6 +2,8 @@ import csv
 import sys
 from pathlib import Path
 
+import pytest
+
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -41,6 +43,9 @@ def test_direct_analyzer_keeps_lexical_ko_available_but_disambiguates_clear_pron
 
 
 def test_regenerated_export_marks_ko_as_pronoun_in_audited_contexts():
+    if not TOKENS_PATH.exists():
+        pytest.skip("data/ctd_analysis/tokens.tsv is absent; export-row validation cannot be checked")
+
     for verse_id, token_index in (("01024055", "14"), ("02020019", "27")):
         row = get_token(verse_id, token_index)
         assert row["normalized_form"] == "ko"
