@@ -203,6 +203,18 @@ Stem alternation now also has an analyzer-aware candidate file at `output/public
 
 The existing packet should therefore be read through `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`. The candidate layer does not imply that every report or questionnaire pair is now print-safe. It makes the packet's accepted and blocked evidence explicit in one reproducible analyzer-aware layer.
 
+# Corpus-wide analyzer audit
+
+The new candidate TSV is still only a curated publication-review sample. Stem alternation needs more than that, because the underlying grammatical question is distributional: which Form I and Form II shapes are actually attested across the corpus, how often they occur, and which local environments favor them. A broader analyzer-based audit now exists in:
+
+- `output/publication_review/stem_alternation_corpus_audit.tsv`
+- `output/publication_review/stem_alternation_environment_summary.tsv`
+- `output/publication_review/stem_alternation_pair_summary.tsv`
+
+These files use the analyzer inventory plus the local token export to map attested stem-family tokens across the Tedim Bible. They are designed to answer where the analyzer sees Form I or Form II material, where the evidence is concentrated in nominalized, temporal, or clause-linking environments, and where apparent pairs are actually derivational, lexicalized, or otherwise noisy. The environment classifier is deliberately conservative. It is useful for corpus triage and packet revision, but it should not be mistaken for a full syntactic parser.
+
+The next interpretive step should therefore start from these audit tables rather than from curated examples alone. The packet now has both a print-evidence candidate layer and a broader corpus-distribution layer; any later revision of the grammar or dictionary slice should use both.
+
 # Recommendation
 
 **B. The current print slice should stay narrow, but with a stronger evidence table.**

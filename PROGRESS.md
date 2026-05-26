@@ -161,8 +161,9 @@ And to `scripts/`:
 - Pronouns / clusivity is now a hardened retrospective retrofit, and `ei/eite` remains explicitly unresolved even after the added `ko/kote` evidence.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Stem alternation now also has an analyzer-aware candidate file at `output/publication_review/candidates_stem_alternation.tsv`, with accepted core pair evidence (`mu ~ muh`, `ne ~ nek`, `nei ~ neih`, plus manually controlled `pia ~ piak`, `za ~ zak`, and `nusia ~ nusiat`) and explicit blocked questionnaire/report-noise rows such as `piangsak`, `ngaihsutna`, and `honkhiat`.
+- Because stem alternation is a distributional topic rather than just a packet of print-safe examples, a broader analyzer-based corpus audit now also exists at `output/publication_review/stem_alternation_corpus_audit.tsv`, `output/publication_review/stem_alternation_environment_summary.tsv`, and `output/publication_review/stem_alternation_pair_summary.tsv`.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- With the `ko` issue now addressed upstream and the pronoun candidate layer regenerated from corrected export output, stem alternation has begun its own retrofit and the next step is to harden that new candidate layer before moving to case marking.
+- With the `ko` issue now addressed upstream and the pronoun candidate layer regenerated from corrected export output, stem alternation has moved beyond the first candidate retrofit into a broader corpus audit; case marking should wait until that audit has been reviewed.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -195,7 +196,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Review and harden the new stem-alternation candidate layer against the packet prose before moving to case marking.
+1. [ ] Review the new stem-alternation corpus audit against the packet prose before moving to case marking.
 2. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 3. [ ] Keep the unresolved `ei/eite` question flagged in any later person-marking work unless new evidence settles it.
 

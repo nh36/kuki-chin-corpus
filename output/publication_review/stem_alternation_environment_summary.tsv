@@ -1,0 +1,421 @@
+pair_id	form_i	form_ii	environment	form_i_count	form_ii_count	total_count	representative_references	notes
+bawl-bawlh	bawl	bawlh	causative_or_derivational_sak	102	0	102	Genesis 2:18; Genesis 21:6; Genesis 26:22; Genesis 34:21; Genesis 37:3	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:102
+bawl-bawlh	bawl	bawlh	clause_linking_kipan	2	0	2	Genesis 39:5; Luke 15:24	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:2
+bawl-bawlh	bawl	bawlh	dependent_temporal_ciangin	12	0	12	Exodus 29:36; Leviticus 27:2; Numbers 6:2; Numbers 10:2; 1 Samuel 22:8	Immediate following `ciangin` provides a conservative dependent-temporal cue.:12
+bawl-bawlh	bawl	bawlh	dependent_temporal_ni_in	2	0	2	Exodus 12:14; Hosea 7:5	Immediate following `ni-in` provides a conservative dependent-temporal cue.:2
+bawl-bawlh	bawl	bawlh	finite_main_or_matrix	2036	0	2036	Genesis 1:7; Genesis 1:16; Genesis 1:26; Genesis 2:4; Genesis 2:7	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:2036
+bawl-bawlh	bawl	bawlh	imperative_or_directive	81	0	81	Genesis 6:14; Genesis 6:16; Genesis 16:6; Genesis 18:6; Genesis 34:9	A following imperative-like particle may indicate directive force.:81
+bawl-bawlh	bawl	bawlh	negative_clause	184	0	184	Genesis 12:18; Genesis 45:8; Genesis 45:9; Genesis 47:29; Exodus 20:4	Nearby negative material marks a negative or irrealis-heavy clause.:184
+bawl-bawlh	bawl	bawlh	nominalized_na	187	0	187	Genesis 13:4; Genesis 16:5; Genesis 21:9; Genesis 31:12; Genesis 31:13	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:187
+bawl-bawlh	bawl	bawlh	possessed_or_genitive_attributive	4	0	4	Psalms 22:16; Proverbs 24:8; Ezekiel 23:37; Ezekiel 23:45	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:4
+bawl-bawlh	bawl	bawlh	purpose_nadingin	66	0	66	Genesis 26:27; Genesis 27:9; Genesis 31:52; Genesis 35:3; Genesis 50:2	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:66
+bawl-bawlh	bawl	bawlh	quotative_or_say_complement	28	0	28	Genesis 11:4; Genesis 27:7; Genesis 38:29; Genesis 41:51; Genesis 41:52	Nearby quotative material suggests embedded or reported-speech structure.:28
+bawl-bawlh	bawl	bawlh	relative_or_attributive_mi	9	0	9	Exodus 30:33; Exodus 30:38; Proverbs 6:33; Matthew 5:22; Matthew 13:41	A following `mi` suggests a relative-like or attributive nominal environment.:9
+bawl-bawlh	bawl	bawlh	unknown_or_needs_review	93	0	93	Genesis 1:31; Genesis 19:9; Exodus 28:36; Numbers 35:22; Deuteronomy 8:9	No conservative local environment rule fired for this token.:93
+bia-biak	bia	biak	causative_or_derivational_sak	1	0	1	Revelation 13:12	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:1
+bia-biak	bia	biak	clause_linking_kipan	0	1	1	2 Kings 25:9	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:1
+bia-biak	bia	biak	finite_main_or_matrix	194	130	324	Genesis 4:26; Genesis 21:33; Genesis 22:5; Genesis 22:6; Genesis 24:26	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:324
+bia-biak	bia	biak	imperative_or_directive	19	2	21	Exodus 10:8; Exodus 10:11; Exodus 10:24; Exodus 12:31; Exodus 24:1	A following imperative-like particle may indicate directive force.:21
+bia-biak	bia	biak	negative_clause	26	28	54	Exodus 20:3; Exodus 20:5; Exodus 34:14; Exodus 34:17; Numbers 18:5	Nearby negative material marks a negative or irrealis-heavy clause.:54
+bia-biak	bia	biak	nominalized_na	0	1551	1551	Genesis 8:20; Genesis 12:7; Genesis 12:8; Genesis 13:4; Genesis 13:18	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:1551
+bia-biak	bia	biak	possessed_or_genitive_attributive	1	0	1	1 Corinthians 6:9	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+bia-biak	bia	biak	purpose_nadingin	27	163	190	Genesis 22:3; Genesis 22:8; Exodus 4:23; Exodus 7:16; Exodus 8:1	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:190
+bia-biak	bia	biak	quotative_or_say_complement	2	4	6	Exodus 10:26; Numbers 18:3; Deuteronomy 13:13; Nehemiah 10:39; John 2:21	Nearby quotative material suggests embedded or reported-speech structure.:6
+bia-biak	bia	biak	relative_or_attributive_mi	6	0	6	Psalms 97:7; Zephaniah 1:5; Acts 9:14; Acts 9:21; Acts 17:4	A following `mi` suggests a relative-like or attributive nominal environment.:6
+bia-biak	bia	biak	unknown_or_needs_review	11	914	925	Genesis 22:7; Exodus 25:8; Exodus 25:9; Exodus 26:1; Exodus 26:6	No conservative local environment rule fired for this token.:925
+ci-cih	ci	cih	causative_or_derivational_sak	45	3	48	Genesis 50:5; Numbers 22:6; Deuteronomy 31:6; Deuteronomy 31:8; Judges 7:24	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:48
+ci-cih	ci	cih	clause_linking_kipan	0	1	1	1 Corinthians 3:22	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:1
+ci-cih	ci	cih	dependent_temporal_ciangin	1	101	102	Genesis 24:14; Genesis 24:33; Genesis 24:43; Genesis 44:25; Genesis 46:33	Immediate following `ciangin` provides a conservative dependent-temporal cue.:102
+ci-cih	ci	cih	dependent_temporal_ni_in	0	2	2	Obadiah 1:12; Obadiah 1:14	Immediate following `ni-in` provides a conservative dependent-temporal cue.:2
+ci-cih	ci	cih	finite_main_or_matrix	7540	813	8353	Genesis 1:3; Genesis 1:4; Genesis 1:5; Genesis 1:6; Genesis 1:8	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:8353
+ci-cih	ci	cih	imperative_or_directive	110	2	112	Genesis 20:13; Genesis 32:5; Genesis 32:18; Genesis 44:5; Genesis 45:11	A following imperative-like particle may indicate directive force.:112
+ci-cih	ci	cih	negative_clause	305	145	450	Genesis 17:15; Genesis 18:15; Genesis 20:5; Genesis 28:8; Genesis 30:30	Nearby negative material marks a negative or irrealis-heavy clause.:450
+ci-cih	ci	cih	nominalized_na	55	314	369	Genesis 21:29; Genesis 28:6; Genesis 31:1; Genesis 33:8; Genesis 41:32	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:369
+ci-cih	ci	cih	possessed_or_genitive_attributive	4	4	8	Genesis 27:11; Jeremiah 16:5; Jeremiah 17:5; Jeremiah 34:17; Jeremiah 45:5	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:8
+ci-cih	ci	cih	purpose_nadingin	9	10	19	Numbers 11:12; Numbers 11:18; Joshua 7:13; 2 Kings 5:22; 1 Chronicles 19:6	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:19
+ci-cih	ci	cih	quotative_or_say_complement	103	2048	2151	Genesis 2:3; Genesis 2:17; Genesis 2:19; Genesis 3:5; Genesis 3:10	Nearby quotative material suggests embedded or reported-speech structure.:2151
+ci-cih	ci	cih	relative_or_attributive_mi	9	0	9	Proverbs 20:14; Matthew 7:21; Matthew 24:5; Mark 13:6; Luke 20:6	A following `mi` suggests a relative-like or attributive nominal environment.:9
+ci-cih	ci	cih	unknown_or_needs_review	63	33	96	Genesis 17:7; Genesis 17:8; Genesis 17:9; Genesis 17:10; Genesis 17:19	No conservative local environment rule fired for this token.:96
+dipkua-dipkuat	dipkua	dipkuat	finite_main_or_matrix	4	0	4	2 Chronicles 29:8; Psalms 48:5; Psalms 66:5; Jeremiah 4:9	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:4
+dipkua-dipkuat	dipkua	dipkuat	nominalized_na	0	1	1	Leviticus 26:16	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:1
+dipkua-dipkuat	dipkua	dipkuat	unknown_or_needs_review	7	0	7	Judges 13:6; Psalms 45:4; Psalms 47:2; Psalms 66:3; Jeremiah 5:30	No conservative local environment rule fired for this token.:7
+gamla-gamlat	gamla	gamlat	causative_or_derivational_sak	1	0	1	2 Timothy 2:16	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:1
+gamla-gamlat	gamla	gamlat	finite_main_or_matrix	9	0	9	Judges 18:28; Nehemiah 4:19; Job 39:7; Isaiah 54:14; Jeremiah 12:2	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:9
+gamla-gamlat	gamla	gamlat	negative_clause	14	0	14	Job 21:16; Psalms 22:11; Psalms 22:19; Psalms 71:12; Isaiah 29:13	Nearby negative material marks a negative or irrealis-heavy clause.:14
+gamla-gamlat	gamla	gamlat	unknown_or_needs_review	57	1	58	Genesis 19:19; Genesis 21:16; Genesis 35:16; Exodus 2:4; Exodus 24:1	No conservative local environment rule fired for this token.:58
+gen-genh	gen	genh	causative_or_derivational_sak	44	0	44	Genesis 18:32; Genesis 30:27; Genesis 44:18; Genesis 50:4; Exodus 4:16	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:44
+gen-genh	gen	genh	clause_linking_kipan	3	0	3	Exodus 4:10; Joshua 14:10; Matthew 16:21	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:3
+gen-genh	gen	genh	dependent_temporal_ciangin	96	0	96	Genesis 21:25; Genesis 31:22; Genesis 37:5; Genesis 37:10; Genesis 38:13	Immediate following `ciangin` provides a conservative dependent-temporal cue.:96
+gen-genh	gen	genh	dependent_temporal_ni_in	2	0	2	Exodus 6:28; Deuteronomy 4:15	Immediate following `ni-in` provides a conservative dependent-temporal cue.:2
+gen-genh	gen	genh	finite_main_or_matrix	2036	0	2036	Genesis 3:11; Genesis 9:22; Genesis 14:13; Genesis 16:13; Genesis 18:27	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:2036
+gen-genh	gen	genh	imperative_or_directive	266	0	266	Genesis 24:23; Genesis 24:33; Genesis 24:49; Genesis 29:15; Genesis 32:29	A following imperative-like particle may indicate directive force.:266
+gen-genh	gen	genh	negative_clause	215	0	215	Genesis 12:18; Genesis 21:26; Genesis 24:7; Genesis 31:20; Genesis 31:27	Nearby negative material marks a negative or irrealis-heavy clause.:215
+gen-genh	gen	genh	nominalized_na	187	0	187	Genesis 39:19; Genesis 41:15; Numbers 26:65; Numbers 35:30; Numbers 36:5	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:187
+gen-genh	gen	genh	possessed_or_genitive_attributive	5	0	5	Matthew 5:32; Matthew 19:9; Luke 13:24; John 3:3; John 3:5	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:5
+gen-genh	gen	genh	purpose_nadingin	81	0	81	Genesis 32:5; Genesis 49:1; Exodus 7:16; Numbers 23:12; Deuteronomy 5:3	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:81
+gen-genh	gen	genh	quotative_or_say_complement	160	0	160	Genesis 24:30; Genesis 38:24; Genesis 41:15; Genesis 43:6; Genesis 45:27	Nearby quotative material suggests embedded or reported-speech structure.:160
+gen-genh	gen	genh	relative_or_attributive_mi	8	0	8	Psalms 15:2; Psalms 101:7; Proverbs 19:5; Proverbs 19:9; Hosea 4:2	A following `mi` suggests a relative-like or attributive nominal environment.:8
+gen-genh	gen	genh	unknown_or_needs_review	476	0	476	Genesis 12:4; Genesis 17:23; Genesis 18:21; Genesis 19:21; Genesis 21:1	No conservative local environment rule fired for this token.:476
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	causative_or_derivational_sak	1	1	2	Psalms 36:11; Luke 8:2	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:2
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	finite_main_or_matrix	130	5	135	Genesis 3:24; Genesis 15:11; Genesis 17:14; Genesis 26:27; Genesis 31:18	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:135
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	imperative_or_directive	4	0	4	Lamentations 3:65; Daniel 4:14; Matthew 10:8; Galatians 4:30	A following imperative-like particle may indicate directive force.:4
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	negative_clause	23	1	24	Genesis 4:14; Exodus 23:29; Numbers 33:55; Joshua 13:13; Joshua 15:63	Nearby negative material marks a negative or irrealis-heavy clause.:24
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	purpose_nadingin	2	0	2	Exodus 23:28; 2 Chronicles 20:11	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:2
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	quotative_or_say_complement	2	0	2	Deuteronomy 29:28; John 9:22	Nearby quotative material suggests embedded or reported-speech structure.:2
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	relative_or_attributive_mi	2	0	2	Mark 9:38; Luke 9:49	A following `mi` suggests a relative-like or attributive nominal environment.:2
+hawlkhia-hawlkhiat	hawlkhia	hawlkhiat	unknown_or_needs_review	0	15	15	Numbers 32:21; 2 Samuel 14:14; 1 Kings 14:24; 1 Kings 21:26; 2 Kings 16:3	No conservative local environment rule fired for this token.:15
+hi-hih	hi	hih	causative_or_derivational_sak	8	38	46	Exodus 13:8; Ruth 3:11; 1 Samuel 2:3; 1 Samuel 14:6; 1 Samuel 20:4	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:46
+hi-hih	hi	hih	dependent_temporal_ciangin	0	19	19	Genesis 3:17; Genesis 18:13; Genesis 26:9; Genesis 29:15; Genesis 38:26	Immediate following `ciangin` provides a conservative dependent-temporal cue.:19
+hi-hih	hi	hih	dependent_temporal_ni_in	0	1	1	Leviticus 16:30	Immediate following `ni-in` provides a conservative dependent-temporal cue.:1
+hi-hih	hi	hih	finite_main_or_matrix	34200	316	34516	Genesis 1:1; Genesis 1:2; Genesis 1:3; Genesis 1:4; Genesis 1:5	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:34516
+hi-hih	hi	hih	imperative_or_directive	15	48	63	Genesis 18:3; Genesis 31:16; Genesis 36:43; Numbers 4:19; Deuteronomy 29:17	A following imperative-like particle may indicate directive force.:63
+hi-hih	hi	hih	negative_clause	5274	366	5640	Genesis 2:5; Genesis 2:17; Genesis 2:18; Genesis 2:20; Genesis 2:25	Nearby negative material marks a negative or irrealis-heavy clause.:5640
+hi-hih	hi	hih	nominalized_na	38	572	610	Genesis 7:1; Genesis 12:11; Genesis 12:18; Genesis 15:13; Genesis 17:7	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:610
+hi-hih	hi	hih	possessed_or_genitive_attributive	38	2	40	Exodus 16:20; Numbers 32:15; Numbers 33:54; Deuteronomy 19:3; 1 Samuel 2:13	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:40
+hi-hih	hi	hih	purpose_nadingin	7	49	56	Genesis 20:9; Genesis 21:30; Genesis 39:6; Genesis 43:18; Exodus 29:36	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:56
+hi-hih	hi	hih	quotative_or_say_complement	7851	308	8159	Genesis 1:3; Genesis 1:4; Genesis 1:5; Genesis 1:6; Genesis 1:8	Nearby quotative material suggests embedded or reported-speech structure.:8159
+hi-hih	hi	hih	relative_or_attributive_mi	60	20	80	Genesis 13:16; Genesis 20:16; Exodus 12:19; Exodus 24:3; Leviticus 9:24	A following `mi` suggests a relative-like or attributive nominal environment.:80
+hi-hih	hi	hih	unknown_or_needs_review	362	4660	5022	Genesis 2:2; Genesis 2:4; Genesis 2:23; Genesis 3:3; Genesis 3:10	No conservative local environment rule fired for this token.:5022
+honkhia-honkhiat	honkhia	honkhiat	compound_or_lexicalized	363	1	364	Genesis 37:21; Genesis 47:25; Exodus 2:19; Exodus 5:23; Exodus 6:6	This pair is currently treated as lexicalized or category-mixed rather than as simple stem evidence.:364
+hu-huh	hu	huh	compound_or_lexicalized	164	464	628	Genesis 1:30; Genesis 2:7; Genesis 2:18; Genesis 2:20; Genesis 4:1	This pair is currently treated as lexicalized or category-mixed rather than as simple stem evidence.:628
+husia-husiat	husia	husiat	finite_main_or_matrix	6	0	6	Job 31:12; Psalms 18:8; Psalms 50:3; Ezekiel 14:17; Acts 23:10	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:6
+husia-husiat	husia	husiat	imperative_or_directive	1	0	1	Psalms 124:5	A following imperative-like particle may indicate directive force.:1
+husia-husiat	husia	husiat	unknown_or_needs_review	2	0	2	Psalms 55:8; Matthew 27:64	No conservative local environment rule fired for this token.:2
+keu-keuh	keu	keuh	causative_or_derivational_sak	15	1	16	Genesis 41:23; Judges 6:39; 2 Kings 19:24; Psalms 58:7; Isaiah 37:25	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:16
+keu-keuh	keu	keuh	dependent_temporal_ciangin	1	0	1	Isaiah 27:11	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+keu-keuh	keu	keuh	finite_main_or_matrix	44	5	49	Genesis 8:13; Genesis 8:14; Exodus 12:8; Exodus 12:9; Exodus 14:21	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:49
+keu-keuh	keu	keuh	imperative_or_directive	3	0	3	Psalms 143:6; Isaiah 44:27; Ezekiel 37:4	A following imperative-like particle may indicate directive force.:3
+keu-keuh	keu	keuh	negative_clause	2	1	3	Judges 16:7; Judges 16:8; Revelation 14:5	Nearby negative material marks a negative or irrealis-heavy clause.:3
+keu-keuh	keu	keuh	nominalized_na	11	0	11	Psalms 126:4; Isaiah 25:5; Isaiah 35:1; Isaiah 41:18; Jeremiah 14:1	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:11
+keu-keuh	keu	keuh	quotative_or_say_complement	1	0	1	Judges 6:37	Nearby quotative material suggests embedded or reported-speech structure.:1
+keu-keuh	keu	keuh	unknown_or_needs_review	89	0	89	Genesis 1:9; Genesis 1:10; Genesis 8:7; Genesis 8:13; Exodus 4:9	No conservative local environment rule fired for this token.:89
+khai-khaih	khai	khaih	causative_or_derivational_sak	3	0	3	Esther 9:13; Jeremiah 10:20; Lamentations 5:12	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:3
+khai-khaih	khai	khaih	dependent_temporal_ciangin	1	0	1	Psalms 62:9	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+khai-khaih	khai	khaih	finite_main_or_matrix	85	0	85	Genesis 40:19; Genesis 40:22; Genesis 41:13; Exodus 26:32; Exodus 27:9	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:85
+khai-khaih	khai	khaih	imperative_or_directive	5	0	5	Numbers 21:8; Numbers 25:4; Esther 7:10; Isaiah 22:25; Isaiah 62:10	A following imperative-like particle may indicate directive force.:5
+khai-khaih	khai	khaih	negative_clause	6	0	6	Deuteronomy 29:23; Jeremiah 4:3; Matthew 6:26; Luke 12:24; John 12:32	Nearby negative material marks a negative or irrealis-heavy clause.:6
+khai-khaih	khai	khaih	nominalized_na	35	0	35	Exodus 26:32; Exodus 26:37; Exodus 27:10; Exodus 27:11; Exodus 27:17	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:35
+khai-khaih	khai	khaih	purpose_nadingin	4	0	4	Exodus 38:28; Esther 5:14; Esther 7:10; Matthew 20:19	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:4
+khai-khaih	khai	khaih	relative_or_attributive_mi	2	0	2	2 Samuel 21:13; Galatians 3:13	A following `mi` suggests a relative-like or attributive nominal environment.:2
+khai-khaih	khai	khaih	unknown_or_needs_review	94	2	96	Genesis 26:12; Genesis 41:42; Exodus 23:10; Exodus 26:33; Exodus 26:36	No conservative local environment rule fired for this token.:96
+khial-khialh	khial	khialh	causative_or_derivational_sak	28	23	51	Exodus 23:33; 1 Kings 14:16; 1 Kings 15:26; 1 Kings 15:30; 1 Kings 15:34	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:51
+khial-khialh	khial	khialh	dependent_temporal_ciangin	0	4	4	Numbers 15:28; Jeremiah 8:4; Matthew 18:21; 1 John 2:1	Immediate following `ciangin` provides a conservative dependent-temporal cue.:4
+khial-khialh	khial	khialh	finite_main_or_matrix	153	40	193	Genesis 6:6; Genesis 6:7; Genesis 20:5; Genesis 39:9; Genesis 43:12	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:193
+khial-khialh	khial	khialh	negative_clause	37	6	43	Genesis 42:22; Leviticus 4:22; Numbers 16:15; Deuteronomy 20:15; Deuteronomy 26:13	Nearby negative material marks a negative or irrealis-heavy clause.:43
+khial-khialh	khial	khialh	nominalized_na	0	420	420	Genesis 18:20; Genesis 20:9; Genesis 31:36; Genesis 41:9; Genesis 50:17	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:420
+khial-khialh	khial	khialh	purpose_nadingin	0	6	6	Genesis 20:6; Psalms 39:1; Psalms 119:11; Proverbs 7:5; Ezekiel 3:21	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:6
+khial-khialh	khial	khialh	quotative_or_say_complement	5	6	11	Leviticus 5:15; Leviticus 5:17; Numbers 15:27; Deuteronomy 19:16; 1 Samuel 2:25	Nearby quotative material suggests embedded or reported-speech structure.:11
+khial-khialh	khial	khialh	relative_or_attributive_mi	4	0	4	Numbers 5:8; Psalms 95:10; Mark 2:15; John 9:16	A following `mi` suggests a relative-like or attributive nominal environment.:4
+khial-khialh	khial	khialh	unknown_or_needs_review	41	2	43	Genesis 13:13; Exodus 20:7; Exodus 20:20; Leviticus 6:2; Leviticus 6:4	No conservative local environment rule fired for this token.:43
+kho-khoh	kho	khoh	causative_or_derivational_sak	2	1	3	Matthew 21:41; Matthew 22:4; Acts 19:31	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:3
+kho-khoh	kho	khoh	finite_main_or_matrix	38	1	39	Genesis 2:5; Genesis 2:15; Exodus 36:6; Numbers 24:21; Judges 19:7	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:39
+kho-khoh	kho	khoh	negative_clause	32	0	32	Genesis 9:20; Deuteronomy 20:6; Deuteronomy 21:4; Deuteronomy 22:10; Judges 5:7	Nearby negative material marks a negative or irrealis-heavy clause.:32
+kho-khoh	kho	khoh	purpose_nadingin	4	0	4	Genesis 3:23; 2 Kings 25:12; Song of Solomon 8:11; Jeremiah 52:16	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:4
+kho-khoh	kho	khoh	unknown_or_needs_review	1	4	5	Proverbs 23:30; Matthew 22:3; Matthew 22:5; Luke 14:17; Luke 14:18	No conservative local environment rule fired for this token.:5
+kho-khot	kho	khot	unknown_or_needs_review	0	2	2	Matthew 19:21; Luke 18:22	No conservative local environment rule fired for this token.:2
+khua-khuat	khua	khuat	clause_linking_kipan	3	0	3	Jeremiah 32:44; Jeremiah 48:24; Luke 24:47	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:3
+khua-khuat	khua	khuat	dependent_temporal_ciangin	7	0	7	2 Samuel 18:24; 2 Samuel 24:20; 1 Kings 20:22; 1 Kings 20:26; 2 Kings 11:14	Immediate following `ciangin` provides a conservative dependent-temporal cue.:7
+khua-khuat	khua	khuat	finite_main_or_matrix	653	2	655	Genesis 8:13; Genesis 11:28; Genesis 50:5; Leviticus 25:32; Leviticus 26:31	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:655
+khua-khuat	khua	khuat	imperative_or_directive	55	0	55	Deuteronomy 4:11; Joshua 18:21; Joshua 21:42; Judges 6:30; Ruth 1:19	A following imperative-like particle may indicate directive force.:55
+khua-khuat	khua	khuat	negative_clause	60	0	60	Genesis 18:28; Genesis 19:2; Genesis 19:12; Leviticus 25:31; Deuteronomy 3:4	Nearby negative material marks a negative or irrealis-heavy clause.:60
+khua-khuat	khua	khuat	nominalized_na	34	0	34	1 Samuel 2:9; 1 Kings 7:16; 1 Kings 7:17; 1 Kings 7:18; 1 Kings 7:20	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:34
+khua-khuat	khua	khuat	possessed_or_genitive_attributive	27	0	27	Genesis 36:33; Genesis 36:36; Genesis 36:37; Joshua 7:2; 2 Samuel 2:2	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:27
+khua-khuat	khua	khuat	purpose_nadingin	8	0	8	Genesis 19:20; Numbers 35:11; Numbers 35:14; 1 Kings 7:18; Psalms 105:39	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:8
+khua-khuat	khua	khuat	quotative_or_say_complement	42	0	42	Genesis 18:2; Genesis 29:2; Deuteronomy 9:16; Joshua 5:13; Joshua 15:62	Nearby quotative material suggests embedded or reported-speech structure.:42
+khua-khuat	khua	khuat	relative_or_attributive_mi	9	0	9	Joshua 8:14; Judges 19:22; Judges 20:37; 1 Samuel 4:13; Isaiah 54:3	A following `mi` suggests a relative-like or attributive nominal environment.:9
+khua-khuat	khua	khuat	unknown_or_needs_review	2810	1	2811	Genesis 1:2; Genesis 1:15; Genesis 1:16; Genesis 3:7; Genesis 3:19	No conservative local environment rule fired for this token.:2811
+kia-kiak	kia	kiak	causative_or_derivational_sak	16	0	16	Exodus 9:18; Exodus 9:23; Numbers 11:31; Numbers 32:7; Numbers 32:9	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:16
+kia-kiak	kia	kiak	finite_main_or_matrix	126	13	139	Genesis 14:10; Genesis 22:13; Genesis 32:7; Genesis 33:11; Genesis 39:17	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:139
+kia-kiak	kia	kiak	negative_clause	24	0	24	Genesis 43:29; Exodus 9:26; Deuteronomy 1:21; Deuteronomy 31:8; Joshua 1:9	Nearby negative material marks a negative or irrealis-heavy clause.:24
+kia-kiak	kia	kiak	purpose_nadingin	2	0	2	Job 37:6; Matthew 18:30	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:2
+kia-kiak	kia	kiak	quotative_or_say_complement	5	0	5	2 Kings 19:26; Isaiah 20:5; Matthew 12:11; Luke 14:5; 1 Corinthians 13:7	Nearby quotative material suggests embedded or reported-speech structure.:5
+kia-kiak	kia	kiak	relative_or_attributive_mi	3	0	3	Deuteronomy 22:8; Matthew 21:44; Luke 20:18	A following `mi` suggests a relative-like or attributive nominal environment.:3
+kia-kiak	kia	kiak	unknown_or_needs_review	3	1	4	Genesis 3:18; Leviticus 19:10; Ruth 2:7; Ezekiel 27:28	No conservative local environment rule fired for this token.:4
+kido-kidot	kido	kidot	dependent_temporal_ciangin	0	1	1	Haggai 2:12	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+kido-kidot	kido	kidot	finite_main_or_matrix	47	1	48	Genesis 14:9; Exodus 17:8; Exodus 17:10; Exodus 32:17; Numbers 10:9	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:48
+kido-kidot	kido	kidot	imperative_or_directive	4	0	4	Exodus 17:9; Deuteronomy 2:24; Judges 9:38; 1 Peter 4:9	A following imperative-like particle may indicate directive force.:4
+kido-kidot	kido	kidot	negative_clause	5	0	5	Deuteronomy 2:9; Deuteronomy 2:19; Isaiah 2:4; Micah 4:3; Matthew 10:34	Nearby negative material marks a negative or irrealis-heavy clause.:5
+kido-kidot	kido	kidot	nominalized_na	34	1	35	Leviticus 26:6; 1 Samuel 14:23; 1 Samuel 17:28; 2 Samuel 2:17; 2 Samuel 3:1	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:35
+kido-kidot	kido	kidot	possessed_or_genitive_attributive	1	0	1	Isaiah 19:2	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+kido-kidot	kido	kidot	purpose_nadingin	8	0	8	Joshua 11:5; 1 Samuel 13:5; 1 Samuel 17:10; 1 Samuel 17:21; 1 Samuel 17:33	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:8
+lampi-lampih	lampi	lampih	finite_main_or_matrix	77	0	77	Genesis 12:20; Genesis 18:16; Genesis 24:27; Genesis 26:31; Genesis 32:1	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:77
+lampi-lampih	lampi	lampih	negative_clause	25	1	26	Genesis 24:48; Genesis 28:20; Genesis 45:24; 2 Samuel 14:14; 2 Kings 6:19	Nearby negative material marks a negative or irrealis-heavy clause.:26
+lampi-lampih	lampi	lampih	purpose_nadingin	4	0	4	Psalms 18:32; Ezekiel 40:22; Ezekiel 40:26; Ezekiel 40:31	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:4
+lampi-lampih	lampi	lampih	quotative_or_say_complement	2	0	2	Joshua 5:7; Proverbs 14:12	Nearby quotative material suggests embedded or reported-speech structure.:2
+lampi-lampih	lampi	lampih	unknown_or_needs_review	254	0	254	Genesis 3:24; Genesis 33:16; Genesis 33:18; Genesis 38:14; Genesis 38:16	No conservative local environment rule fired for this token.:254
+lua-luah	lua	luah	causative_or_derivational_sak	0	12	12	Numbers 16:14; Numbers 27:8; Numbers 32:4; Deuteronomy 1:38; Deuteronomy 3:28	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:12
+lua-luah	lua	luah	dependent_temporal_ciangin	0	1	1	Deuteronomy 3:12	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+lua-luah	lua	luah	finite_main_or_matrix	73	149	222	Genesis 15:2; Genesis 15:3; Genesis 22:17; Genesis 24:60; Genesis 31:14	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:222
+lua-luah	lua	luah	imperative_or_directive	1	5	6	Deuteronomy 1:8; Deuteronomy 1:21; Deuteronomy 9:23; Joshua 19:9; Jeremiah 25:27	A following imperative-like particle may indicate directive force.:6
+lua-luah	lua	luah	negative_clause	36	13	49	Genesis 21:10; Exodus 32:22; Leviticus 22:23; Leviticus 27:28; Numbers 18:23	Nearby negative material marks a negative or irrealis-heavy clause.:49
+lua-luah	lua	luah	nominalized_na	1	11	12	Genesis 48:6; Exodus 27:3; Exodus 38:3; Leviticus 27:22; Numbers 4:14	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:12
+lua-luah	lua	luah	purpose_nadingin	0	46	46	Leviticus 25:46; Numbers 18:24; Numbers 18:26; Numbers 26:53; Numbers 34:17	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:46
+lua-luah	lua	luah	quotative_or_say_complement	5	0	5	Genesis 33:13; Judges 18:26; Proverbs 27:14; Proverbs 27:20; Ezekiel 16:63	Nearby quotative material suggests embedded or reported-speech structure.:5
+lua-luah	lua	luah	relative_or_attributive_mi	1	0	1	1 Samuel 30:10	A following `mi` suggests a relative-like or attributive nominal environment.:1
+lua-luah	lua	luah	unknown_or_needs_review	103	17	120	Genesis 18:14; Genesis 25:31; Genesis 25:32; Genesis 25:33; Genesis 25:34	No conservative local environment rule fired for this token.:120
+mu-muh	mu	muh	causative_or_derivational_sak	5	8	13	Joshua 5:6; Judges 16:19; 2 Samuel 15:25; Job 17:15; Proverbs 14:30	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:13
+mu-muh	mu	muh	clause_linking_kipan	0	1	1	Hosea 9:15	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:1
+mu-muh	mu	muh	dependent_temporal_ciangin	1	173	174	Genesis 3:6; Genesis 12:12; Genesis 18:2; Genesis 19:1; Genesis 24:64	Immediate following `ciangin` provides a conservative dependent-temporal cue.:174
+mu-muh	mu	muh	dependent_temporal_ni_in	0	1	1	Exodus 10:28	Immediate following `ni-in` provides a conservative dependent-temporal cue.:1
+mu-muh	mu	muh	finite_main_or_matrix	1008	406	1414	Genesis 1:4; Genesis 1:10; Genesis 1:12; Genesis 1:16; Genesis 1:21	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:1414
+mu-muh	mu	muh	imperative_or_directive	27	1	28	Genesis 31:51; Exodus 14:13; Exodus 19:4; 1 Samuel 14:29; 1 Samuel 14:38	A following imperative-like particle may indicate directive force.:28
+mu-muh	mu	muh	negative_clause	246	50	296	Genesis 3:8; Genesis 4:14; Genesis 8:9; Genesis 9:23; Genesis 19:11	Nearby negative material marks a negative or irrealis-heavy clause.:296
+mu-muh	mu	muh	nominalized_na	5	295	300	Genesis 6:11; Genesis 19:19; Genesis 23:9; Genesis 23:11; Genesis 29:31	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:300
+mu-muh	mu	muh	purpose_nadingin	14	24	38	Genesis 28:11; Genesis 32:5; Genesis 44:21; Numbers 11:15; Numbers 24:1	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:38
+mu-muh	mu	muh	quotative_or_say_complement	21	21	42	Genesis 9:14; Genesis 13:10; Genesis 18:26; Genesis 18:30; Genesis 30:33	Nearby quotative material suggests embedded or reported-speech structure.:42
+mu-muh	mu	muh	relative_or_attributive_mi	15	0	15	Exodus 18:21; Deuteronomy 7:10; 2 Samuel 5:8; Esther 2:15; Job 29:11	A following `mi` suggests a relative-like or attributive nominal environment.:15
+mu-muh	mu	muh	unknown_or_needs_review	19	13	32	Leviticus 11:13; Leviticus 11:14; Leviticus 11:16; Leviticus 11:17; Numbers 22:41	No conservative local environment rule fired for this token.:32
+mu-muk	mu	muk	finite_main_or_matrix	2	7	9	2 Samuel 6:6; 1 Chronicles 13:9; Psalms 22:7; Psalms 50:16; Psalms 59:7	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:9
+mu-muk	mu	muk	imperative_or_directive	0	1	1	Isaiah 59:3	A following imperative-like particle may indicate directive force.:1
+mu-muk	mu	muk	unknown_or_needs_review	0	26	26	Leviticus 13:45; Deuteronomy 25:4; 1 Samuel 1:13; Job 27:4; Psalms 12:2	No conservative local environment rule fired for this token.:26
+mual-mualh	mual	mualh	finite_main_or_matrix	103	0	103	Genesis 8:4; Genesis 12:8; Genesis 14:10; Genesis 19:17; Genesis 19:30	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:103
+mual-mualh	mual	mualh	imperative_or_directive	1	0	1	Psalms 89:12	A following imperative-like particle may indicate directive force.:1
+mual-mualh	mual	mualh	negative_clause	12	0	12	Exodus 34:3; Leviticus 13:21; Leviticus 13:26; Joshua 14:12; Judges 11:37	Nearby negative material marks a negative or irrealis-heavy clause.:12
+mual-mualh	mual	mualh	possessed_or_genitive_attributive	1	0	1	1 Chronicles 11:32	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+mual-mualh	mual	mualh	purpose_nadingin	1	0	1	1 Samuel 17:3	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:1
+mual-mualh	mual	mualh	quotative_or_say_complement	10	1	11	Leviticus 13:56; Numbers 23:9; Deuteronomy 3:17; Joshua 10:6; 1 Samuel 26:20	Nearby quotative material suggests embedded or reported-speech structure.:11
+mual-mualh	mual	mualh	unknown_or_needs_review	736	0	736	Genesis 7:19; Genesis 7:20; Genesis 8:5; Genesis 10:30; Genesis 14:6	No conservative local environment rule fired for this token.:736
+ne-neh	ne	neh	finite_main_or_matrix	0	13	13	Genesis 19:9; Exodus 17:11; Psalms 10:5; Mark 5:24; Mark 5:31	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:13
+ne-neh	ne	neh	imperative_or_directive	0	1	1	Isaiah 29:19	A following imperative-like particle may indicate directive force.:1
+ne-neh	ne	neh	negative_clause	0	6	6	Exodus 24:2; Leviticus 21:17; Deuteronomy 2:37; Psalms 18:18; Psalms 119:150	Nearby negative material marks a negative or irrealis-heavy clause.:6
+ne-neh	ne	neh	unknown_or_needs_review	0	13	13	Exodus 17:11; Numbers 12:5; 1 Samuel 13:6; 1 Samuel 31:3; 1 Chronicles 10:3	No conservative local environment rule fired for this token.:13
+ne-nek	ne	nek	causative_or_derivational_sak	21	8	29	Genesis 25:30; Genesis 29:7; Genesis 43:32; Leviticus 26:22; Numbers 21:22	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:29
+ne-nek	ne	nek	dependent_temporal_ciangin	0	6	6	Job 20:21; Proverbs 25:16; Zechariah 12:2; Acts 9:19; 1 Corinthians 10:16	Immediate following `ciangin` provides a conservative dependent-temporal cue.:6
+ne-nek	ne	nek	dependent_temporal_ni_in	0	1	1	Genesis 2:17	Immediate following `ni-in` provides a conservative dependent-temporal cue.:1
+ne-nek	ne	nek	finite_main_or_matrix	514	279	793	Genesis 2:16; Genesis 3:2; Genesis 3:5; Genesis 3:6; Genesis 3:7	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:793
+ne-nek	ne	nek	imperative_or_directive	27	2	29	Genesis 27:19; Exodus 16:25; Leviticus 10:12; 1 Samuel 9:24; 1 Samuel 14:34	A following imperative-like particle may indicate directive force.:29
+ne-nek	ne	nek	negative_clause	138	35	173	Genesis 2:17; Genesis 3:1; Genesis 3:3; Genesis 3:11; Genesis 3:17	Nearby negative material marks a negative or irrealis-heavy clause.:173
+ne-nek	ne	nek	nominalized_na	0	55	55	Genesis 49:12; Exodus 12:7; Leviticus 22:8; Leviticus 22:16; 1 Samuel 14:33	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:55
+ne-nek	ne	nek	purpose_nadingin	32	41	73	Genesis 2:9; Genesis 24:33; Genesis 27:4; Genesis 27:7; Genesis 27:10	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:73
+ne-nek	ne	nek	quotative_or_say_complement	7	7	14	Genesis 3:12; Genesis 3:13; Exodus 12:15; Exodus 12:19; Leviticus 7:18	Nearby quotative material suggests embedded or reported-speech structure.:14
+ne-nek	ne	nek	relative_or_attributive_mi	11	1	12	Leviticus 7:25; Leviticus 7:27; Leviticus 17:14; Leviticus 17:15; Leviticus 19:8	A following `mi` suggests a relative-like or attributive nominal environment.:12
+ne-nek	ne	nek	unknown_or_needs_review	24	6	30	Genesis 15:11; Numbers 11:12; Deuteronomy 32:25; 1 Samuel 15:3; 1 Samuel 22:19	No conservative local environment rule fired for this token.:30
+nei-neih	nei	neih	causative_or_derivational_sak	11	2	13	Genesis 1:26; Genesis 17:6; Exodus 10:25; Leviticus 19:19; 1 Samuel 1:5	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:13
+nei-neih	nei	neih	clause_linking_kipan	0	1	1	Colossians 1:16	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:1
+nei-neih	nei	neih	dependent_temporal_ciangin	0	6	6	Leviticus 13:9; Leviticus 13:29; Leviticus 15:19; 2 Samuel 15:2; Romans 13:10	Immediate following `ciangin` provides a conservative dependent-temporal cue.:6
+nei-neih	nei	neih	finite_main_or_matrix	1472	579	2051	Genesis 1:2; Genesis 1:11; Genesis 1:21; Genesis 1:24; Genesis 1:28	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:2051
+nei-neih	nei	neih	imperative_or_directive	50	3	53	Genesis 38:8; Joshua 22:19; 2 Samuel 13:5; Job 17:8; Job 42:8	A following imperative-like particle may indicate directive force.:53
+nei-neih	nei	neih	negative_clause	421	54	475	Genesis 11:30; Genesis 16:1; Genesis 27:38; Genesis 27:39; Genesis 29:15	Nearby negative material marks a negative or irrealis-heavy clause.:475
+nei-neih	nei	neih	nominalized_na	0	80	80	Genesis 3:15; Exodus 21:10; Exodus 22:9; Exodus 23:2; Exodus 23:3	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:80
+nei-neih	nei	neih	possessed_or_genitive_attributive	13	2	15	Genesis 27:11; Genesis 38:1; Deuteronomy 4:20; Judges 13:2; Judges 17:1	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:15
+nei-neih	nei	neih	purpose_nadingin	11	30	41	Genesis 15:7; Genesis 20:17; Genesis 23:9; Genesis 23:18; Genesis 23:20	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:41
+nei-neih	nei	neih	quotative_or_say_complement	31	24	55	Genesis 43:6; Exodus 21:4; Leviticus 12:2; Leviticus 12:5; Leviticus 13:38	Nearby quotative material suggests embedded or reported-speech structure.:55
+nei-neih	nei	neih	relative_or_attributive_mi	26	2	28	Exodus 35:10; Exodus 35:21; Exodus 35:23; Exodus 35:24; Leviticus 13:45	A following `mi` suggests a relative-like or attributive nominal environment.:28
+nei-neih	nei	neih	unknown_or_needs_review	91	40	131	Genesis 1:30; Genesis 13:6; Genesis 33:9; Genesis 33:13; Genesis 34:23	No conservative local environment rule fired for this token.:131
+ngai-ngaih	ngai	ngaih	compound_or_lexicalized	0	378	896	Genesis 6:5; Genesis 8:21; Genesis 20:10; Genesis 20:11; Genesis 25:34	The dossier treats the `ngaihsun/ngaihsut` family as lexical-family contamination rather than clean `ngaih` evidence.:896
+ngai-ngaih	ngai	ngaih	dependent_temporal_ciangin	0	1	1	Psalms 39:3	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+ngai-ngaih	ngai	ngaih	finite_main_or_matrix	242	95	337	Genesis 18:10; Genesis 26:7; Genesis 27:5; Genesis 29:17; Genesis 29:18	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:337
+ngai-ngaih	ngai	ngaih	imperative_or_directive	153	6	159	Genesis 4:23; Genesis 23:6; Genesis 23:8; Genesis 23:11; Genesis 23:15	A following imperative-like particle may indicate directive force.:159
+ngai-ngaih	ngai	ngaih	negative_clause	111	18	129	Genesis 4:23; Genesis 23:13; Genesis 39:10; Genesis 42:21; Exodus 4:1	Nearby negative material marks a negative or irrealis-heavy clause.:129
+ngai-ngaih	ngai	ngaih	nominalized_na	0	10	10	2 Samuel 14:1; Job 21:2; Job 42:4; Proverbs 30:19; Song of Solomon 2:7	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:10
+ngai-ngaih	ngai	ngaih	purpose_nadingin	14	5	19	Genesis 24:63; Judges 5:16; Judges 9:7; 1 Kings 4:34; 1 Kings 10:24	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:19
+ngai-ngaih	ngai	ngaih	quotative_or_say_complement	5	3	8	1 Samuel 25:24; Lamentations 3:56; Ezekiel 13:2; Ezekiel 33:30; John 9:31	Nearby quotative material suggests embedded or reported-speech structure.:8
+ngai-ngaih	ngai	ngaih	unknown_or_needs_review	7	19	26	Genesis 24:16; Genesis 39:6; 1 Kings 18:27; Esther 2:7; Psalms 4:4	No conservative local environment rule fired for this token.:26
+no-noh	no	noh	causative_or_derivational_sak	4	0	4	Psalms 68:9; Psalms 69:32; Isaiah 26:19; Micah 5:7	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:4
+no-noh	no	noh	clause_linking_kipan	2	0	2	2 Kings 17:9; 2 Kings 18:8	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:2
+no-noh	no	noh	dependent_temporal_ciangin	2	0	2	Matthew 24:32; Mark 13:28	Immediate following `ciangin` provides a conservative dependent-temporal cue.:2
+no-noh	no	noh	finite_main_or_matrix	20	1	21	Exodus 10:9; Leviticus 1:14; Leviticus 5:7; Leviticus 5:11; Leviticus 12:6	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:21
+no-noh	no	noh	imperative_or_directive	10	0	10	Numbers 18:27; 1 Samuel 10:14; 1 Samuel 10:15; 1 Kings 12:10; 2 Kings 5:4	A following imperative-like particle may indicate directive force.:10
+no-noh	no	noh	negative_clause	19	0	19	Genesis 27:13; Exodus 12:3; Leviticus 4:3; Numbers 31:18; Deuteronomy 28:48	Nearby negative material marks a negative or irrealis-heavy clause.:19
+no-noh	no	noh	nominalized_na	129	0	129	Genesis 43:33; Genesis 47:4; Numbers 35:2; Numbers 35:3; Numbers 35:4	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:129
+no-noh	no	noh	purpose_nadingin	6	0	6	Genesis 39:14; Genesis 39:17; Leviticus 25:12; Deuteronomy 14:8; Deuteronomy 14:10	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:6
+no-noh	no	noh	quotative_or_say_complement	7	0	7	Leviticus 25:16; Numbers 18:1; Joshua 22:25; 2 Chronicles 10:14; Isaiah 51:23	Nearby quotative material suggests embedded or reported-speech structure.:7
+no-noh	no	noh	relative_or_attributive_mi	1	0	1	Ecclesiastes 4:15	A following `mi` suggests a relative-like or attributive nominal environment.:1
+no-noh	no	noh	unknown_or_needs_review	555	1	556	Genesis 18:7; Genesis 19:8; Genesis 21:28; Genesis 21:29; Genesis 21:30	No conservative local environment rule fired for this token.:556
+nusia-nusiat	nusia	nusiat	causative_or_derivational_sak	1	0	1	Zephaniah 3:6	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:1
+nusia-nusiat	nusia	nusiat	clause_linking_kipan	0	1	1	Deuteronomy 2:14	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:1
+nusia-nusiat	nusia	nusiat	dependent_temporal_ni_in	0	1	1	2 Samuel 19:19	Immediate following `ni-in` provides a conservative dependent-temporal cue.:1
+nusia-nusiat	nusia	nusiat	finite_main_or_matrix	252	15	267	Genesis 2:24; Genesis 23:3; Genesis 28:10; Genesis 33:15; Genesis 39:12	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:267
+nusia-nusiat	nusia	nusiat	imperative_or_directive	8	0	8	Exodus 33:1; Psalms 37:8; Ezekiel 14:6; Daniel 4:15; Daniel 4:23	A following imperative-like particle may indicate directive force.:8
+nusia-nusiat	nusia	nusiat	negative_clause	87	6	93	Genesis 28:15; Genesis 39:18; Genesis 42:33; Genesis 44:22; Genesis 44:28	Nearby negative material marks a negative or irrealis-heavy clause.:93
+nusia-nusiat	nusia	nusiat	possessed_or_genitive_attributive	1	0	1	Isaiah 32:14	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+nusia-nusiat	nusia	nusiat	purpose_nadingin	1	2	3	Numbers 10:2; 1 Samuel 10:9; Daniel 4:26	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:3
+nusia-nusiat	nusia	nusiat	quotative_or_say_complement	3	3	6	Genesis 44:22; Ruth 1:17; 1 Samuel 14:30; 1 Chronicles 28:9; 2 Chronicles 24:20	Nearby quotative material suggests embedded or reported-speech structure.:6
+nusia-nusiat	nusia	nusiat	relative_or_attributive_mi	1	2	3	Jeremiah 41:10; Jeremiah 43:6; Acts 25:14	A following `mi` suggests a relative-like or attributive nominal environment.:3
+nusia-nusiat	nusia	nusiat	unknown_or_needs_review	16	26	42	Deuteronomy 2:35; Deuteronomy 3:7; Deuteronomy 13:5; Deuteronomy 13:16; Deuteronomy 20:14	No conservative local environment rule fired for this token.:42
+om-omh	om	omh	causative_or_derivational_sak	152	0	152	Genesis 3:15; Genesis 13:8; Genesis 24:55; Genesis 42:19; Genesis 44:33	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:152
+om-omh	om	omh	clause_linking_kipan	1	0	1	1 Samuel 7:2	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:1
+om-omh	om	omh	dependent_temporal_ciangin	26	0	26	Genesis 4:8; Genesis 9:16; Genesis 31:49; Leviticus 13:48; Leviticus 13:49	Immediate following `ciangin` provides a conservative dependent-temporal cue.:26
+om-omh	om	omh	finite_main_or_matrix	1613	0	1613	Genesis 2:12; Genesis 2:18; Genesis 2:25; Genesis 3:7; Genesis 6:4	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:1613
+om-omh	om	omh	imperative_or_directive	76	0	76	Genesis 26:3; Genesis 27:44; Genesis 27:45; Genesis 38:11; Exodus 14:13	A following imperative-like particle may indicate directive force.:76
+om-omh	om	omh	negative_clause	1021	0	1021	Genesis 2:5; Genesis 2:20; Genesis 6:12; Genesis 8:22; Genesis 13:9	Nearby negative material marks a negative or irrealis-heavy clause.:1021
+om-omh	om	omh	nominalized_na	451	0	451	Genesis 2:11; Genesis 3:11; Genesis 4:16; Genesis 9:22; Genesis 9:23	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:451
+om-omh	om	omh	possessed_or_genitive_attributive	22	0	22	Numbers 22:4; Deuteronomy 13:15; Deuteronomy 20:11; Joshua 8:16; Joshua 10:28	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:22
+om-omh	om	omh	purpose_nadingin	62	0	62	Genesis 3:12; Genesis 12:10; Genesis 30:37; Genesis 47:4; Exodus 8:16	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:62
+om-omh	om	omh	quotative_or_say_complement	134	0	134	Genesis 1:3; Genesis 18:24; Genesis 31:32; Genesis 31:37; Genesis 32:6	Nearby quotative material suggests embedded or reported-speech structure.:134
+om-omh	om	omh	relative_or_attributive_mi	97	0	97	Genesis 19:11; Genesis 35:6; Genesis 45:7; Exodus 19:16; Exodus 33:16	A following `mi` suggests a relative-like or attributive nominal environment.:97
+om-omh	om	omh	unknown_or_needs_review	3019	0	3019	Genesis 1:3; Genesis 1:6; Genesis 1:7; Genesis 1:9; Genesis 1:11	No conservative local environment rule fired for this token.:3019
+pai-paih	pai	paih	causative_or_derivational_sak	214	13	227	Genesis 20:13; Genesis 24:56; Genesis 30:26; Genesis 30:32; Genesis 32:21	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:227
+pai-paih	pai	paih	clause_linking_kipan	4	0	4	1 Samuel 8:8; 1 Samuel 29:6; 2 Kings 21:15; 1 Chronicles 17:5	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:4
+pai-paih	pai	paih	dependent_temporal_ciangin	129	0	129	Genesis 24:41; Genesis 30:33; Genesis 35:9; Genesis 43:25; Genesis 43:26	Immediate following `ciangin` provides a conservative dependent-temporal cue.:129
+pai-paih	pai	paih	dependent_temporal_ni_in	2	0	2	1 Kings 2:42; Luke 17:29	Immediate following `ni-in` provides a conservative dependent-temporal cue.:2
+pai-paih	pai	paih	finite_main_or_matrix	4279	22	4301	Genesis 2:19; Genesis 2:22; Genesis 3:14; Genesis 4:3; Genesis 4:4	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:4301
+pai-paih	pai	paih	imperative_or_directive	332	0	332	Genesis 7:1; Genesis 8:16; Genesis 8:17; Genesis 11:3; Genesis 11:4	A following imperative-like particle may indicate directive force.:332
+pai-paih	pai	paih	negative_clause	319	1	320	Genesis 6:3; Genesis 24:6; Genesis 24:8; Genesis 26:2; Genesis 27:3	Nearby negative material marks a negative or irrealis-heavy clause.:320
+pai-paih	pai	paih	nominalized_na	175	19	194	Genesis 3:8; Genesis 16:7; Genesis 20:13; Genesis 24:5; Genesis 24:42	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:194
+pai-paih	pai	paih	possessed_or_genitive_attributive	1	1	2	Jeremiah 30:17; Luke 6:19	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:2
+pai-paih	pai	paih	purpose_nadingin	103	1	104	Genesis 11:31; Genesis 12:5; Genesis 31:18; Genesis 31:52; Exodus 3:8	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:104
+pai-paih	pai	paih	quotative_or_say_complement	95	0	95	Genesis 29:6; Genesis 38:13; Genesis 38:28; Genesis 44:26; Genesis 45:1	Nearby quotative material suggests embedded or reported-speech structure.:95
+pai-paih	pai	paih	relative_or_attributive_mi	24	0	24	Genesis 34:24; Leviticus 15:33; Leviticus 22:4; Numbers 19:14; Judges 1:24	A following `mi` suggests a relative-like or attributive nominal environment.:24
+pai-paih	pai	paih	unknown_or_needs_review	59	6	65	Genesis 50:9; Exodus 6:11; Leviticus 11:27; Deuteronomy 13:13; Deuteronomy 23:6	No conservative local environment rule fired for this token.:65
+pia-piak	pia	piak	causative_or_derivational_sak	8	0	8	Genesis 2:4; Numbers 9:7; 2 Chronicles 36:3; Esther 3:13; Job 36:18	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:8
+pia-piak	pia	piak	dependent_temporal_ciangin	0	34	34	Exodus 13:11; Exodus 16:8; Leviticus 20:4; Leviticus 22:18; Leviticus 22:21	Immediate following `ciangin` provides a conservative dependent-temporal cue.:34
+pia-piak	pia	piak	dependent_temporal_ni_in	0	7	7	Leviticus 6:5; Leviticus 7:15; Leviticus 7:16; Numbers 28:26; Joshua 10:12	Immediate following `ni-in` provides a conservative dependent-temporal cue.:7
+pia-piak	pia	piak	finite_main_or_matrix	2226	686	2912	Genesis 1:28; Genesis 1:29; Genesis 1:30; Genesis 2:3; Genesis 2:16	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:2912
+pia-piak	pia	piak	imperative_or_directive	135	8	143	Genesis 14:24; Genesis 20:7; Genesis 22:2; Genesis 23:4; Genesis 24:43	A following imperative-like particle may indicate directive force.:143
+pia-piak	pia	piak	negative_clause	177	41	218	Genesis 15:3; Genesis 20:7; Genesis 23:11; Genesis 24:41; Genesis 27:34	Nearby negative material marks a negative or irrealis-heavy clause.:218
+pia-piak	pia	piak	nominalized_na	0	262	262	Genesis 4:3; Genesis 4:4; Genesis 4:5; Genesis 4:13; Genesis 19:15	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:262
+pia-piak	pia	piak	purpose_nadingin	62	141	203	Genesis 15:7; Genesis 23:9; Genesis 27:4; Genesis 27:7; Genesis 27:10	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:203
+pia-piak	pia	piak	quotative_or_say_complement	33	13	46	Genesis 1:22; Genesis 21:7; Genesis 29:33; Exodus 2:19; Exodus 17:2	Nearby quotative material suggests embedded or reported-speech structure.:46
+pia-piak	pia	piak	relative_or_attributive_mi	8	6	14	Exodus 22:20; Exodus 38:26; Numbers 16:35; Numbers 22:6; Deuteronomy 7:16	A following `mi` suggests a relative-like or attributive nominal environment.:14
+pia-piak	pia	piak	unknown_or_needs_review	183	117	300	Genesis 6:3; Genesis 7:9; Genesis 12:3; Genesis 21:4; Genesis 31:15	No conservative local environment rule fired for this token.:300
+piang-pian	piang	pian	causative_or_derivational_sak	4	44	297	Genesis 1:1; Genesis 1:11; Genesis 1:12; Genesis 1:20; Genesis 1:21	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:297
+piang-pian	piang	pian	clause_linking_kipan	0	5	5	Isaiah 40:21; Daniel 12:1; Matthew 13:35; Matthew 24:21; Luke 11:50	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:5
+piang-pian	piang	pian	dependent_temporal_ciangin	0	7	7	Ezekiel 24:24; Daniel 12:11; Zechariah 2:9; Matthew 2:17; Acts 19:21	Immediate following `ciangin` provides a conservative dependent-temporal cue.:7
+piang-pian	piang	pian	finite_main_or_matrix	308	35	346	Genesis 1:7; Genesis 1:9; Genesis 1:11; Genesis 1:15; Genesis 1:24	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:346
+piang-pian	piang	pian	imperative_or_directive	0	1	1	Revelation 9:9	A following imperative-like particle may indicate directive force.:1
+piang-pian	piang	pian	negative_clause	27	7	34	Exodus 22:5; Numbers 11:12; Judges 19:30; 1 Samuel 4:7; 2 Samuel 18:22	Nearby negative material marks a negative or irrealis-heavy clause.:34
+piang-pian	piang	pian	nominalized_na	0	54	54	Genesis 4:20; Genesis 4:21; Genesis 4:22; Genesis 10:14; Genesis 10:18	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:54
+piang-pian	piang	pian	purpose_nadingin	3	8	11	Genesis 50:20; 2 Chronicles 12:12; Job 10:10; Isaiah 26:14; Mark 13:18	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:11
+piang-pian	piang	pian	quotative_or_say_complement	13	2	15	Leviticus 25:26; 1 Samuel 24:13; Esther 2:11; Psalms 73:20; Ecclesiastes 3:22	Nearby quotative material suggests embedded or reported-speech structure.:15
+piang-pian	piang	pian	relative_or_attributive_mi	1	0	1	John 3:31	A following `mi` suggests a relative-like or attributive nominal environment.:1
+piang-pian	piang	pian	unknown_or_needs_review	33	89	124	Genesis 36:16; Genesis 36:17; Genesis 36:18; Genesis 45:18; Exodus 23:10	No conservative local environment rule fired for this token.:124
+pua-puah	pua	puah	causative_or_derivational_sak	0	5	5	2 Kings 12:5; Ezekiel 36:33; Ezekiel 36:34; Daniel 4:27; Romans 12:2	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:5
+pua-puah	pua	puah	clause_linking_kipan	0	1	1	2 Kings 12:6	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:1
+pua-puah	pua	puah	dependent_temporal_ciangin	0	1	1	Exodus 30:7	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+pua-puah	pua	puah	finite_main_or_matrix	0	84	84	Leviticus 26:39; Leviticus 26:43; Deuteronomy 19:3; Deuteronomy 28:39; 1 Kings 12:25	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:84
+pua-puah	pua	puah	imperative_or_directive	0	4	4	Jeremiah 7:3; Jeremiah 35:15; Daniel 9:17	A following imperative-like particle may indicate directive force.:4
+pua-puah	pua	puah	negative_clause	0	3	3	Leviticus 25:5; 2 Samuel 19:24; 2 Kings 12:7	Nearby negative material marks a negative or irrealis-heavy clause.:3
+pua-puah	pua	puah	nominalized_na	0	6	6	2 Kings 12:5; 2 Kings 12:12; 2 Chronicles 24:13; 2 Chronicles 34:10; Esther 2:12	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:6
+pua-puah	pua	puah	purpose_nadingin	0	13	13	2 Kings 12:7; 2 Kings 12:12; 2 Kings 22:6; 1 Chronicles 26:27; 2 Chronicles 24:5	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:13
+pua-puah	pua	puah	unknown_or_needs_review	0	6	6	Exodus 1:15; Judges 10:1; 1 Chronicles 7:1; 2 Chronicles 26:10; 2 Chronicles 29:18	No conservative local environment rule fired for this token.:6
+pua-puak	pua	puak	causative_or_derivational_sak	15	5	20	Leviticus 22:16; 1 Samuel 16:20; 2 Samuel 18:19; 1 Kings 12:10; Esther 4:13	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:20
+pua-puak	pua	puak	dependent_temporal_ciangin	0	1	1	Numbers 4:24	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+pua-puak	pua	puak	dependent_temporal_ni_in	0	1	1	Obadiah 1:11	Immediate following `ni-in` provides a conservative dependent-temporal cue.:1
+pua-puak	pua	puak	finite_main_or_matrix	263	277	540	Genesis 6:14; Genesis 7:11; Genesis 19:6; Genesis 24:15; Genesis 24:31	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:540
+pua-puak	pua	puak	imperative_or_directive	15	15	30	Genesis 27:13; Genesis 43:12; Leviticus 10:4; Leviticus 11:28; Leviticus 11:40	A following imperative-like particle may indicate directive force.:30
+pua-puak	pua	puak	negative_clause	5	10	15	Genesis 31:39; Genesis 47:30; 1 Samuel 1:18; 1 Samuel 10:27; 2 Samuel 18:20	Nearby negative material marks a negative or irrealis-heavy clause.:15
+pua-puak	pua	puak	nominalized_na	0	7	7	2 Samuel 18:22; 1 Kings 2:26; Nehemiah 13:15; Isaiah 1:14; Isaiah 9:4	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:7
+pua-puak	pua	puak	possessed_or_genitive_attributive	1	0	1	Mark 13:6	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+pua-puak	pua	puak	purpose_nadingin	6	23	29	Genesis 37:25; Genesis 49:15; Exodus 25:14; Exodus 37:5; Exodus 37:15	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:29
+pua-puak	pua	puak	quotative_or_say_complement	0	6	6	1 Samuel 18:8; Ezra 4:10; Esther 2:22; Amos 4:1; Matthew 8:17	Nearby quotative material suggests embedded or reported-speech structure.:6
+pua-puak	pua	puak	relative_or_attributive_mi	4	0	4	1 Samuel 10:3; 1 Kings 5:15; Psalms 126:6	A following `mi` suggests a relative-like or attributive nominal environment.:4
+pua-puak	pua	puak	unknown_or_needs_review	8	12	20	Genesis 44:1; Joshua 3:15; Joshua 9:14; 1 Samuel 25:35; 2 Samuel 1:15	No conservative local environment rule fired for this token.:20
+sawlkhia-sawlkhiat	sawlkhia	sawlkhiat	finite_main_or_matrix	35	2	37	Genesis 3:23; Genesis 19:29; Genesis 21:14; Genesis 25:6; Genesis 28:5	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:37
+sawlkhia-sawlkhiat	sawlkhia	sawlkhiat	imperative_or_directive	3	0	3	Matthew 14:15; Mark 6:36; Luke 9:12	A following imperative-like particle may indicate directive force.:3
+sawlkhia-sawlkhiat	sawlkhia	sawlkhiat	negative_clause	2	1	3	Genesis 31:42; 1 Samuel 20:13; Jeremiah 23:21	Nearby negative material marks a negative or irrealis-heavy clause.:3
+sawlkhia-sawlkhiat	sawlkhia	sawlkhiat	nominalized_na	0	1	1	2 Samuel 13:16	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:1
+sia-siah	sia	siah	causative_or_derivational_sak	71	0	71	Genesis 34:2; Genesis 34:13; Leviticus 19:29; Leviticus 26:16; Leviticus 26:31	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:71
+sia-siah	sia	siah	finite_main_or_matrix	422	28	450	Genesis 4:5; Genesis 6:12; Genesis 8:21; Genesis 9:15; Genesis 12:3	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:450
+sia-siah	sia	siah	imperative_or_directive	29	1	30	Numbers 5:22; Numbers 24:9; Judges 5:23; 2 Samuel 16:10; 2 Kings 18:25	A following imperative-like particle may indicate directive force.:30
+sia-siah	sia	siah	negative_clause	72	8	80	Genesis 18:28; Genesis 18:31; Genesis 18:32; Exodus 9:32; Exodus 22:28	Nearby negative material marks a negative or irrealis-heavy clause.:80
+sia-siah	sia	siah	nominalized_na	0	14	14	Job 18:10; Job 41:1; Psalms 9:15; Psalms 31:4; Psalms 119:85	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:14
+sia-siah	sia	siah	possessed_or_genitive_attributive	1	0	1	Romans 2:9	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+sia-siah	sia	siah	purpose_nadingin	33	4	37	Genesis 6:17; Genesis 9:11; Genesis 19:13; Genesis 50:20; Numbers 23:11	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:37
+sia-siah	sia	siah	quotative_or_say_complement	11	0	11	Leviticus 27:12; Leviticus 27:33; Deuteronomy 9:25; 2 Samuel 1:27; Job 36:23	Nearby quotative material suggests embedded or reported-speech structure.:11
+sia-siah	sia	siah	relative_or_attributive_mi	4	2	6	Exodus 21:17; Exodus 38:26; Leviticus 20:9; Leviticus 24:15; Ecclesiastes 9:2	A following `mi` suggests a relative-like or attributive nominal environment.:6
+sia-siah	sia	siah	unknown_or_needs_review	483	110	593	Genesis 2:9; Genesis 2:17; Genesis 3:5; Genesis 3:22; Genesis 4:6	No conservative local environment rule fired for this token.:593
+sum-sumh	sum	sumh	finite_main_or_matrix	180	0	180	Genesis 4:22; Genesis 17:12; Genesis 42:35; Genesis 43:12; Genesis 43:21	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:180
+sum-sumh	sum	sumh	imperative_or_directive	17	0	17	Genesis 37:28; Deuteronomy 16:19; 1 Kings 10:28; 1 Kings 10:29; 2 Chronicles 1:16	A following imperative-like particle may indicate directive force.:17
+sum-sumh	sum	sumh	negative_clause	19	0	19	Exodus 21:11; Numbers 11:8; 2 Samuel 24:24; 1 Kings 7:47; 1 Kings 18:5	Nearby negative material marks a negative or irrealis-heavy clause.:19
+sum-sumh	sum	sumh	nominalized_na	24	0	24	Joshua 6:19; Joshua 6:24; 2 Kings 12:18; Esther 3:9; Esther 4:7	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:24
+sum-sumh	sum	sumh	possessed_or_genitive_attributive	1	0	1	Nahum 3:16	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+sum-sumh	sum	sumh	purpose_nadingin	2	0	2	Ecclesiastes 11:1; Ezekiel 22:27	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:2
+sum-sumh	sum	sumh	quotative_or_say_complement	3	0	3	Exodus 23:8; Zephaniah 1:11; Matthew 26:9	Nearby quotative material suggests embedded or reported-speech structure.:3
+sum-sumh	sum	sumh	unknown_or_needs_review	395	1	396	Genesis 17:13; Genesis 17:23; Genesis 17:27; Genesis 23:16; Genesis 31:15	No conservative local environment rule fired for this token.:396
+tan-tanh	tan	tanh	causative_or_derivational_sak	13	1	14	Leviticus 25:24; 2 Samuel 16:9; Job 4:10; Psalms 29:5; Psalms 105:33	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:14
+tan-tanh	tan	tanh	finite_main_or_matrix	83	24	107	Genesis 14:24; Genesis 31:14; Genesis 40:19; Genesis 47:22; Exodus 13:13	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:107
+tan-tanh	tan	tanh	imperative_or_directive	2	0	2	Job 6:23; Daniel 4:14	A following imperative-like particle may indicate directive force.:2
+tan-tanh	tan	tanh	negative_clause	8	8	16	Genesis 48:16; Leviticus 19:27; Leviticus 27:20; Leviticus 27:28; Leviticus 27:29	Nearby negative material marks a negative or irrealis-heavy clause.:16
+tan-tanh	tan	tanh	nominalized_na	7	0	7	Ezra 8:21; Esther 9:21; Esther 9:28; Jeremiah 34:13; Daniel 7:20	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:7
+tan-tanh	tan	tanh	purpose_nadingin	4	5	9	Leviticus 6:17; Leviticus 25:26; 2 Kings 6:32; 1 Chronicles 16:18; Psalms 83:8	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:9
+tan-tanh	tan	tanh	quotative_or_say_complement	4	1	5	Ruth 4:4; Matthew 5:30; Matthew 18:8; Mark 9:43; Mark 9:45	Nearby quotative material suggests embedded or reported-speech structure.:5
+tan-tanh	tan	tanh	relative_or_attributive_mi	1	0	1	Revelation 14:3	A following `mi` suggests a relative-like or attributive nominal environment.:1
+tan-tanh	tan	tanh	unknown_or_needs_review	29	45	74	Genesis 14:24; Genesis 21:16; Genesis 43:34; Exodus 29:27; Exodus 29:28	No conservative local environment rule fired for this token.:74
+thei-theih	thei	theih	causative_or_derivational_sak	72	51	123	Exodus 4:15; Exodus 6:3; Exodus 18:16; Exodus 18:20; Exodus 33:12	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:123
+thei-theih	thei	theih	dependent_temporal_ciangin	0	44	44	Genesis 16:4; Genesis 16:5; Genesis 28:8; Genesis 29:31; Genesis 32:25	Immediate following `ciangin` provides a conservative dependent-temporal cue.:44
+thei-theih	thei	theih	finite_main_or_matrix	667	864	1531	Genesis 3:5; Genesis 3:7; Genesis 3:22; Genesis 7:1; Genesis 8:11	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:1531
+thei-theih	thei	theih	imperative_or_directive	99	3	102	Genesis 15:13; Genesis 20:7; Genesis 37:32; Exodus 4:21; Exodus 7:1	A following imperative-like particle may indicate directive force.:102
+thei-theih	thei	theih	modal_or_ability	556	112	668	Genesis 2:16; Genesis 3:2; Genesis 12:13; Genesis 13:16; Genesis 15:8	The `thei/theih` pair often surfaces in modal or ability-heavy contexts.:668
+thei-theih	thei	theih	negative_clause	888	160	1048	Genesis 4:9; Genesis 11:6; Genesis 11:7; Genesis 13:6; Genesis 18:25	Nearby negative material marks a negative or irrealis-heavy clause.:1048
+thei-theih	thei	theih	nominalized_na	0	256	256	Genesis 2:9; Genesis 2:17; Genesis 15:13; Genesis 44:15; Genesis 50:20	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:256
+thei-theih	thei	theih	possessed_or_genitive_attributive	5	0	5	Deuteronomy 32:15; Proverbs 23:2; Ezekiel 2:7; Ezekiel 12:3; Hebrews 5:2	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:5
+thei-theih	thei	theih	purpose_nadingin	35	646	681	Genesis 2:19; Genesis 8:8; Genesis 8:17; Genesis 12:19; Genesis 18:19	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:681
+thei-theih	thei	theih	quotative_or_say_complement	64	16	80	Genesis 13:16; Genesis 18:16; Genesis 26:9; Genesis 41:15; Exodus 21:36	Nearby quotative material suggests embedded or reported-speech structure.:80
+thei-theih	thei	theih	relative_or_attributive_mi	19	0	19	Genesis 47:6; Exodus 31:6; Exodus 36:8; 1 Samuel 10:11; 1 Chronicles 27:32	A following `mi` suggests a relative-like or attributive nominal environment.:19
+thei-theih	thei	theih	unknown_or_needs_review	670	27	697	Genesis 1:21; Genesis 3:7; Genesis 3:24; Genesis 9:24; Genesis 13:7	No conservative local environment rule fired for this token.:697
+thu-thuh	thu	thuh	causative_or_derivational_sak	5	0	5	Judges 11:36; 2 Samuel 4:8; Isaiah 34:8; Jeremiah 51:36; 1 Timothy 3:4	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:5
+thu-thuh	thu	thuh	finite_main_or_matrix	900	4	904	Genesis 4:23; Genesis 11:7; Genesis 17:9; Genesis 18:19; Genesis 18:33	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:904
+thu-thuh	thu	thuh	imperative_or_directive	146	1	147	Genesis 6:6; Genesis 34:18; Genesis 45:16; Exodus 22:9; Exodus 23:13	A following imperative-like particle may indicate directive force.:147
+thu-thuh	thu	thuh	negative_clause	634	0	634	Genesis 16:5; Genesis 18:30; Genesis 24:7; Genesis 27:12; Genesis 27:19	Nearby negative material marks a negative or irrealis-heavy clause.:634
+thu-thuh	thu	thuh	nominalized_na	527	8	535	Genesis 15:14; Genesis 25:21; Genesis 50:11; Genesis 50:17; Exodus 4:12	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:535
+thu-thuh	thu	thuh	possessed_or_genitive_attributive	25	0	25	Genesis 42:19; Genesis 42:31; Genesis 42:33; 2 Kings 25:19; 1 Chronicles 27:32	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:25
+thu-thuh	thu	thuh	purpose_nadingin	63	0	63	Genesis 17:7; Genesis 17:19; Genesis 25:22; Exodus 2:14; Exodus 5:23	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:63
+thu-thuh	thu	thuh	quotative_or_say_complement	130	0	130	Exodus 29:28; Leviticus 24:18; Numbers 6:26; Numbers 22:6; Deuteronomy 15:11	Nearby quotative material suggests embedded or reported-speech structure.:130
+thu-thuh	thu	thuh	relative_or_attributive_mi	39	0	39	Genesis 6:9; Genesis 18:24; Genesis 18:26; Genesis 18:28; Genesis 42:34	A following `mi` suggests a relative-like or attributive nominal environment.:39
+thu-thuh	thu	thuh	unknown_or_needs_review	8128	3	8131	Genesis 1:22; Genesis 1:28; Genesis 2:3; Genesis 2:4; Genesis 2:16	No conservative local environment rule fired for this token.:8131
+tu-tuh	tu	tuh	causative_or_derivational_sak	19	0	19	1 Samuel 9:22; 2 Kings 10:3; 2 Chronicles 6:23; 2 Chronicles 9:8; 2 Chronicles 23:20	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:19
+tu-tuh	tu	tuh	clause_linking_kipan	3	0	3	2 Chronicles 16:9; Ezekiel 9:7; Matthew 12:32	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:3
+tu-tuh	tu	tuh	dependent_temporal_ciangin	6	0	6	Genesis 17:21; Micah 7:6; Romans 3:26; 2 Timothy 1:10; Hebrews 2:18	Immediate following `ciangin` provides a conservative dependent-temporal cue.:6
+tu-tuh	tu	tuh	dependent_temporal_ni_in	2	0	2	Hebrews 1:5; Hebrews 3:7	Immediate following `ni-in` provides a conservative dependent-temporal cue.:2
+tu-tuh	tu	tuh	finite_main_or_matrix	1322	40	1362	Genesis 3:1; Genesis 4:1; Genesis 4:2; Genesis 4:11; Genesis 4:14	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:1362
+tu-tuh	tu	tuh	imperative_or_directive	14	2	16	2 Samuel 9:10; Psalms 2:4; Psalms 7:7; Psalms 110:1; Proverbs 25:7	A following imperative-like particle may indicate directive force.:16
+tu-tuh	tu	tuh	negative_clause	78	8	86	Genesis 18:13; Genesis 21:23; Genesis 31:40; Genesis 31:42; Genesis 35:17	Nearby negative material marks a negative or irrealis-heavy clause.:86
+tu-tuh	tu	tuh	nominalized_na	0	6	6	Deuteronomy 17:8; Esther 8:10; Isaiah 28:24; Ezekiel 29:20; Acts 25:19	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:6
+tu-tuh	tu	tuh	purpose_nadingin	9	0	9	Deuteronomy 32:24; 1 Samuel 22:17; 1 Kings 1:48; 1 Kings 8:25; 1 Chronicles 28:5	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:9
+tu-tuh	tu	tuh	quotative_or_say_complement	30	0	30	Genesis 26:22; Exodus 9:15; Exodus 14:13; Leviticus 9:4; Deuteronomy 2:30	Nearby quotative material suggests embedded or reported-speech structure.:30
+tu-tuh	tu	tuh	relative_or_attributive_mi	7	0	7	Exodus 9:19; Leviticus 15:6; 1 Samuel 25:33; 1 Kings 18:19; Nehemiah 5:1	A following `mi` suggests a relative-like or attributive nominal environment.:7
+tu-tuh	tu	tuh	unknown_or_needs_review	497	5	502	Genesis 2:23; Genesis 8:21; Genesis 11:31; Genesis 18:16; Genesis 19:5	No conservative local environment rule fired for this token.:502
+tua-tuah	tua	tuah	causative_or_derivational_sak	0	2	2	Jeremiah 15:13; Jeremiah 17:3	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:2
+tua-tuah	tua	tuah	dependent_temporal_ciangin	0	13	13	Exodus 13:17; Numbers 35:21; Proverbs 24:10; Ecclesiastes 7:14; Ezekiel 28:9	Immediate following `ciangin` provides a conservative dependent-temporal cue.:13
+tua-tuah	tua	tuah	dependent_temporal_ni_in	0	4	4	Obadiah 1:12; Obadiah 1:13	Immediate following `ni-in` provides a conservative dependent-temporal cue.:4
+tua-tuah	tua	tuah	finite_main_or_matrix	0	95	95	Genesis 3:7; Genesis 32:19; Exodus 23:4; Exodus 26:3; Exodus 26:4	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:95
+tua-tuah	tua	tuah	negative_clause	0	7	7	Proverbs 11:8; Proverbs 21:30; Luke 22:40; Acts 2:40; Acts 20:26	Nearby negative material marks a negative or irrealis-heavy clause.:7
+tua-tuah	tua	tuah	nominalized_na	0	15	15	Numbers 11:1; Numbers 35:19; Deuteronomy 12:13; Joshua 7:5; 1 Samuel 14:32	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:15
+tua-tuah	tua	tuah	possessed_or_genitive_attributive	0	1	1	Psalms 10:10	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+tua-tuah	tua	tuah	purpose_nadingin	0	4	4	1 Samuel 17:48; Ezra 9:13; Revelation 21:2	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:4
+tua-tuah	tua	tuah	quotative_or_say_complement	0	1	1	Numbers 16:29	Nearby quotative material suggests embedded or reported-speech structure.:1
+tua-tuah	tua	tuah	relative_or_attributive_mi	0	2	2	Judges 7:6; Psalms 10:14	A following `mi` suggests a relative-like or attributive nominal environment.:2
+tua-tuah	tua	tuah	unknown_or_needs_review	0	26	26	Exodus 26:9; Exodus 36:10; Exodus 36:16; Numbers 20:14; 2 Samuel 6:5	No conservative local environment rule fired for this token.:26
+tua-tuak	tua	tuak	causative_or_derivational_sak	0	6	6	Ezra 9:13; Job 8:4; Psalms 71:20; Proverbs 3:26; Proverbs 16:18	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:6
+tua-tuak	tua	tuak	clause_linking_kipan	3	0	3	2 Samuel 19:13; Psalms 121:8; Psalms 125:2	Local `a kipan` sequence marks a clause-linking or source/beginning environment.:3
+tua-tuak	tua	tuak	dependent_temporal_ciangin	4241	0	4241	Genesis 1:3; Genesis 1:26; Genesis 2:6; Genesis 2:18; Genesis 2:23	Immediate following `ciangin` provides a conservative dependent-temporal cue.:4241
+tua-tuak	tua	tuak	dependent_temporal_ni_in	85	0	85	Genesis 2:3; Genesis 15:18; Genesis 30:35; Genesis 33:16; Genesis 48:20	Immediate following `ni-in` provides a conservative dependent-temporal cue.:85
+tua-tuak	tua	tuak	finite_main_or_matrix	103	136	239	Genesis 2:18; Genesis 9:23; Genesis 13:11; Genesis 17:13; Genesis 29:14	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:239
+tua-tuak	tua	tuak	imperative_or_directive	40	4	44	Genesis 48:17; Exodus 9:10; Exodus 10:5; Exodus 10:15; Exodus 15:7	A following imperative-like particle may indicate directive force.:44
+tua-tuak	tua	tuak	negative_clause	295	26	321	Genesis 4:5; Genesis 9:13; Genesis 13:9; Genesis 17:11; Genesis 18:28	Nearby negative material marks a negative or irrealis-heavy clause.:321
+tua-tuak	tua	tuak	possessed_or_genitive_attributive	3	0	3	Leviticus 17:15; Luke 11:51; Acts 21:26	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:3
+tua-tuak	tua	tuak	purpose_nadingin	2	1	3	Numbers 3:47; Ezra 2:69; Ecclesiastes 3:11	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:3
+tua-tuak	tua	tuak	quotative_or_say_complement	147	5	152	Genesis 2:17; Genesis 3:5; Genesis 18:24; Genesis 19:22; Genesis 29:2	Nearby quotative material suggests embedded or reported-speech structure.:152
+tua-tuak	tua	tuak	relative_or_attributive_mi	36	1	37	Genesis 2:7; Genesis 21:27; Exodus 19:13; Numbers 1:51; Numbers 3:10	A following `mi` suggests a relative-like or attributive nominal environment.:37
+tua-tuak	tua	tuak	unknown_or_needs_review	8319	69	8388	Genesis 1:2; Genesis 1:4; Genesis 1:6; Genesis 1:7; Genesis 1:9	No conservative local environment rule fired for this token.:8388
+tuahpha-tuahphat	tuahpha	tuahphat	causative_or_derivational_sak	1	0	1	Genesis 27:20	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:1
+tuahpha-tuahphat	tuahpha	tuahphat	dependent_temporal_ciangin	0	1	1	Proverbs 11:10	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+tuahpha-tuahphat	tuahpha	tuahphat	finite_main_or_matrix	2	0	2	Proverbs 13:21; Song of Solomon 1:4	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:2
+vial-vialh	vial	vialh	finite_main_or_matrix	11	0	11	1 Kings 7:35; 2 Kings 16:17; Job 8:17; Job 30:10; Psalms 41:9	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:11
+vial-vialh	vial	vialh	negative_clause	0	1	1	Psalms 119:61	Nearby negative material marks a negative or irrealis-heavy clause.:1
+vial-vialh	vial	vialh	nominalized_na	1	0	1	Psalms 137:7	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:1
+vial-vialh	vial	vialh	quotative_or_say_complement	4	0	4	Psalms 12:2; Psalms 40:15; Isaiah 66:5; Ezekiel 36:2	Nearby quotative material suggests embedded or reported-speech structure.:4
+vial-vialh	vial	vialh	unknown_or_needs_review	11	0	11	1 Kings 7:24; 1 Kings 7:26; 1 Kings 20:31; 1 Kings 20:32; 2 Chronicles 4:5	No conservative local environment rule fired for this token.:11
+za-zak	za	zak	causative_or_derivational_sak	67	11	78	Genesis 26:11; Genesis 37:14; Exodus 23:13; Exodus 32:5; Exodus 36:6	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:78
+za-zak	za	zak	dependent_temporal_ciangin	1	130	131	Genesis 8:21; Genesis 14:14; Genesis 24:30; Genesis 24:52; Genesis 27:34	Immediate following `ciangin` provides a conservative dependent-temporal cue.:131
+za-zak	za	zak	dependent_temporal_ni_in	1	5	6	Numbers 30:5; Numbers 30:7; Numbers 30:8; Numbers 30:12; Numbers 30:14	Immediate following `ni-in` provides a conservative dependent-temporal cue.:6
+za-zak	za	zak	finite_main_or_matrix	279	274	553	Genesis 3:8; Genesis 21:17; Genesis 31:1; Genesis 34:5; Genesis 34:7	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:553
+za-zak	za	zak	imperative_or_directive	67	0	67	Leviticus 26:8; Numbers 12:6; Numbers 16:8; Numbers 20:10; Numbers 23:18	A following imperative-like particle may indicate directive force.:67
+za-zak	za	zak	negative_clause	66	10	76	Genesis 21:26; Genesis 50:19; Deuteronomy 4:28; Deuteronomy 31:2; 1 Samuel 1:13	Nearby negative material marks a negative or irrealis-heavy clause.:76
+za-zak	za	zak	nominalized_na	1	27	28	Genesis 23:10; Genesis 23:13; Genesis 23:16; Exodus 16:8; Numbers 14:28	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:28
+za-zak	za	zak	possessed_or_genitive_attributive	0	1	1	Colossians 4:6	A following `mi` plus a preceding possessor-like token suggests an attributive or possessed nominal environment.:1
+za-zak	za	zak	purpose_nadingin	5	8	13	Numbers 11:2; 2 Chronicles 6:20; 2 Chronicles 9:23; Psalms 77:1; Isaiah 34:1	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:13
+za-zak	za	zak	quotative_or_say_complement	8	0	8	Genesis 43:25; 1 Samuel 18:25; 2 Samuel 19:2; 2 Kings 19:20; Job 16:20	Nearby quotative material suggests embedded or reported-speech structure.:8
+za-zak	za	zak	relative_or_attributive_mi	18	0	18	Leviticus 24:14; 2 Samuel 17:9; Job 29:11; Jeremiah 19:3; Jeremiah 36:3	A following `mi` suggests a relative-like or attributive nominal environment.:18
+za-zak	za	zak	unknown_or_needs_review	627	25	652	Genesis 3:10; Genesis 4:21; Genesis 5:3; Genesis 5:4; Genesis 5:5	No conservative local environment rule fired for this token.:652
+zui-zuih	zui	zuih	causative_or_derivational_sak	0	1	1	Genesis 43:5	Causative or derivational `sak` blocks promotion as simple stem-alternation evidence.:1
+zui-zuih	zui	zuih	dependent_temporal_ciangin	0	1	1	James 2:24	Immediate following `ciangin` provides a conservative dependent-temporal cue.:1
+zui-zuih	zui	zuih	finite_main_or_matrix	772	140	912	Genesis 10:32; Genesis 12:4; Genesis 17:9; Genesis 17:10; Genesis 18:16	No stronger local cue was found, so the token is kept in a conservative finite or matrix bucket.:912
+zui-zuih	zui	zuih	imperative_or_directive	41	0	41	Exodus 34:11; Numbers 10:29; Numbers 22:20; Numbers 22:35; Deuteronomy 4:1	A following imperative-like particle may indicate directive force.:41
+zui-zuih	zui	zuih	negative_clause	134	25	159	Genesis 24:5; Genesis 24:8; Genesis 24:39; Genesis 42:38; Exodus 16:4	Nearby negative material marks a negative or irrealis-heavy clause.:159
+zui-zuih	zui	zuih	nominalized_na	0	71	71	Numbers 14:43; Numbers 32:15; Deuteronomy 7:4; Deuteronomy 7:8; Deuteronomy 7:12	Suffixal `-na` in the analyzer segmentation supports a nominalized environment.:71
+zui-zuih	zui	zuih	purpose_nadingin	10	27	37	Numbers 30:2; Numbers 30:4; Deuteronomy 11:22; Deuteronomy 29:29; Deuteronomy 32:46	Local `ding` or `nadingin` material suggests a purpose or irrealis-heavy environment.:37
+zui-zuih	zui	zuih	quotative_or_say_complement	6	7	13	Genesis 43:33; Exodus 21:23; Deuteronomy 10:13; 1 Kings 6:12; 1 Kings 9:4	Nearby quotative material suggests embedded or reported-speech structure.:13
+zui-zuih	zui	zuih	relative_or_attributive_mi	16	0	16	Exodus 20:6; Leviticus 18:5; Deuteronomy 4:3; Deuteronomy 5:10; Deuteronomy 16:15	A following `mi` suggests a relative-like or attributive nominal environment.:16
+zui-zuih	zui	zuih	unknown_or_needs_review	25	11	36	Genesis 32:19; Genesis 49:19; Leviticus 20:5; Deuteronomy 7:9; Deuteronomy 11:6	No conservative local environment rule fired for this token.:36

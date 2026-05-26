@@ -76,6 +76,17 @@ Candidate files fit into the publication-review workflow like this:
 
 The candidate file is the evidence layer. The dossier interprets that evidence. Any later print-facing slice should promote only manually reviewed examples from the candidate layer.
 
+Stem alternation now needs a second layer in addition to that curated candidate TSV. `output/publication_review/candidates_stem_alternation.tsv` is the print-evidence sample layer, but the broader distribution question is handled by corpus-audit outputs such as:
+
+- `output/publication_review/stem_alternation_corpus_audit.tsv`
+- `output/publication_review/stem_alternation_environment_summary.tsv`
+- `output/publication_review/stem_alternation_pair_summary.tsv`
+
+In other words, stem alternation now has both:
+
+1. a curated candidate layer for print-safe or explicitly blocked packet evidence; and
+2. a broader corpus audit for mapping Form I / Form II distribution across environments.
+
 ## What the current extractor does
 
 For the current demonstratives, negation, pronoun, and stem-alternation layers, the extractor:
