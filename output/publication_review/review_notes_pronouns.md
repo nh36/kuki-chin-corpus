@@ -30,16 +30,16 @@ A separate dossier now exists at `output/publication_review/dossier_pronoun_clus
 
 # Candidate-layer note
 
-Pronouns and clusivity now also have an analyzer-aware candidate file at `output/publication_review/candidates_pronouns.tsv`. That layer records stable accepted pronoun rows, unresolved `ei/eite` evidence, and at least one explicit false friend where `kei` is negative rather than pronominal.
+Pronouns and clusivity now also have an analyzer-aware candidate file at `output/publication_review/candidates_pronouns.tsv`. That layer records stable accepted pronoun rows, both `ko` and `kote` as exclusive in clear dialogue contexts, unresolved `ei/eite` evidence, and at least one explicit false friend where `kei` is negative rather than pronominal.
 
 The packet should now be read in the order `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`. That keeps the clusivity discussion anchored to explicit analyzer-backed candidate rows instead of to raw counts or report-level labels alone.
 
 # Analyzer/export caveats in the candidate layer
 
-The pronoun candidate file uses analyzer-export spans, but some of the exported labels remain imperfect. The clearest accepted `kei` row is glossed `1SG.PRO` and functioned as first person, yet its POS field still reads `FUNC` rather than `PRON`. In the shorter `ei` series, some rows already export as `1PL.EXCL` or `1PL.EXCL.POSS`, even though the clusivity dossier still treats `ei/eite` as mixed and unresolved at the publication level.
+The pronoun candidate file uses analyzer-export spans, but some of the exported labels remain imperfect. The clearest accepted `kei` row is glossed `1SG.PRO` and functioned as first person, yet its POS field still reads `FUNC` rather than `PRON`. The accepted `ko` row is also discourse-clear while still exporting with the lexical gloss `long` and POS `ADJ`. In the shorter `ei` series, some rows already export as `1PL.EXCL` or `1PL.EXCL.POSS`, even though the clusivity dossier still treats `ei/eite` as mixed and unresolved at the publication level.
 
 These caveats do not invalidate the candidate layer, but they do mean the layer is analyzer-backed rather than analyzer-infallible. Accepted status depends on the combination of confirmed token windows, manual verse review, and the constructional interpretation already established in the dossier and packet prose.
 
 # Decision for next slice
 
-This slice is now supported by an explicit candidate layer as well as by the clusivity dossier. The partial correction still stands: `ko/kote` should remain treated as exclusive, while `ei/eite` should remain flagged as under review rather than treated as globally solved. The next step should therefore be to review and harden the pronoun candidate layer before moving on to stem alternation or any new topic.
+This slice is now supported by an explicit candidate layer as well as by the clusivity dossier. The partial correction still stands: `ko/kote` should remain treated as exclusive, while `ei/eite` should remain flagged as under review rather than treated as globally solved. If the current hardening pass proves stable, the next step can be stem alternation rather than another round of pronoun rework.

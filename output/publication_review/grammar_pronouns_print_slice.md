@@ -1,5 +1,5 @@
 ---
-title: "Tedim Chin Grammar Review Slice: Pronouns and Pronominal Marking"
+title: "Tedim Chin Grammar Slice: Pronouns and Pronominal Marking"
 bibliography:
   - ../../literature/bibliography.bib
 link-citations: true
@@ -8,7 +8,7 @@ reference-section-title: "References"
 
 # Scope
 
-This review slice presents a short print-facing chapter on Tedim personal pronouns and closely related pronominal marking. It covers independent personal pronouns, first-person plural forms and clusivity, possessive prefixes, emphatic forms in `-mah`, reflexive and reciprocal marking with `ki-`, and a cautious first treatment of `hong-` and `kong-`. It does not attempt a full account of demonstratives, interrogatives, quantifiers, TAM, or the wider verbal agreement system.
+This account presents a short print-facing chapter on Tedim personal pronouns and closely related pronominal marking. It covers independent personal pronouns, first-person plural forms and clusivity, possessive prefixes, emphatic forms in `-mah`, reflexive and reciprocal marking with `ki-`, and a cautious first treatment of `hong-` and `kong-`. It does not attempt a full account of demonstratives, interrogatives, quantifiers, TAM, or the wider verbal agreement system.
 
 # Personal pronouns
 

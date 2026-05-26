@@ -447,7 +447,7 @@ The most important missing evidence is not another generated summary, but a broa
 
 This dossier now also has an analyzer-aware candidate file at `output/publication_review/candidates_pronouns.tsv`.
 
-That file records stable accepted pronoun rows, strong `ko/kote` evidence that remains treated as exclusive, and explicit unresolved `ei/eite` rows rather than silently flattening them into a solved paradigm. It also keeps at least one false-friend row where `kei` is negative rather than pronominal.
+That file records stable accepted pronoun rows, explicit `ko` and `kote` evidence that remains treated as exclusive, and contrasting unresolved `ei/eite` rows rather than silently flattening them into a solved paradigm. It also keeps at least one false-friend row where `kei` is negative rather than pronominal.
 
 The packet should now be read in the order `candidate file -> dossier -> grammar slice -> dictionary slice -> review notes`. Later pronoun prose should therefore treat the candidate file as the first explicit evidence layer, not as a back-formed appendix after the print packet.
 

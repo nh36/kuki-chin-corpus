@@ -40,33 +40,36 @@ def test_pronoun_candidate_file_exists_with_required_columns():
     assert REQUIRED_COLUMNS <= header
 
 
-def test_pronoun_candidate_file_keeps_core_pronouns_and_exclusive_kote():
+def test_pronoun_candidate_file_keeps_core_pronouns_and_exclusive_ko_kote():
     _, rows = load_candidates()
 
+    by_construction = {row["construction_id"]: row for row in rows}
     accepted = {
         row["construction_id"]
         for row in rows
         if row["candidate_status"] == "accepted"
     }
-    for required in {"kei-pronoun", "kote-exclusive"}:
+    for required in {"kei-pronoun", "ko-exclusive", "kote-exclusive"}:
         assert required in accepted
+
+    assert by_construction["ko-exclusive"]["candidate_status"] == "accepted"
 
 
 def test_pronoun_candidate_file_keeps_ei_series_unresolved_and_negative_kei_out():
     _, rows = load_candidates()
 
+    by_construction = {row["construction_id"]: row for row in rows}
     unresolved_rows = [
         row for row in rows
         if row["construction_id"].startswith(("ei", "eite"))
     ]
     assert unresolved_rows
     assert any(row["candidate_status"] in {"needs_review", "deferred"} for row in unresolved_rows)
-    assert not any(
-        row["candidate_status"] == "accepted"
-        and row["construction_id"] in {"ei-clusivity", "eite-inclusive-context", "eite-exclusive-context"}
-        for row in unresolved_rows
-    )
+    assert by_construction["eite-inclusive-context"]["candidate_status"] == "needs_review"
+    assert by_construction["eite-exclusive-context"]["candidate_status"] == "needs_review"
+    assert by_construction["ei-exclusive-context"]["candidate_status"] != "accepted"
+    assert by_construction["ei-inclusive-context"]["candidate_status"] != "accepted"
 
     kei_negator_rows = [row for row in rows if row["construction_id"] == "kei-negator"]
     assert kei_negator_rows
-    assert all(row["candidate_status"] != "accepted" for row in kei_negator_rows)
+    assert all(row["candidate_status"] == "excluded" for row in kei_negator_rows)
