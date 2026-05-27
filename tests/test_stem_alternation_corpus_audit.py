@@ -14,6 +14,7 @@ PAIR_SUMMARY_PATH = ROOT / "output/publication_review/stem_alternation_pair_summ
 EXAMPLE_MATRIX_PATH = ROOT / "output/publication_review/stem_alternation_example_matrix.tsv"
 LEXICAL_INVENTORY_PATH = ROOT / "output/publication_review/stem_alternation_lexical_inventory.tsv"
 PROMOTABLE_EXAMPLES_PATH = ROOT / "output/publication_review/stem_alternation_promotable_examples.tsv"
+MANUAL_PROMOTION_REVIEW_PATH = ROOT / "output/publication_review/stem_alternation_manual_promotion_review.tsv"
 
 REQUIRED_ENV_COLUMNS = {
     "pair_id",
@@ -100,6 +101,7 @@ def test_stem_alternation_corpus_audit_outputs_exist():
     assert EXAMPLE_MATRIX_PATH.exists()
     assert LEXICAL_INVENTORY_PATH.exists()
     assert PROMOTABLE_EXAMPLES_PATH.exists()
+    assert MANUAL_PROMOTION_REVIEW_PATH.exists()
 
 
 def test_stem_alternation_example_matrix_has_required_columns_and_core_pairs():
@@ -230,9 +232,11 @@ def test_stem_alternation_example_matrix_is_reproducible_when_tokens_export_is_a
     monkeypatch.setattr(module, "EXAMPLE_MATRIX_PATH", tmp_path / "stem_alternation_example_matrix.tsv")
     monkeypatch.setattr(module, "LEXICAL_INVENTORY_PATH", tmp_path / "stem_alternation_lexical_inventory.tsv")
     monkeypatch.setattr(module, "PROMOTABLE_EXAMPLES_PATH", tmp_path / "stem_alternation_promotable_examples.tsv")
+    monkeypatch.setattr(module, "MANUAL_PROMOTION_REVIEW_PATH", tmp_path / "stem_alternation_manual_promotion_review.tsv")
 
     module.write_corpus_audit()
 
     assert (tmp_path / "stem_alternation_example_matrix.tsv").read_text(encoding="utf-8") == EXAMPLE_MATRIX_PATH.read_text(encoding="utf-8")
     assert (tmp_path / "stem_alternation_lexical_inventory.tsv").read_text(encoding="utf-8") == LEXICAL_INVENTORY_PATH.read_text(encoding="utf-8")
     assert (tmp_path / "stem_alternation_promotable_examples.tsv").read_text(encoding="utf-8") == PROMOTABLE_EXAMPLES_PATH.read_text(encoding="utf-8")
+    assert (tmp_path / "stem_alternation_manual_promotion_review.tsv").read_text(encoding="utf-8") == MANUAL_PROMOTION_REVIEW_PATH.read_text(encoding="utf-8")

@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LEXICAL_INVENTORY_PATH = ROOT / "output/publication_review/stem_alternation_lexical_inventory.tsv"
 PROMOTABLE_EXAMPLES_PATH = ROOT / "output/publication_review/stem_alternation_promotable_examples.tsv"
+MANUAL_PROMOTION_REVIEW_PATH = ROOT / "output/publication_review/stem_alternation_manual_promotion_review.tsv"
 GRAMMAR_SLICE_PATH = ROOT / "output/publication_review/grammar_stem_alternation_print_slice.md"
 
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -79,6 +80,27 @@ REQUIRED_PROMOTABLE_COLUMNS = {
     "blocking_or_caveat_notes",
 }
 
+REQUIRED_MANUAL_REVIEW_COLUMNS = {
+    "lexeme_id",
+    "form_i",
+    "form_ii",
+    "gloss",
+    "current_lexical_category",
+    "current_promotion_status",
+    "current_promotion_blocker",
+    "clean_verb_form_i_count",
+    "clean_verb_form_ii_count",
+    "best_form_i_review_example",
+    "best_form_ii_review_example",
+    "environment_distribution_summary",
+    "main_obstacle",
+    "manual_review_decision",
+    "recommended_new_promotion_status",
+    "recommended_grammar_location",
+    "decision_rationale",
+    "next_manual_check",
+}
+
 
 def load_tsv(path: Path):
     with path.open(encoding="utf-8") as handle:
@@ -92,14 +114,17 @@ def section_between(text: str, start_heading: str, end_heading: str) -> str:
     return text[start:end]
 
 
-def test_stem_alternation_lexical_inventory_and_promotable_examples_exist_with_required_columns():
+def test_stem_alternation_lexical_inventory_and_review_outputs_exist_with_required_columns():
     inventory_header, inventory_rows = load_tsv(LEXICAL_INVENTORY_PATH)
     promotable_header, promotable_rows = load_tsv(PROMOTABLE_EXAMPLES_PATH)
+    manual_header, manual_rows = load_tsv(MANUAL_PROMOTION_REVIEW_PATH)
 
     assert REQUIRED_INVENTORY_COLUMNS <= inventory_header
     assert REQUIRED_PROMOTABLE_COLUMNS <= promotable_header
+    assert REQUIRED_MANUAL_REVIEW_COLUMNS <= manual_header
     assert inventory_rows
     assert promotable_rows
+    assert manual_rows
 
 
 def test_stem_alternation_lexical_inventory_includes_psc_and_analyzer_pairs():
@@ -113,7 +138,7 @@ def test_stem_alternation_lexical_inventory_includes_psc_and_analyzer_pairs():
     assert expected_analyzer <= lexeme_ids
 
 
-def test_core_pairs_are_promoted_and_difficult_pairs_are_retained():
+def test_core_pairs_are_promoted_and_manual_review_promotes_new_caveated_verbs():
     _, rows = load_tsv(LEXICAL_INVENTORY_PATH)
     row_map = {row["lexeme_id"]: row for row in rows}
 
@@ -128,8 +153,10 @@ def test_core_pairs_are_promoted_and_difficult_pairs_are_retained():
     assert row_map["bia-biak"]["promotion_status"] == "promote_with_caveat"
     assert row_map["bia-biak"]["lexical_category"] == "lexical_verb"
 
-    for lexeme_id in {"thei-theih", "piang-pian", "ngai-ngaih"}:
-        assert row_map[lexeme_id]["promotion_status"] == "discuss_as_difficult_case"
+    for lexeme_id in {"thei-theih", "piang-pian", "zui-zuih", "khial-khialh", "kia-kiak", "sawlkhia-sawlkhiat"}:
+        assert row_map[lexeme_id]["promotion_status"] == "promote_with_caveat"
+
+    assert row_map["ngai-ngaih"]["promotion_status"] == "discuss_as_difficult_case"
 
 
 def test_same_form_questionnaire_controls_are_classified_as_controls():
@@ -183,7 +210,8 @@ def test_promotable_examples_mark_controls_nominals_and_difficult_pairs_distinct
     assert find("bia-biak", "form_ii")["example_quality"] in {"descriptive_with_caveat", "print_usable_with_caveat"}
     assert find("dawn-dawn", "form_i")["example_quality"] == "questionnaire_control"
     assert find("mual-mualh", "form_i")["example_quality"] == "blocked_nonverbal"
-    assert find("pua-puak", "form_i")["example_quality"] == "blocked_noise"
+    assert find("pua-puak", "form_i")["example_quality"] == "needs_manual_review"
+    assert find("ngai-ngaih", "form_i")["example_quality"] == "needs_manual_review"
 
 
 def test_lexical_inventory_keeps_noisy_forms_out_of_best_clean_examples():
@@ -197,23 +225,56 @@ def test_lexical_inventory_keeps_noisy_forms_out_of_best_clean_examples():
 
     assert "piangsak" in row_map["piang-pian"]["homophone_or_noise_notes"]
     assert "ngaihsun/ngaihsut/ngaihsutna" in row_map["ngai-ngaih"]["homophone_or_noise_notes"]
+    assert "Clean exact verbal rows still survive" in row_map["ngai-ngaih"]["category_evidence"]
 
 
-def test_grammar_slice_keeps_main_inventory_nominal_free_and_retains_controls_and_difficult_cases():
+def test_manual_review_covers_all_bilateral_lexical_verbs_and_key_difficult_cases():
+    _, inventory_rows = load_tsv(LEXICAL_INVENTORY_PATH)
+    _, manual_rows = load_tsv(MANUAL_PROMOTION_REVIEW_PATH)
+    manual_map = {row["lexeme_id"]: row for row in manual_rows}
+
+    bilateral_lexical_verbs = {
+        row["lexeme_id"]
+        for row in inventory_rows
+        if row["lexical_category"] == "lexical_verb"
+        and int(row["clean_verb_form_i_count"]) > 0
+        and int(row["clean_verb_form_ii_count"]) > 0
+    }
+    assert bilateral_lexical_verbs <= manual_map.keys()
+
+    assert manual_map["thei-theih"]["manual_review_decision"] == "promote_with_caveat_now"
+    assert manual_map["thei-theih"]["recommended_new_promotion_status"] == "promote_with_caveat"
+    assert manual_map["piang-pian"]["manual_review_decision"] == "promote_with_caveat_now"
+    assert manual_map["ngai-ngaih"]["manual_review_decision"] == "retain_as_difficult_case"
+    assert "clean exact verbal `ngai`/`ngaih` rows exist" in manual_map["ngai-ngaih"]["decision_rationale"]
+    assert manual_map["keu-keuh"]["manual_review_decision"] == "block_nonverbal"
+
+
+def test_grammar_slice_reflects_manual_review_without_repromoting_nominal_rows():
     text = GRAMMAR_SLICE_PATH.read_text(encoding="utf-8")
-    main_inventory = section_between(text, "# Promoted verbal inventory", "# One-sided Bible attestations and questionnaire controls")
+    main_inventory = section_between(text, "# Promoted verbal inventory", "# Caveated promoted verbs")
+    caveated_inventory = section_between(text, "# Caveated promoted verbs", "# One-sided Bible attestations and questionnaire controls")
 
-    assert "bia ~ biak" in main_inventory
+    for core in {"mu ~ muh", "ne ~ nek", "nei ~ neih"}:
+        assert core in main_inventory
+
+    for promoted in {"bia ~ biak", "thei ~ theih", "piang ~ pian", "zui ~ zuih", "khial ~ khialh", "kia ~ kiak", "sawlkhia ~ sawlkhiat"}:
+        assert promoted in caveated_inventory
     for blocked in {"mual ~ mualh", "sum ~ sumh", "thu ~ thuh", "lampi ~ lampih", "khua ~ khuat"}:
         assert blocked not in main_inventory
+        assert blocked not in caveated_inventory
 
+    assert "# Caveated promoted verbs" in text
     assert "# One-sided Bible attestations and questionnaire controls" in text
     assert "# Stative/adjectival and functional predicates" in text
     assert "# Analyzer-only uncertain rows" in text
-    assert "# Difficult cases" in text
+    assert "# Blocked nominal and non-verbal analyzer rows" in text
+    assert "# Difficult but grammatically important cases" in text
     assert "same-form questionnaire controls" in text
     assert "thei ~ theih" in text
     assert "piang ~ pian" in text
     assert "ngai ~ ngaih" in text
+    assert "pua ~ puak" in text
+    assert "pua ~ puah" in text
     assert "honkhia ~ honkhiat" in text
     assert "hu ~ huh" in text

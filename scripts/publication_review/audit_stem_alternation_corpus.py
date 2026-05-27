@@ -37,6 +37,7 @@ PAIR_SUMMARY_PATH = OUTPUT_DIR / "stem_alternation_pair_summary.tsv"
 EXAMPLE_MATRIX_PATH = OUTPUT_DIR / "stem_alternation_example_matrix.tsv"
 LEXICAL_INVENTORY_PATH = OUTPUT_DIR / "stem_alternation_lexical_inventory.tsv"
 PROMOTABLE_EXAMPLES_PATH = OUTPUT_DIR / "stem_alternation_promotable_examples.tsv"
+MANUAL_PROMOTION_REVIEW_PATH = OUTPUT_DIR / "stem_alternation_manual_promotion_review.tsv"
 CANDIDATES_PATH = OUTPUT_DIR / "candidates_stem_alternation.tsv"
 GRAMMAR_PACKET_PATH = OUTPUT_DIR / "grammar_stem_alternation_print_slice.md"
 DICTIONARY_PACKET_PATH = OUTPUT_DIR / "dictionary_stem_alternation_print_slice.md"
@@ -201,6 +202,27 @@ PROMOTABLE_EXAMPLES_COLUMNS = [
     "blocking_or_caveat_notes",
 ]
 
+MANUAL_PROMOTION_REVIEW_COLUMNS = [
+    "lexeme_id",
+    "form_i",
+    "form_ii",
+    "gloss",
+    "current_lexical_category",
+    "current_promotion_status",
+    "current_promotion_blocker",
+    "clean_verb_form_i_count",
+    "clean_verb_form_ii_count",
+    "best_form_i_review_example",
+    "best_form_ii_review_example",
+    "environment_distribution_summary",
+    "main_obstacle",
+    "manual_review_decision",
+    "recommended_new_promotion_status",
+    "recommended_grammar_location",
+    "decision_rationale",
+    "next_manual_check",
+]
+
 REVIEW_CITED_SAFE_ENVIRONMENTS = {
     "finite_main_or_matrix",
     "dependent_temporal_ciangin",
@@ -320,6 +342,10 @@ SECONDARY_LITERATURE_PAIR_IDS = {
     "si-sit",
 }
 
+# These source maps are intentionally conservative. The repository does not
+# currently contain an exhaustive extracted Tedim pair list from Henderson or
+# Zam Ngaih Cing; mark a pair "yes" only when the in-repo literature review
+# aligns it directly, and prefer "unverified" over implying complete coverage.
 HENDERSON_SOURCE_STATUS = {
     "mu-muh": "yes",
     "ne-nek": "yes",
@@ -369,7 +395,7 @@ LEXICAL_CATEGORY_OVERRIDES = {
     "kho-khot": "analyzer_only_uncertain",
 }
 
-PROMOTION_STATUS_OVERRIDES = {
+BASELINE_PROMOTION_STATUS_OVERRIDES = {
     "mu-muh": "promote_to_main_grammar",
     "ne-nek": "promote_to_main_grammar",
     "nei-neih": "promote_to_main_grammar",
@@ -399,6 +425,12 @@ PROMOTION_STATUS_OVERRIDES = {
     "khua-khuat": "block_from_verb_inventory_pending_review",
     "gamla-gamlat": "block_from_verb_inventory_pending_review",
     "no-noh": "mention_in_inventory_only",
+}
+
+PROMOTION_STATUS_OVERRIDES = {
+    **BASELINE_PROMOTION_STATUS_OVERRIDES,
+    "thei-theih": "promote_with_caveat",
+    "piang-pian": "promote_with_caveat",
 }
 
 PROMOTION_BLOCKER_OVERRIDES = {
@@ -433,6 +465,221 @@ PROMOTION_BLOCKER_OVERRIDES = {
     "mu-muk": "analyzer_pair_only",
     "ne-neh": "analyzer_pair_only",
     "kho-khot": "analyzer_pair_only",
+}
+
+MANUAL_PROMOTION_REVIEW_TARGETS = {
+    "mu-muh",
+    "ne-nek",
+    "nei-neih",
+    "za-zak",
+    "pia-piak",
+    "nusia-nusiat",
+    "bia-biak",
+    "thei-theih",
+    "piang-pian",
+    "ngai-ngaih",
+    "zui-zuih",
+    "khial-khialh",
+    "kia-kiak",
+    "sawlkhia-sawlkhiat",
+    "bawl-bawlh",
+    "dipkua-dipkuat",
+    "gen-genh",
+    "hawlkhia-hawlkhiat",
+    "husia-husiat",
+    "kho-khoh",
+    "kido-kidot",
+    "lua-luah",
+    "tu-tuh",
+    "tuahpha-tuahphat",
+    "vial-vialh",
+    "pai-paih",
+    "pua-puak",
+    "pua-puah",
+    "tua-tuak",
+    "tua-tuah",
+    "khai-khaih",
+    "sia-siah",
+    "tan-tanh",
+    "keu-keuh",
+}
+
+MANUAL_REVIEW_OVERRIDES = {
+    "mu-muh": {
+        "manual_review_decision": "promote_now",
+        "recommended_grammar_location": "main_promoted_verbal_inventory",
+        "main_obstacle": "none",
+        "decision_rationale": "Stable paired finite and derived evidence still makes this the clearest Tedim showcase pair.",
+        "next_manual_check": "Keep the existing exact candidate-token examples.",
+    },
+    "ne-nek": {
+        "manual_review_decision": "promote_now",
+        "recommended_grammar_location": "main_promoted_verbal_inventory",
+        "main_obstacle": "none",
+        "decision_rationale": "Genesis 2:17 still provides the cleanest same-verse Form I/Form II contrast in the packet.",
+        "next_manual_check": "Retain the same-verse contrast as the lead pedagogical example.",
+    },
+    "nei-neih": {
+        "manual_review_decision": "promote_now",
+        "recommended_grammar_location": "main_promoted_verbal_inventory",
+        "main_obstacle": "none",
+        "decision_rationale": "Both forms remain robust and easy to explain without major lexical contamination.",
+        "next_manual_check": "Prefer an exact finite Form I plus attributable or nominalized Form II pairing.",
+    },
+    "za-zak": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "Form II has broad lexical and environmental spread that still needs careful verse choice",
+        "decision_rationale": "The pair is genuine and Bible-attested on both sides, but the grammar should keep the examples conservative because `zak` ranges more widely than the core showcase verbs.",
+        "next_manual_check": "Keep choosing Form II tokens from transparent dependent or clause-linking contexts.",
+    },
+    "pia-piak": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "report noise and derivational crowding around related `-sak` material",
+        "decision_rationale": "Both forms have abundant clean verbal evidence, so the pair belongs in the promoted inventory, but the quoted examples still need filtering away from derivational neighbors.",
+        "next_manual_check": "Prefer exact `pia`/`piak` rows that stay away from nearby causative morphology.",
+    },
+    "nusia-nusiat": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "Form II is clearest in dependent and clause-linking environments rather than in a neat finite contrast",
+        "decision_rationale": "The pair is already packet-worthy, but the grammar should frame it as a caveated promotion whose best evidence comes from non-final syntax rather than from a simple finite paradigm.",
+        "next_manual_check": "Keep pairing the lexical inventory with dependent or clause-linking Form II examples.",
+    },
+    "bia-biak": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "Form II is heavily clustered in worship, offering, and nominalized material",
+        "decision_rationale": "Both forms survive as genuine verbal evidence, so the pair belongs in the promoted inventory, but the grammar should keep noting that the Form II distribution is domain-specific.",
+        "next_manual_check": "Prefer a finite or purpose-context Form II token that avoids sacrificial lexical crowding.",
+    },
+    "thei-theih": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "Form II is especially strong in modal, ability, purposive, and nominalized environments rather than in a neat finite pedagogical contrast",
+        "decision_rationale": "Both forms are cleanly and abundantly attested. The grammar should now promote `thei ~ theih`, but explicitly under a modal or ability subsection rather than as if every Form II token were a plain finite alternant.",
+        "next_manual_check": "Choose a tight modal or purposive Form II verse that does not rely only on nominalization.",
+    },
+    "piang-pian": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "Form II competes with a large derived `piangsak` family and is easiest to show in eventive or dependent environments",
+        "decision_rationale": "Exact `piang` and `pian` rows survive after filtering, so this pair deserves promotion. The prose should treat it as an eventive or intransitive caveated verb rather than as a simple mechanical alternation.",
+        "next_manual_check": "Prefer an exact `pian` row that is eventive and clearly distinct from `piangsak` material.",
+    },
+    "ngai-ngaih": {
+        "manual_review_decision": "retain_as_difficult_case",
+        "recommended_grammar_location": "difficult_cases",
+        "main_obstacle": "clean `ngai/ngaih` rows coexist with heavy lexical-family contamination from `ngaihsun/ngaihsut/ngaihsutna`",
+        "decision_rationale": "The review should now state explicitly that clean exact verbal `ngai`/`ngaih` rows exist on both sides. Even so, the family contamination is still strong enough that this pair belongs in difficult cases rather than in the promoted inventory.",
+        "next_manual_check": "Separate exact `ngai/ngaih` rows from `ngaihs-` family material in any future quotation shortlist.",
+    },
+    "zui-zuih": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "derived `zuihsak` material and the need for a transparent Form II quotation context",
+        "decision_rationale": "Both forms are cleanly attested and lexically coherent. `zui ~ zuih` should be promoted as a real caveated lexical verb rather than left implicit in the wider inventory.",
+        "next_manual_check": "Prefer a Form II row that is exact and not crowded by causative or benefactive morphology.",
+    },
+    "khial-khialh": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "the `khialsak` family still creates derivational noise around otherwise clean rows",
+        "decision_rationale": "Both forms have enough clean verbal evidence for grammar discussion, so this pair should stay promoted with caveat.",
+        "next_manual_check": "Prefer exact rows that stay away from `khialsak` and related causative material.",
+    },
+    "kia-kiak": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "Form II is comparatively sparse and must be kept distinct from `kiasak`-family noise",
+        "decision_rationale": "The surviving Form II evidence is thinner than for the best pairs, but it is still real verbal evidence, so the pair now belongs in the caveated promoted inventory.",
+        "next_manual_check": "Keep the Form II citation exact and avoid nearby derivational morphology.",
+    },
+    "sawlkhia-sawlkhiat": {
+        "manual_review_decision": "promote_with_caveat_now",
+        "recommended_grammar_location": "caveated_promoted_verbal_inventory",
+        "main_obstacle": "clean Form II examples are few and semantically crowded by expulsion or sending contexts",
+        "decision_rationale": "The pair is lexically coherent and both forms are attested, but it should stay caveated until a cleaner Form II example set is isolated.",
+        "next_manual_check": "Prefer a transparent non-negative Form II token with stable verbal POS.",
+    },
+    "bawl-bawlh": {
+        "manual_review_decision": "retain_inventory_only",
+        "recommended_grammar_location": "difficult_cases",
+        "main_obstacle": "Bible evidence is effectively one-sided because the questionnaire control `bawl ~ bawl` already covers the overt written form",
+        "decision_rationale": "The lexical verb remains relevant to the inventory, but there is still no clean overt Form II evidence to justify promotion into the alternating-verb table.",
+        "next_manual_check": "Keep it in the one-sided inventory unless exact `bawlh` verbal rows appear.",
+    },
+    "dipkua-dipkuat": {
+        "manual_review_decision": "retain_inventory_only",
+        "recommended_grammar_location": "difficult_cases",
+        "main_obstacle": "Form II currently survives only in nominalized or otherwise complex material",
+        "decision_rationale": "The lexical item is probably real, but the current Bible evidence is too constructionally narrow for promotion.",
+        "next_manual_check": "Look for an exact non-nominalized `dipkuat` verbal token before promoting it.",
+    },
+    "gen-genh": {
+        "manual_review_decision": "retain_inventory_only",
+        "recommended_grammar_location": "difficult_cases",
+        "main_obstacle": "no clean verbal Form II evidence has survived the current audit",
+        "decision_rationale": "The Bible strongly attests Form I, but promotion should wait until a defensible exact `genh` verbal token is isolated.",
+        "next_manual_check": "Treat any future `genh` candidate as a manual philology item rather than auto-promoting it.",
+    },
+    "hawlkhia-hawlkhiat": {
+        "manual_review_decision": "retain_inventory_only",
+        "recommended_grammar_location": "difficult_cases",
+        "main_obstacle": "current Form II candidates drift toward non-verbal or lemma-unstable readings",
+        "decision_rationale": "The lexeme deserves inventory coverage, but the present Form II evidence is not yet clean enough for promotion.",
+        "next_manual_check": "Require an exact verbal `hawlkhiat` token with stable lemma and POS before promotion.",
+    },
+    "kho-khoh": {
+        "manual_review_decision": "retain_inventory_only",
+        "recommended_grammar_location": "difficult_cases",
+        "main_obstacle": "Form II remains effectively unattested as a clean verbal row, and the base overlaps with `kho-khot`",
+        "decision_rationale": "The Form I side looks verbal enough to keep in the inventory, but the pair is still too one-sided for promotion.",
+        "next_manual_check": "Review `khoh` against `kho-khot` and nominal uses before revisiting promotion.",
+    },
+    "pai-paih": {
+        "manual_review_decision": "needs_more_manual_review",
+        "recommended_grammar_location": "analyzer_only_uncertain",
+        "main_obstacle": "the analyzer pair competes with the same-form questionnaire control `pai ~ pai`, and clean Form II evidence is sparse",
+        "decision_rationale": "Exact `paih` verbal rows do exist, but the shared-base problem is still unresolved enough that the grammar should keep this under analyzer-only uncertainty rather than promote it.",
+        "next_manual_check": "Do a dedicated philological pass on `pai`, `paih`, and the same-form questionnaire control before changing category or promotion status.",
+    },
+    "pua-puak": {
+        "manual_review_decision": "retain_as_difficult_case",
+        "recommended_grammar_location": "difficult_cases",
+        "main_obstacle": "shared Form I base, gloss mismatch, and homophone risk across `pua ~ puak` and `pua ~ puah`",
+        "decision_rationale": "Clean verbal rows exist for `pua` and `puak`, so the pair stays central to the discussion. But the overlap with other `pua` families is still too strong for routine promotion.",
+        "next_manual_check": "Separate the 'spill' reading from questionnaire-style 'carry on back' material before any promotion change.",
+    },
+    "pua-puah": {
+        "manual_review_decision": "needs_more_manual_review",
+        "recommended_grammar_location": "analyzer_only_uncertain",
+        "main_obstacle": "only the Form II side is cleanly verbal, and it shares its Form I base with `pua ~ puak`",
+        "decision_rationale": "The current evidence is too one-sided to treat `pua ~ puah` as an independent promoted pair.",
+        "next_manual_check": "Require exact verbal Form I evidence before revisiting this analyzer pair.",
+    },
+    "tua-tuak": {
+        "manual_review_decision": "needs_more_manual_review",
+        "recommended_grammar_location": "analyzer_only_uncertain",
+        "main_obstacle": "the Form I base is overwhelmingly determiner-like, not verbal, and the shared-base mapping remains unstable",
+        "decision_rationale": "This row is useful as a warning about analyzer overgeneration, but it should stay out of the promoted verb grammar.",
+        "next_manual_check": "Do not promote unless both sides can be shown with stable verbal POS and lemma control.",
+    },
+    "tua-tuah": {
+        "manual_review_decision": "needs_more_manual_review",
+        "recommended_grammar_location": "analyzer_only_uncertain",
+        "main_obstacle": "only the Form II side is currently cleanly verbal, while the Form I base remains category-mixed",
+        "decision_rationale": "The pair remains interesting for analyzer review, but it is still too one-sided for promotion.",
+        "next_manual_check": "Require exact verbal Form I evidence distinct from determiner or discourse uses of `tua`.",
+    },
+    "keu-keuh": {
+        "manual_review_decision": "block_nonverbal",
+        "recommended_grammar_location": "blocked_nonverbal_appendix",
+        "main_obstacle": "current Bible hits are nominal rather than verbal on both sides",
+        "decision_rationale": "This is the kind of analyzer pair the manual review is meant to keep out of the verb-stem alternation grammar.",
+        "next_manual_check": "Leave blocked unless a clean verbal reading is documented for both forms.",
+    },
 }
 
 VERBAL_ENVIRONMENTS = {
@@ -1188,6 +1435,8 @@ def infer_category_evidence(
         note += " The surviving evidence looks chiefly predicative or adjectival rather than like a lexical action verb."
     elif lexical_category == "lexicalized_or_category_mixed":
         note += " The family mixes lexicalized, derivational, or category-shifting material."
+        if clean_verb_form_i_count > 0 or clean_verb_form_ii_count > 0:
+            note += " Clean exact verbal rows still survive apart from the blocked family material."
     elif lexical_category == "analyzer_only_uncertain":
         note += " The analyzer proposes the pair, but the Bible evidence still needs philological review."
     elif clean_verb_form_i_count > 0 or clean_verb_form_ii_count > 0:
@@ -1195,14 +1444,15 @@ def infer_category_evidence(
     return note
 
 
-def infer_promotion_status(
+def infer_promotion_status_with_overrides(
     pair_id: str,
     lexical_category: str,
     clean_verb_form_i_count: int,
     clean_verb_form_ii_count: int,
+    overrides: dict[str, str],
 ) -> str:
-    if pair_id in PROMOTION_STATUS_OVERRIDES:
-        return PROMOTION_STATUS_OVERRIDES[pair_id]
+    if pair_id in overrides:
+        return overrides[pair_id]
     if lexical_category == "same_form_questionnaire_control":
         return "mention_as_questionnaire_control"
     if lexical_category == "noun_or_nominal_compound":
@@ -1216,6 +1466,36 @@ def infer_promotion_status(
     if clean_verb_form_i_count > 0 or clean_verb_form_ii_count > 0:
         return "mention_in_inventory_only"
     return "block_from_verb_inventory_pending_review"
+
+
+def infer_promotion_status(
+    pair_id: str,
+    lexical_category: str,
+    clean_verb_form_i_count: int,
+    clean_verb_form_ii_count: int,
+) -> str:
+    return infer_promotion_status_with_overrides(
+        pair_id,
+        lexical_category,
+        clean_verb_form_i_count,
+        clean_verb_form_ii_count,
+        PROMOTION_STATUS_OVERRIDES,
+    )
+
+
+def infer_baseline_promotion_status(
+    pair_id: str,
+    lexical_category: str,
+    clean_verb_form_i_count: int,
+    clean_verb_form_ii_count: int,
+) -> str:
+    return infer_promotion_status_with_overrides(
+        pair_id,
+        lexical_category,
+        clean_verb_form_i_count,
+        clean_verb_form_ii_count,
+        BASELINE_PROMOTION_STATUS_OVERRIDES,
+    )
 
 
 def infer_promotion_blocker(
@@ -1294,8 +1574,10 @@ def example_quality_for_row(
         return "questionnaire_control"
     if lexical_category == "noun_or_nominal_compound":
         return "blocked_nonverbal"
-    if lexical_category == "lexicalized_or_category_mixed" or row.get("inferred_environment", "") in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
+    if row.get("inferred_environment", "") in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
         return "blocked_noise"
+    if lexical_category == "lexicalized_or_category_mixed":
+        return "needs_manual_review" if is_clean_verbal_row(row, form, pair_id, lexical_category) else "blocked_noise"
     if row.get("print_status", "") in {"print_ready", "print_usable_with_caveat"}:
         return row["print_status"]
     if is_clean_verbal_row(row, form, pair_id, lexical_category):
@@ -1412,8 +1694,12 @@ def source_notes_for_inventory_entry(
             notes.append(f"Analyzer inventory also maps the same Form I base to {', '.join(sibling_pairs)}.")
     if pair is not None and pair.analyzer_status == "packet_pair_not_in_VERB_STEM_PAIRS":
         notes.append("Present in the publication-review packet, but absent from VERB_STEM_PAIRS.")
+    if source_status(HENDERSON_SOURCE_STATUS, pair_id) == "yes":
+        notes.append("`source_henderson=yes` means the in-repo literature review aligns this pair directly to Henderson; it does not claim an exhaustive extracted Henderson pair list.")
     if source_status(HENDERSON_SOURCE_STATUS, pair_id) == "unverified":
         notes.append("Henderson is only indirectly aligned to this pair in current project materials, not through a direct in-repo Tedim pair list.")
+    if source_status(ZAM_SOURCE_STATUS, pair_id) == "yes":
+        notes.append("`source_zam_ngaih_cing=yes` means the in-repo literature review aligns this pair directly to Zam Ngaih Cing; it does not claim an exhaustive extracted Stem 1/2 list.")
     if source_status(ZAM_SOURCE_STATUS, pair_id) == "unverified":
         notes.append("Zam Ngaih Cing is only indirectly aligned to this pair in current project materials, not through a direct in-repo pair list.")
     if pair_is_discussed_in_project_review(pair_id, form_i, form_ii):
@@ -1421,6 +1707,103 @@ def source_notes_for_inventory_entry(
     if questionnaire_entry is not None and pair is not None and questionnaire_entry["gloss"] != pair.gloss:
         notes.append(f"Questionnaire gloss `{questionnaire_entry['gloss']}` and analyzer gloss `{pair.gloss}` differ.")
     return merge_notes(*notes)
+
+
+def format_manual_review_example(row: dict[str, str] | None) -> str:
+    if row is None:
+        return ""
+    form = row.get("normalized_form") or row.get("surface_form", "")
+    environment = row.get("inferred_environment", "")
+    pos = row.get("pos", "")
+    return f"{row.get('reference', '')} `{form}` [{environment}; {pos}]"
+
+
+def summarize_environment_distribution(rows: list[dict[str, str]], form_i: str, form_ii: str) -> str:
+    counter = Counter()
+    for row in rows:
+        if row_matches_exact_form(row, form_i) or row_matches_exact_form(row, form_ii):
+            counter[row.get("inferred_environment", "")] += 1
+    return "; ".join(f"{environment}:{count}" for environment, count in counter.most_common(6) if environment)
+
+
+def default_manual_review_decision(
+    lexical_category: str,
+    recommended_status: str,
+) -> str:
+    if recommended_status == "promote_to_main_grammar":
+        return "promote_now"
+    if recommended_status == "promote_with_caveat":
+        return "promote_with_caveat_now"
+    if recommended_status == "discuss_as_difficult_case":
+        return "retain_as_difficult_case"
+    if lexical_category == "same_form_questionnaire_control":
+        return "retain_questionnaire_control"
+    if lexical_category == "noun_or_nominal_compound":
+        return "block_nonverbal"
+    if lexical_category == "lexicalized_or_category_mixed":
+        return "retain_as_difficult_case"
+    if lexical_category == "analyzer_only_uncertain":
+        return "needs_more_manual_review"
+    if recommended_status == "block_from_verb_inventory_pending_review":
+        return "block_noise"
+    return "retain_inventory_only"
+
+
+def default_grammar_location(
+    lexical_category: str,
+    recommended_status: str,
+) -> str:
+    if recommended_status == "promote_to_main_grammar":
+        return "main_promoted_verbal_inventory"
+    if recommended_status == "promote_with_caveat":
+        return "caveated_promoted_verbal_inventory"
+    if lexical_category == "same_form_questionnaire_control":
+        return "same_form_questionnaire_controls"
+    if lexical_category == "auxiliary_or_functional_verb":
+        return "functional_predicates"
+    if lexical_category == "stative_or_adjectival_predicate":
+        return "stative_predicates"
+    if lexical_category == "noun_or_nominal_compound":
+        return "blocked_nonverbal_appendix"
+    if lexical_category == "analyzer_only_uncertain":
+        return "analyzer_only_uncertain"
+    return "difficult_cases"
+
+
+def default_manual_review_rationale(
+    pair_id: str,
+    lexical_category: str,
+    manual_review_decision: str,
+    main_obstacle: str,
+) -> str:
+    if manual_review_decision == "promote_now":
+        return "Manual review confirms that the pair is still a stable promoted showcase verb."
+    if manual_review_decision == "promote_with_caveat_now":
+        return f"Both forms have enough lexical evidence for grammar discussion, but {main_obstacle.lower()}."
+    if manual_review_decision == "retain_as_difficult_case":
+        return f"The pair stays visible because it is grammatically important, but {main_obstacle.lower()}."
+    if manual_review_decision == "retain_questionnaire_control":
+        return "The row remains a same-form questionnaire control rather than a promoted alternating pair."
+    if manual_review_decision == "block_nonverbal":
+        return "Current Bible hits are non-verbal enough that the pair should stay out of the promoted verb discussion."
+    if manual_review_decision == "block_noise":
+        return "Current evidence is too noisy or too weakly verbal for promotion."
+    if lexical_category == "analyzer_only_uncertain":
+        return "The analyzer suggests the pair, but the current Bible evidence still needs manual philological review."
+    return f"Keep the row in the broader inventory for now because {main_obstacle.lower()}."
+
+
+def default_next_manual_check(
+    manual_review_decision: str,
+    recommended_status: str,
+) -> str:
+    if recommended_status in {"promote_to_main_grammar", "promote_with_caveat"}:
+        return "Keep choosing exact citation rows that match the promoted grammar discussion."
+    if manual_review_decision in {"retain_as_difficult_case", "needs_more_manual_review"}:
+        return "Revisit only with a narrower philological pass on exact token families."
+    if manual_review_decision in {"block_nonverbal", "block_noise"}:
+        return "Leave blocked unless new exact verbal evidence is found."
+    return "Retain in the wider inventory until cleaner evidence appears."
 
 
 def infer_bible_attestation_profile(
@@ -1603,6 +1986,7 @@ def write_lexical_inventory(
 
     inventory_rows = []
     promotable_rows = []
+    manual_review_rows = []
     all_pair_ids = sorted(set(pairs) | set(questionnaire_inventory))
     for pair_id in all_pair_ids:
         pair = pairs.get(pair_id)
@@ -1671,6 +2055,12 @@ def write_lexical_inventory(
             clean_verb_form_ii_count,
         )
         promotion_status = infer_promotion_status(
+            pair_id,
+            lexical_category,
+            clean_verb_form_i_count,
+            clean_verb_form_ii_count,
+        )
+        baseline_promotion_status = infer_baseline_promotion_status(
             pair_id,
             lexical_category,
             clean_verb_form_i_count,
@@ -1752,6 +2142,7 @@ def write_lexical_inventory(
             }
         )
 
+        selected_examples = {"form_i": None, "form_ii": None}
         for stem_alt, form_side, form in (("I", "form_i", form_i), ("II", "form_ii", form_ii)):
             selected = choose_promotable_example_row(
                 pair_rows,
@@ -1762,10 +2153,13 @@ def write_lexical_inventory(
             )
             if selected is None:
                 continue
+            selected_examples[form_side] = selected
             if promotion_status == "mention_as_questionnaire_control":
                 reason_selected = "Best Bible attestation for a same-form questionnaire control."
             elif lexical_category == "noun_or_nominal_compound":
                 reason_selected = "Best available audit row for a blocked nominal or compound-like analyzer pair."
+            elif lexical_category == "lexicalized_or_category_mixed" and is_clean_verbal_row(selected, form, pair_id, lexical_category):
+                reason_selected = "Best clean verbal row from a difficult lexicalized or category-mixed family."
             elif lexical_category == "lexicalized_or_category_mixed":
                 reason_selected = "Best available difficult-case row from a lexicalized or category-mixed family."
             elif is_clean_verbal_row(selected, form, pair_id, lexical_category):
@@ -1806,6 +2200,54 @@ def write_lexical_inventory(
                 }
             )
 
+        if (
+            pair_id in MANUAL_PROMOTION_REVIEW_TARGETS
+            or (lexical_category == "lexical_verb" and baseline_promotion_status != "promote_to_main_grammar")
+            or (lexical_category == "lexical_verb" and clean_verb_form_i_count > 0 and clean_verb_form_ii_count > 0)
+        ):
+            override = MANUAL_REVIEW_OVERRIDES.get(pair_id, {})
+            recommended_new_promotion_status = promotion_status
+            manual_review_decision = override.get(
+                "manual_review_decision",
+                default_manual_review_decision(lexical_category, recommended_new_promotion_status),
+            )
+            recommended_grammar_location = override.get(
+                "recommended_grammar_location",
+                default_grammar_location(lexical_category, recommended_new_promotion_status),
+            )
+            main_obstacle = override.get(
+                "main_obstacle",
+                promotion_blocker.replace("_", " ") if promotion_blocker != "none" else "none",
+            )
+            manual_review_rows.append(
+                {
+                    "lexeme_id": pair_id,
+                    "form_i": form_i,
+                    "form_ii": form_ii,
+                    "gloss": gloss,
+                    "current_lexical_category": lexical_category,
+                    "current_promotion_status": baseline_promotion_status,
+                    "current_promotion_blocker": promotion_blocker,
+                    "clean_verb_form_i_count": str(clean_verb_form_i_count),
+                    "clean_verb_form_ii_count": str(clean_verb_form_ii_count),
+                    "best_form_i_review_example": format_manual_review_example(selected_examples["form_i"]),
+                    "best_form_ii_review_example": format_manual_review_example(selected_examples["form_ii"]),
+                    "environment_distribution_summary": summarize_environment_distribution(pair_rows, form_i, form_ii),
+                    "main_obstacle": main_obstacle,
+                    "manual_review_decision": manual_review_decision,
+                    "recommended_new_promotion_status": recommended_new_promotion_status,
+                    "recommended_grammar_location": recommended_grammar_location,
+                    "decision_rationale": override.get(
+                        "decision_rationale",
+                        default_manual_review_rationale(pair_id, lexical_category, manual_review_decision, main_obstacle),
+                    ),
+                    "next_manual_check": override.get(
+                        "next_manual_check",
+                        default_next_manual_check(manual_review_decision, recommended_new_promotion_status),
+                    ),
+                }
+            )
+
     with LEXICAL_INVENTORY_PATH.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=LEXICAL_INVENTORY_COLUMNS, delimiter="\t")
         writer.writeheader()
@@ -1820,6 +2262,11 @@ def write_lexical_inventory(
                 key=lambda row: (row["lexeme_id"], row["form_side"] != "form_i", row["reference"], int(row["token_index"])),
             )
         )
+
+    with MANUAL_PROMOTION_REVIEW_PATH.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=MANUAL_PROMOTION_REVIEW_COLUMNS, delimiter="\t")
+        writer.writeheader()
+        writer.writerows(sorted(manual_review_rows, key=lambda row: row["lexeme_id"]))
 
 
 def display_path(path: Path) -> Path:
