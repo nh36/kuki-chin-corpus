@@ -18,6 +18,7 @@ intended for git tracking.
 from __future__ import annotations
 
 import csv
+import re
 import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass
@@ -156,6 +157,13 @@ OBVIOUS_NOISY_ROW_FORMS = {
     "huh",
 }
 
+MANUAL_REVIEW_ROW_ALLOWLIST = {
+    ("mu-muh", "01019001", "20"): "print_usable_with_caveat",
+    ("za-zak", "01003008", "13"): "print_usable_with_caveat",
+    ("pia-piak", "01004005", "5"): "print_usable_with_caveat",
+    ("nusia-nusiat", "01002024", "10"): "print_usable_with_caveat",
+}
+
 MANUAL_PUBLICATION_STATUS = {
     "mu-muh": "print_ready",
     "ne-nek": "print_ready",
@@ -284,6 +292,17 @@ def load_review_bundle_text() -> str:
     for path in (DOSSIER_PATH, GRAMMAR_PACKET_PATH, DICTIONARY_PACKET_PATH, REVIEW_NOTES_PATH):
         text_parts.append(path.read_text(encoding="utf-8") if path.exists() else "")
     return "\n".join(text_parts)
+
+
+def extract_exact_review_references(text: str) -> set[str]:
+    references = set()
+    with VERSES_PATH.open(encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        for row in reader:
+            reference = row["reference"]
+            if re.search(rf"(?<![0-9A-Za-z]){re.escape(reference)}(?![0-9])", text):
+                references.add(reference)
+    return references
 
 
 def build_pair_inventory() -> dict[str, PairMeta]:
@@ -614,14 +633,15 @@ def analysis_clarity_score(row: dict[str, str]) -> int:
 
 def selection_priority(
     row: dict[str, str],
-    candidate_references: set[str],
-    review_bundle_text: str,
+    accepted_candidate_row_keys: set[tuple[str, str, str]],
+    review_references: set[str],
     order_index: int,
 ) -> tuple[int, int, int, int, int]:
+    row_key = (row["pair_id"], row["verse_id"], row["token_index"])
     return (
         1 if row["environment"] != "unknown_or_needs_review" else 0,
         analysis_clarity_score(row),
-        2 if row["reference"] in candidate_references else 1 if row["reference"] in review_bundle_text else 0,
+        2 if row_key in accepted_candidate_row_keys else 1 if row_key in MANUAL_REVIEW_ROW_ALLOWLIST or row["reference"] in review_references else 0,
         -len(row["local_context"].split()),
         -order_index,
     )
@@ -629,13 +649,16 @@ def selection_priority(
 
 def build_selection_reason(
     row: dict[str, str],
-    candidate_references: set[str],
-    review_bundle_text: str,
+    candidate_row_keys: set[tuple[str, str, str]],
+    review_references: set[str],
 ) -> str:
     reasons = []
-    if row["reference"] in candidate_references:
-        reasons.append("preferred because this verse already appears in the curated candidate TSV")
-    elif row["reference"] in review_bundle_text:
+    row_key = (row["pair_id"], row["verse_id"], row["token_index"])
+    if row_key in candidate_row_keys:
+        reasons.append("preferred because this exact token is already part of an accepted candidate TSV row")
+    elif row_key in MANUAL_REVIEW_ROW_ALLOWLIST:
+        reasons.append("preferred because this exact row is manually retained as caveated evidence in the packet")
+    elif row["reference"] in review_references:
         reasons.append("preferred because this verse is already cited in the dossier or packet")
 
     if row["environment"] == "unknown_or_needs_review":
@@ -666,6 +689,37 @@ def row_has_obvious_contamination(pair: PairMeta, row: dict[str, str]) -> tuple[
     return False, ""
 
 
+def load_accepted_candidate_row_keys(pairs: dict[str, PairMeta]) -> set[tuple[str, str, str]]:
+    accepted_keys: set[tuple[str, str, str]] = set()
+    if not CANDIDATES_PATH.exists():
+        return accepted_keys
+
+    token_lookup: dict[tuple[str, str], dict[str, str]] = {}
+    for _, verse_tokens in iter_tokens_by_verse():
+        for token_row in verse_tokens:
+            token_lookup[(token_row["verse_id"], token_row["token_index"])] = token_row
+
+    with CANDIDATES_PATH.open(encoding="utf-8") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        for row in reader:
+            if row["candidate_status"] != "accepted":
+                continue
+            pair_id = CANDIDATE_ALIASES.get(row["construction_id"], row["construction_id"])
+            if "~" in pair_id:
+                pair_id = pair_id.replace(" ~ ", "-").replace("~", "-")
+            pair = pairs.get(pair_id)
+            if pair is None:
+                continue
+            for token_index in [part.strip() for part in row["token_indices"].split(",") if part.strip()]:
+                token_row = token_lookup.get((row["verse_id"], token_index))
+                if token_row is None:
+                    continue
+                attested_form, stem_alt, attested_note = infer_attested_form(token_row, pair)
+                if stem_alt in {"I", "II"} and attested_form in {pair.form_i, pair.form_ii} and not attested_note:
+                    accepted_keys.add((pair_id, row["verse_id"], token_index))
+    return accepted_keys
+
+
 def merge_notes(*parts: str) -> str:
     merged = []
     seen = set()
@@ -689,8 +743,7 @@ def row_print_status(
     pair: PairMeta,
     row: dict[str, str],
     environment: str,
-    review_bundle_text: str,
-    candidate_reference_statuses: dict[str, dict[str, set[str]]],
+    accepted_candidate_row_keys: set[tuple[str, str, str]],
 ) -> tuple[str, str]:
     if environment in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
         return "exclude_for_now", "Derived or lexicalized environments stay excluded at the row level even when the pair is retained for review."
@@ -706,17 +759,16 @@ def row_print_status(
     if pair.publication_status in {"exclude_for_now", "dossier_only", "needs_analyzer_review"}:
         return pair.publication_status, "Row status is capped by the pair-level publication status."
 
-    reference = row["reference"]
-    reference_statuses = candidate_reference_statuses.get(pair.pair_id, {}).get(reference, set())
-    if "accepted" in reference_statuses:
+    row_key = (pair.pair_id, row["verse_id"], row["token_index"])
+    if row_key in accepted_candidate_row_keys:
         return pair.publication_status, "Accepted candidate TSV evidence can inherit the pair's editorial status."
 
     if (
-        reference in review_bundle_text
+        row_key in MANUAL_REVIEW_ROW_ALLOWLIST
         and analysis_clarity_score(row) >= 3
         and environment in REVIEW_CITED_SAFE_ENVIRONMENTS
     ):
-        return "print_usable_with_caveat", "Packet- or dossier-cited rows can support review use, but remain caveated unless they are accepted candidate rows."
+        return MANUAL_REVIEW_ROW_ALLOWLIST[row_key], "This exact row is a manually checked review example kept as caveated evidence in the packet."
 
     return "needs_analyzer_review", "Row is useful for matrix review, but it is not strong enough to inherit the pair's print-facing status."
 
@@ -726,8 +778,9 @@ def write_corpus_audit() -> None:
 
     pairs = build_pair_inventory()
     verses = load_verse_metadata()
-    _, _, candidate_references, candidate_reference_statuses = load_candidate_statuses()
+    accepted_candidate_row_keys = load_accepted_candidate_row_keys(pairs)
     review_bundle_text = load_review_bundle_text()
+    review_references = extract_exact_review_references(review_bundle_text)
     form_ii_counts = count_form_ii_hits(pairs)
     form_i_index, form_ii_index, canonical_by_form_i = build_indexes(pairs, form_ii_counts)
 
@@ -787,8 +840,7 @@ def write_corpus_audit() -> None:
                     pair,
                     row_for_status,
                     environment,
-                    review_bundle_text,
-                    candidate_reference_statuses,
+                    accepted_candidate_row_keys,
                 )
                 notes = merge_notes(row_for_status["notes"], status_note)
                 audit_row = {
@@ -872,8 +924,8 @@ def write_corpus_audit() -> None:
                     }
                     priority = selection_priority(
                         example_row,
-                        candidate_references.get(pair.pair_id, set()),
-                        review_bundle_text,
+                        accepted_candidate_row_keys,
+                        review_references,
                         row_order,
                     )
                     current = best_examples.get(key)
@@ -950,8 +1002,8 @@ def write_corpus_audit() -> None:
             example["environment_count_for_side"] = str(example_counts[key])
             example["selection_reason"] = build_selection_reason(
                 example,
-                candidate_references.get(pair_id, set()),
-                review_bundle_text,
+                accepted_candidate_row_keys,
+                review_references,
             )
             writer.writerow(example)
 

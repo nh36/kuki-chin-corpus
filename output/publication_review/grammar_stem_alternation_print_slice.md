@@ -16,7 +16,7 @@ Earlier descriptions agree that Tedim has a two-form verbal system, even though 
 
 The project's generated stem inventory and paradigm tables confirm that the alternation is lexically widespread. Pairs such as `mu ~ muh`, `ne ~ nek`, `nei ~ neih`, `thei ~ theih`, `pia ~ piak`, and `piang ~ pian` are all visible in the current report layer. What is not yet safe enough is automatic editorial packaging. The current `output/grammar/grammar_full.md` and `output/grammar/example_selection_audit.md` still leave stem alternation without a draft-ready backend example, so the present slice uses manually selected Bible verses rather than inheriting auto-selected quotations.[^reports]
 
-The newer `output/publication_review/stem_alternation_example_matrix.tsv` is helpful here, but only as a review tool. It records one representative example per pair, stem side, and environment so the wider distribution can be checked systematically; it does **not** mean that every matrix row is automatically safe to quote in print.
+The newer `output/publication_review/stem_alternation_example_matrix.tsv` is helpful here, but only as a review tool. It records one representative example per pair, stem side, and environment so the wider distribution can be checked systematically; it does **not** mean that every matrix row is automatically safe to quote in print, and its higher-status rows are limited to exact accepted candidate tokens plus a very small number of manually retained caveated examples.
 
 # Coverage in the Bible corpus
 

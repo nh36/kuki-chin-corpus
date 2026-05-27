@@ -61,6 +61,19 @@ REQUIRED_MATRIX_COLUMNS = {
     "notes",
 }
 
+FALLBACK_ACCEPTED_CANDIDATE_ROW_KEYS = {
+    ("mu-muh", "01001004", "8"),
+    ("mu-muh", "01019019", "3"),
+    ("ne-nek", "01002017", "12"),
+    ("ne-nek", "01002017", "23"),
+    ("nei-neih", "01011030", "5"),
+    ("nei-neih", "10023008", "1"),
+    ("pia-piak", "01003012", "8"),
+    ("pia-piak", "01003012", "13"),
+    ("za-zak", "01024052", "6"),
+    ("nusia-nusiat", "05002014", "22"),
+}
+
 
 def load_tsv(path: Path):
     with path.open(encoding="utf-8") as handle:
@@ -139,6 +152,29 @@ def test_stem_alternation_example_matrix_never_promotes_review_or_excluded_envir
         blocked_rows = [row for row in rows if row["environment"] == blocked_environment]
         assert blocked_rows
         assert all(row["print_status"] == "exclude_for_now" for row in blocked_rows)
+
+
+def test_stem_alternation_promoted_matrix_rows_are_exact_candidate_rows_or_manual_allowlist():
+    module = load_audit_module()
+    _, rows = load_tsv(EXAMPLE_MATRIX_PATH)
+
+    if TOKENS_PATH.exists():
+        accepted_candidate_row_keys = module.load_accepted_candidate_row_keys(module.build_pair_inventory())
+    else:
+        accepted_candidate_row_keys = FALLBACK_ACCEPTED_CANDIDATE_ROW_KEYS
+
+    manual_allowlist = set(module.MANUAL_REVIEW_ROW_ALLOWLIST)
+    noisy_forms = {"piangsak", "ngaihsutna", "ngaihsun", "honkhiat", "honkhia", "hu", "huh", "luimu", "muhdah"}
+
+    for row in rows:
+        row_key = (row["pair_id"], row["verse_id"], row["token_index"])
+        if row["print_status"] == "print_ready":
+            assert row_key in accepted_candidate_row_keys
+
+        if row["print_status"] == "print_usable_with_caveat":
+            assert row_key in accepted_candidate_row_keys or row_key in manual_allowlist
+            assert row["environment"] not in {"unknown_or_needs_review", "causative_or_derivational_sak", "compound_or_lexicalized"}
+            assert row["normalized_form"] not in noisy_forms
 
 
 def test_stem_alternation_example_matrix_keeps_noisy_families_out_of_clean_print_ready_evidence():
