@@ -12,6 +12,7 @@ TOKENS_PATH = ROOT / "data/ctd_analysis/tokens.tsv"
 ENV_SUMMARY_PATH = ROOT / "output/publication_review/stem_alternation_environment_summary.tsv"
 PAIR_SUMMARY_PATH = ROOT / "output/publication_review/stem_alternation_pair_summary.tsv"
 EXAMPLE_MATRIX_PATH = ROOT / "output/publication_review/stem_alternation_example_matrix.tsv"
+LEXICAL_INVENTORY_PATH = ROOT / "output/publication_review/stem_alternation_lexical_inventory.tsv"
 
 REQUIRED_ENV_COLUMNS = {
     "pair_id",
@@ -224,7 +225,9 @@ def test_stem_alternation_example_matrix_is_reproducible_when_tokens_export_is_a
     monkeypatch.setattr(module, "ENV_SUMMARY_PATH", tmp_path / "stem_alternation_environment_summary.tsv")
     monkeypatch.setattr(module, "PAIR_SUMMARY_PATH", tmp_path / "stem_alternation_pair_summary.tsv")
     monkeypatch.setattr(module, "EXAMPLE_MATRIX_PATH", tmp_path / "stem_alternation_example_matrix.tsv")
+    monkeypatch.setattr(module, "LEXICAL_INVENTORY_PATH", tmp_path / "stem_alternation_lexical_inventory.tsv")
 
     module.write_corpus_audit()
 
     assert (tmp_path / "stem_alternation_example_matrix.tsv").read_text(encoding="utf-8") == EXAMPLE_MATRIX_PATH.read_text(encoding="utf-8")
+    assert (tmp_path / "stem_alternation_lexical_inventory.tsv").read_text(encoding="utf-8") == LEXICAL_INVENTORY_PATH.read_text(encoding="utf-8")

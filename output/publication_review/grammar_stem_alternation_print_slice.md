@@ -8,129 +8,139 @@ reference-section-title: "References"
 
 # Scope
 
-This review slice tests whether the project can now produce a short print-facing treatment of Tedim verb stem alternation. It focuses on the opposition traditionally called Form I and Form II, on a small set of manually checked Bible examples, and on how paired stems should be represented in print dictionary entries. It does not attempt a full verb chapter, a TAM chapter, or an inventory of every alternating verb in the corpus.
+This review slice now aims at a broader target than the earlier packet. It still does not attempt a full verb chapter or a full TAM chapter, but it does try to show that Tedim verb-stem alternation can be discussed through a larger lexical inventory rather than through only three or four showcase pairs. The key question is no longer just "which quotations are safe enough to print?" but also "which lexical items belong in the grammatical discussion at all, and what kind of Bible evidence actually supports each one?"
 
 # Form I and Form II
 
-Earlier descriptions agree that Tedim has a two-form verbal system, even though the terminology differs. Henderson describes Form I and Form II, while Zam Ngaih Cing speaks of Stem 1 and Stem 2 [@henderson1965; @zamngaihcing2017]. Henderson's account emphasizes clause type, especially the contrast between conclusive and inconclusive verbal phrases, whereas Zam Ngaih Cing gives a more explicitly morphosyntactic account in which Stem 2 is associated with negatives, nominalizations, and certain derived environments [@henderson1965; @zamngaihcing2017].
+Earlier descriptions agree that Tedim has a two-form verbal system, even though the terminology differs. Henderson describes Form I and Form II, while Zam Ngaih Cing speaks of Stem 1 and Stem 2 [@henderson1965; @zamngaihcing2017]. Henderson emphasizes clause type and the contrast between conclusive and inconclusive predication, while Zam Ngaih Cing makes the connection to nominalization, negation, and other morphosyntactic environments more explicit [@henderson1965; @zamngaihcing2017].
 
-The project's generated stem inventory and paradigm tables confirm that the alternation is lexically widespread. Pairs such as `mu ~ muh`, `ne ~ nek`, `nei ~ neih`, `thei ~ theih`, `pia ~ piak`, and `piang ~ pian` are all visible in the current report layer. What is not yet safe enough is automatic editorial packaging. The current `output/grammar/grammar_full.md` and `output/grammar/example_selection_audit.md` still leave stem alternation without a draft-ready backend example, so the present slice uses manually selected Bible verses rather than inheriting auto-selected quotations.[^reports]
+The corpus now supports a stronger editorial distinction than the earlier packet did. The new `output/publication_review/stem_alternation_lexical_inventory.tsv` separates three layers:
 
-The newer `output/publication_review/stem_alternation_example_matrix.tsv` is helpful here, but only as a review tool. It records one representative example per pair, stem side, and environment so the wider distribution can be checked systematically; it does **not** mean that every matrix row is automatically safe to quote in print, and its higher-status rows are limited to exact accepted candidate tokens plus a very small number of manually retained caveated examples.
+1. **Lexical-pair status**: whether the item is supported by secondary literature, the Zakaria/VSA questionnaire, the analyzer inventory, the corpus audit, or some combination of those sources.
+2. **Bible attestation profile**: whether Form I and Form II are both attested, one-sided, or mainly visible in derived, nominalized, or lexicalized environments.
+3. **Print-example safety**: whether any exact token is currently print-ready, print-usable with caveat, dossier-only, or excluded.
 
-# Coverage in the Bible corpus
+That separation matters. Henderson and Zam Ngaih Cing are witnesses to the system, not automatic authorities over every Bible token. Likewise, the hardened `output/publication_review/stem_alternation_example_matrix.tsv` is a review tool, not itself a set of print-safe quotations. It is useful because it makes the corpus distribution inspectable, but it does **not** mean that every matrix row, or every Form II-looking token, belongs in print prose unchanged.
 
-The broader dossier behind this slice now makes it possible to say more clearly what the Bible corpus does and does not support. The corpus does not reduce to three clean pairs plus general uncertainty. It supports a wider field of candidates, but those candidates are not all equally ready for print. Some pairs are clean enough for main prose now, some are usable only with a visible caveat, some remain dossier-only because the evidence is mostly modal, nominalized, or lexically noisy, and some should be excluded from simple stem-alternation treatment altogether.
+# Clean showcase pairs
 
-| Pair | Type | Status | Reason |
-| --- | --- | --- | --- |
-| `mu ~ muh` | `+h` | print-ready | Strong finite vs nominalized/dependent contrast with little lexical noise. |
-| `ne ~ nek` | `+k` | print-ready | Same-verse contrast in Genesis 2:17 makes the pair unusually clear. |
-| `nei ~ neih` | `+h` | print-ready | Finite `nei` and attributive/nominalized `neih` are both robustly attested. |
-| `za ~ zak` | `+k` | print-usable with caveat | Exact Form II is common enough, but some `zak` uses broaden beyond ordinary hearing. |
-| `pia ~ piak` | `+k` | print-usable with caveat | The pair is real, but autogenerated examples are easily contaminated by `piangsak` and related material. |
-| `nusia ~ nusiat` | `+t` | print-usable with caveat | Form II is real, but most good examples are dependent, irrealis, or clause-linking rather than simple finite contrasts. |
-| `thei ~ theih` | `+h` | dossier-only | Real pair, but heavily entangled with modal, purposive, and nominalized uses. |
-| `piang ~ pian` | `-ng > -n` | dossier-only | Real pair, but Form II is mostly visible through `pianna` and `a pian nadingin`. |
-| `ngai ~ ngaih` | `+h` | dossier-only | Exact Form II exists, but the `ngaihsun/ngaihsut` lexical family makes the evidence hard to stabilize. |
-| `honkhia ~ honkhiat` | `+t` | exclude for now | `honkhia` behaves as a lexicalized or compound-like verb, and exact `honkhiat` is nearly absent. |
-| `hu ~ huh` | `+h` in appearance only | exclude for now | The apparent pair crosses lexical category and sense boundaries rather than behaving like a clean stem pair. |
+The cleanest pedagogical material remains concentrated in a small set of pairs. Those still anchor the prose, but they no longer define the whole lexical discussion.
 
-Within this wider field, `za ~ zak`, `pia ~ piak`, and `nusia ~ nusiat` are now the main caveated additions beyond the core print-ready set. By contrast, `thei ~ theih` and `piang ~ pian` should remain explicitly caveated or dossier-only: the former is real but still heavily tied to modal, purposive, and nominalized uses, while the latter is real but shows the Form II side mostly through `pianna` and `a pian nadingin` rather than through a neat bare finite paradigm.
-
-# Main environments for stem alternation
-
-For print purposes, the safest generalization is narrower than any one-line formula such as "Form II is subordinate" or "Form II is negative." The Bible corpus does support a real distributional contrast, but it shows that the opposition is expressed especially clearly when one compares ordinary finite predication with dependent, derived, or nominalized environments. That is the level at which the current material is strongest enough for print.
-
-(@ex:stem-mu)
-a. Tedim: Pasian in tua khuavak hoih hi, ci-in a mu hi. Pasian in khuamial panin khuavak khenkhia hi.
-b. Segmentation: mu
-c. Gloss: see.I
-d. Translation: "And God saw the light, that it was good: and God divided the light from the darkness."
-
-(@ex:stem-muh)
-a. Tedim: en un, note' muhna-ah na nasempa in maipha muzo a, ka nuntakna nong hutna uhah migitna lianpi kei tungah nong lak khin uh hi.
-b. Segmentation: muh-na
-c. Gloss: see.II-NMLZ
-d. Translation: "behold now, thy servant hath found grace in thy sight, and thou hast magnified thy mercy, which thou hast shewed unto me in saving my life"
-
-Genesis 1:4 is a straightforward finite predicate and gives a good Form I example of `mu`. Genesis 19:19, by contrast, does not merely repeat the same verb in a different translation. The relevant form is `muhna-ah` "in your sight", a nominalized dependent phrase. That contrast is stronger print evidence than a loose appeal to English "see" alone, because it shows Form II surfacing inside a derived nominal expression rather than in the final predicate of the clause.
-
-(@ex:stem-ne-nek)
-a. Tedim: Ahih hangin a pha le a sia theihna singkung gah pen na ne kei ding hi. Bang hang hiam cih leh tua na nek ni-in na si ding hi, a ci hi.
-b. Segmentation: ne ... nek
-c. Gloss: eat.I ... eat.II
-d. Translation: "but of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die"
-
-Genesis 2:17 is especially valuable because it places both forms in one verse. The finite prohibition has `na ne kei ding hi`, while the temporal dependent clause has `na nek ni-in`. The same verse also contains `theihna`, which confirms that Stem II is at home in nominalized material as well as in clause-linking environments. This is the kind of evidence a printed chapter should foreground: one verse can show the alternation structurally, not just lexically.
-
-`za ~ zak` is the strongest next-stage pair beyond the original narrow set. `za` is the ordinary Form I stem 'hear', as in Genesis 3:8 `amaute in za uh`. The corpus also attests `zak` well enough to use in print, and Genesis 24:52 gives a good dependent-clause example in `a zak ciangin`. The caution is lexical rather than structural: some `zak` contexts broaden into smell, audience, or other sensory readings, so only manually checked hearing examples should be promoted into print prose.
-
-(@ex:stem-za-zak)
-a. Tedim: Abraham' nasempa in amau' kammalte a zak ciangin Topa' mai leilakah a kunsuk hi.
-b. Segmentation: zak
-c. Gloss: hear.II
-d. Translation: "And it came to pass, that, when Abraham's servant heard their words, he worshipped the LORD, bowing himself to the earth."
-
-# Stem alternation and clause/sentence structure
-
-The alternation matters not only inside verbal paradigms, but also in how Tedim builds noun phrases and clause chains. Many of the clearest corpus examples of Form II are not bare finite verbs at all. They appear in nominalizations, relative-like expressions, and other dependent constructions that are structurally central to Tedim prose.
-
-(@ex:stem-nei-neih)
-a. Tedim: Tu-in Sarai ciing a, ta nei lo hi.
-b. Segmentation: nei
-c. Gloss: have.I
-d. Translation: "But Sarai was barren; she had no child."
-
-(@ex:stem-neih)
-a. Tedim: David' neih mi thahatte' minte: Tahkhemon mi Joshebbasshebeth hi a, amah pen mi thumte a ukpa ahi hi.
-b. Segmentation: nei-h
-c. Gloss: have.II-NOM
-d. Translation: "These be the names of the mighty men whom David had: the Tachmonite that sat in the seat, chief among the captains"
-
-The pair `nei ~ neih` makes the point clearly. Genesis 11:30 has ordinary finite `nei`, while 2 Samuel 23:8 uses `neih` in a derived nominal expression meaning roughly "the men David had". The difference is not a separate dictionary sense. It is the same lexical stem participating in a clause-structure contrast that the printed dictionary should represent explicitly.
-
-(@ex:stem-piang-pianna)
-a. Tedim: Ofir, Havilah, le Jobab' pianna pa ahi hi. Hihte khempeuh Joktan' tapate ahi hi.
-b. Segmentation: pian-na
-c. Gloss: be.born.II-NMLZ
-d. Translation: "and Ophir, and Havilah, and Jobab: all these were the sons of Joktan."
-
-The `piang ~ pian` pair is slightly less tidy in surface distribution than `mu ~ muh` or `ne ~ nek`, because the Bible corpus often shows the Form II side through derived forms such as `pianna` or `a pian nadingin` rather than through a simple isolated bare `pian`. Even so, Genesis 10:29 is good print evidence that the pair should be represented in the dictionary. The important editorial move is to record the pair while also telling the reader that the corpus most readily displays Form II in derived environments.
-
-# Stem alternation and transitivity
-
-The current transitivity report is useful here mainly because it shows what stem alternation is not. Many alternating pairs fall into the report's ambitransitive middle band rather than forming a neat transitive versus intransitive split. `mu/muh`, `ne/nek`, `nei/neih`, and `thei/theih` all cluster outside a simple lexical-valency opposition. That is a warning against turning Form II into a transitivity label. The more plausible editorial summary is that stem choice tracks clause type and derivational environment more strongly than lexical transitivity alone.
-
-At the same time, valency still matters for how alternating verbs are presented in a print dictionary. Ditransitives such as `pia ~ piak` need examples that preserve argument structure rather than isolated citation forms.
-
-(@ex:stem-pia-piak)
-a. Tedim: Mipa in, "Kei tawh a om dinga nong piak numei in singgah hong pia a, ke'n ka ne hi," ci hi.
-b. Segmentation: piak ... pia
-c. Gloss: give.II ... give.I
-d. Translation: "And the man said, The woman whom thou gavest to be with me, she gave me of the tree, and I did eat."
-
-Genesis 3:12 is a good manual example because it puts `nong piak` and `hong pia` in one speech turn. That is enough to justify a paired dictionary entry and caveated grammar mention for `pia ~ piak`. It is not enough to claim that the current autogenerated questionnaire already handles the whole distribution cleanly, so this pair should remain manually curated and explicitly caveated in print-facing work.
-
-# Paradigm examples
-
-The following mini-paradigm records the manually checked Bible support that now anchors the expanded slice. It still privileges the clearest pedagogical pairs, but it also includes the newly admitted caveated pairs `za ~ zak` and `nusia ~ nusiat` so that the table matches the actual scope of the packet.
-
-| Pair | Representative corpus evidence | Editorial note |
+| Pair | Showcase evidence | Current print layer |
 | --- | --- | --- |
-| `mu ~ muh` | Gen 1:4 `mu`; Gen 19:19 `muhna-ah` | Strong finite vs nominalized contrast; draft-ready. |
-| `ne ~ nek` | Gen 2:17 `ne` ... `nek` | One-verse contrast; draft-ready. |
-| `nei ~ neih` | Gen 11:30 `nei`; 2 Sam 23:8 `neih` | Strong finite vs derived nominal contrast; draft-ready. |
-| `za ~ zak` | Gen 3:8 `za`; Gen 24:52 `zak` | Print-usable with caveat; use hearing examples and avoid broader sensory or lexicalized `zak` contexts. |
-| `nusia ~ nusiat` | Gen 2:24 `nusia`; Deut 2:14 `nusiat` | Print-usable with caveat; Form II is clearest in dependent or clause-linking contexts rather than simple finite contrasts. |
-| `thei ~ theih` | Gen 3:2 `thei`; Gen 2:17 `theihna` | Real pair, but Form II is mostly surfaced through derived forms here and the Form I side overlaps with modal use; needs review. |
-| `piang ~ pian` | Gen 1:9 `a piang pah hi`; Gen 10:29 `pianna` | Pair is supported, but Form II is most visible through derived forms; needs review. |
-| `pia ~ piak` | Gen 3:12 `nong piak` ... `hong pia` | Print-usable with caveat; good manual contrast, but current autogenerated report examples remain noisy. |
+| `mu ~ muh` | Gen 1:4 `mu`; Gen 19:19 `muhna-ah` | print-ready |
+| `ne ~ nek` | Gen 2:17 `ne`; Gen 2:17 `nek` | print-ready |
+| `nei ~ neih` | Gen 11:30 `nei`; 2 Sam 23:8 `neih` | print-ready |
+| `za ~ zak` | Gen 3:8 `za`; Gen 24:52 `zak` | print-usable with caveat |
+| `pia ~ piak` | Gen 3:12 `pia`; Gen 3:12 `piak` | print-usable with caveat |
+| `nusia ~ nusiat` | Gen 2:24 `nusia-in`; Deut 2:14 `nusiat` | print-usable with caveat |
+
+# Larger lexical inventory
+
+The inventory is deliberately broader than the print-example layer: not every non-print-ready verb is omitted from discussion. Some verbs are securely alternating but still need manual example control; some are one-sided in the Bible but are still worth listing because the literature or questionnaire flags them; and some are included precisely so the difficult cases can be discussed explicitly instead of disappearing into a false "clean examples only" picture.
+
+Sources are abbreviated as **lit** (Henderson/Zam-facing review layer), **VSA** (the in-repo Zakaria questionnaire/report material), **analyzer**, and **Bible** (current corpus audit / exact-form scan).
+
+| Pair | Sources | Bible attestation profile | Recommended grammar treatment | Print-example layer |
+| --- | --- | --- | --- | --- |
+| `mu ~ muh` | lit+VSA+analyzer+Bible | both forms attested cleanly | core paradigm example | print ready |
+| `ne ~ nek` | lit+VSA+analyzer+Bible | both forms attested cleanly | core paradigm example | print ready |
+| `nei ~ neih` | lit+VSA+analyzer+Bible | both forms attested cleanly | core paradigm example | print ready |
+| `gamla ~ gamlat` | analyzer+Bible | both forms attested cleanly | ordinary inventory entry | needs analyzer review |
+| `mu ~ muk` | analyzer+Bible | both forms attested, but constructionally complex | ordinary inventory entry | needs analyzer review |
+| `nusia ~ nusiat` | lit+analyzer+Bible | both forms attested cleanly | ordinary inventory entry | print usable with caveat |
+| `pia ~ piak` | lit+VSA+analyzer+Bible | both forms attested cleanly | ordinary inventory entry | print usable with caveat |
+| `za ~ zak` | lit+VSA+analyzer+Bible | both forms attested cleanly | ordinary inventory entry | print usable with caveat |
+| `bia ~ biak` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `ci ~ cih` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `dipkua ~ dipkuat` | analyzer+Bible | both forms attested, but constructionally complex | discuss under nominalized/dependent evidence | needs analyzer review |
+| `hawlkhia ~ hawlkhiat` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `hi ~ hih` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `keu ~ keuh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `khai ~ khaih` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `khial ~ khialh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `kho ~ khoh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `khua ~ khuat` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `kia ~ kiak` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `kido ~ kidot` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `lampi ~ lampih` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `lua ~ luah` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `mual ~ mualh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `no ~ noh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `pai ~ paih` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `piang ~ pian` | lit+VSA+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | dossier only |
+| `pua ~ puak` | VSA+analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `sawlkhia ~ sawlkhiat` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `si ~ sit` | lit+VSA+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `sia ~ siah` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `sum ~ sumh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `tan ~ tanh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `thu ~ thuh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `tu ~ tuh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `tua ~ tuak` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `tuahpha ~ tuahphat` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `vial ~ vialh` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `zui ~ zuih` | analyzer+Bible | both forms attested cleanly | discuss under nominalized/dependent evidence | needs analyzer review |
+| `thei ~ theih` | lit+VSA+analyzer+Bible | both forms attested cleanly | discuss under modal/constructional complexity | dossier only |
+| `honkhia ~ honkhiat` | lit+analyzer+Bible | noisy or lexicalized evidence only | discuss under lexicalized/excluded cases | exclude for now |
+| `hu ~ huh` | lit+VSA+Bible | noisy or lexicalized evidence only | discuss under lexicalized/excluded cases | exclude for now |
+| `kho ~ khot` | analyzer+Bible | noisy or lexicalized evidence only | discuss under lexicalized/excluded cases | needs analyzer review |
+| `ngai ~ ngaih` | lit+VSA+analyzer+Bible | both forms attested cleanly | discuss under lexicalized/excluded cases | dossier only |
+| `sak ~ sak` | VSA+Bible | noisy or lexicalized evidence only | discuss under lexicalized/excluded cases | needs analyzer review |
+| `bawl ~ bawl` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `ci ~ ci` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `dawn ~ dawn` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `hi ~ hi` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `hoih ~ hoih` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `hong ~ hong` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `khawl ~ khawl` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `khen ~ khen` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `khum ~ khum` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `lei ~ lei` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `lian ~ lian` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `nuam ~ nuam` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `om ~ om` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `pai ~ pai` | lit+VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `rin ~ rin` | VSA | not attested in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `tom ~ tom` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `uk ~ uk` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `zawh ~ zawh` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `zui ~ zui` | VSA+Bible | Form I only in Bible | mention as literature/questionnaire one-sided item | needs analyzer review |
+| `bawl ~ bawlh` | analyzer+Bible | Form I only in Bible | omit pending stronger evidence | needs analyzer review |
+| `gen ~ genh` | analyzer+Bible | Form I only in Bible | omit pending stronger evidence | needs analyzer review |
+| `husia ~ husiat` | analyzer+Bible | Form I only in Bible | omit pending stronger evidence | needs analyzer review |
+| `ne ~ neh` | analyzer+Bible | Form II only in Bible | omit pending stronger evidence | needs analyzer review |
+| `om ~ omh` | analyzer+Bible | Form I only in Bible | omit pending stronger evidence | needs analyzer review |
+| `pua ~ puah` | analyzer+Bible | Form II only in Bible | omit pending stronger evidence | needs analyzer review |
+| `tua ~ tuah` | analyzer+Bible | Form II only in Bible | omit pending stronger evidence | needs analyzer review |
+
+# One-sided Bible attestations
+
+One-sided Bible attestations are not a reason to drop a verb from the grammar. They are a reason to label it honestly. The inventory therefore keeps same-form questionnaire items such as `dawn ~ dawn`, `pai ~ pai`, `hong ~ hong`, `om ~ om`, `ci ~ ci`, `hi ~ hi`, `bawl ~ bawl`, and `zui ~ zui`, but it treats them as one-sided Bible attestations because the current corpus does not independently show a distinct written Form II for them. Where the analyzer proposes a distinct partner such as `paih`, `cih`, `hih`, `omh`, `bawlh`, or `zuih`, that analyzer row is kept separately rather than being collapsed into the same-form questionnaire row.
+
+No separate Karius, Kariuss, or Karias questionnaire file is present in the repository. The questionnaire layer used here is the in-repo Zakaria/VSA material in `scripts/generate_vsa_report.py`, `docs/paradigms/5-verb-11-vsa-questionnaire.md`, and `docs/grammar/reports/05-verb-11-vsa-questionnaire.md`.
+
+# Nominalized and dependent evidence
+
+The main descriptive generalization is still structural, not mechanical. Form I is clearest in ordinary finite predication. Form II is especially clear in nominalized, dependent, purposive, relative/attributive, and other non-final environments. The strongest examples remain:
+
+- `mu ~ muh`: Gen 1:4 `mu` versus Gen 19:19 `muhna-ah`
+- `ne ~ nek`: Gen 2:17 `na ne kei ding hi` versus `na nek ni-in`
+- `nei ~ neih`: Gen 11:30 `nei` versus 2 Sam 23:8 `neih`
+- `za ~ zak`: Gen 3:8 `za` versus Gen 24:52 `a zak ciangin`
+- `pia ~ piak`: Gen 3:12 `pia` and `piak` in one speech turn
+- `nusia ~ nusiat`: Gen 2:24 `nusia-in` versus Deut 2:14 `nusiat a kipan`
+
+This is also why `thei ~ theih` and `piang ~ pian` remain provisional in the print layer even though they clearly belong in the lexical inventory. `theihna`, `pianna`, purpose constructions, and other dependent material are genuine evidence for the alternation, but they are not the same thing as a neat paired finite paradigm. Negative clauses are relevant here, but they are not a simple diagnostic: the corpus still shows many negatives with Form I, so the grammar should not flatten the system into "Form II = negative."
+
+# Difficult and excluded cases
+
+Several rows remain discussable only because the inventory is broader than the quotation layer. `ngai ~ ngaih` still belongs in the dossier and in the lexical inventory, but the `ngaihsun/ngaihsut/ngaihsutna` family keeps it out of straightforward pedagogical prose. `honkhia ~ honkhiat` and `hu ~ huh` remain excluded from simple stem-alternation treatment because the current evidence behaves as lexicalized, compound-like, or category-mixed material rather than as clean stem alternation. Questionnaire/report noise also has to stay visible: `piangsak`, `neihsak`, `luimu`, `mualtung`, and similar strings belong in the audit discussion precisely because they show where automatic discovery still overreaches.
+
+The wider analyzer inventory raises a second kind of difficulty. Pairs such as `mu ~ muk`, `ne ~ neh`, `pua ~ puak` / `pua ~ puah`, and `tua ~ tuak` / `tua ~ tuah` share a Form I base but not a single clean interpretation. The grammar should therefore inventory them, not suppress them, while making it explicit that some members of that larger field still need philological review before they can support printed examples.
 
 # Editorial summary
 
-This slice now supports a genuine print-facing treatment of Tedim verb stem alternation. The literature and the manually checked Bible evidence agree that a Form I and Form II contrast is real and central. The safest prose, however, is still cautious prose. Form I is straightforward in ordinary finite predication, while Form II is clearest in dependent and derived environments, especially nominalizations and certain clause-linking contexts. The current backend is good enough to inventory pairs and to support a hardened review matrix, but not yet good enough to choose print examples automatically or to flatten the whole system into a single rule about subordination, negation, or transitivity.
+The result is a more usable print-facing model. Tedim verb-stem alternation is lexically widespread. The Bible corpus gives clean paradigm evidence for some verbs, partial or constructionally restricted evidence for many others, and one-sided or same-form questionnaire evidence for still others. That is enough for a larger lexical inventory, even when the exact print-safe quotation layer remains narrow.
 
-The expanded coverage table makes the current editorial position more honest about that wider evidence. `za ~ zak`, `pia ~ piak`, and `nusia ~ nusiat` are now visible as print-usable pairs with caveat; `thei ~ theih` and `piang ~ pian` remain clearly provisional; and `ngai ~ ngaih`, `honkhia ~ honkhiat`, and `hu ~ huh` remain outside simple print treatment for now.
-
-[^reports]: The main current weakness is not the existence of stem alternation, but the reliability of automatic example selection. Some verb sections in `05-verb-11-vsa-questionnaire.md` are visibly noisier than others, and the generated grammar layer still marks the topic as review-only. That is why this slice keeps the evidence set small and manually checked.
+The larger lexical inventory is stronger than the older automatic report layer because it does not collapse lexical-pair status, Bible attestation, and print-example safety into a single confidence word. The matrix remains a review aid, not itself a set of print-safe quotations; the accepted candidate rows remain the strongest anchors for actual printed examples; and the grammar can now say more than "only the cleanest three pairs matter." It can also say which additional verbs are real, which are one-sided in the Bible, which are best discussed under nominalization or dependent structure, and which still belong under lexicalized or excluded cases.

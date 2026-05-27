@@ -7,6 +7,7 @@ Outputs:
     - output/publication_review/stem_alternation_environment_summary.tsv
     - output/publication_review/stem_alternation_pair_summary.tsv
     - output/publication_review/stem_alternation_example_matrix.tsv
+    - output/publication_review/stem_alternation_lexical_inventory.tsv
 
 The audit uses the analyzer's stem-pair inventory plus the local Tedim token
 export. `data/ctd_analysis/tokens.tsv` remains generated local build output and
@@ -33,14 +34,17 @@ CORPUS_AUDIT_PATH = OUTPUT_DIR / "stem_alternation_corpus_audit.tsv"
 ENV_SUMMARY_PATH = OUTPUT_DIR / "stem_alternation_environment_summary.tsv"
 PAIR_SUMMARY_PATH = OUTPUT_DIR / "stem_alternation_pair_summary.tsv"
 EXAMPLE_MATRIX_PATH = OUTPUT_DIR / "stem_alternation_example_matrix.tsv"
+LEXICAL_INVENTORY_PATH = OUTPUT_DIR / "stem_alternation_lexical_inventory.tsv"
 CANDIDATES_PATH = OUTPUT_DIR / "candidates_stem_alternation.tsv"
 GRAMMAR_PACKET_PATH = OUTPUT_DIR / "grammar_stem_alternation_print_slice.md"
 DICTIONARY_PACKET_PATH = OUTPUT_DIR / "dictionary_stem_alternation_print_slice.md"
 REVIEW_NOTES_PATH = OUTPUT_DIR / "review_notes_stem_alternation.md"
 DOSSIER_PATH = OUTPUT_DIR / "dossier_stem_alternation.md"
+STEMS_LIT_REVIEW_PATH = ROOT / "docs" / "grammar" / "lit-reviews" / "05-verb-01-stems-lit.md"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from analyze_morphemes import VERB_STEM_PAIRS  # noqa: E402
+from generate_vsa_report import PSC_TO_TEDIM  # noqa: E402
 
 
 CORPUS_COLUMNS = [
@@ -129,6 +133,41 @@ EXAMPLE_MATRIX_COLUMNS = [
     "notes",
 ]
 
+LEXICAL_INVENTORY_COLUMNS = [
+    "lexeme_id",
+    "form_i",
+    "form_ii",
+    "gloss",
+    "alternation_type",
+    "source_secondary_literature",
+    "source_vsa_questionnaire",
+    "source_analyzer_inventory",
+    "source_corpus_audit",
+    "source_notes",
+    "form_i_bible_attested",
+    "form_ii_bible_attested",
+    "form_i_clean_token_count",
+    "form_ii_clean_token_count",
+    "form_i_family_count",
+    "form_ii_family_count",
+    "best_form_i_examples",
+    "best_form_ii_examples",
+    "nominalized_examples",
+    "dependent_temporal_examples",
+    "purpose_examples",
+    "relative_or_attributive_examples",
+    "negative_examples",
+    "finite_predicate_examples",
+    "derived_or_causative_examples",
+    "compound_or_lexicalized_examples",
+    "homophone_or_noise_notes",
+    "bible_attestation_profile",
+    "lexical_pair_status",
+    "recommended_grammar_treatment",
+    "print_example_status",
+    "notes",
+]
+
 REVIEW_CITED_SAFE_ENVIRONMENTS = {
     "finite_main_or_matrix",
     "dependent_temporal_ciangin",
@@ -176,6 +215,76 @@ MANUAL_PUBLICATION_STATUS = {
     "ngai-ngaih": "dossier_only",
     "honkhia-honkhiat": "exclude_for_now",
     "hu-huh": "exclude_for_now",
+}
+
+LEXICAL_PAIR_STATUS_OVERRIDES = {
+    "mu-muh": "established_pair",
+    "ne-nek": "established_pair",
+    "nei-neih": "established_pair",
+    "za-zak": "established_pair",
+    "pia-piak": "established_pair",
+    "nusia-nusiat": "likely_pair",
+    "thei-theih": "established_pair",
+    "piang-pian": "likely_pair",
+    "ngai-ngaih": "likely_pair",
+    "honkhia-honkhiat": "lexicalized_or_category_mixed",
+    "hu-huh": "lexicalized_or_category_mixed",
+}
+
+GRAMMAR_TREATMENT_OVERRIDES = {
+    "mu-muh": "core_paradigm_example",
+    "ne-nek": "core_paradigm_example",
+    "nei-neih": "core_paradigm_example",
+    "za-zak": "ordinary_inventory_entry",
+    "pia-piak": "ordinary_inventory_entry",
+    "nusia-nusiat": "ordinary_inventory_entry",
+    "thei-theih": "discuss_under_modal_or_constructional_complexity",
+    "piang-pian": "discuss_under_nominalization_or_dependent_clauses",
+    "ngai-ngaih": "discuss_under_lexicalized_or_excluded_forms",
+    "honkhia-honkhiat": "discuss_under_lexicalized_or_excluded_forms",
+    "hu-huh": "discuss_under_lexicalized_or_excluded_forms",
+}
+
+PRINT_STATUS_RANK = {
+    "print_ready": 5,
+    "print_usable_with_caveat": 4,
+    "dossier_only": 3,
+    "needs_analyzer_review": 2,
+    "exclude_for_now": 1,
+}
+
+ENVIRONMENT_PRIORITY = {
+    "finite_main_or_matrix": 9,
+    "imperative_or_directive": 8,
+    "dependent_temporal_ciangin": 7,
+    "dependent_temporal_ni_in": 7,
+    "clause_linking_kipan": 7,
+    "nominalized_na": 6,
+    "relative_or_attributive_mi": 5,
+    "possessed_or_genitive_attributive": 5,
+    "purpose_nadingin": 4,
+    "negative_clause": 3,
+    "modal_or_ability": 2,
+    "quotative_or_say_complement": 1,
+    "unknown_or_needs_review": 0,
+    "causative_or_derivational_sak": -1,
+    "compound_or_lexicalized": -2,
+}
+
+SECONDARY_LITERATURE_PAIR_IDS = {
+    "mu-muh",
+    "ne-nek",
+    "nei-neih",
+    "ngai-ngaih",
+    "thei-theih",
+    "za-zak",
+    "pia-piak",
+    "piang-pian",
+    "nusia-nusiat",
+    "honkhia-honkhiat",
+    "hu-huh",
+    "pai-pai",
+    "si-sit",
 }
 
 SUPPLEMENTAL_PACKET_PAIRS = {
@@ -732,6 +841,500 @@ def merge_notes(*parts: str) -> str:
     return " ".join(merged)
 
 
+def load_tsv_rows(path: Path) -> list[dict[str, str]]:
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
+
+
+def load_questionnaire_inventory() -> dict[str, dict[str, str]]:
+    inventory: dict[str, dict[str, str]] = {}
+    for psc_label, (form_i, form_ii, gloss) in sorted(PSC_TO_TEDIM.items()):
+        pair_id = f"{form_i}-{form_ii}"
+        inventory[pair_id] = {
+            "pair_id": pair_id,
+            "psc_label": psc_label,
+            "form_i": form_i,
+            "form_ii": form_ii,
+            "gloss": gloss,
+        }
+    return inventory
+
+
+def exact_match_candidates(row: dict[str, str]) -> set[str]:
+    segmentation_compact = "".join(split_chain(row.get("segmentation", "")))
+    return {
+        clean(row.get("normalized_form", "")),
+        segmentation_compact,
+    } - {""}
+
+
+def row_matches_exact_form(row: dict[str, str], form: str) -> bool:
+    return form in exact_match_candidates(row)
+
+
+def is_clean_bare_stem_row(row: dict[str, str], form: str) -> bool:
+    if clean(row.get("attested_form", "")) != form:
+        return False
+    if row.get("stem_alternation", "") not in {"I", "II"}:
+        return False
+    if row.get("inferred_environment", "") in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
+        return False
+    notes = row.get("notes", "")
+    if "pair inferred from known noisy or derived family." in notes:
+        return False
+    if "token belongs to the pair family but is not a simple Form I/II token." in notes:
+        return False
+    return row_matches_exact_form(row, form)
+
+
+def inventory_row_priority(row: dict[str, str], form: str) -> tuple[int, int, int, int, str, int]:
+    return (
+        PRINT_STATUS_RANK.get(row.get("print_status", ""), 0),
+        1 if is_clean_bare_stem_row(row, form) else 0,
+        ENVIRONMENT_PRIORITY.get(row.get("inferred_environment", ""), -3),
+        analysis_clarity_score(row),
+        row.get("reference", ""),
+        -int(row.get("token_index", "0") or 0),
+    )
+
+
+def format_inventory_example(row: dict[str, str]) -> str:
+    form = row.get("surface_form") or row.get("attested_form") or row.get("normalized_form")
+    environment = row.get("inferred_environment", "")
+    status = row.get("print_status", "")
+    return f"{row.get('reference', '')} `{form}` [{environment}; {status}]"
+
+
+def choose_inventory_examples(
+    rows: list[dict[str, str]],
+    form: str,
+    *,
+    stem_alts: set[str] | None = None,
+    environments: set[str] | None = None,
+    limit: int = 3,
+) -> str:
+    filtered = []
+    for row in rows:
+        if stem_alts and row.get("stem_alternation", "") not in stem_alts:
+            continue
+        if environments and row.get("inferred_environment", "") not in environments:
+            continue
+        if form and clean(row.get("attested_form", "")) not in {form, ""} and not row_matches_exact_form(row, form):
+            continue
+        filtered.append(row)
+
+    ordered = sorted(filtered, key=lambda item: inventory_row_priority(item, form), reverse=True)
+    seen = set()
+    chosen = []
+    for row in ordered:
+        key = (row.get("reference", ""), row.get("token_index", ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        chosen.append(format_inventory_example(row))
+        if len(chosen) >= limit:
+            break
+    return "; ".join(chosen)
+
+
+def scan_questionnaire_only_rows(
+    entries: dict[str, dict[str, str]],
+    verses: dict[str, dict[str, str]],
+) -> dict[str, list[dict[str, str]]]:
+    if not entries:
+        return {}
+
+    form_index: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    pseudo_pairs: dict[str, PairMeta] = {}
+    for pair_id, entry in entries.items():
+        pseudo_pairs[pair_id] = PairMeta(
+            pair_id=pair_id,
+            form_i=entry["form_i"],
+            form_ii=entry["form_ii"],
+            gloss=entry["gloss"],
+            alternation_type=alternation_type(entry["form_i"], entry["form_ii"]),
+            analyzer_status="questionnaire_only",
+            used_in_print_packet=False,
+            in_candidate_tsv=False,
+            candidate_statuses=(),
+            publication_status="needs_analyzer_review",
+            notes="Questionnaire-only exact-form scan; not part of the analyzer pair inventory.",
+        )
+        form_index[entry["form_i"]].append((pair_id, "I"))
+        if entry["form_ii"] != entry["form_i"]:
+            form_index[entry["form_ii"]].append((pair_id, "II"))
+
+    rows_by_pair: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for verse_id, verse_tokens in iter_tokens_by_verse():
+        verse_meta = verses.get(verse_id)
+        if verse_meta is None:
+            continue
+
+        for index, row in enumerate(verse_tokens):
+            candidates = exact_match_candidates(row)
+            if not candidates:
+                continue
+
+            hits: dict[str, str] = {}
+            for candidate in candidates:
+                for pair_id, stem_alt in form_index.get(candidate, []):
+                    if stem_alt == "II" or pair_id not in hits:
+                        hits[pair_id] = stem_alt
+
+            for pair_id, stem_alt in hits.items():
+                pair = pseudo_pairs[pair_id]
+                environment, env_confidence, env_note = infer_environment(verse_tokens, index, pair, row)
+                print_status = "exclude_for_now" if environment in {"causative_or_derivational_sak", "compound_or_lexicalized"} else "needs_analyzer_review"
+                rows_by_pair[pair_id].append(
+                    {
+                        "pair_id": pair_id,
+                        "form_i": pair.form_i,
+                        "form_ii": pair.form_ii,
+                        "attested_form": pair.form_i if stem_alt == "I" else pair.form_ii,
+                        "stem_form": row["stem_form"],
+                        "verse_id": verse_id,
+                        "reference": verse_meta["reference"],
+                        "token_index": row["token_index"],
+                        "surface_form": row["surface_form"],
+                        "normalized_form": row["normalized_form"],
+                        "segmentation": row["segmentation"],
+                        "gloss": row["gloss"],
+                        "lemma": row["lemma"],
+                        "pos": row["pos"],
+                        "stem_alternation": stem_alt,
+                        "prefix_chain": row["prefix_chain"],
+                        "suffix_chain": row["suffix_chain"],
+                        "usage_type": row["usage_type"],
+                        "function_type": row["function_type"],
+                        "local_context": local_context(verse_tokens, index),
+                        "kjv": verse_meta["kjv"],
+                        "inferred_environment": environment,
+                        "environment_confidence": env_confidence,
+                        "print_status": print_status,
+                        "notes": merge_notes(
+                            pair.notes,
+                            env_note,
+                            "Questionnaire maps the same surface form to both slots." if pair.form_i == pair.form_ii else "",
+                        ),
+                    }
+                )
+    return rows_by_pair
+
+
+def source_notes_for_inventory_entry(
+    pair_id: str,
+    form_i: str,
+    form_ii: str,
+    questionnaire_entry: dict[str, str] | None,
+    pair: PairMeta | None,
+    form_i_index: dict[str, list[str]],
+) -> str:
+    notes = []
+    if questionnaire_entry is not None:
+        notes.append(
+            "Questionnaire evidence comes from the in-repo Zakaria/VSA materials; no separate Karius/Kariuss/Karias questionnaire file is present."
+        )
+        notes.append(f"{questionnaire_entry['psc_label']} -> {form_i}/{form_ii}.")
+        if form_i == form_ii:
+            notes.append("The questionnaire uses the same written form in both slots.")
+        sibling_pairs = sorted(other for other in form_i_index.get(form_i, []) if other != pair_id)
+        if sibling_pairs:
+            notes.append(f"Analyzer inventory also maps the same Form I base to {', '.join(sibling_pairs)}.")
+    if pair is not None and pair.analyzer_status == "packet_pair_not_in_VERB_STEM_PAIRS":
+        notes.append("Present in the publication-review packet, but absent from VERB_STEM_PAIRS.")
+    if pair_id in SECONDARY_LITERATURE_PAIR_IDS:
+        notes.append("Current Henderson/Zam-facing review materials discuss this pair family directly.")
+    if questionnaire_entry is not None and pair is not None and questionnaire_entry["gloss"] != pair.gloss:
+        notes.append(f"Questionnaire gloss `{questionnaire_entry['gloss']}` and analyzer gloss `{pair.gloss}` differ.")
+    return merge_notes(*notes)
+
+
+def infer_bible_attestation_profile(
+    form_i_attested: bool,
+    form_ii_attested: bool,
+    form_i_clean: int,
+    form_ii_clean: int,
+    rows: list[dict[str, str]],
+) -> str:
+    environments = {row.get("inferred_environment", "") for row in rows}
+    if not form_i_attested and not form_ii_attested:
+        return "not_attested_in_bible"
+    if form_i_attested and form_ii_attested:
+        if form_i_clean > 0 and form_ii_clean > 0:
+            return "both_forms_cleanly_attested"
+        if environments <= {"causative_or_derivational_sak", "compound_or_lexicalized"}:
+            return "only_noisy_or_lexicalized_attested"
+        if environments & {
+            "nominalized_na",
+            "dependent_temporal_ciangin",
+            "dependent_temporal_ni_in",
+            "clause_linking_kipan",
+            "purpose_nadingin",
+            "relative_or_attributive_mi",
+            "possessed_or_genitive_attributive",
+            "modal_or_ability",
+        }:
+            return "both_forms_attested_but_complex"
+        return "both_forms_attested_but_complex"
+    if form_i_attested:
+        if form_i_clean > 0:
+            return "form_i_only_attested"
+        if environments & {"nominalized_na", "purpose_nadingin", "relative_or_attributive_mi", "possessed_or_genitive_attributive"}:
+            return "only_derived_or_nominalized_attested"
+        return "only_noisy_or_lexicalized_attested"
+    if form_ii_clean > 0:
+        return "form_ii_only_attested"
+    if environments & {
+        "nominalized_na",
+        "dependent_temporal_ciangin",
+        "dependent_temporal_ni_in",
+        "clause_linking_kipan",
+        "purpose_nadingin",
+        "relative_or_attributive_mi",
+        "possessed_or_genitive_attributive",
+        "modal_or_ability",
+    }:
+        return "only_derived_or_nominalized_attested"
+    return "only_noisy_or_lexicalized_attested"
+
+
+def infer_lexical_pair_status(
+    pair_id: str,
+    *,
+    source_secondary: bool,
+    source_vsa: bool,
+    source_analyzer: bool,
+    form_i_attested: bool,
+    form_ii_attested: bool,
+    bible_profile: str,
+    form_i: str,
+    form_ii: str,
+) -> str:
+    if pair_id in LEXICAL_PAIR_STATUS_OVERRIDES:
+        return LEXICAL_PAIR_STATUS_OVERRIDES[pair_id]
+    if bible_profile == "only_noisy_or_lexicalized_attested":
+        return "homophone_or_noise_only"
+    if form_i == form_ii and source_vsa:
+        return "questionnaire_pair_bible_one_sided" if (form_i_attested or form_ii_attested) else "analyzer_pair_needs_review"
+    if source_vsa and form_i_attested != form_ii_attested:
+        return "questionnaire_pair_bible_one_sided"
+    if source_secondary and form_i_attested != form_ii_attested:
+        return "literature_pair_bible_one_sided"
+    if source_secondary or source_vsa:
+        if bible_profile in {"both_forms_cleanly_attested", "both_forms_attested_but_complex"}:
+            return "established_pair"
+        return "likely_pair"
+    if source_analyzer and bible_profile in {"both_forms_cleanly_attested", "both_forms_attested_but_complex"}:
+        return "likely_pair"
+    if source_analyzer:
+        return "analyzer_pair_needs_review"
+    return "likely_pair"
+
+
+def infer_grammar_treatment(
+    pair_id: str,
+    *,
+    lexical_pair_status: str,
+    bible_profile: str,
+    source_secondary: bool,
+    source_vsa: bool,
+    rows: list[dict[str, str]],
+) -> str:
+    if pair_id in GRAMMAR_TREATMENT_OVERRIDES:
+        return GRAMMAR_TREATMENT_OVERRIDES[pair_id]
+    if lexical_pair_status in {"lexicalized_or_category_mixed", "homophone_or_noise_only"} or bible_profile == "only_noisy_or_lexicalized_attested":
+        return "discuss_under_lexicalized_or_excluded_forms"
+    if bible_profile == "not_attested_in_bible":
+        return "mention_as_literature_or_questionnaire_only" if (source_secondary or source_vsa) else "omit_pending_evidence"
+    if bible_profile in {"form_i_only_attested", "form_ii_only_attested"}:
+        return "mention_as_literature_or_questionnaire_only" if (source_secondary or source_vsa) else "omit_pending_evidence"
+    if any(row.get("inferred_environment", "") == "modal_or_ability" for row in rows):
+        return "discuss_under_modal_or_constructional_complexity"
+    if any(
+        row.get("inferred_environment", "") in {
+            "nominalized_na",
+            "dependent_temporal_ciangin",
+            "dependent_temporal_ni_in",
+            "clause_linking_kipan",
+            "purpose_nadingin",
+            "relative_or_attributive_mi",
+            "possessed_or_genitive_attributive",
+        }
+        for row in rows
+    ):
+        return "discuss_under_nominalization_or_dependent_clauses"
+    return "ordinary_inventory_entry"
+
+
+def best_available_print_status(pair: PairMeta | None, rows: list[dict[str, str]]) -> str:
+    if pair is not None:
+        return pair.publication_status
+    best = "needs_analyzer_review"
+    for row in rows:
+        if PRINT_STATUS_RANK.get(row.get("print_status", ""), 0) > PRINT_STATUS_RANK.get(best, 0):
+            best = row["print_status"]
+    return best
+
+
+def homophone_or_noise_notes(
+    pair_id: str,
+    rows: list[dict[str, str]],
+    questionnaire_entry: dict[str, str] | None,
+    pair: PairMeta | None,
+) -> str:
+    notes = []
+    if pair_id == "ngai-ngaih":
+        notes.append("`ngaihsun/ngaihsut/ngaihsutna` remain lexical-family contamination unless a row can be justified independently.")
+    if pair_id == "piang-pian":
+        notes.append("`piangsak` and related derived rows must not be counted as clean bare Form II evidence.")
+    if pair_id in {"honkhia-honkhiat", "hu-huh"}:
+        notes.append("Current evidence behaves as lexicalized or category-mixed rather than as a clean pedagogical stem pair.")
+    if questionnaire_entry is not None and questionnaire_entry["form_i"] == questionnaire_entry["form_ii"]:
+        notes.append("Questionnaire uses a same-form mapping, so Bible tokens do not independently prove a distinct written Form II.")
+    blocked_forms = Counter(
+        clean(row.get("normalized_form", ""))
+        for row in rows
+        if row.get("inferred_environment", "") in {"causative_or_derivational_sak", "compound_or_lexicalized"}
+    )
+    if blocked_forms:
+        notes.append(f"Blocked noisy material includes {', '.join(name for name, _ in blocked_forms.most_common(4))}.")
+    if pair is not None and pair.form_i == "pua" and pair.form_ii == "puak":
+        notes.append("Questionnaire glosses this base as 'carry.on.back', while the analyzer gloss is 'spill'.")
+    return merge_notes(*notes)
+
+
+def write_lexical_inventory(
+    pairs: dict[str, PairMeta],
+    form_i_index: dict[str, list[str]],
+    verses: dict[str, dict[str, str]],
+) -> None:
+    questionnaire_inventory = load_questionnaire_inventory()
+    audit_rows = load_tsv_rows(CORPUS_AUDIT_PATH)
+    rows_by_pair: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in audit_rows:
+        rows_by_pair[row["pair_id"]].append(row)
+
+    questionnaire_only = {
+        pair_id: entry
+        for pair_id, entry in questionnaire_inventory.items()
+        if pair_id not in pairs
+    }
+    for pair_id, extra_rows in scan_questionnaire_only_rows(questionnaire_only, verses).items():
+        rows_by_pair[pair_id].extend(extra_rows)
+
+    inventory_rows = []
+    all_pair_ids = sorted(set(pairs) | set(questionnaire_inventory))
+    for pair_id in all_pair_ids:
+        pair = pairs.get(pair_id)
+        questionnaire_entry = questionnaire_inventory.get(pair_id)
+        form_i = pair.form_i if pair is not None else questionnaire_entry["form_i"]
+        form_ii = pair.form_ii if pair is not None else questionnaire_entry["form_ii"]
+        gloss_parts = []
+        if pair is not None and pair.gloss:
+            gloss_parts.append(pair.gloss)
+        if questionnaire_entry is not None and questionnaire_entry["gloss"] and questionnaire_entry["gloss"] not in gloss_parts:
+            gloss_parts.append(questionnaire_entry["gloss"])
+        gloss = " / ".join(gloss_parts)
+
+        pair_rows = rows_by_pair.get(pair_id, [])
+        form_i_rows = [row for row in pair_rows if row.get("stem_alternation", "") == "I"]
+        form_ii_rows = [row for row in pair_rows if row.get("stem_alternation", "") == "II"]
+        form_i_clean = sum(1 for row in form_i_rows if is_clean_bare_stem_row(row, form_i))
+        form_ii_clean = sum(1 for row in form_ii_rows if is_clean_bare_stem_row(row, form_ii))
+        form_i_family = len(form_i_rows)
+        form_ii_family = len(form_ii_rows)
+        form_i_attested = form_i_family > 0
+        form_ii_attested = form_ii_family > 0 and not (questionnaire_entry is not None and form_i == form_ii and pair is None)
+
+        bible_profile = infer_bible_attestation_profile(
+            form_i_attested,
+            form_ii_attested,
+            form_i_clean,
+            form_ii_clean,
+            pair_rows,
+        )
+        source_secondary = pair_id in SECONDARY_LITERATURE_PAIR_IDS
+        source_vsa = questionnaire_entry is not None
+        source_analyzer = pair is not None and pair.analyzer_status == "known_to_analyzer"
+        source_corpus = bool(pair_rows)
+        lexical_status = infer_lexical_pair_status(
+            pair_id,
+            source_secondary=source_secondary,
+            source_vsa=source_vsa,
+            source_analyzer=source_analyzer,
+            form_i_attested=form_i_attested,
+            form_ii_attested=form_ii_attested,
+            bible_profile=bible_profile,
+            form_i=form_i,
+            form_ii=form_ii,
+        )
+        grammar_treatment = infer_grammar_treatment(
+            pair_id,
+            lexical_pair_status=lexical_status,
+            bible_profile=bible_profile,
+            source_secondary=source_secondary,
+            source_vsa=source_vsa,
+            rows=pair_rows,
+        )
+        print_status = best_available_print_status(pair, pair_rows)
+        notes = []
+        siblings = sorted(other for other in form_i_index.get(form_i, []) if other != pair_id)
+        if siblings:
+            notes.append(f"Shared Form I base with {', '.join(siblings)}.")
+        if source_vsa and questionnaire_entry is not None and questionnaire_entry["form_i"] == questionnaire_entry["form_ii"] and pair is None:
+            notes.append("Questionnaire keeps the same written form in both slots, so this row is treated as Form I only for Bible-attestation purposes.")
+        if bible_profile == "both_forms_attested_but_complex":
+            notes.append("Both forms are attested, but at least one side is clearest in dependent, nominalized, or otherwise non-bare environments.")
+        if bible_profile in {"form_i_only_attested", "form_ii_only_attested"}:
+            notes.append("Only one stem side is currently attested cleanly in the Bible corpus.")
+        if bible_profile == "only_noisy_or_lexicalized_attested":
+            notes.append("Current Bible evidence is limited to noisy, lexicalized, or heavily derived material.")
+
+        inventory_rows.append(
+            {
+                "lexeme_id": pair_id,
+                "form_i": form_i,
+                "form_ii": form_ii,
+                "gloss": gloss,
+                "alternation_type": alternation_type(form_i, form_ii),
+                "source_secondary_literature": "yes" if source_secondary else "no",
+                "source_vsa_questionnaire": "yes" if source_vsa else "no",
+                "source_analyzer_inventory": "yes" if source_analyzer else "no",
+                "source_corpus_audit": "yes" if source_corpus else "no",
+                "source_notes": source_notes_for_inventory_entry(pair_id, form_i, form_ii, questionnaire_entry, pair, form_i_index),
+                "form_i_bible_attested": "yes" if form_i_attested else "no",
+                "form_ii_bible_attested": "yes" if form_ii_attested else "no",
+                "form_i_clean_token_count": str(form_i_clean),
+                "form_ii_clean_token_count": str(form_ii_clean),
+                "form_i_family_count": str(form_i_family),
+                "form_ii_family_count": str(form_ii_family),
+                "best_form_i_examples": choose_inventory_examples(pair_rows, form_i, stem_alts={"I"}),
+                "best_form_ii_examples": choose_inventory_examples(pair_rows, form_ii, stem_alts={"II"}),
+                "nominalized_examples": choose_inventory_examples(pair_rows, "", environments={"nominalized_na"}, limit=2),
+                "dependent_temporal_examples": choose_inventory_examples(pair_rows, "", environments={"dependent_temporal_ciangin", "dependent_temporal_ni_in", "clause_linking_kipan"}, limit=2),
+                "purpose_examples": choose_inventory_examples(pair_rows, "", environments={"purpose_nadingin"}, limit=2),
+                "relative_or_attributive_examples": choose_inventory_examples(pair_rows, "", environments={"relative_or_attributive_mi", "possessed_or_genitive_attributive"}, limit=2),
+                "negative_examples": choose_inventory_examples(pair_rows, "", environments={"negative_clause"}, limit=2),
+                "finite_predicate_examples": choose_inventory_examples(pair_rows, "", environments={"finite_main_or_matrix", "imperative_or_directive"}, limit=2),
+                "derived_or_causative_examples": choose_inventory_examples(pair_rows, "", environments={"causative_or_derivational_sak"}, limit=2),
+                "compound_or_lexicalized_examples": choose_inventory_examples(pair_rows, "", environments={"compound_or_lexicalized"}, limit=2),
+                "homophone_or_noise_notes": homophone_or_noise_notes(pair_id, pair_rows, questionnaire_entry, pair),
+                "bible_attestation_profile": bible_profile,
+                "lexical_pair_status": lexical_status,
+                "recommended_grammar_treatment": grammar_treatment,
+                "print_example_status": print_status,
+                "notes": merge_notes(*notes),
+            }
+        )
+
+    with LEXICAL_INVENTORY_PATH.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=LEXICAL_INVENTORY_COLUMNS, delimiter="\t")
+        writer.writeheader()
+        writer.writerows(inventory_rows)
+
+
 def display_path(path: Path) -> Path:
     try:
         return path.relative_to(ROOT)
@@ -1007,10 +1610,13 @@ def write_corpus_audit() -> None:
             )
             writer.writerow(example)
 
+    write_lexical_inventory(pairs, form_i_index, verses)
+
     print(f"Wrote {display_path(CORPUS_AUDIT_PATH)}")
     print(f"Wrote {display_path(ENV_SUMMARY_PATH)}")
     print(f"Wrote {display_path(PAIR_SUMMARY_PATH)}")
     print(f"Wrote {display_path(EXAMPLE_MATRIX_PATH)}")
+    print(f"Wrote {display_path(LEXICAL_INVENTORY_PATH)}")
 
 
 def main() -> None:
