@@ -8,6 +8,7 @@ Outputs:
     - output/publication_review/stem_alternation_pair_summary.tsv
     - output/publication_review/stem_alternation_example_matrix.tsv
     - output/publication_review/stem_alternation_lexical_inventory.tsv
+    - output/publication_review/stem_alternation_promotable_examples.tsv
 
 The audit uses the analyzer's stem-pair inventory plus the local Tedim token
 export. `data/ctd_analysis/tokens.tsv` remains generated local build output and
@@ -35,6 +36,7 @@ ENV_SUMMARY_PATH = OUTPUT_DIR / "stem_alternation_environment_summary.tsv"
 PAIR_SUMMARY_PATH = OUTPUT_DIR / "stem_alternation_pair_summary.tsv"
 EXAMPLE_MATRIX_PATH = OUTPUT_DIR / "stem_alternation_example_matrix.tsv"
 LEXICAL_INVENTORY_PATH = OUTPUT_DIR / "stem_alternation_lexical_inventory.tsv"
+PROMOTABLE_EXAMPLES_PATH = OUTPUT_DIR / "stem_alternation_promotable_examples.tsv"
 CANDIDATES_PATH = OUTPUT_DIR / "candidates_stem_alternation.tsv"
 GRAMMAR_PACKET_PATH = OUTPUT_DIR / "grammar_stem_alternation_print_slice.md"
 DICTIONARY_PACKET_PATH = OUTPUT_DIR / "dictionary_stem_alternation_print_slice.md"
@@ -139,19 +141,27 @@ LEXICAL_INVENTORY_COLUMNS = [
     "form_ii",
     "gloss",
     "alternation_type",
-    "source_secondary_literature",
+    "source_henderson",
+    "source_zam_ngaih_cing",
     "source_vsa_questionnaire",
     "source_analyzer_inventory",
-    "source_corpus_audit",
+    "source_bible_audit",
+    "source_project_review",
     "source_notes",
+    "lexical_category",
+    "category_evidence",
     "form_i_bible_attested",
     "form_ii_bible_attested",
     "form_i_clean_token_count",
     "form_ii_clean_token_count",
     "form_i_family_count",
     "form_ii_family_count",
+    "clean_verb_form_i_count",
+    "clean_verb_form_ii_count",
     "best_form_i_examples",
     "best_form_ii_examples",
+    "best_clean_verb_form_i_examples",
+    "best_clean_verb_form_ii_examples",
     "nominalized_examples",
     "dependent_temporal_examples",
     "purpose_examples",
@@ -165,7 +175,30 @@ LEXICAL_INVENTORY_COLUMNS = [
     "lexical_pair_status",
     "recommended_grammar_treatment",
     "print_example_status",
+    "promotion_status",
+    "promotion_blocker",
     "notes",
+]
+
+PROMOTABLE_EXAMPLES_COLUMNS = [
+    "lexeme_id",
+    "form_side",
+    "reference",
+    "verse_id",
+    "token_index",
+    "surface_form",
+    "normalized_form",
+    "segmentation",
+    "gloss_span",
+    "lemma",
+    "pos",
+    "local_context",
+    "kjv",
+    "environment",
+    "lexical_category",
+    "example_quality",
+    "reason_selected",
+    "blocking_or_caveat_notes",
 ]
 
 REVIEW_CITED_SAFE_ENVIRONMENTS = {
@@ -285,6 +318,138 @@ SECONDARY_LITERATURE_PAIR_IDS = {
     "hu-huh",
     "pai-pai",
     "si-sit",
+}
+
+HENDERSON_SOURCE_STATUS = {
+    "mu-muh": "yes",
+    "ne-nek": "yes",
+    "ci-cih": "yes",
+    "hi-hih": "yes",
+    "thei-theih": "yes",
+    "si-sit": "unverified",
+}
+
+ZAM_SOURCE_STATUS = {
+    "mu-muh": "yes",
+    "pai-pai": "yes",
+    "hoih-hoih": "yes",
+}
+
+LEXICAL_CATEGORY_OVERRIDES = {
+    "mu-muh": "lexical_verb",
+    "ne-nek": "lexical_verb",
+    "nei-neih": "lexical_verb",
+    "za-zak": "lexical_verb",
+    "pia-piak": "lexical_verb",
+    "nusia-nusiat": "lexical_verb",
+    "bia-biak": "lexical_verb",
+    "thei-theih": "lexical_verb",
+    "piang-pian": "lexical_verb",
+    "kho-khoh": "lexical_verb",
+    "ngai-ngaih": "lexicalized_or_category_mixed",
+    "honkhia-honkhiat": "lexicalized_or_category_mixed",
+    "hu-huh": "lexicalized_or_category_mixed",
+    "pua-puak": "lexicalized_or_category_mixed",
+    "ci-cih": "auxiliary_or_functional_verb",
+    "hi-hih": "auxiliary_or_functional_verb",
+    "om-omh": "auxiliary_or_functional_verb",
+    "no-noh": "stative_or_adjectival_predicate",
+    "mual-mualh": "noun_or_nominal_compound",
+    "sum-sumh": "noun_or_nominal_compound",
+    "thu-thuh": "noun_or_nominal_compound",
+    "lampi-lampih": "noun_or_nominal_compound",
+    "khua-khuat": "noun_or_nominal_compound",
+    "gamla-gamlat": "noun_or_nominal_compound",
+    "mu-muk": "analyzer_only_uncertain",
+    "ne-neh": "analyzer_only_uncertain",
+    "pai-paih": "analyzer_only_uncertain",
+    "pua-puah": "analyzer_only_uncertain",
+    "tua-tuak": "analyzer_only_uncertain",
+    "tua-tuah": "analyzer_only_uncertain",
+    "kho-khot": "analyzer_only_uncertain",
+}
+
+PROMOTION_STATUS_OVERRIDES = {
+    "mu-muh": "promote_to_main_grammar",
+    "ne-nek": "promote_to_main_grammar",
+    "nei-neih": "promote_to_main_grammar",
+    "za-zak": "promote_with_caveat",
+    "pia-piak": "promote_with_caveat",
+    "nusia-nusiat": "promote_with_caveat",
+    "bia-biak": "promote_with_caveat",
+    "thei-theih": "discuss_as_difficult_case",
+    "piang-pian": "discuss_as_difficult_case",
+    "ngai-ngaih": "discuss_as_difficult_case",
+    "honkhia-honkhiat": "discuss_as_difficult_case",
+    "hu-huh": "discuss_as_difficult_case",
+    "mu-muk": "discuss_as_difficult_case",
+    "pua-puak": "discuss_as_difficult_case",
+    "pua-puah": "discuss_as_difficult_case",
+    "tua-tuak": "discuss_as_difficult_case",
+    "tua-tuah": "discuss_as_difficult_case",
+    "pai-paih": "mention_in_inventory_only",
+    "kho-khoh": "mention_in_inventory_only",
+    "ci-cih": "mention_in_inventory_only",
+    "hi-hih": "mention_in_inventory_only",
+    "om-omh": "block_from_verb_inventory_pending_review",
+    "mual-mualh": "block_from_verb_inventory_pending_review",
+    "sum-sumh": "block_from_verb_inventory_pending_review",
+    "thu-thuh": "block_from_verb_inventory_pending_review",
+    "lampi-lampih": "block_from_verb_inventory_pending_review",
+    "khua-khuat": "block_from_verb_inventory_pending_review",
+    "gamla-gamlat": "block_from_verb_inventory_pending_review",
+    "no-noh": "mention_in_inventory_only",
+}
+
+PROMOTION_BLOCKER_OVERRIDES = {
+    "mu-muh": "none",
+    "ne-nek": "none",
+    "nei-neih": "none",
+    "za-zak": "none",
+    "pia-piak": "none",
+    "nusia-nusiat": "none",
+    "bia-biak": "needs_manual_philological_review",
+    "thei-theih": "needs_manual_philological_review",
+    "piang-pian": "needs_manual_philological_review",
+    "ngai-ngaih": "lexicalized_family_contamination",
+    "honkhia-honkhiat": "category_mismatch",
+    "hu-huh": "category_mismatch",
+    "mual-mualh": "nominal_or_compound_examples_only",
+    "sum-sumh": "nominal_or_compound_examples_only",
+    "thu-thuh": "nominal_or_compound_examples_only",
+    "lampi-lampih": "nominal_or_compound_examples_only",
+    "khua-khuat": "nominal_or_compound_examples_only",
+    "gamla-gamlat": "nominal_or_compound_examples_only",
+    "no-noh": "category_mismatch",
+    "ci-cih": "category_mismatch",
+    "hi-hih": "category_mismatch",
+    "om-omh": "no_clean_form_ii_verb_example",
+    "pai-paih": "needs_manual_philological_review",
+    "pua-puak": "homophone_risk",
+    "pua-puah": "analyzer_pair_only",
+    "tua-tuak": "category_mismatch",
+    "tua-tuah": "category_mismatch",
+    "kho-khoh": "needs_manual_philological_review",
+    "mu-muk": "analyzer_pair_only",
+    "ne-neh": "analyzer_pair_only",
+    "kho-khot": "analyzer_pair_only",
+}
+
+VERBAL_ENVIRONMENTS = {
+    "finite_main_or_matrix",
+    "imperative_or_directive",
+    "negative_clause",
+    "dependent_temporal_ciangin",
+    "dependent_temporal_ni_in",
+    "clause_linking_kipan",
+    "purpose_nadingin",
+    "modal_or_ability",
+    "quotative_or_say_complement",
+}
+
+ALLOWED_PREDICATIVE_NONV_POS = {
+    "om-omh": {"ADJ"},
+    "thei-theih": {"ADJ"},
 }
 
 SUPPLEMENTAL_PACKET_PAIRS = {
@@ -913,6 +1078,7 @@ def choose_inventory_examples(
     *,
     stem_alts: set[str] | None = None,
     environments: set[str] | None = None,
+    row_filter=None,
     limit: int = 3,
 ) -> str:
     filtered = []
@@ -922,6 +1088,8 @@ def choose_inventory_examples(
         if environments and row.get("inferred_environment", "") not in environments:
             continue
         if form and clean(row.get("attested_form", "")) not in {form, ""} and not row_matches_exact_form(row, form):
+            continue
+        if row_filter is not None and not row_filter(row):
             continue
         filtered.append(row)
 
@@ -937,6 +1105,206 @@ def choose_inventory_examples(
         if len(chosen) >= limit:
             break
     return "; ".join(chosen)
+
+
+def source_status(source_map: dict[str, str], pair_id: str) -> str:
+    return source_map.get(pair_id, "no")
+
+
+def pair_is_discussed_in_project_review(pair_id: str, form_i: str, form_ii: str) -> bool:
+    pair_phrase = f"`{form_i} ~ {form_ii}`"
+    for path in (DOSSIER_PATH, REVIEW_NOTES_PATH, DICTIONARY_PACKET_PATH):
+        if path.exists() and pair_phrase in path.read_text(encoding="utf-8"):
+            return True
+    return False
+
+
+def summarize_pos_counts(rows: list[dict[str, str]], limit: int = 3) -> str:
+    counts = Counter(row.get("pos", "") for row in rows)
+    return ", ".join(f"{pos}:{count}" for pos, count in counts.most_common(limit) if pos)
+
+
+def infer_lexical_category(
+    pair_id: str,
+    form_i: str,
+    form_ii: str,
+    pair_rows: list[dict[str, str]],
+    questionnaire_entry: dict[str, str] | None,
+    pair: PairMeta | None,
+) -> str:
+    if pair_id in LEXICAL_CATEGORY_OVERRIDES:
+        return LEXICAL_CATEGORY_OVERRIDES[pair_id]
+    if questionnaire_entry is not None and form_i == form_ii and pair is None:
+        return "same_form_questionnaire_control"
+    pos_counts = Counter(row.get("pos", "") for row in pair_rows)
+    nominalish = pos_counts["N"] + pos_counts["DET"] + pos_counts["PROP"]
+    verbalish = pos_counts["V"] + pos_counts["FUNC"] + pos_counts["ADJ"]
+    if nominalish > max(verbalish * 2, 20):
+        return "noun_or_nominal_compound"
+    if pos_counts["ADJ"] > max(pos_counts["V"] * 2, 50):
+        return "stative_or_adjectival_predicate"
+    if pair is not None and pair.gloss in {"be", "say", "exist"}:
+        return "auxiliary_or_functional_verb"
+    if pair is not None and pair.analyzer_status == "known_to_analyzer":
+        return "lexical_verb"
+    return "analyzer_only_uncertain"
+
+
+def is_clean_verbal_row(
+    row: dict[str, str],
+    form: str,
+    pair_id: str,
+    lexical_category: str,
+) -> bool:
+    if not is_clean_bare_stem_row(row, form):
+        return False
+    if row.get("inferred_environment", "") not in VERBAL_ENVIRONMENTS:
+        return False
+    pos = row.get("pos", "")
+    if pos == "V":
+        return True
+    if lexical_category == "auxiliary_or_functional_verb" and pos == "FUNC":
+        return True
+    if pos in ALLOWED_PREDICATIVE_NONV_POS.get(pair_id, set()):
+        return True
+    return False
+
+
+def infer_category_evidence(
+    pair_rows: list[dict[str, str]],
+    lexical_category: str,
+    clean_verb_form_i_count: int,
+    clean_verb_form_ii_count: int,
+) -> str:
+    pos_summary = summarize_pos_counts(pair_rows)
+    note = f"POS profile {pos_summary or 'none'}; clean verbal exact rows I={clean_verb_form_i_count}, II={clean_verb_form_ii_count}."
+    if lexical_category == "noun_or_nominal_compound":
+        note += " Current Bible hits are predominantly nominal, locative, or compound-like rather than verbal."
+    elif lexical_category == "same_form_questionnaire_control":
+        note += " Bible hits confirm the questionnaire control form, but not an overt written alternation."
+    elif lexical_category == "auxiliary_or_functional_verb":
+        note += " The pair behaves mainly as copular, quotative, existential, or otherwise functional material."
+    elif lexical_category == "stative_or_adjectival_predicate":
+        note += " The surviving evidence looks chiefly predicative or adjectival rather than like a lexical action verb."
+    elif lexical_category == "lexicalized_or_category_mixed":
+        note += " The family mixes lexicalized, derivational, or category-shifting material."
+    elif lexical_category == "analyzer_only_uncertain":
+        note += " The analyzer proposes the pair, but the Bible evidence still needs philological review."
+    elif clean_verb_form_i_count > 0 or clean_verb_form_ii_count > 0:
+        note += " Exact verbal evidence survives after lexical-category filtering."
+    return note
+
+
+def infer_promotion_status(
+    pair_id: str,
+    lexical_category: str,
+    clean_verb_form_i_count: int,
+    clean_verb_form_ii_count: int,
+) -> str:
+    if pair_id in PROMOTION_STATUS_OVERRIDES:
+        return PROMOTION_STATUS_OVERRIDES[pair_id]
+    if lexical_category == "same_form_questionnaire_control":
+        return "mention_as_questionnaire_control"
+    if lexical_category == "noun_or_nominal_compound":
+        return "block_from_verb_inventory_pending_review"
+    if lexical_category in {"lexicalized_or_category_mixed", "analyzer_only_uncertain"}:
+        return "mention_in_inventory_only"
+    if lexical_category in {"auxiliary_or_functional_verb", "stative_or_adjectival_predicate"}:
+        return "mention_in_inventory_only"
+    if clean_verb_form_i_count > 0 and clean_verb_form_ii_count > 0:
+        return "promote_with_caveat"
+    if clean_verb_form_i_count > 0 or clean_verb_form_ii_count > 0:
+        return "mention_in_inventory_only"
+    return "block_from_verb_inventory_pending_review"
+
+
+def infer_promotion_blocker(
+    pair_id: str,
+    lexical_category: str,
+    clean_verb_form_i_count: int,
+    clean_verb_form_ii_count: int,
+) -> str:
+    if pair_id in PROMOTION_BLOCKER_OVERRIDES:
+        return PROMOTION_BLOCKER_OVERRIDES[pair_id]
+    if lexical_category == "same_form_questionnaire_control":
+        return "same_written_form_no_overt_alternation"
+    if lexical_category == "noun_or_nominal_compound":
+        return "nominal_or_compound_examples_only"
+    if lexical_category == "lexicalized_or_category_mixed":
+        return "lexicalized_family_contamination"
+    if lexical_category in {"auxiliary_or_functional_verb", "stative_or_adjectival_predicate"}:
+        return "category_mismatch"
+    if clean_verb_form_i_count == 0:
+        return "no_clean_form_i_verb_example"
+    if clean_verb_form_ii_count == 0:
+        return "no_clean_form_ii_verb_example"
+    return "needs_manual_philological_review"
+
+
+def promotable_example_priority(
+    row: dict[str, str],
+    *,
+    form: str,
+    pair_id: str,
+    lexical_category: str,
+) -> tuple[int, int, int, int, str, int]:
+    return (
+        2 if is_clean_verbal_row(row, form, pair_id, lexical_category) else 1 if is_clean_bare_stem_row(row, form) else 0,
+        PRINT_STATUS_RANK.get(row.get("print_status", ""), 0),
+        ENVIRONMENT_PRIORITY.get(row.get("inferred_environment", ""), -3),
+        analysis_clarity_score(row),
+        row.get("reference", ""),
+        -int(row.get("token_index", "0") or 0),
+    )
+
+
+def choose_promotable_example_row(
+    rows: list[dict[str, str]],
+    *,
+    form: str,
+    stem_alt: str,
+    pair_id: str,
+    lexical_category: str,
+) -> dict[str, str] | None:
+    filtered = [row for row in rows if row.get("stem_alternation", "") == stem_alt and (clean(row.get("attested_form", "")) == form or row_matches_exact_form(row, form))]
+    if not filtered:
+        return None
+    ordered = sorted(
+        filtered,
+        key=lambda item: promotable_example_priority(
+            item,
+            form=form,
+            pair_id=pair_id,
+            lexical_category=lexical_category,
+        ),
+        reverse=True,
+    )
+    return ordered[0]
+
+
+def example_quality_for_row(
+    row: dict[str, str],
+    *,
+    form: str,
+    pair_id: str,
+    lexical_category: str,
+    promotion_status: str,
+) -> str:
+    if promotion_status == "mention_as_questionnaire_control":
+        return "questionnaire_control"
+    if lexical_category == "noun_or_nominal_compound":
+        return "blocked_nonverbal"
+    if lexical_category == "lexicalized_or_category_mixed" or row.get("inferred_environment", "") in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
+        return "blocked_noise"
+    if row.get("print_status", "") in {"print_ready", "print_usable_with_caveat"}:
+        return row["print_status"]
+    if is_clean_verbal_row(row, form, pair_id, lexical_category):
+        if promotion_status == "promote_to_main_grammar":
+            return "descriptive_clean"
+        return "descriptive_with_caveat"
+    if is_clean_bare_stem_row(row, form):
+        return "descriptive_with_caveat"
+    return "needs_manual_review"
 
 
 def scan_questionnaire_only_rows(
@@ -1044,8 +1412,12 @@ def source_notes_for_inventory_entry(
             notes.append(f"Analyzer inventory also maps the same Form I base to {', '.join(sibling_pairs)}.")
     if pair is not None and pair.analyzer_status == "packet_pair_not_in_VERB_STEM_PAIRS":
         notes.append("Present in the publication-review packet, but absent from VERB_STEM_PAIRS.")
-    if pair_id in SECONDARY_LITERATURE_PAIR_IDS:
-        notes.append("Current Henderson/Zam-facing review materials discuss this pair family directly.")
+    if source_status(HENDERSON_SOURCE_STATUS, pair_id) == "unverified":
+        notes.append("Henderson is only indirectly aligned to this pair in current project materials, not through a direct in-repo Tedim pair list.")
+    if source_status(ZAM_SOURCE_STATUS, pair_id) == "unverified":
+        notes.append("Zam Ngaih Cing is only indirectly aligned to this pair in current project materials, not through a direct in-repo pair list.")
+    if pair_is_discussed_in_project_review(pair_id, form_i, form_ii):
+        notes.append("This pair is discussed in current project review materials.")
     if questionnaire_entry is not None and pair is not None and questionnaire_entry["gloss"] != pair.gloss:
         notes.append(f"Questionnaire gloss `{questionnaire_entry['gloss']}` and analyzer gloss `{pair.gloss}` differ.")
     return merge_notes(*notes)
@@ -1136,6 +1508,7 @@ def infer_lexical_pair_status(
 def infer_grammar_treatment(
     pair_id: str,
     *,
+    lexical_category: str,
     lexical_pair_status: str,
     bible_profile: str,
     source_secondary: bool,
@@ -1144,6 +1517,10 @@ def infer_grammar_treatment(
 ) -> str:
     if pair_id in GRAMMAR_TREATMENT_OVERRIDES:
         return GRAMMAR_TREATMENT_OVERRIDES[pair_id]
+    if lexical_category == "same_form_questionnaire_control":
+        return "mention_as_literature_or_questionnaire_only"
+    if lexical_category in {"noun_or_nominal_compound", "auxiliary_or_functional_verb", "stative_or_adjectival_predicate"}:
+        return "discuss_under_lexicalized_or_excluded_forms"
     if lexical_pair_status in {"lexicalized_or_category_mixed", "homophone_or_noise_only"} or bible_profile == "only_noisy_or_lexicalized_attested":
         return "discuss_under_lexicalized_or_excluded_forms"
     if bible_profile == "not_attested_in_bible":
@@ -1225,6 +1602,7 @@ def write_lexical_inventory(
         rows_by_pair[pair_id].extend(extra_rows)
 
     inventory_rows = []
+    promotable_rows = []
     all_pair_ids = sorted(set(pairs) | set(questionnaire_inventory))
     for pair_id in all_pair_ids:
         pair = pairs.get(pair_id)
@@ -1241,8 +1619,11 @@ def write_lexical_inventory(
         pair_rows = rows_by_pair.get(pair_id, [])
         form_i_rows = [row for row in pair_rows if row.get("stem_alternation", "") == "I"]
         form_ii_rows = [row for row in pair_rows if row.get("stem_alternation", "") == "II"]
+        lexical_category = infer_lexical_category(pair_id, form_i, form_ii, pair_rows, questionnaire_entry, pair)
         form_i_clean = sum(1 for row in form_i_rows if is_clean_bare_stem_row(row, form_i))
         form_ii_clean = sum(1 for row in form_ii_rows if is_clean_bare_stem_row(row, form_ii))
+        clean_verb_form_i_count = sum(1 for row in form_i_rows if is_clean_verbal_row(row, form_i, pair_id, lexical_category))
+        clean_verb_form_ii_count = sum(1 for row in form_ii_rows if is_clean_verbal_row(row, form_ii, pair_id, lexical_category))
         form_i_family = len(form_i_rows)
         form_ii_family = len(form_ii_rows)
         form_i_attested = form_i_family > 0
@@ -1255,10 +1636,13 @@ def write_lexical_inventory(
             form_ii_clean,
             pair_rows,
         )
-        source_secondary = pair_id in SECONDARY_LITERATURE_PAIR_IDS
+        source_henderson = source_status(HENDERSON_SOURCE_STATUS, pair_id)
+        source_zam = source_status(ZAM_SOURCE_STATUS, pair_id)
+        source_secondary = source_henderson == "yes" or source_zam == "yes"
         source_vsa = questionnaire_entry is not None
         source_analyzer = pair is not None and pair.analyzer_status == "known_to_analyzer"
-        source_corpus = bool(pair_rows)
+        source_bible = bool(pair_rows)
+        source_project_review = pair_is_discussed_in_project_review(pair_id, form_i, form_ii)
         lexical_status = infer_lexical_pair_status(
             pair_id,
             source_secondary=source_secondary,
@@ -1272,6 +1656,7 @@ def write_lexical_inventory(
         )
         grammar_treatment = infer_grammar_treatment(
             pair_id,
+            lexical_category=lexical_category,
             lexical_pair_status=lexical_status,
             bible_profile=bible_profile,
             source_secondary=source_secondary,
@@ -1279,6 +1664,24 @@ def write_lexical_inventory(
             rows=pair_rows,
         )
         print_status = best_available_print_status(pair, pair_rows)
+        category_evidence = infer_category_evidence(
+            pair_rows,
+            lexical_category,
+            clean_verb_form_i_count,
+            clean_verb_form_ii_count,
+        )
+        promotion_status = infer_promotion_status(
+            pair_id,
+            lexical_category,
+            clean_verb_form_i_count,
+            clean_verb_form_ii_count,
+        )
+        promotion_blocker = infer_promotion_blocker(
+            pair_id,
+            lexical_category,
+            clean_verb_form_i_count,
+            clean_verb_form_ii_count,
+        )
         notes = []
         siblings = sorted(other for other in form_i_index.get(form_i, []) if other != pair_id)
         if siblings:
@@ -1299,19 +1702,37 @@ def write_lexical_inventory(
                 "form_ii": form_ii,
                 "gloss": gloss,
                 "alternation_type": alternation_type(form_i, form_ii),
-                "source_secondary_literature": "yes" if source_secondary else "no",
+                "source_henderson": source_henderson,
+                "source_zam_ngaih_cing": source_zam,
                 "source_vsa_questionnaire": "yes" if source_vsa else "no",
                 "source_analyzer_inventory": "yes" if source_analyzer else "no",
-                "source_corpus_audit": "yes" if source_corpus else "no",
+                "source_bible_audit": "yes" if source_bible else "no",
+                "source_project_review": "yes" if source_project_review else "no",
                 "source_notes": source_notes_for_inventory_entry(pair_id, form_i, form_ii, questionnaire_entry, pair, form_i_index),
+                "lexical_category": lexical_category,
+                "category_evidence": category_evidence,
                 "form_i_bible_attested": "yes" if form_i_attested else "no",
                 "form_ii_bible_attested": "yes" if form_ii_attested else "no",
                 "form_i_clean_token_count": str(form_i_clean),
                 "form_ii_clean_token_count": str(form_ii_clean),
                 "form_i_family_count": str(form_i_family),
                 "form_ii_family_count": str(form_ii_family),
+                "clean_verb_form_i_count": str(clean_verb_form_i_count),
+                "clean_verb_form_ii_count": str(clean_verb_form_ii_count),
                 "best_form_i_examples": choose_inventory_examples(pair_rows, form_i, stem_alts={"I"}),
                 "best_form_ii_examples": choose_inventory_examples(pair_rows, form_ii, stem_alts={"II"}),
+                "best_clean_verb_form_i_examples": choose_inventory_examples(
+                    pair_rows,
+                    form_i,
+                    stem_alts={"I"},
+                    row_filter=lambda row, pair_id=pair_id, lexical_category=lexical_category, form=form_i: is_clean_verbal_row(row, form, pair_id, lexical_category),
+                ),
+                "best_clean_verb_form_ii_examples": choose_inventory_examples(
+                    pair_rows,
+                    form_ii,
+                    stem_alts={"II"},
+                    row_filter=lambda row, pair_id=pair_id, lexical_category=lexical_category, form=form_ii: is_clean_verbal_row(row, form, pair_id, lexical_category),
+                ),
                 "nominalized_examples": choose_inventory_examples(pair_rows, "", environments={"nominalized_na"}, limit=2),
                 "dependent_temporal_examples": choose_inventory_examples(pair_rows, "", environments={"dependent_temporal_ciangin", "dependent_temporal_ni_in", "clause_linking_kipan"}, limit=2),
                 "purpose_examples": choose_inventory_examples(pair_rows, "", environments={"purpose_nadingin"}, limit=2),
@@ -1325,14 +1746,80 @@ def write_lexical_inventory(
                 "lexical_pair_status": lexical_status,
                 "recommended_grammar_treatment": grammar_treatment,
                 "print_example_status": print_status,
+                "promotion_status": promotion_status,
+                "promotion_blocker": promotion_blocker,
                 "notes": merge_notes(*notes),
             }
         )
+
+        for stem_alt, form_side, form in (("I", "form_i", form_i), ("II", "form_ii", form_ii)):
+            selected = choose_promotable_example_row(
+                pair_rows,
+                form=form,
+                stem_alt=stem_alt,
+                pair_id=pair_id,
+                lexical_category=lexical_category,
+            )
+            if selected is None:
+                continue
+            if promotion_status == "mention_as_questionnaire_control":
+                reason_selected = "Best Bible attestation for a same-form questionnaire control."
+            elif lexical_category == "noun_or_nominal_compound":
+                reason_selected = "Best available audit row for a blocked nominal or compound-like analyzer pair."
+            elif lexical_category == "lexicalized_or_category_mixed":
+                reason_selected = "Best available difficult-case row from a lexicalized or category-mixed family."
+            elif is_clean_verbal_row(selected, form, pair_id, lexical_category):
+                reason_selected = f"Best clean verbal {form_side.replace('_', ' ')} row after lexical-category filtering."
+            else:
+                reason_selected = "Best currently available audit row pending manual philological review."
+
+            promotable_rows.append(
+                {
+                    "lexeme_id": pair_id,
+                    "form_side": form_side,
+                    "reference": selected["reference"],
+                    "verse_id": selected["verse_id"],
+                    "token_index": selected["token_index"],
+                    "surface_form": selected["surface_form"],
+                    "normalized_form": selected["normalized_form"],
+                    "segmentation": selected["segmentation"],
+                    "gloss_span": selected["gloss"],
+                    "lemma": selected["lemma"],
+                    "pos": selected["pos"],
+                    "local_context": selected["local_context"],
+                    "kjv": selected["kjv"],
+                    "environment": selected["inferred_environment"],
+                    "lexical_category": lexical_category,
+                    "example_quality": example_quality_for_row(
+                        selected,
+                        form=form,
+                        pair_id=pair_id,
+                        lexical_category=lexical_category,
+                        promotion_status=promotion_status,
+                    ),
+                    "reason_selected": reason_selected,
+                    "blocking_or_caveat_notes": merge_notes(
+                        promotion_blocker if promotion_blocker != "none" else "",
+                        homophone_or_noise_notes(pair_id, pair_rows, questionnaire_entry, pair),
+                        selected.get("notes", ""),
+                    ),
+                }
+            )
 
     with LEXICAL_INVENTORY_PATH.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=LEXICAL_INVENTORY_COLUMNS, delimiter="\t")
         writer.writeheader()
         writer.writerows(inventory_rows)
+
+    with PROMOTABLE_EXAMPLES_PATH.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=PROMOTABLE_EXAMPLES_COLUMNS, delimiter="\t")
+        writer.writeheader()
+        writer.writerows(
+            sorted(
+                promotable_rows,
+                key=lambda row: (row["lexeme_id"], row["form_side"] != "form_i", row["reference"], int(row["token_index"])),
+            )
+        )
 
 
 def display_path(path: Path) -> Path:
@@ -1617,6 +2104,7 @@ def write_corpus_audit() -> None:
     print(f"Wrote {display_path(PAIR_SUMMARY_PATH)}")
     print(f"Wrote {display_path(EXAMPLE_MATRIX_PATH)}")
     print(f"Wrote {display_path(LEXICAL_INVENTORY_PATH)}")
+    print(f"Wrote {display_path(PROMOTABLE_EXAMPLES_PATH)}")
 
 
 def main() -> None:
