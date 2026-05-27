@@ -134,11 +134,11 @@ The first print slice covered `mu ~ muh`, `ne ~ nek`, `nei ~ neih`, `thei ~ thei
 | --- | --- | --- |
 | `za ~ zak` | print grammar prose now, with caveat | Exact Form I and Form II tokens are both common, and `a zak ciangin` is a useful dependent-clause example, but example choice must avoid broader sensory and lexicalized readings. |
 | `ngai ~ ngaih` | dossier-only evidence pending review | The pair is real enough to keep, but the lexical family is dominated by `ngaihsun/ngaihsut` material and the report glosses are unstable. |
-| `nusia ~ nusiat` | dictionary entry now; grammar prose later | Exact Form II is real and constructionally promising, especially in dependent or irrealis contexts, but the slice still lacks a single clean reader-facing pair of examples. |
+| `nusia ~ nusiat` | print-usable with caveat | Exact Form II is real and constructionally promising, especially in dependent and clause-linking contexts, but the clearest reader-facing evidence is still less tidy than the core print-ready pairs. |
 | `honkhia ~ honkhiat` | exclusion for now | `honkhia` is common, but the solitary `honkhiat` hit and the lexicalized/compound behavior make it unsafe as simple stem evidence. |
 | `hu ~ huh` | exclusion for now | The apparent pair crosses lexical category and sense boundaries: `hu` is often noun-like 'breath', while `huh` is help/helper. |
 
-Among the omitted pairs, `za ~ zak` is the strongest candidate for eventual inclusion in the print slice. `nusia ~ nusiat` is promising, but it is more likely to enter first through a carefully caveated dictionary entry than through a headline grammar example. `ngai ~ ngaih` should stay in the dossier until the lexical-family problem is sorted out.
+Among the omitted pairs, `za ~ zak` is the strongest candidate for eventual inclusion in the print slice. `nusia ~ nusiat` now also looks usable with caveat, but not yet as a headline pedagogical contrast on the level of `mu ~ muh` or `ne ~ nek`. `ngai ~ ngaih` should stay in the dossier until the lexical-family problem is sorted out.
 
 # Ranked evidence table
 
@@ -213,6 +213,8 @@ The new candidate TSV is still only a curated publication-review sample. Stem al
 
 Together these files use the analyzer inventory plus the local token export to map attested stem-family tokens across the Tedim Bible. They are designed to answer where the analyzer sees Form I or Form II material, where the evidence is concentrated in nominalized, temporal, or clause-linking environments, and where apparent pairs are actually derivational, lexicalized, or otherwise noisy. The environment classifier is deliberately conservative. It is useful for corpus triage and packet revision, but it should not be mistaken for a full syntactic parser.
 
+The hardened representative matrix is therefore a review tool, not itself a pool of automatically print-safe quotations. Candidate TSV rows remain the strongest basis for print-ready status, while non-candidate matrix rows are mainly there to show the broader distribution and to flag where further manual review is still needed.
+
 The next interpretive step should therefore start from the tracked summary tables and representative example matrix rather than from curated examples alone. The packet now has both a print-evidence candidate layer and a broader corpus-distribution layer; any later revision of the grammar or dictionary slice should use both.
 
 # Recommendation
@@ -222,8 +224,8 @@ The next interpretive step should therefore start from the tracked summary table
 The dossier does not justify a wholesale rewrite of the slice, and it does not force the removal of any current pair. What it does justify is a stronger evidence table behind the slice:
 
 - keep `mu ~ muh`, `ne ~ nek`, and `nei ~ neih` as the core print-ready set;
-- keep `thei ~ theih`, `piang ~ pian`, and `pia ~ piak` explicitly caveated;
-- add a small evidence table naming `za ~ zak` and `nusia ~ nusiat` as next-stage candidates rather than folding them immediately into the main prose;
+- treat `za ~ zak`, `pia ~ piak`, and `nusia ~ nusiat` as print-usable with caveat rather than as equally strong showcase pairs;
+- keep `thei ~ theih` and `piang ~ pian` dossier-only or otherwise provisional;
 - keep `ngai ~ ngaih` dossier-only for now;
 - exclude `honkhia ~ honkhiat` and `hu ~ huh` from simple stem-alternation prose.
 

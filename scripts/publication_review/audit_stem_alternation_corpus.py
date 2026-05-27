@@ -128,6 +128,34 @@ EXAMPLE_MATRIX_COLUMNS = [
     "notes",
 ]
 
+REVIEW_CITED_SAFE_ENVIRONMENTS = {
+    "finite_main_or_matrix",
+    "dependent_temporal_ciangin",
+    "dependent_temporal_ni_in",
+    "clause_linking_kipan",
+    "nominalized_na",
+    "possessed_or_genitive_attributive",
+    "relative_or_attributive_mi",
+}
+
+OBVIOUS_NOISY_ROW_FORMS = {
+    "luimu",
+    "muhdah",
+    "mualtung",
+    "mukte",
+    "ngaihsun",
+    "ngaihsut",
+    "ngaihsutna",
+    "ngaihsutna-in",
+    "piangsak",
+    "piangkhiasak",
+    "piangsakin",
+    "honkhia",
+    "honkhiat",
+    "hu",
+    "huh",
+}
+
 MANUAL_PUBLICATION_STATUS = {
     "mu-muh": "print_ready",
     "ne-nek": "print_ready",
@@ -216,12 +244,18 @@ def alternation_type(form_i: str, form_ii: str) -> str:
     return "other / irregular / uncertain"
 
 
-def load_candidate_statuses() -> tuple[dict[str, set[str]], dict[str, bool], dict[str, set[str]]]:
+def load_candidate_statuses() -> tuple[
+    dict[str, set[str]],
+    dict[str, bool],
+    dict[str, set[str]],
+    dict[str, dict[str, set[str]]],
+]:
     statuses: dict[str, set[str]] = defaultdict(set)
     present: dict[str, bool] = defaultdict(bool)
     references: dict[str, set[str]] = defaultdict(set)
+    reference_statuses: dict[str, dict[str, set[str]]] = defaultdict(lambda: defaultdict(set))
     if not CANDIDATES_PATH.exists():
-        return statuses, present, references
+        return statuses, present, references, reference_statuses
 
     with CANDIDATES_PATH.open(encoding="utf-8") as handle:
         reader = csv.DictReader(handle, delimiter="\t")
@@ -234,7 +268,8 @@ def load_candidate_statuses() -> tuple[dict[str, set[str]], dict[str, bool], dic
                 present[pair_id] = True
                 statuses[pair_id].add(row["candidate_status"])
                 references[pair_id].add(row["reference"])
-    return statuses, present, references
+                reference_statuses[pair_id][row["reference"]].add(row["candidate_status"])
+    return statuses, present, references, reference_statuses
 
 
 def load_print_packet_text() -> str:
@@ -252,7 +287,7 @@ def load_review_bundle_text() -> str:
 
 
 def build_pair_inventory() -> dict[str, PairMeta]:
-    candidate_statuses, in_candidate, _ = load_candidate_statuses()
+    candidate_statuses, in_candidate, _, _ = load_candidate_statuses()
     print_packet_text = load_print_packet_text()
 
     pairs: dict[str, PairMeta] = {}
@@ -535,13 +570,6 @@ def infer_environment(
 
     return "unknown_or_needs_review", "low", "No conservative local environment rule fired for this token."
 
-
-def row_print_status(pair: PairMeta, environment: str) -> str:
-    if environment in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
-        return "exclude_for_now"
-    return pair.publication_status
-
-
 def recommendation_for_pair(
     pair: PairMeta,
     form_i_total: int,
@@ -621,6 +649,23 @@ def build_selection_reason(
     return "; ".join(reasons)
 
 
+def row_has_obvious_contamination(pair: PairMeta, row: dict[str, str]) -> tuple[bool, str]:
+    normalized = clean(row["normalized_form"])
+    surface = clean(row["surface_form"])
+    segmentation = clean(row["segmentation"])
+    if normalized in OBVIOUS_NOISY_ROW_FORMS or surface in OBVIOUS_NOISY_ROW_FORMS:
+        return True, "Surface form belongs to a noisy lexicalized or compound family rather than to a clean print-safe stem token."
+    if normalized.startswith("ngaihs") or normalized.startswith("piangsak") or normalized.startswith("piangkhia"):
+        return True, "Surface form belongs to a derived or lexical-family cluster rather than to a clean stem alternation example."
+    if pair.pair_id == "mu-muh" and ("muh-dah" in segmentation or "lui-mu" in segmentation):
+        return True, "This `mu/muh` family row is lexicalized or compounded rather than a clean print-safe stem token."
+    if "pair inferred from known noisy or derived family." in row["notes"]:
+        return True, "Row was attached to the pair through a known noisy or derived-family override."
+    if "token belongs to the pair family but is not a simple Form I/II token." in row["notes"]:
+        return True, "Row belongs to the stem family, but not as a simple Form I or Form II token."
+    return False, ""
+
+
 def merge_notes(*parts: str) -> str:
     merged = []
     seen = set()
@@ -640,12 +685,48 @@ def display_path(path: Path) -> Path:
         return path
 
 
+def row_print_status(
+    pair: PairMeta,
+    row: dict[str, str],
+    environment: str,
+    review_bundle_text: str,
+    candidate_reference_statuses: dict[str, dict[str, set[str]]],
+) -> tuple[str, str]:
+    if environment in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
+        return "exclude_for_now", "Derived or lexicalized environments stay excluded at the row level even when the pair is retained for review."
+    if environment == "unknown_or_needs_review":
+        return "needs_analyzer_review", "Review-bucket rows never count as print-ready evidence."
+
+    contaminated, contamination_note = row_has_obvious_contamination(pair, row)
+    if contaminated:
+        if pair.publication_status in {"exclude_for_now", "dossier_only"}:
+            return pair.publication_status, contamination_note
+        return "needs_analyzer_review", contamination_note
+
+    if pair.publication_status in {"exclude_for_now", "dossier_only", "needs_analyzer_review"}:
+        return pair.publication_status, "Row status is capped by the pair-level publication status."
+
+    reference = row["reference"]
+    reference_statuses = candidate_reference_statuses.get(pair.pair_id, {}).get(reference, set())
+    if "accepted" in reference_statuses:
+        return pair.publication_status, "Accepted candidate TSV evidence can inherit the pair's editorial status."
+
+    if (
+        reference in review_bundle_text
+        and analysis_clarity_score(row) >= 3
+        and environment in REVIEW_CITED_SAFE_ENVIRONMENTS
+    ):
+        return "print_usable_with_caveat", "Packet- or dossier-cited rows can support review use, but remain caveated unless they are accepted candidate rows."
+
+    return "needs_analyzer_review", "Row is useful for matrix review, but it is not strong enough to inherit the pair's print-facing status."
+
+
 def write_corpus_audit() -> None:
     require_tokens_export()
 
     pairs = build_pair_inventory()
     verses = load_verse_metadata()
-    _, _, candidate_references = load_candidate_statuses()
+    _, _, candidate_references, candidate_reference_statuses = load_candidate_statuses()
     review_bundle_text = load_review_bundle_text()
     form_ii_counts = count_form_ii_hits(pairs)
     form_i_index, form_ii_index, canonical_by_form_i = build_indexes(pairs, form_ii_counts)
@@ -683,9 +764,33 @@ def write_corpus_audit() -> None:
                 pair = pairs[pair_id]
                 attested_form, stem_alt, attested_note = infer_attested_form(row, pair)
                 environment, env_confidence, env_note = infer_environment(verse_tokens, index, pair, row)
-                notes = " ".join(note for note in (pair.notes, pair_note, attested_note, env_note) if note)
-                print_status = row_print_status(pair, environment)
                 context = local_context(verse_tokens, index)
+                row_for_status = {
+                    "pair_id": pair.pair_id,
+                    "form_i": pair.form_i,
+                    "form_ii": pair.form_ii,
+                    "attested_form": attested_form,
+                    "verse_id": verse_id,
+                    "reference": verse_meta["reference"],
+                    "token_index": row["token_index"],
+                    "surface_form": row["surface_form"],
+                    "normalized_form": row["normalized_form"],
+                    "segmentation": row["segmentation"],
+                    "gloss": row["gloss"],
+                    "lemma": row["lemma"],
+                    "pos": row["pos"],
+                    "local_context": context,
+                    "environment": environment,
+                    "notes": " ".join(note for note in (pair.notes, pair_note, attested_note, env_note) if note),
+                }
+                print_status, status_note = row_print_status(
+                    pair,
+                    row_for_status,
+                    environment,
+                    review_bundle_text,
+                    candidate_reference_statuses,
+                )
+                notes = merge_notes(row_for_status["notes"], status_note)
                 audit_row = {
                     "pair_id": pair.pair_id,
                     "form_i": pair.form_i,

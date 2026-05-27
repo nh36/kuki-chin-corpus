@@ -105,6 +105,16 @@ def test_stem_alternation_example_matrix_keeps_form_i_and_form_ii_for_core_pairs
         assert {"form_i", "form_ii"} <= sides
 
 
+def test_stem_alternation_example_matrix_has_at_most_one_row_per_pair_side_environment():
+    _, rows = load_tsv(EXAMPLE_MATRIX_PATH)
+
+    seen = set()
+    for row in rows:
+        key = (row["pair_id"], row["stem_side"], row["environment"])
+        assert key not in seen
+        seen.add(key)
+
+
 def test_stem_alternation_environment_summary_and_matrix_have_required_buckets():
     env_header, env_rows = load_tsv(ENV_SUMMARY_PATH)
     _, matrix_rows = load_tsv(EXAMPLE_MATRIX_PATH)
@@ -116,6 +126,19 @@ def test_stem_alternation_environment_summary_and_matrix_have_required_buckets()
     assert "nominalized_na" in environments
     assert "negative_clause" in environments
     assert environments & {"dependent_temporal_ciangin", "dependent_temporal_ni_in", "clause_linking_kipan"}
+
+
+def test_stem_alternation_example_matrix_never_promotes_review_or_excluded_environments():
+    _, rows = load_tsv(EXAMPLE_MATRIX_PATH)
+
+    unknown_rows = [row for row in rows if row["environment"] == "unknown_or_needs_review"]
+    assert unknown_rows
+    assert all(row["print_status"] == "needs_analyzer_review" for row in unknown_rows)
+
+    for blocked_environment in {"causative_or_derivational_sak", "compound_or_lexicalized"}:
+        blocked_rows = [row for row in rows if row["environment"] == blocked_environment]
+        assert blocked_rows
+        assert all(row["print_status"] == "exclude_for_now" for row in blocked_rows)
 
 
 def test_stem_alternation_example_matrix_keeps_noisy_families_out_of_clean_print_ready_evidence():
@@ -145,6 +168,14 @@ def test_stem_alternation_example_matrix_keeps_noisy_families_out_of_clean_print
     if piangsak_rows:
         assert all(row["pair_id"] == "piang-pian" for row in piangsak_rows)
         assert all(row["print_status"] == "exclude_for_now" for row in piangsak_rows)
+
+    noisy_rows = [
+        row for row in matrix_rows
+        if row["normalized_form"] in {"ngaihsutna", "honkhiat", "piangsak"}
+        or row["pair_id"] in {"honkhia-honkhiat", "hu-huh"}
+    ]
+    assert noisy_rows
+    assert all(row["print_status"] in {"exclude_for_now", "dossier_only"} for row in noisy_rows)
 
 
 def test_stem_alternation_example_matrix_is_reproducible_when_tokens_export_is_available(tmp_path, monkeypatch):
