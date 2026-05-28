@@ -9,6 +9,8 @@ LEXICAL_INVENTORY_PATH = ROOT / "output/publication_review/stem_alternation_lexi
 PROMOTABLE_EXAMPLES_PATH = ROOT / "output/publication_review/stem_alternation_promotable_examples.tsv"
 MANUAL_PROMOTION_REVIEW_PATH = ROOT / "output/publication_review/stem_alternation_manual_promotion_review.tsv"
 CITATION_SHORTLIST_PATH = ROOT / "output/publication_review/stem_alternation_citation_shortlist.tsv"
+SYNTACTIC_CONTEXT_MATRIX_PATH = ROOT / "output/publication_review/stem_alternation_syntactic_context_matrix.tsv"
+PAIR_DISCUSSION_PLAN_PATH = ROOT / "output/publication_review/stem_alternation_pair_discussion_plan.tsv"
 GRAMMAR_SLICE_PATH = ROOT / "output/publication_review/grammar_stem_alternation_print_slice.md"
 
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -129,6 +131,46 @@ REQUIRED_CITATION_SHORTLIST_COLUMNS = {
     "notes",
 }
 
+REQUIRED_CONTEXT_MATRIX_COLUMNS = {
+    "context_id",
+    "context_label",
+    "description",
+    "expected_stem_tendency",
+    "form_i_evidence_pairs",
+    "form_ii_evidence_pairs",
+    "best_form_i_examples",
+    "best_form_ii_examples",
+    "strongest_showcase_pair",
+    "caveated_pairs",
+    "difficult_pairs",
+    "what_this_context_shows",
+    "what_not_to_claim",
+    "recommended_grammar_subsection",
+    "notes",
+}
+
+REQUIRED_PAIR_DISCUSSION_PLAN_COLUMNS = {
+    "lexeme_id",
+    "form_i",
+    "form_ii",
+    "gloss",
+    "grammar_status",
+    "discussion_order",
+    "form_i_attestation_summary",
+    "form_ii_attestation_summary",
+    "main_contexts_for_form_i",
+    "main_contexts_for_form_ii",
+    "best_citation_rows",
+    "contexts_to_discuss",
+    "main_generalization_for_this_pair",
+    "caveats",
+    "blocked_or_noisy_material",
+    "recommended_prose_treatment",
+    "include_in_main_table",
+    "include_in_pair_by_pair_discussion",
+    "notes",
+}
+
 
 def load_tsv(path: Path):
     with path.open(encoding="utf-8") as handle:
@@ -147,15 +189,21 @@ def test_stem_alternation_lexical_inventory_and_review_outputs_exist_with_requir
     promotable_header, promotable_rows = load_tsv(PROMOTABLE_EXAMPLES_PATH)
     manual_header, manual_rows = load_tsv(MANUAL_PROMOTION_REVIEW_PATH)
     citation_header, citation_rows = load_tsv(CITATION_SHORTLIST_PATH)
+    context_header, context_rows = load_tsv(SYNTACTIC_CONTEXT_MATRIX_PATH)
+    pair_plan_header, pair_plan_rows = load_tsv(PAIR_DISCUSSION_PLAN_PATH)
 
     assert REQUIRED_INVENTORY_COLUMNS <= inventory_header
     assert REQUIRED_PROMOTABLE_COLUMNS <= promotable_header
     assert REQUIRED_MANUAL_REVIEW_COLUMNS <= manual_header
     assert REQUIRED_CITATION_SHORTLIST_COLUMNS <= citation_header
+    assert REQUIRED_CONTEXT_MATRIX_COLUMNS <= context_header
+    assert REQUIRED_PAIR_DISCUSSION_PLAN_COLUMNS <= pair_plan_header
     assert inventory_rows
     assert promotable_rows
     assert manual_rows
     assert citation_rows
+    assert context_rows
+    assert pair_plan_rows
 
 
 def test_stem_alternation_lexical_inventory_includes_psc_and_analyzer_pairs():
@@ -360,35 +408,154 @@ def test_citation_shortlist_keeps_special_cases_and_blocked_rows_honest():
         assert all(row["promotion_group"] not in promoted_groups for row in relevant)
 
 
-def test_grammar_slice_reflects_manual_review_without_repromoting_nominal_rows():
+def test_syntactic_context_matrix_covers_major_contexts_and_claim_boundaries():
+    _, rows = load_tsv(SYNTACTIC_CONTEXT_MATRIX_PATH)
+    row_map = {row["context_id"]: row for row in rows}
+    required_contexts = {
+        "finite_main_or_matrix",
+        "imperative_or_directive",
+        "negative_clause",
+        "dependent_temporal_ciangin",
+        "dependent_temporal_ni_in",
+        "clause_linking_kipan",
+        "purpose_nadingin",
+        "nominalized_na",
+        "relative_or_attributive_mi",
+        "possessed_or_genitive_attributive",
+        "modal_or_ability",
+        "quotative_or_say_complement",
+        "compound_or_lexicalized",
+        "causative_or_derivational_sak",
+        "unknown_or_needs_review",
+    }
+
+    assert required_contexts <= row_map.keys()
+
+    for context_id in required_contexts:
+        row = row_map[context_id]
+        assert row["context_label"]
+        assert row["what_this_context_shows"]
+        assert row["what_not_to_claim"]
+        assert row["recommended_grammar_subsection"]
+        assert row["best_form_i_examples"] or row["best_form_ii_examples"] or row["notes"]
+
+    assert "not a single decisive diagnostic" in row_map["negative_clause"]["expected_stem_tendency"]
+    assert "Do not claim that Form II simply equals negation" in row_map["negative_clause"]["what_not_to_claim"]
+    assert "Do not claim that Form I is the only possible matrix form" in row_map["finite_main_or_matrix"]["what_not_to_claim"]
+    assert "Do not claim that Form II is nominalized only" in row_map["nominalized_na"]["what_not_to_claim"]
+
+
+def test_pair_discussion_plan_covers_required_pairs_and_statuses():
+    _, inventory_rows = load_tsv(LEXICAL_INVENTORY_PATH)
+    _, rows = load_tsv(PAIR_DISCUSSION_PLAN_PATH)
+    row_map = {row["lexeme_id"]: row for row in rows}
+
+    core_pairs = {"mu-muh", "ne-nek", "nei-neih"}
+    caveated_pairs = {
+        "za-zak",
+        "pia-piak",
+        "nusia-nusiat",
+        "bia-biak",
+        "thei-theih",
+        "piang-pian",
+        "zui-zuih",
+        "khial-khialh",
+        "kia-kiak",
+        "sawlkhia-sawlkhiat",
+    }
+    difficult_pairs = {"ngai-ngaih", "pua-puak", "pai-paih", "tua-tuah", "tua-tuak"}
+    one_sided_pairs = {
+        "bawl-bawlh",
+        "dipkua-dipkuat",
+        "gen-genh",
+        "hawlkhia-hawlkhiat",
+        "husia-husiat",
+        "kho-khoh",
+        "kido-kidot",
+        "lua-luah",
+        "tu-tuh",
+        "tuahpha-tuahphat",
+        "vial-vialh",
+    }
+    blocked_pairs = {
+        "keu-keuh",
+        "khai-khaih",
+        "sia-siah",
+        "tan-tanh",
+        "mual-mualh",
+        "sum-sumh",
+        "thu-thuh",
+        "lampi-lampih",
+        "khua-khuat",
+        "gamla-gamlat",
+    }
+
+    assert core_pairs <= row_map.keys()
+    assert caveated_pairs <= row_map.keys()
+    assert difficult_pairs <= row_map.keys()
+    assert one_sided_pairs <= row_map.keys()
+    assert blocked_pairs <= row_map.keys()
+
+    same_form_controls = {
+        row["lexeme_id"]
+        for row in inventory_rows
+        if row["lexical_category"] == "same_form_questionnaire_control"
+    }
+    assert same_form_controls <= row_map.keys()
+
+    for lexeme_id in core_pairs:
+        assert row_map[lexeme_id]["grammar_status"] == "core_showcase_pair"
+        assert row_map[lexeme_id]["include_in_main_table"] == "yes"
+
+    for lexeme_id in caveated_pairs:
+        assert row_map[lexeme_id]["grammar_status"] == "promoted_caveated_pair"
+        assert row_map[lexeme_id]["include_in_main_table"] == "yes"
+
+    for lexeme_id in difficult_pairs:
+        assert row_map[lexeme_id]["grammar_status"] == "difficult_but_real_pair"
+
+    for lexeme_id in one_sided_pairs:
+        assert row_map[lexeme_id]["grammar_status"] == "one_sided_bible_attestation"
+
+    for lexeme_id in same_form_controls:
+        assert row_map[lexeme_id]["grammar_status"] == "same_form_questionnaire_control"
+
+    assert row_map["om-omh"]["grammar_status"] == "functional_or_stative_predicate"
+    assert any(row["grammar_status"] == "functional_or_stative_predicate" for row in rows)
+
+    for lexeme_id in blocked_pairs:
+        row = row_map[lexeme_id]
+        assert row["grammar_status"] == "rejected_nonverbal_or_noise"
+        assert row["include_in_main_table"] == "no"
+        assert row["recommended_prose_treatment"] != "Use in the main Form I / Form II table and in the first pair-by-pair subsection."
+
+
+def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
     text = GRAMMAR_SLICE_PATH.read_text(encoding="utf-8")
-    main_inventory = section_between(text, "# Promoted verbal inventory", "# Caveated promoted verbs")
-    caveated_inventory = section_between(text, "# Caveated promoted verbs", "# One-sided Bible attestations and questionnaire controls")
-
-    for core in {"mu ~ muh", "ne ~ nek", "nei ~ neih"}:
-        assert core in main_inventory
-
-    for promoted in {"za ~ zak", "pia ~ piak", "nusia ~ nusiat", "bia ~ biak", "thei ~ theih", "piang ~ pian", "zui ~ zuih", "khial ~ khialh", "kia ~ kiak", "sawlkhia ~ sawlkhiat"}:
-        assert promoted in caveated_inventory
-    for blocked in {"mual ~ mualh", "sum ~ sumh", "thu ~ thuh", "lampi ~ lampih", "khua ~ khuat"}:
-        assert blocked not in main_inventory
-        assert blocked not in caveated_inventory
-
-    assert "stem_alternation_citation_shortlist.tsv" in text
-    assert "not all equally good first examples" in text
-    assert "promoted for grammar discussion" in text
-    assert "rejected as non-verbal or analyzer noise" in text
-    assert "# Caveated promoted verbs" in text
-    assert "# One-sided Bible attestations and questionnaire controls" in text
-    assert "# Stative/adjectival and functional predicates" in text
-    assert "# Analyzer-only uncertain rows" in text
-    assert "# Blocked nominal and non-verbal analyzer rows" in text
-    assert "# Difficult but grammatically important cases" in text
-    assert "same-form questionnaire controls" in text
+    lower_text = text.lower()
+    assert "# Verb-stem alternation" in text
+    assert "draft argument plan" in text
+    assert "should not be organized only by print status" in text
+    assert "both syntactic contexts and individual verb pairs" in text
+    assert "## Distribution by syntactic context" in text
+    assert "### Finite and main-clause uses" in text
+    assert "### Negative clauses" in text
+    assert "### Dependent temporal clauses with `ciangin`" in text
+    assert "### Purposive `nadingin`" in text
+    assert "### Modal and ability uses" in text
+    assert "## Core showcase pairs" in text
+    assert "## Promoted caveated pairs" in text
+    assert "## Difficult but grammatically important pairs" in text
+    assert "## One-sided Bible attestations and questionnaire controls" in text
+    assert "## Rejected/non-verbal/analyzer-noise cases" in text
+    assert "## How the evidence files should be used" in text
+    assert "stem_alternation_syntactic_context_matrix.tsv" in text
+    assert "stem_alternation_pair_discussion_plan.tsv" in text
+    assert "stem_alternation_citation_shortlist.tsv` = the **only quotation-safe layer**" in text
+    assert "The actual grammar section should be drafted in this order" in text
+    assert "system-wide syntactic distribution" in lower_text
+    assert "promoted and difficult pair-by-pair discussion" in lower_text
+    assert "mu ~ muh" in text
     assert "thei ~ theih" in text
-    assert "piang ~ pian" in text
     assert "ngai ~ ngaih" in text
-    assert "pua ~ puak" in text
-    assert "pua ~ puah" in text
-    assert "honkhia ~ honkhiat" in text
-    assert "hu ~ huh" in text
+    assert "keu ~ keuh" in text

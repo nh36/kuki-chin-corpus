@@ -6,144 +6,178 @@ link-citations: true
 reference-section-title: "References"
 ---
 
-# Scope
+# Verb-stem alternation
 
-This review slice now uses the hardened lexical inventory rather than the earlier overinclusive analyzer table. The aim is still to discuss Tedim verb-stem alternation as a real grammar topic, but the relevant inventory must now separate genuine verbal evidence from same-form questionnaire controls, stative or adjectival predicates, nominal analyzer rows, lexicalized families, and analyzer-only uncertainties.
+This file is now a **draft argument plan**, not the final polished grammar section. The eventual prose should not be organized only by print status. It should discuss **both syntactic contexts and individual verb pairs**, in that order:
 
-# Form I and Form II
+1. system-wide Form I / Form II distribution by syntactic context;
+2. the strongest illustrative pairs;
+3. pair-by-pair caveated and difficult evidence;
+4. one-sided, control, and rejected material.
 
-Earlier descriptions agree that Tedim has a two-form verbal system, even though the terminology differs. Henderson describes Form I and Form II, while Zam Ngaih Cing speaks of Stem 1 and Stem 2 [@henderson1965; @zamngaihcing2017]. Henderson emphasizes clause type and the contrast between conclusive and inconclusive predication, while Zam Ngaih Cing makes the connection to nominalization, negation, and other morphosyntactic environments more explicit [@henderson1965; @zamngaihcing2017].
+Earlier descriptions agree that Tedim has a two-form verbal system, even though the terminology differs. Henderson describes Form I and Form II, while Zam Ngaih Cing speaks of Stem 1 and Stem 2 [@henderson1965; @zamngaihcing2017]. The present review packet keeps those descriptive traditions in view, but it now separates coverage, promotion, and quotation safety much more explicitly than the earlier broad analyzer table did.
 
-The current packet therefore keeps three distinct layers in view:
+## The Form I / Form II contrast
 
-1. **Lexical-pair status**: whether the item is supported by secondary literature, the Zakaria/VSA questionnaire, the analyzer inventory, the corpus audit, or some combination of those sources.
-2. **Bible attestation profile**: whether Form I and Form II are both attested, one-sided, or mainly visible in derived, nominalized, or lexicalized environments.
-3. **Promotion status**: whether the pair should be promoted into the main verbal grammar, kept only in the wider inventory, treated as a questionnaire control, or discussed as a difficult case.
+The opening section of the eventual grammar should introduce the system with the strongest lexical pairs, not with the widest possible inventory.
 
-That separation matters. Henderson and Zam Ngaih Cing are witnesses to the system, not automatic authorities over every Bible token. Likewise, the hardened example matrix is a review tool, not itself a set of print-safe quotations. The expanded inventory is welcome, but non-verbal analyzer pairs must not inflate the verb-stem alternation discussion.
+- **Core starting point**: `mu ~ muh`, `ne ~ nek`, `nei ~ neih`.
+- **Basic descriptive claim**: Form I is especially clear in ordinary finite predication and many main-clause uses. Form II is especially visible in dependent, temporal, purposive, attributive, nominalized, and other constructionally bound environments.
+- **Immediate caution**: do not reduce the system to slogans such as *Form II = subordinate*, *Form II = negative*, *Form I = finite*, or *Form II = nominalized only*.
 
-The new tracked shortlist in `output/publication_review/stem_alternation_citation_shortlist.tsv` adds one more layer: **promoted for grammar discussion** is not identical to **safe as a printed quotation**. Some pairs are now secure enough to discuss grammatically, while their best Tedim citations still need caveated handling or should remain notes-only.
+The argument here should stay structural and distributional before it becomes lexical and pair-specific.
 
-# Citation shortlist and print layer
+## Distribution by syntactic context
 
-The shortlist distinguishes four editorial outcomes:
+The main organizing file for this part of the write-up is `output/publication_review/stem_alternation_syntactic_context_matrix.tsv`. The prose should work through the following contexts in order, using the matrix rather than treating all environments as equivalent evidence.
 
-1. **Promoted for grammar discussion and usable as main quotation**: the core showcase set.
-2. **Promoted for grammar discussion, but not all equally good first examples**: the caveated promoted set.
-3. **Retained as a difficult case**: real and grammatically important, but better mentioned cautiously than quoted as a clean paradigm.
-4. **rejected as non-verbal or analyzer noise**: rows that stay in the audit precisely so they do not drift back into the stem-verb prose.
+### Finite and main-clause uses
 
-# Core showcase pairs
+Start with ordinary finite predication. This is where Form I is clearest, even though some lexical pairs still show real Form II matrix tokens.
 
-The cleanest pedagogical material remains concentrated in three pairs. Those still anchor the prose, while the shortlist keeps the larger promoted inventory separate from the printed-example layer.
+### Imperatives and directives
 
-| Pair | Shortlist lead evidence | Citation status |
-| --- | --- | --- |
-| `mu ~ muh` | Gen 1:4 `mu`; Gen 19:1 `muh` | Form I print-ready; Form II usable with caveat |
-| `ne ~ nek` | Gen 2:17 `ne`; Gen 2:17 `nek` | print-ready |
-| `nei ~ neih` | Gen 11:30 `nei`; 2 Sam 23:8 `neih` | print-ready |
+Use imperatives and directives to reinforce the ordinary clause-force profile of Form I, while noting that some lexical pairs still show marked Form II directive material.
 
-# Promoted verbal inventory
+### Negative clauses
 
-The new manual review sheet in `output/publication_review/stem_alternation_manual_promotion_review.tsv` separates the **current** inventory status from the **recommended** grammar promotion decision. In the prose itself, the main promoted table should stay narrow and should not be expanded just because the analyzer can manufacture more pair families.
+Negative clauses belong in the argument, but they are **not** a single diagnostic. The prose should say that negative environments matter, not that Form II simply equals negation.
 
-| Pair | Why it stays in the main promoted table |
-| --- | --- |
-| `mu ~ muh` | Strong exact Form I and Form II evidence, with dependent and nominalized support that stays lexically transparent. |
-| `ne ~ nek` | The Gen 2:17 contrast remains the cleanest same-verse demonstration of Tedim Form I/Form II. |
-| `nei ~ neih` | Both forms remain robust and easy to explain without major lexical-family contamination. |
+### Dependent temporal clauses with `ciangin`
 
-# Caveated promoted verbs
+This is one of the strongest places to show Form II in clearly dependent syntax. It should be one of the central distributional subsections.
 
-The manual review supports a broader **caveated promoted** inventory. These pairs belong in the grammar, but their best Form II evidence is usually constructionally restricted, domain-specific, or harder to quote cleanly than the three core showcase pairs.
+### Temporal and nominal `ni-in` contexts
 
-The shortlist makes that distinction explicit. The caveated promoted verbs are **not all equally good first examples**. Some are promoted because they are real lexical pairs with good Bible evidence, while the final printed quotations still need careful selection or should remain supporting citations rather than headline examples.
+Use `ni-in` as a second temporal construction so the grammar does not make `ciangin` carry the whole dependent-clause argument.
 
-| Pair | Why it is promoted with caveat |
-| --- | --- |
-| `za ~ zak` | A genuine alternating pair, but `zak` ranges widely enough that the grammar should keep the example choice conservative. |
-| `pia ~ piak` | Strong evidence on both sides, but exact examples still need filtering away from nearby derivational material. |
-| `nusia ~ nusiat` | Form II is clearest in dependent and clause-linking contexts rather than in a neat finite pedagogical contrast. |
-| `bia ~ biak` | Clean exact verbal rows survive on both sides, but Form II is still concentrated in worship and offering contexts. |
-| `thei ~ theih` | Both forms are abundant and real, but Form II is especially strong in modal, ability, purposive, and nominalized environments. |
-| `piang ~ pian` | Exact `piang` and `pian` rows survive after filtering, but the pair is easiest to explain under eventive and dependent usage rather than as a simple finite paradigm. |
-| `zui ~ zuih` | Both forms are cleanly attested, but a final citation set still needs to avoid `zuihsak`-family noise. |
-| `khial ~ khialh` | Both forms are usable, but the `khialsak` family still creates derivational crowding around otherwise good examples. |
-| `kia ~ kiak` | The Form II side is thinner than for the best pairs, but the surviving exact rows are still strong enough for grammar discussion. |
-| `sawlkhia ~ sawlkhiat` | Both forms are attested, but the Form II side is sparse enough that the pair should stay explicitly caveated. |
+### Clause-linking with `kipan`
 
-The row-level shortlist now prefers:
+This subsection is especially important for pairs such as `nusia ~ nusiat`, where the best Form II evidence is constructionally bound and source-linking rather than a neat finite contrast.
 
-1. exact verbal tokens when they exist;
-2. Form II rows whose Tedim clause clearly shows dependent, purposive, modal, attributive, or clause-linking syntax;
-3. notes-only treatment when a pair is real but the surviving citation is still too thin or constructionally awkward for print.
+### Purposive `nadingin`
 
-# One-sided Bible attestations and questionnaire controls
+Purposive or irrealis-heavy `ding / nadingin` clauses are one of the clearest places where Form II becomes prominent across several promoted pairs.
 
-One-sided Bible attestations are not a reason to drop a verb from the lexical discussion. They are a reason to label it honestly and keep it out of the promoted alternating-verb tables until both sides are philologically secure.
+### Nominalized `-na`
 
-| Row type | Examples | Editorial treatment |
-| --- | --- | --- |
-| Same-form questionnaire controls | `dawn ~ dawn`, `hong ~ hong`, `om ~ om`, `ci ~ ci`, `hi ~ hi`, `bawl ~ bawl`, `zui ~ zui`, `pai ~ pai` | Keep as controls; do **not** treat them as overt alternating pairs in the promoted verbal inventory. |
-| One-sided or constructionally skewed lexical verbs | `dipkua ~ dipkuat`, `gen ~ genh`, `hawlkhia ~ hawlkhiat`, `husia ~ husiat`, `kho ~ khoh`, `kido ~ kidot`, `lua ~ luah`, `tu ~ tuh`, `tuahpha ~ tuahphat`, `vial ~ vialh`, `bawl ~ bawlh` | Keep in the wider inventory and manual review sheet, but do not promote them until a clean verbal row survives on the missing or unstable side. |
-| One-sided analyzer or questionnaire items | `om ~ omh`, `pai ~ paih` | Keep visible with clear blocking notes, but do not promote them into the verbal tables yet. |
+Nominalized material should be discussed directly, but with an explicit filter against lexicalized nouns and compounds.
 
-No separate Karius, Kariuss, or Karias questionnaire file is present in the repository. The questionnaire layer used here is the in-repo Zakaria/VSA material in `scripts/generate_vsa_report.py`, `docs/paradigms/5-verb-11-vsa-questionnaire.md`, and `docs/grammar/reports/05-verb-11-vsa-questionnaire.md`.
+### Attributive and relative `mi` contexts
 
-# Stative/adjectival and functional predicates
+These contexts belong with the broader non-final distribution. They matter, but they should not be turned into a mechanical rule.
 
-The widened inventory also contains categories that are grammatically relevant but should not inflate the main lexical-verb table.
+### Possessed and genitive attributive contexts
 
-| Category | Examples | Editorial treatment |
-| --- | --- | --- |
-| Stative/adjectival predicate | `no ~ noh` | Mention only as a possible predicative alternation, not as a promoted lexical verb. |
-| Auxiliary or functional verb | `ci ~ cih`, `hi ~ hih`, `om ~ omh` | Discuss separately from lexical verbs. `ci ~ cih` is real and important, but it behaves primarily as quotative or functional verbal material. `hi ~ hih` and `om ~ omh` still suffer from category mismatch or one-sided evidence in the current Bible layer. |
+This section should stay compact and should probably center on `nei ~ neih`, since that pair gives the clearest evidence here.
 
-# Analyzer-only uncertain rows
+### Modal and ability uses
 
-Some rows are worth retaining precisely because they show where the analyzer inventory outruns the current philological control.
+This subsection should explicitly center on `thei ~ theih`, since the pair is real but constructionally special.
 
-| Row type | Examples | Why they stay out of the main promoted table |
-| --- | --- | --- |
-| Analyzer-only uncertain | `mu ~ muk`, `pai ~ paih`, `pua ~ puah`, `tua ~ tuak`, `tua ~ tuah` | The analyzer proposes a pair, but the Bible evidence is still mixed, shared-base, or category-uncertain. |
+### Quotative and say-complement contexts
 
-# Blocked nominal and non-verbal analyzer rows
+Discuss this environment mainly to explain why functional material such as `ci ~ cih` should not be merged blindly into the lexical-verb showcase table.
 
-The manual review also keeps clearly non-verbal analyzer pairs visible as blocked rows rather than letting them drift back into the stem-verb prose.
+### Derived, causative, compound, and lexicalized material
 
-| Row type | Examples | Why they stay blocked |
-| --- | --- | --- |
-| Nominal or compound-like analyzer rows | `mual ~ mualh`, `sum ~ sumh`, `thu ~ thuh`, `lampi ~ lampih`, `khua ~ khuat`, `gamla ~ gamlat`, `keu ~ keuh` | Current Bible hits are nominal, locative, or compound-like rather than clean verbal evidence. |
-| Weakly verbal or category-mismatched rows | `khai ~ khaih`, `sia ~ siah`, `tan ~ tanh` | The best Bible hits are still non-verbal, category-mixed, or too noisy to justify promotion. |
+This should be an explicit filter section, not a positive-evidence section. The grammar needs to show why `-sak` material, compounds, lexicalized families, and review-bucket rows cannot simply be counted as ordinary stem evidence.
 
-# Nominalized and dependent evidence
+## Core showcase pairs
 
-The main descriptive generalization remains structural, not mechanical. Form I is clearest in ordinary finite predication. Form II is especially clear in nominalized, dependent, purposive, relative/attributive, and other non-final environments. That is why `mu ~ muh`, `ne ~ nek`, and `nei ~ neih` remain so strong, and it is also why several real verbs remain caveated rather than disappearing from the discussion.
+The core pair subsection should remain narrow and should illustrate the system with the strongest three pairs:
 
-Negative clauses remain relevant but not diagnostic on their own. The grammar should still avoid slogans like "Form II = negative" or "Form II = subordinate." The more accurate generalization is that Form II is especially visible in dependent, nominalized, purposive, and other non-final environments.
+- `mu ~ muh`
+- `ne ~ nek`
+- `nei ~ neih`
 
-# Difficult but grammatically important cases
+These pairs should do the main pedagogical work for the Form I / Form II contrast.
 
-Several rows remain central to the grammar precisely because the manual review shows both why they matter and why they should **not** be promoted mechanically.
+## Promoted caveated pairs
 
-1. `ngai ~ ngaih` now has to be described more carefully: clean exact verbal `ngai` and `ngaih` rows do survive, but the `ngaihsun/ngaihsut/ngaihsutna` family still creates too much lexical-family contamination for ordinary promotion.
-2. `pua ~ puak` also keeps real verbal evidence on both sides, but the shared Form I base, gloss mismatch, and competition with `pua ~ puah` still make it a difficult-case item rather than a promoted pair.
-3. `pua ~ puah` remains analyzer-only uncertain because the Form II side is cleaner than the Form I side.
-4. `tua ~ tuak` and `tua ~ tuah` remain analyzer overgeneration problems: the base `tua` is too often determiner-like or otherwise category-mixed to support lexical promotion.
-5. `honkhia ~ honkhiat` and `hu ~ huh` remain excluded from simple stem-alternation prose because the current evidence is lexicalized, category-mixed, or both.
+The next section should move to the broader but still promoted inventory:
 
-# Retained difficult and rejected citation candidates
+- `za ~ zak`
+- `pia ~ piak`
+- `nusia ~ nusiat`
+- `bia ~ biak`
+- `thei ~ theih`
+- `piang ~ pian`
+- `zui ~ zuih`
+- `khial ~ khialh`
+- `kia ~ kiak`
+- `sawlkhia ~ sawlkhiat`
 
-The shortlist now keeps difficult and rejected items visible under separate labels instead of letting them blur together.
+Each pair should get a short paragraph or table note answering two questions:
 
-| Shortlist group | Examples | Editorial use |
-| --- | --- | --- |
-| Difficult but still grammatically relevant | `ngai ~ ngaih`, `pua ~ puak` | Mention without overpromoting them as clean citation pairs. |
-| Inventory-only or analyzer-only uncertain | `pai ~ paih`, `tua ~ tuak`, `tua ~ tuah` | Keep in notes until the lexical and category problems are resolved. |
-| Rejected as non-verbal or analyzer noise | `keu ~ keuh`, `khai ~ khaih`, `sia ~ siah`, `tan ~ tanh` | Keep blocked; do not recycle these into the promoted citation set. |
+1. **What does the evidence positively show?**
+2. **What is the specific caveat?**
 
-# Editorial summary
+The point is not to collapse them into one generic “caveated examples” bucket, but to say what kind of Form II evidence each pair contributes.
 
-The hardened lexical inventory is better than the earlier broad table because it now asks the right question: **is this a genuine verbal stem-alternation item, and if so, what kind of evidence supports promoting it?** The new manual review layer pushes that one step further by separating the inherited inventory status from the editorial promotion decision, and the citation shortlist separates promotion from quotation.
+## Difficult but grammatically important pairs
 
-The result is a broader but still controlled packet. The three main showcase pairs remain stable. The caveated promoted inventory is now larger: in addition to `za ~ zak`, `pia ~ piak`, `nusia ~ nusiat`, and `bia ~ biak`, the grammar can now discuss `thei ~ theih`, `piang ~ pian`, `zui ~ zuih`, `khial ~ khialh`, `kia ~ kiak`, and `sawlkhia ~ sawlkhiat` as genuine lexical verbs with caveated evidence. At the same time, same-form questionnaire controls, functional or stative predicates, analyzer-only uncertainties, difficult-case lexical families, and blocked nominal rows stay visible without inflating the promoted verbal inventory or the printed citation set.
+This section should keep the difficult cases in the argument rather than silently dropping them:
+
+- `ngai ~ ngaih`
+- `pua ~ puak`
+- `pai ~ paih`
+- `tua ~ tuah`
+- `tua ~ tuak`
+
+These are not simply rejected. They matter because they show lexical-family contamination, shared-base problems, one-sided evidence, and analyzer overgeneration.
+
+## One-sided Bible attestations and questionnaire controls
+
+This section should separate two things that were too easily blurred in earlier drafts:
+
+1. **One-sided or constructionally skewed lexical verbs** such as `bawl ~ bawlh`, `dipkua ~ dipkuat`, `gen ~ genh`, `hawlkhia ~ hawlkhiat`, `husia ~ husiat`, `kho ~ khoh`, `kido ~ kidot`, `lua ~ luah`, `tu ~ tuh`, `tuahpha ~ tuahphat`, and `vial ~ vialh`.
+2. **Same-form questionnaire controls** such as `dawn ~ dawn`, `hong ~ hong`, `om ~ om`, `ci ~ ci`, `hi ~ hi`, `bawl ~ bawl`, `zui ~ zui`, `pai ~ pai`, and the other same-form rows now tracked in the lexical inventory.
+
+The prose should say clearly that same-form questionnaire rows are useful controls, but they are not overt alternating pairs in the Bible layer.
+
+## Rejected/non-verbal/analyzer-noise cases
+
+This section should explain why some apparent pairs stay blocked:
+
+- nouns and nominal compounds;
+- lexicalized or compound families;
+- derivational `-sak` material;
+- homophones and shared-base contamination;
+- category mismatches;
+- analyzer overgeneration.
+
+Representative blocked rows should include:
+
+- `keu ~ keuh`
+- `khai ~ khaih`
+- `sia ~ siah`
+- `tan ~ tanh`
+- `mual ~ mualh`
+- `sum ~ sumh`
+- `thu ~ thuh`
+- `lampi ~ lampih`
+- `khua ~ khuat`
+- `gamla ~ gamlat`
+
+## How the evidence files should be used
+
+The final prose should keep the current evidence layers distinct:
+
+- `output/publication_review/stem_alternation_citation_shortlist.tsv` = the **only quotation-safe layer** for printed examples.
+- `output/publication_review/stem_alternation_syntactic_context_matrix.tsv` = the basis for the **context-by-context distributional argument**.
+- `output/publication_review/stem_alternation_pair_discussion_plan.tsv` = the basis for the **pair-by-pair discussion order and claims**.
+- `output/publication_review/stem_alternation_lexical_inventory.tsv` = the coverage layer for lexical category, promotion status, blockers, and source basis.
+- `output/publication_review/stem_alternation_promotable_examples.tsv` and `output/publication_review/stem_alternation_manual_promotion_review.tsv` = editorial support files for promotion and example triage.
+- `output/publication_review/stem_alternation_corpus_audit.tsv` = generated local background evidence; useful for checking rows, but not a quotation-safe layer and not a tracked argument table.
+
+## Writing order for the eventual section
+
+The actual grammar section should be drafted in this order:
+
+1. **System-wide syntactic distribution**
+2. **Best-attested showcase pairs**
+3. **Promoted and difficult pair-by-pair discussion**
+4. **One-sided, control, and rejected material**
+
+That is the architecture this packet should now support.

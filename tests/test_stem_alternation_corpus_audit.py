@@ -16,6 +16,8 @@ LEXICAL_INVENTORY_PATH = ROOT / "output/publication_review/stem_alternation_lexi
 PROMOTABLE_EXAMPLES_PATH = ROOT / "output/publication_review/stem_alternation_promotable_examples.tsv"
 MANUAL_PROMOTION_REVIEW_PATH = ROOT / "output/publication_review/stem_alternation_manual_promotion_review.tsv"
 CITATION_SHORTLIST_PATH = ROOT / "output/publication_review/stem_alternation_citation_shortlist.tsv"
+SYNTACTIC_CONTEXT_MATRIX_PATH = ROOT / "output/publication_review/stem_alternation_syntactic_context_matrix.tsv"
+PAIR_DISCUSSION_PLAN_PATH = ROOT / "output/publication_review/stem_alternation_pair_discussion_plan.tsv"
 
 REQUIRED_ENV_COLUMNS = {
     "pair_id",
@@ -104,6 +106,8 @@ def test_stem_alternation_corpus_audit_outputs_exist():
     assert PROMOTABLE_EXAMPLES_PATH.exists()
     assert MANUAL_PROMOTION_REVIEW_PATH.exists()
     assert CITATION_SHORTLIST_PATH.exists()
+    assert SYNTACTIC_CONTEXT_MATRIX_PATH.exists()
+    assert PAIR_DISCUSSION_PLAN_PATH.exists()
 
 
 def test_stem_alternation_example_matrix_has_required_columns_and_core_pairs():
@@ -236,6 +240,8 @@ def test_stem_alternation_example_matrix_is_reproducible_when_tokens_export_is_a
     monkeypatch.setattr(module, "PROMOTABLE_EXAMPLES_PATH", tmp_path / "stem_alternation_promotable_examples.tsv")
     monkeypatch.setattr(module, "MANUAL_PROMOTION_REVIEW_PATH", tmp_path / "stem_alternation_manual_promotion_review.tsv")
     monkeypatch.setattr(module, "CITATION_SHORTLIST_PATH", tmp_path / "stem_alternation_citation_shortlist.tsv")
+    monkeypatch.setattr(module, "SYNTACTIC_CONTEXT_MATRIX_PATH", tmp_path / "stem_alternation_syntactic_context_matrix.tsv")
+    monkeypatch.setattr(module, "PAIR_DISCUSSION_PLAN_PATH", tmp_path / "stem_alternation_pair_discussion_plan.tsv")
 
     module.write_corpus_audit()
 
@@ -244,3 +250,5 @@ def test_stem_alternation_example_matrix_is_reproducible_when_tokens_export_is_a
     assert (tmp_path / "stem_alternation_promotable_examples.tsv").read_text(encoding="utf-8") == PROMOTABLE_EXAMPLES_PATH.read_text(encoding="utf-8")
     assert (tmp_path / "stem_alternation_manual_promotion_review.tsv").read_text(encoding="utf-8") == MANUAL_PROMOTION_REVIEW_PATH.read_text(encoding="utf-8")
     assert (tmp_path / "stem_alternation_citation_shortlist.tsv").read_text(encoding="utf-8") == CITATION_SHORTLIST_PATH.read_text(encoding="utf-8")
+    assert (tmp_path / "stem_alternation_syntactic_context_matrix.tsv").read_text(encoding="utf-8") == SYNTACTIC_CONTEXT_MATRIX_PATH.read_text(encoding="utf-8")
+    assert (tmp_path / "stem_alternation_pair_discussion_plan.tsv").read_text(encoding="utf-8") == PAIR_DISCUSSION_PLAN_PATH.read_text(encoding="utf-8")
