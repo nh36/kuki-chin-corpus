@@ -27,12 +27,13 @@ The opening section of the eventual grammar should introduce the system with the
 
 The argument here should stay structural and distributional before it becomes lexical and pair-specific.
 
-The eventual section will likely need four editorial surfaces:
+The eventual section will likely need five editorial surfaces:
 
 - a **small core showcase table**;
 - a **larger promoted-pair inventory table**;
 - a **pair-by-pair discussion section**;
-- a **separate control/noise appendix or paragraph**.
+- a **one-sided / same-form / functional coverage table**;
+- a **blocked or analyzer-noise table / appendix paragraph**.
 
 ## Distribution by syntactic context
 
@@ -147,6 +148,8 @@ This section should separate two things that were too easily blurred in earlier 
 
 The prose should say clearly that same-form questionnaire rows are useful controls, but they are not overt alternating pairs in the Bible layer.
 
+These rows are **not** discarded. They should stay visible in a coverage table because the grammar needs to account for verbs flagged by the literature, questionnaire, analyzer inventory, and Bible audit even when only one side is cleanly attested in the current Bible layer.
+
 ## Rejected/non-verbal/analyzer-noise cases
 
 This section should explain why some apparent pairs stay blocked:
@@ -189,6 +192,20 @@ The actual grammar section should be drafted in this order:
 1. **System-wide syntactic distribution**
 2. **Best-attested showcase pairs**
 3. **Promoted and difficult pair-by-pair discussion**
-4. **One-sided, control, and rejected material**
+4. **One-sided / same-form / functional coverage table**
+5. **Blocked or analyzer-noise appendix paragraph**
 
 That is the architecture this packet should now support.
+
+## Next prose draft
+
+The next commit should create a separate prose draft file rather than overwrite this planning file, probably at `output/publication_review/grammar_stem_alternation_section_draft.md`.
+
+That draft should be organized as:
+
+1. **System-wide syntactic distribution**
+2. **Core showcase examples**
+3. **Promoted-pair inventory**
+4. **Pair-by-pair notes for promoted and difficult pairs**
+5. **One-sided / same-form / functional coverage table**
+6. **Blocked/noise appendix paragraph**

@@ -170,6 +170,8 @@ REQUIRED_PAIR_DISCUSSION_PLAN_COLUMNS = {
     "include_in_core_showcase_table",
     "include_in_promoted_pair_inventory",
     "include_in_pair_by_pair_discussion",
+    "include_in_coverage_or_control_table",
+    "include_in_blocked_or_noise_table",
     "notes",
 }
 
@@ -529,6 +531,8 @@ def test_pair_discussion_plan_covers_required_pairs_and_statuses():
         assert row["include_in_core_showcase_table"] == "yes"
         assert row["include_in_promoted_pair_inventory"] == "yes"
         assert row["include_in_pair_by_pair_discussion"] == "yes"
+        assert row["include_in_coverage_or_control_table"] == "no"
+        assert row["include_in_blocked_or_noise_table"] == "no"
 
     for lexeme_id in caveated_pairs:
         row = row_map[lexeme_id]
@@ -536,6 +540,8 @@ def test_pair_discussion_plan_covers_required_pairs_and_statuses():
         assert row["include_in_core_showcase_table"] == "no"
         assert row["include_in_promoted_pair_inventory"] == "yes"
         assert row["include_in_pair_by_pair_discussion"] == "yes"
+        assert row["include_in_coverage_or_control_table"] == "no"
+        assert row["include_in_blocked_or_noise_table"] == "no"
 
     for lexeme_id in difficult_pairs:
         row = row_map[lexeme_id]
@@ -543,27 +549,42 @@ def test_pair_discussion_plan_covers_required_pairs_and_statuses():
         assert row["include_in_core_showcase_table"] == "no"
         assert row["include_in_promoted_pair_inventory"] == "no"
         assert row["include_in_pair_by_pair_discussion"] == "yes"
+        assert row["include_in_coverage_or_control_table"] == "no"
+        assert row["include_in_blocked_or_noise_table"] == "no"
 
     for lexeme_id in one_sided_pairs:
-        assert row_map[lexeme_id]["grammar_status"] == "one_sided_bible_attestation"
-        assert row_map[lexeme_id]["include_in_core_showcase_table"] == "no"
-        assert row_map[lexeme_id]["include_in_promoted_pair_inventory"] == "no"
+        row = row_map[lexeme_id]
+        assert row["grammar_status"] == "one_sided_bible_attestation"
+        assert row["include_in_core_showcase_table"] == "no"
+        assert row["include_in_promoted_pair_inventory"] == "no"
+        assert row["include_in_pair_by_pair_discussion"] == "no"
+        assert row["include_in_coverage_or_control_table"] == "yes"
+        assert row["include_in_blocked_or_noise_table"] == "no"
 
     for lexeme_id in same_form_controls:
-        assert row_map[lexeme_id]["grammar_status"] == "same_form_questionnaire_control"
-        assert row_map[lexeme_id]["include_in_core_showcase_table"] == "no"
-        assert row_map[lexeme_id]["include_in_promoted_pair_inventory"] == "no"
+        row = row_map[lexeme_id]
+        assert row["grammar_status"] == "same_form_questionnaire_control"
+        assert row["include_in_core_showcase_table"] == "no"
+        assert row["include_in_promoted_pair_inventory"] == "no"
+        assert row["include_in_pair_by_pair_discussion"] == "no"
+        assert row["include_in_coverage_or_control_table"] == "yes"
+        assert row["include_in_blocked_or_noise_table"] == "no"
 
     assert row_map["om-omh"]["grammar_status"] == "functional_or_stative_predicate"
     assert any(row["grammar_status"] == "functional_or_stative_predicate" for row in rows)
     assert row_map["om-omh"]["include_in_core_showcase_table"] == "no"
     assert row_map["om-omh"]["include_in_promoted_pair_inventory"] == "no"
+    assert row_map["om-omh"]["include_in_coverage_or_control_table"] == "yes"
+    assert row_map["om-omh"]["include_in_blocked_or_noise_table"] == "no"
 
     for lexeme_id in blocked_pairs:
         row = row_map[lexeme_id]
         assert row["grammar_status"] == "rejected_nonverbal_or_noise"
         assert row["include_in_core_showcase_table"] == "no"
         assert row["include_in_promoted_pair_inventory"] == "no"
+        assert row["include_in_pair_by_pair_discussion"] == "no"
+        assert row["include_in_coverage_or_control_table"] == "no"
+        assert row["include_in_blocked_or_noise_table"] == "yes"
         assert row["recommended_prose_treatment"] != "Use in the small core showcase table and return to it briefly at the start of the pair-by-pair discussion."
 
 
@@ -576,7 +597,8 @@ def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
     assert "both syntactic contexts and individual verb pairs" in text
     assert "small core showcase table" in lower_text
     assert "larger promoted-pair inventory table" in lower_text
-    assert "separate control/noise appendix or paragraph" in lower_text
+    assert "one-sided / same-form / functional coverage table" in lower_text
+    assert "blocked or analyzer-noise table / appendix paragraph" in lower_text
     assert "## Distribution by syntactic context" in text
     assert "### Finite and main-clause uses" in text
     assert "### Negative clauses" in text
@@ -594,9 +616,16 @@ def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
     assert "stem_alternation_citation_shortlist.tsv` = the **only quotation-safe layer**" in text
     assert "matrix is for organizing claims and subsection order" in lower_text
     assert "citation shortlist remains the source of quotation candidates" in lower_text
+    assert "should stay visible in a coverage table" in lower_text
+    assert "coverage table" in lower_text
+    assert "only one side is cleanly attested" in lower_text
     assert "The actual grammar section should be drafted in this order" in text
     assert "system-wide syntactic distribution" in lower_text
     assert "promoted and difficult pair-by-pair discussion" in lower_text
+    assert "next prose draft" in lower_text
+    assert "grammar_stem_alternation_section_draft.md" in text
+    assert "one-sided / same-form / functional coverage table" in lower_text
+    assert "blocked/noise appendix paragraph" in lower_text
     assert "main table" not in lower_text
     assert "mu ~ muh" in text
     assert "thei ~ theih" in text

@@ -294,6 +294,8 @@ PAIR_DISCUSSION_PLAN_COLUMNS = [
     "include_in_core_showcase_table",
     "include_in_promoted_pair_inventory",
     "include_in_pair_by_pair_discussion",
+    "include_in_coverage_or_control_table",
+    "include_in_blocked_or_noise_table",
     "notes",
 ]
 
@@ -306,6 +308,10 @@ FILTER_CONTEXT_IDS = {
     "compound_or_lexicalized",
     "causative_or_derivational_sak",
     "unknown_or_needs_review",
+}
+
+FUNCTIONAL_OR_STATIVE_DISCUSSION_PAIR_IDS = {
+    "om-omh",
 }
 
 REVIEW_CITED_SAFE_ENVIRONMENTS = {
@@ -3394,39 +3400,79 @@ def default_prose_treatment_for_status(grammar_status: str) -> str:
     if grammar_status == "difficult_but_real_pair":
         return "Keep it out of the promoted-pair inventory and discuss it explicitly in the difficult-pairs section."
     if grammar_status == "one_sided_bible_attestation":
-        return "Mention it in the one-sided section rather than in the core showcase table or promoted-pair inventory."
+        return "Keep it in the one-sided coverage table rather than in the core showcase table or promoted-pair inventory."
     if grammar_status == "same_form_questionnaire_control":
-        return "Keep it in the questionnaire-control appendix or paragraph rather than in the core showcase table or promoted-pair inventory."
+        return "Keep it in the coverage/control table rather than in the core showcase table or promoted-pair inventory."
     if grammar_status == "functional_or_stative_predicate":
-        return "Handle it separately from lexical stem alternation, outside the core showcase table and promoted-pair inventory."
+        return "Keep it in the coverage/control table, with a short prose note only where the grammar needs explicit functional commentary."
     if grammar_status == "analyzer_only_uncertain":
-        return "Keep it in the analyzer-review section and tie the discussion to review needs, not to strong grammatical claims."
+        return "Keep it in the blocked or analyzer-noise table and tie the discussion to review needs, not to strong grammatical claims."
     return "Use it only in the rejected or noise appendix to explain why the pair stays blocked."
 
 
-def pair_discussion_role_flags(grammar_status: str) -> dict[str, str]:
+def pair_discussion_role_flags(pair_id: str, grammar_status: str) -> dict[str, str]:
     if grammar_status == "core_showcase_pair":
         return {
             "include_in_core_showcase_table": "yes",
             "include_in_promoted_pair_inventory": "yes",
             "include_in_pair_by_pair_discussion": "yes",
+            "include_in_coverage_or_control_table": "no",
+            "include_in_blocked_or_noise_table": "no",
         }
     if grammar_status == "promoted_caveated_pair":
         return {
             "include_in_core_showcase_table": "no",
             "include_in_promoted_pair_inventory": "yes",
             "include_in_pair_by_pair_discussion": "yes",
+            "include_in_coverage_or_control_table": "no",
+            "include_in_blocked_or_noise_table": "no",
         }
     if grammar_status == "difficult_but_real_pair":
         return {
             "include_in_core_showcase_table": "no",
             "include_in_promoted_pair_inventory": "no",
             "include_in_pair_by_pair_discussion": "yes",
+            "include_in_coverage_or_control_table": "no",
+            "include_in_blocked_or_noise_table": "no",
+        }
+    if grammar_status == "one_sided_bible_attestation":
+        return {
+            "include_in_core_showcase_table": "no",
+            "include_in_promoted_pair_inventory": "no",
+            "include_in_pair_by_pair_discussion": "no",
+            "include_in_coverage_or_control_table": "yes",
+            "include_in_blocked_or_noise_table": "no",
+        }
+    if grammar_status == "same_form_questionnaire_control":
+        return {
+            "include_in_core_showcase_table": "no",
+            "include_in_promoted_pair_inventory": "no",
+            "include_in_pair_by_pair_discussion": "no",
+            "include_in_coverage_or_control_table": "yes",
+            "include_in_blocked_or_noise_table": "no",
+        }
+    if grammar_status == "functional_or_stative_predicate":
+        return {
+            "include_in_core_showcase_table": "no",
+            "include_in_promoted_pair_inventory": "no",
+            "include_in_pair_by_pair_discussion": "yes" if pair_id in FUNCTIONAL_OR_STATIVE_DISCUSSION_PAIR_IDS else "no",
+            "include_in_coverage_or_control_table": "yes",
+            "include_in_blocked_or_noise_table": "no",
+        }
+    if grammar_status in {"analyzer_only_uncertain", "rejected_nonverbal_or_noise"}:
+        return {
+            "include_in_core_showcase_table": "no",
+            "include_in_promoted_pair_inventory": "no",
+            "include_in_pair_by_pair_discussion": "no",
+            "include_in_coverage_or_control_table": "no",
+            "include_in_blocked_or_noise_table": "yes",
         }
     return {
         "include_in_core_showcase_table": "no",
         "include_in_promoted_pair_inventory": "no",
         "include_in_pair_by_pair_discussion": "no",
+        "include_in_coverage_or_control_table": "no",
+        "include_in_blocked_or_noise_table": "no",
     }
 
 
@@ -3480,7 +3526,7 @@ def build_pair_discussion_rows(
         manual_row = manual_map.get(lexeme_id)
         citation_rows = citation_map.get(lexeme_id, [])
         grammar_status = grammar_status_for_pair(inventory_row)
-        role_flags = pair_discussion_role_flags(grammar_status)
+        role_flags = pair_discussion_role_flags(lexeme_id, grammar_status)
 
         if manual_row is not None:
             main_generalization = manual_row["decision_rationale"]
@@ -3524,6 +3570,8 @@ def build_pair_discussion_rows(
             "include_in_core_showcase_table": role_flags["include_in_core_showcase_table"],
             "include_in_promoted_pair_inventory": role_flags["include_in_promoted_pair_inventory"],
             "include_in_pair_by_pair_discussion": role_flags["include_in_pair_by_pair_discussion"],
+            "include_in_coverage_or_control_table": role_flags["include_in_coverage_or_control_table"],
+            "include_in_blocked_or_noise_table": role_flags["include_in_blocked_or_noise_table"],
             "notes": default_pair_discussion_note(grammar_status, lexeme_id),
         }
         plan_rows.append(apply_pair_discussion_editorial_overrides(lexeme_id, row))
