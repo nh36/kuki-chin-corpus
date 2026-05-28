@@ -1,5 +1,6 @@
 import csv
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 
@@ -7,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LEXICAL_INVENTORY_PATH = ROOT / "output/publication_review/stem_alternation_lexical_inventory.tsv"
 PROMOTABLE_EXAMPLES_PATH = ROOT / "output/publication_review/stem_alternation_promotable_examples.tsv"
 MANUAL_PROMOTION_REVIEW_PATH = ROOT / "output/publication_review/stem_alternation_manual_promotion_review.tsv"
+CITATION_SHORTLIST_PATH = ROOT / "output/publication_review/stem_alternation_citation_shortlist.tsv"
 GRAMMAR_SLICE_PATH = ROOT / "output/publication_review/grammar_stem_alternation_print_slice.md"
 
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -101,6 +103,32 @@ REQUIRED_MANUAL_REVIEW_COLUMNS = {
     "next_manual_check",
 }
 
+REQUIRED_CITATION_SHORTLIST_COLUMNS = {
+    "lexeme_id",
+    "promotion_group",
+    "form_side",
+    "reference",
+    "verse_id",
+    "token_index",
+    "surface_form",
+    "normalized_form",
+    "segmentation",
+    "gloss_span",
+    "lemma",
+    "pos",
+    "tedim_clause_or_sentence",
+    "local_context",
+    "kjv",
+    "environment",
+    "construction_label",
+    "example_role",
+    "citation_quality",
+    "why_this_example",
+    "remaining_caveat",
+    "use_in_grammar",
+    "notes",
+}
+
 
 def load_tsv(path: Path):
     with path.open(encoding="utf-8") as handle:
@@ -118,13 +146,16 @@ def test_stem_alternation_lexical_inventory_and_review_outputs_exist_with_requir
     inventory_header, inventory_rows = load_tsv(LEXICAL_INVENTORY_PATH)
     promotable_header, promotable_rows = load_tsv(PROMOTABLE_EXAMPLES_PATH)
     manual_header, manual_rows = load_tsv(MANUAL_PROMOTION_REVIEW_PATH)
+    citation_header, citation_rows = load_tsv(CITATION_SHORTLIST_PATH)
 
     assert REQUIRED_INVENTORY_COLUMNS <= inventory_header
     assert REQUIRED_PROMOTABLE_COLUMNS <= promotable_header
     assert REQUIRED_MANUAL_REVIEW_COLUMNS <= manual_header
+    assert REQUIRED_CITATION_SHORTLIST_COLUMNS <= citation_header
     assert inventory_rows
     assert promotable_rows
     assert manual_rows
+    assert citation_rows
 
 
 def test_stem_alternation_lexical_inventory_includes_psc_and_analyzer_pairs():
@@ -250,6 +281,85 @@ def test_manual_review_covers_all_bilateral_lexical_verbs_and_key_difficult_case
     assert manual_map["keu-keuh"]["manual_review_decision"] == "block_nonverbal"
 
 
+def test_citation_shortlist_covers_core_and_caveated_pairs():
+    _, rows = load_tsv(CITATION_SHORTLIST_PATH)
+    by_pair = defaultdict(list)
+    for row in rows:
+        by_pair[row["lexeme_id"]].append(row)
+
+    core_pairs = {"mu-muh", "ne-nek", "nei-neih"}
+    caveated_pairs = {
+        "za-zak",
+        "pia-piak",
+        "nusia-nusiat",
+        "bia-biak",
+        "thei-theih",
+        "piang-pian",
+        "zui-zuih",
+        "khial-khialh",
+        "kia-kiak",
+        "sawlkhia-sawlkhiat",
+    }
+
+    for lexeme_id in core_pairs | caveated_pairs:
+        sides = {row["form_side"] for row in by_pair[lexeme_id]}
+        assert {"form_i", "form_ii"} <= sides
+
+    for lexeme_id in core_pairs:
+        assert any(row["use_in_grammar"] == "use_as_main_example" for row in by_pair[lexeme_id])
+
+    assert all(
+        row["citation_quality"] != "print_ready"
+        for row in rows
+        if row["lexeme_id"] in caveated_pairs
+    )
+
+
+def test_citation_shortlist_keeps_special_cases_and_blocked_rows_honest():
+    _, inventory_rows = load_tsv(LEXICAL_INVENTORY_PATH)
+    _, citation_rows = load_tsv(CITATION_SHORTLIST_PATH)
+    inventory_map = {row["lexeme_id"]: row for row in inventory_rows}
+
+    nusia_form_ii = [
+        row
+        for row in citation_rows
+        if row["lexeme_id"] == "nusia-nusiat" and row["form_side"] == "form_ii"
+    ]
+    assert nusia_form_ii
+    assert all(row["citation_quality"] != "print_ready" for row in nusia_form_ii)
+    assert any(row["pos"] == "N" for row in nusia_form_ii)
+    assert any("clause-linking" in row["construction_label"] or "source" in row["construction_label"] for row in nusia_form_ii)
+
+    thei_rows = [row for row in citation_rows if row["lexeme_id"] == "thei-theih"]
+    assert any(
+        any(keyword in row["construction_label"].lower() for keyword in {"modal", "ability", "purpose", "purposive", "nominal"})
+        for row in thei_rows
+    )
+
+    piang_rows = [row for row in citation_rows if row["lexeme_id"] == "piang-pian"]
+    assert piang_rows
+    assert {row["normalized_form"] for row in piang_rows} <= {"piang", "pian"}
+
+    for lexeme_id in {"zui-zuih", "khial-khialh", "kia-kiak", "sawlkhia-sawlkhiat"}:
+        form_ii = inventory_map[lexeme_id]["form_ii"]
+        relevant = [
+            row
+            for row in citation_rows
+            if row["lexeme_id"] == lexeme_id and row["form_side"] == "form_ii"
+        ]
+        assert relevant
+        assert all(
+            row["normalized_form"] == form_ii or row["citation_quality"] == "needs_manual_check"
+            for row in relevant
+        )
+
+    promoted_groups = {"core_showcase", "caveated_promoted"}
+    for lexeme_id in {"ngai-ngaih", "pua-puak", "pai-paih", "tua-tuak", "tua-tuah", "keu-keuh", "khai-khaih", "sia-siah", "tan-tanh"}:
+        relevant = [row for row in citation_rows if row["lexeme_id"] == lexeme_id]
+        assert relevant
+        assert all(row["promotion_group"] not in promoted_groups for row in relevant)
+
+
 def test_grammar_slice_reflects_manual_review_without_repromoting_nominal_rows():
     text = GRAMMAR_SLICE_PATH.read_text(encoding="utf-8")
     main_inventory = section_between(text, "# Promoted verbal inventory", "# Caveated promoted verbs")
@@ -258,12 +368,16 @@ def test_grammar_slice_reflects_manual_review_without_repromoting_nominal_rows()
     for core in {"mu ~ muh", "ne ~ nek", "nei ~ neih"}:
         assert core in main_inventory
 
-    for promoted in {"bia ~ biak", "thei ~ theih", "piang ~ pian", "zui ~ zuih", "khial ~ khialh", "kia ~ kiak", "sawlkhia ~ sawlkhiat"}:
+    for promoted in {"za ~ zak", "pia ~ piak", "nusia ~ nusiat", "bia ~ biak", "thei ~ theih", "piang ~ pian", "zui ~ zuih", "khial ~ khialh", "kia ~ kiak", "sawlkhia ~ sawlkhiat"}:
         assert promoted in caveated_inventory
     for blocked in {"mual ~ mualh", "sum ~ sumh", "thu ~ thuh", "lampi ~ lampih", "khua ~ khuat"}:
         assert blocked not in main_inventory
         assert blocked not in caveated_inventory
 
+    assert "stem_alternation_citation_shortlist.tsv" in text
+    assert "not all equally good first examples" in text
+    assert "promoted for grammar discussion" in text
+    assert "rejected as non-verbal or analyzer noise" in text
     assert "# Caveated promoted verbs" in text
     assert "# One-sided Bible attestations and questionnaire controls" in text
     assert "# Stative/adjectival and functional predicates" in text
