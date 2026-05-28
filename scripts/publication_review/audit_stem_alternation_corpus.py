@@ -262,8 +262,9 @@ SYNTACTIC_CONTEXT_MATRIX_COLUMNS = [
     "expected_stem_tendency",
     "form_i_evidence_pairs",
     "form_ii_evidence_pairs",
-    "best_form_i_examples",
-    "best_form_ii_examples",
+    "quotation_safe_form_i_examples",
+    "quotation_safe_form_ii_examples",
+    "review_only_examples",
     "strongest_showcase_pair",
     "caveated_pairs",
     "difficult_pairs",
@@ -290,10 +291,22 @@ PAIR_DISCUSSION_PLAN_COLUMNS = [
     "caveats",
     "blocked_or_noisy_material",
     "recommended_prose_treatment",
-    "include_in_main_table",
+    "include_in_core_showcase_table",
+    "include_in_promoted_pair_inventory",
     "include_in_pair_by_pair_discussion",
     "notes",
 ]
+
+SAFE_CONTEXT_USES = {
+    "use_as_main_example",
+    "use_as_supporting_example",
+}
+
+FILTER_CONTEXT_IDS = {
+    "compound_or_lexicalized",
+    "causative_or_derivational_sak",
+    "unknown_or_needs_review",
+}
 
 REVIEW_CITED_SAFE_ENVIRONMENTS = {
     "finite_main_or_matrix",
@@ -1631,6 +1644,135 @@ SYNTACTIC_CONTEXT_SPECS = [
         "notes": "This section justifies why the full audit stays in the background rather than in the printed argument.",
     },
 ]
+
+PAIR_DISCUSSION_EDITORIAL_OVERRIDES = {
+    "mu-muh": {
+        "main_generalization_for_this_pair": "This is the clearest showcase pair because both forms are robustly attested and easy to gloss for first-time readers.",
+        "caveats": "The best Form II citation is a dependent `muh ciangin` clause, so the opening prose should not force a purely finite contrast.",
+        "blocked_or_noisy_material": "Keep derived forms such as `muhsak` and nominalized `muhna/muatna` material out of the core showcase table unless derivation is the point.",
+        "recommended_prose_treatment": "Use this pair in the small core showcase table and cite it again briefly when the pair-by-pair discussion begins.",
+        "notes": "Genesis 1:4 and Genesis 19:1 remain the most stable opening citations for the pair.",
+    },
+    "ne-nek": {
+        "main_generalization_for_this_pair": "This pair gives the cleanest compact contrast because Genesis 2:17 supplies both Form I and Form II in one verse.",
+        "caveats": "The best Form II citation is temporal `nek ni-in`, so the prose should present the pair as a same-verse contrast with constructional asymmetry.",
+        "blocked_or_noisy_material": "Keep `nesak` and related derivations out of the showcase table.",
+        "recommended_prose_treatment": "Use this pair in the small core showcase table and let it anchor the first explanation of non-final Form II.",
+        "notes": "Genesis 2:17 should remain the first place to point readers for a same-verse illustration.",
+    },
+    "nei-neih": {
+        "main_generalization_for_this_pair": "This pair shows that Form II can be strong in attributive and possessed nominal structure as well as in clause-level distribution.",
+        "caveats": "Its best Form II citation is structurally strong but less introductory than the finite contrasts used for `mu ~ muh` and `ne ~ nek`.",
+        "blocked_or_noisy_material": "Keep `neihsak` and related derivations out of the core citations.",
+        "recommended_prose_treatment": "Use this pair in the small core showcase table, then return to it in the attributive subsection of the pair-by-pair discussion.",
+        "notes": "The pair is best used to show that the system reaches beyond simple finite clauses.",
+    },
+    "za-zak": {
+        "main_generalization_for_this_pair": "The pair is real and useful because `za` is overtly directive while `zak` has a clear dependent-clause citation.",
+        "caveats": "The Form I citation carries quotation punctuation and the wider `zak` distribution is lexically broad, so this is not a first-line showcase pair.",
+        "blocked_or_noisy_material": "Keep `zasak` and other derivational rows out of the promoted inventory discussion.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and give it a short note that emphasizes directive Form I versus dependent Form II evidence.",
+        "notes": "Genesis 24:52 is the strongest Form II citation; the Form I side still needs cautious presentation.",
+    },
+    "pia-piak": {
+        "main_generalization_for_this_pair": "Both forms are abundantly attested, so the pair belongs in the promoted inventory even though its best contrast is not especially sharp.",
+        "caveats": "The strongest exact citations sit in crowded transfer contexts, so the pair still needs a more elegant Form II quotation before final prose is drafted.",
+        "blocked_or_noisy_material": "Keep neighboring `-sak` and other transfer-family noise out of the promoted table.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and give it a short note that distinguishes abundant evidence from ideal citation quality.",
+        "notes": "Genesis 3:12 and 1 Chronicles 21:22 currently give the most serviceable exact citations.",
+    },
+    "nusia-nusiat": {
+        "main_generalization_for_this_pair": "The pair is grammar-worthy because the Form II side is clearest in clause-linking syntax rather than in a neat finite paradigm.",
+        "caveats": "The best exact `nusiat` row is still tagged nominal and should be treated as structural evidence, not as a print-ready quotation.",
+        "blocked_or_noisy_material": "Keep `kinusiacipsak` and other derivational material away from the promoted discussion.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and give it a short note centered on clause-linking `nusiat a kipan` evidence.",
+        "notes": "This is the promoted pair that most clearly requires a caveat about quotation quality as distinct from grammatical relevance.",
+    },
+    "bia-biak": {
+        "main_generalization_for_this_pair": "Both forms survive as genuine verbal evidence, and the pair is especially useful for purposive and worship-domain contexts.",
+        "caveats": "The pair remains domain-specific because worship and offering discourse still dominate the clean `biak` rows.",
+        "blocked_or_noisy_material": "Keep `biakna`, `biakinn`, and `biasak` material out of the positive evidence unless nominalization is the point.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and give it a short note that frames the pair as domain-specific rather than all-purpose.",
+        "notes": "Prefer 1 Chronicles 21:23 over nominalized worship nouns when quoting the Form II side.",
+    },
+    "thei-theih": {
+        "main_generalization_for_this_pair": "This is a real promoted pair, but it matters most as a modal or ability predicate rather than as a simple finite alternation.",
+        "caveats": "Even the best Form II rows cluster in dependent, purposive, or modal syntax, so the pair should not be used as a plain showcase paradigm.",
+        "blocked_or_noisy_material": "Keep `theisak` and other derived abilitative material out of the promoted-pair inventory.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and discuss it explicitly in the modal-or-ability subsection.",
+        "notes": "The pair belongs in the grammar argument because it expands the system beyond simple lexical verb contrasts.",
+    },
+    "piang-pian": {
+        "main_generalization_for_this_pair": "Exact `piang` and `pian` rows survive well enough to support a real eventive pair in the grammar.",
+        "caveats": "The Form II side is still sparse and competes with the much larger `piangsak` family, so the prose should keep the pair clearly eventive and non-causative.",
+        "blocked_or_noisy_material": "Keep `piangsak`, `piansak`, and related derived rows out of the promoted inventory.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and treat it as an eventive caveated pair rather than as a headline showcase verb.",
+        "notes": "The current shortlist is strongest when it keeps exact `pian` rows separate from causative material.",
+    },
+    "zui-zuih": {
+        "main_generalization_for_this_pair": "Both forms are lexically coherent and give enough exact evidence to justify promotion into the grammar-facing inventory.",
+        "caveats": "The final quotation set still needs to stay away from `zuihsak` material and from contexts where the Form II side is only loosely controlled.",
+        "blocked_or_noisy_material": "Keep `zuihsak` and other derivational neighbors out of the promoted-pair inventory.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and give it a short note that highlights conditional or non-final Form II evidence.",
+        "notes": "Zechariah 6:15 is still the best exact Form II anchor even though its coarse environment label is conservative.",
+    },
+    "khial-khialh": {
+        "main_generalization_for_this_pair": "The pair has enough clean verbal evidence to stay promoted, especially when Form II is shown in a transparent dependent clause.",
+        "caveats": "Nominalized and derivational families still crowd the Form II side, so exact `khialh` rows have to be selected conservatively.",
+        "blocked_or_noisy_material": "Keep `khialsak`, `khialhsak`, and related derivations out of the promoted discussion.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and give it a short note that centers on dependent-clause evidence rather than on raw token counts.",
+        "notes": "1 John 2:1 remains the cleanest exact Form II citation for the pair.",
+    },
+    "kia-kiak": {
+        "main_generalization_for_this_pair": "The pair is worth keeping because exact `kiak` evidence does survive, even though it is much thinner than the Form I side.",
+        "caveats": "Lemma stability on the Form II side is still weak enough that `kiak` should not yet be treated as a print-safe quotation.",
+        "blocked_or_noisy_material": "Keep `kiasak`-family rows out of the promoted inventory and away from any headline example list.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table, but describe it as a thin pair whose Form II evidence still needs checking.",
+        "notes": "The current plan keeps the pair visible without pretending that the Form II side is already citation-grade.",
+    },
+    "sawlkhia-sawlkhiat": {
+        "main_generalization_for_this_pair": "The pair is lexically coherent and both forms are attested, so it belongs in the promoted inventory.",
+        "caveats": "Clean Form II rows are still few and semantically crowded by sending or expulsion contexts, so the prose should stay cautious.",
+        "blocked_or_noisy_material": "Keep semantically crowded expulsion or dispatch rows out of the promoted inventory unless the exact lexical reading is stable.",
+        "recommended_prose_treatment": "List it in the promoted-pair inventory table and give it a short note that stresses lexical reality but sparse Form II evidence.",
+        "notes": "The pair should remain visible in the grammar plan even though it still needs a cleaner Form II citation set.",
+    },
+    "ngai-ngaih": {
+        "main_generalization_for_this_pair": "Clean exact `ngai` and `ngaih` rows do exist, so this pair should remain central to the difficult-case discussion.",
+        "caveats": "The `ngaihsun/ngaihsut/ngaihsutna` family still contaminates the dataset too heavily for routine promotion into the promoted inventory.",
+        "blocked_or_noisy_material": "Treat `ngaihsun`, `ngaihsut`, and `ngaihsutna` as lexical-family contamination unless a row can be justified independently.",
+        "recommended_prose_treatment": "Keep it out of the promoted-pair inventory but give it an explicit difficult-case paragraph that separates clean `ngai/ngaih` evidence from family noise.",
+        "notes": "This pair matters because it shows why exact verbal evidence can survive without dissolving lexical-family contamination.",
+    },
+    "pua-puak": {
+        "main_generalization_for_this_pair": "Both sides have clean verbal rows, so the pair stays important even though its lexical identity is still unstable.",
+        "caveats": "Shared-base overlap with `pua ~ puah` and gloss mismatch still make routine promotion too risky.",
+        "blocked_or_noisy_material": "Keep `puasak`, `puaksak`, and the `pua ~ puah` homophone cluster out of any promoted inventory table.",
+        "recommended_prose_treatment": "Keep it out of the promoted-pair inventory but give it an explicit difficult-case paragraph about shared-base and homophone risk.",
+        "notes": "This is the pair to use when explaining why exact Bible evidence does not always resolve lexical identity.",
+    },
+    "pai-paih": {
+        "main_generalization_for_this_pair": "Exact `paih` verbal rows do survive, so the pair belongs in the difficult-case discussion rather than being silently discarded.",
+        "caveats": "The Form II evidence is still sparse and competes directly with the same-form questionnaire control `pai ~ pai`.",
+        "blocked_or_noisy_material": "Keep `paisak` and related derived rows out of the difficult-case discussion unless derivation itself is under review.",
+        "recommended_prose_treatment": "Keep it out of the promoted-pair inventory but give it a short difficult-case paragraph about shared-base competition and sparse Form II evidence.",
+        "notes": "This row is useful for explaining why questionnaire controls still matter after Bible auditing.",
+    },
+    "tua-tuah": {
+        "main_generalization_for_this_pair": "The pair remains worth discussing because the Form II side is verbally real even though the Form I side is still unstable.",
+        "caveats": "Only the `tuah` side is currently cleanly verbal, while the matching `tua` side stays category-mixed and often non-verbal.",
+        "blocked_or_noisy_material": "Keep `tuahsakmang` and related derivational material out of the difficult-case discussion.",
+        "recommended_prose_treatment": "Keep it out of the promoted-pair inventory but give it a short difficult-case note about one-sided verbal evidence.",
+        "notes": "This pair helps show why the grammar plan still needs a difficult-case tier between promoted and rejected rows.",
+    },
+    "tua-tuak": {
+        "main_generalization_for_this_pair": "This row remains grammatically important because it shows how analyzer overgeneration can mimic a stem pair.",
+        "caveats": "The Form I base is overwhelmingly determiner-like, and the Form II side is not stable enough to support promotion.",
+        "blocked_or_noisy_material": "Keep `tuaksak` and other unstable shared-base material out of the grammar-facing evidence tables.",
+        "recommended_prose_treatment": "Keep it out of the promoted-pair inventory but give it a short difficult-case note that explains why it currently behaves more like a warning than an example.",
+        "notes": "This is the difficult case that most clearly borders on rejection rather than promotion.",
+    },
+}
 
 VERBAL_ENVIRONMENTS = {
     "finite_main_or_matrix",
@@ -2986,45 +3128,110 @@ def context_example_priority(row: dict[str, str]) -> tuple[int, int, int, int, s
 
 
 def format_context_example(pair_id: str, row: dict[str, str]) -> str:
-    return f"{pair_label(pair_id)}: {row['reference']} `{row['surface_form']}`"
+    return f"{pair_label(pair_id)}: {row['reference']} `{row['surface_form']}` (review-only audit row)"
 
 
 def format_shortlist_context_example(row: dict[str, str]) -> str:
+    construction = row.get("construction_label", "").strip()
+    if construction:
+        return f"{pair_label(row['lexeme_id'])}: {row['reference']} `{row['surface_form']}` ({construction})"
     return f"{pair_label(row['lexeme_id'])}: {row['reference']} `{row['surface_form']}`"
 
 
-def select_context_examples(
+def context_shortlist_priority(row: dict[str, str]) -> tuple[int, int, str, int]:
+    return (
+        0 if row.get("use_in_grammar", "") == "use_as_main_example" else 1,
+        0 if row.get("example_role", "").startswith("lead_") else 1,
+        row.get("reference", ""),
+        int(row.get("token_index", "0") or 0),
+    )
+
+
+def shortlist_context_hits(
+    *,
+    context_id: str,
+    pair_id: str,
+    citation_by_pair: dict[str, list[dict[str, str]]],
+    form_side: str | None = None,
+    safe_only: bool | None = None,
+) -> list[dict[str, str]]:
+    hits = [
+        row
+        for row in citation_by_pair.get(pair_id, [])
+        if row["environment"] == context_id and (form_side is None or row["form_side"] == form_side)
+    ]
+    if safe_only is True:
+        hits = [row for row in hits if row["use_in_grammar"] in SAFE_CONTEXT_USES]
+    elif safe_only is False:
+        hits = [row for row in hits if row["use_in_grammar"] not in SAFE_CONTEXT_USES]
+    return sorted(hits, key=context_shortlist_priority)
+
+
+def select_quotation_safe_context_examples(
     *,
     context_id: str,
     focus_pairs: list[str],
     form_side: str,
-    rows_by_pair: dict[str, list[dict[str, str]]],
     citation_by_pair: dict[str, list[dict[str, str]]],
     limit: int = 2,
 ) -> list[str]:
+    if context_id in FILTER_CONTEXT_IDS:
+        return []
     examples = []
-    stem_alt = "I" if form_side == "form_i" else "II"
     for pair_id in focus_pairs:
-        shortlist_hits = [
-            row
-            for row in citation_by_pair.get(pair_id, [])
-            if row["form_side"] == form_side and row["environment"] == context_id
-        ]
+        shortlist_hits = shortlist_context_hits(
+            context_id=context_id,
+            pair_id=pair_id,
+            citation_by_pair=citation_by_pair,
+            form_side=form_side,
+            safe_only=True,
+        )
         if shortlist_hits:
             examples.append(format_shortlist_context_example(shortlist_hits[0]))
             if len(examples) >= limit:
                 break
-            continue
+    return examples
 
+
+def select_review_only_context_examples(
+    *,
+    context_id: str,
+    focus_pairs: list[str],
+    rows_by_pair: dict[str, list[dict[str, str]]],
+    citation_by_pair: dict[str, list[dict[str, str]]],
+    limit: int = 3,
+) -> list[str]:
+    examples = []
+    seen = set()
+    for pair_id in focus_pairs:
+        shortlist_hits = shortlist_context_hits(
+            context_id=context_id,
+            pair_id=pair_id,
+            citation_by_pair=citation_by_pair,
+            safe_only=False if context_id not in FILTER_CONTEXT_IDS else None,
+        )
+        for row in shortlist_hits:
+            formatted = format_shortlist_context_example(row)
+            if formatted in seen:
+                continue
+            examples.append(formatted)
+            seen.add(formatted)
+            if len(examples) >= limit:
+                return examples
+
+    for pair_id in focus_pairs:
         audit_hits = [
             row
             for row in rows_by_pair.get(pair_id, [])
-            if row.get("stem_alternation", "") == stem_alt and row.get("inferred_environment", "") == context_id
+            if row.get("inferred_environment", "") == context_id
         ]
         if not audit_hits:
             continue
-        best = max(audit_hits, key=context_example_priority)
-        examples.append(format_context_example(pair_id, best))
+        formatted = format_context_example(pair_id, max(audit_hits, key=context_example_priority))
+        if formatted in seen:
+            continue
+        examples.append(formatted)
+        seen.add(formatted)
         if len(examples) >= limit:
             break
     return examples
@@ -3181,20 +3388,77 @@ def default_generalization_for_status(grammar_status: str, pair_id: str) -> str:
 
 def default_prose_treatment_for_status(grammar_status: str) -> str:
     if grammar_status == "core_showcase_pair":
-        return "Use in the main Form I / Form II table and in the first pair-by-pair subsection."
+        return "Use in the small core showcase table and return to it briefly at the start of the pair-by-pair discussion."
     if grammar_status == "promoted_caveated_pair":
-        return "Give a short pair subsection after the core showcase and name the specific constructional caveat."
+        return "List it in the promoted-pair inventory table and give it a short pair-by-pair note that names the specific caveat."
     if grammar_status == "difficult_but_real_pair":
-        return "Discuss in the difficult-but-real section, emphasizing why the pair matters without treating it as routine evidence."
+        return "Keep it out of the promoted-pair inventory and discuss it explicitly in the difficult-pairs section."
     if grammar_status == "one_sided_bible_attestation":
-        return "Mention in the one-sided Bible attestation section, with an explicit note about the missing or weak side."
+        return "Mention it in the one-sided section rather than in the core showcase table or promoted-pair inventory."
     if grammar_status == "same_form_questionnaire_control":
-        return "Keep in the same-form questionnaire control section rather than in the main pair table."
+        return "Keep it in the questionnaire-control appendix or paragraph rather than in the core showcase table or promoted-pair inventory."
     if grammar_status == "functional_or_stative_predicate":
-        return "Discuss separately from lexical stem alternation, under functional or stative predicates."
+        return "Handle it separately from lexical stem alternation, outside the core showcase table and promoted-pair inventory."
     if grammar_status == "analyzer_only_uncertain":
-        return "Keep in the analyzer-only uncertainty section and tie the discussion to review needs, not to strong grammatical claims."
-    return "Use only in the rejected or noise section to explain why the pair stays blocked."
+        return "Keep it in the analyzer-review section and tie the discussion to review needs, not to strong grammatical claims."
+    return "Use it only in the rejected or noise appendix to explain why the pair stays blocked."
+
+
+def pair_discussion_role_flags(grammar_status: str) -> dict[str, str]:
+    if grammar_status == "core_showcase_pair":
+        return {
+            "include_in_core_showcase_table": "yes",
+            "include_in_promoted_pair_inventory": "yes",
+            "include_in_pair_by_pair_discussion": "yes",
+        }
+    if grammar_status == "promoted_caveated_pair":
+        return {
+            "include_in_core_showcase_table": "no",
+            "include_in_promoted_pair_inventory": "yes",
+            "include_in_pair_by_pair_discussion": "yes",
+        }
+    if grammar_status == "difficult_but_real_pair":
+        return {
+            "include_in_core_showcase_table": "no",
+            "include_in_promoted_pair_inventory": "no",
+            "include_in_pair_by_pair_discussion": "yes",
+        }
+    return {
+        "include_in_core_showcase_table": "no",
+        "include_in_promoted_pair_inventory": "no",
+        "include_in_pair_by_pair_discussion": "no",
+    }
+
+
+def default_pair_discussion_note(grammar_status: str, pair_id: str) -> str:
+    if grammar_status == "same_form_questionnaire_control":
+        return "Treat this as a same-form control; detailed source tracking stays in the lexical inventory."
+    if grammar_status == "functional_or_stative_predicate":
+        return "Keep source and analyzer details in the lexical inventory; this row only marks the item as outside lexical stem alternation."
+    if grammar_status == "one_sided_bible_attestation":
+        return "Use the lexical inventory for source tracking; this plan row only marks the item as one-sided in current Bible evidence."
+    if grammar_status == "analyzer_only_uncertain":
+        return "Keep the row available for review, but let the lexical inventory and full audit carry the source detail."
+    if grammar_status == "rejected_nonverbal_or_noise":
+        return "Keep the supporting source detail in the lexical inventory, not in the grammar-facing discussion plan."
+    return f"Use the citation shortlist and context matrix, not the lexical inventory notes, to drive the grammar prose for {pair_label(pair_id)}."
+
+
+def default_blocked_or_noisy_material(inventory_row: dict[str, str]) -> str:
+    note = inventory_row["homophone_or_noise_notes"].strip()
+    if note:
+        return note if note.endswith(".") else f"{note}."
+    return "No specific noisy family is central to the current grammar note."
+
+
+def apply_pair_discussion_editorial_overrides(
+    pair_id: str,
+    row: dict[str, str],
+) -> dict[str, str]:
+    overrides = PAIR_DISCUSSION_EDITORIAL_OVERRIDES.get(pair_id, {})
+    for field_name, field_value in overrides.items():
+        row[field_name] = field_value
+    return row
 
 
 def build_pair_discussion_rows(
@@ -3216,6 +3480,7 @@ def build_pair_discussion_rows(
         manual_row = manual_map.get(lexeme_id)
         citation_rows = citation_map.get(lexeme_id, [])
         grammar_status = grammar_status_for_pair(inventory_row)
+        role_flags = pair_discussion_role_flags(grammar_status)
 
         if manual_row is not None:
             main_generalization = manual_row["decision_rationale"]
@@ -3234,37 +3499,34 @@ def build_pair_discussion_rows(
             main_generalization = default_generalization_for_status(grammar_status, lexeme_id)
             caveats = pretty_blocker(inventory_row["promotion_blocker"])
 
-        plan_rows.append(
-            {
-                "lexeme_id": lexeme_id,
-                "form_i": inventory_row["form_i"],
-                "form_ii": inventory_row["form_ii"],
-                "gloss": inventory_row["gloss"],
-                "grammar_status": grammar_status,
-                "discussion_order": "",
-                "form_i_attestation_summary": pair_attestation_summary(inventory_row, pair_rows, form_side="form_i"),
-                "form_ii_attestation_summary": pair_attestation_summary(inventory_row, pair_rows, form_side="form_ii"),
-                "main_contexts_for_form_i": dominant_contexts_for_stem(pair_rows, "I"),
-                "main_contexts_for_form_ii": dominant_contexts_for_stem(pair_rows, "II"),
-                "best_citation_rows": best_citation_rows_for_pair(
-                    lexeme_id=lexeme_id,
-                    inventory_row=inventory_row,
-                    manual_row=manual_row,
-                    citation_rows=citation_rows,
-                ),
-                "contexts_to_discuss": contexts_to_discuss_for_pair(citation_rows=citation_rows, pair_rows=pair_rows),
-                "main_generalization_for_this_pair": main_generalization,
-                "caveats": caveats,
-                "blocked_or_noisy_material": inventory_row["homophone_or_noise_notes"],
-                "recommended_prose_treatment": default_prose_treatment_for_status(grammar_status),
-                "include_in_main_table": "yes" if grammar_status in {"core_showcase_pair", "promoted_caveated_pair"} else "no",
-                "include_in_pair_by_pair_discussion": "yes",
-                "notes": merge_notes(
-                    inventory_row["notes"],
-                    inventory_row["source_notes"],
-                ),
-            }
-        )
+        row = {
+            "lexeme_id": lexeme_id,
+            "form_i": inventory_row["form_i"],
+            "form_ii": inventory_row["form_ii"],
+            "gloss": inventory_row["gloss"],
+            "grammar_status": grammar_status,
+            "discussion_order": "",
+            "form_i_attestation_summary": pair_attestation_summary(inventory_row, pair_rows, form_side="form_i"),
+            "form_ii_attestation_summary": pair_attestation_summary(inventory_row, pair_rows, form_side="form_ii"),
+            "main_contexts_for_form_i": dominant_contexts_for_stem(pair_rows, "I"),
+            "main_contexts_for_form_ii": dominant_contexts_for_stem(pair_rows, "II"),
+            "best_citation_rows": best_citation_rows_for_pair(
+                lexeme_id=lexeme_id,
+                inventory_row=inventory_row,
+                manual_row=manual_row,
+                citation_rows=citation_rows,
+            ),
+            "contexts_to_discuss": contexts_to_discuss_for_pair(citation_rows=citation_rows, pair_rows=pair_rows),
+            "main_generalization_for_this_pair": main_generalization,
+            "caveats": caveats,
+            "blocked_or_noisy_material": default_blocked_or_noisy_material(inventory_row),
+            "recommended_prose_treatment": default_prose_treatment_for_status(grammar_status),
+            "include_in_core_showcase_table": role_flags["include_in_core_showcase_table"],
+            "include_in_promoted_pair_inventory": role_flags["include_in_promoted_pair_inventory"],
+            "include_in_pair_by_pair_discussion": role_flags["include_in_pair_by_pair_discussion"],
+            "notes": default_pair_discussion_note(grammar_status, lexeme_id),
+        }
+        plan_rows.append(apply_pair_discussion_editorial_overrides(lexeme_id, row))
 
     ordered_rows = sorted(
         plan_rows,
@@ -3307,17 +3569,21 @@ def build_syntactic_context_matrix_rows(
             form_side="form_ii",
             rows_by_pair=rows_by_pair,
         )
-        form_i_examples = select_context_examples(
+        quotation_safe_form_i_examples = select_quotation_safe_context_examples(
             context_id=spec["context_id"],
             focus_pairs=spec["form_i_focus_pairs"],
             form_side="form_i",
-            rows_by_pair=rows_by_pair,
             citation_by_pair=citation_by_pair,
         )
-        form_ii_examples = select_context_examples(
+        quotation_safe_form_ii_examples = select_quotation_safe_context_examples(
             context_id=spec["context_id"],
             focus_pairs=spec["form_ii_focus_pairs"],
             form_side="form_ii",
+            citation_by_pair=citation_by_pair,
+        )
+        review_only_examples = select_review_only_context_examples(
+            context_id=spec["context_id"],
+            focus_pairs=list(dict.fromkeys(spec["form_i_focus_pairs"] + spec["form_ii_focus_pairs"])),
             rows_by_pair=rows_by_pair,
             citation_by_pair=citation_by_pair,
         )
@@ -3330,8 +3596,9 @@ def build_syntactic_context_matrix_rows(
                 "expected_stem_tendency": spec["expected_stem_tendency"],
                 "form_i_evidence_pairs": join_pair_labels(form_i_pairs),
                 "form_ii_evidence_pairs": join_pair_labels(form_ii_pairs),
-                "best_form_i_examples": "; ".join(form_i_examples),
-                "best_form_ii_examples": "; ".join(form_ii_examples),
+                "quotation_safe_form_i_examples": "; ".join(quotation_safe_form_i_examples),
+                "quotation_safe_form_ii_examples": "; ".join(quotation_safe_form_ii_examples),
+                "review_only_examples": "; ".join(review_only_examples),
                 "strongest_showcase_pair": pair_label(spec["strongest_showcase_pair"]) if spec["strongest_showcase_pair"] else "",
                 "caveated_pairs": join_pair_labels(spec["caveated_pairs"]),
                 "difficult_pairs": join_pair_labels(spec["difficult_pairs"]),

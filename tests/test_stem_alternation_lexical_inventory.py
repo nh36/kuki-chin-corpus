@@ -138,8 +138,9 @@ REQUIRED_CONTEXT_MATRIX_COLUMNS = {
     "expected_stem_tendency",
     "form_i_evidence_pairs",
     "form_ii_evidence_pairs",
-    "best_form_i_examples",
-    "best_form_ii_examples",
+    "quotation_safe_form_i_examples",
+    "quotation_safe_form_ii_examples",
+    "review_only_examples",
     "strongest_showcase_pair",
     "caveated_pairs",
     "difficult_pairs",
@@ -166,7 +167,8 @@ REQUIRED_PAIR_DISCUSSION_PLAN_COLUMNS = {
     "caveats",
     "blocked_or_noisy_material",
     "recommended_prose_treatment",
-    "include_in_main_table",
+    "include_in_core_showcase_table",
+    "include_in_promoted_pair_inventory",
     "include_in_pair_by_pair_discussion",
     "notes",
 }
@@ -437,12 +439,27 @@ def test_syntactic_context_matrix_covers_major_contexts_and_claim_boundaries():
         assert row["what_this_context_shows"]
         assert row["what_not_to_claim"]
         assert row["recommended_grammar_subsection"]
-        assert row["best_form_i_examples"] or row["best_form_ii_examples"] or row["notes"]
+        assert (
+            row["quotation_safe_form_i_examples"]
+            or row["quotation_safe_form_ii_examples"]
+            or row["review_only_examples"]
+            or row["notes"]
+        )
 
     assert "not a single decisive diagnostic" in row_map["negative_clause"]["expected_stem_tendency"]
     assert "Do not claim that Form II simply equals negation" in row_map["negative_clause"]["what_not_to_claim"]
     assert "Do not claim that Form I is the only possible matrix form" in row_map["finite_main_or_matrix"]["what_not_to_claim"]
     assert "Do not claim that Form II is nominalized only" in row_map["nominalized_na"]["what_not_to_claim"]
+    assert row_map["imperative_or_directive"]["quotation_safe_form_ii_examples"] == ""
+    assert "biakinn" not in row_map["imperative_or_directive"]["quotation_safe_form_ii_examples"]
+    assert "hihpak" not in row_map["imperative_or_directive"]["quotation_safe_form_ii_examples"]
+
+    for context_id in {"compound_or_lexicalized", "causative_or_derivational_sak", "unknown_or_needs_review"}:
+        row = row_map[context_id]
+        assert row["quotation_safe_form_i_examples"] == ""
+        assert row["quotation_safe_form_ii_examples"] == ""
+        assert row["review_only_examples"]
+        assert any(word in row["expected_stem_tendency"].lower() for word in {"filter", "caution", "dangerous"})
 
 
 def test_pair_discussion_plan_covers_required_pairs_and_statuses():
@@ -503,31 +520,51 @@ def test_pair_discussion_plan_covers_required_pairs_and_statuses():
     }
     assert same_form_controls <= row_map.keys()
 
+    assert {row["lexeme_id"] for row in rows if row["include_in_core_showcase_table"] == "yes"} == core_pairs
+    assert {row["lexeme_id"] for row in rows if row["include_in_promoted_pair_inventory"] == "yes"} == core_pairs | caveated_pairs
+
     for lexeme_id in core_pairs:
-        assert row_map[lexeme_id]["grammar_status"] == "core_showcase_pair"
-        assert row_map[lexeme_id]["include_in_main_table"] == "yes"
+        row = row_map[lexeme_id]
+        assert row["grammar_status"] == "core_showcase_pair"
+        assert row["include_in_core_showcase_table"] == "yes"
+        assert row["include_in_promoted_pair_inventory"] == "yes"
+        assert row["include_in_pair_by_pair_discussion"] == "yes"
 
     for lexeme_id in caveated_pairs:
-        assert row_map[lexeme_id]["grammar_status"] == "promoted_caveated_pair"
-        assert row_map[lexeme_id]["include_in_main_table"] == "yes"
+        row = row_map[lexeme_id]
+        assert row["grammar_status"] == "promoted_caveated_pair"
+        assert row["include_in_core_showcase_table"] == "no"
+        assert row["include_in_promoted_pair_inventory"] == "yes"
+        assert row["include_in_pair_by_pair_discussion"] == "yes"
 
     for lexeme_id in difficult_pairs:
-        assert row_map[lexeme_id]["grammar_status"] == "difficult_but_real_pair"
+        row = row_map[lexeme_id]
+        assert row["grammar_status"] == "difficult_but_real_pair"
+        assert row["include_in_core_showcase_table"] == "no"
+        assert row["include_in_promoted_pair_inventory"] == "no"
+        assert row["include_in_pair_by_pair_discussion"] == "yes"
 
     for lexeme_id in one_sided_pairs:
         assert row_map[lexeme_id]["grammar_status"] == "one_sided_bible_attestation"
+        assert row_map[lexeme_id]["include_in_core_showcase_table"] == "no"
+        assert row_map[lexeme_id]["include_in_promoted_pair_inventory"] == "no"
 
     for lexeme_id in same_form_controls:
         assert row_map[lexeme_id]["grammar_status"] == "same_form_questionnaire_control"
+        assert row_map[lexeme_id]["include_in_core_showcase_table"] == "no"
+        assert row_map[lexeme_id]["include_in_promoted_pair_inventory"] == "no"
 
     assert row_map["om-omh"]["grammar_status"] == "functional_or_stative_predicate"
     assert any(row["grammar_status"] == "functional_or_stative_predicate" for row in rows)
+    assert row_map["om-omh"]["include_in_core_showcase_table"] == "no"
+    assert row_map["om-omh"]["include_in_promoted_pair_inventory"] == "no"
 
     for lexeme_id in blocked_pairs:
         row = row_map[lexeme_id]
         assert row["grammar_status"] == "rejected_nonverbal_or_noise"
-        assert row["include_in_main_table"] == "no"
-        assert row["recommended_prose_treatment"] != "Use in the main Form I / Form II table and in the first pair-by-pair subsection."
+        assert row["include_in_core_showcase_table"] == "no"
+        assert row["include_in_promoted_pair_inventory"] == "no"
+        assert row["recommended_prose_treatment"] != "Use in the small core showcase table and return to it briefly at the start of the pair-by-pair discussion."
 
 
 def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
@@ -537,6 +574,9 @@ def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
     assert "draft argument plan" in text
     assert "should not be organized only by print status" in text
     assert "both syntactic contexts and individual verb pairs" in text
+    assert "small core showcase table" in lower_text
+    assert "larger promoted-pair inventory table" in lower_text
+    assert "separate control/noise appendix or paragraph" in lower_text
     assert "## Distribution by syntactic context" in text
     assert "### Finite and main-clause uses" in text
     assert "### Negative clauses" in text
@@ -552,9 +592,12 @@ def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
     assert "stem_alternation_syntactic_context_matrix.tsv" in text
     assert "stem_alternation_pair_discussion_plan.tsv" in text
     assert "stem_alternation_citation_shortlist.tsv` = the **only quotation-safe layer**" in text
+    assert "matrix is for organizing claims and subsection order" in lower_text
+    assert "citation shortlist remains the source of quotation candidates" in lower_text
     assert "The actual grammar section should be drafted in this order" in text
     assert "system-wide syntactic distribution" in lower_text
     assert "promoted and difficult pair-by-pair discussion" in lower_text
+    assert "main table" not in lower_text
     assert "mu ~ muh" in text
     assert "thei ~ theih" in text
     assert "ngai ~ ngaih" in text

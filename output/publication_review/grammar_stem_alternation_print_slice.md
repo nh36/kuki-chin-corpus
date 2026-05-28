@@ -27,9 +27,16 @@ The opening section of the eventual grammar should introduce the system with the
 
 The argument here should stay structural and distributional before it becomes lexical and pair-specific.
 
+The eventual section will likely need four editorial surfaces:
+
+- a **small core showcase table**;
+- a **larger promoted-pair inventory table**;
+- a **pair-by-pair discussion section**;
+- a **separate control/noise appendix or paragraph**.
+
 ## Distribution by syntactic context
 
-The main organizing file for this part of the write-up is `output/publication_review/stem_alternation_syntactic_context_matrix.tsv`. The prose should work through the following contexts in order, using the matrix rather than treating all environments as equivalent evidence.
+The main organizing file for this part of the write-up is `output/publication_review/stem_alternation_syntactic_context_matrix.tsv`. The matrix is for organizing claims and subsection order; the citation shortlist remains the source of quotation candidates. The prose should work through the following contexts in order, using the matrix rather than treating all environments as equivalent evidence.
 
 ### Finite and main-clause uses
 
@@ -93,6 +100,8 @@ The core pair subsection should remain narrow and should illustrate the system w
 
 These pairs should do the main pedagogical work for the Form I / Form II contrast.
 
+This should become the **small core showcase table**, not the full promoted inventory.
+
 ## Promoted caveated pairs
 
 The next section should move to the broader but still promoted inventory:
@@ -114,6 +123,8 @@ Each pair should get a short paragraph or table note answering two questions:
 2. **What is the specific caveat?**
 
 The point is not to collapse them into one generic “caveated examples” bucket, but to say what kind of Form II evidence each pair contributes.
+
+This should likely become the **larger promoted-pair inventory table**, with short editorial notes rather than long prose for every row.
 
 ## Difficult but grammatically important pairs
 
@@ -165,7 +176,7 @@ Representative blocked rows should include:
 The final prose should keep the current evidence layers distinct:
 
 - `output/publication_review/stem_alternation_citation_shortlist.tsv` = the **only quotation-safe layer** for printed examples.
-- `output/publication_review/stem_alternation_syntactic_context_matrix.tsv` = the basis for the **context-by-context distributional argument**.
+- `output/publication_review/stem_alternation_syntactic_context_matrix.tsv` = the basis for the **context-by-context distributional argument** and for organizing claims by subsection.
 - `output/publication_review/stem_alternation_pair_discussion_plan.tsv` = the basis for the **pair-by-pair discussion order and claims**.
 - `output/publication_review/stem_alternation_lexical_inventory.tsv` = the coverage layer for lexical category, promotion status, blockers, and source basis.
 - `output/publication_review/stem_alternation_promotable_examples.tsv` and `output/publication_review/stem_alternation_manual_promotion_review.tsv` = editorial support files for promotion and example triage.
