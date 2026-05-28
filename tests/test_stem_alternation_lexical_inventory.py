@@ -12,6 +12,7 @@ CITATION_SHORTLIST_PATH = ROOT / "output/publication_review/stem_alternation_cit
 SYNTACTIC_CONTEXT_MATRIX_PATH = ROOT / "output/publication_review/stem_alternation_syntactic_context_matrix.tsv"
 PAIR_DISCUSSION_PLAN_PATH = ROOT / "output/publication_review/stem_alternation_pair_discussion_plan.tsv"
 GRAMMAR_SLICE_PATH = ROOT / "output/publication_review/grammar_stem_alternation_print_slice.md"
+GRAMMAR_SECTION_DRAFT_PATH = ROOT / "output/publication_review/grammar_stem_alternation_section_draft.md"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from analyze_morphemes import VERB_STEM_PAIRS  # noqa: E402
@@ -208,6 +209,8 @@ def test_stem_alternation_lexical_inventory_and_review_outputs_exist_with_requir
     assert citation_rows
     assert context_rows
     assert pair_plan_rows
+    assert GRAMMAR_SECTION_DRAFT_PATH.exists()
+    assert GRAMMAR_SECTION_DRAFT_PATH.read_text(encoding="utf-8").strip()
 
 
 def test_stem_alternation_lexical_inventory_includes_psc_and_analyzer_pairs():
@@ -631,3 +634,88 @@ def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
     assert "thei ~ theih" in text
     assert "ngai ~ ngaih" in text
     assert "keu ~ keuh" in text
+
+
+def test_grammar_section_draft_follows_the_planned_architecture_and_quote_rules():
+    _, citation_rows = load_tsv(CITATION_SHORTLIST_PATH)
+    _, pair_plan_rows = load_tsv(PAIR_DISCUSSION_PLAN_PATH)
+
+    text = GRAMMAR_SECTION_DRAFT_PATH.read_text(encoding="utf-8")
+    lower_text = text.lower()
+
+    assert "# Verb-stem alternation" in text
+    assert "## Overview of the Form I / Form II contrast" in text
+    assert "## Distribution by syntactic context" in text
+    assert "## Core showcase examples" in text
+    assert "## Promoted-pair inventory" in text
+    assert "## Pair-by-pair notes for promoted and difficult pairs" in text
+    assert "## One-sided / same-form / functional coverage table" in text
+    assert "## Blocked/noise appendix" in text
+    assert "stem_alternation_citation_shortlist.tsv` is the quotation-safe layer" in lower_text
+    assert "does **not** simply reduce form ii to subordination, negation, or nominalization" in lower_text
+
+    core_section = section_between(text, "## Core showcase examples", "## Promoted-pair inventory")
+    promoted_section = section_between(text, "## Promoted-pair inventory", "## Pair-by-pair notes for promoted and difficult pairs")
+    difficult_section = section_between(text, "## Pair-by-pair notes for promoted and difficult pairs", "## One-sided / same-form / functional coverage table")
+    coverage_section = section_between(text, "## One-sided / same-form / functional coverage table", "## Blocked/noise appendix")
+    blocked_section = text[text.index("## Blocked/noise appendix") :]
+
+    core_pairs = {"ne ~ nek", "mu ~ muh", "nei ~ neih"}
+    promoted_pairs = {
+        "za ~ zak",
+        "pia ~ piak",
+        "nusia ~ nusiat",
+        "bia ~ biak",
+        "thei ~ theih",
+        "piang ~ pian",
+        "zui ~ zuih",
+        "khial ~ khialh",
+        "kia ~ kiak",
+        "sawlkhia ~ sawlkhiat",
+    }
+    difficult_pairs = {"ngai ~ ngaih", "pua ~ puak", "pai ~ paih", "tua ~ tuah", "tua ~ tuak"}
+
+    for pair in core_pairs:
+        assert pair in core_section
+
+    for pair in promoted_pairs:
+        assert pair in promoted_section
+
+    for pair in difficult_pairs:
+        assert pair in difficult_section
+        assert pair not in promoted_section
+
+    coverage_pairs = {
+        f"{row['form_i']} ~ {row['form_ii']}"
+        for row in pair_plan_rows
+        if row["include_in_coverage_or_control_table"] == "yes"
+    }
+    blocked_pairs = {
+        f"{row['form_i']} ~ {row['form_ii']}"
+        for row in pair_plan_rows
+        if row["include_in_blocked_or_noise_table"] == "yes"
+    }
+
+    for pair in coverage_pairs:
+        assert pair in coverage_section
+
+    for pair in blocked_pairs:
+        assert pair in blocked_section
+        assert pair not in core_section
+        assert pair not in promoted_section
+        assert pair not in difficult_section
+        assert pair not in coverage_section
+
+    assert "`nusia ~ nusiat`" in promoted_section
+    assert "not yet quotation-ready for print" in promoted_section
+    assert "form ii = subordinate" not in lower_text
+    assert "form ii = negative" not in lower_text
+    assert "form ii = nominalized" not in lower_text
+
+    banned_uses = {"reject", "keep_in_notes_only", "mention_without_quotation"}
+    for row in citation_rows:
+        if row["use_in_grammar"] not in banned_uses:
+            continue
+        tedim_clause = row["tedim_clause_or_sentence"].strip()
+        if len(tedim_clause) >= 20:
+            assert tedim_clause not in text
