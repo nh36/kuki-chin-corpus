@@ -122,14 +122,14 @@ These rows are retained because the grammar aims to account for all relevant ver
 | `tu ~ tuh` | sit | Keep it in coverage because the Bible evidence is still one-sided and does not yet justify promotion. |
 | `tuahpha ~ tuahphat` | quickly | Keep it in coverage because the broader inventory still flags the pair, but the Form II side is not yet cleanly verbal in the Bible layer. |
 | `vial ~ vialh` | encircle | Keep it in coverage because the lexeme remains relevant to the inventory even though a clean Form II Bible row is still missing. |
-| `ci ~ cih` | say | Keep it in coverage because the pair is structurally relevant, but the surviving evidence is still one-sided or category-mixed rather than ready for lexical promotion. |
-| `hi ~ hih` | be | Keep it in coverage because the pair matters for the grammar, yet the Bible evidence is still one-sided or category-mixed. |
 | `kho ~ khot` | labor | Keep it in coverage because the analyzer inventory still flags it, even though the current Bible evidence is one-sided and unstable. |
 | `ne ~ neh` | eat | Keep it in coverage because the analyzer inventory still flags it, even though the main grammar argument should rely on `ne ~ nek` instead. |
 | `no ~ noh` | young | Keep it in coverage because the row is grammatically relevant but category-mixed rather than promotable as a lexical alternating verb. |
 | `si ~ sit` | die | Keep it in coverage because the pair remains possible, but it still needs manual philological review rather than promotion. |
 
 ### Same-form questionnaire controls
+
+These are controls, not overt written stem-alternation pairs in the Bible layer.
 
 | Pair | Gloss | Why retained in coverage |
 | --- | --- | --- |
@@ -154,10 +154,14 @@ These rows are retained because the grammar aims to account for all relevant ver
 | `uk ~ uk` | rule | Keep it because the same written form appears in both questionnaire slots and therefore belongs in the coverage layer. |
 | `zawh ~ zawh` | finish | Keep it because the same written form appears in both questionnaire slots, so it remains a control rather than a promoted pair. |
 
-### Functional or stative coverage
+### Functional or stative predicates
+
+These items matter because they interact with clause structure, quotative or say-complement contexts, existence, or predication. They should stay visible in the review slice, but they should not be merged into the lexical-verb showcase table.
 
 | Pair | Gloss | Why retained in coverage |
 | --- | --- | --- |
+| `ci ~ cih` | say | Keep it here because the pair is structurally relevant to quotative and say-complement syntax, even though the surviving Bible evidence is still one-sided or category-mixed rather than ready for lexical promotion. |
+| `hi ~ hih` | be | Keep it here because predication and clause structure make the pair grammatically important, even though the Bible evidence remains one-sided or category-mixed. |
 | `om ~ omh` | exist | Keep it because the item matters grammatically, but it should be discussed outside the core lexical-verb alternation table and not promoted as a clean lexical pair. |
 
 ## Blocked/noise appendix
@@ -176,4 +180,3 @@ The blocked rows stay visible only as warnings. They do **not** belong in the co
 | `lampi ~ lampih` | way | The Bible hits are nominal or compound material rather than genuine verbal alternation. |
 | `khua ~ khuat` | town | The Bible hits are nominal or compound material rather than genuine verbal alternation. |
 | `gamla ~ gamlat` | wilderness | The Bible hits are nominal or compound material rather than genuine verbal alternation. |
-

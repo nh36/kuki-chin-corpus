@@ -659,6 +659,9 @@ def test_grammar_section_draft_follows_the_planned_architecture_and_quote_rules(
     difficult_section = section_between(text, "## Pair-by-pair notes for promoted and difficult pairs", "## One-sided / same-form / functional coverage table")
     coverage_section = section_between(text, "## One-sided / same-form / functional coverage table", "## Blocked/noise appendix")
     blocked_section = text[text.index("## Blocked/noise appendix") :]
+    one_sided_section = section_between(coverage_section, "### One-sided Bible attestations", "### Same-form questionnaire controls")
+    same_form_section = section_between(coverage_section, "### Same-form questionnaire controls", "### Functional or stative predicates")
+    functional_section = coverage_section[coverage_section.index("### Functional or stative predicates") :]
 
     core_pairs = {"ne ~ nek", "mu ~ muh", "nei ~ neih"}
     promoted_pairs = {
@@ -674,6 +677,10 @@ def test_grammar_section_draft_follows_the_planned_architecture_and_quote_rules(
         "sawlkhia ~ sawlkhiat",
     }
     difficult_pairs = {"ngai ~ ngaih", "pua ~ puak", "pai ~ paih", "tua ~ tuah", "tua ~ tuak"}
+    functional_pairs = {"ci ~ cih", "hi ~ hih", "om ~ omh"}
+
+    def row_marker(pair: str) -> str:
+        return f"| `{pair}` |"
 
     for pair in core_pairs:
         assert pair in core_section
@@ -690,24 +697,48 @@ def test_grammar_section_draft_follows_the_planned_architecture_and_quote_rules(
         for row in pair_plan_rows
         if row["include_in_coverage_or_control_table"] == "yes"
     }
+    same_form_controls = {
+        f"{row['form_i']} ~ {row['form_ii']}"
+        for row in pair_plan_rows
+        if row["grammar_status"] == "same_form_questionnaire_control"
+    }
     blocked_pairs = {
         f"{row['form_i']} ~ {row['form_ii']}"
         for row in pair_plan_rows
         if row["include_in_blocked_or_noise_table"] == "yes"
     }
+    one_sided_coverage = coverage_pairs - same_form_controls - functional_pairs
 
     for pair in coverage_pairs:
-        assert pair in coverage_section
+        assert row_marker(pair) in coverage_section
+
+    for pair in one_sided_coverage:
+        assert row_marker(pair) in one_sided_section
+        assert row_marker(pair) not in same_form_section
+        assert row_marker(pair) not in functional_section
+
+    for pair in same_form_controls:
+        assert row_marker(pair) in same_form_section
+        assert row_marker(pair) not in one_sided_section
+        assert row_marker(pair) not in functional_section
+
+    for pair in functional_pairs:
+        assert row_marker(pair) in functional_section
+        assert row_marker(pair) not in one_sided_section
 
     for pair in blocked_pairs:
-        assert pair in blocked_section
-        assert pair not in core_section
-        assert pair not in promoted_section
-        assert pair not in difficult_section
-        assert pair not in coverage_section
+        assert row_marker(pair) in blocked_section
+        assert row_marker(pair) not in core_section
+        assert row_marker(pair) not in promoted_section
+        assert row_marker(pair) not in difficult_section
+        assert row_marker(pair) not in coverage_section
 
     assert "`nusia ~ nusiat`" in promoted_section
     assert "not yet quotation-ready for print" in promoted_section
+    assert "### One-sided Bible attestations" in coverage_section
+    assert "### Same-form questionnaire controls" in coverage_section
+    assert "### Functional or stative predicates" in coverage_section
+    assert "controls, not overt written stem-alternation pairs in the bible layer" in lower_text
     assert "form ii = subordinate" not in lower_text
     assert "form ii = negative" not in lower_text
     assert "form ii = nominalized" not in lower_text
