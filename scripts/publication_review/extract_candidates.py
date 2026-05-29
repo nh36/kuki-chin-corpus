@@ -17,6 +17,7 @@ Extension pattern:
 Usage:
     python3 scripts/publication_review/extract_candidates.py --list-topics
     python3 scripts/publication_review/extract_candidates.py demonstratives
+    python3 scripts/publication_review/extract_candidates.py case_marking
     python3 scripts/publication_review/extract_candidates.py negation
     python3 scripts/publication_review/extract_candidates.py pronouns
     python3 scripts/publication_review/extract_candidates.py stem_alternation
@@ -33,9 +34,9 @@ ROOT = Path(__file__).resolve().parents[2]
 TOKENS_PATH = ROOT / "data" / "ctd_analysis" / "tokens.tsv"
 VERSES_PATH = ROOT / "data" / "verses_aligned.tsv"
 OUTPUT_DIR = ROOT / "output" / "publication_review"
-SUPPORTED_TOPICS = ("demonstratives", "negation", "pronouns", "stem_alternation")
+SUPPORTED_TOPICS = ("demonstratives", "case_marking", "negation", "pronouns", "stem_alternation")
 
-CANDIDATE_COLUMNS = [
+DEFAULT_CANDIDATE_COLUMNS = [
     "candidate_id",
     "topic",
     "construction_id",
@@ -50,6 +51,30 @@ CANDIDATE_COLUMNS = [
     "kjv",
     "candidate_status",
     "confidence",
+    "why_selected",
+    "why_excluded",
+    "manual_review_status",
+    "notes",
+]
+
+CASE_MARKING_CANDIDATE_COLUMNS = [
+    "candidate_id",
+    "topic",
+    "construction_id",
+    "marker",
+    "construction_type",
+    "verse_id",
+    "reference",
+    "surface_span",
+    "token_indices",
+    "segmentation_span",
+    "gloss_span",
+    "lemma_span",
+    "pos_span",
+    "kjv",
+    "candidate_status",
+    "confidence",
+    "print_status",
     "why_selected",
     "why_excluded",
     "manual_review_status",
@@ -110,22 +135,35 @@ class CandidateSpec:
     manual_review_status: str = "reviewed"
     notes: str = ""
     expected_normalized: tuple[str, ...] = ()
+    marker: str = ""
+    construction_type: str = ""
+    print_status: str = ""
+    token_indices_style: str = "comma"
+
+
+def build_candidate(candidate_status: str, **kwargs: object) -> CandidateSpec:
+    kwargs.setdefault("manual_review_status", "reviewed")
+    return CandidateSpec(candidate_status=candidate_status, **kwargs)
 
 
 def accepted(**kwargs: object) -> CandidateSpec:
-    return CandidateSpec(candidate_status="accepted", manual_review_status="reviewed", **kwargs)
+    return build_candidate("accepted", **kwargs)
+
+
+def accepted_with_caveat(**kwargs: object) -> CandidateSpec:
+    return build_candidate("accepted_with_caveat", **kwargs)
 
 
 def excluded(**kwargs: object) -> CandidateSpec:
-    return CandidateSpec(candidate_status="excluded", manual_review_status="reviewed", **kwargs)
+    return build_candidate("excluded", **kwargs)
 
 
 def deferred(**kwargs: object) -> CandidateSpec:
-    return CandidateSpec(candidate_status="deferred", manual_review_status="reviewed", **kwargs)
+    return build_candidate("deferred", **kwargs)
 
 
 def needs_review(**kwargs: object) -> CandidateSpec:
-    return CandidateSpec(candidate_status="needs_review", manual_review_status="reviewed", **kwargs)
+    return build_candidate("needs_review", **kwargs)
 
 
 def parse_args() -> argparse.Namespace:
@@ -220,6 +258,15 @@ def load_tokens() -> dict[str, list[TokenRecord]]:
     return by_verse
 
 
+def format_token_indices(token_indices: tuple[int, ...], style: str) -> str:
+    if style == "range":
+        if len(token_indices) == 1:
+            return str(token_indices[0])
+        if tuple(range(token_indices[0], token_indices[-1] + 1)) == token_indices:
+            return f"{token_indices[0]}-{token_indices[-1]}"
+    return ",".join(str(token_index) for token_index in token_indices)
+
+
 def candidate_row(
     spec: CandidateSpec,
     verse_meta: VerseMeta,
@@ -251,10 +298,12 @@ def candidate_row(
         "candidate_id": spec.candidate_id,
         "topic": spec.topic,
         "construction_id": spec.construction_id,
+        "marker": spec.marker,
+        "construction_type": spec.construction_type,
         "verse_id": verse_meta.verse_id,
         "reference": verse_meta.reference,
         "surface_span": " ".join(token.surface_form for token in selected),
-        "token_indices": ",".join(str(token.token_index) for token in selected),
+        "token_indices": format_token_indices(spec.token_indices, spec.token_indices_style),
         "segmentation_span": " | ".join(token.segmentation for token in selected),
         "gloss_span": " | ".join(token.gloss for token in selected),
         "lemma_span": " | ".join(token.lemma for token in selected),
@@ -262,6 +311,7 @@ def candidate_row(
         "kjv": verse_meta.kjv,
         "candidate_status": spec.candidate_status,
         "confidence": spec.confidence,
+        "print_status": spec.print_status,
         "why_selected": spec.why_selected,
         "why_excluded": spec.why_excluded,
         "manual_review_status": spec.manual_review_status,
@@ -387,6 +437,211 @@ def build_demonstratives_specs() -> list[CandidateSpec]:
             why_excluded="Genesis 6:22 has `tua bangmahin`, not plain `hih bangin`, so it cannot be accepted as a proximal demonstrative manner example.",
             notes="This row records a raw-report misread and the analyzer-confirmed surface span that replaced it.",
             expected_normalized=("tua", "bangmahin"),
+        ),
+    ]
+
+
+def build_case_marking_specs() -> list[CandidateSpec]:
+    topic = "case_marking"
+    return [
+        accepted(
+            candidate_id="case_in_gen4_3_kain_in",
+            topic=topic,
+            construction_id="case_in_ergative",
+            marker="in",
+            construction_type="ergative_agent",
+            reference="Genesis 4:3",
+            token_indices=(3, 4),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_ready",
+            why_selected="Current grammar slice anchor for ergative -in; analyzer export preserves a clean proper-noun-plus-ERG window.",
+            notes="Use as the main accepted ergative candidate.",
+            expected_normalized=("kain", "in"),
+        ),
+        needs_review(
+            candidate_id="case_in_gen1_3_ciangin_review",
+            topic=topic,
+            construction_id="case_in_ambiguity",
+            marker="in",
+            construction_type="ambiguous_homograph",
+            reference="Genesis 1:3",
+            token_indices=(8,),
+            token_indices_style="range",
+            confidence="low",
+            print_status="blocked",
+            why_selected="Retained to show why automatic -in extraction is risky.",
+            why_excluded="String matching on -in would overgenerate conjunctional or non-case material such as ciangin.",
+            manual_review_status="needs_followup",
+            notes="This row is an ambiguity control, not a case example.",
+            expected_normalized=("ciangin",),
+        ),
+        accepted(
+            candidate_id="case_ah_gen11_28_khuaah",
+            topic=topic,
+            construction_id="case_ah_locative",
+            marker="ah",
+            construction_type="locative_place",
+            reference="Genesis 11:28",
+            token_indices=(13,),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_ready",
+            why_selected="Clean noun-plus-locative example from the analyzer export; use as the ordinary -ah locative control.",
+            notes="Plain locative row, kept separate from relator-noun constructions.",
+            expected_normalized=("khua-ah",),
+        ),
+        accepted_with_caveat(
+            candidate_id="case_relator_gen1_6_laizangah",
+            topic=topic,
+            construction_id="case_relator_spatial",
+            marker="relator_noun_plus_case",
+            construction_type="relator_noun_spatial",
+            reference="Genesis 1:6",
+            token_indices=(3,),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Existing slice example; analyzer export preserves the spatial construction cleanly enough for candidate review.",
+            notes="Keep as relator-noun-plus-case evidence rather than flattening it into a bare -ah example.",
+            expected_normalized=("laizangah",),
+        ),
+        accepted_with_caveat(
+            candidate_id="case_relator_gen1_14_vantungah",
+            topic=topic,
+            construction_id="case_relator_spatial",
+            marker="relator_noun_plus_case",
+            construction_type="relator_noun_spatial",
+            reference="Genesis 1:14",
+            token_indices=(8,),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Second existing slice example showing spatial-stem plus locative marking in the analyzer export.",
+            notes="Keep as relator-noun-plus-case evidence rather than as a bare place-noun locative.",
+            expected_normalized=("vantungah",),
+        ),
+        accepted(
+            candidate_id="case_relator_gen2_19_kiangah",
+            topic=topic,
+            construction_id="case_relator_spatial",
+            marker="relator_noun_plus_case",
+            construction_type="relator_noun_spatial",
+            reference="Genesis 2:19",
+            token_indices=(31,),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Representative relator-noun-plus-case row from the token export.",
+            notes="Supports the claim that relator-noun spatial grammar cannot be reduced to a suffix list.",
+            expected_normalized=("kiangah",),
+        ),
+        accepted(
+            candidate_id="case_relator_gen1_11_sungah",
+            topic=topic,
+            construction_id="case_relator_spatial",
+            marker="relator_noun_plus_case",
+            construction_type="relator_noun_spatial",
+            reference="Genesis 1:11",
+            token_indices=(15,),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Representative internal-space relator construction from the analyzer export.",
+            notes="Relator-noun evidence, not a plain -ah control.",
+            expected_normalized=("sungah",),
+        ),
+        accepted(
+            candidate_id="case_relator_gen1_2_tungah",
+            topic=topic,
+            construction_id="case_relator_spatial",
+            marker="relator_noun_plus_case",
+            construction_type="relator_noun_spatial",
+            reference="Genesis 1:2",
+            token_indices=(18,),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Representative surface or vertical relator construction from the analyzer export.",
+            notes="Keep with relator-noun-plus-case rows.",
+            expected_normalized=("tungah",),
+        ),
+        deferred(
+            candidate_id="case_a_gen2_7_a_review",
+            topic=topic,
+            construction_id="case_a_review",
+            marker="a",
+            construction_type="review_needed",
+            reference="Genesis 2:7",
+            token_indices=(9, 10),
+            token_indices_style="range",
+            confidence="low",
+            print_status="blocked",
+            why_selected="Retained as a control because the current export does not cleanly separate allative -a from pronominal or other functional tokens.",
+            why_excluded="The current export does not cleanly separate allative -a from other ambiguous exported a tokens, so do not force them into a candidate layer until the analyzer route is sharper.",
+            manual_review_status="needs_followup",
+            notes="This row documents why -a remains deferred instead of being collapsed into -ah.",
+            expected_normalized=("a", "a"),
+        ),
+        accepted_with_caveat(
+            candidate_id="case_pan_matt5_19_lakpan",
+            topic=topic,
+            construction_id="case_pan_source",
+            marker="pan",
+            construction_type="source_relator",
+            reference="Matthew 5:19",
+            token_indices=(5,),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Matches the current case slice's source example and is analyzer-supported as a relator-noun source construction.",
+            notes="Keep as source marking on a relator noun, not as a bare suffix token.",
+            expected_normalized=("lakpan",),
+        ),
+        accepted_with_caveat(
+            candidate_id="case_panin_gen12_1_inn_panin",
+            topic=topic,
+            construction_id="case_panin_source",
+            marker="panin",
+            construction_type="source_ablative",
+            reference="Genesis 12:1",
+            token_indices=(11, 12),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer export preserves the `inn panin` span and supports conservative source-marking treatment.",
+            notes="Treat -panin conservatively as source-marking evidence without forcing a fully settled compositional `pan + in` analysis.",
+            expected_normalized=("inn", "panin"),
+        ),
+        accepted(
+            candidate_id="case_tawh_gen14_24_kei_tawh",
+            topic=topic,
+            construction_id="case_tawh_comitative",
+            marker="tawh",
+            construction_type="comitative_accompaniment",
+            reference="Genesis 14:24",
+            token_indices=(3, 4),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_ready",
+            why_selected="Current slice example for accompaniment; analyzer export preserves the pronoun-plus-COM window cleanly.",
+            notes="Use as the main comitative/accompaniment candidate.",
+            expected_normalized=("kei", "tawh"),
+        ),
+        accepted_with_caveat(
+            candidate_id="case_tawh_gen2_7_leivui_tawh",
+            topic=topic,
+            construction_id="case_tawh_material",
+            marker="tawh",
+            construction_type="material_or_instrumental_extension",
+            reference="Genesis 2:7",
+            token_indices=(5, 6),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_usable_with_caveat",
+            why_selected="Current slice and review notes treat this as material or means extension rather than ordinary accompaniment.",
+            notes="Keep distinct from accompaniment so tawh is not flattened into a single undifferentiated with-category.",
+            expected_normalized=("leivui", "tawh"),
         ),
     ]
 
@@ -806,6 +1061,8 @@ def build_stem_alternation_specs() -> list[CandidateSpec]:
 def build_specs(topic: str) -> list[CandidateSpec]:
     if topic == "demonstratives":
         return build_demonstratives_specs()
+    if topic == "case_marking":
+        return build_case_marking_specs()
     if topic == "negation":
         return build_negation_specs()
     if topic == "pronouns":
@@ -813,6 +1070,12 @@ def build_specs(topic: str) -> list[CandidateSpec]:
     if topic == "stem_alternation":
         return build_stem_alternation_specs()
     raise SystemExit(f"Unsupported topic: {topic}")
+
+
+def candidate_columns(topic: str) -> list[str]:
+    if topic == "case_marking":
+        return CASE_MARKING_CANDIDATE_COLUMNS
+    return DEFAULT_CANDIDATE_COLUMNS
 
 
 def write_candidates(topic: str, output_path: Path) -> None:
@@ -823,7 +1086,7 @@ def write_candidates(topic: str, output_path: Path) -> None:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=CANDIDATE_COLUMNS, delimiter="\t")
+        writer = csv.DictWriter(handle, fieldnames=candidate_columns(topic), delimiter="\t", extrasaction="ignore")
         writer.writeheader()
         for spec in specs:
             verse_meta = verses.get(spec.reference)

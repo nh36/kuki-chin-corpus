@@ -6,7 +6,7 @@ title: "Tedim Case-Marking Evidence Dossier"
 
 ## Evidence-layer status
 
-Case marking is an older publication-review slice family that now has a manually curated analyzer-aware candidate layer at `output/publication_review/candidates_case_marking.tsv`. That file is the current evidence control for the packet, but `case_marking` is **not** yet a supported extractor topic in `scripts/publication_review/extract_candidates.py`. The present candidate layer is therefore a curated retrofit rather than a corpus-wide automatic search.
+Case marking is an older publication-review slice family that now has a manually curated analyzer-aware candidate layer at `output/publication_review/candidates_case_marking.tsv`. That file is the current evidence control for the packet, and `case_marking` is now a supported curated extractor topic in `scripts/publication_review/extract_candidates.py`. The route remains a curated retrofit rather than a corpus-wide automatic search.
 
 The packet should now be read in the order `candidates_case_marking.tsv` -> `dossier_case_marking.md` -> `grammar_case_marking_print_slice.md` / `dictionary_case_markers_print_slice.md` -> `review_notes_case_marking.md`. This keeps the print slices conservative: the new candidate layer explains which existing claims are supported directly, which ones remain caveated, and which ones stay blocked for now.
 

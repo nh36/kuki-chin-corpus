@@ -143,11 +143,13 @@ def test_case_marking_slice_files_remain_stable_and_progress_mentions_untracked_
 
 def test_case_marking_dossier_exists_and_describes_manual_candidate_layer():
     text = DOSSIER_PATH.read_text(encoding="utf-8")
+    lower_text = text.lower()
 
     assert DOSSIER_PATH.exists()
     assert "candidates_case_marking.tsv" in text
     assert "manually curated analyzer-aware candidate layer" in text
-    assert "not" in text.lower() and "supported extractor topic" in text.lower()
+    assert "supported curated extractor topic" in lower_text
+    assert "rather than a corpus-wide automatic search" in lower_text
     assert "`case_marking`" in text
 
 

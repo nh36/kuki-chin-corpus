@@ -39,12 +39,13 @@ def test_publication_evidence_protocol_exists():
     assert PROTOCOL_PATH.exists()
 
 
-def test_publication_evidence_protocol_marks_case_marking_as_next_planned_retrofit():
+def test_publication_evidence_protocol_marks_case_marking_as_extractor_supported_but_curated():
     text = PROTOCOL_PATH.read_text(encoding="utf-8")
 
     assert "third completed retrospective retrofit" in text
     assert "candidates_case_marking.tsv" in text
-    assert "extractor route itself is still pending" in text
+    assert "plus a curated extractor route" in text
+    assert "intentionally narrow rather than a broad automatic case-marker search" in text
     assert "should continue to start from analyzer-aware candidates rather than from raw string searches" in text
 
 

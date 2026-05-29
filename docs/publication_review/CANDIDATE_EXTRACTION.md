@@ -9,17 +9,12 @@
 Current supported extractor topics:
 
 - `demonstratives`
+- `case_marking`
 - `negation`
 - `pronouns`
 - `stem_alternation`
 
-The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, and stem alternation is now the third retrofit topic. All four use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
-
-Manual candidate layer without extractor support yet:
-
-- `case_marking`
-
-`output/publication_review/candidates_case_marking.tsv` now exists as a manually curated candidate layer, but do **not** treat `case_marking` as a supported extractor topic until the extractor route itself exists.
+The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, stem alternation is the third retrofit topic, and case marking is now extractor-supported through the same curated candidate route. All five use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
 
 ## Required input
 
@@ -49,6 +44,12 @@ Regenerate the demonstratives candidate file:
 python3 scripts/publication_review/extract_candidates.py demonstratives
 ```
 
+Regenerate the case-marking candidate file:
+
+```bash
+python3 scripts/publication_review/extract_candidates.py case_marking
+```
+
 Regenerate the negation candidate file:
 
 ```bash
@@ -70,6 +71,7 @@ python3 scripts/publication_review/extract_candidates.py stem_alternation
 Expected output:
 
 - `output/publication_review/candidates_demonstratives.tsv`
+- `output/publication_review/candidates_case_marking.tsv`
 - `output/publication_review/candidates_negation.tsv`
 - `output/publication_review/candidates_pronouns.tsv`
 - `output/publication_review/candidates_stem_alternation.tsv`
@@ -99,11 +101,11 @@ In other words, stem alternation now has both:
 1. a curated candidate layer for print-safe or explicitly blocked packet evidence; and
 2. a broader corpus audit layer for mapping Form I / Form II distribution across environments, with tracked summaries and a tracked example matrix for GitHub review.
 
-Case marking should begin differently. It is not a broad verb-pair distributional audit like stem alternation. The retrofit should start with a curated candidate TSV for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions. Relator nouns should not be flattened into bare case suffixes in the candidate layer.
+Case marking follows a different pattern from stem alternation. It is not a broad verb-pair distributional audit, and the extractor route is deliberately narrow: it reproduces a curated candidate TSV for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions rather than doing a broad automatic case-marker search. Relator nouns should not be flattened into bare case suffixes in the candidate layer.
 
 ## What the current extractor does
 
-For the current demonstratives, negation, pronoun, and stem-alternation layers, the extractor:
+For the current demonstratives, case-marking, negation, pronoun, and stem-alternation layers, the extractor:
 
 1. loads `data/ctd_analysis/tokens.tsv`;
 2. looks up curated verse/token windows;

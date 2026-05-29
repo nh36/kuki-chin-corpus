@@ -26,7 +26,7 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "Recommended retrofit order" in text
     assert "**Case marking packet review next**" in text
     assert "candidates_case_marking.tsv" in text
-    assert "extractor route still absent" in text
+    assert "curated extractor route now in place" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
