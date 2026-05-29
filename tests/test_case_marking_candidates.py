@@ -9,6 +9,7 @@ CANDIDATES_PATH = ROOT / "output/publication_review/candidates_case_marking.tsv"
 DOSSIER_PATH = ROOT / "output/publication_review/dossier_case_marking.md"
 GRAMMAR_PATH = ROOT / "output/publication_review/grammar_case_marking_print_slice.md"
 DICTIONARY_PATH = ROOT / "output/publication_review/dictionary_case_markers_print_slice.md"
+REVIEW_NOTES_PATH = ROOT / "output/publication_review/review_notes_case_marking.md"
 PROGRESS_PATH = ROOT / "PROGRESS.md"
 
 REQUIRED_COLUMNS = {
@@ -178,6 +179,52 @@ def test_case_marking_slice_files_remain_stable_and_progress_mentions_untracked_
     assert "generated locally and intentionally untracked" in progress_text
     assert "`stem_alternation_environment_summary.tsv`, `stem_alternation_pair_summary.tsv`, and `stem_alternation_example_matrix.tsv`" in progress_text
     assert "stem_alternation_corpus_audit.tsv` is generated locally and intentionally untracked" in progress_text
+
+
+def test_case_marking_print_slices_align_with_candidate_layer() -> None:
+    grammar_text = GRAMMAR_PATH.read_text(encoding="utf-8")
+    dictionary_text = DICTIONARY_PATH.read_text(encoding="utf-8")
+    review_notes_text = REVIEW_NOTES_PATH.read_text(encoding="utf-8")
+
+    assert "candidates_case_marking.tsv" in grammar_text
+    assert "dossier_case_marking.md" in grammar_text
+    assert "Kain in" in grammar_text
+    assert "ciangin" in grammar_text
+    assert "ambiguity controls such as `ciangin`" in grammar_text
+    assert "khua-ah" in grammar_text
+    assert "relator-noun-plus-case" in grammar_text
+    assert "`-a` remains deferred" in grammar_text
+    assert "does **not** collapse `-a` into `-ah`" in grammar_text
+    assert "`pan-in` is useful evidence" in grammar_text
+    assert "not by itself a final structural analysis" in grammar_text
+    assert "kei tawh" in grammar_text
+    assert "leivui tawh" in grammar_text
+    assert "material and instrument-like" in grammar_text
+    assert "pos_span=FUNC" in grammar_text
+
+    assert "candidates_case_marking.tsv" in dictionary_text
+    assert "dossier_case_marking.md" in dictionary_text
+    assert "Kain in" in dictionary_text
+    assert "ciangin" in dictionary_text
+    assert "khua-ah" in dictionary_text
+    assert "laizangah" in dictionary_text
+    assert "lakpan" in dictionary_text
+    assert "relator noun" in dictionary_text
+    assert "structural analysis remains under review" in dictionary_text
+    assert "accompaniment" in dictionary_text
+    assert "material/instrumental extension" in dictionary_text
+    for relator in ["kiang", "sung", "tung", "lak", "laizang", "vantung"]:
+        assert relator in dictionary_text
+
+    assert "candidates_case_marking.tsv" in review_notes_text
+    assert "dossier_case_marking.md" in review_notes_text
+    assert "extractor route" in review_notes_text
+    assert "LF-stable reproducible candidate output" in review_notes_text
+    assert "ciangin" in review_notes_text
+    assert "`-a`" in review_notes_text
+    assert "`-panin`" in review_notes_text
+    assert "`-tawh`" in review_notes_text
+    assert "pos_span=FUNC" in review_notes_text
 
 
 def test_case_marking_dossier_exists_and_describes_manual_candidate_layer():
