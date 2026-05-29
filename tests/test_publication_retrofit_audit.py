@@ -33,7 +33,8 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "aligned dictionary slice" in text
     assert "updated review notes" in text
     assert "tests protecting the main distinctions" in text
-    assert "first analyzer-aware candidate layer and curated extractor route now exist" in text
+    assert "dossier_interrogatives.md" in text
+    assert "first analyzer-aware candidate layer, curated extractor route, and candidate-controlled dossier now exist" in text
     assert "Continue the active interrogatives retrofit through the candidate-first sequence" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
@@ -57,10 +58,11 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "`stem_alternation_environment_summary.tsv`, `stem_alternation_pair_summary.tsv`, and `stem_alternation_example_matrix.tsv`" in text
     assert "candidates_case_marking.tsv" in text
     assert "candidates_interrogatives.tsv" in text
+    assert "dossier_interrogatives.md" in text
     assert "aligned grammar and dictionary slices" in text
-    assert "The active next publication-review task is now interrogatives dossier work" in text
+    assert "The active next publication-review task is now the first interrogatives grammar print slice" in text
     assert "Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, and case marking are now maintenance/human-review topics" in text
-    assert "1. [ ] Stabilize the interrogatives candidate layer and use it to draft the interrogatives dossier." in text
+    assert "1. [ ] Use `candidates_interrogatives.tsv` plus `dossier_interrogatives.md` to draft `output/publication_review/grammar_interrogatives_print_slice.md`; dictionary and review-note slices have not started yet." in text
     assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, and case marking stable for maintenance and human review." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
@@ -82,7 +84,8 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
         assert required in text
 
     assert "interrogatives" in text
-    assert "active retrofit; stabilize candidate layer, then build dossier" in text
+    assert "dossier_interrogatives.md" in text
+    assert "active retrofit; use the dossier to draft the grammar slice; dictionary and review notes not started" in text
     assert "candidates_interrogatives.tsv" in text
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
