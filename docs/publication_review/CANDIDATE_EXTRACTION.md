@@ -15,6 +15,12 @@ Current supported topics:
 
 The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, and stem alternation is now the third retrofit topic. All four use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
 
+Planned next retrofit:
+
+- `case_marking`
+
+Do **not** treat `case_marking` as supported until the extractor route and committed `candidates_case_marking.tsv` file actually exist.
+
 ## Required input
 
 The extractor currently requires:
@@ -92,6 +98,8 @@ In other words, stem alternation now has both:
 
 1. a curated candidate layer for print-safe or explicitly blocked packet evidence; and
 2. a broader corpus audit layer for mapping Form I / Form II distribution across environments, with tracked summaries and a tracked example matrix for GitHub review.
+
+Case marking should begin differently. It is not a broad verb-pair distributional audit like stem alternation. The retrofit should start with a curated candidate TSV for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions. Relator nouns should not be flattened into bare case suffixes in the candidate layer.
 
 ## What the current extractor does
 

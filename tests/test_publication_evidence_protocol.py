@@ -39,6 +39,14 @@ def test_publication_evidence_protocol_exists():
     assert PROTOCOL_PATH.exists()
 
 
+def test_publication_evidence_protocol_marks_case_marking_as_next_planned_retrofit():
+    text = PROTOCOL_PATH.read_text(encoding="utf-8")
+
+    assert "third completed retrospective retrofit" in text
+    assert "Case marking is the next planned retrofit" in text
+    assert "should start from analyzer-aware candidates rather than from raw string searches" in text
+
+
 def test_demonstratives_candidate_file_has_required_columns():
     assert CANDIDATES_PATH.exists()
     header, _ = load_candidates()

@@ -31,6 +31,16 @@ def test_candidate_extractor_lists_supported_topics():
     assert result.stdout.strip().splitlines() == ["demonstratives", "negation", "pronouns", "stem_alternation"]
 
 
+def test_candidate_extraction_doc_marks_case_marking_as_planned_not_supported():
+    text = (ROOT / "docs/publication_review/CANDIDATE_EXTRACTION.md").read_text(encoding="utf-8")
+
+    assert "Current supported topics:" in text
+    assert "- `case_marking`" in text
+    assert "Planned next retrofit:" in text
+    assert "Do **not** treat `case_marking` as supported" in text
+    assert "Relator nouns should not be flattened into bare case suffixes" in text
+
+
 @pytest.mark.parametrize("topic", ["demonstratives", "negation", "pronouns", "stem_alternation"])
 def test_candidates_are_reproducible(tmp_path, topic):
     if not TOKENS_PATH.exists():

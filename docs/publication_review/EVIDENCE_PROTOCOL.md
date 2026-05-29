@@ -122,7 +122,9 @@ Future work may add more automatic discovery, but automatic discovery should nev
 
 After demonstratives, negation is the first retrospective retrofit topic under this same candidate-first workflow. Pronouns / clusivity is the second retrofit topic, and its candidate layer intentionally preserves the still-unresolved `ei/eite` evidence instead of forcing a premature clusivity resolution.
 
-Stem alternation is now the third retrospective retrofit topic. Its candidate layer records accepted core Form I / Form II evidence alongside explicit excluded or cautionary rows for questionnaire/report noise and lexical-family contamination.
+Stem alternation is now the third completed retrospective retrofit at the publication-review evidence-architecture level. Its candidate layer records accepted core Form I / Form II evidence alongside explicit excluded or cautionary rows for questionnaire/report noise and lexical-family contamination, and the wider packet now also includes corpus-audit and prose-planning layers.
+
+Case marking is the next planned retrofit because it is an existing slice family that predates the candidate-first workflow. That retrofit should start from analyzer-aware candidates rather than from raw string searches, especially for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions.
 
 ## Pilot topic: demonstratives/deixis
 

@@ -141,15 +141,13 @@ And to `scripts/`:
 - The pronoun grammar slice, dictionary slice, and review notes have been created in `output/publication_review/`.
 - A separate pronoun clusivity dossier has been created at `output/publication_review/dossier_pronoun_clusivity.md`.
 - A safe partial correction is now in place: `ko/kote` is treated as exclusive, while `ei/eite` remains under review pending further evidence.
-- The pronoun slice is now polished enough to serve as the model for the next print-facing grammar-and-dictionary section, provided the unresolved `ei/eite` question stays explicitly flagged.
-- A third print-review packet on verb stem alternation has now been expanded and synchronized in `output/publication_review/` with a grammar slice, a dictionary slice, review notes, and a supporting evidence dossier.
-- The stem-alternation packet treats case-marking and pronouns as completed editorial models, argues that the Form I / Form II contrast is real, and now includes a Bible-corpus coverage table plus cautious `za ~ zak` and `nusia ~ nusiat` expansions.
+- Demonstratives/deixis remains the protocol-backed pilot topic.
 - The negation evidence dossier at `output/publication_review/dossier_negation.md` has now been converted into a synchronized grammar slice, dictionary slice, review notes, a corrected generated-report caveat, and an analyzer-aware candidate file at `output/publication_review/candidates_negation.tsv`.
 - The negation packet treats `lo`, `loh`, and `kei` as part of one negation system, and Genesis 2:25 plus the old `V lo uh` prohibitive analysis now remain blocked both in packet prose and in the new candidate layer.
 - The negation candidate retrofit has now been hardened with explicit notes for analyzer/export caveats such as `Loh`/`Nadingin` export artifacts, `Nawn` as a `PROP`-like lemma/POS value, and the excluded Genesis 2:25 `uh` row.
-- Demonstratives/deixis remains the protocol pilot topic, while negation is now the first retrospective retrofit under the candidate-first workflow.
+- Negation is now a hardened retrospective retrofit under the candidate-first workflow.
 - Pronouns / clusivity now also have a hardened analyzer-aware candidate file at `output/publication_review/candidates_pronouns.tsv`, with stable accepted pronoun rows, both `ko` and `kote` explicit as exclusive evidence, unresolved `ei/eite` rows, and an excluded negative `kei` false friend.
-- The pronoun candidate layer intentionally preserves the unresolved `ei/eite` issue instead of forcing a global inclusive/exclusive label from analyzer export alone.
+- Pronouns / clusivity now has a hardened candidate layer, with `ei/eite` still unresolved and `ko/kote` handled as exclusive evidence.
 - The pronoun / clusivity retrofit exposed a systematic analyzer/export quality issue for `ko`, and that issue has now been addressed upstream in `scripts/analyze_morphemes.py` through explicit ambiguity handling, context-sensitive pronominal disambiguation, and pronoun-first POS routing in the relevant frames.
 - A dedicated analyzer-quality dossier now lives at `output/publication_review/dossier_analyzer_pronoun_quality.md`, and it now records both the diagnosis and the follow-up fix while explicitly treating philological discourse evidence as the control rather than Henderson alone or the analyzer's concord table alone.
 - A cross-topic analyzer-aware publication-review evidence protocol now lives at `docs/publication_review/EVIDENCE_PROTOCOL.md`.
@@ -157,13 +155,15 @@ And to `scripts/`:
 - Demonstratives/deixis is the pilot topic for the new candidate-extraction layer in `output/publication_review/candidates_demonstratives.tsv`, and the committed TSV is reproducible from `scripts/publication_review/extract_candidates.py`.
 - A retrospective evidence-protocol audit now exists at `output/publication_review/evidence_protocol_retrofit_audit.md`.
 - Earlier publication-review packets are now being checked against the newer candidate-first standard rather than treated as automatically protocol-complete.
-- Demonstratives is already protocol-backed, and negation now has a hardened analyzer-aware candidate layer with caveats documented rather than hidden.
-- Pronouns / clusivity is now a hardened retrospective retrofit, and `ei/eite` remains explicitly unresolved even after the added `ko/kote` evidence.
+- Stem alternation now has an analyzer-aware candidate TSV at `output/publication_review/candidates_stem_alternation.tsv`.
+- Stem alternation also now has a broader corpus audit plus tracked pair/environment/example-matrix outputs in `output/publication_review/stem_alternation_corpus_audit.tsv`, `stem_alternation_environment_summary.tsv`, `stem_alternation_pair_summary.tsv`, and `stem_alternation_example_matrix.tsv`.
+- Stem alternation now has a tracked lexical inventory, promotable examples table, manual promotion review, citation shortlist, syntactic-context matrix, and pair-discussion plan.
+- Stem alternation now also has a first working prose draft at `output/publication_review/grammar_stem_alternation_section_draft.md`.
+- Stem alternation is now ready for human review at the current slice maturity level and should not be further polished until other slices catch up.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
-- Stem alternation now also has an analyzer-aware candidate file at `output/publication_review/candidates_stem_alternation.tsv`, with accepted core pair evidence (`mu ~ muh`, `ne ~ nek`, `nei ~ neih`, plus manually controlled `pia ~ piak`, `za ~ zak`, and `nusia ~ nusiat`) and explicit blocked questionnaire/report-noise rows such as `piangsak`, `ngaihsutna`, and `honkhiat`.
-- Because stem alternation is a distributional topic rather than just a packet of print-safe examples, a broader analyzer-based corpus audit now also exists. The full row-level audit at `output/publication_review/stem_alternation_corpus_audit.tsv` is generated locally and intentionally untracked, while `output/publication_review/stem_alternation_environment_summary.tsv`, `output/publication_review/stem_alternation_pair_summary.tsv`, and the compact tracked `output/publication_review/stem_alternation_example_matrix.tsv` preserve the reviewable GitHub-facing evidence.
+- Case marking already exists as a grammar review slice and review-note layer, and it also has a dictionary slice under the older filename `output/publication_review/dictionary_case_markers_print_slice.md`, but it predates the candidate-first workflow.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- With the `ko` issue now addressed upstream and the pronoun candidate layer regenerated from corrected export output, stem alternation has moved beyond the first candidate retrofit into a broader corpus audit; the tracked example matrix should now drive interpretive revision of the stem-alternation slice, and case marking should wait until that review is done.
+- The next substantive publication-review retrofit is now the case-marking candidate layer.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -196,12 +196,12 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Review the new stem-alternation corpus audit against the packet prose before moving to case marking.
-2. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
-3. [ ] Keep the unresolved `ei/eite` question flagged in any later person-marking work unless new evidence settles it.
+1. [ ] Case marking candidate retrofit.
+2. [ ] Keep stem alternation stable pending human review.
+3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 
 ---
 
-*Last updated: 2026-05-26*  
+*Last updated: 2026-05-28*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*
