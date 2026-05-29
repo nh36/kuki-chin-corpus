@@ -1086,7 +1086,13 @@ def write_candidates(topic: str, output_path: Path) -> None:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=candidate_columns(topic), delimiter="\t", extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=candidate_columns(topic),
+            delimiter="\t",
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
         writer.writeheader()
         for spec in specs:
             verse_meta = verses.get(spec.reference)

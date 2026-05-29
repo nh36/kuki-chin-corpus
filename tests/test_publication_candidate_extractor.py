@@ -42,6 +42,13 @@ def test_candidate_extraction_doc_marks_case_marking_as_supported_but_curated():
     assert "Relator nouns should not be flattened into bare case suffixes" in text
 
 
+def test_committed_candidate_files_use_lf_line_endings():
+    for path in COMMITTED_CANDIDATE_PATHS.values():
+        data = path.read_bytes()
+        assert b"\r\n" not in data, f"{path} contains CRLF line endings"
+        assert b"\r" not in data, f"{path} contains bare CR line endings"
+
+
 @pytest.mark.parametrize("topic", ["demonstratives", "case_marking", "negation", "pronouns", "stem_alternation"])
 def test_candidates_are_reproducible(tmp_path, topic):
     if not TOKENS_PATH.exists():

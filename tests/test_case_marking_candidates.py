@@ -128,6 +128,45 @@ def test_case_marking_keeps_panin_conservative_and_relators_distinct():
     assert "does not cleanly separate" in a_row["why_excluded"].lower()
 
 
+def test_case_marking_preserves_expected_candidate_decisions():
+    _, rows = load_candidates()
+    rows_by_id = {row["candidate_id"]: row for row in rows}
+
+    assert rows_by_id["case_in_gen4_3_kain_in"]["candidate_status"] == "accepted"
+    assert rows_by_id["case_in_gen4_3_kain_in"]["print_status"] == "print_ready"
+
+    assert rows_by_id["case_in_gen1_3_ciangin_review"]["candidate_status"] == "needs_review"
+    assert rows_by_id["case_in_gen1_3_ciangin_review"]["print_status"] == "blocked"
+
+    assert rows_by_id["case_ah_gen11_28_khuaah"]["candidate_status"] == "accepted"
+    assert rows_by_id["case_ah_gen11_28_khuaah"]["print_status"] == "print_ready"
+
+    for candidate_id in [
+        "case_relator_gen1_6_laizangah",
+        "case_relator_gen1_14_vantungah",
+        "case_relator_gen2_19_kiangah",
+        "case_relator_gen1_11_sungah",
+        "case_relator_gen1_2_tungah",
+    ]:
+        assert rows_by_id[candidate_id]["marker"] == "relator_noun_plus_case"
+        assert rows_by_id[candidate_id]["construction_type"] == "relator_noun_spatial"
+
+    assert rows_by_id["case_a_gen2_7_a_review"]["candidate_status"] == "deferred"
+    assert rows_by_id["case_a_gen2_7_a_review"]["print_status"] == "blocked"
+
+    assert rows_by_id["case_pan_matt5_19_lakpan"]["construction_type"] == "source_relator"
+    assert rows_by_id["case_pan_matt5_19_lakpan"]["candidate_status"] == "accepted_with_caveat"
+
+    assert rows_by_id["case_panin_gen12_1_inn_panin"]["candidate_status"] == "accepted_with_caveat"
+    assert "conservative" in rows_by_id["case_panin_gen12_1_inn_panin"]["notes"].lower()
+
+    assert rows_by_id["case_tawh_gen14_24_kei_tawh"]["construction_type"] == "comitative_accompaniment"
+    assert rows_by_id["case_tawh_gen14_24_kei_tawh"]["print_status"] == "print_ready"
+
+    assert rows_by_id["case_tawh_gen2_7_leivui_tawh"]["construction_type"] == "material_or_instrumental_extension"
+    assert rows_by_id["case_tawh_gen2_7_leivui_tawh"]["print_status"] == "print_usable_with_caveat"
+
+
 def test_case_marking_slice_files_remain_stable_and_progress_mentions_untracked_stem_audit():
     grammar_text = GRAMMAR_PATH.read_text(encoding="utf-8")
     dictionary_text = DICTIONARY_PATH.read_text(encoding="utf-8")
