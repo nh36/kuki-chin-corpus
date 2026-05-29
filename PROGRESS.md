@@ -161,11 +161,11 @@ And to `scripts/`:
 - Stem alternation now also has a first working prose draft at `output/publication_review/grammar_stem_alternation_section_draft.md`.
 - Stem alternation is now ready for human review at the current slice maturity level and should not be further polished until other slices catch up.
 - Case marking has now been retrofitted through `output/publication_review/candidates_case_marking.tsv`, `output/publication_review/dossier_case_marking.md`, a curated extractor route, LF-stable reproducible candidate output, aligned grammar and dictionary slices, updated review notes, and tests protecting the main distinctions.
-- Interrogatives now has `output/publication_review/candidates_interrogatives.tsv`, a curated extractor route, a first interpretive dossier at `output/publication_review/dossier_interrogatives.md`, and a first grammar print slice at `output/publication_review/grammar_interrogatives_print_slice.md`; the slice stays controlled by the candidate/dossier layer and keeps embedded-question material plus blocked false friends out of the core printed examples.
+- Interrogatives now has `output/publication_review/candidates_interrogatives.tsv`, a curated extractor route, a first interpretive dossier at `output/publication_review/dossier_interrogatives.md`, a first grammar print slice at `output/publication_review/grammar_interrogatives_print_slice.md`, and a first dictionary print slice at `output/publication_review/dictionary_interrogatives_print_slice.md`; the packet stays controlled by the candidate/dossier layer and keeps embedded-question material plus blocked false friends out of the core printed examples.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, and case marking are now maintenance/human-review topics at the publication-review evidence layer.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- The active next publication-review task is now the interrogatives dictionary print slice; the grammar slice now exists, but dictionary and review-note slices have not started yet.
+- The active next publication-review task is now interrogatives review-note work; the grammar and dictionary slices now exist, but review-note work has not started yet.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -198,7 +198,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Decide whether to draft `output/publication_review/dictionary_interrogatives_print_slice.md` from `candidates_interrogatives.tsv`, `dossier_interrogatives.md`, and `grammar_interrogatives_print_slice.md`; review-note work has not started yet.
+1. [ ] Decide whether to draft `output/publication_review/review_notes_interrogatives.md` from `candidates_interrogatives.tsv`, `dossier_interrogatives.md`, `grammar_interrogatives_print_slice.md`, and `dictionary_interrogatives_print_slice.md`; review-note work has not started yet.
 2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, and case marking stable for maintenance and human review.
 3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 
