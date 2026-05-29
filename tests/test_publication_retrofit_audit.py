@@ -52,7 +52,8 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "candidates_quantifiers.tsv" in text
     assert "tests/test_quantifiers_candidates.py" in text
     assert "tests/test_quantifiers_dossier.py" in text
-    assert "first candidate-controlled dossier now exist" in text
+    assert "tests/test_quantifiers_print_slice.py" in text
+    assert "first grammar slice now exist" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
@@ -87,9 +88,10 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "ready for human review at the current slice maturity level" in text
     assert "candidates_quantifiers.tsv" in text
     assert "dossier_quantifiers.md" in text
+    assert "grammar_quantifiers_print_slice.md" in text
     assert "keeps explicit overlap controls for `khat`, `kuamah`, and bang-family `bangmah`" in text
-    assert "The quantifiers dossier now exists, but the grammar, dictionary, and review-note slices have not yet begun" in text
-    assert "1. [ ] Continue the quantifiers retrofit from `dossier_quantifiers.md` into `grammar_quantifiers_print_slice.md` without broadening into coordinators, sentence-final particles, or broad degree/intensifier prose." in text
+    assert "The quantifiers grammar print slice now exists, but the dictionary and review-note slices have not yet begun" in text
+    assert "1. [ ] Continue the quantifiers retrofit from `grammar_quantifiers_print_slice.md` into `dictionary_quantifiers_print_slice.md` without broadening into review-note work, coordinators, sentence-final particles, or broad degree/intensifier prose." in text
     assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
@@ -125,7 +127,8 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
     assert "hold stable for maintenance and human review" in text
     assert "candidates_quantifiers.tsv" in text
     assert "dossier_quantifiers.md" in text
-    assert "active narrow retrofit; the quantifiers dossier now exists, but grammar, dictionary, and review-note slices have not yet begun" in text
+    assert "grammar_quantifiers_print_slice.md" in text
+    assert "active narrow retrofit; the quantifiers grammar print slice now exists, but dictionary and review-note slices have not yet begun" in text
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
         assert deferred in text
