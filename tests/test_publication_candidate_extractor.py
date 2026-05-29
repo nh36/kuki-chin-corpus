@@ -34,10 +34,10 @@ def test_candidate_extractor_lists_supported_topics():
 def test_candidate_extraction_doc_marks_case_marking_as_planned_not_supported():
     text = (ROOT / "docs/publication_review/CANDIDATE_EXTRACTION.md").read_text(encoding="utf-8")
 
-    assert "Current supported topics:" in text
+    assert "Current supported extractor topics:" in text
     assert "- `case_marking`" in text
-    assert "Planned next retrofit:" in text
-    assert "Do **not** treat `case_marking` as supported" in text
+    assert "Manual candidate layer without extractor support yet:" in text
+    assert "do **not** treat `case_marking` as a supported extractor topic" in text.lower()
     assert "Relator nouns should not be flattened into bare case suffixes" in text
 
 

@@ -124,7 +124,7 @@ After demonstratives, negation is the first retrospective retrofit topic under t
 
 Stem alternation is now the third completed retrospective retrofit at the publication-review evidence-architecture level. Its candidate layer records accepted core Form I / Form II evidence alongside explicit excluded or cautionary rows for questionnaire/report noise and lexical-family contamination, and the wider packet now also includes corpus-audit and prose-planning layers.
 
-Case marking is the next planned retrofit because it is an existing slice family that predates the candidate-first workflow. That retrofit should start from analyzer-aware candidates rather than from raw string searches, especially for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions.
+Case marking has now begun the same retrofit path. It is still an older slice family, but it now has an analyzer-aware `candidates_case_marking.tsv` layer even though the extractor route itself is still pending. Case-marking work should continue to start from analyzer-aware candidates rather than from raw string searches, especially for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions.
 
 ## Pilot topic: demonstratives/deixis
 

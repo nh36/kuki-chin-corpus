@@ -156,10 +156,11 @@ And to `scripts/`:
 - A retrospective evidence-protocol audit now exists at `output/publication_review/evidence_protocol_retrofit_audit.md`.
 - Earlier publication-review packets are now being checked against the newer candidate-first standard rather than treated as automatically protocol-complete.
 - Stem alternation now has an analyzer-aware candidate TSV at `output/publication_review/candidates_stem_alternation.tsv`.
-- Stem alternation also now has a broader corpus audit plus tracked pair/environment/example-matrix outputs in `output/publication_review/stem_alternation_corpus_audit.tsv`, `stem_alternation_environment_summary.tsv`, `stem_alternation_pair_summary.tsv`, and `stem_alternation_example_matrix.tsv`.
+- Stem alternation also now has a broader corpus audit, but `output/publication_review/stem_alternation_corpus_audit.tsv` is generated locally and intentionally untracked; the tracked compact outputs are `stem_alternation_environment_summary.tsv`, `stem_alternation_pair_summary.tsv`, and `stem_alternation_example_matrix.tsv`.
 - Stem alternation now has a tracked lexical inventory, promotable examples table, manual promotion review, citation shortlist, syntactic-context matrix, and pair-discussion plan.
 - Stem alternation now also has a first working prose draft at `output/publication_review/grammar_stem_alternation_section_draft.md`.
 - Stem alternation is now ready for human review at the current slice maturity level and should not be further polished until other slices catch up.
+- Case marking now has a first analyzer-aware candidate layer at `output/publication_review/candidates_case_marking.tsv`, covering ergative `-in`, locative `-ah`, source `-pan` / `-panin`, comitative/material `-tawh`, and relator-noun-plus-case constructions without yet reopening the older slice prose.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Case marking already exists as a grammar review slice and review-note layer, and it also has a dictionary slice under the older filename `output/publication_review/dictionary_case_markers_print_slice.md`, but it predates the candidate-first workflow.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
@@ -196,7 +197,7 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Case marking candidate retrofit.
+1. [ ] Use the new case-marking candidate layer to review the existing case-marking packet conservatively.
 2. [ ] Keep stem alternation stable pending human review.
 3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 

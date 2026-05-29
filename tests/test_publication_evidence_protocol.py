@@ -43,8 +43,9 @@ def test_publication_evidence_protocol_marks_case_marking_as_next_planned_retrof
     text = PROTOCOL_PATH.read_text(encoding="utf-8")
 
     assert "third completed retrospective retrofit" in text
-    assert "Case marking is the next planned retrofit" in text
-    assert "should start from analyzer-aware candidates rather than from raw string searches" in text
+    assert "candidates_case_marking.tsv" in text
+    assert "extractor route itself is still pending" in text
+    assert "should continue to start from analyzer-aware candidates rather than from raw string searches" in text
 
 
 def test_demonstratives_candidate_file_has_required_columns():

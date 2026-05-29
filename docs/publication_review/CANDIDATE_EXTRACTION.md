@@ -6,7 +6,7 @@
 
 ## Current support
 
-Current supported topics:
+Current supported extractor topics:
 
 - `demonstratives`
 - `negation`
@@ -15,11 +15,11 @@ Current supported topics:
 
 The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, and stem alternation is now the third retrofit topic. All four use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
 
-Planned next retrofit:
+Manual candidate layer without extractor support yet:
 
 - `case_marking`
 
-Do **not** treat `case_marking` as supported until the extractor route and committed `candidates_case_marking.tsv` file actually exist.
+`output/publication_review/candidates_case_marking.tsv` now exists as a manually curated candidate layer, but do **not** treat `case_marking` as a supported extractor topic until the extractor route itself exists.
 
 ## Required input
 
