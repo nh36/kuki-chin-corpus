@@ -28,8 +28,10 @@ Two uncertainties remain explicit in the bibliography. The exact venue and year 
 
 # Recommended next editorial task
 
-The next task should still be reviewing this case-marking slice itself rather than moving on to a new section. The specific questions are now clearer: how narrowly the packet should continue to gate `-in`, whether `-panin` should remain a cautious source-marking entry, how strongly the final chapter should foreground relator nouns, and how much weight to give analyzer POS/export labels when they look flatter than the editorial analysis.
+The immediate case-marking alignment pass is now complete. The remaining questions are still real, but they are controlled design decisions rather than blockers: how narrowly the packet should continue to gate `-in`, whether `-panin` should remain a cautious source-marking entry, how strongly the final chapter should foreground relator nouns, and how much weight to give analyzer POS/export labels when they look flatter than the editorial analysis.
+
+At the current slice maturity level, case marking is ready for human review. Any later clarifications should continue to be routed through `candidates_case_marking.tsv` and `dossier_case_marking.md` rather than by reopening the packet with new examples.
 
 # Decision for next slice
 
-This case-marking slice is now good enough to serve as the model for the next print-facing grammar and dictionary slice. The main remaining editorial question is how fully relator nouns should be integrated into the printed chapter structure, but that question is now clear enough to carry forward as a controlled design decision rather than a blocker.
+This case-marking slice is now good enough to serve as the model for the next print-facing grammar and dictionary slice. The next project task should therefore be choosing the next existing publication-review slice or grammar-report topic to retrofit, not continuing to polish case marking. The main remaining editorial question is how fully relator nouns should be integrated into the printed chapter structure, but that question is now clear enough to carry forward as a controlled design decision rather than a blocker.

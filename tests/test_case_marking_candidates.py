@@ -220,6 +220,8 @@ def test_case_marking_print_slices_align_with_candidate_layer() -> None:
     assert "dossier_case_marking.md" in review_notes_text
     assert "extractor route" in review_notes_text
     assert "LF-stable reproducible candidate output" in review_notes_text
+    assert "The immediate case-marking alignment pass is now complete." in review_notes_text
+    assert "case marking is ready for human review" in review_notes_text.lower()
     assert "ciangin" in review_notes_text
     assert "`-a`" in review_notes_text
     assert "`-panin`" in review_notes_text

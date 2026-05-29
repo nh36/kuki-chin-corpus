@@ -1,0 +1,40 @@
+# Remaining retrofit inventory
+
+This inventory is based on the current repository files under `output/publication_review/`, `docs/grammar/reports/`, `docs/grammar/`, and `tests/`. Its purpose is to separate topics that already have a candidate-first publication-review packet from report topics that still exist only as generated grammar material or analyzer/regression coverage.
+
+## Existing publication-review packets already at the candidate-first level
+
+| Topic | Publication-review grammar slice | Dictionary slice | Review notes | Dossier | Candidate TSV | Extractor support | File-backed evidence | Known ambiguity risks | Recommendation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| demonstratives/deixis | yes (`grammar_demonstratives_print_slice.md`) | yes (`dictionary_demonstratives_print_slice.md`) | yes (`review_notes_demonstratives.md`) | yes (`dossier_demonstratives.md`) | yes (`candidates_demonstratives.tsv`) | yes (`extract_candidates.py`) | `output/publication_review/`; `tests/test_demonstratives_docs.py`; `tests/test_publication_candidate_extractor.py` | `hi`, `hih ciangin`, `tua/hua`, raw-search false friends | hold stable for maintenance and human review |
+| negation | yes (`grammar_negation_print_slice.md`) | yes (`dictionary_negation_print_slice.md`) | yes (`review_notes_negation.md`) | yes (`dossier_negation.md`) | yes (`candidates_negation.tsv`) | yes (`extract_candidates.py`) | `output/publication_review/`; `tests/test_negation_candidates.py`; `tests/test_publication_candidate_extractor.py` | `kei` pronoun vs negator, `lo/loh`, `V lo uh`, negative quantifier spillover | hold stable for maintenance and human review |
+| pronouns / clusivity | yes (`grammar_pronouns_print_slice.md`) | yes (`dictionary_pronouns_print_slice.md`) | yes (`review_notes_pronouns.md`) | yes (`dossier_pronoun_clusivity.md`; `dossier_analyzer_pronoun_quality.md`) | yes (`candidates_pronouns.tsv`) | yes (`extract_candidates.py`) | `output/publication_review/`; `tests/test_pronoun_candidates.py`; `tests/test_pronoun_clusivity_docs.py`; `tests/test_pronoun_analyzer_quality.py` | unresolved `ei/eite`, possessive-vs-pronoun overlap, short-form polysemy around `ko` and `kei` | hold stable for maintenance and human review |
+| stem alternation | yes (`grammar_stem_alternation_print_slice.md`; working draft `grammar_stem_alternation_section_draft.md`) | yes (`dictionary_stem_alternation_print_slice.md`) | yes (`review_notes_stem_alternation.md`) | yes (`dossier_stem_alternation.md`) | yes (`candidates_stem_alternation.tsv`) | yes (`extract_candidates.py`) | `output/publication_review/`; `tests/test_stem_alternation_candidates.py`; `tests/test_stem_alternation_corpus_audit.py`; `tests/test_stem_alternation_lexical_inventory.py` | lexical-family contamination, one-sided Bible attestation, noisy questionnaire material, promotion controls | hold stable for maintenance and human review |
+| case marking | yes (`grammar_case_marking_print_slice.md`) | yes (`dictionary_case_markers_print_slice.md`) | yes (`review_notes_case_marking.md`) | yes (`dossier_case_marking.md`) | yes (`candidates_case_marking.tsv`) | yes (`extract_candidates.py`) | `output/publication_review/`; `tests/test_case_marking_candidates.py`; `tests/test_publication_candidate_extractor.py` | homographic `-in`, `-a` vs `-ah`, `panin` structural caution, relator-noun boundaries, `tawh` split, analyzer `pos_span=FUNC` caveats | hold stable for maintenance and human review; do not broaden the candidate layer |
+
+## Existing grammar-report topics without a publication-review packet yet
+
+| Topic | Publication-review grammar slice | Dictionary slice | Review notes | Dossier | Candidate TSV | Extractor support | File-backed evidence | Known ambiguity risks | Recommendation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| interrogatives | no | no | no | no | no | no | `docs/grammar/reports/09-sent-01-interrogatives.md`; `docs/grammar/reports/10-disc-01-sentence-final.md`; `tests/test_grammar_integration.py` (`interrogative-hiam`) | formulaic `Bang hang hiam ci`, lexical/non-particle `hiam`, overlap with sentence-final particles | retrofit now |
+| numerals | no | no | no | no | no | no | `docs/grammar/reports/06-func-03-numerals.md` | `kua` = nine vs `kua` = who; `khat` numeral vs indefinite; numeral/quantifier boundary | defer |
+| quantifiers | no | no | no | no | no | no | `docs/grammar/reports/06-func-05-quantifiers.md` | `khat` overlaps numerals, `kuamah/bangmah` already interact with negation, distributive vs universal scope | defer |
+| coordinators | no | no | no | no | no | no | `docs/grammar/reports/06-func-06-coordinators.md` | `le` vs `leh`, highly frequent clause-linking `a`, conditional vs coordinative readings | defer |
+| relators / postpositions | no separate slice; covered inside case marking | no separate slice; covered inside case marking | no separate note | no separate dossier | no separate TSV | no | `docs/grammar/reports/03-noun-04-relators.md`; `docs/grammar/reports/03-noun-05-postpositions.md`; current case-marking packet | overlaps heavily with the current case-marking packet, attached vs separate `pan/panin/tawh`, relator-vs-case boundary | defer and keep folded into case-marking maintenance |
+| sentence-final particles | no | no | no | no | no | no | `docs/grammar/reports/10-disc-01-sentence-final.md` | `hi` copula vs declarative particle, `hiam` overlap with interrogatives, imperative/jussive particles in the same clause-final domain | defer |
+| broad TAM / aspect / modal | no | no | no | no | no | no | `docs/grammar/reports/05-verb-04-tam.md`; `tests/test_habitual_markers.py`; `tests/test_vp_slots.py` | broad stacked verbal morphology, high interaction with derivation and directionals, not a narrow next slice | defer |
+| directionals | no | no | no | no | no | no | `docs/grammar/reports/05-verb-06-directional.md`; `tests/test_directional_suffixes.py`; `tests/test_vp_slots.py` | polysemous `-toh` (UP vs comitative), overlap with broad VP-slot machinery and with case-marking/comitative prose | defer |
+
+## Deferred future or non-slice topics
+
+| Topic | Current file-backed status | Recommendation |
+| --- | --- | --- |
+| chrestomathy | no current publication-review slice, dossier, or candidate TSV was located in `output/publication_review/` or `docs/grammar/reports/` during this inventory pass | defer; not yet a publication-review topic |
+| Mizo/lus | appears in repository progress/bootstrap materials rather than in the Tedim publication-review packet inventory | defer; not a Tedim publication-review retrofit target |
+| other Kuki-Chin languages | no parallel publication-review packet inventory was located under the inspected Tedim publication-review/report directories | defer; keep out of scope until explicitly chosen |
+
+## Recommendation
+
+All existing publication-review packets have now been brought to the current candidate-first level. The next substantive task should therefore be a deliberately chosen new retrofit topic rather than more polishing of demonstratives, negation, pronouns / clusivity, stem alternation, or case marking.
+
+Among the existing grammar-report topics, **interrogatives** is the strongest next candidate for a narrow retrofit. It already has a generated report, it already has explicit safety controls in `tests/test_grammar_integration.py`, and its ambiguity profile is clearer and narrower than broad TAM or directionals. Broad TAM, directionals, chrestomathy, Mizo/lus, and other non-Tedim or non-slice work should remain deferred until they are chosen intentionally as a new scope.

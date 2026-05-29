@@ -141,7 +141,7 @@ And to `scripts/`:
 - The pronoun grammar slice, dictionary slice, and review notes have been created in `output/publication_review/`.
 - A separate pronoun clusivity dossier has been created at `output/publication_review/dossier_pronoun_clusivity.md`.
 - A safe partial correction is now in place: `ko/kote` is treated as exclusive, while `ei/eite` remains under review pending further evidence.
-- Demonstratives/deixis remains the protocol-backed pilot topic.
+- Demonstratives/deixis remains the protocol-backed pilot topic and is now a maintenance/human-review topic at the publication-review evidence layer.
 - The negation evidence dossier at `output/publication_review/dossier_negation.md` has now been converted into a synchronized grammar slice, dictionary slice, review notes, a corrected generated-report caveat, and an analyzer-aware candidate file at `output/publication_review/candidates_negation.tsv`.
 - The negation packet treats `lo`, `loh`, and `kei` as part of one negation system, and Genesis 2:25 plus the old `V lo uh` prohibitive analysis now remain blocked both in packet prose and in the new candidate layer.
 - The negation candidate retrofit has now been hardened with explicit notes for analyzer/export caveats such as `Loh`/`Nadingin` export artifacts, `Nawn` as a `PROP`-like lemma/POS value, and the excluded Genesis 2:25 `uh` row.
@@ -160,11 +160,11 @@ And to `scripts/`:
 - Stem alternation now has a tracked lexical inventory, promotable examples table, manual promotion review, citation shortlist, syntactic-context matrix, and pair-discussion plan.
 - Stem alternation now also has a first working prose draft at `output/publication_review/grammar_stem_alternation_section_draft.md`.
 - Stem alternation is now ready for human review at the current slice maturity level and should not be further polished until other slices catch up.
-- Case marking now has a first analyzer-aware candidate layer at `output/publication_review/candidates_case_marking.tsv`, covering ergative `-in`, locative `-ah`, source `-pan` / `-panin`, comitative/material `-tawh`, and relator-noun-plus-case constructions without yet reopening the older slice prose.
+- Case marking has now been retrofitted through `output/publication_review/candidates_case_marking.tsv`, `output/publication_review/dossier_case_marking.md`, a curated extractor route, LF-stable reproducible candidate output, aligned grammar and dictionary slices, updated review notes, and tests protecting the main distinctions.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
-- Case marking already exists as a grammar review slice and review-note layer, and it also has a dictionary slice under the older filename `output/publication_review/dictionary_case_markers_print_slice.md`, but it predates the candidate-first workflow.
+- Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, and case marking are now maintenance/human-review topics at the publication-review evidence layer.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- The next substantive publication-review retrofit is now the case-marking candidate layer.
+- The next substantive publication-review task is now to inventory the remaining existing slices and reports, then choose the next retrofit target deliberately.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -197,8 +197,8 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Use the new case-marking candidate layer to review the existing case-marking packet conservatively.
-2. [ ] Keep stem alternation stable pending human review.
+1. [ ] Inventory the remaining existing publication-review slices and grammar reports, then choose the next retrofit target deliberately.
+2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, and case marking stable for maintenance and human review.
 3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 
 ---
