@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CANDIDATES_PATH = ROOT / "output/publication_review/candidates_case_marking.tsv"
+DOSSIER_PATH = ROOT / "output/publication_review/dossier_case_marking.md"
 GRAMMAR_PATH = ROOT / "output/publication_review/grammar_case_marking_print_slice.md"
 DICTIONARY_PATH = ROOT / "output/publication_review/dictionary_case_markers_print_slice.md"
 PROGRESS_PATH = ROOT / "PROGRESS.md"
@@ -138,3 +139,39 @@ def test_case_marking_slice_files_remain_stable_and_progress_mentions_untracked_
     assert "generated locally and intentionally untracked" in progress_text
     assert "`stem_alternation_environment_summary.tsv`, `stem_alternation_pair_summary.tsv`, and `stem_alternation_example_matrix.tsv`" in progress_text
     assert "stem_alternation_corpus_audit.tsv` is generated locally and intentionally untracked" in progress_text
+
+
+def test_case_marking_dossier_exists_and_describes_manual_candidate_layer():
+    text = DOSSIER_PATH.read_text(encoding="utf-8")
+
+    assert DOSSIER_PATH.exists()
+    assert "candidates_case_marking.tsv" in text
+    assert "manually curated analyzer-aware candidate layer" in text
+    assert "not" in text.lower() and "supported extractor topic" in text.lower()
+    assert "`case_marking`" in text
+
+
+def test_case_marking_dossier_routes_key_claims_conservatively():
+    text = DOSSIER_PATH.read_text(encoding="utf-8")
+    lower_text = text.lower()
+
+    assert "Kain in" in text
+    assert "Genesis 4:3" in text
+    assert "ciangin" in text
+    assert "ambiguity-control row" in lower_text
+    assert "not as a case example" in lower_text
+
+    assert "`-a`" in text
+    assert "deferred" in lower_text
+    assert "does **not** promote `-a`" in text or "do **not** promote `-a`" in text
+
+    assert "panin" in lower_text
+    assert "print-usable with caveat" in lower_text
+    assert "not the final structural analysis" in lower_text or "should not force a fully settled compositional analysis" in lower_text
+
+    assert "accompaniment" in lower_text
+    assert "material or instrumental" in lower_text or "material or means" in lower_text
+    assert "plain noun-plus-locative" in lower_text
+    assert "relator-noun-plus-case" in lower_text
+    assert "pos_span=func" in lower_text
+    assert "export limitation" in lower_text

@@ -34,7 +34,7 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "stem_alternation_example_matrix.tsv" in text
     assert "working prose draft" in text or "grammar_stem_alternation_section_draft.md" in text
     assert "dictionary_case_markers_print_slice.md" in text
-    assert "no standalone dossier" in text or "no dossier located" in text
+    assert "dossier_case_marking.md" in text
 
 
 def test_progress_marks_case_marking_as_next_retrofit_and_stem_as_review_ready():
