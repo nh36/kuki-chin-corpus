@@ -126,6 +126,8 @@ Stem alternation is now the third completed retrospective retrofit at the public
 
 Case marking has now joined the same retrofit path. It is still an older slice family, but it now has an analyzer-aware `candidates_case_marking.tsv` layer plus a curated extractor route. That route remains intentionally narrow rather than a broad automatic case-marker search, and case-marking work should continue to start from analyzer-aware candidates rather than from raw string searches, especially for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions.
 
+Interrogatives is now the next narrow retrofit in progress. Its first analyzer-aware `candidates_interrogatives.tsv` layer is also curated rather than broad discovery: it focuses on clause-final `hiam`, selected WH-question windows (`bang`, `kua`, `bangci`, `banghangin`), embedded-question material kept under review, and explicit blocked false friends such as formulaic `Bang hang hiam cih leh` and lexical/non-interrogative `a hiam ...` rows.
+
 ## Pilot topic: demonstratives/deixis
 
 The first pilot under this protocol is `output/publication_review/candidates_demonstratives.tsv`.

@@ -10,11 +10,12 @@ Current supported extractor topics:
 
 - `demonstratives`
 - `case_marking`
+- `interrogatives`
 - `negation`
 - `pronouns`
 - `stem_alternation`
 
-The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, stem alternation is the third retrofit topic, and case marking is now extractor-supported through the same curated candidate route. All five use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
+The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, stem alternation is the third retrofit topic, case marking is now extractor-supported through the same curated candidate route, and interrogatives has now joined that supported set through a narrow curated route. All six use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
 
 ## Required input
 
@@ -50,6 +51,12 @@ Regenerate the case-marking candidate file:
 python3 scripts/publication_review/extract_candidates.py case_marking
 ```
 
+Regenerate the interrogatives candidate file:
+
+```bash
+python3 scripts/publication_review/extract_candidates.py interrogatives
+```
+
 Regenerate the negation candidate file:
 
 ```bash
@@ -72,6 +79,7 @@ Expected output:
 
 - `output/publication_review/candidates_demonstratives.tsv`
 - `output/publication_review/candidates_case_marking.tsv`
+- `output/publication_review/candidates_interrogatives.tsv`
 - `output/publication_review/candidates_negation.tsv`
 - `output/publication_review/candidates_pronouns.tsv`
 - `output/publication_review/candidates_stem_alternation.tsv`
@@ -103,9 +111,11 @@ In other words, stem alternation now has both:
 
 Case marking follows a different pattern from stem alternation. It is not a broad verb-pair distributional audit, and the extractor route is deliberately narrow: it reproduces a curated candidate TSV for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions rather than doing a broad automatic case-marker search. Relator nouns should not be flattened into bare case suffixes in the candidate layer.
 
+Interrogatives follows the same curated pattern. It is **not** a broad automatic search for all `hiam`, `bang`, or `kua` hits. The route preserves accepted clause-final `hiam` and selected WH-question windows, keeps embedded-question material visible without promoting it too quickly, and includes explicit blocked false friends such as formulaic `Bang hang hiam cih leh`, lexical `a hiam ...` material, and bang-family noise like `bangmah` or `bangin`. Comparison particles `maw`, `ham`, and `em` remain deferred until the core `hiam` and WH evidence is stable.
+
 ## What the current extractor does
 
-For the current demonstratives, case-marking, negation, pronoun, and stem-alternation layers, the extractor:
+For the current demonstratives, case-marking, interrogatives, negation, pronoun, and stem-alternation layers, the extractor:
 
 1. loads `data/ctd_analysis/tokens.tsv`;
 2. looks up curated verse/token windows;
@@ -135,4 +145,4 @@ In practice, that means adding:
 
 ## Why the current layers are curated
 
-The first demonstratives implementation, the first negation retrofit, the first pronoun retrofit, and the first stem-alternation retrofit are intentionally curated because publication-review work needs explicit reviewable evidence rows more than it needs a broad automatic discovery engine. Future automation may expand candidate discovery, but publication-review examples must still be analyzer-backed, construction-checked, and manually reviewed before they reach print prose.
+The first demonstratives implementation, the first negation retrofit, the first pronoun retrofit, the first stem-alternation retrofit, and the current interrogatives retrofit are intentionally curated because publication-review work needs explicit reviewable evidence rows more than it needs a broad automatic discovery engine. Future automation may expand candidate discovery, but publication-review examples must still be analyzer-backed, construction-checked, and manually reviewed before they reach print prose.

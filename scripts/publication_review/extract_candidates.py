@@ -18,6 +18,7 @@ Usage:
     python3 scripts/publication_review/extract_candidates.py --list-topics
     python3 scripts/publication_review/extract_candidates.py demonstratives
     python3 scripts/publication_review/extract_candidates.py case_marking
+    python3 scripts/publication_review/extract_candidates.py interrogatives
     python3 scripts/publication_review/extract_candidates.py negation
     python3 scripts/publication_review/extract_candidates.py pronouns
     python3 scripts/publication_review/extract_candidates.py stem_alternation
@@ -34,7 +35,14 @@ ROOT = Path(__file__).resolve().parents[2]
 TOKENS_PATH = ROOT / "data" / "ctd_analysis" / "tokens.tsv"
 VERSES_PATH = ROOT / "data" / "verses_aligned.tsv"
 OUTPUT_DIR = ROOT / "output" / "publication_review"
-SUPPORTED_TOPICS = ("demonstratives", "case_marking", "negation", "pronouns", "stem_alternation")
+SUPPORTED_TOPICS = (
+    "demonstratives",
+    "case_marking",
+    "interrogatives",
+    "negation",
+    "pronouns",
+    "stem_alternation",
+)
 
 DEFAULT_CANDIDATE_COLUMNS = [
     "candidate_id",
@@ -62,6 +70,32 @@ CASE_MARKING_CANDIDATE_COLUMNS = [
     "topic",
     "construction_id",
     "marker",
+    "construction_type",
+    "verse_id",
+    "reference",
+    "surface_span",
+    "token_indices",
+    "segmentation_span",
+    "gloss_span",
+    "lemma_span",
+    "pos_span",
+    "kjv",
+    "candidate_status",
+    "confidence",
+    "print_status",
+    "why_selected",
+    "why_excluded",
+    "manual_review_status",
+    "notes",
+]
+
+INTERROGATIVES_CANDIDATE_COLUMNS = [
+    "candidate_id",
+    "topic",
+    "construction_id",
+    "interrogative_type",
+    "question_word",
+    "particle",
     "construction_type",
     "verse_id",
     "reference",
@@ -136,6 +170,9 @@ class CandidateSpec:
     notes: str = ""
     expected_normalized: tuple[str, ...] = ()
     marker: str = ""
+    interrogative_type: str = ""
+    question_word: str = ""
+    particle: str = ""
     construction_type: str = ""
     print_status: str = ""
     token_indices_style: str = "comma"
@@ -299,6 +336,9 @@ def candidate_row(
         "topic": spec.topic,
         "construction_id": spec.construction_id,
         "marker": spec.marker,
+        "interrogative_type": spec.interrogative_type,
+        "question_word": spec.question_word,
+        "particle": spec.particle,
         "construction_type": spec.construction_type,
         "verse_id": verse_meta.verse_id,
         "reference": verse_meta.reference,
@@ -642,6 +682,216 @@ def build_case_marking_specs() -> list[CandidateSpec]:
             why_selected="Current slice and review notes treat this as material or means extension rather than ordinary accompaniment.",
             notes="Keep distinct from accompaniment so tawh is not flattened into a single undifferentiated with-category.",
             expected_normalized=("leivui", "tawh"),
+        ),
+    ]
+
+
+def build_interrogatives_specs() -> list[CandidateSpec]:
+    topic = "interrogatives"
+    return [
+        accepted_with_caveat(
+            candidate_id="int_hiam_gen24_23_awng_ding_hiam",
+            topic=topic,
+            construction_id="interrogative-hiam-yes-no",
+            reference="Genesis 24:23",
+            token_indices=(8, 9, 10, 11, 12, 13, 14, 15, 16, 17),
+            token_indices_style="range",
+            confidence="medium",
+            interrogative_type="yes_no_question",
+            particle="hiam",
+            construction_type="clause_final_hiam",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer-backed clause-final hiam yes/no question from the existing interrogatives report.",
+            notes="Use the attested yes/no clause `Na pa inn-ah kote giah nading a awng ding hiam`; do not silently back-project the report paraphrase `Inn-ah hong tum theih na hiam` onto the export.",
+            expected_normalized=("na", "pa", "inn-ah", "kote", "giah", "nading", "a", "awng", "ding", "hiam"),
+        ),
+        accepted_with_caveat(
+            candidate_id="int_kua_gen48_8_hihte_kua_ahi_hiam",
+            topic=topic,
+            construction_id="interrogative-kua",
+            reference="Genesis 48:8",
+            token_indices=(9, 10, 11, 12),
+            token_indices_style="range",
+            confidence="medium",
+            interrogative_type="content_question",
+            question_word="kua",
+            particle="hiam",
+            construction_type="wh_plus_hiam",
+            print_status="print_usable_with_caveat",
+            why_selected="Canonical who-question with clause-final hiam from the existing report.",
+            notes="The analyzer exports `kua` as NUM; treat that as an export caveat rather than rejecting the interrogative window.",
+            expected_normalized=("hihte", "kua", "ahi", "hiam"),
+        ),
+        accepted_with_caveat(
+            candidate_id="int_bang_exod16_15_bang_ahi_hiam",
+            topic=topic,
+            construction_id="interrogative-bang",
+            reference="Exodus 16:15",
+            token_indices=(10, 11, 12),
+            token_indices_style="range",
+            confidence="medium",
+            interrogative_type="content_question",
+            question_word="bang",
+            particle="hiam",
+            construction_type="wh_plus_hiam",
+            print_status="print_usable_with_caveat",
+            why_selected="Compact analyzer-backed what-question with clause-final hiam.",
+            notes="The analyzer glosses `bang` as `like`; the clause is still the report's core `Bang ahi hiam?` evidence.",
+            expected_normalized=("bang", "ahi", "hiam"),
+        ),
+        accepted(
+            candidate_id="int_bangci_gen3_13_bangci_hici_gamtat_na_hi_hiam",
+            topic=topic,
+            construction_id="interrogative-bangci",
+            reference="Genesis 3:13",
+            token_indices=(7, 8, 9, 10, 11, 12, 13),
+            token_indices_style="range",
+            confidence="high",
+            interrogative_type="content_question",
+            question_word="bangci",
+            particle="hiam",
+            construction_type="wh_plus_hiam",
+            print_status="print_ready",
+            why_selected="Clean how-question with bangci plus clause-final hiam.",
+            notes="Keep the analyzer-backed bangci window visible rather than flattening it into a generic bang example.",
+            expected_normalized=("bangci", "a", "hici", "gamtat", "na", "hi", "hiam"),
+        ),
+        accepted_with_caveat(
+            candidate_id="int_banghangin_gen4_6_mai_sia_ahi_hiam",
+            topic=topic,
+            construction_id="interrogative-banghangin",
+            reference="Genesis 4:6",
+            token_indices=(9, 10, 11, 12, 13, 14, 15),
+            token_indices_style="range",
+            confidence="medium",
+            interrogative_type="content_question",
+            question_word="banghangin",
+            particle="hiam",
+            construction_type="wh_plus_hiam",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer-backed why-question showing the banghangin reason-question family with clause-final hiam.",
+            notes="The export splits `banghangin` as `bang` + `hangin`; keep it as curated reason-question evidence rather than trusting every raw bang hit.",
+            expected_normalized=("bang", "hangin", "na", "mai", "sia", "ahi", "hiam"),
+        ),
+        accepted_with_caveat(
+            candidate_id="int_kua_2sam22_32_topa_longal_pasian_kua_hiam",
+            topic=topic,
+            construction_id="interrogative-kua",
+            reference="2 Samuel 22:32",
+            token_indices=(0, 1, 2, 3, 4),
+            token_indices_style="range",
+            confidence="medium",
+            interrogative_type="content_question",
+            question_word="kua",
+            particle="hiam",
+            construction_type="wh_plus_hiam",
+            print_status="print_usable_with_caveat",
+            why_selected="Report-backed who-question with explicit clause-final hiam.",
+            notes="As in Genesis 48:8, the analyzer tags `kua` as NUM; the interrogative reading is still clear in the full clause.",
+            expected_normalized=("topa", "longal", "pasian", "kua", "hiam"),
+        ),
+        needs_review(
+            candidate_id="int_embedded_exod16_15_bang_hiam_cih_thei_lo_uh_hi",
+            topic=topic,
+            construction_id="interrogative-embedded-bang-hiam-cih",
+            reference="Exodus 16:15",
+            token_indices=(25, 26, 27, 28, 29, 30, 31),
+            token_indices_style="range",
+            confidence="medium",
+            interrogative_type="embedded_question",
+            question_word="bang",
+            particle="hiam",
+            construction_type="embedded_bang_hiam_cih",
+            print_status="not_print_ready",
+            why_selected="Keeps embedded question material visible in the first-pass candidate layer.",
+            why_excluded="Indirect question complements need separate editorial treatment before they can be reused as ordinary clause-final hiam evidence.",
+            manual_review_status="needs_followup",
+            notes="This is useful embedded-question evidence, but it should not yet drive the first print-facing interrogatives slice.",
+            expected_normalized=("bang", "hiam", "cih", "thei", "lo", "uh", "hi"),
+        ),
+        excluded(
+            candidate_id="int_formulaic_gen3_20_bang_hang_hiam_cih_leh",
+            topic=topic,
+            construction_id="interrogative-formulaic-bang-hang-hiam-cih",
+            reference="Genesis 3:20",
+            token_indices=(9, 10, 11, 12, 13),
+            token_indices_style="range",
+            confidence="high",
+            interrogative_type="rhetorical_or_formulaic",
+            question_word="banghangin",
+            particle="hiam",
+            construction_type="formulaic_reason_expression",
+            print_status="blocked",
+            why_selected="Records the formulaic reason-expression guard already enforced in grammar integration tests.",
+            why_excluded="`Bang hang hiam cih leh` is a formulaic explanatory frame, not an ordinary clause-final hiam question for print promotion.",
+            notes="Keep this blocked so formulaic reason expressions do not leak into core interrogative examples.",
+            expected_normalized=("bang", "hang", "hiam", "cih", "leh"),
+        ),
+        excluded(
+            candidate_id="int_falsefriend_2kings11_11_a_hiam_ciat_uh",
+            topic=topic,
+            construction_id="interrogative-hiam-lexical-false-friend",
+            reference="2 Kings 11:11",
+            token_indices=(15, 16, 17, 18),
+            token_indices_style="range",
+            confidence="high",
+            interrogative_type="false_friend",
+            particle="hiam",
+            construction_type="lexical_or_noninterrogative_hiam",
+            print_status="blocked",
+            why_selected="Makes the lexical `a hiam ciat uh` blocker explicit in the publication-review workflow.",
+            why_excluded="This lexical sequence is not clause-final interrogative hiam evidence and should stay blocked.",
+            notes="Use as an explicit hiam false-friend control instead of relying only on integration-test exclusions.",
+            expected_normalized=("a", "hiam", "ciat", "uh"),
+        ),
+        excluded(
+            candidate_id="int_falsefriend_rev1_16_langnih_a_hiam_namsau",
+            topic=topic,
+            construction_id="interrogative-hiam-lexical-false-friend",
+            reference="Revelation 1:16",
+            token_indices=(10, 11, 12, 13),
+            token_indices_style="range",
+            confidence="high",
+            interrogative_type="false_friend",
+            particle="hiam",
+            construction_type="lexical_or_noninterrogative_hiam",
+            print_status="blocked",
+            why_selected="Captures the Revelation 1:16 sharp/two-edged-sword false friend already guarded by integration tests.",
+            why_excluded="The `a hiam` sequence here belongs to lexical sword description, not to interrogative particle hiam.",
+            notes="Do not treat sharp/two-edged sword contexts as interrogative evidence just because the export surfaces `hiam`.",
+            expected_normalized=("langnih", "a", "hiam", "namsau"),
+        ),
+        excluded(
+            candidate_id="int_falsefriend_gen9_21_bangmah",
+            topic=topic,
+            construction_id="interrogative-bang-false-friend",
+            reference="Genesis 9:21",
+            token_indices=(9,),
+            confidence="high",
+            interrogative_type="false_friend",
+            question_word="bang",
+            construction_type="analyzer_noise",
+            print_status="blocked",
+            why_selected="Keeps bang-family lexical noise visible in the candidate layer.",
+            why_excluded="`bangmah` is lexical/negative-polarity material, not ordinary bang interrogative evidence.",
+            notes="Blocked control row so raw bang matching does not silently treat bangmah as a what-question.",
+            expected_normalized=("bangmah",),
+        ),
+        excluded(
+            candidate_id="int_falsefriend_gen1_7_bangin",
+            topic=topic,
+            construction_id="interrogative-bang-false-friend",
+            reference="Genesis 1:7",
+            token_indices=(22,),
+            confidence="high",
+            interrogative_type="false_friend",
+            question_word="bang",
+            construction_type="analyzer_noise",
+            print_status="blocked",
+            why_selected="Keeps bang-family comparative/non-interrogative material out of the core interrogatives set.",
+            why_excluded="`bangin` is comparison-like material, not ordinary bang interrogative evidence.",
+            notes="Comparison particles `maw`, `ham`, and `em` remain deferred; this first pass stabilizes core hiam and WH evidence first.",
+            expected_normalized=("bangin",),
         ),
     ]
 
@@ -1063,6 +1313,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
         return build_demonstratives_specs()
     if topic == "case_marking":
         return build_case_marking_specs()
+    if topic == "interrogatives":
+        return build_interrogatives_specs()
     if topic == "negation":
         return build_negation_specs()
     if topic == "pronouns":
@@ -1075,6 +1327,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
 def candidate_columns(topic: str) -> list[str]:
     if topic == "case_marking":
         return CASE_MARKING_CANDIDATE_COLUMNS
+    if topic == "interrogatives":
+        return INTERROGATIVES_CANDIDATE_COLUMNS
     return DEFAULT_CANDIDATE_COLUMNS
 
 
