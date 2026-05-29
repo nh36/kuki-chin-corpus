@@ -46,7 +46,9 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "tests/test_numerals_print_slice.py" in text
     assert "dictionary_numerals_print_slice.md" in text
     assert "tests/test_numerals_dictionary_slice.py" in text
-    assert "first analyzer-aware candidate layer, curated extractor route, candidate-controlled dossier, first grammar slice, and first dictionary slice now exist; review-note work has not started yet" in text
+    assert "review_notes_numerals.md" in text
+    assert "tests/test_numerals_review_notes.py" in text
+    assert "first analyzer-aware candidate layer, curated extractor route, candidate-controlled dossier, first grammar slice, first dictionary slice, and review notes now exist; the packet is ready for human review at the current slice maturity level" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
@@ -77,10 +79,11 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "dossier_numerals.md" in text
     assert "grammar_numerals_print_slice.md" in text
     assert "dictionary_numerals_print_slice.md" in text
-    assert "The active next publication-review task is now the numerals review-note slice" in text
-    assert "Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives are now maintenance/human-review topics" in text
-    assert "1. [ ] Continue numerals through the candidate-first sequence by drafting `output/publication_review/review_notes_numerals.md` from `output/publication_review/candidates_numerals.tsv`, `output/publication_review/dossier_numerals.md`, `output/publication_review/grammar_numerals_print_slice.md`, and `output/publication_review/dictionary_numerals_print_slice.md`." in text
-    assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives stable for maintenance and human review." in text
+    assert "review_notes_numerals.md" in text
+    assert "ready for human review at the current slice maturity level" in text
+    assert "The next substantive publication-review task should now be a deliberately chosen next narrow retrofit target from the remaining inventory" in text
+    assert "1. [ ] Deliberately choose the next narrow publication-review retrofit target from the remaining inventory; likely candidates are quantifiers, coordinators, or sentence-final particles." in text
+    assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
     assert "review the new stem-alternation corpus audit against the packet prose before moving to case marking" not in lower_text
@@ -111,7 +114,8 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
     assert "dossier_numerals.md" in text
     assert "grammar_numerals_print_slice.md" in text
     assert "dictionary_numerals_print_slice.md" in text
-    assert "active retrofit; candidate layer, dossier, grammar slice, and dictionary slice now exist; review notes not started" in text
+    assert "review_notes_numerals.md" in text
+    assert "hold stable for maintenance and human review" in text
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
         assert deferred in text
