@@ -61,6 +61,7 @@ Candidate files are the working evidence layer between analyzer export and the d
   - `output/publication_review/candidates_negation.tsv`
   - `output/publication_review/candidates_interrogatives.tsv`
   - `output/publication_review/candidates_numerals.tsv`
+  - `output/publication_review/candidates_quantifiers.tsv`
 
 Candidate files may include both accepted and rejected rows. Excluded or deferred rows are not noise; they document where raw discovery overgenerated or where analyzer-aware review blocked a tempting but unsafe example.
 
@@ -130,7 +131,9 @@ Case marking has now joined the same retrofit path. It is still an older slice f
 
 Interrogatives is now a completed narrow retrofit packet under this workflow. Its analyzer-aware `candidates_interrogatives.tsv` layer remains curated rather than broad discovery: it focuses on clause-final `hiam`, selected WH-question windows (`bang`, `kua`, `bangci`, `banghangin`), embedded-question material kept under review, and explicit blocked false friends such as formulaic `Bang hang hiam cih leh` and lexical/non-interrogative `a hiam ...` rows.
 
-Numerals is now the next narrow retrofit in progress. Its first analyzer-aware `candidates_numerals.tsv` layer is curated rather than a broad automatic numeral search: it keeps a small set of clean analyzer-backed counting windows, blocks interrogative `kua = who` as a numeral false friend, keeps `khat` on the numeral-versus-indefinite boundary, and defers report-like distributive material when the current export does not preserve the expected reduplication cleanly.
+Numerals is now a completed current-slice packet under this workflow. Its curated `candidates_numerals.tsv` layer now sits under `dossier_numerals.md`, `grammar_numerals_print_slice.md`, `dictionary_numerals_print_slice.md`, and `review_notes_numerals.md`; it blocks interrogative `kua = who` as a numeral false friend, keeps `khat` on the numeral-versus-indefinite boundary, and is ready for human review at the current slice maturity level.
+
+Quantifiers is now the next narrow retrofit in progress. Its first analyzer-aware `candidates_quantifiers.tsv` layer is curated rather than a broad automatic quantifier search: it keeps a small set of clean analyzer-backed `khempeuh`, `pawlkhat`, `kuamah`, `bangmah`, and `tampi` rows, preserves overlap controls for `khat`, `kuamah`, and bang-family `bangmah`, and defers noisier `peuhpeuh` / `tawm` material until cleaner analyzer-backed evidence is available.
 
 ## Pilot topic: demonstratives/deixis
 

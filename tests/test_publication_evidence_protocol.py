@@ -39,7 +39,7 @@ def test_publication_evidence_protocol_exists():
     assert PROTOCOL_PATH.exists()
 
 
-def test_publication_evidence_protocol_marks_case_marking_interrogatives_and_numerals_as_curated_retrofits():
+def test_publication_evidence_protocol_marks_case_marking_interrogatives_numerals_and_quantifiers_as_curated_retrofits():
     text = PROTOCOL_PATH.read_text(encoding="utf-8")
 
     assert "third completed retrospective retrofit" in text
@@ -51,10 +51,13 @@ def test_publication_evidence_protocol_marks_case_marking_interrogatives_and_num
     assert "candidates_interrogatives.tsv" in text
     assert "focuses on clause-final `hiam`, selected WH-question windows" in text
     assert "explicit blocked false friends" in text
-    assert "Numerals is now the next narrow retrofit in progress." in text
+    assert "Numerals is now a completed current-slice packet under this workflow." in text
     assert "candidates_numerals.tsv" in text
     assert "blocks interrogative `kua = who` as a numeral false friend" in text
     assert "keeps `khat` on the numeral-versus-indefinite boundary" in text
+    assert "Quantifiers is now the next narrow retrofit in progress." in text
+    assert "candidates_quantifiers.tsv" in text
+    assert "preserves overlap controls for `khat`, `kuamah`, and bang-family `bangmah`" in text
 
 
 def test_demonstratives_candidate_file_has_required_columns():

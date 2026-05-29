@@ -49,6 +49,9 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "review_notes_numerals.md" in text
     assert "tests/test_numerals_review_notes.py" in text
     assert "first analyzer-aware candidate layer, curated extractor route, candidate-controlled dossier, first grammar slice, first dictionary slice, and review notes now exist; the packet is ready for human review at the current slice maturity level" in text
+    assert "candidates_quantifiers.tsv" in text
+    assert "tests/test_quantifiers_candidates.py" in text
+    assert "the quantifiers candidate retrofit has begun" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
@@ -81,8 +84,10 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "dictionary_numerals_print_slice.md" in text
     assert "review_notes_numerals.md" in text
     assert "ready for human review at the current slice maturity level" in text
-    assert "The next substantive publication-review task should now be a deliberately chosen next narrow retrofit target from the remaining inventory" in text
-    assert "1. [ ] Deliberately choose the next narrow publication-review retrofit target from the remaining inventory; likely candidates are quantifiers, coordinators, or sentence-final particles." in text
+    assert "candidates_quantifiers.tsv" in text
+    assert "the candidate retrofit has begun with explicit overlap controls for `khat`, `kuamah`, and bang-family `bangmah`" in text
+    assert "The quantifiers candidate retrofit has now begun" in text
+    assert "1. [ ] Continue the quantifiers retrofit from the new candidate layer into the next candidate-first stage without broadening into coordinators, sentence-final particles, or broad degree/intensifier prose." in text
     assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
@@ -116,6 +121,8 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
     assert "dictionary_numerals_print_slice.md" in text
     assert "review_notes_numerals.md" in text
     assert "hold stable for maintenance and human review" in text
+    assert "candidates_quantifiers.tsv" in text
+    assert "active narrow retrofit; the quantifiers candidate layer has begun" in text
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
         assert deferred in text

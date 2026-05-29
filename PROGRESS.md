@@ -163,10 +163,11 @@ And to `scripts/`:
 - Case marking has now been retrofitted through `output/publication_review/candidates_case_marking.tsv`, `output/publication_review/dossier_case_marking.md`, a curated extractor route, LF-stable reproducible candidate output, aligned grammar and dictionary slices, updated review notes, and tests protecting the main distinctions.
 - Interrogatives now has `output/publication_review/candidates_interrogatives.tsv`, a curated extractor route, a first interpretive dossier at `output/publication_review/dossier_interrogatives.md`, a first grammar print slice at `output/publication_review/grammar_interrogatives_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_interrogatives_print_slice.md`, and review notes at `output/publication_review/review_notes_interrogatives.md`; the packet stays controlled by the candidate/dossier layer and is now ready for human review at the current slice maturity level.
 - Numerals now has `output/publication_review/candidates_numerals.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, a first interpretive dossier at `output/publication_review/dossier_numerals.md`, a first grammar print slice at `output/publication_review/grammar_numerals_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_numerals_print_slice.md`, and review notes at `output/publication_review/review_notes_numerals.md`; the packet stays controlled by the candidate/dossier/print-slice layer, keeps `kua = who` blocked as a numeral false friend, keeps `khat` on the numeral/indefinite boundary, and is now ready for human review at the current slice maturity level.
+- Quantifiers now has `output/publication_review/candidates_quantifiers.tsv` plus curated extractor support in `scripts/publication_review/extract_candidates.py`; the candidate retrofit has begun with explicit overlap controls for `khat`, `kuamah`, and bang-family `bangmah`, while dossier and print-slice work remain to be done.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives are now maintenance/human-review topics at the publication-review evidence layer.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- The next substantive publication-review task should now be a deliberately chosen next narrow retrofit target from the remaining inventory rather than more numerals polishing; likely deferred candidates include quantifiers, coordinators, and sentence-final particles, while broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
+- The quantifiers candidate retrofit has now begun; coordinators and sentence-final particles remain later narrow candidates, while broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -199,12 +200,12 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Deliberately choose the next narrow publication-review retrofit target from the remaining inventory; likely candidates are quantifiers, coordinators, or sentence-final particles.
+1. [ ] Continue the quantifiers retrofit from the new candidate layer into the next candidate-first stage without broadening into coordinators, sentence-final particles, or broad degree/intensifier prose.
 2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review.
-3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
+3. [ ] Keep coordinators, sentence-final particles, broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while quantifiers remains the active narrow retrofit.
 
 ---
 
-*Last updated: 2026-05-28*  
+*Last updated: 2026-05-29*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*

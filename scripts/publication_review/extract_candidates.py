@@ -3,8 +3,8 @@
 Extract analyzer-aware publication-review candidate files.
 
 This script establishes a reusable scaffold for publication-review evidence
-work. The current pilot topic is demonstratives/deixis, using the exported
-Tedim token analysis in data/ctd_analysis/tokens.tsv.
+work. The supported topics use curated analyzer-backed verse windows from the
+exported Tedim token analysis in data/ctd_analysis/tokens.tsv.
 
 Extension pattern:
     - build_<topic>_specs() defines curated CandidateSpec rows for one topic.
@@ -22,6 +22,7 @@ Usage:
     python3 scripts/publication_review/extract_candidates.py numerals
     python3 scripts/publication_review/extract_candidates.py negation
     python3 scripts/publication_review/extract_candidates.py pronouns
+    python3 scripts/publication_review/extract_candidates.py quantifiers
     python3 scripts/publication_review/extract_candidates.py stem_alternation
 """
 
@@ -43,6 +44,7 @@ SUPPORTED_TOPICS = (
     "numerals",
     "negation",
     "pronouns",
+    "quantifiers",
     "stem_alternation",
 )
 
@@ -143,6 +145,31 @@ NUMERALS_CANDIDATE_COLUMNS = [
     "notes",
 ]
 
+QUANTIFIERS_CANDIDATE_COLUMNS = [
+    "candidate_id",
+    "topic",
+    "construction_id",
+    "quantifier_type",
+    "quantifier_form",
+    "construction_type",
+    "verse_id",
+    "reference",
+    "surface_span",
+    "token_indices",
+    "segmentation_span",
+    "gloss_span",
+    "lemma_span",
+    "pos_span",
+    "kjv",
+    "candidate_status",
+    "confidence",
+    "print_status",
+    "why_selected",
+    "why_excluded",
+    "manual_review_status",
+    "notes",
+]
+
 REQUIRED_TOKEN_COLUMNS = {
     "verse_id",
     "token_index",
@@ -204,6 +231,8 @@ class CandidateSpec:
     numeral_type: str = ""
     numeral_value: str = ""
     numeral_form: str = ""
+    quantifier_type: str = ""
+    quantifier_form: str = ""
     construction_type: str = ""
     print_status: str = ""
     token_indices_style: str = "comma"
@@ -373,6 +402,8 @@ def candidate_row(
         "numeral_type": spec.numeral_type,
         "numeral_value": spec.numeral_value,
         "numeral_form": spec.numeral_form,
+        "quantifier_type": spec.quantifier_type,
+        "quantifier_form": spec.quantifier_form,
         "construction_type": spec.construction_type,
         "verse_id": verse_meta.verse_id,
         "reference": verse_meta.reference,
@@ -1088,6 +1119,191 @@ def build_numerals_specs() -> list[CandidateSpec]:
     ]
 
 
+def build_quantifiers_specs() -> list[CandidateSpec]:
+    topic = "quantifiers"
+    return [
+        accepted(
+            candidate_id="quant_univ_gen2_1_khempeuh",
+            topic=topic,
+            construction_id="quantifier-khempeuh",
+            reference="Genesis 2:1",
+            token_indices=(3, 4, 5, 6, 7, 8, 9),
+            token_indices_style="range",
+            confidence="high",
+            quantifier_type="universal",
+            quantifier_form="khempeuh",
+            construction_type="noun_plus_khempeuh",
+            print_status="print_ready",
+            why_selected="Analyzer confirms `khempeuh` in a clean scoped noun phrase, giving the packet a conservative universal anchor.",
+            notes="Keep this as the core universal row rather than importing generated-report frequency counts or broad raw `khempeuh` searches.",
+            expected_normalized=("vantung", "leitung", "le", "a", "sunga", "omte", "khempeuh"),
+        ),
+        accepted_with_caveat(
+            candidate_id="quant_exist_gen32_8_pawlkhat",
+            topic=topic,
+            construction_id="quantifier-pawlkhat",
+            reference="Genesis 32:8",
+            token_indices=(7,),
+            confidence="medium",
+            quantifier_type="existential",
+            quantifier_form="pawlkhat",
+            construction_type="pawlkhat_partitive",
+            print_status="print_usable_with_caveat",
+            why_selected="The generated-report Esau contingency verse still yields a clean analyzer-backed `pawlkhat` token and preserves the partitive or alternative-grouping reading the packet needs.",
+            notes="Treat as partitive or alternative-grouping evidence (`one company ... the other company`), not as an uncomplicated bare `some` entry. The opening `Pawlkhatah` token in this verse remains noisy in the current export, so the clean control token is the later `pawlkhat`.",
+            expected_normalized=("pawlkhat",),
+        ),
+        accepted_with_caveat(
+            candidate_id="quant_boundary_gen32_24_mi_khat",
+            topic=topic,
+            construction_id="quantifier-khat-boundary",
+            reference="Genesis 32:24",
+            token_indices=(9, 10),
+            token_indices_style="range",
+            confidence="medium",
+            quantifier_type="numeral_indefinite_boundary",
+            quantifier_form="khat",
+            construction_type="khat_indefinite_boundary",
+            print_status="print_usable_with_caveat",
+            why_selected="`mi khat` is the clearest familiar analyzer-backed `khat` row, but it sits on the numeral-versus-indefinite boundary that quantifier work must keep explicit.",
+            notes="Boundary evidence only: reuse the already-audited numerals row so quantifiers does not silently absorb numeral `one` as an uncomplicated article-like quantifier.",
+            expected_normalized=("mi", "khat"),
+        ),
+        accepted_with_caveat(
+            candidate_id="quant_neg_exod2_12_kuamah",
+            topic=topic,
+            construction_id="quantifier-kuamah",
+            reference="Exodus 2:12",
+            token_indices=(4, 5, 6),
+            token_indices_style="range",
+            confidence="high",
+            quantifier_type="negative_quantifier",
+            quantifier_form="kuamah",
+            construction_type="negative_quantifier_kuamah",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer confirms `kuamah mu lo` in a true negative clause, giving the packet a controlled negative-quantifier row without reopening the negation slice.",
+            notes="Negation-overlap caveat: keep this as quantifier evidence only in the licensed negative clause; cross-reference the stabilized negation packet instead of re-arguing `lo` here.",
+            expected_normalized=("kuamah", "mu", "lo"),
+        ),
+        accepted_with_caveat(
+            candidate_id="quant_neg_gen39_9_bangmah",
+            topic=topic,
+            construction_id="quantifier-bangmah",
+            reference="Genesis 39:9",
+            token_indices=(25, 26, 27, 28),
+            token_indices_style="range",
+            confidence="high",
+            quantifier_type="negative_quantifier",
+            quantifier_form="bangmah",
+            construction_type="negative_quantifier_bangmah",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer confirms `bangmah om lo hi` as a negative-existential or negative-quantifier clause with a compact analyzer-backed span.",
+            notes="Keep both cautions explicit: this row depends on clear negative licensing, and it must not override interrogative-packet controls on other bang-family material.",
+            expected_normalized=("bangmah", "om", "lo", "hi"),
+        ),
+        accepted_with_caveat(
+            candidate_id="quant_degree_gen17_2_tampi_tak",
+            topic=topic,
+            construction_id="quantifier-tampi",
+            reference="Genesis 17:2",
+            token_indices=(8, 9),
+            token_indices_style="range",
+            confidence="high",
+            quantifier_type="degree",
+            quantifier_form="tampi",
+            construction_type="degree_tampi",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer confirms `tampi tak` as a compact quantity or degree row for the first quantifiers pass.",
+            notes="Keep as quantity or degree evidence only; do not let this first pass broaden into a general adjective or adverb chapter.",
+            expected_normalized=("tampi", "tak"),
+        ),
+        accepted_with_caveat(
+            candidate_id="quant_comp_gen26_16_zaw",
+            topic=topic,
+            construction_id="quantifier-zaw",
+            reference="Genesis 26:16",
+            token_indices=(18, 19),
+            token_indices_style="range",
+            confidence="medium",
+            quantifier_type="comparative",
+            quantifier_form="zaw",
+            construction_type="comparative_zaw",
+            print_status="print_usable_with_caveat",
+            why_selected="A short analyzer-backed `vanglian zaw` span keeps one comparative boundary row visible without overextending the packet.",
+            notes="Comparative caveat: retain only as a compact edge case; do not expand quantifiers into a general comparison chapter.",
+            expected_normalized=("vanglian", "zaw"),
+        ),
+        accepted_with_caveat(
+            candidate_id="quant_int_gen13_2_hau_mahmah",
+            topic=topic,
+            construction_id="quantifier-mahmah",
+            reference="Genesis 13:2",
+            token_indices=(6, 7),
+            token_indices_style="range",
+            confidence="medium",
+            quantifier_type="intensifier",
+            quantifier_form="mahmah",
+            construction_type="intensifier_mahmah",
+            print_status="print_usable_with_caveat",
+            why_selected="A compact `hau mahmah` span keeps intensifier material explicit without pretending this packet now covers full intensifier syntax.",
+            notes="Intensifier caveat: useful as a boundary row, not as the start of a broad degree-modification chapter.",
+            expected_normalized=("hau", "mahmah"),
+        ),
+        deferred(
+            candidate_id="quant_dist_gen31_32_mi_peuhpeuh",
+            topic=topic,
+            construction_id="quantifier-peuhpeuh",
+            reference="Genesis 31:32",
+            token_indices=(4, 5),
+            token_indices_style="range",
+            confidence="medium",
+            quantifier_type="distributive_universal",
+            quantifier_form="peuhpeuh",
+            construction_type="peuhpeuh_distributive",
+            print_status="not_print_ready",
+            why_selected="The report mentions `peuhpeuh`, so the candidate layer keeps one clean analyzer-backed span visible instead of losing track of the form entirely.",
+            why_excluded="The current clean window `mi peuhpeuh` behaves more like free-choice or `whoever / any person` material than a settled distributive-universal anchor, so it is deferred.",
+            manual_review_status="needs_followup",
+            notes="Defer rather than manufacturing a cleaner distributive example from the report alone.",
+            expected_normalized=("mi", "peuhpeuh"),
+        ),
+        deferred(
+            candidate_id="quant_degree_exod16_17_tawm",
+            topic=topic,
+            construction_id="quantifier-tawm",
+            reference="Exodus 16:17",
+            token_indices=(18,),
+            confidence="low",
+            quantifier_type="degree",
+            quantifier_form="tawm",
+            construction_type="degree_tawm",
+            print_status="not_print_ready",
+            why_selected="The quantity-contrast verse behind report-visible `tampi ... tawm` is worth keeping in view for later quantifier work.",
+            why_excluded="The current export glosses `tawm` as `produce` and leaves the low-quantity reading too noisy for print promotion in this first pass.",
+            manual_review_status="needs_followup",
+            notes="Keep deferred until a cleaner analyzer-backed low-quantity row is available; do not infer a settled `tawm` quantifier entry from this contrast alone.",
+            expected_normalized=("tawm",),
+        ),
+        excluded(
+            candidate_id="quant_falsefriend_exod27_11_tua_bangmah_hiin",
+            topic=topic,
+            construction_id="quantifier-bangmah-false-friend",
+            reference="Exodus 27:11",
+            token_indices=(7, 8, 9),
+            token_indices_style="range",
+            confidence="high",
+            quantifier_type="false_friend",
+            quantifier_form="bangmah",
+            construction_type="interrogative_overlap_control",
+            print_status="blocked",
+            why_selected="Bang-family material already caused overgeneration in the interrogatives and negation packets, so the quantifiers layer needs one explicit blocked control.",
+            why_excluded="In `tua bangmah hi-in`, `bangmah` is not an ordinary negative quantifier; this lexicalized bang-family span cannot be promoted as quantifier evidence.",
+            notes="Interrogative-overlap control: keep this blocked so quantifiers does not absorb every `bangmah` hit that surfaces outside clear negative licensing.",
+            expected_normalized=("tua", "bangmah", "hi-in"),
+        ),
+    ]
+
+
 def build_negation_specs() -> list[CandidateSpec]:
     topic = "negation"
     return [
@@ -1513,6 +1729,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
         return build_negation_specs()
     if topic == "pronouns":
         return build_pronouns_specs()
+    if topic == "quantifiers":
+        return build_quantifiers_specs()
     if topic == "stem_alternation":
         return build_stem_alternation_specs()
     raise SystemExit(f"Unsupported topic: {topic}")
@@ -1525,6 +1743,8 @@ def candidate_columns(topic: str) -> list[str]:
         return INTERROGATIVES_CANDIDATE_COLUMNS
     if topic == "numerals":
         return NUMERALS_CANDIDATE_COLUMNS
+    if topic == "quantifiers":
+        return QUANTIFIERS_CANDIDATE_COLUMNS
     return DEFAULT_CANDIDATE_COLUMNS
 
 
