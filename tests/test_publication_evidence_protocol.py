@@ -39,7 +39,7 @@ def test_publication_evidence_protocol_exists():
     assert PROTOCOL_PATH.exists()
 
 
-def test_publication_evidence_protocol_marks_case_marking_and_interrogatives_as_curated_retrofits():
+def test_publication_evidence_protocol_marks_case_marking_interrogatives_and_numerals_as_curated_retrofits():
     text = PROTOCOL_PATH.read_text(encoding="utf-8")
 
     assert "third completed retrospective retrofit" in text
@@ -47,10 +47,14 @@ def test_publication_evidence_protocol_marks_case_marking_and_interrogatives_as_
     assert "plus a curated extractor route" in text
     assert "intentionally narrow rather than a broad automatic case-marker search" in text
     assert "should continue to start from analyzer-aware candidates rather than from raw string searches" in text
-    assert "Interrogatives is now the next narrow retrofit in progress." in text
+    assert "Interrogatives is now a completed narrow retrofit packet under this workflow." in text
     assert "candidates_interrogatives.tsv" in text
     assert "focuses on clause-final `hiam`, selected WH-question windows" in text
     assert "explicit blocked false friends" in text
+    assert "Numerals is now the next narrow retrofit in progress." in text
+    assert "candidates_numerals.tsv" in text
+    assert "blocks interrogative `kua = who` as a numeral false friend" in text
+    assert "keeps `khat` on the numeral-versus-indefinite boundary" in text
 
 
 def test_demonstratives_candidate_file_has_required_columns():

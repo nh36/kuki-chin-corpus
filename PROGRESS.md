@@ -162,10 +162,11 @@ And to `scripts/`:
 - Stem alternation is now ready for human review at the current slice maturity level and should not be further polished until other slices catch up.
 - Case marking has now been retrofitted through `output/publication_review/candidates_case_marking.tsv`, `output/publication_review/dossier_case_marking.md`, a curated extractor route, LF-stable reproducible candidate output, aligned grammar and dictionary slices, updated review notes, and tests protecting the main distinctions.
 - Interrogatives now has `output/publication_review/candidates_interrogatives.tsv`, a curated extractor route, a first interpretive dossier at `output/publication_review/dossier_interrogatives.md`, a first grammar print slice at `output/publication_review/grammar_interrogatives_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_interrogatives_print_slice.md`, and review notes at `output/publication_review/review_notes_interrogatives.md`; the packet stays controlled by the candidate/dossier layer and is now ready for human review at the current slice maturity level.
+- Numerals has now begun the same candidate-first retrofit path with `output/publication_review/candidates_numerals.tsv` and curated extractor support in `scripts/publication_review/extract_candidates.py`; the first-pass layer stays narrow, keeps `kua = who` blocked as a numeral false friend, keeps `khat` on the numeral/indefinite boundary, and does not import raw generated-report counts into print-facing prose.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives are now maintenance/human-review topics at the publication-review evidence layer.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- The active next publication-review task is now choosing the next narrow retrofit target from the remaining inventory; interrogatives is now ready for human review at the current slice maturity level.
+- The active next publication-review task is now the numerals candidate retrofit; the first analyzer-aware candidate layer now exists, but dossier and print-slice work have not started yet.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -198,8 +199,8 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Choose the next narrow retrofit target deliberately from the remaining inventory, most likely numerals, quantifiers, coordinators, or sentence-final particles.
-2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, and case marking stable for maintenance and human review.
+1. [ ] Continue numerals through the candidate-first sequence by interpreting `output/publication_review/candidates_numerals.tsv` conservatively and drafting the dossier only after the candidate layer is reviewed.
+2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives stable for maintenance and human review.
 3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the Tedim packet is expanded one narrow topic at a time.
 
 ---

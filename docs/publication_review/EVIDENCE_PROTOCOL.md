@@ -60,6 +60,7 @@ Candidate files are the working evidence layer between analyzer export and the d
   - `output/publication_review/candidates_demonstratives.tsv`
   - `output/publication_review/candidates_negation.tsv`
   - `output/publication_review/candidates_interrogatives.tsv`
+  - `output/publication_review/candidates_numerals.tsv`
 
 Candidate files may include both accepted and rejected rows. Excluded or deferred rows are not noise; they document where raw discovery overgenerated or where analyzer-aware review blocked a tempting but unsafe example.
 
@@ -89,6 +90,7 @@ Candidate files may include both accepted and rejected rows. Excluded or deferre
 ### Candidate statuses
 
 - `accepted`
+- `accepted_with_caveat`
 - `excluded`
 - `needs_review`
 - `deferred`
@@ -126,7 +128,9 @@ Stem alternation is now the third completed retrospective retrofit at the public
 
 Case marking has now joined the same retrofit path. It is still an older slice family, but it now has an analyzer-aware `candidates_case_marking.tsv` layer plus a curated extractor route. That route remains intentionally narrow rather than a broad automatic case-marker search, and case-marking work should continue to start from analyzer-aware candidates rather than from raw string searches, especially for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions.
 
-Interrogatives is now the next narrow retrofit in progress. Its first analyzer-aware `candidates_interrogatives.tsv` layer is also curated rather than broad discovery: it focuses on clause-final `hiam`, selected WH-question windows (`bang`, `kua`, `bangci`, `banghangin`), embedded-question material kept under review, and explicit blocked false friends such as formulaic `Bang hang hiam cih leh` and lexical/non-interrogative `a hiam ...` rows.
+Interrogatives is now a completed narrow retrofit packet under this workflow. Its analyzer-aware `candidates_interrogatives.tsv` layer remains curated rather than broad discovery: it focuses on clause-final `hiam`, selected WH-question windows (`bang`, `kua`, `bangci`, `banghangin`), embedded-question material kept under review, and explicit blocked false friends such as formulaic `Bang hang hiam cih leh` and lexical/non-interrogative `a hiam ...` rows.
+
+Numerals is now the next narrow retrofit in progress. Its first analyzer-aware `candidates_numerals.tsv` layer is curated rather than a broad automatic numeral search: it keeps a small set of clean analyzer-backed counting windows, blocks interrogative `kua = who` as a numeral false friend, keeps `khat` on the numeral-versus-indefinite boundary, and defers report-like distributive material when the current export does not preserve the expected reduplication cleanly.
 
 ## Pilot topic: demonstratives/deixis
 

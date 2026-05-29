@@ -19,6 +19,7 @@ Usage:
     python3 scripts/publication_review/extract_candidates.py demonstratives
     python3 scripts/publication_review/extract_candidates.py case_marking
     python3 scripts/publication_review/extract_candidates.py interrogatives
+    python3 scripts/publication_review/extract_candidates.py numerals
     python3 scripts/publication_review/extract_candidates.py negation
     python3 scripts/publication_review/extract_candidates.py pronouns
     python3 scripts/publication_review/extract_candidates.py stem_alternation
@@ -39,6 +40,7 @@ SUPPORTED_TOPICS = (
     "demonstratives",
     "case_marking",
     "interrogatives",
+    "numerals",
     "negation",
     "pronouns",
     "stem_alternation",
@@ -96,6 +98,32 @@ INTERROGATIVES_CANDIDATE_COLUMNS = [
     "interrogative_type",
     "question_word",
     "particle",
+    "construction_type",
+    "verse_id",
+    "reference",
+    "surface_span",
+    "token_indices",
+    "segmentation_span",
+    "gloss_span",
+    "lemma_span",
+    "pos_span",
+    "kjv",
+    "candidate_status",
+    "confidence",
+    "print_status",
+    "why_selected",
+    "why_excluded",
+    "manual_review_status",
+    "notes",
+]
+
+NUMERALS_CANDIDATE_COLUMNS = [
+    "candidate_id",
+    "topic",
+    "construction_id",
+    "numeral_type",
+    "numeral_value",
+    "numeral_form",
     "construction_type",
     "verse_id",
     "reference",
@@ -173,6 +201,9 @@ class CandidateSpec:
     interrogative_type: str = ""
     question_word: str = ""
     particle: str = ""
+    numeral_type: str = ""
+    numeral_value: str = ""
+    numeral_form: str = ""
     construction_type: str = ""
     print_status: str = ""
     token_indices_style: str = "comma"
@@ -339,6 +370,9 @@ def candidate_row(
         "interrogative_type": spec.interrogative_type,
         "question_word": spec.question_word,
         "particle": spec.particle,
+        "numeral_type": spec.numeral_type,
+        "numeral_value": spec.numeral_value,
+        "numeral_form": spec.numeral_form,
         "construction_type": spec.construction_type,
         "verse_id": verse_meta.verse_id,
         "reference": verse_meta.reference,
@@ -896,6 +930,164 @@ def build_interrogatives_specs() -> list[CandidateSpec]:
     ]
 
 
+def build_numerals_specs() -> list[CandidateSpec]:
+    topic = "numerals"
+    return [
+        accepted(
+            candidate_id="num_card_gen11_10_kum_nih",
+            topic=topic,
+            construction_id="numeral-nih",
+            reference="Genesis 11:10",
+            token_indices=(14, 15),
+            token_indices_style="range",
+            confidence="high",
+            numeral_type="cardinal",
+            numeral_value="2",
+            numeral_form="nih",
+            construction_type="simple_cardinal",
+            print_status="print_ready",
+            why_selected="Analyzer confirms a clean post-nominal year-counting phrase for basic cardinal `nih`.",
+            notes="Keep as plain `kum nih` evidence; this route is curated rather than a broad search for every numeral-looking token.",
+            expected_normalized=("kum", "nih"),
+        ),
+        accepted(
+            candidate_id="num_card_gen7_10_ni_sagih",
+            topic=topic,
+            construction_id="numeral-sagih",
+            reference="Genesis 7:10",
+            token_indices=(1, 2),
+            token_indices_style="range",
+            confidence="high",
+            numeral_type="cardinal",
+            numeral_value="7",
+            numeral_form="sagih",
+            construction_type="noun_plus_numeral",
+            print_status="print_ready",
+            why_selected="Analyzer confirms a short time-unit counting phrase for basic cardinal `sagih`.",
+            notes="Useful plain noun-plus-numeral evidence without broadening into a full numeral chapter.",
+            expected_normalized=("ni", "sagih"),
+        ),
+        accepted(
+            candidate_id="num_compound_gen5_9_kum_sawmkua",
+            topic=topic,
+            construction_id="numeral-sawmkua",
+            reference="Genesis 5:9",
+            token_indices=(1, 2),
+            token_indices_style="range",
+            confidence="high",
+            numeral_type="compound_cardinal",
+            numeral_value="90",
+            numeral_form="sawmkua",
+            construction_type="compound_tens",
+            print_status="print_ready",
+            why_selected="Analyzer confirms `sawmkua` as a clean compound-ten row and keeps numeral `kua = nine` visible on the numeral side of the ambiguity.",
+            notes="Use as the primary accepted numeral control showing `kua` inside a numeral compound rather than as interrogative `who`.",
+            expected_normalized=("kum", "sawmkua"),
+        ),
+        accepted_with_caveat(
+            candidate_id="num_boundary_gen32_24_mi_khat",
+            topic=topic,
+            construction_id="numeral-khat-boundary",
+            reference="Genesis 32:24",
+            token_indices=(9, 10),
+            token_indices_style="range",
+            confidence="medium",
+            numeral_type="indefinite_or_quantifier_overlap",
+            numeral_value="1",
+            numeral_form="khat",
+            construction_type="khat_indefinite_boundary",
+            print_status="print_usable_with_caveat",
+            why_selected="`mi khat` is the clearest familiar analyzer-backed `khat` row, but it sits exactly on the numeral versus indefinite boundary that the packet needs to keep explicit.",
+            notes="Treat as boundary evidence (`one person` / `a man`), not as an uncomplicated print anchor for bare numeral `one`.",
+            expected_normalized=("mi", "khat"),
+        ),
+        accepted(
+            candidate_id="num_ordinal_gen7_11_nihna",
+            topic=topic,
+            construction_id="numeral-nihna",
+            reference="Genesis 7:11",
+            token_indices=(7,),
+            confidence="high",
+            numeral_type="ordinal",
+            numeral_value="2",
+            numeral_form="nihna",
+            construction_type="ordinal_na",
+            print_status="print_ready",
+            why_selected="Analyzer confirms a clean `-na` ordinal token for the basic ordinal layer.",
+            notes="Keep the tight ordinal token instead of promoting the noisier surrounding month-day expression in this first pass.",
+            expected_normalized=("nihna",),
+        ),
+        accepted_with_caveat(
+            candidate_id="num_mult_gen31_7_sawmvei",
+            topic=topic,
+            construction_id="numeral-sawmvei",
+            reference="Genesis 31:7",
+            token_indices=(10,),
+            confidence="medium",
+            numeral_type="multiplicative",
+            numeral_value="10",
+            numeral_form="sawmvei",
+            construction_type="classifier_vei_sawm",
+            print_status="print_usable_with_caveat",
+            why_selected="Keeps a compact occurrence-counting expression in the candidate layer without trying to build the full classifier system yet.",
+            notes="The generated report paraphrases this as `vei sawm`, but the current analyzer export preserves fused `sawmvei`; keep the export-backed form as the control.",
+            expected_normalized=("sawmvei",),
+        ),
+        accepted_with_caveat(
+            candidate_id="num_large_gen5_27_kum_zakua_kum_sawmguk_kua",
+            topic=topic,
+            construction_id="numeral-large-number",
+            reference="Genesis 5:27",
+            token_indices=(7, 8, 9, 10, 11, 12, 13),
+            token_indices_style="range",
+            confidence="medium",
+            numeral_type="large_number",
+            numeral_value="969",
+            numeral_form="zakua ... sawmguk ... kua",
+            construction_type="large_number_phrase",
+            print_status="print_usable_with_caveat",
+            why_selected="Keeps biblical large-number style visible in the candidate layer and preserves a second numeral-side `kua` context without turning the first pass into a full numerals chapter.",
+            notes="The export compresses the hundred-plus-nine material into `zakua` and leaves final `kua` as a standalone token, so keep this as candidate-level large-number evidence with a visible analyzer caveat.",
+            expected_normalized=("kum", "zakua", "le", "kum", "sawmguk", "le", "kua"),
+        ),
+        excluded(
+            candidate_id="num_falsefriend_gen48_8_hihte_kua_ahi_hiam",
+            topic=topic,
+            construction_id="numeral-kua-false-friend",
+            reference="Genesis 48:8",
+            token_indices=(9, 10, 11, 12),
+            token_indices_style="range",
+            confidence="high",
+            numeral_type="false_friend",
+            numeral_form="kua",
+            construction_type="kua_who_false_friend",
+            print_status="blocked",
+            why_selected="Explicit ambiguity control so raw `kua` matching cannot pull interrogative `who` rows into the numeral packet as `nine`.",
+            why_excluded="This is the familiar interrogative `who` clause `Hihte kua ahi hiam?`, not numeral `kua = nine` evidence.",
+            notes="Reuse the already-audited interrogative window as a blocked numeral false friend instead of rediscovering it later via raw search.",
+            expected_normalized=("hihte", "kua", "ahi", "hiam"),
+        ),
+        deferred(
+            candidate_id="num_dist_gen7_2_sagih_sagih",
+            topic=topic,
+            construction_id="numeral-distributive-sagih",
+            reference="Genesis 7:2",
+            token_indices=(4,),
+            confidence="low",
+            numeral_type="distributive",
+            numeral_value="7",
+            numeral_form="sagih sagih",
+            construction_type="numeral_reduplication",
+            print_status="not_print_ready",
+            why_selected="The generated numerals report treats Genesis 7:2 as distributive `sagih sagih`, so the candidate layer needs one explicit placeholder for that tempting pattern.",
+            why_excluded="The current analyzer export preserves only a single `sagih` token in this counting span, so the expected reduplicated distributive form is not yet analyzer-backed here.",
+            manual_review_status="needs_followup",
+            notes="Keep deferred rather than importing the report's distributive wording into the candidate layer without an analyzer-confirmed repeated numeral span.",
+            expected_normalized=("sagih",),
+        ),
+    ]
+
+
 def build_negation_specs() -> list[CandidateSpec]:
     topic = "negation"
     return [
@@ -1315,6 +1507,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
         return build_case_marking_specs()
     if topic == "interrogatives":
         return build_interrogatives_specs()
+    if topic == "numerals":
+        return build_numerals_specs()
     if topic == "negation":
         return build_negation_specs()
     if topic == "pronouns":
@@ -1329,6 +1523,8 @@ def candidate_columns(topic: str) -> list[str]:
         return CASE_MARKING_CANDIDATE_COLUMNS
     if topic == "interrogatives":
         return INTERROGATIVES_CANDIDATE_COLUMNS
+    if topic == "numerals":
+        return NUMERALS_CANDIDATE_COLUMNS
     return DEFAULT_CANDIDATE_COLUMNS
 
 

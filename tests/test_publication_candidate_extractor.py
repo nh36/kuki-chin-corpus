@@ -12,6 +12,7 @@ COMMITTED_CANDIDATE_PATHS = {
     "demonstratives": ROOT / "output/publication_review/candidates_demonstratives.tsv",
     "case_marking": ROOT / "output/publication_review/candidates_case_marking.tsv",
     "interrogatives": ROOT / "output/publication_review/candidates_interrogatives.tsv",
+    "numerals": ROOT / "output/publication_review/candidates_numerals.tsv",
     "negation": ROOT / "output/publication_review/candidates_negation.tsv",
     "pronouns": ROOT / "output/publication_review/candidates_pronouns.tsv",
     "stem_alternation": ROOT / "output/publication_review/candidates_stem_alternation.tsv",
@@ -34,24 +35,29 @@ def test_candidate_extractor_lists_supported_topics():
         "demonstratives",
         "case_marking",
         "interrogatives",
+        "numerals",
         "negation",
         "pronouns",
         "stem_alternation",
     ]
 
 
-def test_candidate_extraction_doc_marks_case_marking_and_interrogatives_as_supported_but_curated():
+def test_candidate_extraction_doc_marks_case_marking_interrogatives_and_numerals_as_supported_but_curated():
     text = (ROOT / "docs/publication_review/CANDIDATE_EXTRACTION.md").read_text(encoding="utf-8")
 
     assert "Current supported extractor topics:" in text
     assert "- `case_marking`" in text
     assert "- `interrogatives`" in text
+    assert "- `numerals`" in text
     assert "extractor-supported through the same curated candidate route" in text
     assert "rather than doing a broad automatic case-marker search" in text
     assert "Relator nouns should not be flattened into bare case suffixes" in text
-    assert "interrogatives has now joined that supported set through a narrow curated route" in text
+    assert "interrogatives now has a completed narrow curated route" in text
     assert "It is **not** a broad automatic search for all `hiam`, `bang`, or `kua` hits." in text
     assert "explicit blocked false friends" in text
+    assert "numerals has now joined that supported set through its own narrow curated route" in text
+    assert "It is **not** a broad automatic search for all `khat`, `nih`, `kua`, or numeral-looking tokens." in text
+    assert "`kua` = `who` versus `kua` = `nine`" in text
 
 
 def test_committed_candidate_files_use_lf_line_endings():
@@ -61,7 +67,7 @@ def test_committed_candidate_files_use_lf_line_endings():
         assert b"\r" not in data, f"{path} contains bare CR line endings"
 
 
-@pytest.mark.parametrize("topic", ["demonstratives", "case_marking", "interrogatives", "negation", "pronouns", "stem_alternation"])
+@pytest.mark.parametrize("topic", ["demonstratives", "case_marking", "interrogatives", "numerals", "negation", "pronouns", "stem_alternation"])
 def test_candidates_are_reproducible(tmp_path, topic):
     if not TOKENS_PATH.exists():
         pytest.skip("data/ctd_analysis/tokens.tsv is absent; candidate reproducibility cannot be checked")
