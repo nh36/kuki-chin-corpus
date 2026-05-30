@@ -72,8 +72,9 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "Hold coordinators stable for human review" in text
     assert "candidates_sentence_final_particles.tsv" in text
     assert "tests/test_sentence_final_particles_candidates.py" in text
-    assert "first analyzer-aware candidate layer and curated extractor route now exist; dossier and print slices have not yet begun" in text
-    assert "Advance sentence-final particles conservatively from candidate layer to dossier" in text
+    assert "tests/test_sentence_final_particles_dossier.py" in text
+    assert "first analyzer-aware candidate layer, curated extractor route, and first candidate-controlled dossier now exist; grammar, dictionary, and review-note slices have not yet begun" in text
+    assert "Advance sentence-final particles conservatively from dossier to grammar print slice" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
@@ -120,10 +121,11 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "review_notes_coordinators.md" in text
     assert "The coordinators packet is now ready for human review at the current slice maturity level." in text
     assert "candidates_sentence_final_particles.tsv" in text
-    assert "Sentence-final particles now has `output/publication_review/candidates_sentence_final_particles.tsv` plus curated extractor support in `scripts/publication_review/extract_candidates.py`" in text
-    assert "1. [ ] Keep the new sentence-final particle candidate layer narrow and move next to a dossier only if sentence-final particles remains the chosen next packet, without reopening the now review-ready coordinators packet unless a specific reviewer-identified defect appears." in text
+    assert "dossier_sentence_final_particles.md" in text
+    assert "Sentence-final particles now has `output/publication_review/candidates_sentence_final_particles.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, and a first candidate-controlled dossier at `output/publication_review/dossier_sentence_final_particles.md`" in text
+    assert "1. [ ] Keep the sentence-final particles dossier narrow and move next to `output/publication_review/grammar_sentence_final_particles_print_slice.md` only if sentence-final particles remains the chosen next packet, without reopening the now review-ready coordinators packet unless a specific reviewer-identified defect appears." in text
     assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review." in text
-    assert "3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the sentence-final particle candidate retrofit remains the active narrow next step." in text
+    assert "3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the sentence-final particles dossier remains the active narrow next step." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
     assert "review the new stem-alternation corpus audit against the packet prose before moving to case marking" not in lower_text
@@ -171,9 +173,11 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
     assert "tests/test_coordinators_review_notes.py" in text
     assert "ready for human review at the current slice maturity level" in text
     assert "candidates_sentence_final_particles.tsv" in text
+    assert "dossier_sentence_final_particles.md" in text
     assert "tests/test_sentence_final_particles_candidates.py" in text
-    assert "active narrow candidate stage only; dossier and print slices have not yet begun" in text
-    assert "sentence-final particle candidate retrofit has begun" in text
+    assert "tests/test_sentence_final_particles_dossier.py" in text
+    assert "active narrow dossier stage only; grammar, dictionary, and review-note slices have not yet begun" in text
+    assert "sentence-final particle dossier now exists while grammar, dictionary, and review-note slices have not yet begun" in text
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
         assert deferred in text
