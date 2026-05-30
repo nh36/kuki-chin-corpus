@@ -10,7 +10,7 @@ This is the first scoping and candidate pass for the TAM / aspect / modal packet
 
 Nearby verb-domain material matters only as boundary control. `docs/grammar/reports/05-verb-06-directional.md` and `output/publication_review/review_notes_directionals.md` help show where TAM analysis would immediately spill into directionals or broad VP-slot prose if it is not kept narrow.
 
-This dossier is therefore **not** a full TAM grammar slice. It is a conservative scoping document whose job is to identify a small curated candidate set, separate that set from overlap or deferred material, and define the safest next print-facing sub-scope. The grammar and dictionary print slices for TAM now exist, but review-note work has not yet begun.
+This dossier is therefore **not** a full TAM grammar slice. It is a conservative scoping document whose job is to identify a small curated candidate set, separate that set from overlap or deferred material, and define the safest next print-facing sub-scope. The grammar, dictionary, and review-note print slices for TAM now exist, but the packet remains a narrow first TAM packet rather than a full chapter.
 
 ## Evidence protocol
 
@@ -118,4 +118,4 @@ That slice has now been drafted at `grammar_tam_print_slice.md`. It keeps `-lai`
 
 ## Current surface status
 
-The packet now has a first TAM grammar print slice at `grammar_tam_print_slice.md` and a first TAM dictionary print slice at `dictionary_tam_print_slice.md`. `review_notes_tam.md` does **not** yet exist, and the next TAM step should be the review notes rather than a broad rewrite.
+The packet now has a first TAM grammar print slice at `grammar_tam_print_slice.md`, a first TAM dictionary print slice at `dictionary_tam_print_slice.md`, and review notes at `review_notes_tam.md`. With these aligned packet surfaces in place, the TAM packet is now ready for human review at the current slice maturity level. Any later TAM work should be reviewer-identified correction or explicit selection of a new narrow scope rather than a broad rewrite.

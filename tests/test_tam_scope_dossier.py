@@ -26,7 +26,8 @@ def test_tam_scope_dossier_keeps_candidate_layer_controlling_and_conservative() 
     assert "This dossier is therefore **not** a full TAM grammar slice." in text
     assert "Candidate rows, not generated-report raw counts and not a broad search over every TAM-looking suffix, control the dossier." in text
     assert "discovery source, not as finished print prose" in text
-    assert "review-note work has not yet begun" in text
+    assert "review-note print slices for TAM now exist" in text
+    assert "narrow first TAM packet rather than a full chapter" in text
 
 
 def test_tam_scope_dossier_separates_clean_candidates_from_overlap_and_deferred_material() -> None:
@@ -72,7 +73,7 @@ def test_tam_scope_dossier_sets_next_scope_without_claiming_later_surfaces() -> 
     assert "grammar_tam_print_slice.md" in text
     assert "dictionary_tam_print_slice.md" in text
     assert "review_notes_tam.md" in text
-    assert "does **not** yet exist" in text
     assert "The packet now has a first TAM grammar print slice" in text
     assert "first TAM dictionary print slice" in text
-    assert "the next TAM step should be the review notes rather than a broad rewrite" in text
+    assert "ready for human review at the current slice maturity level" in text
+    assert "reviewer-identified correction or explicit selection of a new narrow scope" in text
