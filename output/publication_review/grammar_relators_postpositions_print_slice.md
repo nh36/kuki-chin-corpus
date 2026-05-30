@@ -6,7 +6,7 @@ title: "Tedim Relators / Postpositions Grammar Print Slice"
 
 This is the first narrow grammar slice for Tedim relators / postpositions. It is controlled by `candidates_relators_postpositions.tsv` and `dossier_relators_postpositions_scope.md`. The generated reports `docs/grammar/reports/03-noun-04-relators.md` and `docs/grammar/reports/03-noun-05-postpositions.md` remain discovery or background sources only.
 
-The case-marking packet is the boundary control for this slice: `candidates_case_marking.tsv`, `dossier_case_marking.md`, `grammar_case_marking_print_slice.md`, `dictionary_case_markers_print_slice.md`, and `review_notes_case_marking.md` remain the main print-facing treatment of case marking. This slice is therefore not a rewrite of the case-marking packet. The relators/postpositions dictionary slice and review notes do **not** yet exist.
+The case-marking packet is the boundary control for this slice: `candidates_case_marking.tsv`, `dossier_case_marking.md`, `grammar_case_marking_print_slice.md`, `dictionary_case_markers_print_slice.md`, and `review_notes_case_marking.md` remain the main print-facing treatment of case marking. This slice is therefore not a rewrite of the case-marking packet. The relators/postpositions dictionary slice now exists at `dictionary_relators_postpositions_print_slice.md`, but review notes do **not** yet exist.
 
 # Relator nouns as relational hosts
 
@@ -43,4 +43,4 @@ Several items stay outside the first grammar slice as core claims.
 
 # Recommended next step
 
-After this grammar slice, the next step should be a relators/postpositions dictionary print slice using the same `candidates_relators_postpositions.tsv` and `dossier_relators_postpositions_scope.md`. The packet should remain narrow and case-boundary-controlled rather than broadening into a new case-marking chapter.
+After this grammar slice, the next step is `review_notes_relators_postpositions.md`, using the same `candidates_relators_postpositions.tsv`, `dossier_relators_postpositions_scope.md`, and `dictionary_relators_postpositions_print_slice.md`. The packet should remain narrow and case-boundary-controlled rather than broadening into a new case-marking chapter.

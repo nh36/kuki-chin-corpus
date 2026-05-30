@@ -86,6 +86,6 @@ def test_relators_postpositions_print_slice_does_not_claim_later_surfaces_exist(
     text = _text()
     lower = text.lower()
 
-    assert "dictionary print slice" in text
+    assert "dictionary_relators_postpositions_print_slice.md" in text
     assert "review notes do **not** yet exist" in text
     assert "review notes now exist" not in lower
