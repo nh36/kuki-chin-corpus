@@ -75,10 +75,12 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "tests/test_sentence_final_particles_dossier.py" in text
     assert "tests/test_sentence_final_particles_print_slice.py" in text
     assert "tests/test_sentence_final_particles_dictionary_slice.py" in text
+    assert "tests/test_sentence_final_particles_review_notes.py" in text
     assert "grammar_sentence_final_particles_print_slice.md" in text
     assert "dictionary_sentence_final_particles_print_slice.md" in text
-    assert "first analyzer-aware candidate layer, curated extractor route, first candidate-controlled dossier, first grammar slice, and first dictionary slice now exist; review-note work has not yet begun" in text
-    assert "Advance sentence-final particles conservatively from dictionary print slice to review notes" in text
+    assert "review_notes_sentence_final_particles.md" in text
+    assert "first analyzer-aware candidate layer, curated extractor route, first candidate-controlled dossier, first grammar slice, first dictionary slice, and review notes now exist; the packet is ready for human review at the current slice maturity level" in text
+    assert "Hold sentence-final particles stable for human review" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
@@ -128,10 +130,11 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "dossier_sentence_final_particles.md" in text
     assert "grammar_sentence_final_particles_print_slice.md" in text
     assert "dictionary_sentence_final_particles_print_slice.md" in text
-    assert "Sentence-final particles now has `output/publication_review/candidates_sentence_final_particles.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, a first candidate-controlled dossier at `output/publication_review/dossier_sentence_final_particles.md`, a first grammar print slice at `output/publication_review/grammar_sentence_final_particles_print_slice.md`, and a first dictionary print slice at `output/publication_review/dictionary_sentence_final_particles_print_slice.md`" in text
-    assert "1. [ ] Keep the sentence-final particles dictionary slice narrow and move next to `output/publication_review/review_notes_sentence_final_particles.md` only if sentence-final particles remains the chosen next packet, without reopening the now review-ready coordinators packet unless a specific reviewer-identified defect appears." in text
-    assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review." in text
-    assert "3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while the sentence-final particles dictionary slice remains the active narrow next step." in text
+    assert "review_notes_sentence_final_particles.md" in text
+    assert "Sentence-final particles now has `output/publication_review/candidates_sentence_final_particles.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, a first candidate-controlled dossier at `output/publication_review/dossier_sentence_final_particles.md`, a first grammar print slice at `output/publication_review/grammar_sentence_final_particles_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_sentence_final_particles_print_slice.md`, and review notes at `output/publication_review/review_notes_sentence_final_particles.md`" in text
+    assert "1. [ ] If publication-review retrofit work continues, choose a deliberately new scope from the remaining inventory rather than reopening the now review-ready sentence-final particles or coordinators packets unless a specific reviewer-identified defect appears." in text
+    assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, numerals, quantifiers, coordinators, and sentence-final particles stable for maintenance and human review." in text
+    assert "3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
     assert "review the new stem-alternation corpus audit against the packet prose before moving to case marking" not in lower_text
@@ -182,12 +185,14 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
     assert "dossier_sentence_final_particles.md" in text
     assert "grammar_sentence_final_particles_print_slice.md" in text
     assert "dictionary_sentence_final_particles_print_slice.md" in text
+    assert "review_notes_sentence_final_particles.md" in text
     assert "tests/test_sentence_final_particles_candidates.py" in text
     assert "tests/test_sentence_final_particles_dossier.py" in text
     assert "tests/test_sentence_final_particles_print_slice.py" in text
     assert "tests/test_sentence_final_particles_dictionary_slice.py" in text
-    assert "active narrow dictionary-slice stage only; review-note work has not yet begun" in text
-    assert "sentence-final particles dictionary print slice now exists while review-note work has not yet begun" in text
+    assert "tests/test_sentence_final_particles_review_notes.py" in text
+    assert "ready for human review at the current slice maturity level" in text
+    assert "sentence-final particles packet is now ready for human review at the current slice maturity level" in text
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
         assert deferred in text
