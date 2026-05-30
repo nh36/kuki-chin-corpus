@@ -74,7 +74,6 @@ def test_tam_print_slice_does_not_claim_later_tam_surfaces_exist() -> None:
     text = _text()
     lower = text.lower()
 
-    assert "TAM dictionary print slice" in text
-    assert "Dictionary and review-note slices have not yet begun." in text
-    assert "review_notes_tam.md" not in text
-    assert "dictionary_tam_print_slice.md" not in text
+    assert "dictionary slice now exists" in lower
+    assert "review-note work has not yet begun" in lower
+    assert "review notes now exist" not in lower

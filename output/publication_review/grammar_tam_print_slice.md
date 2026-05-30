@@ -11,7 +11,7 @@ reference-section-title: "References"
 
 This is the first narrow TAM / aspect / modal grammar slice for Tedim Chin, controlled by `candidates_tam.tsv` and `dossier_tam_scope.md`. It is not a full TAM chapter.
 
-The first-slice TAM anchors are limited to `-ngei`, `-gige`, `-zel`, `-ta`, `-zo`, `-kik`, `-ding`, and `-thei`, represented here by `paingei`, `neigige`, `paizel`, `kilawmta`, `bawlzo`, `hongpaikik`, `omding`, and `bawlthei`. This slice therefore stays with compact suffixal anchors already marked print-ready or print-usable in the candidate TSV instead of widening into broad clause-structure, sentence-final, directional, or VP-slot prose. Dictionary and review-note slices have not yet begun.
+The first-slice TAM anchors are limited to `-ngei`, `-gige`, `-zel`, `-ta`, `-zo`, `-kik`, `-ding`, and `-thei`, represented here by `paingei`, `neigige`, `paizel`, `kilawmta`, `bawlzo`, `hongpaikik`, `omding`, and `bawlthei`. This slice therefore stays with compact suffixal anchors already marked print-ready or print-usable in the candidate TSV instead of widening into broad clause-structure, sentence-final, directional, or VP-slot prose. The dictionary slice now exists, but review-note work has not yet begun.
 
 # Experiential and habitual anchors
 
@@ -51,4 +51,4 @@ These forms stay visible as overlap or deferred controls, but they do not belong
 
 # Recommended next step
 
-After this grammar slice, the next step should be a TAM dictionary print slice drafted against the same `candidates_tam.tsv` and `dossier_tam_scope.md`, not a broad TAM rewrite. Dictionary and review-note slices have not yet begun.
+After this grammar slice, the next step is the TAM dictionary print slice drafted against the same `candidates_tam.tsv` and `dossier_tam_scope.md`; that slice now exists, and review-note work has not yet begun. Broad TAM rewrite work remains out of scope.

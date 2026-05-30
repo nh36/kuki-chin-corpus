@@ -44,7 +44,6 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
 
 FORBIDDEN_NEW_PACKET_FILES = {
     "dossier_tam.md",
-    "dictionary_tam_print_slice.md",
     "review_notes_tam.md",
 }
 
@@ -131,6 +130,6 @@ def test_handoff_keeps_deferred_scopes_deferred():
         assert required in text
 
 
-def test_no_tam_dictionary_or_review_surfaces_exist_yet():
+def test_no_tam_review_surfaces_exist_yet():
     for filename in FORBIDDEN_NEW_PACKET_FILES:
         assert not (PUBLICATION_REVIEW_DIR / filename).exists()
