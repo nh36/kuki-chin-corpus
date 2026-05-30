@@ -32,6 +32,7 @@ EXPECTED_CANDIDATE_FILES = {
     "candidates_coordinators.tsv",
     "candidates_sentence_final_particles.tsv",
     "candidates_directionals.tsv",
+    "candidates_relators_postpositions.tsv",
 }
 
 RETROFIT_SEQUENCE_REVIEW_NOTES = {
