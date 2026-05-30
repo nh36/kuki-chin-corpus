@@ -169,10 +169,11 @@ And to `scripts/`:
 - A compact human-review handoff now exists at `output/publication_review/human_review_handoff.md`; it is a reviewer-orientation index only and does not start a new linguistic packet.
 - A final publication-review packet-integrity check now exists at `tests/test_publication_review_packet_integrity.py`.
 - Directionals has now reached the current review-ready slice maturity level under the curated candidate-first packet: `output/publication_review/candidates_directionals.tsv` remains the controlling evidence layer, `output/publication_review/dossier_directionals.md` remains the candidate-controlled interpretation layer, `output/publication_review/grammar_directionals_print_slice.md` remains the narrow grammar slice, `output/publication_review/dictionary_directionals_print_slice.md` remains the aligned dictionary slice, and `output/publication_review/review_notes_directionals.md` now completes the current packet without broadening into VP-slot/TAM prose. The packet keeps `-khia`, `-khiat`, `-toh`, `-lam`, `-sawn`, and `-suk` construction-controlled while leaving `-lut`, `-phei`, `-cip`, and `-tang` deferred or analyzer-noise-bound where no clean print-safe anchor is yet selected. The directionals packet is now ready for human review at the current slice maturity level.
+- Broad TAM / aspect / modal has now started only at the candidate/scoping level: `output/publication_review/candidates_tam.tsv` and `output/publication_review/dossier_tam_scope.md` isolate a small curated set of test-backed TAM anchors, clause-bound controls, and overlap rows without claiming a full TAM grammar slice, dictionary slice, or review notes.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives are now maintenance/human-review topics at the publication-review evidence layer.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- The quantifiers packet is now ready for human review at the current slice maturity level; the coordinators review notes now exist and the coordinators packet is now ready for human review at the current slice maturity level; the sentence-final particles review notes now exist and the sentence-final particles packet is now ready for human review at the current slice maturity level; and the directionals review notes now exist, so the directionals packet is also ready for human review at the current slice maturity level. Broad TAM, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
+- The quantifiers packet is now ready for human review at the current slice maturity level; the coordinators review notes now exist and the coordinators packet is now ready for human review at the current slice maturity level; the sentence-final particles review notes now exist and the sentence-final particles packet is now ready for human review at the current slice maturity level; and the directionals review notes now exist, so the directionals packet is also ready for human review at the current slice maturity level. Broad TAM now has an initial candidate/scoping packet but no TAM grammar slice, dictionary slice, or review notes yet. Chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -206,8 +207,8 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 ## Next Steps
 
 1. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, numerals, quantifiers, coordinators, sentence-final particles, and directionals stable for maintenance and human review.
-2. [ ] Do not begin a new narrow publication-review grammar packet automatically; route any later packet work through explicit scope selection after human review of the completed packets.
-3. [ ] Keep broad TAM, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope.
+2. [ ] Keep broad TAM / aspect / modal limited to the new candidate/scoping packet until a later commit explicitly drafts the first narrow TAM grammar slice.
+3. [ ] Keep chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope.
 
 ---
 

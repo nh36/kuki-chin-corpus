@@ -43,7 +43,6 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
 }
 
 FORBIDDEN_NEW_PACKET_FILES = {
-    "candidates_tam.tsv",
     "dossier_tam.md",
     "grammar_tam_print_slice.md",
     "dictionary_tam_print_slice.md",
@@ -133,6 +132,6 @@ def test_handoff_keeps_deferred_scopes_deferred():
         assert required in text
 
 
-def test_no_new_broad_tam_packet_files_exist():
+def test_no_tam_print_surfaces_exist_yet():
     for filename in FORBIDDEN_NEW_PACKET_FILES:
         assert not (PUBLICATION_REVIEW_DIR / filename).exists()
