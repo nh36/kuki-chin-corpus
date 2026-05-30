@@ -91,7 +91,7 @@ With demonstratives, negation, pronouns / clusivity, stem alternation, and case 
 4. **Hold quantifiers stable for human review** — `candidates_quantifiers.tsv`, `dossier_quantifiers.md`, `grammar_quantifiers_print_slice.md`, `dictionary_quantifiers_print_slice.md`, and `review_notes_quantifiers.md` now exist at the current slice maturity level.
 5. **Hold coordinators stable for human review** — `candidates_coordinators.tsv`, `dossier_coordinators.md`, `grammar_coordinators_print_slice.md`, `dictionary_coordinators_print_slice.md`, and `review_notes_coordinators.md` now exist at the current slice maturity level.
 6. **Hold sentence-final particles stable for human review** — `candidates_sentence_final_particles.tsv`, curated extractor support, `dossier_sentence_final_particles.md`, `grammar_sentence_final_particles_print_slice.md`, `dictionary_sentence_final_particles_print_slice.md`, and `review_notes_sentence_final_particles.md` now exist at the current slice maturity level.
-7. **Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred** — unless they are explicitly chosen as a new scope after sentence-final particles.
+7. **Keep broad TAM, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred** — directionals has now been explicitly chosen as the next candidate-first packet, so only those broader or non-Tedim scopes remain deferred by default.
 
 ## Conclusion
 

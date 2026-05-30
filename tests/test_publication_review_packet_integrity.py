@@ -45,11 +45,6 @@ FORBIDDEN_NEW_PACKET_FILES = {
     "grammar_tam_print_slice.md",
     "dictionary_tam_print_slice.md",
     "review_notes_tam.md",
-    "candidates_directionals.tsv",
-    "dossier_directionals.md",
-    "grammar_directionals_print_slice.md",
-    "dictionary_directionals_print_slice.md",
-    "review_notes_directionals.md",
 }
 
 
@@ -127,7 +122,7 @@ def test_handoff_keeps_deferred_scopes_deferred():
 
     for required in (
         "broad TAM / aspect / modal",
-        "directionals",
+        "directionals has now been explicitly selected as the next candidate-first packet",
         "relators/postpositions as a separate packet",
         "chrestomathy",
         "Mizo/lus",
@@ -136,6 +131,6 @@ def test_handoff_keeps_deferred_scopes_deferred():
         assert required in text
 
 
-def test_no_new_tam_or_directionals_packet_files_exist():
+def test_no_new_broad_tam_packet_files_exist():
     for filename in FORBIDDEN_NEW_PACKET_FILES:
         assert not (PUBLICATION_REVIEW_DIR / filename).exists()

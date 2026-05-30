@@ -37,18 +37,18 @@ def test_publication_review_handoff_describes_packet_surfaces_and_review_state()
     assert "deferred rows without analyzer-backed candidates" in text
 
 
-def test_publication_review_handoff_keeps_deferred_scopes_deferred():
+def test_publication_review_handoff_keeps_selected_scope_and_remaining_deferred_scopes_clear():
     text = HANDOFF_PATH.read_text(encoding="utf-8")
 
     for required in (
         "broad TAM / aspect / modal",
-        "directionals",
         "chrestomathy",
         "Mizo/lus",
         "other Kuki-Chin languages",
     ):
         assert required in text
 
-    assert "should not be started automatically" in text
+    assert "directionals has now been explicitly selected as the next candidate-first packet" in text
+    assert "No further narrow publication-review packet should be started automatically." in text
     assert "select one new scope explicitly" in text
     assert "fresh candidate-first plan" in text

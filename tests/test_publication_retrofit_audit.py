@@ -132,9 +132,9 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "dictionary_sentence_final_particles_print_slice.md" in text
     assert "review_notes_sentence_final_particles.md" in text
     assert "Sentence-final particles now has `output/publication_review/candidates_sentence_final_particles.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, a first candidate-controlled dossier at `output/publication_review/dossier_sentence_final_particles.md`, a first grammar print slice at `output/publication_review/grammar_sentence_final_particles_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_sentence_final_particles_print_slice.md`, and review notes at `output/publication_review/review_notes_sentence_final_particles.md`" in text
-    assert "1. [ ] If publication-review retrofit work continues, choose a deliberately new scope from the remaining inventory rather than reopening the now review-ready sentence-final particles or coordinators packets unless a specific reviewer-identified defect appears." in text
-    assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, numerals, quantifiers, coordinators, and sentence-final particles stable for maintenance and human review." in text
-    assert "3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope." in text
+    assert "1. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, numerals, quantifiers, coordinators, and sentence-final particles stable for maintenance and human review." in text
+    assert "2. [ ] Continue directionals only under the new curated candidate-first packet rather than reopening any already review-ready publication-review packet unless a specific reviewer-identified defect appears." in text
+    assert "3. [ ] Keep broad TAM, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
     assert "review the new stem-alternation corpus audit against the packet prose before moving to case marking" not in lower_text
@@ -196,3 +196,4 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
         assert deferred in text
+    assert "active next candidate-first packet" in text

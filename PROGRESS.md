@@ -168,10 +168,11 @@ And to `scripts/`:
 - Sentence-final particles now has `output/publication_review/candidates_sentence_final_particles.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, a first candidate-controlled dossier at `output/publication_review/dossier_sentence_final_particles.md`, a first grammar print slice at `output/publication_review/grammar_sentence_final_particles_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_sentence_final_particles_print_slice.md`, and review notes at `output/publication_review/review_notes_sentence_final_particles.md`; the packet remains narrow, with `ahi hi` and `lo hi` as caveated declarative overlap rows, `hiam` kept as interrogatives-overlap control, `hen` / `in` / `un` kept construction-bound, and `aw` / `tahen` / `ta` / `zo` kept as caveated boundary material. The packet is now ready for human review at the current slice maturity level.
 - A compact human-review handoff now exists at `output/publication_review/human_review_handoff.md`; it is a reviewer-orientation index only and does not start a new linguistic packet.
 - A final publication-review packet-integrity check now exists at `tests/test_publication_review_packet_integrity.py`.
+- Directionals has now begun as the explicitly chosen next candidate-first grammar packet: `output/publication_review/candidates_directionals.tsv` now exists, `scripts/publication_review/extract_candidates.py` now supports the curated `directionals` route, and the first pass keeps `-khia`, `-khiat`, `-toh`, `-lam`, `-sawn`, and `-suk` construction-controlled while leaving `-lut`, `-phei`, `-cip`, and `-tang` deferred or analyzer-noise-bound where no clean print-safe anchor is yet selected.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives are now maintenance/human-review topics at the publication-review evidence layer.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- The quantifiers packet is now ready for human review at the current slice maturity level; the coordinators review notes now exist and the coordinators packet is now ready for human review at the current slice maturity level; the sentence-final particles review notes now exist and the sentence-final particles packet is now ready for human review at the current slice maturity level, and broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
+- The quantifiers packet is now ready for human review at the current slice maturity level; the coordinators review notes now exist and the coordinators packet is now ready for human review at the current slice maturity level; the sentence-final particles review notes now exist and the sentence-final particles packet is now ready for human review at the current slice maturity level. Broad TAM, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred, while directionals is now the explicitly chosen next candidate-first packet.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -204,9 +205,9 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] If publication-review retrofit work continues, choose a deliberately new scope from the remaining inventory rather than reopening the now review-ready sentence-final particles or coordinators packets unless a specific reviewer-identified defect appears.
-2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, numerals, quantifiers, coordinators, and sentence-final particles stable for maintenance and human review.
-3. [ ] Keep broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope.
+1. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, numerals, quantifiers, coordinators, and sentence-final particles stable for maintenance and human review.
+2. [ ] Continue directionals only under the new curated candidate-first packet rather than reopening any already review-ready publication-review packet unless a specific reviewer-identified defect appears.
+3. [ ] Keep broad TAM, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope.
 
 ---
 

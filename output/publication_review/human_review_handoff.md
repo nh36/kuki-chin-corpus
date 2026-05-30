@@ -6,7 +6,7 @@ title: "Publication Review Handoff"
 
 This document summarizes the current state of the Tedim Chin publication-review retrofit after completion of the sentence-final particles packet.
 
-It is a human-review handoff, not a new analysis. It does not supersede the candidate TSVs, dossiers, grammar slices, dictionary slices, or review notes. All completed packets remain controlled by their candidate TSVs and dossiers. Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin languages remain deferred until explicitly chosen.
+It is a human-review handoff, not a new analysis. It does not supersede the candidate TSVs, dossiers, grammar slices, dictionary slices, or review notes. All completed packets remain controlled by their candidate TSVs and dossiers. Broad TAM, chrestomathy, Mizo/lus, and other Kuki-Chin languages remain deferred until explicitly chosen, while directionals has now been explicitly selected as the next candidate-first packet.
 
 # Review-ready packets
 
@@ -40,12 +40,11 @@ It is a human-review handoff, not a new analysis. It does not supersede the cand
 
 Reviewers should start with the review notes for each packet, check the grammar slice against the dossier and candidate TSV, check dictionary entries only as print-facing editorial drafts, and file specific defects if they find problems.
 
-Reviewers should not ask for open-ended polishing of already review-ready packets, use raw generated-report counts as evidence, promote deferred rows without analyzer-backed candidates, or start broad TAM or directionals as a side effect of reviewing sentence-final particles.
+Reviewers should not ask for open-ended polishing of already review-ready packets, use raw generated-report counts as evidence, promote deferred rows without analyzer-backed candidates, or start broad TAM as a side effect of reviewing the completed packets. Directionals has now been explicitly selected and should proceed only under its new candidate-first packet rather than as a side effect of sentence-final review.
 
 # Deferred scopes
 
 - **broad TAM / aspect / modal:** This is a large VP-system topic and should not be started as a casual continuation of sentence-final particle work.
-- **directionals:** This is another large VP-system topic and should not be started automatically as a side effect of reviewing the completed packets.
 - **relators/postpositions as a separate packet:** These are currently folded into case-marking maintenance and should not be started as a separate packet unless explicitly chosen.
 - **chrestomathy:** This remains outside the current Tedim publication-review packet sequence and should stay deferred until explicitly chosen.
 - **Mizo/lus:** This remains outside the Tedim publication-review handoff and should stay deferred until explicitly chosen.
@@ -53,4 +52,4 @@ Reviewers should not ask for open-ended polishing of already review-ready packet
 
 # Recommended next repository action
 
-No further narrow publication-review packet should be started automatically. The next substantive action should be human review of the completed packets. If new retrofit work is desired, select one new scope explicitly and open a fresh candidate-first plan for it.
+No further narrow publication-review packet should be started automatically. The next substantive action should be human review of the completed packets. Directionals has now been explicitly selected as the one new candidate-first scope already in progress. If additional retrofit work beyond directionals is desired, select one new scope explicitly and open a fresh candidate-first plan for it.

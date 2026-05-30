@@ -11,6 +11,7 @@ Current supported extractor topics:
 - `demonstratives`
 - `case_marking`
 - `coordinators`
+- `directionals`
 - `interrogatives`
 - `numerals`
 - `negation`
@@ -19,7 +20,7 @@ Current supported extractor topics:
 - `sentence_final_particles`
 - `stem_alternation`
 
-The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, stem alternation is the third retrofit topic, case marking is now extractor-supported through the same curated candidate route, coordinators now joins that supported set through its own narrow curated route, interrogatives now has a completed narrow curated route, numerals has now joined that supported set through its own narrow curated route, quantifiers now has a first narrow curated route as well, and sentence-final particles now joins that supported set through its own narrow curated route. All ten use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
+The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, stem alternation is the third retrofit topic, case marking is now extractor-supported through the same curated candidate route, coordinators now joins that supported set through its own narrow curated route, directionals is now the explicitly chosen next grammar packet under the same curated route, interrogatives now has a completed narrow curated route, numerals has now joined that supported set through its own narrow curated route, quantifiers now has a first narrow curated route as well, and sentence-final particles now joins that supported set through its own narrow curated route. All eleven use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
 
 ## Required input
 
@@ -67,6 +68,12 @@ Regenerate the coordinators candidate file:
 python3 scripts/publication_review/extract_candidates.py coordinators
 ```
 
+Regenerate the directionals candidate file:
+
+```bash
+python3 scripts/publication_review/extract_candidates.py directionals
+```
+
 Regenerate the numerals candidate file:
 
 ```bash
@@ -108,6 +115,7 @@ Expected output:
 - `output/publication_review/candidates_demonstratives.tsv`
 - `output/publication_review/candidates_case_marking.tsv`
 - `output/publication_review/candidates_coordinators.tsv`
+- `output/publication_review/candidates_directionals.tsv`
 - `output/publication_review/candidates_interrogatives.tsv`
 - `output/publication_review/candidates_numerals.tsv`
 - `output/publication_review/candidates_negation.tsv`
@@ -145,6 +153,8 @@ Case marking follows a different pattern from stem alternation. It is not a broa
 
 Coordinators follows the same curated pattern. It is **not** a broad automatic search for all `le`, `leh`, `a`, `mawh`, `ahih hangin`, or `ahih kei leh` hits. The route keeps one clean NP-conjunction anchor for `le`, explicit overlap controls for conditional `leh` and sequential-vs-agreement `a`, a deferred lexical-export control for `mawh`, and caveated adversative or conditional-adversative rows for `ahih hangin` and `ahih kei leh`. In other words, the coordinator candidate layer keeps `le` versus `leh`, conditional `leh`, sequential-vs-agreement `a`, lexical `mawh`, and caveated `ahih hangin` / `ahih kei leh` material visible without turning the extractor into a broad automatic coordinator harvest.
 
+Directionals follows the same curated pattern. It is a curated extractor route, **not** a broad automatic search for every directional-looking suffix or every word ending in `khia`, `khiat`, `toh`, `lam`, `sawn`, `lut`, `suk`, `phei`, `cip`, or `tang`. The candidate layer keeps accepted examples plus explicit overlap or boundary controls, especially `-toh` as upward versus comitative/accompany material, `-lam` as direction/side/manner boundary material, and nominalized directional forms such as `-khiat-na` or `-toh-na`.
+
 Interrogatives follows the same curated pattern. It is **not** a broad automatic search for all `hiam`, `bang`, or `kua` hits. The route preserves accepted clause-final `hiam` and selected WH-question windows, keeps embedded-question material visible without promoting it too quickly, and includes explicit blocked false friends such as formulaic `Bang hang hiam cih leh`, lexical `a hiam ...` material, and bang-family noise like `bangmah` or `bangin`. Comparison particles `maw`, `ham`, and `em` remain deferred until the core `hiam` and WH evidence is stable.
 
 Numerals follows the same curated pattern. It is **not** a broad automatic search for all `khat`, `nih`, `kua`, or numeral-looking tokens. The route keeps a small set of clean analyzer-backed counting windows, includes explicit ambiguity controls for `kua` = `who` versus `kua` = `nine`, and keeps `khat` on the numeral versus indefinite boundary instead of silently promoting every `mi khat`-type row as a plain numeral example.
@@ -155,7 +165,7 @@ Sentence-final particles follows the same curated pattern. It is **not** a broad
 
 ## What the current extractor does
 
-For the current demonstratives, case-marking, coordinator, interrogatives, numerals, negation, pronoun, quantifier, sentence-final-particle, and stem-alternation layers, the extractor:
+For the current demonstratives, case-marking, coordinator, directional, interrogatives, numerals, negation, pronoun, quantifier, sentence-final-particle, and stem-alternation layers, the extractor:
 
 1. loads `data/ctd_analysis/tokens.tsv`;
 2. looks up curated verse/token windows;

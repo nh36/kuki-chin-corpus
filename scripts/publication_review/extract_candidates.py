@@ -19,6 +19,7 @@ Usage:
     python3 scripts/publication_review/extract_candidates.py demonstratives
     python3 scripts/publication_review/extract_candidates.py case_marking
     python3 scripts/publication_review/extract_candidates.py coordinators
+    python3 scripts/publication_review/extract_candidates.py directionals
     python3 scripts/publication_review/extract_candidates.py interrogatives
     python3 scripts/publication_review/extract_candidates.py numerals
     python3 scripts/publication_review/extract_candidates.py negation
@@ -43,6 +44,7 @@ SUPPORTED_TOPICS = (
     "demonstratives",
     "case_marking",
     "coordinators",
+    "directionals",
     "interrogatives",
     "numerals",
     "negation",
@@ -199,6 +201,31 @@ COORDINATORS_CANDIDATE_COLUMNS = [
     "notes",
 ]
 
+DIRECTIONALS_CANDIDATE_COLUMNS = [
+    "candidate_id",
+    "topic",
+    "construction_id",
+    "directional_type",
+    "directional_form",
+    "construction_type",
+    "verse_id",
+    "reference",
+    "surface_span",
+    "token_indices",
+    "segmentation_span",
+    "gloss_span",
+    "lemma_span",
+    "pos_span",
+    "kjv",
+    "candidate_status",
+    "confidence",
+    "print_status",
+    "why_selected",
+    "why_excluded",
+    "manual_review_status",
+    "notes",
+]
+
 SENTENCE_FINAL_PARTICLES_CANDIDATE_COLUMNS = [
     "candidate_id",
     "topic",
@@ -289,6 +316,8 @@ class CandidateSpec:
     quantifier_form: str = ""
     coordinator_type: str = ""
     coordinator_form: str = ""
+    directional_type: str = ""
+    directional_form: str = ""
     particle_type: str = ""
     particle_form: str = ""
     construction_type: str = ""
@@ -464,6 +493,8 @@ def candidate_row(
         "quantifier_form": spec.quantifier_form,
         "coordinator_type": spec.coordinator_type,
         "coordinator_form": spec.coordinator_form,
+        "directional_type": spec.directional_type,
+        "directional_form": spec.directional_form,
         "particle_type": spec.particle_type,
         "particle_form": spec.particle_form,
         "construction_type": spec.construction_type,
@@ -1904,6 +1935,223 @@ def build_stem_alternation_specs() -> list[CandidateSpec]:
     ]
 
 
+def build_directionals_specs() -> list[CandidateSpec]:
+    topic = "directionals"
+    return [
+        accepted(
+            candidate_id="dir_khia_gen2_5_pokhia",
+            topic=topic,
+            construction_id="directional-khia-outward",
+            directional_type="outward",
+            directional_form="khia",
+            construction_type="verb_khia_out",
+            reference="Genesis 2:5",
+            token_indices=(30,),
+            confidence="high",
+            print_status="print_ready",
+            why_selected="Genesis 2:5 gives a compact analyzer-backed `pokhia` row and is a clean first outward-directional anchor for the packet.",
+            notes="Keep the selected span tight around the suffixed verb; do not treat every orthographic `khia` sequence as directional evidence.",
+            expected_normalized=("pokhia",),
+        ),
+        accepted_with_caveat(
+            candidate_id="dir_khiat_deut9_4_nawhkhiat",
+            topic=topic,
+            construction_id="directional-khiat-away",
+            directional_type="away",
+            directional_form="khiat",
+            construction_type="verb_khiat_away",
+            reference="Deuteronomy 9:4",
+            token_indices=(10,),
+            confidence="high",
+            print_status="print_usable_with_caveat",
+            why_selected="Deuteronomy 9:4 gives a compact analyzer-backed `nawhkhiat` row and keeps `-khiat` visible through a verbal away-reading rather than only through report counts.",
+            why_excluded="This first pass keeps `-khiat` construction-controlled rather than treating every `...khiat` token as interchangeable directional evidence.",
+            notes="Use as the first away-directional anchor; separate nominalized `-khiat-na` material from finite-looking directional verbs when reviewing later prose.",
+            expected_normalized=("nawhkhiat",),
+        ),
+        accepted_with_caveat(
+            candidate_id="dir_khiatna_exod14_13_hotkhiatna",
+            topic=topic,
+            construction_id="directional-khiat-na-boundary",
+            directional_type="away",
+            directional_form="khiat",
+            construction_type="verb_khiat_away",
+            reference="Exodus 14:13",
+            token_indices=(17,),
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="The generated directional report repeatedly points to `hotkhiatna`, and the analyzer confirms it as a real `-khiat-na` row worth keeping visible in the candidate layer.",
+            why_excluded="This is nominalized `-khiat-na` material, so it should not be treated as identical to a finite directional verb without caveat.",
+            notes="Nominalized directional boundary row: keep `-khiat-na` visible, but do not flatten it into the same category as simple finite directional predicates.",
+            expected_normalized=("hotkhiatna",),
+        ),
+        accepted_with_caveat(
+            candidate_id="dir_toh_num9_17_kilaktoh",
+            topic=topic,
+            construction_id="directional-toh-upward",
+            directional_type="upward",
+            directional_form="toh",
+            construction_type="verb_toh_up",
+            reference="Numbers 9:17",
+            token_indices=(6,),
+            confidence="high",
+            print_status="print_usable_with_caveat",
+            why_selected="Numbers 9:17 gives a compact analyzer-backed `kilaktoh` row and keeps upward `-toh` visible through a construction already highlighted in the grammar report.",
+            why_excluded="`-toh` is polysemous and overlaps with comitative or accompany material elsewhere, so this upward row cannot license raw `toh = UP` harvesting.",
+            notes="Upward evidence with an explicit overlap caveat; pair it with a blocked comitative control rather than promoting `-toh` as always UP.",
+            expected_normalized=("kilaktoh",),
+        ),
+        accepted_with_caveat(
+            candidate_id="dir_tohna_deut32_50_kahtohna",
+            topic=topic,
+            construction_id="directional-toh-na-boundary",
+            directional_type="upward",
+            directional_form="toh",
+            construction_type="verb_toh_up",
+            reference="Deuteronomy 32:50",
+            token_indices=(14,),
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Deuteronomy 32:50 keeps nominalized upward `-toh-na` material visible in the same packet as the clean upward anchor.",
+            why_excluded="This row is nominalized `kahtohna`, so it should not be treated as the same thing as a simple finite directional verb without caveat.",
+            notes="Nominalized upward boundary row; keep `-toh-na` visible while still pairing it with a separate comitative blocker.",
+            expected_normalized=("kahtohna",),
+        ),
+        excluded(
+            candidate_id="dir_toh_exod34_24_paitoh_overlap",
+            topic=topic,
+            construction_id="directional-toh-comitative-overlap",
+            directional_type="comitative_overlap",
+            directional_form="toh",
+            construction_type="toh_comitative_overlap",
+            reference="Exodus 34:24",
+            token_indices=(35,),
+            confidence="high",
+            print_status="blocked",
+            why_selected="A `paitoh` overlap-control row is needed because analyzer tests already treat `paitoh` as lexicalized `go-accompany`, not as a simple upward directional.",
+            why_excluded="This `paitoh` token is comitative or accompany material, so it must block any attempt to promote raw `-toh` as always UP.",
+            notes="Explicit comitative/accompany blocker for the directionals packet.",
+            expected_normalized=("paitoh",),
+        ),
+        accepted_with_caveat(
+            candidate_id="dir_lam_gen30_9_tawplam",
+            topic=topic,
+            construction_id="directional-lam-boundary",
+            directional_type="direction_manner",
+            directional_form="lam",
+            construction_type="lam_nominal_or_directional_boundary",
+            reference="Genesis 30:9",
+            token_indices=(5,),
+            confidence="medium",
+            print_status="not_print_ready",
+            why_selected="Genesis 30:9 gives a compact `tawplam` row and keeps `-lam` visible without pretending the packet already has a simple fully verbal directional suffix analysis.",
+            why_excluded="`-lam` often behaves as side, manner, or directional-boundary material rather than as a straightforward clean verbal directional suffix, so this row stays caveated.",
+            notes="Boundary evidence only: direction, side, or manner material should stay visible without turning `-lam` into a simple clean verbal directional entry.",
+            expected_normalized=("tawplam",),
+        ),
+        accepted_with_caveat(
+            candidate_id="dir_sawn_ezra9_9_piasawn",
+            topic=topic,
+            construction_id="directional-sawn-toward",
+            directional_type="toward",
+            directional_form="sawn",
+            construction_type="verb_sawn_toward",
+            reference="Ezra 9:9",
+            token_indices=(185,),
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Ezra 9:9 gives an analyzer-backed `piasawn` row and is cleaner for a first toward-directional anchor than the kinship-heavy Luke 20:31 example.",
+            why_excluded="Keep this construction-controlled: many easy `-sawn` hits are lexicalized, kinship-based, continuative, or otherwise non-directional.",
+            notes="Toward evidence with lexical-boundary caution; do not let `-sawn` spill into all continuative or kinship-looking material.",
+            expected_normalized=("piasawn",),
+        ),
+        deferred(
+            candidate_id="dir_lut_1sam5_6_uilut_boundary",
+            topic=topic,
+            construction_id="directional-lut-boundary",
+            directional_type="inward",
+            directional_form="lut",
+            construction_type="verb_lut_in",
+            reference="1 Samuel 5:6",
+            token_indices=(10,),
+            confidence="low",
+            print_status="not_print_ready",
+            why_selected="`-lut` is analyzer-listed as a directional suffix, so the packet needs one explicit corpus-backed row showing what the easy export currently gives.",
+            why_excluded="The easiest analyzer-backed `uilut` row is not yet a clean print-safe inward directional anchor for publication-review prose.",
+            manual_review_status="needs_followup",
+            notes="Analyzer-listed but not yet candidate-backed with a clean publication-review anchor; keep `-lut` deferred until a clearer inward corpus row is chosen.",
+            expected_normalized=("uilut",),
+        ),
+        accepted_with_caveat(
+            candidate_id="dir_suk_gen11_5_paisuk",
+            topic=topic,
+            construction_id="directional-suk-downward",
+            directional_type="downward",
+            directional_form="suk",
+            construction_type="verb_suk_down",
+            reference="Genesis 11:5",
+            token_indices=(12,),
+            confidence="high",
+            print_status="print_usable_with_caveat",
+            why_selected="Genesis 11:5 gives a compact analyzer-backed `paisuk` row and is an easy first downward-directional anchor for the packet.",
+            why_excluded="Keep the row construction-controlled even though analyzer tests recognize `-suk`; this packet is still a narrow candidate layer rather than a broad VP-slot sweep.",
+            notes="Clean downward evidence is available, but later prose should still distinguish true directional `-suk` from lexicalized or non-directional lookalikes.",
+            expected_normalized=("paisuk",),
+        ),
+        deferred(
+            candidate_id="dir_phei_ezek41_6_paiphei_boundary",
+            topic=topic,
+            construction_id="directional-phei-boundary",
+            directional_type="horizontal",
+            directional_form="phei",
+            construction_type="verb_phei_horizontal",
+            reference="Ezekiel 41:6",
+            token_indices=(10,),
+            confidence="low",
+            print_status="not_print_ready",
+            why_selected="Analyzer unit tests list `-phei` as directional, so the packet keeps one analyzer-backed corpus row visible instead of silently dropping the form.",
+            why_excluded="The easiest corpus-backed `paiphei` row currently glosses as `go-enter`, not as a clean horizontal directional, so it is not yet print-safe evidence.",
+            manual_review_status="needs_followup",
+            notes="Keep deferred until a clearer horizontal corpus row is selected; do not promote analyzer unit-test inventory alone into publication-review prose.",
+            expected_normalized=("paiphei",),
+        ),
+        deferred(
+            candidate_id="dir_cip_deut28_52_cip_boundary",
+            topic=topic,
+            construction_id="directional-cip-boundary",
+            directional_type="deferred",
+            directional_form="cip",
+            construction_type="analyzer_noise",
+            reference="Deuteronomy 28:52",
+            token_indices=(17,),
+            confidence="low",
+            print_status="blocked",
+            why_selected="The generated report surfaces `-cip`, so the first packet keeps one analyzer-backed corpus token visible rather than relying on report-level discovery wording alone.",
+            why_excluded="This row is lexical `cip = tight`, not a clean downward directional candidate, so `-cip` remains deferred in the packet.",
+            manual_review_status="needs_followup",
+            notes="Report-visible but not candidate-backed as directional evidence in the current packet.",
+            expected_normalized=("cip",),
+        ),
+        deferred(
+            candidate_id="dir_tang_gen1_11_tang_boundary",
+            topic=topic,
+            construction_id="directional-tang-boundary",
+            directional_type="endpoint",
+            directional_form="tang",
+            construction_type="verb_tang_endpoint",
+            reference="Genesis 1:11",
+            token_indices=(9,),
+            confidence="low",
+            print_status="blocked",
+            why_selected="The generated report surfaces `-tang`, so the first packet keeps one analyzer-backed corpus token visible instead of silently treating the form as already directional evidence.",
+            why_excluded="The current export glosses this `tang` token as lexical `embed`, not as a clean endpoint directional candidate.",
+            manual_review_status="needs_followup",
+            notes="Report-visible but not candidate-backed as endpoint directional evidence in the current packet.",
+            expected_normalized=("tang",),
+        ),
+    ]
+
+
 def build_sentence_final_particles_specs() -> list[CandidateSpec]:
     topic = "sentence_final_particles"
     return [
@@ -2089,6 +2337,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
         return build_case_marking_specs()
     if topic == "coordinators":
         return build_coordinators_specs()
+    if topic == "directionals":
+        return build_directionals_specs()
     if topic == "interrogatives":
         return build_interrogatives_specs()
     if topic == "numerals":
@@ -2111,6 +2361,8 @@ def candidate_columns(topic: str) -> list[str]:
         return CASE_MARKING_CANDIDATE_COLUMNS
     if topic == "coordinators":
         return COORDINATORS_CANDIDATE_COLUMNS
+    if topic == "directionals":
+        return DIRECTIONALS_CANDIDATE_COLUMNS
     if topic == "interrogatives":
         return INTERROGATIVES_CANDIDATE_COLUMNS
     if topic == "numerals":
