@@ -114,8 +114,8 @@ The safest next print-facing sub-scope after this candidate layer is a narrow gr
 - compact aspectual material: `-ta`, `-zo`, `-kik`;
 - compact modal material: `-ding`, `-thei`.
 
-That future slice should keep `-lai`, `dingin`, negation-overlap strings, sentence-final overlap rows, directional overlaps, and TAM stacking out of scope. It should also stay candidate-first and should not try to turn `docs/grammar/reports/05-verb-04-tam.md` into a full TAM chapter in one pass.
+That slice has now been drafted at `grammar_tam_print_slice.md`. It keeps `-lai`, `dingin`, negation-overlap strings, sentence-final overlap rows, directional overlaps, and TAM stacking out of scope, and it does not try to turn `docs/grammar/reports/05-verb-04-tam.md` into a full TAM chapter in one pass.
 
-## Not yet started
+## Current surface status
 
-This commit does **not** complete a TAM grammar print slice, dictionary print slice, or review notes. `grammar_tam_print_slice.md`, `dictionary_tam_print_slice.md`, and `review_notes_tam.md` do **not** yet exist, and this dossier does not claim otherwise.
+The packet now has a first TAM grammar print slice at `grammar_tam_print_slice.md`. `dictionary_tam_print_slice.md` and `review_notes_tam.md` do **not** yet exist, and the next TAM step should be the dictionary print slice rather than a broad rewrite.

@@ -72,4 +72,5 @@ def test_tam_scope_dossier_sets_next_scope_without_claiming_later_surfaces() -> 
     assert "dictionary_tam_print_slice.md" in text
     assert "review_notes_tam.md" in text
     assert "do **not** yet exist" in text
-    assert "Grammar, dictionary, and review-note print slices for TAM have **not** yet begun." in text
+    assert "The packet now has a first TAM grammar print slice" in text
+    assert "the next TAM step should be the dictionary print slice rather than a broad rewrite" in text
