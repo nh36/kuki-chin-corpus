@@ -19,6 +19,7 @@ def test_publication_review_handoff_exists_and_names_review_ready_packets():
         "quantifiers",
         "coordinators",
         "sentence-final particles",
+        "directionals",
     ):
         assert required in text
 
@@ -48,7 +49,7 @@ def test_publication_review_handoff_keeps_selected_scope_and_remaining_deferred_
     ):
         assert required in text
 
-    assert "directionals has now been explicitly selected as the next candidate-first packet" in text
+    assert "review_notes_directionals.md" in text
     assert "No further narrow publication-review packet should be started automatically." in text
     assert "select one new scope explicitly" in text
     assert "fresh candidate-first plan" in text

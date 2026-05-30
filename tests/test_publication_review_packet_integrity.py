@@ -17,6 +17,7 @@ EXPECTED_TOPICS = {
     "quantifiers",
     "coordinators",
     "sentence-final particles",
+    "directionals",
 }
 
 EXPECTED_CANDIDATE_FILES = {
@@ -30,6 +31,7 @@ EXPECTED_CANDIDATE_FILES = {
     "candidates_quantifiers.tsv",
     "candidates_coordinators.tsv",
     "candidates_sentence_final_particles.tsv",
+    "candidates_directionals.tsv",
 }
 
 RETROFIT_SEQUENCE_REVIEW_NOTES = {
@@ -37,6 +39,7 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
     "review_notes_quantifiers.md",
     "review_notes_coordinators.md",
     "review_notes_sentence_final_particles.md",
+    "review_notes_directionals.md",
 }
 
 FORBIDDEN_NEW_PACKET_FILES = {
@@ -122,7 +125,6 @@ def test_handoff_keeps_deferred_scopes_deferred():
 
     for required in (
         "broad TAM / aspect / modal",
-        "directionals has now been explicitly selected as the next candidate-first packet",
         "relators/postpositions as a separate packet",
         "chrestomathy",
         "Mizo/lus",
