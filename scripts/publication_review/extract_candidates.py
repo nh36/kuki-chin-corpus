@@ -40,6 +40,7 @@ OUTPUT_DIR = ROOT / "output" / "publication_review"
 SUPPORTED_TOPICS = (
     "demonstratives",
     "case_marking",
+    "coordinators",
     "interrogatives",
     "numerals",
     "negation",
@@ -170,6 +171,31 @@ QUANTIFIERS_CANDIDATE_COLUMNS = [
     "notes",
 ]
 
+COORDINATORS_CANDIDATE_COLUMNS = [
+    "candidate_id",
+    "topic",
+    "construction_id",
+    "coordinator_type",
+    "coordinator_form",
+    "construction_type",
+    "verse_id",
+    "reference",
+    "surface_span",
+    "token_indices",
+    "segmentation_span",
+    "gloss_span",
+    "lemma_span",
+    "pos_span",
+    "kjv",
+    "candidate_status",
+    "confidence",
+    "print_status",
+    "why_selected",
+    "why_excluded",
+    "manual_review_status",
+    "notes",
+]
+
 REQUIRED_TOKEN_COLUMNS = {
     "verse_id",
     "token_index",
@@ -233,6 +259,8 @@ class CandidateSpec:
     numeral_form: str = ""
     quantifier_type: str = ""
     quantifier_form: str = ""
+    coordinator_type: str = ""
+    coordinator_form: str = ""
     construction_type: str = ""
     print_status: str = ""
     token_indices_style: str = "comma"
@@ -404,6 +432,8 @@ def candidate_row(
         "numeral_form": spec.numeral_form,
         "quantifier_type": spec.quantifier_type,
         "quantifier_form": spec.quantifier_form,
+        "coordinator_type": spec.coordinator_type,
+        "coordinator_form": spec.coordinator_form,
         "construction_type": spec.construction_type,
         "verse_id": verse_meta.verse_id,
         "reference": verse_meta.reference,
@@ -747,6 +777,132 @@ def build_case_marking_specs() -> list[CandidateSpec]:
             why_selected="Current slice and review notes treat this as material or means extension rather than ordinary accompaniment.",
             notes="Keep distinct from accompaniment so tawh is not flattened into a single undifferentiated with-category.",
             expected_normalized=("leivui", "tawh"),
+        ),
+    ]
+
+
+def build_coordinators_specs() -> list[CandidateSpec]:
+    topic = "coordinators"
+    return [
+        accepted(
+            candidate_id="coord_le_gen1_1_vantung_le_leitung",
+            topic=topic,
+            construction_id="coordinator-le-np",
+            coordinator_type="np_conjunction",
+            coordinator_form="le",
+            construction_type="np_le",
+            reference="Genesis 1:1",
+            token_indices=(5, 6, 7),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_ready",
+            why_selected="Core NP-coordination anchor: the analyzer cleanly preserves `vantung le leitung` as a noun-plus-conjunction-plus-noun span.",
+            notes="This first pass controls le-overgeneration mainly through curated selection rather than a broad raw le harvest or a separate blocked le row.",
+            expected_normalized=("vantung", "le", "leitung"),
+        ),
+        needs_review(
+            candidate_id="coord_leh_gen13_9_conditional_boundary",
+            topic=topic,
+            construction_id="coordinator-leh-boundary",
+            coordinator_type="clause_conjunction",
+            coordinator_form="leh",
+            construction_type="conditional_leh",
+            reference="Genesis 13:9",
+            token_indices=(18, 19, 20, 21, 22, 23, 24, 25, 26, 27),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="not_print_ready",
+            why_selected="Keeps `leh` visible in the candidate layer through a clean analyzer-backed conditional window instead of pretending every `leh` is a plain clause coordinator.",
+            why_excluded="This row is a boundary control: the verse reads conditionally (`... na lak leh ...`) rather than as uncomplicated clause conjunction, so it should not license generic `leh = and` prose yet.",
+            manual_review_status="needs_followup",
+            notes="Useful overlap control for the coordinator packet because many easy `leh` hits in the export are conditional or otherwise subordinate rather than simple clause conjunctions.",
+            expected_normalized=("veilam", "na", "lak", "leh", "kei", "taklamah", "ka", "pai", "ding", "hi"),
+        ),
+        accepted_with_caveat(
+            candidate_id="coord_a_gen2_10_sequential_linker",
+            topic=topic,
+            construction_id="coordinator-a-sequential",
+            coordinator_type="sequential_clause_linker",
+            coordinator_form="a",
+            construction_type="sequential_a",
+            reference="Genesis 2:10",
+            token_indices=(10, 11, 12, 13, 14, 15, 16, 17),
+            token_indices_style="range",
+            confidence="low",
+            print_status="not_print_ready",
+            why_selected="Representative sequential linkage window: after `gun khat hong luang`, the following `a ... gun hong kikhenin` clause shows why `a` cannot be ignored completely in coordinator review.",
+            why_excluded="The analyzer still exports the relevant `a` as `3SG` / `FUNC`, so this stays caveated boundary evidence rather than an uncomplicated coordinator anchor.",
+            notes="Treat as possible sequential clause linkage only in this specific constructional window; do not broaden to raw `a` hits.",
+            expected_normalized=("luang", "a", "tua", "mun", "panin", "gun", "hong", "kikhenin"),
+        ),
+        excluded(
+            candidate_id="coord_a_gen1_1_agreement_false_friend",
+            topic=topic,
+            construction_id="coordinator-a-false-friend",
+            coordinator_type="false_friend",
+            coordinator_form="a",
+            construction_type="agreement_a_false_friend",
+            reference="Genesis 1:1",
+            token_indices=(8, 9),
+            token_indices_style="range",
+            confidence="high",
+            print_status="blocked",
+            why_selected="High-risk control row showing why raw `a` harvesting would flood the coordinator packet with agreement or other functional material.",
+            why_excluded="Here `a` is the ordinary exported `3SG` / `FUNC` element before `piangsak`, not a coordinator or sequential linker.",
+            notes="Use this row to keep the packet from treating every exported `a` as coordinator evidence.",
+            expected_normalized=("a", "piangsak"),
+        ),
+        deferred(
+            candidate_id="coord_mawh_gen6_3_lexical_control",
+            topic=topic,
+            construction_id="coordinator-mawh-review",
+            coordinator_type="deferred",
+            coordinator_form="mawh",
+            construction_type="analyzer_noise",
+            reference="Genesis 6:3",
+            token_indices=(21,),
+            token_indices_style="range",
+            confidence="low",
+            print_status="not_print_ready",
+            why_selected="The generated coordinator report makes `mawh` worth checking, so the candidate layer should document what the current analyzer export actually supplies.",
+            why_excluded="The current export surfaces `mawh` overwhelmingly as lexical `sin` / `V` material rather than a clean disjunction or alternative-question coordinator example.",
+            manual_review_status="needs_followup",
+            notes="Keep `mawh` deferred until a clean analyzer-backed disjunction or alternative-question row is located; do not replace this with report-only schematic examples.",
+            expected_normalized=("mawh",),
+        ),
+        accepted_with_caveat(
+            candidate_id="coord_ahih_hangin_gen3_4_adversative",
+            topic=topic,
+            construction_id="coordinator-ahih-hangin",
+            coordinator_type="adversative",
+            coordinator_form="ahih hangin",
+            construction_type="adversative_ahih_hangin",
+            reference="Genesis 3:4",
+            token_indices=(0, 1),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer-backed adversative connector from the existing coordinators report.",
+            why_excluded="The form remains internally analyzable as `ahih` plus `hangin`, so it should stay an adversative connector with caveat rather than a fully generalized causal/subordinator analysis.",
+            notes="Keep this packet-level row narrow: it supports adversative connector prose without opening a separate `hangin` chapter.",
+            expected_normalized=("ahih", "hangin"),
+        ),
+        accepted_with_caveat(
+            candidate_id="coord_ahih_kei_leh_exod12_3_boundary",
+            topic=topic,
+            construction_id="coordinator-ahih-kei-leh",
+            coordinator_type="conditional_adversative",
+            coordinator_form="ahih kei leh",
+            construction_type="conditional_adversative_ahih_kei_leh",
+            reference="Exodus 12:3",
+            token_indices=(16, 17, 18),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="not_print_ready",
+            why_selected="Clean analyzer-backed boundary row for the `ahih kei leh` family, which the generated report places near coordination but which overlaps conditionals and negation.",
+            why_excluded="This is not a simple coordinator: it bundles conditional/adversative structure with negation-overlap, so it should remain caveated boundary material.",
+            notes="Retain as controlled overlap evidence only; do not reopen the negation packet or flatten `ahih kei leh` into plain conjunction.",
+            expected_normalized=("ahih", "kei", "leh"),
         ),
     ]
 
@@ -1721,6 +1877,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
         return build_demonstratives_specs()
     if topic == "case_marking":
         return build_case_marking_specs()
+    if topic == "coordinators":
+        return build_coordinators_specs()
     if topic == "interrogatives":
         return build_interrogatives_specs()
     if topic == "numerals":
@@ -1739,6 +1897,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
 def candidate_columns(topic: str) -> list[str]:
     if topic == "case_marking":
         return CASE_MARKING_CANDIDATE_COLUMNS
+    if topic == "coordinators":
+        return COORDINATORS_CANDIDATE_COLUMNS
     if topic == "interrogatives":
         return INTERROGATIVES_CANDIDATE_COLUMNS
     if topic == "numerals":

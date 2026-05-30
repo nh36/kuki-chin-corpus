@@ -58,6 +58,10 @@ def test_publication_retrofit_audit_recommends_priority():
     assert "review_notes_quantifiers.md" in text
     assert "tests/test_quantifiers_review_notes.py" in text
     assert "first analyzer-aware candidate layer, curated extractor route, first candidate-controlled dossier, first grammar slice, first dictionary slice, and review notes now exist; the packet is ready for human review at the current slice maturity level" in text
+    assert "candidates_coordinators.tsv" in text
+    assert "tests/test_coordinators_candidates.py" in text
+    assert "first analyzer-aware candidate layer and curated extractor route now exist; the coordinator retrofit has begun" in text
+    assert "build a candidate-controlled dossier" in text
     assert "candidates_negation.tsv" in text
     assert "candidates_pronouns.tsv" in text
     assert "candidates_stem_alternation.tsv" in text
@@ -97,8 +101,11 @@ def test_progress_marks_current_packets_as_review_ready_and_not_case_marking_nex
     assert "dictionary_quantifiers_print_slice.md" in text
     assert "review_notes_quantifiers.md" in text
     assert "The quantifiers review notes now exist and the quantifiers packet is ready for human review at the current slice maturity level" in text
-    assert "1. [ ] Choose the next narrow publication-review retrofit target from the remaining inventory without reopening the quantifiers packet unless a specific reviewer-identified defect appears; likely later candidates remain coordinators or sentence-final particles." in text
+    assert "candidates_coordinators.tsv" in text
+    assert "the coordinator retrofit has begun at the candidate layer only" in text
+    assert "1. [ ] Keep the new coordinators candidate retrofit narrow and move to a dossier only if coordinators remains the chosen next packet, without reopening quantifiers unless a specific reviewer-identified defect appears." in text
     assert "2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review." in text
+    assert "3. [ ] Keep sentence-final particles, broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while coordinators remains the active narrow candidate retrofit." in text
     assert "Use the new case-marking candidate layer to review the existing case-marking packet conservatively." not in text
     assert "inventory the remaining existing publication-review slices and grammar reports" not in lower_text
     assert "review the new stem-alternation corpus audit against the packet prose before moving to case marking" not in lower_text
@@ -137,6 +144,9 @@ def test_remaining_retrofit_inventory_exists_and_distinguishes_current_vs_future
     assert "dictionary_quantifiers_print_slice.md" in text
     assert "review_notes_quantifiers.md" in text
     assert "hold stable for maintenance and human review" in text
+    assert "candidates_coordinators.tsv" in text
+    assert "active narrow candidate retrofit only" in text
+    assert "sentence-final particles remains the next likely later narrow target after coordinators" in text
     assert "Deferred future or non-slice topics" in text
     for deferred in ("broad TAM / aspect / modal", "directionals", "chrestomathy", "Mizo/lus"):
         assert deferred in text

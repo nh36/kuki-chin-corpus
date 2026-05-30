@@ -164,10 +164,11 @@ And to `scripts/`:
 - Interrogatives now has `output/publication_review/candidates_interrogatives.tsv`, a curated extractor route, a first interpretive dossier at `output/publication_review/dossier_interrogatives.md`, a first grammar print slice at `output/publication_review/grammar_interrogatives_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_interrogatives_print_slice.md`, and review notes at `output/publication_review/review_notes_interrogatives.md`; the packet stays controlled by the candidate/dossier layer and is now ready for human review at the current slice maturity level.
 - Numerals now has `output/publication_review/candidates_numerals.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, a first interpretive dossier at `output/publication_review/dossier_numerals.md`, a first grammar print slice at `output/publication_review/grammar_numerals_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_numerals_print_slice.md`, and review notes at `output/publication_review/review_notes_numerals.md`; the packet stays controlled by the candidate/dossier/print-slice layer, keeps `kua = who` blocked as a numeral false friend, keeps `khat` on the numeral/indefinite boundary, and is now ready for human review at the current slice maturity level.
 - Quantifiers now has `output/publication_review/candidates_quantifiers.tsv`, curated extractor support in `scripts/publication_review/extract_candidates.py`, a first interpretive dossier at `output/publication_review/dossier_quantifiers.md`, a first grammar print slice at `output/publication_review/grammar_quantifiers_print_slice.md`, a first dictionary print slice at `output/publication_review/dictionary_quantifiers_print_slice.md`, and review notes at `output/publication_review/review_notes_quantifiers.md`; the packet remains controlled by the candidate/dossier/grammar layer and keeps explicit overlap controls for `khat`, `kuamah`, and bang-family `bangmah`. The quantifiers review notes now exist and the quantifiers packet is ready for human review at the current slice maturity level.
+- Coordinators now has `output/publication_review/candidates_coordinators.tsv` plus curated extractor support in `scripts/publication_review/extract_candidates.py`; the coordinator retrofit has begun at the candidate layer only, with a clean `le` anchor, explicit `leh` and `a` overlap controls, deferred lexical-export `mawh`, and caveated `ahih hangin` / `ahih kei leh` boundary rows.
 - Future print slices should use analyzer-aware candidate files before drafting grammar or dictionary prose, so dossiers start from filtered evidence rather than from raw-string cleanup.
 - Demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, and interrogatives are now maintenance/human-review topics at the publication-review evidence layer.
 - `data/ctd_analysis/tokens.tsv` remains generated local build output and is intentionally untracked, so candidate-extractor reproducibility tests skip cleanly when it is absent and regenerate locally when needed.
-- The quantifiers packet is now ready for human review at the current slice maturity level; coordinators and sentence-final particles remain later narrow candidates, while broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
+- The quantifiers packet is now ready for human review at the current slice maturity level; coordinators is now the active narrow candidate retrofit, sentence-final particles remains a later narrow candidate, and broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
 - Chrestomathy work and all Mizo/lus work remain deferred while the Tedim publication-review sequence continues one narrow slice at a time.
 
 ## Documentation
@@ -200,12 +201,12 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 
 ## Next Steps
 
-1. [ ] Choose the next narrow publication-review retrofit target from the remaining inventory without reopening the quantifiers packet unless a specific reviewer-identified defect appears; likely later candidates remain coordinators or sentence-final particles.
+1. [ ] Keep the new coordinators candidate retrofit narrow and move to a dossier only if coordinators remains the chosen next packet, without reopening quantifiers unless a specific reviewer-identified defect appears.
 2. [ ] Keep demonstratives/deixis, negation, pronouns/clusivity, stem alternation, case marking, interrogatives, and numerals stable for maintenance and human review.
-3. [ ] Keep coordinators, sentence-final particles, broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while quantifiers remains the active narrow retrofit.
+3. [ ] Keep sentence-final particles, broad TAM, directionals, chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred while coordinators remains the active narrow candidate retrofit.
 
 ---
 
-*Last updated: 2026-05-29*  
+*Last updated: 2026-05-30*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*

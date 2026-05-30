@@ -39,7 +39,7 @@ def test_publication_evidence_protocol_exists():
     assert PROTOCOL_PATH.exists()
 
 
-def test_publication_evidence_protocol_marks_case_marking_interrogatives_numerals_and_quantifiers_as_curated_retrofits():
+def test_publication_evidence_protocol_marks_case_marking_coordinators_interrogatives_numerals_and_quantifiers_as_curated_retrofits():
     text = PROTOCOL_PATH.read_text(encoding="utf-8")
 
     assert "third completed retrospective retrofit" in text
@@ -47,6 +47,11 @@ def test_publication_evidence_protocol_marks_case_marking_interrogatives_numeral
     assert "plus a curated extractor route" in text
     assert "intentionally narrow rather than a broad automatic case-marker search" in text
     assert "should continue to start from analyzer-aware candidates rather than from raw string searches" in text
+    assert "Coordinators has now begun as the next narrow retrofit under this workflow." in text
+    assert "candidates_coordinators.tsv" in text
+    assert "clean `le` NP-conjunction anchor" in text
+    assert "conditional `leh` and sequential-versus-agreement `a`" in text
+    assert "keeps `mawh` visible only as deferred lexical-export material" in text
     assert "Interrogatives is now a completed narrow retrofit packet under this workflow." in text
     assert "candidates_interrogatives.tsv" in text
     assert "focuses on clause-final `hiam`, selected WH-question windows" in text
@@ -55,9 +60,10 @@ def test_publication_evidence_protocol_marks_case_marking_interrogatives_numeral
     assert "candidates_numerals.tsv" in text
     assert "blocks interrogative `kua = who` as a numeral false friend" in text
     assert "keeps `khat` on the numeral-versus-indefinite boundary" in text
-    assert "Quantifiers is now the next narrow retrofit in progress." in text
+    assert "Quantifiers is now a completed current-slice packet under this workflow." in text
     assert "candidates_quantifiers.tsv" in text
     assert "preserves overlap controls for `khat`, `kuamah`, and bang-family `bangmah`" in text
+    assert "ready for human review at the current slice maturity level" in text
 
 
 def test_demonstratives_candidate_file_has_required_columns():

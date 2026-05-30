@@ -60,6 +60,7 @@ Candidate files are the working evidence layer between analyzer export and the d
   - `output/publication_review/candidates_demonstratives.tsv`
   - `output/publication_review/candidates_negation.tsv`
   - `output/publication_review/candidates_interrogatives.tsv`
+  - `output/publication_review/candidates_coordinators.tsv`
   - `output/publication_review/candidates_numerals.tsv`
   - `output/publication_review/candidates_quantifiers.tsv`
 
@@ -133,7 +134,9 @@ Interrogatives is now a completed narrow retrofit packet under this workflow. It
 
 Numerals is now a completed current-slice packet under this workflow. Its curated `candidates_numerals.tsv` layer now sits under `dossier_numerals.md`, `grammar_numerals_print_slice.md`, `dictionary_numerals_print_slice.md`, and `review_notes_numerals.md`; it blocks interrogative `kua = who` as a numeral false friend, keeps `khat` on the numeral-versus-indefinite boundary, and is ready for human review at the current slice maturity level.
 
-Quantifiers is now the next narrow retrofit in progress. Its first analyzer-aware `candidates_quantifiers.tsv` layer is curated rather than a broad automatic quantifier search: it keeps a small set of clean analyzer-backed `khempeuh`, `pawlkhat`, `kuamah`, `bangmah`, and `tampi` rows, preserves overlap controls for `khat`, `kuamah`, and bang-family `bangmah`, and defers noisier `peuhpeuh` / `tawm` material until cleaner analyzer-backed evidence is available.
+Quantifiers is now a completed current-slice packet under this workflow. Its curated `candidates_quantifiers.tsv` layer now sits under `dossier_quantifiers.md`, `grammar_quantifiers_print_slice.md`, `dictionary_quantifiers_print_slice.md`, and `review_notes_quantifiers.md`; it keeps `khempeuh` as the universal anchor, preserves overlap controls for `khat`, `kuamah`, and bang-family `bangmah`, keeps `tampi tak` narrow as degree/quantity evidence, and is ready for human review at the current slice maturity level.
+
+Coordinators has now begun as the next narrow retrofit under this workflow. Its first analyzer-aware `candidates_coordinators.tsv` layer is curated rather than a broad automatic coordinator search: it keeps a clean `le` NP-conjunction anchor, preserves overlap controls for conditional `leh` and sequential-versus-agreement `a`, keeps `mawh` visible only as deferred lexical-export material until a real disjunction or alternative-question example is found, and treats `ahih hangin` plus `ahih kei leh` as caveated adversative or conditional-adversative boundary evidence.
 
 ## Pilot topic: demonstratives/deixis
 

@@ -10,6 +10,7 @@ Current supported extractor topics:
 
 - `demonstratives`
 - `case_marking`
+- `coordinators`
 - `interrogatives`
 - `numerals`
 - `negation`
@@ -17,7 +18,7 @@ Current supported extractor topics:
 - `quantifiers`
 - `stem_alternation`
 
-The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, stem alternation is the third retrofit topic, case marking is now extractor-supported through the same curated candidate route, interrogatives now has a completed narrow curated route, numerals has now joined that supported set through its own narrow curated route, and quantifiers now has a first narrow curated route as well. All eight use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
+The current demonstratives implementation is a curated pilot. Negation is the first hardened retrospective retrofit under the same candidate-first architecture, pronouns / clusivity is the second retrofit topic, stem alternation is the third retrofit topic, case marking is now extractor-supported through the same curated candidate route, coordinators now joins that supported set through its own narrow curated route, interrogatives now has a completed narrow curated route, numerals has now joined that supported set through its own narrow curated route, and quantifiers now has a first narrow curated route as well. All nine use curated, analyzer-validated candidate specs so publication-review work can start from explicit accepted, deferred, excluded, and needs-review rows.
 
 ## Required input
 
@@ -59,6 +60,12 @@ Regenerate the interrogatives candidate file:
 python3 scripts/publication_review/extract_candidates.py interrogatives
 ```
 
+Regenerate the coordinators candidate file:
+
+```bash
+python3 scripts/publication_review/extract_candidates.py coordinators
+```
+
 Regenerate the numerals candidate file:
 
 ```bash
@@ -93,6 +100,7 @@ Expected output:
 
 - `output/publication_review/candidates_demonstratives.tsv`
 - `output/publication_review/candidates_case_marking.tsv`
+- `output/publication_review/candidates_coordinators.tsv`
 - `output/publication_review/candidates_interrogatives.tsv`
 - `output/publication_review/candidates_numerals.tsv`
 - `output/publication_review/candidates_negation.tsv`
@@ -127,6 +135,8 @@ In other words, stem alternation now has both:
 
 Case marking follows a different pattern from stem alternation. It is not a broad verb-pair distributional audit, and the extractor route is deliberately narrow: it reproduces a curated candidate TSV for markers such as `-in`, `-ah`, `-a`, `-pan`, `-panin`, `-tawh`, and relator-noun-plus-case constructions rather than doing a broad automatic case-marker search. Relator nouns should not be flattened into bare case suffixes in the candidate layer.
 
+Coordinators follows the same curated pattern. It is **not** a broad automatic search for all `le`, `leh`, `a`, `mawh`, `ahih hangin`, or `ahih kei leh` hits. The route keeps one clean NP-conjunction anchor for `le`, explicit overlap controls for conditional `leh` and sequential-vs-agreement `a`, a deferred lexical-export control for `mawh`, and caveated adversative or conditional-adversative rows for `ahih hangin` and `ahih kei leh`. In other words, the coordinator candidate layer keeps `le` versus `leh`, conditional `leh`, sequential-vs-agreement `a`, lexical `mawh`, and caveated `ahih hangin` / `ahih kei leh` material visible without turning the extractor into a broad automatic coordinator harvest.
+
 Interrogatives follows the same curated pattern. It is **not** a broad automatic search for all `hiam`, `bang`, or `kua` hits. The route preserves accepted clause-final `hiam` and selected WH-question windows, keeps embedded-question material visible without promoting it too quickly, and includes explicit blocked false friends such as formulaic `Bang hang hiam cih leh`, lexical `a hiam ...` material, and bang-family noise like `bangmah` or `bangin`. Comparison particles `maw`, `ham`, and `em` remain deferred until the core `hiam` and WH evidence is stable.
 
 Numerals follows the same curated pattern. It is **not** a broad automatic search for all `khat`, `nih`, `kua`, or numeral-looking tokens. The route keeps a small set of clean analyzer-backed counting windows, includes explicit ambiguity controls for `kua` = `who` versus `kua` = `nine`, and keeps `khat` on the numeral versus indefinite boundary instead of silently promoting every `mi khat`-type row as a plain numeral example.
@@ -135,7 +145,7 @@ Quantifiers follows the same curated pattern. It is **not** a broad automatic se
 
 ## What the current extractor does
 
-For the current demonstratives, case-marking, interrogatives, numerals, negation, pronoun, quantifiers, and stem-alternation layers, the extractor:
+For the current demonstratives, case-marking, coordinator, interrogatives, numerals, negation, pronoun, quantifiers, and stem-alternation layers, the extractor:
 
 1. loads `data/ctd_analysis/tokens.tsv`;
 2. looks up curated verse/token windows;
@@ -165,4 +175,4 @@ In practice, that means adding:
 
 ## Why the current layers are curated
 
-The first demonstratives implementation, the first negation retrofit, the first pronoun retrofit, the first stem-alternation retrofit, the interrogatives retrofit, the numerals candidate retrofit, and the quantifiers candidate retrofit are intentionally curated because publication-review work needs explicit reviewable evidence rows more than it needs a broad automatic discovery engine. Future automation may expand candidate discovery, but publication-review examples must still be analyzer-backed, construction-checked, and manually reviewed before they reach print prose.
+The first demonstratives implementation, the first negation retrofit, the first pronoun retrofit, the first stem-alternation retrofit, the coordinators candidate retrofit, the interrogatives retrofit, the numerals candidate retrofit, and the quantifiers candidate retrofit are intentionally curated because publication-review work needs explicit reviewable evidence rows more than it needs a broad automatic discovery engine. Future automation may expand candidate discovery, but publication-review examples must still be analyzer-backed, construction-checked, and manually reviewed before they reach print prose.
