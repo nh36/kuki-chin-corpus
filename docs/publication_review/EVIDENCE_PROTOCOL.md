@@ -59,10 +59,11 @@ Candidate files are the working evidence layer between analyzer export and the d
 - Examples:
   - `output/publication_review/candidates_demonstratives.tsv`
   - `output/publication_review/candidates_negation.tsv`
-  - `output/publication_review/candidates_interrogatives.tsv`
-  - `output/publication_review/candidates_coordinators.tsv`
-  - `output/publication_review/candidates_numerals.tsv`
-  - `output/publication_review/candidates_quantifiers.tsv`
+- `output/publication_review/candidates_interrogatives.tsv`
+- `output/publication_review/candidates_coordinators.tsv`
+- `output/publication_review/candidates_numerals.tsv`
+- `output/publication_review/candidates_quantifiers.tsv`
+- `output/publication_review/candidates_sentence_final_particles.tsv`
 
 Candidate files may include both accepted and rejected rows. Excluded or deferred rows are not noise; they document where raw discovery overgenerated or where analyzer-aware review blocked a tempting but unsafe example.
 
@@ -136,7 +137,9 @@ Numerals is now a completed current-slice packet under this workflow. Its curate
 
 Quantifiers is now a completed current-slice packet under this workflow. Its curated `candidates_quantifiers.tsv` layer now sits under `dossier_quantifiers.md`, `grammar_quantifiers_print_slice.md`, `dictionary_quantifiers_print_slice.md`, and `review_notes_quantifiers.md`; it keeps `khempeuh` as the universal anchor, preserves overlap controls for `khat`, `kuamah`, and bang-family `bangmah`, keeps `tampi tak` narrow as degree/quantity evidence, and is ready for human review at the current slice maturity level.
 
-Coordinators has now begun as the next narrow retrofit under this workflow. Its first analyzer-aware `candidates_coordinators.tsv` layer is curated rather than a broad automatic coordinator search: it keeps a clean `le` NP-conjunction anchor, preserves overlap controls for conditional `leh` and sequential-versus-agreement `a`, keeps `mawh` visible only as deferred lexical-export material until a real disjunction or alternative-question example is found, and treats `ahih hangin` plus `ahih kei leh` as caveated adversative or conditional-adversative boundary evidence.
+Coordinators is now a completed current-slice packet under this workflow. Its curated `candidates_coordinators.tsv` layer now sits under `dossier_coordinators.md`, `grammar_coordinators_print_slice.md`, `dictionary_coordinators_print_slice.md`, and `review_notes_coordinators.md`; it keeps a clean `le` NP-conjunction anchor, preserves overlap controls for conditional `leh` and sequential-versus-agreement `a`, keeps `mawh` visible only as deferred lexical-export material until a real disjunction or alternative-question example is found, and treats `ahih hangin` plus `ahih kei leh` as caveated adversative or conditional-adversative boundary evidence.
+
+Sentence-final particles has now begun as the next narrow retrofit under this workflow. Its first analyzer-aware `candidates_sentence_final_particles.tsv` layer is curated rather than a broad automatic particle search: it keeps `ahi hi` and `lo hi` as caveated declarative-overlap rows, treats `hiam` as interrogatives-overlap control rather than reopening the stabilized interrogatives packet, keeps `hen`, `in`, and `un` under constructional review, and leaves `aw`, `tahen`, `ta`, and `zo` only as caveated boundary or deferred TAM-overlap material.
 
 ## Pilot topic: demonstratives/deixis
 

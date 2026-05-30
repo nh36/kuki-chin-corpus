@@ -18,11 +18,13 @@ Usage:
     python3 scripts/publication_review/extract_candidates.py --list-topics
     python3 scripts/publication_review/extract_candidates.py demonstratives
     python3 scripts/publication_review/extract_candidates.py case_marking
+    python3 scripts/publication_review/extract_candidates.py coordinators
     python3 scripts/publication_review/extract_candidates.py interrogatives
     python3 scripts/publication_review/extract_candidates.py numerals
     python3 scripts/publication_review/extract_candidates.py negation
     python3 scripts/publication_review/extract_candidates.py pronouns
     python3 scripts/publication_review/extract_candidates.py quantifiers
+    python3 scripts/publication_review/extract_candidates.py sentence_final_particles
     python3 scripts/publication_review/extract_candidates.py stem_alternation
 """
 
@@ -46,6 +48,7 @@ SUPPORTED_TOPICS = (
     "negation",
     "pronouns",
     "quantifiers",
+    "sentence_final_particles",
     "stem_alternation",
 )
 
@@ -196,6 +199,31 @@ COORDINATORS_CANDIDATE_COLUMNS = [
     "notes",
 ]
 
+SENTENCE_FINAL_PARTICLES_CANDIDATE_COLUMNS = [
+    "candidate_id",
+    "topic",
+    "construction_id",
+    "particle_type",
+    "particle_form",
+    "construction_type",
+    "verse_id",
+    "reference",
+    "surface_span",
+    "token_indices",
+    "segmentation_span",
+    "gloss_span",
+    "lemma_span",
+    "pos_span",
+    "kjv",
+    "candidate_status",
+    "confidence",
+    "print_status",
+    "why_selected",
+    "why_excluded",
+    "manual_review_status",
+    "notes",
+]
+
 REQUIRED_TOKEN_COLUMNS = {
     "verse_id",
     "token_index",
@@ -261,6 +289,8 @@ class CandidateSpec:
     quantifier_form: str = ""
     coordinator_type: str = ""
     coordinator_form: str = ""
+    particle_type: str = ""
+    particle_form: str = ""
     construction_type: str = ""
     print_status: str = ""
     token_indices_style: str = "comma"
@@ -434,6 +464,8 @@ def candidate_row(
         "quantifier_form": spec.quantifier_form,
         "coordinator_type": spec.coordinator_type,
         "coordinator_form": spec.coordinator_form,
+        "particle_type": spec.particle_type,
+        "particle_form": spec.particle_form,
         "construction_type": spec.construction_type,
         "verse_id": verse_meta.verse_id,
         "reference": verse_meta.reference,
@@ -1872,6 +1904,184 @@ def build_stem_alternation_specs() -> list[CandidateSpec]:
     ]
 
 
+def build_sentence_final_particles_specs() -> list[CandidateSpec]:
+    topic = "sentence_final_particles"
+    return [
+        accepted_with_caveat(
+            candidate_id="sfp_hi_gen1_13_ahi_hi",
+            topic=topic,
+            construction_id="particle-hi-ahi-hi",
+            particle_type="declarative",
+            particle_form="hi",
+            construction_type="copula_plus_declarative_ahi_hi",
+            reference="Genesis 1:13",
+            token_indices=(10, 11),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_usable_with_caveat",
+            why_selected="Analyzer preserves `ahi hi` in a compact clause-final span, so the first sentence-final packet can keep declarative `hi` visible without pretending the evidence is a bare standalone particle.",
+            why_excluded="This is not a bare declarative `hi` row: it bundles copular `ahi` plus final `hi`, so it cannot license raw `hi` harvesting or a claim that every `hi` token is sentence-final declarative.",
+            notes="Copula-versus-sentence-final overlap is explicit here; keep `hi` narrow and construction-controlled.",
+            expected_normalized=("ahi", "hi"),
+        ),
+        accepted_with_caveat(
+            candidate_id="sfp_hi_gen4_5_lo_hi",
+            topic=topic,
+            construction_id="particle-hi-lo-hi",
+            particle_type="negation_overlap",
+            particle_form="hi",
+            construction_type="neg_plus_declarative_lo_hi",
+            reference="Genesis 4:5",
+            token_indices=(6, 7, 8),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_usable_with_caveat",
+            why_selected="`thusim lo hi` keeps one compact negative-plus-declarative row visible in the candidate layer so sentence-final review can register how `hi` clusters with stabilized negation material.",
+            why_excluded="This row overlaps the negation packet and should not reopen `lo` analysis or broaden `hi` into every clause-final negative sequence.",
+            notes="Negation-overlap control only; cross-reference the stabilized negation packet rather than rebuilding it here.",
+            expected_normalized=("thusim", "lo", "hi"),
+        ),
+        deferred(
+            candidate_id="sfp_hiam_gen48_8_overlap_control",
+            topic=topic,
+            construction_id="particle-hiam-overlap-control",
+            particle_type="interrogative_overlap",
+            particle_form="hiam",
+            construction_type="interrogative_hiam_overlap_control",
+            reference="Genesis 48:8",
+            token_indices=(9, 10, 11, 12),
+            token_indices_style="range",
+            confidence="high",
+            print_status="not_print_ready",
+            why_selected="Sentence-final particle work borders the already stabilized interrogatives packet, so one clause-final `hiam` row is kept as a cross-reference control.",
+            why_excluded="`Hiam` already belongs to the interrogatives packet, so this row is overlap control only and must not reopen or duplicate interrogatives analysis.",
+            notes="Cross-reference the existing interrogatives packet instead of absorbing `hiam` into a new sentence-final chapter.",
+            manual_review_status="needs_followup",
+            expected_normalized=("hihte", "kua", "ahi", "hiam"),
+        ),
+        deferred(
+            candidate_id="sfp_tahen_gen9_25_hi_tahen",
+            topic=topic,
+            construction_id="particle-tahen-jussive",
+            particle_type="jussive",
+            particle_form="tahen",
+            construction_type="jussive_tahen",
+            reference="Genesis 9:25",
+            token_indices=(12, 13),
+            token_indices_style="range",
+            confidence="low",
+            print_status="not_print_ready",
+            why_selected="The generated sentence-final report makes `tahen` worth checking, so the candidate layer keeps one compact `hi tahen` window in view instead of relying on report paraphrase alone.",
+            why_excluded="In the current export, `tahen` here is lexical `army` / `N` rather than a clean jussive particle, so the row cannot yet serve as settled sentence-final evidence.",
+            notes="The same verse also contains split `ta hen` material earlier in the clause; keep fused-versus-split `tahen`/`ta hen` noise explicit and do not turn this into a broad mood chapter.",
+            manual_review_status="needs_followup",
+            expected_normalized=("hi", "tahen"),
+        ),
+        accepted_with_caveat(
+            candidate_id="sfp_hen_gen1_3_khuavak_om_hen",
+            topic=topic,
+            construction_id="particle-hen-optative",
+            particle_type="optative",
+            particle_form="hen",
+            construction_type="optative_hen",
+            reference="Genesis 1:3",
+            token_indices=(2, 3, 4),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_usable_with_caveat",
+            why_selected="Genesis 1:3 gives a compact analyzer-backed clause-final `hen` row, which is enough to keep optative material visible in a first sentence-final packet.",
+            why_excluded="Use this as optative evidence only: do not let the row expand into a broad mood or TAM account, and note that report-style `ta hen` wording is not what the current export preserves in this verse.",
+            notes="Optative evidence with a report-versus-export caveat; broad TAM remains deferred.",
+            expected_normalized=("khuavak", "om", "hen"),
+        ),
+        accepted_with_caveat(
+            candidate_id="sfp_in_gen6_14_teembaw_khat_bawl_in",
+            topic=topic,
+            construction_id="particle-in-imperative",
+            particle_type="imperative_singular",
+            particle_form="in",
+            construction_type="imperative_in",
+            reference="Genesis 6:14",
+            token_indices=(6, 7, 8, 9),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="print_usable_with_caveat",
+            why_selected="Verse-final `... bawl in` keeps singular imperative `in` visible in a compact analyzer-backed window for the first sentence-final pass.",
+            why_excluded="The current export still glosses this `in` as `ERG` / `FUNC`, and `in` has substantial case-marker overlap elsewhere, so this row must not license raw `in` harvesting.",
+            notes="Imperative-versus-case overlap control. The analyzer exports `teembaw` rather than report-style `lawng`, so later prose should stay aligned to the actual candidate span.",
+            expected_normalized=("teembaw", "khat", "bawl", "in"),
+        ),
+        accepted(
+            candidate_id="sfp_un_ps100_1_gingsak_un",
+            topic=topic,
+            construction_id="particle-un-imperative",
+            particle_type="imperative_plural",
+            particle_form="un",
+            construction_type="imperative_un",
+            reference="Psalms 100:1",
+            token_indices=(7, 8),
+            token_indices_style="range",
+            confidence="high",
+            print_status="print_ready",
+            why_selected="`gingsak un` is a compact analyzer-backed imperative plural window and gives the packet one clean `un` anchor.",
+            notes="The selected span stays tight so the nearby `aw` material does not get flattened into the same candidate row.",
+            expected_normalized=("gingsak", "un"),
+        ),
+        accepted_with_caveat(
+            candidate_id="sfp_aw_ps100_1_gam_khempeuh_aw",
+            topic=topic,
+            construction_id="particle-aw-vocative",
+            particle_type="exclamative_vocative",
+            particle_form="aw",
+            construction_type="vocative_aw",
+            reference="Psalms 100:1",
+            token_indices=(0, 1, 2),
+            token_indices_style="range",
+            confidence="medium",
+            print_status="not_print_ready",
+            why_selected="`Gam khempeuh aw` keeps report-visible `aw` in the candidate layer as vocative or exclamative boundary evidence rather than letting it disappear from the first pass.",
+            why_excluded="The current export glosses `aw` lexically as `voice`, and this verse also contains a second `aw` in `lungdamna aw`, so the row should stay vocative/exclamative boundary material rather than a generalized sentence-final particle entry.",
+            notes="Do not treat every `aw` token as sentence-final mood marking without constructional review.",
+            expected_normalized=("gam", "khempeuh", "aw"),
+        ),
+        needs_review(
+            candidate_id="sfp_ta_gen40_23_mangngilh_ta_hi",
+            topic=topic,
+            construction_id="particle-ta-boundary",
+            particle_type="tam_overlap",
+            particle_form="ta",
+            construction_type="aspect_plus_decl_ta_hi",
+            reference="Genesis 40:23",
+            token_indices=(12, 13, 14),
+            token_indices_style="range",
+            confidence="low",
+            print_status="not_print_ready",
+            why_selected="`mangngilh ta hi` keeps report-visible `ta hi` boundary material explicit without starting a broad TAM chapter.",
+            why_excluded="The current export glosses `ta` here as ambiguous `child` / `FUNC` rather than a clean perfective particle, so this row remains boundary evidence only.",
+            notes="TAM-overlap control only; broad aspectual prose remains deferred.",
+            manual_review_status="needs_followup",
+            expected_normalized=("mangngilh", "ta", "hi"),
+        ),
+        deferred(
+            candidate_id="sfp_zo_gen1_28_zo_boundary",
+            topic=topic,
+            construction_id="particle-zo-boundary",
+            particle_type="tam_overlap",
+            particle_form="zo",
+            construction_type="completive_zo_boundary",
+            reference="Genesis 1:28",
+            token_indices=(17,),
+            confidence="low",
+            print_status="not_print_ready",
+            why_selected="The generated sentence-final report points toward completive `zo`, so the first candidate layer keeps one analyzer-backed `zo` token visible rather than relying on report counts or schematic examples.",
+            why_excluded="The current export glosses this `zo` as ambiguous lexical `south` / `N` rather than as a clean completive particle, so `zo` remains deferred in the sentence-final packet.",
+            notes="Keep `zo` as TAM-overlap boundary material only until a cleaner analyzer-backed completive row is found.",
+            manual_review_status="needs_followup",
+            expected_normalized=("zo",),
+        ),
+    ]
+
+
 def build_specs(topic: str) -> list[CandidateSpec]:
     if topic == "demonstratives":
         return build_demonstratives_specs()
@@ -1889,6 +2099,8 @@ def build_specs(topic: str) -> list[CandidateSpec]:
         return build_pronouns_specs()
     if topic == "quantifiers":
         return build_quantifiers_specs()
+    if topic == "sentence_final_particles":
+        return build_sentence_final_particles_specs()
     if topic == "stem_alternation":
         return build_stem_alternation_specs()
     raise SystemExit(f"Unsupported topic: {topic}")
@@ -1905,6 +2117,8 @@ def candidate_columns(topic: str) -> list[str]:
         return NUMERALS_CANDIDATE_COLUMNS
     if topic == "quantifiers":
         return QUANTIFIERS_CANDIDATE_COLUMNS
+    if topic == "sentence_final_particles":
+        return SENTENCE_FINAL_PARTICLES_CANDIDATE_COLUMNS
     return DEFAULT_CANDIDATE_COLUMNS
 
 
