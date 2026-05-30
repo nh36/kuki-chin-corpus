@@ -6,7 +6,7 @@ title: "Tedim Relators / Postpositions Scoping Dossier"
 
 This is the first candidate/scoping pass for Tedim relator nouns and postpositions. It asks whether relators / postpositions can support a small independent candidate-first packet while keeping the boundary with the existing case-marking packet explicit.
 
-This dossier is therefore **not** a grammar print slice. Grammar, dictionary, and review-note print slices for relators/postpositions have **not** yet begun. `grammar_relators_postpositions_print_slice.md`, `dictionary_relators_postpositions_print_slice.md`, and `review_notes_relators_postpositions.md` do **not** yet exist.
+This dossier is therefore **not** a grammar print slice. The first narrow grammar print slice for relators/postpositions now exists at `grammar_relators_postpositions_print_slice.md`. Dictionary and review-note print slices for relators/postpositions have **not** yet begun. `dictionary_relators_postpositions_print_slice.md` and `review_notes_relators_postpositions.md` do **not** yet exist.
 
 # Evidence protocol
 
@@ -62,6 +62,6 @@ Several forms should remain only as boundary evidence for now.
 
 # Safest next print-facing sub-scope
 
-The safest next print-facing sub-scope is a combined but narrow relators/postpositions grammar slice, led by relator nouns rather than by a broad postposition inventory. That slice should center on `kiang`, `lak`, `sung`, `tung`, and cautiously `pualam`, while treating `pan`, `panin`, and `tawh` only where they are clearly separate or clearly postpositional rather than merely attached case-marking material.
+The safest next print-facing sub-scope was a combined but narrow relators/postpositions grammar slice, led by relator nouns rather than by a broad postposition inventory. That slice now exists at `grammar_relators_postpositions_print_slice.md`; it centers on `kiang`, `lak`, `sung`, `tung`, and cautiously `pualam`, while treating `pan`, `panin`, and `tawh` only where they are clearly separate or clearly postpositional rather than merely attached case-marking material.
 
-A postpositions-only slice would risk duplicating the case-marking packet too quickly. A relator-nouns-only slice would hide the main reason the domain matters: relator nouns and separate postpositions meet in the same constructions. The next slice should therefore be combined, but deliberately small and boundary-controlled.
+A postpositions-only slice would still risk duplicating the case-marking packet too quickly, and a relator-nouns-only slice would still hide the main reason the domain matters. The next step should therefore be a relators/postpositions dictionary print slice using the same candidate TSV and dossier rather than a broad rewrite.

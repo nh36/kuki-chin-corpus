@@ -38,6 +38,7 @@ def test_relators_postpositions_scope_dossier_keeps_candidate_layer_controlling(
     assert "This dossier is therefore **not** a grammar print slice." in text
     assert "generated reports are discovery sources only" in lower
     assert "Candidate rows, not generated-report raw counts" in text
+    assert "grammar_relators_postpositions_print_slice.md" in text
 
 
 def test_relators_postpositions_scope_dossier_distinguishes_relator_nouns_from_postpositions() -> None:
@@ -73,7 +74,13 @@ def test_relators_postpositions_scope_dossier_does_not_claim_later_surfaces_exis
     lower = text.lower()
 
     assert "have **not** yet begun" in text
-    assert "grammar_relators_postpositions_print_slice.md" in text
     assert "dictionary_relators_postpositions_print_slice.md" in text
     assert "review_notes_relators_postpositions.md" in text
     assert "ready for human review" not in lower
+
+
+def test_relators_postpositions_scope_dossier_sets_dictionary_slice_as_next_step() -> None:
+    text = _text()
+
+    assert "first narrow grammar print slice for relators/postpositions now exists" in text
+    assert "The next step should therefore be a relators/postpositions dictionary print slice" in text
