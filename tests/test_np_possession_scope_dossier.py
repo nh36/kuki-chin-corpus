@@ -37,7 +37,8 @@ def test_np_possession_scope_dossier_is_candidate_scoping_only():
 
     assert "first candidate/scoping pass" in text
     assert "not a grammar print slice" in text
-    assert "grammar, dictionary, and review-note slices for np structure / possession do not yet exist" in text
+    assert "grammar print slice now exists" in text
+    assert "dictionary and review-note slices for np structure / possession do not yet exist" in text
     assert "not a full noun-phrase or possession chapter" in text
 
 
@@ -45,6 +46,7 @@ def test_np_possession_scope_dossier_recommends_basic_np_order_next():
     text = DOSSIER_PATH.read_text(encoding="utf-8")
 
     assert "basic NP ordering" in text
+    assert "grammar_np_possession_print_slice.md" in text
     assert "hih mite" in text
     assert "mi khat" in text
     assert "mi khempeuh" in text
