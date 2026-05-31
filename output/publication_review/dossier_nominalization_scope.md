@@ -6,7 +6,7 @@ title: "Tedim Nominalization Scoping Dossier"
 
 This is the first candidate/scoping pass for nominalization. The controlling candidate layer now exists at `output/publication_review/candidates_nominalization.tsv`.
 
-This dossier remains the candidate/scoping pass rather than the print slice itself, and it is not a full derivation or relative-clause chapter. A first narrow grammar print slice now exists at `output/publication_review/grammar_nominalization_print_slice.md`. Dictionary and review-note slices for nominalization do **not** yet exist.
+This dossier remains the candidate/scoping pass rather than the print slice itself, and it is not a full derivation or relative-clause chapter. A first narrow grammar print slice now exists at `output/publication_review/grammar_nominalization_print_slice.md`, and review notes now exist at `output/publication_review/review_notes_nominalization.md`. A dictionary slice for nominalization does **not** yet exist.
 
 # Architecture control
 

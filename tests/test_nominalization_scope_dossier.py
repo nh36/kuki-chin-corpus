@@ -42,4 +42,5 @@ def test_nominalization_scope_dossier_names_boundaries_and_status() -> None:
     assert "candidate/scoping pass" in lower
     assert "rather than the print slice itself" in lower
     assert "grammar_nominalization_print_slice.md" in text
-    assert "dictionary and review-note slices for nominalization do **not** yet exist" in lower
+    assert "review_notes_nominalization.md" in text
+    assert "a dictionary slice for nominalization does **not** yet exist" in lower

@@ -8,7 +8,7 @@ This is the first narrow nominalization grammar slice. It is controlled by `outp
 
 This is not a full nominalization chapter, not a full derivation chapter, not a full relative-clause chapter, and not a full case-routing chapter. It also stays narrow against `output/publication_review/candidates_clause_linkage.tsv`, `output/publication_review/review_notes_clause_linkage.md`, `output/publication_review/review_notes_case_marking.md`, `output/publication_review/review_notes_derivation_valency.md`, `output/publication_review/review_notes_prefix_agreement.md`, and `output/publication_review/review_notes_pronouns.md`.
 
-The present slice therefore covers only the first safe nominalization claim. `-na` is the clearest productive deverbal nominalizer, with `bawlna` as the controlled anchor form, `bawl-na` as the segmentation, and `make-NMLZ / making, creation` as the controlled gloss and function. No dictionary slice exists yet for nominalization, because this packet is still establishing a controlled constructional or morphological claim rather than a settled lexical layer.
+The present slice therefore covers only the first safe nominalization claim. `-na` is the clearest productive deverbal nominalizer, with `bawlna` as the controlled anchor form, `bawl-na` as the segmentation, and `make-NMLZ / making, creation` as the controlled gloss and function. No dictionary slice exists yet for nominalization, because this packet is still establishing a controlled constructional or morphological claim rather than a settled lexical layer. The packet now properly proceeds through nominalization review notes rather than a dictionary slice.
 
 # Deverbal nominalization with `-na`
 
@@ -64,6 +64,6 @@ That claim is deliberately smaller than a full nominalization chapter, smaller t
 
 # Recommended next step
 
-After this grammar slice, the next step should be nominalization review notes rather than a dictionary slice, because this is a constructional or morphological packet and the lexical treatment of `-pa`, `-mi`, and lexicalized forms remains unsettled.
+This packet now properly proceeds to nominalization review notes rather than to a dictionary slice, because this is a constructional or morphological packet and the lexical treatment of `-pa`, `-mi`, and lexicalized forms remains unsettled.
 
-If the project later wants one more nominalization step before review notes and human review, the next sub-scope should be a separate `-pa` or `-mi` agentive candidate expansion rather than a dictionary layer, but not in this commit.
+If the project later wants more nominalization work after review notes, the next sub-scope should be a separate `-pa` or `-mi` agentive candidate expansion rather than a dictionary layer, but not in this commit.
