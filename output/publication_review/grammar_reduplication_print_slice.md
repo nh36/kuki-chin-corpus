@@ -8,7 +8,7 @@ This is the first narrow reduplication grammar slice. It is controlled by `outpu
 
 This is not a full derivation chapter, not a full reduplication chapter, not a dictionary slice, and not a TAM/aspect or VP-structure slice. It also stays narrow against `output/publication_review/review_notes_derivation_valency.md`, `output/publication_review/review_notes_nominalization.md`, `output/publication_review/review_notes_vp_structure_stacking.md`, `output/publication_review/review_notes_noun_domain.md`, and `output/publication_review/review_notes_tam.md`.
 
-The present slice therefore covers only the first safe full-reduplication claim. No dictionary slice or reduplication review-note slice exists yet, because this packet is grammar-facing and constructional rather than lexical.
+The present slice therefore covers only the first safe full-reduplication claim. No dictionary slice exists for reduplication, because this packet is grammar-facing and constructional rather than lexical.
 
 # Full reduplication as intensification
 
@@ -60,6 +60,6 @@ That claim is deliberately smaller than a full derivation chapter, smaller than 
 
 # Recommended next step
 
-After this grammar slice, the next step should be reduplication review notes rather than a dictionary slice, because this packet is grammar-facing and constructional rather than lexical.
+This grammar slice is now paired with `output/publication_review/review_notes_reduplication.md`, so the packet is ready for human review at its current full-reduplication-intensifier slice maturity level.
 
-If more reduplication work is chosen before review notes, the next sub-scope should be distributive `peuhpeuh` or syntactic `ni ni`, not lexicalized-looking or aspect-heavy rows.
+The next editorial step should be a whole-grammar coverage checkpoint rather than starting another new packet immediately. If more reduplication work is chosen after that checkpoint, the next sub-scope should be distributive `peuhpeuh` or syntactic `ni ni`, not lexicalized-looking or aspect-heavy rows.

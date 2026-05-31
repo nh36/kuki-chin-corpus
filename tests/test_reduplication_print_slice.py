@@ -80,4 +80,4 @@ def test_reduplication_print_slice_stays_packet_narrow() -> None:
     assert "not a dictionary slice" in lower
     assert "not a tam/aspect or vp-structure slice" in lower
     assert "dictionary slice now exists" not in lower
-    assert "review notes now exist" not in lower
+    assert "review_notes_reduplication.md" in text

@@ -36,7 +36,8 @@ def test_reduplication_scope_dossier_describes_current_packet_stage() -> None:
     assert "not a dictionary slice" in text
     assert "not a full derivation chapter" in text
     assert "grammar_reduplication_print_slice.md" in text
-    assert "dictionary and review-note slices do not yet exist for reduplication" in text
+    assert "review_notes_reduplication.md" in text
+    assert "a dictionary slice does not yet exist for reduplication" in text
 
 
 def test_reduplication_scope_dossier_keeps_clean_and_boundary_rows_visible() -> None:
