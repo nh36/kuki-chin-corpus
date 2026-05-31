@@ -6,7 +6,7 @@ title: "Tedim VP Structure / Suffix Stacking Scoping Dossier"
 
 This is the first candidate/scoping pass for VP structure and suffix stacking. The controlling candidate layer now exists at `output/publication_review/candidates_vp_structure_stacking.tsv`. This dossier is not a grammar print slice and not a full VP chapter.
 
-The packet is intentionally small. Its job is to decide which VP-slot or suffix-stacking patterns are clean enough to become future print-facing anchors, which patterns are already owned by completed packets, and which patterns should remain deferred because they belong primarily to derivation/valency, negation, sentence-final particles, agreement/prefixes, or subordination. The grammar print slice now exists at `output/publication_review/grammar_vp_structure_stacking_print_slice.md`, but dictionary and review-note print slices for VP structure/stacking do **not** yet exist.
+The packet is intentionally small. Its job is to decide which VP-slot or suffix-stacking patterns are clean enough to become future print-facing anchors, which patterns are already owned by completed packets, and which patterns should remain deferred because they belong primarily to derivation/valency, negation, sentence-final particles, agreement/prefixes, or subordination. The grammar print slice now exists at `output/publication_review/grammar_vp_structure_stacking_print_slice.md`, and review notes now exist at `output/publication_review/review_notes_vp_structure_stacking.md`. No ordinary dictionary slice exists for VP structure/stacking because this packet is constructional rather than lexical.
 
 # Architecture control
 
@@ -27,7 +27,8 @@ The candidate TSV is the controlling layer for this packet. Generated-report cou
 1. `candidates_vp_structure_stacking.tsv`
 2. `dossier_vp_structure_stacking_scope.md`
 3. `grammar_vp_structure_stacking_print_slice.md`
-4. any later narrow dictionary slice or review notes, if they are explicitly chosen
+4. `review_notes_vp_structure_stacking.md`
+5. any later specially justified constructional dictionary layer, if it is explicitly chosen
 
 # Existing packet boundaries
 

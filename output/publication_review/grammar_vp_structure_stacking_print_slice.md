@@ -8,7 +8,7 @@ This is the first narrow VP structure / suffix stacking grammar slice for Tedim.
 
 This is not a full VP chapter. It is not a rewrite of TAM, directionals, negation, sentence-final particles, or relators/postpositions. Those packet boundaries remain explicit through `output/publication_review/review_notes_tam.md`, `output/publication_review/review_notes_directionals.md`, `output/publication_review/review_notes_negation.md`, `output/publication_review/review_notes_sentence_final_particles.md`, and `output/publication_review/review_notes_relators_postpositions.md`.
 
-The present slice therefore covers only the first safe suffix-stacking claim: `bawlzoding` as the central print-usable-with-caveat anchor for aspect plus irrealis stacking. Dictionary and review-note slices for VP structure / suffix stacking do not yet exist.
+The present slice therefore covers only the first safe suffix-stacking claim: `bawlzoding` as the central print-usable-with-caveat anchor for aspect plus irrealis stacking. No ordinary dictionary slice exists for this packet because it is constructional rather than lexical.
 
 # Baseline: completed single-suffix packets
 
@@ -54,6 +54,6 @@ That claim stays deliberately smaller than a full slot template. It does not cla
 
 # Recommended next step
 
-After this grammar slice, the next step should be a VP structure / suffix stacking dictionary print slice only if the dictionary layer can remain as narrow and construction-controlled as this `bawlzoding`-led grammar slice.
+After this grammar slice, the packet can move to review notes without forcing an ordinary dictionary slice, because the safe first-slice claim is constructional rather than lexical.
 
-If that narrow dictionary layer is not yet feasible, the next substantive packet should be derivation/valency candidate scoping rather than a broader VP rewrite.
+The next substantive packet after this narrow constructional slice should therefore be derivation/valency candidate scoping rather than a broader VP rewrite.

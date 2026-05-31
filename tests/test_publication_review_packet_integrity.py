@@ -46,6 +46,7 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
     "review_notes_directionals.md",
     "review_notes_tam.md",
     "review_notes_relators_postpositions.md",
+    "review_notes_vp_structure_stacking.md",
 }
 
 FORBIDDEN_NEW_PACKET_FILES = {

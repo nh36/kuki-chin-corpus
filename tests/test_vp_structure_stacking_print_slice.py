@@ -80,7 +80,6 @@ def test_vp_structure_stacking_print_slice_stays_narrow() -> None:
     lower = text.lower()
 
     assert "not a full vp chapter" in lower
-    assert "dictionary and review-note slices for vp structure / suffix stacking do not yet exist" in lower
+    assert "no ordinary dictionary slice exists for this packet because it is constructional rather than lexical" in lower
     assert "dictionary slice now exists" not in lower
-    assert "review notes now exist" not in lower
-
+    assert "dictionary headword" not in lower

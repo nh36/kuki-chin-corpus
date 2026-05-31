@@ -53,7 +53,8 @@ def test_vp_structure_stacking_scope_dossier_is_scoping_not_print_slice() -> Non
     assert "not a grammar print slice" in lower
     assert "not a full vp chapter" in lower
     assert "grammar print slice now exists at `output/publication_review/grammar_vp_structure_stacking_print_slice.md`" in lower
-    assert "dictionary and review-note print slices for vp structure/stacking do **not** yet exist" in lower or "dictionary and review-note print slices for vp structure / suffix stacking do not yet exist" in lower
+    assert "review notes now exist at `output/publication_review/review_notes_vp_structure_stacking.md`" in lower
+    assert "no ordinary dictionary slice exists for vp structure/stacking because this packet is constructional rather than lexical" in lower
 
 
 def test_vp_structure_stacking_scope_dossier_recommends_narrower_subset() -> None:
