@@ -8,7 +8,7 @@ This is the first narrow prefix/agreement grammar slice for Tedim. It is control
 
 This is not a full agreement chapter, not a full possession chapter, not a full object-prefix or inverse chapter, and not a rewrite of the completed pronouns/clusivity packet. It also stays narrow against `output/publication_review/review_notes_pronouns.md`, `output/publication_review/review_notes_derivation_valency.md`, and `output/publication_review/review_notes_vp_structure_stacking.md`.
 
-The present slice therefore covers only the agreement-versus-possession routing contrast, with `kanei` as the clearest agreement anchor and `kainn` as the clearest possessive-routing anchor. No dictionary slice or prefix/agreement review notes exist yet, because this packet is still establishing a controlled routing claim rather than a lexical headword layer.
+The present slice therefore covers only the agreement-versus-possession routing contrast, with `kanei` as the clearest agreement anchor and `kainn` as the clearest possessive-routing anchor. No dictionary slice exists yet for prefix/agreement, because this packet is still establishing a controlled routing claim rather than a lexical headword layer. The packet now proceeds through review notes rather than through a lexical headword layer.
 
 # Agreement versus possession routing
 
@@ -58,6 +58,6 @@ That claim is deliberately smaller than a full agreement chapter, smaller than a
 
 # Recommended next step
 
-After this grammar slice, the next step should be prefix/agreement review notes rather than a dictionary slice, because this packet is a routing/analysis packet rather than a lexical headword packet.
+This packet now properly proceeds to prefix/agreement review notes rather than to a dictionary slice, because it is a routing/analysis packet rather than a lexical headword packet.
 
-If the project wants one more prefix step before review notes, the next sub-scope should be a separate hong-/kong- object-prefix or inverse candidate expansion, but not in this commit.
+If the project later wants one more prefix step after review notes and human review, the next sub-scope should be a separate hong-/kong- object-prefix or inverse candidate expansion rather than a dictionary layer.

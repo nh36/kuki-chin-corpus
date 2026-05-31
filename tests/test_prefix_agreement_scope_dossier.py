@@ -59,5 +59,6 @@ def test_prefix_agreement_scope_dossier_stays_candidate_only() -> None:
     assert "candidate/scoping pass" in lower
     assert "rather than the print slice itself" in lower
     assert "grammar_prefix_agreement_print_slice.md" in text
+    assert "review_notes_prefix_agreement.md" in text
     assert "not a rewrite of the completed pronouns/clusivity packet" in lower
-    assert "dictionary and review-note slices for prefix/agreement do **not** yet exist" in lower
+    assert "a dictionary slice for prefix/agreement does **not** yet exist" in lower

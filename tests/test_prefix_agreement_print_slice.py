@@ -72,7 +72,7 @@ def test_prefix_agreement_print_slice_stays_narrow() -> None:
     assert "not a full possession chapter" in lower
     assert "not a full object-prefix or inverse chapter" in lower
     assert "not a rewrite of the completed pronouns/clusivity packet" in lower
-    assert "no dictionary slice or prefix/agreement review notes exist yet" in lower
-    assert "review notes rather than a dictionary slice" in lower
+    assert "no dictionary slice exists yet for prefix/agreement" in lower
+    assert "review notes rather than through a lexical headword layer" in lower
+    assert "review notes rather than to a dictionary slice" in lower
     assert "dictionary slice now exists" not in lower
-    assert "review-note slices already exist" not in lower

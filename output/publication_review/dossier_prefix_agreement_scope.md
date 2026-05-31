@@ -6,7 +6,7 @@ title: "Tedim Prefix / Agreement / Object-Prefix Scoping Dossier"
 
 This is the first candidate/scoping pass for pronominal prefixes, agreement, possessive-prefix routing, and object-prefix/inverse material. The controlling candidate layer now exists at `output/publication_review/candidates_prefix_agreement.tsv`.
 
-This dossier remains the candidate/scoping pass rather than the print slice itself. It is also not a rewrite of the completed pronouns/clusivity packet. A first narrow grammar print slice now exists at `output/publication_review/grammar_prefix_agreement_print_slice.md`. Dictionary and review-note slices for prefix/agreement do **not** yet exist.
+This dossier remains the candidate/scoping pass rather than the print slice itself. It is also not a rewrite of the completed pronouns/clusivity packet. A first narrow grammar print slice now exists at `output/publication_review/grammar_prefix_agreement_print_slice.md`, and review notes now exist at `output/publication_review/review_notes_prefix_agreement.md`. A dictionary slice for prefix/agreement does **not** yet exist.
 
 The packet stays narrow on purpose. Its job is to identify a small future print-facing prefix scope while keeping clear boundaries with the completed pronouns/clusivity packet, the current derivation/valency packet, and the constructional VP structure / suffix stacking packet.
 
