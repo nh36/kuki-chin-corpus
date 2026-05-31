@@ -6,7 +6,7 @@ title: "Tedim Noun Domain Scoping Dossier"
 
 This is the first candidate/scoping pass for simple nouns, compound nouns, and proper nouns. The controlling layer is `output/publication_review/candidates_noun_domain.tsv`.
 
-This dossier is not a grammar print slice, not a dictionary slice, and not a full noun chapter. Grammar, dictionary, and review-note slices do not yet exist for the noun domain.
+This dossier is not a grammar print slice, not a dictionary slice, and not a full noun chapter. A narrow grammar print slice now exists at `output/publication_review/grammar_noun_domain_print_slice.md`, but dictionary and review-note slices do not yet exist for the noun domain.
 
 # Architecture control
 
@@ -90,10 +90,10 @@ Several kinds of material should remain deferred at this candidate/scoping stage
 6. Analyzer-noisy, report-only, or count-only noun-domain claims should remain outside the first slice.
 7. Any broad noun chapter claim should remain outside the first slice.
 
-# Safest next print-facing sub-scope
+# Current print-facing status
 
-The safest next print-facing sub-scope after this candidate/scoping layer is a **simple noun stem** grammar slice rather than a compound or proper-noun slice.
+The safest next print-facing sub-scope after this candidate/scoping layer was a **simple noun stem** grammar slice rather than a compound or proper-noun slice.
 
-That next step could safely lead with `gam` as the main anchor and use `aksi / aksi-te` as the supporting plural row. This would let the packet make a small noun-domain claim about simple free stems and ordinary nominal inflection without forcing transparency decisions for compounds or mostly lexical-inventory decisions for proper nouns.
+That recommendation has now been taken in `output/publication_review/grammar_noun_domain_print_slice.md`, which leads with `gam` as the main anchor and uses `aksi / aksi-te` as the supporting plural row. This keeps the packet's first print-facing claim tightly limited to simple free stems and ordinary plural or case-like marking without forcing transparency decisions for compounds or mostly lexical-inventory decisions for proper nouns.
 
-Transparent compounds such as `minam` and `thugen` should remain visible as likely second-step material after that. Proper nouns should remain mostly tertiary or boundary material unless a later task explicitly chooses a separate name-focused scope.
+The next editorial step should now be noun-domain review notes rather than a dictionary slice. If more noun-domain work is chosen before review notes, transparent compounds such as `minam` and `thugen` should remain the safest second-step material, while proper nouns should remain mostly tertiary or boundary material unless a later task explicitly chooses a separate name-focused scope.

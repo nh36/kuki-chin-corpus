@@ -32,20 +32,22 @@ def test_noun_domain_scope_dossier_names_required_sources() -> None:
         assert required in text
 
 
-def test_noun_domain_scope_dossier_is_candidate_scoping_only() -> None:
+def test_noun_domain_scope_dossier_describes_current_packet_stage() -> None:
     text = DOSSIER_PATH.read_text(encoding="utf-8").lower()
 
     assert "first candidate/scoping pass" in text
     assert "not a grammar print slice" in text
     assert "not a dictionary slice" in text
     assert "not a full noun chapter" in text
-    assert "grammar, dictionary, and review-note slices do not yet exist for the noun domain" in text
+    assert "grammar_noun_domain_print_slice.md" in text
+    assert "dictionary and review-note slices do not yet exist for the noun domain" in text
 
 
 def test_noun_domain_scope_dossier_recommends_simple_noun_stems_next() -> None:
     text = DOSSIER_PATH.read_text(encoding="utf-8")
 
     assert "simple noun stem" in text
+    assert "grammar_noun_domain_print_slice.md" in text
     assert "gam" in text
     assert "aksi / aksi-te" in text
     assert "minam" in text
