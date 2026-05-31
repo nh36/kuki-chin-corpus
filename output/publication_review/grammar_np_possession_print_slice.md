@@ -8,7 +8,7 @@ This is the first narrow NP structure / possession grammar slice. It is controll
 
 This is not a full noun-phrase chapter, not a full possession chapter, not a full prefix/agreement chapter, and not a full case or relator chapter. It also stays narrow against `output/publication_review/review_notes_prefix_agreement.md`, `output/publication_review/review_notes_pronouns.md`, `output/publication_review/review_notes_case_marking.md`, `output/publication_review/review_notes_relators_postpositions.md`, `output/publication_review/review_notes_nominalization.md`, and `tests/test_prefix_agr_poss.py`.
 
-The present slice therefore covers only the first safe NP-ordering claim. No dictionary slice or NP structure / possession review-note slice exists yet, because this packet is still establishing a controlled structural/syntactic claim rather than a lexical layer.
+The present slice therefore covers only the first safe NP-ordering claim. No dictionary slice exists yet for NP structure / possession, because this packet is still establishing a controlled structural/syntactic claim rather than a lexical layer. The packet now properly proceeds through NP structure / possession review notes rather than a dictionary slice.
 
 # Basic NP ordering
 
@@ -56,6 +56,6 @@ That claim is deliberately smaller than a full noun-phrase chapter, smaller than
 
 # Recommended next step
 
-After this grammar slice, the next step should be NP structure / possession review notes rather than a dictionary slice, because this packet is structural/syntactic rather than lexical.
+This packet now properly proceeds through NP structure / possession review notes rather than a dictionary slice, because this packet is structural/syntactic rather than lexical.
 
-If possession is chosen before review notes, it should be a separate narrow possession sub-scope led by `ka pa`, not a broad possession chapter.
+If later work returns to possession after review notes, it should be a separate narrow possession sub-scope led by `ka pa`, not a broad possession chapter.

@@ -6,7 +6,7 @@ title: "Tedim NP Structure / Possession Scoping Dossier"
 
 This is the first candidate/scoping pass for NP structure and possession. The controlling layer is `output/publication_review/candidates_np_possession.tsv`.
 
-This dossier is not a grammar print slice. It is not a full noun-phrase or possession chapter. A narrow grammar print slice now exists at `output/publication_review/grammar_np_possession_print_slice.md`, but dictionary and review-note slices for NP structure / possession do not yet exist.
+This dossier is not a grammar print slice. It is not a full noun-phrase or possession chapter. A narrow grammar print slice now exists at `output/publication_review/grammar_np_possession_print_slice.md`, review notes now exist at `output/publication_review/review_notes_np_possession.md`, and a dictionary slice for NP structure / possession does not yet exist.
 
 # Architecture control
 
@@ -93,4 +93,4 @@ The safest next print-facing sub-scope after this candidate/scoping layer was a 
 
 That grammar slice leads with `hih mite`, `mi khat`, and `mi khempeuh`, because those rows let the packet make a small structural claim without reopening the completed prefix/agreement packet, the pronoun packet, or the apostrophe/genitive debates. Possession is still important in this packet, but the safest possession material remains more boundary-heavy than the cleanest NP-order rows.
 
-The next step after that grammar slice should be NP structure / possession review notes rather than a dictionary slice. If possession is chosen before review notes, the safest fallback remains a separate possessor/possessive-prefix sub-scope led by `ka pa`, not a broad possession chapter.
+The next step after that grammar slice was NP structure / possession review notes rather than a dictionary slice, and those review notes now exist at `output/publication_review/review_notes_np_possession.md`. If later work returns to possession, the safest fallback remains a separate possessor/possessive-prefix sub-scope led by `ka pa`, not a broad possession chapter.
