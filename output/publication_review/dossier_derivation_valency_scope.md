@@ -6,7 +6,7 @@ title: "Tedim Derivation / Valency Scoping Dossier"
 
 This is the first candidate/scoping pass for derivation and valency. The controlling candidate layer now exists at `output/publication_review/candidates_derivation_valency.tsv`. This dossier is not a grammar print slice and not a full verbal morphology chapter.
 
-The packet is intentionally small. Its job is to identify a narrow future print-facing sub-scope for derivation / valency while keeping clear boundaries with VP structure / stacking, TAM, directionals, negation, pronouns/prefixes, and transitivity. Grammar, dictionary, and review-note slices for derivation/valency do **not** yet exist.
+The packet is intentionally small. Its job is to identify a narrow future print-facing sub-scope for derivation / valency while keeping clear boundaries with VP structure / stacking, TAM, directionals, negation, pronouns/prefixes, and transitivity. A grammar print slice now exists at `output/publication_review/grammar_derivation_valency_print_slice.md`, and review notes now exist at `output/publication_review/review_notes_derivation_valency.md`, but no dictionary slice exists yet for derivation/valency.
 
 # Architecture control
 

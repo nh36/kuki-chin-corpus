@@ -52,7 +52,9 @@ def test_derivation_valency_scope_dossier_is_scoping_not_print_slice() -> None:
     assert "candidate/scoping pass" in lower
     assert "not a grammar print slice" in lower
     assert "not a full verbal morphology chapter" in lower
-    assert "grammar, dictionary, and review-note slices for derivation/valency do **not** yet exist" in lower
+    assert "grammar_derivation_valency_print_slice.md" in text
+    assert "review_notes_derivation_valency.md" in text
+    assert "no dictionary slice exists yet for derivation/valency" in lower
 
 
 def test_derivation_valency_scope_dossier_covers_main_candidate_groups() -> None:

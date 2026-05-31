@@ -8,7 +8,7 @@ This is the first narrow derivation / valency grammar slice for Tedim. It is con
 
 This is not a full derivation chapter, not a full valency chapter, and not a full verbal morphology chapter. It also does not reopen adjacent packet domains already controlled through `output/publication_review/review_notes_vp_structure_stacking.md`, `output/publication_review/review_notes_tam.md`, `output/publication_review/review_notes_directionals.md`, `output/publication_review/review_notes_pronouns.md`, `tests/test_vp_slots.py`, and `tests/test_prefix_agr_poss.py`.
 
-The present slice therefore covers only the first safe `-sak` claim: `paisak` as the clearest causative anchor and `muhsak` as the clearest benefactive or applicative-like split row. No dictionary slice or review-note slice exists yet for derivation/valency.
+The present slice therefore covers only the first safe `-sak` claim: `paisak` as the clearest causative anchor and `muhsak` as the clearest benefactive or applicative-like split row. No dictionary slice exists yet for derivation/valency, because the packet still leaves the `-sak` lexical split open for later editorial review.
 
 # Causative `-sak`
 
@@ -54,4 +54,4 @@ That claim is deliberately smaller than a full derivation chapter, smaller than 
 
 # Recommended next step
 
-After this grammar slice, the next step should be either a very narrow derivation / valency dictionary slice for `-sak`, or review notes if a dictionary layer would risk overclaiming beyond the current candidate-controlled evidence.
+After this grammar slice, the next step should be review notes rather than a dictionary layer, because a dictionary layer would risk overclaiming beyond the current candidate-controlled evidence before the `-sak` lexical split is reviewed.

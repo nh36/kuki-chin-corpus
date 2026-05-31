@@ -69,6 +69,6 @@ def test_derivation_valency_print_slice_stays_narrow() -> None:
     assert "not a full derivation chapter" in lower
     assert "not a full valency chapter" in lower
     assert "not a full verbal morphology chapter" in lower
-    assert "no dictionary slice or review-note slice exists yet for derivation/valency" in lower
+    assert "no dictionary slice exists yet for derivation/valency" in lower
+    assert "review notes rather than a dictionary layer" in lower
     assert "dictionary slice now exists" not in lower
-    assert "review-note slice now exists" not in lower
