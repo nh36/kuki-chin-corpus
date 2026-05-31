@@ -41,6 +41,7 @@ EXPECTED_CANDIDATE_FILES = {
     "candidates_clause_linkage.tsv",
     "candidates_nominalization.tsv",
     "candidates_np_possession.tsv",
+    "candidates_noun_domain.tsv",
 }
 
 RETROFIT_SEQUENCE_REVIEW_NOTES = {
