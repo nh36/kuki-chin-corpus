@@ -8,7 +8,7 @@ This is the first narrow noun-domain grammar slice. It is controlled by `output/
 
 This is not a full noun chapter, not a compound-noun chapter, not a proper-noun chapter, and not a dictionary slice. It also stays narrow against `output/publication_review/review_notes_np_possession.md`, `output/publication_review/review_notes_nominalization.md`, `output/publication_review/review_notes_relators_postpositions.md`, `output/publication_review/review_notes_case_marking.md`, and `output/publication_review/review_notes_pronouns.md`.
 
-The present slice therefore covers only the first safe simple-noun-stem claim. No dictionary slice or noun-domain review notes exist yet, because this packet is still establishing a grammar-facing noun-domain foundation rather than a lexical layer.
+The present slice therefore covers only the first safe simple-noun-stem claim. No dictionary slice exists for the noun domain, because this packet is still establishing a grammar-facing noun-domain foundation rather than a lexical layer.
 
 # Simple noun stems
 
@@ -64,6 +64,6 @@ That claim is deliberately smaller than a full noun chapter, smaller than a comp
 
 # Recommended next step
 
-This packet should next proceed to noun-domain review notes rather than a dictionary slice, because this packet is still establishing a grammar-facing noun-domain foundation.
+This grammar slice is now paired with `output/publication_review/review_notes_noun_domain.md`, so the packet is ready for human review at its current simple-noun-stem slice maturity level.
 
-If more noun-domain work is chosen before review notes, the next sub-scope should be transparent compounds led by `minam` and `thugen`, not opaque compounds or proper nouns.
+If more noun-domain work is chosen after review notes, the next sub-scope should be transparent compounds led by `minam` and `thugen`, not opaque compounds or proper nouns.

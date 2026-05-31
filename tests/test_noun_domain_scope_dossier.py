@@ -40,7 +40,8 @@ def test_noun_domain_scope_dossier_describes_current_packet_stage() -> None:
     assert "not a dictionary slice" in text
     assert "not a full noun chapter" in text
     assert "grammar_noun_domain_print_slice.md" in text
-    assert "dictionary and review-note slices do not yet exist for the noun domain" in text
+    assert "review_notes_noun_domain.md" in text
+    assert "dictionary slice does not yet exist for the noun domain" in text
 
 
 def test_noun_domain_scope_dossier_recommends_simple_noun_stems_next() -> None:
@@ -48,6 +49,7 @@ def test_noun_domain_scope_dossier_recommends_simple_noun_stems_next() -> None:
 
     assert "simple noun stem" in text
     assert "grammar_noun_domain_print_slice.md" in text
+    assert "review_notes_noun_domain.md" in text
     assert "gam" in text
     assert "aksi / aksi-te" in text
     assert "minam" in text

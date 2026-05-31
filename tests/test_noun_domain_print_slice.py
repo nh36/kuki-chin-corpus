@@ -82,4 +82,4 @@ def test_noun_domain_print_slice_stays_packet_narrow() -> None:
     assert "not a proper-noun chapter" in lower
     assert "not a dictionary slice" in lower
     assert "dictionary slice now exists" not in lower
-    assert "review-note slices already exist" not in lower
+    assert "no dictionary slice exists" in lower

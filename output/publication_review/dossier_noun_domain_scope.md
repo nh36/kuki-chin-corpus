@@ -6,7 +6,7 @@ title: "Tedim Noun Domain Scoping Dossier"
 
 This is the first candidate/scoping pass for simple nouns, compound nouns, and proper nouns. The controlling layer is `output/publication_review/candidates_noun_domain.tsv`.
 
-This dossier is not a grammar print slice, not a dictionary slice, and not a full noun chapter. A narrow grammar print slice now exists at `output/publication_review/grammar_noun_domain_print_slice.md`, but dictionary and review-note slices do not yet exist for the noun domain.
+This dossier is not a grammar print slice, not a dictionary slice, and not a full noun chapter. A narrow grammar print slice now exists at `output/publication_review/grammar_noun_domain_print_slice.md`, review notes now exist at `output/publication_review/review_notes_noun_domain.md`, and a dictionary slice does not yet exist for the noun domain.
 
 # Architecture control
 
@@ -96,4 +96,4 @@ The safest next print-facing sub-scope after this candidate/scoping layer was a 
 
 That recommendation has now been taken in `output/publication_review/grammar_noun_domain_print_slice.md`, which leads with `gam` as the main anchor and uses `aksi / aksi-te` as the supporting plural row. This keeps the packet's first print-facing claim tightly limited to simple free stems and ordinary plural or case-like marking without forcing transparency decisions for compounds or mostly lexical-inventory decisions for proper nouns.
 
-The next editorial step should now be noun-domain review notes rather than a dictionary slice. If more noun-domain work is chosen before review notes, transparent compounds such as `minam` and `thugen` should remain the safest second-step material, while proper nouns should remain mostly tertiary or boundary material unless a later task explicitly chooses a separate name-focused scope.
+The packet now has review notes at `output/publication_review/review_notes_noun_domain.md` and is ready for human review at its current simple-noun-stem slice maturity level. If more noun-domain work is chosen after review notes, transparent compounds such as `minam` and `thugen` should remain the safest second-step material, while proper nouns should remain mostly tertiary or boundary material unless a later task explicitly chooses a separate name-focused scope.
