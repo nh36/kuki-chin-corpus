@@ -56,4 +56,5 @@ def test_clause_linkage_scope_dossier_names_boundaries_and_status() -> None:
     assert "candidate/scoping pass" in lower
     assert "rather than the print slice itself" in lower
     assert "grammar_clause_linkage_print_slice.md" in text
-    assert "dictionary and review-note slices for clause linkage do **not** yet exist" in lower
+    assert "review_notes_clause_linkage.md" in text
+    assert "a dictionary slice for clause linkage does **not** yet exist" in lower

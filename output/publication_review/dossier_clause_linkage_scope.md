@@ -6,7 +6,7 @@ title: "Tedim Clause Linkage Scoping Dossier"
 
 This is the first candidate/scoping pass for subordination, switch reference, and relative clauses. The controlling candidate layer now exists at `output/publication_review/candidates_clause_linkage.tsv`.
 
-This dossier remains the candidate/scoping pass rather than the print slice itself, and it is not a full complex-sentence chapter. A first narrow grammar print slice now exists at `output/publication_review/grammar_clause_linkage_print_slice.md`. Dictionary and review-note slices for clause linkage do **not** yet exist.
+This dossier remains the candidate/scoping pass rather than the print slice itself, and it is not a full complex-sentence chapter. A first narrow grammar print slice now exists at `output/publication_review/grammar_clause_linkage_print_slice.md`, and review notes now exist at `output/publication_review/review_notes_clause_linkage.md`. A dictionary slice for clause linkage does **not** yet exist.
 
 The user-mentioned path `docs/grammar/reports/08-clause-03-relative-clauses.md` is absent in this repository. The current relative-clause report is `docs/grammar/reports/08-clause-03-relatives.md`, and this dossier uses that existing file rather than inventing a missing source.
 

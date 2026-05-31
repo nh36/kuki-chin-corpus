@@ -52,6 +52,7 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
     "review_notes_vp_structure_stacking.md",
     "review_notes_derivation_valency.md",
     "review_notes_prefix_agreement.md",
+    "review_notes_clause_linkage.md",
 }
 
 FORBIDDEN_NEW_PACKET_FILES = {

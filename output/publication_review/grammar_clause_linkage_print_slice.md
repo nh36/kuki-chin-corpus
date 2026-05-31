@@ -8,7 +8,7 @@ This is the first narrow clause-linkage grammar slice for Tedim. It is controlle
 
 This is not a full complex-sentence chapter, not a full switch-reference chapter, and not a full relative-clause chapter. It also stays narrow against `output/publication_review/review_notes_sentence_final_particles.md`, `output/publication_review/review_notes_tam.md`, `output/publication_review/review_notes_vp_structure_stacking.md`, `output/publication_review/review_notes_prefix_agreement.md`, and `output/publication_review/review_notes_pronouns.md`.
 
-The present slice therefore covers only the first safe subordination claim. `Ciangin` is the clearest temporal subordination anchor, while `dingin` remains visible only as a caveated purposive or clause-bound irrealis overlap row. No dictionary slice exists yet for clause linkage, because this packet is still establishing a controlled clausal claim rather than a lexical headword layer.
+The present slice therefore covers only the first safe subordination claim. `Ciangin` is the clearest temporal subordination anchor, while `dingin` remains visible only as a caveated purposive or clause-bound irrealis overlap row. No dictionary slice exists yet for clause linkage, because this packet is still establishing a controlled clausal claim rather than a lexical headword layer. The packet now properly proceeds through clause-linkage review notes rather than a dictionary slice.
 
 # Temporal subordination: ciangin
 
@@ -62,6 +62,6 @@ That claim is deliberately smaller than a full complex-sentence chapter, smaller
 
 # Recommended next step
 
-After this grammar slice, the next step should be clause-linkage review notes rather than a dictionary slice, because this is a constructional or clausal packet rather than a lexical-headword packet.
+This packet now properly proceeds to clause-linkage review notes rather than to a dictionary slice, because it is a constructional or clausal packet rather than a lexical-headword packet.
 
 If the project later wants one more clause-linkage step before review notes and human review, the next sub-scope should be a separate switch-reference or relative-clause candidate expansion rather than a dictionary layer, but not in this commit.
