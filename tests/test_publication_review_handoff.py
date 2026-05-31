@@ -20,6 +20,8 @@ def test_publication_review_handoff_exists_and_names_review_ready_packets():
         "coordinators",
         "sentence-final particles",
         "directionals",
+        "broad TAM / aspect / modal",
+        "relators/postpositions",
     ):
         assert required in text
 
@@ -42,7 +44,6 @@ def test_publication_review_handoff_keeps_selected_scope_and_remaining_deferred_
     text = HANDOFF_PATH.read_text(encoding="utf-8")
 
     for required in (
-        "broad TAM / aspect / modal",
         "chrestomathy",
         "Mizo/lus",
         "other Kuki-Chin languages",
@@ -50,6 +51,8 @@ def test_publication_review_handoff_keeps_selected_scope_and_remaining_deferred_
         assert required in text
 
     assert "review_notes_directionals.md" in text
+    assert "review_notes_tam.md" in text
+    assert "review_notes_relators_postpositions.md" in text
     assert "No further narrow publication-review packet should be started automatically." in text
     assert "select one new scope explicitly" in text
     assert "fresh candidate-first plan" in text

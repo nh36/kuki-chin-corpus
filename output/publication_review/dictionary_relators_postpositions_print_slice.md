@@ -6,7 +6,7 @@ title: "Tedim Relators / Postpositions Dictionary Print Slice"
 
 These are short print-facing dictionary drafts for the relators / postpositions slice. They are controlled by `candidates_relators_postpositions.tsv`, `dossier_relators_postpositions_scope.md`, and `grammar_relators_postpositions_print_slice.md`. The generated reports `docs/grammar/reports/03-noun-04-relators.md` and `docs/grammar/reports/03-noun-05-postpositions.md` remain discovery or background sources only.
 
-The case-marking packet remains the boundary control for this slice: `candidates_case_marking.tsv`, `dossier_case_marking.md`, `grammar_case_marking_print_slice.md`, `dictionary_case_markers_print_slice.md`, and `review_notes_case_marking.md` still own the main print-facing discussion of case marking. These entries are editorial review material only; they do not imply changes to analyzer dictionaries or machine dictionary files. This is a dictionary draft layer, not a machine-dictionary edit and not a rewrite of the case-marking packet. Review-note work for relators/postpositions has not yet begun. `review_notes_relators_postpositions.md` does **not** yet exist.
+The case-marking packet remains the boundary control for this slice: `candidates_case_marking.tsv`, `dossier_case_marking.md`, `grammar_case_marking_print_slice.md`, `dictionary_case_markers_print_slice.md`, and `review_notes_case_marking.md` still own the main print-facing discussion of case marking. These entries are editorial review material only; they do not imply changes to analyzer dictionaries or machine dictionary files. This is a dictionary draft layer, not a machine-dictionary edit and not a rewrite of the case-marking packet. Review notes for relators/postpositions now exist at `review_notes_relators_postpositions.md`.
 
 ## `kiang`
 
@@ -140,4 +140,4 @@ d. Translation: 'with me'
 
 This dictionary slice stays deliberately narrow. `nuai` and `mai` remain boundary material rather than first-slice dictionary entries. `tawhin` remains deferred because the current evidence is sparse and instrument-like. `kipan` and `kipanin` rows involving `ki` remain boundary material. Attached or fused-looking forms such as `kiangah`, `sungah`, `tungah`, and `lakpan` remain shared territory with the case-marking packet rather than independent postposition entries. Raw generated-report counts are not dictionary evidence.
 
-The next step after this dictionary slice is `review_notes_relators_postpositions.md`, but review-note work for relators/postpositions has not yet begun.
+With `review_notes_relators_postpositions.md` now added, the packet is ready for human review at the current slice maturity level.

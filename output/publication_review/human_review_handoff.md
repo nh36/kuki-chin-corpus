@@ -4,9 +4,9 @@ title: "Publication Review Handoff"
 
 # Purpose
 
-This document summarizes the current state of the Tedim Chin publication-review retrofit after completion of the directionals packet at the current slice maturity level.
+This document summarizes the current state of the Tedim Chin publication-review retrofit after completion of the relators/postpositions packet at the current slice maturity level.
 
-It is a human-review handoff, not a new analysis. It does not supersede the candidate TSVs, dossiers, grammar slices, dictionary slices, or review notes. All completed packets remain controlled by their candidate TSVs and dossiers. Broad TAM, chrestomathy, Mizo/lus, and other Kuki-Chin languages remain deferred until explicitly chosen.
+It is a human-review handoff, not a new analysis. It does not supersede the candidate TSVs, dossiers, grammar slices, dictionary slices, or review notes. All completed packets remain controlled by their candidate TSVs and dossiers. Chrestomathy, Mizo/lus, and other Kuki-Chin languages remain deferred until explicitly chosen.
 
 # Review-ready packets
 
@@ -23,6 +23,8 @@ It is a human-review handoff, not a new analysis. It does not supersede the cand
 | coordinators | `candidates_coordinators.tsv` | `dossier_coordinators.md` | `grammar_coordinators_print_slice.md` | `dictionary_coordinators_print_slice.md` | `review_notes_coordinators.md` | preserve `le` vs `leh`, conditional `leh`, noisy `a`, deferred `mawh`, and caveated `ahih hangin` / `ahih kei leh` | human review / maintenance |
 | sentence-final particles | `candidates_sentence_final_particles.tsv` | `dossier_sentence_final_particles.md` | `grammar_sentence_final_particles_print_slice.md` | `dictionary_sentence_final_particles_print_slice.md` | `review_notes_sentence_final_particles.md` | preserve `hi` copula/declarative overlap, `hiam` interrogatives overlap, `in` case overlap, `aw` vocative/exclamative ambiguity, and `ta/zo` TAM spillover | human review / maintenance |
 | directionals | `candidates_directionals.tsv` | `dossier_directionals.md` | `grammar_directionals_print_slice.md` | `dictionary_directionals_print_slice.md` | `review_notes_directionals.md` | preserve `-toh` polysemy with blocked `paitoh`, `-lam` boundary material, nominalized `-khiat-na` / `-toh-na`, and deferred `-lut/-phei/-cip/-tang` cautions | human review / maintenance |
+| broad TAM / aspect / modal | `candidates_tam.tsv` | `dossier_tam_scope.md` | `grammar_tam_print_slice.md` | `dictionary_tam_print_slice.md` | `review_notes_tam.md` | preserve compact suffixal anchors only and keep `pailai`, `dingin`, negation overlap, sentence-final overlap, and broader stacking deferred | human review / maintenance |
+| relators/postpositions | `candidates_relators_postpositions.tsv` | `dossier_relators_postpositions_scope.md` | `grammar_relators_postpositions_print_slice.md` | `dictionary_relators_postpositions_print_slice.md` | `review_notes_relators_postpositions.md` | preserve the relator-led and case-boundary-controlled packet, with `nuai`, `mai`, `tawhin`, `kipan`, and `kipanin` still deferred or boundary-only | human review / maintenance |
 
 # Main caution by packet
 
@@ -37,17 +39,17 @@ It is a human-review handoff, not a new analysis. It does not supersede the cand
 - **Coordinators:** preserve `le` vs `leh`, conditional `leh`, noisy `a`, deferred `mawh`, and caveated `ahih hangin` / `ahih kei leh`.
 - **Sentence-final particles:** preserve `hi` copula/declarative overlap, `hiam` interrogatives overlap, `in` case overlap, `aw` vocative/exclamative ambiguity, and `ta/zo` TAM spillover.
 - **Directionals:** preserve outward `pokhia`, away `nawhkhiat` with analyzer-label caveat, blocked `paitoh` overlap, `-lam` boundary treatment, nominalized `-na` boundary forms, and deferred `-lut/-phei/-cip/-tang`.
+- **Broad TAM / aspect / modal:** preserve the compact-anchor packet and do not widen it into a full TAM or VP-slot rewrite without explicit new scope selection.
+- **Relators/postpositions:** preserve the relator-led boundary with case marking and do not promote `kiangah`, `sungah`, `tungah`, `lakpan`, `nuai`, `mai`, `tawhin`, `kipan`, or `kipanin` beyond the current packet without review.
 
 # What reviewers should do
 
 Reviewers should start with the review notes for each packet, check the grammar slice against the dossier and candidate TSV, check dictionary entries only as print-facing editorial drafts, and file specific defects if they find problems.
 
-Reviewers should not ask for open-ended polishing of already review-ready packets, use raw generated-report counts as evidence, promote deferred rows without analyzer-backed candidates, or start broad TAM as a side effect of reviewing the completed packets.
+Reviewers should not ask for open-ended polishing of already review-ready packets, use raw generated-report counts as evidence, promote deferred rows without analyzer-backed candidates, or start a broad rewrite of TAM, relators/postpositions, or case marking as a side effect of reviewing the completed packets.
 
 # Deferred scopes
 
-- **broad TAM / aspect / modal:** This is a large VP-system topic and should not be started as a casual continuation of sentence-final particle work.
-- **relators/postpositions as a separate packet:** These are currently folded into case-marking maintenance and should not be started as a separate packet unless explicitly chosen.
 - **chrestomathy:** This remains outside the current Tedim publication-review packet sequence and should stay deferred until explicitly chosen.
 - **Mizo/lus:** This remains outside the Tedim publication-review handoff and should stay deferred until explicitly chosen.
 - **other Kuki-Chin languages:** These remain outside the current Tedim publication-review retrofit and should stay deferred until explicitly chosen.

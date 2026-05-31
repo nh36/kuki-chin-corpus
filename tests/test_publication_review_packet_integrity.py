@@ -18,6 +18,8 @@ EXPECTED_TOPICS = {
     "coordinators",
     "sentence-final particles",
     "directionals",
+    "broad TAM / aspect / modal",
+    "relators/postpositions",
 }
 
 EXPECTED_CANDIDATE_FILES = {
@@ -42,6 +44,7 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
     "review_notes_sentence_final_particles.md",
     "review_notes_directionals.md",
     "review_notes_tam.md",
+    "review_notes_relators_postpositions.md",
 }
 
 FORBIDDEN_NEW_PACKET_FILES = {
@@ -122,8 +125,6 @@ def test_handoff_keeps_deferred_scopes_deferred():
     text = HANDOFF_PATH.read_text(encoding="utf-8")
 
     for required in (
-        "broad TAM / aspect / modal",
-        "relators/postpositions as a separate packet",
         "chrestomathy",
         "Mizo/lus",
         "other Kuki-Chin languages",

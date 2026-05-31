@@ -84,10 +84,8 @@ def test_relators_postpositions_dictionary_slice_keeps_boundary_material_out_of_
     assert "raw generated-report counts are not dictionary evidence" in lower
 
 
-def test_relators_postpositions_dictionary_slice_does_not_claim_review_notes_exist() -> None:
+def test_relators_postpositions_dictionary_slice_names_review_notes_surface() -> None:
     text = _text()
-    lower = text.lower()
 
-    assert "review-note work for relators/postpositions has not yet begun" in text
     assert "review_notes_relators_postpositions.md" in text
-    assert "review notes now exist" not in lower
+    assert "ready for human review at the current slice maturity level" in text

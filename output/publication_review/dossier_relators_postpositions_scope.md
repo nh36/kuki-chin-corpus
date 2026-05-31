@@ -6,7 +6,7 @@ title: "Tedim Relators / Postpositions Scoping Dossier"
 
 This is the first candidate/scoping pass for Tedim relator nouns and postpositions. It asks whether relators / postpositions can support a small independent candidate-first packet while keeping the boundary with the existing case-marking packet explicit.
 
-This dossier is therefore **not** a grammar print slice. The first narrow grammar print slice for relators/postpositions now exists at `grammar_relators_postpositions_print_slice.md`. The first dictionary print slice for relators/postpositions now exists at `dictionary_relators_postpositions_print_slice.md`, and review-note work for relators/postpositions has not yet begun. `review_notes_relators_postpositions.md` does **not** yet exist.
+This dossier is therefore **not** a grammar print slice. The first narrow grammar print slice for relators/postpositions now exists at `grammar_relators_postpositions_print_slice.md`. The first dictionary print slice for relators/postpositions now exists at `dictionary_relators_postpositions_print_slice.md`. Review notes for relators/postpositions now exist at `review_notes_relators_postpositions.md`, and the packet is ready for human review at the current slice maturity level.
 
 # Evidence protocol
 
@@ -66,4 +66,4 @@ The safest next print-facing sub-scope was a combined but narrow relators/postpo
 
 The packet now also has a first dictionary print slice at `dictionary_relators_postpositions_print_slice.md`. That dictionary layer keeps the same relator-led and case-boundary-controlled scope rather than broadening into an inventory of attached-looking marker strings.
 
-A postpositions-only slice would still risk duplicating the case-marking packet too quickly, and a relator-nouns-only slice would still hide the main reason the domain matters. The next step should therefore be review notes for relators/postpositions using the same candidate TSV, dossier, grammar slice, and dictionary slice rather than a broad rewrite.
+Review notes now also exist at `review_notes_relators_postpositions.md`, so the current packet is ready for human review at the current slice maturity level. The next substantive work should be either a reviewer-identified correction to an existing packet or explicit selection of a new narrow scope rather than a broad rewrite.

@@ -84,8 +84,7 @@ def test_relators_postpositions_print_slice_keeps_boundary_material_out_of_core_
 
 def test_relators_postpositions_print_slice_does_not_claim_later_surfaces_exist() -> None:
     text = _text()
-    lower = text.lower()
 
     assert "dictionary_relators_postpositions_print_slice.md" in text
-    assert "review notes do **not** yet exist" in text
-    assert "review notes now exist" not in lower
+    assert "review_notes_relators_postpositions.md" in text
+    assert "ready for human review at the current slice maturity level" in text

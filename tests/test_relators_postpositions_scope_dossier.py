@@ -71,18 +71,16 @@ def test_relators_postpositions_scope_dossier_distinguishes_relator_nouns_from_p
 
 def test_relators_postpositions_scope_dossier_names_current_surface_status() -> None:
     text = _text()
-    lower = text.lower()
 
-    assert "dictionary_relators_postpositions_print_slice.md" in text
-    assert "review-note work for relators/postpositions has not yet begun" in text
     assert "dictionary_relators_postpositions_print_slice.md" in text
     assert "review_notes_relators_postpositions.md" in text
-    assert "ready for human review" not in lower
+    assert "ready for human review at the current slice maturity level" in text
 
 
-def test_relators_postpositions_scope_dossier_sets_review_notes_as_next_step() -> None:
+def test_relators_postpositions_scope_dossier_sets_human_review_as_next_step() -> None:
     text = _text()
 
     assert "first narrow grammar print slice for relators/postpositions now exists" in text
     assert "The packet now also has a first dictionary print slice" in text
-    assert "The next step should therefore be review notes for relators/postpositions" in text
+    assert "Review notes now also exist at `review_notes_relators_postpositions.md`" in text
+    assert "The next substantive work should be either a reviewer-identified correction" in text
