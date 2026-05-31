@@ -6,7 +6,7 @@ title: "Tedim Reduplication Scoping Dossier"
 
 This is the first candidate/scoping pass for reduplication. The controlling layer is `output/publication_review/candidates_reduplication.tsv`.
 
-This dossier is not a grammar print slice, not a dictionary slice, and not a full derivation chapter. Grammar, dictionary, and review-note slices do not yet exist for reduplication.
+This dossier is not a grammar print slice, not a dictionary slice, and not a full derivation chapter. A narrow grammar print slice now exists at `output/publication_review/grammar_reduplication_print_slice.md`, but dictionary and review-note slices do not yet exist for reduplication.
 
 # Architecture control
 
@@ -82,8 +82,10 @@ Several kinds of material should remain deferred at this candidate/scoping stage
 6. Analyzer-noisy, count-only, or theory-heavy claims about the whole reduplication system should remain outside the first print-facing claim.
 7. Any broad derivation chapter claim should remain outside the first slice.
 
-# Safest next print-facing sub-scope
+# Current print-facing status
 
-The safest next print-facing sub-scope after this candidate/scoping layer is a narrow grammar print slice for **one clean full reduplication pattern**, not review notes first.
+The safest next print-facing sub-scope after this candidate/scoping layer was a narrow grammar print slice for **one clean full reduplication pattern**, not review notes first.
 
-That next step should be led by `mahmah` as the main anchor, with `taktak` as the closest support row and `peuhpeuh` held visible as secondary distributive evidence. The first slice should not be led by aspectual or TAM-heavy rows such as `leuleu`, by syntactic repetition such as `ni ni`, or by more lexicalized-looking rows such as `kawikawi`.
+That recommendation has now been taken in `output/publication_review/grammar_reduplication_print_slice.md`, which leads with `mahmah` as the main anchor, keeps `taktak` as the closest support row, and keeps `peuhpeuh` visible as secondary distributive evidence. The first slice is still not led by aspectual or TAM-heavy rows such as `leuleu`, by syntactic repetition such as `ni ni`, or by more lexicalized-looking rows such as `kawikawi`.
+
+The next editorial step should now be reduplication review notes rather than a dictionary slice. If more reduplication work is chosen before review notes, distributive `peuhpeuh` or syntactic `ni ni` should remain the safest next sub-scopes rather than aspect-heavy or lexicalized-looking rows.

@@ -28,14 +28,15 @@ def test_reduplication_scope_dossier_names_required_sources() -> None:
         assert required in text
 
 
-def test_reduplication_scope_dossier_describes_candidate_only_stage() -> None:
+def test_reduplication_scope_dossier_describes_current_packet_stage() -> None:
     text = DOSSIER_PATH.read_text(encoding="utf-8").lower()
 
     assert "first candidate/scoping pass" in text
     assert "not a grammar print slice" in text
     assert "not a dictionary slice" in text
     assert "not a full derivation chapter" in text
-    assert "grammar, dictionary, and review-note slices do not yet exist for reduplication" in text
+    assert "grammar_reduplication_print_slice.md" in text
+    assert "dictionary and review-note slices do not yet exist for reduplication" in text
 
 
 def test_reduplication_scope_dossier_keeps_clean_and_boundary_rows_visible() -> None:
@@ -51,5 +52,6 @@ def test_reduplication_scope_dossier_keeps_clean_and_boundary_rows_visible() -> 
         "kawikawi",
         "theithei",
         "narrow grammar print slice",
+        "grammar_reduplication_print_slice.md",
     ):
         assert required in text
