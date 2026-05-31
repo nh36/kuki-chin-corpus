@@ -52,7 +52,8 @@ def test_vp_structure_stacking_scope_dossier_is_scoping_not_print_slice() -> Non
     assert "candidate/scoping pass" in lower
     assert "not a grammar print slice" in lower
     assert "not a full vp chapter" in lower
-    assert "grammar, dictionary, and review-note print slices for vp structure/stacking do **not** yet exist" in lower
+    assert "grammar print slice now exists at `output/publication_review/grammar_vp_structure_stacking_print_slice.md`" in lower
+    assert "dictionary and review-note print slices for vp structure/stacking do **not** yet exist" in lower or "dictionary and review-note print slices for vp structure / suffix stacking do not yet exist" in lower
 
 
 def test_vp_structure_stacking_scope_dossier_recommends_narrower_subset() -> None:
@@ -62,4 +63,3 @@ def test_vp_structure_stacking_scope_dossier_recommends_narrower_subset() -> Non
     assert "bawlzoding" in text
     assert "narrower subset" in lower
     assert "narrow suffix stacking" in lower
-
