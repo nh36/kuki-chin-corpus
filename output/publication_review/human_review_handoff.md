@@ -56,4 +56,4 @@ Reviewers should not ask for open-ended polishing of already review-ready packet
 
 # Recommended next repository action
 
-No further narrow publication-review packet should be started automatically. The next substantive action should be human review of the completed packets. If additional retrofit work beyond the current completed packets is desired, select one new scope explicitly and open a fresh candidate-first plan for it.
+No further narrow publication-review packet should be started automatically. The next substantive action should be human review of the completed packets. If additional retrofit work beyond the current completed packets is desired, select one new scope explicitly and open a fresh candidate-first plan for it. Before any printable full-grammar bundle is assembled, consult `output/publication_review/whole_grammar_coverage_audit.md` for the wider chapter-level coverage gaps and priority choices that still remain outside the completed packet set.
