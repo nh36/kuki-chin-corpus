@@ -6,11 +6,11 @@ title: "Tedim Transitivity Scoping Dossier"
 
 This is the first candidate/scoping pass for transitivity. It is controlled by `output/publication_review/candidates_transitivity.tsv`.
 
-This dossier is not a grammar print slice, not a dictionary slice, and not a full valency or verb-class chapter. Grammar, dictionary, and review-note slices do not yet exist for transitivity.
+This dossier is not a grammar print slice, not a dictionary slice, and not a full valency or verb-class chapter. A first narrow grammar print slice now exists at `output/publication_review/grammar_transitivity_print_slice.md`. Dictionary and review-note slices do not yet exist for transitivity.
 
 # Architecture control
 
-`output/publication_review/whole_grammar_coverage_checkpoint_after_reduplication.md` recommends transitivity as the next task because phonology/tone remains blocked or theory-heavy while transitivity is report-backed but unpacketized. `output/publication_review/whole_grammar_coverage_audit.md` and `PROGRESS.md` therefore move transitivity from an unlifted gap to a candidate-scoping packet.
+`output/publication_review/whole_grammar_coverage_checkpoint_after_reduplication.md` recommends transitivity as the next task because phonology/tone remains blocked or theory-heavy while transitivity is report-backed but unpacketized. `output/publication_review/whole_grammar_coverage_audit.md` and `PROGRESS.md` therefore move transitivity from an unlifted gap to a candidate-scoping packet, and the first narrow grammar slice now exists at `output/publication_review/grammar_transitivity_print_slice.md`.
 
 `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md` and `docs/SKELETON_GRAMMAR.md` both show that transitivity belongs to the verbal architecture and still needs packet-level editorial control. `docs/grammar/grammar_source_map.json` is useful only to confirm that transitivity still lacks a clean dedicated topic layer of its own.
 
@@ -86,6 +86,6 @@ analyzer-noisy, lexicalized, or whole-system verb-class claims remain deferred b
 
 The safest next print-facing sub-scope is a narrow grammar print slice for a clean intransitive/transitive contrast, not an ambitransitive/labile system claim and not a stem-alternation boundary claim.
 
-The likeliest first test is to anchor the contrast with `sih` or `suak` on the intransitive side and `hawl` on the transitive side, while keeping `mu` / `muh`, `nei` / `neih`, `piangsak`, and case-dominated rows visible only as boundary material.
+That first grammar slice now exists at `output/publication_review/grammar_transitivity_print_slice.md`. It anchors the contrast with `sih` and `suak` on the intransitive side and `hawl`, with secondary support from `en`, on the transitive side, while keeping `mu` / `muh`, `nei` / `neih`, `piangsak`, and case-dominated rows visible only as boundary material.
 
-If that contrast proves too weak under closer editorial control, the packet should stop at review notes rather than widening immediately into full valency theory.
+If more transitivity work is chosen before review notes, the next sub-scope should be `mu` / `muh` as a labile or stem-alternation boundary packet rather than a full valency or verb-class expansion.

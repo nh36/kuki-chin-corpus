@@ -37,11 +37,13 @@ def test_transitivity_scope_dossier_describes_candidate_stage_only() -> None:
     assert "not a grammar print slice" in text
     assert "not a dictionary slice" in text
     assert "not a full valency or verb-class chapter" in text
-    assert "grammar, dictionary, and review-note slices do not yet exist for transitivity" in text
+    assert "grammar_transitivity_print_slice.md" in text
+    assert "dictionary and review-note slices do not yet exist for transitivity" in text
 
 
 def test_transitivity_scope_dossier_keeps_candidate_groups_and_next_scope_visible() -> None:
     text = _text()
+    normalized = text.replace("`", "")
     lower = text.lower()
 
     for required in (
@@ -54,7 +56,7 @@ def test_transitivity_scope_dossier_keeps_candidate_groups_and_next_scope_visibl
         "hong",
         "ki",
     ):
-        assert required in text
+        assert required in normalized
 
     assert "clean intransitive/transitive contrast" in lower
     assert "ambitransitive/labile" in lower
