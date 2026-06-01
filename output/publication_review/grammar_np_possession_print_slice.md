@@ -1,61 +1,115 @@
 ---
-title: "Tedim NP Structure / Possession Grammar Print Slice"
+title: "Tedim Chin Grammar Review Slice: NP structure / possession"
+bibliography: ../../literature/bibliography.bib
 ---
 
-# Editorial scope
+# Scope
 
-This is the first narrow NP structure / possession grammar slice. It is controlled by `output/publication_review/candidates_np_possession.tsv` and `output/publication_review/dossier_np_possession_scope.md`. Supporting/background evidence comes from `docs/grammar/reports/03-noun-06-np-structure.md`, `docs/grammar/reports/04-np-07-possession.md`, `docs/grammar/lit-reviews/04-np-07-possession-lit.md`, and `docs/grammar/morphemes/01-prefixes.md`.
+This is now a normalized publication-facing NP structure / possession section, following the coverage-normalization standard defined in `coverage_normalization_audit.md` and piloted in the numerals and quantifiers sections. It remains controlled by candidate evidence and explicit caveats rather than by raw generated-report counts or broad analyzer output [@henderson1965; @zamngaihcing2017].
 
-This is not a full noun-phrase chapter, not a full possession chapter, not a full prefix/agreement chapter, and not a full case or relator chapter. It also stays narrow against `output/publication_review/review_notes_prefix_agreement.md`, `output/publication_review/review_notes_pronouns.md`, `output/publication_review/review_notes_case_marking.md`, `output/publication_review/review_notes_relators_postpositions.md`, `output/publication_review/review_notes_nominalization.md`, and `tests/test_prefix_agr_poss.py`.
+The current section depends on:
 
-The present slice therefore covers only the first safe NP-ordering claim. No dictionary slice exists yet for NP structure / possession, because this packet is still establishing a controlled structural/syntactic claim rather than a lexical layer. The packet now properly proceeds through NP structure / possession review notes rather than a dictionary slice.
+- `coverage_normalization_audit.md`
+- `candidates_np_possession.tsv`
+- `dossier_np_possession.md`
+- `review_notes_np_possession.md`
+- `docs/grammar/reports/03-noun-06-np-structure.md`
+- `docs/grammar/reports/04-np-07-possession.md`
+- `examples_np_possession_normalization.tsv`
 
-# Basic NP ordering
+The numerals and quantifiers sections already carry the fuller analysis of numeral and quantifier systems. This section reuses those checked examples only to support modest noun-phrase structure claims.
 
-The safest current claim in the packet is a small NP-ordering observation rather than a possession claim.
+# Overview of noun phrase structure
 
-`hih mite` is the demonstrative-before-noun anchor. The controlled segmentation is `hih mi-te`, and the controlled gloss is `PROX person-PL`.
+The clearest current evidence supports a small but coherent set of NP-order observations. Demonstrative-related material is safest where a proximal form precedes the noun, as in `hih mite`. Numerals and several quantifier-like forms follow the noun in the cleanest current examples, as seen in `mi khat`, `ni li`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`. The present section therefore supports a modest contrast between demonstrative-before-noun structure and noun-plus-postnominal numeral or quantifier structure, while leaving broader NP templating for later review.
 
-`mi khat` is the head-noun plus numeral anchor. The controlled gloss is `person one`.
+Possession is now visible enough to include as part of the same publication-facing section, but it remains less normalized than the modifier-order material. The safest checked rows show possessor-before-possessed structure in compact noun phrases such as `na pa' inn-ah` and `a zi' min`, while the analysis of possessive prefixes, apostrophe marking, genitive structure, and relator or case overlap still requires explicit caveats.
 
-`mi khempeuh` is the head-noun plus quantifier anchor. The controlled segmentation is `mi khem-peuh`, and the controlled gloss is `person all`.
+Gospel searches produced clean noun-plus-numeral and noun-plus-quantifier examples, which helps keep the section from becoming Genesis-only. Demonstratives and possession remain more OT-led in the current pass because the Gospel comparanda were less clean under present candidate control.
 
-Taken together, these rows support a conservative NP-ordering statement: demonstratives can precede the head noun, while numerals and quantifier-like modifiers can follow the head noun. That is enough for a first print-facing claim, but it is not yet a full theory of all NP modifiers, adjectival ordering, recursive noun-phrase structure, or case closure.
+# Current NP pattern inventory
 
-# Why possession is not yet the first slice
+| Pattern | Example form | Rough function | Current print status | Main boundary issue |
+| --- | --- | --- | --- | --- |
+| demonstrative + noun | `hih mite` | proximal demonstrative before a plural noun | print-ready | Gospel demonstrative comparanda are less clean than the OT anchor |
+| noun + numeral / indefinite boundary | `mi khat` | noun followed by `khat` as numeral or indefinite-like modifier | print-usable with caveat | overlaps with the numerals and indefinites boundary |
+| noun + numeral | `ni li` | counted noun followed by a simple numeral | print-ready | numeral formation belongs to the numerals section |
+| noun + numeral | `kum sawm le nih` | counted noun followed by a compound numeral | print-ready | compound-ten analysis belongs to the numerals section |
+| noun + quantifier | `mi khempeuh` | noun followed by a total quantifier | print-ready | full quantifier semantics belong to the quantifiers section |
+| noun + quantifier | `mi pawlkhat` | noun followed by an existential or partitive-like quantifier | print-usable with caveat | grouping semantics remain caveated |
+| noun + quantifier | `mi tampi` | noun followed by a quantity modifier | print-usable with caveat | borders on broader degree or adjective-like modification |
+| possessor + possessed NP | `na pa' inn-ah` | pronominal possessor with possessed noun phrase | print-usable with caveat | overlaps with possessive prefixes, apostrophe analysis, and case closure |
+| possessed NP chain | `a zi' min` | possessor-marked noun phrase containing a possessed noun | print-usable with caveat | does not yet justify a full possession paradigm |
 
-Possession and possessor-possessed structure are also visible in the candidate layer through `ka pa`, `Topa' inn`, and `a pa' inn`.
+# Demonstratives and nouns
 
-Those rows stay outside the first print-facing claim because they still interact with prefix/agreement routing, pronouns, apostrophe or genitive analysis, and broader possessor-possessed theory. `ka pa` is the safest possession row if a later possession sub-scope is chosen, but it is still more boundary-heavy than the three clean NP-order anchors.
+The clearest checked demonstrative-related anchor remains `hih mite`, which safely supports a demonstrative-before-noun description for the current packet. That is a narrower and safer claim than a full theory of determiner position. The demonstratives section remains the right place for the broader deictic inventory; the present section only uses the NP row to show that demonstrative-related modification does not pattern like the postnominal numeral and quantifier rows.
 
-# Boundary material
+(@ex:np-hih-mite) Exodus 5:5
+a. Tedim: hih mite
+b. Segmentation: hih | mi-te
+c. Gloss: PROX | person-PL
+d. Translation: 'these people'
 
-The rest of the NP structure / possession packet stays outside the first grammar slice because each row is still dominated by another unresolved boundary.
+Matthew 6:2 gives a Gospel comparandum in `a hih mite`, but that row is embedded in a larger relative-like phrase and is therefore less clean as a simple adnominal demonstrative anchor. For print purposes, the OT phrase above remains the better controlled example.
 
-`ka pa`, `Topa' inn`, and `a pa' inn` stay outside because possession and possessor-possessed structure still interact with prefix/agreement routing, pronouns, apostrophe or genitive analysis, and broader possession theory.
+# Numerals and nouns
 
-`Topa' tungah` stays outside because possessive NP plus relator or case material remains shared with `review_notes_case_marking.md` and `review_notes_relators_postpositions.md`.
+The normalized numerals section already carries the fuller description of the numeral system, including compound tens and larger-number expressions. The current NP section uses numeral material only to support noun-plus-numeral order: the cleanest checked rows place the noun before the numeral rather than the numeral before the noun.
 
-`ka suahna leitang` stays outside because nominalized noun-headed material remains shared with `review_notes_nominalization.md`.
+(@ex:np-ni-li) John 11:39
+a. Tedim: ni li
+b. Segmentation: ni | li
+c. Gloss: day | four
+d. Translation: 'four days'
 
-isolated `a`, `ka`, or `na` prefix surfaces stay outside because they are analyzer-noisy away from a controlled nominal host.
+This pattern is also visible in `kum nih` and `kum sawm le nih`, so the NP claim is not tied to a single lexical head. At the same time, `mi khat` remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
 
-Pronoun-led possessor rows such as `amah a pa` stay outside because they still sit between NP structure, possession, and the completed pronoun packet.
+# Quantifiers and nouns
 
-Tone-marked or literature-only genitive claims such as `-á` stay outside because they are not yet tied tightly enough to corpus-backed first-slice anchors.
+The quantifiers section already carries the fuller discussion of total, existential-like, and negative-licensed quantifier material. Here the relevant point is more limited: the cleanest checked quantifier rows also place the noun before the quantifier-like item.
 
-report-only counts stay outside because attestation alone does not make a row safe for the first print-facing claim.
+(@ex:np-mi-khempeuh) Luke 2:1
+a. Tedim: mi khempeuh
+b. Segmentation: mi | khem-peuh
+c. Gloss: person | all
+d. Translation: 'all people'
 
-Any broad recursive possession chapter claim stays outside because this packet is not yet ready to generalize from one safe NP-ordering slice to the whole noun-domain architecture.
+`mi pawlkhat` (Matthew 2:1) and `mi tampi` (Mark 6:34) support the same general noun-plus-quantifier profile, although each keeps its own semantic caveats from the normalized quantifiers section. The current section therefore uses them as modest NP-order evidence rather than as a reopened quantifier chapter.
 
-# Safe first-slice claim
+# Possession
 
-At the current slice maturity level, the safest NP structure / possession claim is that Tedim has candidate-controlled evidence for basic NP ordering: demonstratives can precede the noun, while numerals and quantifier-like modifiers can follow the noun. Possession and possessor-possessed structures remain candidate-layer or boundary material.
+Possession is now printable in a cautious way, but it remains less normalized than the modifier-order material above. The safest current claim is that the checked possession rows show possessor-before-possessed order inside the noun phrase. They do not yet justify a full paradigm of possessive prefixes, a settled treatment of apostrophe marking, or a broad theory of alienable versus inalienable possession.
 
-That claim is deliberately smaller than a full noun-phrase chapter, smaller than a full possession chapter, smaller than a full prefix/agreement chapter, and smaller than a full case or relator chapter.
+(@ex:np-poss-na-pa-inn) Genesis 24:23
+a. Tedim: na pa' inn-ah
+b. Segmentation: na pa' inn-ah
+c. Gloss: 2SG.POSS father house-LOC
+d. Translation: 'in thy father's house'
 
-# Recommended next step
+(@ex:np-poss-a-zi-min) Genesis 3:20
+a. Tedim: a zi' min
+b. Segmentation: a zi' | min
+c. Gloss: 3SG.POSS wife | name
+d. Translation: 'his wife's name'
 
-This packet now properly proceeds through NP structure / possession review notes rather than a dictionary slice, because this packet is structural/syntactic rather than lexical.
+These rows are enough for a cautious description of possessor-before-possessed structure, especially when read together with the packet anchors `ka pa`, `Topa' inn`, and `a pa' inn`. They are not enough for a full possession paradigm, because the current evidence still overlaps with pronouns and possessive prefixes, genitive or apostrophe analysis, relator and postposition structure, and broader questions about head-dependent order.
 
-If later work returns to possession after review notes, it should be a separate narrow possession sub-scope led by `ka pa`, not a broad possession chapter.
+No equally clean Gospel possession row was found for this pass under current candidate discipline. The possession subsection therefore remains OT-led even though the section as a whole includes Gospel-balanced NP-order examples.
+
+# Deferred and boundary material
+
+Several important possession and NP topics remain explicitly deferred.
+
+- A full possession paradigm is still deferred: the present section does not normalize every possessive prefix or every nominal host.
+- Kinship possession remains under-supported beyond a few controlled anchors such as `ka pa`.
+- Pronominal possession and agreement overlap remains shared with the pronoun and prefix/agreement material rather than settled here.
+- Apostrophe-marked relations such as `Topa' inn` remain promising, but their exact relation to genitive marking and title-like noun combinations still needs fuller normalization.
+- `Topa' tungah` remains a relator or case-boundary row rather than a clean possession example.
+- `ka suahna leitang` remains a nominalization boundary row rather than a core possession anchor.
+- Demonstrative, numeral, and quantifier rows are used here for NP-order support only; their full systems remain in the demonstratives, numerals, and quantifiers sections.
+- Analyzer-noisy or report-only material, including isolated prefix surfaces and broad recursive-possession claims, is not promoted into publication prose here.
+
+# Summary
+
+The NP structure / possession section can now support a modest publication-facing description of noun phrase order: the cleanest current evidence points to demonstrative-before-noun structure alongside noun-plus-postnominal numeral and quantifier patterns. Possession is now visible enough to include with formal examples, but it remains a cautious subsection whose broader paradigm, marking analysis, and interface with pronouns, genitive structure, and relators are still explicitly deferred.

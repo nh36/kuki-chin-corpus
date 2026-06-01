@@ -13,72 +13,57 @@ def test_np_possession_print_slice_exists() -> None:
     assert GRAMMAR_PATH.exists(), "NP structure / possession grammar slice must exist"
 
 
-def test_np_possession_print_slice_names_control_support_and_boundaries() -> None:
+def test_np_possession_print_slice_names_control_files() -> None:
     text = _text()
 
     for required in (
+        "coverage_normalization_audit.md",
         "candidates_np_possession.tsv",
-        "dossier_np_possession_scope.md",
+        "dossier_np_possession.md",
+        "review_notes_np_possession.md",
         "docs/grammar/reports/03-noun-06-np-structure.md",
         "docs/grammar/reports/04-np-07-possession.md",
-        "docs/grammar/lit-reviews/04-np-07-possession-lit.md",
-        "docs/grammar/morphemes/01-prefixes.md",
-        "review_notes_prefix_agreement.md",
-        "review_notes_pronouns.md",
-        "review_notes_case_marking.md",
-        "review_notes_relators_postpositions.md",
-        "review_notes_nominalization.md",
-        "tests/test_prefix_agr_poss.py",
     ):
         assert required in text
 
 
-def test_np_possession_print_slice_keeps_first_claim_narrow() -> None:
-    text = _text()
-    lower = text.lower()
-
-    assert "hih mite" in text
-    assert "demonstrative-before-noun anchor" in lower
-    assert "mi khat" in text
-    assert "head-noun plus numeral anchor" in lower
-    assert "mi khempeuh" in text
-    assert "head-noun plus quantifier anchor" in lower
-    assert "hih mi-te" in text
-    assert "PROX person-PL" in text
-    assert "person one" in text
-    assert "mi khem-peuh" in text
-    assert "person all" in text
-
-
-def test_np_possession_print_slice_keeps_boundary_material_outside() -> None:
+def test_np_possession_print_slice_has_normalized_structure_and_anchors() -> None:
     text = _text()
     lower = text.lower()
 
     for required in (
-        "ka pa",
+        "Overview of noun phrase structure",
+        "Current NP pattern inventory",
+        "Demonstratives and nouns",
+        "Numerals and nouns",
+        "Quantifiers and nouns",
+        "Possession",
+        "Deferred and boundary material",
+        "hih mite",
+        "mi khat",
+        "mi khempeuh",
+        "ni li",
+    ):
+        assert required in text
+
+    assert "candidate evidence" in lower
+    assert "explicit caveats" in lower
+
+
+def test_np_possession_print_slice_keeps_possession_cautious() -> None:
+    text = _text()
+    lower = text.lower()
+
+    for required in (
+        "na pa' inn-ah",
+        "a zi' min",
         "Topa' inn",
         "a pa' inn",
         "Topa' tungah",
         "ka suahna leitang",
-        "isolated `a`, `ka`, or `na` prefix surfaces",
-        "amah a pa",
-        "`-á`",
-        "report-only counts",
-        "broad recursive possession chapter claim",
     ):
         assert required in text
 
-    assert "stay outside" in lower or "stays outside" in lower or "boundary material" in lower
+    assert "not enough for a full possession paradigm" in lower or "does not yet justify a full possession paradigm" in lower
+    assert "raw generated-report counts" in lower or "report-only" in lower
 
-
-def test_np_possession_print_slice_stays_packet_narrow() -> None:
-    text = _text()
-    lower = text.lower()
-
-    assert "not a full noun-phrase chapter" in lower
-    assert "not a full possession chapter" in lower
-    assert "not a full prefix/agreement chapter" in lower
-    assert "not a full case or relator chapter" in lower
-    assert "review notes rather than a dictionary slice" in lower
-    assert "dictionary slice now exists" not in lower
-    assert "review-note slices already exist" not in lower

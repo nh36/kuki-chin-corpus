@@ -751,138 +751,277 @@ control.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_np\_possession\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope}
+\subsubsection{Scope}\label{scope-2}
 
-This is the first narrow NP structure / possession grammar slice. It is
-controlled by
-\texttt{output/publication\_review/candidates\_np\_possession.tsv} and
-\texttt{output/publication\_review/dossier\_np\_possession\_scope.md}.
-Supporting/background evidence comes from
-\texttt{docs/grammar/reports/03-noun-06-np-structure.md},
-\texttt{docs/grammar/reports/04-np-07-possession.md},
-\texttt{docs/grammar/lit-reviews/04-np-07-possession-lit.md}, and
-\texttt{docs/grammar/morphemes/01-prefixes.md}.
+This is now a normalized publication-facing NP structure / possession
+section, following the coverage-normalization standard defined in
+\texttt{coverage\_normalization\_audit.md} and piloted in the numerals
+and quantifiers sections. It remains controlled by candidate evidence
+and explicit caveats rather than by raw generated-report counts or broad
+analyzer output \citep{henderson1965, zamngaihcing2017}.
 
-This is not a full noun-phrase chapter, not a full possession chapter,
-not a full prefix/agreement chapter, and not a full case or relator
-chapter. It also stays narrow against
-\texttt{output/publication\_review/review\_notes\_prefix\_agreement.md},
-\texttt{output/publication\_review/review\_notes\_pronouns.md},
-\texttt{output/publication\_review/review\_notes\_case\_marking.md},
-\texttt{output/publication\_review/review\_notes\_relators\_postpositions.md},
-\texttt{output/publication\_review/review\_notes\_nominalization.md},
-and \texttt{tests/test\_prefix\_agr\_poss.py}.
+The current section depends on:
 
-The present slice therefore covers only the first safe NP-ordering
-claim. No dictionary slice exists yet for NP structure / possession,
-because this packet is still establishing a controlled
-structural/syntactic claim rather than a lexical layer. The packet now
-properly proceeds through NP structure / possession review notes rather
-than a dictionary slice.
+\begin{itemize}
+\tightlist
+\item
+  \texttt{coverage\_normalization\_audit.md}
+\item
+  \texttt{candidates\_np\_possession.tsv}
+\item
+  \texttt{dossier\_np\_possession.md}
+\item
+  \texttt{review\_notes\_np\_possession.md}
+\item
+  \texttt{docs/grammar/reports/03-noun-06-np-structure.md}
+\item
+  \texttt{docs/grammar/reports/04-np-07-possession.md}
+\item
+  \texttt{examples\_np\_possession\_normalization.tsv}
+\end{itemize}
 
-\subsubsection{Basic NP ordering}\label{basic-np-ordering}
+The numerals and quantifiers sections already carry the fuller analysis
+of numeral and quantifier systems. This section reuses those checked
+examples only to support modest noun-phrase structure claims.
 
-The safest current claim in the packet is a small NP-ordering
-observation rather than a possession claim.
+\subsubsection{Overview of noun phrase
+structure}\label{overview-of-noun-phrase-structure}
 
-\tdim{hih mite} is the demonstrative-before-noun anchor. The controlled
-segmentation is \tdim{hih mi-te}, and the controlled gloss is
-\tdim{PROX person-PL}.
+The clearest current evidence supports a small but coherent set of
+NP-order observations. Demonstrative-related material is safest where a
+proximal form precedes the noun, as in \tdim{hih mite}. Numerals and
+several quantifier-like forms follow the noun in the cleanest current
+examples, as seen in \tdim{mi khat}, \tdim{ni li}, \tdim{mi khempeuh},
+\tdim{mi pawlkhat}, and \tdim{mi tampi}. The present section therefore
+supports a modest contrast between demonstrative-before-noun structure
+and noun-plus-postnominal numeral or quantifier structure, while leaving
+broader NP templating for later review.
 
-\tdim{mi khat} is the head-noun plus numeral anchor. The controlled
-gloss is \tdim{person one}.
+Possession is now visible enough to include as part of the same
+publication-facing section, but it remains less normalized than the
+modifier-order material. The safest checked rows show
+possessor-before-possessed structure in compact noun phrases such as
+\tdim{na pa' inn-ah} and \tdim{a zi' min}, while the analysis of
+possessive prefixes, apostrophe marking, genitive structure, and relator
+or case overlap still requires explicit caveats.
 
-\tdim{mi khempeuh} is the head-noun plus quantifier anchor. The
-controlled segmentation is \tdim{mi khem-peuh}, and the controlled gloss
-is \tdim{person all}.
+Gospel searches produced clean noun-plus-numeral and
+noun-plus-quantifier examples, which helps keep the section from
+becoming Genesis-only. Demonstratives and possession remain more OT-led
+in the current pass because the Gospel comparanda were less clean under
+present candidate control.
 
-Taken together, these rows support a conservative NP-ordering statement:
-demonstratives can precede the head noun, while numerals and
-quantifier-like modifiers can follow the head noun. That is enough for a
-first print-facing claim, but it is not yet a full theory of all NP
-modifiers, adjectival ordering, recursive noun-phrase structure, or case
-closure.
+\subsubsection{Current NP pattern
+inventory}\label{current-np-pattern-inventory}
 
-\subsubsection{Why possession is not yet the first
-slice}\label{why-possession-is-not-yet-the-first-slice}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pattern
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Example form
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rough function
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Current print status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Main boundary issue
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+demonstrative + noun & \tdim{hih mite} & proximal demonstrative before a
+plural noun & print-ready & Gospel demonstrative comparanda are less
+clean than the OT anchor \\
+noun + numeral / indefinite boundary & \tdim{mi khat} & noun followed by
+\tdim{khat} as numeral or indefinite-like modifier & print-usable with
+caveat & overlaps with the numerals and indefinites boundary \\
+noun + numeral & \tdim{ni li} & counted noun followed by a simple
+numeral & print-ready & numeral formation belongs to the numerals
+section \\
+noun + numeral & \tdim{kum sawm le nih} & counted noun followed by a
+compound numeral & print-ready & compound-ten analysis belongs to the
+numerals section \\
+noun + quantifier & \tdim{mi khempeuh} & noun followed by a total
+quantifier & print-ready & full quantifier semantics belong to the
+quantifiers section \\
+noun + quantifier & \tdim{mi pawlkhat} & noun followed by an existential
+or partitive-like quantifier & print-usable with caveat & grouping
+semantics remain caveated \\
+noun + quantifier & \tdim{mi tampi} & noun followed by a quantity
+modifier & print-usable with caveat & borders on broader degree or
+adjective-like modification \\
+possessor + possessed NP & \tdim{na pa' inn-ah} & pronominal possessor
+with possessed noun phrase & print-usable with caveat & overlaps with
+possessive prefixes, apostrophe analysis, and case closure \\
+possessed NP chain & \tdim{a zi' min} & possessor-marked noun phrase
+containing a possessed noun & print-usable with caveat & does not yet
+justify a full possession paradigm \\
+\end{longtable}
+}
 
-Possession and possessor-possessed structure are also visible in the
-candidate layer through \tdim{ka pa}, \tdim{Topa' inn}, and
-\tdim{a pa' inn}.
+\subsubsection{Demonstratives and nouns}\label{demonstratives-and-nouns}
 
-Those rows stay outside the first print-facing claim because they still
-interact with prefix/agreement routing, pronouns, apostrophe or genitive
-analysis, and broader possessor-possessed theory. \tdim{ka pa} is the
-safest possession row if a later possession sub-scope is chosen, but it
-is still more boundary-heavy than the three clean NP-order anchors.
+The clearest checked demonstrative-related anchor remains
+\tdim{hih mite}, which safely supports a demonstrative-before-noun
+description for the current packet. That is a narrower and safer claim
+than a full theory of determiner position. The demonstratives section
+remains the right place for the broader deictic inventory; the present
+section only uses the NP row to show that demonstrative-related
+modification does not pattern like the postnominal numeral and
+quantifier rows.
 
-\subsubsection{Boundary material}\label{boundary-material}
+\begin{exe}
+\ex \label{ex:np-hih-mite}
+\gll \tdimword{híh} \tdimword{mì-tè} \\
+     \textsc{prox} person-\textsc{pl} \\
+\glt 'these people' (Exodus 5:5)
+\end{exe}
 
-The rest of the NP structure / possession packet stays outside the first
-grammar slice because each row is still dominated by another unresolved
-boundary.
+Matthew 6:2 gives a Gospel comparandum in \tdim{a hih mite}, but that
+row is embedded in a larger relative-like phrase and is therefore less
+clean as a simple adnominal demonstrative anchor. For print purposes,
+the OT phrase above remains the better controlled example.
 
-\tdim{ka pa}, \tdim{Topa' inn}, and \tdim{a pa' inn} stay outside
-because possession and possessor-possessed structure still interact with
-prefix/agreement routing, pronouns, apostrophe or genitive analysis, and
-broader possession theory.
+\subsubsection{Numerals and nouns}\label{numerals-and-nouns}
 
-\tdim{Topa' tungah} stays outside because possessive NP plus relator or
-case material remains shared with
-\texttt{review\_notes\_case\_marking.md} and
-\texttt{review\_notes\_relators\_postpositions.md}.
+The normalized numerals section already carries the fuller description
+of the numeral system, including compound tens and larger-number
+expressions. The current NP section uses numeral material only to
+support noun-plus-numeral order: the cleanest checked rows place the
+noun before the numeral rather than the numeral before the noun.
 
-\tdim{ka suahna leitang} stays outside because nominalized noun-headed
-material remains shared with \texttt{review\_notes\_nominalization.md}.
+\begin{exe}
+\ex \label{ex:np-ni-li}
+\gll \tdimword{nì} \tdimword{li} \\
+     day four \\
+\glt 'four days' (John 11:39)
+\end{exe}
 
-isolated \tdim{a}, \tdim{ka}, or \tdim{na} prefix surfaces stay outside
-because they are analyzer-noisy away from a controlled nominal host.
+This pattern is also visible in \tdim{kum nih} and
+\tdim{kum sawm le nih}, so the NP claim is not tied to a single lexical
+head. At the same time, \tdim{mi khat} remains an explicit boundary row,
+since the present section uses it as NP-order evidence without resolving
+the full numeral versus indefinite analysis that belongs to the numerals
+and quantifier-adjacent discussion.
 
-Pronoun-led possessor rows such as \tdim{amah a pa} stay outside because
-they still sit between NP structure, possession, and the completed
-pronoun packet.
+\subsubsection{Quantifiers and nouns}\label{quantifiers-and-nouns}
 
-Tone-marked or literature-only genitive claims such as \tdim{-á} stay
-outside because they are not yet tied tightly enough to corpus-backed
-first-slice anchors.
+The quantifiers section already carries the fuller discussion of total,
+existential-like, and negative-licensed quantifier material. Here the
+relevant point is more limited: the cleanest checked quantifier rows
+also place the noun before the quantifier-like item.
 
-report-only counts stay outside because attestation alone does not make
-a row safe for the first print-facing claim.
+\begin{exe}
+\ex \label{ex:np-mi-khempeuh}
+\gll \tdimword{mì} \tdimword{khèmpeuh} \\
+     person all \\
+\glt 'all people' (Luke 2:1)
+\end{exe}
 
-Any broad recursive possession chapter claim stays outside because this
-packet is not yet ready to generalize from one safe NP-ordering slice to
-the whole noun-domain architecture.
+\tdim{mi pawlkhat} (Matthew 2:1) and \tdim{mi tampi} (Mark 6:34) support
+the same general noun-plus-quantifier profile, although each keeps its
+own semantic caveats from the normalized quantifiers section. The
+current section therefore uses them as modest NP-order evidence rather
+than as a reopened quantifier chapter.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim}
+\subsubsection{Possession}\label{possession}
 
-At the current slice maturity level, the safest NP structure /
-possession claim is that Tedim has candidate-controlled evidence for
-basic NP ordering: demonstratives can precede the noun, while numerals
-and quantifier-like modifiers can follow the noun. Possession and
-possessor-possessed structures remain candidate-layer or boundary
-material.
+Possession is now printable in a cautious way, but it remains less
+normalized than the modifier-order material above. The safest current
+claim is that the checked possession rows show
+possessor-before-possessed order inside the noun phrase. They do not yet
+justify a full paradigm of possessive prefixes, a settled treatment of
+apostrophe marking, or a broad theory of alienable versus inalienable
+possession.
 
-That claim is deliberately smaller than a full noun-phrase chapter,
-smaller than a full possession chapter, smaller than a full
-prefix/agreement chapter, and smaller than a full case or relator
-chapter.
+\begin{exe}
+\ex \label{ex:np-poss-na-pa-inn}
+\gll \tdimword{nà} \tdimword{pa'} \tdimword{ínn-àh} \\
+     \textsc{2sg} male.\textsc{poss} house-\textsc{loc} \\
+\glt 'in thy father's house' (Genesis 24:23)
+\end{exe}
 
-\subsubsection{Recommended next step}\label{recommended-next-step}
+\begin{exe}
+\ex \label{ex:np-poss-a-zi-min}
+\gll \tdimword{à} \tdimword{zi'} \tdimword{mīn} \\
+     \textsc{3sg} wife.\textsc{poss} name \\
+\glt 'his wife's name' (Genesis 3:20)
+\end{exe}
 
-This packet now properly proceeds through NP structure / possession
-review notes rather than a dictionary slice, because this packet is
-structural/syntactic rather than lexical.
+These rows are enough for a cautious description of
+possessor-before-possessed structure, especially when read together with
+the packet anchors \tdim{ka pa}, \tdim{Topa' inn}, and \tdim{a pa' inn}.
+They are not enough for a full possession paradigm, because the current
+evidence still overlaps with pronouns and possessive prefixes, genitive
+or apostrophe analysis, relator and postposition structure, and broader
+questions about head-dependent order.
 
-If later work returns to possession after review notes, it should be a
-separate narrow possession sub-scope led by \tdim{ka pa}, not a broad
-possession chapter.
+No equally clean Gospel possession row was found for this pass under
+current candidate discipline. The possession subsection therefore
+remains OT-led even though the section as a whole includes
+Gospel-balanced NP-order examples.
+
+\subsubsection{Deferred and boundary
+material}\label{deferred-and-boundary-material}
+
+Several important possession and NP topics remain explicitly deferred.
+
+\begin{itemize}
+\tightlist
+\item
+  A full possession paradigm is still deferred: the present section does
+  not normalize every possessive prefix or every nominal host.
+\item
+  Kinship possession remains under-supported beyond a few controlled
+  anchors such as \tdim{ka pa}.
+\item
+  Pronominal possession and agreement overlap remains shared with the
+  pronoun and prefix/agreement material rather than settled here.
+\item
+  Apostrophe-marked relations such as \tdim{Topa' inn} remain promising,
+  but their exact relation to genitive marking and title-like noun
+  combinations still needs fuller normalization.
+\item
+  \tdim{Topa' tungah} remains a relator or case-boundary row rather than
+  a clean possession example.
+\item
+  \tdim{ka suahna leitang} remains a nominalization boundary row rather
+  than a core possession anchor.
+\item
+  Demonstrative, numeral, and quantifier rows are used here for NP-order
+  support only; their full systems remain in the demonstratives,
+  numerals, and quantifiers sections.
+\item
+  Analyzer-noisy or report-only material, including isolated prefix
+  surfaces and broad recursive-possession claims, is not promoted into
+  publication prose here.
+\end{itemize}
+
+\subsubsection{Summary}\label{summary}
+
+The NP structure / possession section can now support a modest
+publication-facing description of noun phrase order: the cleanest
+current evidence points to demonstrative-before-noun structure alongside
+noun-plus-postnominal numeral and quantifier patterns. Possession is now
+visible enough to include with formal examples, but it remains a
+cautious subsection whose broader paradigm, marking analysis, and
+interface with pronouns, genitive structure, and relators are still
+explicitly deferred.
 
 \subsection{Noun domain}\label{noun-domain}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_noun\_domain\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-1}
+\subsubsection{Editorial scope}\label{editorial-scope}
 
 This is the first narrow noun-domain grammar slice. It is controlled by
 \texttt{output/publication\_review/candidates\_noun\_domain.tsv} and
@@ -950,7 +1089,7 @@ more lexical-inventory-like than the simple noun anchors, and
 \tdim{Topa} also remains entangled with noun-domain and NP-possession
 boundary questions.
 
-\subsubsection{Boundary material}\label{boundary-material-1}
+\subsubsection{Boundary material}\label{boundary-material}
 
 \tdim{minam} and \tdim{thugen} stay outside the first grammar slice
 because transparent compounds still require lexicalization and
@@ -988,7 +1127,7 @@ Any broad noun chapter claim stays outside because this packet is not
 yet ready to generalize from one safe simple-noun-stem slice to the
 whole noun domain.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-1}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim}
 
 At the current slice maturity level, the safest noun-domain claim is
 that Tedim has candidate-controlled evidence for simple free noun stems
@@ -1001,7 +1140,7 @@ That claim is deliberately smaller than a full noun chapter, smaller
 than a compound-noun chapter, smaller than a proper-noun chapter, and
 smaller than a dictionary slice.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-1}
+\subsubsection{Recommended next step}\label{recommended-next-step}
 
 This grammar slice is now paired with
 \texttt{output/publication\_review/review\_notes\_noun\_domain.md}, so
@@ -1017,7 +1156,7 @@ sub-scope should be transparent compounds led by \tdim{minam} and
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_case\_marking\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-2}
+\subsubsection{Scope}\label{scope-3}
 
 This review slice presents a short draft chapter on nominal case marking
 and closely related postpositional constructions in Tedim Chin. It is
@@ -1291,7 +1430,7 @@ relator nouns into the same printed discussion.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_relators\_postpositions\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-2}
+\subsubsection{Editorial scope}\label{editorial-scope-1}
 
 This is the first narrow grammar slice for Tedim relators /
 postpositions. It is controlled by
@@ -1377,7 +1516,7 @@ relator-hosted \tdim{pan}, \tdim{panin}, and \tdim{tawh} should not be
 flattened into a broad inventory of suffix-like strings.
 
 \subsubsection{Deferred and boundary
-material}\label{deferred-and-boundary-material}
+material}\label{deferred-and-boundary-material-1}
 
 Several items stay outside the first grammar slice as core claims.
 
@@ -1403,7 +1542,7 @@ Several items stay outside the first grammar slice as core claims.
   \tdim{panin}, or locative material.
 \end{itemize}
 
-\subsubsection{Recommended next step}\label{recommended-next-step-2}
+\subsubsection{Recommended next step}\label{recommended-next-step-1}
 
 With \texttt{review\_notes\_relators\_postpositions.md} now added, the
 packet is ready for human review at the current slice maturity level.
@@ -1415,7 +1554,7 @@ broadening into a new case-marking chapter.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_numerals\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-3}
+\subsubsection{Scope}\label{scope-4}
 
 This is now a normalized publication-facing numerals section, not just
 the first narrow slice. It is controlled by
@@ -1791,7 +1930,7 @@ currently controlled boundary row is still \tdim{mi khat}, and no
 cleaner Gospel \tdim{khat} boundary example was strong enough to replace
 it in this pilot.
 
-\subsubsection{Summary}\label{summary}
+\subsubsection{Summary}\label{summary-1}
 
 The normalized numerals section now supports a genuine
 publication-facing description. Tedim has a decimal numeral system with
@@ -1814,7 +1953,7 @@ deferred until the repeated span is genuinely analyzer-backed.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_quantifiers\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-4}
+\subsubsection{Scope}\label{scope-5}
 
 This is now a normalized publication-facing quantifiers section,
 following the coverage-normalization standard defined in
@@ -2065,7 +2204,7 @@ or noun-plus-quantity combinations in at least some checked rows, but
 the present packet does not yet settle a full NP-ordering typology.
 
 \subsubsection{Deferred and boundary
-material}\label{deferred-and-boundary-material-1}
+material}\label{deferred-and-boundary-material-2}
 
 Several quantifier-looking domains still need to stay visibly
 non-normalized.
@@ -2121,7 +2260,7 @@ replacement for the classic \tdim{mi khat} boundary row, and Gospel
 \tdim{peuhpeuh} material remained too free-choice or discourse-heavy to
 promote as settled core quantifier evidence.
 
-\subsubsection{Summary}\label{summary-1}
+\subsubsection{Summary}\label{summary-2}
 
 The quantifiers section now reads as a real publication-facing grammar
 section rather than a narrow packet note. \tdim{Khempeuh} remains the
@@ -2585,7 +2724,7 @@ review-note-stage packet with an assembled grammar slice.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_prefix\_agreement\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-3}
+\subsubsection{Editorial scope}\label{editorial-scope-2}
 
 This is the first narrow prefix/agreement grammar slice for Tedim. It is
 controlled by
@@ -2675,7 +2814,7 @@ independent-pronoun paradigm. That is why \tdim{kanei} and \tdim{kainn}
 are better first anchors here than \tdim{ipai}, \tdim{ko}, \tdim{ei}, or
 any broader person-paradigm table.
 
-\subsubsection{Boundary material}\label{boundary-material-2}
+\subsubsection{Boundary material}\label{boundary-material-1}
 
 The rest of the candidate packet stays outside the first grammar slice
 because each row is still dominated by another unresolved boundary.
@@ -2699,7 +2838,7 @@ derivation/valency.
 Apostrophe possession and broader possessor syntax also stay outside
 because this is not a full possession chapter.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-2}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-1}
 
 At the current slice maturity level, the safest prefix/agreement claim
 is that Tedim has candidate-controlled evidence for routing a shared
@@ -2712,7 +2851,7 @@ smaller than a full possession chapter, smaller than a full
 object-prefix or inverse chapter, and smaller than a rewritten pronoun
 packet.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-3}
+\subsubsection{Recommended next step}\label{recommended-next-step-2}
 
 This packet now properly proceeds to prefix/agreement review notes
 rather than to a dictionary slice, because it is a routing/analysis
@@ -2728,7 +2867,7 @@ layer.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_transitivity\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-4}
+\subsubsection{Editorial scope}\label{editorial-scope-3}
 
 This is the first narrow transitivity grammar slice. It is controlled by
 \texttt{output/publication\_review/candidates\_transitivity.tsv} and
@@ -2811,7 +2950,7 @@ alternation. The same caution applies to \tdim{za / zak},
 \tdim{nei / neih}, and \tdim{ngai / ngaih}, which remain candidate-layer
 or boundary material rather than anchors for this commit.
 
-\subsubsection{Boundary material}\label{boundary-material-3}
+\subsubsection{Boundary material}\label{boundary-material-2}
 
 The following stay outside the first grammar slice:
 
@@ -2862,7 +3001,7 @@ intransitive claim. \tdim{dawt}, \tdim{bei}, and \tdim{pia(k)sak} remain
 outside because they are too thin, too noisy, or too report-bound for
 the first print-facing contrast.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-3}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-2}
 
 At the current slice maturity level, the safest transitivity claim is
 that Tedim has candidate-controlled evidence for a narrow
@@ -2874,7 +3013,7 @@ Alternation, labile behavior, stem alternation, derivation/valency,
 prefix/agreement, case-marking, and whole-system verb-class claims
 remain candidate-layer or boundary material.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-4}
+\subsubsection{Recommended next step}\label{recommended-next-step-3}
 
 After this grammar slice, the next step should be transitivity review
 notes rather than a dictionary slice, because this packet is
@@ -2890,7 +3029,7 @@ stacking}\label{vp-structure-suffix-stacking}
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_vp\_structure\_stacking\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-5}
+\subsubsection{Editorial scope}\label{editorial-scope-4}
 
 This is the first narrow VP structure / suffix stacking grammar slice
 for Tedim. It is controlled by
@@ -3001,7 +3140,7 @@ turn into clause-linkage evidence, but it should wait for a
 subordination packet rather than being promoted here as simple VP suffix
 stacking.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-4}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-3}
 
 At the current slice maturity level, the safest VP-structure claim is
 that Tedim permits at least some multi-suffix verbal complexes in which
@@ -3013,7 +3152,7 @@ not claim that every visible stack in the reports belongs to one solved
 VP order, and it does not reopen completed TAM, directional, negation,
 sentence-final, or relator/postposition packets.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-5}
+\subsubsection{Recommended next step}\label{recommended-next-step-4}
 
 After this grammar slice, the packet can move to review notes without
 forcing an ordinary dictionary slice, because the safe first-slice claim
@@ -3028,7 +3167,7 @@ broader VP rewrite.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_tam\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-6}
+\subsubsection{Editorial scope}\label{editorial-scope-5}
 
 This is the first narrow TAM / aspect / modal grammar slice for Tedim
 Chin, controlled by \texttt{candidates\_tam.tsv} and
@@ -3133,7 +3272,7 @@ The following items remain out of this first grammar slice:
 These forms stay visible as overlap or deferred controls, but they do
 not belong to the first compact TAM grammar slice.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-6}
+\subsubsection{Recommended next step}\label{recommended-next-step-5}
 
 After this grammar slice, the next step is the TAM dictionary print
 slice drafted against the same \texttt{candidates\_tam.tsv} and
@@ -3145,7 +3284,7 @@ work has not yet begun. Broad TAM rewrite work remains out of scope.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_directionals\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-5}
+\subsubsection{Scope}\label{scope-6}
 
 This is a short print-facing draft section on directionals in Tedim
 Chin, controlled by \texttt{candidates\_directionals.tsv} and
@@ -3389,7 +3528,7 @@ Dictionary and review-note work have not yet begun.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_derivation\_valency\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-7}
+\subsubsection{Editorial scope}\label{editorial-scope-6}
 
 This is the first narrow derivation / valency grammar slice for Tedim.
 It is controlled by
@@ -3482,7 +3621,7 @@ benefactive/applicative-like uses as separate controlled subsections
 while leaving open whether a later chapter should collapse them back
 into one suffix with two readings.
 
-\subsubsection{Boundary material}\label{boundary-material-4}
+\subsubsection{Boundary material}\label{boundary-material-3}
 
 The rest of the candidate packet remains outside the first grammar slice
 because each row is still dominated by another unresolved boundary.
@@ -3512,7 +3651,7 @@ derivation anchor.
 \tdim{piangsak} stays outside because it is lexicalized or
 transitivity-adjacent rather than a clean productive \tdim{-sak} anchor.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-5}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-4}
 
 At the current slice maturity level, the safest derivation / valency
 claim is that Tedim has candidate-controlled evidence for a productive
@@ -3525,7 +3664,7 @@ morphology chapter. It does not settle the whole \tdim{-pih} system, the
 whole \tdim{ki-} system, derivation-heavy stacking, or transitivity as a
 separate domain.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-7}
+\subsubsection{Recommended next step}\label{recommended-next-step-6}
 
 After this grammar slice, the next step should be review notes rather
 than a dictionary layer, because a dictionary layer would risk
@@ -3537,7 +3676,7 @@ overclaiming beyond the current candidate-controlled evidence before the
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_nominalization\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-8}
+\subsubsection{Editorial scope}\label{editorial-scope-7}
 
 This is the first narrow nominalization grammar slice. It is controlled
 by \texttt{output/publication\_review/candidates\_nominalization.tsv}
@@ -3623,7 +3762,7 @@ partly to case marking and clause-linkage boundaries. It is important
 evidence for later packet coordination, but it should not lead the first
 nominalization slice.
 
-\subsubsection{Boundary material}\label{boundary-material-5}
+\subsubsection{Boundary material}\label{boundary-material-4}
 
 The rest of the nominalization packet stays outside the first grammar
 slice because each row is still dominated by another unresolved
@@ -3659,7 +3798,7 @@ Any broad nominalization chapter claim stays outside because this packet
 is not yet ready to generalize from one safe deverbal nominalizer to the
 whole nominalization system.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-6}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-5}
 
 At the current slice maturity level, the safest nominalization claim is
 that Tedim has candidate-controlled evidence for productive deverbal
@@ -3672,7 +3811,7 @@ That claim is deliberately smaller than a full nominalization chapter,
 smaller than a full derivation chapter, smaller than a full
 relative-clause chapter, and smaller than a full case-routing chapter.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-8}
+\subsubsection{Recommended next step}\label{recommended-next-step-7}
 
 This packet now properly proceeds to nominalization review notes rather
 than to a dictionary slice, because this is a constructional or
@@ -3689,7 +3828,7 @@ this commit.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_clause\_linkage\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-9}
+\subsubsection{Editorial scope}\label{editorial-scope-8}
 
 This is the first narrow clause-linkage grammar slice for Tedim. It is
 controlled by
@@ -3774,7 +3913,7 @@ case-routing questions. The packet is stronger if it keeps relative
 clauses visible but secondary rather than forcing them into the first
 clause-linkage slice before those boundaries are better settled.
 
-\subsubsection{Boundary material}\label{boundary-material-6}
+\subsubsection{Boundary material}\label{boundary-material-5}
 
 The rest of the clause-linkage packet stays outside the first grammar
 slice because each row is still dominated by another unresolved
@@ -3808,7 +3947,7 @@ Any broad complex-sentence chapter claim stays outside because this
 packet is not yet ready to generalize from one safe subordination anchor
 to the whole clause-linkage system.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-7}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-6}
 
 At the current slice maturity level, the safest clause-linkage claim is
 that Tedim has candidate-controlled evidence for temporal subordination,
@@ -3821,7 +3960,7 @@ That claim is deliberately smaller than a full complex-sentence chapter,
 smaller than a full switch-reference chapter, and smaller than a full
 relative-clause chapter.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-9}
+\subsubsection{Recommended next step}\label{recommended-next-step-8}
 
 This packet now properly proceeds to clause-linkage review notes rather
 than to a dictionary slice, because it is a constructional or clausal
@@ -3842,7 +3981,7 @@ morphology}\label{clause-type-discourse-facing-material-and-expressive-morpholog
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_negation\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-6}
+\subsubsection{Scope}\label{scope-7}
 
 This account offers a short treatment of Tedim negation. It is
 intentionally narrow. It focuses on a small set of manually checked
@@ -4021,7 +4160,7 @@ real NPI contexts such as Genesis 22:12
 can safely quote. What should stay out of the main prose is any claim
 based on raw counts alone.
 
-\subsubsection{Summary}\label{summary-2}
+\subsubsection{Summary}\label{summary-3}
 
 The current evidence is strong enough for a stable negation chapter, but
 only if it keeps the system narrow and honest. \tdim{Lo} is the safest
@@ -4042,7 +4181,7 @@ linguistically honest account of the current Bible evidence.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_interrogatives\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-7}
+\subsubsection{Scope}\label{scope-8}
 
 This short print-facing draft section on interrogatives in Tedim Chin is
 controlled by \texttt{candidates\_interrogatives.tsv} and
@@ -4200,7 +4339,7 @@ scope of this first printed analysis.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_sentence\_final\_particles\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-8}
+\subsubsection{Scope}\label{scope-9}
 
 This is a short print-facing draft section on sentence-final particles
 in Tedim Chin, controlled by
@@ -4400,7 +4539,7 @@ Dictionary and review-note slices have not yet begun.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_coordinators\_print\_slice.md}}
 
-\subsubsection{Scope}\label{scope-9}
+\subsubsection{Scope}\label{scope-10}
 
 This is a short print-facing draft section on coordinators in Tedim
 Chin, controlled by \texttt{candidates\_coordinators.tsv} and
@@ -4609,7 +4748,7 @@ dictionary and review-note work have not yet begun.
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_reduplication\_print\_slice.md}}
 
-\subsubsection{Editorial scope}\label{editorial-scope-10}
+\subsubsection{Editorial scope}\label{editorial-scope-9}
 
 This is the first narrow reduplication grammar slice. It is controlled
 by \texttt{output/publication\_review/candidates\_reduplication.tsv} and
@@ -4667,7 +4806,7 @@ Its controlled segmentation and gloss/function are
 It stays outside the leading claim because it is more quantifier-like or
 noun-modifying than the clean intensifier anchors.
 
-\subsubsection{Boundary material}\label{boundary-material-7}
+\subsubsection{Boundary material}\label{boundary-material-6}
 
 \tdim{ni ni} stays outside the first grammar slice because syntactic X X
 repetition overlaps with temporal/adverbial and VP-structure
@@ -4700,7 +4839,7 @@ derivational account.
 Any dictionary-entry claim stays outside because this packet is
 constructional rather than lexical.
 
-\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-8}
+\subsubsection{Safe first-slice claim}\label{safe-first-slice-claim-7}
 
 At the current slice maturity level, the safest reduplication claim is
 that Tedim has candidate-controlled evidence for full reduplication used
@@ -4715,7 +4854,7 @@ That claim is deliberately smaller than a full derivation chapter,
 smaller than a full reduplication chapter, smaller than a TAM/aspect or
 VP-structure slice, and smaller than a dictionary slice.
 
-\subsubsection{Recommended next step}\label{recommended-next-step-10}
+\subsubsection{Recommended next step}\label{recommended-next-step-9}
 
 This grammar slice is now paired with
 \texttt{output/publication\_review/review\_notes\_reduplication.md}, so

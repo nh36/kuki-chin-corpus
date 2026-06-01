@@ -164,7 +164,7 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
         "Full reduplication as intensification",
         "Temporal subordination: ciangin",
         "Deverbal nominalization with `-na`",
-        "Basic NP ordering",
+        "Overview of noun phrase structure",
         "Simple noun stems",
         "Agreement versus possession routing",
         "Causative `-sak`",
@@ -202,6 +202,7 @@ def test_assembled_preview_includes_source_lines_for_inserted_slices() -> None:
 def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     tex = _tex_text()
     lower = tex.lower()
+    normalized = _normalize(lower)
 
     assert TEX_PATH.exists(), "Assembled grammar review preview TeX must exist"
     assert "review preview, not a finished grammar" in lower
@@ -210,7 +211,7 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "\\tdim{hawl} is the clean transitive anchor for the first slice." in lower
     assert "\\tdim{mahmah} is the main full-reduplication intensifier anchor." in lower
     assert "with \\tdim{ciangin} as the clearest current anchor." in lower
-    assert "basic np ordering" in lower
+    assert "overview of noun phrase structure" in normalized
     assert "routing contrast, with \\tdim{kanei} as the clearest agreement anchor" in lower
     assert "cardinal numerals" in lower
     assert "decimal composition" in lower
@@ -337,6 +338,56 @@ def test_assembled_preview_includes_normalized_quantifiers_section() -> None:
         "Deferred and boundary material",
     ):
         assert required in text
+
+
+def test_assembled_preview_includes_normalized_np_possession_section() -> None:
+    text = _text()
+
+    for required in (
+        "normalized publication-facing NP structure / possession section",
+        "Overview of noun phrase structure",
+        "Current NP pattern inventory",
+        "Demonstratives and nouns",
+        "Numerals and nouns",
+        "Quantifiers and nouns",
+        "Possession",
+        "Deferred and boundary material",
+    ):
+        assert required in text
+
+
+def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:np-") >= 4
+    assert tex.count("\\label{ex:np-") >= 4
+
+    for required in ("hih mite", "mi khat", "mi khempeuh", "ni li", "na pa' inn-ah", "Current NP pattern inventory"):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in ("Current NP pattern inventory", "hih mite", "mi khempeuh", "na pa", "ni li"):
+        assert required.lower() in pdf_normalized
+
+
+def test_assembled_preview_tex_keeps_np_example_sources_after_translation() -> None:
+    assert "(Exodus 5:5)" in _tex_example_block("ex:np-hih-mite")
+    assert "(John 11:39)" in _tex_example_block("ex:np-ni-li")
+    assert "(Luke 2:1)" in _tex_example_block("ex:np-mi-khempeuh")
+    assert "(Genesis 24:23)" in _tex_example_block("ex:np-poss-na-pa-inn")
+    assert "(Genesis 3:20)" in _tex_example_block("ex:np-poss-a-zi-min")
+
+
+def test_assembled_preview_np_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Exodus 5:5)" in tex or "(Genesis 24:23)" in tex or "(Genesis 3:20)" in tex
+    assert "(John 11:39)" in tex or "(Luke 2:1)" in tex or "no suitable Gospel example was found" in text
 
 
 def test_assembled_preview_tex_includes_normalized_quantifiers_inventory_and_examples() -> None:
