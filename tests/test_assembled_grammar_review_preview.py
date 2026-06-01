@@ -323,6 +323,55 @@ def test_assembled_preview_numerals_examples_include_old_testament_and_gospel_so
     assert "(John 11:39)" in tex or "(Matthew 9:20)" in tex or "no suitable Gospel example" in _text()
 
 
+def test_assembled_preview_includes_normalized_quantifiers_section() -> None:
+    text = _text()
+
+    for required in (
+        "normalized publication-facing quantifiers section",
+        "Overview of quantification in Tedim",
+        "Quantifier inventory",
+        "Universal / total quantifiers",
+        "Existential / indefinite-like quantifiers",
+        "Quantifiers and negation",
+        "Quantifiers and noun phrase structure",
+        "Deferred and boundary material",
+    ):
+        assert required in text
+
+
+def test_assembled_preview_tex_includes_normalized_quantifiers_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+
+    assert text.count("(@ex:quant-") >= 4
+    assert tex.count("\\label{ex:quant-") >= 4
+
+    for required in ("khempeuh", "pawlkhat", "kuamah", "bangmah", "tampi", "Quantifier inventory"):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex.lower()
+
+    for required in ("Quantifier inventory", "mi khempeuh", "mi pawlkhat", "mi tampi"):
+        assert required.lower() in pdf.lower()
+
+
+def test_assembled_preview_tex_keeps_quantifiers_example_sources_after_translation() -> None:
+    assert "(Genesis 2:1)" in _tex_example_block("ex:quant-khempeuh")
+    assert "(Luke 2:1)" in _tex_example_block("ex:quant-mi-khempeuh")
+    assert "(Matthew 2:1)" in _tex_example_block("ex:quant-mi-pawlkhat")
+    assert "(Exodus 2:12)" in _tex_example_block("ex:quant-kuamah")
+    assert "(John 3:27)" in _tex_example_block("ex:quant-kuamah-bangmah")
+    assert "(Mark 6:34)" in _tex_example_block("ex:quant-mi-tampi")
+
+
+def test_assembled_preview_quantifiers_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 2:1)" in tex or "(Exodus 2:12)" in tex
+    assert "(Luke 2:1)" in tex or "(Matthew 2:1)" in tex or "(Mark 6:34)" in tex or "(John 3:27)" in tex or "no suitable Gospel example was found" in text
+
+
 def test_assembled_preview_tex_keeps_expected_sources_for_examples_2_11_to_2_14() -> None:
     assert "(Genesis 13:8)" in _tex_example_block("ex:pro-eite")
     assert "(Genesis 34:9)" in _tex_example_block("ex:pro-kote")

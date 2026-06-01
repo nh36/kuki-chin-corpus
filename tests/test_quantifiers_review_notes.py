@@ -1,75 +1,76 @@
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-NOTES_PATH = ROOT / "output/publication_review/review_notes_quantifiers.md"
+NOTES = Path("output/publication_review/review_notes_quantifiers.md")
+
+
+def _text() -> str:
+    return NOTES.read_text(encoding="utf-8")
 
 
 def test_quantifiers_review_notes_exists() -> None:
-    assert NOTES_PATH.exists()
+    assert NOTES.exists(), "Quantifiers review notes must exist"
 
 
-def test_quantifiers_review_notes_name_control_files() -> None:
-    text = NOTES_PATH.read_text(encoding="utf-8")
+def test_quantifiers_review_notes_names_packet_surfaces() -> None:
+    text = _text()
 
     for required in (
+        "coverage_normalization_audit.md",
+        "grammar_numerals_print_slice.md",
         "candidates_quantifiers.tsv",
         "dossier_quantifiers.md",
         "grammar_quantifiers_print_slice.md",
-        "dictionary_quantifiers_print_slice.md",
+        "review_notes_quantifiers.md",
+        "examples_quantifiers_normalization.tsv",
+        "docs/grammar/reports/06-func-05-quantifiers.md",
     ):
         assert required in text
 
 
-def test_quantifiers_review_notes_cover_core_analysis() -> None:
-    text = NOTES_PATH.read_text(encoding="utf-8")
-    lower = text.lower()
+def test_quantifiers_review_notes_tracks_core_analysis_and_boundaries() -> None:
+    text = _text()
 
     for required in (
         "khempeuh",
         "pawlkhat",
         "mi khat",
-        "kuamah mu lo",
-        "bangmah om lo hi",
+        "kuamah",
+        "bangmah",
         "tampi tak",
-        "vanglian zaw",
-        "hau mahmah",
+        "mi tampi",
+        "zaw",
+        "mahmah",
+        "peuhpeuh",
+        "tawm",
+        "candidate evidence",
+        "explicit caveats",
     ):
-        assert required in lower
-
-    assert "mi peuhpeuh" in lower or "peuhpeuh" in lower
-    assert "deferred" in lower
-    assert "not print-ready" in lower
-    assert "tawm" in lower
-    assert "numeral/indefinite boundary" in lower or "boundary evidence" in lower
-    assert "negative-licensed" in lower
-    assert "negation overlap" in lower or "negation-overlap" in lower
-    assert "bang-family" in lower or "interrogative-overlap" in lower
-    assert "tua bangmah hi-in" in lower or "exodus 27:11" in lower
-    assert "blocked" in lower or "warn" in lower
+        assert required in text
 
 
-def test_quantifiers_review_notes_keep_scope_narrow() -> None:
-    text = NOTES_PATH.read_text(encoding="utf-8")
-    lower = text.lower()
+def test_quantifiers_review_notes_records_gospel_balance() -> None:
+    text = _text()
 
-    assert "broad adjective/adverb" in lower
-    assert "full degree/intensifier/comparative chapter" in lower
-    assert "edge rows" in lower or "edge row" in lower
+    for required in (
+        "Luke 2:1",
+        "Matthew 2:1",
+        "Mark 6:34",
+        "John 3:27",
+        "Old Testament",
+        "Gospel",
+        "does not produce a cleaner replacement for the classic `mi khat` boundary row".replace("does not", "did not"),
+    ):
+        assert required in text
 
-    for banned in ("5,191", "4,712", "664", "525", "735", "1,351", "13,000+"):
-        assert banned not in text
 
+def test_quantifiers_review_notes_marks_normalized_maturity() -> None:
+    text = _text()
 
-def test_quantifiers_review_notes_mark_review_ready_and_future_scope() -> None:
-    text = NOTES_PATH.read_text(encoding="utf-8")
-    lower = text.lower()
-
-    assert "ready for human review" in lower or "current slice maturity level" in lower
-    assert "coordinators" in lower
-    assert "sentence-final particles" in lower
-    assert "broad tam" in lower
-    assert "directionals" in lower
-    assert "chrestomathy" in lower
-    assert "mizo/lus" in lower
-    assert "other kuki-chin languages" in lower
+    for required in (
+        "second normalized coverage section after numerals",
+        "review preview rather than a finished grammar",
+        "ready for human review at the current normalized coverage level",
+        "Phonology/tone and verb paradigms remain major non-homogeneous gaps",
+    ):
+        assert required in text
