@@ -188,19 +188,27 @@ def test_case_marking_print_slices_align_with_candidate_layer() -> None:
 
     assert "candidates_case_marking.tsv" in grammar_text
     assert "dossier_case_marking.md" in grammar_text
+    assert "review_notes_case_marking.md" in grammar_text
+    assert "coverage_normalization_audit.md" in grammar_text
+    assert "examples_case_marking_normalization.tsv" in grammar_text
     assert "Kain in" in grammar_text
+    assert "Herod in" in grammar_text
     assert "ciangin" in grammar_text
-    assert "ambiguity controls such as `ciangin`" in grammar_text
+    assert "Current case-marking inventory" in grammar_text
+    assert "Locative and goal marking with -ah" in grammar_text
+    assert "Agentive, ergative, or instrumental marking with -in" in grammar_text
+    assert "Genitive / possessive boundary" in grammar_text
+    assert "Case marking and relators/postpositions" in grammar_text
+    assert "Case marking and argument structure" in grammar_text
+    assert "Deferred and boundary material" in grammar_text
     assert "khua-ah" in grammar_text
-    assert "relator-noun-plus-case" in grammar_text
-    assert "`-a` remains deferred" in grammar_text
-    assert "does **not** collapse `-a` into `-ah`" in grammar_text
-    assert "`pan-in` is useful evidence" in grammar_text
-    assert "not by itself a final structural analysis" in grammar_text
-    assert "kei tawh" in grammar_text
-    assert "leivui tawh" in grammar_text
-    assert "material and instrument-like" in grammar_text
-    assert "pos_span=FUNC" in grammar_text
+    assert "inn-ah" in grammar_text
+    assert "na pa' inn-ah" in grammar_text
+    assert "lakpan" in grammar_text
+    assert "David khuapi sungah" in grammar_text
+    assert "not yet enough for a full case paradigm" in grammar_text.lower()
+    assert "does not settle whether the apostrophe" in grammar_text.lower()
+    assert "raw generated-report counts" in grammar_text.lower()
 
     assert "candidates_case_marking.tsv" in dictionary_text
     assert "dossier_case_marking.md" in dictionary_text
@@ -218,15 +226,19 @@ def test_case_marking_print_slices_align_with_candidate_layer() -> None:
 
     assert "candidates_case_marking.tsv" in review_notes_text
     assert "dossier_case_marking.md" in review_notes_text
-    assert "extractor route" in review_notes_text
-    assert "LF-stable reproducible candidate output" in review_notes_text
-    assert "The immediate case-marking alignment pass is now complete." in review_notes_text
-    assert "case marking is ready for human review" in review_notes_text.lower()
+    assert "examples_case_marking_normalization.tsv" in review_notes_text
+    assert "normalized publication-facing case marking section" in review_notes_text
+    assert "Herod in" in review_notes_text
+    assert "keima inn-ah" in review_notes_text
+    assert "David khuapi sungah" in review_notes_text
+    assert "lakpan" in review_notes_text
+    assert "fifth normalized coverage section" in review_notes_text.lower()
+    assert "assembled grammar review preview PDF has been rebuilt" in review_notes_text
     assert "ciangin" in review_notes_text
     assert "`-a`" in review_notes_text
     assert "`-panin`" in review_notes_text
     assert "`-tawh`" in review_notes_text
-    assert "pos_span=FUNC" in review_notes_text
+    assert "full case paradigm" in review_notes_text.lower()
 
 
 def test_case_marking_dossier_exists_and_describes_manual_candidate_layer():

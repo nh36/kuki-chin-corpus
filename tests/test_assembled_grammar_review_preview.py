@@ -374,6 +374,23 @@ def test_assembled_preview_includes_normalized_np_possession_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_case_marking_section() -> None:
+    text = _text()
+
+    for required in (
+        "normalized publication-facing case marking section",
+        "Overview of case-like marking",
+        "Current case-marking inventory",
+        "Locative and goal marking with -ah",
+        "Agentive, ergative, or instrumental marking with -in",
+        "Genitive / possessive boundary",
+        "Case marking and relators/postpositions",
+        "Case marking and argument structure",
+        "Deferred and boundary material",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -406,6 +423,41 @@ def test_assembled_preview_np_examples_include_old_testament_and_gospel_sources(
 
     assert "(Exodus 5:5)" in tex or "(Genesis 24:23)" in tex or "(Genesis 3:20)" in tex
     assert "(John 11:39)" in tex or "(Luke 2:1)" in tex or "no suitable Gospel example was found" in text
+
+
+def test_assembled_preview_tex_includes_normalized_case_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:case-") >= 4
+    assert tex.count("\\label{ex:case-") >= 4
+
+    for required in ("Current case-marking inventory", "Kain in", "khua-ah", "na pa' inn-ah", "lakpan"):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in ("Current case-marking inventory", "kain in", "khua-ah", "lakpan"):
+        assert required.lower() in pdf_normalized
+
+
+def test_assembled_preview_tex_keeps_case_example_sources_after_translation() -> None:
+    assert "(Genesis 4:3)" in _tex_example_block("ex:case-in-kain")
+    assert "(Matthew 2:4)" in _tex_example_block("ex:case-in-herod")
+    assert "(Genesis 11:28)" in _tex_example_block("ex:case-ah-khua")
+    assert "(Matthew 8:8)" in _tex_example_block("ex:case-ah-inn")
+    assert "(Genesis 24:23)" in _tex_example_block("ex:case-poss-na-pa-inn")
+    assert "(Luke 2:11)" in _tex_example_block("ex:case-relator-david-khuapi-sungah")
+    assert "(Matthew 5:19)" in _tex_example_block("ex:case-relator-lakpan")
+
+
+def test_assembled_preview_case_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 4:3)" in tex or "(Genesis 11:28)" in tex or "(Genesis 24:23)" in tex
+    assert "(Matthew 2:4)" in tex or "(Matthew 8:8)" in tex or "(Luke 2:11)" in tex or "(Matthew 5:19)" in tex
 
 
 def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:

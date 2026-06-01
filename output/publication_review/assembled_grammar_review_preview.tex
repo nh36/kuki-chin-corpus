@@ -1330,272 +1330,370 @@ material rather than being mixed into an under-controlled noun list
 
 \subsubsection{Scope}\label{scope-4}
 
-This review slice presents a short draft chapter on nominal case marking
-and closely related postpositional constructions in Tedim Chin. It is
-intended as an editorial model for later sections of the grammar, not as
-a full treatment of nominal morphology. The discussion concentrates on
-ergative \tdim{-in}, locative \tdim{-ah}, ablative and source forms
-\tdim{-pan} and \tdim{-panin}, and comitative \tdim{-tawh}. A final
-section notes the role of relator nouns, since the clearest spatial
-examples regularly involve stems such as \tdim{lak}, \tdim{sung},
-\tdim{kiang}, and \tdim{laizang}.
+This is now a normalized publication-facing case marking section,
+following the coverage-normalization standard defined in
+\texttt{coverage\_normalization\_audit.md} and piloted in the numerals,
+quantifiers, NP structure / possession, and noun domain sections. It
+remains controlled by candidate evidence and explicit caveats rather
+than by raw generated-report counts or broad analyzer output
+\citep{henderson1965, zamngaihcing2017}.
 
-The present print-facing examples are controlled by
-\texttt{candidates\_case\_marking.tsv} and interpreted in
-\texttt{dossier\_case\_marking.md}. This keeps the slice narrow: the
-packet now prints candidate-backed anchors and explicit caveats rather
-than broadening into a new full chapter or a broad automatic case-marker
-survey.
-
-\subsubsection{Case marking in outline}\label{case-marking-in-outline}
-
-Earlier descriptions agree that Tedim marks nominal relations after the
-noun phrase, but they differ in how they analyze those forms. Henderson
-describes them structurally as phrase-final or post-nominal particles
-rather than as a semantic case system
-\citetext{\citealp[59]{henderson1965}; \citealp[104]{henderson1965}}.
-Zam Ngaih Cing, by contrast, offers a seven-case analysis with explicit
-ergative, locative, ablative, and comitative categories
-\citep[sec.~3.3.3.3]{zamngaihcing2017}. Comparative Sukte evidence
-points in the same direction for several core markers, even though Singh
-labels the cognate \tdim{-in} as nominative rather than ergative
-\citep[sec.~4.5.1]{sukte_grammar}.
-
-For a printed grammar, the most useful generalization is therefore
-twofold. First, the language is well described by a case-marking
-analysis in the modern sense. Second, the most natural corpus examples
-often combine case markers with relational nominal stems, so a final
-chapter should not force an artificial boundary between ``case
-suffixes'' and ``spatial nouns''.
-
-\subsubsection{\texorpdfstring{Ergative
-\tdim{-in}}{Ergative }}\label{ergative}
-
-The ergative marker \tdim{-in} marks the transitive subject in Tedim
-Chin \citep[sec.~3.3.3.3.1]{zamngaihcing2017}. Henderson does not use
-the label \emph{ergative}, but her treatment of phrase-final nominal
-particles is compatible with the later analysis
-\citep[59]{henderson1965}. Otsuka likewise assumes ergative \tdim{-in}
-in discussing causers in causative constructions
-\citep{otsuka_causative}. Comparative Sukte retains a cognate \tdim{-in}
-marker, though Singh describes it as nominative
-\citep[sec.~4.5.1]{sukte_grammar}.
-
-In this slice, Genesis 4:3 remains the accepted print anchor because
-\texttt{candidates\_case\_marking.tsv} and
-\texttt{dossier\_case\_marking.md} both treat \tdim{Kain in} as the
-cleanest candidate-backed ergative window. Raw \tdim{-in} extraction is
-unsafe: rows such as \tdim{ciangin} are conjunctional or other non-case
-material, so they must not be promoted as ergative case examples.
-
-\begin{exe}
-\ex \label{ex:erg-in}
-\gll \tdimword{Túa} \tdimword{hùn} \tdimword{sùng-ìn} \tdimword{Kain} \tdimword{ìn} \tdimword{léi} \tdimword{pà-ná} \tdimword{piang} \tdimword{gah} \tdimword{pìak-ná} \tdimword{Topa'} \tdimword{tùngàh} \tdimword{pái-pìh} \tdimword{à,} \\
-     \textsc{dist} time inside-\textsc{erg} \textsc{kain} \textsc{erg} buy father-\textsc{nmlz} be.born branch give.to-\textsc{nmlz} Lord.\textsc{poss} on-\textsc{loc} go-\textsc{appl} \textsc{3sg} \\
-\glt 'And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.' (Genesis 4:3)
-\end{exe}
-
-This example is sufficient for a draft chapter because it shows the
-essential pattern without relying on doubtful segmentation. The agent
-phrase \tdim{Kain in} is simple, animate, and immediately followed by a
-clearly transitive predicate. At the same time, the section remains
-cautious: one accepted candidate-backed example is enough to print the
-analysis, but additional \tdim{-in} rows should still be filtered
-against ambiguity controls such as \tdim{ciangin} before they are
-treated as nominal case evidence.
-
-\subsubsection{\texorpdfstring{Locative
-\tdim{-ah}}{Locative }}\label{locative}
-
-The locative \tdim{-ah} marks location
-\citep[sec.~3.3.3.3.3]{zamngaihcing2017}. Henderson already treats
-\tdim{-ah} as a locative post-nominal particle and discusses its
-phonological behavior in locative nominal figures
-\citep[54-56]{henderson1965}. The current candidate layer, however,
-distinguishes plain noun-plus-locative evidence such as \tdim{khua-ah}
-from relator-noun-plus-case constructions such as \tdim{laizangah},
-\tdim{vantungah}, \tdim{kiangah}, \tdim{sungah}, and \tdim{tungah}. The
-printed description should therefore be slightly richer than a simple
-gloss ``at/in'', while still keeping those two subtypes distinct.
-
-\begin{exe}
-\ex \label{ex:loc-ah}
-\gll \tdimword{Pasian} \tdimword{ìn,} \tdimword{tuite'} \tdimword{lai-zang-àh} \tdimword{vàn} \tdimword{kuum-pì} \tdimword{ōm} \tdimword{hèn} \tdimword{lá,} \tdimword{túa} \tdimword{vàn} \tdimword{kuum-pì} \tdimword{ìn} \tdimword{tùi} \tdimword{lè} \tdimword{tùi} \tdimword{kī-khen-sàk} \tdimword{hèn} \tdimword{cí} \tdimword{hì.} \\
-     God \textsc{erg} water-\textsc{pl}.\textsc{poss} middle-side-\textsc{loc} sky bow-big exist \textsc{juss} take \textsc{dist} sky bow-big \textsc{erg} water and water \textsc{refl}-divide-\textsc{caus} \textsc{juss} say \textsc{decl} \\
-\glt 'And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.' (Genesis 1:6)
-\end{exe}
-
-\begin{exe}
-\ex \label{ex:loc-ah-2}
-\gll \tdimword{léi-tùng} \tdimword{khùa} \tdimword{à} \tdimword{vak-sàk} \tdimword{dìng-ìn} \tdimword{vantung-àh} \tdimword{khuavak} \tdimword{hì} \tdimword{ùh} \tdimword{hèn} \tdimword{cí} \tdimword{hì.} \\
-     land-on town \textsc{3sg} shine-\textsc{caus} \textsc{irr}-\textsc{erg} heaven-\textsc{loc} light \textsc{decl} 2/3PL \textsc{juss} say \textsc{decl} \\
-\glt 'and let them be for lights in the firmament of the heaven to give light upon the earth' (Genesis 1:15)
-\end{exe}
-
-The first example shows especially clearly that \tdim{-ah} often
-completes a larger relational expression rather than attaching only to a
-simple lexical noun. The noun \tdim{laizang} contributes the spatial
-geometry `middle, interior region', and \tdim{-ah} marks that whole
-phrase as locative. The second printed example is still best treated in
-the same relator-noun-plus-case domain, even if \tdim{vantung} looks
-less obviously relational than \tdim{laizang}. The plain
-noun-plus-locative control in the candidate layer is \tdim{khua-ah}, not
-one of these relator rows.
-
-The analyzer export also needs to be read cautiously here. Some locative
-and relator rows surface with \tdim{pos\_span=FUNC}, even though the
-grammar still treats the base as nominal or relational. That export
-label is useful metadata, but it is not decisive enough to collapse
-noun-like and relator-like rows into a single undifferentiated suffix
-list.
-
-\subsubsection{\texorpdfstring{Directional/allative
-\tdim{-a}}{Directional/allative }}\label{directionalallative}
-
-Directional or allative \tdim{-a} remains deferred in the current
-packet. The candidate layer keeps \tdim{-a} separate from \tdim{-ah},
-and the dossier is explicit that the present export does not yet
-distinguish directional \tdim{-a} cleanly from pronominal or other
-functional \tdim{a} tokens. For that reason, the current slice does
-\textbf{not} collapse \tdim{-a} into \tdim{-ah}, and it does not yet
-print a dedicated \tdim{-a} example.
-
-\subsubsection{\texorpdfstring{Source marking: \tdim{-pan} and
-\tdim{-panin}}{Source marking:  and }}\label{source-marking-and}
-
-Zam Ngaih Cing describes \tdim{-pan} as the ablative marker indicating
-source or point of departure \citep[sec.~3.3.3.3.5]{zamngaihcing2017}.
-Comparative Sukte has a cognate \tdim{-pan}, which strengthens the
-historical plausibility of the analysis \citep{sukte_grammar}. Henderson
-does not present an ablative category in the modern sense, but the
-source-marking behavior is nevertheless compatible with her structural
-account of post-nominal particles \citep[104]{henderson1965}.
-
-\begin{exe}
-\ex \label{ex:pan}
-\gll \tdimword{Túa} \tdimword{àhìh} \tdimword{màn-ìn} \tdimword{híh} \tdimword{thù-khàm-te} \tdimword{lak-pàn} \tdimword{à} \tdimword{néu-pèn-tè} \tdimword{khàt} \tdimword{bèk} \tdimword{nà-ngawn} \tdimword{zúi-khá} \tdimword{lò-ìn,} \tdimword{midang-tè} \tdimword{ìn} \tdimword{zòng} \tdimword{à} \tdimword{zùih} \tdimword{lòh} \tdimword{nàdìngìn} \tdimword{à} \tdimword{gēn} \tdimword{mì-tè} \tdimword{pèn} \tdimword{vàn-tùng} \tdimword{kī-ukna} \tdimword{sùng-àh} \tdimword{mì} \tdimword{néu-pèn} \tdimword{hì} \tdimword{dìng} \tdimword{ùh} \tdimword{hì.} \\
-     \textsc{dist} be.\textsc{3sg}.\textsc{rel} reason-\textsc{erg} \textsc{prox} law-\textsc{pl} midst-\textsc{abl} \textsc{3sg} small-most-\textsc{pl} one only \textsc{2sg}-own follow-go \textsc{neg}-\textsc{erg} other.person-\textsc{pl} \textsc{erg} also \textsc{3sg} follow-\textsc{nom} \textsc{neg}-\textsc{nom} \textsc{purp}.\textsc{erg} \textsc{3sg} speak person-\textsc{pl} \textsc{top} sky-on \textsc{refl}-rule.\textsc{nmlz} inside-\textsc{loc} person small-\textsc{top} \textsc{decl} \textsc{irr} 2/3PL \textsc{decl} \\
-\glt 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven.' (Matthew 5:19)
-\end{exe}
-
-This example is worth keeping because it shows a natural source
-construction built on a relator noun. The source relation is real, but
-it is not expressed through a bare noun alone: \tdim{lak} `among, in the
-midst of' combines with \tdim{-pan} to yield a source phrase meaning
-`from among'. The current candidate layer therefore treats \tdim{lakpan}
-as source marking on a relator noun, not merely as a bare suffix
-example.
-
-The related form \tdim{-panin} is common in the corpus and clearly
-belongs to the same source-marking domain, especially after relator
-nouns and other spatial expressions. What remains uncertain is not its
-source meaning, but its exact structural status in every occurrence.
-Some examples look like straightforward source phrases, while others
-behave more like extended or tightly fused source-marking expressions.
-
-\begin{exe}
-\ex \label{ex:panin}
-\gll \tdimword{Topa} \tdimword{ìn} \tdimword{Abram} \tdimword{kìang-àh,} \tdimword{nà} \tdimword{gàm,} \tdimword{nà} \tdimword{beh,} \tdimword{lè} \tdimword{nà} \tdimword{pa'} \tdimword{ínn} \tdimword{pàn-ìn} \tdimword{nàng} \tdimword{kòng} \tdimword{làh} \tdimword{dìng} \tdimword{gàm-àh} \tdimword{pái} \tdimword{ìn} \\
-     Lord \textsc{erg} \textsc{abram} beside-\textsc{loc} \textsc{2sg} land \textsc{2sg} tribe and \textsc{2sg} male.\textsc{poss} house \textsc{abl}-\textsc{erg} \textsc{2sg}.\textsc{pro} \textsc{1sg→3} lamp \textsc{irr} land-\textsc{loc} go \textsc{erg} \\
-\glt 'Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house.' (Genesis 12:1)
-\end{exe}
-
-For that reason, a printed grammar can already gloss \tdim{-panin} as a
-source form related to \tdim{-pan}, but should avoid a stronger
-compositional claim until the full range of corpus contexts has been
-reviewed more closely. The analyzer segmentation \tdim{pan-in} is useful
-evidence for the packet, but it is not by itself a final structural
-analysis.
-
-\subsubsection{\texorpdfstring{Comitative
-\tdim{-tawh}}{Comitative }}\label{comitative}
-
-The comitative \tdim{-tawh} is described in the literature as the marker
-of accompaniment \citep[sec.~3.3.3.3.6]{zamngaihcing2017}. Henderson
-also lists \tdim{tawh} among the post-nominal particles
-\citep[104]{henderson1965}. In the biblical corpus, however, the most
-accessible examples are semantically broader than simple human
-accompaniment. A printed chapter should therefore distinguish the core
-comitative use from its material and instrumental extensions rather than
-treating all examples as equivalent.\footnote{The currently available
-  biblical examples for \tdim{-tawh} are semantically good enough for
-  review, but they do not all illustrate the most prototypical
-  accompaniment reading. That is why the present slice pairs one
-  accompaniment example with one extension example rather than treating
-  Genesis 2:7 or Genesis 2:21 as if they were ordinary companion
-  phrases.}
-
-\begin{exe}
-\ex \label{ex:tawh-accompaniment}
-\gll \tdimword{Tangvalte'} \tdimword{nèk-sá-tè} \tdimword{lè} \tdimword{kèi} \tdimword{tàwh} \tdimword{hòng} \tdimword{kúan} \tdimword{mite'} \tdimword{tành} \tdimword{dìng-tè} \tdimword{lobuang} \tdimword{bangmah} \tdimword{kà} \tdimword{lá} \tdimword{kèi} \tdimword{dìng} \tdimword{hì.} \\
-     youth-\textsc{pl}.\textsc{poss} eat.\textsc{ii}-flesh-\textsc{pl} and \textsc{1sg}.\textsc{pro} \textsc{com} \textsc{3→1} family person-\textsc{pl}.\textsc{poss} spread stand-\textsc{pl} disturb nothing \textsc{1sg} take \textsc{neg} \textsc{irr} \textsc{decl} \\
-\glt 'save only that which the young men have eaten, and the portion of the men which went with me' (Genesis 14:24)
-\end{exe}
-
-\begin{exe}
-\ex \label{ex:tawh-extension}
-\gll \tdimword{Topa} \tdimword{Pasian} \tdimword{ìn} \tdimword{léi-lak} \tdimword{pà-ná} \tdimword{leivui} \tdimword{tàwh} \tdimword{mì-hìng} \tdimword{bāwl} \tdimword{à,} \tdimword{à} \tdimword{nak} \tdimword{sùng-àh} \tdimword{nuntak-ná} \tdimword{hu} \tdimword{sàng} \tdimword{sùk} \tdimword{hì.} \\
-     Lord God \textsc{erg} dust father-\textsc{nmlz} dust \textsc{com} person-kind make \textsc{3sg} \textsc{3sg} nose inside-\textsc{loc} live-\textsc{nmlz} breath high collapse \textsc{decl} \\
-\glt 'And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.' (Genesis 2:7)
-\end{exe}
-
-Genesis 14:24 illustrates the core accompaniment use well enough for
-print: \tdim{kei tawh} marks the men as companions who went with Abram.
-Genesis 2:7, by contrast, shows a broader use in which \tdim{-tawh}
-marks material or means. That wider range should remain explicit in the
-grammar and stay split in the same way it is split in the candidate
-layer. The comitative meaning remains central, but the marker extends
-into associated material and instrument-like readings in ways that the
-English gloss \emph{with} only partly captures.
-
-\subsubsection{Relator nouns}\label{relator-nouns}
-
-The locative and source examples already show that Tedim spatial grammar
-is not exhausted by a list of case markers. Relator nouns such as
-\tdim{lak}, \tdim{sung}, \tdim{kiang}, \tdim{tung}, \tdim{laizang}, and
-\tdim{vantung} regularly host locative and ablative marking, and they do
-so at very high frequency in the candidate-backed packet. Henderson's
-structural treatment makes room for this by analyzing many such forms in
-terms of nominal figures rather than sharply separated case suffixes
-\citep[59]{henderson1965}. Zam Ngaih Cing's case system, meanwhile,
-makes the semantic contribution of the markers clearer
-\citep[sec.~3.3.3.3]{zamngaihcing2017}.
-
-For a final chapter, the best solution will probably be to treat the
-system in two layers: first the case markers themselves, then the class
-of relational nouns that commonly host them. The present review slice
-stops short of a full relator-noun section, but it already makes clear
-that the two layers belong in the same part of the grammar and should
-not be flattened into a bare suffix list.
-
-\subsubsection{Editorial summary}\label{editorial-summary-2}
-
-This slice now supports a modest but genuine draft chapter. Ergative
-\tdim{-in} can be described with a manually confirmed biblical example;
-\tdim{-ah} and \tdim{-pan} are already straightforward to illustrate;
-\tdim{-panin} can be described conservatively as a related source form;
-and \tdim{-tawh} can be presented with one clear accompaniment example
-plus one extension example. The remaining work is not to broaden the
-chapter, but to decide how fully the final grammar should integrate
-relator nouns into the same printed discussion.
-
-\subsubsection{References}\label{references-1}
+The current section depends on:
 
 \begin{itemize}
 \tightlist
 \item
-  Henderson, Eugénie J. A. 1965. \emph{Tiddim Chin: A Descriptive
-  Analysis of Two Texts}. London: Oxford University Press.
+  \texttt{coverage\_normalization\_audit.md}
 \item
-  Otsuka, Kosei. 2009. ``Causative and benefactive suffix -sàk in Tiddim
-  Chin.'' \emph{思言: 東京外国語大学記述言語学論集} 5: 3-24.
+  \texttt{candidates\_case\_marking.tsv}
 \item
-  Singh, L. S. 2018. \emph{A Descriptive Grammar of Sukte (Salhte)}.
-  Imphal: Grassroot Publications.
+  \texttt{dossier\_case\_marking.md}
 \item
-  Zam Ngaih Cing. 2017. \emph{A Descriptive Grammar of Tedim Chin}. PhD
-  dissertation, North-Eastern Hill University, Shillong.
+  \texttt{review\_notes\_case\_marking.md}
+\item
+  \texttt{examples\_case\_marking\_normalization.tsv}
+\item
+  \texttt{docs/grammar/GRAMMAR\_SOURCE\_INVENTORY.md}
+\item
+  \texttt{docs/grammar/morphemes/02-case-markers.md}
+\item
+  \texttt{docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md}
+\item
+  \texttt{docs/grammar/reports/03-noun-04-relators.md}
+\item
+  \texttt{docs/grammar/reports/03-noun-05-postpositions.md}
+\item
+  \texttt{docs/grammar/reports/03-noun-06-np-structure.md}
+\item
+  \texttt{docs/grammar/reports/04-np-07-possession.md}
+\item
+  \texttt{docs/grammar/reports/05-verb-12-transitivity.md}
+\item
+  \texttt{output/grammar/case\_marking\_report.md}
 \end{itemize}
+
+The normalized NP structure / possession, noun domain, relators /
+postpositions, and transitivity sections already carry fuller discussion
+of possessor structure, spatial relators, and clause-level valency. The
+present section only states the case-like patterns that are now safe to
+print, marks where those other sections begin to take over, and keeps
+the unresolved edges explicit.
+
+\subsubsection{Overview of case-like
+marking}\label{overview-of-case-like-marking}
+
+The current evidence supports a modest but coherent picture of
+postnominal case-like marking in Tedim. The clearest publication-facing
+claims concern locative or goal-like \tdim{-ah} and clause-level
+agentive or ergative \tdim{-in}. The same packet also supports more
+cautious discussion of source marking with \tdim{-pan} and
+\tdim{-panin}, plus accompaniment or material-extension uses of
+\tdim{-tawh}, but those markers remain more boundary-heavy because they
+overlap with relator nouns, postpositions, or broader semantic
+extension.
+
+The safest current prose therefore treats case marking as an NP-final
+domain rather than as a fully settled paradigm of discrete suffixes.
+Plain noun-plus-case rows such as \tdim{khua-ah} and clause-level agent
+rows such as \tdim{Kain in} are secure enough to print. Relator-hosted
+forms such as \tdim{lakpan} and \tdim{David khuapi sungah} are also
+real, but they should not be collapsed into a bare suffix inventory.
+Apostrophe-marked possession can host the same NP-final marking, yet the
+apostrophe itself remains a boundary issue rather than a settled
+genitive case marker in this section.
+
+The Gospel search was productive enough to keep the section from
+becoming OT-only. The current manually reviewed supplement adds usable
+Gospel support for \tdim{Herod in}, \tdim{keima inn-ah},
+\tdim{David khuapi sungah}, and \tdim{lakpan}. The possessive-boundary
+example remains OT-led, because no equally compact Gospel row was as
+clean under the current control standard.
+
+\subsubsection{Current case-marking
+inventory}\label{current-case-marking-inventory}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Marker or pattern
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rough function
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Example context
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Current print status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Main boundary issue
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\tdim{-ah} & locative or goal-like NP-final marking & \tdim{khua-ah},
+\tdim{inn-ah} & print-ready & must stay distinct from deferred
+tone-sensitive \tdim{-a} and from relator-hosted spatial phrases \\
+\tdim{-in} & clause-level ergative or agentive marking & \tdim{Kain in},
+\tdim{Herod in} & print-ready & raw \tdim{-in} extraction overgenerates
+forms such as \tdim{ciangin} \\
+possessor phrase plus \tdim{-ah} & possessed NP closed by case-like
+marking & \tdim{na pa' inn-ah} & print-usable with caveat & does not
+settle the apostrophe or genitive analysis \\
+\tdim{-pan} & source marking, often on a relator host & \tdim{lakpan} &
+print-usable with caveat & current clean evidence is relator-hosted
+rather than a broad bare-suffix paradigm \\
+\tdim{-panin} & source or departure marking & \tdim{inn panin} &
+print-usable with caveat & internal structure remains under review \\
+\tdim{-tawh} & accompaniment, with material or instrumental extension &
+\tdim{kei tawh}, \tdim{leivui tawh} & print-usable with caveat &
+accompaniment should not be flattened together with material-extension
+use \\
+relator noun plus case & spatial relational phrase closed by case-like
+marking & \tdim{David khuapi sungah}, \tdim{tungah}, \tdim{kiangah} &
+print-usable with caveat & belongs jointly with the relators /
+postpositions section rather than a suffix-only list \\
+\end{longtable}
+}
+
+\subsubsection{Locative and goal marking with
+-ah}\label{locative-and-goal-marking-with--ah}
+
+The clearest present claim is that \tdim{-ah} is a locative or goal-like
+case marker at the right edge of the noun phrase. The primary
+candidate-backed control is plain noun-plus-locative \tdim{khua-ah},
+while the new source-balance supplement adds a compact Gospel goal-like
+example with \tdim{keima inn-ah}. This is enough to describe \tdim{-ah}
+as marking location and destination-like relations without forcing a
+sharper split among locative, allative, and general oblique labels than
+the current packet can support.
+
+The section also keeps one important negative control explicit. The
+current evidence does \textbf{not} justify collapsing deferred \tdim{-a}
+material into \tdim{-ah}. The source inventory and case dossier both
+keep tone-sensitive or otherwise ambiguous \tdim{-a} questions
+unresolved, so the publication-facing description remains narrower than
+a full locative or allative chapter.
+
+\begin{exe}
+\ex \label{ex:case-ah-khua}
+\gll \tdimword{khùa-àh} \\
+     town-\textsc{loc} \\
+\glt 'in the town' (Genesis 11:28)
+\end{exe}
+
+\begin{exe}
+\ex \label{ex:case-ah-inn}
+\gll \tdimword{kèima} \tdimword{ínn-àh} \\
+     \textsc{1sg}.self house-\textsc{loc} \\
+\glt 'into my house' (Matthew 8:8)
+\end{exe}
+
+These two rows together support the safest present wording.
+\tdim{khua-ah} keeps the simple noun-plus-case pattern visible, while
+\tdim{keima inn-ah} shows that the same marker naturally appears in a
+Gospel clause with motion toward a location. That is enough for cautious
+publication prose, but not yet enough to decide whether every \tdim{-ah}
+token should be described as specifically locative, allative, or more
+generally oblique.
+
+\subsubsection{Agentive, ergative, or instrumental marking with
+-in}\label{agentive-ergative-or-instrumental-marking-with--in}
+
+The present packet supports an agentive or ergative analysis of
+\tdim{-in} more clearly than it supports any broader instrumental
+analysis. Genesis 4:3 remains the primary candidate-backed anchor
+because \tdim{Kain in} is the cleanest controlled row. The new
+supplement adds Matthew 2:4 \tdim{Herod in} as a manually reviewed
+Gospel support example, which helps show that the pattern is not
+confined to one OT narrative window.
+
+At the same time, this section does not claim a complete ergative
+system. It also does not promote a general instrumental \tdim{-in}
+category. The most important control here is still the homograph
+problem: raw searches for \tdim{-in} overgenerate forms such as
+\tdim{ciangin}, so only checked clause-level noun phrase rows are
+promoted into the grammar prose.
+
+\begin{exe}
+\ex \label{ex:case-in-kain}
+\gll \tdimword{Kain} \tdimword{ìn} \\
+     \textsc{kain} \textsc{erg} \\
+\glt 'Cain as transitive subject' (Genesis 4:3)
+\end{exe}
+
+\begin{exe}
+\ex \label{ex:case-in-herod}
+\gll \tdimword{Herod} \tdimword{ìn} \\
+     \textsc{herod} \textsc{erg} \\
+\glt 'Herod as transitive subject' (Matthew 2:4)
+\end{exe}
+
+These examples are intentionally compact. They are not meant to reopen
+the full alignment chapter. They only show that a noun phrase can bear
+checked \tdim{-in} marking in a clause with a transitive predicate, and
+that this is stronger evidence than any uncontrolled \tdim{-in} string
+would be.
+
+\subsubsection{Other controlled oblique
+markers}\label{other-controlled-oblique-markers}
+
+The packet still retains a small set of other controlled case-like
+markers, but they are best treated more cautiously than \tdim{-ah} and
+\tdim{-in}. Source marking with \tdim{-pan} and \tdim{-panin} is real
+enough to describe, especially in rows such as \tdim{lakpan} and
+\tdim{inn panin}, yet the cleanest \tdim{-pan} example is relator-hosted
+and the internal structure of \tdim{-panin} remains under review.
+Likewise, \tdim{-tawh} remains part of the packet because
+\tdim{kei tawh} is a clean accompaniment row and \tdim{leivui tawh}
+shows a material or instrument-like extension, but that semantic split
+needs to stay explicit.
+
+This means the section can already mention \tdim{-pan}, \tdim{-panin},
+and \tdim{-tawh} in the current inventory, but it should not yet present
+them as a fully normalized oblique subsystem. For the present pass, they
+remain controlled supporting material rather than the center of the
+case-marking chapter.
+
+\subsubsection{Genitive / possessive
+boundary}\label{genitive-possessive-boundary}
+
+The clearest way to discuss genitive or possessive boundary material at
+present is to show that an already possessed noun phrase can host
+case-like marking at its right edge. Genesis 24:23 gives the compact row
+\tdim{na pa' inn-ah}, which is already reused in the normalized NP
+structure / possession section. Here it serves a narrower purpose: it
+shows that case-like marking closes the larger noun phrase rather than
+attaching only to a simple underived noun stem.
+
+\begin{exe}
+\ex \label{ex:case-poss-na-pa-inn}
+\gll \tdimword{nà} \tdimword{pa'} \tdimword{ínn-àh} \\
+     \textsc{2sg} male.\textsc{poss} house-\textsc{loc} \\
+\glt 'in thy father's house' (Genesis 24:23)
+\end{exe}
+
+This is enough to justify a boundary note, but not enough to settle the
+apostrophe analysis. The present section therefore does not settle
+whether the apostrophe material should be treated as a genitive suffix,
+a possessive linker, or an orthographic boundary convention. It only
+records that possessed noun phrases can participate in the same
+case-closing pattern that appears elsewhere in the nominal domain. The
+fuller discussion of possessive structure remains with the normalized NP
+structure / possession section.
+
+\subsubsection{Case marking and
+relators/postpositions}\label{case-marking-and-relatorspostpositions}
+
+The boundary with relators and postpositions is now one of the main
+editorial points of the section. Forms such as \tdim{sungah},
+\tdim{tungah}, \tdim{kiangah}, and \tdim{lakpan} are not noise, but
+neither are they simple proof that Tedim can be described by a
+suffix-only case list. The relational host matters: \tdim{sung},
+\tdim{tung}, \tdim{kiang}, and \tdim{lak} contribute spatial content
+before locative or source marking is added.
+
+\begin{exe}
+\ex \label{ex:case-relator-david-khuapi-sungah}
+\gll \tdimword{David} \tdimword{khùa-pì} \tdimword{sùng-àh} \\
+     \textsc{david} village-big inside-\textsc{loc} \\
+\glt 'in the city of David' (Luke 2:11)
+\end{exe}
+
+\begin{exe}
+\ex \label{ex:case-relator-lakpan}
+\gll \tdimword{lak-pàn} \\
+     midst-\textsc{abl} \\
+\glt 'from among' (Matthew 5:19)
+\end{exe}
+
+These rows belong here because they are case-like and NP-final. They
+also belong with the relators / postpositions section because the
+relational noun is part of the grammar, not just a carrier for a suffix.
+That is why forms such as \tdim{tungah} or \tdim{lakpan} should not be
+collapsed into case marking without candidate control. The best current
+solution is to let the two sections meet at the boundary rather than
+pretending the boundary does not exist.
+
+\subsubsection{Case marking and argument
+structure}\label{case-marking-and-argument-structure}
+
+The normalized case section can now say one modest thing about argument
+structure: checked \tdim{-in} rows such as \tdim{Kain in} and
+\tdim{Herod in} show case-marked noun phrases functioning as
+clause-level agents, while locative or goal-like rows such as
+\tdim{inn-ah} show noun phrases entering the clause as spatial arguments
+or adjuncts. That is enough to connect the nominal domain to clause
+structure without reopening the full alignment or valency chapter.
+
+The present section therefore cross-references the transitivity packet
+rather than replacing it. The transitivity section remains the place for
+fuller discussion of argument frames, lexical valency, and broader
+alignment questions. Case marking only contributes the controlled
+NP-final marking side of that picture here.
+
+\subsubsection{Deferred and boundary
+material}\label{deferred-and-boundary-material-2}
+
+Several important topics remain explicitly deferred.
+
+\begin{itemize}
+\tightlist
+\item
+  A full case paradigm is still deferred; the present evidence is not
+  yet enough for a full case paradigm.
+\item
+  The ergative versus instrumental distinction for \tdim{-in} is not
+  settled here.
+\item
+  The finer split among locative, dative, allative, and general oblique
+  functions is still under review.
+\item
+  Tone-sensitive \tdim{-a} material remains blocked rather than being
+  collapsed into \tdim{-ah}.
+\item
+  Apostrophe or genitive analysis remains unresolved and stays shared
+  with the NP structure / possession section.
+\item
+  Possessive noun phrase overlap remains explicit, especially where
+  possessed NPs then take \tdim{-ah}.
+\item
+  Relator-noun and postposition structure remains shared with the
+  relators / postpositions section.
+\item
+  Full alignment and argument-structure claims remain shared with the
+  transitivity section.
+\item
+  \tdim{-panin} remains a controlled source-marking row without a fully
+  settled internal analysis.
+\item
+  \tdim{-tawh} remains split between accompaniment and material or
+  instrumental extension.
+\item
+  Analyzer-noisy or raw report-only marker rows are not promoted into
+  publication prose.
+\item
+  Raw generated-report counts and broad analyzer output are not treated
+  as grammar facts in this section.
+\end{itemize}
+
+\subsubsection{Summary}\label{summary-2}
+
+The case-marking section can now support a fuller publication-facing
+description than the earlier narrow packet allowed. Current evidence
+safely supports clause-level \tdim{-in}, locative or goal-like
+\tdim{-ah}, a boundary note on possessed noun phrases such as
+\tdim{na pa' inn-ah}, and a controlled interface with relator-hosted
+forms such as \tdim{David khuapi sungah} and \tdim{lakpan}. Source
+marking with \tdim{-pan} and \tdim{-panin}, along with \tdim{-tawh},
+remains usable but secondary and caveated. The result is a real grammar
+section with explicit limits, not a claim that the full Tedim case
+system has already been finished
+\citep{henderson1965, zamngaihcing2017}.
 
 \subsection{Relators / postpositions}\label{relators-postpositions}
 
@@ -1688,7 +1786,7 @@ relator-hosted \tdim{pan}, \tdim{panin}, and \tdim{tawh} should not be
 flattened into a broad inventory of suffix-like strings.
 
 \subsubsection{Deferred and boundary
-material}\label{deferred-and-boundary-material-2}
+material}\label{deferred-and-boundary-material-3}
 
 Several items stay outside the first grammar slice as core claims.
 
@@ -2102,7 +2200,7 @@ currently controlled boundary row is still \tdim{mi khat}, and no
 cleaner Gospel \tdim{khat} boundary example was strong enough to replace
 it in this pilot.
 
-\subsubsection{Summary}\label{summary-2}
+\subsubsection{Summary}\label{summary-3}
 
 The normalized numerals section now supports a genuine
 publication-facing description. Tedim has a decimal numeral system with
@@ -2376,7 +2474,7 @@ or noun-plus-quantity combinations in at least some checked rows, but
 the present packet does not yet settle a full NP-ordering typology.
 
 \subsubsection{Deferred and boundary
-material}\label{deferred-and-boundary-material-3}
+material}\label{deferred-and-boundary-material-4}
 
 Several quantifier-looking domains still need to stay visibly
 non-normalized.
@@ -2432,7 +2530,7 @@ replacement for the classic \tdim{mi khat} boundary row, and Gospel
 \tdim{peuhpeuh} material remained too free-choice or discourse-heavy to
 promote as settled core quantifier evidence.
 
-\subsubsection{Summary}\label{summary-3}
+\subsubsection{Summary}\label{summary-4}
 
 The quantifiers section now reads as a real publication-facing grammar
 section rather than a narrow packet note. \tdim{Khempeuh} remains the
@@ -3670,7 +3768,7 @@ controls in this first slice:
 These forms remain deferred or not print-ready in this slice. They
 should not be promoted without cleaner analyzer-backed corpus rows.
 
-\subsubsection{Editorial summary}\label{editorial-summary-3}
+\subsubsection{Editorial summary}\label{editorial-summary-2}
 
 This slice safely supports seven modest claims: \tdim{-khia} is usable
 as outward evidence, anchored by \tdim{pokhia}; \tdim{-khiat} is usable
@@ -4332,7 +4430,7 @@ real NPI contexts such as Genesis 22:12
 can safely quote. What should stay out of the main prose is any claim
 based on raw counts alone.
 
-\subsubsection{Summary}\label{summary-4}
+\subsubsection{Summary}\label{summary-5}
 
 The current evidence is strong enough for a stable negation chapter, but
 only if it keeps the system narrow and honest. \tdim{Lo} is the safest
@@ -4495,7 +4593,7 @@ Existing generated reports mention \tdim{maw}, \tdim{ham}, and
 not part of the core \tdim{hiam} evidence printed here, and this section
 does not yet build a comparison-particle analysis.
 
-\subsubsection{Editorial summary}\label{editorial-summary-4}
+\subsubsection{Editorial summary}\label{editorial-summary-3}
 
 This slice can now safely support four modest claims. First, \tdim{hiam}
 is the candidate-backed question marker in the current print packet,
@@ -4684,7 +4782,7 @@ These rows keep report-visible material in view, but they are not
 print-ready as jussive, perfective, or completive evidence. Broad TAM
 remains deferred.
 
-\subsubsection{Editorial summary}\label{editorial-summary-5}
+\subsubsection{Editorial summary}\label{editorial-summary-4}
 
 This slice safely supports five modest claims: \tdim{ahi hi} is usable
 as copula-plus-declarative evidence with caveat; \tdim{thusim lo hi} is
@@ -4898,7 +4996,7 @@ Several limits remain important at this stage:
 Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin
 language work likewise remain deferred.
 
-\subsubsection{Editorial summary}\label{editorial-summary-6}
+\subsubsection{Editorial summary}\label{editorial-summary-5}
 
 This slice now safely supports four modest claims: \tdim{le} is the
 current NP conjunction anchor, anchored by \tdim{vantung le leitung};

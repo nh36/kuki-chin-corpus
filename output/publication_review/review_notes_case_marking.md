@@ -1,37 +1,39 @@
----
-title: "Review Notes: Tedim Case-Marking Print Slice"
----
+# Case marking review notes
+
+Current packet surfaces:
+
+- `candidates_case_marking.tsv`
+- `dossier_case_marking.md`
+- `grammar_case_marking_print_slice.md`
+- `review_notes_case_marking.md`
+- `examples_case_marking_normalization.tsv`
 
 # What works
 
-The revised slice now reads more like a draft chapter than like an internal dashboard. The grammar prose is anchored to the main descriptive literature, the examples are presented in a stable Pandoc-friendly format, and the dictionary entries are now closer to reader-facing print copy. The section on `-tawh` is materially better because it no longer treats Genesis 2:7 and Genesis 2:21 as if they were ordinary accompaniment examples; it now distinguishes accompaniment from material or instrument-like extension.
+- The section is now a normalized publication-facing case marking section rather than a narrow retrofit packet.
+- The grammar prose can now safely discuss clause-level `-in`, locative or goal-like `-ah`, source-marking `-pan` and `-panin` with caveats, and the retained `-tawh` accompaniment versus material-extension split.
+- The section now has a compact case-marking inventory, multiple formal examples, and explicit boundary subsections for possession, relators / postpositions, and argument structure.
+- Apostrophe-marked possession is now handled in the right way: `na pa' inn-ah` is printable as a boundary example without pretending that the apostrophe analysis is already settled.
 
-The ergative section is also stronger than before. A candidate-backed example from Genesis 4:3 now allows the chapter and dictionary slice to print `-in` as a real grammatical entry rather than leaving it entirely abstract. This is the right kind of intervention for the slice: small, explicit, and editorially controlled rather than algorithmically overconfident.
+# Gospel search and source balance
 
-The packet is also now aligned with the candidate-first protocol. It has `candidates_case_marking.tsv`, `dossier_case_marking.md`, an extractor route in `scripts/publication_review/extract_candidates.py`, and LF-stable reproducible candidate output. That means the print slices can now be reviewed against an explicit evidence layer rather than against ad hoc manual selection alone.
+- The current pass found usable Gospel evidence for `Herod in` (Matthew 2:4), `keima inn-ah` (Matthew 8:8), `David khuapi sungah` (Luke 2:11), and `lakpan` (Matthew 5:19).
+- The core candidate-backed anchors `Kain in` and `khua-ah` remain OT-led, and that is acceptable because they are still the cleanest primary controls.
+- No equally compact Gospel row was promoted for the possessive-boundary example, so the genitive or possessive boundary subsection remains OT-led through `na pa' inn-ah`.
 
-# What does not yet work
+# What still needs caution
 
-The packet is now reproducible, but it should still remain conservative. Homographic `-in` rows such as `ciangin` remain a live ambiguity risk, `-a` still cannot be cleanly separated from `-ah` and other functional material, and `-panin` still needs a structural caveat even where it is accepted as source-marking evidence.
+- The section still depends on candidate evidence and explicit caveats rather than on report-level counts.
+- It does not yet justify a full case paradigm.
+- Raw `-in` harvesting remains unsafe because of homographs such as `ciangin`.
+- Tone-sensitive `-a` remains deferred and should not be collapsed into `-ah`.
+- `-panin` remains source-marking evidence with unresolved internal structure.
+- `-tawh` still needs to stay split between accompaniment and material or instrumental extension.
+- Relator-hosted forms such as `tungah`, `sungah`, `kiangah`, and `lakpan` must stay boundary-controlled rather than being flattened into a suffix-only inventory.
+- Full apostrophe or genitive analysis, broader possessive NP structure, and broader argument-structure claims remain outside this section.
 
-The source discussion around relator nouns also still needs discipline. `lakpan` is best treated as source marking on a relator noun, not as a bare suffix example, and source-vs-relator-noun boundaries remain part of the packet rather than a separable afterthought. Likewise, `-tawh` still needs to stay split between accompaniment and material/instrumental extension.
+# Current maturity and next use
 
-Analyzer export caveats also remain visible. Some locative and relator rows surface with tags such as `pos_span=FUNC` even where the editorial grammar still treats the base as nominal or relational. Those labels are useful as export metadata, but they are not decisive enough to replace the packet's grammatical analysis.
-
-The citation-key problem is now resolved: the grammar slice cites only keys that exist in `literature/bibliography.bib`. Henderson, Zam Ngaih Cing, Otsuka, and the Sukte grammar now all resolve under Pandoc without ad hoc review-draft keys.
-
-# Bibliography correction note
-
-The uploaded source PDFs were checked directly and the Tedim bibliography entries were corrected against those files. This includes the Otsuka causative, applicative, Burmese loanwords, and voice papers, the Otsuka-Kurabe directional-affixes handout, and the Zam Ngaih Cing thesis metadata used by the case-marking slice.
-
-Two uncertainties remain explicit in the bibliography. The exact venue and year of the Otsuka-Kurabe directional-affixes handout still need independent confirmation beyond the uploaded PDF, so the entry is kept conservative. The Zam thesis is cited here as 2017 following Otsuka’s own reference lists, while the local split PDF filenames still contain 2018.
-
-# Recommended next editorial task
-
-The immediate case-marking alignment pass is now complete. The remaining questions are still real, but they are controlled design decisions rather than blockers: how narrowly the packet should continue to gate `-in`, whether `-panin` should remain a cautious source-marking entry, how strongly the final chapter should foreground relator nouns, and how much weight to give analyzer POS/export labels when they look flatter than the editorial analysis.
-
-At the current slice maturity level, case marking is ready for human review. Any later clarifications should continue to be routed through `candidates_case_marking.tsv` and `dossier_case_marking.md` rather than by reopening the packet with new examples.
-
-# Decision for next slice
-
-This case-marking slice is now good enough to serve as the model for the next print-facing grammar and dictionary slice. The next project task should therefore be choosing the next existing publication-review slice or grammar-report topic to retrofit, not continuing to polish case marking. The main remaining editorial question is how fully relator nouns should be integrated into the printed chapter structure, but that question is now clear enough to carry forward as a controlled design decision rather than a blocker.
+- Case marking is now the fifth normalized coverage section after numerals, quantifiers, NP structure / possession, and noun domain.
+- The assembled grammar review preview PDF has been rebuilt with the expanded case marking section.
+- The section is ready for review-preview use as a publication-facing grammar section, but it does not claim that the Tedim grammar as a whole is finished.

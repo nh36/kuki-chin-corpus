@@ -542,112 +542,149 @@ The noun domain can now support a fuller publication-facing section than the ear
 
 ### Scope
 
-This review slice presents a short draft chapter on nominal case marking and closely related postpositional constructions in Tedim Chin. It is intended as an editorial model for later sections of the grammar, not as a full treatment of nominal morphology. The discussion concentrates on ergative `-in`, locative `-ah`, ablative and source forms `-pan` and `-panin`, and comitative `-tawh`. A final section notes the role of relator nouns, since the clearest spatial examples regularly involve stems such as `lak`, `sung`, `kiang`, and `laizang`.
+This is now a normalized publication-facing case marking section, following the coverage-normalization standard defined in `coverage_normalization_audit.md` and piloted in the numerals, quantifiers, NP structure / possession, and noun domain sections. It remains controlled by candidate evidence and explicit caveats rather than by raw generated-report counts or broad analyzer output [@henderson1965; @zamngaihcing2017].
 
-The present print-facing examples are controlled by `candidates_case_marking.tsv` and interpreted in `dossier_case_marking.md`. This keeps the slice narrow: the packet now prints candidate-backed anchors and explicit caveats rather than broadening into a new full chapter or a broad automatic case-marker survey.
+The current section depends on:
 
-### Case marking in outline
+- `coverage_normalization_audit.md`
+- `candidates_case_marking.tsv`
+- `dossier_case_marking.md`
+- `review_notes_case_marking.md`
+- `examples_case_marking_normalization.tsv`
+- `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md`
+- `docs/grammar/morphemes/02-case-markers.md`
+- `docs/grammar/lit-reviews/03-noun-05-postpositions-lit.md`
+- `docs/grammar/reports/03-noun-04-relators.md`
+- `docs/grammar/reports/03-noun-05-postpositions.md`
+- `docs/grammar/reports/03-noun-06-np-structure.md`
+- `docs/grammar/reports/04-np-07-possession.md`
+- `docs/grammar/reports/05-verb-12-transitivity.md`
+- `output/grammar/case_marking_report.md`
 
-Earlier descriptions agree that Tedim marks nominal relations after the noun phrase, but they differ in how they analyze those forms. Henderson describes them structurally as phrase-final or post-nominal particles rather than as a semantic case system [@henderson1965, 59; @henderson1965, 104]. Zam Ngaih Cing, by contrast, offers a seven-case analysis with explicit ergative, locative, ablative, and comitative categories [@zamngaihcing2017, sec. 3.3.3.3]. Comparative Sukte evidence points in the same direction for several core markers, even though Singh labels the cognate `-in` as nominative rather than ergative [@sukte_grammar, sec. 4.5.1].
+The normalized NP structure / possession, noun domain, relators / postpositions, and transitivity sections already carry fuller discussion of possessor structure, spatial relators, and clause-level valency. The present section only states the case-like patterns that are now safe to print, marks where those other sections begin to take over, and keeps the unresolved edges explicit.
 
-For a printed grammar, the most useful generalization is therefore twofold. First, the language is well described by a case-marking analysis in the modern sense. Second, the most natural corpus examples often combine case markers with relational nominal stems, so a final chapter should not force an artificial boundary between “case suffixes” and “spatial nouns”.
+### Overview of case-like marking
 
-### Ergative `-in`
+The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest publication-facing claims concern locative or goal-like `-ah` and clause-level agentive or ergative `-in`. The same packet also supports more cautious discussion of source marking with `-pan` and `-panin`, plus accompaniment or material-extension uses of `-tawh`, but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
 
-The ergative marker `-in` marks the transitive subject in Tedim Chin [@zamngaihcing2017, sec. 3.3.3.3.1]. Henderson does not use the label *ergative*, but her treatment of phrase-final nominal particles is compatible with the later analysis [@henderson1965, 59]. Otsuka likewise assumes ergative `-in` in discussing causers in causative constructions [@otsuka_causative]. Comparative Sukte retains a cognate `-in` marker, though Singh describes it as nominative [@sukte_grammar, sec. 4.5.1].
+The safest current prose therefore treats case marking as an NP-final domain rather than as a fully settled paradigm of discrete suffixes. Plain noun-plus-case rows such as `khua-ah` and clause-level agent rows such as `Kain in` are secure enough to print. Relator-hosted forms such as `lakpan` and `David khuapi sungah` are also real, but they should not be collapsed into a bare suffix inventory. Apostrophe-marked possession can host the same NP-final marking, yet the apostrophe itself remains a boundary issue rather than a settled genitive case marker in this section.
 
-In this slice, Genesis 4:3 remains the accepted print anchor because `candidates_case_marking.tsv` and `dossier_case_marking.md` both treat `Kain in` as the cleanest candidate-backed ergative window. Raw `-in` extraction is unsafe: rows such as `ciangin` are conjunctional or other non-case material, so they must not be promoted as ergative case examples.
+The Gospel search was productive enough to keep the section from becoming OT-only. The current manually reviewed supplement adds usable Gospel support for `Herod in`, `keima inn-ah`, `David khuapi sungah`, and `lakpan`. The possessive-boundary example remains OT-led, because no equally compact Gospel row was as clean under the current control standard.
 
-(@ex:erg-in) Genesis 4:3
-a. Tedim: Tua hun sungin Kain in lei pana piang gah piakna Topa' tungah paipih a,
-b. Segmentation: Kain in
-c. Gloss: Cain ERG
-d. Translation: ‘And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.’
+### Current case-marking inventory
 
-This example is sufficient for a draft chapter because it shows the essential pattern without relying on doubtful segmentation. The agent phrase `Kain in` is simple, animate, and immediately followed by a clearly transitive predicate. At the same time, the section remains cautious: one accepted candidate-backed example is enough to print the analysis, but additional `-in` rows should still be filtered against ambiguity controls such as `ciangin` before they are treated as nominal case evidence.
+| Marker or pattern | Rough function | Example context | Current print status | Main boundary issue |
+| --- | --- | --- | --- | --- |
+| `-ah` | locative or goal-like NP-final marking | `khua-ah`, `inn-ah` | print-ready | must stay distinct from deferred tone-sensitive `-a` and from relator-hosted spatial phrases |
+| `-in` | clause-level ergative or agentive marking | `Kain in`, `Herod in` | print-ready | raw `-in` extraction overgenerates forms such as `ciangin` |
+| possessor phrase plus `-ah` | possessed NP closed by case-like marking | `na pa' inn-ah` | print-usable with caveat | does not settle the apostrophe or genitive analysis |
+| `-pan` | source marking, often on a relator host | `lakpan` | print-usable with caveat | current clean evidence is relator-hosted rather than a broad bare-suffix paradigm |
+| `-panin` | source or departure marking | `inn panin` | print-usable with caveat | internal structure remains under review |
+| `-tawh` | accompaniment, with material or instrumental extension | `kei tawh`, `leivui tawh` | print-usable with caveat | accompaniment should not be flattened together with material-extension use |
+| relator noun plus case | spatial relational phrase closed by case-like marking | `David khuapi sungah`, `tungah`, `kiangah` | print-usable with caveat | belongs jointly with the relators / postpositions section rather than a suffix-only list |
 
-### Locative `-ah`
+### Locative and goal marking with -ah
 
-The locative `-ah` marks location [@zamngaihcing2017, sec. 3.3.3.3.3]. Henderson already treats `-ah` as a locative post-nominal particle and discusses its phonological behavior in locative nominal figures [@henderson1965, 54-56]. The current candidate layer, however, distinguishes plain noun-plus-locative evidence such as `khua-ah` from relator-noun-plus-case constructions such as `laizangah`, `vantungah`, `kiangah`, `sungah`, and `tungah`. The printed description should therefore be slightly richer than a simple gloss “at/in”, while still keeping those two subtypes distinct.
+The clearest present claim is that `-ah` is a locative or goal-like case marker at the right edge of the noun phrase. The primary candidate-backed control is plain noun-plus-locative `khua-ah`, while the new source-balance supplement adds a compact Gospel goal-like example with `keima inn-ah`. This is enough to describe `-ah` as marking location and destination-like relations without forcing a sharper split among locative, allative, and general oblique labels than the current packet can support.
 
-(@ex:loc-ah) Genesis 1:6
-a. Tedim: Pasian in, “Tuite' laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.
-b. Segmentation: lai-zang-ah
-c. Gloss: middle-side-LOC
-d. Translation: ‘And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.’
+The section also keeps one important negative control explicit. The current evidence does **not** justify collapsing deferred `-a` material into `-ah`. The source inventory and case dossier both keep tone-sensitive or otherwise ambiguous `-a` questions unresolved, so the publication-facing description remains narrower than a full locative or allative chapter.
 
-(@ex:loc-ah-2) Genesis 1:15
-a. Tedim: leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi.
-b. Segmentation: vantung-ah
-c. Gloss: heaven-LOC
-d. Translation: ‘and let them be for lights in the firmament of the heaven to give light upon the earth’
+(@ex:case-ah-khua) Genesis 11:28
+a. Tedim: khua-ah
+b. Segmentation: khua | -ah
+c. Gloss: town | LOC
+d. Translation: in the town
 
-The first example shows especially clearly that `-ah` often completes a larger relational expression rather than attaching only to a simple lexical noun. The noun `laizang` contributes the spatial geometry ‘middle, interior region’, and `-ah` marks that whole phrase as locative. The second printed example is still best treated in the same relator-noun-plus-case domain, even if `vantung` looks less obviously relational than `laizang`. The plain noun-plus-locative control in the candidate layer is `khua-ah`, not one of these relator rows.
+(@ex:case-ah-inn) Matthew 8:8
+a. Tedim: keima inn-ah
+b. Segmentation: keima | inn | -ah
+c. Gloss: 1SG.self | house | LOC
+d. Translation: into my house
 
-The analyzer export also needs to be read cautiously here. Some locative and relator rows surface with `pos_span=FUNC`, even though the grammar still treats the base as nominal or relational. That export label is useful metadata, but it is not decisive enough to collapse noun-like and relator-like rows into a single undifferentiated suffix list.
+These two rows together support the safest present wording. `khua-ah` keeps the simple noun-plus-case pattern visible, while `keima inn-ah` shows that the same marker naturally appears in a Gospel clause with motion toward a location. That is enough for cautious publication prose, but not yet enough to decide whether every `-ah` token should be described as specifically locative, allative, or more generally oblique.
 
-### Directional/allative `-a`
+### Agentive, ergative, or instrumental marking with -in
 
-Directional or allative `-a` remains deferred in the current packet. The candidate layer keeps `-a` separate from `-ah`, and the dossier is explicit that the present export does not yet distinguish directional `-a` cleanly from pronominal or other functional `a` tokens. For that reason, the current slice does **not** collapse `-a` into `-ah`, and it does not yet print a dedicated `-a` example.
+The present packet supports an agentive or ergative analysis of `-in` more clearly than it supports any broader instrumental analysis. Genesis 4:3 remains the primary candidate-backed anchor because `Kain in` is the cleanest controlled row. The new supplement adds Matthew 2:4 `Herod in` as a manually reviewed Gospel support example, which helps show that the pattern is not confined to one OT narrative window.
 
-### Source marking: `-pan` and `-panin`
+At the same time, this section does not claim a complete ergative system. It also does not promote a general instrumental `-in` category. The most important control here is still the homograph problem: raw searches for `-in` overgenerate forms such as `ciangin`, so only checked clause-level noun phrase rows are promoted into the grammar prose.
 
-Zam Ngaih Cing describes `-pan` as the ablative marker indicating source or point of departure [@zamngaihcing2017, sec. 3.3.3.3.5]. Comparative Sukte has a cognate `-pan`, which strengthens the historical plausibility of the analysis [@sukte_grammar]. Henderson does not present an ablative category in the modern sense, but the source-marking behavior is nevertheless compatible with her structural account of post-nominal particles [@henderson1965, 104].
+(@ex:case-in-kain) Genesis 4:3
+a. Tedim: Kain in
+b. Segmentation: Kain | in
+c. Gloss: Cain | ERG
+d. Translation: Cain as transitive subject
 
-(@ex:pan) Matthew 5:19
-a. Tedim: Tua ahih manin hih thukhamte lakpan a neupente khat bek nangawn zuikha loin, midangte in zong a zuih loh nadingin a gen mite pen vantung ki-ukna sungah mi neupen hi ding uh hi.
-b. Segmentation: lak-pan
-c. Gloss: midst-ABL
-d. Translation: ‘Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven.’
+(@ex:case-in-herod) Matthew 2:4
+a. Tedim: Herod in
+b. Segmentation: Herod | in
+c. Gloss: Herod | ERG
+d. Translation: Herod as transitive subject
 
-This example is worth keeping because it shows a natural source construction built on a relator noun. The source relation is real, but it is not expressed through a bare noun alone: `lak` ‘among, in the midst of’ combines with `-pan` to yield a source phrase meaning ‘from among’. The current candidate layer therefore treats `lakpan` as source marking on a relator noun, not merely as a bare suffix example.
+These examples are intentionally compact. They are not meant to reopen the full alignment chapter. They only show that a noun phrase can bear checked `-in` marking in a clause with a transitive predicate, and that this is stronger evidence than any uncontrolled `-in` string would be.
 
-The related form `-panin` is common in the corpus and clearly belongs to the same source-marking domain, especially after relator nouns and other spatial expressions. What remains uncertain is not its source meaning, but its exact structural status in every occurrence. Some examples look like straightforward source phrases, while others behave more like extended or tightly fused source-marking expressions.
+### Other controlled oblique markers
 
-(@ex:panin) Genesis 12:1
-a. Tedim: Topa in Abram kiangah, “Na gam, na beh, le na pa' inn panin nang kong lah ding gamah pai in.”
-b. Segmentation: inn panin
-c. Gloss: house from
-d. Translation: ‘Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house.’
+The packet still retains a small set of other controlled case-like markers, but they are best treated more cautiously than `-ah` and `-in`. Source marking with `-pan` and `-panin` is real enough to describe, especially in rows such as `lakpan` and `inn panin`, yet the cleanest `-pan` example is relator-hosted and the internal structure of `-panin` remains under review. Likewise, `-tawh` remains part of the packet because `kei tawh` is a clean accompaniment row and `leivui tawh` shows a material or instrument-like extension, but that semantic split needs to stay explicit.
 
-For that reason, a printed grammar can already gloss `-panin` as a source form related to `-pan`, but should avoid a stronger compositional claim until the full range of corpus contexts has been reviewed more closely. The analyzer segmentation `pan-in` is useful evidence for the packet, but it is not by itself a final structural analysis.
+This means the section can already mention `-pan`, `-panin`, and `-tawh` in the current inventory, but it should not yet present them as a fully normalized oblique subsystem. For the present pass, they remain controlled supporting material rather than the center of the case-marking chapter.
 
-### Comitative `-tawh`
+### Genitive / possessive boundary
 
-The comitative `-tawh` is described in the literature as the marker of accompaniment [@zamngaihcing2017, sec. 3.3.3.3.6]. Henderson also lists `tawh` among the post-nominal particles [@henderson1965, 104]. In the biblical corpus, however, the most accessible examples are semantically broader than simple human accompaniment. A printed chapter should therefore distinguish the core comitative use from its material and instrumental extensions rather than treating all examples as equivalent.[^tawh-extension]
+The clearest way to discuss genitive or possessive boundary material at present is to show that an already possessed noun phrase can host case-like marking at its right edge. Genesis 24:23 gives the compact row `na pa' inn-ah`, which is already reused in the normalized NP structure / possession section. Here it serves a narrower purpose: it shows that case-like marking closes the larger noun phrase rather than attaching only to a simple underived noun stem.
 
-(@ex:tawh-accompaniment) Genesis 14:24
-a. Tedim: Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi.
-b. Segmentation: kei tawh
-c. Gloss: 1SG COM
-d. Translation: ‘save only that which the young men have eaten, and the portion of the men which went with me’
+(@ex:case-poss-na-pa-inn) Genesis 24:23
+a. Tedim: na pa' inn-ah
+b. Segmentation: na | pa' | inn | -ah
+c. Gloss: 2SG.POSS | father | house | LOC
+d. Translation: in thy father's house
 
-(@ex:tawh-extension) Genesis 2:7
-a. Tedim: Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu sang suk hi.
-b. Segmentation: leivui tawh
-c. Gloss: dust COM
-d. Translation: ‘And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.’
+This is enough to justify a boundary note, but not enough to settle the apostrophe analysis. The present section therefore does not settle whether the apostrophe material should be treated as a genitive suffix, a possessive linker, or an orthographic boundary convention. It only records that possessed noun phrases can participate in the same case-closing pattern that appears elsewhere in the nominal domain. The fuller discussion of possessive structure remains with the normalized NP structure / possession section.
 
-Genesis 14:24 illustrates the core accompaniment use well enough for print: `kei tawh` marks the men as companions who went with Abram. Genesis 2:7, by contrast, shows a broader use in which `-tawh` marks material or means. That wider range should remain explicit in the grammar and stay split in the same way it is split in the candidate layer. The comitative meaning remains central, but the marker extends into associated material and instrument-like readings in ways that the English gloss *with* only partly captures.
+### Case marking and relators/postpositions
 
-### Relator nouns
+The boundary with relators and postpositions is now one of the main editorial points of the section. Forms such as `sungah`, `tungah`, `kiangah`, and `lakpan` are not noise, but neither are they simple proof that Tedim can be described by a suffix-only case list. The relational host matters: `sung`, `tung`, `kiang`, and `lak` contribute spatial content before locative or source marking is added.
 
-The locative and source examples already show that Tedim spatial grammar is not exhausted by a list of case markers. Relator nouns such as `lak`, `sung`, `kiang`, `tung`, `laizang`, and `vantung` regularly host locative and ablative marking, and they do so at very high frequency in the candidate-backed packet. Henderson’s structural treatment makes room for this by analyzing many such forms in terms of nominal figures rather than sharply separated case suffixes [@henderson1965, 59]. Zam Ngaih Cing’s case system, meanwhile, makes the semantic contribution of the markers clearer [@zamngaihcing2017, sec. 3.3.3.3].
+(@ex:case-relator-david-khuapi-sungah) Luke 2:11
+a. Tedim: David khuapi sungah
+b. Segmentation: David | khuapi | sung | -ah
+c. Gloss: David | city | inside | LOC
+d. Translation: in the city of David
 
-For a final chapter, the best solution will probably be to treat the system in two layers: first the case markers themselves, then the class of relational nouns that commonly host them. The present review slice stops short of a full relator-noun section, but it already makes clear that the two layers belong in the same part of the grammar and should not be flattened into a bare suffix list.
+(@ex:case-relator-lakpan) Matthew 5:19
+a. Tedim: lakpan
+b. Segmentation: lak | -pan
+c. Gloss: among | ABL
+d. Translation: from among
 
-### Editorial summary
+These rows belong here because they are case-like and NP-final. They also belong with the relators / postpositions section because the relational noun is part of the grammar, not just a carrier for a suffix. That is why forms such as `tungah` or `lakpan` should not be collapsed into case marking without candidate control. The best current solution is to let the two sections meet at the boundary rather than pretending the boundary does not exist.
 
-This slice now supports a modest but genuine draft chapter. Ergative `-in` can be described with a manually confirmed biblical example; `-ah` and `-pan` are already straightforward to illustrate; `-panin` can be described conservatively as a related source form; and `-tawh` can be presented with one clear accompaniment example plus one extension example. The remaining work is not to broaden the chapter, but to decide how fully the final grammar should integrate relator nouns into the same printed discussion.
+### Case marking and argument structure
 
-### References
+The normalized case section can now say one modest thing about argument structure: checked `-in` rows such as `Kain in` and `Herod in` show case-marked noun phrases functioning as clause-level agents, while locative or goal-like rows such as `inn-ah` show noun phrases entering the clause as spatial arguments or adjuncts. That is enough to connect the nominal domain to clause structure without reopening the full alignment or valency chapter.
 
-- Henderson, Eugénie J. A. 1965. *Tiddim Chin: A Descriptive Analysis of Two Texts*. London: Oxford University Press.
-- Otsuka, Kosei. 2009. “Causative and benefactive suffix -sàk in Tiddim Chin.” *思言: 東京外国語大学記述言語学論集* 5: 3-24.
-- Singh, L. S. 2018. *A Descriptive Grammar of Sukte (Salhte)*. Imphal: Grassroot Publications.
-- Zam Ngaih Cing. 2017. *A Descriptive Grammar of Tedim Chin*. PhD dissertation, North-Eastern Hill University, Shillong.
+The present section therefore cross-references the transitivity packet rather than replacing it. The transitivity section remains the place for fuller discussion of argument frames, lexical valency, and broader alignment questions. Case marking only contributes the controlled NP-final marking side of that picture here.
 
-[^tawh-extension]: The currently available biblical examples for `-tawh` are semantically good enough for review, but they do not all illustrate the most prototypical accompaniment reading. That is why the present slice pairs one accompaniment example with one extension example rather than treating Genesis 2:7 or Genesis 2:21 as if they were ordinary companion phrases.
+### Deferred and boundary material
+
+Several important topics remain explicitly deferred.
+
+- A full case paradigm is still deferred; the present evidence is not yet enough for a full case paradigm.
+- The ergative versus instrumental distinction for `-in` is not settled here.
+- The finer split among locative, dative, allative, and general oblique functions is still under review.
+- Tone-sensitive `-a` material remains blocked rather than being collapsed into `-ah`.
+- Apostrophe or genitive analysis remains unresolved and stays shared with the NP structure / possession section.
+- Possessive noun phrase overlap remains explicit, especially where possessed NPs then take `-ah`.
+- Relator-noun and postposition structure remains shared with the relators / postpositions section.
+- Full alignment and argument-structure claims remain shared with the transitivity section.
+- `-panin` remains a controlled source-marking row without a fully settled internal analysis.
+- `-tawh` remains split between accompaniment and material or instrumental extension.
+- Analyzer-noisy or raw report-only marker rows are not promoted into publication prose.
+- Raw generated-report counts and broad analyzer output are not treated as grammar facts in this section.
+
+### Summary
+
+The case-marking section can now support a fuller publication-facing description than the earlier narrow packet allowed. Current evidence safely supports clause-level `-in`, locative or goal-like `-ah`, a boundary note on possessed noun phrases such as `na pa' inn-ah`, and a controlled interface with relator-hosted forms such as `David khuapi sungah` and `lakpan`. Source marking with `-pan` and `-panin`, along with `-tawh`, remains usable but secondary and caveated. The result is a real grammar section with explicit limits, not a claim that the full Tedim case system has already been finished [@henderson1965; @zamngaihcing2017].
 
 ## Relators / postpositions
 
