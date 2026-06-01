@@ -4,47 +4,43 @@ title: "Review Notes: Tedim Numerals Print Slice"
 
 # What works
 
-The numerals packet is now aligned at the current candidate-first maturity level. It has `candidates_numerals.tsv`, a curated extractor route in `scripts/publication_review/extract_candidates.py`, `dossier_numerals.md`, `grammar_numerals_print_slice.md`, `dictionary_numerals_print_slice.md`, and tests covering the main distinctions. The grammar and dictionary slices are controlled by `candidates_numerals.tsv` and `dossier_numerals.md`, not by raw generated-report counts and not by broad string searches over every numeral-looking form.
+The numerals packet is no longer only a first narrow slice. It now has `candidates_numerals.tsv`, `dossier_numerals.md`, `grammar_numerals_print_slice.md`, `dictionary_numerals_print_slice.md`, `review_notes_numerals.md`, the coverage target in `coverage_normalization_audit.md`, and the checked source-balance supplement `examples_numerals_normalization.tsv`. The grammar section is still controlled by candidate evidence and explicit caveats, not by raw generated-report counts and not by broad string searches over every numeral-looking form.
 
-The core analysis is now synchronized in the right way. Basic noun-plus-numeral counting examples are represented by `kum nih` and `ni sagih`. Compound-ten `sawmkua` is represented and also controls `kua = nine` in numeral context. Ordinal `nihna` is represented, while `masa` remains deferred. Occurrence-counting `sawmvei` is represented as the export-backed fused form rather than being silently replaced by report wording `vei sawm`. The Genesis 5:27 large-number row `kum zakua le kum sawmguk le kua` is usable with explicit analyzer caveats. `Kua` ambiguity is controlled by the fact that `Hihte kua ahi hiam?` / Genesis 48:8 remains blocked as numeral evidence. `Mi khat` is kept on the numeral/indefinite boundary, and distributive `sagih sagih` remains deferred because the current analyzer export does not support the repeated span.
+The normalized section now has the expected publication-facing components: a base numeral inventory table, a fuller overview of the decimal system, multiple formal examples, explicit source-balance improvement through Gospel examples, a classifier-like subsection that stays cautious, and a short descriptive summary rather than a packet-status ending.
 
-# What does not yet work
+The core analysis remains synchronized in the right way. `kum nih` and `ni sagih` remain useful Old Testament counted-noun anchors. `ni li` (John 11:39) and `kum sawm le nih` (Matthew 9:20) now supply clean Gospel evidence for the normalized section. `sawmkua` remains the main compound-ten control and the strongest numeral-side control for `kua = nine`. `nihna` remains the safe ordinal anchor. `sawmvei` remains the export-backed fused form rather than report paraphrase `vei sawm`. The Genesis 5:27 large-number row `kum zakua le kum sawmguk le kua` remains usable with explicit analyzer caveats. `mi khat` remains on the numeral/indefinite boundary, and distributive `sagih sagih` remains deferred because the current analyzer export does not support the repeated span.
 
-The packet is intentionally narrow and does not yet describe the full numeral system. It does not yet include a full cardinal paradigm, it does not build a full ordinal paradigm, and `masa` remains deferred rather than promoted as a print anchor for `first`.
+# What still needs caution
 
-The packet also does not yet solve classifier or counting systems beyond `sawmvei`. Distributive reduplication remains not print-ready. `Khat` still overlaps with indefinite or quantifier work, and `kua` still requires constructional control because it can also mean `who`. Generated-report raw frequency tables remain outside the candidate layer and should not be allowed back into the print packet.
+The normalized section is fuller, but it is not a finished numeral chapter. It still does not build a full classifier system, it does not normalize every larger-number pattern, and it does not turn raw report metadata into publication prose. `Pa`, `nu`, `zat`, and `tei` remain promising classifier-like background material rather than fully normalized subsection anchors.
 
-# Analyzer/export caveats
+The large-number and occurrence-counting rows still need their earlier export caveats. `Sawmkua` has clear segmentation and gloss, but the lemma/POS export is flattened. `Nihna` still has `pos_span = N`. `Sawmvei` remains the export-backed fused form, so generated-report wording `vei sawm` should not be substituted silently. In Genesis 5:27, the final `kua` is still glossed as `who` in the export even though the wider construction is clearly numeral.
 
-The main analyzer/export caveats are now explicit and manageable. `Sawmkua` has good segmentation and gloss, but the lemma/POS export is flattened (`kum | sawm`, `N | N`). `Nihna` has `pos_span = N`, which should be treated as a label caveat rather than as a rejection of the ordinal analysis. `Sawmvei` is the export-backed fused form, so generated-report `vei sawm` should not be substituted silently. In Genesis 5:27, the final `kua` is glossed as `who` in the export even though the constructional reading is numeral `nine`. In Genesis 7:2, the current export preserves only one `sagih` token, so `sagih sagih` remains deferred.
+`Masa` remains visible but not promoted. Gospel material such as Matthew 10:2 confirms that `masa` is real background evidence for 'first', but the normalized section still keeps `nihna` as the controlled ordinal anchor and treats `masa` as deferred or needing separate confirmation before it becomes a printed ordinal anchor.
 
-These caveats are not reasons to reopen the packet. They are reasons to keep the candidate, dossier, grammar, and dictionary layers aligned and to preserve explicit editorial notes where the export remains flatter than the constructional analysis.
+# Gospel search and source balance
 
-# Print-slice cautions
+The numerals pilot followed the example-selection policy in `coverage_normalization_audit.md`: first criterion example quality, second criterion source balance. The normalization search checked `data/verses_aligned.tsv` and `bibles/extracted/ctd/ctd-x-bible.txt` directly and recorded the promoted rows in `examples_numerals_normalization.tsv`.
 
-The following claims are safe at the current slice maturity level:
+The search succeeded in finding two good Gospel examples worth promoting:
 
-- noun-plus-numeral counting examples with `kum nih` and `ni sagih`;
-- compound-ten `sawmkua`;
-- ordinal `nihna`;
-- occurrence-counting `sawmvei` with caveat;
-- large-number phrase evidence with caveat;
-- `kua` as numeral only in constructionally numeral contexts;
-- `mi khat` only as boundary evidence.
+- John 11:39 `ni li` for a clean noun-plus-numeral counting phrase;
+- Matthew 9:20 `kum sawm le nih` for a counted-noun expression with a compound numeral.
 
-The following should stay out of print for now:
+The search did **not** produce a Gospel ordinal row clean enough to replace the current `nihna` anchor, and it did not produce a cleaner Gospel `khat` boundary row than Genesis 32:24 `mi khat`. Matthew 10:2 `a masa-in` remains useful background evidence only, not a new promoted ordinal anchor.
 
-- raw frequency counts from generated reports;
-- a full numeral paradigm;
-- `masa` as a promoted ordinal entry;
-- `sagih sagih` as accepted distributive reduplication;
-- a full classifier system;
-- treating every raw `kua` as numeral `nine`;
-- treating `mi khat` as an uncomplicated bare `one` example;
-- quantifier prose imported into numerals.
+# Boundaries and blocked material
 
-# Recommended next editorial task
+The packet still needs the same high-value controls as before.
 
-With these review notes added, the numerals packet is now ready for human review at the current slice maturity level. Any later numerals changes should come from a specific reviewer-identified defect, not from another open-ended polishing pass.
+- Genesis 48:8 `Hihte kua ahi hiam?` remains the blocked `kua = who` false friend and must stay outside numerals.
+- `Mi khat` remains numeral/indefinite boundary evidence rather than an uncomplicated bare `one` example.
+- `Sagih sagih` remains deferred and not print-ready.
+- Raw generated-report counts remain outside the publication-facing grammar section.
+- Quantifier prose is still outside the numerals packet even where `khat` overlaps with later quantifier work.
 
-The next substantive repository task after this commit should therefore be a deliberately chosen next narrow retrofit target from the remaining inventory rather than more numerals polishing. Likely next deferred candidates include quantifiers, coordinators, and sentence-final particles. Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin languages should remain deferred.
+# Current maturity and next use
+
+Numerals is now the first coverage-normalization pilot rather than only a first current-slice packet. It is ready for human review at that higher maturity level: the section is fuller, source-balanced where the checked material allows it, and explicit about what remains caveated or deferred.
+
+Any later numerals changes should still be specific and controlled. The next plausible numerals work would be a later classifier or ordinal expansion only if new checked evidence supports it. Quantifiers, coordinators, sentence-final particles, broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin languages should still remain outside this numerals pilot.

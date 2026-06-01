@@ -1417,114 +1417,166 @@ broadening into a new case-marking chapter.
 
 \subsubsection{Scope}\label{scope-3}
 
-This is a short print-facing draft section on numerals in Tedim Chin,
-controlled by \texttt{candidates\_numerals.tsv} and
-\texttt{dossier\_numerals.md}. It covers only a small candidate-backed
-set: basic cardinal counting phrases, compound tens, one ordinal form,
-one occurrence-counting or multiplicative form, one large-number phrase
-with caveats, and explicit ambiguity controls for \tdim{kua} and
-\tdim{khat}.
+This is now a normalized publication-facing numerals section, not just
+the first narrow slice. It is controlled by
+\texttt{candidates\_numerals.tsv} and \texttt{dossier\_numerals.md}, and
+it is additionally checked against \texttt{review\_notes\_numerals.md},
+\texttt{coverage\_normalization\_audit.md}, and
+\texttt{examples\_numerals\_normalization.tsv}.
 
-It does not yet attempt a full numeral paradigm, a full classifier
-system, a full account of distributive reduplication, quantifiers, or
-generated-report frequency tables. Dictionary and review-note slices
-have not yet begun.
+The section still keeps candidate discipline. Printed claims and formal
+examples come from candidate evidence in
+\texttt{candidates\_numerals.tsv} or from newly checked normalization
+examples in \texttt{examples\_numerals\_normalization.tsv}, not from raw
+generated-report counts and not from broad string searches over every
+numeral-looking form. The separate dictionary print slice still exists,
+but this section now aims to read like a real grammar section rather
+than a packet-status note.
 
-\subsubsection{Numerals in outline}\label{numerals-in-outline}
+\subsubsection{Overview of the numeral
+system}\label{overview-of-the-numeral-system}
 
-The current candidate-backed packet supports a narrow generalization.
-Simple cardinals can follow a counted noun in examples such as
-\tdim{kum nih} and \tdim{ni sagih}. Compound tens are represented by
-\tdim{sawmkua}, ordinal formation is represented by \tdim{nihna},
-occurrence-counting is represented by \tdim{sawmvei}, and large biblical
-number expressions are visible but need caveats. Across the packet,
-\tdim{kua} and \tdim{khat} require constructional controls rather than
-raw-string treatment.
+The current evidence supports a cautious but fuller overview of the
+Tedim numeral system. Tedim is described in the literature as a decimal
+system, with \tdim{sawm} as the ten base and \tdim{za} as the next
+larger base above the first two-digit range
+\citep{zamngaihcing2017, henderson1965}. The Bible-backed review packet
+confirms that basic cardinals, compound tens, larger-number expressions,
+\tdim{-na} ordinals, and at least one occurrence-counting expression are
+all securely part of the current publication-facing section.
 
-\subsubsection{Basic cardinal counting
-phrases}\label{basic-cardinal-counting-phrases}
+This normalized section therefore includes:
 
-The cleanest basic counting phrases in the current packet are Genesis
-11:10 and Genesis 7:10.
+\begin{itemize}
+\tightlist
+\item
+  decimal structure and the most useful cardinal bases;
+\item
+  basic cardinal numerals and noun-plus-numeral counting phrases;
+\item
+  compound tens and one Gospel teen expression;
+\item
+  hundreds, thousands, and larger units only where the evidence is safe;
+\item
+  ordinals with \tdim{-na}, anchored by \tdim{nihna};
+\item
+  counting expressions and classifier-like material, but only
+  cautiously;
+\item
+  occurrence-counting \tdim{sawmvei};
+\item
+  explicit ambiguity controls for \tdim{kua} and \tdim{khat};
+\item
+  distributive reduplication only as deferred material.
+\end{itemize}
 
-\begin{exe}
-\ex \label{ex:num-kum-nih}
-\gll \tdimword{kúm} \tdimword{nìh} \\
-     year two \\
-\glt 'two years'
-\end{exe}
+What it does \textbf{not} do is claim that the whole numeral chapter is
+finished. It does not promote raw generated-report counts as grammar
+facts, it does not normalize a full classifier system from thin
+evidence, and it does not import quantifier prose or dubious analyzer
+output without candidate control.
 
-\begin{exe}
-\ex \label{ex:num-ni-sagih}
-\gll \tdimword{nì} \tdimword{sagih} \\
-     day seven \\
-\glt 'seven days'
-\end{exe}
+\subsubsection{Cardinal numerals}\label{cardinal-numerals}
 
-These are clean post-nominal counting phrases. The printed claim should
-stay modest: they show candidate-backed noun-plus-numeral counting, not
-a full word-order typology for every numeral construction in the
-language.
+The table below gives the core numeral inventory needed for the present
+section. It is publication-facing orientation rather than a raw
+frequency table: the point is to show the basic system, while the formal
+examples below remain restricted to candidate-controlled or newly
+checked normalization rows.
 
-\subsubsection{Compound tens}\label{compound-tens}
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Form
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Current status in this section
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & \tdim{khat} & basic numeral; keep numeral/indefinite overlap
+explicit \\
+2 & \tdim{nih} & clean basic cardinal \\
+3 & \tdim{thum} & basic cardinal recognized in the report/literature
+layer \\
+4 & \tdim{li} & basic cardinal recognized in the report/literature
+layer \\
+5 & \tdim{nga} & basic cardinal recognized in the report/literature
+layer \\
+6 & \tdim{guk} & basic cardinal recognized in the report/literature
+layer \\
+7 & \tdim{sagih} & clean basic cardinal in current examples \\
+8 & \tdim{giat} & basic cardinal recognized in the report/literature
+layer \\
+9 & \tdim{kua} & numeral \tdim{nine} only in constructionally numeral
+contexts \\
+10 & \tdim{sawm} & ten base \\
+100 & \tdim{za} & hundred base \\
+1,000 & \tdim{sing} & thousand base; not fully normalized in this
+pass \\
+10,000 & \tdim{tul} & larger unit recognized in the report/literature
+layer; not fully normalized in this pass \\
+\end{longtable}
+}
 
-Genesis 5:9 gives the clearest current compound-ten example:
+The table does not by itself authorize every form for immediate
+print-heavy exposition. It gives the normalized section a visible
+inventory, while the examples below keep the actual printed claims small
+and checked.
+
+\subsubsection{Decimal composition}\label{decimal-composition}
+
+The safest current descriptive claim is that Tedim builds higher
+numerals through decimal composition, but the publication-facing section
+should phrase that conservatively. The report and literature support a
+decimal structure \citep{zamngaihcing2017, henderson1965}, while the
+current packet gives two especially useful checked examples: one Old
+Testament compound-ten anchor and one Gospel counted-noun expression
+with a compound numeral.
+
+Genesis 5:9 remains the best controlled compound-ten anchor:
 
 \begin{exe}
 \ex \label{ex:num-sawmkua}
 \gll \tdimword{kúm} \tdimword{sàwm-kua} \\
      year ten-nine \\
-\glt 'ninety years'
+\glt 'ninety years' (Genesis 5:9)
 \end{exe}
 
-\tdim{Sawmkua} matters for two reasons. First, it shows a compound-ten
-structure. Second, it is the strongest current numeral-side control for
-\tdim{kua = nine}. The dossier also keeps one analyzer/export caveat
-visible: the segmentation and gloss support the compound reading, but
-the lemma and POS layer is flattened (\tdim{kum | sawm}, \tdim{N | N}).
-That caveat should stay in the prose rather than being silently
-normalized away.
-
-\subsubsection{Ordinals}\label{ordinals}
-
-Genesis 7:11 supplies the current ordinal anchor:
+Matthew 9:20 gives a good Gospel counted-noun expression with a compound
+numeral:
 
 \begin{exe}
-\ex \label{ex:num-nihna}
-\gll \tdimword{nìh-ná} \\
-     two-\textsc{nmlz} \\
-\glt 'second'
+\ex \label{ex:num-kum-sawm-le-nih}
+\gll \tdimword{kúm} \tdimword{sàwm} \tdimword{lè} \tdimword{nìh} \\
+     year ten and two \\
+\glt 'twelve years' (Matthew 9:20)
 \end{exe}
 
-\tdim{Nihna} is the current candidate-backed ordinal example. The
-generated report mentions \tdim{masa} `first', but \tdim{masa} is not
-promoted in this slice, and this section does not attempt a full ordinal
-paradigm. The dossier also records that \tdim{pos\_span = N} in the
-export; that is a label caveat, not a reason to reject the ordinal
-analysis.
+These two rows are enough to support a modest decimal-composition claim.
+\tdim{Sawmkua} shows a clean compound-ten pattern and keeps numeral-side
+\tdim{kua = nine} visible in a securely numeral context.
+\tdim{Kum sawm le nih} shows that a counted noun can also host a larger
+compound numeral in Gospel material, which helps the section avoid
+becoming a grammar of Genesis.
 
-\subsubsection{Occurrence counting / multiplicative
-form}\label{occurrence-counting-multiplicative-form}
+The section should still stop short of a full typology of every higher
+numeral pattern. The report mentions wider two-digit and larger-number
+combinations, but the present normalized section only promotes the best
+checked examples.
 
-Genesis 31:7 keeps one compact occurrence-counting form in view:
-
-\begin{exe}
-\ex \label{ex:num-sawmvei}
-\gll \tdimword{sàwm-véi} \\
-     ten-times \\
-\glt 'ten times'
-\end{exe}
-
-The generated report paraphrases this as \tdim{vei sawm}, but the
-candidate layer uses export-backed \tdim{sawmvei}, and that fused form
-should control the present slice. This row is enough to keep
-occurrence-counting visible, but it is not enough to build a full
-classifier system.
-
-\subsubsection{Large-number phrase}\label{large-number-phrase}
-
-Genesis 5:27 gives one usable large-number phrase, but only with
-explicit caveats:
+Hundreds, thousands, and larger-number expressions are real parts of the
+system, but they need more caution than the simple and compound-ten
+rows. The current large-number anchor remains useful because it shows
+real biblical number style, not because every detail of the analyzer
+export is already polished:
 
 \begin{exe}
 \ex \label{ex:num-large}
@@ -1533,23 +1585,196 @@ explicit caveats:
 \glt 'nine hundred sixty and nine years' (Genesis 5:27)
 \end{exe}
 
-This construction is numeral, not interrogative. The dossier is
-nevertheless explicit about the export caveats: the analyzer compresses
-\tdim{za-kua}, and the final \tdim{kua} is glossed as \tdim{who} in the
-candidate TSV even though the constructional context is numeral. The
-print gloss therefore keeps \tdim{nine} reader-facing while marking the
-export gloss in the example line. This makes the row usable with caveat,
-but not a fully polished anchor for a larger large-number section.
+This is still a print-usable-with-caveat example. The wider construction
+is clearly numeral, but the export compresses \tdim{za-kua}, and the
+final \tdim{kua} is glossed as \tdim{who} in the current export layer.
+The normalized section therefore keeps the row with its analyzer caveat
+visible instead of pretending that the export is already perfect.
 
-\subsubsection{\texorpdfstring{\tdim{Kua}
-ambiguity}{ ambiguity}}\label{ambiguity}
+\subsubsection{Ordinals}\label{ordinals}
 
-\tdim{Kua} needs an explicit control note in the printed grammar. In
-constructionally numeral contexts such as \tdim{sawmkua} and the Genesis
-5:27 large-number phrase, \tdim{kua} is numeral \tdim{nine}. In
-interrogative clauses, however, \tdim{kua} is also \tdim{who}.
+The safest current ordinal claim is that Tedim has \tdim{-na} ordinal
+formation, with \tdim{nihna} as the best controlled anchor. This is
+consistent with the report and literature \citep{zamngaihcing2017}.
 
-The blocked control in the numerals packet is Genesis 48:8:
+\begin{exe}
+\ex \label{ex:num-nihna}
+\gll \tdimword{nìh-ná} \\
+     two-\textsc{nmlz} \\
+\glt 'second' (Genesis 7:11)
+\end{exe}
+
+\tdim{Nihna} is the current print-ready ordinal row. The dossier already
+notes that \tdim{pos\_span = N} in the export; that is a label caveat,
+not a reason to reject the ordinal analysis.
+
+\tdim{Masa} remains visible but deferred. Gospel material such as
+Matthew 10:2 confirms that \tdim{masa} is a live background form for
+`first', but the present section does not yet promote it as the
+normalized ordinal anchor because the current candidate-controlled
+packet is still built around \tdim{nihna}, not around a full ordinal
+paradigm or a full contrast between \tdim{masa} and \tdim{khatna}-type
+forms.
+
+\subsubsection{Counting phrases and word
+order}\label{counting-phrases-and-word-order}
+
+The clearest current word-order claim is still modest: noun-plus-numeral
+patterns are securely attested. The normalized section now keeps both
+Old Testament and Gospel evidence visible for that pattern.
+
+\begin{exe}
+\ex \label{ex:num-kum-nih}
+\gll \tdimword{kúm} \tdimword{nìh} \\
+     year two \\
+\glt 'two years' (Genesis 11:10)
+\end{exe}
+
+\begin{exe}
+\ex \label{ex:num-ni-sagih}
+\gll \tdimword{nì} \tdimword{sagih} \\
+     day seven \\
+\glt 'seven days' (Genesis 7:10)
+\end{exe}
+
+\begin{exe}
+\ex \label{ex:num-ni-li}
+\gll \tdimword{nì} \tdimword{li} \\
+     day four \\
+\glt 'four days' (John 11:39)
+\end{exe}
+
+These are clean counted-noun examples, and they justify a real
+publication-facing statement that noun-plus-numeral order is well
+supported. The normalized section should still avoid overclaiming a
+complete typology of numeral placement. The broader report layer
+contains more patterns, and the literature discusses wider numeral
+syntax, but the checked publication-facing section should stop at what
+the current examples support directly.
+
+The Gospel search for this pilot found good counted-noun examples such
+as \tdim{ni li} and \tdim{kum sawm le nih}. That is enough to improve
+source balance. It does \textbf{not} mean that every numeral
+construction in the section now has an equally good Gospel counterpart.
+
+\subsubsection{Classifier-like and counting
+expressions}\label{classifier-like-and-counting-expressions}
+
+The report and literature mention classifier-like material and counting
+expressions, but the current normalized section should stay selective.
+Only the rows that are candidate-controlled or newly checked for this
+pilot should be promoted.
+
+The safest current occurrence-counting row is still \tdim{sawmvei}:
+
+\begin{exe}
+\ex \label{ex:num-sawmvei}
+\gll \tdimword{sàwm-véi} \\
+     ten-times \\
+\glt 'ten times' (Genesis 31:7)
+\end{exe}
+
+The generated report paraphrases this as \tdim{vei sawm}, but the
+current analyzer export preserves the fused form \tdim{sawmvei}. That
+export-backed \tdim{sawmvei} form means the fused form should control
+the present slice.
+
+\tdim{Mi khat} remains valuable boundary evidence:
+
+\begin{exe}
+\ex \label{ex:num-mi-khat}
+\gll \tdimword{mì} \tdimword{khàt} \\
+     person one \\
+\glt 'a man' / 'one person' (Genesis 32:24)
+\end{exe}
+
+This is why the section discusses \tdim{mi khat} here but does not treat
+it as an uncomplicated bare numeral \tdim{one} example. It should not be
+treated as an uncomplicated bare numeral \tdim{one} example. It sits
+exactly on the numeral/indefinite boundary.
+
+The classifier-like material can therefore be summarized cautiously:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Expression or form
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Current treatment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Reason
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\tdim{mi khat} & print-usable with caveat & numeral/indefinite boundary,
+not a simple classifier row \\
+\tdim{sawmvei} & print-usable with caveat & clear occurrence-counting
+expression \\
+\tdim{pa}, \tdim{nu}, \tdim{zat}, \tdim{tei} & deferred & promising
+report/literature material, but not normalized in this pass \\
+\end{longtable}
+}
+
+This means the section can talk about classifier-like and counting
+expressions without pretending that the full classifier system has
+already been normalized. It also means the section does not start a
+quantifiers retrofit here.
+
+\subsubsection{Distributive numerals}\label{distributive-numerals}
+
+Distributive numerals remain deferred in this pilot. The previous
+generated-report claim for distributive \tdim{sagih sagih} is not
+print-ready because the current analyzer/candidate layer still does not
+support the repeated span in the key Genesis 7:2 row. The generated
+report is useful background orientation, but it should not outrun the
+current checked evidence.
+
+This is exactly the kind of place where normalization must stay
+disciplined. The normalized section can say that distributive
+reduplication is a promising area in the report and literature, but it
+should still defer \tdim{sagih sagih} until the analyzer-backed evidence
+is clean enough to promote.
+
+\subsubsection{Ambiguity controls}\label{ambiguity-controls}
+
+Two ambiguity controls remain central to the section:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Form
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Numeral-side use
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Competing use
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Current print policy
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\tdim{kua} & \tdim{sawmkua}; Genesis 5:27 large-number phrase &
+interrogative \tdim{who} & print only in constructionally numeral
+contexts \\
+\tdim{khat} & basic cardinal `one' & indefinite-like readings such as
+\tdim{mi khat} & keep explicit boundary notes; do not overgeneralize
+article-like use \\
+\end{longtable}
+}
+
+The blocked \tdim{kua} control remains Genesis 48:8:
 
 \begin{quote}
 Hihte kua ahi hiam?
@@ -1559,49 +1784,30 @@ That row belongs to the interrogatives packet, not to numerals. Future
 numerals prose must therefore not use raw \tdim{kua} hits as numeral
 evidence.
 
-\subsubsection{\texorpdfstring{\tdim{Khat} and the numeral/indefinite
-boundary}{ and the numeral/indefinite boundary}}\label{and-the-numeralindefinite-boundary}
+The \tdim{khat} side of the control is different. \tdim{Khat} is
+unquestionably part of the numeral inventory, but not every \tdim{khat}
+example is equally good as a bare numeral illustration. The best
+currently controlled boundary row is still \tdim{mi khat}, and no
+cleaner Gospel \tdim{khat} boundary example was strong enough to replace
+it in this pilot.
 
-Genesis 32:24 gives a useful but boundary-marked example:
+\subsubsection{Summary}\label{summary}
 
-\begin{exe}
-\ex \label{ex:num-mi-khat}
-\gll \tdimword{mì} \tdimword{khàt} \\
-     person one \\
-\glt 'a man' / 'one person'
-\end{exe}
+The normalized numerals section now supports a genuine
+publication-facing description. Tedim has a decimal numeral system with
+basic cardinals, compound tens, larger bases such as \tdim{za},
+\tdim{sing}, and \tdim{tul}, \tdim{-na} ordinals, noun-plus-numeral
+counting phrases, and at least one compact occurrence-counting
+expression. The section now includes multiple formal examples, a visible
+inventory table, and both Old Testament and Gospel evidence where the
+checked material allows it.
 
-\tdim{Mi khat} is analyzer-backed and worth keeping visible, but its
-English context ``a man'' shows why it should not be treated as an
-uncomplicated bare numeral \tdim{one} example. The packet therefore
-keeps it as numeral/indefinite boundary evidence and does not start a
-quantifiers retrofit here.
-
-\subsubsection{Distributive reduplication
-deferred}\label{distributive-reduplication-deferred}
-
-The generated report claims distributive \tdim{sagih sagih} for `by
-sevens', but the candidate layer keeps that material deferred. In the
-current analyzer export window, Genesis 7:2 preserves only a single
-\tdim{sagih} token. Distributive reduplication therefore remains not
-print-ready in this slice, and \tdim{sagih sagih} should not be printed
-as though it were already analyzer-backed.
-
-\subsubsection{Editorial summary}\label{editorial-summary-3}
-
-This slice now safely supports six modest claims: noun-plus-numeral
-counting examples are printable; compound-ten \tdim{sawmkua} is
-candidate-backed; ordinal \tdim{nihna} is candidate-backed;
-occurrence-counting \tdim{sawmvei} remains visible with a fused-export
-caveat; one large-number phrase is usable with explicit analyzer
-caveats; and the packet has explicit controls for \tdim{kua} and
-\tdim{khat}.
-
-What remains deferred is equally important: raw frequency counts, full
-numeral paradigms, \tdim{masa}, distributive reduplication, a full
-classifier system, quantifier overlap, and raw \tdim{kua} matching. The
-next step after this grammar slice is the dictionary print slice, while
-review-note work has not yet begun.
+At the same time, the section keeps the important boundaries explicit.
+\tdim{Sawmvei} remains tied to its fused-export caveat; the Genesis 5:27
+large-number phrase remains usable only with analyzer caveats;
+\tdim{mi khat} remains boundary evidence; \tdim{kua} must stay
+constructionally controlled; and distributive \tdim{sagih sagih} remains
+deferred until the repeated span is genuinely analyzer-backed.
 
 \subsection{Quantifiers}\label{quantifiers}
 
@@ -1677,7 +1883,7 @@ noisy opening \tdim{Pawlkhatah} token should not be substituted for the
 clean later \tdim{pawlkhat} control token.
 
 \subsubsection{\texorpdfstring{\tdim{Khat} and the numeral/indefinite
-boundary}{ and the numeral/indefinite boundary}}\label{and-the-numeralindefinite-boundary-1}
+boundary}{ and the numeral/indefinite boundary}}\label{and-the-numeralindefinite-boundary}
 
 Genesis 32:24 provides the current boundary row:
 
@@ -1793,7 +1999,7 @@ universal/distributive, comparative, degree/intensifier, and
 negative-quantifier systems deferred. Coordinators and sentence-final
 particles remain outside scope.
 
-\subsubsection{Editorial summary}\label{editorial-summary-4}
+\subsubsection{Editorial summary}\label{editorial-summary-3}
 
 This slice safely supports six modest claims: \tdim{khempeuh} is the
 current universal anchor; \tdim{pawlkhat} is usable as partitive or
@@ -3031,7 +3237,7 @@ controls in this first slice:
 These forms remain deferred or not print-ready in this slice. They
 should not be promoted without cleaner analyzer-backed corpus rows.
 
-\subsubsection{Editorial summary}\label{editorial-summary-5}
+\subsubsection{Editorial summary}\label{editorial-summary-4}
 
 This slice safely supports seven modest claims: \tdim{-khia} is usable
 as outward evidence, anchored by \tdim{pokhia}; \tdim{-khiat} is usable
@@ -3693,7 +3899,7 @@ real NPI contexts such as Genesis 22:12
 can safely quote. What should stay out of the main prose is any claim
 based on raw counts alone.
 
-\subsubsection{Summary}\label{summary}
+\subsubsection{Summary}\label{summary-1}
 
 The current evidence is strong enough for a stable negation chapter, but
 only if it keeps the system narrow and honest. \tdim{Lo} is the safest
@@ -3856,7 +4062,7 @@ Existing generated reports mention \tdim{maw}, \tdim{ham}, and
 not part of the core \tdim{hiam} evidence printed here, and this section
 does not yet build a comparison-particle analysis.
 
-\subsubsection{Editorial summary}\label{editorial-summary-6}
+\subsubsection{Editorial summary}\label{editorial-summary-5}
 
 This slice can now safely support four modest claims. First, \tdim{hiam}
 is the candidate-backed question marker in the current print packet,
@@ -4045,7 +4251,7 @@ These rows keep report-visible material in view, but they are not
 print-ready as jussive, perfective, or completive evidence. Broad TAM
 remains deferred.
 
-\subsubsection{Editorial summary}\label{editorial-summary-7}
+\subsubsection{Editorial summary}\label{editorial-summary-6}
 
 This slice safely supports five modest claims: \tdim{ahi hi} is usable
 as copula-plus-declarative evidence with caveat; \tdim{thusim lo hi} is
@@ -4259,7 +4465,7 @@ Several limits remain important at this stage:
 Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin
 language work likewise remain deferred.
 
-\subsubsection{Editorial summary}\label{editorial-summary-8}
+\subsubsection{Editorial summary}\label{editorial-summary-7}
 
 This slice now safely supports four modest claims: \tdim{le} is the
 current NP conjunction anchor, anchored by \tdim{vantung le leitung};

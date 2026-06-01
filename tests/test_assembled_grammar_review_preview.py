@@ -168,6 +168,22 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
         "Simple noun stems",
         "Agreement versus possession routing",
         "Causative `-sak`",
+        ):
+        assert required in text
+
+
+def test_assembled_preview_includes_normalized_numerals_section() -> None:
+    text = _text()
+
+    for required in (
+        "normalized publication-facing numerals section",
+        "Overview of the numeral system",
+        "Cardinal numerals",
+        "Decimal composition",
+        "Counting phrases and word order",
+        "Classifier-like and counting expressions",
+        "Distributive numerals",
+        "Ambiguity controls",
     ):
         assert required in text
 
@@ -196,6 +212,9 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "with \\tdim{ciangin} as the clearest current anchor." in lower
     assert "basic np ordering" in lower
     assert "routing contrast, with \\tdim{kanei} as the clearest agreement anchor" in lower
+    assert "cardinal numerals" in lower
+    assert "decimal composition" in lower
+    assert "occurrence-counting" in lower or "occurrence counting" in lower
 
 
 def test_assembled_preview_tex_uses_real_citation_and_gb4e_machinery() -> None:
@@ -269,6 +288,39 @@ def test_assembled_preview_tex_keeps_expected_sources_for_known_examples() -> No
     assert "(Genesis 1:3)" in _tex_example_block("ex:dem-tua-ciangin")
     assert "(Exodus 14:30)" in _tex_example_block("ex:dem-tua-bangin")
     assert "(Genesis 4:5)" in _tex_example_block("ex:neg-lo")
+
+
+def test_assembled_preview_tex_includes_normalized_numerals_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+
+    assert text.count("(@ex:num-") >= 4
+    assert tex.count("\\label{ex:num-") >= 4
+
+    for required in ("khat", "nih", "thum", "li", "nga", "guk", "sagih", "giat", "kua", "sawm", "za", "sing", "tul"):
+        assert required in text.lower()
+        assert required in tex.lower()
+
+    for required in ("Cardinal numerals", "Decimal composition", "ni li", "kum sawm le nih", "sawmvei"):
+        assert required.lower() in pdf.lower()
+
+
+def test_assembled_preview_tex_keeps_numerals_example_sources_after_translation() -> None:
+    assert "(Genesis 11:10)" in _tex_example_block("ex:num-kum-nih")
+    assert "(Genesis 7:10)" in _tex_example_block("ex:num-ni-sagih")
+    assert "(John 11:39)" in _tex_example_block("ex:num-ni-li")
+    assert "(Genesis 5:9)" in _tex_example_block("ex:num-sawmkua")
+    assert "(Matthew 9:20)" in _tex_example_block("ex:num-kum-sawm-le-nih")
+    assert "(Genesis 7:11)" in _tex_example_block("ex:num-nihna")
+    assert "(Genesis 31:7)" in _tex_example_block("ex:num-sawmvei")
+
+
+def test_assembled_preview_numerals_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 11:10)" in tex
+    assert "(John 11:39)" in tex or "(Matthew 9:20)" in tex or "no suitable Gospel example" in _text()
 
 
 def test_assembled_preview_tex_keeps_expected_sources_for_examples_2_11_to_2_14() -> None:
