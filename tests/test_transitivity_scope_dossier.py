@@ -38,7 +38,8 @@ def test_transitivity_scope_dossier_describes_candidate_stage_only() -> None:
     assert "not a dictionary slice" in text
     assert "not a full valency or verb-class chapter" in text
     assert "grammar_transitivity_print_slice.md" in text
-    assert "dictionary and review-note slices do not yet exist for transitivity" in text
+    assert "review_notes_transitivity.md" in text
+    assert "a dictionary slice does not yet exist for transitivity" in text
 
 
 def test_transitivity_scope_dossier_keeps_candidate_groups_and_next_scope_visible() -> None:

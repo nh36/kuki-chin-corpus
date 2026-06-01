@@ -6,11 +6,11 @@ title: "Tedim Transitivity Scoping Dossier"
 
 This is the first candidate/scoping pass for transitivity. It is controlled by `output/publication_review/candidates_transitivity.tsv`.
 
-This dossier is not a grammar print slice, not a dictionary slice, and not a full valency or verb-class chapter. A first narrow grammar print slice now exists at `output/publication_review/grammar_transitivity_print_slice.md`. Dictionary and review-note slices do not yet exist for transitivity.
+This dossier is not a grammar print slice, not a dictionary slice, and not a full valency or verb-class chapter. A first narrow grammar print slice now exists at `output/publication_review/grammar_transitivity_print_slice.md`, and review notes now exist at `output/publication_review/review_notes_transitivity.md`. A dictionary slice does not yet exist for transitivity.
 
 # Architecture control
 
-`output/publication_review/whole_grammar_coverage_checkpoint_after_reduplication.md` recommends transitivity as the next task because phonology/tone remains blocked or theory-heavy while transitivity is report-backed but unpacketized. `output/publication_review/whole_grammar_coverage_audit.md` and `PROGRESS.md` therefore move transitivity from an unlifted gap to a candidate-scoping packet, and the first narrow grammar slice now exists at `output/publication_review/grammar_transitivity_print_slice.md`.
+`output/publication_review/whole_grammar_coverage_checkpoint_after_reduplication.md` recommends transitivity as the next task because phonology/tone remains blocked or theory-heavy while transitivity is report-backed but unpacketized. `output/publication_review/whole_grammar_coverage_audit.md` and `PROGRESS.md` therefore move transitivity from an unlifted gap to a candidate-scoping packet, then to a first narrow grammar slice, and now to review-note maturity at `output/publication_review/review_notes_transitivity.md`.
 
 `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md` and `docs/SKELETON_GRAMMAR.md` both show that transitivity belongs to the verbal architecture and still needs packet-level editorial control. `docs/grammar/grammar_source_map.json` is useful only to confirm that transitivity still lacks a clean dedicated topic layer of its own.
 
@@ -88,4 +88,4 @@ The safest next print-facing sub-scope is a narrow grammar print slice for a cle
 
 That first grammar slice now exists at `output/publication_review/grammar_transitivity_print_slice.md`. It anchors the contrast with `sih` and `suak` on the intransitive side and `hawl`, with secondary support from `en`, on the transitive side, while keeping `mu` / `muh`, `nei` / `neih`, `piangsak`, and case-dominated rows visible only as boundary material.
 
-If more transitivity work is chosen before review notes, the next sub-scope should be `mu` / `muh` as a labile or stem-alternation boundary packet rather than a full valency or verb-class expansion.
+If more transitivity work is chosen after review notes, the next sub-scope should be `mu` / `muh` as a labile or stem-alternation boundary packet rather than a full valency or verb-class expansion.

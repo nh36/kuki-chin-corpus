@@ -62,6 +62,7 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
     "review_notes_np_possession.md",
     "review_notes_noun_domain.md",
     "review_notes_reduplication.md",
+    "review_notes_transitivity.md",
 }
 
 FORBIDDEN_NEW_PACKET_FILES = {
