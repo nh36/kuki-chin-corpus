@@ -388,6 +388,21 @@ def parse_examples(markdown_text: str) -> list[ParsedExample]:
     return examples
 
 
+def infer_example_source_from_bible(example: ParsedExample, bible: dict[str, str]) -> str:
+    tedim_norm = normalize_text_for_matching(example.tedim)
+    if not tedim_norm:
+        return ""
+
+    matches = [
+        verse_id
+        for verse_id, verse_text in bible.items()
+        if tedim_norm in normalize_text_for_matching(verse_text)
+    ]
+    if len(matches) == 1:
+        return format_reference(matches[0])
+    return ""
+
+
 def strip_outer_quotes(text: str) -> str:
     stripped = text.strip()
     paired_quotes = [
@@ -415,6 +430,33 @@ def render_example_source(source: str, bible: dict[str, str]) -> str:
     if verse_id and verse_id in bible:
         return format_reference(verse_id)
     return source
+
+
+def resolve_example_source(example: ParsedExample, bible: dict[str, str]) -> str:
+    if example.source:
+        return render_example_source(example.source, bible)
+    return infer_example_source_from_bible(example, bible)
+
+
+def enrich_example_headers(markdown_text: str, bible: dict[str, str]) -> str:
+    lines = markdown_text.splitlines()
+    enriched_lines = list(lines)
+    index = 0
+
+    while index < len(lines):
+        parsed_example, next_index = parse_example_at(lines, index)
+        if not parsed_example:
+            index += 1
+            continue
+
+        if parsed_example.label != "review-preview-warning":
+            resolved_source = resolve_example_source(parsed_example, bible)
+            if resolved_source:
+                enriched_lines[index] = f"(@{parsed_example.label}) {resolved_source}"
+
+        index = next_index
+
+    return "\n".join(enriched_lines).rstrip() + "\n"
 
 
 def strip_terminal_source_parenthetical(translation: str, source: str) -> str:
@@ -468,7 +510,7 @@ def analyze_example(
     example: ParsedExample, bible: dict[str, str], tone_dict: dict[str, list[dict[str, str]]]
 ) -> tuple[dict[str, list[str]], str, str | None]:
     warnings: list[str] = []
-    source_display = render_example_source(example.source, bible)
+    source_display = resolve_example_source(example, bible)
 
     if example.source:
         verse_id = reference_to_verse_id(example.source)
@@ -530,9 +572,11 @@ def format_publication_inline_code(line: str) -> str:
 def collect_source_audit_records(markdown_text: str, bible: dict[str, str]) -> list[SourceAuditRecord]:
     records: list[SourceAuditRecord] = []
     for example in parse_examples(markdown_text):
-        if example.label == "review-preview-warning" or not example.source:
+        if example.label == "review-preview-warning":
             continue
-        rendered_source = render_example_source(example.source, bible)
+        rendered_source = resolve_example_source(example, bible)
+        if not rendered_source:
+            continue
         records.append(SourceAuditRecord(label=example.label, source=example.source, rendered_source=rendered_source))
     return records
 
@@ -798,7 +842,8 @@ def main() -> None:
 
     PUBLICATION_REVIEW_DIR.mkdir(parents=True, exist_ok=True)
 
-    markdown = build_markdown()
+    bible = load_bible(BIBLE_PATH)
+    markdown = enrich_example_headers(build_markdown(), bible)
     MARKDOWN_OUTPUT.write_text(markdown, encoding="utf-8")
     print(f"Wrote Markdown preview: {MARKDOWN_OUTPUT}")
 

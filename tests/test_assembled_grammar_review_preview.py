@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from assemble_publication_review_preview import (
     SOURCE_AUDIT_EXCEPTIONS,
     parse_examples,
-    render_example_source,
+    resolve_example_source,
 )
 from interlinear_latex import analyze_text, build_gll_lines, load_bible, reference_to_verse_id
 from restore_tone import load_tone_dictionary
@@ -54,8 +54,10 @@ def _source_examples() -> list[tuple[str, str]]:
     bible = load_bible(BIBLE_PATH)
     examples = []
     for example in parse_examples(_text()):
-        if example.source and example.label != "review-preview-warning":
-            examples.append((example.label, render_example_source(example.source, bible)))
+        if example.label != "review-preview-warning":
+            resolved_source = resolve_example_source(example, bible)
+            if resolved_source:
+                examples.append((example.label, resolved_source))
     return examples
 
 
@@ -269,6 +271,13 @@ def test_assembled_preview_tex_keeps_expected_sources_for_known_examples() -> No
     assert "(Genesis 4:5)" in _tex_example_block("ex:neg-lo")
 
 
+def test_assembled_preview_tex_keeps_expected_sources_for_examples_2_11_to_2_14() -> None:
+    assert "(Genesis 13:8)" in _tex_example_block("ex:pro-eite")
+    assert "(Genesis 34:9)" in _tex_example_block("ex:pro-kote")
+    assert "(Genesis 24:23)" in _tex_example_block("ex:poss-na")
+    assert "(Genesis 3:20)" in _tex_example_block("ex:poss-a")
+
+
 def test_assembled_preview_tex_italicizes_tedim_example_tier_without_italicizing_gloss_tier() -> None:
     block = _tex_example_block("ex:dem-hih")
 
@@ -366,6 +375,15 @@ def test_assembled_preview_pdf_text_keeps_source_references_systematically() -> 
     assert "(Genesis 1:3)" in pdf_text
     assert "(Exodus 14:30)" in pdf_text
     assert "(Genesis 4:5)" in pdf_text
+
+
+def test_assembled_preview_pdf_text_keeps_sources_for_examples_2_11_to_2_14() -> None:
+    pdf_text = _pdf_text()
+
+    assert "(2.11)" in pdf_text and "(Genesis 13:8)" in pdf_text
+    assert "(2.12)" in pdf_text and "(Genesis 34:9)" in pdf_text
+    assert "(2.13)" in pdf_text and "(Genesis 24:23)" in pdf_text
+    assert "(2.14)" in pdf_text and "(Genesis 3:20)" in pdf_text
 
 
 def test_assembly_script_is_reproducible_for_markdown_and_tex() -> None:

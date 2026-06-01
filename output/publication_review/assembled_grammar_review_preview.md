@@ -177,13 +177,13 @@ Earlier descriptions agree on a basic personal-pronoun system with distinct firs
 | 2 | `nang` | `note` |
 | 3 | `amah` | `amaute` |
 
-(@ex:pro-amah)
+(@ex:pro-amah) Genesis 3:20
 a. Tedim: Mipa in a zi' min pen Eve, ci hi. Bang hang hiam cih leh amah pen mihing khempeuh' nu ahi hi.
 b. Segmentation: amah
 c. Gloss: 3SG.PRO
 d. Translation: 'And Adam called his wife's name Eve; because she was the mother of all living.'
 
-(@ex:pro-note)
+(@ex:pro-note) Genesis 9:9
 a. Tedim: En un, note le note' khit a na suanlekhakte uh le,
 b. Segmentation: note
 c. Gloss: 2PL.PRO
@@ -195,13 +195,13 @@ These examples are ordinary independent pronouns rather than bound agreement mar
 
 The main editorial problem in this slice is not whether Tedim has clusivity, but how far the current evidence supports global labels for the two first-person plural series. Henderson clearly distinguishes `ei/eite` from `ko/kote` through pronominal-concord prefixes, pairing the former with `i-` and the latter with `ka-` [@henderson1965, 32-33]. Zam Ngaih Cing likewise treats clusivity as a real feature of Tedim person marking, even though her presentation of the plural forms is not identical in surface detail [@zamngaihcing2017, sec. 3.2.1; @zamngaihcing2017, sec. 3.2.2]. The separate clusivity dossier for this slice shows that sampled Bible dialogue contexts strongly support `ko/kote` as exclusive, but that `ei/eite` has both clear inclusive uses and less straightforward uses in the current Bible evidence. Comparative Sukte is useful here mainly as a contrast, since Singh does not describe the same inclusive/exclusive opposition for Sukte [@sukte_grammar, sec. 4.6.1].
 
-(@ex:pro-eite)
+(@ex:pro-eite) Genesis 13:8
 a. Tedim: Tua ciangin Abram in Lot' kiangah, "Nang le kei' kikal, nang' gancingte le kei' gancingte' kikalah kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi."
 b. Segmentation: eite
 c. Gloss: 1PL.PRO
 d. Translation: 'And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.'
 
-(@ex:pro-kote)
+(@ex:pro-kote) Genesis 34:9
 a. Tedim: Kote tawh kitenna hong bawl un. Na tanute uh kote' tungah hong pia unla, no a dingin ka tanute uh la un.
 b. Segmentation: kote
 c. Gloss: 1PL.PRO
@@ -213,13 +213,13 @@ Genesis 13:8 shows a genuinely inclusive use of `eite`, since Abram explicitly i
 
 The same person-marking forms that appear in pronominal concord also appear before nouns as possessive prefixes. Henderson treats `ka-`, `na-`, `a-`, and `i-` primarily as pronominal concord prefixes, while Zam Ngaih Cing foregrounds their possessive use in noun phrases [@henderson1965, 32-33; @zamngaihcing2017, sec. 3.2.2; @zamngaihcing2017, sec. 3.3.4.1.1]. For a printed grammar, the safest description is that the forms are shared across possessive and agreement environments, but are easiest to present first in their nominal use.
 
-(@ex:poss-na)
+(@ex:poss-na) Genesis 24:23
 a. Tedim: Kua' tanu na hi hiam, hong gen in. Na pa' inn-ah kote' giah nading a awng ding hiam? a ci hi.
 b. Segmentation: na pa' inn-ah
 c. Gloss: 2SG.POSS father house-LOC
 d. Translation: 'Whose daughter art thou? tell me, I pray thee: is there room in thy father's house for us to lodge in?'
 
-(@ex:poss-a)
+(@ex:poss-a) Genesis 3:20
 a. Tedim: Mipa in a zi' min pen Eve, ci hi.
 b. Segmentation: a zi'
 c. Gloss: 3SG.POSS wife
@@ -231,13 +231,13 @@ The same pattern is visible in `ka pa' inn` 'my father's house' and in the `i-` 
 
 Emphatic pronouns are formed by adding `-mah` to a personal-pronoun base [@henderson1965, 32; @zamngaihcing2017, sec. 3.2.6]. In print, it is best to treat these forms neither as an unrelated lexical series nor as mere stylistic variants, but as a productive emphatic pattern built on the ordinary pronoun paradigm.
 
-(@ex:emph-keimah)
+(@ex:emph-keimah) Genesis 4:13
 a. Tedim: Kain in Topa' tungah, Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi.
 b. Segmentation: kei-mah
 c. Gloss: 1SG-EMPH
 d. Translation: 'And Cain said unto the LORD, My punishment is greater than I can bear.'
 
-(@ex:emph-nangmah)
+(@ex:emph-nangmah) Genesis 20:15
 a. Tedim: Abimelek in, En in, ka leitang, na mai-ah om hi. Nangmah in hoih na sakna munah teng in, a ci hi.
 b. Segmentation: nang-mah
 c. Gloss: 2SG-EMPH
@@ -249,7 +249,7 @@ The same element also appears in negative-indefinite forms such as `kuamah` 'no 
 
 Zam Ngaih Cing describes reflexive pronouns as repeated pronouns linked by `leh` [@zamngaihcing2017, sec. 3.2.5]. The biblical corpus nevertheless makes it clear that a print grammar also needs to acknowledge verbal `ki-`, since many reader-facing examples of reflexive or reciprocal meaning are expressed through `ki-` forms rather than through a free reflexive pronoun alone.
 
-(@ex:refl-ki)
+(@ex:refl-ki) Genesis 2:24
 a. Tedim: Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm a, amau tegel pum khat a bang uh hi.
 b. Segmentation: ki-gawm
 c. Gloss: REFL-join
@@ -263,13 +263,13 @@ Henderson's discussion of pronominal concord is still the best starting point fo
 
 The harder question concerns `hong-` and `kong-`. The literature treats them as participant-oriented preverbal prefixes with directional or inverse-like behavior, and Otsuka's causative discussion shows that first- and second-person objects are structurally important to their distribution [@zamngaihcing2017, sec. 5.8.1.3; @otsuka_causative]. The current corpus outputs, however, do not yet yield a stable automatic example set for `hong-`, so the present slice uses only narrow, manually checked illustrations.[^hong-kong]
 
-(@ex:hong-prefix)
+(@ex:hong-prefix) Psalms 18:16
 a. Tedim: Amah in a sangna panin a khut tawh zamin kei hong la a, tui thukpi panin keimah hong kaikhia hi.
 b. Segmentation: hong la
 c. Gloss: 3>1 take
 d. Translation: 'He sent from above, he took me, He drew me out of many waters.'
 
-(@ex:kong-prefix)
+(@ex:kong-prefix) Genesis 41:41
 a. Tedim: Faro in Josef' kiangah, Egypt gam khempeuh a uk dingin nang kong koih khinzo hi, a ci hi.
 b. Segmentation: kong koih
 c. Gloss: 1>2 set
@@ -441,7 +441,7 @@ The ergative marker `-in` marks the transitive subject in Tedim Chin [@zamngaihc
 
 In this slice, Genesis 4:3 remains the accepted print anchor because `candidates_case_marking.tsv` and `dossier_case_marking.md` both treat `Kain in` as the cleanest candidate-backed ergative window. Raw `-in` extraction is unsafe: rows such as `ciangin` are conjunctional or other non-case material, so they must not be promoted as ergative case examples.
 
-(@ex:erg-in)
+(@ex:erg-in) Genesis 4:3
 a. Tedim: Tua hun sungin Kain in lei pana piang gah piakna Topa' tungah paipih a,
 b. Segmentation: Kain in
 c. Gloss: Cain ERG
@@ -453,13 +453,13 @@ This example is sufficient for a draft chapter because it shows the essential pa
 
 The locative `-ah` marks location [@zamngaihcing2017, sec. 3.3.3.3.3]. Henderson already treats `-ah` as a locative post-nominal particle and discusses its phonological behavior in locative nominal figures [@henderson1965, 54-56]. The current candidate layer, however, distinguishes plain noun-plus-locative evidence such as `khua-ah` from relator-noun-plus-case constructions such as `laizangah`, `vantungah`, `kiangah`, `sungah`, and `tungah`. The printed description should therefore be slightly richer than a simple gloss “at/in”, while still keeping those two subtypes distinct.
 
-(@ex:loc-ah)
+(@ex:loc-ah) Genesis 1:6
 a. Tedim: Pasian in, “Tuite' laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.
 b. Segmentation: lai-zang-ah
 c. Gloss: middle-side-LOC
 d. Translation: ‘And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.’
 
-(@ex:loc-ah-2)
+(@ex:loc-ah-2) Genesis 1:15
 a. Tedim: leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi.
 b. Segmentation: vantung-ah
 c. Gloss: heaven-LOC
@@ -477,7 +477,7 @@ Directional or allative `-a` remains deferred in the current packet. The candida
 
 Zam Ngaih Cing describes `-pan` as the ablative marker indicating source or point of departure [@zamngaihcing2017, sec. 3.3.3.3.5]. Comparative Sukte has a cognate `-pan`, which strengthens the historical plausibility of the analysis [@sukte_grammar]. Henderson does not present an ablative category in the modern sense, but the source-marking behavior is nevertheless compatible with her structural account of post-nominal particles [@henderson1965, 104].
 
-(@ex:pan)
+(@ex:pan) Matthew 5:19
 a. Tedim: Tua ahih manin hih thukhamte lakpan a neupente khat bek nangawn zuikha loin, midangte in zong a zuih loh nadingin a gen mite pen vantung ki-ukna sungah mi neupen hi ding uh hi.
 b. Segmentation: lak-pan
 c. Gloss: midst-ABL
@@ -487,7 +487,7 @@ This example is worth keeping because it shows a natural source construction bui
 
 The related form `-panin` is common in the corpus and clearly belongs to the same source-marking domain, especially after relator nouns and other spatial expressions. What remains uncertain is not its source meaning, but its exact structural status in every occurrence. Some examples look like straightforward source phrases, while others behave more like extended or tightly fused source-marking expressions.
 
-(@ex:panin)
+(@ex:panin) Genesis 12:1
 a. Tedim: Topa in Abram kiangah, “Na gam, na beh, le na pa' inn panin nang kong lah ding gamah pai in.”
 b. Segmentation: inn panin
 c. Gloss: house from
@@ -499,13 +499,13 @@ For that reason, a printed grammar can already gloss `-panin` as a source form r
 
 The comitative `-tawh` is described in the literature as the marker of accompaniment [@zamngaihcing2017, sec. 3.3.3.3.6]. Henderson also lists `tawh` among the post-nominal particles [@henderson1965, 104]. In the biblical corpus, however, the most accessible examples are semantically broader than simple human accompaniment. A printed chapter should therefore distinguish the core comitative use from its material and instrumental extensions rather than treating all examples as equivalent.[^tawh-extension]
 
-(@ex:tawh-accompaniment)
+(@ex:tawh-accompaniment) Genesis 14:24
 a. Tedim: Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi.
 b. Segmentation: kei tawh
 c. Gloss: 1SG COM
 d. Translation: ‘save only that which the young men have eaten, and the portion of the men which went with me’
 
-(@ex:tawh-extension)
+(@ex:tawh-extension) Genesis 2:7
 a. Tedim: Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu sang suk hi.
 b. Segmentation: leivui tawh
 c. Gloss: dust COM
@@ -651,7 +651,7 @@ The generated report paraphrases this as `vei sawm`, but the candidate layer use
 
 Genesis 5:27 gives one usable large-number phrase, but only with explicit caveats:
 
-(@ex:num-large)
+(@ex:num-large) Genesis 5:27
 a. Tedim: kum zakua le kum sawmguk le kua
 b. Segmentation: kum | za-kua | le | kum | sawm-guk | le | kua
 c. Gloss: year | hundred-nine | and | year | ten-six | and | nine [export: who]
@@ -711,7 +711,7 @@ The current candidate-backed packet supports a narrow generalization. `Khempeuh`
 
 Genesis 2:1 supplies the current candidate-backed universal anchor:
 
-(@ex:quant-khempeuh)
+(@ex:quant-khempeuh) Genesis 2:1
 a. Tedim: vantung leitung le a sunga omte khempeuh
 b. Segmentation: van-tung | lei-tung | le | a | sung-a | om-te | khempeuh
 c. Gloss: sky-on | land-on | and | 3SG | inside-3SG | exist-PL | all
@@ -1367,7 +1367,7 @@ d. Translation: 'the mount whither thou goest up' / 'going up'
 
 Genesis 30:9 keeps `-lam` visible:
 
-(@ex:dir-lam-tawplam)
+(@ex:dir-lam-tawplam) Genesis 30:9
 a. Tedim: tawplam
 b. Segmentation: tawp-lam
 c. Gloss: end-TOWARD
@@ -1752,7 +1752,7 @@ d. Translation: 'Who are these?'
 
 Genesis 48:8 is the current print anchor for `kua ... hiam`, and 2 Samuel 22:32 gives additional support for the same pattern (`Topa longal Pasian kua hiam`). The dossier again keeps the relevant export caveat explicit: `kua` is tagged as `NUM` in the analyzer output. That label should be treated as an export limitation rather than as evidence against the interrogative reading.
 
-(@ex:hiam-bangci)
+(@ex:hiam-bangci) Genesis 3:13
 a. Tedim: Bangci a hici gamtat na hi hiam?
 b. Segmentation: Bangci | a | hi-ci | gam-tat | na | hi | hiam
 c. Gloss: how | 3SG | this-say | conduct-do | 2SG | DECL | Q
@@ -1816,7 +1816,7 @@ This is the current copula-plus-declarative evidence, but only with caveat. It i
 
 Genesis 4:5 keeps one negative-plus-declarative environment visible:
 
-(@ex:sfp-lo-hi)
+(@ex:sfp-lo-hi) Genesis 4:5
 a. Tedim: thusim lo hi
 b. Segmentation: thusim | lo | hi
 c. Gloss: parable | NEG | DECL
@@ -1836,7 +1836,7 @@ Genesis 48:8 is mentioned here only as cross-reference material. `Hiam` belongs 
 
 Genesis 1:3 supplies the current usable optative row:
 
-(@ex:sfp-hen)
+(@ex:sfp-hen) Genesis 1:3
 a. Tedim: Khuavak om hen
 b. Segmentation: Khuavak | om | hen
 c. Gloss: light | exist | JUSS
@@ -1848,7 +1848,7 @@ This is the current usable optative evidence with caveat. The candidate is analy
 
 Genesis 6:14 keeps one singular imperative row visible:
 
-(@ex:sfp-in)
+(@ex:sfp-in) Genesis 6:14
 a. Tedim: teembaw khat bawl in
 b. Segmentation: teembaw | khat | bawl | in
 c. Gloss: ark | one | make | ERG [export caveat]
@@ -1926,7 +1926,7 @@ That claim must remain narrow. The row does **not** license broad raw `le` harve
 
 Genesis 13:9 keeps `leh` visible only as warning or boundary evidence:
 
-(@ex:coord-leh-boundary)
+(@ex:coord-leh-boundary) Genesis 13:9
 a. Tedim: veilam na lak leh kei taklamah ka pai ding hi
 b. Segmentation: vei-lam | na | lak | leh | kei | taklam-ah | ka | pai | ding | hi
 c. Gloss: faint-direction | 2SG | among | and/if | NEG [export caveat] | right-LOC | 1SG | go | IRR | DECL
@@ -1940,7 +1940,7 @@ The row also carries an analyzer or export caveat: `kei` is glossed as `NEG` in 
 
 Genesis 2:10 keeps one possible sequential-linkage window visible:
 
-(@ex:coord-a-sequential-boundary)
+(@ex:coord-a-sequential-boundary) Genesis 2:10
 a. Tedim: luang a tua mun panin gun hong kikhenin
 b. Segmentation: luang | a | tua | mun | pan-in | gun | hong | kikhen-in
 c. Gloss: flow | 3SG | that | place | ABL-ERG | river | 3→1 | separate-CVB
