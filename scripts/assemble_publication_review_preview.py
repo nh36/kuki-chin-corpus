@@ -40,6 +40,7 @@ from interlinear_latex import (
     build_gll_lines,
     escape_latex,
     format_reference,
+    format_inline_tedim,
     generate_abbreviations_section,
     generate_gb4e_setup,
     load_bible,
@@ -174,6 +175,12 @@ EXAMPLE_PART_RE = {
 CHAPTER_HEADING_RE = re.compile(r"^#\s+(\d+)\.\s+(.+?)\s*$")
 CITATION_KEY_RE = re.compile(r"(?<![`\\])@(?!ex:)([A-Za-z0-9_:+.-]+)")
 BIBLIOGRAPHY_KEY_RE = re.compile(r"@\w+\{([^,]+),")
+INLINE_CODE_RE = re.compile(r"`([^`]+)`")
+
+TECHNICAL_PATH_PREFIXES = ("output/", "docs/", "scripts/", "tests/", "data/", "literature/", "bibles/")
+TECHNICAL_FILE_SUFFIXES = (".md", ".py", ".tex", ".pdf", ".tsv", ".bib", ".json", ".txt", ".yaml", ".yml")
+TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", "git", "bibtex", "pdftotext")
+SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 
 
 @dataclass(frozen=True)
@@ -184,6 +191,13 @@ class ParsedExample:
     segmentation: str
     gloss: str
     translation: str
+
+
+@dataclass(frozen=True)
+class SourceAuditRecord:
+    label: str
+    source: str
+    rendered_source: str
 
 
 def strip_yaml_front_matter(text: str) -> str:
@@ -358,6 +372,22 @@ def parse_example_at(lines: list[str], start: int) -> tuple[ParsedExample | None
     )
 
 
+def parse_examples(markdown_text: str) -> list[ParsedExample]:
+    examples: list[ParsedExample] = []
+    lines = markdown_text.splitlines()
+    index = 0
+
+    while index < len(lines):
+        parsed_example, next_index = parse_example_at(lines, index)
+        if parsed_example:
+            examples.append(parsed_example)
+            index = next_index
+            continue
+        index += 1
+
+    return examples
+
+
 def strip_outer_quotes(text: str) -> str:
     stripped = text.strip()
     paired_quotes = [
@@ -372,8 +402,38 @@ def strip_outer_quotes(text: str) -> str:
     return stripped
 
 
+def normalize_for_comparison(text: str) -> str:
+    return re.sub(r"\s+", " ", text.strip().lower())
+
+
+def render_example_source(source: str, bible: dict[str, str]) -> str:
+    source = source.strip()
+    if not source:
+        return ""
+
+    verse_id = reference_to_verse_id(source)
+    if verse_id and verse_id in bible:
+        return format_reference(verse_id)
+    return source
+
+
+def strip_terminal_source_parenthetical(translation: str, source: str) -> str:
+    match = re.search(r"\(([^()]*)\)\s*$", translation)
+    if not match:
+        return translation
+
+    parenthetical = normalize_for_comparison(match.group(1))
+    if parenthetical != normalize_for_comparison(source):
+        return translation
+
+    return translation[: match.start()].rstrip()
+
+
 def build_translation_line(translation: str, source: str) -> str:
     normalized_translation = strip_outer_quotes(translation)
+    if source:
+        normalized_translation = strip_terminal_source_parenthetical(normalized_translation, source)
+
     rendered = f"'{normalized_translation}'"
     if source:
         rendered = f"{rendered} ({source})"
@@ -408,13 +468,12 @@ def analyze_example(
     example: ParsedExample, bible: dict[str, str], tone_dict: dict[str, list[dict[str, str]]]
 ) -> tuple[dict[str, list[str]], str, str | None]:
     warnings: list[str] = []
-    source_display = example.source
+    source_display = render_example_source(example.source, bible)
 
     if example.source:
         verse_id = reference_to_verse_id(example.source)
         if verse_id:
             if verse_id in bible:
-                source_display = format_reference(verse_id)
                 verse_text = bible[verse_id]
                 verse_norm = normalize_text_for_matching(verse_text)
                 tedim_norm = normalize_text_for_matching(example.tedim)
@@ -429,6 +488,76 @@ def analyze_example(
         warnings.append("analyzer-derived interlinear unavailable; using slice segmentation/gloss fallback")
 
     return analysis, source_display, build_example_warning_text(example.label, warnings)
+
+
+def _is_technical_inline_code(span: str) -> bool:
+    stripped = span.strip()
+    lower = stripped.lower()
+
+    if not stripped:
+        return True
+    if lower.startswith(TECHNICAL_PATH_PREFIXES):
+        return True
+    if stripped.startswith(("ex:", "@ex:", "@")):
+        return True
+    if "::" in stripped:
+        return True
+    if "\\" in stripped:
+        return True
+    if "/" in stripped and " / " not in stripped:
+        return True
+    if any(lower.endswith(suffix) for suffix in TECHNICAL_FILE_SUFFIXES):
+        return True
+    if lower.startswith(TECHNICAL_COMMAND_PREFIXES):
+        return True
+    if re.search(r"\s--?[A-Za-z0-9]", stripped):
+        return True
+    if re.search(r"\b(pytest|python3|pandoc|xelatex|bibtex|git)\b", lower) and " " in stripped:
+        return True
+    return False
+
+
+def format_publication_inline_code(line: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        content = match.group(1)
+        if _is_technical_inline_code(content):
+            return match.group(0)
+        return format_inline_tedim(content)
+
+    return INLINE_CODE_RE.sub(replace, line)
+
+
+def collect_source_audit_records(markdown_text: str, bible: dict[str, str]) -> list[SourceAuditRecord]:
+    records: list[SourceAuditRecord] = []
+    for example in parse_examples(markdown_text):
+        if example.label == "review-preview-warning" or not example.source:
+            continue
+        rendered_source = render_example_source(example.source, bible)
+        records.append(SourceAuditRecord(label=example.label, source=example.source, rendered_source=rendered_source))
+    return records
+
+
+def audit_example_sources(latex_markdown: str, source_records: list[SourceAuditRecord]) -> None:
+    missing: list[str] = []
+    for record in source_records:
+        if record.label in SOURCE_AUDIT_EXCEPTIONS:
+            continue
+
+        match = re.search(
+            rf"\\ex \\label\{{{re.escape(record.label)}\}}(?P<block>.*?)\\end\{{exe\}}",
+            latex_markdown,
+            re.DOTALL,
+        )
+        if not match:
+            missing.append(f"{record.label}: missing gb4e block")
+            continue
+
+        glt_match = re.search(r"\\glt (?P<glt>[^\n]+)", match.group("block"))
+        if not glt_match or record.rendered_source not in glt_match.group("glt"):
+            missing.append(f"{record.label}: missing source after \\glt -> {record.rendered_source}")
+
+    if missing:
+        raise RuntimeError("Source audit failed for assembled preview examples:\n" + "\n".join(missing))
 
 
 def example_to_latex_block(
@@ -471,10 +600,12 @@ def example_to_latex_block(
 def transform_markdown_for_latex(markdown_text: str) -> str:
     bible = load_bible(BIBLE_PATH)
     tone_dict = load_tone_dictionary()
+    source_audit_records = collect_source_audit_records(markdown_text, bible)
     transformed: list[str] = []
     lines = markdown_text.splitlines()
     index = 0
     abbreviations_inserted = False
+    in_publication_slice = False
 
     while index < len(lines):
         line = lines[index]
@@ -494,6 +625,7 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
 
         chapter_match = CHAPTER_HEADING_RE.match(line)
         if chapter_match:
+            in_publication_slice = False
             transformed.extend(
                 [
                     "```{=latex}",
@@ -503,6 +635,15 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
                     f"# {chapter_match.group(2)}",
                 ]
             )
+            index += 1
+            continue
+
+        if line.startswith("## "):
+            in_publication_slice = False
+
+        if line.startswith("*Source slice: `"):
+            in_publication_slice = True
+            transformed.append(line)
             index += 1
             continue
 
@@ -532,10 +673,15 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
                 index += 1
                 continue
 
+        if in_publication_slice and line and not line.startswith("[MAJOR GAP:") and not line.startswith("[REVIEW PREVIEW"):
+            line = format_publication_inline_code(line)
+
         transformed.append(line)
         index += 1
 
-    return "\n".join(transformed).rstrip() + "\n"
+    latex_markdown = "\n".join(transformed).rstrip() + "\n"
+    audit_example_sources(latex_markdown, source_audit_records)
+    return latex_markdown
 
 
 def write_latex_header(path: Path) -> None:

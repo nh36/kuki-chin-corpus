@@ -14,6 +14,11 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+from assemble_publication_review_preview import (
+    SOURCE_AUDIT_EXCEPTIONS,
+    parse_examples,
+    render_example_source,
+)
 from interlinear_latex import analyze_text, build_gll_lines, load_bible, reference_to_verse_id
 from restore_tone import load_tone_dictionary
 
@@ -43,6 +48,15 @@ def _tex_example_block(label: str) -> str:
     block_start = tex.rfind("\\begin{exe}", 0, start)
     block_end = tex.index("\\end{exe}", start) + len("\\end{exe}")
     return tex[block_start:block_end]
+
+
+def _source_examples() -> list[tuple[str, str]]:
+    bible = load_bible(BIBLE_PATH)
+    examples = []
+    for example in parse_examples(_text()):
+        if example.source and example.label != "review-preview-warning":
+            examples.append((example.label, render_example_source(example.source, bible)))
+    return examples
 
 
 @lru_cache(maxsize=1)
@@ -174,12 +188,12 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert TEX_PATH.exists(), "Assembled grammar review preview TeX must exist"
     assert "review preview, not a finished grammar" in lower
     assert "not a final publication pdf" in lower
-    assert "\\texttt{sih} is the clean intransitive anchor for the first slice." in lower
-    assert "\\texttt{hawl} is the clean transitive anchor for the first slice." in lower
-    assert "\\texttt{mahmah} is the main full-reduplication intensifier anchor." in lower
-    assert "with \\texttt{ciangin} as the clearest current anchor." in lower
+    assert "\\tdim{sih} is the clean intransitive anchor for the first slice." in lower
+    assert "\\tdim{hawl} is the clean transitive anchor for the first slice." in lower
+    assert "\\tdim{mahmah} is the main full-reduplication intensifier anchor." in lower
+    assert "with \\tdim{ciangin} as the clearest current anchor." in lower
     assert "basic np ordering" in lower
-    assert "routing contrast, with \\texttt{kanei} as the clearest agreement anchor" in lower
+    assert "routing contrast, with \\tdim{kanei} as the clearest agreement anchor" in lower
 
 
 def test_assembled_preview_tex_uses_real_citation_and_gb4e_machinery() -> None:
@@ -192,6 +206,8 @@ def test_assembled_preview_tex_uses_real_citation_and_gb4e_machinery() -> None:
     assert "\\bibliography{../../literature/bibliography.bib}" in tex
     assert "\\citep{henderson1965, zamngaihcing2017}" in tex
     assert "\\usepackage{gb4e}" in tex
+    assert "\\newcommand{\\tdim}[1]{\\textit{#1}}" in tex
+    assert "\\newcommand{\\tdimword}[1]{\\textit{#1}}" in tex
     assert "\\newcounter{reviewchapter}" in tex
     assert "\\renewcommand{\\thexnumi}{\\arabic{reviewchapter}.\\arabic{xnumi}}" in tex
     assert "\\begin{exe}" in tex
@@ -207,7 +223,7 @@ def test_assembled_preview_tex_contains_real_interlinear_example_content() -> No
     block = _tex_example_block("ex:dem-hih")
 
     assert "\\begin{exe}" in block
-    assert "\\gll H" in block
+    assert "\\gll \\tdimword{" in block
     assert "\\textsc{prox}" in block
     assert "\\textsc{top}" in block
     assert "\\glt 'This is the book of the generations of Adam.' (Genesis 5:1)" in block
@@ -230,6 +246,39 @@ def test_assembled_preview_tex_places_bible_reference_after_translation() -> Non
     assert "Genesis 5:1\n\\gll" not in block
 
 
+def test_assembled_preview_tex_systematically_preserves_example_sources_after_translation() -> None:
+    tex = _tex_text()
+    missing = []
+
+    for label, rendered_source in _source_examples():
+        if label in SOURCE_AUDIT_EXCEPTIONS:
+            continue
+        block = _tex_example_block(label)
+        glt_line = next(line for line in block.splitlines() if line.startswith("\\glt "))
+        if rendered_source not in glt_line:
+            missing.append(f"{label}: {rendered_source}")
+
+    assert not missing, f"Missing source references after translation: {missing}"
+
+
+def test_assembled_preview_tex_keeps_expected_sources_for_known_examples() -> None:
+    assert "\\glt 'This is the book of the generations of Adam.' (Genesis 5:1)" in _tex_example_block("ex:dem-hih")
+    assert "(Genesis 1:6)" in _tex_example_block("ex:dem-tua")
+    assert "(Genesis 1:3)" in _tex_example_block("ex:dem-tua-ciangin")
+    assert "(Exodus 14:30)" in _tex_example_block("ex:dem-tua-bangin")
+    assert "(Genesis 4:5)" in _tex_example_block("ex:neg-lo")
+
+
+def test_assembled_preview_tex_italicizes_tedim_example_tier_without_italicizing_gloss_tier() -> None:
+    block = _tex_example_block("ex:dem-hih")
+
+    assert "\\tdimword{" in block
+    assert "\\gll \\tdimword{" in block
+    assert "\\textsc{prox}" in block
+    gloss_line = next(line for line in block.splitlines() if "\\textsc{prox}" in line)
+    assert "\\tdimword{" not in gloss_line
+
+
 def test_assembled_preview_tex_eliminates_old_raw_example_block_prose() -> None:
     tex = _tex_text()
 
@@ -250,8 +299,29 @@ def test_assembled_preview_assembler_reuses_shared_interlinear_helper() -> None:
     assert "build_gll_lines" in script_text
     assert "generate_abbreviations_section" in script_text
     assert "generate_gb4e_setup" in script_text
+    assert "format_inline_tedim" in script_text
     assert "reference_to_verse_id" in script_text
     assert "analyzer-derived interlinear unavailable; using slice segmentation/gloss fallback" in script_text
+    assert "audit_example_sources" in script_text
+
+
+def test_assembled_preview_tex_distinguishes_inline_tedim_from_technical_paths() -> None:
+    tex = _tex_text()
+
+    assert "\\texttt{output/publication\\_review/grammar\\_transitivity\\_print\\_slice.md}" in tex
+    assert "\\texttt{python3\\ scripts/assemble\\_publication\\_review\\_preview.py}" in tex
+    assert "\\tdim{hih}" in tex
+    assert "\\tdim{tua}" in tex
+    assert "\\tdim{mahmah}" in tex
+    assert "\\tdim{ciangin}" in tex
+    assert "\\tdim{gam}" in tex
+
+
+def test_assembled_preview_gap_and_review_status_text_are_not_aggressively_italicized() -> None:
+    tex = _tex_text()
+
+    assert "{[}MAJOR GAP: phonology/tone remains blocked or theory-heavy.{]}" in tex
+    assert "\\tdim{review preview, not a finished grammar}" not in tex
 
 
 def test_assembled_preview_bible_reference_mapping_hits_existing_ctd_bible_data() -> None:
@@ -286,6 +356,16 @@ def test_assembled_preview_pdf_text_shows_parenthetical_citations_and_numbered_e
     assert "Genesis 5:1" in pdf_text
     assert "book of the generations of Adam." in pdf_text
     assert "Full reduplication as intensification" in pdf_text
+
+
+def test_assembled_preview_pdf_text_keeps_source_references_systematically() -> None:
+    pdf_text = _pdf_text()
+
+    assert "book of the generations of Adam.’ (Genesis 5:1)" in pdf_text or "book of the generations of Adam.' (Genesis 5:1)" in pdf_text
+    assert "(Genesis 1:6)" in pdf_text
+    assert "(Genesis 1:3)" in pdf_text
+    assert "(Exodus 14:30)" in pdf_text
+    assert "(Genesis 4:5)" in pdf_text
 
 
 def test_assembly_script_is_reproducible_for_markdown_and_tex() -> None:

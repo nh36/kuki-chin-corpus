@@ -314,6 +314,8 @@ def generate_gb4e_setup() -> str:
     return r"""
 \usepackage{gb4e}
 \noautomath
+\newcommand{\tdim}[1]{\textit{#1}}
+\newcommand{\tdimword}[1]{\textit{#1}}
 \let\oldeachwordone\eachwordone
 \renewcommand{\eachwordone}{\oldeachwordone\hspace{0.3em}}
 \let\oldeachwordtwo\eachwordtwo
@@ -362,7 +364,15 @@ def analyze_text(text: str, tone_dict: dict[str, list[dict[str, str]]]) -> dict[
     }
 
 
+def format_object_language_token(token: str) -> str:
+    return r"\tdimword{" + escape_latex(token) + "}"
+
+
+def format_inline_tedim(text: str) -> str:
+    return r"\tdim{" + escape_latex(text) + "}"
+
+
 def build_gll_lines(analysis: dict[str, list[str]]) -> tuple[str, str]:
-    object_line = " ".join(escape_latex(word) for word in analysis["toned_words"])
+    object_line = " ".join(format_object_language_token(word) for word in analysis["toned_words"])
     gloss_line = " ".join(format_gloss_smallcaps(word) for word in analysis["gloss_words"])
     return object_line, gloss_line
