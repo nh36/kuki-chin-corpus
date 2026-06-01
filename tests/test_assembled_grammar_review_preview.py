@@ -1,5 +1,13 @@
+from __future__ import annotations
+
+from functools import lru_cache
 from pathlib import Path
+import re
+import shutil
 import subprocess
+import tempfile
+
+import pytest
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +23,33 @@ def _text() -> str:
 
 def _tex_text() -> str:
     return TEX_PATH.read_text(encoding="utf-8")
+
+
+def _normalize(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+@lru_cache(maxsize=1)
+def _pdf_text() -> str:
+    pdftotext = shutil.which("pdftotext")
+    if pdftotext:
+        with tempfile.NamedTemporaryFile(suffix=".txt") as tmp:
+            subprocess.run(
+                [pdftotext, str(PDF_PATH), tmp.name],
+                check=True,
+                cwd=ROOT,
+                capture_output=True,
+                text=True,
+            )
+            return Path(tmp.name).read_text(encoding="utf-8", errors="replace")
+
+    try:
+        from pypdf import PdfReader
+    except Exception as exc:  # pragma: no cover - environment-dependent skip
+        pytest.skip(f"No PDF text extraction tool available: {exc}")
+
+    reader = PdfReader(str(PDF_PATH))
+    return "\n".join(page.extract_text() or "" for page in reader.pages)
 
 
 def test_assembled_grammar_review_preview_exists() -> None:
@@ -111,7 +146,7 @@ def test_assembled_preview_includes_source_lines_for_inserted_slices() -> None:
         assert required in text
 
 
-def test_assembled_preview_tex_exists_and_includes_slice_content() -> None:
+def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     tex = _tex_text()
     lower = tex.lower()
 
@@ -126,9 +161,64 @@ def test_assembled_preview_tex_exists_and_includes_slice_content() -> None:
     assert "routing contrast, with \\texttt{kanei} as the clearest agreement anchor" in lower
 
 
+def test_assembled_preview_tex_uses_real_citation_and_example_machinery() -> None:
+    tex = _tex_text()
+
+    assert "[@" not in tex
+    assert "\\usepackage[]{natbib}" in tex
+    assert "\\bibliographystyle{plainnat}" in tex
+    assert "\\bibliography{../../literature/bibliography.bib}" in tex
+    assert "\\citep{henderson1965, zamngaihcing2017}" in tex
+    assert "\\newcounter{reviewchapter}" in tex
+    assert "\\renewcommand{\\thereviewexample}{\\arabic{reviewchapter}.\\arabic{reviewexample}}" in tex
+    assert "\\begin{reviewexample}{ex:dem-hih}{Genesis 5:1}" in tex
+    assert "\\begin{reviewexample}{ex:dem-tua-ciangin}{Genesis 1:3}" in tex
+    assert "\\begin{reviewexample}{ex:pro-amah}{}" in tex
+    assert "\\reviewobjectline{" in tex
+    assert "\\reviewtranslation{" in tex
+
+
+def test_assembled_preview_tex_contains_real_interlinear_example_content() -> None:
+    tex = _tex_text()
+    start = tex.index("\\begin{reviewexample}{ex:dem-hih}{Genesis 5:1}")
+    end = tex.index("\\end{reviewexample}", start)
+    block = tex[start:end]
+
+    assert "Hih pen Adam’ suanlekhakte’ laibu ahi hi." in block
+    assert "hih & pen \\\\" in block
+    assert "\\textsc{prox} & \\textsc{top} \\\\" in block
+    assert '\\reviewtranslation{"This is the book of the generations of Adam."}' in block
+
+
+def test_assembled_preview_tex_eliminates_old_raw_example_block_prose() -> None:
+    tex = _tex_text()
+
+    assert "a. Tedim:" not in tex
+    assert "b. Segmentation:" not in tex
+    assert "c. Gloss:" not in tex
+    assert "d. Translation:" not in tex
+
+
 def test_assembled_preview_pdf_exists_and_is_non_empty() -> None:
     assert PDF_PATH.exists(), "Assembled grammar review preview PDF must exist"
     assert PDF_PATH.stat().st_size > 0, "Assembled grammar review preview PDF must be non-empty"
+
+
+def test_assembled_preview_pdf_text_shows_resolved_citations_and_numbered_examples() -> None:
+    pdf_text = _pdf_text()
+    normalized = _normalize(pdf_text)
+    lower = normalized.lower()
+
+    assert "[@" not in pdf_text
+    assert "review preview, not a finished grammar" in lower
+    assert "not a final publication pdf" in lower
+    assert "references" in lower
+    assert "henderson" in lower
+    assert "(2.1)" in pdf_text
+    assert "(3.1)" in pdf_text
+    assert "(4.1)" in pdf_text
+    assert "Genesis 5:1" in pdf_text
+    assert "Full reduplication as intensification" in pdf_text
 
 
 def test_assembly_script_is_reproducible_for_markdown_and_tex() -> None:

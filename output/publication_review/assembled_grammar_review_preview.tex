@@ -56,11 +56,45 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{calc}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\usepackage{natbib}
+\geometry{margin=0.75in}
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\newcommand{\frontmattersection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcounter{reviewchapter}
+\newcounter{reviewexample}[reviewchapter]
+\renewcommand{\thereviewexample}{\arabic{reviewchapter}.\arabic{reviewexample}}
+\newcommand{\reviewchapterbreak}{\stepcounter{reviewchapter}\setcounter{reviewexample}{0}}
+\newenvironment{reviewexample}[2]{%
+  \refstepcounter{reviewexample}%
+  \par\medskip\noindent%
+  \makebox[4.2em][l]{(\thereviewexample)}%
+  \begin{minipage}[t]{\dimexpr\linewidth-4.2em\relax}%
+  \ifstrempty{#1}{}{\label{#1}}%
+  \ifstrempty{#2}{}{{\itshape #2}\par\smallskip}%
+}{%
+  \end{minipage}\par\medskip%
+}
+\newcommand{\reviewobjectline}[1]{{\itshape #1\par\smallskip}}
+\newcommand{\reviewtranslation}[1]{\par\smallskip\hspace*{\fill}`#1'\par}
+\newcommand{\reviewwarning}[1]{\par\medskip\noindent\textbf{#1}\par\medskip}
+\newcommand{\reviewwarninginline}[1]{\textbf{#1}\par\smallskip}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Assembled Tedim Grammar Review Preview},
   colorlinks=true,
   linkcolor={Maroon},
   filecolor={Maroon},
@@ -68,25 +102,16 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Assembled Tedim Grammar Review Preview}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{Not a finished grammar}
 \author{}
 \date{}
 
 \begin{document}
-\maketitle
 
 {
 \setcounter{tocdepth}{3}
 \tableofcontents
 }
-\section{Review preview status}\label{review-preview-status}
+\frontmattersection{Review preview status}
 
 This is a review preview, not a finished grammar. It is assembled from
 first-pass publication-review slices and is controlled by
@@ -109,7 +134,7 @@ Many sections are deliberately narrow. Missing or blocked domains are
 marked explicitly. The PDF built from this assembly is a review preview
 PDF, not a final publication PDF.
 
-\section{PDF/build status}\label{pdfbuild-status}
+\frontmattersection{PDF/build status}
 
 This preview is reproducible from committed sources with
 \texttt{python3\ scripts/assemble\_publication\_review\_preview.py}. The
@@ -117,18 +142,18 @@ script writes
 \texttt{output/publication\_review/assembled\_grammar\_review\_preview.md},
 generates
 \texttt{output/publication\_review/assembled\_grammar\_review\_preview.tex}
-through Pandoc, and compiles
+through Pandoc plus natbib/BibTeX citation processing, and compiles
 \texttt{output/publication\_review/assembled\_grammar\_review\_preview.pdf}
-with XeLaTeX when the required tools are available.
+with XeLaTeX while converting the publication-review example blocks into
+numbered interlinear examples.
 
-The assembly reuses current repository conventions where practical:
-XeLaTeX compilation and the \texttt{Times\ New\ Roman} /
-\texttt{Helvetica} font pair already used in
-\texttt{scripts/export\_interlinear.py}, plus the same 0.75-inch
-page-margin convention for generated TeX output.
+The assembly reuses current repository conventions where practical: the
+repository bibliography in \texttt{literature/bibliography.bib}, XeLaTeX
+compilation and the \texttt{Times\ New\ Roman} / \texttt{Helvetica} font
+pair already used in \texttt{scripts/export\_interlinear.py}, plus the
+same 0.75-inch page-margin convention for generated TeX output.
 
-\section{Known narrow-slice
-limitations}\label{known-narrow-slice-limitations}
+\frontmattersection{Known narrow-slice limitations}
 
 \begin{itemize}
 \tightlist
@@ -157,7 +182,7 @@ limitations}\label{known-narrow-slice-limitations}
   \texttt{hawl\ /\ en}.
 \end{itemize}
 
-\section{Major unresolved domains}\label{major-unresolved-domains}
+\frontmattersection{Major unresolved domains}
 
 \begin{itemize}
 \tightlist
@@ -178,7 +203,9 @@ switch reference, relative clauses, transparent compounds, wider
 reduplication, and labile or ambitransitive transitivity remain outside
 this first-pass assembled review preview.
 
-\section{1. Phonology and tone}\label{1-phonology-and-tone}
+\reviewchapterbreak
+
+\section{Phonology and tone}\label{phonology-and-tone}
 
 {[}MAJOR GAP: phonology/tone remains blocked or theory-heavy.{]}
 
@@ -186,10 +213,12 @@ The controlling checkpoints and audit still treat phonology/tone as
 blocked or theory-heavy, so no publication-review grammar slice is
 inlined here yet.
 
-\section{2. Deixis, pronouns, and nominal
-domain}\label{2-deixis-pronouns-and-nominal-domain}
+\reviewchapterbreak
 
-\subsection{Demonstratives / deixis}\label{demonstratives--deixis}
+\section{Deixis, pronouns, and nominal
+domain}\label{deixis-pronouns-and-nominal-domain}
+
+\subsection{Demonstratives / deixis}\label{demonstratives-deixis}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_demonstratives\_print\_slice.md}}
@@ -209,8 +238,8 @@ system}\label{overview-of-the-demonstrative-system}
 
 The current Bible corpus and the literature agree on a compact
 demonstrative core: proximal \texttt{hih} and distal \texttt{tua}
-{[}@henderson1965; @zamngaihcing2017{]}. In Bible usage, however,
-\texttt{tua} is not merely a spatial "that". It is also a strongly
+\citep{henderson1965, zamngaihcing2017}. In Bible usage, however,
+\texttt{tua} is not merely a spatial ``that''. It is also a strongly
 anaphoric and discourse-linking form, especially in narrative and
 temporal sequencing. The most economical description is therefore a
 system with \texttt{hih} as the core proximal demonstrative and
@@ -222,9 +251,9 @@ material such as \texttt{hih\ bangin}, \texttt{tua\ bangin},
 \texttt{tua\ ciangin}, and \texttt{tua\ ahih\ ciangin}. One caution
 remains explicit throughout this slice: Zam Ngaih Cing gives distal
 \texttt{huā}, while the Bible corpus overwhelmingly uses \texttt{tua} as
-the ordinary distal/anaphoric form {[}@zamngaihcing2017{]}. The relation
-is plausible, but it is not resolved here as a settled orthographic
-identity.
+the ordinary distal/anaphoric form \citep{zamngaihcing2017}. The
+relation is plausible, but it is not resolved here as a settled
+orthographic identity.
 
 \subsubsection{\texorpdfstring{Core demonstratives: \texttt{hih} and
 \texttt{tua}}{Core demonstratives: hih and tua}}\label{core-demonstratives-hih-and-tua}
@@ -233,9 +262,14 @@ identity.
 works both as an identificational demonstrative and as an adnominal
 determiner.
 
-(@ex:dem-hih) Genesis 5:1 a. Tedim: Hih pen Adam' suanlekhakte' laibu
-ahi hi. b. Segmentation: hih pen c. Gloss: PROX TOP d. Translation:
-"This is the book of the generations of Adam."
+\begin{reviewexample}{ex:dem-hih}{Genesis 5:1}
+\reviewobjectline{Hih pen Adam’ suanlekhakte’ laibu ahi hi.}
+\begin{tabular}[t]{@{}ll@{}}
+hih & pen \\
+\textsc{prox} & \textsc{top} \\
+\end{tabular}
+\reviewtranslation{"This is the book of the generations of Adam."}
+\end{reviewexample}
 
 Genesis 5:1 is especially useful because it shows \texttt{hih} as the
 unmarked proximal form in identificational prose. Genesis 9:12
@@ -247,17 +281,21 @@ pattern, while Exodus 32:9 \texttt{Hih\ mite\ ka\ mu\ zo\ hi} shows
 broader. It clearly marks distal or previously activated referents, and
 it also extends naturally into anaphoric and discourse-linking uses.
 
-(@ex:dem-tua) Genesis 1:6 a. Tedim: Pasian in, ``Tuite' laizangah van
-kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,'' ci hi.
-b. Segmentation: tua van kuumpi c. Gloss: DIST firmament d. Translation:
-"And God said, Let there be a firmament in the midst of the waters, and
-let it divide the waters from the waters."
+\begin{reviewexample}{ex:dem-tua}{Genesis 1:6}
+\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:dem-tua; showing padded alignment.]}
+\reviewobjectline{Pasian in, “Tuite’ laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.}
+\begin{tabular}[t]{@{}lll@{}}
+tua & van & kuumpi \\
+\textsc{dist} & firmament &  \\
+\end{tabular}
+\reviewtranslation{"And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters."}
+\end{reviewexample}
 
 Genesis 1:6 is a clean adnominal example. Genesis 21:27
 \texttt{tua\ mi\ nihte} is equally good for a more discourse-linked noun
 phrase. The important descriptive point is that the corpus keeps using
-\texttt{tua} where English may translate "that", "the same", or simply a
-contextually given referent.
+\texttt{tua} where English may translate ``that'', ``the same'', or
+simply a contextually given referent.
 
 \subsubsection{\texorpdfstring{Plural forms: \texttt{hihte} and
 \texttt{tuate}}{Plural forms: hihte and tuate}}\label{plural-forms-hihte-and-tuate}
@@ -266,15 +304,23 @@ The plural demonstratives are straightforward. The Bible corpus strongly
 supports \texttt{hihte} and \texttt{tuate} as transparent plural
 extensions of the singular forms.
 
-(@ex:dem-hihte) Genesis 48:8 a. Tedim: Israel in Josef' tapate a muh
-ciangin amah in, ``Hihte kua ahi hiam?'' a ci hi. b. Segmentation: hihte
-c. Gloss: PROX-PL d. Translation: "And Israel beheld
-Joseph\textquotesingle s sons, and said, Who are these?"
+\begin{reviewexample}{ex:dem-hihte}{Genesis 48:8}
+\reviewobjectline{Israel in Josef’ tapate a muh ciangin amah in, “Hihte kua ahi hiam?” a ci hi.}
+\begin{tabular}[t]{@{}l@{}}
+hihte \\
+\textsc{prox}-\textsc{pl} \\
+\end{tabular}
+\reviewtranslation{"And Israel beheld Joseph's sons, and said, Who are these?"}
+\end{reviewexample}
 
-(@ex:dem-tuate) Genesis 7:20 a. Tedim: Mual liante tungah tui omto lai
-a, tuate tungah pi sawmnih le nih thuk-in tuumcip hi. b. Segmentation:
-tuate tungah c. Gloss: DIST-PL on-LOC d. Translation: "Fifteen cubits
-upward did the waters prevail; and the mountains were covered."
+\begin{reviewexample}{ex:dem-tuate}{Genesis 7:20}
+\reviewobjectline{Mual liante tungah tui omto lai a, tuate tungah pi sawmnih le nih thuk-in tuumcip hi.}
+\begin{tabular}[t]{@{}ll@{}}
+tuate & tungah \\
+\textsc{dist}-\textsc{pl} & on-\textsc{loc} \\
+\end{tabular}
+\reviewtranslation{"Fifteen cubits upward did the waters prevail; and the mountains were covered."}
+\end{reviewexample}
 
 Genesis 10:20 \texttt{Hihte\ pen\ ...\ Ham’\ suanlekhakte\ ahi\ hi}
 shows the proximal plural in topic-like prose, while Genesis 2:19
@@ -309,24 +355,30 @@ This is where \texttt{tua} most clearly exceeds a merely spatial
 description. In Bible narrative, \texttt{tua} is a major discourse and
 temporal linker.
 
-(@ex:dem-tua-ciangin) Genesis 1:3 a. Tedim: Pasian in, ``Khuavak om
-hen,'' ci hi; tua ciangin khuavak om pah hi. b. Segmentation: tua
-ciangin c. Gloss: DIST time-CVB d. Translation: "And God said, Let there
-be light: and there was light."
+\begin{reviewexample}{ex:dem-tua-ciangin}{Genesis 1:3}
+\reviewobjectline{Pasian in, “Khuavak om hen,” ci hi; tua ciangin khuavak om pah hi.}
+\begin{tabular}[t]{@{}ll@{}}
+tua & ciangin \\
+\textsc{dist} & time-\textsc{cvb} \\
+\end{tabular}
+\reviewtranslation{"And God said, Let there be light: and there was light."}
+\end{reviewexample}
 
-\texttt{Tua\ ciangin} works naturally as "then / at that time" in event
-sequencing. Genesis 5:5 repeats the same pattern in obituary-style
+\texttt{Tua\ ciangin} works naturally as ``then / at that time'' in
+event sequencing. Genesis 5:5 repeats the same pattern in obituary-style
 narrative: \texttt{tua\ ciangin\ amah\ si\ hi}.
 
 \texttt{Tua\ ahih\ ciangin} is even more explicitly a discourse bridge,
 linking a prior state or event to the next clause.
 
-(@ex:dem-tua-ahih-ciangin) Genesis 2:21 a. Tedim: Tua ahih ciangin Topa
-Pasian in mipa ihmut suak mahmah sak a, ama ihmut kalin a nakguhte khat
-la-in tua mun pen satak tawh a dimsak hi. b. Segmentation: tua ahih
-ciangin c. Gloss: DIST be.3SG then-CVB d. Translation: "And the LORD God
-caused a deep sleep to fall upon Adam, and he slept: and he took one of
-his ribs, and closed up the flesh instead thereof."
+\begin{reviewexample}{ex:dem-tua-ahih-ciangin}{Genesis 2:21}
+\reviewobjectline{Tua ahih ciangin Topa Pasian in mipa ihmut suak mahmah sak a, ama ihmut kalin a nakguhte khat la-in tua mun pen satak tawh a dimsak hi.}
+\begin{tabular}[t]{@{}lll@{}}
+tua & ahih & ciangin \\
+\textsc{dist} & be.\textsc{3sg} & then-\textsc{cvb} \\
+\end{tabular}
+\reviewtranslation{"And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof."}
+\end{reviewexample}
 
 Genesis 1:21 and Genesis 2:19 confirm that \texttt{tua\ ahih\ ciangin}
 is one of the strongest discourse-transition frames in the present
@@ -339,19 +391,23 @@ construction than as a purely compositional spatial phrase.
 The Bible also gives strong manner and discourse constructions built
 from the demonstratives plus \texttt{bangin}.
 
-(@ex:dem-hih-bangin) Genesis 32:4 a. Tedim: amaute hilhin, ``Note in ka
-topa Esau kiangah hih bangin na ci ding uh hi: Na nasempa Jakob in,
-`Laban' kiangah peemta-in tu ciang dong ka om hi. b. Segmentation: hih
-bangin c. Gloss: PROX like-CVB d. Translation: "And he commanded them,
-saying, Thus shall ye speak unto my lord Esau; Thy servant Jacob saith
-thus, I have sojourned with Laban, and stayed there until now:"
+\begin{reviewexample}{ex:dem-hih-bangin}{Genesis 32:4}
+\reviewobjectline{amaute hilhin, “Note in ka topa Esau kiangah hih bangin na ci ding uh hi: Na nasempa Jakob in, ‘Laban’ kiangah peemta-in tu ciang dong ka om hi.}
+\begin{tabular}[t]{@{}ll@{}}
+hih & bangin \\
+\textsc{prox} & like-\textsc{cvb} \\
+\end{tabular}
+\reviewtranslation{"And he commanded them, saying, Thus shall ye speak unto my lord Esau; Thy servant Jacob saith thus, I have sojourned with Laban, and stayed there until now:"}
+\end{reviewexample}
 
-(@ex:dem-tua-bangin) Exodus 14:30 a. Tedim: Topa in tua bangin Egypt
-mite' khutsung panin tua ni-in Israel-te honkhia a, tuipi gei-ah Egypt
-mi a site, Israel mite in mu uh hi. b. Segmentation: tua bangin c.
-Gloss: DIST like-CVB d. Translation: "Thus the LORD saved Israel that
-day out of the hand of the Egyptians; and Israel saw the Egyptians dead
-upon the sea shore."
+\begin{reviewexample}{ex:dem-tua-bangin}{Exodus 14:30}
+\reviewobjectline{Topa in tua bangin Egypt mite’ khutsung panin tua ni-in Israel-te honkhia a, tuipi gei-ah Egypt mi a site, Israel mite in mu uh hi.}
+\begin{tabular}[t]{@{}ll@{}}
+tua & bangin \\
+\textsc{dist} & like-\textsc{cvb} \\
+\end{tabular}
+\reviewtranslation{"Thus the LORD saved Israel that day out of the hand of the Egyptians; and Israel saw the Egyptians dead upon the sea shore."}
+\end{reviewexample}
 
 \texttt{Hih\ bangin} is especially good for direct instruction or quoted
 manner, as also seen in Genesis 42:18 \texttt{hih\ bangin\ gamta\ un}.
@@ -373,8 +429,8 @@ right place for \texttt{hi} is later work on copula or sentence-final
 particles, not this first demonstratives packet.
 
 \texttt{Hih\ ciangin} should also be deferred. The current dossier
-showed that many apparent hits involve verbal \texttt{hih} "do/be thus"
-rather than demonstrative \texttt{hih}. Genesis 18:10, the old
+showed that many apparent hits involve verbal \texttt{hih} ``do/be
+thus'' rather than demonstrative \texttt{hih}. Genesis 18:10, the old
 generated-report example, does not contain exact demonstrative
 \texttt{hih\ ciangin}. For the present slice, \texttt{tua\ ciangin} is
 strong enough to represent the temporal side of the system on its own.
@@ -384,21 +440,21 @@ strong enough to represent the temporal side of the system on its own.
 The current evidence supports a compact but stable demonstrative system.
 \texttt{Hih} is the core proximal demonstrative. \texttt{Tua} is the
 core distal/anaphoric demonstrative and should not be reduced to a
-merely spatial "that". \texttt{Hihte} and \texttt{tuate} are transparent
-plural forms, and the constructional extensions \texttt{hih\ bangin},
-\texttt{tua\ bangin}, \texttt{tua\ ciangin}, and
+merely spatial ``that''. \texttt{Hihte} and \texttt{tuate} are
+transparent plural forms, and the constructional extensions
+\texttt{hih\ bangin}, \texttt{tua\ bangin}, \texttt{tua\ ciangin}, and
 \texttt{tua\ ahih\ ciangin} are all well supported by manually checked
 Bible examples.
 
 Just as important, the chapter has to preserve its cautions. \texttt{Hi}
 is not yet safe as a demonstrative headword, \texttt{hih\ ciangin} is
 not yet a stable temporal counterpart to \texttt{tua\ ciangin}, and the
-relation between Bible \texttt{tua} and the literature\textquotesingle s
-\texttt{huā} is plausible but unresolved. With those limits kept
-explicit, demonstratives and deixis make a good narrow chapter for the
-next Tedim packet.
+relation between Bible \texttt{tua} and the literature's \texttt{huā} is
+plausible but unresolved. With those limits kept explicit,
+demonstratives and deixis make a good narrow chapter for the next Tedim
+packet.
 
-\subsection{Pronouns / clusivity}\label{pronouns--clusivity}
+\subsection{Pronouns / clusivity}\label{pronouns-clusivity}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_pronouns\_print\_slice.md}}
@@ -418,12 +474,13 @@ agreement system.
 
 Earlier descriptions agree on a basic personal-pronoun system with
 distinct first, second, and third persons and with plural forms for at
-least the first and second persons {[}@henderson1965, 32-33;
-@zamngaihcing2017, sec. 3.2.1{]}. Henderson explicitly lists
-\texttt{kei}, \texttt{nang}, \texttt{amah}, \texttt{ei/eite},
-\texttt{ko/kote}, and \texttt{no/note}, while Zam Ngaih Cing confirms
-the broader person-and-number system and the absence of gender in the
-third person {[}@henderson1965, 32; @zamngaihcing2017, sec. 3.2.1{]}.
+least the first and second persons
+\citetext{\citealp[32-33]{henderson1965}; \citealp[sec.~3.2.1]{zamngaihcing2017}}.
+Henderson explicitly lists \texttt{kei}, \texttt{nang}, \texttt{amah},
+\texttt{ei/eite}, \texttt{ko/kote}, and \texttt{no/note}, while Zam
+Ngaih Cing confirms the broader person-and-number system and the absence
+of gender in the third person
+\citetext{\citealp[32]{henderson1965}; \citealp[sec.~3.2.1]{zamngaihcing2017}}.
 For print purposes, the following paradigm is stable enough to use:
 
 {\def\LTcaptype{none} % do not increment counter
@@ -440,16 +497,23 @@ Person & Singular & Plural \\
 \end{longtable}
 }
 
-(@ex:pro-amah) a. Tedim: Mipa in a zi\textquotesingle{} min pen Eve, ci
-hi. Bang hang hiam cih leh amah pen mihing khempeuh\textquotesingle{} nu
-ahi hi. b. Segmentation: amah c. Gloss: 3SG.PRO d. Translation:
-\textquotesingle And Adam called his wife\textquotesingle s name Eve;
-because she was the mother of all living.\textquotesingle{}
+\begin{reviewexample}{ex:pro-amah}{}
+\reviewobjectline{Mipa in a zi' min pen Eve, ci hi. Bang hang hiam cih leh amah pen mihing khempeuh' nu ahi hi.}
+\begin{tabular}[t]{@{}l@{}}
+amah \\
+\textsc{3sg}.\textsc{pro} \\
+\end{tabular}
+\reviewtranslation{'And Adam called his wife's name Eve; because she was the mother of all living.'}
+\end{reviewexample}
 
-(@ex:pro-note) a. Tedim: En un, note le note\textquotesingle{} khit a na
-suanlekhakte uh le, b. Segmentation: note c. Gloss: 2PL.PRO d.
-Translation: \textquotesingle And I, behold, I establish my covenant
-with you, and with your seed after you;\textquotesingle{}
+\begin{reviewexample}{ex:pro-note}{}
+\reviewobjectline{En un, note le note' khit a na suanlekhakte uh le,}
+\begin{tabular}[t]{@{}l@{}}
+note \\
+\textsc{2pl}.\textsc{pro} \\
+\end{tabular}
+\reviewtranslation{'And I, behold, I establish my covenant with you, and with your seed after you;'}
+\end{reviewexample}
 
 These examples are ordinary independent pronouns rather than bound
 agreement markers. \texttt{amah} functions as a free third-person form,
@@ -465,43 +529,46 @@ clusivity, but how far the current evidence supports global labels for
 the two first-person plural series. Henderson clearly distinguishes
 \texttt{ei/eite} from \texttt{ko/kote} through pronominal-concord
 prefixes, pairing the former with \texttt{i-} and the latter with
-\texttt{ka-} {[}@henderson1965, 32-33{]}. Zam Ngaih Cing likewise treats
-clusivity as a real feature of Tedim person marking, even though her
-presentation of the plural forms is not identical in surface detail
-{[}@zamngaihcing2017, sec. 3.2.1; @zamngaihcing2017, sec. 3.2.2{]}. The
-separate clusivity dossier for this slice shows that sampled Bible
+\texttt{ka-} \citep[32-33]{henderson1965}. Zam Ngaih Cing likewise
+treats clusivity as a real feature of Tedim person marking, even though
+her presentation of the plural forms is not identical in surface detail
+\citetext{\citealp[sec.~3.2.1]{zamngaihcing2017}; \citealp[sec.~3.2.2]{zamngaihcing2017}}.
+The separate clusivity dossier for this slice shows that sampled Bible
 dialogue contexts strongly support \texttt{ko/kote} as exclusive, but
 that \texttt{ei/eite} has both clear inclusive uses and less
 straightforward uses in the current Bible evidence. Comparative Sukte is
 useful here mainly as a contrast, since Singh does not describe the same
-inclusive/exclusive opposition for Sukte {[}@sukte\_grammar, sec.
-4.6.1{]}.
+inclusive/exclusive opposition for Sukte
+\citep[sec.~4.6.1]{sukte_grammar}.
 
-(@ex:pro-eite) a. Tedim: Tua ciangin Abram in Lot\textquotesingle{}
-kiangah, "Nang le kei\textquotesingle{} kikal, nang\textquotesingle{}
-gancingte le kei\textquotesingle{} gancingte\textquotesingle{} kikalah
-kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi." b.
-Segmentation: eite c. Gloss: 1PL.PRO d. Translation:
-\textquotesingle And Abram said unto Lot, Let there be no strife, I pray
-thee, between me and thee, and between my herdmen and thy herdmen; for
-we be brethren.\textquotesingle{}
+\begin{reviewexample}{ex:pro-eite}{}
+\reviewobjectline{Tua ciangin Abram in Lot' kiangah, "Nang le kei' kikal, nang' gancingte le kei' gancingte' kikalah kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi."}
+\begin{tabular}[t]{@{}l@{}}
+eite \\
+\textsc{1pl}.\textsc{pro} \\
+\end{tabular}
+\reviewtranslation{'And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.'}
+\end{reviewexample}
 
-(@ex:pro-kote) a. Tedim: Kote tawh kitenna hong bawl un. Na tanute uh
-kote\textquotesingle{} tungah hong pia unla, no a dingin ka tanute uh la
-un. b. Segmentation: kote c. Gloss: 1PL.PRO d. Translation:
-\textquotesingle And make ye marriages with us, and give your daughters
-unto us, and take our daughters unto you.\textquotesingle{}
+\begin{reviewexample}{ex:pro-kote}{}
+\reviewobjectline{Kote tawh kitenna hong bawl un. Na tanute uh kote' tungah hong pia unla, no a dingin ka tanute uh la un.}
+\begin{tabular}[t]{@{}l@{}}
+kote \\
+\textsc{1pl}.\textsc{pro} \\
+\end{tabular}
+\reviewtranslation{'And make ye marriages with us, and give your daughters unto us, and take our daughters unto you.'}
+\end{reviewexample}
 
 Genesis 13:8 shows a genuinely inclusive use of \texttt{eite}, since
 Abram explicitly includes Lot in the relevant group. It does not prove
 that every \texttt{eite} token is inclusive. Genesis 34:9, by contrast,
 is a strong diagnostic for exclusive \texttt{kote}, since Hamor
-addresses Jacob\textquotesingle s family from a distinct in-group. The
-present slice therefore treats \texttt{kote} as exclusive and leaves the
-exact global status of \texttt{eite} under review.\footnote{The earlier
-  report-level reversal \texttt{kote} inclusive versus \texttt{eite}
-  exclusive has now been removed. The safer editorial position is
-  narrower: \texttt{ko/kote} can already be treated as exclusive, but
+addresses Jacob's family from a distinct in-group. The present slice
+therefore treats \texttt{kote} as exclusive and leaves the exact global
+status of \texttt{eite} under review.\footnote{The earlier report-level
+  reversal \texttt{kote} inclusive versus \texttt{eite} exclusive has
+  now been removed. The safer editorial position is narrower:
+  \texttt{ko/kote} can already be treated as exclusive, but
   \texttt{ei/eite} still shows mixed Bible-corpus behavior and should
   remain under review rather than receiving a single global label.}
 
@@ -511,60 +578,71 @@ The same person-marking forms that appear in pronominal concord also
 appear before nouns as possessive prefixes. Henderson treats
 \texttt{ka-}, \texttt{na-}, \texttt{a-}, and \texttt{i-} primarily as
 pronominal concord prefixes, while Zam Ngaih Cing foregrounds their
-possessive use in noun phrases {[}@henderson1965, 32-33;
-@zamngaihcing2017, sec. 3.2.2; @zamngaihcing2017, sec. 3.3.4.1.1{]}. For
-a printed grammar, the safest description is that the forms are shared
-across possessive and agreement environments, but are easiest to present
-first in their nominal use.
+possessive use in noun phrases
+\citetext{\citealp[32-33]{henderson1965}; \citealp[sec.~3.2.2]{zamngaihcing2017}; \citealp[sec.~3.3.4.1.1]{zamngaihcing2017}}.
+For a printed grammar, the safest description is that the forms are
+shared across possessive and agreement environments, but are easiest to
+present first in their nominal use.
 
-(@ex:poss-na) a. Tedim: Kua\textquotesingle{} tanu na hi hiam, hong gen
-in. Na pa\textquotesingle{} inn-ah kote\textquotesingle{} giah nading a
-awng ding hiam? a ci hi. b. Segmentation: na pa\textquotesingle{} inn-ah
-c. Gloss: 2SG.POSS father house-LOC d. Translation:
-\textquotesingle Whose daughter art thou? tell me, I pray thee: is there
-room in thy father\textquotesingle s house for us to lodge
-in?\textquotesingle{}
+\begin{reviewexample}{ex:poss-na}{}
+\reviewobjectline{Kua' tanu na hi hiam, hong gen in. Na pa' inn-ah kote' giah nading a awng ding hiam? a ci hi.}
+\begin{tabular}[t]{@{}lll@{}}
+na & pa' & inn-ah \\
+\textsc{2sg}.\textsc{poss} & father & house-\textsc{loc} \\
+\end{tabular}
+\reviewtranslation{'Whose daughter art thou? tell me, I pray thee: is there room in thy father's house for us to lodge in?'}
+\end{reviewexample}
 
-(@ex:poss-a) a. Tedim: Mipa in a zi\textquotesingle{} min pen Eve, ci
-hi. b. Segmentation: a zi\textquotesingle{} c. Gloss: 3SG.POSS wife d.
-Translation: \textquotesingle And the man called his
-wife\textquotesingle s name Eve.\textquotesingle{}
+\begin{reviewexample}{ex:poss-a}{}
+\reviewobjectline{Mipa in a zi' min pen Eve, ci hi.}
+\begin{tabular}[t]{@{}ll@{}}
+a & zi' \\
+\textsc{3sg}.\textsc{poss} & wife \\
+\end{tabular}
+\reviewtranslation{'And the man called his wife's name Eve.'}
+\end{reviewexample}
 
 The same pattern is visible in \texttt{ka\ pa\textquotesingle{}\ inn}
-\textquotesingle my father\textquotesingle s house\textquotesingle{} and
-in the \texttt{i-} prefix that Henderson associates with the
-\texttt{ei/eite} series {[}@henderson1965, 32-33{]}.
-Singh\textquotesingle s Sukte comparison is also helpful here, since it
-shows cognate person-marking prefixes in possessive use even though the
-wider systems are not identical {[}@sukte\_grammar, sec. 4.5.4{]}.
-Plural verbal markers such as \texttt{-uh} belong to the later agreement
-chapter rather than to the pronoun inventory itself.
+`my father's house' and in the \texttt{i-} prefix that Henderson
+associates with the \texttt{ei/eite} series
+\citep[32-33]{henderson1965}. Singh's Sukte comparison is also helpful
+here, since it shows cognate person-marking prefixes in possessive use
+even though the wider systems are not identical
+\citep[sec.~4.5.4]{sukte_grammar}. Plural verbal markers such as
+\texttt{-uh} belong to the later agreement chapter rather than to the
+pronoun inventory itself.
 
 \subsubsection{\texorpdfstring{Emphatic pronouns in
 \texttt{-mah}}{Emphatic pronouns in -mah}}\label{emphatic-pronouns-in--mah}
 
 Emphatic pronouns are formed by adding \texttt{-mah} to a
-personal-pronoun base {[}@henderson1965, 32; @zamngaihcing2017, sec.
-3.2.6{]}. In print, it is best to treat these forms neither as an
-unrelated lexical series nor as mere stylistic variants, but as a
-productive emphatic pattern built on the ordinary pronoun paradigm.
+personal-pronoun base
+\citetext{\citealp[32]{henderson1965}; \citealp[sec.~3.2.6]{zamngaihcing2017}}.
+In print, it is best to treat these forms neither as an unrelated
+lexical series nor as mere stylistic variants, but as a productive
+emphatic pattern built on the ordinary pronoun paradigm.
 
-(@ex:emph-keimah) a. Tedim: Kain in Topa\textquotesingle{} tungah,
-Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi. b. Segmentation:
-kei-mah c. Gloss: 1SG-EMPH d. Translation: \textquotesingle And Cain
-said unto the LORD, My punishment is greater than I can
-bear.\textquotesingle{}
+\begin{reviewexample}{ex:emph-keimah}{}
+\reviewobjectline{Kain in Topa' tungah, Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi.}
+\begin{tabular}[t]{@{}l@{}}
+kei-mah \\
+\textsc{1sg}-\textsc{emph} \\
+\end{tabular}
+\reviewtranslation{'And Cain said unto the LORD, My punishment is greater than I can bear.'}
+\end{reviewexample}
 
-(@ex:emph-nangmah) a. Tedim: Abimelek in, En in, ka leitang, na mai-ah
-om hi. Nangmah in hoih na sakna munah teng in, a ci hi. b. Segmentation:
-nang-mah c. Gloss: 2SG-EMPH d. Translation: \textquotesingle And
-Abimelech said, Behold, my land is before thee: dwell where it pleaseth
-thee.\textquotesingle{}
+\begin{reviewexample}{ex:emph-nangmah}{}
+\reviewobjectline{Abimelek in, En in, ka leitang, na mai-ah om hi. Nangmah in hoih na sakna munah teng in, a ci hi.}
+\begin{tabular}[t]{@{}l@{}}
+nang-mah \\
+\textsc{2sg}-\textsc{emph} \\
+\end{tabular}
+\reviewtranslation{'And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee.'}
+\end{reviewexample}
 
 The same element also appears in negative-indefinite forms such as
-\texttt{kuamah} \textquotesingle no one\textquotesingle{} and
-\texttt{bangmah} \textquotesingle nothing\textquotesingle{}
-{[}@zamngaihcing2017, sec. 3.2.7{]}. Those items belong more naturally
+\texttt{kuamah} `no one' and \texttt{bangmah} `nothing'
+\citep[sec.~3.2.7]{zamngaihcing2017}. Those items belong more naturally
 to a later section on indefinites and interrogative-based forms, but the
 connection should already be noted here.
 
@@ -572,17 +650,20 @@ connection should already be noted here.
 \texttt{ki-}}{Reflexive and reciprocal marking with ki-}}\label{reflexive-and-reciprocal-marking-with-ki-}
 
 Zam Ngaih Cing describes reflexive pronouns as repeated pronouns linked
-by \texttt{leh} {[}@zamngaihcing2017, sec. 3.2.5{]}. The biblical corpus
-nevertheless makes it clear that a print grammar also needs to
+by \texttt{leh} \citep[sec.~3.2.5]{zamngaihcing2017}. The biblical
+corpus nevertheless makes it clear that a print grammar also needs to
 acknowledge verbal \texttt{ki-}, since many reader-facing examples of
 reflexive or reciprocal meaning are expressed through \texttt{ki-} forms
 rather than through a free reflexive pronoun alone.
 
-(@ex:refl-ki) a. Tedim: Tua thu hangin pasal in a nu le a pa nusia-in a
-zi tawh kigawm a, amau tegel pum khat a bang uh hi. b. Segmentation:
-ki-gawm c. Gloss: REFL-join d. Translation: \textquotesingle Therefore
-shall a man leave his father and his mother, and shall cleave unto his
-wife: and they shall be one flesh.\textquotesingle{}
+\begin{reviewexample}{ex:refl-ki}{}
+\reviewobjectline{Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm a, amau tegel pum khat a bang uh hi.}
+\begin{tabular}[t]{@{}l@{}}
+ki-gawm \\
+\textsc{refl}-join \\
+\end{tabular}
+\reviewtranslation{'Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.'}
+\end{reviewexample}
 
 For print purposes, \texttt{ki-} can already be described as a
 productive reflexive or reciprocal verbal prefix. The remaining caution
@@ -593,43 +674,49 @@ automatically as transparent reflexive morphology.
 \subsubsection{Pronominal prefixes and inverse/directional
 marking}\label{pronominal-prefixes-and-inversedirectional-marking}
 
-Henderson\textquotesingle s discussion of pronominal concord is still
-the best starting point for the bound prefix system. She pairs
-\texttt{kei} with \texttt{ka-}, \texttt{nang} with \texttt{na-}, the
-\texttt{ei/eite} series with \texttt{i-}, the \texttt{ko/kote} series
-with \texttt{ka-}, \texttt{no/note} with \texttt{na-}, and all other
-nominals with \texttt{a-} {[}@henderson1965, 32-33{]}. Zam Ngaih
-Cing\textquotesingle s discussion of nominal prefixes confirms the same
-basic person-marking inventory in noun phrases {[}@zamngaihcing2017,
-sec. 3.3.4.1.1{]}. A printed chapter on pronouns does not need the whole
-verbal paradigm yet, but it does need to note that the independent
-pronouns belong to a wider system of bound person marking.
+Henderson's discussion of pronominal concord is still the best starting
+point for the bound prefix system. She pairs \texttt{kei} with
+\texttt{ka-}, \texttt{nang} with \texttt{na-}, the \texttt{ei/eite}
+series with \texttt{i-}, the \texttt{ko/kote} series with \texttt{ka-},
+\texttt{no/note} with \texttt{na-}, and all other nominals with
+\texttt{a-} \citep[32-33]{henderson1965}. Zam Ngaih Cing's discussion of
+nominal prefixes confirms the same basic person-marking inventory in
+noun phrases \citep[sec.~3.3.4.1.1]{zamngaihcing2017}. A printed chapter
+on pronouns does not need the whole verbal paradigm yet, but it does
+need to note that the independent pronouns belong to a wider system of
+bound person marking.
 
 The harder question concerns \texttt{hong-} and \texttt{kong-}. The
 literature treats them as participant-oriented preverbal prefixes with
-directional or inverse-like behavior, and Otsuka\textquotesingle s
-causative discussion shows that first- and second-person objects are
-structurally important to their distribution {[}@zamngaihcing2017, sec.
-5.8.1.3; @otsuka\_causative{]}. The current corpus outputs, however, do
-not yet yield a stable automatic example set for \texttt{hong-}, so the
-present slice uses only narrow, manually checked
-illustrations.\footnote{The present editorial problem is not whether
-  these forms exist, but how narrowly they should be defined in a first
-  print chapter. The current wording stays close to cases that can be
-  read directly from the verse context without relying on a fully solved
-  backend analysis.}
+directional or inverse-like behavior, and Otsuka's causative discussion
+shows that first- and second-person objects are structurally important
+to their distribution
+\citetext{\citealp[sec.~5.8.1.3]{zamngaihcing2017}; \citealp{otsuka_causative}}.
+The current corpus outputs, however, do not yet yield a stable automatic
+example set for \texttt{hong-}, so the present slice uses only narrow,
+manually checked illustrations.\footnote{The present editorial problem
+  is not whether these forms exist, but how narrowly they should be
+  defined in a first print chapter. The current wording stays close to
+  cases that can be read directly from the verse context without relying
+  on a fully solved backend analysis.}
 
-(@ex:hong-prefix) a. Tedim: Amah in a sangna panin a khut tawh zamin kei
-hong la a, tui thukpi panin keimah hong kaikhia hi. b. Segmentation:
-hong la c. Gloss: 3\textgreater1 take d. Translation:
-\textquotesingle He sent from above, he took me, He drew me out of many
-waters.\textquotesingle{}
+\begin{reviewexample}{ex:hong-prefix}{}
+\reviewobjectline{Amah in a sangna panin a khut tawh zamin kei hong la a, tui thukpi panin keimah hong kaikhia hi.}
+\begin{tabular}[t]{@{}ll@{}}
+hong & la \\
+3>1 & take \\
+\end{tabular}
+\reviewtranslation{'He sent from above, he took me, He drew me out of many waters.'}
+\end{reviewexample}
 
-(@ex:kong-prefix) a. Tedim: Faro in Josef\textquotesingle{} kiangah,
-Egypt gam khempeuh a uk dingin nang kong koih khinzo hi, a ci hi. b.
-Segmentation: kong koih c. Gloss: 1\textgreater2 set d. Translation:
-\textquotesingle And Pharaoh said unto Joseph, See, I have set thee over
-all the land of Egypt.\textquotesingle{}
+\begin{reviewexample}{ex:kong-prefix}{}
+\reviewobjectline{Faro in Josef' kiangah, Egypt gam khempeuh a uk dingin nang kong koih khinzo hi, a ci hi.}
+\begin{tabular}[t]{@{}ll@{}}
+kong & koih \\
+1>2 & set \\
+\end{tabular}
+\reviewtranslation{'And Pharaoh said unto Joseph, See, I have set thee over all the land of Egypt.'}
+\end{reviewexample}
 
 These examples are enough to justify a cautious print description:
 \texttt{hong-} and \texttt{kong-} belong with person-sensitive preverbal
@@ -653,7 +740,7 @@ control.
 
 \subsubsection{References}\label{references}
 
-\subsection{NP structure / possession}\label{np-structure--possession}
+\subsection{NP structure / possession}\label{np-structure-possession}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_np\_possession\_print\_slice.md}}
@@ -954,13 +1041,14 @@ survey.
 Earlier descriptions agree that Tedim marks nominal relations after the
 noun phrase, but they differ in how they analyze those forms. Henderson
 describes them structurally as phrase-final or post-nominal particles
-rather than as a semantic case system {[}@henderson1965, 59;
-@henderson1965, 104{]}. Zam Ngaih Cing, by contrast, offers a seven-case
-analysis with explicit ergative, locative, ablative, and comitative
-categories {[}@zamngaihcing2017, sec. 3.3.3.3{]}. Comparative Sukte
-evidence points in the same direction for several core markers, even
-though Singh labels the cognate \texttt{-in} as nominative rather than
-ergative {[}@sukte\_grammar, sec. 4.5.1{]}.
+rather than as a semantic case system
+\citetext{\citealp[59]{henderson1965}; \citealp[104]{henderson1965}}.
+Zam Ngaih Cing, by contrast, offers a seven-case analysis with explicit
+ergative, locative, ablative, and comitative categories
+\citep[sec.~3.3.3.3]{zamngaihcing2017}. Comparative Sukte evidence
+points in the same direction for several core markers, even though Singh
+labels the cognate \texttt{-in} as nominative rather than ergative
+\citep[sec.~4.5.1]{sukte_grammar}.
 
 For a printed grammar, the most useful generalization is therefore
 twofold. First, the language is well described by a case-marking
@@ -973,13 +1061,14 @@ suffixes'' and ``spatial nouns''.
 \texttt{-in}}{Ergative -in}}\label{ergative--in}
 
 The ergative marker \texttt{-in} marks the transitive subject in Tedim
-Chin {[}@zamngaihcing2017, sec. 3.3.3.3.1{]}. Henderson does not use the
-label \emph{ergative}, but her treatment of phrase-final nominal
-particles is compatible with the later analysis {[}@henderson1965,
-59{]}. Otsuka likewise assumes ergative \texttt{-in} in discussing
-causers in causative constructions {[}@otsuka\_causative{]}. Comparative
-Sukte retains a cognate \texttt{-in} marker, though Singh describes it
-as nominative {[}@sukte\_grammar, sec. 4.5.1{]}.
+Chin \citep[sec.~3.3.3.3.1]{zamngaihcing2017}. Henderson does not use
+the label \emph{ergative}, but her treatment of phrase-final nominal
+particles is compatible with the later analysis
+\citep[59]{henderson1965}. Otsuka likewise assumes ergative \texttt{-in}
+in discussing causers in causative constructions
+\citep{otsuka_causative}. Comparative Sukte retains a cognate
+\texttt{-in} marker, though Singh describes it as nominative
+\citep[sec.~4.5.1]{sukte_grammar}.
 
 In this slice, Genesis 4:3 remains the accepted print anchor because
 \texttt{candidates\_case\_marking.tsv} and
@@ -989,10 +1078,14 @@ is unsafe: rows such as \texttt{ciangin} are conjunctional or other
 non-case material, so they must not be promoted as ergative case
 examples.
 
-(@ex:erg-in) a. Tedim: Tua hun sungin Kain in lei pana piang gah piakna
-Topa\textquotesingle{} tungah paipih a, b. Segmentation: Kain in c.
-Gloss: Cain ERG d. Translation: `And in process of time it came to pass,
-that Cain brought of the fruit of the ground an offering unto the LORD.'
+\begin{reviewexample}{ex:erg-in}{}
+\reviewobjectline{Tua hun sungin Kain in lei pana piang gah piakna Topa' tungah paipih a,}
+\begin{tabular}[t]{@{}ll@{}}
+Kain & in \\
+Cain & \textsc{erg} \\
+\end{tabular}
+\reviewtranslation{‘And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.’}
+\end{reviewexample}
 
 This example is sufficient for a draft chapter because it shows the
 essential pattern without relying on doubtful segmentation. The agent
@@ -1006,27 +1099,35 @@ treated as nominal case evidence.
 \subsubsection{\texorpdfstring{Locative
 \texttt{-ah}}{Locative -ah}}\label{locative--ah}
 
-The locative \texttt{-ah} marks location {[}@zamngaihcing2017, sec.
-3.3.3.3.3{]}. Henderson already treats \texttt{-ah} as a locative
-post-nominal particle and discusses its phonological behavior in
-locative nominal figures {[}@henderson1965, 54-56{]}. The current
-candidate layer, however, distinguishes plain noun-plus-locative
-evidence such as \texttt{khua-ah} from relator-noun-plus-case
-constructions such as \texttt{laizangah}, \texttt{vantungah},
-\texttt{kiangah}, \texttt{sungah}, and \texttt{tungah}. The printed
-description should therefore be slightly richer than a simple gloss
-``at/in'', while still keeping those two subtypes distinct.
+The locative \texttt{-ah} marks location
+\citep[sec.~3.3.3.3.3]{zamngaihcing2017}. Henderson already treats
+\texttt{-ah} as a locative post-nominal particle and discusses its
+phonological behavior in locative nominal figures
+\citep[54-56]{henderson1965}. The current candidate layer, however,
+distinguishes plain noun-plus-locative evidence such as \texttt{khua-ah}
+from relator-noun-plus-case constructions such as \texttt{laizangah},
+\texttt{vantungah}, \texttt{kiangah}, \texttt{sungah}, and
+\texttt{tungah}. The printed description should therefore be slightly
+richer than a simple gloss ``at/in'', while still keeping those two
+subtypes distinct.
 
-(@ex:loc-ah) a. Tedim: Pasian in, ``Tuite\textquotesingle{} laizangah
-van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,'' ci
-hi. b. Segmentation: lai-zang-ah c. Gloss: middle-side-LOC d.
-Translation: `And God said, Let there be a firmament in the midst of the
-waters, and let it divide the waters from the waters.'
+\begin{reviewexample}{ex:loc-ah}{}
+\reviewobjectline{Pasian in, “Tuite' laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.}
+\begin{tabular}[t]{@{}l@{}}
+lai-zang-ah \\
+middle-side-\textsc{loc} \\
+\end{tabular}
+\reviewtranslation{‘And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.’}
+\end{reviewexample}
 
-(@ex:loc-ah-2) a. Tedim: leitung khua a vaksak dingin vantungah khuavak
-hi uh hen,'' ci hi. b. Segmentation: vantung-ah c. Gloss: heaven-LOC d.
-Translation: `and let them be for lights in the firmament of the heaven
-to give light upon the earth'
+\begin{reviewexample}{ex:loc-ah-2}{}
+\reviewobjectline{leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi.}
+\begin{tabular}[t]{@{}l@{}}
+vantung-ah \\
+heaven-\textsc{loc} \\
+\end{tabular}
+\reviewtranslation{‘and let them be for lights in the firmament of the heaven to give light upon the earth’}
+\end{reviewexample}
 
 The first example shows especially clearly that \texttt{-ah} often
 completes a larger relational expression rather than attaching only to a
@@ -1060,19 +1161,21 @@ not yet print a dedicated \texttt{-a} example.
 \texttt{-panin}}{Source marking: -pan and -panin}}\label{source-marking--pan-and--panin}
 
 Zam Ngaih Cing describes \texttt{-pan} as the ablative marker indicating
-source or point of departure {[}@zamngaihcing2017, sec. 3.3.3.3.5{]}.
+source or point of departure \citep[sec.~3.3.3.3.5]{zamngaihcing2017}.
 Comparative Sukte has a cognate \texttt{-pan}, which strengthens the
-historical plausibility of the analysis {[}@sukte\_grammar{]}. Henderson
+historical plausibility of the analysis \citep{sukte_grammar}. Henderson
 does not present an ablative category in the modern sense, but the
 source-marking behavior is nevertheless compatible with her structural
-account of post-nominal particles {[}@henderson1965, 104{]}.
+account of post-nominal particles \citep[104]{henderson1965}.
 
-(@ex:pan) a. Tedim: Tua ahih manin hih thukhamte lakpan a neupente khat
-bek nangawn zuikha loin, midangte in zong a zuih loh nadingin a gen mite
-pen vantung ki-ukna sungah mi neupen hi ding uh hi. b. Segmentation:
-lak-pan c. Gloss: midst-ABL d. Translation: `Whosoever therefore shall
-break one of these least commandments, and shall teach men so, he shall
-be called the least in the kingdom of heaven.'
+\begin{reviewexample}{ex:pan}{}
+\reviewobjectline{Tua ahih manin hih thukhamte lakpan a neupente khat bek nangawn zuikha loin, midangte in zong a zuih loh nadingin a gen mite pen vantung ki-ukna sungah mi neupen hi ding uh hi.}
+\begin{tabular}[t]{@{}l@{}}
+lak-pan \\
+midst-\textsc{abl} \\
+\end{tabular}
+\reviewtranslation{‘Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven.’}
+\end{reviewexample}
 
 This example is worth keeping because it shows a natural source
 construction built on a relator noun. The source relation is real, but
@@ -1089,11 +1192,14 @@ source meaning, but its exact structural status in every occurrence.
 Some examples look like straightforward source phrases, while others
 behave more like extended or tightly fused source-marking expressions.
 
-(@ex:panin) a. Tedim: Topa in Abram kiangah, ``Na gam, na beh, le na
-pa\textquotesingle{} inn panin nang kong lah ding gamah pai in.'' b.
-Segmentation: inn panin c. Gloss: house from d. Translation: `Now the
-LORD had said unto Abram, Get thee out of thy country, and from thy
-kindred, and from thy father's house.'
+\begin{reviewexample}{ex:panin}{}
+\reviewobjectline{Topa in Abram kiangah, “Na gam, na beh, le na pa' inn panin nang kong lah ding gamah pai in.”}
+\begin{tabular}[t]{@{}ll@{}}
+inn & panin \\
+house & from \\
+\end{tabular}
+\reviewtranslation{‘Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house.’}
+\end{reviewexample}
 
 For that reason, a printed grammar can already gloss \texttt{-panin} as
 a source form related to \texttt{-pan}, but should avoid a stronger
@@ -1106,9 +1212,9 @@ structural analysis.
 \texttt{-tawh}}{Comitative -tawh}}\label{comitative--tawh}
 
 The comitative \texttt{-tawh} is described in the literature as the
-marker of accompaniment {[}@zamngaihcing2017, sec. 3.3.3.3.6{]}.
+marker of accompaniment \citep[sec.~3.3.3.3.6]{zamngaihcing2017}.
 Henderson also lists \texttt{tawh} among the post-nominal particles
-{[}@henderson1965, 104{]}. In the biblical corpus, however, the most
+\citep[104]{henderson1965}. In the biblical corpus, however, the most
 accessible examples are semantically broader than simple human
 accompaniment. A printed chapter should therefore distinguish the core
 comitative use from its material and instrumental extensions rather than
@@ -1120,17 +1226,23 @@ treating all examples as equivalent.\footnote{The currently available
   Genesis 2:7 or Genesis 2:21 as if they were ordinary companion
   phrases.}
 
-(@ex:tawh-accompaniment) a. Tedim: Tangvalte\textquotesingle{} neksate
-le kei tawh hong kuan mite\textquotesingle{} tanh dingte lobuang bangmah
-ka la kei ding hi. b. Segmentation: kei tawh c. Gloss: 1SG COM d.
-Translation: `save only that which the young men have eaten, and the
-portion of the men which went with me'
+\begin{reviewexample}{ex:tawh-accompaniment}{}
+\reviewobjectline{Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi.}
+\begin{tabular}[t]{@{}ll@{}}
+kei & tawh \\
+\textsc{1sg} & \textsc{com} \\
+\end{tabular}
+\reviewtranslation{‘save only that which the young men have eaten, and the portion of the men which went with me’}
+\end{reviewexample}
 
-(@ex:tawh-extension) a. Tedim: Topa Pasian in leilak pana leivui tawh
-mihing bawl a, a nak sungah nuntakna hu sang suk hi. b. Segmentation:
-leivui tawh c. Gloss: dust COM d. Translation: `And the LORD God formed
-man of the dust of the ground, and breathed into his nostrils the breath
-of life.'
+\begin{reviewexample}{ex:tawh-extension}{}
+\reviewobjectline{Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu sang suk hi.}
+\begin{tabular}[t]{@{}ll@{}}
+leivui & tawh \\
+dust & \textsc{com} \\
+\end{tabular}
+\reviewtranslation{‘And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.’}
+\end{reviewexample}
 
 Genesis 14:24 illustrates the core accompaniment use well enough for
 print: \texttt{kei\ tawh} marks the men as companions who went with
@@ -1150,9 +1262,9 @@ is not exhausted by a list of case markers. Relator nouns such as
 ablative marking, and they do so at very high frequency in the
 candidate-backed packet. Henderson's structural treatment makes room for
 this by analyzing many such forms in terms of nominal figures rather
-than sharply separated case suffixes {[}@henderson1965, 59{]}. Zam Ngaih
-Cing's case system, meanwhile, makes the semantic contribution of the
-markers clearer {[}@zamngaihcing2017, sec. 3.3.3.3{]}.
+than sharply separated case suffixes \citep[59]{henderson1965}. Zam
+Ngaih Cing's case system, meanwhile, makes the semantic contribution of
+the markers clearer \citep[sec.~3.3.3.3]{zamngaihcing2017}.
 
 For a final chapter, the best solution will probably be to treat the
 system in two layers: first the case markers themselves, then the class
@@ -1190,7 +1302,7 @@ should integrate relator nouns into the same printed discussion.
   dissertation, North-Eastern Hill University, Shillong.
 \end{itemize}
 
-\subsection{Relators / postpositions}\label{relators--postpositions}
+\subsection{Relators / postpositions}\label{relators-postpositions}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_relators\_postpositions\_print\_slice.md}}
@@ -1225,18 +1337,16 @@ The first-slice relator-noun anchors are \texttt{kiang}, \texttt{lak},
 best treated as relational nouns or relational stems that can host
 locative or source marking rather than as simple bare case suffixes.
 
-\texttt{Kiang} is the clearest \textquotesingle beside / near / at the
-side of\textquotesingle{} anchor. \texttt{Lak} is the clearest
-\textquotesingle among / amid / between\textquotesingle{} anchor.
-\texttt{Sung} is the clearest \textquotesingle inside / within /
-among\textquotesingle{} anchor. \texttt{Tung} is usable for
-\textquotesingle on / above / upon\textquotesingle, but it stays
-slightly closer to case-marking territory than the first three anchors
-and should therefore keep an explicit caveat. \texttt{Pualam} is usable
-for \textquotesingle outside / exterior side\textquotesingle, but it
-should remain the most cautious positive relator-noun anchor in the
-first slice because it still looks somewhat more lexical-nominal than
-\texttt{kiang}, \texttt{lak}, \texttt{sung}, or \texttt{tung}.
+\texttt{Kiang} is the clearest `beside / near / at the side of' anchor.
+\texttt{Lak} is the clearest `among / amid / between' anchor.
+\texttt{Sung} is the clearest `inside / within / among' anchor.
+\texttt{Tung} is usable for `on / above / upon', but it stays slightly
+closer to case-marking territory than the first three anchors and should
+therefore keep an explicit caveat. \texttt{Pualam} is usable for
+`outside / exterior side', but it should remain the most cautious
+positive relator-noun anchor in the first slice because it still looks
+somewhat more lexical-nominal than \texttt{kiang}, \texttt{lak},
+\texttt{sung}, or \texttt{tung}.
 
 The point of this slice is not to deny the role of \texttt{-ah} or
 \texttt{-pan}. It is to keep visible that forms such as \texttt{kiang},
@@ -1355,13 +1465,23 @@ phrases}\label{basic-cardinal-counting-phrases}
 The cleanest basic counting phrases in the current packet are Genesis
 11:10 and Genesis 7:10.
 
-(@ex:num-kum-nih) a. Tedim: kum nih b. Segmentation: kum \textbar{} nih
-c. Gloss: year \textbar{} two d. Translation: \textquotesingle two
-years\textquotesingle{}
+\begin{reviewexample}{ex:num-kum-nih}{}
+\reviewobjectline{kum nih}
+\begin{tabular}[t]{@{}lll@{}}
+kum & | & nih \\
+year & | & two \\
+\end{tabular}
+\reviewtranslation{'two years'}
+\end{reviewexample}
 
-(@ex:num-ni-sagih) a. Tedim: ni sagih b. Segmentation: ni \textbar{}
-sagih c. Gloss: day \textbar{} seven d. Translation:
-\textquotesingle seven days\textquotesingle{}
+\begin{reviewexample}{ex:num-ni-sagih}{}
+\reviewobjectline{ni sagih}
+\begin{tabular}[t]{@{}lll@{}}
+ni & | & sagih \\
+day & | & seven \\
+\end{tabular}
+\reviewtranslation{'seven days'}
+\end{reviewexample}
 
 These are clean post-nominal counting phrases. The printed claim should
 stay modest: they show candidate-backed noun-plus-numeral counting, not
@@ -1372,9 +1492,14 @@ language.
 
 Genesis 5:9 gives the clearest current compound-ten example:
 
-(@ex:num-sawmkua) a. Tedim: kum sawmkua b. Segmentation: kum \textbar{}
-sawm-kua c. Gloss: year \textbar{} ten-nine d. Translation:
-\textquotesingle ninety years\textquotesingle{}
+\begin{reviewexample}{ex:num-sawmkua}{}
+\reviewobjectline{kum sawmkua}
+\begin{tabular}[t]{@{}lll@{}}
+kum & | & sawm-kua \\
+year & | & ten-nine \\
+\end{tabular}
+\reviewtranslation{'ninety years'}
+\end{reviewexample}
 
 \texttt{Sawmkua} matters for two reasons. First, it shows a compound-ten
 structure. Second, it is the strongest current numeral-side control for
@@ -1388,24 +1513,35 @@ than being silently normalized away.
 
 Genesis 7:11 supplies the current ordinal anchor:
 
-(@ex:num-nihna) a. Tedim: nihna b. Segmentation: nih-na c. Gloss:
-two-NMLZ d. Translation: \textquotesingle second\textquotesingle{}
+\begin{reviewexample}{ex:num-nihna}{}
+\reviewobjectline{nihna}
+\begin{tabular}[t]{@{}l@{}}
+nih-na \\
+two-\textsc{nmlz} \\
+\end{tabular}
+\reviewtranslation{'second'}
+\end{reviewexample}
 
 \texttt{Nihna} is the current candidate-backed ordinal example. The
-generated report mentions \texttt{masa}
-\textquotesingle first\textquotesingle, but \texttt{masa} is not
-promoted in this slice, and this section does not attempt a full ordinal
-paradigm. The dossier also records that \texttt{pos\_span\ =\ N} in the
-export; that is a label caveat, not a reason to reject the ordinal
-analysis.
+generated report mentions \texttt{masa} `first', but \texttt{masa} is
+not promoted in this slice, and this section does not attempt a full
+ordinal paradigm. The dossier also records that \texttt{pos\_span\ =\ N}
+in the export; that is a label caveat, not a reason to reject the
+ordinal analysis.
 
 \subsubsection{Occurrence counting / multiplicative
-form}\label{occurrence-counting--multiplicative-form}
+form}\label{occurrence-counting-multiplicative-form}
 
 Genesis 31:7 keeps one compact occurrence-counting form in view:
 
-(@ex:num-sawmvei) a. Tedim: sawmvei b. Segmentation: sawm-vei c. Gloss:
-ten-times d. Translation: \textquotesingle ten times\textquotesingle{}
+\begin{reviewexample}{ex:num-sawmvei}{}
+\reviewobjectline{sawmvei}
+\begin{tabular}[t]{@{}l@{}}
+sawm-vei \\
+ten-times \\
+\end{tabular}
+\reviewtranslation{'ten times'}
+\end{reviewexample}
 
 The generated report paraphrases this as \texttt{vei\ sawm}, but the
 candidate layer uses export-backed \texttt{sawmvei}, and that fused form
@@ -1418,12 +1554,15 @@ classifier system.
 Genesis 5:27 gives one usable large-number phrase, but only with
 explicit caveats:
 
-(@ex:num-large) a. Tedim: kum zakua le kum sawmguk le kua b.
-Segmentation: kum \textbar{} za-kua \textbar{} le \textbar{} kum
-\textbar{} sawm-guk \textbar{} le \textbar{} kua c. Gloss: year
-\textbar{} hundred-nine \textbar{} and \textbar{} year \textbar{}
-ten-six \textbar{} and \textbar{} nine {[}export: who{]} d. Translation:
-\textquotesingle nine hundred sixty and nine years\textquotesingle{}
+\begin{reviewexample}{ex:num-large}{}
+\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:num-large; showing padded alignment.]}
+\reviewobjectline{kum zakua le kum sawmguk le kua}
+\begin{tabular}[t]{@{}lllllllllllllll@{}}
+kum & | & za-kua & | & le & | & kum & | & sawm-guk & | & le & | & kua &  &  \\
+year & | & hundred-nine & | & and & | & year & | & ten-six & | & and & | & nine & [export: & who] \\
+\end{tabular}
+\reviewtranslation{'nine hundred sixty and nine years'}
+\end{reviewexample}
 
 This construction is numeral, not interrogative. The dossier is
 nevertheless explicit about the export caveats: the analyzer compresses
@@ -1457,12 +1596,17 @@ boundary}{Khat and the numeral/indefinite boundary}}\label{khat-and-the-numerali
 
 Genesis 32:24 gives a useful but boundary-marked example:
 
-(@ex:num-mi-khat) a. Tedim: mi khat b. Segmentation: mi \textbar{} khat
-c. Gloss: person \textbar{} one d. Translation: \textquotesingle a
-man\textquotesingle{} / \textquotesingle one person\textquotesingle{}
+\begin{reviewexample}{ex:num-mi-khat}{}
+\reviewobjectline{mi khat}
+\begin{tabular}[t]{@{}lll@{}}
+mi & | & khat \\
+person & | & one \\
+\end{tabular}
+\reviewtranslation{'a man' / 'one person'}
+\end{reviewexample}
 
 \texttt{Mi\ khat} is analyzer-backed and worth keeping visible, but its
-English context "a man" shows why it should not be treated as an
+English context ``a man'' shows why it should not be treated as an
 uncomplicated bare numeral \texttt{one} example. The packet therefore
 keeps it as numeral/indefinite boundary evidence and does not start a
 quantifiers retrofit here.
@@ -1470,13 +1614,12 @@ quantifiers retrofit here.
 \subsubsection{Distributive reduplication
 deferred}\label{distributive-reduplication-deferred}
 
-The generated report claims distributive \texttt{sagih\ sagih} for
-\textquotesingle by sevens\textquotesingle, but the candidate layer
-keeps that material deferred. In the current analyzer export window,
-Genesis 7:2 preserves only a single \texttt{sagih} token. Distributive
-reduplication therefore remains not print-ready in this slice, and
-\texttt{sagih\ sagih} should not be printed as though it were already
-analyzer-backed.
+The generated report claims distributive \texttt{sagih\ sagih} for `by
+sevens', but the candidate layer keeps that material deferred. In the
+current analyzer export window, Genesis 7:2 preserves only a single
+\texttt{sagih} token. Distributive reduplication therefore remains not
+print-ready in this slice, and \texttt{sagih\ sagih} should not be
+printed as though it were already analyzer-backed.
 
 \subsubsection{Editorial summary}\label{editorial-summary-3}
 
@@ -1536,12 +1679,14 @@ quantity row. \texttt{Zaw} and \texttt{mahmah} are edge rows only, and
 
 Genesis 2:1 supplies the current candidate-backed universal anchor:
 
-(@ex:quant-khempeuh) a. Tedim: vantung leitung le a sunga omte khempeuh
-b. Segmentation: van-tung \textbar{} lei-tung \textbar{} le \textbar{} a
-\textbar{} sung-a \textbar{} om-te \textbar{} khempeuh c. Gloss: sky-on
-\textbar{} land-on \textbar{} and \textbar{} 3SG \textbar{} inside-3SG
-\textbar{} exist-PL \textbar{} all d. Translation: \textquotesingle the
-heavens and the earth, and all that was in them\textquotesingle{}
+\begin{reviewexample}{ex:quant-khempeuh}{}
+\reviewobjectline{vantung leitung le a sunga omte khempeuh}
+\begin{tabular}[t]{@{}lllllllllllll@{}}
+van-tung & | & lei-tung & | & le & | & a & | & sung-a & | & om-te & | & khempeuh \\
+sky-on & | & land-on & | & and & | & \textsc{3sg} & | & inside-\textsc{3sg} & | & exist-\textsc{pl} & | & all \\
+\end{tabular}
+\reviewtranslation{'the heavens and the earth, and all that was in them'}
+\end{reviewexample}
 
 \texttt{Khempeuh} is the current accepted universal anchor. The example
 is a scoped noun phrase, not a license for raw \texttt{khempeuh}
@@ -1550,29 +1695,39 @@ should therefore stay modest: the current packet supports one clear
 universal anchor, not a complete universal-quantifier system.
 
 \subsubsection{\texorpdfstring{Partitive / existential
-\texttt{pawlkhat}}{Partitive / existential pawlkhat}}\label{partitive--existential-pawlkhat}
+\texttt{pawlkhat}}{Partitive / existential pawlkhat}}\label{partitive-existential-pawlkhat}
 
 Genesis 32:8 gives the current accepted-with-caveat \texttt{pawlkhat}
 row:
 
-(@ex:quant-pawlkhat) a. Tedim: pawlkhat b. Segmentation: pawl-khat c.
-Gloss: some-one d. Translation: \textquotesingle one
-group\textquotesingle{} / \textquotesingle one company\textquotesingle{}
+\begin{reviewexample}{ex:quant-pawlkhat}{}
+\reviewobjectline{pawlkhat}
+\begin{tabular}[t]{@{}l@{}}
+pawl-khat \\
+some-one \\
+\end{tabular}
+\reviewtranslation{'one group' / 'one company'}
+\end{reviewexample}
 
 \texttt{Pawlkhat} is useful, but the context is partitive or alternative
-grouping ("one company ... the other company"), not an uncomplicated
-bare \texttt{some}. The dossier is also explicit that the noisy opening
-\texttt{Pawlkhatah} token should not be substituted for the clean later
-\texttt{pawlkhat} control token.
+grouping (``one company \ldots{} the other company''), not an
+uncomplicated bare \texttt{some}. The dossier is also explicit that the
+noisy opening \texttt{Pawlkhatah} token should not be substituted for
+the clean later \texttt{pawlkhat} control token.
 
 \subsubsection{\texorpdfstring{\texttt{Khat} and the numeral/indefinite
 boundary}{Khat and the numeral/indefinite boundary}}\label{khat-and-the-numeralindefinite-boundary-1}
 
 Genesis 32:24 provides the current boundary row:
 
-(@ex:quant-mi-khat) a. Tedim: mi khat b. Segmentation: mi \textbar{}
-khat c. Gloss: person \textbar{} one d. Translation: \textquotesingle a
-man\textquotesingle{} / \textquotesingle one person\textquotesingle{}
+\begin{reviewexample}{ex:quant-mi-khat}{}
+\reviewobjectline{mi khat}
+\begin{tabular}[t]{@{}lll@{}}
+mi & | & khat \\
+person & | & one \\
+\end{tabular}
+\reviewtranslation{'a man' / 'one person'}
+\end{reviewexample}
 
 \texttt{Mi\ khat} is reused from the numerals packet as boundary
 evidence. It prevents quantifiers from silently absorbing numeral
@@ -1586,16 +1741,23 @@ overlap}\label{negative-quantifiers-and-negation-overlap}
 The current packet prints \texttt{kuamah} and \texttt{bangmah} only in
 negative-licensed clauses.
 
-(@ex:quant-kuamah) a. Tedim: kuamah mu lo b. Segmentation: kuamah
-\textbar{} mu \textbar{} lo c. Gloss: nobody \textbar{} see.I \textbar{}
-NEG d. Translation: \textquotesingle he saw nobody\textquotesingle{} /
-\textquotesingle he saw no man\textquotesingle{}
+\begin{reviewexample}{ex:quant-kuamah}{}
+\reviewobjectline{kuamah mu lo}
+\begin{tabular}[t]{@{}lllll@{}}
+kuamah & | & mu & | & lo \\
+nobody & | & see.\textsc{i} & | & \textsc{neg} \\
+\end{tabular}
+\reviewtranslation{'he saw nobody' / 'he saw no man'}
+\end{reviewexample}
 
-(@ex:quant-bangmah-neg) a. Tedim: bangmah om lo hi b. Segmentation:
-bangmah \textbar{} om \textbar{} lo \textbar{} hi c. Gloss: nothing
-\textbar{} exist \textbar{} NEG \textbar{} DECL d. Translation:
-\textquotesingle there is nothing\textquotesingle{} /
-\textquotesingle nothing exists\textquotesingle{}
+\begin{reviewexample}{ex:quant-bangmah-neg}{}
+\reviewobjectline{bangmah om lo hi}
+\begin{tabular}[t]{@{}lllllll@{}}
+bangmah & | & om & | & lo & | & hi \\
+nothing & | & exist & | & \textsc{neg} & | & \textsc{decl} \\
+\end{tabular}
+\reviewtranslation{'there is nothing' / 'nothing exists'}
+\end{reviewexample}
 
 These rows are accepted with caveat only in negative-licensed contexts.
 This grammar slice should therefore cross-reference, not reopen, the
@@ -1619,14 +1781,18 @@ respects the stabilized interrogatives packet, where bang-family false
 friends had to be handled separately from ordinary question material.
 
 \subsubsection{\texorpdfstring{Degree / quantity
-\texttt{tampi}}{Degree / quantity tampi}}\label{degree--quantity-tampi}
+\texttt{tampi}}{Degree / quantity tampi}}\label{degree-quantity-tampi}
 
 Genesis 17:2 gives the current degree or quantity anchor:
 
-(@ex:quant-tampi) a. Tedim: tampi tak b. Segmentation: tampi \textbar{}
-tak c. Gloss: many \textbar{} truly d. Translation:
-\textquotesingle exceedingly\textquotesingle{} / \textquotesingle very
-many\textquotesingle{}
+\begin{reviewexample}{ex:quant-tampi}{}
+\reviewobjectline{tampi tak}
+\begin{tabular}[t]{@{}lll@{}}
+tampi & | & tak \\
+many & | & truly \\
+\end{tabular}
+\reviewtranslation{'exceedingly' / 'very many'}
+\end{reviewexample}
 
 \texttt{Tampi\ tak} is enough to keep degree or quantity material
 visible in the first slice. It should not, however, launch a full
@@ -1638,14 +1804,23 @@ rows}\label{comparative-and-intensifier-edge-rows}
 The packet keeps one comparative and one intensifier row visible, but
 only as edge material:
 
-(@ex:quant-zaw-edge) a. Tedim: vanglian zaw b. Segmentation: vang-lian
-\textbar{} zaw c. Gloss: power-big \textbar{} more d. Translation:
-\textquotesingle more powerful\textquotesingle{} /
-\textquotesingle mightier\textquotesingle{}
+\begin{reviewexample}{ex:quant-zaw-edge}{}
+\reviewobjectline{vanglian zaw}
+\begin{tabular}[t]{@{}lll@{}}
+vang-lian & | & zaw \\
+power-big & | & more \\
+\end{tabular}
+\reviewtranslation{'more powerful' / 'mightier'}
+\end{reviewexample}
 
-(@ex:quant-mahmah-edge) a. Tedim: hau mahmah b. Segmentation: hau
-\textbar{} mahmah c. Gloss: rich \textbar{} very d. Translation:
-\textquotesingle very rich\textquotesingle{}
+\begin{reviewexample}{ex:quant-mahmah-edge}{}
+\reviewobjectline{hau mahmah}
+\begin{tabular}[t]{@{}lll@{}}
+hau & | & mahmah \\
+rich & | & very \\
+\end{tabular}
+\reviewtranslation{'very rich'}
+\end{reviewexample}
 
 \texttt{Zaw} and \texttt{mahmah} are useful boundary evidence. They are
 not the basis for a full comparison or intensifier chapter in this
@@ -1688,8 +1863,10 @@ into coordinators or sentence-final particles. The next step after this
 grammar slice is the dictionary print slice, while review-note work has
 not yet begun.
 
-\section{3. Predicate structure and verbal
-morphology}\label{3-predicate-structure-and-verbal-morphology}
+\reviewchapterbreak
+
+\section{Predicate structure and verbal
+morphology}\label{predicate-structure-and-verbal-morphology}
 
 \subsection{Stem alternation}\label{stem-alternation}
 
@@ -1718,14 +1895,14 @@ individual verb pairs}, in that order:
 
 Earlier descriptions agree that Tedim has a two-form verbal system, even
 though the terminology differs. Henderson describes Form I and Form II,
-while Zam Ngaih Cing speaks of Stem 1 and Stem 2 {[}@henderson1965;
-@zamngaihcing2017{]}. The present review packet keeps those descriptive
-traditions in view, but it now separates coverage, promotion, and
-quotation safety much more explicitly than the earlier broad analyzer
-table did.
+while Zam Ngaih Cing speaks of Stem 1 and Stem 2
+\citep{henderson1965, zamngaihcing2017}. The present review packet keeps
+those descriptive traditions in view, but it now separates coverage,
+promotion, and quotation safety much more explicitly than the earlier
+broad analyzer table did.
 
 \paragraph{The Form I / Form II
-contrast}\label{the-form-i--form-ii-contrast}
+contrast}\label{the-form-i-form-ii-contrast}
 
 The opening section of the eventual grammar should introduce the system
 with the strongest lexical pairs, not with the widest possible
@@ -2135,7 +2312,7 @@ packet-shaped.{]}
 of the evidence base, but it has not yet been converted into a
 review-note-stage packet with an assembled grammar slice.
 
-\subsection{Prefix / agreement}\label{prefix--agreement}
+\subsection{Prefix / agreement}\label{prefix-agreement}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_prefix\_agreement\_print\_slice.md}}
@@ -2444,7 +2621,7 @@ sub-scope should be \texttt{mu\ /\ muh} as a labile or stem-alternation
 boundary packet, but not in this commit.
 
 \subsection{VP structure / suffix
-stacking}\label{vp-structure--suffix-stacking}
+stacking}\label{vp-structure-suffix-stacking}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_vp\_structure\_stacking\_print\_slice.md}}
@@ -2582,7 +2759,7 @@ The next substantive packet after this narrow constructional slice
 should therefore be derivation/valency candidate scoping rather than a
 broader VP rewrite.
 
-\subsection{TAM / aspect / modal}\label{tam--aspect--modal}
+\subsection{TAM / aspect / modal}\label{tam-aspect-modal}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_tam\_print\_slice.md}}
@@ -2609,9 +2786,8 @@ anchors}\label{experiential-and-habitual-anchors}
 
 \texttt{Paingei} (\texttt{pai-ngei} -\textgreater{} \texttt{go-EXP}) is
 the current experiential anchor. It supports the narrow claim that
-\texttt{-ngei} can mark experiential meaning such as
-\textquotesingle have V-ed before\textquotesingle{} when it stays tied
-to a compact verbal host.
+\texttt{-ngei} can mark experiential meaning such as `have V-ed before'
+when it stays tied to a compact verbal host.
 
 \texttt{Neigige} (\texttt{nei-gige} -\textgreater{} \texttt{have-HAB})
 is the current habitual anchor. It supports a modest print claim that
@@ -2637,19 +2813,18 @@ material such as \texttt{mangngilh\ ta\ hi} outside the core TAM
 evidence.
 
 \texttt{Bawlzo} (\texttt{bawl-zo} -\textgreater{} \texttt{make-COMPL})
-is the current compact completive anchor. It supports a modest
-\textquotesingle finish V-ing\textquotesingle{} or completive reading
-for \texttt{-zo}, but only with the bare-\texttt{zo} and sentence-final
-overlap caveat kept explicit. The slice therefore treats \texttt{bawlzo}
-as usable compact evidence while refusing to turn bare \texttt{zo} into
-default TAM proof.
+is the current compact completive anchor. It supports a modest `finish
+V-ing' or completive reading for \texttt{-zo}, but only with the
+bare-\texttt{zo} and sentence-final overlap caveat kept explicit. The
+slice therefore treats \texttt{bawlzo} as usable compact evidence while
+refusing to turn bare \texttt{zo} into default TAM proof.
 
 \texttt{Hongpaikik} (\texttt{hong-pai-kik} -\textgreater{}
 \texttt{3→1-go-ITER}) is the current iterative anchor. It is usable as
-iterative or \textquotesingle again\textquotesingle{} evidence, but it
-should not become a motion/return chapter. The first slice keeps
-\texttt{-kik} narrow and construction-backed rather than expanding it
-into every return- or motion-flavored verbal sequence.
+iterative or `again' evidence, but it should not become a motion/return
+chapter. The first slice keeps \texttt{-kik} narrow and
+construction-backed rather than expanding it into every return- or
+motion-flavored verbal sequence.
 
 \subsubsection{Compact modal anchors}\label{compact-modal-anchors}
 
@@ -2663,11 +2838,10 @@ clause-linking material.
 
 \texttt{Bawlthei} (\texttt{bawl-thei} -\textgreater{}
 \texttt{make-ABIL}) is the current compact abilitative anchor. It
-supports a narrow \textquotesingle can / be able\textquotesingle{}
-reading for \texttt{-thei}, but only with the negation/irrealis-stack
-caveat kept explicit. Negative-modal strings such as
-\texttt{khiathei\ ding\ om\ lo} remain overlap controls rather than core
-evidence for this first slice.
+supports a narrow `can / be able' reading for \texttt{-thei}, but only
+with the negation/irrealis-stack caveat kept explicit. Negative-modal
+strings such as \texttt{khiathei\ ding\ om\ lo} remain overlap controls
+rather than core evidence for this first slice.
 
 \subsubsection{Deferred and overlap
 material}\label{deferred-and-overlap-material}
@@ -2755,8 +2929,14 @@ verbal suffix in the current packet. \texttt{-lut}, \texttt{-phei},
 
 Genesis 2:5 supplies the cleanest current outward anchor:
 
-(@ex:dir-khia-pokhia) a. Tedim: pokhia b. Segmentation: po-khia c.
-Gloss: grow-out d. Translation: \textquotesingle grew\textquotesingle{}
+\begin{reviewexample}{ex:dir-khia-pokhia}{}
+\reviewobjectline{pokhia}
+\begin{tabular}[t]{@{}l@{}}
+po-khia \\
+grow-out \\
+\end{tabular}
+\reviewtranslation{'grew'}
+\end{reviewexample}
 
 \texttt{Pokhia} is the cleanest current outward \texttt{-khia} anchor.
 It supports a modest print claim that \texttt{-khia} can mark outward
@@ -2771,9 +2951,14 @@ That claim must stay narrow. The row does \textbf{not} license raw
 
 Deuteronomy 9:4 supplies the current away anchor:
 
-(@ex:dir-khiat-nawhkhiat) a. Tedim: nawhkhiat b. Segmentation:
-nawh-khiat c. Gloss: hurry-away d. Translation: \textquotesingle cast
-them out\textquotesingle{}
+\begin{reviewexample}{ex:dir-khiat-nawhkhiat}{}
+\reviewobjectline{nawhkhiat}
+\begin{tabular}[t]{@{}l@{}}
+nawh-khiat \\
+hurry-away \\
+\end{tabular}
+\reviewtranslation{'cast them out'}
+\end{reviewexample}
 
 \texttt{Nawhkhiat} is the current compact away \texttt{-khiat} anchor.
 It is accepted with caveat because the export still labels the selected
@@ -2787,9 +2972,14 @@ claim.
 
 Exodus 14:13 then keeps nominalized boundary material visible:
 
-(@ex:dir-khiatna-hotkhiatna) a. Tedim: hotkhiatna b. Segmentation:
-hot-khiat-na c. Gloss: save-away-NMLZ d. Translation:
-\textquotesingle salvation\textquotesingle{}
+\begin{reviewexample}{ex:dir-khiatna-hotkhiatna}{}
+\reviewobjectline{hotkhiatna}
+\begin{tabular}[t]{@{}l@{}}
+hot-khiat-na \\
+save-away-\textsc{nmlz} \\
+\end{tabular}
+\reviewtranslation{'salvation'}
+\end{reviewexample}
 
 \texttt{Hotkhiatna} keeps \texttt{-khiat-na} visible in the packet. It
 is nominalized boundary material and should not be treated as identical
@@ -2801,13 +2991,18 @@ overlap}{Upward -toh and comitative/accompany overlap}}\label{upward--toh-and-co
 
 Numbers 9:17 supplies the current upward anchor:
 
-(@ex:dir-toh-kilaktoh) a. Tedim: kilaktoh b. Segmentation: ki-lak-toh c.
-Gloss: REFL-take-UP d. Translation: \textquotesingle was taken
-up\textquotesingle{}
+\begin{reviewexample}{ex:dir-toh-kilaktoh}{}
+\reviewobjectline{kilaktoh}
+\begin{tabular}[t]{@{}l@{}}
+ki-lak-toh \\
+\textsc{refl}-take-\textsc{up} \\
+\end{tabular}
+\reviewtranslation{'was taken up'}
+\end{reviewexample}
 
 \texttt{Kilaktoh} is the current upward \texttt{-toh} anchor. It is
-usable only with the packet\textquotesingle s polysemy caveat: this row
-supports upward \texttt{-toh}, but it does not license a raw equation of
+usable only with the packet's polysemy caveat: this row supports upward
+\texttt{-toh}, but it does not license a raw equation of
 \texttt{-toh\ =\ UP}.
 
 Blocked control:
@@ -2825,10 +3020,14 @@ therefore be paired with this explicit caveat.
 Deuteronomy 32:50 also keeps nominalized \texttt{-toh-na} material
 visible:
 
-(@ex:dir-tohna-kahtohna) a. Tedim: kahtohna b. Segmentation: kah-toh-na
-c. Gloss: climb-up-NMLZ d. Translation: \textquotesingle the mount
-whither thou goest up\textquotesingle{} / \textquotesingle going
-up\textquotesingle{}
+\begin{reviewexample}{ex:dir-tohna-kahtohna}{}
+\reviewobjectline{kahtohna}
+\begin{tabular}[t]{@{}l@{}}
+kah-toh-na \\
+climb-up-\textsc{nmlz} \\
+\end{tabular}
+\reviewtranslation{'the mount whither thou goest up' / 'going up'}
+\end{reviewexample}
 
 \texttt{Kahtohna} keeps \texttt{-toh-na} visible, but it is nominalized
 boundary material rather than a simple finite directional predicate.
@@ -2838,9 +3037,14 @@ boundary material rather than a simple finite directional predicate.
 
 Genesis 30:9 keeps \texttt{-lam} visible:
 
-(@ex:dir-lam-tawplam) a. Tedim: tawplam b. Segmentation: tawp-lam c.
-Gloss: end-TOWARD d. Translation: \textquotesingle left
-off\textquotesingle{} / \textquotesingle at the end\textquotesingle{}
+\begin{reviewexample}{ex:dir-lam-tawplam}{}
+\reviewobjectline{tawplam}
+\begin{tabular}[t]{@{}l@{}}
+tawp-lam \\
+end-\textsc{toward} \\
+\end{tabular}
+\reviewtranslation{'left off' / 'at the end'}
+\end{reviewexample}
 
 \texttt{Tawplam} keeps \texttt{-lam} visible, but the export profile
 remains nominal (\texttt{tawp} / \texttt{N}). The safest present
@@ -2855,9 +3059,14 @@ simple verbal directional.
 
 Ezra 9:9 supplies the current cautious toward row:
 
-(@ex:dir-sawn-piasawn) a. Tedim: piasawn b. Segmentation: pia-sawn c.
-Gloss: give-toward d. Translation: \textquotesingle give
-us\textquotesingle{} / \textquotesingle extend to us\textquotesingle{}
+\begin{reviewexample}{ex:dir-sawn-piasawn}{}
+\reviewobjectline{piasawn}
+\begin{tabular}[t]{@{}l@{}}
+pia-sawn \\
+give-toward \\
+\end{tabular}
+\reviewtranslation{'give us' / 'extend to us'}
+\end{reviewexample}
 
 \texttt{Piasawn} is the current cautious toward \texttt{-sawn} row. It
 is more useful than kinship-heavy or nominal-looking rows for this
@@ -2870,8 +3079,14 @@ kinship-heavy \texttt{-sawn} material.
 
 Genesis 11:5 supplies the first corpus-backed downward row:
 
-(@ex:dir-suk-paisuk) a. Tedim: paisuk b. Segmentation: pai-suk c. Gloss:
-go-DOWN d. Translation: \textquotesingle came down\textquotesingle{}
+\begin{reviewexample}{ex:dir-suk-paisuk}{}
+\reviewobjectline{paisuk}
+\begin{tabular}[t]{@{}l@{}}
+pai-suk \\
+go-\textsc{down} \\
+\end{tabular}
+\reviewtranslation{'came down'}
+\end{reviewexample}
 
 \texttt{Paisuk} gives the packet a corpus-backed downward \texttt{-suk}
 row. Analyzer tests also support \texttt{-suk}, but print prose should
@@ -2930,7 +3145,7 @@ The next step after this grammar slice is the dictionary print slice at
 \texttt{output/publication\_review/dictionary\_directionals\_print\_slice.md}.
 Dictionary and review-note work have not yet begun.
 
-\subsection{Derivation / valency}\label{derivation--valency}
+\subsection{Derivation / valency}\label{derivation-valency}
 
 \emph{Source slice:
 \texttt{output/publication\_review/grammar\_derivation\_valency\_print\_slice.md}}
@@ -2987,7 +3202,7 @@ generalize over every \texttt{-sak} form in the reports before saying
 that a productive causative use is visible.
 
 \subsubsection{\texorpdfstring{Benefactive / applicative-like
-\texttt{-sak}}{Benefactive / applicative-like -sak}}\label{benefactive--applicative-like--sak}
+\texttt{-sak}}{Benefactive / applicative-like -sak}}\label{benefactive-applicative-like--sak}
 
 \texttt{muhsak} is the safest benefactive or applicative-like split row
 in the current packet. The candidate layer keeps it distinct from the
@@ -3286,7 +3501,7 @@ broadening into a full complex-sentence chapter or a full inventory of
 all clause-linkage constructions.
 
 \subsubsection{Clause-bound purposive / irrealis overlap:
-dingin}\label{clause-bound-purposive--irrealis-overlap-dingin}
+dingin}\label{clause-bound-purposive-irrealis-overlap-dingin}
 
 \texttt{Dingin} is relevant to clause linkage because the reports
 support purposive or clause-bound irrealis use, but it remains partly
@@ -3383,8 +3598,10 @@ notes and human review, the next sub-scope should be a separate
 switch-reference or relative-clause candidate expansion rather than a
 dictionary layer, but not in this commit.
 
-\section{4. Clause type, discourse-facing material, and expressive
-morphology}\label{4-clause-type-discourse-facing-material-and-expressive-morphology}
+\reviewchapterbreak
+
+\section{Clause type, discourse-facing material, and expressive
+morphology}\label{clause-type-discourse-facing-material-and-expressive-morphology}
 
 \subsection{Negation}\label{negation}
 
@@ -3408,8 +3625,8 @@ negation cannot be reduced to \texttt{lo} alone. Henderson foregrounds
 \texttt{-kei}, including prohibitive uses, while Zam Ngaih Cing
 explicitly describes a contrast between \texttt{-kei} and
 \texttt{-lou/-louh} and links the latter to stem-sensitive or dependent
-environments {[}@henderson1965; @zamngaihcing2017{]}. The safest summary
-is therefore not "Tedim negation = \texttt{lo}", but rather that the
+environments \citep{henderson1965, zamngaihcing2017}. The safest summary
+is therefore not ``Tedim negation = \texttt{lo}'', but rather that the
 present corpus supports a three-part treatment: ordinary clause-level
 negation with \texttt{lo}, dependent or derived negation with
 \texttt{loh}, and \texttt{kei} as a central negator in prohibitives and
@@ -3426,11 +3643,14 @@ combinations such as \texttt{V\ lo\ ding}. That does not make it the
 whole negation system, but it does make it the most transparent starting
 point.
 
-(@ex:neg-lo) Genesis 4:5 a. Tedim: ahih hangin Kain le ama piakna thusim
-lo hi. Tua ahih ciangin Kain heh mahmah a, a mai sia hi. b.
-Segmentation: thusim lo hi c. Gloss: accept NEG DECL d. Translation:
-"but unto Cain and to his offering he had not respect. And Cain was very
-wroth, and his countenance fell."
+\begin{reviewexample}{ex:neg-lo}{Genesis 4:5}
+\reviewobjectline{ahih hangin Kain le ama piakna thusim lo hi. Tua ahih ciangin Kain heh mahmah a, a mai sia hi.}
+\begin{tabular}[t]{@{}lll@{}}
+thusim & lo & hi \\
+accept & \textsc{neg} & \textsc{decl} \\
+\end{tabular}
+\reviewtranslation{"but unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell."}
+\end{reviewexample}
 
 Genesis 4:5 is a good central example because it shows exactly the
 clause type a reader expects from a first negation section: a verbal
@@ -3441,10 +3661,10 @@ more compact predicative clause, and existential patterns such as
 
 \texttt{V\ lo\ uh} is a real and common surface string, but it is not
 automatically prohibitive. Genesis 2:25 \texttt{maizum\ lo\ uh\ hi}
-means "they were not ashamed" and is simply an ordinary plural negative
-predicate. Similar plural negatives occur elsewhere with no imperative
-force. It is better treated as an ordinary clausal negative pattern than
-as the defining prohibitive construction.
+means ``they were not ashamed'' and is simply an ordinary plural
+negative predicate. Similar plural negatives occur elsewhere with no
+imperative force. It is better treated as an ordinary clausal negative
+pattern than as the defining prohibitive construction.
 
 \subsubsection{\texorpdfstring{Dependent and derived negation with
 \texttt{loh}}{Dependent and derived negation with loh}}\label{dependent-and-derived-negation-with-loh}
@@ -3453,15 +3673,17 @@ as the defining prohibitive construction.
 \texttt{lo}. In the current Bible corpus it clusters in dependent,
 purposive, and derived environments such as \texttt{...\ loh\ dinga},
 \texttt{...\ loh\ dingin}, and \texttt{...\ loh\ nadingin}. The safest
-label is therefore something like "dependent or derived negative form",
-not just "another way to spell \texttt{lo}".
+label is therefore something like ``dependent or derived negative
+form'', not just ``another way to spell \texttt{lo}''.
 
-(@ex:neg-loh) Genesis 3:11 a. Tedim: Amah in, ``Na guaktanga na omna kua
-in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi
-hiam?'' ci hi. b. Segmentation: nek loh ding-a c. Gloss: eat.II NEG.DEP
-IRR-ERG d. Translation: "And he said, Who told thee that thou wast
-naked? Hast thou eaten of the tree, whereof I commanded thee that thou
-shouldest not eat?"
+\begin{reviewexample}{ex:neg-loh}{Genesis 3:11}
+\reviewobjectline{Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi hiam?” ci hi.}
+\begin{tabular}[t]{@{}lll@{}}
+nek & loh & ding-a \\
+eat.\textsc{ii} & \textsc{neg}.\textsc{dep} & \textsc{irr}-\textsc{erg} \\
+\end{tabular}
+\reviewtranslation{"And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?"}
+\end{reviewexample}
 
 Genesis 3:11 is especially useful because \texttt{loh} is not just
 attached to a bare verb in isolation. It appears inside a dependent
@@ -3483,14 +3705,14 @@ those prohibitives are among the cleanest manually checked negative
 examples available. This alone is enough to show why the negation system
 cannot be flattened to \texttt{lo}.
 
-(@ex:neg-kei) Genesis 22:12 a. Tedim: Amah in, ``Tangvalpa su kei in.
-Ama tungah bangmah hih kei in. Bang hang hiam cih leh nang in Pasian na
-zahtakna tu-in ka thei a, na tapa khat neihsun keima a dingin na humcip
-lohna ka mu hi,'' a ci hi. b. Segmentation: su kei in ... hih kei in c.
-Gloss: strike NEG IMP ... do NEG IMP d. Translation: "And he said, Lay
-not thine hand upon the lad, neither do thou any thing unto him: for now
-I know that thou fearest God, seeing thou hast not withheld thy son,
-thine only son from me."
+\begin{reviewexample}{ex:neg-kei}{Genesis 22:12}
+\reviewobjectline{Amah in, “Tangvalpa su kei in. Ama tungah bangmah hih kei in. Bang hang hiam cih leh nang in Pasian na zahtakna tu-in ka thei a, na tapa khat neihsun keima a dingin na humcip lohna ka mu hi,” a ci hi.}
+\begin{tabular}[t]{@{}lllllll@{}}
+su & kei & in & ... & hih & kei & in \\
+strike & \textsc{neg} & \textsc{imp} & ... & do & \textsc{neg} & \textsc{imp} \\
+\end{tabular}
+\reviewtranslation{"And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me."}
+\end{reviewexample}
 
 Genesis 22:12 gives two clear negative imperatives in the same speech
 turn. Genesis 15:1 \texttt{Lau\ kei\ in}, Genesis 19:17
@@ -3521,7 +3743,7 @@ very readable in Bible prose. Clauses such as Genesis 11:30
 of saying that something is absent, unavailable, or not possessed.
 
 The corpus also supports a neat constructional entry for
-\texttt{nawn\ lo} "no longer, not again". Genesis 8:12
+\texttt{nawn\ lo} ``no longer, not again''. Genesis 8:12
 \texttt{hong\ ciahkik\ nawn\ lo\ hi} is a clean cessative example, and
 Genesis 17:5 \texttt{Na\ min\ Abram\ hi\ nawn\ lo\ ding\ a} shows the
 same construction in a renamed-future environment. This material is
@@ -3535,12 +3757,14 @@ clause-level inability with \texttt{thei\ lo}, while dependent or
 derived negative ability is better represented by \texttt{theih\ loh}
 patterns than by the much rarer exact string \texttt{theih\ lo}.
 
-(@ex:neg-thei-lo) Genesis 27:23 a. Tedim: A khutte in a sanggampa Esau'
-khut bangin mul nei ahih manin amah in thei lo hi. Tua ahih ciangin amah
-in thupha pia dingin kithawi a, b. Segmentation: thei lo hi c. Gloss:
-know NEG DECL d. Translation: "And he discerned him not, because his
-hands were hairy, as his brother Esau\textquotesingle s hands: so he
-blessed him."
+\begin{reviewexample}{ex:neg-thei-lo}{Genesis 27:23}
+\reviewobjectline{A khutte in a sanggampa Esau’ khut bangin mul nei ahih manin amah in thei lo hi. Tua ahih ciangin amah in thupha pia dingin kithawi a,}
+\begin{tabular}[t]{@{}lll@{}}
+thei & lo & hi \\
+know & \textsc{neg} & \textsc{decl} \\
+\end{tabular}
+\reviewtranslation{"And he discerned him not, because his hands were hairy, as his brother Esau's hands: so he blessed him."}
+\end{reviewexample}
 
 Genesis 27:23 is a compact ordinary example: \texttt{thei\ lo\ hi} means
 that recognition or knowledge failed to occur. Genesis 37:4
@@ -3557,14 +3781,17 @@ the dominant form in the current corpus.
 The Bible corpus gives clean negative-polarity material, but only after
 filtering. Raw exact-string counts overgenerate because \texttt{kuamah}
 can occur in non-pronominal strings and \texttt{bangmah} has non-NPI
-uses such as \texttt{tua\ bangmah\ hi-in} "likewise". The discussion
+uses such as \texttt{tua\ bangmah\ hi-in} ``likewise''. The discussion
 here therefore uses only manually checked examples.
 
-(@ex:neg-kuamah) Exodus 2:12 a. Tedim: Amah khuadak kawikawi a, kuamah
-mu lo ahih manin Egypt mipa thatin sehnel sungah a seel hi. b.
-Segmentation: kuamah mu lo c. Gloss: nobody see NEG d. Translation: "And
-he looked this way and that way, and when he saw that there was no man,
-he slew the Egyptian, and hid him in the sand."
+\begin{reviewexample}{ex:neg-kuamah}{Exodus 2:12}
+\reviewobjectline{Amah khuadak kawikawi a, kuamah mu lo ahih manin Egypt mipa thatin sehnel sungah a seel hi.}
+\begin{tabular}[t]{@{}lll@{}}
+kuamah & mu & lo \\
+nobody & see & \textsc{neg} \\
+\end{tabular}
+\reviewtranslation{"And he looked this way and that way, and when he saw that there was no man, he slew the Egyptian, and hid him in the sand."}
+\end{reviewexample}
 
 Exodus 2:12 is a good \texttt{kuamah} example because the NPI is clearly
 licensed by the negative predicate. \texttt{Bangmah} behaves similarly
@@ -3630,15 +3857,14 @@ as the core yes/no pattern represented in this packet. The best print
 anchor is Genesis 24:23, using the attested analyzer-backed clause
 rather than the older generated-report paraphrase.
 
-(@ex:hiam-yes-no) a. Tedim: Na pa inn-ah kote giah nading a awng ding
-hiam b. Segmentation: Na \textbar{} pa\textquotesingle{} \textbar{}
-inn-ah \textbar{} kote\textquotesingle{} \textbar{} giah \textbar{}
-nading \textbar{} a \textbar{} awng \textbar{} ding \textbar{} hiam c.
-Gloss: 2SG \textbar{} male.POSS \textbar{} house-LOC \textbar{}
-1PL.PRO.POSS \textbar{} camp \textbar{} PURP \textbar{} 3SG \textbar{}
-open \textbar{} IRR \textbar{} Q d. Translation: \textquotesingle Is
-there room in thy father\textquotesingle s house for us to
-lodge?\textquotesingle{}
+\begin{reviewexample}{ex:hiam-yes-no}{}
+\reviewobjectline{Na pa inn-ah kote giah nading a awng ding hiam}
+\begin{tabular}[t]{@{}lllllllllllllllllll@{}}
+Na & | & pa' & | & inn-ah & | & kote' & | & giah & | & nading & | & a & | & awng & | & ding & | & hiam \\
+\textsc{2sg} & | & male.\textsc{poss} & | & house-\textsc{loc} & | & \textsc{1pl}.\textsc{pro}.\textsc{poss} & | & camp & | & \textsc{purp} & | & \textsc{3sg} & | & open & | & \textsc{irr} & | & \textsc{q} \\
+\end{tabular}
+\reviewtranslation{'Is there room in thy father's house for us to lodge?'}
+\end{reviewexample}
 
 This printed example should replace the older report paraphrase
 \texttt{Inn-ah\ hong\ tum\ theih\ na\ hiam}. The dossier is explicit
@@ -3650,7 +3876,7 @@ token in the raw analyzer window, but that punctuation artifact should
 not be printed as if it were part of \texttt{hiam} itself.
 
 \subsubsection{\texorpdfstring{WH + \texttt{hiam} content
-questions}{WH + hiam content questions}}\label{wh--hiam-content-questions}
+questions}{WH + hiam content questions}}\label{wh-hiam-content-questions}
 
 The content-question pattern in the current packet is WH +
 \texttt{hiam}. The safest print-facing claim is therefore not that every
@@ -3658,10 +3884,14 @@ WH form behaves identically, but that the present candidate-backed
 examples show \texttt{bang}, \texttt{kua}, \texttt{bangci}, and
 \texttt{banghangin} in this construction.
 
-(@ex:hiam-bang) a. Tedim: Bang ahi hiam? b. Segmentation: Bang
-\textbar{} ahi \textbar{} hiam c. Gloss: what \textbar{} be.3SG
-\textbar{} Q d. Translation: \textquotesingle What is
-it?\textquotesingle{}
+\begin{reviewexample}{ex:hiam-bang}{}
+\reviewobjectline{Bang ahi hiam?}
+\begin{tabular}[t]{@{}lllll@{}}
+Bang & | & ahi & | & hiam \\
+what & | & be.\textsc{3sg} & | & \textsc{q} \\
+\end{tabular}
+\reviewtranslation{'What is it?'}
+\end{reviewexample}
 
 Exodus 16:15 is the current print anchor for \texttt{bang}. The dossier
 keeps one export caveat explicit: the analyzer glosses \texttt{bang}
@@ -3670,10 +3900,14 @@ support the ordinary what-question reading, so the example remains
 usable in print with that caveat recorded in the packet rather than
 foregrounded in the example line.
 
-(@ex:hiam-kua) a. Tedim: Hihte kua ahi hiam? b. Segmentation: Hihte
-\textbar{} kua \textbar{} ahi \textbar{} hiam c. Gloss: these \textbar{}
-who \textbar{} be.3SG \textbar{} Q d. Translation: \textquotesingle Who
-are these?\textquotesingle{}
+\begin{reviewexample}{ex:hiam-kua}{}
+\reviewobjectline{Hihte kua ahi hiam?}
+\begin{tabular}[t]{@{}lllllll@{}}
+Hihte & | & kua & | & ahi & | & hiam \\
+these & | & who & | & be.\textsc{3sg} & | & \textsc{q} \\
+\end{tabular}
+\reviewtranslation{'Who are these?'}
+\end{reviewexample}
 
 Genesis 48:8 is the current print anchor for \texttt{kua\ ...\ hiam},
 and 2 Samuel 22:32 gives additional support for the same pattern
@@ -3682,12 +3916,14 @@ relevant export caveat explicit: \texttt{kua} is tagged as \texttt{NUM}
 in the analyzer output. That label should be treated as an export
 limitation rather than as evidence against the interrogative reading.
 
-(@ex:hiam-bangci) a. Tedim: Bangci a hici gamtat na hi hiam? b.
-Segmentation: Bangci \textbar{} a \textbar{} hi-ci \textbar{} gam-tat
-\textbar{} na \textbar{} hi \textbar{} hiam c. Gloss: how \textbar{} 3SG
-\textbar{} this-say \textbar{} conduct-do \textbar{} 2SG \textbar{} DECL
-\textbar{} Q d. Translation: \textquotesingle How have you acted
-thus?\textquotesingle{}
+\begin{reviewexample}{ex:hiam-bangci}{}
+\reviewobjectline{Bangci a hici gamtat na hi hiam?}
+\begin{tabular}[t]{@{}lllllllllllll@{}}
+Bangci & | & a & | & hi-ci & | & gam-tat & | & na & | & hi & | & hiam \\
+how & | & \textsc{3sg} & | & this-say & | & conduct-do & | & \textsc{2sg} & | & \textsc{decl} & | & \textsc{q} \\
+\end{tabular}
+\reviewtranslation{'How have you acted thus?'}
+\end{reviewexample}
 
 Genesis 3:13 is the cleanest current \texttt{bangci} row, and it matters
 methodologically because it should remain visible as \texttt{bangci},
@@ -3796,9 +4032,14 @@ overlap}{Declarative hi with copula overlap}}\label{declarative-hi-with-copula-o
 
 Genesis 1:13 supplies the current declarative anchor:
 
-(@ex:sfp-ahi-hi) a. Tedim: ahi hi b. Segmentation: ahi \textbar{} hi c.
-Gloss: be.3SG \textbar{} DECL d. Translation: \textquotesingle it
-was\textquotesingle{}
+\begin{reviewexample}{ex:sfp-ahi-hi}{}
+\reviewobjectline{ahi hi}
+\begin{tabular}[t]{@{}lll@{}}
+ahi & | & hi \\
+be.\textsc{3sg} & | & \textsc{decl} \\
+\end{tabular}
+\reviewtranslation{'it was'}
+\end{reviewexample}
 
 This is the current copula-plus-declarative evidence, but only with
 caveat. It is not a bare \texttt{hi} example. The row bundles copular
@@ -3811,11 +4052,14 @@ sentence-final declarative.
 
 Genesis 4:5 keeps one negative-plus-declarative environment visible:
 
-(@ex:sfp-lo-hi) a. Tedim: thusim lo hi b. Segmentation: thusim
-\textbar{} lo \textbar{} hi c. Gloss: parable \textbar{} NEG \textbar{}
-DECL d. Translation: \textquotesingle he had not
-respect\textquotesingle{} / \textquotesingle it was not
-accepted\textquotesingle{}
+\begin{reviewexample}{ex:sfp-lo-hi}{}
+\reviewobjectline{thusim lo hi}
+\begin{tabular}[t]{@{}lllll@{}}
+thusim & | & lo & | & hi \\
+parable & | & \textsc{neg} & | & \textsc{decl} \\
+\end{tabular}
+\reviewtranslation{'he had not respect' / 'it was not accepted'}
+\end{reviewexample}
 
 This row keeps \texttt{lo\ hi} visible as a sentence-final environment,
 but it overlaps the stabilized negation packet. The present slice should
@@ -3843,10 +4087,14 @@ export caveat should remain visible rather than normalized away.
 
 Genesis 1:3 supplies the current usable optative row:
 
-(@ex:sfp-hen) a. Tedim: Khuavak om hen b. Segmentation: Khuavak
-\textbar{} om \textbar{} hen c. Gloss: light \textbar{} exist \textbar{}
-JUSS d. Translation: \textquotesingle Let there be
-light\textquotesingle{}
+\begin{reviewexample}{ex:sfp-hen}{}
+\reviewobjectline{Khuavak om hen}
+\begin{tabular}[t]{@{}lllll@{}}
+Khuavak & | & om & | & hen \\
+light & | & exist & | & \textsc{juss} \\
+\end{tabular}
+\reviewtranslation{'Let there be light'}
+\end{reviewexample}
 
 This is the current usable optative evidence with caveat. The candidate
 is analyzer-backed as \texttt{om\ hen}, so the slice should not replace
@@ -3858,10 +4106,15 @@ this narrow row into a broad mood chapter.
 
 Genesis 6:14 keeps one singular imperative row visible:
 
-(@ex:sfp-in) a. Tedim: teembaw khat bawl in b. Segmentation: teembaw
-\textbar{} khat \textbar{} bawl \textbar{} in c. Gloss: ark \textbar{}
-one \textbar{} make \textbar{} ERG {[}export caveat{]} d. Translation:
-\textquotesingle Make thee an ark\textquotesingle{}
+\begin{reviewexample}{ex:sfp-in}{}
+\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:sfp-in; showing padded alignment.]}
+\reviewobjectline{teembaw khat bawl in}
+\begin{tabular}[t]{@{}lllllllll@{}}
+teembaw & | & khat & | & bawl & | & in &  &  \\
+ark & | & one & | & make & | & \textsc{erg} & [export & caveat] \\
+\end{tabular}
+\reviewtranslation{'Make thee an ark'}
+\end{reviewexample}
 
 This keeps singular imperative \texttt{in} visible, but only with a
 serious case-marker and export caveat: \texttt{in} is exported as
@@ -3871,9 +4124,14 @@ not report-style \texttt{lawng}. The slice should not harvest raw
 
 Psalms 100:1 supplies the cleanest current imperative anchor:
 
-(@ex:sfp-un) a. Tedim: gingsak un b. Segmentation: ging-sak \textbar{}
-un c. Gloss: sound-CAUS \textbar{} IMP.PL d. Translation:
-\textquotesingle Make a joyful noise\textquotesingle{}
+\begin{reviewexample}{ex:sfp-un}{}
+\reviewobjectline{gingsak un}
+\begin{tabular}[t]{@{}lll@{}}
+ging-sak & | & un \\
+sound-\textsc{caus} & | & \textsc{imp}.\textsc{pl} \\
+\end{tabular}
+\reviewtranslation{'Make a joyful noise'}
+\end{reviewexample}
 
 This is the clean plural-imperative anchor. The span should stay tight
 so nearby \texttt{aw} material in the same verse is not absorbed, and
@@ -3985,10 +4243,14 @@ conditional-adversative boundary material, not a simple coordinator.
 
 Genesis 1:1 supplies the clean print-ready anchor:
 
-(@ex:coord-le-np) a. Tedim: vantung le leitung b. Segmentation: van-tung
-\textbar{} le \textbar{} lei-tung c. Gloss: sky-on \textbar{} and
-\textbar{} land-on d. Translation: \textquotesingle heaven and
-earth\textquotesingle{}
+\begin{reviewexample}{ex:coord-le-np}{}
+\reviewobjectline{vantung le leitung}
+\begin{tabular}[t]{@{}lllll@{}}
+van-tung & | & le & | & lei-tung \\
+sky-on & | & and & | & land-on \\
+\end{tabular}
+\reviewtranslation{'heaven and earth'}
+\end{reviewexample}
 
 This is the current safe NP-conjunction anchor. It supports a modest
 print claim that \texttt{le} joins noun phrases.
@@ -4005,23 +4267,24 @@ material}{Leh as conditional or boundary material}}\label{leh-as-conditional-or-
 Genesis 13:9 keeps \texttt{leh} visible only as warning or boundary
 evidence:
 
-(@ex:coord-leh-boundary) a. Tedim: veilam na lak leh kei taklamah ka pai
-ding hi b. Segmentation: vei-lam \textbar{} na \textbar{} lak \textbar{}
-leh \textbar{} kei \textbar{} taklam-ah \textbar{} ka \textbar{} pai
-\textbar{} ding \textbar{} hi c. Gloss: faint-direction \textbar{} 2SG
-\textbar{} among \textbar{} and/if \textbar{} NEG {[}export caveat{]}
-\textbar{} right-LOC \textbar{} 1SG \textbar{} go \textbar{} IRR
-\textbar{} DECL d. Translation: \textquotesingle if thou wilt take the
-left hand, then I will go to the right\textquotesingle{}
+\begin{reviewexample}{ex:coord-leh-boundary}{}
+\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:coord-leh-boundary; showing padded alignment.]}
+\reviewobjectline{veilam na lak leh kei taklamah ka pai ding hi}
+\begin{tabular}[t]{@{}lllllllllllllllllllll@{}}
+vei-lam & | & na & | & lak & | & leh & | & kei & | & taklam-ah & | & ka & | & pai & | & ding & | & hi &  &  \\
+faint-direction & | & \textsc{2sg} & | & among & | & and/if & | & \textsc{neg} & [export & caveat] & | & right-\textsc{loc} & | & \textsc{1sg} & | & go & | & \textsc{irr} & | & \textsc{decl} \\
+\end{tabular}
+\reviewtranslation{'if thou wilt take the left hand, then I will go to the right'}
+\end{reviewexample}
 
 This row keeps \texttt{leh} visible, but not as a clean simple
 clause-conjunction anchor. The wider English context is conditional, so
 future coordinator prose must not flatten conditional \texttt{leh} into
-a simple printed "\texttt{and}" analysis.
+a simple printed ``\texttt{and}'' analysis.
 
 The row also carries an analyzer or export caveat: \texttt{kei} is
 glossed as \texttt{NEG} in the selected window even though the wider
-English context is "I will go." That should be recorded as an export
+English context is ``I will go.'' That should be recorded as an export
 caveat, not used to reopen the pronouns or negation packets.
 
 \subsubsection{\texorpdfstring{Sequential \texttt{a} and
@@ -4030,13 +4293,14 @@ friends}{Sequential a and agreement-a false friends}}\label{sequential-a-and-agr
 
 Genesis 2:10 keeps one possible sequential-linkage window visible:
 
-(@ex:coord-a-sequential-boundary) a. Tedim: luang a tua mun panin gun
-hong kikhenin b. Segmentation: luang \textbar{} a \textbar{} tua
-\textbar{} mun \textbar{} pan-in \textbar{} gun \textbar{} hong
-\textbar{} kikhen-in c. Gloss: flow \textbar{} 3SG \textbar{} that
-\textbar{} place \textbar{} ABL-ERG \textbar{} river \textbar{} 3→1
-\textbar{} separate-CVB d. Translation: \textquotesingle and from thence
-it was parted\textquotesingle{}
+\begin{reviewexample}{ex:coord-a-sequential-boundary}{}
+\reviewobjectline{luang a tua mun panin gun hong kikhenin}
+\begin{tabular}[t]{@{}lllllllllllllll@{}}
+luang & | & a & | & tua & | & mun & | & pan-in & | & gun & | & hong & | & kikhen-in \\
+flow & | & \textsc{3sg} & | & that & | & place & | & \textsc{abl}-\textsc{erg} & | & river & | & \textsc{3→1} & | & separate-\textsc{cvb} \\
+\end{tabular}
+\reviewtranslation{'and from thence it was parted'}
+\end{reviewexample}
 
 This row keeps possible sequential linkage visible, but it is not
 print-ready as a core coordinator example. The analyzer still exports
@@ -4079,9 +4343,14 @@ a later analyzer-backed row is actually located.
 
 Genesis 3:4 supplies the current adversative connector anchor:
 
-(@ex:coord-ahih-hangin) a. Tedim: Ahih hangin b. Segmentation: Ahih
-\textbar{} hang-in c. Gloss: be.3SG.REL \textbar{} because-ERG d.
-Translation: \textquotesingle but\textquotesingle{}
+\begin{reviewexample}{ex:coord-ahih-hangin}{}
+\reviewobjectline{Ahih hangin}
+\begin{tabular}[t]{@{}lll@{}}
+Ahih & | & hang-in \\
+be.\textsc{3sg}.\textsc{rel} & | & because-\textsc{erg} \\
+\end{tabular}
+\reviewtranslation{'but'}
+\end{reviewexample}
 
 This row is usable with caveat as the current adversative connector. It
 remains internally analyzable as \texttt{ahih} + \texttt{hang-in}, so
@@ -4093,11 +4362,14 @@ from this row.
 
 Exodus 12:3 keeps one compact boundary row visible:
 
-(@ex:coord-ahih-kei-leh) a. Tedim: ahih kei leh b. Segmentation: ahih
-\textbar{} kei \textbar{} leh c. Gloss: be.3SG.REL \textbar{} NEG
-\textbar{} and/if d. Translation:
-\textquotesingle otherwise\textquotesingle{} / \textquotesingle if
-not\textquotesingle{}
+\begin{reviewexample}{ex:coord-ahih-kei-leh}{}
+\reviewobjectline{ahih kei leh}
+\begin{tabular}[t]{@{}lllll@{}}
+ahih & | & kei & | & leh \\
+be.\textsc{3sg}.\textsc{rel} & | & \textsc{neg} & | & and/if \\
+\end{tabular}
+\reviewtranslation{'otherwise' / 'if not'}
+\end{reviewexample}
 
 This row is useful as conditional-adversative boundary material, but it
 is not a simple coordinator. It overlaps with negation and conditional
@@ -4292,11 +4564,13 @@ variants, hong-/kong-, \texttt{-sak}, \texttt{-pih}, and related
 cross-packet boundaries, so they remain visible blockers rather than
 assembled review prose.
 
-\section{End state of this preview}\label{end-state-of-this-preview}
+\frontmattersection{End state of this preview}
 
 This assembled review preview contains the actual prose of the current
 first-pass publication-review grammar slices in a single ordered draft.
 It does not claim that the whole grammar is finished, and the generated
 PDF is a review preview PDF rather than a final publication PDF.
+
+\bibliography{../../literature/bibliography.bib}
 
 \end{document}
