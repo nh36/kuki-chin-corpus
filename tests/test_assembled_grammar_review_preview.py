@@ -5,16 +5,24 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 
 import pytest
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from interlinear_latex import analyze_text, build_gll_lines, load_bible, reference_to_verse_id
+from restore_tone import load_tone_dictionary
+
+
 PREVIEW_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.md"
 TEX_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.tex"
 PDF_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.pdf"
 SCRIPT_PATH = ROOT / "scripts/assemble_publication_review_preview.py"
+BIBLE_PATH = ROOT / "bibles" / "extracted" / "ctd" / "ctd-x-bible.txt"
 
 
 def _text() -> str:
@@ -27,6 +35,19 @@ def _tex_text() -> str:
 
 def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
+
+
+def _tex_example_block(label: str) -> str:
+    tex = _tex_text()
+    start = tex.index(f"\\label{{{label}}}")
+    block_start = tex.rfind("\\begin{exe}", 0, start)
+    block_end = tex.index("\\end{exe}", start) + len("\\end{exe}")
+    return tex[block_start:block_end]
+
+
+@lru_cache(maxsize=1)
+def _tone_dict() -> dict[str, list[dict[str, str]]]:
+    return load_tone_dictionary()
 
 
 @lru_cache(maxsize=1)
@@ -161,42 +182,85 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "routing contrast, with \\texttt{kanei} as the clearest agreement anchor" in lower
 
 
-def test_assembled_preview_tex_uses_real_citation_and_example_machinery() -> None:
+def test_assembled_preview_tex_uses_real_citation_and_gb4e_machinery() -> None:
     tex = _tex_text()
 
     assert "[@" not in tex
     assert "\\usepackage[]{natbib}" in tex
+    assert "\\setcitestyle{authoryear,round,semicolon}" in tex
     assert "\\bibliographystyle{plainnat}" in tex
     assert "\\bibliography{../../literature/bibliography.bib}" in tex
     assert "\\citep{henderson1965, zamngaihcing2017}" in tex
+    assert "\\usepackage{gb4e}" in tex
     assert "\\newcounter{reviewchapter}" in tex
-    assert "\\renewcommand{\\thereviewexample}{\\arabic{reviewchapter}.\\arabic{reviewexample}}" in tex
-    assert "\\begin{reviewexample}{ex:dem-hih}{Genesis 5:1}" in tex
-    assert "\\begin{reviewexample}{ex:dem-tua-ciangin}{Genesis 1:3}" in tex
-    assert "\\begin{reviewexample}{ex:pro-amah}{}" in tex
-    assert "\\reviewobjectline{" in tex
-    assert "\\reviewtranslation{" in tex
+    assert "\\renewcommand{\\thexnumi}{\\arabic{reviewchapter}.\\arabic{xnumi}}" in tex
+    assert "\\begin{exe}" in tex
+    assert "\\ex \\label{ex:dem-hih}" in tex
+    assert "\\ex \\label{ex:dem-tua-ciangin}" in tex
+    assert "\\ex \\label{ex:pro-amah}" in tex
+    assert "\\gll " in tex
+    assert "\\glt " in tex
+    assert "Abbreviations" in tex
 
 
 def test_assembled_preview_tex_contains_real_interlinear_example_content() -> None:
-    tex = _tex_text()
-    start = tex.index("\\begin{reviewexample}{ex:dem-hih}{Genesis 5:1}")
-    end = tex.index("\\end{reviewexample}", start)
-    block = tex[start:end]
+    block = _tex_example_block("ex:dem-hih")
 
-    assert "Hih pen Adam’ suanlekhakte’ laibu ahi hi." in block
-    assert "hih & pen \\\\" in block
-    assert "\\textsc{prox} & \\textsc{top} \\\\" in block
-    assert '\\reviewtranslation{"This is the book of the generations of Adam."}' in block
+    assert "\\begin{exe}" in block
+    assert "\\gll H" in block
+    assert "\\textsc{prox}" in block
+    assert "\\textsc{top}" in block
+    assert "\\glt 'This is the book of the generations of Adam.' (Genesis 5:1)" in block
+
+
+def test_assembled_preview_tex_uses_shared_analyzer_output_for_known_bible_example() -> None:
+    analysis = analyze_text("Hih pen Adam' suanlekhakte' laibu ahi hi.", _tone_dict())
+    object_line, gloss_line = build_gll_lines(analysis)
+    block = _tex_example_block("ex:dem-hih")
+
+    assert object_line in block
+    assert gloss_line in block
+
+
+def test_assembled_preview_tex_places_bible_reference_after_translation() -> None:
+    block = _tex_example_block("ex:dem-hih")
+
+    assert "\\glt 'This is the book of the generations of Adam.' (Genesis 5:1)" in block
+    assert block.index("\\glt") < block.index("Genesis 5:1")
+    assert "Genesis 5:1\n\\gll" not in block
 
 
 def test_assembled_preview_tex_eliminates_old_raw_example_block_prose() -> None:
     tex = _tex_text()
 
+    assert "\\begin{reviewexample}" not in tex
+    assert "\\reviewobjectline{" not in tex
+    assert "\\reviewtranslation{" not in tex
     assert "a. Tedim:" not in tex
     assert "b. Segmentation:" not in tex
     assert "c. Gloss:" not in tex
     assert "d. Translation:" not in tex
+
+
+def test_assembled_preview_assembler_reuses_shared_interlinear_helper() -> None:
+    script_text = SCRIPT_PATH.read_text(encoding="utf-8")
+
+    assert "from interlinear_latex import (" in script_text
+    assert "analyze_text" in script_text
+    assert "build_gll_lines" in script_text
+    assert "generate_abbreviations_section" in script_text
+    assert "generate_gb4e_setup" in script_text
+    assert "reference_to_verse_id" in script_text
+    assert "analyzer-derived interlinear unavailable; using slice segmentation/gloss fallback" in script_text
+
+
+def test_assembled_preview_bible_reference_mapping_hits_existing_ctd_bible_data() -> None:
+    verse_id = reference_to_verse_id("Genesis 5:1")
+    bible = load_bible(BIBLE_PATH)
+
+    assert verse_id == "01005001"
+    assert verse_id in bible
+    assert "Adam" in bible[verse_id]
 
 
 def test_assembled_preview_pdf_exists_and_is_non_empty() -> None:
@@ -204,20 +268,23 @@ def test_assembled_preview_pdf_exists_and_is_non_empty() -> None:
     assert PDF_PATH.stat().st_size > 0, "Assembled grammar review preview PDF must be non-empty"
 
 
-def test_assembled_preview_pdf_text_shows_resolved_citations_and_numbered_examples() -> None:
+def test_assembled_preview_pdf_text_shows_parenthetical_citations_and_numbered_examples() -> None:
     pdf_text = _pdf_text()
     normalized = _normalize(pdf_text)
     lower = normalized.lower()
 
     assert "[@" not in pdf_text
+    assert "[Henderson" not in pdf_text
     assert "review preview, not a finished grammar" in lower
     assert "not a final publication pdf" in lower
+    assert "abbreviations" in lower
     assert "references" in lower
-    assert "henderson" in lower
+    assert re.search(r"\(Henderson,\s*1965.{0,20}Cing,\s*2017\)", normalized)
     assert "(2.1)" in pdf_text
-    assert "(3.1)" in pdf_text
-    assert "(4.1)" in pdf_text
+    assert re.search(r"\(3\.\d+\)", pdf_text)
+    assert re.search(r"\(4\.\d+\)", pdf_text)
     assert "Genesis 5:1" in pdf_text
+    assert "book of the generations of Adam." in pdf_text
     assert "Full reduplication as intensification" in pdf_text
 
 

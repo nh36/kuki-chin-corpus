@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Assemble the publication-review grammar preview into Markdown, TeX, and PDF.
 
-The Markdown preview is a readable assembled draft built from the committed
-publication-review grammar slices. The TeX/PDF path is slightly richer:
+The Markdown preview remains a readable assembled draft built from the committed
+publication-review grammar slices. The TeX/PDF path is richer:
 
-1. Pandoc is used with natbib/BibTeX against the repository bibliography so
-   Markdown citation syntax resolves into real citations and a references
-   section.
+1. Pandoc runs with natbib/BibTeX against `literature/bibliography.bib`, so
+   Markdown citation syntax resolves into real author-year citations and a
+   References section.
 2. Slice example blocks of the form
 
        (@ex:label) Source
@@ -15,7 +15,9 @@ publication-review grammar slices. The TeX/PDF path is slightly richer:
        c. Gloss: ...
        d. Translation: ...
 
-   are converted into chapter-numbered LaTeX examples with aligned gloss rows.
+   are converted into chapter-numbered gb4e examples using the shared analyzer,
+   tone-restoration, Bible-reference, and Leipzig-gloss helpers from
+   `scripts/interlinear_latex.py`.
 
 The resulting PDF is still a review preview, not a final publication PDF.
 """
@@ -28,8 +30,22 @@ import re
 import shutil
 import subprocess
 import tempfile
+from dataclasses import dataclass
 from pathlib import Path
-from typing import NamedTuple
+
+from restore_tone import load_tone_dictionary
+
+from interlinear_latex import (
+    analyze_text,
+    build_gll_lines,
+    escape_latex,
+    format_reference,
+    generate_abbreviations_section,
+    generate_gb4e_setup,
+    load_bible,
+    normalize_text_for_matching,
+    reference_to_verse_id,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,6 +55,7 @@ TEX_OUTPUT = PUBLICATION_REVIEW_DIR / "assembled_grammar_review_preview.tex"
 PDF_OUTPUT = PUBLICATION_REVIEW_DIR / "assembled_grammar_review_preview.pdf"
 BIBLIOGRAPHY_PATH = ROOT / "literature" / "bibliography.bib"
 BIBLIOGRAPHY_RELATIVE = Path("../../literature/bibliography.bib")
+BIBLE_PATH = ROOT / "bibles" / "extracted" / "ctd" / "ctd-x-bible.txt"
 
 PANDOC_FALLBACKS = [
     "/opt/homebrew/bin/pandoc",
@@ -57,19 +74,6 @@ BIBTEX_FALLBACKS = [
     "/usr/local/texlive/2025/bin/universal-darwin/bibtex",
 ]
 
-LATEX_SPECIAL_REPLACEMENTS = [
-    ("\\", r"\textbackslash{}"),
-    ("&", r"\&"),
-    ("%", r"\%"),
-    ("$", r"\$"),
-    ("#", r"\#"),
-    ("_", r"\_"),
-    ("{", r"\{"),
-    ("}", r"\}"),
-    ("~", r"\textasciitilde{}"),
-    ("^", r"\textasciicircum{}"),
-]
-
 FRONTMATTER_SECTION_TITLES = {
     "Review preview status",
     "PDF/build status",
@@ -77,31 +81,6 @@ FRONTMATTER_SECTION_TITLES = {
     "Major unresolved domains",
     "End state of this preview",
 }
-
-EXPECTED_SLICES: list[tuple[str, str]] = [
-    ("Demonstratives / deixis", "output/publication_review/grammar_demonstratives_print_slice.md"),
-    ("Pronouns / clusivity", "output/publication_review/grammar_pronouns_print_slice.md"),
-    ("NP structure / possession", "output/publication_review/grammar_np_possession_print_slice.md"),
-    ("Noun domain", "output/publication_review/grammar_noun_domain_print_slice.md"),
-    ("Case marking", "output/publication_review/grammar_case_marking_print_slice.md"),
-    ("Relators / postpositions", "output/publication_review/grammar_relators_postpositions_print_slice.md"),
-    ("Numerals", "output/publication_review/grammar_numerals_print_slice.md"),
-    ("Quantifiers", "output/publication_review/grammar_quantifiers_print_slice.md"),
-    ("Stem alternation", "output/publication_review/grammar_stem_alternation_print_slice.md"),
-    ("Prefix / agreement", "output/publication_review/grammar_prefix_agreement_print_slice.md"),
-    ("Transitivity", "output/publication_review/grammar_transitivity_print_slice.md"),
-    ("VP structure / suffix stacking", "output/publication_review/grammar_vp_structure_stacking_print_slice.md"),
-    ("TAM / aspect / modal", "output/publication_review/grammar_tam_print_slice.md"),
-    ("Directionals", "output/publication_review/grammar_directionals_print_slice.md"),
-    ("Derivation / valency", "output/publication_review/grammar_derivation_valency_print_slice.md"),
-    ("Nominalization", "output/publication_review/grammar_nominalization_print_slice.md"),
-    ("Clause linkage", "output/publication_review/grammar_clause_linkage_print_slice.md"),
-    ("Negation", "output/publication_review/grammar_negation_print_slice.md"),
-    ("Interrogatives", "output/publication_review/grammar_interrogatives_print_slice.md"),
-    ("Sentence-final particles", "output/publication_review/grammar_sentence_final_particles_print_slice.md"),
-    ("Coordinators", "output/publication_review/grammar_coordinators_print_slice.md"),
-    ("Reduplication", "output/publication_review/grammar_reduplication_print_slice.md"),
-]
 
 ASSEMBLY_SPEC = [
     {
@@ -197,34 +176,14 @@ CITATION_KEY_RE = re.compile(r"(?<![`\\])@(?!ex:)([A-Za-z0-9_:+.-]+)")
 BIBLIOGRAPHY_KEY_RE = re.compile(r"@\w+\{([^,]+),")
 
 
-class ParsedExample(NamedTuple):
+@dataclass(frozen=True)
+class ParsedExample:
     label: str
     source: str
     tedim: str
     segmentation: str
     gloss: str
     translation: str
-
-
-def escape_latex(text: str) -> str:
-    """Escape special LaTeX characters."""
-    for old, new in LATEX_SPECIAL_REPLACEMENTS:
-        text = text.replace(old, new)
-    return text
-
-
-def format_gloss_smallcaps(gloss: str) -> str:
-    """Format Leipzig gloss abbreviations in small caps."""
-    parts = re.split(r"([-.])", gloss)
-    result: list[str] = []
-    for part in parts:
-        if part in {"-", "."}:
-            result.append(part)
-        elif re.match(r"^[A-Z0-9→]+$", part):
-            result.append(r"\textsc{" + part.lower() + "}")
-        else:
-            result.append(escape_latex(part))
-    return "".join(result)
 
 
 def strip_yaml_front_matter(text: str) -> str:
@@ -283,9 +242,9 @@ def build_markdown() -> str:
         "",
         "# PDF/build status",
         "",
-        "This preview is reproducible from committed sources with `python3 scripts/assemble_publication_review_preview.py`. The script writes `output/publication_review/assembled_grammar_review_preview.md`, generates `output/publication_review/assembled_grammar_review_preview.tex` through Pandoc plus natbib/BibTeX citation processing, and compiles `output/publication_review/assembled_grammar_review_preview.pdf` with XeLaTeX while converting the publication-review example blocks into numbered interlinear examples.",
+        "This preview is reproducible from committed sources with `python3 scripts/assemble_publication_review_preview.py`. The script writes `output/publication_review/assembled_grammar_review_preview.md`, generates `output/publication_review/assembled_grammar_review_preview.tex` through Pandoc plus natbib/BibTeX citation processing, and compiles `output/publication_review/assembled_grammar_review_preview.pdf` with XeLaTeX while routing publication-review example blocks through the shared analyzer and gb4e interlinear machinery.",
         "",
-        "The assembly reuses current repository conventions where practical: the repository bibliography in `literature/bibliography.bib`, XeLaTeX compilation and the `Times New Roman` / `Helvetica` font pair already used in `scripts/export_interlinear.py`, plus the same 0.75-inch page-margin convention for generated TeX output.",
+        "The assembly reuses current repository conventions where practical: the repository bibliography in `literature/bibliography.bib`, XeLaTeX compilation and the `Times New Roman` / `Helvetica` font pair already used in `scripts/export_interlinear.py`, the shared Bible/analyzer helpers in `scripts/interlinear_latex.py`, and the same 0.75-inch page-margin convention for generated TeX output.",
         "",
         "# Known narrow-slice limitations",
         "",
@@ -351,8 +310,7 @@ def validate_citations(markdown_text: str, bibliography_path: Path) -> None:
     available = load_bibliography_keys(bibliography_path)
     missing = sorted(cited - available)
     if missing:
-        missing_text = ", ".join(missing)
-        raise RuntimeError(f"Missing bibliography keys for assembled preview: {missing_text}")
+        raise RuntimeError(f"Missing bibliography keys for assembled preview: {', '.join(missing)}")
 
 
 def parse_example_at(lines: list[str], start: int) -> tuple[ParsedExample | None, int]:
@@ -390,75 +348,119 @@ def parse_example_at(lines: list[str], start: int) -> tuple[ParsedExample | None
     return (
         ParsedExample(
             label=match.group(1).lstrip("@"),
-            source=match.group(2) or "",
-            tedim=tedim_match.group(1),
-            segmentation=segmentation_match.group(1),
-            gloss=gloss_match.group(1),
-            translation=translation_match.group(1),
+            source=(match.group(2) or "").strip(),
+            tedim=tedim_match.group(1).strip(),
+            segmentation=segmentation_match.group(1).strip(),
+            gloss=gloss_match.group(1).strip(),
+            translation=translation_match.group(1).strip(),
         ),
         start + 5,
     )
 
 
-def build_gloss_tabular(example: ParsedExample) -> tuple[str, str | None]:
-    segmentation_tokens = example.segmentation.split()
-    gloss_tokens = example.gloss.split()
-    width = max(len(segmentation_tokens), len(gloss_tokens), 1)
-
-    warning: str | None = None
-    if len(segmentation_tokens) != len(gloss_tokens):
-        warning = (
-            f"[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in {example.label}; "
-            "showing padded alignment.]"
-        )
-
-    segmentation_tokens.extend([""] * (width - len(segmentation_tokens)))
-    gloss_tokens.extend([""] * (width - len(gloss_tokens)))
-
-    col_spec = "@{}" + "l" * width + "@{}"
-    seg_row = " & ".join(escape_latex(token) for token in segmentation_tokens) + r" \\"
-    gloss_row = " & ".join(format_gloss_smallcaps(token) if token else "" for token in gloss_tokens) + r" \\"
-    tabular = "\n".join(
-        [
-            r"\begin{tabular}[t]{" + col_spec + "}",
-            seg_row,
-            gloss_row,
-            r"\end{tabular}",
-        ]
-    )
-    return tabular, warning
+def strip_outer_quotes(text: str) -> str:
+    stripped = text.strip()
+    paired_quotes = [
+        ("'", "'"),
+        ('"', '"'),
+        ("‘", "’"),
+        ("“", "”"),
+    ]
+    for left, right in paired_quotes:
+        if stripped.startswith(left) and stripped.endswith(right) and len(stripped) >= 2:
+            return stripped[1:-1].strip()
+    return stripped
 
 
-def example_to_latex_block(example: ParsedExample) -> str:
+def build_translation_line(translation: str, source: str) -> str:
+    normalized_translation = strip_outer_quotes(translation)
+    rendered = f"'{normalized_translation}'"
+    if source:
+        rendered = f"{rendered} ({source})"
+    return escape_latex(rendered)
+
+
+def analysis_is_usable(analysis: dict[str, list[str]]) -> bool:
+    gloss_words = analysis.get("gloss_words", [])
+    if not gloss_words:
+        return False
+    return any(gloss != "??" for gloss in gloss_words)
+
+
+def fallback_analysis(example: ParsedExample) -> dict[str, list[str]]:
+    fallback_surface = example.segmentation.split() or example.tedim.split()
+    fallback_gloss = example.gloss.split() or ["??"] * max(len(fallback_surface), 1)
+    return {
+        "toned_words": fallback_surface,
+        "segmentation_words": fallback_surface,
+        "gloss_words": fallback_gloss,
+    }
+
+
+def build_example_warning_text(label: str, warnings: list[str]) -> str | None:
+    if not warnings:
+        return None
+    joined = "; ".join(warnings)
+    return f"[REVIEW PREVIEW WARNING: {label}: {joined}]"
+
+
+def analyze_example(
+    example: ParsedExample, bible: dict[str, str], tone_dict: dict[str, list[dict[str, str]]]
+) -> tuple[dict[str, list[str]], str, str | None]:
+    warnings: list[str] = []
+    source_display = example.source
+
+    if example.source:
+        verse_id = reference_to_verse_id(example.source)
+        if verse_id:
+            if verse_id in bible:
+                source_display = format_reference(verse_id)
+                verse_text = bible[verse_id]
+                verse_norm = normalize_text_for_matching(verse_text)
+                tedim_norm = normalize_text_for_matching(example.tedim)
+                if tedim_norm and tedim_norm not in verse_norm:
+                    warnings.append("Bible reference mapped, but slice example is not a direct verse span; analyzed slice wording")
+            else:
+                warnings.append("Bible reference parsed but no matching verse was found in the CTD Bible data")
+
+    analysis = analyze_text(example.tedim, tone_dict)
+    if not analysis_is_usable(analysis):
+        analysis = fallback_analysis(example)
+        warnings.append("analyzer-derived interlinear unavailable; using slice segmentation/gloss fallback")
+
+    return analysis, source_display, build_example_warning_text(example.label, warnings)
+
+
+def example_to_latex_block(
+    example: ParsedExample, bible: dict[str, str], tone_dict: dict[str, list[dict[str, str]]]
+) -> str:
     if example.label == "review-preview-warning":
-        warning_text = escape_latex(example.tedim)
         return "\n".join(
             [
                 "```{=latex}",
-                rf"\reviewwarning{{{warning_text}}}",
+                rf"\reviewwarning{{{escape_latex(example.tedim)}}}",
                 "```",
                 "",
             ]
         )
 
-    gloss_tabular, warning = build_gloss_tabular(example)
-    label = escape_latex(example.label)
-    source = escape_latex(example.source)
-    tedim = escape_latex(example.tedim)
-    translation = escape_latex(example.translation)
+    analysis, source_display, warning = analyze_example(example, bible, tone_dict)
+    object_line, gloss_line = build_gll_lines(analysis)
+    translation_line = build_translation_line(example.translation, source_display)
 
     latex_lines = [
         "```{=latex}",
-        rf"\begin{{reviewexample}}{{{label}}}{{{source}}}",
+        r"\begin{exe}",
+        rf"\ex \label{{{escape_latex(example.label)}}}",
     ]
     if warning:
         latex_lines.append(rf"\reviewwarninginline{{{escape_latex(warning)}}}")
     latex_lines.extend(
         [
-            rf"\reviewobjectline{{{tedim}}}",
-            gloss_tabular,
-            rf"\reviewtranslation{{{translation}}}",
-            r"\end{reviewexample}",
+            rf"\gll {object_line} \\",
+            rf"     {gloss_line} \\",
+            rf"\glt {translation_line}",
+            r"\end{exe}",
             "```",
             "",
         ]
@@ -467,9 +469,12 @@ def example_to_latex_block(example: ParsedExample) -> str:
 
 
 def transform_markdown_for_latex(markdown_text: str) -> str:
+    bible = load_bible(BIBLE_PATH)
+    tone_dict = load_tone_dictionary()
     transformed: list[str] = []
     lines = markdown_text.splitlines()
     index = 0
+    abbreviations_inserted = False
 
     while index < len(lines):
         line = lines[index]
@@ -481,12 +486,11 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
             index += 1
             continue
 
-        if index < len(lines):
-            parsed_example, next_index = parse_example_at(lines, index)
-            if parsed_example:
-                transformed.append(example_to_latex_block(parsed_example).rstrip("\n"))
-                index = next_index
-                continue
+        parsed_example, next_index = parse_example_at(lines, index)
+        if parsed_example:
+            transformed.append(example_to_latex_block(parsed_example, bible, tone_dict).rstrip("\n"))
+            index = next_index
+            continue
 
         chapter_match = CHAPTER_HEADING_RE.match(line)
         if chapter_match:
@@ -503,18 +507,30 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
             continue
 
         heading_match = re.match(r"^#\s+(.+?)\s*$", line)
-        if heading_match and heading_match.group(1) in FRONTMATTER_SECTION_TITLES:
-            title = escape_latex(heading_match.group(1))
-            transformed.extend(
-                [
-                    "```{=latex}",
-                    rf"\frontmattersection{{{title}}}",
-                    "```",
-                    "",
-                ]
-            )
-            index += 1
-            continue
+        if heading_match:
+            title = heading_match.group(1)
+            if title == "Known narrow-slice limitations" and not abbreviations_inserted:
+                transformed.extend(
+                    [
+                        "```{=latex}",
+                        generate_abbreviations_section(),
+                        "```",
+                        "",
+                    ]
+                )
+                abbreviations_inserted = True
+
+            if title in FRONTMATTER_SECTION_TITLES:
+                transformed.extend(
+                    [
+                        "```{=latex}",
+                        rf"\frontmattersection{{{escape_latex(title)}}}",
+                        "```",
+                        "",
+                    ]
+                )
+                index += 1
+                continue
 
         transformed.append(line)
         index += 1
@@ -523,46 +539,29 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
 
 
 def write_latex_header(path: Path) -> None:
-    header = r"""
-\usepackage{fontspec}
-\usepackage{geometry}
-\usepackage{array}
-\usepackage{calc}
-\usepackage{fancyhdr}
-\usepackage{xcolor}
-\usepackage{etoolbox}
-\usepackage{natbib}
-\geometry{margin=0.75in}
-\setmainfont{Times New Roman}
-\setsansfont{Helvetica}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-\newcommand{\frontmattersection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
-\newcounter{reviewchapter}
-\newcounter{reviewexample}[reviewchapter]
-\renewcommand{\thereviewexample}{\arabic{reviewchapter}.\arabic{reviewexample}}
-\newcommand{\reviewchapterbreak}{\stepcounter{reviewchapter}\setcounter{reviewexample}{0}}
-\newenvironment{reviewexample}[2]{%
-  \refstepcounter{reviewexample}%
-  \par\medskip\noindent%
-  \makebox[4.2em][l]{(\thereviewexample)}%
-  \begin{minipage}[t]{\dimexpr\linewidth-4.2em\relax}%
-  \ifstrempty{#1}{}{\label{#1}}%
-  \ifstrempty{#2}{}{{\itshape #2}\par\smallskip}%
-}{%
-  \end{minipage}\par\medskip%
-}
-\newcommand{\reviewobjectline}[1]{{\itshape #1\par\smallskip}}
-\newcommand{\reviewtranslation}[1]{\par\smallskip\hspace*{\fill}`#1'\par}
-\newcommand{\reviewwarning}[1]{\par\medskip\noindent\textbf{#1}\par\medskip}
-\newcommand{\reviewwarninginline}[1]{\textbf{#1}\par\smallskip}
+    header = rf"""
+\usepackage{{fontspec}}
+\usepackage{{geometry}}
+\usepackage{{fancyhdr}}
+\usepackage{{xcolor}}
+\usepackage{{natbib}}
+{generate_gb4e_setup()}
+\geometry{{margin=0.75in}}
+\setmainfont{{Times New Roman}}
+\setsansfont{{Helvetica}}
+\pagestyle{{fancy}}
+\fancyhf{{}}
+\fancyfoot[C]{{\thepage}}
+\setcitestyle{{authoryear,round,semicolon}}
+\newcommand{{\frontmattersection}}[1]{{\section*{{#1}}\addcontentsline{{toc}}{{section}}{{#1}}}}
+\newcommand{{\reviewwarning}}[1]{{\par\medskip\noindent\textbf{{#1}}\par\medskip}}
+\newcommand{{\reviewwarninginline}}[1]{{\textbf{{#1}}\par\smallskip}}
+\newcounter{{reviewchapter}}
+\newcommand{{\reviewchapterbreak}}{{\stepcounter{{reviewchapter}}\setcounter{{xnumi}}{{0}}}}
+\renewcommand{{\thexnumi}}{{\arabic{{reviewchapter}}.\arabic{{xnumi}}}}
+\exewidth{{(4.99)}}
 """
     path.write_text(header.lstrip(), encoding="utf-8")
-
-
-def write_latex_markdown(path: Path, markdown_text: str) -> None:
-    path.write_text(markdown_text, encoding="utf-8")
 
 
 def generate_tex(markdown_text: str, markdown_path: Path, tex_path: Path) -> None:
@@ -577,7 +576,7 @@ def generate_tex(markdown_text: str, markdown_path: Path, tex_path: Path) -> Non
         temp_dir = Path(tmpdir)
         latex_markdown_path = temp_dir / "assembled_preview_for_latex.md"
         header_path = temp_dir / "assembled_preview_header.tex"
-        write_latex_markdown(latex_markdown_path, latex_markdown)
+        latex_markdown_path.write_text(latex_markdown, encoding="utf-8")
         write_latex_header(header_path)
 
         command = [
@@ -633,31 +632,10 @@ def compile_pdf(tex_path: Path, pdf_path: Path) -> None:
                 f"{' '.join(command)}\n\nSTDOUT:\n{result.stdout}\n\nSTDERR:\n{result.stderr}"
             )
 
-    run(
-        [
-            xelatex_cmd,
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            tex_path.name,
-        ]
-    )
+    run([xelatex_cmd, "-interaction=nonstopmode", "-halt-on-error", tex_path.name])
     run([bibtex_cmd, stem])
-    run(
-        [
-            xelatex_cmd,
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            tex_path.name,
-        ]
-    )
-    run(
-        [
-            xelatex_cmd,
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            tex_path.name,
-        ]
-    )
+    run([xelatex_cmd, "-interaction=nonstopmode", "-halt-on-error", tex_path.name])
+    run([xelatex_cmd, "-interaction=nonstopmode", "-halt-on-error", tex_path.name])
 
     if not pdf_path.exists() or pdf_path.stat().st_size == 0:
         raise RuntimeError(f"expected non-empty PDF at {pdf_path}")

@@ -60,37 +60,30 @@
 \bibliographystyle{plainnat}
 \usepackage{fontspec}
 \usepackage{geometry}
-\usepackage{array}
-\usepackage{calc}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
-\usepackage{etoolbox}
 \usepackage{natbib}
+\usepackage{gb4e}
+\noautomath
+\let\oldeachwordone\eachwordone
+\renewcommand{\eachwordone}{\oldeachwordone\hspace{0.3em}}
+\let\oldeachwordtwo\eachwordtwo
+\renewcommand{\eachwordtwo}{\oldeachwordtwo\hspace{0.3em}}
+\renewcommand{\textsc}[1]{{\footnotesize\MakeUppercase{#1}}}
 \geometry{margin=0.75in}
 \setmainfont{Times New Roman}
 \setsansfont{Helvetica}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
+\setcitestyle{authoryear,round,semicolon}
 \newcommand{\frontmattersection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
-\newcounter{reviewchapter}
-\newcounter{reviewexample}[reviewchapter]
-\renewcommand{\thereviewexample}{\arabic{reviewchapter}.\arabic{reviewexample}}
-\newcommand{\reviewchapterbreak}{\stepcounter{reviewchapter}\setcounter{reviewexample}{0}}
-\newenvironment{reviewexample}[2]{%
-  \refstepcounter{reviewexample}%
-  \par\medskip\noindent%
-  \makebox[4.2em][l]{(\thereviewexample)}%
-  \begin{minipage}[t]{\dimexpr\linewidth-4.2em\relax}%
-  \ifstrempty{#1}{}{\label{#1}}%
-  \ifstrempty{#2}{}{{\itshape #2}\par\smallskip}%
-}{%
-  \end{minipage}\par\medskip%
-}
-\newcommand{\reviewobjectline}[1]{{\itshape #1\par\smallskip}}
-\newcommand{\reviewtranslation}[1]{\par\smallskip\hspace*{\fill}`#1'\par}
 \newcommand{\reviewwarning}[1]{\par\medskip\noindent\textbf{#1}\par\medskip}
 \newcommand{\reviewwarninginline}[1]{\textbf{#1}\par\smallskip}
+\newcounter{reviewchapter}
+\newcommand{\reviewchapterbreak}{\stepcounter{reviewchapter}\setcounter{xnumi}{0}}
+\renewcommand{\thexnumi}{\arabic{reviewchapter}.\arabic{xnumi}}
+\exewidth{(4.99)}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -144,14 +137,68 @@ generates
 \texttt{output/publication\_review/assembled\_grammar\_review\_preview.tex}
 through Pandoc plus natbib/BibTeX citation processing, and compiles
 \texttt{output/publication\_review/assembled\_grammar\_review\_preview.pdf}
-with XeLaTeX while converting the publication-review example blocks into
-numbered interlinear examples.
+with XeLaTeX while routing publication-review example blocks through the
+shared analyzer and gb4e interlinear machinery.
 
 The assembly reuses current repository conventions where practical: the
 repository bibliography in \texttt{literature/bibliography.bib}, XeLaTeX
 compilation and the \texttt{Times\ New\ Roman} / \texttt{Helvetica} font
-pair already used in \texttt{scripts/export\_interlinear.py}, plus the
-same 0.75-inch page-margin convention for generated TeX output.
+pair already used in \texttt{scripts/export\_interlinear.py}, the shared
+Bible/analyzer helpers in \texttt{scripts/interlinear\_latex.py}, and
+the same 0.75-inch page-margin convention for generated TeX output.
+
+\section*{Abbreviations}
+\addcontentsline{toc}{section}{Abbreviations}
+
+\subsection*{Standard Leipzig Glossing Abbreviations}
+\begin{tabular}{@{}ll@{\hspace{2em}}ll@{}}
+\textsc{1} & first person & \textsc{imp} & imperative \\
+\textsc{2} & second person & \textsc{incl} & inclusive \\
+\textsc{3} & third person & \textsc{ins} & instrumental \\
+\textsc{abil} & abilitative & \textsc{intens} & intensive \\
+\textsc{abl} & ablative & \textsc{irr} & irrealis \\
+\textsc{all} & allative & \textsc{iter} & iterative \\
+\textsc{appl} & applicative & \textsc{loc} & locative \\
+\textsc{caus} & causative & \textsc{neg} & negative \\
+\textsc{com} & comitative & \textsc{nmlz} & nominalizer \\
+\textsc{compl} & completive & \textsc{pfv} & perfective \\
+\textsc{cont} & continuative & \textsc{pl} & plural \\
+\textsc{cvb} & converb & \textsc{poss} & possessive \\
+\textsc{dat} & dative & \textsc{prosp} & prospective \\
+\textsc{dimin} & diminutive & \textsc{prox} & proximal \\
+\textsc{erg} & ergative & \textsc{q} & question particle \\
+\textsc{excl} & exclusive & \textsc{recip} & reciprocal \\
+\textsc{exp} & experiential & \textsc{refl} & reflexive \\
+\textsc{gen} & genitive & \textsc{rel} & relativizer \\
+\textsc{hab} & habitual & \textsc{res} & resultative \\
+\textsc{horiz} & horizontal & \textsc{sg} & singular \\
+\textsc{imm} & immediate & \textsc{top} & topic \\
+\end{tabular}
+
+\vspace{1em}
+\subsection*{Tedim Chin-Specific Conventions}
+\begin{tabular}{@{}ll@{}}
+\textsc{1sg$\rightarrow$3} & first singular acting on third person \\
+\textsc{2$\rightarrow$1} & second person acting on first person \\
+\textsc{3$\rightarrow$1} & third person acting on first person \\
+\textsc{ag} & agent (nominalizer) \\
+\textsc{aug} & augmentative (big/great) \\
+\textsc{dist} & distal/anaphoric demonstrative \\
+\textsc{down} & downward directional \\
+\textsc{hab.cont} & habitual continuative \\
+\textsc{i} & verb form I (citation form) \\
+\textsc{ii} & verb form II (dependent form) \\
+\textsc{more} & comparative (more X) \\
+\textsc{neg.abil} & negative abilitative (cannot) \\
+\textsc{prox} & proximal demonstrative \\
+\textsc{toward} & goal directional \\
+\textsc{up} & upward directional \\
+\end{tabular}
+
+\vspace{1em}
+\noindent\textbf{Verb Forms:} Tedim Chin verbs have two conjugation forms.
+\textsc{i} (Form I) is the citation/independent form; \textsc{ii} (Form II)
+appears in dependent clauses and certain constructions.
 
 \frontmattersection{Known narrow-slice limitations}
 
@@ -262,14 +309,12 @@ orthographic identity.
 works both as an identificational demonstrative and as an adnominal
 determiner.
 
-\begin{reviewexample}{ex:dem-hih}{Genesis 5:1}
-\reviewobjectline{Hih pen Adam’ suanlekhakte’ laibu ahi hi.}
-\begin{tabular}[t]{@{}ll@{}}
-hih & pen \\
-\textsc{prox} & \textsc{top} \\
-\end{tabular}
-\reviewtranslation{"This is the book of the generations of Adam."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-hih}
+\gll Híh pèn Adam' suanlekhakte' laibu àhì hì. \\
+     \textsc{prox} \textsc{top} \textsc{adam}.\textsc{poss} genealogy-\textsc{pl}.\textsc{poss} book be.\textsc{3sg} \textsc{decl} \\
+\glt 'This is the book of the generations of Adam.' (Genesis 5:1)
+\end{exe}
 
 Genesis 5:1 is especially useful because it shows \texttt{hih} as the
 unmarked proximal form in identificational prose. Genesis 9:12
@@ -281,15 +326,12 @@ pattern, while Exodus 32:9 \texttt{Hih\ mite\ ka\ mu\ zo\ hi} shows
 broader. It clearly marks distal or previously activated referents, and
 it also extends naturally into anaphoric and discourse-linking uses.
 
-\begin{reviewexample}{ex:dem-tua}{Genesis 1:6}
-\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:dem-tua; showing padded alignment.]}
-\reviewobjectline{Pasian in, “Tuite’ laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.}
-\begin{tabular}[t]{@{}lll@{}}
-tua & van & kuumpi \\
-\textsc{dist} & firmament &  \\
-\end{tabular}
-\reviewtranslation{"And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-tua}
+\gll Pasian ìn, tuite' lai-zang-àh vàn kuum-pì ōm hèn lá, túa vàn kuum-pì ìn tùi lè tùi kī-khen-sàk hèn cí hì. \\
+     God \textsc{erg} water-\textsc{pl}.\textsc{poss} middle-side-\textsc{loc} sky bow-big exist \textsc{juss} take \textsc{dist} sky bow-big \textsc{erg} water and water \textsc{refl}-divide-\textsc{caus} \textsc{juss} say \textsc{decl} \\
+\glt 'And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.' (Genesis 1:6)
+\end{exe}
 
 Genesis 1:6 is a clean adnominal example. Genesis 21:27
 \texttt{tua\ mi\ nihte} is equally good for a more discourse-linked noun
@@ -304,23 +346,19 @@ The plural demonstratives are straightforward. The Bible corpus strongly
 supports \texttt{hihte} and \texttt{tuate} as transparent plural
 extensions of the singular forms.
 
-\begin{reviewexample}{ex:dem-hihte}{Genesis 48:8}
-\reviewobjectline{Israel in Josef’ tapate a muh ciangin amah in, “Hihte kua ahi hiam?” a ci hi.}
-\begin{tabular}[t]{@{}l@{}}
-hihte \\
-\textsc{prox}-\textsc{pl} \\
-\end{tabular}
-\reviewtranslation{"And Israel beheld Joseph's sons, and said, Who are these?"}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-hihte}
+\gll Israel ìn Josef' tapa-tè à mùh cìang-ìn àmàh ìn, híh-tè kua àhì hìam à cí hì. \\
+     \textsc{israel} \textsc{erg} \textsc{josef}.\textsc{poss} son-\textsc{pl} \textsc{3sg} see.\textsc{ii} then-\textsc{erg} \textsc{3sg}.\textsc{pro} \textsc{erg} \textsc{hihte} who be.\textsc{3sg} \textsc{q} \textsc{3sg} say \textsc{decl} \\
+\glt 'And Israel beheld Joseph's sons, and said, Who are these?' (Genesis 48:8)
+\end{exe}
 
-\begin{reviewexample}{ex:dem-tuate}{Genesis 7:20}
-\reviewobjectline{Mual liante tungah tui omto lai a, tuate tungah pi sawmnih le nih thuk-in tuumcip hi.}
-\begin{tabular}[t]{@{}ll@{}}
-tuate & tungah \\
-\textsc{dist}-\textsc{pl} & on-\textsc{loc} \\
-\end{tabular}
-\reviewtranslation{"Fifteen cubits upward did the waters prevail; and the mountains were covered."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-tuate}
+\gll Mual lìan-tè tùngàh tùi om-tò lái à, túa-tè tùngàh pì sàwm-nìh lè nìh thuk-ìn tuumcip hì. \\
+     mountain big-\textsc{pl} on-\textsc{loc} water be-over midst \textsc{3sg} \textsc{dist}-\textsc{pl} on-\textsc{loc} grandmother ten-two and two deep-\textsc{inst} water \textsc{decl} \\
+\glt 'Fifteen cubits upward did the waters prevail; and the mountains were covered.' (Genesis 7:20)
+\end{exe}
 
 Genesis 10:20 \texttt{Hihte\ pen\ ...\ Ham’\ suanlekhakte\ ahi\ hi}
 shows the proximal plural in topic-like prose, while Genesis 2:19
@@ -355,14 +393,12 @@ This is where \texttt{tua} most clearly exceeds a merely spatial
 description. In Bible narrative, \texttt{tua} is a major discourse and
 temporal linker.
 
-\begin{reviewexample}{ex:dem-tua-ciangin}{Genesis 1:3}
-\reviewobjectline{Pasian in, “Khuavak om hen,” ci hi; tua ciangin khuavak om pah hi.}
-\begin{tabular}[t]{@{}ll@{}}
-tua & ciangin \\
-\textsc{dist} & time-\textsc{cvb} \\
-\end{tabular}
-\reviewtranslation{"And God said, Let there be light: and there was light."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-tua-ciangin}
+\gll Pasian ìn, khuavak ōm hèn cí hì; túa cìang-ìn khuavak ōm pah hì. \\
+     God \textsc{erg} light exist \textsc{juss} say \textsc{decl} \textsc{dist} then-\textsc{erg} light exist do.so \textsc{decl} \\
+\glt 'And God said, Let there be light: and there was light.' (Genesis 1:3)
+\end{exe}
 
 \texttt{Tua\ ciangin} works naturally as ``then / at that time'' in
 event sequencing. Genesis 5:5 repeats the same pattern in obituary-style
@@ -371,14 +407,12 @@ narrative: \texttt{tua\ ciangin\ amah\ si\ hi}.
 \texttt{Tua\ ahih\ ciangin} is even more explicitly a discourse bridge,
 linking a prior state or event to the next clause.
 
-\begin{reviewexample}{ex:dem-tua-ahih-ciangin}{Genesis 2:21}
-\reviewobjectline{Tua ahih ciangin Topa Pasian in mipa ihmut suak mahmah sak a, ama ihmut kalin a nakguhte khat la-in tua mun pen satak tawh a dimsak hi.}
-\begin{tabular}[t]{@{}lll@{}}
-tua & ahih & ciangin \\
-\textsc{dist} & be.\textsc{3sg} & then-\textsc{cvb} \\
-\end{tabular}
-\reviewtranslation{"And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-tua-ahih-ciangin}
+\gll Túa àhìh cìang-ìn Topa Pasian ìn mipa ihmut sùak màhmàh sàk à, àmà ihmut kal-ìn à nak-gùh-tè khàt lá-ìn túa mùn pèn sá-tak tàwh à dimsak hì. \\
+     \textsc{dist} be.\textsc{3sg}.\textsc{rel} then-\textsc{erg} Lord God \textsc{erg} man deep.sleep wither very \textsc{caus} \textsc{3sg} \textsc{3sg}.\textsc{poss} deep.sleep middle-\textsc{cvb} \textsc{3sg} nose-bone-\textsc{pl} one take-\textsc{erg} \textsc{dist} place \textsc{top} flesh-piece \textsc{com} \textsc{3sg} fill \textsc{decl} \\
+\glt 'And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof.' (Genesis 2:21)
+\end{exe}
 
 Genesis 1:21 and Genesis 2:19 confirm that \texttt{tua\ ahih\ ciangin}
 is one of the strongest discourse-transition frames in the present
@@ -391,23 +425,19 @@ construction than as a purely compositional spatial phrase.
 The Bible also gives strong manner and discourse constructions built
 from the demonstratives plus \texttt{bangin}.
 
-\begin{reviewexample}{ex:dem-hih-bangin}{Genesis 32:4}
-\reviewobjectline{amaute hilhin, “Note in ka topa Esau kiangah hih bangin na ci ding uh hi: Na nasempa Jakob in, ‘Laban’ kiangah peemta-in tu ciang dong ka om hi.}
-\begin{tabular}[t]{@{}ll@{}}
-hih & bangin \\
-\textsc{prox} & like-\textsc{cvb} \\
-\end{tabular}
-\reviewtranslation{"And he commanded them, saying, Thus shall ye speak unto my lord Esau; Thy servant Jacob saith thus, I have sojourned with Laban, and stayed there until now:"}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-hih-bangin}
+\gll àmaute hìlh-ìn, nòtè ìn kà topa Esau kìang-àh híh bàng-ìn nà cí dìng ùh hì: Nà nàsèm-pà Jakob ìn, laban' kìang-àh peem-tà-ìn tù cìang dòng kà ōm hì. \\
+     \textsc{3pl}.\textsc{pro} teach-\textsc{cvb} \textsc{2pl}.\textsc{pro} \textsc{erg} \textsc{1sg} lord \textsc{esau} beside-\textsc{loc} \textsc{prox} like-\textsc{erg} \textsc{2sg} say \textsc{irr} 2/3PL \textsc{decl} \textsc{2sg} servant-male \textsc{jakob} \textsc{erg} \textsc{laban}.\textsc{poss} beside-\textsc{loc} widow.son-\textsc{pfv}-\textsc{erg} now then until \textsc{1sg} exist \textsc{decl} \\
+\glt 'And he commanded them, saying, Thus shall ye speak unto my lord Esau; Thy servant Jacob saith thus, I have sojourned with Laban, and stayed there until now:' (Genesis 32:4)
+\end{exe}
 
-\begin{reviewexample}{ex:dem-tua-bangin}{Exodus 14:30}
-\reviewobjectline{Topa in tua bangin Egypt mite’ khutsung panin tua ni-in Israel-te honkhia a, tuipi gei-ah Egypt mi a site, Israel mite in mu uh hi.}
-\begin{tabular}[t]{@{}ll@{}}
-tua & bangin \\
-\textsc{dist} & like-\textsc{cvb} \\
-\end{tabular}
-\reviewtranslation{"Thus the LORD saved Israel that day out of the hand of the Egyptians; and Israel saw the Egyptians dead upon the sea shore."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dem-tua-bangin}
+\gll Topa ìn túa bàng-ìn Egypt mite' khutsung pàn-ìn túa nì-ìn Israel-té honkhia à, tùi-pì gei-àh Egypt mì à sí-tè, Israel mì-tè ìn mú ùh hì. \\
+     Lord \textsc{erg} \textsc{dist} like-\textsc{erg} \textsc{egypt} person-\textsc{pl}.\textsc{poss} palm \textsc{abl}-\textsc{erg} \textsc{dist} day-\textsc{erg} \textsc{israel}-\textsc{te} deliver \textsc{3sg} water-big edge-\textsc{loc} \textsc{egypt} person \textsc{3sg} die-\textsc{pl} \textsc{israel} person-\textsc{pl} \textsc{erg} see.\textsc{i} 2/3PL \textsc{decl} \\
+\glt 'Thus the LORD saved Israel that day out of the hand of the Egyptians; and Israel saw the Egyptians dead upon the sea shore.' (Exodus 14:30)
+\end{exe}
 
 \texttt{Hih\ bangin} is especially good for direct instruction or quoted
 manner, as also seen in Genesis 42:18 \texttt{hih\ bangin\ gamta\ un}.
@@ -497,23 +527,19 @@ Person & Singular & Plural \\
 \end{longtable}
 }
 
-\begin{reviewexample}{ex:pro-amah}{}
-\reviewobjectline{Mipa in a zi' min pen Eve, ci hi. Bang hang hiam cih leh amah pen mihing khempeuh' nu ahi hi.}
-\begin{tabular}[t]{@{}l@{}}
-amah \\
-\textsc{3sg}.\textsc{pro} \\
-\end{tabular}
-\reviewtranslation{'And Adam called his wife's name Eve; because she was the mother of all living.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:pro-amah}
+\gll Mipa ìn à zi' mīn pèn Eve, cí hì. Bàng hàng hìam cìh lèh àmàh pèn mì-hìng khèmpeuh' nù àhì hì. \\
+     man \textsc{erg} \textsc{3sg} wife.\textsc{poss} name \textsc{top} \textsc{eve} say \textsc{decl} like reason \textsc{q} say.\textsc{nom} and \textsc{3sg}.\textsc{pro} \textsc{top} person-kind all.\textsc{poss} female be.\textsc{3sg} \textsc{decl} \\
+\glt 'And Adam called his wife's name Eve; because she was the mother of all living.'
+\end{exe}
 
-\begin{reviewexample}{ex:pro-note}{}
-\reviewobjectline{En un, note le note' khit a na suanlekhakte uh le,}
-\begin{tabular}[t]{@{}l@{}}
-note \\
-\textsc{2pl}.\textsc{pro} \\
-\end{tabular}
-\reviewtranslation{'And I, behold, I establish my covenant with you, and with your seed after you;'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:pro-note}
+\gll Ēn ùn, nòtè lè nòtè' khìt à nà suanlekhak-tè ùh lè, \\
+     look \textsc{imp}.\textsc{pl} \textsc{2pl}.\textsc{pro} and \textsc{2pl}.\textsc{pro}.\textsc{poss} \textsc{seq} \textsc{3sg} \textsc{2sg} genealogy-\textsc{pl} 2/3PL and \\
+\glt 'And I, behold, I establish my covenant with you, and with your seed after you;'
+\end{exe}
 
 These examples are ordinary independent pronouns rather than bound
 agreement markers. \texttt{amah} functions as a free third-person form,
@@ -541,23 +567,19 @@ useful here mainly as a contrast, since Singh does not describe the same
 inclusive/exclusive opposition for Sukte
 \citep[sec.~4.6.1]{sukte_grammar}.
 
-\begin{reviewexample}{ex:pro-eite}{}
-\reviewobjectline{Tua ciangin Abram in Lot' kiangah, "Nang le kei' kikal, nang' gancingte le kei' gancingte' kikalah kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi."}
-\begin{tabular}[t]{@{}l@{}}
-eite \\
-\textsc{1pl}.\textsc{pro} \\
-\end{tabular}
-\reviewtranslation{'And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:pro-eite}
+\gll Túa cìang-ìn Abram ìn Lot' kìang-àh, nàng lè kèi' kī-kal, nàng' gán-cíng-tè lè kèi' gán-cíng-te' kī-kal-àh kī-tot-ná ōm-sàk kèi nì. Bàng hàng hìam cìh lèh eite beh khàt ì-hí hì" \\
+     \textsc{dist} then-\textsc{erg} \textsc{abram} \textsc{erg} \textsc{lot}.\textsc{poss} beside-\textsc{loc} \textsc{2sg}.\textsc{pro} and \textsc{neg}.\textsc{emph}.\textsc{poss} \textsc{refl}-middle \textsc{2sg}.\textsc{pro}.\textsc{poss} cattle-care-\textsc{pl} and \textsc{neg}.\textsc{emph}.\textsc{poss} cattle-care-\textsc{pl}.\textsc{poss} \textsc{refl}-middle-\textsc{loc} \textsc{refl}-cut-\textsc{nmlz} exist-\textsc{caus} \textsc{neg} day like reason \textsc{q} say.\textsc{nom} and \textsc{1pl}.\textsc{pro} tribe one \textsc{1pl}.\textsc{incl}-be \textsc{decl} \\
+\glt 'And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.'
+\end{exe}
 
-\begin{reviewexample}{ex:pro-kote}{}
-\reviewobjectline{Kote tawh kitenna hong bawl un. Na tanute uh kote' tungah hong pia unla, no a dingin ka tanute uh la un.}
-\begin{tabular}[t]{@{}l@{}}
-kote \\
-\textsc{1pl}.\textsc{pro} \\
-\end{tabular}
-\reviewtranslation{'And make ye marriages with us, and give your daughters unto us, and take our daughters unto you.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:pro-kote}
+\gll Kòtè tàwh kī-ten-ná hòng bāwl ùn. Nà tanu-tè ùh kòtè' tùngàh hòng pía ùn-lá, no à dìng-ìn kà tanu-tè ùh lá ùn. \\
+     \textsc{1pl}.\textsc{pro} \textsc{com} \textsc{refl}-marry-\textsc{nmlz} \textsc{3→1} make \textsc{imp}.\textsc{pl} \textsc{2sg} daughter-\textsc{pl} 2/3PL \textsc{1pl}.\textsc{pro}.\textsc{poss} on-\textsc{loc} \textsc{3→1} give \textsc{pl}.\textsc{imp}-and young \textsc{3sg} \textsc{irr}-\textsc{erg} \textsc{1sg} daughter-\textsc{pl} 2/3PL take \textsc{imp}.\textsc{pl} \\
+\glt 'And make ye marriages with us, and give your daughters unto us, and take our daughters unto you.'
+\end{exe}
 
 Genesis 13:8 shows a genuinely inclusive use of \texttt{eite}, since
 Abram explicitly includes Lot in the relevant group. It does not prove
@@ -584,23 +606,19 @@ For a printed grammar, the safest description is that the forms are
 shared across possessive and agreement environments, but are easiest to
 present first in their nominal use.
 
-\begin{reviewexample}{ex:poss-na}{}
-\reviewobjectline{Kua' tanu na hi hiam, hong gen in. Na pa' inn-ah kote' giah nading a awng ding hiam? a ci hi.}
-\begin{tabular}[t]{@{}lll@{}}
-na & pa' & inn-ah \\
-\textsc{2sg}.\textsc{poss} & father & house-\textsc{loc} \\
-\end{tabular}
-\reviewtranslation{'Whose daughter art thou? tell me, I pray thee: is there room in thy father's house for us to lodge in?'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:poss-na}
+\gll Kua' tá-nù nà hì hìam, hòng gēn ìn. Nà pa' ínn-àh kòtè' giah nàdìng à áwng dìng hìam? à cí hì. \\
+     who.\textsc{poss} child-female \textsc{2sg} \textsc{decl} \textsc{q} \textsc{3→1} speak \textsc{erg} \textsc{2sg} male.\textsc{poss} house-\textsc{loc} \textsc{1pl}.\textsc{pro}.\textsc{poss} camp \textsc{purp} \textsc{3sg} open \textsc{irr} \textsc{q} \textsc{3sg} say \textsc{decl} \\
+\glt 'Whose daughter art thou? tell me, I pray thee: is there room in thy father's house for us to lodge in?'
+\end{exe}
 
-\begin{reviewexample}{ex:poss-a}{}
-\reviewobjectline{Mipa in a zi' min pen Eve, ci hi.}
-\begin{tabular}[t]{@{}ll@{}}
-a & zi' \\
-\textsc{3sg}.\textsc{poss} & wife \\
-\end{tabular}
-\reviewtranslation{'And the man called his wife's name Eve.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:poss-a}
+\gll Mipa ìn à zi' mīn pèn Eve, cí hì. \\
+     man \textsc{erg} \textsc{3sg} wife.\textsc{poss} name \textsc{top} \textsc{eve} say \textsc{decl} \\
+\glt 'And the man called his wife's name Eve.'
+\end{exe}
 
 The same pattern is visible in \texttt{ka\ pa\textquotesingle{}\ inn}
 `my father's house' and in the \texttt{i-} prefix that Henderson
@@ -622,23 +640,19 @@ In print, it is best to treat these forms neither as an unrelated
 lexical series nor as mere stylistic variants, but as a productive
 emphatic pattern built on the ordinary pronoun paradigm.
 
-\begin{reviewexample}{ex:emph-keimah}{}
-\reviewobjectline{Kain in Topa' tungah, Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi.}
-\begin{tabular}[t]{@{}l@{}}
-kei-mah \\
-\textsc{1sg}-\textsc{emph} \\
-\end{tabular}
-\reviewtranslation{'And Cain said unto the LORD, My punishment is greater than I can bear.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:emph-keimah}
+\gll Kain ìn Topa' tùngàh, Kèimah gìm hòng kī-pìak-ná, kà thùak zàwh dìng hì lò hì. \\
+     \textsc{kain} \textsc{erg} Lord.\textsc{poss} on-\textsc{loc} \textsc{1sg}.\textsc{pro} suffering \textsc{3→1} \textsc{refl}-give.to-\textsc{nmlz} \textsc{1sg} suffer able \textsc{irr} \textsc{decl} \textsc{neg} \textsc{decl} \\
+\glt 'And Cain said unto the LORD, My punishment is greater than I can bear.'
+\end{exe}
 
-\begin{reviewexample}{ex:emph-nangmah}{}
-\reviewobjectline{Abimelek in, En in, ka leitang, na mai-ah om hi. Nangmah in hoih na sakna munah teng in, a ci hi.}
-\begin{tabular}[t]{@{}l@{}}
-nang-mah \\
-\textsc{2sg}-\textsc{emph} \\
-\end{tabular}
-\reviewtranslation{'And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:emph-nangmah}
+\gll Abimelek ìn, Ēn ìn, kà léi-tāng, nà mái-àh ōm hì. Nangmah ìn hòih nà sàk-ná mùn-àh tèng ìn, à cí hì. \\
+     \textsc{abimelek} \textsc{erg} look \textsc{erg} \textsc{1sg} land-earth \textsc{2sg} face-\textsc{loc} exist \textsc{decl} \textsc{2sg}.\textsc{pro} \textsc{erg} good \textsc{2sg} cause-\textsc{nmlz} place-\textsc{loc} remain \textsc{erg} \textsc{3sg} say \textsc{decl} \\
+\glt 'And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee.'
+\end{exe}
 
 The same element also appears in negative-indefinite forms such as
 \texttt{kuamah} `no one' and \texttt{bangmah} `nothing'
@@ -656,14 +670,12 @@ acknowledge verbal \texttt{ki-}, since many reader-facing examples of
 reflexive or reciprocal meaning are expressed through \texttt{ki-} forms
 rather than through a free reflexive pronoun alone.
 
-\begin{reviewexample}{ex:refl-ki}{}
-\reviewobjectline{Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm a, amau tegel pum khat a bang uh hi.}
-\begin{tabular}[t]{@{}l@{}}
-ki-gawm \\
-\textsc{refl}-join \\
-\end{tabular}
-\reviewtranslation{'Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:refl-ki}
+\gll Túa thù hàng-ìn pasal ìn à nù lè à pà nusia-ìn à zi tàwh kī-gawm à, àmau tegel pum khàt à bàng ùh hì. \\
+     \textsc{dist} word because-\textsc{erg} husband \textsc{erg} \textsc{3sg} female and \textsc{3sg} father abandon-\textsc{erg} \textsc{3sg} wife \textsc{com} \textsc{refl}-seize \textsc{3sg} \textsc{3pl}.\textsc{pro} both body one \textsc{3sg} like 2/3PL \textsc{decl} \\
+\glt 'Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.'
+\end{exe}
 
 For print purposes, \texttt{ki-} can already be described as a
 productive reflexive or reciprocal verbal prefix. The remaining caution
@@ -700,23 +712,19 @@ manually checked illustrations.\footnote{The present editorial problem
   cases that can be read directly from the verse context without relying
   on a fully solved backend analysis.}
 
-\begin{reviewexample}{ex:hong-prefix}{}
-\reviewobjectline{Amah in a sangna panin a khut tawh zamin kei hong la a, tui thukpi panin keimah hong kaikhia hi.}
-\begin{tabular}[t]{@{}ll@{}}
-hong & la \\
-3>1 & take \\
-\end{tabular}
-\reviewtranslation{'He sent from above, he took me, He drew me out of many waters.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:hong-prefix}
+\gll Àmàh ìn à sàng-ná pàn-ìn à khùt tàwh zā-mīn kèi hòng lá à, tùi thuk-pì pàn-ìn kèimah hòng kà-ì-khìa hì. \\
+     \textsc{3sg}.\textsc{pro} \textsc{erg} \textsc{3sg} high-\textsc{nmlz} \textsc{abl}-\textsc{erg} \textsc{3sg} hand \textsc{com} hundred-thousand \textsc{neg} \textsc{3→1} take \textsc{3sg} water deep-big \textsc{abl}-\textsc{erg} \textsc{1sg}.\textsc{pro} \textsc{3→1} \textsc{1sg}-go-exit \textsc{decl} \\
+\glt 'He sent from above, he took me, He drew me out of many waters.'
+\end{exe}
 
-\begin{reviewexample}{ex:kong-prefix}{}
-\reviewobjectline{Faro in Josef' kiangah, Egypt gam khempeuh a uk dingin nang kong koih khinzo hi, a ci hi.}
-\begin{tabular}[t]{@{}ll@{}}
-kong & koih \\
-1>2 & set \\
-\end{tabular}
-\reviewtranslation{'And Pharaoh said unto Joseph, See, I have set thee over all the land of Egypt.'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:kong-prefix}
+\gll Faro ìn Josef' kìang-àh, Egypt gàm khèmpeuh à ùk dìng-ìn nàng kòng kòih khin-zò hì, à cí hì. \\
+     \textsc{faro} \textsc{erg} \textsc{josef}.\textsc{poss} beside-\textsc{loc} \textsc{egypt} land all \textsc{3sg} rule \textsc{irr}-\textsc{erg} \textsc{2sg}.\textsc{pro} \textsc{1sg→3} put \textsc{compl}-\textsc{compl} \textsc{decl} \textsc{3sg} say \textsc{decl} \\
+\glt 'And Pharaoh said unto Joseph, See, I have set thee over all the land of Egypt.'
+\end{exe}
 
 These examples are enough to justify a cautious print description:
 \texttt{hong-} and \texttt{kong-} belong with person-sensitive preverbal
@@ -1078,14 +1086,12 @@ is unsafe: rows such as \texttt{ciangin} are conjunctional or other
 non-case material, so they must not be promoted as ergative case
 examples.
 
-\begin{reviewexample}{ex:erg-in}{}
-\reviewobjectline{Tua hun sungin Kain in lei pana piang gah piakna Topa' tungah paipih a,}
-\begin{tabular}[t]{@{}ll@{}}
-Kain & in \\
-Cain & \textsc{erg} \\
-\end{tabular}
-\reviewtranslation{‘And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.’}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:erg-in}
+\gll Túa hùn sùng-ìn Kain ìn léi pà-ná piang gah pìak-ná Topa' tùngàh pái-pìh à, \\
+     \textsc{dist} time inside-\textsc{erg} \textsc{kain} \textsc{erg} buy father-\textsc{nmlz} be.born branch give.to-\textsc{nmlz} Lord.\textsc{poss} on-\textsc{loc} go-\textsc{appl} \textsc{3sg} \\
+\glt 'And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD.'
+\end{exe}
 
 This example is sufficient for a draft chapter because it shows the
 essential pattern without relying on doubtful segmentation. The agent
@@ -1111,23 +1117,19 @@ from relator-noun-plus-case constructions such as \texttt{laizangah},
 richer than a simple gloss ``at/in'', while still keeping those two
 subtypes distinct.
 
-\begin{reviewexample}{ex:loc-ah}{}
-\reviewobjectline{Pasian in, “Tuite' laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.}
-\begin{tabular}[t]{@{}l@{}}
-lai-zang-ah \\
-middle-side-\textsc{loc} \\
-\end{tabular}
-\reviewtranslation{‘And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.’}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:loc-ah}
+\gll Pasian ìn, tuite' lai-zang-àh vàn kuum-pì ōm hèn lá, túa vàn kuum-pì ìn tùi lè tùi kī-khen-sàk hèn cí hì. \\
+     God \textsc{erg} water-\textsc{pl}.\textsc{poss} middle-side-\textsc{loc} sky bow-big exist \textsc{juss} take \textsc{dist} sky bow-big \textsc{erg} water and water \textsc{refl}-divide-\textsc{caus} \textsc{juss} say \textsc{decl} \\
+\glt 'And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.'
+\end{exe}
 
-\begin{reviewexample}{ex:loc-ah-2}{}
-\reviewobjectline{leitung khua a vaksak dingin vantungah khuavak hi uh hen,” ci hi.}
-\begin{tabular}[t]{@{}l@{}}
-vantung-ah \\
-heaven-\textsc{loc} \\
-\end{tabular}
-\reviewtranslation{‘and let them be for lights in the firmament of the heaven to give light upon the earth’}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:loc-ah-2}
+\gll léi-tùng khùa à vak-sàk dìng-ìn vantung-àh khuavak hì ùh hèn cí hì. \\
+     land-on town \textsc{3sg} shine-\textsc{caus} \textsc{irr}-\textsc{erg} heaven-\textsc{loc} light \textsc{decl} 2/3PL \textsc{juss} say \textsc{decl} \\
+\glt 'and let them be for lights in the firmament of the heaven to give light upon the earth'
+\end{exe}
 
 The first example shows especially clearly that \texttt{-ah} often
 completes a larger relational expression rather than attaching only to a
@@ -1168,14 +1170,12 @@ does not present an ablative category in the modern sense, but the
 source-marking behavior is nevertheless compatible with her structural
 account of post-nominal particles \citep[104]{henderson1965}.
 
-\begin{reviewexample}{ex:pan}{}
-\reviewobjectline{Tua ahih manin hih thukhamte lakpan a neupente khat bek nangawn zuikha loin, midangte in zong a zuih loh nadingin a gen mite pen vantung ki-ukna sungah mi neupen hi ding uh hi.}
-\begin{tabular}[t]{@{}l@{}}
-lak-pan \\
-midst-\textsc{abl} \\
-\end{tabular}
-\reviewtranslation{‘Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven.’}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:pan}
+\gll Túa àhìh màn-ìn híh thù-khàm-te lak-pàn à néu-pèn-tè khàt bèk nà-ngawn zúi-khá lò-ìn, midang-tè ìn zòng à zùih lòh nàdìngìn à gēn mì-tè pèn vàn-tùng kī-ukna sùng-àh mì néu-pèn hì dìng ùh hì. \\
+     \textsc{dist} be.\textsc{3sg}.\textsc{rel} reason-\textsc{erg} \textsc{prox} law-\textsc{pl} midst-\textsc{abl} \textsc{3sg} small-most-\textsc{pl} one only \textsc{2sg}-own follow-go \textsc{neg}-\textsc{erg} other.person-\textsc{pl} \textsc{erg} also \textsc{3sg} follow-\textsc{nom} \textsc{neg}-\textsc{nom} \textsc{purp}.\textsc{erg} \textsc{3sg} speak person-\textsc{pl} \textsc{top} sky-on \textsc{refl}-rule.\textsc{nmlz} inside-\textsc{loc} person small-\textsc{top} \textsc{decl} \textsc{irr} 2/3PL \textsc{decl} \\
+\glt 'Whosoever therefore shall break one of these least commandments, and shall teach men so, he shall be called the least in the kingdom of heaven.'
+\end{exe}
 
 This example is worth keeping because it shows a natural source
 construction built on a relator noun. The source relation is real, but
@@ -1192,14 +1192,12 @@ source meaning, but its exact structural status in every occurrence.
 Some examples look like straightforward source phrases, while others
 behave more like extended or tightly fused source-marking expressions.
 
-\begin{reviewexample}{ex:panin}{}
-\reviewobjectline{Topa in Abram kiangah, “Na gam, na beh, le na pa' inn panin nang kong lah ding gamah pai in.”}
-\begin{tabular}[t]{@{}ll@{}}
-inn & panin \\
-house & from \\
-\end{tabular}
-\reviewtranslation{‘Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house.’}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:panin}
+\gll Topa ìn Abram kìang-àh, nà gàm, nà beh, lè nà pa' ínn pàn-ìn nàng kòng làh dìng gàm-àh pái ìn \\
+     Lord \textsc{erg} \textsc{abram} beside-\textsc{loc} \textsc{2sg} land \textsc{2sg} tribe and \textsc{2sg} male.\textsc{poss} house \textsc{abl}-\textsc{erg} \textsc{2sg}.\textsc{pro} \textsc{1sg→3} lamp \textsc{irr} land-\textsc{loc} go \textsc{erg} \\
+\glt 'Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father’s house.'
+\end{exe}
 
 For that reason, a printed grammar can already gloss \texttt{-panin} as
 a source form related to \texttt{-pan}, but should avoid a stronger
@@ -1226,23 +1224,19 @@ treating all examples as equivalent.\footnote{The currently available
   Genesis 2:7 or Genesis 2:21 as if they were ordinary companion
   phrases.}
 
-\begin{reviewexample}{ex:tawh-accompaniment}{}
-\reviewobjectline{Tangvalte' neksate le kei tawh hong kuan mite' tanh dingte lobuang bangmah ka la kei ding hi.}
-\begin{tabular}[t]{@{}ll@{}}
-kei & tawh \\
-\textsc{1sg} & \textsc{com} \\
-\end{tabular}
-\reviewtranslation{‘save only that which the young men have eaten, and the portion of the men which went with me’}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:tawh-accompaniment}
+\gll Tangvalte' nèk-sá-tè lè kèi tàwh hòng kúan mite' tành dìng-tè lobuang bangmah kà lá kèi dìng hì. \\
+     youth-\textsc{pl}.\textsc{poss} eat.\textsc{ii}-flesh-\textsc{pl} and \textsc{1sg}.\textsc{pro} \textsc{com} \textsc{3→1} family person-\textsc{pl}.\textsc{poss} spread stand-\textsc{pl} disturb nothing \textsc{1sg} take \textsc{neg} \textsc{irr} \textsc{decl} \\
+\glt 'save only that which the young men have eaten, and the portion of the men which went with me'
+\end{exe}
 
-\begin{reviewexample}{ex:tawh-extension}{}
-\reviewobjectline{Topa Pasian in leilak pana leivui tawh mihing bawl a, a nak sungah nuntakna hu sang suk hi.}
-\begin{tabular}[t]{@{}ll@{}}
-leivui & tawh \\
-dust & \textsc{com} \\
-\end{tabular}
-\reviewtranslation{‘And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.’}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:tawh-extension}
+\gll Topa Pasian ìn léi-lak pà-ná leivui tàwh mì-hìng bāwl à, à nak sùng-àh nuntak-ná hu sàng sùk hì. \\
+     Lord God \textsc{erg} dust father-\textsc{nmlz} dust \textsc{com} person-kind make \textsc{3sg} \textsc{3sg} nose inside-\textsc{loc} live-\textsc{nmlz} breath high collapse \textsc{decl} \\
+\glt 'And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.'
+\end{exe}
 
 Genesis 14:24 illustrates the core accompaniment use well enough for
 print: \texttt{kei\ tawh} marks the men as companions who went with
@@ -1465,23 +1459,19 @@ phrases}\label{basic-cardinal-counting-phrases}
 The cleanest basic counting phrases in the current packet are Genesis
 11:10 and Genesis 7:10.
 
-\begin{reviewexample}{ex:num-kum-nih}{}
-\reviewobjectline{kum nih}
-\begin{tabular}[t]{@{}lll@{}}
-kum & | & nih \\
-year & | & two \\
-\end{tabular}
-\reviewtranslation{'two years'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:num-kum-nih}
+\gll kúm nìh \\
+     year two \\
+\glt 'two years'
+\end{exe}
 
-\begin{reviewexample}{ex:num-ni-sagih}{}
-\reviewobjectline{ni sagih}
-\begin{tabular}[t]{@{}lll@{}}
-ni & | & sagih \\
-day & | & seven \\
-\end{tabular}
-\reviewtranslation{'seven days'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:num-ni-sagih}
+\gll nì sagih \\
+     day seven \\
+\glt 'seven days'
+\end{exe}
 
 These are clean post-nominal counting phrases. The printed claim should
 stay modest: they show candidate-backed noun-plus-numeral counting, not
@@ -1492,14 +1482,12 @@ language.
 
 Genesis 5:9 gives the clearest current compound-ten example:
 
-\begin{reviewexample}{ex:num-sawmkua}{}
-\reviewobjectline{kum sawmkua}
-\begin{tabular}[t]{@{}lll@{}}
-kum & | & sawm-kua \\
-year & | & ten-nine \\
-\end{tabular}
-\reviewtranslation{'ninety years'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:num-sawmkua}
+\gll kúm sàwm-kua \\
+     year ten-nine \\
+\glt 'ninety years'
+\end{exe}
 
 \texttt{Sawmkua} matters for two reasons. First, it shows a compound-ten
 structure. Second, it is the strongest current numeral-side control for
@@ -1513,14 +1501,12 @@ than being silently normalized away.
 
 Genesis 7:11 supplies the current ordinal anchor:
 
-\begin{reviewexample}{ex:num-nihna}{}
-\reviewobjectline{nihna}
-\begin{tabular}[t]{@{}l@{}}
-nih-na \\
-two-\textsc{nmlz} \\
-\end{tabular}
-\reviewtranslation{'second'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:num-nihna}
+\gll nìh-ná \\
+     two-\textsc{nmlz} \\
+\glt 'second'
+\end{exe}
 
 \texttt{Nihna} is the current candidate-backed ordinal example. The
 generated report mentions \texttt{masa} `first', but \texttt{masa} is
@@ -1534,14 +1520,12 @@ form}\label{occurrence-counting-multiplicative-form}
 
 Genesis 31:7 keeps one compact occurrence-counting form in view:
 
-\begin{reviewexample}{ex:num-sawmvei}{}
-\reviewobjectline{sawmvei}
-\begin{tabular}[t]{@{}l@{}}
-sawm-vei \\
-ten-times \\
-\end{tabular}
-\reviewtranslation{'ten times'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:num-sawmvei}
+\gll sàwm-véi \\
+     ten-times \\
+\glt 'ten times'
+\end{exe}
 
 The generated report paraphrases this as \texttt{vei\ sawm}, but the
 candidate layer uses export-backed \texttt{sawmvei}, and that fused form
@@ -1554,15 +1538,12 @@ classifier system.
 Genesis 5:27 gives one usable large-number phrase, but only with
 explicit caveats:
 
-\begin{reviewexample}{ex:num-large}{}
-\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:num-large; showing padded alignment.]}
-\reviewobjectline{kum zakua le kum sawmguk le kua}
-\begin{tabular}[t]{@{}lllllllllllllll@{}}
-kum & | & za-kua & | & le & | & kum & | & sawm-guk & | & le & | & kua &  &  \\
-year & | & hundred-nine & | & and & | & year & | & ten-six & | & and & | & nine & [export: & who] \\
-\end{tabular}
-\reviewtranslation{'nine hundred sixty and nine years'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:num-large}
+\gll kúm zā-kua lè kúm sàwm-gùk lè kua \\
+     year hundred-nine and year ten-six and who \\
+\glt 'nine hundred sixty and nine years'
+\end{exe}
 
 This construction is numeral, not interrogative. The dossier is
 nevertheless explicit about the export caveats: the analyzer compresses
@@ -1596,14 +1577,12 @@ boundary}{Khat and the numeral/indefinite boundary}}\label{khat-and-the-numerali
 
 Genesis 32:24 gives a useful but boundary-marked example:
 
-\begin{reviewexample}{ex:num-mi-khat}{}
-\reviewobjectline{mi khat}
-\begin{tabular}[t]{@{}lll@{}}
-mi & | & khat \\
-person & | & one \\
-\end{tabular}
-\reviewtranslation{'a man' / 'one person'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:num-mi-khat}
+\gll mì khàt \\
+     person one \\
+\glt 'a man' / 'one person'
+\end{exe}
 
 \texttt{Mi\ khat} is analyzer-backed and worth keeping visible, but its
 English context ``a man'' shows why it should not be treated as an
@@ -1679,14 +1658,12 @@ quantity row. \texttt{Zaw} and \texttt{mahmah} are edge rows only, and
 
 Genesis 2:1 supplies the current candidate-backed universal anchor:
 
-\begin{reviewexample}{ex:quant-khempeuh}{}
-\reviewobjectline{vantung leitung le a sunga omte khempeuh}
-\begin{tabular}[t]{@{}lllllllllllll@{}}
-van-tung & | & lei-tung & | & le & | & a & | & sung-a & | & om-te & | & khempeuh \\
-sky-on & | & land-on & | & and & | & \textsc{3sg} & | & inside-\textsc{3sg} & | & exist-\textsc{pl} & | & all \\
-\end{tabular}
-\reviewtranslation{'the heavens and the earth, and all that was in them'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-khempeuh}
+\gll vàn-tùng léi-tùng lè à sùng-à ōm-tè khèmpeuh \\
+     sky-on land-on and \textsc{3sg} inside-\textsc{3sg} exist-\textsc{pl} all \\
+\glt 'the heavens and the earth, and all that was in them'
+\end{exe}
 
 \texttt{Khempeuh} is the current accepted universal anchor. The example
 is a scoped noun phrase, not a license for raw \texttt{khempeuh}
@@ -1700,14 +1677,12 @@ universal anchor, not a complete universal-quantifier system.
 Genesis 32:8 gives the current accepted-with-caveat \texttt{pawlkhat}
 row:
 
-\begin{reviewexample}{ex:quant-pawlkhat}{}
-\reviewobjectline{pawlkhat}
-\begin{tabular}[t]{@{}l@{}}
-pawl-khat \\
-some-one \\
-\end{tabular}
-\reviewtranslation{'one group' / 'one company'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-pawlkhat}
+\gll pàwl-khàt \\
+     some-one \\
+\glt 'one group' / 'one company'
+\end{exe}
 
 \texttt{Pawlkhat} is useful, but the context is partitive or alternative
 grouping (``one company \ldots{} the other company''), not an
@@ -1720,14 +1695,12 @@ boundary}{Khat and the numeral/indefinite boundary}}\label{khat-and-the-numerali
 
 Genesis 32:24 provides the current boundary row:
 
-\begin{reviewexample}{ex:quant-mi-khat}{}
-\reviewobjectline{mi khat}
-\begin{tabular}[t]{@{}lll@{}}
-mi & | & khat \\
-person & | & one \\
-\end{tabular}
-\reviewtranslation{'a man' / 'one person'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-mi-khat}
+\gll mì khàt \\
+     person one \\
+\glt 'a man' / 'one person'
+\end{exe}
 
 \texttt{Mi\ khat} is reused from the numerals packet as boundary
 evidence. It prevents quantifiers from silently absorbing numeral
@@ -1741,23 +1714,19 @@ overlap}\label{negative-quantifiers-and-negation-overlap}
 The current packet prints \texttt{kuamah} and \texttt{bangmah} only in
 negative-licensed clauses.
 
-\begin{reviewexample}{ex:quant-kuamah}{}
-\reviewobjectline{kuamah mu lo}
-\begin{tabular}[t]{@{}lllll@{}}
-kuamah & | & mu & | & lo \\
-nobody & | & see.\textsc{i} & | & \textsc{neg} \\
-\end{tabular}
-\reviewtranslation{'he saw nobody' / 'he saw no man'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-kuamah}
+\gll kuamah mú lò \\
+     nobody see.\textsc{i} \textsc{neg} \\
+\glt 'he saw nobody' / 'he saw no man'
+\end{exe}
 
-\begin{reviewexample}{ex:quant-bangmah-neg}{}
-\reviewobjectline{bangmah om lo hi}
-\begin{tabular}[t]{@{}lllllll@{}}
-bangmah & | & om & | & lo & | & hi \\
-nothing & | & exist & | & \textsc{neg} & | & \textsc{decl} \\
-\end{tabular}
-\reviewtranslation{'there is nothing' / 'nothing exists'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-bangmah-neg}
+\gll bangmah ōm lò hì \\
+     nothing exist \textsc{neg} \textsc{decl} \\
+\glt 'there is nothing' / 'nothing exists'
+\end{exe}
 
 These rows are accepted with caveat only in negative-licensed contexts.
 This grammar slice should therefore cross-reference, not reopen, the
@@ -1785,14 +1754,12 @@ friends had to be handled separately from ordinary question material.
 
 Genesis 17:2 gives the current degree or quantity anchor:
 
-\begin{reviewexample}{ex:quant-tampi}{}
-\reviewobjectline{tampi tak}
-\begin{tabular}[t]{@{}lll@{}}
-tampi & | & tak \\
-many & | & truly \\
-\end{tabular}
-\reviewtranslation{'exceedingly' / 'very many'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-tampi}
+\gll tampi tak \\
+     many truly \\
+\glt 'exceedingly' / 'very many'
+\end{exe}
 
 \texttt{Tampi\ tak} is enough to keep degree or quantity material
 visible in the first slice. It should not, however, launch a full
@@ -1804,23 +1771,19 @@ rows}\label{comparative-and-intensifier-edge-rows}
 The packet keeps one comparative and one intensifier row visible, but
 only as edge material:
 
-\begin{reviewexample}{ex:quant-zaw-edge}{}
-\reviewobjectline{vanglian zaw}
-\begin{tabular}[t]{@{}lll@{}}
-vang-lian & | & zaw \\
-power-big & | & more \\
-\end{tabular}
-\reviewtranslation{'more powerful' / 'mightier'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-zaw-edge}
+\gll vang-lìan zàw \\
+     power-big more \\
+\glt 'more powerful' / 'mightier'
+\end{exe}
 
-\begin{reviewexample}{ex:quant-mahmah-edge}{}
-\reviewobjectline{hau mahmah}
-\begin{tabular}[t]{@{}lll@{}}
-hau & | & mahmah \\
-rich & | & very \\
-\end{tabular}
-\reviewtranslation{'very rich'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:quant-mahmah-edge}
+\gll hau màhmàh \\
+     rich very \\
+\glt 'very rich'
+\end{exe}
 
 \texttt{Zaw} and \texttt{mahmah} are useful boundary evidence. They are
 not the basis for a full comparison or intensifier chapter in this
@@ -2929,14 +2892,12 @@ verbal suffix in the current packet. \texttt{-lut}, \texttt{-phei},
 
 Genesis 2:5 supplies the cleanest current outward anchor:
 
-\begin{reviewexample}{ex:dir-khia-pokhia}{}
-\reviewobjectline{pokhia}
-\begin{tabular}[t]{@{}l@{}}
-po-khia \\
-grow-out \\
-\end{tabular}
-\reviewtranslation{'grew'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-khia-pokhia}
+\gll po-khìa \\
+     grow-out \\
+\glt 'grew'
+\end{exe}
 
 \texttt{Pokhia} is the cleanest current outward \texttt{-khia} anchor.
 It supports a modest print claim that \texttt{-khia} can mark outward
@@ -2951,14 +2912,12 @@ That claim must stay narrow. The row does \textbf{not} license raw
 
 Deuteronomy 9:4 supplies the current away anchor:
 
-\begin{reviewexample}{ex:dir-khiat-nawhkhiat}{}
-\reviewobjectline{nawhkhiat}
-\begin{tabular}[t]{@{}l@{}}
-nawh-khiat \\
-hurry-away \\
-\end{tabular}
-\reviewtranslation{'cast them out'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-khiat-nawhkhiat}
+\gll nawh-khìat \\
+     hurry-away \\
+\glt 'cast them out'
+\end{exe}
 
 \texttt{Nawhkhiat} is the current compact away \texttt{-khiat} anchor.
 It is accepted with caveat because the export still labels the selected
@@ -2972,14 +2931,12 @@ claim.
 
 Exodus 14:13 then keeps nominalized boundary material visible:
 
-\begin{reviewexample}{ex:dir-khiatna-hotkhiatna}{}
-\reviewobjectline{hotkhiatna}
-\begin{tabular}[t]{@{}l@{}}
-hot-khiat-na \\
-save-away-\textsc{nmlz} \\
-\end{tabular}
-\reviewtranslation{'salvation'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-khiatna-hotkhiatna}
+\gll hot-khìat-ná \\
+     save-away-\textsc{nmlz} \\
+\glt 'salvation'
+\end{exe}
 
 \texttt{Hotkhiatna} keeps \texttt{-khiat-na} visible in the packet. It
 is nominalized boundary material and should not be treated as identical
@@ -2991,14 +2948,12 @@ overlap}{Upward -toh and comitative/accompany overlap}}\label{upward--toh-and-co
 
 Numbers 9:17 supplies the current upward anchor:
 
-\begin{reviewexample}{ex:dir-toh-kilaktoh}{}
-\reviewobjectline{kilaktoh}
-\begin{tabular}[t]{@{}l@{}}
-ki-lak-toh \\
-\textsc{refl}-take-\textsc{up} \\
-\end{tabular}
-\reviewtranslation{'was taken up'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-toh-kilaktoh}
+\gll kī-làk-tòh \\
+     \textsc{refl}-take-\textsc{up} \\
+\glt 'was taken up'
+\end{exe}
 
 \texttt{Kilaktoh} is the current upward \texttt{-toh} anchor. It is
 usable only with the packet's polysemy caveat: this row supports upward
@@ -3020,14 +2975,12 @@ therefore be paired with this explicit caveat.
 Deuteronomy 32:50 also keeps nominalized \texttt{-toh-na} material
 visible:
 
-\begin{reviewexample}{ex:dir-tohna-kahtohna}{}
-\reviewobjectline{kahtohna}
-\begin{tabular}[t]{@{}l@{}}
-kah-toh-na \\
-climb-up-\textsc{nmlz} \\
-\end{tabular}
-\reviewtranslation{'the mount whither thou goest up' / 'going up'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-tohna-kahtohna}
+\gll kàh-tòh-ná \\
+     climb-up-\textsc{nmlz} \\
+\glt 'the mount whither thou goest up' / 'going up'
+\end{exe}
 
 \texttt{Kahtohna} keeps \texttt{-toh-na} visible, but it is nominalized
 boundary material rather than a simple finite directional predicate.
@@ -3037,14 +2990,12 @@ boundary material rather than a simple finite directional predicate.
 
 Genesis 30:9 keeps \texttt{-lam} visible:
 
-\begin{reviewexample}{ex:dir-lam-tawplam}{}
-\reviewobjectline{tawplam}
-\begin{tabular}[t]{@{}l@{}}
-tawp-lam \\
-end-\textsc{toward} \\
-\end{tabular}
-\reviewtranslation{'left off' / 'at the end'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-lam-tawplam}
+\gll tawp-lam \\
+     end-\textsc{toward} \\
+\glt 'left off' / 'at the end'
+\end{exe}
 
 \texttt{Tawplam} keeps \texttt{-lam} visible, but the export profile
 remains nominal (\texttt{tawp} / \texttt{N}). The safest present
@@ -3059,14 +3010,12 @@ simple verbal directional.
 
 Ezra 9:9 supplies the current cautious toward row:
 
-\begin{reviewexample}{ex:dir-sawn-piasawn}{}
-\reviewobjectline{piasawn}
-\begin{tabular}[t]{@{}l@{}}
-pia-sawn \\
-give-toward \\
-\end{tabular}
-\reviewtranslation{'give us' / 'extend to us'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-sawn-piasawn}
+\gll pía-sàwn \\
+     give-toward \\
+\glt 'give us' / 'extend to us'
+\end{exe}
 
 \texttt{Piasawn} is the current cautious toward \texttt{-sawn} row. It
 is more useful than kinship-heavy or nominal-looking rows for this
@@ -3079,14 +3028,12 @@ kinship-heavy \texttt{-sawn} material.
 
 Genesis 11:5 supplies the first corpus-backed downward row:
 
-\begin{reviewexample}{ex:dir-suk-paisuk}{}
-\reviewobjectline{paisuk}
-\begin{tabular}[t]{@{}l@{}}
-pai-suk \\
-go-\textsc{down} \\
-\end{tabular}
-\reviewtranslation{'came down'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:dir-suk-paisuk}
+\gll pái-sùk \\
+     go-\textsc{down} \\
+\glt 'came down'
+\end{exe}
 
 \texttt{Paisuk} gives the packet a corpus-backed downward \texttt{-suk}
 row. Analyzer tests also support \texttt{-suk}, but print prose should
@@ -3643,14 +3590,12 @@ combinations such as \texttt{V\ lo\ ding}. That does not make it the
 whole negation system, but it does make it the most transparent starting
 point.
 
-\begin{reviewexample}{ex:neg-lo}{Genesis 4:5}
-\reviewobjectline{ahih hangin Kain le ama piakna thusim lo hi. Tua ahih ciangin Kain heh mahmah a, a mai sia hi.}
-\begin{tabular}[t]{@{}lll@{}}
-thusim & lo & hi \\
-accept & \textsc{neg} & \textsc{decl} \\
-\end{tabular}
-\reviewtranslation{"but unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:neg-lo}
+\gll àhìh hàng-ìn Kain lè àmà pìak-ná thusim lò hì. Túa àhìh cìang-ìn Kain hèh màhmàh à, à mái sía hì. \\
+     be.\textsc{3sg}.\textsc{rel} because-\textsc{erg} \textsc{kain} and \textsc{3sg}.\textsc{poss} give.to-\textsc{nmlz} parable \textsc{neg} \textsc{decl} \textsc{dist} be.\textsc{3sg}.\textsc{rel} then-\textsc{erg} \textsc{kain} anger very \textsc{3sg} \textsc{3sg} face evil \textsc{decl} \\
+\glt 'but unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell.' (Genesis 4:5)
+\end{exe}
 
 Genesis 4:5 is a good central example because it shows exactly the
 clause type a reader expects from a first negation section: a verbal
@@ -3676,14 +3621,12 @@ purposive, and derived environments such as \texttt{...\ loh\ dinga},
 label is therefore something like ``dependent or derived negative
 form'', not just ``another way to spell \texttt{lo}''.
 
-\begin{reviewexample}{ex:neg-loh}{Genesis 3:11}
-\reviewobjectline{Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi hiam?” ci hi.}
-\begin{tabular}[t]{@{}lll@{}}
-nek & loh & ding-a \\
-eat.\textsc{ii} & \textsc{neg}.\textsc{dep} & \textsc{irr}-\textsc{erg} \\
-\end{tabular}
-\reviewtranslation{"And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?"}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:neg-loh}
+\gll Àmàh ìn, nà guak-tāng-à nà ōm-ná kua ìn hòng gēn àhì hìam? Nà nèk lòh dìng-à kòng thupiak singgah né khá nà hì hìam cí hì. \\
+     \textsc{3sg}.\textsc{pro} \textsc{erg} \textsc{2sg} bare-body-\textsc{loc} \textsc{2sg} exist-\textsc{nmlz} who \textsc{erg} \textsc{3→1} speak be.\textsc{3sg} \textsc{q} \textsc{2sg} eat.\textsc{ii} \textsc{neg}-\textsc{nom} \textsc{irr}-\textsc{loc} \textsc{1sg→3} commandment hang eat \textsc{neg}.\textsc{perf} \textsc{2sg} \textsc{decl} \textsc{q} say \textsc{decl} \\
+\glt 'And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?' (Genesis 3:11)
+\end{exe}
 
 Genesis 3:11 is especially useful because \texttt{loh} is not just
 attached to a bare verb in isolation. It appears inside a dependent
@@ -3705,14 +3648,12 @@ those prohibitives are among the cleanest manually checked negative
 examples available. This alone is enough to show why the negation system
 cannot be flattened to \texttt{lo}.
 
-\begin{reviewexample}{ex:neg-kei}{Genesis 22:12}
-\reviewobjectline{Amah in, “Tangvalpa su kei in. Ama tungah bangmah hih kei in. Bang hang hiam cih leh nang in Pasian na zahtakna tu-in ka thei a, na tapa khat neihsun keima a dingin na humcip lohna ka mu hi,” a ci hi.}
-\begin{tabular}[t]{@{}lllllll@{}}
-su & kei & in & ... & hih & kei & in \\
-strike & \textsc{neg} & \textsc{imp} & ... & do & \textsc{neg} & \textsc{imp} \\
-\end{tabular}
-\reviewtranslation{"And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:neg-kei}
+\gll Àmàh ìn, tangval-pà sù kèi ìn. Àmà tùngàh bangmah híh kèi ìn. Bàng hàng hìam cìh lèh nàng ìn Pasian nà zah-tàk-ná tù-ìn kà théi à, nà tá-pà khàt nèih-sun kèima à dìng-ìn nà hum-cìp lòh-ná kà mú hì à cí hì. \\
+     \textsc{3sg}.\textsc{pro} \textsc{erg} \textsc{tangvalpa} tear \textsc{neg} \textsc{erg} \textsc{3sg}.\textsc{poss} on-\textsc{loc} nothing \textsc{prox} \textsc{neg} \textsc{erg} like reason \textsc{q} say.\textsc{nom} and \textsc{2sg}.\textsc{pro} \textsc{erg} God \textsc{2sg} fear-exact-\textsc{nmlz} now-\textsc{erg} \textsc{1sg} know \textsc{3sg} \textsc{2sg} child-male one have.\textsc{ii}-long \textsc{1sg}.self \textsc{3sg} \textsc{irr}-\textsc{erg} \textsc{2sg} fear-grip \textsc{neg}-\textsc{nmlz} \textsc{1sg} see.\textsc{i} \textsc{decl} \textsc{3sg} say \textsc{decl} \\
+\glt 'And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me.' (Genesis 22:12)
+\end{exe}
 
 Genesis 22:12 gives two clear negative imperatives in the same speech
 turn. Genesis 15:1 \texttt{Lau\ kei\ in}, Genesis 19:17
@@ -3757,14 +3698,12 @@ clause-level inability with \texttt{thei\ lo}, while dependent or
 derived negative ability is better represented by \texttt{theih\ loh}
 patterns than by the much rarer exact string \texttt{theih\ lo}.
 
-\begin{reviewexample}{ex:neg-thei-lo}{Genesis 27:23}
-\reviewobjectline{A khutte in a sanggampa Esau’ khut bangin mul nei ahih manin amah in thei lo hi. Tua ahih ciangin amah in thupha pia dingin kithawi a,}
-\begin{tabular}[t]{@{}lll@{}}
-thei & lo & hi \\
-know & \textsc{neg} & \textsc{decl} \\
-\end{tabular}
-\reviewtranslation{"And he discerned him not, because his hands were hairy, as his brother Esau's hands: so he blessed him."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:neg-thei-lo}
+\gll À khùt-tè ìn à sanggampa Esau' khùt bàng-ìn múl néi àhìh màn-ìn àmàh ìn théi lò hì. Túa àhìh cìang-ìn àmàh ìn thù-phà pía dìng-ìn kithawi à, \\
+     \textsc{3sg} hand-\textsc{pl} \textsc{erg} \textsc{3sg} brother \textsc{esau}.\textsc{poss} hand like-\textsc{erg} hair have be.\textsc{3sg}.\textsc{rel} reason-\textsc{erg} \textsc{3sg}.\textsc{pro} \textsc{erg} know \textsc{neg} \textsc{decl} \textsc{dist} be.\textsc{3sg}.\textsc{rel} then-\textsc{erg} \textsc{3sg}.\textsc{pro} \textsc{erg} word-good give \textsc{irr}-\textsc{erg} hot.displeasure \textsc{3sg} \\
+\glt 'And he discerned him not, because his hands were hairy, as his brother Esau's hands: so he blessed him.' (Genesis 27:23)
+\end{exe}
 
 Genesis 27:23 is a compact ordinary example: \texttt{thei\ lo\ hi} means
 that recognition or knowledge failed to occur. Genesis 37:4
@@ -3784,14 +3723,12 @@ can occur in non-pronominal strings and \texttt{bangmah} has non-NPI
 uses such as \texttt{tua\ bangmah\ hi-in} ``likewise''. The discussion
 here therefore uses only manually checked examples.
 
-\begin{reviewexample}{ex:neg-kuamah}{Exodus 2:12}
-\reviewobjectline{Amah khuadak kawikawi a, kuamah mu lo ahih manin Egypt mipa thatin sehnel sungah a seel hi.}
-\begin{tabular}[t]{@{}lll@{}}
-kuamah & mu & lo \\
-nobody & see & \textsc{neg} \\
-\end{tabular}
-\reviewtranslation{"And he looked this way and that way, and when he saw that there was no man, he slew the Egyptian, and hid him in the sand."}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:neg-kuamah}
+\gll Àmàh khùa-dāk kawi-kawi à, kuamah mú lò àhìh màn-ìn Egypt mipa thàt-ìn sehnel sùng-àh à seel hì. \\
+     \textsc{3sg}.\textsc{pro} town-near crooked\textasciitilde{}REDUP \textsc{3sg} nobody see.\textsc{i} \textsc{neg} be.\textsc{3sg}.\textsc{rel} reason-\textsc{erg} \textsc{egypt} man kill-\textsc{cvb} wilderness inside-\textsc{loc} \textsc{3sg} hide \textsc{decl} \\
+\glt 'And he looked this way and that way, and when he saw that there was no man, he slew the Egyptian, and hid him in the sand.' (Exodus 2:12)
+\end{exe}
 
 Exodus 2:12 is a good \texttt{kuamah} example because the NPI is clearly
 licensed by the negative predicate. \texttt{Bangmah} behaves similarly
@@ -3857,14 +3794,12 @@ as the core yes/no pattern represented in this packet. The best print
 anchor is Genesis 24:23, using the attested analyzer-backed clause
 rather than the older generated-report paraphrase.
 
-\begin{reviewexample}{ex:hiam-yes-no}{}
-\reviewobjectline{Na pa inn-ah kote giah nading a awng ding hiam}
-\begin{tabular}[t]{@{}lllllllllllllllllll@{}}
-Na & | & pa' & | & inn-ah & | & kote' & | & giah & | & nading & | & a & | & awng & | & ding & | & hiam \\
-\textsc{2sg} & | & male.\textsc{poss} & | & house-\textsc{loc} & | & \textsc{1pl}.\textsc{pro}.\textsc{poss} & | & camp & | & \textsc{purp} & | & \textsc{3sg} & | & open & | & \textsc{irr} & | & \textsc{q} \\
-\end{tabular}
-\reviewtranslation{'Is there room in thy father's house for us to lodge?'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:hiam-yes-no}
+\gll Nà pà ínn-àh kòtè giah nàdìng à áwng dìng hìam \\
+     \textsc{2sg} father house-\textsc{loc} \textsc{1pl}.\textsc{pro} camp \textsc{purp} \textsc{3sg} open \textsc{irr} \textsc{q} \\
+\glt 'Is there room in thy father's house for us to lodge?'
+\end{exe}
 
 This printed example should replace the older report paraphrase
 \texttt{Inn-ah\ hong\ tum\ theih\ na\ hiam}. The dossier is explicit
@@ -3884,14 +3819,12 @@ WH form behaves identically, but that the present candidate-backed
 examples show \texttt{bang}, \texttt{kua}, \texttt{bangci}, and
 \texttt{banghangin} in this construction.
 
-\begin{reviewexample}{ex:hiam-bang}{}
-\reviewobjectline{Bang ahi hiam?}
-\begin{tabular}[t]{@{}lllll@{}}
-Bang & | & ahi & | & hiam \\
-what & | & be.\textsc{3sg} & | & \textsc{q} \\
-\end{tabular}
-\reviewtranslation{'What is it?'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:hiam-bang}
+\gll Bàng àhì hìam? \\
+     like be.\textsc{3sg} \textsc{q} \\
+\glt 'What is it?'
+\end{exe}
 
 Exodus 16:15 is the current print anchor for \texttt{bang}. The dossier
 keeps one export caveat explicit: the analyzer glosses \texttt{bang}
@@ -3900,14 +3833,12 @@ support the ordinary what-question reading, so the example remains
 usable in print with that caveat recorded in the packet rather than
 foregrounded in the example line.
 
-\begin{reviewexample}{ex:hiam-kua}{}
-\reviewobjectline{Hihte kua ahi hiam?}
-\begin{tabular}[t]{@{}lllllll@{}}
-Hihte & | & kua & | & ahi & | & hiam \\
-these & | & who & | & be.\textsc{3sg} & | & \textsc{q} \\
-\end{tabular}
-\reviewtranslation{'Who are these?'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:hiam-kua}
+\gll Híh-tè kua àhì hìam? \\
+     \textsc{prox}-\textsc{pl} who be.\textsc{3sg} \textsc{q} \\
+\glt 'Who are these?'
+\end{exe}
 
 Genesis 48:8 is the current print anchor for \texttt{kua\ ...\ hiam},
 and 2 Samuel 22:32 gives additional support for the same pattern
@@ -3916,14 +3847,12 @@ relevant export caveat explicit: \texttt{kua} is tagged as \texttt{NUM}
 in the analyzer output. That label should be treated as an export
 limitation rather than as evidence against the interrogative reading.
 
-\begin{reviewexample}{ex:hiam-bangci}{}
-\reviewobjectline{Bangci a hici gamtat na hi hiam?}
-\begin{tabular}[t]{@{}lllllllllllll@{}}
-Bangci & | & a & | & hi-ci & | & gam-tat & | & na & | & hi & | & hiam \\
-how & | & \textsc{3sg} & | & this-say & | & conduct-do & | & \textsc{2sg} & | & \textsc{decl} & | & \textsc{q} \\
-\end{tabular}
-\reviewtranslation{'How have you acted thus?'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:hiam-bangci}
+\gll Bangci à hi-cí gàm-tat nà hì hìam? \\
+     how \textsc{3sg} \textsc{prox}-say land-rule \textsc{2sg} \textsc{decl} \textsc{q} \\
+\glt 'How have you acted thus?'
+\end{exe}
 
 Genesis 3:13 is the cleanest current \texttt{bangci} row, and it matters
 methodologically because it should remain visible as \texttt{bangci},
@@ -4032,14 +3961,12 @@ overlap}{Declarative hi with copula overlap}}\label{declarative-hi-with-copula-o
 
 Genesis 1:13 supplies the current declarative anchor:
 
-\begin{reviewexample}{ex:sfp-ahi-hi}{}
-\reviewobjectline{ahi hi}
-\begin{tabular}[t]{@{}lll@{}}
-ahi & | & hi \\
-be.\textsc{3sg} & | & \textsc{decl} \\
-\end{tabular}
-\reviewtranslation{'it was'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:sfp-ahi-hi}
+\gll àhì hì \\
+     be.\textsc{3sg} \textsc{decl} \\
+\glt 'it was'
+\end{exe}
 
 This is the current copula-plus-declarative evidence, but only with
 caveat. It is not a bare \texttt{hi} example. The row bundles copular
@@ -4052,14 +3979,12 @@ sentence-final declarative.
 
 Genesis 4:5 keeps one negative-plus-declarative environment visible:
 
-\begin{reviewexample}{ex:sfp-lo-hi}{}
-\reviewobjectline{thusim lo hi}
-\begin{tabular}[t]{@{}lllll@{}}
-thusim & | & lo & | & hi \\
-parable & | & \textsc{neg} & | & \textsc{decl} \\
-\end{tabular}
-\reviewtranslation{'he had not respect' / 'it was not accepted'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:sfp-lo-hi}
+\gll thusim lò hì \\
+     parable \textsc{neg} \textsc{decl} \\
+\glt 'he had not respect' / 'it was not accepted'
+\end{exe}
 
 This row keeps \texttt{lo\ hi} visible as a sentence-final environment,
 but it overlaps the stabilized negation packet. The present slice should
@@ -4087,14 +4012,12 @@ export caveat should remain visible rather than normalized away.
 
 Genesis 1:3 supplies the current usable optative row:
 
-\begin{reviewexample}{ex:sfp-hen}{}
-\reviewobjectline{Khuavak om hen}
-\begin{tabular}[t]{@{}lllll@{}}
-Khuavak & | & om & | & hen \\
-light & | & exist & | & \textsc{juss} \\
-\end{tabular}
-\reviewtranslation{'Let there be light'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:sfp-hen}
+\gll Khuavak ōm hèn \\
+     light exist \textsc{juss} \\
+\glt 'Let there be light'
+\end{exe}
 
 This is the current usable optative evidence with caveat. The candidate
 is analyzer-backed as \texttt{om\ hen}, so the slice should not replace
@@ -4106,15 +4029,12 @@ this narrow row into a broad mood chapter.
 
 Genesis 6:14 keeps one singular imperative row visible:
 
-\begin{reviewexample}{ex:sfp-in}{}
-\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:sfp-in; showing padded alignment.]}
-\reviewobjectline{teembaw khat bawl in}
-\begin{tabular}[t]{@{}lllllllll@{}}
-teembaw & | & khat & | & bawl & | & in &  &  \\
-ark & | & one & | & make & | & \textsc{erg} & [export & caveat] \\
-\end{tabular}
-\reviewtranslation{'Make thee an ark'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:sfp-in}
+\gll teembaw khàt bāwl ìn \\
+     ark one make \textsc{erg} \\
+\glt 'Make thee an ark'
+\end{exe}
 
 This keeps singular imperative \texttt{in} visible, but only with a
 serious case-marker and export caveat: \texttt{in} is exported as
@@ -4124,14 +4044,12 @@ not report-style \texttt{lawng}. The slice should not harvest raw
 
 Psalms 100:1 supplies the cleanest current imperative anchor:
 
-\begin{reviewexample}{ex:sfp-un}{}
-\reviewobjectline{gingsak un}
-\begin{tabular}[t]{@{}lll@{}}
-ging-sak & | & un \\
-sound-\textsc{caus} & | & \textsc{imp}.\textsc{pl} \\
-\end{tabular}
-\reviewtranslation{'Make a joyful noise'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:sfp-un}
+\gll ging-sàk ùn \\
+     sound-\textsc{caus} \textsc{imp}.\textsc{pl} \\
+\glt 'Make a joyful noise'
+\end{exe}
 
 This is the clean plural-imperative anchor. The span should stay tight
 so nearby \texttt{aw} material in the same verse is not absorbed, and
@@ -4243,14 +4161,12 @@ conditional-adversative boundary material, not a simple coordinator.
 
 Genesis 1:1 supplies the clean print-ready anchor:
 
-\begin{reviewexample}{ex:coord-le-np}{}
-\reviewobjectline{vantung le leitung}
-\begin{tabular}[t]{@{}lllll@{}}
-van-tung & | & le & | & lei-tung \\
-sky-on & | & and & | & land-on \\
-\end{tabular}
-\reviewtranslation{'heaven and earth'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:coord-le-np}
+\gll vàn-tùng lè léi-tùng \\
+     sky-on and land-on \\
+\glt 'heaven and earth'
+\end{exe}
 
 This is the current safe NP-conjunction anchor. It supports a modest
 print claim that \texttt{le} joins noun phrases.
@@ -4267,15 +4183,12 @@ material}{Leh as conditional or boundary material}}\label{leh-as-conditional-or-
 Genesis 13:9 keeps \texttt{leh} visible only as warning or boundary
 evidence:
 
-\begin{reviewexample}{ex:coord-leh-boundary}{}
-\reviewwarninginline{[REVIEW PREVIEW WARNING: segmentation/gloss token mismatch in ex:coord-leh-boundary; showing padded alignment.]}
-\reviewobjectline{veilam na lak leh kei taklamah ka pai ding hi}
-\begin{tabular}[t]{@{}lllllllllllllllllllll@{}}
-vei-lam & | & na & | & lak & | & leh & | & kei & | & taklam-ah & | & ka & | & pai & | & ding & | & hi &  &  \\
-faint-direction & | & \textsc{2sg} & | & among & | & and/if & | & \textsc{neg} & [export & caveat] & | & right-\textsc{loc} & | & \textsc{1sg} & | & go & | & \textsc{irr} & | & \textsc{decl} \\
-\end{tabular}
-\reviewtranslation{'if thou wilt take the left hand, then I will go to the right'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:coord-leh-boundary}
+\gll véi-lam nà lāk lèh kèi taklam-àh kà pái dìng hì \\
+     faint-direction \textsc{2sg} among and \textsc{neg} right-\textsc{loc} \textsc{1sg} go \textsc{irr} \textsc{decl} \\
+\glt 'if thou wilt take the left hand, then I will go to the right'
+\end{exe}
 
 This row keeps \texttt{leh} visible, but not as a clean simple
 clause-conjunction anchor. The wider English context is conditional, so
@@ -4293,14 +4206,12 @@ friends}{Sequential a and agreement-a false friends}}\label{sequential-a-and-agr
 
 Genesis 2:10 keeps one possible sequential-linkage window visible:
 
-\begin{reviewexample}{ex:coord-a-sequential-boundary}{}
-\reviewobjectline{luang a tua mun panin gun hong kikhenin}
-\begin{tabular}[t]{@{}lllllllllllllll@{}}
-luang & | & a & | & tua & | & mun & | & pan-in & | & gun & | & hong & | & kikhen-in \\
-flow & | & \textsc{3sg} & | & that & | & place & | & \textsc{abl}-\textsc{erg} & | & river & | & \textsc{3→1} & | & separate-\textsc{cvb} \\
-\end{tabular}
-\reviewtranslation{'and from thence it was parted'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:coord-a-sequential-boundary}
+\gll luang à túa mùn pàn-ìn gun hòng kikhen-ìn \\
+     flow \textsc{3sg} \textsc{dist} place \textsc{abl}-\textsc{erg} river \textsc{3→1} separate-\textsc{cvb} \\
+\glt 'and from thence it was parted'
+\end{exe}
 
 This row keeps possible sequential linkage visible, but it is not
 print-ready as a core coordinator example. The analyzer still exports
@@ -4343,14 +4254,12 @@ a later analyzer-backed row is actually located.
 
 Genesis 3:4 supplies the current adversative connector anchor:
 
-\begin{reviewexample}{ex:coord-ahih-hangin}{}
-\reviewobjectline{Ahih hangin}
-\begin{tabular}[t]{@{}lll@{}}
-Ahih & | & hang-in \\
-be.\textsc{3sg}.\textsc{rel} & | & because-\textsc{erg} \\
-\end{tabular}
-\reviewtranslation{'but'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:coord-ahih-hangin}
+\gll Àhìh hàng-ìn \\
+     be.\textsc{3sg}.\textsc{rel} because-\textsc{erg} \\
+\glt 'but'
+\end{exe}
 
 This row is usable with caveat as the current adversative connector. It
 remains internally analyzable as \texttt{ahih} + \texttt{hang-in}, so
@@ -4362,14 +4271,12 @@ from this row.
 
 Exodus 12:3 keeps one compact boundary row visible:
 
-\begin{reviewexample}{ex:coord-ahih-kei-leh}{}
-\reviewobjectline{ahih kei leh}
-\begin{tabular}[t]{@{}lllll@{}}
-ahih & | & kei & | & leh \\
-be.\textsc{3sg}.\textsc{rel} & | & \textsc{neg} & | & and/if \\
-\end{tabular}
-\reviewtranslation{'otherwise' / 'if not'}
-\end{reviewexample}
+\begin{exe}
+\ex \label{ex:coord-ahih-kei-leh}
+\gll àhìh kèi lèh \\
+     be.\textsc{3sg}.\textsc{rel} \textsc{neg} and \\
+\glt 'otherwise' / 'if not'
+\end{exe}
 
 This row is useful as conditional-adversative boundary material, but it
 is not a simple coordinator. It overlaps with negation and conditional

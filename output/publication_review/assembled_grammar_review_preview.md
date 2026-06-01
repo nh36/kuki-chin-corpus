@@ -14,9 +14,9 @@ Many sections are deliberately narrow. Missing or blocked domains are marked exp
 
 # PDF/build status
 
-This preview is reproducible from committed sources with `python3 scripts/assemble_publication_review_preview.py`. The script writes `output/publication_review/assembled_grammar_review_preview.md`, generates `output/publication_review/assembled_grammar_review_preview.tex` through Pandoc plus natbib/BibTeX citation processing, and compiles `output/publication_review/assembled_grammar_review_preview.pdf` with XeLaTeX while converting the publication-review example blocks into numbered interlinear examples.
+This preview is reproducible from committed sources with `python3 scripts/assemble_publication_review_preview.py`. The script writes `output/publication_review/assembled_grammar_review_preview.md`, generates `output/publication_review/assembled_grammar_review_preview.tex` through Pandoc plus natbib/BibTeX citation processing, and compiles `output/publication_review/assembled_grammar_review_preview.pdf` with XeLaTeX while routing publication-review example blocks through the shared analyzer and gb4e interlinear machinery.
 
-The assembly reuses current repository conventions where practical: the repository bibliography in `literature/bibliography.bib`, XeLaTeX compilation and the `Times New Roman` / `Helvetica` font pair already used in `scripts/export_interlinear.py`, plus the same 0.75-inch page-margin convention for generated TeX output.
+The assembly reuses current repository conventions where practical: the repository bibliography in `literature/bibliography.bib`, XeLaTeX compilation and the `Times New Roman` / `Helvetica` font pair already used in `scripts/export_interlinear.py`, the shared Bible/analyzer helpers in `scripts/interlinear_latex.py`, and the same 0.75-inch page-margin convention for generated TeX output.
 
 # Known narrow-slice limitations
 
