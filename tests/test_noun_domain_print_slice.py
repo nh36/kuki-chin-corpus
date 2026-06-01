@@ -1,8 +1,7 @@
 from pathlib import Path
 
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-GRAMMAR_PATH = REPO_ROOT / "output" / "publication_review" / "grammar_noun_domain_print_slice.md"
+GRAMMAR_PATH = Path("output/publication_review/grammar_noun_domain_print_slice.md")
 
 
 def _text() -> str:
@@ -10,76 +9,49 @@ def _text() -> str:
 
 
 def test_noun_domain_print_slice_exists() -> None:
-    assert GRAMMAR_PATH.exists(), "Noun-domain grammar slice must exist"
+    assert GRAMMAR_PATH.exists(), "normalized noun domain print slice should exist"
 
 
-def test_noun_domain_print_slice_names_control_support_and_boundaries() -> None:
+def test_noun_domain_print_slice_names_control_files() -> None:
     text = _text()
 
     for required in (
+        "coverage_normalization_audit.md",
         "candidates_noun_domain.tsv",
-        "dossier_noun_domain_scope.md",
-        "docs/grammar/reports/03-noun-01-simple.md",
-        "docs/grammar/reports/03-noun-02-compounds.md",
-        "docs/grammar/reports/03-noun-03-proper.md",
-        "docs/grammar/compound_transparency_audit.md",
-        "docs/grammar/opaque_lexemes.md",
-        "review_notes_np_possession.md",
-        "review_notes_nominalization.md",
-        "review_notes_relators_postpositions.md",
-        "review_notes_case_marking.md",
-        "review_notes_pronouns.md",
+        "dossier_noun_domain.md",
+        "review_notes_noun_domain.md",
+        "docs/grammar/GRAMMAR_SOURCE_INVENTORY.md",
     ):
         assert required in text
 
 
-def test_noun_domain_print_slice_keeps_first_claim_narrow() -> None:
+def test_noun_domain_print_slice_has_normalized_structure_and_anchors() -> None:
     text = _text()
-    lower = text.lower()
 
-    assert "gam" in text
-    assert "main simple free noun stem anchor" in lower
-    assert "gam-te" in text
-    assert "gam-'" in text
-    assert "gam-in" in text
-    assert "gam-ah" in text
-    assert "gam-te-ah" in text
-    assert "aksi / aksi-te" in text
-    assert "supporting plural row" in lower or "supporting plural evidence" in lower
-
-
-def test_noun_domain_print_slice_keeps_boundary_material_outside() -> None:
-    text = _text()
-    lower = text.lower()
-
-    for required in (
-        "minam",
-        "thugen",
-        "singnai",
-        "sanggam",
-        "kholhna",
-        "Abraham",
-        "Topa",
-        "lamethuai",
-        "Topa' inn",
-        "Pronoun-led possessors",
-        "person-head material",
-        "relator/postposition or case-dominated noun rows",
-        "analyzer-noisy, report-only, or count-only noun-domain claims",
-        "Any broad noun chapter claim",
+    for heading in (
+        "# Scope",
+        "# Overview of the noun domain",
+        "# Current noun-domain inventory",
+        "# Simple noun stems",
+        "# Plural marking with -te",
+        "# Human nouns and common nouns",
+        "# Nouns in larger phrases",
+        "# Compounds and proper nouns",
+        "# Nominalization boundary",
+        "# Deferred and boundary material",
+        "# Summary",
     ):
-        assert required in text
+        assert heading in text
 
-    assert "stay outside" in lower or "stays outside" in lower or "boundary material" in lower
+    for anchor in ("gam", "aksi", "aksi-te", "mi", "mite", "mi khempeuh", "minam"):
+        assert anchor in text
 
 
-def test_noun_domain_print_slice_stays_packet_narrow() -> None:
-    text = _text()
-    lower = text.lower()
+def test_noun_domain_print_slice_keeps_boundaries_cautious() -> None:
+    lower = _text().lower()
 
-    assert "not a full noun chapter" in lower
-    assert "not a compound-noun chapter" in lower
-    assert "not a proper-noun chapter" in lower
-    assert "not a dictionary slice" in lower
-    assert "dictionary slice now exists" not in lower
-    assert "no dictionary slice exists" in lower
+    assert "candidate evidence" in lower
+    assert "explicit caveat" in lower or "explicit caveats" in lower
+    assert "does not yet" in lower or "not yet enough" in lower
+    assert "full noun-domain chapter" in lower
+    assert "raw report-only noun lists" in lower

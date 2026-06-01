@@ -340,6 +340,24 @@ def test_assembled_preview_includes_normalized_quantifiers_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_noun_domain_section() -> None:
+    text = _text()
+
+    for required in (
+        "normalized publication-facing noun domain section",
+        "Overview of the noun domain",
+        "Current noun-domain inventory",
+        "Simple noun stems",
+        "Plural marking with -te",
+        "Human nouns and common nouns",
+        "Nouns in larger phrases",
+        "Compounds and proper nouns",
+        "Nominalization boundary",
+        "Deferred and boundary material",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_includes_normalized_np_possession_section() -> None:
     text = _text()
 
@@ -388,6 +406,41 @@ def test_assembled_preview_np_examples_include_old_testament_and_gospel_sources(
 
     assert "(Exodus 5:5)" in tex or "(Genesis 24:23)" in tex or "(Genesis 3:20)" in tex
     assert "(John 11:39)" in tex or "(Luke 2:1)" in tex or "no suitable Gospel example was found" in text
+
+
+def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:noun-") >= 4
+    assert tex.count("\\label{ex:noun-") >= 4
+
+    for required in ("Current noun-domain inventory", "gam", "aksi-te", "hih mite", "mi khempeuh", "minam khat"):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in ("Current noun-domain inventory", "gam", "aksi-te", "hih mite", "mi khempeuh"):
+        assert required.lower() in pdf_normalized
+
+
+def test_assembled_preview_tex_keeps_noun_example_sources_after_translation() -> None:
+    assert "(Genesis 2:5)" in _tex_example_block("ex:noun-gam")
+    assert "(Matthew 2:2)" in _tex_example_block("ex:noun-aksi")
+    assert "(Genesis 1:16)" in _tex_example_block("ex:noun-aksi-te")
+    assert "(Exodus 5:5)" in _tex_example_block("ex:noun-hih-mite")
+    assert "(Luke 2:1)" in _tex_example_block("ex:noun-mi-khempeuh")
+    assert "(Genesis 11:6)" in _tex_example_block("ex:noun-minam-khat")
+
+
+def test_assembled_preview_noun_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 2:5)" in tex or "(Genesis 1:16)" in tex or "(Exodus 5:5)" in tex
+    assert "(Matthew 2:2)" in tex or "(Luke 2:1)" in tex or "no suitable Gospel example was found" in text
 
 
 def test_assembled_preview_tex_includes_normalized_quantifiers_inventory_and_examples() -> None:

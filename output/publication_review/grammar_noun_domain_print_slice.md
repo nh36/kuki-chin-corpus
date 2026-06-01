@@ -1,69 +1,138 @@
 ---
-title: "Tedim Noun Domain Grammar Print Slice"
+title: "Tedim noun domain"
+bibliography: "../../docs/grammar/references.bib"
+csl: "../../docs/grammar/linguistics.csl"
+nocite: |
+  @henderson1965
+  @zamngaihcing2017
 ---
 
-# Editorial scope
+# Scope
 
-This is the first narrow noun-domain grammar slice. It is controlled by `output/publication_review/candidates_noun_domain.tsv` and `output/publication_review/dossier_noun_domain_scope.md`. Supporting/background evidence comes from `docs/grammar/reports/03-noun-01-simple.md`, `docs/grammar/reports/03-noun-02-compounds.md`, `docs/grammar/reports/03-noun-03-proper.md`, `docs/grammar/compound_transparency_audit.md`, and `docs/grammar/opaque_lexemes.md`.
+This is now a normalized publication-facing noun domain section, following the coverage-normalization standard defined in `coverage_normalization_audit.md` and piloted in the numerals, quantifiers, and NP structure / possession sections. It remains controlled by candidate evidence and explicit caveats rather than by raw generated-report counts or broad analyzer output [@henderson1965; @zamngaihcing2017].
 
-This is not a full noun chapter, not a compound-noun chapter, not a proper-noun chapter, and not a dictionary slice. It also stays narrow against `output/publication_review/review_notes_np_possession.md`, `output/publication_review/review_notes_nominalization.md`, `output/publication_review/review_notes_relators_postpositions.md`, `output/publication_review/review_notes_case_marking.md`, and `output/publication_review/review_notes_pronouns.md`.
+The current section depends on:
 
-The present slice therefore covers only the first safe simple-noun-stem claim. No dictionary slice exists for the noun domain, because this packet is still establishing a grammar-facing noun-domain foundation rather than a lexical layer.
+- `coverage_normalization_audit.md`
+- `candidates_noun_domain.tsv`
+- `dossier_noun_domain.md`
+- `review_notes_noun_domain.md`
+- `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md`
+- `docs/grammar/reports/03-noun-01-simple.md`
+- `docs/grammar/reports/03-noun-02-compounds.md`
+- `docs/grammar/reports/03-noun-03-proper.md`
+- `docs/grammar/reports/03-noun-04-plural.md`
+- `docs/grammar/reports/03-noun-05-nominalization.md`
+- `examples_noun_domain_normalization.tsv`
+
+The normalized NP, numerals, and quantifiers sections already carry the fuller discussion of noun phrase order, numeral formation, and quantifier semantics. The present section reuses those checked rows only to show which lexical noun anchors are currently safe to describe in publication-facing prose.
+
+# Overview of the noun domain
+
+The clearest current evidence supports a modest but coherent noun-domain description. Simple lexical nouns such as `gam` and `aksi` are safely attested, and plural marking with `-te` is printable for controlled anchors such as `aksi-te` and `mite`. Human noun `mi` is also a stable lexical head in larger noun phrases, as seen in rows such as `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`, while nonhuman nouns such as `ni` and `kum` behave similarly in counted phrases.
+
+This is enough to describe a small publication-facing noun inventory, to note a cautious `-te` plural pattern, and to show that lexical nouns remain visible as heads inside demonstrative, numeral, and quantifier phrases. It is not yet enough for a full noun-domain chapter, because compounds, proper names, classifier-like nouns, and nominalized nouns still require more boundary control.
+
+Gospel searches produced usable noun-domain evidence for `aksi`, `mi khempeuh`, `ni li`, and proper-name material such as `Abraham' suan David`, which helps keep the section from becoming Genesis-only. The cleanest `gam` and `-te` plural anchors, however, remain OT-led in the current pass.
+
+# Current noun-domain inventory
+
+| Form or pattern | Rough function | Example context | Current print status | Main boundary issue |
+| --- | --- | --- | --- | --- |
+| `gam` | simple common noun 'land / country' | `gam sung` | print-ready | semantic range varies across geographic and political contexts |
+| `aksi` | simple common noun 'star' | `ama aksi` | print-usable with caveat | current Gospel anchor occurs inside a possessed phrase |
+| `aksi-te` | noun with `-te` plural marking | `aksi-te` | print-ready | does not yet settle the full behavior of plural / collective marking |
+| `mi` | human common noun 'person' | `mi khat`, `mi khempeuh` | print-ready | overlaps with quantified and counted NP structure discussed elsewhere |
+| `mi-te` / `mite` | human plural noun | `hih mite` | print-ready | demonstrative and NP-order analysis belongs to other sections |
+| `ni` | noun head in counted phrase | `ni li` | print-ready | numeral semantics belong to the numerals section |
+| `kum` | noun head in counted phrase | `kum sawm le nih` | print-ready | compound numeral analysis belongs to the numerals section |
+| `mi-nam` / `minam` | transparent compound noun | `minam khat` | print-usable with caveat | compound transparency and lexicalization remain under review |
+| `Abraham` | proper name used inside a larger noun phrase | `Abraham' suan David` | print-usable with caveat | does not yet justify a full proper-noun system |
 
 # Simple noun stems
 
-`gam` is the main simple free noun stem anchor.
+The safest simple-stem anchors remain `gam` and `aksi`. `gam` is a robust nonhuman common noun in the noun reports, while `aksi` is visible both in older OT material and in a clean Gospel phrase that keeps the stem separate from plural marking. These rows are enough to show that the noun packet is not limited to derived forms or larger noun phrases: basic lexical stems are directly attested.
 
-The controlled report-backed forms are `gam`, `gam-te`, `gam-'`, `gam-in`, `gam-ah`, and `gam-te-ah`.
+At the same time, the current section keeps the claim narrow. It does not attempt to classify all noun semantics or all stem alternations; it only records that ordinary lexical nouns can be cited safely before the analysis moves on to plural marking and larger NP environments.
 
-Taken together, these forms show a free noun stem that can host ordinary plural and case-like marking. That is enough for a first print-facing claim, but it is not a full noun inflection chapter, not a full case chapter, and not a full noun chapter.
+(@ex:noun-gam) Genesis 2:5
+a. Tedim: gam sung
+b. Segmentation: gam | sung
+c. Gloss: land | inside
+d. Translation: in the land
 
-`aksi / aksi-te` is the supporting plural row. It shows ordinary plural marking on a second simple noun without broadening the slice into a larger noun-domain inventory.
+(@ex:noun-aksi) Matthew 2:2
+a. Tedim: ama aksi
+b. Segmentation: ama | aksi
+c. Gloss: 3SG | star
+d. Translation: his star
 
-# Why compounds are not yet the first slice
+# Plural marking with -te
 
-`minam` and `thugen` are the candidate-layer transparent compounds in the current packet.
+Plural marking with `-te` is now safe to discuss in a limited way. The clearest noun-domain anchors are nonhuman `aksi-te` and human `mi-te` in the fused form `mite`. Taken together, they support a modest claim that `-te` marks plurality on nouns in publication-facing examples.
 
-They stay outside the first print-facing claim because compounds still require transparency and lexicalization decisions before they can safely lead grammar prose.
+The present section does not claim that every plural or collective pattern has been normalized. Broader questions about distributive readings, plurality outside simple noun stems, and the interaction of plural marking with quantification are still deferred.
 
-`singnai` and `sanggam` are the main boundary rows here. `sanggam` stays outside because it is opaque or lexicalized, while `singnai` stays outside because it is a transparency-problem row rather than a clean transparent-compound anchor.
+(@ex:noun-aksi-te) Genesis 1:16
+a. Tedim: aksi-te
+b. Segmentation: aksi | -te
+c. Gloss: star | PL
+d. Translation: stars
 
-# Why proper nouns are not yet the first slice
+# Human nouns and common nouns
 
-`Abraham` is the clean proper-noun candidate, and `Topa` is title-like boundary material.
+Human noun `mi` is now one of the clearest lexical noun anchors in the nominal domain. It appears as a simple noun stem and as the head of several already-normalized noun phrases, including `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`. Its plural form `mite` is equally secure in the current packet.
 
-Proper nouns stay outside the first print-facing claim because they are more lexical-inventory-like than the simple noun anchors, and `Topa` also remains entangled with noun-domain and NP-possession boundary questions.
+This matters for the noun domain because it shows that the normalized NP, numeral, and quantifier sections are reusing genuine noun heads rather than unanalyzed filler forms. The NP structure section remains the right place for broader ordering claims, but the noun domain can now safely say that `mi` and `mite` are stable human common nouns.
 
-# Boundary material
+(@ex:noun-hih-mite) Exodus 5:5
+a. Tedim: hih mite
+b. Segmentation: hih | mi | -te
+c. Gloss: PROX | person | PL
+d. Translation: these people
 
-`minam` and `thugen` stay outside the first grammar slice because transparent compounds still require lexicalization and transparency decisions before they can lead noun-domain grammar prose.
+# Nouns in larger phrases
 
-`singnai` and `lamethuai` stay outside because they remain transparency-problem rows rather than first-slice anchors.
+The normalized numerals, quantifiers, and NP structure / possession sections already show that nouns remain visible as heads in larger phrases. In the current noun-domain pass, that point can be stated modestly: noun heads such as `mi`, `ni`, and `kum` stay lexically identifiable inside counted and quantified expressions rather than disappearing into unanalyzed templates.
 
-`sanggam` stays outside because it is opaque or lexicalized rather than a safe transparent-compound example.
+`mi khempeuh` is the clearest quantified anchor for this purpose, while `ni li` and `kum sawm le nih` show the same thing for counted phrases. The noun-domain claim is therefore limited to lexical headedness; it does not reopen the fuller NP-order or numeral/quantifier analyses.
 
-`kholhna` stays outside because it is nominalization-boundary material rather than a clean simple noun stem.
+(@ex:noun-mi-khempeuh) Luke 2:1
+a. Tedim: mi khempeuh
+b. Segmentation: mi | khempeuh
+c. Gloss: person | all
+d. Translation: all people
 
-`Abraham` and `Topa` stay outside because proper nouns remain more lexical-inventory-like than the simple noun anchors, while `Topa` is also title-like boundary material.
+# Compounds and proper nouns
 
-`Topa' inn` or broader possessor syntax stay outside because they belong with NP structure / possession rather than the first noun-domain slice.
+Compounds and proper nouns are now visible enough for a cautious note, but they remain less normalized than simple stems and plural-marked nouns. The clearest compound-like anchor is `minam`, which is still transparent enough to support a controlled print comment about noun-noun composition. Proper names such as `Abraham` are also clearly nominal, but the current packet is not yet strong enough to generalize over Bible names, place names, or analyzer-noisy multiword name strings.
 
-Pronoun-led possessors or person-head material stay outside because they still sit between noun-domain work, pronouns, and NP structure.
+The current section therefore treats compounds and proper nouns as boundary material with one safe compound example and a more modest proper-name note. `Abraham' suan David` is a useful comparandum, but it does not yet justify a full proper-name subsection or a complete account of name-internal structure.
 
-relator/postposition or case-dominated noun rows stay outside because their main value belongs with `review_notes_relators_postpositions.md` and `review_notes_case_marking.md`.
+(@ex:noun-minam-khat) Genesis 11:6
+a. Tedim: minam khat
+b. Segmentation: mi-nam | khat
+c. Gloss: people.group | one
+d. Translation: one nation
 
-analyzer-noisy, report-only, or count-only noun-domain claims stay outside because they do not yet produce safe first-slice anchors.
+# Nominalization boundary
 
-Any broad noun chapter claim stays outside because this packet is not yet ready to generalize from one safe simple-noun-stem slice to the whole noun domain.
+Derived nouns and nominalized forms remain shared with the nominalization section. Items such as `kholhna` and broader `-na` material are important for the nominal domain, but the present section does not absorb them into the lexical noun inventory. It only notes that lexical nouns, plural-marked nouns, and larger noun phrases have now been normalized far enough that nominalized nouns can be kept as an explicit boundary rather than being mixed into the basic noun list.
 
-# Safe first-slice claim
+# Deferred and boundary material
 
-At the current slice maturity level, the safest noun-domain claim is that Tedim has candidate-controlled evidence for simple free noun stems that can host ordinary plural and case-like marking, with `gam` as the main anchor and `aksi / aksi-te` as supporting plural evidence. Compound nouns and proper nouns remain candidate-layer or boundary material.
+Several noun-domain topics remain explicitly deferred.
 
-That claim is deliberately smaller than a full noun chapter, smaller than a compound-noun chapter, smaller than a proper-noun chapter, and smaller than a dictionary slice.
+- Transparent compounds remain only partially normalized: `minam` is useful, but broader compound classes still need more evidence.
+- Lexicalized compounds remain deferred because current report evidence does not cleanly separate synchronically analyzable forms from frozen lexemes.
+- Proper nouns remain boundary-heavy: `Abraham` is usable as a controlled anchor, but Bible person and place names are not yet normalized as a full subsystem.
+- Classifier-like nouns and measure-like nominal heads remain shared with numeral and quantifier work rather than settled here.
+- Kinship nouns remain partly shared with possession, especially where forms such as `pa`, `inn`, and `min` enter possessor constructions.
+- Nominalized nouns in `-na` remain with the nominalization section rather than being promoted as basic noun stems here.
+- Plural and number patterns beyond straightforward `-te` marking remain deferred.
+- Analyzer-noisy noun labels and multiword proper-name strings are not promoted into publication prose.
+- Raw report-only noun lists are not treated as grammar facts without checked candidate control.
 
-# Recommended next step
+# Summary
 
-This grammar slice is now paired with `output/publication_review/review_notes_noun_domain.md`, so the packet is ready for human review at its current simple-noun-stem slice maturity level.
-
-If more noun-domain work is chosen after review notes, the next sub-scope should be transparent compounds led by `minam` and `thugen`, not opaque compounds or proper nouns.
+The noun domain can now support a fuller publication-facing section than the earlier narrow packet allowed. Current evidence safely identifies simple noun stems such as `gam` and `aksi`, a cautious `-te` plural pattern visible in `aksi-te` and `mite`, stable human noun heads such as `mi`, and lexical nouns that remain visible inside counted and quantified noun phrases. Compounds, proper nouns, and nominalized nouns are now better framed as explicit boundary material rather than being mixed into an under-controlled noun list [@henderson1965; @zamngaihcing2017].
