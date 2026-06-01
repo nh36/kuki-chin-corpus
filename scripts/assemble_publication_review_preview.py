@@ -75,13 +75,7 @@ BIBTEX_FALLBACKS = [
     "/usr/local/texlive/2025/bin/universal-darwin/bibtex",
 ]
 
-FRONTMATTER_SECTION_TITLES = {
-    "Review preview status",
-    "PDF/build status",
-    "Known narrow-slice limitations",
-    "Major unresolved domains",
-    "End state of this preview",
-}
+FRONTMATTER_SECTION_TITLES = {"Review preview status"}
 
 ASSEMBLY_SPEC = [
     {
@@ -176,11 +170,48 @@ CHAPTER_HEADING_RE = re.compile(r"^#\s+(\d+)\.\s+(.+?)\s*$")
 CITATION_KEY_RE = re.compile(r"(?<![`\\])@(?!ex:)([A-Za-z0-9_:+.-]+)")
 BIBLIOGRAPHY_KEY_RE = re.compile(r"@\w+\{([^,]+),")
 INLINE_CODE_RE = re.compile(r"`([^`]+)`")
+MARKDOWN_HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
+INLINE_GLOSS_QUOTE_RE = re.compile(r"(?<![A-Za-z])['‘’]([^'\n]+?)['’](?![A-Za-z])")
 
 TECHNICAL_PATH_PREFIXES = ("output/", "docs/", "scripts/", "tests/", "data/", "literature/", "bibles/")
 TECHNICAL_FILE_SUFFIXES = (".md", ".py", ".tex", ".pdf", ".tsv", ".bib", ".json", ".txt", ".yaml", ".yml")
 TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", "git", "bibtex", "pdftotext")
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
+GRAMMAR_FACING_INTERNAL_SECTION_TITLES = {"Scope", "Editorial scope"}
+GRAMMAR_FACING_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"\bcurrent packet\b", re.IGNORECASE), "current evidence"),
+    (re.compile(r"\bpacket anchors\b", re.IGNORECASE), "main anchors"),
+    (re.compile(r"\bpacket anchor\b", re.IGNORECASE), "main anchor"),
+    (re.compile(r"\bpacketized\b", re.IGNORECASE), "assembled"),
+    (re.compile(r"\bpacket-status\b", re.IGNORECASE), "section"),
+    (re.compile(r"\bpacket\b", re.IGNORECASE), "section"),
+    (re.compile(r"\bpublication-review\b", re.IGNORECASE), "review"),
+    (re.compile(r"\bnormalized section\b", re.IGNORECASE), "section"),
+    (re.compile(r"\bpublication-facing\b", re.IGNORECASE), ""),
+    (re.compile(r"\bcandidate-backed\b", re.IGNORECASE), "checked"),
+    (re.compile(r"\bcandidate-controlled\b", re.IGNORECASE), "checked"),
+    (re.compile(r"\bcandidate discipline\b", re.IGNORECASE), "careful evidence control"),
+    (re.compile(r"\bcandidate control\b", re.IGNORECASE), "careful evidence control"),
+    (re.compile(r"\bcandidate evidence\b", re.IGNORECASE), "checked evidence"),
+    (re.compile(r"\bcandidate layer\b", re.IGNORECASE), "checked evidence"),
+    (re.compile(r"\bcandidate rows\b", re.IGNORECASE), "checked examples"),
+    (re.compile(r"\bcandidate row\b", re.IGNORECASE), "checked example"),
+    (re.compile(r"\bprint slice\b", re.IGNORECASE), "section"),
+    (re.compile(r"\bCurrent print status\b"), "Status in this draft"),
+    (re.compile(r"\bCurrent print policy\b"), "Current treatment"),
+    (re.compile(r"\bprint-ready\b", re.IGNORECASE), "well-supported"),
+    (re.compile(r"\bprint-usable with caveat\b", re.IGNORECASE), "supported with caveat"),
+    (re.compile(r"\bedge row only\b", re.IGNORECASE), "boundary item"),
+    (re.compile(r"\bprint use\b", re.IGNORECASE), "discussion here"),
+    (re.compile(r"\bprint purposes\b", re.IGNORECASE), "present purposes"),
+    (re.compile(r"\bpublication prose\b", re.IGNORECASE), "the present discussion"),
+    (re.compile(r"\bcoverage-normalization\b", re.IGNORECASE), "editorial"),
+    (re.compile(r"\bcoverage normalization\b", re.IGNORECASE), "editorial standard"),
+    (re.compile(r"\bdossier\b", re.IGNORECASE), "background notes"),
+    (re.compile(r"\breview notes\b", re.IGNORECASE), "background notes"),
+    (re.compile(r"\bthis pass\b", re.IGNORECASE), "here"),
+    (re.compile(r"\bcurrent pass\b", re.IGNORECASE), "current stage"),
+]
 
 
 @dataclass(frozen=True)
@@ -221,6 +252,56 @@ def adjust_heading_levels(text: str, increment: int = 2) -> str:
     return "\n".join(adjusted_lines).rstrip() + "\n"
 
 
+def strip_markdown_sections(text: str, titles: set[str]) -> str:
+    output: list[str] = []
+    skip_level: int | None = None
+
+    for line in text.splitlines():
+        heading_match = MARKDOWN_HEADING_RE.match(line)
+        if skip_level is not None:
+            if heading_match and len(heading_match.group(1)) <= skip_level:
+                skip_level = None
+            else:
+                continue
+
+        if heading_match and heading_match.group(2).strip() in titles:
+            skip_level = len(heading_match.group(1))
+            continue
+
+        output.append(line)
+
+    return "\n".join(output).strip() + "\n"
+
+
+def rewrite_grammar_facing_line(line: str) -> str:
+    rewritten = line
+    for pattern, replacement in GRAMMAR_FACING_REPLACEMENTS:
+        rewritten = pattern.sub(replacement, rewritten)
+    rewritten = re.sub(r"\s{2,}", " ", rewritten)
+    rewritten = rewritten.replace(" .", ".").replace(" ,", ",").replace(" ;", ";").replace(" :", ":")
+    return rewritten.strip() if rewritten.strip() else ""
+
+
+def rewrite_grammar_facing_text(text: str) -> str:
+    rewritten_lines = [rewrite_grammar_facing_line(line) if line.strip() else "" for line in text.splitlines()]
+    return "\n".join(rewritten_lines).strip() + "\n"
+
+
+def grammar_facing_gap_text(item: dict[str, object]) -> str:
+    title = str(item.get("title", "")).strip()
+    raw_text = str(item.get("text", "")).lower()
+
+    if "phonology/tone" in raw_text:
+        return "A full discussion of phonology and tone is not yet included in this review preview."
+    if title == "Verb paradigms":
+        return "A full discussion of verbal paradigms is not yet included in this draft."
+    if title == "Broader discourse":
+        return "A fuller treatment of discourse structure is not yet included in this draft."
+    if title == "Analyzer-gap caution":
+        return "Several cross-cutting morphological issues remain unresolved and are not yet integrated into this draft."
+    return "This topic remains outside the present draft."
+
+
 def find_executable(name: str, fallbacks: list[str]) -> str | None:
     found = shutil.which(name)
     if found:
@@ -231,81 +312,79 @@ def find_executable(name: str, fallbacks: list[str]) -> str | None:
     return None
 
 
-def read_slice(path_text: str) -> str | None:
+def read_slice(path_text: str, grammar_facing: bool = True) -> str | None:
     path = ROOT / path_text
     if not path.exists():
         return None
-    return adjust_heading_levels(strip_yaml_front_matter(path.read_text(encoding="utf-8")))
+    text = adjust_heading_levels(strip_yaml_front_matter(path.read_text(encoding="utf-8")))
+    if grammar_facing:
+        text = strip_markdown_sections(text, GRAMMAR_FACING_INTERNAL_SECTION_TITLES)
+        text = rewrite_grammar_facing_text(text)
+    return text
 
 
-def build_markdown() -> str:
-    lines: list[str] = [
-        "---",
-        'title: "Assembled Tedim Grammar Review Preview"',
-        'subtitle: "Not a finished grammar"',
-        'date: ""',
-        "---",
-        "",
-        "# Review preview status",
-        "",
-        "This is a review preview, not a finished grammar. It is assembled from first-pass publication-review slices and is controlled by `output/publication_review/whole_grammar_coverage_checkpoint_after_transitivity.md`, `output/publication_review/whole_grammar_coverage_checkpoint_after_reduplication.md`, `output/publication_review/whole_grammar_coverage_audit.md`, `docs/SKELETON_GRAMMAR.md`, `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md`, and `PROGRESS.md`.",
-        "",
-        "`output/publication_review/review_notes_transitivity.md` brought the transitivity packet to review-note maturity, and the post-transitivity checkpoint now treats the packet set as stable enough for a review preview assembled from actual slice prose. This document is not a new grammar slice, not a dictionary slice, and not a human-review packet. It is intended to help human review and direct editing, not to certify completion.",
-        "",
-        "Many sections are deliberately narrow. Missing or blocked domains are marked explicitly. The PDF built from this assembly is a review preview PDF, not a final publication PDF.",
-        "",
-        "# PDF/build status",
-        "",
-        "This preview is reproducible from committed sources with `python3 scripts/assemble_publication_review_preview.py`. The script writes `output/publication_review/assembled_grammar_review_preview.md`, generates `output/publication_review/assembled_grammar_review_preview.tex` through Pandoc plus natbib/BibTeX citation processing, and compiles `output/publication_review/assembled_grammar_review_preview.pdf` with XeLaTeX while routing publication-review example blocks through the shared analyzer and gb4e interlinear machinery.",
-        "",
-        "The assembly reuses current repository conventions where practical: the repository bibliography in `literature/bibliography.bib`, XeLaTeX compilation and the `Times New Roman` / `Helvetica` font pair already used in `scripts/export_interlinear.py`, the shared Bible/analyzer helpers in `scripts/interlinear_latex.py`, and the same 0.75-inch page-margin convention for generated TeX output.",
-        "",
-        "# Known narrow-slice limitations",
-        "",
-        "- VP structure / suffix stacking: currently anchored by `bawlzoding`.",
-        "- derivation / valency: currently anchored by `-sak`.",
-        "- prefix/agreement: currently anchored by `kanei / kainn`.",
-        "- clause linkage: currently anchored by `ciangin`.",
-        "- nominalization: currently anchored by `-na / bawlna`.",
-        "- NP structure / possession: currently anchored by `hih mite`, `mi khat`, `mi khempeuh`.",
-        "- noun domain: currently anchored by `gam` and `aksi / aksi-te`.",
-        "- reduplication: currently anchored by `mahmah / taktak`, with `peuhpeuh` secondary.",
-        "- transitivity: currently anchored by `sih / suak` versus `hawl / en`.",
-        "",
-        "# Major unresolved domains",
-        "",
-        "- [MAJOR GAP: phonology/tone remains blocked or theory-heavy.]",
-        "- [MAJOR GAP: verb paradigms remain report-backed but not packet-shaped.]",
-        "- [MAJOR GAP: broader discourse remains partly surfaced and boundary-heavy.]",
-        "- [MAJOR GAP: analyzer-gap topics remain cross-cutting blockers.]",
-        "",
-        "Second-pass expansions such as `-pih`, `ki-`, hong-/kong-, switch reference, relative clauses, transparent compounds, wider reduplication, and labile or ambitransitive transitivity remain outside this first-pass assembled review preview.",
-        "",
-    ]
+def build_markdown(grammar_facing: bool = True) -> str:
+    if grammar_facing:
+        lines: list[str] = [
+            "---",
+            'title: "Assembled Tedim Grammar Review Preview"',
+            'subtitle: "Not a finished grammar"',
+            'date: ""',
+            "---",
+            "",
+            "# Review preview status",
+            "",
+            "This is a review preview, not a finished grammar. It is an assembled draft of the current Tedim grammar sections.",
+            "",
+            "Several domains remain incomplete, and end-of-section caveats remain visible while the draft is still under review.",
+            "",
+        ]
+    else:
+        lines = [
+            "---",
+            'title: "Assembled Tedim Grammar Review Preview"',
+            'subtitle: "Not a finished grammar"',
+            'date: ""',
+            "---",
+            "",
+            "# Review preview status",
+            "",
+            "This is a review preview, not a finished grammar.",
+            "",
+        ]
 
     for chapter in ASSEMBLY_SPEC:
         lines.extend([f"# {chapter['title']}", ""])
         for item in chapter["items"]:
             if item["type"] == "slice":
-                lines.extend([f"## {item['title']}", "", f"*Source slice: `{item['path']}`*", ""])
-                content = read_slice(item["path"])
+                lines.extend([f"## {item['title']}", ""])
+                if not grammar_facing:
+                    lines.extend([f"*Source slice: `{item['path']}`*", ""])
+                content = read_slice(item["path"], grammar_facing=grammar_facing)
                 if content is None:
-                    lines.extend([f"[REVIEW PREVIEW GAP: expected grammar slice not found: {item['path']}]", ""])
+                    if grammar_facing:
+                        lines.extend(["This section is not yet available in the assembled draft.", ""])
+                    else:
+                        lines.extend([f"[REVIEW PREVIEW GAP: expected grammar slice not found: {item['path']}]", ""])
                 else:
                     lines.extend([content.rstrip(), ""])
             else:
                 if item.get("title"):
                     lines.extend([f"## {item['title']}", ""])
-                lines.extend([item["text"], "", item["explanation"], ""])
+                if grammar_facing:
+                    lines.extend([grammar_facing_gap_text(item), ""])
+                else:
+                    lines.extend([item["text"], "", item["explanation"], ""])
 
-    lines.extend(
-        [
-            "# End state of this preview",
-            "",
-            "This assembled review preview contains the actual prose of the current first-pass publication-review grammar slices in a single ordered draft. It does not claim that the whole grammar is finished, and the generated PDF is a review preview PDF rather than a final publication PDF.",
-            "",
-        ]
-    )
+    if not grammar_facing:
+        lines.extend(
+            [
+                "# End state of this preview",
+                "",
+                "This assembled review preview contains the actual prose of the current first-pass review grammar slices in a single ordered draft. It does not claim that the whole grammar is finished, and the generated PDF is a review preview PDF rather than a final publication PDF.",
+                "",
+            ]
+        )
     return "\n".join(lines)
 
 
@@ -471,15 +550,53 @@ def strip_terminal_source_parenthetical(translation: str, source: str) -> str:
     return translation[: match.start()].rstrip()
 
 
+def normalize_quote_marks(text: str) -> str:
+    return text.replace("‘", "'").replace("’", "'").replace("“", '"').replace("”", '"')
+
+
+def latex_glossquote(text: str) -> str:
+    return rf"\glossquote{{{escape_latex(text.strip())}}}"
+
+
+def replace_inline_english_glosses(line: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        return latex_glossquote(match.group(1))
+
+    return INLINE_GLOSS_QUOTE_RE.sub(replace, line)
+
+
+def render_english_text_for_latex(text: str, *, wrap_if_unquoted: bool = False) -> str:
+    normalized = normalize_quote_marks(text).strip()
+    parts: list[str] = []
+    last_end = 0
+    found = False
+
+    for match in INLINE_GLOSS_QUOTE_RE.finditer(normalized):
+        found = True
+        parts.append(escape_latex(normalized[last_end : match.start()]))
+        parts.append(latex_glossquote(match.group(1)))
+        last_end = match.end()
+
+    parts.append(escape_latex(normalized[last_end:]))
+    rendered = "".join(parts).strip()
+    if found:
+        return rendered
+
+    stripped = strip_outer_quotes(normalized)
+    if wrap_if_unquoted:
+        return latex_glossquote(stripped)
+    return escape_latex(stripped)
+
+
 def build_translation_line(translation: str, source: str) -> str:
-    normalized_translation = strip_outer_quotes(translation)
+    normalized_translation = normalize_quote_marks(translation)
     if source:
         normalized_translation = strip_terminal_source_parenthetical(normalized_translation, source)
 
-    rendered = f"'{normalized_translation}'"
+    rendered = render_english_text_for_latex(normalized_translation, wrap_if_unquoted=True)
     if source:
-        rendered = f"{rendered} ({source})"
-    return escape_latex(rendered)
+        rendered = f"{rendered} ({escape_latex(source)})"
+    return rendered
 
 
 def analysis_is_usable(analysis: dict[str, list[str]]) -> bool:
@@ -641,7 +758,7 @@ def example_to_latex_block(
     return "\n".join(latex_lines)
 
 
-def transform_markdown_for_latex(markdown_text: str) -> str:
+def transform_markdown_for_latex(markdown_text: str, grammar_facing: bool = True) -> str:
     bible = load_bible(BIBLE_PATH)
     tone_dict = load_tone_dictionary()
     source_audit_records = collect_source_audit_records(markdown_text, bible)
@@ -669,6 +786,16 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
 
         chapter_match = CHAPTER_HEADING_RE.match(line)
         if chapter_match:
+            if not abbreviations_inserted:
+                transformed.extend(
+                    [
+                        "```{=latex}",
+                        generate_abbreviations_section(),
+                        "```",
+                        "",
+                    ]
+                )
+                abbreviations_inserted = True
             in_publication_slice = False
             transformed.extend(
                 [
@@ -683,7 +810,7 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
             continue
 
         if line.startswith("## "):
-            in_publication_slice = False
+            in_publication_slice = grammar_facing
 
         if line.startswith("*Source slice: `"):
             in_publication_slice = True
@@ -694,17 +821,6 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
         heading_match = re.match(r"^#\s+(.+?)\s*$", line)
         if heading_match:
             title = heading_match.group(1)
-            if title == "Known narrow-slice limitations" and not abbreviations_inserted:
-                transformed.extend(
-                    [
-                        "```{=latex}",
-                        generate_abbreviations_section(),
-                        "```",
-                        "",
-                    ]
-                )
-                abbreviations_inserted = True
-
             if title in FRONTMATTER_SECTION_TITLES:
                 transformed.extend(
                     [
@@ -716,6 +832,9 @@ def transform_markdown_for_latex(markdown_text: str) -> str:
                 )
                 index += 1
                 continue
+
+        if grammar_facing and line and not line.startswith("[MAJOR GAP:") and not line.startswith("[REVIEW PREVIEW"):
+            line = replace_inline_english_glosses(line)
 
         if in_publication_slice and line and not line.startswith("[MAJOR GAP:") and not line.startswith("[REVIEW PREVIEW"):
             line = format_publication_inline_code(line)
@@ -743,7 +862,10 @@ def write_latex_header(path: Path) -> None:
 \fancyhf{{}}
 \fancyfoot[C]{{\thepage}}
 \setcitestyle{{authoryear,round,semicolon}}
+\setcounter{{secnumdepth}}{{3}}
+\setcounter{{tocdepth}}{{2}}
 \newcommand{{\frontmattersection}}[1]{{\section*{{#1}}\addcontentsline{{toc}}{{section}}{{#1}}}}
+\newcommand{{\glossquote}}[1]{{`#1'}}
 \newcommand{{\reviewwarning}}[1]{{\par\medskip\noindent\textbf{{#1}}\par\medskip}}
 \newcommand{{\reviewwarninginline}}[1]{{\textbf{{#1}}\par\smallskip}}
 \newcounter{{reviewchapter}}
@@ -754,13 +876,13 @@ def write_latex_header(path: Path) -> None:
     path.write_text(header.lstrip(), encoding="utf-8")
 
 
-def generate_tex(markdown_text: str, markdown_path: Path, tex_path: Path) -> None:
+def generate_tex(markdown_text: str, markdown_path: Path, tex_path: Path, grammar_facing: bool = True) -> None:
     pandoc_cmd = find_executable("pandoc", PANDOC_FALLBACKS)
     if not pandoc_cmd:
         raise RuntimeError("pandoc not found; cannot generate LaTeX preview source")
 
     validate_citations(markdown_text, BIBLIOGRAPHY_PATH)
-    latex_markdown = transform_markdown_for_latex(markdown_text)
+    latex_markdown = transform_markdown_for_latex(markdown_text, grammar_facing=grammar_facing)
 
     with tempfile.TemporaryDirectory() as tmpdir:
         temp_dir = Path(tmpdir)
@@ -776,6 +898,7 @@ def generate_tex(markdown_text: str, markdown_path: Path, tex_path: Path) -> Non
             "--to=latex",
             "--standalone",
             "--toc",
+            "--number-sections",
             "--natbib",
             "--bibliography",
             str(BIBLIOGRAPHY_RELATIVE),
@@ -834,6 +957,19 @@ def compile_pdf(tex_path: Path, pdf_path: Path) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--grammar-facing",
+        dest="grammar_facing",
+        action="store_true",
+        default=True,
+        help="build the grammar-facing review preview (default)",
+    )
+    parser.add_argument(
+        "--internal-review-apparatus",
+        dest="grammar_facing",
+        action="store_false",
+        help="retain internal workflow apparatus in the assembled output",
+    )
+    parser.add_argument(
         "--skip-pdf",
         action="store_true",
         help="write Markdown and TeX only, without compiling the PDF",
@@ -843,11 +979,11 @@ def main() -> None:
     PUBLICATION_REVIEW_DIR.mkdir(parents=True, exist_ok=True)
 
     bible = load_bible(BIBLE_PATH)
-    markdown = enrich_example_headers(build_markdown(), bible)
+    markdown = enrich_example_headers(build_markdown(grammar_facing=args.grammar_facing), bible)
     MARKDOWN_OUTPUT.write_text(markdown, encoding="utf-8")
     print(f"Wrote Markdown preview: {MARKDOWN_OUTPUT}")
 
-    generate_tex(markdown, MARKDOWN_OUTPUT, TEX_OUTPUT)
+    generate_tex(markdown, MARKDOWN_OUTPUT, TEX_OUTPUT, grammar_facing=args.grammar_facing)
     print(f"Wrote LaTeX preview: {TEX_OUTPUT}")
 
     if not args.skip_pdf:

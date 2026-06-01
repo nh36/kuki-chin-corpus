@@ -15,7 +15,7 @@ The section still keeps candidate discipline. Printed claims and formal examples
 
 # Overview of the numeral system
 
-The current evidence supports a cautious but fuller overview of the Tedim numeral system. Tedim is described in the literature as a decimal system, with `sawm` as the ten base and `za` as the next larger base above the first two-digit range [@zamngaihcing2017; @henderson1965]. The Bible-backed review packet confirms that basic cardinals, compound tens, larger-number expressions, `-na` ordinals, and at least one occurrence-counting expression are all securely part of the current publication-facing section.
+The current evidence supports a cautious but fuller overview of the Tedim numeral system. Tedim is described in the literature as a decimal system, with `sawm` 'ten' as the decimal base and `za` 'hundred' as the next larger base above the first two-digit range [@zamngaihcing2017; @henderson1965]. The Bible-backed review packet confirms that basic cardinals, compound tens, larger-number expressions, `-na` ordinals such as `nihna` 'second', and at least one occurrence-counting expression such as `sawmvei` 'ten times' are all securely part of the current publication-facing section.
 
 This normalized section therefore includes:
 
@@ -103,7 +103,7 @@ d. Translation: 'second'
 
 # Counting phrases and word order
 
-The clearest current word-order claim is still modest: noun-plus-numeral patterns are securely attested. The normalized section now keeps both Old Testament and Gospel evidence visible for that pattern.
+The clearest current word-order claim is still modest: noun-plus-numeral patterns are securely attested. Counted nouns such as `kum` 'year' and `ni` 'day' clearly precede the numeral in the best current examples, and the normalized section now keeps both Old Testament and Gospel evidence visible for that pattern.
 
 (@ex:num-kum-nih) Genesis 11:10
 a. Tedim: kum nih
@@ -169,7 +169,7 @@ This is exactly the kind of place where normalization must stay disciplined. The
 
 # Ambiguity controls
 
-Two ambiguity controls remain central to the section:
+Two ambiguity controls remain central to the section: `kua` 'nine' must stay in clearly numeral contexts so that it is not confused with the interrogative form `kua` 'who', and `khat` 'one' still needs explicit boundary notes where numeral and indefinite-like uses overlap.
 
 | Form | Numeral-side use | Competing use | Current print policy |
 |---|---|---|---|

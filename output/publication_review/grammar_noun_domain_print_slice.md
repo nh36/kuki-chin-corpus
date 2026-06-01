@@ -29,11 +29,11 @@ The normalized NP, numerals, and quantifiers sections already carry the fuller d
 
 # Overview of the noun domain
 
-The clearest current evidence supports a modest but coherent noun-domain description. Simple lexical nouns such as `gam` and `aksi` are safely attested, and plural marking with `-te` is printable for controlled anchors such as `aksi-te` and `mite`. Human noun `mi` is also a stable lexical head in larger noun phrases, as seen in rows such as `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`, while nonhuman nouns such as `ni` and `kum` behave similarly in counted phrases.
+The clearest current evidence supports a modest but coherent noun-domain description. Simple lexical nouns such as `gam` 'land / country' and `aksi` 'star' are safely attested, and plural marking with `-te` is printable for controlled anchors such as `aksi-te` 'stars' and `mite` 'people'. Human noun `mi` 'person' is also a stable lexical head in larger noun phrases, as seen in rows such as `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`, while nonhuman nouns such as `ni` 'day' and `kum` 'year' behave similarly in counted phrases.
 
 This is enough to describe a small publication-facing noun inventory, to note a cautious `-te` plural pattern, and to show that lexical nouns remain visible as heads inside demonstrative, numeral, and quantifier phrases. It is not yet enough for a full noun-domain chapter, because compounds, proper names, classifier-like nouns, and nominalized nouns still require more boundary control.
 
-Gospel searches produced usable noun-domain evidence for `aksi`, `mi khempeuh`, `ni li`, and proper-name material such as `Abraham' suan David`, which helps keep the section from becoming Genesis-only. The cleanest `gam` and `-te` plural anchors, however, remain OT-led in the current pass.
+Gospel searches produced usable noun-domain evidence for `aksi`, `mi khempeuh`, `ni li`, and proper-name material such as `Abraham' suan David`, which helps keep the section from becoming Genesis-only. The cleanest `gam` and `-te` plural anchors, however, remain OT-led in the current pass, while compound material such as `minam` 'nation' still needs explicit caveats.
 
 # Current noun-domain inventory
 

@@ -98,61 +98,46 @@ def test_assembled_preview_is_explicitly_a_review_preview() -> None:
     lower = text.lower()
 
     assert "review preview, not a finished grammar" in lower
-    assert "assembled from first-pass publication-review slices" in lower
-    assert "intended to help human review and direct editing" in lower
+    assert "assembled draft of the current tedim grammar sections" in lower
+    assert "end-of-section caveats remain visible" in lower
 
 
-def test_assembled_preview_names_controlling_sources() -> None:
+def test_assembled_preview_frontmatter_suppresses_internal_workflow_apparatus() -> None:
     text = _text()
+    lower = text.lower()
 
-    for required in (
+    for forbidden in (
         "whole_grammar_coverage_checkpoint_after_transitivity.md",
         "whole_grammar_coverage_checkpoint_after_reduplication.md",
         "whole_grammar_coverage_audit.md",
-        "SKELETON_GRAMMAR.md",
-        "GRAMMAR_SOURCE_INVENTORY.md",
-        "PROGRESS.md",
+        "skeleton_grammar.md",
+        "grammar_source_inventory.md",
+        "source slice:",
+        "pdf/build status",
+        "known narrow-slice limitations",
+        "end state of this preview",
     ):
-        assert required in text
+        assert forbidden not in lower
 
 
-def test_assembled_preview_names_key_narrow_slice_anchors() -> None:
+def test_assembled_preview_gap_sections_use_grammar_facing_prose() -> None:
     text = _text()
 
     for required in (
-        "bawlzoding",
-        "`-sak`",
-        "kanei / kainn",
-        "ciangin",
-        "`-na / bawlna`",
-        "hih mite",
-        "mi khat",
-        "mi khempeuh",
-        "`gam`",
-        "aksi / aksi-te",
-        "mahmah / taktak",
-        "peuhpeuh",
-        "sih / suak",
-        "hawl / en",
+        "A full discussion of phonology and tone is not yet included in this review preview.",
+        "A full discussion of verbal paradigms is not yet included in this draft.",
+        "A fuller treatment of discourse structure is not yet included in this draft.",
+        "Several cross-cutting morphological issues remain unresolved and are not yet integrated into this draft.",
     ):
         assert required in text
-
-
-def test_assembled_preview_marks_major_gaps() -> None:
-    text = _text()
-
-    assert "[MAJOR GAP: phonology/tone remains blocked or theory-heavy.]" in text
-    assert "[MAJOR GAP: verb paradigms remain report-backed but not packet-shaped.]" in text
-    assert "[MAJOR GAP: broader discourse remains partly surfaced and boundary-heavy.]" in text
-    assert "[MAJOR GAP: analyzer-gap topics remain cross-cutting blockers.]" in text
 
 
 def test_assembled_preview_does_not_claim_finished_grammar_or_pdf() -> None:
     text = _text()
     lower = text.lower()
 
-    assert "does not claim that the whole grammar is finished" in lower
-    assert "review preview pdf, not a final publication pdf" in lower
+    assert "review preview, not a finished grammar" in lower
+    assert "not a final publication pdf" not in lower
 
 
 def test_assembled_preview_includes_actual_slice_prose() -> None:
@@ -176,7 +161,6 @@ def test_assembled_preview_includes_normalized_numerals_section() -> None:
     text = _text()
 
     for required in (
-        "normalized publication-facing numerals section",
         "Overview of the numeral system",
         "Cardinal numerals",
         "Decimal composition",
@@ -188,15 +172,15 @@ def test_assembled_preview_includes_normalized_numerals_section() -> None:
         assert required in text
 
 
-def test_assembled_preview_includes_source_lines_for_inserted_slices() -> None:
+def test_assembled_preview_hides_source_slice_lines() -> None:
     text = _text()
 
-    for required in (
+    for forbidden in (
         "Source slice: `output/publication_review/grammar_transitivity_print_slice.md`",
         "Source slice: `output/publication_review/grammar_reduplication_print_slice.md`",
         "Source slice: `output/publication_review/grammar_clause_linkage_print_slice.md`",
     ):
-        assert required in text
+        assert forbidden not in text
 
 
 def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
@@ -206,13 +190,14 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
 
     assert TEX_PATH.exists(), "Assembled grammar review preview TeX must exist"
     assert "review preview, not a finished grammar" in lower
-    assert "not a final publication pdf" in lower
+    assert "\\setcounter{secnumdepth}{3}" in tex
+    assert "\\setcounter{tocdepth}{2}" in tex
     assert "\\tdim{sih} is the clean intransitive anchor for the first slice." in lower
     assert "\\tdim{hawl} is the clean transitive anchor for the first slice." in lower
     assert "\\tdim{mahmah} is the main full-reduplication intensifier anchor." in lower
-    assert "with \\tdim{ciangin} as the clearest current anchor." in lower
+    assert "\\tdim{ciangin}" in lower
     assert "overview of noun phrase structure" in normalized
-    assert "routing contrast, with \\tdim{kanei} as the clearest agreement anchor" in lower
+    assert "\\tdim{kanei}" in lower
     assert "cardinal numerals" in lower
     assert "decimal composition" in lower
     assert "occurrence-counting" in lower or "occurrence counting" in lower
@@ -228,6 +213,7 @@ def test_assembled_preview_tex_uses_real_citation_and_gb4e_machinery() -> None:
     assert "\\bibliography{../../literature/bibliography.bib}" in tex
     assert "\\citep{henderson1965, zamngaihcing2017}" in tex
     assert "\\usepackage{gb4e}" in tex
+    assert "\\glossquote" in tex
     assert "\\newcommand{\\tdim}[1]{\\textit{#1}}" in tex
     assert "\\newcommand{\\tdimword}[1]{\\textit{#1}}" in tex
     assert "\\newcounter{reviewchapter}" in tex
@@ -248,7 +234,7 @@ def test_assembled_preview_tex_contains_real_interlinear_example_content() -> No
     assert "\\gll \\tdimword{" in block
     assert "\\textsc{prox}" in block
     assert "\\textsc{top}" in block
-    assert "\\glt 'This is the book of the generations of Adam.' (Genesis 5:1)" in block
+    assert "\\glt \\glossquote{This is the book of the generations of Adam.} (Genesis 5:1)" in block
 
 
 def test_assembled_preview_tex_uses_shared_analyzer_output_for_known_bible_example() -> None:
@@ -263,7 +249,7 @@ def test_assembled_preview_tex_uses_shared_analyzer_output_for_known_bible_examp
 def test_assembled_preview_tex_places_bible_reference_after_translation() -> None:
     block = _tex_example_block("ex:dem-hih")
 
-    assert "\\glt 'This is the book of the generations of Adam.' (Genesis 5:1)" in block
+    assert "\\glt \\glossquote{This is the book of the generations of Adam.} (Genesis 5:1)" in block
     assert block.index("\\glt") < block.index("Genesis 5:1")
     assert "Genesis 5:1\n\\gll" not in block
 
@@ -284,7 +270,7 @@ def test_assembled_preview_tex_systematically_preserves_example_sources_after_tr
 
 
 def test_assembled_preview_tex_keeps_expected_sources_for_known_examples() -> None:
-    assert "\\glt 'This is the book of the generations of Adam.' (Genesis 5:1)" in _tex_example_block("ex:dem-hih")
+    assert "\\glt \\glossquote{This is the book of the generations of Adam.} (Genesis 5:1)" in _tex_example_block("ex:dem-hih")
     assert "(Genesis 1:6)" in _tex_example_block("ex:dem-tua")
     assert "(Genesis 1:3)" in _tex_example_block("ex:dem-tua-ciangin")
     assert "(Exodus 14:30)" in _tex_example_block("ex:dem-tua-bangin")
@@ -328,7 +314,6 @@ def test_assembled_preview_includes_normalized_quantifiers_section() -> None:
     text = _text()
 
     for required in (
-        "normalized publication-facing quantifiers section",
         "Overview of quantification in Tedim",
         "Quantifier inventory",
         "Universal / total quantifiers",
@@ -344,7 +329,6 @@ def test_assembled_preview_includes_normalized_noun_domain_section() -> None:
     text = _text()
 
     for required in (
-        "normalized publication-facing noun domain section",
         "Overview of the noun domain",
         "Current noun-domain inventory",
         "Simple noun stems",
@@ -362,7 +346,6 @@ def test_assembled_preview_includes_normalized_np_possession_section() -> None:
     text = _text()
 
     for required in (
-        "normalized publication-facing NP structure / possession section",
         "Overview of noun phrase structure",
         "Current NP pattern inventory",
         "Demonstratives and nouns",
@@ -378,7 +361,6 @@ def test_assembled_preview_includes_normalized_case_marking_section() -> None:
     text = _text()
 
     for required in (
-        "normalized publication-facing case marking section",
         "Overview of case-like marking",
         "Current case-marking inventory",
         "Locative and goal marking with -ah",
@@ -574,8 +556,8 @@ def test_assembled_preview_assembler_reuses_shared_interlinear_helper() -> None:
 def test_assembled_preview_tex_distinguishes_inline_tedim_from_technical_paths() -> None:
     tex = _tex_text()
 
-    assert "\\texttt{output/publication\\_review/grammar\\_transitivity\\_print\\_slice.md}" in tex
-    assert "\\texttt{python3\\ scripts/assemble\\_publication\\_review\\_preview.py}" in tex
+    assert "\\texttt{output/publication\\_review/grammar\\_transitivity\\_print\\_slice.md}" not in tex
+    assert "\\texttt{python3\\ scripts/assemble\\_publication\\_review\\_preview.py}" not in tex
     assert "\\tdim{hih}" in tex
     assert "\\tdim{tua}" in tex
     assert "\\tdim{mahmah}" in tex
@@ -585,8 +567,9 @@ def test_assembled_preview_tex_distinguishes_inline_tedim_from_technical_paths()
 
 def test_assembled_preview_gap_and_review_status_text_are_not_aggressively_italicized() -> None:
     tex = _tex_text()
+    normalized = _normalize(tex)
 
-    assert "{[}MAJOR GAP: phonology/tone remains blocked or theory-heavy.{]}" in tex
+    assert "A full discussion of phonology and tone is not yet included in this review preview." in normalized
     assert "\\tdim{review preview, not a finished grammar}" not in tex
 
 
@@ -612,7 +595,6 @@ def test_assembled_preview_pdf_text_shows_parenthetical_citations_and_numbered_e
     assert "[@" not in pdf_text
     assert "[Henderson" not in pdf_text
     assert "review preview, not a finished grammar" in lower
-    assert "not a final publication pdf" in lower
     assert "abbreviations" in lower
     assert "references" in lower
     assert re.search(r"\(Henderson,\s*1965.{0,20}Cing,\s*2017\)", normalized)
@@ -627,7 +609,8 @@ def test_assembled_preview_pdf_text_shows_parenthetical_citations_and_numbered_e
 def test_assembled_preview_pdf_text_keeps_source_references_systematically() -> None:
     pdf_text = _pdf_text()
 
-    assert "book of the generations of Adam.’ (Genesis 5:1)" in pdf_text or "book of the generations of Adam.' (Genesis 5:1)" in pdf_text
+    assert "book of the generations of Adam" in pdf_text
+    assert "(Genesis 5:1)" in pdf_text
     assert "(Genesis 1:6)" in pdf_text
     assert "(Genesis 1:3)" in pdf_text
     assert "(Exodus 14:30)" in pdf_text
