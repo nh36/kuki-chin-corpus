@@ -26,7 +26,7 @@ This normalized section therefore includes:
 - ordinals with `-na`, anchored by `nihna`;
 - counting expressions and classifier-like material, but only cautiously;
 - occurrence-counting `sawmvei`;
-- explicit ambiguity controls for `kua` and `khat`;
+- explicit ambiguity controls for numeral-side `kua` 'nine' and boundary `khat` 'one';
 - distributive reduplication only as deferred material.
 
 What it does **not** do is claim that the whole numeral chapter is finished. It does not promote raw generated-report counts as grammar facts, it does not normalize a full classifier system from thin evidence, and it does not import quantifier prose or dubious analyzer output without candidate control.
@@ -100,6 +100,8 @@ d. Translation: 'second'
 `Nihna` is the current print-ready ordinal row. The dossier already notes that `pos_span = N` in the export; that is a label caveat, not a reason to reject the ordinal analysis.
 
 `Masa` remains visible but deferred. Gospel material such as Matthew 10:2 confirms that `masa` is a live background form for 'first', but the present section does not yet promote it as the normalized ordinal anchor because the current candidate-controlled packet is still built around `nihna`, not around a full ordinal paradigm or a full contrast between `masa` and `khatna`-type forms.
+
+No equally good Gospel ordinal example is currently used here, so the subsection stays anchored in the compact OT row while the broader ordinal evidence remains backgrounded.
 
 # Counting phrases and word order
 

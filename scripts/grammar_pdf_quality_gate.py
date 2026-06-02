@@ -1,0 +1,513 @@
+#!/usr/bin/env python3
+"""Fail loudly when the grammar-facing assembled preview violates style gates."""
+
+from __future__ import annotations
+
+import argparse
+import re
+import subprocess
+import tempfile
+from dataclasses import dataclass
+from pathlib import Path
+
+import assemble_publication_review_preview as assembler
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_REPORT_PATH = ROOT / "output" / "publication_review" / "grammar_facing_quality_report.md"
+FIRST_CHAPTER_TITLE = "Phonology and tone"
+TARGET_SECTION_TITLES = {
+    "Numerals",
+    "Quantifiers",
+    "NP structure / possession",
+    "Noun domain",
+    "Case marking",
+}
+NT_BOOKS = {
+    "Matthew",
+    "Mark",
+    "Luke",
+    "John",
+    "Acts",
+    "Romans",
+    "1 Corinthians",
+    "2 Corinthians",
+    "Galatians",
+    "Ephesians",
+    "Philippians",
+    "Colossians",
+    "1 Thessalonians",
+    "2 Thessalonians",
+    "1 Timothy",
+    "2 Timothy",
+    "Titus",
+    "Philemon",
+    "Hebrews",
+    "James",
+    "1 Peter",
+    "2 Peter",
+    "1 John",
+    "2 John",
+    "3 John",
+    "Jude",
+    "Revelation",
+}
+SUBSECTION_IGNORE_RE = re.compile(
+    r"(overview|inventory|summary|deferred|boundary|controls|argument structure)$",
+    re.IGNORECASE,
+)
+ONE_EXAMPLE_NOTE_RE = re.compile(r"No equally (?:good|clean).{0,40}example", re.IGNORECASE)
+PDF_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (re.compile(r"(?:^|\n)\s*Scope\s*(?:\n|$)", re.IGNORECASE), "visible Scope heading"),
+    (re.compile(r"(?:^|\n)\s*Editorial scope\s*(?:\n|$)", re.IGNORECASE), "visible Editorial scope heading"),
+    (re.compile(r"source slice:", re.IGNORECASE), "source-slice marker"),
+    (
+        re.compile(
+            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer",
+            re.IGNORECASE,
+        ),
+        "internal workflow term",
+    ),
+    (re.compile(r"(?:output|scripts|tests|docs)/[A-Za-z0-9_./\\-]+", re.IGNORECASE), "internal file path"),
+    (re.compile(r"test_[A-Za-z0-9_]+\.py", re.IGNORECASE), "test-name reference"),
+)
+TEX_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
+    (re.compile(r"\\section\*?\{Scope\}", re.IGNORECASE), "visible Scope heading"),
+    (re.compile(r"\\section\*?\{Editorial scope\}", re.IGNORECASE), "visible Editorial scope heading"),
+    (re.compile(r"Source slice:", re.IGNORECASE), "source-slice marker"),
+    (
+        re.compile(
+            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer",
+            re.IGNORECASE,
+        ),
+        "internal workflow term",
+    ),
+    (re.compile(r"(?:output|scripts|tests|docs)/[A-Za-z0-9_./\\-]+", re.IGNORECASE), "internal file path"),
+)
+GLOSSARY_REQUIREMENTS: dict[str, tuple[str, ...]] = {
+    "gam": (r"land(?: / country)?",),
+    "aksi": (r"star",),
+    "aksi-te": (r"stars",),
+    "mi": (r"person",),
+    "mite": (r"people",),
+    "kum": (r"year",),
+    "ni": (r"day",),
+    "khat": (r"one",),
+    "nih": (r"two",),
+    "sawm": (r"ten",),
+    "kua": (r"nine|who",),
+    "khempeuh": (r"all",),
+    "pawlkhat": (r"some(?: people)?|one group",),
+    "kuamah": (r"nobody",),
+    "bangmah": (r"nothing",),
+    "tampi": (r"many",),
+    "hih": (r"this",),
+    "tua": (r"that",),
+    "-ah": (r"locative(?: or goal-like)?|LOC",),
+    "-in": (r"ergative|ERG",),
+    "-pan": (r"ablative|source",),
+    "-tawh": (r"with",),
+}
+
+
+@dataclass(frozen=True)
+class MarkdownBlock:
+    level: int
+    title: str
+    parent_titles: tuple[str, ...]
+    content: str
+    start_line: int
+
+
+@dataclass(frozen=True)
+class TexBlock:
+    level: int
+    title: str
+    parent_titles: tuple[str, ...]
+    content: str
+
+
+@dataclass(frozen=True)
+class ExampleRecord:
+    label: str
+    source: str
+    header_source: str
+    contextual_source: str
+    heading_path: tuple[str, ...]
+    preceding_prose: str
+
+
+def normalize_whitespace(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def split_markdown_blocks(text: str) -> list[MarkdownBlock]:
+    lines = text.splitlines()
+    headings: list[tuple[int, int, str, tuple[str, ...]]] = []
+    stack: list[tuple[int, str]] = []
+
+    for index, line in enumerate(lines):
+        match = assembler.MARKDOWN_HEADING_RE.match(line)
+        if not match:
+            continue
+        level = len(match.group(1))
+        title = match.group(2).strip()
+        while stack and stack[-1][0] >= level:
+            stack.pop()
+        parent_titles = tuple(title_text for _, title_text in stack)
+        headings.append((index, level, title, parent_titles))
+        stack.append((level, title))
+
+    blocks: list[MarkdownBlock] = []
+    for idx, (start_line, level, title, parent_titles) in enumerate(headings):
+        end_line = headings[idx + 1][0] if idx + 1 < len(headings) else len(lines)
+        content = "\n".join(lines[start_line + 1 : end_line]).strip("\n")
+        blocks.append(
+            MarkdownBlock(
+                level=level,
+                title=title,
+                parent_titles=parent_titles,
+                content=content,
+                start_line=start_line + 1,
+            )
+        )
+    return blocks
+
+
+def split_tex_blocks(tex: str) -> list[TexBlock]:
+    command_to_level = {"section": 1, "subsection": 2, "subsubsection": 3}
+    matches = list(re.finditer(r"\\(section|subsection|subsubsection)\{([^}]+)\}", tex))
+    blocks: list[TexBlock] = []
+    stack: list[tuple[int, str]] = []
+
+    for index, match in enumerate(matches):
+        level = command_to_level[match.group(1)]
+        title = match.group(2)
+        while stack and stack[-1][0] >= level:
+            stack.pop()
+        parent_titles = tuple(text for _, text in stack)
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(tex)
+        blocks.append(
+            TexBlock(
+                level=level,
+                title=title,
+                parent_titles=parent_titles,
+                content=tex[match.end() : end].strip(),
+            )
+        )
+        stack.append((level, title))
+    return blocks
+
+
+def markdown_block_has_substance(block: MarkdownBlock) -> bool:
+    for raw_line in block.content.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        if line.startswith("*Source slice:"):
+            continue
+        if line.startswith("(@ex:") or line.startswith("|") or line.startswith(">"):
+            return True
+        if re.search(r"[A-Za-z]", line):
+            return True
+    return False
+
+
+def tex_block_has_substance(block: TexBlock) -> bool:
+    content = block.content
+    if not content:
+        return False
+    if any(marker in content for marker in (r"\begin{exe}", r"\begin{longtable}", "Deferred and boundary material")):
+        return True
+    stripped = re.sub(r"\\(?:label|hypertarget|protect|phantomsection)\{[^}]*\}", "", content)
+    stripped = re.sub(r"\\(?:[A-Za-z@]+)(?:\[[^\]]*\])?(?:\{[^{}]*\})?", "", stripped)
+    return bool(re.search(r"[A-Za-z0-9]", stripped))
+
+
+def extract_pdf_text(pdf_path: Path) -> str:
+    if not pdf_path.exists():
+        return ""
+    with tempfile.NamedTemporaryFile(suffix=".txt") as handle:
+        result = subprocess.run(["pdftotext", str(pdf_path), handle.name], capture_output=True, text=True)
+        if result.returncode != 0:
+            raise RuntimeError(f"pdftotext failed for {pdf_path}:\n{result.stderr}")
+        return Path(handle.name).read_text(encoding="utf-8", errors="replace")
+
+
+def tex_body(tex: str) -> str:
+    marker = r"\section{" + FIRST_CHAPTER_TITLE + "}"
+    if marker in tex:
+        return tex.split(marker, 1)[1]
+    return tex
+
+
+def pdf_body(pdf_text: str) -> str:
+    match = re.search(rf"\n1\s+{re.escape(FIRST_CHAPTER_TITLE)}\b", pdf_text)
+    if match:
+        return pdf_text[match.start() :]
+    return pdf_text
+
+
+def collect_example_records(markdown_text: str, bible: dict[str, str]) -> list[ExampleRecord]:
+    lines = markdown_text.splitlines()
+    records: list[ExampleRecord] = []
+    stack: list[tuple[int, str]] = []
+    index = 0
+
+    while index < len(lines):
+        line = lines[index]
+        heading_match = assembler.MARKDOWN_HEADING_RE.match(line)
+        if heading_match:
+            level = len(heading_match.group(1))
+            title = heading_match.group(2).strip()
+            while stack and stack[-1][0] >= level:
+                stack.pop()
+            stack.append((level, title))
+            index += 1
+            continue
+
+        parsed_example, next_index = assembler.parse_example_at(lines, index)
+        if parsed_example:
+            contextual_source = assembler.find_contextual_example_source(lines, index)
+            example_for_resolution = parsed_example
+            if contextual_source and not parsed_example.source:
+                example_for_resolution = assembler.ParsedExample(
+                    label=parsed_example.label,
+                    source=contextual_source,
+                    tedim=parsed_example.tedim,
+                    segmentation=parsed_example.segmentation,
+                    gloss=parsed_example.gloss,
+                    translation=parsed_example.translation,
+                )
+            records.append(
+                ExampleRecord(
+                    label=parsed_example.label,
+                    source=assembler.resolve_example_source(example_for_resolution, bible),
+                    header_source=parsed_example.source,
+                    contextual_source=contextual_source,
+                    heading_path=tuple(title for _, title in stack),
+                    preceding_prose=assembler.extract_preceding_prose(lines, index),
+                )
+            )
+            index = next_index
+            continue
+
+        index += 1
+
+    return records
+
+
+def parse_tex_examples(tex: str) -> dict[str, str]:
+    examples: dict[str, str] = {}
+    for match in re.finditer(r"\\begin\{exe\}(.*?)\\end\{exe\}", tex, re.DOTALL):
+        block = match.group(1)
+        label_match = re.search(r"\\ex\s+\\label\{([^}]+)\}", block)
+        glt_match = re.search(r"\\glt\s+(.+)", block)
+        if label_match and glt_match:
+            examples[label_match.group(1)] = glt_match.group(1).strip()
+    return examples
+
+
+def strip_examples_and_tables(markdown_block: str) -> str:
+    lines = markdown_block.splitlines()
+    kept: list[str] = []
+    index = 0
+
+    while index < len(lines):
+        parsed_example, next_index = assembler.parse_example_at(lines, index)
+        if parsed_example:
+            index = next_index
+            continue
+        line = lines[index]
+        stripped = line.strip()
+        if stripped.startswith("|") or stripped.startswith(">"):
+            index += 1
+            continue
+        kept.append(line)
+        index += 1
+
+    return "\n".join(kept)
+
+
+def first_prose_occurrence_has_gloss(section_text: str, form: str, allowed_glosses: tuple[str, ...]) -> bool:
+    prose = strip_examples_and_tables(section_text)
+    match = re.search(rf"`{re.escape(form)}`", prose)
+    if not match:
+        return True
+    window = prose[match.end() : match.end() + 120]
+    return any(re.search(rf"['`][^'\n`]*{gloss}[^'\n`]*['`]", window, re.IGNORECASE) for gloss in allowed_glosses)
+
+
+def source_category(reference: str) -> str:
+    for book in NT_BOOKS:
+        if reference.startswith(book + " "):
+            return "NT"
+    return "OT"
+
+
+def subsection_example_count(block: MarkdownBlock) -> int:
+    return len(re.findall(r"^\(@ex:[^)]+\)", block.content, re.MULTILINE))
+
+
+def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]:
+    markdown_path = tex_path.with_suffix(".md")
+    pdf_path = tex_path.with_suffix(".pdf")
+    markdown = markdown_path.read_text(encoding="utf-8")
+    tex = tex_path.read_text(encoding="utf-8")
+    pdf_text = extract_pdf_text(pdf_path)
+    bible = assembler.load_bible(assembler.BIBLE_PATH)
+    markdown_blocks = split_markdown_blocks(markdown)
+    tex_blocks = split_tex_blocks(tex)
+    examples = collect_example_records(markdown, bible)
+    tex_examples = parse_tex_examples(tex)
+    issues: list[str] = []
+
+    body_tex = tex_body(tex).replace(r"\_", "_")
+    body_pdf = pdf_body(pdf_text)
+
+    for pattern, description in TEX_INTERNAL_PATTERNS:
+        match = pattern.search(body_tex)
+        if match:
+            issues.append(f"Internal prose in TeX body ({description}): {match.group(0)!r}")
+    for pattern, description in PDF_INTERNAL_PATTERNS:
+        match = pattern.search(body_pdf)
+        if match:
+            issues.append(f"Internal prose in PDF body ({description}): {match.group(0)!r}")
+
+    for example in examples:
+        if example.label == "review-preview-warning":
+            continue
+        glt_line = tex_examples.get(example.label, "")
+        if example.source and f"({example.source})" not in glt_line:
+            issues.append(f"Example {example.label} is missing its source on the \\glt line: {example.source}")
+        if example.contextual_source and not example.header_source and not example.source:
+            issues.append(
+                f"Example {example.label} has a preceding-prose source but no resolved source: {example.contextual_source}"
+            )
+        if example.contextual_source and not example.header_source and f"({example.contextual_source})" not in glt_line:
+            issues.append(
+                f"Example {example.label} still relies on preceding prose for its source instead of the \\glt line: {example.contextual_source}"
+            )
+
+    section_blocks = {
+        block.title: block
+        for block in markdown_blocks
+        if block.level == 2 and block.title in TARGET_SECTION_TITLES
+    }
+    for block in markdown_blocks:
+        if block.title in TARGET_SECTION_TITLES or (block.parent_titles and block.parent_titles[-1] in TARGET_SECTION_TITLES):
+            if block.level in {2, 3} and not markdown_block_has_substance(block):
+                issues.append(f"Blank Markdown section: {' > '.join((*block.parent_titles, block.title))}")
+
+    for block in tex_blocks:
+        if block.title == "References":
+            continue
+        if block.title in TARGET_SECTION_TITLES or (block.parent_titles and block.parent_titles[-1] in TARGET_SECTION_TITLES):
+            if block.level in {2, 3} and not tex_block_has_substance(block):
+                issues.append(f"Blank TeX section: {' > '.join((*block.parent_titles, block.title))}")
+
+    for section_title, block in section_blocks.items():
+        section_examples = [example for example in examples if section_title in example.heading_path]
+        categories = {source_category(example.source) for example in section_examples if example.source}
+        if categories and categories != {"OT", "NT"}:
+            issues.append(f"Section {section_title} does not yet show both OT and NT example coverage.")
+
+        for form, allowed_glosses in GLOSSARY_REQUIREMENTS.items():
+            if not first_prose_occurrence_has_gloss(block.content, form, allowed_glosses):
+                issues.append(f"Section {section_title} does not gloss the first prose mention of `{form}`.")
+
+    for block in markdown_blocks:
+        if block.level != 3 or not block.parent_titles:
+            continue
+        if block.parent_titles[-1] not in TARGET_SECTION_TITLES:
+            continue
+        if SUBSECTION_IGNORE_RE.search(block.title):
+            continue
+        example_count = subsection_example_count(block)
+        if example_count == 1 and not ONE_EXAMPLE_NOTE_RE.search(block.content):
+            issues.append(
+                f"Subsection {block.parent_titles[-1]} > {block.title} has one formal example without an explicit note."
+            )
+
+    if r"\newcommand{\glossquote}[1]{`#1'}" not in tex:
+        issues.append(r"Missing \glossquote macro in generated TeX.")
+    if any(character in body_tex for character in "‘’“”"):
+        issues.append("Generated TeX still contains smart quotes in the grammar-facing body.")
+    quote_check_text = re.sub(r"\\tdimword\{[^}]*\}|\\tdim\{[^}]*\}|\\glossquote\{[^}]*\}", "", body_tex)
+    quote_check_text = re.sub(r"``[^']+''", "", quote_check_text)
+    if re.search(r"(?<![A-Za-z])'[^'\n{}\\]+'(?![A-Za-z])", quote_check_text):
+        issues.append("Generated TeX still contains raw straight-quoted English glosses.")
+    for preserved in ("pa' inn", "Abraham' suan", "Topa' inn", "na pa' inn-ah"):
+        if preserved not in tex:
+            issues.append(f"Generated TeX no longer preserves Tedim apostrophe material: {preserved}")
+
+    summary = {
+        "pages": next(
+            (
+                line.split(":", 1)[1].strip()
+                for line in subprocess.check_output(["pdfinfo", str(pdf_path)], text=True).splitlines()
+                if line.startswith("Pages:")
+            ),
+            "?",
+        )
+        if pdf_path.exists()
+        else "?",
+        "example_count": len([example for example in examples if example.label != "review-preview-warning"]),
+        "issues": len(issues),
+    }
+    return issues, summary
+
+
+def write_report(report_path: Path, tex_path: Path, issues: list[str], summary: dict[str, object]) -> None:
+    tex_display_path = tex_path.resolve()
+    if tex_display_path.is_relative_to(ROOT):
+        tex_display = tex_display_path.relative_to(ROOT)
+    else:
+        tex_display = tex_path
+    lines = [
+        "# Grammar-facing quality report",
+        "",
+        f"- TeX: `{tex_display}`",
+        f"- Issues: {summary['issues']}",
+        f"- Pages: {summary['pages']}",
+        f"- Formal examples checked: {summary['example_count']}",
+        "",
+    ]
+    if issues:
+        lines.extend(["## Failing checks", ""])
+        lines.extend(f"- {issue}" for issue in issues)
+    else:
+        lines.extend(
+            [
+                "## Result",
+                "",
+                "- All configured grammar-facing quality gates passed.",
+            ]
+        )
+
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("tex_path", type=Path, help="Path to the generated grammar-facing TeX file.")
+    parser.add_argument(
+        "--report",
+        type=Path,
+        default=DEFAULT_REPORT_PATH,
+        help="Write the quality report to this Markdown path.",
+    )
+    args = parser.parse_args()
+
+    issues, summary = gather_quality_issues(args.tex_path)
+    write_report(args.report, args.tex_path, issues, summary)
+    if issues:
+        raise SystemExit(
+            "Grammar-facing PDF quality gate failed:\n- " + "\n- ".join(issues) + f"\n\nReport: {args.report}"
+        )
+    print(f"Grammar-facing PDF quality gate passed. Report: {args.report}")
+
+
+if __name__ == "__main__":
+    main()

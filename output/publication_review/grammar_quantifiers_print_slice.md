@@ -117,6 +117,8 @@ d. Translation: 'many people'
 
 This is where the section can integrate quantity material without broadening uncontrollably. The original packet's `tampi tak` row is still the main quantity/degree anchor, but `mi tampi` gives the normalized section a cleaner noun-phrase example. The printed claim should therefore stay narrow: Tedim clearly allows noun-plus-quantifier or noun-plus-quantity combinations in at least some checked rows, but the present packet does not yet settle a full NP-ordering typology.
 
+No equally good second formal example is repeated here, because this subsection gathers the noun-plus-quantifier evidence already illustrated above rather than restaging each earlier construction.
+
 # Deferred and boundary material
 
 Several quantifier-looking domains still need to stay visibly non-normalized.

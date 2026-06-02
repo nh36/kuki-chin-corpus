@@ -29,6 +29,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 from dataclasses import dataclass
 from pathlib import Path
@@ -171,23 +172,120 @@ CITATION_KEY_RE = re.compile(r"(?<![`\\])@(?!ex:)([A-Za-z0-9_:+.-]+)")
 BIBLIOGRAPHY_KEY_RE = re.compile(r"@\w+\{([^,]+),")
 INLINE_CODE_RE = re.compile(r"`([^`]+)`")
 MARKDOWN_HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
-INLINE_GLOSS_QUOTE_RE = re.compile(r"(?<![A-Za-z])['‘’]([^'\n]+?)['’](?![A-Za-z])")
+INLINE_GLOSS_QUOTE_RE = re.compile(r"(?<![A-Za-z])['‘’]((?:[^'\n]|'[A-Za-z])+?)['’](?![A-Za-z])")
+SCRIPTURE_BOOKS = (
+    "Genesis",
+    "Exodus",
+    "Leviticus",
+    "Numbers",
+    "Deuteronomy",
+    "Joshua",
+    "Judges",
+    "Ruth",
+    "1 Samuel",
+    "2 Samuel",
+    "1 Kings",
+    "2 Kings",
+    "1 Chronicles",
+    "2 Chronicles",
+    "Ezra",
+    "Nehemiah",
+    "Esther",
+    "Job",
+    "Psalms?",
+    "Proverbs",
+    "Ecclesiastes",
+    "Song of Songs",
+    "Isaiah",
+    "Jeremiah",
+    "Lamentations",
+    "Ezekiel",
+    "Daniel",
+    "Hosea",
+    "Joel",
+    "Amos",
+    "Obadiah",
+    "Jonah",
+    "Micah",
+    "Nahum",
+    "Habakkuk",
+    "Zephaniah",
+    "Haggai",
+    "Zechariah",
+    "Malachi",
+    "Matthew",
+    "Mark",
+    "Luke",
+    "John",
+    "Acts",
+    "Romans",
+    "1 Corinthians",
+    "2 Corinthians",
+    "Galatians",
+    "Ephesians",
+    "Philippians",
+    "Colossians",
+    "1 Thessalonians",
+    "2 Thessalonians",
+    "1 Timothy",
+    "2 Timothy",
+    "Titus",
+    "Philemon",
+    "Hebrews",
+    "James",
+    "1 Peter",
+    "2 Peter",
+    "1 John",
+    "2 John",
+    "3 John",
+    "Jude",
+    "Revelation",
+)
+SCRIPTURE_REFERENCE_RE = re.compile(
+    rf"\b(?:{'|'.join(SCRIPTURE_BOOKS)})\s+\d+:\d+\b"
+)
 
 TECHNICAL_PATH_PREFIXES = ("output/", "docs/", "scripts/", "tests/", "data/", "literature/", "bibles/")
 TECHNICAL_FILE_SUFFIXES = (".md", ".py", ".tex", ".pdf", ".tsv", ".bib", ".json", ".txt", ".yaml", ".yml")
 TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", "git", "bibtex", "pdftotext")
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 GRAMMAR_FACING_INTERNAL_SECTION_TITLES = {"Scope", "Editorial scope"}
+GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
+    re.compile(r"\bif the project later wants\b", re.IGNORECASE),
+    re.compile(r"\bthe next (?:editorial )?step\b", re.IGNORECASE),
+    re.compile(r"\bready for human review\b", re.IGNORECASE),
+    re.compile(r"\breview-note work\b", re.IGNORECASE),
+    re.compile(r"\b(?:this|that) commit\b", re.IGNORECASE),
+    re.compile(r"\b(?:tests?/|scripts?/|output/|docs/|bibles/)", re.IGNORECASE),
+)
+GRAMMAR_FACING_SECTION_INTROS = {
+    "NP structure / possession": "This section summarizes the current evidence for noun-phrase order and possession.",
+    "Noun domain": "This section gathers the current grammar-facing evidence for basic noun-domain patterns.",
+    "Case marking": "This section summarizes the current evidence for NP-final case-like marking.",
+    "Numerals": "This section gathers the current grammar-facing evidence for the numeral system.",
+    "Quantifiers": "This section summarizes the current evidence for quantifier patterns.",
+}
+GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"`(?:output/publication_review/)?candidates_[^`]+\.tsv`"), "the checked evidence tables"),
+    (re.compile(r"`(?:output/publication_review/)?dossier_[^`]+\.md`"), "background notes"),
+    (re.compile(r"`(?:output/publication_review/)?review_notes_[^`]+\.md`"), "background notes"),
+    (re.compile(r"`(?:output/publication_review/)?whole_grammar_coverage_audit\.md`"), "the whole-grammar audit"),
+    (re.compile(r"`(?:docs/grammar/(?:reports|lit-reviews)/)[^`]+`"), "background review material"),
+    (re.compile(r"`(?:tests/test_[^`]+|scripts/[^`]+)`"), "the current workflow"),
+    (re.compile(r"`(?:output/publication_review/)?grammar_[^`]+\.md`"), "the present section"),
+]
 GRAMMAR_FACING_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bcurrent packet\b", re.IGNORECASE), "current evidence"),
     (re.compile(r"\bpacket anchors\b", re.IGNORECASE), "main anchors"),
     (re.compile(r"\bpacket anchor\b", re.IGNORECASE), "main anchor"),
     (re.compile(r"\bpacketized\b", re.IGNORECASE), "assembled"),
     (re.compile(r"\bpacket-status\b", re.IGNORECASE), "section"),
+    (re.compile(r"\bpackets\b", re.IGNORECASE), "sections"),
     (re.compile(r"\bpacket\b", re.IGNORECASE), "section"),
     (re.compile(r"\bpublication-review\b", re.IGNORECASE), "review"),
     (re.compile(r"\bnormalized section\b", re.IGNORECASE), "section"),
     (re.compile(r"\bpublication-facing\b", re.IGNORECASE), ""),
+    (re.compile(r"\bcandidate TSV\b", re.IGNORECASE), "evidence table"),
     (re.compile(r"\bcandidate-backed\b", re.IGNORECASE), "checked"),
     (re.compile(r"\bcandidate-controlled\b", re.IGNORECASE), "checked"),
     (re.compile(r"\bcandidate discipline\b", re.IGNORECASE), "careful evidence control"),
@@ -208,9 +306,13 @@ GRAMMAR_FACING_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\bcoverage-normalization\b", re.IGNORECASE), "editorial"),
     (re.compile(r"\bcoverage normalization\b", re.IGNORECASE), "editorial standard"),
     (re.compile(r"\bdossier\b", re.IGNORECASE), "background notes"),
+    (re.compile(r"\breview-note\b", re.IGNORECASE), "background"),
     (re.compile(r"\breview notes\b", re.IGNORECASE), "background notes"),
     (re.compile(r"\bthis pass\b", re.IGNORECASE), "here"),
     (re.compile(r"\bcurrent pass\b", re.IGNORECASE), "current stage"),
+    (re.compile(r"\bready for human review\b", re.IGNORECASE), "keeps the analysis deliberately narrow"),
+    (re.compile(r"\bcontrolling files\b", re.IGNORECASE), "background materials"),
+    (re.compile(r"\bsource files\b", re.IGNORECASE), "background materials"),
 ]
 
 
@@ -275,8 +377,20 @@ def strip_markdown_sections(text: str, titles: set[str]) -> str:
 
 def rewrite_grammar_facing_line(line: str) -> str:
     rewritten = line
+    for pattern, replacement in GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS:
+        rewritten = pattern.sub(replacement, rewritten)
     for pattern, replacement in GRAMMAR_FACING_REPLACEMENTS:
         rewritten = pattern.sub(replacement, rewritten)
+    if not rewritten.strip():
+        return ""
+    if any(pattern.search(rewritten) for pattern in GRAMMAR_FACING_DROP_SENTENCE_PATTERNS):
+        sentences = re.split(r"(?<=[.?!])\s+", rewritten)
+        kept_sentences = [
+            sentence
+            for sentence in sentences
+            if sentence.strip() and not any(pattern.search(sentence) for pattern in GRAMMAR_FACING_DROP_SENTENCE_PATTERNS)
+        ]
+        rewritten = " ".join(kept_sentences)
     rewritten = re.sub(r"\s{2,}", " ", rewritten)
     rewritten = rewritten.replace(" .", ".").replace(" ,", ",").replace(" ;", ";").replace(" :", ":")
     return rewritten.strip() if rewritten.strip() else ""
@@ -358,6 +472,8 @@ def build_markdown(grammar_facing: bool = True) -> str:
         for item in chapter["items"]:
             if item["type"] == "slice":
                 lines.extend([f"## {item['title']}", ""])
+                if grammar_facing and item["title"] in GRAMMAR_FACING_SECTION_INTROS:
+                    lines.extend([GRAMMAR_FACING_SECTION_INTROS[item["title"]], ""])
                 if not grammar_facing:
                     lines.extend([f"*Source slice: `{item['path']}`*", ""])
                 content = read_slice(item["path"], grammar_facing=grammar_facing)
@@ -441,11 +557,11 @@ def parse_example_at(lines: list[str], start: int) -> tuple[ParsedExample | None
     return (
         ParsedExample(
             label=match.group(1).lstrip("@"),
-            source=(match.group(2) or "").strip(),
-            tedim=tedim_match.group(1).strip(),
-            segmentation=segmentation_match.group(1).strip(),
-            gloss=gloss_match.group(1).strip(),
-            translation=translation_match.group(1).strip(),
+            source=normalize_quote_marks((match.group(2) or "").strip()),
+            tedim=normalize_quote_marks(tedim_match.group(1).strip()),
+            segmentation=normalize_quote_marks(segmentation_match.group(1).strip()),
+            gloss=normalize_quote_marks(gloss_match.group(1).strip()),
+            translation=normalize_quote_marks(translation_match.group(1).strip()),
         ),
         start + 5,
     )
@@ -465,6 +581,44 @@ def parse_examples(markdown_text: str) -> list[ParsedExample]:
         index += 1
 
     return examples
+
+
+def extract_preceding_prose(lines: list[str], start: int) -> str:
+    paragraph_lines: list[str] = []
+    index = start - 1
+
+    while index >= 0:
+        raw_line = lines[index]
+        stripped = raw_line.strip()
+        if not stripped:
+            if paragraph_lines:
+                break
+            index -= 1
+            continue
+        if (
+            MARKDOWN_HEADING_RE.match(stripped)
+            or EXAMPLE_HEADER_RE.match(stripped)
+            or stripped.startswith("|")
+            or stripped.startswith(">")
+            or stripped.startswith("```")
+            or stripped.startswith("*Source slice:")
+        ):
+            break
+        paragraph_lines.insert(0, stripped)
+        index -= 1
+
+    return " ".join(paragraph_lines).strip()
+
+
+def find_contextual_example_source(lines: list[str], start: int) -> str:
+    preceding_prose = extract_preceding_prose(lines, start)
+    if not preceding_prose:
+        return ""
+    matches = SCRIPTURE_REFERENCE_RE.findall(preceding_prose)
+    unique_matches = list(dict.fromkeys(matches))
+    if len(unique_matches) == 1:
+        return unique_matches[0]
+    return ""
 
 
 def infer_example_source_from_bible(example: ParsedExample, bible: dict[str, str]) -> str:
@@ -529,7 +683,18 @@ def enrich_example_headers(markdown_text: str, bible: dict[str, str]) -> str:
             continue
 
         if parsed_example.label != "review-preview-warning":
-            resolved_source = resolve_example_source(parsed_example, bible)
+            contextual_source = find_contextual_example_source(lines, index)
+            example_with_context = parsed_example
+            if contextual_source and not parsed_example.source:
+                example_with_context = ParsedExample(
+                    label=parsed_example.label,
+                    source=contextual_source,
+                    tedim=parsed_example.tedim,
+                    segmentation=parsed_example.segmentation,
+                    gloss=parsed_example.gloss,
+                    translation=parsed_example.translation,
+                )
+            resolved_source = resolve_example_source(example_with_context, bible)
             if resolved_source:
                 enriched_lines[index] = f"(@{parsed_example.label}) {resolved_source}"
 
@@ -769,7 +934,7 @@ def transform_markdown_for_latex(markdown_text: str, grammar_facing: bool = True
     in_publication_slice = False
 
     while index < len(lines):
-        line = lines[index]
+        line = normalize_quote_marks(lines[index])
 
         if line.strip() == "---":
             index += 1
@@ -954,6 +1119,13 @@ def compile_pdf(tex_path: Path, pdf_path: Path) -> None:
         raise RuntimeError(f"expected non-empty PDF at {pdf_path}")
 
 
+def run_quality_gate(tex_path: Path) -> None:
+    gate_script = ROOT / "scripts" / "grammar_pdf_quality_gate.py"
+    result = subprocess.run([sys.executable, str(gate_script), str(tex_path)], cwd=ROOT, text=True)
+    if result.returncode != 0:
+        raise SystemExit(result.returncode)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -989,6 +1161,9 @@ def main() -> None:
     if not args.skip_pdf:
         compile_pdf(TEX_OUTPUT, PDF_OUTPUT)
         print(f"Wrote PDF preview: {PDF_OUTPUT}")
+
+    if args.grammar_facing:
+        run_quality_gate(TEX_OUTPUT)
 
 
 if __name__ == "__main__":

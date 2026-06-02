@@ -79,23 +79,23 @@ b. Segmentation: aksi | -te
 c. Gloss: star | PL
 d. Translation: stars
 
-# Human nouns and common nouns
-
-Human noun `mi` is now one of the clearest lexical noun anchors in the nominal domain. It appears as a simple noun stem and as the head of several already-normalized noun phrases, including `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`. Its plural form `mite` is equally secure in the current packet.
-
-This matters for the noun domain because it shows that the normalized NP, numeral, and quantifier sections are reusing genuine noun heads rather than unanalyzed filler forms. The NP structure section remains the right place for broader ordering claims, but the noun domain can now safely say that `mi` and `mite` are stable human common nouns.
-
 (@ex:noun-hih-mite) Exodus 5:5
 a. Tedim: hih mite
 b. Segmentation: hih | mi | -te
 c. Gloss: PROX | person | PL
 d. Translation: these people
 
-# Nouns in larger phrases
+# Human nouns and common nouns
 
-The normalized numerals, quantifiers, and NP structure / possession sections already show that nouns remain visible as heads in larger phrases. In the current noun-domain pass, that point can be stated modestly: noun heads such as `mi`, `ni`, and `kum` stay lexically identifiable inside counted and quantified expressions rather than disappearing into unanalyzed templates.
+Human noun `mi` is now one of the clearest lexical noun anchors in the nominal domain. It appears as a simple noun stem and as the head of several already-normalized noun phrases, including `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`. Its plural form `mite` is equally secure in the current packet.
 
-`mi khempeuh` is the clearest quantified anchor for this purpose, while `ni li` and `kum sawm le nih` show the same thing for counted phrases. The noun-domain claim is therefore limited to lexical headedness; it does not reopen the fuller NP-order or numeral/quantifier analyses.
+This matters for the noun domain because it shows that the normalized NP, numeral, and quantifier sections are reusing genuine noun heads rather than unanalyzed filler forms. The NP structure section remains the right place for broader ordering claims, but the noun domain can now safely say that `mi` and `mite` are stable human common nouns.
+
+(@ex:noun-mi-khat) Genesis 32:24
+a. Tedim: mi khat
+b. Segmentation: mi | khat
+c. Gloss: person | one
+d. Translation: a man / one person
 
 (@ex:noun-mi-khempeuh) Luke 2:1
 a. Tedim: mi khempeuh
@@ -103,17 +103,41 @@ b. Segmentation: mi | khempeuh
 c. Gloss: person | all
 d. Translation: all people
 
+# Nouns in larger phrases
+
+The normalized numerals, quantifiers, and NP structure / possession sections already show that nouns remain visible as heads in larger phrases. In the current noun-domain pass, that point can be stated modestly: noun heads such as `mi`, `ni`, and `kum` stay lexically identifiable inside counted and quantified expressions rather than disappearing into unanalyzed templates.
+
+`Ni li` and `kum sawm le nih` are the clearest counted anchors for this purpose. Together they show that lexical noun heads remain visible inside larger numeral phrases. The noun-domain claim is therefore limited to lexical headedness; it does not reopen the fuller NP-order or numeral/quantifier analyses.
+
+(@ex:noun-ni-li) John 11:39
+a. Tedim: ni li
+b. Segmentation: ni | li
+c. Gloss: day | four
+d. Translation: four days
+
+(@ex:noun-kum-sawm-le-nih) Matthew 9:20
+a. Tedim: kum sawm le nih
+b. Segmentation: kum | sawm | le | nih
+c. Gloss: year | ten | and | two
+d. Translation: twelve years
+
 # Compounds and proper nouns
 
 Compounds and proper nouns are now visible enough for a cautious note, but they remain less normalized than simple stems and plural-marked nouns. The clearest compound-like anchor is `minam`, which is still transparent enough to support a controlled print comment about noun-noun composition. Proper names such as `Abraham` are also clearly nominal, but the current packet is not yet strong enough to generalize over Bible names, place names, or analyzer-noisy multiword name strings.
 
-The current section therefore treats compounds and proper nouns as boundary material with one safe compound example and a more modest proper-name note. `Abraham' suan David` is a useful comparandum, but it does not yet justify a full proper-name subsection or a complete account of name-internal structure.
+The current section therefore treats compounds and proper nouns as boundary material with one safe compound example and one cautious proper-name example. `Abraham' suan David` is a useful comparandum, but it does not yet justify a full proper-name subsection or a complete account of name-internal structure.
 
 (@ex:noun-minam-khat) Genesis 11:6
 a. Tedim: minam khat
 b. Segmentation: mi-nam | khat
 c. Gloss: people.group | one
 d. Translation: one nation
+
+(@ex:noun-abraham-suan-david) Matthew 1:1
+a. Tedim: Abraham' suan David
+b. Segmentation: Abraham' | suan | David
+c. Gloss: Abraham.GEN | descendant | David
+d. Translation: David, descendant of Abraham
 
 # Nominalization boundary
 

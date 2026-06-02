@@ -1,18 +1,30 @@
 from __future__ import annotations
 
+from functools import lru_cache
 from pathlib import Path
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 
 import pytest
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import assemble_publication_review_preview as assembler
+import grammar_pdf_quality_gate as gate
+
+from restore_tone import load_tone_dictionary
+
+
 PREVIEW_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.md"
 TEX_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.tex"
 PDF_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.pdf"
+QUALITY_REPORT_PATH = ROOT / "output/publication_review/grammar_facing_quality_report.md"
+BIBLE_PATH = ROOT / "bibles" / "extracted" / "ctd" / "ctd-x-bible.txt"
 
 
 def _text() -> str:
@@ -23,6 +35,7 @@ def _tex_text() -> str:
     return TEX_PATH.read_text(encoding="utf-8")
 
 
+@lru_cache(maxsize=1)
 def _pdf_text() -> str:
     pdftotext = shutil.which("pdftotext")
     if pdftotext:
@@ -45,86 +58,175 @@ def _pdf_text() -> str:
     return "\n".join(page.extract_text() or "" for page in reader.pages)
 
 
-def _normalize(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip()
+@lru_cache(maxsize=1)
+def _quality_result() -> tuple[list[str], dict[str, object]]:
+    return gate.gather_quality_issues(TEX_PATH)
 
 
-def _normalized_domain_only(text: str) -> str:
-    return text.split("# 3. Predicate structure and verbal morphology", 1)[0]
+@lru_cache(maxsize=1)
+def _section_blocks() -> dict[str, gate.MarkdownBlock]:
+    return {
+        block.title: block
+        for block in gate.split_markdown_blocks(_text())
+        if block.level == 2 and block.title in gate.TARGET_SECTION_TITLES
+    }
 
 
-def _normalized_domain_only_pdf(text: str) -> str:
-    parts = re.split(r"\b3\s+Predicate structure and verbal morphology\b", text, maxsplit=1, flags=re.IGNORECASE)
-    return parts[0]
+@lru_cache(maxsize=1)
+def _tone_dict() -> dict[str, list[dict[str, str]]]:
+    return load_tone_dictionary()
 
 
-def test_grammar_facing_output_suppresses_internal_scope_and_workflow_terms() -> None:
-    text = _normalized_domain_only(_text()).lower()
-    tex = _tex_text().lower()
-    pdf = _normalized_domain_only_pdf(_pdf_text()).lower()
-
-    for forbidden in (
-        "\n# scope\n",
-        "editorial scope",
-        "candidate tsv",
-        "dossier",
-        "review notes",
-        "print slice",
-        "publication-review",
-        "coverage normalization",
-        "packet maturity",
-    ):
-        assert forbidden not in text
-        assert forbidden not in pdf
-
-    assert "\\section*{scope}" not in tex
+def _section_text(title: str) -> str:
+    lines = _text().splitlines()
+    blocks = gate.split_markdown_blocks(_text())
+    for index, block in enumerate(blocks):
+        if block.level == 2 and block.title == title:
+            end_line = len(lines)
+            for later in blocks[index + 1 :]:
+                if later.level <= 2:
+                    end_line = later.start_line - 1
+                    break
+            return "\n".join(lines[block.start_line - 1 : end_line])
+    raise AssertionError(f"Missing section: {title}")
 
 
-def test_grammar_facing_output_uses_numbered_sections_and_subsections() -> None:
+def test_grammar_facing_quality_gate_passes_cleanly() -> None:
+    issues, summary = _quality_result()
+    report = QUALITY_REPORT_PATH.read_text(encoding="utf-8")
+
+    assert issues == []
+    assert summary["issues"] == 0
+    assert "- All configured grammar-facing quality gates passed." in report
+    assert f"- Pages: {summary['pages']}" in report
+
+
+def test_grammar_facing_target_sections_are_not_blank_in_markdown_or_tex() -> None:
+    markdown_blocks = gate.split_markdown_blocks(_text())
+    tex_blocks = gate.split_tex_blocks(_tex_text())
+
+    for block in markdown_blocks:
+        if block.level in {2, 3} and (
+            block.title in gate.TARGET_SECTION_TITLES
+            or (block.parent_titles and block.parent_titles[-1] in gate.TARGET_SECTION_TITLES)
+        ):
+            assert gate.markdown_block_has_substance(
+                block
+            ), f"Blank Markdown section: {' > '.join((*block.parent_titles, block.title))}"
+
+    for block in tex_blocks:
+        if block.level in {2, 3} and block.title != "References" and (
+            block.title in gate.TARGET_SECTION_TITLES
+            or (block.parent_titles and block.parent_titles[-1] in gate.TARGET_SECTION_TITLES)
+        ):
+            assert gate.tex_block_has_substance(
+                block
+            ), f"Blank TeX section: {' > '.join((*block.parent_titles, block.title))}"
+
+
+def test_grammar_facing_body_suppresses_internal_workflow_terms() -> None:
+    body_tex = gate.tex_body(_tex_text()).replace(r"\_", "_")
+    body_pdf = gate.pdf_body(_pdf_text())
+
+    for pattern, description in gate.TEX_INTERNAL_PATTERNS:
+        assert not pattern.search(body_tex), f"Internal prose in TeX body ({description})"
+    for pattern, description in gate.PDF_INTERNAL_PATTERNS:
+        assert not pattern.search(body_pdf), f"Internal prose in PDF body ({description})"
+
+
+def test_grammar_facing_examples_keep_sources_after_glt() -> None:
+    bible = assembler.load_bible(BIBLE_PATH)
+    tex_examples = gate.parse_tex_examples(_tex_text())
+
+    missing = []
+    for example in gate.collect_example_records(_text(), bible):
+        if example.label == "review-preview-warning":
+            continue
+        glt_line = tex_examples.get(example.label, "")
+        if example.source and f"({example.source})" not in glt_line:
+            missing.append(f"{example.label}: {example.source}")
+
+    assert not missing, f"Missing source references after translation: {missing}"
+
+
+def test_grammar_facing_contextual_source_is_attached_before_tex_generation() -> None:
+    markdown = """
+## Numerals
+
+In Ezra 2:23, the numeral appears in a simple counting clause.
+
+(@ex:quality-gate-ezra)
+a. Tedim: Anathoth mite, zakhat sawmnih-le-giat.
+b. Segmentation: Anathoth mite za-khat sawm-nih le giat
+c. Gloss: Anathoth people hundred-one ten-two and eight
+d. Translation: The people of Anathoth were one hundred twenty-eight.
+""".strip()
+
+    bible = assembler.load_bible(BIBLE_PATH)
+    enriched = assembler.enrich_example_headers(markdown, bible)
+    example = assembler.parse_examples(enriched)[0]
+    latex = assembler.example_to_latex_block(example, bible, _tone_dict())
+
+    assert "(@ex:quality-gate-ezra) Ezra 2:23" in enriched
+    assert assembler.resolve_example_source(example, bible) == "Ezra 2:23"
+    assert r"\glt \glossquote{The people of Anathoth were one hundred twenty-eight.} (Ezra 2:23)" in latex
+
+
+def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> None:
+    expectations = {
+        "Numerals": ("khat", "nih", "sawm", "kua"),
+        "Quantifiers": ("khempeuh", "pawlkhat", "kuamah", "bangmah", "tampi"),
+        "NP structure / possession": ("hih", "mi", "mite", "ni", "kum"),
+        "Noun domain": ("gam", "aksi", "aksi-te", "mi", "mite"),
+        "Case marking": ("-ah", "-in", "-pan", "-tawh"),
+    }
+
+    for section_title, forms in expectations.items():
+        block = _section_blocks()[section_title]
+        for form in forms:
+            assert gate.first_prose_occurrence_has_gloss(
+                block.content, form, gate.GLOSSARY_REQUIREMENTS[form]
+            ), f"{section_title} does not gloss the first prose mention of {form!r}"
+
+
+def test_grammar_facing_quote_handling_is_clean_and_tedim_apostrophes_survive() -> None:
     tex = _tex_text()
-    pdf = _pdf_text()
-    tex_normalized = _normalize(tex)
-
-    assert r"\section{Phonology and tone}" in tex
-    assert r"\section{Deixis, pronouns, and nominal" in tex
-    assert r"\subsection{NP structure / possession}" in tex
-    assert r"\subsection{Numerals}" in tex
-    assert "Deixis, pronouns, and nominal domain" in tex_normalized
-    assert re.search(r"\n2\s+Deixis, pronouns, and nominal domain", pdf)
-    assert re.search(r"\n2\.\d+\s+NP structure / possession", pdf)
-
-
-def test_grammar_facing_output_glosses_key_inline_tedim_forms() -> None:
-    tex = _normalize(_tex_text())
-
-    for required in (
-        r"\tdim{gam} \glossquote{land / country}",
-        r"\tdim{aksi} \glossquote{star}",
-        r"\tdim{mi} \glossquote{person}",
-        r"\tdim{mite} \glossquote{people}",
-        r"\tdim{sawm} \glossquote{ten}",
-        r"\tdim{khempeuh} \glossquote{all}",
-        r"\tdim{hih} \glossquote{this}",
-    ):
-        assert required in tex
-
-
-def test_grammar_facing_output_fixes_quote_handling_and_preserves_tedim_apostrophes() -> None:
-    tex = _tex_text()
+    body_tex = gate.tex_body(tex)
+    quote_check_text = re.sub(r"\\tdimword\{[^}]*\}|\\tdim\{[^}]*\}|\\glossquote\{[^}]*\}", "", body_tex)
+    quote_check_text = re.sub(r"``[^']+''", "", quote_check_text)
 
     assert r"\newcommand{\glossquote}[1]{`#1'}" in tex
-    assert r"\glt \glossquote{This is the book of the generations of Adam.} (Genesis 5:1)" in tex
-    assert r"\glt '" not in tex
-    assert r"\tdim{na pa' inn-ah}" in tex
-    assert r"\tdim{Abraham' suan David}" in tex
-    assert r"\tdim{Topa' inn}" in tex
+    assert not any(character in body_tex for character in "‘’“”")
+    assert not re.search(r"(?<![A-Za-z])'[^'\n{}\\]+'(?![A-Za-z])", quote_check_text)
+    for preserved in ("pa' inn", "Abraham' suan", "Topa' inn", "na pa' inn-ah"):
+        assert preserved in tex
 
 
-def test_grammar_facing_output_keeps_deferred_notes_visible_without_candidate_row_language() -> None:
-    text = _text().lower()
-    pdf = _pdf_text().lower()
+def test_grammar_facing_one_example_subsections_have_visible_explanations() -> None:
+    offenders = []
+    for block in gate.split_markdown_blocks(_text()):
+        if block.level != 3 or not block.parent_titles:
+            continue
+        if block.parent_titles[-1] not in gate.TARGET_SECTION_TITLES:
+            continue
+        if gate.SUBSECTION_IGNORE_RE.search(block.title):
+            continue
+        if gate.subsection_example_count(block) == 1 and not gate.ONE_EXAMPLE_NOTE_RE.search(block.content):
+            offenders.append(f"{block.parent_titles[-1]} > {block.title}")
 
-    assert "deferred and boundary material" in text
-    assert "deferred and boundary material" in pdf
-    assert "candidate row" not in text
-    assert "candidate row" not in pdf
+    assert not offenders, f"One-example subsections need an explicit grammar-facing note: {offenders}"
+
+
+def test_grammar_facing_normalized_sections_keep_tables_examples_and_caveats() -> None:
+    text = _text()
+    tex = _tex_text()
+
+    for section_title in gate.TARGET_SECTION_TITLES:
+        section_text = _section_text(section_title)
+        assert "|" in section_text, f"{section_title} lost its visible table"
+        assert "(@ex:" in section_text, f"{section_title} lost its formal examples"
+
+    assert "Deferred and boundary material" in text
+    assert "deferred" in tex.lower()
+    assert "boundary material" in tex.lower()
+    assert "candidate row" not in text.lower()

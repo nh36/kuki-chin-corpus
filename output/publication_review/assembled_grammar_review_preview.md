@@ -246,6 +246,8 @@ This slice now supports a real draft chapter on pronouns and pronominal marking.
 
 ## NP structure / possession
 
+This section summarizes the current evidence for noun-phrase order and possession.
+
 ### Overview of noun phrase structure
 
 The clearest current evidence supports a small but coherent set of NP-order observations. Demonstrative-related material is safest where a proximal form precedes the noun, as in `hih mite` 'these people', with `hih` 'this' introducing the phrase. Numerals and several quantifier-like forms follow the noun in the cleanest current examples, as seen in `mi khat` 'one person / a person', `ni li` 'four days', `mi khempeuh` 'all people', `mi pawlkhat` 'some people', and `mi tampi` 'many people'. The present section therefore supports a modest contrast between demonstrative-before-noun structure and noun-plus-postnominal numeral or quantifier structure, while leaving broader NP templating for later review.
@@ -280,6 +282,8 @@ d. Translation: 'these people'
 
 Matthew 6:2 gives a Gospel comparandum in `a hih mite`, but that row is embedded in a larger relative-like phrase and is therefore less clean as a simple adnominal demonstrative anchor. For present purposes, the OT phrase above remains the better controlled example.
 
+No equally clean Gospel demonstrative example is currently used here, so the subsection stays with the compact OT anchor while the embedded Gospel comparandum remains only a supporting note.
+
 ### Numerals and nouns
 
 The normalized numerals section already carries the fuller description of the numeral system, including compound tens and larger-number expressions. The current NP section uses numeral material only to support noun-plus-numeral order: the cleanest checked rows place the noun before the numeral rather than the numeral before the noun.
@@ -290,7 +294,13 @@ b. Segmentation: ni | li
 c. Gloss: day | four
 d. Translation: 'four days'
 
-This pattern is also visible in `kum nih` and `kum sawm le nih`, so the NP claim is not tied to a single lexical head. At the same time, `mi khat` remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
+(@ex:np-kum-sawm-le-nih) Matthew 9:20
+a. Tedim: kum sawm le nih
+b. Segmentation: kum | sawm | le | nih
+c. Gloss: year | ten | and | two
+d. Translation: 'twelve years'
+
+These rows show that the pattern is not tied to a single lexical head. `Ni li` and `kum sawm le nih` both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
 
 ### Quantifiers and nouns
 
@@ -302,7 +312,13 @@ b. Segmentation: mi | khem-peuh
 c. Gloss: person | all
 d. Translation: 'all people'
 
-`mi pawlkhat` (Matthew 2:1) and `mi tampi` (Mark 6:34) support the same general noun-plus-quantifier profile, although each keeps its own semantic caveats from the normalized quantifiers section. The current section therefore uses them as modest NP-order evidence rather than as a reopened quantifier chapter.
+(@ex:np-mi-pawlkhat) Matthew 2:1
+a. Tedim: mi pawlkhat
+b. Segmentation: mi | pawl-khat
+c. Gloss: person | group-one
+d. Translation: 'some people'
+
+`Mi pawlkhat` and `mi tampi` (Mark 6:34) support the same general noun-plus-quantifier profile, although each keeps its own semantic caveats from the normalized quantifiers section. The current section therefore uses them as modest NP-order evidence rather than as a reopened quantifier chapter.
 
 ### Possession
 
@@ -342,6 +358,8 @@ Several important possession and NP topics remain explicitly deferred.
 The NP structure / possession section can now support a modest description of noun phrase order: the cleanest current evidence points to demonstrative-before-noun structure alongside noun-plus-postnominal numeral and quantifier patterns. Possession is now visible enough to include with formal examples, but it remains a cautious subsection whose broader paradigm, marking analysis, and interface with pronouns, genitive structure, and relators are still explicitly deferred.
 
 ## Noun domain
+
+This section gathers the current grammar-facing evidence for basic noun-domain patterns.
 
 ### Overview of the noun domain
 
@@ -395,23 +413,23 @@ b. Segmentation: aksi | -te
 c. Gloss: star | PL
 d. Translation: stars
 
-### Human nouns and common nouns
-
-Human noun `mi` is now one of the clearest lexical noun anchors in the nominal domain. It appears as a simple noun stem and as the head of several already-normalized noun phrases, including `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`. Its plural form `mite` is equally secure in the current evidence.
-
-This matters for the noun domain because it shows that the normalized NP, numeral, and quantifier sections are reusing genuine noun heads rather than unanalyzed filler forms. The NP structure section remains the right place for broader ordering claims, but the noun domain can now safely say that `mi` and `mite` are stable human common nouns.
-
 (@ex:noun-hih-mite) Exodus 5:5
 a. Tedim: hih mite
 b. Segmentation: hih | mi | -te
 c. Gloss: PROX | person | PL
 d. Translation: these people
 
-### Nouns in larger phrases
+### Human nouns and common nouns
 
-The normalized numerals, quantifiers, and NP structure / possession sections already show that nouns remain visible as heads in larger phrases. In the current noun-domain pass, that point can be stated modestly: noun heads such as `mi`, `ni`, and `kum` stay lexically identifiable inside counted and quantified expressions rather than disappearing into unanalyzed templates.
+Human noun `mi` is now one of the clearest lexical noun anchors in the nominal domain. It appears as a simple noun stem and as the head of several already-normalized noun phrases, including `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`. Its plural form `mite` is equally secure in the current evidence.
 
-`mi khempeuh` is the clearest quantified anchor for this purpose, while `ni li` and `kum sawm le nih` show the same thing for counted phrases. The noun-domain claim is therefore limited to lexical headedness; it does not reopen the fuller NP-order or numeral/quantifier analyses.
+This matters for the noun domain because it shows that the normalized NP, numeral, and quantifier sections are reusing genuine noun heads rather than unanalyzed filler forms. The NP structure section remains the right place for broader ordering claims, but the noun domain can now safely say that `mi` and `mite` are stable human common nouns.
+
+(@ex:noun-mi-khat) Genesis 32:24
+a. Tedim: mi khat
+b. Segmentation: mi | khat
+c. Gloss: person | one
+d. Translation: a man / one person
 
 (@ex:noun-mi-khempeuh) Luke 2:1
 a. Tedim: mi khempeuh
@@ -419,17 +437,41 @@ b. Segmentation: mi | khempeuh
 c. Gloss: person | all
 d. Translation: all people
 
+### Nouns in larger phrases
+
+The normalized numerals, quantifiers, and NP structure / possession sections already show that nouns remain visible as heads in larger phrases. In the current noun-domain pass, that point can be stated modestly: noun heads such as `mi`, `ni`, and `kum` stay lexically identifiable inside counted and quantified expressions rather than disappearing into unanalyzed templates.
+
+`Ni li` and `kum sawm le nih` are the clearest counted anchors for this purpose. Together they show that lexical noun heads remain visible inside larger numeral phrases. The noun-domain claim is therefore limited to lexical headedness; it does not reopen the fuller NP-order or numeral/quantifier analyses.
+
+(@ex:noun-ni-li) John 11:39
+a. Tedim: ni li
+b. Segmentation: ni | li
+c. Gloss: day | four
+d. Translation: four days
+
+(@ex:noun-kum-sawm-le-nih) Matthew 9:20
+a. Tedim: kum sawm le nih
+b. Segmentation: kum | sawm | le | nih
+c. Gloss: year | ten | and | two
+d. Translation: twelve years
+
 ### Compounds and proper nouns
 
 Compounds and proper nouns are now visible enough for a cautious note, but they remain less normalized than simple stems and plural-marked nouns. The clearest compound-like anchor is `minam`, which is still transparent enough to support a controlled print comment about noun-noun composition. Proper names such as `Abraham` are also clearly nominal, but the current evidence is not yet strong enough to generalize over Bible names, place names, or analyzer-noisy multiword name strings.
 
-The current section therefore treats compounds and proper nouns as boundary material with one safe compound example and a more modest proper-name note. `Abraham' suan David` is a useful comparandum, but it does not yet justify a full proper-name subsection or a complete account of name-internal structure.
+The current section therefore treats compounds and proper nouns as boundary material with one safe compound example and one cautious proper-name example. `Abraham' suan David` is a useful comparandum, but it does not yet justify a full proper-name subsection or a complete account of name-internal structure.
 
 (@ex:noun-minam-khat) Genesis 11:6
 a. Tedim: minam khat
 b. Segmentation: mi-nam | khat
 c. Gloss: people.group | one
 d. Translation: one nation
+
+(@ex:noun-abraham-suan-david) Matthew 1:1
+a. Tedim: Abraham' suan David
+b. Segmentation: Abraham' | suan | David
+c. Gloss: Abraham.GEN | descendant | David
+d. Translation: David, descendant of Abraham
 
 ### Nominalization boundary
 
@@ -455,9 +497,11 @@ The noun domain can now support a fuller section than the earlier narrow section
 
 ## Case marking
 
+This section summarizes the current evidence for NP-final case-like marking.
+
 ### Overview of case-like marking
 
-The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest claims concern locative or goal-like `-ah` and clause-level agentive or ergative `-in`. The same section also supports more cautious discussion of source marking with `-pan` and `-panin`, plus accompaniment or material-extension uses of `-tawh`, but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
+The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest claims concern locative or goal-like `-ah` 'locative / goal-like' and clause-level agentive or ergative `-in` 'ergative'. The same section also supports more cautious discussion of source marking with `-pan` 'source' and `-panin` 'source / departure', plus accompaniment or material-extension uses of `-tawh` 'with', but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
 
 The safest current prose therefore treats case marking as an NP-final domain rather than as a fully settled paradigm of discrete suffixes. Plain noun-plus-case rows such as `khua-ah` and clause-level agent rows such as `Kain in` are secure enough to print. Relator-hosted forms such as `lakpan` and `David khuapi sungah` are also real, but they should not be collapsed into a bare suffix inventory. Apostrophe-marked possession can host the same NP-final marking, yet the apostrophe itself remains a boundary issue rather than a settled genitive case marker in this section.
 
@@ -521,6 +565,26 @@ The section still retains a small set of other controlled case-like markers, but
 
 This means the section can already mention `-pan`, `-panin`, and `-tawh` in the current inventory, but it should not yet present them as a fully normalized oblique subsystem. For the present pass, they remain controlled supporting material rather than the center of the case-marking chapter.
 
+(@ex:case-panin-inn) Genesis 12:1
+a. Tedim: inn panin
+b. Segmentation: inn | panin
+c. Gloss: house | from
+d. Translation: from the house
+
+(@ex:case-tawh-kei) Genesis 14:24
+a. Tedim: kei tawh
+b. Segmentation: kei | tawh
+c. Gloss: 1SG.PRO | COM
+d. Translation: with me
+
+(@ex:case-tawh-leivui) Genesis 2:7
+a. Tedim: leivui tawh
+b. Segmentation: leivui | tawh
+c. Gloss: dust | COM
+d. Translation: with dust
+
+These rows keep the oblique material concrete. `Inn panin` shows source marking without a relator host, while `kei tawh` and `leivui tawh` show that `-tawh` covers both accompaniment and material-extension uses.
+
 ### Genitive / possessive boundary
 
 The clearest way to discuss genitive or possessive boundary material at present is to show that an already possessed noun phrase can host case-like marking at its right edge. Genesis 24:23 gives the compact row `na pa' inn-ah`, which is already reused in the normalized NP structure / possession section. Here it serves a narrower purpose: it shows that case-like marking closes the larger noun phrase rather than attaching only to a simple underived noun stem.
@@ -532,6 +596,8 @@ c. Gloss: 2SG.POSS | father | house | LOC
 d. Translation: in thy father's house
 
 This is enough to justify a boundary note, but not enough to settle the apostrophe analysis. The present section therefore does not settle whether the apostrophe material should be treated as a genitive suffix, a possessive linker, or an orthographic boundary convention. It only records that possessed noun phrases can participate in the same case-closing pattern that appears elsewhere in the nominal domain. The fuller discussion of possessive structure remains with the normalized NP structure / possession section.
+
+No equally good Gospel possessed NP with case-like closure is currently used here, so the subsection stays with the compact OT example while the wider possession discussion remains elsewhere.
 
 ### Case marking and relators/postpositions
 
@@ -615,9 +681,11 @@ Several items stay outside the first grammar slice as core claims.
 
 ### Recommended next step
 
-With `review_notes_relators_postpositions.md` now added, the section is ready for human review at the current slice maturity level. Later work should remain narrow and case-boundary-controlled rather than broadening into a new case-marking chapter.
+With background notes now added, the section is keeps the analysis deliberately narrow at the current slice maturity level. Later work should remain narrow and case-boundary-controlled rather than broadening into a new case-marking chapter.
 
 ## Numerals
+
+This section gathers the current grammar-facing evidence for the numeral system.
 
 ### Overview of the numeral system
 
@@ -632,7 +700,7 @@ This section therefore includes:
 - ordinals with `-na`, anchored by `nihna`;
 - counting expressions and classifier-like material, but only cautiously;
 - occurrence-counting `sawmvei`;
-- explicit ambiguity controls for `kua` and `khat`;
+- explicit ambiguity controls for numeral-side `kua` 'nine' and boundary `khat` 'one';
 - distributive reduplication only as deferred material.
 
 What it does **not** do is claim that the whole numeral chapter is finished. It does not promote raw generated-report counts as grammar facts, it does not normalize a full classifier system from thin evidence, and it does not import quantifier prose or dubious analyzer output without careful evidence control.
@@ -706,6 +774,8 @@ d. Translation: 'second'
 `Nihna` is the current well-supported ordinal row. The background notes already notes that `pos_span = N` in the export; that is a label caveat, not a reason to reject the ordinal analysis.
 
 `Masa` remains visible but deferred. Gospel material such as Matthew 10:2 confirms that `masa` is a live background form for 'first', but the present section does not yet promote it as the normalized ordinal anchor because the current checked section is still built around `nihna`, not around a full ordinal paradigm or a full contrast between `masa` and `khatna`-type forms.
+
+No equally good Gospel ordinal example is currently used here, so the subsection stays anchored in the compact OT row while the broader ordinal evidence remains backgrounded.
 
 ### Counting phrases and word order
 
@@ -797,6 +867,8 @@ The normalized numerals section now supports a genuine description. Tedim has a 
 At the same time, the section keeps the important boundaries explicit. `Sawmvei` remains tied to its fused-export caveat; the Genesis 5:27 large-number phrase remains usable only with analyzer caveats; `mi khat` remains boundary evidence; `kua` must stay constructionally controlled; and distributive `sagih sagih` remains deferred until the repeated span is genuinely analyzer-backed.
 
 ## Quantifiers
+
+This section summarizes the current evidence for quantifier patterns.
 
 ### Overview of quantification in Tedim
 
@@ -900,6 +972,8 @@ d. Translation: 'many people'
 
 This is where the section can integrate quantity material without broadening uncontrollably. The original section's `tampi tak` row is still the main quantity/degree anchor, but `mi tampi` gives the section a cleaner noun-phrase example. The printed claim should therefore stay narrow: Tedim clearly allows noun-plus-quantifier or noun-plus-quantity combinations in at least some checked rows, but the present section does not yet settle a full NP-ordering typology.
 
+No equally good second formal example is repeated here, because this subsection gathers the noun-plus-quantifier evidence already illustrated above rather than restaging each earlier construction.
+
 ### Deferred and boundary material
 
 Several quantifier-looking domains still need to stay visibly non-normalized.
@@ -958,7 +1032,7 @@ The eventual section will likely need five editorial surfaces:
 
 #### Distribution by syntactic context
 
-The main organizing file for this part of the write-up is `output/publication_review/stem_alternation_syntactic_context_matrix.tsv`. The matrix is for organizing claims and subsection order; the citation shortlist remains the source of quotation candidates. The prose should work through the following contexts in order, using the matrix rather than treating all environments as equivalent evidence.
+The matrix is for organizing claims and subsection order; the citation shortlist remains the source of quotation candidates. The prose should work through the following contexts in order, using the matrix rather than treating all environments as equivalent evidence.
 
 ##### Finite and main-clause uses
 
@@ -1099,12 +1173,12 @@ Representative blocked rows should include:
 
 The final prose should keep the current evidence layers distinct:
 
-- `output/publication_review/stem_alternation_citation_shortlist.tsv` = the **only quotation-safe layer** for printed examples.
-- `output/publication_review/stem_alternation_syntactic_context_matrix.tsv` = the basis for the **context-by-context distributional argument** and for organizing claims by subsection.
-- `output/publication_review/stem_alternation_pair_discussion_plan.tsv` = the basis for the **pair-by-pair discussion order and claims**.
-- `output/publication_review/stem_alternation_lexical_inventory.tsv` = the coverage layer for lexical category, promotion status, blockers, and source basis.
-- `output/publication_review/stem_alternation_promotable_examples.tsv` and `output/publication_review/stem_alternation_manual_promotion_review.tsv` = editorial support files for promotion and example triage.
-- `output/publication_review/stem_alternation_corpus_audit.tsv` = generated local background evidence; useful for checking rows, but not a quotation-safe layer and not a tracked argument table.
+
+
+
+
+
+
 
 #### Writing order for the eventual section
 
@@ -1120,7 +1194,7 @@ That is the architecture this section should now support.
 
 #### Next prose draft
 
-The next commit should create a separate prose draft file rather than overwrite this planning file, probably at `output/publication_review/grammar_stem_alternation_section_draft.md`.
+The next commit should create a separate prose draft file rather than overwrite this planning file, probably at the present section.
 
 That draft should be organized as:
 
@@ -1141,25 +1215,25 @@ A full discussion of verbal paradigms is not yet included in this draft.
 
 The first safe prefix/agreement claim is a routing contrast. Before verbs, the shared pronominal prefix family may be routed as agreement; before nouns, the same family may be routed as possession.
 
-`Kanei` and `kainn` are the core pair for that contrast. `Kanei` keeps the prefix family on a verbal host, while `kainn` keeps it on a nominal host. `tests/test_prefix_agr_poss.py` is the key regression control here, because it explicitly requires verb-side AGR glossing to stay distinct from noun-side POSS glossing.
+`Kanei` and `kainn` are the core pair for that contrast. `Kanei` keeps the prefix family on a verbal host, while `kainn` keeps it on a nominal host. the current workflow is the key regression control here, because it explicitly requires verb-side AGR glossing to stay distinct from noun-side POSS glossing.
 
 That is enough for the first print-facing claim. The slice does not need to resolve every larger prefix question before stating that host type already controls a safe agreement-versus-possession routing contrast in the current checked evidence.
 
 ### Agreement anchor: kanei
 
-`Kanei` is the clearest verbal agreement anchor in the section. The candidate TSV marks it as the main AGR-side row, and `tests/test_prefix_agr_poss.py` protects the glossing as `ka-nei` / `1SG-have`.
+`Kanei` is the clearest verbal agreement anchor in the section. The evidence table marks it as the main AGR-side row, and the current workflow protects the glossing as `ka-nei` / `1SG-have`.
 
 The grammar claim here is deliberately limited. At the current slice maturity level, `kanei` supports only the routing statement that the shared prefix family can surface as verbal agreement before a verb host. This is strong enough for a narrow section, but still smaller than a full agreement chapter or a full prefix paradigm.
 
 ### Possessive anchor: kainn
 
-`Kainn` is the clearest possessive-routing anchor in the section. The candidate TSV marks it as the nominal counterpart to `kanei`, and `tests/test_prefix_agr_poss.py` protects the glossing as `ka-inn` / `1SG.POSS-house`.
+`Kainn` is the clearest possessive-routing anchor in the section. The evidence table marks it as the nominal counterpart to `kanei`, and the current workflow protects the glossing as `ka-inn` / `1SG.POSS-house`.
 
 The grammar claim again stays small. At the current slice maturity level, `kainn` supports the routing statement that the same prefix family can be analyzed as possessive before a noun host. This is enough to justify a first print-facing contrast without pretending that the project already has a full possession chapter or a full possessor-syntax account.
 
 ### Why this is not just pronouns again
 
-The completed pronouns/clusivity section already handles independent pronouns, clusivity, and the broader pronoun paradigm through `output/publication_review/review_notes_pronouns.md`.
+The completed pronouns/clusivity section already handles independent pronouns, clusivity, and the broader pronoun paradigm through background notes.
 
 This slice is doing something narrower. It is about prefix routing across verbal and nominal hosts, not about reopening the independent-pronoun paradigm. That is why `kanei` and `kainn` are better first anchors here than `ipai`, `ko`, `ei`, or any broader person-paradigm table.
 
@@ -1187,15 +1261,13 @@ That claim is deliberately smaller than a full agreement chapter, smaller than a
 
 This section now properly proceeds to prefix/agreement background notes rather than to a dictionary slice, because it is a routing/analysis section rather than a lexical headword section.
 
-If the project later wants one more prefix step after background notes and human review, the next sub-scope should be a separate hong-/kong- object-prefix or inverse candidate expansion rather than a dictionary layer.
-
 ## Transitivity
 
 ### Clean intransitive anchor: sih
 
 `sih` is the clean intransitive anchor for the first slice. The controlled form and gloss/function are `sih / die`.
 
-The claim stays narrow. `output/publication_review/candidates_transitivity.tsv` and `output/publication_review/dossier_transitivity_scope.md` treat `sih` as the safest current intransitive anchor because it is a simple ABS-led event row that does not immediately force derivation/valency, prefix/agreement, or case-marking analysis into the first print-facing claim.
+The claim stays narrow. the checked evidence tables and background notes treat `sih` as the safest current intransitive anchor because it is a simple ABS-led event row that does not immediately force derivation/valency, prefix/agreement, or case-marking analysis into the first print-facing claim.
 
 ### Supporting intransitive row: suak
 
@@ -1207,7 +1279,7 @@ That makes `suak` useful as a second row for the intransitive side of the contra
 
 `hawl` is the clean transitive anchor for the first slice. The controlled form and gloss/function are `hawl / seek`.
 
-The claim here also stays narrow. `hawl` is the safest current transitive anchor because it gives the section a simple transitive event row without leaning on derivation-heavy material such as `piangsak` or stem-family material such as `ngai / ngaih`. The report percentages in `docs/grammar/reports/05-verb-12-transitivity.md` are useful discovery evidence, but they are not treated here as categorical proof.
+The claim here also stays narrow. `hawl` is the safest current transitive anchor because it gives the section a simple transitive event row without leaning on derivation-heavy material such as `piangsak` or stem-family material such as `ngai / ngaih`. The report percentages in background review material are useful discovery evidence, but they are not treated here as categorical proof.
 
 ### Supporting transitive row: en
 
@@ -1219,7 +1291,7 @@ That makes `en` useful as secondary support for the transitive side of the slice
 
 `mu / muh` remains visible boundary evidence for alternation or labile-looking behavior. It matters because it shows that the transitivity report is not exhausted by a clean binary class split.
 
-It stays outside the first print-facing claim, however, because `mu / muh` overlaps directly with Form I / Form II stem alternation. The same caution applies to `za / zak`, `nei / neih`, and `ngai / ngaih`, which remain candidate-layer or boundary material rather than anchors for this commit.
+It stays outside the first print-facing claim, however, because `mu / muh` overlaps directly with Form I / Form II stem alternation.
 
 ### Boundary material
 
@@ -1253,13 +1325,9 @@ Alternation, labile behavior, stem alternation, derivation/valency, prefix/agree
 
 ### Recommended next step
 
-After this grammar slice, the next step should be transitivity background notes rather than a dictionary slice, because this section is grammar-facing and argument-structure-oriented rather than lexical.
-
-If more transitivity work is chosen before background notes, the next sub-scope should be `mu / muh` as a labile or stem-alternation boundary section, but not in this commit.
-
 ## VP structure / suffix stacking
 
-### Baseline: completed single-suffix packets
+### Baseline: completed single-suffix sections
 
 The section starts from two completed single-suffix baselines that are already owned elsewhere.
 
@@ -1267,11 +1335,11 @@ The section starts from two completed single-suffix baselines that are already o
 
 `pokhia` remains the compact V+DIR baseline already owned by the directionals section. It shows that the repository already has a stable post-stem directional anchor, but it should be used here only as baseline evidence rather than widened into a new VP-slot claim.
 
-These baseline rows matter because the first VP slice should not redescribe already-completed packets. Their role here is only to show that compact single-suffix material is already controlled before a multi-suffix claim is added.
+These baseline rows matter because the first VP slice should not redescribe already-completed sections. Their role here is only to show that compact single-suffix material is already controlled before a multi-suffix claim is added.
 
 ### First stacking anchor: aspect plus irrealis
 
-`bawlzoding` is the central first-slice stack. The checked evidence marks it as `print_usable_with_caveat`, and `tests/test_vp_slots.py` already keeps it visible as aspect-plus-modal regression evidence.
+`bawlzoding` is the central first-slice stack. The checked evidence marks it as `print_usable_with_caveat`, and the current workflow already keeps it visible as aspect-plus-modal regression evidence.
 
 The safe print claim is deliberately narrow. `bawlzoding` supports the ordering observation:
 
@@ -1287,11 +1355,11 @@ This is enough for a first grammar slice, but not enough for a full VP slot temp
 
 The rest of the visible stacks remain outside the first core slice because each one is dominated by another section boundary.
 
-`khia-ta` is useful boundary evidence because it shows real TAM/directional overlap, but it is not the first-slice core. The completed TAM and directionals packets already keep this row visible as overlap evidence, and this slice should not reopen either section through that row.
+`khia-ta` is useful boundary evidence because it shows real TAM/directional overlap, but it is not the first-slice core. The completed TAM and directionals sections already keep this row visible as overlap evidence, and this slice should not reopen either section through that row.
 
 `ciahsakkik`, `bawlsakthei`, and `paikhiatsak` are real multi-suffix complexes, but they are derivation/valency-heavy stacks. Once `-sak` and other valency-changing material become central, the next section boundary is derivation/valency rather than narrow VP stacking. These rows therefore stay deferred until the derivation/valency section is explicitly selected.
 
-`khiathei ding om lo` is also real overlap evidence, but it is TAM-negation overlap rather than a clean first VP-stack anchor. The completed negation and TAM packets already control that territory, so it should not be promoted as the model for core VP-stacking prose.
+`khiathei ding om lo` is also real overlap evidence, but it is TAM-negation overlap rather than a clean first VP-stack anchor. The completed negation and TAM sections already control that territory, so it should not be promoted as the model for core VP-stacking prose.
 
 `dingin` remains clause-bound irrealis or subordination material. It is important because it shows how quickly visible verbal stacking can turn into clause-linkage evidence, but it should wait for a subordination section rather than being promoted here as simple VP suffix stacking.
 
@@ -1299,7 +1367,7 @@ The rest of the visible stacks remain outside the first core slice because each 
 
 At the current slice maturity level, the safest VP-structure claim is that Tedim permits at least some multi-suffix verbal complexes in which aspectual material precedes irrealis/modal material, with `bawlzoding` as the clearest current anchor.
 
-That claim stays deliberately smaller than a full slot template. It does not claim that every visible stack in the reports belongs to one solved VP order, and it does not reopen completed TAM, directional, negation, sentence-final, or relator/postposition packets.
+That claim stays deliberately smaller than a full slot template. It does not claim that every visible stack in the reports belongs to one solved VP order, and it does not reopen completed TAM, directional, negation, sentence-final, or relator/postposition sections.
 
 ### Recommended next step
 
@@ -1347,7 +1415,7 @@ These forms stay visible as overlap or deferred controls, but they do not belong
 
 ### Recommended next step
 
-After this grammar slice, the next step is the TAM dictionary section drafted against the same `candidates_tam.tsv` and `dossier_tam_scope.md`; that slice now exists, and review-note work has not yet begun. Broad TAM rewrite work remains out of scope.
+Broad TAM rewrite work remains out of scope.
 
 ## Directionals
 
@@ -1359,7 +1427,7 @@ The current checked section supports a narrow generalization. Directionals are v
 
 Genesis 2:5 supplies the cleanest current outward anchor:
 
-(@ex:dir-khia-pokhia)
+(@ex:dir-khia-pokhia) Genesis 2:5
 a. Tedim: pokhia
 b. Segmentation: po-khia
 c. Gloss: grow-out
@@ -1373,7 +1441,7 @@ That claim must stay narrow. The row does **not** license raw `khia` harvesting 
 
 Deuteronomy 9:4 supplies the current away anchor:
 
-(@ex:dir-khiat-nawhkhiat)
+(@ex:dir-khiat-nawhkhiat) Deuteronomy 9:4
 a. Tedim: nawhkhiat
 b. Segmentation: nawh-khiat
 c. Gloss: hurry-away
@@ -1385,7 +1453,7 @@ Future prose should keep `-khiat` construction-controlled rather than treating e
 
 Exodus 14:13 then keeps nominalized boundary material visible:
 
-(@ex:dir-khiatna-hotkhiatna)
+(@ex:dir-khiatna-hotkhiatna) Exodus 14:13
 a. Tedim: hotkhiatna
 b. Segmentation: hot-khiat-na
 c. Gloss: save-away-NMLZ
@@ -1397,7 +1465,7 @@ d. Translation: 'salvation'
 
 Numbers 9:17 supplies the current upward anchor:
 
-(@ex:dir-toh-kilaktoh)
+(@ex:dir-toh-kilaktoh) Numbers 9:17
 a. Tedim: kilaktoh
 b. Segmentation: ki-lak-toh
 c. Gloss: REFL-take-UP
@@ -1413,7 +1481,7 @@ Blocked control:
 
 Deuteronomy 32:50 also keeps nominalized `-toh-na` material visible:
 
-(@ex:dir-tohna-kahtohna)
+(@ex:dir-tohna-kahtohna) Deuteronomy 32:50
 a. Tedim: kahtohna
 b. Segmentation: kah-toh-na
 c. Gloss: climb-up-NMLZ
@@ -1439,7 +1507,7 @@ This row should not be used to turn every `-lam` form into a simple verbal direc
 
 Ezra 9:9 supplies the current cautious toward row:
 
-(@ex:dir-sawn-piasawn)
+(@ex:dir-sawn-piasawn) Ezra 9:9
 a. Tedim: piasawn
 b. Segmentation: pia-sawn
 c. Gloss: give-toward
@@ -1451,7 +1519,7 @@ d. Translation: 'give us' / 'extend to us'
 
 Genesis 11:5 supplies the first corpus-backed downward row:
 
-(@ex:dir-suk-paisuk)
+(@ex:dir-suk-paisuk) Genesis 11:5
 a. Tedim: paisuk
 b. Segmentation: pai-suk
 c. Gloss: go-DOWN
@@ -1476,21 +1544,21 @@ This slice safely supports seven modest claims: `-khia` is usable as outward evi
 
 What remains deferred is equally important: raw generated-report counts, raw suffix harvesting, `paitoh` as upward `-toh`, nominalized `-na` forms as equivalent to finite directional verbs, `-lut`, `-phei`, `-cip`, and `-tang` as well-supported directionals, and broad TAM or VP-slot prose. Broad TAM, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
 
-The next step after this grammar slice is the dictionary section at `output/publication_review/dictionary_directionals_print_slice.md`. Dictionary and review-note work have not yet begun.
+Dictionary and background work have not yet begun.
 
 ## Derivation / valency
 
 ### Causative `-sak`
 
-`paisak` is the safest causative anchor for the first print-facing derivation / valency claim. The checked evidence marks it as the main future `-sak` causative anchor, and `docs/grammar/reports/05-verb-09-valency.md` already lists it among the common `-sak` forms.
+`paisak` is the safest causative anchor for the first print-facing derivation / valency claim. The checked evidence marks it as the main future `-sak` causative anchor, and background review material already lists it among the common `-sak` forms.
 
-The safe grammar claim is deliberately narrow. The current evidence supports a productive Form I plus `-sak` causative pattern, with `paisak` as the checked row that shows the pattern most cleanly. `tests/test_sak_caus_benf.py` protects that contrast explicitly by requiring `paisak` to gloss as `go-CAUS` rather than as a benefactive or lexicalized exception.
+The safe grammar claim is deliberately narrow. The current evidence supports a productive Form I plus `-sak` causative pattern, with `paisak` as the checked row that shows the pattern most cleanly. the current workflow protects that contrast explicitly by requiring `paisak` to gloss as `go-CAUS` rather than as a benefactive or lexicalized exception.
 
 That is enough for the first core claim. The slice does not need to generalize over every `-sak` form in the reports before saying that a productive causative use is visible.
 
 ### Benefactive / applicative-like `-sak`
 
-`muhsak` is the safest benefactive or applicative-like split row in the current evidence. The checked evidence keeps it distinct from the plain causative line, and `tests/test_sak_caus_benf.py` protects that distinction by requiring Form II plus `-sak` rows to keep the `.II` marker and a `BENF` gloss.
+`muhsak` is the safest benefactive or applicative-like split row in the current evidence. The checked evidence keeps it distinct from the plain causative line, and the current workflow protects that distinction by requiring Form II plus `-sak` rows to keep the `.II` marker and a `BENF` gloss.
 
 The print claim here also stays narrow. The current evidence supports keeping Form II plus `-sak` distinct from the plain causative line in the checked evidence, with `muhsak` as the clearest first-row anchor. The literature and morpheme files justify describing this as benefactive or applicative-like material, but the slice should not pretend that every higher-level label choice is already settled.
 
@@ -1500,7 +1568,7 @@ This is why `muhsak` belongs in the first slice even though it is more caveated 
 
 The grammar can therefore treat the `paisak` versus `muhsak` contrast as a controlled split in the first section. The evidence is strong enough to keep Form I plus `-sak` and Form II plus `-sak` apart in the editorial layer.
 
-At the same time, the slice should keep open the higher-level question of whether this contrast is best described as two readings of one suffix or two editorial subsections of the same suffixal domain. `docs/grammar/lit-reviews/05-verb-09-valency-lit.md` and `docs/grammar/morphemes/06-derivational.md` both support cautious wording here: the split is real enough for careful evidence control, but the final theoretical framing should stay smaller than a full chapter claim.
+At the same time, the slice should keep open the higher-level question of whether this contrast is best described as two readings of one suffix or two editorial subsections of the same suffixal domain.
 
 This first slice therefore adopts a practical editorial solution rather than a maximal theoretical one. It prints the causative and benefactive/applicative-like uses as separate controlled subsections while leaving open whether a later chapter should collapse them back into one suffix with two readings.
 
@@ -1510,9 +1578,9 @@ The rest of the candidate section remains outside the first grammar slice becaus
 
 `paipih` stays outside the first grammar slice because `-pih` still carries applicative, comitative, associative, and benefactive uncertainty. `mipihte` stays outside because it is nominal or lexicalized `pih` boundary material rather than a clean verbal anchor.
 
-`kisep` and `kigen` stay outside because `ki-` still needs a separate reflexive, middle, and passive-like treatment, and because the section must keep prefix/agreement boundary control explicit through `output/publication_review/review_notes_pronouns.md` and `tests/test_prefix_agr_poss.py`.
+`kisep` and `kigen` stay outside because `ki-` still needs a separate reflexive, middle, and passive-like treatment, and because the section must keep prefix/agreement boundary control explicit through background notes and the current workflow.
 
-`ciahsakkik`, `bawlsakthei`, and `paikhiatsak` stay outside because they are derivation-heavy stacks interacting respectively with aspect, modal, and directional material. Those rows remain visible through `output/publication_review/review_notes_vp_structure_stacking.md`, `output/publication_review/review_notes_tam.md`, `output/publication_review/review_notes_directionals.md`, and `tests/test_vp_slots.py`, but they are not the first core derivation anchor.
+`ciahsakkik`, `bawlsakthei`, and `paikhiatsak` stay outside because they are derivation-heavy stacks interacting respectively with aspect, modal, and directional material. Those rows remain visible through background notes, background notes, background notes, and the current workflow, but they are not the first core derivation anchor.
 
 `piangsak` stays outside because it is lexicalized or transitivity-adjacent rather than a clean productive `-sak` anchor.
 
@@ -1524,13 +1592,11 @@ That claim is deliberately smaller than a full derivation chapter, smaller than 
 
 ### Recommended next step
 
-After this grammar slice, the next step should be background notes rather than a dictionary layer, because a dictionary layer would risk overclaiming beyond the current checked evidence before the `-sak` lexical split is reviewed.
-
 ## Nominalization
 
 ### Deverbal nominalization with `-na`
 
-`-na` is the safest current nominalization anchor in the section. The candidate TSV marks it as the main future print-facing row, and the report, source map, and skeleton all converge on it as the primary productive deverbal nominalizer.
+`-na` is the safest current nominalization anchor in the section. The evidence table marks it as the main future print-facing row, and the report, source map, and skeleton all converge on it as the primary productive deverbal nominalizer.
 
 The grammar claim here is deliberately limited. At the current slice maturity level, the safe print-facing row is `bawlna`, with the segmentation `bawl-na` and the controlled gloss `make-NMLZ / making, creation`. That is enough to support a narrow claim for productive deverbal action or result nominalization without broadening into a full nominalization chapter.
 
@@ -1584,13 +1650,11 @@ That claim is deliberately smaller than a full nominalization chapter, smaller t
 
 This section now properly proceeds to nominalization background notes rather than to a dictionary slice, because this is a constructional or morphological section and the lexical treatment of `-pa`, `-mi`, and lexicalized forms remains unsettled.
 
-If the project later wants more nominalization work after background notes, the next sub-scope should be a separate `-pa` or `-mi` agentive candidate expansion rather than a dictionary layer, but not in this commit.
-
 ## Clause linkage
 
 ### Temporal subordination: ciangin
 
-`Ciangin` is the safest current subordination anchor in the section. The candidate TSV marks it as the main future print-facing row, and the reports plus literature review converge on it as the clearest temporal subordinator.
+`Ciangin` is the safest current subordination anchor in the section. The evidence table marks it as the main future print-facing row, and the reports plus literature review converge on it as the clearest temporal subordinator.
 
 The grammar claim here is deliberately limited. At the current slice maturity level, the safe print-facing row is `tua ciangin`, with the segmentation `ciang-in` kept visible where useful. That is enough to support a narrow temporal subordination claim without broadening into a full complex-sentence chapter or a full inventory of all clause-linkage constructions.
 
@@ -1641,8 +1705,6 @@ That claim is deliberately smaller than a full complex-sentence chapter, smaller
 ### Recommended next step
 
 This section now properly proceeds to clause-linkage background notes rather than to a dictionary slice, because it is a constructional or clausal section rather than a lexical-headword section.
-
-If the project later wants one more clause-linkage step before background notes and human review, the next sub-scope should be a separate switch-reference or relative-clause candidate expansion rather than a dictionary layer, but not in this commit.
 
 # 4. Clause type, discourse-facing material, and expressive morphology
 
@@ -1740,13 +1802,13 @@ Because this slice is controlled by the candidate-first section rather than by r
 
 The current checked examples support clause-final `hiam` as the core yes/no pattern represented in this section. The best print anchor is Genesis 24:23, using the attested analyzer-backed clause rather than the older generated-report paraphrase.
 
-(@ex:hiam-yes-no)
+(@ex:hiam-yes-no) Genesis 24:23
 a. Tedim: Na pa inn-ah kote giah nading a awng ding hiam
 b. Segmentation: Na | pa' | inn-ah | kote' | giah | nading | a | awng | ding | hiam
 c. Gloss: 2SG | male.POSS | house-LOC | 1PL.PRO.POSS | camp | PURP | 3SG | open | IRR | Q
 d. Translation: 'Is there room in thy father's house for us to lodge?'
 
-This printed example should replace the older report paraphrase `Inn-ah hong tum theih na hiam`. The background notes is explicit that the exported window for Genesis 24:23 is `Na pa inn-ah kote giah nading a awng ding hiam`, and that attested clause is what the section should use. The candidate TSV also records one export caveat: punctuation is attached to the final token in the raw analyzer window, but that punctuation artifact should not be printed as if it were part of `hiam` itself.
+This printed example should replace the older report paraphrase `Inn-ah hong tum theih na hiam`. The background notes is explicit that the exported window for Genesis 24:23 is `Na pa inn-ah kote giah nading a awng ding hiam`, and that attested clause is what the section should use. The evidence table also records one export caveat: punctuation is attached to the final token in the raw analyzer window, but that punctuation artifact should not be printed as if it were part of `hiam` itself.
 
 ### WH + `hiam` content questions
 
@@ -1760,7 +1822,7 @@ d. Translation: 'What is it?'
 
 Exodus 16:15 is the current print anchor for `bang`. The background notes keeps one export caveat explicit: the analyzer glosses `bang` here as `like`. The clause-level evidence and KJV alignment still support the ordinary what-question reading, so the example remains usable in print with that caveat recorded in the section rather than foregrounded in the example line.
 
-(@ex:hiam-kua)
+(@ex:hiam-kua) Exodus 16:15
 a. Tedim: Hihte kua ahi hiam?
 b. Segmentation: Hihte | kua | ahi | hiam
 c. Gloss: these | who | be.3SG | Q
@@ -1810,7 +1872,7 @@ The current checked section supports a narrow generalization. `Hi` is visible on
 
 Genesis 1:13 supplies the current declarative anchor:
 
-(@ex:sfp-ahi-hi)
+(@ex:sfp-ahi-hi) Genesis 1:13
 a. Tedim: ahi hi
 b. Segmentation: ahi | hi
 c. Gloss: be.3SG | DECL
@@ -1864,7 +1926,7 @@ This keeps singular imperative `in` visible, but only with a serious case-marker
 
 Psalms 100:1 supplies the cleanest current imperative anchor:
 
-(@ex:sfp-un)
+(@ex:sfp-un) Psalms 100:1
 a. Tedim: gingsak un
 b. Segmentation: ging-sak | un
 c. Gloss: sound-CAUS | IMP.PL
@@ -1896,7 +1958,7 @@ This slice safely supports five modest claims: `ahi hi` is usable as copula-plus
 
 What remains deferred is equally important: bare `hi` as a general declarative particle, `hiam` as new sentence-final evidence, `tahen` as a settled jussive, `aw` as a settled exclamative or mood particle, `ta` and `zo` as settled aspectual particles, broad TAM and full mood or aspect chapters, and raw generated-report counts. Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
 
-The next step after this grammar slice is the dictionary section at `output/publication_review/dictionary_sentence_final_particles_print_slice.md`. Dictionary and review-note slices have not yet begun.
+Dictionary and background slices have not yet begun.
 
 ## Coordinators
 
@@ -1908,7 +1970,7 @@ The current checked section supports a narrow generalization. `Le` currently pro
 
 Genesis 1:1 supplies the clean well-supported anchor:
 
-(@ex:coord-le-np)
+(@ex:coord-le-np) Genesis 1:1
 a. Tedim: vantung le leitung
 b. Segmentation: van-tung | le | lei-tung
 c. Gloss: sky-on | and | land-on
@@ -1930,7 +1992,7 @@ d. Translation: 'if thou wilt take the left hand, then I will go to the right'
 
 This row keeps `leh` visible, but not as a clean simple clause-conjunction anchor. The wider English context is conditional, so future coordinator prose must not flatten conditional `leh` into a simple printed "`and`" analysis.
 
-The row also carries an analyzer or export caveat: `kei` is glossed as `NEG` in the selected window even though the wider English context is "I will go." That should be recorded as an export caveat, not used to reopen the pronouns or negation packets.
+The row also carries an analyzer or export caveat: `kei` is glossed as `NEG` in the selected window even though the wider English context is "I will go." That should be recorded as an export caveat, not used to reopen the pronouns or negation sections.
 
 ### Sequential `a` and agreement-`a` false friends
 
@@ -1966,7 +2028,7 @@ Report-only schematic examples such as `mi mawh ganhing mawh` or `pai ding mawh 
 
 Genesis 3:4 supplies the current adversative connector anchor:
 
-(@ex:coord-ahih-hangin)
+(@ex:coord-ahih-hangin) Genesis 3:4
 a. Tedim: Ahih hangin
 b. Segmentation: Ahih | hang-in
 c. Gloss: be.3SG.REL | because-ERG
@@ -1978,7 +2040,7 @@ This row is usable with caveat as the current adversative connector. It remains 
 
 Exodus 12:3 keeps one compact boundary row visible:
 
-(@ex:coord-ahih-kei-leh)
+(@ex:coord-ahih-kei-leh) Exodus 12:3
 a. Tedim: ahih kei leh
 b. Segmentation: ahih | kei | leh
 c. Gloss: be.3SG.REL | NEG | and/if
@@ -2004,7 +2066,7 @@ Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language wo
 
 This slice now safely supports four modest claims: `le` is the current NP conjunction anchor, anchored by `vantung le leitung`; `Ahih hangin` is usable as an adversative connector with caveat; `ahih kei leh` is useful as conditional-adversative boundary evidence with caveat; and `leh`, `a`, plus `mawh` remain visible only as warning, deferred, or boundary material.
 
-What remains deferred is equally important: raw frequency counts, treating every `le`, `leh`, or `a` token as coordinator evidence, simple clause-conjunction `leh`, `mawh` as accepted disjunction, a full sequential-`a` analysis, a fuller temporal or causal subordinator treatment, and sentence-final particles. The next step after this grammar slice is the dictionary section, while dictionary and review-note work have not yet begun.
+What remains deferred is equally important: raw frequency counts, treating every `le`, `leh`, or `a` token as coordinator evidence, simple clause-conjunction `leh`, `mawh` as accepted disjunction, a full sequential-`a` analysis, a fuller temporal or causal subordinator treatment, and sentence-final particles.
 
 ## Reduplication
 
@@ -2058,9 +2120,9 @@ That claim is deliberately smaller than a full derivation chapter, smaller than 
 
 ### Recommended next step
 
-This grammar slice is now paired with `output/publication_review/review_notes_reduplication.md`, so the section is ready for human review at its current full-reduplication-intensifier slice maturity level.
+This grammar slice is now paired with background notes, so the section is keeps the analysis deliberately narrow at its current full-reduplication-intensifier slice maturity level.
 
-The next editorial step should be a whole-grammar coverage checkpoint rather than starting another new section immediately. If more reduplication work is chosen after that checkpoint, the next sub-scope should be distributive `peuhpeuh` or syntactic `ni ni`, not lexicalized-looking or aspect-heavy rows.
+If more reduplication work is chosen after that checkpoint, the next sub-scope should be distributive `peuhpeuh` or syntactic `ni ni`, not lexicalized-looking or aspect-heavy rows.
 
 ## Broader discourse
 

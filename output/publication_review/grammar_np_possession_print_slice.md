@@ -53,6 +53,8 @@ d. Translation: 'these people'
 
 Matthew 6:2 gives a Gospel comparandum in `a hih mite`, but that row is embedded in a larger relative-like phrase and is therefore less clean as a simple adnominal demonstrative anchor. For print purposes, the OT phrase above remains the better controlled example.
 
+No equally clean Gospel demonstrative example is currently used here, so the subsection stays with the compact OT anchor while the embedded Gospel comparandum remains only a supporting note.
+
 # Numerals and nouns
 
 The normalized numerals section already carries the fuller description of the numeral system, including compound tens and larger-number expressions. The current NP section uses numeral material only to support noun-plus-numeral order: the cleanest checked rows place the noun before the numeral rather than the numeral before the noun.
@@ -63,7 +65,13 @@ b. Segmentation: ni | li
 c. Gloss: day | four
 d. Translation: 'four days'
 
-This pattern is also visible in `kum nih` and `kum sawm le nih`, so the NP claim is not tied to a single lexical head. At the same time, `mi khat` remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
+(@ex:np-kum-sawm-le-nih) Matthew 9:20
+a. Tedim: kum sawm le nih
+b. Segmentation: kum | sawm | le | nih
+c. Gloss: year | ten | and | two
+d. Translation: 'twelve years'
+
+These rows show that the pattern is not tied to a single lexical head. `Ni li` and `kum sawm le nih` both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
 
 # Quantifiers and nouns
 
@@ -75,7 +83,13 @@ b. Segmentation: mi | khem-peuh
 c. Gloss: person | all
 d. Translation: 'all people'
 
-`mi pawlkhat` (Matthew 2:1) and `mi tampi` (Mark 6:34) support the same general noun-plus-quantifier profile, although each keeps its own semantic caveats from the normalized quantifiers section. The current section therefore uses them as modest NP-order evidence rather than as a reopened quantifier chapter.
+(@ex:np-mi-pawlkhat) Matthew 2:1
+a. Tedim: mi pawlkhat
+b. Segmentation: mi | pawl-khat
+c. Gloss: person | group-one
+d. Translation: 'some people'
+
+`Mi pawlkhat` and `mi tampi` (Mark 6:34) support the same general noun-plus-quantifier profile, although each keeps its own semantic caveats from the normalized quantifiers section. The current section therefore uses them as modest NP-order evidence rather than as a reopened quantifier chapter.
 
 # Possession
 

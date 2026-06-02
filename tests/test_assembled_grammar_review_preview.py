@@ -26,6 +26,7 @@ from restore_tone import load_tone_dictionary
 PREVIEW_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.md"
 TEX_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.tex"
 PDF_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.pdf"
+QUALITY_REPORT_PATH = ROOT / "output/publication_review/grammar_facing_quality_report.md"
 SCRIPT_PATH = ROOT / "scripts/assemble_publication_review_preview.py"
 BIBLE_PATH = ROOT / "bibles" / "extracted" / "ctd" / "ctd-x-bible.txt"
 
@@ -93,6 +94,14 @@ def test_assembled_grammar_review_preview_exists() -> None:
     assert PREVIEW_PATH.exists(), "Assembled grammar review preview must exist"
 
 
+def test_assembled_preview_quality_report_exists_and_is_clean() -> None:
+    assert QUALITY_REPORT_PATH.exists(), "Grammar-facing quality report must exist"
+    report = QUALITY_REPORT_PATH.read_text(encoding="utf-8")
+
+    assert "- Issues: 0" in report
+    assert "- All configured grammar-facing quality gates passed." in report
+
+
 def test_assembled_preview_is_explicitly_a_review_preview() -> None:
     text = _text()
     lower = text.lower()
@@ -116,8 +125,17 @@ def test_assembled_preview_frontmatter_suppresses_internal_workflow_apparatus() 
         "pdf/build status",
         "known narrow-slice limitations",
         "end state of this preview",
-    ):
+        ):
         assert forbidden not in lower
+
+
+def test_assembler_defaults_to_grammar_facing_mode_and_runs_quality_gate() -> None:
+    script = SCRIPT_PATH.read_text(encoding="utf-8")
+
+    assert 'parser.add_argument(\n        "--grammar-facing",' in script
+    assert "default=True" in script
+    assert 'help="build the grammar-facing review preview (default)"' in script
+    assert "if args.grammar_facing:\n        run_quality_gate(TEX_OUTPUT)" in script
 
 
 def test_assembled_preview_gap_sections_use_grammar_facing_prose() -> None:

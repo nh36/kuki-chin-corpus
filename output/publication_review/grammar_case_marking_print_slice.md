@@ -32,7 +32,7 @@ The normalized NP structure / possession, noun domain, relators / postpositions,
 
 # Overview of case-like marking
 
-The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest publication-facing claims concern locative or goal-like `-ah` and clause-level agentive or ergative `-in`. The same packet also supports more cautious discussion of source marking with `-pan` and `-panin`, plus accompaniment or material-extension uses of `-tawh`, but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
+The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest publication-facing claims concern locative or goal-like `-ah` 'locative / goal-like' and clause-level agentive or ergative `-in` 'ergative'. The same section also supports more cautious discussion of source marking with `-pan` 'source' and `-panin` 'source / departure', plus accompaniment or material-extension uses of `-tawh` 'with', but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
 
 The safest current prose therefore treats case marking as an NP-final domain rather than as a fully settled paradigm of discrete suffixes. Plain noun-plus-case rows such as `khua-ah` and clause-level agent rows such as `Kain in` are secure enough to print. Relator-hosted forms such as `lakpan` and `David khuapi sungah` are also real, but they should not be collapsed into a bare suffix inventory. Apostrophe-marked possession can host the same NP-final marking, yet the apostrophe itself remains a boundary issue rather than a settled genitive case marker in this section.
 
@@ -96,6 +96,26 @@ The packet still retains a small set of other controlled case-like markers, but 
 
 This means the section can already mention `-pan`, `-panin`, and `-tawh` in the current inventory, but it should not yet present them as a fully normalized oblique subsystem. For the present pass, they remain controlled supporting material rather than the center of the case-marking chapter.
 
+(@ex:case-panin-inn) Genesis 12:1
+a. Tedim: inn panin
+b. Segmentation: inn | panin
+c. Gloss: house | from
+d. Translation: from the house
+
+(@ex:case-tawh-kei) Genesis 14:24
+a. Tedim: kei tawh
+b. Segmentation: kei | tawh
+c. Gloss: 1SG.PRO | COM
+d. Translation: with me
+
+(@ex:case-tawh-leivui) Genesis 2:7
+a. Tedim: leivui tawh
+b. Segmentation: leivui | tawh
+c. Gloss: dust | COM
+d. Translation: with dust
+
+These rows keep the oblique material concrete. `Inn panin` shows source marking without a relator host, while `kei tawh` and `leivui tawh` show that `-tawh` covers both accompaniment and material-extension uses.
+
 # Genitive / possessive boundary
 
 The clearest way to discuss genitive or possessive boundary material at present is to show that an already possessed noun phrase can host case-like marking at its right edge. Genesis 24:23 gives the compact row `na pa' inn-ah`, which is already reused in the normalized NP structure / possession section. Here it serves a narrower purpose: it shows that case-like marking closes the larger noun phrase rather than attaching only to a simple underived noun stem.
@@ -107,6 +127,8 @@ c. Gloss: 2SG.POSS | father | house | LOC
 d. Translation: in thy father's house
 
 This is enough to justify a boundary note, but not enough to settle the apostrophe analysis. The present section therefore does not settle whether the apostrophe material should be treated as a genitive suffix, a possessive linker, or an orthographic boundary convention. It only records that possessed noun phrases can participate in the same case-closing pattern that appears elsewhere in the nominal domain. The fuller discussion of possessive structure remains with the normalized NP structure / possession section.
+
+No equally good Gospel possessed NP with case-like closure is currently used here, so the subsection stays with the compact OT example while the wider possession discussion remains elsewhere.
 
 # Case marking and relators/postpositions
 
