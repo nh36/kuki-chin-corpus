@@ -33,7 +33,7 @@ This printed example should replace the older report paraphrase `Inn-ah hong tum
 
 The content-question pattern in the current packet is WH + `hiam`. The safest print-facing claim is therefore not that every WH form behaves identically, but that the present candidate-backed examples show `bang`, `kua`, `bangci`, and `banghangin` in this construction.
 
-(@ex:hiam-bang)
+(@ex:hiam-bang) Exodus 16:15
 a. Tedim: Bang ahi hiam?
 b. Segmentation: Bang | ahi | hiam
 c. Gloss: what | be.3SG | Q

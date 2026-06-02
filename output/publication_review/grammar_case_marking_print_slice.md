@@ -32,11 +32,11 @@ The normalized NP structure / possession, noun domain, relators / postpositions,
 
 # Overview of case-like marking
 
-The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest publication-facing claims concern locative or goal-like `-ah` 'locative / goal-like' and clause-level agentive or ergative `-in` 'ergative'. The same section also supports more cautious discussion of source marking with `-pan` 'source' and `-panin` 'source / departure', plus accompaniment or material-extension uses of `-tawh` 'with', but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
+The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest publication-facing claims concern locative or goal-like `-ah` 'locative / goal-like' and clause-level agentive or ergative `-in` 'ergative / agentive'. The same section also supports more cautious discussion of source marking with `-pan` 'source / ablative' and `-panin` 'source / departure', plus accompaniment or material-extension uses of `-tawh` 'with', but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
 
-The safest current prose therefore treats case marking as an NP-final domain rather than as a fully settled paradigm of discrete suffixes. Plain noun-plus-case rows such as `khua-ah` and clause-level agent rows such as `Kain in` are secure enough to print. Relator-hosted forms such as `lakpan` and `David khuapi sungah` are also real, but they should not be collapsed into a bare suffix inventory. Apostrophe-marked possession can host the same NP-final marking, yet the apostrophe itself remains a boundary issue rather than a settled genitive case marker in this section.
+The safest current prose therefore treats case marking as an NP-final domain rather than as a fully settled paradigm of discrete suffixes. Plain noun-plus-case rows such as `khua-ah` 'in the town' and clause-level agent rows such as `Kain in` 'Cain as agent' are secure enough to print. Relator-hosted forms such as `lakpan` 'from among' and `David khuapi sungah` 'in the city of David' are also real, but they should not be collapsed into a bare suffix inventory. Apostrophe-marked possession can host the same NP-final marking, yet the apostrophe itself remains a boundary issue rather than a settled genitive case marker in this section.
 
-The Gospel search was productive enough to keep the section from becoming OT-only. The current manually reviewed supplement adds usable Gospel support for `Herod in`, `keima inn-ah`, `David khuapi sungah`, and `lakpan`. The possessive-boundary example remains OT-led, because no equally compact Gospel row was as clean under the current control standard.
+The Gospel search was productive enough to keep the section from becoming OT-only. The current manually reviewed supplement adds usable Gospel support for `Herod in` 'Herod as agent', `keima inn-ah` 'into my house', `David khuapi sungah` 'in the city of David', and `lakpan` 'from among'. The possessive-boundary example remains OT-led, because no equally compact Gospel row was as clean under the current control standard.
 
 # Current case-marking inventory
 
@@ -92,7 +92,7 @@ These examples are intentionally compact. They are not meant to reopen the full 
 
 # Other controlled oblique markers
 
-The packet still retains a small set of other controlled case-like markers, but they are best treated more cautiously than `-ah` and `-in`. Source marking with `-pan` and `-panin` is real enough to describe, especially in rows such as `lakpan` and `inn panin`, yet the cleanest `-pan` example is relator-hosted and the internal structure of `-panin` remains under review. Likewise, `-tawh` remains part of the packet because `kei tawh` is a clean accompaniment row and `leivui tawh` shows a material or instrument-like extension, but that semantic split needs to stay explicit.
+The section still retains a small set of other controlled case-like markers, but they are best treated more cautiously than `-ah` and `-in`. Source marking with `-pan` and `-panin` is real enough to describe, especially in rows such as `lakpan` 'from among' and `inn panin` 'from the house', yet the cleanest `-pan` example is relator-hosted and the internal structure of `-panin` remains under review. Likewise, `-tawh` remains part of the section because `kei tawh` 'with me' is a clean accompaniment row and `leivui tawh` 'with dust' shows a material or instrument-like extension, but that semantic split needs to stay explicit.
 
 This means the section can already mention `-pan`, `-panin`, and `-tawh` in the current inventory, but it should not yet present them as a fully normalized oblique subsystem. For the present pass, they remain controlled supporting material rather than the center of the case-marking chapter.
 
@@ -114,11 +114,13 @@ b. Segmentation: leivui | tawh
 c. Gloss: dust | COM
 d. Translation: with dust
 
-These rows keep the oblique material concrete. `Inn panin` shows source marking without a relator host, while `kei tawh` and `leivui tawh` show that `-tawh` covers both accompaniment and material-extension uses.
+These rows keep the oblique material concrete. `Inn panin` 'from the house' shows source marking without a relator host, while `kei tawh` 'with me' and `leivui tawh` 'with dust' show that `-tawh` covers both accompaniment and material-extension uses.
+
+No equally clean Gospel source or accompaniment row is currently used here, so the subsection stays OT-led while the broader oblique inventory remains cautiously delimited.
 
 # Genitive / possessive boundary
 
-The clearest way to discuss genitive or possessive boundary material at present is to show that an already possessed noun phrase can host case-like marking at its right edge. Genesis 24:23 gives the compact row `na pa' inn-ah`, which is already reused in the normalized NP structure / possession section. Here it serves a narrower purpose: it shows that case-like marking closes the larger noun phrase rather than attaching only to a simple underived noun stem.
+The clearest way to discuss genitive or possessive boundary material at present is to show that an already possessed noun phrase can host case-like marking at its right edge. Genesis 24:23 gives the compact row `na pa' inn-ah` 'in your father's house', which is already reused in the normalized NP structure / possession section. Here it serves a narrower purpose: it shows that case-like marking closes the larger noun phrase rather than attaching only to a simple underived noun stem.
 
 (@ex:case-poss-na-pa-inn) Genesis 24:23
 a. Tedim: na pa' inn-ah
@@ -132,7 +134,7 @@ No equally good Gospel possessed NP with case-like closure is currently used her
 
 # Case marking and relators/postpositions
 
-The boundary with relators and postpositions is now one of the main editorial points of the section. Forms such as `sungah`, `tungah`, `kiangah`, and `lakpan` are not noise, but neither are they simple proof that Tedim can be described by a suffix-only case list. The relational host matters: `sung`, `tung`, `kiang`, and `lak` contribute spatial content before locative or source marking is added.
+The boundary with relators and postpositions is now one of the main editorial points of the section. Forms such as `sungah` 'inside / in', `tungah` 'on / upon', `kiangah` 'beside / near', and `lakpan` 'from among' are not noise, but neither are they simple proof that Tedim can be described by a suffix-only case list. The relational host matters: `sung` 'inside', `tung` 'on top', `kiang` 'side / vicinity', and `lak` 'among' contribute spatial content before locative or source marking is added.
 
 (@ex:case-relator-david-khuapi-sungah) Luke 2:11
 a. Tedim: David khuapi sungah
@@ -150,7 +152,7 @@ These rows belong here because they are case-like and NP-final. They also belong
 
 # Case marking and argument structure
 
-The normalized case section can now say one modest thing about argument structure: checked `-in` rows such as `Kain in` and `Herod in` show case-marked noun phrases functioning as clause-level agents, while locative or goal-like rows such as `inn-ah` show noun phrases entering the clause as spatial arguments or adjuncts. That is enough to connect the nominal domain to clause structure without reopening the full alignment or valency chapter.
+The normalized case section can now say one modest thing about argument structure: checked `-in` rows such as `Kain in` 'Cain as agent' and `Herod in` 'Herod as agent' show case-marked noun phrases functioning as clause-level agents, while locative or goal-like rows such as `inn-ah` 'in / into the house' show noun phrases entering the clause as spatial arguments or adjuncts. That is enough to connect the nominal domain to clause structure without reopening the full alignment or valency chapter.
 
 The present section therefore cross-references the transitivity packet rather than replacing it. The transitivity section remains the place for fuller discussion of argument frames, lexical valency, and broader alignment questions. Case marking only contributes the controlled NP-final marking side of that picture here.
 

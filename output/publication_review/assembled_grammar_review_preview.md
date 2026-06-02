@@ -246,7 +246,7 @@ This slice now supports a real draft chapter on pronouns and pronominal marking.
 
 ## NP structure / possession
 
-This section summarizes the current evidence for noun-phrase order and possession.
+The current evidence supports demonstrative-before-noun order alongside noun-plus-postnominal numeral and quantifier patterns, with possession kept as a cautious boundary subsection.
 
 ### Overview of noun phrase structure
 
@@ -300,7 +300,7 @@ b. Segmentation: kum | sawm | le | nih
 c. Gloss: year | ten | and | two
 d. Translation: 'twelve years'
 
-These rows show that the pattern is not tied to a single lexical head. `Ni li` and `kum sawm le nih` both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
+These rows show that the pattern is not tied to a single lexical head. `Ni li` 'four days' and `kum sawm le nih` 'twelve years' both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` 'one person / a person' remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
 
 ### Quantifiers and nouns
 
@@ -359,15 +359,15 @@ The NP structure / possession section can now support a modest description of no
 
 ## Noun domain
 
-This section gathers the current grammar-facing evidence for basic noun-domain patterns.
+The noun-domain evidence is strongest for simple stems such as `gam` 'land / country' and `aksi` 'star', for plural `-te`, and for nouns that remain visible as heads inside larger phrases.
 
 ### Overview of the noun domain
 
-The clearest current evidence supports a modest but coherent noun-domain description. Simple lexical nouns such as `gam` 'land / country' and `aksi` 'star' are safely attested, and plural marking with `-te` is printable for controlled anchors such as `aksi-te` 'stars' and `mite` 'people'. Human noun `mi` 'person' is also a stable lexical head in larger noun phrases, as seen in rows such as `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`, while nonhuman nouns such as `ni` 'day' and `kum` 'year' behave similarly in counted phrases.
+The clearest current evidence supports a modest but coherent noun-domain description. Simple lexical nouns such as `gam` 'land / country' and `aksi` 'star' are safely attested, and plural marking with `-te` is printable for controlled anchors such as `aksi-te` 'stars' and `mite` 'people'. Human noun `mi` 'person' is also a stable lexical head in larger noun phrases, as seen in rows such as `mi khat` 'one person / a person', `mi khempeuh` 'all people', `mi pawlkhat` 'some people', and `mi tampi` 'many people', while nonhuman nouns such as `ni` 'day' and `kum` 'year' behave similarly in counted phrases.
 
 This is enough to describe a small noun inventory, to note a cautious `-te` plural pattern, and to show that lexical nouns remain visible as heads inside demonstrative, numeral, and quantifier phrases. It is not yet enough for a full noun-domain chapter, because compounds, proper names, classifier-like nouns, and nominalized nouns still require more boundary control.
 
-Gospel searches produced usable noun-domain evidence for `aksi`, `mi khempeuh`, `ni li`, and proper-name material such as `Abraham' suan David`, which helps keep the section from becoming Genesis-only. The cleanest `gam` and `-te` plural anchors, however, remain OT-led in the current stage, while compound material such as `minam` 'nation' still needs explicit caveats.
+Gospel searches produced usable noun-domain evidence for `aksi` 'star', `mi khempeuh` 'all people', `ni li` 'four days', and proper-name material such as `Abraham' suan David` 'David, descendant of Abraham', which helps keep the section from becoming Genesis-only. The cleanest `gam` 'land / country' and `-te` plural anchors, however, remain OT-led in the current stage, while compound material such as `minam` 'nation / people-group' still needs explicit caveats.
 
 ### Current noun-domain inventory
 
@@ -441,7 +441,7 @@ d. Translation: all people
 
 The normalized numerals, quantifiers, and NP structure / possession sections already show that nouns remain visible as heads in larger phrases. In the current noun-domain pass, that point can be stated modestly: noun heads such as `mi`, `ni`, and `kum` stay lexically identifiable inside counted and quantified expressions rather than disappearing into unanalyzed templates.
 
-`Ni li` and `kum sawm le nih` are the clearest counted anchors for this purpose. Together they show that lexical noun heads remain visible inside larger numeral phrases. The noun-domain claim is therefore limited to lexical headedness; it does not reopen the fuller NP-order or numeral/quantifier analyses.
+`Ni li` 'four days' and `kum sawm le nih` 'twelve years' are the clearest counted anchors for this purpose. Together they show that lexical noun heads remain visible inside larger numeral phrases. The noun-domain claim is therefore limited to lexical headedness; it does not reopen the fuller NP-order or numeral/quantifier analyses.
 
 (@ex:noun-ni-li) John 11:39
 a. Tedim: ni li
@@ -497,15 +497,15 @@ The noun domain can now support a fuller section than the earlier narrow section
 
 ## Case marking
 
-This section summarizes the current evidence for NP-final case-like marking.
+The current case evidence centers on `-ah` 'locative / goal-like' and `-in` 'ergative / agentive', while `-pan` 'source / ablative', `-panin` 'source / departure', and `-tawh` 'with' remain more cautious oblique extensions.
 
 ### Overview of case-like marking
 
-The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest claims concern locative or goal-like `-ah` 'locative / goal-like' and clause-level agentive or ergative `-in` 'ergative'. The same section also supports more cautious discussion of source marking with `-pan` 'source' and `-panin` 'source / departure', plus accompaniment or material-extension uses of `-tawh` 'with', but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
+The current evidence supports a modest but coherent picture of postnominal case-like marking in Tedim. The clearest claims concern locative or goal-like `-ah` 'locative / goal-like' and clause-level agentive or ergative `-in` 'ergative / agentive'. The same section also supports more cautious discussion of source marking with `-pan` 'source / ablative' and `-panin` 'source / departure', plus accompaniment or material-extension uses of `-tawh` 'with', but those markers remain more boundary-heavy because they overlap with relator nouns, postpositions, or broader semantic extension.
 
-The safest current prose therefore treats case marking as an NP-final domain rather than as a fully settled paradigm of discrete suffixes. Plain noun-plus-case rows such as `khua-ah` and clause-level agent rows such as `Kain in` are secure enough to print. Relator-hosted forms such as `lakpan` and `David khuapi sungah` are also real, but they should not be collapsed into a bare suffix inventory. Apostrophe-marked possession can host the same NP-final marking, yet the apostrophe itself remains a boundary issue rather than a settled genitive case marker in this section.
+The safest current prose therefore treats case marking as an NP-final domain rather than as a fully settled paradigm of discrete suffixes. Plain noun-plus-case rows such as `khua-ah` 'in the town' and clause-level agent rows such as `Kain in` 'Cain as agent' are secure enough to print. Relator-hosted forms such as `lakpan` 'from among' and `David khuapi sungah` 'in the city of David' are also real, but they should not be collapsed into a bare suffix inventory. Apostrophe-marked possession can host the same NP-final marking, yet the apostrophe itself remains a boundary issue rather than a settled genitive case marker in this section.
 
-The Gospel search was productive enough to keep the section from becoming OT-only. The current manually reviewed supplement adds usable Gospel support for `Herod in`, `keima inn-ah`, `David khuapi sungah`, and `lakpan`. The possessive-boundary example remains OT-led, because no equally compact Gospel row was as clean under the current control standard.
+The Gospel search was productive enough to keep the section from becoming OT-only. The current manually reviewed supplement adds usable Gospel support for `Herod in` 'Herod as agent', `keima inn-ah` 'into my house', `David khuapi sungah` 'in the city of David', and `lakpan` 'from among'. The possessive-boundary example remains OT-led, because no equally compact Gospel row was as clean under the current control standard.
 
 ### Current case-marking inventory
 
@@ -561,7 +561,7 @@ These examples are intentionally compact. They are not meant to reopen the full 
 
 ### Other controlled oblique markers
 
-The section still retains a small set of other controlled case-like markers, but they are best treated more cautiously than `-ah` and `-in`. Source marking with `-pan` and `-panin` is real enough to describe, especially in rows such as `lakpan` and `inn panin`, yet the cleanest `-pan` example is relator-hosted and the internal structure of `-panin` remains under review. Likewise, `-tawh` remains part of the section because `kei tawh` is a clean accompaniment row and `leivui tawh` shows a material or instrument-like extension, but that semantic split needs to stay explicit.
+The section still retains a small set of other controlled case-like markers, but they are best treated more cautiously than `-ah` and `-in`. Source marking with `-pan` and `-panin` is real enough to describe, especially in rows such as `lakpan` 'from among' and `inn panin` 'from the house', yet the cleanest `-pan` example is relator-hosted and the internal structure of `-panin` remains under review. Likewise, `-tawh` remains part of the section because `kei tawh` 'with me' is a clean accompaniment row and `leivui tawh` 'with dust' shows a material or instrument-like extension, but that semantic split needs to stay explicit.
 
 This means the section can already mention `-pan`, `-panin`, and `-tawh` in the current inventory, but it should not yet present them as a fully normalized oblique subsystem. For the present pass, they remain controlled supporting material rather than the center of the case-marking chapter.
 
@@ -583,11 +583,13 @@ b. Segmentation: leivui | tawh
 c. Gloss: dust | COM
 d. Translation: with dust
 
-These rows keep the oblique material concrete. `Inn panin` shows source marking without a relator host, while `kei tawh` and `leivui tawh` show that `-tawh` covers both accompaniment and material-extension uses.
+These rows keep the oblique material concrete. `Inn panin` 'from the house' shows source marking without a relator host, while `kei tawh` 'with me' and `leivui tawh` 'with dust' show that `-tawh` covers both accompaniment and material-extension uses.
+
+No equally clean Gospel source or accompaniment row is currently used here, so the subsection stays OT-led while the broader oblique inventory remains cautiously delimited.
 
 ### Genitive / possessive boundary
 
-The clearest way to discuss genitive or possessive boundary material at present is to show that an already possessed noun phrase can host case-like marking at its right edge. Genesis 24:23 gives the compact row `na pa' inn-ah`, which is already reused in the normalized NP structure / possession section. Here it serves a narrower purpose: it shows that case-like marking closes the larger noun phrase rather than attaching only to a simple underived noun stem.
+The clearest way to discuss genitive or possessive boundary material at present is to show that an already possessed noun phrase can host case-like marking at its right edge. Genesis 24:23 gives the compact row `na pa' inn-ah` 'in your father's house', which is already reused in the normalized NP structure / possession section. Here it serves a narrower purpose: it shows that case-like marking closes the larger noun phrase rather than attaching only to a simple underived noun stem.
 
 (@ex:case-poss-na-pa-inn) Genesis 24:23
 a. Tedim: na pa' inn-ah
@@ -601,7 +603,7 @@ No equally good Gospel possessed NP with case-like closure is currently used her
 
 ### Case marking and relators/postpositions
 
-The boundary with relators and postpositions is now one of the main editorial points of the section. Forms such as `sungah`, `tungah`, `kiangah`, and `lakpan` are not noise, but neither are they simple proof that Tedim can be described by a suffix-only case list. The relational host matters: `sung`, `tung`, `kiang`, and `lak` contribute spatial content before locative or source marking is added.
+The boundary with relators and postpositions is now one of the main editorial points of the section. Forms such as `sungah` 'inside / in', `tungah` 'on / upon', `kiangah` 'beside / near', and `lakpan` 'from among' are not noise, but neither are they simple proof that Tedim can be described by a suffix-only case list. The relational host matters: `sung` 'inside', `tung` 'on top', `kiang` 'side / vicinity', and `lak` 'among' contribute spatial content before locative or source marking is added.
 
 (@ex:case-relator-david-khuapi-sungah) Luke 2:11
 a. Tedim: David khuapi sungah
@@ -619,7 +621,7 @@ These rows belong here because they are case-like and NP-final. They also belong
 
 ### Case marking and argument structure
 
-The normalized case section can now say one modest thing about argument structure: checked `-in` rows such as `Kain in` and `Herod in` show case-marked noun phrases functioning as clause-level agents, while locative or goal-like rows such as `inn-ah` show noun phrases entering the clause as spatial arguments or adjuncts. That is enough to connect the nominal domain to clause structure without reopening the full alignment or valency chapter.
+The normalized case section can now say one modest thing about argument structure: checked `-in` rows such as `Kain in` 'Cain as agent' and `Herod in` 'Herod as agent' show case-marked noun phrases functioning as clause-level agents, while locative or goal-like rows such as `inn-ah` 'in / into the house' show noun phrases entering the clause as spatial arguments or adjuncts. That is enough to connect the nominal domain to clause structure without reopening the full alignment or valency chapter.
 
 The present section therefore cross-references the transitivity section rather than replacing it. The transitivity section remains the place for fuller discussion of argument frames, lexical valency, and broader alignment questions. Case marking only contributes the controlled NP-final marking side of that picture here.
 
@@ -685,7 +687,7 @@ With background notes now added, the section is keeps the analysis deliberately 
 
 ## Numerals
 
-This section gathers the current grammar-facing evidence for the numeral system.
+The current numeral evidence supports a decimal system with basic cardinals, counted noun phrases, and `-na` ordinals, while larger-number and classifier-like material remain explicit boundary notes.
 
 ### Overview of the numeral system
 
@@ -747,7 +749,7 @@ b. Segmentation: kum | sawm | le | nih
 c. Gloss: year | ten | and | two
 d. Translation: 'twelve years'
 
-These two rows are enough to support a modest decimal-composition claim. `Sawmkua` shows a clean compound-ten pattern and keeps numeral-side `kua = nine` visible in a securely numeral context. `Kum sawm le nih` shows that a counted noun can also host a larger compound numeral in Gospel material, which helps the section avoid becoming a grammar of Genesis.
+These two rows are enough to support a modest decimal-composition claim. `Sawmkua` shows a clean compound-ten pattern and keeps numeral-side `kua = nine` visible in a securely numeral context. `Kum sawm le nih` 'twelve years' shows that a counted noun can also host a larger compound numeral in Gospel material, which helps the section avoid becoming a grammar of Genesis.
 
 The section should still stop short of a full typology of every higher numeral pattern. The report mentions wider two-digit and larger-number combinations, but the present section only promotes the best checked examples.
 
@@ -801,7 +803,7 @@ d. Translation: 'four days'
 
 These are clean counted-noun examples, and they justify a real statement that noun-plus-numeral order is well supported. The section should still avoid overclaiming a complete typology of numeral placement. The broader report layer contains more patterns, and the literature discusses wider numeral syntax, but the checked section should stop at what the current examples support directly.
 
-The Gospel search for this pilot found good counted-noun examples such as `ni li` and `kum sawm le nih`. That is enough to improve source balance. It does **not** mean that every numeral construction in the section now has an equally good Gospel counterpart.
+The Gospel search for this pilot found good counted-noun examples such as `ni li` 'four days' and `kum sawm le nih` 'twelve years'. That is enough to improve source balance. It does **not** mean that every numeral construction in the section now has an equally good Gospel counterpart.
 
 ### Classifier-like and counting expressions
 
@@ -817,7 +819,7 @@ d. Translation: 'ten times'
 
 The generated report paraphrases this as `vei sawm`, but the current analyzer export preserves the fused form `sawmvei`. That export-backed `sawmvei` form means the fused form should control the present slice.
 
-`Mi khat` remains valuable boundary evidence:
+`Mi khat` 'one person / a person' remains valuable boundary evidence:
 
 (@ex:num-mi-khat) Genesis 32:24
 a. Tedim: mi khat
@@ -836,6 +838,8 @@ The classifier-like material can therefore be summarized cautiously:
 | `pa`, `nu`, `zat`, `tei` | deferred | promising report/literature material, but not normalized in here |
 
 This means the section can talk about classifier-like and counting expressions without pretending that the full classifier system has already been normalized. It also means the section does not start a quantifiers retrofit here.
+
+No equally clean Gospel classifier-like example is currently used here, so the subsection keeps the compact OT anchors while the broader classifier-like inventory remains explicitly delimited.
 
 ### Distributive numerals
 
@@ -868,11 +872,11 @@ At the same time, the section keeps the important boundaries explicit. `Sawmvei`
 
 ## Quantifiers
 
-This section summarizes the current evidence for quantifier patterns.
+The current quantifier evidence centers on `khempeuh` 'all', `pawlkhat` 'some people', `kuamah` 'nobody', `bangmah` 'nothing', and noun-plus-quantifier phrases such as `mi tampi` 'many people'.
 
 ### Overview of quantification in Tedim
 
-The current evidence supports a modest but real account of quantification in Tedim. The safest core anchor is universal or total `khempeuh` 'all'. Existential or indefinite-like quantification is visible through `pawlkhat` 'some people' or more cautiously 'some', but that material still carries a partitive or alternative-grouping caveat. `Khat` 'one' remains boundary evidence shared with numerals rather than an uncomplicated quantifier anchor. Negative-quantifier work is currently safest with `kuamah` 'nobody' and `bangmah` 'nothing' or 'anything' only where clear clause-level negation licenses them. Quantity-related material is also visible through `tampi tak` 'very many / much' and noun-phrase `mi tampi` 'many people', but those rows still border on broader degree or modification work rather than constituting a full independent quantifier subsystem.
+The current evidence supports a modest but real account of quantification in Tedim. The safest core anchor is universal or total `khempeuh` 'all'. Existential or indefinite-like quantification is visible through `pawlkhat` 'some people' or more cautiously 'some', but that material still carries a partitive or alternative-grouping caveat. `khat` 'one' remains boundary evidence shared with numerals rather than an uncomplicated quantifier anchor. Negative-quantifier work is currently safest with `kuamah` 'nobody' and `bangmah` 'nothing' or 'anything' only where clear clause-level negation licenses them. Quantity-related material is also visible through `tampi` 'many', especially in `tampi tak` 'very many / much' and noun-phrase `mi tampi` 'many people', but those rows still border on broader degree or modification work rather than constituting a full independent quantifier subsystem.
 
 This is also where the current evidence meets broader descriptive literature most clearly: quantification in Tedim overlaps with noun-phrase structure, indefiniteness, and negation rather than forming a neatly isolated paradigm [@henderson1965; @zamngaihcing2017].
 
@@ -938,7 +942,7 @@ b. Segmentation: mi | khat
 c. Gloss: person | one
 d. Translation: 'a man' / 'one person'
 
-`Mi khat` is reused from the numerals section as boundary evidence. The present section does not treat `khat` as an uncomplicated quantifier anchor. Instead, it keeps the numeral/indefinite overlap explicit and lets the numerals section carry the fuller discussion of `one`.
+`Mi khat` 'one person / a person' is reused from the numerals section as boundary evidence. The present section does not treat `khat` 'one' as an uncomplicated quantifier anchor. Instead, it keeps the numeral/indefinite overlap explicit and lets the numerals section carry the fuller discussion of `one`.
 
 ### Quantifiers and negation
 
@@ -1814,7 +1818,7 @@ This printed example should replace the older report paraphrase `Inn-ah hong tum
 
 The content-question pattern in the current evidence is WH + `hiam`. The safest print-facing claim is therefore not that every WH form behaves identically, but that the present checked examples show `bang`, `kua`, `bangci`, and `banghangin` in this construction.
 
-(@ex:hiam-bang)
+(@ex:hiam-bang) Exodus 16:15
 a. Tedim: Bang ahi hiam?
 b. Segmentation: Bang | ahi | hiam
 c. Gloss: what | be.3SG | Q

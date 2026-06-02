@@ -71,7 +71,7 @@ b. Segmentation: kum | sawm | le | nih
 c. Gloss: year | ten | and | two
 d. Translation: 'twelve years'
 
-These rows show that the pattern is not tied to a single lexical head. `Ni li` and `kum sawm le nih` both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
+These rows show that the pattern is not tied to a single lexical head. `Ni li` 'four days' and `kum sawm le nih` 'twelve years' both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` 'one person / a person' remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
 
 # Quantifiers and nouns
 

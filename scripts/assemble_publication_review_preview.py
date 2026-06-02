@@ -25,6 +25,7 @@ The resulting PDF is still a review preview, not a final publication PDF.
 from __future__ import annotations
 
 import argparse
+import csv
 import os
 import re
 import shutil
@@ -249,6 +250,21 @@ TECHNICAL_PATH_PREFIXES = ("output/", "docs/", "scripts/", "tests/", "data/", "l
 TECHNICAL_FILE_SUFFIXES = (".md", ".py", ".tex", ".pdf", ".tsv", ".bib", ".json", ".txt", ".yaml", ".yml")
 TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", "git", "bibtex", "pdftotext")
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
+TARGET_QUALITY_GATE_SECTION_TITLES = {
+    "Numerals",
+    "Quantifiers",
+    "NP structure / possession",
+    "Noun domain",
+    "Case marking",
+}
+NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
+NORMALIZATION_SUPPLEMENT_PATHS = (
+    PUBLICATION_REVIEW_DIR / "examples_numerals_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_quantifiers_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_np_possession_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_noun_domain_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_case_marking_normalization.tsv",
+)
 GRAMMAR_FACING_INTERNAL_SECTION_TITLES = {"Scope", "Editorial scope"}
 GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
     re.compile(r"\bif the project later wants\b", re.IGNORECASE),
@@ -259,11 +275,26 @@ GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
     re.compile(r"\b(?:tests?/|scripts?/|output/|docs/|bibles/)", re.IGNORECASE),
 )
 GRAMMAR_FACING_SECTION_INTROS = {
-    "NP structure / possession": "This section summarizes the current evidence for noun-phrase order and possession.",
-    "Noun domain": "This section gathers the current grammar-facing evidence for basic noun-domain patterns.",
-    "Case marking": "This section summarizes the current evidence for NP-final case-like marking.",
-    "Numerals": "This section gathers the current grammar-facing evidence for the numeral system.",
-    "Quantifiers": "This section summarizes the current evidence for quantifier patterns.",
+    "NP structure / possession": (
+        "The current evidence supports demonstrative-before-noun order alongside noun-plus-postnominal numeral "
+        "and quantifier patterns, with possession kept as a cautious boundary subsection."
+    ),
+    "Noun domain": (
+        "The noun-domain evidence is strongest for simple stems such as `gam` 'land / country' and `aksi` 'star', "
+        "for plural `-te`, and for nouns that remain visible as heads inside larger phrases."
+    ),
+    "Case marking": (
+        "The current case evidence centers on `-ah` 'locative / goal-like' and `-in` 'ergative / agentive', "
+        "while `-pan` 'source / ablative', `-panin` 'source / departure', and `-tawh` 'with' remain more cautious oblique extensions."
+    ),
+    "Numerals": (
+        "The current numeral evidence supports a decimal system with basic cardinals, counted noun phrases, "
+        "and `-na` ordinals, while larger-number and classifier-like material remain explicit boundary notes."
+    ),
+    "Quantifiers": (
+        "The current quantifier evidence centers on `khempeuh` 'all', `pawlkhat` 'some people', "
+        "`kuamah` 'nobody', `bangmah` 'nothing', and noun-plus-quantifier phrases such as `mi tampi` 'many people'."
+    ),
 }
 GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"`(?:output/publication_review/)?candidates_[^`]+\.tsv`"), "the checked evidence tables"),
@@ -331,6 +362,30 @@ class SourceAuditRecord:
     label: str
     source: str
     rendered_source: str
+
+
+@dataclass(frozen=True)
+class NormalizationSupplementRow:
+    example_id: str
+    source_reference: str
+    tedim_text: str
+    segmentation: str
+    translation: str
+    path: Path
+    row_number: int
+
+
+@dataclass(frozen=True)
+class ExampleSourceResolution:
+    resolved_source: str
+    header_source: str
+    contextual_source: str
+    supplement_sources: tuple[str, ...]
+    inferred_source: str
+    supplement_example_ids: tuple[str, ...]
+    explicit_no_source: bool
+    require_source: bool
+    conflict_message: str
 
 
 def strip_yaml_front_matter(text: str) -> str:
@@ -654,6 +709,70 @@ def normalize_for_comparison(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip().lower())
 
 
+def heading_path_requires_example_source(heading_path: tuple[str, ...]) -> bool:
+    return any(title in TARGET_QUALITY_GATE_SECTION_TITLES for title in heading_path)
+
+
+def normalize_example_text_for_match(text: str) -> str:
+    normalized = strip_outer_quotes(normalize_quote_marks(text))
+    normalized = re.sub(r"\s+", " ", normalized.strip())
+    return normalized.casefold()
+
+
+def load_normalization_supplements() -> tuple[NormalizationSupplementRow, ...]:
+    rows: list[NormalizationSupplementRow] = []
+    for path in NORMALIZATION_SUPPLEMENT_PATHS:
+        if not path.exists():
+            continue
+        with path.open(encoding="utf-8", newline="") as handle:
+            reader = csv.DictReader(handle, delimiter="\t")
+            for row_number, row in enumerate(reader, start=2):
+                rows.append(
+                    NormalizationSupplementRow(
+                        example_id=(row.get("example_id") or "").strip(),
+                        source_reference=(row.get("source_reference") or "").strip(),
+                        tedim_text=(row.get("tedim_text") or "").strip(),
+                        segmentation=(row.get("segmentation") or "").strip(),
+                        translation=(row.get("translation") or "").strip(),
+                        path=path,
+                        row_number=row_number,
+                    )
+                )
+    return tuple(rows)
+
+
+def match_normalization_supplement_rows(
+    example: ParsedExample, supplement_rows: tuple[NormalizationSupplementRow, ...]
+) -> tuple[NormalizationSupplementRow, ...]:
+    tedim_key = normalize_example_text_for_match(example.tedim)
+    if not tedim_key:
+        return ()
+
+    tedim_matches = [row for row in supplement_rows if normalize_example_text_for_match(row.tedim_text) == tedim_key]
+    if not tedim_matches:
+        return ()
+
+    translation_key = normalize_example_text_for_match(example.translation)
+    translation_matches = [
+        row for row in tedim_matches if normalize_example_text_for_match(row.translation) == translation_key
+    ]
+    if translation_matches:
+        return tuple(translation_matches)
+
+    segmentation_key = normalize_example_text_for_match(example.segmentation)
+    segmentation_matches = [
+        row for row in tedim_matches if normalize_example_text_for_match(row.segmentation) == segmentation_key
+    ]
+    if segmentation_matches:
+        return tuple(segmentation_matches)
+
+    unique_sources = {row.source_reference for row in tedim_matches if row.source_reference}
+    if len(unique_sources) == 1:
+        return tuple(tedim_matches)
+
+    return ()
+
+
 def render_example_source(source: str, bible: dict[str, str]) -> str:
     source = source.strip()
     if not source:
@@ -671,30 +790,96 @@ def resolve_example_source(example: ParsedExample, bible: dict[str, str]) -> str
     return infer_example_source_from_bible(example, bible)
 
 
+def resolve_example_source_metadata(
+    example: ParsedExample,
+    lines: list[str],
+    start: int,
+    bible: dict[str, str],
+    supplement_rows: tuple[NormalizationSupplementRow, ...],
+    heading_path: tuple[str, ...],
+) -> ExampleSourceResolution:
+    preceding_prose = extract_preceding_prose(lines, start)
+    explicit_no_source = bool(
+        NO_SOURCE_AVAILABLE_RE.search(example.source)
+        or NO_SOURCE_AVAILABLE_RE.search(example.translation)
+        or NO_SOURCE_AVAILABLE_RE.search(preceding_prose)
+    )
+    header_source = render_example_source(example.source, bible) if example.source and not explicit_no_source else ""
+    contextual_source = render_example_source(find_contextual_example_source(lines, start), bible)
+    inferred_source = infer_example_source_from_bible(example, bible)
+    matched_rows = match_normalization_supplement_rows(example, supplement_rows)
+    supplement_sources = tuple(
+        sorted({render_example_source(row.source_reference, bible) for row in matched_rows if row.source_reference})
+    )
+    require_source = heading_path_requires_example_source(heading_path)
+
+    evidence_pairs = [
+        ("header", header_source),
+        ("preceding prose", contextual_source),
+        ("Bible inference", inferred_source),
+    ]
+    evidence_pairs.extend((f"supplement {row.example_id}", render_example_source(row.source_reference, bible)) for row in matched_rows)
+    nonempty_pairs = [(origin, source) for origin, source in evidence_pairs if source]
+    unique_sources = sorted({source for _, source in nonempty_pairs})
+
+    conflict_message = ""
+    if len(unique_sources) > 1:
+        rendered_pairs = ", ".join(f"{origin}={source}" for origin, source in nonempty_pairs)
+        conflict_message = f"Conflicting example sources for {example.label}: {rendered_pairs}"
+
+    resolved_source = unique_sources[0] if len(unique_sources) == 1 else ""
+    return ExampleSourceResolution(
+        resolved_source=resolved_source,
+        header_source=header_source,
+        contextual_source=contextual_source,
+        supplement_sources=supplement_sources,
+        inferred_source=inferred_source,
+        supplement_example_ids=tuple(row.example_id for row in matched_rows),
+        explicit_no_source=explicit_no_source,
+        require_source=require_source,
+        conflict_message=conflict_message,
+    )
+
+
 def enrich_example_headers(markdown_text: str, bible: dict[str, str]) -> str:
     lines = markdown_text.splitlines()
     enriched_lines = list(lines)
+    supplement_rows = load_normalization_supplements()
+    stack: list[tuple[int, str]] = []
     index = 0
 
     while index < len(lines):
+        heading_match = MARKDOWN_HEADING_RE.match(lines[index])
+        if heading_match:
+            level = len(heading_match.group(1))
+            title = heading_match.group(2).strip()
+            while stack and stack[-1][0] >= level:
+                stack.pop()
+            stack.append((level, title))
+            index += 1
+            continue
+
         parsed_example, next_index = parse_example_at(lines, index)
         if not parsed_example:
             index += 1
             continue
 
         if parsed_example.label != "review-preview-warning":
-            contextual_source = find_contextual_example_source(lines, index)
-            example_with_context = parsed_example
-            if contextual_source and not parsed_example.source:
-                example_with_context = ParsedExample(
-                    label=parsed_example.label,
-                    source=contextual_source,
-                    tedim=parsed_example.tedim,
-                    segmentation=parsed_example.segmentation,
-                    gloss=parsed_example.gloss,
-                    translation=parsed_example.translation,
+            resolution = resolve_example_source_metadata(
+                parsed_example,
+                lines,
+                index,
+                bible,
+                supplement_rows,
+                tuple(title for _, title in stack),
+            )
+            if resolution.conflict_message:
+                raise RuntimeError(resolution.conflict_message)
+            if resolution.require_source and not resolution.resolved_source and not resolution.explicit_no_source:
+                raise RuntimeError(
+                    f"Missing example source for {parsed_example.label} in {' > '.join(title for _, title in stack)}"
                 )
-            resolved_source = resolve_example_source(example_with_context, bible)
+            resolved_source = resolution.resolved_source
             if resolved_source:
                 enriched_lines[index] = f"(@{parsed_example.label}) {resolved_source}"
 

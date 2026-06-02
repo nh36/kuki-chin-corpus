@@ -17,7 +17,7 @@ The present section therefore keeps candidate evidence and explicit caveats cent
 
 # Overview of quantification in Tedim
 
-The current packet supports a modest but real publication-facing account of quantification in Tedim. The safest core anchor is universal or total `khempeuh` 'all'. Existential or indefinite-like quantification is visible through `pawlkhat` 'some people' or more cautiously 'some', but that material still carries a partitive or alternative-grouping caveat. `Khat` 'one' remains boundary evidence shared with numerals rather than an uncomplicated quantifier anchor. Negative-quantifier work is currently safest with `kuamah` 'nobody' and `bangmah` 'nothing' or 'anything' only where clear clause-level negation licenses them. Quantity-related material is also visible through `tampi tak` 'very many / much' and noun-phrase `mi tampi` 'many people', but those rows still border on broader degree or modification work rather than constituting a full independent quantifier subsystem.
+The current packet supports a modest but real publication-facing account of quantification in Tedim. The safest core anchor is universal or total `khempeuh` 'all'. Existential or indefinite-like quantification is visible through `pawlkhat` 'some people' or more cautiously 'some', but that material still carries a partitive or alternative-grouping caveat. `khat` 'one' remains boundary evidence shared with numerals rather than an uncomplicated quantifier anchor. Negative-quantifier work is currently safest with `kuamah` 'nobody' and `bangmah` 'nothing' or 'anything' only where clear clause-level negation licenses them. Quantity-related material is also visible through `tampi` 'many', especially in `tampi tak` 'very many / much' and noun-phrase `mi tampi` 'many people', but those rows still border on broader degree or modification work rather than constituting a full independent quantifier subsystem.
 
 This is also where the current evidence meets broader descriptive literature most clearly: quantification in Tedim overlaps with noun-phrase structure, indefiniteness, and negation rather than forming a neatly isolated paradigm [@henderson1965; @zamngaihcing2017].
 
@@ -83,7 +83,7 @@ b. Segmentation: mi | khat
 c. Gloss: person | one
 d. Translation: 'a man' / 'one person'
 
-`Mi khat` is reused from the numerals packet as boundary evidence. The present section does not treat `khat` as an uncomplicated quantifier anchor. Instead, it keeps the numeral/indefinite overlap explicit and lets the numerals section carry the fuller discussion of `one`.
+`Mi khat` 'one person / a person' is reused from the numerals packet as boundary evidence. The present section does not treat `khat` 'one' as an uncomplicated quantifier anchor. Instead, it keeps the numeral/indefinite overlap explicit and lets the numerals section carry the fuller discussion of `one`.
 
 # Quantifiers and negation
 

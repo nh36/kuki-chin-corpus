@@ -569,6 +569,8 @@ def test_assembled_preview_assembler_reuses_shared_interlinear_helper() -> None:
     assert "reference_to_verse_id" in script_text
     assert "analyzer-derived interlinear unavailable; using slice segmentation/gloss fallback" in script_text
     assert "audit_example_sources" in script_text
+    assert "load_normalization_supplements" in script_text
+    assert "resolve_example_source_metadata" in script_text
 
 
 def test_assembled_preview_tex_distinguishes_inline_tedim_from_technical_paths() -> None:
@@ -581,6 +583,36 @@ def test_assembled_preview_tex_distinguishes_inline_tedim_from_technical_paths()
     assert "\\tdim{mahmah}" in tex
     assert "\\tdim{ciangin}" in tex
     assert "\\tdim{gam}" in tex
+
+
+def test_assembled_preview_tex_glosses_multiword_running_prose_forms_in_normalized_sections() -> None:
+    tex = _normalize(_tex_text())
+
+    for required in (
+        r"\tdim{mi khat} \glossquote{one person / a person}",
+        r"\tdim{mi khempeuh} \glossquote{all people}",
+        r"\tdim{mi pawlkhat} \glossquote{some people}",
+        r"\tdim{mi tampi} \glossquote{many people}",
+        r"\tdim{ni li} \glossquote{four days}",
+        r"\tdim{khua-ah} \glossquote{in the town}",
+        r"\tdim{Kain in} \glossquote{Cain as agent}",
+        r"\tdim{lakpan} \glossquote{from among}",
+        r"\tdim{Abraham' suan David} \glossquote{David, descendant of Abraham}",
+    ):
+        assert required in tex
+    assert r"\tdim{kum sawm le nih} \glossquote{twelve years}" in tex
+
+
+def test_assembled_preview_tex_keeps_grammar_facing_explanations_for_ot_led_subsections() -> None:
+    text = _text()
+
+    for required in (
+        "No equally good Gospel ordinal example is currently used here",
+        "No equally clean Gospel possession row was found",
+        "No equally clean Gospel source or accompaniment row is currently used here",
+        "No equally clean Gospel classifier-like example is currently used here",
+    ):
+        assert required in text
 
 
 def test_assembled_preview_gap_and_review_status_text_are_not_aggressively_italicized() -> None:

@@ -56,14 +56,17 @@ SUBSECTION_IGNORE_RE = re.compile(
     r"(overview|inventory|summary|deferred|boundary|controls|argument structure)$",
     re.IGNORECASE,
 )
-ONE_EXAMPLE_NOTE_RE = re.compile(r"No equally (?:good|clean).{0,40}example", re.IGNORECASE)
+ONE_EXAMPLE_NOTE_RE = re.compile(
+    r"(?:No equally (?:good|clean).{0,140}(?:example|row)|This construction is rare.{0,140}one example)",
+    re.IGNORECASE,
+)
 PDF_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"(?:^|\n)\s*Scope\s*(?:\n|$)", re.IGNORECASE), "visible Scope heading"),
     (re.compile(r"(?:^|\n)\s*Editorial scope\s*(?:\n|$)", re.IGNORECASE), "visible Editorial scope heading"),
     (re.compile(r"source slice:", re.IGNORECASE), "source-slice marker"),
     (
         re.compile(
-            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer",
+            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer|controlling files|grammar_facing_quality_report\.md",
             re.IGNORECASE,
         ),
         "internal workflow term",
@@ -77,36 +80,56 @@ TEX_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"Source slice:", re.IGNORECASE), "source-slice marker"),
     (
         re.compile(
-            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer",
+            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer|controlling files|grammar_facing_quality_report\.md",
             re.IGNORECASE,
         ),
         "internal workflow term",
     ),
     (re.compile(r"(?:output|scripts|tests|docs)/[A-Za-z0-9_./\\-]+", re.IGNORECASE), "internal file path"),
 )
-GLOSSARY_REQUIREMENTS: dict[str, tuple[str, ...]] = {
-    "gam": (r"land(?: / country)?",),
-    "aksi": (r"star",),
-    "aksi-te": (r"stars",),
-    "mi": (r"person",),
-    "mite": (r"people",),
-    "kum": (r"year",),
-    "ni": (r"day",),
-    "khat": (r"one",),
-    "nih": (r"two",),
-    "sawm": (r"ten",),
-    "kua": (r"nine|who",),
-    "khempeuh": (r"all",),
-    "pawlkhat": (r"some(?: people)?|one group",),
-    "kuamah": (r"nobody",),
-    "bangmah": (r"nothing",),
-    "tampi": (r"many",),
-    "hih": (r"this",),
-    "tua": (r"that",),
-    "-ah": (r"locative(?: or goal-like)?|LOC",),
-    "-in": (r"ergative|ERG",),
-    "-pan": (r"ablative|source",),
-    "-tawh": (r"with",),
+GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
+    "gam": ((r"land(?: / country)?",), "land / country"),
+    "aksi": ((r"star",), "star"),
+    "aksi-te": ((r"stars",), "stars"),
+    "mi": ((r"person",), "person"),
+    "mite": ((r"people",), "people"),
+    "mi khat": ((r"one person|a person",), "one person / a person"),
+    "mi khempeuh": ((r"all people|everyone",), "all people"),
+    "mi pawlkhat": ((r"some people",), "some people"),
+    "mi tampi": ((r"many people",), "many people"),
+    "kum": ((r"year",), "year"),
+    "ni": ((r"day",), "day"),
+    "kum sawm le nih": ((r"twelve years",), "twelve years"),
+    "ni li": ((r"four days",), "four days"),
+    "khat": ((r"one",), "one"),
+    "nih": ((r"two",), "two"),
+    "sawm": ((r"ten",), "ten"),
+    "kua": ((r"nine|who",), "nine"),
+    "khempeuh": ((r"all",), "all"),
+    "pawlkhat": ((r"some(?: people)?|one group",), "some / one group"),
+    "kuamah": ((r"nobody",), "nobody"),
+    "bangmah": ((r"nothing|anything",), "nothing"),
+    "tampi": ((r"many",), "many"),
+    "hih": ((r"this",), "this"),
+    "tua": ((r"that",), "that"),
+    "-ah": ((r"locative / goal-like|locative|goal-like|LOC",), "locative / goal-like"),
+    "-in": ((r"ergative / agentive|ergative|agentive|ERG",), "ergative / agentive"),
+    "-pan": ((r"source / ablative|source|ablative",), "source / ablative"),
+    "-panin": ((r"source / departure|source|departure|from",), "source / departure"),
+    "-tawh": ((r"with",), "with"),
+    "khua-ah": ((r"in the town",), "in the town"),
+    "inn-ah": ((r"in(?:to)? the house|into the house",), "in / into the house"),
+    "keima inn-ah": ((r"into my house",), "into my house"),
+    "Kain in": ((r"Cain as transitive subject|Cain as agent",), "Cain as agent"),
+    "Herod in": ((r"Herod as transitive subject|Herod as agent",), "Herod as agent"),
+    "lakpan": ((r"from among",), "from among"),
+    "sungah": ((r"inside|in",), "inside / in"),
+    "tungah": ((r"on|upon",), "on / upon"),
+    "kiangah": ((r"beside|near",), "beside / near"),
+    "na pa' inn-ah": ((r"in (?:thy|your father'?s) house",), "in your father's house"),
+    "Abraham' suan David": ((r"David, descendant of Abraham",), "David, descendant of Abraham"),
+    "minam": ((r"nation|people-group",), "nation / people-group"),
+    "minam khat": ((r"one nation",), "one nation"),
 }
 
 
@@ -125,6 +148,7 @@ class TexBlock:
     title: str
     parent_titles: tuple[str, ...]
     content: str
+    start_line: int
 
 
 @dataclass(frozen=True)
@@ -133,8 +157,13 @@ class ExampleRecord:
     source: str
     header_source: str
     contextual_source: str
+    supplement_sources: tuple[str, ...]
+    inferred_source: str
     heading_path: tuple[str, ...]
     preceding_prose: str
+    explicit_no_source: bool
+    require_source: bool
+    conflict_message: str
 
 
 def normalize_whitespace(text: str) -> str:
@@ -193,6 +222,7 @@ def split_tex_blocks(tex: str) -> list[TexBlock]:
                 title=title,
                 parent_titles=parent_titles,
                 content=tex[match.end() : end].strip(),
+                start_line=tex[: match.start()].count("\n") + 1,
             )
         )
         stack.append((level, title))
@@ -200,6 +230,7 @@ def split_tex_blocks(tex: str) -> list[TexBlock]:
 
 
 def markdown_block_has_substance(block: MarkdownBlock) -> bool:
+    prose_lines: list[str] = []
     for raw_line in block.content.splitlines():
         line = raw_line.strip()
         if not line:
@@ -208,20 +239,47 @@ def markdown_block_has_substance(block: MarkdownBlock) -> bool:
             continue
         if line.startswith("(@ex:") or line.startswith("|") or line.startswith(">"):
             return True
-        if re.search(r"[A-Za-z]", line):
-            return True
-    return False
+        prose_lines.append(line)
+    return prose_has_substance("\n".join(prose_lines))
 
 
 def tex_block_has_substance(block: TexBlock) -> bool:
     content = block.content
     if not content:
         return False
-    if any(marker in content for marker in (r"\begin{exe}", r"\begin{longtable}", "Deferred and boundary material")):
+    if any(
+        marker in content
+        for marker in (r"\begin{exe}", r"\begin{longtable}", r"\begin{itemize}", r"\begin{enumerate}", "Deferred and boundary material")
+    ):
         return True
-    stripped = re.sub(r"\\(?:label|hypertarget|protect|phantomsection)\{[^}]*\}", "", content)
+    return prose_has_substance(strip_tex_nonprose(content))
+
+
+def prose_has_substance(text: str) -> bool:
+    for paragraph in re.split(r"\n\s*\n", text):
+        cleaned = normalize_whitespace(paragraph)
+        if not cleaned:
+            continue
+        if re.fullmatch(r"(?:[-*]\s*)?(?:TODO|TBD)[:.]?.*", cleaned, re.IGNORECASE):
+            continue
+        if re.fullmatch(r"(?:output|scripts|tests|docs)/[A-Za-z0-9_./\\-]+", cleaned, re.IGNORECASE):
+            continue
+        if len(re.findall(r"[A-Za-z]+", cleaned)) >= 10:
+            return True
+    return False
+
+
+def strip_tex_nonprose(content: str) -> str:
+    stripped = re.sub(r"\\begin\{exe\}.*?\\end\{exe\}", "", content, flags=re.DOTALL)
+    stripped = re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", "", stripped, flags=re.DOTALL)
+    stripped = re.sub(r"\\begin\{itemize\}.*?\\end\{itemize\}", "", stripped, flags=re.DOTALL)
+    stripped = re.sub(r"\\begin\{enumerate\}.*?\\end\{enumerate\}", "", stripped, flags=re.DOTALL)
+    stripped = re.sub(r"\\(?:label|hypertarget|protect|phantomsection)\{[^}]*\}", "", stripped)
+    stripped = re.sub(r"\\glossquote\{([^}]*)\}", r"\1", stripped)
+    stripped = re.sub(r"\\tdim\{([^}]*)\}", r"\1", stripped)
+    stripped = re.sub(r"\\tdimword\{([^}]*)\}", r"\1", stripped)
     stripped = re.sub(r"\\(?:[A-Za-z@]+)(?:\[[^\]]*\])?(?:\{[^{}]*\})?", "", stripped)
-    return bool(re.search(r"[A-Za-z0-9]", stripped))
+    return stripped
 
 
 def extract_pdf_text(pdf_path: Path) -> str:
@@ -252,6 +310,7 @@ def collect_example_records(markdown_text: str, bible: dict[str, str]) -> list[E
     lines = markdown_text.splitlines()
     records: list[ExampleRecord] = []
     stack: list[tuple[int, str]] = []
+    supplement_rows = assembler.load_normalization_supplements()
     index = 0
 
     while index < len(lines):
@@ -268,25 +327,28 @@ def collect_example_records(markdown_text: str, bible: dict[str, str]) -> list[E
 
         parsed_example, next_index = assembler.parse_example_at(lines, index)
         if parsed_example:
-            contextual_source = assembler.find_contextual_example_source(lines, index)
-            example_for_resolution = parsed_example
-            if contextual_source and not parsed_example.source:
-                example_for_resolution = assembler.ParsedExample(
-                    label=parsed_example.label,
-                    source=contextual_source,
-                    tedim=parsed_example.tedim,
-                    segmentation=parsed_example.segmentation,
-                    gloss=parsed_example.gloss,
-                    translation=parsed_example.translation,
-                )
+            heading_path = tuple(title for _, title in stack)
+            resolution = assembler.resolve_example_source_metadata(
+                parsed_example,
+                lines,
+                index,
+                bible,
+                supplement_rows,
+                heading_path,
+            )
             records.append(
                 ExampleRecord(
                     label=parsed_example.label,
-                    source=assembler.resolve_example_source(example_for_resolution, bible),
-                    header_source=parsed_example.source,
-                    contextual_source=contextual_source,
-                    heading_path=tuple(title for _, title in stack),
+                    source=resolution.resolved_source,
+                    header_source=resolution.header_source,
+                    contextual_source=resolution.contextual_source,
+                    supplement_sources=resolution.supplement_sources,
+                    inferred_source=resolution.inferred_source,
+                    heading_path=heading_path,
                     preceding_prose=assembler.extract_preceding_prose(lines, index),
+                    explicit_no_source=resolution.explicit_no_source,
+                    require_source=resolution.require_source,
+                    conflict_message=resolution.conflict_message,
                 )
             )
             index = next_index
@@ -338,6 +400,53 @@ def first_prose_occurrence_has_gloss(section_text: str, form: str, allowed_gloss
     return any(re.search(rf"['`][^'\n`]*{gloss}[^'\n`]*['`]", window, re.IGNORECASE) for gloss in allowed_glosses)
 
 
+def iter_tex_blocks_for_section(tex_blocks: list[TexBlock], section_title: str) -> list[TexBlock]:
+    collected: list[TexBlock] = []
+    in_section = False
+    for block in tex_blocks:
+        if block.level == 2 and block.title == section_title:
+            in_section = True
+            collected = [block]
+            continue
+        if in_section and block.level <= 2:
+            break
+        if in_section:
+            collected.append(block)
+    return collected
+
+
+def strip_tex_examples_tables_and_lists(content: str) -> str:
+    stripped = re.sub(r"\\begin\{exe\}.*?\\end\{exe\}", "", content, flags=re.DOTALL)
+    stripped = re.sub(r"\\begin\{longtable\}.*?\\end\{longtable\}", "", stripped, flags=re.DOTALL)
+    stripped = re.sub(r"\\begin\{itemize\}.*?\\end\{itemize\}", "", stripped, flags=re.DOTALL)
+    stripped = re.sub(r"\\begin\{enumerate\}.*?\\end\{enumerate\}", "", stripped, flags=re.DOTALL)
+    return stripped
+
+
+def find_first_missing_tex_gloss(
+    section_title: str,
+    section_blocks: list[TexBlock],
+    form: str,
+    allowed_glosses: tuple[str, ...],
+    suggested_gloss: str,
+) -> str | None:
+    tdim_pattern = re.compile(rf"\\tdim\{{{re.escape(form)}\}}", re.IGNORECASE)
+    for block in section_blocks:
+        prose = strip_tex_examples_tables_and_lists(block.content)
+        match = tdim_pattern.search(prose)
+        if not match:
+            continue
+        window = prose[match.end() : match.end() + 140]
+        if any(re.search(rf"\\glossquote\{{[^}}]*{gloss}[^}}]*\}}", window, re.IGNORECASE) for gloss in allowed_glosses):
+            return None
+        line_number = block.start_line + prose[: match.start()].count("\n")
+        return (
+            f"Unglossed running-prose form `{form}` in {section_title} near TeX line {line_number}; "
+            f"suggested gloss `{suggested_gloss}`"
+        )
+    return None
+
+
 def source_category(reference: str) -> str:
     for book in NT_BOOKS:
         if reference.startswith(book + " "):
@@ -377,7 +486,11 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
     for example in examples:
         if example.label == "review-preview-warning":
             continue
+        if example.conflict_message:
+            issues.append(example.conflict_message)
         glt_line = tex_examples.get(example.label, "")
+        if example.require_source and not example.source and not example.explicit_no_source:
+            issues.append(f"Example {example.label} requires a source in grammar-facing mode but none was resolved.")
         if example.source and f"({example.source})" not in glt_line:
             issues.append(f"Example {example.label} is missing its source on the \\glt line: {example.source}")
         if example.contextual_source and not example.header_source and not example.source:
@@ -387,6 +500,11 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
         if example.contextual_source and not example.header_source and f"({example.contextual_source})" not in glt_line:
             issues.append(
                 f"Example {example.label} still relies on preceding prose for its source instead of the \\glt line: {example.contextual_source}"
+            )
+        if example.supplement_sources and not any(f"({source})" in glt_line for source in example.supplement_sources):
+            issues.append(
+                f"Example {example.label} is missing its normalization-supplement source on the \\glt line: "
+                + ", ".join(example.supplement_sources)
             )
 
     section_blocks = {
@@ -412,9 +530,17 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
         if categories and categories != {"OT", "NT"}:
             issues.append(f"Section {section_title} does not yet show both OT and NT example coverage.")
 
-        for form, allowed_glosses in GLOSSARY_REQUIREMENTS.items():
-            if not first_prose_occurrence_has_gloss(block.content, form, allowed_glosses):
-                issues.append(f"Section {section_title} does not gloss the first prose mention of `{form}`.")
+        tex_section_blocks = iter_tex_blocks_for_section(tex_blocks, section_title)
+        for form, (allowed_glosses, suggested_gloss) in GLOSSARY_REQUIREMENTS.items():
+            missing_gloss_issue = find_first_missing_tex_gloss(
+                section_title,
+                tex_section_blocks,
+                form,
+                allowed_glosses,
+                suggested_gloss,
+            )
+            if missing_gloss_issue:
+                issues.append(missing_gloss_issue)
 
     for block in markdown_blocks:
         if block.level != 3 or not block.parent_titles:
@@ -428,6 +554,19 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
             issues.append(
                 f"Subsection {block.parent_titles[-1]} > {block.title} has one formal example without an explicit note."
             )
+        subsection_examples = [
+            example
+            for example in examples
+            if len(example.heading_path) >= 2
+            and example.heading_path[-1] == block.title
+            and example.heading_path[-2] == block.parent_titles[-1]
+            and example.source
+        ]
+        if subsection_examples and all(example.source.startswith("Genesis ") for example in subsection_examples):
+            if not ONE_EXAMPLE_NOTE_RE.search(block.content):
+                issues.append(
+                    f"Subsection {block.parent_titles[-1]} > {block.title} uses Genesis-only examples without an explicit explanation."
+                )
 
     if r"\newcommand{\glossquote}[1]{`#1'}" not in tex:
         issues.append(r"Missing \glossquote macro in generated TeX.")

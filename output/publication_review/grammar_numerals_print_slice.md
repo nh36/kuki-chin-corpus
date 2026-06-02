@@ -73,7 +73,7 @@ b. Segmentation: kum | sawm | le | nih
 c. Gloss: year | ten | and | two
 d. Translation: 'twelve years'
 
-These two rows are enough to support a modest decimal-composition claim. `Sawmkua` shows a clean compound-ten pattern and keeps numeral-side `kua = nine` visible in a securely numeral context. `Kum sawm le nih` shows that a counted noun can also host a larger compound numeral in Gospel material, which helps the section avoid becoming a grammar of Genesis.
+These two rows are enough to support a modest decimal-composition claim. `Sawmkua` shows a clean compound-ten pattern and keeps numeral-side `kua = nine` visible in a securely numeral context. `Kum sawm le nih` 'twelve years' shows that a counted noun can also host a larger compound numeral in Gospel material, which helps the section avoid becoming a grammar of Genesis.
 
 The section should still stop short of a full typology of every higher numeral pattern. The report mentions wider two-digit and larger-number combinations, but the present normalized section only promotes the best checked examples.
 
@@ -127,7 +127,7 @@ d. Translation: 'four days'
 
 These are clean counted-noun examples, and they justify a real publication-facing statement that noun-plus-numeral order is well supported. The normalized section should still avoid overclaiming a complete typology of numeral placement. The broader report layer contains more patterns, and the literature discusses wider numeral syntax, but the checked publication-facing section should stop at what the current examples support directly.
 
-The Gospel search for this pilot found good counted-noun examples such as `ni li` and `kum sawm le nih`. That is enough to improve source balance. It does **not** mean that every numeral construction in the section now has an equally good Gospel counterpart.
+The Gospel search for this pilot found good counted-noun examples such as `ni li` 'four days' and `kum sawm le nih` 'twelve years'. That is enough to improve source balance. It does **not** mean that every numeral construction in the section now has an equally good Gospel counterpart.
 
 # Classifier-like and counting expressions
 
@@ -143,7 +143,7 @@ d. Translation: 'ten times'
 
 The generated report paraphrases this as `vei sawm`, but the current analyzer export preserves the fused form `sawmvei`. That export-backed `sawmvei` form means the fused form should control the present slice.
 
-`Mi khat` remains valuable boundary evidence:
+`Mi khat` 'one person / a person' remains valuable boundary evidence:
 
 (@ex:num-mi-khat) Genesis 32:24
 a. Tedim: mi khat
@@ -162,6 +162,8 @@ The classifier-like material can therefore be summarized cautiously:
 | `pa`, `nu`, `zat`, `tei` | deferred | promising report/literature material, but not normalized in this pass |
 
 This means the section can talk about classifier-like and counting expressions without pretending that the full classifier system has already been normalized. It also means the section does not start a quantifiers retrofit here.
+
+No equally clean Gospel classifier-like example is currently used here, so the subsection keeps the compact OT anchors while the broader classifier-like inventory remains explicitly delimited.
 
 # Distributive numerals
 

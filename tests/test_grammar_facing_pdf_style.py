@@ -172,21 +172,128 @@ d. Translation: The people of Anathoth were one hundred twenty-eight.
     assert r"\glt \glossquote{The people of Anathoth were one hundred twenty-eight.} (Ezra 2:23)" in latex
 
 
+@pytest.mark.parametrize(
+    ("lead_in", "expected_source"),
+    [
+        ("In Ezra 2:23, the numeral appears in a simple counting clause.", "Ezra 2:23"),
+        ("Ezra 2:23 gives a compact counting phrase.", "Ezra 2:23"),
+        ("Genesis 5:1 supplies the proximal demonstrative anchor.", "Genesis 5:1"),
+        ("Matthew 2:4 shows the agentive-marked NP clearly.", "Matthew 2:4"),
+        ("Luke 2:1 gives a clean noun-plus-quantifier phrase.", "Luke 2:1"),
+        ("John 11:39 gives a counted noun phrase.", "John 11:39"),
+        ("Mark 6:34 supplies the quantity phrase.", "Mark 6:34"),
+    ],
+)
+def test_grammar_facing_contextual_source_patterns_are_attached_before_tex_generation(
+    lead_in: str, expected_source: str
+) -> None:
+    markdown = f"""
+## Numerals
+
+{lead_in}
+
+(@ex:quality-gate-context)
+a. Tedim: Anathoth mite, zakhat sawmnih-le-giat.
+b. Segmentation: Anathoth mite za-khat sawm-nih le giat
+c. Gloss: Anathoth people hundred-one ten-two and eight
+d. Translation: The people of Anathoth were one hundred twenty-eight.
+""".strip()
+
+    bible = assembler.load_bible(BIBLE_PATH)
+    enriched = assembler.enrich_example_headers(markdown, bible)
+
+    assert f"(@ex:quality-gate-context) {expected_source}" in enriched
+
+
+def test_grammar_facing_tsv_source_is_attached_before_tex_generation() -> None:
+    markdown = """
+## Quantifiers
+
+The noun-plus-quantifier boundary is illustrated again here.
+
+(@ex:quality-gate-tsv)
+a. Tedim: mi khat
+b. Segmentation: mi | khat
+c. Gloss: person | one
+d. Translation: a man / one person
+""".strip()
+
+    bible = assembler.load_bible(BIBLE_PATH)
+    enriched = assembler.enrich_example_headers(markdown, bible)
+    example = assembler.parse_examples(enriched)[0]
+    latex = assembler.example_to_latex_block(example, bible, _tone_dict())
+
+    assert "(@ex:quality-gate-tsv) Genesis 32:24" in enriched
+    assert r"\glt \glossquote{a man / one person} (Genesis 32:24)" in latex
+
+
+def test_grammar_facing_conflicting_example_sources_fail_loudly() -> None:
+    markdown = """
+## Quantifiers
+
+(@ex:quality-gate-conflict) Genesis 1:1
+a. Tedim: mi khat
+b. Segmentation: mi | khat
+c. Gloss: person | one
+d. Translation: a man / one person
+""".strip()
+
+    bible = assembler.load_bible(BIBLE_PATH)
+
+    with pytest.raises(RuntimeError, match=r"Conflicting example sources for ex:quality-gate-conflict: .*Genesis 1:1.*Genesis 32:24"):
+        assembler.enrich_example_headers(markdown, bible)
+
+
 def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> None:
     expectations = {
         "Numerals": ("khat", "nih", "sawm", "kua"),
         "Quantifiers": ("khempeuh", "pawlkhat", "kuamah", "bangmah", "tampi"),
-        "NP structure / possession": ("hih", "mi", "mite", "ni", "kum"),
-        "Noun domain": ("gam", "aksi", "aksi-te", "mi", "mite"),
-        "Case marking": ("-ah", "-in", "-pan", "-tawh"),
+        "NP structure / possession": ("hih", "mi", "mi khat", "ni li", "kum sawm le nih"),
+        "Noun domain": ("gam", "aksi", "aksi-te", "mi khempeuh", "Abraham' suan David"),
+        "Case marking": ("-ah", "-in", "-pan", "-panin", "-tawh", "khua-ah", "Kain in", "lakpan"),
     }
 
     for section_title, forms in expectations.items():
         block = _section_blocks()[section_title]
         for form in forms:
             assert gate.first_prose_occurrence_has_gloss(
-                block.content, form, gate.GLOSSARY_REQUIREMENTS[form]
+                block.content, form, gate.GLOSSARY_REQUIREMENTS[form][0]
             ), f"{section_title} does not gloss the first prose mention of {form!r}"
+
+
+def test_grammar_facing_tex_gloss_lint_rejects_unglossed_running_prose_forms() -> None:
+    bad_block = gate.TexBlock(
+        level=3,
+        title="Quantifiers and noun phrase structure",
+        parent_titles=("Quantifiers",),
+        content=r"\tdim{mi khat} remains a boundary row in the discussion.",
+        start_line=100,
+    )
+    good_block = gate.TexBlock(
+        level=3,
+        title="Quantifiers and noun phrase structure",
+        parent_titles=("Quantifiers",),
+        content=r"\tdim{mi khat} \glossquote{one person / a person} remains a boundary row in the discussion.",
+        start_line=100,
+    )
+
+    assert gate.find_first_missing_tex_gloss(
+        "Quantifiers",
+        [bad_block],
+        "mi khat",
+        gate.GLOSSARY_REQUIREMENTS["mi khat"][0],
+        gate.GLOSSARY_REQUIREMENTS["mi khat"][1],
+    )
+    assert (
+        gate.find_first_missing_tex_gloss(
+            "Quantifiers",
+            [good_block],
+            "mi khat",
+            gate.GLOSSARY_REQUIREMENTS["mi khat"][0],
+            gate.GLOSSARY_REQUIREMENTS["mi khat"][1],
+        )
+        is None
+    )
 
 
 def test_grammar_facing_quote_handling_is_clean_and_tedim_apostrophes_survive() -> None:
@@ -215,6 +322,28 @@ def test_grammar_facing_one_example_subsections_have_visible_explanations() -> N
             offenders.append(f"{block.parent_titles[-1]} > {block.title}")
 
     assert not offenders, f"One-example subsections need an explicit grammar-facing note: {offenders}"
+
+
+def test_grammar_facing_genesis_only_subsections_have_visible_explanations() -> None:
+    offenders = []
+    bible = assembler.load_bible(BIBLE_PATH)
+    examples = gate.collect_example_records(_text(), bible)
+    for block in gate.split_markdown_blocks(_text()):
+        if block.level != 3 or not block.parent_titles or block.parent_titles[-1] not in gate.TARGET_SECTION_TITLES:
+            continue
+        subsection_examples = [
+            example
+            for example in examples
+            if len(example.heading_path) >= 2
+            and example.heading_path[-1] == block.title
+            and example.heading_path[-2] == block.parent_titles[-1]
+            and example.source
+        ]
+        if subsection_examples and all(example.source.startswith("Genesis ") for example in subsection_examples):
+            if not gate.ONE_EXAMPLE_NOTE_RE.search(block.content):
+                offenders.append(f"{block.parent_titles[-1]} > {block.title}")
+
+    assert not offenders, f"Genesis-only subsections need an explicit explanation: {offenders}"
 
 
 def test_grammar_facing_normalized_sections_keep_tables_examples_and_caveats() -> None:
