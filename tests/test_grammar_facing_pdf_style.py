@@ -251,6 +251,7 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
         "NP structure / possession": ("hih", "mi", "mi khat", "ni li", "kum sawm le nih"),
         "Noun domain": ("gam", "aksi", "aksi-te", "mi khempeuh", "Abraham' suan David"),
         "Case marking": ("-ah", "-in", "-pan", "-panin", "-tawh", "khua-ah", "Kain in", "lakpan"),
+        "Relators / postpositions": ("sung", "tung", "kiang", "lak", "pualam", "sungah", "tungah", "kiangah", "lakpan"),
     }
 
     for section_title, forms in expectations.items():

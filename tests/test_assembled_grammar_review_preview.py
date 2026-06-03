@@ -391,6 +391,23 @@ def test_assembled_preview_includes_normalized_case_marking_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_relators_postpositions_section() -> None:
+    text = _text()
+
+    for required in (
+        "Relators / postpositions",
+        "Overview of relators and postpositions",
+        "Current relator / postposition inventory",
+        "Spatial relator nouns",
+        "Relator plus case-like marking",
+        "Postpositional phrase structure",
+        "Case-marking boundary",
+        "Possession and NP-structure boundary",
+        "Deferred and boundary material",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -458,6 +475,59 @@ def test_assembled_preview_case_examples_include_old_testament_and_gospel_source
 
     assert "(Genesis 4:3)" in tex or "(Genesis 11:28)" in tex or "(Genesis 24:23)" in tex
     assert "(Matthew 2:4)" in tex or "(Matthew 8:8)" in tex or "(Luke 2:11)" in tex or "(Matthew 5:19)" in tex
+
+
+def test_assembled_preview_tex_includes_normalized_relators_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:rel-") >= 6
+    assert tex.count("\\label{ex:rel-") >= 6
+
+    for required in (
+        "Current relator / postposition inventory",
+        "Spatial relator nouns",
+        "Relator plus case-like marking",
+        "Postpositional phrase structure",
+        "sungah",
+        "tungah",
+        "kiangah",
+        "lakpan",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "Current relator / postposition inventory",
+        "Spatial relator nouns",
+        "Relator plus case-like marking",
+        "lakpan",
+        "from among the women",
+        "from the Father",
+    ):
+        assert required.lower() in pdf_normalized
+
+
+def test_assembled_preview_tex_keeps_relators_example_sources_after_translation() -> None:
+    assert "(Mark 2:2)" in _tex_example_block("ex:rel-pualam-kongkhak")
+    assert "(Genesis 24:11)" in _tex_example_block("ex:rel-pualam-khuapi")
+    assert "(Luke 2:11)" in _tex_example_block("ex:rel-sungah-david-khuapi")
+    assert "(Genesis 1:2)" in _tex_example_block("ex:rel-tungah-tua-tui")
+    assert "(Genesis 2:19)" in _tex_example_block("ex:rel-kiangah-mipa")
+    assert "(Matthew 5:19)" in _tex_example_block("ex:rel-lakpan")
+    assert "(John 6:45)" in _tex_example_block("ex:rel-kiang-panin-pa")
+    assert "(Exodus 2:7)" in _tex_example_block("ex:rel-lak-panin-numeite")
+
+
+def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 24:11)" in tex or "(Genesis 1:2)" in tex or "(Genesis 2:19)" in tex or "(Exodus 2:7)" in tex
+    assert "(Mark 2:2)" in tex or "(Luke 2:11)" in tex or "(Matthew 5:19)" in tex or "(John 6:45)" in tex or "no equally clean Gospel" in text
 
 
 def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:
@@ -597,6 +667,10 @@ def test_assembled_preview_tex_glosses_multiword_running_prose_forms_in_normaliz
         r"\tdim{khua-ah} \glossquote{in the town}",
         r"\tdim{Kain in} \glossquote{Cain as agent}",
         r"\tdim{lakpan} \glossquote{from among}",
+        r"\tdim{sung} \glossquote{inside}",
+        r"\tdim{kiang} \glossquote{beside / near}",
+        r"\tdim{pualam} \glossquote{outside}",
+        r"\tdim{sungah} \glossquote{inside / in}",
         r"\tdim{Abraham' suan David} \glossquote{David, descendant of Abraham}",
     ):
         assert required in tex

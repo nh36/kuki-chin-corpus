@@ -22,6 +22,7 @@ TARGET_SECTION_TITLES = {
     "NP structure / possession",
     "Noun domain",
     "Case marking",
+    "Relators / postpositions",
 }
 NT_BOOKS = {
     "Matthew",
@@ -125,7 +126,13 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "lakpan": ((r"from among",), "from among"),
     "sungah": ((r"inside|in",), "inside / in"),
     "tungah": ((r"on|upon",), "on / upon"),
-    "kiangah": ((r"beside|near",), "beside / near"),
+    "kiangah": ((r"beside|near|side / vicinity|side|vicinity",), "beside / near"),
+    "sung": ((r"inside|within",), "inside"),
+    "tung": ((r"on|upon|above",), "on / upon"),
+    "kiang": ((r"beside|near|side / vicinity|side|vicinity",), "beside / near"),
+    "lak": ((r"among|midst|between",), "among / midst"),
+    "pualam": ((r"outside|exterior",), "outside"),
+    "tawh": ((r"with",), "with"),
     "na pa' inn-ah": ((r"in (?:thy|your father'?s) house",), "in your father's house"),
     "Abraham' suan David": ((r"David, descendant of Abraham",), "David, descendant of Abraham"),
     "minam": ((r"nation|people-group",), "nation / people-group"),

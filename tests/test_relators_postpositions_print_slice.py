@@ -9,32 +9,21 @@ def _text() -> str:
     return SLICE_PATH.read_text(encoding="utf-8")
 
 
-def test_relators_postpositions_print_slice_exists_and_names_controlling_evidence() -> None:
-    text = _text()
-
-    assert SLICE_PATH.exists()
-    assert "candidates_relators_postpositions.tsv" in text
-    assert "dossier_relators_postpositions_scope.md" in text
-
-
-def test_relators_postpositions_print_slice_names_case_marking_boundary_control() -> None:
+def test_relators_postpositions_print_slice_exists_and_is_grammar_facing() -> None:
     text = _text()
     lower = text.lower()
 
-    for required in (
-        "candidates_case_marking.tsv",
-        "dossier_case_marking.md",
-        "grammar_case_marking_print_slice.md",
-        "dictionary_case_markers_print_slice.md",
-        "review_notes_case_marking.md",
-    ):
-        assert required in text
-
-    assert "boundary control" in lower
-    assert "not a rewrite of the case-marking packet" in lower
+    assert SLICE_PATH.exists()
+    assert "Current relator / postposition inventory" in text
+    assert "Spatial relator nouns" in text
+    assert "Relator plus case-like marking" in text
+    assert "Several issues remain outside the present account." in text
+    assert "# Editorial scope" not in text
+    for forbidden in ("candidate tsv", "dossier", "review notes", "packet", "print slice", "publication-review"):
+        assert forbidden not in lower
 
 
-def test_relators_postpositions_print_slice_covers_core_relator_noun_anchors() -> None:
+def test_relators_postpositions_print_slice_keeps_core_forms_visible() -> None:
     text = _text()
 
     for required in (
@@ -43,48 +32,9 @@ def test_relators_postpositions_print_slice_covers_core_relator_noun_anchors() -
         "sung",
         "tung",
         "pualam",
-    ):
-        assert required in text
-
-    assert "relational nouns or relational stems" in text
-    assert "not simply bare case suffixes" in text
-
-
-def test_relators_postpositions_print_slice_keeps_postpositions_boundary_controlled() -> None:
-    text = _text()
-
-    for required in ("pan", "panin", "tawh"):
-        assert required in text
-
-    assert "separate or relator-hosted source postposition" in text
-    assert "source form with structural caution" in text
-    assert "separate accompaniment or associative postposition" in text
-
-
-def test_relators_postpositions_print_slice_keeps_boundary_material_out_of_core_claims() -> None:
-    text = _text()
-    lower = text.lower()
-
-    for required in (
-        "nuai",
-        "mai",
-        "tawhin",
-        "kiangah",
         "sungah",
         "tungah",
+        "kiangah",
         "lakpan",
-        "kipan",
-        "kipanin",
     ):
         assert required in text
-
-    assert "raw report counts are not evidence" in lower
-    assert "deferred or boundary-only" in lower
-
-
-def test_relators_postpositions_print_slice_does_not_claim_later_surfaces_exist() -> None:
-    text = _text()
-
-    assert "dictionary_relators_postpositions_print_slice.md" in text
-    assert "review_notes_relators_postpositions.md" in text
-    assert "ready for human review at the current slice maturity level" in text

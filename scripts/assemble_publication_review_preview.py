@@ -256,6 +256,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "NP structure / possession",
     "Noun domain",
     "Case marking",
+    "Relators / postpositions",
 }
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
@@ -264,6 +265,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_np_possession_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_noun_domain_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_case_marking_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_relators_postpositions_normalization.tsv",
 )
 GRAMMAR_FACING_INTERNAL_SECTION_TITLES = {"Scope", "Editorial scope"}
 GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
@@ -286,6 +288,10 @@ GRAMMAR_FACING_SECTION_INTROS = {
     "Case marking": (
         "The current case evidence centers on `-ah` 'locative / goal-like' and `-in` 'ergative / agentive', "
         "while `-pan` 'source / ablative', `-panin` 'source / departure', and `-tawh` 'with' remain more cautious oblique extensions."
+    ),
+    "Relators / postpositions": (
+        "The current evidence supports relational nouns such as `sung` 'inside', `tung` 'on / upon', "
+        "`kiang` 'beside / near', and `lak` 'among / midst', together with postpositional source patterns that close the larger phrase."
     ),
     "Numerals": (
         "The current numeral evidence supports a decimal system with basic cardinals, counted noun phrases, "
