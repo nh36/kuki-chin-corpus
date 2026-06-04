@@ -12,41 +12,35 @@ def test_tam_print_slice_exists_and_names_controlling_evidence() -> None:
     text = _text()
 
     assert SLICE_PATH.exists()
-    assert "candidates_tam.tsv" in text
-    assert "dossier_tam_scope.md" in text
-    assert "controlled by `candidates_tam.tsv` and `dossier_tam_scope.md`" in text
-    assert "It is not a full TAM chapter." in text
+    assert "Current TAM inventory" in text
+    assert "Several issues remain outside the present account." in text
 
 
 def test_tam_print_slice_limits_first_slice_anchors_to_selected_compact_forms() -> None:
     text = _text()
 
     for required in (
-        "paingei",
-        "neigige",
-        "paizel",
-        "kilawmta",
-        "bawlzo",
-        "hongpaikik",
-        "omding",
-        "bawlthei",
+        "-ngei",
+        "-gige",
+        "-zel",
+        "-ta",
+        "-zo",
+        "-kik",
+        "-ding",
+        "-thei",
     ):
         assert required in text
 
-    assert "The first-slice TAM anchors are limited to `-ngei`, `-gige`, `-zel`, `-ta`, `-zo`, `-kik`, `-ding`, and `-thei`" in text
+    assert "| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |" in text
 
 
 def test_tam_print_slice_keeps_required_caveats_explicit() -> None:
     text = _text()
     lower = text.lower()
 
-    assert "broader continuative aspect" in lower
-    assert "construction-controlled" in lower
-    assert "sentence-final overlap caveat" in lower
-    assert "bare `zo`" in text
-    assert "motion/return chapter" in lower
-    assert "dingin and clause-bound caveat" in lower
-    assert "negation/irrealis-stack caveat" in lower
+    assert "sentence-final particles" in lower
+    assert "directionals and vp structure" in lower
+    assert "clause-bound `dingin`" in lower
     assert "khiathei ding om lo" in text
 
 
@@ -67,13 +61,13 @@ def test_tam_print_slice_keeps_overlap_and_deferred_material_out_of_scope() -> N
     ):
         assert required in text
 
-    assert "remain out of this first grammar slice" in lower
+    assert "outside the present account" in lower
 
 
 def test_tam_print_slice_does_not_claim_later_tam_surfaces_exist() -> None:
     text = _text()
     lower = text.lower()
 
-    assert "dictionary slice now exists" in lower
-    assert "review-note work has not yet begun" in lower
-    assert "review notes now exist" not in lower
+    assert "candidate tsv" not in lower
+    assert "dossier" not in lower
+    assert "# Editorial scope" not in text

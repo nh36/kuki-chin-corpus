@@ -426,6 +426,25 @@ def test_assembled_preview_includes_normalized_directionals_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_tam_section() -> None:
+    text = _text()
+
+    for required in (
+        "TAM / aspect / modal",
+        "Overview of TAM / aspect / modal marking",
+        "Current TAM inventory",
+        "Perfect, completive, and change-of-state material",
+        "Habitual, continuative, and experiential aspect",
+        "Prospective and irrealis marking",
+        "Ability and modal marking",
+        "Repetition and return marking",
+        "Boundary with negation and sentence-final particles",
+        "Boundary with directionals and VP structure",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -564,6 +583,42 @@ def test_assembled_preview_tex_includes_normalized_directionals_inventory_and_ex
         assert required.lower() in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_tam_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:tam-") >= 8
+    assert tex.count("\\label{ex:tam-") >= 8
+
+    for required in (
+        "Current TAM inventory",
+        "Perfect, completive, and change-of-state material",
+        "Habitual, continuative, and experiential aspect",
+        "Prospective and irrealis marking",
+        "Ability and modal marking",
+        "Repetition and return marking",
+        "paingei",
+        "gige",
+        "ding",
+        "thei",
+        "kik",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "Current TAM inventory",
+        "Perfect, completive, and change-of-state material",
+        "Prospective and irrealis marking",
+        "Ability and modal marking",
+        "Repetition and return marking",
+    ):
+        assert required.lower() in pdf_normalized
+
+
 def test_assembled_preview_tex_keeps_relators_example_sources_after_translation() -> None:
     assert "(Mark 2:2)" in _tex_example_block("ex:rel-pualam-kongkhak")
     assert "(Genesis 24:11)" in _tex_example_block("ex:rel-pualam-khuapi")
@@ -585,6 +640,23 @@ def test_assembled_preview_tex_keeps_directionals_example_sources_after_translat
     assert "(Genesis 11:5)" in _tex_example_block("ex:dir-paisuk")
 
 
+def test_assembled_preview_tex_keeps_tam_example_sources_after_translation() -> None:
+    assert "(Exodus 1:12)" in _tex_example_block("ex:tam-kihta-exod1")
+    assert "(Matthew 4:4)" in _tex_example_block("ex:tam-nungta-matt4")
+    assert "(Exodus 34:27)" in _tex_example_block("ex:tam-bawlzo-exod34")
+    assert "(Matthew 7:14)" in _tex_example_block("ex:tam-zuizo-matt7")
+    assert "(Luke 4:16)" in _tex_example_block("ex:tam-paingei-luke4")
+    assert "(Psalms 33:15)" in _tex_example_block("ex:tam-gige-ps33")
+    assert "(Luke 20:20)" in _tex_example_block("ex:tam-gige-luke20")
+    assert "(Exodus 33:11)" in _tex_example_block("ex:tam-zel-exod33")
+    assert "(Genesis 2:17)" in _tex_example_block("ex:tam-ding-gen2")
+    assert "(Matthew 1:23)" in _tex_example_block("ex:tam-ding-matt1")
+    assert "(Genesis 41:16)" in _tex_example_block("ex:tam-thei-gen41")
+    assert "(Matthew 7:21)" in _tex_example_block("ex:tam-thei-matt7")
+    assert "(Genesis 3:19)" in _tex_example_block("ex:tam-kik-gen3")
+    assert "(Matthew 2:12)" in _tex_example_block("ex:tam-kik-matt2")
+
+
 def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
     tex = _tex_text()
     text = _text()
@@ -598,6 +670,13 @@ def test_assembled_preview_directionals_examples_include_old_testament_and_gospe
 
     assert "(Genesis 2:5)" in tex or "(Deuteronomy 9:4)" in tex or "(Numbers 9:17)" in tex or "(Ezra 9:9)" in tex
     assert "(Luke 9:51)" in tex or "(Luke 20:31)" in tex
+
+
+def test_assembled_preview_tam_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 2:17)" in tex or "(Genesis 3:19)" in tex or "(Exodus 1:12)" in tex or "(Exodus 34:27)" in tex
+    assert "(Matthew 1:23)" in tex or "(Matthew 2:12)" in tex or "(Matthew 4:4)" in tex or "(Matthew 7:14)" in tex or "(Matthew 7:21)" in tex or "(Luke 4:16)" in tex or "(Luke 20:20)" in tex
 
 
 def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:

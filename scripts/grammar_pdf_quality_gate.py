@@ -23,6 +23,7 @@ TARGET_SECTION_TITLES = {
     "Noun domain",
     "Case marking",
     "Relators / postpositions",
+    "TAM / aspect / modal",
     "Directionals",
 }
 GOSPEL_BOOKS = {
@@ -162,6 +163,19 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "piasawn": ((r"give toward|extend to us",), "give toward"),
     "paisuk": ((r"go down|came down",), "go down"),
     "tawplam": ((r"toward the side|at the edge|side",), "toward the side / at the edge"),
+    "-ta": ((r"completive / change-of-state|change-of-state|completive",), "completive / change-of-state"),
+    "-zo": ((r"already / completive|completive|already",), "already / completive"),
+    "-gige": ((r"habitually / always|habitually|always",), "habitually / always"),
+    "-zel": ((r"continuative / keep doing|continuative|keep doing",), "continuative / keep doing"),
+    "-ding": ((r"prospective / irrealis|prospective|irrealis|future-like",), "prospective / irrealis"),
+    "-thei": ((r"can / be able|can|be able",), "can / be able"),
+    "-kik": ((r"again / back|again|back",), "again / back"),
+    "-ngei": ((r"ever / experiential|ever|experiential",), "ever / experiential"),
+    "dingin": ((r"for .* to|clause-bound irrealis|purpose-like",), "for ... to / clause-bound irrealis"),
+    "pailai": ((r"go-midst|prospective candidate|prospective",), "go-midst / prospective candidate"),
+    "khia-ta": ((r"out-PFV|out plus completive|out",), "out-PFV"),
+    "bawlzoding": ((r"make-COMPL-IRR|make plus completive plus irrealis",), "make-COMPL-IRR"),
+    "bawlsakthei": ((r"make-CAUS-ABIL|make plus causative plus abilitative",), "make-CAUS-ABIL"),
 }
 
 

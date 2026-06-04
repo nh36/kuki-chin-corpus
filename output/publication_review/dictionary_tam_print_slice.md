@@ -14,7 +14,7 @@ Category: experiential suffix
 
 Gloss: experiential; have V-ed before
 
-Cross-reference: *Grammar review slice, "Experiential and habitual anchors"*
+Cross-reference: *Grammar review slice, "Habitual, continuative, and experiential aspect"*
 
 Status: draft-ready
 
@@ -32,7 +32,7 @@ Category: habitual suffix
 
 Gloss: habitual; regularly do
 
-Cross-reference: *Grammar review slice, "Experiential and habitual anchors"*
+Cross-reference: *Grammar review slice, "Habitual, continuative, and experiential aspect"*
 
 Status: draft-ready
 
@@ -50,7 +50,7 @@ Category: habitual-continuative suffix
 
 Gloss: habitual-continuative; keep doing
 
-Cross-reference: *Grammar review slice, "Experiential and habitual anchors"*
+Cross-reference: *Grammar review slice, "Habitual, continuative, and experiential aspect"*
 
 Status: usable with construction-control caveat
 
@@ -68,7 +68,7 @@ Category: perfective suffix
 
 Gloss: perfective; completed event
 
-Cross-reference: *Grammar review slice, "Compact aspectual anchors"*
+Cross-reference: *Grammar review slice, "Perfect, completive, and change-of-state material"*
 
 Status: usable only with sentence-final overlap caveat
 
@@ -86,7 +86,7 @@ Category: completive suffix
 
 Gloss: completive; finish V-ing
 
-Cross-reference: *Grammar review slice, "Compact aspectual anchors"*
+Cross-reference: *Grammar review slice, "Perfect, completive, and change-of-state material"*
 
 Status: usable only with bare-`zo` and sentence-final overlap caveat
 
@@ -104,7 +104,7 @@ Category: iterative suffix
 
 Gloss: iterative; again
 
-Cross-reference: *Grammar review slice, "Compact aspectual anchors"*
+Cross-reference: *Grammar review slice, "Repetition and return marking"*
 
 Status: usable with motion/return caveat
 
@@ -122,7 +122,7 @@ Category: irrealis / future / modal suffix
 
 Gloss: irrealis; future; modal
 
-Cross-reference: *Grammar review slice, "Compact modal anchors"*
+Cross-reference: *Grammar review slice, "Prospective and irrealis marking"*
 
 Status: usable only with clause-bound caveat
 
@@ -140,7 +140,7 @@ Category: abilitative suffix
 
 Gloss: abilitative; can; be able
 
-Cross-reference: *Grammar review slice, "Compact modal anchors"*
+Cross-reference: *Grammar review slice, "Ability and modal marking"*
 
 Status: usable only with negation/irrealis-stack caveat
 
