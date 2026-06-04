@@ -73,6 +73,8 @@ d. Translation: 'twelve years'
 
 These rows show that the pattern is not tied to a single lexical head. `Ni li` 'four days' and `kum sawm le nih` 'twelve years' both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` 'one person / a person' remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
 
+No equally clean Old Testament example is currently used for this construction, so the section keeps the compact Gospel anchors.
+
 # Quantifiers and nouns
 
 The quantifiers section already carries the fuller discussion of total, existential-like, and negative-licensed quantifier material. Here the relevant point is more limited: the cleanest checked quantifier rows also place the noun before the quantifier-like item.
@@ -90,6 +92,8 @@ c. Gloss: person | group-one
 d. Translation: 'some people'
 
 `Mi pawlkhat` and `mi tampi` (Mark 6:34) support the same general noun-plus-quantifier profile, although each keeps its own semantic caveats from the normalized quantifiers section. The current section therefore uses them as modest NP-order evidence rather than as a reopened quantifier chapter.
+
+No equally clean Old Testament example is currently used for this construction, so the section keeps the compact Gospel anchors.
 
 # Possession
 

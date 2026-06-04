@@ -130,7 +130,7 @@ d. Translation: in thy father's house
 
 This is enough to justify a boundary note, but not enough to settle the apostrophe analysis. The present section therefore does not settle whether the apostrophe material should be treated as a genitive suffix, a possessive linker, or an orthographic boundary convention. It only records that possessed noun phrases can participate in the same case-closing pattern that appears elsewhere in the nominal domain. The fuller discussion of possessive structure remains with the normalized NP structure / possession section.
 
-No equally good Gospel possessed NP with case-like closure is currently used here, so the subsection stays with the compact OT example while the wider possession discussion remains elsewhere.
+No equally good Gospel example of a possessed noun phrase with case-like closure is currently used here, so the subsection stays with the compact OT example while the wider possession discussion remains elsewhere.
 
 # Case marking and relators/postpositions
 
@@ -149,6 +149,8 @@ c. Gloss: among | ABL
 d. Translation: from among
 
 These rows belong here because they are case-like and NP-final. They also belong with the relators / postpositions section because the relational noun is part of the grammar, not just a carrier for a suffix. That is why forms such as `tungah` or `lakpan` should not be collapsed into case marking without candidate control. The best current solution is to let the two sections meet at the boundary rather than pretending the boundary does not exist.
+
+No equally clean Old Testament example is currently used for this construction, so the section keeps the compact Gospel anchors.
 
 # Case marking and argument structure
 

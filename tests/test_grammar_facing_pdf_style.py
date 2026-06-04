@@ -252,6 +252,23 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
         "Noun domain": ("gam", "aksi", "aksi-te", "mi khempeuh", "Abraham' suan David"),
         "Case marking": ("-ah", "-in", "-pan", "-panin", "-tawh", "khua-ah", "Kain in", "lakpan"),
         "Relators / postpositions": ("sung", "tung", "kiang", "lak", "pualam", "sungah", "tungah", "kiangah", "lakpan"),
+        "Directionals": (
+            "-khia",
+            "-khiat",
+            "-toh",
+            "-sawn",
+            "-suk",
+            "-lam",
+            "pokhia",
+            "nawhkhiat",
+            "kilaktoh",
+            "piasawn",
+            "paisuk",
+            "hotkhiatna",
+            "kahtohna",
+            "paitoh",
+            "tawplam",
+        ),
     }
 
     for section_title, forms in expectations.items():
@@ -325,7 +342,7 @@ def test_grammar_facing_one_example_subsections_have_visible_explanations() -> N
     assert not offenders, f"One-example subsections need an explicit grammar-facing note: {offenders}"
 
 
-def test_grammar_facing_genesis_only_subsections_have_visible_explanations() -> None:
+def test_grammar_facing_ot_only_subsections_have_visible_explanations() -> None:
     offenders = []
     bible = assembler.load_bible(BIBLE_PATH)
     examples = gate.collect_example_records(_text(), bible)
@@ -340,11 +357,26 @@ def test_grammar_facing_genesis_only_subsections_have_visible_explanations() -> 
             and example.heading_path[-2] == block.parent_titles[-1]
             and example.source
         ]
-        if subsection_examples and all(example.source.startswith("Genesis ") for example in subsection_examples):
+        zones = {gate.source_zone(example.source) for example in subsection_examples}
+        if subsection_examples and "Gospel" not in zones:
             if not gate.ONE_EXAMPLE_NOTE_RE.search(block.content):
                 offenders.append(f"{block.parent_titles[-1]} > {block.title}")
 
-    assert not offenders, f"Genesis-only subsections need an explicit explanation: {offenders}"
+    assert not offenders, f"OT-only subsections need an explicit explanation: {offenders}"
+
+
+def test_grammar_facing_sections_keep_old_testament_and_gospel_balance() -> None:
+    offenders = []
+    bible = assembler.load_bible(BIBLE_PATH)
+    examples = gate.collect_example_records(_text(), bible)
+
+    for section_title in gate.TARGET_SECTION_TITLES:
+        section_examples = [example for example in examples if section_title in example.heading_path and example.source]
+        zones = {gate.source_zone(example.source) for example in section_examples}
+        if section_examples and not {"OT", "Gospel"}.issubset(zones):
+            offenders.append(section_title)
+
+    assert not offenders, f"Sections need both OT and Gospel evidence: {offenders}"
 
 
 def test_grammar_facing_normalized_sections_keep_tables_examples_and_caveats() -> None:

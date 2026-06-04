@@ -7,137 +7,119 @@ suppress-bibliography: true
 reference-section-title: "References"
 ---
 
-# Scope
+# Overview of directional expressions
 
-This is a short print-facing draft section on directionals in Tedim Chin, controlled by `candidates_directionals.tsv` and `dossier_directionals.md`.
+The safest current claim is that this section treats a cautious subset of post-verbal directional morphology and directional-looking verbal derivatives, rather than the whole Tedim deictic system. The clearest anchors are `-khia` 'outward', `-khiat` 'away', `-toh` 'upward', `-sawn` 'toward', and `-suk` 'downward'. Forms such as `hotkhiatna` 'salvation' and `kahtohna` 'going up' show that the same morphology also appears inside nominalized material, while pre-verbal deictic markers such as `va-` 'away' and `hong-` 'toward the deictic center' remain better handled as a separate subsystem [@henderson1965; @zamngaihcing2017; @otsuka_kurabe_directional_affixes].
 
-It covers only a small candidate-backed set: outward `-khia`, anchored by `pokhia`; away `-khiat`, anchored by `nawhkhiat`; nominalized `-khiat-na` boundary material, represented by `hotkhiatna`; upward `-toh`, anchored by `kilaktoh`; nominalized `-toh-na` boundary material, represented by `kahtohna`; blocked comitative/accompany `-toh` overlap, represented by `paitoh`; direction/side/manner `-lam` boundary material, represented by `tawplam`; cautious toward `-sawn` evidence, represented by `piasawn`; downward `-suk` evidence, represented by `paisuk`; and deferred `-lut`, `-phei`, `-cip`, plus `-tang`.
+The section therefore keeps its descriptive scope modest. It focuses on forms that are transparent enough for grammar-facing prose now, while leaving broader motion-verb lexicon, deictic prefixing, and full verb-phrase stacking for later treatment.
 
-It does not yet attempt a full VP-slot chapter, a full TAM or aspect account, a full inventory from raw suffix counts, or a treatment of all lexicalized directional-looking forms. Dictionary and review-note slices have not yet begun.
+# Current directional inventory
 
-# Directionals in outline
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `-khia` | outward or outward-result direction | `pokhia` | well supported | should not be generalized from every orthographic `khia` sequence |
+| `-khiat` | away or out-of-domain direction | `nawhkhiat` | supported with caveat | analyzer-label caution remains relevant |
+| `-khiat-na` | nominalized away morphology | `hotkhiatna` | boundary material | not equivalent to a simple finite directional verb |
+| `-toh` | upward direction | `kilaktoh`, `a kilaktoh ding hun` | supported with caveat | blocked `paitoh` overlap prevents a blanket UP reading |
+| `-toh-na` | nominalized upward morphology | `kahtohna` | boundary material | nominalization keeps the directional segment visible without yielding a simple finite predicate |
+| `-sawn` | toward or toward-directed transfer | `piasawn`, `nausawn` | cautious support | easy hits drift into kinship-heavy or lexicalized domains |
+| `-suk` | downward direction | `paisuk` | supported with caveat | still represented by a narrow checked set |
+| `-lam` | sideward or direction-side material | `tawplam` | boundary material | too noun-like for a clean verbal directional analysis |
+| `paitoh` pattern | blocked overlap control | `paitoh` | excluded as a directional anchor | lexicalized accompany/comitative reading blocks a simple upward analysis |
 
-The current candidate-backed packet supports a narrow generalization. Directionals are visible here as suffixed verbal or verbal-derived forms in the candidate layer. The clearest first anchors are `pokhia`, `nawhkhiat`, `kilaktoh`, `piasawn`, and `paisuk`. Nominalized forms such as `hotkhiatna` and `kahtohna` are useful boundary evidence but are not identical to finite directional verbs. `-toh` requires an explicit comitative/accompany warning because `paitoh` is blocked as lexicalized `go-accompany`. `-lam` remains direction/side/manner boundary material rather than a clean simple verbal suffix in the current packet. `-lut`, `-phei`, `-cip`, and `-tang` remain deferred or not print-ready.
+The table also keeps `-lam` 'sideward / toward a side' and `paitoh` 'go-accompany' visible as boundary material rather than as core anchors. That boundary work matters because a grammar-facing section should show where directional evidence stops being clean, not only where it starts.
 
-# Outward `-khia`
+# Outward and away direction
 
-Genesis 2:5 supplies the cleanest current outward anchor:
+The clearest outward and away examples stay conservative. `Pokhia` 'grow out' shows outward orientation, while `nawhkhiat` 'drive out / hurry away' keeps away-directed `-khiat` visible in a compact verbal form. No equally clean Gospel example is currently used for this construction, so the section keeps the compact Old Testament anchors.
 
-(@ex:dir-khia-pokhia)
+(@ex:dir-pokhia) Genesis 2:5
 a. Tedim: pokhia
 b. Segmentation: po-khia
 c. Gloss: grow-out
-d. Translation: 'grew'
+d. Translation: grew out
 
-`Pokhia` is the cleanest current outward `-khia` anchor. It supports a modest print claim that `-khia` can mark outward motion or direction.
-
-That claim must stay narrow. The row does **not** license raw `khia` harvesting or a claim that every orthographic `khia` sequence is directional evidence.
-
-# Away `-khiat` and nominalized `-khiat-na`
-
-Deuteronomy 9:4 supplies the current away anchor:
-
-(@ex:dir-khiat-nawhkhiat)
+(@ex:dir-nawhkhiat) Deuteronomy 9:4
 a. Tedim: nawhkhiat
 b. Segmentation: nawh-khiat
 c. Gloss: hurry-away
-d. Translation: 'cast them out'
+d. Translation: drove them out
 
-`Nawhkhiat` is the current compact away `-khiat` anchor. It is accepted with caveat because the export still labels the selected lemma/POS as `nawh` / `N`. The example is therefore usable as construction-backed away evidence with an analyzer label caution, not as an uncomplicated finite-verb showcase.
+The same away morphology also surfaces in `hotkhiatna` 'salvation', but that form is nominalized and therefore belongs at the boundary between directional morphology and deverbal nominalization rather than as a second finite anchor.
 
-Future prose should keep `-khiat` construction-controlled rather than treating every `...khiat` token as the same directional claim.
+# Upward direction and directionals in the verb phrase
 
-Exodus 14:13 then keeps nominalized boundary material visible:
+Current evidence is strongest for `-toh` 'upward'. Numbers 9:17 gives the clearest compact Old Testament anchor.
 
-(@ex:dir-khiatna-hotkhiatna)
-a. Tedim: hotkhiatna
-b. Segmentation: hot-khiat-na
-c. Gloss: save-away-NMLZ
-d. Translation: 'salvation'
-
-`Hotkhiatna` keeps `-khiat-na` visible in the packet. It is nominalized boundary material and should not be treated as identical to a finite directional predicate.
-
-# Upward `-toh` and comitative/accompany overlap
-
-Numbers 9:17 supplies the current upward anchor:
-
-(@ex:dir-toh-kilaktoh)
+(@ex:dir-kilaktoh-num9) Numbers 9:17
 a. Tedim: kilaktoh
 b. Segmentation: ki-lak-toh
 c. Gloss: REFL-take-UP
-d. Translation: 'was taken up'
+d. Translation: was taken up
 
-`Kilaktoh` is the current upward `-toh` anchor. It is usable only with the packet's polysemy caveat: this row supports upward `-toh`, but it does not license a raw equation of `-toh = UP`.
+Luke 9:51 then shows the same upward material inside a larger verbal sequence:
 
-Blocked control:
+(@ex:dir-kilaktoh-luke9) Luke 9:51
+a. Tedim: a kilaktoh ding hun
+b. Segmentation: a | ki-lak-toh | ding | hun
+c. Gloss: 3SG | REFL-take-UP | IRR | time
+d. Translation: the time for him to be taken up
 
-> `paitoh`
+The Gospel row matters for more than source balance. It shows directional material after the verbal core and before `ding` 'irrealis / prospective', which supports a modest verb-phrase claim without turning this section into a full stacking analysis. At the same time, `paitoh` 'go-accompany' remains the necessary blocked control, and `kahtohna` 'going up' keeps upward morphology visible in nominalized form rather than in a simple finite predicate.
 
-`Paitoh` is blocked as comitative/accompany material. The analyzer tests treat it as lexicalized `go-accompany`, so the present grammar slice must not imply that every `-toh` token is upward-directional evidence. Upward `-toh` examples should therefore be paired with this explicit caveat.
+# Toward direction with `-sawn`
 
-Deuteronomy 32:50 also keeps nominalized `-toh-na` material visible:
+`Piasawn` 'give toward' is the clearest checked Old Testament row.
 
-(@ex:dir-tohna-kahtohna)
-a. Tedim: kahtohna
-b. Segmentation: kah-toh-na
-c. Gloss: climb-up-NMLZ
-d. Translation: 'the mount whither thou goest up' / 'going up'
-
-`Kahtohna` keeps `-toh-na` visible, but it is nominalized boundary material rather than a simple finite directional predicate.
-
-# Direction/side/manner `-lam`
-
-Genesis 30:9 keeps `-lam` visible:
-
-(@ex:dir-lam-tawplam)
-a. Tedim: tawplam
-b. Segmentation: tawp-lam
-c. Gloss: end-TOWARD
-d. Translation: 'left off' / 'at the end'
-
-`Tawplam` keeps `-lam` visible, but the export profile remains nominal (`tawp` / `N`). The safest present analysis is therefore direction/side/manner boundary material rather than a clean verbal directional suffix.
-
-This row should not be used to turn every `-lam` form into a simple verbal directional.
-
-# Toward `-sawn`
-
-Ezra 9:9 supplies the current cautious toward row:
-
-(@ex:dir-sawn-piasawn)
+(@ex:dir-piasawn) Ezra 9:9
 a. Tedim: piasawn
 b. Segmentation: pia-sawn
 c. Gloss: give-toward
-d. Translation: 'give us' / 'extend to us'
+d. Translation: extend to us
 
-`Piasawn` is the current cautious toward `-sawn` row. It is more useful than kinship-heavy or nominal-looking rows for this packet, but it still should stay construction-controlled. The current slice should not generalize from lexicalized, continuative-looking, or kinship-heavy `-sawn` material.
+Luke 20:31 provides a Gospel comparandum in `nausawn` 'elder-sibling-toward':
 
-# Downward `-suk`
+(@ex:dir-nausawn) Luke 20:31
+a. Tedim: nausawn
+b. Segmentation: na-u-sawn
+c. Gloss: 2SG-elder.sibling-toward
+d. Translation: took her in turn as an elder brother
 
-Genesis 11:5 supplies the first corpus-backed downward row:
+The Luke example is still kinship-heavy, so it remains a supporting comparandum rather than the main anchor. Even so, it confirms that toward-oriented `-sawn` material belongs in the present section, while wider kinship and lexicalization issues still require caution.
 
-(@ex:dir-suk-paisuk)
+# Downward direction with `-suk`
+
+`Paisuk` 'go down' gives the clearest checked downward row. No equally clean Gospel example is currently used for this construction, so the section keeps the compact Old Testament anchor. This construction is rare in the controlled evidence, so one example is used here and broader source balancing remains outside the present account.
+
+(@ex:dir-paisuk) Genesis 11:5
 a. Tedim: paisuk
 b. Segmentation: pai-suk
 c. Gloss: go-DOWN
-d. Translation: 'came down'
+d. Translation: came down
 
-`Paisuk` gives the packet a corpus-backed downward `-suk` row. Analyzer tests also support `-suk`, but print prose should rely on corpus-backed candidate rows rather than analyzer inventory alone.
+The row is compact, analyzable, and grammatically useful. It shows that downward `-suk` is part of the directional profile, but it does not justify a larger claim about every downward-looking verb in the language.
 
-# Deferred forms: `-lut`, `-phei`, `-cip`, `-tang`
+# Deictic boundary
 
-Several forms remain visible only as deferred or not print-ready controls in this first slice:
+Several directional meanings in Tedim are better described from the deictic center than from post-verbal suffixes alone. The literature discusses pre-verbal `va-` 'away' and `hong-` or `ong-` 'toward the speaker / venitive' as a separate subsystem [@henderson1965; @zamngaihcing2017; @otsuka_kurabe_directional_affixes]. The present section does not merge those markers with the post-verbal forms above, because the checked examples here are strongest for post-verbal or post-stem material rather than for a full deictic paradigm.
 
-- `uilut` keeps `-lut` visible but is not yet a clean print-safe inward anchor;
-- `paiphei` keeps `-phei` visible, but the current export gloss `go-enter` does not justify a clean horizontal claim;
-- `cip` remains lexical or analyzer-noise material rather than directional down evidence;
-- `tang` remains lexical or analyzer-noise material rather than endpoint-directional evidence.
+This also keeps the present section distinct from the demonstrative system. Directional perspective is clearly relevant, but the forms treated here are verbal rather than demonstrative.
 
-These forms remain deferred or not print-ready in this slice. They should not be promoted without cleaner analyzer-backed corpus rows.
+# TAM and VP-structure boundary
 
-# Editorial summary
+The present section also stops short of a full account of TAM or serial-like verbal sequencing. The upward Gospel row `a kilaktoh ding hun` 'the time for him to be taken up' shows that a directional element can stand before `ding` 'irrealis / prospective', but that single pattern is not enough to settle the full order of aspect, direction, TAM, and clause linkage.
 
-This slice safely supports seven modest claims: `-khia` is usable as outward evidence, anchored by `pokhia`; `-khiat` is usable as away evidence, anchored by `nawhkhiat`, with `-khiat-na` boundary material from `hotkhiatna`; `-toh` is usable as upward evidence, anchored by `kilaktoh`, but only with the `paitoh` comitative/accompany caveat; `-toh-na` remains visible through `kahtohna` as nominalized boundary material; `-lam` remains direction/side/manner boundary material; `-sawn` remains cautious toward evidence through `piasawn`; and `-suk` is now corpus-backed downward evidence through `paisuk`.
+Likewise, noun-like forms such as `hotkhiatna` 'salvation' and `kahtohna` 'going up' show why some directional-looking material belongs with nominalization or broader verb-phrase structure rather than with a simple inventory of finite directional suffixes.
 
-What remains deferred is equally important: raw generated-report counts, raw suffix harvesting, `paitoh` as upward `-toh`, nominalized `-na` forms as equivalent to finite directional verbs, `-lut`, `-phei`, `-cip`, and `-tang` as print-ready directionals, and broad TAM or VP-slot prose. Broad TAM, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
+# Deferred and boundary material
 
-The next step after this grammar slice is the dictionary print slice at `output/publication_review/dictionary_directionals_print_slice.md`. Dictionary and review-note work have not yet begun.
+Several issues remain outside the present account.
+
+- `tawplam` 'toward the side / at the edge' keeps `-lam` visible, but the form is still too noun-like for a clean verbal directional claim.
+- `paitoh` 'go-accompany' remains a blocked overlap row rather than upward evidence.
+- `uilut`, `paiphei`, `cip`, and `tang` are still too noisy or too weakly supported for the present account.
+- The section does not attempt a full lexicon of motion verbs, a full deictic paradigm, or a full suffix-order analysis.
+
+# Summary
+
+The safest grammar-facing conclusion is that Tedim directionals are currently best described through a small checked set of post-verbal forms. `-khia` 'outward', `-khiat` 'away', `-toh` 'upward', `-sawn` 'toward', and `-suk` 'downward' are all visible, but only `-toh` and `-sawn` currently show balanced Old Testament and Gospel formal examples in this section. The rest remains explicitly delimited by nominalization, deictic, or verb-phrase boundaries rather than expanded into a full directional chapter.

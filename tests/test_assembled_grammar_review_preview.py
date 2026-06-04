@@ -408,6 +408,24 @@ def test_assembled_preview_includes_normalized_relators_postpositions_section() 
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_directionals_section() -> None:
+    text = _text()
+
+    for required in (
+        "Directionals",
+        "Overview of directional expressions",
+        "Current directional inventory",
+        "Outward and away direction",
+        "Upward direction and directionals in the verb phrase",
+        "Toward direction with `-sawn`",
+        "Downward direction with `-suk`",
+        "Deictic boundary",
+        "TAM and VP-structure boundary",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -511,6 +529,41 @@ def test_assembled_preview_tex_includes_normalized_relators_inventory_and_exampl
         assert required.lower() in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_directionals_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:dir-") >= 5
+    assert tex.count("\\label{ex:dir-") >= 5
+
+    for required in (
+        "Current directional inventory",
+        "Outward and away direction",
+        "Upward direction and directionals in the verb phrase",
+        "Toward direction with",
+        "Downward direction with",
+        "pokhia",
+        "nawhkhiat",
+        "kilaktoh",
+        "piasawn",
+        "paisuk",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "Current directional inventory",
+        "Outward and away direction",
+        "kilaktoh",
+        "piasawn",
+        "came down",
+    ):
+        assert required.lower() in pdf_normalized
+
+
 def test_assembled_preview_tex_keeps_relators_example_sources_after_translation() -> None:
     assert "(Mark 2:2)" in _tex_example_block("ex:rel-pualam-kongkhak")
     assert "(Genesis 24:11)" in _tex_example_block("ex:rel-pualam-khuapi")
@@ -522,12 +575,29 @@ def test_assembled_preview_tex_keeps_relators_example_sources_after_translation(
     assert "(Exodus 2:7)" in _tex_example_block("ex:rel-lak-panin-numeite")
 
 
+def test_assembled_preview_tex_keeps_directionals_example_sources_after_translation() -> None:
+    assert "(Genesis 2:5)" in _tex_example_block("ex:dir-pokhia")
+    assert "(Deuteronomy 9:4)" in _tex_example_block("ex:dir-nawhkhiat")
+    assert "(Numbers 9:17)" in _tex_example_block("ex:dir-kilaktoh-num9")
+    assert "(Luke 9:51)" in _tex_example_block("ex:dir-kilaktoh-luke9")
+    assert "(Ezra 9:9)" in _tex_example_block("ex:dir-piasawn")
+    assert "(Luke 20:31)" in _tex_example_block("ex:dir-nausawn")
+    assert "(Genesis 11:5)" in _tex_example_block("ex:dir-paisuk")
+
+
 def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
     tex = _tex_text()
     text = _text()
 
     assert "(Genesis 24:11)" in tex or "(Genesis 1:2)" in tex or "(Genesis 2:19)" in tex or "(Exodus 2:7)" in tex
     assert "(Mark 2:2)" in tex or "(Luke 2:11)" in tex or "(Matthew 5:19)" in tex or "(John 6:45)" in tex or "no equally clean Gospel" in text
+
+
+def test_assembled_preview_directionals_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 2:5)" in tex or "(Deuteronomy 9:4)" in tex or "(Numbers 9:17)" in tex or "(Ezra 9:9)" in tex
+    assert "(Luke 9:51)" in tex or "(Luke 20:31)" in tex
 
 
 def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:

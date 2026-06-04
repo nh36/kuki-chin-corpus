@@ -117,7 +117,7 @@ d. Translation: 'many people'
 
 This is where the section can integrate quantity material without broadening uncontrollably. The original packet's `tampi tak` row is still the main quantity/degree anchor, but `mi tampi` gives the normalized section a cleaner noun-phrase example. The printed claim should therefore stay narrow: Tedim clearly allows noun-plus-quantifier or noun-plus-quantity combinations in at least some checked rows, but the present packet does not yet settle a full NP-ordering typology.
 
-No equally good second formal example is repeated here, because this subsection gathers the noun-plus-quantifier evidence already illustrated above rather than restaging each earlier construction.
+No equally clean Old Testament example is currently used for this construction, so the section keeps the compact Gospel anchor. This construction is rare in the controlled evidence, so one example is used here and broader source balancing remains outside the present account.
 
 # Deferred and boundary material
 

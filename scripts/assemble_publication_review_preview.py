@@ -257,6 +257,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Noun domain",
     "Case marking",
     "Relators / postpositions",
+    "Directionals",
 }
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
@@ -266,6 +267,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_noun_domain_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_case_marking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_relators_postpositions_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_directionals_normalization.tsv",
 )
 GRAMMAR_FACING_INTERNAL_SECTION_TITLES = {"Scope", "Editorial scope"}
 GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
@@ -300,6 +302,10 @@ GRAMMAR_FACING_SECTION_INTROS = {
     "Quantifiers": (
         "The current quantifier evidence centers on `khempeuh` 'all', `pawlkhat` 'some people', "
         "`kuamah` 'nobody', `bangmah` 'nothing', and noun-plus-quantifier phrases such as `mi tampi` 'many people'."
+    ),
+    "Directionals": (
+        "The current directional evidence is strongest for post-verbal forms such as `-khia` 'outward', "
+        "`-khiat` 'away', `-toh` 'upward', `-sawn` 'toward', and `-suk` 'downward', while deictic prefixes remain separate."
     ),
 }
 GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [

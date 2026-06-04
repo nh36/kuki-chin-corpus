@@ -85,6 +85,8 @@ b. Segmentation: hih | mi | -te
 c. Gloss: PROX | person | PL
 d. Translation: these people
 
+No equally clean Gospel plural example is currently used for this construction, so the section keeps the compact Old Testament anchors.
+
 # Human nouns and common nouns
 
 Human noun `mi` is now one of the clearest lexical noun anchors in the nominal domain. It appears as a simple noun stem and as the head of several already-normalized noun phrases, including `mi khat`, `mi khempeuh`, `mi pawlkhat`, and `mi tampi`. Its plural form `mite` is equally secure in the current packet.
@@ -120,6 +122,8 @@ a. Tedim: kum sawm le nih
 b. Segmentation: kum | sawm | le | nih
 c. Gloss: year | ten | and | two
 d. Translation: twelve years
+
+No equally clean Old Testament example is currently used for this construction, so the section keeps the compact Gospel anchors.
 
 # Compounds and proper nouns
 

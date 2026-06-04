@@ -23,6 +23,13 @@ TARGET_SECTION_TITLES = {
     "Noun domain",
     "Case marking",
     "Relators / postpositions",
+    "Directionals",
+}
+GOSPEL_BOOKS = {
+    "Matthew",
+    "Mark",
+    "Luke",
+    "John",
 }
 NT_BOOKS = {
     "Matthew",
@@ -58,8 +65,11 @@ SUBSECTION_IGNORE_RE = re.compile(
     re.IGNORECASE,
 )
 ONE_EXAMPLE_NOTE_RE = re.compile(
-    r"(?:No equally (?:good|clean).{0,140}(?:example|row)|This construction is rare.{0,140}one example)",
-    re.IGNORECASE,
+    r"(?:No equally (?:good|clean).{0,120}(?:example|row).{0,120}(?:is currently used|was found)(?: for this construction)?"
+    r"|This construction is rare.{0,200}one example is used here"
+    r"|broader source balancing remains outside the present account"
+    r"|Gospel (?:row|example|comparandum).{0,200}(?:not used formally|remains prose-only))",
+    re.IGNORECASE | re.DOTALL,
 )
 PDF_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"(?:^|\n)\s*Scope\s*(?:\n|$)", re.IGNORECASE), "visible Scope heading"),
@@ -137,6 +147,21 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "Abraham' suan David": ((r"David, descendant of Abraham",), "David, descendant of Abraham"),
     "minam": ((r"nation|people-group",), "nation / people-group"),
     "minam khat": ((r"one nation",), "one nation"),
+    "-khia": ((r"outward|out",), "outward"),
+    "-khiat": ((r"away|out of",), "away"),
+    "-toh": ((r"upward|up",), "upward"),
+    "-sawn": ((r"toward",), "toward"),
+    "-suk": ((r"downward|down",), "downward"),
+    "-lam": ((r"sideward|toward a side|side",), "sideward / toward a side"),
+    "pokhia": ((r"grow out|grew out",), "grow out"),
+    "nawhkhiat": ((r"drive out|hurry away",), "drive out / hurry away"),
+    "hotkhiatna": ((r"salvation|saving away",), "salvation"),
+    "kilaktoh": ((r"be taken up|was taken up",), "be taken up"),
+    "kahtohna": ((r"going up|ascent",), "going up"),
+    "paitoh": ((r"go-accompany|accompany",), "go-accompany"),
+    "piasawn": ((r"give toward|extend to us",), "give toward"),
+    "paisuk": ((r"go down|came down",), "go down"),
+    "tawplam": ((r"toward the side|at the edge|side",), "toward the side / at the edge"),
 }
 
 
@@ -461,6 +486,16 @@ def source_category(reference: str) -> str:
     return "OT"
 
 
+def source_zone(reference: str) -> str:
+    for book in GOSPEL_BOOKS:
+        if reference.startswith(book + " "):
+            return "Gospel"
+    for book in NT_BOOKS:
+        if reference.startswith(book + " "):
+            return "OtherNT"
+    return "OT"
+
+
 def subsection_example_count(block: MarkdownBlock) -> int:
     return len(re.findall(r"^\(@ex:[^)]+\)", block.content, re.MULTILINE))
 
@@ -533,9 +568,9 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
 
     for section_title, block in section_blocks.items():
         section_examples = [example for example in examples if section_title in example.heading_path]
-        categories = {source_category(example.source) for example in section_examples if example.source}
-        if categories and categories != {"OT", "NT"}:
-            issues.append(f"Section {section_title} does not yet show both OT and NT example coverage.")
+        zones = {source_zone(example.source) for example in section_examples if example.source}
+        if section_examples and not {"OT", "Gospel"}.issubset(zones):
+            issues.append(f"Section {section_title} does not yet show both Old Testament and Gospel example coverage.")
 
         tex_section_blocks = iter_tex_blocks_for_section(tex_blocks, section_title)
         for form, (allowed_glosses, suggested_gloss) in GLOSSARY_REQUIREMENTS.items():
@@ -569,11 +604,16 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
             and example.heading_path[-2] == block.parent_titles[-1]
             and example.source
         ]
-        if subsection_examples and all(example.source.startswith("Genesis ") for example in subsection_examples):
+        subsection_zones = {source_zone(example.source) for example in subsection_examples}
+        if subsection_examples and "Gospel" not in subsection_zones:
             if not ONE_EXAMPLE_NOTE_RE.search(block.content):
                 issues.append(
-                    f"Subsection {block.parent_titles[-1]} > {block.title} uses Genesis-only examples without an explicit explanation."
+                    f"Subsection {block.parent_titles[-1]} > {block.title} uses no formal Gospel example without an explicit explanation."
                 )
+        if subsection_examples and "OT" not in subsection_zones and not ONE_EXAMPLE_NOTE_RE.search(block.content):
+            issues.append(
+                f"Subsection {block.parent_titles[-1]} > {block.title} uses no Old Testament example without an explicit explanation."
+            )
 
     if r"\newcommand{\glossquote}[1]{`#1'}" not in tex:
         issues.append(r"Missing \glossquote macro in generated TeX.")

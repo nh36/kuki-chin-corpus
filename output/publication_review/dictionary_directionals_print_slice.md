@@ -14,7 +14,7 @@ Category: outward directional suffix
 
 Gloss: out; outward
 
-Cross-reference: *Grammar review slice, "Outward `-khia`"*
+Cross-reference: *Grammar review slice, "Outward and away direction"*
 
 Status: draft-ready
 
@@ -32,7 +32,7 @@ Category: away directional suffix
 
 Gloss: away
 
-Cross-reference: *Grammar review slice, "Away `-khiat` and nominalized `-khiat-na`"*
+Cross-reference: *Grammar review slice, "Outward and away direction"*
 
 Status: draft-ready with caveat
 
@@ -50,7 +50,7 @@ Category: nominalized away-directional boundary form
 
 Gloss: away-NMLZ
 
-Cross-reference: *Grammar review slice, "Away `-khiat` and nominalized `-khiat-na`"*
+Cross-reference: *Grammar review slice, "Outward and away direction"*
 
 Status: boundary evidence / print-usable with caveat
 
@@ -68,7 +68,7 @@ Category: upward directional suffix / comitative-overlap form
 
 Gloss: up; with comitative/accompany caveat
 
-Cross-reference: *Grammar review slice, "Upward `-toh` and comitative/accompany overlap"*
+Cross-reference: *Grammar review slice, "Upward direction and directionals in the verb phrase"*
 
 Status: usable only with overlap caveat
 
@@ -90,7 +90,7 @@ Category: nominalized upward-directional boundary form
 
 Gloss: up-NMLZ
 
-Cross-reference: *Grammar review slice, "Upward `-toh` and comitative/accompany overlap"*
+Cross-reference: *Grammar review slice, "Upward direction and directionals in the verb phrase"*
 
 Status: boundary evidence / print-usable with caveat
 
@@ -126,7 +126,7 @@ Category: toward directional suffix
 
 Gloss: toward
 
-Cross-reference: *Grammar review slice, "Toward `-sawn`"*
+Cross-reference: *Grammar review slice, "Toward direction with `-sawn`"*
 
 Status: usable with caveat
 
@@ -144,7 +144,7 @@ Category: downward directional suffix
 
 Gloss: down
 
-Cross-reference: *Grammar review slice, "Downward `-suk`"*
+Cross-reference: *Grammar review slice, "Downward direction with `-suk`"*
 
 Status: draft-ready with corpus-backed caveat
 
