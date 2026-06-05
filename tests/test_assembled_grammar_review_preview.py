@@ -445,6 +445,23 @@ def test_assembled_preview_includes_normalized_tam_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_vp_section() -> None:
+    text = _text()
+
+    for required in (
+        "VP structure / suffix stacking",
+        "Overview of VP structure and suffix stacking",
+        "Current VP stacking inventory",
+        "Aspect plus irrealis stacking",
+        "Directional and TAM boundary in the verbal complex",
+        "Ability, irrealis, and negation at the VP boundary",
+        "Derivational stacking and valency overlap",
+        "Clause-linking boundary with `dingin`",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -619,6 +636,40 @@ def test_assembled_preview_tex_includes_normalized_tam_inventory_and_examples() 
         assert required.lower() in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_vp_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:vp-") >= 6
+    assert tex.count("\\label{ex:vp-") >= 6
+
+    for required in (
+        "Current VP stacking inventory",
+        "Aspect plus irrealis stacking",
+        "Directional and TAM boundary in the verbal complex",
+        "Ability, irrealis, and negation at the VP boundary",
+        "Derivational stacking and valency overlap",
+        "bawlzoding",
+        "ciahsakkik",
+        "paikhiatsak",
+        "khiathei ding om lo",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "Current VP stacking inventory",
+        "Aspect plus irrealis stacking",
+        "Derivational stacking and valency overlap",
+        "ciahsakkik",
+        "they will be able to enter",
+    ):
+        assert required.lower() in pdf_normalized
+
+
 def test_assembled_preview_tex_keeps_relators_example_sources_after_translation() -> None:
     assert "(Mark 2:2)" in _tex_example_block("ex:rel-pualam-kongkhak")
     assert "(Genesis 24:11)" in _tex_example_block("ex:rel-pualam-khuapi")
@@ -657,6 +708,16 @@ def test_assembled_preview_tex_keeps_tam_example_sources_after_translation() -> 
     assert "(Matthew 2:12)" in _tex_example_block("ex:tam-kik-matt2")
 
 
+def test_assembled_preview_tex_keeps_vp_example_sources_after_translation() -> None:
+    assert "(Deuteronomy 32:30)" in _tex_example_block("ex:vp-taisakzo-ding-deut32")
+    assert "(Genesis 20:13)" in _tex_example_block("ex:vp-paikhiatsak-gen20")
+    assert "(Luke 9:51)" in _tex_example_block("ex:vp-kilaktoh-ding-luke9")
+    assert "(Genesis 41:16)" in _tex_example_block("ex:vp-khiathei-gen41")
+    assert "(Matthew 7:21)" in _tex_example_block("ex:vp-lutthei-ding-matt7")
+    assert "(Genesis 24:54)" in _tex_example_block("ex:vp-ciahsakkik-gen24")
+    assert "(Mark 12:3)" in _tex_example_block("ex:vp-ciahsakkik-mark12")
+
+
 def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
     tex = _tex_text()
     text = _text()
@@ -677,6 +738,14 @@ def test_assembled_preview_tam_examples_include_old_testament_and_gospel_sources
 
     assert "(Genesis 2:17)" in tex or "(Genesis 3:19)" in tex or "(Exodus 1:12)" in tex or "(Exodus 34:27)" in tex
     assert "(Matthew 1:23)" in tex or "(Matthew 2:12)" in tex or "(Matthew 4:4)" in tex or "(Matthew 7:14)" in tex or "(Matthew 7:21)" in tex or "(Luke 4:16)" in tex or "(Luke 20:20)" in tex
+
+
+def test_assembled_preview_vp_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Deuteronomy 32:30)" in tex or "(Genesis 20:13)" in tex or "(Genesis 41:16)" in tex or "(Genesis 24:54)" in tex
+    assert "(Luke 9:51)" in tex or "(Matthew 7:21)" in tex or "(Mark 12:3)" in tex or "No equally clean Gospel example is currently used for this exact construction" in text
 
 
 def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:

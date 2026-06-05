@@ -1419,53 +1419,115 @@ Alternation, labile behavior, stem alternation, derivation/valency, prefix/agree
 
 ## VP structure / suffix stacking
 
-### Baseline: completed single-suffix sections
+The current VP-structure evidence is strongest for a small checked set of suffix stacks such as `bawlzoding` 'make-COMPL-IRR', directional-plus-irrealis sequences, modal-plus-irrealis strings, and derivational stacks whose ordering can be discussed without forcing a full verb-template chapter.
 
-The section starts from two completed single-suffix baselines that are already owned elsewhere.
+### Overview of VP structure and suffix stacking
 
-`bawlzo` remains the compact V+ASPECT baseline already owned by the TAM section. It shows that the repository already has a stable completive anchor, but it should be used here only as baseline evidence rather than reopened as new VP-structure prose.
+The safest current claim is that Tedim allows a small but real set of multi-suffix verbal complexes and clause-internal stacking patterns, without requiring a full verb-template chapter. The clearest checked anchors are `bawlzoding` 'make-COMPL-IRR', attested `taisakzo ding` 'put to flight / flee-CAUS-COMPL-IRR', directional material such as `a kilaktoh ding hun` 'the time for him to be taken up', modal strings such as `khiathei ding om lo` 'there is no one who can interpret it', and derivational stacks such as `ciahsakkik` 'send back' and `paikhiatsak` 'cause to go out'.
 
-`pokhia` remains the compact V+DIR baseline already owned by the directionals section. It shows that the repository already has a stable post-stem directional anchor, but it should be used here only as baseline evidence rather than widened into a new VP-slot claim.
+This section therefore keeps its descriptive scope controlled. It describes the clearest stack types that can already be stated in grammar-facing prose, while keeping the boundaries with TAM, directionals, negation, derivation, and clause linkage explicit.
 
-These baseline rows matter because the first VP slice should not redescribe already-completed sections. Their role here is only to show that compact single-suffix material is already controlled before a multi-suffix claim is added.
+### Current VP stacking inventory
 
-### First stacking anchor: aspect plus irrealis
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `bawlzoding` | completive plus irrealis after a verbal stem | `bawlzoding` | supported with caveat | analyzer gloss remains noisier than the ordering evidence |
+| V-`zo ding` | aspect before irrealis | `taisakzo ding` | supported with caveat | derivational material often enters the same string |
+| DIR + `ding` | directional material before irrealis in a larger verbal complex | `a kilaktoh ding hun` | supported with caveat | quickly overlaps clause structure |
+| `khia-ta` | directional plus completive boundary | `khia-ta` | boundary material | TAM and directional analysis remain intertwined |
+| `khiathei ding om lo` | ability plus irrealis plus negation | `mang a khiathei ka hi kei hi`, `lutthei ding uh hi` | supported with caveat | already reaches clause-sized modal-negation material |
+| `ciahsakkik` | causative plus iterative or return morphology | `hong ciahsakkik un`, `a guak ciahsakkik uh hi` | supported with caveat | derivational `-sak` remains central |
+| `paikhiatsak` | directional plus causative morphology | `hong paikhiatsak ciangin` | boundary material | sits between directionals and derivation |
+| `dingin` | clause-bound irrealis or purposive linker | `a khen dingin`, `maksim dingin` | boundary material | better treated with clause linkage than with a compact VP inventory |
 
-`bawlzoding` is the central first-slice stack. The checked evidence marks it as `print_usable_with_caveat`, and the current workflow already keeps it visible as aspect-plus-modal regression evidence.
+The table keeps `khia-ta` 'out-PFV' and `dingin` 'for... to / clause-bound irrealis' visible as boundary rows rather than as core stacking anchors. That matters because a grammar-facing section should show where VP-structure evidence stops being simple, not only where it begins.
 
-The safe print claim is deliberately narrow. `bawlzoding` supports the ordering observation:
+### Aspect plus irrealis stacking
 
-> verb stem + completive/aspectual material + irrealis/modal material
+`Bawlzoding` 'make-COMPL-IRR' is the central checked anchor because it keeps the ordering question in view without forcing a full paradigm. The best attested formal Old Testament example for this order is `taisakzo ding` 'put to flight / flee-CAUS-COMPL-IRR', where completive `-zo` 'already / completive' appears before `ding` 'prospective / irrealis'. No equally clean Gospel example is currently used for this exact construction, so the section keeps the compact Old Testament anchor and lets the later subsections show how the same right-edge order continues into Gospel material.
 
-In other words, the current slice supports a small VP-structure claim that aspectual material can precede irrealis/modal material inside a multi-suffix verbal complex.
+(@ex:vp-taisakzo-ding-deut32) Deuteronomy 32:30
+a. Tedim: taisakzo ding
+b. Segmentation: tai-sak-zo | ding
+c. Gloss: flee-CAUS-COMPL | IRR
+d. Translation: put ten thousand to flight
 
-For the present section, that means reading `bawlzoding` as a constructional stack rather than over-trusting every analyzer label on the row. The current analyzer gloss is noisy (`make-south-IRR`), so the slice should not pretend that the middle gloss is already a perfect semantic label. The point of the row is its suffix-stacking evidence: the repository already has a regression-backed form in which a verbal stem is followed by completive/aspectual material and then by irrealis/modal material.
+This row does not settle every detail of the middle suffixes, and it does not replace the checked `bawlzoding` anchor. It is useful because it shows the same broad order in attested text: verbal stem material, then completive material, then irrealis.
 
-This is enough for a first grammar slice, but not enough for a full VP slot template. The present section therefore treats `bawlzoding` as the clearest current anchor for aspect plus irrealis stacking and stops there.
+### Directional and TAM boundary in the verbal complex
 
-### Boundary and deferred stacks
+Directional material can stand inside larger verbal complexes, but the present evidence does not collapse directionals and TAM into one solved suffix template. Genesis 20:13 gives `paikhiatsak` 'cause to go out', where `-khia` 'outward' remains visible inside a causative stack. Luke 9:51 gives `a kilaktoh ding hun` 'the time for him to be taken up', where upward `-toh` 'upward' stands before `ding` 'irrealis / prospective'. The boundary clue `khia-ta` 'out-PFV' belongs in the same zone, but it remains safer here as prose evidence than as a core formal anchor.
 
-The rest of the visible stacks remain outside the first core slice because each one is dominated by another section boundary.
+(@ex:vp-paikhiatsak-gen20) Genesis 20:13
+a. Tedim: hong paikhiatsak ciangin
+b. Segmentation: hong | pai-khia-sak | ciangin
+c. Gloss: VEN | go-out-CAUS | when
+d. Translation: when he caused me to go out
 
-`khia-ta` is useful boundary evidence because it shows real TAM/directional overlap, but it is not the first-slice core. The completed TAM and directionals sections already keep this row visible as overlap evidence, and this slice should not reopen either section through that row.
+(@ex:vp-kilaktoh-ding-luke9) Luke 9:51
+a. Tedim: a kilaktoh ding hun
+b. Segmentation: a | ki-lak-toh | ding | hun
+c. Gloss: 3SG | REFL-take-UP | IRR | time
+d. Translation: the time for him to be taken up
 
-`ciahsakkik`, `bawlsakthei`, and `paikhiatsak` are real multi-suffix complexes, but they are derivation/valency-heavy stacks. Once `-sak` and other valency-changing material become central, the next section boundary is derivation/valency rather than narrow VP stacking. These rows therefore stay deferred until the derivation/valency section is explicitly selected.
+These examples are not identical constructions, but together they show why VP structure has to remain boundary-aware: directional morphology can appear inside larger complexes, yet the surrounding ordering is still sensitive to TAM, derivation, and clause structure.
 
-`khiathei ding om lo` is also real overlap evidence, but it is TAM-negation overlap rather than a clean first VP-stack anchor. The completed negation and TAM sections already control that territory, so it should not be promoted as the model for core VP-stacking prose.
+### Ability, irrealis, and negation at the VP boundary
 
-`dingin` remains clause-bound irrealis or subordination material. It is important because it shows how quickly visible verbal stacking can turn into clause-linkage evidence, but it should wait for a subordination section rather than being promoted here as simple VP suffix stacking.
+Ability material frequently participates in longer strings rather than standing alone. Genesis 41:16 uses `khiathei` 'interpret-ABIL' under negation, while Matthew 7:21 uses `lutthei ding` 'enter-ABIL-IRR' in a projected event. The stronger clause-sized boundary row `khiathei ding om lo` 'there is no one who can interpret it' shows why the section must stop short of a full account of negative modal syntax.
 
-### Safe first-slice claim
+(@ex:vp-khiathei-gen41) Genesis 41:16
+a. Tedim: mang a khiathei ka hi kei hi
+b. Segmentation: mang | a | khia-thei | ka | hi | kei | hi
+c. Gloss: dream | 3SG | interpret-ABIL | 1SG | DECL | NEG | DECL
+d. Translation: I cannot interpret a dream
 
-At the current slice maturity level, the safest VP-structure claim is that Tedim permits at least some multi-suffix verbal complexes in which aspectual material precedes irrealis/modal material, with `bawlzoding` as the clearest current anchor.
+(@ex:vp-lutthei-ding-matt7) Matthew 7:21
+a. Tedim: lutthei ding uh hi
+b. Segmentation: lut-thei | ding | uh | hi
+c. Gloss: enter-ABIL | IRR | 2/3PL | DECL
+d. Translation: they will be able to enter
 
-That claim stays deliberately smaller than a full slot template. It does not claim that every visible stack in the reports belongs to one solved VP order, and it does not reopen completed TAM, directional, negation, sentence-final, or relator/postposition sections.
+This pair shows a stable local point: `-thei` can be followed by further material such as negation or `-ding`, so ability belongs inside VP-structure discussion. It also shows why the present section should not be widened into a full modal chapter.
 
-### Recommended next step
+### Derivational stacking and valency overlap
 
-After this grammar slice, the section can move to background notes without forcing an ordinary dictionary slice, because the safe first-slice claim is constructional rather than lexical.
+Derivational stacking is clearly real, but it is not reducible to suffix order alone. `Ciahsakkik` 'send back' provides the cleanest matched pair now available, with an Old Testament row and a Gospel row. The same area also keeps `bawlsakthei` 'make-CAUS-ABIL' and `paikhiatsak` 'go-out-CAUS' visible, which is why derivation and valency remain unavoidable boundaries for the present section.
 
-The next substantive section after this narrow constructional slice should therefore be derivation/valency candidate scoping rather than a broader VP rewrite.
+(@ex:vp-ciahsakkik-gen24) Genesis 24:54
+a. Tedim: hong ciahsakkik un
+b. Segmentation: hong | ciah-sak-kik | un
+c. Gloss: VEN | return-CAUS-ITER | IMP.2PL
+d. Translation: send me back
+
+(@ex:vp-ciahsakkik-mark12) Mark 12:3
+a. Tedim: a guak ciahsakkik uh hi
+b. Segmentation: a | guak | ciah-sak-kik | uh | hi
+c. Gloss: 3SG | empty | return-CAUS-ITER | 2/3PL | DECL
+d. Translation: they sent him back empty
+
+Because `-sak` is central in both examples, this subsection is best read as a boundary zone between VP structure and derivation / valency. The examples are strong enough to show real stacking, but they do not by themselves justify a full derivational template.
+
+### Clause-linking boundary with `dingin`
+
+`Dingin` 'for... to / clause-bound irrealis' is important because it shows how quickly a stacking-looking form becomes clause linkage. Genesis 1:14 uses `a khen dingin` 'for dividing', and Matthew 1:19 uses `maksim dingin` 'to dismiss quietly'. Those rows are helpful because they keep right-edge irrealis material visible, but they are safer as clause-linking evidence than as core VP suffixes.
+
+This is also why the present section does not treat every `ding`-plus-following-material sequence as the same construction. Some rows belong to local VP stacking, while others already belong to purposive or clause-linking structure.
+
+### Deferred and boundary material
+
+Several issues remain outside the present account.
+
+- `bawlzoding` 'make-COMPL-IRR' remains the central checked anchor, but its exact internal semantics are still noisier than its ordering value.
+- `khia-ta` 'out-PFV' remains a TAM-directional boundary row rather than a core formal example here.
+- `khiathei ding om lo` 'there is no one who can interpret it' and related strings reach clause-sized modal-negation structure too quickly.
+- `bawlsakthei` 'make-CAUS-ABIL' and `paikhiatsak` 'go-out-CAUS' show why derivational stacks need separate treatment.
+- `dingin` 'for... to / clause-bound irrealis' is kept at the clause-linkage boundary rather than inside a full VP template.
+- The section does not attempt a full suffix slot template, a full derivation chapter, or a full account of sentence-final material.
+
+### Summary
+
+The safest grammar-facing conclusion is that Tedim permits a small but real set of multi-suffix verbal complexes. `Bawlzoding` 'make-COMPL-IRR' remains the central checked anchor, while `taisakzo ding`, `lutthei ding`, `ciahsakkik`, and `a kilaktoh ding hun` show how aspect, modality, directionals, and derivation can stack in attested material. At the same time, the boundaries with TAM, directionals, negation, derivation / valency, and clause linkage remain visible, so the section stays controlled rather than turning into a full verbal template chapter.
 
 ## TAM / aspect / modal
 

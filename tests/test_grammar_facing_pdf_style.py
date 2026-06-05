@@ -252,6 +252,15 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
         "Noun domain": ("gam", "aksi", "aksi-te", "mi khempeuh", "Abraham' suan David"),
         "Case marking": ("-ah", "-in", "-pan", "-panin", "-tawh", "khua-ah", "Kain in", "lakpan"),
         "Relators / postpositions": ("sung", "tung", "kiang", "lak", "pualam", "sungah", "tungah", "kiangah", "lakpan"),
+        "VP structure / suffix stacking": (
+            "bawlzoding",
+            "khia-ta",
+            "khiathei ding om lo",
+            "ciahsakkik",
+            "paikhiatsak",
+            "bawlsakthei",
+            "dingin",
+        ),
         "TAM / aspect / modal": (
             "-ta",
             "-zo",

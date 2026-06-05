@@ -257,6 +257,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Noun domain",
     "Case marking",
     "Relators / postpositions",
+    "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
 }
@@ -268,6 +269,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_noun_domain_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_case_marking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_relators_postpositions_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_vp_structure_stacking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_tam_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_directionals_normalization.tsv",
 )
@@ -296,6 +298,11 @@ GRAMMAR_FACING_SECTION_INTROS = {
     "Relators / postpositions": (
         "The current evidence supports relational nouns such as `sung` 'inside', `tung` 'on / upon', "
         "`kiang` 'beside / near', and `lak` 'among / midst', together with postpositional source patterns that close the larger phrase."
+    ),
+    "VP structure / suffix stacking": (
+        "The current VP-structure evidence is strongest for a small checked set of suffix stacks such as "
+        "`bawlzoding` 'make-COMPL-IRR', directional-plus-irrealis sequences, modal-plus-irrealis strings, "
+        "and derivational stacks whose ordering can be discussed without forcing a full verb-template chapter."
     ),
     "Numerals": (
         "The current numeral evidence supports a decimal system with basic cardinals, counted noun phrases, "

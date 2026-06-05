@@ -23,6 +23,7 @@ TARGET_SECTION_TITLES = {
     "Noun domain",
     "Case marking",
     "Relators / postpositions",
+    "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
 }
@@ -176,6 +177,9 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "khia-ta": ((r"out-PFV|out plus completive|out",), "out-PFV"),
     "bawlzoding": ((r"make-COMPL-IRR|make plus completive plus irrealis",), "make-COMPL-IRR"),
     "bawlsakthei": ((r"make-CAUS-ABIL|make plus causative plus abilitative",), "make-CAUS-ABIL"),
+    "ciahsakkik": ((r"send back|return-CAUS-ITER|return",), "send back"),
+    "paikhiatsak": ((r"cause to go out|go-out-CAUS|go out",), "cause to go out"),
+    "khiathei ding om lo": ((r"there is no one who can interpret it|cannot interpret|interpret",), "there is no one who can interpret it"),
 }
 
 
