@@ -257,6 +257,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Noun domain",
     "Case marking",
     "Relators / postpositions",
+    "Transitivity",
     "Derivation / valency",
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
@@ -270,6 +271,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_noun_domain_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_case_marking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_relators_postpositions_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_transitivity_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_derivation_valency_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_vp_structure_stacking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_tam_normalization.tsv",
@@ -300,6 +302,11 @@ GRAMMAR_FACING_SECTION_INTROS = {
     "Relators / postpositions": (
         "The current evidence supports relational nouns such as `sung` 'inside', `tung` 'on / upon', "
         "`kiang` 'beside / near', and `lak` 'among / midst', together with postpositional source patterns that close the larger phrase."
+    ),
+    "Transitivity": (
+        "The current transitivity evidence is strongest for simple intransitive anchors such as `sih` 'die' and "
+        "`suak` 'become', and for transitive anchors such as `hawl` 'seek / steer' and `en` 'look at / see', "
+        "while stem families, derivational predicates, and case- or prefix-heavy rows remain boundary material."
     ),
     "Derivation / valency": (
         "The current derivation and valency evidence is strongest around `-sak` 'causative / benefactive', "

@@ -162,8 +162,8 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
     text = _text()
 
     for required in (
-        "Clean intransitive anchor: sih",
-        "Clean transitive anchor: hawl",
+        "Overview of transitivity contrasts",
+        "Current transitivity inventory",
         "Full reduplication as intensification",
         "Temporal subordination: ciangin",
         "Deverbal nominalization with `-na`",
@@ -210,8 +210,9 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "review preview, not a finished grammar" in lower
     assert "\\setcounter{secnumdepth}{3}" in tex
     assert "\\setcounter{tocdepth}{2}" in tex
-    assert "\\tdim{sih} is the clean intransitive anchor for the first slice." in lower
-    assert "\\tdim{hawl} is the clean transitive anchor for the first slice." in lower
+    assert "overview of transitivity contrasts" in normalized
+    assert "\\tdim{sih}" in lower
+    assert "\\tdim{hawl}" in lower
     assert "\\tdim{mahmah} is the main full-reduplication intensifier anchor." in lower
     assert "\\tdim{ciangin}" in lower
     assert "overview of noun phrase structure" in normalized
@@ -481,6 +482,25 @@ def test_assembled_preview_includes_normalized_derivation_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_transitivity_section() -> None:
+    text = _text()
+
+    for required in (
+        "Transitivity",
+        "Overview of transitivity contrasts",
+        "Current transitivity inventory",
+        "Intransitive predicates",
+        "Transitive predicates",
+        "The narrow intransitive / transitive contrast",
+        "Boundary with stem alternation and labile behavior",
+        "Boundary with derivation / valency",
+        "Boundary with case marking and argument structure",
+        "Boundary with prefix/agreement and voice-like material",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -737,6 +757,44 @@ def test_assembled_preview_tex_includes_normalized_derivation_inventory_and_exam
         assert required.lower() in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_transitivity_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:trans-") >= 8
+    assert tex.count("\\label{ex:trans-") >= 8
+
+    for required in (
+        "Current transitivity inventory",
+        "Intransitive predicates",
+        "Transitive predicates",
+        "The narrow intransitive / transitive contrast",
+        "Boundary with stem alternation and labile behavior",
+        "sih",
+        "suak",
+        "hawl",
+        "en",
+        "mu / muh",
+        "piangsak",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "Current transitivity inventory",
+        "intransitive predicates",
+        "transitive predicates",
+        "sih",
+        "suak",
+        "hawl",
+        "en",
+    ):
+        assert required.lower() in pdf_normalized
+
+
 def test_assembled_preview_tex_keeps_relators_example_sources_after_translation() -> None:
     assert "(Mark 2:2)" in _tex_example_block("ex:rel-pualam-kongkhak")
     assert "(Genesis 24:11)" in _tex_example_block("ex:rel-pualam-khuapi")
@@ -794,6 +852,18 @@ def test_assembled_preview_tex_keeps_derivation_example_sources_after_translatio
     assert "(Mark 12:3)" in _tex_example_block("ex:deriv-ciahsakkik-mark12")
 
 
+def test_assembled_preview_tex_keeps_transitivity_example_sources_after_translation() -> None:
+    assert "(Genesis 11:28)" in _tex_example_block("ex:trans-sih-gen11")
+    assert "(Matthew 22:27)" in _tex_example_block("ex:trans-sih-matt22")
+    assert "(Genesis 26:13)" in _tex_example_block("ex:trans-suak-gen26")
+    assert "(Matthew 12:25)" in _tex_example_block("ex:trans-suak-matt12")
+    assert "(1 Chronicles 13:7)" in _tex_example_block("ex:trans-hawl-1chr13")
+    assert "(Genesis 1:31)" in _tex_example_block("ex:trans-en-gen1")
+    assert "(Matthew 27:36)" in _tex_example_block("ex:trans-en-matt27")
+    assert "(Genesis 6:8)" in _tex_example_block("ex:trans-mu-gen6")
+    assert "(Matthew 2:10)" in _tex_example_block("ex:trans-muh-matt2")
+
+
 def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
     tex = _tex_text()
     text = _text()
@@ -830,6 +900,14 @@ def test_assembled_preview_derivation_examples_include_old_testament_and_gospel_
 
     assert "(Exodus 10:7)" in tex or "(Habakkuk 2:2)" in tex or "(Genesis 24:54)" in tex
     assert "(Mark 10:14)" in tex or "(John 9:26)" in tex or "(Mark 12:3)" in tex or "No equally clean Gospel example is currently used for this exact construction" in text
+
+
+def test_assembled_preview_transitivity_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 11:28)" in tex or "(Genesis 26:13)" in tex or "(Genesis 1:31)" in tex or "(Genesis 6:8)" in tex or "(1 Chronicles 13:7)" in tex
+    assert "(Matthew 22:27)" in tex or "(Matthew 12:25)" in tex or "(Matthew 27:36)" in tex or "(Matthew 2:10)" in tex or "No equally clean Gospel example is currently used for this exact `hawl` row" in text
 
 
 def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:
