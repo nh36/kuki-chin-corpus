@@ -251,6 +251,7 @@ TECHNICAL_FILE_SUFFIXES = (".md", ".py", ".tex", ".pdf", ".tsv", ".bib", ".json"
 TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", "git", "bibtex", "pdftotext")
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
+    "Stem alternation",
     "Numerals",
     "Quantifiers",
     "NP structure / possession",
@@ -265,6 +266,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
 }
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
+    PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_numerals_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_quantifiers_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_np_possession_normalization.tsv",
@@ -287,6 +289,11 @@ GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
     re.compile(r"\b(?:tests?/|scripts?/|output/|docs/|bibles/)", re.IGNORECASE),
 )
 GRAMMAR_FACING_SECTION_INTROS = {
+    "Stem alternation": (
+        "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "
+        "`mu / muh` 'see', `ne / nek` 'eat', and `nei / neih` 'have', while promoted caveated pairs, "
+        "one-sided controls, and blocked rows remain explicit boundaries."
+    ),
     "NP structure / possession": (
         "The current evidence supports demonstrative-before-noun order alongside noun-plus-postnominal numeral "
         "and quantifier patterns, with possession kept as a cautious boundary subsection."

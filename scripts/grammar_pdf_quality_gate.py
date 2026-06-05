@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REPORT_PATH = ROOT / "output" / "publication_review" / "grammar_facing_quality_report.md"
 FIRST_CHAPTER_TITLE = "Phonology and tone"
 TARGET_SECTION_TITLES = {
+    "Stem alternation",
     "Numerals",
     "Quantifiers",
     "NP structure / possession",
@@ -81,7 +82,7 @@ PDF_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"source slice:", re.IGNORECASE), "source-slice marker"),
     (
         re.compile(
-            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer|controlling files|grammar_facing_quality_report\.md",
+            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer|controlling files|grammar_facing_quality_report\.md|draft argument plan|eventual prose|next commit|writing order|quotation-safe layer",
             re.IGNORECASE,
         ),
         "internal workflow term",
@@ -95,7 +96,7 @@ TEX_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"Source slice:", re.IGNORECASE), "source-slice marker"),
     (
         re.compile(
-            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer|controlling files|grammar_facing_quality_report\.md",
+            r"candidate TSV|dossier|review notes|coverage normalization|print slice|packet(?:s| maturity)?|publication-review|current pass|normalized section|ready for human review|this section is now|this is no longer|controlling files|grammar_facing_quality_report\.md|draft argument plan|eventual prose|next commit|writing order|quotation-safe layer",
             re.IGNORECASE,
         ),
         "internal workflow term",
@@ -190,10 +191,24 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "suak": ((r"become",), "become"),
     "hawl": ((r"seek / steer|seek|steer|drive",), "seek / steer"),
     "en": ((r"look at / see|look at|see|watch",), "look at / see"),
+    "ne / nek": ((r"eat",), "eat"),
+    "nei / neih": ((r"have",), "have"),
+    "pia / piak": ((r"give",), "give"),
+    "nusia / nusiat": ((r"leave|forsake|abandon",), "leave"),
+    "bia / biak": ((r"speak / worship / address|worship|speak|address",), "speak / worship / address"),
+    "thei / theih": ((r"can / be able|can|be able|know",), "can / be able"),
+    "piang / pian": ((r"be born / arise|be born|arise",), "be born / arise"),
+    "zui / zuih": ((r"follow",), "follow"),
+    "khial / khialh": ((r"err / sin|err|sin",), "err / sin"),
+    "kia / kiak": ((r"fall",), "fall"),
+    "sawlkhia / sawlkhiat": ((r"send out|send forth",), "send out"),
     "mu / muh": ((r"see",), "see"),
     "za / zak": ((r"hear / listen|hear|listen",), "hear / listen"),
-    "nei / neih": ((r"have",), "have"),
     "ngai / ngaih": ((r"need / love / listen|need|love|listen",), "need / love / listen"),
+    "pua / puak": ((r"carry.on.back|carry|spill",), "carry.on.back / spill"),
+    "pai / paih": ((r"go",), "go"),
+    "tua / tuah": ((r"do",), "do"),
+    "tua / tuak": ((r"meet / receive|meet|receive",), "meet / receive"),
     "pia": ((r"give",), "give"),
     "gen": ((r"say|tell",), "say"),
     "tom": ((r"meet / accompany|meet|accompany",), "meet / accompany"),

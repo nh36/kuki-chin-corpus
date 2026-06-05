@@ -1093,209 +1093,142 @@ What remains deferred is equally important. The section still does not claim a f
 
 ## Stem alternation
 
-### Verb-stem alternation
+The current stem-alternation evidence supports a controlled Form I / Form II contrast around `mu / muh` 'see', `ne / nek` 'eat', and `nei / neih` 'have', while promoted caveated pairs, one-sided controls, and blocked rows remain explicit boundaries.
+
+### Overview of Form I / Form II stem alternation
+
+Tedim has a two-form stem alternation system. Henderson describes this contrast as Form I and Form II, while Zam Ngaih Cing uses Stem 1 and Stem 2 terminology [@henderson1965; @zamngaihcing2017]. The same descriptive pattern is visible in present corpus-backed examples.
+
+This section keeps to a controlled grammar-facing account. It shows stable contrasts first, then keeps difficult, one-sided, and noisy material visible without turning this chapter into a complete monograph on verbal stem alternation.
+
+### Current stem alternation overview
+
+| Form | Typical distribution | Strongest examples | Caveat |
+| --- | --- | --- | --- |
+| Form I | especially common in finite and main-clause predication | `mu` 'see', `ne` 'eat', `nei` 'have' | Form II can also occur in matrix clauses for some lexemes |
+| Form II | especially common in dependent and constructionally bound contexts | `muh` 'see.II', `nek` 'eat.II', `neih` 'have-NOM' | Form II is not restricted to one context such as negation or nominalization |
 
-This file is now a **draft argument plan**, not the final polished grammar section. The eventual prose should not be organized only by print status. It should discuss **both syntactic contexts and individual verb pairs**, in that order:
+### Distribution by syntactic context
 
-1. system-wide Form I / Form II distribution by syntactic context;
-2. the strongest illustrative pairs;
-3. pair-by-pair caveated and difficult evidence;
-4. one-sided, control, and rejected material.
+The strongest distributional pattern is construction-sensitive rather than mechanical. `Ciangin` 'when' and `ni-in` 'on the day / when' are productive temporal frames that often favor Form II in dependent clauses. `Kipan` 'from / since' also hosts clause-linking evidence, while purposive `nadingin` 'in order to' favors non-final forms in several promoted pairs.
 
-Earlier descriptions agree that Tedim has a two-form verbal system, even though the terminology differs. Henderson describes Form I and Form II, while Zam Ngaih Cing speaks of Stem 1 and Stem 2 [@henderson1965; @zamngaihcing2017]. The present review section keeps those descriptive traditions in view, but it now separates coverage, promotion, and quotation safety much more explicitly than the earlier broad analyzer table did.
+Nominalized `-na` 'nominalizer' contexts and attributive `mi` 'person / one who' contexts add further evidence, but they require careful filtering so lexicalized compounds and category-mixed tokens are not overpromoted as simple stem alternants.
 
-#### The Form I / Form II contrast
+The practical distribution can therefore be summarized as follows:
 
-The opening section of the eventual grammar should introduce the system with the strongest lexical pairs, not with the widest possible inventory.
+| Syntactic context | Form tendency in current evidence | Representative pairs | Caution |
+| --- | --- | --- | --- |
+| finite and main-clause predication | Form I most transparent | `mu / muh`, `ne / nek`, `nei / neih` | some Form II matrix tokens remain real |
+| imperatives and directives | Form I usually clearest | `za / zak`, `bia / biak` | directive evidence does not define the whole system |
+| negative clauses | mixed but informative | `ne / nek`, `nei / neih`, `thei / theih` | Form II does not simply equal negation |
+| dependent temporal clauses (`ciangin`, `ni-in`) | Form II often strongest | `muh`, `zak`, `theih`, `nek` | temporal contexts are strong but not exclusive diagnostics |
+| clause-linking with `kipan` and purposive `nadingin` | Form II often constructionally prominent | `nusia / nusiat`, `pia / piak`, `bia / biak` | many rows stay caveated |
+| nominalized `-na` and attributive/relative `mi` contexts | Form II frequently visible | `neih`, `muhna`, `theihna` | lexicalized nouns must be filtered |
+| modal and ability uses | pair-specific behavior | `thei / theih` | modal pairs should not be forced into a simple finite/non-finite slogan |
+| quotative and complement contexts | mixed and often functional | `ci / cih` boundary | functional predicates can obscure lexical pair behavior |
 
-- **Core starting point**: `mu ~ muh`, `ne ~ nek`, `nei ~ neih`.
-- **Basic descriptive claim**: Form I is especially clear in ordinary finite predication and many main-clause uses. Form II is especially visible in dependent, temporal, purposive, attributive, nominalized, and other constructionally bound environments.
-- **Immediate caution**: do not reduce the system to slogans such as *Form II = subordinate*, *Form II = negative*, *Form I = finite*, or *Form II = nominalized only*.
+### Core showcase pairs
 
-The argument here should stay structural and distributional before it becomes lexical and pair-specific.
+The core showcase remains `mu / muh` 'see', `ne / nek` 'eat', and `nei / neih` 'have'. These pairs still give the clearest first pass through Form I and Form II contrasts.
 
-The eventual section will likely need five editorial surfaces:
+(@ex:stem-mu-gen1) Genesis 1:4
+a. Tedim: Pasian in tua khuavak hoih hi, ci-in a mu hi.
+b. Segmentation: Pasian | in | tua | khuavak | hoih | hi | ci-in | a | mu | hi
+c. Gloss: God | ERG | that | light | good | DECL | say-CVB | 3SG | see.I | DECL
+d. Translation: God saw the light, that it was good
 
-- a **small core showcase table**;
-- a **larger promoted-pair inventory table**;
-- a **pair-by-pair discussion section**;
-- a **one-sided / same-form / functional coverage table**;
-- a **blocked or analyzer-noise table / appendix paragraph**.
+(@ex:stem-muh-gen19) Genesis 19:1
+a. Tedim: Lot in amaute a muh ciangin, amaute a dawn dingin ding a.
+b. Segmentation: Lot | in | amaute | a | muh | ciangin | amaute | a | dawn | dingin | ding | a
+c. Gloss: Lot | ERG | 3PL | 3SG | see.II | when | 3PL | 3SG | meet | for | stand | 3SG
+d. Translation: when Lot saw them, he rose to meet them
 
-#### Distribution by syntactic context
+(@ex:stem-ne-gen2) Genesis 2:17
+a. Tedim: Ahih hangin a pha le a sia theihna singkung gah pen na ne kei ding hi.
+b. Segmentation: ahih | hangin | a | pha | le | a | sia | theihna | singkung | gah | pen | na | ne | kei | ding | hi
+c. Gloss: but | because | 3SG | good | and | 3SG | bad | knowledge | tree | fruit | FOC | 2SG | eat | NEG | IRR | DECL
+d. Translation: but you shall not eat of the tree of the knowledge of good and evil
 
-The matrix is for organizing claims and subsection order; the citation shortlist remains the source of quotation candidates. The prose should work through the following contexts in order, using the matrix rather than treating all environments as equivalent evidence.
+(@ex:stem-nek-gen2) Genesis 2:17
+a. Tedim: Bang hang hiam cih leh tua na nek ni-in na si ding hi.
+b. Segmentation: bang | hang | hiam | cih | leh | tua | na | nek | ni-in | na | si | ding | hi
+c. Gloss: what | reason | Q | say | if | that | 2SG | eat.II | day-LOC | 2SG | die | IRR | DECL
+d. Translation: for in the day that you eat of it, you will surely die
 
-##### Finite and main-clause uses
+(@ex:stem-nei-gen11) Genesis 11:30
+a. Tedim: Tu-in Sarai ciing a, ta nei lo hi.
+b. Segmentation: tu-in | Sarai | ciing | a | ta | nei | lo | hi
+c. Gloss: now-ADV | Sarai | barren | 3SG | child | have | NEG | DECL
+d. Translation: now Sarai was barren; she had no child
 
-Start with ordinary finite predication. This is where Form I is clearest, even though some lexical pairs still show real Form II matrix tokens.
+(@ex:stem-neih-2sam23) 2 Samuel 23:8
+a. Tedim: David' neih mi thahatte' minte.
+b. Segmentation: David' | neih | mi | thahat-te' | min-te
+c. Gloss: David.POSS | have-NOM | person | mighty-PL.POSS | name-PL
+d. Translation: the names of David's mighty men
 
-##### Imperatives and directives
+No equally clean Gospel example is currently used for these exact core-pair contrasts, so Gospel comparanda remain prose-only at this stage for the core showcase.
 
-Use imperatives and directives to reinforce the ordinary clause-force profile of Form I, while noting that some lexical pairs still show marked Form II directive material.
+### Promoted caveated pairs
 
-##### Negative clauses
+Beyond the core, the strongest promoted caveated rows include `za / zak` 'hear / listen', `pia / piak` 'give', `nusia / nusiat` 'leave', `bia / biak` 'speak / worship / address', `thei / theih` 'can / be able', `piang / pian` 'be born / arise', `zui / zuih` 'follow', `khial / khialh` 'err / sin', `kia / kiak` 'fall', and `sawlkhia / sawlkhiat` 'send out'.
 
-Negative clauses belong in the argument, but they are **not** a single diagnostic. The prose should say that negative environments matter, not that Form II simply equals negation.
+| Pair | What current evidence positively shows | Caveat |
+| --- | --- | --- |
+| `za / zak` | directive Form I plus dependent Form II evidence is real | Form I citation quality is weaker because of clause-initial punctuation and discourse packaging |
+| `pia / piak` | both sides are robustly attested in transfer predicates | many rows are context-crowded and not ideal for first teaching examples |
+| `nusia / nusiat` | Form II appears in clause-linking structure with `kipan` | best Form II row is still descriptive and category-sensitive |
+| `bia / biak` | both forms are real in worship and purposive frames | distribution is strongly domain-specific |
+| `thei / theih` | modal and dependent uses show genuine alternation | this pair is constructionally special and not a simple finite contrast |
+| `piang / pian` | eventive and dependent rows survive with good signal | derived `piangsak` family requires explicit filtering |
+| `zui / zuih` | conditional and non-final Form II evidence is visible | Form II quotations still need conservative selection |
+| `khial / khialh` | clean dependent Form II evidence survives | derivational families remain nearby |
+| `kia / kiak` | exact `kiak` rows survive and should remain visible | Form II lemma stability still needs philological checking |
+| `sawlkhia / sawlkhiat` | both forms are attested, including a usable Gospel Form II row | Form II evidence remains sparse |
 
-##### Dependent temporal clauses with `ciangin`
+(@ex:stem-sawlkhia-ps43) Psalms 43:3
+a. Tedim: Na khuavak le na thuman hong sawlkhia inla.
+b. Segmentation: na | khuavak | le | na | thuman | hong | sawlkhia | inla
+c. Gloss: 2SG.POSS | light | and | 2SG.POSS | truth | VEN | send.forth.I | IMP
+d. Translation: send out your light and your truth
 
-This is one of the strongest places to show Form II in clearly dependent syntax. It should be one of the central distributional subsections.
+(@ex:stem-sawlkhiat-luke22) Luke 22:35
+a. Tedim: Note in sumbawm, ip, le khedap keng loin kong sawlkhiat lai-in kitangsapna na nei uh hiam?
+b. Segmentation: note | in | sumbawm | ip | le | khedap | keng | loin | kong | sawlkhiat | lai-in | kitangsapna | na | nei | uh | hiam
+c. Gloss: 2PL | ERG | purse | bag | and | sandal | carry | without | 1SG.VEN | send.forth.II | time-LOC | lack | 2PL | have | 2/3PL | Q
+d. Translation: when I sent you without purse, bag, or sandals, did you lack anything
 
-##### Temporal and nominal `ni-in` contexts
+### Difficult but grammatically important pairs
 
-Use `ni-in` as a second temporal construction so the grammar does not make `ciangin` carry the whole dependent-clause argument.
+The difficult set remains central: `ngai / ngaih` 'need / love / listen', `pua / puak` 'carry.on.back / spill', `pai / paih` 'go', `tua / tuah` 'do', and `tua / tuak` 'meet / receive'. These pairs matter because they reveal lexical-family contamination, one-sided evidence, shared-base competition, and analyzer overgeneration.
 
-##### Clause-linking with `kipan`
+`Ngai / ngaih` 'need / love / listen' is especially important. Exact verbal rows exist, but the `ngaihsun` and `ngaihsutna` family can still contaminate the argument unless it is filtered explicitly.
 
-This subsection is especially important for pairs such as `nusia ~ nusiat`, where the best Form II evidence is constructionally bound and source-linking rather than a neat finite contrast.
+### One-sided and same-form controls
 
-##### Purposive `nadingin`
+The current one-sided or constructionally skewed controls include `bawl / bawlh`, `dipkua / dipkuat`, `gen / genh`, `hawlkhia / hawlkhiat`, `husia / husiat`, `kho / khoh`, `kido / kidot`, `lua / luah`, `tu / tuh`, `tuahpha / tuahphat`, and `vial / vialh`.
 
-Purposive or irrealis-heavy `ding / nadingin` clauses are one of the clearest places where Form II becomes prominent across several promoted pairs.
+Same-form controls are also important: `dawn / dawn`, `hong / hong`, `om / om`, `ci / ci`, `hi / hi`, `bawl / bawl`, `zui / zui`, and `pai / pai`. These controls stay visible because they test questionnaire and corpus alignment, but they are not overt alternating pairs in the present Bible layer.
 
-##### Nominalized `-na`
+### Blocked or noisy material
 
-Nominalized material should be discussed directly, but with an explicit filter against lexicalized nouns and compounds.
+Representative blocked rows include `keu / keuh`, `khai / khaih`, `sia / siah`, `tan / tanh`, `mual / mualh`, `sum / sumh`, `thu / thuh`, `lampi / lampih`, `khua / khuat`, and `gamla / gamlat`.
 
-##### Attributive and relative `mi` contexts
+These rows remain blocked for clear grammatical reasons: nominal compounds, lexicalized families, derivational `-sak` 'causative / benefactive' overlap, homophone and shared-base contamination, category mismatch, and analyzer overgeneration. Keeping them visible matters, but promoting them as ordinary stem alternation evidence would overstate the data.
 
-These contexts belong with the broader non-final distribution. They matter, but they should not be turned into a mechanical rule.
+### Deferred and boundary material
 
-##### Possessed and genitive attributive contexts
+Several issues remain outside the present account.
 
-This section should stay compact and should probably center on `nei ~ neih`, since that pair gives the clearest evidence here.
+- Core pairs such as `mu / muh` 'see', `ne / nek` 'eat', and `nei / neih` 'have' are strong enough for grammar-facing use, but they do not exhaust the alternation system.
+- Promoted caveated pairs remain uneven in evidence quality, especially where Form II is sparse or constructionally restricted.
+- Difficult pairs such as `ngai / ngaih` 'need / love / listen' and `pua / puak` 'carry.on.back / spill' remain grammatically important without being fully settled.
+- One-sided and same-form controls remain necessary for coverage, even when they are not overt alternating pairs.
+- Blocked rows remain visible as explicit exclusions so nominal, lexicalized, or analyzer-noisy material is not converted into grammar facts.
 
-##### Modal and ability uses
+### Summary
 
-This subsection should explicitly center on `thei ~ theih`, since the pair is real but constructionally special.
-
-##### Quotative and say-complement contexts
-
-Discuss this environment mainly to explain why functional material such as `ci ~ cih` should not be merged blindly into the lexical-verb showcase table.
-
-##### Derived, causative, compound, and lexicalized material
-
-This should be an explicit filter section, not a positive-evidence section. The grammar needs to show why `-sak` material, compounds, lexicalized families, and review-bucket rows cannot simply be counted as ordinary stem evidence.
-
-#### Core showcase pairs
-
-The core pair subsection should remain narrow and should illustrate the system with the strongest three pairs:
-
-- `mu ~ muh`
-- `ne ~ nek`
-- `nei ~ neih`
-
-These pairs should do the main pedagogical work for the Form I / Form II contrast.
-
-This should become the **small core showcase table**, not the full promoted inventory.
-
-#### Promoted caveated pairs
-
-The next section should move to the broader but still promoted inventory:
-
-- `za ~ zak`
-- `pia ~ piak`
-- `nusia ~ nusiat`
-- `bia ~ biak`
-- `thei ~ theih`
-- `piang ~ pian`
-- `zui ~ zuih`
-- `khial ~ khialh`
-- `kia ~ kiak`
-- `sawlkhia ~ sawlkhiat`
-
-Each pair should get a short paragraph or table note answering two questions:
-
-1. **What does the evidence positively show?**
-2. **What is the specific caveat?**
-
-The point is not to collapse them into one generic “caveated examples” bucket, but to say what kind of Form II evidence each pair contributes.
-
-This should likely become the **larger promoted-pair inventory table**, with short editorial notes rather than long prose for every row.
-
-#### Difficult but grammatically important pairs
-
-This section should keep the difficult cases in the argument rather than silently dropping them:
-
-- `ngai ~ ngaih`
-- `pua ~ puak`
-- `pai ~ paih`
-- `tua ~ tuah`
-- `tua ~ tuak`
-
-These are not simply rejected. They matter because they show lexical-family contamination, shared-base problems, one-sided evidence, and analyzer overgeneration.
-
-#### One-sided Bible attestations and questionnaire controls
-
-This section should separate two things that were too easily blurred in earlier drafts:
-
-1. **One-sided or constructionally skewed lexical verbs** such as `bawl ~ bawlh`, `dipkua ~ dipkuat`, `gen ~ genh`, `hawlkhia ~ hawlkhiat`, `husia ~ husiat`, `kho ~ khoh`, `kido ~ kidot`, `lua ~ luah`, `tu ~ tuh`, `tuahpha ~ tuahphat`, and `vial ~ vialh`.
-2. **Same-form questionnaire controls** such as `dawn ~ dawn`, `hong ~ hong`, `om ~ om`, `ci ~ ci`, `hi ~ hi`, `bawl ~ bawl`, `zui ~ zui`, `pai ~ pai`, and the other same-form rows now tracked in the lexical inventory.
-
-The prose should say clearly that same-form questionnaire rows are useful controls, but they are not overt alternating pairs in the Bible layer.
-
-These rows are **not** discarded. They should stay visible in a coverage table because the grammar needs to account for verbs flagged by the literature, questionnaire, analyzer inventory, and Bible audit even when only one side is cleanly attested in the current Bible layer.
-
-#### Rejected/non-verbal/analyzer-noise cases
-
-This section should explain why some apparent pairs stay blocked:
-
-- nouns and nominal compounds;
-- lexicalized or compound families;
-- derivational `-sak` material;
-- homophones and shared-base contamination;
-- category mismatches;
-- analyzer overgeneration.
-
-Representative blocked rows should include:
-
-- `keu ~ keuh`
-- `khai ~ khaih`
-- `sia ~ siah`
-- `tan ~ tanh`
-- `mual ~ mualh`
-- `sum ~ sumh`
-- `thu ~ thuh`
-- `lampi ~ lampih`
-- `khua ~ khuat`
-- `gamla ~ gamlat`
-
-#### How the evidence files should be used
-
-The final prose should keep the current evidence layers distinct:
-
-
-
-
-
-
-
-
-#### Writing order for the eventual section
-
-The actual grammar section should be drafted in this order:
-
-1. **System-wide syntactic distribution**
-2. **Best-attested showcase pairs**
-3. **Promoted and difficult pair-by-pair discussion**
-4. **One-sided / same-form / functional coverage table**
-5. **Blocked or analyzer-noise appendix paragraph**
-
-That is the architecture this section should now support.
-
-#### Next prose draft
-
-The next commit should create a separate prose draft file rather than overwrite this planning file, probably at the present section.
-
-That draft should be organized as:
-
-1. **System-wide syntactic distribution**
-2. **Core showcase examples**
-3. **Promoted-pair inventory**
-4. **Pair-by-pair notes for promoted and difficult pairs**
-5. **One-sided / same-form / functional coverage table**
-6. **Blocked/noise appendix paragraph**
+Tedim stem alternation can now be stated in controlled grammar-facing prose: Form I and Form II contrasts are real, the core showcase pairs remain stable, and distribution by syntactic context is stronger than any one-line slogan. At the same time, promoted caveated rows, difficult pairs, one-sided controls, and blocked material remain explicit so the section stays accurate without overclaiming.
 
 ## Verb paradigms
 

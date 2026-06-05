@@ -246,6 +246,27 @@ d. Translation: a man / one person
 
 def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> None:
     expectations = {
+        "Stem alternation": (
+            "mu / muh",
+            "ne / nek",
+            "nei / neih",
+            "za / zak",
+            "pia / piak",
+            "nusia / nusiat",
+            "bia / biak",
+            "thei / theih",
+            "piang / pian",
+            "zui / zuih",
+            "khial / khialh",
+            "kia / kiak",
+            "sawlkhia / sawlkhiat",
+            "ngai / ngaih",
+            "pua / puak",
+            "pai / paih",
+            "tua / tuah",
+            "tua / tuak",
+            "mi",
+        ),
         "Numerals": ("khat", "nih", "sawm", "kua"),
         "Quantifiers": ("khempeuh", "pawlkhat", "kuamah", "bangmah", "tampi"),
         "NP structure / possession": ("hih", "mi", "mi khat", "ni li", "kum sawm le nih"),

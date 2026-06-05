@@ -591,49 +591,25 @@ def test_pair_discussion_plan_covers_required_pairs_and_statuses():
         assert row["recommended_prose_treatment"] != "Use in the small core showcase table and return to it briefly at the start of the pair-by-pair discussion."
 
 
-def test_grammar_slice_is_now_an_argument_outline_not_a_print_status_outline():
+def test_grammar_slice_is_now_a_grammar_facing_section():
     text = GRAMMAR_SLICE_PATH.read_text(encoding="utf-8")
     lower_text = text.lower()
-    assert "# Verb-stem alternation" in text
-    assert "draft argument plan" in text
-    assert "should not be organized only by print status" in text
-    assert "both syntactic contexts and individual verb pairs" in text
-    assert "small core showcase table" in lower_text
-    assert "larger promoted-pair inventory table" in lower_text
-    assert "one-sided / same-form / functional coverage table" in lower_text
-    assert "blocked or analyzer-noise table / appendix paragraph" in lower_text
-    assert "## Distribution by syntactic context" in text
-    assert "### Finite and main-clause uses" in text
-    assert "### Negative clauses" in text
-    assert "### Dependent temporal clauses with `ciangin`" in text
-    assert "### Purposive `nadingin`" in text
-    assert "### Modal and ability uses" in text
-    assert "## Core showcase pairs" in text
-    assert "## Promoted caveated pairs" in text
-    assert "## Difficult but grammatically important pairs" in text
-    assert "## One-sided Bible attestations and questionnaire controls" in text
-    assert "## Rejected/non-verbal/analyzer-noise cases" in text
-    assert "## How the evidence files should be used" in text
-    assert "stem_alternation_syntactic_context_matrix.tsv" in text
-    assert "stem_alternation_pair_discussion_plan.tsv" in text
-    assert "stem_alternation_citation_shortlist.tsv` = the **only quotation-safe layer**" in text
-    assert "matrix is for organizing claims and subsection order" in lower_text
-    assert "citation shortlist remains the source of quotation candidates" in lower_text
-    assert "should stay visible in a coverage table" in lower_text
-    assert "coverage table" in lower_text
-    assert "only one side is cleanly attested" in lower_text
-    assert "The actual grammar section should be drafted in this order" in text
-    assert "system-wide syntactic distribution" in lower_text
-    assert "promoted and difficult pair-by-pair discussion" in lower_text
-    assert "next prose draft" in lower_text
-    assert "grammar_stem_alternation_section_draft.md" in text
-    assert "one-sided / same-form / functional coverage table" in lower_text
-    assert "blocked/noise appendix paragraph" in lower_text
-    assert "main table" not in lower_text
-    assert "mu ~ muh" in text
-    assert "thei ~ theih" in text
-    assert "ngai ~ ngaih" in text
-    assert "keu ~ keuh" in text
+    assert "# Overview of Form I / Form II stem alternation" in text
+    assert "Current stem alternation overview" in text
+    assert "Distribution by syntactic context" in text
+    assert "Core showcase pairs" in text
+    assert "Promoted caveated pairs" in text
+    assert "Difficult but grammatically important pairs" in text
+    assert "One-sided and same-form controls" in text
+    assert "Blocked or noisy material" in text
+    assert "Several issues remain outside the present account." in text
+
+    assert "draft argument plan" not in lower_text
+    assert "eventual prose" not in lower_text
+    assert "next commit" not in lower_text
+    assert "writing order" not in lower_text
+    assert "quotation-safe layer" not in lower_text
+    assert not re.search(r"(?:output|tests|scripts|docs)/[A-Za-z0-9_./\\-]+", text)
 
 
 def test_grammar_section_draft_follows_the_planned_architecture_and_quote_rules():

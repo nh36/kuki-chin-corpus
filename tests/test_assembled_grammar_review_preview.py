@@ -162,6 +162,8 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
     text = _text()
 
     for required in (
+        "Overview of Form I / Form II stem alternation",
+        "Current stem alternation overview",
         "Overview of transitivity contrasts",
         "Current transitivity inventory",
         "Full reduplication as intensification",
@@ -210,6 +212,8 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "review preview, not a finished grammar" in lower
     assert "\\setcounter{secnumdepth}{3}" in tex
     assert "\\setcounter{tocdepth}{2}" in tex
+    assert "overview of form i / form ii stem alternation" in normalized
+    assert "current stem alternation overview" in normalized
     assert "overview of transitivity contrasts" in normalized
     assert "\\tdim{sih}" in lower
     assert "\\tdim{hawl}" in lower
@@ -501,6 +505,24 @@ def test_assembled_preview_includes_normalized_transitivity_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_stem_alternation_section() -> None:
+    text = _text()
+
+    for required in (
+        "Stem alternation",
+        "Overview of Form I / Form II stem alternation",
+        "Current stem alternation overview",
+        "Distribution by syntactic context",
+        "Core showcase pairs",
+        "Promoted caveated pairs",
+        "Difficult but grammatically important pairs",
+        "One-sided and same-form controls",
+        "Blocked or noisy material",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -757,6 +779,41 @@ def test_assembled_preview_tex_includes_normalized_derivation_inventory_and_exam
         assert required.lower() in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_stem_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:stem-") >= 6
+    assert tex.count("\\label{ex:stem-") >= 6
+
+    for required in (
+        "Current stem alternation overview",
+        "Distribution by syntactic context",
+        "Core showcase pairs",
+        "Promoted caveated pairs",
+        "mu / muh",
+        "ne / nek",
+        "nei / neih",
+        "ciangin",
+        "ni-in",
+        "kipan",
+        "nadingin",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "current stem alternation overview",
+        "distribution by syntactic context",
+        "core showcase pairs",
+        "promoted caveated pairs",
+    ):
+        assert required in pdf_normalized
+
+
 def test_assembled_preview_tex_includes_normalized_transitivity_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -852,6 +909,17 @@ def test_assembled_preview_tex_keeps_derivation_example_sources_after_translatio
     assert "(Mark 12:3)" in _tex_example_block("ex:deriv-ciahsakkik-mark12")
 
 
+def test_assembled_preview_tex_keeps_stem_example_sources_after_translation() -> None:
+    assert "(Genesis 1:4)" in _tex_example_block("ex:stem-mu-gen1")
+    assert "(Genesis 19:1)" in _tex_example_block("ex:stem-muh-gen19")
+    assert "(Genesis 2:17)" in _tex_example_block("ex:stem-ne-gen2")
+    assert "(Genesis 2:17)" in _tex_example_block("ex:stem-nek-gen2")
+    assert "(Genesis 11:30)" in _tex_example_block("ex:stem-nei-gen11")
+    assert "(2 Samuel 23:8)" in _tex_example_block("ex:stem-neih-2sam23")
+    assert "(Psalms 43:3)" in _tex_example_block("ex:stem-sawlkhia-ps43")
+    assert "(Luke 22:35)" in _tex_example_block("ex:stem-sawlkhiat-luke22")
+
+
 def test_assembled_preview_tex_keeps_transitivity_example_sources_after_translation() -> None:
     assert "(Genesis 11:28)" in _tex_example_block("ex:trans-sih-gen11")
     assert "(Matthew 22:27)" in _tex_example_block("ex:trans-sih-matt22")
@@ -862,6 +930,14 @@ def test_assembled_preview_tex_keeps_transitivity_example_sources_after_translat
     assert "(Matthew 27:36)" in _tex_example_block("ex:trans-en-matt27")
     assert "(Genesis 6:8)" in _tex_example_block("ex:trans-mu-gen6")
     assert "(Matthew 2:10)" in _tex_example_block("ex:trans-muh-matt2")
+
+
+def test_assembled_preview_stem_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 1:4)" in tex or "(Genesis 2:17)" in tex or "(Psalms 43:3)" in tex
+    assert "(Luke 22:35)" in tex or "No equally clean Gospel example is currently used" in text
 
 
 def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
