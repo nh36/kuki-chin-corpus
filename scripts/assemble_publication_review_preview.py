@@ -257,6 +257,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Noun domain",
     "Case marking",
     "Relators / postpositions",
+    "Derivation / valency",
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
@@ -269,6 +270,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_noun_domain_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_case_marking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_relators_postpositions_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_derivation_valency_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_vp_structure_stacking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_tam_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_directionals_normalization.tsv",
@@ -298,6 +300,11 @@ GRAMMAR_FACING_SECTION_INTROS = {
     "Relators / postpositions": (
         "The current evidence supports relational nouns such as `sung` 'inside', `tung` 'on / upon', "
         "`kiang` 'beside / near', and `lak` 'among / midst', together with postpositional source patterns that close the larger phrase."
+    ),
+    "Derivation / valency": (
+        "The current derivation and valency evidence is strongest around `-sak` 'causative / benefactive', "
+        "especially `paisak` 'cause to go' and `muhsak` 'show / make see', while `-pih` 'with / accompanying', "
+        "`ki-` 'reflexive / middle / passive-like', and heavier suffix stacks remain boundary material."
     ),
     "VP structure / suffix stacking": (
         "The current VP-structure evidence is strongest for a small checked set of suffix stacks such as "

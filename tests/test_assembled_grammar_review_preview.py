@@ -462,6 +462,25 @@ def test_assembled_preview_includes_normalized_vp_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_derivation_section() -> None:
+    text = _text()
+
+    for required in (
+        "Derivation / valency",
+        "Overview of derivation and valency change",
+        "Current derivation / valency inventory",
+        "Causative `-sak`",
+        "Benefactive and applicative-like `-sak`",
+        "The practical split within `-sak`",
+        "Boundary with `-pih`",
+        "Boundary with `ki-`",
+        "Boundary with VP stacking",
+        "Boundary with transitivity",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -670,6 +689,54 @@ def test_assembled_preview_tex_includes_normalized_vp_inventory_and_examples() -
         assert required.lower() in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_derivation_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:deriv-") >= 6
+    assert tex.count("\\label{ex:deriv-") >= 6
+
+    for required in (
+        "Current derivation / valency inventory",
+        "Causative `-sak`",
+        "Benefactive and applicative-like `-sak`",
+        "The practical split within `-sak`",
+        "Boundary with VP stacking",
+        "paisak",
+        "muhsak",
+        "ciahsakkik",
+        "piangsak",
+    ):
+        assert required.lower() in text.lower()
+
+    for required in (
+        "Current derivation / valency inventory",
+        "Causative",
+        "Benefactive and applicative-like",
+        "The practical split within",
+        "Boundary with VP stacking",
+        "paisak",
+        "muhsak",
+        "ciahsakkik",
+        "piangsak",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "Current derivation / valency inventory",
+        "causative",
+        "benefactive and applicative-like",
+        "paisak",
+        "muhsak",
+        "ciahsakkik",
+    ):
+        assert required.lower() in pdf_normalized
+
+
 def test_assembled_preview_tex_keeps_relators_example_sources_after_translation() -> None:
     assert "(Mark 2:2)" in _tex_example_block("ex:rel-pualam-kongkhak")
     assert "(Genesis 24:11)" in _tex_example_block("ex:rel-pualam-khuapi")
@@ -718,6 +785,15 @@ def test_assembled_preview_tex_keeps_vp_example_sources_after_translation() -> N
     assert "(Mark 12:3)" in _tex_example_block("ex:vp-ciahsakkik-mark12")
 
 
+def test_assembled_preview_tex_keeps_derivation_example_sources_after_translation() -> None:
+    assert "(Exodus 10:7)" in _tex_example_block("ex:deriv-paisak-exod10")
+    assert "(Mark 10:14)" in _tex_example_block("ex:deriv-paisak-mark10")
+    assert "(Habakkuk 2:2)" in _tex_example_block("ex:deriv-muhsak-hab2")
+    assert "(John 9:26)" in _tex_example_block("ex:deriv-muhsak-john9")
+    assert "(Genesis 24:54)" in _tex_example_block("ex:deriv-ciahsakkik-gen24")
+    assert "(Mark 12:3)" in _tex_example_block("ex:deriv-ciahsakkik-mark12")
+
+
 def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
     tex = _tex_text()
     text = _text()
@@ -746,6 +822,14 @@ def test_assembled_preview_vp_examples_include_old_testament_and_gospel_sources(
 
     assert "(Deuteronomy 32:30)" in tex or "(Genesis 20:13)" in tex or "(Genesis 41:16)" in tex or "(Genesis 24:54)" in tex
     assert "(Luke 9:51)" in tex or "(Matthew 7:21)" in tex or "(Mark 12:3)" in tex or "No equally clean Gospel example is currently used for this exact construction" in text
+
+
+def test_assembled_preview_derivation_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Exodus 10:7)" in tex or "(Habakkuk 2:2)" in tex or "(Genesis 24:54)" in tex
+    assert "(Mark 10:14)" in tex or "(John 9:26)" in tex or "(Mark 12:3)" in tex or "No equally clean Gospel example is currently used for this exact construction" in text
 
 
 def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples() -> None:
