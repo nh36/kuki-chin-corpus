@@ -150,6 +150,60 @@ def test_assembled_preview_gap_sections_use_grammar_facing_prose() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_interrogatives_section() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    normalized_tex = _normalize(tex.lower())
+    normalized_pdf = _normalize(pdf.lower())
+
+    for required in (
+        "Overview of interrogatives in Tedim",
+        "Interrogative inventory",
+        "Clause-final `hiam` 'question particle'",
+        "WH + `hiam` content questions",
+        "Embedded-question boundary",
+        "Blocked false friends and non-interrogative `hiam`",
+        "Deferred comparison particles",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+    for required in (
+        "overview of interrogatives in tedim",
+        "interrogative inventory",
+        "question particle",
+        "wh +",
+        "embedded-question boundary",
+        "blocked false friends and non-interrogative",
+        "deferred comparison particles",
+        "several issues remain outside the present account.",
+    ):
+        assert required in normalized_tex
+        assert required in normalized_pdf
+
+    assert text.count("(@ex:int-") >= 10
+    assert tex.count("\\label{ex:int-") >= 10
+    assert "interrogative inventory" in pdf.lower()
+
+
+def test_assembled_preview_tex_keeps_interrogatives_example_sources_after_translation() -> None:
+    assert "(Genesis 24:23)" in _tex_example_block("ex:int-hiam-gen24-23")
+    assert "(Matthew 6:25)" in _tex_example_block("ex:int-hiam-matt6-25")
+    assert "(Genesis 48:8)" in _tex_example_block("ex:int-kua-gen48-8")
+    assert "(Matthew 16:15)" in _tex_example_block("ex:int-kua-matt16-15")
+    assert "(Genesis 3:13)" in _tex_example_block("ex:int-bangci-gen3-13")
+    assert "(Matthew 12:26)" in _tex_example_block("ex:int-bangci-matt12-26")
+
+
+def test_assembled_preview_interrogatives_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 24:23)" in tex
+    assert "(Matthew 6:25)" in tex
+    assert "(Luke 23:34)" in tex
+
+
 def test_assembled_preview_does_not_claim_finished_grammar_or_pdf() -> None:
     text = _text()
     lower = text.lower()
@@ -223,7 +277,16 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "\\tdim{kanei}" in lower
     assert "cardinal numerals" in lower
     assert "decimal composition" in lower
+    assert "overview of interrogatives in tedim" in normalized
+    assert "interrogative inventory" in normalized
+    assert "\\tdim{hiam}" in lower
+    assert "\\tdim{bangci}" in lower
     assert "occurrence-counting" in lower or "occurrence counting" in lower
+
+
+def test_assembled_preview_pdf_exists_and_is_non_empty() -> None:
+    assert PDF_PATH.exists(), "Assembled grammar review preview PDF must exist"
+    assert PDF_PATH.stat().st_size > 0, "Assembled grammar review preview PDF must not be empty"
 
 
 def test_assembled_preview_tex_uses_real_citation_and_gb4e_machinery() -> None:

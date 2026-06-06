@@ -1,5 +1,7 @@
 ---
-title: "Tedim Chin Grammar Review Slice: Interrogatives"
+title: "Tedim interrogatives"
+author: "Tedim Grammar Working Group"
+date: "2026-06-06"
 bibliography:
   - ../../literature/bibliography.bib
 link-citations: true
@@ -7,76 +9,151 @@ suppress-bibliography: true
 reference-section-title: "References"
 ---
 
-# Scope
+# Overview of interrogatives in Tedim
 
-This short print-facing draft section on interrogatives in Tedim Chin is controlled by `candidates_interrogatives.tsv` and `dossier_interrogatives.md`. It covers clause-final `hiam` and selected WH + `hiam` content questions. It does not yet attempt a full treatment of the sentence-final particle system, and it leaves comparison particles such as `maw`, `ham`, and `em` for later review.
+This section treats clause-final `hiam` 'question particle' and selected WH + `hiam` content questions. It keeps `bang` 'what', `kua` 'who', `bangci` 'how', and `banghangin` 'why' at the core, while `bang hiam cih` 'what ... saying', `bangmah` 'nothing', `bangin` 'as / how', and the comparison-particle forms `maw` 'question/comparison particle', `ham` 'question/comparison particle', and `em` 'question/comparison particle' stay at the boundary.
 
-# Interrogatives in outline
+The inventory below keeps the set compact. Raw counts are not treated as grammar facts here.
 
-The current candidate-backed packet supports a narrow generalization. Yes/no questions can be marked by clause-final `hiam`, and content questions use a WH element plus `hiam`. The present WH inventory represented in the packet is `bang`, `kua`, `bangci`, and `banghangin`. Embedded question complements are visible in the dossier, but they are not yet ready for the first printed analysis.
+## Interrogative inventory
 
-Because this slice is controlled by the candidate-first packet rather than by raw report counts, it should stay narrow. The point here is not to describe every sentence-final question marker or every surface occurrence of `hiam`, but to print only the examples that the current candidate and dossier layer already support.
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `hiam` | question particle | Genesis 24:23; Matthew 6:25 | stable | clause-final yes/no marker |
+| `bang` | what | Exodus 16:15; Matthew 6:31 | stable with caveat | overlaps with `bangmah` 'nothing' and `bangin` 'as / how' |
+| `kua` | who | Genesis 48:8; Matthew 16:15 | stable with caveat | analyzer sometimes tags `kua` as `NUM` |
+| `bangci` | how | Genesis 3:13; Matthew 12:26 | stable | should not be flattened into generic `bang` |
+| `banghangin` | why | Genesis 4:6; Matthew 6:28 | stable with caveat | should not be merged with formulaic `Bang hang hiam cih leh` |
+| `bang hiam cih` | what ... saying / embedded-question boundary | Exodus 16:15; Luke 23:34 | boundary | complements under `thei lo` or speech frames |
+| `Bang hang hiam cih leh` | because / for this reason | Genesis 3:20 | blocked | formulaic reason frame, not ordinary question evidence |
+| `langnih a hiam namsau` | two-edged sword | Revelation 1:16 | blocked | lexical `hiam`, not interrogative `hiam` |
+| `a hiam ciat uh` | each of them | 2 Kings 11:11 | blocked | lexical `hiam`, not interrogative `hiam` |
+| `bangmah` | nothing | Genesis 9:21 | boundary | negative-indefinite rather than interrogative `bang` |
+| `bangin` | as / how | Genesis 1:7; Exodus 14:30 | boundary | manner/comparison/clause-linkage use |
+| `maw` | question/comparison particle | report-backed comparison material | deferred | comparison-particle analysis not yet set out |
+| `ham` | question/comparison particle | report-backed comparison material | deferred | comparison-particle analysis not yet set out |
+| `em` | question/comparison particle | report-backed comparison material | deferred | comparison-particle analysis not yet set out |
 
-# Clause-final `hiam`
+## Clause-final `hiam` 'question particle'
 
-The current candidate-backed examples support clause-final `hiam` as the core yes/no pattern represented in this packet. The best print anchor is Genesis 24:23, using the attested analyzer-backed clause rather than the older generated-report paraphrase.
+Clause-final `hiam` is the safest yes/no question marker in the current evidence. It also appears with some WH questions, but the independent-clause pattern is the clearest place to start.
 
-(@ex:hiam-yes-no)
+(@ex:int-hiam-gen24-23) Genesis 24:23
 a. Tedim: Na pa inn-ah kote giah nading a awng ding hiam
 b. Segmentation: Na | pa' | inn-ah | kote' | giah | nading | a | awng | ding | hiam
 c. Gloss: 2SG | male.POSS | house-LOC | 1PL.PRO.POSS | camp | PURP | 3SG | open | IRR | Q
-d. Translation: 'Is there room in thy father's house for us to lodge?'
+d. Translation: 'Is there room in your father's house for us to stay?' (Genesis 24:23)
 
-This printed example should replace the older report paraphrase `Inn-ah hong tum theih na hiam`. The dossier is explicit that the exported window for Genesis 24:23 is `Na pa inn-ah kote giah nading a awng ding hiam`, and that attested clause is what the print slice should use. The candidate TSV also records one export caveat: punctuation is attached to the final token in the raw analyzer window, but that punctuation artifact should not be printed as if it were part of `hiam` itself.
+Matthew 6:25 gives a Gospel yes/no question with the same clause-final `hiam` pattern, so the distribution is not confined to a single narrative window.
 
-# WH + `hiam` content questions
+(@ex:int-hiam-matt6-25) Matthew 6:25
+a. Tedim: Nuntakna pen an sangin thupizaw a, pumpi pen puan sangin thupizaw hi lo ahi hiam?
+b. Segmentation: Nuntakna | pen | an | sangin | thupizaw | a | pumpi | pen | puan | sangin | thupizaw | hi | lo | ahi | hiam
+c. Gloss: life | TOP | food | than | more.important | CONJ | body | TOP | clothing | than | more.important | DECL | NEG | be.3SG | Q
+d. Translation: 'Is not life more important than food, and the body more important than clothing?' (Matthew 6:25)
 
-The content-question pattern in the current packet is WH + `hiam`. The safest print-facing claim is therefore not that every WH form behaves identically, but that the present candidate-backed examples show `bang`, `kua`, `bangci`, and `banghangin` in this construction.
+## WH + `hiam` content questions
 
-(@ex:hiam-bang) Exodus 16:15
+The content-question pattern is WH + `hiam`. The forms below are the current core WH inventory in this section. `Bang` 'what' and `kua` 'who' are the simplest members of the set; `bangci` 'how' and `banghangin` 'why' show that the same question marker can attach to different semantic relations.
+
+### `bang` 'what'
+
+`Bang` is the clearest what-question word. It can appear in a very short clause or inside a longer question frame.
+
+(@ex:int-bang-exod16-15) Exodus 16:15
 a. Tedim: Bang ahi hiam?
 b. Segmentation: Bang | ahi | hiam
 c. Gloss: what | be.3SG | Q
-d. Translation: 'What is it?'
+d. Translation: 'What is it?' (Exodus 16:15)
 
-Exodus 16:15 is the current print anchor for `bang`. The dossier keeps one export caveat explicit: the analyzer glosses `bang` here as `like`. The clause-level evidence and KJV alignment still support the ordinary what-question reading, so the example remains usable in print with that caveat recorded in the packet rather than foregrounded in the example line.
+Matthew 6:31 shows `bang` in a longer Gospel question frame.
 
-(@ex:hiam-kua)
+(@ex:int-bang-matt6-31) Matthew 6:31
+a. Tedim: Bang ne ding a, bang dawn ding a, bang silh ding ihi hiam?
+b. Segmentation: Bang | ne | ding | a | bang | dawn | ding | a | bang | silh | ding | i | hi | hiam
+c. Gloss: what | eat | IRR | CONJ | what | drink | IRR | CONJ | what | wear | IRR | 1PL | be | Q
+d. Translation: 'What shall we eat, what shall we drink, and what shall we wear?' (Matthew 6:31)
+
+### `kua` 'who'
+
+`Kua` is the core who-question word. The analyzer sometimes tags it as `NUM`, but that export label does not change the clause-level reading.
+
+(@ex:int-kua-gen48-8) Genesis 48:8
 a. Tedim: Hihte kua ahi hiam?
 b. Segmentation: Hihte | kua | ahi | hiam
 c. Gloss: these | who | be.3SG | Q
-d. Translation: 'Who are these?'
+d. Translation: 'Who are these?' (Genesis 48:8)
 
-Genesis 48:8 is the current print anchor for `kua ... hiam`, and 2 Samuel 22:32 gives additional support for the same pattern (`Topa longal Pasian kua hiam`). The dossier again keeps the relevant export caveat explicit: `kua` is tagged as `NUM` in the analyzer output. That label should be treated as an export limitation rather than as evidence against the interrogative reading.
+Matthew 16:15 gives a Gospel counterpart with the same question word.
 
-(@ex:hiam-bangci)
+(@ex:int-kua-matt16-15) Matthew 16:15
+a. Tedim: Tua ahihleh note in kei kua hi hong ci na hi uh hiam?
+b. Segmentation: Tua | ahihleh | note | in | kei | kua | hi | hong | ci | na | hi | uh | hiam
+c. Gloss: then | if.so | 2PL.PRO | ERG | 1SG.PRO | who | DECL | VEN | say | 2 | DECL | PL | Q
+d. Translation: 'But who do you say that I am?' (Matthew 16:15)
+
+### `bangci` 'how'
+
+`Bangci` stays visible as `bangci` rather than being flattened into generic `bang`. It is the clearest manner-question item in the current evidence.
+
+(@ex:int-bangci-gen3-13) Genesis 3:13
 a. Tedim: Bangci a hici gamtat na hi hiam?
 b. Segmentation: Bangci | a | hi-ci | gam-tat | na | hi | hiam
 c. Gloss: how | 3SG | this-say | conduct-do | 2SG | DECL | Q
-d. Translation: 'How have you acted thus?'
+d. Translation: 'How have you acted thus?' (Genesis 3:13)
 
-Genesis 3:13 is the cleanest current `bangci` row, and it matters methodologically because it should remain visible as `bangci`, not be flattened into a generic `bang` example.
+Matthew 12:26 keeps the same `bangci` pattern visible in Gospel material.
 
-The present packet also keeps Genesis 4:6 as reason-question evidence:
+(@ex:int-bangci-matt12-26) Matthew 12:26
+a. Tedim: Tua mah bangin Satan le Satan kihawlkhia le-uh a ukna bangci kip theih ding ahi hiam?
+b. Segmentation: Tua | mah | bangin | Satan | le | Satan | ki-hawl-khia | le-uh | a | uk-na | bangci | kip | theih | ding | ahi | hiam
+c. Gloss: thus | same | like | Satan | and | Satan | REFL-drive-out | if-PL | 3SG | kingdom | how | stand | know | IRR | be.3SG | Q
+d. Translation: 'How then can Satan cast out Satan?' (Matthew 12:26)
 
-> bang hangin na mai sia ahi hiam
+### `banghangin` 'why'
 
-This row is important because it keeps `banghangin` in the slice while also recording the segmentation caveat from the dossier. The analyzer exports the sequence as `bang | hang-in | na | mai | sia | ahi | hiam`, but the current packet still treats the clause as curated reason-question evidence rather than as a raw `bang` hit.
+`Banghangin` remains a reason-question item. The segmented form is slightly noisy, but the clause-level reading is still clear.
 
-# Embedded questions
+(@ex:int-banghangin-gen4-6) Genesis 4:6
+a. Tedim: bang hangin na mai sia ahi hiam
+b. Segmentation: bang | hang-in | na | mai | sia | ahi | hiam
+c. Gloss: what | because-ERG | 2SG | face | evil | be.3SG | Q
+d. Translation: 'Why is your countenance fallen?' (Genesis 4:6)
 
-The dossier keeps Exodus 16:15 `bang hiam cih thei lo uh hi` visible as embedded-question material, but it is not promoted here as a core independent-clause `hiam` example. It should remain deferred for a later treatment of embedded questions or interrogative complementation, not folded into the first printed outline as if it were interchangeable with the main clause-final examples above.
+Matthew 6:28 is a Gospel counterpart with the same reason-question pattern.
 
-# Blocked false friends
+(@ex:int-banghangin-matt6-28) Matthew 6:28
+a. Tedim: Bang hangin puansilh ding lunghimawh na hi uh hiam?
+b. Segmentation: Bang | hangin | puan-silh | ding | lunghimawh | na | hi | uh | hiam
+c. Gloss: why | clothing | IRR | worry | 2PL.PRO | be | PL | Q
+d. Translation: 'Why are you anxious about clothing?' (Matthew 6:28)
 
-The packet also shows why raw `hiam` and `bang` matching would overgenerate. `Bang hang hiam cih leh` in Genesis 3:20 is a formulaic explanatory frame, not an ordinary question example. Revelation 1:16 `langnih a hiam namsau` and 2 Kings 11:11 `a hiam ciat uh` are lexical or non-interrogative `hiam` controls rather than question-particle evidence. Likewise, `bangmah` and `bangin` are bang-family false friends and should not be treated as ordinary `bang` interrogatives.
+## Embedded-question boundary
 
-These blocked rows matter because they keep the printed claim small and accurate: the slice prints candidate-backed interrogative examples, not every surface string that happens to contain `hiam` or `bang`.
+`Bang hiam cih` 'what ... saying' belongs at the embedded-question boundary, not in the independent-clause pattern. The current evidence shows this most clearly where `thei lo` 'do not know' governs the embedded question.
 
-# Deferred particles
+(@ex:int-embedded-exod16-15) Exodus 16:15
+a. Tedim: bang hiam cih thei lo uh hi
+b. Segmentation: bang | hiam | cih | thei | lo | uh | hi
+c. Gloss: what | Q | say.NMLZ | know | NEG | 2/3PL | DECL
+d. Translation: 'They did not know what it was.' (Exodus 16:15)
 
-Existing generated reports mention `maw`, `ham`, and `em`, but they remain deferred in this first print slice. They are not part of the core `hiam` evidence printed here, and this section does not yet build a comparison-particle analysis.
+Luke 23:34 shows the same boundary in a Gospel frame.
 
-# Editorial summary
+(@ex:int-embedded-luke23-34) Luke 23:34
+a. Tedim: Pa aw, amaute in bang hih ihi hiam cih thei lo uh ahih manin a mawhna uh na maisak in
+b. Segmentation: Pa | aw | amaute | in | bang | hih | ihi | hiam | cih | thei | lo | uh | ahih | manin | a | mawhna | uh | na | maisak | in
+c. Gloss: father | VOC | they | ERG | what | do | 1PL | Q | say.NMLZ | know | NEG | PL | be.REL | because | 3SG | sin | PL | 2SG | forgive | IMP
+d. Translation: 'Father, forgive them, for they know not what they are doing.' (Luke 23:34)
 
-This slice can now safely support four modest claims. First, `hiam` is the candidate-backed question marker in the current print packet, with clause-final `hiam` as the core pattern represented in the accepted examples. Second, WH + `hiam` is the current content-question pattern. Third, `bang`, `kua`, `bangci`, and `banghangin` are the current candidate-backed WH forms. Fourth, embedded questions and deferred comparison particles remain outside the scope of this first printed analysis.
+## Blocked false friends and non-interrogative `hiam`
+
+`Bang hang hiam cih leh` 'because / for this reason' is a formulaic reason frame, not an ordinary question. `Langnih a hiam namsau` 'two-edged sword' (Revelation 1:16) and `a hiam ciat uh` 'each of them' (2 Kings 11:11) are lexical `hiam` controls. `Bangmah` 'nothing' (Genesis 9:21) and `bangin` 'as / how' (Genesis 1:7; Exodus 14:30) are boundary forms rather than core interrogatives.
+
+## Deferred comparison particles
+
+`Maw` 'question/comparison particle', `ham` 'question/comparison particle', and `em` 'question/comparison particle' remain deferred. The current evidence is enough to keep them visible, but not enough to build a separate comparison-particle account.
+
+## Deferred material
+
+Several issues remain outside the present account.

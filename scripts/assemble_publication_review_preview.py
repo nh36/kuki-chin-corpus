@@ -252,6 +252,7 @@ TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", 
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Demonstratives / deixis",
+    "Interrogatives",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -272,6 +273,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_demonstratives_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_interrogatives_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_prefix_agreement_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_pronouns_normalization.tsv",
@@ -303,6 +305,13 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "The current demonstrative evidence is strongest for core `hih` 'this' and `tua` 'that / the "
         "aforementioned', plus plural `hihte` 'these' and `tuate` 'those', while `hi` and exact `hih ciangin` "
         "'when this / when doing thus' remain boundary material."
+    ),
+    "Interrogatives": (
+        "The current interrogative evidence is strongest for clause-final `hiam` 'question particle' and WH + "
+        "`hiam` content questions, with core `bang` 'what', `kua` 'who', `bangci` 'how', and `banghangin` "
+        "'why', while `bang hiam cih` 'what ... saying', `bangmah` 'nothing', `bangin` 'as / how', and the "
+        "comparison-particle forms `maw` 'question/comparison particle', `ham` 'question/comparison particle', "
+        "and `em` 'question/comparison particle' stay at the boundary."
     ),
     "Stem alternation": (
         "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "

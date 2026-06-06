@@ -17,6 +17,7 @@ PYTEST_FILES = [
     "tests/test_prefix_agreement_normalized_print_slice.py",
     "tests/test_pronouns_normalized_print_slice.py",
     "tests/test_demonstratives_normalized_print_slice.py",
+    "tests/test_interrogatives_normalized_print_slice.py",
     "tests/test_transitivity_normalized_print_slice.py",
     "tests/test_derivation_valency_normalized_print_slice.py",
     "tests/test_vp_structure_stacking_normalized_print_slice.py",

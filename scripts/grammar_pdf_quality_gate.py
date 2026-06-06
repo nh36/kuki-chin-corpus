@@ -18,6 +18,7 @@ DEFAULT_REPORT_PATH = ROOT / "output" / "publication_review" / "grammar_facing_q
 FIRST_CHAPTER_TITLE = "Phonology and tone"
 TARGET_SECTION_TITLES = {
     "Demonstratives / deixis",
+    "Interrogatives",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -109,6 +110,17 @@ TEX_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"(?:output|scripts|tests|docs)/[A-Za-z0-9_./\\-]+", re.IGNORECASE), "internal file path"),
 )
 GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
+    "hiam": ((r"question particle|question marker|Q",), "question particle"),
+    "bang": ((r"what",), "what"),
+    "bangci": ((r"how",), "how"),
+    "banghangin": ((r"why",), "why"),
+    "bang hiam cih": ((r"what .* saying",), "what ... saying"),
+    "Bang hang hiam cih leh": ((r"because|for this reason",), "because / for this reason"),
+    "langnih a hiam namsau": ((r"two-edged sword",), "two-edged sword"),
+    "a hiam ciat uh": ((r"each of them",), "each of them"),
+    "maw": ((r"question/comparison particle|comparison particle",), "question/comparison particle"),
+    "ham": ((r"question/comparison particle|comparison particle",), "question/comparison particle"),
+    "em": ((r"question/comparison particle|comparison particle",), "question/comparison particle"),
     "gam": ((r"land(?: / country)?",), "land / country"),
     "aksi": ((r"star",), "star"),
     "aksi-te": ((r"stars",), "stars"),
@@ -278,7 +290,7 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "mu-hna-ah": ((r"see-NMLZ-LOC|in the sight",), "see-NMLZ-LOC"),
     "leh": ((r"if / when|conditional",), "if / when"),
     "hangin": ((r"because|causal subordination",), "because"),
-    "bangin": ((r"like / as|comparative",), "like / as"),
+    "bangin": ((r"as / how|like / as|as|how|like|comparative",), "as / how"),
 }
 
 
