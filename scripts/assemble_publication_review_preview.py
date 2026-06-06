@@ -263,6 +263,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
+    "Nominalization",
 }
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
@@ -278,6 +279,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_vp_structure_stacking_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_tam_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_directionals_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_nominalization_normalization.tsv",
 )
 GRAMMAR_FACING_INTERNAL_SECTION_TITLES = {"Scope", "Editorial scope"}
 GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
@@ -341,6 +343,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "The current TAM evidence is strongest for a small checked set of aspectual and modal anchors such as "
         "`-ta` 'completive / change-of-state', `-zo` 'already / completive', `-gige` 'habitually / always', "
         "`-ding` 'prospective / irrealis', `-thei` 'can / be able', and `-kik` 'again / back'."
+    ),
+    "Nominalization": (
+        "The current nominalization evidence is strongest for productive deverbal `-na` 'nominalizer', "
+        "with `bawlna` 'making / creation' as a compact anchor, while `-pa` 'agentive / person' and "
+        "`-mi` 'person / one who' material "
+        "remains explicit boundary evidence."
     ),
 }
 GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [

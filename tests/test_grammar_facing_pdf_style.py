@@ -346,6 +346,18 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
             "paitoh",
             "tawplam",
         ),
+        "Nominalization": (
+            "bawlna",
+            "bawl-na",
+            "-pa",
+            "-mi",
+            "hong pai mi",
+            "omna",
+            "muhna-ah",
+            "kumpipa",
+            "Topa",
+            "a bawl mi",
+        ),
     }
 
     for section_title, forms in expectations.items():

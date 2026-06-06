@@ -2,68 +2,144 @@
 title: "Tedim Nominalization Grammar Print Slice"
 ---
 
-# Editorial scope
+# Overview of nominalization in this section
 
-This is the first narrow nominalization grammar slice. It is controlled by `output/publication_review/candidates_nominalization.tsv` and `output/publication_review/dossier_nominalization_scope.md`. Supporting/background evidence comes from `docs/grammar/reports/07-nmlz-01-deverbal.md`, `docs/grammar/morphemes/06-derivational.md`, `docs/grammar/grammar_source_map.json`, and `docs/SKELETON_GRAMMAR.md`.
+This section treats a controlled part of Tedim nominalization centered on productive deverbal `-na` 'nominalizer'. It keeps agentive or person-head material and nominalized relative-clause material as boundaries so the discussion remains grammar-facing without turning into a full nominalization, relative-clause, or derivational chapter.
 
-This is not a full nominalization chapter, not a full derivation chapter, not a full relative-clause chapter, and not a full case-routing chapter. It also stays narrow against `output/publication_review/candidates_clause_linkage.tsv`, `output/publication_review/review_notes_clause_linkage.md`, `output/publication_review/review_notes_case_marking.md`, `output/publication_review/review_notes_derivation_valency.md`, `output/publication_review/review_notes_prefix_agreement.md`, and `output/publication_review/review_notes_pronouns.md`.
+# Current nominalization inventory
 
-The present slice therefore covers only the first safe nominalization claim. `-na` is the clearest productive deverbal nominalizer, with `bawlna` as the controlled anchor form, `bawl-na` as the segmentation, and `make-NMLZ / making, creation` as the controlled gloss and function. No dictionary slice exists yet for nominalization, because this packet is still establishing a controlled constructional or morphological claim rather than a settled lexical layer. The packet now properly proceeds through nominalization review notes rather than a dictionary slice.
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `-na` | deverbal nominalizer | `theihna`, `ciaptehna` | well supported | broader nominalization inventory remains open |
+| `bawlna` | deverbal nominal from `bawl` | lexical anchor in running prose | supported with caveat | needs wider textual distribution work |
+| `bawl-na` | segmented deverbal nominal | morpheme-level analysis | supported with caveat | segmentation is clearer than full paradigm scope |
+| `-pa` | agentive or person-head nominalization | `lawmpa`, `bawlpa` | boundary material | overlaps lexicalized and title-like uses |
+| `-mi` | person-head or relative-linked nominalization | `a hong pai mi`, `a bawl mi` | boundary material | overlaps relative-clause analysis |
+| `omna` | nominalized clause-like form | `omna mun` patterns | boundary material | overlaps clause linkage and NP structure |
+| `muhna-ah` | nominalization plus case-like marking | `Pasian' muhna-ah` | boundary material | overlaps case marking and clause linkage |
+| `kumpipa` | lexicalized title-like form | royal title contexts | boundary material | not a transparent productive `-pa` pattern |
+| `Topa` | title-like lexical form | reverential title contexts | boundary material | cannot be treated as a productive `-pa` derivation |
 
 # Deverbal nominalization with `-na`
 
-`-na` is the safest current nominalization anchor in the packet. The candidate TSV marks it as the main future print-facing row, and the report, source map, and skeleton all converge on it as the primary productive deverbal nominalizer.
+The suffix `-na` 'nominalizer' forms deverbal nouns and remains the safest productive anchor in the current evidence. The form `bawlna` 'making / creation' with segmentation `bawl-na` 'make-NMLZ' is the clearest compact anchor for this function, even though a full paradigm is still outside the present account.
 
-The grammar claim here is deliberately limited. At the current slice maturity level, the safe print-facing row is `bawlna`, with the segmentation `bawl-na` and the controlled gloss `make-NMLZ / making, creation`. That is enough to support a narrow claim for productive deverbal action or result nominalization without broadening into a full nominalization chapter.
+The same morphology appears in stable textual examples such as `theihna` 'knowledge' and `ciaptehna` 'record / writing'. Together they support a grammar-facing claim for productive deverbal nominalization without forcing a full inventory of all nominal outcomes.
 
-# Why `-pa` and `-mi` are not yet the first slice
+(@ex:nmlz-theihna-gen2) Genesis 2:17
+a. Tedim: a pha le a sia theihna singkung gah
+b. Segmentation: a | pha | le | a | sia | theih-na | singkung | gah
+c. Gloss: 3SG | good | and | 3SG | bad | know-NMLZ | tree | fruit
+d. Translation: the fruit of the tree of the knowledge of good and evil
 
-Agentive or person-head nominalization evidence also exists in the candidate layer, especially through `bawlpa` and `hong pai mi`.
+(@ex:nmlz-ciaptehna-matt1) Matthew 1:1
+a. Tedim: Abraham' suan David, David' suan Jesuh Khrih' khang ciaptehna hih bang ahi hi.
+b. Segmentation: Abraham' suan David | David' suan Jesuh Khrih' | khang | ciapteh-na | hih | bang | ahi | hi
+c. Gloss: Abraham descendant David | David descendant Jesus Christ | lineage | record-NMLZ | PROX | like.this | be | DECL
+d. Translation: This is the record of the genealogy of Jesus Christ, son of David, son of Abraham.
 
-Those rows stay outside the first print-facing claim because `-pa` has lexicalized or title-like boundary rows such as `kumpipa` and `Topa`, while `-mi` still overlaps with person-head and relative-clause analysis. The packet is stronger if it keeps `-pa` and `-mi` visible but secondary rather than forcing them into the first nominalization slice before those lexical and clausal boundaries are better settled.
+# Nominalization and stem alternation
 
-# Why nominalized relatives are not yet the first slice
+Nominalized contexts connect directly to Form II evidence in stem alternation, especially where forms such as `theihna` 'knowledge' keep a nominalizer on a stem family that also participates in Form I/Form II contrasts. This is useful as constructional evidence, but it does not reopen a full stem-alternation chapter here.
 
-Nominalized relative or clause-derived nominal evidence also exists in the candidate layer, especially through `omna`.
+The key point is local: nominalized environments help explain why Form II-like material remains visible in nominalized stems, while broader stem-class claims still depend on the stem-alternation section.
 
-That row stays outside the first print-facing claim because it still belongs partly to clause linkage and relative-clause analysis. The current packet can safely preserve `omna` as candidate-layer evidence without pretending that the first nominalization slice should already resolve the nominalization versus relative-clause boundary.
+(@ex:nmlz-stem-theihna-gen2) Genesis 2:9
+a. Tedim: a pha le a sia theihna singkung
+b. Segmentation: a | pha | le | a | sia | theih-na | singkung
+c. Gloss: 3SG | good | and | 3SG | bad | know-NMLZ | tree
+d. Translation: the tree of the knowledge of good and evil
 
-# Why nominalization plus case is not yet the first slice
+(@ex:nmlz-stem-theihna-matt7) Matthew 7:5
+a. Tedim: na lakkhiat theihna dingun
+b. Segmentation: na | lak-khiat | theih-na | ding-un
+c. Gloss: 2SG.POSS | remove-out | be.able-NMLZ | purpose-2/3PL
+d. Translation: so that you may be able to remove it
 
-Nominalization-plus-case evidence also exists in the boundary layer, especially through `muhna-ah`.
+# Agentive or person-head nominalization boundary
 
-That row stays outside the first print-facing claim because it belongs partly to case marking and clause-linkage boundaries. It is important evidence for later packet coordination, but it should not lead the first nominalization slice.
+Agentive and person-head material is visible through `-pa` 'agentive / person' and `-mi` 'person / one who', including forms such as `bawlpa` 'maker / doer' and `hong pai mi` 'one who came'. The current evidence supports discussing these forms as boundaries, but not promoting them to the core nominalization system yet.
 
-# Boundary material
+This caution matters because `-pa` patterns are easily mixed with lexicalized titles, while `-mi` patterns are often indistinguishable from person-head relative constructions.
 
-The rest of the nominalization packet stays outside the first grammar slice because each row is still dominated by another unresolved boundary.
+(@ex:nmlz-lawmpa-judg7) Judges 7:14
+a. Tedim: Tua ciangin a lawmpa in dawngin.
+b. Segmentation: tua | ciangin | a | lawm-pa | in | dawng-in
+c. Gloss: that | when | 3SG.POSS | companion-AGT | ERG | reply-CVB
+d. Translation: Then his companion answered.
 
-`bawlpa` stays outside because agentive `-pa` still has to be separated from lexicalized and title-like rows.
+(@ex:nmlz-lawmpa-matt1) Matthew 1:19
+a. Tedim: A lawmpa Josef pen a manin a gamta nuam mi khat ahih manin
+b. Segmentation: a | lawm-pa | Josef | pen | a | manin | a | gamta | nuam | mi | khat | ahih | manin
+c. Gloss: 3SG.POSS | companion-AGT | Joseph | TOP | 3SG | rightness | 3SG | act | want | person | one | be | because
+d. Translation: Because Joseph her husband was a righteous man
 
-`hong pai mi` stays outside because person-head `-mi` still overlaps with relative-clause analysis.
+# Nominalized relatives and clause-derived nominalization boundary
 
-`omna` stays outside because nominalized relatives remain shared with clause linkage.
+Forms such as `omna` 'place / being / existence' and `a bawl mi` 'one who made' belong to the overlap between nominalization and relative-clause structure. They are important for analysis, but they remain boundary material in this section.
 
-`muhna-ah` stays outside because nominalization plus case routing remains shared with case marking.
+The same is true for `a hong pai mi` 'one who came': it is structurally informative, but it is safer to coordinate with clause linkage than to treat it as a settled nominalization subtype here.
 
-`kumpipa` and `Topa` stay outside because lexicalized or title-like `-pa` rows should not be mistaken for the cleanest productive anchor.
+(@ex:nmlz-hong-pai-mi-zech14) Zechariah 14:21
+a. Tedim: biakna a pia dingin a hong pai mi khempeuh in tua beelte zangin
+b. Segmentation: biakna | a | pia | dingin | a | hong | pai | mi | khempeuh | in | tua | beelte | zang-in
+c. Gloss: sacrifice | 3SG | give | for | REL | VEN | come | person | all | ERG | those | pots | use-CVB
+d. Translation: all who come to offer sacrifice will use those pots
 
-`a bawl mi` and similar human-head relative rows stay outside because they still sit between nominalization, relative clauses, and prefix/agreement questions.
+(@ex:nmlz-hong-pai-mi-john6) John 6:37
+a. Tedim: ka kiangah a hong pai mi peuhmah ka hawlkhia kei ding hi.
+b. Segmentation: ka | kiang-ah | a | hong | pai | mi | peuhmah | ka | hawl-khia | kei | ding | hi
+c. Gloss: 1SG | side-LOC | REL | VEN | come | person | every | 1SG | drive-out | NEG | IRR | DECL
+d. Translation: I will never cast out anyone who comes to me.
 
-bare `na` stays outside because it is an analyzer-noisy surface form.
+# Nominalization plus case boundary
 
-report-only counts stay outside because attestation by itself does not make a row safe for the first print-facing claim.
+Nominalization-plus-case forms such as `muhna-ah` 'in seeing / in the sight of' are well attested but structurally mixed. They show nominalization and case-like morphology in the same form, so they belong partly with case marking and partly with clause linkage.
 
-Any broad nominalization chapter claim stays outside because this packet is not yet ready to generalize from one safe deverbal nominalizer to the whole nominalization system.
+For that reason, this section treats them as boundary evidence rather than as a core nominalization subtype.
 
-# Safe first-slice claim
+(@ex:nmlz-muhna-ah-gen6) Genesis 6:11
+a. Tedim: Tu-in Pasian' muhna-ah leitung sia a.
+b. Segmentation: tu-in | Pasian' | muh-na-ah | leitung | sia | a
+c. Gloss: now-ERG | God.GEN | see-NMLZ-LOC | earth | corrupt | DECL
+d. Translation: Now the earth was corrupt in the sight of God.
 
-At the current slice maturity level, the safest nominalization claim is that Tedim has candidate-controlled evidence for productive deverbal nominalization with `-na`, with `bawlna` / `bawl-na` as the clearest current anchor. Agentive `-pa`, person-head `-mi`, nominalized relatives, and nominalization-plus-case rows remain candidate-layer or boundary material.
+(@ex:nmlz-muhna-ah-luke19) Luke 19:27
+a. Tedim: keima muhna-ah that un.
+b. Segmentation: keima | muh-na-ah | that | un
+c. Gloss: 1SG | see-NMLZ-LOC | kill | IMP.2PL
+d. Translation: kill them before me.
 
-That claim is deliberately smaller than a full nominalization chapter, smaller than a full derivation chapter, smaller than a full relative-clause chapter, and smaller than a full case-routing chapter.
+# Lexicalized and title-like boundary material
 
-# Recommended next step
+Title-like forms such as `kumpipa` 'king' and `Topa` 'Lord' are important to keep visible because they look segmentable but behave as lexicalized items in many contexts. Treating them as straightforward productive `-pa` nominalizations would overstate what the controlled evidence currently supports.
 
-This packet now properly proceeds to nominalization review notes rather than to a dictionary slice, because this is a constructional or morphological packet and the lexical treatment of `-pa`, `-mi`, and lexicalized forms remains unsettled.
+These rows therefore remain lexicalized boundary material in the present account.
 
-If the project later wants more nominalization work after review notes, the next sub-scope should be a separate `-pa` or `-mi` agentive candidate expansion rather than a dictionary layer, but not in this commit.
+(@ex:nmlz-kumpipa-gen26) Genesis 26:1
+a. Tedim: Filistia mite' kumpipa Abimelek' omna Gerar-ah Isaac pai hi.
+b. Segmentation: Filistia | mite' | kumpipa | Abimelek' | om-na | Gerar-ah | Isaac | pai | hi
+c. Gloss: Philistine | people.GEN | king | Abimelech.GEN | be-NMLZ | Gerar-LOC | Isaac | go | DECL
+d. Translation: Isaac went to Gerar, where Abimelech king of the Philistines lived.
+
+(@ex:nmlz-Topa-luke1) Luke 1:15
+a. Tedim: Topa' muhna-ah amah milian khat hi ding hi.
+b. Segmentation: Topa' | muh-na-ah | amah | milian | khat | hi | ding | hi
+c. Gloss: Lord.GEN | see-NMLZ-LOC | 3SG | great | one | be | IRR | DECL
+d. Translation: He will be great in the sight of the Lord.
+
+# Deferred and boundary material
+
+Several issues remain outside the present account.
+
+- `bawlna` and `bawl-na` support a controlled deverbal core, but they do not by themselves settle the full nominalization paradigm.
+- `-pa`, `bawlpa`, `-mi`, and `hong pai mi` remain boundary material until lexicalized-title and relative-clause overlap is clearer.
+- `omna` and `a bawl mi` remain boundary forms shared with clause linkage and relative structure.
+- `muhna-ah` remains a boundary form shared with case marking and clause linkage.
+- `kumpipa` and `Topa` remain lexicalized or title-like rows rather than transparent productive derivations.
+- Bare `na` remains noisy and should not be promoted without stronger controlled evidence.
+- Raw occurrence counts are not treated as grammar facts without constructional control.
+
+# Summary
+
+The safest grammar-facing conclusion is that Tedim has productive deverbal nominalization with `-na` 'nominalizer', with `bawlna` 'making / creation' and `bawl-na` 'make-NMLZ' as compact anchors. Agentive and person-head material, nominalized relative patterns, nominalization-plus-case forms, and lexicalized title-like forms remain explicit boundaries so the section stays controlled.

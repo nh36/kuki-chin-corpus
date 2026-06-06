@@ -486,6 +486,24 @@ def test_assembled_preview_includes_normalized_derivation_section() -> None:
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_nominalization_section() -> None:
+    text = _text()
+
+    for required in (
+        "Nominalization",
+        "Overview of nominalization in this section",
+        "Current nominalization inventory",
+        "Deverbal nominalization with `-na`",
+        "Nominalization and stem alternation",
+        "Agentive or person-head nominalization boundary",
+        "Nominalized relatives and clause-derived nominalization boundary",
+        "Nominalization plus case boundary",
+        "Lexicalized and title-like boundary material",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_includes_normalized_transitivity_section() -> None:
     text = _text()
 
@@ -779,6 +797,55 @@ def test_assembled_preview_tex_includes_normalized_derivation_inventory_and_exam
         assert required.lower() in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_nominalization_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:nmlz-") >= 4
+    assert tex.count("\\label{ex:nmlz-") >= 4
+
+    for required in (
+        "Current nominalization inventory",
+        "Deverbal nominalization with `-na`",
+        "Nominalization and stem alternation",
+        "Nominalization plus case boundary",
+        "Lexicalized and title-like boundary material",
+    ):
+        assert required.lower() in text.lower()
+
+    for required in (
+        "bawlna",
+        "bawl-na",
+        "muhna-ah",
+    ):
+        assert required.lower() in text.lower()
+
+    for required in (
+        "current nominalization inventory",
+        "deverbal nominalization with",
+        "nominalization and stem alternation",
+        "nominalization plus case boundary",
+        "lexicalized and title-like boundary material",
+        r"\tdim{-na}",
+        "bawlna",
+        "bawl-na",
+        "muhna-ah",
+    ):
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "current nominalization inventory",
+        "deverbal nominalization with",
+        "nominalization and stem alternation",
+        "nominalization plus case boundary",
+        "bawlna",
+    ):
+        assert required in pdf_normalized
+
+
 def test_assembled_preview_tex_includes_normalized_stem_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -909,6 +976,15 @@ def test_assembled_preview_tex_keeps_derivation_example_sources_after_translatio
     assert "(Mark 12:3)" in _tex_example_block("ex:deriv-ciahsakkik-mark12")
 
 
+def test_assembled_preview_tex_keeps_nominalization_example_sources_after_translation() -> None:
+    assert "(Genesis 2:17)" in _tex_example_block("ex:nmlz-theihna-gen2")
+    assert "(Matthew 1:1)" in _tex_example_block("ex:nmlz-ciaptehna-matt1")
+    assert "(Genesis 2:9)" in _tex_example_block("ex:nmlz-stem-theihna-gen2")
+    assert "(Matthew 7:5)" in _tex_example_block("ex:nmlz-stem-theihna-matt7")
+    assert "(Genesis 6:11)" in _tex_example_block("ex:nmlz-muhna-ah-gen6")
+    assert "(Luke 19:27)" in _tex_example_block("ex:nmlz-muhna-ah-luke19")
+
+
 def test_assembled_preview_tex_keeps_stem_example_sources_after_translation() -> None:
     assert "(Genesis 1:4)" in _tex_example_block("ex:stem-mu-gen1")
     assert "(Genesis 19:1)" in _tex_example_block("ex:stem-muh-gen19")
@@ -976,6 +1052,14 @@ def test_assembled_preview_derivation_examples_include_old_testament_and_gospel_
 
     assert "(Exodus 10:7)" in tex or "(Habakkuk 2:2)" in tex or "(Genesis 24:54)" in tex
     assert "(Mark 10:14)" in tex or "(John 9:26)" in tex or "(Mark 12:3)" in tex or "No equally clean Gospel example is currently used for this exact construction" in text
+
+
+def test_assembled_preview_nominalization_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 2:17)" in tex or "(Genesis 2:9)" in tex or "(Genesis 6:11)" in tex or "(Judges 7:14)" in tex
+    assert "(Matthew 1:1)" in tex or "(Matthew 7:5)" in tex or "(Luke 19:27)" in tex or "(John 6:37)" in tex or "No equally clean Gospel example is currently used" in text
 
 
 def test_assembled_preview_transitivity_examples_include_old_testament_and_gospel_sources() -> None:
@@ -1128,6 +1212,12 @@ def test_assembled_preview_tex_glosses_multiword_running_prose_forms_in_normaliz
         r"\tdim{pualam} \glossquote{outside}",
         r"\tdim{sungah} \glossquote{inside / in}",
         r"\tdim{Abraham' suan David} \glossquote{David, descendant of Abraham}",
+        r"\tdim{-na} \glossquote{nominalizer}",
+        r"\tdim{bawlna} \glossquote{making / creation}",
+        r"\tdim{hong pai mi} \glossquote{one who came}",
+        r"\tdim{muhna-ah} \glossquote{in seeing / in the sight of}",
+        r"\tdim{kumpipa} \glossquote{king}",
+        r"\tdim{Topa} \glossquote{Lord}",
     ):
         assert required in tex
     assert r"\tdim{kum sawm le nih} \glossquote{twelve years}" in tex

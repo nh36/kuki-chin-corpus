@@ -29,6 +29,7 @@ TARGET_SECTION_TITLES = {
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
+    "Nominalization",
 }
 GOSPEL_BOOKS = {
     "Matthew",
@@ -220,6 +221,16 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "ciahsakkik": ((r"send back|return-CAUS-ITER|return",), "send back"),
     "paikhiatsak": ((r"cause to go out|go-out-CAUS|go out",), "cause to go out"),
     "khiathei ding om lo": ((r"there is no one who can interpret it|cannot interpret|interpret",), "there is no one who can interpret it"),
+    "bawlna": ((r"making / creation|making|creation",), "making / creation"),
+    "bawl-na": ((r"make-NMLZ|making / creation",), "make-NMLZ"),
+    "-pa": ((r"agentive / person|agentive|person",), "agentive / person"),
+    "-mi": ((r"person / one who|person|one who",), "person / one who"),
+    "hong pai mi": ((r"one who came|person who came",), "one who came"),
+    "omna": ((r"place / being / existence|place|being|existence",), "place / being / existence"),
+    "muhna-ah": ((r"in seeing|in the sight|before",), "in seeing / in the sight"),
+    "kumpipa": ((r"king",), "king"),
+    "Topa": ((r"Lord",), "Lord"),
+    "a bawl mi": ((r"one who made|person who made",), "one who made / person who made"),
 }
 
 
