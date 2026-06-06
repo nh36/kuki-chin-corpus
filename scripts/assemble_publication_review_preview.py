@@ -252,6 +252,7 @@ TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", 
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Stem alternation",
+    "Prefix / agreement",
     "Numerals",
     "Quantifiers",
     "NP structure / possession",
@@ -269,6 +270,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_prefix_agreement_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_numerals_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_quantifiers_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_np_possession_normalization.tsv",
@@ -297,6 +299,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "
         "`mu / muh` 'see', `ne / nek` 'eat', and `nei / neih` 'have', while promoted caveated pairs, "
         "one-sided controls, and blocked rows remain explicit boundaries."
+    ),
+    "Prefix / agreement": (
+        "The current prefix-routing evidence is strongest for host-sensitive contrast between `kanei` 'I have' "
+        "and `kainn` 'my house', where `ka-nei` '1SG-have' patterns as verbal agreement and `ka-inn` "
+        "'1SG.POSS-house' patterns as nominal possession, while `hongmu` 'see me / come-see' and "
+        "`kongmu` 'I see you / 1SG-see.2' remain boundary material."
     ),
     "NP structure / possession": (
         "The current evidence supports demonstrative-before-noun order alongside noun-plus-postnominal numeral "
