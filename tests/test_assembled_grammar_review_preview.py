@@ -187,6 +187,67 @@ def test_assembled_preview_includes_normalized_interrogatives_section() -> None:
     assert "interrogative inventory" in pdf.lower()
 
 
+def test_assembled_preview_includes_normalized_sentence_final_particles_section() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    normalized_tex = _normalize(tex.lower())
+    normalized_pdf = _normalize(pdf.lower())
+
+    for required in (
+        "Overview of sentence-final particles in Tedim",
+        "Sentence-final particle inventory",
+        "Declarative `hi` with copula overlap",
+        "Negative-plus-declarative `lo hi`",
+        "Optative or jussive `hen`",
+        "Imperative `in` and `un`",
+        "`Hiam` as interrogatives overlap",
+        "`Aw` as vocative or exclamative boundary",
+        "`Tahen`, `ta`, and `zo` as deferred TAM-overlap material",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+    for required in (
+        "overview of sentence-final particles in tedim",
+        "sentence-final particle inventory",
+        "declarative",
+        "negative-plus-declarative",
+        "optative or jussive",
+        "imperative",
+        "interrogatives overlap",
+        "vocative or exclamative boundary",
+        "deferred tam-overlap material",
+        "several issues remain outside the present account.",
+    ):
+        assert required in normalized_tex
+        assert required in normalized_pdf
+
+    assert text.count("(@ex:sfp-") >= 8
+    assert tex.count("\\label{ex:sfp-") >= 8
+    assert "sentence-final particle inventory" in pdf.lower()
+
+
+def test_assembled_preview_tex_keeps_sentence_final_particles_example_sources_after_translation() -> None:
+    assert "(Genesis 1:13)" in _tex_example_block("ex:sfp-ahi-hi-gen1-13")
+    assert "(Matthew 1:1)" in _tex_example_block("ex:sfp-ahi-hi-matt1-1")
+    assert "(Genesis 4:5)" in _tex_example_block("ex:sfp-lo-hi-gen4-5")
+    assert "(Matthew 2:10)" in _tex_example_block("ex:sfp-lo-hi-matt2-10")
+    assert "(Genesis 1:3)" in _tex_example_block("ex:sfp-hen-gen1-3")
+    assert "(Matthew 6:9)" in _tex_example_block("ex:sfp-hen-matt6-9")
+    assert "(Genesis 6:14)" in _tex_example_block("ex:sfp-in-gen6-14")
+    assert "(Luke 23:34)" in _tex_example_block("ex:sfp-in-luke23-34")
+    assert "(Psalms 100:1)" in _tex_example_block("ex:sfp-un-ps100-1")
+    assert "(Matthew 3:3)" in _tex_example_block("ex:sfp-un-matt3-3")
+
+
+def test_assembled_preview_sentence_final_particles_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 1:13)" in tex or "(Genesis 4:5)" in tex or "(Psalms 100:1)" in tex
+    assert "(Matthew 1:1)" in tex or "(Matthew 6:9)" in tex or "(Luke 23:34)" in tex
+
+
 def test_assembled_preview_tex_keeps_interrogatives_example_sources_after_translation() -> None:
     assert "(Genesis 24:23)" in _tex_example_block("ex:int-hiam-gen24-23")
     assert "(Matthew 6:25)" in _tex_example_block("ex:int-hiam-matt6-25")
@@ -279,7 +340,10 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "decimal composition" in lower
     assert "overview of interrogatives in tedim" in normalized
     assert "interrogative inventory" in normalized
+    assert "overview of sentence-final particles in tedim" in normalized
+    assert "sentence-final particle inventory" in normalized
     assert "\\tdim{hiam}" in lower
+    assert "\\tdim{hen}" in lower
     assert "\\tdim{bangci}" in lower
     assert "occurrence-counting" in lower or "occurrence counting" in lower
 

@@ -2613,101 +2613,135 @@ Several issues remain outside the present account.
 
 ## Sentence-final particles
 
-### Sentence-final particles in outline
+The current sentence-final evidence is strongest for controlled clause-final uses of `ahi hi` 'be.3SG DECL / it was', `lo hi` 'NEG DECL', `hen` 'jussive / optative', `in` 'imperative / second-person singular imperative boundary', and `un` 'plural imperative', while `hiam` 'question particle', `aw` 'vocative / exclamative boundary', `tahen` 'deferred jussive-looking form', `ta` 'perfective / change-of-state boundary', and `zo` 'completive boundary' remain overlap or deferred material.
 
-The current checked section supports a narrow generalization. `Hi` is visible only through constructionally controlled `ahi hi` and `lo hi` rows. `Hiam` is visible only as overlap control because interrogatives are already stabilized. `Hen` has one usable optative row. `In` and `un` represent imperative material, but `in` has case-marker overlap while `un` is cleaner. `Aw` is only vocative or exclamative boundary material and is not well-supported. `Tahen`, `ta`, and `zo` remain deferred or needs-review because the export is noisy. Broad TAM remains deferred.
+### Overview of sentence-final particles in Tedim
+
+This section treats a small controlled set of sentence-final or clause-final material: `hi` 'declarative', `ahi hi` 'be.3SG DECL / it was', `lo hi` 'NEG DECL', `hen` 'jussive / optative', `in` 'imperative / second-person singular imperative boundary', and `un` 'plural imperative'. It keeps `hiam` 'question particle', `aw` 'vocative / exclamative boundary', `tahen` 'deferred jussive-looking form', `ta` 'perfective / change-of-state boundary', and `zo` 'completive boundary' as overlap or deferred material. The section does not present the whole mood, aspect, TAM, negation, or interrogative system.
+
+### Sentence-final particle inventory
+
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `hi` | declarative | Genesis 1:13; Matthew 1:1 | supported with caveat | discussed through `ahi hi`, not as unrestricted bare `hi` |
+| `ahi hi` | be.3SG DECL / it was | Genesis 1:13; Matthew 1:1 | stable with caveat | bundles copular `ahi` and clause-final `hi` |
+| `lo hi` | NEG DECL | Genesis 4:5; Matthew 2:10 | stable with caveat | overlaps with the negation system |
+| `hen` | jussive / optative | Genesis 1:3; Matthew 6:9 | stable with caveat | not expanded into a full mood chapter |
+| `in` | imperative / second-person singular imperative boundary | Genesis 6:14; Luke 23:34 | supported with caveat | analyzer export overlap with case-like `ERG/FUNC` |
+| `un` | plural imperative | Psalms 100:1; Matthew 3:3 | stable | imperative plural form, often near vocative material |
+| `hiam` | question particle | Genesis 48:8 | boundary | handled in interrogatives, not reanalyzed here |
+| `aw` | vocative / exclamative boundary | Psalms 100:1; Matthew 1:20 | boundary | vocative and lexical overlap |
+| `tahen` | deferred jussive-looking form | Genesis 9:25; Luke 9:60 | deferred | fused `tahen` vs split `ta hen` and export noise |
+| `ta` | perfective / change-of-state boundary | Genesis 40:23; Matthew 14:15 | deferred boundary | TAM overlap and noisy export |
+| `zo` | completive boundary | Genesis 1:28 | deferred boundary | lexical/export ambiguity remains visible |
 
 ### Declarative `hi` with copula overlap
 
-Genesis 1:13 supplies the current declarative anchor:
+Clause-final `hi` is safest here when discussed through `ahi hi` 'be.3SG DECL / it was'. The section therefore keeps copular overlap explicit and does not treat every `hi` token as a settled sentence-final declarative marker.
 
-(@ex:sfp-ahi-hi) Genesis 1:13
+(@ex:sfp-ahi-hi-gen1-13) Genesis 1:13
 a. Tedim: ahi hi
 b. Segmentation: ahi | hi
 c. Gloss: be.3SG | DECL
-d. Translation: 'it was'
+d. Translation: 'it was' (Genesis 1:13)
 
-This is the current copula-plus-declarative evidence, but only with caveat. It is not a bare `hi` example. The row bundles copular `ahi` with final `hi`, so it does not license raw `hi` harvesting or a claim that every `hi` token is sentence-final declarative.
+Matthew 1:1 gives a Gospel counterpart in the same copula-plus-declarative frame.
+
+(@ex:sfp-ahi-hi-matt1-1) Matthew 1:1
+a. Tedim: hih bang ahi hi
+b. Segmentation: hih | bang | ahi | hi
+c. Gloss: this | way | be.3SG | DECL
+d. Translation: 'it is thus / this is how it is' (Matthew 1:1)
 
 ### Negative-plus-declarative `lo hi`
 
-Genesis 4:5 keeps one negative-plus-declarative environment visible:
+`Lo hi` 'NEG DECL' is treated as a negation-plus-declarative overlap point. This section keeps the overlap visible and does not reopen the full negation account.
 
-(@ex:sfp-lo-hi) Genesis 4:5
+(@ex:sfp-lo-hi-gen4-5) Genesis 4:5
 a. Tedim: thusim lo hi
 b. Segmentation: thusim | lo | hi
-c. Gloss: parable | NEG | DECL
-d. Translation: 'he had not respect' / 'it was not accepted'
+c. Gloss: accept | NEG | DECL
+d. Translation: 'it was not accepted' (Genesis 4:5)
 
-This row keeps `lo hi` visible as a sentence-final environment, but it overlaps the stabilized negation section. The present slice should not reopen `lo` or build a new negation section here. It is treated as negation-overlap evidence only.
+Matthew 2:10 gives a Gospel clause with the same `lo hi` pattern.
 
-### `Hiam` as interrogatives overlap
+(@ex:sfp-lo-hi-matt2-10) Matthew 2:10
+a. Tedim: kigen thei lo hi
+b. Segmentation: ki-gen | thei | lo | hi
+c. Gloss: REFL-say | can | NEG | DECL
+d. Translation: 'it cannot be fully told' (Matthew 2:10)
 
-Deferred / overlap control:
+### Optative or jussive `hen`
 
-> `Hihte kua ahi hiam?`
+`Hen` 'jussive / optative' is included for controlled optative-like clause-final usage. The section keeps this narrow and does not widen it into a full mood system.
 
-Genesis 48:8 is mentioned here only as cross-reference material. `Hiam` belongs to the stabilized interrogatives section, so this sentence-final particle slice should not reopen or duplicate `hiam` analysis. The row is not a print anchor for this slice, and the quotation or punctuation noise plus the `kua = NUM` export caveat should remain visible rather than normalized away.
-
-### Optative `hen`
-
-Genesis 1:3 supplies the current usable optative row:
-
-(@ex:sfp-hen) Genesis 1:3
+(@ex:sfp-hen-gen1-3) Genesis 1:3
 a. Tedim: Khuavak om hen
 b. Segmentation: Khuavak | om | hen
 c. Gloss: light | exist | JUSS
-d. Translation: 'Let there be light'
+d. Translation: 'let there be light' (Genesis 1:3)
 
-This is the current usable optative evidence with caveat. The candidate is analyzer-backed as `om hen`, so the slice should not replace it with report-style `ta hen` wording. It also should not turn this narrow row into a broad mood chapter.
+Matthew 6:9 gives a Gospel jussive prayer frame with the same clause-final `hen`.
+
+(@ex:sfp-hen-matt6-9) Matthew 6:9
+a. Tedim: na min siangtho kizahtak hen
+b. Segmentation: na | min | siangtho | ki-zahtak | hen
+c. Gloss: 2SG.POSS | name | holy | REFL-honor | JUSS
+d. Translation: 'hallowed be your name' (Matthew 6:9)
 
 ### Imperative `in` and `un`
 
-Genesis 6:14 keeps one singular imperative row visible:
+`In` 'imperative / second-person singular imperative boundary' and `un` 'plural imperative' are both visible in controlled clauses. For `in`, the case-like analyzer/export overlap remains explicit. For `un`, the clause-final imperative plural use is cleaner.
 
-(@ex:sfp-in) Genesis 6:14
+(@ex:sfp-in-gen6-14) Genesis 6:14
 a. Tedim: teembaw khat bawl in
 b. Segmentation: teembaw | khat | bawl | in
-c. Gloss: ark | one | make | ERG [export caveat]
-d. Translation: 'Make thee an ark'
+c. Gloss: ark | one | make | IMP.SG [export caveat: ERG/FUNC]
+d. Translation: 'make an ark' (Genesis 6:14)
 
-This keeps singular imperative `in` visible, but only with a serious case-marker and export caveat: `in` is exported as `ERG` / `FUNC`. The candidate also has `teembaw`, not report-style `lawng`. The slice should not harvest raw `in` hits and should not reopen case marking.
+Luke 23:34 keeps the same imperative boundary with `in` in Gospel speech.
 
-Psalms 100:1 supplies the cleanest current imperative anchor:
+(@ex:sfp-in-luke23-34) Luke 23:34
+a. Tedim: a mawhna uh na maisak in
+b. Segmentation: a | mawhna | uh | na | mai-sak | in
+c. Gloss: 3SG | sin | PL | 2SG | forgive-CAUS | IMP.SG [export caveat]
+d. Translation: 'forgive their sin' (Luke 23:34)
 
-(@ex:sfp-un) Psalms 100:1
+Psalms 100:1 provides the current controlled Old Testament plural-imperative `un` anchor.
+
+(@ex:sfp-un-ps100-1) Psalms 100:1
 a. Tedim: gingsak un
 b. Segmentation: ging-sak | un
 c. Gloss: sound-CAUS | IMP.PL
-d. Translation: 'Make a joyful noise'
+d. Translation: 'make a joyful noise' (Psalms 100:1)
 
-This is the clean plural-imperative anchor. The span should stay tight so nearby `aw` material in the same verse is not absorbed, and the row should not be used to launch a full imperative paradigm.
+Matthew 3:3 gives a Gospel plural-imperative counterpart with clause-final `un`.
 
-### `Aw` as vocative/exclamative boundary material
+(@ex:sfp-un-matt3-3) Matthew 3:3
+a. Tedim: lampi tangsak un
+b. Segmentation: lampi | tang-sak | un
+c. Gloss: path | straighten-CAUS | IMP.PL
+d. Translation: 'make his paths straight' (Matthew 3:3)
 
-Boundary material:
+### `Hiam` as interrogatives overlap
 
-> `Gam khempeuh aw`
+`Hiam` 'question particle' remains a cross-reference boundary with interrogatives. The clause `Hihte kua ahi hiam?` (Genesis 48:8) stays useful as overlap control, but this section does not reopen independent `hiam` analysis.
 
-Psalms 100:1 keeps `aw` visible, but only as vocative or exclamative boundary material. The analyzer glosses `aw` as `voice` and gives `N` in `pos_span`, and the same verse also has another `aw` in `lungdamna aw`. This is therefore not settled sentence-final mood evidence, and raw `aw` hits should not be treated as sentence-final particles.
+### `Aw` as vocative or exclamative boundary
 
-### `Tahen`, `ta`, and `zo` deferred
+`Aw` 'vocative / exclamative' remains boundary material here. `Gam khempeuh aw` 'all lands!' (Psalms 100:1) and `David suan Josef aw` 'Joseph, son of David!' (Matthew 1:20) show vocative force, but they do not yet justify a broader sentence-final mood claim.
 
-Several report-visible rows remain too noisy to promote:
+### `Tahen`, `ta`, and `zo` as deferred TAM-overlap material
 
-- `hi tahen`: deferred because `tahen` is exported as `army` / `N`; the slice should not normalize fused `tahen` or split `ta hen` into a clean jussive example.
-- `mangngilh ta hi`: needs-review TAM-overlap material because `ta` is exported as `child` / `FUNC`.
-- `zo`: deferred because the export glosses `zo` as `south` / `N` rather than as clean completive evidence.
+`Tahen` 'deferred jussive-looking form' remains unresolved because fused `tahen` and split `ta hen` material are still noisy in the current evidence. `Ta` 'perfective / change-of-state boundary' remains boundary material where clause-final `ta hi` overlaps TAM. `Zo` 'completive boundary' remains deferred where lexical/export ambiguity is still visible.
 
-These rows keep report-visible material in view, but they are not well-supported as jussive, perfective, or completive evidence. Broad TAM remains deferred.
+### Deferred material
 
-### Editorial summary
+Several issues remain outside the present account.
 
-This slice safely supports five modest claims: `ahi hi` is usable as copula-plus-declarative evidence with caveat; `thusim lo hi` is usable as negation-plus-declarative evidence with caveat; `Khuavak om hen` is usable as optative evidence with caveat; `teembaw khat bawl in` is usable as singular imperative evidence only with a case-overlap caveat; and `gingsak un` is the clean plural-imperative anchor.
-
-What remains deferred is equally important: bare `hi` as a general declarative particle, `hiam` as new sentence-final evidence, `tahen` as a settled jussive, `aw` as a settled exclamative or mood particle, `ta` and `zo` as settled aspectual particles, broad TAM and full mood or aspect chapters, and raw generated-report counts. Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work remain deferred.
-
-Dictionary and background slices have not yet begun.
+- Broader interactions among sentence-final particles, clause type, and discourse structure remain outside this section.
+- The present section does not settle the full relation between sentence-final material and TAM or negation.
+- Further treatment of rare or noisy clause-final forms remains deferred until cleaner controlled evidence is available.
 
 ## Coordinators
 

@@ -253,6 +253,7 @@ SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Demonstratives / deixis",
     "Interrogatives",
+    "Sentence-final particles",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -274,6 +275,7 @@ NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unav
 NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_demonstratives_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_interrogatives_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_sentence_final_particles_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_prefix_agreement_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_pronouns_normalization.tsv",
@@ -312,6 +314,13 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "'why', while `bang hiam cih` 'what ... saying', `bangmah` 'nothing', `bangin` 'as / how', and the "
         "comparison-particle forms `maw` 'question/comparison particle', `ham` 'question/comparison particle', "
         "and `em` 'question/comparison particle' stay at the boundary."
+    ),
+    "Sentence-final particles": (
+        "The current sentence-final evidence is strongest for controlled clause-final uses of `ahi hi` "
+        "'be.3SG DECL / it was', `lo hi` 'NEG DECL', `hen` 'jussive / optative', `in` "
+        "'imperative / second-person singular imperative boundary', and `un` 'plural imperative', while "
+        "`hiam` 'question particle', `aw` 'vocative / exclamative boundary', `tahen` 'deferred jussive-looking form', "
+        "`ta` 'perfective / change-of-state boundary', and `zo` 'completive boundary' remain overlap or deferred material."
     ),
     "Stem alternation": (
         "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "

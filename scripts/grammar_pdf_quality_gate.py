@@ -19,6 +19,7 @@ FIRST_CHAPTER_TITLE = "Phonology and tone"
 TARGET_SECTION_TITLES = {
     "Demonstratives / deixis",
     "Interrogatives",
+    "Sentence-final particles",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -110,6 +111,17 @@ TEX_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
     (re.compile(r"(?:output|scripts|tests|docs)/[A-Za-z0-9_./\\-]+", re.IGNORECASE), "internal file path"),
 )
 GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
+    "ahi hi": ((r"be\.3SG DECL|it was|declarative",), "be.3SG DECL / it was"),
+    "lo hi": ((r"NEG DECL|negation\+declarative|neg plus declarative",), "NEG DECL"),
+    "hen": ((r"jussive / optative|jussive|optative",), "jussive / optative"),
+    "in": ((r"imperative / second-person singular imperative boundary|imperative|IMP\.SG",), "imperative / second-person singular imperative boundary"),
+    "un": ((r"plural imperative|imperative plural|IMP\.PL",), "plural imperative"),
+    "aw": ((r"vocative / exclamative|vocative|exclamative",), "vocative / exclamative"),
+    "tahen": ((r"deferred jussive-looking form|jussive-looking",), "deferred jussive-looking form"),
+    "Khuavak om hen": ((r"let there be light",), "let there be light"),
+    "teembaw khat bawl in": ((r"make an ark",), "make an ark"),
+    "gingsak un": ((r"make a joyful noise",), "make a joyful noise"),
+    "Gam khempeuh aw": ((r"all lands",), "all lands"),
     "hiam": ((r"question particle|question marker|Q",), "question particle"),
     "bang": ((r"what",), "what"),
     "bangci": ((r"how",), "how"),
