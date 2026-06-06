@@ -14,8 +14,9 @@ def test_demonstratives_packet_keeps_deferred_forms_out_of_headwords():
     assert "## hi\n" not in dictionary
     assert "## hih ciangin\n" not in dictionary
 
-    assert "`Hi` should be deferred." in grammar
-    assert "`Hih ciangin` should also be deferred." in grammar
+    assert "## Deferred forms:" in grammar
+    assert "`Hi` is kept as deferred boundary material." in grammar
+    assert "`Hih ciangin` is also deferred." in grammar
 
 
 def test_demonstratives_packet_excludes_known_bad_examples():

@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REPORT_PATH = ROOT / "output" / "publication_review" / "grammar_facing_quality_report.md"
 FIRST_CHAPTER_TITLE = "Phonology and tone"
 TARGET_SECTION_TITLES = {
+    "Demonstratives / deixis",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -132,6 +133,13 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "tampi": ((r"many",), "many"),
     "hih": ((r"this",), "this"),
     "tua": ((r"that",), "that"),
+    "huā": ((r"distal demonstrative|that",), "distal demonstrative"),
+    "hihte": ((r"these",), "these"),
+    "tuate": ((r"those",), "those"),
+    "hih bangin": ((r"like this|thus",), "like this / thus"),
+    "tua bangin": ((r"like that|thus",), "like that / thus"),
+    "tua ahih ciangin": ((r"when that was so|then",), "when that was so / then"),
+    "hih ciangin": ((r"when this|when doing thus",), "when this / when doing thus"),
     "-ah": ((r"locative / goal-like|locative|goal-like|LOC",), "locative / goal-like"),
     "-in": ((r"ergative / agentive|ergative|agentive|ERG",), "ergative / agentive"),
     "-pan": ((r"source / ablative|source|ablative",), "source / ablative"),
@@ -256,7 +264,7 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "kumpipa": ((r"king",), "king"),
     "Topa": ((r"Lord",), "Lord"),
     "ciangin": ((r"when|temporal subordination",), "when"),
-    "tua ciangin": ((r"then / when|that when",), "then / when"),
+    "tua ciangin": ((r"then / when|at that time|that when",), "then / when"),
     "ciang-in": ((r"when-ERG|when|then-ERG",), "when-ERG"),
     "dingin": ((r"in order to|for|purpose",), "in order to / for"),
     "ding-in": ((r"IRR-ERG|purpose-ERG",), "IRR-ERG"),

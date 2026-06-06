@@ -294,7 +294,7 @@ def test_assembled_preview_tex_systematically_preserves_example_sources_after_tr
 
 def test_assembled_preview_tex_keeps_expected_sources_for_known_examples() -> None:
     assert "\\glt \\glossquote{This is the book of the generations of Adam.} (Genesis 5:1)" in _tex_example_block("ex:dem-hih")
-    assert "(Genesis 1:6)" in _tex_example_block("ex:dem-tua")
+    assert "(Matthew 1:21)" in _tex_example_block("ex:dem-tua")
     assert "(Genesis 1:3)" in _tex_example_block("ex:dem-tua-ciangin")
     assert "(Exodus 14:30)" in _tex_example_block("ex:dem-tua-bangin")
     assert "(Genesis 4:5)" in _tex_example_block("ex:neg-lo")
@@ -344,6 +344,25 @@ def test_assembled_preview_includes_normalized_quantifiers_section() -> None:
         "Quantifiers and negation",
         "Quantifiers and noun phrase structure",
         "Deferred and boundary material",
+    ):
+        assert required in text
+
+
+def test_assembled_preview_includes_normalized_demonstratives_section() -> None:
+    text = _text()
+
+    for required in (
+        "Demonstratives / deixis",
+        "Overview of demonstratives and deixis in this section",
+        "Current demonstrative inventory",
+        "Core demonstratives: hih and tua",
+        "Plural demonstratives",
+        "Adnominal and pronominal uses",
+        "Discourse and temporal deixis",
+        "Manner constructions with bangin",
+        "Deferred forms:",
+        "Boundary with interrogatives and quantifiers",
+        "Several issues remain outside the present account.",
     ):
         assert required in text
 
@@ -666,6 +685,41 @@ def test_assembled_preview_case_examples_include_old_testament_and_gospel_source
 
     assert "(Genesis 4:3)" in tex or "(Genesis 11:28)" in tex or "(Genesis 24:23)" in tex
     assert "(Matthew 2:4)" in tex or "(Matthew 8:8)" in tex or "(Luke 2:11)" in tex or "(Matthew 5:19)" in tex
+
+
+def test_assembled_preview_tex_includes_normalized_demonstratives_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:dem-") >= 7
+    assert tex.count("\\label{ex:dem-") >= 7
+
+    for required in (
+        "Current demonstrative inventory",
+        "Core demonstratives: hih and tua",
+        "Plural demonstratives",
+        "Adnominal and pronominal uses",
+        "Discourse and temporal deixis",
+        "Manner constructions with bangin",
+        "hihte",
+        "tuate",
+        "tua ciangin",
+        "tua ahih ciangin",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "Current demonstrative inventory",
+        "Core demonstratives: hih and tua",
+        "Plural demonstratives",
+        "Discourse and temporal deixis",
+        "Manner constructions with bangin",
+    ):
+        assert required.lower() in pdf_normalized
 
 
 def test_assembled_preview_tex_includes_normalized_relators_inventory_and_examples() -> None:
@@ -1154,6 +1208,19 @@ def test_assembled_preview_tex_keeps_vp_example_sources_after_translation() -> N
     assert "(Mark 12:3)" in _tex_example_block("ex:vp-ciahsakkik-mark12")
 
 
+def test_assembled_preview_tex_keeps_demonstratives_example_sources_after_translation() -> None:
+    assert "(Genesis 5:1)" in _tex_example_block("ex:dem-hih")
+    assert "(Matthew 1:21)" in _tex_example_block("ex:dem-tua")
+    assert "(Genesis 10:20)" in _tex_example_block("ex:dem-hihte")
+    assert "(Luke 6:14)" in _tex_example_block("ex:dem-tuate")
+    assert "(Exodus 32:9)" in _tex_example_block("ex:dem-adnominal-hih")
+    assert "(Matthew 12:49)" in _tex_example_block("ex:dem-pronominal-hihte")
+    assert "(Genesis 1:3)" in _tex_example_block("ex:dem-tua-ciangin")
+    assert "(Matthew 28:19)" in _tex_example_block("ex:dem-tua-ahih-ciangin")
+    assert "(Matthew 6:9)" in _tex_example_block("ex:dem-hih-bangin")
+    assert "(Exodus 14:30)" in _tex_example_block("ex:dem-tua-bangin")
+
+
 def test_assembled_preview_tex_keeps_derivation_example_sources_after_translation() -> None:
     assert "(Exodus 10:7)" in _tex_example_block("ex:deriv-paisak-exod10")
     assert "(Mark 10:14)" in _tex_example_block("ex:deriv-paisak-mark10")
@@ -1237,6 +1304,14 @@ def test_assembled_preview_stem_examples_include_old_testament_and_gospel_source
 
     assert "(Genesis 1:4)" in tex or "(Genesis 2:17)" in tex or "(Psalms 43:3)" in tex
     assert "(Luke 22:35)" in tex or "No equally clean Gospel example is currently used" in text
+
+
+def test_assembled_preview_demonstratives_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 5:1)" in tex or "(Genesis 10:20)" in tex or "(Genesis 1:3)" in tex or "(Exodus 14:30)" in tex
+    assert "(Matthew 1:21)" in tex or "(Luke 6:14)" in tex or "(Matthew 12:49)" in tex or "(Matthew 28:19)" in tex or "(Matthew 6:9)" in tex or "No equally clean Gospel example is currently used" in text
 
 
 def test_assembled_preview_relators_examples_include_old_testament_and_gospel_sources() -> None:
@@ -1529,7 +1604,7 @@ def test_assembled_preview_pdf_text_keeps_source_references_systematically() -> 
 
     assert "book of the generations of Adam" in pdf_text
     assert "(Genesis 5:1)" in pdf_text
-    assert "(Genesis 1:6)" in pdf_text
+    assert "(Matthew 1:21)" in pdf_text
     assert "(Genesis 1:3)" in pdf_text
     assert "(Exodus 14:30)" in pdf_text
     assert "(Genesis 4:5)" in pdf_text

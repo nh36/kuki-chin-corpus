@@ -251,6 +251,7 @@ TECHNICAL_FILE_SUFFIXES = (".md", ".py", ".tex", ".pdf", ".tsv", ".bib", ".json"
 TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", "git", "bibtex", "pdftotext")
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
+    "Demonstratives / deixis",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -270,6 +271,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
 }
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
+    PUBLICATION_REVIEW_DIR / "examples_demonstratives_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_prefix_agreement_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_pronouns_normalization.tsv",
@@ -297,6 +299,11 @@ GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
     re.compile(r"\b(?:tests?/|scripts?/|output/|docs/|bibles/)", re.IGNORECASE),
 )
 GRAMMAR_FACING_SECTION_INTROS = {
+    "Demonstratives / deixis": (
+        "The current demonstrative evidence is strongest for core `hih` 'this' and `tua` 'that / the "
+        "aforementioned', plus plural `hihte` 'these' and `tuate` 'those', while `hi` and exact `hih ciangin` "
+        "'when this / when doing thus' remain boundary material."
+    ),
     "Stem alternation": (
         "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "
         "`mu / muh` 'see', `ne / nek` 'eat', and `nei / neih` 'have', while promoted caveated pairs, "

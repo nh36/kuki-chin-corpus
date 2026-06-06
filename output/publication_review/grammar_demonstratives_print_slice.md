@@ -1,115 +1,133 @@
 ---
-title: "Tedim Chin Grammar Slice: Demonstratives and Deixis"
+title: "Tedim demonstratives and deixis"
+author: "Tedim Grammar Working Group"
+date: "2026-06-06"
 bibliography:
   - ../../literature/bibliography.bib
-link-citations: true
-reference-section-title: "References"
+csl: ../../literature/chicago-author-date.csl
 ---
 
-# Scope
+# Overview of demonstratives and deixis in this section
 
-This account offers a short treatment of Tedim demonstratives and deixis. It is intentionally narrow. It focuses on a small set of manually checked Bible examples and on the interaction between the core demonstratives `hih` and `tua`, their plural forms, and a few strong constructional extensions. It does not attempt a full treatment of copulas, sentence-final particles, directionals, or broad discourse structure.
+This section treats the demonstrative core `hih` 'this' and `tua` 'that / the aforementioned', their plural forms, and a small set of constructional extensions. It leaves copular and sentence-final material around `hi` 'be / DECL / copula-like', and broader discourse-structure analysis, to other sections.
 
-# Overview of the demonstrative system
+The basic two-way contrast is stable in both corpus and literature [@henderson1965; @zamngaihcing2017]. A standing caveat is that Bible usage is dominated by `tua` 'that / the aforementioned', while the literature often cites `huā` 'distal demonstrative'; the relation is plausible but not settled here.
 
-The current Bible corpus and the literature agree on a compact demonstrative core: proximal `hih` and distal `tua` [@henderson1965; @zamngaihcing2017]. In Bible usage, however, `tua` is not merely a spatial "that". It is also a strongly anaphoric and discourse-linking form, especially in narrative and temporal sequencing. The most economical description is therefore a system with `hih` as the core proximal demonstrative and `tua` as the core distal/anaphoric demonstrative.
+Raw occurrence counts are not treated as grammar facts in this section.
 
-The plural forms `hihte` and `tuate` behave transparently as DEM + `-te`, and the Bible also gives strong constructional material such as `hih bangin`, `tua bangin`, `tua ciangin`, and `tua ahih ciangin`. One caution remains explicit throughout this slice: Zam Ngaih Cing gives distal `huā`, while the Bible corpus overwhelmingly uses `tua` as the ordinary distal/anaphoric form [@zamngaihcing2017]. The relation is plausible, but it is not resolved here as a settled orthographic identity.
+## Current demonstrative inventory
 
-# Core demonstratives: `hih` and `tua`
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `hih` | proximal demonstrative | identificational and adnominal | stable | overlaps with `hi`-related material only at the boundary |
+| `tua` | distal/anaphoric demonstrative | adnominal and discourse-linking | stable | broader discourse functions remain outside this section |
+| `hihte` | proximal plural demonstrative | pronominal and NP-linked | stable | treated as DEM + `-te` |
+| `tuate` | distal plural demonstrative | pronominal and NP-linked | stable | treated as DEM + `-te` |
+| `hih bangin` | manner/deictic construction | instruction or quoted manner | stable with caveat | interface with clause-linkage uses of `bangin` |
+| `tua bangin` | manner/discourse resumptive construction | anaphoric summary or continuation | stable with caveat | interface with clause-linkage uses of `bangin` |
+| `tua ciangin` | temporal/discourse linker | event sequencing ('then') | stable | boundary with clause-linkage chapter |
+| `tua ahih ciangin` | discourse-temporal bridge | inferential/transition frame | stable with caveat | boundary with clause-linkage and discourse domains |
 
-`Hih` is the clearest proximal form in the present corpus. It works both as an identificational demonstrative and as an adnominal determiner.
+## Core demonstratives: hih and tua
+
+The core contrast is between `hih` 'this' and `tua` 'that / the aforementioned'. In controlled examples, `hih` is robust in proximal or presentational contexts, while `tua` regularly tracks already activated or discourse-linked referents.
 
 (@ex:dem-hih) Genesis 5:1
-a. Tedim: Hih pen Adam’ suanlekhakte’ laibu ahi hi.
-b. Segmentation: hih pen
-c. Gloss: PROX TOP
-d. Translation: "This is the book of the generations of Adam."
+a. Tedim: Hih pen Adam' suanlekhakte' laibu ahi hi.
+b. Segmentation: hih | pen | Adam' | suan-lekhak-te' | laibu | ahi | hi
+c. Gloss: PROX | TOP | Adam.POSS | descendant-record-PL.POSS | book | be.3SG | DECL
+d. Translation: 'This is the book of the generations of Adam.' (Genesis 5:1)
 
-Genesis 5:1 is especially useful because it shows `hih` as the unmarked proximal form in identificational prose. Genesis 9:12 `Hih pen ... thuciamna lim ahi hi` confirms the same pattern, while Exodus 32:9 `Hih mite ka mu zo hi` shows `hih` before a noun phrase in ordinary adnominal use.
+Matthew 1:21 provides a Gospel comparandum with adnominal `tua` 'that / the aforementioned'.
 
-`Tua` belongs to the same system, but its range in the Bible is broader. It clearly marks distal or previously activated referents, and it also extends naturally into anaphoric and discourse-linking uses.
+(@ex:dem-tua) Matthew 1:21
+a. Tedim: tua tapa in ama mite a mawhna uh panin honkhia ding ahih manin
+b. Segmentation: tua | tapa | in | ama | mi-te | a | mawhna | uh | panin | hon-khia | ding | ahih | manin
+c. Gloss: DIST | child | ERG | 3SG | person-PL | GEN | sin | PL | from | save-out | IRR | be.REL | because
+d. Translation: 'Because that child will save his people from their sins.' (Matthew 1:21)
 
-(@ex:dem-tua) Genesis 1:6
-a. Tedim: Pasian in, “Tuite’ laizangah van kuumpi om hen la, tua van kuumpi in tui le tui kikhensak hen,” ci hi.
-b. Segmentation: tua van kuumpi
-c. Gloss: DIST firmament
-d. Translation: "And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters."
+## Plural demonstratives
 
-Genesis 1:6 is a clean adnominal example. Genesis 21:27 `tua mi nihte` is equally good for a more discourse-linked noun phrase. The important descriptive point is that the corpus keeps using `tua` where English may translate "that", "the same", or simply a contextually given referent.
+Plural forms are straightforwardly built on demonstrative stems plus `-te` 'plural'. The controlled evidence supports both `hihte` 'these' and `tuate` 'those' as regular plural demonstrative forms.
 
-# Plural forms: `hihte` and `tuate`
+(@ex:dem-hihte) Genesis 10:20
+a. Tedim: Hihte pen a innkuan, a kam pau, a leitang, a minamin Ham' suanlekhakte ahi hi.
+b. Segmentation: hihte | pen | a | innkuan | a | kam | pau | a | leitang | a | minam-in | Ham' | suan-lekhak-te | ahi | hi
+c. Gloss: PROX-PL | TOP | 3SG | family | 3SG | language | speak | 3SG | land | 3SG | nation-ERG | Ham.POSS | descendant-record-PL | be.3SG | DECL
+d. Translation: 'These are the descendants of Ham by their families, languages, lands, and nations.' (Genesis 10:20)
 
-The plural demonstratives are straightforward. The Bible corpus strongly supports `hihte` and `tuate` as transparent plural extensions of the singular forms.
+Luke 6:14 gives a Gospel comparandum with distal plural `tuate` 'those'.
 
-(@ex:dem-hihte) Genesis 48:8
-a. Tedim: Israel in Josef’ tapate a muh ciangin amah in, “Hihte kua ahi hiam?” a ci hi.
-b. Segmentation: hihte
-c. Gloss: PROX-PL
-d. Translation: "And Israel beheld Joseph's sons, and said, Who are these?"
+(@ex:dem-tuate) Luke 6:14
+a. Tedim: Tuate in: Simon (Peter ci-in min a phuah pa)...
+b. Segmentation: tuate | in | Simon
+c. Gloss: DIST-PL | TOP | Simon
+d. Translation: 'Those were: Simon (called Peter) ...' (Luke 6:14)
 
-(@ex:dem-tuate) Genesis 7:20
-a. Tedim: Mual liante tungah tui omto lai a, tuate tungah pi sawmnih le nih thuk-in tuumcip hi.
-b. Segmentation: tuate tungah
-c. Gloss: DIST-PL on-LOC
-d. Translation: "Fifteen cubits upward did the waters prevail; and the mountains were covered."
+## Adnominal and pronominal uses
 
-Genesis 10:20 `Hihte pen ... Ham’ suanlekhakte ahi hi` shows the proximal plural in topic-like prose, while Genesis 2:19 `mipa in tuate bang a ci hiam` shows the distal plural as an ordinary pronoun. Nothing in the present corpus suggests that these need any more complex treatment than DEM + `-te`.
+The same demonstrative forms can modify nouns or stand independently. Adnominal use is clear in forms such as `hih mite` 'these people', while pronominal use is clear in standalone predicate frames.
 
-# Adnominal and pronominal uses
+(@ex:dem-adnominal-hih) Exodus 32:9
+a. Tedim: Hih mite ka mu zo hi.
+b. Segmentation: hih | mi-te | ka | mu | zo | hi
+c. Gloss: PROX | person-PL | 1SG | see | COMPL | DECL
+d. Translation: 'I have seen these people.' (Exodus 32:9)
 
-The same forms serve both as adnominal modifiers and as independent pronouns. Adnominal use is easy to see in Exodus 32:9 `Hih mite`, Genesis 1:6 `tua van kuumpi`, and Genesis 21:27 `tua mi nihte`. Pronominal use is equally clear in Genesis 5:1 `Hih pen`, Genesis 48:8 `Hihte kua ahi hiam?`, and Genesis 2:19 `tuate bang a ci hiam`.
+Matthew 12:49 gives a Gospel pronominal comparandum.
 
-The Bible also shows productive matter/topic phrases such as `hih thu` and `tua thu`. In Genesis 24:9 `hih thu tawh kisai-in` points to the present matter under discussion, while Genesis 6:6 `tua thu in ama lungsim dahsak hi` and Exodus 2:15 `Faro in tua thu a zak ciangin` show anaphoric reference to something just reported. These are important for the grammar chapter, even if they do not have to be first-round dictionary headwords.
+(@ex:dem-pronominal-hihte) Matthew 12:49
+a. Tedim: Hihte pen ka nu le ka sanggamte ahi uh hi.
+b. Segmentation: hihte | pen | ka | nu | le | ka | sanggam-te | ahi | uh | hi
+c. Gloss: PROX-PL | TOP | 1SG.POSS | mother | and | 1SG.POSS | sibling-PL | be.3SG | PL | DECL
+d. Translation: 'These are my mother and my brothers.' (Matthew 12:49)
 
-# Discourse and temporal deixis
+## Discourse and temporal deixis
 
-This is where `tua` most clearly exceeds a merely spatial description. In Bible narrative, `tua` is a major discourse and temporal linker.
+Discourse-temporal uses are centered on `tua ciangin` 'then / at that time' and `tua ahih ciangin` 'when that was so / then'. These constructions are treated here as demonstrative-linked discourse frames, while fuller subordination analysis is left to clause linkage.
 
 (@ex:dem-tua-ciangin) Genesis 1:3
-a. Tedim: Pasian in, “Khuavak om hen,” ci hi; tua ciangin khuavak om pah hi.
-b. Segmentation: tua ciangin
-c. Gloss: DIST time-CVB
-d. Translation: "And God said, Let there be light: and there was light."
+a. Tedim: tua ciangin khuavak om pah hi.
+b. Segmentation: tua | ciangin | khuavak | om | pah | hi
+c. Gloss: DIST | time.CVB | light | exist | immediately | DECL
+d. Translation: 'Then light appeared at once.' (Genesis 1:3)
 
-`Tua ciangin` works naturally as "then / at that time" in event sequencing. Genesis 5:5 repeats the same pattern in obituary-style narrative: `tua ciangin amah si hi`.
+Matthew 28:19 gives a Gospel comparandum for `tua ahih ciangin`.
 
-`Tua ahih ciangin` is even more explicitly a discourse bridge, linking a prior state or event to the next clause.
+(@ex:dem-tua-ahih-ciangin) Matthew 28:19
+a. Tedim: Tua ahih ciangin note pai unla...
+b. Segmentation: tua | ahih | ciangin | note | pai | unla
+c. Gloss: DIST | be.REL | time.CVB | 2PL.PRO | go | IMP.PL-and
+d. Translation: 'When that is so, you must go ...' (Matthew 28:19)
 
-(@ex:dem-tua-ahih-ciangin) Genesis 2:21
-a. Tedim: Tua ahih ciangin Topa Pasian in mipa ihmut suak mahmah sak a, ama ihmut kalin a nakguhte khat la-in tua mun pen satak tawh a dimsak hi.
-b. Segmentation: tua ahih ciangin
-c. Gloss: DIST be.3SG then-CVB
-d. Translation: "And the LORD God caused a deep sleep to fall upon Adam, and he slept: and he took one of his ribs, and closed up the flesh instead thereof."
+## Manner constructions with bangin
 
-Genesis 1:21 and Genesis 2:19 confirm that `tua ahih ciangin` is one of the strongest discourse-transition frames in the present corpus. It is better understood as a fixed demonstrative-temporal construction than as a purely compositional spatial phrase.
+Manner constructions with `bangin` 'like / as' are productive with demonstrative bases: `hih bangin` 'like this / thus' and `tua bangin` 'like that / thus'. These are kept in this section because the demonstrative base remains constructionally active.
 
-# Manner constructions with `bangin`
+(@ex:dem-hih-bangin) Matthew 6:9
+a. Tedim: hih bangin na ngen un
+b. Segmentation: hih | bangin | na | ngen | un
+c. Gloss: PROX | like.CVB | 2 | pray | IMP.PL
+d. Translation: 'Pray like this.' (Matthew 6:9)
 
-The Bible also gives strong manner and discourse constructions built from the demonstratives plus `bangin`.
-
-(@ex:dem-hih-bangin) Genesis 32:4
-a. Tedim: amaute hilhin, “Note in ka topa Esau kiangah hih bangin na ci ding uh hi: Na nasempa Jakob in, ‘Laban’ kiangah peemta-in tu ciang dong ka om hi.
-b. Segmentation: hih bangin
-c. Gloss: PROX like-CVB
-d. Translation: "And he commanded them, saying, Thus shall ye speak unto my lord Esau; Thy servant Jacob saith thus, I have sojourned with Laban, and stayed there until now:"
+Exodus 14:30 gives a controlled Old Testament comparandum with `tua bangin`.
 
 (@ex:dem-tua-bangin) Exodus 14:30
-a. Tedim: Topa in tua bangin Egypt mite’ khutsung panin tua ni-in Israel-te honkhia a, tuipi gei-ah Egypt mi a site, Israel mite in mu uh hi.
-b. Segmentation: tua bangin
-c. Gloss: DIST like-CVB
-d. Translation: "Thus the LORD saved Israel that day out of the hand of the Egyptians; and Israel saw the Egyptians dead upon the sea shore."
+a. Tedim: Topa in tua bangin Egypt mite' khutsung panin Israel-te honkhia hi.
+b. Segmentation: Topa | in | tua | bangin | Egypt | mi-te' | khut-sung | panin | Israel-te | hon-khia | hi
+c. Gloss: Lord | ERG | DIST | like.CVB | Egypt | person-PL.POSS | hand-inside | from | Israel-PL | save-out | DECL
+d. Translation: 'Thus the Lord saved Israel from the hand of the Egyptians.' (Exodus 14:30)
 
-`Hih bangin` is especially good for direct instruction or quoted manner, as also seen in Genesis 42:18 `hih bangin gamta un`. `Tua bangin` often resumes or summarizes an already described event, as in Genesis 50:21 `Amah in tua bangin ... amaute a hehnem hi`. These patterns belong naturally in a demonstratives slice because the deictic base still contributes to how the construction organizes discourse.
+## Deferred forms: `hi` 'be / DECL / copula-like' and `hih ciangin` 'when this / when doing thus'
 
-# Deferred forms: `hi` and `hih ciangin`
+`Hi` is kept as deferred boundary material. In current evidence it overlaps heavily with copular, auxiliary, and sentence-final-particle behavior, so it is not promoted as a stable demonstrative row here.
 
-`Hi` should be deferred. Exact-token `hi` is far too entangled with copular, auxiliary, and sentence-final material to serve as a safe demonstrative headword in this packet. Genesis 48:18 `Hi lo hi, pa aw; hih pen a suak masa ahi hi` shows how quickly the shorter form is absorbed into other clause types. The right place for `hi` is later work on copula or sentence-final particles, not this first demonstratives packet.
+`Hih ciangin` 'when this / when doing thus' is also deferred. Current controlled evidence does not support it as a stable temporal demonstrative counterpart to `tua ciangin`, and many apparent hits overlap with non-demonstrative verbal material.
 
-`Hih ciangin` should also be deferred. The current dossier showed that many apparent hits involve verbal `hih` "do/be thus" rather than demonstrative `hih`. Genesis 18:10, the old generated-report example, does not contain exact demonstrative `hih ciangin`. For the present slice, `tua ciangin` is strong enough to represent the temporal side of the system on its own.
+## Boundary with interrogatives and quantifiers
 
-# Editorial summary
+Forms such as `kua` 'who', `bang` 'what', `kuamah` 'nobody', and `bangmah` 'nothing' belong primarily to interrogative and quantifier/negative-indefinite domains, so they are not expanded in this section.
 
-The current evidence supports a compact but stable demonstrative system. `Hih` is the core proximal demonstrative. `Tua` is the core distal/anaphoric demonstrative and should not be reduced to a merely spatial "that". `Hihte` and `tuate` are transparent plural forms, and the constructional extensions `hih bangin`, `tua bangin`, `tua ciangin`, and `tua ahih ciangin` are all well supported by manually checked Bible examples.
+## Deferred material
 
-Just as important, the chapter has to preserve its cautions. `Hi` is not yet safe as a demonstrative headword, `hih ciangin` is not yet a stable temporal counterpart to `tua ciangin`, and the relation between Bible `tua` and the literature's `huā` is plausible but unresolved. With those limits kept explicit, demonstratives and deixis make a good narrow chapter for the next Tedim packet.
+Several issues remain outside the present account. These include the full `hi` system across copular and sentence-final uses, full discourse-structural deixis, and the unresolved scope of Bible `tua` versus literature `huā`.
