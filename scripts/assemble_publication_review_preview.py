@@ -253,6 +253,7 @@ SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Stem alternation",
     "Prefix / agreement",
+    "Pronouns / clusivity",
     "Numerals",
     "Quantifiers",
     "NP structure / possession",
@@ -271,6 +272,7 @@ NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unav
 NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_prefix_agreement_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_pronouns_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_numerals_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_quantifiers_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_np_possession_normalization.tsv",
@@ -305,6 +307,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "and `kainn` 'my house', where `ka-nei` '1SG-have' patterns as verbal agreement and `ka-inn` "
         "'1SG.POSS-house' patterns as nominal possession, while `hongmu` 'see me / come-see' and "
         "`kongmu` 'I see you / 1SG-see.2' remain boundary material."
+    ),
+    "Pronouns / clusivity": (
+        "The current pronoun evidence is strongest for independent forms such as `kei` 'I / me', `nang` "
+        "'you.SG', and `amah` 'he / she / it', while first-plural clusivity (`eite` 'we' / `kote` 'we.EXCL') and "
+        "participant-oriented prefixes (`hong-` 'participant-oriented venitive-like marker', `kong-` "
+        "'participant-oriented directive-like marker') remain tightly controlled boundary material."
     ),
     "NP structure / possession": (
         "The current evidence supports demonstrative-before-noun order alongside noun-plus-postnominal numeral "

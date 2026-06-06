@@ -1,131 +1,148 @@
 ---
-title: "Tedim Chin Grammar Slice: Pronouns and Pronominal Marking"
+title: "Tedim pronouns and pronominal marking"
+author: "Tedim Grammar Working Group"
+date: "2026-06-06"
 bibliography:
   - ../../literature/bibliography.bib
-link-citations: true
-reference-section-title: "References"
+csl: ../../literature/chicago-author-date.csl
 ---
 
-# Scope
+# Overview of pronouns and pronominal marking in this section
 
-This account presents a short print-facing chapter on Tedim personal pronouns and closely related pronominal marking. It covers independent personal pronouns, first-person plural forms and clusivity, possessive prefixes, emphatic forms in `-mah`, reflexive and reciprocal marking with `ki-`, and a cautious first treatment of `hong-` and `kong-`. It does not attempt a full account of demonstratives, interrogatives, quantifiers, TAM, or the wider verbal agreement system.
+This section describes independent personal pronouns and closely related pronominal marking. It keeps demonstratives, interrogatives, quantifiers, and the wider verbal agreement system in their own sections.
 
-# Personal pronouns
+The stable independent forms include `kei` 'I / me', `nang` 'you.SG', `amah` 'he / she / it', `eite` 'we', `kote` 'we', `note` 'you.PL', and `amaute` 'they'. The treatment of first-person plural distinctions follows cautious grammar-facing practice: `kote` can be treated as an exclusive form in the controlled evidence, while `eite` shows inclusive uses but is not assigned one global label here [@henderson1965; @zamngaihcing2017].
 
-Earlier descriptions agree on a basic personal-pronoun system with distinct first, second, and third persons and with plural forms for at least the first and second persons [@henderson1965, 32-33; @zamngaihcing2017, sec. 3.2.1]. Henderson explicitly lists `kei`, `nang`, `amah`, `ei/eite`, `ko/kote`, and `no/note`, while Zam Ngaih Cing confirms the broader person-and-number system and the absence of gender in the third person [@henderson1965, 32; @zamngaihcing2017, sec. 3.2.1]. For print purposes, the following paradigm is stable enough to use:
+## Current personal-pronoun inventory
 
-| Person | Singular | Plural |
-| --- | --- | --- |
-| 1 | `kei` | `eite`, `kote` |
-| 2 | `nang` | `note` |
-| 3 | `amah` | `amaute` |
+| Person | Singular | Plural | Note or caveat |
+| --- | --- | --- | --- |
+| First | kei | eite, kote | `eite` is often inclusive; `kote` is often exclusive in controlled examples |
+| Second | nang | note | Number contrast is stable in the controlled examples |
+| Third | amah | amaute | Third-person contrast is stable for independent forms |
 
-(@ex:pro-amah)
-a. Tedim: Mipa in a zi' min pen Eve, ci hi. Bang hang hiam cih leh amah pen mihing khempeuh' nu ahi hi.
-b. Segmentation: amah
-c. Gloss: 3SG.PRO
-d. Translation: 'And Adam called his wife's name Eve; because she was the mother of all living.'
+## Independent personal pronouns
 
-(@ex:pro-note)
-a. Tedim: En un, note le note' khit a na suanlekhakte uh le,
-b. Segmentation: note
-c. Gloss: 2PL.PRO
-d. Translation: 'And I, behold, I establish my covenant with you, and with your seed after you;'
+Independent pronouns occur freely as noun-phrase heads. The third-person form `amah` 'he / she / it' and the second-person plural form `note` 'you.PL' illustrate ordinary clause-level use.
 
-These examples are ordinary independent pronouns rather than bound agreement markers. `amah` functions as a free third-person form, while `note` shows the equally straightforward second-person plural. The printed chapter can therefore begin from free pronouns and only then move to the more tightly bound prefixal system.
+(@ex:pro-amah) Genesis 3:20
+a. Tedim: amah pen mihing khempeuh' nu ahi hi.
+b. Segmentation: amah | pen | mihing | khempeuh' | nu | ahi | hi
+c. Gloss: 3SG.PRO | TOP | person | all.POSS | mother | be.3SG | DECL
+d. Translation: ‘She was the mother of all living people.’ (Genesis 3:20)
 
-# First-person plural forms and clusivity
+Matthew 5:13 supplies a Gospel comparandum with second-person plural `note` 'you.PL'.
 
-The main editorial problem in this slice is not whether Tedim has clusivity, but how far the current evidence supports global labels for the two first-person plural series. Henderson clearly distinguishes `ei/eite` from `ko/kote` through pronominal-concord prefixes, pairing the former with `i-` and the latter with `ka-` [@henderson1965, 32-33]. Zam Ngaih Cing likewise treats clusivity as a real feature of Tedim person marking, even though her presentation of the plural forms is not identical in surface detail [@zamngaihcing2017, sec. 3.2.1; @zamngaihcing2017, sec. 3.2.2]. The separate clusivity dossier for this slice shows that sampled Bible dialogue contexts strongly support `ko/kote` as exclusive, but that `ei/eite` has both clear inclusive uses and less straightforward uses in the current Bible evidence. Comparative Sukte is useful here mainly as a contrast, since Singh does not describe the same inclusive/exclusive opposition for Sukte [@sukte_grammar, sec. 4.6.1].
+(@ex:pro-note) Matthew 5:13
+a. Tedim: Note pen leitung mite a dingin ci tawh na kibang uh hi.
+b. Segmentation: note | pen | leitung | mi-te | a | dingin | ci | tawh | na | kibang | uh | hi
+c. Gloss: 2PL.PRO | TOP | world | person-PL | GEN | for | salt | COM | 2 | resemble | PL | DECL
+d. Translation: ‘You are like salt for the people of the world.’ (Matthew 5:13)
 
-(@ex:pro-eite)
-a. Tedim: Tua ciangin Abram in Lot' kiangah, "Nang le kei' kikal, nang' gancingte le kei' gancingte' kikalah kitotna omsak kei ni. Bang hang hiam cih leh eite beh khat ihi hi."
-b. Segmentation: eite
-c. Gloss: 1PL.PRO
-d. Translation: 'And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren.'
+## First-person plural forms and clusivity
 
-(@ex:pro-kote)
-a. Tedim: Kote tawh kitenna hong bawl un. Na tanute uh kote' tungah hong pia unla, no a dingin ka tanute uh la un.
-b. Segmentation: kote
-c. Gloss: 1PL.PRO
-d. Translation: 'And make ye marriages with us, and give your daughters unto us, and take our daughters unto you.'
+The controlled evidence supports a cautious contrast between `eite` 'we' and `kote` 'we.EXCL'. In these data, `kote` behaves like an exclusive first-person plural, while `eite` has inclusive uses but is not forced into a single global value for all contexts.
 
-Genesis 13:8 shows a genuinely inclusive use of `eite`, since Abram explicitly includes Lot in the relevant group. It does not prove that every `eite` token is inclusive. Genesis 34:9, by contrast, is a strong diagnostic for exclusive `kote`, since Hamor addresses Jacob's family from a distinct in-group. The present slice therefore treats `kote` as exclusive and leaves the exact global status of `eite` under review.[^clusivity]
+(@ex:pro-eite) Genesis 13:8
+a. Tedim: Bang hang hiam cih leh eite beh khat ihi hi.
+b. Segmentation: bang | hang | hiam | cih | leh | eite | beh | khat | i-hi | hi
+c. Gloss: what | reason | Q | QUOT | COND | 1PL.PRO | side | one | 1PL-be | DECL
+d. Translation: ‘Because we are one kin-group.’ (Genesis 13:8)
 
-# Possessive prefixes
+Genesis 34:9 gives the complementary row with `kote` 'we.EXCL'.
 
-The same person-marking forms that appear in pronominal concord also appear before nouns as possessive prefixes. Henderson treats `ka-`, `na-`, `a-`, and `i-` primarily as pronominal concord prefixes, while Zam Ngaih Cing foregrounds their possessive use in noun phrases [@henderson1965, 32-33; @zamngaihcing2017, sec. 3.2.2; @zamngaihcing2017, sec. 3.3.4.1.1]. For a printed grammar, the safest description is that the forms are shared across possessive and agreement environments, but are easiest to present first in their nominal use.
+(@ex:pro-kote) Genesis 34:9
+a. Tedim: Kote tawh kitenna hong bawl un.
+b. Segmentation: kote | tawh | ki-ten-na | hong | bawl | un
+c. Gloss: 1PL.PRO.EXCL | COM | RECP-marry-NMLZ | VEN | do | IMP.PL
+d. Translation: ‘Arrange intermarriage with us.’ (Genesis 34:9)
 
-(@ex:poss-na)
-a. Tedim: Kua' tanu na hi hiam, hong gen in. Na pa' inn-ah kote' giah nading a awng ding hiam? a ci hi.
-b. Segmentation: na pa' inn-ah
-c. Gloss: 2SG.POSS father house-LOC
-d. Translation: 'Whose daughter art thou? tell me, I pray thee: is there room in thy father's house for us to lodge in?'
+No equally clean Gospel example is currently used for this construction because no Gospel token of `eite` or `kote` matches the same clusivity contrast at comparable quality.
 
-(@ex:poss-a)
+## Possessive prefixes as pronominal material
+
+Possessive prefixes are directly related to person marking and belong in a compact pronoun-facing treatment: `ka-` 'first-person singular possessive', `na-` 'second-person singular possessive', `a-` 'third-person possessive', and `i-` 'first-person plural possessive'. Full paradigm structure and verbal agreement behavior are handled in the separate agreement and NP-possession sections.
+
+(@ex:poss-na) Genesis 24:23
+a. Tedim: Na pa' inn-ah kote' giah nading a awng ding hiam?
+b. Segmentation: na | pa' | inn-ah | kote' | giah | nading | a | awng | ding | hiam
+c. Gloss: 2SG.POSS | father | house-LOC | 1PL.POSS | stay | for | GEN | room | IRR | Q
+d. Translation: ‘Is there room in your father's house for us to stay?’ (Genesis 24:23)
+
+Luke 2:49 supplies a Gospel row with `ka-` 'first-person singular possessive' in a nominal host phrase.
+
+(@ex:poss-ka-pa-inn) Luke 2:49
+a. Tedim: Ka Pa' inn sungah ka om ding lamtak thei lo na hi uh hiam?
+b. Segmentation: ka | pa' | inn | sung-ah | ka | om | ding | lamtak | thei | lo | na | hi | uh | hiam
+c. Gloss: 1SG.POSS | father | house | inside-LOC | 1SG | stay | IRR | naturally | know | NEG | 2 | be | PL | Q
+d. Translation: ‘Did you not know that I should be in my Father's house?’ (Luke 2:49)
+
+Genesis 3:20 also gives a third-person possessive prefix with `a-` 'third-person possessive'.
+
+(@ex:poss-a) Genesis 3:20
 a. Tedim: Mipa in a zi' min pen Eve, ci hi.
-b. Segmentation: a zi'
-c. Gloss: 3SG.POSS wife
-d. Translation: 'And the man called his wife's name Eve.'
+b. Segmentation: mipa | in | a | zi' | min | pen | Eve | ci | hi
+c. Gloss: man | ERG | 3SG.POSS | wife | name | TOP | Eve | say | DECL
+d. Translation: ‘The man called his wife's name Eve.’ (Genesis 3:20)
 
-The same pattern is visible in `ka pa' inn` 'my father's house' and in the `i-` prefix that Henderson associates with the `ei/eite` series [@henderson1965, 32-33]. Singh's Sukte comparison is also helpful here, since it shows cognate person-marking prefixes in possessive use even though the wider systems are not identical [@sukte_grammar, sec. 4.5.4]. Plural verbal markers such as `-uh` belong to the later agreement chapter rather than to the pronoun inventory itself.
+## Emphatic pronouns in -mah
 
-# Emphatic pronouns in `-mah`
+An emphatic element `-mah` 'self / emphatic' combines with pronoun bases, including `keimah` 'I myself' and `nangmah` 'you yourself'. Forms such as `kuamah` 'nobody' and `bangmah` 'nothing' are treated primarily in quantifier and negative-indefinite domains.
 
-Emphatic pronouns are formed by adding `-mah` to a personal-pronoun base [@henderson1965, 32; @zamngaihcing2017, sec. 3.2.6]. In print, it is best to treat these forms neither as an unrelated lexical series nor as mere stylistic variants, but as a productive emphatic pattern built on the ordinary pronoun paradigm.
+(@ex:emph-keimah) Genesis 4:13
+a. Tedim: Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi.
+b. Segmentation: keimah | gim | hong | ki-piak-na | ka | thuak | zawh | ding | hi | lo | hi
+c. Gloss: 1SG.EMPH | punishment | VEN | REFL-give-NMLZ | 1SG | bear | able | IRR | be | NEG | DECL
+d. Translation: ‘My punishment is more than I can bear.’ (Genesis 4:13)
 
-(@ex:emph-keimah)
-a. Tedim: Kain in Topa' tungah, Keimah gim hong kipiakna, ka thuak zawh ding hi lo hi.
-b. Segmentation: kei-mah
-c. Gloss: 1SG-EMPH
-d. Translation: 'And Cain said unto the LORD, My punishment is greater than I can bear.'
+Matthew 8:22 supplies a Gospel emphatic comparandum with `nangmah` 'you yourself'.
 
-(@ex:emph-nangmah)
-a. Tedim: Abimelek in, En in, ka leitang, na mai-ah om hi. Nangmah in hoih na sakna munah teng in, a ci hi.
-b. Segmentation: nang-mah
-c. Gloss: 2SG-EMPH
-d. Translation: 'And Abimelech said, Behold, my land is before thee: dwell where it pleaseth thee.'
+(@ex:emph-nangmah) Matthew 8:22
+a. Tedim: Nangmah in kei hong zui in.
+b. Segmentation: nangmah | in | kei | hong | zui | in
+c. Gloss: 2SG.EMPH | ERG | 1SG.PRO | VEN | follow | IMP
+d. Translation: ‘You yourself, follow me.’ (Matthew 8:22)
 
-The same element also appears in negative-indefinite forms such as `kuamah` 'no one' and `bangmah` 'nothing' [@zamngaihcing2017, sec. 3.2.7]. Those items belong more naturally to a later section on indefinites and interrogative-based forms, but the connection should already be noted here.
+## Reflexive and reciprocal ki- boundary
 
-# Reflexive and reciprocal marking with `ki-`
+The prefix `ki-` 'reflexive / reciprocal / middle-like' is a boundary topic between pronoun-sensitive participant structure and broader valency behavior. A clear reciprocal predicate is `ki-gawm` 'join together'.
 
-Zam Ngaih Cing describes reflexive pronouns as repeated pronouns linked by `leh` [@zamngaihcing2017, sec. 3.2.5]. The biblical corpus nevertheless makes it clear that a print grammar also needs to acknowledge verbal `ki-`, since many reader-facing examples of reflexive or reciprocal meaning are expressed through `ki-` forms rather than through a free reflexive pronoun alone.
+(@ex:refl-ki) Genesis 2:24
+a. Tedim: a zi tawh kigawm a, amau tegel pum khat a bang uh hi.
+b. Segmentation: a | zi | tawh | ki-gawm | a | amau | tegel | pum | khat | a | bang | uh | hi
+c. Gloss: 3SG.POSS | wife | COM | RECP-join | CONJ | 3PL.PRO | pair | body | one | GEN | become | PL | DECL
+d. Translation: ‘He is joined with his wife, and the two become one body.’ (Genesis 2:24)
 
-(@ex:refl-ki)
-a. Tedim: Tua thu hangin pasal in a nu le a pa nusia-in a zi tawh kigawm a, amau tegel pum khat a bang uh hi.
-b. Segmentation: ki-gawm
-c. Gloss: REFL-join
-d. Translation: 'Therefore shall a man leave his father and his mother, and shall cleave unto his wife: and they shall be one flesh.'
+Matthew 19:5 supplies a Gospel row with the same reciprocal predicate.
 
-For print purposes, `ki-` can already be described as a productive reflexive or reciprocal verbal prefix. The remaining caution is lexical rather than structural: some surface `ki-` forms are lexicalized stems, so not every `ki-` word should be taken automatically as transparent reflexive morphology.
+(@ex:refl-ki-matt19) Matthew 19:5
+a. Tedim: a zi tawh kigawm ding a, amau tegel pumkhat a bang ding uh hi.
+b. Segmentation: a | zi | tawh | ki-gawm | ding | a | amau | tegel | pum-khat | a | bang | ding | uh | hi
+c. Gloss: 3SG.POSS | wife | COM | RECP-join | IRR | CONJ | 3PL.PRO | pair | body-one | GEN | become | IRR | PL | DECL
+d. Translation: ‘He will be joined with his wife, and the two will become one body.’ (Matthew 19:5)
 
-# Pronominal prefixes and inverse/directional marking
+## Participant-oriented hong- and kong- boundary
 
-Henderson's discussion of pronominal concord is still the best starting point for the bound prefix system. She pairs `kei` with `ka-`, `nang` with `na-`, the `ei/eite` series with `i-`, the `ko/kote` series with `ka-`, `no/note` with `na-`, and all other nominals with `a-` [@henderson1965, 32-33]. Zam Ngaih Cing's discussion of nominal prefixes confirms the same basic person-marking inventory in noun phrases [@zamngaihcing2017, sec. 3.3.4.1.1]. A printed chapter on pronouns does not need the whole verbal paradigm yet, but it does need to note that the independent pronouns belong to a wider system of bound person marking.
+The prefixes `hong-` 'participant-oriented venitive-like marker' and `kong-` 'participant-oriented directive-like marker' are included here only as boundary material. Their full status in inverse, directionality, and agreement-related analyses is left for dedicated sections.
 
-The harder question concerns `hong-` and `kong-`. The literature treats them as participant-oriented preverbal prefixes with directional or inverse-like behavior, and Otsuka's causative discussion shows that first- and second-person objects are structurally important to their distribution [@zamngaihcing2017, sec. 5.8.1.3; @otsuka_causative]. The current corpus outputs, however, do not yet yield a stable automatic example set for `hong-`, so the present slice uses only narrow, manually checked illustrations.[^hong-kong]
+(@ex:hong-prefix) Matthew 25:37
+a. Tedim: Topa aw, cikin na gilkial hong mu-in an hong pia ka hi uh hiam?
+b. Segmentation: Topa | aw | cikin | na | gilkial | hong | mu-in | an | hong | pia | ka | hi | uh | hiam
+c. Gloss: Lord | VOC | when | 2 | hungry | VEN | see-CVB | food | VEN | give | 1SG | be | PL | Q
+d. Translation: ‘Lord, when did we see you hungry and give you food?’ (Matthew 25:37)
 
-(@ex:hong-prefix)
-a. Tedim: Amah in a sangna panin a khut tawh zamin kei hong la a, tui thukpi panin keimah hong kaikhia hi.
-b. Segmentation: hong la
-c. Gloss: 3>1 take
-d. Translation: 'He sent from above, he took me, He drew me out of many waters.'
+Genesis 41:41 supplies an Old Testament comparandum for `kong-` 'participant-oriented directive-like marker'.
 
-(@ex:kong-prefix)
-a. Tedim: Faro in Josef' kiangah, Egypt gam khempeuh a uk dingin nang kong koih khinzo hi, a ci hi.
-b. Segmentation: kong koih
-c. Gloss: 1>2 set
-d. Translation: 'And Pharaoh said unto Joseph, See, I have set thee over all the land of Egypt.'
+(@ex:kong-prefix) Genesis 41:41
+a. Tedim: Egypt gam khempeuh a uk dingin nang kong koih khinzo hi.
+b. Segmentation: Egypt | gam | khempeuh | a | uk | dingin | nang | kong | koih | khinzo | hi
+c. Gloss: Egypt | land | all | GEN | rule | for | 2SG.PRO | DIR | place | already | DECL
+d. Translation: ‘I have placed you over all the land of Egypt.’ (Genesis 41:41)
 
-These examples are enough to justify a cautious print description: `hong-` and `kong-` belong with person-sensitive preverbal marking, but the exact boundary between inverse, venitive, benefactive, and wider directional readings still needs fuller chapter-level review. They should therefore appear in the dictionary slice and grammar prose, but under an explicitly provisional analysis rather than as a closed paradigm.
+## Boundary with demonstratives, interrogatives, quantifiers, and wider agreement
 
-# Editorial summary
+This section does not treat demonstratives such as `hih` 'this' and `tua` 'that', interrogatives such as `kua` 'who', quantifier-like negatives such as `kuamah` 'nobody' and `bangmah` 'nothing', or the full prefixal agreement system.
 
-This slice now supports a real draft chapter on pronouns and pronominal marking. Independent pronouns, emphatic forms in `-mah`, and possessive prefixes are straightforward enough for print. `ki-` is also clear enough to present as reflexive or reciprocal verbal marking, provided lexicalized forms remain a review checkpoint. The main unresolved issue is not the existence of clusivity or of `hong-/kong-`, but how far the current report layer can be trusted to label those patterns automatically without closer editorial control.
+## Deferred material
 
-# References
-
-[^clusivity]: The earlier report-level reversal `kote` inclusive versus `eite` exclusive has now been removed. The safer editorial position is narrower: `ko/kote` can already be treated as exclusive, but `ei/eite` still shows mixed Bible-corpus behavior and should remain under review rather than receiving a single global label.
-
-[^hong-kong]: The present editorial problem is not whether these forms exist, but how narrowly they should be defined in a first print chapter. The current wording stays close to cases that can be read directly from the verse context without relying on a fully solved backend analysis.
+Several issues remain outside the present account. These include full clusivity-system stabilization, the full scope of `ki-` across valency domains, and full analysis of `hong-` and `kong-` across agreement and directional systems.

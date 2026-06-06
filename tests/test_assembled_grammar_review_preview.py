@@ -506,6 +506,25 @@ def test_assembled_preview_includes_normalized_prefix_agreement_section() -> Non
         assert required in text
 
 
+def test_assembled_preview_includes_normalized_pronouns_section() -> None:
+    text = _text()
+
+    for required in (
+        "Pronouns / clusivity",
+        "Overview of pronouns and pronominal marking in this section",
+        "Current personal-pronoun inventory",
+        "Independent personal pronouns",
+        "First-person plural forms and clusivity",
+        "Possessive prefixes as pronominal material",
+        "Emphatic pronouns in -mah",
+        "Reflexive and reciprocal ki- boundary",
+        "Participant-oriented hong- and kong- boundary",
+        "Boundary with demonstratives, interrogatives, quantifiers, and wider agreement",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
 def test_assembled_preview_includes_normalized_nominalization_section() -> None:
     text = _text()
 
@@ -882,6 +901,46 @@ def test_assembled_preview_tex_includes_normalized_prefix_agreement_inventory_an
         assert required in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_pronouns_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    pronoun_example_count = (
+        text.count("(@ex:pro-")
+        + text.count("(@ex:poss-")
+        + text.count("(@ex:emph-")
+        + text.count("(@ex:refl-")
+        + text.count("(@ex:hong-")
+        + text.count("(@ex:kong-")
+    )
+    assert pronoun_example_count >= 8
+    assert tex.count("\\label{ex:pro-") >= 4
+
+    for required in (
+        "current personal-pronoun inventory",
+        "independent personal pronouns",
+        "first-person plural forms and clusivity",
+        "possessive prefixes as pronominal material",
+        "emphatic pronouns in -mah",
+        "reflexive and reciprocal ki- boundary",
+        "participant-oriented hong- and kong- boundary",
+    ):
+        assert required.lower() in text.lower()
+        assert required.lower() in tex_normalized
+
+    for required in (
+        "current personal-pronoun inventory",
+        "independent personal pronouns",
+        "first-person plural forms and clusivity",
+        "possessive prefixes as pronominal material",
+        "emphatic pronouns in -mah",
+    ):
+        assert required in pdf_normalized
+
+
 def test_assembled_preview_tex_includes_normalized_nominalization_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -1115,6 +1174,22 @@ def test_assembled_preview_tex_keeps_prefix_agreement_example_sources_after_tran
     assert "(Matthew 25:37)" in _tex_example_block("ex:pref-hongmu-matt25")
 
 
+def test_assembled_preview_tex_keeps_pronouns_example_sources_after_translation() -> None:
+    assert "(Genesis 3:20)" in _tex_example_block("ex:pro-amah")
+    assert "(Matthew 5:13)" in _tex_example_block("ex:pro-note")
+    assert "(Genesis 13:8)" in _tex_example_block("ex:pro-eite")
+    assert "(Genesis 34:9)" in _tex_example_block("ex:pro-kote")
+    assert "(Genesis 24:23)" in _tex_example_block("ex:poss-na")
+    assert "(Luke 2:49)" in _tex_example_block("ex:poss-ka-pa-inn")
+    assert "(Genesis 3:20)" in _tex_example_block("ex:poss-a")
+    assert "(Genesis 4:13)" in _tex_example_block("ex:emph-keimah")
+    assert "(Matthew 8:22)" in _tex_example_block("ex:emph-nangmah")
+    assert "(Genesis 2:24)" in _tex_example_block("ex:refl-ki")
+    assert "(Matthew 19:5)" in _tex_example_block("ex:refl-ki-matt19")
+    assert "(Matthew 25:37)" in _tex_example_block("ex:hong-prefix")
+    assert "(Genesis 41:41)" in _tex_example_block("ex:kong-prefix")
+
+
 def test_assembled_preview_tex_keeps_nominalization_example_sources_after_translation() -> None:
     assert "(Genesis 2:17)" in _tex_example_block("ex:nmlz-theihna-gen2")
     assert "(Matthew 1:1)" in _tex_example_block("ex:nmlz-ciaptehna-matt1")
@@ -1208,6 +1283,14 @@ def test_assembled_preview_prefix_agreement_examples_include_old_testament_and_g
 
     assert "(Genesis 21:7)" in tex or "(Genesis 15:3)" in tex or "(Exodus 30:38)" in tex or "(Jeremiah 7:11)" in tex
     assert "(John 4:17)" in tex or "(Luke 7:6)" in tex or "(Matthew 13:41)" in tex or "(Matthew 25:37)" in tex or "No equally clean Gospel example is currently used" in text
+
+
+def test_assembled_preview_pronouns_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 3:20)" in tex or "(Genesis 13:8)" in tex or "(Genesis 34:9)" in tex or "(Genesis 24:23)" in tex
+    assert "(Matthew 5:13)" in tex or "(Luke 2:49)" in tex or "(Matthew 8:22)" in tex or "(Matthew 19:5)" in tex or "(Matthew 25:37)" in tex or "No equally clean Gospel example is currently used for this construction" in text
 
 
 def test_assembled_preview_nominalization_examples_include_old_testament_and_gospel_sources() -> None:
@@ -1306,6 +1389,7 @@ def test_assembled_preview_tex_keeps_expected_sources_for_examples_2_11_to_2_14(
     assert "(Genesis 13:8)" in _tex_example_block("ex:pro-eite")
     assert "(Genesis 34:9)" in _tex_example_block("ex:pro-kote")
     assert "(Genesis 24:23)" in _tex_example_block("ex:poss-na")
+    assert "(Luke 2:49)" in _tex_example_block("ex:poss-ka-pa-inn")
     assert "(Genesis 3:20)" in _tex_example_block("ex:poss-a")
 
 
