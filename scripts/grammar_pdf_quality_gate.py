@@ -30,6 +30,7 @@ TARGET_SECTION_TITLES = {
     "TAM / aspect / modal",
     "Directionals",
     "Nominalization",
+    "Clause linkage",
 }
 GOSPEL_BOOKS = {
     "Matthew",
@@ -230,7 +231,22 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "muhna-ah": ((r"in seeing|in the sight|before",), "in seeing / in the sight"),
     "kumpipa": ((r"king",), "king"),
     "Topa": ((r"Lord",), "Lord"),
-    "a bawl mi": ((r"one who made|person who made",), "one who made / person who made"),
+    "ciangin": ((r"when|temporal subordination",), "when"),
+    "tua ciangin": ((r"then / when|that when",), "then / when"),
+    "ciang-in": ((r"when-ERG|when|then-ERG",), "when-ERG"),
+    "dingin": ((r"in order to|for|purpose",), "in order to / for"),
+    "ding-in": ((r"IRR-ERG|purpose-ERG",), "IRR-ERG"),
+    "ngenin": ((r"pray-CVB|praying|speaking-CVB",), "pray-CVB"),
+    "VERB-in": ((r"converb|clause chain marker",), "converb"),
+    "ahih ciangin": ((r"when / when it was|when|temporal different-subject",), "when / when it was"),
+    "a bawl mi": ((r"person who|one who makes|one who made|person who made",), "person who"),
+    "omna": ((r"place / being / existence|being|nominalized relative",), "place / being / existence"),
+    "om-na": ((r"be-NMLZ|exist-NMLZ",), "be-NMLZ"),
+    "muhna-ah": ((r"in seeing|in the sight|before",), "in seeing / in the sight"),
+    "mu-hna-ah": ((r"see-NMLZ-LOC|in the sight",), "see-NMLZ-LOC"),
+    "leh": ((r"if / when|conditional",), "if / when"),
+    "hangin": ((r"because|causal subordination",), "because"),
+    "bangin": ((r"like / as|comparative",), "like / as"),
 }
 
 

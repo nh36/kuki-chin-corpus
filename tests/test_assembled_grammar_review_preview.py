@@ -167,7 +167,7 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
         "Overview of transitivity contrasts",
         "Current transitivity inventory",
         "Full reduplication as intensification",
-        "Temporal subordination: ciangin",
+        "Temporal subordination with ciangin",
         "Deverbal nominalization with `-na`",
         "Overview of noun phrase structure",
         "Simple noun stems",
@@ -499,6 +499,25 @@ def test_assembled_preview_includes_normalized_nominalization_section() -> None:
         "Nominalized relatives and clause-derived nominalization boundary",
         "Nominalization plus case boundary",
         "Lexicalized and title-like boundary material",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+
+def test_assembled_preview_includes_normalized_clause_linkage_section() -> None:
+    text = _text()
+
+    for required in (
+        "Clause linkage",
+        "Overview of clause linkage in this section",
+        "Current clause linkage inventory",
+        "Temporal subordination with ciangin",
+        "Purposive or clause-bound irrealis boundary: dingin",
+        "Same-subject converb linkage boundary: VERB-in and ngenin",
+        "Different-subject temporal linkage boundary: ahih ciangin",
+        "Prenominal relative-clause boundary: a bawl mi",
+        "Nominalized relative and clause-like form boundary: omna",
+        "Nominalization-plus-case boundary: muhna-ah",
         "Several issues remain outside the present account.",
     ):
         assert required in text
@@ -846,6 +865,49 @@ def test_assembled_preview_tex_includes_normalized_nominalization_inventory_and_
         assert required in pdf_normalized
 
 
+def test_assembled_preview_tex_includes_normalized_clause_linkage_inventory_and_examples() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    tex_normalized = _normalize(tex.lower())
+    pdf_normalized = _normalize(pdf.lower())
+
+    assert text.count("(@ex:clause-") >= 4
+    assert tex.count("\\label{ex:clause-") >= 4
+
+    for required in (
+       "Current clause linkage inventory",
+       "Temporal subordination with ciangin",
+       "Purposive or clause-bound irrealis boundary: dingin",
+       "Same-subject converb linkage boundary",
+       "Different-subject temporal linkage boundary",
+       "Prenominal relative-clause boundary",
+       "ciangin",
+       "tua ciangin",
+       "dingin",
+       "ngenin",
+    ):
+       assert required.lower() in text.lower()
+
+    for required in (
+       "current clause linkage inventory",
+       "temporal subordination with ciangin",
+       "purposive or clause-bound irrealis",
+       "tua ciangin",
+       "ngenin",
+       "a bawl mi",
+    ):
+       assert required.lower() in tex_normalized
+
+    for required in (
+       "current clause linkage inventory",
+       "temporal subordination",
+       "ciangin",
+       "tua ciangin",
+    ):
+       assert required in pdf_normalized
+
+
 def test_assembled_preview_tex_includes_normalized_stem_inventory_and_examples() -> None:
     text = _text()
     tex = _tex_text()
@@ -985,6 +1047,15 @@ def test_assembled_preview_tex_keeps_nominalization_example_sources_after_transl
     assert "(Luke 19:27)" in _tex_example_block("ex:nmlz-muhna-ah-luke19")
 
 
+def test_assembled_preview_tex_keeps_clause_linkage_example_sources_after_translation() -> None:
+    assert "(Genesis 1:3)" in _tex_example_block("ex:clause-ciangin-gen1p3")
+    assert "(Genesis 1:26)" in _tex_example_block("ex:clause-ciangin-gen1p26")
+    assert "(Genesis 1:14)" in _tex_example_block("ex:clause-dingin-gen1p14")
+    assert "(Genesis 41:55)" in _tex_example_block("ex:clause-ngenin-gen41p55")
+    assert "(Genesis 1:21)" in _tex_example_block("ex:clause-ahih-ciangin-gen1p21")
+    assert "(Genesis 6:11)" in _tex_example_block("ex:clause-muhnaah-gen6p11")
+
+
 def test_assembled_preview_tex_keeps_stem_example_sources_after_translation() -> None:
     assert "(Genesis 1:4)" in _tex_example_block("ex:stem-mu-gen1")
     assert "(Genesis 19:1)" in _tex_example_block("ex:stem-muh-gen19")
@@ -1060,6 +1131,14 @@ def test_assembled_preview_nominalization_examples_include_old_testament_and_gos
 
     assert "(Genesis 2:17)" in tex or "(Genesis 2:9)" in tex or "(Genesis 6:11)" in tex or "(Judges 7:14)" in tex
     assert "(Matthew 1:1)" in tex or "(Matthew 7:5)" in tex or "(Luke 19:27)" in tex or "(John 6:37)" in tex or "No equally clean Gospel example is currently used" in text
+
+
+def test_assembled_preview_clause_linkage_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+    text = _text()
+
+    assert "(Genesis 1:3)" in tex or "(Genesis 1:21)" in tex or "(Genesis 1:26)" in tex or "(Genesis 1:14)" in tex or "(Genesis 41:55)" in tex or "(Genesis 6:11)" in tex
+    assert "(Matthew 7:5)" in tex or "(Luke 19:27)" in tex or "No equally" in text
 
 
 def test_assembled_preview_transitivity_examples_include_old_testament_and_gospel_sources() -> None:

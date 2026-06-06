@@ -74,7 +74,7 @@ These two rows together support the safest present wording. `khua-ah` keeps the 
 
 The present packet supports an agentive or ergative analysis of `-in` more clearly than it supports any broader instrumental analysis. Genesis 4:3 remains the primary candidate-backed anchor because `Kain in` is the cleanest controlled row. The new supplement adds Matthew 2:4 `Herod in` as a manually reviewed Gospel support example, which helps show that the pattern is not confined to one OT narrative window.
 
-At the same time, this section does not claim a complete ergative system. It also does not promote a general instrumental `-in` category. The most important control here is still the homograph problem: raw searches for `-in` overgenerate forms such as `ciangin`, so only checked clause-level noun phrase rows are promoted into the grammar prose.
+At the same time, this section does not claim a complete ergative system. It also does not promote a general instrumental `-in` category. The most important control here is still the homograph problem: raw searches for `-in` overgenerate forms such as `ciangin` 'when', so only checked clause-level noun phrase rows are promoted into the grammar prose.
 
 (@ex:case-in-kain) Genesis 4:3
 a. Tedim: Kain in

@@ -134,7 +134,7 @@ Several issues remain outside the present account.
 
 - `bawlna` and `bawl-na` support a controlled deverbal core, but they do not by themselves settle the full nominalization paradigm.
 - `-pa`, `bawlpa`, `-mi`, and `hong pai mi` remain boundary material until lexicalized-title and relative-clause overlap is clearer.
-- `omna` and `a bawl mi` remain boundary forms shared with clause linkage and relative structure.
+- `omna` and `a bawl mi` 'person who' remain boundary forms shared with clause linkage and relative structure.
 - `muhna-ah` remains a boundary form shared with case marking and clause linkage.
 - `kumpipa` and `Topa` remain lexicalized or title-like rows rather than transparent productive derivations.
 - Bare `na` remains noisy and should not be promoted without stronger controlled evidence.

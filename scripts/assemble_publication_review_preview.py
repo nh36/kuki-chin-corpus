@@ -264,6 +264,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "TAM / aspect / modal",
     "Directionals",
     "Nominalization",
+    "Clause linkage",
 }
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
@@ -280,6 +281,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_tam_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_directionals_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_nominalization_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_clause_linkage_normalization.tsv",
 )
 GRAMMAR_FACING_INTERNAL_SECTION_TITLES = {"Scope", "Editorial scope"}
 GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
@@ -349,6 +351,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "with `bawlna` 'making / creation' as a compact anchor, while `-pa` 'agentive / person' and "
         "`-mi` 'person / one who' material "
         "remains explicit boundary evidence."
+    ),
+    "Clause linkage": (
+        "The current clause-linkage evidence is strongest for temporal subordination with `ciangin` 'when', "
+        "marked clause-finally as `tua ciangin` 'then / when', while purposive material with `dingin` 'in order to', "
+        "same-subject converb construction with `ngenin` 'pray-CVB', different-subject marking with `ahih ciangin` 'when', "
+        "and relative clauses including `a bawl mi` 'person who' remain explicit boundary material."
     ),
 }
 GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [

@@ -358,6 +358,22 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
             "Topa",
             "a bawl mi",
         ),
+        "Clause linkage": (
+            "ciangin",
+            "tua ciangin",
+            "ciang-in",
+            "dingin",
+            "ding-in",
+            "ngenin",
+            "VERB-in",
+            "ahih ciangin",
+            "a bawl mi",
+            "omna",
+            "muhna-ah",
+            "leh",
+            "hangin",
+            "bangin",
+        ),
     }
 
     for section_title, forms in expectations.items():
