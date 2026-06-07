@@ -2,8 +2,8 @@
 
 - TeX: `output/publication_review/assembled_grammar_review_preview.tex`
 - Issues: 0
-- Pages: 78
-- Formal examples checked: 187
+- Pages: 79
+- Formal examples checked: 196
 
 ## Result
 

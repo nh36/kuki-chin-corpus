@@ -18,6 +18,7 @@ DEFAULT_REPORT_PATH = ROOT / "output" / "publication_review" / "grammar_facing_q
 FIRST_CHAPTER_TITLE = "Phonology and tone"
 TARGET_SECTION_TITLES = {
     "Demonstratives / deixis",
+    "Negation",
     "Interrogatives",
     "Sentence-final particles",
     "Stem alternation",
@@ -113,6 +114,16 @@ TEX_INTERNAL_PATTERNS: tuple[tuple[re.Pattern[str], str], ...] = (
 GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "ahi hi": ((r"be\.3SG DECL|it was|declarative",), "be.3SG DECL / it was"),
     "lo hi": ((r"NEG DECL|negation\+declarative|neg plus declarative",), "NEG DECL"),
+    "loh": ((r"dependent / derived NEG|NEG\.DEP|dependent negation",), "dependent / derived NEG"),
+    "loh ding-a": ((r"NEG\.DEP IRR-ERG|NEG\.DEP IRR-LOC/FUNC|dependent negation",), "NEG.DEP IRR-LOC/FUNC"),
+    "kei in": ((r"NEG IMP\.SG|prohibitive",), "NEG IMP.SG"),
+    "kei un": ((r"NEG IMP\.PL|prohibitive",), "NEG IMP.PL"),
+    "maizum lo uh hi": ((r"not ashamed",), "not ashamed"),
+    "om lo hi": ((r"not exist|is absent|exist NEG DECL",), "not exist / be absent"),
+    "nei lo hi": ((r"not have|have NEG DECL",), "not have"),
+    "nawn lo": ((r"no longer|not again",), "no longer / not again"),
+    "thei lo": ((r"cannot|not know",), "cannot / not know"),
+    "theih loh": ((r"dependent inability|not being able|ABIL\.NMLZ NEG",), "dependent inability / not being able"),
     "hen": ((r"jussive / optative|jussive|optative",), "jussive / optative"),
     "in": ((r"imperative / second-person singular imperative boundary|imperative|IMP\.SG",), "imperative / second-person singular imperative boundary"),
     "un": ((r"plural imperative|imperative plural|IMP\.PL",), "plural imperative"),

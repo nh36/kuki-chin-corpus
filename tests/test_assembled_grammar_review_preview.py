@@ -228,6 +228,71 @@ def test_assembled_preview_includes_normalized_sentence_final_particles_section(
     assert "sentence-final particle inventory" in pdf.lower()
 
 
+def test_assembled_preview_includes_normalized_negation_section() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    normalized_tex = _normalize(tex.lower())
+    normalized_pdf = _normalize(pdf.lower())
+
+    for required in (
+        "Overview of negation in Tedim",
+        "Negation inventory",
+        "Clause-level negation with `lo`",
+        "Dependent and derived negation with `loh`",
+        "`kei` in prohibitives and irrealis-heavy negation",
+        "Ordinary plural negative predicates are not automatically prohibitive",
+        "Negative existence and absence",
+        "Cessative `nawn lo`",
+        "Ability and inability",
+        "Negative polarity items",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+    for required in (
+        "overview of negation in tedim",
+        "negation inventory",
+        "clause-level negation with",
+        "dependent and derived negation with",
+        "prohibitives and irrealis-heavy negation",
+        "negative existence and absence",
+        "ability and inability",
+        "negative polarity items",
+        "several issues remain outside the present account.",
+    ):
+        assert required in normalized_tex
+        assert required in normalized_pdf
+
+    assert text.count("(@ex:neg-") >= 10
+    assert tex.count("\\label{ex:neg-") >= 10
+    assert "negation inventory" in normalized_pdf
+
+
+def test_assembled_preview_tex_keeps_negation_example_sources_after_translation() -> None:
+    assert "(Genesis 4:5)" in _tex_example_block("ex:neg-lo")
+    assert "(Matthew 2:10)" in _tex_example_block("ex:neg-lo-matt2-10")
+    assert "(Genesis 3:11)" in _tex_example_block("ex:neg-loh")
+    assert "(Matthew 5:19)" in _tex_example_block("ex:neg-loh-matt5-19")
+    assert "(Genesis 22:12)" in _tex_example_block("ex:neg-kei")
+    assert "(Mark 1:25)" in _tex_example_block("ex:neg-kei-mark1-25")
+    assert "(Genesis 37:24)" in _tex_example_block("ex:neg-om-lo-gen37-24")
+    assert "(John 14:30)" in _tex_example_block("ex:neg-nei-lo-john14-30")
+    assert "(Genesis 8:12)" in _tex_example_block("ex:neg-nawn-lo-gen8-12")
+    assert "(Matthew 28:6)" in _tex_example_block("ex:neg-nawn-lo-matt28-6")
+    assert "(Genesis 27:23)" in _tex_example_block("ex:neg-thei-lo")
+    assert "(John 9:4)" in _tex_example_block("ex:neg-theih-loh-john9-4")
+    assert "(Exodus 2:12)" in _tex_example_block("ex:neg-kuamah")
+    assert "(Matthew 22:46)" in _tex_example_block("ex:neg-kuamah-matt22-46")
+
+
+def test_assembled_preview_negation_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 4:5)" in tex or "(Exodus 2:12)" in tex
+    assert "(Matthew 2:10)" in tex or "(Mark 1:25)" in tex or "(John 14:30)" in tex
+
+
 def test_assembled_preview_tex_keeps_sentence_final_particles_example_sources_after_translation() -> None:
     assert "(Genesis 1:13)" in _tex_example_block("ex:sfp-ahi-hi-gen1-13")
     assert "(Matthew 1:1)" in _tex_example_block("ex:sfp-ahi-hi-matt1-1")

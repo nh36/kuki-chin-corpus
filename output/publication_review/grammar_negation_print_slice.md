@@ -6,86 +6,173 @@ link-citations: true
 reference-section-title: "References"
 ---
 
-# Scope
+# Overview of negation in Tedim
 
-This account offers a short treatment of Tedim negation. It is intentionally narrow. It focuses on a small set of manually checked Bible examples and on the interaction between `lo`, `loh`, and `kei`. It does not attempt a full TAM chapter, a treatment of directionals, or a complete account of every negative construction in the corpus.
+Tedim negation is not reducible to `lo` 'NEG' alone. The current controlled evidence supports at least three major zones: ordinary clause-level negation with `lo` 'NEG', dependent or derived negation with `loh` 'dependent / derived NEG', and `kei` 'NEG / prohibitive NEG' in prohibitives and other irrealis-heavy negative environments [@henderson1965; @zamngaihcing2017].
 
-# Overview of the negation system
+# Negation inventory
 
-The literature and the Bible corpus agree on one central point: Tedim negation cannot be reduced to `lo` alone. Henderson foregrounds `-kei`, including prohibitive uses, while Zam Ngaih Cing explicitly describes a contrast between `-kei` and `-lou/-louh` and links the latter to stem-sensitive or dependent environments [@henderson1965; @zamngaihcing2017]. The safest summary is therefore not "Tedim negation = `lo`", but rather that the present corpus supports a three-part treatment: ordinary clause-level negation with `lo`, dependent or derived negation with `loh`, and `kei` as a central negator in prohibitives and many irrealis-heavy or directive contexts.
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+|---|---|---|---|---|
+| `lo` | clause-level NEG | `thusim lo hi` | core | not the whole system |
+| `lo hi` | NEG DECL | `kigen thei lo hi` | core | overlaps with sentence-final declarative material |
+| `loh` | dependent / derived NEG | `zuih loh nadingin` | core | not a free alternant of ordinary `lo` |
+| `loh ding-a` | NEG.DEP IRR-LOC/FUNC | `nek loh ding-a` | core | overlaps with TAM and purposive linkage |
+| `kei` | NEG / prohibitive NEG | `su kei in` | core | also appears outside strict prohibitives |
+| `kei in` | NEG IMP.SG | `pau kei in` | core | imperative-only shape |
+| `kei un` | NEG IMP.PL | `kihta kei un` | core | imperative-only shape |
+| `om lo hi` | not exist / be absent | `tui om lo hi` | core | existential boundary with possession |
+| `nei lo hi` | not have | `aana nei lo hi` | core | possession boundary |
+| `nawn lo` | no longer / not again | `om nawn lo hi` | core | constructional, not a new basic negator |
+| `thei lo` | cannot / not know | `thei lo hi` | core | ability overlaps with modal subsystem |
+| `theih loh` | dependent inability / not being able | `sep theih loh` | core | dependent form overlaps with linkage |
+| `kuamah` | nobody | `kuamah mu lo` | core with filtering | needs licensing context |
+| `bangmah` | nothing | `bangmah om lo hi` | core with filtering | has non-NPI uses such as `tua bangmah hi-in` |
 
 # Clause-level negation with `lo`
 
-`Lo` is the safest place to start because it is the clearest ordinary clause-level negator in the Bible corpus. It appears in straightforward negative predicates such as `thusim lo hi`, `nei lo hi`, `om lo hi`, and in many future or modal combinations such as `V lo ding`. That does not make it the whole negation system, but it does make it the most transparent starting point.
+`Lo` 'NEG' is the safest ordinary clause-level negator, and `lo hi` 'NEG DECL' is common in straightforward predicate negation.
+
+Genesis 4:5 gives a compact clause-level OT anchor.
 
 (@ex:neg-lo) Genesis 4:5
-a. Tedim: ahih hangin Kain le ama piakna thusim lo hi. Tua ahih ciangin Kain heh mahmah a, a mai sia hi.
+a. Tedim: Kain le ama piakna thusim lo hi.
 b. Segmentation: thusim lo hi
 c. Gloss: accept NEG DECL
-d. Translation: "but unto Cain and to his offering he had not respect. And Cain was very wroth, and his countenance fell."
+d. Translation: "he had not respect for Cain and his offering." (Genesis 4:5)
 
-Genesis 4:5 is a good central example because it shows exactly the clause type a reader expects from a first negation section: a verbal predicate followed by `lo` and the clause-final declarative material. Genesis 11:30 `ta nei lo hi` is equally useful in a more compact predicative clause, and existential patterns such as `om lo hi` belong in the same zone.
+Matthew 2:10 gives a Gospel comparandum in the same clause-level zone.
 
-`V lo uh` is a real and common surface string, but it is not automatically prohibitive. Genesis 2:25 `maizum lo uh hi` means "they were not ashamed" and is simply an ordinary plural negative predicate. Similar plural negatives occur elsewhere with no imperative force. It is better treated as an ordinary clausal negative pattern than as the defining prohibitive construction.
+(@ex:neg-lo-matt2-10) Matthew 2:10
+a. Tedim: Tua aksi a muh uh ciangin a lungdamna uh kigen thei lo hi.
+b. Segmentation: kigen thei lo hi
+c. Gloss: tell ABIL NEG DECL
+d. Translation: "their joy could not be told." (Matthew 2:10)
 
 # Dependent and derived negation with `loh`
 
-`Loh` should not be treated as a random spelling variant of `lo`. In the current Bible corpus it clusters in dependent, purposive, and derived environments such as `... loh dinga`, `... loh dingin`, and `... loh nadingin`. The safest label is therefore something like "dependent or derived negative form", not just "another way to spell `lo`".
+`Loh` 'dependent / derived NEG' is distinct from ordinary `lo`, and the pattern `loh ding-a` 'NEG.DEP IRR-LOC/FUNC' and related purposive shapes are central in dependent negation.
+
+Genesis 3:11 gives the OT dependent-negation anchor.
 
 (@ex:neg-loh) Genesis 3:11
-a. Tedim: Amah in, “Na guaktanga na omna kua in hong gen ahi hiam? Na nek loh dinga kong thupiak singgah ne kha na hi hiam?” ci hi.
+a. Tedim: Na nek loh ding-a kong thupiak singgah ne kha na hi hiam?
 b. Segmentation: nek loh ding-a
 c. Gloss: eat.II NEG.DEP IRR-ERG
-d. Translation: "And he said, Who told thee that thou wast naked? Hast thou eaten of the tree, whereof I commanded thee that thou shouldest not eat?"
+d. Translation: "that thou shouldest not eat?" (Genesis 3:11)
 
-Genesis 3:11 is especially useful because `loh` is not just attached to a bare verb in isolation. It appears inside a dependent complex, `na nek loh dinga kong thupiak`, where the whole point is the commanded non-occurrence of the event. Isaiah 6:10 strengthens the same pattern by repeating `muh loh nading`, `zak loh nading`, and `theihtel loh nading` inside clearly purposive or clause-linking material. This is exactly the distribution seen again and again in the corpus: `loh` is where the Bible orthography most visibly tracks non-finite, dependent, and derived negation.
+Matthew 5:19 gives a Gospel dependent-negation comparandum.
+
+(@ex:neg-loh-matt5-19) Matthew 5:19
+a. Tedim: Midangte in zong a zuih loh nadingin a gen mite pen mi neupen hi ding uh hi.
+b. Segmentation: zuih loh nadingin
+c. Gloss: follow.II NEG.DEP PURP
+d. Translation: "those who teach others not to keep them will be called least." (Matthew 5:19)
 
 # `kei` in prohibitives and irrealis-heavy negation
 
-`Kei` is central to real prohibitives in the Bible corpus, and those prohibitives are among the cleanest manually checked negative examples available. This alone is enough to show why the negation system cannot be flattened to `lo`.
+`Kei` 'NEG / prohibitive NEG' is central in prohibitives, especially `kei in` 'NEG IMP.SG' and `kei un` 'NEG IMP.PL', and it also appears in broader irrealis-heavy negative environments.
+
+Genesis 22:12 gives the core OT prohibitive anchor.
 
 (@ex:neg-kei) Genesis 22:12
-a. Tedim: Amah in, “Tangvalpa su kei in. Ama tungah bangmah hih kei in. Bang hang hiam cih leh nang in Pasian na zahtakna tu-in ka thei a, na tapa khat neihsun keima a dingin na humcip lohna ka mu hi,” a ci hi.
+a. Tedim: Tangvalpa su kei in. Ama tungah bangmah hih kei in.
 b. Segmentation: su kei in ... hih kei in
-c. Gloss: strike NEG IMP ... do NEG IMP
-d. Translation: "And he said, Lay not thine hand upon the lad, neither do thou any thing unto him: for now I know that thou fearest God, seeing thou hast not withheld thy son, thine only son from me."
+c. Gloss: strike NEG IMP.SG ... do NEG IMP.SG
+d. Translation: "Do not strike the boy; do not do anything to him." (Genesis 22:12)
 
-Genesis 22:12 gives two clear negative imperatives in the same speech turn. Genesis 15:1 `Lau kei in`, Genesis 19:17 `Nunghei kei unla, ... khawl kei un`, Leviticus 10:9 `ne kei un`, and Numbers 14:42 `kuanto kei un ... do kei un` all point in the same direction: `kei` is the core prohibitive negator in the current Bible data.
+Mark 1:25 gives a compact Gospel prohibitive comparandum.
 
-The corpus also shows that `kei` is not limited to prohibitives or to first-person realis. Exodus 5:2 has both `ka thei kei hi` and `ka paisak kei ding hi`, which shows `kei` in ordinary negation and in irrealis-heavy future material. The safest print summary is therefore that `kei` is central in prohibitives and common in directive, quoted, or otherwise irrealis-heavy negation, without forcing the whole system into a rigid person-based rule.
+(@ex:neg-kei-mark1-25) Mark 1:25
+a. Tedim: Pau kei in; hih mipa sung panin paikhia in.
+b. Segmentation: pau kei in ... paikhia in
+c. Gloss: speak NEG IMP.SG ... come.out IMP.SG
+d. Translation: "Be silent, and come out of him." (Mark 1:25)
 
-# Negative existence and cessative negation
+# Ordinary plural negative predicates are not automatically prohibitive
 
-Negative existence belongs with ordinary `lo`-based negation, but it deserves its own short section because it is extremely common and very readable in Bible prose. Clauses such as Genesis 11:30 `ta nei lo hi`, Genesis 37:24 `a sungah tui om lo hi`, and Genesis 39:9 `a kep tuam bangmah om lo hi` show the ordinary Tedim way of saying that something is absent, unavailable, or not possessed.
+The pattern `V lo uh` is not automatically a prohibitive. Genesis 2:25 `maizum lo uh hi` 'they were not ashamed' is an ordinary declarative plural negative predicate, not a directive, and Gospel clauses such as Matthew 13:17 `mu lo uh` show the same non-prohibitive negative profile.
 
-The corpus also supports a neat constructional entry for `nawn lo` "no longer, not again". Genesis 8:12 `hong ciahkik nawn lo hi` is a clean cessative example, and Genesis 17:5 `Na min Abram hi nawn lo ding a` shows the same construction in a renamed-future environment. This material is better treated as a construction than as a new basic negator.
+# Negative existence and absence
+
+Negative existence and absence are commonly expressed with `om lo hi` 'not exist / be absent' and `nei lo hi` 'not have'.
+
+Genesis 37:24 gives an OT existential-negation anchor.
+
+(@ex:neg-om-lo-gen37-24) Genesis 37:24
+a. Tedim: Khu sungah tui om lo hi.
+b. Segmentation: om lo hi
+c. Gloss: exist NEG DECL
+d. Translation: "there was no water in the pit." (Genesis 37:24)
+
+John 14:30 gives a Gospel possession-negation comparandum.
+
+(@ex:neg-nei-lo-john14-30) John 14:30
+a. Tedim: Amah in keima tungah aana nei lo hi.
+b. Segmentation: nei lo hi
+c. Gloss: have NEG DECL
+d. Translation: "he has no claim on me." (John 14:30)
+
+# Cessative `nawn lo`
+
+`Nawn lo` 'no longer / not again' is best treated as a constructional negation pattern, not as a separate basic negator.
+
+Genesis 8:12 gives the OT cessative anchor.
+
+(@ex:neg-nawn-lo-gen8-12) Genesis 8:12
+a. Tedim: Tua vachuang hong ciahkik nawn lo hi.
+b. Segmentation: hong ciahkik nawn lo hi
+c. Gloss: return CONT NEG DECL
+d. Translation: "the dove did not return again." (Genesis 8:12)
+
+Matthew 28:6 gives a Gospel cessative comparandum.
+
+(@ex:neg-nawn-lo-matt28-6) Matthew 28:6
+a. Tedim: Amah om nawn lo hi.
+b. Segmentation: om nawn lo hi
+c. Gloss: exist CONT NEG DECL
+d. Translation: "he is no longer here." (Matthew 28:6)
 
 # Ability and inability
 
-The clearest treatment here is not a bare negator but the constructional pair `thei lo / theih loh`. The Bible shows common clause-level inability with `thei lo`, while dependent or derived negative ability is better represented by `theih loh` patterns than by the much rarer exact string `theih lo`.
+The ability pair `thei lo` 'cannot / not know' and `theih loh` 'not being able / dependent inability' is a productive part of negation, and the dependent form should not be collapsed into ordinary clause-level `thei lo`.
+
+Genesis 27:23 gives a compact OT ability-negation anchor.
 
 (@ex:neg-thei-lo) Genesis 27:23
-a. Tedim: A khutte in a sanggampa Esau’ khut bangin mul nei ahih manin amah in thei lo hi. Tua ahih ciangin amah in thupha pia dingin kithawi a,
+a. Tedim: Amah in thei lo hi.
 b. Segmentation: thei lo hi
 c. Gloss: know NEG DECL
-d. Translation: "And he discerned him not, because his hands were hairy, as his brother Esau's hands: so he blessed him."
+d. Translation: "he did not recognize him." (Genesis 27:23)
 
-Genesis 27:23 is a compact ordinary example: `thei lo hi` means that recognition or knowledge failed to occur. Genesis 37:4 `amah hopih thei lo uh hi` shows the same pattern with an ability reading, while Exodus 33:20 `na mu thei kei ding hi` shows inability under `kei`. On the dependent side, Exodus 10:5 `muh theih loh nadingin` and Isaiah 6:10 `theihtel loh nading` show why `theih loh` must be represented directly rather than treating exact `theih lo` as the dominant form in the current corpus.
+John 9:4 gives a Gospel dependent-ability comparandum.
+
+(@ex:neg-theih-loh-john9-4) John 9:4
+a. Tedim: Kuamah in na a sep theih loh zan hun hong tung ding hi.
+b. Segmentation: sep theih loh
+c. Gloss: work ABIL.NMLZ NEG
+d. Translation: "night is coming when no one can work." (John 9:4)
 
 # Negative polarity items
 
-The Bible corpus gives clean negative-polarity material, but only after filtering. Raw exact-string counts overgenerate because `kuamah` can occur in non-pronominal strings and `bangmah` has non-NPI uses such as `tua bangmah hi-in` "likewise". The discussion here therefore uses only manually checked examples.
+The forms `kuamah` 'nobody' and `bangmah` 'nothing' are included here only with filtered, manually checked negative-licensing contexts; raw exact-string counts overgenerate, and `bangmah` has non-NPI uses such as `tua bangmah hi-in` 'likewise / in that way'.
+
+Exodus 2:12 gives a filtered OT `kuamah` example.
 
 (@ex:neg-kuamah) Exodus 2:12
-a. Tedim: Amah khuadak kawikawi a, kuamah mu lo ahih manin Egypt mipa thatin sehnel sungah a seel hi.
+a. Tedim: Kuamah mu lo ahih manin Egypt mipa thatin sehnel sungah a seel hi.
 b. Segmentation: kuamah mu lo
 c. Gloss: nobody see NEG
-d. Translation: "And he looked this way and that way, and when he saw that there was no man, he slew the Egyptian, and hid him in the sand."
+d. Translation: "he saw that there was no man, and hid the Egyptian in the sand." (Exodus 2:12)
 
-Exodus 2:12 is a good `kuamah` example because the NPI is clearly licensed by the negative predicate. `Bangmah` behaves similarly in real NPI contexts such as Genesis 22:12 `Ama tungah bangmah hih kei in` and Genesis 39:9 `bangmah om lo hi`. Those are the kinds of examples the dictionary can safely quote. What should stay out of the main prose is any claim based on raw counts alone.
+Matthew 22:46 gives a filtered Gospel `kuamah` comparandum.
 
-# Summary
+(@ex:neg-kuamah-matt22-46) Matthew 22:46
+a. Tedim: Kuamah in ama thudotna kamkhat beek dawng thei lo uh hi.
+b. Segmentation: kuamah ... dawng thei lo uh hi
+c. Gloss: nobody ... answer ABIL NEG 3PL DECL
+d. Translation: "no one could answer him a word." (Matthew 22:46)
 
-The current evidence is strong enough for a stable negation chapter, but only if it keeps the system narrow and honest. `Lo` is the safest starting point for ordinary clause-level negation. `Loh` is a real dependent or derived negative form and should not be collapsed into accidental spelling variation. `Kei` is central in prohibitives and in many irrealis-heavy negatives, so the chapter must represent it directly rather than relegating it to a footnote.
+# Deferred material
 
-Just as important, the description must avoid false simplicity. `V lo uh` is not the prohibitive construction, Genesis 2:25 is not a prohibitive example, and the NPI section must use filtered examples rather than raw exact-string totals. The result is a compact but linguistically honest account of the current Bible evidence.
+Several issues remain outside the present account. The present section does not reopen a full TAM chapter, a full clause-linkage chapter, a full imperative-mood chapter, or a full polarity-licensing typology; it only marks the boundaries needed to keep `lo`, `loh`, `kei`, negative existence, ability-negation, and filtered NPIs in a coherent grammar-facing description.

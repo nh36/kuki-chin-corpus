@@ -252,6 +252,7 @@ TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", 
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Demonstratives / deixis",
+    "Negation",
     "Interrogatives",
     "Sentence-final particles",
     "Stem alternation",
@@ -274,6 +275,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
 NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_demonstratives_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_negation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_interrogatives_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_sentence_final_particles_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
@@ -307,6 +309,11 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "The current demonstrative evidence is strongest for core `hih` 'this' and `tua` 'that / the "
         "aforementioned', plus plural `hihte` 'these' and `tuate` 'those', while `hi` and exact `hih ciangin` "
         "'when this / when doing thus' remain boundary material."
+    ),
+    "Negation": (
+        "The current negation evidence supports a three-way core around `lo` 'NEG' for ordinary clause negation, "
+        "`loh` 'dependent / derived NEG' in dependent environments, and `kei` 'NEG / prohibitive NEG' in "
+        "prohibitives and irrealis-heavy negative contexts."
     ),
     "Interrogatives": (
         "The current interrogative evidence is strongest for clause-final `hiam` 'question particle' and WH + "
