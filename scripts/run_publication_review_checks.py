@@ -37,6 +37,7 @@ PYTEST_FILES = [
     "tests/test_numerals_normalized_print_slice.py",
     "tests/test_coverage_normalization_audit.py",
     "tests/test_post_normalization_coverage_checkpoint.py",
+    "tests/test_consistency_drift_invariant_audit.py",
     "tests/test_publication_review_packet_integrity.py",
 ]
 

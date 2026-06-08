@@ -23,7 +23,7 @@ The section keeps the analysis deliberately small. It distinguishes core evidenc
 | `ni ni` | syntactic X X repetition | temporal adverbial sequencing | boundary material | syntactic/adverbial interpretation dominates current evidence |
 | `leuleu` | iterative or continuative-looking repetition | `pai leuleu-in` | boundary material | overlaps TAM/aspect and VP-structure domains |
 | `gengen`, `kawikawi`, `theithei` | verbal, expressive, or adverbial-modal-looking rows | report-visible forms with mixed behavior | deferred | lexicalized-looking or report-only behavior remains unresolved |
-| `bangbang`, `bekbek`, `zenzen`, `tuamtuam` | report-only reduplicative-looking rows | table-only candidates | deferred | no clean controlled examples are currently promoted |
+| `bangbang`, `bekbek`, `zenzen`, `tuamtuam` | report-only reduplicative-looking rows | table-only rows | deferred | no clean controlled examples are currently promoted |
 
 ### Full reduplication as intensification
 

@@ -156,7 +156,7 @@ def test_coordinators_normalized_print_slice_glosses_key_tedim_forms_in_prose() 
         "leh": ("if / when",),
         "a": ("sequential linker", "3SG/FUNC overlap"),
         "a piangsak": ("3SG/FUNC", "create"),
-        "mawh": ("deferred disjunction candidate",),
+        "mawh": ("deferred disjunction material",),
         "Ahih hangin": ("but / however",),
         "ahih kei leh": ("otherwise / if not",),
     }

@@ -1826,7 +1826,7 @@ Clause-bound `dingin` 'for... to / clause-bound irrealis' belongs at the same bo
 
 Several issues remain outside the present account.
 
-- `pailai` 'go-midst / prospective candidate' still overlaps lexical `lai` too heavily for the present section.
+- `pailai` 'go-midst / prospective form' still overlaps lexical `lai` too heavily for the present section.
 - `dingin` 'for... to / clause-bound irrealis' and similar purpose-like rows remain clause-linkage material.
 - `mangngilh ta hi` 'has forgotten' keeps clause-final `ta hi` visible without making it the model for completive aspect.
 - `khiathei ding om lo` 'there is no one who can interpret it', `khia-ta` 'out-PFV', `bawlzoding` 'make-COMPL-IRR', and `bawlsakthei` 'make-CAUS-ABIL' remain overlap material rather than core anchors.
@@ -2838,11 +2838,11 @@ Several issues remain outside the present account.
 
 ## Coordinators
 
-The current coordinators evidence is strongest for NP coordination with `le` 'and (NP coordinator)', while `leh` 'if / when', sequential `a` 'sequential linker with 3SG/FUNC overlap', and `mawh` 'deferred disjunction candidate' remain boundary or deferred material, and `Ahih hangin` 'but / however' plus `ahih kei leh` 'otherwise / if not' remain caveated connector patterns.
+The current coordinators evidence is strongest for NP coordination with `le` 'and (NP coordinator)', while `leh` 'if / when', sequential `a` 'sequential linker with 3SG/FUNC overlap', and `mawh` 'deferred disjunction material' remain boundary or deferred material, and `Ahih hangin` 'but / however' plus `ahih kei leh` 'otherwise / if not' remain caveated connector patterns.
 
 ### Overview of coordinators in Tedim
 
-This section keeps coordination narrowly constructional. `le` 'and (NP coordinator)' is the clean noun-phrase anchor, while `leh` 'if / when' and sequential `a` 'sequential linker with 3SG/FUNC overlap' stay boundary-controlled. `mawh` 'deferred disjunction candidate' remains deferred. `Ahih hangin` 'but / however' and `ahih kei leh` 'otherwise / if not' are treated as caveated connector material [@henderson1965; @zamngaihcing2017]. This section does not present a full coordination, subordination, converb, or discourse system.
+This section keeps coordination narrowly constructional. `le` 'and (NP coordinator)' is the clean noun-phrase anchor, while `leh` 'if / when' and sequential `a` 'sequential linker with 3SG/FUNC overlap' stay boundary-controlled. `mawh` 'deferred disjunction material' remains deferred. `Ahih hangin` 'but / however' and `ahih kei leh` 'otherwise / if not' are treated as caveated connector material [@henderson1965; @zamngaihcing2017]. This section does not present a full coordination, subordination, converb, or discourse system.
 
 ### Coordinator inventory
 
@@ -2850,8 +2850,8 @@ This section keeps coordination narrowly constructional. `le` 'and (NP coordinat
 | --- | --- | --- | --- | --- |
 | `le` | NP coordination | `vantung le leitung`; `Van le lei` | core | limited to clean NP coordination claims |
 | `leh` | conditional / boundary linker | `veilam na lak leh kei taklamah ka pai ding hi` | boundary | do not flatten conditional `leh` into simple clause conjunction |
-| `a` | sequential linker candidate | `luang a tua mun panin gun hong kikhenin` | boundary | export overlap with agreement/function `a` |
-| `mawh` | disjunction / alternative-question candidate | `mawh` | deferred | current controlled row is lexical/analyzer-noise material |
+| `a` | sequential linker | `luang a tua mun panin gun hong kikhenin` | boundary | export overlap with agreement/function `a` |
+| `mawh` | disjunction / alternative-question row | `mawh` | deferred | current controlled row is lexical/analyzer-noise material |
 | `Ahih hangin` | adversative connector | `Ahih hangin`; `Ahih hangin kuamah in dawng lo hi` | supported with caveat | internally analyzable as `ahih` + `hang-in` |
 | `ahih kei leh` | conditional-adversative connector | `ahih kei leh`; `tua ahih kei leh` | supported with caveat | not a simple coordinator; overlaps conditional and negation material |
 
@@ -2909,7 +2909,7 @@ The false-friend control `a piangsak` '3SG/FUNC + create' shows why raw `a` harv
 
 ### Deferred `mawh` material
 
-`mawh` 'disjunction candidate (currently deferred)' remains deferred in this section because the controlled row still exports lexical material (`sin / V`) rather than a clean disjunction or alternative-question construction.
+`mawh` 'disjunction material (currently deferred)' remains deferred in this section because the controlled row still exports lexical material (`sin / V`) rather than a clean disjunction or alternative-question construction.
 
 Report-only schematic strings such as `mi mawh ganhing mawh` and `pai ding mawh om ding mawh` are not promoted as grammar evidence here.
 
@@ -2977,7 +2977,7 @@ The section keeps the analysis deliberately small. It distinguishes core evidenc
 | `ni ni` | syntactic X X repetition | temporal adverbial sequencing | boundary material | syntactic/adverbial interpretation dominates current evidence |
 | `leuleu` | iterative or continuative-looking repetition | `pai leuleu-in` | boundary material | overlaps TAM/aspect and VP-structure domains |
 | `gengen`, `kawikawi`, `theithei` | verbal, expressive, or adverbial-modal-looking rows | report-visible forms with mixed behavior | deferred | lexicalized-looking or report-only behavior remains unresolved |
-| `bangbang`, `bekbek`, `zenzen`, `tuamtuam` | report-only reduplicative-looking rows | table-only candidates | deferred | no clean controlled examples are currently promoted |
+| `bangbang`, `bekbek`, `zenzen`, `tuamtuam` | report-only reduplicative-looking rows | table-only rows | deferred | no clean controlled examples are currently promoted |
 
 ##### Full reduplication as intensification
 

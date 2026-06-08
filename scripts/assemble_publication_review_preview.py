@@ -336,7 +336,7 @@ GRAMMAR_FACING_SECTION_INTROS = {
     "Coordinators": (
         "The current coordinators evidence is strongest for NP coordination with `le` 'and (NP coordinator)', "
         "while `leh` 'if / when', sequential `a` 'sequential linker with 3SG/FUNC overlap', and `mawh` "
-        "'deferred disjunction candidate' remain boundary or deferred material, and `Ahih hangin` 'but / however' "
+        "'deferred disjunction material' remain boundary or deferred material, and `Ahih hangin` 'but / however' "
         "plus `ahih kei leh` 'otherwise / if not' remain caveated connector patterns."
     ),
     "Reduplication": (

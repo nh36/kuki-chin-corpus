@@ -9,7 +9,7 @@ reference-section-title: "References"
 
 # Overview of coordinators in Tedim
 
-This section keeps coordination narrowly constructional. `le` 'and (NP coordinator)' is the clean noun-phrase anchor, while `leh` 'if / when' and sequential `a` 'sequential linker with 3SG/FUNC overlap' stay boundary-controlled. `mawh` 'deferred disjunction candidate' remains deferred. `Ahih hangin` 'but / however' and `ahih kei leh` 'otherwise / if not' are treated as caveated connector material [@henderson1965; @zamngaihcing2017]. This section does not present a full coordination, subordination, converb, or discourse system.
+This section keeps coordination narrowly constructional. `le` 'and (NP coordinator)' is the clean noun-phrase anchor, while `leh` 'if / when' and sequential `a` 'sequential linker with 3SG/FUNC overlap' stay boundary-controlled. `mawh` 'deferred disjunction material' remains deferred. `Ahih hangin` 'but / however' and `ahih kei leh` 'otherwise / if not' are treated as caveated connector material [@henderson1965; @zamngaihcing2017]. This section does not present a full coordination, subordination, converb, or discourse system.
 
 # Coordinator inventory
 
@@ -17,8 +17,8 @@ This section keeps coordination narrowly constructional. `le` 'and (NP coordinat
 | --- | --- | --- | --- | --- |
 | `le` | NP coordination | `vantung le leitung`; `Van le lei` | core | limited to clean NP coordination claims |
 | `leh` | conditional / boundary linker | `veilam na lak leh kei taklamah ka pai ding hi` | boundary | do not flatten conditional `leh` into simple clause conjunction |
-| `a` | sequential linker candidate | `luang a tua mun panin gun hong kikhenin` | boundary | export overlap with agreement/function `a` |
-| `mawh` | disjunction / alternative-question candidate | `mawh` | deferred | current controlled row is lexical/analyzer-noise material |
+| `a` | sequential linker | `luang a tua mun panin gun hong kikhenin` | boundary | export overlap with agreement/function `a` |
+| `mawh` | disjunction / alternative-question row | `mawh` | deferred | current controlled row is lexical/analyzer-noise material |
 | `Ahih hangin` | adversative connector | `Ahih hangin`; `Ahih hangin kuamah in dawng lo hi` | supported with caveat | internally analyzable as `ahih` + `hang-in` |
 | `ahih kei leh` | conditional-adversative connector | `ahih kei leh`; `tua ahih kei leh` | supported with caveat | not a simple coordinator; overlaps conditional and negation material |
 
@@ -76,7 +76,7 @@ The false-friend control `a piangsak` '3SG/FUNC + create' shows why raw `a` harv
 
 # Deferred `mawh` material
 
-`mawh` 'disjunction candidate (currently deferred)' remains deferred in this section because the controlled row still exports lexical material (`sin / V`) rather than a clean disjunction or alternative-question construction.
+`mawh` 'disjunction material (currently deferred)' remains deferred in this section because the controlled row still exports lexical material (`sin / V`) rather than a clean disjunction or alternative-question construction.
 
 Report-only schematic strings such as `mi mawh ganhing mawh` and `pai ding mawh om ding mawh` are not promoted as grammar evidence here.
 

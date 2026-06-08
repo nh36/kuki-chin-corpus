@@ -158,7 +158,7 @@ Clause-bound `dingin` 'for ... to / clause-bound irrealis' belongs at the same b
 
 Several issues remain outside the present account.
 
-- `pailai` 'go-midst / prospective candidate' still overlaps lexical `lai` too heavily for the present section.
+- `pailai` 'go-midst / prospective form' still overlaps lexical `lai` too heavily for the present section.
 - `dingin` 'for ... to / clause-bound irrealis' and similar purpose-like rows remain clause-linkage material.
 - `mangngilh ta hi` 'has forgotten' keeps clause-final `ta hi` visible without making it the model for completive aspect.
 - `khiathei ding om lo` 'there is no one who can interpret it', `khia-ta` 'out-PFV', `bawlzoding` 'make-COMPL-IRR', and `bawlsakthei` 'make-CAUS-ABIL' remain overlap material rather than core anchors.
