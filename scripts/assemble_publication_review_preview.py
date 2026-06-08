@@ -256,6 +256,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Interrogatives",
     "Sentence-final particles",
     "Coordinators",
+    "Reduplication",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -280,6 +281,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_interrogatives_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_sentence_final_particles_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_coordinators_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_reduplication_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_prefix_agreement_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_pronouns_normalization.tsv",
@@ -336,6 +338,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "while `leh` 'if / when', sequential `a` 'sequential linker with 3SG/FUNC overlap', and `mawh` "
         "'deferred disjunction candidate' remain boundary or deferred material, and `Ahih hangin` 'but / however' "
         "plus `ahih kei leh` 'otherwise / if not' remain caveated connector patterns."
+    ),
+    "Reduplication": (
+        "The current reduplication evidence is strongest for full-reduplication intensification with `mahmah` "
+        "'very, truly' and support from `taktak` 'truly, certainly', while distributive `peuhpeuh` "
+        "'each~each / every, each', syntactic `ni ni` 'day day / day by day', and forms such as `leuleu` "
+        "'ITER~ITER / gradually' remain secondary, boundary, or deferred material."
     ),
     "Stem alternation": (
         "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "

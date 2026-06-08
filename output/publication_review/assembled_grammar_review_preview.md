@@ -1013,7 +1013,7 @@ The current evidence supports a modest but real account of quantification in Ted
 
 This is also where the current evidence meets broader descriptive literature most clearly: quantification in Tedim overlaps with noun-phrase structure, indefiniteness, and negation rather than forming a neatly isolated paradigm [@henderson1965; @zamngaihcing2017].
 
-The present section therefore keeps five safe claims in view. First, `khempeuh` supports a modest universal or total-quantifier generalization. Second, `pawlkhat` supports existential or indefinite-like readings with an explicit grouping caveat. Third, `kuamah` and `bangmah` remain usable only in negative-licensed clauses. Fourth, noun phrases such as `mi khempeuh` 'all people', `mi pawlkhat` 'some people', and `mi tampi` 'many people' support only a modest noun-plus-quantifier discussion. Fifth, `peuhpeuh`, `tawm`, `zaw`, and `mahmah` remain visible as boundary material without broadening the section into a full free-choice, low-quantity, comparative, or intensifier chapter.
+The present section therefore keeps five safe claims in view. First, `khempeuh` supports a modest universal or total-quantifier generalization. Second, `pawlkhat` supports existential or indefinite-like readings with an explicit grouping caveat. Third, `kuamah` and `bangmah` remain usable only in negative-licensed clauses. Fourth, noun phrases such as `mi khempeuh` 'all people', `mi pawlkhat` 'some people', and `mi tampi` 'many people' support only a modest noun-plus-quantifier discussion. Fifth, `peuhpeuh` 'each~each / every, each', `tawm` 'few', `zaw` 'more', and `mahmah` 'very, truly' remain visible as boundary material without broadening the section into a full free-choice, low-quantity, comparative, or intensifier chapter.
 
 ### Quantifier inventory
 
@@ -1120,7 +1120,7 @@ Several quantifier-looking domains still need to stay visibly non-normalized.
 | numeral overlap with `khat` | supported with caveat | `mi khat` is shared boundary evidence and should not be detached from the numerals discussion |
 | negative quantifier overlap | supported with caveat | `kuamah` and `bangmah` are safe only with explicit negation |
 | pronoun / determiner overlap | deferred beyond modest NP discussion | current examples support only local noun-phrase claims, not a full determiner system |
-| discourse / scope readings with `peuhpeuh` | deferred | current rows lean toward free-choice or broad-indefinite readings rather than settled universal quantification |
+| discourse-range readings with `peuhpeuh` | deferred | current rows lean toward free-choice or broad-indefinite readings rather than settled universal quantification |
 | low-quantity `tawm` | deferred | current export gloss remains too noisy for print promotion |
 | `tampi tak` versus broader degree work | supported with caveat | useful quantity evidence, but not the start of a broad adjective/adverb chapter |
 | `zaw` and `mahmah` | edge rows only | keep comparison and intensification visible without widening the section into a full comparison or intensifier chapter |
@@ -2959,59 +2959,97 @@ Several issues remain outside the present account. This section does not reopen 
 
 ## Reduplication
 
-### Full reduplication as intensification
+The current reduplication evidence is strongest for full-reduplication intensification with `mahmah` 'very, truly' and support from `taktak` 'truly, certainly', while distributive `peuhpeuh` 'each~each / every, each', syntactic `ni ni` 'day day / day by day', and forms such as `leuleu` 'ITER~ITER / gradually' remain secondary, boundary, or deferred material.
+
+### Overview of reduplication in Tedim
+
+This section gives a narrow grammar-facing account of reduplication in Tedim. The core evidence is strongest for intensifier-like full reduplication with `mahmah` 'very, truly' and support from `taktak` 'truly, certainly'. Secondary distributive material with `peuhpeuh` 'each~each / every, each' is kept visible but does not lead the analysis.
+
+The section keeps the analysis deliberately small. It distinguishes core evidence from boundary and deferred material, and it does not treat reduplication as a complete derivational, TAM/aspect, VP-structure, expressive-morphology, or dictionary-entry system.
+
+#### Reduplication inventory
+
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `mahmah` / `mah~mah` | full-reduplication intensifier | `pha mahmah hi` | core anchor | none at the current evidence level |
+| `taktak` / `tak~tak` | full-reduplication intensifier support | `Esau taktak na hi hiam?` | support | context-sensitive lexical contribution remains |
+| `peuhpeuh` / `peuh~peuh` | distributive or free-choice-like reduplication | `khat peuhpeuh` | secondary evidence | quantifier-adjacent behavior remains explicit |
+| `ni ni` | syntactic X X repetition | temporal adverbial sequencing | boundary material | syntactic/adverbial interpretation dominates current evidence |
+| `leuleu` | iterative or continuative-looking repetition | `pai leuleu-in` | boundary material | overlaps TAM/aspect and VP-structure domains |
+| `gengen`, `kawikawi`, `theithei` | verbal, expressive, or adverbial-modal-looking rows | report-visible forms with mixed behavior | deferred | lexicalized-looking or report-only behavior remains unresolved |
+| `bangbang`, `bekbek`, `zenzen`, `tuamtuam` | report-only reduplicative-looking rows | table-only candidates | deferred | no clean controlled examples are currently promoted |
+
+##### Full reduplication as intensification
 
 `mahmah` is the main full-reduplication intensifier anchor.
 
-The controlled segmentation and gloss/function are `mah~mah` and `EMPH~EMPH / very, truly`.
+Its controlled segmentation is `mah~mah`, with gloss/function `EMPH~EMPH / very, truly`.
 
-The report also supports the worked example `pha mahmah hi`, glossed there as `good very DECL`.
+The worked example `pha mahmah hi` remains central in this section, with gloss 'good very DECL'.
 
-`taktak` is the closest support row for the same small intensifying pattern.
+(@ex:red-mahmah-gen1-31) Genesis 1:31
+a. Tedim: hoih sa mahmah hi
+b. Segmentation: hoih | sa | mah~mah | hi
+c. Gloss: good | become.good | EMPH~EMPH | DECL
+d. Translation: 'it was very good' (Genesis 1:31)
 
-Its controlled segmentation and gloss/function are `tak~tak` and `TRUE~TRUE / truly, certainly`.
+Matthew 2:3 gives a Gospel comparandum for the same intensifier pattern.
 
-Taken together, `mahmah` and `taktak` support a narrow full-reduplication intensifier pattern, not the whole reduplication system.
+(@ex:red-mahmah-matt2-3) Matthew 2:3
+a. Tedim: lamdangsa mahmah
+b. Segmentation: lamdang-sa | mah~mah
+c. Gloss: amazed-STAT | EMPH~EMPH
+d. Translation: 'very alarmed / greatly troubled' (Matthew 2:3)
 
-### Secondary distributive evidence
+`Taktak` is the closest support row for the same intensifying pattern.
 
-`peuhpeuh` remains visible as secondary distributive evidence for full reduplication.
+Its controlled segmentation is `tak~tak`, with gloss/function `TRUE~TRUE / truly, certainly`.
 
-Its controlled segmentation and gloss/function are `peuh~peuh` and `each~each / every, each`.
+(@ex:red-taktak-gen27-24) Genesis 27:24
+a. Tedim: Esau taktak na hi hiam?
+b. Segmentation: Esau | tak~tak | na | hi | hiam
+c. Gloss: Esau | TRUE~TRUE | 2SG | be | Q
+d. Translation: 'Are you really Esau?' (Genesis 27:24)
 
-It stays outside the leading claim because it is more quantifier-like or noun-modifying than the clean intensifier anchors.
+Matthew 27:54 gives a Gospel support row for the same `taktak` pattern.
 
-### Boundary material
+(@ex:red-taktak-matt27-54) Matthew 27:54
+a. Tedim: Pasian' Tapa taktak mah ahi hi
+b. Segmentation: Pasian' | Tapa | tak~tak | mah | ahi | hi
+c. Gloss: God-GEN | son | TRUE~TRUE | EMPH | be.3SG.REL | DECL
+d. Translation: 'Truly this was the Son of God' (Matthew 27:54)
 
-`ni ni` stays outside the first grammar slice because syntactic X X repetition overlaps with temporal/adverbial and VP-structure interpretation.
+These rows support a narrow claim: full reduplication can mark intensification. They do not by themselves define the full reduplication system.
 
-`leuleu` stays outside because iterative or continuative reduplication overlaps with TAM/aspect and VP structure.
+##### Secondary distributive reduplication
 
-`gengen` stays outside because the verbal reduplication evidence is too thin for the first print-facing claim.
+`Peuhpeuh` remains secondary distributive evidence, with controlled segmentation `peuh~peuh` and gloss/function `EACH~EACH / every, each`.
 
-`kawikawi` stays outside because it is expressive, spatial-totality, or lexicalized-looking material.
+(@ex:red-peuhpeuh-gen18-14) Genesis 18:14
+a. Tedim: Na khat peuhpeuh Topa a dingin haksa lua ahi hiam?
+b. Segmentation: na | khat | peuh~peuh | Topa | a | ding-in | haksa | lua | ahi | hiam
+c. Gloss: thing | one | EACH~EACH | Lord | 3SG/FUNC | IRR-ERG | difficult | very | be.3SG.REL | Q
+d. Translation: 'Is anything too hard for the Lord?' (Genesis 18:14)
 
-`theithei` stays outside because it is report-only and overlaps adverbial, modal, or ability-related territory.
+Matthew 10:11 supplies a Gospel comparandum for secondary distributive use.
 
-`bangbang`, `bekbek`, `zenzen`, `tuamtuam`, or similar report-only analysis-table rows stay outside because they are not yet controlled enough for the first slice.
+(@ex:red-peuhpeuh-matt10-11) Matthew 10:11
+a. Tedim: khua khat peuhpeuh na tun uh ciangin
+b. Segmentation: khua | khat | peuh~peuh | na | tun | uh | ciangin
+c. Gloss: town | one | EACH~EACH | 2PL | arrive | PL | when
+d. Translation: 'whichever town you enter' (Matthew 10:11)
 
-analyzer-noisy, count-only, or theory-heavy whole-system claims stay outside because they do not yet produce a safe first print-facing pattern.
+This construction remains secondary because it stays close to quantifier or free-choice behavior. It is relevant to reduplication but not promoted as the main anchor.
 
-Any broad derivation chapter claim stays outside because this section is not yet ready to widen one narrow full-reduplication slice into a full derivational account.
+##### Boundary and deferred material
 
-Any dictionary-entry claim stays outside because this section is constructional rather than lexical.
+`Ni ni` 'day day / day by day' remains syntactic or adverbial boundary material. No equally clean Gospel example is currently used for this construction.
 
-### Safe first-slice claim
+`Leuleu` 'ITER~ITER / gradually' remains TAM/aspect or VP-boundary material; Acts 28:13 (`pai leuleu-in`) is retained as prose-only boundary evidence rather than as a core formal example.
 
-At the current slice maturity level, the safest reduplication claim is that Tedim has checked evidence for full reduplication used in intensification, with `mahmah` / `mah~mah` as the main anchor and `taktak` / `tak~tak` as the closest support row. Distributive `peuhpeuh` remains visible as secondary evidence, while syntactic, aspectual, verbal, lexicalized-looking, and report-only reduplication rows remain candidate-layer or boundary material.
+`Gengen` 'speak~speak / saying repeatedly', `kawikawi` 'side~side / all around', `theithei` 'KNOW~KNOW / adverbial-modal boundary', `bangbang` 'kind~kind / various', `bekbek` 'only~only', `zenzen` 'completely', and `tuamtuam` 'various kinds' remain boundary-controlled or deferred. These rows are lexicalized-looking or report-only in the current evidence and are not promoted as core grammar evidence here.
 
-That claim is deliberately smaller than a full derivation chapter, smaller than a full reduplication chapter, smaller than a TAM/aspect or VP-structure slice, and smaller than a dictionary slice.
-
-### Recommended next step
-
-This grammar slice is now paired with background notes, so the section is keeps the analysis deliberately narrow at its current full-reduplication-intensifier slice maturity level.
-
-If more reduplication work is chosen after that checkpoint, the next sub-scope should be distributive `peuhpeuh` or syntactic `ni ni`, not lexicalized-looking or aspect-heavy rows.
+Several issues remain outside the present account. This section does not present a full reduplication, derivation, TAM/aspect, VP-structure, expressive-morphology, or dictionary-entry system.
 
 ## Broader discourse
 

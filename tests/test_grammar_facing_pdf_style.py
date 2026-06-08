@@ -415,6 +415,12 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
             "Ahih hangin",
             "ahih kei leh",
         ),
+        "Reduplication": (
+            "mahmah",
+            "taktak",
+            "peuhpeuh",
+            "pha mahmah hi",
+        ),
         "Prefix / agreement": (
             "kanei",
             "ka-nei",

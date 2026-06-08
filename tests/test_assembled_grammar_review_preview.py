@@ -350,6 +350,55 @@ def test_assembled_preview_coordinators_examples_include_old_testament_and_gospe
     assert "(Matthew 24:35)" in tex or "(Mark 3:4)" in tex or "(Matthew 11:3)" in tex
 
 
+def test_assembled_preview_includes_normalized_reduplication_section() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    normalized_tex = _normalize(tex.lower())
+    normalized_pdf = _normalize(pdf.lower())
+
+    for required in (
+        "Overview of reduplication in Tedim",
+        "Reduplication inventory",
+        "Full reduplication as intensification",
+        "Secondary distributive reduplication",
+        "Boundary and deferred material",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+    for required in (
+        "overview of reduplication in tedim",
+        "reduplication inventory",
+        "full reduplication as intensification",
+        "secondary distributive reduplication",
+        "boundary and deferred material",
+        "several issues remain outside the present account.",
+    ):
+        assert required in normalized_tex
+        assert required in normalized_pdf
+
+    assert text.count("(@ex:red-") >= 6
+    assert tex.count("\\label{ex:red-") >= 6
+    assert "reduplication inventory" in normalized_pdf
+
+
+def test_assembled_preview_tex_keeps_reduplication_example_sources_after_translation() -> None:
+    assert "(Genesis 1:31)" in _tex_example_block("ex:red-mahmah-gen1-31")
+    assert "(Matthew 2:3)" in _tex_example_block("ex:red-mahmah-matt2-3")
+    assert "(Genesis 27:24)" in _tex_example_block("ex:red-taktak-gen27-24")
+    assert "(Matthew 27:54)" in _tex_example_block("ex:red-taktak-matt27-54")
+    assert "(Genesis 18:14)" in _tex_example_block("ex:red-peuhpeuh-gen18-14")
+    assert "(Matthew 10:11)" in _tex_example_block("ex:red-peuhpeuh-matt10-11")
+
+
+def test_assembled_preview_reduplication_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 1:31)" in tex or "(Genesis 27:24)" in tex or "(Genesis 18:14)" in tex
+    assert "(Matthew 2:3)" in tex or "(Matthew 27:54)" in tex or "(Matthew 10:11)" in tex
+
+
 def test_assembled_preview_tex_keeps_sentence_final_particles_example_sources_after_translation() -> None:
     assert "(Genesis 1:13)" in _tex_example_block("ex:sfp-ahi-hi-gen1-13")
     assert "(Matthew 1:1)" in _tex_example_block("ex:sfp-ahi-hi-matt1-1")

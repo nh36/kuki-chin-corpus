@@ -21,7 +21,7 @@ The current packet supports a modest but real publication-facing account of quan
 
 This is also where the current evidence meets broader descriptive literature most clearly: quantification in Tedim overlaps with noun-phrase structure, indefiniteness, and negation rather than forming a neatly isolated paradigm [@henderson1965; @zamngaihcing2017].
 
-The present section therefore keeps five safe publication-facing claims in view. First, `khempeuh` supports a modest universal or total-quantifier generalization. Second, `pawlkhat` supports existential or indefinite-like readings with an explicit grouping caveat. Third, `kuamah` and `bangmah` remain usable only in negative-licensed clauses. Fourth, noun phrases such as `mi khempeuh` 'all people', `mi pawlkhat` 'some people', and `mi tampi` 'many people' support only a modest noun-plus-quantifier discussion. Fifth, `peuhpeuh`, `tawm`, `zaw`, and `mahmah` remain visible as boundary material without broadening the section into a full free-choice, low-quantity, comparative, or intensifier chapter.
+The present section therefore keeps five safe publication-facing claims in view. First, `khempeuh` supports a modest universal or total-quantifier generalization. Second, `pawlkhat` supports existential or indefinite-like readings with an explicit grouping caveat. Third, `kuamah` and `bangmah` remain usable only in negative-licensed clauses. Fourth, noun phrases such as `mi khempeuh` 'all people', `mi pawlkhat` 'some people', and `mi tampi` 'many people' support only a modest noun-plus-quantifier discussion. Fifth, `peuhpeuh` 'each~each / every, each', `tawm` 'few', `zaw` 'more', and `mahmah` 'very, truly' remain visible as boundary material without broadening the section into a full free-choice, low-quantity, comparative, or intensifier chapter.
 
 # Quantifier inventory
 
@@ -128,7 +128,7 @@ Several quantifier-looking domains still need to stay visibly non-normalized.
 | numeral overlap with `khat` | print-usable with caveat | `mi khat` is shared boundary evidence and should not be detached from the numerals discussion |
 | negative quantifier overlap | print-usable with caveat | `kuamah` and `bangmah` are safe only with explicit negation |
 | pronoun / determiner overlap | deferred beyond modest NP discussion | current examples support only local noun-phrase claims, not a full determiner system |
-| discourse / scope readings with `peuhpeuh` | deferred | current rows lean toward free-choice or broad-indefinite readings rather than settled universal quantification |
+| discourse-range readings with `peuhpeuh` | deferred | current rows lean toward free-choice or broad-indefinite readings rather than settled universal quantification |
 | low-quantity `tawm` | deferred | current export gloss remains too noisy for print promotion |
 | `tampi tak` versus broader degree work | print-usable with caveat | useful quantity evidence, but not the start of a broad adjective/adverb chapter |
 | `zaw` and `mahmah` | edge rows only | keep comparison and intensification visible without widening the section into a full comparison or intensifier chapter |
