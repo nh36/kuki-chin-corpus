@@ -293,6 +293,63 @@ def test_assembled_preview_negation_examples_include_old_testament_and_gospel_so
     assert "(Matthew 2:10)" in tex or "(Mark 1:25)" in tex or "(John 14:30)" in tex
 
 
+def test_assembled_preview_includes_normalized_coordinators_section() -> None:
+    text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    normalized_tex = _normalize(tex.lower())
+    normalized_pdf = _normalize(pdf.lower())
+
+    for required in (
+        "Overview of coordinators in Tedim",
+        "Coordinator inventory",
+        "NP coordination with `le`",
+        "Conditional and boundary `leh`",
+        "Sequential `a` and agreement false friends",
+        "Deferred `mawh` material",
+        "Adversative `Ahih hangin`",
+        "Conditional-adversative `ahih kei leh`",
+        "Several issues remain outside the present account.",
+    ):
+        assert required in text
+
+    for required in (
+        "overview of coordinators in tedim",
+        "coordinator inventory",
+        "np coordination with",
+        "conditional and boundary",
+        "sequential",
+        "deferred",
+        "adversative",
+        "conditional-adversative",
+        "several issues remain outside the present account.",
+    ):
+        assert required in normalized_tex
+        assert required in normalized_pdf
+
+    assert text.count("(@ex:coord-") >= 7
+    assert tex.count("\\label{ex:coord-") >= 7
+    assert "coordinator inventory" in normalized_pdf
+
+
+def test_assembled_preview_tex_keeps_coordinators_example_sources_after_translation() -> None:
+    assert "(Genesis 1:1)" in _tex_example_block("ex:coord-le-np")
+    assert "(Matthew 24:35)" in _tex_example_block("ex:coord-le-np-matt24-35")
+    assert "(Genesis 13:9)" in _tex_example_block("ex:coord-leh-boundary")
+    assert "(Genesis 2:10)" in _tex_example_block("ex:coord-a-sequential-boundary")
+    assert "(Genesis 3:4)" in _tex_example_block("ex:coord-ahih-hangin")
+    assert "(Mark 3:4)" in _tex_example_block("ex:coord-ahih-hangin-mark3-4")
+    assert "(Exodus 12:3)" in _tex_example_block("ex:coord-ahih-kei-leh")
+    assert "(Matthew 11:3)" in _tex_example_block("ex:coord-ahih-kei-leh-matt11-3")
+
+
+def test_assembled_preview_coordinators_examples_include_old_testament_and_gospel_sources() -> None:
+    tex = _tex_text()
+
+    assert "(Genesis 1:1)" in tex or "(Exodus 12:3)" in tex
+    assert "(Matthew 24:35)" in tex or "(Mark 3:4)" in tex or "(Matthew 11:3)" in tex
+
+
 def test_assembled_preview_tex_keeps_sentence_final_particles_example_sources_after_translation() -> None:
     assert "(Genesis 1:13)" in _tex_example_block("ex:sfp-ahi-hi-gen1-13")
     assert "(Matthew 1:1)" in _tex_example_block("ex:sfp-ahi-hi-matt1-1")

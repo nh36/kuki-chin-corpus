@@ -20,6 +20,7 @@ PYTEST_FILES = [
     "tests/test_interrogatives_normalized_print_slice.py",
     "tests/test_sentence_final_particles_normalized_print_slice.py",
     "tests/test_negation_normalized_print_slice.py",
+    "tests/test_coordinators_normalized_print_slice.py",
     "tests/test_transitivity_normalized_print_slice.py",
     "tests/test_derivation_valency_normalized_print_slice.py",
     "tests/test_vp_structure_stacking_normalized_print_slice.py",

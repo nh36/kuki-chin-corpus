@@ -406,6 +406,15 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
             "gingsak un",
             "Gam khempeuh aw",
         ),
+        "Coordinators": (
+            "le",
+            "vantung le leitung",
+            "leh",
+            "a piangsak",
+            "mawh",
+            "Ahih hangin",
+            "ahih kei leh",
+        ),
         "Prefix / agreement": (
             "kanei",
             "ka-nei",

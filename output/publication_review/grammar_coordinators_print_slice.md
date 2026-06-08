@@ -7,116 +7,119 @@ suppress-bibliography: true
 reference-section-title: "References"
 ---
 
-# Scope
+# Overview of coordinators in Tedim
 
-This is a short print-facing draft section on coordinators in Tedim Chin, controlled by `candidates_coordinators.tsv` and `dossier_coordinators.md`.
+This section keeps coordination narrowly constructional. `le` 'and (NP coordinator)' is the clean noun-phrase anchor, while `leh` 'if / when' and sequential `a` 'sequential linker with 3SG/FUNC overlap' stay boundary-controlled. `mawh` 'deferred disjunction candidate' remains deferred. `Ahih hangin` 'but / however' and `ahih kei leh` 'otherwise / if not' are treated as caveated connector material [@henderson1965; @zamngaihcing2017]. This section does not present a full coordination, subordination, converb, or discourse system.
 
-It covers only a small candidate-backed set: NP coordination with `le`, anchored by Genesis 1:1 `vantung le leitung`; conditional or boundary `leh`, not clean clause-conjunction `leh`; sequential `a` only as caveated boundary material, paired with a blocked agreement-`a` false friend; `mawh` only as deferred lexical or analyzer-noise material; `Ahih hangin` as a caveated adversative connector; and `ahih kei leh` as conditional-adversative boundary material.
+# Coordinator inventory
 
-It does not yet attempt a full coordination system, a full clause-linking or converb system, a full temporal or causal subordinator treatment, a full sentence-final particle treatment, or generated-report frequency tables. Dictionary and review-note slices have not yet begun.
-
-# Coordinators in outline
-
-The current candidate-backed packet supports a narrow generalization. `Le` currently provides the safe NP-conjunction anchor. `Leh` is visible, but only as conditional or boundary evidence rather than as print-ready simple clause conjunction. `A` is visible only as caveated sequential-linkage boundary evidence and must not be harvested raw. `Mawh` remains deferred until a clean disjunction or alternative-question example is located. `Ahih hangin` is the current adversative connector anchor, with an internal-analysis caveat. `Ahih kei leh` is conditional-adversative boundary material, not a simple coordinator.
+| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `le` | NP coordination | `vantung le leitung`; `Van le lei` | core | limited to clean NP coordination claims |
+| `leh` | conditional / boundary linker | `veilam na lak leh kei taklamah ka pai ding hi` | boundary | do not flatten conditional `leh` into simple clause conjunction |
+| `a` | sequential linker candidate | `luang a tua mun panin gun hong kikhenin` | boundary | export overlap with agreement/function `a` |
+| `mawh` | disjunction / alternative-question candidate | `mawh` | deferred | current controlled row is lexical/analyzer-noise material |
+| `Ahih hangin` | adversative connector | `Ahih hangin`; `Ahih hangin kuamah in dawng lo hi` | supported with caveat | internally analyzable as `ahih` + `hang-in` |
+| `ahih kei leh` | conditional-adversative connector | `ahih kei leh`; `tua ahih kei leh` | supported with caveat | not a simple coordinator; overlaps conditional and negation material |
 
 # NP coordination with `le`
 
-Genesis 1:1 supplies the clean print-ready anchor:
+The clearest NP coordination anchor is `vantung le leitung` 'heaven and earth', where `le` links two noun phrases without clause-linkage ambiguity.
 
-(@ex:coord-le-np)
+Genesis 1:1 supplies the OT anchor.
+
+(@ex:coord-le-np) Genesis 1:1
 a. Tedim: vantung le leitung
 b. Segmentation: van-tung | le | lei-tung
 c. Gloss: sky-on | and | land-on
-d. Translation: 'heaven and earth'
+d. Translation: 'heaven and earth' (Genesis 1:1)
 
-This is the current safe NP-conjunction anchor. It supports a modest print claim that `le` joins noun phrases.
+Matthew 24:35 gives a Gospel comparandum with the same NP-coordination profile.
 
-That claim must remain narrow. The row does **not** license broad raw `le` harvesting, and the current packet does not treat every `le` token as coordinator evidence. A separate blocked `le` row was not created in the first pass; overgeneration is controlled here by curated selection rather than by a broad token sweep.
+(@ex:coord-le-np-matt24-35) Matthew 24:35
+a. Tedim: Van le lei
+b. Segmentation: Van | le | lei
+c. Gloss: heaven | and | earth
+d. Translation: 'heaven and earth' (Matthew 24:35)
 
-# `Leh` as conditional or boundary material
+# Conditional and boundary `leh`
 
-Genesis 13:9 keeps `leh` visible only as warning or boundary evidence:
+`Leh` 'if / when' is kept as boundary material here rather than as a generalized simple clause coordinator.
 
-(@ex:coord-leh-boundary)
+Genesis 13:9 keeps a controlled conditional window visible.
+
+(@ex:coord-leh-boundary) Genesis 13:9
 a. Tedim: veilam na lak leh kei taklamah ka pai ding hi
 b. Segmentation: vei-lam | na | lak | leh | kei | taklam-ah | ka | pai | ding | hi
 c. Gloss: faint-direction | 2SG | among | and/if | NEG [export caveat] | right-LOC | 1SG | go | IRR | DECL
-d. Translation: 'if thou wilt take the left hand, then I will go to the right'
+d. Translation: 'if thou wilt take the left hand, then I will go to the right' (Genesis 13:9)
 
-This row keeps `leh` visible, but not as a clean simple clause-conjunction anchor. The wider English context is conditional, so future coordinator prose must not flatten conditional `leh` into a simple printed "`and`" analysis.
+No equally clean Gospel example is currently used for this construction.
 
-The row also carries an analyzer or export caveat: `kei` is glossed as `NEG` in the selected window even though the wider English context is "I will go." That should be recorded as an export caveat, not used to reopen the pronouns or negation packets.
+The same row keeps an export caution visible: `kei` is glossed as `NEG` in this selected span even though the wider context is first-person future movement.
 
-# Sequential `a` and agreement-`a` false friends
+# Sequential `a` and agreement false friends
 
-Genesis 2:10 keeps one possible sequential-linkage window visible:
+Sequential `a` 'sequential linker with 3SG/FUNC overlap' remains caveated boundary evidence only.
 
-(@ex:coord-a-sequential-boundary)
+Genesis 2:10 keeps one sequential window visible.
+
+(@ex:coord-a-sequential-boundary) Genesis 2:10
 a. Tedim: luang a tua mun panin gun hong kikhenin
 b. Segmentation: luang | a | tua | mun | pan-in | gun | hong | kikhen-in
 c. Gloss: flow | 3SG | that | place | ABL-ERG | river | 3→1 | separate-CVB
-d. Translation: 'and from thence it was parted'
+d. Translation: 'and from thence it was parted' (Genesis 2:10)
 
-This row keeps possible sequential linkage visible, but it is not print-ready as a core coordinator example. The analyzer still exports the relevant `a` as `3SG` / `FUNC`, so the present slice treats it as warning or boundary evidence only.
+No equally clean Gospel example is currently used for this construction.
 
-Blocked control:
+The false-friend control `a piangsak` '3SG/FUNC + create' shows why raw `a` harvesting is unsafe in coordinator analysis.
 
-> `a piangsak`
+# Deferred `mawh` material
 
-Genesis 1:1 `a piangsak` is blocked agreement or function material, not coordinator evidence. This false-friend control prevents raw `a` harvesting from flooding the coordinator packet.
+`mawh` 'disjunction candidate (currently deferred)' remains deferred in this section because the controlled row still exports lexical material (`sin / V`) rather than a clean disjunction or alternative-question construction.
 
-# `Mawh` deferred
-
-The present slice does not print a positive `mawh` example.
-
-Deferred control:
-
-> `mawh`
-
-The generated report mentions `mawh` as disjunction or alternative-question material, but the current candidate layer only has Genesis 6:3, where `mawh` is lexical or analyzer-noise material glossed as `sin` / `V` rather than as disjunction. `Mawh` therefore remains not print-ready in this slice.
-
-Report-only schematic examples such as `mi mawh ganhing mawh` or `pai ding mawh om ding mawh` should not be printed unless a later analyzer-backed row is actually located.
+Report-only schematic strings such as `mi mawh ganhing mawh` and `pai ding mawh om ding mawh` are not promoted as grammar evidence here.
 
 # Adversative `Ahih hangin`
 
-Genesis 3:4 supplies the current adversative connector anchor:
+`Ahih hangin` 'but / however' is the current adversative connector anchor, while still carrying an internal-analysis caution.
 
-(@ex:coord-ahih-hangin)
+Genesis 3:4 supplies the OT anchor.
+
+(@ex:coord-ahih-hangin) Genesis 3:4
 a. Tedim: Ahih hangin
 b. Segmentation: Ahih | hang-in
 c. Gloss: be.3SG.REL | because-ERG
-d. Translation: 'but'
+d. Translation: 'but' (Genesis 3:4)
 
-This row is usable with caveat as the current adversative connector. It remains internally analyzable as `ahih` + `hang-in`, so the present slice should not open a full causal or subordinator analysis from this row.
+Mark 3:4 gives a Gospel comparandum with the same connector.
+
+(@ex:coord-ahih-hangin-mark3-4) Mark 3:4
+a. Tedim: Ahih hangin kuamah in dawng lo hi.
+b. Segmentation: Ahih | hang-in | kuamah | in | dawng | lo | hi
+c. Gloss: be.3SG.REL | because-ERG | nobody | ERG | answer | NEG | DECL
+d. Translation: 'but no one answered.' (Mark 3:4)
 
 # Conditional-adversative `ahih kei leh`
 
-Exodus 12:3 keeps one compact boundary row visible:
+`ahih kei leh` 'otherwise / if not' remains conditional-adversative boundary material and should not be flattened into simple coordination.
 
-(@ex:coord-ahih-kei-leh)
+Exodus 12:3 gives the OT boundary anchor.
+
+(@ex:coord-ahih-kei-leh) Exodus 12:3
 a. Tedim: ahih kei leh
 b. Segmentation: ahih | kei | leh
 c. Gloss: be.3SG.REL | NEG | and/if
-d. Translation: 'otherwise' / 'if not'
+d. Translation: 'otherwise / if not' (Exodus 12:3)
 
-This row is useful as conditional-adversative boundary material, but it is not a simple coordinator. It overlaps with negation and conditional `leh`, yet the slice should not reopen the stabilized negation packet.
+Matthew 11:3 gives a Gospel comparandum in the same conditional-adversative frame.
+
+(@ex:coord-ahih-kei-leh-matt11-3) Matthew 11:3
+a. Tedim: tua ahih kei leh
+b. Segmentation: tua | ahih | kei | leh
+c. Gloss: that | be.3SG.REL | NEG | and/if
+d. Translation: 'or else / if not' (Matthew 11:3)
 
 # Deferred material
 
-Several limits remain important at this stage:
-
-- clean simple clause-conjunction `leh` remains deferred;
-- clean `mawh` disjunction or alternative-question evidence remains deferred;
-- full sequential-`a` analysis remains deferred;
-- `ciangin` and broader `hangin` temporal or causal subordinator material remain deferred;
-- full clause-chaining or converb coordination remains deferred;
-- sentence-final particles remain outside the scope of this slice;
-- generated-report raw counts remain excluded.
-
-Broad TAM, directionals, chrestomathy, Mizo/lus, and other Kuki-Chin language work likewise remain deferred.
-
-# Editorial summary
-
-This slice now safely supports four modest claims: `le` is the current NP conjunction anchor, anchored by `vantung le leitung`; `Ahih hangin` is usable as an adversative connector with caveat; `ahih kei leh` is useful as conditional-adversative boundary evidence with caveat; and `leh`, `a`, plus `mawh` remain visible only as warning, deferred, or boundary material.
-
-What remains deferred is equally important: raw frequency counts, treating every `le`, `leh`, or `a` token as coordinator evidence, simple clause-conjunction `leh`, `mawh` as accepted disjunction, a full sequential-`a` analysis, a fuller temporal or causal subordinator treatment, and sentence-final particles. The next step after this grammar slice is the dictionary print slice, while dictionary and review-note work have not yet begun.
+Several issues remain outside the present account. This section does not reopen `ciangin` 'when', broader `hangin` 'because', temporal or causal subordination, or full converb chaining. Sentence-final particles and broader discourse-organization domains likewise remain outside this account.

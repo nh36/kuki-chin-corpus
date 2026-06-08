@@ -255,6 +255,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Negation",
     "Interrogatives",
     "Sentence-final particles",
+    "Coordinators",
     "Stem alternation",
     "Prefix / agreement",
     "Pronouns / clusivity",
@@ -278,6 +279,7 @@ NORMALIZATION_SUPPLEMENT_PATHS = (
     PUBLICATION_REVIEW_DIR / "examples_negation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_interrogatives_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_sentence_final_particles_normalization.tsv",
+    PUBLICATION_REVIEW_DIR / "examples_coordinators_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_stem_alternation_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_prefix_agreement_normalization.tsv",
     PUBLICATION_REVIEW_DIR / "examples_pronouns_normalization.tsv",
@@ -328,6 +330,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "'imperative / second-person singular imperative boundary', and `un` 'plural imperative', while "
         "`hiam` 'question particle', `aw` 'vocative / exclamative boundary', `tahen` 'deferred jussive-looking form', "
         "`ta` 'perfective / change-of-state boundary', and `zo` 'completive boundary' remain overlap or deferred material."
+    ),
+    "Coordinators": (
+        "The current coordinators evidence is strongest for NP coordination with `le` 'and (NP coordinator)', "
+        "while `leh` 'if / when', sequential `a` 'sequential linker with 3SG/FUNC overlap', and `mawh` "
+        "'deferred disjunction candidate' remain boundary or deferred material, and `Ahih hangin` 'but / however' "
+        "plus `ahih kei leh` 'otherwise / if not' remain caveated connector patterns."
     ),
     "Stem alternation": (
         "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "
