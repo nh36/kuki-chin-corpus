@@ -4,30 +4,21 @@ title: "Tedim Clause Linkage Grammar Print Slice"
 
 # Overview of clause linkage in this section
 
-This section treats controlled temporal subordination with `ciangin` 'when' as the core clause-linkage anchor. It keeps purposive material with `dingin` 'in order to', same-subject converb construction with `ngenin` 'pray-CVB', different-subject construction with `ahih ciangin` 'when', and relative-clause material including `a bawl mi` 'person who' and `omna` 'place / being' as boundaries, so the discussion remains grammar-facing without turning into a full complex-sentence, switch-reference, or relative-clause chapter.
+This section treats controlled temporal subordination with `ciangin` 'when' as the core clause-linkage anchor. Purposive marking with `dingin` 'in order to', same-subject converb construction with `ngenin` 'pray-CVB', different-subject temporal linkage with `ahih ciangin` 'when', prenominal relative clauses with `a bawl mi` 'person who', and nominalization-plus-case forms with `muhna-ah` 'in seeing / in the sight' remain explicit boundaries. The section stays narrow without attempting a full complex-sentence, switch-reference, relative-clause, or nominalized-clause chapter.
 
-# Current clause linkage inventory
+# Core temporal subordination: ciangin
 
-| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
-| --- | --- | --- | --- | --- |
-| `ciangin` | temporal subordination | `tua ciangin` | well supported | broader clause linkage and complex-sentence inventory remains open |
-| `tua ciangin` | segmented temporal subordination | clause-final temporal marker | supported with caveat | segmentation shows `-in` but full -in paradigm is separate |
-| `ciang-in` | segmented temporal form | morpheme analysis | supported with caveat | `-in` suffix has broader clause-linking uses |
-| `dingin` | purposive or clause-bound irrealis | clause-bound conditional-like use | boundary material | overlaps with TAM and irrealis material |
-| `VERB-in` (e.g., `ngenin`) | same-subject converb linkage | `ngenin` 'pray-CVB' for subject chaining | boundary material | overlaps between converb, subordination, and switch-reference analysis |
-| `ahih ciangin` | different-subject temporal linkage | `tua ahih ciang-in` patterns | boundary material | overlaps with relative marker and temporal subordination |
-| `a bawl mi` | prenominal relative clause with human head | 'person who makes / works' | boundary material | overlaps with prefix/agreement and relative-clause structure |
-| `omna` | nominalized relative or clause-like form | nominalized existence or location | boundary material | overlaps with nominalization and NP structure |
-| `muhna-ah` | nominalization plus locative case | 'sight' or sight-expressions | boundary material | overlaps with nominalization, case marking, and clause linkage |
-| `leh` | sentence-final particle or conditional subordinator | 'if / when' uses | boundary material | overlaps with sentence-final particles and coordinators |
-| `hangin` | causal subordination | 'because' | deferred | broader causal system remains unsettled |
-| `bangin` | comparative subordination | 'like / as' | deferred | broader comparative and correlative system remains unsettled |
-
-# Temporal subordination with ciangin
-
-The suffix `ciangin` 'when' forms temporal subordinate clauses and remains the safest productive anchor in the current evidence. The form `tua ciangin` 'then / when' with segmentation `tua ciang-in` 'that when-ERG' is the clearest compact anchor for temporal subordination, and it appears consistently across multiple foundational Bible texts.
+The suffix `ciangin` 'when' is the safest productive anchor for clause linkage and forms temporal subordinate clauses. The form `tua ciangin` 'then / when' with segmentation `tua ciang-in` 'that when-ERG' is the clearest compact anchor for temporal subordination, and it appears consistently across Bible texts.
 
 The same morphology appears in patterns such as `ahih ciangin` 'when it was' where a relative marker `ahih` precedes the subordinator, showing how temporal linkage interacts with relative-clause structure. Together they support a grammar-facing claim for controlled temporal subordination without forcing a full inventory of all subordination outcomes.
+
+| Form or pattern | Rough function | Example context | Current status | Boundary issue |
+| --- | --- | --- | --- | --- |
+| `ciangin` | temporal subordination | clause-final temporal marker | supported core | broader clause-linkage inventory remains open |
+| `tua ciangin` | controlled temporal subordination | compact clause-linking anchor | supported core | same `-in` suffix appears in other contexts |
+| `ciang-in` | segmented form | morpheme analysis | supported core | `-in` suffix has broader uses |
+
+The following example illustrates temporal subordination with the clearest Old Testament anchor:
 
 (@ex:clause-ciangin-gen1p3) Genesis 1:3
 a. Tedim: Pasian in, "Khuavak om hen," ci hi; tua ciangin khuavak om pah hi.
@@ -35,15 +26,7 @@ b. Segmentation: Pasian | in | Khuavak | om | hen | ci | hi | tua | ciang-in | k
 c. Gloss: PASIAN | ERG | light | exist | JUSS | say | DECL | that | when-ERG | light | exist | do.so | DECL
 d. Translation: And God said, "Let there be light:" and there was light. (Genesis 1:3)
 
-A second parallel example shows the same construction in a different context:
-
-(@ex:clause-ciangin-gen1p26) Genesis 1:26
-a. Tedim: Tua ciangin Pasian in, "Eima lim, eimah hong sunin mihing bawl ni.
-b. Segmentation: Tua | ciang-in | Pasian | in | Eima | lim | ei-mah | hong | sun-in | mi-hing | bawl | ni
-c. Gloss: that | when-ERG | PASIAN | ERG | our.god | sign | 1PL.EXCL-EMPH | 3→1 | night-ERG | person-kind | make | NEG
-d. Translation: And God said, "Let us make man in our image..." (Genesis 1:26)
-
-No equally clean Gospel example of temporal subordination with `ciangin` is currently used because Gospel evidence remains limited in the controlled sample.
+No equally clean Gospel example is currently used for this construction.
 
 # Purposive or clause-bound irrealis boundary: dingin
 
@@ -57,11 +40,11 @@ b. Segmentation: Pasian | in | Sun | le | zan | a | khen | ding-in | vantung-ah 
 c. Gloss: PASIAN | ERG | SUN | and | break.apart | 3SG | divide | IRR-ERG | heaven-LOC | light-PL | exist | JUSS
 d. Translation: And God said, "Let there be lights in the firmament of the heaven to divide the day from the night..." (Genesis 1:14)
 
-No equally clean Gospel example of purposive marking with `dingin` is currently used for this construction.
+No equally clean Gospel example is currently used for this construction.
 
 # Same-subject converb linkage boundary: VERB-in and ngenin
 
-Same-subject clause chaining is marked by the converb suffix `-in` 'converbial / linking' on the first verb. The pattern is notated as `VERB-in` 'converb' (e.g., `ngenin` 'pray-CVB'), indicating that the subject of the linked clause is identical to the subject of the following main clause. The form `ngenin` 'pray-CVB' is the clearest anchor example, but the converb pattern extends to other verbs such as `panin` 'plead-CVB'.
+Same-subject clause chaining is marked by the converb suffix `-in` 'converbial / linking' on the first verb. The pattern is notated as `VERB-in` 'converb' (e.g., `ngenin` 'pray-CVB'), indicating that the subject of the linked clause is identical to the subject of the following main clause. The form `ngenin` 'pray-CVB' is the clearest anchor example.
 
 This material remains boundary-only in the present account because the exact status of `-in` as converb, subordinator, or broader linker still needs clearer theoretical control. Treating same-subject chaining as a settled part of clause linkage would require closing the converb-versus-subordination question first.
 
@@ -99,13 +82,7 @@ b. Segmentation: paknamtui | a | bawl | mi | peuhmah
 c. Gloss: perfume | 3SG.REL | make | person | every
 d. Translation: whoever makes any like it (Exodus 30:38)
 
-A Gospel parallel shows the same structure with a nominalized ability marker:
-
-(@ex:clause-abawlmi-matthew7p5) Matthew 7:5
-a. Tedim: na lakkhiat theihna dingun
-b. Segmentation: na | lak-khiat | theih-na | ding-un
-c. Gloss: 2SG.POSS | remove-out | be.able-NMLZ | purpose-2/3PL
-d. Translation: so that you may be able to remove it (Matthew 7:5)
+No equally clean Gospel example is currently used for this construction.
 
 # Nominalized relative and clause-like form boundary: omna
 
@@ -125,7 +102,13 @@ b. Segmentation: Tu-in | Pasian' | muh-na-ah | leitung | sia | a
 c. Gloss: now-ERG | God.GEN | see-NMLZ-LOC | earth | corrupt | DECL
 d. Translation: Now the earth was corrupt in the sight of God. (Genesis 6:11)
 
-No equally clean Gospel example of nominalization-plus-case boundary with `muhna-ah` is currently used for this construction.
+A Gospel parallel shows the same nominalization-plus-case boundary in a different context:
+
+(@ex:clause-muhnaah-luke19p27) Luke 19:27
+a. Tedim: keima muhna-ah that un.
+b. Segmentation: keima | muh-na-ah | that | un
+c. Gloss: 1SG | see-NMLZ-LOC | kill | IMP.2PL
+d. Translation: kill them before me. (Luke 19:27)
 
 # Deferred and boundary material
 
@@ -139,6 +122,9 @@ Several issues remain outside the present account.
 - `muhna-ah` remains a boundary form shared with case marking and nominalization.
 - `leh` 'if / when / conditional' remains outside because sentence-final-particle, coordinator, and subordinator analyses still overlap.
 - `hangin` 'because / causal' and `bangin` 'like / as / comparative' remain broader report-inventory rows rather than the first safe clause-linkage anchors.
+- full switch-reference system claims remain deferred.
+- full relative-clause system claims remain deferred.
+- broader discourse-level linkage remains outside this controlled sentence-level slice.
 - Raw occurrence counts are not treated as grammar facts without constructional control.
 
 # Summary

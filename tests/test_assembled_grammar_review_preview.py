@@ -453,7 +453,7 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
         "Overview of transitivity contrasts",
         "Current transitivity inventory",
         "Full reduplication as intensification",
-        "Temporal subordination with ciangin",
+        "Core temporal subordination: ciangin",
         "Deverbal nominalization with `-na`",
         "Overview of noun phrase structure",
         "Simple noun stems",
@@ -866,8 +866,7 @@ def test_assembled_preview_includes_normalized_clause_linkage_section() -> None:
     for required in (
         "Clause linkage",
         "Overview of clause linkage in this section",
-        "Current clause linkage inventory",
-        "Temporal subordination with ciangin",
+        "Core temporal subordination: ciangin",
         "Purposive or clause-bound irrealis boundary: dingin",
         "Same-subject converb linkage boundary: VERB-in and ngenin",
         "Different-subject temporal linkage boundary: ahih ciangin",
@@ -1353,8 +1352,7 @@ def test_assembled_preview_tex_includes_normalized_clause_linkage_inventory_and_
     assert tex.count("\\label{ex:clause-") >= 4
 
     for required in (
-       "Current clause linkage inventory",
-       "Temporal subordination with ciangin",
+       "Core temporal subordination: ciangin",
        "Purposive or clause-bound irrealis boundary: dingin",
        "Same-subject converb linkage boundary",
        "Different-subject temporal linkage boundary",
@@ -1367,8 +1365,7 @@ def test_assembled_preview_tex_includes_normalized_clause_linkage_inventory_and_
        assert required.lower() in text.lower()
 
     for required in (
-       "current clause linkage inventory",
-       "temporal subordination with ciangin",
+       "core temporal subordination: ciangin",
        "purposive or clause-bound irrealis",
        "tua ciangin",
        "ngenin",
@@ -1377,7 +1374,7 @@ def test_assembled_preview_tex_includes_normalized_clause_linkage_inventory_and_
        assert required.lower() in tex_normalized
 
     for required in (
-       "current clause linkage inventory",
+       "core temporal subordination",
        "temporal subordination",
        "ciangin",
        "tua ciangin",
@@ -1566,11 +1563,11 @@ def test_assembled_preview_tex_keeps_nominalization_example_sources_after_transl
 
 def test_assembled_preview_tex_keeps_clause_linkage_example_sources_after_translation() -> None:
     assert "(Genesis 1:3)" in _tex_example_block("ex:clause-ciangin-gen1p3")
-    assert "(Genesis 1:26)" in _tex_example_block("ex:clause-ciangin-gen1p26")
     assert "(Genesis 1:14)" in _tex_example_block("ex:clause-dingin-gen1p14")
     assert "(Genesis 41:55)" in _tex_example_block("ex:clause-ngenin-gen41p55")
     assert "(Genesis 1:21)" in _tex_example_block("ex:clause-ahih-ciangin-gen1p21")
     assert "(Genesis 6:11)" in _tex_example_block("ex:clause-muhnaah-gen6p11")
+    assert "(Luke 19:27)" in _tex_example_block("ex:clause-muhnaah-luke19p27")
 
 
 def test_assembled_preview_tex_keeps_stem_example_sources_after_translation() -> None:

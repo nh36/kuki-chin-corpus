@@ -295,10 +295,11 @@ grep "^$verse	" data/verses_aligned.tsv | cut -f3
 2. [ ] Keep broad TAM / aspect / modal stable at the current candidate/scoping/grammar/dictionary/review-note packet and limit any later TAM edits to reviewer-identified corrections or an explicitly chosen new narrow scope.
 3. [ ] Keep relators / postpositions stable at the current candidate/scoping/grammar/dictionary/review-note packet and limit later edits to reviewer-identified corrections or an explicitly chosen new narrow scope.
 4. [ ] Keep VP structure / suffix stacking limited to the current candidate/scoping/grammar packet until a later commit explicitly drafts either a very narrow dictionary slice or a different selected packet.
-5. [ ] Keep chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope.
+5. [ ] Keep clause linkage enhanced with repaired construction-to-example alignment and tightened normalization supplement, now ready for human review at the current temporal-subordination slice maturity level.
+6. [ ] Keep chrestomathy, Mizo/lus, and the other Kuki-Chin languages deferred until they are explicitly chosen as a new scope.
 
 ---
 
-*Last updated: 2026-06-01*  
+*Last updated: 2026-06-09*  
 *Tedim Chin coverage: 100% (850,906 tokens)*  
 *Mizo (lus) initial coverage: 82.24% (bootstrap pipeline)*

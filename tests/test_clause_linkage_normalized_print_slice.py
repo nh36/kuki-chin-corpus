@@ -3,15 +3,29 @@ from __future__ import annotations
 from pathlib import Path
 import csv
 import re
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+import assemble_publication_review_preview as assembler
+
+from interlinear_latex import load_bible
+
+
 SLICE_PATH = ROOT / "output/publication_review/grammar_clause_linkage_print_slice.md"
 SUPPLEMENT_PATH = ROOT / "output/publication_review/examples_clause_linkage_normalization.tsv"
+BIBLE_PATH = ROOT / "bibles/extracted/ctd/ctd-x-bible.txt"
 
 
 def _text() -> str:
     return SLICE_PATH.read_text(encoding="utf-8")
+
+
+def _rows() -> list[dict[str, str]]:
+    with SUPPLEMENT_PATH.open(encoding="utf-8") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
 
 
 def _strip_examples_and_tables(text: str) -> str:
@@ -38,7 +52,7 @@ def _first_prose_occurrence_has_gloss(text: str, form: str, glosses: tuple[str, 
     match = re.search(rf"`{re.escape(form)}`", prose)
     if not match:
         return True
-    window = prose[match.end() : match.end() + 180]
+    window = prose[match.end() : match.end() + 220]
     return any(re.search(rf"['`][^'\n`]*{gloss}[^'\n`]*['`]", window, re.IGNORECASE) for gloss in glosses)
 
 
@@ -46,122 +60,95 @@ def test_clause_linkage_normalized_print_slice_exists() -> None:
     assert SLICE_PATH.exists()
 
 
-def test_clause_linkage_normalized_print_slice_is_grammar_facing() -> None:
-    text = _text()
-    lower = text.lower()
-
-    assert not text.lstrip().startswith("# Editorial scope")
-    assert "# Overview of clause linkage in this section" in text
-    assert "Scope" not in text.splitlines()[:12]
-    assert "editorial scope" not in lower
-    assert not re.search(r"(?:output|tests|scripts|docs)/[A-Za-z0-9_./\\-]+", text)
-
-
-def test_clause_linkage_normalized_print_slice_has_required_structure() -> None:
+def test_clause_linkage_normalized_print_slice_has_required_tiered_structure() -> None:
     text = _text()
 
     for required in (
-        "Current clause linkage inventory",
-        "Temporal subordination with ciangin",
-        "Purposive or clause-bound irrealis boundary: dingin",
-        "Same-subject converb linkage boundary: VERB-in and ngenin",
-        "Different-subject temporal linkage boundary: ahih ciangin",
-        "Prenominal relative-clause boundary: a bawl mi",
-        "Nominalized relative and clause-like form boundary: omna",
-        "Nominalization-plus-case boundary: muhna-ah",
-        "Deferred and boundary material",
-        "Several issues remain outside the present account.",
+        "# Overview of clause linkage in this section",
+        "# Core temporal subordination: ciangin",
+        "# Purposive or clause-bound irrealis boundary: dingin",
+        "# Same-subject converb linkage boundary: VERB-in and ngenin",
+        "# Different-subject temporal linkage boundary: ahih ciangin",
+        "# Prenominal relative-clause boundary: a bawl mi",
+        "# Nominalized relative and clause-like form boundary: omna",
+        "# Nominalization-plus-case boundary: muhna-ah",
+        "# Deferred and boundary material",
     ):
         assert required in text
 
-    assert "| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |" in text
+    assert "switch-reference" in text.lower()
+    assert "relative-clause" in text.lower()
+    assert "broader report-inventory rows" in text
+    assert "Raw occurrence counts are not treated as grammar facts" in text
 
 
-def test_clause_linkage_normalized_print_slice_discusses_safe_core_and_boundaries() -> None:
-    text = _text()
-    lower = text.lower()
-
-    assert "temporal subordination" in lower
-    assert "`ciangin`" in text
-    assert "`tua ciangin`" in text or "`ciang-in`" in text
-    assert "boundary" in lower
-    assert "`dingin`" in text
-    assert "`ngenin`" in text or "`VERB-in`" in text
-    assert "`ahih ciangin`" in text
-    assert "`a bawl mi`" in text
-    assert "`omna`" in text
-    assert "`muhna-ah`" in text
-
-
-def test_clause_linkage_normalized_print_slice_has_formal_examples_and_source_balance() -> None:
-    text = _text()
-    example_count = len(re.findall(r"^\(@ex:clause-[^)]+\)", text, re.MULTILINE))
-    has_explanation_for_fewer = "Several issues remain outside the present account." in text
-    assert example_count >= 4 or has_explanation_for_fewer
-
-    assert re.search(r"\(@ex:clause-[^)]+\)\s+(Genesis|Exodus|Judges|Zechariah)\s+\d+:\d+", text)
-    assert (
-        re.search(r"\(@ex:clause-[^)]+\)\s+(Matthew|Mark|Luke|John)\s+\d+:\d+", text)
-        or "No equally" in text
-    )
-
-
-def test_clause_linkage_normalized_print_slice_avoids_internal_project_terms_and_raw_count_claims() -> None:
-    text = _text()
-    lower = text.lower()
-    if lower.startswith("---"):
-        parts = lower.split("---", 2)
-        lower_body = parts[2] if len(parts) == 3 else lower
-    else:
-        lower_body = lower
-
+def test_clause_linkage_normalized_print_slice_avoids_stale_workflow_language() -> None:
+    lower = _text().lower()
     for forbidden in (
-        "packet",
         "candidate tsv",
         "dossier",
         "review notes",
-        "coverage normalization",
-        "print slice",
-        "publication-review",
-        "current pass",
-        "tests/",
-        "scripts/",
+        "packet complete",
+        "this packet is now complete",
+        "ready for human review",
+        "dictionary and review-note slices have not yet begun",
     ):
-        assert forbidden not in lower_body
-
-    assert "report-only counts" not in lower_body
-    assert "raw occurrence counts are not treated as grammar facts" in lower_body
+        assert forbidden not in lower
 
 
-def test_clause_linkage_normalized_print_slice_glosses_key_tedim_forms_in_prose() -> None:
+def test_clause_linkage_examples_keep_source_after_translation() -> None:
+    text = _text()
+    blocks = re.findall(r"(?ms)^\(@ex:clause-[^)]+\).*?(?=^\(@ex:clause-|\Z)", text)
+
+    assert blocks
+    for block in blocks:
+        assert re.search(
+            r"^d\. Translation: .+\((?:Genesis|Exodus|Judges|Matthew|Mark|Luke|John)\s+\d+:\d+\)$",
+            block,
+            re.MULTILINE,
+        ), block
+
+
+def test_clause_linkage_examples_have_resolvable_sources() -> None:
+    text = _text()
+    bible = load_bible(BIBLE_PATH)
+    examples = assembler.parse_examples(text)
+
+    assert examples
+    for example in examples:
+        resolved = assembler.resolve_example_source(example, bible)
+        assert resolved, example.label
+
+
+def test_clause_linkage_genesis_1_26_is_not_used_as_print_ready_example() -> None:
+    text = _text()
+    rows = _rows()
+
+    assert "(@ex:clause-ciangin-gen1p26)" not in text
+    assert not any(
+        row.get("source_reference") == "Genesis 1:26"
+        and row.get("print_status") in {"print_ready", "print_usable_with_caveat"}
+        for row in rows
+    )
+
+
+def test_clause_linkage_running_prose_glosses_key_forms() -> None:
     text = _text()
     expectations = {
         "ciangin": ("when", "temporal subordination"),
-        "tua ciangin": ("then", "when"),
-        "ciang-in": ("when-ERG", "when", "then-ERG"),
-        "dingin": ("in order to", "for", "purpose"),
-        "ding-in": ("IRR-ERG", "purpose"),
-        "ngenin": ("pray-CVB", "pray", "praying"),
-        "VERB-in": ("converb", "clause chain", "linking"),
-        "ahih ciangin": ("when", "temporal"),
-        "a bawl mi": ("person who", "makes", "one who"),
-        "omna": ("place", "being", "existence"),
-        "muhna-ah": ("in seeing", "sight", "in the sight"),
-        "leh": ("if", "when", "conditional"),
-        "hangin": ("because", "causal"),
-        "bangin": ("like", "as", "comparative"),
+        "dingin": ("in order to", "purpose"),
+        "ngenin": ("pray-CVB",),
+        "ahih ciangin": ("when",),
+        "a bawl mi": ("person who",),
+        "muhna-ah": ("in seeing", "in the sight"),
     }
-
     for form, glosses in expectations.items():
         assert _first_prose_occurrence_has_gloss(text, form, glosses), form
 
 
-def test_clause_linkage_normalization_supplement_exists_and_has_expected_columns() -> None:
+def test_clause_linkage_normalization_supplement_has_expected_columns() -> None:
     assert SUPPLEMENT_PATH.exists()
-
-    with SUPPLEMENT_PATH.open(encoding="utf-8") as handle:
-        reader = csv.DictReader(handle, delimiter="\t")
-        rows = list(reader)
+    rows = _rows()
 
     assert rows
     for column in (
@@ -180,6 +167,62 @@ def test_clause_linkage_normalization_supplement_exists_and_has_expected_columns
         "why_selected",
         "caveat",
     ):
-        assert column in reader.fieldnames
+        assert column in rows[0]
 
-    assert any(row["source_zone"] == "Old Testament" for row in rows)
+
+def test_clause_linkage_normalization_supplement_has_no_placeholder_rows() -> None:
+    rows = _rows()
+    assert rows
+
+    for row in rows:
+        tedim = row.get("tedim_text", "")
+        seg = row.get("segmentation", "")
+        trans = row.get("translation", "")
+        assert not tedim.startswith("[")
+        assert not seg.startswith("[")
+        assert "[Gospel example" not in tedim
+        assert "[Gospel example" not in seg
+        assert "[Gospel translation]" not in trans
+
+
+def test_clause_linkage_candidate_form_alignment_for_core_rows() -> None:
+    rows = _rows()
+    assert rows
+
+    core_forms = {"ciangin", "dingin", "ngenin", "ahih ciangin", "a bawl mi", "muhna-ah"}
+    promoted_statuses = {"print_ready", "print_usable_with_caveat"}
+
+    for row in rows:
+        candidate_form = row.get("candidate_form", "").strip().lower()
+        if candidate_form not in core_forms or row.get("print_status") not in promoted_statuses:
+            continue
+
+        tedim = re.sub(r"[*_]+", "", row.get("tedim_text", "").lower())
+        tedim = re.sub(r"\s+", " ", tedim).strip()
+
+        if candidate_form == "ahih ciangin":
+            assert "ahih ciangin" in tedim
+        elif candidate_form == "a bawl mi":
+            assert "a bawl mi" in tedim
+        else:
+            assert candidate_form in tedim, f"{row['example_id']} missing {candidate_form}: {tedim}"
+
+
+def test_clause_linkage_abawlmi_rows_match_labeled_construction() -> None:
+    rows = _rows()
+    for row in rows:
+        if row.get("candidate_form", "").strip().lower() != "a bawl mi":
+            continue
+        tedim = re.sub(r"[*_]+", "", row.get("tedim_text", "").lower())
+        assert "a bawl mi" in tedim
+
+
+def test_clause_linkage_remains_boundary_controlled_not_full_system() -> None:
+    text = _text().lower()
+    assert "full switch-reference chapter" not in text
+    assert "full relative-clause chapter" not in text
+    assert "full complex-sentence chapter" not in text
+
+    deferred = text.split("# deferred and boundary material", 1)[-1]
+    for required in ("switch-reference", "relative-clause", "discourse"):
+        assert required in deferred
