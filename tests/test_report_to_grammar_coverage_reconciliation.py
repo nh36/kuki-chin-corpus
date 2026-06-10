@@ -131,8 +131,3 @@ def test_reconciliation_includes_implementation_sketch_and_no_packet_creation() 
         "No new packet files are created in this commit",
     ):
         assert required in text
-
-    assert not Path("output/publication_review/candidates_ki_reflexive_middle.tsv").exists()
-    assert not Path("output/publication_review/dossier_ki_reflexive_middle_scope.md").exists()
-    assert not Path("output/publication_review/grammar_ki_reflexive_middle_print_slice.md").exists()
-    assert not Path("output/publication_review/review_notes_ki_reflexive_middle.md").exists()

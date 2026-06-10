@@ -125,6 +125,11 @@ ASSEMBLY_SPEC = [
             {"type": "slice", "title": "TAM / aspect / modal", "path": "output/publication_review/grammar_tam_print_slice.md"},
             {"type": "slice", "title": "Directionals", "path": "output/publication_review/grammar_directionals_print_slice.md"},
             {"type": "slice", "title": "Derivation / valency", "path": "output/publication_review/grammar_derivation_valency_print_slice.md"},
+            {
+                "type": "slice",
+                "title": "ki- reflexive / reciprocal / middle",
+                "path": "output/publication_review/grammar_ki_reflexive_middle_print_slice.md",
+            },
             {"type": "slice", "title": "Nominalization", "path": "output/publication_review/grammar_nominalization_print_slice.md"},
             {"type": "slice", "title": "Clause linkage", "path": "output/publication_review/grammar_clause_linkage_print_slice.md"},
         ],
@@ -268,6 +273,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Relators / postpositions",
     "Transitivity",
     "Derivation / valency",
+    "ki- reflexive / reciprocal / middle",
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
@@ -387,6 +393,11 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "The current derivation and valency evidence is strongest around `-sak` 'causative / benefactive', "
         "especially `paisak` 'cause to go' and `muhsak` 'show / make see', while `-pih` 'with / accompanying', "
         "`ki-` 'reflexive / middle / passive-like', and heavier suffix stacks remain boundary material."
+    ),
+    "ki- reflexive / reciprocal / middle": (
+        "The current `ki-` evidence is strongest for reciprocal `ki-gawm` 'join together' and "
+        "subject-affected `ki-lak-toh` 'be taken up', while passive-like `kigen` 'be said / be told' and "
+        "lexicalized forms such as `kipan` 'begin / from' remain explicit boundary material."
     ),
     "VP structure / suffix stacking": (
         "The current VP-structure evidence is strongest for a small checked set of suffix stacks such as "

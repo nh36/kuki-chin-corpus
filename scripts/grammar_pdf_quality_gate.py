@@ -34,6 +34,7 @@ TARGET_SECTION_TITLES = {
     "Relators / postpositions",
     "Transitivity",
     "Derivation / valency",
+    "ki- reflexive / reciprocal / middle",
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
