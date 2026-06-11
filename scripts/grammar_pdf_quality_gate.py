@@ -35,6 +35,7 @@ TARGET_SECTION_TITLES = {
     "Transitivity",
     "Derivation / valency",
     "ki- reflexive / reciprocal / middle",
+    "-pih comitative applicative",
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",

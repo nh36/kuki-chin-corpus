@@ -130,6 +130,11 @@ ASSEMBLY_SPEC = [
                 "title": "ki- reflexive / reciprocal / middle",
                 "path": "output/publication_review/grammar_ki_reflexive_middle_print_slice.md",
             },
+            {
+                "type": "slice",
+                "title": "-pih comitative applicative",
+                "path": "output/publication_review/grammar_pih_comitative_applicative_print_slice.md",
+            },
             {"type": "slice", "title": "Nominalization", "path": "output/publication_review/grammar_nominalization_print_slice.md"},
             {"type": "slice", "title": "Clause linkage", "path": "output/publication_review/grammar_clause_linkage_print_slice.md"},
         ],
@@ -274,6 +279,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Transitivity",
     "Derivation / valency",
     "ki- reflexive / reciprocal / middle",
+    "-pih comitative applicative",
     "VP structure / suffix stacking",
     "TAM / aspect / modal",
     "Directionals",
@@ -398,6 +404,11 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "The current `ki-` evidence is strongest for reciprocal `ki-gawm` 'join together' and "
         "subject-affected `ki-lak-toh` 'be taken up', while passive-like `kigen` 'be said / be told' and "
         "lexicalized forms such as `kipan` 'begin / from' remain explicit boundary material."
+    ),
+    "-pih comitative applicative": (
+        "The current `-pih` evidence is strongest for verbal comitative applicative forms such as "
+        "`paipih` 'go with / accompany', `nekpih` 'eat with', and `tunpih` 'arrive with / bring with', "
+        "while nominal `-pih` forms such as `innkuanpihte` 'family members' remain explicit boundary material."
     ),
     "VP structure / suffix stacking": (
         "The current VP-structure evidence is strongest for a small checked set of suffix stacks such as "

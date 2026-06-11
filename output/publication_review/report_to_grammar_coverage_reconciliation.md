@@ -27,8 +27,8 @@ Controlling sources used in this reconciliation:
 High-level status split:
 
 - **Properly lifted into grammar-facing treatment**: demonstratives/deixis, negation, interrogatives, sentence-final particles, numerals, quantifiers, coordinators, case marking, NP structure, noun domain, relators/postpositions, reduplication.
-- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), nominalization, clause linkage.
-- **Mainly boundary material**: object-prefix/inverse-like `hong-`/`kong-`, reflexive/middle-like `ki-`, applicative `-pih`, switch reference, relative clauses, broad possession architecture.
+- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (active first slice), nominalization, clause linkage.
+- **Mainly boundary material**: object-prefix/inverse-like `hong-`/`kong-`, switch reference, relative clauses, broad possession architecture.
 - **Report-backed but not packetized**: verb paradigms; phonology/tone remains chapter-scale and still outside packetization.
 - **Cross-cutting analyzer-gap topics**: tone in `-a`, conditioned variants (`-pah`/`-pak`/`-lawh`), `hong-` constraints, `-sak` split, `-pih` constraints, `-thei/-theih`, habituals.
 
@@ -49,7 +49,7 @@ High-level status split:
 | pronouns / clusivity | `reports/06-func-01-pronouns.md`; pronoun packet | R: yes, L: yes, M: partial, A: no | pronouns packet | yes | narrow slice | clusivity and prefix interfaces still partially unresolved | hold stable; avoid broad rewrite |
 | pronominal prefixes / agreement | `reports/05-verb-03-agreement.md`; `morphemes/01-prefixes.md`; prefix packet | R: yes, L: yes, M: yes, A: yes | prefix/agreement packet | yes | narrow slice | full paradigm and object/inverse selection not yet synthesized | hold stable; keep boundary cautions |
 | object-prefix or inverse-like `hong-` / `kong-` | `reports/05-verb-03-agreement.md`; `morphemes/01-prefixes.md`; analyzer-gap docs | R: yes, L: partial, M: yes, A: yes | present as boundary rows in prefix/agreement packet | yes | boundary-only | selection constraints and interaction with valency remain unresolved | keep boundary-only until dedicated synthesis |
-| reflexive / reciprocal / middle-like `ki-` | `reports/05-verb-09-valency.md`; `reports/06-func-01-pronouns.md`; `lit-reviews/05-verb-09-valency-lit.md`; `morphemes/01-prefixes.md` | R: yes, L: yes, M: yes, A: no | present as boundary in prefix/agreement + derivation/valency + transitivity | yes | boundary-only | no integrated account across reflexive/reciprocal/middle/passive-like uses | select as next substantive candidate-first packet |
+| reflexive / reciprocal / middle-like `ki-` | `reports/05-verb-09-valency.md`; `reports/06-func-01-pronouns.md`; `lit-reviews/05-verb-09-valency-lit.md`; `morphemes/01-prefixes.md` | R: yes, L: yes, M: yes, A: no | dedicated `ki-` reflexive/reciprocal/middle packet | yes | narrow slice | first slice is intentionally narrow and still boundary-heavy around lexicalized and passive-like rows | hold stable at first-slice maturity; deepen only if review/testing exposes defects |
 | verb paradigms | `reports/05-verb-00-paradigm-tables.md`; skeleton verb chapter | R: yes, L: partial, M: no, A: no | none | yes (`Verb paradigms` placeholder) | unpacketized | report-backed but not lifted into packet workflow | schedule as major packet after next manageable packet |
 | stem alternation | `reports/05-verb-01-stems.md`; `reports/05-verb-11-vsa-questionnaire.md`; stem packet | R: yes, L: yes, M: no, A: no | stem-alternation packet | yes | narrow slice | difficult/one-sided pairs remain explicitly controlled | hold stable |
 | transitivity | `reports/05-verb-12-transitivity.md`; transitivity packet | R: yes, L: partial, M: no, A: no | transitivity packet | yes | narrow slice | lexical vs derivational and prefix-heavy overlap remains open | hold stable |
@@ -59,7 +59,7 @@ High-level status split:
 | suffix combinations / stacking | `reports/05-verb-10-combinations.md`; VP packet | R: yes, L: partial, M: no, A: no | VP structure / stacking packet | yes | narrow slice | cross-domain stacking remains partly unresolved | keep narrow scope |
 | derivation / valency | `reports/05-verb-08-derivational.md`; `reports/05-verb-09-valency.md`; `lit-reviews/05-verb-09-valency-lit.md`; derivation packet | R: yes, L: yes, M: yes, A: yes | derivation/valency packet | yes | narrow slice | still centered on `-sak`; broader system deferred | hold stable |
 | `-sak` | derivation/valency reports + lit + morpheme db + analyzer-gap docs | R: yes, L: yes, M: yes, A: yes | derivation/valency packet | yes | core section | CAUS/BENF split still not globally reconciled with analyzer docs | keep current controlled anchors; avoid broadening |
-| `-pih` | derivation/valency reports + lit + morpheme db + analyzer-gap docs | R: yes, L: yes, M: yes, A: yes | only as boundary in derivation/valency packet | yes | boundary-only | Form II constraints and homophony routing remain unresolved in preview layer | keep boundary-only for now |
+| `-pih` | derivation/valency reports + lit + morpheme db + analyzer-gap docs | R: yes, L: yes, M: yes, A: yes | dedicated `-pih` comitative applicative packet (active) | yes | narrow slice | verbal-vs-nominal homophony and VP/directional stacking boundaries remain unresolved | keep the packet narrow while stabilizing first-slice verbal evidence |
 | nominalization | `reports/07-nmlz-01-deverbal.md`; nominalization packet | R: yes, L: partial, M: yes, A: no | nominalization packet | yes | narrow slice | agentive and clause-boundary interactions remain open | hold stable |
 | reduplication | `reports/07-deriv-02-reduplication.md`; reduplication packet | R: yes, L: partial, M: no, A: no | reduplication packet | yes | core section | broader expressive/lexicalized domain deferred | hold stable |
 | interrogatives | `reports/09-sent-01-interrogatives.md`; `lit-reviews/09-sent-01-interrogatives-lit.md`; interrogatives packet | R: yes, L: yes, M: no, A: no | interrogatives packet | yes | core section | broader discourse/question architecture deferred | hold stable |
@@ -111,14 +111,14 @@ Hold stable unless human review finds defects:
 - VP structure
 - suffix combinations / stacking
 - derivation / valency (`-sak`-led)
+- reflexive / reciprocal / middle-like `ki-` (first slice)
+- verbal `-pih` comitative applicative (first slice)
 - nominalization
 - subordination (inside clause linkage)
 
 ## C. Boundary-only domains still needing synthesis for a fuller grammar
 
 - object-prefix or inverse-like `hong-` / `kong-`
-- reflexive / reciprocal / middle-like `ki-`
-- `-pih`
 - switch reference
 - relative clauses
 - broader possession architecture
@@ -141,69 +141,49 @@ Hold stable unless human review finds defects:
 
 # 4. Recommendation for the next substantive packet
 
-**Recommended next substantive target: reflexive / reciprocal / middle-like `ki-`.**
+**Synchronization update:** the recommended `ki-` target has now been actioned as a first grammar-facing slice and should be held stable at first-slice maturity.
 
-Why this is the best next packet from current architecture:
+**Current active substantive target: verbal `-pih` comitative applicative / comitative suffix.**
 
-1. **Completeness value:** `ki-` is a recurring unresolved boundary across multiple existing sections (prefix/agreement, derivation/valency, transitivity, pronoun-adjacent material).
-2. **Evidence readiness:** It is already report-backed and literature-backed (`05-verb-09-valency`, `06-func-01-pronouns`, `05-verb-09-valency-lit`) with morpheme support.
-3. **Candidate-first fit:** It is narrow enough for a controlled candidate-first packet, unlike chapter-scale phonology/tone and broad verb paradigms.
-4. **Unification value:** It can consolidate scattered boundary cautions into one explicit domain without forcing a full voice chapter.
+Why this is the best active target from the same source architecture:
 
-Why not the other default options immediately:
+1. **Completeness value:** `-pih` is repeatedly visible in derivation/valency, VP, and analyzer-gap boundaries, but has lacked a dedicated packetized treatment.
+2. **Evidence readiness:** it is report-backed, lit-backed, and morpheme-backed (`05-verb-08-derivational`, `05-verb-09-valency`, `05-verb-09-valency-lit`, `morphemes/06-derivational.md`).
+3. **Candidate-first fit:** a narrow verbal-comitative slice is manageable without opening a full applicative/valency/VP chapter.
+4. **Boundary value:** it directly resolves a recurring ambiguity with nominal `-pih` and keeps directional/stacking overlaps explicit.
 
-- **Phonology/tone** remains high-priority but currently has a hard blocker (tone in `-a` cannot be resolved from current corpus layer).
-- **Verb paradigms** are report-backed but likely too large for the next ordinary narrow packet without first resolving current cross-packet boundary drift.
+Why not the other major gaps immediately:
 
-# 5. Implementation sketch for the recommended next packet (do not implement in this commit)
+- **Phonology/tone** remains high-priority but blocked by unresolved tone-sensitive corpus constraints.
+- **Verb paradigms** remain report-backed but chapter-scale and too large for the next ordinary narrow packet.
+
+# 5. Implementation sketch for the active `-pih` target
 
 Likely controlling evidence:
 
+- `docs/grammar/morphemes/06-derivational.md`
+- `docs/grammar/reports/05-verb-08-derivational.md`
 - `docs/grammar/reports/05-verb-09-valency.md`
-- `docs/grammar/reports/06-func-01-pronouns.md`
-- `docs/grammar/reports/05-verb-12-transitivity.md` (boundary controls)
 - `docs/grammar/lit-reviews/05-verb-09-valency-lit.md`
-- `docs/grammar/morphemes/01-prefixes.md`
-- `docs/grammar/morphemes/06-derivational.md` (for interactions with derivation)
+- `docs/grammar/ANALYZER_LITERATURE_GAPS.md`
+- `docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md`
 
-Likely existing boundary surfaces to reconcile:
+Likely boundary surfaces to keep visible:
 
-- `output/publication_review/grammar_prefix_agreement_print_slice.md` (`kipan` boundary row)
-- `output/publication_review/grammar_derivation_valency_print_slice.md` (`kisep`, `kigen` boundary treatment)
-- `output/publication_review/grammar_transitivity_print_slice.md` (`ki-` as voice-like boundary)
+- `output/publication_review/grammar_derivation_valency_print_slice.md` (`-pih` currently boundary-only there)
+- `output/publication_review/grammar_vp_structure_stacking_print_slice.md` (directional and suffix-stack overlap)
+- `output/publication_review/grammar_directionals_print_slice.md` (`-pih` with directional material)
 
-Proposed packet files (next commit, not this one):
+Proposed packet surfaces (now active):
 
-- `output/publication_review/candidates_ki_reflexive_middle.tsv`
-- `output/publication_review/dossier_ki_reflexive_middle_scope.md`
-- `output/publication_review/grammar_ki_reflexive_middle_print_slice.md`
-- `output/publication_review/review_notes_ki_reflexive_middle.md`
+- `output/publication_review/candidates_pih_comitative_applicative.tsv`
+- `output/publication_review/dossier_pih_comitative_applicative_scope.md`
+- `output/publication_review/grammar_pih_comitative_applicative_print_slice.md`
+- `output/publication_review/review_notes_pih_comitative_applicative.md`
 
-Likely initial anchors:
+Likely anchors and controlled boundaries:
 
-- `kisep` (reflexive/middle-like anchor)
-- `kigen` (agent-defocused/passive-like anchor)
-- controlled reciprocal patterns where plural subject cues are clear
-
-Likely false friends / boundary material to keep explicit:
-
-- lexicalized or frozen `ki-` forms (e.g., `kipan`-type rows)
-- `ki-` + derivational stacking (`ki-` with `-sak`, `-pih`, or heavy VP stacks)
-- rows where analyzer segmentation is plausible but construction function is unclear
-
-What not to widen into in the first `ki-` packet:
-
-- full voice-and-valency chapter
-- full transitivity rewrite
-- full paradigmatic treatment of all verbal prefixes
-- broader discourse or clause-linkage expansion
-
-Likely tests needed when that packet is opened:
-
-- `tests/test_ki_reflexive_middle_normalized_print_slice.py`
-- source-after-translation checks for all formal examples
-- source-resolver checks for all formal examples
-- candidate-form-to-Tedim alignment checks for promoted rows
-- explicit boundary/deferred checks to block overclaiming
-
-No new packet files are created in this commit; this reconciliation only selects the next substantive target.
+- Core verbal anchors: `paipih`, `nekpih`, `tunpih`
+- Nominal boundary anchors: `innkuanpihte`, `mipihte`
+- VP/directional boundary anchors: `paikhiatpih`, `pai-pih-suk`-type stacking
+- Keep `-khawm`, full applicatives, and full VP template analysis out of first-slice scope

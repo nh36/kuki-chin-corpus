@@ -115,7 +115,8 @@ def test_reconciliation_recommends_substantive_next_target_not_admin_handoff() -
     lower = text.lower()
 
     assert "# 4. Recommendation for the next substantive packet" in text
-    assert "Recommended next substantive target: reflexive / reciprocal / middle-like `ki-`." in text
+    assert "Synchronization update:" in text
+    assert "Current active substantive target: verbal `-pih` comitative applicative / comitative suffix." in text
     assert "human-review handoff" not in lower
 
 
@@ -123,11 +124,11 @@ def test_reconciliation_includes_implementation_sketch_and_no_packet_creation() 
     text = _text()
 
     for required in (
-        "# 5. Implementation sketch for the recommended next packet",
-        "output/publication_review/candidates_ki_reflexive_middle.tsv",
-        "output/publication_review/dossier_ki_reflexive_middle_scope.md",
-        "output/publication_review/grammar_ki_reflexive_middle_print_slice.md",
-        "output/publication_review/review_notes_ki_reflexive_middle.md",
-        "No new packet files are created in this commit",
+        "# 5. Implementation sketch for the active `-pih` target",
+        "output/publication_review/candidates_pih_comitative_applicative.tsv",
+        "output/publication_review/dossier_pih_comitative_applicative_scope.md",
+        "output/publication_review/grammar_pih_comitative_applicative_print_slice.md",
+        "output/publication_review/review_notes_pih_comitative_applicative.md",
+        "Core verbal anchors: `paipih`, `nekpih`, `tunpih`",
     ):
         assert required in text
