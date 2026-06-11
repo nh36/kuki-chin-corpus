@@ -55,7 +55,23 @@ The corpus (Bible text) contains extensive verbal `-pih` evidence. The dominant 
 | `nekpih` | ~6 | eat.II-COM.APPL — comitative eating (transitive) |
 | `tutpih` | ~3 | sit.II-COM.APPL — comitative sitting (low frequency in corpus) |
 
-The Form II requirement documented in Otsuka and ZNC is consistent with the corpus: all identified verbal `-pih` forms have Stem 2 bases.
+The Form II requirement documented in Otsuka and ZNC is broadly compatible with corpus-facing packet evidence, but the diagnostic strength is uneven across forms. `Nekpih` is currently the clearest packet-internal diagnostic row because `ne/nek` is independently stabilized in the stem-alternation packet, while high-frequency `paipih` remains morphophonologically ambiguous (`pai` vs `paih`) and therefore cannot carry the full diagnostic burden by itself.
+
+## `-pih` and stem alternation diagnostic
+
+The dedicated diagnostic file (`output/publication_review/pih_stem_alternation_diagnostic.md`) yields a concrete split:
+
+1. **Literature-backed rule remains strongest:** verbal `-pih` selects Stem 2 / Form II.
+2. **Best packet-internal diagnostic row:** `nekpih` (`ne/nek`).
+3. **Compatible but not independently diagnostic rows:** `tunpih`, `ompih`.
+4. **Morphophonological boundary rows:** `paipih`, `paikhiatpih` (especially due unresolved `pai/paih` behavior).
+5. **Lexicalized/unclear high-frequency rows:** `hopih`, `hehpih`.
+6. **Blocked but diagnostic in literature:** elicited ZNC contrasts (`tut-pih` vs `*tu-pih`, `nuih-pih` vs `*nui-pih`).
+7. **Blocked as non-verbal:** nominal `-pih` rows (`innkuanpih`, `mipihte`).
+
+### Focused decision on `paipih`
+
+`Paipih` remains promoted for the comitative-applicative function, but it is now explicitly treated as **morphophonological-boundary evidence** for stem diagnostics. The stem questionnaire and current stem slice do not provide a stable single account of GO as either `pai/pai` or `pai/paih`, and corpus-facing packet examples do not provide a clean minimal pair proving `paih-pih`. A contraction account (`paih + -pih` with non-realization of `h` before `p`) is plausible, but not yet decisively proven in this packet.
 
 ## Candidate categories
 
@@ -63,18 +79,24 @@ The Form II requirement documented in Otsuka and ZNC is consistent with the corp
 
 These are accepted as print-ready for formal interlinear examples in the grammar slice:
 
-- `pih-core-paipih-gen2` (Genesis 2:22) — `paipih` intransitive motion + COM.APPL, clear accompanying participant
-- `pih-core-paipih-matt4` (Matthew 4:1) — `paipih` Gospel counterpart, Spirit leads Jesus
+- `pih-core-paipih-gen2` (Genesis 2:22) — `paipih` intransitive motion + COM.APPL, clear accompanying participant, but stem-diagnostic class `morphophonological_boundary`
+- `pih-core-paipih-matt4` (Matthew 4:1) — Gospel counterpart with the same function profile and the same stem-diagnostic caveat
 
 ### Transitive verb candidates (print-ready)
 
-- `pih-trans-nekpih-prov7` (Proverbs 7:15) — `nekpih` eat.II-COM.APPL, OT purpose context
-- `pih-trans-nekpih-luke11` (Luke 11:37) — `nekpih` eat.II-COM.APPL, Gospel invitation context
+- `pih-trans-nekpih-prov7` (Proverbs 7:15) — `nekpih` eat.II-COM.APPL, OT purposive context, stem-diagnostic class `diagnostic_form_ii`
+- `pih-trans-nekpih-luke11` (Luke 11:37) — `nekpih` eat.II-COM.APPL, Gospel invitation context, stem-diagnostic class `diagnostic_form_ii`
 
 ### Motion/comitative object candidates (print-ready)
 
-- `pih-motion-tunpih-gen8` (Genesis 8:11) — `tunpih` arrive.II-COM.APPL, comitative object (olive leaf)
-- `pih-motion-tunpih-matt9` (Matthew 9:2) — `tunpih` arrive.II-COM.APPL, comitative participant (paralytic)
+- `pih-motion-tunpih-gen8` (Genesis 8:11) — `tunpih` arrive-COM.APPL, comitative object (olive leaf), stem-diagnostic class `compatible_not_diagnostic`
+- `pih-motion-tunpih-matt9` (Matthew 9:2) — `tunpih` arrive-COM.APPL, comitative participant (paralytic), stem-diagnostic class `compatible_not_diagnostic`
+
+### Supporting high-frequency candidates (not diagnostic for stem rule)
+
+- `pih-support-hopih-gen27` / `pih-support-hopih-matt12` — supporting verbal rows, stem-diagnostic class `lexicalized_or_unclear`
+- `pih-support-ompih-gen21` / `pih-support-ompih-matt17` — supporting verbal rows, stem-diagnostic class `compatible_not_diagnostic`
+- `pih-boundary-hehpih-gen33` / `pih-boundary-hehpih-matt5` — lexicalized grace-family boundary rows, stem-diagnostic class `lexicalized_or_unclear`
 
 ### Nominal -pih boundary rows
 
@@ -89,7 +111,8 @@ These are deferred/boundary-only and must not be promoted as verbal applicative 
 
 ### Blocked rows
 
-- `pih-blocked-report-zncexample` — ZNC elicited grammaticality data; not promotable as corpus evidence but motivates the Form II restriction claim from literature
+- `pih-blocked-report-tutpih-znc` — ZNC elicited grammaticality contrast (`tut-pih` vs `*tu-pih`), stem-diagnostic class `literature_backed`
+- `pih-blocked-report-nuihpih-znc` — ZNC elicited grammaticality contrast (`nuih-pih` vs `*nui-pih`), stem-diagnostic class `literature_backed`
 
 ## Scope boundaries: what this packet does not claim
 
@@ -103,6 +126,7 @@ This packet does not claim:
 
 ## Next steps (for human review and subsequent packets)
 
-- A human reviewer should check whether the Form II restriction claim from Otsuka and ZNC is consistently reflected in the promoted examples and whether any counter-example exists in the corpus.
-- The high-frequency forms `hopih` and `ompih` may warrant their own candidate investigation in a later tranche.
-- The possible benefactive reading of `-pih` (noted by Otsuka for the `nek-pih` example: "ate food (and gave some) to Aunt Hau") is not promoted in this first packet and should remain an open question.
+- A human reviewer should check whether the current stem-diagnostic split (`diagnostic_form_ii` vs `compatible_not_diagnostic` vs `morphophonological_boundary`) is correctly assigned, especially for `paipih`.
+- `Paipih` should remain promoted for verbal function but not treated as an unproblematic stem diagnostic unless new minimal-pair evidence is found.
+- The possible benefactive reading of `-pih` (noted by Otsuka for the `nek-pih` example: "ate food (and gave some) to Aunt Hau") remains open and is not promoted as a settled account.
+- `Dingin` treatment in this packet should stay harmonized with TAM/clause-linkage convention (`ding-in`, `IRR-ERG`, purposive or clause-bound irrealis).

@@ -18,11 +18,25 @@ CANDIDATES_PATH = ROOT / "output/publication_review/candidates_pih_comitative_ap
 DOSSIER_PATH = ROOT / "output/publication_review/dossier_pih_comitative_applicative_scope.md"
 SLICE_PATH = ROOT / "output/publication_review/grammar_pih_comitative_applicative_print_slice.md"
 REVIEW_NOTES_PATH = ROOT / "output/publication_review/review_notes_pih_comitative_applicative.md"
+DIAGNOSTIC_PATH = ROOT / "output/publication_review/pih_stem_alternation_diagnostic.md"
 BIBLE_PATH = ROOT / "bibles/extracted/ctd/ctd-x-bible.txt"
+
+ALLOWED_STEM_DIAGNOSTIC_VALUES = {
+    "diagnostic_form_ii",
+    "compatible_not_diagnostic",
+    "literature_backed",
+    "morphophonological_boundary",
+    "lexicalized_or_unclear",
+    "blocked",
+}
 
 
 def _text() -> str:
     return SLICE_PATH.read_text(encoding="utf-8")
+
+
+def _diagnostic_text() -> str:
+    return DIAGNOSTIC_PATH.read_text(encoding="utf-8")
 
 
 def _rows() -> list[dict[str, str]]:
@@ -34,21 +48,38 @@ def _normalize(text: str) -> str:
     return re.sub(r"[^0-9a-z]+", " ", text.lower()).strip()
 
 
-# ---------------------------------------------------------------------------
-# File existence
-# ---------------------------------------------------------------------------
-
-
 def test_pih_comitative_applicative_packet_files_exist() -> None:
     assert CANDIDATES_PATH.exists()
     assert DOSSIER_PATH.exists()
     assert SLICE_PATH.exists()
     assert REVIEW_NOTES_PATH.exists()
+    assert DIAGNOSTIC_PATH.exists()
 
 
-# ---------------------------------------------------------------------------
-# Candidate TSV structure
-# ---------------------------------------------------------------------------
+def test_pih_stem_diagnostic_discusses_required_topics_and_forms() -> None:
+    text = _diagnostic_text().lower()
+
+    for required in (
+        "form ii",
+        "stem 2",
+        "paipih",
+        "pai / paih",
+        "nekpih",
+        "tunpih",
+        "hopih",
+        "hehpih",
+        "ompih",
+        "paikhiatpih",
+    ):
+        assert required in text, required
+
+
+def test_pih_stem_diagnostic_gives_a_decision_not_only_uncertainty() -> None:
+    text = _diagnostic_text().lower()
+
+    assert "best-supported decision" in text or "best current conclusion" in text or "decision for grammar-facing phrasing" in text
+    assert "stem 2 selection is the best-supported analysis" in text or "best treated as a stem 2 / form ii selecting suffix" in text
+    assert "paipih" in text and ("morphophonological" in text or "compatible" in text)
 
 
 def test_pih_comitative_applicative_candidate_tsv_has_required_columns() -> None:
@@ -70,6 +101,7 @@ def test_pih_comitative_applicative_candidate_tsv_has_required_columns() -> None
         "translation",
         "candidate_status",
         "print_status",
+        "stem_diagnostic_status",
         "why_selected",
         "caveat",
     }
@@ -85,14 +117,21 @@ def test_pih_comitative_applicative_candidate_tsv_has_no_placeholder_rows() -> N
         assert not row["translation"].startswith("["), row["candidate_id"]
 
 
-def test_pih_comitative_applicative_candidate_tsv_has_ot_and_gospel_promoted_rows() -> None:
-    rows = _rows()
-    promoted = [r for r in rows if r.get("print_status") in {"print_ready", "print_usable_with_caveat"}]
-    assert promoted
+def test_pih_comitative_applicative_candidate_tsv_covers_required_forms() -> None:
+    forms = {row["candidate_form"] for row in _rows()}
+    required = {"paipih", "nekpih", "tunpih", "hopih", "hehpih", "ompih", "paikhiatpih"}
+    assert required.issubset(forms)
 
-    source_zones = {r["source_zone"] for r in promoted}
-    assert "Old Testament" in source_zones, "No Old Testament promoted candidate"
-    assert "Gospels" in source_zones, "No Gospel promoted candidate"
+
+def test_pih_comitative_applicative_candidate_tsv_has_stem_diagnostic_statuses() -> None:
+    rows = _rows()
+    statuses = {row["stem_diagnostic_status"] for row in rows}
+
+    assert statuses <= ALLOWED_STEM_DIAGNOSTIC_VALUES
+    assert "diagnostic_form_ii" in statuses
+    assert "morphophonological_boundary" in statuses
+    assert "compatible_not_diagnostic" in statuses
+    assert "blocked" in statuses
 
 
 def test_pih_comitative_applicative_candidate_tsv_keeps_nominal_pih_as_boundary() -> None:
@@ -101,13 +140,9 @@ def test_pih_comitative_applicative_candidate_tsv_keeps_nominal_pih_as_boundary(
     assert nominal_rows, "Expected at least one nominal -pih boundary row"
     for row in nominal_rows:
         assert row.get("print_status") in {"boundary_only", "blocked"}, (
-            f"Nominal -pih row {row['candidate_id']} must not be print_ready"
+            f"Nominal -pih row {row['candidate_id']} must not be print-ready"
         )
-
-
-# ---------------------------------------------------------------------------
-# Grammar slice: grammar-facing prose
-# ---------------------------------------------------------------------------
+        assert row.get("stem_diagnostic_status") == "blocked"
 
 
 def test_pih_comitative_applicative_slice_is_grammar_facing() -> None:
@@ -141,10 +176,41 @@ def test_pih_comitative_applicative_slice_distinguishes_required_categories() ->
         "stem 2",
         "nominal",
         "boundary",
-        "boundary with nominal",
-        "boundary with directionals",
+        "Boundary with nominal",
+        "Boundary with directionals",
     ):
-        assert required.lower() in lower, f"Expected {required!r} in grammar slice"
+        assert required.lower() in lower
+
+
+def test_pih_comitative_applicative_slice_reflects_diagnostic_conclusion() -> None:
+    text = _text().lower()
+
+    assert "stem 2 selecting" in text or "form ii restriction" in text
+    assert "diagnostic row" in text and "nekpih" in text
+    assert "morphophonological-boundary" in text and "paipih" in text
+    assert "compatible but not independently diagnostic" in text or "compatible but not diagnostic" in text
+
+
+def test_pih_comitative_applicative_slice_does_not_claim_corpus_alone_proves_form_ii_rule() -> None:
+    lower = _text().lower()
+    assert "corpus alone does not prove" in lower or "corpus alone does not" in lower
+
+
+def test_pih_comitative_applicative_slice_does_not_treat_paipih_as_unproblematic() -> None:
+    lower = _text().lower()
+    assert "paipih" in lower
+    assert "pai / paih" in lower
+    assert "morphophonological" in lower
+
+
+def test_pih_comitative_applicative_slice_dingin_glossing_is_harmonized() -> None:
+    text = _text()
+    lower = text.lower()
+
+    assert "ding-in" in text
+    assert "IRR-ERG" in text
+    assert "NMLZ-ERG" not in text
+    assert "clause-bound irrealis" in lower or "purposive" in lower
 
 
 def test_pih_comitative_applicative_slice_keeps_nominal_pih_as_boundary() -> None:
@@ -152,34 +218,25 @@ def test_pih_comitative_applicative_slice_keeps_nominal_pih_as_boundary() -> Non
     lower = text.lower()
 
     assert "nominal" in lower
-    # Nominal forms must appear in boundary discussion, not as promoted evidence
     assert "innkuanpihte" in text or "innkuanpih" in text
     assert "mipihte" in text
-    assert "boundary" in lower
-    # No nominal row promoted in formal examples
     for label in ("@ex:pih-nominal-innkuanpih", "@ex:pih-nominal-mipihte"):
-        assert label not in text, f"Nominal row {label!r} must not appear as a formal example"
+        assert label not in text
 
 
 def test_pih_comitative_applicative_slice_rejects_overclaiming() -> None:
     lower = _text().lower()
 
-    assert "does not claim to solve the full comitative system" in lower or "lies outside the present narrow account" in lower
-    assert "full applicative" in lower or "full applicative chapter" in lower or "full applicative typology" in lower
-    assert "full valency" in lower or "full valency chapter" in lower
-    assert "full derivation" in lower or "full derivational morphology" in lower
+    assert "full applicative" in lower
+    assert "full valency" in lower
+    assert "full derivational morphology" in lower or "full derivation" in lower
+    assert "full vp-slot template" in lower
+    assert "complete comitative system" in lower
 
 
 def test_pih_comitative_applicative_slice_avoids_raw_report_count_promotion() -> None:
     lower = _text().lower()
-    # The slice uses corpus frequencies in the dossier but must not promote raw counts
-    # as grammar facts in the slice itself
-    assert "raw report counts are not" in lower or "frequencies do not convert directly" in lower or "individual frequencies do not convert" in lower
-
-
-# ---------------------------------------------------------------------------
-# Formal examples: source references, resolution, and candidate backing
-# ---------------------------------------------------------------------------
+    assert "frequencies do not convert directly" in lower or "individual frequencies do not convert" in lower or "raw report counts are not" in lower
 
 
 def test_pih_comitative_applicative_slice_examples_keep_source_after_translation() -> None:
@@ -188,9 +245,7 @@ def test_pih_comitative_applicative_slice_examples_keep_source_after_translation
 
     assert blocks
     for block in blocks:
-        assert re.search(r"^d\. Translation: .+\([^)]+\d+:\d+\)$", block, re.MULTILINE), (
-            f"Example block missing source-after-translation:\n{block[:300]}"
-        )
+        assert re.search(r"^d\. Translation: .+\([^)]+\d+:\d+\)$", block, re.MULTILINE), block
 
 
 def test_pih_comitative_applicative_slice_examples_have_resolvable_sources() -> None:
@@ -200,7 +255,7 @@ def test_pih_comitative_applicative_slice_examples_have_resolvable_sources() -> 
     assert examples
     for example in examples:
         resolved = assembler.resolve_example_source(example, bible)
-        assert resolved, f"Example {example.label} source not resolved"
+        assert resolved, example.label
 
 
 def test_pih_comitative_applicative_slice_formal_examples_are_candidate_backed() -> None:
@@ -215,14 +270,12 @@ def test_pih_comitative_applicative_slice_formal_examples_are_candidate_backed()
     assert examples
     for example in examples:
         source = assembler.resolve_example_source(example, bible)
-        assert source in by_source, (
-            f"Example {example.label} source {source!r} not found in candidate TSV"
-        )
+        assert source in by_source, example.label
         tedim_norm = _normalize(example.tedim)
         assert any(
             candidate == tedim_norm or candidate in tedim_norm or tedim_norm in candidate
             for candidate in by_source[source]
-        ), f"Example {example.label} Tedim text not matched in candidate TSV for source {source!r}"
+        ), example.label
 
 
 def test_pih_comitative_applicative_promoted_rows_are_used_in_formal_examples() -> None:
@@ -241,7 +294,5 @@ def test_pih_comitative_applicative_promoted_rows_are_used_in_formal_examples() 
 
     assert promoted
     for row in promoted:
-        assert row["source_reference"] in example_sources, (
-            f"Promoted candidate {row['candidate_id']} source {row['source_reference']!r} "
-            f"not used in any formal example"
-        )
+        assert row["source_reference"] in example_sources
+

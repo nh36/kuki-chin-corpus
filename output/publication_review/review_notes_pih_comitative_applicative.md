@@ -4,54 +4,52 @@ title: "Review Notes: -pih Comitative Applicative Packet"
 
 # Human review checklist for the `-pih` comitative applicative packet
 
-This document is a workflow checklist for a human reviewer assessing the first grammar-facing `-pih` slice. It is not grammar prose and should not appear in the assembled preview.
+This document is a reviewer checklist for the current `-pih` packet. It is workflow material only and should not appear in assembled grammar prose.
 
-## Core claim to verify
+## Diagnostic conclusion to verify
 
-The grammar slice claims that verbal `-pih` is a comitative applicative suffix attaching to Form II / Stem 2 verbs and introducing a comitative participant or comitative object. A reviewer should confirm:
+- [ ] **Is the packet-level diagnostic conclusion correct?**  
+  Current conclusion: verbal `-pih` is best analyzed as Stem 2 selecting, with mixed diagnostic strength across forms (`nekpih` diagnostic, `paipih` morphophonological boundary, `tunpih` compatible-not-diagnostic).
 
-- [ ] **Do the promoted `paipih` examples (Gen 2:22 and Matt 4:1) genuinely show verbal `-pih` in a comitative applicative function?** Both are motion-verb contexts where an accompanying participant is introduced. Confirm that the accompanying participant interpretation is supported by context, not over-read.
+- [ ] **Does the diagnostic file support that conclusion concretely?**  
+  Check `output/publication_review/pih_stem_alternation_diagnostic.md` for explicit treatment of literature claims, candidate inventory, `pai / paih` alternatives, and a final decision.
 
-- [ ] **Is the Form II restriction claim appropriately hedged?** The slice says the restriction is established from literature (Otsuka, ZNC) and that corpus forms conform to it, but that the corpus alone does not provide direct Form I vs Form II contrast pairs. A reviewer should check whether this framing is accurate and whether any apparent Form I + `-pih` counter-example can be found in the corpus.
+## Focused `paipih` check
 
-- [ ] **Do the `nekpih` examples (Prov 7:15 and Luke 11:37) really show transitive verb + `-pih`?** Both appear in purpose/infinitival clauses (`... ding-in`). Confirm that the comitative applicative function is clear in these non-finite contexts and not an artifact of the nominalization.
+- [ ] **Is `paipih` classified correctly?**  
+  It should remain promoted for verbal-comitative function but should not be treated as an unproblematic stem diagnostic.
 
-- [ ] **Do the `tunpih` examples (Gen 8:11 and Matt 9:2) adequately illustrate the comitative object vs comitative participant distinction?** This distinction is claimed by Otsuka; confirm that the two example contexts support it.
+- [ ] **Is the `paih + -pih` morphophonological explanation warranted but not overstated?**  
+  The packet may mention possible non-realization of stem-final `h` before `p`, but should avoid presenting this as proven unless stronger direct evidence is supplied.
 
-## Nominal -pih boundary
+## Comparison with clearer rows
 
-- [ ] **Are `innkuanpihte` and `mipihte` firmly kept as boundary material?** Confirm that no nominal `-pih` form has been promoted into the verbal applicative core claim in the slice or the candidate TSV.
+- [ ] **Is `nekpih` correctly treated as the strongest packet-internal stem diagnostic?**  
+  Confirm that the `ne / nek` stem alternation link is accurately used.
 
-- [ ] **Is the nominal vs verbal `-pih` homophony acknowledged but left unresolved?** The slice should not claim a diachronic or synchronic relationship between the two `-pih` forms.
+- [ ] **Are `tunpih`, `hopih`, `hehpih`, and `ompih` classified appropriately?**  
+  Confirm that non-diagnostic or lexicalized rows are not promoted as primary stem diagnostics.
 
-## Benefactive reading risk
+## `dingin` harmonization check
 
-- [ ] **Is the possible benefactive reading of `-pih` kept as an open question?** Otsuka (2011) notes that `nek-pih` can sometimes be interpreted as "ate food (and gave some to Aunt Hau)" rather than purely "ate food together with Aunt Hau." The current slice does not promote a benefactive reading, but a reviewer should check that the promoted `nekpih` examples are not better analyzed as benefactive.
+- [ ] **Is `dingin` glossing consistent with TAM/clause-linkage/VP conventions?**  
+  In this packet, `ding-in` should be treated as purposive or clause-bound irrealis (`IRR-ERG`), not as a packet-specific nominalization analysis.
 
-## -khawm vs -pih boundary
+## Nominal vs verbal boundary
 
-- [ ] **Is the `-pih` vs `-khawm` distinction left open?** The slice does not claim to resolve the relationship between `-pih` (comitative applicative) and `-khawm` (comitative suffix or adverbial 'together'). Confirm that no promoted example conflates the two.
+- [ ] **Are nominal `-pih` rows still clearly separated from verbal `-pih`?**  
+  `innkuanpih` / `mipihte` should remain boundary-only and must not be used as verbal applicative evidence.
 
-## High-frequency boundary forms
+## Boundary-domain checks
 
-- [ ] **Are `hopih`, `hehpih`, and `ompih` appropriately left as boundary material?** These forms appear hundreds of times in the corpus but their precise applicative status is unresolved. Confirm that they are not silently promoted via the inventory table or discussion prose.
+- [ ] **Are directional/VP-heavy forms still boundary-controlled?**  
+  `paikhiatpih` and similar stacks should remain boundary material unless the section explicitly broadens (which it should not in this packet).
 
-## VP stacking and directionals
+- [ ] **Are possible benefactive readings kept cautious?**  
+  Do not let uncertain benefactive-like readings flatten into a solved applicative typology.
 
-- [ ] **Is `paikhiatpih` (and similar stacks) firmly boundary-controlled?** Directional + comitative applicative stacks are common in the corpus but require a VP-slot analysis that is not attempted in this first packet. Confirm that no such stacked form has slipped into the core claim.
+## Demotion checks
 
-## Segmentation checks
+- [ ] **Should any currently promoted row be demoted?**  
+  In particular, demote if a row is mis-segmented, source-mismatched, or better analyzed as lexicalized boundary material.
 
-- [ ] **Is the segmentation `pai-pih`, `nek-pih`, `tun-pih` consistent with the Form II + `-pih` analysis?** The segmentations in the formal examples should reflect Stem 2 forms of the base verb. A reviewer should confirm that the glossed stem labels (go.II, eat.II, arrive.II) are defensible for these corpus forms.
-
-## Overall scope check
-
-- [ ] **Does the slice avoid claiming a full applicative chapter, full valency chapter, full derivation chapter, full VP-slot template, or a complete comitative system?** The deferred and boundary sections should make these limitations explicit. Confirm that the summary paragraph does not over-claim.
-
-## Rows to consider demoting
-
-If any of the following are found to be problematic, they should be demoted to boundary-only or blocked:
-
-- The `nekpih` rows if the purposive/infinitival context makes the comitative reading ambiguous.
-- The `tunpih` Matt 9:2 row if the bringing interpretation is better analyzed as a straightforward motion verb rather than a comitative applicative.
-- Any row where the Tedim text in the formal example does not match the cited verse reference.
