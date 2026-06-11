@@ -434,6 +434,15 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
             "kipan",
             "a bawl mi",
         ),
+        "Hong / kong object-prefix or inverse-like": (
+            "hong",
+            "kong",
+            "hongbia",
+            "kongpia",
+            "kongkoih",
+            "hongmu",
+            "kongmu",
+        ),
         "Pronouns / clusivity": (
             "kei",
             "nang",

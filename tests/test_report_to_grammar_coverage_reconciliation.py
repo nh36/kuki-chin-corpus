@@ -116,7 +116,7 @@ def test_reconciliation_recommends_substantive_next_target_not_admin_handoff() -
 
     assert "# 4. Recommendation for the next substantive packet" in text
     assert "Synchronization update:" in text
-    assert "Current active substantive target: verbal `-pih` comitative applicative / comitative suffix." in text
+    assert "Current active substantive target: object-prefix / inverse-like `hong-` / `kong-`." in text
     assert "human-review handoff" not in lower
 
 
@@ -124,11 +124,12 @@ def test_reconciliation_includes_implementation_sketch_and_no_packet_creation() 
     text = _text()
 
     for required in (
-        "# 5. Implementation sketch for the active `-pih` target",
-        "output/publication_review/candidates_pih_comitative_applicative.tsv",
-        "output/publication_review/dossier_pih_comitative_applicative_scope.md",
-        "output/publication_review/grammar_pih_comitative_applicative_print_slice.md",
-        "output/publication_review/review_notes_pih_comitative_applicative.md",
-        "Core verbal anchors: `paipih`, `nekpih`, `tunpih`",
+        "# 5. Implementation sketch for the active `hong` / `kong` target",
+        "output/publication_review/candidates_hong_kong_object_prefix.tsv",
+        "output/publication_review/dossier_hong_kong_object_prefix_scope.md",
+        "output/publication_review/grammar_hong_kong_object_prefix_print_slice.md",
+        "output/publication_review/review_notes_hong_kong_object_prefix.md",
+        "Core hong anchors: `hongbia`, `hongmu`",
+        "Core kong anchors: `kongpia`, `kongkoih`, `kongmu`",
     ):
         assert required in text

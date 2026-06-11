@@ -120,6 +120,11 @@ ASSEMBLY_SPEC = [
                 ),
             },
             {"type": "slice", "title": "Prefix / agreement", "path": "output/publication_review/grammar_prefix_agreement_print_slice.md"},
+            {
+                "type": "slice",
+                "title": "Hong / kong object-prefix or inverse-like",
+                "path": "output/publication_review/grammar_hong_kong_object_prefix_print_slice.md",
+            },
             {"type": "slice", "title": "Transitivity", "path": "output/publication_review/grammar_transitivity_print_slice.md"},
             {"type": "slice", "title": "VP structure / suffix stacking", "path": "output/publication_review/grammar_vp_structure_stacking_print_slice.md"},
             {"type": "slice", "title": "TAM / aspect / modal", "path": "output/publication_review/grammar_tam_print_slice.md"},
@@ -367,6 +372,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "and `kainn` 'my house', where `ka-nei` '1SG-have' patterns as verbal agreement and `ka-inn` "
         "'1SG.POSS-house' patterns as nominal possession, while `hongmu` 'see me / come-see' and "
         "`kongmu` 'I see you / 1SG-see.2' remain boundary material."
+    ),
+    "Hong / kong object-prefix or inverse-like": (
+        "The current `hong` 'come / venitive' and `kong` '1→2 / direct-like' evidence is strongest for a narrow "
+        "participant-oriented prefix contrast: `hongbia` 'worship me' and `kongpia` 'give to you' are the "
+        "cleanest paired Gospel rows, `kongkoih` 'place you' adds an OT anchor, and `hongmu` 'see me' / "
+        "`kongmu` 'I see you' remain supportive but not diagnostic."
     ),
     "Pronouns / clusivity": (
         "The current pronoun evidence is strongest for independent forms such as `kei` 'I / me', `nang` "
