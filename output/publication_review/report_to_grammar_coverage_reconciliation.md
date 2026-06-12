@@ -27,16 +27,16 @@ Controlling sources used in this reconciliation:
 High-level status split:
 
 - **Properly lifted into grammar-facing treatment**: demonstratives/deixis, negation, interrogatives, sentence-final particles, numerals, quantifiers, coordinators, case marking, NP structure, noun domain, relators/postpositions, reduplication.
-- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, Hong / kong object-prefix or inverse-like marking (person-diagnostic stabilized), verb paradigms (first finite-frame slice), stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (first slice, stem-diagnostic stabilized), nominalization, clause linkage.
+- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, Hong / kong object-prefix or inverse-like marking (person-diagnostic stabilized), verb paradigms (first finite-frame slice, report-alignment stabilized), stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (first slice, stem-diagnostic stabilized), nominalization, clause linkage.
+- **Current active coverage target**: phonology/tone (cautious first source-aligned slice; blocked `-a` remains unresolved).
 - **Mainly boundary material**: switch reference, relative clauses, broad possession architecture.
-- **Report-backed but not packetized**: phonology/tone remains chapter-scale and still outside packetization.
 - **Cross-cutting analyzer-gap topics**: tone in `-a`, conditioned variants (`-pah`/`-pak`/`-lawh`), `hong-` / `kong-` constraints, `-sak` split, `-pih` constraints, `-thei/-theih`, habituals.
 
 # 2. Source-to-preview matrix
 
 | Domain | Source files / source category | Evidence layers present (R/L/M/A) | Current publication-review packet | Appears in assembled preview? | Coverage type | Main remaining gap | Recommended next action |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| phonology and tone | `SKELETON_GRAMMAR.md`; `GRAMMAR_SOURCE_INVENTORY.md`; `lit-reviews/02-phon-*`; analyzer-gap docs | R: no, L: yes, M: no, A: yes | none | yes (gap placeholder section) | blocked | no packet; tone-sensitive distinctions blocked in corpus layer | keep explicit as blocked chapter-scale gap |
+| phonology and tone | `SKELETON_GRAMMAR.md`; `GRAMMAR_SOURCE_INVENTORY.md`; `lit-reviews/02-phon-*`; analyzer-gap docs | R: no, L: yes, M: no, A: yes | phonology/tone candidate-first packet (first slice) | yes (`Phonology and tone`) | narrow slice | tone-sensitive `-a` still blocked; full tone analysis remains deferred | hold the first slice stable and review |
 | simple nouns | `reports/03-noun-01-simple.md`; noun-domain packet files | R: yes, L: partial, M: no, A: no | noun-domain packet | yes (`Noun domain`) | core section | broader noun architecture still incomplete | hold stable unless human review finds defects |
 | compound nouns | `reports/03-noun-02-compounds.md`; noun-domain dossier/slice | R: yes, L: partial, M: no, A: no | noun-domain packet | yes (boundary prose inside noun domain) | boundary-only | transparent vs opaque routing still incomplete | keep boundary-controlled inside noun-domain scope |
 | proper nouns | `reports/03-noun-03-proper.md`; noun-domain dossier/slice | R: yes, L: partial, M: no, A: no | noun-domain packet | yes (boundary prose inside noun domain) | boundary-only | no stabilized proper-name subsystem | keep as boundary material |
@@ -125,9 +125,9 @@ Hold stable unless human review finds defects:
 - broader possession architecture
 - full VP slot architecture beyond current narrow stacks
 
-## D. Report-backed and still unpacketized domains
+## D. Source-aligned domains lifted as cautious first slices
 
-- phonology and tone
+- phonology and tone (blocked `-a` remains unresolved)
 
 ## E. Cross-cutting blockers / analyzer-gap topics
 
@@ -141,56 +141,54 @@ Hold stable unless human review finds defects:
 
 # 4. Recommendation for the next substantive packet
 
-**Synchronization update:** the `hong` / `kong` target has now been actioned to a first grammar-facing slice with an explicit person-configuration diagnostic and should be held stable at first-slice maturity.
+**Synchronization update:** the `hong` / `kong` target has now been actioned to a first grammar-facing slice with an explicit person-configuration diagnostic and should be held stable at first-slice maturity. The verb-paradigm slice is now also report-alignment stabilized and should stay narrow unless tests break.
 
-**Current active substantive target: basic finite verb paradigms.**
+**Current active substantive target: phonology/tone.**
 
 Why this is the best active target from the same source architecture:
 
-1. **Completeness value:** the assembled preview still needs a dedicated finite-frame and person-marking paradigm section between stem alternation and prefix/agreement.
-2. **Evidence readiness:** the target is report-backed and cross-checkable with existing narrow slices (`05-verb-00`, `05-verb-03`, `05-verb-01`, `05-verb-04/05/07`, plus current prefix/TAM/transitivity/stem slices).
-3. **Candidate-first fit:** a narrow finite-predicate packet is manageable without opening a full agreement, TAM, stem, or voice chapter.
-4. **Boundary value:** it can separate finite-frame anchors from TAM, negation, stem alternation, object-prefix, and analyzer-gap material.
+1. **Completeness value:** the assembled preview now needs a cautious source-led phonology/tone section that can print segmental and tonal orientation without claiming a solved system.
+2. **Evidence readiness:** the literature and orthography source layers are already present and can support a narrow first slice.
+3. **Candidate-first fit:** a source-aligned slice can stay confined to safe segmental claims, tone status, and the blocked `-a` distinction without opening a full phonology or tone chapter.
+4. **Boundary value:** it can keep segmental phonology, orthography, tone status, and unresolved analyzer-gap material separate from stem alternation, TAM, `-pih`, and verb paradigms.
 
 Why not the other major gaps immediately:
 
-- **Phonology/tone** remains high-priority but blocked by unresolved tone-sensitive corpus constraints.
+- **Verb paradigms** is already lifted and stabilized.
 - **Broader discourse** remains partially surfaced and still better treated as deferred chapter-scale work.
 
-# 5. Implementation sketch for the active `verb paradigms` target
+# 5. Implementation sketch for the active `phonology/tone` target
 
 Likely controlling evidence:
 
-- `docs/grammar/reports/05-verb-00-paradigm-tables.md`
-- `docs/grammar/reports/05-verb-03-agreement.md`
-- `docs/grammar/reports/05-verb-01-stems.md`
-- `docs/grammar/reports/05-verb-04-tam.md`
-- `docs/grammar/reports/05-verb-05-aspect.md`
-- `docs/grammar/reports/05-verb-07-modal.md`
-- `docs/grammar/morphemes/01-prefixes.md`
-- `docs/grammar/morphemes/03-aspect.md`
-- `docs/grammar/morphemes/05-modal.md`
+- `docs/SKELETON_GRAMMAR.md`
+- `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md`
+- `docs/grammar/lit-reviews/02-phon-01-phonology-lit.md`
+- `docs/grammar/lit-reviews/02-phon-02-tone-lit.md`
+- `docs/grammar/README_ANALYZER_GAPS.md`
 - `docs/grammar/ANALYZER_LITERATURE_GAPS.md`
 - `docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md`
+- `docs/grammar/ANALYZER_GAPS_QUICK_REFERENCE.md`
 
 Likely boundary surfaces to keep visible:
 
-- `output/publication_review/grammar_prefix_agreement_print_slice.md` (person-prefix boundary)
 - `output/publication_review/grammar_tam_print_slice.md` (TAM boundary)
+- `output/publication_review/grammar_pih_comitative_applicative_print_slice.md` (`-pih` boundary)
 - `output/publication_review/grammar_stem_alternation_print_slice.md` (Form I/II boundary)
-- `output/publication_review/grammar_hong_kong_object_prefix_print_slice.md` (object-prefix boundary)
-- `output/publication_review/grammar_transitivity_print_slice.md` (predicate-class boundary)
+- `output/publication_review/grammar_verb_paradigms_print_slice.md` (finite-paradigm boundary)
 
 Proposed packet surfaces (now active):
 
-- `output/publication_review/candidates_verb_paradigms.tsv`
-- `output/publication_review/dossier_verb_paradigms_scope.md`
-- `output/publication_review/grammar_verb_paradigms_print_slice.md`
-- `output/publication_review/review_notes_verb_paradigms.md`
+- `output/publication_review/candidates_phonology_tone.tsv`
+- `output/publication_review/dossier_phonology_tone_scope.md`
+- `output/publication_review/grammar_phonology_tone_print_slice.md`
+- `output/publication_review/phonology_tone_source_alignment_diagnostic.md`
+- `output/publication_review/review_notes_phonology_tone.md`
 
 Likely anchors and controlled boundaries:
 
-- Core finite-frame anchors: `ka-nei hi`, `a en uh hi`
-- Core person-marking anchors: `na si ding hi`, `a suak hi`, `ka-nei kei hi`
-- Boundary rows: `ta nei lo hi`, `lutthei ding uh hi`, `mu / muh`, object-prefix rows, report-only paradigm artifacts
-- Keep report-table counts, full paradigm expansion, and full TAM/stem/object-prefix systems out of the first slice
+- Core segmental anchors: consonant inventory, vowel inventory, syllable shape
+- Core orthography anchors: practical spelling, tone not marked
+- Core tone anchors: three-tone summary, blocked `-a`
+- Boundary rows: stem alternation, TAM / aspect / modal, `-pih` 'with / accompanying', verb paradigms
+- Keep full phonology, full tone analysis, and corpus-level tone restoration out of the first slice

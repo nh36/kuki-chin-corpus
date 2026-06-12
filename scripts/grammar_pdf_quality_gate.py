@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REPORT_PATH = ROOT / "output" / "publication_review" / "grammar_facing_quality_report.md"
 FIRST_CHAPTER_TITLE = "Phonology and tone"
 TARGET_SECTION_TITLES = {
+    "Phonology and tone",
     "Demonstratives / deixis",
     "Negation",
     "Interrogatives",
@@ -740,8 +741,9 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
 
     for section_title, block in section_blocks.items():
         section_examples = [example for example in examples if section_title in example.heading_path]
-        zones = {source_zone(example.source) for example in section_examples if example.source}
-        if section_examples and not {"OT", "Gospel"}.issubset(zones):
+        sourced_section_examples = [example for example in section_examples if example.source]
+        zones = {source_zone(example.source) for example in sourced_section_examples}
+        if sourced_section_examples and not {"OT", "Gospel"}.issubset(zones):
             issues.append(f"Section {section_title} does not yet show both Old Testament and Gospel example coverage.")
 
         tex_section_blocks = iter_tex_blocks_for_section(tex_blocks, section_title)

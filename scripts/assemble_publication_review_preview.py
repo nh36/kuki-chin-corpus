@@ -83,14 +83,7 @@ ASSEMBLY_SPEC = [
     {
         "title": "1. Phonology and tone",
         "items": [
-            {
-                "type": "gap",
-                "text": "[MAJOR GAP: phonology/tone remains blocked or theory-heavy.]",
-                "explanation": (
-                    "The controlling checkpoints and audit still treat phonology/tone as blocked or theory-heavy, "
-                    "so no publication-review grammar slice is inlined here yet."
-                ),
-            }
+            {"type": "slice", "title": "Phonology and tone", "path": "output/publication_review/grammar_phonology_tone_print_slice.md"},
         ],
     },
     {
@@ -258,6 +251,7 @@ TECHNICAL_FILE_SUFFIXES = (".md", ".py", ".tex", ".pdf", ".tsv", ".bib", ".json"
 TECHNICAL_COMMAND_PREFIXES = ("python3", "make", "pytest", "xelatex", "pandoc", "git", "bibtex", "pdftotext")
 SOURCE_AUDIT_EXCEPTIONS: set[str] = set()
 TARGET_QUALITY_GATE_SECTION_TITLES = {
+    "Phonology and tone",
     "Demonstratives / deixis",
     "Negation",
     "Interrogatives",
@@ -319,6 +313,11 @@ GRAMMAR_FACING_DROP_SENTENCE_PATTERNS: tuple[re.Pattern[str], ...] = (
     re.compile(r"\b(?:tests?/|scripts?/|output/|docs/|bibles/)", re.IGNORECASE),
 )
 GRAMMAR_FACING_SECTION_INTROS = {
+    "Phonology and tone": (
+        "The current phonology and tone section is deliberately cautious: the literature supports a modest "
+        "segmental summary, practical spelling is only indirect evidence, and the tone-sensitive `-a` distinction "
+        "remains blocked."
+    ),
     "Demonstratives / deixis": (
         "The current demonstrative evidence is strongest for core `hih` 'this' and `tua` 'that / the "
         "aforementioned', plus plural `hihte` 'these' and `tuate` 'those', while `hi` and exact `hih ciangin` "

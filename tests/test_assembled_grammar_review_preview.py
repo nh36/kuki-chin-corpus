@@ -138,15 +138,37 @@ def test_assembler_defaults_to_grammar_facing_mode_and_runs_quality_gate() -> No
     assert "if args.grammar_facing:\n        run_quality_gate(TEX_OUTPUT)" in script
 
 
-def test_assembled_preview_gap_sections_use_grammar_facing_prose() -> None:
+def test_assembled_preview_includes_phonology_and_tone_section() -> None:
     text = _text()
+    tex = _tex_text()
+    pdf = _pdf_text()
+    normalized_tex = _normalize(tex.lower())
+    normalized_pdf = _normalize(pdf.lower())
 
     for required in (
-        "A full discussion of phonology and tone is not yet included in this review preview.",
-        "A fuller treatment of discourse structure is not yet included in this draft.",
-        "Several cross-cutting morphological issues remain unresolved and are not yet integrated into this draft.",
+        "Overview of phonology and tone in Tedim",
+        "Orientation table",
+        "Segmental phonology",
+        "Orthography and syllable shape",
+        "Tone status",
+        "The blocked -a issue",
+        "Boundaries with stem alternation, TAM, `-pih`, and verb paradigms",
+        "What can be printed now",
     ):
         assert required in text
+
+    for required in (
+        "overview of phonology and tone in tedim",
+        "orientation table",
+        "segmental phonology",
+        "orthography and syllable shape",
+        "tone status",
+        "the blocked -a issue",
+    ):
+        assert required in normalized_tex
+        assert required in normalized_pdf
+
+    assert "a full discussion of phonology and tone is not yet included" not in text.lower()
 
 
 def test_assembled_preview_includes_normalized_interrogatives_section() -> None:
@@ -1860,7 +1882,11 @@ def test_assembled_preview_gap_and_review_status_text_are_not_aggressively_itali
     tex = _tex_text()
     normalized = _normalize(tex)
 
-    assert "A full discussion of phonology and tone is not yet included in this review preview." in normalized
+    assert (
+        "The current phonology and tone section is deliberately cautious: the literature supports a modest "
+        "segmental summary, practical spelling is only indirect evidence, and the tone-sensitive \\tdim{-a} "
+        "distinction remains blocked."
+    ) in normalized
     assert "\\tdim{review preview, not a finished grammar}" not in tex
 
 
@@ -1889,7 +1915,7 @@ def test_assembled_preview_pdf_text_shows_parenthetical_citations_and_numbered_e
     assert "abbreviations" in lower
     assert "references" in lower
     assert re.search(r"\(Henderson,\s*1965.{0,20}Cing,\s*2017\)", normalized)
-    assert "(2.1)" in pdf_text
+    assert "(1.1)" in pdf_text
     assert re.search(r"\(3\.\d+\)", pdf_text)
     assert re.search(r"\(4\.\d+\)", pdf_text)
     assert "Genesis 5:1" in pdf_text

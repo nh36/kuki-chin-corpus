@@ -96,7 +96,7 @@ def test_reconciliation_distinguishes_required_coverage_types() -> None:
         "narrow slice",
         "boundary-only",
         "mentioned only",
-        "unpacketized",
+        "packetized",
         "blocked",
         "deferred",
     ):
@@ -116,20 +116,24 @@ def test_reconciliation_recommends_substantive_next_target_not_admin_handoff() -
 
     assert "# 4. Recommendation for the next substantive packet" in text
     assert "Synchronization update:" in text
-    assert "Current active substantive target: basic finite verb paradigms." in text
+    assert "Current active substantive target: phonology/tone." in text
+    assert "report-alignment stabilized" in lower
     assert "human-review handoff" not in lower
 
 
-def test_reconciliation_includes_implementation_sketch_and_no_packet_creation() -> None:
+def test_reconciliation_includes_phonology_tone_implementation_sketch() -> None:
     text = _text()
 
     for required in (
-        "# 5. Implementation sketch for the active `verb paradigms` target",
-        "output/publication_review/candidates_verb_paradigms.tsv",
-        "output/publication_review/dossier_verb_paradigms_scope.md",
-        "output/publication_review/grammar_verb_paradigms_print_slice.md",
-        "output/publication_review/review_notes_verb_paradigms.md",
-        "Core finite-frame anchors: `ka-nei hi`, `a en uh hi`",
-        "Core person-marking anchors: `na si ding hi`, `a suak hi`, `ka-nei kei hi`",
+        "# 5. Implementation sketch for the active `phonology/tone` target",
+        "output/publication_review/candidates_phonology_tone.tsv",
+        "output/publication_review/dossier_phonology_tone_scope.md",
+        "output/publication_review/grammar_phonology_tone_print_slice.md",
+        "output/publication_review/phonology_tone_source_alignment_diagnostic.md",
+        "output/publication_review/review_notes_phonology_tone.md",
+        "Core segmental anchors: consonant inventory, vowel inventory, syllable shape",
+        "Core orthography anchors: practical spelling, tone not marked",
+        "Core tone anchors: three-tone summary, blocked `-a`",
+        "Boundary rows: stem alternation, TAM / aspect / modal, `-pih` 'with / accompanying', verb paradigms",
     ):
         assert required in text
