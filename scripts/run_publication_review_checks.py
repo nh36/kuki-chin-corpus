@@ -17,6 +17,7 @@ PYTEST_FILES = [
     "tests/test_ki_reflexive_middle_normalized_print_slice.py",
     "tests/test_pih_comitative_applicative_normalized_print_slice.py",
     "tests/test_hong_kong_object_prefix_normalized_print_slice.py",
+    "tests/test_verb_paradigms_normalized_print_slice.py",
     "tests/test_prefix_agreement_normalized_print_slice.py",
     "tests/test_pronouns_normalized_print_slice.py",
     "tests/test_demonstratives_normalized_print_slice.py",

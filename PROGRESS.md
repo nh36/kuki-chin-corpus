@@ -137,6 +137,7 @@ And to `scripts/`:
 
 ## Recent Tedim publication-review work
 
+- The basic verb-paradigm packet has now been started and lifted to a first grammar-facing print slice, with finite-frame/person-marking anchors and explicit TAM, negation, stem, object-prefix, and analyzer-gap boundaries.
 - The case-marking grammar/dictionary review packet is now the editorial model for Tedim print-facing slices.
 - The pronoun grammar slice, dictionary slice, and review notes have been created in `output/publication_review/`.
 - A separate pronoun clusivity dossier has been created at `output/publication_review/dossier_pronoun_clusivity.md`.

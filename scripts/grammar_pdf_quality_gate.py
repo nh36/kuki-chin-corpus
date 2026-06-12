@@ -24,6 +24,7 @@ TARGET_SECTION_TITLES = {
     "Coordinators",
     "Reduplication",
     "Stem alternation",
+    "Verb paradigms",
     "Prefix / agreement",
     "Hong / kong object-prefix or inverse-like",
     "Pronouns / clusivity",

@@ -110,15 +110,7 @@ ASSEMBLY_SPEC = [
         "title": "3. Predicate structure and verbal morphology",
         "items": [
             {"type": "slice", "title": "Stem alternation", "path": "output/publication_review/grammar_stem_alternation_print_slice.md"},
-            {
-                "type": "gap",
-                "title": "Verb paradigms",
-                "text": "[MAJOR GAP: verb paradigms remain report-backed but not packet-shaped.]",
-                "explanation": (
-                    "`docs/grammar/reports/05-verb-00-paradigm-tables.md` remains part of the evidence base, "
-                    "but it has not yet been converted into a review-note-stage packet with an assembled grammar slice."
-                ),
-            },
+            {"type": "slice", "title": "Verb paradigms", "path": "output/publication_review/grammar_verb_paradigms_print_slice.md"},
             {"type": "slice", "title": "Prefix / agreement", "path": "output/publication_review/grammar_prefix_agreement_print_slice.md"},
             {
                 "type": "slice",
@@ -273,6 +265,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "Coordinators",
     "Reduplication",
     "Stem alternation",
+    "Verb paradigms",
     "Prefix / agreement",
     "Pronouns / clusivity",
     "Numerals",
@@ -366,6 +359,11 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "The current stem-alternation evidence supports a controlled Form I / Form II contrast around "
         "`mu / muh` 'see', `ne / nek` 'eat', and `nei / neih` 'have', while promoted caveated pairs, "
         "one-sided controls, and blocked rows remain explicit boundaries."
+    ),
+    "Verb paradigms": (
+        "The current verb-paradigm evidence is strongest for finite predicate frames such as `kanei` "
+        "'I have', `na si ding hi` '2SG die IRR DECL', and `a en uh hi` '3SG look.at PL DECL', while "
+        "negation-heavy, TAM-heavy, stem-alternation, and object-prefix rows remain boundary material."
     ),
     "Prefix / agreement": (
         "The current prefix-routing evidence is strongest for host-sensitive contrast between `kanei` 'I have' "

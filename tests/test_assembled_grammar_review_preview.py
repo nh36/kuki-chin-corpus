@@ -143,7 +143,6 @@ def test_assembled_preview_gap_sections_use_grammar_facing_prose() -> None:
 
     for required in (
         "A full discussion of phonology and tone is not yet included in this review preview.",
-        "A full discussion of verbal paradigms is not yet included in this draft.",
         "A fuller treatment of discourse structure is not yet included in this draft.",
         "Several cross-cutting morphological issues remain unresolved and are not yet integrated into this draft.",
     ):
@@ -449,6 +448,8 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
 
     for required in (
         "Overview of Form I / Form II stem alternation",
+        "Overview of basic finite verb paradigms in Tedim",
+        "Basic finite paradigm inventory",
         "Current stem alternation overview",
         "Overview of transitivity contrasts",
         "Current transitivity inventory",
@@ -499,6 +500,8 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "\\setcounter{secnumdepth}{3}" in tex
     assert "\\setcounter{tocdepth}{2}" in tex
     assert "overview of form i / form ii stem alternation" in normalized
+    assert "overview of basic finite verb paradigms in tedim" in normalized
+    assert "basic finite paradigm inventory" in normalized
     assert "current stem alternation overview" in normalized
     assert "overview of transitivity contrasts" in normalized
     assert "\\tdim{sih}" in lower

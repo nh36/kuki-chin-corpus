@@ -27,9 +27,9 @@ Controlling sources used in this reconciliation:
 High-level status split:
 
 - **Properly lifted into grammar-facing treatment**: demonstratives/deixis, negation, interrogatives, sentence-final particles, numerals, quantifiers, coordinators, case marking, NP structure, noun domain, relators/postpositions, reduplication.
-- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, Hong / kong object-prefix or inverse-like marking, stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (first slice, stem-diagnostic stabilized), nominalization, clause linkage.
+- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, Hong / kong object-prefix or inverse-like marking (person-diagnostic stabilized), verb paradigms (first finite-frame slice), stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (first slice, stem-diagnostic stabilized), nominalization, clause linkage.
 - **Mainly boundary material**: switch reference, relative clauses, broad possession architecture.
-- **Report-backed but not packetized**: verb paradigms; phonology/tone remains chapter-scale and still outside packetization.
+- **Report-backed but not packetized**: phonology/tone remains chapter-scale and still outside packetization.
 - **Cross-cutting analyzer-gap topics**: tone in `-a`, conditioned variants (`-pah`/`-pak`/`-lawh`), `hong-` / `kong-` constraints, `-sak` split, `-pih` constraints, `-thei/-theih`, habituals.
 
 # 2. Source-to-preview matrix
@@ -48,9 +48,9 @@ High-level status split:
 | demonstratives / deixis | `reports/06-func-02-demonstratives.md`; `lit-reviews/06-func-02-demonstratives-lit.md`; demonstratives packet | R: yes, L: yes, M: no, A: no | demonstratives packet | yes | core section | discourse/deixis extension stays bounded | hold stable |
 | pronouns / clusivity | `reports/06-func-01-pronouns.md`; pronoun packet | R: yes, L: yes, M: partial, A: no | pronouns packet | yes | narrow slice | clusivity and prefix interfaces still partially unresolved | hold stable; avoid broad rewrite |
 | pronominal prefixes / agreement | `reports/05-verb-03-agreement.md`; `morphemes/01-prefixes.md`; prefix packet | R: yes, L: yes, M: yes, A: yes | prefix/agreement packet | yes | narrow slice | full paradigm and object/inverse selection not yet synthesized | hold stable; keep boundary cautions |
-| Hong / kong object-prefix or inverse-like | `reports/05-verb-03-agreement.md`; `morphemes/01-prefixes.md`; analyzer-gap docs | R: yes, L: partial, M: yes, A: yes | hong/kong candidate-first packet | yes | narrow slice | selection constraints and boundary rows remain unresolved | keep the active hong/kong slice narrow while stabilizing the contrast |
+| Hong / kong object-prefix or inverse-like | `reports/05-verb-03-agreement.md`; `morphemes/01-prefixes.md`; analyzer-gap docs | R: yes, L: partial, M: yes, A: yes | hong/kong candidate-first packet (person-diagnostic stabilized) | yes | narrow slice | selection constraints and boundary rows remain unresolved | hold stable at current first-slice maturity |
 | reflexive / reciprocal / middle-like `ki-` | `reports/05-verb-09-valency.md`; `reports/06-func-01-pronouns.md`; `lit-reviews/05-verb-09-valency-lit.md`; `morphemes/01-prefixes.md` | R: yes, L: yes, M: yes, A: no | dedicated `ki-` reflexive/reciprocal/middle packet | yes | narrow slice | first slice is intentionally narrow and still boundary-heavy around lexicalized and passive-like rows | hold stable at first-slice maturity; deepen only if review/testing exposes defects |
-| verb paradigms | `reports/05-verb-00-paradigm-tables.md`; skeleton verb chapter | R: yes, L: partial, M: no, A: no | none | yes (`Verb paradigms` placeholder) | unpacketized | report-backed but not lifted into packet workflow | schedule as major packet after next manageable packet |
+| verb paradigms | `reports/05-verb-00-paradigm-tables.md`; `reports/05-verb-03-agreement.md`; `reports/05-verb-01-stems.md`; `reports/05-verb-04/05/07`; verb-paradigm packet files | R: yes, L: partial, M: yes, A: yes | verb-paradigm candidate-first packet (first slice) | yes (`Verb paradigms` section) | narrow slice | report-table noise, TAM overlap, stem overlap, and analyzer-gap boundaries remain | keep first slice narrow; deepen only after review |
 | stem alternation | `reports/05-verb-01-stems.md`; `reports/05-verb-11-vsa-questionnaire.md`; stem packet | R: yes, L: yes, M: no, A: no | stem-alternation packet | yes | narrow slice | difficult/one-sided pairs remain explicitly controlled | hold stable |
 | transitivity | `reports/05-verb-12-transitivity.md`; transitivity packet | R: yes, L: partial, M: no, A: no | transitivity packet | yes | narrow slice | lexical vs derivational and prefix-heavy overlap remains open | hold stable |
 | TAM / aspect / modal | `reports/05-verb-04/05/07`; `morphemes/03-aspect.md`; `morphemes/05-modal.md`; TAM packet | R: yes, L: yes, M: yes, A: yes | TAM packet | yes | narrow slice | full system and stacking interactions remain open | hold stable |
@@ -75,7 +75,7 @@ High-level status split:
 | analyzer-gap caution (cross-cutting roll-up) | all analyzer-gap docs + inventory audit rows | R: n/a, L: n/a, M: n/a, A: yes | none | yes (`Analyzer-gap caution`) | mentioned only | unresolved items are listed but not synthesized in grammar-facing packets | keep as cross-cutting blocker layer |
 | tone in `-a` case marker | analyzer-gap docs; case-marker literature | R: partial, L: yes, M: yes, A: yes | none | no (only indirect caution) | blocked | corpus layer lacks tone preservation | leave blocked until tone-restored corpus path exists |
 | conditioned variants (`-pah` / `-pak` / `-lawh`) | analyzer-gap docs; modal morpheme notes | R: partial, L: partial, M: yes, A: yes | none | no | blocked | conditioning still unresolved in sources | keep blocked/open as research issue |
-| `hong-` / `kong-` inverse constraints (analyzer topic) | agreement report; prefix morpheme db; analyzer-gap docs | R: yes, L: partial, M: yes, A: yes | hong/kong candidate-first packet | yes | narrow slice | constraints still need careful boundary control | keep the active hong/kong slice narrow until the contrast is stabilized |
+| `hong-` / `kong-` inverse constraints (analyzer topic) | agreement report; prefix morpheme db; analyzer-gap docs | R: yes, L: partial, M: yes, A: yes | hong/kong candidate-first packet | yes | narrow slice | constraints still need careful boundary control | keep stable and boundary-controlled |
 | `-sak` CAUS/BENF split (analyzer topic) | derivation/valency reports; lit review; analyzer-gap docs | R: yes, L: yes, M: yes, A: yes | derivation/valency packet | yes | narrow slice | split is only partly reconciled across layers | keep controlled `-sak` slice; avoid overgeneralization |
 | `-pih` Form II constraints (analyzer topic) | derivation/valency reports; lit review; morpheme db; analyzer-gap docs | R: yes, L: yes, M: yes, A: yes | dedicated `-pih` packet (first slice, stabilized) | yes | narrow slice | row-level selection still needs reviewer confirmation | keep the first slice stable |
 | `-thei/-theih` allomorphy (analyzer topic) | TAM reports; modal morpheme db; analyzer-gap docs | R: yes, L: partial, M: yes, A: yes | TAM packet | yes | narrow slice | form-conditioned allomorphy remains under-specified in review prose | keep narrow and controlled |
@@ -104,6 +104,8 @@ Hold stable unless human review finds defects:
 
 - pronouns / clusivity
 - pronominal prefixes / agreement
+- object-prefix or inverse-like `hong-` / `kong-`
+- verb paradigms (first finite-frame slice)
 - stem alternation
 - transitivity
 - TAM / aspect / modal
@@ -118,16 +120,14 @@ Hold stable unless human review finds defects:
 
 ## C. Boundary-only domains still needing synthesis for a fuller grammar
 
-- object-prefix or inverse-like `hong-` / `kong-`
 - switch reference
 - relative clauses
 - broader possession architecture
 - full VP slot architecture beyond current narrow stacks
 
-## D. Report-backed but not yet packetized domains
+## D. Report-backed and still unpacketized domains
 
 - phonology and tone
-- verb paradigms
 
 ## E. Cross-cutting blockers / analyzer-gap topics
 
@@ -141,52 +141,56 @@ Hold stable unless human review finds defects:
 
 # 4. Recommendation for the next substantive packet
 
-**Synchronization update:** the recommended `ki-` target has now been actioned as a first grammar-facing slice and should be held stable at first-slice maturity.
+**Synchronization update:** the `hong` / `kong` target has now been actioned to a first grammar-facing slice with an explicit person-configuration diagnostic and should be held stable at first-slice maturity.
 
-**Current active substantive target: object-prefix / inverse-like `hong-` / `kong-`.**
+**Current active substantive target: basic finite verb paradigms.**
 
 Why this is the best active target from the same source architecture:
 
-1. **Completeness value:** `hong-` / `kong-` are repeatedly visible in agreement, pronoun, valency, and analyzer-gap sources, but they have lacked a dedicated packetized treatment.
-2. **Evidence readiness:** they are report-backed, lit-backed, and morpheme-backed (`05-verb-03-agreement`, `06-func-01-pronouns`, `morphemes/01-prefixes.md`, `ANALYZER_LITERATURE_GAPS.md`, `ANALYZER_GAPS_CORPUS_EXAMPLES.md`).
-3. **Candidate-first fit:** a narrow participant-oriented slice is manageable without opening a full agreement or inverse chapter.
-4. **Boundary value:** it separates hong venitive/deictic rows from kong direct-like rows and keeps speech-formula overlap explicit.
+1. **Completeness value:** the assembled preview still needs a dedicated finite-frame and person-marking paradigm section between stem alternation and prefix/agreement.
+2. **Evidence readiness:** the target is report-backed and cross-checkable with existing narrow slices (`05-verb-00`, `05-verb-03`, `05-verb-01`, `05-verb-04/05/07`, plus current prefix/TAM/transitivity/stem slices).
+3. **Candidate-first fit:** a narrow finite-predicate packet is manageable without opening a full agreement, TAM, stem, or voice chapter.
+4. **Boundary value:** it can separate finite-frame anchors from TAM, negation, stem alternation, object-prefix, and analyzer-gap material.
 
 Why not the other major gaps immediately:
 
 - **Phonology/tone** remains high-priority but blocked by unresolved tone-sensitive corpus constraints.
-- **Verb paradigms** remain report-backed but chapter-scale and too large for the next ordinary narrow packet.
+- **Broader discourse** remains partially surfaced and still better treated as deferred chapter-scale work.
 
-# 5. Implementation sketch for the active `hong` / `kong` target
+# 5. Implementation sketch for the active `verb paradigms` target
 
 Likely controlling evidence:
 
+- `docs/grammar/reports/05-verb-00-paradigm-tables.md`
 - `docs/grammar/reports/05-verb-03-agreement.md`
+- `docs/grammar/reports/05-verb-01-stems.md`
+- `docs/grammar/reports/05-verb-04-tam.md`
+- `docs/grammar/reports/05-verb-05-aspect.md`
+- `docs/grammar/reports/05-verb-07-modal.md`
 - `docs/grammar/morphemes/01-prefixes.md`
-- `docs/grammar/reports/06-func-01-pronouns.md`
-- `docs/grammar/reports/05-verb-08-derivational.md`
-- `docs/grammar/reports/05-verb-09-valency.md`
-- `docs/grammar/lit-reviews/05-verb-09-valency-lit.md`
+- `docs/grammar/morphemes/03-aspect.md`
+- `docs/grammar/morphemes/05-modal.md`
 - `docs/grammar/ANALYZER_LITERATURE_GAPS.md`
 - `docs/grammar/ANALYZER_GAPS_CORPUS_EXAMPLES.md`
 
 Likely boundary surfaces to keep visible:
 
-- `output/publication_review/grammar_prefix_agreement_print_slice.md` (boundary rows in the older prefix packet)
-- `output/publication_review/grammar_pronouns_print_slice.md` (participant-orientation overlap)
-- `output/publication_review/grammar_transitivity_print_slice.md` (valency overlap)
+- `output/publication_review/grammar_prefix_agreement_print_slice.md` (person-prefix boundary)
+- `output/publication_review/grammar_tam_print_slice.md` (TAM boundary)
+- `output/publication_review/grammar_stem_alternation_print_slice.md` (Form I/II boundary)
+- `output/publication_review/grammar_hong_kong_object_prefix_print_slice.md` (object-prefix boundary)
+- `output/publication_review/grammar_transitivity_print_slice.md` (predicate-class boundary)
 
 Proposed packet surfaces (now active):
 
-- `output/publication_review/candidates_hong_kong_object_prefix.tsv`
-- `output/publication_review/dossier_hong_kong_object_prefix_scope.md`
-- `output/publication_review/grammar_hong_kong_object_prefix_print_slice.md`
-- `output/publication_review/review_notes_hong_kong_object_prefix.md`
+- `output/publication_review/candidates_verb_paradigms.tsv`
+- `output/publication_review/dossier_verb_paradigms_scope.md`
+- `output/publication_review/grammar_verb_paradigms_print_slice.md`
+- `output/publication_review/review_notes_verb_paradigms.md`
 
 Likely anchors and controlled boundaries:
 
-- Core hong anchors: `hongbia`, `hongmu`
-- Core kong anchors: `kongpia`, `kongkoih`, `kongmu`
-- Supporting overlap rows: `hongzui`, `hongsawl`
-- Boundary rows: `hongpai`, `hongbei`, `hongsuahna`, `kongci`, `konggenkik`
-- Keep speech-formula, motion, and lexicalized rows out of the core slice
+- Core finite-frame anchors: `ka-nei hi`, `a en uh hi`
+- Core person-marking anchors: `na si ding hi`, `a suak hi`, `ka-nei kei hi`
+- Boundary rows: `ta nei lo hi`, `lutthei ding uh hi`, `mu / muh`, object-prefix rows, report-only paradigm artifacts
+- Keep report-table counts, full paradigm expansion, and full TAM/stem/object-prefix systems out of the first slice
