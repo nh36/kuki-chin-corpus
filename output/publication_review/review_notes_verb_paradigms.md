@@ -6,16 +6,27 @@ title: "Review Notes: Verb paradigms"
 
 This checklist is for reviewer workflow only and should not appear in assembled grammar prose.
 
-## Finite-frame and person-marking checks
+## Framing and claim-strength checks
 
-- [ ] **Do the promoted rows really illustrate finite predicate frames?**  
-  Recheck `ka-nei hi`, `a en uh hi`, `na si ding hi`, `a suak hi`, and `ka-nei kei hi` in context.
+- [ ] **Is the section framed as finite predicate frames rather than a full paradigm account?**  
+  Confirm that the section is treated as a finite-predicate-frame/person-marked first slice, not as a complete paradigm chapter.
 
 - [ ] **Are person-marking claims too strong?**  
   Confirm the section stays at finite-frame evidence level and does not claim a complete person-prefix paradigm.
 
-- [ ] **Are the selected verbs appropriate first anchors?**  
-  Verify that `nei` and `suak` are safe for this slice, and that broader verb coverage is correctly deferred.
+- [ ] **Do the promoted rows really support person-marked finite predicates?**  
+  Recheck `ka nei hi`, `a en uh hi`, `na si ding hi`, `a suak hi`, and `ka nei kei hi` in context.
+
+## Orthography, segmentation, and `hi` checks
+
+- [ ] **Is surface orthography kept distinct from segmented analysis?**  
+  Check that surface forms such as `ka nei hi` are not replaced by `ka-nei hi` outside segmentation/parse contexts.
+
+- [ ] **Is `ka nei` / `ka-nei` representation consistent across prose and examples?**  
+  Confirm surface forms are used in prose/inventory and segmented forms in segmentation lines.
+
+- [ ] **Is clause-final `hi` treated at the right strength?**  
+  Confirm `hi` is treated as a clause-final element in selected finite frames, without reopening the full sentence-final system.
 
 ## Boundary-routing checks
 
@@ -32,6 +43,9 @@ This checklist is for reviewer workflow only and should not appear in assembled 
 
 - [ ] **Are any rows merely report-table artifacts rather than corpus-backed evidence?**  
   Recheck report-table rows such as `ka pai`/`kap-ai` for artifact segmentation.
+
+- [ ] **Are selected verbs still appropriate first anchors?**  
+  Verify that `nei`, `suak`, and supporting `en` remain the right narrow anchors at this maturity level.
 
 - [ ] **Does the section overstate the state of the full paradigm system?**  
   Confirm the prose remains explicit that this is a narrow first slice, not a complete verbal paradigm chapter.

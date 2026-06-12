@@ -18,18 +18,26 @@ CANDIDATES_PATH = ROOT / "output/publication_review/candidates_verb_paradigms.ts
 DOSSIER_PATH = ROOT / "output/publication_review/dossier_verb_paradigms_scope.md"
 SLICE_PATH = ROOT / "output/publication_review/grammar_verb_paradigms_print_slice.md"
 REVIEW_NOTES_PATH = ROOT / "output/publication_review/review_notes_verb_paradigms.md"
+DIAGNOSTIC_PATH = ROOT / "output/publication_review/verb_paradigm_report_alignment_diagnostic.md"
 BIBLE_PATH = ROOT / "bibles/extracted/ctd/ctd-x-bible.txt"
 
 ALLOWED_DIAGNOSTIC_VALUES = {
     "finite_frame_diagnostic",
     "person_marking_diagnostic",
     "paradigm_supporting",
+    "report_table_only",
     "tam_boundary",
     "negation_boundary",
     "stem_alternation_boundary",
     "object_prefix_boundary",
     "analyzer_gap_blocked",
     "lexicalized_or_unclear",
+}
+
+ALLOWED_EVIDENCE_VALUES = {
+    "corpus_backed",
+    "report_table_only",
+    "analyzer_gap_blocked",
 }
 
 ALLOWED_STATUS_VALUES = {
@@ -61,11 +69,16 @@ def _review_notes_text() -> str:
     return REVIEW_NOTES_PATH.read_text(encoding="utf-8")
 
 
+def _diagnostic_text() -> str:
+    return DIAGNOSTIC_PATH.read_text(encoding="utf-8")
+
+
 def test_verb_paradigm_packet_files_exist() -> None:
     assert CANDIDATES_PATH.exists()
     assert DOSSIER_PATH.exists()
     assert SLICE_PATH.exists()
     assert REVIEW_NOTES_PATH.exists()
+    assert DIAGNOSTIC_PATH.exists()
 
 
 def test_verb_paradigm_candidate_tsv_has_required_columns() -> None:
@@ -83,6 +96,7 @@ def test_verb_paradigm_candidate_tsv_has_required_columns() -> None:
         "stem_form_status",
         "source_reference",
         "source_zone",
+        "evidence_status",
         "tedim_text",
         "segmentation",
         "gloss",
@@ -108,15 +122,18 @@ def test_verb_paradigm_candidate_tsv_tracks_required_diagnostic_categories() -> 
     diagnostic_statuses = {row["diagnostic_status"] for row in rows}
     candidate_statuses = {row["candidate_status"] for row in rows}
     print_statuses = {row["print_status"] for row in rows}
+    evidence_statuses = {row["evidence_status"] for row in rows}
 
     assert diagnostic_statuses <= ALLOWED_DIAGNOSTIC_VALUES
     assert candidate_statuses <= ALLOWED_STATUS_VALUES
     assert print_statuses <= ALLOWED_PRINT_VALUES
+    assert evidence_statuses <= ALLOWED_EVIDENCE_VALUES
 
     for required in (
         "finite_frame_diagnostic",
         "person_marking_diagnostic",
         "paradigm_supporting",
+        "report_table_only",
         "tam_boundary",
         "negation_boundary",
         "stem_alternation_boundary",
@@ -129,12 +146,42 @@ def test_verb_paradigm_candidate_tsv_tracks_required_diagnostic_categories() -> 
 
 def test_verb_paradigm_report_rows_are_not_promoted_as_core_grammar_rows() -> None:
     rows = _rows()
-    report_rows = [row for row in rows if row["source_zone"] == "Report table"]
+    report_rows = [row for row in rows if row["evidence_status"] == "report_table_only"]
 
     assert report_rows
     for row in report_rows:
         assert row["print_status"] in {"boundary_only", "blocked"}
         assert row["candidate_status"] in {"deferred", "blocked"}
+
+
+def test_verb_paradigm_promoted_rows_are_corpus_backed() -> None:
+    for row in _rows():
+        if row["print_status"] in {"print_ready", "print_usable_with_caveat", "supporting_candidate"}:
+            assert row["evidence_status"] == "corpus_backed"
+
+
+def test_verb_paradigm_alignment_diagnostic_discusses_report_and_framing_decision() -> None:
+    lower = _diagnostic_text().lower()
+
+    assert "paradigm-table report" in lower
+    assert "docs/grammar/reports/05-verb-00-paradigm-tables.md" in lower
+    assert "corpus-backed" in lower
+    assert "report-table-only" in lower
+    assert "finite-predicate-frame and person-marked-predicate first slice" in lower
+    assert "fuller paradigm slice" in lower
+
+
+def test_verb_paradigm_alignment_diagnostic_checks_current_promoted_examples() -> None:
+    text = _diagnostic_text()
+
+    for source in (
+        "Genesis 21:7",
+        "Matthew 27:36",
+        "Genesis 2:17",
+        "Genesis 26:13",
+        "John 4:17",
+    ):
+        assert source in text
 
 
 def test_verb_paradigm_slice_is_grammar_facing() -> None:
@@ -172,6 +219,23 @@ def test_verb_paradigm_slice_has_compact_inventory_table_and_required_categories
         "analyzer-gap or blocked material",
     ):
         assert required in lower
+
+
+def test_verb_paradigm_slice_distinguishes_surface_forms_from_segmentation() -> None:
+    text = _slice_text()
+    lower = text.lower()
+
+    assert "surface orthography is kept in prose and inventory forms" in lower
+    assert "`ka nei hi`" in text
+    assert "ka-nei | hi" in text
+    assert "`ka-nei hi`" not in text
+
+
+def test_verb_paradigm_slice_treats_hi_as_scoped_clause_final_material() -> None:
+    lower = _slice_text().lower()
+
+    assert "clause-final `hi`" in lower
+    assert "sentence-final particles section" in lower
 
 
 def test_verb_paradigm_slice_examples_keep_source_after_translation() -> None:
@@ -222,7 +286,7 @@ def test_verb_paradigm_slice_does_not_turn_report_counts_into_grammar_facts() ->
     text = _slice_text()
     lower = text.lower()
 
-    assert "raw report counts are not used as grammar facts" in lower
+    assert "raw report counts or report-table templates are not used as grammar facts by themselves" in lower
     assert not re.search(r"\b\d{1,3}(?:,\d{3})+\b", text)
 
 
@@ -230,9 +294,11 @@ def test_verb_paradigm_review_notes_cover_required_human_checks() -> None:
     lower = _review_notes_text().lower()
 
     for required in (
-        "finite predicate frames",
+        "finite predicate frames rather than a full paradigm account",
         "person-marking claims",
         "tam, negation, stem alternation, or object-prefix",
+        "`ka nei` / `ka-nei`",
+        "clause-final `hi`",
         "selected verbs",
         "report-table artifacts",
         "overstate the state of the full paradigm system",
