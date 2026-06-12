@@ -17,7 +17,9 @@ from interlinear_latex import load_bible
 CANDIDATES_PATH = ROOT / "output/publication_review/candidates_hong_kong_object_prefix.tsv"
 DOSSIER_PATH = ROOT / "output/publication_review/dossier_hong_kong_object_prefix_scope.md"
 SLICE_PATH = ROOT / "output/publication_review/grammar_hong_kong_object_prefix_print_slice.md"
+DIAGNOSTIC_PATH = ROOT / "output/publication_review/hong_kong_person_configuration_diagnostic.md"
 REVIEW_NOTES_PATH = ROOT / "output/publication_review/review_notes_hong_kong_object_prefix.md"
+PREFIX_SLICE_PATH = ROOT / "output/publication_review/grammar_prefix_agreement_print_slice.md"
 PREVIEW_PATH = ROOT / "output/publication_review/assembled_grammar_review_preview.md"
 BIBLE_PATH = ROOT / "bibles/extracted/ctd/ctd-x-bible.txt"
 
@@ -53,6 +55,14 @@ def _preview_text() -> str:
     return PREVIEW_PATH.read_text(encoding="utf-8")
 
 
+def _prefix_text() -> str:
+    return PREFIX_SLICE_PATH.read_text(encoding="utf-8")
+
+
+def _diagnostic_text() -> str:
+    return DIAGNOSTIC_PATH.read_text(encoding="utf-8")
+
+
 def _rows() -> list[dict[str, str]]:
     with CANDIDATES_PATH.open(encoding="utf-8", newline="") as handle:
         return list(csv.DictReader(handle, delimiter="\t"))
@@ -62,6 +72,7 @@ def test_hong_kong_object_prefix_packet_files_exist() -> None:
     assert CANDIDATES_PATH.exists()
     assert DOSSIER_PATH.exists()
     assert SLICE_PATH.exists()
+    assert DIAGNOSTIC_PATH.exists()
     assert REVIEW_NOTES_PATH.exists()
 
 
@@ -86,6 +97,7 @@ def test_hong_kong_object_prefix_candidate_tsv_has_required_columns() -> None:
         "candidate_status",
         "print_status",
         "diagnostic_status",
+        "person_configuration_decision",
         "why_selected",
         "caveat",
     }
@@ -146,12 +158,53 @@ def test_hong_kong_object_prefix_candidate_tsv_statuses_are_controlled() -> None
 
     for form in ("hongbia", "kongpia", "kongkoih"):
         assert by_form[form]["diagnostic_status"] == "object_prefix_diagnostic"
-    for form in ("hongmu", "kongmu", "hongzui", "hongsawl"):
+    for form in ("hongmu", "kongmu", "hongzui"):
         assert by_form[form]["diagnostic_status"] == "compatible_not_diagnostic"
-    for form in ("hongpai", "hongbei"):
+    for form in ("hongsawl", "hongpai", "hongbei"):
         assert by_form[form]["diagnostic_status"] == "deictic_venitive_boundary"
     for form in ("hongsuahna", "kongci", "konggenkik"):
         assert by_form[form]["diagnostic_status"] == "lexicalized_or_unclear"
+
+
+def test_hong_kong_object_prefix_candidate_tsv_has_person_configuration_decisions() -> None:
+    rows = _rows()
+    by_form = {row["candidate_form"]: row for row in rows}
+
+    assert all(row["person_configuration_decision"].strip() for row in rows)
+    assert by_form["hongbia"]["person_configuration_decision"] == "inverse_like_2_to_1_diagnostic"
+    assert by_form["kongpia"]["person_configuration_decision"] == "direct_like_1_to_2_diagnostic"
+    assert by_form["kongkoih"]["person_configuration_decision"] == "direct_like_1_to_2_diagnostic"
+    assert by_form["hongmu"]["person_configuration_decision"] == "sap_or_venitive_support_not_diagnostic"
+    assert by_form["kongci"]["person_configuration_decision"] == "speech_formula_boundary"
+    assert by_form["konggenkik"]["person_configuration_decision"] == "speech_formula_boundary"
+
+
+def test_hong_kong_person_configuration_diagnostic_covers_required_rows_and_sources() -> None:
+    text = _diagnostic_text().lower()
+
+    for required in (
+        "matthew 25:37",
+        "matthew 4:9",
+        "genesis 41:41",
+        "hongbia",
+        "kongpia",
+        "kongkoih",
+        "hongmu",
+        "kongmu",
+        "candidate-by-candidate person diagnosis",
+        "diagnostic conclusion",
+    ):
+        assert required in text
+
+
+def test_hong_kong_person_configuration_diagnostic_gives_concrete_decisions() -> None:
+    text = _diagnostic_text().lower()
+
+    assert "decision:" in text
+    assert "stay promoted" in text
+    assert "demote to boundary" in text
+    assert "sap.orient" in text
+    assert "not diagnostic" in text
 
 
 def test_hong_kong_object_prefix_slice_is_grammar_facing() -> None:
@@ -186,6 +239,7 @@ def test_hong_kong_object_prefix_slice_distinguishes_required_categories() -> No
         "kongkoih",
         "hongmu",
         "kongmu",
+        "hongsawl",
         "hongpai",
         "hongbei",
         "hongsuahna",
@@ -236,12 +290,58 @@ def test_hong_kong_object_prefix_slice_promoted_examples_come_from_candidate_tsv
 
 def test_hong_kong_object_prefix_slice_keeps_deictic_hong_boundary_controlled() -> None:
     rows = _rows()
-    boundary_rows = [row for row in rows if row["candidate_form"] in {"hongpai", "hongbei"}]
+    boundary_rows = [row for row in rows if row["candidate_form"] in {"hongsawl", "hongpai", "hongbei"}]
 
     assert boundary_rows
     for row in boundary_rows:
         assert row["diagnostic_status"] == "deictic_venitive_boundary"
         assert row["print_status"] == "boundary_only"
+
+
+def test_hong_kong_object_prefix_slice_keeps_kong_speech_formula_rows_boundary_only() -> None:
+    rows = _rows()
+    by_form = {row["candidate_form"]: row for row in rows}
+
+    for form in ("kongci", "konggenkik"):
+        assert by_form[form]["candidate_status"] == "deferred"
+        assert by_form[form]["print_status"] == "boundary_only"
+        assert by_form[form]["person_configuration_decision"] == "speech_formula_boundary"
+
+
+def test_hong_kong_object_prefix_slice_hong_rows_are_not_flattened_to_one_analysis() -> None:
+    rows = _rows()
+    hong_rows = [row for row in rows if row["candidate_form"].startswith("hong")]
+    decisions = {row["person_configuration_decision"] for row in hong_rows}
+
+    assert "inverse_like_2_to_1_diagnostic" in decisions
+    assert "sap_or_venitive_support_not_diagnostic" in decisions
+    assert "deictic_venitive_boundary" in decisions
+    assert "lexicalized_or_nominalized_boundary" in decisions
+
+
+def test_hong_kong_object_prefix_slice_reflects_person_configuration_diagnostic() -> None:
+    text = _text()
+    lower = text.lower()
+
+    assert "SAP.ORIENT-see" in text
+    assert "the two `hong` tokens are better treated here as sap-oriented/venitive support" in lower
+    assert "| `hongsawl` | `hong-sawl` | Matthew 13:41 | boundary material | deictic_venitive_boundary |" in text
+    assert "paired diagnostics (`hongbia`, `kongpia`) and the OT `kongkoih` anchor central" in text
+
+
+def test_matt25_glossing_is_harmonized_between_hong_kong_and_prefix_slices() -> None:
+    hk_match = re.search(
+        r"(?ms)^\(@ex:hk-support-matt25\).*?^c\. Gloss: (?P<gloss>[^\n]+)$",
+        _text(),
+    )
+    pref_match = re.search(
+        r"(?ms)^\(@ex:pref-hongmu-matt25\).*?^c\. Gloss: (?P<gloss>[^\n]+)$",
+        _prefix_text(),
+    )
+
+    assert hk_match is not None
+    assert pref_match is not None
+    assert hk_match.group("gloss") == pref_match.group("gloss")
 
 
 def test_hong_kong_object_prefix_slice_does_not_overclaim() -> None:
@@ -255,7 +355,7 @@ def test_hong_kong_object_prefix_slice_does_not_overclaim() -> None:
     assert "full valency chapter" not in lower
     assert "full deictic-motion system" not in lower
     assert "raw report counts do not decide the analysis" in lower
-    assert "motion-heavy rows stay boundary material" in lower
+    assert "motion-heavy rows such as `hongpai` and `hongbei` stay boundary material" in lower
 
 
 def test_hong_kong_object_prefix_preview_places_section_near_prefix_agreement() -> None:

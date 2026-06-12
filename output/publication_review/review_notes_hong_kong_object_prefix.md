@@ -6,37 +6,38 @@ title: "Review Notes: Hong / kong Object-Prefix Packet"
 
 This document is a reviewer checklist for the current `hong` / `kong` packet. It is workflow material only and should not appear in assembled grammar prose.
 
-## Diagnostic conclusion to verify
+## Person-configuration diagnostic review
 
-- [ ] **Is the packet-level diagnostic conclusion correct?**  
-  Current conclusion: the safest grammar-facing claim is a narrow participant-oriented prefix pocket, with `kong` as the cleaner direct-like / 1→2 side and `hong` as the mixed inverse-like / venitive side.
+- [ ] **Is the packet-level person-configuration conclusion correct?**  
+  Check whether the final split (core diagnostics vs supporting vs boundary) is empirically justified.
 
-- [ ] **Does the dossier support that conclusion concretely?**  
-  Check `output/publication_review/dossier_hong_kong_object_prefix_scope.md` for the literature split, the candidate groups, and the final decision.
+- [ ] **Is Matthew 25:37 analyzed correctly?**  
+  Confirm whether both `hong` tokens in `hong mu-in ... hong pia` are best treated as SAP-oriented/venitive support rather than as clean object-prefix diagnostics.
 
-## Focused core-row check
+- [ ] **Does Matthew 4:9 remain the cleanest paired diagnostic?**  
+  Verify that `kei hong bia` (hong-side) and `nangma tungah kong pia` (kong-side) are correctly treated as the clearest in-clause contrast.
 
-- [ ] **Are the promoted `hongbia`, `kongpia`, and `kongkoih` rows correctly classified?**  
-  Verify that the paired Gospel row and the OT `kong` anchor are actually the clearest diagnostic examples.
+- [ ] **Is Genesis 41:41 a true `kong` diagnostic?**  
+  Confirm that `nang kong koih` is strong enough to remain promoted as direct-like `1→2` evidence.
 
-- [ ] **Are `hongmu` and `kongmu` kept supportive rather than diagnostic?**  
-  They should stay useful, but they should not replace the cleaner diagnostic rows.
+## Over-analysis and boundary checks
 
-- [ ] **Are `hongzui` and `hongsawl` kept as support only?**  
-  They should remain useful overlap evidence without displacing the core rows.
+- [ ] **Has any `hong` row been over-analyzed as object-prefixal?**  
+  Especially check `hongsawl`, `hongpai`, and `hongbei` for deictic/venitive boundary treatment.
 
-## Boundary checks
+- [ ] **Are speech-formula `kong` rows kept separate from direct-like diagnostics?**  
+  `kongci` and `konggenkik` should remain boundary-controlled speech/discourse rows.
 
-- [ ] **Is deictic / venitive `hong` still boundary material?**  
-  Check that motion-heavy `hong` rows are not promoted as object-prefix diagnostics.
+- [ ] **Are lexicalized and nominalized rows still separated?**  
+  `hongsuahna` should remain boundary material.
 
-- [ ] **Are lexicalized and speech-formula rows kept separate?**  
-  `hongsuahna`, `kongci`, and `konggenkik` should remain boundary or unclear rows.
+- [ ] **Are transitivity, valency, and pronoun/agreement overlaps still controlled?**  
+  The section should remain narrow and should not become a full agreement or inverse chapter.
 
-- [ ] **Are transitivity, valency, and pronoun/agreement overlaps controlled?**  
-  Check that the packet does not widen into a full agreement chapter or a full inverse chapter.
+## Cross-slice harmonization checks
 
-## Demotion checks
+- [ ] **Are old and new slices harmonized for Matthew 25:37 glossing?**  
+  `grammar_hong_kong_object_prefix_print_slice.md` and `grammar_prefix_agreement_print_slice.md` should no longer contradict each other on this row.
 
-- [ ] **Should any currently promoted row be demoted?**  
-  In particular, demote if a row is mis-segmented, source-mismatched, or better treated as venitive, lexicalized, or speech-formula material.
+- [ ] **Should any promoted row now be demoted, or any supporting row promoted?**  
+  Recheck row status if segmentation, source anchoring, or person interpretation is judged wrong.

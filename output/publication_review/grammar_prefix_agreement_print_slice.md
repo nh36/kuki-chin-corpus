@@ -85,12 +85,12 @@ d. Translation: The Son of Man will send his angels, and they will gather all wh
 
 # Boundary with object-prefix or inverse-like material
 
-Object-prefix or inverse-like material is kept as boundary evidence. `hongmu` 'see me / come-see' and `kongmu` 'I see you / 1SG-see.2' remain visible because they are part of the same prefixal domain, but they are not promoted here to a full object-prefix or inverse chapter.
+Object-prefix or inverse-like material is kept as boundary evidence. `hongmu` 'SAP-oriented see / venitive support' and `kongmu` 'I see you / 1→2' remain visible because they are part of the same prefixal domain, but they are not promoted here to a full object-prefix or inverse chapter.
 
 (@ex:pref-kongmu-jer7) Jeremiah 7:11
 a. Tedim: Keimah in note' hih khempeuh kong mu khin hi, Topa in kong ci hi.
 b. Segmentation: keimah | in | note' | hih | khempeuh | kong-mu | khin | hi | Topa | in | kong | ci | hi
-c. Gloss: 1SG.PRO | ERG | 2PL.POSS | this | all | 1SG-see.2 | PFV | DECL | LORD | ERG | 1SG | say | DECL
+c. Gloss: 1SG.PRO | ERG | 2PL.POSS | this | all | 1→2-see | PFV | DECL | LORD | ERG | 1→2 | say | DECL
 d. Translation: I have seen all these things, says the Lord. (Jeremiah 7:11)
 
 A Gospel counterpart appears in Matthew 25:37.
@@ -98,7 +98,7 @@ A Gospel counterpart appears in Matthew 25:37.
 (@ex:pref-hongmu-matt25) Matthew 25:37
 a. Tedim: Topa aw, cikin na gilkial hong mu-in an hong pia ka hi uh hiam?
 b. Segmentation: Topa | aw | cikin | na | gilkial | hong-mu | in | an | hong | pia | ka | hi | uh | hiam
-c. Gloss: Lord | VOC | when | 2SG | hungry | 3→1-see | ERG | food | 3→1 | give | 1SG | be | 2/3PL | Q
+c. Gloss: Lord | VOC | when | 2SG | hungry | SAP.ORIENT-see | CVB | food | SAP.ORIENT | give | 1PL | be | PL | Q
 d. Translation: Lord, when did we see you hungry and give you food? (Matthew 25:37)
 
 # Boundary with ki-

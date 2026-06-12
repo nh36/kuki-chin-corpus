@@ -1366,12 +1366,12 @@ d. Translation: The Son of Man will send his angels, and they will gather all wh
 
 ### Boundary with object-prefix or inverse-like material
 
-Object-prefix or inverse-like material is kept as boundary evidence. `hongmu` 'see me / come-see' and `kongmu` 'I see you / 1SG-see.2' remain visible because they are part of the same prefixal domain, but they are not promoted here to a full object-prefix or inverse chapter.
+Object-prefix or inverse-like material is kept as boundary evidence. `hongmu` 'SAP-oriented see / venitive support' and `kongmu` 'I see you / 1→2' remain visible because they are part of the same prefixal domain, but they are not promoted here to a full object-prefix or inverse chapter.
 
 (@ex:pref-kongmu-jer7) Jeremiah 7:11
 a. Tedim: Keimah in note' hih khempeuh kong mu khin hi, Topa in kong ci hi.
 b. Segmentation: keimah | in | note' | hih | khempeuh | kong-mu | khin | hi | Topa | in | kong | ci | hi
-c. Gloss: 1SG.PRO | ERG | 2PL.POSS | this | all | 1SG-see.2 | PFV | DECL | LORD | ERG | 1SG | say | DECL
+c. Gloss: 1SG.PRO | ERG | 2PL.POSS | this | all | 1→2-see | PFV | DECL | LORD | ERG | 1→2 | say | DECL
 d. Translation: I have seen all these things, says the Lord. (Jeremiah 7:11)
 
 A Gospel counterpart appears in Matthew 25:37.
@@ -1379,7 +1379,7 @@ A Gospel counterpart appears in Matthew 25:37.
 (@ex:pref-hongmu-matt25) Matthew 25:37
 a. Tedim: Topa aw, cikin na gilkial hong mu-in an hong pia ka hi uh hiam?
 b. Segmentation: Topa | aw | cikin | na | gilkial | hong-mu | in | an | hong | pia | ka | hi | uh | hiam
-c. Gloss: Lord | VOC | when | 2SG | hungry | 3→1-see | ERG | food | 3→1 | give | 1SG | be | 2/3PL | Q
+c. Gloss: Lord | VOC | when | 2SG | hungry | SAP.ORIENT-see | CVB | food | SAP.ORIENT | give | 1PL | be | PL | Q
 d. Translation: Lord, when did we see you hungry and give you food? (Matthew 25:37)
 
 ### Boundary with ki-
@@ -1428,7 +1428,7 @@ The current `hong` 'come / venitive' and `kong` '1→2 / direct-like' evidence i
 
 `hong` 'come / venitive' remains mixed: some rows look inverse-like, while others are clearly deictic, motion, or formulaic. `kong` '1→2 / direct-like' is the cleaner side of the contrast. The section keeps the clearest rows separate from deictic motion, speech-formula rows, and lexicalized or unclear material.
 
-The safest grammar-facing conclusion is narrow: Tedim has a small participant-oriented prefix domain, but this is not a full agreement chapter and not a full inverse-system chapter. The core comparison comes from a paired Gospel row, supported by a second OT `kong` anchor and by cautious `hongmu` 'see me' / `kongmu` 'I see you' support rows.
+The safest grammar-facing conclusion is narrow: Tedim has a small participant-oriented prefix domain, but this is not a full agreement chapter and not a full inverse-system chapter. The core comparison comes from a paired Gospel row, supported by a second OT `kong` anchor and by cautious `hongmu` 'SAP-oriented see' / `kongmu` 'I see you' support rows.
 
 ### Current hong and kong inventory
 
@@ -1440,7 +1440,7 @@ The safest grammar-facing conclusion is narrow: Tedim has a small participant-or
 | `hongmu` | `hong-mu` | Matthew 25:37 | supporting | compatible_not_diagnostic | useful but mixed |
 | `kongmu` | `kong-mu` | Jeremiah 7:11 | supporting | compatible_not_diagnostic | speech-formula overlap nearby |
 | `hongzui` | `hong-zui` | Matthew 8:22 | supporting | compatible_not_diagnostic | imperative / directive support |
-| `hongsawl` | `hong-sawl` | Matthew 13:41 | supporting | compatible_not_diagnostic | sending / overlap row |
+| `hongsawl` | `hong-sawl` | Matthew 13:41 | boundary material | deictic_venitive_boundary | sending / deictic overlap |
 | `hongpai` | `hong-pai` | Exodus 1:1 | boundary material | deictic_venitive_boundary | motion / venitive |
 | `hongbei` | `hong-bei` | Genesis 1:5 | boundary material | deictic_venitive_boundary | temporal motion |
 | `hongsuahna` | `hong-suah-na` | Matthew 1:18 | boundary material | lexicalized_or_unclear | nominalized / formulaic |
@@ -1471,15 +1471,17 @@ Together, these rows are enough to support a narrow participant-oriented prefix 
 
 ### Support but not diagnostic rows
 
-The familiar `hongmu` 'see me' and `kongmu` 'I see you' rows remain useful but not decisive. They show that the participant-oriented contrast is real, but they do not by themselves settle whether every hong token is object-prefixal rather than venitive.
+The familiar `hongmu` 'see you (SAP-oriented)' and `kongmu` 'I see you' rows remain useful but not decisive. They show that participant orientation is real, but they do not by themselves settle whether every `hong` token is object-prefixal rather than venitive/deictic.
 
 ##### Matthew 25:37 support row
 
 (@ex:hk-support-matt25) Matthew 25:37
 a. Tedim: Topa aw, cikin na gilkial hong mu-in an hong pia ka hi uh hiam?
 b. Segmentation: Topa | aw | cikin | na | gilkial | hong-mu | in | an | hong | pia | ka | hi | uh | hiam
-c. Gloss: Lord | VOC | when | 2SG | hungry | 1→2-see | ERG | food | 1→2 | give | 1PL | be | PL | Q
+c. Gloss: Lord | VOC | when | 2SG | hungry | SAP.ORIENT-see | CVB | food | SAP.ORIENT | give | 1PL | be | PL | Q
 d. Translation: Lord, when did we see you hungry and give you food? (Matthew 25:37)
+
+In this quoted clause, the speaker group is first-person plural and the addressee is second person. The clause-level participant configuration is therefore 1PL→2SG, but the two `hong` tokens are better treated here as SAP-oriented/venitive support rather than as clean person-prefix diagnostics. Both tokens are glossed the same way.
 
 ##### Jeremiah 7:11 support row
 
@@ -1489,9 +1491,11 @@ b. Segmentation: keimah | in | note' | hih | khempeuh | kong-mu | khin | hi | To
 c. Gloss: 1SG.PRO | ERG | 2PL.POSS | this | all | 1→2-see | PFV | DECL | LORD | ERG | 1→2 | say | DECL
 d. Translation: I have seen all these things, says the Lord. (Jeremiah 7:11)
 
+Matthew 8:22 (`Nangmah in kei hong zui in`) remains a useful supporting row for inverse-like `hong` with explicit `nangmah` and `kei`, but imperative venitive overlap keeps it below the promoted diagnostic tier.
+
 ### Boundary with deictic / venitive hong
 
-Motion-heavy rows stay boundary material and should not be promoted as object-prefix diagnostics.
+Motion-heavy rows such as `hongpai` and `hongbei` stay boundary material and should not be promoted as object-prefix diagnostics. Overlap rows such as `hongsawl` also remain on this boundary side.
 
 ### Boundary with lexicalized or unclear rows
 
@@ -1507,7 +1511,7 @@ The literature-backed inverse claims remain visible in the background sources, b
 
 ### Summary
 
-The safest grammar-facing conclusion is that Tedim has a narrow participant-oriented prefix pocket. `hong` remains mixed between venitive/deictic and inverse-like uses, while `kong` is the cleaner direct-like / 1→2 side. Keep the clearest paired rows central, treat `hongmu` and `kongmu` as supportive, and leave deictic, lexicalized, and speech-formula rows boundary-only.
+The safest grammar-facing conclusion is that Tedim has a narrow participant-oriented prefix pocket. `hong` remains mixed between venitive/deictic and inverse-like uses, while `kong` is the cleaner direct-like / 1→2 side. Keep the paired diagnostics (`hongbia`, `kongpia`) and the OT `kongkoih` anchor central, treat `hongmu`, `kongmu`, and `hongzui` as supporting, and leave deictic, lexicalized, and speech-formula rows boundary-only.
 
 Raw report counts do not decide the analysis.
 
