@@ -31,19 +31,13 @@ The tone literature supports a three-tone analysis, with tone contrastive in lex
 
 | Form as printed in the Bible | Tone-marked or phonological form from the literature | Meaning | Bible source | Evidence type | Caveat |
 | --- | --- | --- | --- | --- | --- |
-| `ta` / `-ta` (as in `nungta`) | lexical high-tone `ta` vs grammatical low-tone `-ta` in the literature | child / PFV | Genesis 11:30; Matthew 4:4 | bible_attested_example + literature_backed_tone_claim | Spelling does not mark tone directly; tone values come from literature. |
+| `ta` / `-ta` (as in `nungta`) | lexical high-tone `ta` vs grammatical low-tone `-ta` in the literature | child / PFV | Genesis 11:30; Matthew 4:4 | supporting_bible_attestation + literature_backed_tone_claim | `nungta` is analyzed as `nung-ta` in the corpus layer; this row is supporting evidence, not a strict minimal pair. |
 | `thei` / `-thei` (as in `lutthei`) | lexical high-tone `thei` vs grammatical low-tone `-thei` in the literature | know / ABIL | Genesis 4:9; Matthew 7:21 | near_minimal_pair + literature_backed_tone_claim | Bible attests both forms, but tonal interpretation remains literature-backed. |
-| `hi` / `hi` (as in `na hi hi`) | lexical high-tone `hi` vs grammatical low-tone `hi` in the literature | be / DECL | Genesis 16:13 | bible_attested_minimal_pair + literature_backed_tone_claim | Orthography is identical, so role and tone are interpreted from context plus literature. |
+| `hi` / `hi` (as in `na hi hi`) | lexical high-tone `hi` vs grammatical low-tone `hi` in the literature | be / DECL | Genesis 16:13 | homographic_lexical_grammatical_contrast + literature_backed_tone_claim | Orthography is identical, so role and tone are interpreted from context plus literature. |
 
-True orthography-identical tone minimal pairs are limited in the current source-resolved Bible layer, so near-minimal sets are used where needed and labeled explicitly.
+True orthography-identical tone minimal pairs are limited in the current source-resolved Bible layer, so near-minimal sets are used where needed and labeled explicitly. The `ta / -ta` row is kept as supporting Bible attestation rather than strict minimal-pair evidence.
 
 ## Short Bible examples
-
-(@ex:phon-ta-child-gen11) Genesis 11:30
-a. Tedim: ta nei lo hi
-b. Segmentation: ta | nei | lo | hi
-c. Gloss: child | have | NEG | DECL
-d. Translation: had no child
 
 (@ex:phon-thei-abil-matt7) Matthew 7:21
 a. Tedim: lutthei ding uh hi
@@ -51,7 +45,13 @@ b. Segmentation: lut-thei | ding | uh | hi
 c. Gloss: enter-ABIL | IRR | 2/3PL | DECL
 d. Translation: they will be able to enter
 
-These examples show Bible attestation of the forms in context. The tone assignment remains literature-backed, because ordinary Bible spelling does not mark tone contrast reliably.
+(@ex:phon-hi-lex-gram-gen16) Genesis 16:13
+a. Tedim: na hi hi
+b. Segmentation: na | hi | hi
+c. Gloss: 2SG | be | DECL
+d. Translation: you are
+
+These examples show Bible attestation of the forms in context. The tone assignment remains literature-backed, because ordinary Bible spelling does not mark tone contrast reliably. Short Bible examples are printed in ordinary Bible spelling, and tone-marked forms are restricted to the literature column in the table above.
 
 
 ## The blocked -a issue
@@ -64,7 +64,7 @@ Tone interacts with stem alternation, TAM / aspect / modal, `-pih` 'with / accom
 
 ## Deferred material
 
-A full phoneme table, a full tone-sandhi account, and a complete tone analysis remain deferred.
+A full phoneme table, a full tone-sandhi account, and a complete tone analysis remain deferred. The `ta / -ta` contrast remains caveated as supporting evidence rather than as a strict minimal pair.
 
 ## What can be printed now
 

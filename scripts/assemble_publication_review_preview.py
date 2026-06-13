@@ -1152,6 +1152,9 @@ def analyze_example(
     if not analysis_is_usable(analysis):
         analysis = fallback_analysis(example)
         warnings.append("analyzer-derived interlinear unavailable; using slice segmentation/gloss fallback")
+    elif example.label.startswith("ex:phon-"):
+        # Keep phonology/tone Bible examples in ordinary Bible spelling; tone claims live in table/prose.
+        analysis["toned_words"] = example.tedim.split()
 
     return analysis, source_display, build_example_warning_text(example.label, warnings)
 
