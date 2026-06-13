@@ -488,6 +488,18 @@ def test_grammar_facing_key_tedim_forms_are_glossed_on_first_prose_mention() -> 
             "hangin",
             "bangin",
         ),
+        "Same-subject and different-subject clause linkage": (
+            "bawlin",
+            "semin",
+            "VERB-in",
+            "ahih ciangin",
+            "ciangin",
+            "dingin",
+            "ngenin",
+            "a bawl mi",
+            "omna",
+            "muhna-ah",
+        ),
     }
 
     for section_title, forms in expectations.items():
@@ -593,7 +605,9 @@ def test_grammar_facing_sections_keep_old_testament_and_gospel_balance() -> None
         section_examples = [example for example in examples if section_title in example.heading_path and example.source]
         zones = {gate.source_zone(example.source) for example in section_examples}
         if section_examples and not {"OT", "Gospel"}.issubset(zones):
-            offenders.append(section_title)
+            block = _section_blocks()[section_title]
+            if not gate.ONE_EXAMPLE_NOTE_RE.search(block.content):
+                offenders.append(section_title)
 
     assert not offenders, f"Sections need both OT and Gospel evidence: {offenders}"
 

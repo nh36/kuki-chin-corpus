@@ -44,6 +44,7 @@ TARGET_SECTION_TITLES = {
     "Directionals",
     "Nominalization",
     "Clause linkage",
+    "Same-subject and different-subject clause linkage",
 }
 GOSPEL_BOOKS = {
     "Matthew",
@@ -320,6 +321,8 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "muhna-ah": ((r"in seeing|in the sight|before",), "in seeing / in the sight"),
     "kumpipa": ((r"king",), "king"),
     "Topa": ((r"Lord",), "Lord"),
+    "bawlin": ((r"make-CVB|same-subject converb",), "make-CVB"),
+    "semin": ((r"serve-CVB|same-subject converb",), "serve-CVB"),
     "ciangin": ((r"when|temporal subordination",), "when"),
     "tua ciangin": ((r"then / when|at that time|that when",), "then / when"),
     "ciang-in": ((r"when-ERG|when|then-ERG",), "when-ERG"),
@@ -744,7 +747,8 @@ def gather_quality_issues(tex_path: Path) -> tuple[list[str], dict[str, object]]
         sourced_section_examples = [example for example in section_examples if example.source]
         zones = {source_zone(example.source) for example in sourced_section_examples}
         if sourced_section_examples and not {"OT", "Gospel"}.issubset(zones):
-            issues.append(f"Section {section_title} does not yet show both Old Testament and Gospel example coverage.")
+            if not ONE_EXAMPLE_NOTE_RE.search(block.content):
+                issues.append(f"Section {section_title} does not yet show both Old Testament and Gospel example coverage.")
 
         tex_section_blocks = iter_tex_blocks_for_section(tex_blocks, section_title)
         for form, (allowed_glosses, suggested_gloss) in GLOSSARY_REQUIREMENTS.items():

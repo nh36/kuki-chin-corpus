@@ -127,6 +127,11 @@ ASSEMBLY_SPEC = [
             },
             {"type": "slice", "title": "Nominalization", "path": "output/publication_review/grammar_nominalization_print_slice.md"},
             {"type": "slice", "title": "Clause linkage", "path": "output/publication_review/grammar_clause_linkage_print_slice.md"},
+            {
+                "type": "slice",
+                "title": "Same-subject and different-subject clause linkage",
+                "path": "output/publication_review/grammar_switch_reference_print_slice.md",
+            },
         ],
     },
     {
@@ -451,6 +456,14 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "marked clause-finally as `tua ciangin` 'then / when', while purposive material with `dingin` 'in order to', "
         "same-subject converb construction with `ngenin` 'pray-CVB', different-subject marking with `ahih ciangin` 'when', "
         "and relative clauses including `a bawl mi` 'person who' remain explicit boundary material."
+    ),
+    "Same-subject and different-subject clause linkage": (
+        "The current clause-linkage evidence is narrow: same-subject `bawlin` 'make-CVB' and `semin` 'serve-CVB' are "
+        "secure, the report-level `VERB-in` 'converb' label is only a comparison term, `ahih ciangin` 'when / when "
+        "it was' is support only, and ordinary `ciangin` 'when', `dingin` 'in order to / clause-bound irrealis', "
+        "`ngenin` 'pray-CVB', `a bawl mi` 'person who', `omna` 'place / being / existence', and `muhna-ah` "
+        "'in seeing / in the sight' stay boundary-controlled. No equally clean Gospel example is currently used "
+        "for this construction."
     ),
 }
 GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [

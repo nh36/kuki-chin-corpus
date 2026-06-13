@@ -45,6 +45,7 @@ def test_reconciliation_includes_major_domains_and_analyzer_topics() -> None:
 
     for required in (
         "phonology and tone",
+        "Bible-example verified",
         "simple nouns",
         "compound nouns",
         "proper nouns",
@@ -78,6 +79,7 @@ def test_reconciliation_includes_major_domains_and_analyzer_topics() -> None:
         "sentence-final particles",
         "subordination",
         "switch reference",
+        "same-subject and different-subject clause linkage",
         "relative clauses",
         "broader discourse beyond sentence-final particles",
         "tone in `-a` case marker",
@@ -116,24 +118,23 @@ def test_reconciliation_recommends_substantive_next_target_not_admin_handoff() -
 
     assert "# 4. Recommendation for the next substantive packet" in text
     assert "Synchronization update:" in text
-    assert "Current active substantive target: phonology/tone." in text
+    assert "Current active substantive target: same-subject and different-subject clause linkage / switch reference." in text
     assert "report-alignment stabilized" in lower
     assert "human-review handoff" not in lower
 
 
-def test_reconciliation_includes_phonology_tone_implementation_sketch() -> None:
+def test_reconciliation_includes_switch_reference_implementation_sketch() -> None:
     text = _text()
 
     for required in (
-        "# 5. Implementation sketch for the active `phonology/tone` target",
-        "output/publication_review/candidates_phonology_tone.tsv",
-        "output/publication_review/dossier_phonology_tone_scope.md",
-        "output/publication_review/grammar_phonology_tone_print_slice.md",
-        "output/publication_review/phonology_tone_source_alignment_diagnostic.md",
-        "output/publication_review/review_notes_phonology_tone.md",
-        "Core segmental anchors: consonant inventory, vowel inventory, syllable shape",
-        "Core orthography anchors: practical spelling, tone not marked",
-        "Core tone anchors: three-tone summary, blocked `-a`",
-        "Boundary rows: stem alternation, TAM / aspect / modal, `-pih` 'with / accompanying', verb paradigms",
+        "# 5. Implementation sketch for the active `switch reference` target",
+        "output/publication_review/candidates_switch_reference.tsv",
+        "output/publication_review/dossier_switch_reference_scope.md",
+        "output/publication_review/grammar_switch_reference_print_slice.md",
+        "output/publication_review/switch_reference_source_alignment_diagnostic.md",
+        "output/publication_review/review_notes_switch_reference.md",
+        "Core same-subject anchors: `bawlin` and `semin`",
+        "Support-only different-subject-looking material: `ahih ciangin`",
+        "Boundary rows: ordinary `ciangin`, purposive `dingin`, relative clauses, nominalization, and blocked `ngenin`",
     ):
         assert required in text
