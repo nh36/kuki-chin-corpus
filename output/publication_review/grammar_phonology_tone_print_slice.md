@@ -1,6 +1,8 @@
 # Overview of phonology and tone in Tedim
 
-Tedim phonology can be printed cautiously from the literature as a modest segmental summary, an orthography note, and a three-tone system that is not marked in ordinary spelling. This section stays narrow: it prints what the literature supports now, keeps orthography in its proper place as indirect evidence, and leaves the tone-sensitive `-a` distinction unresolved. A tiny formal tone contrast is printed below as a literature-backed minimal set, but it is source unavailable as a Bible citation because it comes from phonology literature rather than a verse span [@henderson1965, pp. 9-13; @zamngaihcing2017, pp. 25-26, 37, 57-60].
+Tedim phonology can be printed cautiously from the literature as a modest segmental summary, an orthography note, and a three-tone system that is not marked in ordinary spelling. This section stays narrow: it prints what the literature supports now, keeps orthography in its proper place as indirect evidence, and leaves the tone-sensitive `-a` distinction unresolved [@henderson1965, pp. 9-13; @zamngaihcing2017, pp. 25-26, 37, 57-60].
+
+The Bible orthography is useful for locating lexical items in context, but the tone contrast itself is taken from the phonological literature, since tone is not consistently represented in ordinary printed spelling.
 
 ## Orientation table
 
@@ -25,15 +27,32 @@ Practical Tedim spelling is useful because it reflects familiar segmental contra
 
 The tone literature supports a three-tone analysis, with tone contrastive in lexical items and with analytical transcription marking tone more explicitly than practical orthography does. The present section can therefore print a short tone-status summary: Tedim has three tones, tone is not marked in ordinary spelling, and tone interacts with morphology in ways that belong partly in other sections [@henderson1965, p. 13; @zamngaihcing2017, pp. 57-60].
 
-The literature also gives a tiny tone triplet that makes the three-way contrast visible in formal print:
+## Bible-attested minimal and near-minimal sets
 
-(@ex:phon-tone-triplet) source unavailable
-a. Tedim: zá zā zà
-b. Segmentation: tone-marked lexical forms
-c. Gloss: hear / medicine, cigarette / hundred
-d. Translation: minimal three-tone contrast
+| Form as printed in the Bible | Tone-marked or phonological form from the literature | Meaning | Bible source | Evidence type | Caveat |
+| --- | --- | --- | --- | --- | --- |
+| `ta` / `-ta` (as in `nungta`) | lexical high-tone `ta` vs grammatical low-tone `-ta` in the literature | child / PFV | Genesis 11:30; Matthew 4:4 | bible_attested_example + literature_backed_tone_claim | Spelling does not mark tone directly; tone values come from literature. |
+| `thei` / `-thei` (as in `lutthei`) | lexical high-tone `thei` vs grammatical low-tone `-thei` in the literature | know / ABIL | Genesis 4:9; Matthew 7:21 | near_minimal_pair + literature_backed_tone_claim | Bible attests both forms, but tonal interpretation remains literature-backed. |
+| `hi` / `hi` (as in `na hi hi`) | lexical high-tone `hi` vs grammatical low-tone `hi` in the literature | be / DECL | Genesis 16:13 | bible_attested_minimal_pair + literature_backed_tone_claim | Orthography is identical, so role and tone are interpreted from context plus literature. |
 
-This construction is rare in formal phonology evidence, so one example is used here.
+True orthography-identical tone minimal pairs are limited in the current source-resolved Bible layer, so near-minimal sets are used where needed and labeled explicitly.
+
+## Short Bible examples
+
+(@ex:phon-ta-child-gen11) Genesis 11:30
+a. Tedim: ta nei lo hi
+b. Segmentation: ta | nei | lo | hi
+c. Gloss: child | have | NEG | DECL
+d. Translation: had no child
+
+(@ex:phon-thei-abil-matt7) Matthew 7:21
+a. Tedim: lutthei ding uh hi
+b. Segmentation: lut-thei | ding | uh | hi
+c. Gloss: enter-ABIL | IRR | 2/3PL | DECL
+d. Translation: they will be able to enter
+
+These examples show Bible attestation of the forms in context. The tone assignment remains literature-backed, because ordinary Bible spelling does not mark tone contrast reliably.
+
 
 ## The blocked -a issue
 
@@ -49,4 +68,4 @@ A full phoneme table, a full tone-sandhi account, and a complete tone analysis r
 
 ## What can be printed now
 
-What can be printed now is a short segmental orientation, an orthography caveat, a three-tone status summary, a tiny formal tone contrast, and a blocked -a warning.
+What can be printed now is a short segmental orientation, an orthography caveat, a three-tone status summary, two or three Bible-attested minimal or near-minimal sets with literature-backed tone interpretation, and a blocked -a warning.

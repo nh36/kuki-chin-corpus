@@ -1,32 +1,62 @@
 # Phonology and tone scope dossier
 
-This dossier sorts the candidate layer into practical print categories.
+This dossier organizes the phonology/tone candidate layer into print-ready, literature-only, boundary, and blocked groups.
 
-## Scope sorting
+## Bible-attested minimal pairs
 
-| Category | Candidate IDs | Print decision | Notes |
-| --- | --- | --- | --- |
-| Safe segmental or orthographic claims | `phon-seg-consonants`, `phon-seg-vowels`, `phon-syllable-shape`, `phon-orthography-tone` | print now | Use conservative orientation wording only. |
-| Literature-backed phonology claims | `phon-seg-consonants`, `phon-seg-vowels`, `phon-syllable-shape` | print now | Keep the segmental summary modest. |
-| Literature-backed tone claims | `phon-tone-threeway`, `phon-tone-grammatical` | print now with caveat | Print tone as contrastive, but not fully analyzed. |
-| Unresolved tone claims | `phon-tone-unresolved` | defer | Keep full tone sandhi and related questions out of the slice. |
-| Blocked `-a` material | `phon-a-blocked` | blocked | The high/low distinction must stay explicit and unresolved. |
-| Morphophonology boundary material | `phon-boundary-stem`, `phon-boundary-tam`, `phon-boundary-pih`, `phon-boundary-verb-paradigms` | boundary-only | Belongs in stem alternation, TAM, `-pih`, or verb paradigms. |
-| Analyzer-gap rows | `phon-a-blocked` | blocked | Do not promote blocked corpus material as grammar fact. |
-| Material deferred elsewhere | `phon-boundary-stem`, `phon-boundary-tam`, `phon-boundary-pih`, `phon-boundary-verb-paradigms` | deferred | Use the relevant sections rather than phonology/tone. |
+| Candidate ID | Form set | Source references | Current print decision | Notes |
+| --- | --- | --- | --- | --- |
+| `phon-bible-hi-hi` | `hi / hi` | Genesis 16:13 | print with caveat | Orthographically identical form used in lexical and grammatical contexts; tone interpretation remains literature-backed. |
+
+## Bible-attested near-minimal pairs
+
+| Candidate ID | Form set | Source references | Current print decision | Notes |
+| --- | --- | --- | --- | --- |
+| `phon-bible-thei-lutthei` | `thei / -thei` | Genesis 4:9; Matthew 7:21 | print with caveat | Same orthographic base in lexical and grammatical contexts; tone interpretation remains literature-backed. |
+
+## Bible-attested examples (not strict minimal pairs)
+
+| Candidate ID | Form set | Source references | Current print decision | Notes |
+| --- | --- | --- | --- | --- |
+| `phon-bible-ta-nungta` | `ta / -ta` (in `nungta`) | Genesis 11:30; Matthew 4:4 | print with caveat | Bible attests both lexical and grammatical hosts; tonal contrast is literature-backed because spelling is unmarked. |
+
+## Literature-only tone contrasts
+
+| Candidate IDs | Current print decision | Notes |
+| --- | --- | --- |
+| `phon-tone-threeway`, `phon-tone-grammatical` | print now with caveat | System-level tone claims are literature-backed and should remain explicitly separated from orthographic evidence. |
+| `phon-seg-consonants`, `phon-seg-vowels`, `phon-syllable-shape` | print now | Segmental orientation remains literature-led and conservative. |
+
+## Blocked or unavailable examples
+
+| Candidate ID / class | Reason unavailable for stronger print claim | Current handling |
+| --- | --- | --- |
+| `phon-a-blocked` | unresolved tone analysis plus unmarked orthography in corpus for high/low `-a` distinction | blocked |
+| `phon-tone-unresolved` | unresolved or conflicting tone-sandhi analysis in current sources | deferred |
+| missing strict minimal sets beyond listed rows | absence from Bible corpus as source-resolved minimal pair, ambiguous spelling, or unresolved tone assignment | keep as literature-only or deferred |
+
+## Boundary material deferred to other sections
+
+| Candidate IDs | Deferred destination |
+| --- | --- |
+| `phon-boundary-stem` | stem alternation |
+| `phon-boundary-tam` | TAM / aspect / modal |
+| `phon-boundary-pih` | `-pih` comitative/applicative |
+| `phon-boundary-verb-paradigms` | verb paradigms |
 
 ## Print scope
 
 Print now:
 
-- a compact segmental orientation
-- an orthography caveat
-- a three-tone summary
-- a blocked `-a` warning
+- conservative segmental orientation
+- orthography caveat
+- literature-backed tone summary
+- small Bible-attested orthographic-homograph and near-minimal sets with source-resolved references
+- blocked `-a` warning
 
 Do not print now:
 
-- a full phoneme table
-- a full tone analysis
-- a full tone-sandhi account
-- any claim that the `-a` distinction is solved
+- full phoneme table
+- full tone-sandhi analysis
+- claims that unmarked orthography alone proves tone values
+- claims that the `-a` contrast is solved

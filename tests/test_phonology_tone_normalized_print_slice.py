@@ -28,6 +28,15 @@ ALLOWED_DIAGNOSTIC_STATUSES = {
     "unresolved_or_conflicting",
 }
 
+BIBLE_REFERENCE_RE = re.compile(
+    r"\b(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|"
+    r"1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song of Songs|Isaiah|"
+    r"Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|"
+    r"Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|"
+    r"Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|"
+    r"Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation)\s+\d+:\d+\b"
+)
+
 
 def _rows() -> list[dict[str, str]]:
     with CANDIDATES_PATH.open(encoding="utf-8", newline="") as handle:
@@ -67,7 +76,15 @@ def test_phonology_tone_candidate_tsv_has_required_columns_and_statuses() -> Non
     assert required_columns.issubset(rows[0].keys())
 
     evidence_types = {row["evidence_type"] for row in rows}
-    assert {"literature_backed", "orthography_backed", "analyzer_gap", "unresolved"}.issubset(evidence_types)
+    assert {
+        "literature_backed_tone_claim",
+        "bible_attested_example",
+        "bible_attested_minimal_pair",
+        "near_minimal_pair",
+        "orthography_support",
+        "analyzer_gap_blocked",
+        "unresolved_or_conflicting",
+    }.issubset(evidence_types)
 
     candidate_statuses = {row["candidate_status"] for row in rows}
     print_statuses = {row["print_status"] for row in rows}
@@ -91,6 +108,9 @@ def test_phonology_tone_candidate_tsv_covers_required_categories() -> None:
         "practical orthography",
         "three-tone system",
         "grammatical tone",
+        "hi / hi",
+        "thei / -thei",
+        "ta / -ta",
         "-a",
         "tone sandhi",
         "Form I / Form II",
@@ -99,14 +119,6 @@ def test_phonology_tone_candidate_tsv_covers_required_categories() -> None:
         "verb paradigms",
     }
     assert required_forms.issubset(forms)
-
-    for row in rows:
-        for field in ("candidate_id", "topic", "candidate_form", "why_selected", "caveat"):
-            value = row[field].strip()
-            assert value
-            assert not value.startswith("[")
-            assert "TBD" not in value
-            assert "TODO" not in value
 
 
 def test_phonology_tone_candidate_tsv_has_no_placeholder_rows() -> None:
@@ -122,6 +134,28 @@ def test_phonology_tone_candidate_tsv_has_no_placeholder_rows() -> None:
             assert "TODO" not in value
 
 
+def test_phonology_tone_candidate_tsv_distinguishes_bible_attested_and_literature_only_claims() -> None:
+    rows = _rows()
+    bible_rows = [
+        row
+        for row in rows
+        if row["evidence_type"] in {"bible_attested_example", "bible_attested_minimal_pair", "near_minimal_pair"}
+    ]
+    assert len(bible_rows) >= 2
+    assert all(BIBLE_REFERENCE_RE.search(row["source_reference"]) for row in bible_rows)
+    assert any(row["evidence_type"] == "literature_backed_tone_claim" for row in rows)
+
+
+def test_phonology_tone_no_print_facing_source_unavailable_or_question_mark_glosses() -> None:
+    rows = _rows()
+    print_rows = [row for row in rows if row["print_status"] in {"print_ready", "print_usable_with_caveat"}]
+
+    for row in print_rows:
+        combined = " ".join((row["source_reference"], row["phonological_claim"], row["tone_claim"], row["caveat"]))
+        assert "source unavailable" not in combined.lower()
+        assert "?" not in combined
+
+
 def test_phonology_tone_diagnostic_discusses_required_topics_and_decision() -> None:
     text = _text(DIAGNOSTIC_PATH).lower()
 
@@ -130,19 +164,34 @@ def test_phonology_tone_diagnostic_discusses_required_topics_and_decision() -> N
         "tone",
         "-a",
         "orthography",
-        "analyzer-gap",
+        "small number of bible-attested",
+        "tone analysis attached to them remains literature-backed",
+        "safe to print now",
+        "blocked",
+        "literature-only wording",
         "stem alternation",
         "tam",
         "-pih",
         "verb paradigms",
-        "safe to print now",
-        "blocked",
-        "literature-only wording",
     ):
         assert required in text, required
 
 
-def test_phonology_tone_slice_is_grammar_facing_and_table_driven() -> None:
+def test_phonology_tone_dossier_has_requested_scope_buckets() -> None:
+    text = _text(DOSSIER_PATH).lower()
+    for required in (
+        "bible-attested minimal pairs",
+        "bible-attested near-minimal pairs",
+        "literature-only tone contrasts",
+        "blocked or unavailable examples",
+        "absence from bible corpus",
+        "ambiguous spelling",
+        "unresolved tone assignment",
+    ):
+        assert required in text
+
+
+def test_phonology_tone_slice_is_grammar_facing_and_hybrid_evidence() -> None:
     text = _text(SLICE_PATH)
     lower = text.lower()
 
@@ -152,8 +201,8 @@ def test_phonology_tone_slice_is_grammar_facing_and_table_driven() -> None:
     for required in (
         "Overview of phonology and tone in Tedim",
         "Orientation table",
-        "Segmental phonology",
-        "Orthography and syllable shape",
+        "Bible-attested minimal and near-minimal sets",
+        "Short Bible examples",
         "Tone status",
         "The blocked -a issue",
         "Boundaries with stem alternation, TAM, `-pih`, and verb paradigms",
@@ -163,29 +212,44 @@ def test_phonology_tone_slice_is_grammar_facing_and_table_driven() -> None:
         assert required in text
 
     assert "| Area | Conservative claim | Evidence status | Caveat |" in text
-    assert "analyzer-gap" not in lower
-    assert "a full phoneme table, a full tone-sandhi account, and a complete tone analysis remain deferred." in lower
-    assert "blocked -a warning" in lower
-    assert "-pih" in text and "with / accompanying" in text
+    assert "| Form as printed in the Bible | Tone-marked or phonological form from the literature | Meaning | Bible source | Evidence type | Caveat |" in text
+    assert "source unavailable" not in lower
+    assert "question-mark" not in lower
+    assert "the bible orthography is useful for locating lexical items in context, but the tone contrast itself is taken from the phonological literature" in lower
+    assert "tone is not consistently represented in ordinary printed spelling" in lower
+    assert "keep `-a` blocked" in text
 
 
-def test_phonology_tone_slice_includes_minimal_formal_tone_example() -> None:
+def test_phonology_tone_slice_has_at_least_two_source_resolved_bible_examples() -> None:
     text = _text(SLICE_PATH)
-    assert re.findall(r"(?m)^\(@ex:[^)]+\)", text)
-    assert "(@ex:phon-tone-triplet) source unavailable" in text
-    assert "minimal three-tone contrast" in text
+    headers = re.findall(r"(?m)^\(@ex:[^)]+\)\s+([^\n]+)$", text)
+    assert len(headers) >= 2
+    assert all(BIBLE_REFERENCE_RE.search(source) for source in headers)
+
+    refs = BIBLE_REFERENCE_RE.findall(text)
+    assert len(set(refs)) >= 4
+
+    gloss_lines = re.findall(r"(?m)^c\. Gloss:\s*(.+)$", text)
+    assert gloss_lines
+    assert all("?" not in gloss for gloss in gloss_lines)
+
+
+def test_phonology_tone_slice_marks_tone_claims_as_literature_backed_when_using_bible_forms() -> None:
+    text = _text(SLICE_PATH)
+    table_lines = [line for line in text.splitlines() if "|" in line and BIBLE_REFERENCE_RE.search(line)]
+    assert table_lines
+    assert all("literature_backed_tone_claim" in line for line in table_lines)
 
 
 def test_phonology_tone_review_notes_cover_human_checkpoints() -> None:
     text = _text(REVIEW_NOTES_PATH).lower()
 
     for required in (
-        "consonant and vowel claims",
-        "orthography",
-        "three-tone summary",
+        "genuinely minimal or near-minimal",
+        "tone values attached to the selected bible-attested forms",
+        "verses actually support the meanings",
+        "separate bible attestation of forms from literature-backed tone analysis",
+        "too speculative",
         "blocked `-a` issue",
-        "analyzer-gap cautions",
-        "phoneme table",
-        "orientation section",
     ):
         assert required in text

@@ -189,11 +189,13 @@ modest segmental summary, an orthography note, and a three-tone system
 that is not marked in ordinary spelling. This section stays narrow: it
 prints what the literature supports now, keeps orthography in its proper
 place as indirect evidence, and leaves the tone-sensitive \tdim{-a}
-distinction unresolved. A tiny formal tone contrast is printed below as
-a literature-backed minimal set, but it is source unavailable as a Bible
-citation because it comes from phonology literature rather than a verse
-span \citetext{\citealp[pp.~9-13]{henderson1965}; \citealp[pp.~25-26,
-37, 57-60]{zamngaihcing2017}}.
+distinction unresolved
+\citetext{\citealp[pp.~9-13]{henderson1965}; \citealp[pp.~25-26, 37,
+57-60]{zamngaihcing2017}}.
+
+The Bible orthography is useful for locating lexical items in context,
+but the tone contrast itself is taken from the phonological literature,
+since tone is not consistently represented in ordinary printed spelling.
 
 \paragraph{Orientation table}\label{orientation-table}
 
@@ -272,18 +274,76 @@ tones, tone is not marked in ordinary spelling, and tone interacts with
 morphology in ways that belong partly in other sections
 \citetext{\citealp[p.~13]{henderson1965}; \citealp[pp.~57-60]{zamngaihcing2017}}.
 
-The literature also gives a tiny tone triplet that makes the three-way
-contrast visible in formal print:
+\paragraph{Bible-attested minimal and near-minimal
+sets}\label{bible-attested-minimal-and-near-minimal-sets}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Form as printed in the Bible
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Tone-marked or phonological form from the literature
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Bible source
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Evidence type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Caveat
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\tdim{ta} / \tdim{-ta} (as in \tdim{nungta}) & lexical high-tone
+\tdim{ta} vs grammatical low-tone \tdim{-ta} in the literature & child /
+PFV & Genesis 11:30; Matthew 4:4 & bible\_attested\_example +
+literature\_backed\_tone\_claim & Spelling does not mark tone directly;
+tone values come from literature. \\
+\tdim{thei} / \tdim{-thei} (as in \tdim{lutthei}) & lexical high-tone
+\tdim{thei} vs grammatical low-tone \tdim{-thei} in the literature &
+know / ABIL & Genesis 4:9; Matthew 7:21 & near\_minimal\_pair +
+literature\_backed\_tone\_claim & Bible attests both forms, but tonal
+interpretation remains literature-backed. \\
+\tdim{hi} / \tdim{hi} (as in \tdim{na hi hi}) & lexical high-tone
+\tdim{hi} vs grammatical low-tone \tdim{hi} in the literature & be /
+DECL & Genesis 16:13 & bible\_attested\_minimal\_pair +
+literature\_backed\_tone\_claim & Orthography is identical, so role and
+tone are interpreted from context plus literature. \\
+\end{longtable}
+}
+
+True orthography-identical tone minimal pairs are limited in the current
+source-resolved Bible layer, so near-minimal sets are used where needed
+and labeled explicitly.
+
+\paragraph{Short Bible examples}\label{short-bible-examples}
 
 \begin{exe}
-\ex \label{ex:phon-tone-triplet}
-\gll \tdimword{zá} \tdimword{zā} \tdimword{zà} \\
-     ? ? ? \\
-\glt \glossquote{minimal three-tone contrast} (source unavailable)
+\ex \label{ex:phon-ta-child-gen11}
+\gll \tdimword{tá} \tdimword{néi} \tdimword{lò} \tdimword{hì} \\
+     child have \textsc{neg} \textsc{decl} \\
+\glt \glossquote{had no child} (Genesis 11:30)
 \end{exe}
 
-This construction is rare in formal phonology evidence, so one example
-is used here.
+\begin{exe}
+\ex \label{ex:phon-thei-abil-matt7}
+\gll \tdimword{lút-thèi} \tdimword{dìng} \tdimword{ùh} \tdimword{hì} \\
+     enter-\textsc{abil} \textsc{irr} 2/3PL \textsc{decl} \\
+\glt \glossquote{they will be able to enter} (Matthew 7:21)
+\end{exe}
+
+These examples show Bible attestation of the forms in context. The tone
+assignment remains literature-backed, because ordinary Bible spelling
+does not mark tone contrast reliably.
 
 \paragraph{The blocked -a issue}\label{the-blocked--a-issue}
 
@@ -314,7 +374,8 @@ analysis remain deferred.
 \paragraph{What can be printed now}\label{what-can-be-printed-now}
 
 What can be printed now is a short segmental orientation, an orthography
-caveat, a three-tone status summary, a tiny formal tone contrast, and a
+caveat, a three-tone status summary, two or three Bible-attested minimal
+or near-minimal sets with literature-backed tone interpretation, and a
 blocked -a warning.
 
 \reviewchapterbreak
