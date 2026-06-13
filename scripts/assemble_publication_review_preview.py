@@ -459,11 +459,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
     ),
     "Same-subject and different-subject clause linkage": (
         "The current clause-linkage evidence is narrow: same-subject `bawlin` 'make-CVB' and `semin` 'serve-CVB' are "
-        "secure, the report-level `VERB-in` 'converb' label is only a comparison term, `ahih ciangin` 'when / when "
-        "it was' is support only, and ordinary `ciangin` 'when', `dingin` 'in order to / clause-bound irrealis', "
-        "`ngenin` 'pray-CVB', `a bawl mi` 'person who', `omna` 'place / being / existence', and `muhna-ah` "
-        "'in seeing / in the sight' stay boundary-controlled. No equally clean Gospel example is currently used "
-        "for this construction."
+        "secure, `bawlin` is printed as a trimmed excerpt because Genesis 11:4 is crowded with boundary `-in` tokens, "
+        "`semin` is kept in full because the Deuteronomy chain is already compact, the report-level `VERB-in` "
+        "'converb' label is only a comparison term, `ahih ciangin` 'when / when it was' is support only, and "
+        "ordinary `ciangin` 'when', `dingin` 'in order to / clause-bound irrealis', `ngenin` 'pray-CVB', `a bawl mi` "
+        "'person who', `omna` 'place / being / existence', and `muhna-ah` 'in seeing / in the sight' stay "
+        "boundary-controlled. No equally clean Gospel example is currently used for this construction."
     ),
 }
 GRAMMAR_FACING_TECHNICAL_REFERENCE_REPLACEMENTS: list[tuple[re.Pattern[str], str]] = [

@@ -33,3 +33,7 @@ Ordinary `ciangin` 'when' remains temporal subordination. Purposive `dingin` 'in
 # Concrete conclusion
 
 The report's switch-reference label is too strong for this packet. The print-facing section should be titled **same-subject and different-subject clause linkage**, with `bawlin` and `semin` promoted, `ahih ciangin` kept as support only, `ngenin` demoted, and `ciangin`, `dingin`, relatives, and nominalization held as boundary material.
+
+# Display note
+
+See `output/publication_review/switch_reference_example_verification.md` for the display-level decision. Genesis 11:4 is now trimmed for print, Deuteronomy 10:20 stays in full with `na` glossed `2SG`, `ahih ciangin` remains table-only support, and `ngenin` stays blocked.

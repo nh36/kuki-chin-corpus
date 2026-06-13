@@ -8,6 +8,15 @@ This is the first candidate-first pass for the switch-reference / same-subject a
 
 The scope stays narrow. It does **not** attempt a full subordination chapter, a full relative-clause chapter, a full converb chapter, or a full discourse chapter.
 
+## Example display stabilization
+
+The current display decision is now more conservative and cleaner than the first pass.
+
+- `bawlin` remains promoted, but the Genesis 11:4 quotation is trimmed so the target `bawl-in` is not buried under `amaute in`, `nadingin`, `a dawn in`, or `lamin`.
+- `semin` remains promoted; Deuteronomy 10:20 is kept in full because the same-subject chain is already compact, and `beel-in` stays boundary material rather than a second converb-like anchor.
+- `ahih ciangin` remains support-only and table-only.
+- `ngenin` remains blocked, and ordinary `ciangin`, `dingin`, `a bawl mi`, `omna`, and `muhna-ah` remain boundary rows.
+
 # Evidence base
 
 Primary sources for this scope:
@@ -35,13 +44,15 @@ No equally clean Gospel example is currently used, so the core stays OT-only for
 
 - `sr-ahih-ciangin-gen1p21` (`ahih ciangin`, Genesis 1:21)
 
-This row keeps the report's different-subject-looking pattern visible, but it does not justify a full switch-reference claim.
+This row keeps the report's different-subject-looking pattern visible, but it does not justify a full switch-reference claim. It remains a table row rather than a formal example.
 
 ## Blocked report anchor
 
 - `sr-ngenin-gen41p55` (`ngenin`, Genesis 41:55)
 
 This row stays blocked because analyzer output does not keep the morphology stable enough for promotion.
+
+The printed `ngenin` material should continue to be treated as blocked/unresolved, not as a secure same-subject diagnostic.
 
 ## Boundary rows
 

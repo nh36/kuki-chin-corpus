@@ -14,6 +14,10 @@ Please check the promoted examples directly against the Tedim clause context.
 6. Check whether `a bawl mi`, `omna`, and `muhna-ah` are still being treated as boundary material rather than core subject-tracking evidence.
 7. Confirm that the grammar-facing label is the safer same-subject and different-subject clause-linkage label rather than a full switch-reference claim.
 8. Check whether the OT-only core is acceptable without forcing a Gospel comparandum.
+9. Check whether `bawl-in` in Genesis 11:4 is really the target converb-like form and whether the shortened excerpt still gives enough context.
+10. Check whether `sem-in` in Deuteronomy 10:20 is correctly analysed and whether the person glossing on `na` should stay `2SG`.
+11. Check whether `beel-in` in Deuteronomy 10:20 is boundary material rather than a second converb-like form.
+12. Check whether any nearby `-in` token has been misanalysed or accidentally promoted.
 
 # Current controlled claim
 
