@@ -81,6 +81,7 @@ def test_reconciliation_includes_major_domains_and_analyzer_topics() -> None:
         "switch reference",
         "same-subject and different-subject clause linkage",
         "relative clauses",
+        "example-verification stabilized",
         "broader discourse beyond sentence-final particles",
         "tone in `-a` case marker",
         "conditioned variants (`-pah` / `-pak` / `-lawh`)",
@@ -136,6 +137,7 @@ def test_reconciliation_includes_switch_reference_implementation_sketch() -> Non
         "output/publication_review/review_notes_relative_clauses.md",
         "Core relative anchor: `a bawl mi`",
         "Supporting relative-like material: `omte`",
+        "relative clauses now have a dedicated first-slice packet",
         "Boundary rows: `omna`, `muhna-ah`, ordinary `ciangin`, purposive `dingin`, support-only `ahih ciangin`, and report-only `a om lai` / `a gen thu`",
     ):
         assert required in text

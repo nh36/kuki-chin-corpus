@@ -4,7 +4,7 @@ title: "Publication Review Handoff"
 
 # Purpose
 
-This document summarizes the current state of the Tedim Chin publication-review retrofit after completion of the relators/postpositions packet at the current slice maturity level.
+This document summarizes the current state of the Tedim Chin publication-review retrofit after completion of the current review-ready packet set, including the stabilized relative-clause packet at first-slice maturity.
 
 It is a human-review handoff, not a new analysis. It does not supersede the candidate TSVs, dossiers, grammar slices, dictionary slices, or review notes. All completed packets remain controlled by their candidate TSVs and dossiers. Chrestomathy, Mizo/lus, and other Kuki-Chin languages remain deferred until explicitly chosen.
 
@@ -25,6 +25,7 @@ It is a human-review handoff, not a new analysis. It does not supersede the cand
 | directionals | `candidates_directionals.tsv` | `dossier_directionals.md` | `grammar_directionals_print_slice.md` | `dictionary_directionals_print_slice.md` | `review_notes_directionals.md` | preserve `-toh` polysemy with blocked `paitoh`, `-lam` boundary material, nominalized `-khiat-na` / `-toh-na`, and deferred `-lut/-phei/-cip/-tang` cautions | human review / maintenance |
 | broad TAM / aspect / modal | `candidates_tam.tsv` | `dossier_tam_scope.md` | `grammar_tam_print_slice.md` | `dictionary_tam_print_slice.md` | `review_notes_tam.md` | preserve compact suffixal anchors only and keep `pailai`, `dingin`, negation overlap, sentence-final overlap, and broader stacking deferred | human review / maintenance |
 | relators/postpositions | `candidates_relators_postpositions.tsv` | `dossier_relators_postpositions_scope.md` | `grammar_relators_postpositions_print_slice.md` | `dictionary_relators_postpositions_print_slice.md` | `review_notes_relators_postpositions.md` | preserve the relator-led and case-boundary-controlled packet, with `nuai`, `mai`, `tawhin`, `kipan`, and `kipanin` still deferred or boundary-only | human review / maintenance |
+| relative clauses | `candidates_relative_clauses.tsv` | `dossier_relative_clauses_scope.md` | `grammar_relative_clauses_print_slice.md` | — | `review_notes_relative_clauses.md` | keep the narrow `mi`-headed / relative-like nominal-modifier packet stable; `a bawl mi` is core, `omte` is support, and `omna` / `muhna-ah` stay boundary material | human review / maintenance |
 
 # Main caution by packet
 
@@ -41,6 +42,7 @@ It is a human-review handoff, not a new analysis. It does not supersede the cand
 - **Directionals:** preserve outward `pokhia`, away `nawhkhiat` with analyzer-label caveat, blocked `paitoh` overlap, `-lam` boundary treatment, nominalized `-na` boundary forms, and deferred `-lut/-phei/-cip/-tang`.
 - **Broad TAM / aspect / modal:** preserve the compact-anchor packet and do not widen it into a full TAM or VP-slot rewrite without explicit new scope selection.
 - **Relators/postpositions:** preserve the relator-led boundary with case marking and do not promote `kiangah`, `sungah`, `tungah`, `lakpan`, `nuai`, `mai`, `tawhin`, `kipan`, or `kipanin` beyond the current packet without review.
+- **Relative clauses:** preserve `a bawl mi` as the core diagnostic, keep `omte` as supporting evidence, keep `omna` and `muhna-ah` as nominalization/case boundaries, and do not widen the packet into a full relative-clause chapter.
 
 # What reviewers should do
 

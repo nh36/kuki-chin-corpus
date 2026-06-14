@@ -20,6 +20,7 @@ EXPECTED_TOPICS = {
     "directionals",
     "broad TAM / aspect / modal",
     "relators/postpositions",
+    "relative clauses",
 }
 
 EXPECTED_CANDIDATE_FILES = {
@@ -44,6 +45,7 @@ EXPECTED_CANDIDATE_FILES = {
     "candidates_noun_domain.tsv",
     "candidates_reduplication.tsv",
     "candidates_transitivity.tsv",
+    "candidates_relative_clauses.tsv",
 }
 
 RETROFIT_SEQUENCE_REVIEW_NOTES = {
@@ -63,6 +65,7 @@ RETROFIT_SEQUENCE_REVIEW_NOTES = {
     "review_notes_noun_domain.md",
     "review_notes_reduplication.md",
     "review_notes_transitivity.md",
+    "review_notes_relative_clauses.md",
 }
 
 FORBIDDEN_NEW_PACKET_FILES = {
@@ -113,8 +116,10 @@ def test_handoff_review_ready_packets_are_file_backed():
         assert surfaces["candidate"], f"{topic} is missing a candidate TSV in the handoff table"
         assert surfaces["dossier"], f"{topic} is missing a dossier entry in the handoff table"
         assert surfaces["grammar"], f"{topic} is missing a grammar slice in the handoff table"
-        assert surfaces["dictionary"], f"{topic} is missing a dictionary slice in the handoff table"
         assert surfaces["review_notes"], f"{topic} is missing review notes in the handoff table"
+
+        if topic != "relative clauses":
+            assert surfaces["dictionary"], f"{topic} is missing a dictionary slice in the handoff table"
 
         for filenames in surfaces.values():
             for filename in filenames:
