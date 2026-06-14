@@ -5,6 +5,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 PUBLICATION_REVIEW_DIR = REPO_ROOT / "output" / "publication_review"
 HANDOFF_PATH = PUBLICATION_REVIEW_DIR / "human_review_handoff.md"
+PROGRESS_PATH = REPO_ROOT / "PROGRESS.md"
 
 EXPECTED_TOPICS = {
     "demonstratives/deixis",
@@ -142,6 +143,17 @@ def test_handoff_keeps_next_action_as_human_review():
     assert "No further narrow publication-review packet should be started automatically." in text
     assert "The next substantive action should be human review of the completed packets." in text
     assert "select one new scope explicitly" in text
+
+
+def test_progress_records_post_relative_clause_review_state():
+    text = PROGRESS_PATH.read_text(encoding="utf-8")
+
+    assert (
+        "relative-clause / relative-like nominal-modifier packet has now been started, lifted, and stabilized at first-slice maturity"
+        in text
+    )
+    assert "records that no new substantive target is currently selected" in text
+    assert "the next substantive action is human review unless Nathan explicitly chooses a new scope" in text
 
 
 def test_handoff_keeps_deferred_scopes_deferred():
