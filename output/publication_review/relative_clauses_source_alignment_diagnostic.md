@@ -15,6 +15,8 @@ The dedicated relative-clause report (`docs/grammar/reports/08-clause-03-relativ
 - **Ordinary subordination and clause-linkage material**: `ciangin`, `dingin`, `bawlin`, `semin`, and support-only `ahih ciangin` remain boundaries for this packet.
 - **Report-table or generated rows**: useful orientation (`a om lai`, `a gen thu`) but not promotable until source-resolved.
 
+See `output/publication_review/relative_clauses_example_verification.md` for detailed example-level verification.
+
 # 2. Safest print-facing label
 
 The concrete print-facing decision is:

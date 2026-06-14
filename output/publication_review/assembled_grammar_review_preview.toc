@@ -242,14 +242,14 @@
 \contentsline {subsubsection}{\numberline {3.13.6}Case-marked nominalization boundary}{77}{subsubsection.3.13.6}%
 \contentsline {subsubsection}{\numberline {3.13.7}Ordinary subordination and clause-linkage boundary}{77}{subsubsection.3.13.7}%
 \contentsline {subsubsection}{\numberline {3.13.8}Deferred material}{77}{subsubsection.3.13.8}%
-\contentsline {subsubsection}{\numberline {3.13.9}Summary}{77}{subsubsection.3.13.9}%
+\contentsline {subsubsection}{\numberline {3.13.9}Summary}{78}{subsubsection.3.13.9}%
 \contentsline {subsection}{\numberline {3.14}Clause linkage}{78}{subsection.3.14}%
 \contentsline {subsubsection}{\numberline {3.14.1}Overview of clause linkage in this section}{78}{subsubsection.3.14.1}%
 \contentsline {subsubsection}{\numberline {3.14.2}Core temporal subordination: ciangin}{78}{subsubsection.3.14.2}%
-\contentsline {subsubsection}{\numberline {3.14.3}Purposive or clause-bound irrealis boundary: dingin}{78}{subsubsection.3.14.3}%
+\contentsline {subsubsection}{\numberline {3.14.3}Purposive or clause-bound irrealis boundary: dingin}{79}{subsubsection.3.14.3}%
 \contentsline {subsubsection}{\numberline {3.14.4}Same-subject converb linkage boundary: VERB-in and ngenin}{79}{subsubsection.3.14.4}%
 \contentsline {subsubsection}{\numberline {3.14.5}Different-subject temporal linkage boundary: ahih ciangin}{79}{subsubsection.3.14.5}%
-\contentsline {subsubsection}{\numberline {3.14.6}Prenominal relative-clause boundary: a bawl mi}{79}{subsubsection.3.14.6}%
+\contentsline {subsubsection}{\numberline {3.14.6}Prenominal relative-clause boundary: a bawl mi}{80}{subsubsection.3.14.6}%
 \contentsline {subsubsection}{\numberline {3.14.7}Nominalized relative and clause-like form boundary: omna}{80}{subsubsection.3.14.7}%
 \contentsline {subsubsection}{\numberline {3.14.8}Nominalization-plus-case boundary: muhna-ah}{80}{subsubsection.3.14.8}%
 \contentsline {subsubsection}{\numberline {3.14.9}Deferred and boundary material}{80}{subsubsection.3.14.9}%
@@ -258,7 +258,7 @@
 \contentsline {subsubsection}{\numberline {3.15.1}Overview of the current evidence}{81}{subsubsection.3.15.1}%
 \contentsline {paragraph}{Current display inventory}{81}{section*.36}%
 \contentsline {paragraph}{Promoted same-subject evidence}{82}{section*.37}%
-\contentsline {paragraph}{Support-only and boundary material}{82}{section*.38}%
+\contentsline {paragraph}{Support-only and boundary material}{83}{section*.38}%
 \contentsline {paragraph}{Deferred material}{83}{section*.39}%
 \contentsline {section}{\numberline {4}Clause type, discourse-facing material, and expressive morphology}{83}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Negation}{83}{subsection.4.1}%
@@ -269,17 +269,17 @@
 \contentsline {subsubsection}{\numberline {4.1.5}\textit {kei} in prohibitives and irrealis-heavy negation}{85}{subsubsection.4.1.5}%
 \contentsline {subsubsection}{\numberline {4.1.6}Ordinary plural negative predicates are not automatically prohibitive}{85}{subsubsection.4.1.6}%
 \contentsline {subsubsection}{\numberline {4.1.7}Negative existence and absence}{85}{subsubsection.4.1.7}%
-\contentsline {subsubsection}{\numberline {4.1.8}Cessative \textit {nawn lo}}{85}{subsubsection.4.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.8}Cessative \textit {nawn lo}}{86}{subsubsection.4.1.8}%
 \contentsline {subsubsection}{\numberline {4.1.9}Ability and inability}{86}{subsubsection.4.1.9}%
 \contentsline {subsubsection}{\numberline {4.1.10}Negative polarity items}{86}{subsubsection.4.1.10}%
-\contentsline {subsubsection}{\numberline {4.1.11}Deferred material}{86}{subsubsection.4.1.11}%
+\contentsline {subsubsection}{\numberline {4.1.11}Deferred material}{87}{subsubsection.4.1.11}%
 \contentsline {subsection}{\numberline {4.2}Interrogatives}{87}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Overview of interrogatives in Tedim}{87}{subsubsection.4.2.1}%
 \contentsline {paragraph}{Interrogative inventory}{87}{section*.40}%
 \contentsline {paragraph}{Clause-final \textit {hiam} `question particle'}{88}{section*.41}%
 \contentsline {paragraph}{WH + \textit {hiam} content questions}{88}{section*.42}%
 \contentsline {subparagraph}{\textit {bang} `what'}{88}{section*.43}%
-\contentsline {subparagraph}{\textit {kua} `who'}{88}{section*.44}%
+\contentsline {subparagraph}{\textit {kua} `who'}{89}{section*.44}%
 \contentsline {subparagraph}{\textit {bangci} `how'}{89}{section*.45}%
 \contentsline {subparagraph}{\textit {banghangin} `why'}{89}{section*.46}%
 \contentsline {paragraph}{Embedded-question boundary}{89}{section*.47}%
@@ -291,11 +291,11 @@
 \contentsline {subsubsection}{\numberline {4.3.2}Sentence-final particle inventory}{90}{subsubsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.3}Declarative \textit {hi} with copula overlap}{91}{subsubsection.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.3.4}Negative-plus-declarative \textit {lo hi}}{91}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Optative or jussive \textit {hen}}{91}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.5}Optative or jussive \textit {hen}}{92}{subsubsection.4.3.5}%
 \contentsline {subsubsection}{\numberline {4.3.6}Imperative \textit {in} and \textit {un}}{92}{subsubsection.4.3.6}%
 \contentsline {subsubsection}{\numberline {4.3.7}\textit {Hiam} as interrogatives overlap}{92}{subsubsection.4.3.7}%
-\contentsline {subsubsection}{\numberline {4.3.8}\textit {Aw} as vocative or exclamative boundary}{92}{subsubsection.4.3.8}%
-\contentsline {subsubsection}{\numberline {4.3.9}\textit {Tahen}, \textit {ta}, and \textit {zo} as deferred TAM-overlap material}{92}{subsubsection.4.3.9}%
+\contentsline {subsubsection}{\numberline {4.3.8}\textit {Aw} as vocative or exclamative boundary}{93}{subsubsection.4.3.8}%
+\contentsline {subsubsection}{\numberline {4.3.9}\textit {Tahen}, \textit {ta}, and \textit {zo} as deferred TAM-overlap material}{93}{subsubsection.4.3.9}%
 \contentsline {subsubsection}{\numberline {4.3.10}Deferred material}{93}{subsubsection.4.3.10}%
 \contentsline {subsection}{\numberline {4.4}Coordinators}{93}{subsection.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.1}Overview of coordinators in Tedim}{93}{subsubsection.4.4.1}%
@@ -303,15 +303,15 @@
 \contentsline {subsubsection}{\numberline {4.4.3}NP coordination with \textit {le}}{94}{subsubsection.4.4.3}%
 \contentsline {subsubsection}{\numberline {4.4.4}Conditional and boundary \textit {leh}}{94}{subsubsection.4.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.5}Sequential \textit {a} and agreement false friends}{94}{subsubsection.4.4.5}%
-\contentsline {subsubsection}{\numberline {4.4.6}Deferred \textit {mawh} material}{94}{subsubsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {4.4.6}Deferred \textit {mawh} material}{95}{subsubsection.4.4.6}%
 \contentsline {subsubsection}{\numberline {4.4.7}Adversative \textit {Ahih hangin}}{95}{subsubsection.4.4.7}%
 \contentsline {subsubsection}{\numberline {4.4.8}Conditional-adversative \textit {ahih kei leh}}{95}{subsubsection.4.4.8}%
 \contentsline {subsubsection}{\numberline {4.4.9}Deferred material}{95}{subsubsection.4.4.9}%
-\contentsline {subsection}{\numberline {4.5}Reduplication}{95}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Overview of reduplication in Tedim}{95}{subsubsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5}Reduplication}{96}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Overview of reduplication in Tedim}{96}{subsubsection.4.5.1}%
 \contentsline {paragraph}{Reduplication inventory}{96}{section*.51}%
 \contentsline {subparagraph}{Full reduplication as intensification}{96}{section*.52}%
 \contentsline {subparagraph}{Secondary distributive reduplication}{97}{section*.53}%
 \contentsline {subparagraph}{Boundary and deferred material}{97}{section*.54}%
 \contentsline {subsection}{\numberline {4.6}Broader discourse}{97}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Analyzer-gap caution}{97}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.7}Analyzer-gap caution}{98}{subsection.4.7}%

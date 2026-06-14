@@ -169,6 +169,16 @@ The first grammar-facing print slice keeps:
 3. **Boundary**: `omna` and `muhna-ah` (nominalization boundaries); ordinary clause-linkage material (boundary control)
 4. **Deferred**: `a nei mi`, `a gen thu`, and other corpus-backed patterns without specific Bible verse resolution
 
+## Example-level verification result
+
+See `output/publication_review/relative_clauses_example_verification.md` for detailed verification of each example. Summary:
+
+- **`a bawl mi` (promoted)**: Verified clean. The prefix `a-` is ordinary 3SG agreement, and `mi` is the head noun. The prenominal structure yields a relative-like reading.
+- **`omte` (supporting)**: Verified appropriate. The form is ambiguous between headless/free relative and plural nominalization; supporting status is correct.
+- **`omna` (boundary)**: Verified as nominalization boundary material. The `-na` nominalizer creates a place/presence frame, not a relative clause.
+- **`muhna-ah` (boundary)**: Verified as case-marked nominalization boundary material. The form combines nominalization (`-na`) with locative case (`-ah`).
+- **Clause-linkage boundaries**: Verified to remain outside the relative-clause core.
+
 ## Relationship to neighboring sections
 
 - **Nominalization section**: `omna` and nominalized relatives remain boundary material

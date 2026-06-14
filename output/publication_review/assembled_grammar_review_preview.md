@@ -2779,7 +2779,7 @@ b. Segmentation: paknamtui | a | bawl | mi | peuhmah
 c. Gloss: perfume | 3SG.REL | make | person | every
 d. Translation: whoever makes any like it
 
-The form `a bawl mi` means `person who makes`, and the report documents 22 tokens of this pattern.
+The form `a bawl mi` shows a person-noun `mi` (person) modified by a prenominal predicate `a bawl` (3SG makes). The prefix `a-` is ordinary third-person singular agreement, not a unique relativizer; in prenominal position before a head noun, it yields a relative-like reading. The head noun `mi` is the understood subject of the relative predicate. The report documents 22 tokens of this pattern, all with the same prenominal structure.
 
 ### Plural relative-like support
 
