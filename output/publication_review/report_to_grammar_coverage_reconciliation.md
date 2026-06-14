@@ -27,10 +27,10 @@ Controlling sources used in this reconciliation:
 High-level status split:
 
 - **Properly lifted into grammar-facing treatment**: demonstratives/deixis, negation, interrogatives, sentence-final particles, numerals, quantifiers, coordinators, case marking, NP structure, noun domain, relators/postpositions, reduplication.
-- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, Hong / kong object-prefix or inverse-like marking (person-diagnostic stabilized), verb paradigms (first finite-frame slice, report-alignment stabilized), stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (first slice, stem-diagnostic stabilized), nominalization, clause linkage, same-subject and different-subject clause linkage (switch reference first slice).
+- **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, Hong / kong object-prefix or inverse-like marking (person-diagnostic stabilized), verb paradigms (first finite-frame slice, report-alignment stabilized), stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (first slice, stem-diagnostic stabilized), nominalization, same-subject and different-subject clause linkage (first-slice lifted, example-display stabilized), relative clauses (first grammar-facing slice).
 - **First-slice lifted and Bible-example verified**: phonology/tone (blocked `-a` remains unresolved).
-- **Current active coverage target**: same-subject and different-subject clause linkage / switch reference.
-- **Mainly boundary material**: relative clauses, broad possession architecture.
+- **Current active coverage target**: relative clauses.
+- **Mainly boundary material**: broad possession architecture.
 - **Cross-cutting analyzer-gap topics**: tone in `-a`, conditioned variants (`-pah`/`-pak`/`-lawh`), `hong-` / `kong-` constraints, `-sak` split, `-pih` constraints, `-thei/-theih`, habituals.
 
 # 2. Source-to-preview matrix
@@ -142,56 +142,45 @@ Hold stable unless human review finds defects:
 
 # 4. Recommendation for the next substantive packet
 
-**Synchronization update:** the `hong` / `kong` target has now been actioned to a first grammar-facing slice with an explicit person-configuration diagnostic and should be held stable at first-slice maturity. The verb-paradigm slice is now also report-alignment stabilized and should stay narrow unless tests break.
+**Synchronization update:** same-subject and different-subject clause linkage has now been stabilized for example display and `-in` disambiguation, and should be held stable at first-slice maturity. The verb-paradigm slice is now also report-alignment stabilized and should stay narrow unless tests break.
 
-**Current active substantive target: same-subject and different-subject clause linkage / switch reference.**
+**Current active substantive target: relative clauses.**
 
 Why this is the best active target from the same source architecture:
 
-1. **Completeness value:** the assembled preview now needs a narrow source-led same-subject / different-subject clause-linkage section that can print controlled evidence without claiming a full switch-reference system.
-2. **Evidence readiness:** the report already distinguishes secure same-subject anchors, support-only different-subject-looking material, and boundary rows.
-3. **Candidate-first fit:** a source-aligned slice can stay confined to safe clause-linkage contrasts without opening a full subordination, relative-clause, or discourse chapter.
-4. **Boundary value:** it can keep ordinary `ciangin`, purposive `dingin`, relative-clause material, and nominalization separate from the subject-tracking core.
+1. **Completeness value:** the assembled preview now needs a narrow source-led relative-clause section that can print controlled evidence without claiming a full relative-clause system.
+2. **Evidence readiness:** the report already distinguishes a secure `mi`-headed diagnostic, supporting plural/headless material, and boundary rows for nominalization and case.
+3. **Candidate-first fit:** a source-aligned slice can stay confined to safe relative-like contrasts without opening a full nominalization, case, or discourse chapter.
+4. **Boundary value:** it can keep ordinary `ciangin`, purposive `dingin`, same-subject linkage, support-only `ahih ciangin`, and nominalized material separate from the relative-clause core.
 
 Why not the other major gaps immediately:
 
 - **Verb paradigms** is already lifted and stabilized.
 - **Broader discourse** remains partially surfaced and still better treated as deferred chapter-scale work.
 
-# 5. Implementation sketch for the active `switch reference` target
+# 5. Implementation sketch for the active relative-clause target
 
 Likely controlling evidence:
 
-- `docs/SKELETON_GRAMMAR.md`
-- `docs/grammar/GRAMMAR_SOURCE_INVENTORY.md`
-- `docs/grammar/reports/08-clause-02-switch-reference.md`
-- `docs/grammar/reports/08-clause-01-subordination.md`
 - `docs/grammar/reports/08-clause-03-relatives.md`
+- `docs/grammar/reports/08-clause-01-subordination.md`
+- `docs/grammar/reports/08-clause-02-switch-reference.md`
 - `docs/grammar/lit-reviews/08-clause-03-subordination-lit.md`
-- `output/publication_review/candidates_switch_reference.tsv`
-- `output/publication_review/dossier_switch_reference_scope.md`
-- `output/publication_review/grammar_switch_reference_print_slice.md`
-- `output/publication_review/switch_reference_source_alignment_diagnostic.md`
-- `output/publication_review/review_notes_switch_reference.md`
+- `output/publication_review/candidates_relative_clauses.tsv`
+- `output/publication_review/dossier_relative_clauses_scope.md`
+- `output/publication_review/grammar_relative_clauses_print_slice.md`
+- `output/publication_review/relative_clauses_source_alignment_diagnostic.md`
+- `output/publication_review/review_notes_relative_clauses.md`
 
 Likely boundary surfaces to keep visible:
 
-- `output/publication_review/grammar_tam_print_slice.md` (TAM boundary)
-- `output/publication_review/grammar_pih_comitative_applicative_print_slice.md` (`-pih` boundary)
-- `output/publication_review/grammar_stem_alternation_print_slice.md` (Form I/II boundary)
-- `output/publication_review/grammar_verb_paradigms_print_slice.md` (finite-paradigm boundary)
-
-Proposed packet surfaces (now active):
-
-- `output/publication_review/candidates_switch_reference.tsv`
-- `output/publication_review/dossier_switch_reference_scope.md`
-- `output/publication_review/grammar_switch_reference_print_slice.md`
-- `output/publication_review/switch_reference_source_alignment_diagnostic.md`
-- `output/publication_review/review_notes_switch_reference.md`
+- `output/publication_review/grammar_nominalization_print_slice.md` (nominalization boundary)
+- `output/publication_review/grammar_clause_linkage_print_slice.md` (clause-linkage boundary)
+- `output/publication_review/grammar_switch_reference_print_slice.md` (stabilized clause-linkage boundary)
 
 Likely anchors and controlled boundaries:
 
-- Core same-subject anchors: `bawlin` and `semin`
-- Support-only different-subject-looking material: `ahih ciangin`
-- Boundary rows: ordinary `ciangin`, purposive `dingin`, relative clauses, nominalization, and blocked `ngenin`
-- Keep the same-subject / different-subject contrast narrow and do not widen it into a full subordination or discourse chapter
+- Core relative anchor: `a bawl mi`
+- Supporting relative-like material: `omte`
+- Boundary rows: `omna`, `muhna-ah`, ordinary `ciangin`, purposive `dingin`, support-only `ahih ciangin`, and report-only `a om lai` / `a gen thu`
+- Keep the relative-clause contrast narrow and do not widen it into a full nominalization, case, or discourse chapter

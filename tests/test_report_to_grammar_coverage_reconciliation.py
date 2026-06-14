@@ -118,7 +118,8 @@ def test_reconciliation_recommends_substantive_next_target_not_admin_handoff() -
 
     assert "# 4. Recommendation for the next substantive packet" in text
     assert "Synchronization update:" in text
-    assert "Current active substantive target: same-subject and different-subject clause linkage / switch reference." in text
+    assert "same-subject and different-subject clause linkage has now been stabilized" in lower
+    assert "Current active substantive target: relative clauses." in text
     assert "report-alignment stabilized" in lower
     assert "human-review handoff" not in lower
 
@@ -127,14 +128,14 @@ def test_reconciliation_includes_switch_reference_implementation_sketch() -> Non
     text = _text()
 
     for required in (
-        "# 5. Implementation sketch for the active `switch reference` target",
-        "output/publication_review/candidates_switch_reference.tsv",
-        "output/publication_review/dossier_switch_reference_scope.md",
-        "output/publication_review/grammar_switch_reference_print_slice.md",
-        "output/publication_review/switch_reference_source_alignment_diagnostic.md",
-        "output/publication_review/review_notes_switch_reference.md",
-        "Core same-subject anchors: `bawlin` and `semin`",
-        "Support-only different-subject-looking material: `ahih ciangin`",
-        "Boundary rows: ordinary `ciangin`, purposive `dingin`, relative clauses, nominalization, and blocked `ngenin`",
+        "# 5. Implementation sketch for the active relative-clause target",
+        "output/publication_review/candidates_relative_clauses.tsv",
+        "output/publication_review/dossier_relative_clauses_scope.md",
+        "output/publication_review/grammar_relative_clauses_print_slice.md",
+        "output/publication_review/relative_clauses_source_alignment_diagnostic.md",
+        "output/publication_review/review_notes_relative_clauses.md",
+        "Core relative anchor: `a bawl mi`",
+        "Supporting relative-like material: `omte`",
+        "Boundary rows: `omna`, `muhna-ah`, ordinary `ciangin`, purposive `dingin`, support-only `ahih ciangin`, and report-only `a om lai` / `a gen thu`",
     ):
         assert required in text

@@ -43,6 +43,7 @@ TARGET_SECTION_TITLES = {
     "TAM / aspect / modal",
     "Directionals",
     "Nominalization",
+    "`mi`-headed and nominalized relative-like constructions",
     "Clause linkage",
     "Same-subject and different-subject clause linkage",
 }
@@ -321,6 +322,7 @@ GLOSSARY_REQUIREMENTS: dict[str, tuple[tuple[str, ...], str]] = {
     "muhna-ah": ((r"in seeing|in the sight|before",), "in seeing / in the sight"),
     "kumpipa": ((r"king",), "king"),
     "Topa": ((r"Lord",), "Lord"),
+    "omte": ((r"those who exist|all that was in it|exist-PL",), "those who exist"),
     "bawlin": ((r"make-CVB|same-subject converb",), "make-CVB"),
     "semin": ((r"serve-CVB|same-subject converb",), "serve-CVB"),
     "ciangin": ((r"when|temporal subordination",), "when"),

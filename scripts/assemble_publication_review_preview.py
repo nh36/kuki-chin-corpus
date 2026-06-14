@@ -126,6 +126,11 @@ ASSEMBLY_SPEC = [
                 "path": "output/publication_review/grammar_pih_comitative_applicative_print_slice.md",
             },
             {"type": "slice", "title": "Nominalization", "path": "output/publication_review/grammar_nominalization_print_slice.md"},
+            {
+                "type": "slice",
+                "title": "`mi`-headed and nominalized relative-like constructions",
+                "path": "output/publication_review/grammar_relative_clauses_print_slice.md",
+            },
             {"type": "slice", "title": "Clause linkage", "path": "output/publication_review/grammar_clause_linkage_print_slice.md"},
             {
                 "type": "slice",
@@ -281,6 +286,7 @@ TARGET_QUALITY_GATE_SECTION_TITLES = {
     "TAM / aspect / modal",
     "Directionals",
     "Nominalization",
+    "`mi`-headed and nominalized relative-like constructions",
     "Clause linkage",
 }
 NO_SOURCE_AVAILABLE_RE = re.compile(r"\b(?:no[- ]source[- ]available|source unavailable)\b", re.IGNORECASE)
@@ -450,6 +456,12 @@ GRAMMAR_FACING_SECTION_INTROS = {
         "with `bawlna` 'making / creation' as a compact anchor, while `-pa` 'agentive / person' and "
         "`-mi` 'person / one who' material "
         "remains explicit boundary evidence."
+    ),
+    "`mi`-headed and nominalized relative-like constructions": (
+        "The current relative-like evidence is narrow: the head noun `mi` 'person' in the clearest source-resolved "
+        "pattern is the main diagnostic, `omte` 'those who exist' remains supporting, and `omna` 'place / being / "
+        "existence' plus `muhna-ah` 'in the sight' remain boundary material. No equally clean Gospel example is "
+        "currently used, so the first slice stays OT-heavy and cautious."
     ),
     "Clause linkage": (
         "The current clause-linkage evidence is strongest for temporal subordination with `ciangin` 'when', "

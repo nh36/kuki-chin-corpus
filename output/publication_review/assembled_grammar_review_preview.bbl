@@ -1,0 +1,27 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cing(2017)]{zamngaihcing2017}
+Zam~Ngaih Cing.
+\newblock \emph{A Descriptive Grammar of {Tedim} {Chin}}.
+\newblock PhD thesis, North-Eastern Hill University, Shillong, 2017.
+\newblock PhD dissertation; local PDF split into Part 1 and Part 2.
+
+\bibitem[Henderson(1965)]{henderson1965}
+Eugénie J.~A. Henderson.
+\newblock \emph{{Tiddim Chin}: A Descriptive Analysis of Two Texts}, volume~15
+  of \emph{London Oriental Series}.
+\newblock Oxford University Press, 1965.
+
+\bibitem[Otsuka and Kurabe()]{otsuka_kurabe_directional_affixes}
+Kosei Otsuka and Keita Kurabe.
+\newblock
+  ティディム・チン語とジンポー語における方向接辞の対照.
+\newblock Conference/proceedings item W-2-3; bibliographic venue and year to
+  verify.
+
+\end{thebibliography}
