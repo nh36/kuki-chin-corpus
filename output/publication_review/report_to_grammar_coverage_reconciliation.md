@@ -29,7 +29,8 @@ High-level status split:
 - **Properly lifted into grammar-facing treatment**: demonstratives/deixis, negation, interrogatives, sentence-final particles, numerals, quantifiers, coordinators, case marking, NP structure, noun domain, relators/postpositions, reduplication.
 - **Lifted but still narrow slices**: pronouns/clusivity, prefix/agreement, Hong / kong object-prefix or inverse-like marking (person-diagnostic stabilized), verb paradigms (first finite-frame slice, report-alignment stabilized), stem alternation, transitivity, TAM/aspect/modal, directionals, VP structure/stacking, derivation/valency (`-sak`-led), reflexive/reciprocal/middle-like `ki-` (first slice), verbal `-pih` comitative applicative (first slice, stem-diagnostic stabilized), nominalization, same-subject and different-subject clause linkage (first-slice lifted, example-display stabilized), relative clauses (first grammar-facing slice, example-verification stabilized).
 - **First-slice lifted and Bible-example verified**: phonology/tone (blocked `-a` remains unresolved).
-- **Current active coverage target**: relative clauses.
+- **Most recent completed target**: relative clauses (first grammar-facing slice, example-verification stabilized).
+- **No new substantive target is currently selected**: hold completed packets stable for review unless a new scope is explicitly chosen.
 - **Mainly boundary material**: broad possession architecture.
 - **Cross-cutting analyzer-gap topics**: tone in `-a`, conditioned variants (`-pah`/`-pak`/`-lawh`), `hong-` / `kong-` constraints, `-sak` split, `-pih` constraints, `-thei/-theih`, habituals.
 
@@ -118,11 +119,12 @@ Hold stable unless human review finds defects:
 - verbal `-pih` comitative applicative (first slice)
 - nominalization
 - subordination (inside clause linkage)
+- relative clauses (first grammar-facing slice, example-verification stabilized)
 
 ## C. Boundary-only domains still needing synthesis for a fuller grammar
 
 - switch reference
-- relative clauses
+- broader relative-clause system beyond the current packet
 - broader possession architecture
 - full VP slot architecture beyond current narrow stacks
 
@@ -140,27 +142,28 @@ Hold stable unless human review finds defects:
 - `-thei/-theih` allomorphy (partly reconciled)
 - habituals (`ngei` / `gige` / `zel`) (partly reconciled)
 
-# 4. Recommendation for the next substantive packet
+# 4. Post-relative-clause completion status
 
-**Synchronization update:** same-subject and different-subject clause linkage has now been stabilized for example display and `-in` disambiguation, and should be held stable at first-slice maturity. The verb-paradigm slice is now also report-alignment stabilized and should stay narrow unless tests break.
+**Synchronization update:** same-subject and different-subject clause linkage has now been stabilized for example display and `-in` disambiguation, and should be held stable at first-slice maturity. The verb-paradigm slice is now also report-alignment stabilized and should stay narrow unless tests break. Relative clauses are now first-slice lifted and example-verification stabilized.
 
-**Current active substantive target: relative clauses.**
+**No new substantive target is currently selected.**
 
-Why this is the best active target from the same source architecture:
+**Next action:** the next substantive action is human review of the completed packets unless a new scope is explicitly selected.
 
-1. **Completeness value:** the assembled preview now needs a narrow source-led relative-clause section that can print controlled evidence without claiming a full relative-clause system.
-2. **Evidence readiness:** the report already distinguishes a secure `mi`-headed diagnostic, supporting plural/headless material, and boundary rows for nominalization and case.
-3. **Candidate-first fit:** a source-aligned slice can stay confined to safe relative-like contrasts without opening a full nominalization, case, or discourse chapter.
-4. **Boundary value:** it can keep ordinary `ciangin`, purposive `dingin`, same-subject linkage, support-only `ahih ciangin`, and nominalized material separate from the relative-clause core.
+Why no automatic new packet target is selected:
+
+1. **Review readiness first:** the completed packet set should be reviewed before opening another narrow packet.
+2. **Scope discipline:** adding a new target without explicit selection risks unbounded expansion and cross-domain drift.
+3. **Deferred architecture remains:** broader relative-clause synthesis, broader discourse, and unresolved analyzer-gap topics remain explicit second-pass work.
 
 Why not the other major gaps immediately:
 
 - **Verb paradigms** is already lifted and stabilized.
 - **Broader discourse** remains partially surfaced and still better treated as deferred chapter-scale work.
 
-# 5. Implementation sketch for the active relative-clause target
+# 5. Completed relative-clause packet state record
 
-Likely controlling evidence:
+Controlling evidence:
 
 - `docs/grammar/reports/08-clause-03-relatives.md`
 - `docs/grammar/reports/08-clause-01-subordination.md`
@@ -172,13 +175,13 @@ Likely controlling evidence:
 - `output/publication_review/relative_clauses_source_alignment_diagnostic.md`
 - `output/publication_review/review_notes_relative_clauses.md`
 
-Likely boundary surfaces to keep visible:
+Boundary surfaces to keep visible:
 
 - `output/publication_review/grammar_nominalization_print_slice.md` (nominalization boundary)
 - `output/publication_review/grammar_clause_linkage_print_slice.md` (clause-linkage boundary)
 - `output/publication_review/grammar_switch_reference_print_slice.md` (stabilized clause-linkage boundary)
 
-Likely anchors and controlled boundaries:
+Anchors and controlled boundaries:
 
 - Core relative anchor: `a bawl mi`
 - Supporting relative-like material: `omte`

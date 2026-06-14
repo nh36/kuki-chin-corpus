@@ -117,19 +117,24 @@ def test_reconciliation_recommends_substantive_next_target_not_admin_handoff() -
     text = _text()
     lower = text.lower()
 
-    assert "# 4. Recommendation for the next substantive packet" in text
+    assert "# 4. Post-relative-clause completion status" in text
     assert "Synchronization update:" in text
     assert "same-subject and different-subject clause linkage has now been stabilized" in lower
-    assert "Current active substantive target: relative clauses." in text
+    assert "relative clauses are now first-slice lifted and example-verification stabilized" in lower
+    assert "No new substantive target is currently selected." in text
+    assert (
+        "the next substantive action is human review of the completed packets unless a new scope is explicitly selected."
+        in lower
+    )
+    assert "Current active substantive target: relative clauses." not in text
     assert "report-alignment stabilized" in lower
-    assert "human-review handoff" not in lower
 
 
-def test_reconciliation_includes_switch_reference_implementation_sketch() -> None:
+def test_reconciliation_records_completed_relative_clause_packet_state() -> None:
     text = _text()
 
     for required in (
-        "# 5. Implementation sketch for the active relative-clause target",
+        "# 5. Completed relative-clause packet state record",
         "output/publication_review/candidates_relative_clauses.tsv",
         "output/publication_review/dossier_relative_clauses_scope.md",
         "output/publication_review/grammar_relative_clauses_print_slice.md",
