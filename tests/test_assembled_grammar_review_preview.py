@@ -491,12 +491,13 @@ def test_assembled_preview_includes_normalized_numerals_section() -> None:
 
     for required in (
         "Overview of the numeral system",
-        "Cardinal numerals",
-        "Decimal composition",
-        "Counting phrases and word order",
-        "Classifier-like and counting expressions",
-        "Distributive numerals",
-        "Ambiguity controls",
+        "Cardinal inventory",
+        "Compound numerals",
+        "Noun-plus-numeral word order",
+        "Ordinals and the `-na` boundary",
+        "Multiplicative and counting expressions",
+        "Ambiguity controls: `kua` and `khat`",
+        "Deferred and boundary material",
     ):
         assert required in text
 
@@ -532,8 +533,8 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "\\tdim{ciangin}" in lower
     assert "overview of noun phrase structure" in normalized
     assert "\\tdim{kanei}" in lower
-    assert "cardinal numerals" in lower
-    assert "decimal composition" in lower
+    assert "cardinal inventory" in lower
+    assert "compound numerals" in lower
     assert "overview of interrogatives in tedim" in normalized
     assert "interrogative inventory" in normalized
     assert "overview of sentence-final particles in tedim" in normalized
@@ -635,7 +636,7 @@ def test_assembled_preview_tex_includes_normalized_numerals_inventory_and_exampl
         assert required in text.lower()
         assert required in tex.lower()
 
-    for required in ("Cardinal numerals", "Decimal composition", "ni li", "kum sawm le nih", "sawmvei"):
+    for required in ("Cardinal inventory", "Compound numerals", "ni li", "kum sawm le nih", "sawmvei"):
         assert required.lower() in pdf.lower()
 
 
@@ -1869,13 +1870,9 @@ def test_assembled_preview_tex_glosses_multiword_running_prose_forms_in_normaliz
 def test_assembled_preview_tex_keeps_grammar_facing_explanations_for_ot_led_subsections() -> None:
     text = _text()
 
-    for required in (
-        "No equally good Gospel ordinal example is currently used here",
-        "No equally clean Gospel possession row was found",
-        "No equally clean Gospel source or accompaniment row is currently used here",
-        "No equally clean Gospel classifier-like example is currently used here",
-    ):
-        assert required in text
+    assert "No equally clean Gospel possession row was found" in text
+    assert "No equally clean Gospel source or accompaniment row is currently used here" in text
+    assert "No equally clean Gospel example is currently used for this construction." in text
 
 
 def test_assembled_preview_gap_and_review_status_text_are_not_aggressively_italicized() -> None:

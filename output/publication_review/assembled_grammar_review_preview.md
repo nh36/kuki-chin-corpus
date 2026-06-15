@@ -898,49 +898,33 @@ The current numeral evidence supports a decimal system with basic cardinals, cou
 
 ### Overview of the numeral system
 
-The current evidence supports a cautious but fuller overview of the Tedim numeral system. Tedim is described in the literature as a decimal system, with `sawm` 'ten' as the decimal base and `za` 'hundred' as the next larger base above the first two-digit range [@zamngaihcing2017; @henderson1965]. The Bible-backed review section confirms that basic cardinals, compound tens, larger-number expressions, `-na` ordinals such as `nihna` 'second', and at least one occurrence-counting expression such as `sawmvei` 'ten times' are all securely part of the current section.
+Tedim numerals are organized around a decimal structure in which `khat` 'one', `nih` 'two', and `kua` 'nine' combine with base terms such as `sawm` 'ten' and `za` 'hundred' [@zamngaihcing2017; @henderson1965]. Larger units such as `sing` 'thousand' and `tul` 'ten thousand' are also recognized in the system, although the clearest examples in this section remain in the lower ranges plus selected large-number biblical expressions.
 
-This section therefore includes:
+The evidence in hand supports a cautious but substantive description: basic cardinals, compound numerals, noun-plus-numeral order, `-na` ordinals, and at least one occurrence-counting expression are all securely attested in formal examples.
 
-- decimal structure and the most useful cardinal bases;
-- basic cardinal numerals and noun-plus-numeral counting phrases;
-- compound tens and one Gospel teen expression;
-- hundreds, thousands, and larger units only where the evidence is safe;
-- ordinals with `-na`, anchored by `nihna`;
-- counting expressions and classifier-like material, but only cautiously;
-- occurrence-counting `sawmvei`;
-- explicit ambiguity controls for numeral-side `kua` 'nine' and boundary `khat` 'one';
-- distributive reduplication only as deferred material.
+### Cardinal inventory
 
-What it does **not** do is claim that the whole numeral chapter is finished. It does not promote raw generated-report counts as grammar facts, it does not normalize a full classifier system from thin evidence, and it does not import quantifier prose or dubious analyzer output without careful evidence control.
+| Value | Numeral | Notes |
+| --- | --- | --- |
+| 1 | `khat` | cardinal, with indefinite-like overlap in some noun phrases |
+| 2 | `nih` | basic cardinal |
+| 3 | `thum` | basic cardinal |
+| 4 | `li` | basic cardinal |
+| 5 | `nga` | basic cardinal |
+| 6 | `guk` | basic cardinal |
+| 7 | `sagih` | basic cardinal |
+| 8 | `giat` | basic cardinal |
+| 9 | `kua` | numeral 'nine' in explicitly numeral environments |
+| 10 | `sawm` | decimal base 'ten' |
+| 100 | `za` | decimal base 'hundred' |
+| 1,000 | `sing` | larger numeral unit |
+| 10,000 | `tul` | larger numeral unit |
 
-### Cardinal numerals
+The table summarizes the core inventory without forcing a full paradigm of every possible constructional variant.
 
-The table below gives the core numeral inventory needed for the present section. It is orientation rather than a raw frequency table: the point is to show the basic system, while the formal examples below remain restricted to checked or newly checked normalization rows.
+### Compound numerals
 
-| Value | Form | Current status in this section |
-|---|---|---|
-| 1 | `khat` | basic numeral; keep numeral/indefinite overlap explicit |
-| 2 | `nih` | clean basic cardinal |
-| 3 | `thum` | basic cardinal recognized in the report/literature layer |
-| 4 | `li` | basic cardinal recognized in the report/literature layer |
-| 5 | `nga` | basic cardinal recognized in the report/literature layer |
-| 6 | `guk` | basic cardinal recognized in the report/literature layer |
-| 7 | `sagih` | clean basic cardinal in current examples |
-| 8 | `giat` | basic cardinal recognized in the report/literature layer |
-| 9 | `kua` | numeral `nine` only in constructionally numeral contexts |
-| 10 | `sawm` | ten base |
-| 100 | `za` | hundred base |
-| 1,000 | `sing` | thousand base; not fully normalized in here |
-| 10,000 | `tul` | larger unit recognized in the report/literature layer; not fully normalized in here |
-
-The table does not by itself authorize every form for immediate print-heavy exposition. It gives the section a visible inventory, while the examples below keep the actual printed claims small and checked.
-
-### Decimal composition
-
-The safest current descriptive claim is that Tedim builds higher numerals through decimal composition, but the section should phrase that conservatively. The report and literature support a decimal structure [@zamngaihcing2017; @henderson1965], while the current evidence gives two especially useful checked examples: one Old Testament compound-ten anchor and one Gospel counted-noun expression with a compound numeral.
-
-Genesis 5:9 remains the best controlled compound-ten anchor:
+Compound numerals are straightforwardly visible in both Old Testament and Gospel examples.
 
 (@ex:num-sawmkua) Genesis 5:9
 a. Tedim: kum sawmkua
@@ -948,19 +932,11 @@ b. Segmentation: kum | sawm-kua
 c. Gloss: year | ten-nine
 d. Translation: 'ninety years'
 
-Matthew 9:20 gives a good Gospel counted-noun expression with a compound numeral:
-
 (@ex:num-kum-sawm-le-nih) Matthew 9:20
 a. Tedim: kum sawm le nih
 b. Segmentation: kum | sawm | le | nih
 c. Gloss: year | ten | and | two
 d. Translation: 'twelve years'
-
-These two rows are enough to support a modest decimal-composition claim. `Sawmkua` shows a clean compound-ten pattern and keeps numeral-side `kua = nine` visible in a securely numeral context. `Kum sawm le nih` 'twelve years' shows that a counted noun can also host a larger compound numeral in Gospel material, which helps the section avoid becoming a grammar of Genesis.
-
-The section should still stop short of a full typology of every higher numeral pattern. The report mentions wider two-digit and larger-number combinations, but the present section only promotes the best checked examples.
-
-Hundreds, thousands, and larger-number expressions are real parts of the system, but they need more caution than the simple and compound-ten rows. The current large-number anchor remains useful because it shows real biblical number style, not because every detail of the analyzer export is already polished:
 
 (@ex:num-large) Genesis 5:27
 a. Tedim: kum zakua le kum sawmguk le kua
@@ -968,27 +944,11 @@ b. Segmentation: kum | za-kua | le | kum | sawm-guk | le | kua
 c. Gloss: year | hundred-nine | and | year | ten-six | and | nine [export: who]
 d. Translation: 'nine hundred sixty and nine years'
 
-This is still a print-usable-with-caveat example. The wider construction is clearly numeral, but the export compresses `za-kua`, and the final `kua` is glossed as `who` in the current export layer. The section therefore keeps the row with its analyzer caveat visible instead of pretending that the export is already perfect.
+These examples support a decimal-compositional analysis for tens and larger expressions. The Genesis 5:27 line is structurally numeral despite analyzer irregularities in the final token gloss.
 
-### Ordinals
+### Noun-plus-numeral word order
 
-The safest current ordinal claim is that Tedim has `-na` ordinal formation, with `nihna` as the best controlled anchor. This is consistent with the report and literature [@zamngaihcing2017].
-
-(@ex:num-nihna) Genesis 7:11
-a. Tedim: nihna
-b. Segmentation: nih-na
-c. Gloss: two-NMLZ
-d. Translation: 'second'
-
-`Nihna` is the current well-supported ordinal row. The background notes already notes that `pos_span = N` in the export; that is a label caveat, not a reason to reject the ordinal analysis.
-
-`Masa` remains visible but deferred. Gospel material such as Matthew 10:2 confirms that `masa` is a live background form for 'first', but the present section does not yet promote it as the normalized ordinal anchor because the current checked section is still built around `nihna`, not around a full ordinal paradigm or a full contrast between `masa` and `khatna`-type forms.
-
-No equally good Gospel ordinal example is currently used here, so the subsection stays anchored in the compact OT row while the broader ordinal evidence remains backgrounded.
-
-### Counting phrases and word order
-
-The clearest current word-order claim is still modest: noun-plus-numeral patterns are securely attested. Counted nouns such as `kum` 'year' and `ni` 'day' clearly precede the numeral in the best current examples, and the section now keeps both Old Testament and Gospel evidence visible for that pattern.
+The strongest current examples show counted nouns preceding numerals.
 
 (@ex:num-kum-nih) Genesis 11:10
 a. Tedim: kum nih
@@ -1008,15 +968,25 @@ b. Segmentation: ni | li
 c. Gloss: day | four
 d. Translation: 'four days'
 
-These are clean counted-noun examples, and they justify a real statement that noun-plus-numeral order is well supported. The section should still avoid overclaiming a complete typology of numeral placement. The broader report layer contains more patterns, and the literature discusses wider numeral syntax, but the checked section should stop at what the current examples support directly.
+These data justify a conservative claim that noun-plus-numeral order is well supported in the best current examples.
 
-The Gospel search for this pilot found good counted-noun examples such as `ni li` 'four days' and `kum sawm le nih` 'twelve years'. That is enough to improve source balance. It does **not** mean that every numeral construction in the section now has an equally good Gospel counterpart.
+### Ordinals and the `-na` boundary
 
-### Classifier-like and counting expressions
+Ordinal formation with `-na` is securely attested.
 
-The report and literature mention classifier-like material and counting expressions, but the current section should stay selective. Only the rows that are checked or newly checked for this pilot should be promoted.
+(@ex:num-nihna) Genesis 7:11
+a. Tedim: nihna
+b. Segmentation: nih-na
+c. Gloss: two-NMLZ
+d. Translation: 'second'
 
-The safest current occurrence-counting row is still `sawmvei`:
+Here `-na` marks ordinal derivation; this use should not be collapsed with the broader nominalizing functions of `-na` elsewhere in the grammar.
+
+No equally clean Gospel example is currently used for this construction.
+
+### Multiplicative and counting expressions
+
+Occurrence counting is represented by `sawmvei` 'ten times'.
 
 (@ex:num-sawmvei) Genesis 31:7
 a. Tedim: sawmvei
@@ -1024,9 +994,18 @@ b. Segmentation: sawm-vei
 c. Gloss: ten-times
 d. Translation: 'ten times'
 
-The generated report paraphrases this as `vei sawm`, but the current analyzer export preserves the fused form `sawmvei`. That export-backed `sawmvei` form means the fused form should control the present slice.
+This expression is retained in the fused form `sawmvei`; it is not rewritten here as a different segmentation.
 
-`Mi khat` 'one person / a person' remains valuable boundary evidence:
+No equally clean Gospel example is currently used for this construction.
+
+### Ambiguity controls: `kua` and `khat`
+
+Numeral interpretation still requires constructional control in two high-risk areas.
+
+| Form | Numeral-side interpretation | Competing interpretation | Caution |
+| --- | --- | --- | --- |
+| `kua` | 'nine' in numeral compounds such as `sawmkua` and larger arithmetic frames | interrogative 'who' | treat as numeral only in clearly numeral constructions |
+| `khat` | cardinal 'one' | indefinite-like NP uses | do not overgeneralize indefinite-like uses as pure numeral syntax |
 
 (@ex:num-mi-khat) Genesis 32:24
 a. Tedim: mi khat
@@ -1034,48 +1013,13 @@ b. Segmentation: mi | khat
 c. Gloss: person | one
 d. Translation: 'a man' / 'one person'
 
-This is why the section discusses `mi khat` here but does not treat it as an uncomplicated bare numeral `one` example. It should not be treated as an uncomplicated bare numeral `one` example. It sits exactly on the numeral/indefinite boundary.
+The interrogative control remains explicit: **Hihte kua ahi hiam?** is a `kua` 'who' clause, not numeral evidence.
 
-The classifier-like material can therefore be summarized cautiously:
+No equally clean Gospel example is currently used for this construction.
 
-| Expression or form | Current treatment | Reason |
-|---|---|---|
-| `mi khat` | supported with caveat | numeral/indefinite boundary, not a simple classifier row |
-| `sawmvei` | supported with caveat | clear occurrence-counting expression |
-| `pa`, `nu`, `zat`, `tei` | deferred | promising report/literature material, but not normalized in here |
+### Deferred and boundary material
 
-This means the section can talk about classifier-like and counting expressions without pretending that the full classifier system has already been normalized. It also means the section does not start a quantifiers retrofit here.
-
-No equally clean Gospel classifier-like example is currently used here, so the subsection keeps the compact OT anchors while the broader classifier-like inventory remains explicitly delimited.
-
-### Distributive numerals
-
-Distributive numerals remain deferred in this pilot. The previous generated-report claim for distributive `sagih sagih` is not well-supported because the current analyzer/checked evidence still does not support the repeated span in the key Genesis 7:2 row. The generated report is useful background orientation, but it should not outrun the current checked evidence.
-
-This is exactly the kind of place where normalization must stay disciplined. The section can say that distributive reduplication is a promising area in the report and literature, but it should still defer `sagih sagih` until the analyzer-backed evidence is clean enough to promote.
-
-### Ambiguity controls
-
-Two ambiguity controls remain central to the section: `kua` 'nine' must stay in clearly numeral contexts so that it is not confused with the interrogative form `kua` 'who', and `khat` 'one' still needs explicit boundary notes where numeral and indefinite-like uses overlap.
-
-| Form | Numeral-side use | Competing use | Current treatment |
-|---|---|---|---|
-| `kua` | `sawmkua`; Genesis 5:27 large-number phrase | interrogative `who` | print only in constructionally numeral contexts |
-| `khat` | basic cardinal 'one' | indefinite-like readings such as `mi khat` | keep explicit boundary notes; do not overgeneralize article-like use |
-
-The blocked `kua` control remains Genesis 48:8:
-
-> Hihte kua ahi hiam?
-
-That row belongs to the interrogatives section, not to numerals. Future numerals prose must therefore not use raw `kua` hits as numeral evidence.
-
-The `khat` side of the control is different. `Khat` is unquestionably part of the numeral inventory, but not every `khat` example is equally good as a bare numeral illustration. The best currently controlled boundary row is still `mi khat`, and no cleaner Gospel `khat` boundary example was strong enough to replace it in this pilot.
-
-### Summary
-
-The normalized numerals section now supports a genuine description. Tedim has a decimal numeral system with basic cardinals, compound tens, larger bases such as `za`, `sing`, and `tul`, `-na` ordinals, noun-plus-numeral counting phrases, and at least one compact occurrence-counting expression. The section now includes multiple formal examples, a visible inventory table, and both Old Testament and Gospel evidence where the checked material allows it.
-
-At the same time, the section keeps the important boundaries explicit. `Sawmvei` remains tied to its fused-export caveat; the Genesis 5:27 large-number phrase remains usable only with analyzer caveats; `mi khat` remains boundary evidence; `kua` must stay constructionally controlled; and distributive `sagih sagih` remains deferred until the repeated span is genuinely analyzer-backed.
+This section does not yet settle the full classifier system, full quantification patterns, the full range of indefinite-like uses of `khat`, all interrogative-side `kua` behavior, or broader NP syntax. It therefore keeps numeral claims narrow where overlap with quantifiers, NP structure, and clause-level interpretation remains unresolved.
 
 ## Quantifiers
 
