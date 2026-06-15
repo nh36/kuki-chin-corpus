@@ -89,228 +89,229 @@
 \contentsline {subsection}{\numberline {2.8}Quantifiers}{31}{subsection.2.8}%
 \contentsline {subsubsection}{\numberline {2.8.1}Overview of quantification in Tedim}{31}{subsubsection.2.8.1}%
 \contentsline {subsubsection}{\numberline {2.8.2}Quantifier inventory}{32}{subsubsection.2.8.2}%
-\contentsline {subsubsection}{\numberline {2.8.3}Universal / total quantifiers}{33}{subsubsection.2.8.3}%
-\contentsline {subsubsection}{\numberline {2.8.4}Existential / indefinite-like quantifiers}{33}{subsubsection.2.8.4}%
-\contentsline {subsubsection}{\numberline {2.8.5}Quantifiers and negation}{34}{subsubsection.2.8.5}%
-\contentsline {subsubsection}{\numberline {2.8.6}Quantifiers and noun phrase structure}{34}{subsubsection.2.8.6}%
-\contentsline {subsubsection}{\numberline {2.8.7}Deferred and boundary material}{34}{subsubsection.2.8.7}%
-\contentsline {subsubsection}{\numberline {2.8.8}Summary}{35}{subsubsection.2.8.8}%
-\contentsline {section}{\numberline {3}Predicate structure and verbal morphology}{35}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Stem alternation}{35}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Overview of Form I / Form II stem alternation}{35}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Current stem alternation overview}{36}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Distribution by syntactic context}{36}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Core showcase pairs}{37}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Promoted caveated pairs}{37}{subsubsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.6}Difficult but grammatically important pairs}{38}{subsubsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.7}One-sided and same-form controls}{38}{subsubsection.3.1.7}%
-\contentsline {subsubsection}{\numberline {3.1.8}Blocked or noisy material}{38}{subsubsection.3.1.8}%
-\contentsline {subsubsection}{\numberline {3.1.9}Deferred and boundary material}{39}{subsubsection.3.1.9}%
-\contentsline {subsubsection}{\numberline {3.1.10}Summary}{39}{subsubsection.3.1.10}%
-\contentsline {subsection}{\numberline {3.2}Verb paradigms}{39}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Overview of basic finite verb paradigms in Tedim}{39}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Basic finite paradigm inventory}{39}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Safest finite predicate frame}{40}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Safest person-marked finite predicates}{40}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}A small set of paradigm-friendly verb anchors}{41}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Boundary with negation and TAM}{41}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Boundary with stem alternation}{41}{subsubsection.3.2.7}%
-\contentsline {subsubsection}{\numberline {3.2.8}Boundary with object-prefix / inverse-like material}{41}{subsubsection.3.2.8}%
-\contentsline {subsubsection}{\numberline {3.2.9}Boundary with analyzer-gap and report-table-only material}{41}{subsubsection.3.2.9}%
-\contentsline {subsubsection}{\numberline {3.2.10}Deferred material}{41}{subsubsection.3.2.10}%
-\contentsline {subsubsection}{\numberline {3.2.11}Summary}{41}{subsubsection.3.2.11}%
-\contentsline {subsection}{\numberline {3.3}Prefix / agreement}{42}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Overview of prefix and agreement routing in this section}{42}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Current prefix and agreement inventory}{42}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Agreement before verbal hosts}{43}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Possession before nominal hosts}{43}{subsubsection.3.3.4}%
-\contentsline {subsubsection}{\numberline {3.3.5}Agreement versus possession routing}{43}{subsubsection.3.3.5}%
-\contentsline {subsubsection}{\numberline {3.3.6}Boundary with independent pronouns and clusivity}{43}{subsubsection.3.3.6}%
-\contentsline {subsubsection}{\numberline {3.3.7}Boundary with relative clauses and a- material}{43}{subsubsection.3.3.7}%
-\contentsline {subsubsection}{\numberline {3.3.8}Boundary with object-prefix or inverse-like material}{44}{subsubsection.3.3.8}%
-\contentsline {subsubsection}{\numberline {3.3.9}Boundary with ki-}{44}{subsubsection.3.3.9}%
-\contentsline {subsubsection}{\numberline {3.3.10}Boundary with apostrophe possession}{45}{subsubsection.3.3.10}%
-\contentsline {subsubsection}{\numberline {3.3.11}Deferred and boundary material}{45}{subsubsection.3.3.11}%
-\contentsline {subsubsection}{\numberline {3.3.12}Summary}{45}{subsubsection.3.3.12}%
-\contentsline {subsection}{\numberline {3.4}Hong / kong object-prefix or inverse-like}{45}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Overview of hong and kong object-prefix or inverse-like marking}{45}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Current hong and kong inventory}{45}{subsubsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.3}Safest hong and kong rows}{46}{subsubsection.3.4.3}%
-\contentsline {subsubsection}{\numberline {3.4.4}Support but not diagnostic rows}{46}{subsubsection.3.4.4}%
-\contentsline {subparagraph}{Matthew 25:37 support row}{47}{section*.34}%
-\contentsline {subparagraph}{Jeremiah 7:11 support row}{47}{section*.35}%
-\contentsline {subsubsection}{\numberline {3.4.5}Boundary with deictic / venitive hong}{47}{subsubsection.3.4.5}%
-\contentsline {subsubsection}{\numberline {3.4.6}Boundary with lexicalized or unclear rows}{47}{subsubsection.3.4.6}%
-\contentsline {subsubsection}{\numberline {3.4.7}Boundary with transitivity, valency, and pronoun/agreement overlap}{47}{subsubsection.3.4.7}%
-\contentsline {subsubsection}{\numberline {3.4.8}Deferred material}{47}{subsubsection.3.4.8}%
-\contentsline {subsubsection}{\numberline {3.4.9}Summary}{47}{subsubsection.3.4.9}%
-\contentsline {subsection}{\numberline {3.5}Transitivity}{48}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Overview of transitivity contrasts}{48}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Current transitivity inventory}{48}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Intransitive predicates}{49}{subsubsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.4}Transitive predicates}{49}{subsubsection.3.5.4}%
-\contentsline {subsubsection}{\numberline {3.5.5}The narrow intransitive / transitive contrast}{50}{subsubsection.3.5.5}%
-\contentsline {subsubsection}{\numberline {3.5.6}Boundary with stem alternation and labile behavior}{50}{subsubsection.3.5.6}%
-\contentsline {subsubsection}{\numberline {3.5.7}Boundary with derivation / valency}{50}{subsubsection.3.5.7}%
-\contentsline {subsubsection}{\numberline {3.5.8}Boundary with case marking and argument structure}{50}{subsubsection.3.5.8}%
-\contentsline {subsubsection}{\numberline {3.5.9}Boundary with prefix/agreement and voice-like material}{50}{subsubsection.3.5.9}%
-\contentsline {subsubsection}{\numberline {3.5.10}Deferred and boundary material}{51}{subsubsection.3.5.10}%
-\contentsline {subsubsection}{\numberline {3.5.11}Summary}{51}{subsubsection.3.5.11}%
-\contentsline {subsection}{\numberline {3.6}VP structure / suffix stacking}{51}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Overview of VP structure and suffix stacking}{51}{subsubsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.2}Current VP stacking inventory}{51}{subsubsection.3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.3}Aspect plus irrealis stacking}{52}{subsubsection.3.6.3}%
-\contentsline {subsubsection}{\numberline {3.6.4}Directional and TAM boundary in the verbal complex}{52}{subsubsection.3.6.4}%
-\contentsline {subsubsection}{\numberline {3.6.5}Ability, irrealis, and negation at the VP boundary}{53}{subsubsection.3.6.5}%
-\contentsline {subsubsection}{\numberline {3.6.6}Derivational stacking and valency overlap}{53}{subsubsection.3.6.6}%
-\contentsline {subsubsection}{\numberline {3.6.7}Clause-linking boundary with \textit {dingin}}{54}{subsubsection.3.6.7}%
-\contentsline {subsubsection}{\numberline {3.6.8}Deferred and boundary material}{54}{subsubsection.3.6.8}%
-\contentsline {subsubsection}{\numberline {3.6.9}Summary}{54}{subsubsection.3.6.9}%
-\contentsline {subsection}{\numberline {3.7}TAM / aspect / modal}{54}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Overview of TAM / aspect / modal marking}{54}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Current TAM inventory}{54}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Perfect, completive, and change-of-state material}{55}{subsubsection.3.7.3}%
-\contentsline {subsubsection}{\numberline {3.7.4}Habitual, continuative, and experiential aspect}{56}{subsubsection.3.7.4}%
-\contentsline {subsubsection}{\numberline {3.7.5}Prospective and irrealis marking}{56}{subsubsection.3.7.5}%
-\contentsline {subsubsection}{\numberline {3.7.6}Ability and modal marking}{57}{subsubsection.3.7.6}%
-\contentsline {subsubsection}{\numberline {3.7.7}Repetition and return marking}{57}{subsubsection.3.7.7}%
-\contentsline {subsubsection}{\numberline {3.7.8}Boundary with negation and sentence-final particles}{57}{subsubsection.3.7.8}%
-\contentsline {subsubsection}{\numberline {3.7.9}Boundary with directionals and VP structure}{57}{subsubsection.3.7.9}%
-\contentsline {subsubsection}{\numberline {3.7.10}Deferred and boundary material}{58}{subsubsection.3.7.10}%
-\contentsline {subsubsection}{\numberline {3.7.11}Summary}{58}{subsubsection.3.7.11}%
-\contentsline {subsection}{\numberline {3.8}Directionals}{58}{subsection.3.8}%
-\contentsline {subsubsection}{\numberline {3.8.1}Overview of directional expressions}{58}{subsubsection.3.8.1}%
-\contentsline {subsubsection}{\numberline {3.8.2}Current directional inventory}{58}{subsubsection.3.8.2}%
-\contentsline {subsubsection}{\numberline {3.8.3}Outward and away direction}{59}{subsubsection.3.8.3}%
-\contentsline {subsubsection}{\numberline {3.8.4}Upward direction and directionals in the verb phrase}{59}{subsubsection.3.8.4}%
-\contentsline {subsubsection}{\numberline {3.8.5}Toward direction with \textit {-sawn}}{60}{subsubsection.3.8.5}%
-\contentsline {subsubsection}{\numberline {3.8.6}Downward direction with \textit {-suk}}{60}{subsubsection.3.8.6}%
-\contentsline {subsubsection}{\numberline {3.8.7}Deictic boundary}{60}{subsubsection.3.8.7}%
-\contentsline {subsubsection}{\numberline {3.8.8}TAM and VP-structure boundary}{61}{subsubsection.3.8.8}%
-\contentsline {subsubsection}{\numberline {3.8.9}Deferred and boundary material}{61}{subsubsection.3.8.9}%
-\contentsline {subsubsection}{\numberline {3.8.10}Summary}{61}{subsubsection.3.8.10}%
-\contentsline {subsection}{\numberline {3.9}Derivation / valency}{61}{subsection.3.9}%
-\contentsline {subsubsection}{\numberline {3.9.1}Overview of derivation and valency change}{61}{subsubsection.3.9.1}%
-\contentsline {subsubsection}{\numberline {3.9.2}Current derivation / valency inventory}{61}{subsubsection.3.9.2}%
-\contentsline {subsubsection}{\numberline {3.9.3}Causative \textit {-sak}}{62}{subsubsection.3.9.3}%
-\contentsline {subsubsection}{\numberline {3.9.4}Benefactive and applicative-like \textit {-sak}}{63}{subsubsection.3.9.4}%
-\contentsline {subsubsection}{\numberline {3.9.5}The practical split within \textit {-sak}}{63}{subsubsection.3.9.5}%
-\contentsline {subsubsection}{\numberline {3.9.6}Boundary with \textit {-pih}}{63}{subsubsection.3.9.6}%
-\contentsline {subsubsection}{\numberline {3.9.7}Boundary with \textit {ki-}}{63}{subsubsection.3.9.7}%
-\contentsline {subsubsection}{\numberline {3.9.8}Boundary with VP stacking}{64}{subsubsection.3.9.8}%
-\contentsline {subsubsection}{\numberline {3.9.9}Boundary with transitivity}{64}{subsubsection.3.9.9}%
-\contentsline {subsubsection}{\numberline {3.9.10}Deferred and boundary material}{64}{subsubsection.3.9.10}%
-\contentsline {subsubsection}{\numberline {3.9.11}Summary}{64}{subsubsection.3.9.11}%
-\contentsline {subsection}{\numberline {3.10}ki- reflexive / reciprocal / middle}{65}{subsection.3.10}%
-\contentsline {subsubsection}{\numberline {3.10.1}Overview of \textit {ki-} reflexive / reciprocal / middle-like marking}{65}{subsubsection.3.10.1}%
-\contentsline {subsubsection}{\numberline {3.10.2}Current \textit {ki-} inventory}{65}{subsubsection.3.10.2}%
-\contentsline {subsubsection}{\numberline {3.10.3}Safest reflexive / reciprocal / middle-like evidence}{65}{subsubsection.3.10.3}%
-\contentsline {subsubsection}{\numberline {3.10.4}Passive-like or agent-defocused evidence}{66}{subsubsection.3.10.4}%
-\contentsline {subsubsection}{\numberline {3.10.5}Lexicalized or frozen \textit {ki-} boundary}{66}{subsubsection.3.10.5}%
-\contentsline {subsubsection}{\numberline {3.10.6}Boundary with derivation, VP stacking, transitivity, and prefix/agreement}{66}{subsubsection.3.10.6}%
-\contentsline {subsubsection}{\numberline {3.10.7}Deferred and boundary material}{67}{subsubsection.3.10.7}%
-\contentsline {subsubsection}{\numberline {3.10.8}Summary}{67}{subsubsection.3.10.8}%
-\contentsline {subsection}{\numberline {3.11}-pih comitative applicative}{67}{subsection.3.11}%
-\contentsline {subsubsection}{\numberline {3.11.1}Overview of verbal \textit {-pih} comitative applicative}{67}{subsubsection.3.11.1}%
-\contentsline {subsubsection}{\numberline {3.11.2}Current \textit {-pih} inventory}{67}{subsubsection.3.11.2}%
-\contentsline {subsubsection}{\numberline {3.11.3}Verbal \textit {-pih} as comitative applicative}{68}{subsubsection.3.11.3}%
-\contentsline {subsubsection}{\numberline {3.11.4}Form II / Stem 2 restriction}{69}{subsubsection.3.11.4}%
-\contentsline {subsubsection}{\numberline {3.11.5}Transitive verb contexts}{69}{subsubsection.3.11.5}%
-\contentsline {subsubsection}{\numberline {3.11.6}Motion verbs and comitative objects}{69}{subsubsection.3.11.6}%
-\contentsline {subsubsection}{\numberline {3.11.7}Boundary with nominal \textit {-pih}}{70}{subsubsection.3.11.7}%
-\contentsline {subsubsection}{\numberline {3.11.8}Boundary with directionals, VP stacking, and \textit {-pih} interactions}{70}{subsubsection.3.11.8}%
-\contentsline {subsubsection}{\numberline {3.11.9}Deferred and boundary material}{70}{subsubsection.3.11.9}%
-\contentsline {subsubsection}{\numberline {3.11.10}Summary}{70}{subsubsection.3.11.10}%
-\contentsline {subsection}{\numberline {3.12}Nominalization}{70}{subsection.3.12}%
-\contentsline {subsubsection}{\numberline {3.12.1}Overview of nominalization in this section}{71}{subsubsection.3.12.1}%
-\contentsline {subsubsection}{\numberline {3.12.2}Current nominalization inventory}{71}{subsubsection.3.12.2}%
-\contentsline {subsubsection}{\numberline {3.12.3}Deverbal nominalization with \textit {-na}}{71}{subsubsection.3.12.3}%
-\contentsline {subsubsection}{\numberline {3.12.4}Nominalization and stem alternation}{72}{subsubsection.3.12.4}%
-\contentsline {subsubsection}{\numberline {3.12.5}Agentive or person-head nominalization boundary}{72}{subsubsection.3.12.5}%
-\contentsline {subsubsection}{\numberline {3.12.6}Nominalized relatives and clause-derived nominalization boundary}{72}{subsubsection.3.12.6}%
-\contentsline {subsubsection}{\numberline {3.12.7}Nominalization plus case boundary}{73}{subsubsection.3.12.7}%
-\contentsline {subsubsection}{\numberline {3.12.8}Lexicalized and title-like boundary material}{73}{subsubsection.3.12.8}%
-\contentsline {subsubsection}{\numberline {3.12.9}Deferred and boundary material}{73}{subsubsection.3.12.9}%
-\contentsline {subsubsection}{\numberline {3.12.10}Summary}{73}{subsubsection.3.12.10}%
-\contentsline {subsection}{\numberline {3.13}\textit {mi}-headed and nominalized relative-like constructions}{74}{subsection.3.13}%
-\contentsline {subsubsection}{\numberline {3.13.1}Overview}{74}{subsubsection.3.13.1}%
-\contentsline {subsubsection}{\numberline {3.13.2}Relative-like inventory}{74}{subsubsection.3.13.2}%
-\contentsline {subsubsection}{\numberline {3.13.3}\textit {mi}-headed relatives}{74}{subsubsection.3.13.3}%
-\contentsline {subsubsection}{\numberline {3.13.4}Plural relative-like support}{75}{subsubsection.3.13.4}%
-\contentsline {subsubsection}{\numberline {3.13.5}Nominalization boundary}{75}{subsubsection.3.13.5}%
-\contentsline {subsubsection}{\numberline {3.13.6}Case-marked nominalization boundary}{75}{subsubsection.3.13.6}%
-\contentsline {subsubsection}{\numberline {3.13.7}Ordinary subordination and clause-linkage boundary}{75}{subsubsection.3.13.7}%
-\contentsline {subsubsection}{\numberline {3.13.8}Deferred material}{75}{subsubsection.3.13.8}%
-\contentsline {subsubsection}{\numberline {3.13.9}Summary}{76}{subsubsection.3.13.9}%
-\contentsline {subsection}{\numberline {3.14}Clause linkage}{76}{subsection.3.14}%
-\contentsline {subsubsection}{\numberline {3.14.1}Overview of clause linkage in this section}{76}{subsubsection.3.14.1}%
-\contentsline {subsubsection}{\numberline {3.14.2}Core temporal subordination: ciangin}{76}{subsubsection.3.14.2}%
-\contentsline {subsubsection}{\numberline {3.14.3}Purposive or clause-bound irrealis boundary: dingin}{77}{subsubsection.3.14.3}%
-\contentsline {subsubsection}{\numberline {3.14.4}Same-subject converb linkage boundary: VERB-in and ngenin}{77}{subsubsection.3.14.4}%
-\contentsline {subsubsection}{\numberline {3.14.5}Different-subject temporal linkage boundary: ahih ciangin}{77}{subsubsection.3.14.5}%
-\contentsline {subsubsection}{\numberline {3.14.6}Prenominal relative-clause boundary: a bawl mi}{78}{subsubsection.3.14.6}%
-\contentsline {subsubsection}{\numberline {3.14.7}Nominalized relative and clause-like form boundary: omna}{78}{subsubsection.3.14.7}%
-\contentsline {subsubsection}{\numberline {3.14.8}Nominalization-plus-case boundary: muhna-ah}{78}{subsubsection.3.14.8}%
-\contentsline {subsubsection}{\numberline {3.14.9}Deferred and boundary material}{78}{subsubsection.3.14.9}%
-\contentsline {subsubsection}{\numberline {3.14.10}Summary}{79}{subsubsection.3.14.10}%
-\contentsline {subsection}{\numberline {3.15}Same-subject and different-subject clause linkage}{79}{subsection.3.15}%
-\contentsline {subsubsection}{\numberline {3.15.1}Overview of the current evidence}{79}{subsubsection.3.15.1}%
-\contentsline {paragraph}{Current display inventory}{79}{section*.36}%
-\contentsline {paragraph}{Promoted same-subject evidence}{80}{section*.37}%
-\contentsline {paragraph}{Support-only and boundary material}{81}{section*.38}%
-\contentsline {paragraph}{Deferred material}{81}{section*.39}%
-\contentsline {section}{\numberline {4}Clause type, discourse-facing material, and expressive morphology}{81}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Negation}{81}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Overview of negation in Tedim}{81}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Negation inventory}{81}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Clause-level negation with \textit {lo}}{82}{subsubsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Dependent and derived negation with \textit {loh}}{82}{subsubsection.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.5}\textit {kei} in prohibitives and irrealis-heavy negation}{83}{subsubsection.4.1.5}%
-\contentsline {subsubsection}{\numberline {4.1.6}Ordinary plural negative predicates are not automatically prohibitive}{83}{subsubsection.4.1.6}%
-\contentsline {subsubsection}{\numberline {4.1.7}Negative existence and absence}{83}{subsubsection.4.1.7}%
-\contentsline {subsubsection}{\numberline {4.1.8}Cessative \textit {nawn lo}}{84}{subsubsection.4.1.8}%
-\contentsline {subsubsection}{\numberline {4.1.9}Ability and inability}{84}{subsubsection.4.1.9}%
-\contentsline {subsubsection}{\numberline {4.1.10}Negative polarity items}{84}{subsubsection.4.1.10}%
-\contentsline {subsubsection}{\numberline {4.1.11}Deferred material}{85}{subsubsection.4.1.11}%
-\contentsline {subsection}{\numberline {4.2}Interrogatives}{85}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Overview of interrogatives in Tedim}{85}{subsubsection.4.2.1}%
-\contentsline {paragraph}{Interrogative inventory}{85}{section*.40}%
-\contentsline {paragraph}{Clause-final \textit {hiam} `question particle'}{86}{section*.41}%
-\contentsline {paragraph}{WH + \textit {hiam} content questions}{86}{section*.42}%
-\contentsline {subparagraph}{\textit {bang} `what'}{86}{section*.43}%
-\contentsline {subparagraph}{\textit {kua} `who'}{87}{section*.44}%
-\contentsline {subparagraph}{\textit {bangci} `how'}{87}{section*.45}%
-\contentsline {subparagraph}{\textit {banghangin} `why'}{87}{section*.46}%
-\contentsline {paragraph}{Embedded-question boundary}{87}{section*.47}%
-\contentsline {paragraph}{Blocked false friends and non-interrogative \textit {hiam}}{88}{section*.48}%
-\contentsline {paragraph}{Deferred comparison particles}{88}{section*.49}%
-\contentsline {paragraph}{Deferred material}{88}{section*.50}%
-\contentsline {subsection}{\numberline {4.3}Sentence-final particles}{88}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Overview of sentence-final particles in Tedim}{88}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Sentence-final particle inventory}{88}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Declarative \textit {hi} with copula overlap}{89}{subsubsection.4.3.3}%
-\contentsline {subsubsection}{\numberline {4.3.4}Negative-plus-declarative \textit {lo hi}}{89}{subsubsection.4.3.4}%
-\contentsline {subsubsection}{\numberline {4.3.5}Optative or jussive \textit {hen}}{90}{subsubsection.4.3.5}%
-\contentsline {subsubsection}{\numberline {4.3.6}Imperative \textit {in} and \textit {un}}{90}{subsubsection.4.3.6}%
-\contentsline {subsubsection}{\numberline {4.3.7}\textit {Hiam} as interrogatives overlap}{90}{subsubsection.4.3.7}%
-\contentsline {subsubsection}{\numberline {4.3.8}\textit {Aw} as vocative or exclamative boundary}{91}{subsubsection.4.3.8}%
-\contentsline {subsubsection}{\numberline {4.3.9}\textit {Tahen}, \textit {ta}, and \textit {zo} as deferred TAM-overlap material}{91}{subsubsection.4.3.9}%
-\contentsline {subsubsection}{\numberline {4.3.10}Deferred material}{91}{subsubsection.4.3.10}%
-\contentsline {subsection}{\numberline {4.4}Coordinators}{91}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Overview of coordinators in Tedim}{91}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Coordinator inventory}{91}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}NP coordination with \textit {le}}{92}{subsubsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.4}Conditional and boundary \textit {leh}}{92}{subsubsection.4.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.5}Sequential \textit {a} and agreement false friends}{92}{subsubsection.4.4.5}%
-\contentsline {subsubsection}{\numberline {4.4.6}Deferred \textit {mawh} material}{93}{subsubsection.4.4.6}%
-\contentsline {subsubsection}{\numberline {4.4.7}Adversative \textit {Ahih hangin}}{93}{subsubsection.4.4.7}%
-\contentsline {subsubsection}{\numberline {4.4.8}Conditional-adversative \textit {ahih kei leh}}{93}{subsubsection.4.4.8}%
-\contentsline {subsubsection}{\numberline {4.4.9}Deferred material}{93}{subsubsection.4.4.9}%
-\contentsline {subsection}{\numberline {4.5}Reduplication}{94}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Overview of reduplication in Tedim}{94}{subsubsection.4.5.1}%
-\contentsline {paragraph}{Reduplication inventory}{94}{section*.51}%
-\contentsline {subparagraph}{Full reduplication as intensification}{94}{section*.52}%
-\contentsline {subparagraph}{Secondary distributive reduplication}{95}{section*.53}%
-\contentsline {subparagraph}{Boundary and deferred material}{95}{section*.54}%
-\contentsline {subsection}{\numberline {4.6}Broader discourse}{95}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Analyzer-gap caution}{96}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {2.8.3}Universal quantification}{32}{subsubsection.2.8.3}%
+\contentsline {subsubsection}{\numberline {2.8.4}Existential / partitive-like quantification}{32}{subsubsection.2.8.4}%
+\contentsline {subsubsection}{\numberline {2.8.5}Negative quantifiers and negation}{33}{subsubsection.2.8.5}%
+\contentsline {subsubsection}{\numberline {2.8.6}Quantity expressions}{33}{subsubsection.2.8.6}%
+\contentsline {subsubsection}{\numberline {2.8.7}Boundary with numerals}{33}{subsubsection.2.8.7}%
+\contentsline {subsubsection}{\numberline {2.8.8}Boundary with NP structure and negation}{34}{subsubsection.2.8.8}%
+\contentsline {subsubsection}{\numberline {2.8.9}Deferred material}{34}{subsubsection.2.8.9}%
+\contentsline {section}{\numberline {3}Predicate structure and verbal morphology}{34}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Stem alternation}{34}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Overview of Form I / Form II stem alternation}{34}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Current stem alternation overview}{34}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Distribution by syntactic context}{34}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Core showcase pairs}{35}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Promoted caveated pairs}{36}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Difficult but grammatically important pairs}{36}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}One-sided and same-form controls}{37}{subsubsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.8}Blocked or noisy material}{37}{subsubsection.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.1.9}Deferred and boundary material}{37}{subsubsection.3.1.9}%
+\contentsline {subsubsection}{\numberline {3.1.10}Summary}{37}{subsubsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.2}Verb paradigms}{37}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Overview of basic finite verb paradigms in Tedim}{37}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Basic finite paradigm inventory}{38}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Safest finite predicate frame}{38}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Safest person-marked finite predicates}{39}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}A small set of paradigm-friendly verb anchors}{39}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Boundary with negation and TAM}{39}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Boundary with stem alternation}{39}{subsubsection.3.2.7}%
+\contentsline {subsubsection}{\numberline {3.2.8}Boundary with object-prefix / inverse-like material}{39}{subsubsection.3.2.8}%
+\contentsline {subsubsection}{\numberline {3.2.9}Boundary with analyzer-gap and report-table-only material}{40}{subsubsection.3.2.9}%
+\contentsline {subsubsection}{\numberline {3.2.10}Deferred material}{40}{subsubsection.3.2.10}%
+\contentsline {subsubsection}{\numberline {3.2.11}Summary}{40}{subsubsection.3.2.11}%
+\contentsline {subsection}{\numberline {3.3}Prefix / agreement}{40}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Overview of prefix and agreement routing in this section}{40}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Current prefix and agreement inventory}{40}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Agreement before verbal hosts}{41}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Possession before nominal hosts}{41}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Agreement versus possession routing}{42}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}Boundary with independent pronouns and clusivity}{42}{subsubsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.7}Boundary with relative clauses and a- material}{42}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.8}Boundary with object-prefix or inverse-like material}{42}{subsubsection.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.9}Boundary with ki-}{43}{subsubsection.3.3.9}%
+\contentsline {subsubsection}{\numberline {3.3.10}Boundary with apostrophe possession}{43}{subsubsection.3.3.10}%
+\contentsline {subsubsection}{\numberline {3.3.11}Deferred and boundary material}{43}{subsubsection.3.3.11}%
+\contentsline {subsubsection}{\numberline {3.3.12}Summary}{44}{subsubsection.3.3.12}%
+\contentsline {subsection}{\numberline {3.4}Hong / kong object-prefix or inverse-like}{44}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Overview of hong and kong object-prefix or inverse-like marking}{44}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Current hong and kong inventory}{44}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Safest hong and kong rows}{45}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Support but not diagnostic rows}{45}{subsubsection.3.4.4}%
+\contentsline {subparagraph}{Matthew 25:37 support row}{45}{section*.34}%
+\contentsline {subparagraph}{Jeremiah 7:11 support row}{45}{section*.35}%
+\contentsline {subsubsection}{\numberline {3.4.5}Boundary with deictic / venitive hong}{46}{subsubsection.3.4.5}%
+\contentsline {subsubsection}{\numberline {3.4.6}Boundary with lexicalized or unclear rows}{46}{subsubsection.3.4.6}%
+\contentsline {subsubsection}{\numberline {3.4.7}Boundary with transitivity, valency, and pronoun/agreement overlap}{46}{subsubsection.3.4.7}%
+\contentsline {subsubsection}{\numberline {3.4.8}Deferred material}{46}{subsubsection.3.4.8}%
+\contentsline {subsubsection}{\numberline {3.4.9}Summary}{46}{subsubsection.3.4.9}%
+\contentsline {subsection}{\numberline {3.5}Transitivity}{46}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Overview of transitivity contrasts}{46}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Current transitivity inventory}{46}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Intransitive predicates}{47}{subsubsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.4}Transitive predicates}{48}{subsubsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.5}The narrow intransitive / transitive contrast}{48}{subsubsection.3.5.5}%
+\contentsline {subsubsection}{\numberline {3.5.6}Boundary with stem alternation and labile behavior}{48}{subsubsection.3.5.6}%
+\contentsline {subsubsection}{\numberline {3.5.7}Boundary with derivation / valency}{49}{subsubsection.3.5.7}%
+\contentsline {subsubsection}{\numberline {3.5.8}Boundary with case marking and argument structure}{49}{subsubsection.3.5.8}%
+\contentsline {subsubsection}{\numberline {3.5.9}Boundary with prefix/agreement and voice-like material}{49}{subsubsection.3.5.9}%
+\contentsline {subsubsection}{\numberline {3.5.10}Deferred and boundary material}{49}{subsubsection.3.5.10}%
+\contentsline {subsubsection}{\numberline {3.5.11}Summary}{49}{subsubsection.3.5.11}%
+\contentsline {subsection}{\numberline {3.6}VP structure / suffix stacking}{50}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Overview of VP structure and suffix stacking}{50}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Current VP stacking inventory}{50}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}Aspect plus irrealis stacking}{51}{subsubsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.4}Directional and TAM boundary in the verbal complex}{51}{subsubsection.3.6.4}%
+\contentsline {subsubsection}{\numberline {3.6.5}Ability, irrealis, and negation at the VP boundary}{51}{subsubsection.3.6.5}%
+\contentsline {subsubsection}{\numberline {3.6.6}Derivational stacking and valency overlap}{52}{subsubsection.3.6.6}%
+\contentsline {subsubsection}{\numberline {3.6.7}Clause-linking boundary with \textit {dingin}}{52}{subsubsection.3.6.7}%
+\contentsline {subsubsection}{\numberline {3.6.8}Deferred and boundary material}{52}{subsubsection.3.6.8}%
+\contentsline {subsubsection}{\numberline {3.6.9}Summary}{53}{subsubsection.3.6.9}%
+\contentsline {subsection}{\numberline {3.7}TAM / aspect / modal}{53}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Overview of TAM / aspect / modal marking}{53}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Current TAM inventory}{53}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Perfect, completive, and change-of-state material}{54}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Habitual, continuative, and experiential aspect}{54}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.5}Prospective and irrealis marking}{55}{subsubsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.6}Ability and modal marking}{55}{subsubsection.3.7.6}%
+\contentsline {subsubsection}{\numberline {3.7.7}Repetition and return marking}{56}{subsubsection.3.7.7}%
+\contentsline {subsubsection}{\numberline {3.7.8}Boundary with negation and sentence-final particles}{56}{subsubsection.3.7.8}%
+\contentsline {subsubsection}{\numberline {3.7.9}Boundary with directionals and VP structure}{56}{subsubsection.3.7.9}%
+\contentsline {subsubsection}{\numberline {3.7.10}Deferred and boundary material}{56}{subsubsection.3.7.10}%
+\contentsline {subsubsection}{\numberline {3.7.11}Summary}{56}{subsubsection.3.7.11}%
+\contentsline {subsection}{\numberline {3.8}Directionals}{57}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Overview of directional expressions}{57}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Current directional inventory}{57}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}Outward and away direction}{58}{subsubsection.3.8.3}%
+\contentsline {subsubsection}{\numberline {3.8.4}Upward direction and directionals in the verb phrase}{58}{subsubsection.3.8.4}%
+\contentsline {subsubsection}{\numberline {3.8.5}Toward direction with \textit {-sawn}}{59}{subsubsection.3.8.5}%
+\contentsline {subsubsection}{\numberline {3.8.6}Downward direction with \textit {-suk}}{59}{subsubsection.3.8.6}%
+\contentsline {subsubsection}{\numberline {3.8.7}Deictic boundary}{59}{subsubsection.3.8.7}%
+\contentsline {subsubsection}{\numberline {3.8.8}TAM and VP-structure boundary}{59}{subsubsection.3.8.8}%
+\contentsline {subsubsection}{\numberline {3.8.9}Deferred and boundary material}{60}{subsubsection.3.8.9}%
+\contentsline {subsubsection}{\numberline {3.8.10}Summary}{60}{subsubsection.3.8.10}%
+\contentsline {subsection}{\numberline {3.9}Derivation / valency}{60}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}Overview of derivation and valency change}{60}{subsubsection.3.9.1}%
+\contentsline {subsubsection}{\numberline {3.9.2}Current derivation / valency inventory}{60}{subsubsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.3}Causative \textit {-sak}}{61}{subsubsection.3.9.3}%
+\contentsline {subsubsection}{\numberline {3.9.4}Benefactive and applicative-like \textit {-sak}}{61}{subsubsection.3.9.4}%
+\contentsline {subsubsection}{\numberline {3.9.5}The practical split within \textit {-sak}}{62}{subsubsection.3.9.5}%
+\contentsline {subsubsection}{\numberline {3.9.6}Boundary with \textit {-pih}}{62}{subsubsection.3.9.6}%
+\contentsline {subsubsection}{\numberline {3.9.7}Boundary with \textit {ki-}}{62}{subsubsection.3.9.7}%
+\contentsline {subsubsection}{\numberline {3.9.8}Boundary with VP stacking}{62}{subsubsection.3.9.8}%
+\contentsline {subsubsection}{\numberline {3.9.9}Boundary with transitivity}{63}{subsubsection.3.9.9}%
+\contentsline {subsubsection}{\numberline {3.9.10}Deferred and boundary material}{63}{subsubsection.3.9.10}%
+\contentsline {subsubsection}{\numberline {3.9.11}Summary}{63}{subsubsection.3.9.11}%
+\contentsline {subsection}{\numberline {3.10}ki- reflexive / reciprocal / middle}{63}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}Overview of \textit {ki-} reflexive / reciprocal / middle-like marking}{63}{subsubsection.3.10.1}%
+\contentsline {subsubsection}{\numberline {3.10.2}Current \textit {ki-} inventory}{64}{subsubsection.3.10.2}%
+\contentsline {subsubsection}{\numberline {3.10.3}Safest reflexive / reciprocal / middle-like evidence}{64}{subsubsection.3.10.3}%
+\contentsline {subsubsection}{\numberline {3.10.4}Passive-like or agent-defocused evidence}{65}{subsubsection.3.10.4}%
+\contentsline {subsubsection}{\numberline {3.10.5}Lexicalized or frozen \textit {ki-} boundary}{65}{subsubsection.3.10.5}%
+\contentsline {subsubsection}{\numberline {3.10.6}Boundary with derivation, VP stacking, transitivity, and prefix/agreement}{65}{subsubsection.3.10.6}%
+\contentsline {subsubsection}{\numberline {3.10.7}Deferred and boundary material}{65}{subsubsection.3.10.7}%
+\contentsline {subsubsection}{\numberline {3.10.8}Summary}{65}{subsubsection.3.10.8}%
+\contentsline {subsection}{\numberline {3.11}-pih comitative applicative}{66}{subsection.3.11}%
+\contentsline {subsubsection}{\numberline {3.11.1}Overview of verbal \textit {-pih} comitative applicative}{66}{subsubsection.3.11.1}%
+\contentsline {subsubsection}{\numberline {3.11.2}Current \textit {-pih} inventory}{66}{subsubsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.3}Verbal \textit {-pih} as comitative applicative}{67}{subsubsection.3.11.3}%
+\contentsline {subsubsection}{\numberline {3.11.4}Form II / Stem 2 restriction}{67}{subsubsection.3.11.4}%
+\contentsline {subsubsection}{\numberline {3.11.5}Transitive verb contexts}{68}{subsubsection.3.11.5}%
+\contentsline {subsubsection}{\numberline {3.11.6}Motion verbs and comitative objects}{68}{subsubsection.3.11.6}%
+\contentsline {subsubsection}{\numberline {3.11.7}Boundary with nominal \textit {-pih}}{68}{subsubsection.3.11.7}%
+\contentsline {subsubsection}{\numberline {3.11.8}Boundary with directionals, VP stacking, and \textit {-pih} interactions}{69}{subsubsection.3.11.8}%
+\contentsline {subsubsection}{\numberline {3.11.9}Deferred and boundary material}{69}{subsubsection.3.11.9}%
+\contentsline {subsubsection}{\numberline {3.11.10}Summary}{69}{subsubsection.3.11.10}%
+\contentsline {subsection}{\numberline {3.12}Nominalization}{69}{subsection.3.12}%
+\contentsline {subsubsection}{\numberline {3.12.1}Overview of nominalization in this section}{69}{subsubsection.3.12.1}%
+\contentsline {subsubsection}{\numberline {3.12.2}Current nominalization inventory}{69}{subsubsection.3.12.2}%
+\contentsline {subsubsection}{\numberline {3.12.3}Deverbal nominalization with \textit {-na}}{70}{subsubsection.3.12.3}%
+\contentsline {subsubsection}{\numberline {3.12.4}Nominalization and stem alternation}{71}{subsubsection.3.12.4}%
+\contentsline {subsubsection}{\numberline {3.12.5}Agentive or person-head nominalization boundary}{71}{subsubsection.3.12.5}%
+\contentsline {subsubsection}{\numberline {3.12.6}Nominalized relatives and clause-derived nominalization boundary}{71}{subsubsection.3.12.6}%
+\contentsline {subsubsection}{\numberline {3.12.7}Nominalization plus case boundary}{72}{subsubsection.3.12.7}%
+\contentsline {subsubsection}{\numberline {3.12.8}Lexicalized and title-like boundary material}{72}{subsubsection.3.12.8}%
+\contentsline {subsubsection}{\numberline {3.12.9}Deferred and boundary material}{72}{subsubsection.3.12.9}%
+\contentsline {subsubsection}{\numberline {3.12.10}Summary}{72}{subsubsection.3.12.10}%
+\contentsline {subsection}{\numberline {3.13}\textit {mi}-headed and nominalized relative-like constructions}{73}{subsection.3.13}%
+\contentsline {subsubsection}{\numberline {3.13.1}Overview}{73}{subsubsection.3.13.1}%
+\contentsline {subsubsection}{\numberline {3.13.2}Relative-like inventory}{73}{subsubsection.3.13.2}%
+\contentsline {subsubsection}{\numberline {3.13.3}\textit {mi}-headed relatives}{73}{subsubsection.3.13.3}%
+\contentsline {subsubsection}{\numberline {3.13.4}Plural relative-like support}{74}{subsubsection.3.13.4}%
+\contentsline {subsubsection}{\numberline {3.13.5}Nominalization boundary}{74}{subsubsection.3.13.5}%
+\contentsline {subsubsection}{\numberline {3.13.6}Case-marked nominalization boundary}{74}{subsubsection.3.13.6}%
+\contentsline {subsubsection}{\numberline {3.13.7}Ordinary subordination and clause-linkage boundary}{74}{subsubsection.3.13.7}%
+\contentsline {subsubsection}{\numberline {3.13.8}Deferred material}{74}{subsubsection.3.13.8}%
+\contentsline {subsubsection}{\numberline {3.13.9}Summary}{75}{subsubsection.3.13.9}%
+\contentsline {subsection}{\numberline {3.14}Clause linkage}{75}{subsection.3.14}%
+\contentsline {subsubsection}{\numberline {3.14.1}Overview of clause linkage in this section}{75}{subsubsection.3.14.1}%
+\contentsline {subsubsection}{\numberline {3.14.2}Core temporal subordination: ciangin}{75}{subsubsection.3.14.2}%
+\contentsline {subsubsection}{\numberline {3.14.3}Purposive or clause-bound irrealis boundary: dingin}{76}{subsubsection.3.14.3}%
+\contentsline {subsubsection}{\numberline {3.14.4}Same-subject converb linkage boundary: VERB-in and ngenin}{76}{subsubsection.3.14.4}%
+\contentsline {subsubsection}{\numberline {3.14.5}Different-subject temporal linkage boundary: ahih ciangin}{76}{subsubsection.3.14.5}%
+\contentsline {subsubsection}{\numberline {3.14.6}Prenominal relative-clause boundary: a bawl mi}{77}{subsubsection.3.14.6}%
+\contentsline {subsubsection}{\numberline {3.14.7}Nominalized relative and clause-like form boundary: omna}{77}{subsubsection.3.14.7}%
+\contentsline {subsubsection}{\numberline {3.14.8}Nominalization-plus-case boundary: muhna-ah}{77}{subsubsection.3.14.8}%
+\contentsline {subsubsection}{\numberline {3.14.9}Deferred and boundary material}{77}{subsubsection.3.14.9}%
+\contentsline {subsubsection}{\numberline {3.14.10}Summary}{78}{subsubsection.3.14.10}%
+\contentsline {subsection}{\numberline {3.15}Same-subject and different-subject clause linkage}{78}{subsection.3.15}%
+\contentsline {subsubsection}{\numberline {3.15.1}Overview of the current evidence}{78}{subsubsection.3.15.1}%
+\contentsline {paragraph}{Current display inventory}{78}{section*.36}%
+\contentsline {paragraph}{Promoted same-subject evidence}{79}{section*.37}%
+\contentsline {paragraph}{Support-only and boundary material}{80}{section*.38}%
+\contentsline {paragraph}{Deferred material}{80}{section*.39}%
+\contentsline {section}{\numberline {4}Clause type, discourse-facing material, and expressive morphology}{80}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Negation}{80}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Overview of negation in Tedim}{80}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Negation inventory}{80}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Clause-level negation with \textit {lo}}{81}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Dependent and derived negation with \textit {loh}}{81}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}\textit {kei} in prohibitives and irrealis-heavy negation}{82}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}Ordinary plural negative predicates are not automatically prohibitive}{82}{subsubsection.4.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.7}Negative existence and absence}{82}{subsubsection.4.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.8}Cessative \textit {nawn lo}}{83}{subsubsection.4.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.9}Ability and inability}{83}{subsubsection.4.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.10}Negative polarity items}{83}{subsubsection.4.1.10}%
+\contentsline {subsubsection}{\numberline {4.1.11}Deferred material}{84}{subsubsection.4.1.11}%
+\contentsline {subsection}{\numberline {4.2}Interrogatives}{84}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Overview of interrogatives in Tedim}{84}{subsubsection.4.2.1}%
+\contentsline {paragraph}{Interrogative inventory}{84}{section*.40}%
+\contentsline {paragraph}{Clause-final \textit {hiam} `question particle'}{85}{section*.41}%
+\contentsline {paragraph}{WH + \textit {hiam} content questions}{85}{section*.42}%
+\contentsline {subparagraph}{\textit {bang} `what'}{85}{section*.43}%
+\contentsline {subparagraph}{\textit {kua} `who'}{86}{section*.44}%
+\contentsline {subparagraph}{\textit {bangci} `how'}{86}{section*.45}%
+\contentsline {subparagraph}{\textit {banghangin} `why'}{86}{section*.46}%
+\contentsline {paragraph}{Embedded-question boundary}{86}{section*.47}%
+\contentsline {paragraph}{Blocked false friends and non-interrogative \textit {hiam}}{87}{section*.48}%
+\contentsline {paragraph}{Deferred comparison particles}{87}{section*.49}%
+\contentsline {paragraph}{Deferred material}{87}{section*.50}%
+\contentsline {subsection}{\numberline {4.3}Sentence-final particles}{87}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Overview of sentence-final particles in Tedim}{87}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Sentence-final particle inventory}{87}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Declarative \textit {hi} with copula overlap}{88}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Negative-plus-declarative \textit {lo hi}}{88}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Optative or jussive \textit {hen}}{89}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Imperative \textit {in} and \textit {un}}{89}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.7}\textit {Hiam} as interrogatives overlap}{89}{subsubsection.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.3.8}\textit {Aw} as vocative or exclamative boundary}{90}{subsubsection.4.3.8}%
+\contentsline {subsubsection}{\numberline {4.3.9}\textit {Tahen}, \textit {ta}, and \textit {zo} as deferred TAM-overlap material}{90}{subsubsection.4.3.9}%
+\contentsline {subsubsection}{\numberline {4.3.10}Deferred material}{90}{subsubsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.4}Coordinators}{90}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Overview of coordinators in Tedim}{90}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Coordinator inventory}{90}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}NP coordination with \textit {le}}{91}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Conditional and boundary \textit {leh}}{91}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.5}Sequential \textit {a} and agreement false friends}{91}{subsubsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.6}Deferred \textit {mawh} material}{92}{subsubsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {4.4.7}Adversative \textit {Ahih hangin}}{92}{subsubsection.4.4.7}%
+\contentsline {subsubsection}{\numberline {4.4.8}Conditional-adversative \textit {ahih kei leh}}{92}{subsubsection.4.4.8}%
+\contentsline {subsubsection}{\numberline {4.4.9}Deferred material}{92}{subsubsection.4.4.9}%
+\contentsline {subsection}{\numberline {4.5}Reduplication}{93}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Overview of reduplication in Tedim}{93}{subsubsection.4.5.1}%
+\contentsline {paragraph}{Reduplication inventory}{93}{section*.51}%
+\contentsline {subparagraph}{Full reduplication as intensification}{93}{section*.52}%
+\contentsline {subparagraph}{Secondary distributive reduplication}{94}{section*.53}%
+\contentsline {subparagraph}{Boundary and deferred material}{94}{section*.54}%
+\contentsline {subsection}{\numberline {4.6}Broader discourse}{94}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Analyzer-gap caution}{95}{subsection.4.7}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  15 JUN 2026 07:42
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  15 JUN 2026 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1262,83 +1262,89 @@ Overfull \hbox (1.17725pt too wide) in paragraph at lines 463--463
 
 [30]
 
-[31] [32]
+[31]
 
-[33] [34]
+[32]
+
+[33]
+
+[34]
 
 [35]
 
-[36] [37]
+[36]
 
-[38] [39]
+[37]
 
-[40]
+[38]
+
+[39] [40]
 
 [41]
 
 [42]
 
 [43]
+Overfull \hbox (5.09619pt too wide) in paragraph at lines 3407--3407
+\TU/TimesNewRoman(0)/m/n/10.95 prefix_diagnostic|  
+ []
+
+
+Overfull \hbox (5.09619pt too wide) in paragraph at lines 3409--3409
+\TU/TimesNewRoman(0)/m/n/10.95 prefix_diagnostic|  
+ []
+
+
+Overfull \hbox (5.09619pt too wide) in paragraph at lines 3411--3411
+\TU/TimesNewRoman(0)/m/n/10.95 prefix_diagnostic|  
+ []
+
+
+Overfull \hbox (47.06761pt too wide) in paragraph at lines 3413--3413
+[]|\TU/TimesNewRoman(0)/m/n/10.95 compatible_not_diagnostic|  
+ []
+
+
+Overfull \hbox (47.06761pt too wide) in paragraph at lines 3415--3415
+[]|\TU/TimesNewRoman(0)/m/n/10.95 compatible_not_diagnostic|  
+ []
+
+
+Overfull \hbox (47.06761pt too wide) in paragraph at lines 3417--3417
+[]|\TU/TimesNewRoman(0)/m/n/10.95 compatible_not_diagnostic|  
+ []
+
+
+Overfull \hbox (45.22835pt too wide) in paragraph at lines 3419--3419
+[]|\TU/TimesNewRoman(0)/m/n/10.95 deictic_venitive_boundary|  
+ []
+
+
+Overfull \hbox (45.22835pt too wide) in paragraph at lines 3421--3421
+[]|\TU/TimesNewRoman(0)/m/n/10.95 deictic_venitive_boundary|  
+ []
+
+
+Overfull \hbox (45.22835pt too wide) in paragraph at lines 3423--3423
+[]|\TU/TimesNewRoman(0)/m/n/10.95 deictic_venitive_boundary|  
+ []
+
+
+Overfull \hbox (28.1778pt too wide) in paragraph at lines 3425--3425
+[]|\TU/TimesNewRoman(0)/m/n/10.95 lexicalized_or_unclear|  
+ []
+
+
+Overfull \hbox (28.1778pt too wide) in paragraph at lines 3427--3427
+[]|\TU/TimesNewRoman(0)/m/n/10.95 lexicalized_or_unclear|  
+ []
+
+
+Overfull \hbox (28.1778pt too wide) in paragraph at lines 3429--3429
+[]|\TU/TimesNewRoman(0)/m/n/10.95 lexicalized_or_unclear|  
+ []
 
 [44]
-Overfull \hbox (5.09619pt too wide) in paragraph at lines 3510--3510
-\TU/TimesNewRoman(0)/m/n/10.95 prefix_diagnostic|  
- []
-
-
-Overfull \hbox (5.09619pt too wide) in paragraph at lines 3512--3512
-\TU/TimesNewRoman(0)/m/n/10.95 prefix_diagnostic|  
- []
-
-
-Overfull \hbox (5.09619pt too wide) in paragraph at lines 3514--3514
-\TU/TimesNewRoman(0)/m/n/10.95 prefix_diagnostic|  
- []
-
-
-Overfull \hbox (47.06761pt too wide) in paragraph at lines 3516--3516
-[]|\TU/TimesNewRoman(0)/m/n/10.95 compatible_not_diagnostic|  
- []
-
-
-Overfull \hbox (47.06761pt too wide) in paragraph at lines 3518--3518
-[]|\TU/TimesNewRoman(0)/m/n/10.95 compatible_not_diagnostic|  
- []
-
-
-Overfull \hbox (47.06761pt too wide) in paragraph at lines 3520--3520
-[]|\TU/TimesNewRoman(0)/m/n/10.95 compatible_not_diagnostic|  
- []
-
-
-Overfull \hbox (45.22835pt too wide) in paragraph at lines 3522--3522
-[]|\TU/TimesNewRoman(0)/m/n/10.95 deictic_venitive_boundary|  
- []
-
-
-Overfull \hbox (45.22835pt too wide) in paragraph at lines 3524--3524
-[]|\TU/TimesNewRoman(0)/m/n/10.95 deictic_venitive_boundary|  
- []
-
-
-Overfull \hbox (45.22835pt too wide) in paragraph at lines 3526--3526
-[]|\TU/TimesNewRoman(0)/m/n/10.95 deictic_venitive_boundary|  
- []
-
-
-Overfull \hbox (28.1778pt too wide) in paragraph at lines 3528--3528
-[]|\TU/TimesNewRoman(0)/m/n/10.95 lexicalized_or_unclear|  
- []
-
-
-Overfull \hbox (28.1778pt too wide) in paragraph at lines 3530--3530
-[]|\TU/TimesNewRoman(0)/m/n/10.95 lexicalized_or_unclear|  
- []
-
-
-Overfull \hbox (28.1778pt too wide) in paragraph at lines 3532--3532
-[]|\TU/TimesNewRoman(0)/m/n/10.95 lexicalized_or_unclear|  
- []
 
 [45]
 
@@ -1348,25 +1354,23 @@ Overfull \hbox (28.1778pt too wide) in paragraph at lines 3532--3532
 
 [48]
 
-[49]
+[49] [50]
 
-[50] [51]
+[51]
 
-[52]
-
-[53]
+[52] [53]
 
 [54]
 
 [55]
 
-[56]
+[56] [57]
 
-[57] [58]
+[58]
 
-[59]
+[59] [60]
 
-[60] [61]
+[61]
 
 [62]
 
@@ -1374,9 +1378,9 @@ Overfull \hbox (28.1778pt too wide) in paragraph at lines 3532--3532
 
 [64]
 
-[65]
+[65] [66]
 
-[66] [67]
+[67]
 
 [68]
 
@@ -1385,11 +1389,11 @@ Overfull \hbox (28.1778pt too wide) in paragraph at lines 3532--3532
 [70]
 
 [71]
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/it' will be
+(Font)              scaled to size 12.0pt on input line 5823.
+
 
 [72]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/it' will be
-(Font)              scaled to size 12.0pt on input line 5926.
-
 
 [73]
 
@@ -1399,53 +1403,51 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/it' will be
 
 [76]
 
-[77]
+[77] [78]
 
-[78] [79]
+[79] [80]
 
-[80] [81]
+[81]
 
 [82]
 
 [83]
-
-[84]
-Overfull \hbox (30.9635pt too wide) in paragraph at lines 6925--6926
+Overfull \hbox (30.9635pt too wide) in paragraph at lines 6822--6823
 []|\TU/TimesNewRoman(0)/m/n/10.95 manner/comparison/clause- 
  []
 
 
-Overfull \hbox (3.0165pt too wide) in paragraph at lines 6926--6926
+Overfull \hbox (3.0165pt too wide) in paragraph at lines 6823--6823
 []|\TU/TimesNewRoman(0)/m/n/10.95 question/comparison 
  []
 
 
-Overfull \hbox (3.0165pt too wide) in paragraph at lines 6928--6928
+Overfull \hbox (3.0165pt too wide) in paragraph at lines 6825--6825
 []|\TU/TimesNewRoman(0)/m/n/10.95 question/comparison 
  []
 
 
-Overfull \hbox (3.0165pt too wide) in paragraph at lines 6930--6930
+Overfull \hbox (3.0165pt too wide) in paragraph at lines 6827--6827
 []|\TU/TimesNewRoman(0)/m/n/10.95 question/comparison 
  []
+
+[84]
 
 [85]
 
-[86]
+[86] [87]
 
-[87] [88]
+[88]
 
-[89]
+[89] [90]
 
-[90] [91]
+[91]
 
 [92]
 
-[93]
+[93] (./assembled_grammar_review_preview.bbl
 
-[94] (./assembled_grammar_review_preview.bbl
-
-[95]
+[94]
 Missing character: There is no テ (U+30C6) in font Times New Roman/OT:script=lat
 n;language=dflt;mapping=tex-text;!
 Missing character: There is no ィ (U+30A3) in font Times New Roman/OT:script=lat
@@ -1500,19 +1502,19 @@ Missing character: There is no 照 (U+7167) in font Times New Roman/OT:script=la
 n;language=dflt;mapping=tex-text;!
 )
 
-[96] (./assembled_grammar_review_preview.aux)
+[95] (./assembled_grammar_review_preview.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20991 strings out of 473832
- 384114 string characters out of 5729482
- 1021043 words of memory out of 5000000
- 43775 multiletter control sequences out of 15000+600000
+ 20995 strings out of 473832
+ 384200 string characters out of 5729482
+ 1021215 words of memory out of 5000000
+ 43779 multiletter control sequences out of 15000+600000
  565669 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,12n,116p,1029b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on assembled_grammar_review_preview.pdf (96 pages).
+Output written on assembled_grammar_review_preview.pdf (95 pages).

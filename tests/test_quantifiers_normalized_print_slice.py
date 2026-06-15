@@ -19,24 +19,30 @@ def test_quantifiers_normalized_print_slice_exists() -> None:
     assert SLICE.exists(), "Normalized quantifiers print slice must exist"
 
 
-def test_quantifiers_normalized_print_slice_names_control_files() -> None:
+def test_quantifiers_normalized_print_slice_avoids_internal_prose() -> None:
     text = _text()
 
-    for required in (
+    # Grammar-facing sections should not expose internal workflow language
+    for forbidden in (
+        "current packet",
+        "print slice",
+        "candidate layer",
+        "this commit",
+        "workflow",
         "coverage_normalization_audit.md",
-        "candidates_quantifiers.tsv",
-        "dossier_quantifiers.md",
-        "review_notes_quantifiers.md",
-        "docs/grammar/reports/06-func-05-quantifiers.md",
     ):
-        assert required in text
+        assert forbidden not in text
 
 
 def test_quantifiers_normalized_print_slice_has_inventory_table() -> None:
     text = _text()
 
     assert "Quantifier inventory" in text
-    assert "| Form | Rough function | Constructional status | Current print status | Main boundary issue |" in text
+    assert "| Form | Provisional function | Current status | Notes |" in text
+    assert "khempeuh" in text
+    assert "pawlkhat" in text
+    assert "kuamah" in text
+    assert "bangmah" in text
 
 
 def test_quantifiers_normalized_print_slice_has_formal_examples() -> None:
@@ -47,28 +53,33 @@ def test_quantifiers_normalized_print_slice_covers_core_quantifier_types() -> No
     text = _text()
 
     for required in (
-        "Universal / total quantifiers",
-        "Existential / indefinite-like quantifiers",
-        "Quantifiers and negation",
-        "Quantifiers and noun phrase structure",
+        "# Universal quantification",
+        "# Existential / partitive-like quantification",
+        "# Negative quantifiers and negation",
+        "# Quantity expressions",
+        "# Boundary with numerals",
+        "# Boundary with NP structure and negation",
+        "# Deferred material",
         "khempeuh",
         "pawlkhat",
         "kuamah",
         "bangmah",
+        "tampi",
     ):
         assert required in text
 
 
-def test_quantifiers_normalized_print_slice_keeps_overlap_and_caveats_visible() -> None:
+def test_quantifiers_normalized_print_slice_keeps_boundaries_explicit() -> None:
     text = _text()
 
     for required in (
-        "numeral/indefinite overlap",
+        "Boundary with numerals",
+        "Boundary with NP structure and negation",
         "khat",
-        "negation",
-        "noun-phrase",
-        "candidate evidence",
-        "explicit caveats",
+        "negation licensing",
+        "indefinite-like",
+        "noun phrase",
+        "deferred",
     ):
         assert required in text
 
@@ -87,11 +98,18 @@ def test_quantifiers_normalized_print_slice_avoids_raw_report_counts() -> None:
         assert forbidden not in text
 
 
-def test_quantifiers_normalized_print_slice_preserves_candidate_discipline() -> None:
+def test_quantifiers_normalized_print_slice_keeps_caveats_and_deferred() -> None:
     text = _text()
 
-    assert "candidate evidence" in text
-    assert "explicit caveats" in text
+    assert "Deferred material" in text
+    assert any(phrase in text for phrase in (
+        "does not yet settle",
+        "remains",
+        "deferred",
+        "boundary",
+        "construction-sensitive",
+    ))
+    assert "with caveat" in text
 
 
 def test_quantifiers_normalization_supplement_exists_and_has_required_columns() -> None:

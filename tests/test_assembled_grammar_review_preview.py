@@ -663,11 +663,13 @@ def test_assembled_preview_includes_normalized_quantifiers_section() -> None:
     for required in (
         "Overview of quantification in Tedim",
         "Quantifier inventory",
-        "Universal / total quantifiers",
-        "Existential / indefinite-like quantifiers",
-        "Quantifiers and negation",
-        "Quantifiers and noun phrase structure",
-        "Deferred and boundary material",
+        "Universal quantification",
+        "Existential / partitive-like quantification",
+        "Negative quantifiers and negation",
+        "Quantity expressions",
+        "Boundary with numerals",
+        "Boundary with NP structure and negation",
+        "Deferred material",
     ):
         assert required in text
 

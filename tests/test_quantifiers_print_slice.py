@@ -12,19 +12,17 @@ def test_quantifiers_print_slice_exists() -> None:
     assert SLICE.exists(), "Quantifiers print slice must exist"
 
 
-def test_quantifiers_print_slice_names_normalization_controls() -> None:
+def test_quantifiers_print_slice_avoids_internal_apparatus() -> None:
     text = _text()
 
-    for required in (
+    for forbidden in (
         "coverage_normalization_audit.md",
-        "grammar_numerals_print_slice.md",
-        "candidates_quantifiers.tsv",
-        "dossier_quantifiers.md",
-        "review_notes_quantifiers.md",
-        "docs/grammar/reports/06-func-05-quantifiers.md",
-        "examples_quantifiers_normalization.tsv",
+        "current packet",
+        "print slice",
+        "candidate layer",
+        "this commit",
     ):
-        assert required in text
+        assert forbidden not in text
 
 
 def test_quantifiers_print_slice_has_inventory_examples_and_core_forms() -> None:
@@ -53,28 +51,29 @@ def test_quantifiers_print_slice_keeps_boundary_caveats_visible() -> None:
     text = _text()
 
     for required in (
-        "does not treat `khat` as an uncomplicated quantifier anchor",
-        "cross-reference, not reopen, the stabilized negation packet",
-        "negative-licensed",
+        "Boundary with numerals",
+        "Boundary with NP structure and negation",
+        "khat",
+        "negation licensing",
         "bang-family",
-        "blocked control",
-        "candidate evidence",
-        "explicit caveats",
-        "noun-phrase",
+        "indefinite-like",
+        "noun phrase",
+        "deferred",
     ):
         assert required in text
 
 
-def test_quantifiers_print_slice_keeps_edge_rows_narrow() -> None:
+def test_quantifiers_print_slice_keeps_deferred_material_clear() -> None:
     text = _text()
 
+    assert "Deferred material" in text
     for required in (
-        "broad adjective/adverb chapter",
-        "comparison or intensifier chapter",
-        "edge rows only",
-        "free-choice",
-        "deferred",
-        "not the start of a broad adjective/adverb chapter",
+        "does not yet settle",
+        "full free-choice",
+        "indefinite uses",
+        "intensifier",
+        "degree",
+        "NP template",
     ):
         assert required in text
 
