@@ -479,7 +479,7 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
         "Core temporal subordination: ciangin",
         "Deverbal nominalization with `-na`",
         "Overview of noun phrase structure",
-        "Simple noun stems",
+            "Simple lexical nouns",
         "Agreement versus possession routing",
         "Causative `-sak`",
         ):
@@ -698,14 +698,14 @@ def test_assembled_preview_includes_normalized_noun_domain_section() -> None:
 
     for required in (
         "Overview of the noun domain",
-        "Current noun-domain inventory",
-        "Simple noun stems",
+        "Noun-domain inventory",
+        "Simple lexical nouns",
+        "Human noun mi",
         "Plural marking with -te",
-        "Human nouns and common nouns",
-        "Nouns in larger phrases",
-        "Compounds and proper nouns",
-        "Nominalization boundary",
-        "Deferred and boundary material",
+        "Compounds",
+        "Proper names and titles",
+        "Boundary with NP structure and nominalization",
+        "Deferred material",
     ):
         assert required in text
 
@@ -1724,14 +1724,14 @@ def test_assembled_preview_tex_includes_normalized_noun_inventory_and_examples()
     tex_normalized = _normalize(tex.lower())
     pdf_normalized = _normalize(pdf.lower())
 
-    assert text.count("(@ex:noun-") >= 4
-    assert tex.count("\\label{ex:noun-") >= 4
+    assert text.count("(@ex:noun-") >= 6
+    assert tex.count("\\label{ex:noun-") >= 6
 
-    for required in ("Current noun-domain inventory", "gam", "aksi-te", "hih mite", "mi khempeuh", "minam khat"):
+    for required in ("Noun-domain inventory", "gam", "aksi-te", "hih mite", "mi khempeuh", "minam", "thugen", "Abraham' suan"):
         assert required.lower() in text.lower()
         assert required.lower() in tex_normalized
 
-    for required in ("Current noun-domain inventory", "gam", "aksi-te", "hih mite", "mi khempeuh"):
+    for required in ("Noun-domain inventory", "gam", "aksi-te", "hih mite", "mi khempeuh"):
         assert required.lower() in pdf_normalized
 
 
@@ -1742,14 +1742,16 @@ def test_assembled_preview_tex_keeps_noun_example_sources_after_translation() ->
     assert "(Exodus 5:5)" in _tex_example_block("ex:noun-hih-mite")
     assert "(Luke 2:1)" in _tex_example_block("ex:noun-mi-khempeuh")
     assert "(Genesis 11:6)" in _tex_example_block("ex:noun-minam-khat")
+    assert "(Genesis 4:23)" in _tex_example_block("ex:noun-thugen")
+    assert "(Matthew 1:1)" in _tex_example_block("ex:noun-abraham-suan-david")
 
 
 def test_assembled_preview_noun_examples_include_old_testament_and_gospel_sources() -> None:
     tex = _tex_text()
     text = _text()
 
-    assert "(Genesis 2:5)" in tex or "(Genesis 1:16)" in tex or "(Exodus 5:5)" in tex
-    assert "(Matthew 2:2)" in tex or "(Luke 2:1)" in tex or "no suitable Gospel example was found" in text
+    assert "(Genesis 2:5)" in tex or "(Genesis 1:16)" in tex or "(Exodus 5:5)" in tex or "(Genesis 11:6)" in tex or "(Genesis 4:23)" in tex
+    assert "(Matthew 2:2)" in tex or "(Luke 2:1)" in tex or "(Matthew 1:1)" in tex
 
 
 def test_assembled_preview_tex_includes_normalized_quantifiers_inventory_and_examples() -> None:
@@ -1859,7 +1861,8 @@ def test_assembled_preview_tex_glosses_multiword_running_prose_forms_in_normaliz
         r"\tdim{kiang} \glossquote{beside / near}",
         r"\tdim{pualam} \glossquote{outside}",
         r"\tdim{sungah} \glossquote{inside / in}",
-        r"\tdim{Abraham' suan David} \glossquote{David, descendant of Abraham}",
+        r"\tdim{Abraham' suan} in Matthew 1:1",
+        r"\glossquote{David, descendant of Abraham} (Matthew 1:1)",
         r"\tdim{-na} \glossquote{nominalizer}",
         r"\tdim{bawlna} \glossquote{making / creation}",
         r"\tdim{hong pai mi} \glossquote{one who came}",

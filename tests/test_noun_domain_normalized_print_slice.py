@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+import re
 from pathlib import Path
 
 
@@ -9,75 +12,115 @@ def _text() -> str:
     return GRAMMAR_PATH.read_text(encoding="utf-8")
 
 
+def _example_labels() -> list[str]:
+    return re.findall(r"^\(@ex:(noun-[^)]+)\)", _text(), flags=re.MULTILINE)
+
+
 def test_noun_domain_normalized_print_slice_exists() -> None:
     assert GRAMMAR_PATH.exists(), "grammar_noun_domain_print_slice.md must exist"
 
 
-def test_noun_domain_normalized_print_slice_names_control_files() -> None:
+def test_noun_domain_normalized_print_slice_avoids_internal_prose() -> None:
+    lower = _text().lower()
+
+    for forbidden in (
+        "# scope",
+        "current packet",
+        "candidate evidence",
+        "current print status",
+        "print-ready",
+        "print-usable",
+        "workflow",
+        "review-note maturity",
+        "coverage-normalization",
+        "raw report-only noun lists",
+    ):
+        assert forbidden not in lower
+
+
+def test_noun_domain_normalized_print_slice_has_inventory_and_core_anchors() -> None:
     text = _text()
 
+    assert "# Noun-domain inventory" in text
+    assert "| Form or pattern | Function | Status | Notes |" in text
+
     for required in (
-        "coverage_normalization_audit.md",
-        "candidates_noun_domain.tsv",
-        "dossier_noun_domain.md",
-        "review_notes_noun_domain.md",
-        "docs/grammar/GRAMMAR_SOURCE_INVENTORY.md",
-        "docs/grammar/reports/03-noun-01-simple.md",
-        "docs/grammar/reports/03-noun-02-compounds.md",
-        "docs/grammar/reports/03-noun-03-proper.md",
-        "docs/grammar/reports/03-noun-04-plural.md",
-        "docs/grammar/reports/03-noun-05-nominalization.md",
+        "gam",
+        "aksi",
+        "aksi-te",
+        "mi",
+        "mite",
+        "minam",
+        "thugen",
+        "Abraham",
+        "Topa",
+        "sanggam",
+        "singnai",
+        "kholhna",
     ):
         assert required in text
 
 
-def test_noun_domain_normalized_print_slice_has_inventory_and_safe_anchors() -> None:
-    text = _text()
-
-    assert "| Form or pattern | Rough function | Example context | Current print status | Main boundary issue |" in text
-
-    for anchor in ("gam", "aksi", "aksi-te", "mi", "mite"):
-        assert anchor in text
-
-
 def test_noun_domain_normalized_print_slice_discusses_required_domains() -> None:
     text = _text()
+    lower = text.lower()
 
     for heading in (
-        "# Simple noun stems",
+        "# Simple lexical nouns",
+        "# Human noun mi",
         "# Plural marking with -te",
-        "# Human nouns and common nouns",
-        "# Nouns in larger phrases",
-        "# Compounds and proper nouns",
-        "# Nominalization boundary",
-        "# Deferred and boundary material",
+        "# Compounds",
+        "# Proper names and titles",
+        "# Boundary with NP structure and nominalization",
+        "# Deferred material",
     ):
         assert heading in text
 
-    lower = text.lower()
-    assert "mi khat" in lower
-    assert "mi khempeuh" in lower
-    assert "mi pawlkhat" in lower
-    assert "mi tampi" in lower
-    assert "proper names" in lower
-    assert "derived nouns and nominalized forms remain shared with the nominalization section" in lower
+    for required in (
+        "simple lexical nouns",
+        "human noun `mi`",
+        "plural marking with `-te`",
+        "transparent compounds",
+        "title-like",
+        "nominalization",
+        "NP structure",
+        "mi khat",
+        "mi khempeuh",
+        "mi pawlkhat",
+        "mi tampi",
+    ):
+        assert required.lower() in lower
 
 
-def test_noun_domain_normalized_print_slice_keeps_claims_cautious() -> None:
+def test_noun_domain_normalized_print_slice_keeps_boundaries_explicit() -> None:
     lower = _text().lower()
 
-    assert "candidate evidence" in lower
-    assert "explicit caveat" in lower or "explicit caveats" in lower
-    assert "not yet enough for a full noun-domain chapter" in lower
-    assert "raw report-only noun lists" in lower
+    for required in (
+        "full noun classification",
+        "full plural system",
+        "classifier-like nouns",
+        "complete compound typology",
+        "nominalized nouns",
+        "proper-name syntax",
+        "title morphology",
+        "full relation between nouns and np structure",
+    ):
+        assert required in lower
 
 
 def test_noun_domain_normalized_print_slice_has_formal_examples_and_source_balance() -> None:
     text = _text()
 
-    assert text.count("(@ex:noun-") >= 4
-    assert "Genesis " in text or "Exodus " in text
-    assert any(gospel in text for gospel in ("Matthew ", "Mark ", "Luke ", "John "))
+    assert len(_example_labels()) >= 6
+    assert "Genesis 2:5" in text
+    assert "Matthew 2:2" in text
+    assert "Genesis 1:16" in text
+    assert "Exodus 5:5" in text
+    assert "Genesis 32:24" in text
+    assert "Luke 2:1" in text
+    assert "Genesis 11:6" in text
+    assert "Genesis 4:23" in text
+    assert "Matthew 1:1" in text
 
 
 def test_noun_domain_normalized_print_slice_avoids_raw_count_promotion() -> None:
@@ -118,6 +161,8 @@ def test_noun_domain_examples_supplement_includes_ot_and_gospel_rows() -> None:
 
     assert "Old Testament" in text
     assert "Gospels" in text
+    assert "Genesis 2:5" in text
+    assert "Matthew 1:1" in text or "Luke 2:1" in text or "Matthew 2:2" in text
 
 
 def test_noun_domain_examples_supplement_does_not_mark_unvetted_rows_print_ready() -> None:
