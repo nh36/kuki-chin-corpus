@@ -13,57 +13,68 @@ def test_np_possession_print_slice_exists() -> None:
     assert GRAMMAR_PATH.exists(), "NP structure / possession grammar slice must exist"
 
 
-def test_np_possession_print_slice_names_control_files() -> None:
-    text = _text()
+def test_np_possession_print_slice_avoids_internal_apparatus_language() -> None:
+    lower = _text().lower()
 
-    for required in (
-        "coverage_normalization_audit.md",
-        "candidates_np_possession.tsv",
-        "dossier_np_possession.md",
-        "review_notes_np_possession.md",
-        "docs/grammar/reports/03-noun-06-np-structure.md",
-        "docs/grammar/reports/04-np-07-possession.md",
+    for forbidden in (
+        "# scope",
+        "current packet",
+        "current section depends on",
+        "coverage-normalization standard",
+        "candidate evidence",
+        "print-ready",
+        "print-usable",
+        "workflow",
+        "review-note maturity",
     ):
-        assert required in text
+        assert forbidden not in lower
 
 
-def test_np_possession_print_slice_has_normalized_structure_and_anchors() -> None:
+def test_np_possession_print_slice_has_fuller_section_structure() -> None:
     text = _text()
-    lower = text.lower()
 
     for required in (
         "Overview of noun phrase structure",
-        "Current NP pattern inventory",
+        "NP pattern inventory",
         "Demonstratives and nouns",
         "Numerals and nouns",
         "Quantifiers and nouns",
         "Possession",
-        "Deferred and boundary material",
-        "hih mite",
-        "mi khat",
-        "mi khempeuh",
-        "ni li",
+        "Boundary with numerals and quantifiers",
+        "Boundary with pronouns, prefix/agreement, case, and relators",
+        "Deferred material",
     ):
         assert required in text
 
-    assert "candidate evidence" in lower
-    assert "explicit caveats" in lower
 
-
-def test_np_possession_print_slice_keeps_possession_cautious() -> None:
+def test_np_possession_print_slice_keeps_core_forms_and_boundaries_visible() -> None:
     text = _text()
     lower = text.lower()
 
     for required in (
+        "hih mite",
+        "ni li",
+        "kum sawm le nih",
+        "mi khempeuh",
+        "mi pawlkhat",
+        "mi tampi",
         "na pa' inn-ah",
         "a zi' min",
-        "Topa' inn",
-        "a pa' inn",
-        "Topa' tungah",
-        "ka suahna leitang",
     ):
         assert required in text
 
-    assert "not enough for a full possession paradigm" in lower or "does not yet justify a full possession paradigm" in lower
-    assert "raw generated-report counts" in lower or "report-only" in lower
+    assert "Topa' inn" in text or ("`Topa'` 'Lord'" in text and "`inn` 'house'" in text)
+    assert "a pa' inn" in text or ("`a` 'his'" in text and "`pa'` 'father'" in text and "`inn` 'house'" in text)
+    assert "Topa' tungah" in text or ("`Topa'` 'Lord'" in text and "`tungah` 'on'" in text)
+    assert "ka suahna leitang" in text or ("`ka` 'my'" in text and "`suahna` 'birth-NMLZ'" in text and "`leitang` 'land'" in text)
 
+    assert "possessor-before-possessed order" in lower
+    assert "full possession paradigm" in lower
+    assert "apostrophe marking" in lower
+
+
+def test_np_possession_print_slice_avoids_raw_report_counts() -> None:
+    lower = _text().lower()
+
+    for forbidden in ("5,191", "4,712", "3,021", "2,244", "1,100", "12x", "24x", "frequency table"):
+        assert forbidden not in lower

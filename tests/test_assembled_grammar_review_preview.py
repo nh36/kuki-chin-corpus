@@ -715,12 +715,14 @@ def test_assembled_preview_includes_normalized_np_possession_section() -> None:
 
     for required in (
         "Overview of noun phrase structure",
-        "Current NP pattern inventory",
+        "NP pattern inventory",
         "Demonstratives and nouns",
         "Numerals and nouns",
         "Quantifiers and nouns",
         "Possession",
-        "Deferred and boundary material",
+        "Boundary with numerals and quantifiers",
+        "Boundary with pronouns, prefix/agreement, case, and relators",
+        "Deferred material",
     ):
         assert required in text
 
@@ -950,14 +952,14 @@ def test_assembled_preview_tex_includes_normalized_np_inventory_and_examples() -
     tex_normalized = _normalize(tex.lower())
     pdf_normalized = _normalize(pdf.lower())
 
-    assert text.count("(@ex:np-") >= 4
-    assert tex.count("\\label{ex:np-") >= 4
+    assert text.count("(@ex:np-") >= 6
+    assert tex.count("\\label{ex:np-") >= 6
 
-    for required in ("hih mite", "mi khat", "mi khempeuh", "ni li", "na pa' inn-ah", "Current NP pattern inventory"):
+    for required in ("hih mite", "mi khat", "mi khempeuh", "mi tampi", "ni li", "na pa' inn-ah", "NP pattern inventory"):
         assert required.lower() in text.lower()
         assert required.lower() in tex_normalized
 
-    for required in ("Current NP pattern inventory", "hih mite", "mi khempeuh", "na pa", "ni li"):
+    for required in ("NP pattern inventory", "hih mite", "mi khempeuh", "na pa", "ni li"):
         assert required.lower() in pdf_normalized
 
 

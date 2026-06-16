@@ -369,29 +369,28 @@ The current evidence supports demonstrative-before-noun order alongside noun-plu
 
 ### Overview of noun phrase structure
 
-The clearest current evidence supports a small but coherent set of NP-order observations. Demonstrative-related material is safest where a proximal form precedes the noun, as in `hih mite` 'these people', with `hih` 'this' introducing the phrase. Numerals and several quantifier-like forms follow the noun in the cleanest current examples, as seen in `mi khat` 'one person / a person', `ni li` 'four days', `mi khempeuh` 'all people', `mi pawlkhat` 'some people', and `mi tampi` 'many people'. The present section therefore supports a modest contrast between demonstrative-before-noun structure and noun-plus-postnominal numeral or quantifier structure, while leaving broader NP templating for later review.
+The present evidence supports a modest but coherent set of noun phrase observations. Demonstrative material can precede nouns, as in `hih` 'this' `mite` 'people' 'these people'. Numerals and quantifier-like forms follow nouns in the clearest examples: `mi` 'person' `khat` 'one' 'one person', `ni` 'day' `li` 'four' 'four days', `mi` 'person' `khempeuh` 'all' 'all people', and `mi` 'person' `tampi` 'many' 'many people'. Possession shows possessor-before-possessed order in secure examples such as `na` 'your' `pa'` 'father' `inn-ah` 'in / into the house' 'your father's house' and `a` 'his' `zi'` 'wife' `min` 'name' 'his wife's name'.
 
-Possession is now visible enough to include as part of the same section, but it remains less normalized than the modifier-order material. The safest checked rows show possessor-before-possessed structure in compact noun phrases such as `na pa' inn-ah` 'in your father's house' and `a zi' min` 'his wife's name', while the analysis of possessive prefixes, apostrophe marking, genitive structure, and relator or case overlap still requires explicit caveats.
+This description remains narrow: the section does not offer a complete NP template, full possession paradigm, or comprehensive analysis of demonstratives, numerals, or quantifiers. The numerals and quantifiers sections already carry fuller treatment of those systems. The present section coordinates with those analyses by using their examples only to support modest claims about noun phrase word order.
 
-Gospel searches produced clean noun-plus-numeral and noun-plus-quantifier examples, which helps keep the section from becoming Genesis-only. Demonstratives and possession remain more OT-led in the current stage because the Gospel comparanda were less clean under present careful evidence control.
+### NP pattern inventory
 
-### Current NP pattern inventory
-
-| Pattern | Example form | Rough function | Status in this draft | Main boundary issue |
+| Pattern | Example form | Function | Status | Boundary notes |
 | --- | --- | --- | --- | --- |
-| demonstrative + noun | `hih mite` | proximal demonstrative before a plural noun | well-supported | Gospel demonstrative comparanda are less clean than the OT anchor |
-| noun + numeral / indefinite boundary | `mi khat` | noun followed by `khat` as numeral or indefinite-like modifier | supported with caveat | overlaps with the numerals and indefinites boundary |
-| noun + numeral | `ni li` | counted noun followed by a simple numeral | well-supported | numeral formation belongs to the numerals section |
-| noun + numeral | `kum sawm le nih` | counted noun followed by a compound numeral | well-supported | compound-ten analysis belongs to the numerals section |
-| noun + quantifier | `mi khempeuh` | noun followed by a total quantifier | well-supported | full quantifier semantics belong to the quantifiers section |
-| noun + quantifier | `mi pawlkhat` | noun followed by an existential or partitive-like quantifier | supported with caveat | grouping semantics remain caveated |
-| noun + quantifier | `mi tampi` | noun followed by a quantity modifier | supported with caveat | borders on broader degree or adjective-like modification |
-| possessor + possessed NP | `na pa' inn-ah` | pronominal possessor with possessed noun phrase | supported with caveat | overlaps with possessive prefixes, apostrophe analysis, and case closure |
-| possessed NP chain | `a zi' min` | possessor-marked noun phrase containing a possessed noun | supported with caveat | does not yet justify a full possession paradigm |
+| demonstrative + noun | `hih` 'this' `mite` 'people' | proximal demonstrative before a plural noun | core | demonstrative system is fuller in the dedicated section |
+| noun + numeral | `ni` 'day' `li` 'four' | counted noun followed by a numeral | core | numeral formation belongs to the numerals section |
+| noun + numeral | `kum` 'year' `sawm` 'ten' `le` 'and' `nih` 'two' | counted noun followed by a compound numeral | core | compound numeral analysis belongs to the numerals section |
+| noun + numeral / indefinite | `mi` 'person' `khat` 'one' | noun with numeral or indefinite-like modifier | core with caveat | overlaps with numerals and indefinite boundaries |
+| noun + universal quantifier | `mi` 'person' `khempeuh` 'all' | noun followed by total quantifier | core | quantifier semantics belong to the quantifiers section |
+| noun + partitive quantifier | `mi` 'person' `pawlkhat` 'some group / some' | noun followed by existential or partitive-like form | core with caveat | grouping semantics are caveated in the quantifiers section |
+| noun + quantity | `mi` 'person' `tampi` 'many' | noun followed by quantity modifier | core with caveat | borders on broader degree modification |
+| possessor + possessed | `na` 'your' `pa'` 'father' `inn-ah` 'in / into the house' | pronominal possessor with possessed noun phrase | core with caveat | overlaps with possessive prefixes, apostrophe marking, and case marking |
+| possessor + possessed | `a` 'his' `zi'` 'wife' `min` 'name' | possessive chain with possessor-before-possessed order | core with caveat | does not settle full possession paradigms |
+| full-NP possessor + possessed | `Topa'` 'Lord' `inn` 'house' | full noun phrase possessor before possessed noun | boundary | apostrophe marking and genitive analysis remain unsettled |
 
 ### Demonstratives and nouns
 
-The clearest checked demonstrative-related anchor remains `hih mite`, which safely supports a demonstrative-before-noun description for the current evidence. That is a narrower and safer claim than a full theory of determiner position. The demonstratives section remains the right place for the broader deictic inventory; the present section only uses the NP row to show that demonstrative-related modification does not pattern like the postnominal numeral and quantifier rows.
+The clearest anchor for demonstrative-noun order is `hih` 'this' `mite` 'people' 'these people', where the demonstrative precedes the noun. This pattern is narrower than a full theory of determiner position, which remains in the dedicated demonstratives section. The present section uses this NP-order evidence to show that demonstrative modification patterns differently from the postnominal numeral and quantifier patterns below.
 
 (@ex:np-hih-mite) Exodus 5:5
 a. Tedim: hih mite
@@ -399,13 +398,13 @@ b. Segmentation: hih | mi-te
 c. Gloss: PROX | person-PL
 d. Translation: 'these people'
 
-Matthew 6:2 gives a Gospel comparandum in `a hih mite`, but that row is embedded in a larger relative-like phrase and is therefore less clean as a simple adnominal demonstrative anchor. For present purposes, the OT phrase above remains the better controlled example.
+While Matthew 6:2 contains `a` 'his' `hih` 'this' `mite` 'people' in a larger phrase, that usage is embedded in relative-like material and is therefore less clean as a simple adnominal demonstrative pattern. The OT phrase above remains the better controlled example for this NP-order subsection.
 
-No equally clean Gospel demonstrative example is currently used here, so the subsection stays with the compact OT anchor while the embedded Gospel comparandum remains only a supporting note.
+No equally clean Gospel possession row was found for this subsection.
 
 ### Numerals and nouns
 
-The normalized numerals section already carries the fuller description of the numeral system, including compound tens and larger-number expressions. The current NP section uses numeral material only to support noun-plus-numeral order: the cleanest checked rows place the noun before the numeral rather than the numeral before the noun.
+The numerals section provides a fuller analysis of numeral formation and semantics. In the present section, the relevant observation is narrower: noun-plus-numeral order is consistent across examples. `Ni` 'day' `li` 'four' places the noun before the numeral, as does `kum` 'year' `sawm` 'ten' `le` 'and' `nih` 'two'. This pattern holds even when numerals are compound. At the same time, `mi` 'person' `khat` 'one' remains an explicit boundary row, since indefinite-like versus purely numeral interpretation for `khat` 'one' is discussed in both the numerals and quantifiers sections.
 
 (@ex:np-ni-li) John 11:39
 a. Tedim: ni li
@@ -419,13 +418,13 @@ b. Segmentation: kum | sawm | le | nih
 c. Gloss: year | ten | and | two
 d. Translation: 'twelve years'
 
-These rows show that the pattern is not tied to a single lexical head. `Ni li` 'four days' and `kum sawm le nih` 'twelve years' both keep the noun before the numeral, even when the numeral itself is compound. At the same time, `mi khat` 'one person / a person' remains an explicit boundary row, since the present section uses it as NP-order evidence without resolving the full numeral versus indefinite analysis that belongs to the numerals and quantifier-adjacent discussion.
+Gospel sources provide the cleanest examples for this construction in the current evidence base.
 
-No equally clean Old Testament example is currently used for this construction, so the section keeps the compact Gospel anchors.
+No equally clean Old Testament example is currently used for this construction.
 
 ### Quantifiers and nouns
 
-The quantifiers section already carries the fuller discussion of total, existential-like, and negative-licensed quantifier material. Here the relevant point is more limited: the cleanest checked quantifier rows also place the noun before the quantifier-like item.
+The quantifiers section provides a fuller discussion of total, existential-like, and negative-licensed quantifier material. Here the relevant point is narrower: quantifier forms follow the noun in the clearest examples. `Mi` 'person' `khempeuh` 'all' shows noun-plus-quantifier order for universal quantification. `Mi` 'person' `pawlkhat` 'some group / some' and `mi` 'person' `tampi` 'many' show the same pattern for existential and quantity expressions.
 
 (@ex:np-mi-khempeuh) Luke 2:1
 a. Tedim: mi khempeuh
@@ -439,17 +438,23 @@ b. Segmentation: mi | pawl-khat
 c. Gloss: person | group-one
 d. Translation: 'some people'
 
-`Mi pawlkhat` and `mi tampi` (Mark 6:34) support the same general noun-plus-quantifier profile, although each keeps its own semantic caveats from the normalized quantifiers section. The current section therefore uses them as modest NP-order evidence rather than as a reopened quantifier chapter.
+(@ex:np-mi-tampi) Mark 6:34
+a. Tedim: mi tampi
+b. Segmentation: mi | tam-pi
+c. Gloss: person | many
+d. Translation: 'many people'
 
-No equally clean Old Testament example is currently used for this construction, so the section keeps the compact Gospel anchors.
+These examples support noun-plus-quantifier order. Each quantifier retains its own semantic caveats from the quantifiers section, but they serve here as NP-order evidence.
+
+No equally clean Old Testament example is currently used for this construction.
 
 ### Possession
 
-Possession is now printable in a cautious way, but it remains less normalized than the modifier-order material above. The safest current claim is that the checked possession rows show possessor-before-possessed order inside the noun phrase. They do not yet justify a full paradigm of possessive prefixes, a settled treatment of apostrophe marking, or a broad theory of alienable versus inalienable possession.
+Possession is now visible enough to include in this section, but it remains less fully developed than the NP-order material above. The safest claim is that checked possession rows show possessor-before-possessed order in noun phrases. They do not yet justify a full paradigm of possessive prefixes, a complete treatment of apostrophe marking, or a settled theory of alienability.
 
 (@ex:np-poss-na-pa-inn) Genesis 24:23
 a. Tedim: na pa' inn-ah
-b. Segmentation: na pa' inn-ah
+b. Segmentation: na | pa' | inn-ah
 c. Gloss: 2SG.POSS father house-LOC
 d. Translation: 'in thy father's house'
 
@@ -459,26 +464,25 @@ b. Segmentation: a zi' | min
 c. Gloss: 3SG.POSS wife | name
 d. Translation: 'his wife's name'
 
-These rows are enough for a cautious description of possessor-before-possessed structure, especially when read together with the main anchors `ka pa`, `Topa' inn`, and `a pa' inn`. They are not enough for a full possession paradigm, because the current evidence still overlaps with pronouns and possessive prefixes, genitive or apostrophe analysis, relator and postposition structure, and broader questions about head-dependent order.
+These examples support possessor-before-possessed order. Related anchors such as `ka` 'my' `pa` 'father' and `Topa'` 'Lord' `inn` 'house' are controlled but do not yet enlarge the paradigm enough for a full possession system. Overlap with pronouns, possessive prefixes, genitive marking, case marking, and relators remains explicit in the deferred material section.
 
-No equally clean Gospel possession row was found for here under current careful evidence control. The possession subsection therefore remains OT-led even though the section as a whole includes Gospel-balanced NP-order examples.
+No equally clean Gospel example is currently used for this construction.
 
-### Deferred and boundary material
+### Boundary with numerals and quantifiers
 
-Several important possession and NP topics remain explicitly deferred.
+The numerals and quantifiers sections remain the primary analyses for their own categories. In this section, `khat` 'one' is used only as an NP-order boundary form in `mi` 'person' `khat` 'one', while numeral formation and ordinal analysis remain in the numerals section. Likewise, `khempeuh` 'all', `pawlkhat` 'some group / some', and `tampi` 'many' are used here to show noun-plus-quantifier order, not to reopen quantifier semantics.
 
-- A full possession paradigm is still deferred: the present section does not normalize every possessive prefix or every nominal host.
-- Kinship possession remains under-supported beyond a few controlled anchors such as `ka pa`.
-- Pronominal possession and agreement overlap remains shared with the pronoun and prefix/agreement material rather than settled here.
-- Apostrophe-marked relations such as `Topa' inn` remain promising, but their exact relation to genitive marking and title-like noun combinations still needs fuller normalization.
-- `Topa' tungah` remains a relator or case-boundary row rather than a clean possession example.
-- `ka suahna leitang` remains a nominalization boundary row rather than a core possession anchor.
-- Demonstrative, numeral, and quantifier rows are used here for NP-order support only; their full systems remain in the demonstratives, numerals, and quantifiers sections.
-- Analyzer-noisy or report-only material, including isolated prefix surfaces and broad recursive-possession claims, is not promoted into the present discussion here.
+### Boundary with pronouns, prefix/agreement, case, and relators
 
-### Summary
+Possession in this section intersects with several neighboring domains. Pronoun and prefix/agreement material remains responsible for fuller analysis of possessive prefixes and person-marking overlap. Case marking remains responsible for phrase-edge closure in rows such as `na` 'your' `pa'` 'father' `inn-ah` 'in / into the house'. Relator and postposition analysis remains responsible for rows such as `Topa'` 'Lord' `tungah` 'on', where possession-like morphology meets relational syntax.
 
-The NP structure / possession section can now support a modest description of noun phrase order: the cleanest current evidence points to demonstrative-before-noun structure alongside noun-plus-postnominal numeral and quantifier patterns. Possession is now visible enough to include with formal examples, but it remains a cautious subsection whose broader paradigm, marking analysis, and interface with pronouns, genitive structure, and relators are still explicitly deferred.
+### Deferred material
+
+This section does not yet settle a complete noun phrase template, a full possession paradigm, or the complete systems of demonstratives, numerals, and quantifiers. More specifically, several important domains remain explicitly deferred.
+
+The possessive-prefix system is not fully normalized here; the prefix/agreement section handles the overlap between possessive and agreement marking. The exact status of apostrophe marking in possessor-possessed relations such as `Topa'` 'Lord' `inn` 'house' and `Topa'` 'Lord' `tungah` 'on' remains unsettled, as does the relation between genitive-like reading and apostrophe-marked patterns. `Topa'` 'Lord' `tungah` 'on' itself is primarily a relator/postposition boundary row rather than core possession. Recursive or chained possessive structures such as `a` 'his' `pa'` 'father' `inn` 'house' are deferred as more complex possession phenomena. Nominalization boundary cases such as `ka` 'my' `suahna` 'birth-NMLZ' `leitang` 'land' belong partly to nominalization and broader noun-headed syntax.
+
+The full systems of demonstratives, numerals, and quantifiers remain in their dedicated sections; this section uses those systems only as NP-order evidence.
 
 ## Noun domain
 

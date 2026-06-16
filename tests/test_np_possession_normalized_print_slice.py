@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 
@@ -20,35 +21,44 @@ def test_np_possession_normalized_print_slice_exists() -> None:
     assert GRAMMAR_PATH.exists(), "Normalized NP structure / possession slice must exist"
 
 
-def test_np_possession_normalized_print_slice_names_control_files() -> None:
-    text = _text()
+def test_np_possession_normalized_print_slice_avoids_internal_scope_and_workflow_language() -> None:
+    lower = _text().lower()
 
-    for required in (
-        "coverage_normalization_audit.md",
-        "candidates_np_possession.tsv",
-        "dossier_np_possession.md",
-        "review_notes_np_possession.md",
-        "docs/grammar/reports/03-noun-06-np-structure.md",
-        "docs/grammar/reports/04-np-07-possession.md",
+    for forbidden in (
+        "# scope",
+        "current packet",
+        "current section depends on",
+        "candidate evidence",
+        "coverage-normalization standard",
+        "print status",
+        "print-ready",
+        "print-usable",
+        "current pass",
+        "workflow",
+        "review-note maturity",
     ):
-        assert required in text
+        assert forbidden not in lower
 
 
 def test_np_possession_normalized_print_slice_has_inventory_and_safe_anchors() -> None:
     text = _text()
 
-    assert "| Pattern | Example form | Rough function | Current print status | Main boundary issue |" in text
+    assert "# NP pattern inventory" in text
+    assert "| Pattern | Example form | Function | Status | Boundary notes |" in text
 
     for required in (
         "hih mite",
-        "mi khat",
+        "ni li",
+        "kum sawm le nih",
         "mi khempeuh",
         "mi pawlkhat",
         "mi tampi",
-        "ni li",
-        "kum sawm le nih",
+        "na pa' inn-ah",
+        "a zi' min",
     ):
         assert required in text
+
+    assert "mi khat" in text or ("`mi` 'person'" in text and "`khat` 'one'" in text)
 
 
 def test_np_possession_normalized_print_slice_discusses_required_domains() -> None:
@@ -60,34 +70,56 @@ def test_np_possession_normalized_print_slice_discusses_required_domains() -> No
         "Numerals and nouns",
         "Quantifiers and nouns",
         "Possession",
-        "Deferred and boundary material",
+        "Boundary with numerals and quantifiers",
+        "Boundary with pronouns, prefix/agreement, case, and relators",
+        "Deferred material",
     ):
         assert required in text
 
     assert "noun-plus-numeral order" in lower
-    assert "noun-plus-quantifier" in lower
-    assert "demonstrative-before-noun" in lower
-    assert "candidate evidence" in lower
-    assert "explicit caveats" in lower
+    assert "noun-plus-quantifier order" in lower
+    assert "possessor-before-possessed order" in lower
 
 
-def test_np_possession_normalized_print_slice_keeps_possession_cautious() -> None:
+def test_np_possession_normalized_print_slice_keeps_boundaries_explicit() -> None:
     text = _text()
     lower = text.lower()
 
-    assert "no equally clean gospel possession row was found" in lower
-    assert "do not yet justify a full paradigm of possessive prefixes" in lower
-    assert "full possession paradigm is still deferred" in lower
+    for required in (
+        "khat",
+        "khempeuh",
+        "pawlkhat",
+        "tampi",
+        "prefix/agreement",
+        "case marking",
+        "relator",
+    ):
+        assert required in text
+
+    assert "Topa' tungah" in text or ("`Topa'` 'Lord'" in text and "`tungah` 'on'" in text)
+    assert "ka suahna leitang" in text or ("`ka` 'my'" in text and "`suahna` 'birth-NMLZ'" in text and "`leitang` 'land'" in text)
+
+    assert "full possession paradigm" in lower
+    assert "apostrophe marking" in lower
+    assert "recursive or chained possessive structures" in lower
 
 
 def test_np_possession_normalized_print_slice_has_formal_examples_and_source_balance() -> None:
     text = _text()
+    example_blocks = re.findall(
+        r"^\(@ex:np-[^)]+\).+\n"
+        r"a\. Tedim: .+\n"
+        r"b\. Segmentation: .+\n"
+        r"c\. Gloss: .+\n"
+        r"d\. Translation: .+\n",
+        text,
+        flags=re.MULTILINE,
+    )
 
-    assert text.count("(@ex:np-") >= 4
-    assert "Exodus 5:5" in text
-    assert "Genesis 24:23" in text
-    assert "John 11:39" in text
-    assert "Luke 2:1" in text
+    assert text.count("(@ex:np-") >= 6
+    assert len(example_blocks) >= 6
+    assert "Exodus 5:5" in text or "Genesis 24:23" in text
+    assert "John 11:39" in text or "Luke 2:1" in text or "Matthew 2:1" in text or "Mark 6:34" in text
 
 
 def test_np_possession_normalized_print_slice_avoids_raw_count_promotion() -> None:
