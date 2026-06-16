@@ -858,15 +858,19 @@ def test_assembled_preview_includes_normalized_pronouns_section() -> None:
 
     for required in (
         "Pronouns / clusivity",
-        "Overview of pronouns and pronominal marking in this section",
-        "Current personal-pronoun inventory",
+        "Overview of Tedim pronouns",
+        "Pronoun inventory",
         "Independent personal pronouns",
         "First-person plural forms and clusivity",
-        "Possessive prefixes as pronominal material",
+        "Second- and third-person forms",
+        "Pronouns and possession",
+        "Independent pronouns versus prefix/agreement marking",
+        "Pronouns with case and relator marking",
         "Emphatic pronouns in -mah",
         "Reflexive and reciprocal ki- boundary",
         "Participant-oriented hong- and kong- boundary",
         "Boundary with demonstratives, interrogatives, quantifiers, and wider agreement",
+        "Deferred questions",
         "Several issues remain outside the present account.",
     ):
         assert required in text
@@ -1301,10 +1305,13 @@ def test_assembled_preview_tex_includes_normalized_pronouns_inventory_and_exampl
     assert tex.count("\\label{ex:pro-") >= 4
 
     for required in (
-        "current personal-pronoun inventory",
+        "pronoun inventory",
         "independent personal pronouns",
         "first-person plural forms and clusivity",
-        "possessive prefixes as pronominal material",
+        "second- and third-person forms",
+        "pronouns and possession",
+        "independent pronouns versus prefix/agreement marking",
+        "pronouns with case and relator marking",
         "emphatic pronouns in -mah",
         "reflexive and reciprocal ki- boundary",
         "participant-oriented hong- and kong- boundary",
@@ -1313,10 +1320,10 @@ def test_assembled_preview_tex_includes_normalized_pronouns_inventory_and_exampl
         assert required.lower() in tex_normalized
 
     for required in (
-        "current personal-pronoun inventory",
+        "pronoun inventory",
         "independent personal pronouns",
         "first-person plural forms and clusivity",
-        "possessive prefixes as pronominal material",
+        "pronouns and possession",
         "emphatic pronouns in -mah",
     ):
         assert required in pdf_normalized

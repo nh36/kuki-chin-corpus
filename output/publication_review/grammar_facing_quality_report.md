@@ -2,7 +2,7 @@
 
 - TeX: `output/publication_review/assembled_grammar_review_preview.tex`
 - Issues: 0
-- Pages: 93
+- Pages: 95
 - Formal examples checked: 236
 
 ## Result

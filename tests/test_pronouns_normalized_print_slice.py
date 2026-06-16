@@ -61,36 +61,45 @@ def test_pronouns_normalized_print_slice_is_grammar_facing() -> None:
     assert "Scope" not in text.splitlines()[:12]
     assert "Editorial summary" not in text
     assert "editorial summary" not in lower
-    assert "# Overview of pronouns and pronominal marking in this section" in text
+    assert "# Overview of Tedim pronouns" in text
     assert not re.search(r"(?:output|tests|scripts|docs)/[A-Za-z0-9_./\\-]+", text)
 
 
 def test_pronouns_normalized_print_slice_has_required_structure_and_content() -> None:
     text = _text()
+    lower = text.lower()
 
     for required in (
-        "Current personal-pronoun inventory",
+        "Pronoun inventory",
         "Independent personal pronouns",
         "First-person plural forms and clusivity",
-        "Possessive prefixes as pronominal material",
+        "Second- and third-person forms",
+        "Pronouns and possession",
+        "Independent pronouns versus prefix/agreement marking",
+        "Pronouns with case and relator marking",
         "Emphatic pronouns in -mah",
         "Reflexive and reciprocal ki- boundary",
         "Participant-oriented hong- and kong- boundary",
         "Boundary with demonstratives, interrogatives, quantifiers, and wider agreement",
-        "Deferred material",
+        "Deferred questions",
         "Several issues remain outside the present account.",
     ):
         assert required in text
 
-    assert "| Person | Singular | Plural | Note or caveat |" in text
+    assert "| Domain | Controlled forms | Function | Status | Notes |" in text
     assert "`amah`" in text and "`note`" in text
     assert "`eite`" in text and "`kote`" in text
     assert "`na-`" in text and "`a-`" in text and "`i-`" in text
+    assert "`kanei`" in text and "`ka-nei`" in text and "`kainn`" in text and "`ka-inn`" in text
     assert "`keimah`" in text and "`nangmah`" in text
     assert "`ki-`" in text and "`ki-gawm`" in text
     assert "`hong-`" in text and "`kong-`" in text
     assert "`hih`" in text and "`tua`" in text and "`kua`" in text
     assert "`kuamah`" in text and "`bangmah`" in text
+    assert "not treated here as independent pronouns" in lower
+    assert "prefix/agreement section" in lower
+    assert "ka pa" in lower and "na pa" in lower
+    assert "case system and relator/postposition structure remain" in lower
 
 
 def test_pronouns_normalized_print_slice_has_formal_examples_and_source_balance() -> None:
@@ -163,6 +172,10 @@ def test_pronouns_normalized_print_slice_glosses_key_tedim_forms_in_prose() -> N
         "kote": ("we", "exclusive"),
         "note": ("you.PL", "you plural"),
         "amaute": ("they",),
+        "kanei": ("I have",),
+        "ka-nei": ("1SG-have",),
+        "kainn": ("my house",),
+        "ka-inn": ("1SG.POSS-house",),
         "na-": ("second-person singular possessive",),
         "a-": ("third-person possessive",),
         "i-": ("first-person plural possessive",),
