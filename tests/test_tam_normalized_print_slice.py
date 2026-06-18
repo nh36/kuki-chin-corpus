@@ -49,15 +49,18 @@ def test_tam_normalized_print_slice_exists() -> None:
 def test_tam_normalized_print_slice_has_inventory_and_core_sections() -> None:
     text = _text()
 
-    assert "Current TAM inventory" in text
-    assert "| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |" in text
-    assert "Perfect, completive, and change-of-state material" in text
-    assert "Habitual, continuative, and experiential aspect" in text
-    assert "Prospective and irrealis marking" in text
-    assert "Ability and modal marking" in text
-    assert "Repetition and return marking" in text
-    assert "Boundary with negation and sentence-final particles" in text
-    assert "Boundary with directionals and VP structure" in text
+    assert "TAM / aspect / modal inventory" in text
+    assert "| Form | Approximate function | Position / host relation | Diagnostic example | Source | Status |" in text
+    assert "Aspectual marking" in text
+    assert "Prospective and future-like or purposive material" in text
+    assert "Modal material" in text
+    assert "Relation to stem alternation" in text
+    assert "Relation to prefix/agreement" in text
+    assert "Relation to directionals and VP structure" in text
+    assert "Formal examples" in text
+    assert "Dictionary-facing implications" in text
+    assert "Deferred questions" in text
+    assert "Form I / Form II" in text
     assert "Several issues remain outside the present account." in text
 
 
@@ -73,13 +76,13 @@ def test_tam_normalized_print_slice_discusses_safe_anchors_and_boundaries() -> N
         "-kik",
         "-ding",
         "-thei",
-        "paingei",
         "dingin",
         "khiathei ding om lo",
-        "mangngilh ta hi",
+        "nuam",
         "khia-ta",
         "bawlzoding",
         "bawlsakthei",
+        "Form I / Form II",
     ):
         assert required in text
 
@@ -110,6 +113,7 @@ def test_tam_normalized_print_slice_avoids_internal_project_terms_and_raw_counts
         "print slice",
         "publication-review",
         "current pass",
+        "boundary material",
     ):
         assert forbidden not in lower
 
@@ -135,6 +139,7 @@ def test_tam_normalized_print_slice_glosses_key_tedim_forms_in_prose() -> None:
         "khia-ta": ("out-PFV", "out"),
         "bawlzoding": ("make-COMPL-IRR", "completive"),
         "bawlsakthei": ("make-CAUS-ABIL", "abilitative"),
+        "khiathei ding om lo": ("cannot interpret", "there is no one who can interpret it"),
     }
 
     for form, glosses in expectations.items():

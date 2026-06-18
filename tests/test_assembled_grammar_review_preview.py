@@ -784,14 +784,16 @@ def test_assembled_preview_includes_normalized_tam_section() -> None:
     for required in (
         "TAM / aspect / modal",
         "Overview of TAM / aspect / modal marking",
-        "Current TAM inventory",
-        "Perfect, completive, and change-of-state material",
-        "Habitual, continuative, and experiential aspect",
-        "Prospective and irrealis marking",
-        "Ability and modal marking",
-        "Repetition and return marking",
-        "Boundary with negation and sentence-final particles",
-        "Boundary with directionals and VP structure",
+        "TAM / aspect / modal inventory",
+        "Aspectual marking",
+        "Prospective and future-like or purposive material",
+        "Modal material",
+        "Relation to stem alternation",
+        "Relation to prefix/agreement",
+        "Relation to directionals and VP structure",
+        "Formal examples",
+        "Dictionary-facing implications",
+        "Deferred questions",
         "Several issues remain outside the present account.",
     ):
         assert required in text
@@ -1134,13 +1136,17 @@ def test_assembled_preview_tex_includes_normalized_tam_inventory_and_examples() 
     assert tex.count("\\label{ex:tam-") >= 8
 
     for required in (
-        "Current TAM inventory",
-        "Perfect, completive, and change-of-state material",
-        "Habitual, continuative, and experiential aspect",
-        "Prospective and irrealis marking",
-        "Ability and modal marking",
-        "Repetition and return marking",
+        "TAM / aspect / modal inventory",
+        "Aspectual marking",
+        "Prospective and future-like or purposive material",
+        "Modal material",
+        "Relation to stem alternation",
+        "Relation to prefix/agreement",
+        "Relation to directionals and VP structure",
+        "Dictionary-facing implications",
         "paingei",
+        "dingin",
+        "khiathei ding om lo",
         "gige",
         "ding",
         "thei",
@@ -1150,11 +1156,11 @@ def test_assembled_preview_tex_includes_normalized_tam_inventory_and_examples() 
         assert required.lower() in tex_normalized
 
     for required in (
-        "Current TAM inventory",
-        "Perfect, completive, and change-of-state material",
-        "Prospective and irrealis marking",
-        "Ability and modal marking",
-        "Repetition and return marking",
+        "TAM / aspect / modal inventory",
+        "Aspectual marking",
+        "Prospective and future-like or purposive material",
+        "Modal material",
+        "Deferred questions",
     ):
         assert required.lower() in pdf_normalized
 

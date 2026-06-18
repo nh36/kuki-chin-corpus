@@ -169,16 +169,19 @@
 \contentsline {subsubsection}{\numberline {3.6.9}Summary}{53}{subsubsection.3.6.9}%
 \contentsline {subsection}{\numberline {3.7}TAM / aspect / modal}{53}{subsection.3.7}%
 \contentsline {subsubsection}{\numberline {3.7.1}Overview of TAM / aspect / modal marking}{53}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Current TAM inventory}{54}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Perfect, completive, and change-of-state material}{54}{subsubsection.3.7.3}%
-\contentsline {subsubsection}{\numberline {3.7.4}Habitual, continuative, and experiential aspect}{55}{subsubsection.3.7.4}%
-\contentsline {subsubsection}{\numberline {3.7.5}Prospective and irrealis marking}{55}{subsubsection.3.7.5}%
-\contentsline {subsubsection}{\numberline {3.7.6}Ability and modal marking}{56}{subsubsection.3.7.6}%
-\contentsline {subsubsection}{\numberline {3.7.7}Repetition and return marking}{56}{subsubsection.3.7.7}%
-\contentsline {subsubsection}{\numberline {3.7.8}Boundary with negation and sentence-final particles}{56}{subsubsection.3.7.8}%
-\contentsline {subsubsection}{\numberline {3.7.9}Boundary with directionals and VP structure}{56}{subsubsection.3.7.9}%
-\contentsline {subsubsection}{\numberline {3.7.10}Deferred and boundary material}{57}{subsubsection.3.7.10}%
-\contentsline {subsubsection}{\numberline {3.7.11}Summary}{57}{subsubsection.3.7.11}%
+\contentsline {subsubsection}{\numberline {3.7.2}TAM / aspect / modal inventory}{53}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Aspectual marking}{54}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Prospective and future-like or purposive material}{54}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.5}Modal material}{55}{subsubsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.6}Relation to stem alternation}{55}{subsubsection.3.7.6}%
+\contentsline {subsubsection}{\numberline {3.7.7}Relation to prefix/agreement}{55}{subsubsection.3.7.7}%
+\contentsline {subsubsection}{\numberline {3.7.8}Relation to directionals and VP structure}{55}{subsubsection.3.7.8}%
+\contentsline {subsubsection}{\numberline {3.7.9}Formal examples}{55}{subsubsection.3.7.9}%
+\contentsline {paragraph}{Aspectual and habitual examples}{55}{section*.27}%
+\contentsline {paragraph}{Prospective and modal examples}{56}{section*.28}%
+\contentsline {paragraph}{Repetition and return examples}{56}{section*.29}%
+\contentsline {subsubsection}{\numberline {3.7.10}Dictionary-facing implications}{56}{subsubsection.3.7.10}%
+\contentsline {subsubsection}{\numberline {3.7.11}Deferred questions}{57}{subsubsection.3.7.11}%
 \contentsline {subsection}{\numberline {3.8}Directionals}{57}{subsection.3.8}%
 \contentsline {subsubsection}{\numberline {3.8.1}Overview of directional expressions}{57}{subsubsection.3.8.1}%
 \contentsline {subsubsection}{\numberline {3.8.2}Current directional inventory}{57}{subsubsection.3.8.2}%
@@ -256,10 +259,10 @@
 \contentsline {subsubsection}{\numberline {3.14.10}Summary}{78}{subsubsection.3.14.10}%
 \contentsline {subsection}{\numberline {3.15}Same-subject and different-subject clause linkage}{78}{subsection.3.15}%
 \contentsline {subsubsection}{\numberline {3.15.1}Overview of the current evidence}{78}{subsubsection.3.15.1}%
-\contentsline {paragraph}{Current display inventory}{78}{section*.27}%
-\contentsline {paragraph}{Promoted same-subject evidence}{79}{section*.28}%
-\contentsline {paragraph}{Support-only and boundary material}{80}{section*.29}%
-\contentsline {paragraph}{Deferred material}{80}{section*.30}%
+\contentsline {paragraph}{Current display inventory}{78}{section*.30}%
+\contentsline {paragraph}{Promoted same-subject evidence}{79}{section*.31}%
+\contentsline {paragraph}{Support-only and boundary material}{80}{section*.32}%
+\contentsline {paragraph}{Deferred material}{80}{section*.33}%
 \contentsline {section}{\numberline {4}Clause type, discourse-facing material, and expressive morphology}{80}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Negation}{80}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Overview of negation in Tedim}{80}{subsubsection.4.1.1}%
@@ -275,17 +278,17 @@
 \contentsline {subsubsection}{\numberline {4.1.11}Deferred material}{84}{subsubsection.4.1.11}%
 \contentsline {subsection}{\numberline {4.2}Interrogatives}{84}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}Overview of interrogatives in Tedim}{84}{subsubsection.4.2.1}%
-\contentsline {paragraph}{Interrogative inventory}{84}{section*.31}%
-\contentsline {paragraph}{Clause-final \textit {hiam} `question particle'}{85}{section*.32}%
-\contentsline {paragraph}{WH + \textit {hiam} content questions}{85}{section*.33}%
-\contentsline {subparagraph}{\textit {bang} `what'}{85}{section*.34}%
-\contentsline {subparagraph}{\textit {kua} `who'}{86}{section*.35}%
-\contentsline {subparagraph}{\textit {bangci} `how'}{86}{section*.36}%
-\contentsline {subparagraph}{\textit {banghangin} `why'}{86}{section*.37}%
-\contentsline {paragraph}{Embedded-question boundary}{86}{section*.38}%
-\contentsline {paragraph}{Blocked false friends and non-interrogative \textit {hiam}}{87}{section*.39}%
-\contentsline {paragraph}{Deferred comparison particles}{87}{section*.40}%
-\contentsline {paragraph}{Deferred material}{87}{section*.41}%
+\contentsline {paragraph}{Interrogative inventory}{84}{section*.34}%
+\contentsline {paragraph}{Clause-final \textit {hiam} `question particle'}{85}{section*.35}%
+\contentsline {paragraph}{WH + \textit {hiam} content questions}{85}{section*.36}%
+\contentsline {subparagraph}{\textit {bang} `what'}{85}{section*.37}%
+\contentsline {subparagraph}{\textit {kua} `who'}{86}{section*.38}%
+\contentsline {subparagraph}{\textit {bangci} `how'}{86}{section*.39}%
+\contentsline {subparagraph}{\textit {banghangin} `why'}{86}{section*.40}%
+\contentsline {paragraph}{Embedded-question boundary}{86}{section*.41}%
+\contentsline {paragraph}{Blocked false friends and non-interrogative \textit {hiam}}{87}{section*.42}%
+\contentsline {paragraph}{Deferred comparison particles}{87}{section*.43}%
+\contentsline {paragraph}{Deferred material}{87}{section*.44}%
 \contentsline {subsection}{\numberline {4.3}Sentence-final particles}{87}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Overview of sentence-final particles in Tedim}{87}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Sentence-final particle inventory}{87}{subsubsection.4.3.2}%
@@ -309,9 +312,9 @@
 \contentsline {subsubsection}{\numberline {4.4.9}Deferred material}{92}{subsubsection.4.4.9}%
 \contentsline {subsection}{\numberline {4.5}Reduplication}{93}{subsection.4.5}%
 \contentsline {subsubsection}{\numberline {4.5.1}Overview of reduplication in Tedim}{93}{subsubsection.4.5.1}%
-\contentsline {paragraph}{Reduplication inventory}{93}{section*.42}%
-\contentsline {subparagraph}{Full reduplication as intensification}{93}{section*.43}%
-\contentsline {subparagraph}{Secondary distributive reduplication}{94}{section*.44}%
-\contentsline {subparagraph}{Boundary and deferred material}{94}{section*.45}%
+\contentsline {paragraph}{Reduplication inventory}{93}{section*.45}%
+\contentsline {subparagraph}{Full reduplication as intensification}{93}{section*.46}%
+\contentsline {subparagraph}{Secondary distributive reduplication}{94}{section*.47}%
+\contentsline {subparagraph}{Boundary and deferred material}{94}{section*.48}%
 \contentsline {subsection}{\numberline {4.6}Broader discourse}{94}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}Analyzer-gap caution}{95}{subsection.4.7}%

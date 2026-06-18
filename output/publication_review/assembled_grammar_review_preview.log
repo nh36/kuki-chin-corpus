@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  18 JUN 2026 11:24
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  18 JUN 2026 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1388,7 +1388,7 @@ Overfull \hbox (28.1778pt too wide) in paragraph at lines 3446--3446
 
 [71]
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/it' will be
-(Font)              scaled to size 12.0pt on input line 5840.
+(Font)              scaled to size 12.0pt on input line 5828.
 
 
 [72]
@@ -1410,22 +1410,22 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/b/it' will be
 [82]
 
 [83]
-Overfull \hbox (30.9635pt too wide) in paragraph at lines 6839--6840
+Overfull \hbox (30.9635pt too wide) in paragraph at lines 6827--6828
 []|\TU/TimesNewRoman(0)/m/n/10.95 manner/comparison/clause- 
  []
 
 
-Overfull \hbox (3.0165pt too wide) in paragraph at lines 6840--6840
+Overfull \hbox (3.0165pt too wide) in paragraph at lines 6828--6828
 []|\TU/TimesNewRoman(0)/m/n/10.95 question/comparison 
  []
 
 
-Overfull \hbox (3.0165pt too wide) in paragraph at lines 6842--6842
+Overfull \hbox (3.0165pt too wide) in paragraph at lines 6830--6830
 []|\TU/TimesNewRoman(0)/m/n/10.95 question/comparison 
  []
 
 
-Overfull \hbox (3.0165pt too wide) in paragraph at lines 6844--6844
+Overfull \hbox (3.0165pt too wide) in paragraph at lines 6832--6832
 []|\TU/TimesNewRoman(0)/m/n/10.95 question/comparison 
  []
 
@@ -1507,10 +1507,10 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21003 strings out of 473832
- 384183 string characters out of 5729482
- 1021070 words of memory out of 5000000
- 43787 multiletter control sequences out of 15000+600000
+ 21006 strings out of 473832
+ 384217 string characters out of 5729482
+ 1021072 words of memory out of 5000000
+ 43790 multiletter control sequences out of 15000+600000
  565669 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,12n,116p,1029b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s

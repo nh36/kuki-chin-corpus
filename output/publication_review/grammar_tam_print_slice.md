@@ -9,28 +9,61 @@ reference-section-title: "References"
 
 # Overview of TAM / aspect / modal marking
 
-The safest current claim is that Tedim shows a controlled set of aspectual and modal anchors that can already be described in grammar-facing prose, without pretending that the whole verbal paradigm is settled. The present section therefore stays with compact suffixal or particle-like material rather than a full account of clause type, sentence-final particles, negation, or verb-phrase stacking.
+Tedim has clear verbal material for aspectual, prospective, and modal meaning, but the present evidence supports a controlled description rather than a complete tense-aspect-modal paradigm. This section therefore focuses on forms with stable interlinear evidence and keeps full template claims for later chapters.
 
-The clearest anchors in this section are `-ta` 'completive / change-of-state', `-zo` 'already / completive', `-gige` 'habitually / always', `-zel` 'continuative / keep doing', `-ding` 'prospective / irrealis', `-thei` 'can / be able', `-kik` 'again / back', and `-ngei` 'ever / experiential'. Several wider questions remain visible around these forms, but they are kept explicit as boundaries rather than folded into a single large TAM chapter.
+The terminology follows the stem-alternation chapter: Form I / Form II labels are used only where they help interpret TAM environments, not as a claim that all alternations are TAM-conditioned. The goal here is to describe what can already be stated securely in publication-facing grammar prose.
 
-# Current TAM inventory
+# TAM / aspect / modal inventory
 
-| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
-| --- | --- | --- | --- | --- |
-| `-ta` | completive or change-of-state aspect | `kihta uh hi`, `nungta zaw hi` | supported with caveat | clause-final `ta hi` remains separate |
-| `-zo` | completive or endpoint reached | `ka bawlzo hi`, `a zuizo uh hi` | supported with caveat | bare `zo` still overlaps sentence-final material |
-| `-gige` | habitual or regularly repeated action | `en gige hi`, `vil gige uh a` | well supported | orthography may separate the habitual element |
-| `-zel` | continuative or repeated continuation | `hopih zel hi` | supported with caveat | wider continuative and lexicalized uses remain open |
-| `-ngei` | experiential or 'ever' aspect | `a paingei bangin` | supporting evidence | many other rows cluster with negation or `nawn` |
-| `-ding` | prospective or irrealis marking | `na si ding hi`, `kiphuak ding hi` | well supported | clause-bound `dingin` remains separate |
-| `-thei` | ability or possibility | `khiathei ka hi kei hi`, `lutthei ding uh hi` | supported with caveat | negation and irrealis often stack with it |
-| `-kik` | repetition or return | `na ciahkik matengin`, `a ciahkik uh hi` | well supported | return and motion readings still need constructional care |
+| Form | Approximate function | Position / host relation | Diagnostic example | Source | Status |
+| --- | --- | --- | --- | --- | --- |
+| `-ta` | completive or change-of-state aspect | suffix on verbal host before declarative material | `kihta uh hi` | Exodus 1:12 | secure with caveat |
+| `-zo` | completive or endpoint reached | suffix on verbal host before declarative material | `ka bawlzo hi` | Exodus 34:27 | secure with caveat |
+| `-gige` | habitual aspect | habitual marker after lexical verb | `en gige hi` | Psalms 33:15 | secure |
+| `-zel` | continuative or repeated continuation | post-verbal continuative marker | `hopih zel hi` | Exodus 33:11 | secure with caveat |
+| `-ngei` | experiential ('ever') aspect | suffixal experiential marking on verb | `a paingei bangin` | Luke 4:16 | supporting but thinner |
+| `-ding` | prospective or irrealis | right-edge prospective marker in finite predicates | `na si ding hi` | Genesis 2:17 | secure |
+| `-thei` | ability or possibility | modal marker after lexical verb; often inside larger strings | `lutthei ding uh hi` | Matthew 7:21 | secure with caveat |
+| `-kik` | repetition or return | iterative marker after lexical verb | `a ciahkik uh hi` | Matthew 2:12 | secure |
+| `dingin` | purposive or clause-bound irrealis | `-ding` in clause-linking environment (`ding-in`) | `a khen dingin` | Genesis 1:14 | attested, treated as cross-domain |
 
-The table keeps `-ngei` 'ever / experiential' visible even though its cleanest formal example is narrower than the habitual and irrealis pairs. That matters because a grammar-facing inventory should show both the secure anchors and the places where the evidence is still thinner.
+# Aspectual marking
 
-# Perfect, completive, and change-of-state material
+Aspectual evidence is strongest for `-ta` 'completive / change-of-state' and `-zo` 'already / completive' in compact verbal hosts, with additional habitual or continuative evidence from `-gige` 'habitually / always', `-zel` 'continuative / keep doing', and experiential `-ngei` 'ever / experiential'. The controlled examples support these values, while still leaving room for lexical and clause-final overlap in wider contexts.
 
-`-ta` 'completive / change-of-state' is safest where a result state or completed change remains attached to a compact verbal host. `-zo` 'already / completive' likewise works best inside tight verbal material rather than as a clause-final particle. The section therefore starts from short verbal rows and keeps broader sentence-final issues for a later boundary discussion.
+This is why the section keeps the aspectual claim narrow: the forms are real and productive in verbal predicates, but the evidence does not yet settle every clause-final use or every semantic subtype.
+
+# Prospective and future-like or purposive material
+
+`-ding` 'prospective / irrealis' is robust in finite predicates and supports future-like projection. Clause-bound `dingin` 'for ... to / clause-bound irrealis' is also clearly attested, but it aligns with purposive and clause-linkage structure and is therefore not treated as the core TAM anchor.
+
+The present account therefore distinguishes predicate-level prospective marking from clause-linking use: both are part of the verbal system, but they should not be collapsed into one solved category at this stage.
+
+# Modal material
+
+`-thei` 'can / be able' provides the clearest controlled modal evidence. It appears both in affirmative projected predicates and in strings that already interact with negation and irrealis, including `khiathei ding om lo` 'there is no one who can interpret it'.
+
+The broader modal domain remains open. In particular, forms such as `nuam` 'want' still need a fuller distinction between lexical predicate use and auxiliary-like use before they can be integrated into a complete modal chapter.
+
+# Relation to stem alternation
+
+TAM examples interact with the Form I / Form II terminology established in the stem-alternation section, especially in modal and nominalizing environments where related stem families surface in different shapes. The secure point is interaction, not single-cause conditioning: TAM environments can host alternants, but TAM alone does not explain the full alternation inventory.
+
+# Relation to prefix/agreement
+
+The TAM examples here are finite predicates and therefore coordinate with the prefix/agreement section: person-prefix material and TAM marking co-occur in ordinary clause structure. This section keeps that interface explicit while leaving full prefix routing and host diagnostics to the prefix/agreement chapter.
+
+# Relation to directionals and VP structure
+
+TAM evidence also meets directional and stacking evidence. Forms such as `khia-ta` 'out-PFV' and `bawlzoding` 'make-COMPL-IRR' show that aspectual and prospective markers can occur in larger verbal complexes, while `bawlsakthei` 'make-CAUS-ABIL' shows overlap with derivational and valency-changing morphology.
+
+These interactions are central to later VP-structure analysis, but the present section does not attempt a full ordering template. It records the overlap and keeps the local TAM claims controlled.
+
+# Formal examples
+
+The examples below illustrate aspectual, prospective, modal, and iterative material with controlled interlinear formatting and source references.
+
+## Aspectual and habitual examples
 
 (@ex:tam-kihta-exod1) Exodus 1:12
 a. Tedim: kihta uh hi
@@ -56,12 +89,6 @@ b. Segmentation: a | zui-zo | uh | hi
 c. Gloss: 3SG | follow-COMPL | 2/3PL | DECL
 d. Translation: they followed it
 
-Taken together, these rows support a modest aspectual claim: Tedim can mark completed or result-state readings in compact verbal material. They do not license every orthographic `ta` or `zo` token as settled TAM evidence, and they do not erase the clause-final boundary that remains visible elsewhere in the grammar.
-
-# Habitual, continuative, and experiential aspect
-
-`-gige` 'habitually / always' is the most even habitual anchor in the current controlled evidence. `-zel` 'continuative / keep doing' is also visible, but its neatest checked row is still Old Testament-led. `-ngei` 'ever / experiential' belongs in the same zone, although the clearest compact formal row at present is the Gospel phrase `paingei` 'go-EXP'.
-
 (@ex:tam-paingei-luke4) Luke 4:16
 a. Tedim: a paingei bangin
 b. Segmentation: a | pai-ngei | bangin
@@ -86,11 +113,7 @@ b. Segmentation: Topa | in | Moses | hopih | zel | hi
 c. Gloss: TOPA | ERG | Moses | speak.with | CONT | DECL
 d. Translation: the Lord kept speaking with Moses
 
-The paired `-gige` rows show that habitual meaning is not confined to one testament. The `-zel` row is included because it keeps continuative aspect visible inside the same section, while `paingei` shows that experiential `-ngei` is real even though many other `ngei` examples sit closer to negated or "ever again" environments.
-
-# Prospective and irrealis marking
-
-`-ding` 'prospective / irrealis' is productive enough to mark future-like or projected events in ordinary clauses. At the same time, many wider report hits are clause-bound forms such as `dingin` 'for ... to / clause-bound irrealis', so the section starts with simpler predicates and leaves purposive or clause-linking material for the boundary note below.
+## Prospective and modal examples
 
 (@ex:tam-ding-gen2) Genesis 2:17
 a. Tedim: na si ding hi
@@ -104,12 +127,6 @@ b. Segmentation: Emmanuel | ki-phuak | ding | hi
 c. Gloss: Emmanuel | REFL-name | IRR | DECL
 d. Translation: will be called Emmanuel
 
-These examples are enough for a controlled grammar-facing statement that `-ding` marks prospective or irrealis meaning in ordinary verbal or predicate structure. They are not enough to settle the full relation between `-ding`, purpose clauses, and broader clause linkage.
-
-# Ability and modal marking
-
-`-thei` 'can / be able' often appears as a close verb-plus-modal sequence rather than as a fully separate lexical verb. The Gospel data provide the cleanest clause-level positive anchor, while Old Testament rows often show the same modal material under negation or inside quoted discourse.
-
 (@ex:tam-thei-gen41) Genesis 41:16
 a. Tedim: mang a khiathei ka hi kei hi
 b. Segmentation: mang | a | khia-thei | ka | hi | kei | hi
@@ -122,11 +139,7 @@ b. Segmentation: lut-thei | ding | uh | hi
 c. Gloss: enter-ABIL | IRR | 2/3PL | DECL
 d. Translation: they will be able to enter
 
-The subsection therefore keeps two points in view at once. First, `-thei` really does mark ability or possibility. Second, the Old Testament row already shows how quickly the modal anchor meets negation, which is why the present section stays narrower than a full modal chapter.
-
-# Repetition and return marking
-
-`-kik` 'again / back' regularly marks repeated or return-oriented events. The present section keeps that claim modest: the suffix is real and productive enough to discuss, but it is not expanded here into a full motion-verb chapter or a full discourse account of repetition.
+## Repetition and return examples
 
 (@ex:tam-kik-gen3) Genesis 3:19
 a. Tedim: na ciahkik matengin
@@ -140,30 +153,23 @@ b. Segmentation: a | ciah-kik | uh | hi
 c. Gloss: 3SG | return-ITER | 2/3PL | DECL
 d. Translation: they returned
 
-The Old Testament and Gospel rows line up closely enough to support a stable grammar-facing statement that `-kik` belongs in the repetitive or return-marking zone. Broader motion semantics still have to be handled construction by construction.
+# Dictionary-facing implications
 
-# Boundary with negation and sentence-final particles
+For lexical presentation, the safest approach is to keep TAM markers tied to attested host verbs and to list interaction-heavy strings separately. This supports dictionary entries for compact forms such as `-ta` 'completive / change-of-state', `-zo` 'already / completive', `-ding` 'prospective / irrealis', and `-thei` 'can / be able' without forcing full treatment of clause-linking and stacking constructions.
 
-The present section does not reopen the negation or sentence-final chapters. That boundary matters most around `-thei` 'can / be able', which often appears in strings such as `khiathei ding om lo` 'there is no one who can interpret it', where ability, irrealis, and negation belong to one clause-sized complex rather than to a single neat suffix slot.
+The same applies to cross-domain rows: `dingin` 'for ... to / clause-bound irrealis', `khiathei ding om lo` 'there is no one who can interpret it', `khia-ta` 'out-PFV', `bawlzoding` 'make-COMPL-IRR', and `bawlsakthei` 'make-CAUS-ABIL' should remain explicitly linked to their broader clause, directional, or VP-structure analyses.
 
-The same caution applies to `-ta` 'completive / change-of-state' and `-zo` 'already / completive'. Compact verbal rows are safe enough to discuss here, but clause-final `ta hi` and bare `zo` remain better treated as boundary material with sentence-final particles than as already-settled TAM categories.
-
-# Boundary with directionals and VP structure
-
-Directional and TAM material can stack, but the present section keeps that interaction explicit rather than solved. The row `khia-ta` 'out-PFV' shows why a tidy aspect label can quickly become a directional-plus-TAM problem, while `bawlzoding` 'make-COMPL-IRR' and `bawlsakthei` 'make-CAUS-ABIL' show why fuller suffix ordering belongs with verb-phrase structure rather than with the compact inventory above.
-
-Clause-bound `dingin` 'for ... to / clause-bound irrealis' belongs at the same boundary. It is important evidence for the wider system, but it turns prospective marking into clause linkage too quickly to serve as the core anchor for the present section.
-
-# Deferred and boundary material
+# Deferred questions
 
 Several issues remain outside the present account.
 
-- `pailai` 'go-midst / prospective form' still overlaps lexical `lai` too heavily for the present section.
-- `dingin` 'for ... to / clause-bound irrealis' and similar purpose-like rows remain clause-linkage material.
-- `mangngilh ta hi` 'has forgotten' keeps clause-final `ta hi` visible without making it the model for completive aspect.
-- `khiathei ding om lo` 'there is no one who can interpret it', `khia-ta` 'out-PFV', `bawlzoding` 'make-COMPL-IRR', and `bawlsakthei` 'make-CAUS-ABIL' remain overlap material rather than core anchors.
-- `-nawn` 'again / any longer' and `-khin` 'already / after completion' are not expanded here.
-
-# Summary
-
-The safest grammar-facing conclusion is that Tedim already shows a small but real TAM, aspect, and modal profile through compact anchors. `-ta`, `-zo`, `-gige`, `-zel`, `-ngei`, `-ding`, `-thei`, and `-kik` can all be discussed now, but only if their boundaries with sentence-final particles, negation, directionals, and wider VP structure remain visible. That is why the section stays controlled: it offers a usable core inventory without pretending that the full verbal system has already been normalized.
+- The full tense-aspect-modal paradigm is not yet settled.
+- Complete VP ordering and stacking constraints are not yet settled.
+- Co-occurrence restrictions among TAM, negation, and sentence-final material are not yet settled.
+- The interaction between TAM environments and all Form I / Form II alternation patterns is not yet settled.
+- The full relation between `dingin` 'for ... to / clause-bound irrealis' and clause linkage is not yet settled.
+- The status of lexical modal predicates versus auxiliary-like modal markers is not yet settled.
+- The full interaction between TAM markers and all directional morphology is not yet settled.
+- Clause-final strings such as `mangngilh ta hi` 'has forgotten' are not yet integrated into a full sentence-final versus TAM account.
+- The status of `pailai` 'go-midst / prospective form', `-khin` 'already / after completion', and `-nawn` 'again / any longer' remains provisional.
+- Full lexical coverage of TAM-bearing stem combinations remains for a later verb-paradigm treatment.
