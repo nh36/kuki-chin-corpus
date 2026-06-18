@@ -51,7 +51,7 @@ def test_prefix_agreement_normalized_print_slice_is_grammar_facing() -> None:
     lower = text.lower()
 
     assert not text.lstrip().startswith("# Editorial scope")
-    assert "# Overview of prefix and agreement routing in this section" in text
+    assert "# Overview of prefixal person marking" in text
     assert "Scope" not in text.splitlines()[:12]
     assert "editorial scope" not in lower
     assert not re.search(r"(?:output|tests|scripts|docs)/[A-Za-z0-9_./\\-]+", text)
@@ -61,21 +61,20 @@ def test_prefix_agreement_normalized_print_slice_has_required_structure() -> Non
     text = _text()
 
     for required in (
-        "Current prefix and agreement inventory",
+        "Prefix inventory and routing",
         "Agreement before verbal hosts",
         "Possession before nominal hosts",
         "Agreement versus possession routing",
-        "Boundary with independent pronouns and clusivity",
-        "Boundary with relative clauses and a- material",
-        "Boundary with object-prefix or inverse-like material",
-        "Boundary with ki-",
-        "Boundary with apostrophe possession",
-        "Deferred and boundary material",
-        "Several issues remain outside the present account.",
+        "The a- family and third-person marking",
+        "Relation to pronouns",
+        "Participant-oriented hong- and kong- boundary",
+        "Reflexive and middle ki- boundary",
+        "Apostrophe possession and broader possession syntax",
+        "Deferred questions",
     ):
         assert required in text
 
-    assert "| Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |" in text
+    assert "| Form or pattern | Function | Host type | Evidence level | Notes |" in text
 
 
 def test_prefix_agreement_normalized_print_slice_discusses_safe_core_and_boundaries() -> None:

@@ -838,17 +838,17 @@ def test_assembled_preview_includes_normalized_prefix_agreement_section() -> Non
 
     for required in (
         "Prefix / agreement",
-        "Overview of prefix and agreement routing in this section",
-        "Current prefix and agreement inventory",
+        "Overview of prefixal person marking",
+        "Prefix inventory and routing",
         "Agreement before verbal hosts",
         "Possession before nominal hosts",
         "Agreement versus possession routing",
-        "Boundary with independent pronouns and clusivity",
-        "Boundary with relative clauses and a- material",
-        "Boundary with object-prefix or inverse-like material",
-        "Boundary with ki-",
-        "Boundary with apostrophe possession",
-        "Several issues remain outside the present account.",
+        "The a- family and third-person marking",
+        "Relation to pronouns",
+        "Participant-oriented hong- and kong- boundary",
+        "Reflexive and middle ki- boundary",
+        "Apostrophe possession and broader possession syntax",
+        "Deferred questions",
     ):
         assert required in text
 
@@ -1251,21 +1251,24 @@ def test_assembled_preview_tex_includes_normalized_prefix_agreement_inventory_an
     assert tex.count("\\label{ex:pref-") >= 4
 
     for required in (
-        "Current prefix and agreement inventory",
+        "Prefix inventory and routing",
         "Agreement before verbal hosts",
         "Possession before nominal hosts",
         "Agreement versus possession routing",
-        "Boundary with relative clauses and a- material",
-        "Boundary with object-prefix or inverse-like material",
-        "Boundary with ki-",
+        "The a- family and third-person marking",
+        "Participant-oriented hong- and kong- boundary",
+        "Reflexive and middle ki- boundary",
     ):
         assert required.lower() in text.lower()
 
     for required in (
-        "current prefix and agreement inventory",
+        "prefix inventory and routing",
         "agreement before verbal hosts",
         "possession before nominal hosts",
         "agreement versus possession routing",
+        "the a- family and third-person marking",
+        "participant-oriented hong- and kong- boundary",
+        "reflexive and middle ki- boundary",
         "kanei",
         "kainn",
         "hongmu",
@@ -1276,10 +1279,11 @@ def test_assembled_preview_tex_includes_normalized_prefix_agreement_inventory_an
         assert required.lower() in tex_normalized
 
     for required in (
-        "current prefix and agreement inventory",
+        "prefix inventory and routing",
         "agreement before verbal hosts",
         "possession before nominal hosts",
         "agreement versus possession routing",
+        "participant-oriented hong- and kong- boundary",
         "kanei",
         "kainn",
     ):
