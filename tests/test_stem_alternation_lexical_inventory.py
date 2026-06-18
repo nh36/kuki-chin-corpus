@@ -2,6 +2,7 @@ import csv
 import sys
 from collections import defaultdict
 from pathlib import Path
+import re
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -594,14 +595,15 @@ def test_pair_discussion_plan_covers_required_pairs_and_statuses():
 def test_grammar_slice_is_now_a_grammar_facing_section():
     text = GRAMMAR_SLICE_PATH.read_text(encoding="utf-8")
     lower_text = text.lower()
-    assert "# Overview of Form I / Form II stem alternation" in text
-    assert "Current stem alternation overview" in text
-    assert "Distribution by syntactic context" in text
-    assert "Core showcase pairs" in text
-    assert "Promoted caveated pairs" in text
-    assert "Difficult but grammatically important pairs" in text
-    assert "One-sided and same-form controls" in text
-    assert "Blocked or noisy material" in text
+    assert "# Overview of stem alternation" in text
+    assert "Stem alternation inventory" in text
+    assert "Core alternation patterns" in text
+    assert "Grammatical environments for alternants" in text
+    assert "Relation to prefix/agreement" in text
+    assert "Relation to TAM and directionals" in text
+    assert "Formal examples" in text
+    assert "Dictionary-facing implications" in text
+    assert "Deferred questions" in text
     assert "Several issues remain outside the present account." in text
 
     assert "draft argument plan" not in lower_text
@@ -609,6 +611,8 @@ def test_grammar_slice_is_now_a_grammar_facing_section():
     assert "next commit" not in lower_text
     assert "writing order" not in lower_text
     assert "quotation-safe layer" not in lower_text
+    assert "boundary material" not in lower_text
+    assert "boundary row" not in lower_text
     assert not re.search(r"(?:output|tests|scripts|docs)/[A-Za-z0-9_./\\-]+", text)
 
 

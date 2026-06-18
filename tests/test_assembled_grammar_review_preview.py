@@ -469,10 +469,10 @@ def test_assembled_preview_includes_actual_slice_prose() -> None:
     text = _text()
 
     for required in (
-        "Overview of Form I / Form II stem alternation",
+        "Overview of stem alternation",
         "Overview of basic finite verb paradigms in Tedim",
         "Basic finite paradigm inventory",
-        "Current stem alternation overview",
+        "Stem alternation inventory",
         "Overview of transitivity contrasts",
         "Current transitivity inventory",
         "Full reduplication as intensification",
@@ -522,10 +522,10 @@ def test_assembled_preview_tex_exists_and_keeps_preview_status() -> None:
     assert "review preview, not a finished grammar" in lower
     assert "\\setcounter{secnumdepth}{3}" in tex
     assert "\\setcounter{tocdepth}{2}" in tex
-    assert "overview of form i / form ii stem alternation" in normalized
+    assert "overview of stem alternation" in normalized
     assert "overview of basic finite verb paradigms in tedim" in normalized
     assert "basic finite paradigm inventory" in normalized
-    assert "current stem alternation overview" in normalized
+    assert "stem alternation inventory" in normalized
     assert "overview of transitivity contrasts" in normalized
     assert "\\tdim{sih}" in lower
     assert "\\tdim{hawl}" in lower
@@ -936,14 +936,15 @@ def test_assembled_preview_includes_normalized_stem_alternation_section() -> Non
 
     for required in (
         "Stem alternation",
-        "Overview of Form I / Form II stem alternation",
-        "Current stem alternation overview",
-        "Distribution by syntactic context",
-        "Core showcase pairs",
-        "Promoted caveated pairs",
-        "Difficult but grammatically important pairs",
-        "One-sided and same-form controls",
-        "Blocked or noisy material",
+        "Overview of stem alternation",
+        "Stem alternation inventory",
+        "Core alternation patterns",
+        "Grammatical environments for alternants",
+        "Relation to prefix/agreement",
+        "Relation to TAM and directionals",
+        "Formal examples",
+        "Dictionary-facing implications",
+        "Deferred questions",
         "Several issues remain outside the present account.",
     ):
         assert required in text
@@ -1434,10 +1435,11 @@ def test_assembled_preview_tex_includes_normalized_stem_inventory_and_examples()
     assert tex.count("\\label{ex:stem-") >= 6
 
     for required in (
-        "Current stem alternation overview",
-        "Distribution by syntactic context",
-        "Core showcase pairs",
-        "Promoted caveated pairs",
+        "Stem alternation inventory",
+        "Core alternation patterns",
+        "Grammatical environments for alternants",
+        "Relation to prefix/agreement",
+        "Relation to TAM and directionals",
         "mu / muh",
         "ne / nek",
         "nei / neih",
@@ -1450,10 +1452,10 @@ def test_assembled_preview_tex_includes_normalized_stem_inventory_and_examples()
         assert required.lower() in tex_normalized
 
     for required in (
-        "current stem alternation overview",
-        "distribution by syntactic context",
-        "core showcase pairs",
-        "promoted caveated pairs",
+        "stem alternation inventory",
+        "core alternation patterns",
+        "grammatical environments for alternants",
+        "relation to prefix/agreement",
     ):
         assert required in pdf_normalized
 

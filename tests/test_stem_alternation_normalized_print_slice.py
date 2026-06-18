@@ -51,7 +51,7 @@ def test_stem_alternation_normalized_print_slice_is_grammar_facing() -> None:
     text = _text()
     lower = text.lower()
 
-    assert "# Overview of Form I / Form II stem alternation" in text
+    assert "# Overview of stem alternation" in text
     assert "draft argument plan" not in lower
     assert "eventual prose" not in lower
     assert "next commit" not in lower
@@ -66,34 +66,39 @@ def test_stem_alternation_normalized_print_slice_has_required_structure() -> Non
     text = _text()
 
     for required in (
-        "Overview of Form I / Form II stem alternation",
-        "Current stem alternation overview",
-        "Distribution by syntactic context",
-        "Core showcase pairs",
-        "Promoted caveated pairs",
-        "Difficult but grammatically important pairs",
-        "One-sided and same-form controls",
-        "Blocked or noisy material",
-        "Deferred and boundary material",
+        "Overview of stem alternation",
+        "Stem alternation inventory",
+        "Core alternation patterns",
+        "Grammatical environments for alternants",
+        "Relation to prefix/agreement",
+        "Relation to TAM and directionals",
+        "Formal examples",
+        "Dictionary-facing implications",
+        "Deferred questions",
         "Several issues remain outside the present account.",
     ):
         assert required in text
 
-    assert "| Form | Typical distribution | Strongest examples | Caveat |" in text
-    assert "| Syntactic context | Form tendency in current evidence | Representative pairs | Caution |" in text
+    assert "| Lexical meaning | Form I | Form II | Diagnostic environment | Source | Status |" in text
+    assert "| Pattern | Representative pairs | What current evidence supports | What remains open |" in text
 
 
-def test_stem_alternation_normalized_print_slice_cites_henderson_and_zam_ngaih_cing() -> None:
+def test_stem_alternation_normalized_print_slice_explains_stem_terminology() -> None:
     text = _text()
+    lower = text.lower()
     bibliography = BIB_PATH.read_text(encoding="utf-8")
 
     assert "@book{henderson1965" in bibliography
     assert "@phdthesis{zamngaihcing2017" in bibliography
+    assert "Form I / Form II" in text
+    assert "Stem 1 / Stem 2" in text
     assert "[@henderson1965; @zamngaihcing2017]" in text
+    assert "does not claim that the full verb-stem paradigm is already complete" in lower
 
 
-def test_stem_alternation_normalized_print_slice_keeps_core_promoted_and_boundary_pairs_visible() -> None:
+def test_stem_alternation_normalized_print_slice_discusses_controlled_pairs_and_environments() -> None:
     text = _text()
+    lower = text.lower()
 
     for required in (
         "mu / muh",
@@ -102,68 +107,65 @@ def test_stem_alternation_normalized_print_slice_keeps_core_promoted_and_boundar
         "za / zak",
         "pia / piak",
         "nusia / nusiat",
-        "bia / biak",
         "thei / theih",
         "piang / pian",
-        "zui / zuih",
-        "khial / khialh",
-        "kia / kiak",
-        "sawlkhia / sawlkhiat",
         "ngai / ngaih",
-        "pua / puak",
-        "pai / paih",
-        "tua / tuah",
-        "tua / tuak",
-        "bawl / bawlh",
-        "dawn / dawn",
-        "hong / hong",
-        "keu / keuh",
-        "khai / khaih",
-        "sia / siah",
-        "tan / tanh",
-        "mual / mualh",
-        "sum / sumh",
-        "thu / thuh",
-        "lampi / lampih",
-        "khua / khuat",
-        "gamla / gamlat",
+        "honkhia / honkhiat",
+        "ciangin",
+        "ni-in",
+        "kipan",
+        "nadingin",
+        "-na",
+        "mi",
     ):
         assert required in text
+
+    assert "finite" in lower
+    assert "dependent" in lower
+    assert "nominalized" in lower
+
+
+def test_stem_alternation_normalized_print_slice_coordinates_with_prefix_tam_directionals() -> None:
+    text = _text()
+    lower = text.lower()
+
+    assert "Relation to prefix/agreement" in text
+    assert "`ka-nei`" in text
+    assert "agreement-before-verbal-host" in lower or "prefix/agreement chapter" in lower
+
+    assert "Relation to TAM and directionals" in text
+    assert "`-ding`" in text
+    assert "directional" in lower
+    assert "dedicated chapters" in lower or "dedicated chapter" in lower
 
 
 def test_stem_alternation_normalized_print_slice_has_formal_examples_and_source_balance() -> None:
     text = _text()
 
     example_count = len(re.findall(r"^\(@ex:stem-[^)]+\)", text, re.MULTILINE))
-    has_explanation_for_fewer = "No equally clean" in text or "Several issues remain outside the present account." in text
-    assert example_count >= 6 or has_explanation_for_fewer
+    assert example_count >= 8
 
-    assert re.search(r"\(@ex:stem-[^)]+\)\s+(Genesis|Exodus|Psalms|1 Chronicles|2 Samuel)\s+\d+:\d+", text)
-    assert (
-        re.search(r"\(@ex:stem-[^)]+\)\s+(Matthew|Mark|Luke|John)\s+\d+:\d+", text)
-        or "No equally clean Gospel example is currently used" in text
-    )
+    assert re.search(r"\(@ex:stem-[^)]+\)\s+(Genesis|Exodus|Psalms|2 Samuel)\s+\d+:\d+", text)
+    assert re.search(r"\(@ex:stem-[^)]+\)\s+(Luke|Matthew|Mark|John)\s+\d+:\d+", text)
 
 
-def test_stem_alternation_normalized_print_slice_avoids_internal_project_terms_and_raw_counts() -> None:
+def test_stem_alternation_normalized_print_slice_avoids_internal_workflow_language() -> None:
     text = _text()
     lower = text.lower()
 
     for forbidden in (
         "packet",
+        "candidate layer",
         "candidate tsv",
         "dossier",
         "review notes",
-        "coverage normalization",
         "print slice",
+        "workflow",
         "publication-review",
-        "current pass",
+        "boundary row",
+        "boundary material",
     ):
         assert forbidden not in lower
-
-    assert "clean verbal exact bible rows survive" not in lower
-    assert "best examples:" not in lower
-    assert not re.search(r"\b\d{1,3}(?:,\d{3})+\b", text)
 
 
 def test_stem_alternation_normalized_print_slice_glosses_key_forms_in_prose() -> None:
@@ -175,25 +177,38 @@ def test_stem_alternation_normalized_print_slice_glosses_key_forms_in_prose() ->
         "nei / neih": ("have",),
         "za / zak": ("hear", "listen"),
         "pia / piak": ("give",),
-        "nusia / nusiat": ("leave", "abandon", "forsake"),
-        "bia / biak": ("speak", "worship", "address"),
-        "thei / theih": ("can", "be able"),
+        "nusia / nusiat": ("leave", "forsake"),
+        "thei / theih": ("know", "be able"),
         "piang / pian": ("be born", "arise"),
-        "zui / zuih": ("follow",),
-        "khial / khialh": ("err", "sin"),
-        "kia / kiak": ("fall",),
-        "sawlkhia / sawlkhiat": ("send out", "send forth"),
-        "ngai / ngaih": ("need", "love", "listen"),
         "ciangin": ("when",),
         "ni-in": ("on the day", "when"),
         "kipan": ("from", "since"),
         "nadingin": ("in order to",),
         "-na": ("nominalizer",),
         "mi": ("person", "one who"),
+        "ka-nei": ("1SG-have",),
+        "neih mi": ("have.II person",),
     }
 
     for form, glosses in expectations.items():
         assert _first_prose_occurrence_has_gloss(text, form, glosses), form
+
+
+def test_stem_alternation_normalized_print_slice_has_deferred_questions_requested_scope() -> None:
+    text = _text()
+    lower = text.lower()
+
+    assert "Deferred questions" in text
+    for required in (
+        "full verb-stem paradigm",
+        "historical origin",
+        "tonal alternations",
+        "complete conditioning environments",
+        "interaction with the full TAM inventory",
+        "interaction with the full directional system",
+        "full lexical coverage",
+    ):
+        assert required.lower() in lower
 
 
 def test_stem_alternation_examples_supplement_exists_and_has_expected_columns() -> None:
