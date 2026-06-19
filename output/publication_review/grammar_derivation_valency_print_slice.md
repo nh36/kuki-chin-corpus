@@ -9,30 +9,74 @@ reference-section-title: "References"
 
 # Overview of derivation and valency change
 
-This section treats a controlled part of Tedim derivation and valency-changing morphology rather than the whole derivational system. The clearest present anchors are `-sak` 'causative / benefactive', especially `paisak` 'cause to go' and `muhsak` 'show / make see', while `-pih` 'with / accompanying', `ki-` 'reflexive / middle / passive-like', and heavier suffix stacks such as `ciahsakkik` 'send back', `bawlsakthei` 'can cause to make', and `paikhiatsak` 'cause to go out' remain explicit boundaries.
+Tedim has verbal morphology and verbal constructions that affect argument structure, but the present section treats controlled examples rather than a complete valency system. The safest anchors are `-sak` 'causative / benefactive', `paisak` 'cause to go', and `muhsak` 'show / make see', with additional interface evidence from `-pih` 'with / accompanying', `paipih` 'go with / accompany', `mipihte` 'companions / associated people', and `ki-` 'reflexive / middle / passive-like' forms such as `kisep` 'REFL-work / do by oneself' and `kigen` 'be said / it is said'.
 
-The goal is therefore modest. It is enough to show that Tedim has a productive causative use of `-sak` 'causative / benefactive', a distinct benefactive or applicative-like use centered on `muhsak` 'show / make see', and several nearby constructions that should not yet be folded into the same account.
+The section also keeps complex verbal rows in view: `ciahsakkik` 'send back', `bawlsakthei` 'make-CAUS-ABIL / can cause to make', `paikhiatsak` 'cause to go out', and `piangsak` 'cause to be born / create'. These forms are important for analysis, but they do not by themselves settle the full derivational or argument-structure profile.
 
 # Current derivation / valency inventory
 
 | Form or pattern | Rough function | Example context | Current grammar-facing status | Boundary issue |
 | --- | --- | --- | --- | --- |
-| Form I + `-sak` | productive causative | `paisak` | supported | safest core claim |
-| Form II + `-sak` | benefactive or applicative-like extension | `muhsak` | supported with caution | higher-level suffix analysis remains open |
-| `paisak` | cause to go | `Israel mite paisak in`, `ka kiangah hong paisak un` | supported | may interact with motion semantics |
-| `muhsak` | show / make see | `ka hong muhsak thu khempeuh`, `na mit khua hong bangci muhsak ahi hiam` | supported with caution | exact benefactive versus applicative label remains open |
-| `paipih` | go with / accompany | `paipih` | boundary material | `-pih` still overlaps comitative and benefactive readings |
-| `ki-` forms | reflexive, middle, or passive-like material | `kisep`, `kigen` | boundary material | needs a separate account |
-| `ciahsakkik`, `bawlsakthei`, `paikhiatsak` | derivation-heavy stacking | `hong ciahsakkik un`, `bawlsakthei`, `hong paikhiatsak ciangin` | boundary material | overlaps VP structure and suffix stacking |
-| `piangsak` | lexicalized causative-looking verb | `piangsak` | boundary material | belongs with transitivity as well as derivation |
-
-The table keeps `paipih` 'go with / accompany', `kisep` 'REFL-work / do by oneself', `kigen` 'be said / it is said', and `piangsak` 'cause to be born / create' visible without turning them into solved core categories. A controlled section should show where the evidence is strongest and where it still shifts into neighboring domains.
+| Form I plus `-sak` | causative-like | `paisak` 'cause to go' | core anchor, productive | none |
+| Form II plus `-sak` | benefactive / applicative-like | `muhsak` 'show / make see' | core anchor with caveat | Form I vs Form II distinction needs wider testing |
+| `-pih` constructions | applicative-like / comitative | `paipih` 'go with', `mipihte` 'companions' | supporting but mixed | lexicalization and nominal status of some rows remain unclear |
+| `ki-` constructions | reflexive / middle / agent-defocused | `kisep` 'do by oneself', `kigen` 'be said' | supporting boundary | prefix-position overlap requires coordination with prefix/agreement |
+| derivation-heavy stacks | layered valency plus TAM/directional | `ciahsakkik` 'send back', `bawlsakthei` 'make-CAUS-ABIL', `paikhiatsak` 'cause to go out' | attested interface evidence | full VP ordering question deferred to VP structure section |
+| lexicalized derivation | morphology with argument-structure effect | `piangsak` 'cause to be born / create' | attested lexicalized form | productive versus lexicalized status needs fuller inventory |
 
 # Causative `-sak`
 
-The form `paisak` 'cause to go' shows a productive causative use of `-sak` 'causative / benefactive'. The clearest current point is practical rather than maximal: Form I plus `-sak` regularly supports a straightforward causative reading, and `paisak` gives that pattern in a compact and transparent way.
+The clearest causative claim is still Form I plus `-sak` with `paisak` 'cause to go'. In the controlled examples, this pattern straightforwardly increases event structure by introducing a causer and a caused participant. The contrast with Form II plus `-sak` remains crucial: `muhsak` 'show / make see' behaves as a distinct benefactive or applicative-like line, not just a duplicate of the Form I causative pattern.
 
-The pair below keeps that point grounded in both Old Testament and Gospel material. In Exodus the form is an imperative meaning 'let the people go', while in Mark it again licenses motion toward the speaker.
+This account stays narrow on purpose. It is strong enough to support a productive causative use and a distinct benefactive/applicative-like use, but it does not yet claim a complete causative paradigm.
+
+# Benefactive and applicative-like `-sak`
+
+The second major `-sak` line is Form II plus `-sak`, as in `muhsak` 'show / make see'. This behaves differently from Form I plus `-sak`: while `paisak` introduces a causer-causee relation, `muhsak` introduces an affected participant with a beneficiary or applicative-like flavor. The distinction is not merely phonological (Form II allomorph) but grammatical: the two lines serve different argument-structure purposes.
+
+Additional applicative-like material appears in `-pih` constructions such as `paipih` 'go with / accompany', where a comitative or co-participant reading is available. However, `mipihte` 'companions / associated people' shows that some `pih`-looking forms are nominal or lexicalized enough to resist a simple verbal applicative account.
+
+# The practical split within `-sak`
+
+The safest statement bundles Form I plus `-sak` (causative) and Form II plus `-sak` (benefactive/applicative-like) as the productive core of `-sak` valency marking, while keeping applicative-like and comitative material visible but more guarded. This is why the inventory lists both as core anchors: they are the clearest controlled examples of valency effects, and they do not by themselves claim a complete causative-applicative system.
+
+# Boundary with `ki-`
+
+`Ki-` 'reflexive / middle / passive-like' is part of valency analysis, but it is not an ordinary person prefix. This is why `ki-` must be coordinated with prefix/agreement: prefix position is shared, yet function is different. Forms such as `kisep` 'REFL-work / do by oneself' and `kigen` 'be said / it is said' point to reflexive, middle, and agent-defocused behavior that changes how participants are profiled.
+
+The transitivity interface is immediate. These constructions often reduce, background, or redistribute participant roles, so they should be described together with transitivity diagnostics, while leaving the full voice system for dedicated treatment. The present evidence does not yet settle the complete reflexive or middle system.
+
+# Boundary with `-pih`
+
+`-Pih` 'with / accompanying' provides applicative-like or comitative evidence in forms such as `paipih` 'go with / accompany'. At the same time, rows such as `mipihte` 'companions / associated people' show that some `pih`-looking forms are nominal or lexicalized enough to resist a simple verbal applicative account.
+
+The safest statement is therefore limited: argument-introducing behavior is visible, but the current controlled examples do not yet settle a full applicative typology. This form is discussed in more detail in the fuller treatment of applicatives or verbal derivation.
+
+# Lexical derivation and productive valency
+
+The section distinguishes productive or semi-productive morphology from lexicalized complex stems. `Paisak` and `muhsak` are currently the clearest productive/semi-productive anchors, while `piangsak` 'cause to be born / create' behaves more like a lexicalized high-frequency stem whose argument profile should also be read with transitivity evidence.
+
+The same distinction applies to stacks such as `ciahsakkik`, `bawlsakthei`, and `paikhiatsak`: they are real and analyzable, but they are not equivalent to the compact core anchors for first-pass valency claims.
+
+# Boundary with VP stacking
+
+Derivational forms occupy recognizable positions inside larger verbal complexes. `Ciahsakkik` 'send back' and `bawlsakthei` 'make-CAUS-ABIL / can cause to make' show that valency morphology can combine with iterative or modal material, while `paikhiatsak` shows directional-plus-derivational layering. The fuller ordering question is discussed under VP structure rather than solved here. The present evidence does not yet settle full VP ordering for derivation-bearing complexes.
+
+# Boundary with transitivity
+
+Derivation / valency patterns change how many participants are licensed or foregrounded. Form I plus `-sak` rows such as `paisak` move events toward causative transitive structure, while `ki-` rows such as `kigen` can background an agent-like participant. At the same time, lexicalized stems such as `piangsak` show why transitivity and derivation cannot always be cleanly separated. This section treats only the controlled examples; the fuller transitivity section provides broader argument-structure analysis.
+
+# Lexical derivation and productive valency
+
+The section distinguishes productive or semi-productive morphology from lexicalized complex stems. `Paisak` and `muhsak` are currently the clearest productive/semi-productive anchors, while `piangsak` 'cause to be born / create' behaves more like a lexicalized high-frequency stem whose argument profile should also be read with transitivity evidence.
+
+The same distinction applies to stacks such as `ciahsakkik`, `bawlsakthei`, and `paikhiatsak`: they are real and analyzable, but they are not equivalent to the compact core anchors for first-pass valency claims.
+
+# Formal examples
+
+The examples below illustrate causative, benefactive, applicative-like, reflexive/middle, and stacked derivation patterns with controlled interlinear formatting.
+
+## Causative and benefactive `-sak`
 
 (@ex:deriv-paisak-exod10) Exodus 10:7
 a. Tedim: Israel mite paisak in
@@ -46,14 +90,6 @@ b. Segmentation: ka | kiang-ah | hong | pai-sak | un
 c. Gloss: 1SG.POSS | beside-LOC | VEN | go-CAUS | IMP.2PL
 d. Translation: let them come to me
 
-These examples do not require a full derivational paradigm. They are enough to support the narrower point that `paisak` keeps a productive causative use clearly visible in ordinary discourse.
-
-# Benefactive and applicative-like `-sak`
-
-The form `muhsak` 'show / make see' supports a distinct benefactive or applicative-like use of `-sak` 'causative / benefactive'. This subsection keeps the wording cautious on purpose: the evidence is strong enough to separate `muhsak` from the plain causative line, but it does not yet force a final theoretical choice about exactly how many suffix senses should be recognized.
-
-The formal examples again show the same row across Old Testament and Gospel material. Habakkuk presents `muhsak` in a reporting context, while John uses it in a question about restored sight.
-
 (@ex:deriv-muhsak-hab2) Habakkuk 2:2
 a. Tedim: Nangmah ka hong muhsak thu khempeuh
 b. Segmentation: nangmah | ka | hong | muh-sak | thu | khempeuh
@@ -66,31 +102,27 @@ b. Segmentation: na | mit | khua | hong | bangci | muh-sak | ahi | hiam
 c. Gloss: 2SG.POSS | eye | awake | VEN | how | see.II-BENF | DECL | Q
 d. Translation: how did he open your eyes
 
-This pair is best treated as a distinct `-sak` line rather than as a simple paraphrase of the causative examples above. At the same time, the section stays smaller than a full applicative chapter and avoids turning one well-supported row into a complete system claim.
+## Applicative-like and reflexive/middle examples
 
-# The practical split within `-sak`
+(@ex:deriv-paipih-gen2) Genesis 2:19
+a. Tedim: tuate a paipih hi
+b. Segmentation: tua-te | a | pai-pih | hi
+c. Gloss: DIST-PL | 3SG | go-APPL | DECL
+d. Translation: he brought them
 
-The practical descriptive split is therefore modest. Form I plus `-sak` supports causative use, while Form II plus `-sak` supports a distinct benefactive or applicative-like use.
+(@ex:deriv-kigen-gen27) Genesis 27:42
+a. Tedim: Rebekah tungah kigen hi.
+b. Segmentation: Rebekah | tung-ah | ki-gen | hi
+c. Gloss: Rebekah | on-LOC | REFL-say | DECL
+d. Translation: The words were told to Rebekah.
 
-That contrast is enough for a controlled grammar account, but the final theoretical status of the split remains open. It may prove best to describe these patterns as two readings within one suffixal domain, or as two tightly related derivational uses that should still be separated in description.
+(@ex:deriv-kigen-matt2) Matthew 2:10
+a. Tedim: a lungdamna uh kigen thei lo hi.
+b. Segmentation: a | lungdamna | uh | ki-gen | thei | lo | hi
+c. Gloss: 3SG | joy | 2/3PL | REFL-say | can | NEG | DECL
+d. Translation: their joy could not be told.
 
-For the present account, the important point is simply that `paisak` 'cause to go' and `muhsak` 'show / make see' should not be flattened into the same gloss line. The contrast is real even if the larger suffix theory remains under discussion.
-
-# Boundary with `-pih`
-
-The nearest boundary beyond `-sak` is `-pih` 'with / accompanying'. The form `paipih` 'go with / accompany' is transparent enough to keep in view, but its function still overlaps comitative, benefactive, and applicative readings too strongly for this section to promote it as a second core derivational anchor.
-
-The same boundary also includes `mipihte` 'companions / associated people', which looks `pih`-based but is noun-centered rather than a clear verbal valency pattern. That is why the present section names `-pih` as an adjacent domain without turning it into a separate applicative chapter.
-
-# Boundary with `ki-`
-
-The prefix `ki-` 'reflexive / middle / passive-like' likewise remains outside the present core account. The clearest future anchor is still `kisep` 'REFL-work / do by oneself', while `kigen` 'be said / it is said' shows the more agent-defocused or passive-like side of the same domain.
-
-Both forms matter because they show that valency change in Tedim is not confined to suffixes alone. Even so, the present section does not absorb reflexive, middle, passive-like, or prefixal structure into a narrow `-sak` discussion.
-
-# Boundary with VP stacking
-
-The overlap with VP structure is easiest to see in derivation-heavy stacks. `Ciahsakkik` 'send back' is the clearest matched pair, and it shows why derivational morphology and suffix ordering must sometimes be discussed together without being collapsed into one chapter. The same boundary keeps `bawlsakthei` 'can cause to make' and `paikhiatsak` 'cause to go out' visible as nearby stacked forms.
+## Stacked derivation examples
 
 (@ex:deriv-ciahsakkik-gen24) Genesis 24:54
 a. Tedim: hong ciahsakkik un
@@ -104,25 +136,21 @@ b. Segmentation: a | guak | ciah-sak-kik | uh | hi
 c. Gloss: 3SG | empty | return-CAUS-ITER | 2/3PL | DECL
 d. Translation: they sent him back empty
 
-These examples are useful precisely because they stop short of a larger template claim. They show that derivational material can participate in bigger suffix strings, while still leaving the full architecture of those strings to the VP section.
+# Dictionary-facing implications
 
-# Boundary with transitivity
+Lexical presentation should prioritize cross-referenced derived families rather than isolated opaque headwords. Productive or semi-productive valency morphology (especially `-sak` and selected `-pih` rows) can be listed with argument-structure notes, while lexicalized stems such as `piangsak` should be marked explicitly as lexicalized or only partly productive when evidence remains mixed.
 
-Some causative-looking verbs remain better treated as transitivity-adjacent lexical items than as first-line derivational evidence. `Piangsak` 'cause to be born / create' is the clearest current example: it is too important to ignore, but too lexicalized to carry the same descriptive weight as `paisak` 'cause to go'.
+This keeps dictionary treatment aligned with grammar evidence without turning the section into a full lexicographic policy chapter.
 
-This is why the present section does not try to settle every transitivity question inside the `-sak` domain. Productive causative morphology and lexicalized transitive verbs meet here, but they should not yet be treated as one solved class.
-
-# Deferred and boundary material
+# Deferred questions
 
 Several issues remain outside the present account.
 
-- `paisak` 'cause to go' and `muhsak` 'show / make see' are the clearest current anchors, but they do not exhaust the derivational system.
-- `paipih` 'go with / accompany' and `mipihte` 'companions / associated people' keep the `-pih` boundary visible without settling its broader function.
-- `kisep` 'REFL-work / do by oneself' and `kigen` 'be said / it is said' show that `ki-` needs a separate reflexive, middle, and passive-like treatment.
-- `ciahsakkik` 'send back', `bawlsakthei` 'can cause to make', and `paikhiatsak` 'cause to go out' belong to the derivation-VP boundary rather than to a compact suffix list.
-- `piangsak` 'cause to be born / create' remains adjacent evidence at the edge of transitivity and lexicalization.
-- The section therefore stays with a narrow `-sak` account instead of expanding into a full derivational morphology or valency-changing chapter.
-
-# Summary
-
-The safest conclusion is that Tedim already shows a controlled derivation / valency contrast centered on `-sak` 'causative / benefactive'. `Paisak` 'cause to go' supports a productive causative use, `muhsak` 'show / make see' supports a distinct benefactive or applicative-like use, and derivation-heavy stacks such as `ciahsakkik` 'send back' show how quickly the same material meets VP structure. The broader systems of `-pih`, `ki-`, and lexicalized transitivity remain visible, but they remain outside the present account.
+- The full causative system is not yet settled.
+- The full reflexive/middle system is not yet settled.
+- The status of productive versus lexicalized behavior for specific forms is not yet settled.
+- The full set of applicative-like or argument-introducing patterns is not yet settled.
+- The full interaction between derivation and transitivity is not yet settled.
+- The full interaction between derivation and directionals is not yet settled.
+- Full VP ordering for derivation-bearing complexes is not yet settled.
+- Complete lexical coverage of derived verbs is not yet settled.
